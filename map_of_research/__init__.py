@@ -1,10 +1,16 @@
+import json  # for saving and parsing json files
+import pandas  # for reading and dumping data
+import os
+
+
 def scrape_faculty_data():
-    import json                         # for saving and parsing json files
     from scholarly import scholarly     # for scraping data from Google Scholar
-    import pandas                       # for reading data
 
     # List of faculty names and Google Scholar IDs
     faculty_in_department = pandas.read_csv("faculty.csv").to_dict('records')
+
+    # Make data directory if it doesn't already exist
+    os.makedirs("data", exist_ok=True)
 
     # Get publications for every faculty member
     for faculty in faculty_in_department:
@@ -19,13 +25,9 @@ def scrape_faculty_data():
 
 
 def visualize_faculty_data():
-    import json  # for saving and parsing json files
-    import os  # for searching for json files
-
     import matplotlib.colors  # for getting pretty colors
     import matplotlib.pyplot  # for converting rgb to hex
     import numpy  # for generic operations
-    import pandas  # dumping json into csv
     import plotly.express  # plotly
     import sentence_transformers  # embeddings
     import sklearn.decomposition  # orient tsne
