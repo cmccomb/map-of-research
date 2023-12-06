@@ -10,7 +10,7 @@ setup(
     author_email='ccm@cmu.edu',
     url='',
     install_requires=["pandas", "scholarly", "plotly", "scikit-learn", "numpy", "sentence_transformers", "matplotlib"],
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'scrape_faculty_data=map_of_research:scrape_faculty_data'
             'visualize_faculty_data=map_of_research:visualize_faculty_data'
