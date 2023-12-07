@@ -55,8 +55,8 @@ def visualize_faculty_data():
     embeddings: NDArray = model.encode(all_the_data['title'].to_list(), show_progress_bar=True)
 
     # Boil down teh data into a 2D plot
-    tsne_embeddings: NDArray = sklearn.manifold.TSNE(n_components=3, random_state=42).fit_transform(embeddings)
-    pca_embeddings: NDArray = sklearn.decomposition.PCA(n_components=3, random_state=42).fit_transform(tsne_embeddings)
+    tsne_embeddings: NDArray = sklearn.manifold.TSNE(n_components=2, random_state=42).fit_transform(embeddings)
+    pca_embeddings: NDArray = sklearn.decomposition.PCA(n_components=2, random_state=42).fit_transform(tsne_embeddings)
     all_the_data['x'] = pca_embeddings[:, 0]
     all_the_data['y'] = pca_embeddings[:, 1]
 
