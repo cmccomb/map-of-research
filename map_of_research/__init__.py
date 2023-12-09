@@ -34,6 +34,8 @@ def visualize_faculty_data():
     import sklearn.decomposition  # orient tsne
     import sklearn.manifold  # make a tsne
     from numpy.typing import NDArray  # for type hinting
+    from sentence_transformers import SentenceTransformer  # for type hinting
+    from plotly.graph_objs import Figure  # for type hinting
 
     # Identify all the json files
     path_to_json: str = './data/'
@@ -52,12 +54,12 @@ def visualize_faculty_data():
     all_the_data.reset_index(inplace=True)
 
     # Embed titles from publications
-    model = sentence_transformers.SentenceTransformer('all-mpnet-base-v2')
-    embeddings: NDArray = model.encode(all_the_data['title'].to_list(), show_progress_bar=True)
+    model: SentenceTransformer = sentence_transformers.SentenceTransformer('all-mpnet-base-v2')
+    embeddings: NDArray[float] = model.encode(all_the_data['title'].to_list(), show_progress_bar=True)
 
     # Boil down teh data into a 2D plot
-    tsne_embeddings: NDArray = sklearn.manifold.TSNE(n_components=2, random_state=42).fit_transform(embeddings)
-    pca_embeddings: NDArray = sklearn.decomposition.PCA(n_components=2, random_state=42).fit_transform(tsne_embeddings)
+    tsne_embeddings: NDArray[float] = sklearn.manifold.TSNE(n_components=2, random_state=42).fit_transform(embeddings)
+    pca_embeddings: NDArray[float] = sklearn.decomposition.PCA(n_components=2, random_state=42).fit_transform(tsne_embeddings)
     all_the_data['x'] = pca_embeddings[:, 0]
     all_the_data['y'] = pca_embeddings[:, 1]
 
@@ -66,7 +68,7 @@ def visualize_faculty_data():
         matplotlib.pyplot.cm.gist_rainbow(numpy.linspace(0, 1, len(json_files)))]
 
     # Plot the embeddings
-    fig = plotly.express.scatter(all_the_data, x="x", y="y", hover_data=["title"], color="faculty", symbol="faculty",
+    fig: Figure = plotly.express.scatter(all_the_data, x="x", y="y", hover_data=["title"], color="faculty", symbol="faculty",
         color_discrete_sequence=colors)
 
     # Make sure the axes are appropriately scaled
