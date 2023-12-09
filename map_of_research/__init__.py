@@ -1,13 +1,14 @@
 import json  # for saving and parsing json files
 import pandas  # for reading and dumping data
 import os
+from pandas import DataFrame  # for type hinting
 
 
 def scrape_faculty_data():
-    from scholarly import scholarly     # for scraping data from Google Scholar
+    import scholarly
 
     # List of faculty names and Google Scholar IDs
-    faculty_in_department = pandas.read_csv("faculty.csv").to_dict('records')
+    faculty_in_department: list[dict] = pandas.read_csv("faculty.csv").to_dict('records')
 
     # Make data directory if it doesn't already exist
     os.makedirs("data", exist_ok=True)
@@ -16,7 +17,7 @@ def scrape_faculty_data():
     for faculty in faculty_in_department:
         if not pandas.isnull(faculty['id']):    # make sure there is an ID in the dict
             # Get and fill the info
-            author = scholarly.fill(scholarly.search_author_id(faculty['id']))
+            author = scholarly.scholarly.fill(scholarly.scholarly.search_author_id(faculty['id']))
             # Extract publications
             faculty_pubs = [publication['bib'] for publication in author['publications']]
             # Save to JSON
@@ -32,20 +33,20 @@ def visualize_faculty_data():
     import sentence_transformers  # embeddings
     import sklearn.decomposition  # orient tsne
     import sklearn.manifold  # make a tsne
-    from numpy.typing import NDArray
+    from numpy.typing import NDArray  # for type hinting
 
     # Identify all the json files
     path_to_json: str = './data/'
     json_files: list[str] = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
 
     # Dump all the json files into a single dataframe
-    all_the_data: pandas.DataFrame = pandas.DataFrame()
+    all_the_data: DataFrame = pandas.DataFrame()
     for json_file in sorted(json_files, key=str.casefold):
         with open(os.path.join(path_to_json, json_file)) as json_file_path:
             json_dict: dict = json.load(json_file_path)
-            json_as_df: pandas.DataFrame = pandas.DataFrame.from_dict(json_dict)
+            json_as_df: DataFrame = pandas.DataFrame.from_dict(json_dict)
             json_as_df['faculty'] = json_file.replace(".json", "")
-            all_the_data: pandas.DataFrame = pandas.concat([all_the_data, json_as_df], axis=0)
+            all_the_data: DataFrame = pandas.concat([all_the_data, json_as_df], axis=0)
 
     # Re-index the dataframe because it appears to eb necessary
     all_the_data.reset_index(inplace=True)
