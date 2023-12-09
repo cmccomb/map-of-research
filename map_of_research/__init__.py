@@ -1,7 +1,6 @@
 import json  # for saving and parsing json files
 import pandas  # for reading and dumping data
 import os
-from pandas import DataFrame  # for type hinting
 
 
 def scrape_faculty_data():
@@ -36,6 +35,7 @@ def visualize_faculty_data():
     from numpy.typing import NDArray  # for type hinting
     from sentence_transformers import SentenceTransformer  # for type hinting
     from plotly.graph_objs import Figure  # for type hinting
+    from pandas import DataFrame  # for type hinting
 
     # Identify all the json files
     path_to_json: str = './data/'
