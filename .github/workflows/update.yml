@@ -6,7 +6,7 @@ permissions:
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      token:
         required: true
 
 env:
@@ -26,4 +26,4 @@ jobs:
       - name: commit and push changes
         uses: actions-js/push@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.token }}
