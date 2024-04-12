@@ -1,15 +1,16 @@
 import json  # for saving and parsing json files
 import pandas  # for reading and dumping data
 import os
+import sys
 
 
 def scrape_faculty_data():
     import scholarly
 
+    file_name = "faculty.csv" or sys.argv[1]
+
     # List of faculty names and Google Scholar IDs
-    faculty_in_department: list[dict] = pandas.read_csv("faculty.csv").to_dict(
-        "records"
-    )
+    faculty_in_department: list[dict] = pandas.read_csv(file_name).to_dict("records")
 
     # Make data directory if it doesn't already exist
     os.makedirs("data", exist_ok=True)
