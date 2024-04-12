@@ -1,6 +1,5 @@
 import json  # for saving and parsing json files
 import os  # for reading files
-import sys  # for command line filename
 
 import matplotlib.colors  # for getting pretty colors
 import matplotlib.pyplot  # for converting rgb to hex
@@ -14,10 +13,10 @@ import sklearn.manifold  # for making a tsne to visualize the high dimensional s
 
 
 def scrape_faculty_data():
-    filename = "faculty.csv" or sys.argv[1]
-
     # List of faculty names and Google Scholar IDs
-    faculty_in_department: list[dict] = pandas.read_csv(filename).to_dict("records")
+    faculty_in_department: list[dict] = pandas.read_csv("faculty.csv").to_dict(
+        "records"
+    )
 
     # Make data directory if it doesn't already exist
     os.makedirs("data", exist_ok=True)
