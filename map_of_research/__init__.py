@@ -1,5 +1,6 @@
 import json  # for saving and parsing json files
 import os  # for reading files
+import sys  # for command line filename
 
 import matplotlib.colors  # for getting pretty colors
 import matplotlib.pyplot  # for converting rgb to hex
@@ -13,11 +14,10 @@ import sklearn.manifold  # for making a tsne to visualize the high dimensional s
 
 
 def scrape_faculty_data():
-
     # List of faculty names and Google Scholar IDs
-    faculty_in_department: list[dict] = pandas.read_csv("faculty.csv").to_dict(
-        "records"
-    )
+    faculty_in_department: list[dict] = pandas.read_csv(
+        "faculty.csv" or sys.argv[1]
+    ).to_dict("records")
 
     # Make data directory if it doesn't already exist
     os.makedirs("data", exist_ok=True)
@@ -44,7 +44,6 @@ def scrape_faculty_data():
 
 
 def visualize_faculty_data():
-
     # Identify all the json files
     path_to_json: str = "./data/"
     json_files: list[str] = [
@@ -64,12 +63,8 @@ def visualize_faculty_data():
     all_the_data.reset_index(inplace=True)
 
     # Embed titles from publications
-    model = sentence_transformers.SentenceTransformer(
-        "all-mpnet-base-v2"
-    )
-    embeddings = model.encode(
-        all_the_data["title"].to_list(), show_progress_bar=True
-    )
+    model = sentence_transformers.SentenceTransformer("all-mpnet-base-v2")
+    embeddings = model.encode(all_the_data["title"].to_list(), show_progress_bar=True)
 
     # Boil down the data into a 2D plot
     tsne_embeddings = sklearn.manifold.TSNE(
