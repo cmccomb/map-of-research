@@ -24,6 +24,7 @@ def scrape_faculty_data():
     # Get publications for every faculty member
     for faculty in faculty_in_department:
         if not pandas.isnull(faculty["id"]):  # make sure there is an ID in the dict
+            print(faculty["name"])
             # Get and fill the info
             author = scholarly.scholarly.fill(
                 scholarly.scholarly.search_author_id(faculty["id"])
