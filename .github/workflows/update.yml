@@ -21,7 +21,7 @@ jobs:
       - name: Install library
         run: pip install git+https://github.com/cmccomb/map-of-research.git -qqq
       - name: Copy old data out of the way
-        run: mkdir data_old; cp data/* data_old/
+        run: mkdir -p data_old; cp data/* data_old/
       - name: Scrape the data
         run: scrape_faculty_data
       - name: Create the visualization
