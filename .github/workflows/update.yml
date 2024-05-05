@@ -19,7 +19,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
       - name: Install library
-        run: pip install git+https://github.com/cmccomb/map-of-research.git
+        run: pip install git+https://github.com/cmccomb/map-of-research.git -qqq
       - name: Copy old data out of the way
         run: cp data/* data_old/
       - name: Scrape the data
