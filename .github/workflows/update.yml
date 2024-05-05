@@ -16,14 +16,17 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: install library
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Install library
         run: pip install git+https://github.com/cmccomb/map-of-research.git
-      - name: scrape the data
+      - name: Copy old data out of the way
+        run: cp data/* data_old/
+      - name: Scrape the data
         run: scrape_faculty_data
-      - name: create the visualization
+      - name: Create the visualization
         run: visualize_faculty_data
-      - name: commit and push changes
+      - name: Commit and push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.token }}

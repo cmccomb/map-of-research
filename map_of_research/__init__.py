@@ -31,7 +31,7 @@ def scrape_faculty_data():
             )
             # Extract publications
             faculty_pubs = [
-                publication["bib"] for publication in author["publications"]
+                {**publication["bib"], "num_citations": publication["num_citations"],  "author_pub_id": publication["author_pub_id"]} for publication in author["publications"]
             ]
             # Save to JSON
             with open("data/" + faculty["name"] + ".json", "w", encoding="utf-8") as f:
