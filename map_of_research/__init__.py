@@ -10,7 +10,7 @@ import scholarly  # this does hte heavy lifting when we scrape data
 import sentence_transformers  # for embedding paper titles as vectors
 import sklearn.decomposition  # for orienting the tsne in a way that fills the screen nicely
 import sklearn.manifold  # for making a tsne to visualize the high dimensional space
-
+import scholarly._proxy_generator
 
 def scrape_faculty_data():
     # List of faculty names and Google Scholar IDs
@@ -26,9 +26,13 @@ def scrape_faculty_data():
         if not pandas.isnull(faculty["id"]):  # make sure there is an ID in the dict
             print(faculty["name"])
             # Get and fill the info
-            author = scholarly.scholarly.fill(
-                scholarly.scholarly.search_author_id(faculty["id"])
-            )
+            try:
+                author = scholarly.scholarly.fill(
+                    scholarly.scholarly.search_author_id(faculty["id"])
+                )
+            except scholarly._proxy_generator.MaxTriesExceededException:
+                pass
+                
             # Extract publications
             faculty_pubs = [
                 {**publication["bib"], "num_citations": publication["num_citations"],  "author_pub_id": publication["author_pub_id"]} for publication in author["publications"]
