@@ -45,7 +45,16 @@ def write_registry(
     maps_path = root / "maps.csv"
     _write(
         people_path,
-        ("person_id", "display_name", "scholar_id", "orcid", "homepage_url", "notes"),
+        (
+            "person_id",
+            "display_name",
+            "scholar_id",
+            "scholar_id_source_url",
+            "scholar_id_verified_at",
+            "orcid",
+            "homepage_url",
+            "notes",
+        ),
         people,
     )
     _write(

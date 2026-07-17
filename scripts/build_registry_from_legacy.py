@@ -134,6 +134,8 @@ def build_registry(legacy_path: Path, output_dir: Path) -> tuple[int, int]:
                 "person_id": person_id,
                 "display_name": display_name,
                 "scholar_id": next(iter(scholar_ids), ""),
+                "scholar_id_source_url": "",
+                "scholar_id_verified_at": "",
                 "orcid": "",
                 "homepage_url": "",
                 "notes": (
@@ -181,7 +183,16 @@ def build_registry(legacy_path: Path, output_dir: Path) -> tuple[int, int]:
     membership_rows.sort(key=lambda row: (row["map_slug"], row["person_id"]))
     _write_csv(
         output_dir / "people.csv",
-        ("person_id", "display_name", "scholar_id", "orcid", "homepage_url", "notes"),
+        (
+            "person_id",
+            "display_name",
+            "scholar_id",
+            "scholar_id_source_url",
+            "scholar_id_verified_at",
+            "orcid",
+            "homepage_url",
+            "notes",
+        ),
         people_rows,
     )
     _write_csv(

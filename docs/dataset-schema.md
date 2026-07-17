@@ -6,9 +6,9 @@ they retain the collection grain while exposing a cleaner work-centric model.
 ## `people`
 
 One row per stable registry identity, including people without a Scholar ID.
-Fields include `person_id`, display name, Scholar ID, ORCID, homepage, notes,
-all retained memberships, included map slugs, observation count, and unique
-work count.
+Fields include `person_id`, display name, Scholar ID, Scholar-ID verification
+source and date, ORCID, homepage, notes, all retained memberships, included map
+slugs, observation count, and unique work count.
 
 ## `profile_publications`
 

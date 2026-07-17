@@ -14,6 +14,8 @@ PEOPLE_COLUMNS = (
     "person_id",
     "display_name",
     "scholar_id",
+    "scholar_id_source_url",
+    "scholar_id_verified_at",
     "orcid",
     "homepage_url",
     "notes",
@@ -61,6 +63,8 @@ class Person:
     person_id: str
     display_name: str
     scholar_id: str
+    scholar_id_source_url: str
+    scholar_id_verified_at: str
     orcid: str
     homepage_url: str
     notes: str
@@ -236,6 +240,25 @@ def load_registry(
                     f"Scholar ID belongs to multiple people: {person.scholar_id}"
                 )
             seen_scholar_ids.add(person.scholar_id)
+        elif person.scholar_id_source_url or person.scholar_id_verified_at:
+            raise ValueError(
+                f"Scholar ID provenance requires a Scholar ID: {person.person_id}"
+            )
+        _validate_https_url(
+            person.scholar_id_source_url,
+            field="scholar_id_source_url",
+        )
+        _validate_date(
+            person.scholar_id_verified_at,
+            field="scholar_id_verified_at",
+        )
+        if bool(person.scholar_id_source_url) != bool(
+            person.scholar_id_verified_at
+        ):
+            raise ValueError(
+                "Scholar ID provenance requires both a source URL and verification "
+                f"date: {person.person_id}"
+            )
         if person.orcid and not ORCID_PATTERN.fullmatch(person.orcid):
             raise ValueError(f"Invalid ORCID for {person.person_id}: {person.orcid!r}")
         _validate_https_url(person.homepage_url, field="homepage_url")

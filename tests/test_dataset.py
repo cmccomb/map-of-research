@@ -13,6 +13,8 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "person_id": "person-one",
                 "display_name": "One Person",
                 "scholar_id": "oneAAAAJ",
+                "scholar_id_source_url": "https://example.test/one",
+                "scholar_id_verified_at": "2026-07-17",
                 "orcid": "",
                 "homepage_url": "",
                 "notes": "",
@@ -82,6 +84,9 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
     assert len(tables["profile_publications"]) == 2
     assert len(tables["authorships"]) == 2
     assert len(tables["works"]) == 1
+    person = tables["people"].set_index("person_id").loc["person-one"]
+    assert person["scholar_id_source_url"] == "https://example.test/one"
+    assert person["scholar_id_verified_at"] == "2026-07-17"
     work = tables["works"].iloc[0]
     assert work["observation_count"] == 2
     assert work["faculty"] == ["One Person", "Two Person"]

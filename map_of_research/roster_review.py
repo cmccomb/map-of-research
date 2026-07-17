@@ -35,8 +35,9 @@ def build_review(*, today: dt.date | None = None) -> str:
         "- Include current faculty, teaching faculty, and emeriti.",
         "- Retain but exclude affiliate, courtesy, visiting, former, and other roles.",
         "- Record new people even when no Google Scholar profile can be verified.",
-        "- Verify Scholar IDs manually or through a faculty-controlled official "
-        "link; never bulk-search Scholar.",
+        "- Verify Scholar IDs through an institutional, faculty-controlled, or "
+        "self-managed public link; never bulk-search Scholar.",
+        "- Record the verification URL and date in `registry/people.csv`.",
         "- After review, update `verified_at` on memberships and `reviewed_at` "
         "in `registry/maps.csv`.",
         "",
@@ -96,7 +97,8 @@ def build_review(*, today: dt.date | None = None) -> str:
             "- [ ] New emeriti were retained with role `emeritus`.",
             "- [ ] Departed faculty were retained with role `former` and excluded.",
             "- [ ] Affiliates and courtesy appointments remain excluded.",
-            "- [ ] Scholar IDs were manually verified; unresolved IDs remain blank.",
+            "- [ ] Scholar IDs have verification URLs and dates; unresolved IDs "
+            "remain blank.",
             "- [ ] Registry tests and a dry-run collection passed.",
             "",
         ]

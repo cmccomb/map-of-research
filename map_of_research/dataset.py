@@ -273,6 +273,8 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "person_id": person.person_id,
                 "display_name": person.display_name,
                 "scholar_id": person.scholar_id,
+                "scholar_id_source_url": person.scholar_id_source_url,
+                "scholar_id_verified_at": person.scholar_id_verified_at,
                 "orcid": person.orcid,
                 "homepage_url": person.homepage_url,
                 "notes": person.notes,

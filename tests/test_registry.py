@@ -16,6 +16,8 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
                 "person_id": "person-byron-yu",
                 "display_name": "Byron Yu",
                 "scholar_id": "Fz3_tukAAAAJ",
+                "scholar_id_source_url": "https://example.test/byron-yu",
+                "scholar_id_verified_at": "2026-07-17",
                 "orcid": "0000-0001-2345-678X",
                 "homepage_url": "https://example.test/byron-yu",
                 "notes": "",
@@ -66,6 +68,10 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
     assert len(registry.memberships) == 3
     assert len(profiles) == 1
     assert profiles[0].display_name == "Byron Yu"
+    assert (
+        profiles[0].person.scholar_id_source_url
+        == "https://example.test/byron-yu"
+    )
     assert profiles[0].map_slugs == ("map-of-bme", "map-of-ece")
     assert map_catalog(registry)["map-of-eng"] == "Engineering"
 
@@ -130,4 +136,36 @@ def test_registry_rejects_role_inclusion_mismatch(tmp_path: Path) -> None:
     )
 
     with pytest.raises(ValueError, match="requires included=False"):
+        load_registry(people_path, memberships_path, maps_path)
+
+
+def test_registry_rejects_scholar_provenance_without_id(tmp_path: Path) -> None:
+    people_path, memberships_path, maps_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-missing-id",
+                "display_name": "Missing ID",
+                "scholar_id": "",
+                "scholar_id_source_url": "https://example.test/profile",
+                "scholar_id_verified_at": "2026-07-17",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-missing-id",
+                "map_slug": "map-of-ece",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "Missing ID",
+                "source_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "verified_at": "2026-07-17",
+            }
+        ],
+    )
+
+    with pytest.raises(ValueError, match="provenance requires a Scholar ID"):
         load_registry(people_path, memberships_path, maps_path)
