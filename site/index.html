@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src 'self' https://huggingface.co; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'"
+    >
+    <meta name="color-scheme" content="dark light">
+    <title>Research map</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/map.css">
+    <script src="assets/map.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Carnegie Mellon University</p>
+        <h1 id="map-title">Research map</h1>
+        <p id="map-status" class="status" role="status">Loading publication map…</p>
+      </div>
+      <a
+        class="dataset-link"
+        href="https://huggingface.co/datasets/ccm/cmu-engineering-publications"
+      >Dataset and provenance</a>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="Map controls">
+        <label>
+          <span>Search titles or faculty</span>
+          <input id="search" type="search" autocomplete="off" placeholder="Search publications">
+        </label>
+        <label>
+          <span>Show group</span>
+          <select id="group-filter">
+            <option value="">All groups</option>
+          </select>
+        </label>
+        <button id="reset-view" type="button">Reset view</button>
+      </section>
+
+      <section class="map-shell" aria-label="Interactive publication map">
+        <canvas id="research-map" tabindex="0">
+          Your browser does not support the canvas element.
+        </canvas>
+        <div id="tooltip" class="tooltip" hidden></div>
+        <div class="map-help">Scroll to zoom · drag to pan · hover for details</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Points are publications positioned from semantic embeddings. Scholar
+        metadata is cached centrally and refreshed conservatively.
+      </p>
+    </footer>
+  </body>
+</html>

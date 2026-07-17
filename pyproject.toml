@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools==83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "map-of-research"
+version = "0.2.0"
+description = "Central data pipeline and static clients for research publication maps"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "Chris McComb"}]
+dependencies = []
+
+[project.optional-dependencies]
+collector = [
+  "pandas==3.0.3",
+  "pyarrow==23.0.1",
+  "scholarly==1.7.11",
+]
+publisher = [
+  "datasets==5.0.0",
+  "numpy==2.5.1",
+  "pandas==3.0.3",
+  "plotly==6.9.0",
+  "pyarrow==23.0.1",
+  "scikit-learn==1.9.0",
+  "sentence-transformers==5.6.0",
+]
+dev = [
+  "pip-audit==2.10.1",
+  "pytest==9.1.1",
+  "ruff==0.15.22",
+]
+
+[project.scripts]
+map-collect = "map_of_research.collector:main"
+map-build-snapshot = "map_of_research.snapshot:build_main"
+map-validate-snapshot = "map_of_research.snapshot:validate_main"
+map-publish-snapshot = "map_of_research.publisher:main"
+
+[project.urls]
+Repository = "https://github.com/cmccomb/map-of-research"
+Dataset = "https://huggingface.co/datasets/ccm/cmu-engineering-publications"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.setuptools.packages.find]
+include = ["map_of_research*"]
