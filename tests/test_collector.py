@@ -32,7 +32,7 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
         memberships.append(
             {
                 "person_id": person_id,
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": name,
@@ -46,10 +46,14 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
 def test_selection_prioritizes_missing_cache_then_oldest_attempt(
     tmp_path: Path,
 ) -> None:
-    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    people_path, memberships_path, departments_path = make_registry(
+        tmp_path / "registry"
+    )
     cache_dir = tmp_path / "authors"
     cache_dir.mkdir()
-    profiles = unique_profiles(load_registry(people_path, memberships_path, maps_path))
+    profiles = unique_profiles(
+        load_registry(people_path, memberships_path, departments_path)
+    )
     atomic_write_json(cache_dir / "betaAAAAJ.json", {})
     state = {
         "schema_version": 1,
@@ -78,7 +82,9 @@ def test_selection_prioritizes_missing_cache_then_oldest_attempt(
 
 
 def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    people_path, memberships_path, departments_path = make_registry(
+        tmp_path / "registry"
+    )
     cache_dir = tmp_path / "authors"
     state_path = tmp_path / "authors.json"
     status_path = tmp_path / "last-collection.json"
@@ -102,7 +108,7 @@ def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
     result = collect_profiles(
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
         cache_dir=cache_dir,
         state_path=state_path,
         status_path=status_path,
@@ -125,7 +131,9 @@ def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
 
 
 def test_successful_collection_writes_atomic_cache_and_state(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    people_path, memberships_path, departments_path = make_registry(
+        tmp_path / "registry"
+    )
     cache_dir = tmp_path / "authors"
     state_path = tmp_path / "authors.json"
     status_path = tmp_path / "last-collection.json"
@@ -142,7 +150,7 @@ def test_successful_collection_writes_atomic_cache_and_state(tmp_path: Path) -> 
     result = collect_profiles(
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
         cache_dir=cache_dir,
         state_path=state_path,
         status_path=status_path,

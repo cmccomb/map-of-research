@@ -1,4 +1,4 @@
-"""Normalized people, map, and membership registry parsing."""
+"""Normalized people, department, and membership registry parsing."""
 
 from __future__ import annotations
 
@@ -22,15 +22,15 @@ PEOPLE_COLUMNS = (
 )
 MEMBERSHIP_COLUMNS = (
     "person_id",
-    "map_slug",
+    "department_id",
     "role",
     "included",
     "legacy_label",
     "source_url",
     "verified_at",
 )
-MAP_COLUMNS = (
-    "map_slug",
+DEPARTMENT_COLUMNS = (
+    "department_id",
     "title",
     "directory_url",
     "reviewed_at",
@@ -46,14 +46,14 @@ KNOWN_ROLES = INCLUDED_ROLES | {
     "visiting",
     "unknown",
 }
-MAP_SLUG_PATTERN = re.compile(r"map-of-[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+DEPARTMENT_ID_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 PERSON_ID_PATTERN = re.compile(r"person-[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 SCHOLAR_ID_PATTERN = re.compile(r"[A-Za-z0-9_-]+\Z")
 ORCID_PATTERN = re.compile(r"(?:https://orcid\.org/)?(\d{4}-\d{4}-\d{4}-[\dX]{4})\Z")
 
 DEFAULT_PEOPLE_PATH = Path("registry/people.csv")
 DEFAULT_MEMBERSHIPS_PATH = Path("registry/memberships.csv")
-DEFAULT_MAPS_PATH = Path("registry/maps.csv")
+DEFAULT_DEPARTMENTS_PATH = Path("registry/departments.csv")
 
 
 @dataclass(frozen=True, order=True)
@@ -71,10 +71,10 @@ class Person:
 
 
 @dataclass(frozen=True, order=True)
-class MapDefinition:
-    """One published map and its authoritative annual-review source."""
+class Department:
+    """One department or program and its authoritative annual-review source."""
 
-    map_slug: str
+    department_id: str
     title: str
     directory_url: str
     reviewed_at: str
@@ -83,10 +83,10 @@ class MapDefinition:
 
 @dataclass(frozen=True, order=True)
 class Membership:
-    """One person's role in one map, including excluded historical roles."""
+    """One person's department role, including excluded historical roles."""
 
     person_id: str
-    map_slug: str
+    department_id: str
     role: str
     included: bool
     legacy_label: str
@@ -96,7 +96,7 @@ class Membership:
 
 @dataclass(frozen=True)
 class AuthorProfile:
-    """One registered Scholar profile and all retained map memberships."""
+    """One registered Scholar profile and all retained department memberships."""
 
     person: Person
     memberships: tuple[Membership, ...]
@@ -114,9 +114,9 @@ class AuthorProfile:
         return self.person.display_name
 
     @property
-    def map_slugs(self) -> tuple[str, ...]:
+    def department_ids(self) -> tuple[str, ...]:
         return tuple(
-            membership.map_slug
+            membership.department_id
             for membership in self.memberships
             if membership.included
         )
@@ -128,15 +128,15 @@ class Registry:
 
     people: tuple[Person, ...]
     memberships: tuple[Membership, ...]
-    maps: tuple[MapDefinition, ...]
+    departments: tuple[Department, ...]
 
     @property
     def people_by_id(self) -> dict[str, Person]:
         return {person.person_id: person for person in self.people}
 
     @property
-    def maps_by_slug(self) -> dict[str, MapDefinition]:
-        return {map_definition.map_slug: map_definition for map_definition in self.maps}
+    def departments_by_id(self) -> dict[str, Department]:
+        return {department.department_id: department for department in self.departments}
 
     def unique_profiles(self, *, included_only: bool = False) -> list[AuthorProfile]:
         """Return registered Scholar profiles, optionally limiting to active scope."""
@@ -153,7 +153,7 @@ class Registry:
             memberships = tuple(
                 sorted(
                     memberships_by_person.get(person.person_id, []),
-                    key=lambda item: (item.map_slug, item.role),
+                    key=lambda item: (item.department_id, item.role),
                 )
             )
             if included_only and not any(item.included for item in memberships):
@@ -166,10 +166,13 @@ class Registry:
             )
         return sorted(profiles, key=lambda profile: profile.scholar_id)
 
-    def map_catalog(self) -> dict[str, str]:
+    def department_catalog(self) -> dict[str, str]:
         return {
-            definition.map_slug: definition.title
-            for definition in sorted(self.maps, key=lambda item: item.map_slug)
+            department.department_id: department.title
+            for department in sorted(
+                self.departments,
+                key=lambda item: item.department_id,
+            )
         }
 
 
@@ -211,7 +214,7 @@ def _validate_date(value: str, *, field: str, required: bool = False) -> None:
 def load_registry(
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
-    maps_path: Path = DEFAULT_MAPS_PATH,
+    departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
 ) -> Registry:
     """Load and cross-validate all normalized registry files."""
 
@@ -252,9 +255,7 @@ def load_registry(
             person.scholar_id_verified_at,
             field="scholar_id_verified_at",
         )
-        if bool(person.scholar_id_source_url) != bool(
-            person.scholar_id_verified_at
-        ):
+        if bool(person.scholar_id_source_url) != bool(person.scholar_id_verified_at):
             raise ValueError(
                 "Scholar ID provenance requires both a source URL and verification "
                 f"date: {person.person_id}"
@@ -265,27 +266,32 @@ def load_registry(
         seen_person_ids.add(person.person_id)
         people.append(person)
 
-    maps: list[MapDefinition] = []
-    seen_map_slugs: set[str] = set()
-    for line_number, row in enumerate(_read_rows(maps_path, MAP_COLUMNS), start=2):
-        definition = MapDefinition(**row)
-        if not MAP_SLUG_PATTERN.fullmatch(definition.map_slug):
+    departments: list[Department] = []
+    seen_department_ids: set[str] = set()
+    for line_number, row in enumerate(
+        _read_rows(departments_path, DEPARTMENT_COLUMNS),
+        start=2,
+    ):
+        department = Department(**row)
+        if not DEPARTMENT_ID_PATTERN.fullmatch(department.department_id):
             raise ValueError(
-                f"Invalid map_slug on {maps_path}:{line_number}: "
-                f"{definition.map_slug!r}"
+                f"Invalid department_id on {departments_path}:{line_number}: "
+                f"{department.department_id!r}"
             )
-        if definition.map_slug in seen_map_slugs:
-            raise ValueError(f"Duplicate map_slug: {definition.map_slug}")
-        if not definition.title:
-            raise ValueError(f"Blank map title on {maps_path}:{line_number}")
+        if department.department_id in seen_department_ids:
+            raise ValueError(f"Duplicate department_id: {department.department_id}")
+        if not department.title:
+            raise ValueError(
+                f"Blank department title on {departments_path}:{line_number}"
+            )
         _validate_https_url(
-            definition.directory_url,
+            department.directory_url,
             field="directory_url",
-            required=definition.map_slug != "map-of-eng",
+            required=True,
         )
-        _validate_date(definition.reviewed_at, field="reviewed_at")
-        seen_map_slugs.add(definition.map_slug)
-        maps.append(definition)
+        _validate_date(department.reviewed_at, field="reviewed_at")
+        seen_department_ids.add(department.department_id)
+        departments.append(department)
 
     memberships: list[Membership] = []
     seen_memberships: set[tuple[str, str, str]] = set()
@@ -301,10 +307,10 @@ def load_registry(
         membership = Membership(included=included_text == "true", **row)
         if membership.person_id not in seen_person_ids:
             raise ValueError(f"Unknown person_id in membership: {membership.person_id}")
-        if membership.map_slug not in seen_map_slugs:
-            raise ValueError(f"Unknown map_slug in membership: {membership.map_slug}")
-        if membership.map_slug == "map-of-eng":
-            raise ValueError("map-of-eng is aggregate-only and cannot have memberships")
+        if membership.department_id not in seen_department_ids:
+            raise ValueError(
+                f"Unknown department_id in membership: {membership.department_id}"
+            )
         if membership.role not in KNOWN_ROLES:
             raise ValueError(f"Unknown registry role: {membership.role!r}")
         expected_included = membership.role in INCLUDED_ROLES
@@ -312,7 +318,11 @@ def load_registry(
             raise ValueError(
                 f"Role {membership.role!r} requires included={expected_included}"
             )
-        identity = (membership.person_id, membership.map_slug, membership.role)
+        identity = (
+            membership.person_id,
+            membership.department_id,
+            membership.role,
+        )
         if identity in seen_memberships:
             raise ValueError(f"Duplicate membership: {identity}")
         _validate_https_url(membership.source_url, field="source_url", required=True)
@@ -320,12 +330,12 @@ def load_registry(
         seen_memberships.add(identity)
         memberships.append(membership)
 
-    if not people or not memberships or not maps:
+    if not people or not memberships or not departments:
         raise ValueError("Normalized registry files cannot be empty")
     return Registry(
         people=tuple(sorted(people)),
         memberships=tuple(sorted(memberships)),
-        maps=tuple(sorted(maps)),
+        departments=tuple(sorted(departments)),
     )
 
 
@@ -337,7 +347,7 @@ def unique_profiles(
     return registry.unique_profiles(included_only=included_only)
 
 
-def map_catalog(registry: Registry) -> dict[str, str]:
-    """Compatibility helper returning map slugs and titles."""
+def department_catalog(registry: Registry) -> dict[str, str]:
+    """Return stable department IDs and display titles."""
 
-    return registry.map_catalog()
+    return registry.department_catalog()

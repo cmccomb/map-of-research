@@ -1,4 +1,4 @@
-"""Publish retained source observations and canonical thin-site artifacts."""
+"""Publish retained source observations and the unified map artifact."""
 
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from typing import Any
 from .dataset import build_dataset_tables
 from .io import atomic_write_json
 from .registry import (
-    DEFAULT_MAPS_PATH,
+    DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
     Registry,
@@ -41,8 +41,10 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 2
-LAYOUT_VERSION = "global-normalized-pca-v2"
+MAP_SCHEMA_VERSION = 3
+LAYOUT_VERSION = "global-publications-pca-v3"
+MAP_ARTIFACT_NAME = "publications.json"
+MAP_TITLE = "CMU Engineering Research"
 STATUS_SCHEMA_VERSION = 2
 DEFAULT_STATUS_PATH = Path("status/last-upload.json")
 STRING_LIST_COLUMNS = frozenset(
@@ -50,9 +52,9 @@ STRING_LIST_COLUMNS = frozenset(
         "author_pub_ids",
         "author_variants",
         "citation_variants",
-        "included_map_slugs",
-        "map_slugs",
-        "map_titles",
+        "included_department_ids",
+        "department_ids",
+        "department_titles",
         "observation_ids",
         "person_ids",
         "scholar_ids",
@@ -166,7 +168,7 @@ def add_global_layout(works: Any) -> Any:
     output["layout_version"] = LAYOUT_VERSION
     output["x"] = math.nan
     output["y"] = math.nan
-    included_mask = output["map_slugs"].apply(lambda value: bool(_as_list(value)))
+    included_mask = output["department_ids"].apply(lambda value: bool(_as_list(value)))
     included = output.loc[included_mask]
     if included.empty:
         raise ValueError("No included works are available for map generation")
@@ -177,7 +179,11 @@ def add_global_layout(works: Any) -> Any:
     if len(matrix) == 1:
         projected = numpy.zeros((1, 2), dtype=numpy.float32)
     else:
-        projected = PCA(n_components=2, svd_solver="full").fit_transform(matrix)
+        projected = PCA(
+            n_components=2,
+            svd_solver="randomized",
+            random_state=0,
+        ).fit_transform(matrix)
         projected -= projected.mean(axis=0, keepdims=True)
         scale = numpy.max(numpy.abs(projected), axis=0)
         scale[scale == 0] = 1.0
@@ -191,53 +197,38 @@ def add_global_layout(works: Any) -> Any:
     return output
 
 
-def _matching_memberships(value: Any, map_slug: str) -> list[dict[str, str]]:
-    matches = []
+def _normalized_memberships(value: Any) -> list[dict[str, str]]:
+    memberships = []
     for item in _as_list(value):
         if not isinstance(item, Mapping):
             raise ValueError("Work membership must be an object")
-        item_slug = str(item.get("map_slug") or "")
-        if map_slug != "map-of-eng" and item_slug != map_slug:
-            continue
-        matches.append(
+        memberships.append(
             {
                 "person_id": str(item.get("person_id") or ""),
                 "display_name": str(item.get("display_name") or ""),
-                "map_slug": item_slug,
-                "map_title": str(item.get("map_title") or ""),
+                "department_id": str(item.get("department_id") or ""),
+                "department_title": str(item.get("department_title") or ""),
                 "role": str(item.get("role") or ""),
             }
         )
-    return matches
+    return memberships
 
 
 def build_map_artifact(
     works: Any,
+    registry: Registry,
     *,
-    map_slug: str,
-    title: str,
     generated_at_utc: str,
 ) -> dict[str, Any]:
-    """Build one work-centric artifact without changing global coordinates."""
+    """Build the full work-centric artifact without changing global coordinates."""
 
     selected_rows: list[tuple[Any, list[dict[str, str]]]] = []
     for row in works.itertuples(index=False):
-        memberships = _matching_memberships(row.memberships, map_slug)
+        memberships = _normalized_memberships(row.memberships)
         if memberships:
             selected_rows.append((row, memberships))
     points = []
     for row, memberships in selected_rows:
-        groups = sorted(
-            {
-                membership["map_title" if map_slug == "map-of-eng" else "display_name"]
-                for membership in memberships
-            },
-            key=str.casefold,
-        )
-        faculty = sorted(
-            {membership["display_name"] for membership in memberships},
-            key=str.casefold,
-        )
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
         points.append(
             {
@@ -246,8 +237,12 @@ def build_map_artifact(
                 "work_id": str(row.work_id),
                 "title": str(row.title),
                 "authors": str(row.authors),
-                "faculty": faculty,
-                "groups": groups,
+                "faculty_ids": sorted(
+                    {membership["person_id"] for membership in memberships}
+                ),
+                "department_ids": sorted(
+                    {membership["department_id"] for membership in memberships}
+                ),
                 "year": None
                 if row.year is None or math.isnan(float(row.year))
                 else int(row.year),
@@ -258,6 +253,67 @@ def build_map_artifact(
                 "observation_count": int(row.observation_count),
             }
         )
+    points.sort(key=lambda point: point["work_id"])
+
+    department_counts: dict[str, int] = {}
+    faculty_counts: dict[str, int] = {}
+    for point in points:
+        for department_id in point["department_ids"]:
+            department_counts[department_id] = (
+                department_counts.get(department_id, 0) + 1
+            )
+        for person_id in point["faculty_ids"]:
+            faculty_counts[person_id] = faculty_counts.get(person_id, 0) + 1
+
+    departments = [
+        {
+            "department_id": department.department_id,
+            "title": department.title,
+            "directory_url": department.directory_url,
+            "reviewed_at": department.reviewed_at,
+            "publication_count": department_counts.get(
+                department.department_id,
+                0,
+            ),
+        }
+        for department in sorted(
+            registry.departments,
+            key=lambda item: item.title.casefold(),
+        )
+    ]
+    memberships_by_person: dict[str, list[dict[str, str]]] = {}
+    for membership in registry.memberships:
+        if not membership.included:
+            continue
+        memberships_by_person.setdefault(membership.person_id, []).append(
+            {
+                "department_id": membership.department_id,
+                "role": membership.role,
+            }
+        )
+    faculty = []
+    ordered_people = sorted(
+        registry.people,
+        key=lambda item: item.display_name.casefold(),
+    )
+    for person in ordered_people:
+        memberships = memberships_by_person.get(person.person_id, [])
+        if not memberships:
+            continue
+        faculty.append(
+            {
+                "person_id": person.person_id,
+                "display_name": person.display_name,
+                "scholar_id": person.scholar_id,
+                "orcid": person.orcid,
+                "homepage_url": person.homepage_url,
+                "memberships": sorted(
+                    memberships,
+                    key=lambda item: (item["department_id"], item["role"]),
+                ),
+                "publication_count": faculty_counts.get(person.person_id, 0),
+            }
+        )
     fetched = [
         str(row.last_fetched_at_utc)
         for row, _ in selected_rows
@@ -266,12 +322,17 @@ def build_map_artifact(
     return {
         "schema_version": MAP_SCHEMA_VERSION,
         "layout_version": LAYOUT_VERSION,
-        "map_slug": map_slug,
-        "title": title,
+        "title": MAP_TITLE,
         "generated_at_utc": generated_at_utc,
         "source_data_oldest_at_utc": min(fetched) if fetched else None,
         "source_data_newest_at_utc": max(fetched) if fetched else None,
         "point_count": len(points),
+        "department_count": len(departments),
+        "faculty_count": len(faculty),
+        "catalogs": {
+            "departments": departments,
+            "faculty": faculty,
+        },
         "points": points,
     }
 
@@ -286,7 +347,6 @@ def _upload_map_artifacts(
 ) -> str:
     from huggingface_hub import HfApi
 
-    catalog = registry.map_catalog()
     with tempfile.TemporaryDirectory(prefix="map-of-research-") as temporary_dir:
         maps_dir = Path(temporary_dir)
         map_manifest: dict[str, Any] = {
@@ -294,25 +354,25 @@ def _upload_map_artifacts(
             "layout_version": LAYOUT_VERSION,
             "generated_at_utc": generated_at_utc,
             "dataset_commits": dict(dataset_commits),
-            "maps": {},
+            "artifact": {},
         }
-        for map_slug, title in catalog.items():
-            artifact = build_map_artifact(
-                works,
-                map_slug=map_slug,
-                title=title,
-                generated_at_utc=generated_at_utc,
-            )
-            artifact_path = maps_dir / f"{map_slug}.json"
-            artifact_path.write_text(
-                json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
-                encoding="utf-8",
-            )
-            map_manifest["maps"][map_slug] = {
-                "title": title,
-                "point_count": artifact["point_count"],
-                "file": artifact_path.name,
-            }
+        artifact = build_map_artifact(
+            works,
+            registry,
+            generated_at_utc=generated_at_utc,
+        )
+        artifact_path = maps_dir / MAP_ARTIFACT_NAME
+        artifact_path.write_text(
+            json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
+            encoding="utf-8",
+        )
+        map_manifest["artifact"] = {
+            "title": artifact["title"],
+            "point_count": artifact["point_count"],
+            "department_count": artifact["department_count"],
+            "faculty_count": artifact["faculty_count"],
+            "file": artifact_path.name,
+        }
         (maps_dir / "manifest.json").write_text(
             json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
@@ -322,7 +382,8 @@ def _upload_map_artifacts(
             repo_type="dataset",
             folder_path=maps_dir,
             path_in_repo="maps",
-            commit_message="Publish work-centric research map artifacts",
+            delete_patterns="*.json",
+            commit_message="Publish unified research map artifact",
         )
     commit_id = getattr(commit, "oid", None)
     if not commit_id:
@@ -356,18 +417,18 @@ def publish_snapshot(
     encoder: Any | None = None,
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
-    maps_path: Path = DEFAULT_MAPS_PATH,
+    departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
-    registry = load_registry(people_path, memberships_path, maps_path)
+    registry = load_registry(people_path, memberships_path, departments_path)
     frame, manifest = validate_snapshot(
         snapshot_path,
         manifest_path,
         max_age_days=max_age_days,
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
     )
     enriched, new_embedding_count = add_embeddings(
         frame,
@@ -408,7 +469,7 @@ def publish_snapshot(
         "profile_publications": len(tables["profile_publications"]),
         "profile_count": int(enriched["scholar_id"].nunique()),
         "new_embedding_count": new_embedding_count,
-        "map_count": len(registry.maps),
+        "map_artifact_count": 1,
         "layout_version": LAYOUT_VERSION,
     }
 
@@ -432,7 +493,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_MEMBERSHIPS_PATH,
     )
-    parser.add_argument("--maps", type=Path, default=DEFAULT_MAPS_PATH)
+    parser.add_argument(
+        "--departments",
+        type=Path,
+        default=DEFAULT_DEPARTMENTS_PATH,
+    )
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     return parser.parse_args(argv)
@@ -465,7 +530,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             max_age_days=args.max_age_days,
             people_path=args.people,
             memberships_path=args.memberships,
-            maps_path=args.maps,
+            departments_path=args.departments,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

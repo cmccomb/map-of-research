@@ -1,26 +1,27 @@
 # Map of Research
 
-`map-of-research` is the source of truth for the CMU engineering publication
-maps. It collects a deliberately small number of public Google Scholar profiles,
-publishes one versioned Hugging Face dataset, and builds browser-ready map
-artifacts for the department sites.
+`map-of-research` is the source of truth for the CMU engineering faculty catalog
+and publication corpus. It collects a deliberately small number of public
+Google Scholar profiles, publishes one versioned Hugging Face dataset, and
+builds one browser-ready artifact for the unified research map.
 
-The department repositories do **not** contact Google Scholar. They are static
-clients of [`ccm/cmu-engineering-publications`](https://huggingface.co/datasets/ccm/cmu-engineering-publications).
+The only visualization repository, `map-of-eng`, does **not** contact Google
+Scholar. It is a static client of
+[`ccm/cmu-engineering-publications`](https://huggingface.co/datasets/ccm/cmu-engineering-publications).
 
 ## Architecture
 
-1. `registry/people.csv`, `memberships.csv`, and `maps.csv` separate stable
-   identity, role history, map inclusion, and official annual-review sources.
+1. `registry/people.csv`, `memberships.csv`, and `departments.csv` separate
+   stable identity, role history, inclusion, and official annual-review sources.
 2. A cache-first collector refreshes at most two unique profiles in a scheduled
    run. It never uses proxies or attempts to bypass a block.
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, reuses existing
    embeddings, and publishes `people`, `works`, `authorships`, and
-   `profile_publications` configs plus precomputed map JSON files.
-5. Each `map-of-*` site fetches its JSON file from the Hub and renders it with a
-   small dependency-free canvas client.
+   `profile_publications` configs plus `maps/publications.json`.
+5. `map-of-eng` fetches that artifact and filters the complete shared layout in
+   the browser; it owns no faculty roster, publication data, or scraper.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
 fetches each unique profile only once, preserves the last good cache on errors,
@@ -38,14 +39,14 @@ its robots policy. The maintained defaults are intentionally conservative:
 - immediate stop after the first Scholar error or block;
 - old data retained when a refresh fails.
 
-Collection can be disabled without affecting the sites: they continue serving
+Collection can be disabled without affecting the site: it continues serving
 the last successfully published dataset.
 
 ## Faculty inclusion and annual review
 
 Maps include faculty, teaching faculty, and emeriti. Affiliate, courtesy,
 visiting, former, and other excluded roles remain in the registry and dataset
-for provenance but do not appear in map artifacts. Missing Scholar IDs remain
+for provenance but do not appear in mapped works. Missing Scholar IDs remain
 blank; they are never guessed by an automated Scholar search.
 
 Every July, a scheduled workflow opens a review issue with each official CMU
@@ -89,9 +90,12 @@ upload workflow.
 
 ## Repository roles
 
-- `map-of-research`: registry, collection, validation, publication, map assets
-- `map-of-eng`: thin all-engineering visualization
-- department `map-of-*` repositories: thin filtered visualizations
+- `map-of-research`: faculty catalog, collection, validation, dataset
+  publication, and the single full-corpus artifact
+- `map-of-eng`: the single static interactive visualization
+
+The legacy department-specific `map-of-*` repositories are archived. Their
+department views now live as filters in `map-of-eng`.
 
 See `status/README.md` for the machine-readable receipts and `SECURITY.md` for
 reporting guidance. The normalized Hub and browser artifact fields are defined

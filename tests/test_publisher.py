@@ -2,6 +2,7 @@ import numpy
 import pandas
 
 import map_of_research.publisher as publisher
+from map_of_research.registry import Department, Membership, Person, Registry
 
 
 def test_embedding_refresh_reuses_existing_vectors(monkeypatch) -> None:
@@ -43,15 +44,15 @@ def work_frame() -> pandas.DataFrame:
                     {
                         "person_id": "person-one",
                         "display_name": "One Person",
-                        "map_slug": "map-of-ece",
-                        "map_title": "Electrical & Computer Engineering",
+                        "department_id": "ece",
+                        "department_title": "Electrical & Computer Engineering",
                         "role": "faculty",
                     },
                     {
                         "person_id": "person-one",
                         "display_name": "One Person",
-                        "map_slug": "map-of-cmu-silicon-valley",
-                        "map_title": "CMU Silicon Valley",
+                        "department_id": "cmu-silicon-valley",
+                        "department_title": "CMU Silicon Valley",
                         "role": "teaching",
                     },
                 ],
@@ -71,34 +72,125 @@ def work_frame() -> pandas.DataFrame:
     )
 
 
-def test_map_artifact_uses_shared_coordinates_and_array_relationships() -> None:
+def registry() -> Registry:
+    return Registry(
+        people=(
+            Person(
+                person_id="person-one",
+                display_name="One Person",
+                scholar_id="ScholarOne",
+                scholar_id_source_url="https://example.test/one",
+                scholar_id_verified_at="2026-07-17",
+                orcid="",
+                homepage_url="https://example.test/one",
+                notes="",
+            ),
+            Person(
+                person_id="person-two",
+                display_name="Two Person",
+                scholar_id="",
+                scholar_id_source_url="",
+                scholar_id_verified_at="",
+                orcid="0000-0000-0000-000X",
+                homepage_url="",
+                notes="No Scholar profile",
+            ),
+        ),
+        memberships=(
+            Membership(
+                person_id="person-one",
+                department_id="ece",
+                role="faculty",
+                included=True,
+                legacy_label="",
+                source_url="https://example.test/ece",
+                verified_at="2026-07-17",
+            ),
+            Membership(
+                person_id="person-one",
+                department_id="cmu-silicon-valley",
+                role="teaching",
+                included=True,
+                legacy_label="",
+                source_url="https://example.test/sv",
+                verified_at="2026-07-17",
+            ),
+            Membership(
+                person_id="person-two",
+                department_id="bme",
+                role="emeritus",
+                included=True,
+                legacy_label="",
+                source_url="https://example.test/bme",
+                verified_at="2026-07-17",
+            ),
+        ),
+        departments=(
+            Department(
+                department_id="bme",
+                title="Biomedical Engineering",
+                directory_url="https://example.test/bme",
+                reviewed_at="2026-07-17",
+                review_notes="Test",
+            ),
+            Department(
+                department_id="cmu-silicon-valley",
+                title="CMU Silicon Valley",
+                directory_url="https://example.test/sv",
+                reviewed_at="2026-07-17",
+                review_notes="Test",
+            ),
+            Department(
+                department_id="ece",
+                title="Electrical & Computer Engineering",
+                directory_url="https://example.test/ece",
+                reviewed_at="2026-07-17",
+                review_notes="Test",
+            ),
+        ),
+    )
+
+
+def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     artifact = publisher.build_map_artifact(
         work_frame(),
-        map_slug="map-of-cmu-silicon-valley",
-        title="CMU Silicon Valley",
+        registry(),
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["schema_version"] == 2
+    assert artifact["schema_version"] == 3
     assert artifact["layout_version"] == publisher.LAYOUT_VERSION
     assert artifact["point_count"] == 1
-    assert artifact["points"][0]["faculty"] == ["One Person"]
-    assert artifact["points"][0]["groups"] == ["One Person"]
+    assert artifact["points"][0]["faculty_ids"] == ["person-one"]
+    assert artifact["points"][0]["department_ids"] == [
+        "cmu-silicon-valley",
+        "ece",
+    ]
     assert artifact["points"][0]["x"] == 0.25
 
 
-def test_engineering_map_groups_by_map_title() -> None:
+def test_map_artifact_catalog_retains_full_included_roster() -> None:
     artifact = publisher.build_map_artifact(
         work_frame(),
-        map_slug="map-of-eng",
-        title="Engineering",
+        registry(),
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["points"][0]["groups"] == [
-        "CMU Silicon Valley",
-        "Electrical & Computer Engineering",
+    assert artifact["department_count"] == 3
+    assert artifact["faculty_count"] == 2
+    assert [item["display_name"] for item in artifact["catalogs"]["faculty"]] == [
+        "One Person",
+        "Two Person",
     ]
+    assert artifact["catalogs"]["faculty"][1]["publication_count"] == 0
+    assert artifact["catalogs"]["faculty"][1]["memberships"] == [
+        {"department_id": "bme", "role": "emeritus"}
+    ]
+    departments = {
+        item["department_id"]: item for item in artifact["catalogs"]["departments"]
+    }
+    assert departments["ece"]["publication_count"] == 1
+    assert departments["bme"]["publication_count"] == 0
 
 
 def test_hub_dataset_preserves_legacy_faculty_string() -> None:
@@ -115,13 +207,16 @@ def test_hub_dataset_preserves_legacy_faculty_string() -> None:
 
 
 def test_empty_map_artifact_is_valid_and_explicit() -> None:
+    frame = work_frame()
+    frame.at[0, "memberships"] = []
     artifact = publisher.build_map_artifact(
-        work_frame(),
-        map_slug="map-of-iii",
-        title="Integrated Innovation Institute",
+        frame,
+        registry(),
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
     assert artifact["point_count"] == 0
     assert artifact["points"] == []
+    assert artifact["department_count"] == 3
+    assert artifact["faculty_count"] == 2
     assert artifact["source_data_newest_at_utc"] is None

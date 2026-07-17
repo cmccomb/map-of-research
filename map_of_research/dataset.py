@@ -116,7 +116,7 @@ def _normalize_memberships(value: Any) -> list[dict[str, Any]]:
             included = included.casefold() == "true"
         memberships.append(
             {
-                "map_slug": _clean_text(item.get("map_slug")),
+                "department_id": _clean_text(item.get("department_id")),
                 "role": _clean_text(item.get("role")),
                 "included": bool(included),
                 "legacy_label": _clean_text(item.get("legacy_label")),
@@ -159,9 +159,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "scholar_id": row.scholar_id,
                 "author_pub_id": row.author_pub_id,
                 "display_name": row.display_name,
-                "map_slugs": sorted(
+                "department_ids": sorted(
                     {
-                        membership["map_slug"]
+                        membership["department_id"]
                         for membership in memberships
                         if membership["included"]
                     }
@@ -172,7 +172,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         )
     authorships = pandas.DataFrame(authorship_rows)
 
-    map_titles = registry.map_catalog()
+    department_titles = registry.department_catalog()
     work_rows: list[dict[str, Any]] = []
     for work_id, group in profile_publications.groupby("work_id", sort=True):
         records = list(group.itertuples(index=False))
@@ -183,19 +183,24 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
             for membership in _normalize_memberships(record.memberships):
                 if not membership["included"]:
                     continue
-                key = (str(record.person_id), membership["map_slug"])
+                key = (str(record.person_id), membership["department_id"])
                 included_memberships[key] = {
                     "person_id": str(record.person_id),
                     "display_name": str(record.display_name),
-                    "map_slug": membership["map_slug"],
-                    "map_title": map_titles[membership["map_slug"]],
+                    "department_id": membership["department_id"],
+                    "department_title": department_titles[membership["department_id"]],
                     "role": membership["role"],
                 }
         memberships = sorted(
             included_memberships.values(),
-            key=lambda item: (item["map_slug"], item["display_name"].casefold()),
+            key=lambda item: (
+                item["department_id"],
+                item["display_name"].casefold(),
+            ),
         )
-        map_slugs = sorted({membership["map_slug"] for membership in memberships})
+        department_ids = sorted(
+            {membership["department_id"] for membership in memberships}
+        )
         years = [record.year for record in records]
         citation_counts = [int(record.citation_count) for record in records]
         fetched = sorted(str(record.fetched_at_utc) for record in records)
@@ -226,8 +231,10 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "source_urls": _variants([record.source_url for record in records]),
                 "person_ids": sorted(people),
                 "faculty": [people[person_id] for person_id in sorted(people)],
-                "map_slugs": map_slugs,
-                "map_titles": [map_titles[map_slug] for map_slug in map_slugs],
+                "department_ids": department_ids,
+                "department_titles": [
+                    department_titles[department_id] for department_id in department_ids
+                ],
                 "memberships": memberships,
                 "scholar_ids": sorted({str(record.scholar_id) for record in records}),
                 "author_pub_ids": sorted(
@@ -253,8 +260,8 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     for membership in registry.memberships:
         memberships_by_person.setdefault(membership.person_id, []).append(
             {
-                "map_slug": membership.map_slug,
-                "map_title": map_titles[membership.map_slug],
+                "department_id": membership.department_id,
+                "department_title": department_titles[membership.department_id],
                 "role": membership.role,
                 "included": membership.included,
                 "legacy_label": membership.legacy_label,
@@ -266,7 +273,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     for person in registry.people:
         memberships = sorted(
             memberships_by_person.get(person.person_id, []),
-            key=lambda item: (item["map_slug"], item["role"]),
+            key=lambda item: (item["department_id"], item["role"]),
         )
         people_rows.append(
             {
@@ -279,9 +286,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "homepage_url": person.homepage_url,
                 "notes": person.notes,
                 "memberships": memberships,
-                "included_map_slugs": sorted(
+                "included_department_ids": sorted(
                     {
-                        membership["map_slug"]
+                        membership["department_id"]
                         for membership in memberships
                         if membership["included"]
                     }

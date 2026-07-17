@@ -64,7 +64,7 @@ jobs:
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --people source/registry/people.csv \
             --memberships source/registry/memberships.csv \
-            --maps source/registry/maps.csv \
+            --departments source/registry/departments.csv \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}

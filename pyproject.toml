@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "map-of-research"
-version = "0.3.0"
-description = "Central data pipeline and static clients for research publication maps"
+version = "0.4.0"
+description = "Faculty catalog and publication pipeline for the CMU research map"
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"

@@ -6,7 +6,7 @@ from tests.registry_helpers import write_registry
 
 
 def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -> None:
-    people_path, memberships_path, maps_path = write_registry(
+    people_path, memberships_path, departments_path = write_registry(
         tmp_path / "registry",
         people=[
             {
@@ -31,7 +31,7 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
         memberships=[
             {
                 "person_id": person_id,
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": person_id,
@@ -41,10 +41,10 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
             for person_id in ("person-one", "person-two")
         ],
     )
-    registry = load_registry(people_path, memberships_path, maps_path)
+    registry = load_registry(people_path, memberships_path, departments_path)
     memberships = [
         {
-            "map_slug": "map-of-ece",
+            "department_id": "ece",
             "role": "faculty",
             "included": True,
             "legacy_label": "Person",
@@ -63,7 +63,7 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "person_id": person_id,
                 "display_name": display_name,
                 "faculty": display_name,
-                "map_slugs": ["map-of-ece"],
+                "department_ids": ["ece"],
                 "memberships": memberships,
                 "author_pub_id": f"{scholar_id}:paper",
                 "title": "The Same Paper!",

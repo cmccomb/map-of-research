@@ -48,10 +48,10 @@ jobs:
         id: registry
         run: |
           mkdir -p snapshot/registry
-          cp source/registry/maps.csv snapshot/registry/maps.csv
+          cp source/registry/departments.csv snapshot/registry/departments.csv
           cp source/registry/memberships.csv snapshot/registry/memberships.csv
           cp source/registry/people.csv snapshot/registry/people.csv
-          rm -f snapshot/registry/faculty.csv
+          rm -f snapshot/registry/faculty.csv snapshot/registry/maps.csv
           if [ -z "$(git -C snapshot status --porcelain -- registry)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else

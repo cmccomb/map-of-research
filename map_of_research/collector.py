@@ -15,7 +15,7 @@ from typing import Any
 
 from .io import atomic_write_json, load_json
 from .registry import (
-    DEFAULT_MAPS_PATH,
+    DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
     AuthorProfile,
@@ -225,7 +225,7 @@ def collect_profiles(
     *,
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
-    maps_path: Path = DEFAULT_MAPS_PATH,
+    departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     state_path: Path = DEFAULT_STATE_PATH,
     status_path: Path = DEFAULT_STATUS_PATH,
@@ -248,9 +248,9 @@ def collect_profiles(
     if request_delay_seconds < 0:
         raise ValueError("request_delay_seconds cannot be negative")
     started_at = now or utc_now()
-    registry = load_registry(people_path, memberships_path, maps_path)
+    registry = load_registry(people_path, memberships_path, departments_path)
     # Retain excluded and historical people in snapshots, but do not spend
-    # Scholar requests refreshing profiles that are outside the published maps.
+    # Scholar requests refreshing profiles outside the included faculty catalog.
     profiles = unique_profiles(registry, included_only=True)
     state = load_collection_state(state_path)
     selected = select_profiles(
@@ -401,7 +401,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_MEMBERSHIPS_PATH,
     )
-    parser.add_argument("--maps", type=Path, default=DEFAULT_MAPS_PATH)
+    parser.add_argument(
+        "--departments",
+        type=Path,
+        default=DEFAULT_DEPARTMENTS_PATH,
+    )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--state-file", type=Path, default=DEFAULT_STATE_PATH)
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
@@ -432,7 +436,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         result = collect_profiles(
             people_path=args.people,
             memberships_path=args.memberships,
-            maps_path=args.maps,
+            departments_path=args.departments,
             cache_dir=args.cache_dir,
             state_path=args.state_file,
             status_path=args.status_file,

@@ -14,26 +14,19 @@ def write_registry(
     *,
     people: list[dict[str, object]],
     memberships: list[dict[str, object]],
-    maps: list[dict[str, object]] | None = None,
+    departments: list[dict[str, object]] | None = None,
 ) -> tuple[Path, Path, Path]:
     root.mkdir(parents=True, exist_ok=True)
-    map_rows = maps or [
+    department_rows = departments or [
         {
-            "map_slug": "map-of-eng",
-            "title": "Engineering",
-            "directory_url": "",
-            "reviewed_at": "2026-07-17",
-            "review_notes": "Aggregate",
-        },
-        {
-            "map_slug": "map-of-ece",
+            "department_id": "ece",
             "title": "Electrical & Computer Engineering",
             "directory_url": "https://www.ece.cmu.edu/directory/faculty.html",
             "reviewed_at": "2026-07-17",
             "review_notes": "Test",
         },
         {
-            "map_slug": "map-of-bme",
+            "department_id": "bme",
             "title": "Biomedical Engineering",
             "directory_url": "https://www.cmu.edu/bme/People/Faculty/",
             "reviewed_at": "2026-07-17",
@@ -42,7 +35,7 @@ def write_registry(
     ]
     people_path = root / "people.csv"
     memberships_path = root / "memberships.csv"
-    maps_path = root / "maps.csv"
+    departments_path = root / "departments.csv"
     _write(
         people_path,
         (
@@ -61,7 +54,7 @@ def write_registry(
         memberships_path,
         (
             "person_id",
-            "map_slug",
+            "department_id",
             "role",
             "included",
             "legacy_label",
@@ -71,8 +64,8 @@ def write_registry(
         memberships,
     )
     _write(
-        maps_path,
-        ("map_slug", "title", "directory_url", "reviewed_at", "review_notes"),
-        map_rows,
+        departments_path,
+        ("department_id", "title", "directory_url", "reviewed_at", "review_notes"),
+        department_rows,
     )
-    return people_path, memberships_path, maps_path
+    return people_path, memberships_path, departments_path

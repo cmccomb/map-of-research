@@ -26,7 +26,7 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
         memberships=[
             {
                 "person_id": "person-alpha",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": "Alpha",
@@ -35,7 +35,7 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
             },
             {
                 "person_id": "person-alpha",
-                "map_slug": "map-of-cmu-silicon-valley",
+                "department_id": "cmu-silicon-valley",
                 "role": "teaching",
                 "included": "true",
                 "legacy_label": "A. Alpha",
@@ -43,23 +43,16 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
                 "verified_at": "2026-07-17",
             },
         ],
-        maps=[
+        departments=[
             {
-                "map_slug": "map-of-eng",
-                "title": "Engineering",
-                "directory_url": "",
-                "reviewed_at": "2026-07-17",
-                "review_notes": "Aggregate",
-            },
-            {
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "title": "ECE",
                 "directory_url": "https://www.ece.cmu.edu/directory/faculty.html",
                 "reviewed_at": "2026-07-17",
                 "review_notes": "",
             },
             {
-                "map_slug": "map-of-cmu-silicon-valley",
+                "department_id": "cmu-silicon-valley",
                 "title": "CMU Silicon Valley",
                 "directory_url": "https://www.sv.cmu.edu/directory/index.html",
                 "reviewed_at": "2026-07-17",
@@ -96,7 +89,9 @@ def write_cache(cache_dir: Path) -> None:
 def test_snapshot_preserves_source_record_and_normalized_memberships(
     tmp_path: Path,
 ) -> None:
-    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    people_path, memberships_path, departments_path = make_registry(
+        tmp_path / "registry"
+    )
     cache_dir = tmp_path / "authors"
     snapshot_path = tmp_path / "snapshot.parquet"
     manifest_path = tmp_path / "snapshot.manifest.json"
@@ -106,7 +101,7 @@ def test_snapshot_preserves_source_record_and_normalized_memberships(
     manifest = build_snapshot(
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
         cache_dir=cache_dir,
         snapshot_path=snapshot_path,
         manifest_path=manifest_path,
@@ -118,15 +113,15 @@ def test_snapshot_preserves_source_record_and_normalized_memberships(
         now=NOW,
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
     )
 
     assert manifest == validated_manifest
     assert len(frame) == 1
     assert frame.loc[0, "person_id"] == "person-alpha"
-    assert set(frame.loc[0, "map_slugs"]) == {
-        "map-of-ece",
-        "map-of-cmu-silicon-valley",
+    assert set(frame.loc[0, "department_ids"]) == {
+        "ece",
+        "cmu-silicon-valley",
     }
     assert len(frame.loc[0, "memberships"]) == 2
     assert frame.loc[0, "year"] == 2025
@@ -135,7 +130,9 @@ def test_snapshot_preserves_source_record_and_normalized_memberships(
 
 
 def test_snapshot_validation_rejects_checksum_mismatch(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    people_path, memberships_path, departments_path = make_registry(
+        tmp_path / "registry"
+    )
     cache_dir = tmp_path / "authors"
     snapshot_path = tmp_path / "snapshot.parquet"
     manifest_path = tmp_path / "snapshot.manifest.json"
@@ -144,7 +141,7 @@ def test_snapshot_validation_rejects_checksum_mismatch(tmp_path: Path) -> None:
     build_snapshot(
         people_path=people_path,
         memberships_path=memberships_path,
-        maps_path=maps_path,
+        departments_path=departments_path,
         cache_dir=cache_dir,
         snapshot_path=snapshot_path,
         manifest_path=manifest_path,
@@ -160,5 +157,5 @@ def test_snapshot_validation_rejects_checksum_mismatch(tmp_path: Path) -> None:
             now=NOW,
             people_path=people_path,
             memberships_path=memberships_path,
-            maps_path=maps_path,
+            departments_path=departments_path,
         )

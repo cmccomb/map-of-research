@@ -2,14 +2,14 @@ from pathlib import Path
 
 import pytest
 
-from map_of_research.registry import load_registry, map_catalog, unique_profiles
+from map_of_research.registry import department_catalog, load_registry, unique_profiles
 from tests.registry_helpers import write_registry
 
 
 def test_registry_collapses_cross_appointments_with_stable_identity(
     tmp_path: Path,
 ) -> None:
-    people_path, memberships_path, maps_path = write_registry(
+    people_path, memberships_path, departments_path = write_registry(
         tmp_path,
         people=[
             {
@@ -34,7 +34,7 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
         memberships=[
             {
                 "person_id": "person-byron-yu",
-                "map_slug": "map-of-bme",
+                "department_id": "bme",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": "BYu",
@@ -43,7 +43,7 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
             },
             {
                 "person_id": "person-byron-yu",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": "Yu",
@@ -52,7 +52,7 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
             },
             {
                 "person_id": "person-missing-id",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "teaching",
                 "included": "true",
                 "legacy_label": "Missing ID",
@@ -62,22 +62,19 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
         ],
     )
 
-    registry = load_registry(people_path, memberships_path, maps_path)
+    registry = load_registry(people_path, memberships_path, departments_path)
     profiles = unique_profiles(registry)
 
     assert len(registry.memberships) == 3
     assert len(profiles) == 1
     assert profiles[0].display_name == "Byron Yu"
-    assert (
-        profiles[0].person.scholar_id_source_url
-        == "https://example.test/byron-yu"
-    )
-    assert profiles[0].map_slugs == ("map-of-bme", "map-of-ece")
-    assert map_catalog(registry)["map-of-eng"] == "Engineering"
+    assert profiles[0].person.scholar_id_source_url == "https://example.test/byron-yu"
+    assert profiles[0].department_ids == ("bme", "ece")
+    assert department_catalog(registry)["ece"] == "Electrical & Computer Engineering"
 
 
 def test_registry_retains_but_excludes_affiliates(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = write_registry(
+    people_path, memberships_path, departments_path = write_registry(
         tmp_path,
         people=[
             {
@@ -92,7 +89,7 @@ def test_registry_retains_but_excludes_affiliates(tmp_path: Path) -> None:
         memberships=[
             {
                 "person_id": "person-affiliate",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "affiliate",
                 "included": "false",
                 "legacy_label": "Affiliate",
@@ -102,15 +99,15 @@ def test_registry_retains_but_excludes_affiliates(tmp_path: Path) -> None:
         ],
     )
 
-    registry = load_registry(people_path, memberships_path, maps_path)
+    registry = load_registry(people_path, memberships_path, departments_path)
 
     assert registry.memberships[0].included is False
-    assert registry.unique_profiles()[0].map_slugs == ()
+    assert registry.unique_profiles()[0].department_ids == ()
     assert registry.unique_profiles(included_only=True) == []
 
 
 def test_registry_rejects_role_inclusion_mismatch(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = write_registry(
+    people_path, memberships_path, departments_path = write_registry(
         tmp_path,
         people=[
             {
@@ -125,7 +122,7 @@ def test_registry_rejects_role_inclusion_mismatch(tmp_path: Path) -> None:
         memberships=[
             {
                 "person_id": "person-affiliate",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "affiliate",
                 "included": "true",
                 "legacy_label": "Affiliate",
@@ -136,11 +133,11 @@ def test_registry_rejects_role_inclusion_mismatch(tmp_path: Path) -> None:
     )
 
     with pytest.raises(ValueError, match="requires included=False"):
-        load_registry(people_path, memberships_path, maps_path)
+        load_registry(people_path, memberships_path, departments_path)
 
 
 def test_registry_rejects_scholar_provenance_without_id(tmp_path: Path) -> None:
-    people_path, memberships_path, maps_path = write_registry(
+    people_path, memberships_path, departments_path = write_registry(
         tmp_path,
         people=[
             {
@@ -157,7 +154,7 @@ def test_registry_rejects_scholar_provenance_without_id(tmp_path: Path) -> None:
         memberships=[
             {
                 "person_id": "person-missing-id",
-                "map_slug": "map-of-ece",
+                "department_id": "ece",
                 "role": "faculty",
                 "included": "true",
                 "legacy_label": "Missing ID",
@@ -168,4 +165,4 @@ def test_registry_rejects_scholar_provenance_without_id(tmp_path: Path) -> None:
     )
 
     with pytest.raises(ValueError, match="provenance requires a Scholar ID"):
-        load_registry(people_path, memberships_path, maps_path)
+        load_registry(people_path, memberships_path, departments_path)

@@ -16,13 +16,13 @@ def build_review(*, today: dt.date | None = None) -> str:
     registry = load_registry()
     review_date = today or dt.datetime.now(dt.UTC).date()
     people = registry.people_by_id
-    memberships_by_map = {
-        definition.map_slug: [
+    memberships_by_department = {
+        department.department_id: [
             membership
             for membership in registry.memberships
-            if membership.map_slug == definition.map_slug
+            if membership.department_id == department.department_id
         ]
-        for definition in registry.maps
+        for department in registry.departments
     }
     lines = [
         f"# Annual faculty roster review — {review_date.year}",
@@ -39,18 +39,16 @@ def build_review(*, today: dt.date | None = None) -> str:
         "self-managed public link; never bulk-search Scholar.",
         "- Record the verification URL and date in `registry/people.csv`.",
         "- After review, update `verified_at` on memberships and `reviewed_at` "
-        "in `registry/maps.csv`.",
+        "in `registry/departments.csv`.",
         "",
-        "## Map checklist",
+        "## Department checklist",
         "",
-        "| Done | Map | Included | Retained/excluded | Missing Scholar ID | "
-        "Last map review | Official directory |",
+        "| Done | Department or program | Included | Retained/excluded | "
+        "Missing Scholar ID | Last review | Official directory |",
         "| --- | --- | ---: | ---: | ---: | --- | --- |",
     ]
-    for definition in registry.maps:
-        if definition.map_slug == "map-of-eng":
-            continue
-        memberships = memberships_by_map[definition.map_slug]
+    for department in registry.departments:
+        memberships = memberships_by_department[department.department_id]
         included = [membership for membership in memberships if membership.included]
         excluded = [membership for membership in memberships if not membership.included]
         missing_ids = sum(
@@ -58,9 +56,9 @@ def build_review(*, today: dt.date | None = None) -> str:
         )
         lines.append(
             "| [ ] | "
-            f"{definition.title} | {len(included)} | {len(excluded)} | {missing_ids} | "
-            f"{definition.reviewed_at or 'Never'} | "
-            f"[Open directory]({definition.directory_url}) |"
+            f"{department.title} | {len(included)} | {len(excluded)} | "
+            f"{missing_ids} | {department.reviewed_at or 'Never'} | "
+            f"[Open directory]({department.directory_url}) |"
         )
 
     lines.extend(["", "## Current role summary", ""])
