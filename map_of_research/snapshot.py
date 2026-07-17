@@ -14,11 +14,17 @@ from typing import Any
 
 from .collector import CACHE_SCHEMA_VERSION
 from .io import atomic_write_json, load_json, sha256_file
-from .registry import AuthorProfile, load_registry, unique_profiles
+from .registry import (
+    DEFAULT_MAPS_PATH,
+    DEFAULT_MEMBERSHIPS_PATH,
+    DEFAULT_PEOPLE_PATH,
+    AuthorProfile,
+    load_registry,
+    unique_profiles,
+)
 
-SNAPSHOT_SCHEMA_VERSION = 2
+SNAPSHOT_SCHEMA_VERSION = 3
 MANIFEST_SCHEMA_VERSION = 1
-DEFAULT_REGISTRY_PATH = Path("registry/faculty.csv")
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_SNAPSHOT_PATH = Path("snapshots/cmu-engineering-publications.parquet")
 DEFAULT_MANIFEST_PATH = Path(
@@ -27,6 +33,8 @@ DEFAULT_MANIFEST_PATH = Path(
 DEFAULT_MAX_AGE_DAYS = 14
 REQUIRED_COLUMNS = {
     "scholar_id",
+    "person_id",
+    "display_name",
     "faculty",
     "map_slugs",
     "memberships",
@@ -38,6 +46,7 @@ REQUIRED_COLUMNS = {
     "citation",
     "citation_count",
     "source_url",
+    "source_record_json",
     "fetched_at_utc",
 }
 
@@ -60,12 +69,15 @@ def _citation_count(value: Any) -> int:
         return 0
 
 
-def _memberships(profile: AuthorProfile) -> list[dict[str, str]]:
+def _memberships(profile: AuthorProfile) -> list[dict[str, Any]]:
     return [
         {
             "map_slug": membership.map_slug,
-            "department": membership.department,
-            "faculty": membership.faculty,
+            "role": membership.role,
+            "included": membership.included,
+            "legacy_label": membership.legacy_label,
+            "source_url": membership.source_url,
+            "verified_at": membership.verified_at,
         }
         for membership in profile.memberships
     ]
@@ -87,6 +99,8 @@ def _publication_row(
     ).strip()
     return {
         "scholar_id": profile.scholar_id,
+        "person_id": profile.person_id,
+        "display_name": profile.display_name,
         "faculty": profile.display_name,
         "map_slugs": list(profile.map_slugs),
         "memberships": _memberships(profile),
@@ -98,8 +112,24 @@ def _publication_row(
         "citation": citation,
         "citation_count": _citation_count(publication.get("num_citations")),
         "source_url": str(publication.get("pub_url") or "").strip(),
+        "source_record_json": json.dumps(
+            dict(publication),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        ),
         "fetched_at_utc": fetched_at_utc,
     }
+
+
+def _registry_sha256(paths: Sequence[Path]) -> str:
+    digest = hashlib.sha256()
+    for path in sorted(paths, key=lambda item: item.name):
+        digest.update(path.name.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(path.read_bytes())
+        digest.update(b"\0")
+    return digest.hexdigest()
 
 
 def _load_profile_cache(path: Path, profile: AuthorProfile) -> dict[str, Any]:
@@ -139,7 +169,9 @@ def _validate_frame(frame: Any) -> None:
 
 def build_snapshot(
     *,
-    registry_path: Path = DEFAULT_REGISTRY_PATH,
+    people_path: Path = DEFAULT_PEOPLE_PATH,
+    memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
+    maps_path: Path = DEFAULT_MAPS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
@@ -150,8 +182,8 @@ def build_snapshot(
     import pandas
 
     created_at = now or dt.datetime.now(dt.UTC)
-    memberships = load_registry(registry_path)
-    profiles = unique_profiles(memberships)
+    registry = load_registry(people_path, memberships_path, maps_path)
+    profiles = unique_profiles(registry)
     rows: list[dict[str, Any]] = []
     cached_profile_ids: list[str] = []
     for profile in profiles:
@@ -174,6 +206,7 @@ def build_snapshot(
 
     frame = pandas.DataFrame(rows)
     _validate_frame(frame)
+    frame["year"] = frame["year"].astype("Int64")
     frame.sort_values(
         ["scholar_id", "title", "author_pub_id"],
         key=lambda column: column.astype(str).str.casefold(),
@@ -202,9 +235,11 @@ def build_snapshot(
         "created_at_utc": created_at.astimezone(dt.UTC).isoformat(),
         "snapshot_file": snapshot_path.name,
         "snapshot_sha256": sha256_file(snapshot_path),
-        "registry_sha256": sha256_file(registry_path),
+        "registry_sha256": _registry_sha256((people_path, memberships_path, maps_path)),
+        "registry_files": [people_path.name, memberships_path.name, maps_path.name],
         "publication_rows": len(frame),
-        "registry_memberships": len(memberships),
+        "registry_people": len(registry.people),
+        "registry_memberships": len(registry.memberships),
         "registry_profiles": len(profiles),
         "cached_profiles": len(cached_profile_ids),
         "cached_profile_ids_sha256": hashlib.sha256(
@@ -221,6 +256,9 @@ def validate_snapshot(
     *,
     max_age_days: int = DEFAULT_MAX_AGE_DAYS,
     now: dt.datetime | None = None,
+    people_path: Path = DEFAULT_PEOPLE_PATH,
+    memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
+    maps_path: Path = DEFAULT_MAPS_PATH,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -239,6 +277,7 @@ def validate_snapshot(
         "publication_rows",
         "registry_profiles",
         "cached_profiles",
+        "registry_sha256",
     }
     missing = required_manifest_fields.difference(manifest)
     if missing:
@@ -253,6 +292,11 @@ def validate_snapshot(
         raise ValueError("Snapshot filename does not match the manifest")
     if sha256_file(snapshot_path) != manifest["snapshot_sha256"]:
         raise ValueError("Snapshot checksum does not match the manifest")
+    if (
+        _registry_sha256((people_path, memberships_path, maps_path))
+        != manifest["registry_sha256"]
+    ):
+        raise ValueError("Registry files do not match the snapshot manifest")
 
     created_at = dt.datetime.fromisoformat(str(manifest["created_at_utc"]))
     if created_at.tzinfo is None:
@@ -278,7 +322,13 @@ def validate_snapshot(
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Build a normalized raw snapshot")
-    parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY_PATH)
+    parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
+    parser.add_argument(
+        "--memberships",
+        type=Path,
+        default=DEFAULT_MEMBERSHIPS_PATH,
+    )
+    parser.add_argument("--maps", type=Path, default=DEFAULT_MAPS_PATH)
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
@@ -288,7 +338,9 @@ def _build_parser() -> argparse.ArgumentParser:
 def build_main(argv: Sequence[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
     manifest = build_snapshot(
-        registry_path=args.registry,
+        people_path=args.people,
+        memberships_path=args.memberships,
+        maps_path=args.maps,
         cache_dir=args.cache_dir,
         snapshot_path=args.snapshot,
         manifest_path=args.manifest,
@@ -301,12 +353,22 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Validate a raw snapshot")
     parser.add_argument("--snapshot", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
+    parser.add_argument(
+        "--memberships",
+        type=Path,
+        default=DEFAULT_MEMBERSHIPS_PATH,
+    )
+    parser.add_argument("--maps", type=Path, default=DEFAULT_MAPS_PATH)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,
         args.manifest,
         max_age_days=args.max_age_days,
+        people_path=args.people,
+        memberships_path=args.memberships,
+        maps_path=args.maps,
     )
     print(json.dumps(manifest, sort_keys=True))
     return 0

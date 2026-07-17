@@ -20,13 +20,9 @@ def test_embedding_refresh_reuses_existing_vectors(monkeypatch) -> None:
     class Encoder:
         def encode(self, titles, **kwargs):
             assert titles == ["New"]
+            assert kwargs["normalize_embeddings"] is True
             return numpy.ones((1, 768), dtype=numpy.float32)
 
-    frame["map_slugs"] = [["map-of-ece"], ["map-of-ece"]]
-    frame["memberships"] = [
-        [{"map_slug": "map-of-ece", "department": "ECE", "faculty": "A"}],
-        [{"map_slug": "map-of-ece", "department": "ECE", "faculty": "B"}],
-    ]
     enriched, new_count = publisher.add_embeddings(
         frame,
         hf_token="test",
@@ -38,70 +34,94 @@ def test_embedding_refresh_reuses_existing_vectors(monkeypatch) -> None:
     assert enriched.loc[1, "embedding"] == [1.0] * 768
 
 
-def test_map_artifact_expands_only_requested_membership() -> None:
-    frame = pandas.DataFrame(
+def work_frame() -> pandas.DataFrame:
+    return pandas.DataFrame(
         [
             {
-                "faculty": "Canonical Name",
+                "work_id": "work-one",
                 "memberships": [
                     {
+                        "person_id": "person-one",
+                        "display_name": "One Person",
                         "map_slug": "map-of-ece",
-                        "department": "ECE",
-                        "faculty": "ECE Label",
+                        "map_title": "Electrical & Computer Engineering",
+                        "role": "faculty",
                     },
                     {
+                        "person_id": "person-one",
+                        "display_name": "One Person",
                         "map_slug": "map-of-cmu-silicon-valley",
-                        "department": "CMU Silicon Valley",
-                        "faculty": "SV Label",
+                        "map_title": "CMU Silicon Valley",
+                        "role": "teaching",
                     },
                 ],
-                "embedding": [0.0] * 768,
+                "x": 0.25,
+                "y": -0.5,
                 "title": "A Paper",
+                "authors": "A. Author and B. Author",
                 "year": 2025,
+                "venue": "A Journal",
                 "citation_count": 7,
-                "source_url": "https://example.test/paper",
+                "doi": "10.1000/test",
+                "source_urls": ["https://example.test/paper"],
+                "observation_count": 2,
+                "last_fetched_at_utc": "2026-01-01T00:00:00+00:00",
             }
         ]
     )
 
+
+def test_map_artifact_uses_shared_coordinates_and_array_relationships() -> None:
     artifact = publisher.build_map_artifact(
-        frame,
+        work_frame(),
         map_slug="map-of-cmu-silicon-valley",
         title="CMU Silicon Valley",
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
+    assert artifact["schema_version"] == 2
+    assert artifact["layout_version"] == publisher.LAYOUT_VERSION
     assert artifact["point_count"] == 1
-    assert artifact["points"][0]["faculty"] == "SV Label"
-    assert artifact["points"][0]["group"] == "SV Label"
+    assert artifact["points"][0]["faculty"] == ["One Person"]
+    assert artifact["points"][0]["groups"] == ["One Person"]
+    assert artifact["points"][0]["x"] == 0.25
 
 
-def test_map_artifact_handles_missing_year() -> None:
-    frame = pandas.DataFrame(
-        [
-            {
-                "faculty": "A",
-                "memberships": [
-                    {
-                        "map_slug": "map-of-ece",
-                        "department": "ECE",
-                        "faculty": "A",
-                    }
-                ],
-                "embedding": [0.0] * 768,
-                "title": "Undated",
-                "year": numpy.nan,
-                "citation_count": 0,
-                "source_url": "",
-            }
-        ]
-    )
-
+def test_engineering_map_groups_by_map_title() -> None:
     artifact = publisher.build_map_artifact(
-        frame,
-        map_slug="map-of-ece",
-        title="ECE",
+        work_frame(),
+        map_slug="map-of-eng",
+        title="Engineering",
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["points"][0]["year"] is None
+    assert artifact["points"][0]["groups"] == [
+        "CMU Silicon Valley",
+        "Electrical & Computer Engineering",
+    ]
+
+
+def test_hub_dataset_preserves_legacy_faculty_string() -> None:
+    frame = pandas.DataFrame(
+        {
+            "faculty": ["Legacy label"],
+            "embedding": [[0.0] * publisher.EMBEDDING_DIMENSION],
+        }
+    )
+
+    dataset = publisher._to_hub_dataset(frame)
+
+    assert dataset[0]["faculty"] == "Legacy label"
+
+
+def test_empty_map_artifact_is_valid_and_explicit() -> None:
+    artifact = publisher.build_map_artifact(
+        work_frame(),
+        map_slug="map-of-iii",
+        title="Integrated Innovation Institute",
+        generated_at_utc="2026-07-17T12:00:00+00:00",
+    )
+
+    assert artifact["point_count"] == 0
+    assert artifact["points"] == []
+    assert artifact["source_data_newest_at_utc"] is None

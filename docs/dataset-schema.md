@@ -1,36 +1,49 @@
 # Dataset and artifact schema
 
-The normalized Hugging Face config is named `publications`. It intentionally
-differs from the legacy `default` config.
+The Hugging Face repository contains four schema-v3 configurations. Together
+they retain the collection grain while exposing a cleaner work-centric model.
 
-Each row represents one publication listed on one unique Scholar profile. A
-cross-appointed faculty member still has one row per profile publication; their
-site memberships are nested rather than duplicated.
+## `people`
 
-| Field | Type | Meaning |
-| --- | --- | --- |
-| `scholar_id` | string | Public profile identifier from the registry |
-| `faculty` | string | Canonical display label |
-| `map_slugs` | list[string] | Machine-readable map memberships |
-| `memberships` | list[struct] | Per-map slug, department, and faculty label |
-| `author_pub_id` | string | Scholar's profile-publication identifier |
-| `title` | string | Publication title |
-| `authors` | string | Author text reported by the profile |
-| `year` | nullable integer | Parsed publication year |
-| `venue` | string | Best available venue text |
-| `citation` | string | Original citation text when present |
-| `citation_count` | non-negative integer | Citation count at collection time |
-| `source_url` | string | Publication URL when present |
-| `fetched_at_utc` | timestamp string | Time that profile cache was refreshed |
-| `embedding` | list[float32] | 768-dimensional pinned MPNet embedding |
+One row per stable registry identity, including people without a Scholar ID.
+Fields include `person_id`, display name, Scholar ID, ORCID, homepage, notes,
+all retained memberships, included map slugs, observation count, and unique
+work count.
 
-The publisher also writes `maps/<map-slug>.json` and `maps/manifest.json` to the
-dataset repository. Map artifacts contain only the browser-facing fields and
-deterministic two-dimensional PCA coordinates. Department artifacts expand the
-matching membership label; `map-of-eng` uses the canonical faculty label and
-one primary department per profile publication.
+## `profile_publications`
 
-The raw automation-branch Parquet snapshot omits embeddings. Its manifest binds
-the file checksum, schema version, registry checksum, row count, profile count,
-and creation time. Publication is rejected if any of those checks fail or the
-snapshot is stale.
+One row per publication observation on one Scholar profile. This is the
+lossless analytical source. It retains the original profile-publication ID,
+parsed bibliographic fields, citation count at collection time, complete
+normalized source record as JSON, fetched timestamp, memberships, work match
+method, and title embedding.
+
+## `works`
+
+One canonical work derived conservatively from the observations. DOI is used
+when present; otherwise an exact normalized title and year are used. Undated
+records without a DOI remain profile-specific to avoid unsafe merges.
+
+The table retains field variants, all source observation IDs, profile IDs,
+faculty relationships, source URLs, first and last observation timestamps,
+match method, observation count, embedding, and the shared global map
+coordinates. Citation count is the maximum retained source observation, not a
+sum across faculty profiles.
+
+## `authorships`
+
+One reversible relationship between a canonical work and the registered person
+whose Scholar profile supplied the observation. It carries the work, person,
+observation and profile-publication IDs plus every retained map membership and
+fetch timestamp.
+
+## Browser artifacts
+
+`maps/<map-slug>.json` uses schema version 2. Every point represents one work
+and contains the shared global coordinates, work ID, title, author text,
+associated CMU faculty array, filter group array, year, venue, citation count,
+DOI, first available source URL, and source observation count.
+
+Artifacts report both generation time and the oldest/newest underlying profile
+refresh timestamps. Sites display source freshness rather than implying that
+an artifact upload refreshed every Scholar profile.

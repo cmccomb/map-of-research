@@ -14,13 +14,19 @@ from pathlib import Path
 from typing import Any
 
 from .io import atomic_write_json, load_json
-from .registry import AuthorProfile, load_registry, unique_profiles
+from .registry import (
+    DEFAULT_MAPS_PATH,
+    DEFAULT_MEMBERSHIPS_PATH,
+    DEFAULT_PEOPLE_PATH,
+    AuthorProfile,
+    load_registry,
+    unique_profiles,
+)
 
 LOGGER = logging.getLogger(__name__)
 CACHE_SCHEMA_VERSION = 1
 STATE_SCHEMA_VERSION = 1
 STATUS_SCHEMA_VERSION = 1
-DEFAULT_REGISTRY_PATH = Path("registry/faculty.csv")
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_STATE_PATH = Path("status/authors.json")
 DEFAULT_STATUS_PATH = Path("status/last-collection.json")
@@ -217,7 +223,9 @@ def _workflow_url() -> str | None:
 
 def collect_profiles(
     *,
-    registry_path: Path = DEFAULT_REGISTRY_PATH,
+    people_path: Path = DEFAULT_PEOPLE_PATH,
+    memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
+    maps_path: Path = DEFAULT_MAPS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     state_path: Path = DEFAULT_STATE_PATH,
     status_path: Path = DEFAULT_STATUS_PATH,
@@ -240,8 +248,10 @@ def collect_profiles(
     if request_delay_seconds < 0:
         raise ValueError("request_delay_seconds cannot be negative")
     started_at = now or utc_now()
-    memberships = load_registry(registry_path)
-    profiles = unique_profiles(memberships)
+    registry = load_registry(people_path, memberships_path, maps_path)
+    # Retain excluded and historical people in snapshots, but do not spend
+    # Scholar requests refreshing profiles that are outside the published maps.
+    profiles = unique_profiles(registry, included_only=True)
     state = load_collection_state(state_path)
     selected = select_profiles(
         profiles,
@@ -260,7 +270,8 @@ def collect_profiles(
         "started_at_utc": _isoformat(started_at),
         "finished_at_utc": None,
         "workflow_url": _workflow_url(),
-        "registry_memberships": len(memberships),
+        "registry_people": len(registry.people),
+        "registry_memberships": len(registry.memberships),
         "unique_profiles": len(profiles),
         "selected_profile_ids": list(selected_ids),
         "refreshed_profile_ids": [],
@@ -384,7 +395,13 @@ def scrape_faculty_data() -> CollectionResult:
 
 def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY_PATH)
+    parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
+    parser.add_argument(
+        "--memberships",
+        type=Path,
+        default=DEFAULT_MEMBERSHIPS_PATH,
+    )
+    parser.add_argument("--maps", type=Path, default=DEFAULT_MAPS_PATH)
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--state-file", type=Path, default=DEFAULT_STATE_PATH)
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
@@ -413,7 +430,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = _parse_args(argv)
     try:
         result = collect_profiles(
-            registry_path=args.registry,
+            people_path=args.people,
+            memberships_path=args.memberships,
+            maps_path=args.maps,
             cache_dir=args.cache_dir,
             state_path=args.state_file,
             status_path=args.status_file,

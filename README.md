@@ -10,13 +10,15 @@ clients of [`ccm/cmu-engineering-publications`](https://huggingface.co/datasets/
 
 ## Architecture
 
-1. `registry/faculty.csv` records map membership and Scholar IDs in one place.
+1. `registry/people.csv`, `memberships.csv`, and `maps.csv` separate stable
+   identity, role history, map inclusion, and official annual-review sources.
 2. A cache-first collector refreshes at most two unique profiles in a scheduled
    run. It never uses proxies or attempts to bypass a block.
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, reuses existing
-   embeddings, and uploads the dataset plus precomputed map JSON files.
+   embeddings, and publishes `people`, `works`, `authorships`, and
+   `profile_publications` configs plus precomputed map JSON files.
 5. Each `map-of-*` site fetches its JSON file from the Hub and renders it with a
    small dependency-free canvas client.
 
@@ -38,6 +40,25 @@ its robots policy. The maintained defaults are intentionally conservative:
 
 Collection can be disabled without affecting the sites: they continue serving
 the last successfully published dataset.
+
+## Faculty inclusion and annual review
+
+Maps include faculty, teaching faculty, and emeriti. Affiliate, courtesy,
+visiting, former, and other excluded roles remain in the registry and dataset
+for provenance but do not appear in map artifacts. Missing Scholar IDs remain
+blank; they are never guessed by an automated Scholar search.
+
+Every July, a scheduled workflow opens a review issue with each official CMU
+directory, role counts, unresolved IDs, and a completion checklist. The review
+is deliberately human-verified and never changes registry rows automatically.
+
+## Dataset grain
+
+The lossless `profile_publications` config retains every collected profile
+observation and its normalized source record. `works` conservatively collapses
+observations by DOI or exact normalized title and year; `authorships` makes that
+derivation reversible. `people` includes registered people even when they have
+no verified Scholar profile or publications.
 
 ## Local development
 

@@ -3,6 +3,7 @@ from pathlib import Path
 
 from map_of_research.collector import normalize_publications
 from scripts import migrate_legacy_cache
+from tests.registry_helpers import write_registry
 
 
 def test_normalizer_accepts_flattened_legacy_publications() -> None:
@@ -34,10 +35,29 @@ def test_migration_provenance_is_relative(tmp_path: Path, monkeypatch) -> None:
     repos_root = tmp_path / "repos"
     source_path = repos_root / "map-of-ece/data/Alpha.json"
     source_path.parent.mkdir(parents=True)
-    registry_path = tmp_path / "faculty.csv"
-    registry_path.write_text(
-        "map_slug,department,faculty,scholar_id\nmap-of-ece,ECE,Alpha,alphaAAAAJ\n",
-        encoding="utf-8",
+    people_path, memberships_path, maps_path = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-alpha",
+                "display_name": "Alpha Person",
+                "scholar_id": "alphaAAAAJ",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-alpha",
+                "map_slug": "map-of-ece",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "Alpha",
+                "source_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "verified_at": "2026-07-17",
+            }
+        ],
     )
     monkeypatch.setattr(
         migrate_legacy_cache,
@@ -58,7 +78,9 @@ def test_migration_provenance_is_relative(tmp_path: Path, monkeypatch) -> None:
 
     migrate_legacy_cache.migrate(
         repos_root=repos_root,
-        registry_path=registry_path,
+        people_path=people_path,
+        memberships_path=memberships_path,
+        maps_path=maps_path,
         cache_dir=cache_dir,
         state_path=tmp_path / "state.json",
     )

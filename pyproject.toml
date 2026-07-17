@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "map-of-research"
-version = "0.2.0"
+version = "0.3.0"
 description = "Central data pipeline and static clients for research publication maps"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -38,6 +38,7 @@ map-collect = "map_of_research.collector:main"
 map-build-snapshot = "map_of_research.snapshot:build_main"
 map-validate-snapshot = "map_of_research.snapshot:validate_main"
 map-publish-snapshot = "map_of_research.publisher:main"
+map-build-roster-review = "map_of_research.roster_review:main"
 
 [project.urls]
 Repository = "https://github.com/cmccomb/map-of-research"

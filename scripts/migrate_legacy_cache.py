@@ -70,11 +70,13 @@ def _candidate(
 def migrate(
     *,
     repos_root: Path,
-    registry_path: Path,
+    people_path: Path,
+    memberships_path: Path,
+    maps_path: Path,
     cache_dir: Path,
     state_path: Path,
 ) -> dict[str, Any]:
-    profiles = unique_profiles(load_registry(registry_path))
+    profiles = unique_profiles(load_registry(people_path, memberships_path, maps_path))
     state: dict[str, Any] = {
         "schema_version": STATE_SCHEMA_VERSION,
         "profiles": {},
@@ -87,7 +89,7 @@ def migrate(
             candidate = _candidate(
                 repos_root,
                 membership.map_slug,
-                membership.faculty,
+                membership.legacy_label,
             )
             if candidate is not None:
                 candidates.append(candidate)
@@ -132,10 +134,16 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repos-root", type=Path, required=True)
     parser.add_argument(
-        "--registry",
+        "--people",
         type=Path,
-        default=Path("registry/faculty.csv"),
+        default=Path("registry/people.csv"),
     )
+    parser.add_argument(
+        "--memberships",
+        type=Path,
+        default=Path("registry/memberships.csv"),
+    )
+    parser.add_argument("--maps", type=Path, default=Path("registry/maps.csv"))
     parser.add_argument("--cache-dir", type=Path, default=Path("data/authors"))
     parser.add_argument(
         "--state-file",
@@ -145,7 +153,9 @@ def main() -> int:
     args = parser.parse_args()
     result = migrate(
         repos_root=args.repos_root,
-        registry_path=args.registry,
+        people_path=args.people,
+        memberships_path=args.memberships,
+        maps_path=args.maps,
         cache_dir=args.cache_dir,
         state_path=args.state_file,
     )

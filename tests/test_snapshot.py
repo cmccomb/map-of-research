@@ -1,4 +1,3 @@
-import csv
 import datetime as dt
 from pathlib import Path
 
@@ -6,44 +5,71 @@ import pytest
 
 from map_of_research.io import atomic_write_json
 from map_of_research.snapshot import build_snapshot, validate_snapshot
+from tests.registry_helpers import write_registry
 
 NOW = dt.datetime(2026, 7, 17, 12, 0, tzinfo=dt.UTC)
 
 
-def write_registry(path: Path) -> None:
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(
-            handle,
-            fieldnames=("map_slug", "department", "faculty", "scholar_id"),
-        )
-        writer.writeheader()
-        writer.writerows(
-            [
-                {
-                    "map_slug": "map-of-ece",
-                    "department": "ECE",
-                    "faculty": "Alpha",
-                    "scholar_id": "alphaAAAAJ",
-                },
-                {
-                    "map_slug": "map-of-cmu-silicon-valley",
-                    "department": "CMU Silicon Valley",
-                    "faculty": "A. Alpha",
-                    "scholar_id": "alphaAAAAJ",
-                },
-            ]
-        )
+def make_registry(root: Path) -> tuple[Path, Path, Path]:
+    return write_registry(
+        root,
+        people=[
+            {
+                "person_id": "person-alpha",
+                "display_name": "Alpha Person",
+                "scholar_id": "alphaAAAAJ",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-alpha",
+                "map_slug": "map-of-ece",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "Alpha",
+                "source_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "verified_at": "2026-07-17",
+            },
+            {
+                "person_id": "person-alpha",
+                "map_slug": "map-of-cmu-silicon-valley",
+                "role": "teaching",
+                "included": "true",
+                "legacy_label": "A. Alpha",
+                "source_url": "https://www.sv.cmu.edu/directory/index.html",
+                "verified_at": "2026-07-17",
+            },
+        ],
+        maps=[
+            {
+                "map_slug": "map-of-eng",
+                "title": "Engineering",
+                "directory_url": "",
+                "reviewed_at": "2026-07-17",
+                "review_notes": "Aggregate",
+            },
+            {
+                "map_slug": "map-of-ece",
+                "title": "ECE",
+                "directory_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "reviewed_at": "2026-07-17",
+                "review_notes": "",
+            },
+            {
+                "map_slug": "map-of-cmu-silicon-valley",
+                "title": "CMU Silicon Valley",
+                "directory_url": "https://www.sv.cmu.edu/directory/index.html",
+                "reviewed_at": "2026-07-17",
+                "review_notes": "",
+            },
+        ],
+    )
 
 
-def test_snapshot_normalizes_cross_appointment_without_duplicate_rows(
-    tmp_path: Path,
-) -> None:
-    registry_path = tmp_path / "faculty.csv"
-    cache_dir = tmp_path / "authors"
-    snapshot_path = tmp_path / "snapshot.parquet"
-    manifest_path = tmp_path / "snapshot.manifest.json"
-    cache_dir.mkdir()
-    write_registry(registry_path)
+def write_cache(cache_dir: Path) -> None:
     atomic_write_json(
         cache_dir / "alphaAAAAJ.json",
         {
@@ -60,13 +86,27 @@ def test_snapshot_normalizes_cross_appointment_without_duplicate_rows(
                     "citation": "Journal, 2025",
                     "author_pub_id": "alphaAAAAJ:paper",
                     "num_citations": 4,
+                    "pages": "1-10",
                 }
             ],
         },
     )
 
+
+def test_snapshot_preserves_source_record_and_normalized_memberships(
+    tmp_path: Path,
+) -> None:
+    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    snapshot_path = tmp_path / "snapshot.parquet"
+    manifest_path = tmp_path / "snapshot.manifest.json"
+    cache_dir.mkdir()
+    write_cache(cache_dir)
+
     manifest = build_snapshot(
-        registry_path=registry_path,
+        people_path=people_path,
+        memberships_path=memberships_path,
+        maps_path=maps_path,
         cache_dir=cache_dir,
         snapshot_path=snapshot_path,
         manifest_path=manifest_path,
@@ -76,10 +116,14 @@ def test_snapshot_normalizes_cross_appointment_without_duplicate_rows(
         snapshot_path,
         manifest_path,
         now=NOW,
+        people_path=people_path,
+        memberships_path=memberships_path,
+        maps_path=maps_path,
     )
 
     assert manifest == validated_manifest
     assert len(frame) == 1
+    assert frame.loc[0, "person_id"] == "person-alpha"
     assert set(frame.loc[0, "map_slugs"]) == {
         "map-of-ece",
         "map-of-cmu-silicon-valley",
@@ -87,34 +131,20 @@ def test_snapshot_normalizes_cross_appointment_without_duplicate_rows(
     assert len(frame.loc[0, "memberships"]) == 2
     assert frame.loc[0, "year"] == 2025
     assert frame.loc[0, "citation_count"] == 4
+    assert '"pages":"1-10"' in frame.loc[0, "source_record_json"]
 
 
 def test_snapshot_validation_rejects_checksum_mismatch(tmp_path: Path) -> None:
-    registry_path = tmp_path / "faculty.csv"
+    people_path, memberships_path, maps_path = make_registry(tmp_path / "registry")
     cache_dir = tmp_path / "authors"
     snapshot_path = tmp_path / "snapshot.parquet"
     manifest_path = tmp_path / "snapshot.manifest.json"
     cache_dir.mkdir()
-    write_registry(registry_path)
-    atomic_write_json(
-        cache_dir / "alphaAAAAJ.json",
-        {
-            "schema_version": 1,
-            "scholar_id": "alphaAAAAJ",
-            "display_name": "Alpha",
-            "fetched_at_utc": NOW.isoformat(),
-            "publication_count": 1,
-            "publications": [
-                {
-                    "title": "A Paper",
-                    "author_pub_id": "alphaAAAAJ:paper",
-                    "num_citations": 0,
-                }
-            ],
-        },
-    )
+    write_cache(cache_dir)
     build_snapshot(
-        registry_path=registry_path,
+        people_path=people_path,
+        memberships_path=memberships_path,
+        maps_path=maps_path,
         cache_dir=cache_dir,
         snapshot_path=snapshot_path,
         manifest_path=manifest_path,
@@ -124,4 +154,11 @@ def test_snapshot_validation_rejects_checksum_mismatch(tmp_path: Path) -> None:
         handle.write(b"tamper")
 
     with pytest.raises(ValueError, match="checksum"):
-        validate_snapshot(snapshot_path, manifest_path, now=NOW)
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            now=NOW,
+            people_path=people_path,
+            memberships_path=memberships_path,
+            maps_path=maps_path,
+        )
