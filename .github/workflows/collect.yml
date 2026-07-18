@@ -1,9 +1,6 @@
 name: Collect bounded Scholar snapshot
 
 on:
-  schedule:
-    - cron: "17 4 * * 2"
-      timezone: America/New_York
   workflow_dispatch:
     inputs:
       force_refresh:

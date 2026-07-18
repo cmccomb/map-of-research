@@ -13,8 +13,9 @@ Scholar. It is a static client of
 
 1. `registry/people.csv`, `memberships.csv`, and `departments.csv` separate
    stable identity, role history, inclusion, and official annual-review sources.
-2. A cache-first collector refreshes at most two unique profiles in a scheduled
-   run. It never uses proxies or attempts to bypass a block.
+2. A cache-first `scholarly` collector refreshes at most two unique profiles in
+   an explicitly started run. It never uses proxies or attempts to bypass a
+   block.
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, reuses existing
@@ -36,13 +37,32 @@ its robots policy. The maintained defaults are intentionally conservative:
 
 - no search-result crawling, citation traversal, proxying, or CAPTCHA bypass;
 - direct lookup of registry-listed public profile IDs only;
-- at most two profiles per scheduled run, with a 90-second inter-profile delay;
+- at most two profiles per explicitly started run, with a 90-second
+  inter-profile delay;
 - no profile refreshed more often than once per year;
 - immediate stop after the first Scholar error or block;
 - old data retained when a refresh fails.
 
 Collection can be disabled without affecting the site: it continues serving
 the last successfully published dataset.
+
+GitHub-hosted Scholar collection is manual-only. A bounded diagnostic on
+2026-07-18 received HTTP 403 from a hosted macOS runner, so the workflow does
+not schedule repeated attempts from that IP space. The pinned `scholarly`
+client has a fail-closed response guard: the first 403, 429, or CAPTCHA aborts
+the run before the library's internal retry path. Local collection uses the
+same limits and must also stop after any refusal.
+
+## Update cadence
+
+- Faculty membership is reviewed annually on July 1.
+- Scholar data changes only after an explicit, successful bounded collection;
+  each profile has a one-year minimum refresh interval.
+- A validated snapshot publishes to Hugging Face immediately after its snapshot
+  branch changes.
+- The map requests the Hugging Face artifact with `no-cache` on every page load,
+  so visitors see a newly published dataset without a Pages redeployment.
+- Visualization code deploys to GitHub Pages when site files change on `main`.
 
 ## Faculty inclusion and annual review
 

@@ -1,7 +1,11 @@
 import datetime as dt
 from pathlib import Path
 
+import pytest
+
 from map_of_research.collector import (
+    ScholarAccessRefused,
+    _fail_fast_scholarly,
     collect_profiles,
     load_collection_state,
     select_profiles,
@@ -11,6 +15,61 @@ from map_of_research.registry import load_registry, unique_profiles
 from tests.registry_helpers import write_registry
 
 NOW = dt.datetime(2026, 7, 17, 12, 0, tzinfo=dt.UTC)
+
+
+def test_scholarly_guard_stops_first_refusal_without_proxy() -> None:
+    class ProxyManager:
+        @staticmethod
+        def has_proxy() -> bool:
+            return False
+
+    class Session:
+        def __init__(self) -> None:
+            self.event_hooks = {"request": [], "response": []}
+
+    class Navigator:
+        pm1 = ProxyManager()
+        pm2 = ProxyManager()
+        _session1 = Session()
+        _session2 = Session()
+
+        @staticmethod
+        def _requests_has_captcha(text: str) -> bool:
+            return "captcha" in text.casefold()
+
+    class ScholarlyClient:
+        _Scholarly__nav = Navigator()
+
+        def __init__(self) -> None:
+            self.retries = None
+            self.timeout = None
+
+        def set_retries(self, value: int) -> None:
+            self.retries = value
+
+        def set_timeout(self, value: int) -> None:
+            self.timeout = value
+
+    class Response:
+        status_code = 403
+        text = "forbidden"
+
+        @staticmethod
+        def read() -> None:
+            return None
+
+    client = ScholarlyClient()
+    with (
+        pytest.raises(ScholarAccessRefused, match="HTTP 403"),
+        _fail_fast_scholarly(client),
+    ):
+        hook = client._Scholarly__nav._session1.event_hooks["response"][0]
+        hook(Response())
+
+    assert client.retries == 1
+    assert client.timeout == 10
+    assert client._Scholarly__nav._session1.event_hooks["response"] == []
+    assert client._Scholarly__nav._session2.event_hooks["response"] == []
 
 
 def make_registry(root: Path) -> tuple[Path, Path, Path]:

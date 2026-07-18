@@ -8,7 +8,8 @@ import logging
 import math
 import os
 import time
-from collections.abc import Callable, Mapping, Sequence
+from collections.abc import Callable, Iterator, Mapping, Sequence
+from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -36,6 +37,73 @@ HARD_MAX_PROFILES = 5
 DEFAULT_PUBLICATION_LIMIT = 200
 HARD_PUBLICATION_LIMIT = 500
 DEFAULT_REQUEST_DELAY_SECONDS = 90.0
+SCHOLARLY_REQUEST_TIMEOUT_SECONDS = 10
+
+
+class ScholarAccessRefused(RuntimeError):
+    """Scholar explicitly refused an automated request."""
+
+
+class _StopScholarAccess(BaseException):
+    """Escape scholarly's internal retry loop after the first refusal."""
+
+
+@contextmanager
+def _fail_fast_scholarly(client: Any) -> Iterator[None]:
+    """Make pinned scholarly fail closed on a block without using proxies.
+
+    Scholarly 1.7.11 retries HTTP 403 responses internally, including long
+    sleeps that do not advance its retry counter. Response hooks let us stop
+    before that retry path while continuing to use scholarly for profile
+    lookup and parsing. The dependency is pinned, and this guard deliberately
+    refuses to run if the expected no-proxy sessions are unavailable.
+    """
+
+    client.set_retries(1)
+    client.set_timeout(SCHOLARLY_REQUEST_TIMEOUT_SECONDS)
+    navigator = getattr(client, "_Scholarly__nav", None)
+    if navigator is None:
+        raise RuntimeError("Cannot install the scholarly fail-fast guard")
+
+    proxy_managers = [getattr(navigator, name, None) for name in ("pm1", "pm2")]
+    if any(manager is None for manager in proxy_managers):
+        raise RuntimeError("Cannot verify scholarly's no-proxy configuration")
+    if any(manager.has_proxy() for manager in proxy_managers):
+        raise RuntimeError("Scholar collection does not permit proxies")
+
+    sessions = [getattr(navigator, name, None) for name in ("_session1", "_session2")]
+    if any(
+        session is None
+        or not isinstance(getattr(session, "event_hooks", None), dict)
+        or "response" not in session.event_hooks
+        for session in sessions
+    ):
+        raise RuntimeError("Cannot install the scholarly fail-fast guard")
+
+    captcha_detector = getattr(navigator, "_requests_has_captcha", None)
+    if not callable(captcha_detector):
+        raise RuntimeError("Cannot install the scholarly CAPTCHA guard")
+
+    def stop_on_refusal(response: Any) -> None:
+        status_code = getattr(response, "status_code", None)
+        if status_code in {403, 429}:
+            raise _StopScholarAccess(f"Scholar returned HTTP {status_code}")
+        if status_code == 200:
+            response.read()
+            if captcha_detector(response.text):
+                raise _StopScholarAccess("Scholar returned a CAPTCHA")
+
+    for session in sessions:
+        session.event_hooks["response"].append(stop_on_refusal)
+    try:
+        yield
+    except _StopScholarAccess as error:
+        raise ScholarAccessRefused(str(error)) from None
+    finally:
+        for session in sessions:
+            hooks = session.event_hooks["response"]
+            if stop_on_refusal in hooks:
+                hooks.remove(stop_on_refusal)
 
 
 @dataclass(frozen=True)
@@ -183,14 +251,15 @@ def fetch_author_publications(
     from scholarly import scholarly
 
     LOGGER.info("Fetching Scholar profile %s", profile.scholar_id)
-    author = scholarly.search_author_id(profile.scholar_id)
-    if not author:
-        raise RuntimeError(f"Scholar profile {profile.scholar_id} was not found")
-    filled_author = scholarly.fill(
-        author,
-        sections=["publications"],
-        publication_limit=publication_limit,
-    )
+    with _fail_fast_scholarly(scholarly):
+        author = scholarly.search_author_id(profile.scholar_id)
+        if not author:
+            raise RuntimeError(f"Scholar profile {profile.scholar_id} was not found")
+        filled_author = scholarly.fill(
+            author,
+            sections=["publications"],
+            publication_limit=publication_limit,
+        )
     if not filled_author:
         raise RuntimeError(f"Scholar profile {profile.scholar_id} could not be filled")
     publications = filled_author.get("publications", [])
@@ -209,6 +278,7 @@ def _looks_blocked(error: BaseException) -> bool:
         "DOSException",
         "MaxTriesExceededException",
         "CaptchaException",
+        "ScholarAccessRefused",
     }
 
 
