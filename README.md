@@ -88,9 +88,11 @@ no verified Scholar profile or publications.
 Use Python 3.12 or newer.
 
 ```bash
-python -m pip install --editable '.[dev]'
+python -m pip install --editable '.[collector,publisher,dev]'
 python -m pytest
 ```
+
+The test command enforces 100% statement and branch coverage for the package.
 
 Plan a collection without network access:
 

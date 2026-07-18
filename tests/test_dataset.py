@@ -1,5 +1,10 @@
-import pandas
+from types import SimpleNamespace
 
+import numpy
+import pandas
+import pytest
+
+import map_of_research.dataset as dataset
 from map_of_research.dataset import build_dataset_tables
 from map_of_research.registry import load_registry
 from tests.registry_helpers import write_registry
@@ -94,3 +99,156 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
         "oneAAAAJ:paper",
         "twoAAAAJ:paper",
     }
+
+
+def test_scalar_normalizers_are_conservative_and_deterministic() -> None:
+    assert dataset._as_list(None) == []
+    assert dataset._as_list([1]) == [1]
+    assert dataset._as_list((1, 2)) == [1, 2]
+    assert dataset._as_list(numpy.asarray([1, 2])) == [1, 2]
+    assert dataset._as_list(numpy.asarray(1)) == [1]
+    assert dataset._as_list(1) == [1]
+    assert dataset.normalize_title("  A Study: Of Things! ") == "a study of things"
+    assert dataset._clean_text(None) == ""
+    assert dataset._clean_text(float("nan")) == ""
+    assert dataset._year(None) is None
+    assert dataset._year(float("nan")) is None
+    assert dataset._year("2025") == 2025
+    assert dataset._year("unknown") is None
+    assert dataset._doi("prefix 10.1000/ABC.1);", "") == "10.1000/abc.1"
+    assert dataset._doi("none") == ""
+
+
+def test_work_identity_prefers_doi_then_title_year_then_observation() -> None:
+    base = {
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "one:paper",
+        "title": "A Paper",
+        "year": 2025,
+        "source_url": "",
+        "citation": "",
+        "source_record_json": "",
+    }
+    doi_identity = dataset._work_identity(
+        SimpleNamespace(**{**base, "source_url": "https://doi.org/10.1000/ABC"})
+    )
+    title_identity = dataset._work_identity(SimpleNamespace(**base))
+    fallback_identity = dataset._work_identity(
+        SimpleNamespace(**{**base, "title": "", "year": None})
+    )
+    assert doi_identity[1:] == ("doi", "10.1000/abc")
+    assert title_identity[1:] == ("normalized_title_year", "")
+    assert fallback_identity[1:] == ("profile_publication", "")
+    assert len({doi_identity[0], title_identity[0], fallback_identity[0]}) == 3
+
+
+def test_variant_selection_has_stable_tie_breaks() -> None:
+    assert dataset._best_text([]) == ""
+    assert dataset._best_text(["Short", "A longer value", "Short"]) == "Short"
+    assert dataset._best_text(["beta", "Alpha"]) == "Alpha"
+    assert dataset._variants([" beta ", "Alpha", "beta", None]) == [
+        "Alpha",
+        "beta",
+    ]
+    assert dataset._mode_year([None, "bad"]) is None
+    assert dataset._mode_year([2025, "2024", 2024, 2025]) == 2024
+
+
+def test_membership_normalization_handles_strings_and_rejects_scalars() -> None:
+    normalized = dataset._normalize_memberships(
+        [
+            {
+                "department_id": " ece ",
+                "role": " faculty ",
+                "included": "TRUE",
+            },
+            {"department_id": "mse", "included": 0},
+        ]
+    )
+    assert normalized[0]["included"] is True
+    assert normalized[0]["department_id"] == "ece"
+    assert normalized[1]["included"] is False
+    with pytest.raises(ValueError, match="must be an object"):
+        dataset._normalize_memberships(["ece"])
+
+
+def test_dataset_keeps_excluded_memberships_and_people_without_observations(
+    tmp_path,
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-observed",
+                "display_name": "Observed Person",
+                "scholar_id": "observedAJ",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "",
+            },
+            {
+                "person_id": "person-unobserved",
+                "display_name": "Unobserved Person",
+                "scholar_id": "",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "Retained roster row",
+            },
+        ],
+        memberships=[
+            {
+                "person_id": "person-observed",
+                "department_id": "ece",
+                "role": "affiliate",
+                "included": "false",
+                "legacy_label": "Observed",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-07-17",
+            },
+            {
+                "person_id": "person-unobserved",
+                "department_id": "ece",
+                "role": "emeritus",
+                "included": "true",
+                "legacy_label": "Unobserved",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-07-17",
+            },
+        ],
+    )
+    registry = load_registry(people_path, memberships_path, departments_path)
+    row = {
+        "scholar_id": "observedAJ",
+        "person_id": "person-observed",
+        "display_name": "Observed Person",
+        "faculty": "Observed Person",
+        "department_ids": [],
+        "memberships": [
+            {
+                "department_id": "ece",
+                "role": "affiliate",
+                "included": False,
+            }
+        ],
+        "author_pub_id": "observed:paper",
+        "title": "Paper",
+        "authors": "Observed Person",
+        "year": None,
+        "venue": "",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": "",
+        "source_record_json": "",
+        "fetched_at_utc": "2026-01-01T00:00:00+00:00",
+        "embedding": [0.0] * 4,
+    }
+    tables = build_dataset_tables(pandas.DataFrame([row]), registry)
+    work = tables["works"].iloc[0]
+    people = tables["people"].set_index("person_id")
+    assert work["memberships"] == []
+    assert work["department_ids"] == []
+    assert people.loc["person-unobserved", "publication_observation_count"] == 0
+    assert people.loc["person-unobserved", "unique_work_count"] == 0
+    assert dataset.table_summary(tables) == (
+        '{"authorships": 1, "people": 2, "profile_publications": 1, "works": 1}'
+    )

@@ -415,7 +415,8 @@ def collect_profiles(
                 }
             )
             refreshed.append(profile.scholar_id)
-        except Exception as error:  # stop after one failed profile by policy
+        # Ending the pass here prevents one access block from multiplying traffic.
+        except Exception as error:
             blocked = _looks_blocked(error)
             record.update(
                 {
