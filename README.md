@@ -85,8 +85,9 @@ map-validate-snapshot \
   --manifest snapshots/cmu-engineering-publications.parquet.manifest.json
 ```
 
-Publishing requires `HF_TOKEN` and is normally performed only by the protected
-upload workflow.
+Publishing requires `HF_TOKEN` locally. The protected `huggingface` GitHub
+environment exposes the same credential to the upload workflow from a secret
+named `HUGGINGFACE_TOKEN`.
 
 ## Repository roles
 
