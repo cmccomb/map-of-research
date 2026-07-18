@@ -57,7 +57,7 @@ jobs:
         run: python -m pip install './source[publisher]'
       - name: Validate, enrich, and publish snapshot
         env:
-          HF_TOKEN: ${{ secrets.API_TOKEN }}
+          HF_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
         run: |
           map-publish-snapshot \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
