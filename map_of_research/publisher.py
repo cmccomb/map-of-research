@@ -41,8 +41,32 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 3
-LAYOUT_VERSION = "global-publications-pca-v3"
+MAP_SCHEMA_VERSION = 4
+LAYOUT_VERSION = "global-publications-multilayout-v1"
+DEFAULT_LAYOUT_ID = "pca"
+LAYOUTS = (
+    {
+        "layout_id": "pca",
+        "label": "Global structure",
+        "method": "PCA",
+        "description": "Emphasizes broad variation across the full corpus.",
+        "x_field": "x",
+        "y_field": "y",
+        "version": "global-publications-pca-v3",
+    },
+    {
+        "layout_id": "tsne",
+        "label": "Local neighborhoods",
+        "method": "t-SNE",
+        "description": (
+            "Emphasizes nearby topical neighborhoods; distances between separate "
+            "clusters are not comparable."
+        ),
+        "x_field": "tsne_x",
+        "y_field": "tsne_y",
+        "version": "global-publications-tsne-v1",
+    },
+)
 MAP_ARTIFACT_NAME = "publications.json"
 MAP_TITLE = "CMU Engineering Research"
 STATUS_SCHEMA_VERSION = 2
@@ -158,41 +182,165 @@ def add_embeddings(
     return output, len(missing_keys)
 
 
-def add_global_layout(works: Any) -> Any:
-    """Fit one deterministic layout shared by every current map."""
+def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
+    """Load a complete compatible layout that can be reused without refitting."""
+
+    import datasets
+
+    try:
+        existing = datasets.load_dataset(
+            REPO_ID,
+            name="works",
+            split="train",
+            token=hf_token or None,
+        )
+    except Exception:
+        LOGGER.info("No reusable works layout found")
+        return {}
+    coordinate_fields = {
+        field
+        for layout in LAYOUTS
+        for field in (str(layout["x_field"]), str(layout["y_field"]))
+    }
+    required_fields = {"work_id", "layout_version", *coordinate_fields}
+    if not required_fields.issubset(existing.column_names):
+        return {}
+    layouts: dict[str, dict[str, float]] = {}
+    for row in existing:
+        if row.get("layout_version") != LAYOUT_VERSION:
+            return {}
+        work_id = str(row.get("work_id") or "")
+        coordinates: dict[str, float] = {}
+        for field in coordinate_fields:
+            try:
+                value = float(row.get(field))
+            except (TypeError, ValueError):
+                return {}
+            if not math.isfinite(value):
+                return {}
+            coordinates[field] = value
+        if not work_id or work_id in layouts:
+            return {}
+        layouts[work_id] = coordinates
+    if layouts:
+        LOGGER.info("Found reusable coordinates for %d works", len(layouts))
+    return layouts
+
+
+def _normalize_layout(projected: Any, *, preserve_aspect: bool) -> Any:
+    """Center coordinates and scale them to a stable browser-friendly range."""
 
     import numpy
+
+    projected = numpy.asarray(projected, dtype=numpy.float32)
+    projected -= projected.mean(axis=0, keepdims=True)
+    if preserve_aspect:
+        scale = float(numpy.max(numpy.abs(projected)))
+        if scale == 0:
+            scale = 1.0
+    else:
+        scale = numpy.max(numpy.abs(projected), axis=0)
+        scale[scale == 0] = 1.0
+    return projected / scale
+
+
+def _fit_pca_layout(matrix: Any) -> Any:
+    """Fit the current broad-structure PCA view."""
+
     from sklearn.decomposition import PCA
+
+    projected = PCA(
+        n_components=2,
+        svd_solver="randomized",
+        random_state=0,
+    ).fit_transform(matrix)
+    return _normalize_layout(projected, preserve_aspect=False)
+
+
+def _fit_tsne_layout(matrix: Any) -> Any:
+    """Fit the t-SNE-then-PCA method used by the previous full map."""
+
+    from sklearn.decomposition import PCA
+    from sklearn.manifold import TSNE
+
+    sample_count = len(matrix)
+    perplexity = min(30.0, max(1.0, (sample_count - 1) / 3))
+    neighborhoods = TSNE(
+        n_components=2,
+        perplexity=perplexity,
+        early_exaggeration=12.0,
+        learning_rate="auto",
+        max_iter=1000,
+        init="pca",
+        random_state=42,
+        method="barnes_hut",
+        angle=0.5,
+        n_jobs=-1,
+        verbose=1,
+    ).fit_transform(matrix)
+    oriented = PCA(
+        n_components=2,
+        svd_solver="full",
+        random_state=42,
+    ).fit_transform(neighborhoods)
+    return _normalize_layout(oriented, preserve_aspect=True)
+
+
+def add_global_layout(
+    works: Any,
+    *,
+    existing_layouts: Mapping[str, Mapping[str, float]] | None = None,
+) -> Any:
+    """Attach both deterministic, full-corpus layouts to every included work."""
+
+    import numpy
 
     output = works.copy()
     output["layout_version"] = LAYOUT_VERSION
-    output["x"] = math.nan
-    output["y"] = math.nan
+    coordinate_fields = tuple(
+        dict.fromkeys(
+            field
+            for layout in LAYOUTS
+            for field in (str(layout["x_field"]), str(layout["y_field"]))
+        )
+    )
+    for field in coordinate_fields:
+        output[field] = math.nan
     included_mask = output["department_ids"].apply(lambda value: bool(_as_list(value)))
     included = output.loc[included_mask]
     if included.empty:
         raise ValueError("No included works are available for map generation")
+    included_work_ids = [str(value) for value in included["work_id"]]
+    if existing_layouts and set(existing_layouts) == set(included_work_ids):
+        for field in coordinate_fields:
+            output.loc[included_mask, field] = [
+                round(float(existing_layouts[work_id][field]), 7)
+                for work_id in included_work_ids
+            ]
+        LOGGER.info("Reused both layouts for %d unchanged works", len(included))
+        return output
+
     matrix = numpy.asarray(included["embedding"].tolist(), dtype=numpy.float32)
     norms = numpy.linalg.norm(matrix, axis=1, keepdims=True)
     norms[norms == 0] = 1.0
     matrix = matrix / norms
     if len(matrix) == 1:
-        projected = numpy.zeros((1, 2), dtype=numpy.float32)
+        pca_projected = numpy.zeros((1, 2), dtype=numpy.float32)
+        tsne_projected = numpy.zeros((1, 2), dtype=numpy.float32)
     else:
-        projected = PCA(
-            n_components=2,
-            svd_solver="randomized",
-            random_state=0,
-        ).fit_transform(matrix)
-        projected -= projected.mean(axis=0, keepdims=True)
-        scale = numpy.max(numpy.abs(projected), axis=0)
-        scale[scale == 0] = 1.0
-        projected /= scale
+        pca_projected = _fit_pca_layout(matrix)
+        tsne_projected = _fit_tsne_layout(matrix)
     output.loc[included_mask, "x"] = [
-        round(float(value), 7) for value in projected[:, 0]
+        round(float(value), 7) for value in pca_projected[:, 0]
     ]
     output.loc[included_mask, "y"] = [
-        round(float(value), 7) for value in projected[:, 1]
+        round(float(value), 7) for value in pca_projected[:, 1]
+    ]
+    output.loc[included_mask, "tsne_x"] = [
+        round(float(value), 7) for value in tsne_projected[:, 0]
+    ]
+    output.loc[included_mask, "tsne_y"] = [
+        round(float(value), 7) for value in tsne_projected[:, 1]
     ]
     return output
 
@@ -234,6 +382,8 @@ def build_map_artifact(
             {
                 "x": round(float(row.x), 7),
                 "y": round(float(row.y), 7),
+                "tsne_x": round(float(row.tsne_x), 7),
+                "tsne_y": round(float(row.tsne_y), 7),
                 "work_id": str(row.work_id),
                 "title": str(row.title),
                 "authors": str(row.authors),
@@ -322,6 +472,8 @@ def build_map_artifact(
     return {
         "schema_version": MAP_SCHEMA_VERSION,
         "layout_version": LAYOUT_VERSION,
+        "default_layout_id": DEFAULT_LAYOUT_ID,
+        "layouts": [dict(layout) for layout in LAYOUTS],
         "title": MAP_TITLE,
         "generated_at_utc": generated_at_utc,
         "source_data_oldest_at_utc": min(fetched) if fetched else None,
@@ -352,6 +504,8 @@ def _upload_map_artifacts(
         map_manifest: dict[str, Any] = {
             "schema_version": MAP_SCHEMA_VERSION,
             "layout_version": LAYOUT_VERSION,
+            "default_layout_id": DEFAULT_LAYOUT_ID,
+            "layouts": [dict(layout) for layout in LAYOUTS],
             "generated_at_utc": generated_at_utc,
             "dataset_commits": dict(dataset_commits),
             "artifact": {},
@@ -436,7 +590,11 @@ def publish_snapshot(
         encoder=encoder,
     )
     tables = build_dataset_tables(enriched, registry)
-    tables["works"] = add_global_layout(tables["works"])
+    existing_layouts = _existing_layouts(hf_token=hf_token)
+    tables["works"] = add_global_layout(
+        tables["works"],
+        existing_layouts=existing_layouts,
+    )
 
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:

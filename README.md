@@ -18,10 +18,12 @@ Scholar. It is a static client of
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, reuses existing
-   embeddings, and publishes `people`, `works`, `authorships`, and
-   `profile_publications` configs plus `maps/publications.json`.
-5. `map-of-eng` fetches that artifact and filters the complete shared layout in
-   the browser; it owns no faculty roster, publication data, or scraper.
+   embeddings and compatible layouts, and publishes `people`, `works`,
+   `authorships`, and `profile_publications` configs plus
+   `maps/publications.json`.
+5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
+   and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
+   publication data, scraper, embedding model, or layout computation.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
 fetches each unique profile only once, preserves the last good cache on errors,
