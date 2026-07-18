@@ -1,0 +1,26 @@
+{
+  "blocked": false,
+  "dry_run": false,
+  "failed_profile_ids": [],
+  "finished_at_utc": "2026-07-18T15:19:42.551318+00:00",
+  "force": false,
+  "max_profiles": 2,
+  "min_age_days": 365,
+  "publication_limit": 200,
+  "refreshed_profile_ids": [
+    "0LqbCKAAAAAJ",
+    "2BTuWpgAAAAJ"
+  ],
+  "registry_memberships": 464,
+  "registry_people": 398,
+  "request_delay_seconds": 90.0,
+  "schema_version": 1,
+  "selected_profile_ids": [
+    "0LqbCKAAAAAJ",
+    "2BTuWpgAAAAJ"
+  ],
+  "started_at_utc": "2026-07-18T15:17:48.704377+00:00",
+  "status": "success",
+  "unique_profiles": 240,
+  "workflow_url": null
+}
