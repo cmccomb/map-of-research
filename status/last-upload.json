@@ -1,0 +1,16 @@
+{
+  "dataset_configs": [
+    "people",
+    "works",
+    "authorships",
+    "profile_publications"
+  ],
+  "dataset_id": "ccm/cmu-engineering-publications",
+  "error_message": "Missing HF_TOKEN environment variable",
+  "error_type": "RuntimeError",
+  "finished_at_utc": "2026-07-18T00:04:07.998714+00:00",
+  "schema_version": 2,
+  "started_at_utc": "2026-07-18T00:04:07.998368+00:00",
+  "status": "failure",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29622173838"
+}
