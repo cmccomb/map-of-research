@@ -1,4 +1,12 @@
 {
+  "artifact_commit": "db27b36fd4117f49ced16ae2d67e11b4e28b6335",
+  "authorships": 38537,
+  "dataset_commits": {
+    "authorships": "42f4608db496b59e5a623b5ae33a1f7d7a5fceca",
+    "people": "b86c3655277f50977b4c4e4d3cd0f978c1981e2a",
+    "profile_publications": "09a243480377fcb0d7273ba042aedd3d6f0ce03e",
+    "works": "a1ec64d99035629c5455374fba1f727883ba6dbc"
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,11 +14,17 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "Registry files do not match the snapshot manifest",
-  "error_type": "ValueError",
-  "finished_at_utc": "2026-07-18T15:54:30.033196+00:00",
+  "error_type": null,
+  "finished_at_utc": "2026-07-18T16:03:13.836917+00:00",
+  "layout_version": "global-publications-multilayout-v1",
+  "map_artifact_count": 1,
+  "new_embedding_count": 227,
+  "people": 398,
+  "profile_count": 216,
+  "profile_publications": 38537,
   "schema_version": 2,
-  "started_at_utc": "2026-07-18T15:54:29.608561+00:00",
-  "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29650853610"
+  "started_at_utc": "2026-07-18T15:57:51.023336+00:00",
+  "status": "success",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29650948454",
+  "works": 35527
 }
