@@ -1,0 +1,1736 @@
+{
+  "display_name": "de Boer",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/de Boer.json",
+  "publication_count": 217,
+  "publications": [
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:abG-DnoFyZgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "1245 2013 Reviewers List"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tS2w5q8j5-wC",
+      "citation": "Experimental Mechanics 48, 825-827, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "2008 Reviewers for Experimental Mechanics"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:LI9QrySNdTsC",
+      "citation": "Digest of Technical Papers 1, 404, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "2E1. P"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:zA6iFVUQeVQC",
+      "citation": "Assembly and Actuation of Nanomaterials Using Active Biomolecules, 6, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "6.0 Engineering micromachined piconewton force sensors for biophysics investigations"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:wbdj-CoPYUoC",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "A few nascent methods for measuring mechanical properties of the biological cell."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:5nxA0vEk-isC",
+      "citation": "Materials and Device Characterization in Micromachining 3512, 241-250, 1998",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "A hinged-pad test structure for sliding friction measurement in micromachining"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ns9cj8rnVeAC",
+      "citation": "Experimental mechanics 49, 395-401, 2009",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A linearized method to measure dynamic friction of microdevices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:KxtntwgDAa4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A MEMS inchworm actuator for static, dynamic and pre-sliding friction measurements"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:eflP2zaiRacC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "A micromachined stick-slip test apparatus."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ufrVoPGSRksC",
+      "citation": "Journal of Micromechanics and Microengineering 19 (8), 085003, 2009",
+      "num_citations": 113,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A nanomechanical switch for integration with CMOS logic"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:dshw04ExmUIC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "A Small Area In-Situ MEMS Test Structure to Accurately Measure Fracture Strength by Electrostatic Probing"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:PVjk1bu6vJQC",
+      "citation": "2024 IEEE 69th Holm Conference on Electrical Contacts (HOLM), 1-6, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Absence of Electrical Contact Resistance Degradation in MEMS Relays Subject to Hot Switching"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:d1gkVwhDpl0C",
+      "citation": "Journal of applied physics 86 (2), 817-827, 1999",
+      "num_citations": 320,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Accurate method for determining adhesion of cantilever beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Y0pCki6q_DkC",
+      "citation": "Acta Materialia 48 (18-19), 4531-4541, 2000",
+      "num_citations": 112,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Adhesion hysteresis of silane coated microcantilevers"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:WbkHhVStYXYC",
+      "citation": "NIST SPECIAL PUBLICATION SP, 51-51, 1996",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Adhesion of Metal Interconnects by Microwedge Indentation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:YsMSGLbcyi4C",
+      "citation": "MRS Online Proceedings Library (OPL) 518, 131, 1998",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Adhesion of polysilicon microbeams in controlled humidity ambients"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:1yQoGdGgb4wC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ADHESION OF POLYSILICON MICROBEAMS IN CONTROLLED HUMIDITY AMBIENTS co N~-7 0 $0 5 I--"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:NhqRSupF_l8C",
+      "citation": "MRS Online Proceedings Library (OPL) 318, 609, 1993",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Adhesion of Tungsten Fine Lines on SiO2 by Micro-Wedge Scratching"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:cFHS6HbyZ2cC",
+      "citation": "MRS Online Proceedings Library (OPL) 318, 323, 1993",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Adhesion Strength of Cu/Polyimide Measured by Continuous Micro-Wedge Scratch Test"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:mB3voiENLucC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 16097, 127-129, 1998",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Adhesion, adhesion hysteresis and friction in MEMS under controlled humidity ambients"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:GnPB-g6toBAC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2002",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Amorphous Diamond MEMS and Sensors"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:LkGwnXOMwfcC",
+      "citation": "Applied Surface Science 212, 735-741, 2003",
+      "num_citations": 61,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "An investigation of sidewall adhesion in MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:rO6llkc54NcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "and Devices IV"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:5qfkUJPXOUwC",
+      "citation": "Available at SSRN 5090583, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Anisotropic Reactive Ion Etching of 2.5 Μm Thick Α-Ta Films for Surface Micromachining"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:xtRiw3GOFMkC",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Assembly and actuation of nanomaterials using active biomolecules."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Fu2w8maKXqMC",
+      "citation": "APS March Meeting Abstracts, U34. 012, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Calibration of Micromachined Force Sensors by Gravitational Force on Precision Microspheres"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ULOm3_A8WrAC",
+      "citation": "Experimental mechanics 47, 171-183, 2007",
+      "num_citations": 61,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Capillary adhesion between elastically hard rough surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:KlAtU1dfN6UC",
+      "citation": "Scripta Materialia 59 (9), 916-920, 2008",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Capillary adhesion model for contacting micromachined surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ldfaerwXgEUC",
+      "citation": "Langmuir 30 (39), 11625-11633, 2014",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Capillary-induced crack healing between surfaces of nanoscale roughness"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:R3hNpaxXUhUC",
+      "citation": "Reliability, Testing, and Characterization of MEMS/MOEMS 4558, 169-180, 2001",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Characterization of an inchworm actuator fabricated by polysilicon surface micromachining"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:TQgYirikUcIC",
+      "citation": "Tribology Letters 36, 233-238, 2009",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Characterization of microscale wear in a polysilicon-based MEMS device using AFM and PEEM–NEXAFS spectromicroscopy"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_Qo2XoVZTnwC",
+      "citation": "MRS Online Proceedings Library (OPL) 616, 21, 2000",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Chemical vapor deposition coating for micromachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:9yKSN-GCB0IC",
+      "citation": "Journal of Vacuum Science & Technology B: Microelectronics and Nanometer …, 2000",
+      "num_citations": 255,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Chemical vapor deposition of fluoroalkylsilane monolayer films for adhesion control in microelectromechanical systems"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ZeXyd9-uunAC",
+      "citation": "Journal of microelectromechanical systems 20 (4), 1043-1053, 2011",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Compact on-chip microtensile tester with prehensile grip mechanism"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:dQ2og3OwTAUC",
+      "citation": "Journal of Micromechanics and Microengineering 30 (5), 055011, 2020",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Compression and decompression of structural tantalum films exposed to buffered hydrofluoric acid"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:f2IySw72cVMC",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 227, U829-U829, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Connecting atomic and nano-scale properties with MEMS performance."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:p2g8aNsByqUC",
+      "citation": "Journal of Microelectromechanical Systems 24 (6), 1868-1877, 2015",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Constant velocity high force microactuator for stick-slip testing of micromachined interfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:kh2fBNsKQNwC",
+      "citation": "Integrating Materials and Manufacturing Innovation, 1-9, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Constraint Active Search in Process Window Optimization for Powder Feed Directed Energy Deposition"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Ri6SYOTghG4C",
+      "citation": "Mechanics of Biological Systems & Micro-and Nanomechanics, Volume 4 …, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Contact Reliability of Pt-and TiN-Coated Microswitches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:JoZmwDi-zQgC",
+      "citation": "Mechanics of Biological Systems & Micro-and Nanomechanics, Volume 4 …, 2018",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Contact reliability of Pt-and TiN-coated microswitches in different environments"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:NaGl4SEjCO4C",
+      "citation": "Journal of microelectromechanical systems 22 (6), 1248-1250, 2013",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Contamination Thresholds of Pt- and -Coated Ohmic Switches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:1sJd4Hv_s6UC",
+      "citation": "MRS Online Proceedings Library (OPL) 1659, 63-68, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Controlling Environment and Contact Materials to Optimize Ohmic Microrelay Lifetimes"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:dfsIfKJdRG4C",
+      "citation": "Tribology Letters 59, 1-12, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Crack Healing Between Rough Polycrystalline Silicon Hydrophilic Surfaces in n-Pentanol and Water Vapors"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ZHo1McVdvXMC",
+      "citation": "MRS Online Proceedings Library 338, 513-518, 1994",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Cracking Mechanisms of Fine Lines by Microwedge Scratch Testing"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:j8SEvjWlNXcC",
+      "citation": "Materials Science and Engineering: A 784, 139309, 2020",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Creep of a thermally stable nanocrystalline nickel tungsten alloy as measured by high temperature nanoindentation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:AXPGKjj_ei8C",
+      "citation": "Nature communications 9 (1), 1664, 2018",
+      "num_citations": 154,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Crystalline polymer nanofibers with ultra-high strength and thermal conductivity"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:JQOojiI6XY0C",
+      "citation": "Applied Catalysis B: Environmental 105 (1-2), 69-76, 2011",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Delaminated titanate and peroxotitanate photocatalysts"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_xSYboBqXhAC",
+      "citation": "Applied Catalysis B: Environmental, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Delaminated titanate and peroxotitanate photocatalysts."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:PoWvk5oyLR8C",
+      "citation": "Metallurgical and Materials Transactions A 55 (7), 2186-2199, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Demonstration and Analysis of Conditions to Obtain a High Strength Inconel 625 to Stainless Steel 304L Interface by Directed Energy Deposition"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4TOpqqG69KYC",
+      "citation": "Journal of Micromechanics and Microengineering 19 (8), 082001, 2009",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Demonstration of an in situ on-chip tensile tester"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:nrtMV_XWKgEC",
+      "citation": "Microsystems & Nanoengineering 7 (1), 6, 2021",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Demonstration of tantalum as a structural material for MEMS thermal actuators"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4OULZ7Gr8RgC",
+      "citation": "Journal of Micromechanics and Microengineering 25 (1), 015009, 2014",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Design and test of reliable high strength ingressive polycrystalline silicon microgripper arrays"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:9ZlFYXVOiuMC",
+      "citation": "Journal of Micromechanics and Microengineering 22 (10), 105027, 2012",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Design, fabrication, performance and reliability of Pt-and RuO2-coated microrelays tested in ultra-high purity gas environments"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:CHSYGLWDkRkC",
+      "citation": "Journal of Vacuum Science & Technology B 32 (6), 2014",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Determination of thin film coefficient of thermal expansion and residual strain from freestanding fixed–fixed beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:qxL8FJ1GzNcC",
+      "citation": "MRS Online Proceedings Library (OPL) 657, EE7. 1, 2000",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Developing a new material for MEMS: amorphous diamond"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:YFjsv_pBGBYC",
+      "citation": "US Patent 8,236,611, 2012",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Die singulation method and package formed thereby"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:eMMeJKvmdy0C",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Die singulation method and package formed thereby"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:geHnlv5EZngC",
+      "citation": "Extreme Mechanics Letters 8, 184-190, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Direct observation of the velocity contribution to friction in monolayer-coated micromachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:epqYDVWIO7EC",
+      "citation": "Journal of Materials Research 36, 3701-3712, 2021",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Directed energy deposition joining of Inconel 625 to 304 stainless steel with direct bonding"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:k_IJM867U9cC",
+      "citation": "MRS Online Proceedings Library (OPL) 605, 163, 1999",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Dynamics of MEMS microengines using optoelectronic laser interferometry"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:eQOLeE2rZwMC",
+      "citation": "Applied Physics Letters 84 (13), 2451-2453, 2004",
+      "num_citations": 87,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Effect of adhesion on dynamic and static friction in surface micromachining"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:iH-uZ7U-co4C",
+      "citation": "International Conference on Fracture, December, Honolulu, Hawaii, 2001",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Effect of nanotexturing on interfacial adhesion in MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tOudhMTPpwUC",
+      "citation": "2015 IEEE 61st Holm Conference on Electrical Contacts (Holm), 358-362, 2015",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Effectiveness of oxygen plasma versus UHV bakeout in cleaning MEMS switch surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:pqnbT2bcN3wC",
+      "citation": "Tribology International 85, 48-55, 2015",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Effects of electrical current and temperature on contamination-induced degradation in ohmic switch contacts"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ZuybSZzF8UAC",
+      "citation": "IEEE Transactions on Components, Packaging and Manufacturing Technology 10 …, 2019",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Effects of hot switching and contamination on contact reliability of Pt-coated microswitches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:HDshCWvjkbEC",
+      "citation": "US Patent 6,424,165, 2002",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Electrostatic apparatus for measurement of microfracture strength"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_kc_bZDykSQC",
+      "citation": "Journal of adhesion science and technology 24 (15-16), 2363-2382, 2010",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Equilibrium vapor adsorption and capillary force: Exact laplace–young equation solution and circular approximation approaches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:e_rmSamDkqQC",
+      "citation": "IEEE Transactions on Energy Conversion, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Evaluation of Rotational Speed Limits in an Axial Flux-Switching Motor Constructed from Metal Amorphous Nanocomposite Magnetic Cores"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hFOr9nPyWt4C",
+      "citation": "TRANSDUCERS'03. 12th International Conference on Solid-State Sensors …, 2003",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Evidence for pre-sliding tangential deflections in MEMS friction"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:a0OBvERweLwC",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Evidence for pre-sliding tangential deflections in MEMS friction."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:aqlVkmm33-oC",
+      "citation": "Tribology letters 41, 177-189, 2011",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Evolution of wear characteristics and frictional behavior in MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:QIV2ME_5wuYC",
+      "citation": "Proc. Internat. Symp. on Microscale Systems, 80-83, 2000",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Experimental and analytical characterization of dynamic effects in electrostatic microengines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:g3aElNc5_aQC",
+      "citation": "MRS Bulletin 47 (12), 1237-1246, 2022",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Experimental insights into adhesion and friction between nominally dry rough surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:RHpTSmoSYBkC",
+      "citation": "MRS Online Proceedings Library (OPL) 308, 647, 1993",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Fracture toughness of silicon and thin film micro-structures by wedge indentation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:PELIpwtuRlgC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Friction and Adhesion in MEMS."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Tiz5es2fbqcC",
+      "citation": "Springer Handbook of Nanotechnology, 1417-1435, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Friction and Wear in Micro-and Nanomachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:-f6ydRqryjwC",
+      "citation": "SEM Annual Conference & Exposition on Experimental and Applied Mechanics, 2002",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Friction in MEMS: From single to multiple asperity contact"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:blknAaTinKkC",
+      "citation": "MRS Online Proceedings Library (OPL) 605, 129, 1999",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Friction measurement in MEMS using a new test structure"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:JV2RwH3_ST0C",
+      "citation": "Sandia report SAND2005-7954, Sandia National Laboratories, Albuquerque, CA, USA, 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Friction of different monolayer lubricants in MEMs interfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:isC4tDSrTZIC",
+      "citation": "Journal of microelectromechanical systems 18 (2), 250-262, 2009",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Frictional aging and sliding bifurcation in monolayer-coated micromachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:RGFaLdJalmkC",
+      "citation": "Physical Review B—Condensed Matter and Materials Physics 81 (17), 174109, 2010",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Frictional aging, de-aging, and re-aging in a monolayer-coated micromachined interface"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:eJXPG6dFmWUC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Frictional studies of a monolayer coated micromachined actuator: Beyond Amontons laws"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:rmuvC79q63oC",
+      "citation": "Tribology Letters 63, 1-12, 2016",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Full assessment of micromachine friction within the rate-state framework: Theory and validation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:BrmTIyaxlBUC",
+      "citation": "Tribology letters 63, 1-15, 2016",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Full assessment of micromachine friction within the rate–state framework: Experiments"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:b0M2c_1WBrUC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2000",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Fundamental mechanisms of micromachine reliability"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:N5tVd3kTz84C",
+      "citation": "Journal of Applied Physics 126 (17), 2019",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Grain growth stagnation and texture development in an irradiated thermally stabilized nanocrystalline alloy"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:bEWYMUwI8FkC",
+      "citation": "Electrochemical and solid-state letters 10 (1), H27, 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Growth of silicon carbide nanoparticles using tetraethylorthosilicate for microelectromechanical systems"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:yD5IFk8b50cC",
+      "citation": "Growth of silicon carbide nanoparticles using tetraethylorthosilicate for …, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Growth of silicon carbide nanoparticles using tetraethylorthosilicate for microelectromechanical systems."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:pyW8ca7W8N0C",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "High fidelity frictional models for MEMS."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ClCfbGk0d_YC",
+      "citation": "Sandia National Laboratories, Albuquerque, NM, 2004",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "High Fidelity Frictional Models for MEMs. SAND2004-4791"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:qjMakFHDy7sC",
+      "citation": "Journal of Microelectromechanical Systems 13 (1), 63-74, 2004",
+      "num_citations": 182,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "High-performance surface-micromachined inchworm actuator"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:D03iK_w7-QYC",
+      "citation": "Proposed for publication in Journal of Microelectromechanical Systems. 13 …, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "High-performance surface-micromachined inchworm actuator."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:u9iWguZQMMsC",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Hydrodynamic effects on coalescence."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:u-x6o8ySG0sC",
+      "citation": "Annual Review of Materials Science 30 (1), 299-333, 2000",
+      "num_citations": 308,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "IC-compatible polysilicon surface micromachining"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:roLk4NBRz8UC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 1999",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "IMaP: Interferometry for material property measurement in MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:e5wmG9Sq2KIC",
+      "citation": "Tribology Letters 51, 341-356, 2013",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Impact of contact materials and operating conditions on stability of micromechanical switches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4fKUyHm3Qg0C",
+      "citation": "MRS Online Proceedings Library (OPL) 444, 87, 1996",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Improved autoadhesion measurement method for micromachined polysilicon beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:V3AGJWp-ZtQC",
+      "citation": "Journal of Micromechanics and Microengineering 26 (11), 115020, 2016",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "In situ oxygen plasma cleaning of microswitch surfaces—comparison of Ti and graphite electrodes"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:3s1wT3WcHBgC",
+      "citation": "Journal of Microelectromechanical Systems 24 (6), 2008-2018, 2015",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "In Situ Platform for Isothermal Testing of Thin-Film Mechanical Properties Using Thermal Actuators"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_FxGoFyzp5QC",
+      "citation": "Wear 260 (6), 580-593, 2006",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "In situ wear studies of surface micromachined interfaces subject to controlled loading"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:8k81kl-MbHgC",
+      "citation": "Journal of microelectromechanical systems 11 (6), 743-753, 2002",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Integrated measurement-modeling approaches for evaluating residual stress using micromachined fixed-fixed beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:RYcK_YlVTxYC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 15960, 305-311, 1998",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Integrated modeling and testing of a micro hinged structure for sliding friction measurement"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:B3FOqHPlNUQC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2000",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Integrated platform for testing MEMS mechanical properties at the wafer scale by the IMaP methodology"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:u_35RYKgDlwC",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Integrated superhard and metallic coatings for MEMS: LDRD 57300 final report."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:l7t_Zn2s7bgC",
+      "citation": "2015 IEEE 61st Holm Conference on Electrical Contacts (Holm), 273-279, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Interactions between materials, environment and contaminant in microswitches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:OU6Ihb5iCvQC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Interferometric Measurement for Improved Understanding of Boundary Effects in Micromachined Beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:kNdYIx-mwKoC",
+      "citation": "Materials and Device Characterization in Micromachining II 3875, 61-72, 1999",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Interferometric measurement for improved understanding of boundary effects in micromachined beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:IjCSPb-OGe4C",
+      "citation": "Journal of Microelectromechanical Systems 10 (3), 336-346, 2001",
+      "num_citations": 164,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Interferometry of actuated microcantilevers to determine material properties and test structure nonidealities in MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Mojj43d5GZwC",
+      "citation": "Biophysical Journal 96 (3), 281a, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Investigating Axonal Outgrowth and Orientation of Neuroblasts through an Alternating Stiffness Substrate"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:0EnyYjriUFMC",
+      "citation": "Journal of Materials Research 12 (10), 2673-2685, 1997",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Investigation of a new fracture mechanics specimen for thin film adhesion measurement"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:WA5NYHcadZ8C",
+      "citation": "2017 IEEE 17th International Conference on Nanotechnology (IEEE-NANO), 822-824, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Investigation of contact resistance of TiN-TiN contacts for nanoswitches"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hMsQuOkrut0C",
+      "citation": "Journal of Alloys and Compounds 948, 169647, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Investigation of metal amorphous nanocomposite soft magnetic alloys in the (FexNiyCo100− xy) 80B14Nb4Si2 system"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:TFP_iSt0sucC",
+      "citation": "US Patent 7,034,271, 2006",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Long working distance incoherent interference microscope"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_Ybze24A_UAC",
+      "citation": "US Patent 6,721,094, 2004",
+      "num_citations": 194,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Long working distance interference microscope"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hqOjcs7Dif8C",
+      "citation": "Applied optics 44 (36), 7714-7721, 2005",
+      "num_citations": 77,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Long-working-distance incoherent-light interference microscope"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:7T2F9Uy0os0C",
+      "citation": "University of Colorado, Boulder, 1982",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1982",
+      "title": "Low temperature phases of the solid electrolyte Ag₂₆ I₁₈ W₄ O₁₆"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:k8Z6L05lTy4C",
+      "citation": "Journal of Applied Physics 135 (2), 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Low voltage cold and hot switching in nanoswitches cleaned by in situ oxygen plasma can achieve low stable contact resistance"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:uLbwQdceFCQC",
+      "citation": "Journal of Solid State Chemistry 48 (1), 121-127, 1983",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "1983",
+      "title": "Low-temperature phases of the solid electrolyte Ag26I18W4O16"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:kzcrU_BdoSEC",
+      "citation": "Materials Research Society, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Materials science of microelectromechanical systems (MEMS) devices III"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:O3NaXMp0MMsC",
+      "citation": "Society for Experimental Mechanics Annual Conference and Exposition …, 2001",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Measurement of residual stress in MEMS to sub megapascal accuracy"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:0N-VGjzr574C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Measuring and modeling electrostatic adhesion in micromachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Wp0gIr-vW9MC",
+      "citation": "Proceedings of International Solid State Sensors and Actuators Conference …, 1997",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Measuring and modeling electrostatic adhesion in micromachines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:qUcmZB5y_30C",
+      "citation": "Journal of materials research 24 (9), 2974-2985, 2009",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Measuring the elastic modulus and residual stress of freestanding thin films using nanoindentation techniques"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:08ZZubdj9fEC",
+      "citation": "MRS Online Proceedings Library (OPL) 436, 103, 1996",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Mechanics of interfacial crack propagation in microscratching"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_axFR9aDTf0C",
+      "citation": "Thin Films Stresses and Mechanical Properties VI: 436, 103, 1996",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Mechanics Of Interfacial Crack Propagation In Microscratching Maarten P. de Boer*, John C. Nelson and William W. Gerberich Dept. of Chemical Engineering and Materials Science …"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Journal of Microelectromechanical Systems 11 (6), 754-764, 2002",
+      "num_citations": 143,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Mechanics of microcantilever beams subject to combined electrostatic and adhesive forces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ye4kPcJQO24C",
+      "citation": "ACS Applied Materials & Interfaces 11 (42), 39238-39247, 2019",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Mechanochemical effects of adsorbates at nanoelectromechanical switch contacts"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:YOwf2qJgpHMC",
+      "citation": "Journal of Micromechanics and Microengineering 20 (12), 125022, 2010",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "MEMS platform for on-chip nanomechanical experiments with strong and highly ductile nanofibers"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:kuK5TVdYjLIC",
+      "citation": "US Patent App. 18/082,543, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Mems platform for thin film nanomechanics characterization"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:YohjEiUPhakC",
+      "citation": "Comprehensive Structural Integrity, 325, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "MEMS Structures for On-chip Testing of"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hMod-77fHWUC",
+      "citation": "Pergamon, 2003",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "MEMS structures for on-chip testing of mechanical and surface properties of thin films"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:dhFuZR0502QC",
+      "citation": "US Patent 5,696,327, 1997",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Method and apparatus for separating a thin film from a substrate"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:UHK10RUVsp4C",
+      "citation": "US Patent 6,567,715, 2003",
+      "num_citations": 63,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Method and system for automated on-chip material and structural certification of MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:_Re3VWB3Y0AC",
+      "citation": "Sandia National Lab.(SNL-CA), Livermore, CA (United States), 2003",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Method and system for automated on-chip material and structural certification of MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:35r97b3x0nAC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Micro-and Nanoscale Mechanical Testing."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:VaXvl8Fpj5cC",
+      "citation": "US Patent App. 18/010,011, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Micro-electromechanical system (mems) including tantalum as a structural material"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:fPk4N6BV_jEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Microdiagnostic Lab on a Chip"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:bnK-pcrLprsC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Microdiagnostic Lab on a Chip-LDRD Final Report"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:uWQEDVKXjbEC",
+      "citation": "Sandia National Labs., 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Microdiagnostic Lab on a Chip-LDRD Final Report; TOPICAL"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:W5xh706n7nkC",
+      "citation": "US Patent 6,446,486, 2002",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Micromachine friction test apparatus"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:SP6oXDckpogC",
+      "citation": "Encyclopedia of Nanotechnology, 1420-1429, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Micromachined 3-D Force Sensors"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Zph67rFs4hoC",
+      "citation": "Applied Physics Letters 89 (17), 2006",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Micromachined piconewton force sensor for biophysics investigations"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:BqipwSGYUEgC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2001",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Microscale modeling and simulation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:XiSMed-E-HIC",
+      "citation": "MRS Online Proceedings Library 280, 631-634, 1992",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "Microstructural Characterization of Low Temperature GaAs (111) B MBE Growth by AFM and Tem"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Acta materialia 44 (8), 3169-3175, 1996",
+      "num_citations": 130,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Microwedge indentation of the thin film fine line—I. Mechanics"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:WF5omc3nYNoC",
+      "citation": "Acta materialia 44 (8), 3177-3187, 1996",
+      "num_citations": 76,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Microwedge indentation of the thin film fine line—II. Experiment"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ILKRHgRFtOwC",
+      "citation": "Carnegie Mellon University, Pittsburgh, PA, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Modeling and Measuring the Stress Distribution in Soft Magnetic Cores due to Epoxy Impregnation and Curing"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:t6usbXjVLHcC",
+      "citation": "Journal of Micromechanics and Microengineering 27 (12), 125023, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Modeling capillary bridge dynamics and crack healing between surfaces of nanoscale roughness"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:EUQCXRtRnyEC",
+      "citation": "Sandia Technology 6 (2), 6-7, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Nanotractor studies microscale friction"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:olpn-zPbct0C",
+      "citation": "Sandia National Laboratories (SNL), Albuquerque, NM, and Livermore, CA …, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Novel in situ mechanical testers to enable integrated metal surface micro-machines."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:SeFeTyx0c_EC",
+      "citation": "MRS Online Proceedings Library (OPL) 1659, 3-8, 2014",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Nucleation rate of capillary bridges between multi-asperity surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:kRWSkSYxWN8C",
+      "citation": "University of Minnesota, 1996",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "On mechanics and measurement of thin film properties in plane strain geometries"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:7PzlFSSx8tAC",
+      "citation": "Acta materialia 56 (14), 3313-3326, 2008",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "On-chip laboratory suite for testing of free-standing metal film mechanical properties, Part II–Experiments"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:mVmsd5A6BfQC",
+      "citation": "Acta materialia 56 (14), 3344-3352, 2008",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "On-chip test structure suite for free-standing metal film mechanical property testing, Part I–Analysis"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:bFI3QPDXJZMC",
+      "citation": "Acta Materiala, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "On-chip test structure suite for freestanding metal film mechanical property testing Part I-Analysis of a notched structure."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:j3f4tGmQtD8C",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 47144, 207-209, 2004",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Operational wear and friction in MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:9vf0nzSNQJEC",
+      "citation": "Journal of Microelectromechanical Systems 28 (1), 95-106, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Optimization and contact reliability of TiN-coated microswitches in various gas environments"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:86PQX7AUzd4C",
+      "citation": "Energies 18 (3), 640, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Optimization Study of Rare Earth-Free Metal Amorphous Nanocomposite Axial Flux-Switching Permanent Magnet Motor"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:PR6Y55bgFSsC",
+      "citation": "Thin Solid Films 697, 137796, 2020",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Origins of thin film delamination induced by electrodeposition and processing methods to overcome it"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:XoXfffV-tXoC",
+      "citation": "Thin Solid Films 800, 140392, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Oxygen diffusion in freestanding body centered cubic tantalum structural thin films in air and in high vacuum"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:70eg2SAEIzsC",
+      "citation": "Journal of Micromechanics and Microengineering 24 (9), 095029, 2014",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Oxygen-induced graphitization of amorphous carbon deposit on ohmic switch contacts improves their electrical conductivity and protects them from wear"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4MWp96NkSFoC",
+      "citation": "Advanced Electronic Materials 8 (9), 2200085, 2022",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Phase Change Nanoelectromechanical Relay for Nonvolatile Low Leakage Switching"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hkOj_22Ku90C",
+      "citation": "2019 IEEE International Electron Devices Meeting (IEDM), 34.1. 1-34.1. 4, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Phase Change NEMS Relay"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:yB1At4FlUx8C",
+      "citation": "2019 AIChE Annual Meeting, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Phase Thermodynamics and Ab Initio Simulations to Optimize Oxidation Resistance of High Entropy Alloys in Additive Manufacturing"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tuHXwOkdijsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Photocatalytic Degradation of Bacteriophages Evidenced by Atomic Force"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:lSLTfruPkqcC",
+      "citation": "PLoS One 8 (1), e53601, 2013",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Photocatalytic degradation of bacteriophages evidenced by atomic force microscopy"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:M3NEmzRMIkIC",
+      "citation": "International Joint Tribology Conference 41812, 113-116, 2004",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Pre-sliding tangential deflections can govern the friction of MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:hC7cP41nSMkC",
+      "citation": "Journal of microelectromechanical systems 20 (4), 922-932, 2011",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Predicting fracture in micrometer-scale polycrystalline silicon MEMS structures"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:AvfA0Oy_GE0C",
+      "citation": "Journal of Microelectromechanical Systems, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Predicting Fracture in Micron-Scale Polycrystalline Silicon MEMS Structures."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:BUYA1_V_uYcC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Predicting Fracture in Micron-Scale Polycrystalline Silicon MEMS Structures."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:maZDTaKrznsC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States); Sandia …, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Predicting Fracture in Micron-Scale Polycrystalline Silicon MEMS Structures."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:L7CI7m0gUJcC",
+      "citation": "Oxidation of Metals 98 (5), 429-450, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Predicting oxidation behavior of multi-principal element alloys by machine learning methods"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:dTyEYWd-f8wC",
+      "citation": "Actuators 7 (4), 71, 2018",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Preparing and mounting polymer nanofibers onto microscale test platforms"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:NMxIlDl6LWMC",
+      "citation": "Review of Scientific Instruments 84 (7), 2013",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Probing microelectromechanical systems in an environmentally controlled chamber using long working distance interferometry"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4JMBOYKVnBMC",
+      "citation": "Micromachining and Microfabrication Process Technology V 3874, 76-84, 1999",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Pulsed-laser-deposited coatings for stiction and wear reduction in MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:gsN89kCJA0AC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "RATE-STATE FRICTION IN MEMSINTERFACES: EXPERIMENT AND THEORY"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:HoB7MX3m0LUC",
+      "citation": "Journal of Applied Physics 116 (24), 2014",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Rate-state friction in microelectromechanical systems interfaces: Experiment and theory"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:nb7KW1ujOQ8C",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Reproducibility Data on SUMMiT"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:r0BpntZqJG4C",
+      "citation": "Micromachining and Microfabrication Process Technology V 3874, 102-112, 1999",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Reproducibility data on SUMMiT"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tYavs44e6CUC",
+      "citation": "Carnegie Mellon University, Pittsburgh, PA, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Ribbon Wrinkling Origin and Its Effect on Tape-Wound Core Shape"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:W7OEmFMy1HYC",
+      "citation": "Microsystems metrology and inspection 3825, 2-15, 1999",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Role of interfacial properties on MEMS performance and reliability"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:UebtZRa9Y70C",
+      "citation": "Applied physics letters 90 (16), 2007",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Rough surface adhesion in the presence of capillary condensation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:IWHjjKOFINEC",
+      "citation": "Langmuir 24 (1), 160-169, 2008",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Rupture work of pendular bridges"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:0KyAp5RtaNEC",
+      "citation": "Journal of Microelectromechanical Systems 30 (3), 426-432, 2021",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Sacrificial materials and release etchants for metal MEMS that reduce or eliminate hydrogen-induced residual stress change"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:4DMP91E08xMC",
+      "citation": "MRS Online Proceedings Library (OPL) 605, 135, 1999",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Selective W for coating and releasing MEMS devices"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:vDijr-p_gm4C",
+      "citation": "Journal of Microelectromechanical Systems 31 (1), 167-175, 2021",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Self-actuating isothermal nanomechanical test platform for tensile creep measurement of freestanding thin films"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:UxriW0iASnsC",
+      "citation": "MRS Online Proceedings Library (OPL) 1659, 55-61, 2014",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Self-tensioning Support Post Design to Control Residual Stress in MEMS Fixed-Fixed Beams"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:vRqMK49ujn8C",
+      "citation": "ASTM Special Technical Publication 1413, 168-202, 2001",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Side-by-side comparison of passive MEMS strain test structures under residual compression"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:uJ-U7cs_P_0C",
+      "citation": "Experimental Mechanics 60, 763-773, 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Size-dependent creep master curve of individual electrospun polymer nanofibers"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:M3ejUd6NZC8C",
+      "citation": "Materials and Device Characterization in Micromachining Ii 3875, 97-103, 1999",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Small-area in-situ MEMS test structure to measure fracture strength by electrostatic probing"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:TIZ-Mc8IlK0C",
+      "citation": "Journal of Composite Materials 57 (9), 1653-1665, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Strength distributions of laminated FeNi-based metal amorphous nanocomposite ribbons"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:J_g5lzvAfSwC",
+      "citation": "Applied Physics Letters 104 (19), 2014",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Stress mapping of micromachined polycrystalline silicon devices via confocal Raman microscopy"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:NJ774b8OgUMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SYMPOSIUM EE"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:ZfRJV9d4-WMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SYMPOSIUM EE Materials Science of Microelectromechanical System (MEMS) Devices III"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tzM49s52ZIMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SYMPOSIUM MM"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:uc_IGeMz5qoC",
+      "citation": "Materials Research Soc., 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Symposium: Held November 29-December 1, 1999, Boston, Massachusetts, USA"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:2KloaMYe4IUC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Testing of Pt-and Ru-coated thermally actuated microrelays in an ultra-high purity environment."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:738O_yMBCRsC",
+      "citation": "Sandia National Lab.(SNL-CA), Livermore, CA (United States); Sandia National …, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "The CINT Cantilever Array Discovery Platform (TM)."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:3fE2CSJIrl8C",
+      "citation": "Journal of Applied Physics 99 (10), 2006",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "The effect of nanoparticles on rough surface adhesion"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:2osOgNQ5qMEC",
+      "citation": "Langmuir 16 (20), 7742-7751, 2000",
+      "num_citations": 234,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "The impact of solution agglomeration on the deposition of self-assembled monolayers"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:MXK_kJrjxJIC",
+      "citation": "Tribology Letters 10 (1), 103-108, 2001",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "The influence of coating structure on micromachine stiction"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:u5HHmVD_uO8C",
+      "citation": "Nature materials 4 (8), 629-634, 2005",
+      "num_citations": 605,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "The role of van der Waals forces in adhesion of micromachined surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:eq2jaN3J8jMC",
+      "citation": "Microelectronics Reliability 98, 131-143, 2019",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "The strong effect on MEMS switch reliability of film deposition conditions and electrode geometry"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:Se3iqnhoufwC",
+      "citation": "Journal of colloid and interface science 311 (1), 171-185, 2007",
+      "num_citations": 77,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Thermodynamics of capillary adhesion between rough surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:evX43VCCuoAC",
+      "citation": "International Joint Tribology Conference 41812, 117-118, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Thermodynamics of Capillary Adhesion in MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:vV6vV6tmYwMC",
+      "citation": "MRS Online Proceedings Library (OPL) 356, 821, 1994",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Thin film adhesion characterization by microwedge scratching of precracked fine lines"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:g5m5HwL7SMYC",
+      "citation": "MRS Online Proceedings Library (OPL) 356, 693, 1994",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Thin film fine line work of adhesion by microwedge indentation"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:L8Ckcad2t8MC",
+      "citation": "Journal of materials research 13 (4), 1002-1014, 1998",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Thin film scratch testing in two dimensions—Experiments and analysis"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:FPJr55Dyh1AC",
+      "citation": "Proceedings of the ASME/STLE International Joint Tribology Conference 1, 113, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "TRIB2004-64360"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:UeHWp8X0CEIC",
+      "citation": "Mrs Bulletin 26 (4), 302-304, 2001",
+      "num_citations": 207,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Tribology of MEMS"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tKAzc9rXhukC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Using Casimir and capillary forces to model adhesion of MEMS cantilevers."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:tkaPQYYpVKoC",
+      "citation": "Journal of the American Ceramic Society 97 (12), 3982-3990, 2014",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Validated prediction of the strength size effect in polycrystalline silicon using the three‐parameter Weibull function"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:P5F9QuxV20EC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 47756, 21-26, 2006",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Van der waals and capillary adhesion of microelectromechanical systems"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:D_sINldO8mEC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Van der Waals and Capillary Adhesion of Microelectromechanical Systems."
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:35N4QoGY0k4C",
+      "citation": "Scanning Probe Microscopy in Nanoscience and Nanotechnology 3, 363-393, 2012",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Van der waals and capillary adhesion of polycrystalline silicon micromachined surfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:8AbLer7MMksC",
+      "citation": "Journal of Physics D: Applied Physics 49 (7), 075303, 2016",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "van der Waals force-induced crack healing in dry rough interfaces"
+    },
+    {
+      "author_pub_id": "P1OWCkAAAAAJ:2P1L_qKh6hAC",
+      "citation": "Journal of Micromechanics and Microengineering 20 (7), 075007, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Wafer-level singulation, release and post-processing in surface micromachining"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "P1OWCkAAAAAJ"
+}

@@ -1,0 +1,146 @@
+{
+  "display_name": "Ogoke",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Ogoke.json",
+  "publication_count": 17,
+  "publications": [
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:Se3iqnhoufwC",
+      "citation": "Additive Manufacturing Letters 11, 100232, 2024",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "AMGPT: A large language model for contextual querying in additive manufacturing"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:YsMSGLbcyi4C",
+      "citation": "The International Journal of Advanced Manufacturing Technology 129 (7), 3047 …, 2023",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Convolutional neural networks for melt depth prediction and visualization in laser powder bed fusion"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:UebtZRa9Y70C",
+      "citation": "arXiv preprint arXiv:2409.13171, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Deep Learning based Optical Image Super-Resolution via Generative Diffusion Models for Layerwise in-situ LPBF Monitoring"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "APS March Meeting Abstracts 2023, M53. 006, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Deep Learning based Super-resolution models for Accelerating Multiphysics Simulations of Laser Powder Bed Fusion"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:LkGwnXOMwfcC",
+      "citation": "Additive Manufacturing Letters 11, 100243, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Deep learning for melt pool depth contour prediction from surface thermal images via vision transformers"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:d1gkVwhDpl0C",
+      "citation": "Additive Manufacturing 60, 103250, 2022",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Deep-learned generators of porosity distributions produced during metal Additive Manufacturing"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:zYLM7Y9cAGgC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, C21. 008, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Direct numerical simulation of rain drop impact on a thin layer of oil over a deep water pool"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:9yKSN-GCB0IC",
+      "citation": "Machine Learning: Science and Technology 2 (4), 045020, 2021",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Graph convolutional networks applied to unstructured flow field data"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:W7OEmFMy1HYC",
+      "citation": "Additive Manufacturing 73, 103663, 2023",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "High-resolution melt pool thermal imaging for metals additive manufacturing using the two-color method with a color camera"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:eQOLeE2rZwMC",
+      "citation": "Materials & Design 245, 113181, 2024",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Inexpensive high fidelity melt pool models in additive manufacturing using generative deep diffusion"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:u-x6o8ySG0sC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, S01. 023, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Inference on spatially unstructured flow fields using Graph Neural Networks"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:WF5omc3nYNoC",
+      "citation": "Journal of Computational Physics 524, 113705, 2025",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Latent neural PDE solver: A reduced-order modeling framework for partial differential equations"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:IjCSPb-OGe4C",
+      "citation": "Additive Manufacturing 55, 102817, 2022",
+      "num_citations": 116,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "MeltpoolNet: Melt pool characteristic prediction in Metal Additive Manufacturing using machine learning"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:Y0pCki6q_DkC",
+      "citation": "Additive Manufacturing Letters 5, 100123, 2023",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Surrogate modeling of melt pool temperature field using deep learning"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:u5HHmVD_uO8C",
+      "citation": "APS April Meeting Abstracts 2021, K17. 009, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "The Mallat Scattering Transform for Reduced Order Modelling of Partial Differential Equations"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:UeHWp8X0CEIC",
+      "citation": "Additive Manufacturing 46, 102033, 2021",
+      "num_citations": 95,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Thermal control of laser powder bed fusion using deep reinforcement learning"
+    },
+    {
+      "author_pub_id": "wtuGC_wAAAAJ:ufrVoPGSRksC",
+      "citation": "Additive Manufacturing 95, 104503, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "ThermoPore: Predicting part porosity based on thermal images using deep learning"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "wtuGC_wAAAAJ"
+}

@@ -1,0 +1,1717 @@
+{
+  "profiles": {
+    "-syEyyAAAAAJ": {
+      "display_name": "Mai",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Mai.json",
+      "publication_count": 117
+    },
+    "-x16PXsAAAAJ": {
+      "display_name": "Mayer",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Mayer.json",
+      "publication_count": 347
+    },
+    "0B3gfuoAAAAJ": {
+      "display_name": "Laird",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Laird.json",
+      "publication_count": 110
+    },
+    "0P7IAs8AAAAJ": {
+      "display_name": "Dickey",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Dickey.json",
+      "publication_count": 381
+    },
+    "0P9w_S0AAAAJ": {
+      "display_name": "McComb",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/McComb.json",
+      "publication_count": 222
+    },
+    "0bg-uVgAAAAJ": {
+      "display_name": "McSharry",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/McSharry.json",
+      "publication_count": 191
+    },
+    "0oI3MWkAAAAJ": {
+      "display_name": "Coffelt",
+      "last_attempt_at_utc": "2025-03-01T01:58:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:58:15+00:00",
+      "migration_source": "map-of-civil/data/Coffelt.json",
+      "publication_count": 7
+    },
+    "1LyndUsAAAAJ": {
+      "display_name": "Majidi",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Majidi.json",
+      "publication_count": 377
+    },
+    "1mNkJwgAAAAJ": {
+      "display_name": "Peca",
+      "last_attempt_at_utc": "2025-04-01T01:24:35+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:24:35+00:00",
+      "migration_source": "map-of-ini/data/Peca.json",
+      "publication_count": 11
+    },
+    "2u09mlAAAAAJ": {
+      "display_name": "Anna",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Anna.json",
+      "publication_count": 145
+    },
+    "32ZyPkEAAAAJ": {
+      "display_name": "Bolmin",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Bolmin.json",
+      "publication_count": 29
+    },
+    "3W2VK5sAAAAJ": {
+      "display_name": "Whitefoot",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Whitefoot.json",
+      "publication_count": 60
+    },
+    "4PU5ZFYV-iEC": {
+      "display_name": "Erdogmus",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Erdogmus.json",
+      "publication_count": 144
+    },
+    "4iYpwt8AAAAJ": {
+      "display_name": "Presto",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Presto.json",
+      "publication_count": 201
+    },
+    "55B-xqUAAAAJ": {
+      "display_name": "Benson",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Benson.json",
+      "publication_count": 97
+    },
+    "5EewAB0AAAAJ": {
+      "display_name": "Zheng",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Zheng.json",
+      "publication_count": 79
+    },
+    "5V852JcAAAAJ": {
+      "display_name": "Sekar",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Sekar.json",
+      "publication_count": 239
+    },
+    "5VQf2cgAAAAJ": {
+      "display_name": "Akinci",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Akinci.json",
+      "publication_count": 313
+    },
+    "5cJzDZEAAAAJ": {
+      "display_name": "Bauer",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Bauer.json",
+      "publication_count": 197
+    },
+    "6IvhxBkAAAAJ": {
+      "display_name": "Skirpan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Skirpan.json",
+      "publication_count": 21
+    },
+    "6JU9KqgAAAAJ": {
+      "display_name": "Rajkumar",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Rajkumar.json",
+      "publication_count": 427
+    },
+    "6p23pUgAAAAJ": {
+      "display_name": "Hibshi",
+      "last_attempt_at_utc": "2025-04-01T01:24:35+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:24:35+00:00",
+      "migration_source": "map-of-ini/data/Hibshi.json",
+      "publication_count": 26
+    },
+    "6y_k3EgAAAAJ": {
+      "display_name": "Ndashimye",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Ndashimye.json",
+      "publication_count": 27
+    },
+    "738WppcAAAAJ": {
+      "display_name": "OHallaron",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/OHallaron.json",
+      "publication_count": 181
+    },
+    "79Ml-9YAAAAJ": {
+      "display_name": "Harper",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Harper.json",
+      "publication_count": 37
+    },
+    "7dey80AAAAAJ": {
+      "display_name": "Cohen-Karni",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Cohen-Karni.json",
+      "publication_count": 92
+    },
+    "7iFu3a4AAAAJ": {
+      "display_name": "Weber",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Weber.json",
+      "publication_count": 274
+    },
+    "7uodSIcAAAAJ": {
+      "display_name": "Niyizamwiyitira",
+      "last_attempt_at_utc": "2025-03-01T00:55:59+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T00:55:59+00:00",
+      "migration_source": "map-of-cmu-africa/data/Niyizamwiyitira.json",
+      "publication_count": 22
+    },
+    "7zUqi1sAAAAJ": {
+      "display_name": "Litster",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Litster.json",
+      "publication_count": 258
+    },
+    "8N6uFIkAAAAJ": {
+      "display_name": "Tucker",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Tucker.json",
+      "publication_count": 193
+    },
+    "8q_lPBoAAAAJ": {
+      "display_name": "Brown",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Brown.json",
+      "publication_count": 177
+    },
+    "8xQ5wR4AAAAJ": {
+      "display_name": "Torres",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Torres.json",
+      "publication_count": 94
+    },
+    "92jyX2EAAAAJ": {
+      "display_name": "Michalek",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Michalek.json",
+      "publication_count": 152
+    },
+    "9KtTt28AAAAJ": {
+      "display_name": "Shen",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Shen.json",
+      "publication_count": 96
+    },
+    "AgCgDcUAAAAJ": {
+      "display_name": "Gueye",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Gueye.json",
+      "publication_count": 75
+    },
+    "AqrJMYIAAAAJ": {
+      "display_name": "Gordon",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Gordon.json",
+      "publication_count": 341
+    },
+    "C-rJaTIAAAAJ": {
+      "display_name": "Finger",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Finger.json",
+      "publication_count": 154
+    },
+    "CINe7CgAAAAJ": {
+      "display_name": "Gounaris",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Gounaris.json",
+      "publication_count": 80
+    },
+    "CSHe53oAAAAJ": {
+      "display_name": "Kurchin",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Kurchin.json",
+      "publication_count": 38
+    },
+    "CxBBWlIAAAAJ": {
+      "display_name": "Campbell",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Campbell.json",
+      "publication_count": 168
+    },
+    "DFtapYEAAAAJ": {
+      "display_name": "Koopman",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Koopman.json",
+      "publication_count": 318
+    },
+    "DK7TEvkAAAAJ": {
+      "display_name": "Steenkiste",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Steenkiste.json",
+      "publication_count": 356
+    },
+    "DquTIDQAAAAJ": {
+      "display_name": "Dayal",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Dayal.json",
+      "publication_count": 123
+    },
+    "E0tlVgQAAAAJ": {
+      "display_name": "Ulissi",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Ulissi.json",
+      "publication_count": 99
+    },
+    "E2N0GsIAAAAJ": {
+      "display_name": "Wang",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Wang.json",
+      "publication_count": 138
+    },
+    "EoRxB3gAAAAJ": {
+      "display_name": "Combemale",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Combemale.json",
+      "publication_count": 17
+    },
+    "F3UFKWMAAAAJ": {
+      "display_name": "Ozdoganlar",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Ozdoganlar.json",
+      "publication_count": 199
+    },
+    "F8Tqw_kAAAAJ": {
+      "display_name": "Peraire",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Peraire.json",
+      "publication_count": 70
+    },
+    "F9kqUXkAAAAJ": {
+      "display_name": "Gibbons",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Gibbons.json",
+      "publication_count": 329
+    },
+    "FClnlsgAAAAJ": {
+      "display_name": "Sanders",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Sanders.json",
+      "publication_count": 423
+    },
+    "Fl1qHEAAAAAJ": {
+      "display_name": "da Silva Sousa",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/da Silva Sousa.json",
+      "publication_count": 53
+    },
+    "Fr9Vhe4AAAAJ": {
+      "display_name": "Halilaj",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Halilaj.json",
+      "publication_count": 40
+    },
+    "Fz3_tukAAAAJ": {
+      "display_name": "Yu",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Yu.json",
+      "publication_count": 140
+    },
+    "G5ZrIsIAAAAJ": {
+      "display_name": "Taheri-Mousavi",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Taheri-Mousavi.json",
+      "publication_count": 25
+    },
+    "GN5Mc3UAAAAJ": {
+      "display_name": "Johnson",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Johnson.json",
+      "publication_count": 120
+    },
+    "GxvFzdcAAAAJ": {
+      "display_name": "Fischhoff",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Fischhoff.json",
+      "publication_count": 767
+    },
+    "H-pgq9QAAAAJ": {
+      "display_name": "Chase",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Chase.json",
+      "publication_count": 70
+    },
+    "HmNtygkAAAAJ": {
+      "display_name": "McGaughey",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/McGaughey.json",
+      "publication_count": 128
+    },
+    "HzsuNvEAAAAJ": {
+      "display_name": "Grande Gutierrez",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Grande Gutierrez.json",
+      "publication_count": 29
+    },
+    "IFFsG-oAAAAJ": {
+      "display_name": "Skowronski",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Skowronski.json",
+      "publication_count": 336
+    },
+    "ILac8DwAAAAJ": {
+      "display_name": "Gomes",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Gomes.json",
+      "publication_count": 71
+    },
+    "ILambBMAAAAJ": {
+      "display_name": "Donahue",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Donahue.json",
+      "publication_count": 551
+    },
+    "INTSXtcAAAAJ": {
+      "display_name": "Rabin",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Rabin.json",
+      "publication_count": 223
+    },
+    "JOMYt6gAAAAJ": {
+      "display_name": "Fedder",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Fedder.json",
+      "publication_count": 404
+    },
+    "K5ja68wAAAAJ": {
+      "display_name": "Rollett",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Rollett.json",
+      "publication_count": 731
+    },
+    "K98bfxEAAAAJ": {
+      "display_name": "Piazza",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Piazza.json",
+      "publication_count": 308
+    },
+    "KZ5QmxQAAAAJ": {
+      "display_name": "Luhanga",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Luhanga.json",
+      "publication_count": 46
+    },
+    "Ktm9tWwAAAAJ": {
+      "display_name": "Bain",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Bain.json",
+      "publication_count": 356
+    },
+    "LMW7_-YAAAAJ": {
+      "display_name": "Mugume",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Mugume.json",
+      "publication_count": 31
+    },
+    "LNMV_6IAAAAJ": {
+      "display_name": "Bezy",
+      "last_attempt_at_utc": "2025-03-01T00:55:59+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T00:55:59+00:00",
+      "migration_source": "map-of-cmu-africa/data/Bezy.json",
+      "publication_count": 1
+    },
+    "LNwlI-8AAAAJ": {
+      "display_name": "Tilton",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Tilton.json",
+      "publication_count": 303
+    },
+    "LxF27NYAAAAJ": {
+      "display_name": "Narra",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Narra.json",
+      "publication_count": 46
+    },
+    "LyK-4aEAAAAJ": {
+      "display_name": "Palchesko",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Palchesko.json",
+      "publication_count": 29
+    },
+    "MFLMm8YAAAAJ": {
+      "display_name": "Webler",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Webler.json",
+      "publication_count": 77
+    },
+    "Mm-vQM8AAAAJ": {
+      "display_name": "Pileggi",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Pileggi.json",
+      "publication_count": 541
+    },
+    "NIaQAAUAAAAJ": {
+      "display_name": "Whitacre",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Whitacre.json",
+      "publication_count": 348
+    },
+    "NNSeBe4AAAAJ": {
+      "display_name": "Jayan",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Jayan.json",
+      "publication_count": 76
+    },
+    "NVcyQ3wAAAAJ": {
+      "display_name": "Srimani",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Srimani.json",
+      "publication_count": 28
+    },
+    "NldhiuYAAAAJ": {
+      "display_name": "Pozzi",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Pozzi.json",
+      "publication_count": 194
+    },
+    "NmnYW7cAAAAJ": {
+      "display_name": "Sokalski",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Sokalski.json",
+      "publication_count": 59
+    },
+    "NnIC2iAAAAAJ": {
+      "display_name": "Robinson",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Robinson.json",
+      "publication_count": 267
+    },
+    "O-29z5AAAAAJ": {
+      "display_name": "Brumley",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Brumley.json",
+      "publication_count": 103
+    },
+    "OiDWDQUAAAAJ": {
+      "display_name": "Tague",
+      "last_attempt_at_utc": "2025-04-01T01:24:35+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:24:35+00:00",
+      "migration_source": "map-of-ini/data/Tague.json",
+      "publication_count": 115
+    },
+    "P1OWCkAAAAAJ": {
+      "display_name": "de Boer",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/de Boer.json",
+      "publication_count": 217
+    },
+    "PInIkl8AAAAJ": {
+      "display_name": "Khair",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Khair.json",
+      "publication_count": 142
+    },
+    "PSZN_hMAAAAJ": {
+      "display_name": "Nock",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Nock.json",
+      "publication_count": 85
+    },
+    "Pstgk60AAAAJ": {
+      "display_name": "Chan",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Chan.json",
+      "publication_count": 27
+    },
+    "QXSGNWkAAAAJ": {
+      "display_name": "Smith",
+      "last_attempt_at_utc": "2025-04-01T01:25:26+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:25:26+00:00",
+      "migration_source": "map-of-iii/data/Smith.json",
+      "publication_count": 30
+    },
+    "QsY8HmEAAAAJ": {
+      "display_name": "Kainerstorfer",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Kainerstorfer.json",
+      "publication_count": 174
+    },
+    "RH_0tmMAAAAJ": {
+      "display_name": "Bustamante",
+      "last_attempt_at_utc": "2025-04-01T01:24:35+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:24:35+00:00",
+      "migration_source": "map-of-ini/data/Bustamante.json",
+      "publication_count": 29
+    },
+    "RYA0zwUAAAAJ": {
+      "display_name": "Budnik",
+      "last_attempt_at_utc": "2025-03-01T01:45:40+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:45:40+00:00",
+      "migration_source": "map-of-ece/data/Budnik.json",
+      "publication_count": 51
+    },
+    "Rn_BmTYAAAAJ": {
+      "display_name": "Fanti",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Fanti.json",
+      "publication_count": 113
+    },
+    "RrSOHq8AAAAJ": {
+      "display_name": "Porter",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Porter.json",
+      "publication_count": 138
+    },
+    "SHcIvuoAAAAJ": {
+      "display_name": "Franchetti",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Franchetti.json",
+      "publication_count": 246
+    },
+    "SL5tv4gAAAAJ": {
+      "display_name": "Islam",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Islam.json",
+      "publication_count": 436
+    },
+    "SU0c5P0AAAAJ": {
+      "display_name": "Bergbreiter",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Bergbreiter.json",
+      "publication_count": 179
+    },
+    "TEMlkDMAAAAJ": {
+      "display_name": "Busogi",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Busogi.json",
+      "publication_count": 25
+    },
+    "U43hPn8AAAAJ": {
+      "display_name": "Tang",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Tang.json",
+      "publication_count": 210
+    },
+    "U8r6ir4AAAAJ": {
+      "display_name": "Malen",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Malen.json",
+      "publication_count": 121
+    },
+    "UIS_G1YAAAAJ": {
+      "display_name": "Bedillion",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Bedillion.json",
+      "publication_count": 84
+    },
+    "UUvF5NkAAAAJ": {
+      "display_name": "Aksak",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Aksak.json",
+      "publication_count": 70
+    },
+    "UtIervAAAAAJ": {
+      "display_name": "Sankaranarayanan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Sankaranarayanan.json",
+      "publication_count": 183
+    },
+    "Uz5IxwgAAAAJ": {
+      "display_name": "Fakhreddine",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Fakhreddine.json",
+      "publication_count": 48
+    },
+    "VH21b7cAAAAJ": {
+      "display_name": "Wang",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Wang.json",
+      "publication_count": 67
+    },
+    "VPWy3N8AAAAJ": {
+      "display_name": "Wang",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Wang.json",
+      "publication_count": 28
+    },
+    "VQJVBdMAAAAJ": {
+      "display_name": "Bockstaller",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Bockstaller.json",
+      "publication_count": 272
+    },
+    "VcbkS6UAAAAJ": {
+      "display_name": "Rounce",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Rounce.json",
+      "publication_count": 137
+    },
+    "VtINcewAAAAJ": {
+      "display_name": "Cagan",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Cagan.json",
+      "publication_count": 456
+    },
+    "WfaqxlgAAAAJ": {
+      "display_name": "Kumar",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Kumar.json",
+      "publication_count": 187
+    },
+    "X5buTmMAAAAJ": {
+      "display_name": "Christin",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Christin.json",
+      "publication_count": 180
+    },
+    "XDT0iaUAAAAJ": {
+      "display_name": "Zajdel",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Zajdel.json",
+      "publication_count": 23
+    },
+    "XEMsPO8AAAAJ": {
+      "display_name": "Moore",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Moore.json",
+      "publication_count": 52
+    },
+    "XEztdZgAAAAJ": {
+      "display_name": "JoeWong",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/JoeWong.json",
+      "publication_count": 204
+    },
+    "XKp8JuwAAAAJ": {
+      "display_name": "Bettinger",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Bettinger.json",
+      "publication_count": 190
+    },
+    "XtTBo1AAAAAJ": {
+      "display_name": "Yagan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Yagan.json",
+      "publication_count": 161
+    },
+    "ZTnog9YAAAAJ": {
+      "display_name": "DeGraef",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/DeGraef.json",
+      "publication_count": 439
+    },
+    "ZdkogE8AAAAJ": {
+      "display_name": "Heard",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Heard.json",
+      "publication_count": 44
+    },
+    "ZejbkR4AAAAJ": {
+      "display_name": "Gellman",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Gellman.json",
+      "publication_count": 451
+    },
+    "ZnRhcFUAAAAJ": {
+      "display_name": "Hoe",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Hoe.json",
+      "publication_count": 167
+    },
+    "Zz3-zGQAAAAJ": {
+      "display_name": "Beuth",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Beuth.json",
+      "publication_count": 203
+    },
+    "_7HjzLYAAAAJ": {
+      "display_name": "Wayne",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Wayne.json",
+      "publication_count": 33
+    },
+    "_X2eOeQAAAAJ": {
+      "display_name": "Kara",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Kara.json",
+      "publication_count": 152
+    },
+    "_ZWLAHkAAAAJ": {
+      "display_name": "Racz",
+      "last_attempt_at_utc": "2024-06-01T00:45:14+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2024-06-01T00:45:14+00:00",
+      "migration_source": "map-of-cmu-africa/data/Racz.json",
+      "publication_count": 1
+    },
+    "a9T7i5QAAAAJ": {
+      "display_name": "Lucia",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Lucia.json",
+      "publication_count": 121
+    },
+    "aH52nxkAAAAJ": {
+      "display_name": "Farimani",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Farimani.json",
+      "publication_count": 200
+    },
+    "aYUS1DkAAAAJ": {
+      "display_name": "Niepa",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Niepa.json",
+      "publication_count": 76
+    },
+    "adJ32iMAAAAJ": {
+      "display_name": "Sirbu",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Sirbu.json",
+      "publication_count": 149
+    },
+    "amrrCWAAAAAJ": {
+      "display_name": "Schneider",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Schneider.json",
+      "publication_count": 130
+    },
+    "asQ8ccIAAAAJ": {
+      "display_name": "O'Connor",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/O'Connor.json",
+      "publication_count": 74
+    },
+    "b7XUPaQAAAAJ": {
+      "display_name": "Berges",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Berges.json",
+      "publication_count": 205
+    },
+    "c8e3DUMAAAAJ": {
+      "display_name": "Jen",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Jen.json",
+      "publication_count": 27
+    },
+    "cncJ21oAAAAJ": {
+      "display_name": "Feinberg",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Feinberg.json",
+      "publication_count": 219
+    },
+    "ctYLFRIAAAAJ": {
+      "display_name": "Washburn",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Washburn.json",
+      "publication_count": 211
+    },
+    "cwIxVGgAAAAJ": {
+      "display_name": "Wahby",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Wahby.json",
+      "publication_count": 66
+    },
+    "dJSe9EUAAAAJ": {
+      "display_name": "Karplus",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Karplus.json",
+      "publication_count": 197
+    },
+    "dpyzXwMAAAAJ": {
+      "display_name": "Chan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Chan.json",
+      "publication_count": 39
+    },
+    "dzHYBKcAAAAJ": {
+      "display_name": "Zhang",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Zhang.json",
+      "publication_count": 385
+    },
+    "eDzzGUQAAAAJ": {
+      "display_name": "Taylor",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Taylor.json",
+      "publication_count": 63
+    },
+    "eLe4eJEAAAAJ": {
+      "display_name": "Rohrer",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Rohrer.json",
+      "publication_count": 462
+    },
+    "ffUu1PcAAAAJ": {
+      "display_name": "Stern",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Stern.json",
+      "publication_count": 373
+    },
+    "fiZryxEAAAAJ": {
+      "display_name": "Grossman",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Grossman.json",
+      "publication_count": 1277
+    },
+    "gFZ3W5wAAAAJ": {
+      "display_name": "Lowry",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Lowry.json",
+      "publication_count": 369
+    },
+    "gbVHsS0AAAAJ": {
+      "display_name": "Szafron",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Szafron.json",
+      "publication_count": 35
+    },
+    "gcqbMxAAAAAJ": {
+      "display_name": "Vernon",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Vernon.json",
+      "publication_count": 220
+    },
+    "gnEgtr8AAAAJ": {
+      "display_name": "Chamanzar",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Chamanzar.json",
+      "publication_count": 134
+    },
+    "h1NXfKYAAAAJ": {
+      "display_name": "Chi",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Chi.json",
+      "publication_count": 160
+    },
+    "hkAq-IIAAAAJ": {
+      "display_name": "VChen",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/VChen.json",
+      "publication_count": 44
+    },
+    "hklOXvkAAAAJ": {
+      "display_name": "Grover",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Grover.json",
+      "publication_count": 240
+    },
+    "hlh0cocAAAAJ": {
+      "display_name": "Low",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Low.json",
+      "publication_count": 74
+    },
+    "i8vD3O0AAAAJ": {
+      "display_name": "Qian",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Qian.json",
+      "publication_count": 201
+    },
+    "iA6lDVMAAAAJ": {
+      "display_name": "Evans",
+      "last_attempt_at_utc": "2025-04-01T01:25:26+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:25:26+00:00",
+      "migration_source": "map-of-iii/data/Evans.json",
+      "publication_count": 44
+    },
+    "iz8reBoAAAAJ": {
+      "display_name": "Marom",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Marom.json",
+      "publication_count": 87
+    },
+    "jCNJhFcAAAAJ": {
+      "display_name": "BChen",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/BChen.json",
+      "publication_count": 65
+    },
+    "jD_4h7sAAAAJ": {
+      "display_name": "Kitchin",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Kitchin.json",
+      "publication_count": 227
+    },
+    "jT2YySMAAAAJ": {
+      "display_name": "DeSantis",
+      "last_attempt_at_utc": "2025-03-01T00:55:59+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T00:55:59+00:00",
+      "migration_source": "map-of-cmu-africa/data/DeSantis.json",
+      "publication_count": 7
+    },
+    "jW3whJYAAAAJ": {
+      "display_name": "Webster-Wood",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Webster-Wood.json",
+      "publication_count": 83
+    },
+    "jcgAPTYAAAAJ": {
+      "display_name": "Kang",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Kang.json",
+      "publication_count": 35
+    },
+    "jnmyOEYAAAAJ": {
+      "display_name": "Nakahira",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Nakahira.json",
+      "publication_count": 60
+    },
+    "jtorb88AAAAJ": {
+      "display_name": "McHenry",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/McHenry.json",
+      "publication_count": 438
+    },
+    "kIUqgbcAAAAJ": {
+      "display_name": "Cranor",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Cranor.json",
+      "publication_count": 524
+    },
+    "kTTBpJkAAAAJ": {
+      "display_name": "Parno",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Parno.json",
+      "publication_count": 179
+    },
+    "kyxpmt8AAAAJ": {
+      "display_name": "Varodayan",
+      "last_attempt_at_utc": "2025-04-01T01:24:35+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:24:35+00:00",
+      "migration_source": "map-of-ini/data/Varodayan.json",
+      "publication_count": 45
+    },
+    "l5EsegcAAAAJ": {
+      "display_name": "Krause",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Krause.json",
+      "publication_count": 39
+    },
+    "l6oz33MAAAAJ": {
+      "display_name": "Ganger",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Ganger.json",
+      "publication_count": 425
+    },
+    "lRpngMEAAAAJ": {
+      "display_name": "Acharya",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Acharya.json",
+      "publication_count": 145
+    },
+    "lSgFdtIAAAAJ": {
+      "display_name": "Jaramillo",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Jaramillo.json",
+      "publication_count": 159
+    },
+    "lViJAdQAAAAJ": {
+      "display_name": "Singh",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Singh.json",
+      "publication_count": 44
+    },
+    "mI7VyEYAAAAJ": {
+      "display_name": "Jones",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Jones.json",
+      "publication_count": 29
+    },
+    "mWpu_ooAAAAJ": {
+      "display_name": "Savvides",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Savvides.json",
+      "publication_count": 412
+    },
+    "mhi9LhkAAAAJ": {
+      "display_name": "Smith",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Smith.json",
+      "publication_count": 95
+    },
+    "mjixDB8AAAAJ": {
+      "display_name": "Dandin",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Dandin.json",
+      "publication_count": 69
+    },
+    "oFIXoy8AAAAJ": {
+      "display_name": "Qu",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Qu.json",
+      "publication_count": 63
+    },
+    "oP6n73gAAAAJ": {
+      "display_name": "Pistorius",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Pistorius.json",
+      "publication_count": 305
+    },
+    "oyaImDQAAAAJ": {
+      "display_name": "Okeyo",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Okeyo.json",
+      "publication_count": 87
+    },
+    "pARKzQsAAAAJ": {
+      "display_name": "Shen",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Shen.json",
+      "publication_count": 291
+    },
+    "pBEw09IAAAAJ": {
+      "display_name": "Sioshansi",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Sioshansi.json",
+      "publication_count": 127
+    },
+    "pgcK25AAAAAJ": {
+      "display_name": "Shimada",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Shimada.json",
+      "publication_count": 299
+    },
+    "pk31kMgAAAAJ": {
+      "display_name": "Panagakos",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Panagakos.json",
+      "publication_count": 60
+    },
+    "ppVNXUsAAAAJ": {
+      "display_name": "Negi",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Negi.json",
+      "publication_count": 147
+    },
+    "qC52bkkAAAAJ": {
+      "display_name": "Wood",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Wood.json",
+      "publication_count": 51
+    },
+    "qMCGI94AAAAJ": {
+      "display_name": "Smailagic",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Smailagic.json",
+      "publication_count": 262
+    },
+    "qoFYHTMAAAAJ": {
+      "display_name": "Moura",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Moura.json",
+      "publication_count": 833
+    },
+    "qyPWUBcAAAAJ": {
+      "display_name": "Narasimhan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Narasimhan.json",
+      "publication_count": 255
+    },
+    "rVFrmkQAAAAJ": {
+      "display_name": "Mukamakuza",
+      "last_attempt_at_utc": "2025-03-01T00:55:59+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T00:55:59+00:00",
+      "migration_source": "map-of-cmu-africa/data/Mukamakuza.json",
+      "publication_count": 19
+    },
+    "rcGIhfMAAAAJ": {
+      "display_name": "Umuhoza",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Umuhoza.json",
+      "publication_count": 27
+    },
+    "rejzeocAAAAJ": {
+      "display_name": "Shi",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Shi.json",
+      "publication_count": 283
+    },
+    "sAdoeA8AAAAJ": {
+      "display_name": "Cook",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Cook.json",
+      "publication_count": 169
+    },
+    "sLEB9iYAAAAJ": {
+      "display_name": "LeDuc",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/LeDuc.json",
+      "publication_count": 152
+    },
+    "sdeRYSMAAAAJ": {
+      "display_name": "Flanigan",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Flanigan.json",
+      "publication_count": 45
+    },
+    "tRmAOagAAAAJ": {
+      "display_name": "Ndibwile",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Ndibwile.json",
+      "publication_count": 35
+    },
+    "uhIGX-MAAAAJ": {
+      "display_name": "Peha",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Peha.json",
+      "publication_count": 313
+    },
+    "vBhJwrkAAAAJ": {
+      "display_name": "He",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/He.json",
+      "publication_count": 1141
+    },
+    "vO15bQkAAAAJ": {
+      "display_name": "Salvador",
+      "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-01T01:36:15+00:00",
+      "migration_source": "map-of-mse/data/Salvador.json",
+      "publication_count": 198
+    },
+    "vVhcBXoAAAAJ": {
+      "display_name": "Thornburg",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Thornburg.json",
+      "publication_count": 32
+    },
+    "vlworSwAAAAJ": {
+      "display_name": "Gregory",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Gregory.json",
+      "publication_count": 116
+    },
+    "w3_2J7EAAAAJ": {
+      "display_name": "Mohan",
+      "last_attempt_at_utc": "2025-04-01T01:25:26+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:25:26+00:00",
+      "migration_source": "map-of-iii/data/Mohan.json",
+      "publication_count": 13
+    },
+    "w4L5vaEAAAAJ": {
+      "display_name": "Moore",
+      "last_attempt_at_utc": "2025-04-01T02:09:42+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:09:42+00:00",
+      "migration_source": "map-of-civil/data/Moore.json",
+      "publication_count": 14
+    },
+    "wP966k4AAAAJ": {
+      "display_name": "KYu",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/KYu.json",
+      "publication_count": 139
+    },
+    "wVMHcqoAAAAJ": {
+      "display_name": "Rawn",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Rawn.json",
+      "publication_count": 78
+    },
+    "wXSgFr4AAAAJ": {
+      "display_name": "Sullivan",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Sullivan.json",
+      "publication_count": 196
+    },
+    "wgrJnDgAAAAJ": {
+      "display_name": "Wiecha",
+      "last_attempt_at_utc": "2025-04-01T01:01:00+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:01:00+00:00",
+      "migration_source": "map-of-cmu-africa/data/Wiecha.json",
+      "publication_count": 80
+    },
+    "wtuGC_wAAAAJ": {
+      "display_name": "Ogoke",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Ogoke.json",
+      "publication_count": 17
+    },
+    "xJrrWmQAAAAJ": {
+      "display_name": "Ren",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Ren.json",
+      "publication_count": 68
+    },
+    "xSMEGpAAAAAJ": {
+      "display_name": "Abbott",
+      "last_attempt_at_utc": "2025-05-01T01:24:56+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-05-01T01:24:56+00:00",
+      "migration_source": "map-of-bme/data/Abbott.json",
+      "publication_count": 52
+    },
+    "y1-WJhYAAAAJ": {
+      "display_name": "Panat",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Panat.json",
+      "publication_count": 103
+    },
+    "yafW7KUAAAAJ": {
+      "display_name": "Li",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Li.json",
+      "publication_count": 106
+    },
+    "ygiY7C8AAAAJ": {
+      "display_name": "Amvrosiadis",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Amvrosiadis.json",
+      "publication_count": 57
+    },
+    "yjJPtE4AAAAJ": {
+      "display_name": "Jia",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Jia.json",
+      "publication_count": 168
+    },
+    "ymFxqWQAAAAJ": {
+      "display_name": "Biegler",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Biegler.json",
+      "publication_count": 961
+    },
+    "yqIoH34AAAAJ": {
+      "display_name": "Joshi",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Joshi.json",
+      "publication_count": 153
+    },
+    "z7tPc9IAAAAJ": {
+      "display_name": "Zhao",
+      "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-03-28T12:50:46+00:00",
+      "migration_source": "map-of-mech/data/Zhao.json",
+      "publication_count": 209
+    },
+    "zKKBwB4AAAAJ": {
+      "display_name": "Whitehead",
+      "last_attempt_at_utc": "2025-04-01T01:19:25+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T01:19:25+00:00",
+      "migration_source": "map-of-cheme/data/Whitehead.json",
+      "publication_count": 108
+    },
+    "zQluaMIAAAAJ": {
+      "display_name": "Morgan",
+      "last_attempt_at_utc": "2025-04-01T02:02:01+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:02:01+00:00",
+      "migration_source": "map-of-ece/data/Morgan.json",
+      "publication_count": 533
+    },
+    "zWAt8DYAAAAJ": {
+      "display_name": "Ferreira",
+      "last_attempt_at_utc": "2025-04-01T02:00:37+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2025-04-01T02:00:37+00:00",
+      "migration_source": "map-of-epp/data/Ferreira.json",
+      "publication_count": 40
+    }
+  },
+  "schema_version": 1
+}

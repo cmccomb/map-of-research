@@ -1,0 +1,2193 @@
+{
+  "display_name": "Weber",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Weber.json",
+  "publication_count": 274,
+  "publications": [
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:L1USKYWJimsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "1. REPORT DATE (DD-MM-YYYY)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:S16KYo8Pm5AC",
+      "citation": "JOURNAL OF NEUROSURGERY 119 (2), A553-A553, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "10 degree-of-freedom neuroprosthetic control by an individual with tetraplegia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:M3NEmzRMIkIC",
+      "citation": "Clinical Neurophysiology 120 (2), e124, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "121. Comparison of localization techniques for upper limb botulinum toxin injections"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:OBSaB-F7qqsC",
+      "citation": "Current Biology 25, R793-R810, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "3. Kuo, AD (2001). A simple model of bipedal walking predicts the preferred speed-step length relationship. J. Biomech. Eng. 123, 264–269."
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:pS0ncopqnHgC",
+      "citation": "Neurosurgery 71 (Supplement_1), 281, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "47238 Results of the Command Trial: An Early Feasibility Study of the Synchron Endovascular Brain-Computer Interface"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4hFrxpcac9AC",
+      "citation": "Journal of neural engineering 8 (5), 056009, 2011",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "A computational model for estimating recruitment of primary afferent fibers by intraneural stimulation in the dorsal root ganglia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:MAUkC_7iAq8C",
+      "citation": "Brain 147 (10), 3583-3595, 2024",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A direct spinal cord–computer interface enables the control of the paralysed hand in spinal cord injury"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:zYLM7Y9cAGgC",
+      "citation": "2009 Annual International Conference of the IEEE Engineering in Medicine and …, 2009",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A fuzzy logic model for hand posture control using human cortical activity recorded by micro-ECoG electrodes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:0CzhzZyukY4C",
+      "citation": "Med 2 (8), 912-937, 2021",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "A modular strategy for next-generation upper-limb sensory-motor neuroprostheses"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:sszUF3NjhM4C",
+      "citation": "Journal of Neural Engineering 21 (4), 046058, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A preliminary study exploring the effects of transcutaneous spinal cord stimulation on spinal excitability and phantom limb pain in people with a transtibial amputation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4MWp96NkSFoC",
+      "citation": "Front. Neurosci. Conference Abstract: Biomag, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "A real-time software toolbox for brain-machine interfaces using magnetoencephelography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kuK5TVdYjLIC",
+      "citation": "Archives of Physical Medicine and Rehabilitation 99 (10), e85, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A Sleeve Electrode Array for Myoelectric Control of Functional Electrical Stimulation-Assisted Hand Function"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:cWzG1nlazyYC",
+      "citation": "bioRxiv, 584995, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A truly injectable neural stimulation electrode made from an in-body curing polymer/metal composite"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HtS1dXgVpQUC",
+      "citation": "2019 41st Annual International Conference of the IEEE Engineering in …, 2019",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A wearable neural interface for detecting and decoding attempted hand movements in a person with tetraplegia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:SGW5VrABaM0C",
+      "citation": "Stroke: Vascular and Interventional Neurology 3, e12448, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Abstract Number‐13: Endovascular BCI to Restore Motor Control for the Command of Digital Devices in Severe Quadriparesis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:8xutWZnSdmoC",
+      "citation": "Plastic and Reconstructive Surgery 133 (3S), 208-209, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Abstract P28: An Interim Analysis of Outcomes Following 5-cm Median Nerve Defect Repair in Non-Human Primates"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:8d8msizDQcsC",
+      "citation": "Magnetoencephalography, 2011",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Accessing and processing MEG signals in real-time: Emerging applications and enabling technologies"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Se3iqnhoufwC",
+      "citation": "Journal of the American College of Surgeons 207 (3), S107-S108, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Achieving functional recovery in experimental hind-limb transplantation comparable to replantation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:hC7cP41nSMkC",
+      "citation": "IFAC Proceedings Volumes 35 (1), 13-18, 2002",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Adaptation in cortical control of arm movement"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4DMP91E08xMC",
+      "citation": "Proceedings of the 20th Annual International Conference of the IEEE …, 1998",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Adaptation of arm movement control under repeated perturbations"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ULOm3_A8WrAC",
+      "citation": "Progress in brain research 143, 477-490, 2004",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Adaptive behavior of cortical neurons during a perturbed arm-reaching movement in a nonhuman primate"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:DJbcl8HfkQkC",
+      "citation": "Journal of Hand Therapy 33 (2), 180-187, 2020",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Advances in motion and electromyography based wearable technology for upper extremity function rehabilitation: A review"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:rmuvC79q63oC",
+      "citation": "Journal of neurophysiology 118 (4), 2412-2420, 2017",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Altered modulation of sensorimotor rhythms with chronic paralysis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HtEfBTGE9r8C",
+      "citation": "Science translational medicine 6 (234), 234ra58-234ra58, 2014",
+      "num_citations": 533,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "An acellular biologic scaffold promotes skeletal muscle formation in mice and humans with volumetric muscle loss"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Ug5p-4gJ2f0C",
+      "citation": "PloS one 8 (2), e55344, 2013",
+      "num_citations": 456,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "An electrocorticographic brain interface in an individual with tetraplegia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:1yWc8FF-_SYC",
+      "citation": "ArXiv, abs/2208.06348 27, 2022",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "An empirical exploration of cross-domain alignment between language and electroencephalogram"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:q3CdL3IzO_QC",
+      "citation": "Advanced healthcare materials 8 (23), 1900892, 2019",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "an injectable neural stimulation electrode made from an in‐body curing polymer/metal composite"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:MpfHP-DdYjUC",
+      "citation": "TISSUE ENGINEERING PART A 28, S505-S505, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "AN INNERVATED SYNOVIUM-CARTILAGE CHIP FOR MODELING JOINT INFLAMMATION AND ASSOCIATED PAIN"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kz9GbA2Ns4gC",
+      "citation": "2012 IEEE 25th international conference on micro electro mechanical systems …, 2012",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "An ultra-compliant, scalable neural probe with molded biodissolvable delivery vehicle"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-f6ydRqryjwC",
+      "citation": "Proceedings of the Second Joint 24th Annual Conference and the Annual Fall …, 2002",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Analysis of neuronal interactions during adaptation and learning in motor control of primates"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:b1wdh0AR-JQC",
+      "citation": "NEUROPROSTHETICS: Theory and Practice, 40-103, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Anatomy and physiology of the central nervous system"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:YsrPvlHIBpEC",
+      "citation": "9° Congresso Florestal Brasileiro 1 (1), 472-475, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Aplicação de extrato pirolenhoso na produtividade da soja"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:KbBQZpvPDL4C",
+      "citation": "US Patent 9,408,571, 2016",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Apparatus and method for implantation of devices into soft tissue"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:QYdC8u9Cj1oC",
+      "citation": "US Patent 10,350,021, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Apparatus and method for implantation of devices into soft tissue"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:1taIhTC69MYC",
+      "citation": "JAMA neurology 80 (3), 270-278, 2023",
+      "num_citations": 96,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Assessment of safety of a fully implanted endovascular brain-computer interface for severe paralysis in 4 patients: the stentrode with thought-controlled digital switch (SWITCH …"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:rHJHxKgnXwkC",
+      "citation": "Science Robotics 8 (83), eadl0014, 2023",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Assistive robotics should seamlessly integrate humans and robots"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:otzGkya1bYkC",
+      "citation": "Frontiers in Bioengineering and Biotechnology 9, 796042, 2021",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Augmented transcutaneous stimulation using an injectable electrode: A computational study"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:BrOSOlqYqPUC",
+      "citation": "FRONTIERS IN BIOENGINEERING AND BIOTECHNOLOGY 12, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Augmented transcutaneous stimulation using an injectable electrode: a computational study (vol 9, 796042, 2021)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:g3aElNc5_aQC",
+      "citation": "bioRxiv, 604108, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Augmenting Quadriplegic Hand Function Using a Sensorimotor Demultiplexing Neural Interface"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Ade32sEp0pkC",
+      "citation": "Machine Learning for Health (ML4H), 480-497, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Automated cardiovascular record retrieval by multimodal learning between electrocardiogram and clinical report"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:lvd772isFD0C",
+      "citation": "2020 42nd Annual International Conference of the IEEE Engineering in …, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Bilateral symmetry in ankle-muscle activation in transtibial amputees"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:jE2MZjpN3IcC",
+      "citation": "Dissertation, RWTH Aachen University, 2022, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Biocatalytic reduction of carboxylic acids: production and application of carboxylate reductases in synthetic enzyme cascades"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kh2fBNsKQNwC",
+      "citation": "Nature Reviews Drug Discovery 13 (6), 399-400, 2014",
+      "num_citations": 377,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Bioelectronic medicines: a research roadmap"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:i2xiXl-TujoC",
+      "citation": "Journal of Surgical Research 176 (2), 490-502, 2012",
+      "num_citations": 129,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Biologic scaffold remodeling in a dog model of complex musculoskeletal injury"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:9yKSN-GCB0IC",
+      "citation": "2008 IEEE international conference on robotics and automation, 3672-3677, 2008",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Biomechanical energy harvesting: Apparatus and method"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:u5HHmVD_uO8C",
+      "citation": "Science 319 (5864), 807-810, 2008",
+      "num_citations": 906,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Biomechanical energy harvesting: generating electricity during walking with minimal user effort"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:5nxA0vEk-isC",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 13 (2 …, 2005",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "BIONic WalkAide for correcting foot drop"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:0N-VGjzr574C",
+      "citation": "Journal of Neurosurgery 122 (6), A1560-A1561, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Brain computer interface (BCI) controlled prosthetic arm movement is possible in the absence of visual input with proprioceptive feedback"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:gsN89kCJA0AC",
+      "citation": "EDX and NM Medicine: Looking to the Future as We Address Today’s Challenges …, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Brain-Computer Interfaces: Success from the University of Pittsburgh"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:UebtZRa9Y70C",
+      "citation": "Neuron 52 (1), 205-220, 2006",
+      "num_citations": 1048,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Brain-controlled interfaces: movement restoration with neural prosthetics"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:5qfkUJPXOUwC",
+      "citation": "Journal of neural engineering 13 (2), 023001, 2016",
+      "num_citations": 87,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Brain–computer interface devices for patients with paralysis and amputation: a meeting report"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:mNrWkgRL2YcC",
+      "citation": "Bioelectronic Medicine 6 (1), 1, 2020",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Building a bioelectronic medicine movement 2019: insights from leaders in industry, academia, and research"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:RoXSNcbkSzsC",
+      "citation": "Journal of Neural Engineering 22 (1), 010201, 2025",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Building consensus on clinical outcome assessments for BCI devices. A summary of the 10th BCI society meeting 2023 workshop"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-nhnvRiOwuoC",
+      "citation": "arXiv preprint arXiv:2208.06348, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Can Brain Signals Reveal Inner Alignment with Human Languages?"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WC9gN4BGCRcC",
+      "citation": "Findings of the Association for Computational Linguistics: EMNLP 2023, 1789-1804, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Can brain signals reveal inner alignment with human languages?"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:3NQIlFlcGxIC",
+      "citation": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and …, 2023",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Cardiac disease diagnosis on imbalanced electrocardiography data through Optimal Transport augmentation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:NXb4pA-qfm4C",
+      "citation": "Archives of physical medicine and rehabilitation 96 (11), 2007-2016, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Changes in cerebellar activation after onabotulinumtoxin A injections for spasticity after chronic stroke: A pilot functional magnetic resonance imaging study"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:1Ye0OR6EYb4C",
+      "citation": "Journal of Neurophysiology, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Changes in Gait Asymmetry May Be Caused by Adaptation of Spinal Reflexes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:F2UWTTQJPOcC",
+      "citation": "medRxiv, 2024.12. 27.24319684, 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Changes in Muscle Activation and Joint Motion During Walking After Transtibial Amputation with Sensory Feedback from Spinal Cord Stimulation: A Case Study"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:tOudhMTPpwUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Channel Interactions During Synchronous Microstimulation with High Density Microelectrode Arrays"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HeT0ZceujKMC",
+      "citation": "The FASEB Journal 27, 650.8-650.8, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Characterization of the tissue response to functional multielectrode arrays in the feline spinal nerve"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:_B80troHkn4C",
+      "citation": "Statistics in Medicine 30 (23), 2854-2866, 2011",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Characterizing global statistical significance of spatio-temporal hot spots in MEG/EEG source space via excursion algorithms"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:M7yex6snE4oC",
+      "citation": "Statistics in medicine 30 (23), 2854-2866, 2011",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Characterizing global statistical significance of spatiotemporal hot spots in magnetoencephalography/electroencephalography source space via excursion algorithms"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-FonjvnnhkoC",
+      "citation": "Journal of Neural Engineering 11 (3), 036007, 2014",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Chronic recruitment of primary afferent neurons by microstimulation in the feline dorsal root ganglia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:_axFR9aDTf0C",
+      "citation": "Biomaterials 35 (34), 9255-9268, 2014",
+      "num_citations": 217,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Chronic tissue response to carboxymethyl cellulose based dissolvable insertion needle for ultra-small neural probes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Wp0gIr-vW9MC",
+      "citation": "Arizona State University, 2001",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Chronic, multi-electrode recordings of cortical activity during adaptation to repeated perturbations of reaching"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:W7OEmFMy1HYC",
+      "citation": "17th International Conference on Biomagnetism Advances in Biomagnetism …, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Cluster-based algorithm for ROI analysis and cognitive state decoding using single-trial source MEG data"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:7PzlFSSx8tAC",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 19 (3 …, 2011",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Clustering linear discriminant analysis for MEG-based brain computer interfaces"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:u-x6o8ySG0sC",
+      "citation": "The Journal of physiology 560 (3), 883-896, 2004",
+      "num_citations": 104,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Coding of position by simultaneously recorded sensory neurones in the cat dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HbR8gkJAVGIC",
+      "citation": "Clinical and translational science 7 (1), 52-59, 2014",
+      "num_citations": 86,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Collaborative approach in the development of high‐performance brain–computer interfaces for a neuroprosthetic arm: Translation from animal models to human control"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-jrNzM816MMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Comparing reaction times of microstimulation in human somatosensory cortex to peripheral sensory input"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:rTD5ala9j4wC",
+      "citation": "Muscle & Nerve 38 (4), 1400, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "COMPARISON OF LOCALIZATION TECHNIQUES FOR UPPER LIMB BOTULINUM TOXIN INJECTIONS"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:M3ejUd6NZC8C",
+      "citation": "PM&R 2 (7), 642-646, 2010",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Comparison of surface and ultrasound localization to identify forearm flexor muscles for botulinum toxin injections"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:yxmsSjX2EkcC",
+      "citation": "Journal of Neural Engineering 21 (2), 026039, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Computational modeling of dorsal root ganglion stimulation using an Injectrode"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PoWvk5oyLR8C",
+      "citation": "Neuromechanical modeling of posture and locomotion, 273-307, 2016",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Computing motion dependent afferent activity during cat locomotion using a forward dynamics musculoskeletal model"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:7H_MAutzIkAC",
+      "citation": "ArXiv, abs/2304.06286 27, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Converting ecg signals to images for efficient image-text retrieval via encoding"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:P7Ujq4OLJYoC",
+      "citation": "Proceedings: Biological Sciences 281 (1793), 1-1, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Correction: Scaling of sensorimotor control in terrestrial mammals"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:k_IJM867U9cC",
+      "citation": "Proceedings of the First Joint BMES/EMBS Conference. 1999 IEEE Engineering …, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Cortical motor prosthesis control from simultaneously recorded neurons"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:YFjsv_pBGBYC",
+      "citation": "Computational intelligence and neuroscience 2011 (1), 363565, 2011",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Craniux: a LabVIEW‐based modular software framework for brain‐machine interface research"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4TOpqqG69KYC",
+      "citation": "Archives of physical medicine and rehabilitation 91 (5), 679-686, 2010",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Cyclic functional electrical stimulation does not enhance gains in hand grasp function when used as an adjunct to onabotulinumtoxinA and task practice therapy: a single-blind …"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:86PQX7AUzd4C",
+      "citation": "Journal of neuroscience methods 244, 52-67, 2015",
+      "num_citations": 239,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "DARPA-funded efforts in the development of novel brain–computer interface technologies"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Zph67rFs4hoC",
+      "citation": "Journal of neurophysiology 104 (5), 2451-2461, 2010",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Decoding and cortical source localization for intended movement direction with MEG"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:bz8QjSJIRt4C",
+      "citation": "IEEE Transactions on Biomedical Engineering 63 (1), 30-42, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Decoding brain states based on magnetoencephalography from prespecified cortical regions"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:3fE2CSJIrl8C",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 14 (2 …, 2006",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Decoding sensory feedback from firing rates of afferent ensembles recorded in cat dorsal root ganglia in normal locomotion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:LgRImbQfgY4C",
+      "citation": "Integrated Sensors for Biological and Neural Sensing 11663, 18-23, 2021",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Detecting and decoding spiking activity from sample populations of single motor neurons using wearable sensors"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:pAkWuXOU-OoC",
+      "citation": "2024 46th Annual International Conference of the IEEE Engineering in …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Detecting and Eliminating Cardiac Artifact from Endovascular EEG Signals"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:zCSUwVk65WsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Detecting and Reversing Myocardial Ischemia Using an Artificially Intelligent Bioelectronic Medicine"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:yD5IFk8b50cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Development of a sensory neuroprosthesis for artificial limbs"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:LhH-TYMQEocC",
+      "citation": "2016 38th Annual International Conference of the IEEE Engineering in …, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Dictionary learning for sparse representation and classification of neural spikes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:qUcmZB5y_30C",
+      "citation": "The 26th Annual International Conference of the IEEE Engineering in Medicine …, 2004",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Disassociation between primary motor cortical activity and movement kinematics during adaptation to reach perturbations"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:bKqednn6t2AC",
+      "citation": "Journal of neural engineering 17 (1), 016014, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "DRG microstimulation evokes postural responses in awake, standing felines"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:artPoR2Yc-kC",
+      "citation": "Science advances 8 (1), eabj5473, 2022",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Dynamic detection and reversal of myocardial ischemia using an artificially intelligent bioelectronic medicine"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:prdVHNxh-e8C",
+      "citation": "Journal of Neurophysiology 130 (4), 1008-1014, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Dynamic spinal reflex adaptation during locomotor adaptation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:mVmsd5A6BfQC",
+      "citation": "Journal of neuroscience methods 134 (1), 91-100, 2004",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Editing trains of action potentials from multi-electrode arrays"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:GFxP56DSvIMC",
+      "citation": "2019 IEEE 29th International Workshop on Machine Learning for Signal …, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Eeg-based texture classification during active touch"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:gKiMpY-AVTkC",
+      "citation": "Scientific reports 10 (1), 20755, 2020",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "EEG-based trial-by-trial texture classification during active touch"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:raTqNPD5sRQC",
+      "citation": "Curitibanos, SC, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Efeito dos métodos de aplicação de calagem e adubação no desempenho da soja (Glycine max)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:_kc_bZDykSQC",
+      "citation": "Archives of physical medicine and rehabilitation 90 (9), 1462-1468, 2009",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Effect of baseline spastic hemiparesis on recovery of upper-limb function following botulinum toxin type A injections and postinjection therapy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:IRz6iEL74y4C",
+      "citation": "Journal of neural engineering 17 (2), 026019, 2020",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Effects of MEG-based neurofeedback for hand rehabilitation after tetraplegia: preliminary findings in cortical modulations and grip strength"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:e5wmG9Sq2KIC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Effects of spatial and temporal parameters of primary afferent microstimulation on neural responses evoked in primary somatosensory cortex of an anesthetized cat"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:0izLItjtcgwC",
+      "citation": "Scientific reports 8 (1), 13067, 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Effects of synchronous electrode pulses on neural recruitment during multichannel microstimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PVgj2kMGcgYC",
+      "citation": "Brain Stimulation 14 (4), 990-1001, 2021",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Electrical stimulation of the external ear acutely activates noradrenergic mechanisms in humans"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:CdxZDUztZiMC",
+      "citation": "Nature communications 14 (1), 7019, 2023",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Electrocatalytic on-site oxygenation for transplanted cell-based-therapies"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:1DsIQWDZLl8C",
+      "citation": "Advances in Neural Information Processing Systems 37, 50313-50342, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "EMGBench: Benchmarking Out-of-Distribution Generalization and Adaptation for Electromyography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kWvqk_afx_IC",
+      "citation": "Adjunct Proceedings of the 37th Annual ACM Symposium on User Interface …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Enabling Advanced Interactions through Closed-loop Control of Motor Unit Activity After Tetraplegia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:2osOgNQ5qMEC",
+      "citation": "Canadian journal of physiology and pharmacology 82 (8-9), 757-768, 2004",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Encoding mechanisms for sensory neurons studied with a multielectrode array in the cat dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:2l5NCbZemmgC",
+      "citation": "Neurology 100 (17_supplement_2), 4738, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Endovascular Brain-Computer Interface to Restore Motor Control for the Command of Digital Devices in Patients with Severe Quadriparesis (S38. 001)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:QyXJ3EUuO1IC",
+      "citation": "bioRxiv, 2024.05. 17.594739, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Epidural Spinal Cord Recordings (ESRs): Sources of Artifact in Stimulation Evoked Compound Action Potentials"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ce2CqMG-AY4C",
+      "citation": "Journal of Neural Engineering, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Epidural Spinal Cord Recordings (ESRs): sources of neural-appearing artifact in stimulation evoked compound action potentials"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:7wO8s98CvbsC",
+      "citation": "Nature medicine 29 (3), 689-699, 2023",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Epidural stimulation of the cervical spinal cord for post-stroke upper-limb paresis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ALROH1vI_8AC",
+      "citation": "medRxiv, 2022.04. 11.22273635, 2022",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Epidural stimulation of the cervical spinal cord improves voluntary motor control in post-stroke upper limb paresis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:lgwcVrK6X84C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Epidural Stimulation of the Cervical Spinal Cord Improves Voluntary Motor Control in Post-stroke Upper Limb Paresis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:6ZxmRoH8BuwC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Estimating bladder pressure from sacral dorsal root ganglia recordings"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:mlAyqtXpCwEC",
+      "citation": "2012 Annual International Conference of the IEEE Engineering in Medicine and …, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Estimation of excitatory drive from sparse motoneuron sampling"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4vMrXwiscB8C",
+      "citation": "Neuromodulation 17 (5), 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Estimation of muscle activity from chronic single unit ventral root recordings"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:GtLg2Ama23sC",
+      "citation": "Journal of neural engineering 12 (1), 016008, 2014",
+      "num_citations": 140,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Evaluation of poly (3, 4-ethylenedioxythiophene)/carbon nanotube neural electrode coatings for stimulation in the dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:w1MjKQ0l0TYC",
+      "citation": "Nature Medicine, 1-11, 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "First-in-human study of epidural spinal cord stimulation in individuals with spinal muscular atrophy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WAzi4Gm8nLoC",
+      "citation": "Curitibanos, SC., 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Formas da calagem e adubação de fósforo e potássio no desempenho da soja (Glycine max) e aveia preta (Avena strigosa)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:aqlVkmm33-oC",
+      "citation": "IEEE Transactions on Biomedical Engineering 58 (3), 598-606, 2010",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Fully automated reduction of ocular artifacts in high-dimensional neural data"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:8k81kl-MbHgC",
+      "citation": "Canadian journal of physiology and pharmacology 82 (8-9), 784-792, 2004",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Functional electrical stimulation using microstimulators to correct foot drop: a case study"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:edDO8Oi4QzsC",
+      "citation": "Plastic and reconstructive surgery 131 (5), 720e-730e, 2013",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Functional outcomes following multiple acute rejections in experimental vascularized composite allotransplantation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:xtoqd-5pKcoC",
+      "citation": "Journal of rehabilitation research and development 50 (2), 145, 2013",
+      "num_citations": 298,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Functional priorities, assistive technology, and brain-computer interfaces after spinal cord injury"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:7Hz3ACDFbsoC",
+      "citation": "Machine Learning for Healthcare Conference, 172-197, 2022",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Geoecg: Data augmentation via wasserstein geodesic perturbation for robust electrocardiogram prediction"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:e_rmSamDkqQC",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 19 (5 …, 2011",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Guest editorial brain training: cortical plasticity and afferent feedback in brain-machine interface systems"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:u-coK7KVo8oC",
+      "citation": "bioRxiv, 2020.05. 21.108902, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Heuristic Spike Sorting Tuner (HSST), a framework to determine optimal parameter selection for a generic spike sorting algorithm"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:DBa1UEJaJKAC",
+      "citation": "npj Robotics 3 (1), 2, 2025",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "High-density electromyography for effective gesture-based control of physically assistive mobile manipulators"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PaBasH6fAo0C",
+      "citation": "bioRxiv, 2022.09. 06.506783, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "High-frequency stimulation does not improve comfort of transcutaneous spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:k8Z6L05lTy4C",
+      "citation": "The Lancet 381 (9866), 557-564, 2013",
+      "num_citations": 2120,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "High-performance neuroprosthetic control by an individual with tetraplegia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:r_AWSJRzSzQC",
+      "citation": "Journal of neural engineering 17 (1), 016019, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Hindlimb motor responses evoked by microstimulation of the lumbar dorsal root ganglia during quiet standing"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Aul-kAQHnToC",
+      "citation": "Journal of neural engineering 17 (4), 046012, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Host tissue response to floating microelectrode arrays chronically implanted in the feline spinal nerve"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:dQ2og3OwTAUC",
+      "citation": "IFAC Proceedings Volumes 29 (1), 938-943, 1996",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Human Arm Trajectory: Planning, Execution, and Control"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kNdYIx-mwKoC",
+      "citation": "2009 Annual International Conference of the IEEE Engineering in Medicine and …, 2009",
+      "num_citations": 174,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Human motor cortical activity recorded with Micro-ECoG electrodes, during individual finger movements"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:LO7wyVUgiFcC",
+      "citation": "PloS one 12 (5), e0176020, 2017",
+      "num_citations": 125,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Human perception of electrical stimulation on the surface of somatosensory cortex"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:VaXvl8Fpj5cC",
+      "citation": "US Patent 9,034,055, 2015",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Human-machine interface based on task-specific temporal postural synergies"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:43bX7VzcjpAC",
+      "citation": "Neuromodulation 25 (5), S65, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "ID: 16233 Selective Stimulation of the Dorsal Root Ganglia With Epineural Macroelectrodes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:jU7OWUQzBzMC",
+      "citation": "Neuromodulation 26 (4), S109, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "ID: 217240 Modelling of Dorsal Root Ganglion Activation via Transcutaneous Stimulation Using an Injectrode"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:mKu_rENv82IC",
+      "citation": "IEEE Transactions on Biomedical Engineering, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Image-Derived Skeletal Muscle Activation Metric Map: a Forearm Study Using Ultra-Fast Ultrasound Imaging and High-Density Electromyography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:O0nohqN1r9EC",
+      "citation": "Biocatalysis and Agricultural Biotechnology 19, 101133, 2019",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Immobilization of Burkholderia cepacia lipase on crosslinked chitosan-based support for the synthesis of geranyl acetate"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:YsMSGLbcyi4C",
+      "citation": "2009 Annual International Conference of the IEEE Engineering in Medicine and …, 2009",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Improved decoding of limb-state feedback from natural sensors"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:VN7nJs4JPk0C",
+      "citation": "Journal of Neurophysiology 133 (1), 299-309, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Improving localization and measurements of M-waves using high-density surface electromyography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:oNZyr7d5Mn4C",
+      "citation": "Acta biomaterialia 8 (10), 3561-3575, 2012",
+      "num_citations": 81,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "In vivo effects of L1 coating on inflammation and neuronal health at the electrode–tissue interface in rat spinal cord and dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:q-HalDI95KYC",
+      "citation": "Proceedings of the 2024 ACM/IEEE International Conference on Human-Robot …, 2024",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Independence in the home: A wearable interface for a person with quadriplegia to teleoperate a mobile manipulator"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:tH6gc1N1XXoC",
+      "citation": "Journal of Neurophysiology 125 (2), 496-508, 2021",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Information about contact force and surface texture is mixed in the firing rates of cutaneous afferent neurons"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:NDuN12AVoxsC",
+      "citation": "IEEE Journal on Selected Areas in Information Theory, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Information-theoretic tools to understand distributed source coding in neuroscience"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:mB3voiENLucC",
+      "citation": "PM&R 3 (6), S148-S157, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Integrating rehabilitation engineering technology with biologics"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:5bg8sr1QxYwC",
+      "citation": "Brain-Computer Interface Research: A State-of-the-Art Summary 10, 75, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Interface:'Disentangling'Sensorimotor Events During Brain-Computer"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:FPJr55Dyh1AC",
+      "citation": "Journal of motor behavior 44 (6), 403-418, 2012",
+      "num_citations": 111,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Interfacing the somatosensory system to restore touch and proprioception: essential considerations"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:6_hjMsCP8ZoC",
+      "citation": "arXiv e-prints, arXiv: 2402.01115, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Interpretation of Intracardiac Electrograms Through Textual Representations"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:jFemdcug13IC",
+      "citation": "arXiv preprint arXiv:2402.01115, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Interpretation of Intracardiac Electrograms Through Textual Representations"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:w0F2JDEymm0C",
+      "citation": "Neuromodulation 28 (1), S15-S16, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "IS029 SPINAL CORD AND PERIPHERAL NERVE STIMULATION FOR MOTOR REHABILITATION"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:DkZNVXde3BIC",
+      "citation": "Journal of NeuroInterventional Surgery 14 (Suppl 1), A239-A240, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "LB009 Motor neuroprosthesis to restore motor control for the command of digital devices: an early feasibility study of safety in subjects with severe quadriparesis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:OTTXONDVkokC",
+      "citation": "Stroke 42 (7), e412-e412, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Letter by Munin et al Regarding Article,“Botulinum Toxin for the Upper Limb After Stroke (BoTULS) Trial: Effect on Impairment, Activity Limitation, and Pain”"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:d1gkVwhDpl0C",
+      "citation": "Journal of Neural Engineering 4 (3), S168, 2007",
+      "num_citations": 103,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Limb-state feedback from ensembles of simultaneously recorded dorsal root ganglion neurons"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:sNmaIFBj_lkC",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 19 (5 …, 2011",
+      "num_citations": 97,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Limb-state information encoded by peripheral and central somatosensory neurons: implications for an afferent interface"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ODE9OILHJdcC",
+      "citation": "Science translational medicine 12 (527), eaav7753, 2020",
+      "num_citations": 117,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Long-gap peripheral nerve repair through sustained release of a neurotrophic factor in nonhuman primates"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:FiDNX6EVdGUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Measuring evoked responses in forearm muscles using high density surface electromyography (HDsEMG)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:DUooU5lO8OsC",
+      "citation": "Journal of neuroengineering and rehabilitation 12, 1-9, 2015",
+      "num_citations": 71,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "MEG-based neurofeedback for hand rehabilitation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ns9cj8rnVeAC",
+      "citation": "US Patent 7,652,386, 2010",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Method and apparatus for harvesting biomechanical energy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:KlAtU1dfN6UC",
+      "citation": "Journal of neurophysiology 97 (2), 1846-1856, 2007",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Method for counting motor units in mice and validation using a mathematical model"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:JV2RwH3_ST0C",
+      "citation": "US Patent App. 11/046,529, 2005",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Method to produce a balanced dorsiflexion during the gait of patients with foot drop"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ClCfbGk0d_YC",
+      "citation": "US Patent 9,057,361, 2015",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Methods and apparatus for harvesting biomechanical energy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:RGFaLdJalmkC",
+      "citation": "US Patent 7,659,636, 2010",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Methods and apparatus for harvesting biomechanical energy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:XvxMoLDsR5gC",
+      "citation": "US Patent 8,487,456, 2013",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Methods and apparatus for harvesting biomechanical energy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:hCrLmN-GePgC",
+      "citation": "US Patent 8,299,634, 2012",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Methods and apparatus for harvesting biomechanical energy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:anf4URPfarAC",
+      "citation": "Frontiers in neurology 5, 104, 2014",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Microelectrode array recordings from the ventral roots in chronically implanted cats"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:umqufdRvDiIC",
+      "citation": "Neurourology and urodynamics 34 (1), 65-71, 2015",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Microstimulation of afferents in the sacral dorsal root ganglia can evoke reflex bladder activity"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:qjMakFHDy7sC",
+      "citation": "Journal of neural engineering 6 (5), 055009, 2009",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Microstimulation of primary afferent neurons in the L7 dorsal root ganglia using multielectrode arrays in anesthetized cats: thresholds and recruitment properties"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:_FM0Bhl9EiAC",
+      "citation": "Journal of Neurophysiology 116 (1), 51-60, 2016",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Microstimulation of the lumbar DRG recruits primary afferent neurons in localized regions of lower limb"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:LPtt_HFRSbwC",
+      "citation": "Science 382 (6671), eabn4732, 2023",
+      "num_citations": 54,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Miniature battery-free bioelectronics"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:sJsF-0ZLhtgC",
+      "citation": "The Journal of Pain 22 (5), 583, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Modeling Joint Pain on a Chip: Integrating sensory neurons in the microJoint to model osteoarthritis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:r0BpntZqJG4C",
+      "citation": "Proceedings of the 25th Annual International Conference of the IEEE …, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Modifications of motor cortical activity induced by adaptation to movement perturbations as revealed by chronic multielectrode recordings in monkeys"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:CB2v5VPnA5kC",
+      "citation": "US Patent 12,115,372, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Monitoring and regulating physiological states and functions via sensory neural inputs to the spinal cord"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:EPG8bYD4jVwC",
+      "citation": "US Patent App. 18/827,494, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Monitoring and regulating physiological states and functions via sensory neural inputs to the spinal cord"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:IUKN3-7HHlwC",
+      "citation": "US Patent 11,433,241, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Monitoring and regulating physiological states and functions via sensory neural inputs to the spinal cord"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:OP4eGU-M3BUC",
+      "citation": "US Patent 9,622,671, 2017",
+      "num_citations": 97,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Monitoring and regulating physiological states and functions via sensory neural inputs to the spinal cord"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:An6A6Jpfc1oC",
+      "citation": "Journal of Neural Engineering, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Motor activity in gamma and high gamma bands recorded with a Stentrode from the human motor cortex in two people with ALS"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:5icHVeHT4IsC",
+      "citation": "Journal of neurointerventional surgery 13 (2), 102-108, 2021",
+      "num_citations": 216,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Motor neuroprosthesis implanted with neurointerventional surgery improves capacity for activities of daily living tasks in severe paralysis: first in-human experience"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:9pM33mqn1YgC",
+      "citation": "Frontiers in integrative neuroscience 8, 17, 2014",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Motor-related brain activity during action observation: a neural substrate for electrocorticographic brain-computer interfaces after spinal cord injury"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:SpbeaW3--B0C",
+      "citation": "IEEE Transactions on Biomedical Engineering 61 (1), 41-54, 2013",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Multichannel electrophysiological spike sorting via joint dictionary learning and mixture modeling"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:YohjEiUPhakC",
+      "citation": "Journal of neural engineering 8 (5), 056010, 2011",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Multielectrode array recordings of bladder and perineal primary afferent activity from the sacral dorsal root ganglia"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:wKETBy42zhYC",
+      "citation": "arXiv preprint arXiv:2304.07675, 2023",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Multimodal representation learning of cardiovascular magnetic resonance imaging"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:MXK_kJrjxJIC",
+      "citation": "Physical medicine and rehabilitation clinics of North America 21 (1), 157, 2010",
+      "num_citations": 282,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Neural interface technology for rehabilitation: exploiting and promoting neuroplasticity"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:FAceZFleit8C",
+      "citation": "Advanced Healthcare Materials 8 (23), 1970090, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Neural Interfaces: An Injectable Neural Stimulation Electrode Made from an In‐Body Curing Polymer/Metal Composite (Adv. Healthcare Mater. 23/2019)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:UeHWp8X0CEIC",
+      "citation": "The Journal of Physiology 589 (10), 2515-2528, 2011",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Neural mechanism of activity spread in the cat motor cortex and its relation to the intrinsic connectivity"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:5MTHONV0fEkC",
+      "citation": "Journal of Physiology 589 (10), 2515-2528, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Neural mechanism of activity spread in the cat motor cortex and its relation to the intrinsic connectivity-DTU Orbit (24/12/2018)"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HhcuHIWmDEUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Neural Mechanisms Underlying the Recovery of Voluntary Control of Motoneurons After Paralysis with Spinal Cord Stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:foquWX3nUaYC",
+      "citation": "Journal of Neural Engineering 8 (4), 046019, 2011",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Neuro-fuzzy decoding of sensory information from ensembles of simultaneously recorded dorsal root ganglion neurons for functional electrical stimulation applications"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kF1pexMAQbMC",
+      "citation": "Neuromodulation: Comprehensive Textbook of Principles, Technologies, and …, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Neuromodulation Technology"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:yFnVuubrUp4C",
+      "citation": "Implantable Neuroprostheses for Restoring Function, 127-151, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Neuroprostheses for somatosensory function"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Dip1O2bNi0gC",
+      "citation": "The journal of spinal cord medicine 36 (4), 258-272, 2013",
+      "num_citations": 119,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Neuroprosthetic technology for individuals with spinal cord injury"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HIFyuExEbWQC",
+      "citation": "Micro-and Nanotechnology Sensors, Systems, and Applications VIII 9836, 106-127, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Neurotechnology for monitoring and restoring sensory, motor, and autonomic functions"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HGTzPopzzJcC",
+      "citation": "Journal of NeuroEngineering and Rehabilitation 21 (1), 46, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "NSF DARE—Transforming modeling in neurorehabilitation: Four threads for catalyzing progress"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PVjk1bu6vJQC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Online feedback control of functional electrical stimulation using dorsal root ganglia recordings"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:F9fV5C73w3QC",
+      "citation": "Neuromodulation 17 (5), 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Optimizing parameter selection of spike sorting algorithms using the heuristic spike sorting tuner"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:eO3_k5sD8BwC",
+      "citation": "Bioelectronic Medicine 11 (1), 6, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Overcoming failure: improving acceptance and success of implanted neural interfaces"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:3bvyWxjaHKcC",
+      "citation": "Neuromodulation 28 (1), S179, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "P036 MICROMAGNETIC STIMULATION OF THE RAT SPINAL CORD WITH SELECTIVE IPSILATERAL RECRUITMENT OF EMGS"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PyEswDtIyv0C",
+      "citation": "Encyclopedia of Computational Neuroscience, 2678-2680, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Peripheral Nerve Interface Applications, Sensory Restoration"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ubry08Y2EpUC",
+      "citation": "Trends in neurosciences 45 (8), 568-578, 2022",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Poststroke arm and hand paresis: should we target the cervical spinal cord?"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-95Q15plzcUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Preparação de esteres catalisada pela lipase de Burkholderia cepacia imobilizada em microesferas de quitosana"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WJVC3Jt7v1AC",
+      "citation": "Bioelectronic Medicine 4, 1-4, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Proceedings of the second biennial Cleveland neural engineering workshop 2013"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:oi2SiIJ9l4AC",
+      "citation": "Nature biomedical engineering 8 (11), 1502, 2024",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Publisher Correction: Restoration of sensory feedback from the foot and reduction of phantom limb pain via closed-loop spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-mN3Mh-tlDkC",
+      "citation": "The Journal of the Acoustical Society of America 150 (4_Supplement), A289-A289, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Quantification of forearm muscle activation by ultrasound imaging and high-density electromyography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:roLk4NBRz8UC",
+      "citation": "2009 Annual International Conference of the IEEE Engineering in Medicine and …, 2009",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Quantizing and characterizing the variance of hand postures in a novel transformation task"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ruyezt5ZtCIC",
+      "citation": "Journal of neural engineering 10 (2), 026020, 2013",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Real-time control of hind limb functional electrical stimulation using feedback from dorsal root ganglia recordings"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:NyGDZy8z5eUC",
+      "citation": "2021 10th International IEEE/EMBS Conference on Neural Engineering (NER …, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Real-time neuromusculoskeletal model for myoelectric control of ankle prosthesis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ZeXyd9-uunAC",
+      "citation": "IEEE Transactions on Biomedical Engineering 57 (8), 1856-1866, 2010",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Real-time robust signal space separation for magnetoencephalography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:wMgC3FpKEyYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Recent Bioelectricity-Related Articles Selected by Ann M. Rajnicek, Media Editor"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WF5omc3nYNoC",
+      "citation": "Proceedings of the 6th Annual Conference, IFESS, 109-11, 2002",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Recording capabilities of a penetrating microelectrode array in dorsal root ganglia and its usefulness for coding of limb position"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:48xauSegjOkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Recording single-and multi-unit neuronal action potentials from the surface of the dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:a9-T7VOCCH8C",
+      "citation": "Scientific reports 9 (1), 2786, 2019",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Recording single-and multi-unit neuronal action potentials from the surface of the dorsal root ganglion"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:6yz0xqPARnAC",
+      "citation": "2021 10th International IEEE/EMBS Conference on Neural Engineering (NER …, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Recruitment of Primary Afferents by Dorsal Root Ganglion Stimulation using the Injectrode"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:KNjnJ3z-R6IC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ref-EMGBench: Benchmarking Reference Normalization for Electromyography Data"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:XUvXOeBm_78C",
+      "citation": "medRxiv, 2023.09. 08.23295273, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Reflex modulation and functional improvements following spinal cord stimulation for sensory restoration after lower-limb amputation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:tYavs44e6CUC",
+      "citation": "Neuromodulation 17 (5), 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Remapping cortical modulation for brain-machine interfaces: A somatotopy-based approach in individuals with upper-limb paralysis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:yMeIxYmEMEAC",
+      "citation": "The FASEB Journal 26, 656.10-656.10, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Response of dorsal root ganglion tissue to chronically stimulated electrodes"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:QIV2ME_5wuYC",
+      "citation": "Proceedings of the First Joint BMES/EMBS Conference. 1999 IEEE Engineering …, 1999",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Response of simultaneously recorded cortical neurons to perturbations in arm trajectory"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:SjuI4pbJlxcC",
+      "citation": "Nature biomedical engineering 8 (8), 992-1003, 2024",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Restoration of sensory feedback from the foot and reduction of phantom limb pain via closed-loop spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:tuHXwOkdijsC",
+      "citation": "Cell 181 (4), 763-773. e12, 2020",
+      "num_citations": 142,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Restoring the sense of touch using a sensorimotor demultiplexing neural interface"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:QD3KBmkZPeQC",
+      "citation": "Brain-Computer Interface Research: A State-of-the-Art Summary 10, 75-85, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Restoring the sense of touch using a sensorimotor demultiplexing neural interface:‘Disentangling’sensorimotor events during brain-computer interface control"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WHdLCjDvYFkC",
+      "citation": "Nature Electronics 6 (2), 99-101, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Rethinking the ethical priorities for brain–computer interfaces"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:kw52XkFRtyQC",
+      "citation": "Computational Intelligence and Neuroscience 2011, 327953, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "RtMEG: A real-time software interface for magnetoencephalography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:IjCSPb-OGe4C",
+      "citation": "17th International Conference on Biomagnetism Advances in Biomagnetism …, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "rtMEG: a real-time software toolbox for brain-machine interfaces using magnetoencephelography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:dhFuZR0502QC",
+      "citation": "Computational intelligence and neuroscience 2011 (1), 327953, 2011",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "rtMEG: A real‐time software interface for magnetoencephalography"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:HE397vMXCloC",
+      "citation": "Comparative Biochemistry and Physiology Part A: Molecular & Integrative …, 2009",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Scaling of sensorimotor control in terrestrial mammals"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:J_g5lzvAfSwC",
+      "citation": "Proceedings of the Royal Society B: Biological Sciences 277 (1700), 3563-3568, 2010",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Scaling of sensorimotor control in terrestrial mammals"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:yqoGN6RLRZoC",
+      "citation": "Proceedings of the Royal Society B: Biological Sciences 281 (1793), 20141911, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Scaling of sensorimotor control in terrestrial mammals"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:lmc2jWPfTJgC",
+      "citation": "International Functional Electrical Stimulation Society Annual Meeting, 9-12, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Selective recording and stimulation with a sacral dorsal root ganglia neural interface"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:fFSKOagxvKUC",
+      "citation": "Journal of neural engineering 17 (1), 016011, 2019",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Selectivity of afferent microstimulation at the DRG using epineural and penetrating electrode arrays"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Ak0FvsSvgGUC",
+      "citation": "Journal of neurophysiology 126 (6), 2104-2118, 2021",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Sensing and decoding the neural drive to paralyzed muscles during attempted movements of a person with tetraplegia using a sleeve array"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:OR75R8vi5nAC",
+      "citation": "Biomedical Information Technology, 687-715, 2020",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Sensory information feedback for neural prostheses"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4JMBOYKVnBMC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Single-and multi-unit activity recorded from the surface of the dorsal root ganglia with non-penetrating electrode arrays"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:WZBGuue-350C",
+      "citation": "IEEE Transactions on Neural Systems and Rehabilitation Engineering 21 (1 …, 2012",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Sparse optimal motor estimation (SOME) for extracting commands for prosthetic limbs"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:iH-uZ7U-co4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SPECIAL SECTION ON BRAIN TRAINING: CORTICAL PLASTICITY AND AFFERENT FEEDBACK IN BRAIN–MACHINE INTERFACE SYSTEMS"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:j7_hQOaDUrUC",
+      "citation": "medRxiv, 2022.09. 15.22279956, 2022",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Spinal cord stimulation restores sensation, improves function, and reduces phantom pain after transtibial amputation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:2tRrZ1ZAMYUC",
+      "citation": "US Patent 11,896,819, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Spinal cord stimulation systems, methods, and devices"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:a3BOlSfXSfwC",
+      "citation": "Transactions of Japanese Society for Medical and Biological Engineering 51 …, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Spinal nerve interfaces for bidirectional communication with prosthetic limbs"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Ri6SYOTghG4C",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Stability of MEG for real-time neurofeedback"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Journal of neural engineering 8 (1), 016002, 2011",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "State-space decoding of primary afferent neuron firing rates"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:L8Ckcad2t8MC",
+      "citation": "Proceedings of the 9th annual conference of the International FES Society, 2004",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Stimulation of peripheral nerves with a microstimulator: experimental results and clinical application to correct foot drop"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:jL-93Qbq4QoC",
+      "citation": "Journal of neural engineering 18 (5), 056068, 2021",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Stimulation of the dorsal root ganglion using an Injectrode®"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:ziOE8S1-AIUC",
+      "citation": "Florianópolis, SC, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Suportes poliméricos à base de quitosana: preparação, caracterização e aplicações biocatalíticas na síntese de ésteres terpênicos"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:F1b5ZUV5XREC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Supporting Information Production of the carboxylate reductase from Nocardia otitidiscaviarum in a soluble, active form for in vitro applications"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:6bLC7aUMtPcC",
+      "citation": "Medrxiv, 2023",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Supraspinal control of motoneurons after paralysis enabled by spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:AXkvAH5U_nMC",
+      "citation": "Research Square, rs. 3. rs-3650257, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Supraspinal control of motoneurons after paralysis enabled by spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:YOwf2qJgpHMC",
+      "citation": "Tissue Engineering Part A 17 (9-10), 1263-1275, 2011",
+      "num_citations": 86,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Sustained growth factor delivery promotes axonal regeneration in long gap peripheral nerve repair"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:KaMxkj08jr0C",
+      "citation": "medRxiv, 2024.02. 14.24302709, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Targeted stimulation of the sensory afferents improves motoneuron function in humans with a degenerative motoneuron disease"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:Dem6FJhTUoYC",
+      "citation": "",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Targeted Stimulation of the Sensory Afferents Improves Motoneuron Function in Humans With Spinal Muscular Atrophy"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:BqipwSGYUEgC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Task-related MEG source localization via discriminant analysis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:KUbvn5osdkgC",
+      "citation": "NEUROPROSTHETICS: Theory and practice, 12-39, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "The autonomic nervous system"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:MLfJN-KU85MC",
+      "citation": "Neuromodulation, 55-68, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The Brain Initiative—Implications for a Revolutionary Change in Clinical Medicine via Neuromodulation Technology"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4xDN1ZYqzskC",
+      "citation": "NEUROMODULATION 24 (4), 793-793, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "The Dorsal Root Ganglion as a Novel Neuromodulatory Target to Evoke Strong and Reproducible Motor Responses in Chronic Motor Complete Spinal Cord Injury: A Case Series of Five …"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4X0JR2_MtJMC",
+      "citation": "Bioelectronic medicine 7, 1-9, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "The fourth bioelectronic medicine summit “technology targeting molecular mechanisms”: current progress, challenges, and charting the future"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:RYcK_YlVTxYC",
+      "citation": "Adapted Physical Activity Quarterly 25 (1), 1-16, 2008",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "The nature and control of postural adaptations of boys with and without developmental coordination disorder"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:qxL8FJ1GzNcC",
+      "citation": "American Journal of Physical Medicine & Rehabilitation 89 (6), 509-521, 2010",
+      "num_citations": 283,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "The role of assistive robotics in the lives of persons with disability"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:0EnyYjriUFMC",
+      "citation": "Experimental Brain Research 152, 489-498, 2003",
+      "num_citations": 148,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "The role of vision on hand preshaping during reach to grasp"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:AHdEip9mkN0C",
+      "citation": "US Patent 10,953,229, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Therapeutic window for treatment of ischemia by vagus nerve stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:uDGL6kOW6j0C",
+      "citation": "US Patent App. 17/207,081, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Therapeutic window for treatment of ischemia by vagus nerve stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:U_HPUtbDl20C",
+      "citation": "Neuromodulation: Technology at the Neural Interface 27 (8), 1347-1359, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Tonic stimulation of dorsal root ganglion results in progressive decline in recruitment of Aα/β-fibers in rats"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:4fGpz3EwCPoC",
+      "citation": "IEEE Transactions on Information Technology in Biomedicine 15 (5), 726-736, 2011",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Toward synergy-based brain-machine interfaces"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:D03iK_w7-QYC",
+      "citation": "Integrative and Comparative Biology 50 (1), 2010",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Tradeoffs responsiveness and resolution in the peripheral nervous system"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:PYBJJbyH-FwC",
+      "citation": "medRxiv, 2023.04. 13.23288483, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Transcutaneous Spinal Cord Stimulation to Reduce Phantom Limb Pain in People with a Transtibial Amputation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:hsZV8lGYWTMC",
+      "citation": "arXiv preprint arXiv:2301.09017, 2023",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Transfer knowledge from natural language to electrocardiography: Can we detect cardiovascular disease through language models?"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:uVUOdF_882EC",
+      "citation": "US Patent App. 18/690,998, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "TREATMENT OF MOTOR IMPAIRMENT AND/OR PROPRIOCEPTION IMPAIRMENT DUE TO NEUROLOGICAL DISORDER OR INJURY"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:gVv57TyPmFsC",
+      "citation": "US Patent 11,433,238, 2022",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Treatment of phantom limb pain and diabetic neuropathy pain, and increasing prosthetic control, by stimulation of dorsal rootlets and lateral spinal cord"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:maZDTaKrznsC",
+      "citation": "Archives of Physical Medicine and Rehabilitation 89 (11), e144, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Upper Limb Function Following Botulinum Toxin A Injections and Postinjection Rehabilitation Therapy: Effect of Baseline Impairment Measured by the Chedoke-McMaster Assessment"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:9c2xU6iGI7YC",
+      "citation": "Archives of Physical Medicine and Rehabilitation, e26, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Use of Cortical Surface Stimulation towards Reliable Sensation in Human"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:TIZ-Mc8IlK0C",
+      "citation": "Neuromodulation 17 (5), 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Use of sensory inputs to train brain computer interface decoders in individuals with limb paralysis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:FiytvqdAVhgC",
+      "citation": "Journal of Neural Engineering 20 (1), 016016, 2023",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Using a high-frequency carrier does not improve comfort of transcutaneous spinal cord stimulation"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:-7ulzOJl1JYC",
+      "citation": "medRxiv, 2024.02. 26.24303289, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Volitional control of movement interacts with proprioceptive feedback in motor cortex during brain-computer interface control in humans"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:XoXfffV-tXoC",
+      "citation": "Neurobiology of disease 121, 286-295, 2019",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "What is the functional relevance of reorganization in primary motor cortex after spinal cord injury?"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:owLR8QvbtFgC",
+      "citation": "2023 IEEE International Magnetic Conference-Short Papers (INTERMAG Short …, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Wireless Magnetoelectric Neural Interfaces"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:hqOjcs7Dif8C",
+      "citation": "IEEE Transactions on Rehabilitation Engineering 8 (2), 196-198, 2000",
+      "num_citations": 147,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Work toward real-time control of a cortical neural prothesis"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:pqnbT2bcN3wC",
+      "citation": "Tissue Engineering Part A 16 (11), 3309-3317, 2010",
+      "num_citations": 215,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Xenogeneic extracellular matrix as an inductive scaffold for regeneration of a functioning musculotendinous junction"
+    },
+    {
+      "author_pub_id": "7iFu3a4AAAAJ:nRpfm8aw39MC",
+      "citation": "MedRxiv, 2022.09. 09.22279611, 2022",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "You will grasp again: A direct spinal cord/computer interface with the spared motor neurons restores the dexterous control of the paralyzed hand after chronic spinal cord injury"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "7iFu3a4AAAAJ"
+}

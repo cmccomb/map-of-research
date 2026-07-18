@@ -1,0 +1,2066 @@
+{
+  "display_name": "Litster",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Litster.json",
+  "publication_count": 258,
+  "publications": [
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4fGpz3EwCPoC",
+      "citation": "241st ECS Meeting (May 29-June 2, 2022), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "(Invited) Addressing the Transport Challenges to the Reaching Fundamental Limits of Performance for Ultra-High Current Density PEM Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:oNZyr7d5Mn4C",
+      "citation": "Electrochemical Society Meeting Abstracts prime2020, 2498-2498, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "(Invited) Details Matter: Applying Computed Tomography and X-Ray Imaging to Advancing PEFCs"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4vMrXwiscB8C",
+      "citation": "Electrochemical Society Meeting Abstracts 245, 1744-1744, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "(Invited) Electrode Transport Resistance Analysis in Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:tkaPQYYpVKoC",
+      "citation": "Electrochemical Society Meeting Abstracts 232, 1374-1374, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "(Invited) Microstructural Modeling of PEFC Catalyst Layer Performance and Durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4MWp96NkSFoC",
+      "citation": "Electrochemical Society Meeting Abstracts 231, 1639-1639, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "(Invited) Porous Electrode Engineering for Platinum Group Metal-Free Oxygen Reduction Reaction Catalysts"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ML0RJ9NH7IQC",
+      "citation": "Electrochemical Society Meeting Abstracts 235, 1811-1811, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "(Invited) Progress Towards High Power Density and Durable PEFCs with PGM-Free Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:XiSMed-E-HIC",
+      "citation": "ECS Transactions 69 (17), 443, 2015",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "3D imaging of fuel cell electrode structure degraded under cell voltage reversal conditions using nanoscale X-ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:KxtntwgDAa4C",
+      "citation": "International Journal of Hydrogen Energy 40 (22), 7124-7134, 2015",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A computational study to investigate the effects of the bipolar plate and gas diffusion layer interface in polymer electrolyte fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:b0M2c_1WBrUC",
+      "citation": "Journal of The Electrochemical Society 161 (12), F1254, 2014",
+      "num_citations": 654,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "A critical review of modeling transport phenomena in polymer-electrolyte fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WA5NYHcadZ8C",
+      "citation": "ECS Transactions 78 (1), 2159, 2017",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A method for quantitative 3D mesoscale analysis of solid oxide fuel cell microstructures using Xe-plasma focused ion beam (PFIB) coupled with SEM"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:eQOLeE2rZwMC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 4305, 963-964, 2007",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "A two-liquid electroosmotic pump for portable drug delivery systems"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Y0pCki6q_DkC",
+      "citation": "Sensors and Actuators A: Physical 163 (1), 311-314, 2010",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "A two-liquid electroosmotic pump using low applied voltage and power"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:M3NEmzRMIkIC",
+      "citation": "international journal of hydrogen energy 38 (22), 9297-9309, 2013",
+      "num_citations": 66,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A two-phase model for studying the role of microporous layer and catalyst layer interface on polymer electrolyte fuel cell performance"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:EkHepimYqZsC",
+      "citation": "AiMES 2018 Meeting (September 30-October 4, 2018), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A-2.2 Imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Ug5p-4gJ2f0C",
+      "citation": "232nd ECS Meeting (October 1-5, 2017),, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A-22 Catalyst Layer 2"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:XoXfffV-tXoC",
+      "citation": "AiMES 2018 Meeting (September 30-October 4, 2018), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A-3.1 Catalyst Layer 1"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LkGwnXOMwfcC",
+      "citation": "Journal of Power Sources 195 (11), 3640-3644, 2010",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Active water management at the cathode of a planar air-breathing polymer electrolyte membrane fuel cell using an electroosmotic pump"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:d1gkVwhDpl0C",
+      "citation": "Journal of the Electrochemical Society 154 (10), B1049, 2007",
+      "num_citations": 117,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Active water management for PEM fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:kNdYIx-mwKoC",
+      "citation": "Stanford University, 2008",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Active water management for proton exchange membrane fuel cells using integrated wicks and electroosmotic pumps"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:PR6Y55bgFSsC",
+      "citation": "2018 AIChE Annual Meeting, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Addressing Transport Losses in Low-Pt and Pt-Free PEM Fuel Cell Cathodes (Invited)"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:uWiczbcajpAC",
+      "citation": "Carnegie Mellon Univ., Pittsburgh, PA (United States), 2021",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Advanced PGM-free cathode engineering for high power density and durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WJVC3Jt7v1AC",
+      "citation": "Applied Energy 349, 121617, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Air contamination of platinum-group metal-free fuel cell cathodes with atomically dispersed iron active sites"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4TOpqqG69KYC",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "An Analytical Model of the Membrane Electrode Assembly in a PEMFC"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:IjCSPb-OGe4C",
+      "citation": "Electrochemical and Solid-State Letters 10 (11), B196, 2007",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "An electro-osmotic fuel pump for direct methanol fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:F9fV5C73w3QC",
+      "citation": "247th ECS Meeting (May 18-22, 2025), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "An Operando Voltage Sensor for a Gas Recombination Catalyst within a Proton Exchange Membrane Water Electrolyzer Cell"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:-f6ydRqryjwC",
+      "citation": "ECS Transactions 50 (2), 269, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "An Oxygen Flux Interrupt Method and In Situ Micro-Sensor for Characterizing Oxygen Transport in PEFCs"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:8d8msizDQcsC",
+      "citation": "Nature Energy 7 (7), 652-663, 2022",
+      "num_citations": 463,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Atomically dispersed iron sites with a nitrogen–carbon coating as highly active and durable oxygen reduction catalysts for fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LI9QrySNdTsC",
+      "citation": "232nd ECS Meeting (October 1-5, 2017),, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "B-21 Electrode/cell Analysis and Impurities"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hC7cP41nSMkC",
+      "citation": "ECS Transactions 41 (1), 409, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Catalyst Layer Analysis: Nanoscale X-ray CT, Spatially-Resolved In Situ Microscale Diagnostics, and Modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:9Nmd_mFXekcC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 1370-1370, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Catalyst Particle Scale Analysis By Transport and Reaction Simulation on 3D Nano-Scale Images for PEMFC"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:tOudhMTPpwUC",
+      "citation": "Physics of Fluids 28 (5), 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Characterizing dynamic hysteresis and fractal statistics of chaotic two-phase flow and application to fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:YohjEiUPhakC",
+      "citation": "Advanced Science 2 (5), 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Colloidal Crystals: Multifunctional Hydrogels with Reversible 3D Ordered Macroporous Structures (Adv. Sci. 5/2015)"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:MXK_kJrjxJIC",
+      "citation": "ECS Transactions 3 (1), 1125, 2006",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Combined Heat and Mass Transfer Model of a Passive Air Breathing Fuel Cell Cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Tiz5es2fbqcC",
+      "citation": "Electrochemical Society Meeting Abstracts 228, 1278-1278, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Combining Nitrogen Precursors in Synthesis of Non-Precious Metal ORR Catalysts with Improved Fuel Cell Performance"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ODE9OILHJdcC",
+      "citation": "ACS Applied Energy Materials 7 (18), 8124-8135, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Composite Anode for PEM Water Electrolyzers: Lowering Iridium Loadings and Reducing Material Costs with a Conductive Additive"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:9yKSN-GCB0IC",
+      "citation": "Journal of Power Sources 156 (2), 334-344, 2006",
+      "num_citations": 80,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Computational analysis of heat and mass transfer in a micro-structured PEMFC cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:xtRiw3GOFMkC",
+      "citation": "Journal of The Electrochemical Society 161 (11), F3091, 2014",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Computational and experimental analysis of water transport at component interfaces in polymer electrolyte fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:vDijr-p_gm4C",
+      "citation": "Journal of The Electrochemical Society 166 (16), F1337, 2019",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Contaminant cation effect on oxygen transport through the ionomers of polymer electrolyte membrane fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:NJ774b8OgUMC",
+      "citation": "National Renewable Energy Lab.(NREL), Golden, CO (United States), 2018",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Control of Ionomer Distribution in Roll-to-Roll Coated Fuel Cell Catalyst Layers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:7PzlFSSx8tAC",
+      "citation": "Heat and mass transfer 42 (5), 387-397, 2006",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Convective mass transfer in helical pipes: effect of curvature and torsion"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:yqoGN6RLRZoC",
+      "citation": "247th ECS Meeting (May 18-22, 2025), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Correlations between Ink Fabrication Parameters, Material Properties, and Performance for Iridium Oxide Anodes in Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:O3NaXMp0MMsC",
+      "citation": "ECS Transactions 58 (1), 1125, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Coupling of deterministic contact mechanics model and two-phase model to study the effect of catalyst layer| microporous layer interface on polymer electrolyte fuel cell …"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:IWHjjKOFINEC",
+      "citation": "US Patent 8,080,325, 2011",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Covers for electrochemical cells and related methods"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:dBIO0h50nwkC",
+      "citation": "US Patent App. 13/293,666, 2012",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Covers for electrochemical cells and related methods"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:qjMakFHDy7sC",
+      "citation": "Journal of Power Sources 174 (1), 272-281, 2007",
+      "num_citations": 72,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Current distribution in polymer electrolyte membrane fuel cell with active water management"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4hFrxpcac9AC",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1602-1602, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Degradation Acceleration-Factor Analysis for Platinum Group Metal (PGM)-Free Polymer Electrolyte Fuel Cell Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:9c2xU6iGI7YC",
+      "citation": "Electrochimica Acta 503, 144837, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Degradation Analysis for Platinum Group Metal-Free Fuel Cell Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_axFR9aDTf0C",
+      "citation": "Environmental science & technology 56 (2), 1413-1422, 2021",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Desalination fuel cells with high thermodynamic energy efficiency"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ClCfbGk0d_YC",
+      "citation": "MethodsX 8, 101562, 2021",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Designing reliable electrochemical cells for operando lithium-ion battery study"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:maZDTaKrznsC",
+      "citation": "Journal of Power Sources 241, 379-387, 2013",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Deterministic contact mechanics model applied to electrode interfaces in polymer electrolyte fuel cells and interfacial water accumulation"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:UxriW0iASnsC",
+      "citation": "Investigative Ophthalmology & Visual Science 49 (13), 5264-5264, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Development of a Biocompatible, Implantable Microstimulator for Closing Denervated Orbicularis Oculi in Rabbits"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LhH-TYMQEocC",
+      "citation": "247th ECS Meeting (May 18-22, 2025), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Development of Characterization Techniques to Study Chemical and Ionomer Degradation in Proton-Exchange Membrane Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:foquWX3nUaYC",
+      "citation": "Journal of Power Sources 506, 230039, 2021",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Development of high-performance roll-to-roll-coated gas-diffusion-electrode-based fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Y5dfb0dijaUC",
+      "citation": "Electrochemical Society Meeting Abstracts 232, 157-157, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Development of Micro-Capillary and Micro-Pouch Cells for in-Operando Observation of Dendrites and Electrodeposition Using Ultra High Resolution X-Ray Imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:uLbwQdceFCQC",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 1410-1410, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Development of PEFC Membrane Electrode Assemblies for Iron-Doped Metal Organic Framework Catalysts"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hCrLmN-GePgC",
+      "citation": "Electrochemical Society Meeting Abstracts 240, 1188-1188, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Development of Polymer Electrolyte Fuel Cell (PEFC) Cathodes with High Oxygen Permeability Ionomer (HOPI) for High Performance and Durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LPZeul_q3PIC",
+      "citation": "ECS Transactions 75 (14), 139, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Direct simulations of coupled transport and reaction on nano-scale X-ray computed tomography images of platinum group metal-free catalyst cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:p__nRnzSRKYC",
+      "citation": "Electrochimica Acta 345, 136191, 2020",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Distributions of local electrochemistry in heterogeneous microstructures of solid oxide fuel cells using high-performance computations"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Journal of Power Sources 188 (1), 82-88, 2009",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Dry gas operation of proton exchange membrane fuel cells with parallel channels: Non-porous versus porous plates"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:9pM33mqn1YgC",
+      "citation": "Electrochemical Society Meeting Abstracts 241, 1465-1465, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Durable and High-Power Iron-Based Cathodes for Proton-Exchange Membrane Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:r_AWSJRzSzQC",
+      "citation": "Proceedings of the 2022 Annual Merit Review and Peer Evaluation Report …, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Durable High-Power-Density Fuel Cell Cathodes for Heavy-Duty Vehicles"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:L8Ckcad2t8MC",
+      "citation": "International Journal of Hydrogen Energy 37 (10), 8505-8511, 2012",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Effects of an agglomerate size distribution on the PEFC agglomerate model"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:wbdj-CoPYUoC",
+      "citation": "Electrochemical Society Meeting Abstracts 231, 1472-1472, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Effects of Carbon Supports on the Stability of Pt and PtCo Nanoparticles in PEMFC Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:DJbcl8HfkQkC",
+      "citation": "Electrochemical Society Meeting Abstracts prime2024, 3285-3285, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Electrochemical Modeling of a Commercial Polymer Electrolyte Fuel Cell Using 3-D Micro-Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:anf4URPfarAC",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1504-1504, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Electrode Ionomer Accelerated Stress Test Applied to High Oxygen Permeability Ionomer in Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:OcBU2YAGkTUC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Electrode Transport Diagnostics and Design Advances for Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:mVmsd5A6BfQC",
+      "citation": "The 2006 Annual Meeting, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Electroosmotic Pumps for Fuel Delivery to Direct Methanol Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:FPJr55Dyh1AC",
+      "citation": "Advanced Energy and Sustainability Research 2 (12), 2100123, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Elucidation of Performance Recovery for Fe‐Based Catalyst Cathodes in Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:PVjk1bu6vJQC",
+      "citation": "Electrochemical Society Meeting Abstracts 240, 1148-1148, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Elucidation of Performance Recovery for Platinum-Group Metal Free Cathodes in Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:mNrWkgRL2YcC",
+      "citation": "ECS Transactions 114 (5), 563, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Enabling Low Iridium Loadings and Reduced Catalyst Material Cost for PEM Water Electrolyzers Via Composite Anode Design with Conductive Additive"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:W7OEmFMy1HYC",
+      "citation": "Electrochimica Acta 54 (26), 6223-6233, 2009",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Engineering model for coupling wicks and electroosmotic pumps with proton exchange membrane fuel cells for active water management"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:UeHWp8X0CEIC",
+      "citation": "Journal of Power Sources 167 (1), 118-129, 2007",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Engineering model of a passive planar air breathing fuel cell cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Wp0gIr-vW9MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Enhanced Water Management with Electroosmotic Pumps for PEM Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HtEfBTGE9r8C",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1514-1514, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Evaluation of High Oxygen Permeability Ionomer (HOPI) Oxygen Permeability for Proton Exchange Membrane Fuel Cells (PEMFCs)"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:u-x6o8ySG0sC",
+      "citation": "Journal of Power Sources 154 (1), 95-105, 2006",
+      "num_citations": 558,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Ex situ visualization of liquid water transport in PEM fuel cell gas diffusion layers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:bFI3QPDXJZMC",
+      "citation": "Journal of Power Sources 272, 386-397, 2014",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Exergy & economic analysis of biogas fueled solid oxide fuel cell systems"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:k_IJM867U9cC",
+      "citation": "Applied energy 107, 315-328, 2013",
+      "num_citations": 130,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Exergy and economic analyses of advanced IGCC–CCS and IGFC–CCS power plants"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:yD5IFk8b50cC",
+      "citation": "Applied Energy 128, 230-245, 2014",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Exergy and economic analysis of a CaO-looping gasifier for IGFC–CCS and IGCC–CCS"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:EYYDruWGBe4C",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Exergy and Economic Analysis of Catalytic Coal Gasifiers Coupled With Solid Oxide Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:qxL8FJ1GzNcC",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Exergy and Economic Analysis of Catalytic Coal Gasifiers Coupled With Solid Oxide Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:3htObqc8RwsC",
+      "citation": "Scientific Reports 14 (1), 31637, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Experimental assessment and analysis of mass transport limiting current density in water vapor-fed polymer electrolyte membrane electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_Ybze24A_UAC",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 1389-1389, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Experimental Study on Ionic Conductivity of Carbon Support within Polymer Electrolyte Fuel Cell Catalyst Layers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:evX43VCCuoAC",
+      "citation": "Proceedings of the national academy of sciences 116 (11), 4899-4904, 2019",
+      "num_citations": 193,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Expert assessments of the cost and expected future performance of proton exchange membrane fuel cells for vehicles"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:tKAzc9rXhukC",
+      "citation": "Evolving Energy Realities: Adapting to What's Next, 36th USAEE/IAEE North …, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Expert Assessments of the Expected Future Costs and Performance of Hydrogen Storage Systems for Vehicles"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:86PQX7AUzd4C",
+      "citation": "Energy Policy 160, 112671, 2022",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Expert elicitation on paths to advance fuel cell electric vehicles"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:edDO8Oi4QzsC",
+      "citation": "ACS Applied Energy Materials 4 (9), 9653-9663, 2021",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Fe-Doped Copolymer-Templated Nitrogen-Rich Carbon as a PGM-Free Fuel Cell Catalyst"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:bKqednn6t2AC",
+      "citation": "ECS Transactions 114 (5), 117, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Fitting Scattering Profiles of Perfluorinated Sulfonic Acid Ionomer Dispersions"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:JQOojiI6XY0C",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 1534-1534, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Formation of Metal-Nitrogen Sites in Atomically-Dispersed Catalysts Observed By in Situ Microscopy"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:YsMSGLbcyi4C",
+      "citation": "ECS Transactions 3 (1), 1279, 2006",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Free convection direct methanol fuel cells powered by electroosmotic pumps"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:bEWYMUwI8FkC",
+      "citation": "ECS Meeting Abstracts, 124, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Fuel Cell Electrode Analysis with Nano-scale X-ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WqliGbK-hY8C",
+      "citation": "Journal of The Electrochemical Society 165 (3), F238, 2018",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Fuel cell performance implications of membrane electrode assembly fabrication with platinum-nickel nanowire catalysts"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:aqlVkmm33-oC",
+      "citation": "US Patent App. 11/805,990, 2007",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Fuel cell water management"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:p2g8aNsByqUC",
+      "citation": "Langmuir 31 (36), 9853-9858, 2015",
+      "num_citations": 116,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Gas transport resistance in polymer electrolyte thin films on oxygen reduction reaction catalysts"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Ri6SYOTghG4C",
+      "citation": "Electrochimica Acta 416, 140262, 2022",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Half-cell electrode assessments of a crossover-tolerant direct methanol fuel cell with a platinum group metal-free cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:j8SEvjWlNXcC",
+      "citation": "ACS Energy Letters 4 (5), 1158-1161, 2019",
+      "num_citations": 64,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Half-wave potential or mass activity? characterizing platinum group metal-free fuel cell catalysts by rotating disk electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:mB3voiENLucC",
+      "citation": "US Patent 7,846,593, 2010",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Heat and water management device and method in fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_FM0Bhl9EiAC",
+      "citation": "Journal of Power Sources 541, 231652, 2022",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "High performance finite element simulations of infiltrated solid oxide fuel cell cathode microstructures"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Z5m8FVwuT1cC",
+      "citation": "MethodsX 7, 100822, 2020",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "High performance modeling of heterogeneous SOFC electrode microstructures using the MOOSE framework: ERMINE (Electrochemical Reactions in MIcrostructural NEtworks)"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:BUYA1_V_uYcC",
+      "citation": "ACS applied materials & interfaces 12 (2), 2216-2224, 2019",
+      "num_citations": 124,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "High power density platinum group metal-free cathodes for polymer electrolyte fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:a9-T7VOCCH8C",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1647-1647, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "High Resolution Characterization of Proton Exchange Membrane Water Electrolysis Anodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:7T2F9Uy0os0C",
+      "citation": "Energy & Environmental Science 12 (1), 250-260, 2019",
+      "num_citations": 780,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Highly active atomically dispersed CoN 4 fuel cell cathode catalysts derived from surfactant-assisted MOFs: carbon-shell confinement strategy"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:yFnVuubrUp4C",
+      "citation": "Energy and Environmental Science 12 (1), 250-260, 2019",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Highly active atomically dispersed CoN 4 fuel cell cathode catalysts derived from surfactant-assisted MOFs: Carbon-shell confinement strategy"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:e_rmSamDkqQC",
+      "citation": "Environmental science & technology 55 (1), 553-562, 2020",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Hydrogen storage for fuel cell electric vehicles: expert elicitation and a levelized cost of driving model"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:yMeIxYmEMEAC",
+      "citation": "245th ECS Meeting (May 26-30, 2024), 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "I01-Electrode, PTL and MEA 2"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:lmc2jWPfTJgC",
+      "citation": "PRiME 2020 (ECS, ECSJ, & KECS Joint Meeting), 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "I01A Online Live Session 3"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ipzZ9siozwsC",
+      "citation": "236th ECS Meeting (October 13-17, 2019), 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "I01A-01 Catalyst Layer Modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:FAceZFleit8C",
+      "citation": "242nd ECS Meeting (October 9-13, 2022), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "I01A-Modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:uc_IGeMz5qoC",
+      "citation": "236th ECS Meeting (October 13-17, 2019), 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "I01B-1A-Portable Power"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:cWzG1nlazyYC",
+      "citation": "PRiME 2024 (October 6-11, 2024), 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "I01F-Stack and System Modelling 1"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HeT0ZceujKMC",
+      "citation": "247th ECS Meeting (May 18-22, 2025), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "I03-Fuel Cell 01"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:bz8QjSJIRt4C",
+      "citation": "241st ECS Meeting (May 29-June 2, 2022), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "I07-PEM Water Electrolysis 2"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:f2IySw72cVMC",
+      "citation": "Computational Modeling of Objects Presented in Images. Fundamentals, Methods …, 2014",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Image restoration of phase contrast nano scale X-ray CT images"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:dshw04ExmUIC",
+      "citation": "Journal of Applied Physics 117 (18), 2015",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Image segmentation of nanoscale Zernike phase contrast X-ray computed tomography images"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:sNmaIFBj_lkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Image Segmentation of Nanoscale Zernike Phase Contrast X-ray CT Images"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:OR75R8vi5nAC",
+      "citation": "Journal of Power Sources 629, 236032, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Impact of catalyst carbon support on the benefits of high oxygen permeability ionomer for proton exchange membrane fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:mlAyqtXpCwEC",
+      "citation": "2022 AIChE Annual Meeting, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Improving Performance and Durability of Polymer Electrolyte Fuel Cell Cathodes with High Oxygen Permeability Ionomer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LO7wyVUgiFcC",
+      "citation": "242nd ECS Meeting (October 9-13, 2022), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Improving the Performance of a Direct Methanol Fuel Cell Using a Composite Methanol Crossover Scavenger Layer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:QIV2ME_5wuYC",
+      "citation": "ECS Transactions 33 (1), 1241, 2010",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "In Situ Measurement of Oxygen Partial Pressure in a Cathode Catalyst Layer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:r0BpntZqJG4C",
+      "citation": "Journal of the Electrochemical Society 159 (8), A1351, 2012",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "In situ measurements of potential, current and charging current across an EDL capacitance anode for an aqueous sodium hybrid battery"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4JMBOYKVnBMC",
+      "citation": "ECS Meeting Abstracts, 1635, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "In situ Measurements of Potential, Current, and Charging Rate across an Ultracapacitor Electrode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ULOm3_A8WrAC",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2010",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "In Situ Measurements of Through-Plane, Ionic Potential Distributions in Porous Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:dhFuZR0502QC",
+      "citation": "ECS Meeting Abstracts, 1869, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "In Situ Measurements to Extract Potential, Local Current and Charging Current Distributions in the Electric and Electrolyte Phases of an EDL Capacitance Electrode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:YFjsv_pBGBYC",
+      "citation": "ECS Transactions 58 (1), 831, 2013",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "In Situ, ionic conductivity measurement of ionomer/binder-free Pt catalyst under fuel cell operating condition"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:qUcmZB5y_30C",
+      "citation": "ECS Transactions 33 (1), 1229, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "In Situ, Through-Plane Measurements of Ionic Potential in a PEMFC Catalyst Layer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:8AbLer7MMksC",
+      "citation": "Electrochemical Society Meeting Abstracts 230, 207-207, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "In-Operando Imaging of Electrodeposition and Dendrites Using Nanoscale X-Ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:UHK10RUVsp4C",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 181-181, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "In-Operando Observation of Lithium-Silicon Alloy Phase Propagation in Particle-Based Electrodes Using Nanoscale X-Ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:fPk4N6BV_jEC",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 244, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "In-Situ PEFC Oxygen Sensing: An Ultra-Microelectrode Sensor with Oxygen Flux Interrupt Measurements"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:5nxA0vEk-isC",
+      "citation": "Energy Sustainability 48890, 325-326, 2009",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "In-situ Polymerized Wicks for Passive Water Management in PEM Fuel Cell Systems"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WbkHhVStYXYC",
+      "citation": "ECS Transactions 69 (17), 23, 2015",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "In-situ through-plane measurements of ionic potential distributions in non-precious metal catalyst electrode for PEFC"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:35N4QoGY0k4C",
+      "citation": "ECS Meeting Abstracts, 1452, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Increase Porosity of Anodes in Direct Formic Acid Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:k8Z6L05lTy4C",
+      "citation": "National Renewable Energy Lab.(NREL), Golden, CO (United States), 2021",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Influence of Ink Formulation and Drying Conditions on Ionomer Distribution in High-Performance Roll-to-Roll-Coated Gas-Diffusion Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:vbGhcppDl1QC",
+      "citation": "Electrochemical Society Meeting Abstracts 237, 1685-1685, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Influence of Ionomer Composition and Distribution on PEM Fuel Cell Performance of PGM-Free Catalyst"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:IUKN3-7HHlwC",
+      "citation": "2023 AIChE Annual Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Innovations in Proton Exchange Membrane Fuel Cell Cathode Materials and Architectures for High Power Density, and Durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:rmuvC79q63oC",
+      "citation": "Journal of Power Sources 522, 230821, 2022",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Integration of a high oxygen permeability ionomer into polymer electrolyte membrane fuel cell cathodes for high efficiency and power density"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:1qzjygNMrQYC",
+      "citation": "ACS applied materials & interfaces 9 (22), 18748-18757, 2017",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Internal morphologies of cycled Li-metal electrodes investigated by nano-scale resolution X-ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:NXb4pA-qfm4C",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1369-1369, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Investigating Oxygen Reduction Reaction Using a Multiscale Modeling Approach for Polymer Electrolyte Membrane Fuel Cell"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:fFSKOagxvKUC",
+      "citation": "Journal of Power Sources 633, 236452, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Investigating proton exchange membrane water electrolyzers (PEMWE) performance losses through the galvanostatic intermittent titration technique (GITT) for electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:vRqMK49ujn8C",
+      "citation": "Electrochemical Society Meeting Abstracts 229, 1419-1419, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Investigation and Mitigation of Degradation in Polymer Electrolyte Fuel Cell Due to Cell Reversal Using Oxygen Evolution Catalyst"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:JoZmwDi-zQgC",
+      "citation": "ECS Transactions 80 (8), 535, 2017",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Investigation of hydrogen starvation of polymer electrolyte fuel cells in freezing condition using reference electrode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:fQNAKQ3IYiAC",
+      "citation": "Ecs Transactions 75 (14), 339, 2016",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Investigation of Ion Conductivity and ORR on Metal/Water Interfaces in Proton Exchange Membrane Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:0KyAp5RtaNEC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 207-207, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Investigation of lithium-silicon alloy phase propagation using high resolution operando X-Ray microscopy"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:-_dYPAW6P2MC",
+      "citation": "ChemElectroChem 6 (10), 2659-2666, 2019",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Ionic Conductivity over Metal/Water Interfaces in Ionomer‐Free Fuel Cell Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HIFyuExEbWQC",
+      "citation": "Electrochemical Society Meeting Abstracts 245, 1844-1844, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Limiting Current Density in Water Vapor-Fed Polymer Electrolyte Membrane Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:SpbeaW3--B0C",
+      "citation": "236th ECS Meeting (October 13-17, 2019), 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Limiting Current Measurements of Oxygen Transport Resistance in Platinum Group Metal-Free Fuel Cell Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:nrtMV_XWKgEC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 1450-1450, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Limiting Current Measurements of Oxygen Transport Resistance in Platinum Group Metal-Free Fuel Cell Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:t7zJ5fGR-2UC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 452-452, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Lithium Plating Patterns on Lithium Anode Revealed with Operando Nanoscale X-Ray Imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HtS1dXgVpQUC",
+      "citation": "Electrochemical Society Meeting Abstracts prime2024, 3215-3215, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Machine Learning in Fuel Cell Stacks, Systems and Modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:UebtZRa9Y70C",
+      "citation": "",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Mass transfer enhancement in membrane separation-rotating vs. helical modules"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:2osOgNQ5qMEC",
+      "citation": "Electrochimica Acta 52 (11), 3849-3862, 2007",
+      "num_citations": 89,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Mathematical modelling of ambient air-breathing fuel cells for portable devices"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_FxGoFyzp5QC",
+      "citation": "",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Mathematical modelling of fuel cells for portable devices"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:fEOibwPWpKIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Measurement of the active width in Sr-doped lanthanum manganate Sofc Cathodes using Nano-ct, impedance spectroscopy and Bayesian calibration"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:KUbvn5osdkgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Meeting Solid Oxide Fuel Cell Cost and Degradation Rate Targets"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:VLnqNzywnoUC",
+      "citation": "Joule 3 (9), 2060-2065, 2019",
+      "num_citations": 85,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Meeting US solid oxide fuel cell targets"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:LjlpjdlvIbIC",
+      "citation": "Journal of Power Sources 386, 1-9, 2018",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Mesoscale characterization of local property distributions in heterogeneous electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:bnK-pcrLprsC",
+      "citation": "Journal of The Electrochemical Society 164 (11), E3359, 2017",
+      "num_citations": 89,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Micro-scale analysis of liquid water breakthrough inside gas diffusion layer for PEMFC using X-ray computed tomography and lattice Boltzmann method"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_kc_bZDykSQC",
+      "citation": "International Heat Transfer Conference 49408, 91-95, 2010",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Micron-scale Diagnostics for Through-plane Transport Phenomena in Porous Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:738O_yMBCRsC",
+      "citation": "Journal of Power Sources 306, 674-684, 2016",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Microscale measurements of oxygen concentration across the thickness of diffusion media in operating polymer electrolyte fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:KbBQZpvPDL4C",
+      "citation": "Journal of The Electrochemical Society, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Mitigating Crack Formation When Using High Oxygen Permeability Ionomer in PEMFC Catalyst Layers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Mojj43d5GZwC",
+      "citation": "Journal of The Electrochemical Society 164 (9), F1037, 2017",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Modeling electrochemical performance of the hierarchical morphology of precious group metal-free cathode for polymer electrolyte fuel cell"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:eMMeJKvmdy0C",
+      "citation": "ECS Transactions 64 (3), 281, 2014",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Modeling hierarchical non-precious metal catalyst cathodes for PEFCs using multi-scale X-ray CT imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:NhqRSupF_l8C",
+      "citation": "Electrochimica Acta 146, 194-206, 2014",
+      "num_citations": 57,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Modeling ion conduction and electrochemical reactions in water films on thin-film metal electrodes with application to low temperature fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4DMP91E08xMC",
+      "citation": "Ecs Transactions 41 (1), 179, 2011",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Modeling Ion Transport in Fuel Cell Electrodes including Water| Electrolyte Interfaces and Electric Double Layers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:j3f4tGmQtD8C",
+      "citation": "Energy & Environmental Science 5 (9), 8660-8672, 2012",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Molten catalytic coal gasification with in situ carbon and sulphur capture"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:M05iB0D1s5AC",
+      "citation": "Fuel Cells 13 (5), 935-945, 2013",
+      "num_citations": 138,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Morphological analyses of polymer electrolyte fuel cell electrodes with nano‐scale computed tomography imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:QYdC8u9Cj1oC",
+      "citation": "International Journal of Hydrogen Energy 59, 176-186, 2024",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Morphological analysis of iridium oxide anode catalyst layers for proton exchange membrane water electrolysis using high-resolution imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:2VqYfGB8ITEC",
+      "citation": "Available at SSRN 4499994, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Morphological Analysis of Iridium Oxide Anodes For Proton Exchange Membrane Water Electrolysis Using High-Resolution Imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:vV6vV6tmYwMC",
+      "citation": "ECS Transactions 58 (1), 481, 2013",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Morphological analysis of polymer electrolyte fuel cell electrode using high resolution X-ray computed tomography and subsequent performance analysis"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:eJXPG6dFmWUC",
+      "citation": "Electrochemical Society Meeting Abstracts 230, 2387-2387, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Multi-Scale Modeling of Transports inside PEMFC By Combining Multi-Phase CFD Fuel Cell Model with Lattice Boltzmann Method"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:nb7KW1ujOQ8C",
+      "citation": "Advanced Science 2 (5), 1500069, 2015",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Multifunctional hydrogels with reversible 3D ordered macroporous structures"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:P5F9QuxV20EC",
+      "citation": "Journal of Power Sources 283, 314-319, 2015",
+      "num_citations": 86,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Multiple imaging mode X-ray computed tomography for distinguishing active and inactive phases in lithium-ion battery cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:K3LRdlH-MEoC",
+      "citation": "Journal of Power Sources 307, 496-509, 2016",
+      "num_citations": 136,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Multiscale modeling of lithium-ion battery electrodes based on nano-scale X-ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:q3CdL3IzO_QC",
+      "citation": "Applied Energy 299, 117315, 2021",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Multiscale operando X-ray investigations provide insights into electro-chemo-mechanical behavior of lithium intercalation cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_B80troHkn4C",
+      "citation": "ECS Transactions 80 (8), 231, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Nano-scale simulation of platinum particle dissolution, re-deposition, and transport"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:3s1wT3WcHBgC",
+      "citation": "Microscopy and Microanalysis 19 (S2), 630-631, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Nano-scale X-ray computed tomography: Morphological analysis of fuel cell electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ruyezt5ZtCIC",
+      "citation": "Journal of Power Sources 506, 230188, 2021",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Non-planar platinum group metal-free fuel cell cathodes for enhanced oxygen transport and water rejection"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:g5m5HwL7SMYC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, H35. 004, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Nonlinear analysis of polymer electrolyte fuel cell dynamics with cathode two-phase flow"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:L7CI7m0gUJcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Nonlinear analysis of two-phase flow dynamics in a polymer electrolyte fuel cell cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:4OULZ7Gr8RgC",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Nonlinear Analysis of Two-Phase Flow in Polymer Electrolyte Fuel Cell Cathode Microchannels"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hFOr9nPyWt4C",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Nonlinear Analysis of Two-Phase Instabilities in PEMFC Parallel-Channel Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:a0OBvERweLwC",
+      "citation": "Journal of Power Sources 267, 243-254, 2014",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Nonlinear analysis of voltage dynamics in a polymer electrolyte fuel cell due to two-phase channel flow"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ns9cj8rnVeAC",
+      "citation": "ECS Transactions 58 (1), 109, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Nonlinear Diffusion Analysis of the Voltage Signal of a Polymer Electrolyte Fuel Cell with Cathode Water Accumulation"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:dTyEYWd-f8wC",
+      "citation": "ECS Transactions 80 (8), 187, 2017",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Numerical predicting of liquid water transport inside gas diffusion layer for PEMFC using lattice Boltzmann method"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:geHnlv5EZngC",
+      "citation": "Journal of Power Sources 328, 280-288, 2016",
+      "num_citations": 106,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "On the impact of water activity on reversal tolerant fuel cell anode performance and durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hMsQuOkrut0C",
+      "citation": "Journal of Power Sources 472, 228439, 2020",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "On the origin of deactivation of reversal-tolerant fuel cell anodes under voltage reversal conditions"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:-FonjvnnhkoC",
+      "citation": "Electrochemical Society Meeting Abstracts prime2020, 2125-2125, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Operando Analysis of Cation Migration in PEMFC Electrodes Using Nanoscale X-Ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Dip1O2bNi0gC",
+      "citation": "ACS Applied Energy Materials 4 (2), 1657-1665, 2021",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Operando Particle-Scale Characterization of Silicon Anode Degradation during Cycling by Ultrahigh-Resolution X-ray Microscopy and Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:DUooU5lO8OsC",
+      "citation": "Available at SSRN 4448639, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Operando Ultra-High-Resolution X-Ray Microscopy of Lithium Anodes with Separator Interactions"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:IRz6iEL74y4C",
+      "citation": "Journal of Power Sources 581, 233468, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Operando ultra-high-resolution X-ray microscopy of lithium anodes with separator interactions"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:PELIpwtuRlgC",
+      "citation": "ECS Transactions 80 (8), 283, 2017",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Oxygen transport effects of cobalt cation contamination of ionomer thin films in proton exchange membrane fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:kz9GbA2Ns4gC",
+      "citation": "Electrochemical Society Meeting Abstracts prime2020, 2099-2099, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Parametric Modeling Study of PEM Fuel Cell with Platinum Group Metal-Free Cathode Catalyst Layer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Se3iqnhoufwC",
+      "citation": "Journal of Power Sources 195 (10), 3201-3206, 2010",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Passive water management at the cathode of a planar air-breathing proton exchange membrane fuel cell"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:0N-VGjzr574C",
+      "citation": "Applied Energy 304, 117641, 2021",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Paths to market for stationary solid oxide fuel cells: Expert elicitation and a cost of electricity model"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:0izLItjtcgwC",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1429-1429, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Patterned Nafion Membranes for Improved Transport in PGM-Free PEMFC Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:u5HHmVD_uO8C",
+      "citation": "Journal of power sources 130 (1-2), 61-76, 2004",
+      "num_citations": 1874,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "PEM fuel cell electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Zph67rFs4hoC",
+      "citation": "ECS Transactions 3 (1), 1217, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Performance Analysis of Air-Breathing Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:0EnyYjriUFMC",
+      "citation": "Mini-Micro Fuel Cells: Fundamentals and Applications, 47-74, 2008",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Performance analysis of microstructured fuel cells for portable applications"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:3fE2CSJIrl8C",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 43009, 637-642, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Physics of Pumping Methanol/Water Solutions for Fuel Cell Applications"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:dQ2og3OwTAUC",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 294-294, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Planar Lithium Battery Cell Development to Advance in-Operando Nano-CT Imaging of Graphite Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:eflP2zaiRacC",
+      "citation": "Journal of Power Sources 338, 49-64, 2017",
+      "num_citations": 134,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Plug-in hybrid electric vehicle LiFePO4 battery life implications of thermal management, driving conditions, and regional climate"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:OTTXONDVkokC",
+      "citation": "Applied Energy 353, 122004, 2024",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Predicting pemfc performance from a volumetric image of catalyst layer structure using pore network modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:S16KYo8Pm5AC",
+      "citation": "Energy and AI 3, 100045, 2021",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Prediction of high frequency resistance in polymer electrolyte membrane fuel cells using long short term memory based model"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:uJ-U7cs_P_0C",
+      "citation": "International Design Engineering Technical Conferences and Computers and …, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Prediction of Nitrogen Concentration in Fuel Cells Using Data-Driven Modeling"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:VaXvl8Fpj5cC",
+      "citation": "PRiME 2020 (ECS, ECSJ, & KECS Joint Meeting), 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Proton Channel Electrodes for Improved Transport in PGM-free PEMFC Cathodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hqOjcs7Dif8C",
+      "citation": "Sensors and Actuators B: Chemical 151 (2), 394-401, 2011",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Pumping with electroosmosis of the second kind in mesoporous skeletons"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:kRWSkSYxWN8C",
+      "citation": "Journal of the American Ceramic Society 100 (5), 2232-2242, 2017",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Quantifying intermediate‐frequency heterogeneities of SOFC electrodes using X‐ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HbR8gkJAVGIC",
+      "citation": "Journal of Power Sources 498, 229846, 2021",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Quantifying morphological variability and operating evolution in SOFC anode microstructures"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:epqYDVWIO7EC",
+      "citation": "Journal of The Electrochemical Society 167 (5), 054506, 2019",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Quantitative analysis of multi-scale heterogeneities in complex electrode microstructures"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:AXPGKjj_ei8C",
+      "citation": "Physical Chemistry Chemical Physics 19 (37), 25334-25345, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Quantitative interpretation of impedance spectroscopy data on porous LSM electrodes using X-ray computed tomography and Bayesian model-based analysis"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:08ZZubdj9fEC",
+      "citation": "National Energy Technology Laboratory (NETL), Pittsburgh, PA, Morgantown, WV …, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Representative Volumes in Highly Heterogeneous Fuel Cell Materials"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:D_sINldO8mEC",
+      "citation": "ACS applied materials & interfaces 8 (48), 32764-32777, 2016",
+      "num_citations": 132,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Resolving electrode morphology’s impact on platinum group metal-free cathode performance using nano-CT of 3D hierarchical pore and ionomer distribution"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:KlAtU1dfN6UC",
+      "citation": "Advanced Functional Materials 22 (3), 555-560, 2012",
+      "num_citations": 240,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Resolving the Three‐Dimensional Microstructure of Polymer Electrolyte Fuel Cell Electrodes using Nanometer‐Scale X‐ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:tS2w5q8j5-wC",
+      "citation": "Electrochemical Society Meeting Abstracts 229, 213-213, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Revealing Lithium Dendrite Morphologies Via in Situ Optical Microscopy and X-Ray Nano-CT"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:i2xiXl-TujoC",
+      "citation": "ACS Applied Energy Materials 4 (1), 119-127, 2021",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Reversal tolerant anodes using protective layers for highly robust automotive fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:yB1At4FlUx8C",
+      "citation": "ACS Applied Energy Materials 2 (10), 7152-7161, 2019",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Robust operation of fuel cell systems in subfreezing conditions: a material-based solution to achieve better anode durability"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:M7yex6snE4oC",
+      "citation": "Advanced Materials 32 (46), 2003577, 2020",
+      "num_citations": 345,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Single cobalt sites dispersed in hierarchically porous nanofiber networks for durable and high‐power PGM‐free cathodes in fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:TQgYirikUcIC",
+      "citation": "The Journal of Physical Chemistry C 116 (18), 9862-9875, 2012",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Spatially resolved modeling of electric double layers and surface chemistry for the hydrogen oxidation reaction in water-filled platinum–carbon electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ZeXyd9-uunAC",
+      "citation": "Analytical chemistry 83 (24), 9492-9498, 2011",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Spatially resolved, in situ potential measurements through porous electrodes as applied to fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:u_35RYKgDlwC",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 244, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Spatially-resolved modeling of electric double layers and surface chemistry for the oxygen reduction reaction in water-filled platinum-carbon electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:BqipwSGYUEgC",
+      "citation": "ECS Transactions 58 (1), 27, 2013",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Spatially-resolved modeling of electric double layers for the oxygen reduction reaction in water-filled platinum electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_Re3VWB3Y0AC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Spatiotemporal Electrochemical Measurements Across an EDL Capacitance Electrode with Application to Aqueous Sodium Hybrid Batteries"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HoB7MX3m0LUC",
+      "citation": "Journal of Power Sources 248, 348-355, 2014",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Spatiotemporal electrochemical measurements across an electric double layer capacitor electrode with application to aqueous sodium hybrid batteries"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:CHSYGLWDkRkC",
+      "citation": "Journal of Power Sources 275, 408-418, 2015",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Stabilization of polymer electrolyte fuel cell voltage with reduced-order Lyapunov exponent feedback and corrective pressure perturbations"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:TFP_iSt0sucC",
+      "citation": "Energy & fuels 27 (8), 4278-4289, 2013",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Steam–Coal Gasification Using CaO and KOH for in Situ Carbon and Sulfur Capture"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:6ZxmRoH8BuwC",
+      "citation": "Electrochemical Society Meeting Abstracts 243, 2219-2219, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Studying Crack Formation in Catalyst Layer Films for Proton Exchange Membrane Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WZBGuue-350C",
+      "citation": "Journal of Power Sources 478, 229049, 2020",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Studying Pt-based fuel cell electrode degradation with nanoscale X-ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:Fu2w8maKXqMC",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 1379-1379, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Studying Pt-Based Proton Exchange Membrane Fuel Cell Degradation with Nano-Scale X-Ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:EUQCXRtRnyEC",
+      "citation": "ECS Transactions 64 (3), 681, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "The Effect of Cathode Pressure Perturbations on the Voltage Stability of a Simulated Fuel Cell Stack"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:YOwf2qJgpHMC",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "The Effect of Electric Double Layers on Ionic Conductivity in the Agglomerates of PEM Fuel Cell Anodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:XvxMoLDsR5gC",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 2630-2630, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "The Effects of Operating Conditions on the Electrode-Specific Potentials and Overall Performance of a Polymer Exchange Membrane Water Electrolyzer"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:M3ejUd6NZC8C",
+      "citation": "International Conference on Fuel Cell Science, Engineering and Technology …, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The Role of Channel Plurality in Two-Phase Flow Instabilities in PEM Cathode Channels"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:roLk4NBRz8UC",
+      "citation": "Electrochemical and Solid-State Letters 11 (1), B1, 2007",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Theoretical performance analysis of microstructured air-breathing fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:5ugPr518TE4C",
+      "citation": "Electrochemical Society Meeting Abstracts 231, 1514-1514, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Tomography Aided Development of Membrane Electrode Assemblies for PEM Water Electrolysis"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:W5xh706n7nkC",
+      "citation": "Electrochemical Society Meeting Abstracts aimes2018, 1419-1419, 2018",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Total Cost of Ownership of Fuel Cell Electric Vehicles Using Expert Assessments"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:z_wVstp3MssC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 1457-1457, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Towards a High-Performance DMFC Membrane Electrode Assembly Using Iron-Doped Metal Organic Framework Catalysts on the Cathode"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:HE397vMXCloC",
+      "citation": "ECS Transactions 78 (1), 2711, 2017",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Towards quantification of local electrochemical parameters in microstructures of solid oxide fuel cell electrodes using high performance computations"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:5Ul4iDaHHb8C",
+      "citation": "Electrochemical Society Meeting Abstracts 230, 208-208, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Towards the I n-Operando Observation of Lithium Dendrite Growth Via X-Ray Computed Tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:5awf1xo2G04C",
+      "citation": "Electrochemical Society Meeting Abstracts 233, 1582-1582, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Transport in Low Pt-Loading Cathodes: The Impact of Electrode and Catalyst Support Morphology"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:_5tno0g5mFcC",
+      "citation": "Electrochemical Society Meeting Abstracts 243, 2081-2081, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Transport Properties of Iridium Oxide Catalyst Layers for Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Developments in Heat Transfer 19, 175, 2005",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Two-phase transport in porous gas diffusion electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:kzcrU_BdoSEC",
+      "citation": "Microscopy and Microanalysis 24 (S2), 420-423, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Ultra-high Resolution In-operando X-ray Microscopy of Fuel cells and Batteries"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:XD-gHx7UXLsC",
+      "citation": "Electrochemical Society Meeting Abstracts 236, 1437-1437, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Understanding Carbon Corrosion Damage to Fuel Cell Electrodes: Towards Reversal Invincible"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:VOx2b1Wkg3QC",
+      "citation": "Journal of The Electrochemical Society 163 (13), A2636, 2016",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Understanding Li-ion battery anode degradation and pore morphological changes through nano-resolution X-ray computed tomography"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:hkOj_22Ku90C",
+      "citation": "Journal of Power Sources 397, 397-404, 2018",
+      "num_citations": 113,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Understanding the voltage reversal behavior of automotive fuel cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ILKRHgRFtOwC",
+      "citation": "Journal of power sources 472, 228442, 2020",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Understanding water management in platinum group metal-free electrodes using neutron imaging"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:9vf0nzSNQJEC",
+      "citation": "Electrochemical Society Meeting Abstracts 232, 1418-1418, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Using Multi-Scale Modeling to Understand Transports inside PEMFC Under Different Configurations"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:a3BOlSfXSfwC",
+      "citation": "247th ECS Meeting (May 18-22, 2025), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Vapor Deposition of Iridium Anodes Onto High Surface Area Membranes for Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:5qfkUJPXOUwC",
+      "citation": "Electrochemical Society Meeting Abstracts 240, 1222-1222, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Vapor-fed Methanol Oxidation Reaction Kinetics on High Surface Area Carbon Supported PtRu Catalysts in a Direct Methanol Fuel Cell"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:OU6Ihb5iCvQC",
+      "citation": "chemelectrochem 2 (11), 1752-1759, 2015",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Vertically Oriented Polymer Electrolyte Nanofiber Catalyst Support for Thin Film Proton‐Exchange Membrane Fuel Cell Electrodes"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:rO6llkc54NcC",
+      "citation": "ECS Transactions 58 (1), 1137, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Vertically-Oriented Polymer Electrolyte Nanofiber Catalyst Support for Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:blknAaTinKkC",
+      "citation": "ECS Meeting Abstracts, 1472, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Vertically-Oriented Polymer Electrolyte Nanofiber Catalyst Support for Polymer Electrolyte Fuel Cells"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:umqufdRvDiIC",
+      "citation": "Electrochemical Society Meeting Abstracts 242, 1636-1636, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Voltage Loss Analysis of Proton Exchange Membrane Water Electrolyzers"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:8k81kl-MbHgC",
+      "citation": "Journal of Power Sources 196 (4), 1948-1954, 2011",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Voltage loss and fluctuation in proton exchange membrane fuel cells: The role of cathode channel plurality and air stoichiometric ratio"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ye4kPcJQO24C",
+      "citation": "Electrochemical Society Meeting Abstracts 233, 1776-1776, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Water Activity Dependence of Oxygen Evolution Reaction Catalysts and Carbon Corrosion of Reversal Tolerant Fuel Cell Anodes during Hydrogen Starvation Conditions"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:WF5omc3nYNoC",
+      "citation": "ECS Transactions 3 (1), 949, 2006",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Water management at the cathode of a planar air-breathing fuel cell with an electroosmotic pump"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:RHpTSmoSYBkC",
+      "citation": "The 2006 Annual Meeting, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Water Management in a 25cm 2 Pem Fuel Cell with Electroosmotic Pumping"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:ufrVoPGSRksC",
+      "citation": "ECS Transactions 3 (1), 409, 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Water transport in gas diffusion layers of pemfcs"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:V3AGJWp-ZtQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "X-RAY TOMOGRAPHY FOR INVESTIGATING DEGRADATION AND WATER TRANSPORT IN POLYMER ELECTROLYTE FUEL CELLS"
+    },
+    {
+      "author_pub_id": "7zUqi1sAAAAJ:u9iWguZQMMsC",
+      "citation": "Chemical Engineering Science 138, 499-509, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "X-ray tomography-based analysis of transport and reaction in the catalyst coating of a reformer"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "7zUqi1sAAAAJ"
+}

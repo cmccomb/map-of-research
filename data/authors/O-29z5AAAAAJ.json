@@ -1,0 +1,822 @@
+{
+  "display_name": "Brumley",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Brumley.json",
+  "publication_count": 103,
+  "publications": [
+    {
+      "author_pub_id": "O-29z5AAAAAJ:hC7cP41nSMkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "18-732 Secure Software Systems Static Information Flow Analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:HDshCWvjkbEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "A Binary-Centric Approach to Vulnerability Analysis and Defense"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:abG-DnoFyZgC",
+      "citation": "; login:: the magazine of USENIX & SAGE 26 (7), 76-82, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "A crash course in managing security"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:tkaPQYYpVKoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A World Where We Trust {Hard-Won} Lessons in Security Research, Technology, and People"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:UebtZRa9Y70C",
+      "citation": "Technical Report CMU-CS-06-180, Carnegie Mellon University School of …, 2006",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Alias analysis for assembly"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:eQOLeE2rZwMC",
+      "citation": "2010 IEEE symposium on Security and privacy, 317-331, 2010",
+      "num_citations": 1140,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "All you ever wanted to know about dynamic taint analysis and forward symbolic execution (but might have been afraid to ask)"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:WA5NYHcadZ8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "All You Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (but Might Have Been Afraid to Ask)(Invited Talk)"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:isC4tDSrTZIC",
+      "citation": "Proceedings of the 2013 ACM SIGSAC conference on Computer & communications …, 2013",
+      "num_citations": 646,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "An empirical study of cryptographic misuse in android applications"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:_kc_bZDykSQC",
+      "citation": "Carnegie Mellon University, 2008",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Analysis and defense of vulnerabilities in binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:4JMBOYKVnBMC",
+      "citation": "US Patent 9,135,405, 2015",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Automated exploit generation"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:roLk4NBRz8UC",
+      "citation": "Communications of the ACM 57 (2), 74-84, 2014",
+      "num_citations": 622,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Automatic exploit generation"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Y5dfb0dijaUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Automatic Exploit Generation The idea is to identify security-critical software bugs so they can be fixed first."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:zYLM7Y9cAGgC",
+      "citation": "2008 IEEE Symposium on Security and Privacy (sp 2008), 143-157, 2008",
+      "num_citations": 411,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Automatic patch-based exploit generation is possible: Techniques and implications"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:M05iB0D1s5AC",
+      "citation": "2015 USENIX Summit on Gaming, Games, and Gamification in Security Education …, 2015",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Automatic problem generation for {Capture-the-Flag} competitions"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:g5m5HwL7SMYC",
+      "citation": "Proceedings of the 2015 10th Joint Meeting on Foundations of Software …, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Automatically deriving pointer reference expressions from binary code for memory dump analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:O3NaXMp0MMsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Automatically Generating Accurate Input Filters for Host-Based Defenses Using Binary Static Analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:W7OEmFMy1HYC",
+      "citation": "Botnet Detection: Countering the Largest Security Threat, 65-88, 2008",
+      "num_citations": 347,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Automatically identifying trigger-based behavior in malware"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:RHpTSmoSYBkC",
+      "citation": "Carnegie Mellon University, 2013",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Automatically inferring the evolution of malicious activity on the internet"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:5nxA0vEk-isC",
+      "citation": "International Conference on Computer Aided Verification, 463-469, 2011",
+      "num_citations": 681,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "BAP: A binary analysis platform"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:d1gkVwhDpl0C",
+      "citation": "Information Systems Security: 4th International Conference, ICISS 2008 …, 2008",
+      "num_citations": 1089,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "BitBlaze: A new approach to computer security via binary analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:hMod-77fHWUC",
+      "citation": "",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "BitBlaze: Binary analysis for computer security"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:_FxGoFyzp5QC",
+      "citation": "Technical Report CS-07-133, School of Computer Science, Carnegie Mellon …, 2007",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "BitScope: Automatically dissecting malicious binaries"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:-f6ydRqryjwC",
+      "citation": "CMU-CyLab-10-006 16, 2009",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Bitshred: Fast, scalable code reuse detection in binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:M3ejUd6NZC8C",
+      "citation": "Cylab, Carnegie Mellon University, Pittsburgh, PA, Technical Report CMU …, 2010",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Bitshred: Fast, scalable malware triage"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:kNdYIx-mwKoC",
+      "citation": "Proceedings of the 18th ACM conference on Computer and communications …, 2011",
+      "num_citations": 401,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Bitshred: feature hashing malware for scalable triage and semantic analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:08ZZubdj9fEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Blanket Execution: Dynamic Similarity Testing for"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:RGFaLdJalmkC",
+      "citation": "23rd USENIX Security Symposium (USENIX Security 14), 303-317, 2014",
+      "num_citations": 279,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Blanket execution: Dynamic similarity testing for program binaries and components"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:YOwf2qJgpHMC",
+      "citation": "US Patent 7,373,451, 2008",
+      "num_citations": 185,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Cache-based system management architecture with virtual appliances, network repositories, and virtual appliance transceivers"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:eMMeJKvmdy0C",
+      "citation": "Malware Detection 27, 147, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Carnegie Mellon University, Pittsburgh, PA, USA dbrumley@ cs. emu. edu, jnewsome@ ece. emu. edu, dawnsong@ cmu. edu"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:uWQEDVKXjbEC",
+      "citation": "Proceedings of the Internet Measurement Conference 2018, 464-470, 2018",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Cloud datacenter SDN monitoring: Experiences and challenges"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:MXK_kJrjxJIC",
+      "citation": "Carnegie Mellon University. Information Networking Institute, 2009",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Contractual anonymity"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:WF5omc3nYNoC",
+      "citation": "20th IEEE Computer Security Foundations Symposium (CSF'07), 311-325, 2007",
+      "num_citations": 112,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Creating vulnerability signatures using weakest preconditions"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:4fKUyHm3Qg0C",
+      "citation": "US Patent 11,102,079, 2021",
+      "num_citations": 104,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Cross-regional virtual network peering"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:LkGwnXOMwfcC",
+      "citation": "Proceedings of the 2006 ACM Symposium on Information, computer and …, 2006",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Design space and analysis of worm defense strategies"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:JV2RwH3_ST0C",
+      "citation": "US Patent 9,542,559, 2017",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Detecting exploitable bugs in binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:SP6oXDckpogC",
+      "citation": "US Patent 9,183,396, 2015",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Detecting exploitable bugs in binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:geHnlv5EZngC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "DUNFIELD, J. CMU-CS-04-117"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:8k81kl-MbHgC",
+      "citation": "Technical Report CMU-CyLab-10-002, Carnegie Mellon University, CyLab, 2010",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Efficient directionless weakest preconditions"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:R3hNpaxXUhUC",
+      "citation": "CyLab, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Efficient directionless weakest preconditions (cmu-cylab-10-002)"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:ZeXyd9-uunAC",
+      "citation": "Carnegie Mellon University, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Efficient Directionless Weakest Preconditions (CMU-CyLab-10-002)"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:BqipwSGYUEgC",
+      "citation": "Proceedings of the 36th International Conference on Software Engineering …, 2014",
+      "num_citations": 361,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Enhancing symbolic execution with veritesting"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:_Qo2XoVZTnwC",
+      "citation": "US Patent 7,975,059, 2011",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Generic application level protocol analyzer"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:IjCSPb-OGe4C",
+      "citation": "NDSS, 2007",
+      "num_citations": 166,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Generic Application-Level Protocol Analyzer and its Language."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:TQgYirikUcIC",
+      "citation": "Proceedings of the 2012 ACM conference on Computer and communications …, 2012",
+      "num_citations": 174,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "GPS software attacks"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:D03iK_w7-QYC",
+      "citation": "2017 IEEE 30th Computer Security Foundations Symposium (CSF), 7-21, 2017",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "How shall we play a game?: A game-theoretical model for cyber-warfare games"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:b0M2c_1WBrUC",
+      "citation": "; login:: the magazine of USENIX & SAGE 40 (2), 69-71, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Invisible intruders: rootkits in practice"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:SeFeTyx0c_EC",
+      "citation": "US Patent 9,619,375, 2017",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Methods and systems for automatically testing software"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:IWHjjKOFINEC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Mitigating C vulnerabilities"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:B3FOqHPlNUQC",
+      "citation": "US Patent 11,063,857, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Monitoring connectivity and latency of a virtual network"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:NaGl4SEjCO4C",
+      "citation": "USENIX Summer 21, 1992",
+      "num_citations": 300,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "Network (In) Security Through IP Packet Filtering."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:J_g5lzvAfSwC",
+      "citation": "23rd USENIX Security Symposium (USENIX Security 14), 861-875, 2014",
+      "num_citations": 329,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Optimizing seed selection for fuzzing"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:7PzlFSSx8tAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Organizing Committee: Technical Program Committee Chairs"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:V3AGJWp-ZtQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Part II Software Analysis and Assurance"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:iH-uZ7U-co4C",
+      "citation": "CMU, 2013",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "picoctf: Teaching 10,000 high school students to hack"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:4TOpqqG69KYC",
+      "citation": "Proceedings of the 17th ACM conference on Computer and communications …, 2010",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Platform-independent programs"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:2osOgNQ5qMEC",
+      "citation": "USENIX security symposium 57 (72), 2004",
+      "num_citations": 330,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Privtrans: Automatically partitioning programs for privilege separation"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:bnK-pcrLprsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Program Co-Chairs"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:ldfaerwXgEUC",
+      "citation": "2015 IEEE Symposium on Security and Privacy, 725-741, 2015",
+      "num_citations": 344,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Program-adaptive mutational fuzzing"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:0EnyYjriUFMC",
+      "citation": "20th USENIX Security Symposium (USENIX Security 11), 2011",
+      "num_citations": 563,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Q: Exploit hardening made easy"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:hFOr9nPyWt4C",
+      "citation": "2012 IEEE Symposium on Security and Privacy, 48-62, 2012",
+      "num_citations": 310,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "ReDeBug: finding unpatched code clones in entire os distributions"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:u5HHmVD_uO8C",
+      "citation": "Computer Networks 48 (5), 701-716, 2005",
+      "num_citations": 1389,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Remote timing attacks are practical"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:xtRiw3GOFMkC",
+      "citation": "; login:: the magazine of USENIX & SAGE 25 (7), 32-37, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "repeatable security"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Proceedings of the 13th ACM conference on Computer and communications …, 2006",
+      "num_citations": 164,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Replayer: Automatic protocol replay by binary analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:ufrVoPGSRksC",
+      "citation": "Carnegie Mellon University, 2007",
+      "num_citations": 153,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "RICH: Automatically protecting against integer-based vulnerabilities"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:CHSYGLWDkRkC",
+      "citation": "Proceedings of the NDSS Workshop on Binary Analysis Research 2018, 2018",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Saluki: finding taint-style vulnerabilities with static property checking"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:yD5IFk8b50cC",
+      "citation": "International Conference on Computer Aided Verification, 453-474, 2017",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Scaling up DPLL (T) string solvers using context-dependent simplification"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:M3NEmzRMIkIC",
+      "citation": "Proceedings of the 2013 ACM SIGSAC conference on Computer & communications …, 2013",
+      "num_citations": 257,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Scheduling black-box mutational fuzzing"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Se3iqnhoufwC",
+      "citation": "Journal of Communications and Networks 13 (2), 187-200, 2011",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "SplitScreen: Enabling efficient, distributed malware detection"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:maZDTaKrznsC",
+      "citation": "Encyclopedia of Cryptography, Security and Privacy, 2526-2528, 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Static analysis"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Zph67rFs4hoC",
+      "citation": "Malware Detection, 147-170, 2007",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Sting: An end-to-end self-healing system for defending against internet worms"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:aqlVkmm33-oC",
+      "citation": "CMU-CS-05-191, 2005",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Sting: An end-to-end self-healing system for defending against zero-day worm attacks on commodity software"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:YsMSGLbcyi4C",
+      "citation": "Proceedings of the 2nd ACM SIGOPS/EuroSys European Conference on Computer …, 2007",
+      "num_citations": 92,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Sweeper: A lightweight end-to-end system for defending against fast worms"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:e5wmG9Sq2KIC",
+      "citation": "21st USENIX Security Symposium (USENIX Security 12), 617-630, 2012",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "TACHYON: Tandem execution for efficient live patch testing"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Wp0gIr-vW9MC",
+      "citation": "Carnegie Mellon University, 2005",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Taxonomy and effectiveness of worm defense strategies"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:mB3voiENLucC",
+      "citation": "October, 2013",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "The BAP handbook"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:vRqMK49ujn8C",
+      "citation": "USENIX Login 43 (2), 6-9, 2018",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The cyber grand challenge and the future of cyber-autonomy"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:f2IySw72cVMC",
+      "citation": "Enigma 2018 (Enigma 2018), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The Future of {Cyber-Autonomy}"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:_B80troHkn4C",
+      "citation": "Communications of the ACM 57 (2), 74-84, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "The magazine archive includes every article published in Communications of the ACM for over the past 50 years."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:1sJd4Hv_s6UC",
+      "citation": "IEEE Security & Privacy 16 (2), 52-60, 2018",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The mayhem cyber reasoning system"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:tOudhMTPpwUC",
+      "citation": "IEEE SPECTRUM 56 (2), 30-35, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "The White-Hat Hacking Machine: Meet Mayhem, winner of the DARPA contest to find and repair software vulnerabilities"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:ULOm3_A8WrAC",
+      "citation": "IEEE Transactions on Dependable and Secure Computing 5 (4), 224-241, 2008",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Theory and techniques for automatic generation of vulnerability-based signatures"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:a0OBvERweLwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thesis/Dissertation Acceptance &"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:fPk4N6BV_jEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thursday, January 14"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:hqOjcs7Dif8C",
+      "citation": "Carnegie Mellon University, 2011",
+      "num_citations": 305,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "TIE: Principled reverse engineering of types in binary programs"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:qxL8FJ1GzNcC",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards attack-agnostic defenses"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:rO6llkc54NcC",
+      "citation": "NDSS 1, 1.1-8.1, 2016",
+      "num_citations": 541,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Towards automated dynamic analysis for linux-based embedded firmware."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:Y0pCki6q_DkC",
+      "citation": "USENIX Security Symposium 15, 2007",
+      "num_citations": 165,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Towards Automatic Discovery of Deviations in Binary Implementations with Applications to Error Detection and Fingerprint Generation."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:u-x6o8ySG0sC",
+      "citation": "2006 IEEE Symposium on Security and Privacy (S&P'06), 15 pp.-16, 2006",
+      "num_citations": 417,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards automatic generation of vulnerability-based signatures"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:bEWYMUwI8FkC",
+      "citation": "22nd USENIX Security Symposium (USENIX Security 13), 81-96, 2013",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Towards automatic software lineage inference"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:4DMP91E08xMC",
+      "citation": "Carnegie Mellon University, Tech. Rep. CMU-CS-06-136, 2006",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards automatically eliminating integer-based vulnerabilities"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:mVmsd5A6BfQC",
+      "citation": "Technical Report CMU-CS-07-150, CMU, 2007",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Towards practical automatic generation of multipath vulnerability signatures"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:3fE2CSJIrl8C",
+      "citation": "",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Tracking hackers on IRC"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:QIV2ME_5wuYC",
+      "citation": "2012 IEEE Symposium on Security and Privacy, 380-394, 2012",
+      "num_citations": 799,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Unleashing mayhem on binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:L8Ckcad2t8MC",
+      "citation": "2014-04-26]. http://users. ece. emu. edu/r-ejschwar/papers/usenix Ii-update. pdf, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Update on Q: Exploit Hardening Made Easy"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:9ZlFYXVOiuMC",
+      "citation": "",
+      "num_citations": 2,
+      "pub_url": "",
+      "title": "Vine project documentation"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:dhFuZR0502QC",
+      "citation": "US Patent 7,890,689, 2011",
+      "num_citations": 268,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Virtual appliance management"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:9yKSN-GCB0IC",
+      "citation": "LISA 3, 181-194, 2003",
+      "num_citations": 267,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Virtual Appliances for Deploying and Maintaining Software."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:UeHWp8X0CEIC",
+      "citation": "NDSS, 2006",
+      "num_citations": 145,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Vulnerability-Specific Execution Filtering for Exploit Prevention on Commodity Software."
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:8AbLer7MMksC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "We lower MAYHEM to binary code (part 1)"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:t6usbXjVLHcC",
+      "citation": "5th USENIX Workshop on Offensive Technologies (WOOT 11), 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Welcome and Best Paper Awards"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:dfsIfKJdRG4C",
+      "citation": "2017 IEEE Symposium on Security and Privacy (SP), 824-839, 2017",
+      "num_citations": 81,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Your exploit is mine: Automatic shellcode transplant for remote exploits"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:ns9cj8rnVeAC",
+      "citation": "23rd USENIX Security Symposium (USENIX Security 14), 845-860, 2014",
+      "num_citations": 356,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "{BYTEWEIGHT}: Learning to recognize functions in binary code"
+    },
+    {
+      "author_pub_id": "O-29z5AAAAAJ:KlAtU1dfN6UC",
+      "citation": "login: Magazine, Intrusion Detection Special Issue, 1999-9, 1999",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "“invisible intruders: rootkits in practice"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "O-29z5AAAAAJ"
+}

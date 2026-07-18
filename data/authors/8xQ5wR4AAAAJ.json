@@ -1,0 +1,756 @@
+{
+  "display_name": "Torres",
+  "fetched_at_utc": "2025-04-01T01:19:25+00:00",
+  "migration_source": "map-of-cheme/data/Torres.json",
+  "publication_count": 94,
+  "publications": [
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:ZHo1McVdvXMC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "10A: Process Design for a Net Zero Carbon Economy I"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:9ZlFYXVOiuMC",
+      "citation": "2019 IEEE Latin American Conference on Computational Intelligence (LA-CCI), 1-6, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A comparative study on the numerical performance of kaizen programming and genetic programming for symbolic regression problems"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:kNdYIx-mwKoC",
+      "citation": "Computer aided chemical engineering 47, 451-456, 2019",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A genetic programming approach for construction of surrogate models"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:YFjsv_pBGBYC",
+      "citation": "Neural computing and applications 35 (13), 9299-9317, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A Kaizen Programming algorithm for multi-output regression based on a heterogeneous island model"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:KlAtU1dfN6UC",
+      "citation": "AIChE Journal 65 (12), e16775, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A market‐driven algorithm for the assessment of promising bio‐based chemicals"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:maZDTaKrznsC",
+      "citation": "Computer Aided Chemical Engineering 49, 1771-1776, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A multi-output machine learning approach for generation of surrogate models in process engineering"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:eQOLeE2rZwMC",
+      "citation": "Computer Aided Chemical Engineering 37, 1175-1180, 2015",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A Novel Approach for the Identification of Economic Opportunities within the Framework of a Biorefinery"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:vV6vV6tmYwMC",
+      "citation": "Computers & Chemical Engineering 181, 108540, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A robust disjunctive formulation for the redesign of forest biomass-based fuels supply chain under multiple factors of uncertainty"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:rO6llkc54NcC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A System-Dynamics Based Approach for Modeling Circular Economy Networks for Plastic Recycling"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:3fE2CSJIrl8C",
+      "citation": "Biorefinery: Integrated Sustainable Processes for Biomass Conversion to …, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Analysis and Optimization of Multi-actor Biorefineries"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:IWHjjKOFINEC",
+      "citation": "Computer Aided Chemical Engineering 48, 1549-1554, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Analyzing Hydrogen Production Capacities to Seize Renewable Energy Surplus"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:4JMBOYKVnBMC",
+      "citation": "2020 Virtual AIChE Annual Meeting, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Assessing the Production of Novel Chemicals Using Business-Inspired Approaches"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:_Qo2XoVZTnwC",
+      "citation": "2017 AIChE Annual Meeting, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Biofuels Production: Design, Simulation, and Economic Analysis"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:qUcmZB5y_30C",
+      "citation": "2018 AIChE Annual Meeting, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Biofuels Production: Design, Simulation, and Economic Analysis"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:UebtZRa9Y70C",
+      "citation": "Computer Aided Chemical Engineering 29, 236-240, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Biomass to chemicals: Design of an extractive reaction process for the production of 5-hydroxymethylfurfural"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:d1gkVwhDpl0C",
+      "citation": "Computers & chemical engineering 42, 130-137, 2012",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Biomass to chemicals: Design of an extractive-reaction process for the production of 5-hydroxymethylfurfural"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:Zph67rFs4hoC",
+      "citation": "Processes 7 (10), 645, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "BISSO: Biomass Interface for Superstructure Simulation and Optimization"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:NaGl4SEjCO4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Circular Economy: Definitions, Challenges, and Opportunities"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:ldfaerwXgEUC",
+      "citation": "Clean Technologies and Environmental Policy 26 (3), 577-578, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Circular Economy: not just another name for waste treatment"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:u5HHmVD_uO8C",
+      "citation": "Energy & Environmental Science 3 (10), 1560-1572, 2010",
+      "num_citations": 200,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Continuous production of 5-hydroxymethylfurfural from fructose: a design case study"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:bEWYMUwI8FkC",
+      "citation": "Chemical Engineering Research and Design 183, 235-249, 2022",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Coupling time varying power sources to production of green-hydrogen: a superstructure based approach for technology selection and optimal design"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:hFOr9nPyWt4C",
+      "citation": "Asociación de Ingenieros Químicos del Uruguay: Montevideo, Uruguay, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Creación de herramienta computacional para la simulación de procesos de conversión de biomasa"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:8k81kl-MbHgC",
+      "citation": "transformation 15, 16, 2013",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Curriculum vitae analyses of engineering Ph. Ds working in academia and industry"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:hMod-77fHWUC",
+      "citation": "2022 AIChE Annual Meeting, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Design and Operations under Uncertainty-II"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:2P1L_qKh6hAC",
+      "citation": "2023 AIChE Annual Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Design and Optimization of Circular Economy Networks: Recycling of Polyethylene Terephthalate As a Case Study"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:4OULZ7Gr8RgC",
+      "citation": "National Energy Technology Laboratory (NETL), Pittsburgh, PA, Morgantown, WV …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Design and Optimization of Processes for Recovering Rare Earth Elements from End-of-Life Hard Disk Drives"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:YsMSGLbcyi4C",
+      "citation": "AIChE Journal 62 (9), 3369-3391, 2016",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Design of multi‐actor distributed processing systems: A game‐theoretical approach"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:M3NEmzRMIkIC",
+      "citation": "Computer Aided Chemical Engineering 51, 1513-1518, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Determination of Adsorption Energies from DFT databases using Machine Learning techniques"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:dhFuZR0502QC",
+      "citation": "Energies 13 (6), 1493, 2020",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Developing process designs for biorefineries—Definitions, categories, and unit operations"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:iH-uZ7U-co4C",
+      "citation": "Computers & Chemical Engineering 161, 107756, 2022",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Development of a machine learning-based soft sensor for an oil refinery’s distillation column"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:70eg2SAEIzsC",
+      "citation": "2023 IEEE Latin American Conference on Computational Intelligence (LA-CCI), 1-6, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Does Kaizen Programming need a physic-informed mechanism to improve the search?"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:dfsIfKJdRG4C",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Early-career researchers in sustainable energy"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:W7OEmFMy1HYC",
+      "citation": "Chemical Engineering Science 126, 186-195, 2015",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Economic assessment of temperature swing adsorption systems as Claus tail gas clean up units"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:roLk4NBRz8UC",
+      "citation": "Computer Aided Chemical Engineering 38, 1383-1388, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Economically optimal multi-actor processing networks: material flows and price assignment of the intermediates using Lagrangian decomposition"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:MXK_kJrjxJIC",
+      "citation": "Processes 6 (10), 204, 2018",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Effect of tariff policy and battery degradation on optimal energy storage"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:hqOjcs7Dif8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "EN Pistikopoulos, MC Georgiadis and A. Kokossis"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:RHpTSmoSYBkC",
+      "citation": "Sustainable Design for Renewable Processes, 573-622, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Energy storage"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:Wp0gIr-vW9MC",
+      "citation": "Bioresource technology 299, 122685, 2020",
+      "num_citations": 331,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Engineering aspects of hydrothermal pretreatment: From batch to continuous operation, scale-up and pilot reactor under biorefinery concept"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:u-x6o8ySG0sC",
+      "citation": "AIChE Journal 59 (1), 2013",
+      "num_citations": 85,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Engineering Biomass Conversion Processes: A Systems Perspective."
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:zYLM7Y9cAGgC",
+      "citation": "Grasas y aceites 57 (2), 2006",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Estabilidad oxidativa y contenido de tocoferoles en el aceite de canola extraído con CO2 supercrítico."
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:YOwf2qJgpHMC",
+      "citation": "As Produções cerâmicas de imitação na Hispania, 349-360, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Estudo da sondagem T183 das termas do Alto da Cividade, Braga"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:HoB7MX3m0LUC",
+      "citation": "Montevideo: INIA, 2011",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Evaluación de los impactos económicos, sociales, ambientales e institucionales de 20 años de inversión en investigación e innovación agropecuaria por parte del Instituto …"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:Se3iqnhoufwC",
+      "citation": "Computer Aided Chemical Engineering 38, 1635-1640, 2016",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Evaluation of the production of lipids for fuels and proteins from microalgae by decomposition of the processing network"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:hC7cP41nSMkC",
+      "citation": "2020 Virtual AIChE Annual Meeting, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Exploiting Wind/Sun Energy Surplus for Production of Green-Hydrogen: Combining PEM and AE Electrolyzers for Cost Efficiency"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:_FxGoFyzp5QC",
+      "citation": "Computer Aided Chemical Engineering 37, 2123-2128, 2015",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Exploring opportunities for the production of chemicals from municipal solid wastes within the framework of a biorefinery"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:J_g5lzvAfSwC",
+      "citation": "Industrial & Engineering Chemistry Research 63 (1), 358-370, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Green hydrogen production: Process design and capacity expansion integrating economic and operational autonomy objectives"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:lSLTfruPkqcC",
+      "citation": "2022 AIChE Annual Meeting, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Green-Hydrogen Production: Systematic Superstructure-Based Approach for Technology Selection"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:JV2RwH3_ST0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Herramientas de optimización matemática aplicadas al diseño de procesos de producción de hidrógeno verde en Uruguay"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:ufrVoPGSRksC",
+      "citation": "Hydrothermal Processing in Biorefineries: Production of Bioethanol and High …, 2017",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Hydrothermal pretreatment: Process modeling and economic assessment within the framework of biorefinery processes"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:a0OBvERweLwC",
+      "citation": "Qualitative Inquiry, 10778004241279220, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "I Am Both, I Am Neither: A Collaborative Autoethnographic Poem"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:j3f4tGmQtD8C",
+      "citation": "2021 AIChE Annual Meeting, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Integrated Product and Process Design"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:WF5omc3nYNoC",
+      "citation": "ICERI2011 Proceedings, 2897-2902, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "INTERDISCIPLINARY HEALTH TEAM, CAN BE INCLUDED IN THE UNIVERSITY CURRICULA?"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:Tyk-4Ss8FVUC",
+      "citation": "The Journal of Supercritical Fluids 45 (2), 177-180, 2008",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Lanoline purification by selective extraction of pesticides using supercritical CO2"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:RGFaLdJalmkC",
+      "citation": "Computer Aided Chemical Engineering 52, 1107-1112, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Learning interpretable multi-output models: Kaizen programming based symbolic regression for estimating outlet concentrations of a splitter"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:u_35RYKgDlwC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Leveraging Hourly Variations in Electricity Pricing for Optimal Retrofit Electrification of an Oil Refinery"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:4DMP91E08xMC",
+      "citation": "Energy & Fuels 30 (12), 10494-10498, 2016",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Lignin from Eucalyptus spp. Kraft Black Liquor as Biofuel"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:cFHS6HbyZ2cC",
+      "citation": "Current Opinion in Green and Sustainable Chemistry, 100982, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Machine Learning and Process Systems Engineering for Sustainable Chemical Processes-A Short Review"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:fPk4N6BV_jEC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Multi-Objective Optimization of an Integrated Cluster for Methanol Production"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:9yKSN-GCB0IC",
+      "citation": "AIChE journal 58 (6), 1764-1777, 2012",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Networks with large solvent recycle: Dynamics, hierarchical control, and a biorefinery application"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:pyW8ca7W8N0C",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Next-Gen Manufacturing in Pharma, Food, and Bioprocessing"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:zA6iFVUQeVQC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Novel Approaches to CO2 Utilization I"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:yD5IFk8b50cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "NyA 18 Cuantificación del contenido de carbohidratos solubles en praderas del sur de chile por espectroscopia NIR."
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:UeHWp8X0CEIC",
+      "citation": "Chemical Engineering Science 116, 235-242, 2014",
+      "num_citations": 87,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "On the kinetics of the isomerization of glucose to fructose using Sn-Beta"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:NMxIlDl6LWMC",
+      "citation": "Trabajo presentado en II Congreso Agua Ambiente y Energía, Montevideo, Uruguay, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Operación óptima de baterías bajo el actual régimen tarifario"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:ZeXyd9-uunAC",
+      "citation": "ENERLAC. Revista de energía de Latinoamérica y el Caribe 4 (1), 56-77, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Operación óptima de baterías bajo el actual régimen tarifario en Uruguay"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:-f6ydRqryjwC",
+      "citation": "2019 AIChE Annual Meeting, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Optimal Energy Storage in Batteries: A Convex Formulation for Definition of Charge/Discharge Schedules"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:RYcK_YlVTxYC",
+      "citation": "2023 AIChE Annual Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Optimal Flowsheets for Electrification of Oil Refineries through Superstructure Optimization"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:ns9cj8rnVeAC",
+      "citation": "Computer Aided Chemical Engineering 52, 247-253, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Optimal Retrofitting of Conventional Oil Refinery into Sustainable Bio-Refinery Under Uncertainty"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:g5m5HwL7SMYC",
+      "citation": "AIChE Journal 70 (4), e18371, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Optimal retrofitting of conventional oil refinery into sustainable bio‐refinery under uncertainty"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:mVmsd5A6BfQC",
+      "citation": "2017 AIChE Annual Meeting, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Optimization of Biorefinery Production Chains and Decision-Making through Sustainability Evaluation: A Biojet Fuel Case Study"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:LkGwnXOMwfcC",
+      "citation": "Computer Aided Chemical Engineering 38, 1317-1322, 2016",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Optimization of lignocellulosic waste biorefinery using multi-actor multi-objective mathematical framework"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:0EnyYjriUFMC",
+      "citation": "Clean technologies and environmental policy 20, 1697-1719, 2018",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Optimization of multi-pathway production chains and multi-criteria decision-making through sustainability evaluation: A biojet fuel production case study"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:3s1wT3WcHBgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Optimization of Retrofit Decarbonization in Oil Refineries"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:Y0pCki6q_DkC",
+      "citation": "Grasas y Aceites 57 (2), 155-159, 2006",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Oxidative stability and tocopherol concentration of canola oil extracted using supercritical CO2"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:35N4QoGY0k4C",
+      "citation": "BMC Health Services Research 16, 111-242, 2016",
+      "num_citations": 64,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Proceedings of the 3rd IPLeiria’s International Health Congress: Leiria, Portugal. 6-7 May 2016"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:HDshCWvjkbEC",
+      "citation": "2018 AIChE Annual Meeting, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Process Design: Conceptualization and Analysis of Chemical Processes II"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:qjMakFHDy7sC",
+      "citation": "Foundations of Computer-Aided Process Operations. Savannah, Georgia, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Process engineering of biorefineries: recent results and new research vistas"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:2osOgNQ5qMEC",
+      "citation": "Current Opinion in Chemical Engineering 2 (4), 442-447, 2013",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Process systems engineering for biorefineries: new research vistas"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:GnPB-g6toBAC",
+      "citation": "2024 AIChE Annual Meeting, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Production of Low-carbon Fuels form Biomass: Design, Simulation, and Economic Analysis I"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:QIV2ME_5wuYC",
+      "citation": "Endocrinology Insights 5 (2), 49-54, 2010",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Qualidade de vida: estudo de uma população com diabetes mellitus tipo 1"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:SeFeTyx0c_EC",
+      "citation": "Computer Aided Chemical Engineering 53, 1309-1314, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Recycling Rare Earth Elements from End-of-Life Electric and Hybrid Electric Vehicle Motors"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:mB3voiENLucC",
+      "citation": "Instituto de Ingeniería Química, Facultad de Ingeniería, Universidad de la …, 2017",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Relevamiento de la biomasa disponible en Uruguay utilizable como materia prima en la producción de químicos"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:IjCSPb-OGe4C",
+      "citation": "Journal of the American Oil Chemists' Society 84 (6), 597-601, 2007",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Selectivity of Supercritical CO2 in the Fractionation of Hake Liver Oil Ethyl Esters"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:r0BpntZqJG4C",
+      "citation": "Human Reproduction 25, i108, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Session 67: Endocrine and Immunologic Aspects of Early Pregnancy"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:O3NaXMp0MMsC",
+      "citation": "2023 AIChE Annual Meeting, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Sustainable Biorefineries Plenary Session (Invited Talks)"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:k_IJM867U9cC",
+      "citation": "2022 AIChE Annual Meeting, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Sustainable Biorefineries Plenary Session (Invited Talks)"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:pqnbT2bcN3wC",
+      "citation": "2023 AIChE Annual Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Sustainable Engineering Forum Plenary Session (Invited Talks)"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:M05iB0D1s5AC",
+      "citation": "Frontiers in Chemical Engineering 6, 1388456, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Systematic conceptual design strategies for the recovery of metals from E-waste"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:TFP_iSt0sucC",
+      "citation": "2021 IEEE Latin American Conference on Computational Intelligence (LA-CCI), 1-6, 2021",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Towards a multi-output kaizen programming algorithm"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:aqlVkmm33-oC",
+      "citation": "2019 AIChE Annual Meeting, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Towards Automated Discovery of Plausible Reaction Paths in Complex Catalytic Systems Using Network Generation and Optimization"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:_kc_bZDykSQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1939",
+      "title": "Twenty-five Cases of Chagas's Disease seen in Minas Geraes."
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:5nxA0vEk-isC",
+      "citation": "Computer aided chemical engineering 44, 1435-1440, 2018",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Two-phase dynamic model for pem electrolyzer"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:isC4tDSrTZIC",
+      "citation": "2023 AIChE Annual Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Value-Added Biorefinery Co-Products"
+    },
+    {
+      "author_pub_id": "8xQ5wR4AAAAJ:TQgYirikUcIC",
+      "citation": "2017 AIChE Annual Meeting, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Value-Added Co-Products from Biorefineries"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "8xQ5wR4AAAAJ"
+}

@@ -1,0 +1,565 @@
+{
+  "display_name": "Aksak",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Aksak.json",
+  "publication_count": 70,
+  "publications": [
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:Se3iqnhoufwC",
+      "citation": "Ph. D. Thesis, 2008",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "A design methodology for biologically inspired dry fibrillar adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:IjCSPb-OGe4C",
+      "citation": "2007 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2007",
+      "num_citations": 101,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "A modular robotic system using magnetic force effectors"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:D_tqNUsBuKoC",
+      "citation": "IEEE transactions on ultrasonics, ferroelectrics, and frequency control 68 …, 2020",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "A multidirectional piezoelectric vibration energy harvester with direction-dependent dual resonance"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:d1gkVwhDpl0C",
+      "citation": "Journal of Adhesion Science and Technology 21 (12-13), 1281-1296, 2007",
+      "num_citations": 301,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Adhesion and anisotropic friction enhancements of angled heterogeneous micro-fiber arrays with spherical and spatula tips"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:u5HHmVD_uO8C",
+      "citation": "Langmuir 23 (6), 3322-3332, 2007",
+      "num_citations": 391,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Adhesion of biologically inspired vertical and angled polymer microfiber arrays"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:YOwf2qJgpHMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ADHESIVE BEHAVIOR OF VERTICAL AND ANGLED POLYMER MICROFIBER ARRAYS"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:M3ejUd6NZC8C",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, R16. 005, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Aerodynamics of S809 Airfoil at Low and Transitional Reynolds Numbers"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:-uzm3Y7AvW0C",
+      "citation": "US Patent App. 17/909,798, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "An adhesive material having microstructures and permeation-resistent properties"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:eQOLeE2rZwMC",
+      "citation": "Journal of Applied Physics 107 (11), 2010",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "An experimental analysis of elliptical adhesive contact"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:qE4H1tSSYIIC",
+      "citation": "Bioinspiration & Biomimetics 15 (5), 056007, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Bioinspired fibrillar adhesives with shape-controlled off-center caps for switchable and directional adhesion"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:Xz60mAmATU4C",
+      "citation": "Bio-inspired Structured Adhesives: Biological Prototypes, Fabrication …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Bioinspired Mushroom-Like Fiber Adhesives: The Effect of Cap Dimensions on Adherence"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:roLk4NBRz8UC",
+      "citation": "Technical Report, DTIC Document, 2009",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Biologically Inspired Polymer Microfibrillar Arrays for Mask Sealing"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Proceedings of the national conference on artificial intelligence 20 (4), 1730, 2005",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Catoms: Moving robots without moving parts"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:KWzIFqRkAKkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Chapter II. Facilities, Systems and Databases 29"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Proceedings of the 3rd international conference on Embedded networked sensor …, 2005",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Claytronics: highly scalable communications, sensing, and actuation networks"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:qjMakFHDy7sC",
+      "citation": "Sensors and Actuators B: Chemical 114 (1), 254-262, 2006",
+      "num_citations": 118,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Compliant and low-cost humidity nanosensors using nanoporous polymer membranes"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:Y0pCki6q_DkC",
+      "citation": "ACS applied materials & interfaces 1 (10), 2277-2287, 2009",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Dangling chain elastomers as repeatable fibrillar adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:isU91gLudPYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "DPR & Claytronics Teams"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:4TOpqqG69KYC",
+      "citation": "NWRC Summer Research Institute Proceedings in Renewable Energy, Turbulence …, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Drag Reduction Experiments in Wind Tunnel"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:MXK_kJrjxJIC",
+      "citation": "US Patent App. 13/533,386, 2012",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Dry adhesive structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:LkGwnXOMwfcC",
+      "citation": "US Patent App. 13/429,621, 2012",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Dry adhesives and methods for making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:WF5omc3nYNoC",
+      "citation": "US Patent 8,524,092, 2013",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Dry adhesives and methods for making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:YlPif8NxrbYC",
+      "citation": "US Patent 8,142,700, 2012",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Dry adhesives and methods for making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:aqlVkmm33-oC",
+      "citation": "US Patent 11,773,298, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Dry adhesives and methods for making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:zwpXiJ37cpgC",
+      "citation": "US Patent 12,203,015, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Dry adhesives and methods for making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:3fE2CSJIrl8C",
+      "citation": "US Patent App. 13/845,702, 2013",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Dry adhesives and methods of making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:8k81kl-MbHgC",
+      "citation": "US Patent 8,398,909, 2013",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Dry adhesives and methods of making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:8Xgff_V0N9gC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "EFFECT OF BIO-INSPIRED COATING ON A SEPARATED FLOW UNDER STRONG ADVERSE PRESSURE GRADIENT"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:7PzlFSSx8tAC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, A32. 003, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Effects of bio-inspired microscale roughness on macroscale flow structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:-DxkuPiZhfEC",
+      "citation": "Proceedings of the National Academy of Sciences 115 (6), 1210-1214, 2018",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Engineered bio-inspired coating for passive flow control"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:2osOgNQ5qMEC",
+      "citation": "Applied Physics Letters 91 (22), 2007",
+      "num_citations": 134,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Enhanced friction of elastomer microfiber adhesives with spatulate tips"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:9ZlFYXVOiuMC",
+      "citation": "US Patent 10,830,261, 2020",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Fibrillar structures to reduce viscous drag on aerodynamic and hydrodynamic wall surfaces"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:g5Ck-dwhA_QC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, A16. 007, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Flow around an autonomous underwater vehicle with bio-inspired coating"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:zdjWy_NXXwUC",
+      "citation": "Journal of Renewable and Sustainable Energy 10 (4), 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Flow modulation by a mushroom-like coating around the separation region of a wind-turbine airfoil section"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:UeHWp8X0CEIC",
+      "citation": "Applied Physics Letters 91 (6), 2007",
+      "num_citations": 63,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Friction of partially embedded vertically aligned carbon nanofibers inside elastomers"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:9yKSN-GCB0IC",
+      "citation": "2008 IEEE international conference on robotics and automation, 3058-3063, 2008",
+      "num_citations": 197,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Gecko inspired micro-fibrillar adhesives for wall climbing robots on micro/nanoscale rough surfaces"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:u-x6o8ySG0sC",
+      "citation": "Small 5 (2), 170-175, 2009",
+      "num_citations": 564,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Gecko‐inspired directional and controllable adhesion"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:4DMP91E08xMC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, D27. 005, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Holographic measurement of wall stress distribution and 3D flow over a surface textured by microfibers"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:ZqE1mSdD_DYC",
+      "citation": "2023 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "How the Fingerprint Effect Applies to Digitized Fingerprint-Like Structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:_FxGoFyzp5QC",
+      "citation": "2012 Annual International Conference of the IEEE Engineering in Medicine and …, 2012",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Investigation of bioinspired gecko fibers to improve adhesion of HeartLander surgical robot"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:2v_ZtQDX9iAC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, L26. 007, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Large-scale Motions in a Separated Turbulent Boundary layer"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:v6i8RKmR8ToC",
+      "citation": "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control 64 …, 2017",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Low-frequency and broadband vibration energy harvesting using base-mounted piezoelectric transducers"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:_kc_bZDykSQC",
+      "citation": "US Patent 9,566,722, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Method of molding simple or complex micro and/or nanopatterned features on both planar or non-planar molded objects and surfaces and the molded objects produced using same"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:unp9ATQDT5gC",
+      "citation": "US Patent App. 17/335,679, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Methods and systems for making fibrillar adhesion structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:c1e4I3QdEKYC",
+      "citation": "US Patent App. 17/268,428, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Methods and systems for making tilted and curved structures with high aspect ratios"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:27LrP4qxOz0C",
+      "citation": "US Patent 9,340,708, 2016",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Methods of forming dry adhesive structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:5nxA0vEk-isC",
+      "citation": "US Patent 9,120,953, 2015",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Methods of forming dry adhesive structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:X9ykpCP0fEIC",
+      "citation": "US Patent 10,307,941, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Methods of forming dry adhesive structures"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:UebtZRa9Y70C",
+      "citation": "US Patent 8,206,631, 2012",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Methods of making dry adhesives"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:L_l9e5I586QC",
+      "citation": "US Patent 11,613,674, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Microfibers with mushroom-shaped tips for optimal adhesion"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:mVmsd5A6BfQC",
+      "citation": "US Patent 10,689,549, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Microfibers with mushroom-shaped tips for optimal adhesion"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:kJDgFkosVoMC",
+      "citation": "Bulletin of the American Physical Society 63, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Mitigation of flow separation and debris using a bio-inspired micro-textured coating"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:qwy9JoKyICEC",
+      "citation": "APS Division of Fluid Dynamics Meeting Abstracts, D26. 005, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "On the dynamics of the flow in the vicinity of micro-scale coatings composed by organized elements"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:eAlLMO4JVmQC",
+      "citation": "Journal of Turbulence 20 (9), 563-576, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "On the large-and small-scale motions in a separated, turbulent-boundary-layer flow"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:qxL8FJ1GzNcC",
+      "citation": "Scripta Materialia 108, 15-18, 2015",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Patterning of metallic glasses using polymer templates"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:ufrVoPGSRksC",
+      "citation": "Sensor Letters 9 (2), 457-463, 2011",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Piezoelectric polymer fiber arrays for tactile sensing applications"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:H_jBuBxbQIAC",
+      "citation": "Journal of Testing and Evaluation 51 (5), 3402-3417, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Piezoresistive Composites in Tension and Compression Using a Cantilevered Beam for Spot Testing and Tactile Sensing"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:NMlhSUseqAsC",
+      "citation": "Bulletin of the American Physical Society, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Resilient and Scalable Bio-Inspired Metamaterial for Passive Noise Control"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:-yGd096yOn8C",
+      "citation": "Bulletin of the American Physical Society 67, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Resilient and Scalable Quasicrystal Coatings for Quiet and Efficient Urban Air Mobility"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:DyXnQzXoVgIC",
+      "citation": "Royal Society open science 4 (6), 161105, 2017",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Sticking to rough surfaces using functionally graded bio-inspired microfibres"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:C33y2ycGS3YC",
+      "citation": "US Patent App. 16/122,794, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Surface coating for reduction of aerodynamic noise and vibrations"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:SAZ1SQo2q1kC",
+      "citation": "US Patent 12,012,981, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Surface coating for reduction of aerodynamic noise and vibrations"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:YsMSGLbcyi4C",
+      "citation": "Journal of The Royal Society Interface 8 (61), 1166-1175, 2011",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The effect of aspect ratio on adhesion and stiffness for soft elastic fibres"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:wE-fMHVdjMkC",
+      "citation": "Beilstein journal of nanotechnology 9 (1), 2893-2905, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The effect of flexible joint-like elements on the adhesive performance of nature-inspired bent mushroom-like fibers"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:ULOm3_A8WrAC",
+      "citation": "Beilstein journal of nanotechnology 5 (1), 630-638, 2014",
+      "num_citations": 80,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "The optimal shape of elastomer mushroom-like fibers for high and robust adhesion"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:AzKEL7Gb_04C",
+      "citation": "IEEE Sensors Journal 23 (5), 5437-5447, 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "The orientation dependence of the fingerprint effect for slip speed estimation and control"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:NxmKEeNBbOMC",
+      "citation": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "The Relationship Between Incremental Changes in Orientation and Slip Speed Estimation Using the Fingerprint Effect"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:W7OEmFMy1HYC",
+      "citation": "Chemistry–An Asian Journal 6 (1), 128-136, 2011",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Thermoresponsive hydrogel scaffolds with tailored hydrophilic pores"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:tHtfpZlB6tUC",
+      "citation": "Journal of Applied Polymer Science, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Using a conductive sphere as a probe to characterize the sensitivity of soft piezoresistive films"
+    },
+    {
+      "author_pub_id": "UUvF5NkAAAAJ:ghEM2AJqZyQC",
+      "citation": "US Patent 11,271,497, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Vibration energy harvesting using a base mounted piezoelectric transducer"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "UUvF5NkAAAAJ"
+}

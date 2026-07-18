@@ -1,0 +1,488 @@
+{
+  "display_name": "Nakahira",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Nakahira.json",
+  "publication_count": 60,
+  "publications": [
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:M3NEmzRMIkIC",
+      "citation": "Learning for Dynamics and Control Conference, 358-370, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A generalizable physics-informed learning framework for risk probability estimation"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:JV2RwH3_ST0C",
+      "citation": "Learning for Dynamics and Control Conference, 915-927, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A Learning and Control Perspective for Microfinance"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:iH-uZ7U-co4C",
+      "citation": "arXiv preprint arXiv:2207.12631, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A learning and control perspective for microfinance"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:YsMSGLbcyi4C",
+      "citation": "IFAC Workshop on Distributed Estimation and Control in Networked Systems 48 …, 2015",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A linear programming framework for networked control system design"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:r0BpntZqJG4C",
+      "citation": "2022 IEEE Intelligent Vehicles Symposium (IV), 1662-1668, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Adaptive safe control for driving in uncertain environments"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:UebtZRa9Y70C",
+      "citation": "2017 IEEE 56th Annual Conference on Decision and Control (CDC), 6015-6020, 2017",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Algorithms for optimal control with fixed-rate feedback"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:vV6vV6tmYwMC",
+      "citation": "International Conference on Artificial Intelligence and Statistics, 4087-4095, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "An analytic solution to covariance propagation in neural networks"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:7PzlFSSx8tAC",
+      "citation": "IEEE Transactions on Automatic Control 65 (11), 4781-4792, 2020",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "An Integrative Perspective to LQ and  Control for Delayed and Quantized Systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:NMxIlDl6LWMC",
+      "citation": "https://ppms.cit.cmu.edu/media/project_files/IFAC_AV_final.pdf, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "An occlusion-and interaction-aware safe control strategy for autonomous vehicles"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:5nxA0vEk-isC",
+      "citation": "IEEE Transactions on Automatic Control, 2018",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Attack-Resilient H2, H-infinity, and L1 State Estimator"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:hFOr9nPyWt4C",
+      "citation": "IEEE Trans. Autom. Control. 63 (12), 4353-4360, 2018",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Attack-Resilient ℋ2, ℋ∩, and ℓ1 State Estimator."
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:ldfaerwXgEUC",
+      "citation": "arXiv preprint arXiv:2409.03160, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Autonomous Drifting Based on Maximal Safety Probability Learning"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:4JMBOYKVnBMC",
+      "citation": "2021 55th Annual Conference on Information Sciences and Systems (CISS), 1-6, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Axon Arbor Trade-off Between Wiring Cost, Delay, and Synchronization in Neuronal Networks"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:ns9cj8rnVeAC",
+      "citation": "2023 IEEE 26th International Conference on Intelligent Transportation …, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Bayesian Network-Based Probabilistic Constraints for Safe Autonomous Driving in Occlusion Environments"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:BqipwSGYUEgC",
+      "citation": "Building and Environment 247, 111053, 2024",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Calibrating subjective data biases and model predictive uncertainties in machine learning-based thermal perception predictions"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:RHpTSmoSYBkC",
+      "citation": "International Conference on Computer Vision Theory and Applications 2, 427-430, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "COMPUTATIONAL MODEL FOR PROBABILITY PREDICTION OF SCAN PATHS IN STATIC SCENES"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:9ZlFYXVOiuMC",
+      "citation": "California Institute of Technology, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Connecting the speed-accuracy trade-offs in sensorimotor control and neurophysiology reveals diversity sweet spots in layered control architectures"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:J_g5lzvAfSwC",
+      "citation": "arXiv e-prints, arXiv: 2403.11863, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Context-aware LLM-based Safe Control Against Latent Risks"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:NaGl4SEjCO4C",
+      "citation": "arXiv preprint arXiv:2403.11863, 2024",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Context-aware llm-based safe control against latent risks"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:bEWYMUwI8FkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Diversity deconstrains component limitations in sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:QIV2ME_5wuYC",
+      "citation": "Proceedings of the National Academy of Sciences, 2021",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Diversity-enabled sweet spots in layered architectures and speed-accuracy trade-offs in sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:Zph67rFs4hoC",
+      "citation": "Decision and Control (CDC), 2015 IEEE 54th Annual Conference on, 5808-5813, 2015",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Dynamic state estimation in the presence of compromised sensory data"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:UeHWp8X0CEIC",
+      "citation": "SIGMETRICS Performance Evaluation Review 45 (2), 33-35, 2017",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Electric vehicle charging: a queueing approach"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:j3f4tGmQtD8C",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Energy Efficient Computing R&D Roadmap Outline for Automated Vehicles"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:YOwf2qJgpHMC",
+      "citation": "2019 American Control Conference (ACC), 483-488, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Experimental and educational platforms for studying architecture and tradeoffs in human sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:RYcK_YlVTxYC",
+      "citation": "Available at SSRN 4773505, 0",
+      "num_citations": 1,
+      "pub_url": "",
+      "title": "Fast Bandit-Based Policy Adaptation in Diverse Environments"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:qjMakFHDy7sC",
+      "citation": "Proceedings of the Thirteenth Australasian User Interface Conference-Volume …, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Feasibility of computational estimation of task-oriented visual attention"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:mVmsd5A6BfQC",
+      "citation": "arXiv preprint arXiv:1906.00905, 2019",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Fitts’ law for speed-accuracy trade-off is a diversity sweet spot in sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:0EnyYjriUFMC",
+      "citation": "2018 Annual American Control Conference (ACC), 2707-2714, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Fundamental limits and achievable performance in biomolecular control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:2P1L_qKh6hAC",
+      "citation": "arXiv preprint arXiv:2407.08868, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Generalizable Physics-Informed Learning for Stochastic Safety-Critical Systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:TQgYirikUcIC",
+      "citation": "Operations Research, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Generalized Exact Scheduling: A Minimal-Variance Distributed Deadline Scheduler"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:9yKSN-GCB0IC",
+      "citation": "2015 54th IEEE Conference on Decision and Control (CDC), 7522-7529, 2015",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Hard limits on robust control over delayed and quantized communication channels with applications to sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:70eg2SAEIzsC",
+      "citation": "arXiv preprint arXiv:2406.00234, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Learning to Stabilize Unknown LTI Systems on a Single Trajectory under Stochastic Noise"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "IET international conference on communication technology and application …, 2011",
+      "num_citations": 189,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Medical application on internet of things"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:L8Ckcad2t8MC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 46 (3), 56-61, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Minimal-variance distributed deadline scheduling in a stationary environment"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:3fE2CSJIrl8C",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 46 (2), 12-14, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Minimal-variance distributed scheduling under strict demands and deadlines"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:R3hNpaxXUhUC",
+      "citation": "arXiv preprint arXiv:2110.13380, 2021",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Myopically Verifiable Probabilistic Certificate for Long-term Safety"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:35N4QoGY0k4C",
+      "citation": "arXiv preprint arXiv:2404.16883, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Myopically verifiable probabilistic certificates for safe control and learning"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:zYLM7Y9cAGgC",
+      "citation": "2016 35th Chinese Control Conference (CCC), 2189-2195, 2016",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "On identification of parameterized switched linear systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:O3NaXMp0MMsC",
+      "citation": "Computing in Civil Engineering 2023, 987-995, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Optimizing HVAC systems for energy efficiency and comfort: A scalable and robust multi-zone control approach with uncertainty considerations"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:pqnbT2bcN3wC",
+      "citation": "IEEE Control Systems Letters, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Orthogonal Modal Representation in Long-Term Risk Quantification for Dynamic Multi-Agent Systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:HoB7MX3m0LUC",
+      "citation": "arXiv preprint arXiv:2503.16777, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Physics-Informed Deep B-Spline Networks for Dynamical Systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:GnPB-g6toBAC",
+      "citation": "Proceedings of the AAAI Conference on Artificial Intelligence 38 (19), 21699 …, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Physics-informed representation and learning: Control and risk quantification"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:lSLTfruPkqcC",
+      "citation": "2024 American Control Conference (ACC), pp. 3576-3583, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Physics-informed RL for Maximal Safety Probability Estimation"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:M05iB0D1s5AC",
+      "citation": "arXiv preprint arXiv:2409.08434, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Predictive Control and Regret Analysis of Non-Stationary MDP with Look-ahead Information"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:isC4tDSrTZIC",
+      "citation": "2022 IEEE 61st Conference on Decision and Control (CDC), 5343-5350, 2022",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Probabilistic safety certificate for multi-agent systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:maZDTaKrznsC",
+      "citation": "Computer 56 (3), 47-58, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Research challenges for energy-efficient computing in automated vehicles"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:TFP_iSt0sucC",
+      "citation": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (12), 15331 …, 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Rethinking safe control in the presence of self-seeking humans"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:_Qo2XoVZTnwC",
+      "citation": "60th IEEE Conference on Decision and Control (CDC), 6640-6645, 2021",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Safe Control in the Presence of Stochastic Uncertainties"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:g5m5HwL7SMYC",
+      "citation": "Carnegie Mellon University. Traffic21 Institute. Safety21 University …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Safe Decision-Making in Interactive Environments"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:RGFaLdJalmkC",
+      "citation": "arXiv preprint arXiv:2403.06045, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Sample-Optimal Zero-Violation Safety For Continuous Control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:k_IJM867U9cC",
+      "citation": "IEEE Control Systems Letters 7, 1285-1290, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Scalable Long-Term Safety Certificate for Large-Scale Systems"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:e5wmG9Sq2KIC",
+      "citation": "IEEE transactions on smart grid 13 (3), 2209-2217, 2021",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Smoothed least-laxity-first algorithm for electric vehicle charging: Online decision and performance analysis with resource augmentation"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:IWHjjKOFINEC",
+      "citation": "arXiv preprint arXiv:2102.08610, 2021",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Smoothed least-laxity-first algorithm for EV charging"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:u5HHmVD_uO8C",
+      "citation": "Proceedings of the Eighth International Conference on Future Energy Systems …, 2017",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Smoothed least-laxity-first algorithm for EV charging"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:SeFeTyx0c_EC",
+      "citation": "arXiv preprint arXiv:2503.16756, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Stabilizing Linear Systems under Partial Observability: Sample Complexity and Fundamental Limits"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:W7OEmFMy1HYC",
+      "citation": "2016 IEEE 55th Conference on Decision and Control (CDC), 5925-5949, 2016",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Teaching control theory in high school"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:_kc_bZDykSQC",
+      "citation": "2019 American Control Conference (ACC), 809-814, 2019",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Theoretical foundations for layered architectures and speed-accuracy tradeoffs in sensorimotor control"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:YFjsv_pBGBYC",
+      "citation": "2024 IEEE International Conference on Robotics and Automation (ICRA), 12956 …, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Towards proactive safe human-robot collaborations via data-efficient conditional behavior prediction"
+    },
+    {
+      "author_pub_id": "jnmyOEYAAAAJ:eQOLeE2rZwMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Universal Laws and Architectures (普遍法则与结构)"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "jnmyOEYAAAAJ"
+}

@@ -1,0 +1,1909 @@
+{
+  "display_name": "Grover",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Grover.json",
+  "publication_count": 240,
+  "publications": [
+    {
+      "author_pub_id": "hklOXvkAAAAJ:O3NaXMp0MMsC",
+      "citation": "arXiv preprint arXiv:1411.4253, 2014",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "\" Information-Friction\" for Noiseless Compressive Sensing Decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:isC4tDSrTZIC",
+      "citation": "IEEE Transactions on Information Theory 61 (2), 895 - 907, 2015",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "\"Information-Friction\" and its implications on minimum energy required for communication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:2Q0AJrNhS-QC",
+      "citation": "IEEE Control Systems Magazine, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "2010 IEEE Control Systems Society Awards"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:RVqaWcrwK10C",
+      "citation": "Euro-Par 2020: Parallel Processing: 26th International Conference on …, 2020",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "3D Coded SUMMA: Communication-efficient and robust parallel matrix multiplication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:8k81kl-MbHgC",
+      "citation": "48th IEEE Conference on Decision and Control (CDC) 2009, 2881-2886, 2009",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A constant-factor approximately optimal solution to the witsenhausen counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:iH-uZ7U-co4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Fresh Look at Boolean Functions: Progress Report"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:L8Ckcad2t8MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A general lower bound on the decoding complexity of message passing decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Se3iqnhoufwC",
+      "citation": "Submitted to the IEEE Workshop on Information Theory, 2008",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "A general lower bound on the decoding complexity of sparse-graph codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:e9bUPLv0EjcC",
+      "citation": "2024 IEEE International Symposium on Information Theory Workshops (ISIT-W), 1-9, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A minimal intervention definition of reverse engineering a neural circuit"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:r56sNq9gaawC",
+      "citation": "Journal of Theoretical Biology 572, 111580, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A model of neurovascular coupling and its application to cortical spreading depolarization"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:JTtNqH-x4gYC",
+      "citation": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A Spatial-Temporal Graph Attention Network for Automated Detection and Width Estimation of Cortical Spreading Depression Using Scalp EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qbqt7gslDFUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Synergistic Perspective on Information Flow and Encoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:s2G-WRnXBicC",
+      "citation": "2018 IEEE International Symposium on Information Theory (ISIT), 1585-1589, 2018",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A unified coded deep neural network training strategy based on generalized polydot codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:YsMSGLbcyi4C",
+      "citation": "47th IEEE Conference on Decision and Control (CDC) 2008, 1636-1641, 2008",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "A vector version of witsenhausen’s counterexample: A convergence of control, communication and computation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:oXKBmVzQOggC",
+      "citation": "medRxiv, 2020.07. 17.20156299, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Abnormalities in cortical pattern of coherence in interictal migraine detected using ultra high-density EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:8JTMrWI6FdcC",
+      "citation": "Brain Communications 3 (2), fcab061, 2021",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Abnormalities in cortical pattern of coherence in migraine detected using ultra high-density EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:hEXC_dOfxuUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Achieving information capacity of EEG-based brain-computer interfaces using high-density EEG sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:hqOjcs7Dif8C",
+      "citation": "PhD Thesis, 2010",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Actions can speak more clearly than words"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:cdwqcPQS8ssC",
+      "citation": "arXiv preprint arXiv:1602.04260, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Adaptivity provably helps: information-theoretic limits on l_0 cost of non-adaptive sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:yKzB5RS27GgC",
+      "citation": "Proceedings of the IEEE 108 (8), 1219-1234, 2020",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Addressing unreliability in emerging devices and non-von Neumann architectures using coded computing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:FQ36aI_S1AEC",
+      "citation": "Journal of Vision 19 (10), 275-275, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Altered visual processing in migraine not associated with auditory abnormalities"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:j2GSQqY3pL0C",
+      "citation": "IEEE Transactions on Biomedical Engineering 66 (4), 1115-1126, 2018",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "An algorithm for automated, noninvasive detection of cortical spreading depolarizations based on EEG simulations"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:-vzq6BoH5oUC",
+      "citation": "2018 IEEE International Conference on Big Data (Big Data), 1113-1120, 2018",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "An application of storage-optimal matdot codes for coded matrix multiplication: Fast k-nearest neighbors estimation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:4oJvMfeQlr8C",
+      "citation": "2015 53rd Annual Allerton Conference on Communication, Control, and …, 2015",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "An information theoretic technique for harnessing attenuation of high spatial frequencies to design ultra-high-density EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:w0odbtu79TwC",
+      "citation": "International Workshop on Algorithmic Bias in Search and Recommendation, 117-129, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "An Information-Theoretic Measure for Enabling Category Exemptions with an Application to Filter Bubbles"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:koF6b02d8EEC",
+      "citation": "Proceedings of the AAAI Conference on Artificial Intelligence 34 (04), 3825-3833, 2020",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "An information-theoretic quantification of discrimination with exempt features"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:L7vk9XBBNxgC",
+      "citation": "Proceedings of the IEEE 105 (2), 367-384, 2017",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "An Information-Theoretic View of EEG Sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:MXK_kJrjxJIC",
+      "citation": "2010 6th International Symposium on Turbo Codes & Iterative Information …, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "An interference-aware perspective on decoding power"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:9ZlFYXVOiuMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Approximately optimal strategies for the vector Witsenhausen problem for each vector length"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:j3f4tGmQtD8C",
+      "citation": "IEEE Transactions on Automatic Control 58 (9), 2189 - 2204, 2013",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Approximately-Optimal Solutions to the Finite-Dimensional Witsenhausen Counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:RJujIP1NYNUC",
+      "citation": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER), 1-6, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Automated Electrical Waveform Design for Cell-Type Selective Stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:bbjcffOLshcC",
+      "citation": "2021 10th International IEEE/EMBS Conference on Neural Engineering (NER …, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Automated, scalable and generalizable deep learning for tracking cortical spreading depression using EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:IjCSPb-OGe4C",
+      "citation": "2007 IEEE Information Theory Workshop, 196-201, 2007",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Bounds on the tradeoff between decoding complexity and rate for sparse-graph codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:JqN3CTdJtl0C",
+      "citation": "Neuron 110 (13), 2057-2062, 2022",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Building a culture of responsible neurotech: neuroethics as socio-technical challenges"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:1xBWf43XMUgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "CALL FOR PAPERS IEEE Journal of Selected Areas in Communications Wireless Communications Powered by Energy Harvesting and Wireless Energy Transfer"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:J_g5lzvAfSwC",
+      "citation": "2014 52nd Annual Allerton Conference on Communication, Control, and …, 2014",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Can a noisy encoder be used to communicate reliably?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:EsrhoZGmrkoC",
+      "citation": "Advances in Neural Information Processing Systems 34, 3149-3162, 2021",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Can information flows suggest targets for interventions in neural circuits?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qYOp8iumCsAC",
+      "citation": "Communications Biology 7 (1), 1076, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Cell-specific effects of temporal interference stimulation on cortical function"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:tSVUDDkujAIC",
+      "citation": "",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Cell-specific effects of temporal interference stimulation on cortical function"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:QtA78RmWg5MC",
+      "citation": "2019 9th International IEEE/EMBS Conference on Neural Engineering (NER), 411-414, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Cell-type selective stimulation of neurons based on single neuron models"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:GUYAmugLYisC",
+      "citation": "Innovations and Interdisciplinary Solutions for Underserved Areas: Second …, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Challenges and opportunities in instrumentation and use of high-density EEG for underserved regions"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:aqlVkmm33-oC",
+      "citation": "2012 IEEE Global Communications Conference (GLOBECOM), 3286-3292, 2012",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Choosing “green” codes by simulation-based modeling of implementations"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:37Fl7vPTsUIC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Coded 2.5 d summa: Coded matrix multiplication for high performance computing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qCaWouos7ogC",
+      "citation": "US Patent App. 16/588,990, 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Coded computation strategies for distributed matrix-matrix and matrix-vector products"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:BCdnXsLIVDwC",
+      "citation": "2017 IEEE International Symposium on Information Theory (ISIT), 2403-2407, 2017",
+      "num_citations": 161,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Coded convolution for parallel and distributed computing within a deadline"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:bCjgOgSFrM0C",
+      "citation": "Advances in Neural Information Processing Systems 30, 2017",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Coded distributed computing for inverse problems"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:h1pkognVyKwC",
+      "citation": "2019 IEEE International Symposium on Information Theory (ISIT), 2654-2658, 2019",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Coded elastic computing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:pxXbYLTb8EgC",
+      "citation": "arXiv preprint arXiv:1805.09891, 2018",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Coded FFT and its communication overhead"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:s1ouQE5r0WUC",
+      "citation": "arXiv preprint arXiv:1805.06046, 2018",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Coded iterative computing using substitute decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:onKP9CxGSkIC",
+      "citation": "2020 IEEE International Symposium on Information Theory (ISIT), 191-196, 2020",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Coded QR decomposition"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:hB2aVRuWZNwC",
+      "citation": "arXiv preprint arXiv:1903.01042, 2019",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "CodeNet: Training large scale neural networks in presence of soft-errors"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:-38epGy1wY0C",
+      "citation": "2018 IEEE International Symposium on Information Theory (ISIT), 1575-1579, 2018",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Coding for a single sparse inverse problem"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:DGzKIA18-3YC",
+      "citation": "2015 49th Asilomar Conference on Signals, Systems and Computers, 940-942, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Coding for improved focusing of ultrasound, and an application to neurostimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:uoRD4RTSUPoC",
+      "citation": "2016 IEEE International Symposium on Information Theory (ISIT), 140-144, 2016",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Coding for lossy function computation: Analyzing sequential function computation with distortion accumulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:dFKc6_kCK1wC",
+      "citation": "arXiv preprint arXiv:1706.00163, 2017",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Coding method for parallel iterative linear solver"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:TeJ9juy8vcMC",
+      "citation": "2017 IEEE International Symposium on Information Theory (ISIT), 421-425, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Communicating under temperature and energy harvesting constraints"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:M05iB0D1s5AC",
+      "citation": "IEEE Transactions on Information Theory 63 (6), 3729-3756, 2017",
+      "num_citations": 72,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Computing linear transformations with unreliable components"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:CMPXdcK5v8EC",
+      "citation": "2016 IEEE International Symposium on Information Theory (ISIT), 1934-1938, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Computing linear transforms with unreliable components"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Zbx7W2Xs4QsC",
+      "citation": "arXiv preprint arXiv:2305.07013, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Computing unique information for Poisson and multinomial systems"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ZqLB7dQ1iF4C",
+      "citation": "US Patent App. 17/047,832, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Conductive carbon fiber-based sponge"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ehoypfNsBj8C",
+      "citation": "2016 Information Theory and Applications Workshop (ITA), 1-5, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Containing errors in computations for neural sensing: does a hierarchical-referencing strategy lead to energy savings?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:oFn-K-OQSCAC",
+      "citation": "Headache: The Journal of Head and Face Pain 59 (10), 1773-1787, 2019",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Cortical hyper‐excitability in migraine in response to chromatic patterns"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:uPCvBZYD9qUC",
+      "citation": "2018 56th Annual Allerton Conference on Communication, Control, and …, 2018",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Cross-iteration coded computing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:gkldIfsazJcC",
+      "citation": "Frontiers in Neurology 11, 569699, 2020",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Current conceptual understanding of the epileptogenic network from stereoelectroencephalography-based connectivity inferences"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:8O4vDxvErlEC",
+      "citation": "Journal of Neural Engineering, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "DeepFocus: a transnasal approach for optimized deep brain stimulation of reward circuit nodes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:mB3voiENLucC",
+      "citation": "IEEE Control Systems Magazine 1066, 2010",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Demystifying the Witsenhausen counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:I-2NeQpV75MC",
+      "citation": "Vision 2 (4), 44, 2018",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Differentiation of types of visual agnosia using EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:rJyh6hJnyfgC",
+      "citation": "NeuroImage 277, 120210, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Diffuse optical tomography spatial prior for EEG source localization in human visual cortex"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:NMxIlDl6LWMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Distributed Control: A New Frontier of Information Theory"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ULOm3_A8WrAC",
+      "citation": "2010 IEEE International Symposium on Information Theory, 151-155, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Distributed signal cancelation inspired by Witsenhausen's counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:YGhAHpnIhDoC",
+      "citation": "2018 IEEE Biomedical Circuits and Systems Conference (BioCAS), 1-4, 2018",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Do single neuron models exhibit temporal interference stimulation?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:yCjxvIMm6_oC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "E++ D ̂x1"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:MNNNGtAgD4EC",
+      "citation": "ICAD Proceedings 2017, 2017",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "EchoExplorer​ TM​: A game app for understanding echolocation and learning to navigate using echo cues"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Mx5hWS9ctUkC",
+      "citation": "US Patent 11,839,477, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "EEG electrode assembly"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:IExZWSxeYXUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "EEG for Accommodating Thick and Curly Hair"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:aNch6Af-aFkC",
+      "citation": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "EEG Source Imaging of Infarct Core and Penumbra for Ischemic Stroke Patients"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:F9HO9s0W2bwC",
+      "citation": "Carnegie Mellon University (CMU), 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "EEG stimuli for pediatric patients with lobectomy: Description and Matlab codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:svGagg1hbZMC",
+      "citation": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Effect of electric field direction on neuronal activity: an ex-vivo study*"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:SgM-ki2adj0C",
+      "citation": "2021 10th International IEEE/EMBS Conference on Neural Engineering (NER …, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Effect of focality of transcranial currents on neural responses"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:mgoTDWlsYNUC",
+      "citation": "Journal of Neural Engineering 18 (4), 046042, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Effect of skull thickness and conductivity on current propagation for noninvasively injected currents"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:JIEWM9yDoCIC",
+      "citation": "2022 IEEE Information Theory Workshop (ITW), 356-361, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Efficient interventions in a neural circuit from observations: an information-theoretic study"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:nU66GSXDKhoC",
+      "citation": "2016 IEEE International Symposium on Information Theory (ISIT), 2734-2738, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Energy efficient distributed coding for data collection in a noisy sparse network"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:GtqhT-R7ZnwC",
+      "citation": "2016 8th International Conference on Communication Systems and Networks …, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Energy efficient learning and classification for distributed sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:_9Xh93LWpsYC",
+      "citation": "IEEE Transactions on Wireless Communications 15 (8), 5440-5452, 2016",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Energy harvesting transmitters that heat up: Throughput maximization under temperature constraints"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ns9cj8rnVeAC",
+      "citation": "IEEE Journal on Selected Areas in Communications 33 (3), 360-381, 2015",
+      "num_citations": 1009,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Energy Harvesting Wireless Communications: A Review of Recent Advances"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:nOiSByfp82kC",
+      "citation": "2015 53rd Annual Allerton Conference on Communication, Control, and …, 2015",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Energy-adaptive codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:U3qCfcK-7lkC",
+      "citation": "Proceedings of the IEEE 107 (4), 765-777, 2019",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Energy-adaptive error correcting for dynamic and heterogeneous networks"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:vofGIMt6cyEC",
+      "citation": "2017 IEEE International Symposium on Information Theory (ISIT), 2608-2612, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Energy-adaptive polar codes: Trading off reliability and decoder circuit energy"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:feST4K8J0scC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Energy-adaptive Polar Coding: Trading Off Reliability and Decoding Energy with Adaptive Polar Coding Circuits"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Cvh0bltMcLgC",
+      "citation": "IEEE Journal on Selected Areas in Communications 34 (5), 1417-1430, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Energy-constrained distributed learning and classification by exploiting relative relevance of sensors’ data"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:KsTgnNRry18C",
+      "citation": "JOURNAL OF CEREBRAL BLOOD FLOW AND METABOLISM 39, 480-481, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Enhanced spatiotemporal reconstruction of neural activities using simultaneous electroencephalography and near-infrared spectroscopy"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:wlzmIqt2EaEC",
+      "citation": "Neurophotonics 8 (1), 015002-015002, 2021",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Enhanced spatiotemporal resolution imaging of neuronal activity using joint electroencephalography and diffuse optical tomography"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:za7pDTvVV8kC",
+      "citation": "Proc of 23rd International Conference on Auditory Display (ICAD2017), 2017",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Evaluating two ways to train sensitivity to echoes to improve echolocation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:blknAaTinKkC",
+      "citation": "",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Evaluation of Wireless Traffic Sensors by Sensys Networks, Inc."
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:WGv8Og3F3KgC",
+      "citation": "2024 46th Annual International Conference of the IEEE Engineering in …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Ex vivo studies of efficacy of DeepFocus: a technique for minimally-invasive deep-brain stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:T_0gP6tLVL0C",
+      "citation": "Journal of Biomedical Optics 29 (S3), S33310-S33310, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Exploring the impact and influence of melanin on frequency-domain near-infrared spectroscopy measurements"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Oo_WeVVXg5wC",
+      "citation": "2022 58th Annual Allerton Conference on Communication, Control, and …, 2022",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Extracting unique information through markov relations"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:w7CBUyPWg-0C",
+      "citation": "Clinical Neurophysiology 129, e113, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "F123. Ultra-high-density scalp EEG outperforms localized invasive ECoG grids in inferring depth of seizure foci"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:RgznTc0nqo4C",
+      "citation": "IEEE Transactions on Information Theory 67 (10), 6675-6710, 2021",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Fairness under feature exemptions: Counterfactual and observational measures"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:8gBurD7jEYQC",
+      "citation": "2017 IEEE International Conference on Acoustics, Speech and Signal …, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Fast path localization on graphs via multiscale Viterbi decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:1wZ_wKGpLuwC",
+      "citation": "IEEE Transactions on Signal Processing 66 (21), 5588-5603, 2018",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Fast temporal path localization on graphs via multiscale Viterbi decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:KqnX2w3egDsC",
+      "citation": "2016 54th Annual Allerton Conference on Communication, Control, and …, 2016",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Fault-tolerant distributed logistic regression using unreliable components"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:vjZqxyZ7hS4C",
+      "citation": "2016 9th International Symposium on Turbo Codes and Iterative Information …, 2016",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Fault-tolerant parallel linear filtering using compressive sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Oj-SLI0tZTcC",
+      "citation": "2019 IEEE Biomedical Circuits and Systems Conference (BioCAS), 1-4, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Feedback-based Electrode Rehydration for High Quality, Long Term, Noninvasive Biopotential Measurements and Current Delivery"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:cww_0JKUTDwC",
+      "citation": "2018 IEEE Biomedical Circuits and Systems Conference (BioCAS), 1-4, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Flexible ultra-resolution subdermal EEG probes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:09LM3QYkMKUC",
+      "citation": "Advanced Science 10 (20), 2207251, 2023",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Focused epicranial brain stimulation by spatial sculpting of pulsed electric fields using high density electrode arrays"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:WF5omc3nYNoC",
+      "citation": "2011 45th Annual Conference on Information Sciences and Systems, 1-6, 2011",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Fundamental bounds on the interconnect complexity of decoder implementations"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:HKviVsUxM5wC",
+      "citation": "2016 IEEE 17th International Workshop on Signal Processing Advances in …, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Fundamental limits and achievable strategies for low energy compressed sensing with applications in wireless communication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:hFOr9nPyWt4C",
+      "citation": "2012 IEEE Information Theory Workshop, 527-531, 2012",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Fundamental limits on power consumption for lossless signal reconstruction"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:J4E9jCG1tHUC",
+      "citation": "2016 IEEE International Symposium on Information Theory (ISIT), 1794-1798, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Fundamental limits on source-localization accuracy of EEG-based neural sensing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:_kc_bZDykSQC",
+      "citation": "IEEE International Symposium on Information Theory (ISIT), 2716 - 2720, 2012",
+      "num_citations": 54,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Fundamental limits on the power consumption of encoding and decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ufrVoPGSRksC",
+      "citation": "IEEE Global Telecommunications Conference, 2004. GLOBECOM'04. 6, 3681-3684, 2004",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Geolocation using transmit and receive diversity"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:xii_ZKWM4-0C",
+      "citation": "IEEE Transactions on Information Theory 63 (9), 6059-6084, 2017",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Graph codes for distributed instant message collection in an arbitrary noisy broadcast network"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:M3ejUd6NZC8C",
+      "citation": "2011 Information Theory and Applications Workshop, 1-4, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Green codes with short wires at the decoder: Fundamental limits and constructions"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:d1gkVwhDpl0C",
+      "citation": "IEEE International Symposium on Information Theory (ISIT), 1178-1182, 2008",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Green codes: Energy-efficient short-range communication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:tFzHCjejgA0C",
+      "citation": "IEEE Journal on Selected Areas in Information Theory 2 (3), 813-813, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Guest editorial for special issue on coded computing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:70eg2SAEIzsC",
+      "citation": "IEEE Journal on Selected Areas in Communications 33 (3), 357-359, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Guest Editorial: Wireless Communications Powered by Energy Harvesting and Wireless Energy Transfer (Part I)"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:oynPyU19kbsC",
+      "citation": "IEEE Journal on Selected Areas in Communications 33 (8), 1477-1479, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Guest Editorial: Wireless Communications Powered by Energy Harvesting and Wireless Energy Transfer, Part II"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:eIKNFFVQvJAC",
+      "citation": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER), 1-4, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "High resolution focused non-invasive electrical stimulation of motor cortex in rodent model"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:uWy0R8PweswC",
+      "citation": "2021 43rd Annual International Conference of the IEEE Engineering in …, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "HingePlace: Focused transcranial electrical current stimulation that allows subthreshold fields outside the stimulation target"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:8rLWgkbgOXQC",
+      "citation": "arXiv preprint arXiv:2502.01382, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "HingePlace: Harnessing the neural thresholding behavior to optimize Transcranial Electrical Stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:mJbmKSuM8toC",
+      "citation": "2020 IEEE International Symposium on Information Theory (ISIT), 2879-2884, 2020",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "How else can we define information flow in neural circuits?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:TQgYirikUcIC",
+      "citation": "2012 50th Annual Allerton Conference on Communication, Control, and …, 2012",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "How far are LDPC codes from fundamental limits on total power consumption?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:5F1dSjz1ScoC",
+      "citation": "2019 IEEE international symposium on information theory (ISIT), 176-180, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "How should we define information flow in neural circuits?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:PklR0melJeUC",
+      "citation": "Sandia National Lab.(SNL-NM), Albuquerque, NM (United States), 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Hydrophilic Conductive Sponge Electrodes For EEG Monitoring."
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:6pF0wJmtdfAC",
+      "citation": "2020 42nd Annual International Conference of the IEEE Engineering in …, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Hydrophilic Conductive Sponge Sensors for Fast Setup, Low Impedance Bio-potential Measurements"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:lSLsV1MU4ZUC",
+      "citation": "2023 Computing in Cardiology (CinC) 50, 1-4, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Hyperensemble learning from multimodal biosignals to robustly predict functional outcome after cardiac arrest"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:SPgmg5JLkoEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "IEEE Communications Society"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:sfsSB7lKuh0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "IEEE COMMUNICATIONS SOCIETY"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:0EnyYjriUFMC",
+      "citation": "48th Annual Allerton Conference on Communication, Control, and Computing …, 2010",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Implicit and explicit communication in decentralized control"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:cx97FdCJQX8C",
+      "citation": "Optical Tomography and Spectroscopy, OW3D. 2, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Improving Electroencephalography Source Reconstruction Accuracy Using Spatial Priors Derived from Diffuse Optical Tomography"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:rpSJNIKeXWsC",
+      "citation": "2015 53rd Annual Allerton Conference on Communication, Control, and …, 2015",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Information dissipation in noiseless lossy in-network function computation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:r0BpntZqJG4C",
+      "citation": "IEEE Transactions on Information Theory 61 (4), 1539-1549, 2015",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Information embedding and the triple role of control"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "IEEE Information Theory Workshop (ITW) 2010, 1-5, 2010",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Information embedding meets distributed control"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:oH8HCDhqVGsC",
+      "citation": "IEEE Transactions on Information Theory 66 (9), 5456-5491, 2020",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Information flow in computational systems"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:NaGl4SEjCO4C",
+      "citation": "2014 52nd Annual Allerton Conference on Communication, Control, and …, 2014",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Information friction limits on computation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:BqipwSGYUEgC",
+      "citation": "Encyclopedia of Systems and Control, 567-571, 2015",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Information Structures, the Witsenhausen Counterexample, and Communicating Using Actions."
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:KlAtU1dfN6UC",
+      "citation": "2011 49th Annual Allerton Conference on Communication, Control, and …, 2011",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Information theory meets circuit design: why capacity-approaching codes require more chip area and power"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:anDooRL1HQEC",
+      "citation": "Encyclopedia of Systems and Control, 1016-1021, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Information-Theoretic Approaches for Non-classical Information Patterns"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:J6OZcwVsj5AC",
+      "citation": "IEEE Journal on Selected Areas in Information Theory, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Information-theoretic tools to understand distributed source coding in neuroscience"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Zph67rFs4hoC",
+      "citation": "2010 IEEE International Symposium on Information Theory, 2373-2377, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Information-theoretic tradeoffs of throughput and chip power consumption for decoding error-correcting codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:XeErXHja3Z8C",
+      "citation": "Sensys Networks, Berkeley, CA, USA, Tech. Rep, 2006",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Innovative transportation products and services evaluation of wireless traffic sensors-sensys: Final report"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:M3NEmzRMIkIC",
+      "citation": "2013 Asilomar Conference on Signals, Systems and Computers, 619-621, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Intrusion detection for wireless power networks, near-field communication, and side-channel attacks"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:_IsBomjs8bsC",
+      "citation": "Annual Meeting of the Society for Neuroscience (SfN), Poster 829, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Is the direction of Granger causal influence the same as the direction of information flow?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:u_mOZUIutIEC",
+      "citation": "2015 53rd Annual Allerton Conference on Communication, Control, and …, 2015",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Is the direction of greater Granger causal influence the same as the direction of information flow?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:_FxGoFyzp5QC",
+      "citation": "49th IEEE Conference on Decision and Control (CDC), 585-590, 2010",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Is Witsenhausen's counterexample a relevant toy?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:YFjsv_pBGBYC",
+      "citation": "2014 IEEE International Symposium on Information Theory, 2854-2858, 2014",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Is “Shannon-capacity of noisy computing” zero?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:jq04SsiGh3QC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Joint Design of Codes and Decoders for Minimization of Transmit, Decoding, and A/D Power"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:QAOzB4mb83kC",
+      "citation": "Clinical and Translational Biophotonics, JW3A. 4, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Joint Spatio-temporal Neural Source Reconstruction Using Electroencephalography and Near-infrared Spectroscopy"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:mVmsd5A6BfQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Little Green Codes: Energy-Efficient Short-Range Communication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:jKT558fuBk8C",
+      "citation": "2018 56th Annual Allerton Conference on Communication, Control, and …, 2018",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Locally recoverable coded matrix multiplication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:KIRwYnRZzWQC",
+      "citation": "2018 40th Annual International Conference of the IEEE Engineering in …, 2018",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Low-cost carbon fiber-based conductive silicone sponge EEG electrodes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:NnTm98qLMbgC",
+      "citation": "2017 IEEE International Symposium on Information Theory (ISIT), 3080-3084, 2017",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Lower bounds on the minimax risk for the source localization problem"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ynsZFq2pu0MC",
+      "citation": "2018 56th Annual Allerton Conference on Communication, Control, and …, 2018",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Masterless coded computing: A fully-distributed coded FFT algorithm"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:kQqwFFzsCTwC",
+      "citation": "2024 IEEE International Symposium on Information Theory (ISIT), 262-267, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Message-relevant dimension reduction of neural populations"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Lo8V22OuN40C",
+      "citation": "US Patent 11,925,470, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Method for detecting and localizing brain silences in EEG signals using correlation of sources in a low-resolution grid to localize silences in a high-resolution grid of EEG …"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:xlVdBZVQT58C",
+      "citation": "US Patent 12,178,588, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Method for detecting and localizing brain silences using EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qhW0HyKmSusC",
+      "citation": "US Patent App. 18/021,257, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Method for Focused Transcranial Electrical Current Stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:3WNXLiBY60kC",
+      "citation": "US Patent App. 18/742,524, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Method for Non-Invasive or Minimally-Invasive Stimulation of Deep Brain Targets"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:IWHjjKOFINEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Near vs far field: interference aggregation in TV whitespaces Extended Edition"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qxL8FJ1GzNcC",
+      "citation": "2011 IEEE Global Telecommunications Conference-GLOBECOM 2011, 1-5, 2011",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Near vs. far field: Interference aggregation in TV whitespaces"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:k8to_Y4Q4_EC",
+      "citation": "Nature communications biology selections, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Neural silences can be localized rapidly using noninvasive scalp EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qSd0DAb9jMoC",
+      "citation": "Communications biology 4 (1), 429, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Neural silences can be localized rapidly using noninvasive scalp EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:kvJssbFybhEC",
+      "citation": "Journal of Neurotrauma 36 (13), A50-A51, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Non-invasive algorithm for silence localization in stroke and traumatic brain injuries"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:4tNoA7Af41QC",
+      "citation": "US Patent App. 17/082,251, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Non-invasive method for suppressing spreading depolarization in human brains"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Kv9jytqXTosC",
+      "citation": "US Patent App. 18/894,976, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Non-invasive method for suppressing spreading depolarization in human brains"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:lPDSu1ZU3VAC",
+      "citation": "Communications Medicine 3 (1), 113, 2023",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Noninvasive and reliable automated detection of spreading depolarization in severe traumatic brain injury using scalp EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:_n8fIOMweQoC",
+      "citation": "bioRxiv, 2022.10. 07.511376, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Noninvasive, automated and reliable detection of spreading depolarizations in severe traumatic brain injury using scalp EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:5bfplxN71z4C",
+      "citation": "2020 42nd annual international conference of the IEEE engineering in …, 2020",
+      "num_citations": 112,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Novel electrodes for reliable EEG recordings on coarse and curly hair"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:7PzlFSSx8tAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "On Capacity Achieving Sequences OF LDPC Codes Over BEC"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:qUcmZB5y_30C",
+      "citation": "2012 46th Annual Conference on Information Sciences and Systems (CISS), 1-6, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "On myopic strategies in dynamic adversarial team decision problems"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:UebtZRa9Y70C",
+      "citation": "Proceedings of the Allerton Conference on Communication, Control, and …, 2009",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "On the generalized Witsenhausen counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:9yKSN-GCB0IC",
+      "citation": "IEEE Symposium on New Frontiers in Dynamic Spectrum Access Networks (DySPAN …, 2007",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "On the need for knowledge of the phase in exploiting known primary transmissions"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:1paMEeroeoQC",
+      "citation": "2017 55th Annual Allerton Conference on Communication, Control, and …, 2017",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "On the optimal recovery threshold of coded matrix multiplication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:RJNGbXJAtMsC",
+      "citation": "IEEE Transactions on Information Theory 66 (1), 278-301, 2019",
+      "num_citations": 300,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "On the optimal recovery threshold of coded matrix multiplication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:urP0JZOBBUsC",
+      "citation": "IEEE Journal on Selected Areas in Communications 34 (2), 375-396, 2015",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "On the total power capacity of regular-LDPC codes with iterative message-passing decoders"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:NXYAu82O0W8C",
+      "citation": "2015 IEEE International Symposium on Information Theory (ISIT), 1129-1133, 2015",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Optimal scheduling for energy harvesting transmitters under temperature constraints"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:DPO9WFcz7UcC",
+      "citation": "Clinical and Translational Neurophotonics 2022 11945, 19-23, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Optimized optode placement strategy for diffuse optical tomography"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Pqt4MY__2vwC",
+      "citation": "IEEE Transactions on Biomedical Engineering 70 (12), 3300-3311, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Pathfinder: designing stimulus for neuromodulation through data-driven inverse estimation of non-linear functions"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:9o6PfxSMcEIC",
+      "citation": "2024 46th Annual International Conference of the IEEE Engineering in …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Pilot Evaluation of Sevo Systems for Epilepsy: Equitable EEG for Coarse, Dense, and Curly Hair"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:1Aeql8wG3wEC",
+      "citation": "Frontiers in neuroscience 15, 658930, 2021",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Projections and the potential societal impact of the future of neurotechnologies"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ZYsTHYU9jrMC",
+      "citation": "Journal of Neural Engineering 18 (4), 046017, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Quantifying a frequency modulation response biomarker in responsive neurostimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:uQVPmWFBlwUC",
+      "citation": "arXiv preprint arXiv:2206.08454, 2022",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Quantifying feature contributions to overall disparity using information theory"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:4TOpqqG69KYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Quantum Algorithms for Signal Processing: Quantum Reading and Bandwidth Estimation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:xa5BkEQK8BgC",
+      "citation": "arXiv preprint arXiv:1601.06224, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Rate distortion for lossy in-network function computation: Information dissipation and sequential reverse water-filling"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:GHsHDPAyICYC",
+      "citation": "IEEE Transactions on Information Theory 63 (8), 5179-5206, 2017",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Rate distortion for lossy in-network linear function computation and consensus: Distortion accumulation and sequential reverse water-filling"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:h9G0ZmjYpDoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Research Submissions"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ZysSsiWj_g4C",
+      "citation": "",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Revisiting the nyquist-rate of human eeg"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:o-PowTg_VKEC",
+      "citation": "ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and …, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Robust Molecular Dynamics Simulations Using Coded FFT Algorithm"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:UKB2i6g6GNMC",
+      "citation": "JOURNAL OF NEUROCHEMISTRY 162, 144-144, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Safety profile of localized non-invasive brain stimulation using uHD-PES: histological analysis"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:R6EwkKsDylYC",
+      "citation": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Scaling of Algorithmic Bias in Pulse Oximetry with Signal-to-Noise Ratio"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:ZeXyd9-uunAC",
+      "citation": "2012 Information theory and applications workshop, 47-53, 2012",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Securing inductively-coupled communication"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:u-x6o8ySG0sC",
+      "citation": "IEEE International Symposium on Information Theory (ISIT), 2363-2367, 2010",
+      "num_citations": 1219,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Shannon meets Tesla: Wireless information and power transfer."
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:rzmi0EmCOGEC",
+      "citation": "Advances In Neural Information Processing Systems 29, 2016",
+      "num_citations": 436,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Short-dot: Computing large linear transforms distributedly using coded short dot products"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:g30IDTdgJMgC",
+      "citation": "2019 9th International IEEE/EMBS Conference on Neural Engineering (NER …, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Silence localization"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:-f6ydRqryjwC",
+      "citation": "2011 19th European Signal Processing Conference, 884-888, 2011",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Simple models for power optimization across transmission, equalization and decoding"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:9CGX2owmTHMC",
+      "citation": "JOURNAL OF NEUROTRAUMA 38 (14), A82-A83, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "SPREADING DEPOLARIZATION IS DETECTED NON-INVASIVELY USING SCALP ELECTROENCEPHALOGRAPHY"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:j7XjBeKFbTsC",
+      "citation": "IEEE Transactions on Biomedical Engineering 67 (3), 726-737, 2019",
+      "num_citations": 73,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "STIMULUS: noninvasive dynamic patterns of neurostimulation using spatio-temporal interference"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Ei5r6KrKXVQC",
+      "citation": "arXiv preprint arXiv:1806.06140, 2018",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Straggler-resilient and communication-efficient distributed iterative linear solver"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:TFP_iSt0sucC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Submission Guidelines"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:DwWRdx-KAo4C",
+      "citation": "US Patent App. 18/011,351, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "System and Method for Deep Learning for Tracking Cortical Spreading Depression Using EEG"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:WM2K3OHRCGMC",
+      "citation": "US Patent 10,682,068, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "System and method for hierarchical referencing for biopotential measurements"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:wgKq3sYidysC",
+      "citation": "US Patent App. 18/640,353, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "System and Method for the Automatic Design of Electrical Waveforms for Selective Neuron Stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:o9ULDYDKYbIC",
+      "citation": "Brain Injury 31 (6-7), 990-990, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Systematic and automated algorithms for detecting cortical spreading depolarizations using EEG and ECoG to improve TBI diagnosis and treatment"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:9tXw7Op4-u0C",
+      "citation": "2019 IEEE International Symposium on Information Theory (ISIT), 1-5, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Systematic matrix multiplication codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Yw6v6SrDvuUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Teaching statement"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:u5HHmVD_uO8C",
+      "citation": "7th International Symposium on Modeling and Optimization in Mobile, Ad Hoc …, 2009",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "The finite-dimensional Witsenhausen counterexample"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:UarirCmVI0EC",
+      "citation": "BioRxiv, 2020.04. 23.051870, 2020",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "The mechanics of temporal interference stimulation"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:5nxA0vEk-isC",
+      "citation": "2011 IEEE Workshop on Signal Processing Systems (SiPS), 128-133, 2011",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The power cost of over-designing codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:3fE2CSJIrl8C",
+      "citation": "2008 Information Theory and Applications Workshop, 293-302, 2008",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "The price of certainty: iterative decoding from a total power perspective"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:k_IJM867U9cC",
+      "citation": "available online at http://arXiv. org/abs/0801.0352 v1, 2007",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "The price of certainty:“waterslide curves” and the gap to capacity,”"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:4JMBOYKVnBMC",
+      "citation": "",
+      "num_citations": 6,
+      "pub_url": "",
+      "title": "The price of certainty:“waterslide curves” and the gap to capacity,” Dec. 2007"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:kNdYIx-mwKoC",
+      "citation": "2011 50th IEEE Conference on Decision and Control and European Control …, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The role of common “context” in signaling"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:hC7cP41nSMkC",
+      "citation": "2011 IEEE International Symposium on Information Theory Proceedings, 2432-2436, 2011",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The “source-simplification” aspect of signaling"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:roLk4NBRz8UC",
+      "citation": "2009 IEEE International Symposium on Information Theory, 2517-2521, 2009",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Time-division multiplexing for green broadcasting"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:v6PuF9mNY3oC",
+      "citation": "2023 11th International IEEE/EMBS Conference on Neural Engineering (NER), 1-4, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Time-Varying Mutual Information Analysis of Evoked in Vivo Local Field Potentials in Rodents"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:UeHWp8X0CEIC",
+      "citation": "IEEE Journal on Selected Areas in Communications 29 (8), 1744-1755, 2011",
+      "num_citations": 166,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Towards a communication-theoretic understanding of system-level power consumption"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:lRPiJ3GhvscC",
+      "citation": "JOURNAL OF NEUROTRAUMA 36 (13), A144-A144, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "TOWARDS AN AUTOMATED ALGORITHM FOR DETECTION OF CORTICAL SPREADING DEPRESSION BASED ON ELECTROCORTICOGRAPHY SIGNALS"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:2P1L_qKh6hAC",
+      "citation": "arXiv preprint arXiv:1504.01019, 2015",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Towards approaching total-power-capacity: Transmit and decoding power minimization for ldpc codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:sYWwZaPVD1oC",
+      "citation": "2022 29th IEEE International Conference on Electronics, Circuits and Systems …, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Tracking the effects of tumor treating fields on human breast cancer cells in vitro using a capacitance sensing lab-on-CMOS microsystem"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:QIV2ME_5wuYC",
+      "citation": "arXiv preprint cs/0702073, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Tradeoff between decoding complexity and rate for codes on graphs"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:dMpQl7XwOw4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ultra high-density EEG for interictal migraine and controls: stimuli description and matlab codes"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:tgTmbKTkO1IC",
+      "citation": "2015 49th Asilomar Conference on Signals, Systems and Computers, 943-947, 2015",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Ultra-high-density EEG: How many bits of resolution do the electrodes need?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:lSLTfruPkqcC",
+      "citation": "Emerging Technology and Architecture for Big-data Analytics, 159-173, 2017",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Ultra-low-power biomedical circuit design and optimization: Catching the don’t cares"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:6IBXqrN-DEwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ultra-resolution Subdermal EEG: Long-term Minimally-invasive Brain Monitoring"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:aU4yMueWZ3QC",
+      "citation": "Comput. Syst. Neurosci.(Cosyne), 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Understanding encoding and redundancy in grid cells using partial information decomposition"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:E2bRg1zSkIsC",
+      "citation": "2024 60th Annual Allerton Conference on Communication, Control, and …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Understanding Neural Population Communication with Latent Channels"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:maZDTaKrznsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Understanding” Information-Friction” for Minimizing Power Consumed in Data Centers and BigData Processing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:zYLM7Y9cAGgC",
+      "citation": "IEEE Transactions on Information Theory 53 (2), 794-804, 2007",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Upper bounds on the rate of LDPC codes for a class of finite-state Markov channels"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:eQOLeE2rZwMC",
+      "citation": "Information Theory Workshop, 230-235, 2004",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Upper bounds on the rate of LDPC codes for Gilbert-Elliott channels"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:Wp0gIr-vW9MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Upper Bounds on the Rate of Ramdomly Constructed LDPC Codes for a Class of Markov Channels"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:RYcK_YlVTxYC",
+      "citation": "2014 52nd Annual Allerton Conference on Communication, Control, and …, 2014",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Using relative-relevance of data pieces for efficient communication, with an application to neural data acquisition"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:IyxfXMz2bNAC",
+      "citation": "Scientific reports 7 (1), 16248, 2017",
+      "num_citations": 85,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Very high density EEG elucidates spatiotemporal aspects of early visual processing"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:oYwriLWYh5YC",
+      "citation": "Mobility21, Carnegie Mellon University, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Wearable Neurotechnology for Inferring the Driver’s Attention for Assistive Driving"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:vV6vV6tmYwMC",
+      "citation": "2013 IEEE Online Conference on Green Communications (OnlineGreenComm), 82-87, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "What do we need to do to “green” data-center networks? A fundamental perspective"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:KqW5X_olkfQC",
+      "citation": "arXiv preprint cs/0702071, 2007",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "What is needed to exploit knowledge of primary transmissions?"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:5VjbC5aozO0C",
+      "citation": "2017 IEEE International Conference on Communications Workshops (ICC …, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Wireless information and energy transfer under temperature constraints"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:LkGwnXOMwfcC",
+      "citation": "International Journal of Systems, Control and Communications 2 (1), 197-237, 2010",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Witsenhausen's counterexample as Assisted Interference Suppression"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:W7OEmFMy1HYC",
+      "citation": "IEEE International Symposium on Information Theory (ISIT) 2007, 2166-2170, 2007",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Writing on rayleigh faded dirt: a computable upper bound to the outage capacity"
+    },
+    {
+      "author_pub_id": "hklOXvkAAAAJ:bEWYMUwI8FkC",
+      "citation": "IEEE International Symposium on Information Theory (ISIT) 2013, 2513-2517, 2013",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "“Information-friction” and its impact on minimum energy per communicated bit"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "hklOXvkAAAAJ"
+}

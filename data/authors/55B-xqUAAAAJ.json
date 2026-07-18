@@ -1,0 +1,780 @@
+{
+  "display_name": "Benson",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Benson.json",
+  "publication_count": 97,
+  "publications": [
+    {
+      "author_pub_id": "55B-xqUAAAAJ:lgwcVrK6X84C",
+      "citation": "Proceedings of the First Asia-Pacific Workshop on Networking, 15-21, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A Call To Arms for Tackling the Unexpected Implications of SDN Controller Enhancements"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Y0pCki6q_DkC",
+      "citation": "Tech. Rep. 1643, UW Madison, 2008",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "A case for complexity models in network design and management"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:jU7OWUQzBzMC",
+      "citation": "2023 IEEE/ACM 31st International Symposium on Quality of Service (IWQoS), 1-11, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A Data-Driven Framework for TCP to Achieve Flexible QoS Control in Mobile Data Networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Bg7qf7VwUHIC",
+      "citation": "Proceedings of the 2016 ACM Workshop on Cloud-Assisted Networking, 67-72, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "A First Look at Bugs in OpenStack"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:UeHWp8X0CEIC",
+      "citation": "HotCloud 10, 15, 2010",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "A First Look at Problems in the Cloud."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:LkGwnXOMwfcC",
+      "citation": "Proceedings of the second ACM SIGCOMM workshop on Hot topics in software …, 2013",
+      "num_citations": 103,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A slick control plane for network middleboxes"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:kNdYIx-mwKoC",
+      "citation": "Proceedings of the 2015 International Conference on Distributed Computing …, 2015",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A Universal Approach to Data Center Network Design"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:LgRImbQfgY4C",
+      "citation": "Proceedings of the 2016 ACM on Internet Measurement Conference, 319-325, 2016",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "A view from the other side: Understanding mobile phone characteristics in the developing world"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:48xauSegjOkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ANCS 2017"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:hqOjcs7Dif8C",
+      "citation": "TR2013-01, Department of Computer Science, Duke University, 0",
+      "num_citations": 2,
+      "pub_url": "",
+      "title": "BigPi: Sharing Link Pools in Cloud Networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:ALROH1vI_8AC",
+      "citation": "IEEE Journal on Selected Areas in Communications 38 (7), 1432-1447, 2020",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Building and Testing Modular Programs for Programmable Data Planes"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:WF5omc3nYNoC",
+      "citation": "",
+      "num_citations": 7,
+      "pub_url": "",
+      "title": "Challenges in Unifying Control of Middlebox Traversals and Functionality"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:GFxP56DSvIMC",
+      "citation": "ACM SIGCOMM Computer Communication Review 45 (4), 371-372, 2015",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Chaos Monkey: Increasing SDN Reliability through Systematic Network Destruction"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:5icHVeHT4IsC",
+      "citation": "",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Citation TR1686 Date 2011"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:nZcligLrVowC",
+      "citation": "US Patent 9,104,492, 2015",
+      "num_citations": 255,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Cloud-based middlebox management system"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:9yKSN-GCB0IC",
+      "citation": "Proceedings of the 2nd ACM Symposium on Cloud Computing, 8, 2011",
+      "num_citations": 313,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Cloudnaas: a cloud networking platform for enterprise applications"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:PVgj2kMGcgYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Commoditizing the “S” in SDN: BareMetal Switching Infrastructure"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:jL-93Qbq4QoC",
+      "citation": "Proceedings of the ACM Symposium on Cloud Computing, 351-363, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Composing SDN Controller Enhancements with Mozart"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:7H_MAutzIkAC",
+      "citation": "19th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2022",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Configanator: A Data-driven Approach to Improving {CDN} Performance."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:0CzhzZyukY4C",
+      "citation": "",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Configtron: Tackling network diversity with heterogeneous configurations."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:gKiMpY-AVTkC",
+      "citation": "",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Contextual Router: Advancing Experience Oriented Networking to the Home"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:8k81kl-MbHgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "CrossCloud'14: 2014 IEEE INFOCOM Workshop on Cross-Cloud Systems-Committees"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Ak0FvsSvgGUC",
+      "citation": "arXiv preprint arXiv:1611.01529, 2016",
+      "num_citations": 137,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Dapper: Data Plane Performance Diagnosis of TCP"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:1lhNe0rCu4AC",
+      "citation": "Proceedings of the 18th acm/ifip/usenix middleware conference: Industrial …, 2017",
+      "num_citations": 110,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Darnet: a deep learning solution for distracted driving detection"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:cK4Rrx0J3m0C",
+      "citation": "Proceedings of the 2018 Workshop on Network Meets AI & ML, 8-14, 2018",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "DeepConf: Automating data center network topologies management with machine learning"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:nRpfm8aw39MC",
+      "citation": "arXiv preprint arXiv:1712.03890, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Deepconfig: Automating data center network topologies management with machine learning"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:6yz0xqPARnAC",
+      "citation": "Proceedings of the Symposium on SDN Research, 199-200, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Delorean: Using Time Travel to Avoid Bugs and Failures in SDN Applications"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:zYLM7Y9cAGgC",
+      "citation": "ACM SIGCOMM Computer Communication Review 41 (4), 302-313, 2011",
+      "num_citations": 57,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Demystifying configuration challenges and trade-offs in network-based isp services"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:a3BOlSfXSfwC",
+      "citation": "Proceedings of the 14th ACM Workshop on Hot Topics in Networks, 6, 2015",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Destroying networks for fun (and profit)"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:v1_lew4L6wgC",
+      "citation": "Proceedings of the 2019 ACM Symposium on SDN Research, 36-48, 2019",
+      "num_citations": 223,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Detecting volumetric attacks on lot devices via sdn-based monitoring of mud activity"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:_OXeSy2IsFwC",
+      "citation": "",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Dynamic Prioritization of Traffic in Home Networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:buQ7SEKw-1sC",
+      "citation": "Proceedings of the Fourteenth EuroSys Conference 2019, 1-15, 2019",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Efficient and safe network updates with suffix causal consistency"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Se3iqnhoufwC",
+      "citation": "US Patent 8,892,945, 2014",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Efficient application management in a cloud with failures"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:8xutWZnSdmoC",
+      "citation": "Technical Report TR1686, University of Wisconsin, Dept. of Computer Science, 2011",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "EPIC: Platform-as-a-service model for cloud networking"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:4xDN1ZYqzskC",
+      "citation": "Proceedings of the 2nd Workshop on Cloud-Assisted Networking, 67-72, 2017",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Fending off IoT-hunting attacks at home networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:ZzlSgRqYykMC",
+      "citation": "arXiv preprint arXiv:1605.06150, 2016",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Finding Needles in the Haystack: Harnessing Syslogs for Data Center Management"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:vDZJ-YLwNdEC",
+      "citation": "",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "FOCUS: Function Offloading from a Controller to Utilize Switch Power"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:CB2v5VPnA5kC",
+      "citation": "Proceedings of the Eighteenth European Conference on Computer Systems, 18-32, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Foxhound: Server-Grade Observability for Network-Augmented Applications"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:0EnyYjriUFMC",
+      "citation": "Proceedings of the 4th annual Symposium on Cloud Computing, 53, 2013",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Harmony: coordinating network, compute, and storage in software-defined clouds"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:wMgC3FpKEyYC",
+      "citation": "Proceedings of the 13th International Conference on emerging Networking …, 2017",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Hermes: Providing tight control over high-performance sdn switches"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:_FxGoFyzp5QC",
+      "citation": "Proceedings of the second ACM SIGCOMM workshop on Hot topics in software …, 2013",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "HotSwap: correct and efficient controller upgrades for software-defined networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:WC23djZS0W4C",
+      "citation": "Proceedings of the 3rd Workshop on Machine Learning and Systems, 94-103, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Illuminating the hidden challenges of data-driven CDNs"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:QD3KBmkZPeQC",
+      "citation": "Proceedings of the Workshop on Hot Topics in Operating Systems, 216-224, 2019",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "In-network compute: Considered armed and dangerous"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:U4n9YNQMCAIC",
+      "citation": "Network Traffic Measurement and Analysis Conference (TMA), 2020",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Inspector Gadget: A Framework for Inferring TCP Con-gestion Control Algorithms and Protocol Configurations."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:kVjdVfd2voEC",
+      "citation": "2018 IEEE 38th International Conference on Distributed Computing Systems …, 2018",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "InspectorGadget: Inferring Network Protocol Configuration for Web Services."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:7BrZ7Jt4UNcC",
+      "citation": "Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "IoT S&P 2017: First Workshop on Internet of Things Security and Privacy"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:gVv57TyPmFsC",
+      "citation": "Proceedings of the Symposium on SDN Research, 7, 2016",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Isolating and Tolerating SDN Application Failures with LegoSDN"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:7wO8s98CvbsC",
+      "citation": "Proceedings of the ACM on Measurement and Analysis of Computing Systems 7 (1 …, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "JS Capsules: A Framework for Capturing Fine-grained JavaScript Memory Measurements for the Mobile Web"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:LdasjJ6CEcoC",
+      "citation": "2018 IEEE International Conference on Big Data (Big Data), 1837-1845, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Learning to Simplify Distributed Systems Management"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:2osOgNQ5qMEC",
+      "citation": "Proceedings of the Seventh COnference on emerging Networking EXperiments and …, 2011",
+      "num_citations": 843,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Microte: fine grained traffic engineering for data centers"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Ehil0879vHcC",
+      "citation": "In ACM CoNEXT’11, 2011",
+      "num_citations": 843,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Microte: The case for fine-grained traffic engineering in data centers"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:PYBJJbyH-FwC",
+      "citation": "Proceedings of the on CoNEXT Student Workshop 2023, 7-8, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "MicroView: Cloud-Native Observability with Temporal Precision"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:wKETBy42zhYC",
+      "citation": "CoNEXT-SW'23: Proceedings of the 4th International CoNEXT Student Workshop, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "MicroView: observability with temporal precision"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:IjCSPb-OGe4C",
+      "citation": "Proceedings of the 9th ACM SIGCOMM conference on Internet measurement …, 2009",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Mining policies from enterprise network configuration"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:j7_hQOaDUrUC",
+      "citation": "ACM SIGCOMM Computer Communication Review 50 (4), 35-48, 2020",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Mobile web browsing under memory pressure"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:7Hz3ACDFbsoC",
+      "citation": "Proceedings of the 2018 Morning Workshop on In-Network Computing, 7-13, 2018",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Mp-hula: Multipath transport aware load balancing using programmable data planes"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:F1b5ZUV5XREC",
+      "citation": "IEEE Internet Computing 20 (6), 7-9, 2016",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Network Function Virtualization"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:u5HHmVD_uO8C",
+      "citation": "Proceedings of the 10th ACM SIGCOMM conference on Internet measurement, 267-280, 2010",
+      "num_citations": 2951,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Network traffic characteristics of data centers in the wild"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:ufrVoPGSRksC",
+      "citation": "UNIVERSITY OF WISCONSIN–MADISON, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "NEW PARADIGMS FOR MANAGING THE COMPLEXITY AND IMPROVING THE PERFORMANCE OF ENTERPRISE NETWORKS."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:MhiOAD_qIWkC",
+      "citation": "IEEE INFOCOM 2023-IEEE Conference on Computer Communications, 1-10, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Nimble: Fast and Safe Migration of Network Functions"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:CaZNVDsoPx4C",
+      "citation": "Proceedings of the 1st ACM CoNEXT Workshop on Emerging in-Network Computing …, 2019",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "P4-InTel: Bridging the Gap between iCF Diagnosis and Functionality"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:BzfGm06jWhQC",
+      "citation": "Proceedings of the 14th International Conference on emerging Networking …, 2018",
+      "num_citations": 110,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "P4visor: Lightweight virtualization and composition primitives for building and testing modular programs"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:fbc8zXXH2BUC",
+      "citation": "",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Peeking into the Cloud: Toward User-Driven Cloud Management"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:u-coK7KVo8oC",
+      "citation": "Proceedings of the 2016 ACM on Internet Measurement Conference, 499-511, 2016",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Performance Characterization of a Commercial Video Streaming Service"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:W7OEmFMy1HYC",
+      "citation": "Poster Session, USENIX Symposium on Networked Systems Design and …, 2009",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Phoenix: A system for automatically reconfiguring networks"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Aul-kAQHnToC",
+      "citation": "Proceedings of the Eleventh European Conference on Computer Systems, 37, 2016",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Picocenter: Supporting long-lived, mostly-idle applications in cloud environments"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:KlAtU1dfN6UC",
+      "citation": "Proceedings of the 2014 ACM SIGCOMM workshop on Distributed cloud computing …, 2014",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "ProActive routing in scalable data centers with PARIS"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:PaBasH6fAo0C",
+      "citation": "Dagstuhl Reports 9 (3), 2019",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Programmable Network Data Planes (Dagstuhl Seminar 19141)"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:OP4eGU-M3BUC",
+      "citation": "Proceedings of the 1st ACM SIGCOMM Symposium on Software Defined Networking …, 2015",
+      "num_citations": 130,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Programming slick network functions"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:MpfHP-DdYjUC",
+      "citation": "arXiv e-prints, arXiv: 2007.02624, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Providing In-network Support to Coflow Scheduling"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:ubry08Y2EpUC",
+      "citation": "arXiv preprint arXiv:2007.02624, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Providing In-network Support to Coflow Scheduling"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:UebtZRa9Y70C",
+      "citation": "Proceedings of the 2013 workshop on Student workhop, 57-58, 2013",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Real-time diagnosis of TCP performance in clouds"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:MXK_kJrjxJIC",
+      "citation": "Technical Report TR-975-14, Princeton University, 2015",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "RINC: Real-Time Inference-based Network Diagnosis in the Cloud"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:zCSUwVk65WsC",
+      "citation": "Proceedings of the ACM SIGCOMM 2018 Conference on Posters and Demos, 150-152, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Shadowp4: Building and testing modular programs"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:FiytvqdAVhgC",
+      "citation": "Proceedings of the 19th ACM Workshop on Hot Topics in Networks, 103-109, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Solver-Aided Multi-Party Configuration"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:otzGkya1bYkC",
+      "citation": "Proceedings of the 2017 Workshop on Internet of Things Security and Privacy …, 2017",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Sounding the bell for improving internet (of things) security"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:P7Ujq4OLJYoC",
+      "citation": "International Journal of Network Management 26 (1), 4-5, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Special issue on Software‐Defined Networking and Network Functions Virtualization for flexible network management"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:roLk4NBRz8UC",
+      "citation": "arXiv preprint arXiv:1305.0209, 2013",
+      "num_citations": 292,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Stratos: A Network-Aware Orchestration Layer for Middleboxes in the Cloud"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:YsMSGLbcyi4C",
+      "citation": "UW-Madison TR1771, 15, 2012",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Stratos: Virtual middleboxes as first-class entities"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:uDGL6kOW6j0C",
+      "citation": "Proceedings of the 2nd Workshop on Cloud-Assisted Networking, 25-30, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Switch-visor: towards infrastructure-level virtualization of SDN switches"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:qjMakFHDy7sC",
+      "citation": "INM/WREN 10, 2008",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "The Case for Fine-Grained Traffic Engineering in Data Centers."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:NyGDZy8z5eUC",
+      "citation": "Proceedings of the Symposium on SDN Research, 150-156, 2017",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "The Case for Making Tight Control Plane Latency Guarantees in SDN Switches"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:WHdLCjDvYFkC",
+      "citation": "Proceedings of the Student Workshop, 27-28, 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "The case for more flexible distributed tracing"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Proceedings of the 2011 ACM SIGCOMM conference on Internet measurement …, 2011",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The evolution of network configuration: a tale of two campuses"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:5nxA0vEk-isC",
+      "citation": "Proceedings of the third workshop on Hot topics in software defined …, 2014",
+      "num_citations": 125,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Tolerating SDN Application Failures with LegoSDN."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:F9fV5C73w3QC",
+      "citation": "Proceedings of the 2015 ACM SIGCOMM Workshop on Hot Topics in Middleboxes …, 2015",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Towards a Safe Playground for HTTPS and Middle Boxes with QoS2"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:u-x6o8ySG0sC",
+      "citation": "ACM SIGCOMM Computer Communication Review 40 (1), 92-99, 2010",
+      "num_citations": 1040,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Understanding data center traffic characteristics"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:d1gkVwhDpl0C",
+      "citation": "NSDI, 335-348, 2009",
+      "num_citations": 338,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Unraveling the Complexity of Network Management."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:jgBuDB5drN8C",
+      "citation": "IEEE Transactions on Dependable and Secure Computing, 2020",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Verifying and monitoring iots network behavior using mud profiles"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:IaI1MmNe2tcC",
+      "citation": "2020 IEEE 9th International Conference on Cloud Networking (CloudNet), 1-8, 2020",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "ViperProbe: Rethinking Microservice Observability with eBPF"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:3fE2CSJIrl8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Web-QoS2: Web-browsing Quickly and of course Safely, Too."
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:kw52XkFRtyQC",
+      "citation": "Proceedings of the 22nd International Workshop on Mobile Computing Systems …, 2021",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "WebMedic: Disentangling the Memory-Functionality Tension for the Next Billion Mobile Web Users"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:owLR8QvbtFgC",
+      "citation": "Proceedings of the Student Workshop, 9-10, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "WebOpt Profiler: Providing performance clarity for Web Optimizations"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:1taIhTC69MYC",
+      "citation": "Proceedings of the 22nd International Workshop on Mobile Computing Systems …, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "WebOptProfiler: Providing performance clarity for Mobile Webpage Optimizations"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:eQOLeE2rZwMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Xen-ophobia: On profiling boot startup"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:BJbdYPG6LGMC",
+      "citation": "arXiv preprint arXiv:1602.03273, 2016",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "YTrace: End-to-end Performance Diagnosis in Large Cloud and Content Providers"
+    },
+    {
+      "author_pub_id": "55B-xqUAAAAJ:43bX7VzcjpAC",
+      "citation": "Proceedings of the Annual conference of the ACM Special Interest Group on …, 2020",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Zero Downtime Release: Disruption-free Load Balancing of a Multi-Billion User Website"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "55B-xqUAAAAJ"
+}

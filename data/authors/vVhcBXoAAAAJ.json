@@ -1,0 +1,264 @@
+{
+  "display_name": "Thornburg",
+  "fetched_at_utc": "2025-04-01T01:01:00+00:00",
+  "migration_source": "map-of-cmu-africa/data/Thornburg.json",
+  "publication_count": 32,
+  "publications": [
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:Y0pCki6q_DkC",
+      "citation": "2022 International Conference on Computational Intelligence and Sustainable …, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A Probabilistic Tool for Modeling Smart Microgrids with Renewable Energy and Demand Side Management"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:d1gkVwhDpl0C",
+      "citation": "Energy for Sustainable Development 64, 15-24, 2021",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "A tool for assessing demand side management and operating strategies for isolated microgrids"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:W7OEmFMy1HYC",
+      "citation": "Carnegie Mellon University, 2018",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A tool for probabilistic evaluation of microgrid operating strategies with demand side management"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:LkGwnXOMwfcC",
+      "citation": "2018 IEEE PES Asia-Pacific Power and Energy Engineering Conference (APPEEC …, 2018",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Automated planning of rooftop PV systems with aerial image processing"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:Se3iqnhoufwC",
+      "citation": "Deep Learning Applications, Volume 3, 263-293, 2022",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Building power grid 2.0: Deep learning and federated computations for energy decarbonization and edge resilience"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:YsMSGLbcyi4C",
+      "citation": "4th IET Clean Energy and Technology Conference (CEAT 2016), 2016",
+      "num_citations": 181,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Comparison of lead-acid and lithium ion batteries for stationary storage in off-grid energy systems"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:UeHWp8X0CEIC",
+      "citation": "2021 IEEE PES/IAS PowerAfrica, 1-5, 2021",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Comparison of simulators for microgrid modeling and demand response"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:IjCSPb-OGe4C",
+      "citation": "2020 19th IEEE International Conference on Machine Learning and Applications …, 2020",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Connecting distributed pockets of energy flexibility through federated computations: Limitations and possibilities"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:3fE2CSJIrl8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "CRADA Final Report: CRADA Number NFE-19-07846 with Grid Fruit, LLC"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:qjMakFHDy7sC",
+      "citation": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "CRADA Number NFE-19-07846 with Grid Fruit, LLC (CRADA Final Report)"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:0EnyYjriUFMC",
+      "citation": "IEEE Electrification Magazine 12 (1), 66-76, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Energy Savings Through Refrigeration Load Control With Assessment of Commercial Potential: Lowering peak power and electricity bills through optimal demand scheduling"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:Zph67rFs4hoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Fish Farm Computer Vision for Feed Optimization and Tracking"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:ULOm3_A8WrAC",
+      "citation": "Available at SSRN 5184838, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Generative AI Methodology for Uncovering Entrepreneurial Journeys in Africa"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:eQOLeE2rZwMC",
+      "citation": "SIAM Conference on Control and Its Applications, 2015",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Incorporating smart-grid operating strategies into off-grid electrification planning"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Energy research & social science 41, 59-70, 2018",
+      "num_citations": 89,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Institutional influence on power sector investments: A case study of on-and off-grid energy in Kenya and Tanzania"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:kNdYIx-mwKoC",
+      "citation": "IEEE Power and Energy Society Conference on Innovative Smart Grid Technologies, 2021",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Load forecasting of food retail buildings with deep learning"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:ufrVoPGSRksC",
+      "citation": "2021 IEEE PES Innovative Smart Grid Technologies Conference-Latin America …, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Load forecasting of food retail buildings with deep learning"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Hydropower Foundation, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Microgrid Energy Management with Load Clipping DSM and Small Hydro Dispatch"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:9yKSN-GCB0IC",
+      "citation": "Hydropower Foundation, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Modeling Smart Microgrids for the Developing World with Probabilistic Supply and Demand Inputs"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:u-x6o8ySG0sC",
+      "citation": "2021 IEEE Green Technologies Conference (GreenTech), 201-208, 2021",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Optimization of refrigeration defrost schedules for demand shifting in commercial buildings"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:8k81kl-MbHgC",
+      "citation": "2023 IEEE PES 15th Asia-Pacific Power and Energy Engineering Conference …, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Peer-to-Peer Electricity Trading: A Policy Approach for Rwanda"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:u5HHmVD_uO8C",
+      "citation": "2017 IEEE PES PowerAfrica, 600-605, 2017",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Simulating energy management strategies for microgrids with smart meter demand management"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:MXK_kJrjxJIC",
+      "citation": "Energies 18 (1), 208, 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Simulation of PEM Electrolyzer Power Management with Renewable Generation in Owerri, Nigeria"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:YOwf2qJgpHMC",
+      "citation": "Int. J. Hydrog. Energy 46, 14005-14023, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Simulation of PEM Electrolyzer Power Management with Renewable Generation in Owerri, Nigeria. Energies 2025, 18, 208"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:KlAtU1dfN6UC",
+      "citation": "Energies 18 (4), 994, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Smart Grid Fault Mitigation and Cybersecurity with Wide-Area Measurement Systems: A Review"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:_FxGoFyzp5QC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Smart Grids"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:roLk4NBRz8UC",
+      "citation": "2016 IEEE PES PowerAfrica, 1-5, 2016",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Smart microgrid operation simulator for management and electrification planning"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:WF5omc3nYNoC",
+      "citation": "Africa-EU Symposium on RE Research and Innovation 2, 2016",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Smart pricing implementation/simulator with ICT infrastructure"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:2osOgNQ5qMEC",
+      "citation": "Proceedings of the 7th Annual Symposium on Computing for Development, 1-4, 2016",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Stochastic simulator for smart microgrid planning"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:5nxA0vEk-isC",
+      "citation": "2024 IEEE Texas Power and Energy Conference (TPEC), 1-6, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Strategic EV charging and renewable integration in Texas"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:hqOjcs7Dif8C",
+      "citation": "arXiv preprint arXiv:2310.17056, 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Strategizing ev charging and renewable integration in texas"
+    },
+    {
+      "author_pub_id": "vVhcBXoAAAAJ:UebtZRa9Y70C",
+      "citation": "Energies 16 (17), 6379, 2023",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Towards an energy future with ubiquitous electric vehicles: Barriers and opportunities"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "vVhcBXoAAAAJ"
+}

@@ -1,0 +1,1783 @@
+{
+  "display_name": "Rabin",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Rabin.json",
+  "publication_count": 223,
+  "publications": [
+    {
+      "author_pub_id": "INTSXtcAAAAJ:2P1L_qKh6hAC",
+      "citation": "Cryobiology 67 (3), 399-400, 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "005 Integration of polarized light into scanning cryomacroscopy"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:VOx2b1Wkg3QC",
+      "citation": "Cryobiology 67 (3), 400-401, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "009 Solid mechanics aspects in scale-up vitrification: From visualization of physical effects to the analysis of structural damage"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Y5dfb0dijaUC",
+      "citation": "Cryobiology 67 (3), 401, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "011 Computation tools in the service of cryomedicine"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:b0M2c_1WBrUC",
+      "citation": "Cryobiology 67 (3), 402, 2013",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "016 Integration of transient hot-wire method into scanning cryomacroscopy in the study of thermal conductivity of dimethyl sulfoxide"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:N5tVd3kTz84C",
+      "citation": "Cryobiology 67 (3), 425-426, 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "098 Developing an Intelligent tutoring system for prostate cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:YOwf2qJgpHMC",
+      "citation": "Cryobiology 67 (3), 426, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "099 Generating synthetic ultrasound imaging artifacts for the purpose of computerized training of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:hkOj_22Ku90C",
+      "citation": "Cryobiology 67 (3), 430, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "114 Thermal expansion of a carotid artery model permeated with the cryoprotective cocktail DP6 and synthetic ice modulators at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:HDshCWvjkbEC",
+      "citation": "Cryobiology 55 (3), 363, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "115. Experimental verification of bioheat transfer simulations with application to computerized planning of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4JMBOYKVnBMC",
+      "citation": "Advances in biopreservation, 359, 2006",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "13 Solid Mechanics Aspects of"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_Ybze24A_UAC",
+      "citation": "Cryobiology 55 (3), 374, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "150. Steady-shear experiments in cryoprotectants near glass transition"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:l7t_Zn2s7bgC",
+      "citation": "Cryobiology 71 (1), 169, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "17. Preserving structural integrity in cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:g5m5HwL7SMYC",
+      "citation": "Cryobiology 71 (1), 170-171, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "22. Avoiding the problems of ice in tissues via vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ULOm3_A8WrAC",
+      "citation": "Cryobiology 66 (3), 351, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "31. Computation tools at the forefront of cryosurgery development"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:70eg2SAEIzsC",
+      "citation": "Cryobiology 63 (3), 315-316, 2011",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "36. Generation of 3D prostate models for computerized cryosurgery training"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:738O_yMBCRsC",
+      "citation": "Cryobiology 71 (1), 174, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "38. Exploring the mechanical behavior of cryopreserved materials"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:e5wmG9Sq2KIC",
+      "citation": "Cryobiology 71 (1), 175, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "42. Challenges in thermo-mechanical stress modeling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:abG-DnoFyZgC",
+      "citation": "Cryobiology 55 (3), 344, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "62. Stress relaxation in vitrified blood vessels"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:K3LRdlH-MEoC",
+      "citation": "Cryobiology 63 (3), 324, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "67. The effects of synthetic ice blockers on thermal expansion of vitrifying DP6 and their implications on large-scale cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:NaGl4SEjCO4C",
+      "citation": "Cryobiology 61 (3), 363, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "7. A new approach to cryosurgery training using computation tools"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:q3oQSFYPqjQC",
+      "citation": "Cryobiology 57 (3), 329, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "71. Correlation of vitreous cryopreservation visualization of carotid artery segments with tissue functional recovery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:VLnqNzywnoUC",
+      "citation": "Cryobiology 53 (3), 405-406, 2006",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "90. Computerized planning of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:KxtntwgDAa4C",
+      "citation": "Biomedical Instrumentation and Technology 31 (3), 251-258, 1997",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "A compact cryosurgical apparatus for minimally invasive procedures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:geHnlv5EZngC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A COMPUTATIONAL CASE STUDY FOR THE TREATMENT OF HEAD-AND-NECK TUMOR USING INTERSTITIAL PHOTODYNAMIC THERAPY"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:UebtZRa9Y70C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Computational Framework to Optimize Fiducial Marker Placement to Account for Intraoperative Tissue Deformation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:GnPB-g6toBAC",
+      "citation": "Energy-based Treatment of Tissue and Assessment IX 10066, 296-304, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A computerized tutor prototype for prostate cryotherapy: key building blocks and system evaluation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:2osOgNQ5qMEC",
+      "citation": "Cryobiology 91, 164, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A First-Order Thermal Model Of Partial Crystallization During Cryopreservation By Vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:WbkHhVStYXYC",
+      "citation": "Cryobiology 46 (2), 109-120, 2003",
+      "num_citations": 76,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A general model for the propagation of uncertainty in measurements into heat transfer simulations and its application to cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:O3NaXMp0MMsC",
+      "citation": "Experimental Mechanics 39, 132-136, 1999",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "A model for the time response of solid-embedded thermocouples"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:UxriW0iASnsC",
+      "citation": "Cryobiology 67 (3), 264-273, 2013",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A new cryomacroscope device (Type III) for visualization of physical events in cryopreservation with applications to vitrification and synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:HE397vMXCloC",
+      "citation": "Cryobiology 33 (1), 82-92, 1996",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "A new cryosurgical device for controlled freezing: I. Setup and validation tests"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ZuybSZzF8UAC",
+      "citation": "Cryobiology 33 (1), 93-105, 1996",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "A New Cryosurgical Device for Controlled Freezing: II. In VivoExperiments on Skeletal Muscle of Rabbit Hindlimbs"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Heat Transfer Summer Conference 55485, V002T11A004, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A new device and technique for thermal conductivity measurements of glass-forming materials with application to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:1sJd4Hv_s6UC",
+      "citation": "Experimental mechanics 47, 337-346, 2007",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "A new device for mechanical testing of blood vessels at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:hC7cP41nSMkC",
+      "citation": "Cryobiology 72 (1), 69-77, 2016",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "A new method for temperature-field reconstruction during ultrasound-monitored cryosurgery using potential-field analogy"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:0EnyYjriUFMC",
+      "citation": "Medical engineering & physics 33 (10), 1234-1244, 2011",
+      "num_citations": 200,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "A new thermal model for bone drilling with applications to orthopaedic surgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:mVmsd5A6BfQC",
+      "citation": "Heat Transfer Summer Conference 42754, 337-342, 2007",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "A Novel Experimental Procedure and Technique for Smallscale Calorimetry"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:BwyfMAYsbu0C",
+      "citation": "Scientific Reports 15 (1), 2178, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "A simplified computational liver perfusion model, with applications to organ preservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:BUYA1_V_uYcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A Simplified Liver Perfusion Model, with Applications to Organ Preservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:dfsIfKJdRG4C",
+      "citation": "Design and Operation of Heat Exchangers: Proceedings of the EUROTHERM …, 1992",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "A simplified model for helical heat exchanger for long-term energy storage in soil"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4fKUyHm3Qg0C",
+      "citation": "Cryobiology 69 (1), 187, 2014",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "A11 Session 3: Computerized tools for cryosurgery training: Imaging artifacts, training interface and computational challenges"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4OULZ7Gr8RgC",
+      "citation": "Cryobiology 46, 301-302, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Acker, Jason P., 197 Ahammad, MM, 2 Armitage, Susan E., 61, 76 Armitage, WJ, 194, 277"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:35r97b3x0nAC",
+      "citation": "Cryobiology 44, 4, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Acknowledgment of Guest Reviewers January 2001–December 2001"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:u5HHmVD_uO8C",
+      "citation": "Cryobiology 48, 99, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Acknowledgment of Guest Reviewers January 2003–December 2003"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:TQgYirikUcIC",
+      "citation": "Cryobiology 50, 116, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Acknowledgment of Guest Reviewers January 2004–December 2004"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_xSYboBqXhAC",
+      "citation": "Cryobiology 56, 168-169, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Acknowledgment of Guest Reviewers January 2007–December 2007"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:roLk4NBRz8UC",
+      "citation": "Cryobiology 52, 167, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Acknowledgment of Guest Reviewers January–December 2005"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:tkaPQYYpVKoC",
+      "citation": "International journal of heat and mass transfer 36 (3), 673-683, 1993",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "An efficient numerical solution for the multidimensional solidification (or melting) problem using a microcomputer"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:lSLTfruPkqcC",
+      "citation": "Computer methods and programs in biomedicine 85 (1), 41-50, 2007",
+      "num_citations": 96,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "An efficient numerical technique for bioheat simulations and its application to computerized cryosurgery planning"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:YsMSGLbcyi4C",
+      "citation": "Medical engineering & physics 34 (10), 1510-1520, 2012",
+      "num_citations": 226,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "An experimental investigation on thermal exposure during bone drilling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Se3iqnhoufwC",
+      "citation": "Cryobiology 33 (4), 472-482, 1996",
+      "num_citations": 57,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "An experimental study of the mechanical response of frozen biological tissues at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:kRWSkSYxWN8C",
+      "citation": "Mechanics of Materials 32 (3), 149-159, 2000",
+      "num_citations": 94,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "An investigation of the heat generated during cyclic loading of two glassy polymers. Part II: Thermal analysis"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:bnK-pcrLprsC",
+      "citation": "MSV, 187-193, 2007",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Analysis of a Numerical Scheme for Bioheat Simulations of Cryosurgery and its Experimental Validation on a Phantom Material."
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:MXK_kJrjxJIC",
+      "citation": "Cryobiology 103, 70-80, 2021",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Analysis of crystallization during rewarming in suboptimal vitrification conditions: a semi-empirical approach"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:8k81kl-MbHgC",
+      "citation": "Summer Bioengineering Conference 54587, 757-758, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Analysis of Heat Transfer in Bone Drilling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:mvPsJ3kp5DgC",
+      "citation": "PloS one 13 (6), e0199155, 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Analysis of polarized-light effects in glass-promoting solutions with applications to cryopreservation and organ banking"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:hqOjcs7Dif8C",
+      "citation": "Medical Engineering & Physics 29 (6), 661-670, 2007",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Analysis of the effect of partial vitrification on stress development in cryopreserved blood vessels"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:zLWjf1WUPmwC",
+      "citation": "May 19th and 20th, 1998 Technion—Israel Institute of Technology Haifa …, 1998",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Analysis of Thermal Stress in Phase Change Processes and Its Application to Cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:LjlpjdlvIbIC",
+      "citation": "Cryobiology 33 (2), 276-290, 1996",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Analysis of thermal stresses around a cryosurgical probe"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_Re3VWB3Y0AC",
+      "citation": "Cryo letters 26 (6), 409, 2005",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Analysis of thermo-mechanical stress in cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:R3hNpaxXUhUC",
+      "citation": "Advances in Heat and Mass Transfer in Biotechnology, Hayes, LJ (Ed.), HTD …, 1995",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Approximate solution of the inverse-stephan problem in cartesian, cylindrical and spherical geometries"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:JQOojiI6XY0C",
+      "citation": "Cryobiology 39, 386, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Article ID cryo. 1999.2223, available online at http://www. idealibrary. com on"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:YFjsv_pBGBYC",
+      "citation": "Cryobiology 73 (3), 419, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Avoiding the ice cryolesion in tissue cryopreservation with ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:D03iK_w7-QYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Biological Tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:eJXPG6dFmWUC",
+      "citation": "Atlas of Cryosurgery, 343-398, 2001",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Breast cancer cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:sSrBHYA8nusC",
+      "citation": "Medicine Meets Virtual Reality 14, 541, 2006",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Bubble packing application in computerized planning of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:XiVPGOgt02cC",
+      "citation": "CryoLetters 30 (6), 414-421, 2009",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Can thermal expansion differences between cryopreserved tissue and cryoprotective agents alone cause cracking?"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:eQOLeE2rZwMC",
+      "citation": "Eureka alert, 0",
+      "num_citations": 10,
+      "pub_url": "",
+      "title": "Cancer treatment by electromagnetic activator nanoheaters"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:NJ774b8OgUMC",
+      "citation": "Medical engineering & physics 36 (9), 1191-1196, 2014",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Characterization of a CMOS sensing core for ultra-miniature wireless implantable temperature sensors with application to cryomedicine"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_FxGoFyzp5QC",
+      "citation": "",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Combined solution of the inverse Stefan problem for successive freezing/thawing in nonideal biological tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:NhqRSupF_l8C",
+      "citation": "ASME-PUBLICATIONS-HTD 295, 1-1, 1994",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Combined Solution of the Inverse Stefan Problem in Nonideal Biological Tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:mB3voiENLucC",
+      "citation": "Cryobiology 97, 270, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Comparison of single-step and two-step radiofrequency rewarming of vitrified rabbit kidney and human kidney specimens"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:yB1At4FlUx8C",
+      "citation": "Cryobiology 92, 278, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Computation In The Service Of Cryosurgery: Simulations, Planning, And Training"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:hFOr9nPyWt4C",
+      "citation": "Society for Thermal Medicine Annual Meeting, 13-16.2012, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Computation tools in the service of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:uc_IGeMz5qoC",
+      "citation": "Computer Methods in Biomechanics and Biomedical Engineering 7 (2), 101-110, 2004",
+      "num_citations": 81,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Computerized planning for multiprobe cryosurgery using a force-field analogy"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:uWQEDVKXjbEC",
+      "citation": "International journal of heat and mass transfer 51 (23-24), 5671-5678, 2008",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Computerized planning of cryosurgery using bubble packing: an experimental validation on a phantom material"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:M05iB0D1s5AC",
+      "citation": "Technology in cancer research & treatment 3 (3), 229-243, 2004",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Computerized planning of cryosurgery using cryoprobes and cryoheaters"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:9Nmd_mFXekcC",
+      "citation": "Energy-based Treatment of Tissue and Assessment V 7181, 138-149, 2009",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Computerized planning of cryosurgery: from model reconstruction to cryoprobe placement strategies"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:u_35RYKgDlwC",
+      "citation": "Technology in Cancer Research & Treatment 16 (6), 1272-1283, 2017",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Computerized planning of prostate cryosurgery and shape considerations"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:NMxIlDl6LWMC",
+      "citation": "JOURNAL OF ENDOUROLOGY 20, A127-A127, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Computerized planning of prostate cryosurgery using bubble packing"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4DMP91E08xMC",
+      "citation": "Cryobiology 60 (1), 71-79, 2010",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Computerized planning of prostate cryosurgery using variable cryoprobe insertion depth"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:7T2F9Uy0os0C",
+      "citation": "Computer Aided Surgery 13 (1), 1-13, 2008",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Computerized planning of prostate cryosurgery with pullback operation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Tiz5es2fbqcC",
+      "citation": "CryoLetters 34 (4), 324-337, 2013",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Computerized training of cryosurgery–a system approach"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:dhFuZR0502QC",
+      "citation": "",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Continuum mechanics analysis of fracture progression in the vitrified cryoprotective agent DP6"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:z_wVstp3MssC",
+      "citation": "Journal of Biomechanics 39, S379, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Continuum mechanics prediction of fracture progression in vitrified DP6 and its application to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:fQNAKQ3IYiAC",
+      "citation": "Cryobiology 81, 219, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Crash course: Physical effects in cryopreservation: An engineering approach"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:EUQCXRtRnyEC",
+      "citation": "Physics in Medicine & Biology 48 (5), 619, 2003",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Cryoheater as a means of cryosurgery control"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:IjCSPb-OGe4C",
+      "citation": "Summer Bioengineering Conference 44809, 27-28, 2012",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Cryomacroscopy in 3D: a device prototype for the study of cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:J_g5lzvAfSwC",
+      "citation": "Cell preservation technology 3 (3), 169-183, 2005",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Cryomacroscopy of vitrification I: A prototype and experimental observations on the cocktails VS55 and DP6"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:UeHWp8X0CEIC",
+      "citation": "CELL PRESERVATION TECHNOLOGY 3 (3), 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Cryomacroscopy of Vitrification II: Experimental Observations and Analysis of Fracture"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:8AbLer7MMksC",
+      "citation": "Cell preservation technology 3 (3), 184-200, 2005",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Cryomacroscopy of vitrification II: Experimental observations and analysis of fracture formation in vitrified VS55 and DP6"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4MWp96NkSFoC",
+      "citation": "Cryobiology 117, 105105, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Cryopreservation by vitrification of Anopheles gambiae mosquitoes: Recent advances"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ZfRJV9d4-WMC",
+      "citation": "Cryobiology 57 (1), 1-8, 2008",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Cryopreservation of carotid artery segments via vitrification subject to marginal thermal conditions: correlation of freezing visualization with functional recovery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_B80troHkn4C",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 16431, 65-69, 1999",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Cryosurgery for breast malignancies: Apparatus and techniques"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:9ZlFYXVOiuMC",
+      "citation": "Computer methods in biomechanics and biomedical engineering 11 (2), 113-121, 2008",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Cryosurgery planning using bubble packing in 3D"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:f2IySw72cVMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Cryotherapy and cryopreservation (Boris Rubinsky 70th birthday session)"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:5Ul4iDaHHb8C",
+      "citation": "Technology in Cancer Research & Treatment 17, 1533033818762207, 2018",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Defeating cancers’ adaptive defensive strategies using thermal therapies: examining cancer’s therapeutic resistance, ablative, and computational modeling strategies as a means …"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Mojj43d5GZwC",
+      "citation": "Summer Bioengineering Conference 54587, 749-750, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Developing a framework for computerized training of cryosurgery based on finite elements analysis"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Fu2w8maKXqMC",
+      "citation": "Cryobiology 63 (3), 315, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Developing means to improve cryosurgery monitoring: A miniature wireless implantable temperature sensor and a temperature-field reconstruction technique"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:CHSYGLWDkRkC",
+      "citation": "Society for Thermal Medicine Annual Meeting, 2011",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Developing new means for thermal therapy monitoring and control: a miniature wireless implantable temperature sensor and a temperature-field reconstruction technique"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:B3FOqHPlNUQC",
+      "citation": "2012 38th Annual Northeast Bioengineering Conference (NEBEC), 173-174, 2012",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Developing the cryomacroscope for cryopreservation applications"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:j3f4tGmQtD8C",
+      "citation": "Lasers in Surgery: Advanced Characterization, Therapeutics, and Systems IX …, 1999",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Development of a cryosurgical technique for breast malignancies"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:zA6iFVUQeVQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "eerses deser"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:EkHepimYqZsC",
+      "citation": "",
+      "num_citations": 78,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Exact solution to the one-dimensional inverse-Stefan problem in nonideal biological tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:W5xh706n7nkC",
+      "citation": "ASME-PUBLICATIONS-HTD 322, 131-132, 1995",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Experimental Cryosurgery of the Skeletal Muscle of Rabbits' Hindlimbs by Control of the Freezing Rate"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:P5F9QuxV20EC",
+      "citation": "May 19th and 20th, 1998 Technion—Israel Institute of Technology Haifa …, 1998",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Experimental Cryosurgery on a Sheep Breast Model Utilizing a New Compact Cryosurgical Device and Miniaturized Cryoprobes"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:pqnbT2bcN3wC",
+      "citation": "Journal of Biomechanics 39, S379-S380, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Experimental study of viscoelasticity effects in cryopreservation of blood vessels by means of vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:WF5omc3nYNoC",
+      "citation": "Cryobiology 109, 60-61, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Experimental validation of a multiphysics mathematical model for body deformation due to thermo-mechanics effects during cryopreservation by vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:LkGwnXOMwfcC",
+      "citation": "Physics in Medicine & Biology 52 (15), 4553, 2007",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Experimental verification of numerical simulations of cryosurgery with application to computerized planning"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:RHpTSmoSYBkC",
+      "citation": "Cryobiology 53 (1), 75-95, 2006",
+      "num_citations": 72,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Fracture formation in vitrified thin films of cryoprotectants"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:qxL8FJ1GzNcC",
+      "citation": "Journal of Biomechanics 39, S379, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Fracture formation in vitrified thin films of cryoprotectants and its application to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:PELIpwtuRlgC",
+      "citation": "International journal of computer assisted radiology and surgery 8, 301-312, 2013",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Generating prostate models by means of geometric deformation with application to computerized training of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:1yQoGdGgb4wC",
+      "citation": "Summer Bioengineering Conference 54587, 751-752, 2011",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Geometric deformation of three-dimensional prostate model with applications to computerized training of cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:7PzlFSSx8tAC",
+      "citation": "Technology in cancer research & treatment 16 (1), 5-14, 2017",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "GPU-based simulation of ultrasound imaging artifacts for cryosurgery training"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:V3AGJWp-ZtQC",
+      "citation": "Technology in cancer research & treatment 15 (2), 377-386, 2016",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Graphics processing unit-based bioheat simulation to facilitate rapid decision making associated with cryosurgery training"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:KlAtU1dfN6UC",
+      "citation": "Cryobiology 34 (4), 394-405, 1997",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Gross damage accumulation in frozen rabbit liver due to mechanical stress at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:nrtMV_XWKgEC",
+      "citation": "Science translational medicine 9 (379), eaah4586, 2017",
+      "num_citations": 302,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Improved tissue cryopreservation using inductive heating of magnetic nanoparticles"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:t7zJ5fGR-2UC",
+      "citation": "",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Incorporation of phase-change materials into a ground thermal energy storage system: Theoretical study"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ns9cj8rnVeAC",
+      "citation": "Experimental Mechanics 40, 197-202, 2000",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Infrared temperature sensing of mechanically loaded specimens: thermal analysis"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:wbdj-CoPYUoC",
+      "citation": "Solar Energy 55 (6), 435-444, 1995",
+      "num_citations": 198,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Integrated solar collector storage system based on a salt-hydrate phase-change material"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:-_dYPAW6P2MC",
+      "citation": "Journal of computational design and engineering 1 (4), 272-288, 2014",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Interactive prostate shape reconstruction from 3D TRUS images"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:u9iWguZQMMsC",
+      "citation": "International Journal of Hyperthermia 18 (3), 194-202, 2002",
+      "num_citations": 279,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Is intracellular hyperthermia superior to extracellular hyperthermia in the thermal sense?"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:kzcrU_BdoSEC",
+      "citation": "Cryobiology 111, 9-15, 2023",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Is isochoric vitrification feasible?"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:p__nRnzSRKYC",
+      "citation": "Cryobiology 118, 105216, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Is isochoric vitrification feasible? Cycling between modeling, experimental observations, and first principles"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:hMod-77fHWUC",
+      "citation": "Journal of microscopy 200 (1), 42-49, 2000",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Is it reasonable to assume a uniformly distributed cooling‐rate along the microslide of a directional solidification stage?"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:SP6oXDckpogC",
+      "citation": "Cryobiology 56 (3), 248-250, 2008",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Key issues in bioheat transfer simulations for the application of cryosurgery planning"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:bEWYMUwI8FkC",
+      "citation": "PLoS One 18 (3), e0282613, 2023",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Large surface deformation due to thermo-mechanical effects during cryopreservation by vitrification–mathematical model and experimental validation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_Qo2XoVZTnwC",
+      "citation": "PLoS One 10 (5), e0125862, 2015",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Large thermal conductivity differences between the crystalline and vitrified states of DMSO with applications to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:pyW8ca7W8N0C",
+      "citation": "Cryobiology 39 (1), 29-46, 1999",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Long-term follow-up post-cryosurgery in a sheep breast model"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:M3ejUd6NZC8C",
+      "citation": "Cryobiology 102, 34-41, 2021",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Mathematical modeling of surface deformation during vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:t6usbXjVLHcC",
+      "citation": "Cryobiology 103, 167, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "May Smaller Specimens Experience Larger Thermomechanical Stresses During Vitrification?"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:tzM49s52ZIMC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 4711, 343-345, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "MEMS Based High Sensitivity Calorimetry"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:4TOpqqG69KYC",
+      "citation": "US Patent 6,786,902, 2004",
+      "num_citations": 94,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Method and apparatus for cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:W7OEmFMy1HYC",
+      "citation": "US Patent 6,039,730, 2000",
+      "num_citations": 172,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Method and apparatus for cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:OU6Ihb5iCvQC",
+      "citation": "US Patent 5,899,897, 1999",
+      "num_citations": 134,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Method and apparatus for heating during cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:dshw04ExmUIC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 50534 …, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Modeling and Measurement of Temperature Distributions in Bone Drilling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Y0pCki6q_DkC",
+      "citation": "Cryobiology 97, 264, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Modeling surface deformation in large-scale cryopreservation by vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:WA5NYHcadZ8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Multidimensional Freezing Problem During Cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:1qzjygNMrQYC",
+      "citation": "Journal of microelectromechanical systems 16 (4), 861-871, 2007",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Nanoscale calorimetry using a suspended bridge configuration"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:XiSMed-E-HIC",
+      "citation": "",
+      "num_citations": 249,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Numerical solution of the multidimensional freezing problem during cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:u-x6o8ySG0sC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "O0145 Polarized-light cryomacroscopy: a mathematical framework for thermomechanical stress and light refraction analyses."
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:0KyAp5RtaNEC",
+      "citation": "Cryogenics 64, 86-94, 2014",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "On the effects of thermal history on the development and relaxation of thermo-mechanical stress in cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:qjMakFHDy7sC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 19296, 33-40, 2000",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Optimization of organ freezing protocols with specified allowable thermal stress levels"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ZeXyd9-uunAC",
+      "citation": "Mechanical Engineering 139 (05), 44-49, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Organ Banking"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:k_IJM867U9cC",
+      "citation": "CryoLetters 43 (1), 1-9, 2022",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Perspective: temperature-dependent density and thermal expansion of cryoprotective agents"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:qUcmZB5y_30C",
+      "citation": "Cryobiology 73 (2), 261-271, 2016",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Polarized light scanning cryomacroscopy, part I: Experimental apparatus and observations of vitrification, crystallization, and photoelasticity effects"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:dTyEYWd-f8wC",
+      "citation": "Cryobiology 73 (2), 272-281, 2016",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Polarized light scanning cryomacroscopy, part II: Thermal modeling and analysis of experimental observations"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Cryobiology 97, 269, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Preserving structural integrity in organ vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ipzZ9siozwsC",
+      "citation": "Cryobiology 91, 160, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Radiofrequency Rewarming Of Vitrified Rabbit Kidney And Human Kidney Specimens–A Thermomechanical Study."
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:vRqMK49ujn8C",
+      "citation": "arXiv preprint arXiv:2010.13823, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Real-time prediction of soft tissue deformations using data-driven nonlinear presurgical simulations"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:D_sINldO8mEC",
+      "citation": "Technology in Cancer Research & Treatment 17, 1533034618766792, 2018",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Reconstruction of a deformed tumor based on fiducial marker registration: a computational feasibility study"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:r0BpntZqJG4C",
+      "citation": "Journal of Applied Mechanics 87 (10), 101003, 2020",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Scaling effects on the residual thermomechanical stress during ice-free cooling to storage temperature"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:JV2RwH3_ST0C",
+      "citation": "measurement 17, 18, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "sclsuce@ nlnec7®"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:isC4tDSrTZIC",
+      "citation": "Technology in cancer research & treatment 15 (2), 396-407, 2016",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Simulation-based cryosurgery intelligent tutoring system prototype"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:blknAaTinKkC",
+      "citation": "Technology in cancer research & treatment 15 (6), 805-814, 2016",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Simulation-based cryosurgery training: variable insertion depth planning in prostate cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:eMMeJKvmdy0C",
+      "citation": "International Journal of Computer Assisted Radiology and Surgery 15, 225-237, 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Soft tissue deformation tracking by means of an optimized fiducial marker layout with application to cancer tumors"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:d1gkVwhDpl0C",
+      "citation": "Annals of biomedical engineering 35, 2077-2086, 2007",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Stress-strain measurements and viscoelastic response of blood vessels cryopreserved by vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:9yKSN-GCB0IC",
+      "citation": "Journal of biomechanical engineering 137 (8), 081007, 2015",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Stress–strain measurements in vitrified arteries permeated with synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:XD-gHx7UXLsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Successive Freezing/Thawing in Nonideal Biological Tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:uJ-U7cs_P_0C",
+      "citation": "Cryobiology 65 (3), 270-277, 2012",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Temperature field reconstruction for minimally invasive cryosurgery with application to wireless implantable temperature sensors and/or medical imaging"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:IWHjjKOFINEC",
+      "citation": "Summer Bioengineering Conference 54587, 41-42, 2011",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Temperature field reconstruction for the application of wireless implantable temperature sensors in cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:3fE2CSJIrl8C",
+      "citation": "US Patent 6,517,538, 2003",
+      "num_citations": 106,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Temperature-controlled snare"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:uWiczbcajpAC",
+      "citation": "Cryobiology 113, 104617, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Temperature-dependent thermophysical properties of CPAS and tissues relevant to cryobiology"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:kNdYIx-mwKoC",
+      "citation": "2012 38th Annual Northeast Bioengineering Conference (NEBEC), 73-74, 2012",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Temperature-field reconstruction for the application of prostate cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:tS2w5q8j5-wC",
+      "citation": "Journal of microscopy 199 (3), 214-223, 2000",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Temperature‐controlled microscopy for imaging living cells: apparatus, thermal analysis and temperature dependency of embryonic elongation in Caenorhabditis elegans"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:5nxA0vEk-isC",
+      "citation": "Summer Bioengineering Conference 54587, 431-432, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The Effect of Synthetic Ice Blockers on Thermal Expansion of the Cryoprotective Cocktail DP6"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:nb7KW1ujOQ8C",
+      "citation": "Cell preservation technology 5 (2), 104-115, 2007",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "The effect of temperature gradients on stress development during cryopreservation via vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:_kc_bZDykSQC",
+      "citation": "Cryo Letters 21 (3), 163-170, 2000",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "The effect of temperature-dependent thermal conductivity in heat transfer simulations of frozen biomaterials"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:JoZmwDi-zQgC",
+      "citation": "Cell Preservation Technology 2 (3), 215-226, 2004",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The effect of thermal expansion of ingredients on the cocktails VS55 and DP6"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:epqYDVWIO7EC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "The Grand Challenges of Organ Banking"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:RGFaLdJalmkC",
+      "citation": "Cryobiology 72 (2), 169-182, 2016",
+      "num_citations": 159,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "The Grand Challenges of Organ Banking: Proceedings from the first global summit on complex tissue cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:BrmTIyaxlBUC",
+      "citation": "Nature biotechnology 35 (6), 530-542, 2017",
+      "num_citations": 547,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "The promise of organ and tissue preservation to transform medicine"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:J-pR_7NvFogC",
+      "citation": "International Journal of Computer Assisted Radiology and Surgery 13, 541-549, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The role of exposure time in computerized training of prostate cryosurgery: performance comparison of surgical residents with engineering students"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:uLbwQdceFCQC",
+      "citation": "Cryogenics 62, 118-128, 2014",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "The scanning cryomacroscope–A device prototype for the study of cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:aqlVkmm33-oC",
+      "citation": "CryoLetters 23 (6), 361-374, 2002",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "The thermal effect of urethral warming during cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ZHo1McVdvXMC",
+      "citation": "Journal of biomechanical engineering 140 (1), 011005, 2018",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Thermal analyses of a human kidney and a rabbit kidney during cryopreservation by vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:evX43VCCuoAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thermal Analyses of a Human Kidney and a Rabbit Kidney During Cryopreservation by Vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:eflP2zaiRacC",
+      "citation": "Journal of heat transfer 144 (3), 031202, 2022",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Thermal analyses of nanowarming-assisted recovery of the heart from cryopreservation by vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:cFHS6HbyZ2cC",
+      "citation": "International journal of heat and mass transfer 39 (5), 1051-1065, 1996",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Thermal analysis of a helical heat exchanger for ground thermal energy storage in arid zones"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:bFI3QPDXJZMC",
+      "citation": "Cryo-letters 20 (2), 95-102, 1999",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Thermal analysis of cryocycling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:xtRiw3GOFMkC",
+      "citation": "Cryobiology 91, 128-136, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Thermal analysis of marginal conditions to facilitate cryopreservation by vitrification using a semi-empirical approach"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Wp0gIr-vW9MC",
+      "citation": "Cryobiology 97, 264, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Thermal analysis of nanowarming in a human heart and a rat heart model"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:tOudhMTPpwUC",
+      "citation": "Cryobiology 97, 264-265, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Thermal analysis of partial crystallization during recovery from cryogenic storage using a semi-empirical approach"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:BqipwSGYUEgC",
+      "citation": "PLoS One 15 (9), e0238941, 2020",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Thermal conductivity of cryoprotective agents loaded with nanoparticles, with application to recovery of preserved tissues and organs from cryogenic storage"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:HoB7MX3m0LUC",
+      "citation": "Cryobiology 73 (2), 196-202, 2016",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermal conductivity of the cryoprotective cocktail DP6 in cryogenic temperatures, in the presence and absence of synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ye4kPcJQO24C",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 37106, 181-182, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Thermal Expansion Measurements of Cryoprotective Agents"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:SdhP9T11ey4C",
+      "citation": "Cryobiology 46 (3), 254-263, 2003",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Thermal expansion measurements of cryoprotective agents. Part I: A new experimental apparatus"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ldfaerwXgEUC",
+      "citation": "Cryobiology 46 (3), 264-270, 2003",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Thermal expansion measurements of cryoprotective agents. Part II: measurements of DP6 and VS55, and comparison with DMSO"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:fEOibwPWpKIC",
+      "citation": "",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Thermal expansion measurements of frozen biological tissues at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:dQ2og3OwTAUC",
+      "citation": "Annals of Biomedical Engineering 33, 1213-1228, 2005",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Thermal expansion of blood vessels and muscle specimens permeated with DMSO, DP6, and VS55 at cryogenic temperatures"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:yD5IFk8b50cC",
+      "citation": "Cryobiology 52 (2), 269-283, 2006",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Thermal expansion of blood vessels in low cryogenic temperatures Part I: A new experimental device"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:TFP_iSt0sucC",
+      "citation": "Cryobiology 52 (2), 284-294, 2006",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Thermal expansion of blood vessels in low cryogenic temperatures, Part II: Vitrification with VS55, DP6, and 7.05 M DMSO"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:vV6vV6tmYwMC",
+      "citation": "Cryobiology 52 (2), 284-294, 2006",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Thermal Expansion of blood vessels in low cryogenic temperatures, Part II: Vitrification with VS55, DP6, and 7.05 M DMSO"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:M3NEmzRMIkIC",
+      "citation": "2012 38th Annual Northeast Bioengineering Conference (NEBEC), 77-78, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Thermal expansion of cryoprotective agents and synthetic ice blockers"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:3s1wT3WcHBgC",
+      "citation": "Cryobiology 65 (2), 117-125, 2012",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Thermal expansion of the cryoprotectant cocktail DP6 combined with synthetic ice modulators in presence and absence of biological tissues"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:SeFeTyx0c_EC",
+      "citation": "ASME Bioengineering and Biotransport Conference, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Thermal expansion of the cryoprotective agent cocktail DP6 in combination with various synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:rO6llkc54NcC",
+      "citation": "Cryobiology 68 (3), 318-326, 2014",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Thermal expansion of vitrified blood vessels permeated with DP6 and synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:-f6ydRqryjwC",
+      "citation": "International Journal of Solids and Structures 37 (17), 2363-2375, 2000",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Thermal stress modeling in cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:iH-uZ7U-co4C",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 16431, 183-187, 1999",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Thermal stress modeling of the freezing of biological tissue"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:5ugPr518TE4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "THERMAL STRESS MODELlNG OF THE FREEZlNG OF BlOLOGlCAL TlSSUE"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:LPZeul_q3PIC",
+      "citation": "",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Thermal stresses in a freezing sphere and its application to cryobiology"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:9vf0nzSNQJEC",
+      "citation": "Cryobiology 76, 129-139, 2017",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Thermo-mechanical stress analysis of cryopreservation in cryobags and the potential benefit of nanowarming"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:AXPGKjj_ei8C",
+      "citation": "Plos one 17 (4), e0267852, 2022",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Thermo-mechanics aspects of isochoric cryopreservation: A new modeling approach and comparison with experimental data"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:eq2jaN3J8jMC",
+      "citation": "Plos one 18 (8), e0290063, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Thermomechanical stress analyses of nanowarming-assisted recovery from cryopreservation by vitrification in human heart and rat heart models"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:vDijr-p_gm4C",
+      "citation": "Cryobiology 113, 104622, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Thermomechanical stress analysis of popliteal artery in various configurations during vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:a0OBvERweLwC",
+      "citation": "Cryobiology 100, 180-192, 2021",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Thermomechanical stress analysis of rabbit kidney and human kidney during cryopreservation by vitrification with the application of radiofrequency heating"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:L8Ckcad2t8MC",
+      "citation": "Journal of biomechanical engineering 138 (1), 011010, 2016",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermomechanical stress in cryopreservation via vitrification with nanoparticle heating as a stress-moderating effect"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:AvfA0Oy_GE0C",
+      "citation": "Annual Review of Heat Transfer 27, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Thermomechanics Modeling and Visualization of Physical Effects to Improve Cryopreservation by Vitrification"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:QIV2ME_5wuYC",
+      "citation": "The International Journal of Medical Robotics and Computer Assisted Surgery …, 2007",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Towards intra‐operative computerized planning of prostate cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:olpn-zPbct0C",
+      "citation": "",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Two-phase computerized planning of cryosurgery using bubble-packing and force-field analogy"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:maZDTaKrznsC",
+      "citation": "2013 IEEE Biomedical Circuits and Systems Conference (BioCAS), 226-229, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Ultra-low power frequency and duty-cycle modulated implantable pressure-temperature sensor"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:fPk4N6BV_jEC",
+      "citation": "Energy-based Treatment of Tissue and Assessment VI 7901, 264-274, 2011",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Ultra-miniature wireless temperature sensor for thermal medicine applications"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ML0RJ9NH7IQC",
+      "citation": "Cryobiology 118, 105187, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Ultrasound-based geometric modeling of the human ovary with applications to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:URolC5Kub84C",
+      "citation": "Cryobiology 113, 104692, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Ultrasound-based geometric modeling of the ovary with applications to cryopreservation"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:p2g8aNsByqUC",
+      "citation": "CRYO LETTERS 19, 319-326, 1998",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Uncertainty in measurements of fluid temperature in tubes"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Zph67rFs4hoC",
+      "citation": "Cryo-Letters 19 (4), 213-224, 1998",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Uncertainty in temperature measurements during cryosurgery"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:PR6Y55bgFSsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Viscoelasticity Behavior of Vitrified Blood Vessels"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:ufrVoPGSRksC",
+      "citation": "Experimental mechanics 49, 663-672, 2009",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Viscosity of cryoprotective agents near glass transition: a new device, technique, and data on DMSO, DP6, and VS55"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:Z5m8FVwuT1cC",
+      "citation": "Cryobiology 117, 104976, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Vitreous tissue cryopreservation using a blood vessel model and cryomacroscopy for scale-up studies: Observations and mathematical modeling"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:5awf1xo2G04C",
+      "citation": "Cryobiology 80, 161, 2018",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Vitreous tissue cryopreservation using blood vessel models and cryomacroscopy for scale-up studies"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:RYcK_YlVTxYC",
+      "citation": "Cryobiology 109, 21, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Vitrification and rewarming of magnetic nanoparticle-loaded rat hearts"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:WqliGbK-hY8C",
+      "citation": "Advanced materials technologies 7 (3), 2100873, 2022",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Vitrification and rewarming of magnetic nanoparticle‐loaded rat hearts"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:35N4QoGY0k4C",
+      "citation": "Cell preservation technology 4 (4), 236-244, 2006",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Vitrification of carotid artery segments: an integrated study of thermophysical events and functional recovery toward scale-up for clinical applications"
+    },
+    {
+      "author_pub_id": "INTSXtcAAAAJ:2KloaMYe4IUC",
+      "citation": "Cryobiology 82, 70-77, 2018",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Vitrification tendency and stability of DP6-based vitrification solutions for complex tissue cryopreservation"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "INTSXtcAAAAJ"
+}

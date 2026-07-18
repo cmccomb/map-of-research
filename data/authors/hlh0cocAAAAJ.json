@@ -1,0 +1,600 @@
+{
+  "display_name": "Low",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Low.json",
+  "publication_count": 74,
+  "publications": [
+    {
+      "author_pub_id": "hlh0cocAAAAJ:BqipwSGYUEgC",
+      "citation": "Euro-Par 2020: Parallel Processing: 26th International Conference on …, 2020",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "3D Coded SUMMA: Communication-efficient and robust parallel matrix multiplication"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:0EnyYjriUFMC",
+      "citation": "2nd Workshop on Near Data Processing, WONDP 2014, 2014",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "3D-stacked memory-side acceleration: Accelerator and system design"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:3fE2CSJIrl8C",
+      "citation": "Workshop on Near Data Processing (WONDP), 2015",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A 3 d-stacked memory manycore stencil accelerator system"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:WF5omc3nYNoC",
+      "citation": "University of Texas at Austin, 2013",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A Calculus of Loop Invariants for Dense Linear Algebra Optimization"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:QIV2ME_5wuYC",
+      "citation": "Proceedings of the First International Workshop on Software Correctness for …, 2017",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A family of provably correct algorithms for exact triangle counting"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:GnPB-g6toBAC",
+      "citation": "SIAM Journal on Scientific Computing 42 (5), C245-C264, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "A flexible framework for multidimensional DFTs"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:bEWYMUwI8FkC",
+      "citation": "2019 IEEE International Parallel and Distributed Processing Symposium …, 2019",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A portable gpu framework for snp comparisons"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:M3ejUd6NZC8C",
+      "citation": "2016 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "A scale-free structure for power-law graphs"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:IWHjjKOFINEC",
+      "citation": "2018 IEEE International Symposium on Information Theory (ISIT), 1585-1589, 2018",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A unified coded deep neural network training strategy based on generalized polydot codes"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:d1gkVwhDpl0C",
+      "citation": "ACM Transactions on Mathematical Software (TOMS) 32 (2), 169-179, 2006",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Accumulating Householder transformations, revisited"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:hMod-77fHWUC",
+      "citation": "Proceedings of the IEEE 108 (8), 1219-1234, 2020",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Addressing unreliability in emerging devices and non-von Neumann architectures using coded computing"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:u-x6o8ySG0sC",
+      "citation": "Computer Science Department, University of Texas at Austin, 2004",
+      "num_citations": 61,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "An API for manipulating matrices stored by blocks"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:k_IJM867U9cC",
+      "citation": "Proceedings of the International Conference for High Performance Computing …, 2019",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Analytical cache modeling and tilesize optimization for tensor contractions"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:LkGwnXOMwfcC",
+      "citation": "ACM Transactions on Mathematical Software (TOMS) 43 (2), 1-18, 2016",
+      "num_citations": 193,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Analytical modeling is enough for high-performance BLIS"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:D03iK_w7-QYC",
+      "citation": "Association for Computing Machinery, Incorporated, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "ARRAY'21: Proceedings of the 7th ACM SIGPLAN International Workshop on Libraries, Languages and Compilers for Array Programming: June 21, 2021, Virtual, Canada"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:4TOpqqG69KYC",
+      "citation": "arXiv preprint arXiv:1611.08035, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Automating the last-mile for high performance dense linear algebra"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:JV2RwH3_ST0C",
+      "citation": "US Patent App. 16/588,990, 2020",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Coded computation strategies for distributed matrix-matrix and matrix-vector products"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:7PzlFSSx8tAC",
+      "citation": "arXiv preprint arXiv:1805.09891, 2018",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Coded FFT and its communication overhead"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:TQgYirikUcIC",
+      "citation": "arXiv preprint arXiv:1903.01042, 2019",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "CodeNet: Training large scale neural networks in presence of soft-errors"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:KlAtU1dfN6UC",
+      "citation": "Proceedings of the 3rd Workshop on Programming Models for SIMD/Vector …, 2016",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Compilers, hands-off my hands-on optimizations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:35N4QoGY0k4C",
+      "citation": "2021 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2021",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Delayed asynchronous iterative graph algorithms"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:TFP_iSt0sucC",
+      "citation": "2019 IEEE International Parallel and Distributed Processing Symposium …, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Delta-stepping SSSP: From vertices and edges to GraphBLAS implementations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:ULOm3_A8WrAC",
+      "citation": "2016 IEEE International Parallel and Distributed Processing Symposium …, 2016",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Efficient computation of linkage disequilibria as dense linear algebra operations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:isC4tDSrTZIC",
+      "citation": "Proceedings of the 52nd Annual IEEE/ACM International Symposium on …, 2019",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Efficient spmv operation for large and highly sparse matrices using scalable multi-way merge parallelization"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:kNdYIx-mwKoC",
+      "citation": "Proceedings of the 48th International Symposium on Microarchitecture, 750-761, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Enabling portable energy efficiency with memory accelerated library"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:ns9cj8rnVeAC",
+      "citation": "2020 IEEE International Symposium on Workload Characterization (IISWC), 216-227, 2020",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Evaluation of graph analytics frameworks using the gap benchmark suite"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:cFHS6HbyZ2cC",
+      "citation": "2023 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Exploiting Fusion Opportunities in Linear Algebraic Graph Query Engines"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:M3NEmzRMIkIC",
+      "citation": "Parallel Processing and Applied Mathematics: 13th International Conference …, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Exploiting symmetries of small prime-sized dfts"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:UebtZRa9Y70C",
+      "citation": "ArXiv, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Exploiting Symmetry in Tensors for High Performance."
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Technical Report TR-12-33, The University of Texas at Austin, Department of …, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Exploiting symmetry in tensors for high performance: an initial study"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:Y0pCki6q_DkC",
+      "citation": "SIAM Journal on Scientific Computing 36 (5), C453-C479, 2014",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Exploiting symmetry in tensors for high performance: Multiplication with symmetric tensors"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:maZDTaKrznsC",
+      "citation": "2019 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2019",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Exploration of fine-grained parallelism for load balancing eager k-truss on gpu and cpu"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:9yKSN-GCB0IC",
+      "citation": "Proceedings of the tenth ACM SIGPLAN symposium on Principles and practice of …, 2005",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Extracting SMP parallelism for dense linear algebra algorithms from high-level specifications"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:SeFeTyx0c_EC",
+      "citation": "2022 IEEE International Parallel and Distributed Processing Symposium …, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Families of butterfly counting algorithms for bipartite graphs"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:mB3voiENLucC",
+      "citation": "2018 IEEE 25th International Conference on High Performance Computing …, 2018",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "FFTX and SpectralPack: A first look"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:4DMP91E08xMC",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2017",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "First look: Linear algebra-based triangle counting without matrix multiplication"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:Se3iqnhoufwC",
+      "citation": "Technical Report TR-12-18, The University of Texas at Austin, Department of …, 2012",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "FLAME Working Note# 64. Theory and practice of fusing loops when optimizing parallel dense linear algebra operations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:hFOr9nPyWt4C",
+      "citation": "Proceedings of the IEEE 106 (11), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "From High-Level Specification to High-Performance Code"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:70eg2SAEIzsC",
+      "citation": "2021 IEEE High Performance Extreme Computing Conference (HPEC), 1-2, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Fusing Non Element-wise Layers in DNNs"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:IjCSPb-OGe4C",
+      "citation": "Computer Science Department, University of Texas at Austin, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Generic Directed Acyclic Graphs (generic DAGs)"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:aqlVkmm33-oC",
+      "citation": "2017 IEEE 18th International Symposium on High Assurance Systems Engineering …, 2017",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "High assurance code generation for cyber-physical systems"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:L8Ckcad2t8MC",
+      "citation": "Proceedings of the 35th International Conference on Machine Learning 80 …, 2018",
+      "num_citations": 103,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "High performance zero-memory overhead direct convolutions"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:qxL8FJ1GzNcC",
+      "citation": "IEEE Control Systems Magazine 37 (2), 82-103, 2017",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "High-assurance SPIRAL: End-to-end guarantees for robot and car control"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:-f6ydRqryjwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "High-Performance Kernels for Exact Linear Algebra"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:4JMBOYKVnBMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Implementing Level-3 BLAS with BLIS: Early Experience"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:YsMSGLbcyi4C",
+      "citation": "The University of Texas at Austin, Department of Computer Science, FLAME …, 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Implementing level-3 BLAS with BLIS: Early experience"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:ZeXyd9-uunAC",
+      "citation": "2018 IEEE International Parallel and Distributed Processing Symposium (IPDPS …, 2018",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Large bandwidth-efficient FFTs on multicore and multi-socket systems"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:yD5IFk8b50cC",
+      "citation": "SC24-W: Workshops of the International Conference for High Performance …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Linear Algebra Approach for Directed Triad Counting and Enumeration"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:iH-uZ7U-co4C",
+      "citation": "Proceedings of the 6th ACM SIGPLAN International Workshop on Libraries …, 2019",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Linear algebraic depth-first search"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:HDshCWvjkbEC",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-7, 2018",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Linear algebraic formulation of edge-centric k-truss algorithms with adjacency matrices"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:NMxIlDl6LWMC",
+      "citation": "2020 IEEE International Parallel and Distributed Processing Symposium …, 2020",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Linear algebraic Louvain method in python"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:R3hNpaxXUhUC",
+      "citation": "2018 56th Annual Allerton Conference on Communication, Control, and …, 2018",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Masterless coded computing: A fully-distributed coded FFT algorithm"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:Wp0gIr-vW9MC",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2017",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Mixed data layout kernels for vectorized complex arithmetic"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:ldfaerwXgEUC",
+      "citation": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS …, 2022",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Modeling matrix engines for portability and performance"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:mVmsd5A6BfQC",
+      "citation": "Proc. IEEE HPEC, 2017",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Optimizing FFT resource efficiency on FPGA using high-level synthesis"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:MXK_kJrjxJIC",
+      "citation": "2015 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Optimizing space time adaptive processing through accelerating memory-bounded operations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:qUcmZB5y_30C",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-7, 2018",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Pagerank acceleration for large graphs with scalable hardware and two-step spmv"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:2osOgNQ5qMEC",
+      "citation": "Department of Computer Sciences Technical Report TR-04-05, The University of …, 2004",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Parallelizing FLAME code with OpenMP task queues"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:blknAaTinKkC",
+      "citation": "2018 IEEE International Parallel and Distributed Processing Symposium …, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Patterns of GraphBLAS Algorithms: Tales from the Trenches"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:NaGl4SEjCO4C",
+      "citation": "2020 IEEE 20th International Conference on Bioinformatics and Bioengineering …, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "qLD: High-performance Computation of Linkage Disequilibrium on CPU and GPU"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:vV6vV6tmYwMC",
+      "citation": "Molecular Ecology Resources 21 (7), 2580-2587, 2021",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "quickLD: An efficient software for linkage disequilibrium analyses"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:ZHo1McVdvXMC",
+      "citation": "Journal of Systems Architecture 135, 102806, 2023",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Reformulating the direct convolution for high-performance deep learning inference on ARM processors"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:2P1L_qKh6hAC",
+      "citation": "Frontiers in Genetics 12, 822986, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Scalable Bioinformatics: Methods, Software Tools, and Hardware Architectures"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:YOwf2qJgpHMC",
+      "citation": "ACM Transactions on Mathematical Software (TOMS) 34 (2), 2008",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Scalable parallelization of FLAME code via the workqueuing model"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:zA6iFVUQeVQC",
+      "citation": "arXiv preprint arXiv:2303.04769, 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Small: A software framework for portable machine learning libraries"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:dfsIfKJdRG4C",
+      "citation": "ACM Transactions on Embedded Computing Systems 23 (3), 1-25, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "SMaLL: Software for Rapidly Instantiating Machine Learning Libraries"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:hC7cP41nSMkC",
+      "citation": "Proceedings of the IEEE 106 (11), 1935-1968, 2018",
+      "num_citations": 141,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "SPIRAL: Extreme performance portability"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:W7OEmFMy1HYC",
+      "citation": "ACM Transactions on Mathematical Software (TOMS) 42 (2), 1-19, 2016",
+      "num_citations": 133,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "The BLIS framework: Experiments in portability"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:zYLM7Y9cAGgC",
+      "citation": "",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Theory and practice of fusing loops when optimizing parallel dense linear algebra operations"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:RGFaLdJalmkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Topics in Advanced Computing: Promise and Challenges of Recommendation Systems for the DoD"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:J_g5lzvAfSwC",
+      "citation": "2020 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Towards an objective metric for the performance of exact triangle count"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:UeHWp8X0CEIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Towards the Final Generation of Dense Linear Algebra Libraries"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:e5wmG9Sq2KIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Yaji, Sharath 81"
+    },
+    {
+      "author_pub_id": "hlh0cocAAAAJ:3s1wT3WcHBgC",
+      "citation": "2022 IEEE International Symposium on Phased Array Systems & Technology (PAST …, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Zoom Out: Abstractions for Efficient Radar Algorithms on COTS architectures"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "hlh0cocAAAAJ"
+}

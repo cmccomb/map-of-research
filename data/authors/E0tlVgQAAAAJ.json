@@ -1,0 +1,801 @@
+{
+  "display_name": "Ulissi",
+  "fetched_at_utc": "2025-04-01T01:19:25+00:00",
+  "migration_source": "map-of-cheme/data/Ulissi.json",
+  "publication_count": 99,
+  "publications": [
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:RXiHnyRawswC",
+      "citation": "Langmuir 31 (1), 628-636, 2015",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "2D equation-of-state model for corona phase molecular recognition on single-walled carbon nanotube and graphene surfaces"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:NtCmTCuxid4C",
+      "citation": "The Journal of Physical Chemistry C 119 (24), 13876-13886, 2015",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A mathematical formulation and solution of the CoPhMoRe inverse problem for helically wrapping polymer corona phases on cylindrical substrates"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:UebtZRa9Y70C",
+      "citation": "The Journal of Physical Chemistry C 117 (23), 12373-12378, 2013",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A quantitative and predictive model of electromigration-induced breakdown of metal nanowires"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:w2UhwfzvF0QC",
+      "citation": "Nature 581 (7807), 178-183, 2020",
+      "num_citations": 1207,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Accelerated discovery of CO2 electrocatalysts using active machine learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:qsWQJNntlusC",
+      "citation": "Nature Catalysis 1 (9), 696-703, 2018",
+      "num_citations": 759,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Active learning across intermetallics to guide discovery of electrocatalysts for CO2 reduction and H2 evolution"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:vD2iS2Kej30C",
+      "citation": "The Journal of Physical Chemistry C 128 (27), 11190-11195, 2024",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Adapting OC20-trained EquiformerV2 models for high-entropy materials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:uoRD4RTSUPoC",
+      "citation": "The 28th North American Catalysis Society Meeting, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Adsorb-ML: Accelerating Adsorption Energy Calculations with Machine Learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:MGPUR4WVBMEC",
+      "citation": "npj Computational Materials 9 (1), 172, 2023",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "AdsorbML: a leap in efficiency for adsorption energy calculations using generalizable machine learning potentials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:vxA22ZmNLkoC",
+      "citation": "arXiv preprint arXiv:2211.16486 159, 2022",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Adsorbml: Accelerating adsorption energy calculations with machine learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:5rMqqAh47xYC",
+      "citation": "arXiv preprint arXiv:2503.03965, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "All-atom Diffusion Transformers: Unified generative modelling of molecules and materials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:B2rIPIGFPLEC",
+      "citation": "Journal of Open Source Software 8 (87), 5035, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "AmpTorch: A Python package for scalable fingerprint-based neural network training on multi-element systems with integrated uncertainty quantification"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Vztgr1qGG8IC",
+      "citation": "arXiv preprint arXiv:2010.09435, 2020",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "An introduction to electrocatalyst design using machine learning for renewable energy storage"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:UeHWp8X0CEIC",
+      "citation": "The Journal of Physical Chemistry Letters 2 (14), 1690-1694, 2011",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Applicability of birth–death markov modeling for single-molecule counting using single-walled carbon nanotube fluorescent sensor arrays"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:1xBWf43XMUgC",
+      "citation": "2020 Virtual AIChE Annual Meeting, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Applications of Data Science in Catalysis and Reaction Engineering II"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:ufKn5pxu7C0C",
+      "citation": "Journal of Chemical Information and Modeling 63 (24), 7642-7654, 2023",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Applying Large Graph Neural Networks to Predict Transition Metal Complex Energies Using the tmQM_wB97MV Data Set"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:WzTVkKNmPSkC",
+      "citation": "The journal of physical chemistry letters 7 (19), 3931-3935, 2016",
+      "num_citations": 104,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Automated discovery and construction of surface phase diagrams using machine learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:WMtz-WDmgKQC",
+      "citation": "The Journal of Chemical Physics 158 (21), 2023",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Beyond independent error assumptions in large GNN atomistic models"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:DQNrXyjhriIC",
+      "citation": "Langmuir 36 (3), 819-826, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Capturing structural transitions in surfactant adsorption isotherms at solid/solution interfaces"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:2osOgNQ5qMEC",
+      "citation": "The Journal of Physical Chemistry Letters 2 (22), 2892-2896, 2011",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Carbon nanotubes as molecular conduits: advances and challenges for transport through isolated sub-2 nm pores"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:5LPo_wSKItgC",
+      "citation": "Catalysis Science & Technology 12 (20), 6256-6267, 2022",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Catlas: an automated framework for catalyst discovery demonstrated for direct syngas conversion"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:ZysSsiWj_g4C",
+      "citation": "ACS Catalysis 15, 5283-5294, 2024",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "CatTSunami: Accelerating transition state energy calculations with pretrained graph neural networks"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:roLk4NBRz8UC",
+      "citation": "Small 9 (11), 1954-1963, 2013",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Charge transfer at junctions of a single layer of graphene and a metallic single walled carbon nanotube"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:CCeGMaHljPEC",
+      "citation": "The Journal of Physical Chemistry C 127 (48), 23459-23466, 2023",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Chemical properties from graph neural network-predicted electron densities"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:j8pvxH-kN2QC",
+      "citation": "Journal of Chemical Information and Modeling 63 (20), 6192-6197, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Cluster-MLP: An Active Learning Genetic Algorithm Framework for Accelerated Discovery of Global Minimum Configurations of Pure and Alloyed Nanoclusters"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:u-x6o8ySG0sC",
+      "citation": "Biomedical Optics, BTuF48, 2008",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Compact Polarization Camera with Liquid-Crystal Retarder for Patterning of Biological Textures"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:8uzoZH4hB9AC",
+      "citation": "The Journal of Chemical Physics 154 (12), 2021",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Computational catalyst discovery: Active classification through myopic multiscale sampling"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:yJjnfzR0HrkC",
+      "citation": "Chemical engineering education 54 (3), 2020",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Computational notebooks in chemical engineering curricula"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:hEXC_dOfxuUC",
+      "citation": "Integrating Materials and Manufacturing Innovation, 1-9, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Constraint Active Search in Process Window Optimization for Powder Feed Directed Energy Deposition"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:YsMSGLbcyi4C",
+      "citation": "Computers & chemical engineering 51, 149-156, 2013",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Control of nano and microchemical systems"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:MDX3w3dAD3YC",
+      "citation": "The journal of physical chemistry letters 10 (15), 4401-4408, 2019",
+      "num_citations": 239,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Convolutional neural network of atomic surface structures to predict binding energies for high-throughput screening of catalysts"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:SpPTWFSNUtQC",
+      "citation": "ACS Applied Energy Materials 1 (5), 1990-1999, 2018",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Copper silver thin films with metastable miscibility for oxygen reduction electrocatalysis in alkaline electrolytes"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:wGzT3bKASkAC",
+      "citation": "Machine Learning: Science and Technology 2 (4), 045018, 2021",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Deep reinforcement learning for predicting kinetic pathways to surface reconstruction in a ternary alloy"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:4QKQTXcH0q8C",
+      "citation": "ACS Catalysis 12 (18), 11137-11151, 2022",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Detailed microkinetics for the oxidation of exhaust gas emissions through automated mechanism generation"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:KlAtU1dfN6UC",
+      "citation": "Energy & Environmental Science 7 (11), 3769-3781, 2014",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Deterministic modelling of carbon nanotube near-infrared solar cells"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:S2WlVNSe3u4C",
+      "citation": "Electrochemical Society Meeting Abstracts 240, 1188-1188, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Development of Polymer Electrolyte Fuel Cell (PEFC) Cathodes with High Oxygen Permeability Ionomer (HOPI) for High Performance and Durability"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:hqOjcs7Dif8C",
+      "citation": "Nature communications 4 (1), 2397, 2013",
+      "num_citations": 179,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Diameter-dependent ion transport through the interior of isolated single-walled carbon nanotubes"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:DquSII9TDu4C",
+      "citation": "Physical Review Letters 125 (17), 173001, 2020",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Differentiable optimization for the prediction of ground state structures (DOGSS)"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:PVqtIyvKoSUC",
+      "citation": "ACS applied materials & interfaces 12 (34), 38256-38265, 2020",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Discovery of acid-stable oxygen evolution catalysts: high-throughput computational screening of equimolar bimetallic oxides"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:_9Xh93LWpsYC",
+      "citation": "2021 AIChE Annual Meeting, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Discovery of Catalysts for the Application of Nitrate Reduction and Water Purification Using Machine Learning Techniques"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:4n0clTBhZ78C",
+      "citation": "Journal of chemical information and modeling 58 (12), 2392-2400, 2018",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Dynamic workflows for routine materials discovery in surface science"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Journal of catalysis 281 (2), 339-344, 2011",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Effect of multiscale model uncertainty on identification of optimal catalyst properties"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:hefNtdE4IMkC",
+      "citation": "ACS Catalysis 11 (5), 2483-2491, 2021",
+      "num_citations": 57,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Efficient Discovery of Active, Selective, and Stable Catalysts for Electrochemical H2O2 Synthesis through Active Motif Screening"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Oo1CbQkBAzEC",
+      "citation": "ACS Applied Materials & Interfaces 13 (7), 8082-8094, 2021",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Elimination of multidrug-resistant bacteria by transition metal dichalcogenides encapsulated by synthetic single-stranded DNA"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:CMvovTBb2okC",
+      "citation": "Machine Learning: Science and Technology 2 (2), 025007, 2020",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Enabling robust offline active learning for machine learning potentials using simple physics-based priors"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:nOiSByfp82kC",
+      "citation": "Journal of Catalysis 440, 115795, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Enumeration of surface site nuclearity and shape in a database of intermetallic low-index surface facets"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:It0W0vAlS5QC",
+      "citation": "arXiv preprint arXiv:2402.04379, 2024",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Fine-tuned language models generate stable inorganic materials as text"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:8RAEygVn5_EC",
+      "citation": "Machine Learning: Science and Technology 3 (3), 03LT01, 2022",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "FINETUNA: fine-tuning accelerated molecular simulations"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:IHkkN1K1AlAC",
+      "citation": "arXiv preprint arXiv:2310.16802, 2023",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "From molecules to materials: Pre-training large generalizable models for atomic property prediction"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Gb6Hms-Uo9kC",
+      "citation": "arXiv preprint arXiv:2204.02782, 2022",
+      "num_citations": 77,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "GemNet-OC: developing graph neural networks for large and diverse molecular simulation datasets"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:iKswqCX-FLkC",
+      "citation": "Machine Learning: Science and Technology 5 (2), 025018, 2024",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Generalization of graph-based active learning relaxation strategies across materials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Nufq_to8ts0C",
+      "citation": "The Journal of Physical Chemistry C 126 (6), 2931-2936, 2022",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Heterogeneous catalysis in grammar school"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:IjCSPb-OGe4C",
+      "citation": "Chemical Engineering Science 65 (1), 240-246, 2010",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "High throughput multiscale modeling for design of experiments, catalysts, and reactors: Application to hydrogen production from ammonia"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:NtGNdKbuCngC",
+      "citation": "arXiv preprint arXiv 2204, 2022",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "How do graph networks generalize to large and diverse molecular systems"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:pRWBApOjXDcC",
+      "citation": "Applied Catalysis B: Environmental 320, 121959, 2023",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Identifying limitations in screening high-throughput photocatalytic bimetallic nanoparticles with machine-learned hydrogen adsorptions"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:rqnDXT1GswoC",
+      "citation": "Physical Chemistry Chemical Physics 22 (35), 19454-19458, 2020",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "In silico discovery of active, stable, CO-tolerant and cost-effective electrocatalysts for hydrogen evolution and oxidation"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:0EnyYjriUFMC",
+      "citation": "Chemistry of Materials 26 (1), 172-183, 2014",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Low dimensional carbon materials for applications in mass and energy transport"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:sbeIDTyQOFgC",
+      "citation": "Acs Catalysis 7 (10), 6600-6608, 2017",
+      "num_citations": 399,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Machine-Learning Methods Enable Exhaustive Searches for Active Bimetallic Facets and Reveal Active Site Motifs for CO2 Reduction"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:EBV337fEn3EC",
+      "citation": "Machine Learning: Science and Technology 1 (2), 025006, 2020",
+      "num_citations": 230,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Methods for comparing uncertainty quantifications for material property predictions"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:idthP5jqfYAC",
+      "citation": "Massachusetts Institute of Technology, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Modeling and simulation of stochastic phenomena in carbon nanotube-based single molecule sensors"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:9yKSN-GCB0IC",
+      "citation": "International Journal of Hydrogen Energy 37 (3), 2911-2923, 2012",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Modelling and development of photoelectrochemical reactor for H2 production"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:8k81kl-MbHgC",
+      "citation": "Nature nanotechnology 8 (12), 959-968, 2013",
+      "num_citations": 363,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Molecular recognition using corona phase complexes made of synthetic polymers adsorbed on carbon nanotubes"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:e3CVSTJ63dQC",
+      "citation": "arXiv preprint arXiv:2503.18911, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Multi-Physics Inverse Design of Varifocal Optical Devices using Data-Driven Surrogates and Differential Modeling"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:LkGwnXOMwfcC",
+      "citation": "Acs Nano 6 (12), 10632-10645, 2012",
+      "num_citations": 64,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Observation of oscillatory surface reactions of riboflavin, trolox, and singlet oxygen using single carbon nanotube fluorescence spectroscopy"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:cRMvf6lLvU8C",
+      "citation": "Acs Catalysis 11 (10), 6059-6072, 2021",
+      "num_citations": 621,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Open catalyst 2020 (OC20) dataset and community challenges"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:cF7EPgIk0B4C",
+      "citation": "arXiv preprint arXiv:2411.11783, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Open Catalyst Experiments 2024 (OCx24): Bridging Experiments and Computational Models"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:kO05sadLmrgC",
+      "citation": "ACS Catalysis 12 (14), 8572-8581, 2022",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Open challenges in developing generalizable large-scale machine-learning models for catalyst discovery"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:rpSJNIKeXWsC",
+      "citation": "arXiv preprint arXiv:2410.12771, 2024",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Open materials 2024 (omat24) inorganic materials dataset and models"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:bXQfdp6S9ecC",
+      "citation": "The Journal of Physical Chemistry C 123 (48), 29209-29218, 2019",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Optimization-based design of active and stable nanostructured surfaces"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:u3T1itk59dMC",
+      "citation": "ACS Catalysis 10 (7), 4244-4252, 2020",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Parallelized screening of characterized and DFT-modeled bimetallic colloidal cocatalysts for photocatalytic hydrogen evolution"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Kqc1aDSOPooC",
+      "citation": "ACS nano 10 (8), 7542-7549, 2016",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Persistently auxetic materials: Engineering the poisson ratio of 2D Self-Avoiding membranes under conditions of Non-Zero Anisotropic Strain"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:as0KMg8qHbkC",
+      "citation": "US Patent 9,801,536, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Polarimetric accessory for colposcope"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:xa5BkEQK8BgC",
+      "citation": "Journal of the American Chemical Society 146 (23), 15740-15750, 2024",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Pourbaix machine learning framework identifies acidic water oxidation catalysts exhibiting suppressed ruthenium dissolution"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:HKviVsUxM5wC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Practical Application of Machine Learning in Catalysis"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:l6Q3WhenKVUC",
+      "citation": "The journal of physical chemistry letters 11 (9), 3185-3191, 2020",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Practical deep-learning representation for fast heterogeneous catalyst screening"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:XtJa11BXPS4C",
+      "citation": "Carnegie Mellon Univ., Pittsburgh, PA (United States), 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Predicting Catalyst Surface Stability Under Reaction Conditions Using Deep Reinforcement Learning and Machine Learning Potentials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:uAPFzskPt0AC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Predicting Intermetallic Surface Energies with High-Throughput DFT and Convolutional Neural Networks"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:N6_Y7JlWxwsC",
+      "citation": "Oxidation of Metals 98 (5), 429-450, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Predicting oxidation behavior of multi-principal element alloys by machine learning methods"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:3fE2CSJIrl8C",
+      "citation": "ACS nano 8 (4), 3367-3379, 2014",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Quantitative theory of adsorptive separation for the electronic sorting of single-walled carbon nanotubes"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:txeM2kYbVNMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Replica-Exchange Molecular Dynamics on Hadoop 18.337 Final Report"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:i91s68tWr-MC",
+      "citation": "Machine Learning: Science and Technology 3 (4), 045028, 2022",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Robust and scalable uncertainty estimation with conformal prediction for machine-learned interatomic potentials"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:wuD5JclIwkYC",
+      "citation": "arXiv preprint arXiv:2106.09575, 2021",
+      "num_citations": 92,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Rotation invariant graph neural networks using spin convolutions"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:oldoQiaHq2UC",
+      "citation": "The Journal of Chemical Physics 157 (7), 2022",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Screening of bimetallic electrocatalysts for water purification with machine learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:M0j1y4EgrScC",
+      "citation": "Available at SSRN 4145497, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Site Geometry as a Descriptor for Catalystsite Geometry as a Descriptor for Catalyst Selectivity in Intermetallicsselectivity in Interme"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:kNdYIx-mwKoC",
+      "citation": "Nano letters 14 (8), 4887-4894, 2014",
+      "num_citations": 109,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Spatiotemporal intracellular nitric oxide signaling captured using internalized, near-infrared fluorescent carbon nanotube nanosensors"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:NU-BerS4NX4C",
+      "citation": "Advances in Neural Information Processing Systems 35, 8054-8067, 2022",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Spherical channels for modeling atomic interactions"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:Se3iqnhoufwC",
+      "citation": "The Journal of Physical Chemistry C 117 (19), 9641-9651, 2013",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Stochastic pore blocking and gating in PDMS–glass nanopores from vapor–liquid phase transitions"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:v_tt_AnqfNMC",
+      "citation": "2012 American Control Conference (ACC), 1-7, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Systems nanotechnology: Identification, estimation, and control of nanoscale systems"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:qjMakFHDy7sC",
+      "citation": "The Journal of chemical physics 135 (8), 2011",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The chemical dynamics of nanosensors capable of single-molecule detection"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:zdX0sdgBH_kC",
+      "citation": "arXiv preprint arXiv:2010.09990, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "The Open Catalyst 2020 (OC20) Dataset and Community Challenges. arXiv e-prints 2020"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:VnuxuLaQPLMC",
+      "citation": "ACS Catalysis 13 (5), 3066-3084, 2023",
+      "num_citations": 178,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "The Open Catalyst 2022 (OC22) dataset and challenges for oxide electrocatalysts"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:AFXcoJnoRH0C",
+      "citation": "NeurIPS (Competition and Demos), 29-40, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "The Open Catalyst Challenge 2021: Competition Report."
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:yZoBfgUKqwcC",
+      "citation": "ACS Central Science 10 (5), 923-941, 2024",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "The Open DAC 2023 dataset and challenges for sorbent discovery in direct air capture"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:e84hm74t-eoC",
+      "citation": "The Journal of Physical Chemistry C 122 (26), 14481-14487, 2018",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Theoretical investigations of transition metal surface energies under lattice strain and CO environment"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:BJtnxTr0fRcC",
+      "citation": "Nature communications 8 (1), 14621, 2017",
+      "num_citations": 584,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "To address surface reaction network complexity using scaling relations machine learning and DFT calculations"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:i_7YvbSbtFEC",
+      "citation": "Acs Catalysis 9 (9), 7651-7659, 2019",
+      "num_citations": 168,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Toward a design of active oxygen evolution catalysts: insights from automated density functional theory calculations and machine learning"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:oursBaop5wYC",
+      "citation": "Journal of chemical information and modeling 59 (11), 4742-4749, 2019",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Toward predicting intermetallics surface properties with high-throughput DFT and convolutional neural networks"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:pUxgyZctzPYC",
+      "citation": "The Journal of Chemical Physics 156 (18), 2022",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Transfer learning using attentions across atomic systems with graph neural networks (TAAG)"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:u5HHmVD_uO8C",
+      "citation": "Journal of biomedical optics 11 (6), 060504-060504-3, 2006",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Visualization of biological texture using correlation coefficient images"
+    },
+    {
+      "author_pub_id": "E0tlVgQAAAAJ:mVC4hKzE2FoC",
+      "citation": "Journal of Chemical Information and Modeling 63 (8), 2427-2437, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "WhereWulff: A Semiautonomous Workflow for Systematic Catalyst Surface Reactivity under Reaction Conditions"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "E0tlVgQAAAAJ"
+}

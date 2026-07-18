@@ -1,0 +1,3338 @@
+{
+  "display_name": "Ganger",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Ganger.json",
+  "publication_count": 425,
+  "publications": [
+    {
+      "author_pub_id": "l6oz33MAAAAJ:YFjsv_pBGBYC",
+      "citation": "Carnegie Mellon University, 2007",
+      "num_citations": 101,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "//Trace: parallel trace replay with approximate causal events"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_Qo2XoVZTnwC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "//TRACE: Parallel Trace Replay with Approximate Causal Events (CMU-PDL-06-108)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sJsF-0ZLhtgC",
+      "citation": "Proceedings of the Thirteenth EuroSys Conference, 1-17, 2018",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "3sigma: distribution-based cluster scheduling for runtime uncertainty"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:QIV2ME_5wuYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "5th USENIX Conference on File and Storage Technologies–Abstract"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_xSYboBqXhAC",
+      "citation": "Pittsburgh, PA: CMUPDL-09-101: Carnegie Mellon University Parallel Data Lab …, 2009",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A (In) Cast of thousands: scaling datacenter TCP to kiloservers and gigabits"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:b0M2c_1WBrUC",
+      "citation": "Carnegie Mellon University, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A (In) Cast of Thousands: Scaling Datacenter TCP to Kiloservers and Gigabits (CMU-PDL-09-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:m92CDrhVnKEC",
+      "citation": "Proceedings of the 3rd Workshop on Sustainable Computer Systems (HotCarbon), 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A call for research on storage emissions"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:0CzhzZyukY4C",
+      "citation": "10th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 18), 2018",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A case for packing and indexing in cloud file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:PR6Y55bgFSsC",
+      "citation": "Proceedings of the 3rd USENIX Conference on File and Storage Technologies …, 2004",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "A framework for building unobtrusive disk maintenance applications"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ZuybSZzF8UAC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Framework for Building Unobtrusive Disk Maintenance Applications (CMU-CS-03-192)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:BwyfMAYsbu0C",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A human organization analogy for self-* systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:S16KYo8Pm5AC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Human Organization Analogy for Self-* Systems (CMU-CS-03-129)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:r0BpntZqJG4C",
+      "citation": "Proceedings, 2nd Berinoro Workshop on Future Directions in Distributed Computing, 2004",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "A protocol family approach to survivable storage infrastructures"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4MWp96NkSFoC",
+      "citation": "Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-03-103 …, 2003",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A protocol family for versatile survivable storage infrastructures"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4OULZ7Gr8RgC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A Protocol Family for Versatile Survivable Storage Infrastructures (CMU-PDL-03-103)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LkGwnXOMwfcC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A prototype user interface for coarse-grained desktop access control"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A Prototype User Interface for Coarse-Grained Desktop Access Control (CMU-CS-03-200)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LPtt_HFRSbwC",
+      "citation": "The HDF Group, Champaign, IL (United States), 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A Software Defined Storage Approach to Exascale Storage Services (Final Technical Report)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:zCSUwVk65WsC",
+      "citation": "Algorithms and Architectures for Self-Managing Systems, 13-18, 2003",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A two-tiered software architecture for automated tuning of disk layouts"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_kc_bZDykSQC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Two-Tiered Software Architecture for Automated Tuning of Disk Layouts (CMU-CS-03-130)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:UHK10RUVsp4C",
+      "citation": "2010 USENIX Annual Technical Conference (USENIX ATC 10), 2010",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "A {Transparently-Scalable} Metadata Service for the Ursa Minor Storage System"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:CdxZDUztZiMC",
+      "citation": "arXiv preprint arXiv:1910.00762, 2019",
+      "num_citations": 138,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Accelerating deep learning by focusing on the biggest losers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HeT0ZceujKMC",
+      "citation": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems …, 2010",
+      "num_citations": 186,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Access control for home data sharing: Attitudes, needs and practices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LjlpjdlvIbIC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Access Control for Home Data Sharing: Attitudes, Needs and Practices (CMU-CyLab-09-013, CMU-PDL-09-110)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:DUooU5lO8OsC",
+      "citation": "CHI, 645-654, 2010",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Access control for home data sharing: evaluating social acceptability."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XvxMoLDsR5gC",
+      "citation": "Proceedings of the 27th international ACM conference on International …, 2013",
+      "num_citations": 167,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Active disk meets flash: A case for intelligent ssds"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:iH-uZ7U-co4C",
+      "citation": "Proceedings of the seventh ACM symposium on cloud computing, 98-111, 2016",
+      "num_citations": 167,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Addressing the straggler problem for iterative convergent parallel ML"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:J_g5lzvAfSwC",
+      "citation": "ACM Transactions on Storage (TOS) 10 (4), 1-27, 2014",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Agility and performance in elastic distributed storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_5tno0g5mFcC",
+      "citation": "Proceedings of the third ACM Symposium on Cloud Computing, 1-7, 2012",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "alsched: Algebraic scheduling of mixed workloads in heterogeneous clouds"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:3htObqc8RwsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "An Unsolved Problem"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:L8Ckcad2t8MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Appeared in the Proceedings of the ACM Sigmetrics Conference, May, 1994, pp. 241-251. Scheduling Algorithms for Modern Disk Drives"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:6ZxmRoH8BuwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Appears in Proceedings of the 4th Symposium on Operating Systems Design and Implementation. San Diego, CA. October, 2000."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WqliGbK-hY8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Appears in Proceedings of the Ąth Symposium on Operating Systems Design and Implementation, 2000"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:qUcmZB5y_30C",
+      "citation": "Proceedings of the sixteenth ACM symposium on Operating systems principles …, 1997",
+      "num_citations": 473,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Application performance and flexibility on exokernel systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:VaXvl8Fpj5cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Application-level Flow Scheduling for Efficient Collective Data Transfers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yqoGN6RLRZoC",
+      "citation": "Proceedings of the ACM SIGMETRICS joint international conference on …, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Applying idealized lower-bound runtime models to understand inefficiencies in data-intensive computing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hFOr9nPyWt4C",
+      "citation": "DTIC Document, 2010",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Applying performance models to understand data-intensive computing efficiency"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:KxtntwgDAa4C",
+      "citation": "Technical report. 2011. CMU-PDL-11-103, 2011",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Applying simple performance models to understand inefficiencies in data-intensive computing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SpbeaW3--B0C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Argon: Performance Insulation for Shared Storage Servers (CMU-PDL-06-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:KbBQZpvPDL4C",
+      "citation": "FAST 7, 5-5, 2007",
+      "num_citations": 319,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Argon: Performance Insulation for Shared Storage Servers."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-f6ydRqryjwC",
+      "citation": "Carnegie Mellon University, 2013",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Asymmetry-aware execution placement on manycore chips"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uWQEDVKXjbEC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Atropos: A Disk Array Volume Manager for Orchestrated Use of Disks (CMU-PDL-03-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WJVC3Jt7v1AC",
+      "citation": "FAST 4, 2004",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Atropos: A Disk Array Volume Manager for Orchestrated Use of Disks."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OR75R8vi5nAC",
+      "citation": "",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Attribute-based prediction of file properties"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:g5m5HwL7SMYC",
+      "citation": "Carnegie Mellon University, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Authentication Confidences (CMU-CS-01-123)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yY3RG6sOEgwC",
+      "citation": "HotOS, 169, 2001",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Authentication Confidences."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:i2xiXl-TujoC",
+      "citation": "4th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 12), 2012",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Automated diagnosis without predictability is a recipe for failure"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4TOpqqG69KYC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 28 (1), 112-113, 2000",
+      "num_citations": 202,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Automated disk drive characterization"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tzM49s52ZIMC",
+      "citation": "Technical report, 1999",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Automated disk drive characterization"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:PELIpwtuRlgC",
+      "citation": "Carnegie Mellon University, 1999",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Automated Disk Drive Characterization (CMU-CS-99-176)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:9yKSN-GCB0IC",
+      "citation": "ACM SIGOPS Operating Systems Review 34 (2), 36, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Automatic function placement in distributed storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:JTqpx9DYBaYC",
+      "citation": "Proceedings of the ACM Symposium on Cloud Computing, 61-75, 2021",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Automating instrumentation choices for performance problems in distributed applications with VAIF"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:vbGhcppDl1QC",
+      "citation": "Technical report CMU-PDL-11-101. Carnegie Mellon University, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Automation without predictability is a recipe for failure"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:bFI3QPDXJZMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "AWASTHI, Pranjal CMU-ML-13-107 BRADLEY, Joseph K. CMU-ML-13-100 CASTELLANOS, Lucia CMU-ML-13-108 CHEN, Xi CMU-ML-13-105"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Mojj43d5GZwC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Balancing locality and randomness in DHTs"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:M3ejUd6NZC8C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Balancing Locality and Randomness in DHTs (CMU-CS-03-203)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:naSTrk-c4S8C",
+      "citation": "22nd USENIX Conference on File and Storage Technologies (FAST 24), 347-371, 2024",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Baleen:{ML} admission & prefetching for flash caches"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4Yq6kJLCcecC",
+      "citation": "SIGMETRICS'07: Proceedings of the 2007 International Conference on …, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Best Paper Award"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:IUKN3-7HHlwC",
+      "citation": "Proceedings Eighth Workshop on Hot Topics in Operating Systems, 100-105, 2001",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Better security via smarter devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Ak0FvsSvgGUC",
+      "citation": "Carnegie Mellon Univ., Pittsburgh, PA, Tech. Rep. CMU-PDL-17–104, 2017",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Bigger, longer, fewer: what do cluster jobs look like outside google"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Se3iqnhoufwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Blurring the Line Between Operating Systems and Storage Devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OP4eGU-M3BUC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2001",
+      "num_citations": 85,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Blurring the line between OSes and storage devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:MXK_kJrjxJIC",
+      "citation": "Carnegie Mellon University, 2001",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Blurring the line between OSes and storage devices. School of Computer Science"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:b1wdh0AR-JQC",
+      "citation": "Technical Report CMU-CS-03-187, Carnegie Mellon University School for …, 2003",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Byzantine-tolerant erasure-coded storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dfsIfKJdRG4C",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Byzantine-tolerant Erasure-coded Storage (CMU-CS-03-187)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:rbm3iO8VlycC",
+      "citation": "",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "1983",
+      "title": "Carnegie Mellon University"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:GtLg2Ama23sC",
+      "citation": "Hot Topics in Autonomic Computing, 2, 2007",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Categorizing and differencing system behaviours"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:g3aElNc5_aQC",
+      "citation": "Carnegie Mellon University Parallel Data Laboratory Technical Report CMU-PDL …, 2004",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Challenges in Building a Two-Tiered Learning Architecture for Disk Layout"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:8AbLer7MMksC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Challenges in Building a Two-Tiered Learning Architecture for Disk Layout (CMU-PDL-04-109)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hkOj_22Ku90C",
+      "citation": "Proceedings of the Thirtieth international conference on Very large data …, 2004",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Clotho: Decoupling memory page layout from storage organization"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:k8Z6L05lTy4C",
+      "citation": "Proceedings of the 30th VLDB Conference 3 (4.1), 3.4, 2004",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Clotho: Decoupling page layout from storage organization"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:qmtmRrLr0tkC",
+      "citation": "Conference Proceedings, 336, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Cluster Scheduling for Explicitly-Speculative Tasks"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tuHXwOkdijsC",
+      "citation": "Proceedings of the 18th annual international conference on Supercomputing …, 2004",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Cluster scheduling for explicitly-speculative tasks"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:wKETBy42zhYC",
+      "citation": "17th USENIX Conference on File and Storage Technologies (FAST 19), 345-358, 2019",
+      "num_citations": 71,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Cluster storage systems gotta have {HeART}: improving storage efficiency by exploiting disk-reliability heterogeneity"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:86PQX7AUzd4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "CMU-PDL-16-104 September 2016"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:AHdEip9mkN0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "CMU-PDL-17-107 November 2017"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:q3oQSFYPqjQC",
+      "citation": "2009 28th IEEE International Symposium on Reliable Distributed Systems, 278-287, 2009",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Co-scheduling of disk head time in cluster-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tS2w5q8j5-wC",
+      "citation": "Carnegie Mellon University, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Co-Scheduling of Disk Head Time in Cluster-Based Storage (CMU-PDL-08-113)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yxmsSjX2EkcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Compact Filter Structures for Fast Data Partitioning"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:6bLC7aUMtPcC",
+      "citation": "2019 IEEE International Conference on Cluster Computing (CLUSTER), 1-12, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Compact Filters for Fast Online Data Partitioning"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5Ul4iDaHHb8C",
+      "citation": "USENIX Annual Technical Conference, General Track, 121-133, 2005",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Comparison-Based File Server Verification."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:silx2ntsSuwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Composition as a tool for HPC service development"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:j3f4tGmQtD8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Computational Database Systems for Massive Scientific Datasets"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Aul-kAQHnToC",
+      "citation": "Proceedings of the twentieth ACM symposium on operating systems principles …, 2005",
+      "num_citations": 228,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Connections: using context to enhance file search"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:F9fV5C73w3QC",
+      "citation": "Carnegie Mellon University, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Connections: Using Context to Enhance File Search (CMU-PDL-05-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:48xauSegjOkC",
+      "citation": "Carnegie Mellon University Technical Report CMU-CS-03-102, 0",
+      "num_citations": 6,
+      "pub_url": "",
+      "title": "CONTRIBUTORS. 2003. The DiskSim simulation environment version 3.0 reference manual"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:qjMakFHDy7sC",
+      "citation": "Parallel Data Lab., Carnegie Mellon Univ., Pittsburgh, PA, USA, Tech. Rep, 2008",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Contributors. The disksim simulation environment version 4.0 reference manual"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yFnVuubrUp4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Correctness of the Read/Conditional-Write and Query/Update protocols"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uJ-U7cs_P_0C",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2002",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Cuckoo: layered clustering for NFS"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:EkHepimYqZsC",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Cuckoo: Layered clustering for NFS (CMU-CS-02-183)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dhFuZR0502QC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "D-SPTF: Decentralized Request Distribution in Brick-based Storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kzcrU_BdoSEC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "D-SPTF: Decentralized Request Distribution in Brick-based Storage (CMU-CS-03-202)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HE397vMXCloC",
+      "citation": "Proceedings of the 2000 ACM SIGMOD international conference on Management of …, 2000",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Data mining on an OLTP system (nearly) for free"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:vDijr-p_gm4C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Data Mining on an OLTP System (Nearly) for Free (CMU-CS-99-151)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:UeHWp8X0CEIC",
+      "citation": "",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Database of validated disk parameters for DiskSim"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:YohjEiUPhakC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Decentralized Recovery for Survivable Storage Systems Theodore Ming-Tao Wong May 2004"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:TIZ-Mc8IlK0C",
+      "citation": "CMU-CS-02-180, 2002",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Decentralized storage consistency via versioning servers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:W7OEmFMy1HYC",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Decentralized Storage Consistency via Versioning Servers (CMU-CS-02-180)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:FAceZFleit8C",
+      "citation": "Massachusetts Institute of Technology, Department of Electrical Engineering …, 1997",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Decentralizing UNIX abstractions in the exokernel architecture"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:69ZgNCALVd0C",
+      "citation": "Proceedings of the International Conference for High Performance Computing …, 2021",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Deltafs: A scalable no-ground-truth filesystem for massively-parallel computing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:zA6iFVUQeVQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Department of Electrical Engineering and Computer Science University of Michigan, Ann Arbor 48109-2122 worthing@ eecs. umich. edu"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:foquWX3nUaYC",
+      "citation": "Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-03-107, 2003",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Design and implementation of a freeblock subsystem"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:BUYA1_V_uYcC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Design and Implementation of a Freeblock Subsystem (CMU-PDL-03-107)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kh2fBNsKQNwC",
+      "citation": "Carnegie Mellon University, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Design and Implementation of a Self-Securing Storage Device (CMU-CS-00-129)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:43bX7VzcjpAC",
+      "citation": "Fourth Symposium on Operating Systems Design and Implementation (OSDI 2000), 2000",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Design and Implementation of a {Self-Securing} Storage Device"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:k_IJM867U9cC",
+      "citation": "ACM SIGARCH Computer Architecture News 28 (5), 1-12, 2000",
+      "num_citations": 139,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Designing computer systems with MEMS-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:GFxP56DSvIMC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Designing Computer Systems with MEMS-based Storage (CMU-CS-00-137)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:w0F2JDEymm0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Diagnosing performance changes by comparing request ﬂows"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yMeIxYmEMEAC",
+      "citation": "8th USENIX Symposium on Networked Systems Design and Implementation (NSDI 11), 2011",
+      "num_citations": 261,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Diagnosing performance changes by comparing request flows"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Zph67rFs4hoC",
+      "citation": "Technical Report CMU-PDL-10–107. Parallel Data Laboratory, 2010",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Diagnosing performance changes by comparing system behaviours"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5nxA0vEk-isC",
+      "citation": "Technical report 10–103. Carnegie Mellon University, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Diagnosing performance problems by visualizing and comparing system behaviours"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:L7CI7m0gUJcC",
+      "citation": "FAST 4, 73-86, 2004",
+      "num_citations": 159,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Diamond: A Storage Architecture for Early Discard in Interactive Search."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OU6Ihb5iCvQC",
+      "citation": "Computer 27 (3), 30-36, 1994",
+      "num_citations": 186,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Disk arrays: high-performance, high-reliability storage subsystems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:EYYDruWGBe4C",
+      "citation": "US Patent 6,693,766, 2004",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Disk drive system with hybrid surface-based data mapping and method of operation thereof"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:vRqMK49ujn8C",
+      "citation": "[1993] Proceedings of the Twenty-sixth Hawaii International Conference on …, 1993",
+      "num_citations": 109,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Disk subsystem load balancing: Disk striping vs. conventional data placement"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:p__nRnzSRKYC",
+      "citation": "13th Workshop on Hot Topics in Operating Systems (HotOS XIII), 2011",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Disks are like snowflakes: no two are alike"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:F2UWTTQJPOcC",
+      "citation": "",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Disksim"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ubry08Y2EpUC",
+      "citation": "DiskSim, 2010",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "DiskSim 4.0"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:JQOojiI6XY0C",
+      "citation": "2000 USENIX Annual Technical Conference (USENIX ATC 00), 2000",
+      "num_citations": 172,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Dynamic Function Placement for {Data-Intensive} Cluster Computing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ruyezt5ZtCIC",
+      "citation": "Technical Report CMU-CS-99-140, 1999",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Dynamic function placement in active storage clusters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:j7_hQOaDUrUC",
+      "citation": "Carnegie Mellon University, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Dynamic Function Placement in Active Storage Clusters (CMU-CS-99-140)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:bEWYMUwI8FkC",
+      "citation": "International Conference on Dependable Systems and Networks, 2004, 73-82, 2004",
+      "num_citations": 108,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Dynamic quarantine of Internet worms"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:umqufdRvDiIC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Dynamic Quarantine of Internet Worms (CMU-PDL-03-108)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:F1b5ZUV5XREC",
+      "citation": "Proc. MLSys, 1-3, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Dynamic stem-sharing for multi-tenant video processing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:0KyAp5RtaNEC",
+      "citation": "IEEE Data Eng. Bull. 29 (3), 55-62, 2006",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Early experiences on the journey towards self-* storage."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:W5xh706n7nkC",
+      "citation": "Proceedings of the 9th workshop on ACM SIGOPS European workshop: beyond the …, 2000",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Easing the management of data-parallel systems via adaptation"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:EUQCXRtRnyEC",
+      "citation": "International Conference on Dependable Systems and Networks, 2004, 135-144, 2004",
+      "num_citations": 275,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Efficient Byzantine-tolerant erasure-coded storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XD-gHx7UXLsC",
+      "citation": "Technical Report CMU-CS-03-127, 2003",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Efficient consistency for erasure-coded data via versioning servers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:e_rmSamDkqQC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Efficient Consistency for Erasure-coded Data via Versioning Servers (CMU-CS-03-127)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:YsMSGLbcyi4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Efficient Mixed-Platform Clouds"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Br1UauaknNIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ekanadham, Kattamuri Emer, Joel Enright Jerger, Natalie Erez, Mattan"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:NhqRSupF_l8C",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Eliminating Cross-server Operations in Scalable File Systems (CMU-PDL-06-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:jmjb1lOE9QIC",
+      "citation": "USENIX 1997 Annual Technical Conference (USENIX ATC 97), 1997",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Embedded Inodes and Explicit Grouping: Exploiting Bandwidth for Small Files"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:M3NEmzRMIkIC",
+      "citation": "USENIX Annual Technical Conference, 1-17, 1997",
+      "num_citations": 264,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Embedded Inodes and Explicit Grouping: Exploiting Disk Bandwidth for Small Files."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LI9QrySNdTsC",
+      "citation": "IBM systems journal 42 (1), 60-76, 2003",
+      "num_citations": 179,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Enabling autonomic behavior in systems software with hot swapping"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dTyEYWd-f8wC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2000",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Enabling dynamic security management of networked systems via device-embedded security"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:1yQoGdGgb4wC",
+      "citation": "Carnegie Mellon University, Pittsburgh, PA, http://www. pdl. cmu. edu/PDL …, 2000",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Enabling dynamic security management of via device-embedded security"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:RHpTSmoSYBkC",
+      "citation": "Carnegie Mellon University, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Enabling Dynamic Security Management of via Device-Embedded Security (CMU-CS-00-174)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:edDO8Oi4QzsC",
+      "citation": "Carnegie Mellon University. Information Networking Institute, 2001",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Examining Semantics In Multi-Protocol Network File Systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tkaPQYYpVKoC",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Examining Semantics In Multi-Protocol Network File Systems (CMU-CS-02-103)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SdhP9T11ey4C",
+      "citation": "3rd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 11), 2011",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Exertion-based billing for cloud storage access"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:cFHS6HbyZ2cC",
+      "citation": "2014 USENIX Annual Technical Conference (USENIX ATC 14), 37-48, 2014",
+      "num_citations": 213,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Exploiting bounded staleness to speed up big data analytics"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5ugPr518TE4C",
+      "citation": "Proceedings of the ACM Symposium on Cloud Computing, 1-14, 2014",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Exploiting iterative-ness for parallel ML computations"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:vV6vV6tmYwMC",
+      "citation": "Technical Report CMU–CS–03–125. Carnegie-Mellon University, Pittsburgh, PA, 2003",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Exposing and exploiting internal parallelism in MEMS-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sNmaIFBj_lkC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Exposing and Exploiting Internal Parallelism in MEMS-based Storage (CMU-CS-03-125)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:8dzOF9BpDQoC",
+      "citation": "ACM Transactions on Storage 19 (1), 1-33, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Extending and Programming the NVMe I/O Determinism Interface for Flash Arrays"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ULOm3_A8WrAC",
+      "citation": "ACM Transactions on Computer Systems (TOCS) 20 (1), 49-83, 2002",
+      "num_citations": 94,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Fast and flexible application-level networking on exokernel systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:KlAtU1dfN6UC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Fast and Flexible Application-level Networking on Exokernel Systems (CMU-CS-00-117)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:j8SEvjWlNXcC",
+      "citation": "ACM SIGOPS Operating Systems Review 39 (5), 59-74, 2005",
+      "num_citations": 576,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Fault-scalable Byzantine fault-tolerant services"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:buQ7SEKw-1sC",
+      "citation": "proc. 20th ACM symp. on Op. Sys. Principles, ACM SIGOPS, Brighton (UK), 2005",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Faultscalable Byzantine Fault-tolerant Services"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ILKRHgRFtOwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "File Attribute-Based Predictions and Optimizations"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dQ2og3OwTAUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "File classiﬁcation in self-* storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:u-coK7KVo8oC",
+      "citation": "International Conference on Autonomic Computing, 2004. Proceedings., 44-51, 2004",
+      "num_citations": 125,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "File classification in self-* storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_FM0Bhl9EiAC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "File Classification in Self-* Storage Systems (CMU-PDL-04-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uWiczbcajpAC",
+      "citation": "ACM Transactions on Storage (TOS) 8 (3), 1-26, 2012",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "File system virtual appliances: Portable file system implementations"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:oNZyr7d5Mn4C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "File System Virtual Appliances: Portable File System Implementations (CMU-PDL-09-102)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:xtRiw3GOFMkC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "File System Virtual Appliances: Third-party File System Implementations without the Pain (CMU-PDL-08-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LhH-TYMQEocC",
+      "citation": "Tech. Rep. CMUPDL-08-106, Carnegie Mellon University Parallel Data Lab. May, 2008",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "File system virtual appliances: Thirdparty file system implementations without the pain"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:3NQIlFlcGxIC",
+      "citation": "Proceedings of the 27th ACM Symposium on Operating Systems Principles, 353-369, 2019",
+      "num_citations": 127,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "File systems unfit as distributed storage backends: lessons from 10 years of Ceph evolution"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:a9-T7VOCCH8C",
+      "citation": "Technical Report CMU-CS-99-174, Carnegie Mellon University, 1999",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Filling the memory access gap: A case for on-chip magnetic storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:otzGkya1bYkC",
+      "citation": "Carnegie Mellon University, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Filling the Memory Access Gap: A Case for On-Chip Magnetic Storage (CMU-CS-99-174)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:xtoqd-5pKcoC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Finding and containing enemies within the walls with self-securing network interfaces"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Dip1O2bNi0gC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Finding and Containing Enemies Within the Walls with Self-securing Network Interfaces (CMU-CS-03-109)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XoXfffV-tXoC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Freeblock Scheduling Outside of Disk Firmware (CMU-CS-01-149)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dshw04ExmUIC",
+      "citation": "FAST 2, 275-288, 2002",
+      "num_citations": 139,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Freeblock Scheduling Outside of Disk Firmware."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eJXPG6dFmWUC",
+      "citation": "14th USENIX symposium on networked systems design and implementation (NSDI …, 2017",
+      "num_citations": 556,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Gaia:{Geo-Distributed} machine learning approaching {LAN} speeds"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kNdYIx-mwKoC",
+      "citation": "Proceedings of the eleventh european conference on computer systems, 1-16, 2016",
+      "num_citations": 412,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Geeps: Scalable deep learning on distributed gpus with a gpu-specialized parameter server"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:bz8QjSJIRt4C",
+      "citation": "Proc. Computer Measurement Group (CMG) Conference, Dec. 1995, 1995",
+      "num_citations": 154,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Generating representative synthetic workloads: An unsolved problem"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:jL-93Qbq4QoC",
+      "citation": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 691-704, 2018",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Geriatrix: Aging what you see and what you {don’t} see. a file system aging approach for modern storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:m4fbC6XIj1kC",
+      "citation": "arXiv preprint arXiv:2406.17145, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Graphpipe: Improving performance and scalability of dnn training with graph pipeline parallelism"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:R3hNpaxXUhUC",
+      "citation": "Proceedings of the third ACM symposium on cloud computing, 1-13, 2012",
+      "num_citations": 1393,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Heterogeneity and dynamicity of clouds at scale: Google trace analysis"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uVUOdF_882EC",
+      "citation": "Proceedings of the 11th ACM Symposium on Cloud Computing, 165-178, 2020",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "High availability in cheap distributed key value storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:gKiMpY-AVTkC",
+      "citation": "hotos, 0177, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Hinting for Goodness"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:vDZJ-YLwNdEC",
+      "citation": "Proceedings of the Eighth Workshop on Hot Topics in Operating Systems, 177, 2001",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Hinting for goodness' sake"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sfnaS5RM6jYC",
+      "citation": "Communications of the ACM 53 (7), 5-5, 2010",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Hypercriticality"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:fEOibwPWpKIC",
+      "citation": "Technical Report 06-104, Parallel Data Laboratory, Carnegie Mellon University, 2006",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Improving small file performance in object-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HDshCWvjkbEC",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Improving Small File Performance in Object-based Storage (CMU-PDL-06-104)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Y5dfb0dijaUC",
+      "citation": "Technical Report. Parallel Data Laboratory Carnegie Mellon University, 2010",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Improving storage bandwidth guarantees with performance insulation"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WZBGuue-350C",
+      "citation": "Carnegie Mellon University, 2009",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "In search of an API for scalable file systems: Under the table or above it?"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:VLnqNzywnoUC",
+      "citation": "Computer 42 (8), 30-37, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "in SIGIR, pp. 50–57, 1999.[7] AK Menon and C. Elkan,“Link prediction via matrix factorization,” in ECML PKDD, pp. 437–452, Springer, 2011.[8] S. Schelter, V. Satuluri, and RB Zadeh"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hqOjcs7Dif8C",
+      "citation": "ACM SIGOPS Operating Systems Review 34 (2), 30, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Incorporating MEMS-based storage into computer systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:RGFaLdJalmkC",
+      "citation": "2006 IEEE International Conference on Autonomic Computing, 187-198, 2006",
+      "num_citations": 78,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Informed data distribution selection in a self-predicting storage system"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:aqlVkmm33-oC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Informed Data Distribution Selection in a Self-predicting Storage System (CMU-PDL-06-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:M05iB0D1s5AC",
+      "citation": "Proceedings of the 3rd workshop on Data management for sensor networks: in …, 2006",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Intelligent system monitoring on large clusters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5awf1xo2G04C",
+      "citation": "ACM SIGOPS Operating Systems Review 40 (3), 38-44, 2006",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "InteMon: continuous mining of sensor data in large-scale self-infrastructures"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kw52XkFRtyQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Introduction to Computer Systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:pqnbT2bcN3wC",
+      "citation": "School of Computer Science Carnegie Mellon University, PA 15213, 2002",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Intrusion detection, diagnosis, and recovery with self-securing storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_axFR9aDTf0C",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Intrusion Detection, Diagnosis, and Recovery with Self-Securing Storage (CMU-CS-02-140)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:1qzjygNMrQYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "iny"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:TlpoogIpr_IC",
+      "citation": "Proceedings of the ACM SIGOPS 28th Symposium on Operating Systems Principles …, 2021",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "IODA: A host/device co-design for strong predictability contract on modern flash storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:JoZmwDi-zQgC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 36 (1), 253-264, 2008",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Ironmodel: Robust performance models in the wild"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OTTXONDVkokC",
+      "citation": "Proceedings of the Twenty-Fifth Hawaii International Conference on System …, 1992",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "Issues and problems in the I/O subsystem. I. The magnetic disk"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:8d8msizDQcsC",
+      "citation": "Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-12-112, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "JackRabbit: Improved agility in elastic distributed storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:7PzlFSSx8tAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "JAGADISH, HV CMU-CS-99-171 JOHNSON, David B. CMU-CS-99-148 JOHNSON, Theodore CMU-CS-99-171 JUVVA, Kanaka CMU-CS-99-107 KINDRED, Darrell S. CMU-CS-99-130"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SeFeTyx0c_EC",
+      "citation": "2000 USENIX Annual Technical Conference (USENIX ATC 00), 2000",
+      "num_citations": 427,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Journaling versus soft updates: Asynchronous meta-data protection in file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:PoWvk5oyLR8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Journaling versus Soft-Updates"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:pQTOvowfQioC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "JOURNALINGVERSUSSOFTU PD ATE S: ASYNCHRONOUSME TA-DA TA PROTECTION INFILESYSTEMS"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:DrR-2ekChdkC",
+      "citation": "Proceedings of the ACM SIGOPS 28th symposium on operating systems principles …, 2021",
+      "num_citations": 61,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Kangaroo: Caching billions of tiny objects on flash"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:aIdbFUkbNIkC",
+      "citation": "ACM Transactions on Storage (TOS) 18 (3), 1-33, 2022",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Kangaroo: Theory and practice of caching billions of tiny objects on flash"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mel-f30kHHgC",
+      "citation": "9th USENIX Symposium on Networked Systems Design and Implementation (NSDI 12 …, 2012",
+      "num_citations": 146,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Koi: A {Location-Privacy} platform for smartphone apps"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:1sJd4Hv_s6UC",
+      "citation": "Proceedings 2003 VLDB Conference, 706-717, 2003",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Lachesis: robust database storage management based on device-specific performance characteristics"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:2KloaMYe4IUC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Lachesis: Robust Database Storage Management Based on Device-specific Performance Characteristics (CMU-CS-03-124)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:L1USKYWJimsC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Lazy Redundancy for NVM Storage: Handing the Performance-Reliability Tradeoff to Applications"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:lSLTfruPkqcC",
+      "citation": "24th IEEE Symposium on Reliable Distributed Systems (SRDS'05), 179-190, 2005",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Lazy verification in fault-tolerant distributed storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:d1gkVwhDpl0C",
+      "citation": "Proceedings of the 7th ACM european conference on Computer Systems, 169-182, 2012",
+      "num_citations": 95,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "LazyBase: trading freshness for performance in a scalable database"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:wbdj-CoPYUoC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Location-based node ids: Enabling explicit locality in dhts"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ldfaerwXgEUC",
+      "citation": "Proceedings of the 1st workshop on Architectural and system support for …, 2006",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Log-based architectures for general-purpose monitoring of deployed code"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:7T2F9Uy0os0C",
+      "citation": "Intel Research Tech ReportIRP-TR-06-05, 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Logs and lifeguards: Accelerating dynamic program monitoring"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:9Nmd_mFXekcC",
+      "citation": "ACM SIGOPS Operating Systems Review 41 (6), 73-86, 2007",
+      "num_citations": 168,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Low-overhead byzantine fault-tolerant storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:2P1L_qKh6hAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MADHU, K. CMU-CS-01-125 MADHYASTHA, Tara CMU-CS-01-101 MAHABOOB, Habeen CMU-CS-01-162, CMU-CS-01-163"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:wMgC3FpKEyYC",
+      "citation": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 29-42, 2018",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Mainstream: Dynamic {Stem-Sharing} for {Multi-Tenant} Video Processing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mlAyqtXpCwEC",
+      "citation": "Proceedings of the Sixth ACM Symposium on Cloud Computing, 381-394, 2015",
+      "num_citations": 150,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Managed communication and consistency for fast data-parallel iterative analytics"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:35r97b3x0nAC",
+      "citation": "VLDB PhD Workshop, 2003",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Matching Database Access Patterns to Storage Characteristics."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eMMeJKvmdy0C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Measurement and Analysis of TCP Throughput Collapse in Cluster-based Storage Systems (CMU-PDL-07-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:35N4QoGY0k4C",
+      "citation": "FAST 8, 1-14, 2008",
+      "num_citations": 377,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Measurement and analysis of TCP throughput collapse in cluster-based storage systems."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SjuI4pbJlxcC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "title": "Memoization to reduce forward-passes in selective-backprop"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:nrtMV_XWKgEC",
+      "citation": "Nonvolatile Memory Technology Symp, 2001",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "MEMS memory elements"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LPZeul_q3PIC",
+      "citation": "Communications of the ACM 43 (11), 72-80, 2000",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "MEMS-based integrated-circuit mass-storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Og1tA8FjbJAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MEMS-Based Integrated-Circuit Mass-Storage Systems Abandoning the rotating disk paradigm, simple miniature microelectromechanical systems position probe tips over the storage …"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_Ybze24A_UAC",
+      "citation": "FAST, 87-100, 2004",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "MEMS-based storage devices and standard disk interfaces: A square peg in a round hole?"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:KUbvn5osdkgC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MEMS-Based Storage Devices and Standard Disk Interfaces: A Square Peg in a Round Hole?(CMU-PDL-03-102)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:URolC5Kub84C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Metadata Efficiency in a Comprehensive Versioning File System (CMU-CS-02-145)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ClCfbGk0d_YC",
+      "citation": "OSDI 94, 5, 1994",
+      "num_citations": 170,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Metadata Update Performance in File Systems."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:37UQlXuwjP4C",
+      "citation": "Proceedings of the 16th ACM International Conference on Systems and Storage …, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Mimir: Finding cost-efficient storage configurations in the public cloud"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:U_HPUtbDl20C",
+      "citation": "arXiv preprint arXiv:1904.03257, 2019",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Mlsys: The new frontier of machine learning systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:abG-DnoFyZgC",
+      "citation": "arXiv preprint arXiv:1803.07445, 2018",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Mltuner: System support for automatic machine learning tuning"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HGTzPopzzJcC",
+      "citation": "Journal of Computer Science and Technology 35, 121-144, 2020",
+      "num_citations": 97,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Mochi: Composing data services for high-performance computing environments"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:6_hjMsCP8ZoC",
+      "citation": "计算机科学技术学报 35 (1), 121-144, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Mochi: 为高性能计算环境组合数据服务"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:blknAaTinKkC",
+      "citation": "IEEE Transactions on Computers 47 (6), 66-624, 1998",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Modeling and Performance Evaluation Using System-Level Models to Evaluate I/O Subsystem Designs"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:738O_yMBCRsC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 28 (1), 56-65, 2000",
+      "num_citations": 109,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Modeling and performance of MEMS-based storage devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yB1At4FlUx8C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Modeling and Performance of MEMS-Based Storage Devices (CMU-CS-00-100)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Ehil0879vHcC",
+      "citation": "Technical Report CMU-CS-00-100, Carnegie Mellon Univeristy School of …, 1999",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Modeling and scheduling of mems-based storage devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5qfkUJPXOUwC",
+      "citation": "Technical Report CMU-CS—OO-lOO, Carnegie Mellon University, 1999",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Modeling and scheduling of mems—based storage devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:YOwf2qJgpHMC",
+      "citation": "Fast Abstract at International Conference on Dependable Systems & Networks …, 2002",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Modeling correlated failures in survivable storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:D_sINldO8mEC",
+      "citation": "Proceedings of the 2007 ACM SIGMETRICS international conference on …, 2007",
+      "num_citations": 123,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Modeling the relative fitness of storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_OXeSy2IsFwC",
+      "citation": "Carnegie Mellon University Parallel Data Lab Technical Report, 2005",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Modeling the relative fitness of storage devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:P5F9QuxV20EC",
+      "citation": "Carnegie Mellon University, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Modeling the Relative Fitness of Storage Devices (CMU-PDL-05-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:2osOgNQ5qMEC",
+      "citation": "Advances in neural information processing systems 26, 2013",
+      "num_citations": 981,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "More effective distributed ml via a stale synchronous parallel parameter server"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:NDuN12AVoxsC",
+      "citation": "12th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 20), 2020",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "More {IOPS} for less: Exploiting burstable storage in public clouds"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ji7lAbPyDbYC",
+      "citation": "Proceedings of the ACM SIGOPS 30th Symposium on Operating Systems Principles …, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Morph: Efficient File-Lifetime Redundancy Management for Cluster File Systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:t7zJ5fGR-2UC",
+      "citation": "2007 IEEE 23rd International Conference on Data Engineering, 926-935, 2006",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "MultiMap: Preserving disk locality for multidimensional datasets"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:isC4tDSrTZIC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MultiMap: Preserving Disk Locality for Multidimensional Datasets (CMU-PDL-05-102)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:jgBuDB5drN8C",
+      "citation": "Carnegie Mellon University, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "My Cache or Yours? Making Storage More Exclusive (CMU-CS-00-157)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:NXb4pA-qfm4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Narayanan, Dushyanth Parashar, Manish Pertet, Soila"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:TFP_iSt0sucC",
+      "citation": "Proceedings of Hot Interconnects 8, 1999",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Network support for network-attached storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hCrLmN-GePgC",
+      "citation": "IEEE Communications Magazine 41 (8), 84-90, 2003",
+      "num_citations": 772,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Object-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:IjCSPb-OGe4C",
+      "citation": "IEEE Potentials 24 (2), 31-34, 2005",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Object-based storage: pushing more functionality into storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:IWHjjKOFINEC",
+      "citation": "Workshop on hot topics in autonomic computing (HotAC) 11, 2007",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Observer: keeping system models from becoming obsolete"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4fGpz3EwCPoC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Observer: Keeping System Models from Becoming Obsolete (CMU-PDL-07-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:dBIO0h50nwkC",
+      "citation": "Proceedings of the 2nd international workshop on Petascale data storage …, 2007",
+      "num_citations": 101,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "On application-level approaches to avoiding TCP throughput collapse in cluster-based storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:nZcligLrVowC",
+      "citation": "Technical Report CMU-CS-02-129, Carnegie Mellon University, 2002",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "On correlated failures in survivable storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Ri6SYOTghG4C",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "On Correlated Failures in Survivable Storage Systems (CMU-CS-02-129)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:gVv57TyPmFsC",
+      "citation": "2016 IEEE International Conference on Cloud Engineering (IC2E), 224-225, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "On io latency prediction accuracy and automated load balancing in consolidated vm environments"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:qxL8FJ1GzNcC",
+      "citation": "Carnegie Mellon University, 2005",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "On multidimensional data and modern disks"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:QD3KBmkZPeQC",
+      "citation": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 533-546, 2018",
+      "num_citations": 172,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "On the diversity of cluster workloads and its impact on research results"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:lvd772isFD0C",
+      "citation": "Technical Report CMU-PDL-03-106, 2003",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "On the feasibility of intrusion detection inside workstation disks"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:08ZZubdj9fEC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "On the Feasibility of Intrusion Detection Inside Workstation Disks (CMU-PDL-03-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:olpn-zPbct0C",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 23 (1), 146-156, 1995",
+      "num_citations": 313,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "On-line extraction of SCSI disk drive parameters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ZzlSgRqYykMC",
+      "citation": "Proceedings of the 2017 ACM International Conference on Management of Data …, 2017",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Online deduplication for databases"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tYavs44e6CUC",
+      "citation": "Computer 43 (4), 35-43, 2010",
+      "num_citations": 223,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Open cirrus: A global cloud computing testbed"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OzeSX8-yOCQC",
+      "citation": "9th USENIX Conference on File and Storage Technologies (FAST 11), 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Opening Remarks and Best Paper Awards"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4DMP91E08xMC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Operating System Management of MEMS-based Storage Devices (CMU-CS-00-136)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:geHnlv5EZngC",
+      "citation": "Fourth Symposium on Operating Systems Design and Implementation (OSDI 2000), 2000",
+      "num_citations": 88,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Operating System Management of {MEMS-based} Storage Devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Ic1VZgkJnDsC",
+      "citation": "3rd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 11), 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Panel: What do academics need/want to know about cloud clusters?"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:c59VksA5Vz4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "PARALLEL DATA LAB"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:NJ774b8OgUMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Parallel Data Laboratory"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:cWzG1nlazyYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Parallel Data Laboratory"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:jSAVyFp_754C",
+      "citation": "",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "PART A"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:M7yex6snE4oC",
+      "citation": "Tech. rep., DTIC Document, 2005",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "PASIS: A Distributed Framework for Perpetually Available and Secure Information Systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:7H_MAutzIkAC",
+      "citation": "Proceedings of the 1st Symposium on Operating Systems Design and …, 0",
+      "num_citations": 41,
+      "pub_url": "",
+      "title": "Patt. Metadata update performance in file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:1r-w4gtu6w8C",
+      "citation": "arXiv preprint arXiv:1803.07445, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "PDL ABSTRACT"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:roLk4NBRz8UC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "PDL Celebrates its 10 th Year!"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:u-x6o8ySG0sC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "PDL Packet Spring Update"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:prdVHNxh-e8C",
+      "citation": "Proceedings of the 2019 International Conference on Management of Data, 1889 …, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Peering through the dark: An owl's view of inter-job dependencies and jobs' impact in shared clusters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Z5m8FVwuT1cC",
+      "citation": "Carnegie Mellon University, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Perspective: Semantic data management for the home (CMU-PDL-08-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:epqYDVWIO7EC",
+      "citation": "FAST 9, 167-182, 2009",
+      "num_citations": 77,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Perspective: Semantic Data Management for the Home."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uDGL6kOW6j0C",
+      "citation": "arXiv preprint arXiv:1806.03377, 2018",
+      "num_citations": 292,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Pipedream: Fast and efficient pipeline parallel dnn training"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:1yWc8FF-_SYC",
+      "citation": "Proceedings of the 27th ACM symposium on operating systems principles, 1-15, 2019",
+      "num_citations": 981,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "PipeDream: Generalized pipeline parallelism for DNN training"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LgRImbQfgY4C",
+      "citation": "Proceedings of the 1st Conference on Systems and Machine Learning (SysML), 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "PipeDream: Pipeline parallelism for DNN training"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:iyewoVqAXLQC",
+      "citation": "arXiv preprint arXiv:2410.07192, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "PipeFill: Using GPUs During Bubbles in Pipeline-parallel LLM Training"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ce2CqMG-AY4C",
+      "citation": "15th {USENIX} Symposium on Operating Systems Design and Implementation …, 2021",
+      "num_citations": 216,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Pollux: Co-adaptive cluster scheduling for goodput-optimized deep learning"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Wp0gIr-vW9MC",
+      "citation": "Proceedings of the IEEE Workshop on Hot Topics in Operating Systems (HotOS), 2001",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Position summary: Authentication confidences"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:OcBU2YAGkTUC",
+      "citation": "Proceedings Eighth Workshop on Hot Topics in Operating Systems, 177, 2001",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Position summary: hinting for goodness' sake"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mB3voiENLucC",
+      "citation": "Proceedings of the Seventh ACM Symposium on Cloud Computing, 401-414, 2016",
+      "num_citations": 83,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Principled workflow-centric tracing of distributed systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ufrVoPGSRksC",
+      "citation": "Canregie Mellon Parallel Data Laboratory, CMU-PDL-11-107, 2011",
+      "num_citations": 150,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Principles of operation for shingled disk devices"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LK8CI43ZvvMC",
+      "citation": "Proceedings of the ACM Symposium on Cloud Computing, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "PriorityMeister"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4vMrXwiscB8C",
+      "citation": "Proceedings of the ACM Symposium on Cloud Computing, 1-14, 2014",
+      "num_citations": 136,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Prioritymeister: Tail latency qos for shared networked storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SnGPuo6Feq8C",
+      "citation": "USENIX Association, 2008",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Proceedings of the 6th USENIX Conference on File and Storage Technologies"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-7ulzOJl1JYC",
+      "citation": "Work, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Program Co-Chairs"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SIv7DqKytYAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Program co-chairs"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:0izLItjtcgwC",
+      "citation": "Proceedings of the Twelfth European Conference on Computer Systems, 589-604, 2017",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Proteus: agile ml elasticity through tiered reliability in dynamic resource markets"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:9vf0nzSNQJEC",
+      "citation": "Carnegie Mellon University Parallel Data Lab Technical Report, 2006",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Putting home storage management into perspective"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:V3AGJWp-ZtQC",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Putting Home Storage Management into Perspective (CMU-PDL-06-110)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ZHo1McVdvXMC",
+      "citation": "Proceedings of the 18th ACM SIGKDD international conference on Knowledge …, 2012",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Rainmon: An integrated approach to mining bursty timeseries monitoring data"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:BJrgspguQaEC",
+      "citation": "Proceedings of the 28th ACM International Conference on Architectural …, 2023",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "RAIZN: Redundant array of independent zoned namespaces"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XUvXOeBm_78C",
+      "citation": "Technical Report CMU-PDL--, CMU Parallel Data Laboratory, April. URL http …, 2019",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Reconciling LSM-Trees with Modern Hard Drives using BlueFS"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4e5Qn2KL_jwC",
+      "citation": "Proceedings of the ACM SIGOPS 30th Symposium on Operating Systems Principles …, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Reducing Cross-Cloud/Region Costs with the Auto-Configuring MACARON Cache"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:5MTHONV0fEkC",
+      "citation": "Proceedings of the Sixth ACM Symposium on Cloud Computing, 222-235, 2015",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Reducing replication bandwidth for distributed document databases"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mVmsd5A6BfQC",
+      "citation": "Communications of the ACM 52 (4), 91-96, 2009",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Relative fitness modeling"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sSrBHYA8nusC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 33 (4), 23-28, 2006",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Relative fitness models for storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Fu2w8maKXqMC",
+      "citation": "13th IEEE International Symposium on Modeling, Analysis, and Simulation of …, 2005",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Replication policies for layered clustering of NFS servers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:9pM33mqn1YgC",
+      "citation": "Proceedings of the 1st ACM Symposium on Cloud Computing, 217-228, 2010",
+      "num_citations": 302,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Robust and flexible power-proportional storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:QYdC8u9Cj1oC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Robust and Flexible Power-Proportional Storage (CMU-PDL-10-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:PVjk1bu6vJQC",
+      "citation": "ACM SIGCOMM computer communication review 39 (4), 303-314, 2009",
+      "num_citations": 591,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Safe and effective fine-grained TCP retransmissions for datacenter communication"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:AvfA0Oy_GE0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Scalability, Usability and Applicability of Massive File System Directories"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ZeXyd9-uunAC",
+      "citation": "Cmu. edu.[Online]. Available: https://www. pdl. cmu. edu/PDLFTP/BigLearning …, 2015",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Scalable deep learning on distributed GPUs with a GPU-specialized parameter server"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:lYAcb2jw7qUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Scalable Fault Tolerance through Byzantine Locking"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:cK4Rrx0J3m0C",
+      "citation": "SC18: International Conference for High Performance Computing, Networking …, 2018",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Scaling embedded in-situ indexing with deltaFS"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:D03iK_w7-QYC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Scaling metadata service for weak scaling workloads"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:fFSKOagxvKUC",
+      "citation": "Proceedings of the 1994 ACM SIGMETRICS conference on Measurement and …, 1994",
+      "num_citations": 410,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Scheduling algorithms for modern disk drives"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kuK5TVdYjLIC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Scheduling explicitly-speculative tasks"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4fKUyHm3Qg0C",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Scheduling Explicitly-speculative Tasks (CMU-CS-03-204)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eflP2zaiRacC",
+      "citation": "University of Michigan, Computer Science and Engineering Division …, 1994",
+      "num_citations": 61,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Scheduling for modern disk drives and non-random workloads"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:nb7KW1ujOQ8C",
+      "citation": "SC'05: Proceedings of the 2005 ACM/IEEE Conference on Supercomputing, 37-37, 2005",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Scheduling speculative tasks in a compute farm"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:MLfJN-KU85MC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2000",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Secure continuous biometric-enhanced authentication"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:GnPB-g6toBAC",
+      "citation": "Carnegie Mellon University, 2000",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Secure continuous biometric-enhanced authentication (cmu-cs-00-134)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WHdLCjDvYFkC",
+      "citation": "Technical Report CMU-CS-01-120, Carnegie Mellon University, 2001",
+      "num_citations": 141,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Selecting the right data distribution scheme for a survivable storage system"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:fQNAKQ3IYiAC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Selecting the Right Data Distribution Scheme for a Survivable Storage System (CMU-CS-01-120)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HoB7MX3m0LUC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 138,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Self-* storage: Brick-based storage with automated administration"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:BqipwSGYUEgC",
+      "citation": "Carnegie Mellon University, 2003",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Self-* Storage: Brick-based Storage with Automated Administration (CMU-CS-03-178)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:yD5IFk8b50cC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2002",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Self-securing network interfaces: What, why and how"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XiSMed-E-HIC",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Self-Securing Network Interfaces: What, Why and How (CMU-CS-02-144)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WbkHhVStYXYC",
+      "citation": "OSDI, 165-180, 2000",
+      "num_citations": 433,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Self-Securing Storage: Protecting Data in Compromised Systems."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HIFyuExEbWQC",
+      "citation": "Proceedings of the 7th workshop on ACM SIGOPS European workshop: Systems …, 1996",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Server operating systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:QsaTk4IG4EwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Session details: File Systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eQOLeE2rZwMC",
+      "citation": "Carnegie Mellon University, 2012",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Shingled magnetic recording for big data applications"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ijdKiLOsEJMC",
+      "citation": "Proceedings of the 29th Symposium on Operating Systems Principles, 642-657, 2023",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ZfRJV9d4-WMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Similarity-based Deduplication for Databases"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:rO6llkc54NcC",
+      "citation": "Parallel Data Laboratory, 1-17, 2010",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "SmartScan: Efficient metadata crawl for storage management metadata querying in large file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HbR8gkJAVGIC",
+      "citation": "Parallel Data Lab., Carnegie Mellon Univ., Pittsburgh, PA, USA, Tech. Rep …, 2014",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "So, you want to trace your distributed system? Key design insights from years of practical experience"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:0EnyYjriUFMC",
+      "citation": "University of Michigan, Computer Science and Engineering Division …, 1995",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Soft updates: A solution to the metadata update problem in file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hMod-77fHWUC",
+      "citation": "ACM Transactions on Computer Systems (TOCS) 18 (2), 127-153, 2000",
+      "num_citations": 223,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Soft updates: a solution to the metadata update problem in file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ipzZ9siozwsC",
+      "citation": "USENIX Annual Technical Conference, FREENIX Track, 1-17, 1999",
+      "num_citations": 182,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Soft Updates: A Technique for Eliminating Most Synchronous Writes in the Fast Filesystem."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:UebtZRa9Y70C",
+      "citation": "The 7th USENIX Conference on File and Storage Technologies (FAST’09) 3, 2009",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Solving TCP incast in cluster storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:fPk4N6BV_jEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Solving the straggler problem for iterative convergent parallel ML"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:SP6oXDckpogC",
+      "citation": "14th Workshop on Hot Topics in Operating Systems (HotOS XIV), 2013",
+      "num_citations": 184,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Solving the straggler problem with bounded staleness"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:e5wmG9Sq2KIC",
+      "citation": "5th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage 13), 2013",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Specialized storage for big numeric time series"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Tiz5es2fbqcC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 34 (1), 3-14, 2006",
+      "num_citations": 185,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Stardust: tracking activity in a distributed storage system"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:c_xDhezhKKUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Storage benchmarking for HPC"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uc_IGeMz5qoC",
+      "citation": "ACM SIGMETRICS Performance Evaluation Review 32 (1), 412-413, 2004",
+      "num_citations": 244,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Storage device performance prediction with CART models"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:a0OBvERweLwC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Storage Device Performance Prediction with CART Models (CMU-PDL-04-103)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:BOlwja0KXvYC",
+      "citation": "",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Storage Systems in the {LLM} Era"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:l7t_Zn2s7bgC",
+      "citation": "ACM Transactions on Information and System Security (TISSEC) 13 (4), 1-27, 2010",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Storage-based intrusion detection"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:evX43VCCuoAC",
+      "citation": "12th USENIX Security Symposium (USENIX Security 03), 2003",
+      "num_citations": 199,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Storage-based intrusion detection: Watching storage activity for suspicious behavior"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:nRpfm8aw39MC",
+      "citation": "Carnegie Mellon University, 2002",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Storage-based Intrusion Detection: Watching Storage Activity For Suspicious Behavior (CMU-CS-02-179)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kVjdVfd2voEC",
+      "citation": "Proceedings of the ACM symposium on cloud computing, 121-134, 2018",
+      "num_citations": 106,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Stratus: Cost-aware container scheduling in the public cloud"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:O0nohqN1r9EC",
+      "citation": "ACM Transactions on Storage (TOS) 16 (4), 1-31, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Streaming data reorganization at scale with DeltaFS indexed massive directories"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:bKqednn6t2AC",
+      "citation": "Computer 33 (8), 61-68, 2000",
+      "num_citations": 361,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Survivable information storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mvPsJ3kp5DgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Survivable Storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_FxGoFyzp5QC",
+      "citation": "Proceedings DARPA Information Survivability Conference and Exposition II …, 2001",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Survivable storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:R-LXmdHK_14C",
+      "citation": "IEEE Computer (Aug. 2000), 61-68, 2001",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Survivable Storage System”"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:u5HHmVD_uO8C",
+      "citation": "IEEE Transactions on Magnetics 37 (2), 657-662, 2001",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "System design considerations for MEMS-actuated magnetic-probe-based mass storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:N5tVd3kTz84C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "System Software Support for High Performance Servers"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ns9cj8rnVeAC",
+      "citation": "USENIX Annual Technical Conference, General Track, 141-154, 2003",
+      "num_citations": 218,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "System Support for Online Reconfiguration."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:q3CdL3IzO_QC",
+      "citation": "University of Michigan, 1995",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "System-oriented evaluation of I/O subsystem performance"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-FonjvnnhkoC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Tashi: Location-Aware Cluster Management"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:kz9GbA2Ns4gC",
+      "citation": "Proceedings of the 1st Workshop on Automated Control for Datacenters and …, 2009",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Tashi: location-aware cluster management"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:J-pR_7NvFogC",
+      "citation": "Proceedings of the Eleventh European Conference on Computer Systems, 1-16, 2016",
+      "num_citations": 252,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "TetriSched: global rescheduling with adaptive plan-ahead in dynamic heterogeneous clusters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:uLbwQdceFCQC",
+      "citation": "Tech. Rep., 2013",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Tetrisched: Space-time scheduling for heterogeneous datacenters"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-mN3Mh-tlDkC",
+      "citation": "Usenix Mag 43 (4), 2018",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "The Atlas cluster trace repository"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-jrNzM816MMC",
+      "citation": "ACM Transactions on Storage (TOS) 16 (2), 1-31, 2020",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "The case for custom storage backends in distributed storage systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:MhiOAD_qIWkC",
+      "citation": "University of Michigan, EECS, Technical Report CSE-TR-358-98, 1998",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "The disksim simulation environment"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Parallel Data Lab, http://www. pdl. cmu. edu/DiskSim/Online-document, 2009",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "The DiskSim simulation environment (v4. 0)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:IaI1MmNe2tcC",
+      "citation": "Reference Manual. Carnegie Mellon University, 1999",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "The DiskSim Simulation Environment (Version 2.0)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:nVrZBo8bIpAC",
+      "citation": "Technical report, Carnegie Mellon University/University of Michigan, 1999",
+      "num_citations": 248,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "The DiskSim simulation environment version 2.0 reference manual"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ALROH1vI_8AC",
+      "citation": "CMU, 0",
+      "num_citations": 9,
+      "pub_url": "",
+      "title": "The DiskSim Simulation Environment Version 2.0 Reference Manual, December 1999"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:FiytvqdAVhgC",
+      "citation": "Technical Report, 2003",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "The DiskSim simulation environment version 3.0"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:f2IySw72cVMC",
+      "citation": "School of Computer Science, Carnegie Mellon University, 2003",
+      "num_citations": 526,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "The DiskSim simulation environment version 3.0 reference manual"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eI34FqJmdUoC",
+      "citation": "Communications of the ACM 52 (11), 15-17, 2009",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "The magazine archive includes every article published in Communications of the ACM for over the past 50 years."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hC7cP41nSMkC",
+      "citation": "Proceedings of the 1993 ACM SIGMETRICS conference on Measurement and …, 1993",
+      "num_citations": 60,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "The process-flow model: examining I/O performance from the system's point of view"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:3fE2CSJIrl8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "The Query/Update protocol: efficient and scalable Byzantine fault-tolerance"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:0N-VGjzr574C",
+      "citation": "Carnegie Mellon University Parallel Data Laboratory Technical Report, 2004",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The safety and liveness properties of a protocol family for versatile survivable storage infrastructures"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:2VqYfGB8ITEC",
+      "citation": "Carnegie Mellon University, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The Safety and Liveness Properties of a Protocol Family for Versatile Survivable Storage Infrastructures (CMU-PDL-03-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:KNjnJ3z-R6IC",
+      "citation": "14th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2020",
+      "num_citations": 140,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "The {CacheLib} caching engine: Design and experiences at scale"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:tOudhMTPpwUC",
+      "citation": "Carnegie Mellon University, Tech. Rep., 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "TierML: Using tiers of reliability for agile elasticity in machine learning"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sA9dB-pw3HoC",
+      "citation": "16th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2022",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Tiger:{Disk-Adaptive} redundancy without placement restrictions"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ye4kPcJQO24C",
+      "citation": "Conference on File and Storage Technologies (FAST 02), 2002",
+      "num_citations": 76,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Timing-accurate storage emulation"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:r_AWSJRzSzQC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Timing-accurate Storage Emulation (CMU-CS-01-146)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:JWITY9-sCbMC",
+      "citation": "Carnegie Mellon University, 2004",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Timing-accurate storage emulation: evaluating hypothetical storage components in real computer systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:AXPGKjj_ei8C",
+      "citation": "Parallel data laboratory, Carnegie Mellon University. June, 2004",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Toward automatic context-based attribute assignment for semantic file systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:gsN89kCJA0AC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Toward Automatic Context-based Attribute Assignment for Semantic File Systems (CMU-PDL-04-105)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:P7Ujq4OLJYoC",
+      "citation": "12th USENIX Conference on File and Storage Technologies (FAST 14), 89-103, 2014",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Toward strong, usable access control for shared distributed data"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:t6usbXjVLHcC",
+      "citation": "Schloss Dagstuhl–Leibniz-Zentrum für Informatik, 2007",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Towards bounded wait-free PASIS"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:TQgYirikUcIC",
+      "citation": "Tech. Rep. CMU-PDL-06-103, Carnegie Mellon University, 2006",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards efficient semantic object storage for the home"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:DJbcl8HfkQkC",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards Efficient Semantic Object Storage for the Home (CMU-PDL-06-103)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:9ZlFYXVOiuMC",
+      "citation": "Fourth Symposium on Operating Systems Design and Implementation (OSDI 2000), 2000",
+      "num_citations": 218,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Towards higher disk head utilization: Extracting\" free\" bandwidth from busy disk drives"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:ML0RJ9NH7IQC",
+      "citation": "The Knowledge Engineering Review 21 (3), 261-267, 2006",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Towards self-predicting systems: What if you could ask ‘what-if’?"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:pyW8ca7W8N0C",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards Self-Predicting Systems: What if You Could Ask “What-if”?(CMU-PDL-05-101)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4JMBOYKVnBMC",
+      "citation": "Intel Science and Technology Center for Cloud Computing, Tech. Rep 84, 1-21, 2012",
+      "num_citations": 266,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Towards understanding heterogeneous clouds at scale: Google trace analysis"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:3bvyWxjaHKcC",
+      "citation": "",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Track-aligned extents: Matching access patterns to disk drive characteristics"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:XiVPGOgt02cC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Track-aligned Extents: Matching Access Patterns to Disk Drive Characteristics (CMU-CS-01-119)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:zLWjf1WUPmwC",
+      "citation": "FAST 2, 259-274, 2002",
+      "num_citations": 236,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Track-aligned extents: matching access patterns to disk drive characteristics."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Bg7qf7VwUHIC",
+      "citation": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 1-14, 2018",
+      "num_citations": 73,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Tributary: spot-dancing for elastic services with latency {SLOs}"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:hsZV8lGYWTMC",
+      "citation": "arXiv preprint arXiv:1908.09922, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Tvarak: Software-managed hardware offload for DAX NVM storage redundancy"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:PyEswDtIyv0C",
+      "citation": "2020 ACM/IEEE 47th Annual International Symposium on Computer Architecture …, 2020",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Tvarak: software-managed hardware offload for redundancy in direct-access nvm storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:u9iWguZQMMsC",
+      "citation": "Carnegie Mellon University Technical Report, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Understanding Inefficiencies in Data-Intensive Computing"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:pAkWuXOU-OoC",
+      "citation": "14th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2020",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Unearthing inter-job dependencies for better cluster scheduling"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:u_35RYKgDlwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ursa Minor/Major Design Document"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:-_dYPAW6P2MC",
+      "citation": "Tech. Rep. CMU-PDL-05-104, Parallel Data Laboratory, Carnegie Mellon …, 2005",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Ursa Minor: versatile cluster-based storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:a3BOlSfXSfwC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Ursa Minor: Versatile Cluster-based Storage (CMU-PDL-05-104)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:_Re3VWB3Y0AC",
+      "citation": "FAST 5, 5-5, 2005",
+      "num_citations": 261,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Ursa Minor: Versatile Cluster-based Storage."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:sJPMR1oEGYQC",
+      "citation": "Carnegie Mellon University, 2006",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Using context to assist in personal file retrieval"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:8k81kl-MbHgC",
+      "citation": "Proceedings of the Sixth ACM Symposium on Cloud Computing, 395-407, 2015",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Using data transformations for low-latency time series analysis"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HtS1dXgVpQUC",
+      "citation": "USENIX Annual Technical Conference, 171-184, 2007",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Using Provenance to Aid in Personal File Search."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:NaGl4SEjCO4C",
+      "citation": "IEEE Transactions on Computers 47 (6), 667-678, 1998",
+      "num_citations": 99,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Using system-level models to evaluate I/O subsystem designs"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:eq2jaN3J8jMC",
+      "citation": "Carnegie Mellon University, 2007",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Using Utility to Provision Storage Systems (CMU-PDL-07-106)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:LO7wyVUgiFcC",
+      "citation": "FAST 8, 1-16, 2008",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Using Utility to Provision Storage Systems."
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:bnK-pcrLprsC",
+      "citation": "Proceedings of the twenty-sixth annual ACM symposium on Principles of …, 2007",
+      "num_citations": 159,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Verifying distributed erasure-coded data"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:rHJHxKgnXwkC",
+      "citation": "arXiv preprint arXiv:2004.09619, 2020",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Vilamb: Low overhead asynchronous redundancy for direct access nvm"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:4hFrxpcac9AC",
+      "citation": "IEEE transactions on visualization and computer graphics 19 (12), 2466-2475, 2013",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Visualizing request-flow comparison to aid performance diagnosis in distributed systems"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:Y0pCki6q_DkC",
+      "citation": "ACM SIGARCH Computer Architecture News 45 (2), 613-626, 2017",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Viyojit: Decoupling battery and DRAM capacities for battery-backed DRAM"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:JV2RwH3_ST0C",
+      "citation": "VMWare Technical Journal,:–, December. Cited on pages and, 2012",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "vQuery: a platform for connecting configuration and performance"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:K3LRdlH-MEoC",
+      "citation": "9th Workshop on Hot Topics in Operating Systems (HotOS IX), 2003",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Why can't I find my files? New methods for automating attribute assignment"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WF5omc3nYNoC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Why Can’t I Find My Files? New Methods for Automating Attribute Assignment (CMU-CS-03-116)"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:HJSXoJQnj-YC",
+      "citation": "Proceedings of the ACM SIGOPS 28th Symposium on Operating Systems Principles …, 2021",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "WineFS: a hugepage-aware file system for persistent memory that ages gracefully"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:oPLKW5k6eA4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "with approximate causal events"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WAzi4Gm8nLoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Your Work"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:FPJr55Dyh1AC",
+      "citation": "2010 IEEE/IFIP International Conference on Dependable Systems & Networks …, 2010",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Zzyzx: Scalable fault tolerance through Byzantine locking"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:AZju0d2GQJ0C",
+      "citation": "18th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "{FairyWREN}: A Sustainable Cache for Emerging {Write-Read-Erase} Flash Interfaces"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:VN7nJs4JPk0C",
+      "citation": "14th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2020",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "{PACEMAKER}: Avoiding {HeART} attacks in storage clusters with disk-adaptive redundancy"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:maZDTaKrznsC",
+      "citation": "12th USENIX Conference on File and Storage Technologies (FAST 14), 243-255, 2014",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "{SpringFS}: Bridging Agility and Performance in Elastic Distributed Storage"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:mWEH9CqjF64C",
+      "citation": "2021 USENIX annual technical conference (USENIX ATC 21), 689-703, 2021",
+      "num_citations": 202,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "{ZNS}: Avoiding the block interface tax for flash-based {SSDs}"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:k_7cPK9k7w8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "| Dept. of EECS, Univ. of Michigan"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:WC23djZS0W4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "гт ж ь р кщвь я е р я рь с е ек╧ в кьсж з в"
+    },
+    {
+      "author_pub_id": "l6oz33MAAAAJ:7wO8s98CvbsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "ХЭЙ ЫЙМНЙН"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "l6oz33MAAAAJ"
+}

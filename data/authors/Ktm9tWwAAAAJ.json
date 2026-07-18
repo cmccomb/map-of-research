@@ -1,0 +1,2838 @@
+{
+  "display_name": "Bain",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Bain.json",
+  "publication_count": 356,
+  "publications": [
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:EPG8bYD4jVwC",
+      "citation": "Electrochemical Society Meeting Abstracts 232, 1208-1208, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "(Invited) Formation of Conducting Filaments in TaOx-Based Resistive Switching Devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WJVC3Jt7v1AC",
+      "citation": "2014 IEEE Compound Semiconductor Integrated Circuit Symposium (CSICS), 1-3, 2014",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "12.5 THz Fco GeTe inline phase-change switch technology for reconfigurable RF and switching applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:U_HPUtbDl20C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "2015 Index IEEE Journal on Exploratory Solid-State Computational Devices and Circuits Vol."
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:sszUF3NjhM4C",
+      "citation": "2015 IEEE International Electron Devices Meeting (IEDM), 25.3. 1-25.3. 4, 2015",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A 3/5 GHz reconfigurable CMOS low-noise amplifier integrated with a four-terminal phase-change RF switch"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NJ774b8OgUMC",
+      "citation": "TRANSDUCERS 2009-2009 International Solid-State Sensors, Actuators and …, 2009",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A CMOS-MEMS rotary microactuator suitable for hard disk drive applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SeFeTyx0c_EC",
+      "citation": "IEEE transactions on magnetics 45 (10), 3749-3752, 2009",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A method for simultaneous position and timing error detection for bit-patterned media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:RYcK_YlVTxYC",
+      "citation": "IEEE transactions on magnetics 42 (10), 2428-2430, 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "A micromagnetic study of the effect of spatial variations in damping in perpendicular recording heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:UebtZRa9Y70C",
+      "citation": "IEEE transactions on magnetics 40 (4), 2549-2551, 2004",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "A model for mark size dependence on field emission voltage in heat-assisted magnetic probe recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:pqnbT2bcN3wC",
+      "citation": "Physica B: Condensed Matter 381 (1-2), 204-208, 2006",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "A model of heat transfer in STM-based magnetic recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:GtLg2Ama23sC",
+      "citation": "IEEE transactions on electron devices 60 (12), 3979-3988, 2013",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A Phase-Change Via-Reconfigurable CMOS  VCO"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:nb7KW1ujOQ8C",
+      "citation": "2010 International Electron Devices Meeting, 10.3. 1-10.3. 4, 2010",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "A phase-change via-reconfigurable on-chip inductor"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:rmuvC79q63oC",
+      "citation": "IEEE transactions on magnetics 49 (7), 3564-3567, 2013",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A Process for Transferring and Patterning InAs Quantum Dot Optical Gain Media for HAMR Near Field Optical Sources"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:VN7nJs4JPk0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Reactive Ion Milling Process for Patterning Narrow Track Iron Nitride Recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-f6ydRqryjwC",
+      "citation": "IEEE Transactions on Magnetics 33 (5), 2830-2832, 1997",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "A reactive ion milling process for patterning narrow track iron nitride recording head poles at the wafer level"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:raTqNPD5sRQC",
+      "citation": "IEEE Transactions on Microwave Theory and Techniques 65 (11), 4689-4702, 2017",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A reconfigurable dual-frequency narrowband CMOS LNA using phase-change RF switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zdjWy_NXXwUC",
+      "citation": "IEEE Transactions on Magnetics 54 (11), 1-4, 2018",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A split-pole-gapped NFT write head design for transition curvature reduction in heat-assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4aZ_i-5WJEQC",
+      "citation": "Optical Data Storage, TuD2, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A study of near-field aperture geometries on VSALs"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:R3hNpaxXUhUC",
+      "citation": "Optical Data Storage 2003 5069, 312-318, 2003",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A study of near-field aperture geometry effects on very small aperture lasers (VSAL)"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zUl2_INMlC4C",
+      "citation": "Proc. Geol. Assoc 93, 395-402, 1982",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1982",
+      "title": "A Tertiary Basin at Dutson, near Launce ston, Cornwall, England"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_axFR9aDTf0C",
+      "citation": "Proceedings of the Geologists' Association 93 (4), 395-402, 1982",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "1982",
+      "title": "A Tertiary basin at Dutson, near Launceston, Cornwall, England"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:cFHS6HbyZ2cC",
+      "citation": "Microscopy and Microanalysis 14 (S2), 832-833, 2008",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Aberration corrected Lorentz microscopy for perpendicular magnetic recording media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LXmCCkuhhTsC",
+      "citation": "2018 IEEE Micro Electro Mechanical Systems (MEMS), 241-244, 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Acousto-optic gyroscope"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:z6xuaG2dYH0C",
+      "citation": "2019 IEEE International Symposium on Inertial Sensors and Systems (INERTIAL …, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Acousto-optic gyroscope with improved sensitivity and 100 second stability in a small form factor"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:D_tqNUsBuKoC",
+      "citation": "US Patent 11,112,245, 2021",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Acousto-optic gyroscopes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SAZ1SQo2q1kC",
+      "citation": "CLEO: Science and Innovations, SF3N. 4, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Acousto-optic modulator based on the integration of arsenic trisulfide photonic components with lithium niobate surface acoustic waves"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:unp9ATQDT5gC",
+      "citation": "Photonics Research 7 (9), 1003-1013, 2019",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Acousto-optical modulation of thin film lithium niobate waveguide devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YTuZlYwrTOUC",
+      "citation": "IEEE Journal on Emerging and Selected Topics in Circuits and Systems 12 (2 …, 2022",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Adapting the RACER Architecture to Integrate Improved In-ReRAM Logic Primitives"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:KxtntwgDAa4C",
+      "citation": "Journal of the Magnetics Society of Japan 32 (2_2), 162-167, 2008",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Adjacent track aging in heat assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mKu_rENv82IC",
+      "citation": "IEEE Electron Device Letters 37 (5), 568-571, 2016",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "AlN barriers for capacitance reduction in phase-change RF switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:pAkWuXOU-OoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Also in this Issue"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:foquWX3nUaYC",
+      "citation": "Micro & Nano Letters 8 (1), 43-46, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "An AFM/STM multi‐mode nanofabrication approach allowing in situ surface modification and characterisation"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:qjMakFHDy7sC",
+      "citation": "Japanese journal of applied physics 41 (3S), 1821, 2002",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "An integrated read/write head for hybrid recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:q-HalDI95KYC",
+      "citation": "2015 IEEE 6th Latin American Symposium on Circuits & Systems (LASCAS), 1-4, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "An RRAM-based oscillatory neural network"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:qxL8FJ1GzNcC",
+      "citation": "IEEE Transactions on Education 44 (3), 224-231, 2001",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "An undergraduate laboratory in magnetic recording fundamentals"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tS2w5q8j5-wC",
+      "citation": "Journal of magnetism and magnetic materials 287, 51-60, 2005",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Analysis and optimization of terabit magnetic recording systems limited by down-track and cross-track write field gradients"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:t7zJ5fGR-2UC",
+      "citation": "2003 IEEE International Magnetics Conference (INTERMAG), DQ-12, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Analysis of a shielded writer for perpendicular recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tOudhMTPpwUC",
+      "citation": "IEEE transactions on magnetics 38 (5), 2694-2696, 2002",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Analysis of angular dependent resistance measurements on IrMn-based spin valves using a finite pinning model"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:J_g5lzvAfSwC",
+      "citation": "IEEE transactions on magnetics 36 (5), 2170-2172, 2000",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Analysis of dropout peakshift in magnetic tape recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_Qo2XoVZTnwC",
+      "citation": "IEEE transactions on magnetics 40 (4), 2576-2578, 2004",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Analysis of transition shape and adjacent track aging for 1 Tb/in/sup 2/write head designs"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:q3oQSFYPqjQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Angular Dependent Measurement of Spin Valve Magnetoresistance to Identify the Magnetic Response of the Individual Constituent Layers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:fQNAKQ3IYiAC",
+      "citation": "IEEE Transactions on Magnetics 45 (2), 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Aoki, K. 816 Araki, R. 799"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:umqufdRvDiIC",
+      "citation": "IEEE Transactions on Magnetics 50 (7), 0301503, 2014",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "APDSC’13 Committees"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:BrmTIyaxlBUC",
+      "citation": "US Patent 7,773,330, 2010",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Apparatus for excitation, enhancement, and confinement of surface electromagnetic waves for confined optical power delivery"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:M05iB0D1s5AC",
+      "citation": "IEEE transactions on magnetics 45 (10), 3523-3526, 2009",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Application of image processing to characterize patterning noise in self-assembled nano-masks for bit-patterned media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:5qfkUJPXOUwC",
+      "citation": "Applied Physics Letters 102 (25), 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Assessing diffusion barriers for phase change memory devices using the magnetization of Fe"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:PELIpwtuRlgC",
+      "citation": "Applied Physics Letters 98 (23), 2011",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Band alignment between GeTe and SiO2/metals for characterization of junctions in nonvolatile resistance change elements"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:lYAcb2jw7qUC",
+      "citation": "Market Structure and Industrial Performance 15, 372, 1994",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "BOC 159 Bonini, C. 97, 106, 107 Booz Allen Acquisition Services 197"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:nqdriD65xNoC",
+      "citation": "Transnational Corporations and Innovatory Activities 17, 434, 1994",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Borneo International Furniture 332 Bowmar 75 Bozeman, B. 276 Brander, J. 417"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hQUaER0FWQ4C",
+      "citation": "Appl. Phys. Lett 103, 133507, 2013",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "C. et al. Compositionally matched nitrogen-doped Ge2Sb2Te5/Ge2Sb2Te5 superlattice-like structures for phase change random access memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:nPT8s1NX_-sC",
+      "citation": "Theories of Local Economic Development: Perspectives from Across the …, 1993",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Cain, Glen G., 141 Cann, Elyse, 127, 135 305"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WbkHhVStYXYC",
+      "citation": "Optical Data Storage 2000 4090, 292-299, 2000",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Channel modeling for hybrid magneto-optical recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zLWjf1WUPmwC",
+      "citation": "PROCEEDINGS-SPIE THE INTERNATIONAL SOCIETY FOR OPTICAL ENGINEERING, 292-301, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Channel modeling for hybrid magneto-optical recording [4090-72]"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NhqRSupF_l8C",
+      "citation": "2000 IEEE International Conference on Acoustics, Speech, and Signal …, 2000",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Characterization and equalization of dropouts in the magnetic tape recording channel"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:K3LRdlH-MEoC",
+      "citation": "2005 IEEE International Magnetics Conference (INTERMAG), 31-32, 2005",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Characterization of blue-and red-very small aperture lasers for hybrid recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:9vf0nzSNQJEC",
+      "citation": "IEEE transactions on magnetics 46 (6), 1741-1744, 2010",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Characterization of Conducting Atomic Force Microscopy for Use With Magnetic Tunnel Junctions"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:abG-DnoFyZgC",
+      "citation": "Journal of magnetism and magnetic materials 305 (1), 16-23, 2006",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Characterization of heat-assisted magnetic probe recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:nrtMV_XWKgEC",
+      "citation": "Optical Data Storage 2004 5380, 697-703, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Characterization of refraction at a waveguide step for fabrication of mode index lenses"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4DMP91E08xMC",
+      "citation": "Optical Data Storage 2004 5380, 393-402, 2004",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Characterization of very small aperture GaN lasers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:f2IySw72cVMC",
+      "citation": "2008 IEEE 21st International Conference on Micro Electro Mechanical Systems …, 2008",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "CMOS-MEMS probes for reconfigurable IC’s"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:3s1wT3WcHBgC",
+      "citation": "IEEE transactions on magnetics 43 (8), 3497-3501, 2007",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Co Alloy- Granular-Type Longitudinal Media for Sputtered Tape Applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:j8SEvjWlNXcC",
+      "citation": "MRS Online Proceedings Library (OPL) 221, 477, 1991",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1991",
+      "title": "Coherency Stresses in Mo/Ni Multilayer Films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:HtEfBTGE9r8C",
+      "citation": "2013 IEEE International Integrated Reliability Workshop Final Report, 146-149, 2013",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Comparison of electric field dependent activation energy for electroformation in TaOx and TiOx based RRAMs"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:rbm3iO8VlycC",
+      "citation": "Applied Physics Letters 103 (13), 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Compositionally matched nitrogen-doped Ge2Sb2Te5/Ge2Sb2Te5 superlattice-like structures for phase change random access memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:rO6llkc54NcC",
+      "citation": "Applied Physics A 102, 877-883, 2011",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Computational investigations into the operating window for memristive devices based on homogeneous ionic motion"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:uWiczbcajpAC",
+      "citation": "APS March Meeting Abstracts, L31. 004, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Conductive atomic force microscopy measurements of nanopillar magnetic tunnel junctions"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:UeHWp8X0CEIC",
+      "citation": "IEEE Transactions on Magnetics 33 (5), 2893-2895, 1997",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Considerations in the design of probe heads for 100 Gbit/in/sup 2/recording density"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:JV2RwH3_ST0C",
+      "citation": "Journal of applied physics 91 (10), 6824-6826, 2002",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Control of stress and plasma-induced heating during dc magnetron sputtering of permalloy films for microelectromechanical systems"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Wp0gIr-vW9MC",
+      "citation": "Journal of applied physics 91 (10), 7065-7067, 2002",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Controlling the magnetic properties of CoCrPt thin films by means of thin hexagonal-close-packed intermediate layers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:PVjk1bu6vJQC",
+      "citation": "IEEE Transactions on Magnetics 37 (4), 3077-3077, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Correction to\" Performance of dropout correction on real magnetic tape waveforms with dropouts\""
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hkOj_22Ku90C",
+      "citation": "US Patent App. 12/780,207, 2011",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Coupled plasmonic waveguides and associated apparatuses and methods"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mlAyqtXpCwEC",
+      "citation": "US Patent App. 14/103,326, 2014",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Coupled Plasmonic Waveguides and Associated Apparatuses and Methods"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ye4kPcJQO24C",
+      "citation": "2010 APMRC, 1-2, 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Coupled plasmonic waveguides: Near field transducers for HAMR"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:uLbwQdceFCQC",
+      "citation": "2011 11th Annual Non-Volatile Memory Technology Symposium Proceeding, 1-4, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Crystallinity and its influence on physical and magnetic properties in phase change magnetic materials"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Y0pCki6q_DkC",
+      "citation": "Journal of applied physics 73 (11), 7591-7598, 1993",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Crystallographic anisotropy in thin film magnetic recording media analyzed with x‐ray diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Zh0EY9V9P6UC",
+      "citation": "Electrochemical Society Meeting Abstracts 228, 762-762, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Current Filamentation in Rram As Measured By High Speed Electrical Thermometry"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WF5omc3nYNoC",
+      "citation": "IEEE transactions on magnetics 38 (5), 1895-1897, 2002",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Dependence of thermomagnetic mark size on applied STM voltage in Co-Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:2l5NCbZemmgC",
+      "citation": "IEEE transactions on microwave theory and techniques 65 (11), 4531-4540, 2017",
+      "num_citations": 80,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Design criteria in sizing phase-change RF switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:u9iWguZQMMsC",
+      "citation": "IEEE transactions on magnetics 31 (6), 2675-2677, 1995",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "Design of small recording head elements using thermally constrained transmission line modeling"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:r0BpntZqJG4C",
+      "citation": "Journal of applied physics 95 (11), 6780-6782, 2004",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Detailed modeling of temperature rise in giant magnetoresistive sensor during an electrostatic discharge event"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:KaMxkj08jr0C",
+      "citation": "US Patent 9,997,700, 2018",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Deterministic seeding of switching filament in oxide-based memristive devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:blknAaTinKkC",
+      "citation": "US Patent 6,999,384, 2006",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Device with waveguide defined by dielectric in aperture of cross-track portion of electrical conductor for writing data to a recording medium"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:OTTXONDVkokC",
+      "citation": "US Patent 9,246,549, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Dielectric resonator driven near field transducer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zGdJYJv2LkUC",
+      "citation": "2017 IEEE 17th International Conference on Nanotechnology (IEEE-NANO), 531-533, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Diode laser mode selection via periodic arrays of adjacent nanoscale metallic structures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:M7yex6snE4oC",
+      "citation": "Microscopy and Microanalysis 18 (S2), 706-707, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Dislocation Analysis in Metal-Oxide Materials and Devices by Electron Channeling Contrast Imaging"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hCrLmN-GePgC",
+      "citation": "Journal of Applied Physics 113 (23), 2013",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Dislocation impact on resistive switching in single-crystal SrTiO3"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:CNPyR2KL9-0C",
+      "citation": "2019 IEEE Photonics Conference (IPC), 1-2, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Driving guided surface plasmon modes on gold nanowires with perpendicularly oriented dielectric-metallic waveguide pair"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4JMBOYKVnBMC",
+      "citation": "IEEE Journal on Selected Areas in Communications 19 (4), 744-755, 2001",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Dropout-tolerant read channels"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YOwf2qJgpHMC",
+      "citation": "Journal of applied physics 100 (5), 2006",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Dynamic domain motion of thermal-magnetically formed marks on CoNi∕ Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:M3NEmzRMIkIC",
+      "citation": "Journal of applied physics 91 (10), 8665-8669, 2002",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Dynamic Kerr imaging of soft underlayers for perpendicular recording applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:AXkvAH5U_nMC",
+      "citation": "Journal of Applied Physics 118 (11), 2015",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Dynamics of electroforming in binary metal oxide-based resistive switching memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:M3ejUd6NZC8C",
+      "citation": "IEEE transactions on magnetics 37 (4), 1376-1378, 2001",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Dynamics of perpendicular recording heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:XiVPGOgt02cC",
+      "citation": "2006 IEEE International Magnetics Conference (INTERMAG), 80-80, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Effect of Local Damping in Perpendicular Recording Head: a Micromagnetic Study"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tYavs44e6CUC",
+      "citation": "Applied Physics Letters 101 (1), 2012",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Effect of metals and annealing on specific contact resistivity of GeTe/metal contacts"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mB3voiENLucC",
+      "citation": "Journal of applied physics 91 (10), 7830-7832, 2002",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Effect of stress on stripe domain onset in sputtered FeAlN and CoFe films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-jrNzM816MMC",
+      "citation": "IEEE Transactions on Magnetics 52 (7), 1-4, 2015",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Effect of Thin Cr and Cu Adhesion Layers on Surface Plasmon Resonance at Au/SiO2 Interfaces"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:35N4QoGY0k4C",
+      "citation": "IEEE transactions on magnetics 42 (10), 2306-2308, 2006",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Effects of Deposition Rate on Microstructure of CoCrPt-SiOGranular Longitudinal Media for Tape Applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:isC4tDSrTZIC",
+      "citation": "Journal of applied physics 93 (10), 6459-6461, 2003",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Effects of focused-ion-beam irradiation on perpendicular write head performance"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:vV6vV6tmYwMC",
+      "citation": "International Conference on Micro/Nanoscale Heat Transfer 42924, 493-502, 2008",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Effects of high current density at nanoscale point contacts"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:maZDTaKrznsC",
+      "citation": "Transactions of the Magnetics Society of Japan 2 (4), 322-327, 2002",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Effects of optical spot/magnetic head misalignment for perpendicular hybrid magnetic recording systems"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:D03iK_w7-QYC",
+      "citation": "IEEE transactions on magnetics 41 (9), 2529-2533, 2005",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Effects of polymeric substrate roughness on head-medium spacing and recording properties of sputtered magnetic tape"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:VL0QpB8kHFEC",
+      "citation": "Journal of applied physics 99 (8), 2006",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Effects of substrate bias on CoCrPt-SiO2 magnetic recording media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:AXPGKjj_ei8C",
+      "citation": "Optical Data Storage 2003 5069, 341-344, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Efficiency of light coupling from a light delivery system to a planar waveguide for optical and hybrid recording heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:EsEWqaRxkBgC",
+      "citation": "Optics letters 44 (18), 4558-4561, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Efficient arsenic trisulfide vertical grating coupler on lithium niobate for integrated photonic applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:IjCSPb-OGe4C",
+      "citation": "Physical Review B 44 (3), 1184, 1991",
+      "num_citations": 89,
+      "pub_url": "",
+      "pub_year": "1991",
+      "title": "Elastic strains and coherency stresses in Mo/Ni multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ZqE1mSdD_DYC",
+      "citation": "ACS Applied Electronic Materials 2 (3), 683-691, 2020",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Electrical and Thermal Dynamics of Self-Oscillations in TaOx-Based Threshold Switching Devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:FiDNX6EVdGUC",
+      "citation": "ACS applied materials & interfaces 9 (13), 11704-11710, 2017",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Electro-Thermal Model of Threshold Switching in TaOx-Based Devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:0EnyYjriUFMC",
+      "citation": "Applied physics letters 90 (20), 2007",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Electrode influence on the transport through SrRuO3∕ Cr-doped SrZrO3/metal junctions"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:RtRctb2lSbAC",
+      "citation": "Applied physics letters 96 (9), 2010",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Electron beam induced current investigations of Pt"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:yD5IFk8b50cC",
+      "citation": "Applied Physics Letters 96 (9), 2010",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Electron beam induced current investigations of Pt/SrTiO3− x interface exposed to chemical and electrical stresses"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:XvxMoLDsR5gC",
+      "citation": "Advanced Functional Materials 24 (35), 5522-5529, 2014",
+      "num_citations": 95,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Electronic instabilities leading to electroformation of binary metal oxide‐based resistive switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WA5NYHcadZ8C",
+      "citation": "2010 APMRC, 1-2, 2010",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Electrothermal actuators for hard disk drive applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:kuK5TVdYjLIC",
+      "citation": "Journal of Physics D: Applied Physics 45 (39), 395101, 2012",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Elimination of high transient currents and electrode damage during electroformation of TiO2-based resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:OBSaB-F7qqsC",
+      "citation": "Physical Review Applied 5 (1), 014009, 2016",
+      "num_citations": 78,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Enhancement of thermal conductance at metal-dielectric interfaces using subnanometer metal adhesion layers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SP6oXDckpogC",
+      "citation": "Proceedings of the IEEE 98 (12), 2061-2075, 2010",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Enhancing CMOS using nanoelectronic devices: A perspective on hybrid integrated systems"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:uc_IGeMz5qoC",
+      "citation": "IEEE Transactions on Magnetics 47 (10), 2364-2367, 2011",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Evanescent coupling between dielectric and plasmonic waveguides for HAMR applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:s9ia6_kGH2AC",
+      "citation": "Journal of Applied Physics 128 (19), 2020",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Evolution of the conductive filament with cycling in TaOx-based resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NaGl4SEjCO4C",
+      "citation": "Optical Data Storage 2001 4342, 502-510, 2002",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Experimenatal test bed for hybrid recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mel-f30kHHgC",
+      "citation": "Solid State Devices and Materials, 2016 International Conference, 26-29, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Experimental Demonstration and Modeling of GeTe 6 Oscillators and Threshold Switches for Emerging Architectures and Memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:c59VksA5Vz4C",
+      "citation": "2024 IEEE 35th Magnetic Recording Conference (TMRC), 1-2, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Experimental Demonstration of a Low Optical Loss AlN Heatsink for HAMR NFT Temperature Rise Reduction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dAp6zn-oMfAC",
+      "citation": "IEEE Transactions on Magnetics, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Experimental Demonstration of a Low Optical Loss AlN Heatsink for Reduction of HAMR NFT Self-Heating"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Hck25ST_3aIC",
+      "citation": "IEEE Electron Device Letters 39 (4), 610-613, 2018",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Experimental demonstration of AlN heat spreaders for the monolithic integration of inline phase-change switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:IWHjjKOFINEC",
+      "citation": "Japanese journal of applied physics 42 (2S), 989, 2003",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Experimental effects of laser power on the writability and pulse width in a heat assisted longitudinal recording system"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4fGpz3EwCPoC",
+      "citation": "Applied Physics Letters 103 (13), 2013",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Experimental estimates of in-plane thermal conductivity in FePt-C granular thin film heat assisted magnetic recording media using a model layered system"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dshw04ExmUIC",
+      "citation": "IEEE transactions on magnetics 41 (10), 2923-2925, 2005",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Experimental evidence for gyromagnetic damping in magnetic heads determined by impedance measurements up to 9 GHz"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:fEOibwPWpKIC",
+      "citation": "Journal of Applied Physics 109 (7), 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Extendibility of traditional perpendicular magnetic recording for hard disk drives"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:AzKEL7Gb_04C",
+      "citation": "Journal of Lightwave Technology 38 (7), 2053-2059, 2020",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Extraction of elastooptic coefficient of thin-film arsenic trisulfide using a Mach–Zehnder acoustooptic modulator on lithium niobate"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:URolC5Kub84C",
+      "citation": "IEEE transactions on magnetics 47 (10), 2656-2659, 2011",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Fabrication and recording of bit patterned media prepared by rotary stage electron beam lithography"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:MXK_kJrjxJIC",
+      "citation": "Nanotechnology 13 (5), 619, 2002",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Fabrication of nanomagnetic probes via focused ion beam etching anddeposition"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:__bU50VfleQC",
+      "citation": "APS March Meeting Abstracts, K1. 181, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Fabrication of Si nanowires on Si (100) using a scanning probe tip"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:TQgYirikUcIC",
+      "citation": "Applied optics 45 (24), 6192-6197, 2006",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Field localization in very small aperture lasers studied by apertureless near-field microscopy"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:i2xiXl-TujoC",
+      "citation": "Journal of The Magnetics Society of Japan 21 (S_2_PMRC_97_2), S2_65-68, 1997",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Fine Grain Barium Ferrite Thin Films With Perpendicular C-axis Orientation"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eJXPG6dFmWUC",
+      "citation": "2003 IEEE International Magnetics Conference (INTERMAG), ET-07, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Focused ion-beam fabrication of nanoscale magnetic structures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:5nxA0vEk-isC",
+      "citation": "Journal of applied physics 91 (10), 6830-6832, 2002",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Focused-ion-beam induced grain growth in magnetic materials for recording heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:CYCckWUYoCcC",
+      "citation": "ACS applied materials & interfaces 10 (27), 23187-23197, 2018",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Formation of the Conducting Filament in TaOx-Resistive Switching Devices by Thermal-Gradient-Induced Cation Accumulation"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:VOx2b1Wkg3QC",
+      "citation": "IEEE Transactions on Magnetics 38 (5), 2694-2696, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "GMR, SPIN VALVES, AND TUNNEL MAGNETORESISTANCE-Analysis of Angular Dependent Resistance Measurements on IrMn-Based Spin Valves Using a Finite Pinning Model."
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LPZeul_q3PIC",
+      "citation": "Physical Review B—Condensed Matter and Materials Physics 84 (6), 064437, 2011",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Green’s function for magnetostatic surface waves and its application to the study of diffraction patterns"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:xtoqd-5pKcoC",
+      "citation": "2000 IEEE International Magnetics Conference (INTERMAG), 217-217, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Growth rate dependence of nitrogen incorporation in reactively sputtered FeAlN films for recording head poles"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:EUQCXRtRnyEC",
+      "citation": "IEEE transactions on magnetics 36 (5), 3473-3475, 2000",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Growth rate dependence of nitrogen incorporation in reactively sputtered FeXN films for recording head poles"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:0KyAp5RtaNEC",
+      "citation": "IEEE transactions on magnetics 46 (6), 2462-2465, 2010",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "HAMR Adjacent Track Stability in the Presence of a Medium Curie Temperature Distribution"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-FonjvnnhkoC",
+      "citation": "2012 Digest APMRC, 1-2, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "HAMR near field transducers based on microcavity disk lasers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:7PzlFSSx8tAC",
+      "citation": "Journal of Physics D: Applied Physics 39 (12), 2485, 2006",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Heat-assisted magnetic probe recording on a granular CoNi/Pt multilayered film"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:k_IJM867U9cC",
+      "citation": "IEEE transactions on magnetics 37 (4), 1640-1642, 2001",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "High coercivity Co-alloy thin films on polymer substrates"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_Ybze24A_UAC",
+      "citation": "2010 IEEE 23rd International Conference on Micro Electro Mechanical Systems …, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "High current low contact resistance platinum-coated CMOS-MEMS probes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:9ZlFYXVOiuMC",
+      "citation": "Journal of applied physics 91 (10), 8052-8054, 2002",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "High frequency dynamics of the soft underlayer in perpendicular recording system"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:PoWvk5oyLR8C",
+      "citation": "1998 IEEE International Magnetics Conference (INTERMAG), 63-63, 1998",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "High frequency initial permeability of NiFe and FeAIN"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "IEEE transactions on magnetics 34 (4), 1438-1440, 2002",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "High frequency initial permeability of NiFe and FeAlN"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ldfaerwXgEUC",
+      "citation": "Journal of applied physics 99 (8), 2006",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "High frequency susceptibility of closure domain structures calculated using micromagnetic modeling"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:DBa1UEJaJKAC",
+      "citation": "2015 Symposium on VLSI Technology (VLSI Technology), T186-T187, 2015",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "High performance, integrated 1T1R oxide-based oscillator: Stack engineering for low-power operation in neural network applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:TaaCk18tZOkC",
+      "citation": "(No Title), 1998",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "High-density magnetic recording and integrated magneto-optics, materials and devices: symposium held April 12-16, 1998, San Francisco, California, US"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:xtRiw3GOFMkC",
+      "citation": "Materials Research Society symposia proceedings, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "High-density magnetic recording and integrated magneto-optics: materials and devices(San Francisco CA, 12-16 April 1998)"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:X0DADzN9RKwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "High-Density| Magnetic Recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:6_hjMsCP8ZoC",
+      "citation": "IEEE Transactions on Electron Devices 62 (11), 3857-3862, 2015",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "High-Frequency TaOx-Based Compact Oscillators"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4hFrxpcac9AC",
+      "citation": "Proceedings of Technical Program-2014 International Symposium on VLSI …, 2014",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "High-speed in-situ pulsed thermometry in oxide RRAMs"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:N5tVd3kTz84C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "IEEE Magnetics Society"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:2osOgNQ5qMEC",
+      "citation": "Applied physics letters 83 (16), 3245-3247, 2003",
+      "num_citations": 99,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Imaging of optical field confinement in ridge waveguides fabricated on very-small-aperture laser"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:d1gkVwhDpl0C",
+      "citation": "Journal of Applied Physics 91 (10), 8034-8036, 2002",
+      "num_citations": 107,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Imaging of quantized magnetostatic modes using spatially resolved ferromagnetic resonance"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-uzm3Y7AvW0C",
+      "citation": "2019 Device Research Conference (DRC), 107-108, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Impact Ionization model for S-NDR based threshold switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:XoXfffV-tXoC",
+      "citation": "Journal of Applied Physics 113 (16), 2013",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Impact of Joule heating on the microstructure of nanoscale TiO2 resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NMlhSUseqAsC",
+      "citation": "AIP Advances 10 (1), 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Impact of straightened thermal profiles generated by gapped near field transducers on HAMR SNR"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-95Q15plzcUC",
+      "citation": "Analog Integrated Circuits and Signal Processing 89, 619-629, 2016",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Implementing delay insensitive oscillatory neural networks using CMOS and emerging technology"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Y5dfb0dijaUC",
+      "citation": "Journal of applied physics 91 (10), 8736-8738, 2002",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Improvement of preferred orientation of NiAl/CrMn underlayers deposited on prebaked tape substrates"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_AeoHAGD03cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Improving the Compatibility and Manufacturability of Digital Architectures for Processing Using Resistive Memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:DUooU5lO8OsC",
+      "citation": "Microscopy and Microanalysis 20 (S3), 1548-1549, 2014",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "In Situ Biasing TEM Characterization of Resistive Switching Phenomena in TiO2-based RRAM"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:sNmaIFBj_lkC",
+      "citation": "2014 IEEE International Reliability Physics Symposium, 5E. 5.1-5E. 5.5, 2014",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "In situ biasing TEM investigation of resistive switching events in TiO2-based RRAM"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:BwyfMAYsbu0C",
+      "citation": "International Conference on Advanced Synthesis of Engineered Structural …, 1992",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "In Situ Observation of Epitaxial Strains in Cu (001) on Fe (001) During the Initial Stages of Growth"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hMsQuOkrut0C",
+      "citation": "Micro & Nano Letters 7 (4), 334-336, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "In situ quantification of electrical isolation in STM-fabricated TiOx nanostructures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:IRz6iEL74y4C",
+      "citation": "Microscopy and Microanalysis 21 (1), 140-153, 2015",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "In Situ TEM Imaging of Defect Dynamics under Electrical Bias in Resistive Switching Rutile-TiO2"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ILKRHgRFtOwC",
+      "citation": "Physics of X-Ray Multilayer Structures, WA4, 1992",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "In-Situ Grazing Incidence X-Ray Diffraction During Sputter Deposition"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4OULZ7Gr8RgC",
+      "citation": "MRS Online Proceedings Library (OPL) 312, 291, 1993",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "In-Situ Observation of The Initial Stages of Co (0001) Epitaxy on Pt (111) Using Grazing Incidence X-Ray Diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LGlY6t8CeOMC",
+      "citation": "Physics of X-Ray Multilayer Structures, WC. 1, 1994",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "In-Situ Structural Characterization of Ultra-Thin Epitaxial Metal Films and Multilayers Observed with Grazing Incidence X-Ray Scattering"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:z8nqeaKD1nsC",
+      "citation": "LES REVUES D'ÉCONOMIE EN FRANCE, 307, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "INDEX DES NOMS"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-_dYPAW6P2MC",
+      "citation": "2005 IEEE International Magnetics Conference (INTERMAG), 1337-1338, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Influence of media background on write/read performance in perpendicular media with an antiferromagnetic layer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:PR6Y55bgFSsC",
+      "citation": "IEEE transactions on magnetics 41 (10), 3157-3159, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Influence of polarity of media DC background on write/read performance in perpendicular media with an antiferromagnetically stabilized soft underlayer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:9yKSN-GCB0IC",
+      "citation": "IEEE Transactions on Magnetics 38 (5), 3501-3520, 2002",
+      "num_citations": 148,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Influence of stress and texture on soft magnetic properties of thin films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:65Yg0jNCQDAC",
+      "citation": "2017 IEEE MTT-S International Microwave Workshop Series on Advanced …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Inline phase-change switch material optimizations for increased reliability, RF power handling, and integration"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LK8CI43ZvvMC",
+      "citation": "Applied Physics Letters 122 (5), 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Interface dewetting as a source of void formation and aggregation in phase change nanoscale actuators"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:vbGhcppDl1QC",
+      "citation": "MRS Online Proceedings Library 187, 315-320, 1990",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1990",
+      "title": "Interfacial Composition and Structue in Pt/Ni and Pt/Nb Multilayer Films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:j3f4tGmQtD8C",
+      "citation": "MRS Online Proceedings Library (OPL) 343, 555, 1994",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "1994",
+      "title": "Interfacial Structure and Mechanical Properties of Compositionally-Modulated Au-Ni thin Films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zA6iFVUQeVQC",
+      "citation": "IEEE transactions on magnetics 46 (6), 2307-2310, 2010",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Investigating pattern transfer in the small-gap regime using electron-beam stabilized nanoparticle array etch masks"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:a9-T7VOCCH8C",
+      "citation": "Micro & Nano Letters 9 (5), 332-336, 2014",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Investigation of tip current and normal force measured simultaneously during local oxidation of titanium using dual‐mode scanning probe microscopy"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ce2CqMG-AY4C",
+      "citation": "ACS applied materials & interfaces 8 (20), 12908-12914, 2016",
+      "num_citations": 136,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Joule Heating-Induced Metal–Insulator Transition in Epitaxial VO2/TiO2 Devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:bEWYMUwI8FkC",
+      "citation": "IEEE transactions on magnetics 37 (4), 2761-2763, 2001",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Kerr imaging of a thin film magnetic transducer to measure thin film head fields"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:TFP_iSt0sucC",
+      "citation": "Japanese journal of applied physics 45 (2S), 1193, 2006",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Laser diode active height control for near field optical storage"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:uWQEDVKXjbEC",
+      "citation": "Optical Data Storage 2006 6282, 136-143, 2006",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Laser diode active height control system for data storage applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:5Ul4iDaHHb8C",
+      "citation": "2006 Optical Data Storage Topical Meeting, 144-146, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Laser Diode Feedback Sensor Characterization Experiments for Data Storage Applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ZHo1McVdvXMC",
+      "citation": "2009 IEEE 22nd International Conference on Micro Electro Mechanical Systems …, 2009",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Lever-based CMOS-MEMS probes for reconfigurable RF IC's"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:BqipwSGYUEgC",
+      "citation": "IEEE transactions on magnetics 35 (2), 740-745, 2002",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Limitations to track following imposed by position error signal SNR using a multi-tapped magnetoresistive servo head"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hC7cP41nSMkC",
+      "citation": "IEEE transactions on magnetics 38 (5), 2237-2239, 2002",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Local degradation of magnetic properties in magnetic thin films irradiated by Ga/sup+/focused-ion-beams"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:1qzjygNMrQYC",
+      "citation": "Journal of Applied Physics 110 (5), 2011",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Local heating-induced plastic deformation in resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:PyEswDtIyv0C",
+      "citation": "IEEE Journal on Selected Areas in Communications 34 (9), 2470-2485, 2016",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Locally rewritable codes for resistive memories"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:c1e4I3QdEKYC",
+      "citation": "Neural Regen Res 9, 016, 2009",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Locally transplanted enteric glia improve functional and structural recovery in a rat model of spinal cord injury"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:oNZyr7d5Mn4C",
+      "citation": "US Patent 6,865,056, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Longitudinal magnetic recording heads with variable-length gaps"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:UxriW0iASnsC",
+      "citation": "Applied Physics Letters 97 (18), 2010",
+      "num_citations": 80,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Low resistance, high dynamic range reconfigurable phase change switch for radio frequency applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:MAUkC_7iAq8C",
+      "citation": "Apl Materials 4 (1), 2016",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Low temperature electroformation of TaOx-based resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:uVUOdF_882EC",
+      "citation": "2016 IEEE Symposium on VLSI Technology, 1-2, 2016",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Low-power, high-performance S-NDR oscillators for stereo (3D) vision using directly-coupled oscillator networks"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:5ugPr518TE4C",
+      "citation": "IEEE Transactions on Magnetics 42 (10), 2306-2308, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Magnetic and Magneto-Optical Recording-Effects of Deposition Rate on Microstructure of CoCrPt-SiO2 Granular Longitudinal Media for Tape Applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:evX43VCCuoAC",
+      "citation": "MRS Online Proceedings Library (OPL) 231, 459, 1991",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1991",
+      "title": "Magnetic Anisotropy of Crystalline Defects"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:vRqMK49ujn8C",
+      "citation": "IEEE transactions on magnetics 45 (2), 883-888, 2009",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Magnetic decay at elevated temperature relevant to heat-assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:oi2SiIJ9l4AC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MAGNETIC HEAD DESIGN FOR TRANSITION CURVATURE CORRECTION IN HAMR"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hMod-77fHWUC",
+      "citation": "Journal of applied physics 81 (8), 4495-4497, 1997",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Magnetic properties of FeAlN films at elevated temperatures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eO3_k5sD8BwC",
+      "citation": "Encyclopedia of Materials: Science and Technology, 4868-4879, 2001",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Magnetic Recording Devices: Inductive Heads, Properties"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eflP2zaiRacC",
+      "citation": "IEEE Transactions on Magnetics 41 (10), 3157-3159, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Magnetic Recording Media-Influence of Polarity of Media DC Background on Write/Read Performance in Perpendicular Media With an Antiferromagnetically Stabilized Soft Underlayer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:UHK10RUVsp4C",
+      "citation": "IEEE Transactions on Magnetics, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Magnetic Recording: Systems, Heads, Channels, Head-Disk Interference, Modeling-Experimental Evidence for Gyromagnetic Damping in Magnetic Heads Determined by Impedance …"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:QsaTk4IG4EwC",
+      "citation": "2018 IEEE Micro Electro Mechanical Systems (MEMS), 791-794, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Magnetically actuated reconfigurable pixelated antenna"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:2P1L_qKh6hAC",
+      "citation": "IEEE transactions on magnetics 41 (10), 3763-3765, 2005",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Magnetically defined domain isolation for studies of nucleation and growth coercivities"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:MIg0yeAD4ggC",
+      "citation": "Microwave and Optical Technology Letters 61 (10), 2348-2353, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Magnetically reconfigurable pixelated antenna"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-yGd096yOn8C",
+      "citation": "Journal of Micromechanics and Microengineering 29 (11), 115020, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Magnetically-actuated micromechanical nickel patches for a monolithically integrated reconfigurable antenna on printed circuit board"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:RHpTSmoSYBkC",
+      "citation": "IEEE transactions on magnetics 38 (5), 3030-3032, 2002",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Magnetization reduction due to oxygen contamination of bias sputtered Fe/sub 35/Co/sub 65/thin films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SpbeaW3--B0C",
+      "citation": "Applied Physics A 113, 221-229, 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Magnetoresistance in granular films formed by CoFe and phase change material"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dfsIfKJdRG4C",
+      "citation": "Optical Data Storage 2004 5380, 163-170, 2004",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "MAMMOS read-only memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hFOr9nPyWt4C",
+      "citation": "Applied physics letters 80 (10), 1835-1837, 2002",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Mark shapes in hybrid recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Ic1VZgkJnDsC",
+      "citation": "Optics Express 32 (4), 5252-5260, 2024",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Measured optical losses of Sc doped AlN waveguides"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ufrVoPGSRksC",
+      "citation": "Applied Physics Letters 84 (17), 3331-3333, 2004",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Measurement of Ga implantation profiles in the sidewall and bottom of focused-ion-beam-etched structures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eQOLeE2rZwMC",
+      "citation": "Physical Review B—Condensed Matter and Materials Physics 70 (10), 104416, 2004",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Measurement of magnetostatic mode excitation and relaxation in permalloy films using scanning Kerr imaging"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:0izLItjtcgwC",
+      "citation": "Applied Physics Letters 104 (11), 2014",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Mechanism of localized electrical conduction at the onset of electroforming in TiO2 based resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ns9cj8rnVeAC",
+      "citation": "Nonvolatile Memory Technology Symp, 2001",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "MEMS memory elements"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Tiz5es2fbqcC",
+      "citation": "US Patent 5,863,661, 1999",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Method of enhancing the c-axis perpendicular orientation of barium hexaferrite thin films and barium hexaferrite thin film recording media produced thereby"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:W7OEmFMy1HYC",
+      "citation": "IEEE transactions on magnetics 34 (4), 2030-2032, 1998",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "MFM quantification of magnetic fields generated by ultra-small single pole perpendicular heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:epqYDVWIO7EC",
+      "citation": "US Patent 8,243,397, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Micromachined electrothermal rotary actuator"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_FxGoFyzp5QC",
+      "citation": "Journal of Applied Physics 87 (9), 5538-5540, 2000",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Micromagnetic simulation of a flux guide for a read head with sub-100 nm resolution"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LkGwnXOMwfcC",
+      "citation": "Journal of Applied Physics 87 (9), 6636-6638, 2000",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Micromagnetic simulation of an ultrasmall single-pole perpendicular write head"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dhFuZR0502QC",
+      "citation": "Journal of applied physics 95 (11), 6864-6866, 2004",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Micromagnetic simulation of effect of stress-induced anisotropy in soft magnetic thin films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:F2UWTTQJPOcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Micromagnetic simulation of soft magnetic tips for application in a probe array data storage system"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:sSrBHYA8nusC",
+      "citation": "MRS Online Proceedings Library (OPL) 313, 677, 1993",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Microstructural Dependence of the Perpendicular Magnetic Anisotropy in Co-Pt Alloys"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mvPsJ3kp5DgC",
+      "citation": "2008 IEEE International Conference on Communications, 2061-2065, 2008",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Mitigating the effects of track mis-registration in bit-patterned media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:p2g8aNsByqUC",
+      "citation": "Journal of Applied Physics 110 (3), 2011",
+      "num_citations": 143,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Mobility of oxygen vacancy in SrTiO3 and its implications for oxygen-migration-based resistance switching"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:86PQX7AUzd4C",
+      "citation": "IEEE transactions on magnetics 49 (7), 3560-3563, 2013",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Modeling of polarization effects in Au nanodots excited with InAs quantum dot emitters for use as a HAMR heat source"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tkaPQYYpVKoC",
+      "citation": "2002 IEEE International Magnetics Conference (INTERMAG), BU16, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Moment reduction due to oxygen contamination of Fe/sub 35/Co/sub 65"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:L8Ckcad2t8MC",
+      "citation": "IEEE transactions on magnetics 34 (4), 1904-1906, 1998",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Multi-tapped magnetoresistive heads for magnetic tape tracking servo"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Ug5p-4gJ2f0C",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 227, U280-U280, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Nano-optics for infrared chemical imaging and heat assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:1sJd4Hv_s6UC",
+      "citation": "ASME International Mechanical Engineering Congress and Exposition 3638, 1-14, 2002",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Nanoscale energy transport in information technology research with an application to high-density data storage devices and systems"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hSRAE-fF4OAC",
+      "citation": "2018 76th Device Research Conference (DRC), 1-2, 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Nanoscale Scanning Probe Thermometry of TaOe-based selector devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:IsPWOBWtZBwC",
+      "citation": "MRS Bulletin 43 (2), 112-118, 2018",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Nanoscale thermal transport aspects of heat-assisted magnetic recording devices and materials"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:08ZZubdj9fEC",
+      "citation": "Journal of applied physics 81 (8), 4524-4526, 1997",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "1997",
+      "title": "Narrow track dual magnetoresistive heads for tape"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:lSLTfruPkqcC",
+      "citation": "IEEE transactions on magnetics 38 (5), 2253-2255, 2002",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Narrow-gap single-pole heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YsMSGLbcyi4C",
+      "citation": "Optical Data Storage 2000 4090, 66-71, 2000",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Near-field hybrid recording with a mode index waveguide lens"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:wbdj-CoPYUoC",
+      "citation": "PROCEEDINGS-SPIE THE INTERNATIONAL SOCIETY FOR OPTICAL ENGINEERING, 66-73, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Near-field hybrid recording with a mode index waveguide lens [4090-70]"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eMMeJKvmdy0C",
+      "citation": "IEEE Transactions on Magnetics 40 (4), 1993, 2004",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Ninth Joint MMM–Intermag Conference"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:1Ye0OR6EYb4C",
+      "citation": "2015 45th European Solid State Device Research Conference (ESSDERC), 93-96, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Novel CMOS-compatible a-Si based oscillator and threshold switch"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:v6i8RKmR8ToC",
+      "citation": "Optics express 26 (19), 25060-25075, 2018",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Novel on chip rotation detection based on the acousto-optic effect in surface acoustic wave gyroscopes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:GnPB-g6toBAC",
+      "citation": "Journal of applied physics 101 (8), 2007",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Observation of geometrical resonance in optical throughput of very small aperture lasers associated with surface plasmons"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:VaXvl8Fpj5cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ODS 2006 author index"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:HJSXoJQnj-YC",
+      "citation": "9th Joint MMM/Intermag Conference, January 5-9, Anaheim, CA (2004), 2004",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "On the Challenges of Achieving Areal Densities with Heat Assisted Magnetic Recording Substantially Greater than with Conventional Magnetic Recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ziOE8S1-AIUC",
+      "citation": "Nanotechnology 28 (40), 405201, 2017",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "ON-state evolution in lateral and vertical VO2 threshold switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:fPk4N6BV_jEC",
+      "citation": "Journal of lightwave technology 25 (12), 3704-3709, 2007",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Optical feedback height control system using laser diode sensor for near-field data storage applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:FPJr55Dyh1AC",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 229, U730-U730, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Optical field enhancement via waveguides and surface plasmons in light-emitting diodes detected by near-field scanning optical microscopy."
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mUJArPsKIAAC",
+      "citation": "IEEE Transactions on Electron Devices 64 (9), 3934-3942, 2017",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Origin and optimization of RF power handling limitations in inline phase-change switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:CdxZDUztZiMC",
+      "citation": "IEEE journal on Emerging and Selected Topics in Circuits and Systems 5 (2 …, 2015",
+      "num_citations": 86,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Oscillatory neural networks based on TMO nano-oscillators and multi-level RRAM cells"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:yB1At4FlUx8C",
+      "citation": "2006 IEEE International Magnetics Conference (INTERMAG), 8-8, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Oxide mobility enhancement due to bias sputtering in perpendicular recording media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hsZV8lGYWTMC",
+      "citation": "Advanced Functional Materials 25 (19), 2876-2883, 2015",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Oxygen Vacancy Creation, Drift, and Aggregation in TiO2‐Based Resistive Switches at Low Temperature and Voltage"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:eq2jaN3J8jMC",
+      "citation": "Journal of Applied Physics 87 (9), 6680-6685, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "PART 3-Symposium on Magnetic Technology for a Single Chip Computer-Single-chip computers with microelectromechanical systems-based magnetic memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:kzcrU_BdoSEC",
+      "citation": "IEEE Transactions on Magnetics 36 (5), 3473-3475, 2000",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "PART I-Soft Magnetic Materials: Processing, Modeling, Magnetoimpedance, and Application-Growth Rate Dependence of Nitrogen Incorporation in Reactively Sputtered FeXN Films for …"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:S16KYo8Pm5AC",
+      "citation": "Nanotechnology 24 (8), 085303, 2013",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Pattern transfer with stabilized nanoparticle etch masks"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:kRWSkSYxWN8C",
+      "citation": "IEEE transactions on magnetics 37 (2), 639-645, 2001",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Performance of dropout correction on real magnetic tape waveforms with dropouts"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:jSAVyFp_754C",
+      "citation": "2017 IEEE 17th International Conference on Nanotechnology (IEEE-NANO), 850-854, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Phase based boolean computation using GeTe6 oscillators"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:UuEBAcK4md4C",
+      "citation": "2017 IEEE MTT-S International Microwave Workshop Series on Advanced …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Phase change RF switches with fCO exceeding 10 THz"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WC9gN4BGCRcC",
+      "citation": "IEEE Journal on Exploratory Solid-State Computational Devices and Circuits 1 …, 2015",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Phase coupling and control of oxide-based oscillators for neuromorphic computing"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:s85pQhAUCrAC",
+      "citation": "AIP Advances 13 (2), 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Plasmonic near field transducer of nanocomposite with distributed feedback"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:WqliGbK-hY8C",
+      "citation": "SENSORS, 2009 IEEE, 1911-1914, 2009",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Platinum sputtered CMOS-MEMS electrothermal probes with piezoresistive force sensing"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:pyW8ca7W8N0C",
+      "citation": "TRANSDUCERS 2009-2009 International Solid-State Sensors, Actuators and …, 2009",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Polysilicon sensors for CMOS-MEMS electrothermal probes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NXb4pA-qfm4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Procedure for Submitting a Contributed Article"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Dem6FJhTUoYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Procedure for Submitting a Contributed Article An IEEE style guide, Information for Authors, and other author tools are available at http://www. ieee. org …"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_xSYboBqXhAC",
+      "citation": "Optical Data Storage 2004 5380, 28-33, 2004",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Prototype mode index lens for heat-assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:V3AGJWp-ZtQC",
+      "citation": "IEEE transactions on magnetics 35 (5), 2262-2264, 1999",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Pulse asymmetries and write nonlinearities in the write equalization process for magnetic tape recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:BJrgspguQaEC",
+      "citation": "MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture …, 2021",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "RACER: Bit-pipelined processing using resistive memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:rHJHxKgnXwkC",
+      "citation": "2015 73rd Annual Device Research Conference (DRC), 291-292, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Read disturb and device failure studies in TiO2-based resistive switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YFjsv_pBGBYC",
+      "citation": "Journal of magnetism and magnetic materials 235 (1-3), 138-142, 2001",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Real-time observation of sub-nanosecond magnetic switching in perpendicular multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:1yWc8FF-_SYC",
+      "citation": "2015 IEEE MTT-S International Microwave Symposium, 1-4, 2015",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Reconfigurable inline phase-change switches for broadband applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ZeXyd9-uunAC",
+      "citation": "High-Density Data Recording and Retrieval Technologies 2604, 165-175, 1996",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Recording heads: write heads for high-density magnetic tape"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:KlAtU1dfN6UC",
+      "citation": "IEEE transactions on magnetics 38 (5), 1994-1996, 2002",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Recording layer influence on the dynamics of a soft underlayer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:HoB7MX3m0LUC",
+      "citation": "Journal of applied physics 93 (10), 7783-7785, 2003",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Recording properties of CoCrPt tape media sputter-deposited at room temperature on polymeric substrates"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4TOpqqG69KYC",
+      "citation": "IEEE transactions on magnetics 36 (5), 2536-2538, 2000",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Residual stress optimization in FeAlN pole materials"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:JoZmwDi-zQgC",
+      "citation": "MATERIALS SCIENCE AND TECHNOLOGY-ASSOCIATION FOR IRON AND STEEL TECHNOLOGY- 1, 2, 2005",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Resistive Switching Properties of Electrode-SrZrO~ 3-SrRuO~ 3 Heterostructures with Different Electrodes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:qe6vwMD2xtsC",
+      "citation": "Freeman 600, 567, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Revue canadienne de botanique"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:pQTOvowfQioC",
+      "citation": "Fuentes 1000, 1587, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Revue canadienne de recherche forestière"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:zYLM7Y9cAGgC",
+      "citation": "Applied physics letters 83 (22), 4474-4476, 2003",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Ridge waveguide as a near-field optical source"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:W5xh706n7nkC",
+      "citation": "APS March Meeting Abstracts, W31. 013, 2009",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "RIE-based Pattern Transfer Using Nanoparticle Arrays as Etch Masks"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YsrPvlHIBpEC",
+      "citation": "Nanoscale 9 (37), 14139-14148, 2017",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Scaling behavior of oxide-based electrothermal threshold switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Z5m8FVwuT1cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SELECTED PAPERS FROM THE 2002 INTERNATIONAL MAGNETICS CONFERENCE (INTERMAG 2002)"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dQ2og3OwTAUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SELECTED PAPERS FROM THE FIRST NORTH AMERICAN PERPENDICULAR MAGNETIC RECORDING CONFERENCE (NAPMRC)"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ClCfbGk0d_YC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Selected papers from the seventh Perpendicular Magnetic Recording Conference (PMRC 2004) 31 May–2 June 2004, Sendai, Japan"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:O3NaXMp0MMsC",
+      "citation": "Journal of Physics D: Applied Physics 41 (13), 134001, 2008",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Self-assembled nanoparticle arrays as nanomasks for pattern transfer"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Fu2w8maKXqMC",
+      "citation": "2011 IEEE 24th International Conference on Micro Electro Mechanical Systems …, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Self-engaging and disengaging CMOS-MEMS probes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:kNdYIx-mwKoC",
+      "citation": "Journal of applied physics 91 (10), 7113-7115, 2002",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Separation of contributions to spin valve interlayer exchange coupling field by temperature dependent coupling field measurements"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:35r97b3x0nAC",
+      "citation": "IEEE International Conference on Image Processing 2005 3, III-81, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Shallow arc detection in disk surface images for disk forensics"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:w0F2JDEymm0C",
+      "citation": "MORIS2006WS, Tomiura, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Side Track Erasure and Wide Magnetic Pole HAMR Write Heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:BmWJbWwHJAwC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Silicon and Column IV Semiconductors Devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hGdtkIFZdKAC",
+      "citation": "2021 IEEE 32nd Magnetic Recording Conference (TMRC), 1-2, 2021",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Simulation of a Thermally Efficient HAMR Ridge Waveguide NFT on an AIN Heat Sink"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SxCCDk4iOpsC",
+      "citation": "IEEE Transactions on Magnetics 58 (4), 1-7, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Simulation of a Thermally Efficient Heat-Assisted Magnetic Recording Ridge Waveguide NFT on an AlN Heat Sink"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ZfRJV9d4-WMC",
+      "citation": "US Patent 7,948,708, 2011",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Simultaneous bit pattern determination and head positional information detection on patterned media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:738O_yMBCRsC",
+      "citation": "IEEE transactions on magnetics 46 (3), 825-829, 2010",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Simultaneous PES Generation, Timing Recovery, and Multi-Track Read on Patterned Media: Concept and Performance"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:u5HHmVD_uO8C",
+      "citation": "Journal of applied physics 87 (9), 6680-6685, 2000",
+      "num_citations": 180,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Single-chip computers with microelectromechanical systems-based magnetic memory"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ipzZ9siozwsC",
+      "citation": "IEEE Transactions on Magnetics 38 (5), 3030-3032, 2002",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "SOFT MAGNETIC MATERIALS: THIN FILMS, GMI, AND HIGH-FREQUENCY APPLICATIONS-Magnetization Reduction Due to Oxygen Contamination of Bias Sputtered Fe35Co65 Thin Films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:mVmsd5A6BfQC",
+      "citation": "US Patent 6,594,430, 2003",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Solid immersion lenses for focusing collimated light in the near-field region"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:DkZNVXde3BIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SPECIAL ISSUE ON RF FRONTENDS FOR MOBILE RADIO TERMINAL APPLICATIONS"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:u_35RYKgDlwC",
+      "citation": "Applied Physics Letters 95 (13), 2009",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Spin transfer torque switching of magnetic tunnel junctions using a conductive atomic force microscope"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_B80troHkn4C",
+      "citation": "2003 IEEE International Magnetics Conference (INTERMAG), FT-09, 2003",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Spin-polarized nanodevice for future information technologies"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:qE4H1tSSYIIC",
+      "citation": "Nature communications 10 (1), 1628, 2019",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Spontaneous current constriction in threshold switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tHtfpZlB6tUC",
+      "citation": "Advanced Electronic Materials 5 (7), 1800954, 2019",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Stable Metallic Enrichment in Conductive Filaments in TaOx‐Based Resistive Switches Arising from Competing Diffusive Fluxes"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:VLnqNzywnoUC",
+      "citation": "Optical Data Storage 2006 6282, 34-40, 2006",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Stacked planar solid immersion mirror"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:EkHepimYqZsC",
+      "citation": "MRS Online Proceedings Library (OPL) 312, 101, 1993",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Strain Relaxation During Growth Of Epitaxial Fe on Cu (O01)/MgO (001)"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:u-x6o8ySG0sC",
+      "citation": "MRS bulletin 17 (7), 46-51, 1992",
+      "num_citations": 175,
+      "pub_url": "",
+      "pub_year": "1992",
+      "title": "Stress determination in textured thin films using X-ray diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:dTyEYWd-f8wC",
+      "citation": "MRS Online Proceedings Library (OPL) 239, 475, 1991",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1991",
+      "title": "Structural characterization of multilayers using x-ray diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:7T2F9Uy0os0C",
+      "citation": "MRS Online Proceedings Library (OPL) 313, 799, 1993",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Structural Characterization of Pt/Co multilayers for magnetooptic recording using x-ray diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:XiSMed-E-HIC",
+      "citation": "Stanford University, 1993",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "Structural characterization of thin metallic films and multilayers using x-ray diffraction"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:HDshCWvjkbEC",
+      "citation": "IEEE transactions on magnetics 37 (4), 1570-1572, 2001",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Sub-nanosecond non-Arrhenius magnetic switching in perpendicular multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:O0nohqN1r9EC",
+      "citation": "2016 IEEE MTT-S International Microwave Symposium (IMS), 1-4, 2016",
+      "num_citations": 40,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Substrate agnostic monolithic integration of the inline phase-change switch technology"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:l7t_Zn2s7bgC",
+      "citation": "Journal of applied physics 91 (10), 6827-6829, 2002",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Surface nitrogen concentration dependence of the nitrogen incorporation in reactively sputtered FeXN films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LPtt_HFRSbwC",
+      "citation": "IEEE Electromagnetic Compatibility Magazine 2 (2), 59-67, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Susceptibility of magnetic information storage to power frequency magnetic fields"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:k_7cPK9k7w8C",
+      "citation": "Journal of Applied Physics 123 (11), 2018",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Switching dynamics of TaOx-based threshold switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:kz9GbA2Ns4gC",
+      "citation": "US Patent 8,289,659, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Systems and methods for magnetic head element translation"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:b0M2c_1WBrUC",
+      "citation": "IEEE Transactions on Magnetics 32 (5), 3407-3409, 1996",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Tape erase bands measured by MFM compared to MR head cross erase band responses"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:KWzIFqRkAKkC",
+      "citation": "Journal of Applied Physics 127 (23), 2020",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Temperature overshoot as the cause of physical changes in resistive switching devices during electro-formation"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:4MWp96NkSFoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Test Invited Talk"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:qUcmZB5y_30C",
+      "citation": "IEEE transactions on magnetics 40 (4), 2404-2406, 2004",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The application of sputtered thin film in advanced recording tape media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:XD-gHx7UXLsC",
+      "citation": "2005 IEEE International Magnetics Conference (INTERMAG), 245-246, 2005",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "The effect of external magnetic field on mark size during field emission assisted magnetic probe recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:3fE2CSJIrl8C",
+      "citation": "Journal of applied physics 99 (2), 2006",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "The effect of external magnetic field on mark size in heat-assisted probe recording on CoNi∕ Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Zph67rFs4hoC",
+      "citation": "IEEE Transactions on Magnetics 32 (5), 4541-4543, 1996",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "The effect of nitrogen partitioning on the magnetic properties of FeAlN films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:70eg2SAEIzsC",
+      "citation": "Journal of applied physics 99 (8), 2006",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "The effect of stress-induced anisotropy in patterned FeCo thin-film structures"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:ULOm3_A8WrAC",
+      "citation": "IEEE transactions on magnetics 31 (6), 2703-2705, 1995",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "The effect of substrate temperature on the magnetic properties of FeAlN thin films for recording heads"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:aqlVkmm33-oC",
+      "citation": "IEEE transactions on magnetics 31 (6), 2700-2702, 1995",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "1995",
+      "title": "The effect of surface topography on the soft magnetic properties of FeAlN films"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Mojj43d5GZwC",
+      "citation": "Journal of Applied Physics 109 (7), 2011",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "The influence of media optical properties on the efficiency of optical power delivery for heat assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:-nhnvRiOwuoC",
+      "citation": "49th Annual Conference on Magnetism and Magnetic Materials, MMM 2004, 2004",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The Role of Heat Sink in Heat Assisted Magnetic Probe Recording on CoNi/Pt Film"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:w1MjKQ0l0TYC",
+      "citation": "Poster presentation at the NAPMRC 2004, 2004",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The Role of Heat Sink in STM-Based Magnetic Probe Recording on CoNi/Pt Multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:YlPif8NxrbYC",
+      "citation": "Physica. B, Condensed Matter 387, 2007",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "The role of MFM signal in mark size measurement in probe-based magnetic recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:a0OBvERweLwC",
+      "citation": "Physica B: Condensed Matter 387 (1-2), 328-332, 2007",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "The role of MFM signal in mark size measurement in probe-based magnetic recording on CoNi/Pt multilayers"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:bFI3QPDXJZMC",
+      "citation": "Integrated Nanosystems: Design, Synthesis, and Applications 41774, 41-44, 2004",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "The Role of STM Tip Shape in Heat Assisted Magnetic Probe Recording on CONI/PT Film"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:e5wmG9Sq2KIC",
+      "citation": "IEEE transactions on magnetics 38 (4), 1658-1663, 2002",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "The role of the gap in single pole heads in perpendicular recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:2KloaMYe4IUC",
+      "citation": "2011 11th Annual Non-Volatile Memory Technology Symposium Proceeding, 1-4, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Thermal conductivity measurements of nitrogen-doped Ge2Sb2Te5"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:A8cqit5AE6sC",
+      "citation": "2011 11th Annual Non-Volatile Memory Technology Symposium Proceeding, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thermal conductivity measurements of nitrogen-doped Ge2Sb2Te5"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:J-pR_7NvFogC",
+      "citation": "ASME, 2008",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Thermal Design for Probe Transformation of Phase Change Vias"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:RGFaLdJalmkC",
+      "citation": "Applied physics letters 88 (24), 2006",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Thermal limits on field alignment of nanoparticle FePt media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:P5F9QuxV20EC",
+      "citation": "Transactions of the Magnetics Society of Japan 4 (4-2), 166-171, 2004",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Thermal load in sliders for hybrid recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:tKAzc9rXhukC",
+      "citation": "2005 IEEE International Magnetics Conference (INTERMAG), 25-26, 2005",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Thermal management in heat assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:CHSYGLWDkRkC",
+      "citation": "IEEE transactions on magnetics 43 (1), 62-66, 2006",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Thermal management in heat-assisted magnetic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:8k81kl-MbHgC",
+      "citation": "IEEE transactions on magnetics 40 (1), 137-147, 2004",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Thermal Williams-Comstock model for predicting transition lengths in a heat-assisted magnetic recording system"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:L_l9e5I586QC",
+      "citation": "Applied Physics Letters 114 (16), 2019",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Thermal-gradient-driven elemental segregation in Ge2Sb2Te5 phase change memory cells"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:LjlpjdlvIbIC",
+      "citation": "Journal of Physics D: Applied Physics 44 (18), 185103, 2011",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Thermographic analysis of localized conductive channels in bipolar resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NDuN12AVoxsC",
+      "citation": "Review of Scientific Instruments 87 (2), 2016",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermometry of a high temperature high speed micro heater"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:SjuI4pbJlxcC",
+      "citation": "IEEE Transactions on Electron Devices 62 (9), 2972-2977, 2015",
+      "num_citations": 49,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Thermometry of filamentary RRAM devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:roLk4NBRz8UC",
+      "citation": "IEEE transactions on magnetics 32 (1), 166-171, 1996",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "1996",
+      "title": "Thin film tape recording heads with high moment FeAlN poles"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:_kc_bZDykSQC",
+      "citation": "IEEE transactions on magnetics 41 (2), 654-659, 2005",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Thin-film recording media on flexible substrates for tape applications"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:z_wVstp3MssC",
+      "citation": "2010 IEEE 23rd International Conference on Micro Electro Mechanical Systems …, 2010",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Three-DOF CMOS-MEMS probes with embedded piezoresistive sensors"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:g5m5HwL7SMYC",
+      "citation": "IEEE transactions on electron devices 57 (1), 312-320, 2009",
+      "num_citations": 54,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Three-terminal probe reconfigurable phase-change material switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:JQOojiI6XY0C",
+      "citation": "Joint International Symposium on Optical Memory and Optical Data Storage, OTuA4, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Trans-ABS Power Coupling Efficiency of Near Field Transducers for HAMR Calculated with Finite Element Modeling"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:e_rmSamDkqQC",
+      "citation": "Applied Physics Letters 102 (2), 2013",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Transient characterization of the electroforming process in TiO2 based resistive switching devices"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:JWITY9-sCbMC",
+      "citation": "Jonghan Kwon, Chao-Yang Chen, Abhishek Sharma, Andrea Fantini, Malgorzata …, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Transient thermometry and high-resolution analysis of filamentary resistive switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:1DsIQWDZLl8C",
+      "citation": "ACS Applied Materials & Interfaces 8 (31), 20176-20184, 2016",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Transient thermometry and high-resolution transmission electron microscopy analysis of filamentary resistive switches"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:KNjnJ3z-R6IC",
+      "citation": "2016 IEEE International Reliability Physics Symposium (IRPS), 7B-3-1-7B-3-5, 2016",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Transient thermometry and HRTEM analysis of RRAM thermal dynamics during switching and failure"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:Se3iqnhoufwC",
+      "citation": "IEEE InternationalElectron Devices Meeting, 2005. IEDM Technical Digest …, 2005",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Tunable on-chip inductors up to 5 GHz using patterned permalloy laminations"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:QIV2ME_5wuYC",
+      "citation": "IEEE Transactions on Magnetics 44 (11), 3789-3792, 2008",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Two-dimensional pulse response and media noise modeling for bit-patterned media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:NMxIlDl6LWMC",
+      "citation": "Applied physics letters 90 (25), 2007",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Use of bias sputtering to enhance decoupling in oxide composite perpendicular recording media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:iH-uZ7U-co4C",
+      "citation": "IEEE transactions on magnetics 39 (6), 3616-3618, 2003",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Use of room-temperature bias sputtering to decrease intergranular coupling in magnetic media deposited on polymeric substrates"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:hqOjcs7Dif8C",
+      "citation": "IEEE transactions on magnetics 29 (1), 300-306, 1993",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "X-ray diffraction characterization of stress and crystallographic texture in thin film media"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:OU6Ihb5iCvQC",
+      "citation": "Journal of applied physics 74 (2), 996-1000, 1993",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "1993",
+      "title": "X‐ray analysis of compositional modulation in Co/Pt multilayer films for magneto‐optic recording"
+    },
+    {
+      "author_pub_id": "Ktm9tWwAAAAJ:C33y2ycGS3YC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "авбдгжеиз й г еи\"! $#% г'& () 0е й д 213\" 4 5 еи'! 6#% 78з еи9 з@ 13 AB CAD# Bз 4# EF 5 (G 5Cй 561I HP5@ 9 з@'&Qеи78зR 2 1I (8# Sеиг 5C T 5CйU7! $ CVQ1Wеи7 13з@ г 137Gе й! з …"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "Ktm9tWwAAAAJ"
+}

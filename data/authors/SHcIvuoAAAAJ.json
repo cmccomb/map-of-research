@@ -1,0 +1,1935 @@
+{
+  "display_name": "Franchetti",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Franchetti.json",
+  "publication_count": 246,
+  "publications": [
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:WqliGbK-hY8C",
+      "citation": "IEEE Control Systems Magazine 37 (6), 1, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "2017 Index IEEE Control Systems Vol. 37"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:HbR8gkJAVGIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)| 979-8-3503-9739-0/23/$31.00© 2023 IEEE| DOI: 10.1109/ISPASS57527. 2023.00052"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:1qzjygNMrQYC",
+      "citation": "2016 IEEE High Performance Extreme Computing Conference (HPEC), 1-1, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "3d dram based application specific hardware accelerator for spmv"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4DMP91E08xMC",
+      "citation": "2nd Workshop on Near Data Processing, WONDP 2014, 2014",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "3D-stacked memory-side acceleration: Accelerator and system design"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:bFI3QPDXJZMC",
+      "citation": "US Patent 9,286,216, 2016",
+      "num_citations": 97,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "3DIC memory chips including computational logic-in-memory for performing accelerated data processing"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:f2IySw72cVMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "60 Awards"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:86PQX7AUzd4C",
+      "citation": "2024 IEEE Hot Chips 36 Symposium (HCS), 1-1, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A 1.19 GHz 9.52 Gsamples/sec Radix-8 FFT Hardware Accelerator in 28nm"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:p2g8aNsByqUC",
+      "citation": "Workshop on Near Data Processing (WONDP), 2015",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A 3 d-stacked memory manycore stencil accelerator system"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:0EnyYjriUFMC",
+      "citation": "2013 IEEE international 3D systems integration conference (3DIC), 1-7, 2013",
+      "num_citations": 153,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A 3D-stacked logic-in-memory accelerator for application-specific data intensive computing"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ILKRHgRFtOwC",
+      "citation": "2022 IEEE/ACM International Symposium on Code Generation and Optimization …, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A compiler for sound floating-point computations using affine arithmetic"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:CHSYGLWDkRkC",
+      "citation": "Compilers for Parallel Computing Workshop, 2013",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A domain-specific language and compiler for stencil computations on short-vector simd and gpu architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:uc_IGeMz5qoC",
+      "citation": "SIAM Journal on Scientific Computing 42 (5), C245-C264, 2020",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "A flexible framework for multidimensional DFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_Re3VWB3Y0AC",
+      "citation": "arXiv preprint arXiv:1904.10119, 2019",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A flexible framework for parallel multi-dimensional DFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:j8SEvjWlNXcC",
+      "citation": "arXiv e-prints, arXiv: 1904.10119, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A Flexible Framework for Parallel Multi-Dimensional DFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:S16KYo8Pm5AC",
+      "citation": "Workshop Proceedings of the 51st International Conference on Parallel …, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A framework for low communication approaches for large scale 3D convolution"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:i2xiXl-TujoC",
+      "citation": "2022 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A High Throughput Hardware Accelerator for FFTW Codelets: A First Look"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:NMxIlDl6LWMC",
+      "citation": "2011 North American Power Symposium, 1-5, 2011",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "A multi-core high performance computing framework for distribution power flow"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:TFP_iSt0sucC",
+      "citation": "2012 IEEE Power and Energy Society General Meeting, 1-6, 2012",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "A multi-core high performance computing framework for probabilistic solutions of distribution systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:GtLg2Ama23sC",
+      "citation": "SC24-W: Workshops of the International Conference for High Performance …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A Performance-Portable MultiGPU Implementation of 3D Euler Equations using ProtoX and IRIS"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:mVmsd5A6BfQC",
+      "citation": "Proc. Fourth IMACS Symposium on Mathematical Modelling (MATHMOD 2003) 2 …, 2003",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "A portable short vector version of fftw"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:JV2RwH3_ST0C",
+      "citation": "2013 IEEE PES innovative smart grid technologies conference (ISGT), 1-6, 2013",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A Quasi-Monte Carlo approach for radial distribution system probabilistic load flow"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:sSrBHYA8nusC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "A Queueing Based Scheduling Approach for Load Management in Electrical Energy Systems: The Case of Electric Vehicle Charging"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_FxGoFyzp5QC",
+      "citation": "International Conference on High Performance Computing for Computational …, 2006",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "A rewriting system for the vectorization of signal transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:J-pR_7NvFogC",
+      "citation": "2016 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "A scale-free structure for power-law graphs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:dTyEYWd-f8wC",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A scale-free structure for real world networks"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:UeHWp8X0CEIC",
+      "citation": "Proceedings 16th International Parallel and Distributed Processing Symposium …, 2002",
+      "num_citations": 82,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "A SIMD vectorizing compiler for digital signal processing algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:bnK-pcrLprsC",
+      "citation": "IFIP/IEEE International Conference on Very Large Scale Integration-System on …, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "A Smart Memory Accelerated Computed Tomography Parallel Backprojection"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:IjCSPb-OGe4C",
+      "citation": "Proceedings of the 27th international ACM conference on International …, 2013",
+      "num_citations": 181,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "A stencil compiler for short-vector simd architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4fKUyHm3Qg0C",
+      "citation": "Proceedings of the 52Nd Annual Design Automation Conference, 1-6, 2015",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A synthesis methodology for application-specific logic-in-memory designs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:l7t_Zn2s7bgC",
+      "citation": "2014 IEEE PES General Meeting| Conference & Exposition, 1-5, 2014",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Accelerated AC contingency calculation on commodity multi-core SIMD CPUs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:BrmTIyaxlBUC",
+      "citation": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and …, 2015",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Accelerating architectural simulation via statistical techniques: A survey"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:kh2fBNsKQNwC",
+      "citation": "2024 33th International Conference on Parallel Architectures and Compilation …, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Accelerating High-Precision Number Theoretic Transforms using Intel AVX-512"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:L8Ckcad2t8MC",
+      "citation": "2013 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2013",
+      "num_citations": 140,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Accelerating sparse matrix-matrix multiplication with 3D-stacked logic-in-memory hardware"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:URolC5Kub84C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Adaptation of A64 Scalable Vector Extension for Spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Mojj43d5GZwC",
+      "citation": "Concurrency and Computation: Practice and Experience 29 (17), e4105, 2017",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Algebraic description and automatic generation of multigrid methods in SPIRAL"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:SP6oXDckpogC",
+      "citation": "Proceedings of the ACM/SIGDA international symposium on Field Programmable …, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Algorithm and architecture optimization for large size two dimensional discrete fourier transform"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_B80troHkn4C",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2017",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Algorithm and hardware co-optimized solution for large SpMV problems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ZuybSZzF8UAC",
+      "citation": "composites 2, 1, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Algorithm design for large scale FFT-based simulations on cpu-gpu platforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:PR6Y55bgFSsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Algorithm Design for Large Scale Parallel FFT-Based Simulations on Heterogeneous Platforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:lSLTfruPkqcC",
+      "citation": "2014 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2014",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Algorithm/hardware co-optimized sar image reconstruction with 3d-stacked logic in memory"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:70eg2SAEIzsC",
+      "citation": "Institute for Applied Mathematics and Numerical Analysis, Vienna University …, 2003",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "An abstraction layer for SIMD extensions"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:p__nRnzSRKYC",
+      "citation": "2021 IEEE International Parallel and Distributed Processing Symposium …, 2021",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "An auto-tuning with adaptation of a64 scalable vector extension for spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:8AbLer7MMksC",
+      "citation": "2015 IEEE International Conference on Digital Signal Processing (DSP), 422-426, 2015",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "An ensemble technique for estimating vehicle speed and gear position from acoustic data"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:YsMSGLbcyi4C",
+      "citation": "IEEE Transactions on Smart Grid 4 (1), 446-456, 2012",
+      "num_citations": 182,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "An information-theoretic approach to PMU placement in electric power systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:AvfA0Oy_GE0C",
+      "citation": "2021 IEEE/ACM International Symposium on Code Generation and Optimization …, 2021",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "An interval compiler for sound floating-point computations"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4JMBOYKVnBMC",
+      "citation": "Proc. High Performance Embedded Computing (HPEC), 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Application-specific logic-in-memory for polar format synthetic aperture radar"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:oNZyr7d5Mn4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Approximating Manifolds and Geodesics with Curved Surfaces"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:b0M2c_1WBrUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Approximative 1D and 2D FFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:8k81kl-MbHgC",
+      "citation": "2001 IEEE International Conference on Acoustics, Speech, and Signal …, 2001",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Architecture independent short vector FFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:2P1L_qKh6hAC",
+      "citation": "Dagstuhl Reports 3 (9), 214-244, 2014",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Automatic application tuning for hpc architectures (dagstuhl seminar 13401)"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:dshw04ExmUIC",
+      "citation": "Proc. NVIDIA Res. Summit GPU Technol. Conf, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Automatic generation of FFT libraries for GPUs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:VaXvl8Fpj5cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Automatic Generation of Matrix-Vector Code Using SPIRAL for the Power10 ISA"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:cFHS6HbyZ2cC",
+      "citation": "AURORA Technical Report TR2001-17, Institute for Applied Mathematics and …, 2001",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2001",
+      "title": "Automatic Generation of SIMD DSP Code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ldfaerwXgEUC",
+      "citation": "International Conference on High Performance Computing for Computational …, 2012",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Automatic generation of the HPC challenge’s global FFT benchmark for BlueGene/P"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:SeFeTyx0c_EC",
+      "citation": "High Performance Extreme Computing (HPEC), 2009",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Automatic generation of vectorized fast Fourier transform libraries for the larrabee and avx instruction set extension"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:3fE2CSJIrl8C",
+      "citation": "International Symposium on Parallel and Distributed Processing and …, 2006",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Automatic performance optimization of the discrete Fourier transform on distributed memory computers"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:9ZlFYXVOiuMC",
+      "citation": "Proceedings of the international conference on Supercomputing, 265-274, 2011",
+      "num_citations": 50,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Automatic SIMD vectorization of fast Fourier transforms for the Larrabee and AVX instruction sets"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:iH-uZ7U-co4C",
+      "citation": "Submitted to 6th International Meeting on High Performance Computing for …, 2004",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Automatically optimized FFT codes for the BlueGene/L supercomputer"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:yD5IFk8b50cC",
+      "citation": "High Performance Computing for Computational Science-VECPAR 2004: 6th …, 2005",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Automatically tuned fFTs for blueGene/L’s double FPU"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:V3AGJWp-ZtQC",
+      "citation": "arXiv preprint arXiv:1611.08035, 2016",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Automating the last-mile for high performance dense linear algebra"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:bEWYMUwI8FkC",
+      "citation": "Procedia Computer Science 4, 2176-2185, 2011",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Autotuning a random walk boolean satisfiability solver"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:xtRiw3GOFMkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Backend Optimization for Straight Line Code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:BqipwSGYUEgC",
+      "citation": "2014 IEEE International Conference on Acoustics, Speech and Signal …, 2014",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Barometric and GPS altitude sensor fusion"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:5ugPr518TE4C",
+      "citation": "2016 IEEE International Conference on Big Data (Big Data), 2616-2625, 2016",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Big data computation of taxi movement in New York City"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:qUcmZB5y_30C",
+      "citation": "The International Journal of High Performance Computing Applications 22 (1 …, 2008",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Bluegene/L applications: Parallelism on a massive scale"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ZHo1McVdvXMC",
+      "citation": "GPCE 7, 1-2, 2007",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Can we teach computers to write fast libraries?"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4OULZ7Gr8RgC",
+      "citation": "International Conference on High Performance Computing for Computational …, 2014",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Capturing the expert: Generating fast matrix-multiply kernels with spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_FM0Bhl9EiAC",
+      "citation": "arXiv preprint arXiv:2501.07535, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Code Generation for Cryptographic Kernels using Multi-word Modular Arithmetic on GPU"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:r0BpntZqJG4C",
+      "citation": "AURORA Technical Report TR2003-07, Institute for Applied Mathematics and …, 2003",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Compiler Technology for the SIMD Vectorization of Straight Line Code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_xSYboBqXhAC",
+      "citation": "Proceedings of the 3rd Workshop on Programming Models for SIMD/Vector …, 2016",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Compilers, hands-off my hands-on optimizations"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Wp0gIr-vW9MC",
+      "citation": "International Conference on High-Performance Embedded Architectures and …, 2010",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Computer generation of efficient software Viterbi decoders"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Zph67rFs4hoC",
+      "citation": "Proceedings of the 23rd international conference on Supercomputing, 26-35, 2009",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Computer generation of fast Fourier transforms for the cell broadband engine"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:WF5omc3nYNoC",
+      "citation": "ACM Transactions on Design Automation of Electronic Systems (TODAES) 17 (2 …, 2012",
+      "num_citations": 164,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Computer generation of hardware for linear digital signal processing transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:blknAaTinKkC",
+      "citation": "Carnegie Mellon University, 2010",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Computer generation of platform-adapted physical layer software"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:tOudhMTPpwUC",
+      "citation": "2012 IEEE/IFIP 20th International Conference on VLSI and System-on-Chip …, 2012",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Cost-effective smart memory implementation for parallel backprojection in computed tomography"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:EUQCXRtRnyEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Das, Subhasis, 349 Devadas, Srinivas, 616 Dijk, Marten van, 616 Dreslinksi, Ronald G., 27, 629"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:9yKSN-GCB0IC",
+      "citation": "Compiler Construction: 20th International Conference, CC 2011, Held as Part …, 2011",
+      "num_citations": 177,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Data layout transformation for stencil computations on short-vector simd architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_Qo2XoVZTnwC",
+      "citation": "ACM SIGARCH Computer Architecture News 43 (3S), 131-143, 2015",
+      "num_citations": 258,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Data reorganization in memory using 3D-stacked DRAM"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:tS2w5q8j5-wC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Department of Electrical and Computer Engineering Carnegie Mellon University Pittsburgh, PA USA"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:-_dYPAW6P2MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Design and Specification of Large-scale Simulations for GPUs using FFTX"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:M3ejUd6NZC8C",
+      "citation": "2012 IEEE 23rd International Conference on Application-Specific Systems …, 2012",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Design automation framework for application-specific logic-in-memory blocks"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:WA5NYHcadZ8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "DFT Transform on the Fermi (GTX480): Automatic Program Generation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hC7cP41nSMkC",
+      "citation": "Center for Silicon System Implementation, Carnegie Mellon University, Tech …, 2007",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Discrete Fourier transform compiler: From mathematical representation to efficient hardware"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:d1gkVwhDpl0C",
+      "citation": "IEEE Signal Processing Magazine 26 (6), 90-102, 2009",
+      "num_citations": 126,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Discrete Fourier transform on multicore"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:e5wmG9Sq2KIC",
+      "citation": "2008 IEEE International Symposium on Parallel and Distributed Processing, 1-5, 2008",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Domain-specific library generation for parallel software and hardware platforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ZeXyd9-uunAC",
+      "citation": "2014 IEEE international symposium on hardware-oriented security and trust …, 2014",
+      "num_citations": 86,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Efficient and secure intellectual property (IP) design with split fabrication"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:evX43VCCuoAC",
+      "citation": "Proceedings of the 52nd Annual IEEE/ACM International Symposium on …, 2019",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Efficient spmv operation for large and highly sparse matrices using scalable multi-way merge parallelization"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:2osOgNQ5qMEC",
+      "citation": "Proceedings of the IEEE 93 (2), 409-425, 2005",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Efficient utilization of SIMD extensions"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:OU6Ihb5iCvQC",
+      "citation": "Proceedings of the 48th International Symposium on Microarchitecture, 750-761, 2015",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Enabling portable energy efficiency with memory accelerated library"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:UebtZRa9Y70C",
+      "citation": "Springer, 2011",
+      "num_citations": 58,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Encyclopedia of parallel computing, chapter Spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:K3LRdlH-MEoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Energy Efficient Application-Specific Logic-in-Memory for Interpolation in Synthetic Aperture Radar"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:M05iB0D1s5AC",
+      "citation": "Computer 48 (12), 24-33, 2015",
+      "num_citations": 293,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Energy-efficient abundant-data computing: The N3XT 1,000 x"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:FPJr55Dyh1AC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "EVPFFTX: A First Look at FFTX Applications in Material Science"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Z5m8FVwuT1cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Extending Spiral to Other Numerical Algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:dQ2og3OwTAUC",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-7, 2018",
+      "num_citations": 80,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Fast and accurate object detection in high resolution 4K and 8K video using GPUs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:7PzlFSSx8tAC",
+      "citation": "2010 IEEE International Conference on Image Processing, 641-644, 2010",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Fast and robust active contours for image segmentation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4TOpqqG69KYC",
+      "citation": "2010 IEEE International Conference on Image Processing, 3281-3284, 2010",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Fast bilateral filtering by adapting block size"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:RGFaLdJalmkC",
+      "citation": "Encyclopedia of Parallel Computing. Springer, 51, 2011",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Fast fourier transform"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:t6usbXjVLHcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Fast Fourier Transform on FPGA: Design Choices and Evaluation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:t7zJ5fGR-2UC",
+      "citation": "2020 IEEE 36th International Conference on Data Engineering (ICDE), 1465-1476, 2020",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "FESIA: A fast and SIMD-efficient set intersection approach on modern CPUs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Tiz5es2fbqcC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "FFT ALGORITHMS FOR MULTIPLY-ADD ARCHITECTURES"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_kc_bZDykSQC",
+      "citation": "International Conference on Compiler Construction, 217-231, 2004",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2004",
+      "title": "Fft compiler techniques"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:RYcK_YlVTxYC",
+      "citation": "2007 IEEE International High Level Design Validation and Test Workshop, 137-139, 2007",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "FFT Compiler: from math to efficient hardware HLDVT invited short paper"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:u-x6o8ySG0sC",
+      "citation": "Proceedings of the 2006 ACM/IEEE Conference on Supercomputing, 115-es, 2006",
+      "num_citations": 109,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "FFT program generation for shared memory: SMP and multicore"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:HDshCWvjkbEC",
+      "citation": "International Workshop on State-of-the-Art in Scientific and Parallel …, 2008",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "FFT program generation for the Cell BE"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:fEOibwPWpKIC",
+      "citation": "Proceedings of the International Conference on High Performance Computing in …, 2020",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Ffte on sve: Spiral-generated kernels"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:R3hNpaxXUhUC",
+      "citation": "2014 IEEE International Conference on Acoustics, Speech and Signal …, 2014",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "FFTs with near-optimal memory access through block data layouts"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:VOx2b1Wkg3QC",
+      "citation": "Journal of Signal Processing Systems 85, 67-82, 2016",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "FFTs with near-optimal memory access through block data layouts: Algorithm, architecture and design automation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Fu2w8maKXqMC",
+      "citation": "2018 IEEE 25th International Conference on High Performance Computing …, 2018",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "FFTX and SpectralPack: A first look"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:35r97b3x0nAC",
+      "citation": "2019 IEEE High Performance Extreme Computing Conference (HPEC), 1-2, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "FFTX for Micromechanical Stress-Strain Analysis"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ClCfbGk0d_YC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "FFTX-IRIS: A Dynamic Execution System for Heterogeneous Platforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:q3CdL3IzO_QC",
+      "citation": "Proceedings of the SC'23 Workshops of The International Conference on High …, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Fftx-iris: Towards performance portability and heterogeneity for spiral generated code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:tkaPQYYpVKoC",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2017",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "First look: Linear algebra-based triangle counting without matrix multiplication"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:SpbeaW3--B0C",
+      "citation": "2022 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2022",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Flexible hardware accelerator design generation with spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:PVjk1bu6vJQC",
+      "citation": "Proceedings of the ACM on Programming Languages 8 (PLDI), 442-466, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Floating-Point TVPI Abstract Domain"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:eQOLeE2rZwMC",
+      "citation": "Proceedings of the 45th annual Design Automation Conference, 385-390, 2008",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Formal datapath representation and manipulation for implementing DSP transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:W7OEmFMy1HYC",
+      "citation": "Proceedings of the 2005 ACM SIGPLAN conference on Programming language …, 2005",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Formal loop merging for signal transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:uWQEDVKXjbEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Formal Verification of HCOL Rewriting"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:BUYA1_V_uYcC",
+      "citation": "Identity 1 (1), 2, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Formulas as Functional Fortran-Style Map-Based Programs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:9pM33mqn1YgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "FortranX: Harnessing Code Generation, Portability, and Heterogeneity in Fortran"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:W5xh706n7nkC",
+      "citation": "Proceedings of the IEEE 106 (11), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "From High-Level Specification to High-Performance Code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_Ybze24A_UAC",
+      "citation": "Proceedings of the IEEE 106 (11), 1875-1878, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "From High-Level Specification to High-Performance Code [Scanning the Issue]"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:PELIpwtuRlgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Gagan Agrawal (Ohio State University) Srinivas Aluru (Georgia Tech) Rafael Asenjo (Universidad de Málaga) Michael Burke (Rice University)"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ipzZ9siozwsC",
+      "citation": "2020 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Gbtlx: A first look"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:kNdYIx-mwKoC",
+      "citation": "15th Annual IEEE Symposium on Field-Programmable Custom Computing Machines …, 2007",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Generating FPGA-accelerated DFT libraries"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:KlAtU1dfN6UC",
+      "citation": "2009 IEEE International Conference on Acoustics, Speech and Signal …, 2009",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Generating high performance pruned FFT implementations"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:YFjsv_pBGBYC",
+      "citation": "High Performance Embedded Computing (HPEC) 85 (86), 136, 2008",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Generating high-performance general size linear transform libraries using Spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Ug5p-4gJ2f0C",
+      "citation": "2023 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Generating high-performance number theoretic transform implementations for vector architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Dip1O2bNi0gC",
+      "citation": "IEEE/ACM International Symposium on Code Generation and Optimization (CGO), 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Generating number theoretic transforms for multi-word integer data types"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:3s1wT3WcHBgC",
+      "citation": "2015 IEEE International Parallel and Distributed Processing Symposium, 743-752, 2015",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Generating optimized Fourier interpolation routines for density functional theory using SPIRAL"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:YOwf2qJgpHMC",
+      "citation": "International Conference on Compiler Construction, 116-131, 2008",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Generating SIMD vectorized permutations"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:EYYDruWGBe4C",
+      "citation": "2021 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2021",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Graph Embedding and Field Based Detection of Non-Local Webs in Large Scale Free Networks"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:pyW8ca7W8N0C",
+      "citation": "IEEE Micro 36 (1), 14-23, 2015",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Hamlet architecture for parallel data reorganization in memory"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:isC4tDSrTZIC",
+      "citation": "2014 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2014",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "HAMLeT: Hardware accelerated memory layout transform within 3D-stacked DRAM"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:maZDTaKrznsC",
+      "citation": "2010 IEEE International Conference on Acoustics, Speech and Signal …, 2010",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Hardware implementation of the discrete fourier transform with non-power-of-two problem size"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:1yQoGdGgb4wC",
+      "citation": "Proceedings of the 7th ACM SIGPLAN International Workshop on Functional High …, 2018",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "HELIX: a case study of a formal verification of high performance program generation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:AXPGKjj_ei8C",
+      "citation": "2017 IEEE 18th International Symposium on High Assurance Systems Engineering …, 2017",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "High assurance code generation for cyber-physical systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:g5m5HwL7SMYC",
+      "citation": "Signal Processing, Sensor/Information Fusion, and Target Recognition XXIII …, 2014",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "High assurance SPIRAL"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:O3NaXMp0MMsC",
+      "citation": "High Performance Embedded Computing (HPEC), 2009",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "High performance linear transform program generation for the Cell BE"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:9Nmd_mFXekcC",
+      "citation": "US Patent 11,249,720, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "High performance merge sort with scalable parallelization and full-throughput reduction"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:zYLM7Y9cAGgC",
+      "citation": "IEEE Transactions on Circuits and Systems for Video Technology 20 (11), 1509 …, 2010",
+      "num_citations": 77,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "High performance stereo vision designed for massively data parallel platforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:VL0QpB8kHFEC",
+      "citation": "International Conference on Machine Learning, 5776-5785, 2018",
+      "num_citations": 103,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "High performance zero-memory overhead direct convolutions"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:HE397vMXCloC",
+      "citation": "IEEE Control Systems Magazine 37 (2), 82-103, 2017",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "High-assurance SPIRAL: End-to-end guarantees for robot and car control"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:qxL8FJ1GzNcC",
+      "citation": "Algorithms for Synthetic Aperture Radar Imagery XVI 7337, 72-83, 2009",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "High-performance synthetic aperture radar image formation on commodity multicore architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:dfsIfKJdRG4C",
+      "citation": "2012 IEEE 26th International Parallel and Distributed Processing Symposium …, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Highly Efficient Performance Portable Tracking of Evolving Surfaces"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Se3iqnhoufwC",
+      "citation": "Generative and Transformational Techniques in Software Engineering II …, 2008",
+      "num_citations": 54,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "How to write fast numerical code: A small introduction"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:vDijr-p_gm4C",
+      "citation": "arXiv preprint arXiv:2012.15647, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Indirect Measurement of Hepatic Drug Clearance by Fitting Dynamical Models"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:e_rmSamDkqQC",
+      "citation": "Proceedings of High Performance Extreme Computing (HPEC), 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Interval arithmetic-based FFT for large integer multiplication"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:g3aElNc5_aQC",
+      "citation": "Massive Graph Analytics, 507-524, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Introduction to GraphBLAS"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:N5tVd3kTz84C",
+      "citation": "2018 IEEE International Parallel and Distributed Processing Symposium (IPDPS …, 2018",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Large bandwidth-efficient FFTs on multicore and multi-socket systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:LjlpjdlvIbIC",
+      "citation": "Update 1, 1, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Large Scale FFT-Based Stress-Strain Simulations with Irregular Domain Decomposition"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ZfRJV9d4-WMC",
+      "citation": "2018 IEEE Global Conference on Signal and Information Processing (GlobalSIP …, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Large-scale algorithm design for parallel FFT-based simulations on GPUs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:qjMakFHDy7sC",
+      "citation": "Proceedings of the 2006 ACM/IEEE conference on Supercomputing, 45-es, 2006",
+      "num_citations": 125,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Large-scale electronic structure calculations of high-Z metals on the BlueGene/L platform"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Y0pCki6q_DkC",
+      "citation": "SC'05: Proceedings of the 2005 ACM/IEEE Conference on Supercomputing, 24-24, 2005",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Large-scale first-principles molecular dynamics simulations on the bluegene/l platform using the qbox code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:SdhP9T11ey4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Large-scale Parallel Numerical Computing Technology Research Team"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:BwyfMAYsbu0C",
+      "citation": "2021 IEEE International Parallel and Distributed Processing Symposium …, 2021",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Leveraging High Dimensional Spatial Graph Embedding as a Heuristic for Graph Algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:M7yex6snE4oC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "LIMA: Hardware for FFT based Large Integer Multiplication"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:kzcrU_BdoSEC",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-7, 2018",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Linear algebraic formulation of edge-centric k-truss algorithms with adjacency matrices"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:olpn-zPbct0C",
+      "citation": "Workshop on High-Level Synthesis colocated with DAC, 2008",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Linear transforms: From math to efficient hardware"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:GnPB-g6toBAC",
+      "citation": "Journal of Signal Processing Systems 71, 297-312, 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Local interpolation-based polar format sar: Algorithm, hardware implementation and design automation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:8d8msizDQcsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "LSU Scholarly Repositor y"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:_axFR9aDTf0C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Magic Memory: A Memory-Centric Declarative Programming Paradigm to Enable High Productivity on Heterogeneous Systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:kz9GbA2Ns4gC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Magic Memory: A Programming Model For Big Data Analytics"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:z_wVstp3MssC",
+      "citation": "Proceedings of the Platform for Advanced Scientific Computing Conference, 1-10, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Massive scaling of massif: Algorithm development and analysis for simulation on gpus"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:mvPsJ3kp5DgC",
+      "citation": "2016 IEEE High Performance Extreme Computing Conference (HPEC), 1-9, 2016",
+      "num_citations": 317,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Mathematical foundations of the GraphBLAS"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ULOm3_A8WrAC",
+      "citation": "2012 IEEE 20th International Symposium on Field-Programmable Custom …, 2012",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Memory bandwidth efficient two-dimensional fast Fourier transform algorithm and implementation for large problem sizes"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:JoZmwDi-zQgC",
+      "citation": "2017 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2017",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Mixed data layout kernels for vectorized complex arithmetic"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:5awf1xo2G04C",
+      "citation": "2017 IEEE International Conference on Multisensor Fusion and Integration for …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Multirotor UAV state prediction through multi-microphone side-channel fusion"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:k8Z6L05lTy4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "On Manifold Graph Embedding"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:HoB7MX3m0LUC",
+      "citation": "Proceedings of the 11-th Euromicro Conference on Parallel Distributed and …, 2003",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "On using ZENTURIO for performance and parameter studies on clusters and grids"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:5nxA0vEk-isC",
+      "citation": "arXiv preprint arXiv:1106.5063, 2011",
+      "num_citations": 74,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "On-line decentralized charging of plug-in electric vehicles in power systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:roLk4NBRz8UC",
+      "citation": "IFIP Working Conference on Domain-Specific Languages, 385-409, 2009",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Operator language: A program generation framework for fast kernels"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:edDO8Oi4QzsC",
+      "citation": "2023 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Optimization and Performance Analysis of Shor's Algorithm in Qiskit"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ns9cj8rnVeAC",
+      "citation": "AURORA Technical Report TR2003-10, Institute for Applied Mathematics and …, 2003",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Optimization Techniques for SIMD Vectorized Straight Line Code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hMod-77fHWUC",
+      "citation": "2012 IEEE Conference on High Performance Extreme Computing, 1-6, 2012",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Optimized parallel distribution load flow solver on commodity multi-core CPU"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:vbGhcppDl1QC",
+      "citation": "2021 IEEE High Performance Extreme Computing Conference (HPEC), 1-7, 2021",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Optimized quantum circuit generation with SPIRAL"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:9vf0nzSNQJEC",
+      "citation": "Proc. IEEE HPEC, 2017",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Optimizing FFT resource efficiency on FPGA using high-level synthesis"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:P5F9QuxV20EC",
+      "citation": "2015 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Optimizing space time adaptive processing through accelerating memory-bounded operations"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:UHK10RUVsp4C",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-7, 2018",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Pagerank acceleration for large graphs with scalable hardware and two-step spmv"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:vV6vV6tmYwMC",
+      "citation": "Workshop on Programming Models for Ubiquitous Parallelism (PMUP) 56, 2006",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Parallelism in Spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:IWHjjKOFINEC",
+      "citation": "Proceedings.(ICASSP'05). IEEE International Conference on Acoustics, Speech …, 2005",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Performance analysis of the filtered backprojection image reconstruction algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:35N4QoGY0k4C",
+      "citation": "AURORA Tech. Report TR1998-20, Institute for Applied and Numerical …, 1998",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Performance Evaluation of FFT Algorithms Using Performance Counters"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:5Ul4iDaHHb8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1998",
+      "title": "Performance Evaluation of FFT Algorithms Using Performance Counters (AURORA TR 1998-20)"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:UxriW0iASnsC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Performance Evaluation of FFT Routines"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:B3FOqHPlNUQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "1999",
+      "title": "Performance Evaluation of FFT Routines-Machine Independent Serial Programs (AURORA TR 1999-05)"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:mB3voiENLucC",
+      "citation": "na, 2003",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Performance portable short vector transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:LPZeul_q3PIC",
+      "citation": "Carnegie Mellon University, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Performance Portable Tracking of Evolving Surfaces"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:k_IJM867U9cC",
+      "citation": "International Conference on High-Performance Embedded Architectures and …, 2007",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "Performance/energy optimization of DSP transforms on the XScale processor"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:-f6ydRqryjwC",
+      "citation": "2012 IEEE International Conference on Acoustics, Speech and Signal …, 2012",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Polar format synthetic aperture radar in energy efficient application-specific logic-in-memory"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:fPk4N6BV_jEC",
+      "citation": "Proceedings of the 3rd International Workshop on High Performance Computing …, 2013",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Power system probabilistic and security analysis on commodity high performance computing systems"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:nb7KW1ujOQ8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Practical Assessment of MAP’s Vectorizer and Backend"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:eMMeJKvmdy0C",
+      "citation": "Technical report/Department of Information and Computing Sciences 2017 (1), 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Prediction of Quadcopter State through Multi-Microphone Side-Channel Fusion"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hkOj_22Ku90C",
+      "citation": "2018 IEEE High Performance extreme Computing Conference (HPEC), 1-6, 2018",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Preliminary exploration of large-scale triangle counting on shared-memory multicore system"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:J_g5lzvAfSwC",
+      "citation": "2013 IEEE Power & Energy Society General Meeting, 1-5, 2013",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Privacy preserving smart metering system based retail level electricity market"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:kRWSkSYxWN8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Program Co-Chairs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:LkGwnXOMwfcC",
+      "citation": "Proceedings of the 15th international conference on Parallel architectures …, 2006",
+      "num_citations": 65,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Program generation for the all-pairs shortest path problem"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:NaGl4SEjCO4C",
+      "citation": "way 3, 79, 2008",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Program generation with Spiral: Beyond transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:yB1At4FlUx8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Proof Assistant Approach Overview"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:XiSMed-E-HIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Protecting Consumers: The Smart Grid and Your Data"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:-FonjvnnhkoC",
+      "citation": "2023 IEEE High Performance Extreme Computing Conference (HPEC), 1-6, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Protox: A first look"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:zLWjf1WUPmwC",
+      "citation": "Supercomputing (SC) 6, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Quantum circuit optimization with SPIRAL: a first look"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:M3NEmzRMIkIC",
+      "citation": "2011 IEEE International Conference on Acoustics, Speech and Signal …, 2011",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Real-time software implementation of an IEEE 802.11 a baseband receiver on Intel multicore"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:bz8QjSJIRt4C",
+      "citation": "Simulation 196, 216, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Recherche experte (SolR)"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:PoWvk5oyLR8C",
+      "citation": "2023 IEEE International Symposium on Performance Analysis of Systems and …, 2023",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Rpu: The ring processing unit"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:4fGpz3EwCPoC",
+      "citation": "Simulation 196, 216, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Search using SolR syntax"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:aqlVkmm33-oC",
+      "citation": "2012 North American power symposium (NAPS), 1-6, 2012",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Secure multiparty computation based privacy preserving smart metering system"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:QIV2ME_5wuYC",
+      "citation": "2003 IEEE International Conference on Acoustics, Speech, and Signal …, 2003",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Short vector code generation and adaptation for DSP algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:ufrVoPGSRksC",
+      "citation": "Proceedings International Parallel and Distributed Processing Symposium, 10 pp., 2003",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Short vector code generation for the discrete Fourier transform"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:u_35RYKgDlwC",
+      "citation": "na, 2000",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2000",
+      "title": "Short Vector FFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:RHpTSmoSYBkC",
+      "citation": "Proc. High Performance Embedded Computing (HPEC), 2002",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2002",
+      "title": "Short vector SIMD code generation for DSP algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:j3f4tGmQtD8C",
+      "citation": "2007 IEEE International Conference on Acoustics, Speech and Signal …, 2007",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2007",
+      "title": "SIMD vectorization of non-two-power sized FFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:7T2F9Uy0os0C",
+      "citation": "Available: citeseer. ist. psu. edu/kral03simd. html, 0",
+      "num_citations": 2,
+      "pub_url": "",
+      "title": "Simd vectorization of straight line code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hqOjcs7Dif8C",
+      "citation": "Euro-Par 2003 Parallel Processing: 9th International Euro-Par Conference …, 2003",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "SIMD vectorization of straight line FFT code"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:uWiczbcajpAC",
+      "citation": "National Institute of Standards and Technology, Tech. Rep, 2016",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Smart grid in a room simulator-sgrs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:u9iWguZQMMsC",
+      "citation": "Carnegie Mellon University, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Smart Memory Synthesis for Energy-Efficient Computed Tomography Reconstruction"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:pqnbT2bcN3wC",
+      "citation": "Scientific Programming 22 (4), 259-260, 2014",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Special issue on automatic application tuning for HPC architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:08ZZubdj9fEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "SPECIAL SECTION ON COMPUTATIONAL INTELLIGENCE APPLICATIONS IN SMART GRIDS"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hMsQuOkrut0C",
+      "citation": "Encyclopedia of Parallel Computing, 2011",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Spiral"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:dhFuZR0502QC",
+      "citation": "Proceedings of the 4th International Workshop on Parallel and Symbolic …, 2010",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Spiral-generated modular FFT algorithms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:vRqMK49ujn8C",
+      "citation": "ACM Commun. Comput. Algebra 44 (1/2), 25-26, 2010",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "SPIRAL-generated modular FFTs."
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:TQgYirikUcIC",
+      "citation": "Encyclopedia of parallel computing 4, 1920-1933, 2011",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Spiral."
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:u5HHmVD_uO8C",
+      "citation": "Proceedings of the IEEE 93 (2), 232-275, 2005",
+      "num_citations": 1103,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "SPIRAL: Code generation for DSP transforms"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:JQOojiI6XY0C",
+      "citation": "Proceedings of the IEEE 106 (11), 1935-1968, 2018",
+      "num_citations": 141,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "SPIRAL: Extreme performance portability"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:D03iK_w7-QYC",
+      "citation": "Proc. EDGE Workshop, pp. D49-D50, 2006",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Spiral: Generating Signal Processing Kernels for New Commodity Architectures"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:rO6llkc54NcC",
+      "citation": "Algebraic Methodology and Software Technology: 12th International Conference …, 2008",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "System demonstration of Spiral: Generator for high-performance linear transform libraries"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:XiVPGOgt02cC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Top Performance in Signal Processing"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:a0OBvERweLwC",
+      "citation": "AURORA Technical Report TR2003-31, Institute for Applied Mathematics and …, 2003",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2003",
+      "title": "Top Performance SIMD FFTs"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Ri6SYOTghG4C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards a RISC-V Instruction Set Extension for Multi-word Arithmetic"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:rmuvC79q63oC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards an End-to-End Processing-in-DRAM Acceleration of Spectral Library Search"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:0N-VGjzr574C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards Automating Black Belt Programming"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:WZBGuue-350C",
+      "citation": "IEEE HPEC, 2022",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Towards full-stack acceleration for fully homomorphic encryption"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:YohjEiUPhakC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards LibraryX: A Framework for Cross-Library Call Optimization"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:FAceZFleit8C",
+      "citation": "arXiv preprint arXiv:2501.09201, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Towards Semantics Lifting for Scientific Computing: A Case Study on FFT"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:wbdj-CoPYUoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "TPC Members"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hCrLmN-GePgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "TREBUCHET Fully Homomorphic Encryption Accelerator: Phase Two Performance Estimation Results"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:5qfkUJPXOUwC",
+      "citation": "arXiv preprint arXiv:2304.05237, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Trebuchet: Fully homomorphic encryption accelerator for deep computation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:XoXfffV-tXoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Twiddle Factor Generation for a Vectorized Number Theoretic Transform"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:hFOr9nPyWt4C",
+      "citation": "2014 IEEE 25th International Conference on Application-Specific Systems …, 2014",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Understanding the design space of dram-optimized hardware FFT accelerators"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:1sJd4Hv_s6UC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Vectorization Techniques for BlueGene/L’s Double FPU"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:MXK_kJrjxJIC",
+      "citation": "IBM Journal of Research and Development 49 (2.3), 437-446, 2005",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2005",
+      "title": "Vectorization techniques for the Blue Gene/L double FPU"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:0KyAp5RtaNEC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Verified Translation Between Purely Functional and Imperative Domain Specific Languages in HELIX"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:epqYDVWIO7EC",
+      "citation": "International Workshop on Numerical Software Verification, 33-49, 2020",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Verified translation between purely functional and imperative domain specific languages in HELIX"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Y5dfb0dijaUC",
+      "citation": "Cell 412, 527-7281, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Wei Yu"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Proceedings of the 34th ACM SIGPLAN conference on Programming language …, 2013",
+      "num_citations": 181,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "When polyhedral transformations meet SIMD code generation"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:geHnlv5EZngC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Workshop Organization Organizing Committee"
+    },
+    {
+      "author_pub_id": "SHcIvuoAAAAJ:2KloaMYe4IUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Yaji, Sharath 81"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "SHcIvuoAAAAJ"
+}

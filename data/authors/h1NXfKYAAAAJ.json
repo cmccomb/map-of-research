@@ -1,0 +1,1290 @@
+{
+  "display_name": "Chi",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Chi.json",
+  "publication_count": 160,
+  "publications": [
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:bXvxhPDrUX0C",
+      "citation": "Biomedical Optics Express 6 (3), 902-917, 2015",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "3D multifocus astigmatism and compressed sensing (3D MACS) based superresolution reconstruction"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:J4wmHkHhN-kC",
+      "citation": "Scientific Data 9 (1), 421, 2022",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "A large collection of real-world pediatric sleep studies"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:9xhnSCvx0jcC",
+      "citation": "Scientific Reports 13 (1), 21253, 2023",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A lightweight transformer for faster and robust EBSD data collection"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ECJ25tEN_EwC",
+      "citation": "arXiv preprint arXiv:2309.09977, 2023",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A Multi-Token Coordinate Descent Method for Semi-Decentralized Vertical Federated Learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Xxrp-jDxsD4C",
+      "citation": "2018 IEEE Statistical Signal Processing Workshop (SSP), 398-402, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A non-convex approach to joint sensor calibration and spectrum estimation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5uu-MYFt2EcC",
+      "citation": "Journal of Machine Learning Research 18, 1-35, 2017",
+      "num_citations": 188,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A nonconvex approach for phase retrieval: Reshaped Wirtinger flow and incremental algorithms"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:dtdq7L-L3iMC",
+      "citation": "arXiv preprint arXiv:2408.02320, 2024",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "A Sharp Convergence Theory for The Probability Flow ODEs of Diffusion Models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Uha2Xg-6WXIC",
+      "citation": "The Thirteenth International Conference on Learning Representations (ICLR), 2025",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "A Theoretical Analysis of Self-Supervised Learning for Vision Transformers"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:QUYzkoTeugQC",
+      "citation": "Uncertainty in Artificial Intelligence, 2226-2236, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A trajectory is worth three sentences: multimodal transformer for offline reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:D0NosnH9lYgC",
+      "citation": "International Conference on Machine Learning, 2024",
+      "num_citations": 37,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Accelerating convergence of score-based diffusion models, provably"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BxcezVm2apwC",
+      "citation": "Journal of Machine Learning Research 22, 150:1-150:63, 2021",
+      "num_citations": 134,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Accelerating Ill-Conditioned Low-Rank Matrix Estimation via Scaled Gradient Descent"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:PWMd_Z0sy-4C",
+      "citation": "ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and …, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Accelerating Ill-Conditioned Robust Low-Rank Tensor Regression"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Y20HiHuZk70C",
+      "citation": "2022 IEEE International Conference on Data Mining (ICDM), 1329-1334, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Active Heterogeneous Graph Neural Networks with Per-step Meta-Q-Learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:jg3FfqxSHJQC",
+      "citation": "2013 IEEE International Conference on Acoustics, Speech and Signal …, 2013",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Analysis of Fisher information and the Cramér-Rao bound for nonlinear parameter estimation after compressed sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:dYRx7efp7U0C",
+      "citation": "Automatica 113, 108715, 2020",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Analytical convergence regions of accelerated gradient descent in nonconvex optimization under regularity condition"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:UoSa6IK8DwsC",
+      "citation": "International Conference on Learning Representations (ICLR), 2023",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Asynchronous gradient play in zero-sum multi-agent games"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:RW1BPcyHXiwC",
+      "citation": "Proceedings of the AAAI Conference on Artificial Intelligence 36 (8), 9118-9126, 2022",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Batch active learning with graph neural networks via multi-agent deep reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:vs4DU1qUSb8C",
+      "citation": "Advances in Neural Information Processing Systems 35, 31653-31667, 2022",
+      "num_citations": 59,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "BEER: Fast  Rate for Decentralized Nonconvex Optimization with Communication Compression"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:l07DEcJES74C",
+      "citation": "arXiv preprint arXiv:2402.02698, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Beyond Expectations: Learning with Stochastic Dominance Made Practical"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ae0xyBWlIcIC",
+      "citation": "IEEE Transactions on Signal Processing 69, 867-877, 2021",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Beyond Procrustes: Balancing-free gradient descent for asymmetric low-rank matrix sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5thYEm8kiqcC",
+      "citation": "2015 IEEE 6th International Workshop on Computational Advances in Multi …, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Blind calibration of multi-channel samplers using sparse recovery"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:o4Qvs5Y5TLQC",
+      "citation": "IEEE Signal Processing Letters 23 (10), 1384-1388, 2016",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Blind deconvolution from multiple sparse inputs"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:LoiWQfKZB3kC",
+      "citation": "arXiv preprint arXiv:2409.20067, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Breaking the Curse of Multiagency in Robust Multi-Agent Reinforcement Learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:RfQ-KHj5eBsC",
+      "citation": "Information and Inference: A Journal of the IMA 12 (2), 969-1043, 2023",
+      "num_citations": 66,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Breaking the sample complexity barrier to regret-optimal model-free reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:8LfMcXwVQboC",
+      "citation": "Operations Research 72 (1), 203-221, 2024",
+      "num_citations": 156,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Breaking the sample size barrier in model-based reinforcement learning with a generative model"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:OKy9v0bssVUC",
+      "citation": "2015 49th Asilomar Conference on Signals, Systems and Computers, 102-106, 2015",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Change-point estimation of high-dimensional streaming data via sketching"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:3YIFwf-X_CwC",
+      "citation": "International Conference on Artificial Intelligence and Statistics (AISTATS), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Characterizing the Accuracy-Communication-Privacy Trade-off in Distributed Stochastic Convex Optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:gNZucvRojEcC",
+      "citation": "IEEE Transactions on Pattern Analysis and Machine Intelligence 36 (8), 1519-1531, 2013",
+      "num_citations": 115,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Classification and boosting with multiple collaborative representations"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:lonyfjS0l_UC",
+      "citation": "The Journal of Machine Learning Research 21 (1), 7331-7381, 2020",
+      "num_citations": 144,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Communication-efficient distributed optimization in networks with gradient tracking and variance reduction"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:KFIQUvoPKFAC",
+      "citation": "IEEE Transactions on Signal and Information Processing over Networks, 2025",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Communication-efficient federated optimization over semi-decentralized networks"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:jq7mLYt49woC",
+      "citation": "IEEE Transactions on Signal Processing, 2025",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Communication-efficient Vertical Federated Learning via Compressed Error Feedback"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:45AZ0Vt6gvEC",
+      "citation": "Principles of Waveform Diversity and Design, 2011",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Complementary waveforms for sidelobe suppression and radar polarimetry"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ECvNt0vk_34C",
+      "citation": "Compressed Sensing and its Applications: MATHEON Workshop 2013, 75-95, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Compressed sensing, sparse inversion, and model mismatch"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:EGhj4itiAA0C",
+      "citation": "IEEE Signal Processing Letters 28, 56-60, 2020",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Compressed super-resolution of positive sources"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ZM__uENUXnMC",
+      "citation": "2010 IEEE International Conference on Image Processing, 89-92, 2010",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Compressive blind source separation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:QNfnWKgKwv8C",
+      "citation": "2012 IEEE Statistical Signal Processing Workshop (SSP), 592-595, 2012",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Compressive demodulation of mutually interfering signals"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:xUD2GqFNeDMC",
+      "citation": "2015 IEEE International Conference on Acoustics, Speech and Signal …, 2015",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Compressive graph clustering from random sketches"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Jxw8hHINxX0C",
+      "citation": "IEEE Transactions on Signal Processing 63 (4), 1030-1042, 2014",
+      "num_citations": 257,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Compressive two-dimensional harmonic retrieval via atomic norm minimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:TaWRl4-rBxwC",
+      "citation": "IEEE Journal of Selected Topics in Signal Processing, 2025",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Convergence and privacy of decentralized nonconvex optimization with gradient clipping and communication compression"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:bYbwfsIO_fQC",
+      "citation": "IEEE Transactions on Signal Processing 68, 3976-3989, 2020",
+      "num_citations": 33,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Convergence of distributed stochastic variance reduced methods without sampling extra data"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:AOwgc6nnr1EC",
+      "citation": "Wavelets and Sparsity XVII 10394, 314-321, 2017",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Convex relaxations of spectral sparsity for robust super-resolution and line spectrum estimation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:_wawhP5Vwy0C",
+      "citation": "Advances in Neural Information Processing Systems 36, 56256-56277, 2023",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Counterfactual generation with identifiability guarantees"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:aJ-3-MYELVsC",
+      "citation": "2015 IEEE International Conference on Acoustics, Speech and Signal …, 2015",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Covariance tracking from sketches of rapid data streams"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BzPC9jo9PWgC",
+      "citation": "Proceedings of the 21st International Workshop on Mobile Computing Systems …, 2020",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Data quality-informed multiple occupant localization using floor vibration sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:DxlTmyU89zoC",
+      "citation": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and …, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Deep Unfolded Tensor Robust PCA with Self-supervised Learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ysWPWRY3VgcC",
+      "citation": "SIAM Journal on Mathematics of Data Science 4 (3), 1031-1051, 2022",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "DESTRESS: Computation-optimal and communication-efficient decentralized nonconvex finite-sum optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:rCuJAniQoLoC",
+      "citation": "Proceedings of the 1st ACM International Workshop on Device-Free Human …, 2019",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Device-free multiple people localization through floor vibration"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:YIdQ7BAI8VoC",
+      "citation": "2011 Annual International Conference of the IEEE Engineering in Medicine and …, 2011",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Diagnostic grade wireless ECG monitoring"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:mqGkWRiPAHEC",
+      "citation": "Journal of Machine Learning Research 25 (200), 1-91, 2024",
+      "num_citations": 75,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Distributionally robust model-based offline reinforcement learning with near-optimal sample complexity"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:LSkeIYDkhQYC",
+      "citation": "International Conference on Artificial Intelligence and Statistics, 2701-2709, 2024",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Escaping Saddle Points in Heterogeneous Federated Learning via Distributed SGD with Communication Compression"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:AdGrMoNItN4C",
+      "citation": "IEEE Transactions on Information Theory 61 (7), 4034-4059, 2015",
+      "num_citations": 288,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Exact and stable covariance estimation from quadratic sampling via convex programming"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:zDhyt2jClVkC",
+      "citation": "Princeton University, 2012",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Exploitation of geometry in signal processing and sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:22I2CSi1iVUC",
+      "citation": "Information and Inference: A Journal of the IMA 12 (3), 1716-1758, 2023",
+      "num_citations": 18,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Fast and provable tensor robust principal component analysis via scaled gradient descent"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Y4-Jr3-UGfkC",
+      "citation": "SIAM Journal on Optimization, 2025",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Fast computation of optimal transport via entropy-regularized extragradient methods"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:RmQ8dt0hH3oC",
+      "citation": "Operations Research 70 (4), 2563-2578, 2022",
+      "num_citations": 243,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Fast global convergence of natural policy gradient methods with entropy regularization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:0KZCP5UExFUC",
+      "citation": "Journal of Machine Learning Research 25 (4), 1-48, 2024",
+      "num_citations": 95,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Fast Policy Extragradient Methods for Competitive Games with Entropy Regularization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ult01sCh7k0C",
+      "citation": "Optics Letters 40 (13), 2989-2992, 2015",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Fast two-dimensional super-resolution image reconstruction algorithm for ultra-high emitter density"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:M8Ejg5y-C14C",
+      "citation": "International Conference on Learning Representations (ICLR), 2023",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Faster last-iterate convergence of policy optimization in zero-sum Markov games"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:cnT3a81PI4sC",
+      "citation": "International Conference on Artificial Intelligence and Statistics (AISTATS), 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Faster WIND: Accelerating Iterative Best-of- Distillation for LLM Alignment"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:VU60ks20i7sC",
+      "citation": "Advances in Neural Information Processing Systems 37, 121304-121375, 2024",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Federated natural policy gradient and actor critic methods for multi-task reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:VdWZULf8Gq0C",
+      "citation": "International Conference on Machine Learning, 2024",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Federated offline reinforcement learning: Collaborative single-policy coverage suffices"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:AdUz3-SiDfgC",
+      "citation": "International Conference on Machine Learning, 2024",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:YvgfBAebZEkC",
+      "citation": "SIAG on Optimization Views and News 31 (1), 12-22, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Global Convergence of Policy Gradient Methods in Reinforcement Learning, Games and Control"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:LYDvBi7O6RsC",
+      "citation": "2009 3rd IEEE International Workshop on Computational Advances in Multi …, 2009",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Golay complementary waveforms for sparse delay-Doppler radar imaging"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:cUMtEw7vMgQC",
+      "citation": "Mathematical Programming 176 (1), 5-37, 2019",
+      "num_citations": 295,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Gradient descent with random initialization: Fast global convergence for nonconvex phase retrieval"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5McdzzY_mmwC",
+      "citation": "IEEE Journal of Selected Topics in Signal Processing 10 (4), 782-794, 2016",
+      "num_citations": 150,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Guaranteed blind sparse spikes deconvolution via lifting and convex optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:hKmHnHMtuq0C",
+      "citation": "IEEE Transactions on Signal Processing 68, 3225-3235, 2020",
+      "num_citations": 62,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Guaranteed recovery of one-hidden-layer neural networks via cross entropy"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:H8haQKU-3ZsC",
+      "citation": "IEEE Signal Processing Magazine 37 (2), 39-57, 2020",
+      "num_citations": 167,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Harnessing sparsity over the continuum: Atomic norm minimization for superresolution"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:b8wqy9DyMDUC",
+      "citation": "IEEE Signal Processing Magazine 35 (4), 14-31, 2018",
+      "num_citations": 193,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Harnessing structures in big data via guaranteed low-rank matrix estimation: Recent theory and fast algorithms via convex and nonconvex optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Z610oKUqOA4C",
+      "citation": "2022 56th Asilomar Conference on Signals, Systems, and Computers, 749-753, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Harvesting Curvatures for Communication-Efficient Distributed Optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:1GSnt3Xtl_sC",
+      "citation": "IEEE Transactions on Information Theory 70 (8), 5969-5999, 2024",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "High-probability sample complexities for policy evaluation with linear function approximation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:jD_Q_A4-jPwC",
+      "citation": "Advances in Neural Information Processing Systems 36, 2010-2032, 2023",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Identification of nonlinear latent hierarchical models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:UFuRdyijzaAC",
+      "citation": "Foundations of Computational Mathematics 20, 451-632, 2020",
+      "num_citations": 440,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Implicit regularization in nonconvex statistical estimation: Gradient descent converges linearly for phase retrieval, matrix completion and blind deconvolution"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BPyjDV4UkSoC",
+      "citation": "Advances in Neural Information Processing Systems 37, 85867-85898, 2024",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "In-context learning with representations: Contextual generalization of trained transformers"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:lw-us_wcTJgC",
+      "citation": "arXiv preprint arXiv:2502.09780, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Incentivize without Bonus: Provably Efficient Model-based Online Multi-agent RL for Markov Games"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:2C0LhDdYSbcC",
+      "citation": "2022 IEEE 61st Conference on Decision and Control (CDC), 2833-2838, 2022",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Independent natural policy gradient methods for potential games: Finite-time global convergence with entropy regularization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:YK4ucWkmU_UC",
+      "citation": "Operations Research 72 (1), 222-236, 2024",
+      "num_citations": 118,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Is Q-Learning Minimax Optimal? A Tight Sample Complexity Analysis"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:6sy8ByAbWgIC",
+      "citation": "IEEE Signal Processing Letters 23 (9), 1183-1187, 2016",
+      "num_citations": 48,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Kaczmarz method for solving quadratic equations"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:j33aPA1ap8EC",
+      "citation": "2013 IEEE International Conference on Acoustics, Speech and Signal …, 2013",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Knowledge-enhanced matching pursuit"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:lu5AzqVF4qYC",
+      "citation": "2016 24th European Signal Processing Conference (EUSIPCO), 316-320, 2016",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Kronecker covariance sketching for spatial-temporal data"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:VPl5zSG_J1oC",
+      "citation": "Advances in Neural Information Processing Systems 37, 36938-36975, 2024",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Learning discrete concepts in latent hierarchical models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:D90uR9ClOh8C",
+      "citation": "IEEE Transactions on Signal Processing 68, 4210-4225, 2020",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Learning Latent Features with Pairwise Penalties in Low-Rank Matrix Completion"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:RIrVDUe1hjoC",
+      "citation": "ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and …, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Leveraging Multimodal Diffusion Models to Accelerate Imaging with Side Information"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:vpzZMdrIWDEC",
+      "citation": "IEEE Journal on Selected Areas in Information Theory 4, 1-15, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Local geometry of nonconvex spike deconvolution from low-pass measurements"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:rVBkUn48wTwC",
+      "citation": "IEEE Signal Processing Magazine 35 (5), 178-181, 2018",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Low-rank matrix completion [lecture notes]"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:geVfx-PNG5EC",
+      "citation": "2013 IEEE Global Conference on Signal and Information Processing, 622-622, 2013",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Low-rank matrix recovery with Poisson noise"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:96M4k3P_OWMC",
+      "citation": "IEEE Transactions on Signal Processing 69, 2396-2409, 2021",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Low-rank matrix recovery with scaled subgradient methods: Fast and robust convergence without the condition number"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:o0tJHVzi6PsC",
+      "citation": "IEEE Transactions on Signal Processing 65 (2), 397-408, 2016",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Low-rank positive semidefinite matrix recovery from corrupted rank-one measurements"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:7q08wCQPkLwC",
+      "citation": "IEEE Signal Processing Letters 26 (5), 700-704, 2019",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Low-rank structured covariance matrix estimation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:F-1HeU7gMOYC",
+      "citation": "IEEE Transactions on Information Theory 67 (7), 4784-4811, 2021",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Manifold gradient descent solves multi-channel sparse blind deconvolution provably and efficiently"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:-XtG2q47PdUC",
+      "citation": "Compressed Sensing and Its Applications: Third International MATHEON …, 2019",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Median-truncated gradient descent: A robust and scalable nonconvex approach for signal estimation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5LOebrzo1TYC",
+      "citation": "IEEE Transactions on information Theory 64 (11), 7287-7310, 2018",
+      "num_citations": 160,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Median-truncated nonconvex approach for phase retrieval with outliers"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:GO5CT2y9xrEC",
+      "citation": "US Patent 9,136,980, 2015",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Method and apparatus for low complexity compression of signals"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BulkYocH2doC",
+      "citation": "US Patent 9,356,731, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Method and apparatus for low complexity compression of signals employing differential operation for transient segment detection"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:LHWLPdAD5FMC",
+      "citation": "Advances in Neural Information Processing Systems 35, 15353-15367, 2022",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Minimax-optimal multi-agent RL in Markov games with a generative model"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BDTQWqO089sC",
+      "citation": "US Patent App. 13/330,905, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Multi-class classification method"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:csTP5AdqY_wC",
+      "citation": "2013 Asilomar Conference on Signals, Systems and Computers, 1667-1671, 2013",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Nearest subspace classification with missing data"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:R0GtuAMwyXEC",
+      "citation": "SIAM Journal on Optimization 30 (4), 3098-3121, 2020",
+      "num_citations": 201,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Noisy matrix completion: Understanding statistical guarantees for convex relaxation via nonconvex optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:9PmR9Y676FQC",
+      "citation": "Information and Inference: A Journal of the IMA 9 (2), 289-325, 2020",
+      "num_citations": 39,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Non-convex low-rank matrix recovery with arbitrary outliers via median-truncated gradient descent"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ipSP0SfFaZ8C",
+      "citation": "IEEE Transactions on Information Theory 67 (3), 1928-1950, 2019",
+      "num_citations": 67,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Nonconvex matrix factorization from rank-one measurements"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:N5XbD978G_MC",
+      "citation": "IEEE Transactions on Signal Processing 67 (20), 5239-5269, 2019",
+      "num_citations": 531,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Nonconvex optimization meets low-rank matrix factorization: An overview"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:cocyvO7vrcwC",
+      "citation": "IEEE Transactions on Signal Processing 64 (5), 1257-1269, 2015",
+      "num_citations": 341,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Off-the-grid line spectrum denoising and estimation with multiple measurement vectors"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:FXgMSCUEOHUC",
+      "citation": "Joint European Conference on Machine Learning and Knowledge Discovery in …, 2023",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Offline Reinforcement Learning with On-Policy Q-Function Regularization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:s-mE-ZzancgC",
+      "citation": "ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and …, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "On the sensitivity of spectral initialization for noisy phase retrieval"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:WYtWvJut7doC",
+      "citation": "IEEE Transactions on Information Theory 66 (11), 7237-7252, 2020",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "On the stable resolution limit of total variation regularization for spike deconvolution"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Sg-YnEhjH50C",
+      "citation": "IEEE Transactions on Communications 63 (7), 2541-2554, 2015",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Orthogonal matching pursuit on faulty circuits"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:QxtoOqDH1aQC",
+      "citation": "Compressive Sensing VI: From Diverse Modalities to Big Data Analytics 10211 …, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Performance bounds for modal analysis using sparse linear arrays"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:07QC26MHY14C",
+      "citation": "International Conference on Machine Learning, 19967-20025, 2022",
+      "num_citations": 114,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Pessimistic Q-learning for offline reinforcement learning: Towards optimal sample complexity"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Iq19BMNozs4C",
+      "citation": "IEEE Transactions on Signal Processing 61 (23), 5947-5959, 2013",
+      "num_citations": 210,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Petrels: Parallel subspace estimation and tracking by recursive least squares from partial observations"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:lAj_JhtUatoC",
+      "citation": "2021 IEEE International Conference on Image Processing (ICIP), 2868-2872, 2021",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Plug-And-Play Image Reconstruction Meets Stochastic Variance-Reduced Gradient Methods"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Fd6TstiuZzAC",
+      "citation": "SIAM Journal on Optimization 33 (2), 1061-1091, 2023",
+      "num_citations": 94,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Policy mirror descent for regularized reinforcement learning: A generalized framework with linear convergence"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:vNwWLMROEM0C",
+      "citation": "ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and …, 2022",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Privacy-Preserving Federated Multi-Task Linear Regression: A One-Shot Linear Mixing Approach Inspired By Graph Regularization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Sipo1f_CKiIC",
+      "citation": "First Conference on Language Modeling, 2024",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Prompt-prompted Adaptive Structured Pruning for Efficient LLM Generation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:zVd9Rc0DoukC",
+      "citation": "Explorations in the Mathematics of Data Science: The Inaugural Volume of the …, 2024",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Provably Accelerating Ill-Conditioned Low-Rank Estimation via Scaled Gradient Descent, Even with Overparameterization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:sArNgO4T4MoC",
+      "citation": "Advances in Neural Information Processing Systems 37, 36148-36184, 2024",
+      "num_citations": 15,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Provably robust score-based diffusion posterior sampling for plug-and-play image reconstruction"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:DGpvO1n63MYC",
+      "citation": "IEEE Transactions on Signal Processing 66 (12), 3268-3279, 2018",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Quantized spectral compressed sensing: Cramer-Rao bounds and recovery algorithms"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Y1W0x10ZrwMC",
+      "citation": "2009 International Waveform Diversity and Design Conference, 258-262, 2009",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Range sidelobe suppression in a desired Doppler interval"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:8moDcb_GFzgC",
+      "citation": "2010 IEEE International Symposium on Information Theory, 2108-2112, 2010",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Regularized blind detection for MIMO communications"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:W91e3rS6dHEC",
+      "citation": "Optics Letters 38 (19), 3957-3960, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Resolving spatial modes of lasers via matrix completion"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:IwGqIHSOC8kC",
+      "citation": "Proceedings of the IEEE 106 (8), 1274-1276, 2018",
+      "num_citations": 100,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Rethinking PCA for modern data sets: Theory, algorithms, and applications"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:uSQurnFbQXsC",
+      "citation": "Advances in Neural Information Processing Systems 36, 55582-55615, 2023",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Reward-agnostic fine-tuning: Provable statistical benefits of hybrid reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:OTBXYDkIvNoC",
+      "citation": "The Thirteenth International Conference on Learning Representations (ICLR), 2025",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Robust gymnasium: A unified modular benchmark for robust reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:SC9kKMAi-DoC",
+      "citation": "IEEE Transactions on Information Theory 60, 6576-6601, 2014",
+      "num_citations": 374,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Robust spectral compressed sensing via structured matrix completion"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:BQCiT8P4igIC",
+      "citation": "IEEE Transactions on Information Theory 68 (1), 448-473, 2021",
+      "num_citations": 139,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Sample complexity of asynchronous Q-learning: Sharper analysis and variance reduction"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ypV3Rv634DYC",
+      "citation": "Reinforcement Learning Journal 3, 1467-1510, 2024",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Sample Complexity of Offline Distributionally Robust Linear Markov Decision Processes"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:d4paSpBSrDQC",
+      "citation": "Advances in Neural Information Processing Systems 34, 16671-16685, 2021",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Sample-efficient reinforcement learning is feasible for linearly realizable MDPs with limited revisiting"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:gxL4SBlKZTUC",
+      "citation": "International Conference on Machine Learning, 2024",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Sample-Efficient Robust Multi-Agent Reinforcement Learning in the Face of Environmental Uncertainty"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:flnLHN-H2asC",
+      "citation": "GLOBECOM 2024-2024 IEEE Global Communications Conference, 2635-2640, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Scalable Dynamic Resource Allocation via Domain Randomized Reinforcement Learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:PpfTWA6RG0gC",
+      "citation": "Journal of Machine Learning Research 23 (163), 1-77, 2022",
+      "num_citations": 57,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Scaling and scalability: Provable nonconvex low-rank tensor estimation from incomplete measurements"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:zDMysJqCCKgC",
+      "citation": "Advances in Neural Information Processing Systems 36, 66328-66363, 2023",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Seeing is not believing: Robust reinforcement learning against spurious correlation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:X41XOdD1uaEC",
+      "citation": "2019 53rd Asilomar Conference on Signals, Systems, and Computers, 230-234, 2019",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Self-calibrated super resolution"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:gPamCmV4epEC",
+      "citation": "IEEE Transactions on Signal Processing 59 (5), 2182-2195, 2011",
+      "num_citations": 1081,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Sensitivity to basis mismatch in compressed sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Efx6ZPdPmuEC",
+      "citation": "The Annals of Statistics 52 (1), 233-260, 2024",
+      "num_citations": 106,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Settling the sample complexity of model-based offline reinforcement learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:8igAKu_hPxwC",
+      "citation": "arXiv preprint arXiv:2410.21465, 2024",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:X1y8G5kAG8gC",
+      "citation": "ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and …, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Shift-invariant subspace tracking with missing data"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5Y7y0xowK3MC",
+      "citation": "Mathematical Programming 201, 707-802, 2023",
+      "num_citations": 71,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Softmax policy gradient methods can take exponential time to converge"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:cpgjJtNNFA0C",
+      "citation": "ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and …, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Solving quadratic equations via amplitude-based nonconvex optimization"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:vlMkzkLhH4wC",
+      "citation": "Advances in Neural Information Processing Systems 35, 4285-4300, 2022",
+      "num_citations": 51,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "SoteriaFL: A unified framework for private federated learning with communication compression"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:7xtfDMUJqJkC",
+      "citation": "2013 IEEE Global Conference on Signal and Information Processing, 321-324, 2013",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Sparse MIMO radar via structured matrix completion"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:lf0D1wPZyaoC",
+      "citation": "Foundations and Trends® in Machine Learning 14 (5), 566-806, 2021",
+      "num_citations": 266,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Spectral methods for data science: A statistical perspective"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:9mnZQYLiiboC",
+      "citation": "Applied and Computational Harmonic Analysis 46 (1), 1-39, 2019",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Stable separation and super-resolution of mixture models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:LGh1lRt-7sUC",
+      "citation": "IEEE Transactions on Signal Processing 66 (4), 1051-1064, 2017",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Stochastic approximation and memory-limited subspace tracking for Poisson streaming data"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:vPKCt-r_nWsC",
+      "citation": "Proceedings of the IEEE 106 (8), 1293-1310, 2018",
+      "num_citations": 112,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Streaming PCA and subspace tracking: The missing data case"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:eP5N1itS6b0C",
+      "citation": "The Annals of Statistics 49 (2), 944-967, 2021",
+      "num_citations": 88,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Subspace estimation from unbalanced and incomplete data matrices: ℓ2,∞ statistical guarantees"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Oi-j_DTgP3cC",
+      "citation": "IEEE Transactions on Signal Processing 65 (17), 4429-4442, 2017",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Subspace learning from bits"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:2hrGa7H818QC",
+      "citation": "IEEE Transactions on Computational Imaging 3 (4), 763-773, 2017",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Super-resolution image reconstruction for high-density three-dimensional single-molecule microscopy"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Es-9c2L5hKwC",
+      "citation": "2018 IEEE International Conference on Acoustics, Speech and Signal …, 2018",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Terahertz imaging of binary reflectance with variational Bayesian inference"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:ztWeZN2wRXQC",
+      "citation": "Journal of Machine Learning Research 26 (26), 1-85, 2025",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "The blessing of heterogeneity in federated Q-learning: Linear speedup and beyond"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Yv3O0rUKnT0C",
+      "citation": "Advances in Neural Information Processing Systems 36, 79903-79917, 2023",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "The curious price of distributional robustness in reinforcement learning with a generative model"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:Ui6Ig_dFDbcC",
+      "citation": "International Conference on Machine Learning, 38611-38654, 2023",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "The power of preconditioning in overparameterized low-rank matrix sensing"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:DPkBdyRpVwQC",
+      "citation": "Advances in Neural Information Processing Systems 37, 39694-39747, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "The sample-communication complexity trade-off in federated Q-learning"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:YbLjypsZzowC",
+      "citation": "The Twelfth International Conference on Learning Representations (ICLR), 2024",
+      "num_citations": 91,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Towards non-asymptotic convergence for diffusion-based generative models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:5Y1KH4bkPm0C",
+      "citation": "Workshop on Efficient Systems for Foundation Models@ ICML2023, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Towards Structured Sparsity in Transformers for Efficient Inference"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:fhZv66dCuXAC",
+      "citation": "IEEE Transactions on Wireless Communications 10 (7), 2234-2245, 2011",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Training signal design and tradeoffs for spectrally-efficient multi-user MIMO-OFDM systems"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:dXBh7-90p_YC",
+      "citation": "IEEE Signal Processing Society SigPort, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Tutorial slides for convex optimization techniques for super-resolution parameter estimation"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:VDARjI3xf8gC",
+      "citation": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …, 2023",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Understanding Masked Autoencoders via Hierarchical Latent Variable Models"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:h7-KW5G1enMC",
+      "citation": "The Thirteenth International Conference on Learning Representations (ICLR), 2025",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Value-Incentivized Preference Optimization: A Unified Approach to Online and Offline RLHF"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:V8JMcbNWlSUC",
+      "citation": "IEEE Transactions on Signal and Information Processing over Networks 6, 48-62, 2019",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Vector-valued graph trend filtering with non-convex penalties"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:1yhUMift6wIC",
+      "citation": "The Thirteenth International Conference on Learning Representations (ICLR), 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Vertical Federated Learning with Missing Features During Training and Inference"
+    },
+    {
+      "author_pub_id": "h1NXfKYAAAAJ:q1ZQJjUA47MC",
+      "citation": "2022 IEEE International Symposium on Phased Array Systems & Technology (PAST …, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Zoom Out: Abstractions for Efficient Radar Algorithms on COTS architectures"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "h1NXfKYAAAAJ"
+}

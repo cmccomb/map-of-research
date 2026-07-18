@@ -1,0 +1,964 @@
+{
+  "display_name": "Lucia",
+  "fetched_at_utc": "2025-04-01T02:02:01+00:00",
+  "migration_source": "map-of-ece/data/Lucia.json",
+  "publication_count": 121,
+  "publications": [
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:LPZeul_q3PIC",
+      "citation": "Multi-Core Memory Models and Concurrency Theory, 16, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "3.20 Detecting, Avoiding and Understanding Errors in Concurrent Programs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:B3FOqHPlNUQC",
+      "citation": "ESSCIRC 2023-IEEE 49th European Solid State Circuits Conference (ESSCIRC …, 2023",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A 10.33 μJ/encryption Homomorphic Encryption Engine in 28nm CMOS with 4096-degree 109-bit Polynomials for Resource-Constrained IoT Clients"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:UeHWp8X0CEIC",
+      "citation": "USENIX HotPar 17, 2009",
+      "num_citations": 29,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "A case for system support for concurrency exceptions"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:u_35RYKgDlwC",
+      "citation": "IEEE Computer Architecture Letters 19 (1), 68-71, 2020",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "A power-aware heterogeneous architecture scaling model for energy-harvesting computers"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:M3NEmzRMIkIC",
+      "citation": "Proceedings of the Twenty-Third International Conference on Architectural …, 2018",
+      "num_citations": 245,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A reconfigurable energy storage architecture for energy-harvesting devices"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:4TOpqqG69KYC",
+      "citation": "ACM SIGPLAN Notices 50 (6), 575-585, 2015",
+      "num_citations": 349,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "A simpler, safer programming and execution model for intermittent systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:tOudhMTPpwUC",
+      "citation": "Proceedings of the ACM on Programming Languages 7 (PLDI), 736-760, 2023",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "A type system for safe intermittent computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:WbkHhVStYXYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Aamer Jaleel, NVIDIA Abdullah Muzahid, Texas A&M University Ajay Joshi, Boston University Akanksha Jain, Google"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:NMxIlDl6LWMC",
+      "citation": "13th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2018",
+      "num_citations": 221,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Adaptive dynamic checkpointing for safe efficient intermittent computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:fPk4N6BV_jEC",
+      "citation": "Proceedings of the 41st ACM SIGPLAN Conference on Programming Language …, 2020",
+      "num_citations": 94,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Adaptive low-overhead scheduling for periodic and reactive intermittent execution"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:RHpTSmoSYBkC",
+      "citation": "Proceedings of the ACM on Programming Languages, October 2017, Article No.: 96, 2017",
+      "num_citations": 320,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Alpaca: Intermittent execution without checkpoints"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:738O_yMBCRsC",
+      "citation": "2022 55th IEEE/ACM International Symposium on Microarchitecture (MICRO), 318-335, 2022",
+      "num_citations": 21,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "An architectural charge management interface for energy-harvesting systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:R3hNpaxXUhUC",
+      "citation": "IEEE Micro 37 (3), 116-125, 2017",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "An energy-aware debugger for intermittently powered systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:mVmsd5A6BfQC",
+      "citation": "ACM SIGARCH Computer Architecture News 44 (2), 577-589, 2016",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "An energy-interference-free hardware-software debugger for intermittent energy-harvesting systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:IjCSPb-OGe4C",
+      "citation": "IEEE micro 29 (1), 73-83, 2009",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Atom-Aid: Detecting and surviving atomicity violations"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:u-x6o8ySG0sC",
+      "citation": "ACM SIGARCH Computer Architecture News 36 (3), 277-288, 2008",
+      "num_citations": 159,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Atom-aid: Detecting and surviving atomicity violations"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Se3iqnhoufwC",
+      "citation": "Workshop on Determinism and Correctness in Parallel Programming w …, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Automatic Empirical Failure Avoidance for Concurrent Software"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:bFI3QPDXJZMC",
+      "citation": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming …, 2021",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Automatically enforcing fresh and consistent inputs in intermittent systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:pqnbT2bcN3wC",
+      "citation": "Proceedings of the 7th International Workshop on Energy Harvesting & Energy …, 2019",
+      "num_citations": 83,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Camaroptera: A batteryless long-range remote visual sensing system"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:KxtntwgDAa4C",
+      "citation": "ACM Transactions on Embedded Computing Systems (TECS) 21 (3), 1-25, 2022",
+      "num_citations": 54,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Camaroptera: A long-range image sensor with local inference for remote sensing applications"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:qUcmZB5y_30C",
+      "citation": "Proceedings of the 2016 ACM SIGPLAN International Conference on Object …, 2016",
+      "num_citations": 298,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Chain: tasks and channels for reliable intermittent programs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:eJXPG6dFmWUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Characterizing Carbon Impact in End-to-end Sensing Pipelines"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:P5F9QuxV20EC",
+      "citation": "Proceedings of the 27th ACM International Conference on Architectural …, 2022",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Client-Optimized Algorithms and Acceleration for Encrypted Compute Offloading"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:2osOgNQ5qMEC",
+      "citation": "Proceedings of the 37th annual international symposium on Computer …, 2010",
+      "num_citations": 90,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Colorsafe: architectural support for debugging and dynamically avoiding multi-variable atomicity violations"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:vV6vV6tmYwMC",
+      "citation": "Proceedings of the 28th International symposium on high-performance parallel …, 2019",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Combining data duplication and graph reordering to accelerate parallel graph processing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:8AbLer7MMksC",
+      "citation": "Proceedings of the 33rd ACM SIGPLAN International Conference on Compiler …, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Compiler-Based Memory Encryption for Machine Learning on Commodity Low-Power Devices"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:EUQCXRtRnyEC",
+      "citation": "GetMobile: Mobile Computing and Communications 25 (1), 16-23, 2021",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Computational nanosatellite constellations: Opportunities and challenges"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:9ZlFYXVOiuMC",
+      "citation": "ACM Transactions on Software Engineering and Methodology (TOSEM) 25 (2), 1-37, 2016",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Concurrency debugging with differential schedule projections"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:M3ejUd6NZC8C",
+      "citation": "ACM SIGPLAN Notices 50 (6), 586-595, 2015",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Concurrency debugging with differential schedule projections"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:2P1L_qKh6hAC",
+      "citation": "Proceedings of the 46th International Symposium on Computer Architecture …, 2019",
+      "num_citations": 140,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "CoNDA: Efficient cache coherence support for near-data accelerators"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:hqOjcs7Dif8C",
+      "citation": "37th Annual International Symposium on Computer Architecture 10 (1815961 …, 2010",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Conflict exceptions: Providing simple parallel language semantics with precise hardware exceptions"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:d1gkVwhDpl0C",
+      "citation": "ACM SIGARCH Computer Architecture News 38 (3), 210-221, 2010",
+      "num_citations": 118,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Conflict exceptions: Simplifying concurrent language semantics with precise hardware exceptions for data-races"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:8k81kl-MbHgC",
+      "citation": "ACM SIGPLAN Notices 48 (4), 39-50, 2013",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Cooperative empirical failure avoidance for multithreaded programs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:MXK_kJrjxJIC",
+      "citation": "US Patent 8,739,163, 2014",
+      "num_citations": 81,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Critical path deterministic execution of multithreaded applications in a transactional memory system"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:TFP_iSt0sucC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "CSE 590v Review Learning Globally-Consistent Local Distance Functions for Shape-Based Image Retrieval and Classification"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:ULOm3_A8WrAC",
+      "citation": "2015 IEEE/ACM International Symposium on Code Generation and Optimization …, 2015",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Data provenance tracking for concurrent programs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:VOx2b1Wkg3QC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Dataflow Blocks: Modular Time-Multiplexing for CGRAs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:u5HHmVD_uO8C",
+      "citation": "Proceedings of the 14th international conference on Architectural support …, 2009",
+      "num_citations": 390,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "DMP: Deterministic shared memory multiprocessing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:qjMakFHDy7sC",
+      "citation": "IEEE micro 30 (1), 40-49, 2010",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "DMP: Deterministic shared-memory multiprocessing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:ZHo1McVdvXMC",
+      "citation": "ACM Transactions on Sensor Networks (TOSN) 16 (1), 1-24, 2020",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Dynamic task-based intermittent execution for energy-harvesting devices"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:fQNAKQ3IYiAC",
+      "citation": "Proceedings of the 29th ACM International Conference on Architectural …, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "EagleEye: Nanosatellite constellation design for high-coverage, high-resolution sensing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:HDshCWvjkbEC",
+      "citation": "Technical Report OSU-CISRC-4/17-TR01, Computer Science & Engineering, Ohio …, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Efficient Architecture Support for Region-Serializability-Based Consistency"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:YFjsv_pBGBYC",
+      "citation": "US Patent App. 15/938,216, 2018",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Energy-interference-free debugger for intermittent energy-harvesting systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:aqlVkmm33-oC",
+      "citation": "2015 International Conference on Compilers, Architecture and Synthesis for …, 2015",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Energy-interference-free system and toolchain support for energy-harvesting devices"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:HoB7MX3m0LUC",
+      "citation": "arXiv preprint arXiv:1912.02276, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Enhancing Stratospheric Weather Analyses and Forecasts by Deploying Sensors from a Weather Balloon"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:rO6llkc54NcC",
+      "citation": "7th International Workshop on Energy Harvesting and Energy-Neutral Sensing …, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "ENSsys 2019 Chairs' Welcome"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Tyk-4Ss8FVUC",
+      "citation": "proceedings of SHCMP, 2008",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Explicitly parallel programming with shared-memory is insane: At least make it deterministic"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:9yKSN-GCB0IC",
+      "citation": "Proceedings of the 42nd annual IEEE/ACM international symposium on …, 2009",
+      "num_citations": 119,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Finding concurrency bugs with context-aware communication graphs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:f2IySw72cVMC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "FIT CTU"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:4JMBOYKVnBMC",
+      "citation": "arXiv preprint arXiv:1709.09491, 2017",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Flexible support for fast parallel commutative updates"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:XiSMed-E-HIC",
+      "citation": "US Patent App. 17/572,925, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Generation framework for ultra-low power cgras"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:WF5omc3nYNoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Greedy Coherence"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:_Qo2XoVZTnwC",
+      "citation": "ACM Transactions on Parallel Computing (TOPC) 4 (1), 1-2, 2017",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Guest Editor Introduction PPoPP 2016, Special Issue 2 of 2"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:SP6oXDckpogC",
+      "citation": "IET Computers & Digital Techniques 16 (4), 89-90, 2022",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Guest Editorial: Special issue on battery‐free computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:g5m5HwL7SMYC",
+      "citation": "Proceedings of the ACM on Programming Languages 3 (OOPSLA), 1-31, 2019",
+      "num_citations": 36,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "I/o dependent idempotence bugs in intermittent systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:5nxA0vEk-isC",
+      "citation": "Proceedings of the ACM international conference on Object oriented …, 2012",
+      "num_citations": 123,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "IFRit: interference-free regions for dynamic data-race detection"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:1sJd4Hv_s6UC",
+      "citation": "HPCA, 543-557, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Improving Locality of Irregular Updates with Hardware Assisted Propagation Blocking."
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:BqipwSGYUEgC",
+      "citation": "Proceedings of the Twenty-Fourth International Conference on Architectural …, 2019",
+      "num_citations": 257,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Intelligence beyond the edge: Inference on intermittent embedded systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:GnPB-g6toBAC",
+      "citation": "National Science Foundation, 2018",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Inter-disciplinary research challenges in computer systems for the 2020s"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:mB3voiENLucC",
+      "citation": "2nd Summit on Advances in Programming Languages (SNAPL 2017), 8: 1-8: 14, 2017",
+      "num_citations": 240,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Intermittent computing: Challenges and opportunities"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:k_IJM867U9cC",
+      "citation": "SysML Conference 48, 2018",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Intermittent deep neural network inference"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:L8Ckcad2t8MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ISCA 2016 External Review Committee"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:kRWSkSYxWN8C",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "ISCA 2024"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Y0pCki6q_DkC",
+      "citation": "Acm Sigplan Notices 46 (6), 378-388, 2011",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Isolating and understanding concurrency errors using reconstructed execution fragments"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:l7t_Zn2s7bgC",
+      "citation": "Proceedings of the 28th ACM International Conference on Architectural …, 2023",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Kodan: Addressing the computational bottleneck in space"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:dhFuZR0502QC",
+      "citation": "IEEE Computer Architecture Letters 16 (1), 46-50, 2016",
+      "num_citations": 227,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "LazyPIM: An efficient cache coherence mechanism for processing-in-memory"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:TQgYirikUcIC",
+      "citation": "arXiv preprint arXiv:1706.03162, 2017",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "LazyPIM: Efficient support for cache coherence in processing-in-memory architectures"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:W7OEmFMy1HYC",
+      "citation": "2nd USENIX Workshop on Hot Topics in Parallelism, 2010",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Lock prediction"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:08ZZubdj9fEC",
+      "citation": "Active Methods in Autonomous Navigation Workshop, 2023",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Lost in Space: Visual Satellite Navigation"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:4fKUyHm3Qg0C",
+      "citation": "2023 IEEE International Symposium on Circuits and Systems (ISCAS), 1-4, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "MANIC: A  @ 4MHz, 256 MOPS/mW, RISC-V microcontroller with embedded MRAM main memory and vector-dataflow co-processor in 22nm bulk finFET CMOS"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:geHnlv5EZngC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "MANIC: A 19µW@ 4MHz, 256 MOPS/mW, RISC-V microcontroller with embedded MRAM main memory and vector-dataflow co-processor in 22nm bulk finFET CMOS"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:M05iB0D1s5AC",
+      "citation": "Proceedings of the 52nd Annual IEEE/ACM International Symposium on …, 2019",
+      "num_citations": 69,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Manic: A vector-dataflow architecture for ultra-low-power embedded systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:blknAaTinKkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Migratory Trash Clouds"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:mvPsJ3kp5DgC",
+      "citation": "IEEE Micro, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Monza: An Energy-Minimal, General-Purpose Dataflow SoC for the Internet of Things"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:wbdj-CoPYUoC",
+      "citation": "arXiv preprint arXiv:2503.01756, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Nanosatellite Constellation and Ground Station Co-design for Low-Latency Critical Event Detection"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:b0M2c_1WBrUC",
+      "citation": "arXiv preprint arXiv:2107.05453, 2021",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Neat: Low-Complexity, Efficient On-Chip Cache Coherence"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Zph67rFs4hoC",
+      "citation": "Proceedings of the workshop on Memory Systems Performance and Correctness, 1-3, 2014",
+      "num_citations": 102,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Nonvolatile memory is a broken time machine"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:cFHS6HbyZ2cC",
+      "citation": "arXiv preprint arXiv:2011.08451, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Optimizing graph processing and preprocessing with hardware assisted propagation blocking"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:CHSYGLWDkRkC",
+      "citation": "US Patent 12,009,903, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Orbital edge computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:RYcK_YlVTxYC",
+      "citation": "IEEE Computer Architecture Letters 18 (1), 59-62, 2019",
+      "num_citations": 96,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Orbital edge computing: Machine inference in space"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:zA6iFVUQeVQC",
+      "citation": "Proceedings of the Twenty-Fifth International Conference on Architectural …, 2020",
+      "num_citations": 265,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Orbital edge computing: Nanosatellite constellations as a new class of computer system"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:SeFeTyx0c_EC",
+      "citation": "IEEE Computer Architecture Letters, 1-1, 2019",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Orbital edge computing: Processing data in space"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:-f6ydRqryjwC",
+      "citation": "",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Orca: Ordering-free regions for consistency and atomicity"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Wp0gIr-vW9MC",
+      "citation": "WAX 2016, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Overcoming the data-flow limit on parallelism with structural approximation"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:yD5IFk8b50cC",
+      "citation": "2021 IEEE International Symposium on High-Performance Computer Architecture …, 2021",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "P-opt: Practical optimal cache replacement for graph analytics"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:3s1wT3WcHBgC",
+      "citation": "Proceedings of the Twenty-Fifth International Conference on Architectural …, 2020",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Peacenik: Architecture support for not failing under fail-stop memory consistency"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:sSrBHYA8nusC",
+      "citation": "Proceedings of the 56th Annual IEEE/ACM International Symposium on …, 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Pipestitch: An energy-minimal dataflow architecture with lightweight threads"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:UebtZRa9Y70C",
+      "citation": "2012 Second International Workshop on Developing Tools as Plug-Ins (TOPI), 1-6, 2012",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Playing cupid: The IDE as a matchmaker for plug-ins"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:hFOr9nPyWt4C",
+      "citation": "ACM SIGPLAN Notices 52 (8), 431-432, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Poster: An architecture and programming model for accelerating parallel commutative computations via privatization"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:pyW8ca7W8N0C",
+      "citation": "arXiv preprint arXiv:2103.06743, 2021",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Practical encrypted computing for iot clients"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:J-pR_7NvFogC",
+      "citation": "Proceedings of the 27th International Symposium on High Performance Computer …, 0",
+      "num_citations": 1,
+      "pub_url": "",
+      "title": "Practical Optimal Cache Replacement for Graphs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:4DMP91E08xMC",
+      "citation": "Proceedings of the 21st ACM SIGPLAN Symposium on Principles and Practice of …, 2016",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Production-guided concurrency debugging"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:ldfaerwXgEUC",
+      "citation": "2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS …, 2019",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Rethinking support for region conflict exceptions"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:Tiz5es2fbqcC",
+      "citation": "2022 55th IEEE/ACM International Symposium on Microarchitecture (MICRO), 546-564, 2022",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Riptide: A programmable, energy-minimal dataflow compiler and architecture"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:eflP2zaiRacC",
+      "citation": "Apache Spark: A Unified Engine for Big Data Processing. Commun ACM 59 (11 …, 2016",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "RSa, W Pa, D Ta, A Ma, D Aa, M Xa, R Ja, V Sa, F MJ"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:V3AGJWp-ZtQC",
+      "citation": "Communications of the ACM 60 (4), 12-14, 2017",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Sensors on the Brain Implantable wireless monitors give researchers a new look inside the human body"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:_FxGoFyzp5QC",
+      "citation": "SIGPLAN Notices 46 (6), 378, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Session 6b: Concurrency Defects-Session Chair: Armando Solar-Lezama (Massachusetts Institute of Technology)-Isolating and Understanding Concurrency Errors Using Reconstructed …"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:_xSYboBqXhAC",
+      "citation": "2021 ACM/IEEE 48th Annual International Symposium on Computer Architecture …, 2021",
+      "num_citations": 92,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Snafu: An ultra-low-power, energy-minimal CGRA-generation framework and architecture"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:maZDTaKrznsC",
+      "citation": "Proceedings of the Twenty-Third International Conference on Architectural …, 2018",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "SOFRITAS: Serializable ordering-free regions for increasing thread atomicity scalably"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:70eg2SAEIzsC",
+      "citation": "Proceedings of the 40th ACM SIGPLAN Conference on Programming Language …, 2019",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Supporting peripherals in intermittent systems with just-in-time checkpoints"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:K3LRdlH-MEoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Sustainability Challenges for Computing: what are the computer architecture and systems challenges, and what can/should the research community do about it?"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:YsMSGLbcyi4C",
+      "citation": "Fun Ideas and Thoughts w/Conference on Programming Language Design and …, 2011",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "System Introspection with Hardware Watchmachines"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:kNdYIx-mwKoC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "System Support for Concurrent Software Reliability"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:0EnyYjriUFMC",
+      "citation": "US Patent 8,832,659, 2014",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Systems and methods for finding concurrency errors"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:YOwf2qJgpHMC",
+      "citation": "US Patent 9,146,737, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Systems and methods for finding concurrency errors"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:KlAtU1dfN6UC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Systems Should Automatically Specialize Code and Data"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:u9iWguZQMMsC",
+      "citation": "Small Satellite Conference, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Tartan artibeus: A batteryless, computational satellite research platform"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:vRqMK49ujn8C",
+      "citation": "Carnegie Mellon University, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Technical Report: A Type System for Safe Intermittent Computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:isC4tDSrTZIC",
+      "citation": "Proceedings of the 27th International Conference on Compiler Construction …, 2018",
+      "num_citations": 108,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Termination checking and task decomposition for task-based intermittent programs"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:ns9cj8rnVeAC",
+      "citation": "Proceedings of the 20th International Workshop on Mobile Computing Systems …, 2019",
+      "num_citations": 64,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "The computing landscape of the 21st century"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:5Ul4iDaHHb8C",
+      "citation": "Communications of the ACM 67 (3), 64-73, 2024",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "The internet of batteryless things"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:D03iK_w7-QYC",
+      "citation": "Proceedings of the 22nd international workshop on mobile computing systems …, 2021",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "The role of edge offload for hardware-accelerated mobile devices"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:4OULZ7Gr8RgC",
+      "citation": "Proceedings of the ACM on Programming Languages 4 (OOPSLA), 1-31, 2020",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Towards a formal foundation of intermittent computing"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:q3oQSFYPqjQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Towards Understanding the Carbon Impact in End-to-end Sensing Pipelines"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:35N4QoGY0k4C",
+      "citation": "Proceedings of the 40th ACM SIGPLAN Conference on Programming Language …, 2019",
+      "num_citations": 83,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Transactional concurrency control for intermittent, energy-harvesting computing systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:dfsIfKJdRG4C",
+      "citation": "Proceedings of Machine Learning and Systems 3, 637-651, 2021",
+      "num_citations": 38,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Understanding and improving failure tolerant training for deep learning recommendation with partial recovery"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:qxL8FJ1GzNcC",
+      "citation": "ACM SIGPLAN Notices 50 (10), 241-259, 2015",
+      "num_citations": 70,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Valor: Efficient, software-only region conflict exceptions"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:1qzjygNMrQYC",
+      "citation": "US Patent App. 18/901,964, 2025",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2025",
+      "title": "Vector dataflow architecture for embedded systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:dshw04ExmUIC",
+      "citation": "US Patent 12,164,926, 2024",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Vector dataflow architecture for embedded systems"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:BrmTIyaxlBUC",
+      "citation": "2024 IEEE International Conference on Robotics and Automation (ICRA), 11774 …, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "VINSat: Solving the Lost-in-Space Problem with Visual-Inertial Navigation"
+    },
+    {
+      "author_pub_id": "a9T7i5QAAAAJ:hMod-77fHWUC",
+      "citation": "2018 IEEE International Symposium on Workload Characterization (IISWC), 2018",
+      "num_citations": 98,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "When is Graph Reordering an Optimization? studying the effect of lightweight graph reordering across applications and input graphs"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "a9T7i5QAAAAJ"
+}

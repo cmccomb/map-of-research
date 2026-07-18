@@ -1,0 +1,411 @@
+{
+  "display_name": "Wood",
+  "fetched_at_utc": "2025-05-01T01:24:56+00:00",
+  "migration_source": "map-of-bme/data/Wood.json",
+  "publication_count": 51,
+  "publications": [
+    {
+      "author_pub_id": "qC52bkkAAAAJ:4TOpqqG69KYC",
+      "citation": "International Society of Magnetic Resonance in Medicine, 4408, 2013",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "20-To-8 channel Tx array with 32-channel adjustable receive-only insert for 7T head imaging"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:70eg2SAEIzsC",
+      "citation": "The 23nd International Society of Magnetic Resonance in Medicine Annual Meeting, 2015",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "3D eigenmodes optimizations for 3D imaging at 7T"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:blknAaTinKkC",
+      "citation": "In Proc. of the 25th International Society of Magnetic Resonance in Medicine …, 2017",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "64-channel Double-Octagon Tx Head Coil for 7T Imaging"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:aqlVkmm33-oC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "64-CHANNEL RADIO FREQUENCY HEAD COIL SIMULATIONS"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:O3NaXMp0MMsC",
+      "citation": "Toronto, Canada, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "7T Multi-slab Whole-Head Homogenous and Low SAR T2 Acquisitions with Limited RF Power Amplifiers Capabilities"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:ns9cj8rnVeAC",
+      "citation": "Proc Intl Soc Mag Reson Med 21, 4368, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "7T Tx Body Coil with Rx-Only Insert: Primarily Results"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:TFP_iSt0sucC",
+      "citation": "NMR in Biomedicine 34 (3), e4441, 2021",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "A comprehensive electromagnetic evaluation of an MRI anthropomorphic head phantom"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:ULOm3_A8WrAC",
+      "citation": "In Proc. of the 25th International Society of Magnetic Resonance in Medicine …, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A new RF coil for foot and ankle imaging at 7T MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:maZDTaKrznsC",
+      "citation": "International Society for Magnetic Resonance in Medicine 25, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A new RF coil for foot and ankle imaging at 7T MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:YOwf2qJgpHMC",
+      "citation": "Magnetic resonance imaging 45, 1-6, 2018",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "A new RF transmit coil for foot and ankle imaging at 7T MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:JV2RwH3_ST0C",
+      "citation": "Joint Annual Meeting ISMRMESMRMB, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "An Electrically Conductive SLA Resin used for the Design of Anthropomorphic Phantoms"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:pqnbT2bcN3wC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Analyzing Cortical Thickness and Volume in patients with Sickle Cell Disease using 7T-MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:NMxIlDl6LWMC",
+      "citation": "22nd Annual Meeting of ISMRM, 2014",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Anatomically detailed human head phantom for MR testing purposes"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:hFOr9nPyWt4C",
+      "citation": "University of Pittsburgh, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Anthropomorphic Phantom Developments for the Characterization and Evaluations of MRI RF Coils"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:bEWYMUwI8FkC",
+      "citation": "Blood 136, 57-58, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Assessing Dynamic Cerebral Autoregulation in Patients with Sickle Cell Disease Using Near-Infrared Spectroscopy and Paced Breathing"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:rO6llkc54NcC",
+      "citation": "Blood 144, 3879, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Assessing the Impact of Cognitive Load on Resting State Tissue Oxygen Saturation in Adult Patients with Sickle Cell Disease"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:7PzlFSSx8tAC",
+      "citation": "The American Journal of Geriatric Psychiatry 26 (6), 690-699, 2018",
+      "num_citations": 17,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Association of hippocampal substructure resting-state functional connectivity with memory performance in older adults"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:g5m5HwL7SMYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Association of hippocampal substructure resting-state functional connectivity with memory performance in older adults"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:BqipwSGYUEgC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "B1+ and Temperature Analysis in Two UHF RF Coils"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:RGFaLdJalmkC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Comparison of Electric and B1+ Fields for Heterogeneous and Homogeneous Anthropomorphic Phantoms and Anatomical Models: Numerical Simulations and Experimental Findings"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:-f6ydRqryjwC",
+      "citation": "PloS one 14 (1), e0209663, 2019",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Computational and experimental evaluation of the Tic-Tac-Toe RF coil for 7 Tesla MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:mVmsd5A6BfQC",
+      "citation": "Plos one 13 (2), e0192794, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Correction: Design and fabrication of a realistic anthropomorphic heterogeneous head phantom for MR purposes"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:M05iB0D1s5AC",
+      "citation": "Frontiers in Neuroscience 17, 1331375, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Corrigendum: Demographic reporting and phenotypic exclusion in fNIRS"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:35N4QoGY0k4C",
+      "citation": "Frontiers in Neuroscience 17, 1086208, 2023",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Demographic reporting and phenotypic exclusion in fNIRS"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:KlAtU1dfN6UC",
+      "citation": "PLoS ONE 12 (8), 2017",
+      "num_citations": 55,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Design and fabrication of a realistic anthropomorphic heterogeneous head phantom for MR purposes"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:mB3voiENLucC",
+      "citation": "PLOS ONE 13 (2), 2018",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Design and fabrication of a realistic anthropomorphic heterogeneous head phantom for MR purposes (vol 12, e0183168, 2017)"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:3s1wT3WcHBgC",
+      "citation": "Blood 144, 3876, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Dynamic Cerebral Autoregulation and Blood Pressure Oscillations Reveal the Severity of Autoregulatory Dysfunction in Sickle Cell Disease"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:Zph67rFs4hoC",
+      "citation": "In Proc. of the 25th International Society of Magnetic Resonance in Medicine …, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Evaluation of an Anthropomorphic Phantom with In-Vivo Using Quantitative MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:M3NEmzRMIkIC",
+      "citation": "The 26th International Society of Magnetic Resonance in Medicine Annual Meeting, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Experimental and numerical evaluations of simultaneously excitable Eigenmodes in a 20-channel transmit RF array for 7 Tesla human MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:ZHo1McVdvXMC",
+      "citation": "Journal of Biomedical Optics 29 (S3), S33310-S33310, 2024",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Exploring the impact and influence of melanin on frequency-domain near-infrared spectroscopy measurements"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:ldfaerwXgEUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Fundamentals of MRI and Neuroimaging Analysis Final Project"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:zA6iFVUQeVQC",
+      "citation": "Blood 144, 294, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Higher Hemoglobin Level Correlates with Increased Tissue Oxygenation in a Comprehensive Profile of Hemorheology in Sickle Cell Disease"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:J_g5lzvAfSwC",
+      "citation": "Proc. of the 27th International Society of Magnetic Resonance in Medicine …, 2019",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Homogeneous 64-channel RF transmit array for brain imaging at 7T, 9.4 T, and 10.5 T"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:e5wmG9Sq2KIC",
+      "citation": "Journal of 3D printing in medicine 3 (3), 119-125, 2019",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "How to design and construct a 3D-printed human head phantom"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:iH-uZ7U-co4C",
+      "citation": "Scientific reports 11 (1), 3370, 2021",
+      "num_citations": 32,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Improved 7 Tesla transmit field homogeneity with reduced electromagnetic power deposition using coupled Tic Tac Toe antennas"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:RHpTSmoSYBkC",
+      "citation": "In Proc. of the 25th International Society of Magnetic Resonance in Medicine …, 2017",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "In-vivo (8x4) 32-ch Tx-only Body Array for UHF MR"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:ZeXyd9-uunAC",
+      "citation": "PloS one 13 (11), e0206127, 2018",
+      "num_citations": 44,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "In-vivo and numerical analysis of the eigenmodes produced by a multi-level Tic-Tac-Toe head transmit array for 7 Tesla MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:hMod-77fHWUC",
+      "citation": "Toronto, Canada2015, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Initial Results: Ultra-High Field 32-ch Tx Body Array with Bright Centers."
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:k_IJM867U9cC",
+      "citation": "",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "ISMRM best practices for safety testing of experimental RF hardware"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:YFjsv_pBGBYC",
+      "citation": "Proceedings of the 26th Annual Meeting of ISMRM, Paris, France, 4.1, 2018",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "New optimization strategies for RF shimming at UHF MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:RYcK_YlVTxYC",
+      "citation": "Proc of the 26th International Society of Magnetic Resonance in Medicine …, 2018",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Noise mitigation from high-resolution 7T MRI images"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:GnPB-g6toBAC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Optimization of RF system for homogenous, consistent, and safe neuro imaging at 7T MRI"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:HoB7MX3m0LUC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Patients with sickle cell disease have altered brain fractional anisotropy, axial, mean and radial diffusivity quantified by 7T MRI."
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:j3f4tGmQtD8C",
+      "citation": "Optics and the Brain, JTu3A. 5, 2020",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Quantifying Cerebral Autoregulation in Patients with Sickle Cell Disease Using Near-Infrared Spectroscopy"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:2P1L_qKh6hAC",
+      "citation": "2023 45th Annual International Conference of the IEEE Engineering in …, 2023",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Scaling of Algorithmic Bias in Pulse Oximetry with Signal-to-Noise Ratio"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:_Qo2XoVZTnwC",
+      "citation": "ISMRM, 2013",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Simultaneous excitation of distinct electromagnetic modes using a Tx array"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:SeFeTyx0c_EC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "The potential of using a hemodynamic signal as a biomarker of cognitive load in sickle cell disease"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:NaGl4SEjCO4C",
+      "citation": "Proc of the 25th International Society of Magnetic Resonance in Medicine …, 2017",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Towards homogenous 7T neuro imaging: findings and comparisons between 7T TTT and NOVA RF coil systems"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:qxL8FJ1GzNcC",
+      "citation": "ISMRM 23rd Annual Meeting & Exhibition, 2015",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Transmit Array Performance across Subjects at 7T MRI: Simulations and Experiments"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:lSLTfruPkqcC",
+      "citation": "PLoS One 17 (9), e0274258, 2022",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Two-layer analytical model for estimation of layer thickness and flow using Diffuse Correlation Spectroscopy"
+    },
+    {
+      "author_pub_id": "qC52bkkAAAAJ:L8Ckcad2t8MC",
+      "citation": "TRANSPLANTATION 100 (7), S419-S420, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Ultra-high resolution non-contrast imaging for chronic rejection monitoring and procedural planning in reconstructive transplantation"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "qC52bkkAAAAJ"
+}

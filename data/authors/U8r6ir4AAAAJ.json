@@ -1,0 +1,971 @@
+{
+  "display_name": "Malen",
+  "fetched_at_utc": "2025-03-28T12:50:46+00:00",
+  "migration_source": "map-of-mech/data/Malen.json",
+  "publication_count": 121,
+  "publications": [
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:B3FOqHPlNUQC",
+      "citation": "Handbook of Single-Molecule Electronics, 314-355, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "-Thermoelectricity in Molecular Junctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:ZHo1McVdvXMC",
+      "citation": "2017 IEEE 17th International Conference on Nanotechnology (IEEE-NANO), 991-994, 2017",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "A comparison of the impact of metal-ion containing and metal-ion free photoresist developers on graphene field-effect transistors"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:b0M2c_1WBrUC",
+      "citation": "Proceedings of the National Academy of Sciences 116 (43), 21438-21444, 2019",
+      "num_citations": 294,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "A multifunctional shape-morphing elastomer with liquid metal inclusions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:ULOm3_A8WrAC",
+      "citation": "Nanoscale and Microscale Thermophysical Engineering 19 (3), 183-205, 2015",
+      "num_citations": 84,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Advances in studying phonon mean free path dependent contributions to thermal conductivity"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:YFjsv_pBGBYC",
+      "citation": "Applied Energy 181, 224-231, 2016",
+      "num_citations": 27,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Amplified charge and discharge rates in phase change materials for energy storage using spatially-enhanced thermal conductivity"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:kNdYIx-mwKoC",
+      "citation": "Physical Review B 90 (6), 064302, 2014",
+      "num_citations": 83,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Analytical interpretation of nondiffusive phonon transport in thermoreflectance thermal conductivity measurements"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:nb7KW1ujOQ8C",
+      "citation": "Applied Physics Letters 116 (21), 2020",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Assessing the impact of disjoining pressure on thin-film evaporation with atomistic simulation and kinetic theory"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:4DMP91E08xMC",
+      "citation": "International Conference on Micro/Nanoscale Heat Transfer 54778, 683-686, 2012",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Assessment of Fourier-Based Thermal Models Used in Frequency-Domain Thermoreflectance Data Analysis"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Wp0gIr-vW9MC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Au+ Cr Film on GaAs Substrate"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:0EnyYjriUFMC",
+      "citation": "Acs Nano 7 (11), 10296-10306, 2013",
+      "num_citations": 52,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Bi1–xSbx Alloy Nanocrystals: Colloidal Synthesis, Charge Transport, and Thermoelectric Properties"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Tyk-4Ss8FVUC",
+      "citation": "Nature communications 4 (1), 1640, 2013",
+      "num_citations": 727,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Broadband phonon mean free path contributions to thermal conductivity measured using frequency domain thermoreflectance"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:VOx2b1Wkg3QC",
+      "citation": "Appl. Phys. Lett 103, 133507, 2013",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "C. et al. Compositionally matched nitrogen-doped Ge2Sb2Te5/Ge2Sb2Te5 superlattice-like structures for phase change random access memory"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:NhqRSupF_l8C",
+      "citation": "Nano letters 19 (12), 8533-8538, 2019",
+      "num_citations": 43,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Chemical Reactions Impede Thermal Transport Across Metal/β-Ga2O3 Interfaces"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:8k81kl-MbHgC",
+      "citation": "Applied Physics Letters 103 (13), 2013",
+      "num_citations": 5,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Compositionally matched nitrogen-doped Ge2Sb2Te5/Ge2Sb2Te5 superlattice-like structures for phase change random access memory"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:wbdj-CoPYUoC",
+      "citation": "The International Journal of Advanced Manufacturing Technology 129 (7), 3047 …, 2023",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Convolutional neural networks for melt depth prediction and visualization in laser powder bed fusion"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:NaGl4SEjCO4C",
+      "citation": "Nano letters 17 (1), 220-227, 2017",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Cooperative molecular behavior enhances the thermal conductance of binary self-assembled monolayer junctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:ZeXyd9-uunAC",
+      "citation": "57th Annual Report on Research Under Sponsorship of The American Chemical …, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Coupling of Electrons, Photons, and Vibrations in Hydrocarbon Based Molecular Junctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:3fE2CSJIrl8C",
+      "citation": "The Journal of Physical Chemistry C 118 (14), 7288-7295, 2014",
+      "num_citations": 96,
+      "pub_url": "",
+      "pub_year": "2014",
+      "title": "Coupling of organic and inorganic vibrational states and their thermal transport in nanocrystal arrays"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:XiVPGOgt02cC",
+      "citation": "Additive Manufacturing Letters 11, 100243, 2024",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Deep learning for melt pool depth contour prediction from surface thermal images via vision transformers"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:hC7cP41nSMkC",
+      "citation": "Heat Transfer Summer Conference 55478, V001T03A004, 2013",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Dependence of Thermal Conductivities of the AlN Film in the LED Architecture on Surface Roughness and Lattice Mismatch"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:BrmTIyaxlBUC",
+      "citation": "Nano letters 23 (9), 3687-3693, 2023",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Differentiating thermal conductances at semiconductor nanocrystal/ligand and ligand/solvent interfaces in colloidal suspensions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:bFI3QPDXJZMC",
+      "citation": "Nano letters 20 (3), 1718-1724, 2020",
+      "num_citations": 46,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Doping-Induced Superconductivity in the van der Waals Superatomic Crystal Re6Se8Cl2"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:ufrVoPGSRksC",
+      "citation": "Nuclear engineering and design 239 (8), 1505-1530, 2009",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Economic analysis of grid and wire wrap supported hydride and oxide fueled pressurized water reactors"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:fPk4N6BV_jEC",
+      "citation": "Applied Physics Letters 113 (18), 2018",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Effect of epitaxial strain and vacancies on the ferroelectric-like response of CaTiO3 thin films"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Y0pCki6q_DkC",
+      "citation": "University of California, Berkeley, 2009",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Energy conversion and transport in organic-inorganic heterojunctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:_Qo2XoVZTnwC",
+      "citation": "Physical Review Applied 5 (1), 014009, 2016",
+      "num_citations": 78,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Enhancement of thermal conductance at metal-dielectric interfaces using subnanometer metal adhesion layers"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:SP6oXDckpogC",
+      "citation": "ACS Applied Materials & Interfaces 12 (30), 34317-34322, 2020",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Enhancing thermal interface conductance to graphene using Ni–Pd alloy contacts"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:maZDTaKrznsC",
+      "citation": "Polymer 93, 72-77, 2016",
+      "num_citations": 26,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Enhancing thermal transport in nanocomposites by polymer-graft modification of particle fillers"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:sSrBHYA8nusC",
+      "citation": "Journal of Building Engineering 50, 104178, 2022",
+      "num_citations": 20,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Experimental correlation of thermal conductivity with dielectric properties of wood and wood-based materials: possibilities for rapid in-situ building energy evaluation"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:5nxA0vEk-isC",
+      "citation": "Applied Physics Letters 103 (13), 2013",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Experimental estimates of in-plane thermal conductivity in FePt-C granular thin film heat assisted magnetic recording media using a model layered system"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:abG-DnoFyZgC",
+      "citation": "Nano letters 19 (11), 7901-7907, 2019",
+      "num_citations": 68,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Ferroelectric Domain Walls in PbTiO3 Are Effective Regulators of Heat Flow at Room Temperature"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:eJXPG6dFmWUC",
+      "citation": "American Chemical Society, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Ferroelectric Domain Walls in PbTiO3 Are Effective Regulators of Heat Flow at Room Temperature"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:p2g8aNsByqUC",
+      "citation": "Nanoscale Horizons 5 (11), 1524-1529, 2020",
+      "num_citations": 10,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Fullerene rotational dynamics generate disordered configurations that suppress thermal conductivity in superatomic crystals"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:d1gkVwhDpl0C",
+      "citation": "Chemical Physics Letters 491 (4-6), 109-122, 2010",
+      "num_citations": 199,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Fundamentals of energy transport, energy conversion, and thermal properties in organic–inorganic heterojunctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:UeHWp8X0CEIC",
+      "citation": "Advanced Functional Materials 22 (24), 5251-5258, 2012",
+      "num_citations": 120,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Gas diffusion, energy transport, and thermal accommodation in single‐walled carbon nanotube aerogels"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:UxriW0iASnsC",
+      "citation": "ECS Meeting Abstracts, 1941, 2013",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Heat Dissipation in GaN Based Power Electronics"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:aqlVkmm33-oC",
+      "citation": "ECS Transactions 58 (4), 343, 2013",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Heat dissipation in GAN based power electronics"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:HE397vMXCloC",
+      "citation": "Available at SSRN 5060201, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "High Speed Thermal Imaging and Modeling of Laser Powder Bed Fusion Manufactured Wc-Ni Cemented Carbides"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:J_g5lzvAfSwC",
+      "citation": "Proceedings of the National Academy of Sciences 114 (9), 2143-2148, 2017",
+      "num_citations": 639,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "High thermal conductivity in soft elastomers with elongated liquid metal inclusions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:LPZeul_q3PIC",
+      "citation": "Additive Manufacturing 73, 103663, 2023",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "High-resolution melt pool thermal imaging for metals additive manufacturing using the two-color method with a color camera"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Mojj43d5GZwC",
+      "citation": "Available at SSRN 4307946, 2022",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "High-Resolution Melt Pool Thermal Imaging for Metals Additive Manufacturing Using the Two-Color Method with a Single Color Camera"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:CHSYGLWDkRkC",
+      "citation": "International Journal of Heat and Mass Transfer 150, 119153, 2020",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Hot-spot thermal management by phase change materials enhanced by spatially graded metal meshes"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:WF5omc3nYNoC",
+      "citation": "Nuclear engineering and design 239 (8), 1374-1405, 2009",
+      "num_citations": 45,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Hydride fuel for LWRs—project overview"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:u-x6o8ySG0sC",
+      "citation": "Nano letters 9 (3), 1164-1169, 2009",
+      "num_citations": 287,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Identifying the length dependence of orbital alignment and contact coupling in molecular heterojunctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:D03iK_w7-QYC",
+      "citation": "Physical Review B 99 (11), 115418, 2019",
+      "num_citations": 11,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Impact of metal adhesion layer diffusion on thermal interface conductance"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:IjCSPb-OGe4C",
+      "citation": "Review of Scientific Instruments 82 (6), 2011",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Improved 3-omega measurement of thermal conductivity in liquid, gases, and powders using a metal-coated optical fiber"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:bnK-pcrLprsC",
+      "citation": "Materials & Design 245, 113181, 2024",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Inexpensive high fidelity melt pool models in additive manufacturing using generative deep diffusion"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:_kc_bZDykSQC",
+      "citation": "ABSTRACTS OF PAPERS OF THE AMERICAN CHEMICAL SOCIETY 235, 2008",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "INOR 61-Thermopower as a tool for characterization of metal-molecule junctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:UebtZRa9Y70C",
+      "citation": "Review of Scientific Instruments 84 (6), 2013",
+      "num_citations": 122,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Instrumentation of broadband frequency domain thermoreflectance for measuring thermal conductivity accumulation functions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:HDshCWvjkbEC",
+      "citation": "Journal of Applied Physics 118 (23), 2015",
+      "num_citations": 31,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Interpretation of thermoreflectance measurements with a two-temperature model including non-surface heat deposition"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:olpn-zPbct0C",
+      "citation": "Materials Horizons 11 (14), 3267-3286, 2024",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Intrinsically thermally conductive polymers"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:KxtntwgDAa4C",
+      "citation": "Applied Physics Letters 201106 (100), 2012",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Jonathan A. Malen"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:YOwf2qJgpHMC",
+      "citation": "PLoS One 10 (5), e0125862, 2015",
+      "num_citations": 42,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Large thermal conductivity differences between the crystalline and vitrified states of DMSO with applications to cryopreservation"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:qjMakFHDy7sC",
+      "citation": "Applied Physics Letters 100 (20), 2012",
+      "num_citations": 64,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Layer-by-layer thermal conductivities of the Group III nitride films in blue/green light emitting diodes"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:J-pR_7NvFogC",
+      "citation": "Additive Manufacturing 81, 104022, 2024",
+      "num_citations": 6,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Limits of dispersoid size and number density in oxide dispersion strengthened alloys fabricated with powder bed fusion-laser beam"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:cFHS6HbyZ2cC",
+      "citation": "APS March Meeting Abstracts 2019, X12. 010, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Maximizing Alloy Graphene Interface Conductance"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:eQOLeE2rZwMC",
+      "citation": "Journal of microelectromechanical systems 15 (4), 976-985, 2006",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2006",
+      "title": "Methanol steam reformer on a silicon wafer"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:-f6ydRqryjwC",
+      "citation": "Nature communications 6 (1), 8694, 2015",
+      "num_citations": 143,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Microsecond-sustained lasing from colloidal quantum dot solids"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:8AbLer7MMksC",
+      "citation": "Journal of Materials Chemistry C 10 (32), 11686-11696, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Modeling the tunable thermal conductivity of intercalated layered materials with three-directional anisotropic phonon dispersion and relaxation times"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:hFOr9nPyWt4C",
+      "citation": "Scientific Reports 5 (1), 16095, 2015",
+      "num_citations": 47,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Modifying the thermal conductivity of small molecule organic semiconductor thin films with metal nanoparticles"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:vV6vV6tmYwMC",
+      "citation": "Cambridge University Press, 2015",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Molecular Polymer and Hybrid Materials for Thermoelectrics: November 30-December 5, 2014, Boston, Massachusetts, USA"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:M3NEmzRMIkIC",
+      "citation": "Journal of Applied Physics 119 (14), 2016",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Morse potential-based model for contacting composite rough surfaces: Application to self-assembled monolayer junctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:geHnlv5EZngC",
+      "citation": "Nano Letters 22 (12), 4669-4676, 2022",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Nanocrystal ordering enhances thermal transport and mechanics in single-domain colloidal nanocrystal superlattices"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:HoB7MX3m0LUC",
+      "citation": "MRS Bulletin 43 (2), 112-118, 2018",
+      "num_citations": 30,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Nanoscale thermal transport aspects of heat-assisted magnetic recording devices and materials"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:yD5IFk8b50cC",
+      "citation": "Physical Review B 99 (5), 054308, 2019",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Nondiffusive electron transport in metals: A two-temperature Boltzmann transport equation analysis of thermoreflectance experiments"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:O3NaXMp0MMsC",
+      "citation": "2016 IEEE International Reliability Physics Symposium (IRPS), 5A-2-1-5A-2-7, 2016",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Nondiffusive heat dissipation from a pulse-heated conductive filament in RRAM"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:isC4tDSrTZIC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Nondiffusive thermal transport increases temperature rise in RRAM filaments"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:k_IJM867U9cC",
+      "citation": "IEEE Electron Device Letters 37 (5), 572-575, 2016",
+      "num_citations": 14,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Nondiffusive thermal transport increases temperature rise in RRAM filaments"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:OU6Ihb5iCvQC",
+      "citation": "Nature communications 11 (1), 4010, 2020",
+      "num_citations": 141,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Observation of reduced thermal conductivity in a metal-organic framework due to the presence of adsorbates"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:roLk4NBRz8UC",
+      "citation": "",
+      "num_citations": 193,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Optical measurement of thermal conductivity using fiber aligned frequency domain thermoreflectance"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:BqipwSGYUEgC",
+      "citation": "Nature materials 16 (1), 83-88, 2017",
+      "num_citations": 139,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Orientational order controls crystalline and amorphous thermal transport in superatomic crystals"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:W7OEmFMy1HYC",
+      "citation": "Energy & Environmental Science 6 (4), 1267-1273, 2013",
+      "num_citations": 71,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Periodic heating amplifies the efficiency of thermoelectric energy conversion"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:2P1L_qKh6hAC",
+      "citation": "Nano letters 17 (9), 5734-5739, 2017",
+      "num_citations": 133,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Phonon speed, not scattering, differentiates thermal transport in lead halide perovskites"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:ldfaerwXgEUC",
+      "citation": "Journal of Applied Physics 122 (12), 2017",
+      "num_citations": 56,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Phonon-boundary scattering in nanoporous silicon films: Comparison of Monte Carlo techniques"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:q3oQSFYPqjQC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "PLEASE CITE THIS ARTICLE AS DOI: 10.1063/5.0010467"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:70eg2SAEIzsC",
+      "citation": "US Patent 10,720,261, 2020",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Polymer composite with liquid phase metal inclusions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:u9iWguZQMMsC",
+      "citation": "US Patent 11,232,883, 2022",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Polymer composite with liquid phase metal inclusions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:eflP2zaiRacC",
+      "citation": "Construction and Building Materials 447, 138102, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Predicting effective thermal conductivity of multilayered assemblies related to wood-frame construction based on dielectric properties: Data exploration for application to …"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:u5HHmVD_uO8C",
+      "citation": "Nano letters 8 (2), 715-719, 2008",
+      "num_citations": 350,
+      "pub_url": "",
+      "pub_year": "2008",
+      "title": "Probing the chemistry of molecular heterojunctions using thermoelectricity"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:3s1wT3WcHBgC",
+      "citation": "2017 IEEE 17th International Conference on Nanotechnology (IEEE-NANO), 459-462, 2017",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2017",
+      "title": "Processing-induced strain in dual-gated graphene FETs"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:1qzjygNMrQYC",
+      "citation": "Applied Physics Letters 123 (13), 2023",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Reduced thermal resistance of amorphous Al2O3 thin films on β-Ga2O3 and amorphous SiO2 substrates via rapid thermal annealing"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:4fKUyHm3Qg0C",
+      "citation": "Review of Scientific Instruments 93 (2), 2022",
+      "num_citations": 8,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Reducing the uncertainty caused by the laser spot radius in frequency-domain thermoreflectance measurements of thermal properties"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:dfsIfKJdRG4C",
+      "citation": "APS March Meeting Abstracts 2019, B02. 008, 2019",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Reduction of the thermal conductivity in PbTiO3 thin-films by ferroelectric domain walls."
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:P5F9QuxV20EC",
+      "citation": "Physical Review Materials 4 (5), 054002, 2020",
+      "num_citations": 16,
+      "pub_url": "",
+      "pub_year": "2020",
+      "title": "Reduction of thermal conductivity in ferroelectric  thin films"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:u_35RYKgDlwC",
+      "citation": "Nature Energy 3 (10), 826-827, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Regulating hot and cold"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:zYLM7Y9cAGgC",
+      "citation": "Nanoscale and microscale thermophysical engineering 17 (1), 25-49, 2013",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Report on the Seventh US–Japan Joint Seminar on Nanoscale Transport Phenomena—Science and Engineering"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:mvPsJ3kp5DgC",
+      "citation": "nature communications 14 (1), 2667, 2023",
+      "num_citations": 9,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Shape distortion in sintering results from nonhomogeneous temperature activating a long-range mass transport"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:K3LRdlH-MEoC",
+      "citation": "ACS nano 15 (3), 4165-4172, 2021",
+      "num_citations": 34,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Signatures of coherent phonon transport in ultralow thermal conductivity two-dimensional ruddlesden–popper phase perovskites"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:EUQCXRtRnyEC",
+      "citation": "Journal of the American Chemical Society 141 (28), 10967-10971, 2019",
+      "num_citations": 19,
+      "pub_url": "",
+      "pub_year": "2019",
+      "title": "Solution-processable superatomic thin-films"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Tiz5es2fbqcC",
+      "citation": "US Patent 12,104,114, 2024",
+      "num_citations": 0,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Solution-processable superatomic thin-films"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:4OULZ7Gr8RgC",
+      "citation": "Journal of the American Chemical Society 140 (46), 15601-15605, 2018",
+      "num_citations": 24,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Spontaneous electronic band formation and switchable behaviors in a phase-rich superatomic crystal"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:YsMSGLbcyi4C",
+      "citation": "Nature materials 12 (5), 410-415, 2013",
+      "num_citations": 281,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Surface chemistry mediates thermal transport in three-dimensional nanocrystal arrays"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:D_sINldO8mEC",
+      "citation": "Additive Manufacturing Letters 5, 100123, 2023",
+      "num_citations": 25,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Surrogate modeling of melt pool temperature field using deep learning"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:5Ul4iDaHHb8C",
+      "citation": "arXiv preprint arXiv:2207.12259, 2022",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Surrogate modeling of melt pool thermal field using deep learning"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:hMod-77fHWUC",
+      "citation": "ACS applied materials & interfaces 8 (29), 19168-19174, 2016",
+      "num_citations": 28,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Temperature dependent thermal conductivity and thermal interface resistance of pentacene thin films with varying morphology"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:dhFuZR0502QC",
+      "citation": "International Conference on Micro/Nanoscale Heat Transfer 54778, 579-583, 2012",
+      "num_citations": 4,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Temperature dependent thermal properties in LEDs for solid state lighting"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:Se3iqnhoufwC",
+      "citation": "Journal of Applied Physics 113 (21), 2013",
+      "num_citations": 53,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "The impact of film thickness and substrate surface roughness on the thermal resistance of aluminum nitride nucleation layers"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:9yKSN-GCB0IC",
+      "citation": "Nano letters 9 (10), 3406-3412, 2009",
+      "num_citations": 129,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "The nature of transport variations in molecular heterojunction electronics"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:35N4QoGY0k4C",
+      "citation": "Journal of biomechanical engineering 140 (1), 011005, 2018",
+      "num_citations": 41,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Thermal analyses of a human kidney and a rabbit kidney during cryopreservation by vitrification"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:WbkHhVStYXYC",
+      "citation": "",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thermal Analyses of a Human Kidney and a Rabbit Kidney During Cryopreservation by Vitrification"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:zA6iFVUQeVQC",
+      "citation": "2018 17th IEEE Intersociety Conference on Thermal and Thermomechanical …, 2018",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Thermal Conductance of β-Ga2O3/Metal Interfaces"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:L8Ckcad2t8MC",
+      "citation": "2011 11th Annual Non-Volatile Memory Technology Symposium Proceeding, 1-4, 2011",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Thermal conductivity measurements of nitrogen-doped Ge2Sb2Te5"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:f2IySw72cVMC",
+      "citation": "2011 11th Annual Non-Volatile Memory Technology Symposium Proceeding, 0",
+      "num_citations": 0,
+      "pub_url": "",
+      "title": "Thermal conductivity measurements of nitrogen-doped Ge2Sb2Te5"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:4TOpqqG69KYC",
+      "citation": "International Conference on Micro/Nanoscale Heat Transfer 54778, 591-595, 2012",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2012",
+      "title": "Thermal Conductivity of Carbon Nanotube Aerogels With Different Filling Gases"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:SeFeTyx0c_EC",
+      "citation": "Additive Manufacturing 21, 201-208, 2018",
+      "num_citations": 231,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Thermal conductivity of metal powders for powder bed additive manufacturing"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:NMxIlDl6LWMC",
+      "citation": "Cryobiology 73 (2), 196-202, 2016",
+      "num_citations": 22,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermal conductivity of the cryoprotective cocktail DP6 in cryogenic temperatures, in the presence and absence of synthetic ice modulators"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:_FxGoFyzp5QC",
+      "citation": "Nuclear engineering and design 239 (8), 1442-1460, 2009",
+      "num_citations": 23,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Thermal hydraulic analysis for grid supported pressurized water reactor cores"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:LkGwnXOMwfcC",
+      "citation": "Nuclear engineering and design 239 (8), 1471-1480, 2009",
+      "num_citations": 13,
+      "pub_url": "",
+      "pub_year": "2009",
+      "title": "Thermal hydraulic design of a hydride-fueled inverted PWR core"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:RHpTSmoSYBkC",
+      "citation": "Physical Review B 93 (3), 035309, 2016",
+      "num_citations": 35,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermal interface conductance across metal alloy–dielectric interfaces"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:pyW8ca7W8N0C",
+      "citation": "International Heat Transfer Conference Digital Library, 2018",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2018",
+      "title": "Thermal transport behaviors in lead halide perovskites"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:GnPB-g6toBAC",
+      "citation": "Annual Review of Heat Transfer, 2016",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2016",
+      "title": "Thermal Transport in nanostructured organic-inorganic hybrid materials"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:l7t_Zn2s7bgC",
+      "citation": "Nature materials 20 (8), 1142-1148, 2021",
+      "num_citations": 236,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Thermally conductive ultra-low-k dielectric layers based on two-dimensional covalent organic frameworks"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:t6usbXjVLHcC",
+      "citation": "Nature Communications 15 (1), 4275, 2024",
+      "num_citations": 1,
+      "pub_url": "",
+      "pub_year": "2024",
+      "title": "Thermoelectric active cooling for transient hot spots in microprocessors"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:qUcmZB5y_30C",
+      "citation": "International Heat Transfer Conference 49392, 845-855, 2010",
+      "num_citations": 2,
+      "pub_url": "",
+      "pub_year": "2010",
+      "title": "Thermoelectricity at the organic-inorganic interface"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:2osOgNQ5qMEC",
+      "citation": "Nano letters 11 (10), 4089-4094, 2011",
+      "num_citations": 200,
+      "pub_url": "",
+      "pub_year": "2011",
+      "title": "Thermoelectricity in fullerene–metal heterojunctions"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:hqOjcs7Dif8C",
+      "citation": "ACS nano 7 (12), 11183-11189, 2013",
+      "num_citations": 79,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Tunable electrical and thermal transport in ice-templated multilayer graphene nanocomposites through freezing rate control"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:5ugPr518TE4C",
+      "citation": "Additive Manufacturing 78, 103855, 2023",
+      "num_citations": 12,
+      "pub_url": "",
+      "pub_year": "2023",
+      "title": "Two-color thermal imaging of the melt pool in powder-blown laser-directed energy deposition"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:fQNAKQ3IYiAC",
+      "citation": "Scientific Reports 12 (1), 22353, 2022",
+      "num_citations": 3,
+      "pub_url": "",
+      "pub_year": "2022",
+      "title": "Ultrahigh evaporative heat transfer measured locally in submicron water films"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:tOudhMTPpwUC",
+      "citation": "Physical Review Applied 15 (6), 064043, 2021",
+      "num_citations": 7,
+      "pub_url": "",
+      "pub_year": "2021",
+      "title": "Universal model for predicting the thermal boundary conductance of a multilayered-metal–dielectric interface"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:MXK_kJrjxJIC",
+      "citation": "Scientific reports 3 (1), 2963, 2013",
+      "num_citations": 195,
+      "pub_url": "",
+      "pub_year": "2013",
+      "title": "Universal phonon mean free path spectra in crystalline semiconductors at high temperature"
+    },
+    {
+      "author_pub_id": "U8r6ir4AAAAJ:KlAtU1dfN6UC",
+      "citation": "Nano letters 15 (5), 2985-2991, 2015",
+      "num_citations": 143,
+      "pub_url": "",
+      "pub_year": "2015",
+      "title": "Vibrational mismatch of metal leads controls thermal conductance of self-assembled monolayer junctions"
+    }
+  ],
+  "schema_version": 1,
+  "scholar_id": "U8r6ir4AAAAJ"
+}
