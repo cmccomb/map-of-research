@@ -288,7 +288,7 @@ def test_low_information_region_audit_requires_all_quality_signals() -> None:
     retained = audited[audited["detail_keyword_id"] == "keyword-02-01"]
     assert not outliers["map_eligible"].any()
     assert outliers["map_region_outlier"].all()
-    assert outliers["tsne_x"].isna().all()
+    assert outliers["tsne_x"].tolist() == [float(index) for index in range(dimensions)]
     assert set(outliers["map_exclusion_reasons"].map(tuple)) == {
         ("low_information_region",)
     }

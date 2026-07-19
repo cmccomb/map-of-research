@@ -500,6 +500,12 @@ def test_existing_layouts_accepts_only_complete_compatible_rows(monkeypatch) -> 
         install_datasets(monkeypatch, lambda *args, _rows=rows, **kwargs: _rows)
         assert publisher._existing_layouts(hf_token="token") == {}
 
+    mixed = Rows([valid[0], {**valid[0], "work_id": "excluded", "x": numpy.nan}])
+    install_datasets(monkeypatch, lambda *args, **kwargs: mixed)
+    assert publisher._existing_layouts(hf_token="token") == {
+        "one": {"x": 0.0, "y": 1.0, "tsne_x": 2.0, "tsne_y": 3.0}
+    }
+
 
 def test_existing_layouts_tolerates_missing_prior_dataset(monkeypatch) -> None:
     def missing(*args, **kwargs):
