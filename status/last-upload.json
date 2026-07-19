@@ -1,12 +1,4 @@
 {
-  "artifact_commit": "6fb5d8df011ef5d4922a0e6f53f6c51b59a91bcd",
-  "authorships": 38537,
-  "dataset_commits": {
-    "authorships": "e05ad9388ba1a08c5ff45ac76a9f251faf831c3a",
-    "people": "afb5cdb72a0aa584c89443595f0e02f184a4e521",
-    "profile_publications": "a1e7bb95ec2b129f53901c234b0669e3160c4b6e",
-    "works": "e05ad9388ba1a08c5ff45ac76a9f251faf831c3a"
-  },
   "dataset_configs": [
     "people",
     "works",
@@ -14,19 +6,11 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_type": null,
-  "excluded_works": 494,
-  "finished_at_utc": "2026-07-19T11:33:36.515120+00:00",
-  "layout_version": "global-publications-multilayout-v2",
-  "map_artifact_count": 1,
-  "mapped_works": 32665,
-  "new_embedding_count": 0,
-  "people": 398,
-  "profile_count": 216,
-  "profile_publications": 38537,
+  "error_message": "Missing HF_TOKEN environment variable",
+  "error_type": "RuntimeError",
+  "finished_at_utc": "2026-07-19T17:03:23.329502+00:00",
   "schema_version": 2,
-  "started_at_utc": "2026-07-19T11:29:47.832934+00:00",
-  "status": "success",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29685175836",
-  "works": 35527
+  "started_at_utc": "2026-07-19T17:03:23.328939+00:00",
+  "status": "failure",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29696014289"
 }
