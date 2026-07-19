@@ -15,6 +15,12 @@ from typing import Any
 
 from .dataset import build_dataset_tables
 from .io import atomic_write_json
+from .keywords import (
+    KEYWORD_MODEL_VERSION,
+    REGION_AUDIT_VERSION,
+    add_publication_keywords,
+    exclude_low_information_regions,
+)
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -42,8 +48,8 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 5
-LAYOUT_VERSION = "global-publications-multilayout-v2"
+MAP_SCHEMA_VERSION = 6
+LAYOUT_VERSION = "global-publications-multilayout-v3"
 DEFAULT_LAYOUT_ID = "pca"
 LAYOUTS = (
     {
@@ -53,7 +59,7 @@ LAYOUTS = (
         "description": "Emphasizes broad variation across the full corpus.",
         "x_field": "x",
         "y_field": "y",
-        "version": "global-publications-pca-v4",
+        "version": "global-publications-pca-v5",
     },
     {
         "layout_id": "tsne",
@@ -65,8 +71,12 @@ LAYOUTS = (
         ),
         "x_field": "tsne_x",
         "y_field": "tsne_y",
-        "version": "global-publications-tsne-v2",
+        "version": "global-publications-tsne-v3",
     },
+)
+KEYWORD_LEVELS = (
+    {"level": 0, "label": "Topic regions"},
+    {"level": 1, "label": "Detailed topics"},
 )
 MAP_ARTIFACT_NAME = "publications.json"
 MAP_TITLE = "CMU Engineering Research"
@@ -260,12 +270,18 @@ def _fit_pca_layout(matrix: Any) -> Any:
 
 
 def _fit_tsne_layout(matrix: Any) -> Any:
-    """Fit the t-SNE-then-PCA method used by the previous full map."""
+    """Fit a memory-bounded PCA, t-SNE, and final-orientation pipeline."""
 
     from sklearn.decomposition import PCA
     from sklearn.manifold import TSNE
 
     sample_count = len(matrix)
+    reduced_dimensions = min(50, matrix.shape[1], sample_count - 1)
+    reduced = PCA(
+        n_components=reduced_dimensions,
+        svd_solver="randomized",
+        random_state=42,
+    ).fit_transform(matrix)
     perplexity = min(30.0, max(1.0, (sample_count - 1) / 3))
     neighborhoods = TSNE(
         n_components=2,
@@ -277,9 +293,9 @@ def _fit_tsne_layout(matrix: Any) -> Any:
         random_state=42,
         method="barnes_hut",
         angle=0.5,
-        n_jobs=-1,
+        n_jobs=1,
         verbose=1,
-    ).fit_transform(matrix)
+    ).fit_transform(reduced)
     oriented = PCA(
         n_components=2,
         svd_solver="full",
@@ -383,8 +399,28 @@ def build_map_artifact(
             if row.map_eligible:
                 selected_rows.append((row, memberships))
     points = []
+    keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
+        keyword_id = str(row.keyword_id)
+        keyword = str(row.keyword)
+        detail_keyword_id = str(row.detail_keyword_id)
+        detail_keyword = str(row.detail_keyword)
+        if not all((keyword_id, keyword, detail_keyword_id, detail_keyword)):
+            raise ValueError("Every mapped work must have both topic keyword levels")
+        row_keywords = (
+            (keyword_id, keyword, 0, None),
+            (detail_keyword_id, detail_keyword, 1, keyword_id),
+        )
+        for item_id, label, level, parent_id in row_keywords:
+            metadata = {
+                "label": label,
+                "level": level,
+                "parent_keyword_id": parent_id,
+            }
+            existing = keyword_metadata.setdefault(item_id, metadata)
+            if existing != metadata:
+                raise ValueError(f"Keyword {item_id} has inconsistent metadata")
         points.append(
             {
                 "x": round(float(row.x), 7),
@@ -408,9 +444,57 @@ def build_map_artifact(
                 "doi": str(row.doi),
                 "source_url": source_urls[0] if source_urls else "",
                 "observation_count": int(row.observation_count),
+                "keyword_ids": [keyword_id, detail_keyword_id],
             }
         )
     points.sort(key=lambda point: point["work_id"])
+
+    keyword_members: dict[str, list[dict[str, Any]]] = {}
+    for point in points:
+        for keyword_id in point["keyword_ids"]:
+            keyword_members.setdefault(str(keyword_id), []).append(point)
+    keywords = []
+    for keyword_id in sorted(
+        keyword_members,
+        key=lambda value: (
+            keyword_metadata[value]["level"],
+            keyword_metadata[value]["label"].casefold(),
+        ),
+    ):
+        members = keyword_members[keyword_id]
+        coordinates = {}
+        for layout in LAYOUTS:
+            x_field = str(layout["x_field"])
+            y_field = str(layout["y_field"])
+            coordinates[str(layout["layout_id"])] = {
+                "x": round(
+                    sum(float(point[x_field]) for point in members) / len(members),
+                    7,
+                ),
+                "y": round(
+                    sum(float(point[y_field]) for point in members) / len(members),
+                    7,
+                ),
+            }
+        keywords.append(
+            {
+                "keyword_id": keyword_id,
+                **keyword_metadata[keyword_id],
+                "publication_count": len(members),
+                "coordinates": coordinates,
+            }
+        )
+    keyword_levels = []
+    for level in KEYWORD_LEVELS:
+        level_number = int(level["level"])
+        keyword_levels.append(
+            {
+                **level,
+                "keyword_count": sum(
+                    keyword["level"] == level_number for keyword in keywords
+                ),
+            }
+        )
 
     department_counts: dict[str, int] = {}
     faculty_counts: dict[str, int] = {}
@@ -479,6 +563,8 @@ def build_map_artifact(
     return {
         "schema_version": MAP_SCHEMA_VERSION,
         "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+        "keyword_model_version": KEYWORD_MODEL_VERSION,
+        "region_audit_version": REGION_AUDIT_VERSION,
         "layout_version": LAYOUT_VERSION,
         "default_layout_id": DEFAULT_LAYOUT_ID,
         "layouts": [dict(layout) for layout in LAYOUTS],
@@ -490,10 +576,13 @@ def build_map_artifact(
         "excluded_work_count": len(related_rows) - len(selected_rows),
         "department_count": len(departments),
         "faculty_count": len(faculty),
+        "keyword_count": len(keywords),
+        "keyword_levels": keyword_levels,
         "catalogs": {
             "departments": departments,
             "faculty": faculty,
         },
+        "keywords": keywords,
         "points": points,
     }
 
@@ -513,6 +602,8 @@ def _upload_map_artifacts(
         map_manifest: dict[str, Any] = {
             "schema_version": MAP_SCHEMA_VERSION,
             "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+            "keyword_model_version": KEYWORD_MODEL_VERSION,
+            "region_audit_version": REGION_AUDIT_VERSION,
             "layout_version": LAYOUT_VERSION,
             "default_layout_id": DEFAULT_LAYOUT_ID,
             "layouts": [dict(layout) for layout in LAYOUTS],
@@ -536,6 +627,8 @@ def _upload_map_artifacts(
             "excluded_work_count": artifact["excluded_work_count"],
             "department_count": artifact["department_count"],
             "faculty_count": artifact["faculty_count"],
+            "keyword_count": artifact["keyword_count"],
+            "keyword_levels": artifact["keyword_levels"],
             "file": artifact_path.name,
         }
         (maps_dir / "manifest.json").write_text(
@@ -606,6 +699,9 @@ def publish_snapshot(
         tables["works"],
         existing_layouts=existing_layouts,
     )
+    tables["works"] = add_publication_keywords(tables["works"])
+    tables["works"] = exclude_low_information_regions(tables["works"])
+    tables["works"] = add_publication_keywords(tables["works"])
 
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
@@ -640,12 +736,17 @@ def publish_snapshot(
         "works": len(tables["works"]),
         "mapped_works": int(mapped_mask.sum()),
         "excluded_works": int((related_mask & ~mapped_mask).sum()),
+        "keywords": int(tables["works"].loc[mapped_mask, "keyword_id"].nunique()),
+        "detail_keywords": int(
+            tables["works"].loc[mapped_mask, "detail_keyword_id"].nunique()
+        ),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
         "profile_count": int(enriched["scholar_id"].nunique()),
         "new_embedding_count": new_embedding_count,
         "map_artifact_count": 1,
         "layout_version": LAYOUT_VERSION,
+        "region_audit_version": REGION_AUDIT_VERSION,
     }
 
 

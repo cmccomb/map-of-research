@@ -1,6 +1,6 @@
 # Dataset and artifact schema
 
-The Hugging Face repository contains four schema-v5 configurations. Together
+The Hugging Face repository contains four schema-v6 configurations. Together
 they retain the collection grain while exposing a cleaner work-centric model.
 
 ## `people`
@@ -28,11 +28,15 @@ records without a DOI remain profile-specific to avoid unsafe merges.
 The table retains field variants, all source observation IDs, profile IDs,
 faculty relationships, source URLs, first and last observation timestamps,
 match method, observation count, embedding, eligibility decision, exclusion
-reasons, and both shared full-corpus map layouts. `x` and `y` are the
-broad-structure PCA coordinates; `tsne_x` and `tsne_y` are the
-local-neighborhood t-SNE coordinates, oriented using the same final PCA rotation
-as the previous full map. Citation count is the maximum retained source
-observation, not a sum across faculty profiles.
+reasons, both shared full-corpus map layouts, and the assigned topic hierarchy.
+`x` and `y` are the broad-structure PCA coordinates; `tsne_x` and `tsne_y` are
+the local-neighborhood t-SNE coordinates after a memory-bounded 50-dimensional
+PCA reduction and a final deterministic orientation. `keyword_id`, `keyword`,
+`detail_keyword_id`, `detail_keyword`, and `keyword_model_version` record the
+deterministic nested visible-region assignment. `map_region_audit_version` and
+`map_region_outlier` retain the result of the multi-signal catch-all audit.
+Citation count is the maximum retained source observation, not a sum across
+faculty profiles.
 
 Canonical map fields prefer passing observations when a DOI joins passing and
 excluded variants of the same work. All variants remain in their loss-aware
@@ -48,15 +52,21 @@ membership and fetch timestamp.
 
 ## Browser artifacts
 
-`maps/publications.json` uses schema version 5. It is the only browser artifact.
+`maps/publications.json` uses schema version 6. It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus
 coordinate pairs, work ID, title, author text, stable faculty and department ID
 arrays, year, venue, citation count, DOI, first available source URL, and source
-observation count. The top-level `layouts` catalog gives each view's label,
-method, interpretation, coordinate fields, and version; `default_layout_id`
-selects the initial view. `quality_assessment_version` identifies the policy and
-`excluded_work_count` reports how many faculty-linked works were retained in the
-dataset but left out of the visualization.
+observation count, plus one `keyword_ids` entry per hierarchy level. The
+top-level `layouts` catalog gives
+each view's label, method, interpretation, coordinate fields, and version;
+`default_layout_id` selects the initial view. The `keywords` catalog provides a
+concise label, hierarchy level, optional parent, publication count, and centroid
+in every layout for each topic region. `keyword_levels` describes the ordered
+overview and detail levels. `quality_assessment_version` identifies the policy,
+`keyword_model_version` identifies the labeling procedure, and
+`region_audit_version` identifies the multi-signal catch-all audit. The
+`excluded_work_count` reports how many faculty-linked works were retained in
+the dataset but left out of the visualization.
 
 The embedded department catalog provides titles, directory sources, annual
 review dates, and publication counts. The faculty catalog includes every person
@@ -77,15 +87,29 @@ quality-policy layout version, so a policy change forces a complete refit rather
 than mixing old and new coordinates. Compatible coordinates are reused when the
 eligible corpus is unchanged so routine republishes do not move points.
 
+Topic keywords partition the visible t-SNE landscape with deterministic
+k-means and label each region from its publication titles using repeated 2- and
+3-word phrases weighted by within-region coverage and corpus specificity. The
+default hierarchy has 30 overview regions and approximately 120 nested detail
+regions; undersized detail fragments merge into their nearest sibling. Stable
+keyword IDs are derived from labels and centroids rather than k-means' arbitrary
+numbering. Keywords describe visible neighborhoods and do not claim a formal
+taxonomy.
+
 ## Map-eligibility policy
 
 The policy removes high-confidence non-research records from layout computation
 without deleting source data. Reason codes cover conference front matter,
 publication front matter, organization or container records, affiliations or
 contact blocks, person or citation indexes, navigation or interface text, event
-or session labels, placeholders or document controls, and garbled index text.
+or session labels, placeholders or document controls, garbled index text, and
+underspecified titles that cannot carry a reliable semantic placement.
 
-The policy deliberately does not infer quality from citation count, missing
-bibliographic fields, embedding position, cluster membership, or t-SNE
-coordinates. Those signals are incomplete or layout-dependent and would create
-unacceptably broad false positives.
+No single missing bibliographic field, citation count, or embedding position is
+an exclusion rule. After the title-level policy, a provisional detail hierarchy
+is used to audit large catch-all regions. A region is withheld only when four
+independent thresholds all fail: embedding coherence, year completeness,
+citation presence, and title length. This conservative conjunction prevents any
+single incomplete signal from becoming a broad filter. Affected works remain in
+`works` with `low_information_region`; only their browser-map participation is
+disabled.

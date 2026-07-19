@@ -140,6 +140,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     dois: list[str] = []
     map_eligibility: list[bool] = []
     exclusion_reasons: list[list[str]] = []
+    known_person_titles = {
+        normalize_title(person.display_name) for person in registry.people
+    }
     for row in profile_publications.itertuples(index=False):
         observation_ids.append(_observation_identity(row))
         work_id, method, doi = _work_identity(row)
@@ -152,8 +155,12 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
             doi=doi,
             source_url=_clean_text(row.source_url),
         )
-        map_eligibility.append(quality.map_eligible)
-        exclusion_reasons.append(list(quality.exclusion_reasons))
+        reasons = list(quality.exclusion_reasons)
+        if normalize_title(str(row.title)) in known_person_titles:
+            reasons.append("person_or_citation_index")
+        stable_reasons = list(dict.fromkeys(reasons))
+        map_eligibility.append(not stable_reasons)
+        exclusion_reasons.append(stable_reasons)
     profile_publications.insert(0, "observation_id", observation_ids)
     profile_publications.insert(1, "work_id", work_ids)
     profile_publications.insert(2, "work_match_method", match_methods)
