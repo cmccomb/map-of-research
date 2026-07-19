@@ -15,6 +15,7 @@ from typing import Any
 
 from .dataset import build_dataset_tables
 from .io import atomic_write_json
+from .keywords import KEYWORD_MODEL_VERSION, add_publication_keywords
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -42,7 +43,7 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 5
+MAP_SCHEMA_VERSION = 6
 LAYOUT_VERSION = "global-publications-multilayout-v2"
 DEFAULT_LAYOUT_ID = "pca"
 LAYOUTS = (
@@ -383,8 +384,16 @@ def build_map_artifact(
             if row.map_eligible:
                 selected_rows.append((row, memberships))
     points = []
+    keyword_labels: dict[str, str] = {}
     for row, memberships in selected_rows:
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
+        keyword_id = str(row.keyword_id)
+        keyword = str(row.keyword)
+        if not keyword_id or not keyword:
+            raise ValueError("Every mapped work must have a topic keyword")
+        existing_keyword = keyword_labels.setdefault(keyword_id, keyword)
+        if existing_keyword != keyword:
+            raise ValueError(f"Keyword {keyword_id} has inconsistent labels")
         points.append(
             {
                 "x": round(float(row.x), 7),
@@ -408,9 +417,43 @@ def build_map_artifact(
                 "doi": str(row.doi),
                 "source_url": source_urls[0] if source_urls else "",
                 "observation_count": int(row.observation_count),
+                "keyword_id": keyword_id,
             }
         )
     points.sort(key=lambda point: point["work_id"])
+
+    keyword_members: dict[str, list[dict[str, Any]]] = {}
+    for point in points:
+        keyword_id = str(point["keyword_id"])
+        keyword_members.setdefault(keyword_id, []).append(point)
+    keywords = []
+    for keyword_id in sorted(
+        keyword_members,
+        key=lambda value: keyword_labels[value].casefold(),
+    ):
+        members = keyword_members[keyword_id]
+        coordinates = {}
+        for layout in LAYOUTS:
+            x_field = str(layout["x_field"])
+            y_field = str(layout["y_field"])
+            coordinates[str(layout["layout_id"])] = {
+                "x": round(
+                    sum(float(point[x_field]) for point in members) / len(members),
+                    7,
+                ),
+                "y": round(
+                    sum(float(point[y_field]) for point in members) / len(members),
+                    7,
+                ),
+            }
+        keywords.append(
+            {
+                "keyword_id": keyword_id,
+                "label": keyword_labels[keyword_id],
+                "publication_count": len(members),
+                "coordinates": coordinates,
+            }
+        )
 
     department_counts: dict[str, int] = {}
     faculty_counts: dict[str, int] = {}
@@ -479,6 +522,7 @@ def build_map_artifact(
     return {
         "schema_version": MAP_SCHEMA_VERSION,
         "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+        "keyword_model_version": KEYWORD_MODEL_VERSION,
         "layout_version": LAYOUT_VERSION,
         "default_layout_id": DEFAULT_LAYOUT_ID,
         "layouts": [dict(layout) for layout in LAYOUTS],
@@ -490,10 +534,12 @@ def build_map_artifact(
         "excluded_work_count": len(related_rows) - len(selected_rows),
         "department_count": len(departments),
         "faculty_count": len(faculty),
+        "keyword_count": len(keywords),
         "catalogs": {
             "departments": departments,
             "faculty": faculty,
         },
+        "keywords": keywords,
         "points": points,
     }
 
@@ -513,6 +559,7 @@ def _upload_map_artifacts(
         map_manifest: dict[str, Any] = {
             "schema_version": MAP_SCHEMA_VERSION,
             "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+            "keyword_model_version": KEYWORD_MODEL_VERSION,
             "layout_version": LAYOUT_VERSION,
             "default_layout_id": DEFAULT_LAYOUT_ID,
             "layouts": [dict(layout) for layout in LAYOUTS],
@@ -536,6 +583,7 @@ def _upload_map_artifacts(
             "excluded_work_count": artifact["excluded_work_count"],
             "department_count": artifact["department_count"],
             "faculty_count": artifact["faculty_count"],
+            "keyword_count": artifact["keyword_count"],
             "file": artifact_path.name,
         }
         (maps_dir / "manifest.json").write_text(
@@ -606,6 +654,7 @@ def publish_snapshot(
         tables["works"],
         existing_layouts=existing_layouts,
     )
+    tables["works"] = add_publication_keywords(tables["works"])
 
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
@@ -640,6 +689,7 @@ def publish_snapshot(
         "works": len(tables["works"]),
         "mapped_works": int(mapped_mask.sum()),
         "excluded_works": int((related_mask & ~mapped_mask).sum()),
+        "keywords": int(tables["works"].loc[mapped_mask, "keyword_id"].nunique()),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
         "profile_count": int(enriched["scholar_id"].nunique()),

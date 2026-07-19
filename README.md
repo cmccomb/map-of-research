@@ -20,9 +20,9 @@ Scholar. It is a static client of
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
    map-eligibility decision for every observation and work, reuses existing
-   embeddings and compatible layouts, and publishes `people`, `works`,
-   `authorships`, and `profile_publications` configs plus
-   `maps/publications.json`.
+   embeddings and compatible layouts, assigns concise keywords to visible
+   topical regions, and publishes `people`, `works`, `authorships`, and
+   `profile_publications` configs plus `maps/publications.json`.
 5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
    and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
    publication data, scraper, embedding model, or layout computation.
@@ -94,6 +94,13 @@ URL is never sufficient for exclusion. The decision, policy version, and reason
 codes remain on the dataset rows; excluded observations and works are not
 deleted. A work stays map-eligible if any retained source observation passes the
 policy.
+
+The publisher also assigns every mapped work to one of 30 deterministic topic
+regions in the shared t-SNE layout. Each region receives a concise phrase from
+the titles it contains using coverage-aware, corpus-specific n-gram scoring.
+These keywords are descriptive navigation aids, not additional exclusion rules:
+they never drop or rewrite publications, and they are regenerated whenever the
+mapped corpus or layout changes.
 
 ## Local development
 

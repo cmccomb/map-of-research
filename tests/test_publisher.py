@@ -164,6 +164,9 @@ def work_frame() -> pandas.DataFrame:
                 "work_id": "work-one",
                 "map_eligible": True,
                 "map_exclusion_reasons": [],
+                "keyword_model_version": publisher.KEYWORD_MODEL_VERSION,
+                "keyword_id": "keyword-01",
+                "keyword": "reliable systems",
                 "memberships": [
                     {
                         "person_id": "person-one",
@@ -284,11 +287,12 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["schema_version"] == 5
+    assert artifact["schema_version"] == 6
     assert artifact["quality_assessment_version"] == (
         publisher.QUALITY_ASSESSMENT_VERSION
     )
     assert artifact["layout_version"] == publisher.LAYOUT_VERSION
+    assert artifact["keyword_model_version"] == publisher.KEYWORD_MODEL_VERSION
     assert artifact["default_layout_id"] == "pca"
     assert [layout["layout_id"] for layout in artifact["layouts"]] == [
         "pca",
@@ -302,6 +306,40 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     ]
     assert artifact["points"][0]["x"] == 0.25
     assert artifact["points"][0]["tsne_x"] == -0.75
+    assert artifact["points"][0]["keyword_id"] == "keyword-01"
+    assert artifact["keyword_count"] == 1
+    assert artifact["keywords"] == [
+        {
+            "keyword_id": "keyword-01",
+            "label": "reliable systems",
+            "publication_count": 1,
+            "coordinates": {
+                "pca": {"x": 0.25, "y": -0.5},
+                "tsne": {"x": -0.75, "y": 0.125},
+            },
+        }
+    ]
+
+
+def test_map_artifact_requires_consistent_keywords() -> None:
+    missing = work_frame()
+    missing.loc[0, "keyword_id"] = ""
+    with pytest.raises(ValueError, match="must have a topic keyword"):
+        publisher.build_map_artifact(
+            missing,
+            registry(),
+            generated_at_utc="2026-07-17T12:00:00+00:00",
+        )
+
+    inconsistent = pandas.concat([work_frame(), work_frame()], ignore_index=True)
+    inconsistent.loc[1, "work_id"] = "work-two"
+    inconsistent.loc[1, "keyword"] = "different label"
+    with pytest.raises(ValueError, match="inconsistent labels"):
+        publisher.build_map_artifact(
+            inconsistent,
+            registry(),
+            generated_at_utc="2026-07-17T12:00:00+00:00",
+        )
 
 
 def test_global_layout_attaches_pca_and_tsne_coordinates(monkeypatch) -> None:
@@ -543,6 +581,8 @@ def test_empty_map_artifact_is_valid_and_explicit() -> None:
     assert artifact["department_count"] == 3
     assert artifact["faculty_count"] == 2
     assert artifact["source_data_newest_at_utc"] is None
+    assert artifact["keyword_count"] == 0
+    assert artifact["keywords"] == []
 
 
 def test_map_artifact_excludes_ineligible_works_but_retains_freshness() -> None:
@@ -650,6 +690,7 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
     assert commit == "artifact-commit"
     assert uploads[0][1]["point_count"] == 1
     assert uploads[0][2]["dataset_commits"] == {"works": "works-commit"}
+    assert uploads[0][2]["artifact"]["keyword_count"] == 1
 
     HfApi.upload_folder = lambda self, **kwargs: SimpleNamespace()
     with pytest.raises(RuntimeError, match="did not return a commit"):
@@ -737,6 +778,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
     monkeypatch.setattr(
         publisher,
+        "add_publication_keywords",
+        lambda works: works.assign(keyword_id=["keyword-01", ""]),
+    )
+    monkeypatch.setattr(
+        publisher,
         "_upload_map_artifacts",
         lambda *args, **kwargs: "artifact-commit",
     )
@@ -767,6 +813,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["new_embedding_count"] == 2
     assert result["mapped_works"] == 1
     assert result["excluded_works"] == 1
+    assert result["keywords"] == 1
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
@@ -784,6 +831,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
     monkeypatch.setattr(publisher, "build_dataset_tables", lambda *args: tables)
     monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
     monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
+    monkeypatch.setattr(publisher, "add_publication_keywords", lambda works: works)
     monkeypatch.setattr(
         publisher,
         "_to_hub_dataset",

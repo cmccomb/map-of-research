@@ -1,6 +1,6 @@
 # Dataset and artifact schema
 
-The Hugging Face repository contains four schema-v5 configurations. Together
+The Hugging Face repository contains four schema-v6 configurations. Together
 they retain the collection grain while exposing a cleaner work-centric model.
 
 ## `people`
@@ -28,11 +28,13 @@ records without a DOI remain profile-specific to avoid unsafe merges.
 The table retains field variants, all source observation IDs, profile IDs,
 faculty relationships, source URLs, first and last observation timestamps,
 match method, observation count, embedding, eligibility decision, exclusion
-reasons, and both shared full-corpus map layouts. `x` and `y` are the
-broad-structure PCA coordinates; `tsne_x` and `tsne_y` are the
-local-neighborhood t-SNE coordinates, oriented using the same final PCA rotation
-as the previous full map. Citation count is the maximum retained source
-observation, not a sum across faculty profiles.
+reasons, both shared full-corpus map layouts, and the assigned topic keyword.
+`x` and `y` are the broad-structure PCA coordinates; `tsne_x` and `tsne_y` are
+the local-neighborhood t-SNE coordinates, oriented using the same final PCA
+rotation as the previous full map. `keyword_id`, `keyword`, and
+`keyword_model_version` record the deterministic visible-region assignment.
+Citation count is the maximum retained source observation, not a sum across
+faculty profiles.
 
 Canonical map fields prefer passing observations when a DOI joins passing and
 excluded variants of the same work. All variants remain in their loss-aware
@@ -48,15 +50,18 @@ membership and fetch timestamp.
 
 ## Browser artifacts
 
-`maps/publications.json` uses schema version 5. It is the only browser artifact.
+`maps/publications.json` uses schema version 6. It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus
 coordinate pairs, work ID, title, author text, stable faculty and department ID
 arrays, year, venue, citation count, DOI, first available source URL, and source
-observation count. The top-level `layouts` catalog gives each view's label,
-method, interpretation, coordinate fields, and version; `default_layout_id`
-selects the initial view. `quality_assessment_version` identifies the policy and
-`excluded_work_count` reports how many faculty-linked works were retained in the
-dataset but left out of the visualization.
+observation count, plus its `keyword_id`. The top-level `layouts` catalog gives
+each view's label, method, interpretation, coordinate fields, and version;
+`default_layout_id` selects the initial view. The `keywords` catalog provides a
+concise label, publication count, and centroid in every layout for each topic
+region. `quality_assessment_version` identifies the policy,
+`keyword_model_version` identifies the labeling procedure, and
+`excluded_work_count` reports how many faculty-linked works were retained in
+the dataset but left out of the visualization.
 
 The embedded department catalog provides titles, directory sources, annual
 review dates, and publication counts. The faculty catalog includes every person
@@ -76,6 +81,14 @@ eligible canonical work rows and title embeddings. Compatibility includes the
 quality-policy layout version, so a policy change forces a complete refit rather
 than mixing old and new coordinates. Compatible coordinates are reused when the
 eligible corpus is unchanged so routine republishes do not move points.
+
+Topic keywords partition the visible t-SNE landscape with deterministic
+k-means and label each region from its publication titles using repeated 2- and
+3-word phrases weighted by within-region coverage and corpus specificity. The
+default is 30 regions. Stable keyword IDs are derived from the resulting labels
+and centroids rather than from k-means' arbitrary cluster numbering. Keywords
+describe visible neighborhoods; they do not claim a formal taxonomy and do not
+affect map eligibility.
 
 ## Map-eligibility policy
 
