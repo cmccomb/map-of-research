@@ -1,11 +1,11 @@
 {
-  "artifact_commit": "72ea8493e4a4f3c89751af8d9b743bdff39a474c",
+  "artifact_commit": "b4fbebad84fed4449ea334f1c7fd6f235561d022",
   "authorships": 38202,
   "dataset_commits": {
-    "authorships": "4dde3b7b244846ef38f98cc50fb494122d2ba436",
-    "people": "3b10fff8ce9b418844fe06fd61ec3f5405e09ebf",
-    "profile_publications": "4dde3b7b244846ef38f98cc50fb494122d2ba436",
-    "works": "4dde3b7b244846ef38f98cc50fb494122d2ba436"
+    "authorships": "0aab705cff6eaff63492d246f71e1f18f86b8c95",
+    "people": "9ead3b8825bd1acc8d26dd2b37fe0db35ebc96f4",
+    "profile_publications": "1e189000bea5f8a890654eedab7175c1d8636def",
+    "works": "c708979c95761fb65030770f8c1de04214ecee9c"
   },
   "dataset_configs": [
     "people",
@@ -17,7 +17,7 @@
   "detail_keywords": 120,
   "error_type": null,
   "excluded_works": 1196,
-  "finished_at_utc": "2026-07-19T20:44:57.959503+00:00",
+  "finished_at_utc": "2026-07-19T21:47:50.691298+00:00",
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
@@ -28,8 +28,9 @@
   "profile_publications": 38202,
   "region_audit_version": "low-information-semantic-region-v1",
   "schema_version": 2,
-  "started_at_utc": "2026-07-19T20:38:28.338378+00:00",
+  "started_at_utc": "2026-07-19T21:41:09.204778+00:00",
   "status": "success",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29702839983",
+  "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/29704749790",
   "works": 35196
 }
