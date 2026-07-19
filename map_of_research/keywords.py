@@ -7,7 +7,13 @@ import re
 from collections import Counter
 from typing import Any
 
-KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-v3"
+from .topic_labels import (
+    TOPIC_LABEL_REVIEW_VERSION,
+    apply_reviewed_labels,
+    review_catalog,
+)
+
+KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v4"
 REGION_AUDIT_VERSION = "low-information-semantic-region-v1"
 DEFAULT_KEYWORD_COUNT = 30
 DEFAULT_DETAIL_KEYWORD_COUNT = 120
@@ -20,6 +26,7 @@ MINIMUM_SHORT_TITLE_FRACTION = 0.30
 SHORT_TITLE_LENGTH = 30
 MINIMUM_CLUSTER_SUPPORT = 2
 MINIMUM_CLUSTER_COVERAGE = 0.01
+MINIMUM_EXTENSION_SUPPORT_RATIO = 0.65
 RANDOM_STATE = 42
 
 _TOKEN_PATTERN = re.compile(r"(?u)\b[^\W\d_][^\W_]+\b")
@@ -57,9 +64,11 @@ _DOMAIN_STOP_WORDS = frozenset(
         "research",
         "session",
         "special",
+        "states",
         "study",
         "summary",
         "symposium",
+        "united",
         "university",
         "using",
         "volume",
@@ -74,6 +83,12 @@ _UNINFORMATIVE_PHRASES = frozenset(
         "united states",
     }
 )
+
+
+def _is_uninformative_phrase(label: str) -> bool:
+    """Return whether a label contains a blocked generic phrase."""
+
+    return any(phrase in label for phrase in _UNINFORMATIVE_PHRASES)
 
 
 def _stop_words() -> frozenset[str]:
@@ -118,7 +133,7 @@ def _cluster_keywords(
         vectorizer = CountVectorizer(
             binary=True,
             lowercase=True,
-            ngram_range=(2, 3),
+            ngram_range=(2, 4),
             stop_words=sorted(_stop_words()),
             strip_accents="unicode",
         )
@@ -175,15 +190,38 @@ def _cluster_keywords(
                     str(phrases[index]),
                 )
             )
-        label = next(
+        chosen_index = next(
             (
-                str(phrases[index])
+                index
                 for index in candidates
                 if str(phrases[index]) not in used
-                and str(phrases[index]) not in _UNINFORMATIVE_PHRASES
+                and not _is_uninformative_phrase(str(phrases[index]))
             ),
-            "",
+            None,
         )
+        label = ""
+        if chosen_index is not None:
+            chosen_tokens = str(phrases[chosen_index]).split()
+            extension_candidates = [
+                index
+                for index in candidates
+                if len(str(phrases[index]).split()) > len(chosen_tokens)
+                and " ".join(chosen_tokens) in str(phrases[index])
+                and local_support[index]
+                >= local_support[chosen_index] * MINIMUM_EXTENSION_SUPPORT_RATIO
+                and str(phrases[index]) not in used
+                and not _is_uninformative_phrase(str(phrases[index]))
+            ]
+            chosen_index = min(
+                extension_candidates,
+                default=chosen_index,
+                key=lambda index: (
+                    -len(str(phrases[index]).split()),
+                    -float(scores[index]),
+                    str(phrases[index]),
+                ),
+            )
+            label = str(phrases[chosen_index])
         if not label:
             label = _fallback_keyword(cluster_titles, used=used)
         used.add(label)
@@ -356,10 +394,15 @@ def add_publication_keywords(
 
     output = works.copy()
     output["keyword_model_version"] = KEYWORD_MODEL_VERSION
+    output["topic_label_review_version"] = TOPIC_LABEL_REVIEW_VERSION
     output["keyword_id"] = ""
     output["keyword"] = ""
+    output["keyword_extracted"] = ""
+    output["keyword_label_reviewed"] = False
     output["detail_keyword_id"] = ""
     output["detail_keyword"] = ""
+    output["detail_keyword_extracted"] = ""
+    output["detail_keyword_label_reviewed"] = False
     included_mask = output["map_eligible"] & output["department_ids"].apply(
         lambda value: len(value) > 0
     )
@@ -385,7 +428,15 @@ def add_publication_keywords(
         ).fit_predict(coordinates)
 
     titles = [str(value) for value in included["title"]]
-    labels_by_cluster = _cluster_keywords(titles, labels, prefer_readable=True)
+    extracted_labels_by_cluster = _cluster_keywords(
+        titles,
+        labels,
+        prefer_readable=True,
+    )
+    labels_by_cluster, reviewed_overviews = apply_reviewed_labels(
+        extracted_labels_by_cluster,
+        review_catalog(0),
+    )
     centroids = {
         cluster_id: coordinates[labels == cluster_id].mean(axis=0)
         for cluster_id in labels_by_cluster
@@ -436,9 +487,14 @@ def add_publication_keywords(
             detail_parents[next_detail_cluster] = cluster_id
             next_detail_cluster += 1
 
-    detail_labels_by_cluster = _cluster_keywords(
+    extracted_detail_labels_by_cluster = _cluster_keywords(
         titles,
         detail_labels,
+        reserved=set(labels_by_cluster.values()),
+    )
+    detail_labels_by_cluster, reviewed_details = apply_reviewed_labels(
+        extracted_detail_labels_by_cluster,
+        review_catalog(1),
         reserved=set(labels_by_cluster.values()),
     )
     detail_centroids = {
@@ -470,10 +526,23 @@ def add_publication_keywords(
     output.loc[included_mask, "keyword"] = [
         labels_by_cluster[int(cluster_id)] for cluster_id in labels
     ]
+    output.loc[included_mask, "keyword_extracted"] = [
+        extracted_labels_by_cluster[int(cluster_id)] for cluster_id in labels
+    ]
+    output.loc[included_mask, "keyword_label_reviewed"] = [
+        reviewed_overviews[int(cluster_id)] for cluster_id in labels
+    ]
     output.loc[included_mask, "detail_keyword_id"] = [
         detail_keyword_ids[int(cluster_id)] for cluster_id in detail_labels
     ]
     output.loc[included_mask, "detail_keyword"] = [
         detail_labels_by_cluster[int(cluster_id)] for cluster_id in detail_labels
+    ]
+    output.loc[included_mask, "detail_keyword_extracted"] = [
+        extracted_detail_labels_by_cluster[int(cluster_id)]
+        for cluster_id in detail_labels
+    ]
+    output.loc[included_mask, "detail_keyword_label_reviewed"] = [
+        reviewed_details[int(cluster_id)] for cluster_id in detail_labels
     ]
     return output

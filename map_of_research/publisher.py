@@ -30,6 +30,7 @@ from .registry import (
     load_registry,
 )
 from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
+from .topic_labels import TOPIC_LABEL_REVIEW_VERSION
 
 LOGGER = logging.getLogger(__name__)
 REPO_ID = "ccm/cmu-engineering-publications"
@@ -48,7 +49,7 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 6
+MAP_SCHEMA_VERSION = 7
 LAYOUT_VERSION = "global-publications-multilayout-v3"
 DEFAULT_LAYOUT_ID = "pca"
 LAYOUTS = (
@@ -406,17 +407,53 @@ def build_map_artifact(
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
         keyword_id = str(row.keyword_id)
         keyword = str(row.keyword)
+        keyword_extracted = str(row.keyword_extracted)
+        keyword_label_reviewed = bool(row.keyword_label_reviewed)
         detail_keyword_id = str(row.detail_keyword_id)
         detail_keyword = str(row.detail_keyword)
-        if not all((keyword_id, keyword, detail_keyword_id, detail_keyword)):
+        detail_keyword_extracted = str(row.detail_keyword_extracted)
+        detail_keyword_label_reviewed = bool(row.detail_keyword_label_reviewed)
+        if not all(
+            (
+                keyword_id,
+                keyword,
+                keyword_extracted,
+                detail_keyword_id,
+                detail_keyword,
+                detail_keyword_extracted,
+            )
+        ):
             raise ValueError("Every mapped work must have both topic keyword levels")
         row_keywords = (
-            (keyword_id, keyword, 0, None),
-            (detail_keyword_id, detail_keyword, 1, keyword_id),
+            (
+                keyword_id,
+                keyword,
+                keyword_extracted,
+                keyword_label_reviewed,
+                0,
+                None,
+            ),
+            (
+                detail_keyword_id,
+                detail_keyword,
+                detail_keyword_extracted,
+                detail_keyword_label_reviewed,
+                1,
+                keyword_id,
+            ),
         )
-        for item_id, label, level, parent_id in row_keywords:
+        for (
+            item_id,
+            label,
+            extracted_label,
+            label_reviewed,
+            level,
+            parent_id,
+        ) in row_keywords:
             metadata = {
                 "label": label,
+                "extracted_label": extracted_label,
+                "label_reviewed": label_reviewed,
                 "level": level,
                 "parent_keyword_id": parent_id,
             }
@@ -566,6 +603,7 @@ def build_map_artifact(
         "schema_version": MAP_SCHEMA_VERSION,
         "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
         "keyword_model_version": KEYWORD_MODEL_VERSION,
+        "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
         "region_audit_version": REGION_AUDIT_VERSION,
         "layout_version": LAYOUT_VERSION,
         "default_layout_id": DEFAULT_LAYOUT_ID,
@@ -605,6 +643,7 @@ def _upload_map_artifacts(
             "schema_version": MAP_SCHEMA_VERSION,
             "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
             "keyword_model_version": KEYWORD_MODEL_VERSION,
+            "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
             "region_audit_version": REGION_AUDIT_VERSION,
             "layout_version": LAYOUT_VERSION,
             "default_layout_id": DEFAULT_LAYOUT_ID,
@@ -749,6 +788,7 @@ def publish_snapshot(
         "map_artifact_count": 1,
         "layout_version": LAYOUT_VERSION,
         "region_audit_version": REGION_AUDIT_VERSION,
+        "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
     }
 
 
