@@ -220,18 +220,20 @@ def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     layouts: dict[str, dict[str, float]] = {}
     for row in existing:
         if row.get("layout_version") != LAYOUT_VERSION:
-            return {}
+            continue
         work_id = str(row.get("work_id") or "")
         coordinates: dict[str, float] = {}
         for field in coordinate_fields:
             try:
                 value = float(row.get(field))
             except (TypeError, ValueError):
-                return {}
+                break
             if not math.isfinite(value):
-                return {}
+                break
             coordinates[field] = value
-        if not work_id or work_id in layouts:
+        if len(coordinates) != len(coordinate_fields) or not work_id:
+            continue
+        if work_id in layouts:
             return {}
         layouts[work_id] = coordinates
     if layouts:

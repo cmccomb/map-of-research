@@ -35,13 +35,16 @@ PCA reduction and a final deterministic orientation. `keyword_id`, `keyword`,
 `detail_keyword_id`, `detail_keyword`, and `keyword_model_version` record the
 deterministic nested visible-region assignment. `map_region_audit_version` and
 `map_region_outlier` retain the result of the multi-signal catch-all audit.
+Excluded works retain their coordinates for reproducibility and safe layout
+reuse; `map_eligible` alone controls browser-map participation.
 Citation count is the maximum retained source observation, not a sum across
 faculty profiles.
 
 Canonical map fields prefer passing observations when a DOI joins passing and
 excluded variants of the same work. All variants remain in their loss-aware
-arrays and in `profile_publications`. A work is excluded from layout fitting and
-the browser artifact only when every source observation is excluded.
+arrays and in `profile_publications`. The title-level policy excludes a work
+from layout fitting only when every source observation is excluded; the later
+region audit affects the browser artifact without discarding fitted coordinates.
 
 ## `authorships`
 

@@ -332,8 +332,6 @@ def exclude_low_information_regions(works: Any) -> Any:
         ].apply(
             lambda reasons: list(dict.fromkeys([*reasons, "low_information_region"]))
         )
-        for field in ("x", "y", "tsne_x", "tsne_y"):
-            output.loc[indices, field] = numpy.nan
     return output
 
 
