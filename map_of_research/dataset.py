@@ -10,6 +10,7 @@ from collections import Counter
 from collections.abc import Mapping
 from typing import Any
 
+from .quality import QUALITY_ASSESSMENT_VERSION, assess_publication
 from .registry import Registry
 
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
@@ -137,16 +138,33 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     work_ids: list[str] = []
     match_methods: list[str] = []
     dois: list[str] = []
+    map_eligibility: list[bool] = []
+    exclusion_reasons: list[list[str]] = []
     for row in profile_publications.itertuples(index=False):
         observation_ids.append(_observation_identity(row))
         work_id, method, doi = _work_identity(row)
         work_ids.append(work_id)
         match_methods.append(method)
         dois.append(doi)
+        quality = assess_publication(
+            title=str(row.title),
+            year=_year(row.year),
+            doi=doi,
+            source_url=_clean_text(row.source_url),
+        )
+        map_eligibility.append(quality.map_eligible)
+        exclusion_reasons.append(list(quality.exclusion_reasons))
     profile_publications.insert(0, "observation_id", observation_ids)
     profile_publications.insert(1, "work_id", work_ids)
     profile_publications.insert(2, "work_match_method", match_methods)
     profile_publications.insert(3, "doi", dois)
+    profile_publications.insert(4, "map_eligible", map_eligibility)
+    profile_publications.insert(5, "map_exclusion_reasons", exclusion_reasons)
+    profile_publications.insert(
+        6,
+        "quality_assessment_version",
+        QUALITY_ASSESSMENT_VERSION,
+    )
 
     authorship_rows: list[dict[str, Any]] = []
     for row in profile_publications.itertuples(index=False):
@@ -176,6 +194,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     work_rows: list[dict[str, Any]] = []
     for work_id, group in profile_publications.groupby("work_id", sort=True):
         records = list(group.itertuples(index=False))
+        eligible_records = [record for record in records if record.map_eligible]
+        canonical_records = eligible_records or records
+        map_eligible = bool(eligible_records)
         people: dict[str, str] = {}
         included_memberships: dict[tuple[str, str], dict[str, str]] = {}
         for record in records:
@@ -207,15 +228,26 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         work_rows.append(
             {
                 "work_id": work_id,
+                "map_eligible": map_eligible,
+                "map_exclusion_reasons": []
+                if map_eligible
+                else sorted(
+                    {
+                        reason
+                        for record in records
+                        for reason in record.map_exclusion_reasons
+                    }
+                ),
+                "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
                 "work_match_method": _best_text(
                     [record.work_match_method for record in records]
                 ),
                 "doi": _best_text([record.doi for record in records]),
-                "title": _best_text([record.title for record in records]),
+                "title": _best_text([record.title for record in canonical_records]),
                 "title_variants": _variants([record.title for record in records]),
-                "authors": _best_text([record.authors for record in records]),
+                "authors": _best_text([record.authors for record in canonical_records]),
                 "author_variants": _variants([record.authors for record in records]),
-                "year": _mode_year(years),
+                "year": _mode_year([record.year for record in canonical_records]),
                 "year_variants": sorted(
                     {
                         year
@@ -223,9 +255,11 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                         if year is not None
                     }
                 ),
-                "venue": _best_text([record.venue for record in records]),
+                "venue": _best_text([record.venue for record in canonical_records]),
                 "venue_variants": _variants([record.venue for record in records]),
-                "citation": _best_text([record.citation for record in records]),
+                "citation": _best_text(
+                    [record.citation for record in canonical_records]
+                ),
                 "citation_variants": _variants([record.citation for record in records]),
                 "citation_count": max(citation_counts, default=0),
                 "source_urls": _variants([record.source_url for record in records]),
@@ -246,7 +280,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "observation_count": len(records),
                 "first_fetched_at_utc": fetched[0],
                 "last_fetched_at_utc": fetched[-1],
-                "embedding": list(records[0].embedding),
+                "embedding": list(canonical_records[0].embedding),
             }
         )
     works = pandas.DataFrame(work_rows)
@@ -254,6 +288,13 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     observation_count = Counter(authorships["person_id"])
     unique_work_count = {
         person_id: int(group["work_id"].nunique())
+        for person_id, group in authorships.groupby("person_id")
+    }
+    mapped_work_ids = set(works.loc[works["map_eligible"], "work_id"])
+    mapped_work_count = {
+        person_id: int(
+            group.loc[group["work_id"].isin(mapped_work_ids), "work_id"].nunique()
+        )
         for person_id, group in authorships.groupby("person_id")
     }
     memberships_by_person: dict[str, list[dict[str, Any]]] = {}
@@ -297,6 +338,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                     person.person_id, 0
                 ),
                 "unique_work_count": unique_work_count.get(person.person_id, 0),
+                "mapped_work_count": mapped_work_count.get(person.person_id, 0),
             }
         )
     people = pandas.DataFrame(people_rows)

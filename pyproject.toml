@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "map-of-research"
-version = "0.4.0"
+version = "0.5.0"
 description = "Faculty catalog and publication pipeline for the CMU research map"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -30,6 +30,7 @@ publisher = [
 dev = [
   "pip-audit==2.10.1",
   "pytest==9.1.1",
+  "pytest-cov==7.1.0",
   "ruff==0.15.22",
 ]
 
@@ -45,7 +46,7 @@ Repository = "https://github.com/cmccomb/map-of-research"
 Dataset = "https://huggingface.co/datasets/ccm/cmu-engineering-publications"
 
 [tool.pytest.ini_options]
-addopts = "-q"
+addopts = "-q --cov=map_of_research --cov-branch --cov-report=term-missing:skip-covered --cov-fail-under=100"
 testpaths = ["tests"]
 
 [tool.ruff]

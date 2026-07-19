@@ -1,6 +1,6 @@
 # Dataset and artifact schema
 
-The Hugging Face repository contains four schema-v4 configurations. Together
+The Hugging Face repository contains four schema-v5 configurations. Together
 they retain the collection grain while exposing a cleaner work-centric model.
 
 ## `people`
@@ -8,7 +8,7 @@ they retain the collection grain while exposing a cleaner work-centric model.
 One row per stable registry identity, including people without a Scholar ID.
 Fields include `person_id`, display name, Scholar ID, Scholar-ID verification
 source and date, ORCID, homepage, notes, all retained memberships, included
-department IDs, observation count, and unique work count.
+department IDs, observation count, unique work count, and mapped work count.
 
 ## `profile_publications`
 
@@ -16,7 +16,8 @@ One row per publication observation on one Scholar profile. This is the
 lossless analytical source. It retains the original profile-publication ID,
 parsed bibliographic fields, citation count at collection time, complete
 normalized source record as JSON, fetched timestamp, memberships, work match
-method, and title embedding.
+method, title embedding, `map_eligible`, `map_exclusion_reasons`, and the quality
+assessment version.
 
 ## `works`
 
@@ -26,11 +27,17 @@ records without a DOI remain profile-specific to avoid unsafe merges.
 
 The table retains field variants, all source observation IDs, profile IDs,
 faculty relationships, source URLs, first and last observation timestamps,
-match method, observation count, embedding, and both shared full-corpus map
-layouts. `x` and `y` are the broad-structure PCA coordinates; `tsne_x` and
-`tsne_y` are the local-neighborhood t-SNE coordinates, oriented using the same
-final PCA rotation as the previous full map. Citation count is the maximum
-retained source observation, not a sum across faculty profiles.
+match method, observation count, embedding, eligibility decision, exclusion
+reasons, and both shared full-corpus map layouts. `x` and `y` are the
+broad-structure PCA coordinates; `tsne_x` and `tsne_y` are the
+local-neighborhood t-SNE coordinates, oriented using the same final PCA rotation
+as the previous full map. Citation count is the maximum retained source
+observation, not a sum across faculty profiles.
+
+Canonical map fields prefer passing observations when a DOI joins passing and
+excluded variants of the same work. All variants remain in their loss-aware
+arrays and in `profile_publications`. A work is excluded from layout fitting and
+the browser artifact only when every source observation is excluded.
 
 ## `authorships`
 
@@ -41,13 +48,15 @@ membership and fetch timestamp.
 
 ## Browser artifacts
 
-`maps/publications.json` uses schema version 4. It is the only browser artifact.
+`maps/publications.json` uses schema version 5. It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus
 coordinate pairs, work ID, title, author text, stable faculty and department ID
 arrays, year, venue, citation count, DOI, first available source URL, and source
 observation count. The top-level `layouts` catalog gives each view's label,
 method, interpretation, coordinate fields, and version; `default_layout_id`
-selects the initial view.
+selects the initial view. `quality_assessment_version` identifies the policy and
+`excluded_work_count` reports how many faculty-linked works were retained in the
+dataset but left out of the visualization.
 
 The embedded department catalog provides titles, directory sources, annual
 review dates, and publication counts. The faculty catalog includes every person
@@ -63,5 +72,20 @@ implying that an artifact upload refreshed every Scholar profile.
 PCA is the default because it preserves broad global variation. The t-SNE view
 is provided for local neighborhood exploration; spacing between separate t-SNE
 clusters must not be interpreted quantitatively. Both layouts use the same
-canonical work rows, title embeddings, and filters. Compatible coordinates are
-reused when the corpus is unchanged so routine republishes do not move points.
+eligible canonical work rows and title embeddings. Compatibility includes the
+quality-policy layout version, so a policy change forces a complete refit rather
+than mixing old and new coordinates. Compatible coordinates are reused when the
+eligible corpus is unchanged so routine republishes do not move points.
+
+## Map-eligibility policy
+
+The policy removes high-confidence non-research records from layout computation
+without deleting source data. Reason codes cover conference front matter,
+publication front matter, organization or container records, affiliations or
+contact blocks, person or citation indexes, navigation or interface text, event
+or session labels, placeholders or document controls, and garbled index text.
+
+The policy deliberately does not infer quality from citation count, missing
+bibliographic fields, embedding position, cluster membership, or t-SNE
+coordinates. Those signals are incomplete or layout-dependent and would create
+unacceptably broad false positives.
