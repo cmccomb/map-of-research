@@ -20,8 +20,9 @@ Scholar. It is a static client of
    `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
    map-eligibility decision for every observation and work, reuses existing
-   embeddings and compatible layouts, assigns concise keywords to visible
-   topical regions, and publishes `people`, `works`, `authorships`, and
+   embeddings and compatible layouts, assigns hierarchical keywords to visible
+   topical regions, audits diffuse low-information regions, and publishes
+   `people`, `works`, `authorships`, and
    `profile_publications` configs plus `maps/publications.json`.
 5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
    and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
@@ -88,19 +89,26 @@ no verified Scholar profile or publications.
 The research map excludes only records that match high-confidence,
 content-based rules for conference front matter, journal front matter,
 organization or container records, affiliations and contact blocks,
-person/citation indexes, navigation text, event labels, placeholders, or
-garbled index text. Missing year, venue, author text, DOI, citations, or source
-URL is never sufficient for exclusion. The decision, policy version, and reason
-codes remain on the dataset rows; excluded observations and works are not
-deleted. A work stays map-eligible if any retained source observation passes the
+person/citation indexes, navigation text, event labels, placeholders, garbled
+index text, or titles too small to support a reliable semantic placement.
+Missing year, venue, author text, DOI, citations, or source URL is never
+sufficient for exclusion. The decision, policy version, and reason codes remain
+on the dataset rows; excluded observations and works are not deleted. A work
+stays map-eligible if any retained source observation passes the title-level
 policy.
 
-The publisher also assigns every mapped work to one of 30 deterministic topic
-regions in the shared t-SNE layout. Each region receives a concise phrase from
-the titles it contains using coverage-aware, corpus-specific n-gram scoring.
-These keywords are descriptive navigation aids, not additional exclusion rules:
-they never drop or rewrite publications, and they are regenerated whenever the
-mapped corpus or layout changes.
+The publisher assigns every mapped work to one of 30 deterministic overview
+regions and approximately 120 nested detail regions in the shared t-SNE layout.
+Each receives a concise phrase from the titles it contains using coverage-aware,
+corpus-specific n-gram scoring. Detail regions contain at least 50 works and are
+revealed by the site as visitors zoom.
+
+A preliminary detail pass also exposes the rare catch-all region that isolated
+title rules cannot identify safely. The publisher withholds a region only when
+it is simultaneously incoherent in embedding space, dominated by short titles,
+missing many years, and mostly uncited. The audit version and reason remain on
+every affected work, all source data stays published, and the final topic
+hierarchy is regenerated without the withheld rows.
 
 ## Local development
 

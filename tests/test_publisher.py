@@ -167,6 +167,8 @@ def work_frame() -> pandas.DataFrame:
                 "keyword_model_version": publisher.KEYWORD_MODEL_VERSION,
                 "keyword_id": "keyword-01",
                 "keyword": "reliable systems",
+                "detail_keyword_id": "keyword-01-01",
+                "detail_keyword": "fault tolerant systems",
                 "memberships": [
                     {
                         "person_id": "person-one",
@@ -293,6 +295,7 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     )
     assert artifact["layout_version"] == publisher.LAYOUT_VERSION
     assert artifact["keyword_model_version"] == publisher.KEYWORD_MODEL_VERSION
+    assert artifact["region_audit_version"] == publisher.REGION_AUDIT_VERSION
     assert artifact["default_layout_id"] == "pca"
     assert [layout["layout_id"] for layout in artifact["layouts"]] == [
         "pca",
@@ -306,25 +309,45 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     ]
     assert artifact["points"][0]["x"] == 0.25
     assert artifact["points"][0]["tsne_x"] == -0.75
-    assert artifact["points"][0]["keyword_id"] == "keyword-01"
-    assert artifact["keyword_count"] == 1
+    assert artifact["points"][0]["keyword_ids"] == [
+        "keyword-01",
+        "keyword-01-01",
+    ]
+    assert artifact["keyword_count"] == 2
+    assert artifact["keyword_levels"] == [
+        {"level": 0, "label": "Topic regions", "keyword_count": 1},
+        {"level": 1, "label": "Detailed topics", "keyword_count": 1},
+    ]
     assert artifact["keywords"] == [
         {
             "keyword_id": "keyword-01",
             "label": "reliable systems",
+            "level": 0,
+            "parent_keyword_id": None,
             "publication_count": 1,
             "coordinates": {
                 "pca": {"x": 0.25, "y": -0.5},
                 "tsne": {"x": -0.75, "y": 0.125},
             },
-        }
+        },
+        {
+            "keyword_id": "keyword-01-01",
+            "label": "fault tolerant systems",
+            "level": 1,
+            "parent_keyword_id": "keyword-01",
+            "publication_count": 1,
+            "coordinates": {
+                "pca": {"x": 0.25, "y": -0.5},
+                "tsne": {"x": -0.75, "y": 0.125},
+            },
+        },
     ]
 
 
 def test_map_artifact_requires_consistent_keywords() -> None:
     missing = work_frame()
     missing.loc[0, "keyword_id"] = ""
-    with pytest.raises(ValueError, match="must have a topic keyword"):
+    with pytest.raises(ValueError, match="both topic keyword levels"):
         publisher.build_map_artifact(
             missing,
             registry(),
@@ -334,7 +357,7 @@ def test_map_artifact_requires_consistent_keywords() -> None:
     inconsistent = pandas.concat([work_frame(), work_frame()], ignore_index=True)
     inconsistent.loc[1, "work_id"] = "work-two"
     inconsistent.loc[1, "keyword"] = "different label"
-    with pytest.raises(ValueError, match="inconsistent labels"):
+    with pytest.raises(ValueError, match="inconsistent metadata"):
         publisher.build_map_artifact(
             inconsistent,
             registry(),
@@ -582,6 +605,10 @@ def test_empty_map_artifact_is_valid_and_explicit() -> None:
     assert artifact["faculty_count"] == 2
     assert artifact["source_data_newest_at_utc"] is None
     assert artifact["keyword_count"] == 0
+    assert artifact["keyword_levels"] == [
+        {"level": 0, "label": "Topic regions", "keyword_count": 0},
+        {"level": 1, "label": "Detailed topics", "keyword_count": 0},
+    ]
     assert artifact["keywords"] == []
 
 
@@ -690,7 +717,8 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
     assert commit == "artifact-commit"
     assert uploads[0][1]["point_count"] == 1
     assert uploads[0][2]["dataset_commits"] == {"works": "works-commit"}
-    assert uploads[0][2]["artifact"]["keyword_count"] == 1
+    assert uploads[0][2]["artifact"]["keyword_count"] == 2
+    assert uploads[0][2]["artifact"]["keyword_levels"][1]["keyword_count"] == 1
 
     HfApi.upload_folder = lambda self, **kwargs: SimpleNamespace()
     with pytest.raises(RuntimeError, match="did not return a commit"):
@@ -779,7 +807,10 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(
         publisher,
         "add_publication_keywords",
-        lambda works: works.assign(keyword_id=["keyword-01", ""]),
+        lambda works: works.assign(
+            keyword_id=["keyword-01", ""],
+            detail_keyword_id=["keyword-01-01", ""],
+        ),
     )
     monkeypatch.setattr(
         publisher,
@@ -814,6 +845,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["mapped_works"] == 1
     assert result["excluded_works"] == 1
     assert result["keywords"] == 1
+    assert result["detail_keywords"] == 1
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
@@ -832,6 +864,11 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
     monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
     monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
     monkeypatch.setattr(publisher, "add_publication_keywords", lambda works: works)
+    monkeypatch.setattr(
+        publisher,
+        "exclude_low_information_regions",
+        lambda works: works,
+    )
     monkeypatch.setattr(
         publisher,
         "_to_hub_dataset",

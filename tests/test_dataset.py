@@ -169,6 +169,13 @@ def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(
         },
         {
             **base,
+            "author_pub_id": "one:person-index",
+            "title": "One Person",
+            "source_record_json": '{"doi":"10.1000/shared"}',
+            "embedding": [0.25, 0.75],
+        },
+        {
+            **base,
             "author_pub_id": "one:research",
             "title": "A substantive research paper",
             "year": 2025,
@@ -188,6 +195,9 @@ def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(
         "affiliation_or_contact"
     ]
     assert not bool(observations.loc["one:editorial", "map_eligible"])
+    assert observations.loc["one:person-index", "map_exclusion_reasons"] == [
+        "person_or_citation_index"
+    ]
     assert bool(observations.loc["one:research", "map_eligible"])
     assert not bool(works.loc["", "map_eligible"])
     assert works.loc["", "map_exclusion_reasons"] == ["affiliation_or_contact"]
