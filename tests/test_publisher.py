@@ -167,8 +167,12 @@ def work_frame() -> pandas.DataFrame:
                 "keyword_model_version": publisher.KEYWORD_MODEL_VERSION,
                 "keyword_id": "keyword-01",
                 "keyword": "reliable systems",
+                "keyword_extracted": "reliable systems",
+                "keyword_label_reviewed": True,
                 "detail_keyword_id": "keyword-01-01",
                 "detail_keyword": "fault tolerant systems",
+                "detail_keyword_extracted": "fault tolerant systems",
+                "detail_keyword_label_reviewed": True,
                 "memberships": [
                     {
                         "person_id": "person-one",
@@ -289,12 +293,15 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["schema_version"] == 6
+    assert artifact["schema_version"] == 7
     assert artifact["quality_assessment_version"] == (
         publisher.QUALITY_ASSESSMENT_VERSION
     )
     assert artifact["layout_version"] == publisher.LAYOUT_VERSION
     assert artifact["keyword_model_version"] == publisher.KEYWORD_MODEL_VERSION
+    assert artifact["topic_label_review_version"] == (
+        publisher.TOPIC_LABEL_REVIEW_VERSION
+    )
     assert artifact["region_audit_version"] == publisher.REGION_AUDIT_VERSION
     assert artifact["default_layout_id"] == "pca"
     assert [layout["layout_id"] for layout in artifact["layouts"]] == [
@@ -322,6 +329,8 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
         {
             "keyword_id": "keyword-01",
             "label": "reliable systems",
+            "extracted_label": "reliable systems",
+            "label_reviewed": True,
             "level": 0,
             "parent_keyword_id": None,
             "publication_count": 1,
@@ -333,6 +342,8 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
         {
             "keyword_id": "keyword-01-01",
             "label": "fault tolerant systems",
+            "extracted_label": "fault tolerant systems",
+            "label_reviewed": True,
             "level": 1,
             "parent_keyword_id": "keyword-01",
             "publication_count": 1,
@@ -723,6 +734,9 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
     assert commit == "artifact-commit"
     assert uploads[0][1]["point_count"] == 1
     assert uploads[0][2]["dataset_commits"] == {"works": "works-commit"}
+    assert uploads[0][2]["topic_label_review_version"] == (
+        publisher.TOPIC_LABEL_REVIEW_VERSION
+    )
     assert uploads[0][2]["artifact"]["keyword_count"] == 2
     assert uploads[0][2]["artifact"]["keyword_levels"][1]["keyword_count"] == 1
 
@@ -852,6 +866,9 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["excluded_works"] == 1
     assert result["keywords"] == 1
     assert result["detail_keywords"] == 1
+    assert result["topic_label_review_version"] == (
+        publisher.TOPIC_LABEL_REVIEW_VERSION
+    )
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:

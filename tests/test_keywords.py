@@ -3,6 +3,7 @@ import pandas
 import pytest
 
 import map_of_research.keywords as keywords
+from map_of_research.topic_labels import apply_reviewed_labels, review_catalog
 
 
 def works_frame() -> pandas.DataFrame:
@@ -81,6 +82,14 @@ def test_keywords_are_deterministic_visible_regions_and_retain_every_work() -> N
     assert first.loc[first["work_id"] == "outside-roster", "keyword"].item() == ""
     assert first.loc[first["work_id"] == "excluded", "detail_keyword_id"].item() == ""
     assert set(first["keyword_model_version"]) == {keywords.KEYWORD_MODEL_VERSION}
+    assert first.loc[first["keyword_id"].ne(""), "keyword_extracted"].ne("").all()
+    assert (
+        first.loc[first["detail_keyword_id"].ne(""), "detail_keyword_extracted"]
+        .ne("")
+        .all()
+    )
+    assert not first["keyword_label_reviewed"].any()
+    assert first["detail_keyword_label_reviewed"].dtype == bool
 
 
 def test_one_visible_region_uses_one_keyword() -> None:
@@ -198,6 +207,47 @@ def test_keyword_labels_skip_generic_phrases() -> None:
     labels = keywords._cluster_keywords(titles, numpy.zeros(3, dtype=int))
 
     assert labels == {0: "low carbon"}
+
+
+def test_keyword_labels_prefer_well_supported_specific_phrases() -> None:
+    titles = [
+        "Robust speech recognition in noise",
+        "Robust speech recognition for calls",
+        "Robust speech processing for meetings",
+    ]
+
+    labels = keywords._cluster_keywords(titles, numpy.zeros(3, dtype=int))
+
+    assert labels == {0: "robust speech recognition"}
+
+
+def test_reviewed_labels_preserve_extraction_and_reject_ambiguity() -> None:
+    overview_reviews = review_catalog(0)
+    detail_reviews = review_catalog(1)
+    assert len(overview_reviews) == len(set(overview_reviews.values())) == 30
+    assert len(detail_reviews) == len(set(detail_reviews.values())) == 120
+
+    labels, reviewed = apply_reviewed_labels(
+        {0: "access control", 1: "unreviewed phrase"},
+        overview_reviews,
+    )
+
+    assert labels == {
+        0: "cybersecurity & privacy",
+        1: "unreviewed phrase",
+    }
+    assert reviewed == {0: True, 1: False}
+
+    with pytest.raises(ValueError, match="non-empty and unique"):
+        apply_reviewed_labels(
+            {0: "access control"},
+            overview_reviews,
+            reserved={"cybersecurity & privacy"},
+        )
+    with pytest.raises(ValueError, match="non-empty and unique"):
+        apply_reviewed_labels({0: ""}, {})
+    with pytest.raises(ValueError, match="Unknown topic hierarchy"):
+        review_catalog(2)
 
 
 def test_detail_cluster_allocation_is_proportional_and_capacity_limited() -> None:

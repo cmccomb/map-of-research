@@ -1,6 +1,6 @@
 # Dataset and artifact schema
 
-The Hugging Face repository contains four schema-v6 configurations. Together
+The Hugging Face repository contains four schema-v7 configurations. Together
 they retain the collection grain while exposing a cleaner work-centric model.
 
 ## `people`
@@ -33,8 +33,12 @@ reasons, both shared full-corpus map layouts, and the assigned topic hierarchy.
 the local-neighborhood t-SNE coordinates after a memory-bounded 50-dimensional
 PCA reduction and a final deterministic orientation. `keyword_id`, `keyword`,
 `detail_keyword_id`, `detail_keyword`, and `keyword_model_version` record the
-deterministic nested visible-region assignment. `map_region_audit_version` and
-`map_region_outlier` retain the result of the multi-signal catch-all audit.
+deterministic nested visible-region assignment. `keyword_extracted` and
+`detail_keyword_extracted` preserve the title-derived phrases behind the public
+labels; the corresponding `*_label_reviewed` fields and
+`topic_label_review_version` make the editorial pass auditable.
+`map_region_audit_version` and `map_region_outlier` retain the result of the
+multi-signal catch-all audit.
 Excluded works retain their coordinates for reproducibility and safe layout
 reuse; `map_eligible` alone controls browser-map participation.
 Citation count is the maximum retained source observation, not a sum across
@@ -55,7 +59,7 @@ membership and fetch timestamp.
 
 ## Browser artifacts
 
-`maps/publications.json` uses schema version 6. It is the only browser artifact.
+`maps/publications.json` uses schema version 7. It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus
 coordinate pairs, work ID, title, author text, stable faculty and department ID
 arrays, year, venue, citation count, DOI, first available source URL, and source
@@ -63,11 +67,13 @@ observation count, plus one `keyword_ids` entry per hierarchy level. The
 top-level `layouts` catalog gives
 each view's label, method, interpretation, coordinate fields, and version;
 `default_layout_id` selects the initial view. The `keywords` catalog provides a
-concise label, hierarchy level, optional parent, publication count, and centroid
-in every layout for each topic region. `keyword_levels` describes the ordered
-overview and detail levels. `quality_assessment_version` identifies the policy,
-`keyword_model_version` identifies the labeling procedure, and
-`region_audit_version` identifies the multi-signal catch-all audit. The
+concise label, extracted phrase, review status, hierarchy level, optional
+parent, publication count, and centroid in every layout for each topic region.
+`keyword_levels` describes the ordered overview and detail levels.
+`quality_assessment_version` identifies the policy, `keyword_model_version`
+identifies the extraction and clustering procedure,
+`topic_label_review_version` identifies the manual representative-title audit,
+and `region_audit_version` identifies the multi-signal catch-all audit. The
 `excluded_work_count` reports how many faculty-linked works were retained in
 the dataset but left out of the visualization.
 
@@ -91,8 +97,13 @@ than mixing old and new coordinates. Compatible coordinates are reused when the
 eligible corpus is unchanged so routine republishes do not move points.
 
 Topic keywords partition the visible t-SNE landscape with deterministic
-k-means and label each region from its publication titles using repeated 2- and
-3-word phrases weighted by within-region coverage and corpus specificity. The
+k-means and label each region from its publication titles using repeated
+two-to-four-word phrases weighted by within-region coverage and corpus
+specificity. Strongly supported longer phrases are preferred over clipped
+forms. A versioned, exact-match editorial catalog then supplies the public
+label. Both phrases and whether a catalog match occurred remain in the dataset
+and browser artifact; a changed, unmatched phrase is published as-is and marked
+unreviewed rather than being assigned a guess from an older cluster. The
 default hierarchy has 30 overview regions and approximately 120 nested detail
 regions; undersized detail fragments merge into their nearest sibling. Stable
 keyword IDs are derived from labels and centroids rather than k-means' arbitrary
