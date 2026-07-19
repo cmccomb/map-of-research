@@ -15,6 +15,7 @@ from typing import Any
 
 from .dataset import build_dataset_tables
 from .io import atomic_write_json
+from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -41,8 +42,8 @@ HF_TOKEN_ENV = "HF_TOKEN"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 MODEL_REVISION = "e8c3b32edf5434bc2275fc9bab85f82640a19130"
 EMBEDDING_DIMENSION = 768
-MAP_SCHEMA_VERSION = 4
-LAYOUT_VERSION = "global-publications-multilayout-v1"
+MAP_SCHEMA_VERSION = 5
+LAYOUT_VERSION = "global-publications-multilayout-v2"
 DEFAULT_LAYOUT_ID = "pca"
 LAYOUTS = (
     {
@@ -52,7 +53,7 @@ LAYOUTS = (
         "description": "Emphasizes broad variation across the full corpus.",
         "x_field": "x",
         "y_field": "y",
-        "version": "global-publications-pca-v3",
+        "version": "global-publications-pca-v4",
     },
     {
         "layout_id": "tsne",
@@ -64,7 +65,7 @@ LAYOUTS = (
         ),
         "x_field": "tsne_x",
         "y_field": "tsne_y",
-        "version": "global-publications-tsne-v1",
+        "version": "global-publications-tsne-v2",
     },
 )
 MAP_ARTIFACT_NAME = "publications.json"
@@ -77,6 +78,7 @@ STRING_LIST_COLUMNS = frozenset(
         "author_variants",
         "citation_variants",
         "included_department_ids",
+        "map_exclusion_reasons",
         "department_ids",
         "department_titles",
         "observation_ids",
@@ -306,7 +308,9 @@ def add_global_layout(
     )
     for field in coordinate_fields:
         output[field] = math.nan
-    included_mask = output["department_ids"].apply(lambda value: bool(_as_list(value)))
+    included_mask = output["map_eligible"] & output["department_ids"].apply(
+        lambda value: bool(_as_list(value))
+    )
     included = output.loc[included_mask]
     if included.empty:
         raise ValueError("No included works are available for map generation")
@@ -370,11 +374,14 @@ def build_map_artifact(
 ) -> dict[str, Any]:
     """Build the full work-centric artifact without changing global coordinates."""
 
+    related_rows: list[tuple[Any, list[dict[str, str]]]] = []
     selected_rows: list[tuple[Any, list[dict[str, str]]]] = []
     for row in works.itertuples(index=False):
         memberships = _normalized_memberships(row.memberships)
         if memberships:
-            selected_rows.append((row, memberships))
+            related_rows.append((row, memberships))
+            if row.map_eligible:
+                selected_rows.append((row, memberships))
     points = []
     for row, memberships in selected_rows:
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
@@ -466,11 +473,12 @@ def build_map_artifact(
         )
     fetched = [
         str(row.last_fetched_at_utc)
-        for row, _ in selected_rows
+        for row, _ in related_rows
         if str(row.last_fetched_at_utc)
     ]
     return {
         "schema_version": MAP_SCHEMA_VERSION,
+        "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
         "layout_version": LAYOUT_VERSION,
         "default_layout_id": DEFAULT_LAYOUT_ID,
         "layouts": [dict(layout) for layout in LAYOUTS],
@@ -479,6 +487,7 @@ def build_map_artifact(
         "source_data_oldest_at_utc": min(fetched) if fetched else None,
         "source_data_newest_at_utc": max(fetched) if fetched else None,
         "point_count": len(points),
+        "excluded_work_count": len(related_rows) - len(selected_rows),
         "department_count": len(departments),
         "faculty_count": len(faculty),
         "catalogs": {
@@ -503,6 +512,7 @@ def _upload_map_artifacts(
         maps_dir = Path(temporary_dir)
         map_manifest: dict[str, Any] = {
             "schema_version": MAP_SCHEMA_VERSION,
+            "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
             "layout_version": LAYOUT_VERSION,
             "default_layout_id": DEFAULT_LAYOUT_ID,
             "layouts": [dict(layout) for layout in LAYOUTS],
@@ -523,6 +533,7 @@ def _upload_map_artifacts(
         map_manifest["artifact"] = {
             "title": artifact["title"],
             "point_count": artifact["point_count"],
+            "excluded_work_count": artifact["excluded_work_count"],
             "department_count": artifact["department_count"],
             "faculty_count": artifact["faculty_count"],
             "file": artifact_path.name,
@@ -618,11 +629,17 @@ def publish_snapshot(
         generated_at_utc=generated_at_utc,
         dataset_commits=dataset_commits,
     )
+    related_mask = tables["works"]["department_ids"].apply(
+        lambda value: bool(_as_list(value))
+    )
+    mapped_mask = related_mask & tables["works"]["map_eligible"]
     return {
         "dataset_commits": dataset_commits,
         "artifact_commit": artifact_commit,
         "people": len(tables["people"]),
         "works": len(tables["works"]),
+        "mapped_works": int(mapped_mask.sum()),
+        "excluded_works": int((related_mask & ~mapped_mask).sum()),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
         "profile_count": int(enriched["scholar_id"].nunique()),

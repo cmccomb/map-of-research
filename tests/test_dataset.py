@@ -94,11 +94,109 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
     assert person["scholar_id_verified_at"] == "2026-07-17"
     work = tables["works"].iloc[0]
     assert work["observation_count"] == 2
+    assert bool(work["map_eligible"])
+    assert work["map_exclusion_reasons"] == []
     assert work["faculty"] == ["One Person", "Two Person"]
     assert set(work["author_pub_ids"]) == {
         "oneAAAAJ:paper",
         "twoAAAAJ:paper",
     }
+    assert person["mapped_work_count"] == 1
+
+
+def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(
+    tmp_path,
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-one",
+                "display_name": "One Person",
+                "scholar_id": "oneAAAAJ",
+                "orcid": "",
+                "homepage_url": "",
+                "notes": "",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "One",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-07-17",
+            }
+        ],
+    )
+    registry = load_registry(people_path, memberships_path, departments_path)
+    membership = {
+        "department_id": "ece",
+        "role": "faculty",
+        "included": True,
+    }
+    base = {
+        "scholar_id": "oneAAAAJ",
+        "person_id": "person-one",
+        "display_name": "One Person",
+        "faculty": "One Person",
+        "department_ids": ["ece"],
+        "memberships": [membership],
+        "authors": "",
+        "year": None,
+        "venue": "",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": "",
+        "fetched_at_utc": "2026-01-01T00:00:00+00:00",
+    }
+    rows = [
+        {
+            **base,
+            "author_pub_id": "one:affiliation",
+            "title": "Department of Biomedical Engineering",
+            "source_record_json": "{}",
+            "embedding": [1.0, 0.0],
+        },
+        {
+            **base,
+            "author_pub_id": "one:editorial",
+            "title": "Guest Editorial: A Special Issue",
+            "source_record_json": '{"doi":"10.1000/shared"}',
+            "embedding": [0.0, 1.0],
+        },
+        {
+            **base,
+            "author_pub_id": "one:research",
+            "title": "A substantive research paper",
+            "year": 2025,
+            "venue": "Journal",
+            "source_record_json": '{"doi":"10.1000/shared"}',
+            "embedding": [0.5, 0.5],
+        },
+    ]
+
+    tables = build_dataset_tables(pandas.DataFrame(rows), registry)
+    observations = tables["profile_publications"].set_index("author_pub_id")
+    works = tables["works"].set_index("doi")
+    person = tables["people"].iloc[0]
+
+    assert not bool(observations.loc["one:affiliation", "map_eligible"])
+    assert observations.loc["one:affiliation", "map_exclusion_reasons"] == [
+        "affiliation_or_contact"
+    ]
+    assert not bool(observations.loc["one:editorial", "map_eligible"])
+    assert bool(observations.loc["one:research", "map_eligible"])
+    assert not bool(works.loc["", "map_eligible"])
+    assert works.loc["", "map_exclusion_reasons"] == ["affiliation_or_contact"]
+    assert bool(works.loc["10.1000/shared", "map_eligible"])
+    assert works.loc["10.1000/shared", "map_exclusion_reasons"] == []
+    assert works.loc["10.1000/shared", "title"] == "A substantive research paper"
+    assert works.loc["10.1000/shared", "embedding"] == [0.5, 0.5]
+    assert person["unique_work_count"] == 2
+    assert person["mapped_work_count"] == 1
 
 
 def test_scalar_normalizers_are_conservative_and_deterministic() -> None:

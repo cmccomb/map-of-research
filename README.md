@@ -18,7 +18,8 @@ Scholar. It is a static client of
    block.
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
-4. A separate trusted workflow validates that snapshot, reuses existing
+4. A separate trusted workflow validates that snapshot, records a versioned
+   map-eligibility decision for every observation and work, reuses existing
    embeddings and compatible layouts, and publishes `people`, `works`,
    `authorships`, and `profile_publications` configs plus
    `maps/publications.json`.
@@ -60,8 +61,9 @@ same limits and must also stop after any refusal.
   each profile has a one-year minimum refresh interval.
 - A validated snapshot publishes to Hugging Face immediately after its snapshot
   branch changes.
-- The map requests the Hugging Face artifact with `no-cache` on every page load,
-  so visitors see a newly published dataset without a Pages redeployment.
+- The map's daily or manually dispatched Pages build packages the newest
+  immutable Hugging Face artifact at the same origin; browsers never contact
+  Hugging Face for publication data.
 - Visualization code deploys to GitHub Pages when site files change on `main`.
 
 ## Faculty inclusion and annual review
@@ -82,6 +84,16 @@ observation and its normalized source record. `works` conservatively collapses
 observations by DOI or exact normalized title and year; `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
 no verified Scholar profile or publications.
+
+The research map excludes only records that match high-confidence,
+content-based rules for conference front matter, journal front matter,
+organization or container records, affiliations and contact blocks,
+person/citation indexes, navigation text, event labels, placeholders, or
+garbled index text. Missing year, venue, author text, DOI, citations, or source
+URL is never sufficient for exclusion. The decision, policy version, and reason
+codes remain on the dataset rows; excluded observations and works are not
+deleted. A work stays map-eligible if any retained source observation passes the
+policy.
 
 ## Local development
 

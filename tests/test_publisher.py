@@ -162,6 +162,8 @@ def work_frame() -> pandas.DataFrame:
         [
             {
                 "work_id": "work-one",
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
                 "memberships": [
                     {
                         "person_id": "person-one",
@@ -282,7 +284,10 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
         generated_at_utc="2026-07-17T12:00:00+00:00",
     )
 
-    assert artifact["schema_version"] == 4
+    assert artifact["schema_version"] == 5
+    assert artifact["quality_assessment_version"] == (
+        publisher.QUALITY_ASSESSMENT_VERSION
+    )
     assert artifact["layout_version"] == publisher.LAYOUT_VERSION
     assert artifact["default_layout_id"] == "pca"
     assert [layout["layout_id"] for layout in artifact["layouts"]] == [
@@ -304,17 +309,20 @@ def test_global_layout_attaches_pca_and_tsne_coordinates(monkeypatch) -> None:
         [
             {
                 "work_id": "one",
+                "map_eligible": True,
                 "department_ids": ["ece"],
                 "embedding": [3.0, 4.0, 0.0],
             },
             {
                 "work_id": "two",
+                "map_eligible": True,
                 "department_ids": ["mse"],
                 "embedding": [0.0, 0.0, 2.0],
             },
             {
                 "work_id": "excluded",
-                "department_ids": [],
+                "map_eligible": False,
+                "department_ids": ["ece"],
                 "embedding": [1.0, 0.0, 0.0],
             },
         ]
@@ -358,11 +366,13 @@ def test_global_layout_reuses_complete_unchanged_coordinates(monkeypatch) -> Non
         [
             {
                 "work_id": "one",
+                "map_eligible": True,
                 "department_ids": ["ece"],
                 "embedding": [1.0, 0.0],
             },
             {
                 "work_id": "two",
+                "map_eligible": True,
                 "department_ids": ["mse"],
                 "embedding": [0.0, 1.0],
             },
@@ -465,12 +475,19 @@ def test_real_layout_fitters_return_normalized_coordinates() -> None:
 
 def test_global_layout_handles_single_work_and_rejects_empty_map() -> None:
     one = pandas.DataFrame(
-        [{"work_id": "one", "department_ids": ["ece"], "embedding": [0, 0]}]
+        [
+            {
+                "work_id": "one",
+                "map_eligible": True,
+                "department_ids": ["ece"],
+                "embedding": [0, 0],
+            }
+        ]
     )
     output = publisher.add_global_layout(one)
     assert output.loc[0, ["x", "y", "tsne_x", "tsne_y"]].tolist() == [0, 0, 0, 0]
 
-    one.at[0, "department_ids"] = []
+    one.at[0, "map_eligible"] = False
     with pytest.raises(ValueError, match="No included works"):
         publisher.add_global_layout(one)
 
@@ -526,6 +543,21 @@ def test_empty_map_artifact_is_valid_and_explicit() -> None:
     assert artifact["department_count"] == 3
     assert artifact["faculty_count"] == 2
     assert artifact["source_data_newest_at_utc"] is None
+
+
+def test_map_artifact_excludes_ineligible_works_but_retains_freshness() -> None:
+    frame = work_frame()
+    frame.at[0, "map_eligible"] = False
+    frame.at[0, "map_exclusion_reasons"] = ["organization_or_container"]
+    artifact = publisher.build_map_artifact(
+        frame,
+        registry(),
+        generated_at_utc="2026-07-17T12:00:00+00:00",
+    )
+
+    assert artifact["point_count"] == 0
+    assert artifact["excluded_work_count"] == 1
+    assert artifact["source_data_newest_at_utc"] == "2026-01-01T00:00:00+00:00"
 
 
 def test_map_artifact_normalizes_missing_metadata_and_rejects_bad_memberships() -> None:
@@ -679,6 +711,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     tables = {
         name: pandas.DataFrame({"value": [1, 2]}) for name in publisher.DATASET_CONFIGS
     }
+    tables["works"] = pandas.DataFrame(
+        {
+            "value": [1, 2],
+            "department_ids": [["ece"], ["ece"]],
+            "map_eligible": [True, False],
+        }
+    )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
     monkeypatch.setattr(
         publisher,
@@ -726,6 +765,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     }
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
+    assert result["mapped_works"] == 1
+    assert result["excluded_works"] == 1
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
