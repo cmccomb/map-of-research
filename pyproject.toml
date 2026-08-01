@@ -19,7 +19,7 @@ collector = [
   "scholarly==1.7.11",
 ]
 publisher = [
-  "datasets==5.0.0",
+  "datasets==5.0.1",
   "numpy==2.5.1",
   "pandas==3.0.3",
   "plotly==6.9.0",
