@@ -586,3 +586,9 @@ def test_main_reports_startup_failures(
         status = json.loads(status_path.read_text())
         assert status["status"] == "failure"
         assert status["error_type"] == "RuntimeError"
+
+
+def test_scholarly_import_supports_pinned_bibtexparser() -> None:
+    from scholarly import scholarly
+
+    assert callable(scholarly.search_author_id)
