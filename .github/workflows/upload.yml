@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 concurrency:
   group: central-publication-upload-v1
@@ -57,8 +58,10 @@ jobs:
         run: python -m pip install './source[publisher]'
       - name: Validate, enrich, and publish snapshot
         env:
-          HF_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
+          HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
         run: |
+          HF_TOKEN="$(hf auth token)"
+          export HF_TOKEN
           map-publish-snapshot \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
