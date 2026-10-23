@@ -59,6 +59,7 @@ jobs:
       - name: Validate, enrich, and publish snapshot
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
+          HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
