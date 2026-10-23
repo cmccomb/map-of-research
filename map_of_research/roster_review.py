@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 from collections import Counter
+from collections.abc import Sequence
 from pathlib import Path
 
 from .registry import load_registry
@@ -104,10 +105,10 @@ def build_review(*, today: dt.date | None = None) -> str:
     return "\n".join(lines)
 
 
-def main() -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     review = build_review()
     if args.output:
         args.output.write_text(review, encoding="utf-8")

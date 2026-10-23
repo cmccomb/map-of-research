@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools==83.0.0"]
+requires = ["setuptools==84.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "map-of-research"
-version = "0.4.0"
+version = "0.7.0"
 description = "Faculty catalog and publication pipeline for the CMU research map"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -14,23 +14,25 @@ dependencies = []
 
 [project.optional-dependencies]
 collector = [
-  "pandas==3.0.3",
-  "pyarrow==23.0.1",
+  "bibtexparser==1.4.4",
+  "pandas==3.0.5",
+  "pyarrow==25.0.1",
   "scholarly==1.7.11",
 ]
 publisher = [
-  "datasets==5.0.0",
+  "datasets==5.0.1",
   "numpy==2.5.1",
-  "pandas==3.0.3",
-  "plotly==6.9.0",
-  "pyarrow==23.0.1",
+  "pandas==3.0.5",
+  "plotly==7.0.0",
+  "pyarrow==25.0.1",
   "scikit-learn==1.9.0",
-  "sentence-transformers==5.6.0",
+  "sentence-transformers==6.0.0",
 ]
 dev = [
   "pip-audit==2.10.1",
   "pytest==9.1.1",
-  "ruff==0.15.22",
+  "pytest-cov==7.1.0",
+  "ruff==0.16.5",
 ]
 
 [project.scripts]
@@ -45,7 +47,7 @@ Repository = "https://github.com/cmccomb/map-of-research"
 Dataset = "https://huggingface.co/datasets/ccm/cmu-engineering-publications"
 
 [tool.pytest.ini_options]
-addopts = "-q"
+addopts = "-q --cov=map_of_research --cov-branch --cov-report=term-missing:skip-covered --cov-fail-under=100"
 testpaths = ["tests"]
 
 [tool.ruff]

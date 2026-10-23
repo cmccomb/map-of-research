@@ -13,15 +13,20 @@ Scholar. It is a static client of
 
 1. `registry/people.csv`, `memberships.csv`, and `departments.csv` separate
    stable identity, role history, inclusion, and official annual-review sources.
-2. A cache-first collector refreshes at most two unique profiles in a scheduled
-   run. It never uses proxies or attempts to bypass a block.
+2. A cache-first `scholarly` collector refreshes at most two unique profiles in
+   an explicitly started run. It never uses proxies or attempts to bypass a
+   block.
 3. A raw Parquet snapshot and checksum manifest are staged on the
    `automation/map-snapshot` branch.
-4. A separate trusted workflow validates that snapshot, reuses existing
-   embeddings, and publishes `people`, `works`, `authorships`, and
+4. A separate trusted workflow validates that snapshot, records a versioned
+   map-eligibility decision for every observation and work, reuses existing
+   embeddings and compatible layouts, assigns a reviewed topic hierarchy to
+   visible regions, audits diffuse low-information regions, and publishes
+   `people`, `works`, `authorships`, and
    `profile_publications` configs plus `maps/publications.json`.
-5. `map-of-eng` fetches that artifact and filters the complete shared layout in
-   the browser; it owns no faculty roster, publication data, or scraper.
+5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
+   and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
+   publication data, scraper, embedding model, or layout computation.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
 fetches each unique profile only once, preserves the last good cache on errors,
@@ -34,13 +39,33 @@ its robots policy. The maintained defaults are intentionally conservative:
 
 - no search-result crawling, citation traversal, proxying, or CAPTCHA bypass;
 - direct lookup of registry-listed public profile IDs only;
-- at most two profiles per scheduled run, with a 90-second inter-profile delay;
+- at most two profiles per explicitly started run, with a 90-second
+  inter-profile delay;
 - no profile refreshed more often than once per year;
 - immediate stop after the first Scholar error or block;
 - old data retained when a refresh fails.
 
 Collection can be disabled without affecting the site: it continues serving
 the last successfully published dataset.
+
+GitHub-hosted Scholar collection is manual-only. A bounded diagnostic on
+2026-07-18 received HTTP 403 from a hosted macOS runner, so the workflow does
+not schedule repeated attempts from that IP space. The pinned `scholarly`
+client has a fail-closed response guard: the first 403, 429, or CAPTCHA aborts
+the run before the library's internal retry path. Local collection uses the
+same limits and must also stop after any refusal.
+
+## Update cadence
+
+- Faculty membership is reviewed annually on July 1.
+- Scholar data changes only after an explicit, successful bounded collection;
+  each profile has a one-year minimum refresh interval.
+- A validated snapshot publishes to Hugging Face immediately after its snapshot
+  branch changes.
+- The map's daily or manually dispatched Pages build packages the newest
+  immutable Hugging Face artifact at the same origin; browsers never contact
+  Hugging Face for publication data.
+- Visualization code deploys to GitHub Pages when site files change on `main`.
 
 ## Faculty inclusion and annual review
 
@@ -61,14 +86,43 @@ observations by DOI or exact normalized title and year; `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
 no verified Scholar profile or publications.
 
+The research map excludes only records that match high-confidence,
+content-based rules for conference front matter, journal front matter,
+organization or container records, affiliations and contact blocks,
+person/citation indexes, navigation text, event labels, placeholders, garbled
+index text, or titles too small to support a reliable semantic placement.
+Missing year, venue, author text, DOI, citations, or source URL is never
+sufficient for exclusion. The decision, policy version, and reason codes remain
+on the dataset rows; excluded observations and works are not deleted. A work
+stays map-eligible if any retained source observation passes the title-level
+policy.
+
+The publisher assigns every mapped work to one of 30 deterministic overview
+regions and approximately 120 nested detail regions in the shared t-SNE layout.
+Each receives a coverage-aware, corpus-specific phrase from its titles. A
+versioned editorial catalog, checked against representative titles on
+2026-07-19, turns those extracted phrases into concise public labels without
+discarding the source phrase or its review status. Unmatched phrases remain
+visible and are explicitly marked unreviewed. Detail regions contain at least
+50 works and are revealed by the site as visitors zoom.
+
+A preliminary detail pass also exposes the rare catch-all region that isolated
+title rules cannot identify safely. The publisher withholds a region only when
+it is simultaneously incoherent in embedding space, dominated by short titles,
+missing many years, and mostly uncited. The audit version and reason remain on
+every affected work, all source data stays published, and the final topic
+hierarchy is regenerated without the withheld rows.
+
 ## Local development
 
 Use Python 3.12 or newer.
 
 ```bash
-python -m pip install --editable '.[dev]'
+python -m pip install --editable '.[collector,publisher,dev]'
 python -m pytest
 ```
+
+The test command enforces 100% statement and branch coverage for the package.
 
 Plan a collection without network access:
 
@@ -85,8 +139,9 @@ map-validate-snapshot \
   --manifest snapshots/cmu-engineering-publications.parquet.manifest.json
 ```
 
-Publishing requires `HF_TOKEN` and is normally performed only by the protected
-upload workflow.
+Publishing requires `HF_TOKEN` locally. The protected `huggingface` GitHub
+environment exposes the same credential to the upload workflow from a secret
+named `HUGGINGFACE_TOKEN`.
 
 ## Repository roles
 
