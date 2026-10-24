@@ -329,9 +329,10 @@ def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
     assert observations.loc["one:later", "work_match_method"] == (
         "curated_native_title_year"
     )
-    assert observations.loc["one:later", "work_id"] == observations.loc[
-        curated["author_pub_id"], "work_id"
-    ]
+    assert (
+        observations.loc["one:later", "work_id"]
+        == observations.loc[curated["author_pub_id"], "work_id"]
+    )
     assert len(tables["works"]) == 1
     work = tables["works"].iloc[0]
     assert work["doi"] == ""
@@ -349,9 +350,7 @@ def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
         pandas.DataFrame([incidental_doi, scholar]), registry
     )
     assert len(incidental["works"]) == 1
-    assert incidental["works"].iloc[0]["source_native_ids"] == [
-        "egu2012:abstract-1"
-    ]
+    assert incidental["works"].iloc[0]["source_native_ids"] == ["egu2012:abstract-1"]
 
     other_curated = {
         **curated,
@@ -362,9 +361,9 @@ def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
         pandas.DataFrame([curated, other_curated, scholar]), registry
     )
     assert len(ambiguous["works"]) == 3
-    scholar_row = ambiguous["profile_publications"].set_index("author_pub_id").loc[
-        "one:later"
-    ]
+    scholar_row = (
+        ambiguous["profile_publications"].set_index("author_pub_id").loc["one:later"]
+    )
     assert scholar_row["work_match_method"] == "normalized_title_year"
 
     doi_curated = {
@@ -377,9 +376,11 @@ def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
         pandas.DataFrame([curated, doi_curated, scholar]), registry
     )
     assert len(mixed_identifiers["works"]) == 3
-    scholar_row = mixed_identifiers["profile_publications"].set_index(
-        "author_pub_id"
-    ).loc["one:later"]
+    scholar_row = (
+        mixed_identifiers["profile_publications"]
+        .set_index("author_pub_id")
+        .loc["one:later"]
+    )
     assert scholar_row["work_match_method"] == "normalized_title_year"
 
 
