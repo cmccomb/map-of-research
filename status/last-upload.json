@@ -1,12 +1,4 @@
 {
-  "artifact_commit": "50682a7df65207450a09fcc1d30fd819a2be3f89",
-  "authorships": 38571,
-  "dataset_commits": {
-    "authorships": "37cc5c0c3129dcbcdc9f8363aadf97b72edfe9bb",
-    "people": "465a724d1fa2884f49ee15d2e8495f9257e93a78",
-    "profile_publications": "df5be9532f7056c8ef0c1f5c7c60b68634533cbe",
-    "works": "393e1fd564d1ae4133b5abe27419d1c831473578"
-  },
   "dataset_configs": [
     "people",
     "works",
@@ -14,25 +6,11 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "detail_keywords": 120,
-  "error_type": null,
-  "excluded_works": 1357,
-  "finished_at_utc": "2026-10-24T21:59:38.673121+00:00",
-  "keywords": 30,
-  "layout_version": "global-publications-multilayout-v3",
-  "map_artifact_count": 1,
-  "mapped_works": 32882,
-  "new_embedding_count": 168,
-  "people": 933,
-  "profile_count": 226,
-  "profile_publications": 39629,
-  "region_audit_version": "low-information-semantic-region-v2",
-  "reviewed_exclusions": 105,
-  "reviewed_exclusions_sha256": "b93ace1e6dc9ca469c0d2d1b08a06f8fa747b193281a629cf41628297ea1443d",
+  "error_message": "Topic display labels must be non-empty and unique; cluster 103 reviewed to reserved 'block copolymers'",
+  "error_type": "ValueError",
+  "finished_at_utc": "2026-10-24T23:04:51.802645+00:00",
   "schema_version": 2,
-  "started_at_utc": "2026-10-24T21:51:00.103527+00:00",
-  "status": "success",
-  "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40135887149",
-  "works": 36606
+  "started_at_utc": "2026-10-24T22:56:32.692289+00:00",
+  "status": "failure",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40140527465"
 }
