@@ -308,6 +308,77 @@ def work_frame() -> pandas.DataFrame:
     )
 
 
+def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> None:
+    works = work_frame()
+    external = {
+        "person_id": "external-paul-erdos",
+        "display_name": "Paul Erdős",
+        "source_url": "https://example.test/publisher",
+    }
+    works["external_coauthors"] = [[external]]
+    works["external_coauthor_ids"] = [[external["person_id"]]]
+    works["source_types"] = [["curated_verified"]]
+    works["source_verified_at"] = "2026-10-24"
+    works["source_verification_urls"] = [["https://example.test/publisher"]]
+    works["last_fetched_at_utc"] = ""
+
+    artifact = publisher.build_map_artifact(
+        works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
+    )
+    point = artifact["points"][0]
+    assert point["source_types"] == ["curated_verified"]
+    assert point["source_verified_at"] == "2026-10-24"
+    assert point["source_verification_urls"] == ["https://example.test/publisher"]
+    assert point["external_coauthor_ids"] == ["external-paul-erdos"]
+    assert artifact["catalogs"]["external_coauthors"] == [external]
+    assert artifact["source_data_newest_at_utc"] is None
+
+    # Two records may name the same external person, but may not disagree.
+    duplicate = works.copy()
+    duplicate.at[0, "work_id"] = "work-two"
+    assert (
+        len(
+            publisher.build_map_artifact(
+                pandas.concat([works, duplicate], ignore_index=True),
+                registry(),
+                generated_at_utc="2026-10-24T12:00:00+00:00",
+            )["catalogs"]["external_coauthors"]
+        )
+        == 1
+    )
+
+
+@pytest.mark.parametrize(
+    ("external", "message"),
+    [
+        ("bad", "must be an object"),
+        ({"person_id": "", "display_name": "Name"}, "needs identity"),
+        ({"person_id": "external-x", "display_name": ""}, "needs identity"),
+    ],
+)
+def test_map_artifact_rejects_invalid_external_identity(external, message) -> None:
+    works = work_frame()
+    works["external_coauthors"] = [[external]]
+    with pytest.raises(ValueError, match=message):
+        publisher.build_map_artifact(
+            works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
+        )
+
+
+def test_map_artifact_rejects_conflicting_external_identity() -> None:
+    works = work_frame()
+    other = works.copy()
+    other.at[0, "work_id"] = "work-two"
+    works["external_coauthors"] = [[{"person_id": "external-x", "display_name": "X"}]]
+    other["external_coauthors"] = [[{"person_id": "external-x", "display_name": "Y"}]]
+    with pytest.raises(ValueError, match="Conflicting external"):
+        publisher.build_map_artifact(
+            pandas.concat([works, other], ignore_index=True),
+            registry(),
+            generated_at_utc="2026-10-24T12:00:00+00:00",
+        )
+
+
 def registry() -> Registry:
     return Registry(
         people=(

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "external_coauthors": [
+    {
+      "person_id": "external-paul-erdos",
+      "display_name": "Paul Erdős",
+      "source_url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases"
+    }
+  ],
+  "works": [
+    {
+      "person_id": "person-prasadtetali-bf494329",
+      "doi": "10.1002/rsa.3240010302",
+      "title": "Representations of Integers as the Sum of k Terms",
+      "authors": "Paul Erdős and Prasad Tetali",
+      "year": 1990,
+      "venue": "Random Structures & Algorithms",
+      "citation": "Random Structures & Algorithms 1(3), 245–261 (1990)",
+      "source_url": "https://doi.org/10.1002/rsa.3240010302",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/tetali.html",
+        "https://doi.org/10.1002/rsa.3240010302"
+      ],
+      "source_verified_at": "2026-10-24",
+      "external_coauthor_ids": ["external-paul-erdos"]
+    },
+    {
+      "person_id": "person-prasadtetali-bf494329",
+      "doi": "10.4064/aa-69-3-243-258",
+      "title": "Independence of Solution Sets and Minimal Asymptotic Bases",
+      "authors": "Paul Erdős, Melvyn Nathanson, and Prasad Tetali",
+      "year": 1995,
+      "venue": "Acta Arithmetica",
+      "citation": "Acta Arithmetica 69(3), 243–258 (1995)",
+      "source_url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases",
+      "source_verification_urls": [
+        "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases"
+      ],
+      "source_verified_at": "2026-10-24",
+      "external_coauthor_ids": ["external-paul-erdos"]
+    }
+  ]
+}

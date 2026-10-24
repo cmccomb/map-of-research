@@ -99,6 +99,9 @@ STRING_LIST_COLUMNS = frozenset(
         "person_ids",
         "scholar_ids",
         "source_urls",
+        "source_types",
+        "source_verification_urls",
+        "external_coauthor_ids",
         "title_variants",
         "venue_variants",
     }
@@ -435,8 +438,26 @@ def build_map_artifact(
             if row.map_eligible:
                 selected_rows.append((row, memberships))
     points = []
+    external_coauthors: dict[str, dict[str, str]] = {}
     keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
+        for coauthor in _as_list(getattr(row, "external_coauthors", [])):
+            if not isinstance(coauthor, Mapping):
+                raise ValueError("External coauthor catalog entry must be an object")
+            entry = {
+                "person_id": str(coauthor.get("person_id") or ""),
+                "display_name": str(coauthor.get("display_name") or ""),
+                "source_url": str(coauthor.get("source_url") or ""),
+            }
+            person_id = entry["person_id"]
+            if not person_id or not entry["display_name"]:
+                raise ValueError("External coauthor catalog entry needs identity")
+            if (
+                person_id in external_coauthors
+                and external_coauthors[person_id] != entry
+            ):
+                raise ValueError("Conflicting external coauthor catalog entry")
+            external_coauthors[person_id] = entry
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
         keyword_id = str(row.keyword_id)
         keyword = str(row.keyword)
@@ -521,6 +542,16 @@ def build_map_artifact(
                 "citation_count": int(row.citation_count),
                 "doi": str(row.doi),
                 "source_url": source_urls[0] if source_urls else "",
+                "source_types": list(
+                    _as_list(getattr(row, "source_types", ["scholar"]))
+                ),
+                "source_verified_at": str(getattr(row, "source_verified_at", "")),
+                "source_verification_urls": list(
+                    _as_list(getattr(row, "source_verification_urls", []))
+                ),
+                "external_coauthor_ids": list(
+                    _as_list(getattr(row, "external_coauthor_ids", []))
+                ),
                 "observation_count": int(row.observation_count),
                 "keyword_ids": [keyword_id, detail_keyword_id],
             }
@@ -655,7 +686,8 @@ def build_map_artifact(
     fetched = [
         str(row.last_fetched_at_utc)
         for row, _ in related_rows
-        if str(row.last_fetched_at_utc)
+        if "scholar" in _as_list(getattr(row, "source_types", ["scholar"]))
+        and str(row.last_fetched_at_utc)
     ]
     return {
         "schema_version": MAP_SCHEMA_VERSION,
@@ -681,6 +713,10 @@ def build_map_artifact(
             "schools": schools,
             "departments": departments,
             "faculty": faculty,
+            "external_coauthors": [
+                external_coauthors[person_id]
+                for person_id in sorted(external_coauthors)
+            ],
         },
         "keywords": keywords,
         "points": points,
@@ -844,7 +880,13 @@ def publish_snapshot(
         ),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
-        "profile_count": int(enriched["scholar_id"].nunique()),
+        "profile_count": int(
+            enriched.loc[
+                enriched.get("source_type", "scholar") == "scholar", "scholar_id"
+            ].nunique()
+            if "source_type" in enriched
+            else enriched["scholar_id"].nunique()
+        ),
         "new_embedding_count": new_embedding_count,
         "map_artifact_count": 1,
         "layout_version": LAYOUT_VERSION,

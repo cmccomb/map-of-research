@@ -1,5 +1,6 @@
 import datetime as dt
 import json
+from dataclasses import replace
 from pathlib import Path
 
 import pandas
@@ -323,9 +324,212 @@ def valid_frame() -> pandas.DataFrame:
                 "author_pub_id": "one:paper",
                 "title": "A paper",
                 "citation_count": 1,
+                "source_type": "scholar",
             }
         ]
     )
+
+
+def curated_payload() -> dict:
+    return {
+        "schema_version": 1,
+        "external_coauthors": [
+            {
+                "person_id": "external-example",
+                "display_name": "External Example",
+                "source_url": "https://example.test/author",
+            }
+        ],
+        "works": [
+            {
+                "person_id": "person-alpha",
+                "doi": "10.1000/example",
+                "title": "A Verified Paper",
+                "authors": "Alpha Person and External Example",
+                "year": 1995,
+                "venue": "Journal",
+                "citation": "Journal 1 (1995)",
+                "source_url": "https://example.test/paper",
+                "source_verification_urls": ["https://example.test/paper"],
+                "source_verified_at": "2026-10-24",
+                "external_coauthor_ids": ["external-example"],
+            }
+        ],
+    }
+
+
+def test_curated_rows_are_provenance_bound_and_not_scholar_fetches(
+    tmp_path: Path,
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    write_cache(cache_dir)
+    curated_path = tmp_path / "data/curated/works.json"
+    curated_path.parent.mkdir(parents=True)
+    atomic_write_json(curated_path, curated_payload())
+    snapshot_path = tmp_path / "snapshot.parquet"
+    manifest_path = tmp_path / "snapshot.manifest.json"
+    manifest = build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        snapshot_path=snapshot_path,
+        manifest_path=manifest_path,
+        now=NOW,
+    )
+    frame, _ = validate_snapshot(
+        snapshot_path,
+        manifest_path,
+        now=NOW,
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+    )
+    assert manifest["cached_profiles"] == 1
+    assert manifest["curated_work_rows"] == 1
+    assert manifest["curated_works_sha256"] == snapshot.sha256_file(curated_path)
+    scholar = frame.loc[frame["source_type"] == "scholar"].iloc[0]
+    curated = frame.loc[frame["source_type"] == "curated_verified"].iloc[0]
+    assert scholar["fetched_at_utc"] == NOW.isoformat()
+    assert curated["scholar_id"] == ""
+    assert curated["fetched_at_utc"] == ""
+    assert curated["source_doi"] == "10.1000/example"
+    assert curated["source_verified_at"] == "2026-10-24"
+    assert curated["external_coauthors"][0]["person_id"] == "external-example"
+
+    edited = curated_payload()
+    edited["works"][0]["title"] = "Tampered title"
+    atomic_write_json(curated_path, edited)
+    with pytest.raises(ValueError, match="Curated work source"):
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            now=NOW,
+            people_path=paths[0],
+            memberships_path=paths[1],
+            departments_path=paths[2],
+        )
+    atomic_write_json(curated_path, curated_payload())
+    manifest["curated_work_rows"] = 0
+    atomic_write_json(manifest_path, manifest)
+    with pytest.raises(ValueError, match="curated row count"):
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            now=NOW,
+            people_path=paths[0],
+            memberships_path=paths[1],
+            departments_path=paths[2],
+        )
+
+
+@pytest.mark.parametrize(
+    ("path", "replacement", "message"),
+    [
+        (("__root__",), [], "schema"),
+        (("schema_version",), 2, "schema"),
+        (("works",), {}, "must be lists"),
+        (("external_coauthors",), {}, "must be lists"),
+        (("external_coauthors", 0), "bad", "must be an object"),
+        (("external_coauthors", 0, "person_id"), "person-example", "identity"),
+        (("external_coauthors", 0, "display_name"), "", "identity"),
+        (("external_coauthors", 0, "source_url"), "http://example.test", "HTTPS"),
+        (("works", 0), "bad", "must be an object"),
+        (("works", 0, "person_id"), "person-missing", "registered faculty"),
+        (("works", 0, "doi"), "bad-doi", "invalid DOI"),
+        (("works", 0, "title"), "", "title, authors, and venue"),
+        (("works", 0, "authors"), "", "title, authors, and venue"),
+        (("works", 0, "venue"), "", "title, authors, and venue"),
+        (("works", 0, "year"), "unknown", "year is invalid"),
+        (("works", 0, "source_verified_at"), "yesterday", "YYYY-MM-DD"),
+        (("works", 0, "source_verification_urls"), "bad", "verification URLs"),
+        (("works", 0, "source_verification_urls"), [], "verification URLs"),
+        (("works", 0, "source_verification_urls"), ["http://bad"], "HTTPS"),
+        (("works", 0, "external_coauthor_ids"), "bad", "unknown external"),
+        (
+            ("works", 0, "external_coauthor_ids"),
+            ["external-unknown"],
+            "unknown external",
+        ),
+        (("works", 0, "source_url"), "http://bad", "HTTPS"),
+    ],
+)
+def test_curated_source_rejects_unverified_or_invalid_entries(
+    tmp_path: Path, path: tuple, replacement, message: str
+) -> None:
+    profiles = unique_profiles(load_registry(*make_registry(tmp_path / "registry")))
+    payload = curated_payload()
+    if path == ("__root__",):
+        payload = replacement
+    else:
+        target = payload
+        for part in path[:-1]:
+            target = target[part]
+        target[path[-1]] = replacement
+    source_path = tmp_path / "curated.json"
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match=message):
+        snapshot._load_curated_rows(source_path, profiles)
+
+
+def test_curated_source_rejects_duplicate_ids_and_works(tmp_path: Path) -> None:
+    profiles = unique_profiles(load_registry(*make_registry(tmp_path / "registry")))
+    source_path = tmp_path / "curated.json"
+    payload = curated_payload()
+    payload["external_coauthors"].append(payload["external_coauthors"][0])
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match="identity"):
+        snapshot._load_curated_rows(source_path, profiles)
+
+    payload = curated_payload()
+    payload["works"].append(payload["works"][0])
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match="Duplicate curated faculty DOI"):
+        snapshot._load_curated_rows(source_path, profiles)
+
+
+def test_curated_source_requires_active_faculty_and_can_omit_external_ids(
+    tmp_path: Path,
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    registry = load_registry(*paths)
+    profile = unique_profiles(registry)[0]
+    excluded = snapshot.AuthorProfile(
+        person=profile.person,
+        memberships=tuple(
+            replace(item, included=False) for item in profile.memberships
+        ),
+    )
+    source_path = tmp_path / "curated.json"
+    payload = curated_payload()
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match="registered faculty"):
+        snapshot._load_curated_rows(source_path, [excluded])
+
+    payload["works"][0].pop("external_coauthor_ids")
+    atomic_write_json(source_path, payload)
+    rows = snapshot._load_curated_rows(source_path, [profile])
+    assert rows[0]["external_coauthors"] == []
+    assert snapshot._curated_path(paths[0], source_path) == source_path
+    assert (
+        snapshot._build_parser()
+        .parse_args(["--curated-works", str(source_path)])
+        .curated_works
+        == source_path
+    )
+
+
+def test_snapshot_rejects_invalid_source_identity_fields() -> None:
+    with pytest.raises(ValueError, match="unknown source"):
+        snapshot._validate_frame(valid_frame().assign(source_type="unknown"))
+    with pytest.raises(ValueError, match="Scholar identity"):
+        snapshot._validate_frame(valid_frame().assign(scholar_id=""))
+    with pytest.raises(ValueError, match="need a DOI"):
+        snapshot._validate_frame(
+            valid_frame().assign(source_type="curated_verified", source_doi="")
+        )
 
 
 @pytest.mark.parametrize(

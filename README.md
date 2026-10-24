@@ -1,11 +1,12 @@
 # Map of Research
 
-`map-of-research` is the source of truth for the CMU Engineering faculty catalog
-and publication corpus. Its normalized school hierarchy supports a staged SCS
-pilot; the current roster and published dataset remain Engineering scoped. It
-collects a deliberately small number of public Google Scholar profiles,
-publishes one versioned Hugging Face dataset, and builds one browser-ready
-publication artifact.
+`map-of-research` is the source of truth for the CMU faculty catalog and
+publication corpus. Its normalized school hierarchy supports staged SCS and
+MCS pilots; the published dataset remains Engineering scoped. It
+collects a deliberately small number of public Google Scholar profiles and
+retains two publisher/CMU-verified Tetali–Erdős DOI records while Scholar is
+blocked. It publishes one versioned Hugging Face dataset and builds one
+browser-ready publication artifact.
 
 The visualization repositories `map-of-eng` and `map-of-collaboration` do
 **not** contact Google Scholar. They are static clients of
@@ -19,8 +20,10 @@ The visualization repositories `map-of-eng` and `map-of-collaboration` do
 2. A cache-first `scholarly` collector refreshes at most two unique profiles in
    an explicitly started run. It never uses proxies or attempts to bypass a
    block.
-3. A raw Parquet snapshot and checksum manifest are staged on the
-   `automation/map-snapshot` branch.
+3. `data/curated/works.json` holds the two separately verified DOI works and
+   their source URLs, verification dates, and external coauthor identities.
+   The raw Parquet snapshot and checksum manifest bind both the registry and
+   curated source on the `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
    map-eligibility decision for every observation and work, reuses existing
    embeddings and compatible layouts, assigns a reviewed topic hierarchy to
@@ -33,8 +36,8 @@ The visualization repositories `map-of-eng` and `map-of-collaboration` do
    roster, scraper, or publication embedding model.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
-fetches each unique profile only once, preserves the last good cache on errors,
-and makes every collection/upload auditable.
+fetches each selected profile at most once per collection run, preserves the
+last good cache on errors, and makes every collection/upload auditable.
 
 ## Scholar access policy
 
@@ -63,9 +66,16 @@ same limits and must also stop after any refusal.
 
 - Faculty membership is reviewed annually on July 1.
 - Scholar data changes only after an explicit, successful bounded collection;
-  each profile has a one-year minimum refresh interval.
-- A validated snapshot publishes to Hugging Face immediately after its snapshot
-  branch changes.
+  each profile has a one-year minimum refresh interval. Small manual local
+  batches may run when access permits, under the same stop-on-refusal limits;
+  there is no scheduled retry.
+- Curated DOI records change only after a person verifies the CMU/publisher
+  evidence and updates `data/curated/works.json`. Their verification date is
+  separate from the map's Scholar-profile refresh date.
+- Snapshot validation and Hugging Face publication are separate steps. The
+  trusted `upload.yml` workflow can be dispatched with a reviewed snapshot
+  ref; a GitHub Actions commit from the collection workflow does not itself
+  start the upload workflow.
 - The map's daily or manually dispatched Pages build packages the newest
   immutable Hugging Face artifact at the same origin; browsers never contact
   Hugging Face for publication data.
@@ -84,11 +94,14 @@ is deliberately human-verified and never changes registry rows automatically.
 
 ## Dataset grain
 
-The lossless `profile_publications` config retains every collected profile
-observation and its normalized source record. `works` conservatively collapses
-observations by DOI or exact normalized title and year; `authorships` makes that
+The lossless `profile_publications` config retains each Scholar profile
+observation and each explicitly marked `curated_verified` DOI record with its
+source metadata. `works` conservatively collapses observations by DOI or exact
+normalized title and year; a DOI-less Scholar record matches a curated DOI only
+when title and year match exactly one curated work. `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
-no verified Scholar profile or publications.
+no verified Scholar profile or publications. Curated records never count as
+Scholar profile refreshes.
 
 The research map excludes only records that match high-confidence,
 content-based rules for conference front matter, journal front matter,
@@ -111,11 +124,14 @@ visible and are explicitly marked unreviewed. Detail regions contain at least
 50 works and are revealed by the site as visitors zoom.
 
 A preliminary detail pass also exposes the rare catch-all region that isolated
-title rules cannot identify safely. The publisher withholds a region only when
-it is simultaneously incoherent in embedding space, dominated by short titles,
-missing many years, and mostly uncited. The audit version and reason remain on
-every affected work, all source data stays published, and the final topic
-hierarchy is regenerated without the withheld rows.
+title rules cannot identify safely. The publisher flags a region only when it
+is simultaneously incoherent in embedding space, dominated by short titles,
+missing many years, and mostly uncited. Inside a flagged region, a work with a
+DOI, known year, substantive title, named authors, venue, and source URL stays
+visible; weaker works retain the `low_information_region` exclusion. The
+versioned audit records `map_region_documented_override` for each retained
+exception, keeps all source rows in the dataset, and regenerates the final
+topic hierarchy from visible works.
 
 ## Local development
 

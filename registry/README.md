@@ -14,10 +14,16 @@ The registry is intentionally normalized:
 Every department must reference a school in `schools.csv`. School membership is
 derived from a person's included department memberships; a cross-appointed
 person keeps one `person_id` and can belong to multiple schools. The school
-catalog includes Engineering and SCS. The initial SCS pilot contains four
+catalog includes Engineering, SCS, and MCS. The initial SCS pilot contains four
 verified S3D core faculty and two CSD research and tenure faculty. These are
 selected pilot records, not a complete SCS roster; only cached Scholar profiles
 contribute publication observations.
+
+The initial MCS pilot contains one verified Mathematical Sciences faculty
+member, Prasad Tetali. It is not a complete MCS or department roster. His
+official CMU profile links a Scholar ID, but no Scholar publication cache has
+been collected yet. An Erdős coauthorship shown on the official profile does
+not make Paul Erdős a CMU faculty member.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained

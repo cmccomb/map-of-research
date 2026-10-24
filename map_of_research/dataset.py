@@ -66,13 +66,32 @@ def _observation_identity(row: Any) -> str:
     return _hash_id("observation", f"{row.scholar_id}\0{row.author_pub_id}")
 
 
-def _work_identity(row: Any) -> tuple[str, str, str]:
-    doi = _doi(row.source_url, row.citation, row.source_record_json)
+def _work_identity(
+    row: Any,
+    *,
+    curated_title_year_dois: Mapping[tuple[str, int], set[str]] | None = None,
+) -> tuple[str, str, str]:
+    doi = _doi(
+        getattr(row, "source_doi", ""),
+        row.source_url,
+        row.citation,
+        row.source_record_json,
+    )
     if doi:
         return _hash_id("work", f"doi:{doi}"), "doi", doi
     normalized_title = normalize_title(str(row.title))
     year = _year(row.year)
     if normalized_title and year is not None:
+        candidate_dois = (curated_title_year_dois or {}).get(
+            (normalized_title, year), set()
+        )
+        if len(candidate_dois) == 1:
+            curated_doi = next(iter(candidate_dois))
+            return (
+                _hash_id("work", f"doi:{curated_doi}"),
+                "curated_title_year",
+                curated_doi,
+            )
         value = f"title-year:{normalized_title}\0{year}"
         return _hash_id("work", value), "normalized_title_year", ""
     value = f"profile-publication:{row.scholar_id}\0{row.author_pub_id}"
@@ -134,6 +153,27 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     import pandas
 
     profile_publications = observations.copy()
+    if "source_type" not in profile_publications:
+        profile_publications["source_type"] = "scholar"
+    for column, default in (
+        ("source_doi", ""),
+        ("source_verified_at", ""),
+        ("source_verification_urls", []),
+        ("external_coauthors", []),
+    ):
+        if column not in profile_publications:
+            profile_publications[column] = [
+                default for _ in range(len(profile_publications))
+            ]
+    curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
+    for row in profile_publications.itertuples(index=False):
+        if row.source_type != "curated_verified":
+            continue
+        doi = _doi(row.source_doi)
+        title = normalize_title(str(row.title))
+        year = _year(row.year)
+        if doi and title and year is not None:
+            curated_title_year_dois.setdefault((title, year), set()).add(doi)
     observation_ids: list[str] = []
     work_ids: list[str] = []
     match_methods: list[str] = []
@@ -145,7 +185,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     }
     for row in profile_publications.itertuples(index=False):
         observation_ids.append(_observation_identity(row))
-        work_id, method, doi = _work_identity(row)
+        work_id, method, doi = _work_identity(
+            row, curated_title_year_dois=curated_title_year_dois
+        )
         work_ids.append(work_id)
         match_methods.append(method)
         dois.append(doi)
@@ -205,6 +247,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 ),
                 "memberships": memberships,
                 "fetched_at_utc": row.fetched_at_utc,
+                "source_type": row.source_type,
             }
         )
     authorships = pandas.DataFrame(authorship_rows)
@@ -248,7 +291,28 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         school_ids = sorted({membership["school_id"] for membership in memberships})
         years = [record.year for record in records]
         citation_counts = [int(record.citation_count) for record in records]
-        fetched = sorted(str(record.fetched_at_utc) for record in records)
+        fetched = sorted(
+            str(record.fetched_at_utc)
+            for record in records
+            if record.source_type == "scholar" and str(record.fetched_at_utc)
+        )
+        external_coauthors: dict[str, dict[str, str]] = {}
+        for record in records:
+            for coauthor in _as_list(record.external_coauthors):
+                if not isinstance(coauthor, Mapping):
+                    raise ValueError("External coauthor provenance must be an object")
+                person_id = _clean_text(coauthor.get("person_id"))
+                details = {
+                    "person_id": person_id,
+                    "display_name": _clean_text(coauthor.get("display_name")),
+                    "source_url": _clean_text(coauthor.get("source_url")),
+                }
+                if (
+                    person_id in external_coauthors
+                    and external_coauthors[person_id] != details
+                ):
+                    raise ValueError("Conflicting external coauthor provenance")
+                external_coauthors[person_id] = details
         work_rows.append(
             {
                 "work_id": work_id,
@@ -287,6 +351,24 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "citation_variants": _variants([record.citation for record in records]),
                 "citation_count": max(citation_counts, default=0),
                 "source_urls": _variants([record.source_url for record in records]),
+                "source_types": sorted({str(record.source_type) for record in records}),
+                "source_verified_at": max(
+                    (str(record.source_verified_at) for record in records),
+                    default="",
+                ),
+                "source_verification_urls": sorted(
+                    {
+                        str(url)
+                        for record in records
+                        for url in _as_list(record.source_verification_urls)
+                        if url
+                    }
+                ),
+                "external_coauthors": [
+                    external_coauthors[person_id]
+                    for person_id in sorted(external_coauthors)
+                ],
+                "external_coauthor_ids": sorted(external_coauthors),
                 "person_ids": sorted(people),
                 "faculty": [people[person_id] for person_id in sorted(people)],
                 "department_ids": department_ids,
@@ -296,7 +378,9 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "school_ids": school_ids,
                 "school_titles": [school_titles[school_id] for school_id in school_ids],
                 "memberships": memberships,
-                "scholar_ids": sorted({str(record.scholar_id) for record in records}),
+                "scholar_ids": sorted(
+                    {str(record.scholar_id) for record in records if record.scholar_id}
+                ),
                 "author_pub_ids": sorted(
                     {str(record.author_pub_id) for record in records}
                 ),
@@ -304,14 +388,20 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                     {str(record.observation_id) for record in records}
                 ),
                 "observation_count": len(records),
-                "first_fetched_at_utc": fetched[0],
-                "last_fetched_at_utc": fetched[-1],
+                "first_fetched_at_utc": fetched[0] if fetched else "",
+                "last_fetched_at_utc": fetched[-1] if fetched else "",
                 "embedding": list(canonical_records[0].embedding),
             }
         )
     works = pandas.DataFrame(work_rows)
 
     observation_count = Counter(authorships["person_id"])
+    scholar_observation_count = Counter(
+        authorships.loc[authorships["source_type"] == "scholar", "person_id"]
+    )
+    curated_observation_count = Counter(
+        authorships.loc[authorships["source_type"] == "curated_verified", "person_id"]
+    )
     unique_work_count = {
         person_id: int(group["work_id"].nunique())
         for person_id, group in authorships.groupby("person_id")
@@ -372,6 +462,12 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                     }
                 ),
                 "publication_observation_count": observation_count.get(
+                    person.person_id, 0
+                ),
+                "scholar_observation_count": scholar_observation_count.get(
+                    person.person_id, 0
+                ),
+                "curated_observation_count": curated_observation_count.get(
                     person.person_id, 0
                 ),
                 "unique_work_count": unique_work_count.get(person.person_id, 0),
