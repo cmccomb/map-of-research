@@ -1,0 +1,5 @@
+# Huaiying Zhang Scholar-ID verification — 2026-10-24
+
+The [CMU Biological Sciences faculty page](https://www.cmu.edu/bio/people/faculty/zhang.html) identifies Huaiying Zhang as an assistant professor and links her CMU-hosted lab. The lab's [publications page](https://labs.bio.cmu.edu/zhang/publications/) says "For full list of publications: Huaiying Zhang - Google Scholar" and links `https://scholar.google.com/citations?user=RnA6G0UAAAAJ&hl=en`. The named lab page and department-to-lab link provide the identity evidence for the ID added to `people.csv`.
+
+This is a verified profile link, not a publication capture. No Scholar publication rows are added in this registry change. It raises the dated Biological Sciences roster's known Scholar-ID coverage from 11 to 12 of 47 included people; 35 remain without a verified ID (13 tenure-track faculty, 15 teaching faculty, and 7 emeriti). The [earlier Bio roster review](2026-10-24-bio-scholar-ids.md) records the 11-person baseline and the prior unresolved list.
