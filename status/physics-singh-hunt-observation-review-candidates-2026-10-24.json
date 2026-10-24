@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Uncertain classifications from the saved Singh/Hunt captures. All 148 source and cache rows remain intact. These are not entries in the curated producer exclusion manifest.",
+  "note": "Unresolved classifications from the saved Singh/Hunt captures. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. All source and cache rows remain intact; these preliminary flags are not producer exclusions.",
   "candidates": [
     {
       "scholar_id": "hgtyZOUAAAAJ",
@@ -23,33 +23,15 @@
       "concern": "Patent record; decide publication-type policy before any exclusion."
     },
     {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 49,
+      "author_pub_id": "hgtyZOUAAAAJ:ClCfbGk0d_YC",
+      "concern": "The 2018 conference program lists S. Singh at Sant Longowal, suggesting a namesake; an exact full-name primary source is needed before exclusion."
+    },
+    {
       "scholar_id": "11EoZncAAAAJ",
       "capture_row": 31,
       "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
-      "concern": "Venue is blank in Scholar; identify source before deciding classification."
-    },
-    {
-      "scholar_id": "11EoZncAAAAJ",
-      "capture_row": 62,
-      "author_pub_id": "11EoZncAAAAJ:tS2w5q8j5-wC",
-      "concern": "NSF award record may be a nonpublication; verify the award record before exact exclusion."
-    },
-    {
-      "scholar_id": "11EoZncAAAAJ",
-      "capture_row": 63,
-      "author_pub_id": "11EoZncAAAAJ:dshw04ExmUIC",
-      "concern": "Colloquium event entry may be a nonpublication; verify event source."
-    },
-    {
-      "scholar_id": "11EoZncAAAAJ",
-      "capture_row": 71,
-      "author_pub_id": "11EoZncAAAAJ:vRqMK49ujn8C",
-      "concern": "NSF award record may be a nonpublication; verify the award record before exact exclusion."
-    },
-    {
-      "scholar_id": "11EoZncAAAAJ",
-      "capture_row": 92,
-      "author_pub_id": "11EoZncAAAAJ:xtRiw3GOFMkC",
       "concern": "Venue is blank in Scholar; identify source before deciding classification."
     },
     {
@@ -64,16 +46,8 @@
       "scholar_id": "11EoZncAAAAJ",
       "capture_row_groups": [
         [
-          1,
-          81
-        ],
-        [
           5,
           54
-        ],
-        [
-          7,
-          70
         ]
       ],
       "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."

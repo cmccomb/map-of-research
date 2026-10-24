@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_proposed_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "These 31 exact source-reviewed observations are proposed for a later producer exclusion update. This source-only draft does not apply exclusions, and all raw capture and cache rows remain intact.",
+  "exclusions": [
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 1809145 for a funded research project, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1809145.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:dshw04ExmUIC",
+      "reason_code": "nonpublication",
+      "reason": "The source is an Ohio University newsletter announcement for Benjamin Hunt’s CMSS colloquium, not a separate research publication.",
+      "evidence_url": "https://ohioopen.library.ohio.edu/cas_forum_all/4913/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The publisher-only entry repeats the complete 2017 Nature Communications article retained on this profile as row 7.",
+      "evidence_url": "https://www.nature.com/articles/s41467-017-00824-w",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:vRqMK49ujn8C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF equipment award 1626099, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1626099.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The publisher-only entry repeats the complete 2013 Science article retained on this profile as row 1.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/23686343/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:-f6ydRqryjwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2000 Adelaide chemical engineering thesis is by a namesake, Benjamin Matthew Hunt; CMU physicist Benjamin M. Hunt earned his bachelor’s degree in 2002 and physics PhD in 2009.",
+      "evidence_url": "https://digital.library.adelaide.edu.au/items/38d0b5c7-9c78-4bcd-8e7d-ca51bc698c37",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The optical-clock conference work is by NIST/Colorado researcher Benjamin Hunt, not the CMU condensed-matter physicist.",
+      "evidence_url": "https://indico.global/event/12925/book-of-abstracts.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:wMgC3FpKEyYC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 2311430, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2311430.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:lgwcVrK6X84C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 2209167, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2209167.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:buQ7SEKw-1sC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 2031737, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2031737.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:otzGkya1bYkC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 1913158, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1913158.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:43bX7VzcjpAC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 1613449, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1613449.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:1lhNe0rCu4AC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 1306805, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1306805.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:jgBuDB5drN8C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 0969863, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0969863.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:ubry08Y2EpUC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 0653315, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0653315.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:CaZNVDsoPx4C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 0510020, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0510020.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:zCSUwVk65WsC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 0354982, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0354982.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:48xauSegjOkC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 0099450, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0099450.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:AXkvAH5U_nMC",
+      "reason_code": "nonpublication",
+      "reason": "The captured record is NSF award 0073362 (shown without leading zeros as 73362 in Scholar), a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0073362.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:7H_MAutzIkAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 157 is Vanessa Koch's sole-authored 2019 Trinity College Dublin PhD thesis, not work by Colin Morningstar.",
+      "evidence_url": "https://www.tara.tcd.ie/tara8/server/api/core/bitstreams/5a7d8a27-92d6-4862-be06-f037941639f9/content",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:6yz0xqPARnAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 240 is the Pittsburgh address line extracted from a paper, not a separate authored publication.",
+      "evidence_url": "https://arxiv.org/pdf/hep-lat/0312019",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:LdasjJ6CEcoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 247 is Morningstar's email address line extracted from a paper, not a separate publication.",
+      "evidence_url": "https://arxiv.org/pdf/hep-lat/0103008",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:7Hz3ACDFbsoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 250 is a University of California San Diego address line extracted from the conference paper, not a separate publication.",
+      "evidence_url": "https://lss.fnal.gov/archive/1999/conf/Conf-99-279-T.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:yFnVuubrUp4C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 266 is a theory-section heading extracted from the Heavy Quarkonium Physics report, not a separate publication.",
+      "evidence_url": "https://arxiv.org/pdf/hep-ph/0412158",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:dTyEYWd-f8wC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 267 is an alphabetical author-and-page excerpt from the Author index in Nuclear Physics B - Proceedings Supplements 34 (1994), pages 831-835, not an authored research article.",
+      "evidence_url": "https://api.elsevier.com/content/article/PII:0920563294905274",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:mvPsJ3kp5DgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 268 is extracted front matter from the Heavy Quarkonium Physics report already retained as complete profile row 8.",
+      "evidence_url": "https://arxiv.org/pdf/hep-ph/0412158",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "author_pub_id": "8AqWr_4AAAAJ:abG-DnoFyZgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 272 is a second malformed front-matter extraction of the Heavy Quarkonium Physics report already retained as complete profile row 8.",
+      "evidence_url": "https://arxiv.org/pdf/hep-ph/0412158",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:2KloaMYe4IUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 90 uses the journal name as its title but repeats Hybrid Charmonium and the rho-pi Puzzle, retained as complete profile row 96.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1155/2008/982341",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:ns9cj8rnVeAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 130 imports a Japanese related-links label for an unrelated Paleontological Research article; Diana Parno is absent from the source publication.",
+      "evidence_url": "https://www.palaeo-soc-japan.jp/pr/2015-1.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:z_wVstp3MssC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 146 is a copyright and title-page fragment from Ying-Ting Lin's thesis; Parno served on the committee and is not the thesis author.",
+      "evidence_url": "https://hdl.handle.net/1773/45253",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:VL0QpB8kHFEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 149 is the Hall A Collaboration member-list chapter of the 2008 status report, not a research publication.",
+      "evidence_url": "https://hallaweb.jlab.org/publications/AnnualReports/AnnualReport2008.pdf",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}
