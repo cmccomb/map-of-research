@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Saved-capture anomalies require source or publication-type review. All 428 Morningstar/Parno source and cache rows remain intact; no curated producer exclusion is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 184,
+      "author_pub_id": "8AqWr_4AAAAJ:wMgC3FpKEyYC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 189,
+      "author_pub_id": "8AqWr_4AAAAJ:lgwcVrK6X84C",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 191,
+      "author_pub_id": "8AqWr_4AAAAJ:buQ7SEKw-1sC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 192,
+      "author_pub_id": "8AqWr_4AAAAJ:otzGkya1bYkC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 199,
+      "author_pub_id": "8AqWr_4AAAAJ:43bX7VzcjpAC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 210,
+      "author_pub_id": "8AqWr_4AAAAJ:1lhNe0rCu4AC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 217,
+      "author_pub_id": "8AqWr_4AAAAJ:jgBuDB5drN8C",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 226,
+      "author_pub_id": "8AqWr_4AAAAJ:ubry08Y2EpUC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 233,
+      "author_pub_id": "8AqWr_4AAAAJ:CaZNVDsoPx4C",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 237,
+      "author_pub_id": "8AqWr_4AAAAJ:zCSUwVk65WsC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 246,
+      "author_pub_id": "8AqWr_4AAAAJ:48xauSegjOkC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 251,
+      "author_pub_id": "8AqWr_4AAAAJ:AXkvAH5U_nMC",
+      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 266,
+      "author_pub_id": "8AqWr_4AAAAJ:yFnVuubrUp4C",
+      "concern": "Saved title/metadata may represent an index, thesis, or unrelated work; verify source and attribution before any exclusion."
+    },
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row": 267,
+      "author_pub_id": "8AqWr_4AAAAJ:dTyEYWd-f8wC",
+      "concern": "Saved title/metadata may represent an index, thesis, or unrelated work; verify source and attribution before any exclusion."
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "capture_row": 146,
+      "author_pub_id": "JbSQsXAAAAAJ:z_wVstp3MssC",
+      "concern": "Saved title/metadata may represent an index, thesis, or unrelated work; verify source and attribution before any exclusion."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_row_groups": [
+        [
+          8,
+          268,
+          272
+        ],
+        [
+          25,
+          222
+        ],
+        [
+          30,
+          249
+        ],
+        [
+          56,
+          75
+        ],
+        [
+          65,
+          238
+        ],
+        [
+          82,
+          255
+        ],
+        [
+          89,
+          244
+        ],
+        [
+          104,
+          121
+        ],
+        [
+          106,
+          232
+        ],
+        [
+          117,
+          262
+        ],
+        [
+          118,
+          230
+        ],
+        [
+          125,
+          201
+        ],
+        [
+          130,
+          188
+        ],
+        [
+          135,
+          206
+        ],
+        [
+          153,
+          264
+        ],
+        [
+          156,
+          183
+        ],
+        [
+          160,
+          202
+        ],
+        [
+          174,
+          176
+        ],
+        [
+          214,
+          215
+        ],
+        [
+          225,
+          227
+        ],
+        [
+          228,
+          269
+        ],
+        [
+          235,
+          236
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "capture_row_groups": [
+        [
+          10,
+          154
+        ],
+        [
+          27,
+          150
+        ],
+        [
+          41,
+          121
+        ],
+        [
+          50,
+          117
+        ],
+        [
+          67,
+          135
+        ],
+        [
+          69,
+          119
+        ],
+        [
+          72,
+          99
+        ],
+        [
+          131,
+          139
+        ],
+        [
+          141,
+          155
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "capture_rows": [
+        178,
+        179,
+        181,
+        182,
+        200,
+        203,
+        204,
+        209,
+        221,
+        222,
+        225,
+        227,
+        231,
+        245,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "capture_rows": [
+        111,
+        112,
+        135,
+        143,
+        145,
+        146,
+        147,
+        151,
+        152,
+        153
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "8AqWr_4AAAAJ",
+      "row_count": 3,
+      "capture_rows": [
+        213,
+        224,
+        241
+      ],
+      "note": "Meeting abstracts remain in the raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "row_count": 22,
+      "capture_rows": [
+        103,
+        104,
+        108,
+        109,
+        110,
+        113,
+        114,
+        115,
+        118,
+        119,
+        120,
+        122,
+        123,
+        124,
+        126,
+        129,
+        131,
+        138,
+        139,
+        140,
+        142,
+        144
+      ],
+      "note": "Meeting abstracts remain in the raw capture; no blanket exclusion proposed."
+    }
+  ]
+}
