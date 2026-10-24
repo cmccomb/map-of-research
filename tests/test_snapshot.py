@@ -395,6 +395,7 @@ def valid_frame() -> pandas.DataFrame:
                 "title": "A paper",
                 "citation_count": 1,
                 "source_type": "scholar",
+                "source_native_id": "",
             }
         ]
     )
@@ -733,6 +734,8 @@ def test_snapshot_rejects_invalid_source_identity_fields() -> None:
         snapshot._validate_frame(valid_frame().assign(source_type="unknown"))
     with pytest.raises(ValueError, match="Scholar identity"):
         snapshot._validate_frame(valid_frame().assign(scholar_id=""))
+    with pytest.raises(ValueError, match="curated source ID"):
+        snapshot._validate_frame(valid_frame().assign(source_native_id="egu:example"))
     with pytest.raises(ValueError, match="exactly one DOI or source_native_id"):
         snapshot._validate_frame(
             valid_frame().assign(

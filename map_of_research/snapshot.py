@@ -347,6 +347,8 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot contains an unknown source type")
     if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
         raise ValueError("Scholar observations need a Scholar identity")
+    if frame.loc[frame["source_type"] == "scholar", "source_native_id"].ne("").any():
+        raise ValueError("Scholar observations cannot claim a curated source ID")
     curated = frame.loc[frame["source_type"] == "curated_verified"]
     if curated["source_doi"].eq("").eq(curated["source_native_id"].eq("")).any():
         raise ValueError(
