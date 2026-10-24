@@ -46,16 +46,20 @@ staged together. Exact publication eligibility is reviewed separately.
 The next Biological Sciences source capture preserves all 142 visible rows on
 Gordon Rule's direct Scholar profile, with paired redacted HTML and JSON, a
 cache, and a checksum receipt. His official CMU Biological Sciences roster
-identity is known, but this isolated branch does not assign the Scholar ID in
-the registry. The cache is not eligible for a full-corpus snapshot until that
-identity review is complete. Exact nonpublication and attribution decisions
-remain a separate source review.
+identity is known, but the producer registry does not yet assign his Scholar
+ID. This cache enters a full-corpus snapshot after that identity review merges.
+Exact nonpublication and attribution decisions remain a separate source review.
 
-The next local Biological Sciences batch adds 81 complete visible Scholar rows:
+The next Biological Sciences batch adds 81 complete visible Scholar rows:
 C. Joel McManus (62, displayed as “Joel McManus”) and Elizabeth Ransey (19).
 Their paired redacted HTML and JSON, normalized caches, and checksum receipts
-are staged together. The Scholar IDs and official CMU identity pages are
-verified on current producer main, while this stacked source branch predates
-those registry assignments. The frozen 15-profile release does not include
-these caches. Exact nonpublication and attribution decisions remain a separate
-source review.
+are staged together. Their Scholar IDs and official CMU identity pages are
+verified in the producer registry. Exact nonpublication and attribution
+decisions remain a separate source review.
+
+En Cai adds 20 complete visible Scholar rows, with paired redacted HTML and
+JSON, a normalized cache, and a checksum receipt. Her Scholar ID and official
+CMU identity page are verified in the producer registry. Publication
+eligibility is reviewed separately from raw-source preservation. These six
+follow-on profiles add 322 raw Scholar rows in total; the prior 15-profile
+snapshot and its manifest stay unchanged until a coordinated rebuild.
