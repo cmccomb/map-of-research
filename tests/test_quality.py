@@ -75,6 +75,53 @@ def test_high_confidence_noise_families_are_excluded(title, reason) -> None:
     assert reason in result.exclusion_reasons
 
 
+def test_dated_authored_erratum_is_not_journal_front_matter() -> None:
+    tetali_erratum = assessment(
+        "Erratum to “Minimal Completely Separating Systems of k-Sets”"
+        "[J. Combin. Theory Ser. A 93, 192–198 (2001)]",
+        year=2003,
+        source_url="https://scholar.google.com/citations?view_op=view_citation"
+        "&user=FmZaK1wAAAAJ&citation_for_view=FmZaK1wAAAAJ:ye4kPcJQO24C",
+    )
+    assert tetali_erratum.map_eligible is True
+    assert tetali_erratum.exclusion_reasons == ()
+    assert (
+        assessment(
+            "Erratum to “Minimal Completely Separating Systems of k-Sets”"
+            "[J. Combin. Theory Ser. A 93, 192–198 (2001)]",
+            year=2003,
+        ).map_eligible
+        is True
+    )
+    assert (
+        assessment(
+            "Corrigendum to “On generating functions of Hausdorff moment sequences”",
+            year=2026,
+        ).map_eligible
+        is True
+    )
+    assert (
+        assessment(
+            "Correction to: Explicit isogeometric topology optimization based on "
+            "moving morphable voids with closed B-spline boundary curves",
+            year=2020,
+        ).map_eligible
+        is True
+    )
+
+    publisher_front_matter = assessment(
+        "Table of contents",
+        year=2003,
+        source_url="https://example.test/journal-volume",
+    )
+    assert publisher_front_matter.map_eligible is False
+    assert publisher_front_matter.exclusion_reasons == ("publication_front_matter",)
+
+    unverified_fragment = assessment('Correction to" Statistical performance"')
+    assert unverified_fragment.map_eligible is False
+    assert unverified_fragment.exclusion_reasons == ("publication_front_matter",)
+
+
 @pytest.mark.parametrize(
     "title",
     [

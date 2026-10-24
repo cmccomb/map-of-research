@@ -143,6 +143,8 @@ sufficient for exclusion. The decision, policy version, and reason codes remain
 on the dataset rows; excluded observations and works are not deleted. A work
 stays map-eligible if any retained source observation passes the title-level
 policy.
+Substantive, dated errata, corrigenda, and corrections are citable works;
+reviewed exact-ID decisions handle a falsely attributed or corrupted notice.
 
 The separate reviewed-exclusion manifest names individual Scholar rows that
 source review found to be nonpublications, false profile attributions, or
