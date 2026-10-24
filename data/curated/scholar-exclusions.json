@@ -4384,6 +4384,1182 @@
       "reason": "The title is the tail of the author list for the retained 2008 Applied Physics Letters article 92:122107.",
       "evidence_url": "https://www.cmu.edu/bio/people/faculty/cai.html",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:kz9GbA2Ns4gC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1413202, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1413202.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:LI9QrySNdTsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1310441, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1310441.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1059037, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1059037.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:HbR8gkJAVGIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0821296, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0821296.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:k8Z6L05lTy4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0315925, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0315925.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:TIZ-Mc8IlK0C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is only a section heading, while the captured venue is the title of Arindam Chowdhury’s 2002 CMU dissertation in the official PhD recipient record; it is not a distinct Armitage publication.",
+      "evidence_url": "https://www.chem.cmu.edu/alumni/phd/doc_degr/doc_degr-recipient.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:VaXvl8Fpj5cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0078765, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0078765.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:foquWX3nUaYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9988451, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9988451.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:xtoqd-5pKcoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "ACS lists a single 1993 correction at page 7555. The retained row 203 identifies it as an erratum; this row drops that qualifier and copies the original title.",
+      "evidence_url": "https://pubs.acs.org/toc/jacsat/115/16",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:iTIPypF6y-oC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Springer identifies Koltzenburg, Maskos, and Nuyken as the authors of the 2017 textbook. Matyjaszewski contributed a foreword, not authorship of the whole book.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-662-49279-6",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:M_hJRgAi9DwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Tyk-4Ss8FVUC (Polymers at interfaces: using atom transfer radical polymerization in the controlled growth of homopolymers and block copolymers from silicon surfaces in the absence of …); independent bibliographic record confirms Macromolecules 32 (1999), first page 8716.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:wcu1fX446GUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:IjCSPb-OGe4C (Polymers with very low polydispersities from atom transfer radical polymerization); independent bibliographic record confirms Science 272 (1996), first page 866.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:yTVG5XyEbqwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:YsMSGLbcyi4C (Controlled/“living” radical polymerization. Atom transfer radical polymerization using multidentate amine ligands); independent bibliographic record confirms Macromolecules 30 (1997), first page 7697.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:TZCwKM9shoYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Lhzy3ZptxVQC (Controlled/\" living\" radical polymerization. Halogen atom transfer radical polymerization promoted by a Cu (I)/Cu (II) redox process); independent bibliographic record confirms Macromolecules 28 (1995), first page 7901.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:XYBbmEkKTjAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Lhzy3ZptxVQC (Controlled/\" living\" radical polymerization. Halogen atom transfer radical polymerization promoted by a Cu (I)/Cu (II) redox process); independent bibliographic record confirms Macromolecules 28 (1995), first page 7901.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:I_Q6JS_c2lwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:xtRiw3GOFMkC (Kinetics of decomposition of 2, 2, 6, 6-tetramethyl-1-(1-phenylethoxy) piperidine and its implications on nitroxyl-mediated styrene polymerization); independent bibliographic record confirms Macromolecules 28 (1995), first page 6692.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:JpZHB2EbTyIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:IjCSPb-OGe4C (Polymers with very low polydispersities from atom transfer radical polymerization); independent bibliographic record confirms Science 272 (1996), first page 866.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:fJm6x8J4LekC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:TFP_iSt0sucC (Kinetic study of the homogeneous atom transfer radical polymerization of methyl methacrylate); independent bibliographic record confirms Macromolecules 30 (1997), first page 6507.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:db6sjn-4dDkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:HDshCWvjkbEC (Controlled/“living” atom transfer radical polymerization of methyl methacrylate using various initiation systems); independent bibliographic record confirms Macromolecules 31 (1998), first page 1527.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:bR5oKgKGZ9kC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Tyk-4Ss8FVUC (Polymers at interfaces: using atom transfer radical polymerization in the controlled growth of homopolymers and block copolymers from silicon surfaces in the absence of …); independent bibliographic record confirms Macromolecules 32 (1999), first page 8716.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ajsgnKPiXUcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:4JMBOYKVnBMC (Controlled/“living” radical polymerization of methyl methacrylate by atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 30 (1997), first page 2216.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:7pB20q6EYD8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:YsMSGLbcyi4C (Controlled/“living” radical polymerization. Atom transfer radical polymerization using multidentate amine ligands); independent bibliographic record confirms Macromolecules 30 (1997), first page 7697.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:fblNHzkjDWgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:9ZlFYXVOiuMC (Atom transfer radical polymerization of (meth) acrylamides); independent bibliographic record confirms Macromolecules 32 (1999), first page 4826.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:6QSForVwekEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:IWHjjKOFINEC (Mechanism of controlled/“living” radical polymerization of styrene in the presence of nitroxyl radicals. Kinetics and simulations); independent bibliographic record confirms Macromolecules 29 (1996), first page 7661.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:crj7m7lBAXMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:eMMeJKvmdy0C (\" Living\"/controlled radical polymerization. Transition-metal-catalyzed atom transfer radical polymerization in the presence of a conventional radical initiator); independent bibliographic record confirms Macromolecules 28 (1995), first page 7572.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:2FL_9_oiFT0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:KlAtU1dfN6UC (Synthesis and characterization of star polymers with varying arm number, length, and composition from organic and hybrid inorganic/organic multifunctional initiators); independent bibliographic record confirms Macromolecules 32 (1999), first page 6526.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:BICEi0P-klIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "“ACS Macro Lett.” is the journal name imported as a paper title; the same author list is the retained 2015 article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/mz500834g",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:dg6LyGYAbRwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:r0BpntZqJG4C (Polymerization of n-butyl acrylate by atom transfer radical polymerization. Remarkable effect of ethylene carbonate and other solvents); independent bibliographic record confirms Macromolecules 31 (1998), first page 1535.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:pYedaldbyesC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:QIV2ME_5wuYC (Atom transfer radical polymerization of tert-butyl acrylate and preparation of block copolymers); independent bibliographic record confirms Macromolecules 33 (2000), first page 4039.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:dDWX_BJh2WwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:9ZlFYXVOiuMC (Atom transfer radical polymerization of (meth) acrylamides); independent bibliographic record confirms Macromolecules 32 (1999), first page 4826.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:9hi8uQQMxn4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Lhzy3ZptxVQC (Controlled/\" living\" radical polymerization. Halogen atom transfer radical polymerization promoted by a Cu (I)/Cu (II) redox process); independent bibliographic record confirms Macromolecules 28 (1995), first page 7901.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:aX994SrUs_AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:MXK_kJrjxJIC (Utilizing halide exchange to improve control of atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 31 (1998), first page 6836.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:VtE3cOHX7jYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:eMMeJKvmdy0C (\" Living\"/controlled radical polymerization. Transition-metal-catalyzed atom transfer radical polymerization in the presence of a conventional radical initiator); independent bibliographic record confirms Macromolecules 28 (1995), first page 7572.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:JEU6oiEA7sAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2022 Wiley book chapter is by Evelyne van Ruymbeke and Dimitris Vlassopoulos only. Matyjaszewski is an editor of the containing book.",
+      "evidence_url": "https://doi.org/10.1002/9783527815562.mme0034",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:Pe4qj77vIb0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:-f6ydRqryjwC (Controlled/“living” radical polymerization. Homogeneous reverse atom transfer radical polymerization using AIBN as the initiator); independent bibliographic record confirms Macromolecules 30 (1997), first page 7692.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:L3EPBdNpqTwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:b0M2c_1WBrUC (Synthesis of well-defined amphiphilic block copolymers with 2-(dimethylamino) ethyl methacrylate by controlled radical polymerization); independent bibliographic record confirms Macromolecules 32 (1999), first page 1763.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:-rJzQCqpPy8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:KlAtU1dfN6UC (Synthesis and characterization of star polymers with varying arm number, length, and composition from organic and hybrid inorganic/organic multifunctional initiators); independent bibliographic record confirms Macromolecules 32 (1999), first page 6526.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:jadrQdTinU8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:aqlVkmm33-oC (Synthesis of acrylate and methacrylate block copolymers using atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 31 (1998), first page 8005.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:SX_7NHgc4EoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:QIV2ME_5wuYC (Atom transfer radical polymerization of tert-butyl acrylate and preparation of block copolymers); independent bibliographic record confirms Macromolecules 33 (2000), first page 4039.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:fGf7eakw1skC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:08ZZubdj9fEC (Atom transfer radical copolymerization of methyl methacrylate and n-butyl acrylate); independent bibliographic record confirms Macromolecules 34 (2001), first page 415.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:k7q84DbdwMkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:SP6oXDckpogC (Atom transfer radical copolymerization of styrene and n-butyl acrylate); independent bibliographic record confirms Macromolecules 32 (1999), first page 2221.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:cLTWZyeEzYQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Tiz5es2fbqcC (Reversible redox cleavage/coupling of polystyrene with disulfide or thiol groups prepared by atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 35 (2002), first page 9009.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:Sfpquvl-xlAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "“ACS Macro Lett.” is a journal-name fragment, while the retained 2012 article has the same author group and a full title.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/mz300457e",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:JRsRMxr6jeEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:pyW8ca7W8N0C (Polymerization of substituted styrenes by atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 30 (1997), first page 5643.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:V1nBLc0XvGsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:LjlpjdlvIbIC (Kinetic analysis of controlled/“living” radical polymerizations by simulations. 1. The importance of diffusion-controlled reactions); independent bibliographic record confirms Macromolecules 32 (1999), first page 2948.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:tNmn4cwa0ScC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:fEOibwPWpKIC (Simultaneous EPR and kinetic study of styrene atom transfer radical polymerization (ATRP)); independent bibliographic record confirms Macromolecules 31 (1998), first page 5695.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:FBcFxi217TgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:a0OBvERweLwC (Immobilization of the copper catalyst in atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 32 (1999), first page 2941.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:AI-5X4gT9lUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:UHK10RUVsp4C (Controlled/“living” radical polymerization with dendrimers containing stable radicals); independent bibliographic record confirms Macromolecules 29 (1996), first page 4167.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:fILhpA0PAsEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:_kc_bZDykSQC (Permanent, nonleaching antibacterial surfaces. 1. Synthesis by atom transfer radical polymerization); independent bibliographic record confirms Biomacromolecules 5 (2004), first page 877.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/bm034352k",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:9uvUmQZnaecC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:KxtntwgDAa4C (An investigation into the CuX/2, 2 ‘-bipyridine (X= Br or Cl) mediated atom transfer radical polymerization of acrylonitrile); independent bibliographic record confirms Macromolecules 32 (1999), first page 6431.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:9feStdD0LQ8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:r0BpntZqJG4C (Polymerization of n-butyl acrylate by atom transfer radical polymerization. Remarkable effect of ethylene carbonate and other solvents); independent bibliographic record confirms Macromolecules 31 (1998), first page 1535.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:UzCbxNTfINAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:SP6oXDckpogC (Atom transfer radical copolymerization of styrene and n-butyl acrylate); independent bibliographic record confirms Macromolecules 32 (1999), first page 2221.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:9crOBHBO_0cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:FPJr55Dyh1AC (Water-borne block and statistical copolymers synthesized using atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 33 (2000), first page 2296.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:BBgDiIqlkjcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Mojj43d5GZwC (\" Living\" radical polymerization of vinyl acetate); independent bibliographic record confirms Macromolecules 27 (1994), first page 645.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:LpJ4L8tw5K0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:GnPB-g6toBAC (Radical nature of Cu-catalyzed controlled radical polymerizations (atom transfer radical polymerization)); independent bibliographic record confirms Macromolecules 31 (1998), first page 4710.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ZoxmWHDhGE4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:D03iK_w7-QYC (Controlled/living radical polymerization of vinyl acetate by degenerative transfer with alkyl iodides); independent bibliographic record confirms Macromolecules 36 (2003), first page 9346.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:c1inI0PF7pQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:HoB7MX3m0LUC (Densely-grafted and double-grafted PEO brushes via ATRP. A route to soft elastomers); independent bibliographic record confirms Macromolecules 36 (2003), first page 6746.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:-7hz9Je1r5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:BUYA1_V_uYcC (Synthesis of well-defined alternating copolymers by controlled/living radical polymerization in the presence of Lewis acids); independent bibliographic record confirms Macromolecules 36 (2003), first page 3136.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:LA4OTcbMHDQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:L7CI7m0gUJcC (Heterografted PEO–PnBA brush copolymers); independent bibliographic record confirms Polymer 44 (2003), first page 6863.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:B-L1oJnry8cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Zph67rFs4hoC (Activator generated by electron transfer for atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 38 (2005), first page 4139.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:LLiXD_u3HPoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:08ZZubdj9fEC (Atom transfer radical copolymerization of methyl methacrylate and n-butyl acrylate); independent bibliographic record confirms Macromolecules 34 (2001), first page 415.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:hYn2feYqS88C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:DkZNVXde3BIC (\" Living\" cationic polymerization of styrene in the presence of tetrabutylammonium salts); independent bibliographic record confirms Macromolecules 26 (1993), first page 2785.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:5kPk9ySVCH0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:PELIpwtuRlgC (Mechanistic aspect of reverse atom transfer radical polymerization of n-butyl methacrylate in aqueous dispersed system); independent bibliographic record confirms Macromolecules 33 (2000), first page 7310.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:tl2vixOLeswC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:FPJr55Dyh1AC (Water-borne block and statistical copolymers synthesized using atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 33 (2000), first page 2296.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:GeK8YprAuG8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:eq2jaN3J8jMC (Block copolymers of poly (styrene) and poly (acrylic acid) of various molar masses, topologies, and compositions prepared via controlled/living radical polymerization …); independent bibliographic record confirms Macromolecules 34 (2001), first page 4439.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:h8Z0oieY4pgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Z5m8FVwuT1cC (Kinetic analysis of controlled/“living” radical polymerizations by simulations. 2. Apparent external orders of reactants in atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 33 (2000), first page 1553.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:3S28UbO8kNMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:BrmTIyaxlBUC (Observation and analysis of a slow termination process in the atom transfer radical polymerization of styrene); independent bibliographic record confirms Tetrahedron 53 (1997), first page 15321.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:HcwyVQLE2yUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:0izLItjtcgwC (EPR study of atom transfer radical polymerization (ATRP) of styrene); independent bibliographic record confirms Macromolecules 31 (1998), first page 548.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:LXJi0SSOA9oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:z_wVstp3MssC (Sonochemical synthesis of polysilylenes by reductive coupling of disubstituted dichlorosilanes with alkali metals); independent bibliographic record confirms Macromolecules 28 (1995), first page 59.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:e8QtjKZPWEsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:IjCSPb-OGe4C (Polymers with very low polydispersities from atom transfer radical polymerization); independent bibliographic record confirms Science 272 (1996), first page 866.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:8QpronZWmEoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:u9iWguZQMMsC (Ranking living systems); independent bibliographic record confirms Macromolecules 26 (1993), first page 1787.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:-gyp0GYJ1WwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:EUQCXRtRnyEC (Determination of activation and deactivation rate constants of model compounds in atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 34 (2001), first page 5125.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:gs4y9EaAC9EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:dTyEYWd-f8wC (Initiation efficiency in the synthesis of molecular brushes by grafting from via atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 38 (2005), first page 702.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:1gSrWeNtq_cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:TFP_iSt0sucC (Kinetic study of the homogeneous atom transfer radical polymerization of methyl methacrylate); independent bibliographic record confirms Macromolecules 30 (1997), first page 6507.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:MIRdOSOK3M0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:uWiczbcajpAC (Synthesis of functional polystyrenes by atom transfer radical polymerization using protected and unprotected carboxylic acid initiators); independent bibliographic record confirms Macromolecules 32 (1999), first page 7349.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:XlwuXga91i8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:IWHjjKOFINEC (Mechanism of controlled/“living” radical polymerization of styrene in the presence of nitroxyl radicals. Kinetics and simulations); independent bibliographic record confirms Macromolecules 29 (1996), first page 7661.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:H4GFzQhrpr4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:yB1At4FlUx8C (Copolymerization of N, N-dimethylacrylamide with n-butyl acrylate via atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 36 (2003), first page 2598.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:3ATAXZaS3TEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:NyGDZy8z5eUC (Factors affecting rates of comonomer consumption in copolymerization processes with intermittent activation); independent bibliographic record confirms Macromolecules 35 (2002), first page 6773.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:FZCUiftdOUEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:ULOm3_A8WrAC (Step-growth “click” coupling of telechelic polymers prepared by atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 38 (2005), first page 3558.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:aWCtK4zW1QcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:wbdj-CoPYUoC (Synthesis of degradable miktoarm star copolymers via atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 38 (2005), first page 5995.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:UGFFkuTI9KQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:dshw04ExmUIC (Block copolymers by transformation of living ring-opening metathesis polymerization into controlled/“living” atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 30 (1997), first page 6513.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:KJzUgciPZu0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:vRqMK49ujn8C (Combining atom transfer radical polymerization and disulfide/thiol redox chemistry: a route to well-defined (bio) degradable polymeric materials); independent bibliographic record confirms Macromolecules 38 (2005), first page 3087.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:8Op0m--4DtwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:pqnbT2bcN3wC (Tridentate nitrogen-based ligands in Cu-based ATRP: A structure− activity study); independent bibliographic record confirms Macromolecules 34 (2001), first page 430.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:tNsEl-QMJWAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:Mojj43d5GZwC (\" Living\" radical polymerization of vinyl acetate); independent bibliographic record confirms Macromolecules 27 (1994), first page 645.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:yOA6RG8w9-QC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:1taIhTC69MYC (Interaction of propagating radicals with copper (I) and copper (II) species); independent bibliographic record confirms Macromolecules 31 (1998), first page 4718.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:thkM2fmW5swC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:_5tno0g5mFcC (Effect of penultimate unit on the activation process in ATRP); independent bibliographic record confirms Macromolecules 36 (2003), first page 8222.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:nva1KoxQSsgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:u-coK7KVo8oC (Effect of [CuII] on the rate of activation in ATRP); independent bibliographic record confirms Macromolecules 38 (2005), first page 2015.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:Yea2hB8LYAgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:HDshCWvjkbEC (Controlled/“living” atom transfer radical polymerization of methyl methacrylate using various initiation systems); independent bibliographic record confirms Macromolecules 31 (1998), first page 1527.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:huaeK-hngbUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:hC7cP41nSMkC (\" Living\" radical polymerization. 1. Possibilities and limitations); independent bibliographic record confirms Macromolecules 27 (1994), first page 638.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:aOgtWGAEtoUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:fEOibwPWpKIC (Simultaneous EPR and kinetic study of styrene atom transfer radical polymerization (ATRP)); independent bibliographic record confirms Macromolecules 31 (1998), first page 5695.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:J0LY0Bm-n5cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:SeFeTyx0c_EC (ABA triblock copolymers containing polyhedral oligomeric silsesquioxane pendant groups: synthesis and unique properties); independent bibliographic record confirms Polymer 44 (2003), first page 2739.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:NPXGMAJaBc0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:foquWX3nUaYC (Atom transfer radical polymerization initiated with vinylidene fluoride telomers); independent bibliographic record confirms Macromolecules 33 (2000), first page 4613.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:sruhrGb4OIAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:9vf0nzSNQJEC (Well-defined (Co) polymers with 5-vinyltetrazole units via combination of atom transfer radical (Co) polymerization of acrylonitrile and “click chemistry”-type …); independent bibliographic record confirms Macromolecules 37 (2004), first page 9308.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:jLgYsXMKUAIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:fQNAKQ3IYiAC (Improving the structural control of graft copolymers by combining ATRP with the macromonomer method); independent bibliographic record confirms Macromolecules 34 (2001), first page 3186.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:awctw23wKMwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:VLnqNzywnoUC (Effect of [bpy]/[Cu (I)] ratio, solvent, counterion, and alkyl bromides on the activation rate constants in atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 36 (2003), first page 599.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:931SYA3ZkTIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:xtRiw3GOFMkC (Kinetics of decomposition of 2, 2, 6, 6-tetramethyl-1-(1-phenylethoxy) piperidine and its implications on nitroxyl-mediated styrene polymerization); independent bibliographic record confirms Macromolecules 28 (1995), first page 6692.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:hV1lSNenGuMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:JQOojiI6XY0C (Synthesis of Styrene− Acrylonitrile copolymers and related block copolymers by atom transfer radical polymerization); independent bibliographic record confirms Macromolecules 35 (2002), first page 6142.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:eq_4NgCLNE0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser artifact: the captured venue says “There is no corresponding record for this reference” and the title is a journal citation string. Retain TSkli5EAAAAJ:YohjEiUPhakC (Densely heterografted brush macromolecules with crystallizable grafts. Synthesis and bulk properties); independent bibliographic record confirms Macromolecules 39 (2006), first page 584.",
+      "evidence_url": "https://www.cmu.edu/maty/publications-and-ip/published-papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:6cRkBLN27MIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2401112, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2401112.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:nrqKGYZW0YEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0549353, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0549353.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:6Y_dmPnKdi4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2404433, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2404433.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:pa8CQvru-44C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2324168, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2324168.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:skJa_PN5K8UC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2202747, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2202747.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:T5CU1zodnjUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2108901, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2108901.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:DixNtYelOVEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2000391, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2000391.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:wULyvFuScqUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1921858, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1921858.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:dn5YDl2tZ1AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1840477, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1840477.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:pbjxn5iCWp4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1707490, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1707490.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ayC5lPBLW6kC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1501324, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1501324.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:qhIcoX8QylYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1436219, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1436219.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:POFsnQupWFoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1400052, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1400052.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:P9MRcciWm44C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1332836, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1332836.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:JqMfBPSLmukC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1122575, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1122575.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:gmU9yhUcbuYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1026060, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1026060.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:5zr8yy9J6TYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0969301, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0969301.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:xBGfnI2HyV0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0729967, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0729967.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:YSgvKD4x8dUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0715494, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0715494.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:6Qrnqxh1sGEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0609087, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0609087.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:CvglplIuTUsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0619424, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0619424.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:DDwNw_L35yQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0608646, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0608646.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:jv8D7fDxOUYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0521721, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0521721.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:3Y8oUG17k5cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0455327, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0455327.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:8npi0XEtz6YC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0405627, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0405627.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ZN7I2HTsEOEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0304568, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0304568.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:1pey-SaUeH0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0242207, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0242207.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:WrZp7-IeehMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0131093, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0131093.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ewL_JhaqEDAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0103307, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0103307.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:6hyyh8_BpA4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0096601, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0096601.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:tI-2XuXIwQMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0090409, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0090409.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:t4SdOxG4BhAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9808188, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9808188.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:PhT1XvKUZKoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9871450, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9871450.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:Nm_okVSxvOsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9307217, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9307217.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:j6mqITKBdiAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8957071, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8957071.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:_KMF2lpQ3qEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8803774, not a publication; official award title matches this exact captured row.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8803774.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:pzJoL9iqVMkC",
+      "reason_code": "nonpublication",
+      "reason": "The title is Wiley’s journal URL printed in article footers, not a scholarly work title.",
+      "evidence_url": "https://onlinelibrary.wiley.com/journal/10991581",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:VaMtIHQgT-EC",
+      "reason_code": "nonpublication",
+      "reason": "The title is RSC’s descriptive Polymer Chemistry journal tagline, not an article.",
+      "evidence_url": "https://pubs.rsc.org/en/journals/journal/py",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:E327TtleLkAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The cited 2007 paper is authored by El-Sharkawy, Khder, and Ahmed; Matyjaszewski is absent. The captured title and author strings are spliced from unrelated records.",
+      "evidence_url": "https://doi.org/10.1016/j.micromeso.2006.12.037",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:ZJKMmrYpGLkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Copyright and manuscript-control text from the ACS article was imported as a second title. Retain its full-title 1999 article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ma981693v",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:fD-0gpYWMdcC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title identifies supporting information for the retained 2018 RSC article TSkli5EAAAAJ:bFgkZVW0mDEC, not a separate publication.",
+      "evidence_url": "https://doi.org/10.1039/C8RE00156A",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:KG8tk2sPfjMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is RSC Chemical Society Reviews issue/header text. The retained article starts on page 1087 in that exact issue.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2008/cs/b714578k",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:D-uKCfLt7BgC",
+      "reason_code": "nonpublication",
+      "reason": "“Beckwith Review Series” is a publisher series heading, not an authored review title.",
+      "evidence_url": "https://connectsci.au/ch/collections",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:zBs7CkPFb0QC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is a bibliographic citation fragment for the retained 1995 JACS paper at volume 117, page 5614.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ja00125a035",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:zzgztwuPHMwC",
+      "reason_code": "nonpublication",
+      "reason": "The title names a CMU Matyjaszewski Polymer Group web page on controlled radical polymerization, not a scholarly publication.",
+      "evidence_url": "https://www.cmu.edu/maty/crp/development.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:OnQ0iyPyVxgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2007 book chapter on pages 2369–2408 is by Leclerc, Heiser, Brochon, and Hadziioannou; Matyjaszewski is an editor of the volume, not a chapter author. The separately retained edited-book observation is TSkli5EAAAAJ:QD3KBmkZPeQC.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F9783527631421.ch57",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:c52SNvrZdl4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2007 book chapter on pages 2263–2293 is by Bielawski and Willson; Matyjaszewski is an editor of the volume, not a chapter author. The separately retained edited-book observation is TSkli5EAAAAJ:QD3KBmkZPeQC.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F9783527631421.ch54",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:F7-PPLTuqqMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2007 chapter on pages 1137–1178, Grafting and Polymer Brushes on Solid Surfaces, is by Fukuda, Tsujii, and Ohno; Matyjaszewski edited the containing volume. The separately retained edited-book observation is TSkli5EAAAAJ:QD3KBmkZPeQC.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F9783527631421.ch27",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:brUMFgqIwuYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2007 book chapter on pages 1881–1936 is Chromatography of polymers by Radke; Matyjaszewski is an editor of the volume, not the chapter author. The separately retained edited-book observation is TSkli5EAAAAJ:QD3KBmkZPeQC.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F9783527631421.ch45",
+      "verified_at": "2026-10-24"
     }
   ]
 }
