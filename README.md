@@ -71,6 +71,13 @@ rule. Captured rows retain their Scholar citation URLs and checksums of the
 locally saved source pages; a capped profile is labeled as such. Browser
 capture is not a scheduled or search-based collection path.
 
+A browser cache marked `complete_visible_profile` is excluded from bounded
+`scholarly` refreshes, including `--force`. The collector checks again before
+writing so a complete capture added during a run is also preserved. A new
+complete browser capture is required to update its publication rows and
+coverage claim; a response capped at the collector's 200-publication default
+cannot replace them.
+
 ## Update cadence
 
 - Faculty membership is reviewed annually on July 1.

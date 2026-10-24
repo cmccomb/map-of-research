@@ -240,6 +240,108 @@ def test_selection_prioritizes_missing_cache_then_oldest_attempt(
     ]
 
 
+def test_complete_browser_capture_is_excluded_even_when_forced(tmp_path: Path) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    complete_path = cache_dir / "alphaAAAAJ.json"
+    complete = {
+        "schema_version": 1,
+        "scholar_id": "alphaAAAAJ",
+        "publication_count": 253,
+        "publications": [
+            {"title": f"Paper {index}", "author_pub_id": f"alpha:{index}"}
+            for index in range(253)
+        ],
+        "browser_capture": {
+            "coverage": "complete_visible_profile",
+            "more_remain": False,
+        },
+    }
+    atomic_write_json(complete_path, complete)
+    profiles = unique_profiles(load_registry(*paths))
+    selected = select_profiles(
+        profiles,
+        {"profiles": {}},
+        cache_dir,
+        now=NOW,
+        min_age_days=0,
+        max_profiles=1,
+        force=True,
+    )
+    assert [profile.scholar_id for profile in selected] == ["betaAAAAJ"]
+
+    calls = []
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        target_person_ids=["person-alpha"],
+        force=True,
+        now=NOW,
+        fetcher=lambda *args, **kwargs: calls.append((args, kwargs)),
+    )
+    assert result.status == "noop"
+    assert calls == []
+    assert load_json(complete_path) == complete
+
+
+@pytest.mark.parametrize("new_count", [200, 253, 254])
+def test_complete_browser_capture_survives_a_late_bounded_refresh(
+    tmp_path: Path,
+    monkeypatch,
+    new_count: int,
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    complete = {
+        "schema_version": 1,
+        "scholar_id": "alphaAAAAJ",
+        "publication_count": 253,
+        "publications": [{"author_pub_id": f"old:{i}"} for i in range(253)],
+        "browser_capture": {"coverage": "complete_visible_profile"},
+    }
+    atomic_write_json(cache_path, complete)
+    old_bytes = cache_path.read_bytes()
+    selected = unique_profiles(load_registry(*paths))[:1]
+    # Emulate a capture installed after the initial profile selection.
+    monkeypatch.setattr(collector, "select_profiles", lambda *args, **kwargs: selected)
+
+    def fetcher(profile, *, publication_limit):
+        assert publication_limit == 200
+        return [
+            {"title": f"New {i}", "author_pub_id": f"new:{i}"} for i in range(new_count)
+        ]
+
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        now=NOW,
+        fetcher=fetcher,
+    )
+    assert result.status == "failure"
+    assert result.failed_profile_ids == ("alphaAAAAJ",)
+    assert cache_path.read_bytes() == old_bytes
+    state = load_collection_state(tmp_path / "state.json")
+    assert state["profiles"]["alphaAAAAJ"]["last_error_type"] == "RuntimeError"
+
+
+def test_complete_browser_capture_check_rejects_invalid_cache(tmp_path: Path) -> None:
+    cache_path = tmp_path / "profile.json"
+    atomic_write_json(cache_path, [])
+    with pytest.raises(ValueError, match="not a JSON object"):
+        collector._has_complete_browser_capture(cache_path)
+
+
 def test_collection_state_initializes_and_validates_schema(tmp_path: Path) -> None:
     path = tmp_path / "state.json"
     assert load_collection_state(path) == {"schema_version": 1, "profiles": {}}
