@@ -50,6 +50,35 @@ records the profile IDs, coverage, counts, and checksums. These are captured
 profile observations; the number of distinct or mapped works depends on the
 later normalization and map-eligibility audit.
 
+## Fonseca visible-profile completion
+
+A later direct Chrome request to the same [CMU-linked Fonseca Scholar profile](https://scholar.google.com/citations?user=JV3ryMgAAAAJ)
+loaded 100 rows and used Show more twice. The button then disabled at 253 rows.
+The browser was closed without a refusal. This replaces Fonseca's earlier
+200-row `capped_partial` cache with a 253-row `complete_visible_profile` cache;
+it makes no claim about works missing from Scholar. The 200 old citation IDs
+are all retained with unchanged titles, authors, years, venues, and citation
+counts. The 53 added IDs and all 253 rows were checked against the saved HTML
+for profile identity, contiguous row order, unique citation IDs, citation URLs,
+displayed fields, and the disabled continuation button. The raw
+[`HTML`](../../data/captures/fonseca-visible-253-2026-10-24.html),
+[`row JSON`](../../data/captures/fonseca-visible-253-2026-10-24.json), and
+[`receipt`](../../status/browser-capture-fonseca-complete-2026-10-24.json)
+preserve the source and checksums.
+
+Twenty-one exact Fonseca observations have source-backed exclusions in
+`data/curated/scholar-exclusions.json`: 18 NSF award records verified through
+the [NSF Awards API](https://api.nsf.gov/services/v1/awards.json?id=2205627),
+one cardiology article attributed to an I. Fonseca at a Coimbra medical
+service in [PubMed](https://pubmed.ncbi.nlm.nih.gov/1290648/), one
+[Infosys book-series](https://www.infosysprize.org/about-isf/springer-series.html)
+container, and the [Analysis & PDE](https://msp.org/apde/about/journal/about.html)
+journal container. These observations remain in the raw snapshot but do not
+create Fonseca authorships or map points. Prefaces, correction notices,
+preprints, lecture notes, and reports were retained where they may be genuine
+scholarly outputs; unclear or damaged metadata did not by itself justify
+removing a unique work.
+
 ## Stopped direct-profile attempt
 
 A later headed Chrome attempt opened the direct Scholar ID `ms9O2zoAAAAJ`
