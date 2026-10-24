@@ -53,6 +53,12 @@ def write_registry(
             "primary_department_source_url",
             "primary_department_verified_at",
             "primary_department_basis",
+            "primary_academic_home_type",
+            "primary_academic_home_id",
+            "primary_academic_home_title",
+            "primary_academic_home_source_url",
+            "primary_academic_home_verified_at",
+            "primary_academic_home_basis",
         ),
         people,
     )
@@ -78,8 +84,12 @@ def write_registry(
             "directory_url",
             "reviewed_at",
             "review_notes",
+            "unit_type",
         ),
-        [{"school_id": "engineering", **row} for row in department_rows],
+        [
+            {"school_id": "engineering", "unit_type": "department", **row}
+            for row in department_rows
+        ],
     )
     _write(
         schools_path,

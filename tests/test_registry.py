@@ -203,10 +203,12 @@ def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None
             {
                 "person_id": "person-reviewed",
                 "display_name": "Reviewed Academic",
-                "primary_department_id": "iii",
-                "primary_department_source_url": "https://example.test/iii-profile",
-                "primary_department_verified_at": "2026-10-24",
-                "primary_department_basis": "reviewed",
+                "primary_academic_home_type": "institute",
+                "primary_academic_home_id": "iii",
+                "primary_academic_home_title": "Integrated Innovation Institute",
+                "primary_academic_home_source_url": "https://example.test/iii-profile",
+                "primary_academic_home_verified_at": "2026-10-24",
+                "primary_academic_home_basis": "reviewed",
             },
         ],
         memberships=[
@@ -259,11 +261,13 @@ def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None
                 "department_id": "cmu-silicon-valley",
                 "title": "CMU Silicon Valley",
                 "directory_url": "https://example.test/campus",
+                "unit_type": "campus",
             },
             {
                 "department_id": "iii",
                 "title": "Integrated Innovation Institute",
                 "directory_url": "https://example.test/iii",
+                "unit_type": "institute",
             },
             {
                 "department_id": "cmu-africa",
@@ -279,8 +283,9 @@ def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None
     )
     registry = load_registry(people_path, memberships_path, departments_path)
     assert registry.primary_affiliation("person-campus").basis == "unresolved"
-    assert registry.primary_affiliation("person-academic").department_id == "iii"
-    assert registry.primary_affiliation("person-reviewed").department_id == "iii"
+    assert registry.primary_affiliation("person-academic").home_id == "iii"
+    assert registry.primary_affiliation("person-academic").home_type == "institute"
+    assert registry.primary_affiliation("person-reviewed").home_id == "iii"
     assert registry.primary_affiliation("person-africa").department_id == "cmu-africa"
 
 
@@ -431,36 +436,41 @@ def test_primary_review_ledger_covers_every_ambiguous_registry_identity() -> Non
         review_rows = list(csv.DictReader(handle))
     reviews = {row["person_id"]: row for row in review_rows}
     assert len(reviews) == len(review_rows)
-    ambiguous = set()
+    needs_review = set()
     for person in registry.people:
         memberships = [
             item for item in registry.memberships if item.person_id == person.person_id
         ]
         included = {item.department_id for item in memberships if item.included}
         candidates = included or {item.department_id for item in memberships}
-        if len(candidates) > 1:
-            ambiguous.add(person.person_id)
+        primary = registry.primary_affiliation(person.person_id)
+        if len(candidates) > 1 or (included and primary.home_type == "unresolved"):
+            needs_review.add(person.person_id)
             review = reviews[person.person_id]
             assert review["review_source_urls"].startswith("https://")
-            primary = registry.primary_affiliation(person.person_id)
             assert review["primary_department_id"] == primary.department_id
+            assert review["primary_academic_home_type"] == primary.home_type
+            assert review["primary_academic_home_id"] == primary.home_id
             assert review["review_status"] == (
-                person.primary_department_basis
-                if person.primary_department_id
+                person.primary_department_basis or person.primary_academic_home_basis
+                if person.primary_department_id or person.primary_academic_home_id
                 else "derived"
-                if primary.department_id
+                if primary.home_id
                 else "unresolved"
             )
         else:
-            primary = registry.primary_affiliation(person.person_id)
-            included_academic = {
-                item.department_id for item in memberships if item.included
-            } - registry_module.CAMPUS_ONLY_IDS
+            included_academic = [
+                item
+                for item in memberships
+                if item.included
+                and registry.departments_by_id[item.department_id].unit_type
+                not in {"campus"}
+            ]
             if not included_academic:
                 assert primary.basis == "unresolved"
             else:
-                assert primary.department_id
-    assert set(reviews) == ambiguous
+                assert primary.home_id
+    assert set(reviews) == needs_review
 
 
 @pytest.mark.parametrize(
@@ -837,3 +847,219 @@ def test_registry_indexes_and_profile_properties(tmp_path: Path) -> None:
     assert registry.departments_by_id["ece"].title.startswith("Electrical")
     assert profile.scholar_id == "oneAAAAJ"
     assert unique_profiles(registry) == [profile]
+
+
+def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
+    registry = load_registry()
+    with Path("registry/reviews/2026-10-24-heinz-tepper-primary-units.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    assert len(rows) == 29
+    for row in rows:
+        person = registry.people_by_id[row["person_id"]]
+        assert person.scholar_id
+        home = registry.primary_affiliation(person.person_id)
+        assert home.department_id == ""
+        if row["display_name"] == "Pedro Ferreira":
+            assert (home.home_type, home.home_id, home.basis) == (
+                "constituent_school",
+                "heinz-ism",
+                "inferred_advisee_count",
+            )
+        elif row["one_or_multiple"] == "one":
+            assert (home.home_type, home.home_id) == (
+                "academic_area",
+                row["proposed_primary_academic_home"],
+            )
+            assert home.title == row["official_unit_names"]
+            if person.display_name not in {"Gérard P. Cornuéjols", "Nicholas Muller"}:
+                assert home.source_url == row["official_unit_source_urls"]
+        else:
+            assert (home.home_type, home.home_id, home.basis) == (
+                "school",
+                "tepper",
+                "school_fallback",
+            )
+        published = home.published_fields()
+        assert published["primary_academic_home_type"] == home.home_type
+        assert published["primary_academic_home_id"] == home.home_id
+        assert published["primary_academic_home_title"] == home.title
+        assert published["primary_academic_home_school_id"] == home.school_id
+        assert published["primary_academic_home_source_url"] == home.source_url
+        assert published["primary_academic_home_basis"] == home.basis
+        assert published["primary_department_id"] == ""
+        assert published["primary_department_basis"] == "unresolved"
+    assert registry.departments_by_id["cmu-africa"].unit_type == "department"
+    assert registry.departments_by_id["cmu-silicon-valley"].unit_type == "campus"
+
+
+@pytest.mark.parametrize(
+    ("home", "unit_ids", "invalid_unit_type", "message"),
+    [
+        (
+            {"primary_department_id": "ece"},
+            ("ece", "tepper-faculty"),
+            False,
+            "Two explicit primary homes",
+        ),
+        (
+            {"primary_academic_home_type": "campus"},
+            ("tepper-faculty",),
+            False,
+            "Invalid primary academic home type",
+        ),
+        (
+            {"primary_academic_home_title": ""},
+            ("tepper-faculty",),
+            False,
+            "needs title, source and date",
+        ),
+        (
+            {"primary_academic_home_basis": "alphabetical"},
+            ("tepper-faculty",),
+            False,
+            "needs a valid basis",
+        ),
+        (
+            {"primary_academic_home_id": ""},
+            ("tepper-faculty",),
+            False,
+            "provenance needs an ID",
+        ),
+        (
+            {
+                "primary_academic_home_type": "school",
+                "primary_academic_home_id": "unknown",
+                "primary_academic_home_title": "Unknown",
+            },
+            ("ece",),
+            False,
+            "Unknown primary school home",
+        ),
+        (
+            {
+                "primary_academic_home_type": "school",
+                "primary_academic_home_id": "tepper",
+                "primary_academic_home_title": "Tepper School of Business",
+            },
+            ("ece",),
+            False,
+            "not an included membership",
+        ),
+        (
+            {"primary_academic_home_id": "tepper:Invalid"},
+            ("tepper-faculty",),
+            False,
+            "Invalid primary academic area",
+        ),
+        (
+            {},
+            ("ece",),
+            False,
+            "needs Tepper membership",
+        ),
+        (
+            {
+                "primary_academic_home_type": "institute",
+                "primary_academic_home_id": "ece",
+                "primary_academic_home_title": "ECE",
+            },
+            ("ece",),
+            False,
+            "not an eligible typed unit",
+        ),
+        (
+            {
+                "primary_academic_home_id": "",
+                "primary_academic_home_type": "",
+                "primary_academic_home_title": "",
+                "primary_academic_home_source_url": "",
+                "primary_academic_home_verified_at": "",
+                "primary_academic_home_basis": "",
+                "primary_department_id": "iii",
+                "primary_department_source_url": "https://example.test/iii",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": "reviewed",
+            },
+            ("iii",),
+            False,
+            "must be an actual department",
+        ),
+        (
+            {},
+            ("tepper-faculty",),
+            True,
+            "Invalid registry unit type",
+        ),
+    ],
+)
+def test_primary_home_rejects_invalid_evidence_or_type(
+    tmp_path: Path,
+    home: dict[str, str],
+    unit_ids: tuple[str, ...],
+    invalid_unit_type: bool,
+    message: str,
+) -> None:
+    person = {
+        "person_id": "person-test",
+        "display_name": "Test",
+        "primary_academic_home_type": "academic_area",
+        "primary_academic_home_id": "tepper:finance",
+        "primary_academic_home_title": "Finance",
+        "primary_academic_home_source_url": "https://example.test/area",
+        "primary_academic_home_verified_at": "2026-10-24",
+        "primary_academic_home_basis": "reviewed",
+        **home,
+    }
+    departments = [
+        {
+            "department_id": "ece",
+            "school_id": "engineering",
+            "title": "ECE",
+            "directory_url": "https://example.test/ece",
+        },
+        {
+            "department_id": "iii",
+            "school_id": "engineering",
+            "title": "III",
+            "unit_type": "institute",
+            "directory_url": "https://example.test/iii",
+        },
+        {
+            "department_id": "tepper-faculty",
+            "school_id": "tepper",
+            "title": "Tepper roster",
+            "unit_type": "invalid" if invalid_unit_type else "roster_container",
+            "directory_url": "https://example.test/tepper",
+        },
+    ]
+    paths = write_registry(
+        tmp_path,
+        people=[person],
+        memberships=[
+            {
+                "person_id": "person-test",
+                "department_id": unit_id,
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/roster",
+            }
+            for unit_id in unit_ids
+        ],
+        departments=departments,
+        schools=[
+            {
+                "school_id": "engineering",
+                "title": "Engineering",
+                "directory_url": "https://example.test/engineering",
+            },
+            {
+                "school_id": "tepper",
+                "title": "Tepper School of Business",
+                "directory_url": "https://example.test/tepper",
+            },
+        ],
+    )
+    with pytest.raises(ValueError, match=message):
+        load_registry(*paths)

@@ -488,6 +488,7 @@ def registry() -> Registry:
                 directory_url="https://example.test/sv",
                 reviewed_at="2026-07-17",
                 review_notes="Test",
+                unit_type="campus",
             ),
             Department(
                 department_id="ece",
@@ -1097,8 +1098,13 @@ def test_map_artifact_catalog_retains_full_included_roster() -> None:
     }
     assert departments["ece"]["publication_count"] == 1
     assert departments["ece"]["school_id"] == "engineering"
+    assert departments["ece"]["unit_type"] == "department"
     assert departments["bme"]["publication_count"] == 0
     assert artifact["catalogs"]["faculty"][0]["school_ids"] == ["engineering"]
+    assert artifact["catalogs"]["faculty"][0]["primary_academic_home_type"] == (
+        "department"
+    )
+    assert artifact["catalogs"]["faculty"][0]["primary_academic_home_id"] == ("ece")
 
 
 def test_map_artifact_tracks_cross_school_membership_once() -> None:
@@ -1162,6 +1168,9 @@ def test_map_artifact_tracks_cross_school_membership_once() -> None:
         "scs",
     ]
     assert artifact["catalogs"]["faculty"][0]["primary_department_id"] == ""
+    assert artifact["catalogs"]["faculty"][0]["primary_academic_home_type"] == (
+        "unresolved"
+    )
     assert (
         artifact["catalogs"]["faculty"][0]["primary_department_basis"] == "unresolved"
     )

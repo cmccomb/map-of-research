@@ -1,7 +1,8 @@
-# Primary display department review, 2026-10-24
+# Primary academic home review, 2026-10-24
 
 The [row-level review ledger](2026-10-24-primary-departments.csv) records all
-188 people with more than one candidate unit: 170 included people and 18
+190 people needing an explicit review: 168 included people with multiple
+candidate units, two included people with only a campus facet, and 20
 excluded-only people with multiple recorded units. It reconciles the
 [four-school primary review](2026-10-24-other-schools-primary.md) and the
 [Physics primary review](2026-10-24-physics-primary-departments.csv) with the
@@ -9,19 +10,23 @@ earlier Engineering, SCS, and MCS choices. All memberships remain available
 for filters. A display primary is not an assertion about a university HR
 primary appointment.
 
-| Population | People | One included academic unit | Reviewed source | Inferred profile title | Inferred PhD advisees | Unresolved |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,481 | 1,246 | 178 | 2 | 15 | 40 |
-| Excluded-only roster | 520 | 0 | 0 | 0 | 0 | 520 |
-| Entire registry | 2,001 | 1,246 | 178 | 2 | 15 | 560 |
+| Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | Unresolved |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Included roster | 1,481 | 1,099 | 152 | 172 | 2 | 16 | 40 |
+| Excluded-only roster | 520 | 0 | 0 | 0 | 0 | 0 | 520 |
+| Entire registry | 2,001 | 1,099 | 152 | 172 | 2 | 16 | 560 |
 
 The explicit choices include their source URL, verification date, and basis in
 `people.csv`. `reviewed` means a source-backed map display choice;
-`inferred_profile_title` means the selected department is named in a CMU
-faculty-page title despite a joint appointment; `inferred_advisee_count` means
-the selected department has more distinct PhD advisees with publicly stated
-degree departments in the available lab roster. The latter two are editorial
-inferences with limits recorded in the ledger.
+`school_fallback` means only a broad school-level home is supported by an
+included shared roster; `inferred_profile_title` means the selected academic
+unit is named in a CMU faculty-page title despite a joint appointment; and
+`inferred_advisee_count` means that unit has more distinct PhD advisees with
+publicly stated degree departments in the available lab roster. The latter
+two are editorial inferences with limits recorded in the ledger. The typed
+home fields distinguish actual departments from institutes, constituent
+schools, Tepper academic areas, and broad school fallbacks. The legacy
+`primary_department_id` is populated only for actual departments.
 
 The ledger records all 40 included people without a supported single choice.
 Examples with specific evidence gaps are:
@@ -55,9 +60,36 @@ Ilyas remains unresolved.
 names 12 Neural Computation PhD advisees, three ECE advisees, and one BME
 advisee among its degree-coded current and former students. His inferred
 display primary is Neuroscience Institute; the roster may not represent every
-past advisee. The [four-school review](2026-10-24-other-schools-primary.md)
-also documents advising-count changes for Lujo Bauer, Tzahi Cohen-Karni, and
-other coequal appointments.
+past advisee. [Lujo Bauer's CMU-hosted student roster](https://users.ece.cmu.edu/~lbauer/)
+lists 12 degree-labeled CMU ECE PhD students (three current, nine former)
+versus eight Societal Computing PhD students (four current, four former).
+Entries explicitly credited to another advisor are excluded from this count.
+The former-student section includes people Bauer says he advised *or worked
+with closely*, so ECE is a labeled inference from his listed PhD students,
+not a claim about a complete advising history. This full-roster comparison
+supersedes the current-cohort-only S3D choice in the earlier
+[Heinz](2026-10-24-heinz.md) and
+[four-school](2026-10-24-other-schools-primary.md) reviews.
+[Tzahi Cohen-Karni's CMU lab roster](https://www.cmu.edu/cohenkarnilab/people/index.html)
+supports the separate MSE inference from eight current MSE and seven current
+BME PhD students, with both appointments retained.
+
+[Pedro Ferreira's CMU-hosted faculty profile](https://www.contrib.andrew.cmu.edu/~pedrof/)
+names both the Heinz School of Information Systems and Management (ISM) and
+Engineering and Public Policy (EPP). His
+[January 2025 CV](https://www.heinz.cmu.edu/faculty-research/profiles/profiles/pedro-ferreira/_files/pmfcv012025.pdf)
+names ten CMU Heinz PhD students and nine EPP PhD students across graduated
+primary, graduated co-advised, and current groups; one Temple co-advisee is
+outside the CMU comparison. The CV identifies the Heinz students at the
+*college* level, so the choice of ISM is an inference combining that narrow
+10-to-9 lead with the self-profile's explicit constituent-school position.
+His EPP, Heinz ISM, and shared Heinz memberships remain included. This
+supersedes the school-level `heinz-faculty` placeholder in the earlier
+[Heinz review](2026-10-24-heinz.md). The
+[Heinz and Tepper hierarchy review](2026-10-24-heinz-tepper-primary-units.csv)
+also records 23 Tepper people listed in one official academic area and five
+listed in two; academic areas are not departments, and the shared roster
+containers do not by themselves identify a person's constituent home.
 [Niepa's current lab roster](https://www.cheme.engineering.cmu.edu/research-groups/niepa-lab.html)
 lists nine doctorate students. Five have published ChemE degree evidence:
 [Camila Cue](https://engineering.cmu.edu/news-events/news/2026/06/08-fellowships.html),
@@ -82,7 +114,19 @@ title-based display choices, with both memberships retained.
 
 The CMU-Africa roster unit is treated as an academic department under
 Engineering for this dataset. Its 12 included people with no other included
-department inherit it as their display primary. CMU Silicon Valley is a campus
+department inherit it as their display primary. For the three cross-appointed
+people, [Tim Brown's current profile](https://www.africa.engineering.cmu.edu/about/contact/directory/bios/brown-tim.html)
+titles him Professor of EPP and Director of CMU-Africa, and
+[Barry Rawn's Engineering profile](https://engineering.cmu.edu/directory/bios/rawn-barry.html)
+titles him ECE teaching professor working at CMU-Africa. Their display choices
+use those professorship titles while retaining the CMU-Africa department.
+[Ismaila Dabo's current profile](https://www.africa.engineering.cmu.edu/about/contact/directory/bios/dabo-ismaila.html)
+titles both CMU-Africa and MSE; a
+[CMU MSE appointment account](https://www.mse.engineering.cmu.edu/news/2024/09/12-dabo-global-partnership.html)
+describes his joining the MSE faculty to establish its first substantial
+presence at CMU-Africa. That context supports MSE as a reviewed display
+choice while retaining CMU-Africa. None of these choices asserts a university
+HR primary appointment. CMU Silicon Valley is a campus
 facet, so it cannot be a primary. Only substantive included academic
 memberships can supply a primary; excluded courtesy, affiliate, and adjunct
 memberships remain filterable but do not supply one. All 520 excluded-only
@@ -92,7 +136,7 @@ supports an included ECE membership alongside the Silicon Valley campus.
 
 The 486 Scholar-ID holders include the later Bio/Chemistry IDs, directly linked
 profiles in four more schools, and David R. Owen's user-supplied current ID.
-Of 456 included Scholar-ID holders, 454 have a display primary; Andrew Ilyas
+Of 456 included Scholar-ID holders, 454 have a typed display home; Andrew Ilyas
 and Chris Hendrickson remain unresolved. The other 30 Scholar-ID holders are
 excluded-only and have no display primary.
 The earlier Bio/Chemistry ID additions retain their identity provenance. The

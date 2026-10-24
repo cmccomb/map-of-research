@@ -522,10 +522,7 @@ def build_dataset_tables(
                 "orcid": person.orcid,
                 "homepage_url": person.homepage_url,
                 "notes": person.notes,
-                "primary_department_id": primary.department_id,
-                "primary_department_source_url": primary.source_url,
-                "primary_department_verified_at": primary.verified_at,
-                "primary_department_basis": primary.basis,
+                **primary.published_fields(),
                 "memberships": memberships,
                 "included_department_ids": sorted(
                     {

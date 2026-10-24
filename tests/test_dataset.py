@@ -143,6 +143,8 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
     assert person["included_school_ids"] == ["engineering", "scs"]
     assert person["primary_department_id"] == ""
     assert person["primary_department_basis"] == "unresolved"
+    assert person["primary_academic_home_type"] == "unresolved"
+    assert person["primary_academic_home_id"] == ""
     assert work["school_ids"] == ["engineering", "scs"]
     assert work["school_titles"] == [
         "College of Engineering",

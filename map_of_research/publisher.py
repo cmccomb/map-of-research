@@ -809,6 +809,7 @@ def build_map_artifact(
         {
             "department_id": department.department_id,
             "school_id": department.school_id,
+            "unit_type": department.unit_type,
             "title": department.title,
             "directory_url": department.directory_url,
             "reviewed_at": department.reviewed_at,
@@ -862,10 +863,7 @@ def build_map_artifact(
                     memberships,
                     key=lambda item: (item["department_id"], item["role"]),
                 ),
-                "primary_department_id": primary.department_id,
-                "primary_department_source_url": primary.source_url,
-                "primary_department_verified_at": primary.verified_at,
-                "primary_department_basis": primary.basis,
+                **primary.published_fields(),
                 "school_ids": sorted(
                     {
                         school_by_department[membership["department_id"]]

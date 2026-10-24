@@ -23,6 +23,12 @@ PEOPLE_COLUMNS = (
     "primary_department_source_url",
     "primary_department_verified_at",
     "primary_department_basis",
+    "primary_academic_home_type",
+    "primary_academic_home_id",
+    "primary_academic_home_title",
+    "primary_academic_home_source_url",
+    "primary_academic_home_verified_at",
+    "primary_academic_home_basis",
 )
 MEMBERSHIP_COLUMNS = (
     "person_id",
@@ -40,6 +46,7 @@ DEPARTMENT_COLUMNS = (
     "directory_url",
     "reviewed_at",
     "review_notes",
+    "unit_type",
 )
 SCHOOL_COLUMNS = (
     "school_id",
@@ -48,8 +55,11 @@ SCHOOL_COLUMNS = (
 )
 INCLUDED_ROLES = frozenset({"faculty", "teaching", "emeritus"})
 CAMPUS_ONLY_IDS = frozenset({"cmu-silicon-valley"})
+ACADEMIC_UNIT_TYPES = frozenset({"department", "constituent_school", "institute"})
+UNIT_TYPES = ACADEMIC_UNIT_TYPES | {"campus", "roster_container"}
+PRIMARY_HOME_TYPES = ACADEMIC_UNIT_TYPES | {"academic_area", "school"}
 EXPLICIT_PRIMARY_BASES = frozenset(
-    {"reviewed", "inferred_advisee_count", "inferred_profile_title"}
+    {"reviewed", "inferred_advisee_count", "inferred_profile_title", "school_fallback"}
 )
 KNOWN_ROLES = INCLUDED_ROLES | {
     "adjunct",
@@ -88,21 +98,59 @@ class Person:
     primary_department_source_url: str = ""
     primary_department_verified_at: str = ""
     primary_department_basis: str = ""
+    primary_academic_home_type: str = ""
+    primary_academic_home_id: str = ""
+    primary_academic_home_title: str = ""
+    primary_academic_home_source_url: str = ""
+    primary_academic_home_verified_at: str = ""
+    primary_academic_home_basis: str = ""
 
 
 @dataclass(frozen=True)
 class PrimaryAffiliation:
-    """A map display affiliation, with its public evidence and decision basis."""
+    """A typed map display home, with its public evidence and decision basis."""
 
-    department_id: str
+    home_type: str
+    home_id: str
+    title: str
+    school_id: str
     source_url: str
     verified_at: str
     basis: str
 
+    @property
+    def department_id(self) -> str:
+        """Legacy compatibility field, populated only for actual departments."""
+
+        return self.home_id if self.home_type == "department" else ""
+
+    def published_fields(self) -> dict[str, str]:
+        """Expose the typed contract and department-only legacy fields."""
+
+        return {
+            "primary_academic_home_type": self.home_type,
+            "primary_academic_home_id": self.home_id,
+            "primary_academic_home_title": self.title,
+            "primary_academic_home_school_id": self.school_id,
+            "primary_academic_home_source_url": self.source_url,
+            "primary_academic_home_verified_at": self.verified_at,
+            "primary_academic_home_basis": self.basis,
+            "primary_department_id": self.department_id,
+            "primary_department_source_url": self.source_url
+            if self.department_id
+            else "",
+            "primary_department_verified_at": self.verified_at
+            if self.department_id
+            else "",
+            "primary_department_basis": self.basis
+            if self.department_id
+            else "unresolved",
+        }
+
 
 @dataclass(frozen=True, order=True)
 class Department:
-    """One department or program and its authoritative annual-review source."""
+    """One registry unit and its authoritative annual-review source."""
 
     department_id: str
     title: str
@@ -110,6 +158,7 @@ class Department:
     reviewed_at: str
     review_notes: str
     school_id: str
+    unit_type: str = "department"
 
 
 @dataclass(frozen=True, order=True)
@@ -230,31 +279,92 @@ class Registry:
         """Prefer an evidence-reviewed choice; derive only unambiguous cases."""
 
         person = self.people_by_id[person_id]
-        if person.primary_department_id:
+        if person.primary_academic_home_id:
+            school_id = (
+                person.primary_academic_home_id
+                if person.primary_academic_home_type == "school"
+                else "tepper"
+                if person.primary_academic_home_type == "academic_area"
+                else self.departments_by_id[person.primary_academic_home_id].school_id
+            )
             return PrimaryAffiliation(
-                person.primary_department_id,
+                person.primary_academic_home_type,
+                person.primary_academic_home_id,
+                person.primary_academic_home_title,
+                school_id,
+                person.primary_academic_home_source_url,
+                person.primary_academic_home_verified_at,
+                person.primary_academic_home_basis,
+            )
+        if person.primary_department_id:
+            department = self.departments_by_id[person.primary_department_id]
+            return PrimaryAffiliation(
+                department.unit_type,
+                department.department_id,
+                department.title,
+                department.school_id,
                 person.primary_department_source_url,
                 person.primary_department_verified_at,
                 person.primary_department_basis,
             )
         memberships = [item for item in self.memberships if item.person_id == person_id]
         included = [item for item in memberships if item.included]
-        departments = {
+        academic = {
             item.department_id
             for item in included
-            if item.department_id not in CAMPUS_ONLY_IDS
+            if self.departments_by_id[item.department_id].unit_type
+            in ACADEMIC_UNIT_TYPES
         }
-        if len(departments) != 1:
-            return PrimaryAffiliation("", "", "", "unresolved")
+        container_schools = {
+            self.departments_by_id[item.department_id].school_id
+            for item in included
+            if self.departments_by_id[item.department_id].unit_type
+            == "roster_container"
+        }
+        if len(academic) == 1:
+            department = self.departments_by_id[next(iter(academic))]
+            if container_schools - {department.school_id}:
+                return PrimaryAffiliation(
+                    "unresolved", "", "", "", "", "", "unresolved"
+                )
+            membership = max(
+                (
+                    item
+                    for item in included
+                    if item.department_id == department.department_id
+                ),
+                key=lambda item: (item.verified_at, item.source_url),
+            )
+            return PrimaryAffiliation(
+                department.unit_type,
+                department.department_id,
+                department.title,
+                department.school_id,
+                membership.source_url,
+                membership.verified_at,
+                "single_included_membership",
+            )
+        if academic or len(container_schools) != 1:
+            return PrimaryAffiliation("unresolved", "", "", "", "", "", "unresolved")
+        school_id = next(iter(container_schools))
         membership = max(
-            (item for item in included if item.department_id in departments),
+            (
+                item
+                for item in included
+                if self.departments_by_id[item.department_id].school_id == school_id
+                and self.departments_by_id[item.department_id].unit_type
+                == "roster_container"
+            ),
             key=lambda item: (item.verified_at, item.source_url),
         )
         return PrimaryAffiliation(
-            membership.department_id,
+            "school",
+            school_id,
+            self.schools_by_id[school_id].title,
+            school_id,
             membership.source_url,
             membership.verified_at,
-            "single_included_membership",
+            "school_fallback",
         )
 
 
@@ -356,6 +466,46 @@ def load_registry(
             person.primary_department_verified_at,
             field="primary_department_verified_at",
         )
+        _validate_https_url(
+            person.primary_academic_home_source_url,
+            field="primary_academic_home_source_url",
+        )
+        _validate_date(
+            person.primary_academic_home_verified_at,
+            field="primary_academic_home_verified_at",
+        )
+        if person.primary_academic_home_id:
+            if person.primary_department_id:
+                raise ValueError(f"Two explicit primary homes for {person.person_id}")
+            if person.primary_academic_home_type not in PRIMARY_HOME_TYPES:
+                raise ValueError(
+                    f"Invalid primary academic home type for {person.person_id}"
+                )
+            if not (
+                person.primary_academic_home_title
+                and person.primary_academic_home_source_url
+                and person.primary_academic_home_verified_at
+            ):
+                raise ValueError(
+                    "Primary academic home needs title, source and date: "
+                    f"{person.person_id}"
+                )
+            if person.primary_academic_home_basis not in EXPLICIT_PRIMARY_BASES:
+                raise ValueError(
+                    f"Primary academic home needs a valid basis: {person.person_id}"
+                )
+        elif any(
+            (
+                person.primary_academic_home_type,
+                person.primary_academic_home_title,
+                person.primary_academic_home_source_url,
+                person.primary_academic_home_verified_at,
+                person.primary_academic_home_basis,
+            )
+        ):
+            raise ValueError(
+                f"Primary academic home provenance needs an ID: {person.person_id}"
+            )
         if person.primary_department_id:
             if person.primary_department_id in CAMPUS_ONLY_IDS:
                 raise ValueError(
@@ -430,6 +580,11 @@ def load_registry(
             raise ValueError(
                 f"Blank department title on {departments_path}:{line_number}"
             )
+        if department.unit_type not in UNIT_TYPES:
+            raise ValueError(
+                f"Invalid registry unit type for {department.department_id}: "
+                f"{department.unit_type!r}"
+            )
         _validate_https_url(
             department.directory_url,
             field="directory_url",
@@ -479,21 +634,72 @@ def load_registry(
     if not people or not memberships or not departments:
         raise ValueError("Normalized registry files cannot be empty")
     memberships_by_person: dict[str, list[Membership]] = {}
+    departments_by_id = {item.department_id: item for item in departments}
+    schools_by_id = {item.school_id: item for item in schools}
     for membership in memberships:
         memberships_by_person.setdefault(membership.person_id, []).append(membership)
     for person in people:
-        if not person.primary_department_id:
-            continue
         options = memberships_by_person.get(person.person_id, [])
         valid = {
             item.department_id
             for item in options
-            if item.included and item.department_id not in CAMPUS_ONLY_IDS
+            if item.included
+            and departments_by_id[item.department_id].unit_type in ACADEMIC_UNIT_TYPES
         }
-        if person.primary_department_id not in valid:
-            raise ValueError(
-                f"Primary department is not an eligible membership: {person.person_id}"
-            )
+        if person.primary_department_id:
+            department = departments_by_id.get(person.primary_department_id)
+            if department is None or department.unit_type != "department":
+                raise ValueError(
+                    "Primary department must be an actual department: "
+                    f"{person.person_id}"
+                )
+            if person.primary_department_id not in valid:
+                raise ValueError(
+                    "Primary department is not an eligible membership: "
+                    f"{person.person_id}"
+                )
+        if not person.primary_academic_home_id:
+            continue
+        home_type = person.primary_academic_home_type
+        home_id = person.primary_academic_home_id
+        if home_type == "school":
+            school = schools_by_id.get(home_id)
+            if school is None or school.title != person.primary_academic_home_title:
+                raise ValueError(f"Unknown primary school home: {person.person_id}")
+            if not any(
+                item.included
+                and departments_by_id[item.department_id].school_id == home_id
+                and departments_by_id[item.department_id].unit_type
+                == "roster_container"
+                for item in options
+            ):
+                raise ValueError(
+                    f"Primary school is not an included membership: {person.person_id}"
+                )
+        elif home_type == "academic_area":
+            if not home_id.startswith("tepper:") or not DEPARTMENT_ID_PATTERN.fullmatch(
+                home_id.removeprefix("tepper:")
+            ):
+                raise ValueError(f"Invalid primary academic area: {person.person_id}")
+            if not any(
+                item.included and item.department_id == "tepper-faculty"
+                for item in options
+            ):
+                raise ValueError(
+                    f"Primary academic area needs Tepper membership: {person.person_id}"
+                )
+        else:
+            department = departments_by_id.get(home_id)
+            if (
+                department is None
+                or department.unit_type != home_type
+                or department.title != person.primary_academic_home_title
+                or home_id not in valid
+            ):
+                raise ValueError(
+                    "Primary academic home is not an eligible typed unit: "
+                    f"{person.person_id}"
+                )
     return Registry(
         people=tuple(sorted(people)),
         memberships=tuple(sorted(memberships)),

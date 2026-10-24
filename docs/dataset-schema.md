@@ -16,19 +16,27 @@ a snapshot with a different school hierarchy.
 One row per stable registry identity, including people without a Scholar ID.
 Fields include `person_id`, display name, Scholar ID, Scholar-ID verification
 source and date, ORCID, homepage, notes, all retained memberships, included
-department IDs, raw observation count, eligible unique work count, and mapped
-work count.
-`primary_department_id`, its public source URL, verification date, and basis
-identify one source-backed or unambiguous display affiliation. The ID is blank
-with basis `unresolved` where multiple included academic departments have no
-supported single choice, or no substantive included academic role is recorded.
-CMU-Africa is an eligible academic unit under Engineering in this dataset;
-CMU Silicon Valley is a campus facet and cannot be a primary department.
-Inferred display choices are explicitly labeled
-`inferred_advisee_count` or `inferred_profile_title`, not presented as an
-official HR primary. The [2026-10-24 review](../registry/reviews/2026-10-24-primary-departments.md)
-records the outstanding cases.
-It does not remove memberships or affect publication collection.
+registry unit IDs, raw observation count, eligible unique work count, and mapped
+work count. The additive `primary_academic_home_type`,
+`primary_academic_home_id`, `primary_academic_home_title`,
+`primary_academic_home_school_id`, `primary_academic_home_source_url`,
+`primary_academic_home_verified_at`, and `primary_academic_home_basis` fields
+describe one display home and its evidence. The type is `department`,
+`constituent_school`, `institute`, `academic_area`, `school`, or `unresolved`.
+An unresolved home has no ID; it does not acquire a choice from an alphabetical
+tie-break. The legacy `primary_department_id`, source URL, and date are
+compatibility fields populated only when the home is an actual department. For
+other resolved home types, the legacy basis is `unresolved` so older consumers
+do not infer a false department. Consumers use the typed fields to distinguish
+those homes from genuinely unresolved cases.
+An academic area or broad school-level home must not be presented as a verified
+department. Inferences from PhD advising counts or faculty titles are labeled
+in the basis field and are not claims about university HR primary appointments.
+CMU-Africa is an Engineering academic department in this dataset; CMU Silicon
+Valley is a campus facet and cannot be a primary academic home. The
+[2026-10-24 review](../registry/reviews/2026-10-24-primary-departments.md)
+records the outstanding cases. These fields do not remove memberships or
+affect publication collection.
 `included_school_ids` and school information on memberships are derived from
 the validated registry; they are not a second identity or collection key.
 
@@ -121,8 +129,9 @@ source, annual review date, and publication count. The faculty catalog includes 
 with an included faculty, teaching, or emeritus membership—even when that
 person has no verified Scholar profile or mapped publications—and provides
 stable identity, public identifiers, memberships, roles, and publication
-counts, with school IDs derived from included memberships and an evidence-based
-display primary department where one is available. The complete
+counts, with school IDs derived from included memberships and the typed primary
+academic home where one is supported. Publication and affiliation filters still
+use all included memberships. The complete
 loss-aware records remain in the four dataset configs.
 
 The artifact reports both generation time and the oldest/newest underlying
