@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-24",
+  "review_scope": "offline full-visible Google Scholar capture; no new Scholar profile requests",
+  "person_id": "person-davidrowen-a186595d",
+  "scholar_id": "tfBFyTMAAAAJ",
+  "profile_url": "https://scholar.google.com/citations?user=tfBFyTMAAAAJ&hl=en&oi=ao",
+  "profile_url_provenance": "user-supplied; corroborated by Scholar CMU affiliation and verified andrew.cmu.edu email; CMU biography currently links the dead prior ID ms9O2zoAAAAJ",
+  "source_capture_json_sha256": "e3d8937183eb1d9ac53257a421fbba8065e5a8ab0cdd2205025f1936f52b54ec",
+  "source_capture_html_sha256": "637abe6ad881bc787ae94d08de17147a3b3761c3d74236b94222fe5863462bed",
+  "raw_profile_rows": 146,
+  "exclusions": [
+    {
+      "capture_row_index": 59,
+      "captured_title": "Werden wir dümmer?",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:0izLItjtcgwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher's original article credits only Manfred Spitzer of Ulm; Owen is not an author.",
+      "evidence_url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0038-1670573.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 64,
+      "captured_title": "Multiscale Modeling in Continuum Mechanics and Structured Deformations",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:KlAtU1dfN6UC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:iH-uZ7U-co4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second copy of the edited volume; Springer identifies both Del Piero and Owen as editors. Keep the complete book row 25 and Owen's separate chapter row 60.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-7091-2770-4",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 66,
+      "captured_title": "Intelligence in fathers and sons: Familial resemblances and generational differences",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:4hFrxpcac9AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Teasdale's coauthor D. R. Owen in this psychology research line is affiliated with the University of Copenhagen's Institute of Clinical Psychology, distinct from CMU's continuum mechanician.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/2500201/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 76,
+      "captured_title": "International Series of Numerical Mathematics, Vol. 101,© 1991 Birkhäuser Verlag Basel",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:pyW8ca7W8N0C",
+      "reason_code": "nonpublication",
+      "reason": "The title is the series, volume, and copyright header of the proceedings, not Owen's contribution. Retain his chapter at row 112.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-0348-7303-1",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 92,
+      "captured_title": "Submacroscopically Stable Equilibria of Elastic Bodies Undergoing Disarrangements and Dissipation",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:0EnyYjriUFMC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:hMod-77fHWUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same Deseri–Owen article as row 20; publisher dates it online in 2009 and in the 2010 issue, explaining the year difference.",
+      "evidence_url": "https://journals.sagepub.com/doi/10.1177/1081286509106101",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 93,
+      "captured_title": "Constituents Undergoing ing Disarrangements and Mixing",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:L8Ckcad2t8MC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:IRz6iEL74y4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated and OCR-corrupted title of Owen's chapter already captured completely at row 55.",
+      "evidence_url": "https://www.aracne-editrice.it/index.php/pubblicazione.html?item=9788854819566",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 97,
+      "captured_title": "4) In their explanation of the laws of thermodynamics, particularly the",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:bFI3QPDXJZMC",
+      "reason_code": "nonpublication",
+      "reason": "Numbered footnote or body-text fragment from Coleman and Owen's actual thermodynamics chapter, retained at rows 62 and 120.",
+      "evidence_url": "https://pages.jh.edu/rrynasi1/NewFoundations4Math/Literature/Lawvere%2BSchanuel%28eds%291986CategoriesInContinuumPhysics.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 98,
+      "captured_title": "Department of Mathematics Carnegie-Mellon University Pittsburgh, Pennsylvania 15213",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:70eg2SAEIzsC",
+      "reason_code": "nonpublication",
+      "reason": "Author affiliation/address block, not a separate publication.",
+      "evidence_url": "https://pages.jh.edu/rrynasi1/NewFoundations4Math/Literature/Lawvere%2BSchanuel%28eds%291986CategoriesInContinuumPhysics.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 99,
+      "captured_title": "Center for Nonlinear Analysis",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:lSLTfruPkqcC",
+      "reason_code": "nonpublication",
+      "reason": "CMU's Center for Nonlinear Analysis is a research center, not a work title.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 101,
+      "captured_title": "Structured Deformations and the Microgeometry of Continua",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:6ZxmRoH8BuwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0102477 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0102477",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 102,
+      "captured_title": "MR1808369 (2002a: 74004) 74A05 (35Q72)",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:roLk4NBRz8UC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:SeFeTyx0c_EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Math Reviews accession and subject codes were imported as the title of the Owen–Paroni article already present at row 12.",
+      "evidence_url": "https://arpi.unipi.it/handle/11568/885818",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 105,
+      "captured_title": "Mathematical Sciences: Structured Deformations and the Microgeometry of Continua",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:DUooU5lO8OsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9703863 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9703863",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 110,
+      "captured_title": "Pittsburgh, PA 15213, USA",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:OTTXONDVkokC",
+      "reason_code": "nonpublication",
+      "reason": "Title is Owen's Pittsburgh affiliation line from the proceedings, not a contribution; retain his titled chapter at row 113.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-94-011-3644-0?page=5",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 117,
+      "captured_title": "Mathematical Sciences: Nonlinear Continuum Mechanics",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:QYdC8u9Cj1oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8704834 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8704834",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 118,
+      "captured_title": "Intelligence in Fathers and Sons: Familial",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:mlAyqtXpCwEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Malformed second row for the Teasdale–Owen psychology article at row 66; that Owen belongs to the Copenhagen psychology research line, not CMU Mathematical Sciences.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/2500201/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 119,
+      "captured_title": "stance there is a function of state³, called the entropy, whose difference at two",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:2VqYfGB8ITEC",
+      "reason_code": "nonpublication",
+      "reason": "Body-text fragment from the actual Coleman–Owen chapter retained at row 120.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-642-70803-9",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 130,
+      "captured_title": "Numerical Methods in Engineering and Materials Mechanics",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured author is D. R. J. Owen of University of Wales Swansea; Swansea lists D. R. J. Owen on its engineering research staff, distinct from CMU's D. R. Owen.",
+      "evidence_url": "https://www.swansea.ac.uk/science-and-engineering/research/zienkiewicz-institute-for-modelling-data-ai/research/themes/materials-manufacturing/solids-structures-coupled-systems/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 131,
+      "captured_title": "BERNARD D. COLEMAN MAURO FABRIZIO",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:35r97b3x0nAC",
+      "reason_code": "nonpublication",
+      "reason": "All-caps coauthor names from a page header of the Coleman–Fabrizio–Owen article retained at row 24, not its title.",
+      "evidence_url": "https://www.numdam.org/item/RSMUP_1982__68__207_0/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 133,
+      "captured_title": "Criminality in XYY and XXY Men",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:_5tno0g5mFcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Science article identifies its D. R. Owen as an assistant professor of psychology at Brooklyn College, not CMU's mathematician.",
+      "evidence_url": "https://www.science.org/doi/10.1126/science.959813",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 136,
+      "captured_title": "Nearly viscometric flows(Constitutive equations describing small perturbations on viscometric flows, noting relations with stress-relaxation moduli flow)",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:qjMakFHDy7sC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title includes an explanatory parenthesis but has the same authors, journal volume, and pages as the complete 1967 article at row 5.",
+      "evidence_url": "https://doi.org/10.1063/1.1762197",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 137,
+      "captured_title": "Nearly viscometric flows.",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:qjMakFHDy7sC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:mB3voiENLucC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second shortened copy of the 1967 Pipkin–Owen article retained at row 5.",
+      "evidence_url": "https://doi.org/10.1063/1.1762197",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 138,
+      "captured_title": "ENERGETICS OF TWO-LEVEL SHEARS AND HARDENING OF SINGLE CRYSTALS",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:4TOpqqG69KYC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:86PQX7AUzd4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated all-caps copy of the Deseri–Owen 2002 article retained at row 31.",
+      "evidence_url": "https://journals.sagepub.com/doi/10.1177/1081286502007002225",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 143,
+      "captured_title": "Center for Nonlinear Analysis",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:u_35RYKgDlwC",
+      "reason_code": "nonpublication",
+      "reason": "CMU's Center for Nonlinear Analysis is a research center, not a work title; second such imported row.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 144,
+      "captured_title": "Active Slip Separation and the Energetics of Slip in Single Crystals",
+      "canonical_author_pub_id": "tfBFyTMAAAAJ:aqlVkmm33-oC",
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:ZHo1McVdvXMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated and undated variant of the 2000 Deseri–Owen slip-band article retained at row 43.",
+      "evidence_url": "https://www.cmu.edu/math/people/faculty/owen.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "capture_row_index": 146,
+      "captured_title": "International Centre for Mechanical Science (CISM)",
+      "canonical_author_pub_id": null,
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:2P1L_qKh6hAC",
+      "reason_code": "nonpublication",
+      "reason": "CISM is the name of the International Centre for Mechanical Sciences and its Springer book series; the row has no Owen author or work title.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-7091-2770-4",
+      "verified_at": "2026-10-24"
+    }
+  ],
+  "unresolved": [
+    {
+      "capture_row_index": 56,
+      "author_pub_id": "tfBFyTMAAAAJ:9ZlFYXVOiuMC",
+      "captured_title": "An Approach to Rheology Through Multi‐Variable Thermodynamics",
+      "issue": "Possibly Owen's book review of Harry Hull, rather than Hull's book itself; obtain the Physics Today review page."
+    },
+    {
+      "capture_row_index": 75,
+      "author_pub_id": "tfBFyTMAAAAJ:NXb4pA-qfm4C",
+      "captured_title": "Parallel adaptive computing strategy for metal forming processes",
+      "issue": "Macedo–Dutko–Petrinic metal-forming work likely involves Swansea's D. R. J. Owen, but locate the exact original article before exclusion."
+    },
+    {
+      "capture_row_index": 106,
+      "author_pub_id": "tfBFyTMAAAAJ:_FM0Bhl9EiAC",
+      "captured_title": "WANT",
+      "issue": "WANT is unusable metadata, but no source yet establishes whether it masks a unique Owen work."
+    },
+    {
+      "capture_row_index": 108,
+      "author_pub_id": "tfBFyTMAAAAJ:IUKN3-7HHlwC",
+      "captured_title": "DEFORMATIONS AND STRESSES",
+      "issue": "Likely genuine conference version of Owen's deformations-and-stresses report; needs original proceedings title/pages."
+    },
+    {
+      "capture_row_index": 109,
+      "author_pub_id": "tfBFyTMAAAAJ:ns9cj8rnVeAC",
+      "captured_title": "BERNARD D. COLEMAN, WILLIAM J. HRUSA",
+      "issue": "OCR author-header title appears to mask a unique Coleman/Hrusa/Newman/Owen chapter on second sound; repair metadata before any exclusion."
+    },
+    {
+      "capture_row_index": 116,
+      "author_pub_id": "tfBFyTMAAAAJ:RYcK_YlVTxYC",
+      "captured_title": "A Commentary on Thermodynamics. Tracts in Natural Philosophy, Vol. 32",
+      "issue": "Likely Owen-authored book review in American Scientist; confirm original review page."
+    },
+    {
+      "capture_row_index": 139,
+      "author_pub_id": "tfBFyTMAAAAJ:FPJr55Dyh1AC",
+      "captured_title": "SOME RECENT DEVELOPMENTS ON STRUCTURED DEFORMATIONS",
+      "issue": "Possibly a genuine multi-author structured-deformations preprint or talk; no reliable year/venue yet."
+    },
+    {
+      "capture_row_index": 140,
+      "author_pub_id": "tfBFyTMAAAAJ:q3CdL3IzO_QC",
+      "captured_title": "Partial Differential Equations Seminar RSS",
+      "issue": "Seminar listing may point to a real Deseri–Owen talk; verify the event record and exact presentation title."
+    },
+    {
+      "capture_row_index": 141,
+      "author_pub_id": "tfBFyTMAAAAJ:foquWX3nUaYC",
+      "captured_title": "Seminário de Equações Diferenciais Parciais RSS",
+      "issue": "Portuguese seminar listing may point to a real talk; verify before excluding."
+    },
+    {
+      "capture_row_index": 145,
+      "author_pub_id": "tfBFyTMAAAAJ:ldfaerwXgEUC",
+      "captured_title": "STRUCTURED DEFORMATIONS AND GEOMETRICAL CONSTRAINTS AT THE MICROLEVEL",
+      "issue": "Potential unique structured-deformations talk or manuscript; locate an original source before editing."
+    }
+  ],
+  "explicit_retentions": [
+    {
+      "capture_row_index": 79,
+      "author_pub_id": "tfBFyTMAAAAJ:_Qo2XoVZTnwC",
+      "captured_title": "Corrections to the paper",
+      "reason": "Published correction/erratum is an authored historical work; retain."
+    },
+    {
+      "capture_row_index": 142,
+      "author_pub_id": "tfBFyTMAAAAJ:VLnqNzywnoUC",
+      "captured_title": "Corrigendum: On the Time Derivatives of Equilibrated Response Functions",
+      "reason": "Published corrigendum is an authored historical work; retain."
+    },
+    {
+      "capture_row_index": 60,
+      "author_pub_id": "tfBFyTMAAAAJ:NaGl4SEjCO4C",
+      "captured_title": "Elasticity with disarrangements",
+      "reason": "Genuine authored chapter distinct from edited volume; retain."
+    },
+    {
+      "capture_row_index": 112,
+      "author_pub_id": "tfBFyTMAAAAJ:3s1wT3WcHBgC",
+      "captured_title": "Recent Research on Elastic-Plastic Oscillators",
+      "reason": "Genuine chapter in the proceedings; retain."
+    },
+    {
+      "capture_row_index": 113,
+      "author_pub_id": "tfBFyTMAAAAJ:BqipwSGYUEgC",
+      "captured_title": "A Survey of Some Mathematical Descriptions of Deformations and States for Elastic-Plastic Materials",
+      "reason": "Genuine chapter in the proceedings; retain."
+    }
+  ]
+}

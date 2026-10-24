@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-24",
+  "review_scope": "offline review of three complete visible Google Scholar captures; no new Scholar profile data acquired",
+  "profiles": [
+    {
+      "person": "howell",
+      "display_name": "Jay / Jason Howell",
+      "scholar_id": "uHqbF7sAAAAJ",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/howell.html",
+      "raw_rows": 30,
+      "raw_json_sha256": "cc707ebaa96ab5f04edc3fca68fe97ddb0e839c8a093f7bb0003af2dcd80bae2",
+      "raw_html_sha256": "18dba820cacdaa2accfd98ed28a3beb7916b49a64a4a39669330b7b8a52d1736"
+    },
+    {
+      "person": "shkolnikov",
+      "display_name": "Mykhaylo Shkolnikov",
+      "scholar_id": "eVxdemsAAAAJ",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/shkolnikov.html",
+      "raw_rows": 54,
+      "raw_json_sha256": "6e913c484c64f03fa7e77b8f31f38d7f2bef266ac98baf3b4efe71e48e5a6920",
+      "raw_html_sha256": "9b3e5a8a6037379fe67202acce6abe1f49e742880d67de0e836cf41b444656ea"
+    },
+    {
+      "person": "grossberg",
+      "display_name": "Rami Grossberg",
+      "scholar_id": "q1g_W5sAAAAJ",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/grossberg.html",
+      "raw_rows": 47,
+      "raw_json_sha256": "4fd37bf8037b367aed43d39b302aa50bb87e80fdbae6489579471421f1ae2009",
+      "raw_html_sha256": "bb7d511c4668d0207287f9a4024e7c9ad64c6435fc037f15b6445ddd5c4a9cc0"
+    }
+  ],
+  "exclusions": [
+    {
+      "person": "howell",
+      "capture_row_index": 27,
+      "captured_title": "Solubility characteristics of poly (3‐hexylthiophene) Part B Polymer physics",
+      "canonical_author_pub_id": "uHqbF7sAAAAJ:HtEfBTGE9r8C",
+      "scholar_id": "uHqbF7sAAAAJ",
+      "author_pub_id": "uHqbF7sAAAAJ:DUooU5lO8OsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title appends the journal's Part B subtitle to the same Roesing–Howell–Boucher article retained at row 3.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.24364",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "howell",
+      "capture_row_index": 28,
+      "captured_title": "Temperature dependence of the convex solubility parameters of organic semiconductors Part B Polymer physics",
+      "canonical_author_pub_id": "uHqbF7sAAAAJ:_FM0Bhl9EiAC",
+      "scholar_id": "uHqbF7sAAAAJ",
+      "author_pub_id": "uHqbF7sAAAAJ:sNmaIFBj_lkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title appends the journal's Part B subtitle to the same Howell–Boucher article retained at row 20.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.23948",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 45,
+      "captured_title": "FORWARD PERFORMANCE PROCESSES IN INCOMPLETE MARKETS AND ILL-POSED HJB EQUATIONS",
+      "canonical_author_pub_id": "eVxdemsAAAAJ:MXK_kJrjxJIC",
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:YFjsv_pBGBYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "All-caps title and OCR-corrupted journal line duplicate the complete SIAM article retained at row 14.",
+      "evidence_url": "https://epubs.siam.org/doi/10.1137/15M1016059",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 48,
+      "captured_title": "Probabilistic Approach to Singular Free Boundary Problems and Applications",
+      "canonical_author_pub_id": null,
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:NMxIlDl6LWMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2108680 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2108680.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 49,
+      "captured_title": "Large-Scale Behavior of Interacting Particle Systems",
+      "canonical_author_pub_id": null,
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:blknAaTinKkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1811723 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1811723.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 50,
+      "captured_title": "Investigation of Interacting Particle Systems by Stochastic Analysis Methods",
+      "canonical_author_pub_id": null,
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:hMod-77fHWUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1506290 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1506290.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 54,
+      "captured_title": "THE ANNALS",
+      "canonical_author_pub_id": null,
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:O3NaXMp0MMsC",
+      "reason_code": "nonpublication",
+      "reason": "THE ANNALS is the cover and contents of the entire 2026 Annals of Applied Probability issue, with all issue authors imported into one row; Shkolnikov's actual paper is retained at row 38.",
+      "evidence_url": "https://imstat.org/publications/aap/aap_36_1/aap_36_1.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 38,
+      "captured_title": "Finite models, stability and Ramsey's theorem",
+      "canonical_author_pub_id": "q1g_W5sAAAAJ:lSLTfruPkqcC",
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Misdated single-author variant of the Ensley–Grossberg finite-models paper retained at row 41; arXiv lists both authors and the original 1996 submission.",
+      "evidence_url": "https://arxiv.org/abs/math/9608205",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 39,
+      "captured_title": "μ-Abstract elementary classes and other generalizations",
+      "canonical_author_pub_id": "q1g_W5sAAAAJ:isC4tDSrTZIC",
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Single-author, truncated-venue variant of the five-author μ-abstract-elementary-classes article retained at row 13.",
+      "evidence_url": "https://www.math.cmu.edu/~rami/WebPage/homeOLD%20copy.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 40,
+      "captured_title": "Henry B. Gonzalez Convention Center San Antonio, TX, USA January 12–13, 2015",
+      "canonical_author_pub_id": null,
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:k_IJM867U9cC",
+      "reason_code": "nonpublication",
+      "reason": "Title is the San Antonio meeting location and date from the Bulletin issue contents, not an authored research work.",
+      "evidence_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/8419F831A95E3786F6540DA40A92B539/S1079898615000451a.pdf/bsl_volume_21_issue_4_cover_and_front_matter.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 43,
+      "captured_title": "Hodges Wilfrid. Building models by games. London Mathematical Society student texts, no. 2. Cambridge University Press, Cambridge etc. 1985, vi+ 311 pp",
+      "canonical_author_pub_id": "q1g_W5sAAAAJ:ns9cj8rnVeAC",
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:aqlVkmm33-oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, malformed second entry for Grossberg's genuine Hodges book review, which is retained with journal pages at row 42.",
+      "evidence_url": "https://www.cambridge.org/core/product/identifier/S0022481200024749/type/journal_article",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 46,
+      "captured_title": "ON THE NUMBER OF NONISOMORPHIC MODELS OF AN INFINITARY THEORY",
+      "canonical_author_pub_id": "q1g_W5sAAAAJ:Tyk-4Ss8FVUC",
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:RHpTSmoSYBkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated uppercase duplicate of the Grossberg–Shelah 1986 article retained at row 15; publisher gives the actual two authors and pages 302–322, not page 486.",
+      "evidence_url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/on-the-number-of-nonisomorphic-models-of-an-infinitary-theory-which-has-the-infinitary-order-property-part-a/840509E1FCB22C84EB2A68B54EA06F3F",
+      "verified_at": "2026-10-24"
+    }
+  ],
+  "unresolved": [
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 30,
+      "author_pub_id": "eVxdemsAAAAJ:HDshCWvjkbEC",
+      "captured_title": "Scaling limits of external multi-particle DLA on the plane and the supercooled Stefan problem",
+      "issue": "Scholar dates this article 2021, while the CMU author list cites its 2024 journal issue; verify first-online date before rewriting metadata."
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 34,
+      "author_pub_id": "eVxdemsAAAAJ:_Qo2XoVZTnwC",
+      "captured_title": "Stefan problem with surface tension: global existence of physical solutions under radial symmetry: S. Nadtochiy, M. Shkolnikov",
+      "issue": "Scholar title includes a trailing author-name fragment; the sole record is the genuine Nadtochiy–Shkolnikov paper, so retain and repair title separately."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 21,
+      "author_pub_id": "q1g_W5sAAAAJ:hqOjcs7Dif8C",
+      "captured_title": "The main gap for totally transcendental diagrams and abstract decomposition theorem",
+      "issue": "The main-gap manuscript may be a draft title/version of the later Abstract decomposition theorem and applications; no duplicate is present in this capture, so retain."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 25,
+      "author_pub_id": "q1g_W5sAAAAJ:2P1L_qKh6hAC",
+      "captured_title": "Uniqueness of limit models in abstract elementary classes",
+      "issue": "Possible early title/version of Uniqueness of limit models in classes with amalgamation, but no matching 2011 primary artifact located; retain."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 31,
+      "author_pub_id": "q1g_W5sAAAAJ:Zph67rFs4hoC",
+      "captured_title": "Ramsey’s theorem in stable structures",
+      "issue": "Ensley–Grossberg Ramsey manuscript appears substantive; check relation to row 41 before any de-duplication."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 44,
+      "author_pub_id": "q1g_W5sAAAAJ:IWHjjKOFINEC",
+      "captured_title": "On chains of relatively saturated submodels of a stable model",
+      "issue": "1989 CMU technical report has a related but nonidentical title to 1991 journal row 19; preserve until text/version comparison."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 45,
+      "author_pub_id": "q1g_W5sAAAAJ:4TOpqqG69KYC",
+      "captured_title": "Indiscernible sequences in stable models",
+      "issue": "1989 CMU technical report has a related but nonidentical title to 1991 journal row 20; preserve until text/version comparison."
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 47,
+      "author_pub_id": "q1g_W5sAAAAJ:qxL8FJ1GzNcC",
+      "captured_title": "CATEGORICITY TRANSFER THEOREM FOR TAME ABSTRACT ELEMENTARY CLASSES",
+      "issue": "Title may be a generic fragment of the Grossberg–VanDieren categoricity article at row 4, but there is no direct primary record for this exact title; retain."
+    }
+  ],
+  "explicit_retentions": [
+    {
+      "person": "howell",
+      "capture_row_index": 12,
+      "author_pub_id": "uHqbF7sAAAAJ:u5HHmVD_uO8C",
+      "captured_title": "Irreducible polynomials of given forms",
+      "reason": "Clemson-era Gao–Howell–Panario finite-fields chapter is genuine.",
+      "evidence_url": "https://www.math.clemson.edu/~sgao/papers/GHP99.pdf"
+    },
+    {
+      "person": "howell",
+      "capture_row_index": 21,
+      "author_pub_id": "uHqbF7sAAAAJ:FAceZFleit8C",
+      "captured_title": "The Index Calculus Algorithm for Discrete Logarithms",
+      "reason": "The 1998 Clemson index-calculus thesis is part of Howell's earlier research history; retain pending archival URL repair.",
+      "evidence_url": "https://www.cmu.edu/math/people/faculty/howell.html"
+    },
+    {
+      "person": "howell",
+      "capture_row_index": 22,
+      "author_pub_id": "uHqbF7sAAAAJ:zYLM7Y9cAGgC",
+      "captured_title": "A general polynomial sieve",
+      "reason": "Clemson-era Gao–Howell polynomial-sieve article is genuine.",
+      "evidence_url": "https://www.math.clemson.edu/~sgao/papers/sieve_poly.pdf"
+    },
+    {
+      "person": "howell",
+      "capture_row_index": 3,
+      "author_pub_id": "uHqbF7sAAAAJ:HtEfBTGE9r8C",
+      "captured_title": "Solubility characteristics of poly (3‐hexylthiophene)",
+      "reason": "The polymer-solubility paper is verified by its publisher and CMU.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.24364"
+    },
+    {
+      "person": "howell",
+      "capture_row_index": 20,
+      "author_pub_id": "uHqbF7sAAAAJ:_FM0Bhl9EiAC",
+      "captured_title": "Temperature dependence of the convex solubility parameters of organic semiconductors",
+      "reason": "The polymer-solubility paper is verified by its publisher and CMU.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.23948"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 17,
+      "author_pub_id": "eVxdemsAAAAJ:ufrVoPGSRksC",
+      "captured_title": "Intertwining diffusions and wave equations",
+      "reason": "Current arXiv v4 lists Budway, Pal, and Shkolnikov; the 2013 Scholar year reflects the first version and does not make Budway a false collaborator.",
+      "evidence_url": "https://arxiv.org/abs/1306.0857v4"
+    },
+    {
+      "person": "shkolnikov",
+      "capture_row_index": 53,
+      "author_pub_id": "eVxdemsAAAAJ:kNdYIx-mwKoC",
+      "captured_title": "Competing Particle Systems and Their Applications",
+      "reason": "Stanford doctoral thesis is listed on the author's CMU publication page.",
+      "evidence_url": "https://www.math.cmu.edu/~mshkolni/"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 22,
+      "author_pub_id": "q1g_W5sAAAAJ:JV2RwH3_ST0C",
+      "captured_title": "Superior abstract elementary classes are tame",
+      "reason": "Submitted Grossberg–Kolesnikov paper is listed on the author's CMU page.",
+      "evidence_url": "https://www.math.cmu.edu/~rami/WebPage/homeOLD%20copy.html"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 24,
+      "author_pub_id": "q1g_W5sAAAAJ:L8Ckcad2t8MC",
+      "captured_title": "On Hanf numbers of the infinitary order property, Draft",
+      "reason": "Hanf-number draft is listed on the author's CMU page.",
+      "evidence_url": "https://www.math.cmu.edu/~rami/WebPage/homeOLD%20copy.html"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 28,
+      "author_pub_id": "q1g_W5sAAAAJ:5nxA0vEk-isC",
+      "captured_title": "Rich models",
+      "reason": "The Albert–Grossberg article genuinely names Rami P. Grossberg.",
+      "evidence_url": "https://www.jstor.org/stable/2274488"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 33,
+      "author_pub_id": "q1g_W5sAAAAJ:ldfaerwXgEUC",
+      "captured_title": "Uniqueness of limit models in classes with amalgamation",
+      "reason": "The 2008 Grossberg–VanDieren–Villaveces manuscript is a genuine dated 24-page author-hosted preprint. Retain its Scholar observation alongside the 2016 journal version.",
+      "evidence_url": "https://www.math.cmu.edu/users/rami/gvv_11_5.08.pdf"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 34,
+      "author_pub_id": "q1g_W5sAAAAJ:2osOgNQ5qMEC",
+      "captured_title": "A Course in Model Theory, book in preparation",
+      "reason": "Author-hosted long-form book draft exists; keep the unique scholarly draft visible while the book remains in preparation.",
+      "evidence_url": "https://www.math.cmu.edu/users/rami/MOAB1.pdf"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 35,
+      "author_pub_id": "q1g_W5sAAAAJ:M3ejUd6NZC8C",
+      "captured_title": "Characterizing stability and superstability by unions of chains and saturated models",
+      "reason": "Albert–Grossberg CMU research report is on the author's own publication list.",
+      "evidence_url": "https://www.math.cmu.edu/~rami/WebPage/homeOLD%20copy.html"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 42,
+      "author_pub_id": "q1g_W5sAAAAJ:ns9cj8rnVeAC",
+      "captured_title": "Wilfrid Hodges. Building models by games. London Mathematical Society student texts, no. 2. Cambridge University Press, Cambridge etc. 1985, vi + 311 pp.",
+      "reason": "Published Hodges book review is a genuine authored work, not the Hodges book itself.",
+      "evidence_url": "https://www.cambridge.org/core/product/identifier/S0022481200024749/type/journal_article"
+    }
+  ]
+}

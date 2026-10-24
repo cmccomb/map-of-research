@@ -1,0 +1,1092 @@
+{
+  "schema_version": 1,
+  "scope": "Offline three-profile source review; no Scholar profile requests",
+  "reviewed_at": "2026-10-24",
+  "counts": {
+    "exclude_with_independent_evidence": 72,
+    "retain_repair": 7,
+    "hold_uncertain": 29
+  },
+  "decisions": [
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 64,
+      "author_pub_id": "9lFYMIkAAAAJ:Hck25ST_3aIC",
+      "captured_title": "Graduate Texts in Mathematics",
+      "initial_supporting_url": "https://link.springer.com/book/10.1007/978-3-319-11008-0",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "'Graduate Texts in Mathematics' is the series, not the book title; the authors' real 2014 book 'Integer Programming' is separately indexed.",
+      "independent_evidence_url": "https://link.springer.com/book/10.1007/978-3-319-11008-0"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 117,
+      "author_pub_id": "9lFYMIkAAAAJ:QIV2ME_5wuYC",
+      "captured_title": "CBMS-NSF Regional Conference Series in Applied Mathematics",
+      "initial_supporting_url": "https://epubs.siam.org/doi/10.1137/1.9781611970203",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Series-title record for L. Lovasz's 'An Algorithmic Theory of Numbers, Graphs and Convexity'; author list is a broad bibliographic index, not Cornuejols's publication.",
+      "independent_evidence_url": "https://epubs.siam.org/doi/10.1137/1.9781611970203"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 195,
+      "author_pub_id": "9lFYMIkAAAAJ:OcBU2YAGkTUC",
+      "captured_title": "Call at",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 224,
+      "author_pub_id": "9lFYMIkAAAAJ:r_AWSJRzSzQC",
+      "captured_title": "CV détaillé",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The captured names are the examination committee for Jérôme Malick’s 2017 habilitation; Cornuéjols was a committee member, not an author of this CV.",
+      "independent_evidence_url": "https://membres-ljk.imag.fr/Jerome.Malick/hdr.html"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 225,
+      "author_pub_id": "9lFYMIkAAAAJ:sA9dB-pw3HoC",
+      "captured_title": "Mixed Integer Optimization: New Cut Generation Paradigms",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1560828",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 1560828, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1560828"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 233,
+      "author_pub_id": "9lFYMIkAAAAJ:UmS_249rOGwC",
+      "captured_title": "(Mixed) Integer and Combinatorial Optimization: New Convexification Techniques",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1263239",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 1263239, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1263239"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 236,
+      "author_pub_id": "9lFYMIkAAAAJ:artPoR2Yc-kC",
+      "captured_title": "I={1,..., m} be the set of client locations, J={1,..., n} the set of potential",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "Likely extracted text from On the Uncapacitated Location Problem, but the source-to-row match is not firm enough for automatic exclusion.",
+      "independent_evidence_url": "https://www.sciencedirect.com/bookseries/annals-of-discrete-mathematics/vol/1/suppl/C"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 239,
+      "author_pub_id": "9lFYMIkAAAAJ:g5Ck-dwhA_QC",
+      "captured_title": "Integer and Combinatorial Optimization: Intersection Cuts from Multiple Rows",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1024554",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 1024554, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1024554"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 247,
+      "author_pub_id": "9lFYMIkAAAAJ:Y5dfb0dijaUC",
+      "captured_title": "www. elsevier. com/locate/jctb",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this as Author Index for Volume 99, a journal index rather than Cornuéjols research.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0095-8956(09)00077-X"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 248,
+      "author_pub_id": "9lFYMIkAAAAJ:qe6vwMD2xtsC",
+      "captured_title": "Mixed Integer and Combinatorial Optimization: Lift-and-Project and Polyhedral Combinatorics",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0653419",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0653419, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0653419"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 252,
+      "author_pub_id": "9lFYMIkAAAAJ:SIv7DqKytYAC",
+      "captured_title": "Polyhedral and Graph Theoretic Methods in Mixed Integer and Combinatorial Optimization",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0352885",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0352885, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0352885"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 253,
+      "author_pub_id": "9lFYMIkAAAAJ:KbBQZpvPDL4C",
+      "captured_title": "Latin-American Conference on Combinatorics, Graphs and Applications",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The original event program lists Cornuéjols as an invited speaker; the conference name is an event record, not a publication title.",
+      "independent_evidence_url": "https://www.dii.uchile.cl/~lacga04/program.html"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 254,
+      "author_pub_id": "9lFYMIkAAAAJ:ILKRHgRFtOwC",
+      "captured_title": "Adamsson, Jay, 21",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this as Volume Author Index, not a Cornuéjols paper.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0095-8956(04)00007-3"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 257,
+      "author_pub_id": "9lFYMIkAAAAJ:Mojj43d5GZwC",
+      "captured_title": "Aharoni, Ron, 72 Alon, Noga, 231",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this as Volume Author Index, not a Cornuéjols paper.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0095-8956(03)00017-0"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 258,
+      "author_pub_id": "9lFYMIkAAAAJ:1taIhTC69MYC",
+      "captured_title": "Conference on Integer Programming in Honor of Egon Balas: Carnegie-Mellon University, June 3-5, 2002",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0207140",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0207140, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0207140"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 259,
+      "author_pub_id": "9lFYMIkAAAAJ:5MTHONV0fEkC",
+      "captured_title": "the Geometry of Numbers",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The fragment is from the genuine Cornuéjols-Li article A Connection between Cutting Plane Theory and the Geometry of Numbers, indexed in full elsewhere in this capture.",
+      "independent_evidence_url": "https://www.andrew.cmu.edu/user/gc0v/webpub/connection.pdf"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 261,
+      "author_pub_id": "9lFYMIkAAAAJ:4hFrxpcac9AC",
+      "captured_title": "A Connection between Cutting Plane llaeory and the Geometry of Numb ers",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "OCR-damaged duplicate of the genuine Cornuéjols-Li article indexed in full elsewhere in this capture.",
+      "independent_evidence_url": "https://www.andrew.cmu.edu/user/gc0v/webpub/connection.pdf"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 262,
+      "author_pub_id": "9lFYMIkAAAAJ:F1b5ZUV5XREC",
+      "captured_title": "oPERAToNs REsEARcH",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 263,
+      "author_pub_id": "9lFYMIkAAAAJ:0CzhzZyukY4C",
+      "captured_title": "MATHEMArics oF",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 264,
+      "author_pub_id": "9lFYMIkAAAAJ:Xz60mAmATU4C",
+      "captured_title": "Integer and Combinatorial Optimization: Polyhedral and Graph Theoretic Methods",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0098427",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0098427, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0098427"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 265,
+      "author_pub_id": "9lFYMIkAAAAJ:NyGDZy8z5eUC",
+      "captured_title": "CGGGGGGGGGL LL OPERATIONS RESEARCH",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 266,
+      "author_pub_id": "9lFYMIkAAAAJ:tKAzc9rXhukC",
+      "captured_title": "Article ID jctb. 2001.2035, available online at http: ТТwww. idealibrary. com on",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies article ID jctb.2001.2035 as Author Index for Volume 81, not a Cornuéjols paper.",
+      "independent_evidence_url": "https://doi.org/10.1006/jctb.2001.2035"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 267,
+      "author_pub_id": "9lFYMIkAAAAJ:2tRrZ1ZAMYUC",
+      "captured_title": "GGGGGGGGGL GLS OPERATIONS RESEARCH",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 268,
+      "author_pub_id": "9lFYMIkAAAAJ:4X0JR2_MtJMC",
+      "captured_title": "MATHEMATICS OF",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 269,
+      "author_pub_id": "9lFYMIkAAAAJ:sJsF-0ZLhtgC",
+      "captured_title": "MATHEMATIcs oF oPERATIONs REsEARCH",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 270,
+      "author_pub_id": "9lFYMIkAAAAJ:AHdEip9mkN0C",
+      "captured_title": "GGGG L GGGGG LL LLL OPERATIONS RESEARCH",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 271,
+      "author_pub_id": "9lFYMIkAAAAJ:N5tVd3kTz84C",
+      "captured_title": "Workshop on the Theory and Practice of Integer Programming in honor of Ralph E. Gomory on the Occasion of his 70th Birthday",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "DIMACS describes this as a workshop honoring Gomory, not a Cornuéjols-authored publication.",
+      "independent_evidence_url": "https://archive.dimacs.rutgers.edu/archive/Workshops/Gomory/"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 272,
+      "author_pub_id": "9lFYMIkAAAAJ:6yz0xqPARnAC",
+      "captured_title": "MATHEMATIcs oF",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 275,
+      "author_pub_id": "9lFYMIkAAAAJ:t6usbXjVLHcC",
+      "captured_title": "Article ID jctb. 1999.1937, available online at http: ÂÂwww. idealibrary. com on",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies article ID jctb.1999.1937 as Author Index for Volume 77, not a Cornuéjols paper.",
+      "independent_evidence_url": "https://doi.org/10.1006/jctb.1999.1937"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 276,
+      "author_pub_id": "9lFYMIkAAAAJ:2v_ZtQDX9iAC",
+      "captured_title": "Combinatorial Optimization and Integer Programming: Polyhedral Analysis and Algorithms",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802773",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9802773, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802773"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 277,
+      "author_pub_id": "9lFYMIkAAAAJ:DyXnQzXoVgIC",
+      "captured_title": "Polyherdral Methods in Integer and Combinatorial Optimization",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9424348",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9424348, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9424348"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 282,
+      "author_pub_id": "9lFYMIkAAAAJ:fEOibwPWpKIC",
+      "captured_title": "The following is a list of individuals who served as referees for papers reviewed between March 1, 1993 and June 10, 1994. We apologize for possible name misspellings or omissions.",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this item as Referees 1993, the journal's referee roster.",
+      "independent_evidence_url": "https://doi.org/10.1007/BF01582582"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 283,
+      "author_pub_id": "9lFYMIkAAAAJ:CYCckWUYoCcC",
+      "captured_title": "Integer and Combinatorial Optimization: Polyhedral Methods and Algorithms",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9201340",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9201340, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9201340"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 296,
+      "author_pub_id": "9lFYMIkAAAAJ:qwy9JoKyICEC",
+      "captured_title": "Second Integer Programming and Combinatorial Optimization Conference; Pittsburgh, PA; May 25-27, 1992",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9114298",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9114298, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9114298"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 303,
+      "author_pub_id": "9lFYMIkAAAAJ:8Xgff_V0N9gC",
+      "captured_title": "Integer Programming and Combinatorial Optimization",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8503192",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 8503192, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8503192"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 304,
+      "author_pub_id": "9lFYMIkAAAAJ:_Re3VWB3Y0AC",
+      "captured_title": "MATHEMATICAL PROGRAMMING thanks the following individuals for graciously giving of their time and counsel to help in the reviewing of papers in 1984.",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this item as Referees 1984, an editorial acknowledgement.",
+      "independent_evidence_url": "https://doi.org/10.1007/BF01585663"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 308,
+      "author_pub_id": "9lFYMIkAAAAJ:VLnqNzywnoUC",
+      "captured_title": "The editorial board of MATHEMATICAL PROGRAMMING thanks the following individuals for graciously giving of their time and counsel to help in the reviewing of papers in 1981.",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this item as Referees 1981, an editorial acknowledgement.",
+      "independent_evidence_url": "https://doi.org/10.1007/BF01583792"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 317,
+      "author_pub_id": "9lFYMIkAAAAJ:QD3KBmkZPeQC",
+      "captured_title": "George L. Nemhauser Anita M. Race School of Industrial and Systems Engineering, Georgia Institute of Technology, Atlanta, GA 30332, USA [phone:(404) 894-4821j~",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 318,
+      "author_pub_id": "9lFYMIkAAAAJ:lvd772isFD0C",
+      "captured_title": "Jacob Abernethy Dimitris Achlioptas Nir Ailon Adi Akavia",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 320,
+      "author_pub_id": "9lFYMIkAAAAJ:mNrWkgRL2YcC",
+      "captured_title": "Graphs without Odd Holes, Parachutes or Proper Wheels: A Generalization of Meyniel Graphs and of Line Graphs of Bipartite Graphs",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher's complete Graphs without Odd Holes, Parachutes or Proper Wheels article is already indexed as the clean Scholar record; this is its clipped duplicate.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0095-8956(02)00021-7"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 321,
+      "author_pub_id": "9lFYMIkAAAAJ:WJVC3Jt7v1AC",
+      "captured_title": "Detailed scientific program",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 322,
+      "author_pub_id": "9lFYMIkAAAAJ:lmc2jWPfTJgC",
+      "captured_title": "List of Referees: Volumes 9 l-100",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "At least two distinct publisher referee-list records have the same volume-range title. Exact source match remains ambiguous.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0166-218X(00)90003-9"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 324,
+      "author_pub_id": "9lFYMIkAAAAJ:gsN89kCJA0AC",
+      "captured_title": "CA 94720, USA",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 325,
+      "author_pub_id": "9lFYMIkAAAAJ:zLWjf1WUPmwC",
+      "captured_title": "List of Referees: Volumes 101} 110",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this item as List of referees: volumes 101–110, a referee roster.",
+      "independent_evidence_url": "https://doi.org/10.1016/S0166-218X(01)00239-6"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 326,
+      "author_pub_id": "9lFYMIkAAAAJ:ipzZ9siozwsC",
+      "captured_title": "George L. Nemhauser Yvonne B. Kissi School of Industrial and Systems Engineering, Georgia Institute of Technology, Atlanta, GA 30332, USA [phone:(404) 894-4821]",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 327,
+      "author_pub_id": "9lFYMIkAAAAJ:nrtMV_XWKgEC",
+      "captured_title": "Laboratoire d’Informatique Fondamentale de Marseille",
+      "initial_supporting_url": null,
+      "decision": "retain_repair",
+      "rationale": "The title is a report cover/header. Cornuéjols coauthored the underlying 2003 report, Graphs and Combinatorial Optimization; repair the title.",
+      "independent_evidence_url": "https://pageperso.lis-lab.fr/~edouard.thiel/RESP/Rapports/15-2003.pdf"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 328,
+      "author_pub_id": "9lFYMIkAAAAJ:z_wVstp3MssC",
+      "captured_title": "Atul Bhandari",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "CMU dissertation title page names Atul Bhandari as author and Cornuéjols as a committee member; the name-only Scholar entry is not his authored work.",
+      "independent_evidence_url": "https://www.cmu.edu/tepper/programs/phd/program/assets/dissertations/2006-operations-research-bhandari-dissertation.pdf"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 329,
+      "author_pub_id": "9lFYMIkAAAAJ:kzcrU_BdoSEC",
+      "captured_title": "List of Referees: Volumes 3 l-40",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher identifies this item as List of referees: volumes 31–40, a referee roster.",
+      "independent_evidence_url": "https://doi.org/10.1016/0166-218X(92)90014-2"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "capture_row_index": 331,
+      "author_pub_id": "9lFYMIkAAAAJ:dTyEYWd-f8wC",
+      "captured_title": "Editor Editorial Assistant",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 106,
+      "author_pub_id": "A0ISJPUAAAAJ:Se3iqnhoufwC",
+      "captured_title": "THE ANNALS",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The Annals masthead is attached to the real Kruk-Lehoczky-Shreve article Accuracy of State Space Collapse for Earliest-Deadline-First Queues, separately indexed in full.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/AAP0151.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 112,
+      "author_pub_id": "A0ISJPUAAAAJ:HDshCWvjkbEC",
+      "captured_title": "Page XV, line 5. Replace Early Exercise with American Derivative Secu-rities. Page 5, lines 23–24. Replace the sentence,“Sometimes the bid-ask spread can be ignored because not …",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/",
+      "decision": "retain_repair",
+      "rationale": "This is Shreve's dated Volume I errata notice, with substantive corrections; retain and repair its title.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ErrataVolIJuly2011.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 113,
+      "author_pub_id": "A0ISJPUAAAAJ:zYLM7Y9cAGgC",
+      "captured_title": "Page XIX, line 5. Change Early Exercise to American Derivative Securi-ties. Page 15, lines 1-2. Change the text to the maximal distance between two successive yk partition …",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/",
+      "decision": "retain_repair",
+      "rationale": "This is Shreve's distinct dated Volume II errata notice, with substantive corrections; retain and repair its title.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ErrataVolIIJuly2011.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 116,
+      "author_pub_id": "A0ISJPUAAAAJ:kuK5TVdYjLIC",
+      "captured_title": "Stochastic Analysis with Applications to Finance",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0903475",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0903475, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0903475"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 117,
+      "author_pub_id": "A0ISJPUAAAAJ:vRqMK49ujn8C",
+      "captured_title": "22S: 273 Advanced Topics in Actuarial Science Stochastic Analysis for Insurance and Finance",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The Iowa course syllabus is by Qihe Tang; Shreve appears only as a cited textbook author.",
+      "independent_evidence_url": "https://citeseerx.ist.psu.edu/document?doi=fd6ad41286fcdbe777d05229d1e6618e405cf7f5&repid=rep1&type=pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 118,
+      "author_pub_id": "A0ISJPUAAAAJ:MLfJN-KU85MC",
+      "captured_title": "GOALI: Carnegie Mellon-Morgan Stanley Mathematical Finance Postdoctoral Fellow",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0353556",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0353556, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0353556"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 119,
+      "author_pub_id": "A0ISJPUAAAAJ:hMsQuOkrut0C",
+      "captured_title": "Mathematical Finance and Stochastic Networks",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0404682",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0404682, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0404682"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 128,
+      "author_pub_id": "A0ISJPUAAAAJ:u9iWguZQMMsC",
+      "captured_title": "Futures trading model with transaction costs",
+      "initial_supporting_url": "https://www.cmu.edu/math/grad/phd/past-recipients.html",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Karel Janecek's 2004 CMU doctoral thesis. Shreve is listed as advisor, not author; their separate coauthored journal article remains in the profile.",
+      "independent_evidence_url": "https://www.cmu.edu/math/grad/phd/past-recipients.html"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 133,
+      "author_pub_id": "A0ISJPUAAAAJ:KUbvn5osdkgC",
+      "captured_title": "FRG: The Mathematics of Financial Risk Management",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0139911",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0139911, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0139911"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 134,
+      "author_pub_id": "A0ISJPUAAAAJ:VaXvl8Fpj5cC",
+      "captured_title": "Participant Support for 28th Conference on Stochastic Processes and their Applications, July 5-11, 2002, Melbourne, Australia",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0202158",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0202158, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0202158"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 135,
+      "author_pub_id": "A0ISJPUAAAAJ:gsN89kCJA0AC",
+      "captured_title": "Stochastic Models for Queueing and Finance",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0103814",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0103814, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0103814"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 136,
+      "author_pub_id": "A0ISJPUAAAAJ:_axFR9aDTf0C",
+      "captured_title": "VIGRE: Vertical and Horizontal Integration of Research and Education in Statistics and Mathematical Sciences at Carnegie Mellon",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9819950, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 138,
+      "author_pub_id": "A0ISJPUAAAAJ:ILKRHgRFtOwC",
+      "captured_title": "Proceedings of Symposia in Applied Mathematics Volume 57, 1999",
+      "initial_supporting_url": "https://www.ams.org/books/psapm/058/psapm058-endmatter.pdf",
+      "decision": "retain_repair",
+      "rationale": "The malformed volume title belongs to Shreve's genuine chapter, Quantitative methods for portfolio management, in Proceedings of Symposia in Applied Mathematics 57; repair the title.",
+      "independent_evidence_url": "https://www.ams.org/journals/notices/200001/200001FullIssue.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 141,
+      "author_pub_id": "A0ISJPUAAAAJ:LI9QrySNdTsC",
+      "captured_title": "Stochastic Control Models in Finance",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802464",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9802464, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802464"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 146,
+      "author_pub_id": "A0ISJPUAAAAJ:tYavs44e6CUC",
+      "captured_title": "Mathematical Sciences: Singular Control in Mathematical Finance and Related Problems",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9500626",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9500626, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9500626"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 147,
+      "author_pub_id": "A0ISJPUAAAAJ:7T2F9Uy0os0C",
+      "captured_title": "THE ANNALS",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Annals masthead fragment belongs to the genuine Soner-Shreve-Cvitanic article separately indexed with its complete title.",
+      "independent_evidence_url": "https://www.jstor.org/stable/2245301"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 149,
+      "author_pub_id": "A0ISJPUAAAAJ:TIZ-Mc8IlK0C",
+      "captured_title": "Mathematical Sciences: REU Summer Undergraduate Applied Mathematics Institute-Center for Nonlinear Analysis",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9322105",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9322105, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9322105"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 151,
+      "author_pub_id": "A0ISJPUAAAAJ:lmc2jWPfTJgC",
+      "captured_title": "Mathematical Sciences: Stochastic Processes and the Theory of Mathematical Finance",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9203360, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 152,
+      "author_pub_id": "A0ISJPUAAAAJ:L7CI7m0gUJcC",
+      "captured_title": "Pittsburgh, PA 15213",
+      "initial_supporting_url": null,
+      "decision": "retain_repair",
+      "rationale": "Address fragment belongs to the Bridge-Shreve Applied Stochastic Analysis chapter, Multi-dimensional finite-fuel singular stochastic control; preserve the edition pending title repair.",
+      "independent_evidence_url": "https://link.springer.com/book/10.1007/BFb0007043?page=1"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 153,
+      "author_pub_id": "A0ISJPUAAAAJ:S16KYo8Pm5AC",
+      "captured_title": "Pittsburgh, PA 15213",
+      "initial_supporting_url": null,
+      "decision": "retain_repair",
+      "rationale": "Address fragment belongs to the Shreve-Soner Applied Stochastic Analysis chapter, A free boundary problem related to singular stochastic control; preserve the chapter pending title repair.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 154,
+      "author_pub_id": "A0ISJPUAAAAJ:_Re3VWB3Y0AC",
+      "captured_title": "Stochastics and stochastics reports",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher issue table of contents identifies this as Stochastics and Stochastics Reports front matter, not an authored research article.",
+      "independent_evidence_url": "https://www.tandfonline.com/toc/gssr19/33/1-2?nav=tocList"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 155,
+      "author_pub_id": "A0ISJPUAAAAJ:b1wdh0AR-JQC",
+      "captured_title": "Mathematical Sciences: Brownian Motion Models of Financial Markets",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9002588, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 161,
+      "author_pub_id": "A0ISJPUAAAAJ:tuHXwOkdijsC",
+      "captured_title": "Mathematical Sciences: Applications of Stochastic Control toConsumption/Investment Decisions, Equilibrium Analysis and Production",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8702537",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 8702537, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8702537"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 167,
+      "author_pub_id": "A0ISJPUAAAAJ:k8Z6L05lTy4C",
+      "captured_title": "Mathematical Sciences: Optimal Stochastic Control Theory With Applications to Consumption/Investment and Inventory/Production Models",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8403166",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 8403166, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8403166"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 170,
+      "author_pub_id": "A0ISJPUAAAAJ:g3aElNc5_aQC",
+      "captured_title": "Optimal Control Theory For an Economics Model With Degenerate Diffusions (Mathematical Sciences)",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8202210",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 8202210, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8202210"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 173,
+      "author_pub_id": "A0ISJPUAAAAJ:AXPGKjj_ei8C",
+      "captured_title": "Third Conference of the Society for Economic Dynamics and Control The third conference of the Society for Economic Dynamics and Control (SEDC) took place at the Technical …",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher metadata titles the item News items; the conference notice is not a Shreve-authored paper.",
+      "independent_evidence_url": "https://doi.org/10.1016/0165-1889(81)90031-2"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 175,
+      "author_pub_id": "A0ISJPUAAAAJ:SpbeaW3--B0C",
+      "captured_title": "REAL-TIME QUEUES IN HEAVY TRAFFIC WITH",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Truncated title of the Doytchinov-Lehoczky-Shreve real-time queues article already present as Scholar row 19.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 177,
+      "author_pub_id": "A0ISJPUAAAAJ:vbGhcppDl1QC",
+      "captured_title": "The CEFI (Faculty of Economics, University of Aix-Marseille II) has jointly organized with the University of Valenciennes (IUT) and the Economics Department of the EEC an …",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 179,
+      "author_pub_id": "A0ISJPUAAAAJ:2KloaMYe4IUC",
+      "captured_title": "THE ANNALS",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher's Annals issue contents show a table of contents combining separate articles and authors, including Shreve's separately indexed article.",
+      "independent_evidence_url": "https://www.jstor.org/stable/i251217"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 180,
+      "author_pub_id": "A0ISJPUAAAAJ:ZfRJV9d4-WMC",
+      "captured_title": "MATH 666: Simulation for Finance Spring 2019 Graduate Course Syllabus",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NJIT's 2019 course syllabus is by David Horntrop; Shreve appears as a cited textbook author.",
+      "independent_evidence_url": "https://math.njit.edu/sites/math/files/Math_666-SP19.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 181,
+      "author_pub_id": "A0ISJPUAAAAJ:dTyEYWd-f8wC",
+      "captured_title": "Simulation of two methods in co-adaptive control for brain-machine interfaces",
+      "initial_supporting_url": "https://dspace.mit.edu/entities/publication/7166e4df-0183-48fb-8509-4de4859b3da3",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "MIT record credits Kowalski and Srinivasan for this brain-machine-interface demo; Shreve is not an author.",
+      "independent_evidence_url": "https://dspace.mit.edu/entities/publication/7166e4df-0183-48fb-8509-4de4859b3da3"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 182,
+      "author_pub_id": "A0ISJPUAAAAJ:eMMeJKvmdy0C",
+      "captured_title": "Kurtz, Thomas G. 112, 147 Ledoit, Olivier, 2 Le Gall, Jean-Francois, 117 Levine, David, 2, 176",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 183,
+      "author_pub_id": "A0ISJPUAAAAJ:TFP_iSt0sucC",
+      "captured_title": "Stochastic Differential Equations",
+      "initial_supporting_url": "https://link.springer.com/book/10.1007/978-1-4612-0949-2",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Conflated names around the genuine Karatzas-Shreve 'Stochastic Differential Equations' book chapter, which is already separately indexed as Scholar row 69.",
+      "independent_evidence_url": "https://link.springer.com/book/10.1007/978-1-4612-0949-2"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 184,
+      "author_pub_id": "A0ISJPUAAAAJ:7PzlFSSx8tAC",
+      "captured_title": "DEGENERATE DIFFUSION PROCESSES IN PORTFOLIO MANAGE\" l",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Truncated title of the Lehoczky-Sethi-Shreve 1982 conference paper already present as Scholar row 104.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "capture_row_index": 185,
+      "author_pub_id": "A0ISJPUAAAAJ:9ZlFYXVOiuMC",
+      "captured_title": "Ы и з н в гвк м Ъ з Ф б из н Ьж в",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 136,
+      "author_pub_id": "P_AmD6MAAAAJ:FPJr55Dyh1AC",
+      "captured_title": "College of Humanities and Social Sciences Senior Honors Thesis",
+      "initial_supporting_url": "https://www.cmu.edu/dietrich/students/undergraduate/honors-and-pre-professional-programs/senior-honors/submission-guidelines",
+      "decision": "hold_uncertain",
+      "rationale": "The generic current CMU senior-honors guidelines do not identify this particular 2010 thesis or its author. Keep until exact source evidence is found.",
+      "independent_evidence_url": "https://www.cmu.edu/dietrich/students/undergraduate/honors-and-pre-professional-programs/senior-honors/submission-guidelines"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 156,
+      "author_pub_id": "P_AmD6MAAAAJ:9c2xU6iGI7YC",
+      "captured_title": "NAVAL POSTGRADUATESCHOOL",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 170,
+      "author_pub_id": "P_AmD6MAAAAJ:3fE2CSJIrl8C",
+      "captured_title": "THE ANNALS",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The Annals masthead is attached to the real Kruk-Lehoczky-Shreve article separately indexed with its complete title.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/AAP0151.pdf"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 177,
+      "author_pub_id": "P_AmD6MAAAAJ:HtS1dXgVpQUC",
+      "captured_title": "The kD Sliding Window Fourier Transform: Algorithms, Applications, and Statistics April 22, 2017 Lee Richardson Advisor: William F. Eddy",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 178,
+      "author_pub_id": "P_AmD6MAAAAJ:5qfkUJPXOUwC",
+      "captured_title": "Wtiv",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 179,
+      "author_pub_id": "P_AmD6MAAAAJ:bz8QjSJIRt4C",
+      "captured_title": "Donald Gross, Chairman",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 180,
+      "author_pub_id": "P_AmD6MAAAAJ:bKqednn6t2AC",
+      "captured_title": "Magnetoencephalography-Analysis of Very Noisy Spatial and Temporal Varying Fields",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0527141",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 0527141, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0527141"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 182,
+      "author_pub_id": "P_AmD6MAAAAJ:9pM33mqn1YgC",
+      "captured_title": "Kopetz, H.(1997). Real-Time Systems: Design Prin",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 185,
+      "author_pub_id": "P_AmD6MAAAAJ:DJbcl8HfkQkC",
+      "captured_title": "VIGRE: Vertical and Horizontal Integration of Research and Education in Statistics and Mathematical Sciences at Carnegie Mellon",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9819950, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 193,
+      "author_pub_id": "P_AmD6MAAAAJ:yFnVuubrUp4C",
+      "captured_title": "Mathematical Sciences: Stochastic Processes and the Theory of Mathematical Finance",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9203360, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 196,
+      "author_pub_id": "P_AmD6MAAAAJ:OcBU2YAGkTUC",
+      "captured_title": "Mathematical Sciences: Brownian Motion Models of Financial Markets",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 9002588, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 200,
+      "author_pub_id": "P_AmD6MAAAAJ:mlAyqtXpCwEC",
+      "captured_title": "Department of Operations Research Naval Postgraduate School Monterey, California",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The title is a Naval Postgraduate School contributor-address line from the book front matter, not a separate Lehoczky work. The actual Gaver–Lehoczky chapter is retained at OU6Ihb5iCvQC.",
+      "independent_evidence_url": "https://api.pageplace.de/preview/DT0400.9781483261270_A23866638/preview-9781483261270_A23866638.pdf"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 206,
+      "author_pub_id": "P_AmD6MAAAAJ:NXb4pA-qfm4C",
+      "captured_title": "A New Approach to the Evaluation and Optimization of the Performance of Queueing Systems",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8101576",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 8101576, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8101576"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 209,
+      "author_pub_id": "P_AmD6MAAAAJ:0izLItjtcgwC",
+      "captured_title": "A New Approach to the Evaluation and Optimization of the Performance of Networks of Queues",
+      "initial_supporting_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=7905526",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "NSF award 7905526, not a research publication.",
+      "independent_evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=7905526"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 215,
+      "author_pub_id": "P_AmD6MAAAAJ:IRz6iEL74y4C",
+      "captured_title": "We propose a new type of repairman model in which failures may require multiple repair operations, each done by a specialized repair crew. These repair operations may occur",
+      "initial_supporting_url": "https://pubsonline.informs.org/toc/mnsc/24/1",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Article abstract sentence was promoted to a title; the actual Gaver-Lehoczky 1977 paper appears as Scholar row 91.",
+      "independent_evidence_url": "https://pubsonline.informs.org/toc/mnsc/24/1"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 222,
+      "author_pub_id": "P_AmD6MAAAAJ:R3hNpaxXUhUC",
+      "captured_title": "Department of",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 223,
+      "author_pub_id": "P_AmD6MAAAAJ:_FM0Bhl9EiAC",
+      "captured_title": "A DIFFUSION APPROXIMATION SOLUTION FOR A REPAIRMAN PROBLEM WITH TWO TYPES OF",
+      "initial_supporting_url": "https://pubsonline.informs.org/toc/mnsc/24/1",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Truncated duplicate with impossible 1954 year; publisher identifies the complete Gaver-Lehoczky article as 1977, pages 71-81.",
+      "independent_evidence_url": "https://pubsonline.informs.org/toc/mnsc/24/1"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 224,
+      "author_pub_id": "P_AmD6MAAAAJ:IUKN3-7HHlwC",
+      "captured_title": "REAL-TIME QUEUES IN HEAVY TRAFFIC WITH",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Truncated title of the Doytchinov-Lehoczky-Shreve real-time queues paper already present as a complete Scholar record.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 227,
+      "author_pub_id": "P_AmD6MAAAAJ:4fGpz3EwCPoC",
+      "captured_title": "The CEFI (Faculty of Economics, University of Aix-Marseille II) has jointly organized with the University of Valenciennes (IUT) and the Economics Department of the EEC an …",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 228,
+      "author_pub_id": "P_AmD6MAAAAJ:gsN89kCJA0AC",
+      "captured_title": "Donnarumma, Ciro 296 Drepper, Ulrich 345 Dupont de Dinechin, Benoît 283 Dutt, Nikil 191",
+      "initial_supporting_url": null,
+      "decision": "hold_uncertain",
+      "rationale": "No exact independent source was established; retain pending review.",
+      "independent_evidence_url": null
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 229,
+      "author_pub_id": "P_AmD6MAAAAJ:WA5NYHcadZ8C",
+      "captured_title": "MR2331321 (2009c: 65008) Asmussen, Søren (DK-ARHS-TS); Glynn, Peter W.(1-STF-MGE) Stochastic simulation: algorithms and analysis. Stochastic Modelling and Applied Probability …",
+      "initial_supporting_url": null,
+      "decision": "retain_repair",
+      "rationale": "MathSciNet review is a real review authored by John P. Lehoczky; repair the title and retain.",
+      "independent_evidence_url": "https://dornsife.usc.edu/sergey-lototsky/wp-content/uploads/sites/211/2023/06/BookRevMathSciNet.pdf"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 230,
+      "author_pub_id": "P_AmD6MAAAAJ:dfsIfKJdRG4C",
+      "captured_title": "THE ANNALS",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Publisher's Annals issue contents are a table of contents mixing separate articles and authors, not a Lehoczky-authored item.",
+      "independent_evidence_url": "https://www.jstor.org/stable/i251217"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 231,
+      "author_pub_id": "P_AmD6MAAAAJ:j3f4tGmQtD8C",
+      "captured_title": "DEGENERATE DIFFUSION PROCESSES IN PORTFOLIO MANAGE\" l",
+      "initial_supporting_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Truncated title of the Lehoczky-Sethi-Shreve 1982 conference paper already present as a complete record.",
+      "independent_evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "capture_row_index": 232,
+      "author_pub_id": "P_AmD6MAAAAJ:YOwf2qJgpHMC",
+      "captured_title": "Quantized EDF Scheduling in a Stochastic Environment 3",
+      "initial_supporting_url": null,
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "Clipped title with page numeral duplicates the complete Lehoczky coauthored Quantized EDF Scheduling in a Stochastic Environment paper.",
+      "independent_evidence_url": "https://doi.org/10.1109/IPDPS.2002.1016476"
+    }
+  ]
+}
