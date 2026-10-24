@@ -14,7 +14,10 @@ The registry is intentionally normalized:
 Every department must reference a school in `schools.csv`. School membership is
 derived from a person's included department memberships; a cross-appointed
 person keeps one `person_id` and can belong to multiple schools. The school
-catalog includes Engineering, SCS, and MCS. A dated review of the official
+catalog includes Engineering, SCS, MCS, CFA, Dietrich, Heinz, and Tepper. It
+contains 7 top-level schools, 40 academic units or documented roster
+containers, 2,001 people, and 2,354 memberships after the four-school
+2026-10-24 expansion. A dated review of the official
 faculty listings on 2026-10-24 added all seven SCS departments and all four
 MCS departments. The reviewed pages supplied 357 SCS and 270 MCS department
 observations; 346 and 212 memberships, respectively, meet the existing
@@ -22,6 +25,34 @@ faculty, teaching, or emeritus inclusion policy. After identity reconciliation,
 the registry has 317 included SCS people and 211 included MCS people. The
 dated source extracts and coverage limits are in
 [`reviews/2026-10-24.md`](reviews/2026-10-24.md).
+
+The four added schools were reviewed against their public faculty listings on
+2026-10-24. Source observations include repeat cards and source-only staff or
+students; registered memberships apply the faculty-role policy below.
+
+| School | Units or roster containers | Source observations | Memberships | Included people | Dated review |
+| --- | ---: | ---: | ---: | ---: | --- |
+| College of Fine Arts | 5 | 425 | 367 | 256 | [CFA](reviews/2026-10-24-cfa.md) |
+| Dietrich College | 9 | 472 | 471 | 270 | [Dietrich](reviews/2026-10-24-dietrich.md) |
+| Heinz College | 3 | 309 | 282 | 83 | [Heinz](reviews/2026-10-24-heinz.md) |
+| Tepper School of Business | 1 | 138 | 138 | 118 | [Tepper](reviews/2026-10-24-tepper.md) |
+
+The five CFA rows represent its actual schools. Dietrich has seven departments
+and two faculty-owning institutes. Heinz has two actual graduate schools plus
+one shared college faculty container because its main directory does not
+assign every person to a school. Tepper has one school-level container because
+its 12 academic areas lack separate faculty rosters. The containers satisfy
+the current registry schema; they are not asserted to be academic departments.
+The linked reviews and source CSVs document role decisions, identities,
+directly linked Scholar IDs, and unresolved directory gaps.
+
+The [four-school display-primary ledger](reviews/2026-10-24-other-schools-primary.md)
+covers 105 registered Scholar-ID people in the added-school scope: 102 have a
+source-backed display unit and three remain explicitly unresolved. Its three
+`primary_department_*` fields align with [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35),
+which adds primary fields to the canonical people schema. The current roster
+PR retains the decisions in a dated audit file so the primary-schema change
+can integrate them without collapsing joint memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,
@@ -39,6 +70,7 @@ records another direct ID link from a CMU-hosted lab publications page.
 The [Bob Murphy follow-up](reviews/2026-10-24-bio-murphy-scholar-id.md)
 reconciles his Bio and Computational Biology emeritus memberships under one
 Scholar-linked person.
+
 The [three Bio profile checks](reviews/2026-10-24-bio-scholar-verified-profiles.md)
 record Scholar IDs confirmed directly from named profiles with verified CMU
 email addresses and matching official faculty identities.
@@ -54,7 +86,8 @@ collected once.
 
 The registry retains every legacy label in `legacy_label` for provenance.
 The first full-name and role review against all 11 Engineering directories was
-completed on 2026-07-17. SCS and MCS were reviewed on 2026-10-24. Unresolved
+completed on 2026-07-17. SCS, MCS, CFA, Dietrich, Heinz, and Tepper were
+reviewed on 2026-10-24. Unresolved
 identities and Scholar IDs remain blank rather than being guessed.
 
 New Scholar IDs should record the faculty-controlled, institutional, or

@@ -2,7 +2,8 @@
 
 `map-of-research` is the source of truth for the CMU faculty catalog and
 publication corpus. Its normalized school hierarchy has dated faculty
-rosters for Engineering, SCS, and MCS. It collects small, explicit batches of
+rosters for all seven CMU schools: Engineering, SCS, MCS, CFA, Dietrich,
+Heinz, and Tepper. It collects small, explicit batches of
 public Google Scholar profiles and retains separately verified DOI records
 for publications missing from the profile cache. It publishes one versioned
 Hugging Face dataset and builds one browser-ready publication artifact. The
@@ -114,6 +115,12 @@ is deliberately human-verified and never changes registry rows automatically.
 The [2026-10-24 SCS/MCS review](registry/reviews/2026-10-24.md) records the
 initial school-wide directory expansion, source extracts, role boundaries,
 identity decisions, and publication coverage gaps.
+The [CFA](registry/reviews/2026-10-24-cfa.md),
+[Dietrich](registry/reviews/2026-10-24-dietrich.md),
+[Heinz](registry/reviews/2026-10-24-heinz.md), and
+[Tepper](registry/reviews/2026-10-24-tepper.md) reviews record the four-school
+faculty expansion and its official source extracts. These rows establish
+faculty identities and appointments only; they do not add publication data.
 
 ## Dataset grain
 
