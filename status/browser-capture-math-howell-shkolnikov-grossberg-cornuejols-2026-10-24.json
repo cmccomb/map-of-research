@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "math"
+  ],
+  "profiles": [
+    {
+      "scholar_id": "uHqbF7sAAAAJ",
+      "display_name": "Jay Howell",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/howell.html",
+      "captured_at_utc": "2026-10-24T21:14:48.412Z",
+      "profile_url": "https://scholar.google.com/citations?user=uHqbF7sAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 30,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 30,
+      "raw_json_path": "data/captures/howell-visible-30-2026-10-24.json",
+      "raw_json_sha256": "cc707ebaa96ab5f04edc3fca68fe97ddb0e839c8a093f7bb0003af2dcd80bae2",
+      "raw_html_path": "data/captures/howell-visible-30-2026-10-24.html",
+      "raw_html_sha256": "18dba820cacdaa2accfd98ed28a3beb7916b49a64a4a39669330b7b8a52d1736"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "display_name": "Mykhaylo Shkolnikov",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/shkolnikov.html",
+      "captured_at_utc": "2026-10-24T21:16:28.231Z",
+      "profile_url": "https://scholar.google.com/citations?user=eVxdemsAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 54,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 54,
+      "raw_json_path": "data/captures/shkolnikov-visible-54-2026-10-24.json",
+      "raw_json_sha256": "6e913c484c64f03fa7e77b8f31f38d7f2bef266ac98baf3b4efe71e48e5a6920",
+      "raw_html_path": "data/captures/shkolnikov-visible-54-2026-10-24.html",
+      "raw_html_sha256": "9b3e5a8a6037379fe67202acce6abe1f49e742880d67de0e836cf41b444656ea"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "display_name": "Rami Grossberg",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/grossberg.html",
+      "captured_at_utc": "2026-10-24T21:18:09.541Z",
+      "profile_url": "https://scholar.google.com/citations?user=q1g_W5sAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 47,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 47,
+      "raw_json_path": "data/captures/grossberg-visible-47-2026-10-24.json",
+      "raw_json_sha256": "4fd37bf8037b367aed43d39b302aa50bb87e80fdbae6489579471421f1ae2009",
+      "raw_html_path": "data/captures/grossberg-visible-47-2026-10-24.html",
+      "raw_html_sha256": "bb7d511c4668d0207287f9a4024e7c9ad64c6435fc037f15b6445ddd5c4a9cc0"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "display_name": "Gérard P. Cornuéjols",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/cornuejols.html",
+      "captured_at_utc": "2026-10-24T21:20:07.361Z",
+      "profile_url": "https://scholar.google.com/citations?user=9lFYMIkAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 4,
+      "displayed_count": 331,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 331,
+      "raw_json_path": "data/captures/cornuejols-visible-331-2026-10-24.json",
+      "raw_json_sha256": "ab2a3880492ecc828275e7eab1e0e2da00600e281f7f14af4b8517617c00929b",
+      "raw_html_path": "data/captures/cornuejols-visible-331-2026-10-24.html",
+      "raw_html_sha256": "d0e204ac872a1ac99fa5885e14f53c2e3a5f3ea39eca33f3488f5ab4c29c2d6b"
+    }
+  ],
+  "browser_sessions_closed": true
+}
