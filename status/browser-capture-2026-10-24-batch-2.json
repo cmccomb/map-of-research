@@ -1,0 +1,67 @@
+{
+  "blocked": false,
+  "collection_method": "chrome_direct_profile",
+  "failed_profile_ids": [],
+  "finished_at_utc": "2026-10-24T19:11:17.437Z",
+  "first_profile_loaded_at_utc": "2026-10-24T19:09:11+00:00",
+  "inter_profile_loaded_gap_seconds": 95,
+  "max_profiles": 2,
+  "profile_capture": [
+    {
+      "citation_annotations": [],
+      "coverage": "capped_partial",
+      "display_name": "Prasad Tetali",
+      "missing_venue": 14,
+      "missing_year": 0,
+      "more_remain": true,
+      "person_id": "person-prasadtetali-bf494329",
+      "publication_count": 200,
+      "scholar_id": "FmZaK1wAAAAJ",
+      "source_html_sha256": "f2eaf097151026c25ae9e86e18949c38d8ed9d96162a746bb8de554f055cf760",
+      "source_json_sha256": "27aff7483526ef00b6da352ac6e97339d2f2fccb649bcfde3704db39c4a52bf3",
+      "zero_or_blank_citations": 50
+    },
+    {
+      "citation_annotations": [
+        {
+          "author_pub_id": "tWQsy4UAAAAJ:70eg2SAEIzsC",
+          "display": "290*",
+          "row": 4
+        },
+        {
+          "author_pub_id": "tWQsy4UAAAAJ:bEWYMUwI8FkC",
+          "display": "32*",
+          "row": 30
+        }
+      ],
+      "coverage": "complete_visible_profile",
+      "display_name": "Dejan Slepčev",
+      "missing_venue": 4,
+      "missing_year": 2,
+      "more_remain": false,
+      "person_id": "person-dejanslepcev-93733ef1",
+      "publication_count": 86,
+      "scholar_id": "tWQsy4UAAAAJ",
+      "source_html_sha256": "daa99b928a5e76fe42f0885db0fd7e906c643cf13850fa8b65dfc2323efb1fc0",
+      "source_json_sha256": "0189b60206897ed12826d6d5fbda05466916f2b31e0946524b85d8ab9f6cb4e5",
+      "zero_or_blank_citations": 26
+    }
+  ],
+  "publication_limit": 200,
+  "refreshed_profile_ids": [
+    "FmZaK1wAAAAJ",
+    "tWQsy4UAAAAJ"
+  ],
+  "request_delay_seconds": 90.0,
+  "schema_version": 1,
+  "second_profile_loaded_at_utc": "2026-10-24T19:10:46+00:00",
+  "selected_profile_ids": [
+    "FmZaK1wAAAAJ",
+    "tWQsy4UAAAAJ"
+  ],
+  "started_at_utc": "2026-10-24T19:09:11+00:00",
+  "status": "success",
+  "target_department_ids": [
+    "math"
+  ]
+}

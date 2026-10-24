@@ -417,6 +417,15 @@
       "migration_source": "map-of-ece/data/da Silva Sousa.json",
       "publication_count": 53
     },
+    "FmZaK1wAAAAJ": {
+      "collection_method": "chrome_direct_profile",
+      "coverage": "capped_partial",
+      "display_name": "Prasad Tetali",
+      "last_attempt_at_utc": "2026-10-24T19:10:28.966000+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2026-10-24T19:10:28.966000+00:00",
+      "publication_count": 200
+    },
     "Fr9Vhe4AAAAJ": {
       "display_name": "Halilaj",
       "last_attempt_at_utc": "2025-03-28T12:50:46+00:00",
@@ -1543,6 +1552,15 @@
       "last_success_at_utc": "2025-04-01T01:01:00+00:00",
       "migration_source": "map-of-cmu-africa/data/Ndibwile.json",
       "publication_count": 35
+    },
+    "tWQsy4UAAAAJ": {
+      "collection_method": "chrome_direct_profile",
+      "coverage": "complete_visible_profile",
+      "display_name": "Dejan Slepčev",
+      "last_attempt_at_utc": "2026-10-24T19:11:17.437000+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2026-10-24T19:11:17.437000+00:00",
+      "publication_count": 86
     },
     "uhIGX-MAAAAJ": {
       "display_name": "Peha",
