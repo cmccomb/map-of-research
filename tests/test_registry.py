@@ -990,6 +990,128 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
 
 
 @pytest.mark.parametrize(
+    ("name", "home_type", "home_id", "basis", "included_ids"),
+    [
+        (
+            "Barbara Johnstone",
+            "department",
+            "english",
+            "inferred_profile_title",
+            {"english", "lcal"},
+        ),
+        (
+            "Beibei Li",
+            "school",
+            "heinz",
+            "reviewed",
+            {"heinz-faculty", "tepper-faculty"},
+        ),
+        (
+            "Brad Mahon",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"ni", "psychology"},
+        ),
+        ("Dana Scott", "department", "csd", "reviewed", {"csd", "philosophy"}),
+        (
+            "Daniel Nagin",
+            "school",
+            "heinz",
+            "inferred_profile_title",
+            {"heinz-faculty", "stats"},
+        ),
+        (
+            "David Hounshell",
+            "department",
+            "sds",
+            "inferred_profile_title",
+            {"epp", "sds"},
+        ),
+        ("David Touretzky", "department", "csd", "reviewed", {"csd", "ni"}),
+        (
+            "Jamie Callan",
+            "institute",
+            "lti",
+            "inferred_profile_title",
+            {"heinz-faculty", "heinz-ism", "lti"},
+        ),
+        ("Jessica Cantlon", "institute", "ni", "reviewed", {"ni", "psychology"}),
+        (
+            "Kim J. Hyatt",
+            "school",
+            "heinz",
+            "school_fallback",
+            {"heinz-faculty", "heinz-ism", "heinz-ppm"},
+        ),
+        (
+            "David Lamont",
+            "academic_area",
+            "tepper:strategy",
+            "reviewed",
+            {"iii", "tepper-faculty"},
+        ),
+        (
+            "Marcel Just",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"bme", "psychology"},
+        ),
+        (
+            "Marlene Behrmann",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"ni", "psychology"},
+        ),
+        ("Paul Hopper", "department", "english", "reviewed", {"english", "lcal"}),
+        (
+            "Stacy Rosenberg",
+            "school",
+            "heinz",
+            "school_fallback",
+            {"heinz-faculty", "heinz-ism", "heinz-ppm"},
+        ),
+        ("Tai-Sing Lee", "department", "csd", "reviewed", {"csd", "ni"}),
+    ],
+)
+def test_source_backed_display_homes_preserve_memberships_and_published_types(
+    name: str,
+    home_type: str,
+    home_id: str,
+    basis: str,
+    included_ids: set[str],
+) -> None:
+    registry = load_registry()
+    person = next(person for person in registry.people if person.display_name == name)
+    home = registry.primary_affiliation(person.person_id)
+    assert (home.home_type, home.home_id, home.basis) == (home_type, home_id, basis)
+    assert home.source_url.startswith("https://")
+    assert home.verified_at == "2026-10-24"
+    assert {
+        item.department_id
+        for item in registry.memberships
+        if item.person_id == person.person_id and item.included
+    } == included_ids
+
+    published = home.published_fields()
+    assert published["primary_academic_home_type"] == home_type
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == home.title
+    assert published["primary_academic_home_school_id"] == home.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == basis
+    assert published["primary_department_id"] == (
+        home_id if home_type == "department" else ""
+    )
+    assert published["primary_department_basis"] == (
+        basis if home_type == "department" else "unresolved"
+    )
+
+
+@pytest.mark.parametrize(
     ("home", "unit_ids", "invalid_unit_type", "message"),
     [
         (
