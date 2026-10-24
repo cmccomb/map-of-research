@@ -38,6 +38,16 @@ titles Robert F. Sekerka “University Professor of Physics and Mathematics,
 Emeritus,” so the map displays Physics. First-listed order is a display
 tie-break, not an institutional rank or an exclusion of the Math appointment.
 All four department memberships remain included for filters and collection.
+Avigad's [faculty-authored student list](https://www.andrew.cmu.edu/user/avigad/students.html),
+cross-checked against the [CMU Pure and Applied Logic alumni list](https://www.logic.cmu.edu/alumni.html)
+and [Philosophy graduate programs](https://www.cmu.edu/dietrich/philosophy/graduate/phd/),
+places 8 of 17 listed PhD advisees in Philosophy programs, 5 in Mathematical
+Sciences, and 4 in Computer Science. This corroborates the displayed Philosophy
+home but is a count of listed advisees, not an institutional primary appointment;
+the chosen display rule remains first-listed department. Sekerka's
+[CMU-hosted CV](https://sekerkaweb.phys.cmu.edu/SekerkaCV2015.html)
+documents the Physics and Mathematics appointments but has no degree-coded
+advisee list, so the same title-order display rule supplies his visual home.
 
 The ledger records all 38 included people without a supported single choice.
 Examples with specific evidence gaps are:
