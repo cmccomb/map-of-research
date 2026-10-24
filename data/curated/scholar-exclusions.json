@@ -4328,6 +4328,54 @@
       "reason": "CMU-hosted source shows this is an address fragment from a Mark Fox and Norman Sadeh scheduling paper, with no Gordon Rule authorship.",
       "evidence_url": "https://iiif.library.cmu.edu/file/Newell_box00099_fld07543_doc0001/Newell_box00099_fld07543_doc0001.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:uWQEDVKXjbEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 124 is NSF award 0806703 for Some mesoscale issues for applied mathematics, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0806703.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:u9iWguZQMMsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 127 is NSF award 0305794 for Some Mesoscale Issues in Applied Mathematics, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0305794.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:RYcK_YlVTxYC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 129 is NSF award 0072194 for Some Mesoscale Issues for Applied Mathematics, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0072194.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:aqlVkmm33-oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 130 misreads the authors as title DAVID KINDERLEHRER; the publisher identifies the 1999 Kinderlehrer-Walkington paper as Approximation of parabolic equations using the Wasserstein metric, already captured correctly at row 28.",
+      "evidence_url": "https://archive.numdam.org/item/M2AN_1999__33_4_837_0/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 136 is a sentence fragment, not a work title. The volume publisher identifies the work at page 303 as Kinderlehrer's New Methods in the Study of Free Boundary Problems, already captured at row 122.",
+      "evidence_url": "https://www.jstor.org/stable/j.ctt1b7x7tv.22",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "gJbEoq8AAAAJ",
+      "author_pub_id": "gJbEoq8AAAAJ:roLk4NBRz8UC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 138 misreads an author name as title DAVID KINDERLEHRER. The publisher identifies the 1975 article at pages 323-344 as A free boundary value problem in potential theory by Kinderlehrer and Stampacchia, already captured correctly at row 101.",
+      "evidence_url": "https://www.numdam.org/articles/10.5802/aif.587/",
+      "verified_at": "2026-10-24"
     }
   ]
 }
