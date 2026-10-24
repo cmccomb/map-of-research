@@ -1,0 +1,35 @@
+{
+  "blocked": false,
+  "browser_closed": true,
+  "collection_method": "chrome_direct_profile",
+  "error_type": "profile_http_404",
+  "failed_profile_ids": [
+    "ms9O2zoAAAAJ"
+  ],
+  "finished_at_utc": "2026-10-24T19:16:12.273+00:00",
+  "http_status": 404,
+  "max_profiles": 2,
+  "note": "Stopped before requesting the second profile. This response does not establish that Owen has no publications or that the CMU-linked ID is invalid.",
+  "official_scholar_id_source_url": "https://www.cmu.edu/math/people/faculty/owen.html",
+  "publication_limit": 200,
+  "refreshed_profile_ids": [],
+  "request_delay_seconds": 90.0,
+  "schema_version": 1,
+  "selected_profile_ids": [
+    "ms9O2zoAAAAJ",
+    "CRCzglkAAAAJ"
+  ],
+  "source_profile_url": "https://scholar.google.com/citations?user=ms9O2zoAAAAJ&hl=en",
+  "started_at_utc": "2026-10-24T19:16:12.273+00:00",
+  "status": "failure",
+  "target_department_ids": [
+    "math"
+  ],
+  "target_person_ids": [
+    "person-davidrowen-a186595d",
+    "person-iantice-372961d6"
+  ],
+  "unrequested_profile_ids": [
+    "CRCzglkAAAAJ"
+  ]
+}
