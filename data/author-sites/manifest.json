@@ -44,6 +44,29 @@
       "direct_linked_doi_count": 0,
       "redacted_session_url_occurrences": 0,
       "links_with_session_component_removed": 0
+    },
+    {
+      "person_id": "person-matthewrosenzweig-94bdde39",
+      "person_name": "Matthew Rosenzweig",
+      "official_profile_url": "https://www.cmu.edu/math/people/faculty/rosenzweig.html",
+      "source_url": "https://matthewrosenzweigwork-max.github.io/publications.html",
+      "retrieved_at_utc": "2026-10-24T23:22:40.147551+00:00",
+      "html_path": "data/author-sites/matthew-rosenzweig.html",
+      "html_sha256": "8520807156371dbd4cfebf96e6b161b018c301919790bdafb6d85af9b2d2ad9c",
+      "original_html_sha256_local_only": "8520807156371dbd4cfebf96e6b161b018c301919790bdafb6d85af9b2d2ad9c",
+      "json_path": "data/author-sites/matthew-rosenzweig.json",
+      "json_sha256": "7b27d78cdf52340165a802fb8738b4f69259b6a2811683a04754cdfb59babc6f",
+      "observations": 35,
+      "section_counts": {
+        "preprints": 14,
+        "proceedings_surveys": 1,
+        "published_papers": 20
+      },
+      "direct_linked_doi_count": 20,
+      "coverage_label_source_url": "https://matthewrosenzweigwork-max.github.io/",
+      "coverage_label_as_listed": "Complete publication list",
+      "redacted_session_url_occurrences": 0,
+      "links_with_session_component_removed": 0
     }
   ]
 }
