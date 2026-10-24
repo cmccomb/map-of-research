@@ -266,7 +266,8 @@ _PLAIN_INITIAL_AFTER_PUNCTUATION_PATTERN = re.compile(
 _EDITOR_SUFFIX_PATTERN = re.compile(r"\(editors?\)$", re.IGNORECASE)
 _SIMPLE_CITATION_INDEX_PATTERN = re.compile(
     r"(?:[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’-]+,\s*"
-    r"(?:[A-Z]{1,3}|[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ'’-]+)\.?)"
+    r"(?:[A-Z]{1,3}(?![A-Za-z0-9])|"
+    r"[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ'’-]+)\.?)"
     r"(?:,?\s*\d{1,4})+(?:\s+.*)?$"
 )
 _NAME_CONNECTORS = frozenset(
