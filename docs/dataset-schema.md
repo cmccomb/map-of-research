@@ -32,6 +32,10 @@ those homes from genuinely unresolved cases.
 An academic area or broad school-level home must not be presented as a verified
 department. Inferences from PhD advising counts or faculty titles are labeled
 in the basis field and are not claims about university HR primary appointments.
+The `display_tie_break_first_listed` basis is an explicitly reviewed visual
+choice for a joint appointment: it picks the first department in a cited CMU
+dual-department title. It does not rank the appointments, remove memberships,
+or determine publication collection or school inclusion.
 CMU-Africa is an Engineering academic department in this dataset; CMU Silicon
 Valley is a campus facet and cannot be a primary academic home. The
 [2026-10-24 review](../registry/reviews/2026-10-24-primary-departments.md)

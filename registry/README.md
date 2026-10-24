@@ -59,9 +59,12 @@ verified unit; a school-level roster container is not thereby a verified
 department. CMU-Africa is an academic department under Engineering for this
 dataset; CMU Silicon Valley is a campus facet and cannot be a primary.
 Excluded courtesy, adjunct, affiliate, and former roles cannot supply a
-primary on their own. Multiple eligible units require a source-backed choice
-or a clearly labeled advising-count or title inference. Where the evidence
-does not distinguish one, the home remains unresolved. No alphabetical
+primary on their own. Multiple eligible units require a source-backed choice,
+a clearly labeled advising-count or title inference, or an explicitly reviewed
+visual tie-break. `display_tie_break_first_listed` selects the first department
+in an official dual-department title only for the map display. It does not
+rank university appointments or remove either membership. Other cases where
+the evidence does not distinguish one remain unresolved. No alphabetical
 tie-break is used.
 
 Tepper's official faculty listings support one academic area for 23 of the 28
@@ -75,14 +78,15 @@ All of these people's included memberships remain available to filters.
 
 The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
 records all 190 people needing explicit review. Across 2,001 registry
-people, 1,441 included people have a display primary and 560 remain unresolved,
-including all 520 excluded-only people. Of 1,481 included people, 40 remain
+people, 1,442 included people have a display primary and 559 remain unresolved,
+including all 521 excluded-only people. Of 1,480 included people, 38 remain
 unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
 Andrew Ilyas and Chris Hendrickson remain unresolved. The
 [four-school review](reviews/2026-10-24-other-schools-primary.md) and
-[Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence;
-Sekerka's Math/Physics tie remains unresolved. Publication and school filters
-continue to use all included memberships.
+[Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence.
+Avigad and Sekerka have explicit first-listed visual tie-breaks; their joint
+appointments remain included. Publication and school filters continue to use
+all included memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,

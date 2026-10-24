@@ -59,7 +59,13 @@ ACADEMIC_UNIT_TYPES = frozenset({"department", "constituent_school", "institute"
 UNIT_TYPES = ACADEMIC_UNIT_TYPES | {"campus", "roster_container"}
 PRIMARY_HOME_TYPES = ACADEMIC_UNIT_TYPES | {"academic_area", "school"}
 EXPLICIT_PRIMARY_BASES = frozenset(
-    {"reviewed", "inferred_advisee_count", "inferred_profile_title", "school_fallback"}
+    {
+        "reviewed",
+        "inferred_advisee_count",
+        "inferred_profile_title",
+        "display_tie_break_first_listed",
+        "school_fallback",
+    }
 )
 KNOWN_ROLES = INCLUDED_ROLES | {
     "adjunct",
