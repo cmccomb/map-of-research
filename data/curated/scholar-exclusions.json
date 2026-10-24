@@ -1760,8 +1760,7 @@
       "reason": "Yearless supplementary-information file for the complete 2016 Scientific Reports article retained on this profile.",
       "evidence_url": "https://www.nature.com/articles/srep35136",
       "verified_at": "2026-10-24"
-    }
-,
+    },
     {
       "scholar_id": "ctYLFRIAAAAJ",
       "author_pub_id": "ctYLFRIAAAAJ:ClCfbGk0d_YC",
@@ -1784,6 +1783,134 @@
       "reason_code": "nonpublication",
       "reason": "Supplementary information for the separately captured 2018 Green Chemistry article, not an independent research publication.",
       "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2018/gc/c8gc00051d",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:P7Ujq4OLJYoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "UIC Psychiatry identifies the exact connectome presentation as work by Ryan M. Sullivan, a different researcher.",
+      "evidence_url": "https://www.psych.uic.edu/sites/default/files/2024-07/July_2024_Newsletter_0.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:kh2fBNsKQNwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Nebraska Law Review attributes the exact lecture/article to Douglas Laycock and Steven Collis, not Ryan Sullivan.",
+      "evidence_url": "https://digitalcommons.unl.edu/nlr/vol95/iss1/2/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:_Re3VWB3Y0AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ESSD identifies the exact 30ebbr data-stream author R. C. Sullivan with the Argonne flux-research group, not CMU Ryan Sullivan.",
+      "evidence_url": "https://essd.copernicus.org/articles/17/5007/2025/essd-17-5007-2025-assets.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:IRz6iEL74y4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "ESSD identifies the exact 30ecor (a1) data-stream author R. C. Sullivan with the Argonne flux-research group, not CMU Ryan Sullivan.",
+      "evidence_url": "https://essd.copernicus.org/articles/17/5007/2025/essd-17-5007-2025-assets.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:anf4URPfarAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "AmeriFlux names the US-A03 dataset author and site PI Ryan Sullivan at Argonne, with an anl.gov address.",
+      "evidence_url": "https://ameriflux.lbl.gov/sites/siteinfo/US-A03",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:0izLItjtcgwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ESSD cites this exact US-A10 AmeriFlux dataset by its Argonne Ryan C. Sullivan author group.",
+      "evidence_url": "https://essd.copernicus.org/articles/17/5007/2025/essd-17-5007-2025.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:mNrWkgRL2YcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ESSD identifies the exact ECORSF instrument record with the Argonne Ryan C. Sullivan author group.",
+      "evidence_url": "https://essd.copernicus.org/articles/17/5007/2025/essd-17-5007-2025-assets.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:AHdEip9mkN0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "UIC REWARD Lab attributes the exact endocannabinoid presentation to its R. M. Sullivan, not CMU Ryan Sullivan.",
+      "evidence_url": "https://www.psych.uic.edu/research/lab-directory/reward-lab/in-the-news/dr-natania-crane-emily-jones-ryan-sullivan-rebecca-denson-and-the-reward-lab-presented-talks-and-posters-at-the-86th-annual-meeting-of-the-college-on-problems-of-drug-dependence-conference",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:sJsF-0ZLhtgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The DOE EBBR handbook names D. R. Cook and R. C. Sullivan as authors, both at Argonne National Laboratory.",
+      "evidence_url": "https://www.arm.gov/publications/tech_reports/handbooks/ebbr_handbook.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:HeT0ZceujKMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The published FLUXNET-CH4 paper identifies coauthor Ryan C. Sullivan at Argonne with ORCID 0000-0002-3500-1842.",
+      "evidence_url": "https://essd.copernicus.org/articles/13/3607/2021/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:yMeIxYmEMEAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "This alternate FLUXNET-CH4 title is the same paper whose Ryan C. Sullivan coauthor is at Argonne, ORCID 0000-0002-3500-1842.",
+      "evidence_url": "https://essd.copernicus.org/articles/13/3607/2021/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:5MTHONV0fEkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Scientific Reports identifies the exact flux-intercomparison article author R. C. Sullivan at Argonne.",
+      "evidence_url": "https://www.nature.com/articles/s41598-024-67911-z",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:6ZxmRoH8BuwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The University of Nebraska paper record identifies coauthor Ryan C. Sullivan at Argonne.",
+      "evidence_url": "https://digitalcommons.unl.edu/biosysengfacpub/813/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:cWzG1nlazyYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ESSD identifies the exact sebs (b1) data-stream author R. C. Sullivan with the Argonne flux-research group.",
+      "evidence_url": "https://essd.copernicus.org/articles/17/5007/2025/essd-17-5007-2025-assets.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:NyGDZy8z5eUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The DOE QCECOR report is from the ARM flux program; its updated author list includes the Argonne R. C. Sullivan, while the 2019 edition is cited under Tang et al.",
+      "evidence_url": "https://www.arm.gov/publications/tech_reports/doe-sc-arm-tr-223.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:HtS1dXgVpQUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original UpCH4 article assigns its Ryan C. Sullivan author to Argonne National Laboratory.",
+      "evidence_url": "https://www.fs.usda.gov/nrs/pubs/jrnl/2023/nrs_2023_mcnicol_001.pdf",
       "verified_at": "2026-10-24"
     }
   ]
