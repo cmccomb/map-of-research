@@ -6,7 +6,7 @@ Reviewed 2026-10-24. This is an **offline screen for false attribution, nonpubli
 
 | Scholar account | Visible rows | Capture | Evidence files | Exclusions proposed |
 | --- | ---: | --- | --- | ---: |
-| Giovanni Leoni `0Nj-v7sAAAAJ` | 134 | Complete visible profile; limit 200; `more_remain=false` | `work/scholar-bootstrap/leoni-visible-134-2026-10-24.json` SHA256 `78e1bb2e564fb313d1b4c4b6bb11b9543fd32b30e2ad2ff3100a63597a20aeb7`; paired HTML SHA256 `3047d9e35beee4a82f0995da0b41239f1872cabe26f356871c445bdab3e12b3c` | 20 |
+| Giovanni Leoni `0Nj-v7sAAAAJ` | 134 | Complete visible profile; limit 200; `more_remain=false` | `data/captures/leoni-visible-134-2026-10-24.json` SHA256 `78e1bb2e564fb313d1b4c4b6bb11b9543fd32b30e2ad2ff3100a63597a20aeb7`; paired redacted `data/captures/leoni-profile-134-2026-10-24.html` SHA256 `324d420a79c393c214daca5c443648cd3b7caa08d94951451be3d45b489b7fcc` | 20 |
 | Tomasz Tkocz `4JAHlmcAAAAJ` | 69 | Complete visible profile; limit 1000; `more_remain=false` | Paired source JSON SHA256 `49510fbacf65f6828344579b9753ca02fb8fdbdf6c3f1f58c449d8ecc570cd56`; HTML SHA256 `dc4d7714ac97a5b3dd89fd4174445c07b2dfa03405401f3270e5eb1b144cf7ff` | 0 |
 | John Mackey `uOCVq1cAAAAJ` | 19 | Complete visible profile; limit 5000; `more_remain=false` | Paired source JSON SHA256 `ff01bd32a2c0f6a96a3ccd73716c10d3eb8f576fdd10bc77eef0ea0e20144a40`; HTML SHA256 `21ccb3110a685f37f932c2bf9e5c7fac3325ec23d0fa4e67e7bedd201a808f8b` | 1 |
 

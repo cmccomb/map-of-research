@@ -3,10 +3,9 @@
   "reviewed_at": "2026-10-24",
   "scope": "Second-pass offline review of all 57 structural candidates in the Frieze/Bukh complete visible Google Scholar captures.",
   "policy": "Raw profile rows remain unchanged. These decisions only concern map eligibility. A malformed title for a genuine unique report or paper is retained pending bibliographic repair. Garbled rows whose underlying version cannot be identified remain unresolved and are not exclusions.",
-  "source_review_path": "work/math-frieze-bukh-source-review-2026-10-24.json",
   "source_capture_paths": {
-    "EqKRQ4YAAAAJ": "work/math-frieze-bukh-snapshot/data/captures/frieze-visible-659-2026-10-24.json",
-    "H8qYeA0AAAAJ": "work/math-frieze-bukh-snapshot/data/captures/bukh-visible-85-2026-10-24.json"
+    "EqKRQ4YAAAAJ": "data/captures/frieze-visible-659-2026-10-24.json",
+    "H8qYeA0AAAAJ": "data/captures/bukh-visible-85-2026-10-24.json"
   },
   "summary": {
     "verified_exclusions": 45,
