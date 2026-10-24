@@ -42,3 +42,11 @@ profiles: Zheng Kuang (41) and Tina Lee (38). Scholar displays the latter
 account as “Tina H Lee”; its verified CMU identity is recorded in the registry
 review. Their raw HTML and JSON, normalized caches, and checksum receipts are
 staged together. Exact publication eligibility is reviewed separately.
+
+The next Biological Sciences source capture preserves all 142 visible rows on
+Gordon Rule's direct Scholar profile, with paired redacted HTML and JSON, a
+cache, and a checksum receipt. His official CMU Biological Sciences roster
+identity is known, but this isolated branch does not assign the Scholar ID in
+the registry. The cache is not eligible for a full-corpus snapshot until that
+identity review is complete. Exact nonpublication and attribution decisions
+remain a separate source review.
