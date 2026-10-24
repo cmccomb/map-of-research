@@ -66,9 +66,13 @@ same limits and must also stop after any refusal.
 
 An explicit local browser capture can bootstrap a directly linked CMU profile
 when the `scholarly` client cannot access it. It uses the same two-profile cap,
-90-second inter-profile gap, 200-publication default limit, and stop-on-refusal
-rule. Captured rows retain their Scholar citation URLs and checksums of the
-locally saved source pages; a capped profile is labeled as such. Browser
+90-second inter-profile gap, and stop-on-refusal rule. The capture pages through
+the visible profile until Scholar offers no more rows; a deliberate row cap
+leaves the cache labeled `capped_partial`. A refusal preserves the prior good
+cache and records the failed attempt. A completed capture is labeled
+`complete_visible_profile`, which describes the visible Scholar profile, not
+the researcher's entire academic history. Captured rows retain their Scholar
+citation URLs and checksums of the saved source HTML and row JSON. Browser
 capture is not a scheduled or search-based collection path.
 
 ## Update cadence
@@ -114,6 +118,13 @@ when title and year match exactly one curated work. `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
 no verified Scholar profile or publications. Curated records never count as
 Scholar profile refreshes.
+
+For a verified profile, its visible Google Scholar rows are the primary
+publication source. Official CMU pages establish the profile identity. Curated
+DOI records are clearly labeled supplemental evidence for works missing from
+the Scholar cache; they do not redefine whether the visible profile was fully
+captured. The saved raw rows remain available when a specific attribution or
+nonpublication needs review.
 
 The research map excludes records that match high-confidence,
 content-based rules for conference front matter, journal front matter,

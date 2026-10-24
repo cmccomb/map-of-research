@@ -22,6 +22,11 @@ any newly eligible works. The map artifact exposes `source_types`,
 points, plus `catalogs.external_coauthors`. The artifact's Scholar refresh date
 uses only real Scholar fetches.
 
+When a verified Google Scholar profile exists, its visible profile rows are the
+primary source for that person's publications. Curated DOI observations fill
+specific gaps and remain labeled `curated_verified`; an official CMU page
+verifies identity or an individual DOI record, not Scholar completeness.
+
 ## Reviewed Scholar observations
 
 `scholar-exclusions.json` records exact Scholar profile-publication IDs whose
