@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Saved-capture anomalies still need source and publication-type review. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. Walker rows 403, 405, and 412 remain unresolved; row 409 is source-confirmed genuine and retained. All 646 Deserno/Walker source and cache rows remain intact; no curated producer exclusion is applied here.",
+  "note": "Saved-capture anomalies still need source and publication-type review. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. Walker rows 222 and 402 have unresolved report attribution; rows 403, 405, and 412 also remain unresolved. Walker row 409 is source-confirmed genuine and retained. All 646 Deserno/Walker source and cache rows remain intact; no curated producer exclusion is applied here.",
   "walker_profile_attribution_review": {
     "scholar_id": "IcEsJfAAAAAJ",
     "state": "profile_wide_row_attribution_review_required_before_publication",
@@ -19,6 +19,7 @@
       394,
       397,
       398,
+      402,
       412
     ]
   },
@@ -121,6 +122,12 @@
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 222,
+      "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
+      "concern": "The 2018 Victorian pathology-services rostering report shares an RMIT team and subject, but the exact report title is absent from checked faculty outputs; verify exact author attribution before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
       "capture_row": 292,
       "author_pub_id": "IcEsJfAAAAAJ:SgM-ki2adj0C",
       "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
@@ -199,6 +206,12 @@
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 402,
+      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
+      "concern": "The saved record shares the RMIT pathology-services rostering report title with row 222, but the exact report is absent from checked faculty outputs; verify exact author attribution before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
       "capture_row": 412,
       "author_pub_id": "IcEsJfAAAAAJ:V3AGJWp-ZtQC",
       "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
@@ -257,6 +270,10 @@
         [
           123,
           266
+        ],
+        [
+          222,
+          402
         ]
       ],
       "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
@@ -333,6 +350,7 @@
         365,
         369,
         373,
+        402,
         403,
         405,
         412

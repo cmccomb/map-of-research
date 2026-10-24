@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Uncertain saved-capture classification; all 624 Feenstra/Swendsen source and cache rows remain intact. No curated producer exclusion is applied here.",
+  "note": "Uncertain saved-capture classifications remain. Feenstra row 267 has an exact source-reviewed false-attribution proposal in physics-followon-reviewed-observation-exclusions-2026-10-24.json; row 246 is source-confirmed genuine coeditor work and retained. All 624 Feenstra/Swendsen source and cache rows remain intact. No curated producer exclusion is applied here.",
   "candidates": [
     {
       "scholar_id": "p1aFEDYAAAAJ",
