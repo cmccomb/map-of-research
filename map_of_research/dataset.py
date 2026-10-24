@@ -507,6 +507,7 @@ def build_dataset_tables(
         )
     people_rows = []
     for person in registry.people:
+        primary = registry.primary_affiliation(person.person_id)
         memberships = sorted(
             memberships_by_person.get(person.person_id, []),
             key=lambda item: (item["department_id"], item["role"]),
@@ -521,6 +522,7 @@ def build_dataset_tables(
                 "orcid": person.orcid,
                 "homepage_url": person.homepage_url,
                 "notes": person.notes,
+                **primary.published_fields(),
                 "memberships": memberships,
                 "included_department_ids": sorted(
                     {

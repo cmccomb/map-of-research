@@ -809,6 +809,7 @@ def build_map_artifact(
         {
             "department_id": department.department_id,
             "school_id": department.school_id,
+            "unit_type": department.unit_type,
             "title": department.title,
             "directory_url": department.directory_url,
             "reviewed_at": department.reviewed_at,
@@ -850,6 +851,7 @@ def build_map_artifact(
         memberships = memberships_by_person.get(person.person_id, [])
         if not memberships:
             continue
+        primary = registry.primary_affiliation(person.person_id)
         faculty.append(
             {
                 "person_id": person.person_id,
@@ -861,6 +863,7 @@ def build_map_artifact(
                     memberships,
                     key=lambda item: (item["department_id"], item["role"]),
                 ),
+                **primary.published_fields(),
                 "school_ids": sorted(
                     {
                         school_by_department[membership["department_id"]]

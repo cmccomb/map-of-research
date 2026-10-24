@@ -16,7 +16,7 @@ derived from a person's included department memberships; a cross-appointed
 person keeps one `person_id` and can belong to multiple schools. The school
 catalog includes Engineering, SCS, MCS, CFA, Dietrich, Heinz, and Tepper. It
 contains 7 top-level schools, 40 academic units or documented roster
-containers, 2,001 people, and 2,354 memberships after the four-school
+containers, 2,001 people, and 2,355 memberships after the four-school
 2026-10-24 expansion. A dated review of the official
 faculty listings on 2026-10-24 added all seven SCS departments and all four
 MCS departments. The reviewed pages supplied 357 SCS and 270 MCS department
@@ -46,13 +46,43 @@ the current registry schema; they are not asserted to be academic departments.
 The linked reviews and source CSVs document role decisions, identities,
 directly linked Scholar IDs, and unresolved directory gaps.
 
-The [four-school display-primary ledger](reviews/2026-10-24-other-schools-primary.md)
-covers 105 registered Scholar-ID people in the added-school scope: 102 have a
-source-backed display unit and three remain explicitly unresolved. Its three
-`primary_department_*` fields align with [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35),
-which adds primary fields to the canonical people schema. The current roster
-PR retains the decisions in a dated audit file so the primary-schema change
-can integrate them without collapsing joint memberships.
+The primary academic home is a single **display affiliation**, not a
+replacement for memberships or a claim about university HR records. Published
+`primary_academic_home_type`, `_id`, `_title`, `_school_id`, `_source_url`,
+`_verified_at`, and `_basis` fields distinguish departments, constituent
+schools, institutes, academic areas, broader schools, and unresolved cases.
+The legacy `primary_department_id` is a compatibility field only for an actual
+department home; its basis reads `unresolved` for other resolved home types,
+which consumers distinguish through the typed fields. A person with one
+included academic unit can inherit that
+verified unit; a school-level roster container is not thereby a verified
+department. CMU-Africa is an academic department under Engineering for this
+dataset; CMU Silicon Valley is a campus facet and cannot be a primary.
+Excluded courtesy, adjunct, affiliate, and former roles cannot supply a
+primary on their own. Multiple eligible units require a source-backed choice
+or a clearly labeled advising-count or title inference. Where the evidence
+does not distinguish one, the home remains unresolved. No alphabetical
+tie-break is used.
+
+Tepper's official faculty listings support one academic area for 23 of the 28
+reviewed Scholar-ID holders. Five are listed in two areas; their explicit
+Tepper school-level fallback is a broad, evidence-limited home, not a verified
+department or a claim that either area leads. Heinz has constituent schools
+rather than academic departments. Pedro Ferreira's School of Information
+Systems and Management choice is an inference: his CMU-hosted self-profile
+identifies ISM and EPP, while named PhD advisees favor Heinz over EPP 10 to 9.
+All of these people's included memberships remain available to filters.
+
+The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
+records all 190 people needing explicit review. Across 2,001 registry
+people, 1,441 included people have a display primary and 560 remain unresolved,
+including all 520 excluded-only people. Of 1,481 included people, 40 remain
+unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
+Andrew Ilyas and Chris Hendrickson remain unresolved. The
+[four-school review](reviews/2026-10-24-other-schools-primary.md) and
+[Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence;
+Sekerka's Math/Physics tie remains unresolved. Publication and school filters
+continue to use all included memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,
