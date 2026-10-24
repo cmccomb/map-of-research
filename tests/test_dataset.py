@@ -339,6 +339,20 @@ def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
     assert work["source_types"] == ["curated_verified", "scholar"]
     assert work["observation_count"] == 2
 
+    # A DOI mentioned elsewhere in the provenance does not rekey a
+    # source-native work that has no verified source_doi field.
+    incidental_doi = {
+        **curated,
+        "source_record_json": '{"related_url":"https://example.test/10.1000/other"}',
+    }
+    incidental = build_dataset_tables(
+        pandas.DataFrame([incidental_doi, scholar]), registry
+    )
+    assert len(incidental["works"]) == 1
+    assert incidental["works"].iloc[0]["source_native_ids"] == [
+        "egu2012:abstract-1"
+    ]
+
     other_curated = {
         **curated,
         "author_pub_id": "curated-native:person-one:agu2012:other",
