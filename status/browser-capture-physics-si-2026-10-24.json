@@ -17,10 +17,14 @@
   "source_json_path": "data/captures/physics-fangwei-si-2026-10-24.json",
   "source_json_sha256": "aef07c45477888575ab9249742b952386c950e7fa93d821350d9fca9d5dc2829",
   "source_html_path": "data/captures/physics-fangwei-si-2026-10-24.html",
-  "source_html_sha256": "1876ced84afe49ca5cc4f2e87c0b5715060596f25a90851e43921ba302401c31",
+  "source_html_sha256": "e471765341c9653dd4f49a775bcea21fe92178e18cf489922885a76634f9bcbf",
   "browser_closed": true,
   "release_state": "staged_for_review",
   "batch_status": "held_after_first_profile_at_coordinator_request",
   "release_dependency": "Reconcile draft PR #51 role correction: Fangwei Si BME listing is courtesy and Physics is the sole included department.",
-  "publication_observation_review": "All 18 visible titles are publication-like; no high-confidence nonpublication artifact identified in this offline pass. Identity attribution remains the source profile claim."
+  "publication_observation_review": "All 18 visible titles are publication-like; no high-confidence nonpublication artifact identified in this offline pass. Identity attribution remains the source profile claim.",
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
 }

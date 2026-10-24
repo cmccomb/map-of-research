@@ -24,7 +24,7 @@
       "more_remain": false,
       "visible_page_error": "",
       "source_json_sha256": "1eecb04cc016c29a29acd1f9c01a38d4a415bd7073aac8417ce5ec0974955a1a",
-      "source_html_sha256": "72be309d90b328454a305962b25e6c4d4b1875d3e2cb2672a9de09ed0ca17a6e"
+      "source_html_sha256": "f156eae9f0658f840ef8e1a3d7d8f587ac93de6b49474345b677fc7e33533af5"
     },
     {
       "person_id": "person-grigorytarnopolskiy-6dfab035",
@@ -35,7 +35,7 @@
       "more_remain": false,
       "visible_page_error": "",
       "source_json_sha256": "291099dda57dbbe9c21d3583b67458a5d99da939456f47bacfc18fdbce676446",
-      "source_html_sha256": "035b3142231ea1411d5398e533aba254ac07cd97ef970f23882d34e228ac9575"
+      "source_html_sha256": "2893be50417bfec72bd91148738960e45cb03b70d711e6c6d86c16eab202c49e"
     }
   ],
   "first_profile_reserved_at_utc": "2026-10-24T21:41:00+00:00",
@@ -48,5 +48,6 @@
   "blocked": false,
   "status": "success",
   "release_state": "staged_for_review",
-  "recorded_at_utc": "2026-10-24T21:44:50.534301+00:00"
+  "recorded_at_utc": "2026-10-24T21:44:50.534301+00:00",
+  "html_redaction_replacement": "[REDACTED]"
 }
