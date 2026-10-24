@@ -31,6 +31,9 @@ bounded local batch captured Prasad Tetali and Dejan Slepčev; its
 coverage and provenance separately from map publication. Two separately
 verified Tetali–Erdős DOI works are retained in the curated source. Paul
 Erdős is an external coauthor, not CMU faculty.
+The [Bio Scholar-ID follow-up](reviews/2026-10-24-bio-scholar-ids.md) verifies
+three additional IDs from named CMU expert pages; it does not add publication
+observations.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
