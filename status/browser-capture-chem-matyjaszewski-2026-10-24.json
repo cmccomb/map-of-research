@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "browser_route": "isolated_task_browser",
+  "person_id": "person-krzysztofmatyjaszewski-29a2013e",
+  "display_name": "Krzysztof Matyjaszewski",
+  "profile_display_name": "Krzysztof Matyjaszewski",
+  "scholar_id": "TSkli5EAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/matyjaszewski.html",
+  "scholar_id_source_url": "https://www.cmu.edu/chemistry/people/faculty/matyjaszewski.html",
+  "captured_at_utc": "2026-10-24T22:55:21.338000+00:00",
+  "profile_url": "https://scholar.google.com/citations?user=TSkli5EAAAAJ&hl=en",
+  "publication_count": 2707,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 29,
+  "show_more_click_count": 28,
+  "source_json_path": "data/captures/matyjaszewski-visible-2707-2026-10-24.json",
+  "source_json_sha256": "0a6baf6edf0003cb4b28fa42f4240fd9279de3e0adb5da474b972f690c1408a9",
+  "source_html_path": "data/captures/matyjaszewski-visible-2707-2026-10-24.html",
+  "source_html_sha256": "4fbcbf2e8786d9243caaff17644ac1a16c9070dd158956d7f6c589394df3685e",
+  "cache_path": "data/authors/TSkli5EAAAAJ.json",
+  "cache_sha256": "970c1698164515449f88673fa52ee7072bd1525b13600c05de4ba3ecd8e42146",
+  "browser_closed": true,
+  "release_state": "staged_for_source_review",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "missing_year": 136,
+  "missing_venue": 140,
+  "zero_or_blank_citations": 742,
+  "citation_annotations": [
+    {
+      "row": 39,
+      "author_pub_id": "TSkli5EAAAAJ:27jnQnxMyUIC",
+      "display": "770*"
+    },
+    {
+      "row": 65,
+      "author_pub_id": "TSkli5EAAAAJ:QD3KBmkZPeQC",
+      "display": "533*"
+    },
+    {
+      "row": 116,
+      "author_pub_id": "TSkli5EAAAAJ:ZHo1McVdvXMC",
+      "display": "360*"
+    },
+    {
+      "row": 117,
+      "author_pub_id": "TSkli5EAAAAJ:isC4tDSrTZIC",
+      "display": "359*"
+    },
+    {
+      "row": 148,
+      "author_pub_id": "TSkli5EAAAAJ:P5F9QuxV20EC",
+      "display": "302*"
+    },
+    {
+      "row": 190,
+      "author_pub_id": "TSkli5EAAAAJ:B3FOqHPlNUQC",
+      "display": "252*"
+    },
+    {
+      "row": 271,
+      "author_pub_id": "TSkli5EAAAAJ:UmS_249rOGwC",
+      "display": "185*"
+    },
+    {
+      "row": 316,
+      "author_pub_id": "TSkli5EAAAAJ:8XpgKc9YVYQC",
+      "display": "161*"
+    },
+    {
+      "row": 496,
+      "author_pub_id": "TSkli5EAAAAJ:0paDrhnEFY0C",
+      "display": "103*"
+    },
+    {
+      "row": 542,
+      "author_pub_id": "TSkli5EAAAAJ:ZyBjE3zI-i8C",
+      "display": "97*"
+    },
+    {
+      "row": 835,
+      "author_pub_id": "TSkli5EAAAAJ:x3BrfUtjctIC",
+      "display": "52*"
+    },
+    {
+      "row": 1078,
+      "author_pub_id": "TSkli5EAAAAJ:vGVSmY4B7dEC",
+      "display": "32*"
+    },
+    {
+      "row": 1156,
+      "author_pub_id": "TSkli5EAAAAJ:FDWdkovcuQUC",
+      "display": "26*"
+    },
+    {
+      "row": 1197,
+      "author_pub_id": "TSkli5EAAAAJ:t0WnC8xj2-sC",
+      "display": "24*"
+    },
+    {
+      "row": 1346,
+      "author_pub_id": "TSkli5EAAAAJ:cAX_JoMERPUC",
+      "display": "16*"
+    },
+    {
+      "row": 1580,
+      "author_pub_id": "TSkli5EAAAAJ:unvvabd0N_sC",
+      "display": "7*"
+    },
+    {
+      "row": 1720,
+      "author_pub_id": "TSkli5EAAAAJ:JRy6eiyfWjYC",
+      "display": "4*"
+    }
+  ],
+  "year_anomalies": []
+}

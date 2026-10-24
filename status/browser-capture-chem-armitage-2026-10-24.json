@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "browser_route": "isolated_task_browser",
+  "person_id": "person-brucearmitage-59bcecbe",
+  "display_name": "Bruce Armitage",
+  "profile_display_name": "Bruce A. Armitage",
+  "scholar_id": "BWNUifwAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/armitage.html",
+  "scholar_id_source_url": "https://experts.cmu.edu/expert/bruce.armitage/bruce-armitage",
+  "captured_at_utc": "2026-10-24T22:56:30.359000+00:00",
+  "profile_url": "https://scholar.google.com/citations?user=BWNUifwAAAAJ&hl=en",
+  "publication_count": 207,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/armitage-visible-207-2026-10-24.json",
+  "source_json_sha256": "f366e9eb4f249ddbee7afb64d885aa6bd7bc379ffa0654b1b61837f0a1ed1d1d",
+  "source_html_path": "data/captures/armitage-visible-207-2026-10-24.html",
+  "source_html_sha256": "40a8851ef69d039b614def8a4f484938507d56c90dd6aebd336e65acac0a6be5",
+  "cache_path": "data/authors/BWNUifwAAAAJ.json",
+  "cache_sha256": "4f7b6930b478965fb7b0a7e2b42921730b6bbc891fe3305b5465afbba371c8e8",
+  "browser_closed": true,
+  "release_state": "staged_for_source_review",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "missing_year": 1,
+  "missing_venue": 2,
+  "zero_or_blank_citations": 74,
+  "citation_annotations": [
+    {
+      "row": 101,
+      "author_pub_id": "BWNUifwAAAAJ:vV6vV6tmYwMC",
+      "display": "16*"
+    }
+  ],
+  "year_anomalies": []
+}
