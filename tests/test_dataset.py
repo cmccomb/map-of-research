@@ -44,6 +44,31 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "verified_at": "2026-07-17",
             }
             for person_id in ("person-one", "person-two")
+        ]
+        + [
+            {
+                "person_id": "person-one",
+                "department_id": "s3d",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "One Person",
+                "source_url": "https://example.test/s3d",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "school_id": "engineering",
+                "title": "Electrical & Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "s3d",
+                "school_id": "scs",
+                "title": "Software and Societal Systems Department",
+                "directory_url": "https://example.test/s3d",
+            },
         ],
     )
     registry = load_registry(people_path, memberships_path, departments_path)
@@ -68,8 +93,21 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "person_id": person_id,
                 "display_name": display_name,
                 "faculty": display_name,
-                "department_ids": ["ece"],
-                "memberships": memberships,
+                "department_ids": ["ece", "s3d"]
+                if person_id == "person-one"
+                else ["ece"],
+                "memberships": memberships
+                + (
+                    [
+                        {
+                            "department_id": "s3d",
+                            "role": "faculty",
+                            "included": True,
+                        }
+                    ]
+                    if person_id == "person-one"
+                    else []
+                ),
                 "author_pub_id": f"{scholar_id}:paper",
                 "title": "The Same Paper!",
                 "authors": "One Person and Two Person",
@@ -102,6 +140,260 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
         "twoAAAAJ:paper",
     }
     assert person["mapped_work_count"] == 1
+    assert person["included_school_ids"] == ["engineering", "scs"]
+    assert work["school_ids"] == ["engineering", "scs"]
+    assert work["school_titles"] == [
+        "College of Engineering",
+        "School of Computer Science",
+    ]
+    authorship = tables["authorships"].set_index("person_id").loc["person-one"]
+    assert authorship["school_ids"] == [
+        "engineering",
+        "scs",
+    ]
+
+
+def test_curated_doi_reconciles_later_scholar_rows_without_losing_provenance(
+    tmp_path,
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-one",
+                "display_name": "One Person",
+                "scholar_id": "oneAAAAJ",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/faculty",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    membership = {
+        "department_id": "ece",
+        "role": "faculty",
+        "included": True,
+    }
+    base = {
+        "person_id": "person-one",
+        "display_name": "One Person",
+        "faculty": "One Person",
+        "department_ids": ["ece"],
+        "memberships": [membership],
+        "title": "A Verified Paper",
+        "authors": "One Person and External Example",
+        "year": 1995,
+        "venue": "Journal",
+        "citation": "Journal 1995",
+        "citation_count": 0,
+        "source_url": "",
+        "source_record_json": "{}",
+        "embedding": [0.0, 1.0],
+        "source_doi": "",
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "external_coauthors": [],
+    }
+    external = {
+        "person_id": "external-example",
+        "display_name": "External Example",
+        "source_url": "https://example.test/author",
+    }
+    curated = {
+        **base,
+        "scholar_id": "",
+        "author_pub_id": "curated-doi:10.1000/example",
+        "source_type": "curated_verified",
+        "source_doi": "10.1000/example",
+        "source_url": "https://example.test/publisher",
+        "source_verified_at": "2026-10-24",
+        "source_verification_urls": ["https://example.test/publisher"],
+        "external_coauthors": [external],
+        "fetched_at_utc": "",
+    }
+    scholar_doi = {
+        **base,
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "one:doi",
+        "source_type": "scholar",
+        "source_doi": "10.1000/example",
+        "fetched_at_utc": "2026-11-01T12:00:00+00:00",
+    }
+    scholar_title = {
+        **base,
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "one:no-doi",
+        "source_type": "scholar",
+        "fetched_at_utc": "2026-11-02T12:00:00+00:00",
+    }
+    conflicting_doi = {
+        **scholar_title,
+        "author_pub_id": "one:other-doi",
+        "source_doi": "10.1000/other",
+    }
+    tables = build_dataset_tables(
+        pandas.DataFrame([curated, scholar_doi, scholar_title, conflicting_doi]),
+        registry,
+    )
+    observations = tables["profile_publications"].set_index("author_pub_id")
+    assert observations.loc["one:no-doi", "work_match_method"] == "curated_title_year"
+    assert observations.loc["one:other-doi", "doi"] == "10.1000/other"
+    works = tables["works"].set_index("doi")
+    assert len(works) == 2
+    merged = works.loc["10.1000/example"]
+    assert merged["observation_count"] == 3
+    assert merged["source_types"] == ["curated_verified", "scholar"]
+    assert merged["source_verified_at"] == "2026-10-24"
+    assert merged["source_verification_urls"] == ["https://example.test/publisher"]
+    assert merged["external_coauthor_ids"] == ["external-example"]
+    assert merged["last_fetched_at_utc"] == "2026-11-02T12:00:00+00:00"
+    assert merged["scholar_ids"] == ["oneAAAAJ"]
+    person = tables["people"].iloc[0]
+    assert person["scholar_observation_count"] == 3
+    assert person["curated_observation_count"] == 1
+    assert person["publication_observation_count"] == 4
+
+
+def test_ambiguous_curated_title_year_does_not_guess_a_doi(tmp_path) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "one"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/faculty",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    base = {
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "department_ids": ["ece"],
+        "memberships": [{"department_id": "ece", "included": True}],
+        "title": "Same Title",
+        "authors": "One",
+        "year": 1995,
+        "venue": "Journal",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": "",
+        "source_record_json": "{}",
+        "embedding": [0.0, 1.0],
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "external_coauthors": [],
+        "fetched_at_utc": "",
+    }
+    rows = [
+        {
+            **base,
+            "scholar_id": "",
+            "author_pub_id": f"curated:{doi}",
+            "source_type": "curated_verified",
+            "source_doi": doi,
+        }
+        for doi in ("10.1000/one", "10.1000/two")
+    ]
+    rows.append(
+        {
+            **base,
+            "scholar_id": "one",
+            "author_pub_id": "one:no-doi",
+            "source_type": "scholar",
+            "source_doi": "",
+            "fetched_at_utc": "2026-10-24T12:00:00+00:00",
+        }
+    )
+    tables = build_dataset_tables(pandas.DataFrame(rows), registry)
+    assert len(tables["works"]) == 3
+    scholar = (
+        tables["profile_publications"].set_index("author_pub_id").loc["one:no-doi"]
+    )
+    assert scholar["work_match_method"] == "normalized_title_year"
+
+
+def test_dataset_rejects_conflicting_external_coauthor_evidence(tmp_path) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "one"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/faculty",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    row = {
+        "scholar_id": "",
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "department_ids": ["ece"],
+        "memberships": [{"department_id": "ece", "included": True}],
+        "author_pub_id": "curated:one",
+        "source_type": "curated_verified",
+        "source_doi": "10.1000/one",
+        "title": "One Work",
+        "authors": "One and External",
+        "year": 1995,
+        "venue": "Journal",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": "",
+        "source_record_json": "{}",
+        "embedding": [0.0, 1.0],
+        "source_verified_at": "2026-10-24",
+        "source_verification_urls": ["https://example.test/work"],
+        "external_coauthors": [
+            {
+                "person_id": "external-one",
+                "display_name": "External One",
+                "source_url": "https://example.test/author",
+            }
+        ],
+        "fetched_at_utc": "",
+    }
+    with pytest.raises(ValueError, match="must be an object"):
+        build_dataset_tables(
+            pandas.DataFrame([{**row, "external_coauthors": ["bad"]}]), registry
+        )
+    different = {
+        **row,
+        "author_pub_id": "curated:two",
+        "external_coauthors": [
+            {**row["external_coauthors"][0], "display_name": "Different Name"}
+        ],
+    }
+    with pytest.raises(ValueError, match="Conflicting external"):
+        build_dataset_tables(pandas.DataFrame([row, different]), registry)
+
+    # A malformed curator row cannot serve as an exact title/year DOI anchor.
+    no_doi = {**row, "source_doi": "", "author_pub_id": "curated:no-doi"}
+    result = build_dataset_tables(pandas.DataFrame([no_doi]), registry)
+    assert result["works"].iloc[0]["doi"] == ""
 
 
 def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(

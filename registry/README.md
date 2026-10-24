@@ -7,8 +7,27 @@ The registry is intentionally normalized:
   durable notes.
 - `memberships.csv` owns department roles, inclusion state, legacy labels, the
   official source URL, and the date of human verification.
-- `departments.csv` owns stable department IDs, titles, official directory URLs,
-  annual review dates, and the documented review policy.
+- `departments.csv` owns stable department IDs, their parent `school_id`, titles,
+  official directory URLs, annual review dates, and the documented review policy.
+- `schools.csv` owns stable school IDs, titles, and official directory URLs.
+
+Every department must reference a school in `schools.csv`. School membership is
+derived from a person's included department memberships; a cross-appointed
+person keeps one `person_id` and can belong to multiple schools. The school
+catalog includes Engineering, SCS, and MCS. A dated review of the official
+faculty listings on 2026-10-24 added all seven SCS departments and all four
+MCS departments. The reviewed pages supplied 357 SCS and 270 MCS department
+observations; 346 and 212 memberships, respectively, meet the existing
+faculty, teaching, or emeritus inclusion policy. After identity reconciliation,
+the registry has 317 included SCS people and 211 included MCS people. The
+dated source extracts and coverage limits are in
+[`reviews/2026-10-24.md`](reviews/2026-10-24.md).
+
+Faculty registration does not imply publication coverage. The source pages
+directly linked 93 SCS and 44 MCS Scholar IDs, but only 8 included SCS and 3
+included MCS people have a cache in the local preview. Prasad Tetali still has
+no Scholar cache; two separately verified Tetali–Erdős DOI records are retained
+in the curated source. Paul Erdős is an external coauthor, not CMU faculty.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
@@ -20,9 +39,9 @@ represented by multiple memberships for the same stable `person_id` and are
 collected once.
 
 The registry retains every legacy label in `legacy_label` for provenance.
-The first full-name and role review against all 11 official directories was
-completed on 2026-07-17. Unresolved identities and Scholar IDs remain blank
-rather than being guessed.
+The first full-name and role review against all 11 Engineering directories was
+completed on 2026-07-17. SCS and MCS were reviewed on 2026-10-24. Unresolved
+identities and Scholar IDs remain blank rather than being guessed.
 
 New Scholar IDs should record the faculty-controlled, institutional, or
 self-managed public page that links the profile in `scholar_id_source_url`,

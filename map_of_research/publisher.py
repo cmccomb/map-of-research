@@ -4,12 +4,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import logging
 import math
 import os
 import tempfile
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
@@ -80,7 +81,8 @@ KEYWORD_LEVELS = (
     {"level": 1, "label": "Detailed topics"},
 )
 MAP_ARTIFACT_NAME = "publications.json"
-MAP_TITLE = "CMU Engineering Research"
+MAP_TITLE = "CMU Faculty Research"
+MAX_REUSABLE_DOI_REKEYS = 25
 STATUS_SCHEMA_VERSION = 2
 DEFAULT_STATUS_PATH = Path("status/last-upload.json")
 STRING_LIST_COLUMNS = frozenset(
@@ -89,13 +91,19 @@ STRING_LIST_COLUMNS = frozenset(
         "author_variants",
         "citation_variants",
         "included_department_ids",
+        "included_school_ids",
         "map_exclusion_reasons",
         "department_ids",
         "department_titles",
+        "school_ids",
+        "school_titles",
         "observation_ids",
         "person_ids",
         "scholar_ids",
         "source_urls",
+        "source_types",
+        "source_verification_urls",
+        "external_coauthor_ids",
         "title_variants",
         "venue_variants",
     }
@@ -115,34 +123,67 @@ def _as_list(value: Any) -> list[Any]:
     return [value]
 
 
+def _published_rows(
+    config_name: str,
+    columns: tuple[str, ...],
+    *,
+    hf_token: str,
+) -> Iterator[dict[str, Any]]:
+    """Read published Parquet columns without applying stale Hub feature metadata."""
+
+    import pyarrow.parquet as parquet
+    from huggingface_hub import snapshot_download
+
+    directory_name = "data" if config_name == "default" else config_name
+    snapshot_root = Path(
+        snapshot_download(
+            REPO_ID,
+            repo_type="dataset",
+            allow_patterns=f"{directory_name}/train-*.parquet",
+            token=hf_token or None,
+        )
+    )
+    parquet_files = sorted((snapshot_root / directory_name).glob("train-*.parquet"))
+    if not parquet_files:
+        raise FileNotFoundError(f"No published {config_name} Parquet shard")
+    for parquet_path in parquet_files:
+        shard = parquet.ParquetFile(parquet_path)
+        missing = set(columns).difference(shard.schema_arrow.names)
+        if missing:
+            LOGGER.info("Published %s lacks reusable columns %s", config_name, missing)
+            return
+        for batch in shard.iter_batches(columns=list(columns), batch_size=512):
+            yield from batch.to_pylist()
+
+
 def _existing_embeddings(*, hf_token: str) -> dict[tuple[str, str], list[float]]:
     """Load reusable observation vectors from any prior dataset generation."""
 
-    import datasets
-
     for config_name in REUSABLE_EMBEDDING_CONFIGS:
+        embeddings: dict[tuple[str, str], list[float]] = {}
         try:
-            existing = datasets.load_dataset(
-                REPO_ID,
-                name=config_name,
-                split="train",
-                token=hf_token or None,
-            )
-        except Exception:
+            for row in _published_rows(
+                config_name,
+                ("author_pub_id", "title", "embedding"),
+                hf_token=hf_token,
+            ):
+                author_pub_id = str(row.get("author_pub_id") or "")
+                title = str(row.get("title") or "")
+                embedding = row.get("embedding")
+                if not author_pub_id or not title or not isinstance(embedding, list):
+                    continue
+                if len(embedding) != EMBEDDING_DIMENSION:
+                    continue
+                embeddings[(author_pub_id, title)] = [
+                    float(value) for value in embedding
+                ]
+        except FileNotFoundError:
             LOGGER.info("No reusable %s dataset config found", config_name)
             continue
-        if "embedding" not in existing.column_names:
-            continue
-        embeddings: dict[tuple[str, str], list[float]] = {}
-        for row in existing:
-            author_pub_id = str(row.get("author_pub_id") or "")
-            title = str(row.get("title") or "")
-            embedding = row.get("embedding")
-            if not author_pub_id or not title or not isinstance(embedding, list):
-                continue
-            if len(embedding) != EMBEDDING_DIMENSION:
-                continue
-            embeddings[(author_pub_id, title)] = [float(value) for value in embedding]
+        except Exception as error:
+            raise RuntimeError(
+                f"Could not read reusable {config_name} embeddings"
+            ) from error
         if embeddings:
             LOGGER.info(
                 "Reusing %d embeddings from config %s",
@@ -166,6 +207,23 @@ def add_embeddings(
         (str(row.author_pub_id), str(row.title))
         for row in frame[["author_pub_id", "title"]].itertuples(index=False)
     ]
+    # The encoder receives only the title. A new curated observation of an
+    # already published title can therefore use the same vector, provided all
+    # published vectors for that exact title agree.
+    by_title: dict[str, list[float]] = {}
+    ambiguous_titles: set[str] = set()
+    for (_, title), vector in existing.items():
+        previous = by_title.setdefault(title, vector)
+        if previous != vector:
+            ambiguous_titles.add(title)
+    for key in keys:
+        if (
+            key not in existing
+            and key[1] in by_title
+            and key[1] not in ambiguous_titles
+        ):
+            existing[key] = by_title[key[1]]
+
     missing_keys = list(dict.fromkeys(key for key in keys if key not in existing))
     if missing_keys:
         if encoder is None:
@@ -198,48 +256,204 @@ def add_embeddings(
 def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     """Load a complete compatible layout that can be reused without refitting."""
 
-    import datasets
-
-    try:
-        existing = datasets.load_dataset(
-            REPO_ID,
-            name="works",
-            split="train",
-            token=hf_token or None,
-        )
-    except Exception:
-        LOGGER.info("No reusable works layout found")
-        return {}
     coordinate_fields = {
         field
         for layout in LAYOUTS
         for field in (str(layout["x_field"]), str(layout["y_field"]))
     }
-    required_fields = {"work_id", "layout_version", *coordinate_fields}
-    if not required_fields.issubset(existing.column_names):
-        return {}
+    required_fields = ("work_id", "layout_version", *sorted(coordinate_fields))
     layouts: dict[str, dict[str, float]] = {}
-    for row in existing:
-        if row.get("layout_version") != LAYOUT_VERSION:
-            continue
-        work_id = str(row.get("work_id") or "")
-        coordinates: dict[str, float] = {}
-        for field in coordinate_fields:
-            try:
-                value = float(row.get(field))
-            except (TypeError, ValueError):
-                break
-            if not math.isfinite(value):
-                break
-            coordinates[field] = value
-        if len(coordinates) != len(coordinate_fields) or not work_id:
-            continue
-        if work_id in layouts:
-            return {}
-        layouts[work_id] = coordinates
+    try:
+        for row in _published_rows("works", required_fields, hf_token=hf_token):
+            if row.get("layout_version") != LAYOUT_VERSION:
+                continue
+            work_id = str(row.get("work_id") or "")
+            coordinates: dict[str, float] = {}
+            for field in coordinate_fields:
+                try:
+                    value = float(row.get(field))
+                except (TypeError, ValueError):
+                    break
+                if not math.isfinite(value):
+                    break
+                coordinates[field] = value
+            if len(coordinates) != len(coordinate_fields) or not work_id:
+                continue
+            if work_id in layouts:
+                return {}
+            layouts[work_id] = coordinates
+    except FileNotFoundError:
+        LOGGER.info("No reusable works layout found")
+        return {}
+    except Exception as error:
+        raise RuntimeError("Could not read reusable works layouts") from error
     if layouts:
         LOGGER.info("Found reusable coordinates for %d works", len(layouts))
     return layouts
+
+
+def _existing_work_state(*, hf_token: str) -> list[dict[str, Any]]:
+    """Read the published work order and fields needed to verify layout reuse."""
+
+    fields = (
+        "work_id",
+        "title",
+        "year",
+        "doi",
+        "work_match_method",
+        "map_eligible",
+        "map_region_outlier",
+        "map_exclusion_reasons",
+        "department_ids",
+        "quality_assessment_version",
+        "keyword_model_version",
+        "topic_label_review_version",
+        "map_region_audit_version",
+        "layout_version",
+    )
+    try:
+        return list(_published_rows("works", fields, hf_token=hf_token))
+    except FileNotFoundError:
+        LOGGER.info("No published works are available for order reuse")
+        return []
+    except Exception as error:
+        raise RuntimeError("Could not read published works for order reuse") from error
+
+
+def _year_key(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        if math.isnan(value):
+            return None
+    except TypeError:
+        pass
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _reusable_work_order(
+    works: Any,
+    previous: Sequence[Mapping[str, Any]],
+    layouts: Mapping[str, Mapping[str, float]],
+) -> tuple[Any, dict[str, Mapping[str, float]]] | None:
+    """Reuse prior coordinates and row order only for an identical work corpus.
+
+    DOI-backed records may replace a few title/year work IDs. Reusing the old
+    row order matters as much as reusing coordinates: k-means initialization
+    depends on row order even when every coordinate is unchanged.
+    """
+
+    if len(previous) != len(works) or not previous or not layouts:
+        return None
+    prior_by_id = {str(row.get("work_id") or ""): row for row in previous}
+    current_by_id = {str(row.work_id): row for row in works.itertuples(index=False)}
+    if (
+        "" in prior_by_id
+        or len(prior_by_id) != len(previous)
+        or len(current_by_id) != len(works)
+    ):
+        return None
+
+    for row in previous:
+        if (
+            row.get("layout_version") != LAYOUT_VERSION
+            or row.get("quality_assessment_version") != QUALITY_ASSESSMENT_VERSION
+            or row.get("keyword_model_version") != KEYWORD_MODEL_VERSION
+            or row.get("topic_label_review_version") != TOPIC_LABEL_REVIEW_VERSION
+            or row.get("map_region_audit_version") != REGION_AUDIT_VERSION
+        ):
+            return None
+
+    missing_prior = set(prior_by_id) - set(current_by_id)
+    new_current = set(current_by_id) - set(prior_by_id)
+    if len(missing_prior) > MAX_REUSABLE_DOI_REKEYS:
+        return None
+
+    # Require a title/year key to identify exactly one work across both full
+    # corpora. This rules out accidental joins on common or duplicate titles.
+    prior_keys: dict[tuple[str, int | None], list[str]] = {}
+    current_keys: dict[tuple[str, int | None], list[str]] = {}
+    for work_id, row in prior_by_id.items():
+        key = (str(row.get("title") or ""), _year_key(row.get("year")))
+        prior_keys.setdefault(key, []).append(work_id)
+    for work_id, row in current_by_id.items():
+        key = (str(row.title or ""), _year_key(row.year))
+        current_keys.setdefault(key, []).append(work_id)
+
+    rekeys: dict[str, str] = {}
+    for old_id in missing_prior:
+        row = prior_by_id[old_id]
+        key = (str(row.get("title") or ""), _year_key(row.get("year")))
+        if (
+            not key[0].strip()
+            or key[1] is None
+            or row.get("work_match_method") != "normalized_title_year"
+            or str(row.get("doi") or "").strip()
+        ):
+            return None
+        old_matches = prior_keys.get(key, [])
+        new_matches = current_keys.get(key, [])
+        if len(old_matches) != 1 or len(new_matches) != 1:
+            return None
+        new_id = new_matches[0]
+        if new_id not in new_current:
+            return None
+        current = current_by_id[new_id]
+        doi = str(current.doi or "").casefold()
+        expected_id = "work-" + hashlib.sha256(f"doi:{doi}".encode()).hexdigest()
+        if (
+            not doi.startswith("10.")
+            or new_id != expected_id
+            or current.work_match_method not in {"doi", "curated_title_year"}
+            or "curated_verified" not in _as_list(current.source_types)
+            or not str(current.source_verified_at or "").strip()
+            or not _as_list(current.source_verification_urls)
+        ):
+            return None
+        rekeys[old_id] = new_id
+    remapped_layouts: dict[str, Mapping[str, float]] = {}
+    for old_id, prior in prior_by_id.items():
+        new_id = rekeys.get(old_id, old_id)
+        current = current_by_id[new_id]
+        if str(prior.get("title") or "") != str(current.title or "") or _year_key(
+            prior.get("year")
+        ) != _year_key(current.year):
+            return None
+        prior_reasons = set(map(str, _as_list(prior.get("map_exclusion_reasons"))))
+        was_region_outlier = bool(prior.get("map_region_outlier"))
+        previous_eligible = bool(prior.get("map_eligible")) or was_region_outlier
+        if was_region_outlier:
+            prior_reasons.discard("low_information_region")
+        if (
+            previous_eligible != bool(current.map_eligible)
+            or prior_reasons != set(map(str, _as_list(current.map_exclusion_reasons)))
+            or (previous_eligible and bool(_as_list(prior.get("department_ids"))))
+            != (bool(current.map_eligible) and bool(_as_list(current.department_ids)))
+        ):
+            return None
+        if previous_eligible and bool(_as_list(prior.get("department_ids"))):
+            if old_id not in layouts:
+                return None
+            remapped_layouts[new_id] = layouts[old_id]
+
+    ordered_ids = [
+        rekeys.get(str(row["work_id"]), str(row["work_id"])) for row in previous
+    ]
+    positions = {
+        str(work_id): position for position, work_id in enumerate(works["work_id"])
+    }
+    ordered_works = works.iloc[
+        [positions[work_id] for work_id in ordered_ids]
+    ].reset_index(drop=True)
+    LOGGER.info(
+        "Reusing published layout and work order for %d works (%d DOI rekeys)",
+        len(ordered_works),
+        len(rekeys),
+    )
+    return ordered_works, remapped_layouts
 
 
 def _normalize_layout(projected: Any, *, preserve_aspect: bool) -> Any:
@@ -393,6 +607,11 @@ def build_map_artifact(
 ) -> dict[str, Any]:
     """Build the full work-centric artifact without changing global coordinates."""
 
+    school_by_department = {
+        department.department_id: department.school_id
+        for department in registry.departments
+    }
+
     related_rows: list[tuple[Any, list[dict[str, str]]]] = []
     selected_rows: list[tuple[Any, list[dict[str, str]]]] = []
     for row in works.itertuples(index=False):
@@ -402,8 +621,26 @@ def build_map_artifact(
             if row.map_eligible:
                 selected_rows.append((row, memberships))
     points = []
+    external_coauthors: dict[str, dict[str, str]] = {}
     keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
+        for coauthor in _as_list(getattr(row, "external_coauthors", [])):
+            if not isinstance(coauthor, Mapping):
+                raise ValueError("External coauthor catalog entry must be an object")
+            entry = {
+                "person_id": str(coauthor.get("person_id") or ""),
+                "display_name": str(coauthor.get("display_name") or ""),
+                "source_url": str(coauthor.get("source_url") or ""),
+            }
+            person_id = entry["person_id"]
+            if not person_id or not entry["display_name"]:
+                raise ValueError("External coauthor catalog entry needs identity")
+            if (
+                person_id in external_coauthors
+                and external_coauthors[person_id] != entry
+            ):
+                raise ValueError("Conflicting external coauthor catalog entry")
+            external_coauthors[person_id] = entry
         source_urls = [str(value) for value in _as_list(row.source_urls) if value]
         keyword_id = str(row.keyword_id)
         keyword = str(row.keyword)
@@ -475,6 +712,12 @@ def build_map_artifact(
                 "department_ids": sorted(
                     {membership["department_id"] for membership in memberships}
                 ),
+                "school_ids": sorted(
+                    {
+                        school_by_department[membership["department_id"]]
+                        for membership in memberships
+                    }
+                ),
                 "year": None
                 if row.year is None or math.isnan(float(row.year))
                 else int(row.year),
@@ -482,6 +725,16 @@ def build_map_artifact(
                 "citation_count": int(row.citation_count),
                 "doi": str(row.doi),
                 "source_url": source_urls[0] if source_urls else "",
+                "source_types": list(
+                    _as_list(getattr(row, "source_types", ["scholar"]))
+                ),
+                "source_verified_at": str(getattr(row, "source_verified_at", "")),
+                "source_verification_urls": list(
+                    _as_list(getattr(row, "source_verification_urls", []))
+                ),
+                "external_coauthor_ids": list(
+                    _as_list(getattr(row, "external_coauthor_ids", []))
+                ),
                 "observation_count": int(row.observation_count),
                 "keyword_ids": [keyword_id, detail_keyword_id],
             }
@@ -536,18 +789,22 @@ def build_map_artifact(
         )
 
     department_counts: dict[str, int] = {}
+    school_counts: dict[str, int] = {}
     faculty_counts: dict[str, int] = {}
     for point in points:
         for department_id in point["department_ids"]:
             department_counts[department_id] = (
                 department_counts.get(department_id, 0) + 1
             )
+        for school_id in point["school_ids"]:
+            school_counts[school_id] = school_counts.get(school_id, 0) + 1
         for person_id in point["faculty_ids"]:
             faculty_counts[person_id] = faculty_counts.get(person_id, 0) + 1
 
     departments = [
         {
             "department_id": department.department_id,
+            "school_id": department.school_id,
             "title": department.title,
             "directory_url": department.directory_url,
             "reviewed_at": department.reviewed_at,
@@ -560,6 +817,15 @@ def build_map_artifact(
             registry.departments,
             key=lambda item: item.title.casefold(),
         )
+    ]
+    schools = [
+        {
+            "school_id": school.school_id,
+            "title": school.title,
+            "directory_url": school.directory_url,
+            "publication_count": school_counts.get(school.school_id, 0),
+        }
+        for school in sorted(registry.schools, key=lambda item: item.title.casefold())
     ]
     memberships_by_person: dict[str, list[dict[str, str]]] = {}
     for membership in registry.memberships:
@@ -591,13 +857,20 @@ def build_map_artifact(
                     memberships,
                     key=lambda item: (item["department_id"], item["role"]),
                 ),
+                "school_ids": sorted(
+                    {
+                        school_by_department[membership["department_id"]]
+                        for membership in memberships
+                    }
+                ),
                 "publication_count": faculty_counts.get(person.person_id, 0),
             }
         )
     fetched = [
         str(row.last_fetched_at_utc)
         for row, _ in related_rows
-        if str(row.last_fetched_at_utc)
+        if "scholar" in _as_list(getattr(row, "source_types", ["scholar"]))
+        and str(row.last_fetched_at_utc)
     ]
     return {
         "schema_version": MAP_SCHEMA_VERSION,
@@ -615,12 +888,18 @@ def build_map_artifact(
         "point_count": len(points),
         "excluded_work_count": len(related_rows) - len(selected_rows),
         "department_count": len(departments),
+        "school_count": len(schools),
         "faculty_count": len(faculty),
         "keyword_count": len(keywords),
         "keyword_levels": keyword_levels,
         "catalogs": {
+            "schools": schools,
             "departments": departments,
             "faculty": faculty,
+            "external_coauthors": [
+                external_coauthors[person_id]
+                for person_id in sorted(external_coauthors)
+            ],
         },
         "keywords": keywords,
         "points": points,
@@ -667,6 +946,7 @@ def _upload_map_artifacts(
             "point_count": artifact["point_count"],
             "excluded_work_count": artifact["excluded_work_count"],
             "department_count": artifact["department_count"],
+            "school_count": artifact["school_count"],
             "faculty_count": artifact["faculty_count"],
             "keyword_count": artifact["keyword_count"],
             "keyword_levels": artifact["keyword_levels"],
@@ -736,6 +1016,14 @@ def publish_snapshot(
     )
     tables = build_dataset_tables(enriched, registry)
     existing_layouts = _existing_layouts(hf_token=hf_token)
+    if existing_layouts:
+        reuse = _reusable_work_order(
+            tables["works"],
+            _existing_work_state(hf_token=hf_token),
+            existing_layouts,
+        )
+        if reuse is not None:
+            tables["works"], existing_layouts = reuse
     tables["works"] = add_global_layout(
         tables["works"],
         existing_layouts=existing_layouts,
@@ -783,7 +1071,13 @@ def publish_snapshot(
         ),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
-        "profile_count": int(enriched["scholar_id"].nunique()),
+        "profile_count": int(
+            enriched.loc[
+                enriched.get("source_type", "scholar") == "scholar", "scholar_id"
+            ].nunique()
+            if "source_type" in enriched
+            else enriched["scholar_id"].nunique()
+        ),
         "new_embedding_count": new_embedding_count,
         "map_artifact_count": 1,
         "layout_version": LAYOUT_VERSION,

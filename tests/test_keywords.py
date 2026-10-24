@@ -370,3 +370,82 @@ def test_region_audit_skips_small_regions() -> None:
 
     assert audited["map_eligible"].tolist() == [True]
     assert audited["map_region_outlier"].tolist() == [False]
+
+
+def test_region_audit_preserves_documented_paper_inside_weak_region() -> None:
+    rows = []
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+            }
+        )
+    rows[0].update(
+        {
+            "year": 1995,
+            "title": "Independence of solution sets and minimal asymptotic bases",
+            "authors": "Paul Erdős, Melvyn Nathanson, and Prasad Tetali",
+            "venue": "Acta Arithmetica",
+            "doi": "10.4064/aa-69-3-243-258",
+            "source_urls": ["https://example.test/publisher"],
+        }
+    )
+    rows[1].update(
+        {
+            "year": 1990,
+            "title": "A long enough title with several descriptive words",
+            "authors": "Two Authors",
+            "venue": "Journal",
+            "doi": "10.1000/another",
+            "source_urls": [],
+        }
+    )
+
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+
+    assert audited["map_eligible"].sum() == 1
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited.loc[0, "map_exclusion_reasons"] == []
+    assert not bool(audited.loc[1, "map_eligible"])
+    assert bool(audited.loc[1, "map_region_outlier"])
+    assert audited.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
+    assert (
+        audited["map_region_audit_version"]
+        .eq("low-information-semantic-region-v2")
+        .all()
+    )
+
+
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        ("https://example.test/paper", True),
+        (" ", False),
+        (["https://example.test/paper"], True),
+        (("https://example.test/paper",), True),
+        (numpy.asarray(["https://example.test/paper"]), True),
+        ([], False),
+        ([None], False),
+        ([""], False),
+        (None, False),
+        (float("nan"), False),
+    ],
+)
+def test_documented_work_source_url_handles_parquet_and_missing_values(
+    value, expected
+) -> None:
+    assert keywords._has_source_url(value) is expected

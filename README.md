@@ -1,36 +1,45 @@
 # Map of Research
 
-`map-of-research` is the source of truth for the CMU engineering faculty catalog
-and publication corpus. It collects a deliberately small number of public
-Google Scholar profiles, publishes one versioned Hugging Face dataset, and
-builds one browser-ready artifact for the unified research map.
+`map-of-research` is the source of truth for the CMU faculty catalog and
+publication corpus. Its normalized school hierarchy has dated faculty
+rosters for Engineering, SCS, and MCS. It collects small, explicit batches of
+public Google Scholar profiles and retains separately verified DOI records
+for publications missing from the profile cache. It publishes one versioned
+Hugging Face dataset and builds one browser-ready publication artifact. The
+dataset ID retains its original Engineering name; the manifest records the
+scope of each published revision.
 
-The only visualization repository, `map-of-eng`, does **not** contact Google
-Scholar. It is a static client of
+The visualization repositories `map-of-eng` and `map-of-collaboration` do
+**not** contact Google Scholar. They are static clients of
 [`ccm/cmu-engineering-publications`](https://huggingface.co/datasets/ccm/cmu-engineering-publications).
 
 ## Architecture
 
-1. `registry/people.csv`, `memberships.csv`, and `departments.csv` separate
-   stable identity, role history, inclusion, and official annual-review sources.
+1. `registry/people.csv`, `memberships.csv`, `departments.csv`, and
+   `schools.csv` separate stable identity, role history, unit inclusion,
+   school hierarchy, and official annual-review sources.
 2. A cache-first `scholarly` collector refreshes at most two unique profiles in
    an explicitly started run. It never uses proxies or attempts to bypass a
    block.
-3. A raw Parquet snapshot and checksum manifest are staged on the
-   `automation/map-snapshot` branch.
+3. `data/curated/works.json` holds separately verified DOI observations,
+   including the Tetali–Erdős and Mathematical Sciences–MSE papers, with
+   source URLs, verification dates, and external coauthor identities.
+   The raw Parquet snapshot and checksum manifest bind both the registry and
+   curated source on the `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
    map-eligibility decision for every observation and work, reuses existing
    embeddings and compatible layouts, assigns a reviewed topic hierarchy to
    visible regions, audits diffuse low-information regions, and publishes
    `people`, `works`, `authorships`, and
    `profile_publications` configs plus `maps/publications.json`.
-5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
-   and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
-   publication data, scraper, embedding model, or layout computation.
+5. `map-of-eng` packages that artifact and switches between the precomputed PCA
+   and t-SNE layouts in the browser. `map-of-collaboration` derives a
+   coauthorship graph from its faculty and work IDs. Neither site owns a faculty
+   roster, scraper, or publication embedding model.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
-fetches each unique profile only once, preserves the last good cache on errors,
-and makes every collection/upload auditable.
+fetches each selected profile at most once per collection run, preserves the
+last good cache on errors, and makes every collection/upload auditable.
 
 ## Scholar access policy
 
@@ -55,13 +64,27 @@ client has a fail-closed response guard: the first 403, 429, or CAPTCHA aborts
 the run before the library's internal retry path. Local collection uses the
 same limits and must also stop after any refusal.
 
+An explicit local browser capture can bootstrap a directly linked CMU profile
+when the `scholarly` client cannot access it. It uses the same two-profile cap,
+90-second inter-profile gap, 200-publication default limit, and stop-on-refusal
+rule. Captured rows retain their Scholar citation URLs and checksums of the
+locally saved source pages; a capped profile is labeled as such. Browser
+capture is not a scheduled or search-based collection path.
+
 ## Update cadence
 
 - Faculty membership is reviewed annually on July 1.
 - Scholar data changes only after an explicit, successful bounded collection;
-  each profile has a one-year minimum refresh interval.
-- A validated snapshot publishes to Hugging Face immediately after its snapshot
-  branch changes.
+  each profile has a one-year minimum refresh interval. Small manual local
+  batches may run when access permits, under the same stop-on-refusal limits;
+  there is no scheduled retry.
+- Curated DOI records change only after a person verifies the CMU/publisher
+  evidence and updates `data/curated/works.json`. Their verification date is
+  separate from the map's Scholar-profile refresh date.
+- Snapshot validation and Hugging Face publication are separate steps. The
+  trusted `upload.yml` workflow can be dispatched with a reviewed snapshot
+  ref; a GitHub Actions commit from the collection workflow does not itself
+  start the upload workflow.
 - The map's daily or manually dispatched Pages build packages the newest
   immutable Hugging Face artifact at the same origin; browsers never contact
   Hugging Face for publication data.
@@ -77,14 +100,20 @@ blank; they are never guessed by an automated Scholar search.
 Every July, a scheduled workflow opens a review issue with each official CMU
 directory, role counts, unresolved IDs, and a completion checklist. The review
 is deliberately human-verified and never changes registry rows automatically.
+The [2026-10-24 SCS/MCS review](registry/reviews/2026-10-24.md) records the
+initial school-wide directory expansion, source extracts, role boundaries,
+identity decisions, and publication coverage gaps.
 
 ## Dataset grain
 
-The lossless `profile_publications` config retains every collected profile
-observation and its normalized source record. `works` conservatively collapses
-observations by DOI or exact normalized title and year; `authorships` makes that
+The lossless `profile_publications` config retains each Scholar profile
+observation and each explicitly marked `curated_verified` DOI record with its
+source metadata. `works` conservatively collapses observations by DOI or exact
+normalized title and year; a DOI-less Scholar record matches a curated DOI only
+when title and year match exactly one curated work. `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
-no verified Scholar profile or publications.
+no verified Scholar profile or publications. Curated records never count as
+Scholar profile refreshes.
 
 The research map excludes only records that match high-confidence,
 content-based rules for conference front matter, journal front matter,
@@ -107,11 +136,14 @@ visible and are explicitly marked unreviewed. Detail regions contain at least
 50 works and are revealed by the site as visitors zoom.
 
 A preliminary detail pass also exposes the rare catch-all region that isolated
-title rules cannot identify safely. The publisher withholds a region only when
-it is simultaneously incoherent in embedding space, dominated by short titles,
-missing many years, and mostly uncited. The audit version and reason remain on
-every affected work, all source data stays published, and the final topic
-hierarchy is regenerated without the withheld rows.
+title rules cannot identify safely. The publisher flags a region only when it
+is simultaneously incoherent in embedding space, dominated by short titles,
+missing many years, and mostly uncited. Inside a flagged region, a work with a
+DOI, known year, substantive title, named authors, venue, and source URL stays
+visible; weaker works retain the `low_information_region` exclusion. The
+versioned audit records `map_region_documented_override` for each retained
+exception, keeps all source rows in the dataset, and regenerates the final
+topic hierarchy from visible works.
 
 ## Local development
 
@@ -130,6 +162,23 @@ Plan a collection without network access:
 map-collect --dry-run
 ```
 
+For a small local department or school batch, use the full canonical registry
+and target included, verified Scholar profiles before starting a real collection:
+
+```bash
+map-collect --dry-run --department-id math --max-profiles 2
+map-collect --dry-run --school-id scs --max-profiles 2
+map-collect --dry-run --school-id mcs --max-profiles 2
+map-collect --dry-run --person-id person-prasadtetali-bf494329
+```
+
+`math` is the Mathematical Sciences department ID in
+`registry/departments.csv`. `--department-id`, `--school-id`, and `--person-id`
+are each repeatable, but cannot be mixed in one run. Targeting does not change
+the profile cap, delay, annual refresh window, or stop-on-refusal rule. The
+status receipt records the requested targets. Build snapshots from the full
+registry, not a temporary targeted copy.
+
 Build and validate a raw snapshot from the current cache:
 
 ```bash
@@ -147,7 +196,9 @@ named `HUGGINGFACE_TOKEN`.
 
 - `map-of-research`: faculty catalog, collection, validation, dataset
   publication, and the single full-corpus artifact
-- `map-of-eng`: the single static interactive visualization
+- `map-of-eng`: static publication map
+- `map-of-collaboration`: static coauthorship graph derived from the same work
+  and faculty IDs
 
 The legacy department-specific `map-of-*` repositories are archived. Their
 department views now live as filters in `map-of-eng`.

@@ -15,6 +15,7 @@ def write_registry(
     people: list[dict[str, object]],
     memberships: list[dict[str, object]],
     departments: list[dict[str, object]] | None = None,
+    schools: list[dict[str, object]] | None = None,
 ) -> tuple[Path, Path, Path]:
     root.mkdir(parents=True, exist_ok=True)
     department_rows = departments or [
@@ -36,6 +37,7 @@ def write_registry(
     people_path = root / "people.csv"
     memberships_path = root / "memberships.csv"
     departments_path = root / "departments.csv"
+    schools_path = root / "schools.csv"
     _write(
         people_path,
         (
@@ -65,7 +67,31 @@ def write_registry(
     )
     _write(
         departments_path,
-        ("department_id", "title", "directory_url", "reviewed_at", "review_notes"),
-        department_rows,
+        (
+            "department_id",
+            "school_id",
+            "title",
+            "directory_url",
+            "reviewed_at",
+            "review_notes",
+        ),
+        [{"school_id": "engineering", **row} for row in department_rows],
+    )
+    _write(
+        schools_path,
+        ("school_id", "title", "directory_url"),
+        schools
+        or [
+            {
+                "school_id": "engineering",
+                "title": "College of Engineering",
+                "directory_url": "https://example.test/engineering",
+            },
+            {
+                "school_id": "scs",
+                "title": "School of Computer Science",
+                "directory_url": "https://example.test/scs",
+            },
+        ],
     )
     return people_path, memberships_path, departments_path

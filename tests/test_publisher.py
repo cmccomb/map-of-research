@@ -1,3 +1,4 @@
+import hashlib
 import json
 import sys
 from types import SimpleNamespace
@@ -7,20 +8,110 @@ import pandas
 import pytest
 
 import map_of_research.publisher as publisher
-from map_of_research.registry import Department, Membership, Person, Registry
+from map_of_research.registry import Department, Membership, Person, Registry, School
 
 
 class Rows(list):
-    def __init__(self, rows, columns=None):
-        super().__init__(rows)
-        self.column_names = columns or list(rows[0] if rows else [])
+    pass
 
 
-def install_datasets(monkeypatch, loader) -> None:
+def install_published_rows(monkeypatch, loader) -> None:
+    monkeypatch.setattr(publisher, "_published_rows", loader)
+
+
+def test_published_rows_ignore_extra_parquet_columns_and_read_all_shards(
+    monkeypatch,
+    tmp_path,
+) -> None:
+    directory = tmp_path / "profile_publications"
+    directory.mkdir()
+    for index in range(2):
+        pandas.DataFrame(
+            [
+                {
+                    "author_pub_id": f"author:{index}",
+                    "title": f"Title {index}",
+                    "embedding": [float(index)] * publisher.EMBEDDING_DIMENSION,
+                    "newer_column": "not in older Hub feature metadata",
+                }
+            ]
+        ).to_parquet(directory / f"train-{index:05d}-of-00002.parquet", index=False)
+    calls = []
+
+    def snapshot_download(repo_id, **kwargs):
+        calls.append((repo_id, kwargs))
+        return str(tmp_path)
+
     monkeypatch.setitem(
         sys.modules,
-        "datasets",
-        SimpleNamespace(load_dataset=loader),
+        "huggingface_hub",
+        SimpleNamespace(snapshot_download=snapshot_download),
+    )
+    rows = list(
+        publisher._published_rows(
+            "profile_publications",
+            ("author_pub_id", "title", "embedding"),
+            hf_token="token",
+        )
+    )
+    assert [row["author_pub_id"] for row in rows] == ["author:0", "author:1"]
+    assert all("newer_column" not in row for row in rows)
+    assert calls == [
+        (
+            publisher.REPO_ID,
+            {
+                "repo_type": "dataset",
+                "allow_patterns": "profile_publications/train-*.parquet",
+                "token": "token",
+            },
+        )
+    ]
+    assert len(publisher._existing_embeddings(hf_token="token")) == 2
+
+    works_directory = tmp_path / "works"
+    works_directory.mkdir()
+    pandas.DataFrame(
+        [
+            {
+                "work_id": "work-one",
+                "layout_version": publisher.LAYOUT_VERSION,
+                "x": 0.1,
+                "y": 0.2,
+                "tsne_x": 0.3,
+                "tsne_y": 0.4,
+                "newer_column": "not in older Hub feature metadata",
+            }
+        ]
+    ).to_parquet(works_directory / "train-00000-of-00001.parquet", index=False)
+    assert publisher._existing_layouts(hf_token="token") == {
+        "work-one": {"x": 0.1, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4}
+    }
+
+
+def test_published_rows_skip_unusable_or_missing_parquet_config(
+    monkeypatch,
+    tmp_path,
+) -> None:
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(snapshot_download=lambda *args, **kwargs: str(tmp_path)),
+    )
+    with pytest.raises(FileNotFoundError, match="default"):
+        list(publisher._published_rows("default", ("embedding",), hf_token=""))
+
+    directory = tmp_path / "works"
+    directory.mkdir()
+    pandas.DataFrame([{"work_id": "one"}]).to_parquet(
+        directory / "train-00000-of-00001.parquet", index=False
+    )
+    assert (
+        list(
+            publisher._published_rows(
+                "works", ("work_id", "layout_version"), hf_token=""
+            )
+        )
+        == []
     )
 
 
@@ -66,8 +157,8 @@ def test_list_normalization_handles_scalar_tuple_and_array() -> None:
 def test_existing_embeddings_searches_compatible_configs(monkeypatch) -> None:
     calls = []
 
-    def load_dataset(repo_id, *, name, split, token):
-        calls.append((repo_id, name, split, token))
+    def published_rows(name, columns, *, hf_token):
+        calls.append((name, columns, hf_token))
         if name == "profile_publications":
             raise FileNotFoundError
         if name == "publications":
@@ -84,18 +175,29 @@ def test_existing_embeddings_searches_compatible_configs(monkeypatch) -> None:
             ]
         )
 
-    install_datasets(monkeypatch, load_dataset)
+    install_published_rows(monkeypatch, published_rows)
 
     assert publisher._existing_embeddings(hf_token="token") == {
         ("a:one", "Reusable"): [1.0] * publisher.EMBEDDING_DIMENSION
     }
-    assert [call[1] for call in calls] == list(publisher.REUSABLE_EMBEDDING_CONFIGS)
+    assert [call[0] for call in calls] == list(publisher.REUSABLE_EMBEDDING_CONFIGS)
+    assert calls[0][1] == ("author_pub_id", "title", "embedding")
+    assert calls[0][2] == "token"
 
 
 def test_existing_embeddings_returns_empty_when_no_vectors_exist(monkeypatch) -> None:
     invalid = Rows([{"author_pub_id": "", "title": "", "embedding": []}])
-    install_datasets(monkeypatch, lambda *args, **kwargs: invalid)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: invalid)
     assert publisher._existing_embeddings(hf_token="") == {}
+
+
+def test_existing_embeddings_stop_on_unexpected_read_failure(monkeypatch) -> None:
+    install_published_rows(
+        monkeypatch,
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("corrupt shard")),
+    )
+    with pytest.raises(RuntimeError, match="Could not read reusable"):
+        publisher._existing_embeddings(hf_token="")
 
 
 @pytest.mark.parametrize(
@@ -157,6 +259,45 @@ def test_embedding_refresh_does_nothing_when_every_vector_is_reusable(
     assert output.loc[0, "embedding"] == vector
 
 
+def test_embedding_refresh_reuses_exact_title_for_new_curated_observation(
+    monkeypatch,
+) -> None:
+    vector = [0.25] * publisher.EMBEDDING_DIMENSION
+    monkeypatch.setattr(
+        publisher,
+        "_existing_embeddings",
+        lambda **_: {("scholar:old", "Same title"): vector},
+    )
+    frame = pandas.DataFrame([{"author_pub_id": "curated:new", "title": "Same title"}])
+    output, new_count = publisher.add_embeddings(frame, hf_token="token")
+    assert new_count == 0
+    assert output.loc[0, "embedding"] == vector
+
+
+def test_embedding_refresh_encodes_when_published_title_vectors_disagree(
+    monkeypatch,
+) -> None:
+    monkeypatch.setattr(
+        publisher,
+        "_existing_embeddings",
+        lambda **_: {
+            ("one", "Same title"): [0.0] * publisher.EMBEDDING_DIMENSION,
+            ("two", "Same title"): [1.0] * publisher.EMBEDDING_DIMENSION,
+        },
+    )
+    frame = pandas.DataFrame([{"author_pub_id": "curated:new", "title": "Same title"}])
+    encoder = SimpleNamespace(
+        encode=lambda titles, **kwargs: numpy.full(
+            (len(titles), publisher.EMBEDDING_DIMENSION), 0.5
+        )
+    )
+    output, new_count = publisher.add_embeddings(
+        frame, hf_token="token", encoder=encoder
+    )
+    assert new_count == 1
+    assert output.loc[0, "embedding"] == [0.5] * publisher.EMBEDDING_DIMENSION
+
+
 def work_frame() -> pandas.DataFrame:
     return pandas.DataFrame(
         [
@@ -205,6 +346,77 @@ def work_frame() -> pandas.DataFrame:
             }
         ]
     )
+
+
+def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> None:
+    works = work_frame()
+    external = {
+        "person_id": "external-paul-erdos",
+        "display_name": "Paul Erdős",
+        "source_url": "https://example.test/publisher",
+    }
+    works["external_coauthors"] = [[external]]
+    works["external_coauthor_ids"] = [[external["person_id"]]]
+    works["source_types"] = [["curated_verified"]]
+    works["source_verified_at"] = "2026-10-24"
+    works["source_verification_urls"] = [["https://example.test/publisher"]]
+    works["last_fetched_at_utc"] = ""
+
+    artifact = publisher.build_map_artifact(
+        works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
+    )
+    point = artifact["points"][0]
+    assert point["source_types"] == ["curated_verified"]
+    assert point["source_verified_at"] == "2026-10-24"
+    assert point["source_verification_urls"] == ["https://example.test/publisher"]
+    assert point["external_coauthor_ids"] == ["external-paul-erdos"]
+    assert artifact["catalogs"]["external_coauthors"] == [external]
+    assert artifact["source_data_newest_at_utc"] is None
+
+    # Two records may name the same external person, but may not disagree.
+    duplicate = works.copy()
+    duplicate.at[0, "work_id"] = "work-two"
+    assert (
+        len(
+            publisher.build_map_artifact(
+                pandas.concat([works, duplicate], ignore_index=True),
+                registry(),
+                generated_at_utc="2026-10-24T12:00:00+00:00",
+            )["catalogs"]["external_coauthors"]
+        )
+        == 1
+    )
+
+
+@pytest.mark.parametrize(
+    ("external", "message"),
+    [
+        ("bad", "must be an object"),
+        ({"person_id": "", "display_name": "Name"}, "needs identity"),
+        ({"person_id": "external-x", "display_name": ""}, "needs identity"),
+    ],
+)
+def test_map_artifact_rejects_invalid_external_identity(external, message) -> None:
+    works = work_frame()
+    works["external_coauthors"] = [[external]]
+    with pytest.raises(ValueError, match=message):
+        publisher.build_map_artifact(
+            works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
+        )
+
+
+def test_map_artifact_rejects_conflicting_external_identity() -> None:
+    works = work_frame()
+    other = works.copy()
+    other.at[0, "work_id"] = "work-two"
+    works["external_coauthors"] = [[{"person_id": "external-x", "display_name": "X"}]]
+    other["external_coauthors"] = [[{"person_id": "external-x", "display_name": "Y"}]]
+    with pytest.raises(ValueError, match="Conflicting external"):
+        publisher.build_map_artifact(
+            pandas.concat([works, other], ignore_index=True),
+            registry(),
+            generated_at_utc="2026-10-24T12:00:00+00:00",
+        )
 
 
 def registry() -> Registry:
@@ -263,6 +475,7 @@ def registry() -> Registry:
         departments=(
             Department(
                 department_id="bme",
+                school_id="engineering",
                 title="Biomedical Engineering",
                 directory_url="https://example.test/bme",
                 reviewed_at="2026-07-17",
@@ -270,6 +483,7 @@ def registry() -> Registry:
             ),
             Department(
                 department_id="cmu-silicon-valley",
+                school_id="engineering",
                 title="CMU Silicon Valley",
                 directory_url="https://example.test/sv",
                 reviewed_at="2026-07-17",
@@ -277,10 +491,18 @@ def registry() -> Registry:
             ),
             Department(
                 department_id="ece",
+                school_id="engineering",
                 title="Electrical & Computer Engineering",
                 directory_url="https://example.test/ece",
                 reviewed_at="2026-07-17",
                 review_notes="Test",
+            ),
+        ),
+        schools=(
+            School(
+                school_id="engineering",
+                title="College of Engineering",
+                directory_url="https://example.test/engineering",
             ),
         ),
     )
@@ -313,6 +535,16 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     assert artifact["points"][0]["department_ids"] == [
         "cmu-silicon-valley",
         "ece",
+    ]
+    assert artifact["points"][0]["school_ids"] == ["engineering"]
+    assert artifact["school_count"] == 1
+    assert artifact["catalogs"]["schools"] == [
+        {
+            "school_id": "engineering",
+            "title": "College of Engineering",
+            "directory_url": "https://example.test/engineering",
+            "publication_count": 1,
+        }
     ]
     assert artifact["points"][0]["x"] == 0.25
     assert artifact["points"][0]["tsne_x"] == -0.75
@@ -494,13 +726,13 @@ def test_existing_layouts_accepts_only_complete_compatible_rows(monkeypatch) -> 
             }
         ]
     )
-    install_datasets(monkeypatch, lambda *args, **kwargs: valid)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: valid)
     assert publisher._existing_layouts(hf_token="token") == {
         "one": {"x": 0.0, "y": 1.0, "tsne_x": 2.0, "tsne_y": 3.0}
     }
 
     invalid_rows = [
-        Rows([], columns=["work_id"]),
+        Rows([]),
         Rows([{**valid[0], "layout_version": "old"}]),
         Rows([{**valid[0], "x": "bad"}]),
         Rows([{**valid[0], "x": numpy.inf}]),
@@ -508,11 +740,11 @@ def test_existing_layouts_accepts_only_complete_compatible_rows(monkeypatch) -> 
         Rows([valid[0], valid[0]]),
     ]
     for rows in invalid_rows:
-        install_datasets(monkeypatch, lambda *args, _rows=rows, **kwargs: _rows)
+        install_published_rows(monkeypatch, lambda *args, _rows=rows, **kwargs: _rows)
         assert publisher._existing_layouts(hf_token="token") == {}
 
     mixed = Rows([valid[0], {**valid[0], "work_id": "excluded", "x": numpy.nan}])
-    install_datasets(monkeypatch, lambda *args, **kwargs: mixed)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: mixed)
     assert publisher._existing_layouts(hf_token="token") == {
         "one": {"x": 0.0, "y": 1.0, "tsne_x": 2.0, "tsne_y": 3.0}
     }
@@ -522,12 +754,285 @@ def test_existing_layouts_tolerates_missing_prior_dataset(monkeypatch) -> None:
     def missing(*args, **kwargs):
         raise FileNotFoundError
 
-    install_datasets(monkeypatch, missing)
+    install_published_rows(monkeypatch, missing)
     assert publisher._existing_layouts(hf_token="token") == {}
 
-    columns = ["work_id", "layout_version", "x", "y", "tsne_x", "tsne_y"]
-    install_datasets(monkeypatch, lambda *args, **kwargs: Rows([], columns=columns))
+    install_published_rows(monkeypatch, lambda *args, **kwargs: Rows([]))
     assert publisher._existing_layouts(hf_token="token") == {}
+
+
+def test_existing_layouts_stop_on_unexpected_read_failure(monkeypatch) -> None:
+    install_published_rows(
+        monkeypatch,
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("corrupt shard")),
+    )
+    with pytest.raises(RuntimeError, match="Could not read reusable works"):
+        publisher._existing_layouts(hf_token="")
+
+
+def test_existing_work_state_reads_published_order_and_missing_config(
+    monkeypatch,
+) -> None:
+    calls = []
+
+    def published_rows(config, fields, *, hf_token):
+        calls.append((config, hf_token, fields))
+        return Rows([{"work_id": "second"}, {"work_id": "first"}])
+
+    install_published_rows(monkeypatch, published_rows)
+    assert [
+        row["work_id"] for row in publisher._existing_work_state(hf_token="token")
+    ] == [
+        "second",
+        "first",
+    ]
+    assert calls[0][0:2] == ("works", "token")
+    assert "map_region_outlier" in calls[0][2]
+
+    def missing(*args, **kwargs):
+        raise FileNotFoundError
+
+    install_published_rows(monkeypatch, missing)
+    assert publisher._existing_work_state(hf_token="token") == []
+
+    def corrupt(*args, **kwargs):
+        raise OSError("corrupt shard")
+
+    install_published_rows(monkeypatch, corrupt)
+    with pytest.raises(RuntimeError, match="order reuse"):
+        publisher._existing_work_state(hf_token="token")
+
+
+def test_reusable_year_key_handles_missing_and_invalid_values() -> None:
+    assert publisher._year_key(None) is None
+    assert publisher._year_key(numpy.nan) is None
+    assert publisher._year_key("2020") == 2020
+    assert publisher._year_key("unknown") is None
+
+
+def reusable_work_state():
+    new_id = "work-" + hashlib.sha256(b"doi:10.1000/rekey").hexdigest()
+
+    def prior(work_id, title, *, eligible=True, outlier=False, reasons=None):
+        return {
+            "work_id": work_id,
+            "title": title,
+            "year": 2020,
+            "doi": "",
+            "work_match_method": "normalized_title_year",
+            "map_eligible": eligible,
+            "map_region_outlier": outlier,
+            "map_exclusion_reasons": reasons or [],
+            "department_ids": ["mse"],
+            "quality_assessment_version": publisher.QUALITY_ASSESSMENT_VERSION,
+            "keyword_model_version": publisher.KEYWORD_MODEL_VERSION,
+            "topic_label_review_version": publisher.TOPIC_LABEL_REVIEW_VERSION,
+            "map_region_audit_version": publisher.REGION_AUDIT_VERSION,
+            "layout_version": publisher.LAYOUT_VERSION,
+        }
+
+    previous = [
+        prior("old-title-id", "Material A"),
+        prior("retained", "Material B"),
+        prior(
+            "audited-out",
+            "Material C",
+            eligible=False,
+            outlier=True,
+            reasons=["low_information_region"],
+        ),
+        prior("quality-out", "Material D", eligible=False, reasons=["non_research"]),
+    ]
+    current = pandas.DataFrame(
+        [
+            {
+                "work_id": "retained",
+                "title": "Material B",
+                "year": 2020,
+                "doi": "",
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "department_ids": ["mse"],
+                "embedding": [1.0, 0.0],
+            },
+            {
+                "work_id": new_id,
+                "title": "Material A",
+                "year": 2020,
+                "doi": "10.1000/rekey",
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "department_ids": ["mse"],
+                "embedding": [0.0, 1.0],
+            },
+            {
+                "work_id": "quality-out",
+                "title": "Material D",
+                "year": 2020,
+                "doi": "",
+                "map_eligible": False,
+                "map_exclusion_reasons": ["non_research"],
+                "department_ids": ["mse"],
+                "embedding": [0.0, 0.0],
+            },
+            {
+                "work_id": "audited-out",
+                "title": "Material C",
+                "year": 2020,
+                "doi": "",
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "department_ids": ["mse"],
+                "embedding": [1.0, 1.0],
+            },
+        ]
+    )
+    current["work_match_method"] = "normalized_title_year"
+    current.loc[1, "work_match_method"] = "curated_title_year"
+    current["source_types"] = [["scholar"] for _ in range(len(current))]
+    current.at[1, "source_types"] = ["scholar", "curated_verified"]
+    current["source_verified_at"] = ""
+    current.loc[1, "source_verified_at"] = "2026-10-24"
+    current["source_verification_urls"] = [[] for _ in range(len(current))]
+    current.at[1, "source_verification_urls"] = ["https://example.test/doi"]
+    layouts = {
+        work_id: {"x": x, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4}
+        for work_id, x in [
+            ("old-title-id", 0.1),
+            ("retained", 0.5),
+            ("audited-out", 0.9),
+        ]
+    }
+    return current, previous, layouts, new_id
+
+
+def test_reusable_work_order_preserves_doi_rekey_layout_and_topic_order(
+    monkeypatch,
+) -> None:
+    current, previous, layouts, new_id = reusable_work_state()
+    reused = publisher._reusable_work_order(current, previous, layouts)
+    assert reused is not None
+    ordered, remapped = reused
+    assert ordered["work_id"].tolist() == [
+        new_id,
+        "retained",
+        "audited-out",
+        "quality-out",
+    ]
+    assert set(remapped) == {new_id, "retained", "audited-out"}
+    assert remapped[new_id] == layouts["old-title-id"]
+
+    monkeypatch.setattr(
+        publisher,
+        "_fit_pca_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_fit_tsne_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    laid_out = publisher.add_global_layout(ordered, existing_layouts=remapped)
+    assert laid_out.loc[0, "x"] == 0.1
+    assert laid_out.loc[2, "x"] == 0.9
+    assert numpy.isnan(laid_out.loc[3, "x"])
+
+
+def test_reusable_work_order_preserves_prior_order_without_new_rekeys() -> None:
+    current, previous, layouts, new_id = reusable_work_state()
+    previous[0]["work_id"] = new_id
+    layouts[new_id] = layouts.pop("old-title-id")
+    reused = publisher._reusable_work_order(current, previous, layouts)
+    assert reused is not None
+    assert reused[0]["work_id"].tolist()[0] == new_id
+
+
+def test_reusable_work_order_caps_doi_rekeys() -> None:
+    current, previous, layouts, _ = reusable_work_state()
+    additions = []
+    for index in range(publisher.MAX_REUSABLE_DOI_REKEYS):
+        old = f"old-{index}"
+        new = (
+            "work-" + hashlib.sha256(f"doi:10.1000/rekey-{index}".encode()).hexdigest()
+        )
+        previous.append({**previous[0], "work_id": old, "title": f"Material {index}"})
+        additions.append(
+            {
+                **current.iloc[1].to_dict(),
+                "work_id": new,
+                "title": f"Material {index}",
+                "doi": f"10.1000/rekey-{index}",
+            }
+        )
+        layouts[old] = layouts["old-title-id"]
+    expanded = pandas.concat([current, pandas.DataFrame(additions)], ignore_index=True)
+    assert publisher._reusable_work_order(expanded, previous, layouts) is None
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "missing_previous",
+        "missing_layouts",
+        "old_duplicate_id",
+        "current_duplicate_id",
+        "old_version",
+        "more_current_works",
+        "changed_title",
+        "changed_year",
+        "changed_eligibility",
+        "changed_reasons",
+        "changed_department_inclusion",
+        "missing_coordinate",
+        "bad_doi",
+        "ambiguous_title_year",
+        "old_doi_id_still_present",
+        "rekey_matches_retained_title",
+        "old_doi_present",
+        "unverified_rekey",
+    ],
+)
+def test_reusable_work_order_rejects_non_equivalent_corpora(change) -> None:
+    current, previous, layouts, new_id = reusable_work_state()
+    if change == "missing_previous":
+        previous = []
+    elif change == "missing_layouts":
+        layouts = {}
+    elif change == "old_duplicate_id":
+        previous[1]["work_id"] = previous[0]["work_id"]
+    elif change == "current_duplicate_id":
+        current.loc[1, "work_id"] = "retained"
+    elif change == "old_version":
+        previous[0]["layout_version"] = "old-layout"
+    elif change == "more_current_works":
+        current = pandas.concat([current, current.iloc[[0]].assign(work_id="new")])
+    elif change == "changed_title":
+        current.loc[0, "title"] = "New title"
+    elif change == "changed_year":
+        current.loc[0, "year"] = 2021
+    elif change == "changed_eligibility":
+        current.loc[0, "map_eligible"] = False
+    elif change == "changed_reasons":
+        current.at[2, "map_exclusion_reasons"] = ["different_reason"]
+    elif change == "changed_department_inclusion":
+        current.at[0, "department_ids"] = []
+    elif change == "missing_coordinate":
+        layouts.pop("retained")
+    elif change == "bad_doi":
+        current.loc[1, "doi"] = "10.1000/wrong"
+    elif change == "ambiguous_title_year":
+        previous[1]["title"] = "Material A"
+        current.loc[0, "title"] = "Material A"
+    elif change == "old_doi_id_still_present":
+        current.loc[0, "work_id"] = "old-title-id"
+    elif change == "rekey_matches_retained_title":
+        current.loc[0, "title"] = "Material A"
+        current.loc[1, "title"] = "Different title"
+    elif change == "old_doi_present":
+        previous[0]["doi"] = "10.1000/old"
+    elif change == "unverified_rekey":
+        current.at[1, "source_verification_urls"] = []
+    assert publisher._reusable_work_order(current, previous, layouts) is None
 
 
 def test_layout_normalization_handles_flat_axes_and_aspect_modes() -> None:
@@ -591,7 +1096,79 @@ def test_map_artifact_catalog_retains_full_included_roster() -> None:
         item["department_id"]: item for item in artifact["catalogs"]["departments"]
     }
     assert departments["ece"]["publication_count"] == 1
+    assert departments["ece"]["school_id"] == "engineering"
     assert departments["bme"]["publication_count"] == 0
+    assert artifact["catalogs"]["faculty"][0]["school_ids"] == ["engineering"]
+
+
+def test_map_artifact_tracks_cross_school_membership_once() -> None:
+    source = registry()
+    cross_school = Registry(
+        people=source.people,
+        memberships=(
+            *source.memberships,
+            Membership(
+                person_id="person-one",
+                department_id="s3d",
+                role="faculty",
+                included=True,
+                legacy_label="",
+                source_url="https://example.test/s3d",
+                verified_at="2026-10-24",
+            ),
+        ),
+        departments=(
+            *source.departments,
+            Department(
+                department_id="s3d",
+                school_id="scs",
+                title="Software and Societal Systems Department",
+                directory_url="https://example.test/s3d",
+                reviewed_at="2026-10-24",
+                review_notes="Pilot",
+            ),
+        ),
+        schools=(
+            *source.schools,
+            School(
+                school_id="scs",
+                title="School of Computer Science",
+                directory_url="https://example.test/scs",
+            ),
+        ),
+    )
+    works = work_frame()
+    works.at[0, "memberships"] = [
+        *works.at[0, "memberships"],
+        {
+            "person_id": "person-one",
+            "display_name": "One Person",
+            "department_id": "s3d",
+            "department_title": "Software and Societal Systems Department",
+            "role": "faculty",
+        },
+    ]
+
+    artifact = publisher.build_map_artifact(
+        works,
+        cross_school,
+        generated_at_utc="2026-10-24T12:00:00+00:00",
+    )
+
+    assert artifact["point_count"] == 1
+    assert artifact["points"][0]["school_ids"] == ["engineering", "scs"]
+    assert artifact["catalogs"]["faculty"][0]["school_ids"] == [
+        "engineering",
+        "scs",
+    ]
+    school_counts = {
+        school["school_id"]: school["publication_count"]
+        for school in artifact["catalogs"]["schools"]
+    }
+    assert school_counts == {
+        "engineering": 1,
+        "scs": 1,
+    }
 
 
 def test_hub_dataset_preserves_legacy_faculty_string() -> None:
@@ -696,6 +1273,7 @@ def test_map_catalog_ignores_excluded_memberships_and_unrostered_people() -> Non
             ),
         ),
         departments=source.departments,
+        schools=source.schools,
     )
     artifact = publisher.build_map_artifact(
         work_frame(),
@@ -738,6 +1316,7 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
         publisher.TOPIC_LABEL_REVIEW_VERSION
     )
     assert uploads[0][2]["artifact"]["keyword_count"] == 2
+    assert uploads[0][2]["artifact"]["school_count"] == 1
     assert uploads[0][2]["artifact"]["keyword_levels"][1]["keyword_count"] == 1
 
     HfApi.upload_folder = lambda self, **kwargs: SimpleNamespace()
@@ -792,9 +1371,11 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
     assert string_list[0]["department_ids"] == ["ece"]
 
 
+@pytest.mark.parametrize("reuse_order", [False, True])
 def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch,
     tmp_path,
+    reuse_order,
 ) -> None:
     frame = pandas.DataFrame({"scholar_id": ["one", "two", "one"]})
     tables = {
@@ -822,8 +1403,28 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         lambda *args, **kwargs: (frame, 2),
     )
     monkeypatch.setattr(publisher, "build_dataset_tables", lambda *args: tables)
-    monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
-    monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
+    original_layouts = {"old": {"x": 0.1}}
+    reused_layouts = {"new": {"x": 0.1}}
+    monkeypatch.setattr(
+        publisher, "_existing_layouts", lambda **kwargs: original_layouts
+    )
+    monkeypatch.setattr(
+        publisher, "_existing_work_state", lambda **kwargs: [{"work_id": "old"}]
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_reusable_work_order",
+        lambda works, previous, layouts: (
+            (works, reused_layouts) if reuse_order else None
+        ),
+    )
+    observed_layouts = []
+
+    def retain_layout(works, *, existing_layouts):
+        observed_layouts.append(existing_layouts)
+        return works
+
+    monkeypatch.setattr(publisher, "add_global_layout", retain_layout)
     monkeypatch.setattr(
         publisher,
         "add_publication_keywords",
@@ -860,6 +1461,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["dataset_commits"] == {
         name: f"{name}-commit" for name in publisher.DATASET_CONFIGS
     }
+    assert observed_layouts == [reused_layouts if reuse_order else original_layouts]
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
     assert result["mapped_works"] == 1

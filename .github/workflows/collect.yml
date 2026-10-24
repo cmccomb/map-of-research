@@ -41,15 +41,18 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install collector
         run: python -m pip install './source[collector]'
-      - name: Synchronize the canonical registry
+      - name: Synchronize the canonical registry and curated works
         id: registry
         run: |
           mkdir -p snapshot/registry
           cp source/registry/departments.csv snapshot/registry/departments.csv
+          cp source/registry/schools.csv snapshot/registry/schools.csv
           cp source/registry/memberships.csv snapshot/registry/memberships.csv
           cp source/registry/people.csv snapshot/registry/people.csv
+          mkdir -p snapshot/data/curated
+          cp source/data/curated/works.json snapshot/data/curated/works.json
           rm -f snapshot/registry/faculty.csv snapshot/registry/maps.csv
-          if [ -z "$(git -C snapshot status --porcelain -- registry)" ]; then
+          if [ -z "$(git -C snapshot status --porcelain -- registry data/curated)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
