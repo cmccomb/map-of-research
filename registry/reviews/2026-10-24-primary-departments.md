@@ -12,9 +12,12 @@ primary appointment.
 
 | Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | First-listed display tie-break | Unresolved |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,480 | 1,098 | 152 | 172 | 2 | 16 | 2 | 38 |
+| Included roster | 1,480 | 1,098 | 152 | 172 | 3 | 17 | 2 | 36 |
 | Excluded-only roster | 521 | 0 | 0 | 0 | 0 | 0 | 0 | 521 |
-| Entire registry | 2,001 | 1,098 | 152 | 172 | 2 | 16 | 2 | 559 |
+| Entire registry | 2,001 | 1,098 | 152 | 172 | 3 | 17 | 2 | 557 |
+
+The included count incorporates the later correction of Itamar Vigdorovich's
+future Fall 2027 Math appointment, which remains excluded pending its start.
 
 The explicit choices include their source URL, verification date, and basis in
 `people.csv`. `reviewed` means a source-backed map display choice;
@@ -49,17 +52,15 @@ the chosen display rule remains first-listed department. Sekerka's
 documents the Physics and Mathematics appointments but has no degree-coded
 advisee list, so the same title-order display rule supplies his visual home.
 
-The ledger records all 38 included people without a supported single choice.
+The ledger records all 36 included people without a supported single choice.
 Examples with specific evidence gaps are:
 
 | Person | Included units | Remaining evidence gap |
 | --- | --- | --- |
-| [Andrew Ilyas](https://engineering.cmu.edu/directory/bios/ilyas-andrew.html) | ECE, S3D | His three identified current PhD advisees are one each in S3D, CSD, and MLD; this does not establish a leading department. Both appointments remain coequal in available faculty sources. |
 | [Edward Rubin](https://epp.engineering.cmu.edu/directory/bios/rubin-edward.html) | EPP, MechE | The official profile calls the appointments joint. An [EPP PhD thesis](https://www.cmu.edu/ceic/assets/docs/publications/phd-dissertations/2010/hari-mantripragada-phd-thesis-2010.pdf) and [CMU news](https://www.cmu.edu/news/stories/archives/2019/july/rubin-leads-carbon-capture-research.html) identify two distinct EPP advisees, but the historical MechE denominator is unknown. |
 | [Elias Towe](https://ece.cmu.edu/directory/bios/towe-elias.html) | ECE, MSE | His current profile titles both departments. No public degree-coded advisor/student roster was found. |
 | [Karimulla Shaikh](https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
 | [Ravi Thomas](https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
-| [Chris Hendrickson](https://cee.engineering.cmu.edu/directory/index.html) | CEE, EPP, Heinz | Current emeritus appointments are coequal. Located CEE PhD advisees do not establish a majority across all three units. |
 
 [Newell R. Washburn's faculty-authored 2020 CV](https://purebase.com/wp-content/uploads/2020/10/NRW_cv_2020.pdf)
 lists 14 current and former PhD advisees: eight Chemistry, three BME, and
@@ -74,8 +75,19 @@ display primary from a page that appears to be dated around 2024–25.
 [Tori Qiu](https://cos.s3d.cmu.edu/people/students/qiu-torri.html) is in
 Societal Computing/S3D, [Matan Shtepel](https://csd.cmu.edu/people/doctoral-student/matan-shtepel)
 is in CSD, and [Jeffrey Wu](https://ml.cmu.edu/people/phd-students) is listed
-under MLD PhD students. The observed degree-department count is tied one each;
-Ilyas remains unresolved.
+under MLD PhD students. Among Ilyas's *two included faculty appointments*,
+the observed degree-department count is S3D 1 versus ECE 0. S3D is a bounded
+display inference from the current listed students; the CSD and MLD students
+are retained in the evidence, but Ilyas has no included CSD or MLD faculty
+appointment. This does not assert a university HR primary or a complete
+advising history.
+[Chris Hendrickson's 2026–27 CMU CEE catalog entry](https://coursecatalog.web.cmu.edu/schools-colleges/collegeofengineering/departmentofcivilandenvironmentalengineering/)
+titles him Hamerschlag University Professor Emeritus *of Civil and Environmental
+Engineering*. The [College of Engineering profile](https://engineering.cmu.edu/directory/bios/hendrickson-chris.html)
+also records EPP and Heinz College. Located doctoral records span CEE, EPP,
+and Heinz, without a complete lifetime denominator. CEE is a title-based
+display inference from the current CMU catalog; all three memberships remain
+included.
 [Byron Yu's CMU-hosted group roster](https://users.ece.cmu.edu/~byronyu/people.html)
 names 12 Neural Computation PhD advisees, three ECE advisees, and one BME
 advisee among its degree-coded current and former students. His inferred
@@ -154,11 +166,10 @@ people are therefore unresolved, including Elizabeth Wayne, whose CMU role is
 adjunct. [Rafal Wlodarski's current ECE teaching profile](https://www.sv.cmu.edu/directory/faculty-and-researchers/bios/wlodarski-rafal.html)
 supports an included ECE membership alongside the Silicon Valley campus.
 
-The 486 Scholar-ID holders include the later Bio/Chemistry IDs, directly linked
+The 487 Scholar-ID holders include the later Bio/Chemistry IDs, directly linked
 profiles in four more schools, and David R. Owen's user-supplied current ID.
-Of 456 included Scholar-ID holders, 454 have a typed display home; Andrew Ilyas
-and Chris Hendrickson remain unresolved. The other 30 Scholar-ID holders are
-excluded-only and have no display primary.
+All 457 included Scholar-ID holders have a typed display home. The other 30
+Scholar-ID holders are excluded-only and have no display primary.
 The earlier Bio/Chemistry ID additions retain their identity provenance. The
 later four-school review changed some display choices when it added substantive
 cross-appointments; Alison Barth, for example, now has included Biological

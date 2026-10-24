@@ -3,12 +3,12 @@
 The [dated primary ledger](2026-10-24-other-schools-primary.csv) covers every
 person with a registered Google Scholar ID and at least one membership added
 through the CFA, Dietrich, Heinz, or Tepper review. It has **105 distinct
-people**: **102 resolved** display-primary units and **three explicitly
-unresolved** cases. The three `primary_department_*` columns match the schema
-proposed in [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35);
-`basis` is an audit note. The current registry does not yet have those three
-columns, so this ledger preserves the decisions for integration after that
-schema change. It neither removes joint memberships nor adds publication data.
+people**: **103 resolved** display-primary units and **two explicitly
+unresolved** cases. The three `primary_department_*` columns match the
+[current registry schema](https://github.com/cmccomb/map-of-research/pull/35),
+which was merged after the initial review; `basis` is an audit note. This
+ledger preserves the original decisions and later evidence updates. It neither
+removes joint memberships nor adds publication data.
 
 For a person with one included academic unit, the official membership source
 supports that unit. For multiple included units, the reviewers used current
@@ -40,16 +40,18 @@ position can settle a display choice even when a bounded advising subset
 leans elsewhere, as [Tepper's Nicholas Muller review](2026-10-24-tepper.md)
 documents. The original joint memberships remain included.
 
-The three unresolved rows are:
+The two unresolved rows are:
 
 - **Berit C. R. Royer:** LCAL lists a part-time adjunct lecturer. No included
   CMU faculty unit is documented by this review.
 - **Laura McCann:** current BME and English profiles both call her a jointly
   appointed Lecturer. Both memberships are excluded under the faculty-role
   policy; see the [Dietrich review](2026-10-24-dietrich.md).
-- **Chris Hendrickson:** current CEE, EPP, and Heinz emeritus appointments are
-  coequal in official sources. Two located CEE doctoral advisees do not
-  establish a majority across those units; see the [Heinz review](2026-10-24-heinz.md).
+Chris Hendrickson's CEE display primary is a later title-based inference from
+his [2026–27 CMU CEE catalog entry](https://coursecatalog.web.cmu.edu/schools-colleges/collegeofengineering/departmentofcivilandenvironmentalengineering/).
+The located doctoral records do not establish a lifetime majority across CEE,
+EPP, and Heinz; see the [Heinz review](2026-10-24-heinz.md). All three
+memberships remain included.
 
 The ledger also retains the Civil and Environmental Engineering choice for
 Destenie Nock from draft PR #35's EPP catalog evidence. Her new CFA
