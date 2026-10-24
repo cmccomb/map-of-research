@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "browser_route": "isolated_task_browser",
+  "person_id": "person-annamkietrys-6a2429bc",
+  "display_name": "Anna M. Kietrys",
+  "profile_display_name": "Anna M. Kietrys",
+  "scholar_id": "L0nXO5EAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/kietrys.html",
+  "scholar_id_source_url": "https://scholar.google.com/citations?user=L0nXO5EAAAAJ&hl=en&oi=ao",
+  "scholar_id_source_kind": "user_supplied_direct_profile",
+  "profile_identity_evidence": "Displayed CMU Department of Chemistry affiliation and verified andrew.cmu.edu email",
+  "captured_at_utc": "2026-10-24T23:12:16.066000+00:00",
+  "profile_url": "https://scholar.google.com/citations?user=L0nXO5EAAAAJ&hl=en&oi=ao",
+  "publication_count": 36,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/kietrys-visible-36-2026-10-24.json",
+  "source_json_sha256": "535fedd483161c1133b3a0e2ccf61c1a47f7bba6511064e25e70b7690c613d27",
+  "source_html_path": "data/captures/kietrys-visible-36-2026-10-24.html",
+  "source_html_sha256": "f766cc49e2130533aa1a0ae29f895e4af858d9a358f7543cf248bd846275589d",
+  "cache_path": "data/authors/L0nXO5EAAAAJ.json",
+  "cache_sha256": "6752920dd5cf3ee0455e4e8f27bd4953c750a7dfb4d52bdc52ae6c075b5b635e",
+  "browser_closed": true,
+  "release_state": "staged_for_source_review",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "missing_year": 0,
+  "missing_venue": 3,
+  "zero_or_blank_citations": 10,
+  "citation_annotations": [
+    {
+      "row": 23,
+      "author_pub_id": "L0nXO5EAAAAJ:qjMakFHDy7sC",
+      "display": "2*"
+    }
+  ],
+  "year_anomalies": []
+}
