@@ -129,7 +129,13 @@ def test_registry_retains_one_profile_across_schools(tmp_path: Path) -> None:
 
 
 @pytest.mark.parametrize(
-    "basis", ["reviewed", "inferred_advisee_count", "inferred_profile_title"]
+    "basis",
+    [
+        "reviewed",
+        "inferred_advisee_count",
+        "inferred_profile_title",
+        "display_tie_break_first_listed",
+    ],
 )
 def test_primary_department_requires_reviewed_evidence_for_multiple_memberships(
     tmp_path: Path,
@@ -191,6 +197,59 @@ def test_primary_department_requires_reviewed_evidence_for_multiple_memberships(
     single = registry.primary_affiliation("person-single")
     assert (single.department_id, single.basis) == ("ece", "single_included_membership")
     assert single.source_url == "https://example.test/ece"
+
+
+@pytest.mark.parametrize(
+    ("person_id", "department_id", "school_id", "title", "source_url", "unit_ids"),
+    [
+        (
+            "person-jeremyavigad-0d62ce13",
+            "philosophy",
+            "dietrich",
+            "Department of Philosophy",
+            "https://www.cmu.edu/dietrich/philosophy/people/faculty/jeremy-avigad.html",
+            {"math", "philosophy"},
+        ),
+        (
+            "person-robertfsekerka-8dacf315",
+            "physics",
+            "mcs",
+            "Physics",
+            "https://www.cmu.edu/leadership/the-provost/university-professors",
+            {"math", "physics"},
+        ),
+    ],
+)
+def test_joint_math_display_tie_break_preserves_both_memberships(
+    person_id: str,
+    department_id: str,
+    school_id: str,
+    title: str,
+    source_url: str,
+    unit_ids: set[str],
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    assert person.primary_academic_home_type == "department"
+    assert person.primary_department_id == ""
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "department",
+        department_id,
+        title,
+        school_id,
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        "display_tie_break_first_listed",
+    )
+    assert home.published_fields()["primary_department_id"] == department_id
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == unit_ids
 
 
 def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None:

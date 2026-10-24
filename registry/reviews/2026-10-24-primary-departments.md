@@ -10,11 +10,11 @@ earlier Engineering, SCS, and MCS choices. All memberships remain available
 for filters. A display primary is not an assertion about a university HR
 primary appointment.
 
-| Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | Unresolved |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,481 | 1,099 | 152 | 172 | 2 | 16 | 40 |
-| Excluded-only roster | 520 | 0 | 0 | 0 | 0 | 0 | 520 |
-| Entire registry | 2,001 | 1,099 | 152 | 172 | 2 | 16 | 560 |
+| Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | First-listed display tie-break | Unresolved |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Included roster | 1,480 | 1,098 | 152 | 172 | 2 | 16 | 2 | 38 |
+| Excluded-only roster | 521 | 0 | 0 | 0 | 0 | 0 | 0 | 521 |
+| Entire registry | 2,001 | 1,098 | 152 | 172 | 2 | 16 | 2 | 559 |
 
 The explicit choices include their source URL, verification date, and basis in
 `people.csv`. `reviewed` means a source-backed map display choice;
@@ -28,7 +28,28 @@ home fields distinguish actual departments from institutes, constituent
 schools, Tepper academic areas, and broad school fallbacks. The legacy
 `primary_department_id` is populated only for actual departments.
 
-The ledger records all 40 included people without a supported single choice.
+`display_tie_break_first_listed` is an explicitly reviewed visual choice for
+two joint appointments whose official CMU titles list both departments. The
+[Philosophy profile for Jeremy Avigad](https://www.cmu.edu/dietrich/philosophy/people/faculty/jeremy-avigad.html)
+titles him “Professor of Philosophy and Mathematical Sciences,” so the map
+displays Philosophy. The
+[Provost's University Professors list](https://www.cmu.edu/leadership/the-provost/university-professors)
+titles Robert F. Sekerka “University Professor of Physics and Mathematics,
+Emeritus,” so the map displays Physics. First-listed order is a display
+tie-break, not an institutional rank or an exclusion of the Math appointment.
+All four department memberships remain included for filters and collection.
+Avigad's [faculty-authored student list](https://www.andrew.cmu.edu/user/avigad/students.html),
+cross-checked against the [CMU Pure and Applied Logic alumni list](https://www.logic.cmu.edu/alumni.html)
+and [Philosophy graduate programs](https://www.cmu.edu/dietrich/philosophy/graduate/phd/),
+places 8 of 17 listed PhD advisees in Philosophy programs, 5 in Mathematical
+Sciences, and 4 in Computer Science. This corroborates the displayed Philosophy
+home but is a count of listed advisees, not an institutional primary appointment;
+the chosen display rule remains first-listed department. Sekerka's
+[CMU-hosted CV](https://sekerkaweb.phys.cmu.edu/SekerkaCV2015.html)
+documents the Physics and Mathematics appointments but has no degree-coded
+advisee list, so the same title-order display rule supplies his visual home.
+
+The ledger records all 38 included people without a supported single choice.
 Examples with specific evidence gaps are:
 
 | Person | Included units | Remaining evidence gap |
@@ -38,7 +59,6 @@ Examples with specific evidence gaps are:
 | [Elias Towe](https://ece.cmu.edu/directory/bios/towe-elias.html) | ECE, MSE | His current profile titles both departments. No public degree-coded advisor/student roster was found. |
 | [Karimulla Shaikh](https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
 | [Ravi Thomas](https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
-| [Robert F. Sekerka](https://www.cmu.edu/leadership/the-provost/university-professors) | Math, Physics | CMU titles him University Professor of Physics and Mathematics, Emeritus. His Math mailing address does not establish a primary. |
 | [Chris Hendrickson](https://cee.engineering.cmu.edu/directory/index.html) | CEE, EPP, Heinz | Current emeritus appointments are coequal. Located CEE PhD advisees do not establish a majority across all three units. |
 
 [Newell R. Washburn's faculty-authored 2020 CV](https://purebase.com/wp-content/uploads/2020/10/NRW_cv_2020.pdf)
@@ -129,7 +149,7 @@ choice while retaining CMU-Africa. None of these choices asserts a university
 HR primary appointment. CMU Silicon Valley is a campus
 facet, so it cannot be a primary. Only substantive included academic
 memberships can supply a primary; excluded courtesy, affiliate, and adjunct
-memberships remain filterable but do not supply one. All 520 excluded-only
+memberships remain filterable but do not supply one. All 521 excluded-only
 people are therefore unresolved, including Elizabeth Wayne, whose CMU role is
 adjunct. [Rafal Wlodarski's current ECE teaching profile](https://www.sv.cmu.edu/directory/faculty-and-researchers/bios/wlodarski-rafal.html)
 supports an included ECE membership alongside the Silicon Valley campus.
