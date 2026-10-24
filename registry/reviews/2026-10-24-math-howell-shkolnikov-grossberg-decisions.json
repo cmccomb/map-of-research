@@ -118,18 +118,6 @@
     },
     {
       "person": "grossberg",
-      "capture_row_index": 33,
-      "captured_title": "Uniqueness of limit models in classes with amalgamation",
-      "canonical_author_pub_id": "q1g_W5sAAAAJ:ZeXyd9-uunAC",
-      "scholar_id": "q1g_W5sAAAAJ",
-      "author_pub_id": "q1g_W5sAAAAJ:ldfaerwXgEUC",
-      "reason_code": "corrupted_duplicate",
-      "reason": "The 2008 Grossberg–VanDieren–Villaveces preprint is a version of the same titled article published in 2016 and retained at row 7.",
-      "evidence_url": "https://www.math.cmu.edu/users/rami/gvv_11_5.08.pdf",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "person": "grossberg",
       "capture_row_index": 38,
       "captured_title": "Finite models, stability and Ramsey's theorem",
       "canonical_author_pub_id": "q1g_W5sAAAAJ:lSLTfruPkqcC",
@@ -327,6 +315,14 @@
       "captured_title": "Rich models",
       "reason": "The Albert–Grossberg article genuinely names Rami P. Grossberg.",
       "evidence_url": "https://www.jstor.org/stable/2274488"
+    },
+    {
+      "person": "grossberg",
+      "capture_row_index": 33,
+      "author_pub_id": "q1g_W5sAAAAJ:ldfaerwXgEUC",
+      "captured_title": "Uniqueness of limit models in classes with amalgamation",
+      "reason": "The 2008 Grossberg–VanDieren–Villaveces manuscript is a genuine dated 24-page author-hosted preprint. Retain its Scholar observation alongside the 2016 journal version.",
+      "evidence_url": "https://www.math.cmu.edu/users/rami/gvv_11_5.08.pdf"
     },
     {
       "person": "grossberg",
