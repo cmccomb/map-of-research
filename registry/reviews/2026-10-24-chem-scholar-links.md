@@ -33,3 +33,12 @@ The user supplied five candidate Scholar profile URLs without names. All five ar
 | Maria Kurnikova | `IggMbacAAAAJ` | [Chemistry faculty profile](https://www.cmu.edu/chemistry/people/faculty/kurnikova.html) and supplied [Scholar profile](https://scholar.google.com/citations?user=IggMbacAAAAJ&hl=en&oi=ao). | Scholar displayed Maria Kurnikova as CMU Chemistry professor with a verified `andrew.cmu.edu` email and her CMU faculty page. | Complete visible profile capture of 170 rows is staged for paired validation and attribution review. |
 
 Each of the five supplied IDs was assigned by its own source evidence and profile identity, never by the order of URLs. Raw Scholar rows remain subject to separate attribution and publication-type review before they contribute graph edges.
+
+## Additional user-supplied Scholar links checked on 2026-10-24
+
+| Person | Scholar ID | Identity verification | Capture state |
+| --- | --- | --- | --- |
+| Anna M. Kietrys | [`L0nXO5EAAAAJ`](https://scholar.google.com/citations?user=L0nXO5EAAAAJ&hl=en&oi=ao) | The direct profile displayed her exact name, Department of Chemistry at Carnegie Mellon University, and verified `andrew.cmu.edu` email; her [CMU Chemistry page](https://www.cmu.edu/chemistry/people/faculty/kietrys.html) independently confirms her role. | An isolated-browser capture reached a disabled Show More control at 36 rows. Paired sanitized HTML/JSON source evidence is staged separately. |
+| Roberto R. Gil | [`FRtd8_QAAAAJ`](https://scholar.google.com/citations?user=FRtd8_QAAAAJ&hl=en&oi=ao) | The direct profile displayed his exact name, Department of Chemistry at Carnegie Mellon University, and verified `andrew.cmu.edu` email; his [CMU Chemistry page](https://www.cmu.edu/chemistry/people/faculty/gil.html) independently confirms his role. The separately saved initial profile header corroborates this identity. | An isolated-browser capture reached a disabled Show More control at 195 JSON rows. The HTML extraction truncated at row 77, so a complete paired HTML receipt and canonical cache are pending a new guarded browser slot. |
+
+Both profile opens followed literal successful reservations in the shared Scholar lane. Neither identity assignment adds raw publications or changes the committed source snapshot; the Gil profile remains a verified identity even though its full HTML evidence needs recapture.
