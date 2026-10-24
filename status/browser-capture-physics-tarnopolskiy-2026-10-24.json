@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-grigorytarnopolskiy-6dfab035",
+  "display_name": "Grigory Tarnopolskiy",
+  "scholar_profile_name": "Grigory Tarnopolsky",
+  "scholar_id": "jrRg4PAAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/tarnopolsky.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/tarnopolsky.html",
+  "captured_at_utc": "2026-10-24T21:42:55.688Z",
+  "publication_count": 65,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/physics-grigory-tarnopolskiy-2026-10-24.json",
+  "source_json_sha256": "291099dda57dbbe9c21d3583b67458a5d99da939456f47bacfc18fdbce676446",
+  "source_html_path": "data/captures/physics-grigory-tarnopolskiy-2026-10-24.html",
+  "source_html_sha256": "2893be50417bfec72bd91148738960e45cb03b70d711e6c6d86c16eab202c49e",
+  "browser_closed": true,
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 52,
+      "display": "2*"
+    }
+  ],
+  "profile_name_variant": "Scholar uses Tarnopolsky; CMU registry uses Tarnopolskiy. Direct CMU profile link verifies the ID.",
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
