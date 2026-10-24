@@ -184,6 +184,302 @@
       "reason": "LaTeX preamble was imported into the title; the complete 2017 journal observation is retained separately.",
       "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=tWQsy4UAAAAJ&citation_for_view=tWQsy4UAAAAJ:tOudhMTPpwUC",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CRCzglkAAAAJ",
+      "author_pub_id": "CRCzglkAAAAJ:-f6ydRqryjwC",
+      "reason_code": "nonpublication",
+      "reason": "Analysis & PDE is a journal title, not an article by Tice.",
+      "evidence_url": "https://msp.org/publications/journals/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CRCzglkAAAAJ",
+      "author_pub_id": "CRCzglkAAAAJ:KlAtU1dfN6UC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Numeric identifier is appended to a second observation of Guo and Tice’s 2010 work; retain the complete title.",
+      "evidence_url": "https://arxiv.org/abs/1011.5179",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CRCzglkAAAAJ",
+      "author_pub_id": "CRCzglkAAAAJ:IWHjjKOFINEC",
+      "reason_code": "nonpublication",
+      "reason": "ONEPAS is a seminar organized by Tice, not a publication.",
+      "evidence_url": "https://www.math.cmu.edu/~iantice/seminar.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:S16KYo8Pm5AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2106534, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2106534",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:HbR8gkJAVGIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1812609, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1812609",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:i2xiXl-TujoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1515400, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1515400",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:e_rmSamDkqQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1211161, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1211161",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:WZBGuue-350C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0905723, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0905723",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:rmuvC79q63oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0635983, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0635983",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:PoWvk5oyLR8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0604420, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0604420",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:VaXvl8Fpj5cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0652558, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0652558",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:xtoqd-5pKcoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0305985, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0305985",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:Dip1O2bNi0gC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0072609, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0072609",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:oNZyr7d5Mn4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9704924, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9704924",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:YohjEiUPhakC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9628467, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9628467",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:q3CdL3IzO_QC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9403871, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9403871",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:foquWX3nUaYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9201869, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9201869",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:-FonjvnnhkoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9196155, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9196155",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:M7yex6snE4oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8902422, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8902422",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:SpbeaW3--B0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8807032, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8807032",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:k8Z6L05lTy4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8605781, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8605781",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:kz9GbA2Ns4gC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8401614, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8401614",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:f2IySw72cVMC",
+      "reason_code": "nonpublication",
+      "reason": "Center for Nonlinear Analysis is a CMU research center, not an individual work.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:4OULZ7Gr8RgC",
+      "reason_code": "nonpublication",
+      "reason": "Center for Nonlinear Analysis is a CMU research center, not an individual work.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:4MWp96NkSFoC",
+      "reason_code": "nonpublication",
+      "reason": "Center for Nonlinear Analysis is a CMU research center, not an individual work.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:wbdj-CoPYUoC",
+      "reason_code": "nonpublication",
+      "reason": "Center for Nonlinear Analysis is a CMU research center, not an individual work.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:PVjk1bu6vJQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This garbled correction-title variant duplicates the separately retained 2026 corrigendum by Liu and Pego.",
+      "evidence_url": "https://sites.math.duke.edu/~jliu/pdf/LiuPego_TAMS_2026.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:B3FOqHPlNUQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "CNA report number is appended to the title of the separately retained Hausdorff moment paper.",
+      "evidence_url": "https://www.math.cmu.edu/~bobpego/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:8AbLer7MMksC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "CNA report number is appended to the title of the separately retained solitary water waves paper.",
+      "evidence_url": "https://www.math.cmu.edu/~bobpego/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:geHnlv5EZngC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "CNA report number is appended to the title of the separately retained animal group-size paper.",
+      "evidence_url": "https://www.math.cmu.edu/~bobpego/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:u-x6o8ySG0sC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "MathSciNet identifier was imported as a title for the separately retained min-driven clustering paper.",
+      "evidence_url": "https://www.math.cmu.edu/~bobpego/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:bnK-pcrLprsC",
+      "reason_code": "nonpublication",
+      "reason": "A concatenated publication list and unrelated citation is not an identifiable single work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:bnK-pcrLprsC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "nonpublication",
+      "reason": "A mathematical sentence fragment was imported as a title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:edDO8Oi4QzsC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:0N-VGjzr574C",
+      "reason_code": "nonpublication",
+      "reason": "Truncated journal masthead text is not an identifiable work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:0N-VGjzr574C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:XiVPGOgt02cC",
+      "reason_code": "nonpublication",
+      "reason": "Journal and editorial-board masthead text is not an individual work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:XiVPGOgt02cC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:W7OEmFMy1HYC",
+      "reason_code": "nonpublication",
+      "reason": "Unparseable garbled text is not an identifiable work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:W7OEmFMy1HYC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:j8SEvjWlNXcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title and erroneous 1977 date duplicate the retained 2006 Stokes pressure work.",
+      "evidence_url": "https://sites.math.duke.edu/~jliu/pdf/Liu_Liu_Pego_RIMS_2007.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
