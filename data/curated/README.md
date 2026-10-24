@@ -1,12 +1,14 @@
 # Verified DOI work records
 
-`works.json` holds 19 faculty observations for 14 verified DOI works: two
+`works.json` holds 20 faculty observations for 15 verified DOI works: two
 Prasad Tetali–Paul Erdős papers, six Mathematics observations across three
 Math–MSE papers, and four observations across three David R. Owen papers (one
 shared with Irene Fonseca). Six further observations across five papers link
 Noel Walkington to Engineering, Ian Tice to Giovanni Leoni, and David
 Kinderlehrer and Robert Suter to Engineering collaborators. One additional
 Walkington chapter replaces an incorrectly attributed whole-book Scholar row.
+One further verified Walkington journal record supplies correct metadata for
+an exact Scholar row with malformed author and venue fields.
 Each row names its CMU faculty person, exact DOI, publisher or CMU verification
 URLs, verification date, and any external coauthor IDs. Paul Erdős is an
 external coauthor, not a CMU faculty registry member.
@@ -39,3 +41,9 @@ rows in `profile_publications` with the decision fields, but excludes them from
 eligible observation matches the same work, that observation can still map the
 work. Add a row only after checking the particular observation and cited
 evidence; uncertain rows stay unexcluded until reviewed.
+
+Walkington's Scholar row `CGSMDGwAAAAJ:8AbLer7MMksC` is a reviewed
+`corrupted_duplicate` of the verified DOI `10.1090/qam/1598`. Its full raw row
+stays in `profile_publications`. The DOI observation supplies the mapped
+authors, venue, citation, and faculty authorship. Recheck this exclusion if
+Scholar repairs those displayed fields in a later capture.
