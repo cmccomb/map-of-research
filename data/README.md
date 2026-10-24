@@ -23,3 +23,10 @@ complete profiles: Aryn Gittis (85), Catherine Armbruster (52), Drew Bridges
 (27), Russell Schwartz (307), Irene Kaplow (49), Jonathan Henninger (27), and
 Kate Hong (18). The raw records remain intact when exact reviewed exclusions
 remove nonpublications or false attributions from mapped works.
+
+The second Biological Sciences batch adds 686 visible rows from six complete
+profiles: Alison Barth (115), Eric Yttri (51), Kenneth Hovis (6), Huaiying
+Zhang (61), Yongxin Zhao (86), and Robert F. Murphy (367). Each cache keeps the
+Scholar row and citation identifier, and each paired capture preserves the
+source evidence after blanking captured form values. Publication eligibility
+is reviewed separately from raw-source preservation.
