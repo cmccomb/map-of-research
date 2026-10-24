@@ -303,6 +303,9 @@ def collect_profiles(
     max_profiles: int = DEFAULT_MAX_PROFILES,
     publication_limit: int = DEFAULT_PUBLICATION_LIMIT,
     request_delay_seconds: float = DEFAULT_REQUEST_DELAY_SECONDS,
+    target_school_ids: Sequence[str] = (),
+    target_department_ids: Sequence[str] = (),
+    target_person_ids: Sequence[str] = (),
     force: bool = False,
     dry_run: bool = False,
     now: dt.datetime | None = None,
@@ -322,6 +325,50 @@ def collect_profiles(
     # Retain excluded and historical people in snapshots, but do not spend
     # Scholar requests refreshing profiles outside the included faculty catalog.
     profiles = unique_profiles(registry, included_only=True)
+    school_ids = tuple(sorted(set(target_school_ids)))
+    department_ids = tuple(sorted(set(target_department_ids)))
+    person_ids = tuple(sorted(set(target_person_ids)))
+    if sum(bool(targets) for targets in (school_ids, department_ids, person_ids)) > 1:
+        raise ValueError("Use school, department, or person targets, not a mix")
+    unknown_schools = set(school_ids) - registry.schools_by_id.keys()
+    if unknown_schools:
+        raise ValueError(f"Unknown school target(s): {sorted(unknown_schools)}")
+    unknown_departments = set(department_ids) - registry.departments_by_id.keys()
+    if unknown_departments:
+        raise ValueError(f"Unknown department target(s): {sorted(unknown_departments)}")
+    known_profile_ids = {profile.person_id for profile in profiles}
+    unknown_people = set(person_ids) - known_profile_ids
+    if unknown_people:
+        raise ValueError(
+            "Person target(s) need an included membership and verified Scholar ID: "
+            f"{sorted(unknown_people)}"
+        )
+    if school_ids:
+        school_by_department = {
+            department.department_id: department.school_id
+            for department in registry.departments
+        }
+        profiles = [
+            profile
+            for profile in profiles
+            if any(
+                school_by_department[membership.department_id] in school_ids
+                for membership in profile.memberships
+                if membership.included
+            )
+        ]
+    elif department_ids:
+        profiles = [
+            profile
+            for profile in profiles
+            if any(
+                membership.department_id in department_ids
+                for membership in profile.memberships
+                if membership.included
+            )
+        ]
+    elif person_ids:
+        profiles = [profile for profile in profiles if profile.person_id in person_ids]
     state = load_collection_state(state_path)
     selected = select_profiles(
         profiles,
@@ -343,6 +390,9 @@ def collect_profiles(
         "registry_people": len(registry.people),
         "registry_memberships": len(registry.memberships),
         "unique_profiles": len(profiles),
+        "target_school_ids": list(school_ids),
+        "target_department_ids": list(department_ids),
+        "target_person_ids": list(person_ids),
         "selected_profile_ids": list(selected_ids),
         "refreshed_profile_ids": [],
         "failed_profile_ids": [],
@@ -493,6 +543,27 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_REQUEST_DELAY_SECONDS,
     )
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--school-id",
+        action="append",
+        default=[],
+        dest="target_school_ids",
+        help="Target included Scholar profiles in a CMU school (repeatable)",
+    )
+    parser.add_argument(
+        "--person-id",
+        action="append",
+        default=[],
+        dest="target_person_ids",
+        help="Target one included person with a verified Scholar ID (repeatable)",
+    )
+    parser.add_argument(
+        "--department-id",
+        action="append",
+        default=[],
+        dest="target_department_ids",
+        help="Target included Scholar profiles in a CMU department (repeatable)",
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args(argv)
 
@@ -515,6 +586,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             max_profiles=args.max_profiles,
             publication_limit=args.publication_limit,
             request_delay_seconds=args.request_delay_seconds,
+            target_school_ids=args.target_school_ids,
+            target_department_ids=args.target_department_ids,
+            target_person_ids=args.target_person_ids,
             force=args.force,
             dry_run=args.dry_run,
         )

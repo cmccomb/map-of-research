@@ -74,6 +74,154 @@ def test_registry_collapses_cross_appointments_with_stable_identity(
     assert profiles[0].person.scholar_id_source_url == "https://example.test/byron-yu"
     assert profiles[0].department_ids == ("bme", "ece")
     assert department_catalog(registry)["ece"] == "Electrical & Computer Engineering"
+    assert registry.schools_by_id["engineering"].title == "College of Engineering"
+    assert registry.school_catalog()["engineering"] == "College of Engineering"
+
+
+def test_registry_retains_one_profile_across_schools(tmp_path: Path) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-cross-school",
+                "display_name": "Cross School",
+                "scholar_id": "crossAAAAJ",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-cross-school",
+                "department_id": department_id,
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/roster",
+                "verified_at": "2026-10-24",
+            }
+            for department_id in ("ece", "s3d")
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "school_id": "engineering",
+                "title": "Electrical & Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "s3d",
+                "school_id": "scs",
+                "title": "Software and Societal Systems Department",
+                "directory_url": "https://example.test/s3d",
+            },
+        ],
+    )
+
+    registry = load_registry(
+        people_path,
+        memberships_path,
+        departments_path,
+        schools_path=tmp_path / "schools.csv",
+    )
+    profiles = registry.unique_profiles(included_only=True)
+    assert len(profiles) == 1
+    assert profiles[0].department_ids == ("ece", "s3d")
+    assert registry.departments_by_id["s3d"].school_id == "scs"
+
+
+@pytest.mark.parametrize(
+    ("schools", "department_school_id", "message"),
+    [
+        (
+            [
+                {
+                    "school_id": "Bad ID",
+                    "title": "Bad",
+                    "directory_url": "https://example.test",
+                }
+            ],
+            "engineering",
+            "Invalid school_id",
+        ),
+        (
+            [
+                {
+                    "school_id": "engineering",
+                    "title": "Eng",
+                    "directory_url": "https://example.test",
+                },
+                {
+                    "school_id": "engineering",
+                    "title": "Eng",
+                    "directory_url": "https://example.test",
+                },
+            ],
+            "engineering",
+            "Duplicate school_id",
+        ),
+        (
+            [
+                {
+                    "school_id": "engineering",
+                    "title": "",
+                    "directory_url": "https://example.test",
+                }
+            ],
+            "engineering",
+            "Blank school title",
+        ),
+        (
+            [
+                {
+                    "school_id": "engineering",
+                    "title": "Eng",
+                    "directory_url": "http://example.test",
+                }
+            ],
+            "engineering",
+            "absolute HTTPS URL",
+        ),
+        (
+            [
+                {
+                    "school_id": "engineering",
+                    "title": "Eng",
+                    "directory_url": "https://example.test",
+                }
+            ],
+            "scs",
+            "Unknown school_id",
+        ),
+    ],
+)
+def test_registry_rejects_invalid_school_hierarchy(
+    tmp_path: Path,
+    schools: list[dict[str, str]],
+    department_school_id: str,
+    message: str,
+) -> None:
+    paths = write_registry(
+        tmp_path,
+        people=[{"person_id": "person-one", "display_name": "One"}],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/ece",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "school_id": department_school_id,
+                "title": "ECE",
+                "directory_url": "https://example.test/ece",
+            }
+        ],
+        schools=schools,
+    )
+    with pytest.raises(ValueError, match=message):
+        load_registry(*paths)
 
 
 def test_registry_retains_but_excludes_affiliates(tmp_path: Path) -> None:

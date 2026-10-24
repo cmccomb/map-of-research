@@ -502,6 +502,181 @@ def test_collection_supports_dry_run_and_noop(tmp_path: Path) -> None:
     assert noop.selected_profile_ids == ()
 
 
+def test_school_and_person_targets_preserve_the_global_collection_budget(
+    tmp_path: Path,
+) -> None:
+    people = [
+        {
+            "person_id": f"person-{name}",
+            "display_name": name.title(),
+            "scholar_id": f"{name}AAAAJ" if name != "gamma" else "",
+        }
+        for name in ("alpha", "beta", "gamma")
+    ]
+    memberships = [
+        {
+            "person_id": f"person-{name}",
+            "department_id": department,
+            "role": "faculty",
+            "included": "true",
+            "legacy_label": name.title(),
+            "source_url": "https://example.test/directory",
+            "verified_at": "2026-07-17",
+        }
+        for name, department in (
+            ("alpha", "ece"),
+            ("beta", "ece"),
+            ("beta", "csd"),
+            ("gamma", "csd"),
+        )
+    ]
+    paths = write_registry(
+        tmp_path / "registry",
+        people=people,
+        memberships=memberships,
+        departments=[
+            {
+                "department_id": department,
+                "school_id": school,
+                "title": department.upper(),
+                "directory_url": "https://example.test/directory",
+            }
+            for department, school in (("ece", "engineering"), ("csd", "scs"))
+        ],
+    )
+    common = {
+        "people_path": paths[0],
+        "memberships_path": paths[1],
+        "departments_path": paths[2],
+        "cache_dir": tmp_path / "cache",
+        "state_path": tmp_path / "state.json",
+        "status_path": tmp_path / "status.json",
+        "now": NOW,
+        "dry_run": True,
+        "max_profiles": 1,
+    }
+    school = collect_profiles(**common, target_school_ids=["scs", "scs"])
+    assert school.selected_profile_ids == ("betaAAAAJ",)
+    status = load_json(common["status_path"])
+    assert status["target_school_ids"] == ["scs"]
+    assert status["target_department_ids"] == []
+    assert status["target_person_ids"] == []
+    assert status["unique_profiles"] == 1
+    person = collect_profiles(**common, target_person_ids=["person-alpha"])
+    assert person.selected_profile_ids == ("alphaAAAAJ",)
+    assert load_json(common["status_path"])["target_person_ids"] == ["person-alpha"]
+    for target, message in (
+        ({"target_school_ids": ["unknown"]}, "Unknown school"),
+        ({"target_person_ids": ["person-gamma"]}, "verified Scholar ID"),
+        ({"target_person_ids": ["person-absent"]}, "verified Scholar ID"),
+        (
+            {"target_school_ids": ["scs"], "target_person_ids": ["person-alpha"]},
+            "school, department, or person targets",
+        ),
+    ):
+        with pytest.raises(ValueError, match=message):
+            collect_profiles(**common, **target)
+
+
+def test_department_targets_select_included_profiles_and_share_the_global_cap(
+    tmp_path: Path,
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": f"person-{name}",
+                "display_name": name.title(),
+                "scholar_id": f"{name}AAAAJ" if name != "epsilon" else "",
+            }
+            for name in ("alpha", "beta", "gamma", "delta", "epsilon")
+        ],
+        memberships=[
+            {
+                "person_id": f"person-{name}",
+                "department_id": department,
+                "role": "faculty" if included else "affiliate",
+                "included": "true" if included else "false",
+                "legacy_label": name.title(),
+                "source_url": "https://example.test/directory",
+                "verified_at": "2026-07-17",
+            }
+            for name, department, included in (
+                ("alpha", "math", True),
+                ("beta", "math", False),
+                ("beta", "chem", True),
+                ("gamma", "math", True),
+                ("gamma", "chem", True),
+                ("delta", "ece", True),
+                ("epsilon", "math", True),
+            )
+        ],
+        departments=[
+            {
+                "department_id": department,
+                "school_id": school,
+                "title": department.upper(),
+                "directory_url": "https://example.test/directory",
+            }
+            for department, school in (
+                ("math", "mcs"),
+                ("chem", "mcs"),
+                ("ece", "engineering"),
+            )
+        ],
+        schools=[
+            {
+                "school_id": school,
+                "title": school.title(),
+                "directory_url": "https://example.test/directory",
+            }
+            for school in ("engineering", "mcs")
+        ],
+    )
+    common = {
+        "people_path": paths[0],
+        "memberships_path": paths[1],
+        "departments_path": paths[2],
+        "cache_dir": tmp_path / "cache",
+        "state_path": tmp_path / "state.json",
+        "status_path": tmp_path / "status.json",
+        "now": NOW,
+        "dry_run": True,
+    }
+    math = collect_profiles(**common, target_department_ids=["math", "math"])
+    assert math.selected_profile_ids == ("alphaAAAAJ",)
+    status = load_json(common["status_path"])
+    assert status["target_department_ids"] == ["math"]
+    assert status["target_school_ids"] == []
+    assert status["target_person_ids"] == []
+    assert status["unique_profiles"] == 2
+
+    two_departments = collect_profiles(
+        **common,
+        target_department_ids=["math", "chem", "math"],
+        max_profiles=2,
+    )
+    assert two_departments.selected_profile_ids == ("alphaAAAAJ", "betaAAAAJ")
+    status = load_json(common["status_path"])
+    assert status["target_department_ids"] == ["chem", "math"]
+    assert status["unique_profiles"] == 3
+    assert status["max_profiles"] == 2
+
+    for target, message in (
+        ({"target_department_ids": ["unknown"]}, "Unknown department"),
+        (
+            {"target_school_ids": ["mcs"], "target_department_ids": ["math"]},
+            "school, department, or person targets",
+        ),
+        (
+            {"target_department_ids": ["math"], "target_person_ids": ["person-alpha"]},
+            "school, department, or person targets",
+        ),
+    ):
+        with pytest.raises(ValueError, match=message):
+            collect_profiles(**common, **target)
+
+
 def test_collection_delays_between_profiles_and_can_finish_partial(
     tmp_path: Path,
 ) -> None:
@@ -563,6 +738,23 @@ def test_workflow_url_compatibility_entrypoint_and_parser(monkeypatch) -> None:
     monkeypatch.setattr(collector, "collect_profiles", lambda **kwargs: expected)
     assert collector.scrape_faculty_data() is expected
     assert collector._parse_args(["--force", "--dry-run"]).force is True
+    targets = collector._parse_args(
+        [
+            "--school-id",
+            "scs",
+            "--school-id",
+            "mcs",
+            "--department-id",
+            "math",
+            "--department-id",
+            "chem",
+            "--person-id",
+            "person-x",
+        ]
+    )
+    assert targets.target_school_ids == ["scs", "mcs"]
+    assert targets.target_department_ids == ["math", "chem"]
+    assert targets.target_person_ids == ["person-x"]
 
 
 @pytest.mark.parametrize(("raises", "exit_code"), [(False, 0), (True, 1)])

@@ -7,10 +7,12 @@ import datetime as dt
 import hashlib
 import json
 import os
+import re
 import tempfile
 from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 from .collector import CACHE_SCHEMA_VERSION
 from .io import atomic_write_json, load_json, sha256_file
@@ -18,14 +20,18 @@ from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
+    DEFAULT_SCHOOLS_PATH,
     AuthorProfile,
+    Membership,
+    Registry,
     load_registry,
     unique_profiles,
 )
 
-SNAPSHOT_SCHEMA_VERSION = 4
+SNAPSHOT_SCHEMA_VERSION = 5
 MANIFEST_SCHEMA_VERSION = 1
 DEFAULT_CACHE_DIR = Path("data/authors")
+DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
 DEFAULT_SNAPSHOT_PATH = Path("snapshots/cmu-engineering-publications.parquet")
 DEFAULT_MANIFEST_PATH = Path(
     "snapshots/cmu-engineering-publications.parquet.manifest.json"
@@ -48,7 +54,14 @@ REQUIRED_COLUMNS = {
     "source_url",
     "source_record_json",
     "fetched_at_utc",
+    "source_type",
+    "source_doi",
+    "source_verified_at",
+    "source_verification_urls",
+    "external_coauthors",
 }
+CURATED_SCHEMA_VERSION = 1
+DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+\Z", re.IGNORECASE)
 
 
 def _parse_year(value: Any) -> int | None:
@@ -69,7 +82,7 @@ def _citation_count(value: Any) -> int:
         return 0
 
 
-def _memberships(profile: AuthorProfile) -> list[dict[str, Any]]:
+def _memberships(memberships: Sequence[Membership]) -> list[dict[str, Any]]:
     return [
         {
             "department_id": membership.department_id,
@@ -79,7 +92,7 @@ def _memberships(profile: AuthorProfile) -> list[dict[str, Any]]:
             "source_url": membership.source_url,
             "verified_at": membership.verified_at,
         }
-        for membership in profile.memberships
+        for membership in memberships
     ]
 
 
@@ -103,7 +116,7 @@ def _publication_row(
         "display_name": profile.display_name,
         "faculty": profile.display_name,
         "department_ids": list(profile.department_ids),
-        "memberships": _memberships(profile),
+        "memberships": _memberships(profile.memberships),
         "author_pub_id": str(publication["author_pub_id"]),
         "title": str(publication["title"]),
         "authors": str(publication.get("author") or "").strip(),
@@ -119,7 +132,147 @@ def _publication_row(
             separators=(",", ":"),
         ),
         "fetched_at_utc": fetched_at_utc,
+        "source_type": "scholar",
+        "source_doi": str(publication.get("doi") or "").strip(),
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "external_coauthors": [],
     }
+
+
+def _curated_path(people_path: Path, curated_path: Path | None) -> Path:
+    if curated_path is not None:
+        return curated_path
+    return people_path.parent.parent / DEFAULT_CURATED_WORKS_PATH
+
+
+def _https_url(value: Any, *, field: str) -> str:
+    url = str(value or "").strip()
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or not parsed.netloc:
+        raise ValueError(f"Curated {field} must be an HTTPS URL")
+    return url
+
+
+def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
+    if not path.is_file():
+        return []
+    source = load_json(path)
+    if (
+        not isinstance(source, dict)
+        or source.get("schema_version") != CURATED_SCHEMA_VERSION
+    ):
+        raise ValueError(f"Unsupported curated-work schema: {path}")
+    works = source.get("works")
+    coauthors = source.get("external_coauthors")
+    if not isinstance(works, list) or not isinstance(coauthors, list):
+        raise ValueError("Curated works and external coauthors must be lists")
+    external_by_id: dict[str, dict[str, str]] = {}
+    for item in coauthors:
+        if not isinstance(item, dict):
+            raise ValueError("Curated external coauthor must be an object")
+        person_id = str(item.get("person_id") or "").strip()
+        display_name = str(item.get("display_name") or "").strip()
+        if (
+            not person_id.startswith("external-")
+            or not display_name
+            or person_id in external_by_id
+        ):
+            raise ValueError(
+                "Curated external coauthor identity is invalid or duplicated"
+            )
+        external_by_id[person_id] = {
+            "person_id": person_id,
+            "display_name": display_name,
+            "source_url": _https_url(
+                item.get("source_url"), field="coauthor source_url"
+            ),
+        }
+    people_by_id = registry.people_by_id
+    memberships_by_person: dict[str, list[Membership]] = {}
+    for membership in registry.memberships:
+        memberships_by_person.setdefault(membership.person_id, []).append(membership)
+    rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for work in works:
+        if not isinstance(work, dict):
+            raise ValueError("Curated work must be an object")
+        person_id = str(work.get("person_id") or "").strip()
+        person = people_by_id.get(person_id)
+        memberships = memberships_by_person.get(person_id, [])
+        department_ids = [
+            membership.department_id
+            for membership in memberships
+            if membership.included
+        ]
+        if person is None or not department_ids:
+            raise ValueError(
+                f"Curated work has no active registered faculty: {person_id}"
+            )
+        doi = str(work.get("doi") or "").strip().casefold()
+        if not DOI_PATTERN.fullmatch(doi):
+            raise ValueError(f"Curated work has an invalid DOI: {doi}")
+        key = (person_id, doi)
+        if key in seen:
+            raise ValueError(f"Duplicate curated faculty DOI: {key}")
+        seen.add(key)
+        title = str(work.get("title") or "").strip()
+        authors = str(work.get("authors") or "").strip()
+        venue = str(work.get("venue") or "").strip()
+        if not title or not authors or not venue:
+            raise ValueError("Curated work needs a title, authors, and venue")
+        year = _parse_year(work.get("year"))
+        if year is None:
+            raise ValueError("Curated work year is invalid")
+        verified_at = str(work.get("source_verified_at") or "").strip()
+        try:
+            dt.date.fromisoformat(verified_at)
+        except ValueError as error:
+            raise ValueError(
+                "Curated source_verified_at must use YYYY-MM-DD"
+            ) from error
+        verification_urls = work.get("source_verification_urls")
+        if not isinstance(verification_urls, list) or not verification_urls:
+            raise ValueError("Curated work needs verification URLs")
+        verified_urls = [
+            _https_url(url, field="source_verification_urls")
+            for url in verification_urls
+        ]
+        external_ids = work.get("external_coauthor_ids", [])
+        if not isinstance(external_ids, list) or any(
+            str(item) not in external_by_id for item in external_ids
+        ):
+            raise ValueError("Curated work references an unknown external coauthor")
+        rows.append(
+            {
+                "scholar_id": "",
+                "person_id": person_id,
+                "display_name": person.display_name,
+                "faculty": person.display_name,
+                "department_ids": department_ids,
+                "memberships": _memberships(memberships),
+                "author_pub_id": f"curated-doi:{person_id}:{doi}",
+                "title": title,
+                "authors": authors,
+                "year": year,
+                "venue": venue,
+                "citation": str(work.get("citation") or "").strip(),
+                "citation_count": 0,
+                "source_url": _https_url(work.get("source_url"), field="source_url"),
+                "source_record_json": json.dumps(
+                    work, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+                ),
+                "fetched_at_utc": "",
+                "source_type": "curated_verified",
+                "source_doi": doi,
+                "source_verified_at": verified_at,
+                "source_verification_urls": verified_urls,
+                "external_coauthors": [
+                    external_by_id[str(item)] for item in external_ids
+                ],
+            }
+        )
+    return rows
 
 
 def _registry_sha256(paths: Sequence[Path]) -> str:
@@ -130,6 +283,21 @@ def _registry_sha256(paths: Sequence[Path]) -> str:
         digest.update(path.read_bytes())
         digest.update(b"\0")
     return digest.hexdigest()
+
+
+def _registry_paths(
+    people_path: Path,
+    memberships_path: Path,
+    departments_path: Path,
+) -> tuple[Path, ...]:
+    """Include the school hierarchy in snapshot provenance."""
+
+    return (
+        people_path,
+        memberships_path,
+        departments_path,
+        departments_path.with_name(DEFAULT_SCHOOLS_PATH.name),
+    )
 
 
 def _load_profile_cache(path: Path, profile: AuthorProfile) -> dict[str, Any]:
@@ -155,6 +323,12 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot has no publication rows")
     if frame[["scholar_id", "author_pub_id"]].isnull().any().any():
         raise ValueError("Snapshot publication identities cannot be null")
+    if not frame["source_type"].isin({"scholar", "curated_verified"}).all():
+        raise ValueError("Snapshot contains an unknown source type")
+    if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
+        raise ValueError("Scholar observations need a Scholar identity")
+    if frame.loc[frame["source_type"] == "curated_verified", "source_doi"].eq("").any():
+        raise ValueError("Curated observations need a DOI")
     duplicate_mask = frame.duplicated(
         subset=["scholar_id", "author_pub_id"],
         keep=False,
@@ -173,6 +347,7 @@ def build_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
+    curated_path: Path | None = None,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     now: dt.datetime | None = None,
@@ -184,6 +359,7 @@ def build_snapshot(
     created_at = now or dt.datetime.now(dt.UTC)
     registry = load_registry(people_path, memberships_path, departments_path)
     profiles = unique_profiles(registry)
+    source_path = _curated_path(people_path, curated_path)
     rows: list[dict[str, Any]] = []
     cached_profile_ids: list[str] = []
     for profile in profiles:
@@ -203,6 +379,8 @@ def build_snapshot(
                 )
             )
         cached_profile_ids.append(profile.scholar_id)
+
+    rows.extend(_load_curated_rows(source_path, registry))
 
     frame = pandas.DataFrame(rows)
     _validate_frame(frame)
@@ -236,18 +414,24 @@ def build_snapshot(
         "snapshot_file": snapshot_path.name,
         "snapshot_sha256": sha256_file(snapshot_path),
         "registry_sha256": _registry_sha256(
-            (people_path, memberships_path, departments_path)
+            _registry_paths(people_path, memberships_path, departments_path)
         ),
         "registry_files": [
             people_path.name,
             memberships_path.name,
             departments_path.name,
+            DEFAULT_SCHOOLS_PATH.name,
         ],
         "publication_rows": len(frame),
         "registry_people": len(registry.people),
         "registry_memberships": len(registry.memberships),
         "registry_profiles": len(profiles),
         "cached_profiles": len(cached_profile_ids),
+        "curated_works_file": source_path.name if source_path.is_file() else "",
+        "curated_works_sha256": sha256_file(source_path)
+        if source_path.is_file()
+        else "",
+        "curated_work_rows": int((frame["source_type"] == "curated_verified").sum()),
         "cached_profile_ids_sha256": hashlib.sha256(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
         ).hexdigest(),
@@ -265,6 +449,7 @@ def validate_snapshot(
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
+    curated_path: Path | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -284,6 +469,9 @@ def validate_snapshot(
         "registry_profiles",
         "cached_profiles",
         "registry_sha256",
+        "curated_works_file",
+        "curated_works_sha256",
+        "curated_work_rows",
     }
     missing = required_manifest_fields.difference(manifest)
     if missing:
@@ -299,10 +487,20 @@ def validate_snapshot(
     if sha256_file(snapshot_path) != manifest["snapshot_sha256"]:
         raise ValueError("Snapshot checksum does not match the manifest")
     if (
-        _registry_sha256((people_path, memberships_path, departments_path))
+        _registry_sha256(
+            _registry_paths(people_path, memberships_path, departments_path)
+        )
         != manifest["registry_sha256"]
     ):
         raise ValueError("Registry files do not match the snapshot manifest")
+    source_path = _curated_path(people_path, curated_path)
+    current_curated_name = source_path.name if source_path.is_file() else ""
+    current_curated_sha = sha256_file(source_path) if source_path.is_file() else ""
+    if (
+        manifest["curated_works_file"] != current_curated_name
+        or manifest["curated_works_sha256"] != current_curated_sha
+    ):
+        raise ValueError("Curated work source does not match the snapshot manifest")
 
     created_at = dt.datetime.fromisoformat(str(manifest["created_at_utc"]))
     if created_at.tzinfo is None:
@@ -318,9 +516,14 @@ def validate_snapshot(
     _validate_frame(frame)
     if len(frame) != int(manifest["publication_rows"]):
         raise ValueError("Snapshot row count does not match the manifest")
-    cached_profiles = frame["scholar_id"].nunique()
+    cached_profiles = frame.loc[
+        frame["source_type"] == "scholar", "scholar_id"
+    ].nunique()
     if cached_profiles != int(manifest["cached_profiles"]):
         raise ValueError("Snapshot profile count does not match the manifest")
+    curated_rows = int((frame["source_type"] == "curated_verified").sum())
+    if curated_rows != int(manifest["curated_work_rows"]):
+        raise ValueError("Snapshot curated row count does not match the manifest")
     if int(manifest["cached_profiles"]) > int(manifest["registry_profiles"]):
         raise ValueError("Snapshot contains more profiles than the registry")
     return frame, manifest
@@ -340,6 +543,7 @@ def _build_parser() -> argparse.ArgumentParser:
         default=DEFAULT_DEPARTMENTS_PATH,
     )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
+    parser.add_argument("--curated-works", type=Path)
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
     return parser
@@ -352,6 +556,7 @@ def build_main(argv: Sequence[str] | None = None) -> int:
         memberships_path=args.memberships,
         departments_path=args.departments,
         cache_dir=args.cache_dir,
+        curated_path=args.curated_works,
         snapshot_path=args.snapshot,
         manifest_path=args.manifest,
     )
@@ -375,6 +580,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
         default=DEFAULT_DEPARTMENTS_PATH,
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
+    parser.add_argument("--curated-works", type=Path)
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,
@@ -383,6 +589,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
         people_path=args.people,
         memberships_path=args.memberships,
         departments_path=args.departments,
+        curated_path=args.curated_works,
     )
     print(json.dumps(manifest, sort_keys=True))
     return 0

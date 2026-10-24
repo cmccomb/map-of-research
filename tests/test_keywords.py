@@ -226,6 +226,7 @@ def test_reviewed_labels_preserve_extraction_and_reject_ambiguity() -> None:
     detail_reviews = review_catalog(1)
     assert len(overview_reviews) == len(set(overview_reviews.values())) == 30
     assert len(detail_reviews) == len(set(detail_reviews.values())) == 120
+    assert set(overview_reviews.values()).isdisjoint(detail_reviews.values())
 
     labels, reviewed = apply_reviewed_labels(
         {0: "access control", 1: "unreviewed phrase"},
@@ -246,8 +247,146 @@ def test_reviewed_labels_preserve_extraction_and_reject_ambiguity() -> None:
         )
     with pytest.raises(ValueError, match="non-empty and unique"):
         apply_reviewed_labels({0: ""}, {})
+    with pytest.raises(ValueError, match="non-empty and unique"):
+        apply_reviewed_labels({0: "access control"}, {"access control": " "})
+    with pytest.raises(ValueError, match="non-empty and unique"):
+        apply_reviewed_labels({0: "one"}, {"one": "same", "two": "same"})
+    labels, reviewed = apply_reviewed_labels(
+        {0: "current"},
+        {"unused": "parent"},
+        reserved={"parent"},
+    )
+    assert labels == {0: "current"}
+    assert reviewed == {0: False}
     with pytest.raises(ValueError, match="Unknown topic hierarchy"):
         review_catalog(2)
+
+
+@pytest.mark.parametrize(
+    ("extracted", "expected"),
+    [
+        ({0: "decision making", 1: "trauma triage"}, {0: False, 1: False}),
+        ({0: "trauma triage", 1: "decision making"}, {0: False, 1: False}),
+    ],
+)
+def test_direct_extraction_precedes_colliding_reviewed_label(
+    extracted: dict[int, str], expected: dict[int, bool]
+) -> None:
+    labels, reviewed = apply_reviewed_labels(
+        extracted,
+        {"decision making": "trauma triage"},
+    )
+
+    assert labels == extracted
+    assert reviewed == expected
+
+
+def test_direct_extraction_precedes_another_reviewed_keys_output() -> None:
+    labels, reviewed = apply_reviewed_labels(
+        {0: "first", 1: "second"},
+        {"first": "second", "second": "final"},
+    )
+
+    assert labels == {0: "first", 1: "final"}
+    assert reviewed == {0: False, 1: True}
+
+
+@pytest.mark.parametrize(
+    ("extracted", "reserved"),
+    [({0: "topic", 1: "topic"}, set()), ({0: "topic"}, {"topic"})],
+)
+def test_duplicate_or_parent_matching_extractions_remain_errors(
+    extracted: dict[int, str], reserved: set[str]
+) -> None:
+    with pytest.raises(ValueError, match="non-empty and unique"):
+        apply_reviewed_labels(extracted, {}, reserved=reserved)
+
+
+def test_colliding_reviews_preserve_source_phrases_in_both_keyword_levels(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    def extracted_for_test(
+        titles: list[str],
+        labels: numpy.ndarray,
+        *,
+        reserved: set[str] | None = None,
+        prefer_readable: bool = False,
+    ) -> dict[int, str]:
+        del titles, reserved
+        clusters = sorted({int(label) for label in labels})
+        if prefer_readable:
+            assert len(clusters) == 2
+            return dict(
+                zip(
+                    clusters,
+                    ["access control", "cybersecurity & privacy"],
+                    strict=True,
+                )
+            )
+        assert len(clusters) == 4
+        return dict(
+            zip(
+                clusters,
+                [
+                    "decision making",
+                    "trauma triage",
+                    "energy systems",
+                    "heat exchanger",
+                ],
+                strict=True,
+            )
+        )
+
+    monkeypatch.setattr(keywords, "_cluster_keywords", extracted_for_test)
+    output = keywords.add_publication_keywords(
+        works_frame(),
+        keyword_count=2,
+        detail_keyword_count=4,
+        minimum_detail_cluster_size=1,
+    )
+
+    overview = output[["keyword", "keyword_extracted", "keyword_label_reviewed"]]
+    detail = output[
+        ["detail_keyword", "detail_keyword_extracted", "detail_keyword_label_reviewed"]
+    ]
+    assert set(overview["keyword"]) == {"access control", "cybersecurity & privacy", ""}
+    assert not overview["keyword_label_reviewed"].any()
+    assert set(detail["detail_keyword"]) == {
+        "decision making",
+        "trauma triage",
+        "energy systems",
+        "process integration & carbon capture",
+        "",
+    }
+    assert (
+        output.loc[
+            output["detail_keyword_extracted"] == "decision making",
+            "detail_keyword_label_reviewed",
+        ]
+        .eq(False)
+        .all()
+    )
+    assert (
+        output.loc[
+            output["detail_keyword_extracted"] == "heat exchanger",
+            "detail_keyword_label_reviewed",
+        ]
+        .eq(True)
+        .all()
+    )
+    assert set(overview["keyword_extracted"]) == {
+        "access control",
+        "cybersecurity & privacy",
+        "",
+    }
+    assert set(detail["detail_keyword_extracted"]) == {
+        "decision making",
+        "trauma triage",
+        "energy systems",
+        "heat exchanger",
+        "",
+    }
+    assert not set(overview["keyword"]) & set(detail["detail_keyword"]) - {""}
 
 
 def test_detail_cluster_allocation_is_proportional_and_capacity_limited() -> None:
@@ -370,3 +509,82 @@ def test_region_audit_skips_small_regions() -> None:
 
     assert audited["map_eligible"].tolist() == [True]
     assert audited["map_region_outlier"].tolist() == [False]
+
+
+def test_region_audit_preserves_documented_paper_inside_weak_region() -> None:
+    rows = []
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+            }
+        )
+    rows[0].update(
+        {
+            "year": 1995,
+            "title": "Independence of solution sets and minimal asymptotic bases",
+            "authors": "Paul Erdős, Melvyn Nathanson, and Prasad Tetali",
+            "venue": "Acta Arithmetica",
+            "doi": "10.4064/aa-69-3-243-258",
+            "source_urls": ["https://example.test/publisher"],
+        }
+    )
+    rows[1].update(
+        {
+            "year": 1990,
+            "title": "A long enough title with several descriptive words",
+            "authors": "Two Authors",
+            "venue": "Journal",
+            "doi": "10.1000/another",
+            "source_urls": [],
+        }
+    )
+
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+
+    assert audited["map_eligible"].sum() == 1
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited.loc[0, "map_exclusion_reasons"] == []
+    assert not bool(audited.loc[1, "map_eligible"])
+    assert bool(audited.loc[1, "map_region_outlier"])
+    assert audited.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
+    assert (
+        audited["map_region_audit_version"]
+        .eq("low-information-semantic-region-v2")
+        .all()
+    )
+
+
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        ("https://example.test/paper", True),
+        (" ", False),
+        (["https://example.test/paper"], True),
+        (("https://example.test/paper",), True),
+        (numpy.asarray(["https://example.test/paper"]), True),
+        ([], False),
+        ([None], False),
+        ([""], False),
+        (None, False),
+        (float("nan"), False),
+    ],
+)
+def test_documented_work_source_url_handles_parquet_and_missing_values(
+    value, expected
+) -> None:
+    assert keywords._has_source_url(value) is expected

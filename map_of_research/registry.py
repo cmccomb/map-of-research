@@ -1,4 +1,4 @@
-"""Normalized people, department, and membership registry parsing."""
+"""Normalized people, schools, departments, and membership registry parsing."""
 
 from __future__ import annotations
 
@@ -31,10 +31,16 @@ MEMBERSHIP_COLUMNS = (
 )
 DEPARTMENT_COLUMNS = (
     "department_id",
+    "school_id",
     "title",
     "directory_url",
     "reviewed_at",
     "review_notes",
+)
+SCHOOL_COLUMNS = (
+    "school_id",
+    "title",
+    "directory_url",
 )
 INCLUDED_ROLES = frozenset({"faculty", "teaching", "emeritus"})
 KNOWN_ROLES = INCLUDED_ROLES | {
@@ -47,6 +53,7 @@ KNOWN_ROLES = INCLUDED_ROLES | {
     "unknown",
 }
 DEPARTMENT_ID_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+SCHOOL_ID_PATTERN = DEPARTMENT_ID_PATTERN
 PERSON_ID_PATTERN = re.compile(r"person-[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 SCHOLAR_ID_PATTERN = re.compile(r"[A-Za-z0-9_-]+\Z")
 ORCID_PATTERN = re.compile(r"(?:https://orcid\.org/)?(\d{4}-\d{4}-\d{4}-[\dX]{4})\Z")
@@ -54,6 +61,7 @@ ORCID_PATTERN = re.compile(r"(?:https://orcid\.org/)?(\d{4}-\d{4}-\d{4}-[\dX]{4}
 DEFAULT_PEOPLE_PATH = Path("registry/people.csv")
 DEFAULT_MEMBERSHIPS_PATH = Path("registry/memberships.csv")
 DEFAULT_DEPARTMENTS_PATH = Path("registry/departments.csv")
+DEFAULT_SCHOOLS_PATH = Path("registry/schools.csv")
 
 
 @dataclass(frozen=True, order=True)
@@ -79,6 +87,16 @@ class Department:
     directory_url: str
     reviewed_at: str
     review_notes: str
+    school_id: str
+
+
+@dataclass(frozen=True, order=True)
+class School:
+    """One CMU school or college and its official public directory."""
+
+    school_id: str
+    title: str
+    directory_url: str
 
 
 @dataclass(frozen=True, order=True)
@@ -129,6 +147,7 @@ class Registry:
     people: tuple[Person, ...]
     memberships: tuple[Membership, ...]
     departments: tuple[Department, ...]
+    schools: tuple[School, ...]
 
     @property
     def people_by_id(self) -> dict[str, Person]:
@@ -137,6 +156,10 @@ class Registry:
     @property
     def departments_by_id(self) -> dict[str, Department]:
         return {department.department_id: department for department in self.departments}
+
+    @property
+    def schools_by_id(self) -> dict[str, School]:
+        return {school.school_id: school for school in self.schools}
 
     def unique_profiles(self, *, included_only: bool = False) -> list[AuthorProfile]:
         """Return registered Scholar profiles, optionally limiting to active scope."""
@@ -173,6 +196,12 @@ class Registry:
                 self.departments,
                 key=lambda item: item.department_id,
             )
+        }
+
+    def school_catalog(self) -> dict[str, str]:
+        return {
+            school.school_id: school.title
+            for school in sorted(self.schools, key=lambda item: item.school_id)
         }
 
 
@@ -215,8 +244,11 @@ def load_registry(
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
+    schools_path: Path | None = None,
 ) -> Registry:
     """Load and cross-validate all normalized registry files."""
+
+    schools_path = schools_path or departments_path.with_name(DEFAULT_SCHOOLS_PATH.name)
 
     people: list[Person] = []
     seen_person_ids: set[str] = set()
@@ -266,6 +298,30 @@ def load_registry(
         seen_person_ids.add(person.person_id)
         people.append(person)
 
+    schools: list[School] = []
+    seen_school_ids: set[str] = set()
+    for line_number, row in enumerate(
+        _read_rows(schools_path, SCHOOL_COLUMNS),
+        start=2,
+    ):
+        school = School(**row)
+        if not SCHOOL_ID_PATTERN.fullmatch(school.school_id):
+            raise ValueError(
+                f"Invalid school_id on {schools_path}:{line_number}: "
+                f"{school.school_id!r}"
+            )
+        if school.school_id in seen_school_ids:
+            raise ValueError(f"Duplicate school_id: {school.school_id}")
+        if not school.title:
+            raise ValueError(f"Blank school title on {schools_path}:{line_number}")
+        _validate_https_url(
+            school.directory_url,
+            field="directory_url",
+            required=True,
+        )
+        seen_school_ids.add(school.school_id)
+        schools.append(school)
+
     departments: list[Department] = []
     seen_department_ids: set[str] = set()
     for line_number, row in enumerate(
@@ -280,6 +336,11 @@ def load_registry(
             )
         if department.department_id in seen_department_ids:
             raise ValueError(f"Duplicate department_id: {department.department_id}")
+        if department.school_id not in seen_school_ids:
+            raise ValueError(
+                f"Unknown school_id for {department.department_id}: "
+                f"{department.school_id}"
+            )
         if not department.title:
             raise ValueError(
                 f"Blank department title on {departments_path}:{line_number}"
@@ -336,6 +397,7 @@ def load_registry(
         people=tuple(sorted(people)),
         memberships=tuple(sorted(memberships)),
         departments=tuple(sorted(departments)),
+        schools=tuple(sorted(schools)),
     )
 
 

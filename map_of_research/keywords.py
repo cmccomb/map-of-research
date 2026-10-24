@@ -13,8 +13,8 @@ from .topic_labels import (
     review_catalog,
 )
 
-KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v4"
-REGION_AUDIT_VERSION = "low-information-semantic-region-v1"
+KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v5"
+REGION_AUDIT_VERSION = "low-information-semantic-region-v2"
 DEFAULT_KEYWORD_COUNT = 30
 DEFAULT_DETAIL_KEYWORD_COUNT = 120
 MINIMUM_DETAIL_CLUSTER_SIZE = 50
@@ -24,6 +24,7 @@ MINIMUM_MISSING_YEAR_FRACTION = 0.15
 MINIMUM_UNCITED_FRACTION = 0.50
 MINIMUM_SHORT_TITLE_FRACTION = 0.30
 SHORT_TITLE_LENGTH = 30
+MINIMUM_DOCUMENTED_TITLE_WORDS = 5
 MINIMUM_CLUSTER_SUPPORT = 2
 MINIMUM_CLUSTER_COVERAGE = 0.01
 MINIMUM_EXTENSION_SUPPORT_RATIO = 0.65
@@ -315,13 +316,44 @@ def _merge_small_clusters(
     return numpy.asarray([remapping[int(label)] for label in merged], dtype=int)
 
 
+def _has_source_url(value: Any) -> bool:
+    if isinstance(value, str):
+        return bool(value.strip())
+    if hasattr(value, "tolist"):
+        value = value.tolist()
+    if not isinstance(value, (list, tuple)):
+        return False
+    return any(isinstance(url, str) and bool(url.strip()) for url in value)
+
+
+def _documented_work_mask(region: Any) -> Any:
+    """Find independently identifiable papers inside an otherwise weak region."""
+
+    import pandas
+
+    fields = {"doi", "year", "title", "authors", "venue", "source_urls"}
+    if not fields.issubset(region.columns):
+        return pandas.Series(False, index=region.index)
+    titles = region["title"].fillna("").astype(str).str.strip()
+    return (
+        region["doi"].fillna("").astype(str).str.match(r"^10\.\d{4,9}/\S+$")
+        & region["year"].notna()
+        & titles.str.len().ge(SHORT_TITLE_LENGTH)
+        & titles.str.split().str.len().ge(MINIMUM_DOCUMENTED_TITLE_WORDS)
+        & region["authors"].fillna("").astype(str).str.strip().ne("")
+        & region["venue"].fillna("").astype(str).str.strip().ne("")
+        & region["source_urls"].apply(_has_source_url)
+    )
+
+
 def exclude_low_information_regions(works: Any) -> Any:
     """Withhold only large regions that fail several independent quality checks.
 
     The preliminary detailed topics expose diffuse catch-all regions that title-level
     rules cannot identify safely. A region is excluded only when it is simultaneously
     incoherent in embedding space, citation-poor, metadata-poor, and dominated by
-    short titles. Every row and its audit reason remain in the published dataset.
+    short titles. Individually documented papers remain visible even in such a
+    region; weaker rows retain the region exclusion reason in the dataset.
     """
 
     import numpy
@@ -330,6 +362,7 @@ def exclude_low_information_regions(works: Any) -> Any:
     output = works.copy()
     output["map_region_audit_version"] = REGION_AUDIT_VERSION
     output["map_region_outlier"] = False
+    output["map_region_documented_override"] = False
     included_mask = output["map_eligible"] & output["detail_keyword_id"].ne("")
     for _, region in output.loc[included_mask].groupby(
         "detail_keyword_id",
@@ -361,7 +394,9 @@ def exclude_low_information_regions(works: Any) -> Any:
         )
         if not should_exclude:
             continue
-        indices = region.index
+        documented = _documented_work_mask(region)
+        output.loc[region.index[documented], "map_region_documented_override"] = True
+        indices = region.index[~documented]
         output.loc[indices, "map_eligible"] = False
         output.loc[indices, "map_region_outlier"] = True
         output.loc[indices, "map_exclusion_reasons"] = output.loc[
