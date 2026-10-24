@@ -115,7 +115,7 @@ derivation reversible. `people` includes registered people even when they have
 no verified Scholar profile or publications. Curated records never count as
 Scholar profile refreshes.
 
-The research map excludes only records that match high-confidence,
+The research map excludes records that match high-confidence,
 content-based rules for conference front matter, journal front matter,
 organization or container records, affiliations and contact blocks,
 person/citation indexes, navigation text, event labels, placeholders, garbled
@@ -125,6 +125,12 @@ sufficient for exclusion. The decision, policy version, and reason codes remain
 on the dataset rows; excluded observations and works are not deleted. A work
 stays map-eligible if any retained source observation passes the title-level
 policy.
+
+The separate reviewed-exclusion manifest names individual Scholar rows that
+source review found to be nonpublications, false profile attributions, or
+corrupted duplicates. Those rows stay in `profile_publications` with review
+evidence. They do not supply work fields or faculty links when a valid
+observation of the same work exists. See `data/curated/README.md`.
 
 The publisher assigns every mapped work to one of 30 deterministic overview
 regions and approximately 120 nested detail regions in the shared t-SNE layout.
@@ -187,6 +193,11 @@ map-validate-snapshot \
   --snapshot snapshots/cmu-engineering-publications.parquet \
   --manifest snapshots/cmu-engineering-publications.parquet.manifest.json
 ```
+
+`map-publish-snapshot` reads `data/curated/scholar-exclusions.json` by default;
+pass `--reviewed-exclusions` when the trusted source checkout is in another
+directory, as in the upload workflow. The upload receipt records the manifest
+checksum and number of matched exclusions.
 
 Publishing requires `HF_TOKEN` locally. The protected `huggingface` GitHub
 environment exposes the same credential to the upload workflow from a secret

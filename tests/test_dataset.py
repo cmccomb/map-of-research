@@ -497,7 +497,7 @@ def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(
     assert works.loc["10.1000/shared", "map_exclusion_reasons"] == []
     assert works.loc["10.1000/shared", "title"] == "A substantive research paper"
     assert works.loc["10.1000/shared", "embedding"] == [0.5, 0.5]
-    assert person["unique_work_count"] == 2
+    assert person["unique_work_count"] == 1
     assert person["mapped_work_count"] == 1
 
 
@@ -650,5 +650,5 @@ def test_dataset_keeps_excluded_memberships_and_people_without_observations(
     assert people.loc["person-unobserved", "publication_observation_count"] == 0
     assert people.loc["person-unobserved", "unique_work_count"] == 0
     assert dataset.table_summary(tables) == (
-        '{"authorships": 1, "people": 2, "profile_publications": 1, "works": 1}'
+        '{"authorships": 0, "people": 2, "profile_publications": 1, "works": 1}'
     )
