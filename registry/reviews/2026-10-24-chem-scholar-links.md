@@ -19,3 +19,15 @@ The [CMU Scholars page for David Yaron](https://scholars.cmu.edu/5199-david-yaro
 The [Chemistry profile for Ryan Sullivan](https://www.cmu.edu/chemistry/people/faculty/sullivan.html) links `8EppB1cAAAAJ`, which returned HTTP 404 in Chrome. The existing `wXSgFr4AAAAJ` profile loaded as Ryan C. Sullivan, Professor of Chemistry and Mechanical Engineering at Carnegie Mellon University, with a verified `cmu.edu` address and the Sullivan lab homepage. Its identity is supported, so the registry ID and historical cache are retained. Some cached titles are unrelated to aerosol chemistry; future full-profile capture should review those rows individually before publication.
 
 These seven IDs register source identities only. They do not imply that their full visible Google Scholar publication lists have been captured.
+
+## User-supplied Scholar links checked on 2026-10-24
+
+The user supplied five candidate Scholar profile URLs without names. Three are now attributed: two by CMU-maintained Scott Institute pages and one by direct profile identity in a guarded Chrome session:
+
+| Person | Scholar ID | Identity source | Verification | Publication capture |
+| --- | --- | --- | --- | --- |
+| Carrie McDonough | `Xq5HrPYAAAAJ` | [Scott Institute profile](https://energy.cmu.edu/directory/bios/mcdonough-carrie.html) | CMU page links the exact ID; the Scholar profile displayed Carrie McDonough and a verified `andrew.cmu.edu` email in a guarded local Chrome session. | Complete visible profile capture of 55 rows is staged for attribution review; not yet a canonical cache or dataset release. |
+| Yisong (Alex) Guo | `xfTeH7YAAAAJ` | [Scott Institute profile](https://energy.cmu.edu/directory/bios/guo-yisong.html) | CMU page links the exact ID. | Full profile capture remains pending. |
+| Tomasz Kowalewski | `6VKJW4kAAAAJ` | [Chemistry faculty profile](https://www.cmu.edu/chemistry/people/faculty/kowalewski.html) confirms his appointment; the supplied [Scholar profile](https://scholar.google.com/citations?user=6VKJW4kAAAAJ&hl=en&oi=ao) displayed the matching name, Chemistry professorship, and verified `andrew.cmu.edu` email. | Direct identity check in guarded Chrome session. | Complete visible profile capture of 351 rows is staged for attribution review; not yet a canonical cache or dataset release. |
+
+The two other supplied IDs remain unassigned until their displayed Scholar identity or a direct institution-maintained link confirms them. No identity is inferred from the order of URLs.
