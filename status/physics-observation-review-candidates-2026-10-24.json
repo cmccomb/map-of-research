@@ -2,14 +2,8 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "These are row-level anomalies found in saved Scholar captures. They are not source-reviewed exclusion decisions. All raw captures and normalized cache rows remain intact pending separate review.",
+  "note": "These saved-capture anomalies still need source or publication-type review. Exact source-reviewed exclusions are recorded separately in physics-reviewed-observation-exclusions-2026-10-24.json. All raw capture and cache rows remain intact; no exclusion is applied here.",
   "candidates": [
-    {
-      "scholar_id": "kcXOB1MAAAAJ",
-      "capture_row": 27,
-      "author_pub_id": "kcXOB1MAAAAJ:3NQIlFlcGxIC",
-      "concern": "Modern cosmology is credited to DW Sciama (1971), not Scott Dodelson; verify false profile attribution."
-    },
     {
       "scholar_id": "kcXOB1MAAAAJ",
       "capture_row": 435,
@@ -23,28 +17,10 @@
       "concern": "Title is only 'Book• Second Edition• 2020'; identify the underlying Dodelson/Schmidt book before deciding whether this is a duplicate or malformed metadata."
     },
     {
-      "scholar_id": "kcXOB1MAAAAJ",
-      "capture_row": 442,
-      "author_pub_id": "kcXOB1MAAAAJ:XoXfffV-tXoC",
-      "concern": "Title resembles an author index rather than a research work; verify source and attribution."
-    },
-    {
-      "scholar_id": "jcb81yAAAAAJ",
-      "capture_row": 167,
-      "author_pub_id": "jcb81yAAAAAJ:hImZayhCRfQC",
-      "concern": "Ara OB1A stellar-population title is paired with ACT consortium authors; verify metadata conflation."
-    },
-    {
       "scholar_id": "jcb81yAAAAAJ",
       "capture_row": 181,
       "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
       "concern": "A forum for collaboration may be a nonpublication; verify source."
-    },
-    {
-      "scholar_id": "jcb81yAAAAAJ",
-      "capture_row": 182,
-      "author_pub_id": "jcb81yAAAAAJ:fhMX52Pd6iQC",
-      "concern": "Zheng Zheng (郑政) appears to be a person name rather than a publication title; verify source."
     },
     {
       "scholar_id": "au_cLfoAAAAJ",
@@ -114,51 +90,9 @@
     },
     {
       "scholar_id": "wex9ft0AAAAJ",
-      "capture_row": 241,
-      "author_pub_id": "wex9ft0AAAAJ:v1_lew4L6wgC",
-      "concern": "May be an NSF award record rather than a publication; verify source and classification."
-    },
-    {
-      "scholar_id": "wex9ft0AAAAJ",
-      "capture_row": 243,
-      "author_pub_id": "wex9ft0AAAAJ:MAUkC_7iAq8C",
-      "concern": "May be an NSF award record rather than a publication; verify source and classification."
-    },
-    {
-      "scholar_id": "wex9ft0AAAAJ",
-      "capture_row": 249,
-      "author_pub_id": "wex9ft0AAAAJ:-7ulzOJl1JYC",
-      "concern": "May be an NSF award record rather than a publication; verify source and classification."
-    },
-    {
-      "scholar_id": "wex9ft0AAAAJ",
-      "capture_row": 254,
-      "author_pub_id": "wex9ft0AAAAJ:kVjdVfd2voEC",
-      "concern": "May be an NSF award record rather than a publication; verify source and classification."
-    },
-    {
-      "scholar_id": "wex9ft0AAAAJ",
-      "capture_row": 263,
-      "author_pub_id": "wex9ft0AAAAJ:LjlpjdlvIbIC",
-      "concern": "Curriculum vitae is dated 1909 in captured metadata; verify source, date, and publication classification."
-    },
-    {
-      "scholar_id": "wex9ft0AAAAJ",
       "capture_row": 265,
       "author_pub_id": "wex9ft0AAAAJ:jU7OWUQzBzMC",
       "concern": "European Society of Medicine entry has no year or venue; verify source and whether this belongs to Rupert Croft."
-    },
-    {
-      "scholar_id": "AcW2EXwAAAAJ",
-      "capture_row": 25,
-      "author_pub_id": "AcW2EXwAAAAJ:K3LRdlH-MEoC",
-      "concern": "Slow-roll inflation paper lists P Auclair and C Ringeval, with no visible Breivik author; verify profile attribution."
-    },
-    {
-      "scholar_id": "AcW2EXwAAAAJ",
-      "capture_row": 96,
-      "author_pub_id": "AcW2EXwAAAAJ:uWQEDVKXjbEC",
-      "concern": "Anode/cathode modeling paper with K Breivik in author string appears outside this researcher’s field; verify identity and attribution."
     },
     {
       "scholar_id": "AcW2EXwAAAAJ",
@@ -231,6 +165,78 @@
       "capture_row": 40,
       "author_pub_id": "xKrmD5IAAAAJ:WF5omc3nYNoC",
       "concern": "Author text “TSRM Ishigami” appears malformed; verify source metadata."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 318,
+      "author_pub_id": "6pPZKd0AAAAJ:W2uZP3ddy8sC",
+      "concern": "Same arXiv identifier as capture row 295; compare preprint and publication versions before any deduplication."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 387,
+      "author_pub_id": "6pPZKd0AAAAJ:x21FZCSn4ZoC",
+      "concern": "Same arXiv identifier as capture row 363; compare source records before any deduplication."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 427,
+      "author_pub_id": "6pPZKd0AAAAJ:M_lZXyI38BkC",
+      "concern": "MNRAS volume 463(2) title resembles capture row 179 but the captured years differ (2026 versus 2016); verify metadata and versions."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 475,
+      "author_pub_id": "6pPZKd0AAAAJ:6VlyvFCUEfcC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 517,
+      "author_pub_id": "6pPZKd0AAAAJ:rTD5ala9j4wC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 529,
+      "author_pub_id": "6pPZKd0AAAAJ:FiDNX6EVdGUC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 542,
+      "author_pub_id": "6pPZKd0AAAAJ:ILKRHgRFtOwC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 553,
+      "author_pub_id": "6pPZKd0AAAAJ:KS-xo-ZNxMsC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 574,
+      "author_pub_id": "6pPZKd0AAAAJ:hMsQuOkrut0C",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 575,
+      "author_pub_id": "6pPZKd0AAAAJ:L7CI7m0gUJcC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 42,
+      "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
+      "concern": "Title may have lost a mathematical symbol in Scholar rendering; verify source text."
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 46,
+      "author_pub_id": "O0NnwB0AAAAJ:WF5omc3nYNoC",
+      "concern": "Venue is blank in captured metadata; verify source without assuming exclusion."
     }
   ]
 }
