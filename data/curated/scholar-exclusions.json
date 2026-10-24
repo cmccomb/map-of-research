@@ -4328,6 +4328,46 @@
       "reason": "CMU-hosted source shows this is an address fragment from a Mark Fox and Norman Sadeh scheduling paper, with no Gordon Rule authorship.",
       "evidence_url": "https://iiif.library.cmu.edu/file/Newell_box00099_fld07543_doc0001/Newell_box00099_fld07543_doc0001.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "28yZqbcAAAAJ",
+      "author_pub_id": "28yZqbcAAAAJ:4oJvMfeQlr8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The parent-article-title version repeats the retained 2019 Genome Biology correction, volume 20 article 53, rather than identifying another publication.",
+      "evidence_url": "https://link.springer.com/article/10.1186/s13059-019-1668-5",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "28yZqbcAAAAJ",
+      "author_pub_id": "28yZqbcAAAAJ:xii_ZKWM4-0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The parent-article-title version repeats the retained 2018 Genome Research corrigendum on page 1766, not the 2014 research article.",
+      "evidence_url": "https://genome.cshlp.org/content/28/11/1766",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "28yZqbcAAAAJ",
+      "author_pub_id": "28yZqbcAAAAJ:SWgZeABleR0C",
+      "reason_code": "nonpublication",
+      "reason": "Supplementary Information is the supporting data file for the retained 2016 Bioinformatics Ribomap article, not a separate authored work.",
+      "evidence_url": "https://academic.oup.com/bioinformatics/article/32/12/1880/1744291",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "RPkJ39IAAAAJ",
+      "author_pub_id": "RPkJ39IAAAAJ:d1gkVwhDpl0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title appends Nat Commun 7:10882 to the retained 2016 article title; the publisher identifies one article with DOI 10.1038/ncomms10882.",
+      "evidence_url": "https://www.nature.com/articles/ncomms10882",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "RPkJ39IAAAAJ",
+      "author_pub_id": "RPkJ39IAAAAJ:zYLM7Y9cAGgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Dartmouth Digital Commons branding was imported as a title for the same 2016 Nature Communications article retained on this profile.",
+      "evidence_url": "https://digitalcommons.dartmouth.edu/facoa/2601/",
+      "verified_at": "2026-10-24"
     }
   ]
 }
