@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_proposed_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "These exact observation decisions are separate from lossless raw capture. Apply through the maintained reviewed-exclusion manifest after the snapshot branch is reconciled with main; preserve the raw rows.",
+  "exclusions": [
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:HDshCWvjkbEC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher note about the original Kozii et al. paper, not a separate research work; the original remains in row 19.",
+      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.97.099901",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:mB3voiENLucC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher note about the original Venderbos, Kozii and Fu paper, not a separate research work; the original remains in row 5.",
+      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.95.179902",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:Wp0gIr-vW9MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The memorial volume is an edited book credited to Ge, Niemi, Phua and Takhtajan; Tarnopolsky authored a chapter, not the whole volume.",
+      "evidence_url": "https://doi.org/10.1142/10811",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is an author-line fragment from the Vacua on the Brink of Decay chapter; retain the correctly titled row 38.",
+      "evidence_url": "https://dare.uva.nl/id/cc56c740-02d1-4dca-aded-2ea8e1454e63",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:M3ejUd6NZC8C",
+      "reason_code": "nonpublication",
+      "reason": "The title is the Oxford Academic journal issue container rather than an authored work.",
+      "evidence_url": "https://academic.oup.com/ptep/issue/2016/12",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}

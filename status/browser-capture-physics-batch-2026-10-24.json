@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "ZEHOKUkAAAAJ",
+    "jrRg4PAAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "ZEHOKUkAAAAJ",
+    "jrRg4PAAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-vladyslavkozii-1637eb52",
+      "display_name": "Vladyslav Kozii",
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "publication_count": 40,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "1eecb04cc016c29a29acd1f9c01a38d4a415bd7073aac8417ce5ec0974955a1a",
+      "source_html_sha256": "72be309d90b328454a305962b25e6c4d4b1875d3e2cb2672a9de09ed0ca17a6e"
+    },
+    {
+      "person_id": "person-grigorytarnopolskiy-6dfab035",
+      "display_name": "Grigory Tarnopolskiy",
+      "scholar_id": "jrRg4PAAAAAJ",
+      "publication_count": 65,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "291099dda57dbbe9c21d3583b67458a5d99da939456f47bacfc18fdbce676446",
+      "source_html_sha256": "035b3142231ea1411d5398e533aba254ac07cd97ef970f23882d34e228ac9575"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T21:41:00+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T21:42:36+00:00",
+  "last_profile_request_at_utc": "2026-10-24T21:42:36+00:00",
+  "inter_profile_reservation_gap_seconds": 96,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T21:44:50.534301+00:00"
+}
