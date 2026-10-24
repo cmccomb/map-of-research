@@ -1,8 +1,9 @@
 # Map of Research
 
 `map-of-research` is the source of truth for the CMU faculty catalog and
-publication corpus. Its normalized school hierarchy supports staged SCS and
-MCS pilots; the published dataset remains Engineering scoped. It
+publication corpus. Its normalized school hierarchy now has dated faculty
+rosters for Engineering, SCS, and MCS; the published dataset remains
+Engineering scoped while the expanded roster and local map are reviewed. It
 collects a deliberately small number of public Google Scholar profiles and
 retains two publisher/CMU-verified Tetali–Erdős DOI records while Scholar is
 blocked. It publishes one versioned Hugging Face dataset and builds one
@@ -91,6 +92,9 @@ blank; they are never guessed by an automated Scholar search.
 Every July, a scheduled workflow opens a review issue with each official CMU
 directory, role counts, unresolved IDs, and a completion checklist. The review
 is deliberately human-verified and never changes registry rows automatically.
+The [2026-10-24 SCS/MCS review](registry/reviews/2026-10-24.md) records the
+initial school-wide directory expansion, source extracts, role boundaries,
+identity decisions, and publication coverage gaps.
 
 ## Dataset grain
 
@@ -149,6 +153,20 @@ Plan a collection without network access:
 ```bash
 map-collect --dry-run
 ```
+
+For a small local school batch, use the full canonical registry and target
+included, verified Scholar profiles before starting a real collection:
+
+```bash
+map-collect --dry-run --school-id scs --max-profiles 2
+map-collect --dry-run --school-id mcs --max-profiles 2
+map-collect --dry-run --person-id person-prasadtetali-bf494329
+```
+
+`--school-id` and `--person-id` are repeatable, but cannot be mixed in one
+run. Targeting does not change the profile cap, delay, annual refresh window,
+or stop-on-refusal rule. The status receipt records the requested targets.
+Build snapshots from the full registry, not a temporary targeted copy.
 
 Build and validate a raw snapshot from the current cache:
 

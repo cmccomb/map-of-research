@@ -1,15 +1,23 @@
 department_id,school_id,title,directory_url,reviewed_at,review_notes
+bio,mcs,Biological Sciences,https://www.cmu.edu/bio/people/faculty/index.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; affiliate and other excluded roles retained."
 bme,engineering,Biomedical Engineering,https://www.cmu.edu/bme/People/Faculty/,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
+cbd,scs,Ray and Stephanie Lane Computational Biology Department,https://www.cmu.edu/cbd/people/voting-faculty.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
+chem,mcs,Chemistry,https://www.cmu.edu/chemistry/people/,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; affiliate and other excluded roles retained."
 cheme,engineering,Chemical Engineering,https://www.cheme.engineering.cmu.edu/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
 civil,engineering,Civil & Environmental Engineering,https://cee.engineering.cmu.edu/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
 cmu-africa,engineering,CMU-Africa,https://www.africa.engineering.cmu.edu/about/contact/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
 cmu-silicon-valley,engineering,CMU Silicon Valley,https://www.sv.cmu.edu/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
-csd,scs,Computer Science Department,https://www.csd.cs.cmu.edu/people/research-tenure-faculty,2026-10-24,Pilot roster includes two verified research and tenure faculty; this is not a complete department roster.
+csd,scs,Computer Science Department,https://www.csd.cs.cmu.edu/people/research-tenure-faculty,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
 ece,engineering,Electrical & Computer Engineering,https://www.ece.cmu.edu/directory/faculty.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
 epp,engineering,Engineering & Public Policy,https://epp.engineering.cmu.edu/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
+hcii,scs,Human-Computer Interaction Institute,https://hcii.cmu.edu/people/faculty,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
 iii,engineering,Integrated Innovation Institute,https://www.cmu.edu/iii/people/faculty-staff/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
 ini,engineering,Information Networking Institute,https://www.cmu.edu/ini/about/team/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
-math,mcs,Mathematical Sciences,https://www.cmu.edu/math/people/faculty/index.html,2026-10-24,Pilot roster includes Prasad Tetali only; this is not a complete department roster.
+lti,scs,Language Technologies Institute,https://www.lti.cs.cmu.edu/people/faculty/index.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
+math,mcs,Mathematical Sciences,https://www.cmu.edu/math/people/faculty/index.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; affiliate and other excluded roles retained."
 mech,engineering,Mechanical Engineering,https://www.meche.engineering.cmu.edu/directory/index.html,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
+mld,scs,Machine Learning Department,https://ml.cmu.edu/people/core-faculty,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
 mse,engineering,Materials Science & Engineering,https://www.mse.engineering.cmu.edu/directory/,2026-07-17,"Include faculty, teaching faculty, and emeriti; exclude affiliates."
-s3d,scs,Software and Societal Systems Department,https://s3d.cmu.edu/people/faculty-index.html,2026-10-24,Pilot roster includes four verified core faculty who are already in the Engineering registry; this is not a complete department roster.
+physics,mcs,Physics,https://www.cmu.edu/physics/people/faculty/index.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; affiliate and other excluded roles retained."
+ri,scs,Robotics Institute,https://www.ri.cmu.edu/people/faculty/,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
+s3d,scs,Software and Societal Systems Department,https://s3d.cmu.edu/people/faculty-index.html,2026-10-24,"Official faculty, teaching, and emeritus listings reviewed on 2026-10-24; ambiguous and future appointments retained excluded."
