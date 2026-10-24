@@ -5944,6 +5944,126 @@
       "reason": "NSF continuing grant 2331037, not a research publication. The official NSF award record names the same project and PI.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/2331037.json",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:2tRrZ1ZAMYUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Duplicate 2014 JACS nitrogenase article; retain xfTeH7YAAAAJ:hFOr9nPyWt4C (DOI 10.1021/ja505720m).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/25275608/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:gKiMpY-AVTkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed author-fragment title duplicates the 2011 Biochemistry article; retain xfTeH7YAAAAJ:IjCSPb-OGe4C (DOI 10.1021/bi200046p).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/21500788/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:4xDN1ZYqzskC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Duplicate 2025 PNAS HAT-reactivity article; retain xfTeH7YAAAAJ:PVgj2kMGcgYC (DOI 10.1073/pnas.2414962122).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/39899716/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:1lhNe0rCu4AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Online-year variant of the same JACS HAT-reactivity article; retain xfTeH7YAAAAJ:0CzhzZyukY4C (DOI 10.1021/jacs.4c10120).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/39699233/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:ALROH1vI_8AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Abridged-title duplicate of the 2024 Biochemistry Fe/Mn CADD article; retain xfTeH7YAAAAJ:sJsF-0ZLhtgC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/39471288/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:7wO8s98CvbsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Spacing-error and venue-less duplicate of the 2024 JBC NifU-to-NifQ article; retain xfTeH7YAAAAJ:4X0JR2_MtJMC (DOI 10.1016/j.jbc.2024.107900).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/39442618/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:CB2v5VPnA5kC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Earlier-year duplicate of the 2024 Scientific Reports rubredoxin article; retain xfTeH7YAAAAJ:tH6gc1N1XXoC (DOI 10.1038/s41598-024-62261-2).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/38806591/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:5MTHONV0fEkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-less earlier-year duplicate of the 2024 Scientific Reports rubredoxin article; retain xfTeH7YAAAAJ:tH6gc1N1XXoC (DOI 10.1038/s41598-024-62261-2).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/38806591/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:yMeIxYmEMEAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-less duplicate of the 2020 JACS scandium-promoted O-O bond cleavage article; retain xfTeH7YAAAAJ:LO7wyVUgiFcC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/32017545/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:QIV2ME_5wuYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Short-title duplicate of the 2013 Biochemistry hydrogenase article; retain xfTeH7YAAAAJ:3fE2CSJIrl8C (DOI 10.1021/bi301336r).",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/23249091/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:a3BOlSfXSfwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Yearless duplicate of the 2012 Chemical Science TauD mimic article; retain xfTeH7YAAAAJ:W7OEmFMy1HYC (DOI 10.1039/C2SC01044E).",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2012/sc/c2sc01044e",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:SpbeaW3--B0C",
+      "reason_code": "nonpublication",
+      "reason": "Edited book-volume container lists contributors to different chapters as coauthors; retain Guo and Jikun Li's chapter xfTeH7YAAAAJ:YohjEiUPhakC.",
+      "evidence_url": "https://www.degruyterbrill.com/serial/isc-b/html?lang=en",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:IRz6iEL74y4C",
+      "reason_code": "nonpublication",
+      "reason": "Cover feature for the 2019 ChemCatChem paper, not a second research work; retain xfTeH7YAAAAJ:9c2xU6iGI7YC.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/toc/18673899/2019/11/6",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:ClCfbGk0d_YC",
+      "reason_code": "nonpublication",
+      "reason": "Back-cover feature for the 2018 Angewandte research article, not a second research work; retain xfTeH7YAAAAJ:XoXfffV-tXoC.",
+      "evidence_url": "https://onlinelibrary.wiley.com/toc/15213773/57/49",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "xfTeH7YAAAAJ",
+      "author_pub_id": "xfTeH7YAAAAJ:FPJr55Dyh1AC",
+      "reason_code": "nonpublication",
+      "reason": "German-edition back-cover feature for the 2018 Angewandte research article, not a second research work; retain xfTeH7YAAAAJ:XoXfffV-tXoC.",
+      "evidence_url": "https://onlinelibrary.wiley.com/toc/15213757/130/49",
+      "verified_at": "2026-10-24"
     }
   ]
 }
