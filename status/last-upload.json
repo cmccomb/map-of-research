@@ -1,4 +1,12 @@
 {
+  "artifact_commit": "c2cf41dbbf66de2418d119d8c5cec875b325ae35",
+  "authorships": 38107,
+  "dataset_commits": {
+    "authorships": "6cb4cfed94df89bb41d19d94b70f0b9cf5a6d432",
+    "people": "baf2766bb0531e74726dafffe2d8939b1eb35fe3",
+    "profile_publications": "39ab927e98cc228d29e3df8a11891e55cd774af7",
+    "works": "05c82c6ff1d2938b7336397ede5a7a0b4a3709b6"
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,11 +14,25 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "[Errno 2] No such file or directory: 'data/curated/scholar-exclusions.json'",
-  "error_type": "FileNotFoundError",
-  "finished_at_utc": "2026-10-24T21:01:54.972614+00:00",
+  "detail_keywords": 120,
+  "error_type": null,
+  "excluded_works": 1356,
+  "finished_at_utc": "2026-10-24T21:12:14.380850+00:00",
+  "keywords": 30,
+  "layout_version": "global-publications-multilayout-v3",
+  "map_artifact_count": 1,
+  "mapped_works": 32460,
+  "new_embedding_count": 43,
+  "people": 934,
+  "profile_count": 222,
+  "profile_publications": 39200,
+  "region_audit_version": "low-information-semantic-region-v2",
+  "reviewed_exclusions": 81,
+  "reviewed_exclusions_sha256": "bdad4b54a184a137a69c68c52a35e6d82324d5892ba35c82712fd2a38117d982",
   "schema_version": 2,
-  "started_at_utc": "2026-10-24T21:01:54.524212+00:00",
-  "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40132271833"
+  "started_at_utc": "2026-10-24T21:04:36.585898+00:00",
+  "status": "success",
+  "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40132468420",
+  "works": 36183
 }
