@@ -11,3 +11,8 @@ The automation branch stores small machine-readable receipts here:
 
 Receipts contain public profile IDs and operational metadata, never credentials
 or cookies. Failed collection never deletes the last good profile cache.
+
+A `browser-capture-chem-donahue-2026-10-24.json` receipt records the complete
+visible Donahue capture as `staged_for_source_review`. Its paired disappeared-ID
+and suspect-row CSVs document why the canonical cache and snapshot are still
+unchanged.

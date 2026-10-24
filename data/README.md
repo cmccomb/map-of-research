@@ -63,3 +63,11 @@ CMU identity page are verified in the producer registry. Publication
 eligibility is reviewed separately from raw-source preservation. These six
 follow-on profiles add 322 raw Scholar rows in total; the prior 15-profile
 snapshot and its manifest stay unchanged until a coordinated rebuild.
+
+The staged Neil Donahue browser evidence includes a noncanonical candidate
+cache under `data/captures/` while twelve IDs missing from a 2025 migrated
+cache receive individual source review. The candidate is not read by the
+snapshot builder. Seven SVG-rendered title symbols are recovered from the
+saved HTML `aria-label` values; the unmodified browser text extraction is
+also retained for comparison. Hidden Scholar form tokens are redacted from
+the staged HTML, with the original capture hash in its receipt.
