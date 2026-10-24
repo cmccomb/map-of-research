@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "person": "David Yaron",
+  "scholar_id": "HMSZExQAAAAJ",
+  "capture": {
+    "json_path": "data/captures/yaron-visible-242-2026-10-24.json",
+    "json_sha256": "a9f7edd64ccfa55c70f691edf02585a9b51a55da6dccc3a3a6bfbb252d5c0916",
+    "html_path": "data/captures/yaron-visible-242-2026-10-24.html",
+    "html_sha256": "3249d71553e7549bbcd62463a55748424f34de6e66729349837ee0189e131d0b",
+    "captured_at": "2026-10-24T22:36:36.482Z",
+    "displayed_count": 242,
+    "more_remain": false,
+    "challenge": false,
+    "cache_path": "data/authors/HMSZExQAAAAJ.json",
+    "cache_sha256": "34b4682f86e301204f477f0b6269b59aa36d7bd8dc069973cf46ed2b28d497c4"
+  },
+  "review_status": "offline_proposed_not_merged",
+  "proposed_exclusions": [
+    {
+      "index": 20,
+      "author_pub_id": "HMSZExQAAAAJ:k8Z6L05lTy4C",
+      "title": "Plan recognition and visualization in exploratory learning environments",
+      "reason_code": "false_profile_attribution",
+      "reason": "This exact 2013 ACM Transactions article is by Ofra Amir and Yakov Gal only. A separate book chapter with the same title has Yaron as a coauthor; do not conflate the two.",
+      "evidence_url": "https://www.research.ed.ac.uk/en/publications/plan-recognition-and-visualization-in-exploratory-learning-enviro/",
+      "retained_parent_id": null
+    },
+    {
+      "index": 112,
+      "author_pub_id": "HMSZExQAAAAJ:tKAzc9rXhukC",
+      "title": "Chemical education research:\" One firm spot\": The role of homework as lever in acquiring conceptual and performance competence in college chemistry",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Extra subject prefix and misspelled author in a second cache record for the same 2007 Journal of Chemical Education article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ed084p1047",
+      "retained_parent_id": "HMSZExQAAAAJ:l7t_Zn2s7bgC"
+    },
+    {
+      "index": 113,
+      "author_pub_id": "HMSZExQAAAAJ:kz9GbA2Ns4gC",
+      "title": "Studying the Effects of Personalized Language and Worked Examples in the Context of a Web-Based Intelligent Tutor",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second cache record for the same 2006 ITS conference paper; truncated author and venue metadata.",
+      "evidence_url": "https://www.cs.cmu.edu/~bmclaren/pubs/McLarenEtAl-EffectsOfPersonalizedLanguage-ITS2006.pdf",
+      "retained_parent_id": "HMSZExQAAAAJ:NaGl4SEjCO4C"
+    },
+    {
+      "index": 114,
+      "author_pub_id": "HMSZExQAAAAJ:O3NaXMp0MMsC",
+      "title": "eLearning and Web-Based Intelligent Tutoring Systems-Studying the Effects of Personalized Language and Worked Examples in the Context of a Web-Based Intelligent Tutor",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2006 ITS paper and pages 318-328 as the retained record, with proceedings-container text prefixed to the title.",
+      "evidence_url": "https://www.cs.cmu.edu/~bmclaren/pubs/McLarenEtAl-EffectsOfPersonalizedLanguage-ITS2006.pdf",
+      "retained_parent_id": "HMSZExQAAAAJ:NaGl4SEjCO4C"
+    },
+    {
+      "index": 121,
+      "author_pub_id": "HMSZExQAAAAJ:ILKRHgRFtOwC",
+      "title": "Collaborative Research: Improving Student Success in General, Organic, and Biological Chemistry with Community-Refined Courseware",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2337209, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2337209.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 122,
+      "author_pub_id": "HMSZExQAAAAJ:oNZyr7d5Mn4C",
+      "title": "Collaborative Research: Cyberinfrastructure for Robust Learning of Interconnected Knowledge",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2016929, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2016929.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 125,
+      "author_pub_id": "HMSZExQAAAAJ:p__nRnzSRKYC",
+      "title": "Collaborative Research: Interactive Online Support for Open-Ended Problem Solving Spanning Science Practices and Domain Topics",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1726856, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1726856.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 128,
+      "author_pub_id": "HMSZExQAAAAJ:mvPsJ3kp5DgC",
+      "title": "Conjugated Polymers with Repeated Sequences of Group 16 Heterocycles Synthesized through Catalyst-Transfer Polycondensation",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated/venue-less duplicate of the same 2016 JACS article; author names are inverted/transliterated in the cache.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/jacs.6b01916",
+      "retained_parent_id": "HMSZExQAAAAJ:zA6iFVUQeVQC"
+    },
+    {
+      "index": 129,
+      "author_pub_id": "HMSZExQAAAAJ:fPk4N6BV_jEC",
+      "title": "In-Situ Platinum Deposition on Nitrogen-Doped Carbon Films as a Source of Catalytic Activity in a Hydrogen Evolution Reaction",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated/venue-less duplicate of the same 2016 ACS Applied Materials & Interfaces article; author names are inverted/transliterated.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acsami.6b03924",
+      "retained_parent_id": "HMSZExQAAAAJ:_xSYboBqXhAC"
+    },
+    {
+      "index": 136,
+      "author_pub_id": "HMSZExQAAAAJ:uWiczbcajpAC",
+      "title": "Emission and Charge Transfer in Conjugated Materials and Their Aggregates: Towards Imaging Films and Devices",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1363050, not a publication; the NSF API record matches the captured title. Award PI is Linda Peteanu, not Yaron.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1363050.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 145,
+      "author_pub_id": "HMSZExQAAAAJ:hMsQuOkrut0C",
+      "title": "CI-TEAM DEMO: Collaborative Research: An Online Community to Broaden Access to the Computational Research Enterprise",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1135553, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1135553.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 146,
+      "author_pub_id": "HMSZExQAAAAJ:AvfA0Oy_GE0C",
+      "title": "Online Chemistry: Problems, Concepts and Contexts",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1123355, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1123355.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 149,
+      "author_pub_id": "HMSZExQAAAAJ:KUbvn5osdkgC",
+      "title": "CDI-Type I: Using Machine Learning to Develop New Approaches to Semiempirical Quantum Chemistry",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1027985, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1027985.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 153,
+      "author_pub_id": "HMSZExQAAAAJ:EYYDruWGBe4C",
+      "title": "Collaborative Research ChemEd DL: Extending a Unique Pathway for Chemical Education",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0937888, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0937888.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 158,
+      "author_pub_id": "HMSZExQAAAAJ:vbGhcppDl1QC",
+      "title": "Collaborative Research: Recurring Patterns in Molecular Science: Reusable Learning Resources",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0817493, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0817493.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 167,
+      "author_pub_id": "HMSZExQAAAAJ:BwyfMAYsbu0C",
+      "title": "Computational Modeling of the Photophysics of Organic Molecules and Materials",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0719350, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0719350.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 173,
+      "author_pub_id": "HMSZExQAAAAJ:L7CI7m0gUJcC",
+      "title": "Collaborative Research: Interdisciplinary Virtual Labs for Undergraduate Education in the NSDL MatDL",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0632751, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0632751.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 174,
+      "author_pub_id": "HMSZExQAAAAJ:ML0RJ9NH7IQC",
+      "title": "Collaborative Project: ChemEd Digital Library: An NSDL Pathway for Chemical Sciences Education",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0632269, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0632269.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 180,
+      "author_pub_id": "HMSZExQAAAAJ:BUYA1_V_uYcC",
+      "title": "Online Systems to Support Problem Solving and Learning in Introductory Chemistry",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0443041, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0443041.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 187,
+      "author_pub_id": "HMSZExQAAAAJ:g3aElNc5_aQC",
+      "title": "Using Digital Libraries to Build Educational Communities",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0333720, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0333720.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 189,
+      "author_pub_id": "HMSZExQAAAAJ:URolC5Kub84C",
+      "title": "Computational Modeling of the Photophysics of Conjugated Polymers",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0316759, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0316759.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 190,
+      "author_pub_id": "HMSZExQAAAAJ:Fu2w8maKXqMC",
+      "title": "Section III. B",
+      "reason_code": "nonpublication",
+      "reason": "\"Section III. B\" is a section fragment from Arindam Chowdhury's dissertation, not a standalone Yaron coauthored publication. CMU lists Chowdhury as the thesis author and Peteanu as advisor.",
+      "evidence_url": "https://www.cmu.edu/chemistry/pdf/doc_degr-recipient.pdf",
+      "retained_parent_id": null
+    },
+    {
+      "index": 194,
+      "author_pub_id": "HMSZExQAAAAJ:4MWp96NkSFoC",
+      "title": "Development and Assessment of Interactive Online Homework for Introductory Chemistry",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0127455, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0127455.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 199,
+      "author_pub_id": "HMSZExQAAAAJ:lmc2jWPfTJgC",
+      "title": "A Service for Digital Libraries for Education",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second cache record for the same 2001 ACM/IEEE-CS Joint Conference on Digital Libraries paper, with shortened title and missing pages. Keep the fuller conference record; the 2002 journal article is a distinct retained output.",
+      "evidence_url": "https://files.eric.ed.gov/fulltext/ED459815.pdf",
+      "retained_parent_id": "HMSZExQAAAAJ:SP6oXDckpogC"
+    },
+    {
+      "index": 201,
+      "author_pub_id": "HMSZExQAAAAJ:Z5m8FVwuT1cC",
+      "title": "Collaborative Project: A Component Repository and Environment for Assembly of Teaching Environments (CREATE)",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0085862, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0085862.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 203,
+      "author_pub_id": "HMSZExQAAAAJ:zLWjf1WUPmwC",
+      "title": "Computational Modeling of the Photophysics of Conjugated Polymers",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9985719, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9985719.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 204,
+      "author_pub_id": "HMSZExQAAAAJ:epqYDVWIO7EC",
+      "title": "A Flexible Networked Laboratory Simulation for Use in Introductory Chemistry Courses",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9950673, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9950673.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 207,
+      "author_pub_id": "HMSZExQAAAAJ:NMxIlDl6LWMC",
+      "title": "Polymers, Biopolymers, and Complex Systems-An explicit-solvent dynamic-dielectric screening model of electron-hole interactions in conjugated polymers",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1998 Journal of Chemical Physics article, volume 109 issue 14 pages 6147-6156, with unrelated proceedings/category text prefixed.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pub.html",
+      "retained_parent_id": "HMSZExQAAAAJ:PELIpwtuRlgC"
+    },
+    {
+      "index": 211,
+      "author_pub_id": "HMSZExQAAAAJ:vDijr-p_gm4C",
+      "title": "Computational Modeling of the Photophysics of Conjugated Polymers",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9530148, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9530148.json",
+      "retained_parent_id": null
+    },
+    {
+      "index": 232,
+      "author_pub_id": "HMSZExQAAAAJ:tuHXwOkdijsC",
+      "title": "Tuning the molecular weight distribution from atom transfer radical polymerization using deep reinforcement learning",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, incomplete D Yaron-only metadata for the same 2018 RSC article. Publisher identifies the full coauthor list and publication details.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlehtml/2018/me/c7me00131b",
+      "retained_parent_id": "HMSZExQAAAAJ:ZeXyd9-uunAC"
+    },
+    {
+      "index": 233,
+      "author_pub_id": "HMSZExQAAAAJ:b1wdh0AR-JQC",
+      "title": "McLaren et al-Studying the Learning Effect of Personalization and Worked Examples in the Solving of Stoich Problems",
+      "reason_code": "nonpublication",
+      "reason": "The exact title is a LearnLab Theory Wiki project page summarizing the stoichiometry study; the page cites the separately published 2006 ITS paper.",
+      "evidence_url": "https://www.learnlab.org/mediawiki-1.44.2/index.php?title=McLaren_et_al_-_Studying_the_Learning_Effect_of_Personalization_and_Worked_Examples_in_the_Solving_of_Stoich_Problems",
+      "retained_parent_id": "HMSZExQAAAAJ:NaGl4SEjCO4C"
+    },
+    {
+      "index": 234,
+      "author_pub_id": "HMSZExQAAAAJ:kuK5TVdYjLIC",
+      "title": "Stoichiometry Study",
+      "reason_code": "nonpublication",
+      "reason": "\"Stoichiometry Study\" is the LearnLab Theory Wiki project page, not a publication; the page lists a separate annotated bibliography of papers.",
+      "evidence_url": "https://learnlab.org/mediawiki-1.44.2/index.php?title=Stoichiometry_Study",
+      "retained_parent_id": "HMSZExQAAAAJ:NaGl4SEjCO4C"
+    },
+    {
+      "index": 235,
+      "author_pub_id": "HMSZExQAAAAJ:fEOibwPWpKIC",
+      "title": "Supporting Information: Treating Semiempirical Hamiltonians as Flexible Machine Learning Models yields Accurate and Interpretable Results",
+      "reason_code": "nonpublication",
+      "reason": "Supporting Information file attached to the 2023 ACS article, not a separate research publication.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acs.jctc.3c00491",
+      "retained_parent_id": "HMSZExQAAAAJ:2KloaMYe4IUC"
+    },
+    {
+      "index": 236,
+      "author_pub_id": "HMSZExQAAAAJ:35r97b3x0nAC",
+      "title": "Chemistry—A European",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated journal-name fragment with the same author sequence as the complete 2023 Wiley article.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.202300477",
+      "retained_parent_id": "HMSZExQAAAAJ:W5xh706n7nkC"
+    },
+    {
+      "index": 237,
+      "author_pub_id": "HMSZExQAAAAJ:WA5NYHcadZ8C",
+      "title": "Nitrogen Enriched Nanocarbons as a Metal-Free Water Reducing Catalysts",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact conference presentation was given by Eric Gottlieb; the captured author list has no Yaron. The Pitt author CV lists this presentation, separately from Yaron works.",
+      "evidence_url": "https://www.klic.pitt.edu/jak_cv.pdf",
+      "retained_parent_id": null
+    },
+    {
+      "index": 239,
+      "author_pub_id": "HMSZExQAAAAJ:KxtntwgDAa4C",
+      "title": "Article pubs. acs. org/jchemeduc Terms of Use Evidence-Based Approaches to Improving Chemical Equilibrium Instruction",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated ACS website terms-of-use text prefixed to the exact title of the retained 2014 Journal of Chemical Education article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ed5002009",
+      "retained_parent_id": "HMSZExQAAAAJ:tS2w5q8j5-wC"
+    }
+  ],
+  "deferred": [
+    {
+      "index": 89,
+      "author_pub_id": "HMSZExQAAAAJ:TIZ-Mc8IlK0C",
+      "title": "40th Symp. Molec. Spectrosc.",
+      "review_note": "Generic symposium title; may be an incomplete abstract rather than a standalone work. Need the original 1985 program/abstract before excluding.",
+      "evidence_url": null
+    },
+    {
+      "index": 107,
+      "author_pub_id": "HMSZExQAAAAJ:maZDTaKrznsC",
+      "title": "Building a community around general chemistry performance expectations",
+      "review_note": "ACS abstract author list is truncated; Yaron may be among omitted authors. Do not infer nonauthorship from the visible list.",
+      "evidence_url": null
+    },
+    {
+      "index": 109,
+      "author_pub_id": "HMSZExQAAAAJ:9ZlFYXVOiuMC",
+      "title": "Embedding parameters in ab initio theory to develop approximations based on molecular similarity",
+      "review_note": "Possibly an updated preprint of row 110, but arXiv identifiers differ. Need source-level version reconciliation.",
+      "evidence_url": null
+    },
+    {
+      "index": 110,
+      "author_pub_id": "HMSZExQAAAAJ:f2IySw72cVMC",
+      "title": "Embedding parameters in ab initio theory to develop well-controlled approximations based on molecular similarity",
+      "review_note": "Possibly an earlier preprint of row 109; do not collapse without source-level comparison.",
+      "evidence_url": null
+    },
+    {
+      "index": 116,
+      "author_pub_id": "HMSZExQAAAAJ:VL0QpB8kHFEC",
+      "title": "Framing Chapter: Three Lenses through Which to Reflect on Simulations for Science Education",
+      "review_note": "Captured year is \"6\" while the venue mentions 2021 and an independent book table of contents credits Yaron as the chapter author. Repair the year from a publisher/library primary record; do not exclude solely for malformed year.",
+      "evidence_url": null
+    },
+    {
+      "index": 120,
+      "author_pub_id": "HMSZExQAAAAJ:yB1At4FlUx8C",
+      "title": "Math matters or maybe not: An astonishing independence between math and rate of learning in chemistry",
+      "review_note": "2024 ChemRxiv precursor to row 85; source policy for a separately posted preprint versus final paper needs a decision.",
+      "evidence_url": null
+    },
+    {
+      "index": 200,
+      "author_pub_id": "HMSZExQAAAAJ:70eg2SAEIzsC",
+      "title": "Electroabsorption of cyanine dimers bound to duplex DNA: Effect of exciton coupling on excited-state dipole moments and polarizabilities",
+      "review_note": "Identical title to row 202 but a different year and venue; could be a distinct meeting abstract.",
+      "evidence_url": null
+    },
+    {
+      "index": 202,
+      "author_pub_id": "HMSZExQAAAAJ:V3AGJWp-ZtQC",
+      "title": "Electroabsorption of cyanine dimers bound to duplex DNA: Effect of exciton coupling on excited-state dipole moments and polarizabilities.",
+      "review_note": "Identical title to row 200 but a different year and venue; could be a distinct meeting abstract.",
+      "evidence_url": null
+    },
+    {
+      "index": 238,
+      "author_pub_id": "HMSZExQAAAAJ:eJXPG6dFmWUC",
+      "title": "When do diagrams enhance science learning?",
+      "review_note": "Undated short title could be a genuine separate education output or variant of row 36; needs source lookup.",
+      "evidence_url": null
+    },
+    {
+      "index": 241,
+      "author_pub_id": "HMSZExQAAAAJ:0EnyYjriUFMC",
+      "title": "Using Internet of Things (IOT) and Virtual Lab Activities to Enhance Learning in Online Chemistry Labs hosted in Google Classroom",
+      "review_note": "Undated virtual-lab education item has named coauthors; source/publication venue not established.",
+      "evidence_url": null
+    },
+    {
+      "index": 242,
+      "author_pub_id": "HMSZExQAAAAJ:W7OEmFMy1HYC",
+      "title": "The Effects of Structural and Micro-Environmental Disorder on the Electronic Properties of MEH-PPV and Related Oligomers",
+      "review_note": "Undated manuscript title with named coauthors; CMU hosts a related PDF, but relationship to row 30 is not resolved.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pdf/yaron-ppv-disorder.pdf"
+    }
+  ],
+  "confirmed_retained_examples": [
+    {
+      "index": 16,
+      "author_pub_id": "HMSZExQAAAAJ:t6usbXjVLHcC",
+      "title": "Using handheld devices for tests in classes",
+      "note": "CMU original technical report explicitly lists Yaron as third author despite truncated Scholar author cell.",
+      "evidence_url": "https://www.cs.cmu.edu/~pebbles/papers/CMU-CS-00-152.pdf"
+    },
+    {
+      "index": 17,
+      "author_pub_id": "HMSZExQAAAAJ:4OULZ7Gr8RgC",
+      "title": "Tuning thiophene with phosphorus: synthesis and electronic properties of benzobisthiaphospholes",
+      "note": "Wiley/PubMed full author list includes Yaron despite truncation.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.201402561"
+    },
+    {
+      "index": 26,
+      "author_pub_id": "HMSZExQAAAAJ:IWHjjKOFINEC",
+      "title": "The dynamics between student affect and behavior occurring outside of educational software",
+      "note": "ChemCollective publication list explicitly credits Yaron on this education/CS paper.",
+      "evidence_url": "https://chemcollective.org/about_us/research"
+    },
+    {
+      "index": 53,
+      "author_pub_id": "HMSZExQAAAAJ:EUQCXRtRnyEC",
+      "title": "The open-response chemistry cognitive assistance tutor system: Development and implementation",
+      "note": "ACS issue author list names David J. Yaron on this tutor paper.",
+      "evidence_url": "https://pubs.acs.org/toc/jceda8/99/2"
+    },
+    {
+      "index": 55,
+      "author_pub_id": "HMSZExQAAAAJ:tS2w5q8j5-wC",
+      "title": "Evidence-based approaches to improving chemical equilibrium instruction",
+      "note": "ACS full author list includes Yaron despite truncated Scholar cell.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ed5002009"
+    },
+    {
+      "index": 100,
+      "author_pub_id": "HMSZExQAAAAJ:VOx2b1Wkg3QC",
+      "title": "Making lemonade out of lemons: Supporting adoption of evidence-based practices in response to educational disruptions",
+      "note": "ACS issue full author list includes David J. Yaron.",
+      "evidence_url": "https://pubs.acs.org/toc/jceda8/97/9"
+    },
+    {
+      "index": 240,
+      "author_pub_id": "HMSZExQAAAAJ:4TOpqqG69KYC",
+      "title": "A Digital Library Architecture that Promotes Creation and Use of Modifiable Student Activities",
+      "note": "ChemCollective publication list names this book chapter.",
+      "evidence_url": "https://chemcollective.org/about_us/research"
+    }
+  ]
+}

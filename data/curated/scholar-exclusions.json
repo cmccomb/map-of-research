@@ -6448,6 +6448,294 @@
       "reason": "The exact-title IOP deposit dates the Physics Bulletin item to March 1984, pages 92-93, and has no author field. A separate IOP PDF recommendation panel contains the saved Salim/Fang/Rich and Trac/Chen/Holst name groups for two unrelated articles. We infer the captured byline is a parser conflation rather than evidence Trac authored the 1984 item.",
       "evidence_url": "https://api.crossref.org/works/10.1088%2F0031-9112%2F35%2F3%2F007",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:k8Z6L05lTy4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "This exact 2013 ACM Transactions article is by Ofra Amir and Yakov Gal only. A separate book chapter with the same title has Yaron as a coauthor; do not conflate the two.",
+      "evidence_url": "https://www.research.ed.ac.uk/en/publications/plan-recognition-and-visualization-in-exploratory-learning-enviro/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:tKAzc9rXhukC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Extra subject prefix and misspelled author in a second cache record for the same 2007 Journal of Chemical Education article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ed084p1047",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:kz9GbA2Ns4gC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second cache record for the same 2006 ITS conference paper; truncated author and venue metadata.",
+      "evidence_url": "https://www.cs.cmu.edu/~bmclaren/pubs/McLarenEtAl-EffectsOfPersonalizedLanguage-ITS2006.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:O3NaXMp0MMsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2006 ITS paper and pages 318-328 as the retained record, with proceedings-container text prefixed to the title.",
+      "evidence_url": "https://www.cs.cmu.edu/~bmclaren/pubs/McLarenEtAl-EffectsOfPersonalizedLanguage-ITS2006.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:ILKRHgRFtOwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2337209, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2337209.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:oNZyr7d5Mn4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2016929, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2016929.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:p__nRnzSRKYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1726856, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1726856.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:mvPsJ3kp5DgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated/venue-less duplicate of the same 2016 JACS article; author names are inverted/transliterated in the cache.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/jacs.6b01916",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:fPk4N6BV_jEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated/venue-less duplicate of the same 2016 ACS Applied Materials & Interfaces article; author names are inverted/transliterated.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acsami.6b03924",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:uWiczbcajpAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1363050, not a publication; the NSF API record matches the captured title. Award PI is Linda Peteanu, not Yaron.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1363050.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:hMsQuOkrut0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1135553, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1135553.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:AvfA0Oy_GE0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1123355, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1123355.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:KUbvn5osdkgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1027985, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1027985.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:EYYDruWGBe4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0937888, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0937888.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:vbGhcppDl1QC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0817493, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0817493.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:BwyfMAYsbu0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0719350, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0719350.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:L7CI7m0gUJcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0632751, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0632751.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:ML0RJ9NH7IQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0632269, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0632269.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:BUYA1_V_uYcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0443041, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0443041.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:g3aElNc5_aQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0333720, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0333720.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:URolC5Kub84C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0316759, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0316759.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:Fu2w8maKXqMC",
+      "reason_code": "nonpublication",
+      "reason": "\"Section III. B\" is a section fragment from Arindam Chowdhury's dissertation, not a standalone Yaron coauthored publication. CMU lists Chowdhury as the thesis author and Peteanu as advisor.",
+      "evidence_url": "https://www.cmu.edu/chemistry/pdf/doc_degr-recipient.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:4MWp96NkSFoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0127455, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0127455.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second cache record for the same 2001 ACM/IEEE-CS Joint Conference on Digital Libraries paper, with shortened title and missing pages. Keep the fuller conference record; the 2002 journal article is a distinct retained output.",
+      "evidence_url": "https://files.eric.ed.gov/fulltext/ED459815.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:Z5m8FVwuT1cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0085862, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0085862.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:zLWjf1WUPmwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9985719, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9985719.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:epqYDVWIO7EC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9950673, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9950673.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:NMxIlDl6LWMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1998 Journal of Chemical Physics article, volume 109 issue 14 pages 6147-6156, with unrelated proceedings/category text prefixed.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pub.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:vDijr-p_gm4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9530148, not a publication; the NSF API record matches the captured title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9530148.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:tuHXwOkdijsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, incomplete D Yaron-only metadata for the same 2018 RSC article. Publisher identifies the full coauthor list and publication details.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlehtml/2018/me/c7me00131b",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:b1wdh0AR-JQC",
+      "reason_code": "nonpublication",
+      "reason": "The exact title is a LearnLab Theory Wiki project page summarizing the stoichiometry study; the page cites the separately published 2006 ITS paper.",
+      "evidence_url": "https://www.learnlab.org/mediawiki-1.44.2/index.php?title=McLaren_et_al_-_Studying_the_Learning_Effect_of_Personalization_and_Worked_Examples_in_the_Solving_of_Stoich_Problems",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:kuK5TVdYjLIC",
+      "reason_code": "nonpublication",
+      "reason": "\"Stoichiometry Study\" is the LearnLab Theory Wiki project page, not a publication; the page lists a separate annotated bibliography of papers.",
+      "evidence_url": "https://learnlab.org/mediawiki-1.44.2/index.php?title=Stoichiometry_Study",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:fEOibwPWpKIC",
+      "reason_code": "nonpublication",
+      "reason": "Supporting Information file attached to the 2023 ACS article, not a separate research publication.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acs.jctc.3c00491",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:35r97b3x0nAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated journal-name fragment with the same author sequence as the complete 2023 Wiley article.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.202300477",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:WA5NYHcadZ8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact conference presentation was given by Eric Gottlieb; the captured author list has no Yaron. The Pitt author CV lists this presentation, separately from Yaron works.",
+      "evidence_url": "https://www.klic.pitt.edu/jak_cv.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:KxtntwgDAa4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated ACS website terms-of-use text prefixed to the exact title of the retained 2014 Journal of Chemical Education article.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ed5002009",
+      "verified_at": "2026-10-24"
     }
   ]
 }
