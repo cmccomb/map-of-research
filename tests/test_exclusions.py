@@ -36,6 +36,7 @@ def _entry(**changes: object) -> dict[str, object]:
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     assert len(exclusions) >= 990
+    assert sum(key[0] == "ILambBMAAAAJ" for key in exclusions) == 43
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
