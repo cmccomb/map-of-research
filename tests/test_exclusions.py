@@ -34,7 +34,8 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 197
+    assert len(exclusions) == 200
+    assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "7ICaR4EAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "FmZaK1wAAAAJ" for key in exclusions) == 22
     assert sum(key[0] == "tWQsy4UAAAAJ" for key in exclusions) == 11
