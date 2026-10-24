@@ -4328,6 +4328,22 @@
       "reason": "CMU-hosted source shows this is an address fragment from a Mark Fox and Norman Sadeh scheduling paper, with no Gordon Rule authorship.",
       "evidence_url": "https://iiif.library.cmu.edu/file/Newell_box00099_fld07543_doc0001/Newell_box00099_fld07543_doc0001.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "yssfFIsAAAAJ",
+      "author_pub_id": "yssfFIsAAAAJ:W7OEmFMy1HYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 49 truncates the title of the same Demirkoparan, Pence, and Wineman article retained as yssfFIsAAAAJ:LkGwnXOMwfcC (DOI 10.1098/rspa.2008.0360); it also omits year and venue.",
+      "evidence_url": "https://api.crossref.org/works/10.1098/rspa.2008.0360",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "8Vj5Ps4AAAAJ",
+      "author_pub_id": "8Vj5Ps4AAAAJ:W7OEmFMy1HYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 8 prefixes the publisher's Research Article type label to the title of the same Khare article retained as 8Vj5Ps4AAAAJ:zYLM7Y9cAGgC (DOI 10.1155/2013/358527); it also omits the venue.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1155/2013/358527",
+      "verified_at": "2026-10-24"
     }
   ]
 }

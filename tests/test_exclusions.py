@@ -34,9 +34,11 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 541
+    assert len(exclusions) == 543
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
+    assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -89,6 +91,20 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, excluded_id, retained_id in (
+        ("yssfFIsAAAAJ", "W7OEmFMy1HYC", "LkGwnXOMwfcC"),
+        ("8Vj5Ps4AAAAJ", "W7OEmFMy1HYC", "zYLM7Y9cAGgC"),
+    ):
+        assert exclusions[(scholar_id, f"{scholar_id}:{excluded_id}")].reason_code == (
+            "corrupted_duplicate"
+        )
+        assert (scholar_id, f"{scholar_id}:{retained_id}") not in exclusions
+    # CMU Qatar independently credits Demirkoparan despite Scholar's short author field.
+    assert ("yssfFIsAAAAJ", "yssfFIsAAAAJ:mB3voiENLucC") not in exclusions
 
 
 @pytest.mark.parametrize(
