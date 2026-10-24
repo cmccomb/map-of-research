@@ -895,6 +895,70 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
 
 
 @pytest.mark.parametrize(
+    ("person_id", "home_id", "included_ids", "counts"),
+    [
+        (
+            "person-annlee-3bb27a6a",
+            "stats",
+            {"stats", "mld"},
+            "stats=11;mld=2",
+        ),
+        (
+            "person-davidplaut-2f20021e",
+            "psychology",
+            {"psychology", "ni"},
+            "psychology=7;computer_science=1;neural_computation=2",
+        ),
+        (
+            "person-sivaramanbalakrishnan-911f98b0",
+            "stats",
+            {"stats", "mld"},
+            "stats=4;mld=2",
+        ),
+    ],
+)
+def test_advisee_count_homes_keep_memberships_and_publish_evidence(
+    person_id: str, home_id: str, included_ids: set[str], counts: str
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.basis) == (
+        "department",
+        home_id,
+        "inferred_advisee_count",
+    )
+    assert home.source_url.startswith("https://")
+    assert home.verified_at == "2026-10-24"
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_ids
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["phd_advisee_counts"] == counts
+    assert review["review_status"] == "inferred_advisee_count"
+    assert review["primary_department_id"] == home_id
+    assert review["review_source_urls"] == home.source_url
+    assert review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == home_id
+    assert published["primary_department_basis"] == "inferred_advisee_count"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_school_id"] == "dietrich"
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "inferred_advisee_count"
+    assert person.primary_department_id == home_id
+
+
+@pytest.mark.parametrize(
     ("home", "unit_ids", "invalid_unit_type", "message"),
     [
         (
