@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "selected_profile_ids": [
+    "EqKRQ4YAAAAJ",
+    "H8qYeA0AAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "EqKRQ4YAAAAJ",
+    "H8qYeA0AAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "blocked": false,
+  "max_profiles": 2,
+  "publication_limit": 1000,
+  "request_delay_seconds": 90,
+  "first_profile_loaded_at_utc": "2026-10-24T20:52:49Z",
+  "second_profile_loaded_at_utc": "2026-10-24T20:55:33Z",
+  "inter_profile_loaded_gap_seconds": 164,
+  "browser_closed": true,
+  "profile_capture": [
+    {
+      "person_id": "person-alanfrieze-ef264103",
+      "display_name": "Alan Frieze",
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "publication_count": 659,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "page_load_count": 7,
+      "show_more_click_count": 6,
+      "source_json_path": "data/captures/frieze-visible-659-2026-10-24.json",
+      "source_json_sha256": "63588d9509c2423d1c71bc7a642c59477ee31131bc76a1a5be6ed871edfba3d2",
+      "source_html_path": "data/captures/frieze-visible-659-2026-10-24.html",
+      "source_html_sha256": "f9d00c7e1165101bf45ce30d05d31364bac4a9293575998dee0d233db2ea5c0c"
+    },
+    {
+      "person_id": "person-borisbukh-913f47d3",
+      "display_name": "Boris Bukh",
+      "scholar_id": "H8qYeA0AAAAJ",
+      "publication_count": 85,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "page_load_count": 1,
+      "show_more_click_count": 0,
+      "source_json_path": "data/captures/bukh-visible-85-2026-10-24.json",
+      "source_json_sha256": "efe86c0eb71283f8d9ed51b2e5bf9f1504d85875cd373a2b991eb167fbc36dc5",
+      "source_html_path": "data/captures/bukh-visible-85-2026-10-24.html",
+      "source_html_sha256": "2ccc6a5053b380a15e59f9a250dd1a06045010a9cf211ed471e6b2299f1afcf9"
+    }
+  ],
+  "release_state": "staged_for_review"
+}
