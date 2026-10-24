@@ -2144,6 +2144,350 @@
       "reason": "A journal section heading was prefixed to the same 2000 membrane-tethering article retained on this profile.",
       "evidence_url": "https://www.sciencedirect.com/science/article/pii/S002192581989899X",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:s2G-WRnXBicC",
+      "reason_code": "nonpublication",
+      "reason": "\"General Discussion in\" is an incomplete title fragment with no year or identifiable work; this captured row cannot represent a publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=300&pagesize=100&citation_for_view=ILambBMAAAAJ:s2G-WRnXBicC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:KqW5X_olkfQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:-mN3Mh-tlDkC.",
+      "evidence_url": "https://acp.copernicus.org/articles/16/1693/2016/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:3x-KLxxGyuUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Submitter-prefixed malformed record; complete 2025 preprint ILambBMAAAAJ:1wZ_wKGpLuwC and 2026 article ILambBMAAAAJ:IExZWSxeYXUC are separately captured.",
+      "evidence_url": "https://amt.copernicus.org/articles/19/3363/2026/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:Ei5r6KrKXVQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2431817, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2431817.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:NnTm98qLMbgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2407746, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2407746.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:BPS1z4jHU5cC",
+      "reason_code": "nonpublication",
+      "reason": "Conference session or poster-session title, not an individual presentation.",
+      "evidence_url": "https://csl.noaa.gov/news/2023/AGU-FM23planner.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:WM2K3OHRCGMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2336463, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2336463.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:RVqaWcrwK10C",
+      "reason_code": "nonpublication",
+      "reason": "Online poster-discussion session title, not an individually titled Donahue presentation; the captured year is uncorroborated.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=400&pagesize=100&citation_for_view=ILambBMAAAAJ:RVqaWcrwK10C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:j7XjBeKFbTsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2215489, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2215489.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:Yw6v6SrDvuUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2132089, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2132089.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:8JTMrWI6FdcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:TGkaJS32XoUC.",
+      "evidence_url": "https://acp.copernicus.org/articles/20/11809/2020/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:s1ouQE5r0WUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1801897, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1801897.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:x2hKVfJWtf0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1807530, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1807530.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:vofGIMt6cyEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1801574, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1801574.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:mgoTDWlsYNUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:EsEWqaRxkBgC.",
+      "evidence_url": "https://acp.copernicus.org/articles/18/845/2018/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:lRPiJ3GhvscC",
+      "reason_code": "nonpublication",
+      "reason": "NASA proposal record 18-ACMAP18-0008, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=400&pagesize=100&citation_for_view=ILambBMAAAAJ:lRPiJ3GhvscC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:RJNGbXJAtMsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1740665, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1740665.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:JdL-Xu2nR38C",
+      "reason_code": "nonpublication",
+      "reason": "One-page James G. Anderson festschrift preface list, not an individual Donahue research work; the separate tribute article remains eligible.",
+      "evidence_url": "https://pubs.acs.org/toc/jpcafh/120/9",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:o9ULDYDKYbIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1531284, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1531284.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:1paMEeroeoQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1439551, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1439551.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:bCjgOgSFrM0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1447056, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1447056.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:TiIbgCYny7sC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1412309, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1412309.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:qbqt7gslDFUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1256042, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1256042.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:XeErXHja3Z8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1136479, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1136479.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:yCjxvIMm6_oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1012293, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1012293.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:IyxfXMz2bNAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0922643, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0922643.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:bbjcffOLshcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0748402, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0748402.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:w7CBUyPWg-0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0717532, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0717532.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:rzmi0EmCOGEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0446495, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0446495.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:w0odbtu79TwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0420842, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0420842.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:e0LTWoPxLYMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0336296, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0336296.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:pxXbYLTb8EgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0125283, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0125283.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:SgM-ki2adj0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9977992, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9977992.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:ZYsTHYU9jrMC",
+      "reason_code": "nonpublication",
+      "reason": "Caltech Library subscriber-access notice imported as a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=500&pagesize=100&citation_for_view=ILambBMAAAAJ:ZYsTHYU9jrMC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:dMpQl7XwOw4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:AXkvAH5U_nMC.",
+      "evidence_url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015JD023868",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:oXKBmVzQOggC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:48xauSegjOkC.",
+      "evidence_url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015GL063142",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:dhpJJ7xvgBgC",
+      "reason_code": "nonpublication",
+      "reason": "Unrelated data-table fragment imported as a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=500&pagesize=100&citation_for_view=ILambBMAAAAJ:dhpJJ7xvgBgC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:RgznTc0nqo4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:7H_MAutzIkAC.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/2015JD023539/abstract",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:F9HO9s0W2bwC",
+      "reason_code": "nonpublication",
+      "reason": "Truncated Environmental Science: Processes & Impacts journal title; the actual 2018 editorial \"Atmospheric surfaces\" is separately captured as ILambBMAAAAJ:sfnaS5RM6jYC.",
+      "evidence_url": "https://pure.au.dk/portal/en/publications/atmospheric-surfaces/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:cww_0JKUTDwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed title or author-list fragment for the publisher article already represented by complete Scholar row ILambBMAAAAJ:mVC4hKzE2FoC.",
+      "evidence_url": "https://amt.copernicus.org/articles/17/5413/2024/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:j2GSQqY3pL0C",
+      "reason_code": "nonpublication",
+      "reason": "Conference session or poster-session title, not an individual presentation.",
+      "evidence_url": "https://agu.confex.com/agu/f/EarthCoveringAGU25",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:ufKn5pxu7C0C",
+      "reason_code": "nonpublication",
+      "reason": "Website scheduled-maintenance message imported as a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ILambBMAAAAJ&cstart=500&pagesize=100&citation_for_view=ILambBMAAAAJ:ufKn5pxu7C0C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:lK9BDNCuzFgC",
+      "reason_code": "nonpublication",
+      "reason": "Environmental Science: Processes & Impacts journal title, not a separate work; the actual 2018 editorial \"Atmospheric surfaces\" is separately captured as ILambBMAAAAJ:sfnaS5RM6jYC.",
+      "evidence_url": "https://pure.au.dk/portal/en/publications/atmospheric-surfaces/",
+      "verified_at": "2026-10-24"
     }
   ]
 }
