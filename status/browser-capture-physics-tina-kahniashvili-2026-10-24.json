@@ -25,5 +25,14 @@
   "html_redactions": {
     "scholar_xsrf_form_values": 2,
     "replacement": "[REDACTED]"
+  },
+  "guarded_batch_context": {
+    "this_profile_reserved_at_utc": "2026-10-24T22:07:11+00:00",
+    "previous_profile_reserved_at_utc": "2026-10-24T22:05:39+00:00",
+    "inter_profile_reservation_gap_seconds": 92,
+    "minimum_inter_profile_gap_seconds": 90,
+    "original_batch_commit": "cca3ea8",
+    "original_batch_receipt_path": "status/browser-capture-physics-di-matteo-kahniashvili-batch-2026-10-24.json",
+    "source_scope_note": "The paired Di Matteo source and receipt were merged separately through PR #109; this per-profile receipt preserves Kahniashvili's batch timing."
   }
 }

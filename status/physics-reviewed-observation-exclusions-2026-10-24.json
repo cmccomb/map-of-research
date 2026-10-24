@@ -1,49 +1,9 @@
 {
   "schema_version": 1,
-  "review_state": "source_reviewed_proposed_not_applied",
+  "review_state": "source_reviewed_present_in_producer_main",
   "reviewed_at": "2026-10-24",
-  "note": "These exact observation decisions are separate from lossless raw capture. Apply through the maintained reviewed-exclusion manifest after the snapshot branch is reconciled with main; preserve the raw rows.",
+  "note": "These 14 exact source-reviewed decisions for the remaining 11 profiles are already in the maintained producer-main exclusion manifest. Raw captures and author caches retain every observed row. The four profiles separately merged through source PR #109 and their five previously reviewed decisions are omitted from this slice.",
   "exclusions": [
-    {
-      "scholar_id": "ZEHOKUkAAAAJ",
-      "author_pub_id": "ZEHOKUkAAAAJ:HDshCWvjkbEC",
-      "reason_code": "nonpublication",
-      "reason": "Publisher note about the original Kozii et al. paper, not a separate research work; the original remains in row 19.",
-      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.97.099901",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "scholar_id": "ZEHOKUkAAAAJ",
-      "author_pub_id": "ZEHOKUkAAAAJ:mB3voiENLucC",
-      "reason_code": "nonpublication",
-      "reason": "Publisher note about the original Venderbos, Kozii and Fu paper, not a separate research work; the original remains in row 5.",
-      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.95.179902",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "scholar_id": "jrRg4PAAAAAJ",
-      "author_pub_id": "jrRg4PAAAAAJ:Wp0gIr-vW9MC",
-      "reason_code": "false_profile_attribution",
-      "reason": "The memorial volume is an edited book credited to Ge, Niemi, Phua and Takhtajan; Tarnopolsky authored a chapter, not the whole volume.",
-      "evidence_url": "https://doi.org/10.1142/10811",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "scholar_id": "jrRg4PAAAAAJ",
-      "author_pub_id": "jrRg4PAAAAAJ:M05iB0D1s5AC",
-      "reason_code": "corrupted_duplicate",
-      "reason": "The title is an author-line fragment from the Vacua on the Brink of Decay chapter; retain the correctly titled row 38.",
-      "evidence_url": "https://dare.uva.nl/id/cc56c740-02d1-4dca-aded-2ea8e1454e63",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "scholar_id": "jrRg4PAAAAAJ",
-      "author_pub_id": "jrRg4PAAAAAJ:M3ejUd6NZC8C",
-      "reason_code": "nonpublication",
-      "reason": "The title is the Oxford Academic journal issue container rather than an authored work.",
-      "evidence_url": "https://academic.oup.com/ptep/issue/2016/12",
-      "verified_at": "2026-10-24"
-    },
     {
       "scholar_id": "AcW2EXwAAAAJ",
       "author_pub_id": "AcW2EXwAAAAJ:K3LRdlH-MEoC",
@@ -128,7 +88,7 @@
       "scholar_id": "wex9ft0AAAAJ",
       "author_pub_id": "wex9ft0AAAAJ:LjlpjdlvIbIC",
       "reason_code": "nonpublication",
-      "reason": "The source is Rupert A. C. Croft’s CMU-hosted curriculum vitae, not a research publication; the captured 1909 date is erroneous.",
+      "reason": "The source is Rupert A. C. Croft\u2019s CMU-hosted curriculum vitae, not a research publication; the captured 1909 date is erroneous.",
       "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/croft_cv.pdf",
       "verified_at": "2026-10-24"
     },
