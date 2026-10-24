@@ -252,6 +252,72 @@ def test_joint_math_display_tie_break_preserves_both_memberships(
     } == unit_ids
 
 
+@pytest.mark.parametrize(
+    ("person_id", "home_id", "included_ids"),
+    [
+        ("person-edwardrubin-5cdd285c", "epp", {"epp", "mech"}),
+        (
+            "person-elibenmichael-e8530c7b",
+            "stats",
+            {"stats", "heinz-faculty"},
+        ),
+        ("person-larryawasserman-299c0ed3", "stats", {"stats", "mld"}),
+        ("person-rayidghani-0861bb94", "mld", {"mld", "heinz-faculty"}),
+        ("person-robertekass-a29bd712", "stats", {"stats", "mld", "ni"}),
+        ("person-teddyseidenfeld-57226b15", "philosophy", {"philosophy", "stats"}),
+        ("person-towe-a7ced21f", "ece", {"ece", "mse"}),
+    ],
+)
+def test_coequal_display_tiebreaks_keep_memberships_and_publish_basis(
+    person_id: str, home_id: str, included_ids: set[str]
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    department = registry.departments_by_id[home_id]
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "department",
+        home_id,
+        department.title,
+        department.school_id,
+    )
+    assert (home.verified_at, home.basis) == (
+        "2026-10-24",
+        "display_tie_break_first_listed",
+    )
+    assert home.source_url.startswith("https://")
+    assert person.primary_department_id == ""
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_ids
+
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["review_status"] == "display_tie_break_first_listed"
+    assert review["primary_department_id"] == home_id
+    assert home.source_url in review["review_source_urls"].split("|")
+    assert "Visual display tie-break only" in review["review_note"]
+    assert "does not rank his institutional appointments" in review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == home_id
+    assert published["primary_department_basis"] == "display_tie_break_first_listed"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == department.title
+    assert published["primary_academic_home_school_id"] == department.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == (
+        "display_tie_break_first_listed"
+    )
+
+
 def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None:
     people_path, memberships_path, departments_path = write_registry(
         tmp_path,
