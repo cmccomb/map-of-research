@@ -1,11 +1,11 @@
 {
-  "artifact_commit": "600be6e1613a1944185086097b655213c460c426",
-  "authorships": 38250,
+  "artifact_commit": "e19923b42fecb56f3571eb9a40f5e6f1f1c41cf2",
+  "authorships": 38592,
   "dataset_commits": {
-    "authorships": "8ff0826770b00b0dffbd8bc219600c69ebe4b467",
-    "people": "5a5481745a169fe0a031c5e9e15a630932534a56",
-    "profile_publications": "5017ccb65556f515891e368dc06939565c7ffcc6",
-    "works": "c4479f492dee89f8d5664926dd02546bc268d47a"
+    "authorships": "d7e47a67eba2d769da68230e62e98f07b555e4de",
+    "people": "95d5c2ff90354bd13447b188fe5f617c15f1a52b",
+    "profile_publications": "3b4021c314ffa19028efa22dfe06a2144d87bb80",
+    "works": "177c7b33a43d423e9b8a894cbf3c83c1cee42477"
   },
   "dataset_configs": [
     "people",
@@ -16,21 +16,21 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 1246,
-  "finished_at_utc": "2026-10-23T17:58:35.363677+00:00",
+  "excluded_works": 1194,
+  "finished_at_utc": "2026-10-24T18:25:15.676634+00:00",
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 31715,
-  "new_embedding_count": 616,
-  "people": 398,
-  "profile_count": 216,
-  "profile_publications": 38250,
-  "region_audit_version": "low-information-semantic-region-v1",
+  "mapped_works": 32043,
+  "new_embedding_count": 334,
+  "people": 934,
+  "profile_count": 218,
+  "profile_publications": 38592,
+  "region_audit_version": "low-information-semantic-region-v2",
   "schema_version": 2,
-  "started_at_utc": "2026-10-23T17:50:58.538814+00:00",
+  "started_at_utc": "2026-10-24T18:18:16.008922+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/39997922689",
-  "works": 35328
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40119923054",
+  "works": 35604
 }
