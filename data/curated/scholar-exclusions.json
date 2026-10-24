@@ -3904,6 +3904,158 @@
       "reason": "Truncated title and incomplete three-author copy of the 2024 CICM chapter; publisher's four-author 21–41 chapter is retained at ufrVoPGSRksC, alongside its 2023 preprint.",
       "evidence_url": "https://link.springer.com/book/10.1007/978-3-031-66997-2",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:HDshCWvjkbEC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher note about the original Kozii et al. paper, not a separate research work; the original remains in row 19.",
+      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.97.099901",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:mB3voiENLucC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher note about the original Venderbos, Kozii and Fu paper, not a separate research work; the original remains in row 5.",
+      "evidence_url": "https://link.aps.org/doi/10.1103/PhysRevB.95.179902",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:Wp0gIr-vW9MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The memorial volume is an edited book credited to Ge, Niemi, Phua and Takhtajan; Tarnopolsky authored a chapter, not the whole volume.",
+      "evidence_url": "https://doi.org/10.1142/10811",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is an author-line fragment from the Vacua on the Brink of Decay chapter; retain the correctly titled row 38.",
+      "evidence_url": "https://dare.uva.nl/id/cc56c740-02d1-4dca-aded-2ea8e1454e63",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:M3ejUd6NZC8C",
+      "reason_code": "nonpublication",
+      "reason": "The title is the Oxford Academic journal issue container rather than an authored work.",
+      "evidence_url": "https://academic.oup.com/ptep/issue/2016/12",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "APS credits Slow-roll inflation at N3LO only to Pierre Auclair and Christophe Ringeval, not Katelyn Breivik.",
+      "evidence_url": "https://doi.org/10.1103/PhysRevD.106.063512",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:uWQEDVKXjbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The battery article credits Telmasre, Mishra, Jao, Aggarwal, Zheng, and Subramanian; Breivik appears only in an unrelated publisher recommendation.",
+      "evidence_url": "https://sites.utexas.edu/maple/files/2025/10/Telmasre_2025_ECS_Adv._4_030503.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:3NQIlFlcGxIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 1971 Modern Cosmology book is by D. W. Sciama, not Scott Dodelson.",
+      "evidence_url": "https://astro.ing.iac.es/library/showentry.php?entryflag=book&refnr=2513",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:XoXfffV-tXoC",
+      "reason_code": "nonpublication",
+      "reason": "This is the proceedings author index rather than a separate Dodelson research work.",
+      "evidence_url": "https://www.slac.stanford.edu/econf/C990809/docs/AuthorIndex.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "author_pub_id": "jcb81yAAAAAJ:hImZayhCRfQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The published Ara OB1a paper credits Baume, Carraro, Comeron, and de Elia, not Hy Trac; the captured ACT author text is conflated with this article.",
+      "evidence_url": "https://doi.org/10.1051/0004-6361/201015497",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "author_pub_id": "jcb81yAAAAAJ:fhMX52Pd6iQC",
+      "reason_code": "nonpublication",
+      "reason": "The captured person-name title is Zheng Zheng on a presentation cover that lists Hy Trac among collaborators, not a publication title.",
+      "evidence_url": "https://member.ipmu.jp/igm/proc/zheng_zheng.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "author_pub_id": "wex9ft0AAAAJ:v1_lew4L6wgC",
+      "reason_code": "nonpublication",
+      "reason": "Gigapixel Lyman-alpha Forest Cosmology is NSF award 1109730, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1109730.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "author_pub_id": "wex9ft0AAAAJ:MAUkC_7iAq8C",
+      "reason_code": "nonpublication",
+      "reason": "Miniquasars in the Dark Ages is NSF award 1009781, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1009781.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "author_pub_id": "wex9ft0AAAAJ:-7ulzOJl1JYC",
+      "reason_code": "nonpublication",
+      "reason": "Toward Petascale Cosmology with GADGET is NSF award 0749212, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0749212.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "author_pub_id": "wex9ft0AAAAJ:kVjdVfd2voEC",
+      "reason_code": "nonpublication",
+      "reason": "Galaxy Formation, Alignments and Lensing Contamination is NSF award 0205978, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0205978.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "author_pub_id": "wex9ft0AAAAJ:LjlpjdlvIbIC",
+      "reason_code": "nonpublication",
+      "reason": "The source is Rupert A. C. Croft’s CMU-hosted curriculum vitae, not a research publication; the captured 1909 date is erroneous.",
+      "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/croft_cv.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "author_pub_id": "6pPZKd0AAAAJ:4e5Qn2KL_jwC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title and award number identify NSF award 2308193, a funded project record rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2308193.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "author_pub_id": "6pPZKd0AAAAJ:nRpfm8aw39MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 338 is the BESIII Collaboration article in Chinese Physics C 47(1), 013002 (DOI 10.1088/1674-1137/ac9895); its complete author list does not include Antonella Palmese.",
+      "evidence_url": "https://inspirehep.net/files/5d327409805a0d882d626fc7354d6435",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "author_pub_id": "6pPZKd0AAAAJ:hHIA4WEVY-EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 544 repeats the BESIII Collaboration article in Chinese Physics C 47(1), 013002 (DOI 10.1088/1674-1137/ac9895) with a conflated author list; the complete article author list does not include Antonella Palmese.",
+      "evidence_url": "https://inspirehep.net/files/5d327409805a0d882d626fc7354d6435",
+      "verified_at": "2026-10-24"
     }
   ]
 }
