@@ -96,6 +96,16 @@ def test_title_case_technical_paper_is_not_mistaken_for_an_author_list() -> None
     assert result == quality.PublicationQuality(True, ())
 
 
+def test_gene_name_following_comma_is_not_mistaken_for_citation_index() -> None:
+    result = assessment(
+        "Aneuploidy, TP53 mutation, and amplification of MYC correlate with "
+        "increased intratumor heterogeneity and poor prognosis of breast "
+        "cancer patients",
+        year=2018,
+    )
+    assert result == quality.PublicationQuality(True, ())
+
+
 def test_technical_report_identifier_inside_a_real_title_is_retained() -> None:
     result = assessment(
         "A type system for transactional memory (CMU-CS-02-140)",
