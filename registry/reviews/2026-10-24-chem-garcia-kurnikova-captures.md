@@ -1,6 +1,6 @@
 # Chemistry Scholar evidence: Garcia-Bosch and Kurnikova — 2026-10-24
 
-The user supplied two Scholar IDs without a name mapping. A gated, direct-profile Chrome batch resolved both to included CMU Chemistry faculty and captured their **complete visible profiles**. The saved HTML/JSON preserve every displayed publication row, including dubious rows; hidden Scholar `xsrf` values were redacted as `[REDACTED]`. This capture-only branch does not assign registry IDs, add canonical author caches, or alter the map snapshot.
+The user supplied two Scholar IDs without a name mapping. A gated, direct-profile Chrome batch resolved both to included CMU Chemistry faculty and captured their **complete visible profiles**. The saved HTML/JSON and canonical caches preserve every displayed publication row, including dubious rows; hidden Scholar `xsrf` values were redacted as `[REDACTED]`. This source-only branch does not assign registry IDs, rebuild the map snapshot, or trigger a dataset upload.
 
 | CMU person and primary department | Identity evidence | Visible rows | Capture state |
 | --- | --- | ---: | --- |
@@ -14,7 +14,7 @@ The guard reserved `-HzcsYQAAAAJ` at 21:58:35 UTC and `IggMbacAAAAJ` at 22:00:12
 | `garcia-bosch-visible-91-2026-10-24` | `b512987955af886407c216d3a45ac4aabf4b11a7f7f7236175db6906451e00ea` | `2118769917810444f5d0308ecb9f15b957a0c8b0f1a8c93fb603d42f79fd6675` | 91 unique publication IDs; 0 blank years, 2 blank venues, 0 missing authors; 2 hidden `xsrf` values redacted. |
 | `kurnikova-visible-170-2026-10-24` | `4c9a5d6b654df3398b917fe3b48f9fe462cacd0885d568aee38a1d96b8e9e937` | `552cedb95a0e83e7480d749055007817f5f5af9f0a5f7fdcaf27a34b1959ab96` | 170 unique publication IDs; 6 blank years, 9 blank venues, 0 missing authors; 2 hidden `xsrf` values redacted. |
 
-The offline converter matched every saved HTML row to its JSON row, including title, authors, venue, year, citation display, and citation URL. Candidate caches and a validation report are staged outside Git at `work/chem-polymer-capture-staging/` pending source and producer sequencing.
+The offline converter matched every saved HTML row to its JSON row, including title, authors, venue, year, citation display, and citation URL. The resulting `data/authors/-HzcsYQAAAAJ.json` and `data/authors/IggMbacAAAAJ.json` each have `complete_visible_profile` coverage, a disabled final Show More state, the paired capture hashes, and 91 or 170 unique citation IDs. They are canonical source caches staged for the next coordinated snapshot; the currently committed snapshot is unchanged.
 
 ## Producer review before cache release
 
@@ -25,7 +25,7 @@ Two exact Scholar rows are **NSF award records**, not publications. Official NSF
 | `-HzcsYQAAAAJ:SeFeTyx0c_EC` | [NSF award 2153109](https://api.nsf.gov/services/v1/awards/2153109.json), Isaac Garcia-Bosch PI. |
 | `IggMbacAAAAJ:hkOj_22Ku90C` | [NSF award 1818213](https://api.nsf.gov/services/v1/awards/1818213.json), Maria Kurnikova PI. |
 
-Do not delete those source rows. Stage exact producer exclusions before the caches contribute collaboration edges.
+Do not delete those source rows. Producer PR #83 stages 15 exact Garcia-Bosch/Kurnikova exclusions supported by the separate quality review; it must land before these caches contribute collaboration edges. Both PRs remain draft during the release freeze.
 
 Other rows warrant focused review but remain **unexcluded**: Garcia-Bosch `-HzcsYQAAAAJ:7PzlFSSx8tAC` is a garbled one-word “Company” title; Kurnikova `IggMbacAAAAJ:ZuybSZzF8UAC` is a one-word “III” title with no year; and `IggMbacAAAAJ:cFHS6HbyZ2cC` is labeled “SPECIAL ISSUE ON ION CHANNELS—BIONANOTUBES” with no year. The current generic quality rule already rejects Garcia-Bosch's three author-list titles `:RGFaLdJalmkC`, `:ZeXyd9-uunAC`, and `:9yKSN-GCB0IC`. An exact source or output-type decision is needed for the remaining suspicious entries.
 
