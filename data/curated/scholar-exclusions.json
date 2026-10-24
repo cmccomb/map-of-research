@@ -2144,6 +2144,1758 @@
       "reason": "A journal section heading was prefixed to the same 2000 membrane-tethering article retained on this profile.",
       "evidence_url": "https://www.sciencedirect.com/science/article/pii/S002192581989899X",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:5awf1xo2G04C",
+      "reason_code": "nonpublication",
+      "reason": "Research Showcase@CMU is the former name of CMU's institutional repository, not a paper title.",
+      "evidence_url": "https://www.library.cmu.edu/about/news/2023-10/kilthub",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:5ugPr518TE4C",
+      "reason_code": "nonpublication",
+      "reason": "Journal masthead ANALYSIS & PDE, not an article title. Retain the actual Fonseca–Fusco–Leoni–Morini article at _Qo2XoVZTnwC.",
+      "evidence_url": "https://msp.org/apde/2015/8-2/apde-v8-n2-p02-p.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:EUQCXRtRnyEC",
+      "reason_code": "nonpublication",
+      "reason": "SIAM PDF is business-meeting minutes; Leoni is mentioned as a conference co-chair, not an author of a scholarly work.",
+      "evidence_url": "https://www.siam.org/media/igpnlvld/siag_pde_11.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:JQOojiI6XY0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1714098 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1714098",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:J_g5lzvAfSwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The malformed title joins the original thin-films article and erratum into one undated manuscript package; both separate works remain at 0EnyYjriUFMC and qUcmZB5y_30C.",
+      "evidence_url": "https://gillesfrancfort.com/page3.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:LPZeul_q3PIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The 2014 volume and pages identify Leoni–Spector's substantive corrigendum, already retained with its correct title at QIV2ME_5wuYC; this row repeats the original paper title.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0022123613004242",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:M3NEmzRMIkIC",
+      "reason_code": "nonpublication",
+      "reason": "Captured title is a CVGMT repository header and URL, not the title of the Fonseca–Leoni–Müller paper. Retain the named A-quasiconvexity article at roLk4NBRz8UC.",
+      "evidence_url": "https://cvgmt.sns.it/person/220/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:NMxIlDl6LWMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-contaminated title embeds Sergio Conti's institutional address. Retain the legitimate 2001 preprint versions and the 2002 published article at 2osOgNQ5qMEC.",
+      "evidence_url": "https://cvgmt.sns.it/paper/1602/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:UHK10RUVsp4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1412095 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1412095",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:UxriW0iASnsC",
+      "reason_code": "nonpublication",
+      "reason": "Paolo Piovano is the CV subject; Fonseca and Leoni are listed as supervisors. The captured title is a person's name, not a Leoni publication.",
+      "evidence_url": "https://www.math.cmu.edu/~ppiovano/PaoloPiovano_files/Curriculum%20Vitae%20CMU%20Website.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:W5xh706n7nkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0405423 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0405423",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:_Re3VWB3Y0AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0635983 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0635983",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:_Ybze24A_UAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1007989 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1007989",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:blknAaTinKkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-damaged title incorporates Irene Fonseca's affiliation block; retain the 2001 CMU report at BqipwSGYUEgC and the 2003 article at 3fE2CSJIrl8C.",
+      "evidence_url": "https://cvgmt.sns.it/person/220/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:cFHS6HbyZ2cC",
+      "reason_code": "nonpublication",
+      "reason": "SISSA PDF is a dated slide deck for Leoni's talk, not a scholarly publication.",
+      "evidence_url": "https://iris.sissa.it/retrieve/dd8a4bf8-b908-20a0-e053-d805fe0a8cb0/Leoni_SISSA.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:fPk4N6BV_jEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The JAMS article at volume 11, pages 899–965 was authored by P. Daskalopoulos and R. Hamilton only; Leoni is not an author.",
+      "evidence_url": "https://doi.org/10.1090/S0894-0347-98-00277-X",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:fQNAKQ3IYiAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This 2008 volume and pages identify the substantive erratum, already retained with its correct title at qUcmZB5y_30C. Retain the 2007 original at 0EnyYjriUFMC too.",
+      "evidence_url": "https://www.gillesfrancfort.com/assets/files/bending-errata-2007-october-16%20copy.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:tzM49s52ZIMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2108784 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2108784",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:uLbwQdceFCQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0708039 is a grant record, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0708039",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:vV6vV6tmYwMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-damaged title incorporates Irene Fonseca's affiliation, while an institution is misparsed as an author. Retain the 2001 CMU report at dhFuZR0502QC and the 2005 article at 4TOpqqG69KYC.",
+      "evidence_url": "https://www.math.cmu.edu/CNA/Publications/publications2001/009abs/009abs.htm",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:1taIhTC69MYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0207140, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0207140",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:2v_ZtQDX9iAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9802773, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802773",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:4hFrxpcac9AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-damaged duplicate of the genuine Cornuéjols-Li article indexed in full elsewhere in this capture.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/gc0v/webpub/connection.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:5MTHONV0fEkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The fragment is from the genuine Cornuéjols-Li article A Connection between Cutting Plane Theory and the Geometry of Numbers, indexed in full elsewhere in this capture.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/gc0v/webpub/connection.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:8Xgff_V0N9gC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8503192, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8503192",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:CYCckWUYoCcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9201340, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9201340",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:DyXnQzXoVgIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9424348, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9424348",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:Hck25ST_3aIC",
+      "reason_code": "nonpublication",
+      "reason": "'Graduate Texts in Mathematics' is the series, not the book title; the authors' real 2014 book 'Integer Programming' is separately indexed.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-319-11008-0",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:ILKRHgRFtOwC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this as Volume Author Index, not a Cornuéjols paper.",
+      "evidence_url": "https://doi.org/10.1016/S0095-8956(04)00007-3",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:KbBQZpvPDL4C",
+      "reason_code": "nonpublication",
+      "reason": "The original event program lists Cornuéjols as an invited speaker; the conference name is an event record, not a publication title.",
+      "evidence_url": "https://www.dii.uchile.cl/~lacga04/program.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:Mojj43d5GZwC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this as Volume Author Index, not a Cornuéjols paper.",
+      "evidence_url": "https://doi.org/10.1016/S0095-8956(03)00017-0",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:N5tVd3kTz84C",
+      "reason_code": "nonpublication",
+      "reason": "DIMACS describes this as a workshop honoring Gomory, not a Cornuéjols-authored publication.",
+      "evidence_url": "https://archive.dimacs.rutgers.edu/archive/Workshops/Gomory/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:QIV2ME_5wuYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Series-title record for L. Lovasz's 'An Algorithmic Theory of Numbers, Graphs and Convexity'; author list is a broad bibliographic index, not Cornuejols's publication.",
+      "evidence_url": "https://epubs.siam.org/doi/10.1137/1.9781611970203",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:SIv7DqKytYAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0352885, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0352885",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:UmS_249rOGwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1263239, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1263239",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:VLnqNzywnoUC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this item as Referees 1981, an editorial acknowledgement.",
+      "evidence_url": "https://doi.org/10.1007/BF01583792",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:Xz60mAmATU4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0098427, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0098427",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:Y5dfb0dijaUC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this as Author Index for Volume 99, a journal index rather than Cornuéjols research.",
+      "evidence_url": "https://doi.org/10.1016/S0095-8956(09)00077-X",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:_Re3VWB3Y0AC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this item as Referees 1984, an editorial acknowledgement.",
+      "evidence_url": "https://doi.org/10.1007/BF01585663",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:fEOibwPWpKIC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this item as Referees 1993, the journal's referee roster.",
+      "evidence_url": "https://doi.org/10.1007/BF01582582",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:g5Ck-dwhA_QC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1024554, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1024554",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:kzcrU_BdoSEC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this item as List of referees: volumes 31–40, a referee roster.",
+      "evidence_url": "https://doi.org/10.1016/0166-218X(92)90014-2",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:mNrWkgRL2YcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Publisher's complete Graphs without Odd Holes, Parachutes or Proper Wheels article is already indexed as the clean Scholar record; this is its clipped duplicate.",
+      "evidence_url": "https://doi.org/10.1016/S0095-8956(02)00021-7",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:qe6vwMD2xtsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0653419, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0653419",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:qwy9JoKyICEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9114298, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9114298",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:sA9dB-pw3HoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1560828, not a research publication. Exact title and ID checked with the NSF Awards API.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1560828",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:t6usbXjVLHcC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies article ID jctb.1999.1937 as Author Index for Volume 77, not a Cornuéjols paper.",
+      "evidence_url": "https://doi.org/10.1006/jctb.1999.1937",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:tKAzc9rXhukC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies article ID jctb.2001.2035 as Author Index for Volume 81, not a Cornuéjols paper.",
+      "evidence_url": "https://doi.org/10.1006/jctb.2001.2035",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:zLWjf1WUPmwC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher identifies this item as List of referees: volumes 101–110, a referee roster.",
+      "evidence_url": "https://doi.org/10.1016/S0166-218X(01)00239-6",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:z_wVstp3MssC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CMU dissertation title page names Atul Bhandari as author and Cornuéjols as a committee member; the name-only Scholar entry is not his authored work.",
+      "evidence_url": "https://www.cmu.edu/tepper/programs/phd/program/assets/dissertations/2006-operations-research-bhandari-dissertation.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:2KloaMYe4IUC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher's Annals issue contents show a table of contents combining separate articles and authors, including Shreve's separately indexed article.",
+      "evidence_url": "https://www.jstor.org/stable/i251217",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:7PzlFSSx8tAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of the Lehoczky-Sethi-Shreve 1982 conference paper already present as Scholar row 104.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:7T2F9Uy0os0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Annals masthead fragment belongs to the genuine Soner-Shreve-Cvitanic article separately indexed with its complete title.",
+      "evidence_url": "https://www.jstor.org/stable/2245301",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:AXPGKjj_ei8C",
+      "reason_code": "nonpublication",
+      "reason": "Publisher metadata titles the item News items; the conference notice is not a Shreve-authored paper.",
+      "evidence_url": "https://doi.org/10.1016/0165-1889(81)90031-2",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:KUbvn5osdkgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0139911, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0139911",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:LI9QrySNdTsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9802464, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9802464",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:MLfJN-KU85MC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0353556, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0353556",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:Se3iqnhoufwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The Annals masthead is attached to the real Kruk-Lehoczky-Shreve article Accuracy of State Space Collapse for Earliest-Deadline-First Queues, separately indexed in full.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/AAP0151.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:SpbeaW3--B0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of the Doytchinov-Lehoczky-Shreve real-time queues article already present as Scholar row 19.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:TFP_iSt0sucC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Conflated names around the genuine Karatzas-Shreve 'Stochastic Differential Equations' book chapter, which is already separately indexed as Scholar row 69.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-1-4612-0949-2",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:TIZ-Mc8IlK0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9322105, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9322105",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:VaXvl8Fpj5cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0202158, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0202158",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:ZfRJV9d4-WMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "NJIT's 2019 course syllabus is by David Horntrop; Shreve appears as a cited textbook author.",
+      "evidence_url": "https://math.njit.edu/sites/math/files/Math_666-SP19.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:_Re3VWB3Y0AC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher issue table of contents identifies this as Stochastics and Stochastics Reports front matter, not an authored research article.",
+      "evidence_url": "https://www.tandfonline.com/toc/gssr19/33/1-2?nav=tocList",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:_axFR9aDTf0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9819950, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:b1wdh0AR-JQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9002588, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:dTyEYWd-f8wC",
+      "reason_code": "false_profile_attribution",
+      "reason": "MIT record credits Kowalski and Srinivasan for this brain-machine-interface demo; Shreve is not an author.",
+      "evidence_url": "https://dspace.mit.edu/entities/publication/7166e4df-0183-48fb-8509-4de4859b3da3",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:g3aElNc5_aQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8202210, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8202210",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:gsN89kCJA0AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0103814, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0103814",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:hMsQuOkrut0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0404682, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0404682",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:k8Z6L05lTy4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8403166, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8403166",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:kuK5TVdYjLIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0903475, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0903475",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9203360, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:tYavs44e6CUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9500626, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9500626",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:tuHXwOkdijsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8702537, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8702537",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:u9iWguZQMMsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Karel Janecek's 2004 CMU doctoral thesis. Shreve is listed as advisor, not author; their separate coauthored journal article remains in the profile.",
+      "evidence_url": "https://www.cmu.edu/math/grad/phd/past-recipients.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:vRqMK49ujn8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Iowa course syllabus is by Qihe Tang; Shreve appears only as a cited textbook author.",
+      "evidence_url": "https://citeseerx.ist.psu.edu/document?doi=fd6ad41286fcdbe777d05229d1e6618e405cf7f5&repid=rep1&type=pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:-c_eYhz9dBkC",
+      "reason_code": "nonpublication",
+      "reason": "Complete FSTTCS 2008 proceedings volume, edited by Hariharan, Mukund, and Vinay; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-2",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:-uzm3Y7AvW0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The paper is by Addario-Berry, McDiarmid, and Reed, as its author-uploaded arXiv record states; Frieze is absent from the actual byline.",
+      "evidence_url": "https://arxiv.org/abs/1110.0009",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:0kLwNjf3oFwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1555599, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1555599",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:1r-w4gtu6w8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Algorithmica 34:480–501 (2002) is Hayes, Kutin, and van Melkebeek’s quantum-majority paper; the captured Dyer–Frieze author field is false.",
+      "evidence_url": "https://pages.cs.wisc.edu/~dieter/Research/q-majority.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:2l5NCbZemmgC",
+      "reason_code": "nonpublication",
+      "reason": "Journal of Algorithms 20(3):633 is the publisher’s author index for volume 20, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677496900322",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:2mikiJ1VBVsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0200945, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0200945",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:3pYxbvHKFu8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Author-affiliation text appended to On key storage in secure networks, represented cleanly at row 40.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:4WewbtJKmRkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2341774, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2341774",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:69ZgNCALVd0C",
+      "reason_code": "nonpublication",
+      "reason": "The title is a bibliography/author-list fragment, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:7BrZ7Jt4UNcC",
+      "reason_code": "nonpublication",
+      "reason": "The journal’s acknowledgement of reviewers is not a publication authored by Frieze.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:7VEv-pLvLSsC",
+      "reason_code": "nonpublication",
+      "reason": "The title is another person’s name, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:9CGX2owmTHMC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a survey/contents heading and page number with a broad composite author list, not a Frieze paper.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:An6A6Jpfc1oC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a bibliography fragment naming unrelated papers and authors, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:BPS1z4jHU5cC",
+      "reason_code": "nonpublication",
+      "reason": "The captured string is a corrupted journal masthead, with a broad editorial/author list rather than an article by Frieze.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:DkZNVXde3BIC",
+      "reason_code": "nonpublication",
+      "reason": "The captured text comes from Journal of Algorithms 38(2):466, the publisher’s Papers to Appear in Forthcoming Issues page, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677401911575",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:DrR-2ekChdkC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with page references, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:EPG8bYD4jVwC",
+      "reason_code": "nonpublication",
+      "reason": "The captured text comes from Journal of Algorithms 38(1):334, the publisher’s Papers to Appear in Forthcoming Issues page, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677400911568",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:GFxP56DSvIMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Mathematical Reviews accession string for Edge Disjoint Hamilton Cycles in Sparse Random Graphs; clean full-title Scholar row 170 represents the article.",
+      "evidence_url": "https://digitalcommons.memphis.edu/facpubs/4556/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:GYcXSSpN504C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Theorem sentence extracted from Frieze’s 1991 Annals of Applied Probability article; clean full-title Scholar row 89 represents it.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:HJSXoJQnj-YC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with page references, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Ic1VZgkJnDsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "PDF heading and author-line fragment of the k-median paper represented by clean Scholar row 62.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:JTqpx9DYBaYC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a department/journal-title fragment with a long composite author list, not an identifiable Frieze work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:JdL-Xu2nR38C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Institutional address pulled from the 1987 Information Processing Letters article; clean full-title Scholar row 182 has the same journal and pages.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KNjnJ3z-R6IC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated duplicate of A partitioned inverse in linear programming, clean Scholar row 621.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KPAPMsW7zc0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9225008, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9225008",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KbBQZpvPDL4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Mathematical Reviews accession string for Vertex Covers by Edge Disjoint Cliques; clean full-title Scholar row 403 has the same journal, volume, pages, year, and authors.",
+      "evidence_url": "https://www.math.cmu.edu/users/math/tbohman/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:M7C5BM2v8n8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Formula fragment from the Dyer–Frieze–Foulds n-cube connectivity paper; a clean full-title Scholar row is already captured.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MNNNGtAgD4EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted title/byline of Reconstructing truncated integer variables satisfying linear congruences, clean Scholar row 30.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MtS25d97-7AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9818411, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9818411",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MvIMIWP2nqIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1952285, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1952285",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Nnq8S6OXqDYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Discrete Applied Mathematics 3:1–8 (1981) is Beck and Fiala’s Integer-making Theorems; the captured Frieze/coauthor field is false.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/0166218X81900226",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:PYBJJbyH-FwC",
+      "reason_code": "nonpublication",
+      "reason": "The title names managing editors of a journal, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:PaBasH6fAo0C",
+      "reason_code": "nonpublication",
+      "reason": "The title is a volume/issue header fragment, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Q3-QASNKTMEC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with a page reference, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QI7uKX5mnFEC",
+      "reason_code": "nonpublication",
+      "reason": "Complete AofA 2018 proceedings volume, edited by Fill and Ward; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-110",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QUX0mv85b1cC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with page references, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Qh5Z_vBjo80C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0753472, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0753472",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QsKbpXNoaWkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1362785, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1362785",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QsaTk4IG4EwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of An extension of Christofides heuristic to the k-person travelling salesman problem, clean Scholar row 123.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SGW5VrABaM0C",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with a page reference, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SgM-ki2adj0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Abstract sentence from Dyer and Frieze’s randomized fixed-dimensional linear programming article; clean full-title Scholar row 97 represents it.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/Texfiles/RANDALG.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SjuI4pbJlxcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Issue-header-prefixed duplicate of Mixing properties of the Swendsen-Wang process, represented cleanly in the profile.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SnGPuo6Feq8C",
+      "reason_code": "nonpublication",
+      "reason": "Journal of Algorithms 52(2):208 is the publisher’s author index for volume 52, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677404000963",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:URGbnSt0D2cC",
+      "reason_code": "nonpublication",
+      "reason": "The title is the FOCS 2024 event label; the conference publishes separately titled papers.",
+      "evidence_url": "https://focs.computer.org/2024/accepted-papers-for-focs-2024/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:V_vSwabWVtYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Author-line fragment of the k-median paper represented by clean Scholar row 62.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:WHdLCjDvYFkC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a Combinatorics journal/header fragment with a broad composite author list, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Xl6nMSl579sC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with a page reference, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ZJ-noXUx9mkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of On random symmetric travelling salesman problems, clean Scholar row 92.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ZZwcLRaXOV4C",
+      "reason_code": "nonpublication",
+      "reason": "Complete APPROX/RANDOM 2019 proceedings volume, edited by Achlioptas and Végh; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-145",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:_AeoHAGD03cC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a New Jersey postal address only, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:_u2aKJ9e-CoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9530974, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9530974",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:a3BOlSfXSfwC",
+      "reason_code": "nonpublication",
+      "reason": "Journal/issue masthead imported as a work; the cited 1999 volume 8 pages 7–29 paper is Noga Alon’s Combinatorial Nullstellensatz.",
+      "evidence_url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/combinatorial-nullstellensatz/E32C7ED059D6B92C6C67E18CC716872A",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:bFuYayV9R1gC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8900112, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=8900112",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:djcsc3XHdKAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1107583, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1107583",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:e-nnqdki048C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Repository boilerplate was incorporated into the title; clean publication is present at Scholar row 214.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:g30IDTdgJMgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Damaged citation-line duplicate of the SODA paper represented by clean Scholar row 18; the author lists and title fragment do not define a second work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ibZ2AwG9z6wC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured row credits A. Barg alone and names only an About this journal page; there is no Frieze authorship.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:jPVjDSAV6m0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "1985 work is authored by A. H. G. Rinnooy Kan; distinct from Frieze and Reed’s 1998 chapter at clean row 234.",
+      "evidence_url": "https://ageconsearch.umn.edu/record/272328/files/erasmus177.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:k_7cPK9k7w8C",
+      "reason_code": "nonpublication",
+      "reason": "The title is Discrete Mathematics’ acknowledgement of referees, not a research publication.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:l7iSsH4_Im4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1013110, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1013110",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:m44aUaJR3ikC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of A simple heuristic for the p-centre problem, clean Scholar row 14.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:mWEH9CqjF64C",
+      "reason_code": "nonpublication",
+      "reason": "The captured text comes from Journal of Algorithms 51(2):216, the publisher’s Papers to Appear in Forthcoming Issues page, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677404000525",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nPT8s1NX_-sC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a New Jersey postal address only, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nVrZBo8bIpAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "PDF title/byline fragment of On linear programs with random costs, clean Scholar row 81.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nZcligLrVowC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a corrupted Combinatorics, Probability and Computing journal heading, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:oPLKW5k6eA4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of On the existence of Hamiltonian cycles in a class of random graphs, clean Scholar row 71.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:pS0ncopqnHgC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a published list of referees, not a publication authored by Frieze.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:pZ2CosqRuhkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9024935, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9024935",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:q-HalDI95KYC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a long list of individual names, not a research title or Frieze byline.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:qOpkhvVCMvUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0502793, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0502793",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:rTD5ala9j4wC",
+      "reason_code": "nonpublication",
+      "reason": "Journal of Algorithms 39(2):242 is the publisher’s author index for volume 39, not an authored Frieze paper.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0196677401911666",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:rbm3iO8VlycC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with a page reference, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:sJPMR1oEGYQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of Partitioning random graphs into large cycles, clean Scholar row 408.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:sfnaS5RM6jYC",
+      "reason_code": "nonpublication",
+      "reason": "The title is an author-index entry with a page reference, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:uGrg30pLAbkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1661063, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1661063",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wKETBy42zhYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CMU thesis authored by David Paul Kravitz; Frieze is listed on the committee, not as author.",
+      "evidence_url": "https://www.math.cmu.edu/users/math/kravitz2/final.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wMgC3FpKEyYC",
+      "reason_code": "nonpublication",
+      "reason": "The title is Wormald’s name and institutional address, not an authored work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wSy_KLzO7YEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Case-variant duplicate of A randomized algorithm for fixed-dimensional linear programming, clean Scholar row 97.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:xm0LlTxljI0C",
+      "reason_code": "nonpublication",
+      "reason": "The captured string is Frieze’s departmental address, not a work title.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:zCSUwVk65WsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The same Discrete Applied Mathematics 3:1–8 (1981) page range belongs to Beck and Fiala; this second formula-fragment row also falsely credits Frieze.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/0166218X81900226",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:-f6ydRqryjwC",
+      "reason_code": "nonpublication",
+      "reason": "CODING THEORY is a table-of-contents section heading; the Bukh–Guruswami–Håstad paper is listed underneath with its own title.",
+      "evidence_url": "https://www.itsoc.org/sites/default/files/2021-01/67nits01-MarchWeb.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:35N4QoGY0k4C",
+      "reason_code": "nonpublication",
+      "reason": "FOCS 2021 proceedings imprint/ISBN/DOI boilerplate, not the Bukh paper within it.",
+      "evidence_url": "https://ieee-focs.org/FOCS-2021-Papers/pdfs/FOCS2021-5stbVHiOp5jRHWlSl41FkR/205500a237/205500a237.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:3s1wT3WcHBgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Journal title imported in place of the paper title; the Lund–Bukh paper is Stability properties of the transverse envelope equations, clean Scholar row 1.",
+      "evidence_url": "https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.7.024801",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:4fKUyHm3Qg0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1555149, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1555149",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:B3FOqHPlNUQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1301548, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1301548",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:GnPB-g6toBAC",
+      "reason_code": "nonpublication",
+      "reason": "Complete SoCG 2011 proceedings volume, not a Bukh paper; his Space crossing numbers paper is a separate contribution.",
+      "evidence_url": "https://doi.org/10.1145/1998196",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:P5F9QuxV20EC",
+      "reason_code": "nonpublication",
+      "reason": "Complete SoCG 2018 proceedings volume, not a Bukh paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-99",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:R3hNpaxXUhUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Conference program/page fragment containing the title of Bukh and Sudakov’s Induced subgraphs paper, which is present as clean row 26.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:ldfaerwXgEUC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a Journal of Combinatorial Theory author-index entry, not a Bukh paper; Bukh’s own writings list does not identify it as a work.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2154063, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2154063",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:0izLItjtcgwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 7905526, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=7905526",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:3fE2CSJIrl8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The Annals masthead is attached to the real Kruk-Lehoczky-Shreve article separately indexed with its complete title.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/AAP0151.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:DJbcl8HfkQkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9819950, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9819950",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:IRz6iEL74y4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Article abstract sentence was promoted to a title; the actual Gaver-Lehoczky 1977 paper appears as Scholar row 91.",
+      "evidence_url": "https://pubsonline.informs.org/toc/mnsc/24/1",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:IUKN3-7HHlwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of the Doytchinov-Lehoczky-Shreve real-time queues paper already present as a complete Scholar record.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:NXb4pA-qfm4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8101576, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8101576",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:OcBU2YAGkTUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9002588, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9002588",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:YOwf2qJgpHMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Clipped title with page numeral duplicates the complete Lehoczky coauthored Quantized EDF Scheduling in a Stochastic Environment paper.",
+      "evidence_url": "https://doi.org/10.1109/IPDPS.2002.1016476",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:_FM0Bhl9EiAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated duplicate with impossible 1954 year; publisher identifies the complete Gaver-Lehoczky article as 1977, pages 71-81.",
+      "evidence_url": "https://pubsonline.informs.org/toc/mnsc/24/1",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:bKqednn6t2AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0527141, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0527141",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:dfsIfKJdRG4C",
+      "reason_code": "nonpublication",
+      "reason": "Publisher's Annals issue contents are a table of contents mixing separate articles and authors, not a Lehoczky-authored item.",
+      "evidence_url": "https://www.jstor.org/stable/i251217",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:j3f4tGmQtD8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of the Lehoczky-Sethi-Shreve 1982 conference paper already present as a complete record.",
+      "evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:yFnVuubrUp4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9203360, not a research publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9203360",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:NMxIlDl6LWMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2108680 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2108680.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:O3NaXMp0MMsC",
+      "reason_code": "nonpublication",
+      "reason": "THE ANNALS is the cover and contents of the entire 2026 Annals of Applied Probability issue, with all issue authors imported into one row; Shkolnikov's actual paper is retained at row 38.",
+      "evidence_url": "https://imstat.org/publications/aap/aap_36_1/aap_36_1.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:YFjsv_pBGBYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "All-caps title and OCR-corrupted journal line duplicate the complete SIAM article retained at row 14.",
+      "evidence_url": "https://epubs.siam.org/doi/10.1137/15M1016059",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:blknAaTinKkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1811723 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1811723.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "eVxdemsAAAAJ",
+      "author_pub_id": "eVxdemsAAAAJ:hMod-77fHWUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1506290 is a research grant record, not a paper.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1506290.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Misdated single-author variant of the Ensley–Grossberg finite-models paper retained at row 41; arXiv lists both authors and the original 1996 submission.",
+      "evidence_url": "https://arxiv.org/abs/math/9608205",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:RHpTSmoSYBkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated uppercase duplicate of the Grossberg–Shelah 1986 article retained at row 15; publisher gives the actual two authors and pages 302–322, not page 486.",
+      "evidence_url": "https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/abs/on-the-number-of-nonisomorphic-models-of-an-infinitary-theory-which-has-the-infinitary-order-property-part-a/840509E1FCB22C84EB2A68B54EA06F3F",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:aqlVkmm33-oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, malformed second entry for Grossberg's genuine Hodges book review, which is retained with journal pages at row 42.",
+      "evidence_url": "https://www.cambridge.org/core/product/identifier/S0022481200024749/type/journal_article",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Single-author, truncated-venue variant of the five-author μ-abstract-elementary-classes article retained at row 13.",
+      "evidence_url": "https://www.math.cmu.edu/~rami/WebPage/homeOLD%20copy.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:k_IJM867U9cC",
+      "reason_code": "nonpublication",
+      "reason": "Title is the San Antonio meeting location and date from the Bulletin issue contents, not an authored research work.",
+      "evidence_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/8419F831A95E3786F6540DA40A92B539/S1079898615000451a.pdf/bsl_volume_21_issue_4_cover_and_front_matter.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "q1g_W5sAAAAJ",
+      "author_pub_id": "q1g_W5sAAAAJ:ldfaerwXgEUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The 2008 Grossberg–VanDieren–Villaveces preprint is a version of the same titled article published in 2016 and retained at row 7.",
+      "evidence_url": "https://www.math.cmu.edu/users/rami/gvv_11_5.08.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:0izLItjtcgwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher's original article credits only Manfred Spitzer of Ulm; Owen is not an author.",
+      "evidence_url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0038-1670573.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:2P1L_qKh6hAC",
+      "reason_code": "nonpublication",
+      "reason": "CISM is the name of the International Centre for Mechanical Sciences and its Springer book series; the row has no Owen author or work title.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-7091-2770-4",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:2VqYfGB8ITEC",
+      "reason_code": "nonpublication",
+      "reason": "Body-text fragment from the actual Coleman–Owen chapter retained at row 120.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-642-70803-9",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:35r97b3x0nAC",
+      "reason_code": "nonpublication",
+      "reason": "All-caps coauthor names from a page header of the Coleman–Fabrizio–Owen article retained at row 24, not its title.",
+      "evidence_url": "https://www.numdam.org/item/RSMUP_1982__68__207_0/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:4hFrxpcac9AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Teasdale's coauthor D. R. Owen in this psychology research line is affiliated with the University of Copenhagen's Institute of Clinical Psychology, distinct from CMU's continuum mechanician.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/2500201/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:6ZxmRoH8BuwC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0102477 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0102477",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:70eg2SAEIzsC",
+      "reason_code": "nonpublication",
+      "reason": "Author affiliation/address block, not a separate publication.",
+      "evidence_url": "https://pages.jh.edu/rrynasi1/NewFoundations4Math/Literature/Lawvere%2BSchanuel%28eds%291986CategoriesInContinuumPhysics.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:86PQX7AUzd4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated all-caps copy of the Deseri–Owen 2002 article retained at row 31.",
+      "evidence_url": "https://journals.sagepub.com/doi/10.1177/1081286502007002225",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:DUooU5lO8OsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9703863 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9703863",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:IRz6iEL74y4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated and OCR-corrupted title of Owen's chapter already captured completely at row 55.",
+      "evidence_url": "https://www.aracne-editrice.it/index.php/pubblicazione.html?item=9788854819566",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:M05iB0D1s5AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title includes an explanatory parenthesis but has the same authors, journal volume, and pages as the complete 1967 article at row 5.",
+      "evidence_url": "https://doi.org/10.1063/1.1762197",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:OTTXONDVkokC",
+      "reason_code": "nonpublication",
+      "reason": "Title is Owen's Pittsburgh affiliation line from the proceedings, not a contribution; retain his titled chapter at row 113.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-94-011-3644-0?page=5",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:QYdC8u9Cj1oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8704834 is a grant record, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=8704834",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:SeFeTyx0c_EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Math Reviews accession and subject codes were imported as the title of the Owen–Paroni article already present at row 12.",
+      "evidence_url": "https://arpi.unipi.it/handle/11568/885818",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:ZHo1McVdvXMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated and undated variant of the 2000 Deseri–Owen slip-band article retained at row 43.",
+      "evidence_url": "https://www.cmu.edu/math/people/faculty/owen.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:_5tno0g5mFcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Science article identifies its D. R. Owen as an assistant professor of psychology at Brooklyn College, not CMU's mathematician.",
+      "evidence_url": "https://www.science.org/doi/10.1126/science.959813",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:bFI3QPDXJZMC",
+      "reason_code": "nonpublication",
+      "reason": "Numbered footnote or body-text fragment from Coleman and Owen's actual thermodynamics chapter, retained at rows 62 and 120.",
+      "evidence_url": "https://pages.jh.edu/rrynasi1/NewFoundations4Math/Literature/Lawvere%2BSchanuel%28eds%291986CategoriesInContinuumPhysics.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured author is D. R. J. Owen of University of Wales Swansea; Swansea lists D. R. J. Owen on its engineering research staff, distinct from CMU's D. R. Owen.",
+      "evidence_url": "https://www.swansea.ac.uk/science-and-engineering/research/zienkiewicz-institute-for-modelling-data-ai/research/themes/materials-manufacturing/solids-structures-coupled-systems/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:hMod-77fHWUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same Deseri–Owen article as row 20; publisher dates it online in 2009 and in the 2010 issue, explaining the year difference.",
+      "evidence_url": "https://journals.sagepub.com/doi/10.1177/1081286509106101",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:iH-uZ7U-co4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second copy of the edited volume; Springer identifies both Del Piero and Owen as editors. Keep the complete book row 25 and Owen's separate chapter row 60.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-7091-2770-4",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:lSLTfruPkqcC",
+      "reason_code": "nonpublication",
+      "reason": "CMU's Center for Nonlinear Analysis is a research center, not a work title.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:mB3voiENLucC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second shortened copy of the 1967 Pipkin–Owen article retained at row 5.",
+      "evidence_url": "https://doi.org/10.1063/1.1762197",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:mlAyqtXpCwEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Malformed second row for the Teasdale–Owen psychology article at row 66; that Owen belongs to the Copenhagen psychology research line, not CMU Mathematical Sciences.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/2500201/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:pyW8ca7W8N0C",
+      "reason_code": "nonpublication",
+      "reason": "The title is the series, volume, and copyright header of the proceedings, not Owen's contribution. Retain his chapter at row 112.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-0348-7303-1",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tfBFyTMAAAAJ",
+      "author_pub_id": "tfBFyTMAAAAJ:u_35RYKgDlwC",
+      "reason_code": "nonpublication",
+      "reason": "CMU's Center for Nonlinear Analysis is a research center, not a work title; second such imported row.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "uHqbF7sAAAAJ",
+      "author_pub_id": "uHqbF7sAAAAJ:DUooU5lO8OsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title appends the journal's Part B subtitle to the same Roesing–Howell–Boucher article retained at row 3.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.24364",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "uHqbF7sAAAAJ",
+      "author_pub_id": "uHqbF7sAAAAJ:sNmaIFBj_lkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title appends the journal's Part B subtitle to the same Howell–Boucher article retained at row 20.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/polb.23948",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "uOCVq1cAAAAJ",
+      "author_pub_id": "uOCVq1cAAAAJ:Se3iqnhoufwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title and incomplete three-author copy of the 2024 CICM chapter; publisher's four-author 21–41 chapter is retained at ufrVoPGSRksC, alongside its 2023 preprint.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-031-66997-2",
+      "verified_at": "2026-10-24"
     }
   ]
 }

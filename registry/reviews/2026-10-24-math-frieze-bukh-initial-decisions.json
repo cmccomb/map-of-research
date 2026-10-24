@@ -1,0 +1,1378 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-24",
+  "scope": "Offline source review of complete visible Google Scholar profiles for Alan Frieze and Boris Bukh; no new Scholar requests.",
+  "policy": "Raw profile rows stay intact. Verified exclusions are proposed only for map eligibility. Structural candidates need a second exact-source check; unresolved entries must not become exclusions by implication. Genuine preprints, corrections, theses, reports, reviews, and signed seminar contributions are retained when attributable.",
+  "profiles": [
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "name": "Alan Frieze",
+      "publication_count": 659,
+      "coverage": "complete_visible_profile",
+      "source_json_path": "data/captures/frieze-visible-659-2026-10-24.json",
+      "source_json_sha256": "63588d9509c2423d1c71bc7a642c59477ee31131bc76a1a5be6ed871edfba3d2",
+      "source_html_path": "data/captures/frieze-visible-659-2026-10-24.html",
+      "source_html_sha256": "f9d00c7e1165101bf45ce30d05d31364bac4a9293575998dee0d233db2ea5c0c"
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "name": "Boris Bukh",
+      "publication_count": 85,
+      "coverage": "complete_visible_profile",
+      "source_json_path": "data/captures/bukh-visible-85-2026-10-24.json",
+      "source_json_sha256": "efe86c0eb71283f8d9ed51b2e5bf9f1504d85875cd373a2b991eb167fbc36dc5",
+      "source_html_path": "data/captures/bukh-visible-85-2026-10-24.html",
+      "source_html_sha256": "2ccc6a5053b380a15e59f9a250dd1a06045010a9cf211ed471e6b2299f1afcf9"
+    }
+  ],
+  "summary": {
+    "raw_profile_rows": {
+      "EqKRQ4YAAAAJ": 659,
+      "H8qYeA0AAAAJ": 85
+    },
+    "verified_exclusions": {
+      "EqKRQ4YAAAAJ": 36,
+      "H8qYeA0AAAAJ": 9
+    },
+    "structural_candidates_for_second_review": {
+      "EqKRQ4YAAAAJ": 56,
+      "H8qYeA0AAAAJ": 1
+    },
+    "explicit_retentions": {
+      "EqKRQ4YAAAAJ": 7,
+      "H8qYeA0AAAAJ": 8
+    },
+    "unresolved": {
+      "EqKRQ4YAAAAJ": 15,
+      "H8qYeA0AAAAJ": 0
+    }
+  },
+  "verified_exclusions": [
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:djcsc3XHdKAC",
+      "capture_row_index": 524,
+      "title_as_captured": "8th Workshop on Algorithms and Models for the Web Graph (WAW 2011)",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1107583, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1107583",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:0kLwNjf3oFwC",
+      "capture_row_index": 511,
+      "title_as_captured": "AF: EAGER: Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1555599, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1555599",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:l7iSsH4_Im4C",
+      "capture_row_index": 527,
+      "title_as_captured": "AF: Small: Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1013110, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1013110",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:bFuYayV9R1gC",
+      "capture_row_index": 596,
+      "title_as_captured": "Algorithms and Complexity with Concentration on Probabilistic Analysis",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8900112, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=8900112",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:pZ2CosqRuhkC",
+      "capture_row_index": 591,
+      "title_as_captured": "Algorithms and Complexity with Concentration on Probabilistic Analysis",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9024935, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9024935",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:2mikiJ1VBVsC",
+      "capture_row_index": 551,
+      "title_as_captured": "Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0200945, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0200945",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KPAPMsW7zc0C",
+      "capture_row_index": 588,
+      "title_as_captured": "Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9225008, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9225008",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MtS25d97-7AC",
+      "capture_row_index": 570,
+      "title_as_captured": "Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9818411, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9818411",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:_u2aKJ9e-CoC",
+      "capture_row_index": 578,
+      "title_as_captured": "Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9530974, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=9530974",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:qOpkhvVCMvUC",
+      "capture_row_index": 541,
+      "title_as_captured": "Probabilistic Considerations in the Analysis of Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0502793, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0502793",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Qh5Z_vBjo80C",
+      "capture_row_index": 531,
+      "title_as_captured": "Random Graphs: Structure and Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0753472, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=0753472",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:4WewbtJKmRkC",
+      "capture_row_index": 494,
+      "title_as_captured": "Random Structures and Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2341774, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2341774",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MvIMIWP2nqIC",
+      "capture_row_index": 501,
+      "title_as_captured": "Random Structures and Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1952285, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1952285",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QsKbpXNoaWkC",
+      "capture_row_index": 252,
+      "title_as_captured": "Random structures and algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1362785, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1362785",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:uGrg30pLAbkC",
+      "capture_row_index": 509,
+      "title_as_captured": "Random Structures and Algorithms",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1661063, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1661063",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:4fKUyHm3Qg0C",
+      "capture_row_index": 74,
+      "title_as_captured": "CAREER: Algebraic extremal combinatorics",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1555149, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1555149",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:B3FOqHPlNUQC",
+      "capture_row_index": 76,
+      "title_as_captured": "Geometry in combinatorics",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1301548, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1301548",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:tS2w5q8j5-wC",
+      "capture_row_index": 69,
+      "title_as_captured": "Problems in Extremal and Geometric Combinatorics",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2154063, not a scholarly publication; checked in the NSF awards API.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2154063",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:g30IDTdgJMgC",
+      "capture_row_index": 282,
+      "title_as_captured": "Vinay. Clustering in large graphs and matrices",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Damaged citation-line duplicate of the SODA paper represented by clean Scholar row 18; the author lists and title fragment do not define a second work.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:jPVjDSAV6m0C",
+      "capture_row_index": 292,
+      "title_as_captured": "Probabilistic analysis of algorithms",
+      "reason_code": "false_profile_attribution",
+      "reason": "1985 work is authored by A. H. G. Rinnooy Kan; distinct from Frieze and Reed’s 1998 chapter at clean row 234.",
+      "evidence_url": "https://ageconsearch.umn.edu/record/272328/files/erasmus177.pdf",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:a3BOlSfXSfwC",
+      "capture_row_index": 404,
+      "title_as_captured": "Combinatorics probability and computing",
+      "reason_code": "nonpublication",
+      "reason": "Journal/issue masthead imported as a work; the cited 1999 volume 8 pages 7–29 paper is Noga Alon’s Combinatorial Nullstellensatz.",
+      "evidence_url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/combinatorial-nullstellensatz/E32C7ED059D6B92C6C67E18CC716872A",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ZZwcLRaXOV4C",
+      "capture_row_index": 460,
+      "title_as_captured": "Approximation, Randomization, and Combinatorial Optimization. Algorithms and Techniques (APPROX/RANDOM 2019)",
+      "reason_code": "nonpublication",
+      "reason": "Complete APPROX/RANDOM 2019 proceedings volume, edited by Achlioptas and Végh; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-145",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:e-nnqdki048C",
+      "capture_row_index": 507,
+      "title_as_captured": "This is a repository copy of Discordant Voting Processes on Finite Graphs.",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Repository boilerplate was incorporated into the title; clean publication is present at Scholar row 214.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QI7uKX5mnFEC",
+      "capture_row_index": 508,
+      "title_as_captured": "29th International Conference on Probabilistic, Combinatorial and Asymptotic Methods for the Analysis of Algorithms (AofA 2018)",
+      "reason_code": "nonpublication",
+      "reason": "Complete AofA 2018 proceedings volume, edited by Fill and Ward; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-110",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:-c_eYhz9dBkC",
+      "capture_row_index": 533,
+      "title_as_captured": "IARCS Annual Conference on Foundations of Software Technology and Theoretical Computer Science",
+      "reason_code": "nonpublication",
+      "reason": "Complete FSTTCS 2008 proceedings volume, edited by Hariharan, Mukund, and Vinay; not a Frieze paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-2",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wKETBy42zhYC",
+      "capture_row_index": 540,
+      "title_as_captured": "Satisfiability and the giant component in online variants of the classical random models",
+      "reason_code": "false_profile_attribution",
+      "reason": "CMU thesis authored by David Paul Kravitz; Frieze is listed on the committee, not as author.",
+      "evidence_url": "https://www.math.cmu.edu/users/math/kravitz2/final.pdf",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ZJ-noXUx9mkC",
+      "capture_row_index": 550,
+      "title_as_captured": "Чn random symmetric travelling salesman problems",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of On random symmetric travelling salesman problems, clean Scholar row 92.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SjuI4pbJlxcC",
+      "capture_row_index": 568,
+      "title_as_captured": "DYNAMICAL AND NONEQUILIBRIUM CONSIDERATIONS-Spin Systems and Other Statistical Mechanical Systems-Mixing properties of the Swendsen-Wang process on the complete graph and …",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Issue-header-prefixed duplicate of Mixing properties of the Swendsen-Wang process, represented cleanly in the profile.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Ic1VZgkJnDsC",
+      "capture_row_index": 601,
+      "title_as_captured": "PROBABILISTIC ANALYSIS OF A RELAXATION FOR THE k-MEDIAN PROBLEM” SANG AHN,* COLIN COOPER, § G’ERARD CORNUIEJOLS “",
+      "reason_code": "corrupted_duplicate",
+      "reason": "PDF heading and author-line fragment of the k-median paper represented by clean Scholar row 62.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:V_vSwabWVtYC",
+      "capture_row_index": 603,
+      "title_as_captured": "sANG AHN,* coLIN CooPER, GÉRARD CORNUÉOLS",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Author-line fragment of the k-median paper represented by clean Scholar row 62.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nVrZBo8bIpAC",
+      "capture_row_index": 609,
+      "title_as_captured": "ON LINEAR PROGRAMS WITH RANDOM COSTS. ME, DYER,'",
+      "reason_code": "corrupted_duplicate",
+      "reason": "PDF title/byline fragment of On linear programs with random costs, clean Scholar row 81.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:m44aUaJR3ikC",
+      "capture_row_index": 611,
+      "title_as_captured": "A sıvıPLE HEURIsic FoR THE p-cNTRE PRoLEM",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of A simple heuristic for the p-centre problem, clean Scholar row 14.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:3pYxbvHKFu8C",
+      "capture_row_index": 628,
+      "title_as_captured": "On Key Storage In Secure Networks Martin Dyer* School of Computer Studies, University of Leeds, Leeds, UK",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Author-affiliation text appended to On key storage in secure networks, represented cleanly at row 40.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:MNNNGtAgD4EC",
+      "capture_row_index": 637,
+      "title_as_captured": "PECONSTRUCTIN (, TRIJNCATED INTEGER VARIABLES SATISFYIN (, LINEAR CONGRUENCES* ALAN M. FRIEZEt, JOHAN HASTADț, RAVI KANNAN, JEFFREY C. LAGARIAS AN ADI SHAMIR|",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted title/byline of Reconstructing truncated integer variables satisfying linear congruences, clean Scholar row 30.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wSy_KLzO7YEC",
+      "capture_row_index": 642,
+      "title_as_captured": "A RANDOMIZED ALGORITHM FOR FIXED-DIMENSIONAL LINEAR PROGRAMMING",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Case-variant duplicate of A randomized algorithm for fixed-dimensional linear programming, clean Scholar row 97.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:sJPMR1oEGYQC",
+      "capture_row_index": 643,
+      "title_as_captured": "PARTITIONING RANDOM GRAPHS INTO LARGE",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of Partitioning random graphs into large cycles, clean Scholar row 408.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:oPLKW5k6eA4C",
+      "capture_row_index": 646,
+      "title_as_captured": "ON THE EXISTENCE OF HANIILTONIAN CYCLES IN A CLASS OF RANDOM GRAPES",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR-corrupted duplicate of On the existence of Hamiltonian cycles in a class of random graphs, clean Scholar row 71.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QsaTk4IG4EwC",
+      "capture_row_index": 648,
+      "title_as_captured": "AN EXTENSION OF CHRISTOFIDES HEURISTIC TO THE",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title of An extension of Christofides heuristic to the k-person travelling salesman problem, clean Scholar row 123.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KNjnJ3z-R6IC",
+      "capture_row_index": 653,
+      "title_as_captured": "A Partitioned Inverse in Linear",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated duplicate of A partitioned inverse in linear programming, clean Scholar row 621.",
+      "evidence_url": "https://www.math.cmu.edu/~af1p/papers.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:3s1wT3WcHBgC",
+      "capture_row_index": 51,
+      "title_as_captured": "Phys. Rev. ST Accel. Beams",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Journal title imported in place of the paper title; the Lund–Bukh paper is Stability properties of the transverse envelope equations, clean Scholar row 1.",
+      "evidence_url": "https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.7.024801",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:P5F9QuxV20EC",
+      "capture_row_index": 72,
+      "title_as_captured": "34th International Symposium on Computational Geometry (SoCG 2018)",
+      "reason_code": "nonpublication",
+      "reason": "Complete SoCG 2018 proceedings volume, not a Bukh paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-99",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:GnPB-g6toBAC",
+      "capture_row_index": 77,
+      "title_as_captured": "27th Annual ACM Symposium on Computational Geometry, SCG'11 sponsors: ACM SIGACT, ACM SIGGRAPH.-Proceedings of the 27th Annual Symposium on Computational Geometry, SCG'11.-Сер …",
+      "reason_code": "nonpublication",
+      "reason": "Complete SoCG 2011 proceedings volume, not a Bukh paper; his Space crossing numbers paper is a separate contribution.",
+      "evidence_url": "https://doi.org/10.1145/1998196",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:R3hNpaxXUhUC",
+      "capture_row_index": 79,
+      "title_as_captured": "on Extremal Graphs and Hypergraphs Carnegie Mellon University May 5-6, 2007 Induced subgraphs of Ramsey graphs with many distinct degrees",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Conference program/page fragment containing the title of Bukh and Sudakov’s Induced subgraphs paper, which is present as clean row 26.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:35N4QoGY0k4C",
+      "capture_row_index": 84,
+      "title_as_captured": "2021 IEEE 62nd Annual Symposium on Foundations of Computer Science (FOCS)| 978-1-6654-2055-6/22/$31.00© 2022 IEEE| DOI: 10.1109/FOCS52979. 2021.00128",
+      "reason_code": "nonpublication",
+      "reason": "FOCS 2021 proceedings imprint/ISBN/DOI boilerplate, not the Bukh paper within it.",
+      "evidence_url": "https://ieee-focs.org/FOCS-2021-Papers/pdfs/FOCS2021-5stbVHiOp5jRHWlSl41FkR/205500a237/205500a237.pdf",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:-f6ydRqryjwC",
+      "capture_row_index": 85,
+      "title_as_captured": "CODING THEORY",
+      "reason_code": "nonpublication",
+      "reason": "CODING THEORY is a table-of-contents section heading; the Bukh–Guruswami–Håstad paper is listed underneath with its own title.",
+      "evidence_url": "https://www.itsoc.org/sites/default/files/2021-01/67nits01-MarchWeb.pdf",
+      "automatic_eligibility_before_review": true
+    }
+  ],
+  "structural_candidates_for_second_review": [
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ibZ2AwG9z6wC",
+      "capture_row_index": 293,
+      "title_as_captured": "About this journal",
+      "reason_code": "needs_second_review",
+      "reason": "Generic About this journal page with A. Barg, not a research title or Frieze byline.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=200&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:ibZ2AwG9z6wC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:BPS1z4jHU5cC",
+      "capture_row_index": 478,
+      "title_as_captured": "Y Probability &'Computing",
+      "reason_code": "needs_second_review",
+      "reason": "Corrupted journal masthead text, not a citable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=400&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:BPS1z4jHU5cC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:xm0LlTxljI0C",
+      "capture_row_index": 480,
+      "title_as_captured": "Department of Mathematical Sciences, Carnegie Mellon University, Pittsburgh, USA.",
+      "reason_code": "needs_second_review",
+      "reason": "Affiliation/address line, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=400&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:xm0LlTxljI0C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:M7C5BM2v8n8C",
+      "capture_row_index": 522,
+      "title_as_captured": "Pe Po=++(sinn+c)/n",
+      "reason_code": "needs_second_review",
+      "reason": "Equation fragment, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:M7C5BM2v8n8C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:HJSXoJQnj-YC",
+      "capture_row_index": 538,
+      "title_as_captured": "Fink, Jirí, 1074 Frankl, Peter, 204",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:HJSXoJQnj-YC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:sfnaS5RM6jYC",
+      "capture_row_index": 543,
+      "title_as_captured": "Addario-Berry, L., 237",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:sfnaS5RM6jYC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SnGPuo6Feq8C",
+      "capture_row_index": 546,
+      "title_as_captured": "Fernau, Henning, 26 Fiala, Jirí, 134 Flaxman, Abraham",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:SnGPuo6Feq8C",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:mWEH9CqjF64C",
+      "capture_row_index": 547,
+      "title_as_captured": "Yossi Azar, Leah Epstein, Yossi Richter, and Gerhard J. Woeginger. All-norm",
+      "reason_code": "needs_second_review",
+      "reason": "Bibliography/contents fragment listing unrelated authors.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:mWEH9CqjF64C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+      "capture_row_index": 552,
+      "title_as_captured": "ж ла в гв л ж д з",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:LWqeokA2EBkC",
+      "capture_row_index": 553,
+      "title_as_captured": "ت ز سر ¹ث ج ط ط ط ض× سذ سض رس ض ط ذف ضسغ ز‎",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:LWqeokA2EBkC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:wMgC3FpKEyYC",
+      "capture_row_index": 554,
+      "title_as_captured": "Nicholas C. Wormald y. Department of Mathematics and Statistics, University of Melbourne VIC 3010, Australia.",
+      "reason_code": "needs_second_review",
+      "reason": "Author and institutional address line, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:wMgC3FpKEyYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:1r-w4gtu6w8C",
+      "capture_row_index": 555,
+      "title_as_captured": "THOMAS P. HAYES",
+      "reason_code": "needs_second_review",
+      "reason": "Person name only, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:1r-w4gtu6w8C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:H7nrzBkawXsC",
+      "capture_row_index": 557,
+      "title_as_captured": "Ъ в гб ж йа ж ж д з г вгвЙ гвзи ви ж гвв и к ин в Р б аигв ин",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:H7nrzBkawXsC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+      "capture_row_index": 558,
+      "title_as_captured": "Хйаи Й гагйж Р б аигв н а з в ж в гб Й гагйж ж д з",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:rTD5ala9j4wC",
+      "capture_row_index": 560,
+      "title_as_captured": "Andersson, Gunnar, 162",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:rTD5ala9j4wC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:DkZNVXde3BIC",
+      "capture_row_index": 561,
+      "title_as_captured": "Barun Chandra and Magnús M. Halldórsson. Greedy Local Improvement",
+      "reason_code": "needs_second_review",
+      "reason": "Bibliography sentence beginning with another author, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:DkZNVXde3BIC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:EPG8bYD4jVwC",
+      "capture_row_index": 562,
+      "title_as_captured": "Barun Chandra and Magnús M. Halldórsson. Approximation Algorithms for",
+      "reason_code": "needs_second_review",
+      "reason": "Bibliography sentence beginning with another author, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:EPG8bYD4jVwC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:KbBQZpvPDL4C",
+      "capture_row_index": 563,
+      "title_as_captured": "MR1832444 (2002c: 05125) 05C70 (05C80)",
+      "reason_code": "needs_second_review",
+      "reason": "Mathematical Reviews accession/classification string, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:KbBQZpvPDL4C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:An6A6Jpfc1oC",
+      "capture_row_index": 567,
+      "title_as_captured": "Gruia Ca $ linescu, Howard Karloff, and Yuval Rabani. An Improved Approximation Algorithm for Multiway Cut Dario Catalano and Rosario Gennaro. New Efficient and Secure …",
+      "reason_code": "needs_second_review",
+      "reason": "Bibliography sentence beginning with another author, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:An6A6Jpfc1oC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:GFxP56DSvIMC",
+      "capture_row_index": 569,
+      "title_as_captured": "MR1753066 (2001d: 05168) 05C80 (05C45)",
+      "reason_code": "needs_second_review",
+      "reason": "Mathematical Reviews accession/classification string, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:GFxP56DSvIMC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Xl6nMSl579sC",
+      "capture_row_index": 580,
+      "title_as_captured": "AGARWAL, PANKAJ K., 508",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:Xl6nMSl579sC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:69ZgNCALVd0C",
+      "capture_row_index": 581,
+      "title_as_captured": "SAMPATH K. KANNAN, EUGENE L. LAWLER, AND TANDY J. WARNOW. Deter",
+      "reason_code": "needs_second_review",
+      "reason": "Bibliography/author-list fragment; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:69ZgNCALVd0C",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:2l5NCbZemmgC",
+      "capture_row_index": 582,
+      "title_as_captured": "ABITEOUL, SERGE, 30",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:2l5NCbZemmgC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:LGlY6t8CeOMC",
+      "capture_row_index": 583,
+      "title_as_captured": "CSD-TR-95—052 August 1995",
+      "reason_code": "needs_second_review",
+      "reason": "Technical-report control number/date, not a research title; underlying work needs identification.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:LGlY6t8CeOMC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nZcligLrVowC",
+      "capture_row_index": 585,
+      "title_as_captured": "«v% Combinatorics, Computing",
+      "reason_code": "needs_second_review",
+      "reason": "Corrupted journal-title fragment, not a research title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:nZcligLrVowC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:PYBJJbyH-FwC",
+      "capture_row_index": 589,
+      "title_as_captured": "Managing Editors: Graham Brightwell, Andrew Thomason",
+      "reason_code": "needs_second_review",
+      "reason": "Managing editors line, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:PYBJJbyH-FwC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:QUX0mv85b1cC",
+      "capture_row_index": 590,
+      "title_as_captured": "Bokowski, Jiirgen, 161 Magidor, Menachem, 257",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:QUX0mv85b1cC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:yqoGN6RLRZoC",
+      "capture_row_index": 592,
+      "title_as_captured": "Martin Dyer School of Computer Studies, University of Leeds, Leeds, UK",
+      "reason_code": "needs_second_review",
+      "reason": "Author and institutional address line, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:yqoGN6RLRZoC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:GYcXSSpN504C",
+      "capture_row_index": 593,
+      "title_as_captured": "THEoREM 1. Suppose that a> 5. Then there exists (8= 8 (a)> 0 such that",
+      "reason_code": "needs_second_review",
+      "reason": "Theorem sentence excerpt, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:GYcXSSpN504C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:DrR-2ekChdkC",
+      "capture_row_index": 595,
+      "title_as_captured": "Althofer, Ingo, 140 Lenhart, William J., 135",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:DrR-2ekChdkC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:7BrZ7Jt4UNcC",
+      "capture_row_index": 600,
+      "title_as_captured": "Mathematical Programming thanks the following individuals for graciously giving of their time and counsel to help in the reviewing of papers in 1988.",
+      "reason_code": "needs_second_review",
+      "reason": "Journal acknowledgement of reviewers, not a Frieze publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7BrZ7Jt4UNcC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Q3-QASNKTMEC",
+      "capture_row_index": 602,
+      "title_as_captured": "Abbott, HL, 13",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:Q3-QASNKTMEC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:JdL-Xu2nR38C",
+      "capture_row_index": 604,
+      "title_as_captured": "Department of Computer Science and Statistics, Queen Mary College, University of London, Mile End Road, London El 4NS, United Kingdom",
+      "reason_code": "needs_second_review",
+      "reason": "Institutional address line; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:JdL-Xu2nR38C",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SGW5VrABaM0C",
+      "capture_row_index": 605,
+      "title_as_captured": "Ando, Kiyoshi, 87",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:SGW5VrABaM0C",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:vDZJ-YLwNdEC",
+      "capture_row_index": 610,
+      "title_as_captured": "30 Bidirectional Edges Problem: I",
+      "reason_code": "needs_second_review",
+      "reason": "Section/problem-number fragment, not a research title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:vDZJ-YLwNdEC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Og1tA8FjbJAC",
+      "capture_row_index": 617,
+      "title_as_captured": "a; ABSTRACT K-Greedy algorithms are natural generalisations of the classic",
+      "reason_code": "needs_second_review",
+      "reason": "Article abstract sentence, not title; the underlying K-Greedy Algorithms work needs a clean citation.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:Og1tA8FjbJAC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Nnq8S6OXqDYC",
+      "capture_row_index": 619,
+      "title_as_captured": "and the expectation of max",
+      "reason_code": "needs_second_review",
+      "reason": "Formula fragment, not a research title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:Nnq8S6OXqDYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:zCSUwVk65WsC",
+      "capture_row_index": 620,
+      "title_as_captured": "max1 in jD (t; i; V1; V2;::: Vt) j is at most 2 (n).",
+      "reason_code": "needs_second_review",
+      "reason": "Formula fragment, not a research title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:zCSUwVk65WsC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:URGbnSt0D2cC",
+      "capture_row_index": 626,
+      "title_as_captured": "FOCS 2024",
+      "reason_code": "needs_second_review",
+      "reason": "FOCS 2024 proceedings/event label; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:URGbnSt0D2cC",
+      "automatic_eligibility_before_review": false
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:9CGX2owmTHMC",
+      "capture_row_index": 632,
+      "title_as_captured": "Surveys: A Survey on PageRank Computing 73",
+      "reason_code": "needs_second_review",
+      "reason": "Survey/contents heading and page number, not a title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:9CGX2owmTHMC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:SgM-ki2adj0C",
+      "capture_row_index": 633,
+      "title_as_captured": "which the expected computation time is O (d\":\" n), where lim,..., e,= 0. This improves the",
+      "reason_code": "needs_second_review",
+      "reason": "Article abstract sentence, not a title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:SgM-ki2adj0C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:7VEv-pLvLSsC",
+      "capture_row_index": 638,
+      "title_as_captured": "PETER L. HAMMER",
+      "reason_code": "needs_second_review",
+      "reason": "Person name only, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7VEv-pLvLSsC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:VRfTbSk87rEC",
+      "capture_row_index": 640,
+      "title_as_captured": "Ъ в гб ж йа ж ж д з г вгвЙ гвзи ви ж в д в в в жгб и вйб ж",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:VRfTbSk87rEC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+      "capture_row_index": 641,
+      "title_as_captured": "ааз в вз Хг аз л и",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:_AeoHAGD03cC",
+      "capture_row_index": 644,
+      "title_as_captured": "NJ 08903, USA",
+      "reason_code": "needs_second_review",
+      "reason": "Postal address only, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:_AeoHAGD03cC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:nPT8s1NX_-sC",
+      "capture_row_index": 645,
+      "title_as_captured": "NJ 08903, USA",
+      "reason_code": "needs_second_review",
+      "reason": "Postal address only, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:nPT8s1NX_-sC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:-uzm3Y7AvW0C",
+      "capture_row_index": 647,
+      "title_as_captured": "Connectivity for Bridge-Addable Monotone Graph Classes 803",
+      "reason_code": "needs_second_review",
+      "reason": "Page header from paper by other named authors; no Frieze authorship shown.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:-uzm3Y7AvW0C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:k_7cPK9k7w8C",
+      "capture_row_index": 649,
+      "title_as_captured": "DISCRETE MATHEMATICS has continuously benefitted from the kind assis-tance of a great number of referees. We hereby express our gratitude for their sustained efforts, without …",
+      "reason_code": "needs_second_review",
+      "reason": "Journal thanks/referee acknowledgement, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:k_7cPK9k7w8C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:rbm3iO8VlycC",
+      "capture_row_index": 650,
+      "title_as_captured": "HAMIDOUNE, YAHYA OULD, 151",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:rbm3iO8VlycC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:JTqpx9DYBaYC",
+      "capture_row_index": 651,
+      "title_as_captured": "of Mathematics",
+      "reason_code": "needs_second_review",
+      "reason": "Journal/department title fragment, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:JTqpx9DYBaYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:pS0ncopqnHgC",
+      "capture_row_index": 652,
+      "title_as_captured": "List of Referees: Volumes 41-50",
+      "reason_code": "needs_second_review",
+      "reason": "List of referees, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:pS0ncopqnHgC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:q-HalDI95KYC",
+      "capture_row_index": 654,
+      "title_as_captured": "Jacob Abernethy Dimitris Achlioptas Nir Ailon Adi Akavia",
+      "reason_code": "needs_second_review",
+      "reason": "Long author-name list, not a research title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:q-HalDI95KYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:7wO8s98CvbsC",
+      "capture_row_index": 655,
+      "title_as_captured": "L LLe ees ss c cca aah hhi iie eer rrs ss L LLe eei iib bbn nni iiz zz",
+      "reason_code": "needs_second_review",
+      "reason": "Severely garbled journal/page text; likely duplicate of an identified code paper but not verified.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7wO8s98CvbsC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:WHdLCjDvYFkC",
+      "capture_row_index": 656,
+      "title_as_captured": "c f Combinatorics",
+      "reason_code": "needs_second_review",
+      "reason": "Journal/header fragment, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:WHdLCjDvYFkC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:FiytvqdAVhgC",
+      "capture_row_index": 657,
+      "title_as_captured": "вги гв ж в гб ОЙЫ Ь л и дж з ж а и ж а ж з",
+      "reason_code": "needs_second_review",
+      "reason": "Character-encoding corruption with no recoverable work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:FiytvqdAVhgC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:PaBasH6fAo0C",
+      "capture_row_index": 659,
+      "title_as_captured": "olume 5, Number 4",
+      "reason_code": "needs_second_review",
+      "reason": "Volume/issue header fragment, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:PaBasH6fAo0C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:ldfaerwXgEUC",
+      "capture_row_index": 80,
+      "title_as_captured": "Fink, Jirí, 1074 Frankl, Peter, 204",
+      "reason_code": "needs_second_review",
+      "reason": "Author index page; automatic quality rule already excludes it.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H8qYeA0AAAAJ&pagesize=100&citation_for_view=H8qYeA0AAAAJ:ldfaerwXgEUC",
+      "automatic_eligibility_before_review": false
+    }
+  ],
+  "explicit_retentions": [
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:5qfkUJPXOUwC",
+      "capture_row_index": 230,
+      "title_as_captured": "Multicolored trees in random graphs",
+      "reason_code": "retain",
+      "reason": "Frieze and McKay are both named by the CMU repository, despite Scholar dropping Frieze from the captured author field.",
+      "evidence_url": "https://doi.org/10.1184/R1/6478478",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:Br1UauaknNIC",
+      "capture_row_index": 474,
+      "title_as_captured": "Corrigendum: Edge-Disjoint Paths in Expander Graphs",
+      "reason_code": "retain",
+      "reason": "Dated named corrigendum to a substantive paper; retain under the correction-notice policy.",
+      "evidence_url": "https://epubs.siam.org/doi/10.1137/S0097539701395097",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:LPtt_HFRSbwC",
+      "capture_row_index": 525,
+      "title_as_captured": "Design and Analysis of Randomized and Approximation Algorithms (Dagstuhl Seminar 11241)",
+      "reason_code": "retain",
+      "reason": "Authored Dagstuhl seminar report, not merely a venue label.",
+      "evidence_url": "https://doi.org/10.4230/DagRep.1.6.24",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:yIeBiWEAh44C",
+      "capture_row_index": 574,
+      "title_as_captured": "Probability Theory and Combinatorial Optimization.",
+      "reason_code": "retain",
+      "reason": "Book review with Frieze byline; do not infer nonpublication from being a review.",
+      "evidence_url": "https://netlib.org/na-digest-html/97/v97n43.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:LXmCCkuhhTsC",
+      "capture_row_index": 618,
+      "title_as_captured": "Linear and combinatorial optimization in ordered algebraic structures: U. ZIMMERMANN Volume 10 in: Annals of Discrete Mathematics, North-Holland, Amsterdam, 1981, ix+ 380 pages …",
+      "reason_code": "retain",
+      "reason": "Book review with Frieze byline; do not infer nonpublication from the title naming another author.",
+      "evidence_url": "https://www.csd.cs.cmu.edu/publications-by-year?page=303",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:NObE97JSLecC",
+      "capture_row_index": 625,
+      "title_as_captured": "Research Feature The traveling salesperson problem: an analysis of typical instances",
+      "reason_code": "retain",
+      "reason": "Actual CMU MCS newsletter research feature authored by Alan Frieze.",
+      "evidence_url": "https://magazine.mcs.cmu.edu/math/2022-issue/research-feature/",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:IaI1MmNe2tcC",
+      "capture_row_index": 658,
+      "title_as_captured": "5.7 Random TSP",
+      "reason_code": "retain",
+      "reason": "Frieze-authored Random TSP open-problem contribution in Dagstuhl Seminar 11241 report.",
+      "evidence_url": "https://doi.org/10.4230/DagRep.1.6.24",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:MXK_kJrjxJIC",
+      "capture_row_index": 1,
+      "title_as_captured": "Stability properties of the transverse envelope equations describing intense ion beam transport",
+      "reason_code": "retain",
+      "reason": "2004 peer-reviewed Lund–Bukh beam-transport paper; this early physics work is genuine despite its absence from Bukh’s current selected Math list.",
+      "evidence_url": "https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.7.024801",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:3fE2CSJIrl8C",
+      "capture_row_index": 29,
+      "title_as_captured": "A core-particle model for periodically focused ion beams with intense space-charge",
+      "reason_code": "retain",
+      "reason": "Lund and Bukh physics coauthorship is corroborated by the publisher; do not treat the subject shift as a homonym signal.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900207003452",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:RGFaLdJalmkC",
+      "capture_row_index": 70,
+      "title_as_captured": "FAQ and erratum to “Radon partitions in convexity spaces”",
+      "reason_code": "retain",
+      "reason": "Bukh’s own writing page links an FAQ for Radon partitions; correction/FAQ may be a distinct citable note.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:PELIpwtuRlgC",
+      "capture_row_index": 73,
+      "title_as_captured": "A Bound on the Number of Edges in Graphs Without an Even Cycle (vol 26, pg 1, 2017)",
+      "reason_code": "retain",
+      "reason": "Dated, identified correction to the Bukh–Jiang even-cycle paper.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:5nxA0vEk-isC",
+      "capture_row_index": 75,
+      "title_as_captured": "Errata for “Multidimensional Kruskal–Katona theorem”",
+      "reason_code": "retain",
+      "reason": "Bukh’s own writing page links errata for the Kruskal–Katona theorem paper.",
+      "evidence_url": "https://www.borisbukh.org/writing.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:_kc_bZDykSQC",
+      "capture_row_index": 78,
+      "title_as_captured": "Extremal Problems in Combinatorial Geometry and Additive Combinatorics",
+      "reason_code": "retain",
+      "reason": "Scholar lists a Princeton doctoral thesis for Bukh, consistent with his official CMU education record; keep it while exact thesis-title verification remains open.",
+      "evidence_url": "https://www.cmu.edu/math/people/faculty/bukh.html",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:ULOm3_A8WrAC",
+      "capture_row_index": 82,
+      "title_as_captured": "Influence of conducting plate boundary conditions on the RMS envelope equations describing intense ion beam transport",
+      "reason_code": "retain",
+      "reason": "Bukh and Lund’s accelerator conference contribution is a plausible genuine historical work; preserve pending exact proceedings check.",
+      "evidence_url": "https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.7.064201",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "H8qYeA0AAAAJ",
+      "author_pub_id": "H8qYeA0AAAAJ:Zph67rFs4hoC",
+      "capture_row_index": 83,
+      "title_as_captured": "Analytical study of envelope modes for a fully depressed beam in solenoidal and quadrupole periodic transport channels",
+      "reason_code": "retain",
+      "reason": "Bukh and Lund’s accelerator conference contribution is a plausible genuine historical work; preserve pending exact proceedings check.",
+      "evidence_url": "https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.7.064201",
+      "automatic_eligibility_before_review": true
+    }
+  ],
+  "unresolved": [
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:4hFrxpcac9AC",
+      "capture_row_index": 339,
+      "title_as_captured": "IN RANDOM GRAPES",
+      "reason_code": "unresolved",
+      "reason": "IN RANDOM GRAPES may be a badly truncated genuine paper; identify source before excluding.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=300&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:4hFrxpcac9AC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:UuEBAcK4md4C",
+      "capture_row_index": 516,
+      "title_as_captured": "Special Section on the Forty-Second Annual ACM Symposium on Theory of Computing (STOC 2010)",
+      "reason_code": "unresolved",
+      "reason": "Special-section introduction credits Frieze among editors; distinguish signed editorial output from imported masthead.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:UuEBAcK4md4C",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:JavbeY_VQWIC",
+      "capture_row_index": 519,
+      "title_as_captured": "Special Issue on Algorithms and Models for the Web Graph",
+      "reason_code": "unresolved",
+      "reason": "Special-issue editorial/intro may be genuine signed work; compare the publisher page before excluding.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:JavbeY_VQWIC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:O0nohqN1r9EC",
+      "capture_row_index": 520,
+      "title_as_captured": "Special Issue on Algorithms and Models for the Web Graph",
+      "reason_code": "unresolved",
+      "reason": "Second variant of special-issue intro; identify whether separate signed output or duplicate.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:O0nohqN1r9EC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:BJbdYPG6LGMC",
+      "capture_row_index": 523,
+      "title_as_captured": "Algorithms and Models for the Web-Graph: 8th International Workshop, WAW 2011, Atlanta, GA, USA, May 27-29, 2011, Proceedings",
+      "reason_code": "unresolved",
+      "reason": "Edited WAW 2011 volume may count as legitimate edited scholarly output; policy decision needed.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:BJbdYPG6LGMC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:NtGNdKbuCngC",
+      "capture_row_index": 537,
+      "title_as_captured": "Analco workshop preface",
+      "reason_code": "unresolved",
+      "reason": "ANALCO preface with Frieze among named authors; retain until authored-prelude policy is applied.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:NtGNdKbuCngC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:ziOE8S1-AIUC",
+      "capture_row_index": 539,
+      "title_as_captured": "Random graphs",
+      "reason_code": "unresolved",
+      "reason": "Random graphs may be a short genuine proceedings contribution; title alone is insufficient.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:ziOE8S1-AIUC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:pUxgyZctzPYC",
+      "capture_row_index": 542,
+      "title_as_captured": "Analco workshop preface",
+      "reason_code": "unresolved",
+      "reason": "ANALCO preface with Frieze among named authors; retain until authored-prelude policy is applied.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:pUxgyZctzPYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:BOlwja0KXvYC",
+      "capture_row_index": 598,
+      "title_as_captured": "Combinatorics",
+      "reason_code": "unresolved",
+      "reason": "Combinatorics may be a very short signed piece or a container; identify original source.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:BOlwja0KXvYC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:RoXSNcbkSzsC",
+      "capture_row_index": 599,
+      "title_as_captured": "Combinatorics & Optimization",
+      "reason_code": "unresolved",
+      "reason": "Combinatorics & Optimization may be a signed piece or container; identify original source.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:RoXSNcbkSzsC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:oXKBmVzQOggC",
+      "capture_row_index": 608,
+      "title_as_captured": "Alexander HG Rinnooy Kan (Erasmus University, The Netherlands) Theory and applications of combinatorial optimization Deterministic and probabilistic analysis of algorithms …",
+      "reason_code": "unresolved",
+      "reason": "Garbled heading of a mathematical-programming publication; identify the actual paper before excluding.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:oXKBmVzQOggC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:zfsRRabFVBUC",
+      "capture_row_index": 631,
+      "title_as_captured": "Markov chains and sampling methods for contiguous partitions of graphs",
+      "reason_code": "unresolved",
+      "reason": "APS/AMS meeting abstract may be a distinct scholarly output; distinguish from talk-only listing.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:zfsRRabFVBUC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:4tNoA7Af41QC",
+      "capture_row_index": 634,
+      "title_as_captured": "Algorithms for assignment problems",
+      "reason_code": "unresolved",
+      "reason": "Algorithms for assignment problems may be a genuine early report/chapter; do not reject on generic title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:4tNoA7Af41QC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:kvJssbFybhEC",
+      "capture_row_index": 635,
+      "title_as_captured": "ASYMMETRIC TRAVELLING SALESMAN PROBLEMIS",
+      "reason_code": "unresolved",
+      "reason": "Garbled asymmetric-TSP title may refer to a genuine paper; locate clean record.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:kvJssbFybhEC",
+      "automatic_eligibility_before_review": true
+    },
+    {
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "author_pub_id": "EqKRQ4YAAAAJ:XDrR66g3YHsC",
+      "capture_row_index": 639,
+      "title_as_captured": "Thresholds: 4. Logic",
+      "reason_code": "unresolved",
+      "reason": "Thresholds: 4. Logic may be a book subsection; determine whether an authored chapter.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:XDrR66g3YHsC",
+      "automatic_eligibility_before_review": true
+    }
+  ]
+}
