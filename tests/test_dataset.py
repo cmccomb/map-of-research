@@ -266,6 +266,109 @@ def test_curated_doi_reconciles_later_scholar_rows_without_losing_provenance(
     assert person["publication_observation_count"] == 4
 
 
+def test_verified_native_id_reconciles_one_exact_doi_free_scholar_row(
+    tmp_path,
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "one"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/faculty",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    base = {
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "department_ids": ["ece"],
+        "memberships": [{"department_id": "ece", "included": True}],
+        "title": "A Conference Abstract",
+        "authors": "One and Two",
+        "year": 2012,
+        "venue": "Meeting",
+        "citation": "Meeting 2012",
+        "citation_count": 0,
+        "source_url": "https://example.test/abstract",
+        "source_record_json": "{}",
+        "source_doi": "",
+        "source_native_id": "",
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "external_coauthors": [],
+        "embedding": [0.0, 1.0],
+    }
+    curated = {
+        **base,
+        "scholar_id": "",
+        "author_pub_id": "curated-native:person-one:egu2012:abstract-1",
+        "source_type": "curated_verified",
+        "source_native_id": "egu2012:abstract-1",
+        "source_verified_at": "2026-10-24",
+        "source_verification_urls": ["https://example.test/abstract"],
+        "fetched_at_utc": "",
+    }
+    scholar = {
+        **base,
+        "scholar_id": "one",
+        "author_pub_id": "one:later",
+        "source_type": "scholar",
+        "fetched_at_utc": "2026-11-01T12:00:00+00:00",
+    }
+    tables = build_dataset_tables(pandas.DataFrame([curated, scholar]), registry)
+    observations = tables["profile_publications"].set_index("author_pub_id")
+    assert observations.loc["one:later", "work_match_method"] == (
+        "curated_native_title_year"
+    )
+    assert observations.loc["one:later", "work_id"] == observations.loc[
+        curated["author_pub_id"], "work_id"
+    ]
+    assert len(tables["works"]) == 1
+    work = tables["works"].iloc[0]
+    assert work["doi"] == ""
+    assert work["source_native_ids"] == ["egu2012:abstract-1"]
+    assert work["source_types"] == ["curated_verified", "scholar"]
+    assert work["observation_count"] == 2
+
+    other_curated = {
+        **curated,
+        "author_pub_id": "curated-native:person-one:agu2012:other",
+        "source_native_id": "agu2012:other",
+    }
+    ambiguous = build_dataset_tables(
+        pandas.DataFrame([curated, other_curated, scholar]), registry
+    )
+    assert len(ambiguous["works"]) == 3
+    scholar_row = ambiguous["profile_publications"].set_index("author_pub_id").loc[
+        "one:later"
+    ]
+    assert scholar_row["work_match_method"] == "normalized_title_year"
+
+    doi_curated = {
+        **curated,
+        "author_pub_id": "curated-doi:person-one:10.1000/article",
+        "source_native_id": "",
+        "source_doi": "10.1000/article",
+    }
+    mixed_identifiers = build_dataset_tables(
+        pandas.DataFrame([curated, doi_curated, scholar]), registry
+    )
+    assert len(mixed_identifiers["works"]) == 3
+    scholar_row = mixed_identifiers["profile_publications"].set_index(
+        "author_pub_id"
+    ).loc["one:later"]
+    assert scholar_row["work_match_method"] == "normalized_title_year"
+
+
 def test_scholar_fields_win_when_a_verified_doi_record_matches(tmp_path) -> None:
     paths = write_registry(
         tmp_path / "registry",
