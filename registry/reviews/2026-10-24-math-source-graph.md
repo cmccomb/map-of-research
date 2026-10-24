@@ -147,3 +147,35 @@ Math-linked works, 274 of which pass the initial map-eligibility policy; the
 later spatial audit can refine visibility. Those counts precede the second
 direct profile batch above. Missing caches for other Math people remain a
 collection gap, not evidence of no publications.
+
+## Bounded Scholar batch 3 (staged for review)
+
+A direct browser capture of the [CMU-linked Ian Tice profile](https://www.cmu.edu/math/people/faculty/tice.html)
+returned all 63 visible Scholar rows. A second direct capture of the
+[CMU-linked Robert Pego profile](https://www.cmu.edu/math/people/faculty/pego.html)
+returned all 196 visible rows. The requests were 107 seconds apart. The
+browser was closed after the second capture; no other profile was requested
+in this batch. Each captured row has its Scholar observation ID, citation
+link, and the raw HTML/JSON capture hashes in the snapshot receipt. The
+validated local raw snapshot has 39,147 observations: 39,129 from 222 cached
+Scholar profiles and 18 curated observations. It has not been uploaded.
+
+The separate reviewed-exclusion manifest adds 37 decisions keyed to exact
+Scholar observation IDs: three for Tice and 34 for Pego. Before these
+decisions, all 63 Tice rows and 191 of Pego's 196 rows passed automatic
+quality screening. After them, 60 Tice rows and 157 Pego rows remain
+eligible. The 37 excluded observations remain in the raw table with their
+reasons and evidence; they do not create map authorships. Nineteen Pego rows
+are [NSF awards](https://www.nsf.gov/awardsearch/), and four are labels for
+[CMU's Center for Nonlinear Analysis](https://www.cmu.edu/math/cna/).
+Other entries include a Tice seminar and journal title, fragments, and
+corrupted duplicate citations. Pego's [CMU publication list](https://www.math.cmu.edu/~bobpego/)
+confirms the retained scholarly works behind the CNA report-number variants.
+The original [2026 Hausdorff corrigendum](https://sites.math.duke.edu/~jliu/pdf/LiuPego_TAMS_2026.pdf)
+is retained; only a garbled duplicate title is excluded.
+
+The [Majda memorial](https://people.math.wisc.edu/~stechmann/publications/MajdaMemorial-EngquistSouganidisStechmannVicol2023preprint.pdf)
+is kept provisionally. Its front byline has four authors, while Pego
+contributed a signed section, so an automatic false-attribution decision
+would overstate what the evidence establishes. No unique identified
+research work was removed in this review.
