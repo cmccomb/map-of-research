@@ -46,13 +46,26 @@ the current registry schema; they are not asserted to be academic departments.
 The linked reviews and source CSVs document role decisions, identities,
 directly linked Scholar IDs, and unresolved directory gaps.
 
-The [four-school display-primary ledger](reviews/2026-10-24-other-schools-primary.md)
-covers 105 registered Scholar-ID people in the added-school scope: 102 have a
-source-backed display unit and three remain explicitly unresolved. Its three
-`primary_department_*` fields align with [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35),
-which adds primary fields to the canonical people schema. The current roster
-PR retains the decisions in a dated audit file so the primary-schema change
-can integrate them without collapsing joint memberships.
+The primary department is a single **display affiliation**, not a replacement
+for memberships or a claim about university HR records. A person with one
+included academic unit inherits that verified membership. CMU-Africa is an
+academic unit under Engineering for this dataset; CMU Silicon Valley is a
+campus facet and cannot be a primary. Excluded courtesy, adjunct, affiliate,
+and former roles cannot supply a primary on their own. Multiple eligible units
+require a source-backed choice or a clearly labeled advising-count or title
+inference. Where the evidence does not distinguish one, the primary stays
+blank. No alphabetical tie-break is used.
+
+The [primary-department review ledger](reviews/2026-10-24-primary-departments.md)
+records all 188 people with multiple candidate units. Across 2,001 registry
+people, 1,441 included people have a display primary and 560 remain unresolved,
+including all 520 excluded-only people. Of 1,481 included people, 40 remain
+unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
+Andrew Ilyas and Chris Hendrickson remain unresolved. The
+[four-school review](reviews/2026-10-24-other-schools-primary.md) and
+[Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence;
+Sekerka's Math/Physics tie remains unresolved. Publication and school filters
+continue to use all included memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,

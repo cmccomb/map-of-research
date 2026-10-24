@@ -19,6 +19,10 @@ PEOPLE_COLUMNS = (
     "orcid",
     "homepage_url",
     "notes",
+    "primary_department_id",
+    "primary_department_source_url",
+    "primary_department_verified_at",
+    "primary_department_basis",
 )
 MEMBERSHIP_COLUMNS = (
     "person_id",
@@ -43,6 +47,10 @@ SCHOOL_COLUMNS = (
     "directory_url",
 )
 INCLUDED_ROLES = frozenset({"faculty", "teaching", "emeritus"})
+CAMPUS_ONLY_IDS = frozenset({"cmu-silicon-valley"})
+EXPLICIT_PRIMARY_BASES = frozenset(
+    {"reviewed", "inferred_advisee_count", "inferred_profile_title"}
+)
 KNOWN_ROLES = INCLUDED_ROLES | {
     "adjunct",
     "affiliate",
@@ -76,6 +84,20 @@ class Person:
     orcid: str
     homepage_url: str
     notes: str
+    primary_department_id: str = ""
+    primary_department_source_url: str = ""
+    primary_department_verified_at: str = ""
+    primary_department_basis: str = ""
+
+
+@dataclass(frozen=True)
+class PrimaryAffiliation:
+    """A map display affiliation, with its public evidence and decision basis."""
+
+    department_id: str
+    source_url: str
+    verified_at: str
+    basis: str
 
 
 @dataclass(frozen=True, order=True)
@@ -204,6 +226,37 @@ class Registry:
             for school in sorted(self.schools, key=lambda item: item.school_id)
         }
 
+    def primary_affiliation(self, person_id: str) -> PrimaryAffiliation:
+        """Prefer an evidence-reviewed choice; derive only unambiguous cases."""
+
+        person = self.people_by_id[person_id]
+        if person.primary_department_id:
+            return PrimaryAffiliation(
+                person.primary_department_id,
+                person.primary_department_source_url,
+                person.primary_department_verified_at,
+                person.primary_department_basis,
+            )
+        memberships = [item for item in self.memberships if item.person_id == person_id]
+        included = [item for item in memberships if item.included]
+        departments = {
+            item.department_id
+            for item in included
+            if item.department_id not in CAMPUS_ONLY_IDS
+        }
+        if len(departments) != 1:
+            return PrimaryAffiliation("", "", "", "unresolved")
+        membership = max(
+            (item for item in included if item.department_id in departments),
+            key=lambda item: (item.verified_at, item.source_url),
+        )
+        return PrimaryAffiliation(
+            membership.department_id,
+            membership.source_url,
+            membership.verified_at,
+            "single_included_membership",
+        )
+
 
 def _read_rows(path: Path, expected_columns: Iterable[str]) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8-sig") as handle:
@@ -295,6 +348,38 @@ def load_registry(
         if person.orcid and not ORCID_PATTERN.fullmatch(person.orcid):
             raise ValueError(f"Invalid ORCID for {person.person_id}: {person.orcid!r}")
         _validate_https_url(person.homepage_url, field="homepage_url")
+        _validate_https_url(
+            person.primary_department_source_url,
+            field="primary_department_source_url",
+        )
+        _validate_date(
+            person.primary_department_verified_at,
+            field="primary_department_verified_at",
+        )
+        if person.primary_department_id:
+            if person.primary_department_id in CAMPUS_ONLY_IDS:
+                raise ValueError(
+                    f"Primary department cannot be a campus: {person.person_id}"
+                )
+            if not (
+                person.primary_department_source_url
+                and person.primary_department_verified_at
+            ):
+                raise ValueError(
+                    f"Primary department needs source and date: {person.person_id}"
+                )
+            if person.primary_department_basis not in EXPLICIT_PRIMARY_BASES:
+                raise ValueError(
+                    f"Primary department needs a valid basis: {person.person_id}"
+                )
+        elif (
+            person.primary_department_source_url
+            or person.primary_department_verified_at
+            or person.primary_department_basis
+        ):
+            raise ValueError(
+                f"Primary department provenance needs an ID: {person.person_id}"
+            )
         seen_person_ids.add(person.person_id)
         people.append(person)
 
@@ -393,6 +478,22 @@ def load_registry(
 
     if not people or not memberships or not departments:
         raise ValueError("Normalized registry files cannot be empty")
+    memberships_by_person: dict[str, list[Membership]] = {}
+    for membership in memberships:
+        memberships_by_person.setdefault(membership.person_id, []).append(membership)
+    for person in people:
+        if not person.primary_department_id:
+            continue
+        options = memberships_by_person.get(person.person_id, [])
+        valid = {
+            item.department_id
+            for item in options
+            if item.included and item.department_id not in CAMPUS_ONLY_IDS
+        }
+        if person.primary_department_id not in valid:
+            raise ValueError(
+                f"Primary department is not an eligible membership: {person.person_id}"
+            )
     return Registry(
         people=tuple(sorted(people)),
         memberships=tuple(sorted(memberships)),

@@ -49,6 +49,10 @@ def write_registry(
             "orcid",
             "homepage_url",
             "notes",
+            "primary_department_id",
+            "primary_department_source_url",
+            "primary_department_verified_at",
+            "primary_department_basis",
         ),
         people,
     )

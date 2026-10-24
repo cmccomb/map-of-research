@@ -125,6 +125,342 @@ def test_registry_retains_one_profile_across_schools(tmp_path: Path) -> None:
     assert len(profiles) == 1
     assert profiles[0].department_ids == ("ece", "s3d")
     assert registry.departments_by_id["s3d"].school_id == "scs"
+    assert registry.primary_affiliation("person-cross-school").basis == "unresolved"
+
+
+@pytest.mark.parametrize(
+    "basis", ["reviewed", "inferred_advisee_count", "inferred_profile_title"]
+)
+def test_primary_department_requires_reviewed_evidence_for_multiple_memberships(
+    tmp_path: Path,
+    basis: str,
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-joint",
+                "display_name": "Joint Faculty",
+                "scholar_id": "jointAAAAJ",
+                "primary_department_id": "s3d",
+                "primary_department_source_url": "https://example.test/joint-profile",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": basis,
+            },
+            {"person_id": "person-single", "display_name": "Single Faculty"},
+        ],
+        memberships=[
+            {
+                "person_id": "person-joint",
+                "department_id": department_id,
+                "role": "faculty",
+                "included": "true",
+                "source_url": f"https://example.test/{department_id}",
+                "verified_at": "2026-10-24",
+            }
+            for department_id in ("ece", "s3d")
+        ]
+        + [
+            {
+                "person_id": "person-single",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "title": "Electrical and Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "s3d",
+                "school_id": "scs",
+                "title": "Software and Societal Systems Department",
+                "directory_url": "https://example.test/s3d",
+            },
+        ],
+    )
+    registry = load_registry(people_path, memberships_path, departments_path)
+    joint = registry.primary_affiliation("person-joint")
+    assert (joint.department_id, joint.basis) == ("s3d", basis)
+    assert joint.source_url == "https://example.test/joint-profile"
+    single = registry.primary_affiliation("person-single")
+    assert (single.department_id, single.basis) == ("ece", "single_included_membership")
+    assert single.source_url == "https://example.test/ece"
+
+
+def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {"person_id": "person-campus", "display_name": "Campus Only"},
+            {"person_id": "person-academic", "display_name": "Campus and Academic"},
+            {"person_id": "person-africa", "display_name": "CMU-Africa Faculty"},
+            {
+                "person_id": "person-reviewed",
+                "display_name": "Reviewed Academic",
+                "primary_department_id": "iii",
+                "primary_department_source_url": "https://example.test/iii-profile",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": "reviewed",
+            },
+        ],
+        memberships=[
+            {
+                "person_id": person_id,
+                "department_id": "cmu-silicon-valley",
+                "role": "teaching",
+                "included": "true",
+                "source_url": "https://example.test/campus",
+                "verified_at": "2026-10-24",
+            }
+            for person_id in ("person-campus", "person-academic", "person-reviewed")
+        ]
+        + [
+            {
+                "person_id": "person-academic",
+                "department_id": "iii",
+                "role": "teaching",
+                "included": "true",
+                "source_url": "https://example.test/iii",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-reviewed",
+                "department_id": "iii",
+                "role": "teaching",
+                "included": "true",
+                "source_url": "https://example.test/iii",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-africa",
+                "department_id": "cmu-africa",
+                "role": "teaching",
+                "included": "true",
+                "source_url": "https://example.test/africa",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-africa",
+                "department_id": "ece",
+                "role": "courtesy",
+                "included": "false",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-10-24",
+            },
+        ],
+        departments=[
+            {
+                "department_id": "cmu-silicon-valley",
+                "title": "CMU Silicon Valley",
+                "directory_url": "https://example.test/campus",
+            },
+            {
+                "department_id": "iii",
+                "title": "Integrated Innovation Institute",
+                "directory_url": "https://example.test/iii",
+            },
+            {
+                "department_id": "cmu-africa",
+                "title": "CMU-Africa",
+                "directory_url": "https://example.test/africa",
+            },
+            {
+                "department_id": "ece",
+                "title": "Electrical and Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+        ],
+    )
+    registry = load_registry(people_path, memberships_path, departments_path)
+    assert registry.primary_affiliation("person-campus").basis == "unresolved"
+    assert registry.primary_affiliation("person-academic").department_id == "iii"
+    assert registry.primary_affiliation("person-reviewed").department_id == "iii"
+    assert registry.primary_affiliation("person-africa").department_id == "cmu-africa"
+
+
+def test_primary_department_rejects_campus(tmp_path: Path) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-campus",
+                "display_name": "Campus Only",
+                "primary_department_id": "cmu-silicon-valley",
+                "primary_department_source_url": "https://example.test/campus",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": "reviewed",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-campus",
+                "department_id": "cmu-silicon-valley",
+                "role": "teaching",
+                "included": "true",
+                "source_url": "https://example.test/campus",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "cmu-silicon-valley",
+                "title": "CMU Silicon Valley",
+                "directory_url": "https://example.test/campus",
+            }
+        ],
+    )
+    with pytest.raises(ValueError, match="Primary department cannot be a campus"):
+        load_registry(people_path, memberships_path, departments_path)
+
+
+def test_primary_department_rejects_unsupported_membership(tmp_path: Path) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-test",
+                "display_name": "Test",
+                "primary_department_id": "bme",
+                "primary_department_source_url": "https://example.test/profile",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": "reviewed",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-test",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-test",
+                "department_id": "bme",
+                "role": "courtesy",
+                "included": "false",
+                "source_url": "https://example.test/bme",
+                "verified_at": "2026-10-24",
+            },
+        ],
+    )
+    with pytest.raises(ValueError, match="not an eligible membership"):
+        load_registry(people_path, memberships_path, departments_path)
+
+
+def test_primary_department_rejects_unspecified_decision_basis(tmp_path: Path) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-test",
+                "display_name": "Test",
+                "primary_department_id": "ece",
+                "primary_department_source_url": "https://example.test/profile",
+                "primary_department_verified_at": "2026-10-24",
+                "primary_department_basis": "alphabetical",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-test",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    with pytest.raises(ValueError, match="valid basis"):
+        load_registry(people_path, memberships_path, departments_path)
+
+
+@pytest.mark.parametrize(
+    ("primary_id", "source_url", "verified_at", "message"),
+    [
+        ("ece", "", "2026-10-24", "needs source and date"),
+        ("", "https://example.test/profile", "", "provenance needs an ID"),
+    ],
+)
+def test_primary_department_provenance_is_complete(
+    tmp_path: Path,
+    primary_id: str,
+    source_url: str,
+    verified_at: str,
+    message: str,
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-test",
+                "display_name": "Test",
+                "primary_department_id": primary_id,
+                "primary_department_source_url": source_url,
+                "primary_department_verified_at": verified_at,
+                "primary_department_basis": "reviewed" if primary_id else "",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-test",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/ece",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    with pytest.raises(ValueError, match=message):
+        load_registry(people_path, memberships_path, departments_path)
+
+
+def test_primary_review_ledger_covers_every_ambiguous_registry_identity() -> None:
+    registry = load_registry()
+    ledger_path = Path("registry/reviews/2026-10-24-primary-departments.csv")
+    with ledger_path.open(newline="", encoding="utf-8") as handle:
+        review_rows = list(csv.DictReader(handle))
+    reviews = {row["person_id"]: row for row in review_rows}
+    assert len(reviews) == len(review_rows)
+    ambiguous = set()
+    for person in registry.people:
+        memberships = [
+            item for item in registry.memberships if item.person_id == person.person_id
+        ]
+        included = {item.department_id for item in memberships if item.included}
+        candidates = included or {item.department_id for item in memberships}
+        if len(candidates) > 1:
+            ambiguous.add(person.person_id)
+            review = reviews[person.person_id]
+            assert review["review_source_urls"].startswith("https://")
+            primary = registry.primary_affiliation(person.person_id)
+            assert review["primary_department_id"] == primary.department_id
+            assert review["review_status"] == (
+                person.primary_department_basis
+                if person.primary_department_id
+                else "derived"
+                if primary.department_id
+                else "unresolved"
+            )
+        else:
+            primary = registry.primary_affiliation(person.person_id)
+            included_academic = {
+                item.department_id for item in memberships if item.included
+            } - registry_module.CAMPUS_ONLY_IDS
+            if not included_academic:
+                assert primary.basis == "unresolved"
+            else:
+                assert primary.department_id
+    assert set(reviews) == ambiguous
 
 
 @pytest.mark.parametrize(

@@ -1161,6 +1161,10 @@ def test_map_artifact_tracks_cross_school_membership_once() -> None:
         "engineering",
         "scs",
     ]
+    assert artifact["catalogs"]["faculty"][0]["primary_department_id"] == ""
+    assert (
+        artifact["catalogs"]["faculty"][0]["primary_department_basis"] == "unresolved"
+    )
     school_counts = {
         school["school_id"]: school["publication_count"]
         for school in artifact["catalogs"]["schools"]
