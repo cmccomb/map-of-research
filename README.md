@@ -4,7 +4,7 @@
 publication corpus. Its normalized school hierarchy has dated faculty
 rosters for all seven CMU schools: Engineering, SCS, MCS, CFA, Dietrich,
 Heinz, and Tepper. It collects small, explicit batches of
-public Google Scholar profiles and retains separately verified DOI records
+public Google Scholar profiles and retains separately verified work records
 for publications missing from the profile cache. It publishes one versioned
 Hugging Face dataset and builds one browser-ready publication artifact. The
 dataset ID retains its original Engineering name; the manifest records the
@@ -22,9 +22,10 @@ The visualization repositories `map-of-eng` and `map-of-collaboration` do
 2. A cache-first `scholarly` collector refreshes at most two unique profiles in
    an explicitly started run. It never uses proxies or attempts to bypass a
    block.
-3. `data/curated/works.json` holds separately verified DOI observations,
-   including the Tetali–Erdős and Mathematical Sciences–MSE papers, with
-   source URLs, verification dates, and external coauthor identities.
+3. `data/curated/works.json` holds separately verified DOI and source-native
+   observations, including the Tetali–Erdős papers and historical Donahue
+   conference items, with source URLs, verification dates, and any external
+   coauthor identities.
    The raw Parquet snapshot and checksum manifest bind both the registry and
    curated source on the `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
@@ -152,17 +153,18 @@ faculty identities and appointments only; they do not add publication data.
 ## Dataset grain
 
 The lossless `profile_publications` config retains each Scholar profile
-observation and each explicitly marked `curated_verified` DOI record with its
-source metadata. `works` conservatively collapses observations by DOI or exact
-normalized title and year; a DOI-less Scholar record matches a curated DOI only
-when title and year match exactly one curated work. `authorships` makes that
+observation and each explicitly marked `curated_verified` record with its
+source metadata. `works` conservatively collapses observations by DOI, a
+curated source-native ID, or exact normalized title and year. A DOI-less
+Scholar record matches a curated identity only when its title and year match
+exactly one curated work. `authorships` makes that
 derivation reversible. `people` includes registered people even when they have
 no verified Scholar profile or publications. Curated records never count as
 Scholar profile refreshes.
 
 For a verified profile, its visible Google Scholar rows are the primary
 publication source. Official CMU pages establish the profile identity. Curated
-DOI records are clearly labeled supplemental evidence for works missing from
+records are clearly labeled supplemental evidence for works missing from
 the Scholar cache; they do not redefine whether the visible profile was fully
 captured. The saved raw rows remain available when a specific attribution or
 nonpublication needs review.

@@ -358,6 +358,7 @@ def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> No
     works["external_coauthors"] = [[external]]
     works["external_coauthor_ids"] = [[external["person_id"]]]
     works["source_types"] = [["curated_verified"]]
+    works["source_native_ids"] = [["egu2012:abstract-1"]]
     works["source_verified_at"] = "2026-10-24"
     works["source_verification_urls"] = [["https://example.test/publisher"]]
     works["last_fetched_at_utc"] = ""
@@ -367,6 +368,7 @@ def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> No
     )
     point = artifact["points"][0]
     assert point["source_types"] == ["curated_verified"]
+    assert point["source_native_ids"] == ["egu2012:abstract-1"]
     assert point["source_verified_at"] == "2026-10-24"
     assert point["source_verification_urls"] == ["https://example.test/publisher"]
     assert point["external_coauthor_ids"] == ["external-paul-erdos"]

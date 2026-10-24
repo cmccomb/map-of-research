@@ -28,7 +28,7 @@ from .registry import (
     unique_profiles,
 )
 
-SNAPSHOT_SCHEMA_VERSION = 5
+SNAPSHOT_SCHEMA_VERSION = 6
 MANIFEST_SCHEMA_VERSION = 1
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
@@ -56,12 +56,14 @@ REQUIRED_COLUMNS = {
     "fetched_at_utc",
     "source_type",
     "source_doi",
+    "source_native_id",
     "source_verified_at",
     "source_verification_urls",
     "external_coauthors",
 }
 CURATED_SCHEMA_VERSION = 1
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+\Z", re.IGNORECASE)
+NATIVE_ID_PATTERN = re.compile(r"[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._:/-]*\Z")
 
 
 def _parse_year(value: Any) -> int | None:
@@ -134,6 +136,7 @@ def _publication_row(
         "fetched_at_utc": fetched_at_utc,
         "source_type": "scholar",
         "source_doi": str(publication.get("doi") or "").strip(),
+        "source_native_id": "",
         "source_verified_at": "",
         "source_verification_urls": [],
         "external_coauthors": [],
@@ -210,11 +213,20 @@ def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
                 f"Curated work has no active registered faculty: {person_id}"
             )
         doi = str(work.get("doi") or "").strip().casefold()
-        if not DOI_PATTERN.fullmatch(doi):
+        native_id = str(work.get("source_native_id") or "").strip().casefold()
+        if doi and not DOI_PATTERN.fullmatch(doi):
             raise ValueError(f"Curated work has an invalid DOI: {doi}")
-        key = (person_id, doi)
+        if native_id and not NATIVE_ID_PATTERN.fullmatch(native_id):
+            raise ValueError(
+                f"Curated work has an invalid source_native_id: {native_id}"
+            )
+        if bool(doi) == bool(native_id):
+            raise ValueError("Curated work needs exactly one DOI or source_native_id")
+        identifier = f"doi:{doi}" if doi else f"native:{native_id}"
+        key = (person_id, identifier)
         if key in seen:
-            raise ValueError(f"Duplicate curated faculty DOI: {key}")
+            kind = "DOI" if doi else "source_native_id"
+            raise ValueError(f"Duplicate curated faculty {kind}: {key}")
         seen.add(key)
         title = str(work.get("title") or "").strip()
         authors = str(work.get("authors") or "").strip()
@@ -238,6 +250,9 @@ def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
             _https_url(url, field="source_verification_urls")
             for url in verification_urls
         ]
+        source_url = _https_url(work.get("source_url"), field="source_url")
+        if native_id and source_url not in verified_urls:
+            raise ValueError("Curated source_native_id URL needs verification")
         external_ids = work.get("external_coauthor_ids", [])
         if not isinstance(external_ids, list) or any(
             str(item) not in external_by_id for item in external_ids
@@ -251,20 +266,25 @@ def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
                 "faculty": person.display_name,
                 "department_ids": department_ids,
                 "memberships": _memberships(memberships),
-                "author_pub_id": f"curated-doi:{person_id}:{doi}",
+                "author_pub_id": (
+                    f"curated-doi:{person_id}:{doi}"
+                    if doi
+                    else f"curated-native:{person_id}:{native_id}"
+                ),
                 "title": title,
                 "authors": authors,
                 "year": year,
                 "venue": venue,
                 "citation": str(work.get("citation") or "").strip(),
                 "citation_count": 0,
-                "source_url": _https_url(work.get("source_url"), field="source_url"),
+                "source_url": source_url,
                 "source_record_json": json.dumps(
                     work, ensure_ascii=False, sort_keys=True, separators=(",", ":")
                 ),
                 "fetched_at_utc": "",
                 "source_type": "curated_verified",
                 "source_doi": doi,
+                "source_native_id": native_id,
                 "source_verified_at": verified_at,
                 "source_verification_urls": verified_urls,
                 "external_coauthors": [
@@ -327,8 +347,11 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot contains an unknown source type")
     if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
         raise ValueError("Scholar observations need a Scholar identity")
-    if frame.loc[frame["source_type"] == "curated_verified", "source_doi"].eq("").any():
-        raise ValueError("Curated observations need a DOI")
+    curated = frame.loc[frame["source_type"] == "curated_verified"]
+    if curated["source_doi"].eq("").eq(curated["source_native_id"].eq("")).any():
+        raise ValueError(
+            "Curated observations need exactly one DOI or source_native_id"
+        )
     duplicate_mask = frame.duplicated(
         subset=["scholar_id", "author_pub_id"],
         keep=False,
