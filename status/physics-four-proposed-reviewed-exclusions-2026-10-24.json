@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_proposed_not_applied",
+  "reviewed_at": "2026-10-24",
+  "producer_main_checked_commit": "6c97d571",
+  "already_merged_exclusion_count": 5,
+  "existing_manifest_path": "data/curated/scholar-exclusions.json",
+  "note": "These six newly verified exact decisions are additional to five already on producer main. Raw capture and cache rows stay intact. A separate producer PR must apply all six before this source batch is ingested.",
+  "exclusions": [
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:-f6ydRqryjwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second Scholar record of the Nature Communications 11:1046 article; retain complete-author row 9 (ZEHOKUkAAAAJ:KlAtU1dfN6UC).",
+      "evidence_url": "https://www.nature.com/articles/s41467-020-14819-7",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:ZHo1McVdvXMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same PTEP 2016 article 12C105 as retained row 12 (jrRg4PAAAAAJ:roLk4NBRz8UC); Lin Fei is the expanded first-author name.",
+      "evidence_url": "https://academic.oup.com/ptep/article/2016/12/12C105/2624094",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:dfsIfKJdRG4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same arXiv:2606.19732 paper as retained row 55 (jrRg4PAAAAAJ:cFHS6HbyZ2cC); retain the fuller first-author spelling.",
+      "evidence_url": "https://arxiv.org/abs/2606.19732",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:z8nqeaKD1nsC",
+      "reason_code": "nonpublication",
+      "reason": "Scholar title is an affiliation/address fragment from Sijacki et al., not the article title or a separate work.",
+      "evidence_url": "https://arxiv.org/pdf/0705.2238",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:8dzOF9BpDQoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Scholar title is an abstract fragment of KwangHo Park’s 2012 University of Maryland dissertation, not a Di Matteo work.",
+      "evidence_url": "https://www.astro.umd.edu/sites/default/files/theses/people/2012Park.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:mvPsJ3kp5DgC",
+      "reason_code": "nonpublication",
+      "reason": "Supplementary Methods for retained Nature article row 1 (79uTAy8AAAAJ:TFP_iSt0sucC), not a separate research work.",
+      "evidence_url": "https://www.nature.com/articles/nature03335",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}
