@@ -4184,6 +4184,150 @@
       "reason": "NSF award 0700174 has this project title; this row is a grant record rather than a research publication.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/0700174.json",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2112872, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2112872.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:NhqRSupF_l8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0942572, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0942572.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:vRqMK49ujn8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0837734, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0837734.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:LPZeul_q3PIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF instrumentation award 0821296, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0821296.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:fQNAKQ3IYiAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9305002, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9305002.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:5Ul4iDaHHb8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF instrumentation award 9217013, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9217013.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:8AbLer7MMksC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9005374, not an authored research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9005374.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:B3FOqHPlNUQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Stanford affiliation fragment with the same authors and page as the retained Specificities of Germ Line Antibodies chapter.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4684-5745-2_24",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:4fKUyHm3Qg0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Stanford affiliation fragment with the same authors and page as the retained Specificities of Germ Line Antibodies chapter.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4684-5745-2_24",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:2osOgNQ5qMEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Chapter-abstract sentence imported as a title, duplicating the retained Specificities of Germ Line Antibodies chapter.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4684-5745-2_24",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:sSrBHYA8nusC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "CMU street-address fragment sharing the authors, proceedings, and opening page of the retained 1987 membrane-protein chapter.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:pyW8ca7W8N0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Sentence fragment sharing the authors, proceedings, and opening page of the retained 1987 membrane-protein chapter.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:hqOjcs7Dif8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Journal section header prefixed to the same 2001 Der p 2 article retained on this profile.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S002192581946242X",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:geHnlv5EZngC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Abbreviated title and incomplete venue duplicate the complete 2023 Protein Science article retained on this profile.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/37632831/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-less repetition of the complete 2018 Biochemistry thymidylate-kinase article retained on this profile.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29684273/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:u9iWguZQMMsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-less repetition of the complete 2018 Biochemistry thymidylate-kinase article retained on this profile.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29684273/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:p2g8aNsByqUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher identifies a different 2015 Polish article and three authors; the captured 2013 conference metadata is mismatched and does not establish Rule authorship.",
+      "evidence_url": "https://www.e-mentor.edu.pl/artykul/index/numer/60/id/1184",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "n6flaAsAAAAJ",
+      "author_pub_id": "n6flaAsAAAAJ:tOudhMTPpwUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CMU-hosted source shows this is an address fragment from a Mark Fox and Norman Sadeh scheduling paper, with no Gordon Rule authorship.",
+      "evidence_url": "https://iiif.library.cmu.edu/file/Newell_box00099_fld07543_doc0001/Newell_box00099_fld07543_doc0001.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
