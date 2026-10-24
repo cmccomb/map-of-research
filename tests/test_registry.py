@@ -954,6 +954,89 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
 
 
 @pytest.mark.parametrize(
+    ("person_id", "source_url", "included_ids", "recorded_ids"),
+    [
+        (
+            "person-farnamjahanian-ec16c348",
+            "https://www.csd.cmu.edu/people/faculty/farnam-jahanian",
+            {"csd", "heinz-faculty", "heinz-ism"},
+            {"csd", "ece", "heinz-faculty", "heinz-ism"},
+        ),
+        (
+            "person-rogerdannenberg-73c4f6bd",
+            "https://www.csd.cmu.edu/people/faculty/roger-dannenberg",
+            {"csd", "music"},
+            {"csd", "music"},
+        ),
+    ],
+)
+def test_csd_department_field_homes_preserve_verified_memberships(
+    person_id: str,
+    source_url: str,
+    included_ids: set[str],
+    recorded_ids: set[str],
+) -> None:
+    registry = load_registry()
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "department",
+        "csd",
+        "Computer Science Department",
+        "scs",
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        "reviewed",
+    )
+    memberships = [
+        membership
+        for membership in registry.memberships
+        if membership.person_id == person_id
+    ]
+    assert {membership.department_id for membership in memberships} == recorded_ids
+    assert {
+        membership.department_id for membership in memberships if membership.included
+    } == included_ids
+    assert "art" not in recorded_ids
+    if person_id == "person-farnamjahanian-ec16c348":
+        ece = next(
+            membership
+            for membership in memberships
+            if membership.department_id == "ece"
+        )
+        assert (ece.role, ece.included, ece.source_url, ece.verified_at) == (
+            "courtesy",
+            False,
+            "https://www.ece.cmu.edu/directory/courtesy-faculty.html",
+            "2026-10-24",
+        )
+
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["review_status"] == "reviewed"
+    assert review["primary_department_id"] == "csd"
+    assert review["primary_academic_home_type"] == "department"
+    assert review["primary_academic_home_id"] == "csd"
+    assert source_url in review["review_source_urls"].split("|")
+    assert review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == "csd"
+    assert published["primary_department_basis"] == "reviewed"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == "csd"
+    assert published["primary_academic_home_title"] == "Computer Science Department"
+    assert published["primary_academic_home_school_id"] == "scs"
+    assert published["primary_academic_home_source_url"] == source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "reviewed"
+
+
+@pytest.mark.parametrize(
     ("home", "unit_ids", "invalid_unit_type", "message"),
     [
         (
