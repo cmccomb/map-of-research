@@ -1,11 +1,11 @@
 {
-  "artifact_commit": "b841b6d2674fc8cc554310f08edcf6fdc3bd0fed",
-  "authorships": 38413,
+  "artifact_commit": "50682a7df65207450a09fcc1d30fd819a2be3f89",
+  "authorships": 38571,
   "dataset_commits": {
-    "authorships": "23cdd29406e6f1fbef4f85b24a6d3bc739f3a9e9",
-    "people": "f6c1cf1946895d5c5a98c60a99e7255b1bfe0820",
-    "profile_publications": "51112c5a17228ba50ed3734f799fdaa284ddf97a",
-    "works": "b93c9ca786e44da01f9fe730aece84168f6ac8bf"
+    "authorships": "37cc5c0c3129dcbcdc9f8363aadf97b72edfe9bb",
+    "people": "465a724d1fa2884f49ee15d2e8495f9257e93a78",
+    "profile_publications": "df5be9532f7056c8ef0c1f5c7c60b68634533cbe",
+    "works": "393e1fd564d1ae4133b5abe27419d1c831473578"
   },
   "dataset_configs": [
     "people",
@@ -16,23 +16,23 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 1350,
-  "finished_at_utc": "2026-10-24T21:38:55.320530+00:00",
+  "excluded_works": 1357,
+  "finished_at_utc": "2026-10-24T21:59:38.673121+00:00",
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 32721,
-  "new_embedding_count": 258,
+  "mapped_works": 32882,
+  "new_embedding_count": 168,
   "people": 933,
-  "profile_count": 223,
-  "profile_publications": 39461,
+  "profile_count": 226,
+  "profile_publications": 39629,
   "region_audit_version": "low-information-semantic-region-v2",
-  "reviewed_exclusions": 95,
-  "reviewed_exclusions_sha256": "5b387268c8385e04f90278b5155c19c84e4461639b915ea07c0b566a7e2bf805",
+  "reviewed_exclusions": 105,
+  "reviewed_exclusions_sha256": "b93ace1e6dc9ca469c0d2d1b08a06f8fa747b193281a629cf41628297ea1443d",
   "schema_version": 2,
-  "started_at_utc": "2026-10-24T21:31:16.526015+00:00",
+  "started_at_utc": "2026-10-24T21:51:00.103527+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40134437912",
-  "works": 36438
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40135887149",
+  "works": 36606
 }
