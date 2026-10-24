@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "math"
+  ],
+  "profiles": [
+    {
+      "scholar_id": "0tIcPvMAAAAJ",
+      "display_name": "Wesley Pegden",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/pegden.html",
+      "captured_at_utc": "2026-10-24T21:04:39.620Z",
+      "profile_url": "https://scholar.google.com/citations?user=0tIcPvMAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 89,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 89,
+      "raw_json_path": "data/captures/pegden-visible-89-2026-10-24.json",
+      "raw_json_sha256": "a29fc5ee1d379550232bbe0d387a1a04cbfe9e4388262e390a19ccca61444165",
+      "raw_html_path": "data/captures/pegden-visible-89-2026-10-24.html",
+      "raw_html_sha256": "d9e657227f642c78b0c352cadebf5491886baa5731c2a73e732bce643964f973"
+    },
+    {
+      "scholar_id": "SHxT0AEAAAAJ",
+      "display_name": "Tom Bohman",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/bohman.html",
+      "captured_at_utc": "2026-10-24T21:06:21.304Z",
+      "profile_url": "https://scholar.google.com/citations?user=SHxT0AEAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 90,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 90,
+      "raw_json_path": "data/captures/bohman-visible-90-2026-10-24.json",
+      "raw_json_sha256": "b50625706fa35309c1ca3ec5f5e5ee689ec0e5d25052d6d8f8ab2c0567dd42da",
+      "raw_html_path": "data/captures/bohman-visible-90-2026-10-24.html",
+      "raw_html_sha256": "676569b86f75e3ce90f4da1a6ff09ccb00600d1c66df26e5fac69af0c388ce95"
+    }
+  ],
+  "browser_sessions_closed": true
+}
