@@ -648,6 +648,118 @@
       "reason": "Analysis & PDE is the journal title, not an individual Fonseca work.",
       "evidence_url": "https://msp.org/apde/about/journal/about.html",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:Aul-kAQHnToC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2154447 is a funded project record, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2154447",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:u-coK7KVo8oC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2031980 is a travel grant record, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2031980",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:5MTHONV0fEkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2041108 is a funded project record, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=2041108",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:fbc8zXXH2BUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1802789 is a funded project record, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards.json?id=1802789",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:6yz0xqPARnAC",
+      "reason_code": "nonpublication",
+      "reason": "Digital Discovery is the journal name, not an individual Isayev publication.",
+      "evidence_url": "https://pubs.rsc.org/en/journals/journalissues/dd",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:zCSUwVk65WsC",
+      "reason_code": "nonpublication",
+      "reason": "Published on 11 June 2025 is PDF page metadata, not a work title.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlepdf/2025/sc/d4sc08572h",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:nVrZBo8bIpAC",
+      "reason_code": "nonpublication",
+      "reason": "rsc.li/chemical-science is the journal website address, not a work title.",
+      "evidence_url": "https://olexandrisayev.com/wp-content/uploads/d3sc02408c.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:EkHepimYqZsC",
+      "reason_code": "nonpublication",
+      "reason": "The Southampton repository identifies this record as a seminar video.",
+      "evidence_url": "https://eprints.soton.ac.uk/452737/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:ufrVoPGSRksC",
+      "reason_code": "nonpublication",
+      "reason": "This is the title of the 2004 conference, not an individual Isayev work.",
+      "evidence_url": "https://www.jsucompchem.org/events/cctcc",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:v1_lew4L6wgC",
+      "reason_code": "nonpublication",
+      "reason": "Topic Editors is an editorial roster heading, not an authored research work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=7ICaR4EAAAAJ&citation_for_view=7ICaR4EAAAAJ:v1_lew4L6wgC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:BzfGm06jWhQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Imported author-list text is a malformed duplicate of Crowdsourced mapping of unexplored target space of kinase inhibitors, which is already captured as a correctly titled row.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/34083538/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:hMsQuOkrut0C",
+      "reason_code": "nonpublication",
+      "reason": "This is supporting information for the separately captured Chemical Science paper.",
+      "evidence_url": "https://www.rsc.org/suppdata/d1/sc/d1sc05610g/d1sc05610g1.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:vRqMK49ujn8C",
+      "reason_code": "nonpublication",
+      "reason": "This is a publisher copyright footer imported from a PDF, not a work title.",
+      "evidence_url": "https://www.rsc.org/suppdata/c8/fd/c8fd00032h/c8fd00032h1.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "7ICaR4EAAAAJ",
+      "author_pub_id": "7ICaR4EAAAAJ:GnPB-g6toBAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Imported first-sentence text duplicates the separately captured 2008 AIChE conference paper.",
+      "evidence_url": "https://skoge.folk.ntnu.no/prost/proceedings/aiche-2008/data/papers/P139517.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
