@@ -156,6 +156,9 @@ def test_reviewed_false_attribution_cannot_attach_faculty_to_shared_work(
         "display_name": "One",
         "memberships": [{"department_id": "ece", "included": True}],
         "department_ids": ["ece"],
+        "authors": "One and Incorrect",
+        "venue": "Misattributed Preprint",
+        "citation": "Bad venue 2024",
         "citation_count": 900,
         "source_url": "https://example.test/bad-source",
         "external_coauthors": [
@@ -225,6 +228,9 @@ def test_reviewed_false_attribution_cannot_attach_faculty_to_shared_work(
     assert shared["person_ids"] == ["person-two"]
     assert shared["department_ids"] == ["math"]
     assert shared["school_ids"] == ["mcs"]
+    assert shared["authors"] == "Two and Collaborator"
+    assert shared["venue"] == "Journal"
+    assert shared["citation"] == "Journal 2024"
     assert shared["citation_count"] == 4
     assert shared["source_urls"] == ["https://example.test/good-source"]
     assert shared["author_pub_ids"] == ["twoAAAAJ:paper"]
