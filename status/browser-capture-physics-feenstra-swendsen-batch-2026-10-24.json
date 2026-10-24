@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "p1aFEDYAAAAJ",
+    "KoHdmZEAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "p1aFEDYAAAAJ",
+    "KoHdmZEAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-randallfeenstra-0f288978",
+      "display_name": "Randall Feenstra",
+      "scholar_id": "p1aFEDYAAAAJ",
+      "publication_count": 422,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "person_id": "person-roberthswendsen-cfa7c981",
+      "display_name": "Robert H. Swendsen",
+      "scholar_id": "KoHdmZEAAAAJ",
+      "publication_count": 202,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "075c874bac31dd13da2321d26072d81e15bf5b2abc35a8a39bb2ee9af899b5bc",
+      "source_html_sha256": "a443ca0d836a91375bca005cea00b9842067fdd743d78eaa0974b4a281be363c"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T23:07:34+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T23:09:12+00:00",
+  "inter_profile_reservation_gap_seconds": 98,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T23:10:28.450374+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Both IDs directly linked from official CMU Physics pages; live names and Carnegie Mellon affiliations matched."
+}

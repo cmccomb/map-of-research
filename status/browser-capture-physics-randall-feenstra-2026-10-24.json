@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-randallfeenstra-0f288978",
+  "display_name": "Randall Feenstra",
+  "scholar_profile_name": "Randall Feenstra",
+  "scholar_id": "p1aFEDYAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty-emeriti/feenstra.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty-emeriti/feenstra.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; live profile name and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T23:07:34+00:00",
+  "captured_at_utc": "2026-10-24T23:08:23.793Z",
+  "publication_count": 422,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 6,
+  "show_more_click_count": 5,
+  "source_json_path": "data/captures/physics-randall-feenstra-2026-10-24.json",
+  "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+  "source_html_path": "data/captures/physics-randall-feenstra-2026-10-24.html",
+  "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f",
+  "cache_path": "data/authors/p1aFEDYAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

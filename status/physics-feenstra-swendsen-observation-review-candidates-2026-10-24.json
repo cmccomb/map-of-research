@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Uncertain saved-capture classification; all 624 Feenstra/Swendsen source and cache rows remain intact. No curated producer exclusion is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 45,
+      "author_pub_id": "p1aFEDYAAAAJ:fFSKOagxvKUC",
+      "concern": "Patent record; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 159,
+      "author_pub_id": "p1aFEDYAAAAJ:D03iK_w7-QYC",
+      "concern": "Patent record; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 300,
+      "author_pub_id": "p1aFEDYAAAAJ:M0leSnx2MbUC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 303,
+      "author_pub_id": "p1aFEDYAAAAJ:PQEM9vzQD9gC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 353,
+      "author_pub_id": "p1aFEDYAAAAJ:hNSvKAmkeYkC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 358,
+      "author_pub_id": "p1aFEDYAAAAJ:N4u4nq0IxgcC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 368,
+      "author_pub_id": "p1aFEDYAAAAJ:n3vGvpFsckwC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 371,
+      "author_pub_id": "p1aFEDYAAAAJ:9NZAP19TdFAC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 381,
+      "author_pub_id": "p1aFEDYAAAAJ:tz746QTLzJkC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 384,
+      "author_pub_id": "p1aFEDYAAAAJ:ymY9cBF3mdcC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 395,
+      "author_pub_id": "p1aFEDYAAAAJ:pYKElYtJMmwC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 185,
+      "author_pub_id": "KoHdmZEAAAAJ:P_fFXc30I2UC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 188,
+      "author_pub_id": "KoHdmZEAAAAJ:23Hg5vt_rPQC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 192,
+      "author_pub_id": "KoHdmZEAAAAJ:OP2qWFMeUpEC",
+      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 193,
+      "author_pub_id": "KoHdmZEAAAAJ:pZYLKkizsIQC",
+      "concern": "Saved title resembles a malformed or nonpublication record; identify source before classification."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 198,
+      "author_pub_id": "KoHdmZEAAAAJ:FmXltp8y-ZkC",
+      "concern": "Saved title resembles a malformed or nonpublication record; identify source before classification."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 200,
+      "author_pub_id": "KoHdmZEAAAAJ:_B80troHkn4C",
+      "concern": "Saved title resembles a malformed or nonpublication record; identify source before classification."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row_groups": [
+        [
+          19,
+          204
+        ],
+        [
+          36,
+          295
+        ],
+        [
+          85,
+          349
+        ],
+        [
+          95,
+          351
+        ],
+        [
+          134,
+          401
+        ],
+        [
+          232,
+          305
+        ],
+        [
+          239,
+          420
+        ],
+        [
+          243,
+          397
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare sources before any deduplication."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row_groups": [
+        [
+          3,
+          55
+        ],
+        [
+          9,
+          31
+        ],
+        [
+          10,
+          134,
+          140
+        ],
+        [
+          148,
+          195
+        ],
+        [
+          177,
+          178
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare sources before any deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_rows": [
+        260,
+        297,
+        305,
+        366,
+        373,
+        385,
+        391,
+        402,
+        418,
+        419,
+        420,
+        421,
+        422
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_rows": [
+        178,
+        189,
+        197,
+        198,
+        199,
+        200
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "row_count": 26,
+      "capture_rows": [
+        276,
+        278,
+        294,
+        298,
+        299,
+        301,
+        306,
+        308,
+        309,
+        340,
+        341,
+        345,
+        346,
+        347,
+        348,
+        354,
+        355,
+        360,
+        363,
+        364,
+        369,
+        375,
+        377,
+        394,
+        398,
+        399
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "row_count": 4,
+      "capture_rows": [
+        164,
+        165,
+        168,
+        169
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    }
+  ]
+}
