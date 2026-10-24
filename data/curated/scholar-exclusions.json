@@ -4184,6 +4184,22 @@
       "reason": "NSF award 0700174 has this project title; this row is a grant record rather than a research publication.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/0700174.json",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CGSMDGwAAAAJ",
+      "author_pub_id": "CGSMDGwAAAAJ:Se3iqnhoufwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 7 is the whole Combinatorial Scientific Computing book edited by Naumann and Schenk, not a Walkington-authored work. Walkington coauthored the distinct chapter 3D Delaunay Mesh Generation, recorded separately as a verified DOI work.",
+      "evidence_url": "https://www.routledge.com/Combinatorial-Scientific-Computing-1st-Edition/Naumann-Schenk/p/book/9780367381752",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CGSMDGwAAAAJ",
+      "author_pub_id": "CGSMDGwAAAAJ:XiVPGOgt02cC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 94 is the complete APPROX/RANDOM 2019 proceedings volume edited by Achlioptas and Vegh, not a Walkington-authored work. Walkington coauthored its separate Hardy-Muckenhoupt Bounds for Laplacian Eigenvalues paper, also captured at row 76 as a preprint.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-145",
+      "verified_at": "2026-10-24"
     }
   ]
 }
