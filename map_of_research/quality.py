@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-QUALITY_ASSESSMENT_VERSION = "research-map-eligibility-v2"
+QUALITY_ASSESSMENT_VERSION = "research-map-eligibility-v3"
 
 
 def _patterns(*expressions: str) -> tuple[re.Pattern[str], ...]:
@@ -116,7 +116,6 @@ _PUBLICATION_FRONT_MATTER_PATTERNS = _patterns(
     r".*\btribute(?: to)?(?:\b.*)?",
     r"(?:in memoriam\s+.*|.*\s+in memoriam)",
     r"preface(?::|\b).*",
-    r"(?:correction to|corrigendum|erratum)\b.*",
     r"supplementary information for(?:\b.*)?",
     r"selected proceedings(?:\b.*)?",
     r"symposium:\s*held\b.*",
@@ -133,6 +132,10 @@ _PUBLICATION_FRONT_MATTER_PATTERNS = _patterns(
     r"upcoming issues of the",
     r"call for papers(?:\b.*)?",
     r"apa copyright notice:.*",
+)
+
+_CORRECTION_NOTICE_PATTERN = re.compile(
+    r"(?:correction to|corrigendum|erratum)\b.*", re.IGNORECASE
 )
 
 _EVENT_OR_SESSION_PATTERNS = _patterns(
@@ -425,7 +428,17 @@ def assess_publication(
         reasons.append("navigation_or_interface")
     if _matches(_CONFERENCE_FRONT_MATTER_PATTERNS, clean_title):
         reasons.append("conference_front_matter")
-    if _matches(_PUBLICATION_FRONT_MATTER_PATTERNS, clean_title):
+    # Dated, substantive corrections are citable works; exact-row reviews can
+    # still remove a corrupted or falsely attributed Scholar observation.
+    correction_notice = bool(_CORRECTION_NOTICE_PATTERN.fullmatch(clean_title))
+    identified_correction = (
+        correction_notice
+        and len(clean_title.split()) >= 4
+        and (bool(doi.strip()) or year is not None)
+    )
+    if _matches(_PUBLICATION_FRONT_MATTER_PATTERNS, clean_title) or (
+        correction_notice and not identified_correction
+    ):
         reasons.append("publication_front_matter")
     if (
         _matches(_EVENT_OR_SESSION_PATTERNS, clean_title)
