@@ -62,6 +62,28 @@ publications or that the linked identity is invalid. The
 [dated failure receipt](https://github.com/cmccomb/map-of-research/blob/automation/map-snapshot/status/browser-attempt-2026-10-24-3.json)
 records the HTTP status, stopped batch, and closed browser.
 
+## Verified David R. Owen works
+
+The stopped Scholar attempt left Owen without a profile cache. His
+[CMU faculty page](https://www.cmu.edu/math/people/faculty/owen.html)
+independently lists the three works below, and each publisher's DOI page
+confirms the title, authors, venue, and year. Four curated authorship
+observations attribute the three works to Owen and, for the 1999 paper,
+also to Fonseca. They retain the CMU and publisher URLs and the verification
+date; they do not claim to be captured Scholar observations.
+
+| Year | Work | DOI evidence |
+| --- | --- | --- |
+| 1999 | Structured Deformations as Energy Minimizers in Models of Fracture and Hysteresis, with Irene Fonseca | [Mathematics and Mechanics of Solids](https://journals.sagepub.com/doi/abs/10.1177/108128659900400304) |
+| 1998 | Antiplane Shear Flows in Viscoplastic Solids Exhibiting Isotropic and Kinematic Hardening, with J. M. Greenberg | [SIAM Journal on Applied Mathematics](https://epubs.siam.org/doi/10.1137/S0036139997314940) |
+| 1993 | Structured deformations of continua, with Gianpietro Del Piero | [Archive for Rational Mechanics and Analysis](https://link.springer.com/article/10.1007/BF00375133) |
+
+Fonseca's existing Scholar cache contains the 1999 title and year. A local
+normalization check resolved her cached observation and the two curated
+authorships to one DOI work with both CMU faculty IDs. The 1998 and 1993
+DOI works are separate. Owen's full publication coverage remains unknown
+until a later source becomes available.
+
 ## Verified Mathematics–MSE links
 
 Six curated observations identify three DOI works coauthored by
