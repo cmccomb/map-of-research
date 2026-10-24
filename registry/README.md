@@ -39,6 +39,9 @@ records another direct ID link from a CMU-hosted lab publications page.
 The [Bob Murphy follow-up](reviews/2026-10-24-bio-murphy-scholar-id.md)
 reconciles his Bio and Computational Biology emeritus memberships under one
 Scholar-linked person.
+The [three Bio profile checks](reviews/2026-10-24-bio-scholar-verified-profiles.md)
+record Scholar IDs confirmed directly from named profiles with verified CMU
+email addresses and matching official faculty identities.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
@@ -58,3 +61,7 @@ New Scholar IDs should record the faculty-controlled, institutional, or
 self-managed public page that links the profile in `scholar_id_source_url`,
 plus the human verification date in `scholar_id_verified_at`. Legacy IDs may
 leave those fields blank until they are reverified.
+When no such page links an ID, a directly viewed Scholar profile can be the
+source if its verified CMU email, name, and affiliation or linked homepage
+corroborate an official faculty listing. Record that identity evidence in a
+dated review; a name-only search match is insufficient.
