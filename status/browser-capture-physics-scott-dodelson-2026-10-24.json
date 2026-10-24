@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-scottdodelson-73513ee9",
+  "display_name": "Scott Dodelson",
+  "scholar_profile_name": "Scott Dodelson",
+  "scholar_id": "kcXOB1MAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/dodelson.html",
+  "scholar_id_source_url": "https://scholar.google.com/citations?user=kcXOB1MAAAAJ&hl=en&oi=ao",
+  "scholar_identity_basis": "Explicitly confirmed by Chris McComb on 2026-10-24; Scholar profile name matched; no CMU link to the ID was found.",
+  "captured_at_utc": "2026-10-24T21:56:06.724Z",
+  "publication_count": 443,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 7,
+  "show_more_click_count": 6,
+  "source_json_path": "data/captures/physics-scott-dodelson-2026-10-24.json",
+  "source_json_sha256": "196c4783bca3bcdab4d9494d0944e5d6c908393112db816d4ca034e6e89570f0",
+  "source_html_path": "data/captures/physics-scott-dodelson-2026-10-24.html",
+  "source_html_sha256": "1446204e70aa523385b4a760dc603cab0039a56e7f583199f40f3fbc8ee6effe",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 105,
+      "display": "99*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

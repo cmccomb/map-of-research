@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "These are row-level anomalies found in the saved Scholar captures. They are not source-reviewed exclusion decisions. Both raw captures and all normalized cache rows remain intact pending separate review.",
+  "candidates": [
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 27,
+      "author_pub_id": "kcXOB1MAAAAJ:3NQIlFlcGxIC",
+      "concern": "Modern cosmology is credited to DW Sciama (1971), not Scott Dodelson; verify false profile attribution."
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 435,
+      "author_pub_id": "kcXOB1MAAAAJ:3lUAU8Oskd0C",
+      "concern": "Title is only 'Book• Third Edition• 2025'; identify the underlying Dodelson/Schmidt book before deciding whether this is a duplicate or malformed metadata."
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 436,
+      "author_pub_id": "kcXOB1MAAAAJ:0sTkTiv_uMkC",
+      "concern": "Title is only 'Book• Second Edition• 2020'; identify the underlying Dodelson/Schmidt book before deciding whether this is a duplicate or malformed metadata."
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 442,
+      "author_pub_id": "kcXOB1MAAAAJ:XoXfffV-tXoC",
+      "concern": "Title resembles an author index rather than a research work; verify source and attribution."
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "capture_row": 167,
+      "author_pub_id": "jcb81yAAAAAJ:hImZayhCRfQC",
+      "concern": "Ara OB1A stellar-population title is paired with ACT consortium authors; verify metadata conflation."
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "capture_row": 181,
+      "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
+      "concern": "A forum for collaboration may be a nonpublication; verify source."
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "capture_row": 182,
+      "author_pub_id": "jcb81yAAAAAJ:fhMX52Pd6iQC",
+      "concern": "Zheng Zheng (郑政) appears to be a person name rather than a publication title; verify source."
+    }
+  ]
+}
