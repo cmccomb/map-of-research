@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "batch": "physics-si-clean-source",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "target_base_commit": "473c101",
+  "producer_main_checked_commit": "6c97d571",
+  "department_id": "physics",
+  "primary_faculty_membership_verified": true,
+  "fangwei_si_cross_membership": "BME is courtesy/included=false; Physics is faculty/included=true in the target registry.",
+  "profile_count": 1,
+  "raw_observation_count": 18,
+  "reviewed_exclusion_count": 0,
+  "unresolved_candidate_count": 0,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "profiles": [
+    {
+      "person_id": "person-fangweisi-54f4d242",
+      "display_name": "Fangwei Si",
+      "scholar_profile_name": "Fangwei Si (司方伟)",
+      "scholar_id": "o-Ra68kAAAAJ",
+      "publication_count": 18,
+      "coverage": "complete_visible_profile",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/si.html",
+      "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/si.html",
+      "cache_path": "data/authors/o-Ra68kAAAAJ.json",
+      "source_json_path": "data/captures/physics-fangwei-si-2026-10-24.json",
+      "source_html_path": "data/captures/physics-fangwei-si-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-si-2026-10-24.json",
+      "reviewed_exclusion_count": 0,
+      "unresolved_candidate_count": 0
+    }
+  ],
+  "eligible_observation_count": 18,
+  "producer_exclusion_dependency": "none for this 18-row profile",
+  "source_review": "All 18 visible titles and displayed authors were read. No clear nonpublication, false attribution, or duplicate row was found. The 2010 silk paper is listed under undergraduate research in Fangwei Si’s CMU-hosted CV; eLife’s full author list confirms Fangwei Si on the 2024 mother-machine paper despite Scholar’s truncated display.",
+  "carved_from_draft_pr": 80,
+  "source_review_evidence_urls": [
+    "https://www.cmu.edu/physics/people/faculty/documents/si_cv2.pdf",
+    "https://elifesciences.org/articles/88463"
+  ]
+}

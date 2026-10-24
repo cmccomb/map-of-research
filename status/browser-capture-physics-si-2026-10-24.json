@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-fangweisi-54f4d242",
+  "display_name": "Fangwei Si",
+  "scholar_profile_name": "Fangwei Si (司方伟)",
+  "scholar_id": "o-Ra68kAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/si.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/si.html",
+  "captured_at_utc": "2026-10-24T21:34:18.729Z",
+  "publication_count": 18,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/physics-fangwei-si-2026-10-24.json",
+  "source_json_sha256": "aef07c45477888575ab9249742b952386c950e7fa93d821350d9fca9d5dc2829",
+  "source_html_path": "data/captures/physics-fangwei-si-2026-10-24.html",
+  "source_html_sha256": "e471765341c9653dd4f49a775bcea21fe92178e18cf489922885a76634f9bcbf",
+  "browser_closed": true,
+  "release_state": "staged_for_review",
+  "batch_status": "held_after_first_profile_at_coordinator_request",
+  "release_dependency": "Reconcile draft PR #51 role correction: Fangwei Si BME listing is courtesy and Physics is the sole included department.",
+  "publication_observation_review": "All 18 visible titles are publication-like; no high-confidence nonpublication artifact identified in this offline pass. Identity attribution remains the source profile claim.",
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
