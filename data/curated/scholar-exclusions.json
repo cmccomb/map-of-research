@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "exclusions": [
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:_B80troHkn4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "PyCUDA author list does not include Prasad Tetali.",
+      "evidence_url": "https://arxiv.org/abs/0911.3456",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:2KloaMYe4IUC",
+      "reason_code": "nonpublication",
+      "reason": "ITCS 2017 complete conference volume/front matter, not a Tetali paper.",
+      "evidence_url": "https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-67",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:4MWp96NkSFoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF conference award 2334815, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2334815",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:VLnqNzywnoUC",
+      "reason_code": "nonpublication",
+      "reason": "Recommended articles is website interface text, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=FmZaK1wAAAAJ&citation_for_view=FmZaK1wAAAAJ:VLnqNzywnoUC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:tuHXwOkdijsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1740776, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740776",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:3fE2CSJIrl8C",
+      "reason_code": "nonpublication",
+      "reason": "Computer Science Review is a journal/container title, not a work title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=FmZaK1wAAAAJ&citation_for_view=FmZaK1wAAAAJ:3fE2CSJIrl8C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:b1wdh0AR-JQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1415498, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1415498",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:uWiczbcajpAC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1415496, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1415496",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:XD-gHx7UXLsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CORE metadata/site banner was imported as the title; the cited PDF does not identify Tetali as an author.",
+      "evidence_url": "https://core.ac.uk/download/pdf/75551.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:kuK5TVdYjLIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF conference award 1101623, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1101623",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:0KyAp5RtaNEC",
+      "reason_code": "nonpublication",
+      "reason": "B582 Author Index is a volume index, not an authored research work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=FmZaK1wAAAAJ&citation_for_view=FmZaK1wAAAAJ:0KyAp5RtaNEC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:WA5NYHcadZ8C",
+      "reason_code": "nonpublication",
+      "reason": "Prasad Tetali curriculum vitae is a CV, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=FmZaK1wAAAAJ&citation_for_view=FmZaK1wAAAAJ:WA5NYHcadZ8C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:p2g8aNsByqUC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2342349, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2342349",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:UxriW0iASnsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2206069, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2206069",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:XiSMed-E-HIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1814991, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1814991",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:4fKUyHm3Qg0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1601475, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1601475",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:SP6oXDckpogC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1516677, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1516677",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1421502, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1421502",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:u9iWguZQMMsC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 1211760, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1211760",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:OU6Ihb5iCvQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0908415, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0908415",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:uWQEDVKXjbEC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0638481, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0638481",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:B3FOqHPlNUQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Incomplete uppercase title duplicates the complete 2011 Duke Mathematical Journal work; retain the complete record instead.",
+      "evidence_url": "https://www.math.cmu.edu/users/slepcev/CDFLS.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:tOudhMTPpwUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "LaTeX preamble was imported into the title; the complete 2017 journal observation is retained separately.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=tWQsy4UAAAAJ&citation_for_view=tWQsy4UAAAAJ:tOudhMTPpwUC",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}

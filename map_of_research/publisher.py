@@ -15,7 +15,8 @@ from pathlib import Path
 from typing import Any
 
 from .dataset import build_dataset_tables
-from .io import atomic_write_json
+from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .io import atomic_write_json, sha256_file
 from .keywords import (
     KEYWORD_MODEL_VERSION,
     REGION_AUDIT_VERSION,
@@ -616,9 +617,12 @@ def build_map_artifact(
     selected_rows: list[tuple[Any, list[dict[str, str]]]] = []
     for row in works.itertuples(index=False):
         memberships = _normalized_memberships(row.memberships)
-        if memberships:
+        source_included = bool(
+            getattr(row, "has_included_source_profile", bool(memberships))
+        )
+        if source_included:
             related_rows.append((row, memberships))
-            if row.map_eligible:
+            if row.map_eligible and memberships:
                 selected_rows.append((row, memberships))
     points = []
     external_coauthors: dict[str, dict[str, str]] = {}
@@ -997,6 +1001,7 @@ def publish_snapshot(
     people_path: Path = DEFAULT_PEOPLE_PATH,
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
+    exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1009,12 +1014,13 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    exclusions = load_exclusions(exclusions_path)
     enriched, new_embedding_count = add_embeddings(
         frame,
         hf_token=hf_token,
         encoder=encoder,
     )
-    tables = build_dataset_tables(enriched, registry)
+    tables = build_dataset_tables(enriched, registry, exclusions)
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
         reuse = _reusable_work_order(
@@ -1054,8 +1060,12 @@ def publish_snapshot(
         generated_at_utc=generated_at_utc,
         dataset_commits=dataset_commits,
     )
-    related_mask = tables["works"]["department_ids"].apply(
-        lambda value: bool(_as_list(value))
+    related_mask = (
+        tables["works"]["has_included_source_profile"]
+        if "has_included_source_profile" in tables["works"]
+        else tables["works"]["department_ids"].apply(
+            lambda value: bool(_as_list(value))
+        )
     )
     mapped_mask = related_mask & tables["works"]["map_eligible"]
     return {
@@ -1071,6 +1081,12 @@ def publish_snapshot(
         ),
         "authorships": len(tables["authorships"]),
         "profile_publications": len(tables["profile_publications"]),
+        "reviewed_exclusions": int(
+            tables["profile_publications"]["review_exclusion_code"].ne("").sum()
+            if "review_exclusion_code" in tables["profile_publications"]
+            else 0
+        ),
+        "reviewed_exclusions_sha256": sha256_file(exclusions_path),
         "profile_count": int(
             enriched.loc[
                 enriched.get("source_type", "scholar") == "scholar", "scholar_id"
@@ -1111,6 +1127,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_DEPARTMENTS_PATH,
     )
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
+    parser.add_argument(
+        "--reviewed-exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     return parser.parse_args(argv)
 
@@ -1143,6 +1162,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             people_path=args.people,
             memberships_path=args.memberships,
             departments_path=args.departments,
+            exclusions_path=args.reviewed_exclusions,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

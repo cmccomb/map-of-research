@@ -10,6 +10,7 @@ from collections import Counter
 from collections.abc import Mapping
 from typing import Any
 
+from .exclusions import ReviewedExclusion
 from .quality import QUALITY_ASSESSMENT_VERSION, assess_publication
 from .registry import Registry
 
@@ -147,7 +148,11 @@ def _normalize_memberships(value: Any) -> list[dict[str, Any]]:
     return memberships
 
 
-def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any]:
+def build_dataset_tables(
+    observations: Any,
+    registry: Registry,
+    exclusions: Mapping[tuple[str, str], ReviewedExclusion] | None = None,
+) -> dict[str, Any]:
     """Build retained observations plus canonical people/work relationship tables."""
 
     import pandas
@@ -180,6 +185,10 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     dois: list[str] = []
     map_eligibility: list[bool] = []
     exclusion_reasons: list[list[str]] = []
+    review_codes: list[str] = []
+    review_reasons: list[str] = []
+    review_evidence_urls: list[str] = []
+    review_dates: list[str] = []
     known_person_titles = {
         normalize_title(person.display_name) for person in registry.people
     }
@@ -200,6 +209,13 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         reasons = list(quality.exclusion_reasons)
         if normalize_title(str(row.title)) in known_person_titles:
             reasons.append("person_or_citation_index")
+        review = (exclusions or {}).get((str(row.scholar_id), str(row.author_pub_id)))
+        if review is not None:
+            reasons.append(f"reviewed_{review.reason_code}")
+        review_codes.append(review.reason_code if review else "")
+        review_reasons.append(review.reason if review else "")
+        review_evidence_urls.append(review.evidence_url if review else "")
+        review_dates.append(review.verified_at if review else "")
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
@@ -209,8 +225,12 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     profile_publications.insert(3, "doi", dois)
     profile_publications.insert(4, "map_eligible", map_eligibility)
     profile_publications.insert(5, "map_exclusion_reasons", exclusion_reasons)
+    profile_publications.insert(6, "review_exclusion_code", review_codes)
+    profile_publications.insert(7, "review_exclusion_reason", review_reasons)
+    profile_publications.insert(8, "review_evidence_url", review_evidence_urls)
+    profile_publications.insert(9, "review_verified_at", review_dates)
     profile_publications.insert(
-        6,
+        10,
         "quality_assessment_version",
         QUALITY_ASSESSMENT_VERSION,
     )
@@ -222,6 +242,8 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
     }
     authorship_rows: list[dict[str, Any]] = []
     for row in profile_publications.itertuples(index=False):
+        if not row.map_eligible:
+            continue
         memberships = _normalize_memberships(row.memberships)
         authorship_rows.append(
             {
@@ -250,7 +272,22 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "source_type": row.source_type,
             }
         )
-    authorships = pandas.DataFrame(authorship_rows)
+    authorships = pandas.DataFrame(
+        authorship_rows,
+        columns=(
+            "work_id",
+            "person_id",
+            "observation_id",
+            "scholar_id",
+            "author_pub_id",
+            "display_name",
+            "department_ids",
+            "school_ids",
+            "memberships",
+            "fetched_at_utc",
+            "source_type",
+        ),
+    )
 
     department_titles = registry.department_catalog()
     work_rows: list[dict[str, Any]] = []
@@ -261,7 +298,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         map_eligible = bool(eligible_records)
         people: dict[str, str] = {}
         included_memberships: dict[tuple[str, str], dict[str, str]] = {}
-        for record in records:
+        for record in eligible_records:
             people[str(record.person_id)] = str(record.display_name)
             for membership in _normalize_memberships(record.memberships):
                 if not membership["included"]:
@@ -289,15 +326,15 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
             {membership["department_id"] for membership in memberships}
         )
         school_ids = sorted({membership["school_id"] for membership in memberships})
-        years = [record.year for record in records]
-        citation_counts = [int(record.citation_count) for record in records]
+        years = [record.year for record in canonical_records]
+        citation_counts = [int(record.citation_count) for record in canonical_records]
         fetched = sorted(
             str(record.fetched_at_utc)
-            for record in records
+            for record in canonical_records
             if record.source_type == "scholar" and str(record.fetched_at_utc)
         )
         external_coauthors: dict[str, dict[str, str]] = {}
-        for record in records:
+        for record in eligible_records:
             for coauthor in _as_list(record.external_coauthors):
                 if not isinstance(coauthor, Mapping):
                     raise ValueError("External coauthor provenance must be an object")
@@ -317,6 +354,11 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
             {
                 "work_id": work_id,
                 "map_eligible": map_eligible,
+                "has_included_source_profile": any(
+                    membership["included"]
+                    for record in records
+                    for membership in _normalize_memberships(record.memberships)
+                ),
                 "map_exclusion_reasons": []
                 if map_eligible
                 else sorted(
@@ -328,13 +370,17 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 ),
                 "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
                 "work_match_method": _best_text(
-                    [record.work_match_method for record in records]
+                    [record.work_match_method for record in canonical_records]
                 ),
-                "doi": _best_text([record.doi for record in records]),
+                "doi": _best_text([record.doi for record in canonical_records]),
                 "title": _best_text([record.title for record in canonical_records]),
-                "title_variants": _variants([record.title for record in records]),
+                "title_variants": _variants(
+                    [record.title for record in canonical_records]
+                ),
                 "authors": _best_text([record.authors for record in canonical_records]),
-                "author_variants": _variants([record.authors for record in records]),
+                "author_variants": _variants(
+                    [record.authors for record in canonical_records]
+                ),
                 "year": _mode_year([record.year for record in canonical_records]),
                 "year_variants": sorted(
                     {
@@ -344,22 +390,30 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                     }
                 ),
                 "venue": _best_text([record.venue for record in canonical_records]),
-                "venue_variants": _variants([record.venue for record in records]),
+                "venue_variants": _variants(
+                    [record.venue for record in canonical_records]
+                ),
                 "citation": _best_text(
                     [record.citation for record in canonical_records]
                 ),
-                "citation_variants": _variants([record.citation for record in records]),
+                "citation_variants": _variants(
+                    [record.citation for record in canonical_records]
+                ),
                 "citation_count": max(citation_counts, default=0),
-                "source_urls": _variants([record.source_url for record in records]),
-                "source_types": sorted({str(record.source_type) for record in records}),
+                "source_urls": _variants(
+                    [record.source_url for record in canonical_records]
+                ),
+                "source_types": sorted(
+                    {str(record.source_type) for record in canonical_records}
+                ),
                 "source_verified_at": max(
-                    (str(record.source_verified_at) for record in records),
+                    (str(record.source_verified_at) for record in canonical_records),
                     default="",
                 ),
                 "source_verification_urls": sorted(
                     {
                         str(url)
-                        for record in records
+                        for record in canonical_records
                         for url in _as_list(record.source_verification_urls)
                         if url
                     }
@@ -379,15 +433,19 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "school_titles": [school_titles[school_id] for school_id in school_ids],
                 "memberships": memberships,
                 "scholar_ids": sorted(
-                    {str(record.scholar_id) for record in records if record.scholar_id}
+                    {
+                        str(record.scholar_id)
+                        for record in canonical_records
+                        if record.scholar_id
+                    }
                 ),
                 "author_pub_ids": sorted(
-                    {str(record.author_pub_id) for record in records}
+                    {str(record.author_pub_id) for record in canonical_records}
                 ),
                 "observation_ids": sorted(
-                    {str(record.observation_id) for record in records}
+                    {str(record.observation_id) for record in canonical_records}
                 ),
-                "observation_count": len(records),
+                "observation_count": len(canonical_records),
                 "first_fetched_at_utc": fetched[0] if fetched else "",
                 "last_fetched_at_utc": fetched[-1] if fetched else "",
                 "embedding": list(canonical_records[0].embedding),
@@ -395,24 +453,27 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         )
     works = pandas.DataFrame(work_rows)
 
-    observation_count = Counter(authorships["person_id"])
+    observation_count = Counter(profile_publications["person_id"])
     scholar_observation_count = Counter(
-        authorships.loc[authorships["source_type"] == "scholar", "person_id"]
+        profile_publications.loc[
+            profile_publications["source_type"] == "scholar", "person_id"
+        ]
     )
     curated_observation_count = Counter(
-        authorships.loc[authorships["source_type"] == "curated_verified", "person_id"]
+        profile_publications.loc[
+            profile_publications["source_type"] == "curated_verified", "person_id"
+        ]
     )
     unique_work_count = {
         person_id: int(group["work_id"].nunique())
         for person_id, group in authorships.groupby("person_id")
     }
-    mapped_work_ids = set(works.loc[works["map_eligible"], "work_id"])
-    mapped_work_count = {
-        person_id: int(
-            group.loc[group["work_id"].isin(mapped_work_ids), "work_id"].nunique()
-        )
-        for person_id, group in authorships.groupby("person_id")
-    }
+    mapped_work_count: Counter[str] = Counter()
+    for row in works.itertuples(index=False):
+        if not row.map_eligible:
+            continue
+        for person_id in {membership["person_id"] for membership in row.memberships}:
+            mapped_work_count[person_id] += 1
     memberships_by_person: dict[str, list[dict[str, Any]]] = {}
     for membership in registry.memberships:
         memberships_by_person.setdefault(membership.person_id, []).append(

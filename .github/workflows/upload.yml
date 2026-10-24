@@ -69,6 +69,7 @@ jobs:
             --people source/registry/people.csv \
             --memberships source/registry/memberships.csv \
             --departments source/registry/departments.csv \
+            --reviewed-exclusions source/data/curated/scholar-exclusions.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}
