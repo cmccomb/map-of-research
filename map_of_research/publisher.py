@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import logging
 import math
@@ -80,7 +81,8 @@ KEYWORD_LEVELS = (
     {"level": 1, "label": "Detailed topics"},
 )
 MAP_ARTIFACT_NAME = "publications.json"
-MAP_TITLE = "CMU Engineering Research"
+MAP_TITLE = "CMU Faculty Research"
+MAX_REUSABLE_DOI_REKEYS = 25
 STATUS_SCHEMA_VERSION = 2
 DEFAULT_STATUS_PATH = Path("status/last-upload.json")
 STRING_LIST_COLUMNS = frozenset(
@@ -205,6 +207,23 @@ def add_embeddings(
         (str(row.author_pub_id), str(row.title))
         for row in frame[["author_pub_id", "title"]].itertuples(index=False)
     ]
+    # The encoder receives only the title. A new curated observation of an
+    # already published title can therefore use the same vector, provided all
+    # published vectors for that exact title agree.
+    by_title: dict[str, list[float]] = {}
+    ambiguous_titles: set[str] = set()
+    for (_, title), vector in existing.items():
+        previous = by_title.setdefault(title, vector)
+        if previous != vector:
+            ambiguous_titles.add(title)
+    for key in keys:
+        if (
+            key not in existing
+            and key[1] in by_title
+            and key[1] not in ambiguous_titles
+        ):
+            existing[key] = by_title[key[1]]
+
     missing_keys = list(dict.fromkeys(key for key in keys if key not in existing))
     if missing_keys:
         if encoder is None:
@@ -271,6 +290,170 @@ def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     if layouts:
         LOGGER.info("Found reusable coordinates for %d works", len(layouts))
     return layouts
+
+
+def _existing_work_state(*, hf_token: str) -> list[dict[str, Any]]:
+    """Read the published work order and fields needed to verify layout reuse."""
+
+    fields = (
+        "work_id",
+        "title",
+        "year",
+        "doi",
+        "work_match_method",
+        "map_eligible",
+        "map_region_outlier",
+        "map_exclusion_reasons",
+        "department_ids",
+        "quality_assessment_version",
+        "keyword_model_version",
+        "topic_label_review_version",
+        "map_region_audit_version",
+        "layout_version",
+    )
+    try:
+        return list(_published_rows("works", fields, hf_token=hf_token))
+    except FileNotFoundError:
+        LOGGER.info("No published works are available for order reuse")
+        return []
+    except Exception as error:
+        raise RuntimeError("Could not read published works for order reuse") from error
+
+
+def _year_key(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        if math.isnan(value):
+            return None
+    except TypeError:
+        pass
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _reusable_work_order(
+    works: Any,
+    previous: Sequence[Mapping[str, Any]],
+    layouts: Mapping[str, Mapping[str, float]],
+) -> tuple[Any, dict[str, Mapping[str, float]]] | None:
+    """Reuse prior coordinates and row order only for an identical work corpus.
+
+    DOI-backed records may replace a few title/year work IDs. Reusing the old
+    row order matters as much as reusing coordinates: k-means initialization
+    depends on row order even when every coordinate is unchanged.
+    """
+
+    if len(previous) != len(works) or not previous or not layouts:
+        return None
+    prior_by_id = {str(row.get("work_id") or ""): row for row in previous}
+    current_by_id = {str(row.work_id): row for row in works.itertuples(index=False)}
+    if (
+        "" in prior_by_id
+        or len(prior_by_id) != len(previous)
+        or len(current_by_id) != len(works)
+    ):
+        return None
+
+    for row in previous:
+        if (
+            row.get("layout_version") != LAYOUT_VERSION
+            or row.get("quality_assessment_version") != QUALITY_ASSESSMENT_VERSION
+            or row.get("keyword_model_version") != KEYWORD_MODEL_VERSION
+            or row.get("topic_label_review_version") != TOPIC_LABEL_REVIEW_VERSION
+            or row.get("map_region_audit_version") != REGION_AUDIT_VERSION
+        ):
+            return None
+
+    missing_prior = set(prior_by_id) - set(current_by_id)
+    new_current = set(current_by_id) - set(prior_by_id)
+    if len(missing_prior) > MAX_REUSABLE_DOI_REKEYS:
+        return None
+
+    # Require a title/year key to identify exactly one work across both full
+    # corpora. This rules out accidental joins on common or duplicate titles.
+    prior_keys: dict[tuple[str, int | None], list[str]] = {}
+    current_keys: dict[tuple[str, int | None], list[str]] = {}
+    for work_id, row in prior_by_id.items():
+        key = (str(row.get("title") or ""), _year_key(row.get("year")))
+        prior_keys.setdefault(key, []).append(work_id)
+    for work_id, row in current_by_id.items():
+        key = (str(row.title or ""), _year_key(row.year))
+        current_keys.setdefault(key, []).append(work_id)
+
+    rekeys: dict[str, str] = {}
+    for old_id in missing_prior:
+        row = prior_by_id[old_id]
+        key = (str(row.get("title") or ""), _year_key(row.get("year")))
+        if (
+            not key[0].strip()
+            or key[1] is None
+            or row.get("work_match_method") != "normalized_title_year"
+            or str(row.get("doi") or "").strip()
+        ):
+            return None
+        old_matches = prior_keys.get(key, [])
+        new_matches = current_keys.get(key, [])
+        if len(old_matches) != 1 or len(new_matches) != 1:
+            return None
+        new_id = new_matches[0]
+        if new_id not in new_current:
+            return None
+        current = current_by_id[new_id]
+        doi = str(current.doi or "").casefold()
+        expected_id = "work-" + hashlib.sha256(f"doi:{doi}".encode()).hexdigest()
+        if (
+            not doi.startswith("10.")
+            or new_id != expected_id
+            or current.work_match_method not in {"doi", "curated_title_year"}
+            or "curated_verified" not in _as_list(current.source_types)
+            or not str(current.source_verified_at or "").strip()
+            or not _as_list(current.source_verification_urls)
+        ):
+            return None
+        rekeys[old_id] = new_id
+    remapped_layouts: dict[str, Mapping[str, float]] = {}
+    for old_id, prior in prior_by_id.items():
+        new_id = rekeys.get(old_id, old_id)
+        current = current_by_id[new_id]
+        if str(prior.get("title") or "") != str(current.title or "") or _year_key(
+            prior.get("year")
+        ) != _year_key(current.year):
+            return None
+        prior_reasons = set(map(str, _as_list(prior.get("map_exclusion_reasons"))))
+        was_region_outlier = bool(prior.get("map_region_outlier"))
+        previous_eligible = bool(prior.get("map_eligible")) or was_region_outlier
+        if was_region_outlier:
+            prior_reasons.discard("low_information_region")
+        if (
+            previous_eligible != bool(current.map_eligible)
+            or prior_reasons != set(map(str, _as_list(current.map_exclusion_reasons)))
+            or (previous_eligible and bool(_as_list(prior.get("department_ids"))))
+            != (bool(current.map_eligible) and bool(_as_list(current.department_ids)))
+        ):
+            return None
+        if previous_eligible and bool(_as_list(prior.get("department_ids"))):
+            if old_id not in layouts:
+                return None
+            remapped_layouts[new_id] = layouts[old_id]
+
+    ordered_ids = [
+        rekeys.get(str(row["work_id"]), str(row["work_id"])) for row in previous
+    ]
+    positions = {
+        str(work_id): position for position, work_id in enumerate(works["work_id"])
+    }
+    ordered_works = works.iloc[
+        [positions[work_id] for work_id in ordered_ids]
+    ].reset_index(drop=True)
+    LOGGER.info(
+        "Reusing published layout and work order for %d works (%d DOI rekeys)",
+        len(ordered_works),
+        len(rekeys),
+    )
+    return ordered_works, remapped_layouts
 
 
 def _normalize_layout(projected: Any, *, preserve_aspect: bool) -> Any:
@@ -833,6 +1016,14 @@ def publish_snapshot(
     )
     tables = build_dataset_tables(enriched, registry)
     existing_layouts = _existing_layouts(hf_token=hf_token)
+    if existing_layouts:
+        reuse = _reusable_work_order(
+            tables["works"],
+            _existing_work_state(hf_token=hf_token),
+            existing_layouts,
+        )
+        if reuse is not None:
+            tables["works"], existing_layouts = reuse
     tables["works"] = add_global_layout(
         tables["works"],
         existing_layouts=existing_layouts,

@@ -1,13 +1,13 @@
 # Map of Research
 
 `map-of-research` is the source of truth for the CMU faculty catalog and
-publication corpus. Its normalized school hierarchy now has dated faculty
-rosters for Engineering, SCS, and MCS; the published dataset remains
-Engineering scoped while the expanded roster and local map are reviewed. It
-collects a deliberately small number of public Google Scholar profiles and
-retains two publisher/CMU-verified Tetali–Erdős DOI records while Scholar is
-blocked. It publishes one versioned Hugging Face dataset and builds one
-browser-ready publication artifact.
+publication corpus. Its normalized school hierarchy has dated faculty
+rosters for Engineering, SCS, and MCS. It collects small, explicit batches of
+public Google Scholar profiles and retains separately verified DOI records
+for publications missing from the profile cache. It publishes one versioned
+Hugging Face dataset and builds one browser-ready publication artifact. The
+dataset ID retains its original Engineering name; the manifest records the
+scope of each published revision.
 
 The visualization repositories `map-of-eng` and `map-of-collaboration` do
 **not** contact Google Scholar. They are static clients of
@@ -21,8 +21,9 @@ The visualization repositories `map-of-eng` and `map-of-collaboration` do
 2. A cache-first `scholarly` collector refreshes at most two unique profiles in
    an explicitly started run. It never uses proxies or attempts to bypass a
    block.
-3. `data/curated/works.json` holds the two separately verified DOI works and
-   their source URLs, verification dates, and external coauthor identities.
+3. `data/curated/works.json` holds separately verified DOI observations,
+   including the Tetali–Erdős and Mathematical Sciences–MSE papers, with
+   source URLs, verification dates, and external coauthor identities.
    The raw Parquet snapshot and checksum manifest bind both the registry and
    curated source on the `automation/map-snapshot` branch.
 4. A separate trusted workflow validates that snapshot, records a versioned
@@ -62,6 +63,13 @@ not schedule repeated attempts from that IP space. The pinned `scholarly`
 client has a fail-closed response guard: the first 403, 429, or CAPTCHA aborts
 the run before the library's internal retry path. Local collection uses the
 same limits and must also stop after any refusal.
+
+An explicit local browser capture can bootstrap a directly linked CMU profile
+when the `scholarly` client cannot access it. It uses the same two-profile cap,
+90-second inter-profile gap, 200-publication default limit, and stop-on-refusal
+rule. Captured rows retain their Scholar citation URLs and checksums of the
+locally saved source pages; a capped profile is labeled as such. Browser
+capture is not a scheduled or search-based collection path.
 
 ## Update cadence
 
@@ -154,19 +162,22 @@ Plan a collection without network access:
 map-collect --dry-run
 ```
 
-For a small local school batch, use the full canonical registry and target
-included, verified Scholar profiles before starting a real collection:
+For a small local department or school batch, use the full canonical registry
+and target included, verified Scholar profiles before starting a real collection:
 
 ```bash
+map-collect --dry-run --department-id math --max-profiles 2
 map-collect --dry-run --school-id scs --max-profiles 2
 map-collect --dry-run --school-id mcs --max-profiles 2
 map-collect --dry-run --person-id person-prasadtetali-bf494329
 ```
 
-`--school-id` and `--person-id` are repeatable, but cannot be mixed in one
-run. Targeting does not change the profile cap, delay, annual refresh window,
-or stop-on-refusal rule. The status receipt records the requested targets.
-Build snapshots from the full registry, not a temporary targeted copy.
+`math` is the Mathematical Sciences department ID in
+`registry/departments.csv`. `--department-id`, `--school-id`, and `--person-id`
+are each repeatable, but cannot be mixed in one run. Targeting does not change
+the profile cap, delay, annual refresh window, or stop-on-refusal rule. The
+status receipt records the requested targets. Build snapshots from the full
+registry, not a temporary targeted copy.
 
 Build and validate a raw snapshot from the current cache:
 

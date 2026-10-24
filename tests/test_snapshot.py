@@ -84,6 +84,76 @@ def make_registry(root: Path) -> tuple[Path, Path, Path]:
     )
 
 
+def make_curated_only_registry(root: Path) -> tuple[Path, Path, Path]:
+    return write_registry(
+        root,
+        people=[
+            {
+                "person_id": "person-math",
+                "display_name": "Math Person",
+                "scholar_id": "",
+            },
+            {
+                "person_id": "person-affiliate",
+                "display_name": "Affiliate Person",
+                "scholar_id": "",
+            },
+        ],
+        memberships=[
+            {
+                "person_id": "person-math",
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty.html",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-math",
+                "department_id": "ece",
+                "role": "affiliate",
+                "included": "false",
+                "source_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "verified_at": "2026-10-24",
+            },
+            {
+                "person_id": "person-affiliate",
+                "department_id": "math",
+                "role": "affiliate",
+                "included": "false",
+                "source_url": "https://www.cmu.edu/math/people/faculty.html",
+                "verified_at": "2026-10-24",
+            },
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty.html",
+            },
+            {
+                "department_id": "ece",
+                "school_id": "engineering",
+                "title": "ECE",
+                "directory_url": "https://www.ece.cmu.edu/directory/faculty.html",
+            },
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs/",
+            },
+            {
+                "school_id": "engineering",
+                "title": "College of Engineering",
+                "directory_url": "https://www.cmu.edu/engineering/",
+            },
+        ],
+    )
+
+
 def write_cache(cache_dir: Path) -> None:
     atomic_write_json(
         cache_dir / "alphaAAAAJ.json",
@@ -230,7 +300,7 @@ def test_snapshot_scalar_normalizers_and_venue_fallbacks(tmp_path: Path) -> None
         row = snapshot._publication_row(profile, publication, fetched_at_utc="now")
         assert row["venue"] == f"From {field}"
         assert row["citation_count"] == 0
-    assert len(snapshot._memberships(profile)) == 2
+    assert len(snapshot._memberships(profile.memberships)) == 2
 
 
 def test_registry_digest_is_independent_of_argument_order(tmp_path: Path) -> None:
@@ -425,6 +495,63 @@ def test_curated_rows_are_provenance_bound_and_not_scholar_fetches(
         )
 
 
+def test_curated_work_for_included_faculty_without_scholar_profile(
+    tmp_path: Path,
+) -> None:
+    paths = make_curated_only_registry(tmp_path / "registry")
+    curated_path = tmp_path / "data/curated/works.json"
+    curated_path.parent.mkdir(parents=True)
+    payload = curated_payload()
+    payload["works"][0].update(
+        person_id="person-math",
+        title="A Verified Mathematics Paper",
+        authors="Math Person and External Example",
+    )
+    atomic_write_json(curated_path, payload)
+    snapshot_path = tmp_path / "snapshot.parquet"
+    manifest_path = tmp_path / "snapshot.manifest.json"
+
+    manifest = build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=tmp_path / "no-scholar-cache",
+        snapshot_path=snapshot_path,
+        manifest_path=manifest_path,
+        now=NOW,
+    )
+    frame, validated_manifest = validate_snapshot(
+        snapshot_path,
+        manifest_path,
+        now=NOW,
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+    )
+
+    assert manifest == validated_manifest
+    assert manifest["registry_people"] == 2
+    assert manifest["registry_profiles"] == manifest["cached_profiles"] == 0
+    assert manifest["curated_work_rows"] == len(frame) == 1
+    row = frame.iloc[0]
+    assert row["person_id"] == "person-math"
+    assert row["scholar_id"] == row["fetched_at_utc"] == ""
+    assert row["department_ids"].tolist() == ["math"]
+    assert {membership["department_id"] for membership in row["memberships"]} == {
+        "math",
+        "ece",
+    }
+    assert row["source_type"] == "curated_verified"
+    assert row["source_doi"] == "10.1000/example"
+    assert row["source_verified_at"] == "2026-10-24"
+    assert row["source_verification_urls"].tolist() == ["https://example.test/paper"]
+
+    payload["works"][0]["person_id"] = "person-affiliate"
+    atomic_write_json(curated_path, payload)
+    with pytest.raises(ValueError, match="registered faculty"):
+        snapshot._load_curated_rows(curated_path, load_registry(*paths))
+
+
 @pytest.mark.parametrize(
     ("path", "replacement", "message"),
     [
@@ -459,7 +586,7 @@ def test_curated_rows_are_provenance_bound_and_not_scholar_fetches(
 def test_curated_source_rejects_unverified_or_invalid_entries(
     tmp_path: Path, path: tuple, replacement, message: str
 ) -> None:
-    profiles = unique_profiles(load_registry(*make_registry(tmp_path / "registry")))
+    registry = load_registry(*make_registry(tmp_path / "registry"))
     payload = curated_payload()
     if path == ("__root__",):
         payload = replacement
@@ -471,23 +598,23 @@ def test_curated_source_rejects_unverified_or_invalid_entries(
     source_path = tmp_path / "curated.json"
     atomic_write_json(source_path, payload)
     with pytest.raises(ValueError, match=message):
-        snapshot._load_curated_rows(source_path, profiles)
+        snapshot._load_curated_rows(source_path, registry)
 
 
 def test_curated_source_rejects_duplicate_ids_and_works(tmp_path: Path) -> None:
-    profiles = unique_profiles(load_registry(*make_registry(tmp_path / "registry")))
+    registry = load_registry(*make_registry(tmp_path / "registry"))
     source_path = tmp_path / "curated.json"
     payload = curated_payload()
     payload["external_coauthors"].append(payload["external_coauthors"][0])
     atomic_write_json(source_path, payload)
     with pytest.raises(ValueError, match="identity"):
-        snapshot._load_curated_rows(source_path, profiles)
+        snapshot._load_curated_rows(source_path, registry)
 
     payload = curated_payload()
     payload["works"].append(payload["works"][0])
     atomic_write_json(source_path, payload)
     with pytest.raises(ValueError, match="Duplicate curated faculty DOI"):
-        snapshot._load_curated_rows(source_path, profiles)
+        snapshot._load_curated_rows(source_path, registry)
 
 
 def test_curated_source_requires_active_faculty_and_can_omit_external_ids(
@@ -495,22 +622,22 @@ def test_curated_source_requires_active_faculty_and_can_omit_external_ids(
 ) -> None:
     paths = make_registry(tmp_path / "registry")
     registry = load_registry(*paths)
-    profile = unique_profiles(registry)[0]
-    excluded = snapshot.AuthorProfile(
-        person=profile.person,
+    excluded = replace(
+        registry,
         memberships=tuple(
-            replace(item, included=False) for item in profile.memberships
+            replace(item, role="affiliate", included=False)
+            for item in registry.memberships
         ),
     )
     source_path = tmp_path / "curated.json"
     payload = curated_payload()
     atomic_write_json(source_path, payload)
     with pytest.raises(ValueError, match="registered faculty"):
-        snapshot._load_curated_rows(source_path, [excluded])
+        snapshot._load_curated_rows(source_path, excluded)
 
     payload["works"][0].pop("external_coauthor_ids")
     atomic_write_json(source_path, payload)
-    rows = snapshot._load_curated_rows(source_path, [profile])
+    rows = snapshot._load_curated_rows(source_path, registry)
     assert rows[0]["external_coauthors"] == []
     assert snapshot._curated_path(paths[0], source_path) == source_path
     assert (

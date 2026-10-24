@@ -22,6 +22,8 @@ from .registry import (
     DEFAULT_PEOPLE_PATH,
     DEFAULT_SCHOOLS_PATH,
     AuthorProfile,
+    Membership,
+    Registry,
     load_registry,
     unique_profiles,
 )
@@ -80,7 +82,7 @@ def _citation_count(value: Any) -> int:
         return 0
 
 
-def _memberships(profile: AuthorProfile) -> list[dict[str, Any]]:
+def _memberships(memberships: Sequence[Membership]) -> list[dict[str, Any]]:
     return [
         {
             "department_id": membership.department_id,
@@ -90,7 +92,7 @@ def _memberships(profile: AuthorProfile) -> list[dict[str, Any]]:
             "source_url": membership.source_url,
             "verified_at": membership.verified_at,
         }
-        for membership in profile.memberships
+        for membership in memberships
     ]
 
 
@@ -114,7 +116,7 @@ def _publication_row(
         "display_name": profile.display_name,
         "faculty": profile.display_name,
         "department_ids": list(profile.department_ids),
-        "memberships": _memberships(profile),
+        "memberships": _memberships(profile.memberships),
         "author_pub_id": str(publication["author_pub_id"]),
         "title": str(publication["title"]),
         "authors": str(publication.get("author") or "").strip(),
@@ -152,9 +154,7 @@ def _https_url(value: Any, *, field: str) -> str:
     return url
 
 
-def _load_curated_rows(
-    path: Path, profiles: Sequence[AuthorProfile]
-) -> list[dict[str, Any]]:
+def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
     if not path.is_file():
         return []
     source = load_json(path)
@@ -188,15 +188,24 @@ def _load_curated_rows(
                 item.get("source_url"), field="coauthor source_url"
             ),
         }
-    profiles_by_person = {profile.person_id: profile for profile in profiles}
+    people_by_id = registry.people_by_id
+    memberships_by_person: dict[str, list[Membership]] = {}
+    for membership in registry.memberships:
+        memberships_by_person.setdefault(membership.person_id, []).append(membership)
     rows: list[dict[str, Any]] = []
     seen: set[tuple[str, str]] = set()
     for work in works:
         if not isinstance(work, dict):
             raise ValueError("Curated work must be an object")
         person_id = str(work.get("person_id") or "").strip()
-        profile = profiles_by_person.get(person_id)
-        if profile is None or not profile.memberships or not profile.department_ids:
+        person = people_by_id.get(person_id)
+        memberships = memberships_by_person.get(person_id, [])
+        department_ids = [
+            membership.department_id
+            for membership in memberships
+            if membership.included
+        ]
+        if person is None or not department_ids:
             raise ValueError(
                 f"Curated work has no active registered faculty: {person_id}"
             )
@@ -238,10 +247,10 @@ def _load_curated_rows(
             {
                 "scholar_id": "",
                 "person_id": person_id,
-                "display_name": profile.display_name,
-                "faculty": profile.display_name,
-                "department_ids": list(profile.department_ids),
-                "memberships": _memberships(profile),
+                "display_name": person.display_name,
+                "faculty": person.display_name,
+                "department_ids": department_ids,
+                "memberships": _memberships(memberships),
                 "author_pub_id": f"curated-doi:{person_id}:{doi}",
                 "title": title,
                 "authors": authors,
@@ -371,7 +380,7 @@ def build_snapshot(
             )
         cached_profile_ids.append(profile.scholar_id)
 
-    rows.extend(_load_curated_rows(source_path, profiles))
+    rows.extend(_load_curated_rows(source_path, registry))
 
     frame = pandas.DataFrame(rows)
     _validate_frame(frame)
