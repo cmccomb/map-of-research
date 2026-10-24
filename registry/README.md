@@ -16,7 +16,7 @@ derived from a person's included department memberships; a cross-appointed
 person keeps one `person_id` and can belong to multiple schools. The school
 catalog includes Engineering, SCS, MCS, CFA, Dietrich, Heinz, and Tepper. It
 contains 7 top-level schools, 40 academic units or documented roster
-containers, 2,001 people, and 2,349 memberships after the four-school
+containers, 2,001 people, and 2,354 memberships after the four-school
 2026-10-24 expansion. A dated review of the official
 faculty listings on 2026-10-24 added all seven SCS departments and all four
 MCS departments. The reviewed pages supplied 357 SCS and 270 MCS department
