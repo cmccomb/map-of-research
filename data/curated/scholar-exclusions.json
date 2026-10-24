@@ -5608,6 +5608,14 @@
       "reason": "Capture row 328 is the supplementary methods PDF for the 2005 Nature letter retained as complete Di Matteo profile row 1, not a separate research publication.",
       "evidence_url": "https://web.phys.cmu.edu/~tiziana/NatureSI/si.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "VzAGH3wAAAAJ",
+      "author_pub_id": "VzAGH3wAAAAJ:vV6vV6tmYwMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF continuing grant 2331037, not a research publication. The official NSF award record names the same project and PI.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2331037.json",
+      "verified_at": "2026-10-24"
     }
   ]
 }
