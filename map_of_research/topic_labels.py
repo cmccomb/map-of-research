@@ -183,9 +183,9 @@ def apply_reviewed_labels(
     """Apply exact reviews without hiding a different cluster's extracted phrase.
 
     Extracted phrases have first claim on their display text. A reviewed label
-    that would collide with another extraction falls back to its own extracted
-    phrase and is marked unreviewed. Duplicate extracted phrases, duplicate
-    editorial labels, and labels colliding with a parent remain errors.
+    that would collide with another extraction or a parent label falls back to
+    its own extracted phrase and is marked unreviewed. Duplicate extracted
+    phrases and duplicate editorial labels remain errors.
     """
 
     reserved_labels = set(reserved or ())
@@ -213,11 +213,6 @@ def apply_reviewed_labels(
     for cluster_id in sorted(extracted_by_cluster):
         extracted = extracted_by_cluster[cluster_id]
         preferred = reviews.get(extracted)
-        if preferred in reserved_labels:
-            raise ValueError(
-                "Topic display labels must be non-empty and unique; "
-                f"cluster {cluster_id!r} reviewed to reserved {preferred!r}"
-            )
         apply_review = preferred is not None and (
             preferred == extracted or preferred not in raw_phrases
         )
