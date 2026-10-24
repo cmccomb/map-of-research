@@ -147,6 +147,90 @@
       "capture_row": 265,
       "author_pub_id": "wex9ft0AAAAJ:jU7OWUQzBzMC",
       "concern": "European Society of Medicine entry has no year or venue; verify source and whether this belongs to Rupert Croft."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 25,
+      "author_pub_id": "AcW2EXwAAAAJ:K3LRdlH-MEoC",
+      "concern": "Slow-roll inflation paper lists P Auclair and C Ringeval, with no visible Breivik author; verify profile attribution."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 96,
+      "author_pub_id": "AcW2EXwAAAAJ:uWQEDVKXjbEC",
+      "concern": "Anode/cathode modeling paper with K Breivik in author string appears outside this researcher’s field; verify identity and attribution."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 130,
+      "author_pub_id": "AcW2EXwAAAAJ:qUcmZB5y_30C",
+      "concern": "Title appears malformed as “Michele Armano ESAC, ESA”; identify the underlying source."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 112,
+      "author_pub_id": "AcW2EXwAAAAJ:0EnyYjriUFMC",
+      "concern": "Missing-link record appears to overlap capture rows 6 and 128; compare source records before classifying."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 95,
+      "author_pub_id": "AcW2EXwAAAAJ:p2g8aNsByqUC",
+      "concern": "Appears to share the same arXiv identifier as capture row 94; compare versions and citation IDs."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 117,
+      "author_pub_id": "AcW2EXwAAAAJ:u-x6o8ySG0sC",
+      "concern": "AAS abstract appears to share title with capture row 115; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 121,
+      "author_pub_id": "AcW2EXwAAAAJ:ufrVoPGSRksC",
+      "concern": "AAS abstract appears to share title with capture row 116; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 84,
+      "author_pub_id": "AcW2EXwAAAAJ:q3oQSFYPqjQC",
+      "concern": "VizieR data catalog; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 99,
+      "author_pub_id": "AcW2EXwAAAAJ:CHSYGLWDkRkC",
+      "concern": "HST proposal; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 131,
+      "author_pub_id": "AcW2EXwAAAAJ:d1gkVwhDpl0C",
+      "concern": "Zenodo software release; verify publication-type classification."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 31,
+      "author_pub_id": "xKrmD5IAAAAJ:4TOpqqG69KYC",
+      "concern": "WTe2 spin-orbit-torque paper appears to be a preprint or journal version of capture row 2; compare source records."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 14,
+      "author_pub_id": "xKrmD5IAAAAJ:u-x6o8ySG0sC",
+      "concern": "Title appears truncated and ends “graphene sheets on”; verify source metadata."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 22,
+      "author_pub_id": "xKrmD5IAAAAJ:2osOgNQ5qMEC",
+      "concern": "Title contains literal “<? format?>”; verify source metadata."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 40,
+      "author_pub_id": "xKrmD5IAAAAJ:WF5omc3nYNoC",
+      "concern": "Author text “TSRM Ishigami” appears malformed; verify source metadata."
     }
   ]
 }
