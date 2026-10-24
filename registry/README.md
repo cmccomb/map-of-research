@@ -65,3 +65,6 @@ When no such page links an ID, a directly viewed Scholar profile can be the
 source if its verified CMU email, name, and affiliation or linked homepage
 corroborate an official faculty listing. Record that identity evidence in a
 dated review; a name-only search match is insufficient.
+If the owner explicitly confirms an ID without a linking page, record the
+supplied Scholar URL and confirmation date, and identify that provenance in
+`notes` rather than claiming independent link verification.
