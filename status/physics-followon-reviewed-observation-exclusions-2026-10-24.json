@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "source_reviewed_proposed_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "These 31 exact source-reviewed observations are proposed for a later producer exclusion update. This source-only draft does not apply exclusions, and all raw capture and cache rows remain intact.",
+  "note": "These 43 exact source-reviewed observations are proposed for a later producer exclusion update. This source-only draft does not apply exclusions, and all raw capture and cache rows remain intact.",
   "exclusions": [
     {
       "scholar_id": "11EoZncAAAAJ",
@@ -250,6 +250,102 @@
       "reason_code": "nonpublication",
       "reason": "Capture row 149 is the Hall A Collaboration member-list chapter of the 2008 status report, not a research publication.",
       "evidence_url": "https://hallaweb.jlab.org/publications/AnnualReports/AnnualReport2008.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 222 is a Victorian pathology-services rostering report from the RMIT health-services team that includes a different Matthew Walker, not CMU astrophysicist Matthew Walker; the exact report PDF was unavailable.",
+      "evidence_url": "https://academics.rmit.edu.au/matthew-walker/publications",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:NJ774b8OgUMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 399 is an 1899 electrical-engineering discussion, predating the CMU astrophysicist and unrelated to his publications.",
+      "evidence_url": "https://doi.org/10.1049/jiee-1.1899.0009",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:qYOp8iumCsAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 400 is an affiliation block extracted from the genuine Breaking beta article retained as complete profile row 57, not a separate publication.",
+      "evidence_url": "https://academic.oup.com/mnras/article/501/1/978/6006274",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:k8to_Y4Q4_EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 401 is a human-epilepsy study by a clinical-neuroscience Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.nature.com/articles/s41467-023-42971-3",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 402 repeats the RMIT Victorian pathology-services rostering report attributed to a different Matthew Walker on that health-services research team; the exact report PDF was unavailable.",
+      "evidence_url": "https://www.emerald.com/pr/article/53/1/18/1228114/Health-services-in-Australia-and-the-impact-of",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:sfnaS5RM6jYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 404 is an Australian bushfire-information research report by RMIT emergency-management researcher Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.naturalhazards.com.au/crc-collection/downloads/rmpp_scenario_exercises_research_report_bnhcrc.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:C33y2ycGS3YC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 406 is a health-services evaluation of early supported discharge by a different Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://ijic.org/articles/786/files/submission/proof/786-1-2518-1-10-20110721.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:AYInfyleIOsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 407 is a health-psychology systematic review by a different Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://nottingham-repository.worktribe.com/output/778883/can-illness-beliefs-from-the-common-sense-model-prospectively-predict-adherence-to-self-management-behaviours-a-systematic-review-and-meta-analysis",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:Hck25ST_3aIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 408 is rehabilitation-research congress material attributed to a different Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.deutsche-rentenversicherung.de/SharedDocs/Downloads/DE/Experten/reha_forschung/reha_kolloquium/TB-28Reha-Koll15EFRR.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:yMeIxYmEMEAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 410 is an Australian multiple-hazards emergency-information report by RMIT researcher Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.naturalhazards.com.au/crc-collection/downloads/rmpp_scenario_exercises_research_report_bnhcrc.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:vbGhcppDl1QC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 411 is an Australian risk-communication briefing note by RMIT researcher Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.naturalhazards.com.au/crc-collection/downloads/rmpp_scenario_exercises_research_report_bnhcrc.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:abG-DnoFyZgC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 413 is THE ANNALS journal header and front matter in the source PDF, not a Walker-authored research publication.",
+      "evidence_url": "https://arxiv.org/pdf/0802.1214",
       "verified_at": "2026-10-24"
     }
   ]

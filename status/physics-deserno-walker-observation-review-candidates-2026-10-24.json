@@ -2,11 +2,11 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Saved-capture anomalies need source and publication-type review. All 646 Deserno/Walker source and cache rows remain intact; no curated producer exclusion is applied here.",
+  "note": "Saved-capture anomalies still need source and publication-type review. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. Walker rows 403, 405, and 412 remain unresolved; row 409 is source-confirmed genuine and retained. All 646 Deserno/Walker source and cache rows remain intact; no curated producer exclusion is applied here.",
   "walker_profile_attribution_review": {
     "scholar_id": "IcEsJfAAAAAJ",
     "state": "profile_wide_row_attribution_review_required_before_publication",
-    "reason": "The verified faculty-owned Scholar profile includes astrophysics records together with visibly unrelated same-name records in occupational therapy, medicine, journalism, composting, and emergency management. The example rows below are not an exhaustive exclusion list.",
+    "reason": "The verified faculty-owned Scholar profile includes astrophysics records together with visibly unrelated same-name records in occupational therapy, medicine, journalism, composting, and emergency management. The unresolved example rows below are not an exhaustive exclusion list; exact reviewed proposals are in the follow-on ledger.",
     "example_capture_rows": [
       330,
       331,
@@ -19,10 +19,6 @@
       394,
       397,
       398,
-      402,
-      404,
-      406,
-      410,
       412
     ]
   },
@@ -203,30 +199,6 @@
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 402,
-      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
-      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 404,
-      "author_pub_id": "IcEsJfAAAAAJ:sfnaS5RM6jYC",
-      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 406,
-      "author_pub_id": "IcEsJfAAAAAJ:C33y2ycGS3YC",
-      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 410,
-      "author_pub_id": "IcEsJfAAAAAJ:yMeIxYmEMEAC",
-      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
       "capture_row": 412,
       "author_pub_id": "IcEsJfAAAAAJ:V3AGJWp-ZtQC",
       "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
@@ -285,10 +257,6 @@
         [
           123,
           266
-        ],
-        [
-          222,
-          402
         ]
       ],
       "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
@@ -365,19 +333,9 @@
         365,
         369,
         373,
-        400,
-        401,
-        402,
         403,
-        404,
         405,
-        406,
-        408,
-        409,
-        410,
-        411,
-        412,
-        413
+        412
       ],
       "concern": "Scholar venue is blank; source and classification remain unresolved."
     }
