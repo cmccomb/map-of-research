@@ -36,3 +36,9 @@ profiles: Jonathan Minden (127) and Luisa Hiller (101). Scholar displays the
 latter account as “Hiller NL”; its CMU-linked identity is recorded in the
 registry review. The captured rows remain attributed to that Scholar account
 and are available for separate publication review.
+
+The fourth Biological Sciences batch adds 79 visible rows from two complete
+profiles: Zheng Kuang (41) and Tina Lee (38). Scholar displays the latter
+account as “Tina H Lee”; its verified CMU identity is recorded in the registry
+review. Their raw HTML and JSON, normalized caches, and checksum receipts are
+staged together. Exact publication eligibility is reviewed separately.
