@@ -2120,6 +2120,30 @@
       "reason": "NSF collaborative research award 1818213, not a research publication.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/1818213.json",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "5TCNs50AAAAJ",
+      "author_pub_id": "5TCNs50AAAAJ:O0nohqN1r9EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated Science title and page-only citation duplicate the complete 2017 synVI article retained on this profile.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/28280154/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CaQRJ8IAAAAJ",
+      "author_pub_id": "CaQRJ8IAAAAJ:LkGwnXOMwfcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "An author-list fragment was imported as a title, duplicating the complete 2015 atlastin paper retained on this profile.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4335215/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "CaQRJ8IAAAAJ",
+      "author_pub_id": "CaQRJ8IAAAAJ:eQOLeE2rZwMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A journal section heading was prefixed to the same 2000 membrane-tethering article retained on this profile.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S002192581989899X",
+      "verified_at": "2026-10-24"
     }
   ]
 }
