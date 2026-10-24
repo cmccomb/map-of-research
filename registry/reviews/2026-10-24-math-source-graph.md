@@ -84,6 +84,40 @@ authorships to one DOI work with both CMU faculty IDs. The 1998 and 1993
 DOI works are separate. Owen's full publication coverage remains unknown
 until a later source becomes available.
 
+## Next verified collaboration batch (staged for review)
+
+Five DOI works add six curated faculty observations, without claiming a new
+Scholar capture. Each authorship was checked against a CMU faculty identity
+and the linked publisher record. The publisher's full ScienceDirect pages
+were inaccessible during this review, so the two Elsevier DOI records also
+use the [CMU Center for Nonlinear Analysis record](https://www.math.cmu.edu/cna/Publications/publication_auto.php?cnacode=25-CNA-006)
+or [Ian Tice's CMU publications page](https://www.math.cmu.edu/~iantice/publications.html)
+for the author list. The staged Scholar caches already contain observations
+for the other registered coauthors listed below; those observations are
+retained rather than duplicated as curated faculty rows.
+
+| Year | DOI work | New curated faculty observations | Existing cached coauthors |
+| --- | --- | --- | --- |
+| 2025 | [Accretion and ablation in deformable solids using an Eulerian formulation: A finite deformation numerical method](https://www.sciencedirect.com/science/article/pii/S0022509625000523) | [Noel J. Walkington](https://www.cmu.edu/math/people/faculty/walkington.html) | Anthony Rollett, Kaushik Dayal |
+| 2022 | [Accretion and ablation in deformable solids with an Eulerian description: examples using the method of characteristics](https://journals.sagepub.com/doi/10.1177/10812865211054573) | Noel J. Walkington | Kaushik Dayal |
+| 2023 | [Traveling Wave Solutions to the Free Boundary Incompressible Navier-Stokes Equations](https://onlinelibrary.wiley.com/doi/10.1002/cpa.22084) | [Ian Tice](https://www.cmu.edu/math/people/faculty/tice.html) | Giovanni Leoni |
+| 2019 | [Traces for homogeneous Sobolev spaces in infinite strip-like domains](https://www.sciencedirect.com/science/article/pii/S0022123619300254) | Ian Tice | Giovanni Leoni |
+| 2022 | [Comparison of simulated and measured grain volume changes during grain growth](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402) | [David Kinderlehrer](https://www.cmu.edu/math/people/faculty/kinderlehrer.html), [Robert M. Suter](https://www.cmu.edu/physics/people/faculty/suter.html) | Kaushik Dayal, Gregory S. Rohrer |
+
+Suter's [CMU Physics page](https://www.cmu.edu/physics/people/faculty/suter.html)
+also names the 2022 grain-growth work and identifies him as an emeritus
+Physics professor with a courtesy Materials Science and Engineering
+appointment. The [APS DOI record](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402)
+lists his and Kinderlehrer's names and CMU affiliations. The other authors
+of the five works who are not in the current included registry are preserved
+in the full author strings; no faculty identity is inferred for them.
+
+A local normalization check using the staged 220-profile cache resolved each
+DOI to exactly one map-eligible work. The six new curated observations joined
+seven already cached Scholar observations across those five works. This
+validation establishes the proposed links in the producer's normalized data;
+the batch is not in a public snapshot until a later upload and site deploy.
+
 ## Verified Mathematics–MSE links
 
 Six curated observations identify three DOI works coauthored by
