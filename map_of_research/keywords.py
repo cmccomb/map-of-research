@@ -13,7 +13,7 @@ from .topic_labels import (
     review_catalog,
 )
 
-KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v4"
+KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v5"
 REGION_AUDIT_VERSION = "low-information-semantic-region-v2"
 DEFAULT_KEYWORD_COUNT = 30
 DEFAULT_DETAIL_KEYWORD_COUNT = 120
