@@ -50,3 +50,12 @@ identity is known, but this isolated branch does not assign the Scholar ID in
 the registry. The cache is not eligible for a full-corpus snapshot until that
 identity review is complete. Exact nonpublication and attribution decisions
 remain a separate source review.
+
+The next local Biological Sciences batch adds 81 complete visible Scholar rows:
+C. Joel McManus (62, displayed as “Joel McManus”) and Elizabeth Ransey (19).
+Their paired redacted HTML and JSON, normalized caches, and checksum receipts
+are staged together. The Scholar IDs and official CMU identity pages are
+verified on current producer main, while this stacked source branch predates
+those registry assignments. The frozen 15-profile release does not include
+these caches. Exact nonpublication and attribution decisions remain a separate
+source review.
