@@ -335,6 +335,15 @@ def test_scholar_fields_win_when_a_verified_doi_record_matches(tmp_path) -> None
     assert work["source_types"] == ["curated_verified", "scholar"]
     assert work["source_verification_urls"] == ["https://example.test/publisher"]
 
+    # Pandas uses a nullable scalar for absent Scholar years in a full snapshot.
+    scholar_without_year = {**scholar, "year": pandas.NA}
+    missing_year_tables = build_dataset_tables(
+        pandas.DataFrame([curated, scholar_without_year]), registry
+    )
+    missing_year_work = missing_year_tables["works"].iloc[0]
+    assert missing_year_work["title"] == scholar["title"]
+    assert missing_year_work["year"] == curated["year"]
+
 
 def test_ambiguous_curated_title_year_does_not_guess_a_doi(tmp_path) -> None:
     paths = write_registry(
