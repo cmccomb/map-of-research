@@ -38,6 +38,7 @@ DEFAULT_PUBLICATION_LIMIT = 200
 HARD_PUBLICATION_LIMIT = 500
 DEFAULT_REQUEST_DELAY_SECONDS = 90.0
 SCHOLARLY_REQUEST_TIMEOUT_SECONDS = 10
+COMPLETE_VISIBLE_PROFILE = "complete_visible_profile"
 
 
 class ScholarAccessRefused(RuntimeError):
@@ -158,6 +159,21 @@ def load_collection_state(path: Path) -> dict[str, Any]:
     return state
 
 
+def _has_complete_browser_capture(path: Path) -> bool:
+    """Protect a manually verified full-profile capture from bounded refreshes."""
+
+    if not path.is_file():
+        return False
+    cache = load_json(path)
+    if not isinstance(cache, Mapping):
+        raise ValueError(f"Profile cache is not a JSON object: {path}")
+    capture = cache.get("browser_capture")
+    return (
+        isinstance(capture, Mapping)
+        and capture.get("coverage") == COMPLETE_VISIBLE_PROFILE
+    )
+
+
 def select_profiles(
     profiles: Sequence[AuthorProfile],
     state: Mapping[str, Any],
@@ -181,7 +197,12 @@ def select_profiles(
     cutoff = now - dt.timedelta(days=min_age_days)
     candidates: list[tuple[bool, dt.datetime, str, AuthorProfile]] = []
     for profile in profiles:
-        cached = (cache_dir / f"{profile.scholar_id}.json").is_file()
+        cache_path = cache_dir / f"{profile.scholar_id}.json"
+        cached = cache_path.is_file()
+        # A bounded scholarly response cannot establish that it includes the
+        # entire visible history documented by a complete browser capture.
+        if cached and _has_complete_browser_capture(cache_path):
+            continue
         record = profile_state.get(profile.scholar_id, {})
         if not isinstance(record, Mapping):
             record = {}
@@ -445,6 +466,14 @@ def collect_profiles(
                 profile,
                 publication_limit=publication_limit,
             )
+            cache_path = cache_dir / f"{profile.scholar_id}.json"
+            # Recheck before writing in case a complete capture was installed
+            # after selection. Never replace its rows or coverage claim.
+            if _has_complete_browser_capture(cache_path):
+                raise RuntimeError(
+                    "Automated Scholar refresh cannot replace a complete "
+                    f"visible browser capture: {profile.scholar_id}"
+                )
             cache_payload = {
                 "schema_version": CACHE_SCHEMA_VERSION,
                 "scholar_id": profile.scholar_id,
@@ -454,7 +483,7 @@ def collect_profiles(
                 "publications": publications,
             }
             atomic_write_json(
-                cache_dir / f"{profile.scholar_id}.json",
+                cache_path,
                 cache_payload,
             )
             record.update(
