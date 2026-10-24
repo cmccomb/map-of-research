@@ -895,6 +895,78 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
 
 
 @pytest.mark.parametrize(
+    ("name", "home_type", "home_id", "excluded_id", "role_source"),
+    [
+        (
+            "Amelia M. Haviland",
+            "school",
+            "heinz",
+            "stats",
+            "https://www.cmu.edu/dietrich/statistics-datascience/resources/docs/history21.pdf",
+        ),
+        (
+            "Barbara Shinn-Cunningham",
+            "institute",
+            "ni",
+            "psychology",
+            "https://www.cmu.edu/ni/people/faculty/barbara-shinn-cunningham",
+        ),
+        (
+            "David Choi",
+            "school",
+            "heinz",
+            "stats",
+            "https://www.andrew.cmu.edu/user/davidch/choi_CV.pdf",
+        ),
+    ],
+)
+def test_courtesy_corrections_keep_recorded_memberships_and_typed_homes(
+    name: str,
+    home_type: str,
+    home_id: str,
+    excluded_id: str,
+    role_source: str,
+) -> None:
+    registry = load_registry()
+    person = next(person for person in registry.people if person.display_name == name)
+    memberships = [
+        item for item in registry.memberships if item.person_id == person.person_id
+    ]
+    corrected = next(item for item in memberships if item.department_id == excluded_id)
+    assert (corrected.role, corrected.included) == ("courtesy", False)
+    assert corrected.source_url == role_source
+    assert corrected.verified_at == "2026-10-24"
+    assert any(item.included for item in memberships)
+
+    home = registry.primary_affiliation(person.person_id)
+    assert (home.home_type, home.home_id, home.basis) == (
+        home_type,
+        home_id,
+        "reviewed",
+    )
+    published = home.published_fields()
+    assert published["primary_academic_home_type"] == home_type
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == home.title
+    assert published["primary_academic_home_school_id"] == home.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "reviewed"
+    assert published["primary_department_id"] == ""
+    assert published["primary_department_basis"] == "unresolved"
+
+    with Path("registry/reviews/2026-10-24-courtesy-home-corrections.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        reviews = list(csv.DictReader(handle))
+    assert len(reviews) == 3
+    review = next(row for row in reviews if row["person_id"] == person.person_id)
+    assert review["corrected_membership_id"] == excluded_id
+    assert review["role_source_url"] == role_source
+    assert review["verified_at"] == "2026-10-24"
+
+
+@pytest.mark.parametrize(
     ("home", "unit_ids", "invalid_unit_type", "message"),
     [
         (
