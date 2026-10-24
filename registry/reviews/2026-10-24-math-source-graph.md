@@ -7,7 +7,7 @@ pages. A profile ID alone supplies no publication observations. This pass
 prioritized faculty whose work connects mathematics to engineering and
 materials science.
 
-## Direct profile batch
+## First direct profile batch
 
 The [Irene Fonseca](https://www.cmu.edu/math/people/faculty/fonseca.html) and
 [Giovanni Leoni](https://www.cmu.edu/math/people/faculty/leoni.html) CMU pages
@@ -25,6 +25,30 @@ checked against its saved source HTML. Thirteen rows have no displayed year;
 The cache files hold per-profile capture method, coverage, source-page
 checksums, and citation URLs. The dated receipt is
 `status/browser-capture-2026-10-24.json` on the snapshot branch.
+
+## Second direct profile batch
+
+The [Prasad Tetali](https://www.cmu.edu/math/people/faculty/tetali.html)
+and [Dejan Slepčev](https://www.cmu.edu/math/people/faculty/slepcev.html)
+CMU pages link their respective Scholar IDs. A separate, explicitly started
+local Chrome batch opened those two direct profile URLs on 2026-10-24. The
+profile loads were 95 seconds apart. The receipt reports no access refusal
+or failed profile. The batch used no search results, citation traversal,
+proxies, or CAPTCHA bypass.
+
+The batch retained 200 Tetali rows and 86 Slepčev rows. Tetali's profile
+still offered more publications at the 200-row cap, so its cache is marked
+`capped_partial`. Slepčev's visible profile had no further rows and is marked
+`complete_visible_profile`. Two rows had no displayed year and 18 had no
+displayed venue across the two profiles; those fields remain blank. Two
+Slepčev citation counts included an asterisk in the displayed source; the
+cache retains that display alongside the numeric count. Each publication's
+ID, title, authors, venue, year, citation display, and citation URL was
+checked against saved HTML, and the source JSON and HTML checksums were
+verified. The [dated second-batch receipt](https://github.com/cmccomb/map-of-research/blob/automation/map-snapshot/status/browser-capture-2026-10-24-batch-2.json)
+records the profile IDs, coverage, counts, and checksums. These are captured
+profile observations; the number of distinct or mapped works depends on the
+later normalization and map-eligibility audit.
 
 ## Verified Mathematics–MSE links
 
@@ -49,8 +73,9 @@ external historical coauthor in the collaboration map and appears only when
 the viewer's **Show Erdős** control is selected. A global Erdős-distance
 coloring is deferred pending a broader coauthor source graph.
 
-The normalized pre-layout snapshot from this pass has 38,592 observations and
+The first CMU-wide normalized pre-layout snapshot has 38,592 observations and
 218 cached profiles across Engineering, SCS, and MCS. It yields 280 distinct
 Math-linked works, 274 of which pass the initial map-eligibility policy; the
-later spatial audit can refine visibility. Missing caches for the other Math
-people remain a collection gap, not evidence of no publications.
+later spatial audit can refine visibility. Those counts precede the second
+direct profile batch above. Missing caches for other Math people remain a
+collection gap, not evidence of no publications.
