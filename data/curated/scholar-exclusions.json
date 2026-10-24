@@ -4368,6 +4368,22 @@
       "reason": "Dartmouth Digital Commons branding was imported as a title for the same 2016 Nature Communications article retained on this profile.",
       "evidence_url": "https://digitalcommons.dartmouth.edu/facoa/2601/",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ySlRYXoAAAAJ",
+      "author_pub_id": "ySlRYXoAAAAJ:foquWX3nUaYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title appends Science 356:eaal3118 to the complete 2017 microvillar-search article retained on this profile.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/cai.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ySlRYXoAAAAJ",
+      "author_pub_id": "ySlRYXoAAAAJ:xtoqd-5pKcoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is the tail of the author list for the retained 2008 Applied Physics Letters article 92:122107.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/cai.html",
+      "verified_at": "2026-10-24"
     }
   ]
 }
