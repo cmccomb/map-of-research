@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "math"
+  ],
+  "profiles": [
+    {
+      "scholar_id": "4JAHlmcAAAAJ",
+      "display_name": "Tomasz Tkocz",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/tkocz.html",
+      "captured_at_utc": "2026-10-24T21:08:02.047Z",
+      "profile_url": "https://scholar.google.com/citations?user=4JAHlmcAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 69,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 69,
+      "raw_json_path": "data/captures/tkocz-visible-69-2026-10-24.json",
+      "raw_json_sha256": "49510fbacf65f6828344579b9753ca02fb8fdbdf6c3f1f58c449d8ecc570cd56",
+      "raw_html_path": "data/captures/tkocz-visible-69-2026-10-24.html",
+      "raw_html_sha256": "dc4d7714ac97a5b3dd89fd4174445c07b2dfa03405401f3270e5eb1b144cf7ff"
+    },
+    {
+      "scholar_id": "uOCVq1cAAAAJ",
+      "display_name": "John F. Mackey",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/mackey.html",
+      "captured_at_utc": "2026-10-24T21:09:50.206Z",
+      "profile_url": "https://scholar.google.com/citations?user=uOCVq1cAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 19,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 19,
+      "raw_json_path": "data/captures/mackey-visible-19-2026-10-24.json",
+      "raw_json_sha256": "ff01bd32a2c0f6a96a3ccd73716c10d3eb8f576fdd10bc77eef0ea0e20144a40",
+      "raw_html_path": "data/captures/mackey-visible-19-2026-10-24.html",
+      "raw_html_sha256": "21ccb3110a685f37f932c2bf9e5c7fac3325ec23d0fa4e67e7bedd201a808f8b"
+    }
+  ],
+  "browser_sessions_closed": true
+}

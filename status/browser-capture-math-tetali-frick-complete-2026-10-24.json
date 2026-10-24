@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "math"
+  ],
+  "profiles": [
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "display_name": "Prasad Tetali",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/tetali.html",
+      "captured_at_utc": "2026-10-24T21:01:06.657Z",
+      "profile_url": "https://scholar.google.com/citations?user=FmZaK1wAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 3,
+      "displayed_count": 222,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 222,
+      "raw_json_path": "data/captures/tetali-visible-222-2026-10-24.json",
+      "raw_json_sha256": "61b4e3dd6b376f5b73a38c91a841589f56b43712c3484fdaf5faecc313235cca",
+      "raw_html_path": "data/captures/tetali-visible-222-2026-10-24.html",
+      "raw_html_sha256": "3503ad060dd779326511f0a9c532b9668d96c35b7f25f7a0a3c02f0a6cc7156b"
+    },
+    {
+      "scholar_id": "7G7zH2AAAAAJ",
+      "display_name": "Florian Frick",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/frick.html",
+      "captured_at_utc": "2026-10-24T20:59:09.318Z",
+      "profile_url": "https://scholar.google.com/citations?user=7G7zH2AAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 1,
+      "displayed_count": 58,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 58,
+      "raw_json_path": "data/captures/frick-visible-58-2026-10-24.json",
+      "raw_json_sha256": "1c02fdb2b4b7c41058f6623645269e49d1b30fcdf276df98f033cc91dabff06b",
+      "raw_html_path": "data/captures/frick-visible-58-2026-10-24.html",
+      "raw_html_sha256": "f69c2daa053b8bb99c05eef2288eebbfdafda1aa01717cfe536f878e9186752f"
+    }
+  ],
+  "browser_sessions_closed": true
+}
