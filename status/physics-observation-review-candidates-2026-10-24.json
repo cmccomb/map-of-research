@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "These are row-level anomalies found in the saved Scholar captures. They are not source-reviewed exclusion decisions. Both raw captures and all normalized cache rows remain intact pending separate review.",
+  "note": "These are row-level anomalies found in saved Scholar captures. They are not source-reviewed exclusion decisions. All raw captures and normalized cache rows remain intact pending separate review.",
   "candidates": [
     {
       "scholar_id": "kcXOB1MAAAAJ",
@@ -51,6 +51,102 @@
       "capture_row": 88,
       "author_pub_id": "au_cLfoAAAAJ:bFI3QPDXJZMC",
       "concern": "Author surname appears as Kahniashbvili rather than Kahniashvili; retain the raw row and review metadata spelling separately."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 62,
+      "author_pub_id": "wovjAPsAAAAJ:XiSMed-E-HIC",
+      "concern": "Dataset record; verify how to classify relative to the associated research article before any exclusion."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 65,
+      "author_pub_id": "wovjAPsAAAAJ:g5m5HwL7SMYC",
+      "concern": "Meeting abstract appears to overlap article at capture row 4; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 66,
+      "author_pub_id": "wovjAPsAAAAJ:2P1L_qKh6hAC",
+      "concern": "Meeting abstract appears to overlap article at capture row 27; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 73,
+      "author_pub_id": "wovjAPsAAAAJ:BqipwSGYUEgC",
+      "concern": "Meeting abstract appears to overlap article at capture row 9; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 86,
+      "author_pub_id": "wovjAPsAAAAJ:MXK_kJrjxJIC",
+      "concern": "Meeting abstract appears to overlap article at capture row 10; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 240,
+      "author_pub_id": "wex9ft0AAAAJ:gKiMpY-AVTkC",
+      "concern": "Sloan Digital Sky Survey ninth release appears to duplicate capture row 15; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 228,
+      "author_pub_id": "wex9ft0AAAAJ:V3AGJWp-ZtQC",
+      "concern": "Sloan Digital Sky Survey tenth release appears to duplicate capture row 20; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 250,
+      "author_pub_id": "wex9ft0AAAAJ:LPtt_HFRSbwC",
+      "concern": "CMS physics technical design report appears to duplicate capture rows 26 and 157; also verify Croft attribution."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 212,
+      "author_pub_id": "wex9ft0AAAAJ:otzGkya1bYkC",
+      "concern": "PRIYA suite appears to duplicate capture row 82; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 267,
+      "author_pub_id": "wex9ft0AAAAJ:xtRiw3GOFMkC",
+      "concern": "Variance, skewness and kurtosis appears to duplicate capture row 96; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 241,
+      "author_pub_id": "wex9ft0AAAAJ:v1_lew4L6wgC",
+      "concern": "May be an NSF award record rather than a publication; verify source and classification."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 243,
+      "author_pub_id": "wex9ft0AAAAJ:MAUkC_7iAq8C",
+      "concern": "May be an NSF award record rather than a publication; verify source and classification."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 249,
+      "author_pub_id": "wex9ft0AAAAJ:-7ulzOJl1JYC",
+      "concern": "May be an NSF award record rather than a publication; verify source and classification."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 254,
+      "author_pub_id": "wex9ft0AAAAJ:kVjdVfd2voEC",
+      "concern": "May be an NSF award record rather than a publication; verify source and classification."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 263,
+      "author_pub_id": "wex9ft0AAAAJ:LjlpjdlvIbIC",
+      "concern": "Curriculum vitae is dated 1909 in captured metadata; verify source, date, and publication classification."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 265,
+      "author_pub_id": "wex9ft0AAAAJ:jU7OWUQzBzMC",
+      "concern": "European Society of Medicine entry has no year or venue; verify source and whether this belongs to Rupert Croft."
     }
   ]
 }

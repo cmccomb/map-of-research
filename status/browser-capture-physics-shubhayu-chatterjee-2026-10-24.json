@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-shubhayuchatterjee-34929dff",
+  "display_name": "Shubhayu Chatterjee",
+  "scholar_profile_name": "Shubhayu Chatterjee",
+  "scholar_id": "wovjAPsAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/chatterjee.html",
+  "scholar_id_source_url": "https://www.ocf.berkeley.edu/~chatterjee/pubs.html",
+  "scholar_identity_basis": "Scholar ID linked from Chatterjee faculty-controlled former Berkeley publications page; identity matched against current CMU profile; Scholar profile name matched.",
+  "captured_at_utc": "2026-10-24T22:10:45.660Z",
+  "publication_count": 90,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/physics-shubhayu-chatterjee-2026-10-24.json",
+  "source_json_sha256": "e9e6701454c954abaed4a020c786ab7d589ef535683ac936dc973ec0b6fd54d0",
+  "source_html_path": "data/captures/physics-shubhayu-chatterjee-2026-10-24.html",
+  "source_html_sha256": "8195957aae721fbdec338c5eb6e875de421bc6cde7776690ae19660566bd7263",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 34,
+      "display": "23*"
+    },
+    {
+      "row": 42,
+      "display": "7*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
