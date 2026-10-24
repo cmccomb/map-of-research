@@ -28,5 +28,11 @@ The second Biological Sciences batch adds 686 visible rows from six complete
 profiles: Alison Barth (115), Eric Yttri (51), Kenneth Hovis (6), Huaiying
 Zhang (61), Yongxin Zhao (86), and Robert F. Murphy (367). Each cache keeps the
 Scholar row and citation identifier, and each paired capture preserves the
-source evidence after blanking captured form values. Publication eligibility
-is reviewed separately from raw-source preservation.
+source evidence after replacing captured form values with `[REDACTED]`.
+Publication eligibility is reviewed separately from raw-source preservation.
+
+The third Biological Sciences batch adds 228 visible rows from two complete
+profiles: Jonathan Minden (127) and Luisa Hiller (101). Scholar displays the
+latter account as “Hiller NL”; its CMU-linked identity is recorded in the
+registry review. The captured rows remain attributed to that Scholar account
+and are available for separate publication review.
