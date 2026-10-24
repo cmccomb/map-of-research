@@ -262,6 +262,80 @@ def test_curated_doi_reconciles_later_scholar_rows_without_losing_provenance(
     assert person["publication_observation_count"] == 4
 
 
+def test_scholar_fields_win_when_a_verified_doi_record_matches(tmp_path) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "one"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/faculty",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    base = {
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "department_ids": ["ece"],
+        "memberships": [{"department_id": "ece", "included": True}],
+        "source_doi": "10.1000/example",
+        "source_record_json": "{}",
+        "embedding": [0.0, 1.0],
+        "source_verification_urls": [],
+        "external_coauthors": [],
+    }
+    curated = {
+        **base,
+        "scholar_id": "",
+        "author_pub_id": "curated:example",
+        "source_type": "curated_verified",
+        "title": "A Longer Publisher Title for Graph Models of Research Collaboration",
+        "authors": "One, Two, and Three Researchers",
+        "year": 1996,
+        "venue": "Publisher Journal of Graph Models",
+        "citation": "Publisher Journal of Graph Models, 1996",
+        "citation_count": 12,
+        "source_url": "https://example.test/publisher",
+        "source_verified_at": "2026-10-24",
+        "source_verification_urls": ["https://example.test/publisher"],
+        "fetched_at_utc": "",
+    }
+    scholar = {
+        **base,
+        "scholar_id": "one",
+        "author_pub_id": "one:example",
+        "source_type": "scholar",
+        "title": "Graph Models of Research Collaboration",
+        "authors": "One and Two",
+        "year": 1995,
+        "venue": "Graph Journal",
+        "citation": "",
+        "citation_count": 4,
+        "source_url": "https://scholar.google.com/citations?view_op=view_citation",
+        "source_verified_at": "",
+        "fetched_at_utc": "2026-10-24T12:00:00+00:00",
+    }
+    tables = build_dataset_tables(pandas.DataFrame([curated, scholar]), registry)
+    work = tables["works"].iloc[0]
+    assert work["title"] == scholar["title"]
+    assert work["authors"] == scholar["authors"]
+    assert work["year"] == scholar["year"]
+    assert work["venue"] == scholar["venue"]
+    assert work["citation_count"] == scholar["citation_count"]
+    assert work["citation"] == curated["citation"]  # Scholar field is empty.
+    assert set(work["title_variants"]) == {curated["title"], scholar["title"]}
+    assert work["source_types"] == ["curated_verified", "scholar"]
+    assert work["source_verification_urls"] == ["https://example.test/publisher"]
+
+
 def test_ambiguous_curated_title_year_does_not_guess_a_doi(tmp_path) -> None:
     paths = write_registry(
         tmp_path / "registry",
