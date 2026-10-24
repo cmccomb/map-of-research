@@ -533,6 +533,42 @@ def test_primary_review_ledger_covers_every_ambiguous_registry_identity() -> Non
 
 
 @pytest.mark.parametrize(
+    ("person_id", "home_id", "basis", "included_units"),
+    [
+        (
+            "person-andrewilyas-9f6dac37",
+            "s3d",
+            "inferred_advisee_count",
+            {"ece", "s3d"},
+        ),
+        (
+            "person-chrishendrickson-c5d421c4",
+            "civil",
+            "inferred_profile_title",
+            {"civil", "epp", "heinz-faculty"},
+        ),
+    ],
+)
+def test_cross_appointed_scholars_have_evidence_bounded_display_homes(
+    person_id: str, home_id: str, basis: str, included_units: set[str]
+) -> None:
+    registry = load_registry()
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.department_id, home.basis) == (
+        "department",
+        home_id,
+        home_id,
+        basis,
+    )
+    assert home.source_url.startswith("https://")
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_units
+
+
+@pytest.mark.parametrize(
     ("schools", "department_school_id", "message"),
     [
         (
