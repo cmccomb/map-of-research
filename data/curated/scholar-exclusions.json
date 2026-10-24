@@ -5608,6 +5608,46 @@
       "reason": "Capture row 328 is the supplementary methods PDF for the 2005 Nature letter retained as complete Di Matteo profile row 1, not a separate research publication.",
       "evidence_url": "https://web.phys.cmu.edu/~tiziana/NatureSI/si.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:u9V92aW7jw8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Reference-parser copy uses only Marcel Dekker: New York, 1996 as its title and says there is no corresponding record. Retain the complete edited-book observation TSkli5EAAAAJ:LGh1lRt-7sUC for Cationic Polymerizations: Mechanisms, Synthesis and Applications; the CMU CV confirms the book, editor, publisher, place, and year.",
+      "evidence_url": "https://www.cmu.edu/maty/members/krzysztof-matyjaszewski-cv1.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:5awf1xo2G04C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Springer lists Armitage as a chapter author for pages 53–84 of the 1996 volume, not an author or editor of the whole book. Retain the complete chapter observation BWNUifwAAAAJ:kNdYIx-mwKoC.",
+      "evidence_url": "https://link.springer.com/book/10.1007/3-540-60484-7",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:S16KYo8Pm5AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Springer credits Waring and Chaires as the 2005 book editors; Armitage authored only the chapter on pages 55–76. Retain the complete chapter observation BWNUifwAAAAJ:2osOgNQ5qMEC.",
+      "evidence_url": "https://link.springer.com/book/10.1007/b99428",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:epqYDVWIO7EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The clipped title 7 DNA-Templated is chapter 7 starting at page 255 in Organic Photochemistry and Photophysics; Routledge gives the full chapter title and Armitage as author. Retain complete observation BWNUifwAAAAJ:XD-gHx7UXLsC.",
+      "evidence_url": "https://www.routledge.com/Organic-Photochemistry-and-Photophysics/Ramamurthy-Schanze/p/book/9780429126642",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "BWNUifwAAAAJ",
+      "author_pub_id": "BWNUifwAAAAJ:KUbvn5osdkgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The clipped PNA Beacons and row and retained complete observation BWNUifwAAAAJ:3s1wT3WcHBgC have identical Datta/Wang/Armitage authors, 2004 source book, and first page 141. Keep the complete title and suppress the clipped copy.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=BWNUifwAAAAJ&citation_for_view=BWNUifwAAAAJ:3s1wT3WcHBgC",
+      "verified_at": "2026-10-24"
     }
   ]
 }
