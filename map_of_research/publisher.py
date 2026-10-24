@@ -9,7 +9,7 @@ import logging
 import math
 import os
 import tempfile
-from collections.abc import Mapping, Sequence
+from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
@@ -89,9 +89,12 @@ STRING_LIST_COLUMNS = frozenset(
         "author_variants",
         "citation_variants",
         "included_department_ids",
+        "included_school_ids",
         "map_exclusion_reasons",
         "department_ids",
         "department_titles",
+        "school_ids",
+        "school_titles",
         "observation_ids",
         "person_ids",
         "scholar_ids",
@@ -115,34 +118,67 @@ def _as_list(value: Any) -> list[Any]:
     return [value]
 
 
+def _published_rows(
+    config_name: str,
+    columns: tuple[str, ...],
+    *,
+    hf_token: str,
+) -> Iterator[dict[str, Any]]:
+    """Read published Parquet columns without applying stale Hub feature metadata."""
+
+    import pyarrow.parquet as parquet
+    from huggingface_hub import snapshot_download
+
+    directory_name = "data" if config_name == "default" else config_name
+    snapshot_root = Path(
+        snapshot_download(
+            REPO_ID,
+            repo_type="dataset",
+            allow_patterns=f"{directory_name}/train-*.parquet",
+            token=hf_token or None,
+        )
+    )
+    parquet_files = sorted((snapshot_root / directory_name).glob("train-*.parquet"))
+    if not parquet_files:
+        raise FileNotFoundError(f"No published {config_name} Parquet shard")
+    for parquet_path in parquet_files:
+        shard = parquet.ParquetFile(parquet_path)
+        missing = set(columns).difference(shard.schema_arrow.names)
+        if missing:
+            LOGGER.info("Published %s lacks reusable columns %s", config_name, missing)
+            return
+        for batch in shard.iter_batches(columns=list(columns), batch_size=512):
+            yield from batch.to_pylist()
+
+
 def _existing_embeddings(*, hf_token: str) -> dict[tuple[str, str], list[float]]:
     """Load reusable observation vectors from any prior dataset generation."""
 
-    import datasets
-
     for config_name in REUSABLE_EMBEDDING_CONFIGS:
+        embeddings: dict[tuple[str, str], list[float]] = {}
         try:
-            existing = datasets.load_dataset(
-                REPO_ID,
-                name=config_name,
-                split="train",
-                token=hf_token or None,
-            )
-        except Exception:
+            for row in _published_rows(
+                config_name,
+                ("author_pub_id", "title", "embedding"),
+                hf_token=hf_token,
+            ):
+                author_pub_id = str(row.get("author_pub_id") or "")
+                title = str(row.get("title") or "")
+                embedding = row.get("embedding")
+                if not author_pub_id or not title or not isinstance(embedding, list):
+                    continue
+                if len(embedding) != EMBEDDING_DIMENSION:
+                    continue
+                embeddings[(author_pub_id, title)] = [
+                    float(value) for value in embedding
+                ]
+        except FileNotFoundError:
             LOGGER.info("No reusable %s dataset config found", config_name)
             continue
-        if "embedding" not in existing.column_names:
-            continue
-        embeddings: dict[tuple[str, str], list[float]] = {}
-        for row in existing:
-            author_pub_id = str(row.get("author_pub_id") or "")
-            title = str(row.get("title") or "")
-            embedding = row.get("embedding")
-            if not author_pub_id or not title or not isinstance(embedding, list):
-                continue
-            if len(embedding) != EMBEDDING_DIMENSION:
-                continue
-            embeddings[(author_pub_id, title)] = [float(value) for value in embedding]
+        except Exception as error:
+            raise RuntimeError(
+                f"Could not read reusable {config_name} embeddings"
+            ) from error
         if embeddings:
             LOGGER.info(
                 "Reusing %d embeddings from config %s",
@@ -198,45 +234,37 @@ def add_embeddings(
 def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     """Load a complete compatible layout that can be reused without refitting."""
 
-    import datasets
-
-    try:
-        existing = datasets.load_dataset(
-            REPO_ID,
-            name="works",
-            split="train",
-            token=hf_token or None,
-        )
-    except Exception:
-        LOGGER.info("No reusable works layout found")
-        return {}
     coordinate_fields = {
         field
         for layout in LAYOUTS
         for field in (str(layout["x_field"]), str(layout["y_field"]))
     }
-    required_fields = {"work_id", "layout_version", *coordinate_fields}
-    if not required_fields.issubset(existing.column_names):
-        return {}
+    required_fields = ("work_id", "layout_version", *sorted(coordinate_fields))
     layouts: dict[str, dict[str, float]] = {}
-    for row in existing:
-        if row.get("layout_version") != LAYOUT_VERSION:
-            continue
-        work_id = str(row.get("work_id") or "")
-        coordinates: dict[str, float] = {}
-        for field in coordinate_fields:
-            try:
-                value = float(row.get(field))
-            except (TypeError, ValueError):
-                break
-            if not math.isfinite(value):
-                break
-            coordinates[field] = value
-        if len(coordinates) != len(coordinate_fields) or not work_id:
-            continue
-        if work_id in layouts:
-            return {}
-        layouts[work_id] = coordinates
+    try:
+        for row in _published_rows("works", required_fields, hf_token=hf_token):
+            if row.get("layout_version") != LAYOUT_VERSION:
+                continue
+            work_id = str(row.get("work_id") or "")
+            coordinates: dict[str, float] = {}
+            for field in coordinate_fields:
+                try:
+                    value = float(row.get(field))
+                except (TypeError, ValueError):
+                    break
+                if not math.isfinite(value):
+                    break
+                coordinates[field] = value
+            if len(coordinates) != len(coordinate_fields) or not work_id:
+                continue
+            if work_id in layouts:
+                return {}
+            layouts[work_id] = coordinates
+    except FileNotFoundError:
+        LOGGER.info("No reusable works layout found")
+        return {}
+    except Exception as error:
+        raise RuntimeError("Could not read reusable works layouts") from error
     if layouts:
         LOGGER.info("Found reusable coordinates for %d works", len(layouts))
     return layouts
@@ -393,6 +421,11 @@ def build_map_artifact(
 ) -> dict[str, Any]:
     """Build the full work-centric artifact without changing global coordinates."""
 
+    school_by_department = {
+        department.department_id: department.school_id
+        for department in registry.departments
+    }
+
     related_rows: list[tuple[Any, list[dict[str, str]]]] = []
     selected_rows: list[tuple[Any, list[dict[str, str]]]] = []
     for row in works.itertuples(index=False):
@@ -475,6 +508,12 @@ def build_map_artifact(
                 "department_ids": sorted(
                     {membership["department_id"] for membership in memberships}
                 ),
+                "school_ids": sorted(
+                    {
+                        school_by_department[membership["department_id"]]
+                        for membership in memberships
+                    }
+                ),
                 "year": None
                 if row.year is None or math.isnan(float(row.year))
                 else int(row.year),
@@ -536,18 +575,22 @@ def build_map_artifact(
         )
 
     department_counts: dict[str, int] = {}
+    school_counts: dict[str, int] = {}
     faculty_counts: dict[str, int] = {}
     for point in points:
         for department_id in point["department_ids"]:
             department_counts[department_id] = (
                 department_counts.get(department_id, 0) + 1
             )
+        for school_id in point["school_ids"]:
+            school_counts[school_id] = school_counts.get(school_id, 0) + 1
         for person_id in point["faculty_ids"]:
             faculty_counts[person_id] = faculty_counts.get(person_id, 0) + 1
 
     departments = [
         {
             "department_id": department.department_id,
+            "school_id": department.school_id,
             "title": department.title,
             "directory_url": department.directory_url,
             "reviewed_at": department.reviewed_at,
@@ -560,6 +603,15 @@ def build_map_artifact(
             registry.departments,
             key=lambda item: item.title.casefold(),
         )
+    ]
+    schools = [
+        {
+            "school_id": school.school_id,
+            "title": school.title,
+            "directory_url": school.directory_url,
+            "publication_count": school_counts.get(school.school_id, 0),
+        }
+        for school in sorted(registry.schools, key=lambda item: item.title.casefold())
     ]
     memberships_by_person: dict[str, list[dict[str, str]]] = {}
     for membership in registry.memberships:
@@ -591,6 +643,12 @@ def build_map_artifact(
                     memberships,
                     key=lambda item: (item["department_id"], item["role"]),
                 ),
+                "school_ids": sorted(
+                    {
+                        school_by_department[membership["department_id"]]
+                        for membership in memberships
+                    }
+                ),
                 "publication_count": faculty_counts.get(person.person_id, 0),
             }
         )
@@ -615,10 +673,12 @@ def build_map_artifact(
         "point_count": len(points),
         "excluded_work_count": len(related_rows) - len(selected_rows),
         "department_count": len(departments),
+        "school_count": len(schools),
         "faculty_count": len(faculty),
         "keyword_count": len(keywords),
         "keyword_levels": keyword_levels,
         "catalogs": {
+            "schools": schools,
             "departments": departments,
             "faculty": faculty,
         },
@@ -667,6 +727,7 @@ def _upload_map_artifacts(
             "point_count": artifact["point_count"],
             "excluded_work_count": artifact["excluded_work_count"],
             "department_count": artifact["department_count"],
+            "school_count": artifact["school_count"],
             "faculty_count": artifact["faculty_count"],
             "keyword_count": artifact["keyword_count"],
             "keyword_levels": artifact["keyword_levels"],

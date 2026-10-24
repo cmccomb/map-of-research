@@ -7,8 +7,17 @@ The registry is intentionally normalized:
   durable notes.
 - `memberships.csv` owns department roles, inclusion state, legacy labels, the
   official source URL, and the date of human verification.
-- `departments.csv` owns stable department IDs, titles, official directory URLs,
-  annual review dates, and the documented review policy.
+- `departments.csv` owns stable department IDs, their parent `school_id`, titles,
+  official directory URLs, annual review dates, and the documented review policy.
+- `schools.csv` owns stable school IDs, titles, and official directory URLs.
+
+Every department must reference a school in `schools.csv`. School membership is
+derived from a person's included department memberships; a cross-appointed
+person keeps one `person_id` and can belong to multiple schools. The school
+catalog includes Engineering and SCS. The initial SCS pilot contains four
+verified S3D core faculty and two CSD research and tenure faculty. These are
+selected pilot records, not a complete SCS roster; only cached Scholar profiles
+contribute publication observations.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained

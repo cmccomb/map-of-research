@@ -46,6 +46,7 @@ jobs:
         run: |
           mkdir -p snapshot/registry
           cp source/registry/departments.csv snapshot/registry/departments.csv
+          cp source/registry/schools.csv snapshot/registry/schools.csv
           cp source/registry/memberships.csv snapshot/registry/memberships.csv
           cp source/registry/people.csv snapshot/registry/people.csv
           rm -f snapshot/registry/faculty.csv snapshot/registry/maps.csv

@@ -173,6 +173,11 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         QUALITY_ASSESSMENT_VERSION,
     )
 
+    school_titles = registry.school_catalog()
+    school_by_department = {
+        department.department_id: department.school_id
+        for department in registry.departments
+    }
     authorship_rows: list[dict[str, Any]] = []
     for row in profile_publications.itertuples(index=False):
         memberships = _normalize_memberships(row.memberships)
@@ -187,6 +192,13 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "department_ids": sorted(
                     {
                         membership["department_id"]
+                        for membership in memberships
+                        if membership["included"]
+                    }
+                ),
+                "school_ids": sorted(
+                    {
+                        school_by_department[membership["department_id"]]
                         for membership in memberships
                         if membership["included"]
                     }
@@ -217,6 +229,10 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                     "display_name": str(record.display_name),
                     "department_id": membership["department_id"],
                     "department_title": department_titles[membership["department_id"]],
+                    "school_id": school_by_department[membership["department_id"]],
+                    "school_title": school_titles[
+                        school_by_department[membership["department_id"]]
+                    ],
                     "role": membership["role"],
                 }
         memberships = sorted(
@@ -229,6 +245,7 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
         department_ids = sorted(
             {membership["department_id"] for membership in memberships}
         )
+        school_ids = sorted({membership["school_id"] for membership in memberships})
         years = [record.year for record in records]
         citation_counts = [int(record.citation_count) for record in records]
         fetched = sorted(str(record.fetched_at_utc) for record in records)
@@ -276,6 +293,8 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "department_titles": [
                     department_titles[department_id] for department_id in department_ids
                 ],
+                "school_ids": school_ids,
+                "school_titles": [school_titles[school_id] for school_id in school_ids],
                 "memberships": memberships,
                 "scholar_ids": sorted({str(record.scholar_id) for record in records}),
                 "author_pub_ids": sorted(
@@ -310,6 +329,10 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
             {
                 "department_id": membership.department_id,
                 "department_title": department_titles[membership.department_id],
+                "school_id": school_by_department[membership.department_id],
+                "school_title": school_titles[
+                    school_by_department[membership.department_id]
+                ],
                 "role": membership.role,
                 "included": membership.included,
                 "legacy_label": membership.legacy_label,
@@ -337,6 +360,13 @@ def build_dataset_tables(observations: Any, registry: Registry) -> dict[str, Any
                 "included_department_ids": sorted(
                     {
                         membership["department_id"]
+                        for membership in memberships
+                        if membership["included"]
+                    }
+                ),
+                "included_school_ids": sorted(
+                    {
+                        membership["school_id"]
                         for membership in memberships
                         if membership["included"]
                     }

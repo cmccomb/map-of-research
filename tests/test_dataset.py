@@ -44,6 +44,31 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "verified_at": "2026-07-17",
             }
             for person_id in ("person-one", "person-two")
+        ]
+        + [
+            {
+                "person_id": "person-one",
+                "department_id": "s3d",
+                "role": "faculty",
+                "included": "true",
+                "legacy_label": "One Person",
+                "source_url": "https://example.test/s3d",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "school_id": "engineering",
+                "title": "Electrical & Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "s3d",
+                "school_id": "scs",
+                "title": "Software and Societal Systems Department",
+                "directory_url": "https://example.test/s3d",
+            },
         ],
     )
     registry = load_registry(people_path, memberships_path, departments_path)
@@ -68,8 +93,21 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
                 "person_id": person_id,
                 "display_name": display_name,
                 "faculty": display_name,
-                "department_ids": ["ece"],
-                "memberships": memberships,
+                "department_ids": ["ece", "s3d"]
+                if person_id == "person-one"
+                else ["ece"],
+                "memberships": memberships
+                + (
+                    [
+                        {
+                            "department_id": "s3d",
+                            "role": "faculty",
+                            "included": True,
+                        }
+                    ]
+                    if person_id == "person-one"
+                    else []
+                ),
                 "author_pub_id": f"{scholar_id}:paper",
                 "title": "The Same Paper!",
                 "authors": "One Person and Two Person",
@@ -102,6 +140,17 @@ def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -
         "twoAAAAJ:paper",
     }
     assert person["mapped_work_count"] == 1
+    assert person["included_school_ids"] == ["engineering", "scs"]
+    assert work["school_ids"] == ["engineering", "scs"]
+    assert work["school_titles"] == [
+        "College of Engineering",
+        "School of Computer Science",
+    ]
+    authorship = tables["authorships"].set_index("person_id").loc["person-one"]
+    assert authorship["school_ids"] == [
+        "engineering",
+        "scs",
+    ]
 
 
 def test_dataset_retains_quality_exclusions_and_prefers_an_eligible_observation(

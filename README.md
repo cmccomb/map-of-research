@@ -1,18 +1,21 @@
 # Map of Research
 
-`map-of-research` is the source of truth for the CMU engineering faculty catalog
-and publication corpus. It collects a deliberately small number of public
-Google Scholar profiles, publishes one versioned Hugging Face dataset, and
-builds one browser-ready artifact for the unified research map.
+`map-of-research` is the source of truth for the CMU Engineering faculty catalog
+and publication corpus. Its normalized school hierarchy supports a staged SCS
+pilot; the current roster and published dataset remain Engineering scoped. It
+collects a deliberately small number of public Google Scholar profiles,
+publishes one versioned Hugging Face dataset, and builds one browser-ready
+publication artifact.
 
-The only visualization repository, `map-of-eng`, does **not** contact Google
-Scholar. It is a static client of
+The visualization repositories `map-of-eng` and `map-of-collaboration` do
+**not** contact Google Scholar. They are static clients of
 [`ccm/cmu-engineering-publications`](https://huggingface.co/datasets/ccm/cmu-engineering-publications).
 
 ## Architecture
 
-1. `registry/people.csv`, `memberships.csv`, and `departments.csv` separate
-   stable identity, role history, inclusion, and official annual-review sources.
+1. `registry/people.csv`, `memberships.csv`, `departments.csv`, and
+   `schools.csv` separate stable identity, role history, unit inclusion,
+   school hierarchy, and official annual-review sources.
 2. A cache-first `scholarly` collector refreshes at most two unique profiles in
    an explicitly started run. It never uses proxies or attempts to bypass a
    block.
@@ -24,9 +27,10 @@ Scholar. It is a static client of
    visible regions, audits diffuse low-information regions, and publishes
    `people`, `works`, `authorships`, and
    `profile_publications` configs plus `maps/publications.json`.
-5. `map-of-eng` fetches that artifact and switches between the precomputed PCA
-   and t-SNE full-corpus layouts in the browser; it owns no faculty roster,
-   publication data, scraper, embedding model, or layout computation.
+5. `map-of-eng` packages that artifact and switches between the precomputed PCA
+   and t-SNE layouts in the browser. `map-of-collaboration` derives a
+   coauthorship graph from its faculty and work IDs. Neither site owns a faculty
+   roster, scraper, or publication embedding model.
 
 This split keeps the Hugging Face token away from the Scholar-facing process,
 fetches each unique profile only once, preserves the last good cache on errors,
@@ -147,7 +151,9 @@ named `HUGGINGFACE_TOKEN`.
 
 - `map-of-research`: faculty catalog, collection, validation, dataset
   publication, and the single full-corpus artifact
-- `map-of-eng`: the single static interactive visualization
+- `map-of-eng`: static publication map
+- `map-of-collaboration`: static coauthorship graph derived from the same work
+  and faculty IDs
 
 The legacy department-specific `map-of-*` repositories are archived. Their
 department views now live as filters in `map-of-eng`.

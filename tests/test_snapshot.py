@@ -138,6 +138,7 @@ def test_snapshot_preserves_source_record_and_normalized_memberships(
     )
 
     assert manifest == validated_manifest
+    assert "schools.csv" in manifest["registry_files"]
     assert len(frame) == 1
     assert frame.loc[0, "person_id"] == "person-alpha"
     assert set(frame.loc[0, "department_ids"]) == {
@@ -234,6 +235,36 @@ def test_snapshot_scalar_normalizers_and_venue_fallbacks(tmp_path: Path) -> None
 def test_registry_digest_is_independent_of_argument_order(tmp_path: Path) -> None:
     paths = make_registry(tmp_path / "registry")
     assert snapshot._registry_sha256(paths) == snapshot._registry_sha256(paths[::-1])
+    registry_paths = snapshot._registry_paths(*paths)
+    assert registry_paths[-1] == paths[2].with_name("schools.csv")
+
+
+def test_snapshot_validation_rejects_changed_school_hierarchy(tmp_path: Path) -> None:
+    (
+        snapshot_path,
+        manifest_path,
+        people_path,
+        memberships_path,
+        departments_path,
+        _,
+    ) = build_fixture(tmp_path)
+    schools_path = departments_path.with_name("schools.csv")
+    schools_path.write_text(
+        schools_path.read_text(encoding="utf-8").replace(
+            "College of Engineering", "Engineering College"
+        ),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="Registry files do not match"):
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            now=NOW,
+            people_path=people_path,
+            memberships_path=memberships_path,
+            departments_path=departments_path,
+        )
 
 
 @pytest.mark.parametrize(

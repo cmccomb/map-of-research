@@ -7,20 +7,110 @@ import pandas
 import pytest
 
 import map_of_research.publisher as publisher
-from map_of_research.registry import Department, Membership, Person, Registry
+from map_of_research.registry import Department, Membership, Person, Registry, School
 
 
 class Rows(list):
-    def __init__(self, rows, columns=None):
-        super().__init__(rows)
-        self.column_names = columns or list(rows[0] if rows else [])
+    pass
 
 
-def install_datasets(monkeypatch, loader) -> None:
+def install_published_rows(monkeypatch, loader) -> None:
+    monkeypatch.setattr(publisher, "_published_rows", loader)
+
+
+def test_published_rows_ignore_extra_parquet_columns_and_read_all_shards(
+    monkeypatch,
+    tmp_path,
+) -> None:
+    directory = tmp_path / "profile_publications"
+    directory.mkdir()
+    for index in range(2):
+        pandas.DataFrame(
+            [
+                {
+                    "author_pub_id": f"author:{index}",
+                    "title": f"Title {index}",
+                    "embedding": [float(index)] * publisher.EMBEDDING_DIMENSION,
+                    "newer_column": "not in older Hub feature metadata",
+                }
+            ]
+        ).to_parquet(directory / f"train-{index:05d}-of-00002.parquet", index=False)
+    calls = []
+
+    def snapshot_download(repo_id, **kwargs):
+        calls.append((repo_id, kwargs))
+        return str(tmp_path)
+
     monkeypatch.setitem(
         sys.modules,
-        "datasets",
-        SimpleNamespace(load_dataset=loader),
+        "huggingface_hub",
+        SimpleNamespace(snapshot_download=snapshot_download),
+    )
+    rows = list(
+        publisher._published_rows(
+            "profile_publications",
+            ("author_pub_id", "title", "embedding"),
+            hf_token="token",
+        )
+    )
+    assert [row["author_pub_id"] for row in rows] == ["author:0", "author:1"]
+    assert all("newer_column" not in row for row in rows)
+    assert calls == [
+        (
+            publisher.REPO_ID,
+            {
+                "repo_type": "dataset",
+                "allow_patterns": "profile_publications/train-*.parquet",
+                "token": "token",
+            },
+        )
+    ]
+    assert len(publisher._existing_embeddings(hf_token="token")) == 2
+
+    works_directory = tmp_path / "works"
+    works_directory.mkdir()
+    pandas.DataFrame(
+        [
+            {
+                "work_id": "work-one",
+                "layout_version": publisher.LAYOUT_VERSION,
+                "x": 0.1,
+                "y": 0.2,
+                "tsne_x": 0.3,
+                "tsne_y": 0.4,
+                "newer_column": "not in older Hub feature metadata",
+            }
+        ]
+    ).to_parquet(works_directory / "train-00000-of-00001.parquet", index=False)
+    assert publisher._existing_layouts(hf_token="token") == {
+        "work-one": {"x": 0.1, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4}
+    }
+
+
+def test_published_rows_skip_unusable_or_missing_parquet_config(
+    monkeypatch,
+    tmp_path,
+) -> None:
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(snapshot_download=lambda *args, **kwargs: str(tmp_path)),
+    )
+    with pytest.raises(FileNotFoundError, match="default"):
+        list(publisher._published_rows("default", ("embedding",), hf_token=""))
+
+    directory = tmp_path / "works"
+    directory.mkdir()
+    pandas.DataFrame([{"work_id": "one"}]).to_parquet(
+        directory / "train-00000-of-00001.parquet", index=False
+    )
+    assert (
+        list(
+            publisher._published_rows(
+                "works", ("work_id", "layout_version"), hf_token=""
+            )
+        )
+        == []
     )
 
 
@@ -66,8 +156,8 @@ def test_list_normalization_handles_scalar_tuple_and_array() -> None:
 def test_existing_embeddings_searches_compatible_configs(monkeypatch) -> None:
     calls = []
 
-    def load_dataset(repo_id, *, name, split, token):
-        calls.append((repo_id, name, split, token))
+    def published_rows(name, columns, *, hf_token):
+        calls.append((name, columns, hf_token))
         if name == "profile_publications":
             raise FileNotFoundError
         if name == "publications":
@@ -84,18 +174,29 @@ def test_existing_embeddings_searches_compatible_configs(monkeypatch) -> None:
             ]
         )
 
-    install_datasets(monkeypatch, load_dataset)
+    install_published_rows(monkeypatch, published_rows)
 
     assert publisher._existing_embeddings(hf_token="token") == {
         ("a:one", "Reusable"): [1.0] * publisher.EMBEDDING_DIMENSION
     }
-    assert [call[1] for call in calls] == list(publisher.REUSABLE_EMBEDDING_CONFIGS)
+    assert [call[0] for call in calls] == list(publisher.REUSABLE_EMBEDDING_CONFIGS)
+    assert calls[0][1] == ("author_pub_id", "title", "embedding")
+    assert calls[0][2] == "token"
 
 
 def test_existing_embeddings_returns_empty_when_no_vectors_exist(monkeypatch) -> None:
     invalid = Rows([{"author_pub_id": "", "title": "", "embedding": []}])
-    install_datasets(monkeypatch, lambda *args, **kwargs: invalid)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: invalid)
     assert publisher._existing_embeddings(hf_token="") == {}
+
+
+def test_existing_embeddings_stop_on_unexpected_read_failure(monkeypatch) -> None:
+    install_published_rows(
+        monkeypatch,
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("corrupt shard")),
+    )
+    with pytest.raises(RuntimeError, match="Could not read reusable"):
+        publisher._existing_embeddings(hf_token="")
 
 
 @pytest.mark.parametrize(
@@ -263,6 +364,7 @@ def registry() -> Registry:
         departments=(
             Department(
                 department_id="bme",
+                school_id="engineering",
                 title="Biomedical Engineering",
                 directory_url="https://example.test/bme",
                 reviewed_at="2026-07-17",
@@ -270,6 +372,7 @@ def registry() -> Registry:
             ),
             Department(
                 department_id="cmu-silicon-valley",
+                school_id="engineering",
                 title="CMU Silicon Valley",
                 directory_url="https://example.test/sv",
                 reviewed_at="2026-07-17",
@@ -277,10 +380,18 @@ def registry() -> Registry:
             ),
             Department(
                 department_id="ece",
+                school_id="engineering",
                 title="Electrical & Computer Engineering",
                 directory_url="https://example.test/ece",
                 reviewed_at="2026-07-17",
                 review_notes="Test",
+            ),
+        ),
+        schools=(
+            School(
+                school_id="engineering",
+                title="College of Engineering",
+                directory_url="https://example.test/engineering",
             ),
         ),
     )
@@ -313,6 +424,16 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     assert artifact["points"][0]["department_ids"] == [
         "cmu-silicon-valley",
         "ece",
+    ]
+    assert artifact["points"][0]["school_ids"] == ["engineering"]
+    assert artifact["school_count"] == 1
+    assert artifact["catalogs"]["schools"] == [
+        {
+            "school_id": "engineering",
+            "title": "College of Engineering",
+            "directory_url": "https://example.test/engineering",
+            "publication_count": 1,
+        }
     ]
     assert artifact["points"][0]["x"] == 0.25
     assert artifact["points"][0]["tsne_x"] == -0.75
@@ -494,13 +615,13 @@ def test_existing_layouts_accepts_only_complete_compatible_rows(monkeypatch) -> 
             }
         ]
     )
-    install_datasets(monkeypatch, lambda *args, **kwargs: valid)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: valid)
     assert publisher._existing_layouts(hf_token="token") == {
         "one": {"x": 0.0, "y": 1.0, "tsne_x": 2.0, "tsne_y": 3.0}
     }
 
     invalid_rows = [
-        Rows([], columns=["work_id"]),
+        Rows([]),
         Rows([{**valid[0], "layout_version": "old"}]),
         Rows([{**valid[0], "x": "bad"}]),
         Rows([{**valid[0], "x": numpy.inf}]),
@@ -508,11 +629,11 @@ def test_existing_layouts_accepts_only_complete_compatible_rows(monkeypatch) -> 
         Rows([valid[0], valid[0]]),
     ]
     for rows in invalid_rows:
-        install_datasets(monkeypatch, lambda *args, _rows=rows, **kwargs: _rows)
+        install_published_rows(monkeypatch, lambda *args, _rows=rows, **kwargs: _rows)
         assert publisher._existing_layouts(hf_token="token") == {}
 
     mixed = Rows([valid[0], {**valid[0], "work_id": "excluded", "x": numpy.nan}])
-    install_datasets(monkeypatch, lambda *args, **kwargs: mixed)
+    install_published_rows(monkeypatch, lambda *args, **kwargs: mixed)
     assert publisher._existing_layouts(hf_token="token") == {
         "one": {"x": 0.0, "y": 1.0, "tsne_x": 2.0, "tsne_y": 3.0}
     }
@@ -522,12 +643,20 @@ def test_existing_layouts_tolerates_missing_prior_dataset(monkeypatch) -> None:
     def missing(*args, **kwargs):
         raise FileNotFoundError
 
-    install_datasets(monkeypatch, missing)
+    install_published_rows(monkeypatch, missing)
     assert publisher._existing_layouts(hf_token="token") == {}
 
-    columns = ["work_id", "layout_version", "x", "y", "tsne_x", "tsne_y"]
-    install_datasets(monkeypatch, lambda *args, **kwargs: Rows([], columns=columns))
+    install_published_rows(monkeypatch, lambda *args, **kwargs: Rows([]))
     assert publisher._existing_layouts(hf_token="token") == {}
+
+
+def test_existing_layouts_stop_on_unexpected_read_failure(monkeypatch) -> None:
+    install_published_rows(
+        monkeypatch,
+        lambda *args, **kwargs: (_ for _ in ()).throw(OSError("corrupt shard")),
+    )
+    with pytest.raises(RuntimeError, match="Could not read reusable works"):
+        publisher._existing_layouts(hf_token="")
 
 
 def test_layout_normalization_handles_flat_axes_and_aspect_modes() -> None:
@@ -591,7 +720,79 @@ def test_map_artifact_catalog_retains_full_included_roster() -> None:
         item["department_id"]: item for item in artifact["catalogs"]["departments"]
     }
     assert departments["ece"]["publication_count"] == 1
+    assert departments["ece"]["school_id"] == "engineering"
     assert departments["bme"]["publication_count"] == 0
+    assert artifact["catalogs"]["faculty"][0]["school_ids"] == ["engineering"]
+
+
+def test_map_artifact_tracks_cross_school_membership_once() -> None:
+    source = registry()
+    cross_school = Registry(
+        people=source.people,
+        memberships=(
+            *source.memberships,
+            Membership(
+                person_id="person-one",
+                department_id="s3d",
+                role="faculty",
+                included=True,
+                legacy_label="",
+                source_url="https://example.test/s3d",
+                verified_at="2026-10-24",
+            ),
+        ),
+        departments=(
+            *source.departments,
+            Department(
+                department_id="s3d",
+                school_id="scs",
+                title="Software and Societal Systems Department",
+                directory_url="https://example.test/s3d",
+                reviewed_at="2026-10-24",
+                review_notes="Pilot",
+            ),
+        ),
+        schools=(
+            *source.schools,
+            School(
+                school_id="scs",
+                title="School of Computer Science",
+                directory_url="https://example.test/scs",
+            ),
+        ),
+    )
+    works = work_frame()
+    works.at[0, "memberships"] = [
+        *works.at[0, "memberships"],
+        {
+            "person_id": "person-one",
+            "display_name": "One Person",
+            "department_id": "s3d",
+            "department_title": "Software and Societal Systems Department",
+            "role": "faculty",
+        },
+    ]
+
+    artifact = publisher.build_map_artifact(
+        works,
+        cross_school,
+        generated_at_utc="2026-10-24T12:00:00+00:00",
+    )
+
+    assert artifact["point_count"] == 1
+    assert artifact["points"][0]["school_ids"] == ["engineering", "scs"]
+    assert artifact["catalogs"]["faculty"][0]["school_ids"] == [
+        "engineering",
+        "scs",
+    ]
+    school_counts = {
+        school["school_id"]: school["publication_count"]
+        for school in artifact["catalogs"]["schools"]
+    }
+    assert school_counts == {
+        "engineering": 1,
+        "scs": 1,
+    }
 
 
 def test_hub_dataset_preserves_legacy_faculty_string() -> None:
@@ -696,6 +897,7 @@ def test_map_catalog_ignores_excluded_memberships_and_unrostered_people() -> Non
             ),
         ),
         departments=source.departments,
+        schools=source.schools,
     )
     artifact = publisher.build_map_artifact(
         work_frame(),
@@ -738,6 +940,7 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
         publisher.TOPIC_LABEL_REVIEW_VERSION
     )
     assert uploads[0][2]["artifact"]["keyword_count"] == 2
+    assert uploads[0][2]["artifact"]["school_count"] == 1
     assert uploads[0][2]["artifact"]["keyword_levels"][1]["keyword_count"] == 1
 
     HfApi.upload_folder = lambda self, **kwargs: SimpleNamespace()

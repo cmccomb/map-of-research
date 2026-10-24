@@ -18,6 +18,7 @@ from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
+    DEFAULT_SCHOOLS_PATH,
     AuthorProfile,
     load_registry,
     unique_profiles,
@@ -132,6 +133,21 @@ def _registry_sha256(paths: Sequence[Path]) -> str:
     return digest.hexdigest()
 
 
+def _registry_paths(
+    people_path: Path,
+    memberships_path: Path,
+    departments_path: Path,
+) -> tuple[Path, ...]:
+    """Include the school hierarchy in snapshot provenance."""
+
+    return (
+        people_path,
+        memberships_path,
+        departments_path,
+        departments_path.with_name(DEFAULT_SCHOOLS_PATH.name),
+    )
+
+
 def _load_profile_cache(path: Path, profile: AuthorProfile) -> dict[str, Any]:
     cache = load_json(path)
     if not isinstance(cache, dict):
@@ -236,12 +252,13 @@ def build_snapshot(
         "snapshot_file": snapshot_path.name,
         "snapshot_sha256": sha256_file(snapshot_path),
         "registry_sha256": _registry_sha256(
-            (people_path, memberships_path, departments_path)
+            _registry_paths(people_path, memberships_path, departments_path)
         ),
         "registry_files": [
             people_path.name,
             memberships_path.name,
             departments_path.name,
+            DEFAULT_SCHOOLS_PATH.name,
         ],
         "publication_rows": len(frame),
         "registry_people": len(registry.people),
@@ -299,7 +316,9 @@ def validate_snapshot(
     if sha256_file(snapshot_path) != manifest["snapshot_sha256"]:
         raise ValueError("Snapshot checksum does not match the manifest")
     if (
-        _registry_sha256((people_path, memberships_path, departments_path))
+        _registry_sha256(
+            _registry_paths(people_path, memberships_path, departments_path)
+        )
         != manifest["registry_sha256"]
     ):
         raise ValueError("Registry files do not match the snapshot manifest")
