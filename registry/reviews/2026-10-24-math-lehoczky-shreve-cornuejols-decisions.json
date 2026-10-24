@@ -4,9 +4,9 @@
   "reviewed_at": "2026-10-24",
   "source_review": "math-lehoczky-shreve-cornuejols-source-review-2026-10-24.json",
   "counts": {
-    "exclude_with_independent_evidence": 70,
+    "exclude_with_independent_evidence": 72,
     "retain_repair": 7,
-    "hold_uncertain": 31
+    "hold_uncertain": 29
   },
   "decisions": [
     {
@@ -45,9 +45,9 @@
       "author_pub_id": "9lFYMIkAAAAJ:r_AWSJRzSzQC",
       "captured_title": "CV détaillé",
       "initial_supporting_url": null,
-      "decision": "hold_uncertain",
-      "rationale": "No exact independent source was established; retain pending review.",
-      "independent_evidence_url": null
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The captured names are the examination committee for Jérôme Malick’s 2017 habilitation; Cornuéjols was a committee member, not an author of this CV.",
+      "independent_evidence_url": "https://membres-ljk.imag.fr/Jerome.Malick/hdr.html"
     },
     {
       "scholar_id": "9lFYMIkAAAAJ",
@@ -965,9 +965,9 @@
       "author_pub_id": "P_AmD6MAAAAJ:mlAyqtXpCwEC",
       "captured_title": "Department of Operations Research Naval Postgraduate School Monterey, California",
       "initial_supporting_url": null,
-      "decision": "hold_uncertain",
-      "rationale": "No exact independent source was established; retain pending review.",
-      "independent_evidence_url": null
+      "decision": "exclude_with_independent_evidence",
+      "rationale": "The title is a Naval Postgraduate School contributor-address line from the book front matter, not a separate Lehoczky work. The actual Gaver–Lehoczky chapter is retained at OU6Ihb5iCvQC.",
+      "independent_evidence_url": "https://api.pageplace.de/preview/DT0400.9781483261270_A23866638/preview-9781483261270_A23866638.pdf"
     },
     {
       "scholar_id": "P_AmD6MAAAAJ",

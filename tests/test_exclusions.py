@@ -34,7 +34,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 486
+    assert len(exclusions) == 488
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -67,9 +67,9 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "EqKRQ4YAAAAJ" for key in exclusions) == 80
     assert sum(key[0] == "H8qYeA0AAAAJ" for key in exclusions) == 10
     assert sum(key[0] == "tfBFyTMAAAAJ" for key in exclusions) == 25
-    assert sum(key[0] == "9lFYMIkAAAAJ" for key in exclusions) == 30
+    assert sum(key[0] == "9lFYMIkAAAAJ" for key in exclusions) == 31
     assert sum(key[0] == "A0ISJPUAAAAJ" for key in exclusions) == 27
-    assert sum(key[0] == "P_AmD6MAAAAJ" for key in exclusions) == 13
+    assert sum(key[0] == "P_AmD6MAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "uHqbF7sAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "eVxdemsAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "q1g_W5sAAAAJ" for key in exclusions) == 5

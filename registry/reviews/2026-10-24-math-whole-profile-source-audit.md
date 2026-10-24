@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-24 against the saved complete visible-profile captures. Google Scholar remains the primary source for each observed row. This review identifies only exact citation IDs that independent sources show to be grants, front matter, false attributions, or corrupted duplicates. Every captured Scholar row stays in the raw source table; the exclusion manifest prevents a reviewed row from becoming a mapped work or authorship.
 
-The manifest adds **218** exact-ID decisions to the 268 present on this branch's producer `main` baseline. Each decision states its reason and source URL. All 218 IDs are unique and occur in the staged complete Math captures; the existing 268 decisions are preserved.
+The manifest adds **220** exact-ID decisions to the 268 present on this branch's producer `main` baseline. Each decision states its reason and source URL. All 220 IDs are unique and occur in the staged complete Math captures; the existing 268 decisions are preserved.
 
 | Review scope | New exact exclusions | Decision record |
 | --- | ---: | --- |
@@ -10,10 +10,10 @@ The manifest adds **218** exact-ID decisions to the 268 present on this branch's
 | Frieze and Bukh second pass | 45 | `2026-10-24-math-frieze-bukh-second-pass-decisions.json` |
 | Owen | 25 | `2026-10-24-math-owen-source-decisions.json` |
 | Howell, Shkolnikov, Grossberg | 12 | `2026-10-24-math-howell-shkolnikov-grossberg-decisions.json` |
-| Lehoczky, Shreve, Cornuéjols | 70 | `2026-10-24-math-lehoczky-shreve-cornuejols-decisions.json` |
+| Lehoczky, Shreve, Cornuéjols | 72 | `2026-10-24-math-lehoczky-shreve-cornuejols-decisions.json` |
 | Published Leoni, Tkocz, Mackey captures | 21 | `2026-10-24-math-leoni-tkocz-mackey-triage.md` |
 
-The Lehoczky/Shreve/Cornuéjols ledger records all 108 candidates: 70 exclusions, seven genuine items needing title repair, and 31 unresolved entries retained. The genuine items include Lehoczky's authored MathSciNet review, Shreve's separate Volume I and Volume II errata, Shreve's chapter in *Proceedings of Symposia in Applied Mathematics* 57, and Cornuéjols's report. Frieze's 1995 technical report and 1982 paper are likewise retained in the second-pass record. These decisions avoid discarding real academic work because Scholar clipped a title or merged a page header into it.
+The Lehoczky/Shreve/Cornuéjols ledger records all 108 candidates: 72 exclusions, seven genuine items needing title repair, and 29 unresolved entries retained. The genuine items include Lehoczky's authored MathSciNet review, Shreve's separate Volume I and Volume II errata, Shreve's chapter in *Proceedings of Symposia in Applied Mathematics* 57, and Cornuéjols's report. A second source check established that Cornuéjols was named on another scholar's examination committee, not as a CV author, and that a purported Lehoczky title was a book contributor address. Frieze's 1995 technical report and 1982 paper are likewise retained in the second-pass record. These decisions avoid discarding real academic work because Scholar clipped a title or merged a page header into it.
 
 The other ledgers also preserve unresolved rows instead of turning uncertainty into exclusion. Grossberg's author-hosted 2008 preprint is retained alongside its 2016 journal version; version history alone is not grounds for exclusion. A title repair would require a separate, provenance-preserving display metadata change; this manifest changes only map eligibility. “Complete visible profile” means all rows shown by that Scholar profile at capture time, not independent proof of the researcher's lifetime publication total.
 

@@ -2507,6 +2507,14 @@
     },
     {
       "scholar_id": "9lFYMIkAAAAJ",
+      "author_pub_id": "9lFYMIkAAAAJ:r_AWSJRzSzQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured names are the examination committee for Jérôme Malick’s 2017 habilitation; Cornuéjols was a committee member, not an author of this CV.",
+      "evidence_url": "https://membres-ljk.imag.fr/Jerome.Malick/hdr.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "9lFYMIkAAAAJ",
       "author_pub_id": "9lFYMIkAAAAJ:sA9dB-pw3HoC",
       "reason_code": "nonpublication",
       "reason": "NSF award 1560828, not a research publication. Exact title and ID checked with the NSF Awards API.",
@@ -3575,6 +3583,14 @@
       "reason_code": "corrupted_duplicate",
       "reason": "Truncated title of the Lehoczky-Sethi-Shreve 1982 conference paper already present as a complete record.",
       "evidence_url": "https://www.math.cmu.edu/users/shreve/ShreveCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "author_pub_id": "P_AmD6MAAAAJ:mlAyqtXpCwEC",
+      "reason_code": "nonpublication",
+      "reason": "The title is a Naval Postgraduate School contributor-address line from the book front matter, not a separate Lehoczky work. The actual Gaver–Lehoczky chapter is retained at OU6Ihb5iCvQC.",
+      "evidence_url": "https://api.pageplace.de/preview/DT0400.9781483261270_A23866638/preview-9781483261270_A23866638.pdf",
       "verified_at": "2026-10-24"
     },
     {
