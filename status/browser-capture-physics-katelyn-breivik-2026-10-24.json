@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-katelynbreivik-8bef079f",
+  "display_name": "Katelyn Breivik",
+  "scholar_profile_name": "Katelyn Breivik",
+  "scholar_id": "AcW2EXwAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/breivik.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/breivik.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:18:52.389Z",
+  "publication_count": 131,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 3,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/physics-katelyn-breivik-2026-10-24.json",
+  "source_json_sha256": "89cc02ae3a6319b05ea905baf715a207d41254c3935fea15500c98a2b0c38253",
+  "source_html_path": "data/captures/physics-katelyn-breivik-2026-10-24.html",
+  "source_html_sha256": "67563a99261141eb6ab016622605ddf4f6c8c16fda577888afa64a13a0be758d",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

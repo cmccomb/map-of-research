@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "These saved-capture anomalies still need source or publication-type review. Exact source-reviewed exclusions are recorded separately in physics-reviewed-observation-exclusions-2026-10-24.json. All raw capture and cache rows remain intact; no exclusion is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 435,
+      "author_pub_id": "kcXOB1MAAAAJ:3lUAU8Oskd0C",
+      "concern": "Title is only 'Book• Third Edition• 2025'; identify the underlying Dodelson/Schmidt book before deciding whether this is a duplicate or malformed metadata."
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "capture_row": 436,
+      "author_pub_id": "kcXOB1MAAAAJ:0sTkTiv_uMkC",
+      "concern": "Title is only 'Book• Second Edition• 2020'; identify the underlying Dodelson/Schmidt book before deciding whether this is a duplicate or malformed metadata."
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "capture_row": 181,
+      "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
+      "concern": "A forum for collaboration may be a nonpublication; verify source."
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "capture_row": 88,
+      "author_pub_id": "au_cLfoAAAAJ:bFI3QPDXJZMC",
+      "concern": "Author surname appears as Kahniashbvili rather than Kahniashvili; retain the raw row and review metadata spelling separately."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 62,
+      "author_pub_id": "wovjAPsAAAAJ:XiSMed-E-HIC",
+      "concern": "Dataset record; verify how to classify relative to the associated research article before any exclusion."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 65,
+      "author_pub_id": "wovjAPsAAAAJ:g5m5HwL7SMYC",
+      "concern": "Meeting abstract appears to overlap article at capture row 4; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 66,
+      "author_pub_id": "wovjAPsAAAAJ:2P1L_qKh6hAC",
+      "concern": "Meeting abstract appears to overlap article at capture row 27; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 73,
+      "author_pub_id": "wovjAPsAAAAJ:BqipwSGYUEgC",
+      "concern": "Meeting abstract appears to overlap article at capture row 9; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "capture_row": 86,
+      "author_pub_id": "wovjAPsAAAAJ:MXK_kJrjxJIC",
+      "concern": "Meeting abstract appears to overlap article at capture row 10; verify whether this is a distinct citable work."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 240,
+      "author_pub_id": "wex9ft0AAAAJ:gKiMpY-AVTkC",
+      "concern": "Sloan Digital Sky Survey ninth release appears to duplicate capture row 15; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 228,
+      "author_pub_id": "wex9ft0AAAAJ:V3AGJWp-ZtQC",
+      "concern": "Sloan Digital Sky Survey tenth release appears to duplicate capture row 20; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 250,
+      "author_pub_id": "wex9ft0AAAAJ:LPtt_HFRSbwC",
+      "concern": "CMS physics technical design report appears to duplicate capture rows 26 and 157; also verify Croft attribution."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 212,
+      "author_pub_id": "wex9ft0AAAAJ:otzGkya1bYkC",
+      "concern": "PRIYA suite appears to duplicate capture row 82; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 267,
+      "author_pub_id": "wex9ft0AAAAJ:xtRiw3GOFMkC",
+      "concern": "Variance, skewness and kurtosis appears to duplicate capture row 96; compare source records."
+    },
+    {
+      "scholar_id": "wex9ft0AAAAJ",
+      "capture_row": 265,
+      "author_pub_id": "wex9ft0AAAAJ:jU7OWUQzBzMC",
+      "concern": "European Society of Medicine entry has no year or venue; verify source and whether this belongs to Rupert Croft."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 130,
+      "author_pub_id": "AcW2EXwAAAAJ:qUcmZB5y_30C",
+      "concern": "Title appears malformed as “Michele Armano ESAC, ESA”; identify the underlying source."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 112,
+      "author_pub_id": "AcW2EXwAAAAJ:0EnyYjriUFMC",
+      "concern": "Missing-link record appears to overlap capture rows 6 and 128; compare source records before classifying."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 95,
+      "author_pub_id": "AcW2EXwAAAAJ:p2g8aNsByqUC",
+      "concern": "Appears to share the same arXiv identifier as capture row 94; compare versions and citation IDs."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 117,
+      "author_pub_id": "AcW2EXwAAAAJ:u-x6o8ySG0sC",
+      "concern": "AAS abstract appears to share title with capture row 115; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 121,
+      "author_pub_id": "AcW2EXwAAAAJ:ufrVoPGSRksC",
+      "concern": "AAS abstract appears to share title with capture row 116; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 84,
+      "author_pub_id": "AcW2EXwAAAAJ:q3oQSFYPqjQC",
+      "concern": "VizieR data catalog; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 99,
+      "author_pub_id": "AcW2EXwAAAAJ:CHSYGLWDkRkC",
+      "concern": "HST proposal; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 131,
+      "author_pub_id": "AcW2EXwAAAAJ:d1gkVwhDpl0C",
+      "concern": "Zenodo software release; verify publication-type classification."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 31,
+      "author_pub_id": "xKrmD5IAAAAJ:4TOpqqG69KYC",
+      "concern": "WTe2 spin-orbit-torque paper appears to be a preprint or journal version of capture row 2; compare source records."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 14,
+      "author_pub_id": "xKrmD5IAAAAJ:u-x6o8ySG0sC",
+      "concern": "Title appears truncated and ends “graphene sheets on”; verify source metadata."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 22,
+      "author_pub_id": "xKrmD5IAAAAJ:2osOgNQ5qMEC",
+      "concern": "Title contains literal “<? format?>”; verify source metadata."
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 40,
+      "author_pub_id": "xKrmD5IAAAAJ:WF5omc3nYNoC",
+      "concern": "Author text “TSRM Ishigami” appears malformed; verify source metadata."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 318,
+      "author_pub_id": "6pPZKd0AAAAJ:W2uZP3ddy8sC",
+      "concern": "Same arXiv identifier as capture row 295; compare preprint and publication versions before any deduplication."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 387,
+      "author_pub_id": "6pPZKd0AAAAJ:x21FZCSn4ZoC",
+      "concern": "Same arXiv identifier as capture row 363; compare source records before any deduplication."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 427,
+      "author_pub_id": "6pPZKd0AAAAJ:M_lZXyI38BkC",
+      "concern": "MNRAS volume 463(2) title resembles capture row 179 but the captured years differ (2026 versus 2016); verify metadata and versions."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 475,
+      "author_pub_id": "6pPZKd0AAAAJ:6VlyvFCUEfcC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 517,
+      "author_pub_id": "6pPZKd0AAAAJ:rTD5ala9j4wC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 529,
+      "author_pub_id": "6pPZKd0AAAAJ:FiDNX6EVdGUC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 542,
+      "author_pub_id": "6pPZKd0AAAAJ:ILKRHgRFtOwC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 553,
+      "author_pub_id": "6pPZKd0AAAAJ:KS-xo-ZNxMsC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 574,
+      "author_pub_id": "6pPZKd0AAAAJ:hMsQuOkrut0C",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "6pPZKd0AAAAJ",
+      "capture_row": 575,
+      "author_pub_id": "6pPZKd0AAAAJ:L7CI7m0gUJcC",
+      "concern": "Astronomy proposal record; verify whether it should be treated as a citable research output."
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 42,
+      "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
+      "concern": "Title may have lost a mathematical symbol in Scholar rendering; verify source text."
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 46,
+      "author_pub_id": "O0NnwB0AAAAJ:WF5omc3nYNoC",
+      "concern": "Venue is blank in captured metadata; verify source without assuming exclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 752,
+      "author_pub_id": "jkKrk0sAAAAJ:m17PD2GNzEEC",
+      "concern": "Same title as Meyer capture row 91 (Physical Review Letters 114, 062003), but this record has no year and a Carnegie Mellon University venue; compare source records before classifying."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 245,
+      "author_pub_id": "jkKrk0sAAAAJ:__-MWuy60AoC",
+      "concern": "Generic title \"NSR Query Results\" conflicts with a journal citation; identify the underlying paper and correct source metadata before deciding on inclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 345,
+      "author_pub_id": "jkKrk0sAAAAJ:hi9FzYtmh84C",
+      "concern": "Generic title \"NSR Query Results\" conflicts with a different journal citation; identify the underlying paper and correct source metadata before deciding on inclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 686,
+      "author_pub_id": "jkKrk0sAAAAJ:GYQ3uSOjhYkC",
+      "concern": "Same title, year, and journal as Meyer capture row 4, \"The H1 detector at HERA\"; compare full records for duplicate status."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 11,
+      "author_pub_id": "NhBa8hAAAAAJ:70eg2SAEIzsC",
+      "concern": "Title, displayed authors, journal volume/page, and year match Shi capture row 10 exactly; verify duplicate identity before applying any exclusion."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 115,
+      "author_pub_id": "NhBa8hAAAAAJ:bnK-pcrLprsC",
+      "concern": "Title, journal volume/pages, and year match Shi capture row 55; displayed author surname differs Littlejohn/Littlesjohn, so review duplicate and spelling."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 127,
+      "author_pub_id": "NhBa8hAAAAAJ:dhFuZR0502QC",
+      "concern": "APS March Meeting abstract shares a title with Nature Materials article at Shi capture row 2; review publication-type policy and relationship."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 105,
+      "author_pub_id": "NhBa8hAAAAAJ:u9iWguZQMMsC",
+      "concern": "Bulletin of the American Physical Society abstract shares a title with Nature Physics article at Shi capture row 5; review publication-type policy and relationship."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 114,
+      "author_pub_id": "NhBa8hAAAAAJ:tOudhMTPpwUC",
+      "concern": "Title marks this as an Author Correction; review whether correction notices belong in the published research view."
+    }
+  ]
+}

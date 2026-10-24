@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "batch": "physics-eleven-profile-source-slice",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "already_merged_source_pr": 109,
+  "department_id": "physics",
+  "profile_count": 11,
+  "raw_observation_count": 2868,
+  "reviewed_exclusion_count_present_in_producer_main": 14,
+  "preliminary_candidate_count": 48,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "ingestion_ready": false,
+  "ingestion_dependency": "The 48 preliminary candidates remain unresolved; coordinate producer and source review before any snapshot ingestion. This draft changes source evidence only.",
+  "profiles": [
+    {
+      "display_name": "Antonella Palmese",
+      "scholar_id": "6pPZKd0AAAAJ",
+      "publication_count": 624,
+      "cache_path": "data/authors/6pPZKd0AAAAJ.json",
+      "source_json_path": "data/captures/physics-antonella-palmese-2026-10-24.json",
+      "source_html_path": "data/captures/physics-antonella-palmese-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-antonella-palmese-2026-10-24.json"
+    },
+    {
+      "display_name": "Curtis Meyer",
+      "scholar_id": "jkKrk0sAAAAJ",
+      "publication_count": 764,
+      "cache_path": "data/authors/jkKrk0sAAAAJ.json",
+      "source_json_path": "data/captures/physics-curtis-meyer-2026-10-24.json",
+      "source_html_path": "data/captures/physics-curtis-meyer-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-curtis-meyer-2026-10-24.json"
+    },
+    {
+      "display_name": "Hy Trac",
+      "scholar_id": "jcb81yAAAAAJ",
+      "publication_count": 184,
+      "cache_path": "data/authors/jcb81yAAAAAJ.json",
+      "source_json_path": "data/captures/physics-hy-trac-2026-10-24.json",
+      "source_html_path": "data/captures/physics-hy-trac-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-hy-trac-2026-10-24.json"
+    },
+    {
+      "display_name": "Jyoti Katoch",
+      "scholar_id": "xKrmD5IAAAAJ",
+      "publication_count": 44,
+      "cache_path": "data/authors/xKrmD5IAAAAJ.json",
+      "source_json_path": "data/captures/physics-jyoti-katoch-2026-10-24.json",
+      "source_html_path": "data/captures/physics-jyoti-katoch-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-jyoti-katoch-2026-10-24.json"
+    },
+    {
+      "display_name": "Katelyn Breivik",
+      "scholar_id": "AcW2EXwAAAAJ",
+      "publication_count": 131,
+      "cache_path": "data/authors/AcW2EXwAAAAJ.json",
+      "source_json_path": "data/captures/physics-katelyn-breivik-2026-10-24.json",
+      "source_html_path": "data/captures/physics-katelyn-breivik-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-katelyn-breivik-2026-10-24.json"
+    },
+    {
+      "display_name": "Riccardo Penco",
+      "scholar_id": "O0NnwB0AAAAJ",
+      "publication_count": 46,
+      "cache_path": "data/authors/O0NnwB0AAAAJ.json",
+      "source_json_path": "data/captures/physics-riccardo-penco-2026-10-24.json",
+      "source_html_path": "data/captures/physics-riccardo-penco-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-riccardo-penco-2026-10-24.json"
+    },
+    {
+      "display_name": "Rupert Croft",
+      "scholar_id": "wex9ft0AAAAJ",
+      "publication_count": 267,
+      "cache_path": "data/authors/wex9ft0AAAAJ.json",
+      "source_json_path": "data/captures/physics-rupert-croft-2026-10-24.json",
+      "source_html_path": "data/captures/physics-rupert-croft-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-rupert-croft-2026-10-24.json"
+    },
+    {
+      "display_name": "Scott Dodelson",
+      "scholar_id": "kcXOB1MAAAAJ",
+      "publication_count": 443,
+      "cache_path": "data/authors/kcXOB1MAAAAJ.json",
+      "source_json_path": "data/captures/physics-scott-dodelson-2026-10-24.json",
+      "source_html_path": "data/captures/physics-scott-dodelson-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-scott-dodelson-2026-10-24.json"
+    },
+    {
+      "display_name": "Shubhayu Chatterjee",
+      "scholar_id": "wovjAPsAAAAJ",
+      "publication_count": 90,
+      "cache_path": "data/authors/wovjAPsAAAAJ.json",
+      "source_json_path": "data/captures/physics-shubhayu-chatterjee-2026-10-24.json",
+      "source_html_path": "data/captures/physics-shubhayu-chatterjee-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-shubhayu-chatterjee-2026-10-24.json"
+    },
+    {
+      "display_name": "Sufei Shi",
+      "scholar_id": "NhBa8hAAAAAJ",
+      "publication_count": 141,
+      "cache_path": "data/authors/NhBa8hAAAAAJ.json",
+      "source_json_path": "data/captures/physics-sufei-shi-2026-10-24.json",
+      "source_html_path": "data/captures/physics-sufei-shi-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-sufei-shi-2026-10-24.json"
+    },
+    {
+      "display_name": "Tina Kahniashvili",
+      "scholar_id": "au_cLfoAAAAJ",
+      "publication_count": 134,
+      "cache_path": "data/authors/au_cLfoAAAAJ.json",
+      "source_json_path": "data/captures/physics-tina-kahniashvili-2026-10-24.json",
+      "source_html_path": "data/captures/physics-tina-kahniashvili-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json"
+    }
+  ]
+}
