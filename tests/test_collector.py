@@ -563,9 +563,7 @@ def test_school_and_person_targets_preserve_the_global_collection_budget(
     assert status["unique_profiles"] == 1
     person = collect_profiles(**common, target_person_ids=["person-alpha"])
     assert person.selected_profile_ids == ("alphaAAAAJ",)
-    assert load_json(common["status_path"])["target_person_ids"] == [
-        "person-alpha"
-    ]
+    assert load_json(common["status_path"])["target_person_ids"] == ["person-alpha"]
     for target, message in (
         ({"target_school_ids": ["unknown"]}, "Unknown school"),
         ({"target_person_ids": ["person-gamma"]}, "verified Scholar ID"),

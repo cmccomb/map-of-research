@@ -353,9 +353,7 @@ def collect_profiles(
             )
         ]
     elif person_ids:
-        profiles = [
-            profile for profile in profiles if profile.person_id in person_ids
-        ]
+        profiles = [profile for profile in profiles if profile.person_id in person_ids]
     state = load_collection_state(state_path)
     selected = select_profiles(
         profiles,
@@ -530,11 +528,17 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--force", action="store_true")
     parser.add_argument(
-        "--school-id", action="append", default=[], dest="target_school_ids",
+        "--school-id",
+        action="append",
+        default=[],
+        dest="target_school_ids",
         help="Target included Scholar profiles in a CMU school (repeatable)",
     )
     parser.add_argument(
-        "--person-id", action="append", default=[], dest="target_person_ids",
+        "--person-id",
+        action="append",
+        default=[],
+        dest="target_person_ids",
         help="Target one included person with a verified Scholar ID (repeatable)",
     )
     parser.add_argument("--dry-run", action="store_true")
