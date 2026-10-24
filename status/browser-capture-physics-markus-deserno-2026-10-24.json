@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-markusdeserno-3b04d008",
+  "display_name": "Markus Deserno",
+  "scholar_profile_name": "Markus Deserno",
+  "scholar_id": "1J28ExgAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/deserno.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/1144-markus-deserno",
+  "scholar_identity_basis": "Official CMU Scholars profile directly links this Scholar ID; CMU Physics faculty page confirms role, and live profile identity and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T22:57:45+00:00",
+  "captured_at_utc": "2026-10-24T22:58:25.208Z",
+  "publication_count": 233,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/physics-markus-deserno-2026-10-24.json",
+  "source_json_sha256": "c34e14cf0746c418ef6748271ea72bcc2574904d10c7610dbe08d8f81a30889b",
+  "source_html_path": "data/captures/physics-markus-deserno-2026-10-24.html",
+  "source_html_sha256": "8a8141cc9602e0d4ba05096af4bd377bfcecf5d4d50919ee9ff1c4eebd4c55e7",
+  "cache_path": "data/authors/1J28ExgAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
