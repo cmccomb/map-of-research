@@ -1,0 +1,18 @@
+# Yisong Guo complete visible Scholar profile — 2026-10-24
+
+The [CMU Chemistry faculty page](https://www.cmu.edu/chemistry/people/faculty/guo.html) identifies Yisong (Alex) Guo as a Chemistry professor. The [CMU Scott Institute profile](https://energy.cmu.edu/directory/bios/guo-yisong.html) links Google Scholar ID [`xfTeH7YAAAAJ`](https://scholar.google.com/citations?user=xfTeH7YAAAAJ&hl=en) directly. The Scholar profile displayed “Yisong Guo,” Department of Chemistry at Carnegie Mellon University, verified `andrew.cmu.edu` email, and a CMU-hosted group homepage. Chemistry is his evidenced primary department.
+
+One guarded, headed Chrome session opened that direct profile URL at 22:08:46 UTC. Two Show More clicks expanded articles 1–20 to 1–100 and then to 1–182; the button became disabled, with no page challenge or visible error. The browser was closed and the shared Scholar gate released. The [machine-readable capture receipt](../../status/browser-capture-chem-guo-2026-10-24.json) records the exact source paths, SHA-256 hashes, row count, and XSRF redaction count. Complete visible-profile coverage means all rows Scholar displayed at capture time, not proof that Scholar includes every academic work or that every row is a research publication.
+
+The offline paired-capture converter matched all 182 HTML and JSON rows across title, authors, venue, year, citation display, and citation URL; it found 182 unique publication IDs and no missing author. Three rows have no displayed year, seven have no displayed venue, and 45 have zero or blank citation counts. Row 129, `xfTeH7YAAAAJ:F9fV5C73w3QC`, retains Scholar's `2*` citation display. Missing values were left blank. The saved HTML redacts the two hidden `xsrf` form values as `[REDACTED]`; the visible publication rows are unchanged. A candidate canonical cache was validated and staged outside Git pending producer exclusions and release sequencing.
+
+## Two exact supporting files to exclude from map authorships
+
+The following are standalone supplementary files for main articles already present in Guo's profile. Keep every raw Scholar row for provenance, but exclude the supporting-file rows when producing collaboration edges.
+
+| Supporting-file `author_pub_id` | Retained main article and primary evidence |
+| --- | --- |
+| `xfTeH7YAAAAJ:lvd772isFD0C` | Retain `xfTeH7YAAAAJ:_FM0Bhl9EiAC`, “Spectroscopic Description of the E1 State of Mo Nitrogenase Based on Mo and Fe X-ray Absorption and Mössbauer Studies,” *Inorganic Chemistry* 58(18), 12365–12376 (2019). The [NLM PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC6751781/) identifies DOI `10.1021/acs.inorgchem.9b01951` and links its separate `ic9b01951_si_001.pdf` supporting file. The Scholar supporting-file row repeats the main title and displayed authors, prefixing “Supplementary Information,” and has no year or venue. |
+| `xfTeH7YAAAAJ:fbc8zXXH2BUC` | Retain `xfTeH7YAAAAJ:edDO8Oi4QzsC`, “Elucidating the Reaction Pathway of Decarboxylation-Assisted Olefination Catalyzed by a Mononuclear Non-Heme Iron Enzyme,” *Journal of the American Chemical Society* 140(45), 15190 (2018). The [NLM PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC6480304/) identifies DOI `10.1021/jacs.8b10077` and a separate Supporting Information PDF. The Scholar supporting-file row repeats the main title and displayed authors, prefixing “Supporting Information,” and has no year or venue. |
+
+Corrections and conference abstracts remain in the raw profile pending a project-wide output-type policy. No other exact nonpublication or namesake exclusion is asserted from this capture review.
