@@ -179,3 +179,43 @@ is kept provisionally. Its front byline has four authors, while Pego
 contributed a signed section, so an automatic false-attribution decision
 would overstate what the evidence establishes. No unique identified
 research work was removed in this review.
+
+## Complete visible Tetali and Frick captures (staged for the next upload)
+
+After the capped Tetali batch above, a direct Chrome visit to the same
+[CMU-linked Tetali profile](https://www.cmu.edu/math/people/faculty/tetali.html)
+continued until Scholar disabled **Show more**. It showed 222 rows, including
+all 200 previously captured citation IDs. A separate visit to the
+[CMU-linked Florian Frick profile](https://www.cmu.edu/math/people/faculty/frick.html)
+showed 58 rows and no further pages. Neither page showed an access error.
+Each cache points to saved raw HTML and row JSON by checksum; the saved files
+and cache checksums agree. These are complete *visible Scholar profiles* at
+capture time, not a claim about either researcher's absolute academic history.
+The captures are staged in the snapshot worktree and are not part of the
+published dataset at the time of this review.
+
+Thirty-one Tetali rows received manual triage because of short or noisy
+metadata. Six were already in the reviewed-exclusion manifest. Ten new exact
+citation IDs are now excluded as containers or imported text fragments:
+
+| Exact Scholar row suffixes | Review evidence |
+| --- | --- |
+| `J-pR_7NvFogC` | The [DIMACS program](https://archive.dimacs.rutgers.edu/Workshops/RandomStructures/program.html) identifies the row title as the workshop itself; Tetali gave a separately titled talk. |
+| `YFjsv_pBGBYC` | “DSCRETE APPLIED MATHEMATICS” is a journal title. The actual Alon–Spencer–Tetali [article](https://www.sciencedirect.com/science/article/pii/0166218X93E0136M) is retained separately as `J_g5lzvAfSwC`. |
+| `9Nmd_mFXekcC`, `nrtMV_XWKgEC` | The Hélène Barcelo name/address text and Tetali's editorial-board listing appear in [journal front matter](https://www-roc.inria.fr/secret/Pascale.Charpin/ChHeZi06.pdf), not as a work title. |
+| `t7zJ5fGR-2UC`, `yB1At4FlUx8C`, `z_wVstp3MssC` | “LMNO, BP 5186” is a [French laboratory postal address](https://comptes-rendus.academie-sciences.fr/mathematique/articles/10.1016/S1631-073X%2802%2900021-3/). |
+| `RHpTSmoSYBkC`, `LPZeul_q3PIC`, `KxtntwgDAa4C` | “Joint work with....” is a sentence fragment; “Sarah Miracle” is a [CV header](https://citeseerx.ist.psu.edu/document?doi=84841f2bbd02d707f6341f1388787845401476a7&repid=rep1&type=pdf); “THE ANNALS” is a [journal heading](https://imstat.org/journals-and-publications/annals-of-applied-probability/). |
+
+The review retained 12 other flagged Tetali rows as genuine works or
+author-truncated Scholar entries, including the [Friedgut–Rödl–Ruciński–Tetali
+paper](https://doi.org/10.1090/memo/0845), the [HeteSim meeting
+abstract](https://davidkartchner.com/papersjmm-2022-semnet-2), a real
+[DIMACS report](https://archive.dimacs.rutgers.edu/archive/About/Reports/graphtheory.html),
+and a scholarly erratum. No reviewed exclusion was added for the erratum; the
+current quality rule keeps substantive dated correction notices eligible. Three uncertain
+talk/title-variant rows remain
+provisionally included. Frick's 58 rows had no clear container or false
+attribution in the title/author/venue review, so this pass adds no Frick
+exclusions. The reviewed manifest now contains 22 Tetali decisions in total;
+all raw Scholar rows stay in the source table with their provenance and
+review reasons.
