@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "math"
+  ],
+  "profiles": [
+    {
+      "scholar_id": "P_AmD6MAAAAJ",
+      "display_name": "John Lehoczky",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/lehoczky.html",
+      "captured_at_utc": "2026-10-24T21:11:47.824Z",
+      "profile_url": "https://scholar.google.com/citations?user=P_AmD6MAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 3,
+      "displayed_count": 232,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 232,
+      "raw_json_path": "data/captures/lehoczky-visible-232-2026-10-24.json",
+      "raw_json_sha256": "63fc3fe2fcc07c2f19c109e221c89e4e80e35526d98752811b4ac94545d8940c",
+      "raw_html_path": "data/captures/lehoczky-visible-232-2026-10-24.html",
+      "raw_html_sha256": "3ec5efa49566f989b408852b140e65c39ffc5baf4609606a3726d135c58c7118"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "display_name": "Steven Shreve",
+      "official_identity_url": "https://www.cmu.edu/math/people/faculty/shreve.html",
+      "captured_at_utc": "2026-10-24T21:13:12.292Z",
+      "profile_url": "https://scholar.google.com/citations?user=A0ISJPUAAAAJ&hl=en&pagesize=100",
+      "page_load_count": 2,
+      "displayed_count": 185,
+      "more_remain": false,
+      "coverage": "complete_visible_profile",
+      "unique_citation_ids": 185,
+      "raw_json_path": "data/captures/shreve-visible-185-2026-10-24.json",
+      "raw_json_sha256": "9fcb963058aa09f00a22580528d7857cd3ba96adf4cab7797a20101fa9cb91a8",
+      "raw_html_path": "data/captures/shreve-visible-185-2026-10-24.html",
+      "raw_html_sha256": "18d40dea18389f4b2985eb6d4a095496ba03f27554cd2e812d2fae10e60aaa23"
+    }
+  ],
+  "browser_sessions_closed": true
+}
