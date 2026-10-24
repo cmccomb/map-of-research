@@ -5560,6 +5560,54 @@
       "reason": "The 2007 book chapter on pages 1881–1936 is Chromatography of polymers by Radke; Matyjaszewski is an editor of the volume, not the chapter author. The separately retained edited-book observation is TSkli5EAAAAJ:QD3KBmkZPeQC.",
       "evidence_url": "https://api.crossref.org/works/10.1002%2F9783527631421.ch45",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "ZEHOKUkAAAAJ",
+      "author_pub_id": "ZEHOKUkAAAAJ:-f6ydRqryjwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 35 is an incomplete publisher-metadata repeat of the 2020 Nature Communications article retained as complete Kozii profile row 9.",
+      "evidence_url": "https://www.nature.com/articles/s41467-020-14819-7",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:ZHo1McVdvXMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 53 has a truncated and misread author list for the PTEP 2016 article retained as complete Tarnopolsky profile row 12.",
+      "evidence_url": "https://academic.oup.com/ptep/article/2016/12/12C105/2624094",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jrRg4PAAAAAJ",
+      "author_pub_id": "jrRg4PAAAAAJ:dfsIfKJdRG4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 54 repeats the arXiv:2606.19732 paper retained as complete Tarnopolsky profile row 55.",
+      "evidence_url": "https://arxiv.org/abs/2606.19732",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:z8nqeaKD1nsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 238 is a CMU and Harvard affiliation line extracted from the Sijacki et al. paper retained as complete Di Matteo profile row 5, not a separate publication.",
+      "evidence_url": "https://arxiv.org/pdf/0705.2238",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:8dzOF9BpDQoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 320 is an abstract fragment of KwangHo Park's sole-authored 2012 University of Maryland dissertation; Tiziana Di Matteo served on its external advisory committee but is not its author.",
+      "evidence_url": "https://www.astro.umd.edu/sites/default/files/theses/people/2012Park.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "79uTAy8AAAAJ",
+      "author_pub_id": "79uTAy8AAAAJ:mvPsJ3kp5DgC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 328 is the supplementary methods PDF for the 2005 Nature letter retained as complete Di Matteo profile row 1, not a separate research publication.",
+      "evidence_url": "https://web.phys.cmu.edu/~tiziana/NatureSI/si.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
