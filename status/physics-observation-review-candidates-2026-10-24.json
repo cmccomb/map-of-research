@@ -237,6 +237,60 @@
       "capture_row": 46,
       "author_pub_id": "O0NnwB0AAAAJ:WF5omc3nYNoC",
       "concern": "Venue is blank in captured metadata; verify source without assuming exclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 752,
+      "author_pub_id": "jkKrk0sAAAAJ:m17PD2GNzEEC",
+      "concern": "Same title as Meyer capture row 91 (Physical Review Letters 114, 062003), but this record has no year and a Carnegie Mellon University venue; compare source records before classifying."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 245,
+      "author_pub_id": "jkKrk0sAAAAJ:__-MWuy60AoC",
+      "concern": "Generic title \"NSR Query Results\" conflicts with a journal citation; identify the underlying paper and correct source metadata before deciding on inclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 345,
+      "author_pub_id": "jkKrk0sAAAAJ:hi9FzYtmh84C",
+      "concern": "Generic title \"NSR Query Results\" conflicts with a different journal citation; identify the underlying paper and correct source metadata before deciding on inclusion."
+    },
+    {
+      "scholar_id": "jkKrk0sAAAAJ",
+      "capture_row": 686,
+      "author_pub_id": "jkKrk0sAAAAJ:GYQ3uSOjhYkC",
+      "concern": "Same title, year, and journal as Meyer capture row 4, \"The H1 detector at HERA\"; compare full records for duplicate status."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 11,
+      "author_pub_id": "NhBa8hAAAAAJ:70eg2SAEIzsC",
+      "concern": "Title, displayed authors, journal volume/page, and year match Shi capture row 10 exactly; verify duplicate identity before applying any exclusion."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 115,
+      "author_pub_id": "NhBa8hAAAAAJ:bnK-pcrLprsC",
+      "concern": "Title, journal volume/pages, and year match Shi capture row 55; displayed author surname differs Littlejohn/Littlesjohn, so review duplicate and spelling."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 127,
+      "author_pub_id": "NhBa8hAAAAAJ:dhFuZR0502QC",
+      "concern": "APS March Meeting abstract shares a title with Nature Materials article at Shi capture row 2; review publication-type policy and relationship."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 105,
+      "author_pub_id": "NhBa8hAAAAAJ:u9iWguZQMMsC",
+      "concern": "Bulletin of the American Physical Society abstract shares a title with Nature Physics article at Shi capture row 5; review publication-type policy and relationship."
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "capture_row": 114,
+      "author_pub_id": "NhBa8hAAAAAJ:tOudhMTPpwUC",
+      "concern": "Title marks this as an Author Correction; review whether correction notices belong in the published research view."
     }
   ]
 }

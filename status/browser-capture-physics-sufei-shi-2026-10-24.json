@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-sufeishi-74105d16",
+  "display_name": "Sufei Shi",
+  "scholar_profile_name": "Sufei Shi",
+  "scholar_id": "NhBa8hAAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/shi.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/shi.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:39:47.849Z",
+  "publication_count": 141,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 3,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/physics-sufei-shi-2026-10-24.json",
+  "source_json_sha256": "a5eb869380fef73b4aa2a85872b8a00bb302faa21f7812dee96de23bc9f63164",
+  "source_html_path": "data/captures/physics-sufei-shi-2026-10-24.html",
+  "source_html_sha256": "dfab89eba785298960d7b66c294a4065b5fe02ac94d75766912f8a73f46b1aa0",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 50,
+      "author_pub_id": "NhBa8hAAAAAJ:Zph67rFs4hoC",
+      "display": "40*"
+    },
+    {
+      "row": 62,
+      "author_pub_id": "NhBa8hAAAAAJ:_kc_bZDykSQC",
+      "display": "23*"
+    },
+    {
+      "row": 68,
+      "author_pub_id": "NhBa8hAAAAAJ:L8Ckcad2t8MC",
+      "display": "14*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
