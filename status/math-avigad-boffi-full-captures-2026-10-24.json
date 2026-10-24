@@ -1,0 +1,96 @@
+{
+  "status": "staged_unpublished",
+  "coverage": "complete_visible_profiles",
+  "profiles": 2,
+  "visible_rows": 308,
+  "records": [
+    {
+      "person_id": "person-jeremyavigad-0d62ce13",
+      "display_name": "Jeremy Avigad",
+      "scholar_id": "VQfvIfQAAAAJ",
+      "publication_count": 260,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "missing_year": 19,
+      "missing_authors": [],
+      "missing_venue": 60,
+      "zero_or_blank_citations": 115,
+      "citation_annotations": [
+        {
+          "row": 17,
+          "author_pub_id": "VQfvIfQAAAAJ:gKiMpY-AVTkC",
+          "display": "94*"
+        }
+      ],
+      "year_anomalies": [],
+      "source_json_sha256": "928e5a051cbb8dc8b63d1612caf6c7a48a7c6077d341cb7429b74eacba040e0d",
+      "source_html_sha256": "feee92831b0bbdd847679374116f9e5f30630403bfe3446efbfa850be64f8d11",
+      "author_cache_path": "data/authors/VQfvIfQAAAAJ.json",
+      "author_cache_sha256": "27d2be2df9c0c68e1435aea9f8100a564635690cbfd6e086bbeb3b3fd6ea067a",
+      "raw_json_path": "data/captures/avigad-visible-260-2026-10-24.json",
+      "raw_html_path": "data/captures/avigad-visible-260-2026-10-24.html",
+      "identity_source_url": "https://www.andrew.cmu.edu/user/avigad/papers.html",
+      "show_more_disabled": true,
+      "challenge": false,
+      "page_error": false,
+      "collection_method": "playwright_direct_profile"
+    },
+    {
+      "person_id": "person-nicholasboffi-177af5e2",
+      "display_name": "Nicholas Boffi",
+      "scholar_id": "_jkX2q0AAAAJ",
+      "publication_count": 48,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "missing_year": 0,
+      "missing_authors": [],
+      "missing_venue": 0,
+      "zero_or_blank_citations": 5,
+      "citation_annotations": [
+        {
+          "row": 3,
+          "author_pub_id": "_jkX2q0AAAAJ:9ZlFYXVOiuMC",
+          "display": "168*"
+        },
+        {
+          "row": 6,
+          "author_pub_id": "_jkX2q0AAAAJ:mVmsd5A6BfQC",
+          "display": "117*"
+        },
+        {
+          "row": 9,
+          "author_pub_id": "_jkX2q0AAAAJ:LkGwnXOMwfcC",
+          "display": "81*"
+        },
+        {
+          "row": 13,
+          "author_pub_id": "_jkX2q0AAAAJ:e5wmG9Sq2KIC",
+          "display": "51*"
+        },
+        {
+          "row": 18,
+          "author_pub_id": "_jkX2q0AAAAJ:RHpTSmoSYBkC",
+          "display": "23*"
+        },
+        {
+          "row": 40,
+          "author_pub_id": "_jkX2q0AAAAJ:hqOjcs7Dif8C",
+          "display": "2*"
+        }
+      ],
+      "year_anomalies": [],
+      "source_json_sha256": "09cb4ac074ace59d8c4562b9ff1b3f80e3225699d69ffdd43390bedbdeabb2ff",
+      "source_html_sha256": "7262f27de73b37c657b63d78adf901a6c89b10b04505e0a2ee6d3d8174b943bb",
+      "author_cache_path": "data/authors/_jkX2q0AAAAJ.json",
+      "author_cache_sha256": "240c4659e45cc849d223f45451030de7561a1bbb8e432b46f12c732dd8d6e9d7",
+      "raw_json_path": "data/captures/boffi-visible-48-2026-10-24.json",
+      "raw_html_path": "data/captures/boffi-visible-48-2026-10-24.html",
+      "identity_source_url": "https://nmboffi.github.io/",
+      "show_more_disabled": true,
+      "challenge": false,
+      "page_error": false,
+      "collection_method": "playwright_direct_profile"
+    }
+  ],
+  "note": "The 308 observations are saved as source data for a later snapshot and are absent from the current 43,701-row combined artifact."
+}
