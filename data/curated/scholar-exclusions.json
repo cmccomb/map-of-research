@@ -1196,16 +1196,8 @@
     {
       "scholar_id": "_IfiZD4AAAAJ",
       "author_pub_id": "_IfiZD4AAAAJ:_Qo2XoVZTnwC",
-      "reason_code": "nonpublication",
-      "reason": "Citation to the HALPER corrigendum, not the original research article already on this profile.",
-      "evidence_url": "https://academic.oup.com/bioinformatics/article/36/22-23/5561/6053196",
-      "verified_at": "2026-10-24"
-    },
-    {
-      "scholar_id": "_IfiZD4AAAAJ",
-      "author_pub_id": "_IfiZD4AAAAJ:IjCSPb-OGe4C",
-      "reason_code": "nonpublication",
-      "reason": "HALPER corrigendum notice, not the original research article already on this profile.",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Original-article title and page-5561 citation metadata are a damaged duplicate of the separately retained 2020 HALPER corrigendum.",
       "evidence_url": "https://academic.oup.com/bioinformatics/article/36/22-23/5561/6053196",
       "verified_at": "2026-10-24"
     },
@@ -1215,6 +1207,374 @@
       "reason_code": "corrupted_duplicate",
       "reason": "Truncated title and missing year duplicate the complete 2015 Genome Research article elsewhere on this profile.",
       "evidence_url": "https://genome.cshlp.org/content/25/6/907",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:UxriW0iASnsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Concatenated title and subtitle duplicate the complete 2024 neocortical learning article elsewhere on this profile.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11261211/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:pqnbT2bcN3wC",
+      "reason_code": "nonpublication",
+      "reason": "Misspelled author index and volume heading, not an individual research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=FXqaMl4AAAAJ&citation_for_view=FXqaMl4AAAAJ:pqnbT2bcN3wC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:mB3voiENLucC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "SYSTEMS/CIRCUITS is the journal section header for the complete 2015 article elsewhere on this profile.",
+      "evidence_url": "https://www.jneurosci.org/content/jneuro/35/50/16450.full.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:3fE2CSJIrl8C",
+      "reason_code": "nonpublication",
+      "reason": "University of Tokyo lists this title as an invited seminar by Barth.",
+      "evidence_url": "https://www.neurochem.m.u-tokyo.ac.jp/english/neurochemistry_seminar.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:2osOgNQ5qMEC",
+      "reason_code": "nonpublication",
+      "reason": "This title is a seminar announcement, not a research publication.",
+      "evidence_url": "https://www2.kansai-u.ac.jp/cee/research/data/seminar20170317tokyo.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FXqaMl4AAAAJ",
+      "author_pub_id": "FXqaMl4AAAAJ:u5HHmVD_uO8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The published abstract identifies Meredith, Dawitz, and Kramvis as authors, not Barth.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/22542246/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "T3nx5tgAAAAJ",
+      "author_pub_id": "T3nx5tgAAAAJ:eQOLeE2rZwMC",
+      "reason_code": "nonpublication",
+      "reason": "Program for the 2018 Open Science Symposium, not a research publication.",
+      "evidence_url": "https://events.library.cmu.edu/oss2019/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "x_xzlvoAAAAJ",
+      "author_pub_id": "x_xzlvoAAAAJ:9yKSN-GCB0IC",
+      "reason_code": "nonpublication",
+      "reason": "Journal of Neuroscience Methods volume contents list, not an authored research article.",
+      "evidence_url": "https://www.sciencedirect.com/journal/journal-of-neuroscience-methods/vol/191/issue/2",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "RnA6G0UAAAAJ",
+      "author_pub_id": "RnA6G0UAAAAJ:R3hNpaxXUhUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher lists Kaufman, Huang, and Pederson as authors; Huaiying Zhang is absent.",
+      "evidence_url": "https://faseb.onlinelibrary.wiley.com/doi/full/10.1096/fj.202201455R",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:XAp-VaTZjjwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "This online-learning review is by the Robert Murphy affiliated with SRI education research, not the CMU computational biologist.",
+      "evidence_url": "https://www.sri.com/wp-content/uploads/2021/12/EvaluationEvidenceBasedPracticeOnlineLearning.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:BJtnxTr0fRcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF education grant award 1118993, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1118993",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:xGWFX6Gbr9MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Aerospace paper credits R. D. Murphy, not CMU biologist R. F. Murphy.",
+      "evidence_url": "https://arc.aiaa.org/doi/10.2514/6.1968-400",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:Ej9njvOgR2oC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Automotive combustion chapter credits a Ricardo engineering author named R. Murphy, unrelated to the CMU biologist.",
+      "evidence_url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/tdg/TEKNOLOGI%20REKAYASA%20MATERIAL%20PERTAHANAN/The%20science%20and%20technology%20of%20materials%20in%20automotive%20engines.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:M_lZXyI38BkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Elementary mathematics curriculum report is by the Robert Murphy of SRI education research.",
+      "evidence_url": "https://ies.ed.gov/use-work/resource-library/report/evaluation-report/achievement-effects-four-early-elementary-school-math-curricula-findings-first-graders-39-schools",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:RXiHnyRawswC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Medical quality-improvement paper credits R. P. Murphy of Sligo University Hospital, not CMU R. F. Murphy.",
+      "evidence_url": "https://www.imj.ie/wp-content/uploads/2021/06/Bleep-Free-Protected-Teaching-Time-A-Completed-Quality-Improvement-Cycle.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:L7CI7m0gUJcC",
+      "reason_code": "nonpublication",
+      "reason": "BIRD 2008 full conference proceedings volume; Murphy is an editor, not an author of this container.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-540-70600-7",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:v_tt_AnqfNMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ASSISTments paper identifies its Robert F. Murphy as LFC Research, California, rather than CMU.",
+      "evidence_url": "https://files.eric.ed.gov/fulltext/ED631720.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:s9ia6_kGH2AC",
+      "reason_code": "nonpublication",
+      "reason": "IEEE society-news list recognizing Murphy as an award recipient, not a paper he authored.",
+      "evidence_url": "https://users.ece.cmu.edu/~yuejiec/papers/2020IEEE_SPS_Award.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:X4-KO54GjGYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF education grant award 1913317, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1913317",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:SpPTWFSNUtQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF education grant award 1720514, not an authored publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1720514",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:owLR8QvbtFgC",
+      "reason_code": "nonpublication",
+      "reason": "Installation instructions for OMERO.searcher software, not a research publication.",
+      "evidence_url": "https://www.cmu.edu/cbd/people/murphy.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:I858iXPj1OkC",
+      "reason_code": "nonpublication",
+      "reason": "ISMB 2012 proceedings committee roster, not a research article.",
+      "evidence_url": "https://academic.oup.com/bioinformatics/article/28/12/i2/270339",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:w1MjKQ0l0TYC",
+      "reason_code": "nonpublication",
+      "reason": "ISMB/ECCB 2011 proceedings committee roster, not a research article.",
+      "evidence_url": "https://academic.oup.com/bioinformatics/article/27/13/i2/186520",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:Aul-kAQHnToC",
+      "reason_code": "nonpublication",
+      "reason": "ISMB 2010 organization and committee roster, not a research article.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:Aul-kAQHnToC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:rbGdIwl2e6cC",
+      "reason_code": "nonpublication",
+      "reason": "NSF information-technology grant award 0331657, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0331657",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:bVQMTfhMCi4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Lizard morphology article credits a Royal Ontario Museum author named R. Murphy, not the CMU computational biologist.",
+      "evidence_url": "https://academic.oup.com/mam/article-abstract/9/S02/1510/6907269",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:GYcXSSpN504C",
+      "reason_code": "nonpublication",
+      "reason": "Women’s Wear Daily fashion-business news item, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:GYcXSSpN504C",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:hHIA4WEVY-EC",
+      "reason_code": "nonpublication",
+      "reason": "Women’s Wear Daily fashion-business news item, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:hHIA4WEVY-EC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:txeM2kYbVNMC",
+      "reason_code": "nonpublication",
+      "reason": "Women’s Wear Daily fashion-business news item, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:txeM2kYbVNMC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:sbeIDTyQOFgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF graduate-training grant award 9256343, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9256343",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:60iIaj97TE0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF equipment grant award 9217403, not a publication.",
+      "evidence_url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=9217403",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:q0uBw5dMOAkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "School randomized-trial recruitment report is by the Robert Murphy of SRI education research.",
+      "evidence_url": "https://www.sri.com/wp-content/uploads/2021/12/sri-education-recruiting-for-rct.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:8VtEwCQfWZkC",
+      "reason_code": "nonpublication",
+      "reason": "Urology department mailing-address text was imported as a work title; the author list does not identify Murphy.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:8VtEwCQfWZkC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:vnF2_uLGgtgC",
+      "reason_code": "nonpublication",
+      "reason": "Vol. followed by an alphabet-sequence OCR artifact is not a usable individual publication title.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:vnF2_uLGgtgC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:YPNY0knpFBYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "NASA report credits an aerospace author R. D. Murphy, not CMU biologist R. F. Murphy.",
+      "evidence_url": "https://ntrs.nasa.gov/api/citations/19750007531/downloads/19750007531.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:FsLZdJ3BAzkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR alphabet noise corrupts the title of the complete 1982 insulin-endocytosis paper elsewhere on this profile.",
+      "evidence_url": "https://murphylab.cbd.cmu.edu/MurphyCV.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:RtRctb2lSbAC",
+      "reason_code": "nonpublication",
+      "reason": "Supplementary file to the complete 2019 cell-shape article elsewhere on this profile.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6612826/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:G1UMdFYMoxkC",
+      "reason_code": "nonpublication",
+      "reason": "Event-registration website interface text, not a research publication.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=qQLlBH4AAAAJ&citation_for_view=qQLlBH4AAAAJ:G1UMdFYMoxkC",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:hvmnpdAuIbkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Wrong author order and missing year duplicate the complete 2011 image-derived cellular-organization article elsewhere on this profile.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/full/10.1002/cyto.a.21066",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:ZqE1mSdD_DYC",
+      "reason_code": "nonpublication",
+      "reason": "Supplementary-information file to the complete 2019 human-protein-complex article elsewhere on this profile.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6527899/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:2l5NCbZemmgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title incorporates journal citation and DOI text, duplicating the complete 2013 T-cell signaling article elsewhere on this profile.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1111/imr.12103",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:raTqNPD5sRQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Body-text fragment duplicates the dated JCB correction notice elsewhere on this profile.",
+      "evidence_url": "https://rupress.org/jcb/article/174/6/903/54995/Correction-From-imaging-to-understanding-Frontiers",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:kWvqk_afx_IC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated title and missing year duplicate the complete 1989 endocytosis paper elsewhere on this profile.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/2472962/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:ce2CqMG-AY4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "RF name fragment and missing year duplicate the complete 2008 protein-location paper elsewhere on this profile.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2901901/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:RoXSNcbkSzsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "R. name fragment and missing year duplicate the complete 2008 nuclear-morphometry paper elsewhere on this profile.",
+      "evidence_url": "https://murphylab.cbd.cmu.edu/publications/149-rohde2008.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:wKETBy42zhYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Misspelled truncated title and missing year duplicate the complete 1982 insulin-binding paper elsewhere on this profile.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/cyto.990020608",
       "verified_at": "2026-10-24"
     }
   ]

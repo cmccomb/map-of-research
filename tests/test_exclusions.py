@@ -34,7 +34,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 152
+    assert len(exclusions) == 197
     assert sum(key[0] == "7ICaR4EAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "FmZaK1wAAAAJ" for key in exclusions) == 22
     assert sum(key[0] == "tWQsy4UAAAAJ" for key in exclusions) == 11
@@ -46,7 +46,12 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "FkS0PMEAAAAJ" for key in exclusions) == 8
     assert sum(key[0] == "W9-dYLcAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "6ArMETUAAAAJ" for key in exclusions) == 18
-    assert sum(key[0] == "_IfiZD4AAAAJ" for key in exclusions) == 3
+    assert sum(key[0] == "_IfiZD4AAAAJ" for key in exclusions) == 2
+    assert sum(key[0] == "FXqaMl4AAAAJ" for key in exclusions) == 6
+    assert sum(key[0] == "T3nx5tgAAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "x_xzlvoAAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "RnA6G0UAAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "qQLlBH4AAAAJ" for key in exclusions) == 37
     assert {decision.reason_code for decision in exclusions.values()} == {
         "nonpublication",
         "false_profile_attribution",
