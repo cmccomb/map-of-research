@@ -1,0 +1,33 @@
+# Kietrys and Gil complete-profile row review
+
+Reviewed 2026-10-24 from the paired, sanitized Google Scholar captures in draft source PR #101. The user supplied both profile URLs; separate identity PR #102 records their match to CMU Chemistry. The capture receipts report 36/36 Kietrys rows and 195/195 Gil rows with matching HTML/JSON citation IDs, disabled final Show More buttons, and closed browser tabs. This review changes no raw capture. The manifest excludes only the 17 citation IDs below when the profiles enter a later snapshot.
+
+| Scholar row | Exact decision | Source and retained work |
+| --- | --- | --- |
+| Kietrys 32 `IWHjjKOFINEC` | False attribution: commentary by Trauner and Arp | [Thieme publisher record](https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0039-1691638.pdf) gives the two authors. Retain the original ACS paper with Kietrys, row 10. |
+| Gil 99 `0KyAp5RtaNEC` | False attribution: whole edited volume | [RSC front matter](https://books.rsc.org/books/edited-volume/995/chapter/793085/Front-Matter) names Williams, Martin, and Rovnyak as editors. Gil's chapter at row 131 remains. |
+| Gil 117 `z_wVstp3MssC` | False attribution: different Roberto Gil | [University of Alcalá research record](https://portalinvestigacion.consorciomadrono.es/authors/43375.html?page=6&pageType=conference&sortBy=titleDesc) assigns this IEEE paper to Roberto Gil-Pita. |
+| Gil 121 `vRqMK49ujn8C` | False attribution: whole edited volume | [RSC front matter](https://books.rsc.org/books/edited-volume/995/chapter/793085/Front-Matter) again lists only Williams, Martin, and Rovnyak. Gil's chapter at row 131 remains. |
+| Gil 147 `M7yex6snE4oC` | Duplicate abbreviated chapter title | [Wiley chapter](https://onlinelibrary.wiley.com/doi/10.1002/9781119806721.ch9) confirms Lesot/Gil and 2023 chapter. Retain row 137. |
+| Gil 148 `dTyEYWd-f8wC` | Duplicate abbreviated PMMA title | [Wiley article](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/mrc.4711) confirms the identical six authors, volume 56, pages 321–328. Retain row 70. |
+| Gil 154 `ipzZ9siozwsC` | Truncated duplicate correction title | [Nature correction](https://www.nature.com/articles/s42004-020-0274-5) is the only 2020 volume 3 item; retain the substantive 2018 article, row 54. |
+| Gil 155 `uc_IGeMz5qoC` | Nonpublication: publisher correction | [Nature correction](https://www.nature.com/articles/s42004-020-0274-5) says only received/accepted dates were added to the original article, row 54. |
+| Gil 161 `TIZ-Mc8IlK0C` | Duplicate, missing venue and alternate diacritics | [ACS article](https://pubs.acs.org/doi/10.1021/acs.jnatprod.8b00162) confirms the full title, six authors, and pages 2329–2337. Retain row 111. |
+| Gil 163 `tuHXwOkdijsC` | Nonpublication: NSF award 1726525 | [NSF award API](https://api.nsf.gov/services/v1/awards/1726525.json) gives the exact title, PI, and CMU recipient. |
+| Gil 168 `lmc2jWPfTJgC` | Nonpublication: affiliation text parsed as title | [Springer chapter](https://link.springer.com/chapter/10.1007/978-1-4613-0413-5_25) labels the same text as the authors' 1996 affiliation. Retain actual chapter, row 149. |
+| Gil 170 `kuK5TVdYjLIC` | Nonpublication: NSF award 1111684 | [NSF award API](https://api.nsf.gov/services/v1/awards/1111684.json) gives the exact title, PI, and CMU recipient. |
+| Gil 171 `WA5NYHcadZ8C` | Nonpublication: curriculum vitae heading | The row borrows volume 1, issue 3, pages 437–443 from Gil's actual [RSC tartrazine article](https://pubs.rsc.org/en/content/articlelanding/2011/cy/c0cy00070a), row 38; “IV. CURRICULUM VITAE” is a section heading, not the article title. |
+| Gil 172 `b1wdh0AR-JQC` | Nonpublication: NSF award 1039870 | [NSF award API](https://api.nsf.gov/services/v1/awards/1039870.json) gives the exact title, PI, and CMU recipient. |
+| Gil 176 `7T2F9Uy0os0C` | Duplicate, missing venue | [Elsevier DOI](https://doi.org/10.1016/j.phytochem.2007.01.004) resolves the same four-author, 2007 Phytochemistry paper. Retain row 95. |
+| Gil 182 `EYYDruWGBe4C` | Duplicate, malformed first author and no venue | [ACS article](https://pubs.acs.org/doi/abs/10.1021/np960018g) confirms the 1996 article. Retain row 11. |
+| Gil 184 `_Qo2XoVZTnwC` | Duplicate with “Twxo” typo | [Thieme article](https://doi.org/10.1055/s-2006-959586) confirms the 1994 work, volume 60, pages 594–596. Retain row 69. |
+
+The capture still contains rows requiring a separate decision. They are deliberately **not** in the manifest:
+
+- Kietrys 29–30 are poster-number records; Kietrys 33–34 are related patent-language records; Kietrys 35–36 are supplement abstracts. Their exact relationship to any full publication has not been established. Kietrys 31 is a [substantive corrigendum](https://pure.kaist.ac.kr/en/publications/corrigendum-an-excimer-clamp-for-measuring-damaged-base-excision-/) correcting a molecular structure diagram; it remains in the complete academic history, alongside original row 14.
+- Gil 65/158 share a title but are a 2018 article and 2019 ACS meeting abstract with different author renderings. Gil 34/190 have related titles but may be separate studies. Gil 146 is a ChemInform abstract, 153 has malformed quote characters, and 183 appears to be an erratum. None is excluded without resolving its source.
+- Gil 191–193 look like course-brochure text; 185–190 and 194–195 have incomplete citation metadata. The current evidence does not prove which are distinct research outputs, presentation abstracts, or nonpublication artifacts.
+
+All other raw rows remain eligible for later graph integration, subject to ordinary title/authorship normalization. The observed exclusions should not be described as a fully adjudicated publication history.
+
+Truncated Scholar author strings were not treated as proof of misattribution. In particular, publisher or institution records explicitly include Gil on the long-author-list [2025 polymer article at row 119](https://pubs.acs.org/doi/10.1021/acs.macromol.5c00952), [2012 BMRB statement at row 132](https://research.manchester.ac.uk/en/publications/in-support-of-the-bmrb/), [2025 chiral polymer article at row 150](https://lipid.phys.cmu.edu/papers25/Tomek2025.pdf), and [2019 Spinus proceedings item at row 160](https://www.ampere-society.org/books/Spinus2019.pdf); these remain eligible.
