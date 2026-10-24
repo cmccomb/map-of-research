@@ -20,7 +20,11 @@
   "raw_json_path": "data/captures/fonseca-visible-253-2026-10-24.json",
   "raw_json_sha256": "760455e2c46a7d85c03560559383d7109bcc6bbb993d08e4559e6310136f58c3",
   "raw_html_path": "data/captures/fonseca-visible-253-2026-10-24.html",
-  "raw_html_sha256": "08150d437b7cc5b2db207895282cbe294cc777fc9e9810ba52da831d598d9bdf",
+  "raw_html_sha256": "019710afa2fe1d7d9aa25baed5b6b4a097db4d5ee767b6410acdf8c230b4550d",
   "browser_closed": true,
-  "access_refused": false
+  "access_refused": false,
+  "raw_html_original_sha256": "08150d437b7cc5b2db207895282cbe294cc777fc9e9810ba52da831d598d9bdf",
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2
+  }
 }
