@@ -2,25 +2,13 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Uncertain saved-capture classification; all 486 Widom/Majetich source and cache rows remain intact. No curated producer exclusion is applied here.",
+  "note": "Unresolved saved-capture classifications remain; seven exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. Widom row 215 is confirmed as his 1997 book chapter by his CMU publication list and retained; Majetich row 270 is confirmed as her EPA-hosted presentation abstract and retained. All 486 Widom/Majetich source and cache rows remain intact. No curated producer exclusion is applied here.",
   "candidates": [
-    {
-      "scholar_id": "czs45aEAAAAJ",
-      "capture_row": 212,
-      "author_pub_id": "czs45aEAAAAJ:3bvyWxjaHKcC",
-      "concern": "Title appears truncated; identify exact source and publication type before classification."
-    },
     {
       "scholar_id": "czs45aEAAAAJ",
       "capture_row": 214,
       "author_pub_id": "czs45aEAAAAJ:YsrPvlHIBpEC",
       "concern": "Title appears to be a bibliographic fragment; identify exact source before classification."
-    },
-    {
-      "scholar_id": "czs45aEAAAAJ",
-      "capture_row": 215,
-      "author_pub_id": "czs45aEAAAAJ:ce2CqMG-AY4C",
-      "concern": "Title is incomplete and Scholar omits year and venue; identify exact source before classification."
     },
     {
       "scholar_id": "FRlLpMYAAAAJ",
@@ -54,24 +42,6 @@
     },
     {
       "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 258,
-      "author_pub_id": "FRlLpMYAAAAJ:lvd772isFD0C",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 263,
-      "author_pub_id": "FRlLpMYAAAAJ:DJbcl8HfkQkC",
-      "concern": "Program committee record with missing year and venue; identify exact source before classification."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 264,
-      "author_pub_id": "FRlLpMYAAAAJ:kz9GbA2Ns4gC",
-      "concern": "Incomplete supplementary-information title with missing year and venue; identify source."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
       "capture_row": 265,
       "author_pub_id": "FRlLpMYAAAAJ:-_dYPAW6P2MC",
       "concern": "Title appears to contain a conference program fragment; identify exact source."
@@ -90,12 +60,6 @@
     },
     {
       "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 270,
-      "author_pub_id": "FRlLpMYAAAAJ:q3oQSFYPqjQC",
-      "concern": "Generic presentation-abstract title with no year or venue; identify exact source."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
       "capture_row": 271,
       "author_pub_id": "FRlLpMYAAAAJ:Tiz5es2fbqcC",
       "concern": "Title appears to combine multiple bibliographic fragments; identify exact source."
@@ -108,10 +72,6 @@
         [
           131,
           211
-        ],
-        [
-          204,
-          205
         ]
       ],
       "concern": "Same normalized title appears under distinct Scholar citation IDs; compare exact sources before deduplication."
@@ -119,14 +79,6 @@
     {
       "scholar_id": "FRlLpMYAAAAJ",
       "capture_row_groups": [
-        [
-          16,
-          186
-        ],
-        [
-          35,
-          251
-        ],
         [
           93,
           135
@@ -153,25 +105,15 @@
   ],
   "missing_venue_groups": [
     {
-      "scholar_id": "czs45aEAAAAJ",
-      "capture_rows": [
-        215
-      ],
-      "concern": "Scholar venue is blank; source and classification remain unresolved."
-    },
-    {
       "scholar_id": "FRlLpMYAAAAJ",
       "capture_rows": [
         126,
         200,
         261,
-        263,
-        264,
         265,
         266,
         267,
         268,
-        270,
         271
       ],
       "concern": "Scholar venue is blank; source and classification remain unresolved."
@@ -179,27 +121,17 @@
   ],
   "missing_year_groups": [
     {
-      "scholar_id": "czs45aEAAAAJ",
-      "capture_rows": [
-        215
-      ],
-      "concern": "Scholar year is blank; inspect source before supplying publication metadata."
-    },
-    {
       "scholar_id": "FRlLpMYAAAAJ",
       "capture_rows": [
         259,
         260,
         261,
         262,
-        263,
-        264,
         265,
         266,
         267,
         268,
         269,
-        270,
         271
       ],
       "concern": "Scholar year is blank; inspect source before supplying publication metadata."
