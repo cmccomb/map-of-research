@@ -36,6 +36,9 @@ three additional IDs from named CMU expert pages; it does not add publication
 observations.
 The [Huaiying Zhang follow-up](reviews/2026-10-24-bio-zhang-scholar-id.md)
 records another direct ID link from a CMU-hosted lab publications page.
+The [Bob Murphy follow-up](reviews/2026-10-24-bio-murphy-scholar-id.md)
+reconciles his Bio and Computational Biology emeritus memberships under one
+Scholar-linked person.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
