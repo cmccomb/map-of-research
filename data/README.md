@@ -36,3 +36,11 @@ profiles: Jonathan Minden (127) and Luisa Hiller (101). Scholar displays the
 latter account as “Hiller NL”; its CMU-linked identity is recorded in the
 registry review. The captured rows remain attributed to that Scholar account
 and are available for separate publication review.
+
+The staged Neil Donahue browser evidence includes a noncanonical candidate
+cache under `data/captures/` while twelve IDs missing from a 2025 migrated
+cache receive individual source review. The candidate is not read by the
+snapshot builder. Seven SVG-rendered title symbols are recovered from the
+saved HTML `aria-label` values; the unmodified browser text extraction is
+also retained for comparison. Hidden Scholar form tokens are redacted from
+the staged HTML, with the original capture hash in its receipt.
