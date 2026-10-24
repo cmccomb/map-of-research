@@ -24,10 +24,13 @@ dated source extracts and coverage limits are in
 [`reviews/2026-10-24.md`](reviews/2026-10-24.md).
 
 Faculty registration does not imply publication coverage. The source pages
-directly linked 93 SCS and 44 MCS Scholar IDs, but only 8 included SCS and 3
-included MCS people have a cache in the local preview. Prasad Tetali still has
-no Scholar cache; two separately verified Tetali–Erdős DOI records are retained
-in the curated source. Paul Erdős is an external coauthor, not CMU faculty.
+directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,
+only 8 included SCS and 3 included MCS people had a Scholar cache. A later
+bounded local batch captured Prasad Tetali and Dejan Slepčev; its
+[Math source-graph review](reviews/2026-10-24-math-source-graph.md) records
+coverage and provenance separately from map publication. Two separately
+verified Tetali–Erdős DOI works are retained in the curated source. Paul
+Erdős is an external coauthor, not CMU faculty.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
