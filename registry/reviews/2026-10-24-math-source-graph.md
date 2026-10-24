@@ -50,6 +50,18 @@ records the profile IDs, coverage, counts, and checksums. These are captured
 profile observations; the number of distinct or mapped works depends on the
 later normalization and map-eligibility audit.
 
+## Stopped direct-profile attempt
+
+A later headed Chrome attempt opened the direct Scholar ID `ms9O2zoAAAAJ`
+linked from [David R. Owen's CMU page](https://www.cmu.edu/math/people/faculty/owen.html).
+The profile request returned HTTP 404 at about 19:16 UTC on 2026-10-24, so
+collection stopped immediately and the browser was closed. No publication
+rows were captured and no second profile was requested. The CMU-linked ID
+remains in the registry; this access gap is not evidence that Owen has no
+publications or that the linked identity is invalid. The
+[dated failure receipt](https://github.com/cmccomb/map-of-research/blob/automation/map-snapshot/status/browser-attempt-2026-10-24-3.json)
+records the HTTP status, stopped batch, and closed browser.
+
 ## Verified Mathematics–MSE links
 
 Six curated observations identify three DOI works coauthored by
