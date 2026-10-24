@@ -1,10 +1,11 @@
 # Verified DOI work records
 
-`works.json` holds two manually verified Prasad Tetali–Paul Erdős papers and
-six Math–MSE faculty observations for three jointly authored papers. Each row
-names its CMU faculty person, exact DOI, publisher or CMU verification URLs,
-verification date, and external coauthor IDs. Paul Erdős is an external
-coauthor, not a CMU faculty registry member.
+`works.json` holds 12 faculty observations for eight verified DOI works: two
+Prasad Tetali–Paul Erdős papers, six Mathematics observations across three
+Math–MSE papers, and four observations across three David R. Owen papers (one
+shared with Irene Fonseca). Each row names its CMU faculty person, exact DOI,
+publisher or CMU verification URLs, verification date, and external coauthor
+IDs. Paul Erdős is an external coauthor, not a CMU faculty registry member.
 
 The snapshot builder validates this file, records its checksum in the manifest,
 and retains `curated_verified` separately from `scholar` observations. Dataset
