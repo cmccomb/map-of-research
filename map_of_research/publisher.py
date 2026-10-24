@@ -103,6 +103,7 @@ STRING_LIST_COLUMNS = frozenset(
         "scholar_ids",
         "source_urls",
         "source_types",
+        "source_native_ids",
         "source_verification_urls",
         "external_coauthor_ids",
         "title_variants",
@@ -731,6 +732,9 @@ def build_map_artifact(
                 "source_url": source_urls[0] if source_urls else "",
                 "source_types": list(
                     _as_list(getattr(row, "source_types", ["scholar"]))
+                ),
+                "source_native_ids": list(
+                    _as_list(getattr(row, "source_native_ids", []))
                 ),
                 "source_verified_at": str(getattr(row, "source_verified_at", "")),
                 "source_verification_urls": list(

@@ -495,6 +495,48 @@ def test_curated_rows_are_provenance_bound_and_not_scholar_fetches(
         )
 
 
+def test_curated_native_id_survives_snapshot_without_scholar_identity(
+    tmp_path: Path,
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    curated_path = tmp_path / "data/curated/works.json"
+    curated_path.parent.mkdir(parents=True)
+    payload = curated_payload()
+    work = payload["works"][0]
+    work.pop("doi")
+    work["source_native_id"] = "EGU2012:EGU2012-2516-1"
+    atomic_write_json(curated_path, payload)
+    snapshot_path = tmp_path / "snapshot.parquet"
+    manifest_path = tmp_path / "snapshot.manifest.json"
+
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=tmp_path / "no-scholar-cache",
+        snapshot_path=snapshot_path,
+        manifest_path=manifest_path,
+        now=NOW,
+    )
+    frame, manifest = validate_snapshot(
+        snapshot_path,
+        manifest_path,
+        now=NOW,
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+    )
+    assert manifest["cached_profiles"] == 0
+    assert manifest["curated_work_rows"] == len(frame) == 1
+    row = frame.iloc[0]
+    assert row["author_pub_id"] == (
+        "curated-native:person-alpha:egu2012:egu2012-2516-1"
+    )
+    assert row["source_native_id"] == "egu2012:egu2012-2516-1"
+    assert row["source_doi"] == row["scholar_id"] == row["fetched_at_utc"] == ""
+    assert row["source_type"] == "curated_verified"
+
+
 def test_curated_work_for_included_faculty_without_scholar_profile(
     tmp_path: Path,
 ) -> None:
@@ -566,6 +608,7 @@ def test_curated_work_for_included_faculty_without_scholar_profile(
         (("works", 0), "bad", "must be an object"),
         (("works", 0, "person_id"), "person-missing", "registered faculty"),
         (("works", 0, "doi"), "bad-doi", "invalid DOI"),
+        (("works", 0, "source_native_id"), "bad id", "source_native_id"),
         (("works", 0, "title"), "", "title, authors, and venue"),
         (("works", 0, "authors"), "", "title, authors, and venue"),
         (("works", 0, "venue"), "", "title, authors, and venue"),
@@ -616,6 +659,43 @@ def test_curated_source_rejects_duplicate_ids_and_works(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="Duplicate curated faculty DOI"):
         snapshot._load_curated_rows(source_path, registry)
 
+    payload = curated_payload()
+    payload["works"][0].pop("doi")
+    payload["works"][0]["source_native_id"] = "egu2012:egu2012-2516-1"
+    payload["works"].append(payload["works"][0])
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match="Duplicate curated faculty source_native_id"):
+        snapshot._load_curated_rows(source_path, registry)
+
+
+@pytest.mark.parametrize(
+    ("doi", "native_id", "source_url", "message"),
+    [
+        ("", "", "https://example.test/paper", "exactly one"),
+        ("10.1000/example", "egu:example", "https://example.test/paper", "exactly one"),
+        ("", "bad id", "https://example.test/paper", "invalid source_native_id"),
+        ("", "egu:example", "https://example.test/other", "URL needs verification"),
+    ],
+)
+def test_curated_native_identity_requires_exact_source_evidence(
+    tmp_path: Path,
+    doi: str,
+    native_id: str,
+    source_url: str,
+    message: str,
+) -> None:
+    registry = load_registry(*make_registry(tmp_path / "registry"))
+    payload = curated_payload()
+    payload["works"][0].update(
+        doi=doi,
+        source_native_id=native_id,
+        source_url=source_url,
+    )
+    source_path = tmp_path / "curated.json"
+    atomic_write_json(source_path, payload)
+    with pytest.raises(ValueError, match=message):
+        snapshot._load_curated_rows(source_path, registry)
+
 
 def test_curated_source_requires_active_faculty_and_can_omit_external_ids(
     tmp_path: Path,
@@ -653,9 +733,11 @@ def test_snapshot_rejects_invalid_source_identity_fields() -> None:
         snapshot._validate_frame(valid_frame().assign(source_type="unknown"))
     with pytest.raises(ValueError, match="Scholar identity"):
         snapshot._validate_frame(valid_frame().assign(scholar_id=""))
-    with pytest.raises(ValueError, match="need a DOI"):
+    with pytest.raises(ValueError, match="exactly one DOI or source_native_id"):
         snapshot._validate_frame(
-            valid_frame().assign(source_type="curated_verified", source_doi="")
+            valid_frame().assign(
+                source_type="curated_verified", source_doi="", source_native_id=""
+            )
         )
 
 
