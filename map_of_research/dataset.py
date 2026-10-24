@@ -117,8 +117,7 @@ def _source_values(records: list[Any], field: str) -> list[Any]:
     scholar_values = [
         getattr(record, field)
         for record in records
-        if record.source_type == "scholar"
-        and _clean_text(getattr(record, field))
+        if record.source_type == "scholar" and _clean_text(getattr(record, field))
     ]
     return scholar_values or [getattr(record, field) for record in records]
 
@@ -411,9 +410,7 @@ def build_dataset_tables(
                 "citation_count": max(
                     (
                         int(value)
-                        for value in _source_values(
-                            canonical_records, "citation_count"
-                        )
+                        for value in _source_values(canonical_records, "citation_count")
                     ),
                     default=0,
                 ),
