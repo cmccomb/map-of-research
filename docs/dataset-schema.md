@@ -23,8 +23,9 @@ the validated registry; they are not a second identity or collection key.
 
 ## `profile_publications`
 
-One row per publication observation on one Scholar profile. This is the
-lossless analytical source. It retains the original profile-publication ID,
+One row per publication observation on one Scholar profile or an explicitly
+marked verified DOI record. This is the lossless analytical source. It retains
+the original profile-publication ID,
 parsed bibliographic fields, citation count at collection time, complete
 normalized source record as JSON, fetched timestamp, memberships, work match
 method, title embedding, `map_eligible`, `map_exclusion_reasons`, and the quality
@@ -36,6 +37,10 @@ evidence URL, and verification date on the same retained row.
 One canonical work derived conservatively from the observations. DOI is used
 when present; otherwise an exact normalized title and year are used. Undated
 records without a DOI remain profile-specific to avoid unsafe merges.
+When a verified DOI record and an eligible Scholar observation resolve to the
+same work, populated Scholar fields supply the canonical title, authors, year,
+venue, citation text, and citation count. Verified DOI fields fill gaps in the
+Scholar observation. Both observations and their variants remain available.
 
 The table retains field variants, contributing observation IDs, profile IDs,
 faculty relationships, source URLs, first and last observation timestamps,

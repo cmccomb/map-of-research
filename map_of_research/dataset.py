@@ -111,6 +111,17 @@ def _best_text(values: list[Any]) -> str:
     )
 
 
+def _source_values(records: list[Any], field: str) -> list[Any]:
+    """Use Scholar for a populated field, then verified records for gaps."""
+
+    scholar_values = [
+        getattr(record, field)
+        for record in records
+        if record.source_type == "scholar" and _clean_text(getattr(record, field))
+    ]
+    return scholar_values or [getattr(record, field) for record in records]
+
+
 def _variants(values: list[Any]) -> list[str]:
     return sorted(
         {_clean_text(value) for value in values if _clean_text(value)},
@@ -327,7 +338,6 @@ def build_dataset_tables(
         )
         school_ids = sorted({membership["school_id"] for membership in memberships})
         years = [record.year for record in canonical_records]
-        citation_counts = [int(record.citation_count) for record in canonical_records]
         fetched = sorted(
             str(record.fetched_at_utc)
             for record in canonical_records
@@ -373,15 +383,15 @@ def build_dataset_tables(
                     [record.work_match_method for record in canonical_records]
                 ),
                 "doi": _best_text([record.doi for record in canonical_records]),
-                "title": _best_text([record.title for record in canonical_records]),
+                "title": _best_text(_source_values(canonical_records, "title")),
                 "title_variants": _variants(
                     [record.title for record in canonical_records]
                 ),
-                "authors": _best_text([record.authors for record in canonical_records]),
+                "authors": _best_text(_source_values(canonical_records, "authors")),
                 "author_variants": _variants(
                     [record.authors for record in canonical_records]
                 ),
-                "year": _mode_year([record.year for record in canonical_records]),
+                "year": _mode_year(_source_values(canonical_records, "year")),
                 "year_variants": sorted(
                     {
                         year
@@ -389,17 +399,21 @@ def build_dataset_tables(
                         if year is not None
                     }
                 ),
-                "venue": _best_text([record.venue for record in canonical_records]),
+                "venue": _best_text(_source_values(canonical_records, "venue")),
                 "venue_variants": _variants(
                     [record.venue for record in canonical_records]
                 ),
-                "citation": _best_text(
-                    [record.citation for record in canonical_records]
-                ),
+                "citation": _best_text(_source_values(canonical_records, "citation")),
                 "citation_variants": _variants(
                     [record.citation for record in canonical_records]
                 ),
-                "citation_count": max(citation_counts, default=0),
+                "citation_count": max(
+                    (
+                        int(value)
+                        for value in _source_values(canonical_records, "citation_count")
+                    ),
+                    default=0,
+                ),
                 "source_urls": _variants(
                     [record.source_url for record in canonical_records]
                 ),
