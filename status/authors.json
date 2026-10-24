@@ -313,6 +313,15 @@
       "migration_source": "map-of-cheme/data/Gounaris.json",
       "publication_count": 80
     },
+    "CRCzglkAAAAJ": {
+      "collection_method": "chrome_direct_profile",
+      "coverage": "complete_visible_profile",
+      "display_name": "Ian Tice",
+      "last_attempt_at_utc": "2026-10-24T20:07:25.782000+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2026-10-24T20:07:25.782000+00:00",
+      "publication_count": 63
+    },
     "CSHe53oAAAAJ": {
       "display_name": "Kurchin",
       "last_attempt_at_utc": "2025-03-01T01:36:15+00:00",
@@ -1414,6 +1423,15 @@
       "last_attempt_at_utc": "2026-10-24T19:16:12.273+00:00",
       "last_error_message": "Direct CMU-linked Google Scholar profile returned HTTP 404 in headed Chrome; no data captured.",
       "last_error_type": "profile_http_404"
+    },
+    "neJ3NIUAAAAJ": {
+      "collection_method": "chrome_direct_profile",
+      "coverage": "complete_visible_profile",
+      "display_name": "Robert Pego",
+      "last_attempt_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "last_error_type": null,
+      "last_success_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "publication_count": 196
     },
     "oFIXoy8AAAAJ": {
       "display_name": "Qu",

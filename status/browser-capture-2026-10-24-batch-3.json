@@ -1,0 +1,57 @@
+{
+  "blocked": false,
+  "browser_closed": true,
+  "collection_method": "chrome_direct_profile",
+  "failed_profile_ids": [],
+  "finished_at_utc": "2026-10-24T20:09:15.600+00:00",
+  "first_profile_loaded_at_utc": "2026-10-24T20:07:09+00:00",
+  "inter_profile_loaded_gap_seconds": 107,
+  "max_profiles": 2,
+  "profile_capture": [
+    {
+      "citation_annotations": [],
+      "coverage": "complete_visible_profile",
+      "display_name": "Ian Tice",
+      "missing_venue": 5,
+      "missing_year": 4,
+      "more_remain": false,
+      "person_id": "person-iantice-372961d6",
+      "publication_count": 63,
+      "scholar_id": "CRCzglkAAAAJ",
+      "source_html_sha256": "3a580f957499e3dabca33125be63ee3f783a7f7f4b593cc891beb737f529255b",
+      "source_json_sha256": "969b050f6e40c46581152bc5593c9deb30797e5cfae8b4e1de9bb5b63c383c3f",
+      "zero_or_blank_citations": 11
+    },
+    {
+      "citation_annotations": [],
+      "coverage": "complete_visible_profile",
+      "display_name": "Robert Pego",
+      "missing_venue": 23,
+      "missing_year": 16,
+      "more_remain": false,
+      "person_id": "person-robertpego-707a4eaf",
+      "publication_count": 196,
+      "scholar_id": "neJ3NIUAAAAJ",
+      "source_html_sha256": "8576688dc0eef64f81665c03038516c71f57aa8f0c5ea2f21136f67244a24f90",
+      "source_json_sha256": "ebb1602714200cba77d316d166ac1f62885be4ec958c233257e7eda7734a0c20",
+      "zero_or_blank_citations": 70
+    }
+  ],
+  "publication_limit": 200,
+  "refreshed_profile_ids": [
+    "CRCzglkAAAAJ",
+    "neJ3NIUAAAAJ"
+  ],
+  "request_delay_seconds": 90.0,
+  "schema_version": 1,
+  "second_profile_loaded_at_utc": "2026-10-24T20:08:56+00:00",
+  "selected_profile_ids": [
+    "CRCzglkAAAAJ",
+    "neJ3NIUAAAAJ"
+  ],
+  "started_at_utc": "2026-10-24T20:07:09+00:00",
+  "status": "success",
+  "target_department_ids": [
+    "math"
+  ]
+}
