@@ -138,8 +138,12 @@ Each receives a coverage-aware, corpus-specific phrase from its titles. A
 versioned editorial catalog, checked against representative titles on
 2026-07-19, turns those extracted phrases into concise public labels without
 discarding the source phrase or its review status. Unmatched phrases remain
-visible and are explicitly marked unreviewed. Detail regions contain at least
-50 works and are revealed by the site as visitors zoom.
+visible and are explicitly marked unreviewed. If a reviewed label collides with
+another region's extracted phrase, the direct extraction keeps that label and
+the reviewed region displays its own extracted phrase as unreviewed. The
+`*_label_reviewed` flag means the reviewed wording was actually applied; an
+exact catalog match alone is insufficient. Detail regions contain at least 50
+works and are revealed by the site as visitors zoom.
 
 A preliminary detail pass also exposes the rare catch-all region that isolated
 title rules cannot identify safely. The publisher flags a region only when it

@@ -125,9 +125,13 @@ k-means and label each region from its publication titles using repeated
 two-to-four-word phrases weighted by within-region coverage and corpus
 specificity. Strongly supported longer phrases are preferred over clipped
 forms. A versioned, exact-match editorial catalog then supplies the public
-label. Both phrases and whether a catalog match occurred remain in the dataset
+label. Both phrases and whether the reviewed wording was applied remain in the dataset
 and browser artifact; a changed, unmatched phrase is published as-is and marked
 unreviewed rather than being assigned a guess from an older cluster. The
+same rule applies when a reviewed label collides with another region's direct
+extraction: the direct phrase keeps the label, and the displaced reviewed
+region displays its extracted phrase as unreviewed. The `*_label_reviewed`
+field is true only when the reviewed wording was actually applied. The
 default hierarchy has 30 overview regions and approximately 120 nested detail
 regions; undersized detail fragments merge into their nearest sibling. Stable
 keyword IDs are derived from labels and centroids rather than k-means' arbitrary
