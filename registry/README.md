@@ -34,6 +34,8 @@ Erdős is an external coauthor, not CMU faculty.
 The [Bio Scholar-ID follow-up](reviews/2026-10-24-bio-scholar-ids.md) verifies
 three additional IDs from named CMU expert pages; it does not add publication
 observations.
+The [Huaiying Zhang follow-up](reviews/2026-10-24-bio-zhang-scholar-id.md)
+records another direct ID link from a CMU-hosted lab publications page.
 
 Roles `faculty`, `teaching`, and `emeritus` must be included. Affiliate,
 courtesy, visiting, former, special, adjunct, and unknown roles must be retained
