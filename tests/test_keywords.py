@@ -239,12 +239,13 @@ def test_reviewed_labels_preserve_extraction_and_reject_ambiguity() -> None:
     }
     assert reviewed == {0: True, 1: False}
 
-    with pytest.raises(ValueError, match="non-empty and unique"):
-        apply_reviewed_labels(
-            {0: "access control"},
-            overview_reviews,
-            reserved={"cybersecurity & privacy"},
-        )
+    labels, reviewed = apply_reviewed_labels(
+        {0: "access control"},
+        overview_reviews,
+        reserved={"cybersecurity & privacy"},
+    )
+    assert labels == {0: "access control"}
+    assert reviewed == {0: False}
     with pytest.raises(ValueError, match="non-empty and unique"):
         apply_reviewed_labels({0: ""}, {})
     with pytest.raises(ValueError, match="non-empty and unique"):
@@ -387,6 +388,37 @@ def test_colliding_reviews_preserve_source_phrases_in_both_keyword_levels(
         "",
     }
     assert not set(overview["keyword"]) & set(detail["detail_keyword"]) - {""}
+
+
+def test_detail_review_colliding_with_parent_falls_back_to_extraction(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    def extracted_for_test(
+        titles: list[str],
+        labels: numpy.ndarray,
+        *,
+        reserved: set[str] | None = None,
+        prefer_readable: bool = False,
+    ) -> dict[int, str]:
+        del titles, labels
+        if prefer_readable:
+            assert reserved is None
+            return {0: "block copolymers"}
+        assert reserved == {"block copolymers"}
+        return {0: "block copolymer"}
+
+    monkeypatch.setattr(keywords, "_cluster_keywords", extracted_for_test)
+    output = keywords.add_publication_keywords(
+        works_frame(),
+        keyword_count=1,
+        detail_keyword_count=1,
+    )
+    mapped = output.loc[output["keyword_id"].ne("")]
+
+    assert set(mapped["keyword"]) == {"block copolymers"}
+    assert set(mapped["detail_keyword"]) == {"block copolymer"}
+    assert set(mapped["detail_keyword_extracted"]) == {"block copolymer"}
+    assert not mapped["detail_keyword_label_reviewed"].any()
 
 
 def test_detail_cluster_allocation_is_proportional_and_capacity_limited() -> None:
