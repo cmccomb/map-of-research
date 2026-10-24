@@ -73,6 +73,9 @@ def _work_identity(
     curated_title_year_dois: Mapping[tuple[str, int], set[str]] | None = None,
     curated_title_year_native_ids: Mapping[tuple[str, int], set[str]] | None = None,
 ) -> tuple[str, str, str]:
+    native_id = _clean_text(getattr(row, "source_native_id", ""))
+    if native_id and not _doi(getattr(row, "source_doi", "")):
+        return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
     doi = _doi(
         getattr(row, "source_doi", ""),
         row.source_url,
@@ -81,9 +84,6 @@ def _work_identity(
     )
     if doi:
         return _hash_id("work", f"doi:{doi}"), "doi", doi
-    native_id = _clean_text(getattr(row, "source_native_id", ""))
-    if native_id:
-        return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
     normalized_title = normalize_title(str(row.title))
     year = _year(row.year)
     if normalized_title and year is not None:
