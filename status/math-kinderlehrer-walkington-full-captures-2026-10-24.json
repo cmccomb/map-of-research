@@ -55,10 +55,10 @@
       "year_anomalies": [],
       "source_json_sha256": "e8113ed8dc68bc1bdc3f57b0de79e3d4e0c34202b211afd1de7d2fe3f71ef1c1",
       "source_html_sha256": "330651a28440205bc156b70da5d6bc0467700f22a9267fe4c9356728b55727f0",
-      "identity_status": "candidate_unassigned_no_verified_scholar_affiliation",
-      "identity_note": "DBLP links this exact Scholar ID from its Noel Walkington record; visible works overlap CMU's official page and include CMU Math collaborations. Scholar displays Unknown affiliation and No verified email. This is a complete visible-profile capture, not verified CMU account ownership; leave registry Scholar ID blank.",
+      "identity_status": "user_confirmed_no_verified_scholar_affiliation",
+      "identity_note": "DBLP links this exact Scholar ID from its Noel Walkington record, and visible works overlap CMU's official and researcher-managed pages. Chris McComb reviewed the direct candidate URL in this Codex chat on 2026-10-24 and said it looks like Walkington. Scholar displays Unknown affiliation and No verified email; independent CMU account verification is absent.",
       "official_person_url": "https://www.cmu.edu/math/people/faculty/walkington.html",
-      "scholar_id_source_url": "https://dblp.org/pid/w/NoelWalkington.html",
+      "scholar_id_source_url": "https://scholar.google.com/citations?hl=en&user=CGSMDGwAAAAJ&view_op=list_works&sortby=pubdate",
       "collection_method": "isolated_playwright_direct_profile",
       "page_load_count": 2,
       "show_more_clicks": 1,
@@ -68,7 +68,7 @@
       "raw_json_path": "data/captures/noel-walkington-visible-144-2026-10-24.json",
       "raw_html_path": "data/captures/noel-walkington-visible-144-2026-10-24.html",
       "author_cache_path": "data/authors/CGSMDGwAAAAJ.json",
-      "author_cache_sha256": "7a4c60655b22584134baf5a3368f81981a9bf31fe27efd59d78d9528e0aaf9cd",
+      "author_cache_sha256": "32f9ec874f0e733bf6a59a339f1fbd29dea1fade94eec3e82dbfd5a7ef516858",
       "exact_link_followup": {
         "checked_urls": [
           "https://www.cmu.edu/math/people/faculty/walkington.html",
@@ -82,9 +82,9 @@
           "Numerical approximation of viscoelastic fluids",
           "A Dual–Mixed Finite Element Method for the Brinkman Problem"
         ],
-        "note": "Official and self-managed pages show the same research identity and titles but no exact Scholar link; this bounded negative check does not prove no such link exists elsewhere."
+        "note": "Official and self-managed pages show the same research identity and titles but no exact Scholar link. Chris subsequently confirmed the direct candidate URL in this chat; the bounded negative check does not prove no link exists elsewhere."
       }
     }
   ],
-  "note": "Source observations only. Walkington account ownership remains unverified. No combined snapshot, manifest, or publisher registry change."
+  "note": "Source observations only. Walkington's direct candidate URL was user-confirmed; Scholar still has no verified CMU affiliation or email. No combined snapshot, manifest, or publisher registry change."
 }
