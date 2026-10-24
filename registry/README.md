@@ -47,8 +47,8 @@ The linked reviews and source CSVs document role decisions, identities,
 directly linked Scholar IDs, and unresolved directory gaps.
 
 The [four-school display-primary ledger](reviews/2026-10-24-other-schools-primary.md)
-covers 105 registered Scholar-ID people in the added-school scope: 103 have a
-source-backed display unit and two remain explicitly unresolved. Its three
+covers 105 registered Scholar-ID people in the added-school scope: 102 have a
+source-backed display unit and three remain explicitly unresolved. Its three
 `primary_department_*` fields align with [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35),
 which adds primary fields to the canonical people schema. The current roster
 PR retains the decisions in a dated audit file so the primary-schema change

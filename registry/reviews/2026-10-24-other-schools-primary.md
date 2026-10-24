@@ -3,7 +3,7 @@
 The [dated primary ledger](2026-10-24-other-schools-primary.csv) covers every
 person with a registered Google Scholar ID and at least one membership added
 through the CFA, Dietrich, Heinz, or Tepper review. It has **105 distinct
-people**: **103 resolved** display-primary units and **two explicitly
+people**: **102 resolved** display-primary units and **three explicitly
 unresolved** cases. The three `primary_department_*` columns match the schema
 proposed in [draft PR #35](https://github.com/cmccomb/map-of-research/pull/35);
 `basis` is an audit note. The current registry does not yet have those three
@@ -40,10 +40,13 @@ position can settle a display choice even when a bounded advising subset
 leans elsewhere, as [Tepper's Nicholas Muller review](2026-10-24-tepper.md)
 documents. The original joint memberships remain included.
 
-The two unresolved rows are:
+The three unresolved rows are:
 
 - **Berit C. R. Royer:** LCAL lists a part-time adjunct lecturer. No included
   CMU faculty unit is documented by this review.
+- **Laura McCann:** current BME and English profiles both call her a jointly
+  appointed Lecturer. Both memberships are excluded under the faculty-role
+  policy; see the [Dietrich review](2026-10-24-dietrich.md).
 - **Chris Hendrickson:** current CEE, EPP, and Heinz emeritus appointments are
   coequal in official sources. Two located CEE doctoral advisees do not
   establish a majority across those units; see the [Heinz review](2026-10-24-heinz.md).
