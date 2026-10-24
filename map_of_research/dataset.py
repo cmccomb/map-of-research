@@ -38,8 +38,8 @@ def normalize_title(value: str) -> str:
 
 
 def _clean_text(value: Any) -> str:
-    text = str(value or "").strip()
-    return "" if text == "nan" else text
+    text = str(value if value is not None else "").strip()
+    return "" if text.casefold() in {"nan", "<na>"} else text
 
 
 def _year(value: Any) -> int | None:
