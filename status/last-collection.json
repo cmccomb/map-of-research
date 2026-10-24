@@ -1,24 +1,61 @@
 {
   "blocked": false,
-  "dry_run": false,
+  "collection_method": "chrome_direct_profile",
   "failed_profile_ids": [],
-  "finished_at_utc": "2026-10-23T17:17:53.729322+00:00",
-  "force": false,
-  "max_profiles": 1,
-  "min_age_days": 365,
+  "finished_at_utc": "2026-10-24T18:05:29.874+00:00",
+  "inter_profile_gap_seconds": 97,
+  "max_profiles": 2,
+  "profile_capture": [
+    {
+      "citation_annotations": [],
+      "coverage": "capped_partial",
+      "display_name": "Irene Fonseca",
+      "missing_venue": 13,
+      "missing_year": 3,
+      "more_remain": true,
+      "person_id": "person-irenefonseca-51ba491a",
+      "publication_count": 200,
+      "scholar_id": "JV3ryMgAAAAJ",
+      "source_html_sha256": "0f98c05aa4d331c1434e66e9f5ce2f8c85aba987348c58ae9615b742f78c5a5c",
+      "source_json_sha256": "403f30bdf876ac7614e46c28d6614484d0c0bcc6ce2335b3cd23907118fe9163",
+      "zero_or_blank_citations": 36
+    },
+    {
+      "citation_annotations": [
+        {
+          "author_pub_id": "0Nj-v7sAAAAJ:l7t_Zn2s7bgC",
+          "display": "8*",
+          "row": 51
+        }
+      ],
+      "coverage": "complete_visible_profile",
+      "display_name": "Giovanni Leoni",
+      "missing_venue": 24,
+      "missing_year": 10,
+      "more_remain": false,
+      "person_id": "person-giovannileoni-02ab6865",
+      "publication_count": 134,
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "source_html_sha256": "3047d9e35beee4a82f0995da0b41239f1872cabe26f356871c445bdab3e12b3c",
+      "source_json_sha256": "78e1bb2e564fb313d1b4c4b6bb11b9543fd32b30e2ad2ff3100a63597a20aeb7",
+      "zero_or_blank_citations": 49
+    }
+  ],
   "publication_limit": 200,
   "refreshed_profile_ids": [
-    "gTmfVvkAAAAJ"
+    "JV3ryMgAAAAJ",
+    "0Nj-v7sAAAAJ"
   ],
-  "registry_memberships": 1,
-  "registry_people": 1,
   "request_delay_seconds": 90.0,
   "schema_version": 1,
+  "second_profile_requested_at_utc": "2026-10-24T18:04:39+00:00",
   "selected_profile_ids": [
-    "gTmfVvkAAAAJ"
+    "JV3ryMgAAAAJ",
+    "0Nj-v7sAAAAJ"
   ],
-  "started_at_utc": "2026-10-23T17:17:49.131659+00:00",
+  "started_at_utc": "2026-10-24T18:03:02+00:00",
   "status": "success",
-  "unique_profiles": 1,
-  "workflow_url": null
+  "target_department_ids": [
+    "math"
+  ]
 }
