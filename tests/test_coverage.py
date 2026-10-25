@@ -745,7 +745,7 @@ def test_receipt_reads_scholar_svg_title_labels(tmp_path: Path) -> None:
     html.write_text(
         html.read_text().replace(
             ">One</a>",
-            '><svg class="gs_fsvg" aria-label="α"></svg>-pinene between '
+            '><svg class="gs_fsvg" aria-label="    α    "></svg>-pinene between '
             '<svg class="gs_fsvg" aria-label="-50"></svg> and '
             '<svg class="gs_fsvg" aria-label="+25"></svg> '
             '<svg class="gs_fsvg" aria-label="∘"></svg>C</a>',

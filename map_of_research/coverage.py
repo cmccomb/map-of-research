@@ -67,7 +67,10 @@ class _ProfileHTML(HTMLParser):
         if self._field:
             if self._field == "title" and tag == "svg" and "gs_fsvg" in classes:
                 # Scholar renders some title glyphs as labeled SVG icons.
-                self._field_text.append(attributes.get("aria-label") or "")
+                # MathJax pads accessible labels for visual positioning. The
+                # padding is not part of the citation title, including when a
+                # hyphen follows the SVG with no intervening space.
+                self._field_text.append((attributes.get("aria-label") or "").strip())
             self._field_depth += 1
             return
         if tag == "tr" and "gsc_a_tr" in (attributes.get("class") or "").split():
