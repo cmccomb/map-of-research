@@ -401,6 +401,16 @@ OTHER_PRIMARY = {
     ),
 }
 
+# The CMU-affiliated Pittsburgh Quantum Institute lists this exact older work
+# among Hyung Kim's most cited publications, resolving the initials-only row.
+CMU_INSTITUTIONAL = {
+    1: (
+        "Mass spectrum of chiral ten-dimensional N=2 supergravity on",
+        1985,
+        "https://www.pqi.org/hyung-kim",
+    ),
+}
+
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
 ACS_PARENT_ID = f"{SCHOLAR_ID}:SeFeTyx0c_EC"
 CORRECTION_PREFIX = re.compile(
@@ -549,6 +559,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     evidence_url,
                 )
             )
+        elif index in CMU_INSTITUTIONAL:
+            expected_title, expected_year, evidence_url = CMU_INSTITUTIONAL[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(
+                    f"CMU institutional match changed at capture row {index}"
+                )
+            status = "cmu_institutional_bibliography_retained"
+            evidence_source = "Pittsburgh Quantum Institute CMU faculty bibliography"
         elif cmu_exact:
             status = "cmu_orcid_exact_title_year_retained"
             doi = cmu_exact["doi"]
@@ -615,6 +633,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 100,
+        "cmu_institutional_bibliography_retained": 1,
         "cmu_orcid_title_only_year_check": 1,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
@@ -622,7 +641,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
         "proposed_other_person_primary_work": 33,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 436,
+        "unresolved_attribution_hold": 435,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
