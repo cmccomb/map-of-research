@@ -25,6 +25,7 @@ from map_of_research.region_review import (
     CURRENT_REVISION,
     DEFAULT_REGION_REVIEW_PATH,
     SNAPSHOT_SHA256,
+    ReviewedRegionDecision,
     load_region_review,
 )
 from map_of_research.registry import load_registry
@@ -280,17 +281,24 @@ def test_math_region_loader_rejects_each_frozen_manifest_boundary(
 
 def test_composite_plan_applies_all_31_math_overrides(tmp_path):
     decisions = _load(_fixture(tmp_path))
+    chem_entries = json.loads(
+        Path("data/curated/scholar-chem-region-review.json").read_text()
+    )["decisions"]
+    chem = tuple(
+        ReviewedRegionDecision(**{**entry, "evidence_scope": "exact_chemistry_review"})
+        for entry in chem_entries
+    )
     kwargs = {
         "source_commit": COMPOSITE_SOURCE_COMMIT,
         "source_sha256": SNAPSHOT_SHA256,
         "prior_revision": CURRENT_REVISION,
     }
     manifest = Path("data/curated/region-remediation-bernhard.json")
-    plan = load_composite_region_plan(manifest, decisions, **kwargs)
+    plan = load_composite_region_plan(manifest, decisions, chem, **kwargs)
     assert len(plan.restore | plan.reexclude) == 280
-    assert len(plan.gains) == 99
-    assert len(plan.losses) == 156
+    assert len(plan.gains) == 95
+    assert len(plan.losses) == 149
     with pytest.raises(ValueError, match="exact f8"):
         load_composite_region_plan(
-            manifest, decisions, **{**kwargs, "source_commit": "0" * 40}
+            manifest, decisions, chem, **{**kwargs, "source_commit": "0" * 40}
         )

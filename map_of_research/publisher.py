@@ -27,6 +27,10 @@ from .bio_release_gate import (
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
 )
+from .chem_region_review import (
+    DEFAULT_CHEM_REGION_REVIEW_PATH,
+    load_chem_region_review,
+)
 from .composite_region import (
     HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
@@ -46,7 +50,7 @@ from .composite_region import (
 from .composite_region import (
     VARIANT_FIELDS as COMPOSITE_VARIANT_FIELDS,
 )
-from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
+from .contexts import DEFAULT_CONTEXTS_PATH, ReviewedContext, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
     apply_corrections,
@@ -65,7 +69,7 @@ from .doi_aliases import (
     load_doi_aliases,
     validate_doi_aliases,
 )
-from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .exclusions import DEFAULT_EXCLUSIONS_PATH, ReviewedExclusion, load_exclusions
 from .hub_card import build_updated_dataset_card
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
@@ -83,6 +87,7 @@ from .profile_releases import (
 )
 from .provisional_holds import (
     DEFAULT_PROVISIONAL_HOLDS_PATH,
+    ProvisionalHold,
     load_provisional_holds,
     require_no_provisional_hold_contributions,
     validate_provisional_holds,
@@ -1495,6 +1500,7 @@ def publish_snapshot(
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
+    chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1568,6 +1574,58 @@ def publish_snapshot(
         excluded_ids=set(exclusions),
         confirmed_ids=set(attribution_reviews.confirmed),
     )
+    reviewed_chem_decisions = (
+        load_chem_region_review(
+            chem_region_review_path,
+            snapshot_frame=frame,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_dir=cache_dir,
+            registry=registry,
+        )
+        if sullivan_transition
+        else ()
+    )
+    # The frozen source manifests must remain byte-identical for Sullivan.
+    # Apply these separately pinned Chemistry decisions only in memory.
+    effective_exclusions = dict(exclusions)
+    effective_holds = dict(provisional_holds)
+    effective_contexts = dict(contexts)
+    for decision in reviewed_chem_decisions:  # pragma: no cover - exact f8/bb88 preview
+        key = decision.scholar_id, decision.author_pub_id
+        if (
+            key in exclusions
+            or key in provisional_holds
+            or key in attribution_reviews.confirmed
+        ):
+            raise ValueError(
+                f"Chemistry review overlaps an earlier exact decision: {key}"
+            )
+        if decision.decision == "exclude":
+            effective_exclusions[key] = ReviewedExclusion(
+                decision.reason_code,
+                decision.reason,
+                decision.evidence_url,
+                decision.reviewed_at,
+            )
+        elif decision.decision == "hold":
+            effective_holds[key] = ProvisionalHold(
+                decision.scholar_id,
+                decision.author_pub_id,
+                decision.capture_row_index,
+                decision.reason,
+                decision.evidence_url,
+                decision.reviewed_at,
+            )
+        if decision.output_type:
+            if key in contexts:
+                raise ValueError(f"Chemistry output type overlaps prior context: {key}")
+            effective_contexts[key] = ReviewedContext(
+                publication_type=decision.output_type,
+                document_id="",
+                reason=decision.reason,
+                evidence_url=decision.evidence_url,
+                verified_at=decision.reviewed_at,
+            )
     if (  # pragma: no cover - exact f8/bb88 manifest bytes
         sullivan_transition
         and sha256_file(math_region_review_path) != MATH_REVIEW_MANIFEST_SHA256
@@ -1590,6 +1648,7 @@ def publish_snapshot(
         load_composite_region_plan(
             repair_manifest_path,
             reviewed_math_decisions,
+            reviewed_chem_decisions,
             source_commit=source_commit or "",
             source_sha256=str(manifest["snapshot_sha256"]),
             prior_revision=prior_revision,
@@ -1609,11 +1668,11 @@ def publish_snapshot(
     tables = build_dataset_tables(
         enriched,
         registry,
-        exclusions,
+        effective_exclusions,
         doi_aliases,
         attribution_reviews,
-        contexts,
-        provisional_holds,
+        effective_contexts,
+        effective_holds,
     )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
@@ -1775,6 +1834,9 @@ def publish_snapshot(
         continuity_receipt["math_region_review_sha256"] = sha256_file(
             math_region_review_path
         )
+        continuity_receipt["chem_region_review_sha256"] = sha256_file(
+            chem_region_review_path
+        )
     tables["works"] = add_publication_keywords(tables["works"])
     if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         if prior_artifact is None:
@@ -1791,7 +1853,7 @@ def publish_snapshot(
             },
         )
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
-    require_no_provisional_hold_contributions(tables, provisional_holds)
+    require_no_provisional_hold_contributions(tables, effective_holds)
     if comparison_revision != prior_revision:
         require_historical_region_decisions(prior_works, tables["works"])
         repair_related_mask = (
@@ -2049,6 +2111,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Exact 31-row Math review applied within the f8 composite release",
     )
     parser.add_argument(
+        "--chem-region-review-manifest",
+        type=Path,
+        default=DEFAULT_CHEM_REGION_REVIEW_PATH,
+        help="Exact 19-row Chemistry review applied within the f8 composite release",
+    )
+    parser.add_argument(
         "--require-bio-release",
         action="store_true",
         help="Fail closed unless the frozen complete Bio snapshot passes its gate",
@@ -2218,6 +2286,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             ),
             curated_works_path=args.scholar_curated_works,
             math_region_review_path=args.math_region_review_manifest,
+            chem_region_review_path=args.chem_region_review_manifest,
         )
         status.pop("atomic_release_intent", None)
         status.update(

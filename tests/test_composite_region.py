@@ -39,6 +39,7 @@ def test_retained_visible_nonpoint_keeps_prior_blank_topics():
     current = {
         **prior,
         "map_eligible": True,
+        "map_region_documented_override": True,
         "has_included_source_profile": False,
         "memberships": [],
         "map_region_prior_eligible_override": False,
@@ -55,6 +56,10 @@ def test_retained_visible_nonpoint_keeps_prior_blank_topics():
     ).iloc[0]
 
     assert {field: result[field] for field in TOPIC_FIELDS} == BLANK_TOPICS
+    assert (
+        result["map_region_documented_override"]
+        == prior["map_region_documented_override"]
+    )
 
 
 def test_hidden_math_allows_only_exact_empty_attribution():

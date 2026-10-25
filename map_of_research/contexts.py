@@ -13,7 +13,13 @@ from .io import load_json
 DEFAULT_CONTEXTS_PATH = Path("data/curated/scholar-contexts.json")
 CONTEXT_SCHEMA_VERSION = 1
 CONTEXT_TYPES = frozenset(
-    {"patent", "edited_book", "panel_transcript", "withdrawn_article"}
+    {
+        "patent",
+        "edited_book",
+        "panel_transcript",
+        "withdrawn_article",
+        "conference_presentation",
+    }
 )
 PATENT_PUBLICATION_NUMBER = re.compile(r"^[A-Z]{2}\d{5,}[A-Z]\d?$")
 

@@ -43,7 +43,7 @@ MATH_EXCLUSIONS_SHA256 = (
 MATH_HOLDS_SHA256 = "d52bbf51d65b8922b2dbde1d51afe4e287ce3a5818f460a96f69181e8c8197b0"
 BASELINE_MAP_SHA256 = "358e23af6774ea4fd53bab5ed8b55fdd1891a4e7730c0924d74e428e94cd4a88"
 BASELINE_MAP_POINTS = 42925
-FINAL_MAP_POINTS = 42850
+FINAL_MAP_POINTS = 42853
 COORDINATE_FIELDS = ("x", "y", "tsne_x", "tsne_y")
 TOPIC_FIELDS = (
     "keyword_id",
@@ -96,6 +96,7 @@ WORK_REGION_FIELDS = frozenset(
         "map_exclusion_reasons",
     }
 )
+TYPED_WORK_FIELDS = frozenset({"publication_type", "context_evidence_urls"})
 HIDDEN_MATH_ATTRIBUTION_FIELDS = frozenset(
     {
         "faculty",
@@ -110,9 +111,6 @@ HIDDEN_MATH_ATTRIBUTION_FIELDS = frozenset(
 )
 FULLERENES_WORK_ID = (
     "work-fda500c2821091a0f441404779cf526c144bb34b1feb6c4ee0a40b15b0efea7e"
-)
-DRUG_REPURPOSING_WORK_ID = (
-    "work-3cdf5a11569ffec20aaa9823ad8d98c97dcca69ee3e9ca279217a387ef024ba5"
 )
 FULLERENES_OBSERVATION_ID = (
     "observation-338edc5769bb3e75b6d64ae0019140fcf065cb662c3df1c31cfb3704a1701ddb"
@@ -158,27 +156,32 @@ class CompositeRegionPlan:
     reexclude: frozenset[str]
     math: tuple[ReviewedRegionDecision, ...]
     manifest_sha256: str
+    chem: tuple[ReviewedRegionDecision, ...] = ()
+
+    @property
+    def reviews(self) -> tuple[ReviewedRegionDecision, ...]:
+        return (*self.math, *self.chem)
 
     @property
     def gains(self) -> frozenset[str]:
-        math_ids = {item.work_id for item in self.math}
+        reviewed_ids = {item.work_id for item in self.reviews}
         return frozenset(
-            (self.restore - math_ids)
+            (self.restore - reviewed_ids)
             | {
                 item.work_id
-                for item in self.math
+                for item in self.reviews
                 if item.visible and item.transition == "restore"
             }
         )
 
     @property
     def losses(self) -> frozenset[str]:
-        math_ids = {item.work_id for item in self.math}
+        reviewed_ids = {item.work_id for item in self.reviews}
         return frozenset(
-            (self.reexclude - math_ids)
+            (self.reexclude - reviewed_ids)
             | {
                 item.work_id
-                for item in self.math
+                for item in self.reviews
                 if not item.visible and item.transition == "reexclude"
             }
         )
@@ -187,6 +190,7 @@ class CompositeRegionPlan:
 def load_composite_region_plan(
     manifest_path: Path,
     math: tuple[ReviewedRegionDecision, ...],
+    chem: tuple[ReviewedRegionDecision, ...] = (),
     *,
     source_commit: str,
     source_sha256: str,
@@ -222,6 +226,7 @@ def load_composite_region_plan(
     ):
         raise ValueError("Bernhard repair work set differs from reviewed 280")
     math_ids = {item.work_id for item in math}
+    chem_ids = {item.work_id for item in chem}
     if (
         len(math_ids) != 31
         or math_ids - (set(restore) | set(reexclude))
@@ -230,9 +235,22 @@ def load_composite_region_plan(
         )
     ):
         raise ValueError("Math review does not exactly override the historical repair")
-    plan = CompositeRegionPlan(frozenset(restore), frozenset(reexclude), math, digest)
-    if len(plan.gains) != 99 or len(plan.losses) != 156:
-        raise ValueError("Composite repair does not have exact +99/-156 scope")
+    if (
+        len(chem) != 19
+        or math_ids & chem_ids
+        or not chem_ids.issubset(set(restore) | set(reexclude))
+        or any(
+            (item.work_id in restore) != (item.transition == "restore") for item in chem
+        )
+    ):
+        raise ValueError(
+            "Chemistry review does not exactly override the historical repair"
+        )
+    plan = CompositeRegionPlan(
+        frozenset(restore), frozenset(reexclude), math, digest, chem
+    )
+    if len(plan.gains) != 95 or len(plan.losses) != 149:
+        raise ValueError("Composite repair does not have exact +95/-149 scope")
     return plan
 
 
@@ -265,11 +283,23 @@ def apply_composite_region_decisions(
         for identity, row in current_profiles.items()
         if identity[0] != SULLIVAN_PERSON_ID
     }
+    typed_observations = {
+        item.observation_identity for item in plan.chem if item.output_type
+    }
+    typed_work_ids = {item.work_id for item in plan.chem if item.output_type}
+
+    def observation_fields(identity: tuple[str, str, str, str]) -> tuple[str, ...]:
+        return tuple(
+            field
+            for field in FINGERPRINT_FIELDS
+            if identity not in typed_observations or field != "publication_type"
+        )
+
     if old_non_sullivan.keys() != new_non_sullivan.keys() or any(
         old_non_sullivan[identity].get("work_id")
         != new_non_sullivan[identity].get("work_id")
-        or _fingerprint_fields(old_non_sullivan[identity], FINGERPRINT_FIELDS)
-        != _fingerprint_fields(new_non_sullivan[identity], FINGERPRINT_FIELDS)
+        or _fingerprint_fields(old_non_sullivan[identity], observation_fields(identity))
+        != _fingerprint_fields(new_non_sullivan[identity], observation_fields(identity))
         for identity in old_non_sullivan
     ):
         raise ValueError("Non-Sullivan Scholar observation source or work ID drifted")
@@ -294,7 +324,7 @@ def apply_composite_region_decisions(
         or sum(len(rows) for rows in new_members.values()) != 284
     ):
         raise ValueError("Composite repair lacks the exact 284 old work observations")
-    reviewed = {item.work_id: item for item in plan.math}
+    reviewed = {item.work_id: item for item in plan.reviews}
     for work_id in sorted(affected):
         old = prior_works.get(work_id)
         historical = historical_works.get(work_id)
@@ -308,14 +338,34 @@ def apply_composite_region_decisions(
             or not old_observations
             or old_observations.keys() != new_observations.keys()
             or _fingerprint_fields(
-                old, (*WORK_FINGERPRINT_FIELDS, "quality_assessment_version")
+                old,
+                tuple(
+                    field
+                    for field in (
+                        *WORK_FINGERPRINT_FIELDS,
+                        "quality_assessment_version",
+                    )
+                    if work_id not in typed_work_ids or field != "publication_type"
+                ),
             )
             != _fingerprint_fields(
-                current, (*WORK_FINGERPRINT_FIELDS, "quality_assessment_version")
+                current,
+                tuple(
+                    field
+                    for field in (
+                        *WORK_FINGERPRINT_FIELDS,
+                        "quality_assessment_version",
+                    )
+                    if work_id not in typed_work_ids or field != "publication_type"
+                ),
             )
             or any(
-                _fingerprint_fields(old_observations[identity], FINGERPRINT_FIELDS)
-                != _fingerprint_fields(new_observations[identity], FINGERPRINT_FIELDS)
+                _fingerprint_fields(
+                    old_observations[identity], observation_fields(identity)
+                )
+                != _fingerprint_fields(
+                    new_observations[identity], observation_fields(identity)
+                )
                 for identity in old_observations
             )
             or bool(old.get("map_eligible")) != (work_id in plan.reexclude)
@@ -326,27 +376,32 @@ def apply_composite_region_decisions(
             raise ValueError(
                 f"Composite repair source or historical decision drift: {work_id}"
             )
-        math_decision = reviewed.get(work_id)
-        if math_decision is not None:
-            identity = math_decision.observation_identity
+        exact_decision = reviewed.get(work_id)
+        if exact_decision is not None:
+            identity = exact_decision.observation_identity
             if (
                 set(old_observations) != {identity}
                 or set(new_observations) != {identity}
                 or hashlib.sha256(
                     str(old_observations[identity]["source_record_json"]).encode()
                 ).hexdigest()
-                != math_decision.source_record_sha256
+                != exact_decision.source_record_sha256
                 or bool(new_observations[identity].get("map_eligible"))
-                != math_decision.visible
+                != exact_decision.visible
+                or (
+                    bool(exact_decision.output_type)
+                    and new_observations[identity].get("publication_type")
+                    != exact_decision.output_type
+                )
                 or _fingerprint_fields(
                     old, (*WORK_FINGERPRINT_FIELDS, "quality_assessment_version")
                 )
-                != math_decision.work_fingerprint_sha256
+                != exact_decision.work_fingerprint_sha256
             ):
                 raise ValueError(
-                    f"Math override source or observation drift: {work_id}"
+                    f"Exact region override source or observation drift: {work_id}"
                 )
-            visible = math_decision.visible
+            visible = exact_decision.visible
         else:
             visible = work_id in plan.restore
         if visible:
@@ -357,7 +412,7 @@ def apply_composite_region_decisions(
                 for reason in current["map_exclusion_reasons"]
                 if reason != "low_information_region"
             ]
-        elif math_decision is None:
+        elif exact_decision is None:
             output.at[index, "map_eligible"] = False
             output.at[index, "map_region_outlier"] = True
             output.at[index, "map_exclusion_reasons"] = [
@@ -380,7 +435,7 @@ def apply_composite_region_decisions(
         final_visible - old_visible != plan.gains
         or old_visible - final_visible != plan.losses
     ):
-        raise ValueError("Composite repair work ID delta exceeds +99/-156")
+        raise ValueError("Composite repair work ID delta exceeds +95/-149")
     return output
 
 
@@ -436,7 +491,6 @@ def freeze_composite_presentation(
                             f"Non-Sullivan source variants changed: {work_id}: {field}"
                         )
                     output.at[index, field] = before
-            if work_id == DRUG_REPURPOSING_WORK_ID:
                 output.at[index, "map_region_documented_override"] = prior[
                     "map_region_documented_override"
                 ]
@@ -492,7 +546,7 @@ def validate_composite_map_points(
         raise ValueError("Composite map has no points")
     new_points = {str(point["work_id"]): point for point in new_list}
     if len(new_points) != len(new_list) or len(new_points) != FINAL_MAP_POINTS:
-        raise ValueError("Composite map lacks exact 42,850 unique points")
+        raise ValueError("Composite map lacks exact 42,853 unique points")
     gains = new_points.keys() - old_points.keys()
     losses = old_points.keys() - new_points.keys()
     old_sullivan = {
@@ -508,8 +562,8 @@ def validate_composite_map_points(
     if old_sullivan | new_sullivan != set(fixture["sullivan_work_id_union"]):
         raise ValueError("Sullivan source work IDs differ from reviewed f8 stage")
     if (
-        len(gains) != 110
-        or len(losses) != 185
+        len(gains) != 106
+        or len(losses) != 178
         or not plan.gains.issubset(gains)
         or not plan.losses.issubset(losses)
         or len(gains - plan.gains) != 11
@@ -521,7 +575,7 @@ def validate_composite_map_points(
         or candidate.get("point_count") != FINAL_MAP_POINTS
     ):
         raise ValueError(
-            "Composite map point IDs exceed 99/156 repair and 11/29 Sullivan"
+            "Composite map point IDs exceed 95/149 repair and 11/29 Sullivan"
         )
     old_works = {str(row["work_id"]): row for row in prior_works}
     digest_exclusions = frozenset(fixture["map_digest_excluded_fields"])
@@ -638,7 +692,11 @@ def _require_hidden_math_attribution(row: Mapping[str, Any], work_id: str) -> No
 
 
 def _work_payload_exceptions(
-    work_id: str, *, affected: frozenset[str], hidden_math: set[str]
+    work_id: str,
+    *,
+    affected: frozenset[str],
+    hidden_math: set[str],
+    typed_work_ids: set[str] | None = None,
 ) -> frozenset[str]:
     if work_id in hidden_math:
         return (
@@ -647,7 +705,15 @@ def _work_payload_exceptions(
             | HIDDEN_MATH_ATTRIBUTION_FIELDS
         )
     if work_id in affected:
-        return WORK_REGION_FIELDS | frozenset(TOPIC_FIELDS)
+        return (
+            WORK_REGION_FIELDS
+            | frozenset(TOPIC_FIELDS)
+            | (
+                TYPED_WORK_FIELDS
+                if work_id in (typed_work_ids or set())
+                else frozenset()
+            )
+        )
     if work_id == FULLERENES_WORK_ID:
         return frozenset(FULLERENES_REVIEW_FIELDS)
     return frozenset()
@@ -700,8 +766,11 @@ def validate_composite_staged_works(
     expected: dict[str, str] = {}
     prior_topics: dict[str, dict[str, Any]] = {}
     affected = plan.restore | plan.reexclude
-    math = {item.work_id: item for item in plan.math}
-    hidden_math = {work_id for work_id, item in math.items() if not item.visible}
+    reviewed = {item.work_id: item for item in plan.reviews}
+    hidden_reviewed = {
+        work_id for work_id, item in reviewed.items() if not item.visible
+    }
+    typed_work_ids = {item.work_id for item in plan.chem if item.output_type}
     exclusion_path = curated_dir / "scholar-exclusions.json"
     if (
         hashlib.sha256(exclusion_path.read_bytes()).hexdigest()
@@ -724,7 +793,10 @@ def validate_composite_staged_works(
                 else _digest_row(
                     row,
                     exclude=_work_payload_exceptions(
-                        work_id, affected=affected, hidden_math=hidden_math
+                        work_id,
+                        affected=affected,
+                        hidden_math=hidden_reviewed,
+                        typed_work_ids=typed_work_ids,
                     ),
                 )
             )
@@ -776,7 +848,10 @@ def validate_composite_staged_works(
                 _digest_row(
                     row,
                     exclude=_work_payload_exceptions(
-                        work_id, affected=affected, hidden_math=hidden_math
+                        work_id,
+                        affected=affected,
+                        hidden_math=hidden_reviewed,
+                        typed_work_ids=typed_work_ids,
                     ),
                 )
                 != expected[work_id]
@@ -789,16 +864,16 @@ def validate_composite_staged_works(
                 raise ValueError("Fullerenes exact attribution review drifted")
             if work_id in affected:
                 target = (
-                    math[work_id].visible
-                    if work_id in math
+                    reviewed[work_id].visible
+                    if work_id in reviewed
                     else work_id in plan.restore
                 )
                 if bool(row.get("map_eligible")) != target:
                     raise ValueError(
                         f"Staged Bernhard/Math visibility drift: {work_id}"
                     )
-                if work_id in math:
-                    decision = math[work_id]
+                if work_id in reviewed:
+                    decision = reviewed[work_id]
                     reasons = (
                         []
                         if decision.visible
@@ -806,16 +881,21 @@ def validate_composite_staged_works(
                         if decision.decision == "hold"
                         else [
                             "reviewed_"
-                            + exclusions[(decision.scholar_id, decision.author_pub_id)][
-                                "reason_code"
-                            ]
+                            + (
+                                decision.reason_code
+                                or exclusions[
+                                    (decision.scholar_id, decision.author_pub_id)
+                                ]["reason_code"]
+                            )
                         ]
                     )
                     if (
                         row["map_region_outlier"]
                         or row["map_exclusion_reasons"] != reasons
                     ):
-                        raise ValueError(f"Staged Math region reason drift: {work_id}")
+                        raise ValueError(
+                            f"Staged reviewed region reason drift: {work_id}"
+                        )
                 elif bool(row["map_region_outlier"]) != (
                     work_id in plan.reexclude
                 ) or row["map_exclusion_reasons"] != (
@@ -831,7 +911,13 @@ def validate_composite_staged_works(
                 )
                 if any(row[field] != expected_topics[field] for field in TOPIC_FIELDS):
                     raise ValueError(f"Staged Bernhard/Math topic drift: {work_id}")
-            if work_id in hidden_math:
+                if work_id in typed_work_ids and (
+                    row["publication_type"] != reviewed[work_id].output_type
+                    or row["context_evidence_urls"] != [reviewed[work_id].evidence_url]
+                    or not row["collaboration_eligible"]
+                ):
+                    raise ValueError(f"Staged Chemistry output type drift: {work_id}")
+            if work_id in hidden_reviewed:
                 _require_hidden_math_attribution(row, work_id)
     removed_ids = expected.keys() - seen
     if (
@@ -880,11 +966,11 @@ def validate_composite_staged_nonwork_tables(
         for profile in json.loads(holds_path.read_text())["profiles"]
         for item in profile["held_observations"]
     }
-    reviewed = {(item.person_id, item.author_pub_id): item for item in plan.math}
-    if len(reviewed) != 31:
-        raise ValueError("Math review observation identities repeat")
-    hidden_math_by_person = Counter(
-        item.person_id for item in plan.math if not item.visible
+    reviewed = {(item.person_id, item.author_pub_id): item for item in plan.reviews}
+    if len(reviewed) != 50:
+        raise ValueError("Exact Math/Chemistry review observation identities repeat")
+    hidden_by_person = Counter(
+        item.person_id for item in plan.reviews if not item.visible
     )
     fixture = _load_stage_fixture(
         curated_dir,
@@ -902,7 +988,7 @@ def validate_composite_staged_nonwork_tables(
         expected: dict[str, str] = {}
         old_seen: set[str] = set()
         old_sullivan: set[str] = set()
-        math_ids: set[str] = set()
+        reviewed_ids: set[str] = set()
         for batch in before.iter_batches(batch_size=128):
             for row in batch.to_pylist():
                 key = str(row.get(key_field) or "")
@@ -929,9 +1015,9 @@ def validate_composite_staged_nonwork_tables(
                             raise ValueError("Noonan bb88 count baseline drifted")
                         row["unique_work_count"] = 101
                         row["mapped_work_count"] = 101
-                    if key in hidden_math_by_person:
-                        row["unique_work_count"] -= hidden_math_by_person[key]
-                        row["mapped_work_count"] -= hidden_math_by_person[key]
+                    if key in hidden_by_person:
+                        row["unique_work_count"] -= hidden_by_person[key]
+                        row["mapped_work_count"] -= hidden_by_person[key]
                     expected[key] = _digest_row(row, exclude=frozenset())
                     continue
                 if config_name != "people" and row["person_id"] == SULLIVAN_PERSON_ID:
@@ -940,28 +1026,43 @@ def validate_composite_staged_nonwork_tables(
                 if config_name != "people":
                     decision = reviewed.get((row["person_id"], row["author_pub_id"]))
                     if decision is not None:
-                        math_ids.add(key)
+                        reviewed_ids.add(key)
                         if config_name == "authorships" and not decision.visible:
                             continue
                         if config_name == "profile_publications":
                             row = dict(row)
                             row["map_eligible"] = decision.visible
+                            if decision.output_type:
+                                row["publication_type"] = decision.output_type
+                                row["context_review_reason"] = decision.reason
+                                row["context_evidence_url"] = decision.evidence_url
+                                row["context_verified_at"] = decision.reviewed_at
                             if decision.decision == "hold":
-                                hold = holds[
-                                    (decision.scholar_id, decision.author_pub_id)
-                                ]
                                 row["map_exclusion_reasons"] = [
                                     "attribution_provisional_hold"
                                 ]
                                 row["review_attribution_status"] = "held"
-                                row["review_attribution_evidence_url"] = hold[
-                                    "evidence_url"
-                                ]
+                                row["review_attribution_evidence_url"] = (
+                                    decision.evidence_url
+                                    if decision in plan.chem
+                                    else holds[
+                                        (decision.scholar_id, decision.author_pub_id)
+                                    ]["evidence_url"]
+                                )
                                 row["collaboration_eligible"] = False
                             elif decision.decision == "exclude":
-                                review = exclusions[
-                                    (decision.scholar_id, decision.author_pub_id)
-                                ]
+                                review = (
+                                    {
+                                        "reason_code": decision.reason_code,
+                                        "reason": decision.reason,
+                                        "evidence_url": decision.evidence_url,
+                                        "verified_at": decision.reviewed_at,
+                                    }
+                                    if decision in plan.chem
+                                    else exclusions[
+                                        (decision.scholar_id, decision.author_pub_id)
+                                    ]
+                                )
                                 row["map_exclusion_reasons"] = [
                                     f"reviewed_{review['reason_code']}"
                                 ]
@@ -988,8 +1089,8 @@ def validate_composite_staged_nonwork_tables(
                         row["review_verified_at"] = review["verified_at"]
                         row["collaboration_eligible"] = False
                 expected[key] = _digest_row(row, exclude=frozenset())
-        if config_name != "people" and len(math_ids) != 31:
-            raise ValueError(f"bb88 {config_name} lacks all 31 Math observations")
+        if config_name != "people" and len(reviewed_ids) != 50:
+            raise ValueError(f"bb88 {config_name} lacks all 50 reviewed observations")
         exact_sullivan = (
             fixture["tables"][config_name]["sha256_by_observation_id"]
             if config_name != "people"

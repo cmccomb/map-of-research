@@ -342,7 +342,12 @@ def build_dataset_tables(
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
-        collaboration_eligibility.append(not stable_reasons and context is None)
+        collaboration_eligibility.append(
+            not stable_reasons
+            and (
+                context is None or context.publication_type == "conference_presentation"
+            )
+        )
     for index, work_id in enumerate(work_ids):
         if work_id in unmapped_work_reasons:
             map_eligibility[index] = False
@@ -463,7 +468,7 @@ def build_dataset_tables(
         publication_type = next(iter(reviewed_types), "publication")
         collaboration_eligible = (
             map_eligible
-            and publication_type == "publication"
+            and publication_type in {"publication", "conference_presentation"}
             and all(record.collaboration_eligible for record in eligible_records)
         )
         people: dict[str, str] = {}
