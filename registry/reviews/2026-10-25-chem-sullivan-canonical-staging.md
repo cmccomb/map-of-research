@@ -9,7 +9,7 @@ review notes in #244 describe that branch's 196-row canonical state; this child
 branch is a later staging state.
 
 Producer draft `codex/chem-sullivan-retention-holds-20261025` binds this exact
-cache hash to 51 exact exclusions, 40 provisional holds, and four historical-ID
+cache hash to 55 exact exclusions, 36 provisional holds, and four historical-ID
 dispositions. The two old ORNL variants must map to the current row's exact
 `false_profile_attribution` exclusion. The AGU 2017 abstract remains a separate
 verified curated work; the EGU25 abstract maps to its current Scholar ID. No
