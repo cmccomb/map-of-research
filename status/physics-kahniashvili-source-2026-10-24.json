@@ -11,11 +11,11 @@
   "raw_observation_count": 134,
   "already_merged_reviewed_exclusion_count": 0,
   "new_proposed_exclusion_count": 5,
-  "expected_eligible_observation_count_after_producer_merge": 129,
+  "expected_observation_count_after_exact_exclusions": 129,
   "capture_coverage": "complete_visible_profile",
   "source_files_preserve_raw_rows": true,
   "ingestion_ready": false,
-  "ingestion_dependency": "Review and merge the paired producer proposal for five exact exclusions before ingesting this source profile. Two supplemental-material rows remain open source-review candidates. The genuine preprint and proceedings records remain in the raw cache.",
+  "ingestion_dependency": "Review and merge paired producer PR #143 for five exact exclusions before ingesting this source profile. Two supplemental-material rows remain open source-review candidates. The genuine preprint and proceedings records remain in the raw cache.",
   "source_review_path": "status/physics-kahniashvili-source-review-2026-10-24.json",
   "profiles": [
     {
