@@ -682,6 +682,159 @@
         "https://api.crossref.org/works/10.1038/s41589-025-01960-x"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:ML0RJ9NH7IQC",
+      "observed_title": "Global dynamics and photon loss in the Kompaneets equation",
+      "observed_year": 2023,
+      "published_doi": "10.1137/22m1533207",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://epubs.siam.org/doi/10.1137/22M1533207",
+        "https://api.crossref.org/works/10.1137%2F22M1533207"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "2a6fa5031c226e53442a62d8b87a0fcdaf3c47c8cc65c77f028213a268fcc760",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:5ace4a0f50f15bf47c7f",
+        "observation_id": "observation-c64e1265bf8b25291d58385f0b9016853e31f0983bf12aaf60fa8ea9e7080235",
+        "observed_title": "Global Dynamics and Photon Loss in the Kompaneets Equation,",
+        "observed_year": 2023,
+        "source_doi": "10.1137/22m1533207",
+        "source_record_sha256": "09083890db25b665c7bc1ff2b8de047610db927d911231ab5dd17f3ae4a5e9ca",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:J-pR_7NvFogC",
+      "observed_title": "Coagulation and universal scaling limits for critical Galton–Watson processes",
+      "observed_year": 2018,
+      "published_doi": "10.1017/apr.2018.23",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://www.cambridge.org/core/journals/advances-in-applied-probability/article/abs/coagulation-and-universal-scaling-limits-for-critical-galtonwatson-processes/AA83743F3EE751AAE422A963B37E088F",
+        "https://api.crossref.org/works/10.1017%2Fapr.2018.23"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "8fadc78b560810fb18bb427cc62fd328d08b5fee70b21434ac31d209640cc749",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:65eaad1f4cdfed5a8525",
+        "observation_id": "observation-f194532dac36dd77ed977404260250e254e0bf42490a600f4fc1da5e3eebf343",
+        "observed_title": "Coagulation and universal scaling limits for critical Galton-Watson processes,",
+        "observed_year": 2018,
+        "source_doi": "10.1017/apr.2018.23",
+        "source_record_sha256": "067d765175a0bc845dcb6fce9c4d91b2436ed74a5a1ae96106a9f0acdfdc386c",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:LPZeul_q3PIC",
+      "observed_title": "Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation",
+      "observed_year": 2016,
+      "published_doi": "10.1137/15m1054730",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://epubs.siam.org/doi/10.1137/15M1054730",
+        "https://api.crossref.org/works/10.1137%2F15M1054730"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "db2d8d902f03a7898ca4ac8296a6dc2d85e2f195a69444a69046ae1e2104a344",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:4068f9f7be659eba111f",
+        "observation_id": "observation-2e46b10e089996bca655dcc6418bf9b7b7af05657c08b733e68f365d4f846872",
+        "observed_title": "Bose-Einstein condensation in a Hyperbolic model for the Kompaneets Equation,",
+        "observed_year": 2016,
+        "source_doi": "10.1137/15m1054730",
+        "source_record_sha256": "f5f0bf1e882f6a60e834c7ef0e1d164fd8adf6160765135e31f109c162b0e975",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:2osOgNQ5qMEC",
+      "observed_title": "Global existence for two extended Navier-Stokes systems",
+      "observed_year": 2013,
+      "published_doi": "10.4310/cms.2015.v13.n1.a12",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1308.4735",
+        "https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2015/0013/0001/CMS-2015-0013-0001-a012.pdf",
+        "https://api.crossref.org/works/10.4310%2FCMS.2015.v13.n1.a12"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "97ee1834ce75284cb1fdba1fb8843132e4f490dc9c4939db02bc93c5db74374d",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:ab059b794ac9899d7747",
+        "observation_id": "observation-bcb11109308d5a8de07f4a1de24c082b8122ef069721bc2027b712e4754981e7",
+        "observed_title": "Global existence for two extended Navier-Stokes systems,",
+        "observed_year": 2015,
+        "source_doi": "10.4310/cms.2015.v13.n1.a12",
+        "source_record_sha256": "4350ca314b9a8e774fd8ca4996f12a313439d2a3a71d1ca11922c4868d87f97a",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:EUQCXRtRnyEC",
+      "observed_title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes",
+      "observed_year": 2015,
+      "published_doi": "10.1214/14-aap1008",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1212.6451",
+        "https://imstat.org/publications/aap/aap_25_2/AAP_25_2.pdf",
+        "https://api.crossref.org/works/10.1214%2F14-AAP1008"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "123691e660328a402574c9bd9617eba3e6fc1534b10f9c8393edc835c66c2eed",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:22c053c64dff66188f32",
+        "observation_id": "observation-d7ea6e2b1893bfa7e11e069078b2aaa399adf945579d190481ddab50aaf3065e",
+        "observed_title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,",
+        "observed_year": 2015,
+        "source_doi": "10.1214/14-aap1008",
+        "source_record_sha256": "dff3d8521749e37257ecfd42a716c51c09f7637b823467af39d5634a7436aa94",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:qjMakFHDy7sC",
+      "observed_title": "Coercivity and stability results for an extended Navier-Stokes system",
+      "observed_year": 2012,
+      "published_doi": "10.1063/1.4738637",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1202.5671",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf",
+        "https://api.crossref.org/works/10.1063%2F1.4738637"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "962657c59ddcc2a5c93b9f6601417607dadab3a34a5b7e40b4e33295654931cf",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:fb975efb2e5460466a84",
+        "observation_id": "observation-a0a814aabdc26b3a43f75befa38b45ba190873e687425baac5435052b70f98cc",
+        "observed_title": "Coercivity and stability results for an extended Navier-Stokes system,",
+        "observed_year": 2012,
+        "source_doi": "10.1063/1.4738637",
+        "source_record_sha256": "1b32ba4cd4664b96ecafca6758005fa34db790730b3aaf64b9515c8519a8c5ae",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
+      }
     }
   ]
 }

@@ -1,0 +1,539 @@
+{
+  "source_snapshot_sha256": "9bf9570577618313c333155836187e800c55e50526950d98650decc08321e364",
+  "rows": [
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:5ace4a0f50f15bf47c7f",
+      "title": "Global Dynamics and Photon Loss in the Kompaneets Equation,",
+      "authors": "J. Ballew, G. Iyer, C. D. Levermore, H. Liu, R. Pego",
+      "year": 2023,
+      "venue": "SIAM J. Math Anal (2023).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets.pdf\",\"authors_as_listed\":\"J. Ballew, G. Iyer, C. D. Levermore, H. Liu, R. Pego\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"10.1137/22M1533207\",\"doi_url_as_linked\":\"https://doi.org/10.1137/22M1533207\",\"metadata_gaps\":\"\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"13\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Global Dynamics and Photon Loss in the Kompaneets Equation,\",\"venue_as_listed\":\"SIAM J. Math Anal (2023).\",\"work_url_as_linked\":\"https://doi.org/10.1137/22M1533207\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2023\"},\"doi_review\":{\"author_site_year\":2023,\"doi\":\"10.1137/22m1533207\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.1137%2F22M1533207\",\"publisher_title\":\"Global Dynamics and Photon Loss in the Kompaneets Equation\",\"publisher_year\":2023,\"reviewed_at\":\"2026-10-25\",\"row_index\":13,\"title_match\":\"exact_normalized\",\"year_basis\":\"publisher_registry_published_year\"}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.1137/22m1533207",
+      "source_native_id": "author-site:iyer:5ace4a0f50f15bf47c7f",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets.pdf",
+        "https://api.crossref.org/works/10.1137%2F22M1533207"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "https://doi.org/10.1137/22M1533207",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:ML0RJ9NH7IQC",
+      "title": "Global dynamics and photon loss in the Kompaneets equation",
+      "authors": "J Ballew, G Iyer, CD Levermore, H Liu, RL Pego",
+      "year": 2023,
+      "venue": "SIAM Journal on Mathematical Analysis 55 (5), 5715-5750, 2023",
+      "citation": "",
+      "citation_count": 2,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:ML0RJ9NH7IQC",
+      "source_record_json": "{\"author\":\"J Ballew, G Iyer, CD Levermore, H Liu, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:ML0RJ9NH7IQC\",\"capture_row_index\":116,\"citation_count_display\":\"2\",\"num_citations\":2,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:ML0RJ9NH7IQC\",\"pub_year\":\"2023\",\"title\":\"Global dynamics and photon loss in the Kompaneets equation\",\"venue\":\"SIAM Journal on Mathematical Analysis 55 (5), 5715-5750, 2023\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:65eaad1f4cdfed5a8525",
+      "title": "Coagulation and universal scaling limits for critical Galton-Watson processes,",
+      "authors": "G. Iyer, N. Leger, R. L. Pego",
+      "year": 2018,
+      "venue": "Advances in Applied Probability (2018).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc.pdf\",\"authors_as_listed\":\"G. Iyer, N. Leger, R. L. Pego\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"10.1017/apr.2018.23\",\"doi_url_as_linked\":\"https://doi.org/10.1017/apr.2018.23\",\"metadata_gaps\":\"\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"24\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Coagulation and universal scaling limits for critical Galton-Watson processes,\",\"venue_as_listed\":\"Advances in Applied Probability (2018).\",\"work_url_as_linked\":\"https://doi.org/10.1017/apr.2018.23\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2018\"},\"doi_review\":{\"author_site_year\":2018,\"doi\":\"10.1017/apr.2018.23\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.1017%2Fapr.2018.23\",\"publisher_title\":\"Coagulation and universal scaling limits for critical Galton–Watson processes\",\"publisher_year\":2018,\"reviewed_at\":\"2026-10-25\",\"row_index\":24,\"title_match\":\"exact_normalized\",\"year_basis\":\"publisher_registry_published_year\"}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.1017/apr.2018.23",
+      "source_native_id": "author-site:iyer:65eaad1f4cdfed5a8525",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc.pdf",
+        "https://api.crossref.org/works/10.1017%2Fapr.2018.23"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "https://doi.org/10.1017/apr.2018.23",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:J-pR_7NvFogC",
+      "title": "Coagulation and universal scaling limits for critical Galton–Watson processes",
+      "authors": "G Iyer, N Leger, RL Pego",
+      "year": 2018,
+      "venue": "Advances in Applied Probability 50 (2), 504-542, 2018",
+      "citation": "",
+      "citation_count": 9,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:J-pR_7NvFogC",
+      "source_record_json": "{\"author\":\"G Iyer, N Leger, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:J-pR_7NvFogC\",\"capture_row_index\":91,\"citation_count_display\":\"9\",\"num_citations\":9,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:J-pR_7NvFogC\",\"pub_year\":\"2018\",\"title\":\"Coagulation and universal scaling limits for critical Galton–Watson processes\",\"venue\":\"Advances in Applied Probability 50 (2), 504-542, 2018\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:4068f9f7be659eba111f",
+      "title": "Bose-Einstein condensation in a Hyperbolic model for the Kompaneets Equation,",
+      "authors": "J. Ballew, G. Iyer, R. L. Pego",
+      "year": 2016,
+      "venue": "SIAM J. Math. Anal. (2016).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets.pdf\",\"authors_as_listed\":\"J. Ballew, G. Iyer, R. L. Pego\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"10.1137/15M1054730\",\"doi_url_as_linked\":\"http://dx.doi.org/10.1137/15M1054730\",\"metadata_gaps\":\"\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"27\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Bose-Einstein condensation in a Hyperbolic model for the Kompaneets Equation,\",\"venue_as_listed\":\"SIAM J. Math. Anal. (2016).\",\"work_url_as_linked\":\"http://dx.doi.org/10.1137/15M1054730\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2016\"},\"doi_review\":{\"author_site_year\":2016,\"doi\":\"10.1137/15m1054730\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.1137%2F15M1054730\",\"publisher_title\":\"Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation\",\"publisher_year\":2016,\"reviewed_at\":\"2026-10-25\",\"row_index\":27,\"title_match\":\"exact_normalized\",\"year_basis\":\"publisher_registry_published_year\"}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.1137/15m1054730",
+      "source_native_id": "author-site:iyer:4068f9f7be659eba111f",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets.pdf",
+        "https://api.crossref.org/works/10.1137%2F15M1054730"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "http://dx.doi.org/10.1137/15M1054730",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:LPZeul_q3PIC",
+      "title": "Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation",
+      "authors": "J Ballew, G Iyer, RL Pego",
+      "year": 2016,
+      "venue": "SIAM Journal on Mathematical Analysis 48 (6), 3840-3859, 2016",
+      "citation": "",
+      "citation_count": 7,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:LPZeul_q3PIC",
+      "source_record_json": "{\"author\":\"J Ballew, G Iyer, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:LPZeul_q3PIC\",\"capture_row_index\":94,\"citation_count_display\":\"7\",\"num_citations\":7,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:LPZeul_q3PIC\",\"pub_year\":\"2016\",\"title\":\"Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation\",\"venue\":\"SIAM Journal on Mathematical Analysis 48 (6), 3840-3859, 2016\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:ab059b794ac9899d7747",
+      "title": "Global existence for two extended Navier-Stokes systems,",
+      "authors": "M. Ignatova, G. Iyer, J. P. Kelliher, R. L. Pego, A. D. Zarnescu",
+      "year": 2015,
+      "venue": "Commun. Math. Sci. (2015).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201308-llp-gexist.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201308-llp-gexist.pdf\",\"authors_as_listed\":\"M. Ignatova, G. Iyer, J. P. Kelliher, R. L. Pego, A. D. Zarnescu\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"\",\"doi_url_as_linked\":\"\",\"metadata_gaps\":\"no_doi_link_on_author_page\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"32\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Global existence for two extended Navier-Stokes systems,\",\"venue_as_listed\":\"Commun. Math. Sci. (2015).\",\"work_url_as_linked\":\"http://intlpress.com/site/pub/pages/journals/items/cms/content/vols/0013/0001/a012/index.html\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2015\"},\"doi_review\":null,\"unlinked_doi_review\":{\"author_site_authors\":\"M. Ignatova, G. Iyer, J. P. Kelliher, R. L. Pego, A. D. Zarnescu\",\"author_site_title\":\"Global existence for two extended Navier-Stokes systems,\",\"author_site_year\":2015,\"doi\":\"10.4310/cms.2015.v13.n1.a12\",\"evidence_urls\":[\"https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2015/0013/0001/CMS-2015-0013-0001-a012.pdf\",\"https://arxiv.org/abs/1308.4735\"],\"publisher_authors\":[\"Mihaela Ignatova\",\"Gautam Iyer\",\"James P. Kelliher\",\"Robert L. Pego\",\"Arghir D. Zarnescu\"],\"publisher_registry_response_sha256\":\"5af028147af667368a8eada5d5f57765e87040f580a14e42eaf37832ecc7b9f1\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.4310%2FCMS.2015.v13.n1.a12\",\"publisher_title\":\"Global existence for two extended Navier-Stokes systems\",\"publisher_year\":2015,\"review_origin\":\"independently_verified_unlinked\",\"reviewed_at_utc\":\"2026-10-25T11:30:54.308072+00:00\",\"row_index\":32}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.4310/cms.2015.v13.n1.a12",
+      "source_native_id": "author-site:iyer:ab059b794ac9899d7747",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201308-llp-gexist.pdf",
+        "https://api.crossref.org/works/10.4310%2FCMS.2015.v13.n1.a12",
+        "https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2015/0013/0001/CMS-2015-0013-0001-a012.pdf",
+        "https://arxiv.org/abs/1308.4735"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "http://intlpress.com/site/pub/pages/journals/items/cms/content/vols/0013/0001/a012/index.html",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:2osOgNQ5qMEC",
+      "title": "Global existence for two extended Navier-Stokes systems",
+      "authors": "M Ignatova, G Iyer, JP Kelliher, RL Pego, AD Zarnescu",
+      "year": 2013,
+      "venue": "arXiv preprint arXiv:1308.4735, 2013",
+      "citation": "",
+      "citation_count": 10,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:2osOgNQ5qMEC",
+      "source_record_json": "{\"author\":\"M Ignatova, G Iyer, JP Kelliher, RL Pego, AD Zarnescu\",\"author_pub_id\":\"neJ3NIUAAAAJ:2osOgNQ5qMEC\",\"capture_row_index\":86,\"citation_count_display\":\"10\",\"num_citations\":10,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:2osOgNQ5qMEC\",\"pub_year\":\"2013\",\"title\":\"Global existence for two extended Navier-Stokes systems\",\"venue\":\"arXiv preprint arXiv:1308.4735, 2013\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:22c053c64dff66188f32",
+      "title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,",
+      "authors": "G. Iyer, N. Leger, R. L. Pego",
+      "year": 2015,
+      "venue": "Ann. Appl. Probab. (2015).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201212-coagulation.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201212-coagulation.pdf\",\"authors_as_listed\":\"G. Iyer, N. Leger, R. L. Pego\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"\",\"doi_url_as_linked\":\"\",\"metadata_gaps\":\"no_doi_link_on_author_page\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"33\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,\",\"venue_as_listed\":\"Ann. Appl. Probab. (2015).\",\"work_url_as_linked\":\"http://projecteuclid.org/euclid.aoap/1424355128\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2015\"},\"doi_review\":null,\"unlinked_doi_review\":{\"author_site_authors\":\"G. Iyer, N. Leger, R. L. Pego\",\"author_site_title\":\"Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,\",\"author_site_year\":2015,\"doi\":\"10.1214/14-aap1008\",\"evidence_urls\":[\"https://arxiv.org/abs/1212.6451\",\"https://imstat.org/publications/aap/aap_25_2/AAP_25_2.pdf\"],\"publisher_authors\":[\"Gautam Iyer\",\"Nicholas Leger\",\"Robert L. Pego\"],\"publisher_registry_response_sha256\":\"e5d6cd260b6f61e317830a8500f1164efd59d6a98708714c68fa9b02aebeffdf\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.1214%2F14-AAP1008\",\"publisher_title\":\"Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes\",\"publisher_year\":2015,\"review_origin\":\"independently_verified_unlinked\",\"reviewed_at_utc\":\"2026-10-25T11:30:54.429646+00:00\",\"row_index\":33}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.1214/14-aap1008",
+      "source_native_id": "author-site:iyer:22c053c64dff66188f32",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201212-coagulation.pdf",
+        "https://api.crossref.org/works/10.1214%2F14-AAP1008",
+        "https://arxiv.org/abs/1212.6451",
+        "https://imstat.org/publications/aap/aap_25_2/AAP_25_2.pdf"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "http://projecteuclid.org/euclid.aoap/1424355128",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:EUQCXRtRnyEC",
+      "title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes",
+      "authors": "G Iyer, N Leger, RL Pego",
+      "year": 2015,
+      "venue": "",
+      "citation": "",
+      "citation_count": 10,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:EUQCXRtRnyEC",
+      "source_record_json": "{\"author\":\"G Iyer, N Leger, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:EUQCXRtRnyEC\",\"capture_row_index\":85,\"citation_count_display\":\"10\",\"num_citations\":10,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=20&pagesize=80&citation_for_view=neJ3NIUAAAAJ:EUQCXRtRnyEC\",\"pub_year\":\"2015\",\"title\":\"Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes\",\"venue\":\"\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:fb975efb2e5460466a84",
+      "title": "Coercivity and stability results for an extended Navier-Stokes system,",
+      "authors": "G. Iyer, R. L. Pego, A. D. Zarnescu",
+      "year": 2012,
+      "venue": "J. Math Physics (2012).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf\",\"authors_as_listed\":\"G. Iyer, R. L. Pego, A. D. Zarnescu\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"\",\"doi_url_as_linked\":\"\",\"metadata_gaps\":\"no_doi_link_on_author_page\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"34\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Coercivity and stability results for an extended Navier-Stokes system,\",\"venue_as_listed\":\"J. Math Physics (2012).\",\"work_url_as_linked\":\"http://link.aip.org/link/?JMP/53/115605\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2012\"},\"doi_review\":null,\"unlinked_doi_review\":{\"author_site_authors\":\"G. Iyer, R. L. Pego, A. D. Zarnescu\",\"author_site_title\":\"Coercivity and stability results for an extended Navier-Stokes system,\",\"author_site_year\":2012,\"doi\":\"10.1063/1.4738637\",\"evidence_urls\":[\"https://arxiv.org/abs/1202.5671\",\"https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf\"],\"publisher_authors\":[\"Gautam Iyer\",\"Robert L. Pego\",\"Arghir Zarnescu\"],\"publisher_registry_response_sha256\":\"f46e4a03e72e1939e9c855e4177d20276ec107033e383e830396e8a9222e91bd\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.1063%2F1.4738637\",\"publisher_title\":\"Coercivity and stability results for an extended Navier-Stokes system\",\"publisher_year\":2012,\"review_origin\":\"independently_verified_unlinked\",\"reviewed_at_utc\":\"2026-10-25T11:30:54.525359+00:00\",\"row_index\":34}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.1063/1.4738637",
+      "source_native_id": "author-site:iyer:fb975efb2e5460466a84",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf",
+        "https://api.crossref.org/works/10.1063%2F1.4738637",
+        "https://arxiv.org/abs/1202.5671",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "http://link.aip.org/link/?JMP/53/115605",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:qjMakFHDy7sC",
+      "title": "Coercivity and stability results for an extended Navier-Stokes system",
+      "authors": "G Iyer, RL Pego, A Zarnescu",
+      "year": 2012,
+      "venue": "Journal of mathematical physics 53 (11), 2012",
+      "citation": "",
+      "citation_count": 3,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:qjMakFHDy7sC",
+      "source_record_json": "{\"author\":\"G Iyer, RL Pego, A Zarnescu\",\"author_pub_id\":\"neJ3NIUAAAAJ:qjMakFHDy7sC\",\"capture_row_index\":109,\"citation_count_display\":\"3\",\"num_citations\":3,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:qjMakFHDy7sC\",\"pub_year\":\"2012\",\"title\":\"Coercivity and stability results for an extended Navier-Stokes system\",\"venue\":\"Journal of mathematical physics 53 (11), 2012\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

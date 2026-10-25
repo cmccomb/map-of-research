@@ -30,6 +30,13 @@ and a published DOI. It distinguishes a `preprint_of` row from a
 ID, observed title and year, source DOI, and exclusion state before applying
 the alias. It preserves both raw Scholar observations and joins them to one
 published work, including a matching curated DOI observation when present.
+The six Iyer–Pego cross-source aliases additionally pin the complete Scholar
+source-record hash, the exact Iyer author-site observation ID and DOI, its
+title, year, source-record hash, and the checksum of the 47-entry author-site
+capture. A changed or absent target fails validation. The aliases apply only
+to the six enumerated Scholar publication IDs, never to a title or year rule.
+The [Iyer–Pego review](../../registry/reviews/2026-10-25-math-gautam-iyer-pego-aliases.md)
+records the exact evidence and the two held version families.
 The version-of-record title, year, and venue supply that work's display. See
 the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
 the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
