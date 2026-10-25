@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "review_state": "saved_html_derived_title_repair",
+  "reviewed_at": "2026-10-25",
+  "scholar_id": "kcXOB1MAAAAJ",
+  "source_branch_base_commit": "1da9ddf3b925f2a5ac3ba01054acc7ee0b6aec4d",
+  "original_source_json_blob_sha1": "d6b1262d8e57a4f155ef2cc110e6d3b0d548001f",
+  "original_source_json_sha256": "196c4783bca3bcdab4d9494d0944e5d6c908393112db816d4ca034e6e89570f0",
+  "repaired_source_json_sha256": "5715a20db25262ad530735e0d0f8d46b49a782a08379f425ffc22431e972421e",
+  "source_html_sha256": "1446204e70aa523385b4a760dc603cab0039a56e7f583199f40f3fbc8ee6effe",
+  "original_guarded_batch_receipt_sha256": "681badb9648dc777b10355d82c012398a7dfd42023c04996847308f5a11a4820",
+  "source_json_path": "data/captures/physics-scott-dodelson-2026-10-24.json",
+  "source_html_path": "data/captures/physics-scott-dodelson-2026-10-24.html",
+  "individual_capture_receipt_path": "status/browser-capture-physics-scott-dodelson-2026-10-24.json",
+  "original_guarded_batch_receipt_path": "status/browser-capture-physics-user-confirmed-batch-2026-10-24.json",
+  "correction_rule": "Restore only the 14 title strings omitted by the original JSON extractor from gs_fsvg SVG aria-label text in the saved HTML. Update the derived JSON/cache titles and current per-profile JSON digests; leave the HTML and original guarded-batch receipt byte-for-byte unchanged.",
+  "original_guarded_batch_receipt_note": "The original batch receipt records the original extractor JSON digest and Dodelson/Trac capture timing. The revised individual receipt and cache browser_capture digest identify the corrected derived JSON. The batch receipt is retained as historical capture provenance.",
+  "source_release_hold": true,
+  "unresolved_capture_rows": [
+    435,
+    436
+  ],
+  "repairs": [
+    {
+      "capture_row": 36,
+      "author_pub_id": "kcXOB1MAAAAJ:__bU50VfleQC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey Year 3 results: Constraints on extensions to  with weak lensing and galaxy clustering",
+      "original_cache_value": "Dark Energy Survey Year 3 results: Constraints on extensions to with weak lensing and galaxy clustering",
+      "restored_saved_html_value": "Dark Energy Survey Year 3 results: Constraints on extensions to ΛCDM with weak lensing and galaxy clustering"
+    },
+    {
+      "capture_row": 51,
+      "author_pub_id": "kcXOB1MAAAAJ:Zph67rFs4hoC",
+      "field": "title",
+      "original_derived_json_value": "Everpresent",
+      "original_cache_value": "Everpresent",
+      "restored_saved_html_value": "Everpresent Λ"
+    },
+    {
+      "capture_row": 57,
+      "author_pub_id": "kcXOB1MAAAAJ:UebtZRa9Y70C",
+      "field": "title",
+      "original_derived_json_value": "CMB Anisotropy Induced by Cosmic Strings on Angular Scales",
+      "original_cache_value": "CMB Anisotropy Induced by Cosmic Strings on Angular Scales",
+      "restored_saved_html_value": "CMB Anisotropy Induced by Cosmic Strings on Angular Scales >~ 15'"
+    },
+    {
+      "capture_row": 116,
+      "author_pub_id": "kcXOB1MAAAAJ:dAp6zn-oMfAC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey: A 2.1% measurement of the angular baryonic acoustic oscillation scale at redshift  from the final dataset",
+      "original_cache_value": "Dark Energy Survey: A 2.1% measurement of the angular baryonic acoustic oscillation scale at redshift from the final dataset",
+      "restored_saved_html_value": "Dark Energy Survey: A 2.1% measurement of the angular baryonic acoustic oscillation scale at redshift zeff=0.85 from the final dataset"
+    },
+    {
+      "capture_row": 131,
+      "author_pub_id": "kcXOB1MAAAAJ:oi2SiIJ9l4AC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey Year 1 Results: Tomographic cross-correlations between Dark Energy Survey galaxies and CMB lensing from South Pole",
+      "original_cache_value": "Dark Energy Survey Year 1 Results: Tomographic cross-correlations between Dark Energy Survey galaxies and CMB lensing from South Pole",
+      "restored_saved_html_value": "Dark Energy Survey Year 1 Results: Tomographic cross-correlations between Dark Energy Survey galaxies and CMB lensing from South Pole Telescope+Planck"
+    },
+    {
+      "capture_row": 141,
+      "author_pub_id": "kcXOB1MAAAAJ:tHtfpZlB6tUC",
+      "field": "title",
+      "original_derived_json_value": "Joint analysis of Dark Energy Survey Year 3 data and CMB lensing from SPT and . II. Cross-correlation measurements and cosmological constraints",
+      "original_cache_value": "Joint analysis of Dark Energy Survey Year 3 data and CMB lensing from SPT and . II. Cross-correlation measurements and cosmological constraints",
+      "restored_saved_html_value": "Joint analysis of Dark Energy Survey Year 3 data and CMB lensing from SPT and Planck. II. Cross-correlation measurements and cosmological constraints"
+    },
+    {
+      "capture_row": 170,
+      "author_pub_id": "kcXOB1MAAAAJ:IsPWOBWtZBwC",
+      "field": "title",
+      "original_derived_json_value": "DES Y1 results: Splitting growth and geometry to test",
+      "original_cache_value": "DES Y1 results: Splitting growth and geometry to test",
+      "restored_saved_html_value": "DES Y1 results: Splitting growth and geometry to test ΛCDM"
+    },
+    {
+      "capture_row": 184,
+      "author_pub_id": "kcXOB1MAAAAJ:ziOE8S1-AIUC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey Year 1 Results: Cross-correlation between Dark Energy Survey Y1 galaxy weak lensing and South Pole Telescope CMB weak lensing",
+      "original_cache_value": "Dark Energy Survey Year 1 Results: Cross-correlation between Dark Energy Survey Y1 galaxy weak lensing and South Pole Telescope CMB weak lensing",
+      "restored_saved_html_value": "Dark Energy Survey Year 1 Results: Cross-correlation between Dark Energy Survey Y1 galaxy weak lensing and South Pole Telescope+Planck CMB weak lensing"
+    },
+    {
+      "capture_row": 239,
+      "author_pub_id": "kcXOB1MAAAAJ:_tF6a-HnqWAC",
+      "field": "title",
+      "original_derived_json_value": "The DECADE cosmic shear project IV: cosmological constraints from 107 million galaxies across 5,400 deg of the sky",
+      "original_cache_value": "The DECADE cosmic shear project IV: cosmological constraints from 107 million galaxies across 5,400 deg of the sky",
+      "restored_saved_html_value": "The DECADE cosmic shear project IV: cosmological constraints from 107 million galaxies across 5,400 deg^2 of the sky"
+    },
+    {
+      "capture_row": 246,
+      "author_pub_id": "kcXOB1MAAAAJ:KTwcwpFFj4wC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270 million galaxies across  of the sky",
+      "original_cache_value": "Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270 million galaxies across of the sky",
+      "restored_saved_html_value": "Dark Energy Camera All Data Everywhere cosmic shear project. V. Constraints on cosmology and astrophysics from 270 million galaxies across 13,000 deg2 of the sky"
+    },
+    {
+      "capture_row": 267,
+      "author_pub_id": "kcXOB1MAAAAJ:aEW5N-EHWIMC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps  realizations for  samples",
+      "original_cache_value": "Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps realizations for samples",
+      "restored_saved_html_value": "Dark Energy Survey Year 6 results: Clustering redshifts and importance sampling of self-organized-maps n(z) realizations for 3×2pt samples"
+    },
+    {
+      "capture_row": 274,
+      "author_pub_id": "kcXOB1MAAAAJ:WWeOtg8bX_EC",
+      "field": "title",
+      "original_derived_json_value": "Dark Energy Survey Year 3 results: Simulation-based  inference from weak lensing and galaxy clustering maps with deep learning: Analysis design",
+      "original_cache_value": "Dark Energy Survey Year 3 results: Simulation-based inference from weak lensing and galaxy clustering maps with deep learning: Analysis design",
+      "restored_saved_html_value": "Dark Energy Survey Year 3 results: Simulation-based wCDM inference from weak lensing and galaxy clustering maps with deep learning: Analysis design"
+    },
+    {
+      "capture_row": 292,
+      "author_pub_id": "kcXOB1MAAAAJ:YsMSGLbcyi4C",
+      "field": "title",
+      "original_derived_json_value": "Cosmic Microwave Background Anisotropy Induced by Cosmic Strings on Angular Scales",
+      "original_cache_value": "Cosmic Microwave Background Anisotropy Induced by Cosmic Strings on Angular Scales",
+      "restored_saved_html_value": "Cosmic Microwave Background Anisotropy Induced by Cosmic Strings on Angular Scales ≳15′"
+    },
+    {
+      "capture_row": 327,
+      "author_pub_id": "kcXOB1MAAAAJ:M_lZXyI38BkC",
+      "field": "title",
+      "original_derived_json_value": "Interacting Dark Sector (ETHOS ): Cosmological Constraints from SPT Cluster Abundance with DES and HST Weak Lensing Data",
+      "original_cache_value": "Interacting Dark Sector (ETHOS ): Cosmological Constraints from SPT Cluster Abundance with DES and HST Weak Lensing Data",
+      "restored_saved_html_value": "Interacting Dark Sector (ETHOS n=0): Cosmological Constraints from SPT Cluster Abundance with DES and HST Weak Lensing Data"
+    }
+  ]
+}

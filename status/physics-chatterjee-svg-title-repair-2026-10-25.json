@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "review_state": "saved_html_extraction_corrected",
+  "reviewed_at": "2026-10-25",
+  "scholar_id": "wovjAPsAAAAJ",
+  "capture_receipt": "status/browser-capture-physics-shubhayu-chatterjee-2026-10-24.json",
+  "original_source_commit": "1da9ddf3b925f2a5ac3ba01054acc7ee0b6aec4d",
+  "original_source_json_sha256": "e9e6701454c954abaed4a020c786ab7d589ef535683ac936dc973ec0b6fd54d0",
+  "corrected_source_json_sha256": "b9119e9c40c7148af8ef59ff7e0fe81d82ae50a83c9ef64c11e0e8d039531cf5",
+  "source_html_sha256_unchanged": "8195957aae721fbdec338c5eb6e875de421bc6cde7776690ae19660566bd7263",
+  "source_html_unchanged": true,
+  "guarded_batch_receipt_unchanged": true,
+  "extraction_corrections": [
+    {
+      "capture_row": 34,
+      "author_pub_id": "wovjAPsAAAAJ:nb7KW1ujOQ8C",
+      "original_json_value": "Quantum noise spectroscopy of superconducting dynamics in thin film BiSrCaCuO",
+      "corrected_json_and_cache_value": "Quantum noise spectroscopy of superconducting dynamics in thin film Bi_2Sr_2CaCu_2O_{8+\\delta}",
+      "saved_html_svg_aria_labels": ["_2", "_2", "_2", "_{8+\\delta}"]
+    },
+    {
+      "capture_row": 36,
+      "author_pub_id": "wovjAPsAAAAJ:zYLM7Y9cAGgC",
+      "original_json_value": "Superconductivity from a confinement transition out of a fractionalized Fermi liquid with  topological and Ising-nematic orders",
+      "corrected_json_and_cache_value": "Superconductivity from a confinement transition out of a fractionalized Fermi liquid with Z2 topological and Ising-nematic orders",
+      "saved_html_svg_aria_labels": ["Z2"]
+    },
+    {
+      "capture_row": 39,
+      "author_pub_id": "wovjAPsAAAAJ:HoB7MX3m0LUC",
+      "original_json_value": "Magnetization amplification in the interlayer pairing superconductor",
+      "corrected_json_and_cache_value": "Magnetization amplification in the interlayer pairing superconductor 4Hb-TaS2",
+      "saved_html_svg_aria_labels": ["4Hb-TaS2"]
+    },
+    {
+      "capture_row": 88,
+      "author_pub_id": "wovjAPsAAAAJ:2osOgNQ5qMEC",
+      "original_json_value": "Unification of bosonic and fermionic  spin liquids on a rectangular lattice",
+      "corrected_json_and_cache_value": "Unification of bosonic and fermionic \\mathbb{Z}_2 spin liquids on a rectangular lattice",
+      "saved_html_svg_aria_labels": ["\\mathbb{Z}_2"]
+    }
+  ],
+  "evidence_note": "The saved redacted Scholar HTML has SVG aria-label title text at these four exact rows. The original direct-browser JSON innerText omitted those labels. This correction restores the HTML-parsed titles in derived JSON and cache without opening Scholar; all citation IDs, other fields, HTML bytes, and guarded-batch receipt are unchanged. The profile's other exact-row review flags remain unresolved."
+}

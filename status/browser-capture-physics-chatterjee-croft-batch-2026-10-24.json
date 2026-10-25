@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "wovjAPsAAAAJ",
+    "wex9ft0AAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "wovjAPsAAAAJ",
+    "wex9ft0AAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-shubhayuchatterjee-34929dff",
+      "display_name": "Shubhayu Chatterjee",
+      "scholar_id": "wovjAPsAAAAJ",
+      "publication_count": 90,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "e9e6701454c954abaed4a020c786ab7d589ef535683ac936dc973ec0b6fd54d0",
+      "source_html_sha256": "8195957aae721fbdec338c5eb6e875de421bc6cde7776690ae19660566bd7263"
+    },
+    {
+      "person_id": "person-rupertcroft-16669f45",
+      "display_name": "Rupert Croft",
+      "scholar_id": "wex9ft0AAAAJ",
+      "publication_count": 267,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "15c3ad256181f566d5564a3d68ae8534346d73ed4438c5ae8ec22d6140baa951",
+      "source_html_sha256": "349f4086037a3d2a5c8269407a53109bcffb24fad319dbc04196c05175634cbb"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:10:24+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:11:59+00:00",
+  "last_profile_request_at_utc": "2026-10-24T22:11:59+00:00",
+  "inter_profile_reservation_gap_seconds": 95,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T22:13:28.157851+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Chatterjee ID linked from faculty-controlled former Berkeley page with current CMU identity corroboration; Croft ID linked from CMU Scholars; both profile names matched."
+}

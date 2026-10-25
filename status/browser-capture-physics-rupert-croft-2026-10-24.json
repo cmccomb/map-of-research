@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-rupertcroft-16669f45",
+  "display_name": "Rupert Croft",
+  "scholar_profile_name": "Rupert Croft",
+  "scholar_id": "wex9ft0AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/croft.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/4061-rupert-croft",
+  "scholar_identity_basis": "CMU Scholars page directly links the Scholar ID; profile name matched.",
+  "captured_at_utc": "2026-10-24T22:12:24.916Z",
+  "publication_count": 267,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/physics-rupert-croft-2026-10-24.json",
+  "source_json_sha256": "15c3ad256181f566d5564a3d68ae8534346d73ed4438c5ae8ec22d6140baa951",
+  "source_html_path": "data/captures/physics-rupert-croft-2026-10-24.html",
+  "source_html_sha256": "349f4086037a3d2a5c8269407a53109bcffb24fad319dbc04196c05175634cbb",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 6,
+      "display": "1114*"
+    },
+    {
+      "row": 13,
+      "display": "527*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
