@@ -6064,6 +6064,126 @@
       "reason": "German-edition back-cover feature for the 2018 Angewandte research article, not a second research work; retain xfTeH7YAAAAJ:XoXfffV-tXoC.",
       "evidence_url": "https://onlinelibrary.wiley.com/toc/15213757/130/49",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:7PzlFSSx8tAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The row conflates Garcia-Bosch's Dalton Transactions paper with a different 2007 Tetrahedron Letters article at pages 1645-1649 whose author list excludes him.",
+      "evidence_url": "https://doi.org/10.1016/j.tetlet.2006.12.108",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:3fE2CSJIrl8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "An author list was imported as the title of the 2010 Angewandte article retained as -HzcsYQAAAAJ:0EnyYjriUFMC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/20191646/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:9ZlFYXVOiuMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A venue-blank title transcription duplicates the 2010 Angewandte article retained as -HzcsYQAAAAJ:0EnyYjriUFMC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/20191646/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:QIV2ME_5wuYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Wiley-imprint title transcription duplicates the 2009 article retained as -HzcsYQAAAAJ:mVmsd5A6BfQC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/19562811/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:_FxGoFyzp5QC",
+      "reason_code": "nonpublication",
+      "reason": "Spotlights is an issue navigation heading with article authors misattached, not their research publication.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/toc/15213765/2013/19/25",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "-HzcsYQAAAAJ",
+      "author_pub_id": "-HzcsYQAAAAJ:dhFuZR0502QC",
+      "reason_code": "nonpublication",
+      "reason": "CCDC 657976 is supplementary crystallographic data for the 2007 Dalton article retained as -HzcsYQAAAAJ:UeHWp8X0CEIC, not a separate paper.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2007/dt/b712754e",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:7T2F9Uy0os0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A mid-title truncation duplicates the complete 2014 PLOS article retained as IggMbacAAAAJ:f2IySw72cVMC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/25025226/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:uLbwQdceFCQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Clipped encyclopedia-chapter title duplicates Ion Channels: Computational Analysis, retained as IggMbacAAAAJ:ZHo1McVdvXMC.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/9780470048672.wecb261",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:geHnlv5EZngC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A section prefix duplicates the 2003 Biophysical Journal article retained as IggMbacAAAAJ:O3NaXMp0MMsC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/12770873/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:bEWYMUwI8FkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A section prefix duplicates the 2000 Biophysical Journal article retained as IggMbacAAAAJ:CHSYGLWDkRkC.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/10866939/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:LkGwnXOMwfcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "A journal-section prefix duplicates the 2000 JPCB article retained as IggMbacAAAAJ:u9iWguZQMMsC.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/jp001282s",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:dQ2og3OwTAUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated abbreviated manuscript copy duplicates the published 2022 article retained as IggMbacAAAAJ:Zph67rFs4hoC.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10693435/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:cFHS6HbyZ2cC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The IEEE guest editorial lists Krishnamurthy, Chung, and Dumont as authors; Kurnikova is not an author.",
+      "evidence_url": "https://doi.org/10.1109/TNB.2005.845391",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:r0BpntZqJG4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2009 Biophysical Journal meeting abstract lists Bessonov, Hajjar, Petrescu, and Winterhalter; Kurnikova is not an author.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2008.12.3497",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IggMbacAAAAJ",
+      "author_pub_id": "IggMbacAAAAJ:ZuybSZzF8UAC",
+      "reason_code": "nonpublication",
+      "reason": "The saved Scholar row is titled only III, with no publication year or identifiable venue; it is not an identifiable research work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=IggMbacAAAAJ&citation_for_view=IggMbacAAAAJ:ZuybSZzF8UAC",
+      "verified_at": "2026-10-24"
     }
   ]
 }
