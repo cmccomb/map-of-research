@@ -51,6 +51,17 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 2,
       "provisional_hold_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40"
+    },
+    {
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 228,
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
     }
   ]
 }
