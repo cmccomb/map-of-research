@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 872
+    assert len(exclusions) >= 874
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -163,6 +163,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "6pPZKd0AAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "grTfBeAAAAAJ" for key in exclusions) == 16
+    assert sum(key[0] == "lKAvvmoAAAAJ" for key in exclusions) == 2
     assert {decision.reason_code for decision in exclusions.values()} == {
         "nonpublication",
         "false_profile_attribution",
@@ -209,6 +210,31 @@ def test_jarvik_exact_review_excludes_only_source_verified_rows() -> None:
         "abG-DnoFyZgC",  # Malformed title, no demonstrated duplicate.
     }
     assert retained.isdisjoint(actual)
+
+
+def test_adviti_naik_review_excludes_only_two_source_verified_duplicate_rows() -> None:
+    scholar_id = "lKAvvmoAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    expected = {"ZeXyd9-uunAC", "YsMSGLbcyi4C"}
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:")
+        for sid, author_pub_id in exclusions
+        if sid == scholar_id
+    }
+    assert actual == expected
+    assert all(
+        exclusions[(scholar_id, f"{scholar_id}:{suffix}")].reason_code
+        == "corrupted_duplicate"
+        for suffix in expected
+    )
+    for retained in (
+        "ufrVoPGSRksC",  # Complete 2019 Frontiers article.
+        "d1gkVwhDpl0C",  # Complete 2014 PLOS article.
+        "IjCSPb-OGe4C",  # Separate 2013 dissertation.
+        "0EnyYjriUFMC",  # Separate 2021 bioRxiv version.
+        "u5HHmVD_uO8C",  # Yearless conference abstract, not disproved.
+    ):
+        assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:
