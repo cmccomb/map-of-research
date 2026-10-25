@@ -109,7 +109,11 @@ def _validate(cache_dir, profile, decision, receipt, **kwargs):
 
 
 def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
-    (profile,) = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == "0e1jwkkAAAAJ"
+    )
     assert profile.person_id == "person-terrencejcollins-61cf6ed9"
     assert profile.scholar_id == "0e1jwkkAAAAJ"
     assert profile.expected_source_rows == 361
