@@ -1823,3 +1823,62 @@ def test_five_verified_math_scholars_have_roster_backed_primary_home(
         "mcs",
     )
     assert home.published_fields()["primary_department_id"] == "math"
+
+
+def test_every_included_math_person_has_an_explicit_primary_home() -> None:
+    registry = load_registry()
+    math_ids = {
+        membership.person_id
+        for membership in registry.memberships
+        if membership.department_id == "math" and membership.included
+    }
+    assert len(math_ids) == 65
+    assert all(
+        registry.people_by_id[person_id].primary_department_id
+        or registry.people_by_id[person_id].primary_academic_home_id
+        for person_id in math_ids
+    )
+
+    newly_explicit = {
+        person_id
+        for person_id in math_ids
+        if registry.people_by_id[person_id].primary_department_basis
+        == "single_included_membership"
+    }
+    assert len(newly_explicit) == 49
+    for person_id in newly_explicit:
+        person = registry.people_by_id[person_id]
+        included = [
+            membership
+            for membership in registry.memberships
+            if membership.person_id == person_id and membership.included
+        ]
+        assert len(included) == 1
+        assert person.primary_department_id == included[0].department_id == "math"
+        assert person.primary_department_source_url == included[0].source_url
+        assert person.primary_department_verified_at == included[0].verified_at
+        assert (
+            registry.primary_affiliation(person_id).published_fields()[
+                "primary_department_basis"
+            ]
+            == "single_included_membership"
+        )
+
+    joint_ids = {
+        person_id
+        for person_id in math_ids
+        if sum(
+            membership.included and membership.person_id == person_id
+            for membership in registry.memberships
+        )
+        > 1
+    }
+    assert joint_ids == {
+        "person-gerardpcornuejols-4d013329",
+        "person-jeremyavigad-0d62ce13",
+        "person-johnmackey-544edfa3",
+        "person-johnplehoczky-091b9734",
+        "person-manuelblum-943b6e0a",
+        "person-nicholasboffi-177af5e2",
+        "person-robertfsekerka-8dacf315",
+    }

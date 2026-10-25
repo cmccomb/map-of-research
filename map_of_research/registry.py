@@ -63,6 +63,7 @@ PRIMARY_HOME_TYPES = ACADEMIC_UNIT_TYPES | {"academic_area", "campus", "school"}
 EXPLICIT_PRIMARY_BASES = frozenset(
     {
         "reviewed",
+        "single_included_membership",
         "inferred_advisee_count",
         "inferred_profile_title",
         "display_tie_break_first_listed",
@@ -673,6 +674,18 @@ def load_registry(
                     "Primary department is not an eligible membership: "
                     f"{person.person_id}"
                 )
+            if person.primary_department_basis == "single_included_membership":
+                included = [item for item in options if item.included]
+                if (
+                    len(included) != 1
+                    or included[0].department_id != person.primary_department_id
+                    or included[0].source_url != person.primary_department_source_url
+                    or included[0].verified_at != person.primary_department_verified_at
+                ):
+                    raise ValueError(
+                        "Explicit single-membership primary must match its source: "
+                        f"{person.person_id}"
+                    )
         if not person.primary_academic_home_id:
             continue
         home_type = person.primary_academic_home_type
