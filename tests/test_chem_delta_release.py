@@ -119,7 +119,11 @@ def test_missing_or_extra_chemistry_observation_fails(
     monkeypatch.setattr(delta, "_target_work", lambda row, _decision: row)
     monkeypatch.setattr(delta, "_target_profile", lambda row, _decision: row)
 
-    def parent(profile_rows: list[dict[str, object]], author_rows=authored):
+    def parent(
+        profile_rows: list[dict[str, object]],
+        author_rows=authored,
+        people_rows=None,
+    ):
         files = {
             f"{name}/train-00000-of-00001.parquet": _parquet(
                 tmp_path / name / "train-00000-of-00001.parquet", rows
@@ -128,7 +132,7 @@ def test_missing_or_extra_chemistry_observation_fails(
                 ("works", works),
                 ("profile_publications", profile_rows),
                 ("authorships", author_rows),
-                ("people", people),
+                ("people", people if people_rows is None else people_rows),
             )
         }
         return delta.ExactParent("1" * 40, files)
@@ -163,6 +167,8 @@ def test_missing_or_extra_chemistry_observation_fails(
             ),
             decisions,
         )
+    with pytest.raises(ValueError, match="lacks five affected people"):
+        delta._parent_targets(parent(profiles, people_rows=people[:-1]), decisions)
 
 
 @pytest.mark.parametrize("changed_table", ["works", "authorships"])
@@ -245,6 +251,9 @@ def test_non19_map_point_or_shared_payload_drift_fails(
     ] = "work-unreviewed-extra"
     with pytest.raises(ValueError, match="more than exact"):
         delta.validate_exact_map(prior, extra, decisions)
+    added_null_metadata = {**candidate, "unexpected_metadata": None}
+    with pytest.raises(ValueError, match="metadata keys"):
+        delta.validate_exact_map(prior, added_null_metadata, decisions)
 
 
 def test_map_catalogs_allow_only_point_derived_count_changes(

@@ -345,7 +345,7 @@ def _parent_targets(
             targets["people"][row["person_id"]] = _target_person(
                 row, hidden_by_person[row["person_id"]]
             )
-    if len(targets["people"]) != len(hidden_by_person) != 5:
+    if len(targets["people"]) != 5 or len(hidden_by_person) != 5:
         raise ValueError("Chemistry parent lacks five affected people")
     return targets, hidden
 
@@ -559,6 +559,8 @@ def validate_exact_map(
             }
         ):
             raise ValueError("Chemistry map changed unrelated external coauthors")
+    if prior.keys() != candidate.keys():
+        raise ValueError("Chemistry map changed non-derived metadata keys")
     if any(
         field
         not in {
@@ -570,7 +572,7 @@ def validate_exact_map(
             "points",
         }
         and prior.get(field) != candidate.get(field)
-        for field in prior.keys() | candidate.keys()
+        for field in prior
     ):
         raise ValueError("Chemistry map changed non-derived metadata")
     return {
