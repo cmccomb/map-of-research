@@ -379,6 +379,27 @@ OTHER_PRIMARY = {
         "The journal article identifies its first author in full as "
         "Hyung-Jin Kim of Wonkwang University School of Medicine.",
     ),
+    81: (
+        "High sensitive micro-cantilever sensor and fabricating method thereof",
+        2003,
+        "Hyung-Joon Kim",
+        "",
+        "https://patents.google.com/patent/US20030032293A1/en",
+        "published US patent application and inventor assignment",
+        "The exact US application 10/209,866 names Hyung-Joon Kim of "
+        "Korea Institute of Science and Technology as an inventor; "
+        "the published assignment also spells out his full name.",
+    ),
+    85: (
+        "Homocysteine, folate and pregnancy outcomes",
+        2012,
+        "Hai Joong Kim",
+        "10.3109/01443615.2012.693984",
+        "https://pure.korea.ac.kr/en/publications/homocysteine-folate-and-pregnancy-outcomes/",
+        "Korea University institutional full-author article record",
+        "The Korea University record names this exact article's H. J. Kim "
+        "author in full as Hai Joong Kim.",
+    ),
 }
 
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
@@ -600,15 +621,15 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 31,
+        "proposed_other_person_primary_work": 33,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 438,
+        "unresolved_attribution_hold": 436,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 367 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 369 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
