@@ -1,0 +1,30 @@
+# Colin Morningstar Scholar observation review, 2026-10-24
+
+[Source carve #133](https://github.com/cmccomb/map-of-research/pull/133), derived from [draft #87](https://github.com/cmccomb/map-of-research/pull/87), preserves Morningstar’s complete 272-row visible Scholar capture. This paired producer draft applies only 20 exact source-reviewed exclusions: 12 NSF award records, one unrelated thesis, five document fragments or index lines, and two malformed duplicates. The raw HTML, JSON, and cache rows remain intact. His sole included Physics membership derives Physics as the primary academic home.
+
+Each full ID occurs once in the saved raw JSON and once in the converted author cache; the manifest records the complete IDs and reason codes.
+
+| Capture row | ID suffix | Code | Exact decision and source |
+| ---: | --- | --- | --- |
+| 184 | `wMgC3FpKEyYC` | `nonpublication` | The captured title is NSF award 2311430, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/2311430.json). |
+| 189 | `lgwcVrK6X84C` | `nonpublication` | The captured title is NSF award 2209167, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/2209167.json). |
+| 191 | `buQ7SEKw-1sC` | `nonpublication` | The captured title is NSF award 2031737, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/2031737.json). |
+| 192 | `otzGkya1bYkC` | `nonpublication` | The captured title is NSF award 1913158, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/1913158.json). |
+| 199 | `43bX7VzcjpAC` | `nonpublication` | The captured title is NSF award 1613449, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/1613449.json). |
+| 210 | `1lhNe0rCu4AC` | `nonpublication` | The captured title is NSF award 1306805, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/1306805.json). |
+| 217 | `jgBuDB5drN8C` | `nonpublication` | The captured title is NSF award 0969863, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0969863.json). |
+| 226 | `ubry08Y2EpUC` | `nonpublication` | The captured title is NSF award 0653315, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0653315.json). |
+| 233 | `CaZNVDsoPx4C` | `nonpublication` | The captured title is NSF award 0510020, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0510020.json). |
+| 237 | `zCSUwVk65WsC` | `nonpublication` | The captured title is NSF award 0354982, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0354982.json). |
+| 246 | `48xauSegjOkC` | `nonpublication` | The captured title is NSF award 0099450, a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0099450.json). |
+| 251 | `AXkvAH5U_nMC` | `nonpublication` | The captured record is NSF award 0073362 (shown without leading zeros as 73362 in Scholar), a funded project record rather than a research publication. [Primary source](https://api.nsf.gov/services/v1/awards/0073362.json). |
+| 157 | `7H_MAutzIkAC` | `false_profile_attribution` | Capture row 157 is Vanessa Koch's sole-authored 2019 Trinity College Dublin PhD thesis, not work by Colin Morningstar. [Primary source](https://www.tara.tcd.ie/tara8/server/api/core/bitstreams/5a7d8a27-92d6-4862-be06-f037941639f9/content). |
+| 240 | `6yz0xqPARnAC` | `nonpublication` | Capture row 240 is the Pittsburgh address line extracted from a paper, not a separate authored publication. [Primary source](https://arxiv.org/pdf/hep-lat/0312019). |
+| 247 | `LdasjJ6CEcoC` | `nonpublication` | Capture row 247 is Morningstar's email address line extracted from a paper, not a separate publication. [Primary source](https://arxiv.org/pdf/hep-lat/0103008). |
+| 250 | `7Hz3ACDFbsoC` | `nonpublication` | Capture row 250 is a University of California San Diego address line extracted from the conference paper, not a separate publication. [Primary source](https://lss.fnal.gov/archive/1999/conf/Conf-99-279-T.pdf). |
+| 266 | `yFnVuubrUp4C` | `nonpublication` | Capture row 266 is a theory-section heading extracted from the Heavy Quarkonium Physics report, not a separate publication. [Primary source](https://arxiv.org/pdf/hep-ph/0412158). |
+| 267 | `dTyEYWd-f8wC` | `nonpublication` | Capture row 267 is an alphabetical author-and-page excerpt from the Author index in Nuclear Physics B - Proceedings Supplements 34 (1994), pages 831-835, not an authored research article. [Primary source](https://api.elsevier.com/content/article/PII:0920563294905274). |
+| 268 | `mvPsJ3kp5DgC` | `corrupted_duplicate` | Capture row 268 is extracted front matter from the Heavy Quarkonium Physics report already retained as complete profile row 8. [Primary source](https://arxiv.org/pdf/hep-ph/0412158). |
+| 272 | `abG-DnoFyZgC` | `corrupted_duplicate` | Capture row 272 is a second malformed front-matter extraction of the Heavy Quarkonium Physics report already retained as complete profile row 8. [Primary source](https://arxiv.org/pdf/hep-ph/0412158). |
+
+The other captured rows remain eligible or pending exact source review. The source ledger preserves 21 same-title groups, 20 blank-venue rows, and three meeting abstracts as review flags; none receives a blanket exclusion. The 710 existing producer exclusions are unchanged, and this draft contains 730 entries after its 20 additions. If Morningstar is ingested after this review, 272 raw observations yield 252 eligible observations before general quality filtering and cross-profile work matching. This draft does not build, upload, or publish a dataset.
