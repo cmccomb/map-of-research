@@ -1,12 +1,14 @@
 {
   "schema_version": 1,
-  "review_state": "source_reviewed_producer_draft_pending",
+  "review_state": "source_reviewed_exclusions_in_producer_main",
   "reviewed_at": "2026-10-24",
+  "producer_reconciled_at": "2026-10-25",
+  "producer_main_checked_commit": "6880d05abfbd9c44144cd88a5a9377c2a7d74fdc",
   "scholar_id": "jcb81yAAAAAJ",
   "raw_observation_count": 184,
   "unresolved_candidate_count": 0,
   "candidates": [],
-  "existing_in_producer_main": [
+  "prior_producer_decisions": [
     {
       "scholar_id": "jcb81yAAAAAJ",
       "author_pub_id": "jcb81yAAAAAJ:hImZayhCRfQC",
@@ -143,5 +145,5 @@
       "evidence_url": "https://ascl.net/1102.008"
     }
   ],
-  "note": "All 184 raw rows remain intact. Nine corrupted-duplicate decisions refer only to exact malformed repeat IDs. Rows 181 and 184 have separate source-backed false-attribution and proposal decisions; genuine correction and software records remain. No Trac candidate in this slice is unresolved."
+  "note": "All 184 raw rows remain intact. Producer main includes all 13 exact Trac decisions: two prior decisions and 11 reviewed here. Nine corrupted-duplicate decisions refer only to exact malformed repeat IDs. Rows 181 and 184 have separate source-backed false-attribution and proposal decisions; genuine correction and software records remain. No Trac candidate in this slice is unresolved."
 }
