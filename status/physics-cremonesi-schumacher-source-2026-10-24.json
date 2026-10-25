@@ -11,7 +11,7 @@
   "review_status": "100_merged_exclusions_six_followup_draft_with_map_quality_hold",
   "proposed_exclusion_count": 100,
   "producer_review_ready": false,
-  "ingestion_dependency": "Producer PR #160 merged 100 exact source-backed exclusions (77 Cremonesi, 23 Schumacher) and the fail-closed publisher preflight into main. Draft producer PR #212 reviews six more exact duplicate observations (three per profile) but is not merged. Thirteen exact IDs still need decisions and currently pass automatic map eligibility; tracker companion row 547 is an additional hold. Keep source PR #156 draft and do not build or upload a Physics snapshot while map_quality_hold is true.",
+  "ingestion_dependency": "Producer PR #160 merged 100 exact source-backed exclusions (77 Cremonesi, 23 Schumacher) and the fail-closed publisher preflight into main. Draft producer PR #212 reviews six more exact duplicate observations (three per profile) but is not merged. Thirteen exact IDs still need decisions and currently pass automatic map eligibility; tracker row 547 is a source-verified genuine report observation, while tracker row 68 remains among the 13 unresolved IDs. Keep source PR #156 draft and do not build or upload a Physics snapshot while map_quality_hold is true.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
   "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
@@ -73,7 +73,7 @@
     "wJ_gQLoAAAAJ": 77,
     "LibSWRMAAAAJ": 23
   },
-  "producer_review_hold_reason": "Thirteen exact IDs still need decisions and currently pass automatic map eligibility. Tracker companion row 547 is an additional hold. Six source-backed exclusions are reviewed in draft producer PR #212 but not merged; the live publisher preflight stays fail-closed for both profiles.",
+  "producer_review_hold_reason": "Thirteen exact IDs still need decisions and currently pass automatic map eligibility. Tracker row 547 is a source-verified retain; row 68 remains unresolved. Six source-backed exclusions are reviewed in draft producer PR #212 but not merged; the live publisher preflight stays fail-closed for both profiles.",
   "publisher_guard_state": "merged_on_main_7b6d923e_live_for_trusted_publisher",
   "publisher_guard_effect": "If either Physics Scholar ID is in a raw snapshot and this status is held, the trusted publisher rejects the whole upload before embeddings or dataset writes; raw captures and snapshot rows remain intact.",
   "map_quality_hold": true,
@@ -95,8 +95,8 @@
   "unresolved_exact_id_count": 13,
   "currently_map_eligible_unresolved_count": 13,
   "currently_quality_filtered_unresolved_ids": [],
-  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions pending draft PR #212 and one as a genuine retained journal observation. Thirteen exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three pending exclusions. Tracker companion row 547 remains held separately; all three Schumacher same-work pairs have exact decisions in draft PR #212.",
-  "review_updated_at_utc": "2026-10-25T03:38:03+00:00",
+  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions pending draft PR #212 and one as a genuine retained journal observation. Thirteen exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three pending exclusions. Tracker row 547 is now a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions in draft PR #212.",
+  "review_updated_at_utc": "2026-10-25T03:44:20+00:00",
   "map_quality_hold_scholar_ids": [
     "wJ_gQLoAAAAJ",
     "LibSWRMAAAAJ"
@@ -112,7 +112,8 @@
     "LibSWRMAAAAJ:ipzZ9siozwsC"
   ],
   "verified_retain_ids_from_followup": [
-    "wJ_gQLoAAAAJ:f2QdLyYkFyUC"
+    "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
+    "wJ_gQLoAAAAJ:JOhajB-2wfwC"
   ],
   "followup_producer_exact_exclusion_count": 6,
   "followup_producer_exact_exclusion_count_by_profile": {

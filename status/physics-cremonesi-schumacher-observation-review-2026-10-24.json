@@ -6,7 +6,7 @@
   "source_rows_preserved": 2506,
   "producer_changes_applied": false,
   "producer_changes_applied_scope": "source branch and raw source rows; producer manifest and guard merged on main at 7b6d923e",
-  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. Producer PR #160 merged 100 independently source-verified exact decisions and a fail-closed publisher preflight into main. Draft producer PR #212 reviews six more source-verified exact duplicate observations, including three previously held Cremonesi IDs and three Schumacher same-work pairs. Cremonesi row 1334 is a verified journal retain. Thirteen exact IDs remain held; all currently pass automatic map eligibility. Raw source rows remain unchanged.",
+  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. Producer PR #160 merged 100 independently source-verified exact decisions and a fail-closed publisher preflight into main. Draft producer PR #212 reviews six more source-verified exact duplicate observations, including three previously held Cremonesi IDs and three Schumacher same-work pairs. Cremonesi row 1334 is a verified journal retain, and row 547 is a genuine 2021 HAL notice of the 2017 CMS tracker TDR. Thirteen exact IDs remain held; all currently pass automatic map eligibility. Raw source rows remain unchanged.",
   "profiles": [
     {
       "person_id": "person-matteocremonesi-b2aba740",
@@ -46,8 +46,17 @@
         "wJ_gQLoAAAAJ:OlGoE9RybnsC"
       ],
       "verified_retain_ids_from_followup": [
-        "wJ_gQLoAAAAJ:f2QdLyYkFyUC"
-      ]
+        "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
+        "wJ_gQLoAAAAJ:JOhajB-2wfwC"
+      ],
+      "tracker_companion_disposition": {
+        "author_pub_id": "wJ_gQLoAAAAJ:JOhajB-2wfwC",
+        "capture_row_index": 547,
+        "disposition": "genuine report observation retained; 2021 is the HAL notice date for the original 2017 CMS tracker TDR",
+        "hal_metadata_url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-03448298&fl=title_s%2CauthFullName_s%2CinspireId_s%2CpublicationDate_s%2Cabstract_s",
+        "cms_tdr_url": "https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/TDR-17-001/index.html",
+        "primary_match": "Exact title and first six saved authors match HAL. HAL lists 2,255 authors including Matteo Cremonesi, INSPIRE ID 1614103, and 2021-11-25 notice date."
+      }
     },
     {
       "person_id": "person-reinhardschumacher-35cd3c6f",
@@ -177,7 +186,7 @@
       ]
     }
   ],
-  "next_decision": "Keep source PR #156 and follow-up producer PR #212 draft while 13 unresolved exact IDs and tracker companion row 547 await evidence. The source map_quality_hold remains true, so do not build or upload a Physics snapshot.",
+  "next_decision": "Keep source PR #156 and follow-up producer PR #212 draft while 13 unresolved exact IDs await evidence; tracker row 547 is a verified retain. The source map_quality_hold remains true, so do not build or upload a Physics snapshot.",
   "source_verified_exact_exclusion_count_by_profile": {
     "wJ_gQLoAAAAJ": 77,
     "LibSWRMAAAAJ": 23
@@ -188,9 +197,9 @@
   "unresolved_exact_id_count": 13,
   "currently_map_eligible_unresolved_count": 13,
   "currently_quality_filtered_unresolved_ids": [],
-  "unresolved_exact_id_scope": "13 IDs still need exact decisions; tracker companion row 547 is separately held. Three Schumacher same-work pairs have decisions pending in draft PR #212.",
-  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions pending draft PR #212 and one as a genuine retained journal observation. Thirteen exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three pending exclusions. Tracker companion row 547 remains held separately; all three Schumacher same-work pairs have exact decisions in draft PR #212.",
-  "review_updated_at_utc": "2026-10-25T03:38:03+00:00",
+  "unresolved_exact_id_scope": "13 IDs still need exact decisions; tracker row 547 is a verified retain. Three Schumacher same-work pairs have decisions pending in draft PR #212.",
+  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions pending draft PR #212 and one as a genuine retained journal observation. Thirteen exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three pending exclusions. Tracker row 547 is now a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions in draft PR #212.",
+  "review_updated_at_utc": "2026-10-25T03:44:20+00:00",
   "followup_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/212",
   "followup_producer_review_state": "draft_unmerged",
   "merged_producer_exact_exclusion_count": 100,
