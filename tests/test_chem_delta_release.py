@@ -61,6 +61,38 @@ def test_live_parent_rejects_wrong_revision_before_download() -> None:
         delta.require_live_337_parent(delta.OLD_PARENT, hf_token=None, api=Api())
 
 
+def test_live_parent_rejects_head_move_after_seven_file_readback(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    files = {name: tmp_path / name for name in RELEASE_PATHS}
+    for name, path in files.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(name.encode())
+    hashes = {
+        name: hashlib.sha256(path.read_bytes()).hexdigest()
+        for name, path in files.items()
+    }
+    check_parent_files = delta.require_exact_parent_files
+    monkeypatch.setattr(
+        delta,
+        "require_exact_parent_files",
+        lambda paths: check_parent_files(paths, expected_hashes=hashes),
+    )
+    heads = iter(["1" * 40, "2" * 40])
+
+    class Api:
+        def repo_info(self, *_args, **_kwargs):
+            return SimpleNamespace(sha=next(heads))
+
+    with pytest.raises(ValueError, match="moved while reading"):
+        delta.require_live_337_parent(
+            "1" * 40,
+            hf_token=None,
+            api=Api(),
+            download=lambda _repo, name, **_kwargs: str(files[name]),
+        )
+
+
 def test_chemistry_release_requires_new_readback_intent_path(tmp_path: Path) -> None:
     path = tmp_path / "intent.json"
     sink = delta.durable_intent_sink(path)
@@ -232,6 +264,82 @@ def test_unreviewed_table_payload_drift_fails(
             stage_files,
             {name: {} for name in sample},
             set(),
+        )
+
+
+def test_four_table_gate_accepts_only_reviewed_rows_and_hidden_authorship(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    parent_rows = {
+        "people": [
+            {"person_id": "person-other", "payload": "fixed"},
+            {"person_id": "person-reviewed", "payload": "before"},
+        ],
+        "works": [
+            {"work_id": "work-other", "payload": "fixed"},
+            {"work_id": "work-reviewed", "payload": "before"},
+        ],
+        "authorships": [
+            {"observation_id": "observation-other", "payload": "fixed"},
+            {"observation_id": "observation-hidden", "payload": "removed"},
+        ],
+        "profile_publications": [
+            {"observation_id": "observation-other", "payload": "fixed"},
+            {"observation_id": "observation-hidden", "payload": "before"},
+        ],
+    }
+    targets = {
+        "people": {
+            "person-reviewed": {"person_id": "person-reviewed", "payload": "reviewed"}
+        },
+        "works": {"work-reviewed": {"work_id": "work-reviewed", "payload": "reviewed"}},
+        "authorships": {},
+        "profile_publications": {
+            "observation-hidden": {
+                "observation_id": "observation-hidden",
+                "payload": "reviewed",
+            }
+        },
+    }
+    parent_files = {}
+    staged_files = {}
+    for name, rows in parent_rows.items():
+        relpath = f"{name}/train-00000-of-00001.parquet"
+        parent_files[relpath] = _parquet(tmp_path / "parent" / relpath, rows)
+        staged_rows = [
+            targets[name].get(
+                row.get("person_id") or row.get("work_id") or row.get("observation_id"),
+                row,
+            )
+            for row in rows
+            if name != "authorships" or row["observation_id"] != "observation-hidden"
+        ]
+        staged_files[relpath] = _parquet(tmp_path / "stage" / relpath, staged_rows)
+    monkeypatch.setattr(delta, "PARENT_TABLE_ROWS", dict.fromkeys(parent_rows, 2))
+    monkeypatch.setattr(
+        delta,
+        "TARGET_TABLE_ROWS",
+        {**dict.fromkeys(parent_rows, 2), "authorships": 1},
+    )
+    parent = delta.ExactParent("1" * 40, parent_files)
+    assert delta.validate_exact_tables(
+        parent, staged_files, targets, {"observation-hidden"}
+    ) == {**dict.fromkeys(parent_rows, 2), "authorships": 1}
+    works_path = "works/train-00000-of-00001.parquet"
+    _parquet(
+        tmp_path / "stage" / works_path,
+        list(
+            reversed(
+                [
+                    {"work_id": "work-other", "payload": "fixed"},
+                    {"work_id": "work-reviewed", "payload": "reviewed"},
+                ]
+            )
+        ),
+    )
+    with pytest.raises(ValueError, match="order drift"):
+        delta.validate_exact_tables(
+            parent, staged_files, targets, {"observation-hidden"}
         )
 
 

@@ -6,15 +6,23 @@ stays intact; it cannot be reused after that release becomes the Hub parent.
 
 from __future__ import annotations
 
+import argparse
+import datetime as dt
 import hashlib
 import json
+import os
+import subprocess
 from collections import Counter
 from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .atomic_release import RELEASE_PATHS, commit_atomic_release
+from .atomic_release import (
+    RELEASE_PATHS,
+    AtomicReleaseReconciliationRequired,
+    commit_atomic_release,
+)
 from .chem_region_review import (
     CHEM_REVIEW_SHA256,
     SOURCE_COMMIT,
@@ -32,6 +40,7 @@ from .io import atomic_write_json, load_json, sha256_file
 from .publisher import (
     LAYOUTS,
     REPO_ID,
+    STATUS_SCHEMA_VERSION,
     _to_hub_dataset,
     _write_map_artifacts,
 )
@@ -42,6 +51,7 @@ from .region_continuity import (
 )
 from .region_review import ReviewedRegionDecision
 from .registry import Registry
+from .release_baseline import pin_prior_release
 
 OLD_PARENT = "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd"
 REVIEWED_337_PRODUCER = "514254a8118c28ea3f145c9a30f6f89b589ec550"
@@ -54,6 +64,8 @@ PARENT_TABLE_ROWS = {
     "profile_publications": 51879,
 }
 TARGET_TABLE_ROWS = {**PARENT_TABLE_ROWS, "authorships": 49620}
+INTENT_BRANCH = "automation/map-snapshot"
+INTENT_REMOTE_PATH = "cmccomb/map-of-research"
 
 # These are the seven bytes in the merged-main, first-write-intercepted #337 receipt:
 # /Users/work/Documents/Codex/2026-10-24/you-x20/work/
@@ -156,6 +168,264 @@ def durable_intent_sink(path: Path) -> Callable[[Mapping[str, Any]], None]:
             raise RuntimeError("Chemistry atomic intent did not survive readback")
 
     return persist
+
+
+def _git(repo: Path, *arguments: str) -> str:
+    result = subprocess.run(
+        ["git", "-C", str(repo), *arguments],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return result.stdout.strip()
+
+
+def _serialized_status_bytes(payload: Mapping[str, Any]) -> bytes:
+    """Match atomic_write_json without rereading a mutable checkout file."""
+
+    return (
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    ).encode("utf-8")
+
+
+def _remote_intent_tip(repo: Path) -> str:
+    fields = _git(repo, "ls-remote", "--heads", "origin", INTENT_BRANCH).split()
+    if len(fields) != 2 or fields[1] != f"refs/heads/{INTENT_BRANCH}":
+        raise RuntimeError("Snapshot intent branch is unavailable")
+    return fields[0]
+
+
+def _require_intent_remote(repo: Path) -> None:
+    remote = _git(repo, "remote", "get-url", "origin")
+    if remote not in {
+        f"https://github.com/{INTENT_REMOTE_PATH}",
+        f"https://github.com/{INTENT_REMOTE_PATH}.git",
+        f"git@github.com:{INTENT_REMOTE_PATH}.git",
+    }:
+        raise ValueError(
+            "Chemistry intent requires the canonical GitHub snapshot remote"
+        )
+
+
+def _push_and_readback_intent(
+    repo: Path,
+    paths: Sequence[Path],
+    *,
+    expected_previous_tip: str,
+    expected_bytes_by_path: Mapping[str, bytes],
+) -> str:
+    """Commit status, push without force, then compare remote blobs byte for byte."""
+
+    _require_intent_remote(repo)
+    if (
+        _git(repo, "rev-parse", "HEAD") != expected_previous_tip
+        or _remote_intent_tip(repo) != expected_previous_tip
+    ):
+        raise RuntimeError("Snapshot branch moved before Chemistry intent checkpoint")
+    relative = []
+    for path in paths:
+        try:
+            name = path.resolve().relative_to(repo.resolve()).as_posix()
+        except ValueError as error:
+            raise ValueError(
+                "Chemistry intent status is outside snapshot checkout"
+            ) from error
+        if name not in {
+            "status/last-upload.json",
+            "status/last-successful-upload.json",
+        }:
+            raise ValueError("Chemistry intent may checkpoint only upload status")
+        relative.append(name)
+    if set(relative) != set(expected_bytes_by_path):
+        raise ValueError("Chemistry checkpoint expected bytes differ from status paths")
+    if any(
+        (repo / name).read_bytes() != expected_bytes_by_path[name] for name in relative
+    ):
+        raise RuntimeError("Chemistry status changed before remote checkpoint")
+    _git(
+        repo,
+        "-c",
+        "user.name=github-actions[bot]",
+        "-c",
+        "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+        "commit",
+        "--only",
+        "-m",
+        "Record Chemistry atomic release intent [skip ci]",
+        "--",
+        *relative,
+    )
+    local_tip = _git(repo, "rev-parse", "HEAD")
+    _require_intent_remote(repo)
+    _git(repo, "push", "origin", f"HEAD:{INTENT_BRANCH}")
+    if _remote_intent_tip(repo) != local_tip:
+        raise RuntimeError("Chemistry intent push did not become remote head")
+    remote_ref = f"refs/remotes/origin/{INTENT_BRANCH}"
+    _git(
+        repo,
+        "fetch",
+        "--no-tags",
+        "origin",
+        f"refs/heads/{INTENT_BRANCH}:{remote_ref}",
+    )
+    if _git(repo, "rev-parse", remote_ref) != local_tip:
+        raise RuntimeError("Chemistry fetched intent differs from pushed commit")
+    _require_intent_remote(repo)
+    for name, expected in expected_bytes_by_path.items():
+        remote_bytes = subprocess.run(
+            ["git", "-C", str(repo), "show", f"{remote_ref}:{name}"],
+            check=True,
+            capture_output=True,
+        ).stdout
+        if remote_bytes != expected:
+            raise RuntimeError(f"Chemistry remote intent readback differs: {name}")
+    if _remote_intent_tip(repo) != local_tip:
+        raise RuntimeError("Snapshot branch moved after Chemistry intent readback")
+    return local_tip
+
+
+class RetainedGitIntent:
+    """Keep a pending release intent on the snapshot branch before Hub writes."""
+
+    def __init__(
+        self,
+        *,
+        intent_path: Path,
+        snapshot_checkout: Path,
+        parent_revision: str,
+        producer_commit: str,
+    ) -> None:
+        self.repo = snapshot_checkout.resolve(strict=True)
+        self.status_path = self.repo / "status/last-upload.json"
+        self.success_path = self.repo / "status/last-successful-upload.json"
+        self.parent_revision = require_revision(parent_revision)
+        self.producer_commit = require_revision(producer_commit)
+        self.started_at_utc = dt.datetime.now(dt.UTC).isoformat()
+        server = os.environ.get("GITHUB_SERVER_URL")
+        repository = os.environ.get("GITHUB_REPOSITORY")
+        run_id = os.environ.get("GITHUB_RUN_ID")
+        self.workflow_url = (
+            f"{server}/{repository}/actions/runs/{run_id}"
+            if server and repository and run_id
+            else None
+        )
+        self.local_sink = durable_intent_sink(intent_path)
+        _require_intent_remote(self.repo)
+        if not self.success_path.is_file() or not self.status_path.is_file():
+            raise ValueError("Chemistry intent requires both prior upload receipts")
+        if _git(self.repo, "status", "--porcelain", "--", "status"):
+            raise ValueError("Chemistry snapshot status checkout is dirty")
+        self.checkpoint_tip = _git(self.repo, "rev-parse", "HEAD")
+        if self.checkpoint_tip != _remote_intent_tip(self.repo):
+            raise RuntimeError("Snapshot branch moved before Chemistry release")
+        if pin_prior_release(self.repo / "status") != self.parent_revision:
+            raise ValueError(
+                "Snapshot successful receipt differs from live #337 parent"
+            )
+        self.last_intent: dict[str, Any] | None = None
+
+    def __call__(self, intent: Mapping[str, Any]) -> None:
+        if (
+            intent.get("parent_revision") != self.parent_revision
+            or intent.get("release_context", {}).get("producer_commit")
+            != self.producer_commit
+            or intent.get("release_context", {}).get("snapshot_commit") != SOURCE_COMMIT
+        ):
+            raise ValueError("Chemistry intent context differs from frozen release")
+        self.local_sink(intent)
+        status = {
+            "schema_version": STATUS_SCHEMA_VERSION,
+            "status": "failure",
+            "started_at_utc": self.started_at_utc,
+            "finished_at_utc": None,
+            "dataset_id": REPO_ID,
+            "dataset_configs": list(PARENT_TABLE_ROWS),
+            "workflow_url": self.workflow_url,
+            "producer_commit": self.producer_commit,
+            "snapshot_commit": SOURCE_COMMIT,
+            "prior_revision": self.parent_revision,
+            "error_type": "AtomicWriteOutcomeUnknown",
+            "error_message": (
+                "Inspect the retained Chemistry atomic intent before retrying"
+            ),
+            "atomic_release_intent": dict(intent),
+        }
+        atomic_write_json(self.status_path, status)
+        if load_json(self.status_path) != status:
+            raise RuntimeError("Chemistry status intent failed local readback")
+        self.checkpoint_tip = _push_and_readback_intent(
+            self.repo,
+            [self.status_path],
+            expected_previous_tip=self.checkpoint_tip,
+            expected_bytes_by_path={
+                "status/last-upload.json": _serialized_status_bytes(status)
+            },
+        )
+        self.last_intent = dict(intent)
+
+    def finalize_success(self, revision: str, receipt: Mapping[str, Any]) -> None:
+        if self.last_intent is None:
+            raise RuntimeError("Chemistry release has no retained prewrite intent")
+        revision = require_revision(revision)
+        if (
+            receipt.get("artifact_revision") != revision
+            or receipt.get("parent_revision") != self.parent_revision
+            or receipt.get("commit_nonce") != self.last_intent.get("commit_nonce")
+            or receipt.get("sha256_by_path") != self.last_intent.get("sha256_by_path")
+            or receipt.get("size_by_path") != self.last_intent.get("size_by_path")
+            or receipt.get("hosted_file_bytes_match_prewrite") is not True
+        ):
+            raise ValueError(
+                "Chemistry successful receipt differs from retained intent"
+            )
+        status = {
+            "schema_version": STATUS_SCHEMA_VERSION,
+            "status": "success",
+            "started_at_utc": self.started_at_utc,
+            "finished_at_utc": dt.datetime.now(dt.UTC).isoformat(),
+            "dataset_id": REPO_ID,
+            "dataset_configs": list(PARENT_TABLE_ROWS),
+            "workflow_url": self.workflow_url,
+            "producer_commit": self.producer_commit,
+            "snapshot_commit": SOURCE_COMMIT,
+            "prior_revision": self.parent_revision,
+            "artifact_commit": revision,
+            "error_type": None,
+            "error_message": None,
+            "atomic_release_intent": self.last_intent,
+            "atomic_release": dict(receipt),
+        }
+        atomic_write_json(self.status_path, status)
+        atomic_write_json(self.success_path, status)
+        if (
+            load_json(self.status_path) != status
+            or load_json(self.success_path) != status
+        ):
+            raise RuntimeError("Chemistry success receipt failed local readback")
+        self.checkpoint_tip = _push_and_readback_intent(
+            self.repo,
+            [self.status_path, self.success_path],
+            expected_previous_tip=self.checkpoint_tip,
+            expected_bytes_by_path={
+                "status/last-upload.json": _serialized_status_bytes(status),
+                "status/last-successful-upload.json": _serialized_status_bytes(status),
+            },
+        )
+
+
+def retained_git_intent_sink(
+    intent_path: Path,
+    snapshot_checkout: Path,
+    *,
+    parent_revision: str,
+    producer_commit: str,
+) -> RetainedGitIntent:
+    return RetainedGitIntent(
+        intent_path=intent_path,
+        snapshot_checkout=snapshot_checkout,
+        parent_revision=parent_revision,
+        producer_commit=producer_commit,
+    )
 
 
 def _review_sets(
@@ -815,14 +1085,24 @@ def publish_chem_delta(
     chem_review_path: Path,
     stage_dir: Path,
     intent_path: Path,
+    snapshot_checkout: Path,
+    producer_commit: str,
 ) -> tuple[str, dict[str, Any]]:
     """Release only after a future live #337 parent passes every pinned gate."""
 
     from .registry import load_registry
     from .snapshot import validate_snapshot
 
-    intent_sink = durable_intent_sink(intent_path)
+    if not hf_token or not hf_token.strip():
+        raise ValueError("Chemistry release requires an explicit HF_TOKEN")
+    _require_producer_checkout(Path(__file__).resolve().parents[1], producer_commit)
     parent = require_live_337_parent(expected_parent_revision, hf_token=hf_token)
+    intent_sink = retained_git_intent_sink(
+        intent_path,
+        snapshot_checkout,
+        parent_revision=parent.revision,
+        producer_commit=producer_commit,
+    )
     registry = load_registry(people_path, memberships_path, departments_path)
     frame, manifest = validate_snapshot(
         snapshot_path,
@@ -841,7 +1121,7 @@ def publish_chem_delta(
         registry=registry,
     )
     files, gate = stage_chem_delta(parent, decisions, registry, stage_dir)
-    return commit_atomic_release(
+    revision, receipt = commit_atomic_release(
         files,
         prewrite_gate=gate,
         repo_id=REPO_ID,
@@ -852,5 +1132,92 @@ def publish_chem_delta(
         intent_metadata={
             "source_commit": SOURCE_COMMIT,
             "producer_review_commit": REVIEWED_337_PRODUCER,
+            "producer_commit": require_revision(producer_commit),
+            "snapshot_commit": SOURCE_COMMIT,
         },
     )
+    try:
+        intent_sink.finalize_success(revision, receipt)
+    except Exception as error:
+        raise AtomicReleaseReconciliationRequired(
+            {
+                **receipt,
+                "artifact_revision": revision,
+                "verification_status": "reconciliation_required",
+                "verification_stage": "persist_success_receipt",
+                "write_outcome": "verified_hub_status_pending",
+                "verification_error_type": type(error).__name__,
+                "verification_error_message": str(error)[:500],
+            }
+        ) from error
+    return revision, receipt
+
+
+def _require_producer_checkout(checkout: Path, expected_commit: str) -> None:
+    """Run the reviewed producer code from an exact clean Git checkout."""
+
+    checkout = checkout.resolve(strict=True)
+    expected_commit = require_revision(expected_commit)
+    if _git(checkout, "rev-parse", "HEAD") != expected_commit:
+        raise ValueError("Chemistry producer checkout differs from reviewed SHA")
+    if _git(checkout, "status", "--porcelain"):
+        raise ValueError("Chemistry producer checkout must be clean")
+    if Path(__file__).resolve() != checkout / "map_of_research/chem_delta_release.py":
+        raise ValueError("Chemistry release code is outside reviewed checkout")
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    """Manual production entrypoint; no release is inferred from a branch name."""
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--expected-parent-revision", required=True)
+    parser.add_argument("--expected-producer-commit", required=True)
+    parser.add_argument("--producer-checkout", type=Path, required=True)
+    parser.add_argument("--source-data-checkout", type=Path, required=True)
+    parser.add_argument("--snapshot-checkout", type=Path, required=True)
+    parser.add_argument("--stage-dir", type=Path, required=True)
+    parser.add_argument("--intent-path", type=Path, required=True)
+    args = parser.parse_args(argv)
+    token = os.environ.get("HF_TOKEN", "").strip()
+    if not token:
+        raise ValueError("Chemistry release requires an explicit HF_TOKEN")
+    parent_revision = require_revision(args.expected_parent_revision)
+    if parent_revision == OLD_PARENT:
+        raise ValueError("Chemistry release requires the live #337 Hub parent")
+    producer_commit = require_revision(args.expected_producer_commit)
+    _require_producer_checkout(args.producer_checkout, producer_commit)
+    source_data = args.source_data_checkout.resolve(strict=True)
+    if _git(source_data, "rev-parse", "HEAD") != SOURCE_COMMIT:
+        raise ValueError("Chemistry source data differs from frozen source commit")
+    if _git(source_data, "status", "--porcelain"):
+        raise ValueError("Chemistry frozen source data checkout must be clean")
+    if args.stage_dir.exists():
+        raise ValueError("Chemistry stage directory must be new for this attempt")
+    if args.intent_path.exists():
+        raise ValueError("Chemistry local intent path must be new for this attempt")
+    source = args.producer_checkout.resolve(strict=True)
+    snapshot = args.snapshot_checkout.resolve(strict=True)
+    revision, receipt = publish_chem_delta(
+        expected_parent_revision=parent_revision,
+        hf_token=token,
+        snapshot_path=source_data / "snapshots/cmu-engineering-publications.parquet",
+        snapshot_manifest_path=source_data
+        / "snapshots/cmu-engineering-publications.parquet.manifest.json",
+        source_cache_dir=source_data / "data/authors",
+        people_path=source / "registry/people.csv",
+        memberships_path=source / "registry/memberships.csv",
+        departments_path=source / "registry/departments.csv",
+        chem_review_path=source / "data/curated/scholar-chem-region-review.json",
+        stage_dir=args.stage_dir,
+        intent_path=args.intent_path,
+        snapshot_checkout=snapshot,
+        producer_commit=producer_commit,
+    )
+    if receipt.get("artifact_revision") != revision:
+        raise RuntimeError("Chemistry final receipt differs from hosted revision")
+    print(f"revision={revision}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

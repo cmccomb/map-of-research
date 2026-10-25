@@ -1,0 +1,88 @@
+name: Publish reviewed Chemistry region delta
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_parent_revision:
+        description: Immutable live #337 Hub parent SHA reviewed with its seven file hashes
+        required: true
+        type: string
+      reviewed_producer_commit:
+        description: Exact reviewed main commit containing the Chemistry release gate
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: central-publication-upload-v1
+  cancel-in-progress: false
+
+jobs:
+  chemistry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment: huggingface
+    steps:
+      - name: Require reviewed main commit
+        env:
+          REVIEWED_PRODUCER_COMMIT: ${{ inputs.reviewed_producer_commit }}
+        run: |
+          test "$GITHUB_REF" = refs/heads/main
+          test "$GITHUB_SHA" = "$REVIEWED_PRODUCER_COMMIT"
+      - name: Check out reviewed producer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          path: source
+          persist-credentials: false
+      - name: Check out collected snapshot and retained status
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: automation/map-snapshot
+          path: snapshot
+          persist-credentials: true
+          sparse-checkout: |
+            status
+          sparse-checkout-cone-mode: false
+      - name: Check out frozen Chemistry source data
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 8be6a2400cf72dd959c874bfcada8624540820ef
+          path: source-data
+          persist-credentials: false
+          sparse-checkout: |
+            snapshots/cmu-engineering-publications.parquet
+            snapshots/cmu-engineering-publications.parquet.manifest.json
+            data/authors
+          sparse-checkout-cone-mode: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: source/pyproject.toml
+      - name: Install exact producer
+        run: python -m pip install -e './source[publisher]'
+      - name: Validate, checkpoint remotely, and publish Chemistry delta
+        env:
+          HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
+          HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+          EXPECTED_PARENT_REVISION: ${{ inputs.expected_parent_revision }}
+          REVIEWED_PRODUCER_COMMIT: ${{ inputs.reviewed_producer_commit }}
+        run: |
+          set -euo pipefail
+          HF_TOKEN="$(hf auth token)"
+          test -n "$HF_TOKEN"
+          export HF_TOKEN
+          attempt_dir="$(mktemp -d)"
+          python -m map_of_research.chem_delta_release \
+            --expected-parent-revision "$EXPECTED_PARENT_REVISION" \
+            --expected-producer-commit "$REVIEWED_PRODUCER_COMMIT" \
+            --producer-checkout source \
+            --source-data-checkout source-data \
+            --snapshot-checkout snapshot \
+            --stage-dir "$attempt_dir/stage" \
+            --intent-path "$attempt_dir/chem-intent.json"

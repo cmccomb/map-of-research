@@ -76,13 +76,36 @@ Parquet configs, both map files, and README. Every non-Chemistry row and shared
 map point must match that Hub parent. The old `bb88ddf0` preview for draft
 PR #338 is source-review evidence only and cannot authorize this restack.
 
-The release path requires a new filesystem intent record and reads it back
-before the Hub write. A file on an ephemeral GitHub runner is not sufficient
-recovery evidence across runs. Before any future real upload, release
-orchestration must persist that intent off-runner as a retained receipt or
-status artifact and make it available for reconciliation if the write outcome
-is uncertain. The first-write-intercepted preview records a local intent but
-does not authorize a real upload.
+The release path requires a new local intent and a clean snapshot-branch
+checkout whose last successful receipt names the exact live #337 parent. Before
+any Hub write it commits the nonce, seven stage hashes, and parent to
+`automation/map-snapshot/status/last-upload.json`, pushes without force, fetches
+that remote commit, and compares the retained status bytes. A failed push,
+readback, or branch check stops before the Hub write. The prior successful
+receipt remains intact until all seven immutable Hub files have been verified;
+only then does the path advance both status files. The first-write-intercepted
+preview simulates this Git checkpoint in a local output directory and makes no
+canonical Git remote mutation, so its receipt must label that simulation.
+
+The separate manual `chem-region-release.yml` workflow is a future production
+entrypoint. It requires a reviewed main producer SHA, a requested immutable Hub
+parent, an explicit Hub token, and three distinct checkouts: clean reviewed
+producer code, frozen raw snapshot and complete Scholar caches at `8be6a240`,
+and current `automation/map-snapshot` status. The production CLI checks those
+commits and source bytes before building the seven files. The existing #337
+upload workflow is unchanged. The Git checkpoint is retained on the status
+branch before `HfApi.create_commit`; missing credentials, prior status, remote
+push, or fetched-byte readback abort before that write. This draft workflow is
+not an upload authorization and has not been dispatched.
+
+The standing 100% generic coverage metric excludes both new Chemistry release
+modules. A separate CI gate measures their branch coverage: the synthetic
+19-row/eight-cache source loader and exact-delta tests currently cover 96% of
+`chem_region_review.py` and 76% of `chem_delta_release.py` (78% combined,
+minimum 75%). The full seven-file serialization in `stage_chem_delta` was
+exercised against the merged-main #337 staged parent in the offline simulation;
+the live-parent, first-write-intercepted preview is still required after #337
+is actually published.
 
 Two clean #337 producer previews serialized one otherwise identical work with
 the same `venue_variants` in opposite order. The cause is `_variants()` in
