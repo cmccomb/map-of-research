@@ -24,7 +24,12 @@ parent work/map topic relationship. The staged map must match the parent's
 visible observations follows the existing topic path. Bio and composite
 release gates remain separate.
 
-This branch is local and has not dispatched an upload. The Chemistry release
-will change the Hub parent; the Physics no-upload preview and all parent-bound
-checks must run again against that new immutable revision before any merge or
-upload decision.
+This branch is local and has not dispatched an upload. The trusted Chemistry
+release advanced the Hub parent to
+`dcbdfacd7e8cfeaefd4c91081c4b347b7c690061`. A Physics no-upload preview
+against that immutable revision stopped at the existing region-continuity gate
+with one unexplained loss and six unexplained gains. It made no Hub write call.
+The ordinary full-snapshot publisher does not yet replay the Chemistry
+release's 19 exact reviewed decisions, so Chemistry row and map preservation
+must be solved and previewed before this held-only topic guard can be accepted
+for the new parent.
