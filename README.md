@@ -83,6 +83,12 @@ complete browser capture is required to update its publication rows and
 coverage claim; a response capped at the collector's 200-publication default
 cannot replace them.
 
+Legacy caches already at or above a requested publication limit are also
+excluded from that bounded refresh, including `--force`. For smaller caches,
+the collector rejects a replacement missing any previously observed Scholar
+citation ID and keeps the last good cache for review. This prevents a partial
+response from silently removing older publication rows.
+
 ## Update cadence
 
 - Faculty membership is reviewed annually on July 1.
