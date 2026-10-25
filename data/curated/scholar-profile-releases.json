@@ -47,10 +47,10 @@
       "state": "released",
       "expected_source_rows": 41,
       "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
-      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
+      "reason": "Complete 41-row visible Scholar profile verified; the 2020 strawberry preprint is joined to its 2022 PNAS version by exact reviewed DOI aliases. One unresolved archive observation remains held from mapped works.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 2,
-      "provisional_hold_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40"
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "fec43159aba48541b4bcb47077360ba76514087e39b3715a585fd682d719d988"
     },
     {
       "person_id": "person-stefanbernhard-7f8d72cd",
