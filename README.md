@@ -309,12 +309,15 @@ publisher still pins the current hosted head for upload safety, embeddings,
 and layouts. It compares region decisions with the last verified pre-Bernhard
 release only after checking the exact snapshot bytes, immutable source and
 historical receipt commits, both successful receipts, and the producer commit
-selected by the dispatch event. It checks the live source branch tip again
-immediately before the first Hub write. Ordinary push and dispatch uploads
-leave the switch false and compare with their current hosted head. A completed
+selected by the dispatch event. It checks the live producer and source branch
+tips again immediately before the first Hub write. Ordinary push and dispatch
+uploads leave the switch false and compare with their current hosted head. A completed
 correction cannot be replayed because the hosted head and source tip change.
 Keep producer `main` and the snapshot branch frozen through the receipt push;
 the pre-write check cannot lock the Git branch against a later writer.
+The one-time mode leaves a failed run in Actions logs without advancing the
+snapshot branch. A partial Hub upload still changes the Hub head and blocks a
+retry until it is audited and restored.
 
 The publisher writes dataset configs sequentially and checks that the hosted
 repository still equals the pinned prior SHA immediately before the first

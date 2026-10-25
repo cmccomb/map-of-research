@@ -69,6 +69,7 @@ from .region_continuity import (
 from .region_repair import (
     require_approved_comparison_revision,
     require_expected_repair_preview,
+    require_frozen_producer_tip,
     require_frozen_source_tip,
 )
 from .registry import (
@@ -1353,15 +1354,29 @@ def publish_snapshot(
         )
         if comparison_revision != prior_revision:
             continuity_receipt["current_hub_revision"] = prior_revision
-            require_expected_repair_preview(
-                work_count=len(tables["works"]),
-                new_embedding_count=new_embedding_count,
-                layout_reused=layout_reused,
-                continuity_receipt=continuity_receipt,
-            )
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
+    if comparison_revision != prior_revision:
+        repair_related_mask = (
+            tables["works"]["has_included_source_profile"]
+            if "has_included_source_profile" in tables["works"]
+            else tables["works"]["department_ids"].apply(
+                lambda value: bool(_as_list(value))
+            )
+        )
+        repair_mapped_mask = (
+            repair_related_mask
+            & tables["works"]["map_eligible"]
+            & tables["works"]["memberships"].apply(lambda value: bool(_as_list(value)))
+        )
+        require_expected_repair_preview(
+            work_count=len(tables["works"]),
+            map_point_count=int(repair_mapped_mask.sum()),
+            new_embedding_count=new_embedding_count,
+            layout_reused=layout_reused,
+            continuity_receipt=continuity_receipt,
+        )
 
     if prior_revision is not None:
         _require_current_dataset_revision(
@@ -1369,6 +1384,10 @@ def publish_snapshot(
         )
     if comparison_revision != prior_revision:
         require_frozen_source_tip(snapshot_path.parent.parent)
+        require_frozen_producer_tip(
+            snapshot_path.parent.parent,
+            os.environ.get("MAP_PRODUCER_COMMIT", ""),
+        )
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
         commit = _to_hub_dataset(tables[config_name]).push_to_hub(

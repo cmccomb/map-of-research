@@ -285,6 +285,14 @@ def reconcile_region_decisions(
             continue
         if prior.get("quality_assessment_version") != row.quality_assessment_version:
             continue
+        prior_departments = {
+            str(value) for value in _value(prior.get("department_ids")) or [] if value
+        }
+        current_departments = {
+            str(value) for value in _value(row.department_ids) or [] if value
+        }
+        if prior_departments != current_departments:
+            continue
         if _fingerprint_fields(prior, WORK_FINGERPRINT_FIELDS) != _fingerprint_fields(
             row, WORK_FINGERPRINT_FIELDS
         ):

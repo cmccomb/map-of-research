@@ -375,6 +375,25 @@ def test_quality_version_change_prevents_continuity_and_requires_review():
         reconcile([changed], [old], [work("one", eligible=True, outlier=False)], [old])
 
 
+def test_department_change_cannot_inherit_prior_region_decision():
+    old = observation("person", "one")
+    current = work("one", eligible=False, outlier=True)
+    current["department_ids"] = ["bme"]
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile([current], [old], [work("one", eligible=True, outlier=False)], [old])
+
+
+def test_department_order_does_not_change_region_identity():
+    old = observation("person", "one")
+    prior = work("one", eligible=True, outlier=False)
+    prior["department_ids"] = ["bio", "bme"]
+    current = work("one", eligible=False, outlier=True)
+    current["department_ids"] = ["bme", "bio"]
+    result, receipt = reconcile([current], [old], [prior], [old])
+    assert result.map_eligible.tolist() == [True]
+    assert receipt["prior_eligible_overrides"] == 1
+
+
 def test_published_authorship_is_guarded_even_without_included_department():
     old = observation("person", "one")
     _, receipt = reconcile(

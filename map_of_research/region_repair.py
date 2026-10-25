@@ -63,17 +63,38 @@ def require_frozen_source_tip(snapshot_root: Path) -> None:
         raise RuntimeError("Frozen snapshot branch moved before upload")
 
 
+def require_frozen_producer_tip(snapshot_root: Path, expected_commit: str) -> None:
+    """Reject a repair if producer main moved after dispatch."""
+
+    expected = require_revision(expected_commit)
+    branch_ref = "refs/heads/main"
+    response = subprocess.run(
+        ["git", "-C", str(snapshot_root), "ls-remote", "origin", branch_ref],
+        capture_output=True,
+        check=True,
+        text=True,
+    )
+    if response.stdout.strip() != f"{expected}\t{branch_ref}":
+        raise RuntimeError("Producer main moved before upload")
+
+
 def require_expected_repair_preview(
     *,
     work_count: int,
+    map_point_count: int,
     new_embedding_count: int,
     layout_reused: bool,
     continuity_receipt: dict[str, Any],
 ) -> None:
     """Stop if the exact replay differs from the reviewed no-upload result."""
 
-    if work_count != 47693 or new_embedding_count != 0 or not layout_reused:
-        raise RuntimeError("Bernhard repair changed corpus, embeddings, or layout")
+    if (
+        work_count != 47693
+        or map_point_count != 42869
+        or new_embedding_count != 0
+        or not layout_reused
+    ):
+        raise RuntimeError("Bernhard repair changed map points, embeddings, or layout")
     expected = {
         "prior_revision": REGION_COMPARISON_REVISION,
         "current_hub_revision": CURRENT_HUB_REVISION,

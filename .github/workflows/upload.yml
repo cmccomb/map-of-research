@@ -163,8 +163,16 @@ jobs:
       - name: Record upload receipt
         if: ${{ always() }}
         working-directory: snapshot
+        env:
+          RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
         run: |
           if [ ! -f status/last-upload.json ]; then
+            exit 0
+          fi
+          if ! python ../source/scripts/require_current_upload_receipt.py \
+            --receipt status/last-upload.json \
+            --workflow-url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            --repair-mode "$RESTORE_PRIOR_REGIONS"; then
             exit 0
           fi
           git config user.name "github-actions[bot]"

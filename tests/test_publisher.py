@@ -1639,6 +1639,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         {
             "value": [1, 2],
             "department_ids": [["ece"], ["ece"]],
+            "memberships": [[{"person_id": "person-one"}], []],
             "map_eligible": [True, False],
         }
     )
@@ -1702,6 +1703,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     comparison_checks = []
     preview_checks = []
     source_tip_checks = []
+    producer_tip_checks = []
     published_revisions = []
     if region_override:
         monkeypatch.setattr(
@@ -1713,6 +1715,12 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             publisher,
             "require_frozen_source_tip",
             lambda path: source_tip_checks.append(path),
+        )
+        monkeypatch.setenv("MAP_PRODUCER_COMMIT", "c" * 40)
+        monkeypatch.setattr(
+            publisher,
+            "require_frozen_producer_tip",
+            lambda path, commit: producer_tip_checks.append((path, commit)),
         )
         monkeypatch.setattr(
             publisher,
@@ -1796,10 +1804,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         else []
     )
     assert source_tip_checks == ([tmp_path.parent] if region_override else [])
+    assert producer_tip_checks == (
+        [(tmp_path.parent, "c" * 40)] if region_override else []
+    )
     assert preview_checks == (
         [
             {
                 "work_count": 2,
+                "map_point_count": 1,
                 "new_embedding_count": 2,
                 "layout_reused": reuse_order,
                 "continuity_receipt": {

@@ -197,9 +197,33 @@ def test_repair_checks_live_source_branch_tip(tmp_path, monkeypatch):
         repair.require_frozen_source_tip(tmp_path)
 
 
+def test_repair_checks_live_producer_main_tip(tmp_path, monkeypatch):
+    expected = "a" * 40
+    monkeypatch.setattr(
+        repair.subprocess,
+        "run",
+        lambda *args, **kwargs: SimpleNamespace(
+            stdout=f"{expected}\trefs/heads/main\n"
+        ),
+    )
+    repair.require_frozen_producer_tip(tmp_path, expected)
+    with pytest.raises(ValueError, match="immutable"):
+        repair.require_frozen_producer_tip(tmp_path, "main")
+    monkeypatch.setattr(
+        repair.subprocess,
+        "run",
+        lambda *args, **kwargs: SimpleNamespace(
+            stdout=f"{'b' * 40}\trefs/heads/main\n"
+        ),
+    )
+    with pytest.raises(RuntimeError, match="Producer main moved"):
+        repair.require_frozen_producer_tip(tmp_path, expected)
+
+
 def reviewed_preview():
     return {
         "work_count": 47693,
+        "map_point_count": 42869,
         "new_embedding_count": 0,
         "layout_reused": True,
         "continuity_receipt": {
@@ -224,11 +248,12 @@ def test_exact_repair_preview_is_required_before_upload():
     repair.require_expected_repair_preview(**expected)
     for field, value in (
         ("work_count", 47694),
+        ("map_point_count", 42870),
         ("new_embedding_count", 1),
         ("layout_reused", False),
     ):
         changed = {**expected, field: value}
-        with pytest.raises(RuntimeError, match="corpus, embeddings, or layout"):
+        with pytest.raises(RuntimeError, match="map points, embeddings, or layout"):
             repair.require_expected_repair_preview(**changed)
     for key in expected["continuity_receipt"]:
         changed = reviewed_preview()
