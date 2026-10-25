@@ -54,7 +54,7 @@ from .registry import Registry
 from .release_baseline import pin_prior_release
 
 OLD_PARENT = "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd"
-REVIEWED_337_PRODUCER = "514254a8118c28ea3f145c9a30f6f89b589ec550"
+REVIEWED_337_PRODUCER = "a68fbf0c4ea1623b84c01497f40f718f5edac7f8"
 PARENT_POINT_COUNT = 42909
 TARGET_POINT_COUNT = 42907
 PARENT_TABLE_ROWS = {
@@ -67,9 +67,9 @@ TARGET_TABLE_ROWS = {**PARENT_TABLE_ROWS, "authorships": 49620}
 INTENT_BRANCH = "automation/map-snapshot"
 INTENT_REMOTE_PATH = "cmccomb/map-of-research"
 
-# These are the seven bytes in the merged-main, first-write-intercepted #337 receipt:
-# /Users/work/Documents/Codex/2026-10-24/you-x20/work/
-# sullivan-math-merged-main-preview/receipt.json (producer 514254a8, source 8be6a240).
+# These are the seven immutable files in the successful #337 Hub release
+# 38f119d71692cdb9112210217b532a7dd7c1633a (producer a68fbf0c, frozen
+# source 8be6a240). The status/last-upload.json receipt records their hashes.
 # A later Hub head qualifies only if *all seven* immutable files match.
 PARENT_SHA256_BY_PATH = {
     "README.md": ("69c92647bf73c293e7e372e64b5a7ce0902923dda0e25933b1e957a29c6d7173"),
@@ -77,10 +77,10 @@ PARENT_SHA256_BY_PATH = {
         "1398a6d9410945c0eb17601cc42e13efb851ebddb481af6b1725e1e836175a7d"
     ),
     "maps/manifest.json": (
-        "3a7cac63bbaac51662c5f907d1552d8739f4a36ee73d30f654ad69173101a6ae"
+        "2707db369661b39703cbd08b05db324ad624a2d3815a1844a06569d3ca84ae04"
     ),
     "maps/publications.json": (
-        "01e3486c026125d6c3d8a943a56d193080bf2e2b642838649bdca88713be1872"
+        "431ca9f1ed98e0a04e025438d16940296528efa145271be987596c664d32eff3"
     ),
     "people/train-00000-of-00001.parquet": (
         "8c369014272b84d44f61621ed0c93077f0195d73156f95065acc3b19d52d57e4"
@@ -89,7 +89,7 @@ PARENT_SHA256_BY_PATH = {
         "d9f7202470c927fde0b7e776bbea0b32d9192eae38516c7f187926f4fde3b5ba"
     ),
     "works/train-00000-of-00001.parquet": (
-        "a655680907be759bbebfab5195f4b6a000f1d9f540911cb72f9525e08e705a71"
+        "ef071bce69745fe9815f0e038267541b6ad9c242d195cc73de3c9573f74a7c91"
     ),
 }
 

@@ -66,15 +66,17 @@ notice in *Progress in Polymer Science*, and the truncated duplicate
 has no authors; the adjacent [Berry–Matyjaszewski editorial](https://api.crossref.org/works/10.1016/S0079-6700(02)00115-6)
 has a separate DOI and page.
 
-The #337 parent is expected to contain 42,909 map points. The scoped Chemistry
-decisions add three and remove five, for an expected 42,907 points. The parent
-must first be published at a new immutable Hub revision whose seven release
-files match the independently validated #337 staged receipt byte for byte.
-Then run a fresh exact-parent, first-write-intercepted preview from the exact
-reviewed code head and frozen source commit `8be6a240`, checking all four
-Parquet configs, both map files, and README. Every non-Chemistry row and shared
-map point must match that Hub parent. The old `bb88ddf0` preview for draft
-PR #338 is source-review evidence only and cannot authorize this restack.
+The #337 parent is now published at immutable Hub revision
+`38f119d71692cdb9112210217b532a7dd7c1633a`, with successful
+`automation/map-snapshot/status/last-upload.json` and producer `a68fbf0c`.
+Its seven files were downloaded and independently checked against that receipt.
+It has 42,909 map points. The scoped Chemistry decisions add three and remove
+five, for an expected 42,907 points. Run a fresh exact-parent,
+first-write-intercepted preview from the exact reviewed code head and frozen
+source commit `8be6a240`, checking all four Parquet configs, both map files,
+and README. Every non-Chemistry row and shared map point must match the live
+Hub parent. The old `bb88ddf0` preview for draft PR #338 is source-review
+evidence only and cannot authorize this restack.
 
 The release path requires a new local intent and a clean snapshot-branch
 checkout whose last successful receipt names the exact live #337 parent. Before
@@ -104,14 +106,23 @@ modules. A separate CI gate measures their branch coverage: the synthetic
 `chem_region_review.py` and 76% of `chem_delta_release.py` (78% combined,
 minimum 75%). The full seven-file serialization in `stage_chem_delta` was
 exercised against the merged-main #337 staged parent in the offline simulation;
-the live-parent, first-write-intercepted preview is still required after #337
-is actually published.
+the live-parent, first-write-intercepted preview remains required before any
+Chemistry write.
 
-Two clean #337 producer previews serialized one otherwise identical work with
-the same `venue_variants` in opposite order. The cause is `_variants()` in
-`dataset.py`: it sorts a `set` by `str.casefold`, so strings differing only in
-capitalization tie and retain the set's process-dependent order. A later
-publisher run could therefore produce a different `works` file hash. This
-restack pins the merged-main #337 receipt and its exact live file bytes. A
-separate producer fix should sort by `(value.casefold(), value)` before a
-future full rebuild; it is outside this Chemistry delta release.
+The merged-main local preview, hosted Linux no-write preview
+[40196085001](https://github.com/cmccomb/map-of-research/actions/runs/40196085001),
+and actual successful upload
+[40197924026](https://github.com/cmccomb/map-of-research/actions/runs/40197924026)
+did not produce identical seven-file bytes. The hosted preview and live Hub
+contain exactly the same 42,909 ordered publication IDs and final eligibility,
+attribution, and metadata. Eleven *new Sullivan* points, outside all nineteen
+Chemistry decisions, have different layout coordinates; two derived
+unclassified keyword centroids also move. The manifest's intermediate
+`region_continuity.prior_eligible_overrides` and `prior_excluded_overrides`
+counts are `100/62` in the hosted preview and `79/134` in the live Hub, while
+the final decisions match. The local preview additionally differed in the
+order of two case-varied `title_variants` for one unrelated work; deterministic
+variant ordering was subsequently fixed in producer PR #343. The **actual live
+Hub bytes** and its successful release receipt, rather than either preview,
+are the exact Chemistry parent. The nineteen decisions and frozen source hashes
+have not changed.
