@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "person_id": "person-jamescummings-521af556",
+  "primary_department": "math",
+  "scholar_id": null,
+  "release_eligible": false,
+  "source_priority": "verified_google_scholar_profile_if_one_is_found",
+  "source_counts": {
+    "cmu_elements_records": 108,
+    "researcher_site_items": 51,
+    "orcid_work_groups": 51,
+    "orcid_exact_doi_elements_matches": 49,
+    "publisher_missing_publication_manifestations": 4,
+    "candidate_duplicate_pairs": 13
+  },
+  "sources": [
+    {
+      "kind": "official_identity",
+      "file": "official-identity.html",
+      "url": "https://www.cmu.edu/math/people/faculty/cummings.html",
+      "sha256": "f1c8de8c77a22d7c1a8f4508c6a2a0341b66bdb2b2f873c8878b06face681cd9"
+    },
+    {
+      "kind": "researcher_bibliography",
+      "file": "researcher-papers.html",
+      "url": "https://www.math.cmu.edu/users/jcumming/papers/",
+      "sha256": "8b4e329dc4bb66d73deae596f61cb2b190216d8dc5189cc0a5ae908221cef691"
+    },
+    {
+      "kind": "cmu_elements_capture_csv",
+      "file": "elements-108.csv",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications",
+      "sha256": "b1998c46bb83bb71e50c94318b9bee2669a66c09fa9dcb64cff02fcc54d2901a"
+    },
+    {
+      "kind": "cmu_elements_capture_manifest",
+      "file": "elements-manifest.json",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications",
+      "sha256": "64985bdde5c09db5534f7b290b1e535368942f8fddb7ed54057f41278c06c63c"
+    },
+    {
+      "kind": "orcid_works_linked_by_cmu_elements",
+      "file": "orcid-works.json",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-7913-0427/works",
+      "sha256": "f3b80a9cf2d621d56cfea3a4368c2c6395204b668fe1ef2bf981d1a898039961"
+    },
+    {
+      "kind": "cmu_elements_page",
+      "file": "page-000.html",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications",
+      "sha256": "6cbd0db32457d05844c4aafafbfade8a3ce4c279e5b8fe4d2cdec7c292bd2379"
+    },
+    {
+      "kind": "cmu_elements_page",
+      "file": "page-025.html",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=25&sort=dateDesc&favouritesFirst=true",
+      "sha256": "9ebfadc8ec4d3f814aaba7bb9dabc7a4fae1c83e57cd45486d05df0192e5fb67"
+    },
+    {
+      "kind": "cmu_elements_page",
+      "file": "page-050.html",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=50&sort=dateDesc&favouritesFirst=true",
+      "sha256": "165fcc5b60c378a5aff62d9ce8bf3f8f9ec646702ae35e1b42c1643b2ccbf438"
+    },
+    {
+      "kind": "cmu_elements_page",
+      "file": "page-075.html",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=75&sort=dateDesc&favouritesFirst=true",
+      "sha256": "882646b8904471e0572828b49affeec5477d5e5f31df5866a8a35e5e4eed2960"
+    },
+    {
+      "kind": "cmu_elements_page",
+      "file": "page-100.html",
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=100&sort=dateDesc&favouritesFirst=true",
+      "sha256": "e9027d91c5bf8b5ed4777179dad88d70f2723a9360e238690ea20139c74590d1"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-appalachian.json",
+      "url": "https://api.crossref.org/works/10.1017/CBO9781139208574",
+      "sha256": "1c802f797a8d4373cdb0e580cb91129ad0943fd4ecbe8e74e7ef2bea4047f087"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-compactness.json",
+      "url": "https://api.crossref.org/works/10.1017/9781316755860.006",
+      "sha256": "c7f03d3e6a482b54ee1855f8b7fcaad279f3572d2c0a5618f525dfd35d1dde1e"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-large-cardinal.json",
+      "url": "https://api.crossref.org/works/10.1007/978-94-015-8988-8_2",
+      "sha256": "fe308a6ba436d62d59882c627347c5cdd2e6484f7030f1157f0a0f0d1f31ee31"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-foundations.json",
+      "url": "https://api.crossref.org/works/10.1090/conm/690",
+      "sha256": "17270fc20a3a22829972ce658d729bf42dc44a51fe1b6e7d12644d3e168e3c4a"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-higher-recursion.json",
+      "url": "https://api.crossref.org/works/10.1142/14141",
+      "sha256": "3a280e20d1f967056a9f3a400fae88fe142813b064545873d21e1890062e5182"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-review.json",
+      "url": "https://api.crossref.org/works/10.2307/421078",
+      "sha256": "928153534eed5310918cfce3842fdc2c5a609b9a0b2f45ac1bfdfc12675fa5be"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-education-chapter.json",
+      "url": "https://api.crossref.org/works/10.1007/978-3-319-99214-3_15",
+      "sha256": "21eb02cb25f6325bbd1e6086345f19b48bc4d63d1cfff8bedefcfede06ac587e"
+    },
+    {
+      "kind": "crossref_registration",
+      "file": "crossref-notes.json",
+      "url": "https://api.crossref.org/works/10.1305/ndjfl/1125409326",
+      "sha256": "8ce94fc239418ac14b2f339dfa31b1119dc5131c0b613308d5aaff919e47e7bf"
+    }
+  ],
+  "review_files": [
+    {
+      "file": "elements-crosswalk-108.csv",
+      "sha256": "aee76afa8602f8863a89b8fa827b76e6c9c208f7dce5ec4f9f844abc0f23c7de"
+    },
+    {
+      "file": "researcher-crosswalk-51.csv",
+      "sha256": "382b5353ea4e29b46f022f601949db223449a590f40d79efe84342844bf164fe"
+    },
+    {
+      "file": "orcid-crosswalk-51.csv",
+      "sha256": "51dec125cd78b196d65d059b6a1db74062f9c40348278adc94dfe18acfda7adb"
+    },
+    {
+      "file": "publisher-omissions-4.json",
+      "sha256": "1624621dccac9610b0e46c48b2897da045d1ba23ce4b368700c2ea1604680a9d"
+    }
+  ],
+  "release_holds": [
+    "No exact Google Scholar account is verified for this researcher.",
+    "Researcher bibliography stopped updating 2017-10-23; ORCID stops at 2024; Elements is not a complete deduplicated career bibliography.",
+    "Publisher-backed chapters and edited volumes missing or misclassified in Elements must retain contributor roles.",
+    "Repository DOI records, a malformed book review, and 13 candidate duplicate pairs need reviewed work identities.",
+    "No source row is eligible to enter the collaboration graph in this review-only batch."
+  ]
+}
