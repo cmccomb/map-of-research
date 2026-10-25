@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 1116
+    assert len(exclusions) == 1117
     assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
@@ -43,7 +43,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
-    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 387
+    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 388
     assert sum(key[0] == "0e1jwkkAAAAJ" for key in exclusions) == 23
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
@@ -108,7 +108,7 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
     assert len({row["author_pub_id"] for row in rows}) == 918
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     proposed = [row for row in rows if row["status"].startswith("proposed_")]
-    assert len(proposed) == 379
+    assert len(proposed) == 380
     for row in rows:
         key = ("bC4aq-4AAAAJ", row["author_pub_id"])
         if row["status"].startswith("proposed_") or row["status"] == "already_excluded":
@@ -145,6 +145,11 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
         by_index[312]["status"] == "cmu_orcid_exact_title_year_retained"
         and by_index[797]["status"] == "proposed_corrupted_duplicate_primary"
         and by_index[797]["author_pub_id"] == "bC4aq-4AAAAJ:9Nmd_mFXekcC"
+    )
+    assert (
+        by_index[156]["status"] == "proposed_other_person_primary_work"
+        and by_index[795]["status"] == "proposed_corrupted_duplicate_primary"
+        and by_index[795]["author_pub_id"] == "bC4aq-4AAAAJ:pUxgyZctzPYC"
     )
     assert all(
         by_index[index]["status"] == "proposed_other_person_primary_work"

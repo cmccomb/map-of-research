@@ -8746,6 +8746,14 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:pUxgyZctzPYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This Scholar row repeats the 2018 Journal of Instrumentation title, volume 13 issue 2, and leading coauthors of observation bC4aq-4AAAAJ:hNSvKAmkeYkC; the KNU institutional record identifies one article, T02007, whose H. J. Kim author links to Hong Joo Kim. This row is a redundant citation observation.",
+      "evidence_url": "https://research.knu.ac.kr/en/publications/muon-detector-for-the-cosine-100-experiment/",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "0e1jwkkAAAAJ",
       "author_pub_id": "0e1jwkkAAAAJ:yxmsSjX2EkcC",
       "reason_code": "false_profile_attribution",
