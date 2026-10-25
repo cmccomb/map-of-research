@@ -16,7 +16,7 @@
   "new_proposed_exclusion_count": 10,
   "unresolved_candidate_count": 1,
   "ingestion_ready": false,
-  "ingestion_dependency": "Merge this source-only PR, then merge the exact Trac producer exclusion PR before a centrally coordinated snapshot rebuild. Capture row 181 remains unresolved and should receive exact source review before ingestion.",
+  "ingestion_dependency": "Merge reviewed producer PR #147 into main before source PR #146 enters automation/map-snapshot, because a source-branch merge triggers the snapshot upload. Capture row 181 remains unresolved and needs exact source review before ingestion.",
   "capture_batch_receipt_path": "status/browser-capture-physics-user-confirmed-batch-2026-10-24.json",
   "capture_batch_provenance_note": "The original two-profile Dodelson/Trac batch receipt is preserved byte-for-byte. Its Dodelson entry records shared capture timing; Dodelson source files are not in this Trac-only PR.",
   "observation_review_path": "status/physics-trac-observation-review-2026-10-24.json",
