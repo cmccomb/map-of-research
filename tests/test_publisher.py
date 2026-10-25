@@ -2057,6 +2057,10 @@ def test_breivik_gate_requires_explicit_release_status(tmp_path) -> None:
     with pytest.raises(FileNotFoundError):
         publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
 
+    status_path.write_text("{")
+    with pytest.raises(json.JSONDecodeError):
+        publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
     for invalid in ([], {"batch": "wrong"}):
         status_path.write_text(json.dumps(invalid))
         with pytest.raises(ValueError, match="invalid source status"):
