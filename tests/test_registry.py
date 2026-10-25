@@ -383,6 +383,108 @@ def test_primary_department_rejects_campus(tmp_path: Path) -> None:
         load_registry(people_path, memberships_path, departments_path)
 
 
+@pytest.mark.parametrize(
+    ("person_id", "source_url"),
+    [
+        (
+            "person-shaikh-2e0f9c29",
+            "https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html",
+        ),
+        (
+            "person-thomas-f531a8ff",
+            "https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html",
+        ),
+    ],
+)
+def test_reviewed_silicon_valley_home_is_a_campus_not_a_department(
+    person_id: str, source_url: str
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    home = registry.primary_affiliation(person_id)
+    assert person.primary_department_id == ""
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "campus",
+        "cmu-silicon-valley",
+        "CMU Silicon Valley",
+        "engineering",
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        "reviewed",
+    )
+    published = home.published_fields()
+    assert published["primary_department_id"] == ""
+    assert published["primary_academic_home_type"] == "campus"
+    assert published["primary_academic_home_id"] == "cmu-silicon-valley"
+    memberships = {
+        item.department_id: item.included
+        for item in registry.memberships
+        if item.person_id == person_id
+    }
+    assert memberships == {"cmu-silicon-valley": True, "iii": False}
+
+
+@pytest.mark.parametrize(
+    ("campus_included", "academic_included", "message"),
+    [
+        (False, False, "not an eligible typed unit"),
+        (True, True, "Campus display home requires no included academic unit"),
+    ],
+)
+def test_campus_home_requires_only_an_included_campus_membership(
+    tmp_path: Path, campus_included: bool, academic_included: bool, message: str
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-campus-review",
+                "display_name": "Campus Review",
+                "primary_academic_home_type": "campus",
+                "primary_academic_home_id": "cmu-silicon-valley",
+                "primary_academic_home_title": "CMU Silicon Valley",
+                "primary_academic_home_source_url": "https://example.test/campus-profile",
+                "primary_academic_home_verified_at": "2026-10-24",
+                "primary_academic_home_basis": "reviewed",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-campus-review",
+                "department_id": department_id,
+                "role": "teaching" if included else "adjunct",
+                "included": "true" if included else "false",
+                "source_url": f"https://example.test/{department_id}",
+                "verified_at": "2026-10-24",
+            }
+            for department_id, included in (
+                ("cmu-silicon-valley", campus_included),
+                ("iii", academic_included),
+            )
+        ],
+        departments=[
+            {
+                "department_id": "cmu-silicon-valley",
+                "school_id": "engineering",
+                "title": "CMU Silicon Valley",
+                "directory_url": "https://example.test/campus",
+                "unit_type": "campus",
+            },
+            {
+                "department_id": "iii",
+                "school_id": "engineering",
+                "title": "Integrated Innovation Institute",
+                "directory_url": "https://example.test/iii",
+                "unit_type": "institute",
+            },
+        ],
+    )
+    with pytest.raises(ValueError, match=message):
+        load_registry(people_path, memberships_path, departments_path)
+
+
 def test_primary_department_rejects_unsupported_membership(tmp_path: Path) -> None:
     people_path, memberships_path, departments_path = write_registry(
         tmp_path,
@@ -503,7 +605,9 @@ def test_primary_review_ledger_covers_every_ambiguous_registry_identity() -> Non
         included = {item.department_id for item in memberships if item.included}
         candidates = included or {item.department_id for item in memberships}
         primary = registry.primary_affiliation(person.person_id)
-        if len(candidates) > 1 or (included and primary.home_type == "unresolved"):
+        if len(candidates) > 1 or (
+            included and primary.home_type in {"unresolved", "campus"}
+        ):
             needs_review.add(person.person_id)
             review = reviews[person.person_id]
             assert review["review_source_urls"].startswith("https://")
@@ -999,7 +1103,7 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
             "Two explicit primary homes",
         ),
         (
-            {"primary_academic_home_type": "campus"},
+            {"primary_academic_home_type": "laboratory"},
             ("tepper-faculty",),
             False,
             "Invalid primary academic home type",

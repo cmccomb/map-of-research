@@ -57,7 +57,10 @@ which consumers distinguish through the typed fields. A person with one
 included academic unit can inherit that
 verified unit; a school-level roster container is not thereby a verified
 department. CMU-Africa is an academic department under Engineering for this
-dataset; CMU Silicon Valley is a campus facet and cannot be a primary.
+dataset. CMU Silicon Valley is a campus facet, never an academic department.
+For a person with an included campus membership and no included academic unit,
+it can be an explicitly reviewed typed `campus` display home; the legacy
+`primary_department_id` remains empty.
 Excluded courtesy, adjunct, affiliate, and former roles cannot supply a
 primary on their own. Multiple eligible units require a source-backed choice,
 a clearly labeled advising-count or title inference, or an explicitly reviewed
@@ -78,10 +81,9 @@ All of these people's included memberships remain available to filters.
 
 The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
 records all 190 people needing explicit review. Across 2,001 registry
-people, 1,442 included people have a display primary and 559 remain unresolved,
-including all 521 excluded-only people. Of 1,480 included people, 38 remain
-unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
-Andrew Ilyas and Chris Hendrickson remain unresolved. The
+people, 1,446 included people have a display primary and 555 remain unresolved,
+including all 521 excluded-only people. Of 1,480 included people, 34 remain
+unresolved. Of 459 included people with a Scholar ID, all have a primary. The
 [four-school review](reviews/2026-10-24-other-schools-primary.md) and
 [Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence.
 Avigad and Sekerka have explicit first-listed visual tie-breaks; their joint
