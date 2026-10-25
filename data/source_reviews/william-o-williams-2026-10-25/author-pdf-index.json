@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "complmusc.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/complmusc.pdf",
+    "sha256": "2c3946764caf57d6fb47350da0a39e9903ad3db30e0a98083d5810f9e9ca4a5e",
+    "bytes": 394443,
+    "title_as_first_page": "Huxley’s Model of Muscle Contraction with Compliance",
+    "date_as_first_page": "2011-01-03",
+    "relationship_review": "same_work_as:10.1007/s10659-011-9304-y",
+    "content_committed": false
+  },
+  {
+    "filename": "geometric.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/geometric.pdf",
+    "sha256": "15779ac1d47ac9bca0cb4ba7dab7a32d43faac37f0c266b324727fee66fbb57a",
+    "bytes": 631740,
+    "title_as_first_page": "Geometric effects in an elastic tensegrity structure",
+    "date_as_first_page": "",
+    "relationship_review": "same_work_as:10.1023/a:1011092811824",
+    "content_committed": false
+  },
+  {
+    "filename": "marching.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/marching.pdf",
+    "sha256": "a2d69410f14714db48c72b8866eca0b6ebf4c15ad8ff63cc210220a4470c65fa",
+    "bytes": 382582,
+    "title_as_first_page": "A marching procedure for form-finding for tensegrity structures",
+    "date_as_first_page": "",
+    "relationship_review": "same_work_as:10.2140/jomms.2007.2.857",
+    "content_committed": false
+  },
+  {
+    "filename": "newprimer.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/newprimer.pdf",
+    "sha256": "9cc72f569bde2085f858c1d91a5469b9d776e46aab28bd94a917f363c8a94737",
+    "bytes": 564921,
+    "title_as_first_page": "A Primer on the Mechanics of Tensegrity Structures",
+    "date_as_first_page": "2001–2016",
+    "relationship_review": "version_cluster:primer",
+    "content_committed": false
+  },
+  {
+    "filename": "oldnewprimer.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/oldnewprimer.pdf",
+    "sha256": "70f9fabe70c900ef180bad2dd5e7c30e9ba4787c7e3f29d470a30ab7d1cd284a",
+    "bytes": 447953,
+    "title_as_first_page": "A Primer on the Mechanics of Tensegrity Structures",
+    "date_as_first_page": "2007-06-13",
+    "relationship_review": "version_cluster:primer",
+    "content_committed": false
+  },
+  {
+    "filename": "snelson.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/snelson.pdf",
+    "sha256": "dff0166542a080f66a54502b98b3fc5900512e3b885f65fcdd5ca8262d33c6d9",
+    "bytes": 415052,
+    "title_as_first_page": "Snelson Tensegrity Structures",
+    "date_as_first_page": "",
+    "relationship_review": "possibly_distinct_manuscript_hold",
+    "content_committed": false
+  },
+  {
+    "filename": "thickshell.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/thickshell.pdf",
+    "sha256": "494b5aec55187a79fa9c64f582b0b2d966e464a8fff7b4e69a873dd77e9f49a7",
+    "bytes": 641245,
+    "title_as_first_page": "Shells with Thickness Distension",
+    "date_as_first_page": "1999-07-23",
+    "relationship_review": "same_work_as:10.1016/s0020-7683(00)00082-2",
+    "content_committed": false
+  },
+  {
+    "filename": "vibration.pdf",
+    "source_url": "https://www.math.cmu.edu/~wow/papers/vibration.pdf",
+    "sha256": "bc17c6144db12095bd7a75d71b4284f601e0c48fd43dbfbadfa2cdc553b53730",
+    "bytes": 437337,
+    "title_as_first_page": "Vibration of an Elastic Tensegrity Structure",
+    "date_as_first_page": "",
+    "relationship_review": "same_work_as:10.1016/s0997-7538(01)01181-0",
+    "content_committed": false
+  }
+]
