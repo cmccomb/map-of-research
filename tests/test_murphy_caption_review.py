@@ -79,3 +79,17 @@ def test_all_six_retained_works_display_full_source_metadata() -> None:
         assert "…" not in correction.corrected["venue"]
         assert "..." not in correction.corrected["authors"]
         assert "Robert F. Murphy" in correction.corrected["authors"]
+
+
+def test_gordon_rule_exchange_chapter_has_exact_publisher_identity() -> None:
+    aliases = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)
+    key = ("n6flaAsAAAAJ", "n6flaAsAAAAJ:M3NEmzRMIkIC")
+    alias = aliases[key]
+    assert alias.doi == "10.1007/1-4020-3500-4_18"
+    assert alias.observed_title == "Exchange processes"
+    assert alias.observed_year == 2006
+    assert alias.relationship == "version_of_record"
+    assert (
+        "https://link.springer.com/chapter/10.1007/1-4020-3500-4_18"
+        in alias.evidence_urls
+    )
