@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-25",
+  "capture_receipt": "status/browser-capture-physics-katelyn-breivik-2026-10-24.json",
+  "raw_capture_and_receipt_unchanged": true,
+  "repairs": [
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 116,
+      "author_pub_id": "AcW2EXwAAAAJ:qjMakFHDy7sC",
+      "cache_field": "author",
+      "captured_value": "A Polzin, A Geller, A Miller, K Breivik",
+      "repaired_value": "A Geller, A Polzin, K Breivik, A Miller",
+      "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+      "evidence_note": "The official AAS 233 abstract book, abstract 363.17 on PDF pages 495-496, lists Aaron Geller, Ava Polzin, Katelyn Breivik, and Adam Miller in that order. The saved 2019 abstract row 116 reverses this order. Repair only the row 116 cache author field; the separate 2018 manuscript row 121 retains its captured Polzin-first order. Raw JSON, HTML, and capture receipts remain unchanged."
+    }
+  ]
+}
