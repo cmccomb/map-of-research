@@ -30,10 +30,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 121 | `159375617198d7887a0614b6e3d992fdbc985b5b6e81210b3ea353a21be4eb1e` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 436 | `bae6f84bd85ad29660d7d95f371a10ede1b1623d7e8577d0d8ca97a1cb1e73b8` |
-| Held from any map release | 361 | `c054c3616c6db0a31240c7629797aeeaa270a8a55c7ee28dcbe3e1fc262845a7` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 447 | `343570eeb1cb06b2eb82ba5240d60eb5fba491ecfb0c026284995e127253e37b` |
+| Held from any map release | 350 | `04ba862ac8a2fc2bdaa790fe2c129b2552317e1dd646bf1f60ae375cf7c3d86f` |
 
-The 361 holds comprise observations that still lack enough output-level review
+The 350 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 121 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -75,11 +75,16 @@ only those exact Scholar IDs.
 identify Hyeonsook Kim on one IEEE output and Hyung Joon Kim on five KIST
 sensor outputs. The six exact Scholar IDs are excluded; neighboring
 initials-only records stay held.
+[Eleven further exact publisher, society, and institutional author records](2026-10-25-chem-kim-eleven-full-author-primary-review.md)
+identify Ho Jin, Hee Joung, Hae Jin, HyeJung, Hee-Jin, and Hyun-Jung Kim
+on other works; only those eleven exact Scholar IDs are excluded.
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
 own DOI/page evidence and remain distinct works. The 121 confirmed rows do
 **not** represent Kim's whole publication history.
 The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
 keeps three more initials-only records held despite suggestive related sources.
+A [separate high-citation QC pass](2026-10-25-chem-kim-high-citation-holds-qc.md)
+documents 14 exact works that still lack a direct full-name attribution.
 
 The offline [preparer](prepare_chem_kim_reviewed_subset.py) recreates a
 candidate `data/authors/bC4aq-4AAAAJ.json`-shaped cache and both proposal
@@ -100,8 +105,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 121 confirmed IDs, and the 436 exact exclusion IDs to
-these lists; it must prevent all 361 held rows from creating works,
+all 918 exact IDs, the 121 confirmed IDs, and the 447 exact exclusion IDs to
+these lists; it must prevent all 350 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the

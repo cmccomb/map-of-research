@@ -1,0 +1,27 @@
+# Hyung J. Kim: eleven more exact source-attribution decisions
+
+These decisions address eleven held observations in the complete 918-row
+Google Scholar capture. They concern identity on the **exact work**, not a
+topic, neighboring publication, or assumed coauthor network. Every other
+captured ID keeps its prior disposition. No public profile is released.
+
+| Capture row / Scholar citation suffix | Primary work and person evidence | Decision |
+| --- | --- | --- |
+| 152 / `x2hKVfJWtf0C` | [Wiley DOI 10.1111/ene.13321](https://onlinelibrary.wiley.com/doi/10.1111/ene.13321), *European Journal of Neurology* 24:966–973, links its H. J. Kim author at National Cancer Center to [ORCID 0000-0002-8672-8419](https://orcid.org/0000-0002-8672-8419); the [ORCID person API](https://pub.orcid.org/v3.0/0000-0002-8672-8419/person) spells **Ho Jin Kim**. Exact title, year, pages, and coauthors match. | Exclude this exact ID as another person's work. |
+| 230 / `ZysSsiWj_g4C` | [Wiley DOI 10.1111/ene.13011](https://onlinelibrary.wiley.com/doi/10.1111/ene.13011), *European Journal of Neurology* 23:1165–1173, gives corresponding H. J. Kim's National Cancer Center address `hojinkim@ncc.re.kr`; [NCC's faculty page](https://www.ncc-gcsp.ac.kr/kr_academics/kimhojin.jsp) gives that address for **Ho Jin Kim**. | Exclude this exact ID. |
+| 247 / `4vMrXwiscB8C` | [University of Seoul's exact output](https://pure.uos.ac.kr/en/publications/treatment-of-abandoned-coal-mine-discharged-waters-using-lime-was/) and the [Springer DOI deposit](https://api.crossref.org/works/10.1007%2FBF02913923) name second author **Hee Joung Kim** in *Geosciences Journal* 11:111–114 (2007). | Exclude this exact ID. |
+| 250 / `QtA78RmWg5MC` | The Scholar **title field is corrupted**: “Korean Endocrine Society, Committee for Clinical Practice Guidelines” is the corporate author. Its venue field names *Clinical Guidelines for the Management of Adrenal Incidentaloma*. The [original society article](https://pmc.ncbi.nlm.nih.gov/articles/PMC5503865/) is *Endocrinology and Metabolism* 32:200–218 (2017), DOI 10.3803/EnM.2017.32.2.200, and identifies eighth author **Hae Jin Kim** at Ajou University. Saved author order and year match. | Exclude this exact ID as a false person attribution; the malformed Scholar fields are preserved in the raw capture. |
+| 251 / `NXYAu82O0W8C` | [Wiley DOI 10.1111/ene.13266](https://onlinelibrary.wiley.com/doi/10.1111/ene.13266), *European Journal of Neurology* 24:652–658, gives corresponding H. J. Kim at `hojinkim@ncc.re.kr`; [NCC's Ho Jin Kim bibliography](https://www.ncc-gcsp.ac.kr/kr_academics/kimhojin.jsp) lists the exact title, year, volume, and pages. | Exclude this exact ID. |
+| 253 / `AvfA0Oy_GE0C` | [Korean Nuclear Society publisher-deposited DOI 10.5516/NET.09.2013.103](https://api.crossref.org/works/10.5516%2FNET.09.2013.103) and the original article front page give first author **Hyun-Jung Kim** with the exact five-person team, *Nuclear Engineering and Technology* 46:529–540 (2014). The [KCI exact journal record](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001900776) gives a different Korean rendering of the first author's name; that discrepancy should be resolved for a separate person authority record, but neither original source identifies CMU Hyung J. Kim. | Exclude only this exact ID. |
+| 270 / `xii_ZKWM4-0C` | [Wiley DOI 10.1111/ene.14274](https://onlinelibrary.wiley.com/doi/10.1111/ene.14274), *European Journal of Neurology* 27:1546–1555, links its National Cancer Center H. J. Kim to the [Ho Jin Kim ORCID](https://pub.orcid.org/v3.0/0000-0002-8672-8419/person). | Exclude this exact ID. |
+| 296 / `Ehil0879vHcC` | [AIP publisher-deposited DOI 10.1063/1.3506497](https://api.crossref.org/works/10.1063%2F1.3506497) expands seventh author H. J. Kim to **HyeJung Kim**, matching *Applied Physics Letters* 97:171912 (2010) and the full eight-person team. | Exclude this exact ID. |
+| 411 / `uLbwQdceFCQC` | The [original *Journal of Korean Medical Science* article](https://jkms.org/DOIx.php?id=10.3346/jkms.2011.26.12.1646) gives second author **Hee-Jin Kim** at Samsung Medical Center on the exact 2011 article, volume 26, pages 1646–1649. | Exclude this exact ID. |
+| 412 / `HIFyuExEbWQC` | [KCI's original society article record](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000974760) names **Hee Joung Kim** on “Assessment of Water Pollution by Discharge of Abandoned Mines,” *Journal of Soil and Groundwater Environment* 10:25–36 (2005). The saved Scholar author order differs, but title, journal, year, pages, and coauthor team identify the same work. | Exclude this exact ID. |
+| 434 / `fFSKOagxvKUC` | [KCI's original society article record](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000930334) names sixth author **Hee Joung Kim** on “Phytoremediation of Heavy Metal contaminated Soils Using Transgenic Plants,” *Korean Journal of Soil Science and Fertilizer* 37:396–406 (2004). The Scholar byline order differs, but exact title, journal, year, and remaining team match. | Exclude this exact ID. |
+
+The partition is now **121 confirmed, 447 exact exclusions, 350 held = 918**.
+The source capture SHA-256 remains
+`ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867`;
+the offline candidate cache remains
+`f4b7b37efcd3310a05ff82057488ecb286450e3db0dc390b4e26b125fc378b2e`.
+The 350 holds and the entire Kim profile remain off the public maps.
