@@ -206,7 +206,10 @@ def test_eight_additional_primary_source_records_remain_held() -> None:
     items = additions["observations"]
     assert len(items) == len({item["observation_id"] for item in items}) == 8
     assert {item["source_kind"] for item in items} == {
-        "research_preprint", "masters_thesis", "withdrawn_preprint", "magazine_article"
+        "research_preprint",
+        "masters_thesis",
+        "withdrawn_preprint",
+        "magazine_article",
     }
     assert sum(item["source_kind"] == "research_preprint" for item in items) == 4
     assert sum(item["source_kind"] == "magazine_article" for item in items) == 2
