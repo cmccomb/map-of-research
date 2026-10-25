@@ -84,6 +84,7 @@ PRIOR_OBSERVATION_FIELDS = (
     *IDENTITY_FIELDS,
     "work_id",
     "map_eligible",
+    "collaboration_eligible",
     "review_exclusion_code",
     "context_verified_at",
     *tuple(field for field in FINGERPRINT_FIELDS if field not in IDENTITY_FIELDS),
@@ -100,6 +101,8 @@ class RegionReleaseDiffError(ValueError):
             "Region release-diff gate failed: "
             f"{len(receipt['unexplained_losses'])} unexplained losses, "
             f"{len(receipt['unexplained_gains'])} unexplained gains, "
+            f"{len(receipt.get('unapproved_mapped_binding_changes', []))} "
+            "mapped binding changes, "
             f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
             "unused Sullivan approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
@@ -439,6 +442,27 @@ def reconcile_region_decisions(
     after = _visible_observations(current_rows, final_works)
     losses = before - after
     gains = after - before
+    # Visibility alone is insufficient: a still-visible observation can move
+    # to another eligible work or stop contributing a collaboration edge.
+    # Neither change is covered by a Sullivan visible-row loss approval.
+    unapproved_mapped_binding_changes = [
+        {
+            "observation": _display(identity),
+            "prior_work_id": str(previous_rows[identity].get("work_id") or ""),
+            "current_work_id": str(current_rows[identity].get("work_id") or ""),
+            "prior_collaboration_eligible": bool(
+                previous_rows[identity].get("collaboration_eligible")
+            ),
+            "current_collaboration_eligible": bool(
+                current_rows[identity].get("collaboration_eligible")
+            ),
+        }
+        for identity in sorted(before & after)
+        if str(previous_rows[identity].get("work_id") or "")
+        != str(current_rows[identity].get("work_id") or "")
+        or bool(previous_rows[identity].get("collaboration_eligible"))
+        != bool(current_rows[identity].get("collaboration_eligible"))
+    ]
     reviewed_losses = sorted(
         identity for identity in losses if _reviewed_loss(current_rows.get(identity))
     )
@@ -471,10 +495,14 @@ def reconcile_region_decisions(
             )
         ):
             raise ValueError("Sullivan exact-loss approval is not the reviewed set")
-        unused_sullivan_approvals = (
-            approved_sullivan_losses - otherwise_unexplained_losses
-        )
-    unexplained_losses = sorted(otherwise_unexplained_losses - approved_sullivan_losses)
+        unused_sullivan_approvals = approved_sullivan_losses - losses
+    # In this one-time source transition the manifest is the entire permitted
+    # prior-visible loss set. Generic reviewed-loss exemptions still apply to
+    # ordinary releases, but cannot admit a 23rd Sullivan-release loss.
+    losses_requiring_approval = (
+        losses if sullivan_loss_approval is not None else otherwise_unexplained_losses
+    )
+    unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
     verified_gains = sorted(
         identity
         for identity in gains
@@ -537,9 +565,15 @@ def reconcile_region_decisions(
         ],
         "verified_gains": [_display(item) for item in verified_gains],
         "new_source_gains": len(new_gains),
+        "unapproved_mapped_binding_changes": unapproved_mapped_binding_changes,
         "unexplained_losses": [_display(item) for item in unexplained_losses],
         "unexplained_gains": [_display(item) for item in unexplained_gains],
     }
-    if unexplained_losses or unexplained_gains or unused_sullivan_approvals:
+    if (
+        unexplained_losses
+        or unexplained_gains
+        or unapproved_mapped_binding_changes
+        or unused_sullivan_approvals
+    ):
         raise RegionReleaseDiffError(receipt)
     return output, receipt

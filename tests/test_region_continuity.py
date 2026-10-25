@@ -167,6 +167,43 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["unexplained_gains"] == []
 
 
+def test_visible_observation_cannot_change_work_without_exact_review():
+    prior_rows = [observation("person-one", "one"), observation("person-two", "two")]
+    current_rows = [{**prior_rows[0], "work_id": "two"}, prior_rows[1]]
+    works = [
+        work("one", eligible=True, outlier=False),
+        work("two", eligible=True, outlier=False),
+    ]
+    with pytest.raises(RegionReleaseDiffError, match="mapped binding changes") as error:
+        reconcile(works, current_rows, works, prior_rows)
+    assert error.value.receipt["unapproved_mapped_binding_changes"] == [
+        {
+            "observation": "person-one/profile/profile:shared-row/scholar",
+            "prior_work_id": "one",
+            "current_work_id": "two",
+            "prior_collaboration_eligible": False,
+            "current_collaboration_eligible": False,
+        }
+    ]
+
+
+def test_visible_observation_cannot_change_collaboration_eligibility_silently():
+    prior = {**observation("person-one", "one"), "collaboration_eligible": True}
+    current = {**prior, "collaboration_eligible": False}
+    works = [work("one", eligible=True, outlier=False)]
+    with pytest.raises(RegionReleaseDiffError, match="mapped binding changes") as error:
+        reconcile(works, [current], works, [prior])
+    assert error.value.receipt["unapproved_mapped_binding_changes"] == [
+        {
+            "observation": "person-one/profile/profile:shared-row/scholar",
+            "prior_work_id": "one",
+            "current_work_id": "one",
+            "prior_collaboration_eligible": True,
+            "current_collaboration_eligible": False,
+        }
+    ]
+
+
 def test_sullivan_approval_rejects_wrong_object_type():
     rows = [observation("person-one", "one")]
     works = [work("one", eligible=True, outlier=False)]
@@ -351,6 +388,30 @@ def test_exact_sullivan_approval_fails_for_unapproved_loss_and_unused_id():
             pandas.DataFrame(current_rows[1:]),
             prior_works,
             prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+        )
+
+
+def test_exact_sullivan_approval_rejects_extra_generic_reviewed_loss():
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    extra = observation("person-extra", "extra")
+    reviewed_extra = {
+        **extra,
+        "map_eligible": False,
+        "review_exclusion_code": "duplicate",
+        "map_exclusion_reasons": ["reviewed_duplicate"],
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile_region_decisions(
+            pandas.DataFrame(
+                [*current_works, work("extra", eligible=False, outlier=False)]
+            ),
+            pandas.DataFrame([*current_rows, reviewed_extra]),
+            [*prior_works, work("extra", eligible=True, outlier=False)],
+            [*prior_rows, extra],
             prior_revision=PRIOR_REVISION,
             sullivan_loss_approval=approval,
         )
