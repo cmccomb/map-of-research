@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scholar_id": "U3C5FmkAAAAJ",
+  "display_name": "Clive Newstead",
+  "fetched_at_utc": "2026-10-24T23:52:02.122000+00:00",
+  "publication_count": 2,
+  "publications": [
+    {
+      "title": "An infinite descent into pure mathematics",
+      "author": "C Newstead",
+      "pub_year": "2018",
+      "venue": "",
+      "num_citations": 3,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=U3C5FmkAAAAJ&pagesize=100&citation_for_view=U3C5FmkAAAAJ:u-x6o8ySG0sC",
+      "author_pub_id": "U3C5FmkAAAAJ:u-x6o8ySG0sC",
+      "capture_row_index": 2,
+      "citation_count_display": "3*"
+    },
+    {
+      "title": "Polynomial pseudomonads and dependent type theory",
+      "author": "S Awodey, C Newstead",
+      "pub_year": "2018",
+      "venue": "arXiv preprint arXiv:1802.00997, 2018",
+      "num_citations": 14,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=U3C5FmkAAAAJ&pagesize=100&citation_for_view=U3C5FmkAAAAJ:u5HHmVD_uO8C",
+      "author_pub_id": "U3C5FmkAAAAJ:u5HHmVD_uO8C",
+      "capture_row_index": 1,
+      "citation_count_display": "14"
+    }
+  ],
+  "browser_capture": {
+    "method": "isolated_playwright_direct_profile",
+    "profile_url": "https://scholar.google.com/citations?user=U3C5FmkAAAAJ&hl=en&pagesize=100",
+    "captured_at_utc": "2026-10-24T23:52:02.122000+00:00",
+    "source_json_filename": "newstead-visible-2-2026-10-24.json",
+    "source_json_sha256": "4ae56bb8f9b95532da729ca825d1f13aaa069ec31a3f6f93f6d079aa7d4f180f",
+    "source_html_filename": "newstead-visible-2-2026-10-24.html",
+    "source_html_sha256": "8704592a279517e3023f344b392e15f59475f434dc2f5a5dc8e649c405eefeab",
+    "displayed_count": 2,
+    "limit": 5000,
+    "more_remain": false,
+    "coverage": "complete_visible_profile",
+    "identity_status": "verified_identity_stale_scholar_affiliation",
+    "official_person_url": "https://www.cmu.edu/math/people/faculty/newstead.html",
+    "owned_person_url": "https://www.math.cmu.edu/~cnewstea/",
+    "requested_profile_url": "https://scholar.google.com/citations?user=U3C5FmkAAAAJ&hl=en&pagesize=100",
+    "lifetime_publication_completeness": "not_independently_established"
+  }
+}
