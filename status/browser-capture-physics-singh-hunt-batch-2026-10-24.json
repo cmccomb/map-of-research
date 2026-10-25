@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "hgtyZOUAAAAJ",
+    "11EoZncAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "hgtyZOUAAAAJ",
+    "11EoZncAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-simranjeetsingh-8f74243d",
+      "display_name": "Simranjeet Singh",
+      "scholar_id": "hgtyZOUAAAAJ",
+      "publication_count": 53,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "source_json_sha256": "08026528fc70b1c9c553ca465debaadecfb80499dadb5a05eb334c9a9ece41de",
+      "source_html_sha256": "68daa670cc3772e41e14a4c7368c6772aaf2c31262a2282b27e4f442789d5039"
+    },
+    {
+      "person_id": "person-benjaminhunt-e286d360",
+      "display_name": "Benjamin Hunt",
+      "scholar_id": "11EoZncAAAAJ",
+      "publication_count": 95,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "source_json_sha256": "86a289c18b286602ea6c24ea21ec98f5de4e848c5fea6a3c25b75ca926b127e2",
+      "source_html_sha256": "b1edd814ad0889efee8d27821e0d2586a698b7c7f2dc8d70bb7a813609a4e4f3"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:41:41+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:43:16+00:00",
+  "inter_profile_reservation_gap_seconds": 95,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T22:44:23.100951+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Singh linked from official CMU Physics faculty page; Hunt linked from official CMU Scholars profile, with Physics faculty role confirmed. Both live Scholar profiles matched name and Carnegie Mellon affiliation."
+}

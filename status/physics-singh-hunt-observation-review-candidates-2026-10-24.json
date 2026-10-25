@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-25",
+  "note": "Both Singh patent rows are verified genuine and retained under the project patent policy; Hunt row 95 remains unresolved. Source and cache rows remain intact; no producer change is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row": 95,
+      "author_pub_id": "11EoZncAAAAJ:qjMakFHDy7sC",
+      "concern": "Venue is blank in Scholar; identify source before deciding classification."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row_groups": [
+        [
+          5,
+          54
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "row_count": 6,
+      "capture_rows": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        52
+      ],
+      "note": "Meeting abstracts are retained in the raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "row_count": 40,
+      "capture_rows": [
+        32,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        90
+      ],
+      "note": "Meeting abstracts are retained in the raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 38,
+      "author_pub_id": "hgtyZOUAAAAJ:7PzlFSSx8tAC",
+      "reason": "Official UCF repository identifies this as Simranjeet Singh’s 2014 Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://stars.library.ucf.edu/etd/4606/"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row": 31,
+      "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
+      "reason": "CMU CV identifies Relaxation Dynamics Of Solid Helium-4 as Benjamin Hunt’s 2009 Cornell Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/hunt_cv.pdf"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 37,
+      "author_pub_id": "hgtyZOUAAAAJ:YohjEiUPhakC",
+      "reason": "Retain as a genuine Simranjeet Singh patent application; the project supports patent work identity by published document number.",
+      "evidence_url": "https://patents.google.com/patent/US20230335325A1/en"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 48,
+      "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
+      "reason": "Retain as a genuine Simranjeet Singh patent; the project supports patent work identity by published document number.",
+      "evidence_url": "https://patents.google.com/patent/US10134979B1/en"
+    }
+  ]
+}

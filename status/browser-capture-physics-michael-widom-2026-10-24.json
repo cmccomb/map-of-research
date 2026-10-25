@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-michaelwidom-8ddeb878",
+  "display_name": "Michael Widom",
+  "scholar_profile_name": "Michael Widom",
+  "scholar_id": "czs45aEAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/widom.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/5138-michael-widom",
+  "scholar_identity_basis": "CMU Scholars page directly links this Scholar ID; official CMU Physics faculty page confirms role, and live Scholar name matched.",
+  "reserved_at_utc": "2026-10-24T23:19:26+00:00",
+  "captured_at_utc": "2026-10-24T23:20:00.751Z",
+  "publication_count": 215,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/physics-michael-widom-2026-10-24.json",
+  "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+  "source_html_path": "data/captures/physics-michael-widom-2026-10-24.html",
+  "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04",
+  "cache_path": "data/authors/czs45aEAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "capture_row": 67,
+      "author_pub_id": "czs45aEAAAAJ:Zph67rFs4hoC",
+      "citation_count_display": "43*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

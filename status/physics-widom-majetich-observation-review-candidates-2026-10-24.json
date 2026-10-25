@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-25",
+  "note": "Widom row 214 and Majetich rows 222, 265, 266 and 267 moved to the exact proposed ledger. Majetich patents 93, 104 and 135 are genuine and retained. Majetich row 181 is a genuine DOE technical report, retained but awaiting report-type context support; row 271 remains unresolved. No producer change is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 181,
+      "author_pub_id": "FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+      "concern": "Exact OSTI source verifies a genuine DOE technical report. Retain; producer context lacks a report type, so type support remains pending."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 271,
+      "author_pub_id": "FRlLpMYAAAAJ:Tiz5es2fbqcC",
+      "concern": "Title appears to combine multiple bibliographic fragments; identify exact source."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row_groups": [
+        [
+          131,
+          211
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare exact sources before deduplication."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row_groups": [
+        [
+          97,
+          250
+        ],
+        [
+          124,
+          189
+        ],
+        [
+          145,
+          232
+        ],
+        [
+          238,
+          242
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare exact sources before deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_rows": [
+        126,
+        200,
+        261,
+        268,
+        271
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "missing_year_groups": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_rows": [
+        259,
+        260,
+        261,
+        262,
+        268,
+        269,
+        271
+      ],
+      "concern": "Scholar year is blank; inspect source before supplying publication metadata."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "row_count": 1,
+      "capture_rows": [
+        211
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "row_count": 26,
+      "capture_rows": [
+        165,
+        178,
+        180,
+        184,
+        187,
+        192,
+        195,
+        197,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        217,
+        220,
+        221,
+        223,
+        227,
+        234,
+        238,
+        239,
+        240,
+        243,
+        244
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 93,
+      "author_pub_id": "FRlLpMYAAAAJ:9pM33mqn1YgC",
+      "reason": "Retain as a genuine Sara Majetich patent, published as US10586579B2.",
+      "evidence_url": "https://patents.google.com/patent/US10586579B2/en"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 104,
+      "author_pub_id": "FRlLpMYAAAAJ:abG-DnoFyZgC",
+      "reason": "Retain as a genuine Sara Majetich patent application, published as US20130327636A1.",
+      "evidence_url": "https://patents.google.com/patent/US20130327636A1/en"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 135,
+      "author_pub_id": "FRlLpMYAAAAJ:sNmaIFBj_lkC",
+      "reason": "Retain as a distinct genuine Sara Majetich patent, published as US10854257B2.",
+      "evidence_url": "https://patents.google.com/patent/US10854257B2/en"
+    }
+  ]
+}
