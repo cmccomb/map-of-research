@@ -2002,6 +2002,119 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
         )
 
 
+def test_breivik_gate_blocks_current_hold_before_enrichment(
+    monkeypatch, tmp_path
+) -> None:
+    snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
+    status_path = tmp_path / "status" / publisher.BREIVIK_REVIEW_STATUS_NAME
+    status_path.parent.mkdir()
+    status_path.write_text(
+        json.dumps(
+            {
+                "batch": publisher.BREIVIK_REVIEW_BATCH,
+                "ingestion_ready": False,
+                "snapshot_release_hold": True,
+                "preliminary_candidate_count": 8,
+                "reviewed_exclusion_count_present_in_producer_main": 2,
+            }
+        )
+    )
+    frame = pandas.DataFrame({"scholar_id": [publisher.BREIVIK_REVIEW_SCHOLAR_ID]})
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (frame, {"created_at_utc": "now"}),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "add_embeddings",
+        lambda *args, **kwargs: pytest.fail("held rows reached enrichment"),
+    )
+    with pytest.raises(
+        ValueError, match="Breivik map-quality gate: source review is held"
+    ):
+        publisher.publish_snapshot(
+            snapshot_path, tmp_path / "manifest.json", hf_token="token"
+        )
+
+
+def test_breivik_gate_requires_explicit_release_status(tmp_path) -> None:
+    snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
+    status_path = tmp_path / "status" / publisher.BREIVIK_REVIEW_STATUS_NAME
+    status_path.parent.mkdir()
+    frame = pandas.DataFrame({"scholar_id": [publisher.BREIVIK_REVIEW_SCHOLAR_ID]})
+    exclusions = {
+        (publisher.BREIVIK_REVIEW_SCHOLAR_ID, f"Breivik:reviewed-{i}"): object()
+        for i in range(7)
+    }
+    exclusions[("other", "other:reviewed")] = object()
+
+    publisher._require_breivik_review_ready(
+        pandas.DataFrame({"scholar_id": ["other"]}), snapshot_path, exclusions
+    )
+    with pytest.raises(FileNotFoundError):
+        publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    status_path.write_text("{")
+    with pytest.raises(json.JSONDecodeError):
+        publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    for invalid in ([], {"batch": "wrong"}):
+        status_path.write_text(json.dumps(invalid))
+        with pytest.raises(ValueError, match="invalid source status"):
+            publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    ready = {
+        "batch": publisher.BREIVIK_REVIEW_BATCH,
+        "ingestion_ready": True,
+        "snapshot_release_hold": False,
+        "preliminary_candidate_count": 0,
+        "quality_review_complete": True,
+        "reviewed_exclusion_count_present_in_producer_main": 7,
+    }
+    for change in (
+        {"ingestion_ready": False},
+        {"snapshot_release_hold": True},
+        {"preliminary_candidate_count": 1},
+        {"preliminary_candidate_count": False},
+        {"quality_review_complete": False},
+    ):
+        status_path.write_text(json.dumps({**ready, **change}))
+        with pytest.raises(ValueError, match="source review is held"):
+            publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    for missing_field in (
+        "ingestion_ready",
+        "snapshot_release_hold",
+        "preliminary_candidate_count",
+        "quality_review_complete",
+    ):
+        status_path.write_text(
+            json.dumps(
+                {key: value for key, value in ready.items() if key != missing_field}
+            )
+        )
+        with pytest.raises(ValueError, match="source review is held"):
+            publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    for changed_count in (2, 8, True, "7", None):
+        status_path.write_text(
+            json.dumps(
+                {
+                    **ready,
+                    "reviewed_exclusion_count_present_in_producer_main": changed_count,
+                }
+            )
+        )
+        with pytest.raises(ValueError, match="reviewed-exclusion count differs"):
+            publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+    status_path.write_text(json.dumps(ready))
+    publisher._require_breivik_review_ready(frame, snapshot_path, exclusions)
+
+
 def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
     for name in ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_RUN_ID"):
         monkeypatch.delenv(name, raising=False)
