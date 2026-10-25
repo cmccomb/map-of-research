@@ -1729,6 +1729,68 @@ COSINE_FULLNAME_AUTHORS = {
     366: "D Lee, JY Cho, CH Ha, E Jeon, H Kim, J Kim, K Kim, SH Kim, SK Kim, ...",
 }
 
+# These three exact DOI records identify the initials-only author through
+# institutional author links, a full university byline, or publisher-linked
+# ORCID person records. Similar collaborations without that identity link
+# remain held.
+KNU_COSINE_AMORE_PRIMARY = {
+    353: (
+        "Measurements of low-energy nuclear recoil quenching factors for Na "
+        "and I recoils in the NaI (Tl) scintillator",
+        2024,
+        "Hong Joo Kim",
+        "10.1103/PhysRevC.110.014614",
+        "https://research.knu.ac.kr/en/publications/measurements-of-low-energy-nuclear-recoil-quenching-factors-for-n/",
+        "Kyungpook National University exact DOI author-to-person link",
+        "The Kyungpook National University record for Physical Review C "
+        "110:014614 links its H. J. Kim author directly to Hong Joo Kim's "
+        "Physics faculty page. He is distinct from CMU Chemistry's Hyung J. Kim.",
+    ),
+    408: (
+        "Limits on WIMP dark matter with NaI (Tl) crystals in three years "
+        "of COSINE-100 data",
+        2025,
+        "Hongjoo Kim",
+        "10.1103/77p2-rnbw",
+        "https://scholar.korea.ac.kr/item/c10ee6c6-a308-44a3-a039-13d2f39d10c1",
+        "Korea University exact DOI complete full-name byline and APS affiliation",
+        "Korea University's record of the exact Physical Review Letters "
+        "135:231001 article and DOI names Hongjoo Kim in the complete "
+        "byline. The APS original identifies H. J. Kim's affiliation as "
+        "Kyungpook National University Physics, not CMU Chemistry.",
+    ),
+    519: (
+        "Radioassay of the materials for AMoRE-II experiment",
+        2024,
+        "Ho-Jong Kim and HongJoo Kim",
+        "10.3389/fphy.2024.1362209",
+        "https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2024.1362209/full",
+        "Frontiers original byline with two author-linked ORCID identities",
+        "The Frontiers article for volume 12:1362209 lists two H. J. Kim "
+        "authors and links them to ORCID 0000-0002-8265-5283 (Ho-Jong Kim) "
+        "and 0000-0001-9787-4684 (HongJoo Kim). Neither is CMU Chemistry "
+        "professor Hyung J. Kim.",
+    ),
+}
+OTHER_PRIMARY.update(KNU_COSINE_AMORE_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        353: "bC4aq-4AAAAJ:RgznTc0nqo4C",
+        408: "bC4aq-4AAAAJ:e0LTWoPxLYMC",
+        519: "bC4aq-4AAAAJ:oXKBmVzQOggC",
+    }
+)
+KNU_COSINE_AMORE_VENUES = {
+    353: "Physical Review C 110 (1), 014614, 2024",
+    408: "Physical review letters 135 (23), 231001, 2025",
+    519: "Frontiers in Physics 12, 1362209, 2024",
+}
+KNU_COSINE_AMORE_AUTHORS = {
+    353: "SH Lee, HW Joo, HJ Kim, KW Kim, SK Kim, YD Kim, YJ Ko, HS Lee, ...",
+    408: "GH Yu, N Carlin, JY Cho, JJ Choi, S Choi, AC Ezeribe, LE França, C Ha, ...",
+    519: "A Agrawal, VV Alenkov, P Aryal, H Bae, J Beyer, B Bhandari, RS Boiko, ...",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3347,6 +3409,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["authors"] != COSINE_FULLNAME_AUTHORS[index]
                 )
                 or (
+                    index in KNU_COSINE_AMORE_VENUES
+                    and row["venue"] != KNU_COSINE_AMORE_VENUES[index]
+                )
+                or (
+                    index in KNU_COSINE_AMORE_AUTHORS
+                    and row["authors"] != KNU_COSINE_AMORE_AUTHORS[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3698,17 +3768,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 121,
+        "proposed_other_person_primary_work": 124,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 316,
+        "unresolved_attribution_hold": 313,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 468 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 471 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
