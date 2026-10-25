@@ -192,6 +192,28 @@ def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
     )
 
 
+def test_checked_in_mcmanus_hold_targets_only_unverified_poster_byline():
+    profiles = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    profile = next(item for item in profiles if item.scholar_id == "28yZqbcAAAAJ")
+    assert profile.person_id == "person-cjoelmcmanus-f28918ce"
+    assert profile.expected_source_rows == 62
+    assert profile.cache_sha256 == (
+        "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096"
+    )
+    assert profile.expected_reviewed_exclusion_rows == 3
+    assert profile.reviewed_exclusion_ids_sha256 == (
+        "3316309a95705c86671fc2144795b95a22296fc4df3c358334290e9fe002bc84"
+    )
+    assert [
+        (item.capture_row_index, item.author_pub_id)
+        for item in profile.held_observations
+    ] == [(60, "28yZqbcAAAAJ:HKviVsUxM5wC")]
+    assert (
+        hold_ids_sha256({item.author_pub_id for item in profile.held_observations})
+        == "5009f431f17b2eaecdd281dc6ed51e01f8a4914074e85d7f7ab4e3273ca0e2aa"
+    )
+
+
 def _manifest(tmp_path, profiles):
     path = tmp_path / "holds.json"
     path.write_text(json.dumps({"schema_version": 1, "profiles": profiles}))

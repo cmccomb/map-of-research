@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "approval_id": "bio-mcmanus-rustbelt-2021-poster-one-time-loss",
+  "prior_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
+  "source_snapshot_sha256": "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550",
+  "profile_releases_sha256": "3e478a97229db160c92cd0e4b584d9cac4bece811daf7469c307df80524560f3",
+  "provisional_holds_sha256": "7653e248423dcd63242a6a095c05d8271b0e2dba2bf0fc5d4ebdb56442c9227d",
+  "source_cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+  "expected_loss_count": 1,
+  "loss": {
+    "person_id": "person-cjoelmcmanus-f28918ce",
+    "scholar_id": "28yZqbcAAAAJ",
+    "author_pub_id": "28yZqbcAAAAJ:HKviVsUxM5wC",
+    "source_type": "scholar",
+    "prior_work_id": "work-d701cf6129386f93f78754f5b2f78e2653904fecbc6428dfb27ca849547cf4e8",
+    "source_record_sha256": "a2d3b3ebb010eea4f246edf2d67e7c4463440499ea15de380aff25486dddd164",
+    "capture_row_index": 60,
+    "reason": "Rustbelt RNA 2021 lists Tosiano's poster 101 and its topic, but the public organizer record does not verify the complete four-name Scholar byline or contributor roles; hold the placeholder from map and coauthor edges pending the original abstract.",
+    "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=28yZqbcAAAAJ&cstart=20&pagesize=80&citation_for_view=28yZqbcAAAAJ:HKviVsUxM5wC"
+  }
+}

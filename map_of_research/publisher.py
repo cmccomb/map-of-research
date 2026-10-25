@@ -76,6 +76,7 @@ from .keywords import (
     exclude_low_information_regions,
 )
 from .math_release_gate import validate_math_coverage
+from .poster_loss_approval import load_poster_loss_approval
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
     load_profile_releases,
@@ -1291,21 +1292,19 @@ def _publish_atomic_release(
             prior_revision=prior_revision,
             hf_token=hf_token,
         )
-        pending_in_parent = sum(
-            row.get("keyword_id") == "keyword-unclassified"
-            and row.get("detail_keyword_id") == "keyword-unclassified-pending-review"
-            and bool(row["map_eligible"])
-            for row in baselines["repair_works"]
-        )
-        if pending_in_parent:
-            if not repair_manifest_path.is_file():
-                raise FileNotFoundError(
-                    "Bio release needs the reviewed repair manifest: "
-                    f"{repair_manifest_path}"
-                )
-            repair_manifest = load_json(repair_manifest_path)
-        else:
-            repair_manifest = {"restore_eligible_work_ids": []}
+        # Carry every pending label in the immutable Hub parent. The historical
+        # Bernhard manifest names 112 different decisions, while the current
+        # Sullivan/Math parent contains 15 mapped pending labels.
+        repair_manifest = {
+            "restore_eligible_work_ids": sorted(
+                str(row["work_id"])
+                for row in baselines["repair_works"]
+                if row.get("keyword_id") == "keyword-unclassified"
+                and row.get("detail_keyword_id")
+                == "keyword-unclassified-pending-review"
+                and bool(row["map_eligible"])
+            )
+        }
         tables["works"] = preserve_pending_review_topics(
             tables["works"], baselines["repair_works"], repair_manifest
         )
@@ -1490,6 +1489,7 @@ def publish_snapshot(
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
     provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
+    historical_loss_approval_path: Path | None = None,
     source_cache_dir: Path | None = None,
     primary_home_baseline_path: Path | None = None,
     prior_revision: str | None = None,
@@ -1606,6 +1606,19 @@ def publish_snapshot(
         if sullivan_transition
         else None
     )
+    poster_loss_approval = None
+    if historical_loss_approval_path is not None:
+        if not frozen_bio_source:
+            raise ValueError("McManus poster approval requires the frozen Bio source")
+        poster_loss_approval = load_poster_loss_approval(
+            historical_loss_approval_path,
+            prior_revision=prior_revision,
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            profile_releases_sha256=release_manifest_sha256,
+            provisional_holds_sha256=provisional_manifest_sha256,
+            release_decisions=release_decisions,
+            validated_holds=provisional_holds,
+        )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
     )
@@ -1656,7 +1669,9 @@ def publish_snapshot(
         existing_layouts=existing_layouts,
     )
     tables["works"] = add_publication_keywords(tables["works"])
-    tables["works"] = exclude_low_information_regions(tables["works"])
+    tables["works"] = exclude_low_information_regions(
+        tables["works"], doi_aliases=doi_aliases
+    )
     comparison_revision = region_comparison_revision or prior_revision
     prior_work_fields = tuple(
         dict.fromkeys(
@@ -1781,6 +1796,7 @@ def publish_snapshot(
         sullivan_continuity_addendum=sullivan_continuity_addendum,
         composite_plan=composite_plan,
         historical_works=historical_works,
+        approved_poster_loss=poster_loss_approval,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -2108,6 +2124,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--provisional-holds", type=Path, default=DEFAULT_PROVISIONAL_HOLDS_PATH
     )
+    parser.add_argument(
+        "--approved-poster-loss",
+        type=Path,
+        help="Reviewed parent-pinned approval for one McManus poster map-point loss",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2219,6 +2240,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             contexts_path=args.reviewed_contexts,
             profile_releases_path=args.profile_releases,
             provisional_holds_path=args.provisional_holds,
+            historical_loss_approval_path=args.approved_poster_loss,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,

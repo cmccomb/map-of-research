@@ -18,6 +18,8 @@ import traceback
 from pathlib import Path
 from typing import Any
 
+from map_of_research.region_continuity import RegionReleaseDiffError
+
 
 class FirstHubWriteIntercepted(Exception):
     """The seven-file commit reached its first network mutation boundary."""
@@ -258,6 +260,11 @@ def main() -> int:
                 contexts_path=curated / "scholar-contexts.json",
                 profile_releases_path=curated / "scholar-profile-releases.json",
                 provisional_holds_path=curated / "scholar-provisional-holds.json",
+                historical_loss_approval_path=(
+                    curated / "bio-mcmanus-poster-loss-approval.json"
+                    if (curated / "bio-mcmanus-poster-loss-approval.json").is_file()
+                    else None
+                ),
                 source_cache_dir=snapshot / "data/authors",
                 primary_home_baseline_path=(
                     reviews / "2026-10-25-implicit-scholar-primary-baseline.json"
@@ -293,6 +300,8 @@ def main() -> int:
         receipt["status"] = "failed_before_hub_write"
         receipt["error_type"] = type(error).__name__
         receipt["error"] = str(error)[:1000]
+        if isinstance(error, RegionReleaseDiffError):
+            receipt["region_release_diff"] = error.receipt
         receipt["traceback"] = traceback.format_exc(limit=12)
         return 1
     finally:

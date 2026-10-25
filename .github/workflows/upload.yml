@@ -234,6 +234,14 @@ jobs:
           if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
             BIO_RELEASE_ARGS+=(--require-bio-release)
           fi
+          # This reviewed file is added only after the immutable release parent
+          # is known. An unused or stale approval fails the publisher gate.
+          if [ -f source/data/curated/bio-mcmanus-poster-loss-approval.json ]; then
+            BIO_RELEASE_ARGS+=(
+              --approved-poster-loss
+              source/data/curated/bio-mcmanus-poster-loss-approval.json
+            )
+          fi
           map-publish-snapshot \
             "${BIO_RELEASE_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \

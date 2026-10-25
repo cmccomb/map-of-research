@@ -165,7 +165,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "T3nx5tgAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "x_xzlvoAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "RnA6G0UAAAAJ" for key in exclusions) == 1
-    assert sum(key[0] == "qQLlBH4AAAAJ" for key in exclusions) == 37
+    assert sum(key[0] == "qQLlBH4AAAAJ" for key in exclusions) == 40
     assert sum(key[0] == "bKMKO_AAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "MbRIDjgAAAAJ" for key in exclusions) == 9
     assert sum(key[0] == "wXSgFr4AAAAJ" for key in exclusions) == 56

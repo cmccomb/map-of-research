@@ -1786,6 +1786,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     producer_tip_checks = []
     published_revisions = []
     published_fields = []
+    approved_losses = []
+    approval_loads = []
+    approved_loss = object()
+    monkeypatch.setattr(
+        publisher,
+        "load_poster_loss_approval",
+        lambda path, **kwargs: approval_loads.append((path, kwargs)) or approved_loss,
+    )
     if region_override:
         monkeypatch.setattr(
             publisher,
@@ -1838,7 +1846,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             publisher,
             "reconcile_region_decisions",
             lambda works, *args, **kwargs: (
-                works,
+                approved_losses.append(kwargs["approved_poster_loss"]) or works,
                 {"prior_revision": kwargs["prior_revision"], "stable_works": 1},
             ),
         )
@@ -1903,6 +1911,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
                 tmp_path / "manifest.json",
                 **publish_options,
             )
+        if reuse_order:
+            with pytest.raises(ValueError, match="requires the frozen Bio source"):
+                publisher.publish_snapshot(
+                    tmp_path / "snapshot.parquet",
+                    tmp_path / "manifest.json",
+                    historical_loss_approval_path=tmp_path / "approval.json",
+                    **publish_options,
+                )
         assert not atomic_calls
         baseline_checks.clear()
         published_revisions.clear()
@@ -1910,6 +1926,10 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         observed_layouts.clear()
         snapshot_digest["value"] = publisher.BIO_SOURCE_SHA256
         publish_options["require_bio_release"] = True
+        if reuse_order:
+            publish_options["historical_loss_approval_path"] = (
+                tmp_path / "approval.json"
+            )
     result = publisher.publish_snapshot(
         tmp_path / "snapshot.parquet",
         tmp_path / "manifest.json",
@@ -1983,6 +2003,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert result["atomic_release"] == {"mode": "single_parent_commit"}
     assert len(atomic_calls) == 1
+    if bio_intent and reuse_order:
+        assert len(approval_loads) == 1
+        assert approval_loads[0][0] == tmp_path / "approval.json"
+        assert approval_loads[0][1]["prior_revision"] == "a" * 40
+        assert approved_losses[-1] is approved_loss
+    else:
+        assert approval_loads == []
+        if pinned:
+            assert approved_losses[-1] is None
     assert observed_layouts == [reused_layouts if reuse_order else original_layouts]
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
@@ -2224,7 +2253,7 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         lambda works: works.assign(keyword_id="k", detail_keyword_id="d"),
     )
     monkeypatch.setattr(
-        publisher, "exclude_low_information_regions", lambda works: works
+        publisher, "exclude_low_information_regions", lambda works, **kwargs: works
     )
 
     def upload_dataset(*args, **kwargs):

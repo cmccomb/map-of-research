@@ -10210,6 +10210,30 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:unp9ATQDT5gC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The alternate-title Scholar row describes the same 2007 Pacific Symposium on Biocomputing paper at pages 257–268 as retained canonical proceedings row qQLlBH4AAAAJ:pqnbT2bcN3wC; it is not a second publication.",
+      "evidence_url": "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:idthP5jqfYAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This blank-venue Scholar row misspells the 2009 BioLINK paper as “SLIF: Structure Literature Image Finer” and repeats the author sequence of retained proceedings row qQLlBH4AAAAJ:AXPGKjj_ei8C. The original paper establishes one publication at pages 209–212.",
+      "evidence_url": "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:P7Ujq4OLJYoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This blank-venue Scholar row has a garbled author string for the 2009 KDD paper and duplicates retained proceedings row qQLlBH4AAAAJ:g5m5HwL7SMYC, confirmed by the original article and DOI 10.1145/1557019.1557031.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4256960/",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "wex9ft0AAAAJ",
       "author_pub_id": "wex9ft0AAAAJ:6bLC7aUMtPcC",
       "reason_code": "false_profile_attribution",

@@ -11,9 +11,11 @@ from typing import Any
 
 from .region_continuity import require_revision
 
-BIO_SOURCE_SHA256 = "5853827607c8fa804685feaf18e52f8be8a700c66ede5453c7919ea49f76c409"
+# Frozen combined source content at staged W3 commit 01c05970. Its Git commit
+# may change when it is restacked onto the Sullivan upload receipt.
+BIO_SOURCE_SHA256 = "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550"
 BIO29_REVISION = "96fdc335fa0061be30a14698d2a89b9d21454b35"
-BIO_SOURCE_ROWS = 51_827
+BIO_SOURCE_ROWS = 51_883
 BIO_ROSTER_COUNT = 47
 BIO_SCHOLAR_PROFILES = 30
 BIO_SCHOLAR_ROWS = 2_688
@@ -231,10 +233,10 @@ def preserve_pending_review_topics(
         return candidate_works
     if (
         not isinstance(restored, list)
-        or len(restored) != 112
+        or len(restored) != len(pending_in_parent)
         or set(restored) != pending_in_parent
     ):
-        raise ValueError("Expected the exact 112 restored pending-review works")
+        raise ValueError("Expected the exact mapped pending-review works in parent")
     output = candidate_works.copy()
     current_ids = output["work_id"].astype(str)
     if current_ids.duplicated().any() or set(restored) - set(current_ids):
@@ -272,7 +274,7 @@ def validate_bio_release_prewrite(
         or len(source_frame) != BIO_SOURCE_ROWS
     ):
         raise ValueError(
-            "Bio release source differs from the frozen 51,827-row snapshot"
+            "Bio release source differs from the frozen 51,883-row snapshot"
         )
     bio_ids = {
         item.person_id
@@ -388,6 +390,13 @@ def validate_bio_release_prewrite(
         or continuity_receipt.get("unexplained_gains")
     ):
         raise ValueError("Bio release lacks a clean exact-observation region diff")
+    approved_losses = continuity_receipt.get("approved_one_time_losses") or []
+    expected_poster_loss = ["/".join(POSTER_ID)] if POSTER_ID in mapped_losses else []
+    if approved_losses != expected_poster_loss or (
+        expected_poster_loss
+        and not continuity_receipt.get("poster_loss_approval_sha256")
+    ):
+        raise ValueError("Bio release needs the exact one-time poster-loss approval")
     candidate_bio = {
         person["person_id"]
         for person in candidate_artifact["catalogs"]["faculty"]
@@ -411,9 +420,11 @@ def validate_bio_release_prewrite(
         and bool(row["map_eligible"])
     }
     if pending_in_parent and (
-        len(restored) != 112 or set(restored) != pending_in_parent
+        not isinstance(restored, list)
+        or len(restored) != len(pending_in_parent)
+        or set(restored) != pending_in_parent
     ):
-        raise ValueError("Repair manifest does not identify 112 restored works")
+        raise ValueError("Pending-topic list differs from the immutable parent")
     if not pending_in_parent and restored:
         raise ValueError("Repair manifest names pending works absent from parent")
     point_by_id = {point["work_id"]: point for point in candidate_artifact["points"]}

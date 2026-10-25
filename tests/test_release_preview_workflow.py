@@ -9,6 +9,7 @@ from pathlib import Path
 from types import ModuleType, SimpleNamespace
 
 import map_of_research
+from map_of_research.region_continuity import RegionReleaseDiffError
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts/preview_atomic_release.py"
@@ -42,13 +43,24 @@ def _load_script():
     return module
 
 
-def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
+def _run_preview(
+    monkeypatch,
+    tmp_path,
+    *,
+    fail_before_write: bool,
+    approval: bool = False,
+    region_diff: bool = False,
+):
     preview = _load_script()
     producer = tmp_path / "producer"
     snapshot = tmp_path / "snapshot"
     receipt_checkout = tmp_path / "receipt"
     output = tmp_path / "output"
     producer.mkdir()
+    if approval:
+        curated = producer / "data/curated"
+        curated.mkdir(parents=True)
+        (curated / "bio-mcmanus-poster-loss-approval.json").write_text("{}")
     (snapshot / "snapshots").mkdir(parents=True)
     (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
@@ -102,7 +114,21 @@ def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
     class FakeReconciliation(RuntimeError):
         pass
 
-    def fake_publish(*_args, atomic_intent_sink, **_kwargs):
+    def fake_publish(*_args, atomic_intent_sink, **kwargs):
+        approval_path = producer / "data/curated/bio-mcmanus-poster-loss-approval.json"
+        assert kwargs["historical_loss_approval_path"] == (
+            approval_path if approval else None
+        )
+        if region_diff:
+            raise RegionReleaseDiffError(
+                {
+                    "unexplained_losses": [],
+                    "unexplained_gains": [],
+                    "unapproved_mapped_binding_changes": [
+                        {"observation": "person-a/scholar-a/citation-a/scholar"}
+                    ],
+                }
+            )
         if fail_before_write:
             raise ValueError("review gate failed")
         staging = tmp_path / "publisher-stage"
@@ -175,6 +201,26 @@ def test_no_write_preview_fails_job_when_release_gate_fails(monkeypatch, tmp_pat
     assert receipt["error"] == "review gate failed"
     assert receipt["blocked_hub_write_calls"] == 0
     assert receipt["hub_writes_completed"] == 0
+
+
+def test_no_write_preview_records_exact_region_diff_before_write(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, region_diff=True
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert receipt["blocked_hub_write_calls"] == 0
+    assert receipt["region_release_diff"]["unapproved_mapped_binding_changes"] == [
+        {"observation": "person-a/scholar-a/citation-a/scholar"}
+    ]
+
+
+def test_no_write_preview_passes_one_time_bio_loss_approval(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, approval=True
+    )
+    assert code == 0
+    assert receipt["status"] == "passed_no_upload"
 
 
 def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():

@@ -491,34 +491,35 @@ def test_atomic_publisher_stages_all_files_and_runs_gate_before_commit(
         assert [call[0] for call in calls] == ["map", "commit"]
 
 
-def test_atomic_bio_staging_requires_manifest_only_for_pending_parent(
+def test_atomic_bio_staging_uses_immutable_parent_pending_labels(
     monkeypatch, tmp_path
 ) -> None:
     calls, tables, manifest = _stage(monkeypatch, tmp_path, bio=True, pending=True)
     manifest.unlink()
-    with pytest.raises(FileNotFoundError, match="reviewed repair manifest"):
-        publisher._publish_atomic_release(
-            tables,
-            _bio_registry(),
-            source_frame=pandas.DataFrame({"source": [1]}),
-            source_manifest={"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
-            hf_token="token",
-            prior_revision="a" * 40,
-            atomic_intent_sink=lambda intent: None,
-            generated_at_utc="2026-10-25T00:00:00+00:00",
-            continuity_receipt={"prior_revision": "a" * 40},
-            repair_manifest_path=manifest,
-            provisional_holds={},
-            prior_profiles=[],
-            prior_people=_prior_bio_people(),
-        )
-    assert calls == []
+    revision, _ = publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
+        hf_token="token",
+        prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={"prior_revision": "a" * 40},
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=_prior_bio_people(),
+    )
+    assert revision == "b" * 40
+    assert calls[0] == ("preserve", {"restore_eligible_work_ids": ["work"]})
 
 
-def test_atomic_bio_staging_reads_pending_manifest_before_gate(
+def test_atomic_bio_staging_ignores_historical_pending_manifest(
     monkeypatch, tmp_path
 ) -> None:
     calls, tables, manifest = _stage(monkeypatch, tmp_path, bio=True, pending=True)
+    manifest.write_text(json.dumps({"restore_eligible_work_ids": ["other"]}))
     revision, _ = publisher._publish_atomic_release(
         tables,
         _bio_registry(),

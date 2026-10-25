@@ -68,7 +68,7 @@ def _candidate(monkeypatch):
     )
     raw.append(poster)
     works.append({"work_id": gate.POSTER_WORK_ID, "map_eligible": False})
-    restored = [f"pending-{index:03d}" for index in range(112)]
+    restored = [f"pending-{index:03d}" for index in range(15)]
     for work_id in restored:
         works.append(
             {
@@ -166,7 +166,7 @@ def test_bio_prewrite_gate_preserves_complete_source_graph_and_topics(
     receipt = gate.validate_bio_release_prewrite(**candidate)
     assert receipt["status"] == "pass"
     assert receipt["bio_edges_preserved"] == 1
-    assert receipt["pending_topic_works_preserved"] == 112
+    assert receipt["pending_topic_works_preserved"] == 15
 
     candidate["candidate_artifact"]["points"][-1]["faculty_ids"] = ["person-0"]
     with pytest.raises(ValueError, match="graph loses"):
@@ -205,8 +205,21 @@ def test_bb88_visible_poster_requires_exact_source_bound_hold(monkeypatch) -> No
     )
     poster_work["map_eligible"] = True
     candidate["baselines"]["repair_profile"][-1]["map_eligible"] = True
+    with pytest.raises(ValueError, match="one-time poster-loss approval"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_one_time_losses"] = [
+        "/".join(gate.POSTER_ID)
+    ]
+    candidate["continuity_receipt"]["poster_loss_approval_sha256"] = "f" * 64
     receipt = gate.validate_bio_release_prewrite(**candidate)
     assert receipt["held_poster_mapped_loss"] is True
+
+    candidate["continuity_receipt"]["approved_one_time_losses"] = []
+    with pytest.raises(ValueError, match="one-time poster-loss approval"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_one_time_losses"] = [
+        "/".join(gate.POSTER_ID)
+    ]
 
     candidate["tables"]["profile_publications"].at[4, "map_exclusion_reasons"] = (
         "other_reason"
@@ -278,7 +291,7 @@ def test_bb88_without_pending_topics_needs_no_repair_manifest(monkeypatch) -> No
         ("poster", "McManus poster"),
         ("continuity", "region diff"),
         ("catalog", "catalog omits"),
-        ("repair_manifest", "112 restored"),
+        ("repair_manifest", "immutable parent"),
         ("pending_point", "Pending-review topic changed"),
         ("pending_catalog", "pending topic catalog"),
     ],
@@ -341,9 +354,9 @@ def test_bio_gate_fails_closed_on_cohort_or_graph_drift(
 @pytest.mark.parametrize(
     ("change", "message"),
     [
-        ("short_manifest", "exact 112"),
+        ("short_manifest", "exact mapped pending-review"),
         ("missing_candidate", "loses a restored"),
-        ("missing_baseline", "exact 112"),
+        ("missing_baseline", "exact mapped pending-review"),
         ("baseline_topic", "baseline topic is not pending"),
         ("candidate_excluded", "candidate excludes"),
     ],

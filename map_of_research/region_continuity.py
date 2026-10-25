@@ -14,7 +14,7 @@ import string
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from datetime import date
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
@@ -46,6 +46,9 @@ from .sullivan_loss_approval import (
 from .sullivan_loss_approval import (
     ExactSullivanLossApproval,
 )
+
+if TYPE_CHECKING:
+    from .poster_loss_approval import PosterLossApproval
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
@@ -390,6 +393,7 @@ def reconcile_region_decisions(
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
     composite_plan: Any | None = None,
     historical_works: Mapping[str, Mapping[str, Any]] | None = None,
+    approved_poster_loss: PosterLossApproval | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -615,7 +619,21 @@ def reconcile_region_decisions(
         if sullivan_loss_approval is not None
         else otherwise_unexplained_losses
     )
-    unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
+    approved_losses: set[ObservationKey] = set()
+    if approved_poster_loss is not None:
+        approved_losses.add(
+            approved_poster_loss.require_exact_loss(
+                prior_revision=prior_revision,
+                losses=losses_requiring_approval - approved_sullivan_losses,
+                previous_rows=previous_rows,
+                current_rows=current_rows,
+                previous_works=previous_works,
+                final_works=final_works,
+            )
+        )
+    unexplained_losses = sorted(
+        losses_requiring_approval - approved_sullivan_losses - approved_losses
+    )
     verified_gains = sorted(
         identity
         for identity in gains
@@ -703,6 +721,14 @@ def reconcile_region_decisions(
         "unused_sullivan_loss_approvals": [
             _display(item) for item in sorted(unused_sullivan_approvals)
         ],
+        "approved_one_time_losses": [
+            _display(item) for item in sorted(approved_losses)
+        ],
+        "poster_loss_approval_sha256": (
+            approved_poster_loss.manifest_sha256
+            if approved_poster_loss is not None
+            else None
+        ),
         "verified_gains": [_display(item) for item in verified_gains],
         "reviewed_composite_work_gains": (
             sorted(composite_plan.gains) if composite_plan is not None else []

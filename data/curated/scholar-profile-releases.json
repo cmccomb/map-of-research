@@ -117,6 +117,17 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "b1002c90d937ae3f5bc674acd6e0a8fac9ef36af254400cfca7583861e619431"
+    },
+    {
+      "person_id": "person-cjoelmcmanus-f28918ce",
+      "scholar_id": "28yZqbcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 62,
+      "cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+      "reason": "Complete 62-row visible Scholar profile is retained. Three exact duplicate/supplement exclusions are reviewed separately. Poster 101 remains raw but is provisionally held from the map and coauthor links until its original full byline and output metadata are verified.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "5009f431f17b2eaecdd281dc6ed51e01f8a4914074e85d7f7ab4e3273ca0e2aa"
     }
   ]
 }
