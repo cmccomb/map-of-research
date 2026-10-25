@@ -10,6 +10,7 @@ SCHOLAR_ID = "AcW2EXwAAAAJ"
 AUTHOR_PUB_ID = f"{SCHOLAR_ID}:roLk4NBRz8UC"
 CAPTURED_AUTHOR = "K Breivik, S Chatterjee, J Andrews"
 REPAIRED_AUTHOR = "J Andrews, S Chatterjee, K Breivik"
+ROW116_CAPTURED_AUTHOR = "A Polzin, A Geller, A Miller, K Breivik"
 SOURCE_JSON_SHA256 = "89cc02ae3a6319b05ea905baf715a207d41254c3935fea15500c98a2b0c38253"
 SOURCE_HTML_SHA256 = "67563a99261141eb6ab016622605ddf4f6c8c16fda577888afa64a13a0be758d"
 BATCH_SHA256 = "88a1db96e95183879bcf489ce561c34daa506d3594f37500716a716506ad4dac"
@@ -76,7 +77,11 @@ def test_breivik_row115_author_repair_keeps_capture_evidence() -> None:
             "citation_for_view"
         ] == [cached_row["author_pub_id"]]
         assert source_row["authors"] == (
-            CAPTURED_AUTHOR if index == 115 else cached_row["author"]
+            CAPTURED_AUTHOR
+            if index == 115
+            else ROW116_CAPTURED_AUTHOR
+            if index == 116
+            else cached_row["author"]
         )
     assert by_index[115]["author_pub_id"] == AUTHOR_PUB_ID
     assert by_index[115]["author"] == REPAIRED_AUTHOR
