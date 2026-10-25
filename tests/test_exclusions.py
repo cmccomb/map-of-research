@@ -160,7 +160,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "ZEHOKUkAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "jrRg4PAAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "79uTAy8AAAAJ" for key in exclusions) == 3
-    assert sum(key[0] == "AcW2EXwAAAAJ" for key in exclusions) == 2
+    assert sum(key[0] == "AcW2EXwAAAAJ" for key in exclusions) == 7
     assert sum(key[0] == "kcXOB1MAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "jcb81yAAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 5
@@ -214,6 +214,36 @@ def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:
     assert actual == expected
     assert (scholar_id, f"{scholar_id}:VL0QpB8kHFEC") not in exclusions
     assert (scholar_id, f"{scholar_id}:TFP_iSt0sucC") not in exclusions
+
+
+def test_breivik_five_reviewed_exclusions_preserve_existing_decisions() -> None:
+    scholar_id = "AcW2EXwAAAAJ"
+    expected = {
+        "K3LRdlH-MEoC": "false_profile_attribution",
+        "uWQEDVKXjbEC": "false_profile_attribution",
+        "q3oQSFYPqjQC": "nonpublication",
+        "CHSYGLWDkRkC": "nonpublication",
+        "0EnyYjriUFMC": "corrupted_duplicate",
+        "u-x6o8ySG0sC": "corrupted_duplicate",
+        "qUcmZB5y_30C": "nonpublication",
+    }
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == expected
+    for retained in (
+        "Tyk-4Ss8FVUC",  # 2020 journal article behind row 112.
+        "RYcK_YlVTxYC",  # Journal article behind row 84 dataset.
+        "P5F9QuxV20EC",  # Published paper after row 99 proposal.
+        "roLk4NBRz8UC",  # Numbered AAS abstract behind row 117.
+        "p2g8aNsByqUC",  # Faithful arXiv preprint observation.
+        "ufrVoPGSRksC",  # 2018 manuscript, distinct from meeting abstract.
+        "d1gkVwhDpl0C",  # Citable software; output policy unresolved.
+    ):
+        assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
 
 
 def test_jarvik_exact_review_excludes_only_source_verified_rows() -> None:

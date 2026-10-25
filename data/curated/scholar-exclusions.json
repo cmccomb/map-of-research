@@ -7920,6 +7920,46 @@
       "reason": "Capture row 1145 has the same 2025 title and author list but only an APS publisher venue; CMS HIN-24-002 identifies the PRL 135 article 132301. Retain the cited complete row wJ_gQLoAAAAJ:_-FgD5s_Z1cC (capture row 687).",
       "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-24-002/index.html",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:q3oQSFYPqjQC",
+      "reason_code": "nonpublication",
+      "reason": "CDS VizieR describes four data tables for the Sayeed et al. Astrophysical Journal 964:42 article retained at capture row 32; this catalog entry is not a second research publication.",
+      "evidence_url": "https://cdsarc.cds.unistra.fr/viz-bin/ReadMe/J/ApJ/964/42?format=html&tex=true",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:CHSYGLWDkRkC",
+      "reason_code": "nonpublication",
+      "reason": "The captured HST Proposal 17881 is the observing proposal for Betelgeuse; coauthor Joyce lists the exact title under HST Director's Discretionary Time in her CV. The later article is retained at capture row 47.",
+      "evidence_url": "https://www.meridithjoyce.com/Joyce_academicCV_Feb2026.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:0EnyYjriUFMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This repeats the 2020 Classical and Quantum Gravity 37:215011 article retained at capture row 6, but prepends unrelated authors and omits the article number. The University of Glasgow record confirms the article DOI and Sedda-first byline.",
+      "evidence_url": "https://eprints.gla.ac.uk/226485/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:u-x6o8ySG0sC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The AAS 233 official abstract book lists one Constraining BH formation with 2M05215658+4359220 abstract, no. 112.01. Capture row 115 retains the abstract number; this row repeats the abstract without it. Row 115 reverses the official author order and needs source-quality review before ingestion.",
+      "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:qUcmZB5y_30C",
+      "reason_code": "nonpublication",
+      "reason": "The University of Zurich 2016 LISA symposium participant list begins with Michele Armano and then the adjacent names imported as authors; Breivik appears as a registrant, not an author of this work.",
+      "evidence_url": "https://www.physik.uzh.ch/events/lisa2016/?page=participants",
+      "verified_at": "2026-10-24"
     }
   ]
 }
