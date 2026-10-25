@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import copy
+import json
+from pathlib import Path
 
 import numpy
 import pandas
@@ -17,6 +19,11 @@ from map_of_research.region_continuity import (
     _verification_url_identity,
     reconcile_region_decisions,
     require_revision,
+)
+from map_of_research.sullivan_loss_approval import (
+    APPROVAL_SHA256,
+    PRIOR_REVISION,
+    ExactSullivanLossApproval,
 )
 
 REVISION = "a" * 40
@@ -160,6 +167,20 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["unexplained_gains"] == []
 
 
+def test_sullivan_approval_rejects_wrong_object_type():
+    rows = [observation("person-one", "one")]
+    works = [work("one", eligible=True, outlier=False)]
+    with pytest.raises(ValueError, match="wrong type"):
+        reconcile_region_decisions(
+            pandas.DataFrame(works),
+            pandas.DataFrame(rows),
+            works,
+            rows,
+            prior_revision=REVISION,
+            sullivan_loss_approval=object(),
+        )
+
+
 def test_current_exact_exclusion_wins_and_is_receipted():
     old = observation("person", "one")
     current = {
@@ -211,6 +232,127 @@ def test_provisional_hold_alone_cannot_remove_prior_visible_observation():
             [current],
             [work("one", eligible=True, outlier=False)],
             [old],
+        )
+
+
+def _sullivan_exact_loss_fixture():
+    path = (
+        Path(__file__).resolve().parents[1]
+        / "data/curated/sullivan-exact-losses-bb88.json"
+    )
+    entries = json.loads(path.read_text(encoding="utf-8"))["approved_losses"]
+    identities = [
+        tuple(
+            entry[field]
+            for field in ("person_id", "scholar_id", "author_pub_id", "source_type")
+        )
+        for entry in entries
+    ]
+    held = frozenset(
+        identity
+        for entry, identity in zip(entries, identities, strict=True)
+        if entry["decision"] == "provisional_hold"
+    )
+    rekeys = frozenset(set(identities) - held)
+    approval = ExactSullivanLossApproval(
+        identities=frozenset(identities),
+        manifest_sha256=APPROVAL_SHA256,
+        held_identities=held,
+        rekey_identities=rekeys,
+    )
+    prior_rows = []
+    current_rows = []
+    prior_works = []
+    current_works = []
+    for index, (entry, identity) in enumerate(zip(entries, identities, strict=True)):
+        work_id = f"sullivan-work-{index}"
+        row = observation(identity[0], work_id)
+        row.update(
+            scholar_id=identity[1],
+            author_pub_id=identity[2],
+            source_type=identity[3],
+        )
+        prior_rows.append(row)
+        prior_works.append(work(work_id, eligible=True, outlier=False))
+        current_works.append(work(work_id, eligible=False, outlier=False))
+        if entry["decision"] == "provisional_hold":
+            current_rows.append(
+                {
+                    **row,
+                    "map_eligible": False,
+                    "map_exclusion_reasons": ["attribution_provisional_hold"],
+                    "review_attribution_status": "held",
+                }
+            )
+    return approval, prior_rows, current_rows, prior_works, current_works
+
+
+def test_exact_sullivan_loss_set_receipts_18_holds_and_four_rekeys():
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    _, receipt = reconcile_region_decisions(
+        pandas.DataFrame(current_works),
+        pandas.DataFrame(current_rows),
+        prior_works,
+        prior_rows,
+        prior_revision=PRIOR_REVISION,
+        sullivan_loss_approval=approval,
+    )
+    assert len(receipt["approved_sullivan_held_losses"]) == 18
+    assert len(receipt["approved_sullivan_rekey_losses"]) == 4
+    assert receipt["sullivan_loss_approval_sha256"] == APPROVAL_SHA256
+    assert receipt["unexplained_losses"] == []
+    assert receipt["unused_sullivan_loss_approvals"] == []
+
+
+def test_forged_sullivan_loss_approval_cannot_waive_generic_loss():
+    old = observation("person-one", "one")
+    identity = ("person-one", "profile", "profile:shared-row", "scholar")
+    forged = ExactSullivanLossApproval(
+        identities=frozenset({identity}),
+        manifest_sha256=APPROVAL_SHA256,
+        held_identities=frozenset({identity}),
+        rekey_identities=frozenset(),
+    )
+    with pytest.raises(ValueError, match="not the reviewed set"):
+        reconcile_region_decisions(
+            pandas.DataFrame([work("one", eligible=False, outlier=False)]),
+            pandas.DataFrame([{**old, "map_eligible": False}]),
+            [work("one", eligible=True, outlier=False)],
+            [old],
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=forged,
+        )
+
+
+def test_exact_sullivan_approval_fails_for_unapproved_loss_and_unused_id():
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    extra = observation("person-extra", "extra")
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile_region_decisions(
+            pandas.DataFrame(
+                [*current_works, work("extra", eligible=False, outlier=False)]
+            ),
+            pandas.DataFrame([*current_rows, {**extra, "map_eligible": False}]),
+            [*prior_works, work("extra", eligible=True, outlier=False)],
+            [*prior_rows, extra],
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+        )
+
+    prior_rows = prior_rows[1:]
+    prior_works = prior_works[1:]
+    with pytest.raises(RegionReleaseDiffError, match="1 unused Sullivan approvals"):
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works[1:]),
+            pandas.DataFrame(current_rows[1:]),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
         )
 
 

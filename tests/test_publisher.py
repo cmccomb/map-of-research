@@ -1935,6 +1935,33 @@ def test_region_override_requires_current_hub_revision(monkeypatch, tmp_path) ->
         )
 
 
+def test_sullivan_transition_requires_exact_source_commit(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame(),
+            {"snapshot_sha256": publisher.SULLIVAN_SOURCE_SHA256},
+        ),
+    )
+    with pytest.raises(
+        ValueError, match="Sullivan release needs its exact source commit"
+    ):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision=publisher.SULLIVAN_PRIOR_REVISION,
+            atomic_intent_sink=lambda intent: None,
+        )
+
+
 def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) -> None:
     monkeypatch.setattr(
         publisher,

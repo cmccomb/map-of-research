@@ -93,6 +93,21 @@ from .registry import (
     validate_included_scholar_primary_homes,
 )
 from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
+from .sullivan_loss_approval import (
+    DEFAULT_APPROVAL_PATH as DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
+)
+from .sullivan_loss_approval import (
+    DEFAULT_CROSSWALK_PATH as DEFAULT_SULLIVAN_CROSSWALK_PATH,
+)
+from .sullivan_loss_approval import (
+    PRIOR_REVISION as SULLIVAN_PRIOR_REVISION,
+)
+from .sullivan_loss_approval import (
+    SOURCE_SHA256 as SULLIVAN_SOURCE_SHA256,
+)
+from .sullivan_loss_approval import (
+    validate_sullivan_exact_losses,
+)
 from .topic_labels import TOPIC_LABEL_REVIEW_VERSION
 
 LOGGER = logging.getLogger(__name__)
@@ -1364,6 +1379,10 @@ def publish_snapshot(
     atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
     repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
+    source_commit: str | None = None,
+    sullivan_loss_approval_path: Path = DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
+    sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
+    curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1390,6 +1409,12 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    sullivan_transition = (
+        prior_revision == SULLIVAN_PRIOR_REVISION
+        and manifest["snapshot_sha256"] == SULLIVAN_SOURCE_SHA256
+    )
+    if sullivan_transition and not source_commit:
+        raise ValueError("Sullivan release needs its exact source commit")
     frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
     if require_bio_release and not frozen_bio_source:
         raise ValueError("Bio release source differs from the frozen snapshot")
@@ -1505,12 +1530,34 @@ def publish_snapshot(
     )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    sullivan_loss_approval = (
+        validate_sullivan_exact_losses(
+            approval_path=sullivan_loss_approval_path,
+            prior_revision=prior_revision,
+            source_snapshot_commit=source_commit or "",
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_path=cache_dir / "wXSgFr4AAAAJ.json",
+            profile_releases_path=profile_releases_path,
+            provisional_holds_path=provisional_holds_path,
+            crosswalk_path=sullivan_crosswalk_path,
+            curated_works_path=curated_works_path,
+            exclusions_path=exclusions_path,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            source_rows=frame.to_dict("records"),
+            current_profiles=tables["profile_publications"].to_dict("records"),
+            validated_holds=provisional_holds,
+        )
+        if sullivan_transition
+        else None
+    )
     tables["works"], continuity_receipt = reconcile_region_decisions(
         tables["works"],
         tables["profile_publications"],
         prior_works,
         prior_profiles,
         prior_revision=comparison_revision,
+        sullivan_loss_approval=sullivan_loss_approval,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -1825,6 +1872,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="append",
         default=[],
     )
+    parser.add_argument(
+        "--sullivan-loss-approval",
+        type=Path,
+        default=DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
+    )
     return parser.parse_args(argv)
 
 
@@ -1913,6 +1965,17 @@ def main(argv: Sequence[str] | None = None) -> int:
             repair_manifest_path=args.repair_reviewed_work_manifest,
             atomic_intent_sink=checkpoint,
             require_bio_release=args.require_bio_release,
+            source_commit=os.environ.get("MAP_SOURCE_COMMIT"),
+            sullivan_loss_approval_path=args.sullivan_loss_approval,
+            sullivan_crosswalk_path=next(
+                (
+                    path
+                    for path in args.scholar_additional_prior_id_crosswalk
+                    if path.name == DEFAULT_SULLIVAN_CROSSWALK_PATH.name
+                ),
+                DEFAULT_SULLIVAN_CROSSWALK_PATH,
+            ),
+            curated_works_path=args.scholar_curated_works,
         )
         status.pop("atomic_release_intent", None)
         status.update(
