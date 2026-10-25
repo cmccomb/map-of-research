@@ -13,8 +13,10 @@ The [original journal article](https://www.funjournal.org/wp-content/uploads/201
 identify the same authors, title, 2014 date, and 12(2):A159–A166 pages.
 The stable source-native ID is `pmcid:pmc3970999`; no DOI is inferred.
 
-The curated row joins the exact retained Scholar title/year once in the
-51,827-row local snapshot. All 51,826 prior rows, including every raw Scholar
-observation, remain field-identical. Its admission to the map is subject to
-the strict independently verified native-ID guard and the all-profile release
-gate; the source row alone does not grant publication authority.
+The curated row joins the exact retained Scholar title/year once in this
+51,883-row source snapshot. All 51,879 rows from the preceding published
+source snapshot, including every raw Scholar observation, remain field-identical;
+three reviewed Murphy native records are the other additions. Its admission to
+the map is subject to the strict independently verified native-ID guard and
+the all-profile release gate; the source row alone does not grant publication
+authority.

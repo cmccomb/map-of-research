@@ -44,7 +44,7 @@ jobs:
       - name: Check out trusted publisher
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.sha || 'main' }}
           path: source
           persist-credentials: false
       - name: Check out collected snapshot
@@ -52,12 +52,21 @@ jobs:
         with:
           ref: ${{ env.SNAPSHOT_REF }}
           path: snapshot
-          persist-credentials: true
+          persist-credentials: false
           sparse-checkout: |
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
             data/authors
             data/captures
+            status
+          sparse-checkout-cone-mode: false
+      - name: Check out current upload receipts
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: automation/map-snapshot
+          path: receipt
+          persist-credentials: true
+          sparse-checkout: |
             status
           sparse-checkout-cone-mode: false
       - name: Check out reviewed prior upload receipt
@@ -81,7 +90,7 @@ jobs:
         id: baseline
         run: |
           python -m map_of_research.release_baseline \
-            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
+            --status-dir receipt/status >> "$GITHUB_OUTPUT"
       - name: Select region comparison
         id: region
         env:
@@ -98,7 +107,7 @@ jobs:
             --historical-commit "$(git -C reviewed-prior rev-parse HEAD 2>/dev/null || true)" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
-            --current-receipt snapshot/status/last-upload.json \
+            --current-receipt receipt/status/last-upload.json \
             --historical-receipt reviewed-prior/status/last-upload.json \
             --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
@@ -136,7 +145,7 @@ jobs:
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
           HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
-          MAP_DURABLE_INTENT_REPO: snapshot
+          MAP_DURABLE_INTENT_REPO: receipt
           MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot
           REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
         run: |
@@ -164,6 +173,7 @@ jobs:
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
             --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
+            --math-region-review-manifest source/data/curated/scholar-region-review.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
@@ -185,10 +195,10 @@ jobs:
             --attribution-reviews source/data/curated/scholar-attribution-reviews.json \
             --profile-releases source/data/curated/scholar-profile-releases.json \
             --provisional-holds source/data/curated/scholar-provisional-holds.json \
-            --status-file snapshot/status/last-upload.json
+            --status-file receipt/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}
-        working-directory: snapshot
+        working-directory: receipt
         env:
           RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
         run: |
