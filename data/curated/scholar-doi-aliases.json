@@ -835,6 +835,70 @@
         "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
         "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb"
       }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:VL0QpB8kHFEC",
+      "observed_title": "Anomalous diffusion in one and two dimensional combs",
+      "observed_year": 2018,
+      "published_doi": "10.4310/cms.2020.v18.n7.a2",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1809.01601v1",
+        "https://www.math.cmu.edu/CNA/Publications/publication_auto.php?cnacode=18-CNA-018",
+        "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "26fb83f93d9b238821a920fa409860307aec912e069a33d84c28ef28782af6fe",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:c60cc76f0b3ffff7dc82",
+        "observation_id": "observation-58bb53fc957fb0406477fa1a1715c4e9d0b31db53c6813a8c61165b9a7f87b74",
+        "observed_title": "Anomalous diffusion in one and two dimensional combs,",
+        "observed_year": 2020,
+        "source_doi": "10.4310/cms.2020.v18.n7.a2",
+        "source_record_sha256": "f250935e47b3e1dea517b7841b38e4024764d7ca8ed2aa07bbf776031d59b5a4",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb",
+        "published_display": {
+          "title": "Anomalous diffusion in comb-shaped domains and graphs",
+          "year": 2020,
+          "venue": "Communications in Mathematical Sciences",
+          "registry_url": "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2"
+        }
+      }
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "author_pub_id": "neJ3NIUAAAAJ:NJ774b8OgUMC",
+      "observed_title": "Anomalous diffusion in comb-shaped domains and graphs",
+      "observed_year": 2018,
+      "published_doi": "10.4310/cms.2020.v18.n7.a2",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1809.01601v2",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+        "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2"
+      ],
+      "verified_at": "2026-10-25",
+      "observed_source_record_sha256": "c87663128d6bca724a769ea4f7943a4dc065c6df4088fc666c95322bf00d1a9b",
+      "target_observation": {
+        "person_id": "person-gautamiyer-3894621b",
+        "author_pub_id": "author-site:person-gautamiyer-3894621b:c60cc76f0b3ffff7dc82",
+        "observation_id": "observation-58bb53fc957fb0406477fa1a1715c4e9d0b31db53c6813a8c61165b9a7f87b74",
+        "observed_title": "Anomalous diffusion in one and two dimensional combs,",
+        "observed_year": 2020,
+        "source_doi": "10.4310/cms.2020.v18.n7.a2",
+        "source_record_sha256": "f250935e47b3e1dea517b7841b38e4024764d7ca8ed2aa07bbf776031d59b5a4",
+        "capture_path": "data/author_sites/gautam-iyer-2026-10-25.json",
+        "capture_sha256": "421e40cf104781b1500644f9f74ad81ce6768881edcf55daf9463626d69ff6eb",
+        "published_display": {
+          "title": "Anomalous diffusion in comb-shaped domains and graphs",
+          "year": 2020,
+          "venue": "Communications in Mathematical Sciences",
+          "registry_url": "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2"
+        }
+      }
     }
   ]
 }

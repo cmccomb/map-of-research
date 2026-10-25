@@ -1,0 +1,137 @@
+{
+  "source_snapshot_sha256": "9bf9570577618313c333155836187e800c55e50526950d98650decc08321e364",
+  "rows": [
+    {
+      "scholar_id": "",
+      "person_id": "person-gautamiyer-3894621b",
+      "display_name": "Gautam Iyer",
+      "faculty": "Gautam Iyer",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "faculty",
+          "included": true,
+          "legacy_label": "Gautam Iyer",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "author-site:person-gautamiyer-3894621b:c60cc76f0b3ffff7dc82",
+      "title": "Anomalous diffusion in one and two dimensional combs,",
+      "authors": "S. Cohn, G. Iyer, J. Nolen, R. L. Pego",
+      "year": 2020,
+      "venue": "Commun. Math. Sci. (2018).",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+      "source_record_json": "{\"author_site_row\":{\"author_manuscript_url_as_linked\":\"https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf\",\"authors_as_listed\":\"S. Cohn, G. Iyer, J. Nolen, R. L. Pego\",\"captured_at_utc\":\"2026-10-25T09:48:40+00:00\",\"doi_as_linked\":\"10.4310/CMS.2020.v18.n7.a2\",\"doi_url_as_linked\":\"https://dx.doi.org/10.4310/CMS.2020.v18.n7.a2\",\"metadata_gaps\":\"\",\"person_id\":\"person-gautamiyer-3894621b\",\"row_index\":\"22\",\"site_list\":\"All Publications\",\"source_page_sha256\":\"264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b\",\"source_page_url\":\"https://www.math.cmu.edu/~gautam/sj/index.html\",\"title_as_listed\":\"Anomalous diffusion in one and two dimensional combs,\",\"venue_as_listed\":\"Commun. Math. Sci. (2018).\",\"work_url_as_linked\":\"https://dx.doi.org/10.4310/CMS.2020.v18.n7.a2\",\"work_url_kind\":\"venue_link\",\"year_as_listed\":\"2018\"},\"doi_review\":{\"additional_evidence_note\":\"The author-hosted manuscript and published PDF have the same title, byline, and subject; the bibliography title is a stale variant.\",\"additional_evidence_urls\":[\"https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf\",\"https://www.intlpress.com/site/pub/files/_fulltext/journals/cms/2020/0018/0007/CMS-2020-0018-0007-a002.pdf\"],\"author_site_year\":2018,\"doi\":\"10.4310/cms.2020.v18.n7.a2\",\"publisher_registry_url\":\"https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2\",\"publisher_title\":\"Anomalous diffusion in comb-shaped domains and graphs\",\"publisher_year\":2020,\"reviewed_at\":\"2026-10-25\",\"row_index\":22,\"title_match\":\"author_manuscript_matches_publisher\",\"year_basis\":\"publisher_registry_published_year\"}}",
+      "fetched_at_utc": "",
+      "source_type": "author_site",
+      "source_doi": "10.4310/cms.2020.v18.n7.a2",
+      "source_native_id": "author-site:iyer:c60cc76f0b3ffff7dc82",
+      "source_verified_at": "2026-10-25",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/index.html",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+        "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+        "https://www.intlpress.com/site/pub/files/_fulltext/journals/cms/2020/0018/0007/CMS-2020-0018-0007-a002.pdf"
+      ],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": false,
+      "source_work_url_as_linked": "https://dx.doi.org/10.4310/CMS.2020.v18.n7.a2",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:VL0QpB8kHFEC",
+      "title": "Anomalous diffusion in one and two dimensional combs",
+      "authors": "S Cohn, G Iyer, J Nolen, RL Pego",
+      "year": 2018,
+      "venue": "To Be Submitted, 2018",
+      "citation": "",
+      "citation_count": 1,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:VL0QpB8kHFEC",
+      "source_record_json": "{\"author\":\"S Cohn, G Iyer, J Nolen, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:VL0QpB8kHFEC\",\"capture_row_index\":125,\"citation_count_display\":\"1\",\"num_citations\":1,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:VL0QpB8kHFEC\",\"pub_year\":\"2018\",\"title\":\"Anomalous diffusion in one and two dimensional combs\",\"venue\":\"To Be Submitted, 2018\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "scholar_id": "neJ3NIUAAAAJ",
+      "person_id": "person-robertpego-707a4eaf",
+      "display_name": "Robert Pego",
+      "faculty": "Robert Pego",
+      "department_ids": [
+        "math"
+      ],
+      "memberships": [
+        {
+          "department_id": "math",
+          "role": "emeritus",
+          "included": true,
+          "legacy_label": "Robert Pego",
+          "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+          "verified_at": "2026-10-24"
+        }
+      ],
+      "author_pub_id": "neJ3NIUAAAAJ:NJ774b8OgUMC",
+      "title": "Anomalous diffusion in comb-shaped domains and graphs",
+      "authors": "S Cohn, G Iyer, J Nolen, RL Pego",
+      "year": 2018,
+      "venue": "arXiv preprint arXiv:1809.01601, 2018",
+      "citation": "",
+      "citation_count": 0,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:NJ774b8OgUMC",
+      "source_record_json": "{\"author\":\"S Cohn, G Iyer, J Nolen, RL Pego\",\"author_pub_id\":\"neJ3NIUAAAAJ:NJ774b8OgUMC\",\"capture_row_index\":130,\"citation_count_display\":\"\",\"num_citations\":0,\"pub_url\":\"https://scholar.google.com/citations?view_op=view_citation&hl=en&user=neJ3NIUAAAAJ&cstart=100&pagesize=100&citation_for_view=neJ3NIUAAAAJ:NJ774b8OgUMC\",\"pub_year\":\"2018\",\"title\":\"Anomalous diffusion in comb-shaped domains and graphs\",\"venue\":\"arXiv preprint arXiv:1809.01601, 2018\"}",
+      "fetched_at_utc": "2026-10-24T20:09:15.600000+00:00",
+      "source_type": "scholar",
+      "source_doi": "",
+      "source_native_id": "",
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "external_coauthors": [],
+      "source_output_type": "publication",
+      "source_citation_count_known": true,
+      "source_work_url_as_linked": "",
+      "embedding": [
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

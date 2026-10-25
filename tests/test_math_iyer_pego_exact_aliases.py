@@ -40,16 +40,10 @@ def _fixture_frame():
 def _iyer_aliases():
     all_aliases = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)
     selected = {
-        key: value
-        for key, value in all_aliases.items()
-        if value.target_observation is not None
+        key: value for key, value in all_aliases.items() if key[1] in REVIEWED_IDS
     }
     assert {key[1] for key in selected} == REVIEWED_IDS
-    assert not any(
-        key[1].endswith(suffix)
-        for key in selected
-        for suffix in (":Tiz5es2fbqcC", ":VL0QpB8kHFEC", ":NJ774b8OgUMC")
-    )
+    assert ("tWQsy4UAAAAJ", "tWQsy4UAAAAJ:Tiz5es2fbqcC") not in all_aliases
     return selected
 
 
