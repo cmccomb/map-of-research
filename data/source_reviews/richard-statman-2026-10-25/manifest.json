@@ -45,9 +45,14 @@
     "third_party_doi_leads_with_crossref_registration": 38,
     "third_party_doi_exact_normalized_titles": 27,
     "third_party_doi_title_variants_for_review": 11,
-    "third_party_doi_registrations_without_published_date": 6
+    "third_party_doi_registrations_without_published_date": 6,
+    "third_party_non_doi_leads_reviewed": 11,
+    "third_party_non_doi_arxiv_journal_version_pairs": 2,
+    "third_party_non_doi_crossref_registrations": 7
   },
   "files": {
+    "arxiv-0903.1374.html.gz": "d3df0a3624b2dbbdf94265c9b209dc3e4269e2b579fef2e9f96912c7d260c9d7",
+    "arxiv-1809.08169.html.gz": "e26c5726b51413d039dc0fc6f5a0c8b07f54ea8a1b09a1c4f8b5b86ff39870fe",
     "arxiv-2309.03602.html.gz": "762ec4becbf848af472a83d68cf9b8af7193c8f24deab605b11a3b66e36edd99",
     "cambridge-book-crossref.json": "8af7777af3acc2a7b5081a9af5341d7c36fe1dcdb0e30200d7823bdc1dc8980f",
     "cmu-profile.html": "3d54e732c22d69e6ba780e32be5f421430cc0e293eeded64229b809b9eeefc88",
@@ -56,6 +61,8 @@
     "cmu-selected-16.csv": "0e5ae3a4c353dafb6ca03601ee48476d85b4959c46d476eac1644e260183b4f1",
     "csauthors-67.json": "100c76cd751ea04dfb23c20645f952e690c1141de10b0bf11267f3bd22653bd6",
     "csauthors-crossref-38.json": "741fb6b40e465e1af9330d9ad5674d48ae9f9d8ec72934253baf08c8ae613dd5",
+    "csauthors-non-doi-11.json": "46d9dfc023dcb039aa7915ac198b243ff51fc2d5f197b5d6341313a503ef79d4",
+    "csauthors-non-doi-crossref-7.json": "b9a31bf7ab983b07908181f8764da4eccc2fb27f7a9e44c7e568513a1d56e8b2",
     "csauthors-page.html.gz": "c2803110c81d184bf54448d1568cab0b6c27d67655ac904d743f77a0fcc98db2",
     "dowek-papers.html.gz": "a118abfaf876dca380ef5413f2df89b0ca41fa34cbc977d68ad7e59af0ddf9b6",
     "kilthub-article-6476546.json": "fa8eedb9f1b4a5309d8c277e34687773b17aa9d8ea7ae018e0d418a6eaa82510",

@@ -20,6 +20,7 @@ def test_statman_source_review_is_complete_for_its_bounded_sources():
         "third_party_unmatched_titles_needing_primary_review": 49,
         "third_party_doi_leads_with_crossref_registration": 38,
         "third_party_doi_title_variants_for_review": 11,
+        "third_party_non_doi_leads_reviewed": 11,
         "held_source_observations_not_works": 37,
     }
 

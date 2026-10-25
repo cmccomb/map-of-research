@@ -83,8 +83,11 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "third_party_doi_exact_normalized_titles": 27,
         "third_party_doi_title_variants_for_review": 11,
         "third_party_doi_registrations_without_published_date": 6,
+        "third_party_non_doi_leads_reviewed": 11,
+        "third_party_non_doi_arxiv_journal_version_pairs": 2,
+        "third_party_non_doi_crossref_registrations": 7,
     }
-    assert len(manifest["files"]) == 35
+    assert len(manifest["files"]) == 39
     for filename, expected_hash in manifest["files"].items():
         assert hashlib.sha256((source_dir / filename).read_bytes()).hexdigest() == (
             expected_hash
@@ -443,6 +446,88 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         == 27
     )
     assert sum(row["registered_published"] is None for row in publisher_candidates) == 6
+    non_doi = json.loads((source_dir / "csauthors-non-doi-11.json").read_text())
+    assert non_doi["schema_version"] == 1
+    assert non_doi["person_id"] == PERSON_ID
+    assert non_doi["source_scope"] == "held_primary_lead_review_not_distinct_works"
+    non_doi_rows = non_doi["records"]
+    assert [row["index"] for row in non_doi_rows] == [
+        7,
+        9,
+        11,
+        20,
+        21,
+        48,
+        53,
+        55,
+        57,
+        61,
+        65,
+    ]
+    assert len({row["source_record_key"] for row in non_doi_rows}) == 11
+    assert not {row["source_record_key"] for row in non_doi_rows} & {
+        row["candidate_source_record_key"] for row in publisher_candidates
+    }
+    for row in non_doi_rows:
+        candidate = candidate_by_key[row["source_record_key"]]
+        assert candidate["index"] == row["index"]
+        assert candidate["row_sha256"] == row["source_row_sha256"]
+        assert candidate["title_as_displayed"] == row["title_as_displayed"]
+        assert candidate["exact_normalized_title_matches_in_prior_37"] == []
+        assert row["primary_evidence_url"].startswith("https://")
+        for field in (
+            "scholar_profile_observation",
+            "release_eligible",
+            "map_eligible",
+            "collaboration_eligible",
+        ):
+            assert row[field] is False
+    assert {row["candidate_source_record_key"] for row in publisher_candidates} | {
+        row["source_record_key"] for row in non_doi_rows
+    } == {
+        row["source_record_key"]
+        for row in candidates
+        if not row["exact_normalized_title_matches_in_prior_37"]
+    }
+    registrations = json.loads(
+        (source_dir / "csauthors-non-doi-crossref-7.json").read_text()
+    )["records"]
+    assert len(registrations) == 7
+    registration_by_index = {row["index"]: row for row in registrations}
+    assert set(registration_by_index) == {9, 11, 21, 55, 57, 61, 65}
+    for row in non_doi_rows:
+        if row["index"] in registration_by_index:
+            registered = registration_by_index[row["index"]]
+            assert (
+                registered["message"]["DOI"].casefold()
+                == row["related_journal_doi"].casefold()
+            )
+            assert (
+                sum(
+                    a.get("family", "").casefold() == "statman"
+                    for a in registered["message"]["author"]
+                )
+                == 1
+            )
+            assert row["publisher_registration_bundle"] == (
+                "csauthors-non-doi-crossref-7.json"
+            )
+        else:
+            assert row["publisher_registration_bundle"] is None
+    for index, arxiv_id, journal_doi in (
+        (7, "1809.08169", "10.46298/lmcs-18(3:35)2022"),
+        (20, "0903.1374", "10.2168/LMCS-5(2:6)2009"),
+    ):
+        row = next(row for row in non_doi_rows if row["index"] == index)
+        arxiv_page = gzip.decompress(
+            (source_dir / f"arxiv-{arxiv_id}.html.gz").read_bytes()
+        ).decode("utf-8")
+        assert f'name="citation_arxiv_id" content="{arxiv_id}"' in arxiv_page
+        assert "Richard Statman" in arxiv_page
+        assert journal_doi.casefold() == row["related_journal_doi"].casefold()
+        assert journal_doi.casefold() in unquote(arxiv_page).casefold()
+    assert non_doi_rows[0]["existing_observation"] == "CMU-16"
+    assert all(row["existing_observation"] is None for row in non_doi_rows[1:])
     assert {row["graph_eligible"] for row in observations} == {"false"}
     assert {row["hold_reason"] for row in observations} == {
         "no_verified_scholar_or_complete_author_bibliography"
@@ -462,6 +547,7 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "third_party_unmatched_titles_needing_primary_review": 49,
         "third_party_doi_leads_with_crossref_registration": 38,
         "third_party_doi_title_variants_for_review": 11,
+        "third_party_non_doi_leads_reviewed": 11,
         "held_source_observations_not_works": len(observations),
     }
 

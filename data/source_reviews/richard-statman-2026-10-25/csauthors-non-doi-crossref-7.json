@@ -1,0 +1,1834 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "index": 9,
+      "request_url": "https://api.crossref.org/works/10.1017/S0960129515000341",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              2
+            ]
+          ],
+          "date-time": "2022-04-02T19:59:48Z",
+          "timestamp": 1648929588104
+        },
+        "reference-count": 4,
+        "publisher": "Cambridge University Press (CUP)",
+        "issue": "5",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2015,
+                  8,
+                  7
+                ]
+              ],
+              "date-time": "2015-08-07T00:00:00Z",
+              "timestamp": 1438905600000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 0,
+            "URL": "https://www.cambridge.org/core/terms"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Math. Struct. Comp. Sci."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2017,
+              6
+            ]
+          ]
+        },
+        "abstract": "<jats:p>In Barendregt (1984), Corrado Böhm conjectured that every adequate (Barendregt 1984, 6.4.2 (ii)) numeral system of normal combinators has normal successor, predecessor and zero test. In this note, we give a counterexample to this conjecture. Our example is shown to have no normal zero test. Böhm has informed us that Intrigila (1994) has given an example with no normal successor. Our strategy, in terms of the <jats:bold>ant-lion paradigm</jats:bold>, is to pry open the trap so wide that it enters its active state before its jaws are shut.</jats:p>",
+        "DOI": "10.1017/s0960129515000341",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              7
+            ]
+          ],
+          "date-time": "2015-08-07T03:06:17Z",
+          "timestamp": 1438916777000
+        },
+        "page": "734-737",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Taming the wild ant-lion; a counterexample to a conjecture of Böhm"
+        ],
+        "prefix": "10.1017",
+        "volume": "27",
+        "author": [
+          {
+            "given": "RICK",
+            "family": "STATMAN",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "56",
+        "published-online": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              7
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "S0960129515000341_ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BFb0035755"
+          },
+          {
+            "key": "S0960129515000341_ref1",
+            "volume-title": "The Lambda Calculus. Its Syntax and Semantics",
+            "author": "Barendregt",
+            "year": "1984"
+          },
+          {
+            "key": "S0960129515000341_ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/inco.1994.1079"
+          },
+          {
+            "key": "S0960129515000341_ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1305/ndjfl/1040408610"
+          }
+        ],
+        "container-title": [
+          "Mathematical Structures in Computer Science"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0960129515000341",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              17
+            ]
+          ],
+          "date-time": "2019-04-17T22:43:44Z",
+          "timestamp": 1555541024000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://www.cambridge.org/core/product/identifier/S0960129515000341/type/journal_article"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              7
+            ]
+          ]
+        },
+        "references-count": 4,
+        "journal-issue": {
+          "issue": "5",
+          "published-print": {
+            "date-parts": [
+              [
+                2017,
+                6
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0960129515000341"
+        ],
+        "URL": "https://doi.org/10.1017/s0960129515000341",
+        "relation": {},
+        "ISSN": [
+          "0960-1295",
+          "1469-8072"
+        ],
+        "issn-type": [
+          {
+            "value": "0960-1295",
+            "type": "print"
+          },
+          {
+            "value": "1469-8072",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              7
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "request_url": "https://api.crossref.org/works/10.1016/j.entcs.2016.09.045",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              10
+            ]
+          ],
+          "date-time": "2024-07-10T15:22:13Z",
+          "timestamp": 1720624933471
+        },
+        "reference-count": 8,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2016-10-01T00:00:00Z",
+              "timestamp": 1475280000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  9,
+                  20
+                ]
+              ],
+              "date-time": "2016-09-20T00:00:00Z",
+              "timestamp": 1474329600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "http://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Electronic Notes in Theoretical Computer Science"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              10
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.entcs.2016.09.045",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              10,
+              7
+            ]
+          ],
+          "date-time": "2016-10-07T20:33:46Z",
+          "timestamp": 1475872426000
+        },
+        "page": "305-312",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "special_numbering": "C",
+        "title": [
+          "How to Think of Intersection Types as Cartesian Products"
+        ],
+        "prefix": "10.1016",
+        "volume": "325",
+        "author": [
+          {
+            "given": "Rick",
+            "family": "Statman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0010",
+            "series-title": "CUP",
+            "article-title": "Lambda Calculus with Types",
+            "author": "Barendregt",
+            "year": "2013"
+          },
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0020",
+            "doi-asserted-by": "crossref",
+            "first-page": "931",
+            "DOI": "10.2307/2273659",
+            "article-title": "A filter lambda model and the completeness of type assignment",
+            "volume": "48",
+            "author": "Brarendregt",
+            "year": "1983",
+            "journal-title": "Journal of Symbolic Logic"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.entcs.2016.09.045_br0030",
+            "first-page": "15",
+            "article-title": "Intersection types and lambda definability",
+            "volume": "13",
+            "author": "Bucciarelli",
+            "year": "2003",
+            "journal-title": "MSCS03"
+          },
+          {
+            "issue": "l",
+            "key": "10.1016/j.entcs.2016.09.045_br0040",
+            "doi-asserted-by": "crossref",
+            "first-page": "139",
+            "DOI": "10.1007/BF02011875",
+            "article-title": "A new type assignment for lambda terms",
+            "volume": "19",
+            "author": "Coppo",
+            "year": "1978",
+            "journal-title": "Archiv fur math. logik"
+          },
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0050",
+            "first-page": "204",
+            "article-title": "Extending the lambda calculus with surjective pairing is conservative",
+            "volume": "4",
+            "author": "de Vrijer",
+            "year": "1989",
+            "journal-title": "LICS"
+          },
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0060",
+            "series-title": "A local translation of untyped into simply typed lambda-calculus",
+            "author": "Statman",
+            "year": "1991"
+          },
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0070",
+            "series-title": "Liber Armicorum for Roel DeVrijer",
+            "article-title": "Surjective pairing revisited",
+            "author": "Statman",
+            "year": "2009"
+          },
+          {
+            "key": "10.1016/j.entcs.2016.09.045_br0080",
+            "doi-asserted-by": "crossref",
+            "unstructured": "K. Støvring, Extending the extensional lambda calculus with surjective pairing is conservative, LMCS 2, 1–14.",
+            "DOI": "10.2168/LMCS-2(2:1)2006"
+          }
+        ],
+        "container-title": [
+          "Electronic Notes in Theoretical Computer Science"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1571066116300962?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1571066116300962?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              9,
+              14
+            ]
+          ],
+          "date-time": "2019-09-14T10:58:56Z",
+          "timestamp": 1568458736000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1571066116300962"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              10
+            ]
+          ]
+        },
+        "references-count": 8,
+        "alternative-id": [
+          "S1571066116300962"
+        ],
+        "URL": "https://doi.org/10.1016/j.entcs.2016.09.045",
+        "relation": {},
+        "ISSN": [
+          "1571-0661"
+        ],
+        "issn-type": [
+          {
+            "value": "1571-0661",
+            "type": "print"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "index": 21,
+      "request_url": "https://api.crossref.org/works/10.2178/jsl/1203350781",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              4
+            ]
+          ],
+          "date-time": "2022-04-04T17:38:57Z",
+          "timestamp": 1649093937973
+        },
+        "reference-count": 5,
+        "publisher": "Cambridge University Press (CUP)",
+        "issue": "4",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2014,
+                  3,
+                  12
+                ]
+              ],
+              "date-time": "2014-03-12T00:00:00Z",
+              "timestamp": 1394582400000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 2293,
+            "URL": "https://www.cambridge.org/core/terms"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "J. symb. log."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2007,
+              12
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title><jats:p>We consider three problems concerning alpha conversion of closed terms (combinators).</jats:p><jats:p>(1) Given a combinator <jats:italic>M</jats:italic> find the an alpha convert of <jats:italic>M</jats:italic> with a smallest number of distinct variables.</jats:p><jats:p>(2) Given two alpha convertible combinators <jats:italic>M</jats:italic> and <jats:italic>N</jats:italic> find a shortest alpha conversion of <jats:italic>M</jats:italic> to <jats:italic>N</jats:italic>.</jats:p><jats:p>(3) Given two alpha convertible combinators <jats:italic>M</jats:italic> and <jats:italic>N</jats:italic> find an alpha conversion of <jats:italic>M</jats:italic> to <jats:italic>N</jats:italic> which uses the smallest number of variables possible along the way.</jats:p><jats:p>We obtain the following results.</jats:p><jats:p>(1) There is a polynomial time algorithm for solving problem (1). It is reducible to vertex coloring of chordal graphs.</jats:p><jats:p>(2) Problem (2) is <jats:italic>co-NP</jats:italic> complete (in recognition form). The general feedback vertex set problem for digraphs is reducible to problem (2).</jats:p><jats:p>(3) At most one variable besides those occurring in both <jats:italic>M</jats:italic> and <jats:italic>N</jats:italic> is necessary. This appears to be the folklore but the proof is not familiar. A polynomial time algorithm for the alpha conversion of <jats:italic>M</jats:italic> to <jats:italic>N</jats:italic> using at most one extra variable is given.</jats:p><jats:p>There is a tradeoff between solutions to problem (2) and problem (3) which we do not fully understand.</jats:p>",
+        "DOI": "10.2178/jsl/1203350781",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2008,
+              3,
+              25
+            ]
+          ],
+          "date-time": "2008-03-25T18:42:11Z",
+          "timestamp": 1206470531000
+        },
+        "page": "1197-1203",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "On the complexity of alpha conversion"
+        ],
+        "prefix": "10.1017",
+        "volume": "72",
+        "author": [
+          {
+            "given": "Rick",
+            "family": "Statman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "56",
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              3,
+              12
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "S0022481200004862_ref004",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1137/0201013"
+          },
+          {
+            "key": "S0022481200004862_ref001",
+            "volume-title": "The lambda calculus",
+            "author": "Barendregt",
+            "year": "1984"
+          },
+          {
+            "key": "S0022481200004862_ref003",
+            "volume-title": "Computers and intractibility",
+            "author": "Gary",
+            "year": "1976"
+          },
+          {
+            "key": "S0022481200004862_ref005",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.21236/AD0705364"
+          },
+          {
+            "key": "S0022481200004862_ref002",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.2140/pjm.1965.15.835"
+          }
+        ],
+        "container-title": [
+          "Journal of Symbolic Logic"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0022481200004862",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T19:42:42Z",
+          "timestamp": 1556739762000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://www.cambridge.org/core/product/identifier/S0022481200004862/type/journal_article"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              2007,
+              12
+            ]
+          ]
+        },
+        "references-count": 5,
+        "journal-issue": {
+          "issue": "4",
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                12
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0022481200004862"
+        ],
+        "URL": "https://doi.org/10.2178/jsl/1203350781",
+        "relation": {},
+        "ISSN": [
+          "0022-4812",
+          "1943-5886"
+        ],
+        "issn-type": [
+          {
+            "value": "0022-4812",
+            "type": "print"
+          },
+          {
+            "value": "1943-5886",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "index": 55,
+      "request_url": "https://api.crossref.org/works/10.1145/2422.322414",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              4
+            ]
+          ],
+          "date-time": "2026-10-04T01:26:17Z",
+          "timestamp": 1791077177516,
+          "version": "4.1.0"
+        },
+        "reference-count": 26,
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1984,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "1984-01-01T00:00:00Z",
+              "timestamp": 441763200000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "dl.acm.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "J. ACM"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1984,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1145/2422.322414",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              7,
+              27
+            ]
+          ],
+          "date-time": "2002-07-27T07:25:57Z",
+          "timestamp": 1027754757000
+        },
+        "page": "30-46",
+        "update-policy": "https://doi.org/10.1145/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 127,
+        "title": [
+          "On the Structure of Armstrong Relations for Functional Dependencies"
+        ],
+        "prefix": "10.1145",
+        "volume": "31",
+        "author": [
+          {
+            "given": "Catriel",
+            "family": "Beeri",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, Hebrew University, Givat Ram, 91904 Jerusalem, Israel"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Martin",
+            "family": "Dowd",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Rutgers University, New Brunswick, N.J."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ronald",
+            "family": "Fagin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "IBM Research Laboratory, K55/281, 5600 Cottle Road, San Jose, Calif."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Richard",
+            "family": "Statman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Rutgers University, New Brunswick, N.J."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "320",
+        "published-online": {
+          "date-parts": [
+            [
+              1984,
+              1
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_1_1_2",
+            "first-page": "580",
+            "author": "ARMSTRONG W.W.",
+            "year": "1974",
+            "unstructured": "ARMSTRONG , W.W. l_~penoency structures ot oataoase relallonsBily&amp; lrl / 'TO e. 11\"11\" /4, ! ~O l'tll Holland , Amsterdam , 1974 , pp. 580 - 583 . ARMSTRONG, W.W.l_~penoency structures ot oataoase relallonsBily&amp; lrl /'TOe. 11\"11\" /4, !~Ol'tll Holland, Amsterdam, 1974, pp. 580-583.",
+            "journal-title": "Amsterdam"
+          },
+          {
+            "key": "e_1_2_1_2_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/320610.320620"
+          },
+          {
+            "key": "e_1_2_1_3_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/320064.320066"
+          },
+          {
+            "key": "e_1_2_1_4_2",
+            "first-page": "47",
+            "volume-title": "Proc ACM-SIGMOD Int. Conf. on Management of Data",
+            "author": "BEERI C.",
+            "year": "1977",
+            "unstructured": "BEERI , C. , FAGIN , R. , AND HOWARD , J.H. A complete axiomatization for functional and multivalued dependencies m database relations . In Proc ACM-SIGMOD Int. Conf. on Management of Data ( Toronto , Aug , 1977 ), ACM, New York, pp. 47 - 61 . 10.1145/509404.509414 BEERI, C., FAGIN, R., AND HOWARD, J.H.A complete axiomatization for functional and multivalued dependencies m database relations. In Proc ACM-SIGMOD Int. Conf. on Management of Data (Toronto, Aug, 1977), ACM, New York, pp. 47-61. 10.1145/509404.509414"
+          },
+          {
+            "key": "e_1_2_1_5_2",
+            "first-page": "171",
+            "volume-title": "Calif.",
+            "author": "CASANOVA M.A.",
+            "year": "1982",
+            "unstructured": "CASANOVA , M.A. , FAON , R. , AND PAPADIMITRIOU , C. Inclusion dependencies and their interaction w~th functional dependencies. Sl AM ~ Comput (to appear); extended abstract appeared in Proc. 1st ACM SIGACT-SIGMOD Principles of Database Systems (Los Angeles , Calif. , 1982 ), ACM , New York , pp. 171 - 176 . 10.1145/588111.588141 CASANOVA, M.A., FAON, R., AND PAPADIMITRIOU, C.Inclusion dependencies and their interaction w~th functional dependencies. SlAM ~ Comput (to appear); extended abstract appeared in Proc. 1st ACM SIGACT-SIGMOD Principles of Database Systems (Los Angeles, Calif., 1982), ACM, New York, pp. 171-176. 10.1145/588111.588141"
+          },
+          {
+            "key": "e_1_2_1_6_2",
+            "first-page": "65",
+            "volume-title": "Data Base Systems, Courant Computer Soence Symposia 6",
+            "author": "CODD E.F.",
+            "unstructured": "CODD , E.F. Further normalization of the database relational model. In Data Base Systems, Courant Computer Soence Symposia 6 , R. Rustin, Ed., Prentice Hall , Englewood Cliffs, N.J. , pp. 65 - 98 . CODD, E.F.Further normalization of the database relational model. In Data Base Systems, Courant Computer Soence Symposia 6, R. Rustin, Ed., Prentice Hall, Englewood Cliffs, N.J., pp. 65-98."
+          },
+          {
+            "key": "e_1_2_1_7_2",
+            "doi-asserted-by": "crossref",
+            "first-page": "6",
+            "DOI": "10.1016/0020-0190(78)90013-3",
+            "volume": "7",
+            "author": "DEMETROVICS J",
+            "year": "1978",
+            "unstructured": "DEMETROVICS , J ,On the number of candidate keys. Inf Proc Lett 7 , 6 ( Oct. 1978 ), 266-269. DEMETROVICS, J,On the number of candidate keys. Inf Proc Lett 7, 6 (Oct. 1978), 266-269.",
+            "journal-title": "Inf Proc Lett"
+          },
+          {
+            "key": "e_1_2_1_8_2",
+            "first-page": "3",
+            "volume": "5",
+            "author": "DEMETROVICS J.",
+            "year": "1981",
+            "unstructured": "DEMETROVICS , J. , AND GYEPESI , G. On the functional dependency and some generalizations of it. Acta Cyberne 5 , 3 ( 1981 ), 295-305. DEMETROVICS, J., AND GYEPESI, G. On the functional dependency and some generalizations of it. Acta Cyberne 5, 3 (1981), 295-305.",
+            "journal-title": "Acta Cyberne"
+          },
+          {
+            "key": "e_1_2_1_9_2",
+            "first-page": "482",
+            "volume-title": "Paul Erdos: The Art ofCount:ng---Selected Wrtttngs",
+            "author": "ERDOS P.",
+            "year": "1973",
+            "unstructured": "ERDOS , P. , AND KLEITMAN , D. Extremal problems among subsets of a given set. In Paul Erdos: The Art ofCount:ng---Selected Wrtttngs , J. Spencer, Ed., MIT Press , 1973 , pp. 482 - 506 . ERDOS, P., AND KLEITMAN, D.Extremal problems among subsets of a given set. In Paul Erdos: The Art ofCount:ng---Selected Wrtttngs, J. Spencer, Ed., MIT Press, 1973, pp. 482-506."
+          },
+          {
+            "key": "e_1_2_1_10_2",
+            "volume-title": "J Symb Logic 41. 1 (Mar",
+            "author": "FAGIN R.",
+            "year": "1976",
+            "unstructured": "FAGIN , R. Probabilities on finite models. J Symb Logic 41. 1 (Mar . 1976 ), 50-58. FAGIN, R.Probabilities on finite models. J Symb Logic 41. 1 (Mar. 1976), 50-58."
+          },
+          {
+            "key": "e_1_2_1_11_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/320557.320571"
+          },
+          {
+            "key": "e_1_2_1_12_2",
+            "first-page": "6",
+            "volume": "21",
+            "author": "FAGIN R.",
+            "year": "1977",
+            "unstructured": "FAGIN , R. Functional dependencies tn a relational database and propositional logic. IBM ~ Res Devel 21 , 6 ( Nov. 1977 ), 534-544. FAGIN, R.Functional dependencies tn a relational database and propositional logic. IBM ~ Res Devel 21, 6 (Nov. 1977), 534-544.",
+            "journal-title": "Res Devel"
+          },
+          {
+            "key": "e_1_2_1_13_2",
+            "volume-title": "Proc 7th IBM Syrup. on Mathematical Foundations of Compuler Scrence",
+            "author": "FAG N, R",
+            "year": "1982",
+            "unstructured": "FAG e N, R . Armstrong databases . In Proc 7th IBM Syrup. on Mathematical Foundations of Compuler Scrence ( Kanagawa, Japan , May 1982 ); also appeared as Res. Rep. ILI3440, IBM Resoareh Lab., San Jose, Calif., Apr. 1982. FAGeN, R.Armstrong databases. In Proc 7th IBM Syrup. on Mathematical Foundations of Compuler Scrence (Kanagawa, Japan, May 1982); also appeared as Res. Rep. ILI3440, IBM Resoareh Lab., San Jose, Calif., Apr. 1982."
+          },
+          {
+            "key": "e_1_2_1_14_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/800141.804660"
+          },
+          {
+            "key": "e_1_2_1_15_2",
+            "volume-title": "A Guide to the Theory of NP- Completeness",
+            "author": "GAREY M.R.",
+            "year": "1979",
+            "unstructured": "GAREY , M.R. , AND JOHNSON , D.S. Computers and lntractibility : A Guide to the Theory of NP- Completeness , Freeman , San Francisco , 1979 . GAREY, M.R., AND JOHNSON, D.S.Computers and lntractibility: A Guide to the Theory of NP- Completeness, Freeman, San Francisco, 1979."
+          },
+          {
+            "key": "e_1_2_1_16_2",
+            "volume-title": "of Southern California",
+            "author": "GINSBURG S.",
+            "year": "1982",
+            "unstructured": "GINSBURG , S. , AND HULL , R. Characterizations for functional dependency and Boyee-Codd normal form families. Tech. Rep., Univ. of Southern California , Los Angeles , Calif ., Feb. 1982 . GINSBURG, S., AND HULL, R.Characterizations for functional dependency and Boyee-Codd normal form families. Tech. Rep., Univ. of Southern California, Los Angeles, Calif., Feb. 1982."
+          },
+          {
+            "key": "e_1_2_1_17_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/322326.322331"
+          },
+          {
+            "key": "e_1_2_1_18_2",
+            "volume-title": "Drpartemenf d'lnformauque, Universit6 de Montrral",
+            "author": "GOLD E.M.",
+            "year": "1974",
+            "unstructured": "GOLD , E.M. Axiomatization of attribute dependencies. Publ. # 173 , Drpartemenf d'lnformauque, Universit6 de Montrral , May 1974 . GOLD, E.M. Axiomatization of attribute dependencies. Publ. # 173, Drpartemenf d'lnformauque, Universit6 de Montrral, May 1974."
+          },
+          {
+            "key": "e_1_2_1_19_2",
+            "volume-title": "GRATZER, G.UniversalAlgebra",
+            "year": "1979",
+            "unstructured": "GRATZER, G.UniversalAlgebra , 2 nd ed. Springer-Verlag , New York , 1979 . GRATZER, G.UniversalAlgebra, 2nd ed. Springer-Verlag, New York, 1979.",
+            "edition": "2"
+          },
+          {
+            "key": "e_1_2_1_20_2",
+            "first-page": "2",
+            "volume": "17",
+            "author": "LUCCHES",
+            "year": "1978",
+            "unstructured": "LUCCHES l, C.L., AND OSBORN , S.L. Candidate keys for relations , J. Comput Syst. ScL 17 , 2 ( Oct. 1978 ), 270-279. LUCCHESl, C.L., AND OSBORN, S.L.Candidate keys for relations, J. Comput Syst. ScL 17, 2 (Oct. 1978), 270-279.",
+            "journal-title": "J. Comput Syst. ScL"
+          },
+          {
+            "key": "e_1_2_1_21_2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1145/322261.322263"
+          },
+          {
+            "key": "e_1_2_1_22_2",
+            "volume-title": "Advances m Database Theory, Itol. 1, H. Gallaire, J. Minker, and J-M",
+            "author": "SILVA A,M",
+            "year": "1981",
+            "unstructured": "SILVA , A,M ., AND MELKANOFF , M.A. A method for helping discover the dependencies of a relatton . In Advances m Database Theory, Itol. 1, H. Gallaire, J. Minker, and J-M . Nwolas, Eds., Plenum Pubhshing , New York , 1981 . SILVA, A,M., AND MELKANOFF, M.A. A method for helping discover the dependencies of a relatton. In Advances m Database Theory, Itol. 1, H. Gallaire, J. Minker, and J-M. Nwolas, Eds., Plenum Pubhshing, New York, 1981."
+          },
+          {
+            "key": "e_1_2_1_23_2",
+            "doi-asserted-by": "crossref",
+            "first-page": "544",
+            "DOI": "10.1007/BF01171114",
+            "volume": "27",
+            "author": "SPERNER E.",
+            "year": "1928",
+            "unstructured": "SPERNER , E. , Eine Satz uber Untermensen einer endlichen Menge. Math. Zeu. 27 ( 1928 ), 544 - 548 . SPERNER, E., Eine Satz uber Untermensen einer endlichen Menge. Math. Zeu. 27 (1928), 544-548.",
+            "journal-title": "Menge. Math. Zeu."
+          },
+          {
+            "key": "e_1_2_1_24_2",
+            "series-title": "SIAM J Comput. (to appear)",
+            "volume-title": "Worst case exponential lower bounds for input resolution with paramodulation",
+            "author": "~TATMAN R.",
+            "unstructured": "~TATMAN , R. Worst case exponential lower bounds for input resolution with paramodulation . SIAM J Comput. (to appear) . ~TATMAN, R. Worst case exponential lower bounds for input resolution with paramodulation. SIAM J Comput. (to appear)."
+          },
+          {
+            "key": "e_1_2_1_25_2",
+            "volume-title": "2rid ed",
+            "author": "ULLMAN J.D.",
+            "year": "1982",
+            "unstructured": "ULLMAN , J.D. Prtnc~ples of Database Systems , 2rid ed . Computer Science Press , Rockville, Md ., 1982 . ULLMAN, J.D.Prtnc~ples of Database Systems, 2rid ed. Computer Science Press, Rockville, Md., 1982."
+          },
+          {
+            "key": "e_1_2_1_27_2",
+            "first-page": "431",
+            "volume-title": "Proc. 1975 National Computer Conf. 44",
+            "author": "ZLOOF M.M.",
+            "unstructured": "ZLOOF , M.M. Query-by-example. In Proc. 1975 National Computer Conf. 44 , AFIPS Press, Arlington, Va. , pp. 431 - 438 . ZLOOF, M.M. Query-by-example. In Proc. 1975 National Computer Conf. 44, AFIPS Press, Arlington, Va., pp. 431-438."
+          }
+        ],
+        "container-title": [
+          "Journal of the ACM"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://dl.acm.org/doi/10.1145/2422.322414",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://dl.acm.org/doi/pdf/10.1145/2422.322414",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2025-06-18T04:18:35Z",
+          "timestamp": 1750220315000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://dl.acm.org/doi/10.1145/2422.322414"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              1984,
+              1
+            ]
+          ]
+        },
+        "references-count": 26,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1984,
+                1
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1145/2422.322414"
+        ],
+        "URL": "https://doi.org/10.1145/2422.322414",
+        "relation": {},
+        "ISSN": [
+          "0004-5411",
+          "1557-735X"
+        ],
+        "issn-type": [
+          {
+            "value": "0004-5411",
+            "type": "print"
+          },
+          {
+            "value": "1557-735X",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              1984,
+              1
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "1984-01-01",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 57,
+      "request_url": "https://api.crossref.org/works/10.2307/2273377",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              4
+            ]
+          ],
+          "date-time": "2026-06-04T20:29:41Z",
+          "timestamp": 1780604981317,
+          "version": "3.54.1"
+        },
+        "reference-count": 9,
+        "publisher": "Cambridge University Press (CUP)",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2014,
+                  3,
+                  12
+                ]
+              ],
+              "date-time": "2014-03-12T00:00:00Z",
+              "timestamp": 1394582400000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 11699,
+            "URL": "https://www.cambridge.org/core/terms"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "J. symb. log."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1982,
+              3
+            ]
+          ]
+        },
+        "abstract": "<jats:p>In [4] Gordon Plotkin considers the problem of characterizing the <jats:italic>λ</jats:italic>-definable functionals in full type structures. A plausible, but, as we shall see, quite false, conjecture is that a functional is <jats:italic>λ</jats:italic>-definable ⇔ it is invariant in the sense of Fraenkel and Mostowski. A better guess might be that the set of <jats:italic>λ</jats:italic>-definable functionals of type <jats:italic>σ</jats:italic> has a uniform (in <jats:italic>σ</jats:italic>) definition in type theory over all full type structures (Plotkin explicitly considers a certain sort of definition by means of “logical relations”). More or less generally, one may ask if the following question is decidable.</jats:p><jats:p>Given: a functional <jats:italic>F</jats:italic> in a full type structure over a finite ground domain.</jats:p><jats:p>Question: is <jats:italic>F</jats:italic><jats:italic>λ</jats:italic>-definable?</jats:p><jats:p>We call the statement that this question is decidable Plotkin's <jats:italic>λ</jats:italic>-definability conjecture. We do not know if Plotkin's conjecture is true.</jats:p><jats:p>In this note we consider several questions which quickly arise from Plotkin's conjecture. In <jats:italic>§</jats:italic>1, we ask which type structures satisfy <jats:italic>λ</jats:italic>-definability = invariance. We construct for each consistent set of equations a model satisfying this equality. From consideration of these models we obtain a number of syntactic corollaries including a reduction of <jats:italic>βη</jats:italic>-conversion to <jats:italic>βη</jats:italic>-conversion at a single type (Theorem 3), an “<jats:italic>ω</jats:italic>-rule” for <jats:italic>βη</jats:italic>-conversion (Proposition 6) and consistency with <jats:italic>βη</jats:italic>-conversion (Proposition 8), definability and indefinability results for versions of Kronecker's <jats:italic>δ</jats:italic> (Propositions 10 and 11), and a decidability result for the problem of inter-definability among combinators.</jats:p>",
+        "DOI": "10.2307/2273377",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              6
+            ]
+          ],
+          "date-time": "2006-05-06T21:58:32Z",
+          "timestamp": 1146952712000
+        },
+        "page": "17-26",
+        "source": "Crossref",
+        "is-referenced-by-count": 65,
+        "title": [
+          "Completeness, invariance and <i>λ</i>-definability"
+        ],
+        "prefix": "10.1017",
+        "volume": "47",
+        "author": [
+          {
+            "given": "R.",
+            "family": "Statman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "56",
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              3,
+              12
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "S0022481200044662_ref007",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0304-3975(76)90021-9"
+          },
+          {
+            "key": "S0022481200044662_ref004",
+            "volume-title": "λ-definability and logical relations",
+            "author": "Plotkin",
+            "year": "1973"
+          },
+          {
+            "key": "S0022481200044662_ref008",
+            "volume-title": "Natural deduction",
+            "author": "Prawitz",
+            "year": "1965"
+          },
+          {
+            "key": "S0022481200044662_ref009",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S0049-237X(08)71129-7"
+          },
+          {
+            "key": "S0022481200044662_ref005",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0304-3975(79)90007-0"
+          },
+          {
+            "key": "S0022481200044662_ref006",
+            "first-page": "123",
+            "volume-title": "Lecture Notes in Mathematics",
+            "volume": "344",
+            "author": "Troelstra",
+            "year": "1973"
+          },
+          {
+            "key": "S0022481200044662_ref003",
+            "first-page": "213",
+            "volume-title": "Lecture Notes in Computer Science",
+            "volume": "37",
+            "author": "Jacopini",
+            "year": "1975"
+          },
+          {
+            "key": "S0022481200044662_ref001",
+            "volume-title": "Combinatory logic",
+            "volume": "1",
+            "author": "Curry",
+            "year": "1968"
+          },
+          {
+            "key": "S0022481200044662_ref002",
+            "first-page": "22",
+            "volume-title": "Lecture Notes in Mathematics",
+            "volume": "453",
+            "author": "Friedman",
+            "year": "1975"
+          }
+        ],
+        "container-title": [
+          "Journal of Symbolic Logic"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0022481200044662",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              24
+            ]
+          ],
+          "date-time": "2019-05-24T21:42:22Z",
+          "timestamp": 1558734142000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://www.cambridge.org/core/product/identifier/S0022481200044662/type/journal_article"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              1982,
+              3
+            ]
+          ]
+        },
+        "references-count": 9,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1982,
+                3
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0022481200044662"
+        ],
+        "URL": "https://doi.org/10.2307/2273377",
+        "relation": {},
+        "ISSN": [
+          "0022-4812",
+          "1943-5886"
+        ],
+        "issn-type": [
+          {
+            "value": "0022-4812",
+            "type": "print"
+          },
+          {
+            "value": "1943-5886",
+            "type": "electronic"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              1982,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "index": 61,
+      "request_url": "https://api.crossref.org/works/10.1016/0012-365X%2881%2990177-1",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              29
+            ]
+          ],
+          "date-time": "2022-03-29T19:38:27Z",
+          "timestamp": 1648582707676
+        },
+        "reference-count": 2,
+        "publisher": "Elsevier BV",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1981,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "1981-01-01T00:00:00Z",
+              "timestamp": 347155200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2013,
+                  7,
+                  17
+                ]
+              ],
+              "date-time": "2013-07-17T00:00:00Z",
+              "timestamp": 1374019200000
+            },
+            "content-version": "vor",
+            "delay-in-days": 11885,
+            "URL": "https://www.elsevier.com/open-access/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Discrete Mathematics"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1981
+            ]
+          ]
+        },
+        "DOI": "10.1016/0012-365x(81)90177-1",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              7,
+              28
+            ]
+          ],
+          "date-time": "2002-07-28T16:40:59Z",
+          "timestamp": 1027874459000
+        },
+        "page": "103-107",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "title": [
+          "Reductions of the graph reconstruction conjecture"
+        ],
+        "prefix": "10.1016",
+        "volume": "36",
+        "author": [
+          {
+            "given": "R.",
+            "family": "Statman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/0012-365X(81)90177-1_BIB1",
+            "series-title": "Graph Theory",
+            "author": "Harary",
+            "year": "1969"
+          },
+          {
+            "key": "10.1016/0012-365X(81)90177-1_BIB2",
+            "unstructured": "R. Statman and F. Harary, The graph isomorphism problem is equivalent to the legitimate deck problem for regular graphs, to appear."
+          }
+        ],
+        "container-title": [
+          "Discrete Mathematics"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:0012365X81901771?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:0012365X81901771?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              11
+            ]
+          ],
+          "date-time": "2019-04-11T03:23:25Z",
+          "timestamp": 1554953005000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/0012365X81901771"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              1981
+            ]
+          ]
+        },
+        "references-count": 2,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1981
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "0012365X81901771"
+        ],
+        "URL": "https://doi.org/10.1016/0012-365x(81)90177-1",
+        "relation": {},
+        "ISSN": [
+          "0012-365X"
+        ],
+        "issn-type": [
+          {
+            "value": "0012-365X",
+            "type": "print"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              1981
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "index": 65,
+      "request_url": "https://api.crossref.org/works/10.1016/0304-3975%2879%2990006-9",
+      "message": {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              25
+            ]
+          ],
+          "date-time": "2026-10-25T05:17:06Z",
+          "timestamp": 1792905426690,
+          "version": "4.5.0"
+        },
+        "reference-count": 14,
+        "publisher": "Elsevier BV",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1979,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "1979-07-01T00:00:00Z",
+              "timestamp": 299635200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2013,
+                  7,
+                  17
+                ]
+              ],
+              "date-time": "2013-07-17T00:00:00Z",
+              "timestamp": 1374019200000
+            },
+            "content-version": "vor",
+            "delay-in-days": 12435,
+            "URL": "https://www.elsevier.com/open-access/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Theoretical Computer Science"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1979,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1016/0304-3975(79)90006-9",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2002-07-26T04:17:21Z",
+          "timestamp": 1027657041000
+        },
+        "page": "67-72",
+        "source": "Crossref",
+        "is-referenced-by-count": 142,
+        "title": [
+          "Intuitionistic propositional logic is polynomial-space complete"
+        ],
+        "prefix": "10.1016",
+        "volume": "9",
+        "author": [
+          {
+            "given": "Richard",
+            "family": "Statman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB1",
+            "series-title": "Proc. of the 7th Annual Symp. on Theory of Computing",
+            "article-title": "Feasibly constructive proofs and the propositional calculus",
+            "author": "Cook",
+            "year": "1975"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB2",
+            "series-title": "Proc. Sixth A.C.M. Symp. on Theory of Computing",
+            "article-title": "On the length of proofs in the propositional calculus",
+            "author": "Cook",
+            "year": "1974"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB3",
+            "volume": "Vol. 1",
+            "author": "Curry",
+            "year": "1968"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB4",
+            "series-title": "Intuitionistic Logic, Modal Theory and Forcing",
+            "author": "Fitting",
+            "year": "1969"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB5",
+            "article-title": "Equality between functionals",
+            "volume": "453",
+            "author": "Friedman",
+            "year": "1974"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB6",
+            "author": "Howard",
+            "year": "1969",
+            "journal-title": "The formulae-as-types notion of construction"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB7",
+            "series-title": "Introduction to Mathematics",
+            "author": "Kleene",
+            "year": "1952"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB8",
+            "doi-asserted-by": "crossref",
+            "first-page": "378",
+            "DOI": "10.2307/2964012",
+            "article-title": "A remark on free choice sequences and topological completeness proofs",
+            "volume": "23",
+            "author": "Kreisel",
+            "year": "1958",
+            "journal-title": "J. Symbolic Logic"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB9",
+            "series-title": "Formal Systems and Recursive Functions",
+            "article-title": "Semantical analysis of intuitionistic logic I",
+            "author": "Kripke",
+            "year": "1965"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/0304-3975(79)90006-9_BIB10",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1137/0206033",
+            "article-title": "The computational complexity of provability in systems of model propositional logic",
+            "volume": "6",
+            "author": "Ladner",
+            "year": "1977",
+            "journal-title": "SIAM J. Comput."
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB11",
+            "series-title": "Natural Deduction, Stockholm Studies in Philosophy 3",
+            "author": "Prawitz",
+            "year": "1965"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB12",
+            "series-title": "Mathematical Logic",
+            "author": "Shoenfield",
+            "year": "1967"
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB13",
+            "doi-asserted-by": "crossref",
+            "first-page": "73",
+            "DOI": "10.1016/0304-3975(79)90007-0",
+            "article-title": "The typed λ-calculus is not elementary recursive",
+            "volume": "9",
+            "author": "Statman",
+            "year": "1979",
+            "journal-title": "Theoret. Comput. Sci."
+          },
+          {
+            "key": "10.1016/0304-3975(79)90006-9_BIB14",
+            "doi-asserted-by": "crossref",
+            "first-page": "1",
+            "DOI": "10.1016/0304-3975(76)90061-X",
+            "article-title": "The polynomial-time hierarchy",
+            "volume": "3",
+            "author": "Stockmeyer",
+            "year": "1976",
+            "journal-title": "Theoret. Comput. Sci."
+          }
+        ],
+        "container-title": [
+          "Theoretical Computer Science"
+        ],
+        "original-title": [],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:0304397579900069?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:0304397579900069?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              12
+            ]
+          ],
+          "date-time": "2019-04-12T13:54:40Z",
+          "timestamp": 1555077280000
+        },
+        "score": 1,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/0304397579900069"
+          }
+        },
+        "subtitle": [],
+        "short-title": [],
+        "issued": {
+          "date-parts": [
+            [
+              1979,
+              7
+            ]
+          ]
+        },
+        "references-count": 14,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                1979,
+                7
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "0304397579900069"
+        ],
+        "URL": "https://doi.org/10.1016/0304-3975(79)90006-9",
+        "relation": {},
+        "ISSN": [
+          "0304-3975"
+        ],
+        "issn-type": [
+          {
+            "value": "0304-3975",
+            "type": "print"
+          }
+        ],
+        "subject": [],
+        "published": {
+          "date-parts": [
+            [
+              1979,
+              7
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}
