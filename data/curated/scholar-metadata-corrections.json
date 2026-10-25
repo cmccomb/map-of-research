@@ -297,6 +297,25 @@
       "basis": "Nature lists Proteostasis as a section label rather than part of the article title.",
       "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:VyyvE1HPe8MC",
+      "expected": {
+        "title": "Presentation Abstract",
+        "year": null,
+        "venue": "",
+        "authors": "GV Lowry, B Dufour, Y Liu, SA Majetich, K Matyjaszewski, T Phenrat, ..."
+      },
+      "corrected": {
+        "title": "Delivering Polymer-Modified Fe0 Nanoparticles to Subsurface Chlorinated Organic Solvent DNAPL",
+        "year": 2005,
+        "venue": "Nanotechnology and the Environment: Applications and Implications Progress Review Workshop III",
+        "authors": "Gregory V. Lowry, Bruno Dufour, Yueqiang Liu, Sara A. Majetich, Kris Matyjaszewski, Tanapon Phenrat, Navid Saleh, Kevin Sirk, Robert D. Tilton"
+      },
+      "basis": "The EPA's original presentation abstract names the full title and all nine CMU authors. The EPA workshop agenda dates the meeting to October 26-28, 2005. Scholar instead imports the page heading as the title and omits the year and venue. This remains a conference abstract, not a journal article.",
+      "evidence_url": "https://archive.epa.gov/ncer/publications/web/html/lowry.html",
+      "verified_at": "2026-10-25"
     }
   ]
 }
