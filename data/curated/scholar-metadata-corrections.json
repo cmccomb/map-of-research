@@ -157,6 +157,38 @@
       "basis": "The saved Scholar SVG aria-label writes the multiplication sign as \\times; arXiv:1803.01933 renders the expression, so the effective title uses a readable multiplication sign.",
       "evidence_url": "https://arxiv.org/abs/1803.01933",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:u-x6o8ySG0sC",
+      "expected": {
+        "title": "A new bound for the 2/3 conjecture",
+        "year": 2013,
+        "venue": "Combinatorics, Probability and Computing 22 (3), 384-393, 2013",
+        "authors": "CH LIU, JS Sereni, P Whalen, ZB Yilma"
+      },
+      "corrected": {
+        "authors": "Daniel Král', Chun-Hung Liu, Jean-Sébastien Sereni, Peter Whalen, Zelealem B. Yilma"
+      },
+      "basis": "Cambridge's published article names Daniel Král' first, followed by Liu, Sereni, Whalen, and Yilma; the Scholar journal row omits Král'.",
+      "evidence_url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/new-bound-for-the-23-conjecture/46A4FEA3BE07A0D1498138BD15B0DBEF",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:eQOLeE2rZwMC",
+      "expected": {
+        "title": "A new bound for the 2/3 conjecture",
+        "year": 2012,
+        "venue": "arXiv preprint arXiv:1204.2519, 2012",
+        "authors": "P Whalen, ZB Yilma"
+      },
+      "corrected": {
+        "authors": "Daniel Král', Chun-Hung Liu, Jean-Sébastien Sereni, Peter Whalen, Zelealem B. Yilma"
+      },
+      "basis": "The author-submitted arXiv record lists all five authors; the Scholar preprint row lists only Whalen and Yilma.",
+      "evidence_url": "https://arxiv.org/abs/1204.2519",
+      "verified_at": "2026-10-25"
     }
   ]
 }

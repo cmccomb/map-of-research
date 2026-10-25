@@ -38,6 +38,12 @@ the [Eur/Young exact-work review](../../registry/reviews/2026-10-25-math-eur-you
 and [Brandon/Kramkov exact-work review](../../registry/reviews/2026-10-25-math-brandon-kramkov-exact-works.md)
 for the exact source evidence.
 
+`scholar-metadata-corrections.json` repairs only effective display metadata for
+an exact Scholar observation; the saved cache and `source_record_json` retain
+the observed values. A byline repair must guard the observed authors as well as
+title, year, and venue. The [Yilma review](../../registry/reviews/2026-10-25-math-yilma-whole-scholar-profile.md)
+documents two publisher-verified five-author repairs.
+
 `scholar-contexts.json` is a separate exact-observation review manifest. It
 records publication type and primary evidence for unusual Scholar records.
 Patent work identity uses the published document number; the raw Scholar cache

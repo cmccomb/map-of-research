@@ -381,6 +381,58 @@
         "https://www.sciencedirect.com/science/article/pii/S0304414913001877"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:IjCSPb-OGe4C",
+      "observed_title": "Multiple Petersen subdivisions in permutation graphs",
+      "observed_year": 2012,
+      "published_doi": "10.37236/2239",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1204.1989",
+        "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v20i1p37"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:eQOLeE2rZwMC",
+      "observed_title": "A new bound for the 2/3 conjecture",
+      "observed_year": 2012,
+      "published_doi": "10.1017/S0963548312000612",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1204.2519",
+        "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/new-bound-for-the-23-conjecture/46A4FEA3BE07A0D1498138BD15B0DBEF"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:u-x6o8ySG0sC",
+      "observed_title": "A new bound for the 2/3 conjecture",
+      "observed_year": 2013,
+      "published_doi": "10.1017/S0963548312000612",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1204.2519",
+        "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/new-bound-for-the-23-conjecture/46A4FEA3BE07A0D1498138BD15B0DBEF"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:MXK_kJrjxJIC",
+      "observed_title": "The minimum number of spanning trees in regular multigraphs",
+      "observed_year": 2022,
+      "published_doi": "10.37236/10911",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://www.math.cmu.edu/~zyilma/docs/PekarekSereniYilma_SpanningTreesRegularMultigraphs.pdf",
+        "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v29i4p29"
+      ],
+      "verified_at": "2026-10-25"
     }
   ]
 }

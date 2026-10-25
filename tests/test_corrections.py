@@ -48,6 +48,11 @@ def test_checked_in_corrections_are_exact_and_leave_two_ambiguous_rows_held() ->
         "nRpfm8aw39MC",
         "TesyEGJKHF4C",
     }
+    yilma_id = "AlNKTGsAAAAJ"
+    assert {key[1].split(":")[-1] for key in corrections if key[0] == yilma_id} == {
+        "u-x6o8ySG0sC",
+        "eQOLeE2rZwMC",
+    }
     for held in ("CdxZDUztZiMC", "sA9dB-pw3HoC"):
         assert (scholar_id, f"{scholar_id}:{held}") not in corrections
 
@@ -168,6 +173,10 @@ def test_correction_changes_effective_work_key_and_preserves_raw_scholar_row(
             "invalid bibliographic fields",
         ),
         (_entry(corrected={"doi": "10.1000/test"}), "invalid bibliographic fields"),
+        (
+            _entry(corrected={"authors": "Verified Author List"}),
+            "needs exact observed authors",
+        ),
         (_entry(corrected={"year": 2101}), "invalid bibliographic fields"),
         (_entry(corrected={"year": 1712}), "must change every listed field"),
         (_entry(basis=""), "needs a specific basis"),
