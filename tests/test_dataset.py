@@ -130,6 +130,9 @@ def test_reviewed_preprint_alias_keeps_scholar_source_and_one_work(
     [
         ("FmZaK1wAAAAJ", "roLk4NBRz8UC", "f2IySw72cVMC", 2015),
         ("tWQsy4UAAAAJ", "nb7KW1ujOQ8C", "GnPB-g6toBAC", 2020),
+        ("FmZaK1wAAAAJ", "zA6iFVUQeVQC", "bFI3QPDXJZMC", 2015),
+        ("cAiedtsAAAAJ", "7PzlFSSx8tAC", "dhFuZR0502QC", 2023),
+        ("SHxT0AEAAAAJ", "pyW8ca7W8N0C", "g5m5HwL7SMYC", 2024),
     ],
 )
 def test_reviewed_scholar_versions_retain_two_rows_and_one_published_work(
