@@ -56,3 +56,12 @@ byline, and career-completeness review. Citation counts are unknown here.
 Run `python3 scripts/validate_schimmerling_source_review.py` from the repo
 root to verify the pinned files, embedded CMU payloads, crosswalk coverage,
 and person identity.
+
+`load_staged.py` reads that reviewed source set as one held batch. It emits
+all 47 source observations with their native IDs, full original source
+records, source authors, genre review, and version-review flags. Its 40
+research candidates and 26 multi-author research candidates count source
+observations, not distinct works or approved collaboration links. Every row
+has `release_eligible`, `map_eligible`, and `collaboration_eligible` set to
+false. This loader does not feed the production snapshot builder; the
+version families and whole-career scope still require review.
