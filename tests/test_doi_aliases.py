@@ -1,9 +1,11 @@
 import json
 from pathlib import Path
 
+import numpy
 import pandas
 import pytest
 
+import map_of_research.keywords as keywords
 from map_of_research.doi_aliases import (
     DEFAULT_DOI_ALIASES_PATH,
     load_doi_aliases,
@@ -34,6 +36,69 @@ def test_walkington_alias_matches_exact_raw_scholar_row() -> None:
         ]
     )
     validate_doi_aliases(frame, aliases, {})
+
+
+def test_murphy_spatial_package_exact_alias_survives_weak_region() -> None:
+    key = ("qQLlBH4AAAAJ", "qQLlBH4AAAAJ:RMgMIBzvq-4C")
+    alias = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)[key]
+    assert alias.doi == "10.1515/jib-2022-0054"
+    assert alias.observed_title == (
+        "SBML level 3 package: spatial processes, version 1, release 1"
+    )
+    assert alias.observed_year == 2023
+    assert "https://sbml.org/documents/specifications/level-3/version-1/spatial/" in (
+        alias.evidence_urls
+    )
+    raw = pandas.DataFrame(
+        [
+            {
+                "source_type": "scholar",
+                "scholar_id": key[0],
+                "author_pub_id": key[1],
+                "title": alias.observed_title,
+                "year": alias.observed_year,
+                "source_doi": "",
+            }
+        ]
+    )
+    validate_doi_aliases(raw, {key: alias}, {})
+
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    rows = []
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+            }
+        )
+    rows[0].update(
+        {
+            "year": alias.observed_year,
+            "citation_count": 12,
+            "title": alias.observed_title,
+            "authors": "JC Schaff, A Lakshminarayana, RF Murphy, FT Bergmann, et al.",
+            "venue": "Journal of Integrative Bioinformatics 20 (1), 20220054",
+            "doi": alias.doi,
+            "source_urls": list(alias.evidence_urls),
+        }
+    )
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+    assert bool(audited.loc[0, "map_eligible"])
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited["map_eligible"].sum() == 1
 
 
 def test_trusted_upload_uses_producer_doi_alias_manifest() -> None:
