@@ -167,6 +167,20 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["unexplained_gains"] == []
 
 
+def test_sullivan_approval_rejects_wrong_object_type():
+    rows = [observation("person-one", "one")]
+    works = [work("one", eligible=True, outlier=False)]
+    with pytest.raises(ValueError, match="wrong type"):
+        reconcile_region_decisions(
+            pandas.DataFrame(works),
+            pandas.DataFrame(rows),
+            works,
+            rows,
+            prior_revision=REVISION,
+            sullivan_loss_approval=object(),
+        )
+
+
 def test_current_exact_exclusion_wins_and_is_receipted():
     old = observation("person", "one")
     current = {
