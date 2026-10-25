@@ -4,6 +4,7 @@ from map_of_research.corrections import DEFAULT_CORRECTIONS_PATH, load_correctio
 from map_of_research.dataset import normalize_title
 from map_of_research.doi_aliases import DEFAULT_DOI_ALIASES_PATH, load_doi_aliases
 from map_of_research.exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from map_of_research.io import load_json
 
 SCHOLAR_ID = "qQLlBH4AAAAJ"
 
@@ -93,3 +94,10 @@ def test_gordon_rule_exchange_chapter_has_exact_publisher_identity() -> None:
         "https://link.springer.com/chapter/10.1007/1-4020-3500-4_18"
         in alias.evidence_urls
     )
+    flagged = [
+        row
+        for row in load_json(DEFAULT_DOI_ALIASES_PATH)["aliases"]
+        if row.get("allow_short_title_region_override")
+    ]
+    assert len(flagged) == 1
+    assert (flagged[0]["scholar_id"], flagged[0]["author_pub_id"]) == key
