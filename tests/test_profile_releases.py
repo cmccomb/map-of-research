@@ -170,7 +170,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
                 item.held_author_pub_ids,
             ),
         )
-    ) == (64, 232, 374)
+    ) == (65, 233, 372)
     validate_reviewed_subset_decisions(
         releases,
         load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),
@@ -179,7 +179,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
 
 
 @pytest.mark.parametrize(
-    "index,pub_id,year,title,authors,decision,code,evidence_url",
+    "index,pub_id,year,title,authors,decision,code,evidence_url,basis_marker",
     [
         (
             136,
@@ -191,6 +191,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
             "reviewed_excluded",
             "false_profile_attribution",
             "https://www.nature.com/articles/30748",
+            None,
         ),
         (
             157,
@@ -201,6 +202,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
             "reviewed_excluded",
             "false_profile_attribution",
             "https://pub.vito.be/openaccess/2020-Das%20et%20al.%2C%20J.%20Electrochem.%20Soc._MES.pdf",
+            None,
         ),
         (
             470,
@@ -212,11 +214,36 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
             "positive_primary_source_reviewed_subset",
             "exact_original_meeting_abstract_with_cmu_identity",
             "https://www.acs.org/content/dam/acsorg/meetings/national-meetings/program-book/2016-philadelphia.pdf",
+            "published meeting abstract",
+        ),
+        (
+            544,
+            "FrF1YXQAAAAJ:Wp0gIr-vW9MC",
+            "2010",
+            "Five years in review",
+            "SR Das, JA Piccirilli",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://www.nature.com/articles/nchembio.379",
+            None,
+        ),
+        (
+            601,
+            "FrF1YXQAAAAJ:hC7cP41nSMkC",
+            "2000",
+            "Synthesis of carbocyclic 4'-beta-thio nucleosides: A new class of "
+            "carbocyclic 5'-nornucleosides based on the biochemistry of "
+            "S-adenosylmethionine",
+            "SR Das",
+            "positive_primary_source_reviewed_subset",
+            "exact_institutional_thesis_record",
+            "https://auburn.edu/academic/provost/commencement/archives/_assets/programs/2000s/2000%20Commencement%20Program_001-compressed.pdf",
+            "doctoral dissertation",
         ),
     ],
 )
 def test_das_next_source_decisions_pin_exact_captured_rows(
-    index, pub_id, year, title, authors, decision, code, evidence_url
+    index, pub_id, year, title, authors, decision, code, evidence_url, basis_marker
 ) -> None:
     with Path("registry/reviews/2026-10-25-chem-das-complete-profile-ledger.csv").open(
         newline=""
@@ -245,7 +272,7 @@ def test_das_next_source_decisions_pin_exact_captured_rows(
             Path("data/curated/scholar-attribution-reviews.json")
         ).confirmed[key]
         assert review.evidence_url == evidence_url
-        assert "published meeting abstract" in review.evidence_basis
+        assert basis_marker in review.evidence_basis
 
 
 def test_missing_trusted_profile_release_manifest_fails_closed(tmp_path) -> None:
