@@ -14,7 +14,7 @@ publication in Kim's academic history appears there.
 At producer head `fa8b087`, I converted the saved 918 rows to the ordinary
 snapshot shape in memory, added inert embedding vectors, and called
 `build_dataset_tables` with the existing `scholar-exclusions.json`. This made
-**409 of 410 held observations map eligible**. The one exception,
+**409 of 410 unresolved observations map eligible**. The one exception,
 `bC4aq-4AAAAJ:KaMxkj08jr0C` (“I-SEEC 2012”), was rejected by the generic
 `event_or_session_label` quality rule. All 394 exact exclusions were
 suppressed, and all 114 positive person signals were eligible. The publisher
@@ -24,18 +24,18 @@ hold gate would put unresolved attributions into graph works and edges.
 ## Conservative exact-ID proposal
 
 The [prepared release fragment](proposals/scholar-profile-releases.kim-proposal.json)
-and [54 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
+and [66 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
 partition every captured ID as follows:
 
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
-| Confirmed source-backed works for a possible reviewed subset | 54 | `0848000caa8b4ea03c2e843be551d7eb8f039ded78ba559651398fdb792014d8` |
+| Confirmed source-backed works for a possible reviewed subset | 66 | `1e76f396359f12b0bd9aacb72b04090ca8a39c28611178020ff2d1a08ca3623d` |
 | Exact false-attribution, duplicate, or nonpublication exclusions | 394 | `e074bac97acf1dd2c4aa762e71f1551b148172125d13561330b9bf6b13e14a8e` |
-| Held from any map release | 470 | `1b295a5f1f4dc4fda75cd8df329779e8e72896acba19755d42ee19567a846759` |
+| Held from any map release | 458 | `ba9ee4d1699c1926385a8c414bbfec6577960ae01088336b90c4ba93e394bbcb` |
 
-The 470 holds comprise 410 unresolved observations plus 60 exact CMU-linked
+The 458 holds comprise 410 unresolved observations plus 48 exact CMU-linked
 ORCID title/year **person signals** that still lack enough output-level review
-for this conservative subset. The 54 confirmed entries have exact Scholar
+for this conservative subset. The 66 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 [group bibliography](2026-10-25-chem-kim-lab-bibliography-follow-up.md), and
@@ -43,9 +43,10 @@ the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 plus the [first eight CMU group matches](2026-10-25-chem-kim-group-eight-primary-retentions.md)
 and [ten further group/publisher matches](2026-10-25-chem-kim-group-ten-primary-retentions.md),
 followed by [eleven AIP/PLOS/BKCS matches](2026-10-25-chem-kim-group-eleven-primary-retentions.md)
-and [ten recent CMU faculty/publisher matches](2026-10-25-chem-kim-faculty-ten-primary-retentions.md).
+and [ten recent CMU faculty/publisher matches](2026-10-25-chem-kim-faculty-ten-primary-retentions.md),
+followed by [twelve systematic official-bibliography/publisher matches](2026-10-25-chem-kim-official-bibliography-twelve-primary-retentions.md).
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
-own DOI/page evidence and remain distinct works. The 54 confirmed rows do
+own DOI/page evidence and remain distinct works. The 66 confirmed rows do
 **not** represent Kim's whole publication history.
 The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
 keeps three more initials-only records held despite suggestive related sources.
@@ -69,8 +70,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 54 confirmed IDs, and the 394 exact exclusion IDs to
-these lists; it must prevent all 470 held rows from creating works,
+all 918 exact IDs, the 66 confirmed IDs, and the 394 exact exclusion IDs to
+these lists; it must prevent all 458 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the
