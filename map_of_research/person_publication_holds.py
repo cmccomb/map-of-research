@@ -18,6 +18,12 @@ DEFAULT_PERSON_PUBLICATION_HOLDS_PATH = Path(
     "data/curated/person-publication-holds.json"
 )
 _DOI = re.compile(r"10\.\d{4,9}/\S+")
+BIO_HOLD_RELEASE_REVISION = "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
+_BIO_HOLD_PRIOR_REVISION = "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061"
+_BIO_HOLD_SOURCE_SHA256 = (
+    "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550"
+)
+_BIO_HELD_PERSON_ID = "person-shlomotaasan-403c9cf9"
 
 
 @dataclass(frozen=True)
@@ -32,6 +38,19 @@ class PersonPublicationHold:
     reason: str
     evidence_url: str
     reviewed_at: str
+
+
+def _continues_published_bio_hold(
+    hold: PersonPublicationHold, prior_revision: str | None
+) -> bool:
+    """Permit the exact published Bio hold on its immediate immutable parent."""
+
+    return (
+        prior_revision == BIO_HOLD_RELEASE_REVISION
+        and hold.person_id == _BIO_HELD_PERSON_ID
+        and hold.prior_revision == _BIO_HOLD_PRIOR_REVISION
+        and hold.source_snapshot_sha256 == _BIO_HOLD_SOURCE_SHA256
+    )
 
 
 def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ...]:
@@ -156,6 +175,12 @@ def validate_person_hold_losses(
     current = list(current_profiles)
     approved: set[tuple[str, str, str, str]] = set()
     for hold in holds:
+        if _continues_published_bio_hold(hold, prior_revision):
+            if any(
+                row.get("person_id") == hold.person_id for row in previous + current
+            ):
+                raise ValueError("Person-publication hold prior or current rows differ")
+            continue
         if hold.prior_revision != prior_revision:
             raise ValueError("Person-publication hold parent revision differs")
         person_rows = [
@@ -205,6 +230,7 @@ def select_released_person_observations(
     holds: tuple[PersonPublicationHold, ...],
     *,
     source_snapshot_sha256: str,
+    prior_revision: str | None = None,
 ) -> tuple[Any, list[dict[str, Any]], set[str]]:
     """Remove only reviewed held owners after exact raw-row validation."""
 
@@ -235,7 +261,10 @@ def select_released_person_observations(
             for row in source.itertuples(index=False)
         )
         if (
-            hold.source_snapshot_sha256 != source_snapshot_sha256
+            (
+                hold.source_snapshot_sha256 != source_snapshot_sha256
+                and not _continues_published_bio_hold(hold, prior_revision)
+            )
             or len(source) != hold.expected_source_rows
             or source["source_type"].ne("curated_verified").any()
             or actual_observations != sorted(hold.source_observations)
