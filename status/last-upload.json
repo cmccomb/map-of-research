@@ -1,9 +1,8 @@
 {
-  "artifact_commit": "38f119d71692cdb9112210217b532a7dd7c1633a",
-  "atomic_release": {
-    "artifact_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
-    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: a2c318135a234d8c92abd6efb15e6d83",
-    "commit_nonce": "a2c318135a234d8c92abd6efb15e6d83",
+  "atomic_release_intent": {
+    "artifact_revision": null,
+    "commit_message": "Publish exact Chemistry region review atomically\n\nRelease-Intent-Nonce: b70f6887d6d74392ba853d597b6e01f6",
+    "commit_nonce": "b70f6887d6d74392ba853d597b6e01f6",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -13,222 +12,143 @@
       "profile_publications/train-00000-of-00001.parquet",
       "works/train-00000-of-00001.parquet"
     ],
-    "hosted_file_bytes_match_prewrite": true,
+    "intent_status": "before_write",
     "mode": "single_parent_commit",
-    "parent_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
+    "parent_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
     "prewrite_gate": {
-      "bernhard_repair_manifest_sha256": "8679bb3b01483e9e87ba5220df4ef9a4b673264a79cc8cd48392f119dbe1fefc",
-      "composite_map_parity": {
-        "map_points": 42909,
+      "authorship_delta": {
+        "added": 0,
+        "donahue_presentation_coauthor_edges_added": 0,
+        "removed": [
+          {
+            "observation_id": "observation-322aff7eafed093d9336074939432f3aa638371b22424978424688b3089d06a9",
+            "person_id": "person-krzysztofmatyjaszewski-29a2013e",
+            "work_id": "work-39536a0d503d0d0abce7d0c49c97a5150a99454d025374863666b670bf7f5aae"
+          },
+          {
+            "observation_id": "observation-63227c66c182db44fc86f56c5052c458ff8a777efa34d28ea5acb4c24fd02bd5",
+            "person_id": "person-terrencejcollins-61cf6ed9",
+            "work_id": "work-65c9212f1031ce123018ab27d5e79ab97a79ded77d1bffaf1198b046d9e02940"
+          },
+          {
+            "observation_id": "observation-68bc84c96651dd28d34791a7f441e6522bcbbaf5b1a9ff2b375243581ce33f23",
+            "person_id": "person-robertorgil-90b0cbe9",
+            "work_id": "work-71334c823192bad89b03e4a28b91e98f5c9a347b8267156a95482f4fa741c18a"
+          },
+          {
+            "observation_id": "observation-73df2e15488df8202c7d251262c2cc520458de486ef076d3d88f5834cc283dbf",
+            "person_id": "person-krzysztofmatyjaszewski-29a2013e",
+            "work_id": "work-2f1347e35aa8c3baaa68a55454162f9b76009d7507369772b76e78ef1f8ba059"
+          },
+          {
+            "observation_id": "observation-82240a6b916e038f5e8331359e51df1459558444f8f1644ad208205e29881535",
+            "person_id": "person-krzysztofmatyjaszewski-29a2013e",
+            "work_id": "work-e5795459b6d42521aed58eda810f50c4635e25bf18068d07bb7edc1b60c5ae2b"
+          },
+          {
+            "observation_id": "observation-973c36ad8fdea4d041a09a1d25ac3988fc600211bbe5b31fa5180c29c14df9bb",
+            "person_id": "person-terrencejcollins-61cf6ed9",
+            "work_id": "work-95c7a920d86a580cbd14f08b21d4861bf4758d574ab06db03c18061336c460e0"
+          },
+          {
+            "observation_id": "observation-c12177f395e4d08929c979547f5637707232e109d6ccc368bd40c137643005be",
+            "person_id": "person-mariakurnikova-215a60c6",
+            "work_id": "work-df59c8c890fd2af56537af2e81b25fdba5e593e506413d7026e069f74e22b8ba"
+          },
+          {
+            "observation_id": "observation-d4f33ddad77fd19114ea15ae8b6104414c8a51ad738387676ad2dee832760ad5",
+            "person_id": "person-washburn-3a49d96a",
+            "work_id": "work-4f7e7b4b8b671200c714a25bdc20fdcd0c37b77573238c7c5d47e1f45eca1920"
+          },
+          {
+            "observation_id": "observation-fb752aa794b04cb835558eb1a6e8278801f97f14097c8f7f09448239022c7a7f",
+            "person_id": "person-terrencejcollins-61cf6ed9",
+            "work_id": "work-58beee05deaba938d869e420c9bdc5c3923b38587ae46beccba78f1a1b97fe80"
+          }
+        ],
+        "shared_payloads_frozen": 49620
+      },
+      "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
+      "gate": "exact-chemistry-post-337-delta-v1",
+      "map": {
+        "map_points": 42907,
         "removed_work_ids": [
-          "work-1aa3cd9ca2a224f3720f1c8068b306278c6e589ac195faf3f8bd6cf70426ef78",
-          "work-2c115702ad01913c32a100b74a136ef45a296307597a9ac61726e1718a490df1"
+          "work-2f1347e35aa8c3baaa68a55454162f9b76009d7507369772b76e78ef1f8ba059",
+          "work-39536a0d503d0d0abce7d0c49c97a5150a99454d025374863666b670bf7f5aae",
+          "work-71334c823192bad89b03e4a28b91e98f5c9a347b8267156a95482f4fa741c18a",
+          "work-95c7a920d86a580cbd14f08b21d4861bf4758d574ab06db03c18061336c460e0",
+          "work-e5795459b6d42521aed58eda810f50c4635e25bf18068d07bb7edc1b60c5ae2b"
         ],
         "restored_work_ids": [
-          "work-1f25701efbbc68dd1f9a8b54cb178e702de15524c9853ed7d1fe1a24494d2612",
-          "work-320cf1e6dbf6a7644f75b5fe48ba3645f2e0ad11048708012fe1f715e3e33b93",
-          "work-38ede4e51235c8cc32a1f972d6586412b1a3517381d232efeaf2c02c91003019",
-          "work-c0c68760d33b4dd55a610aede37237428babd5d8609b54c3f47822fcd3994457"
+          "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+          "work-7cf42c9fd2912068c1a0198c94b9ca19f67cd16f4112f52c44b98a59a2c0662a",
+          "work-f07078afd572186934d04127dcd8526c089e5089ad69b1c4504702ac49c4329b"
         ],
-        "shared_points_frozen": 42894,
-        "status": "pass",
-        "sullivan_new_work_ids": [
-          "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d",
-          "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
-          "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f",
-          "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d",
-          "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032",
-          "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc",
-          "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
-          "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276",
-          "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
-          "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114",
-          "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1"
-        ],
-        "sullivan_removed_work_ids": [
-          "work-00119ce6c246870e1093bfa8d6bf5f7f2dd00c4e254eb75afa7918b47e91cefa",
-          "work-1e0894e1fdfd288db72861e54712abc35ee5c522606105482baf40eebfc03931",
-          "work-281380005be9fb3927f4ff847f9242f96544b2c497ee5e95058ed521ee0f7dc8",
-          "work-2dc1e8bab6977930c1004ad6f2e30e7f45c319c73a9e7ceec632bf0c50e1f050",
-          "work-30d95b3f6d7cfd6fc64159a1e394641759a4de24f9a2bcfb8dc843f96093fbc2",
-          "work-346177a186af2374aa0ff7a41eb6421d1e1c6b2833be60967253561309ebad6a",
-          "work-4043df9ef166a7a55a9bff178220e30ad757cd7a4bcaefc82104bf4fff66e251",
-          "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
-          "work-4faeed12c5dd0125d97c9ee5940d3b430f9c8a201495ba4d65ae4ab02274fa09",
-          "work-538123ca6317c3428a3133716b2a98c3b30370ada68df09e167c7f5bd28df5c0",
-          "work-5dcc0f98cca7d8ac579ed262d3c256906e3a688b371a11a98528188c6cc738dc",
-          "work-60b080a67f4400a130ecafe17b8575867aaf45b7527d94e5396e7a127b8b24da",
-          "work-6a32f12212002f24b2e55823946fb4f0dd9ed6348214cb26d007eb8d472ea710",
-          "work-6c7b071518a7834a405498de72db85597c887853e950ea29d1313cf4b88afa3b",
-          "work-6fab60ed5c6f46717e336e1dbde85da924d2fc09c04b2dc0576be41846b1874a",
-          "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
-          "work-87681e7443fa9a1fc1a405700030080f24e853371690c1067dbad649d947da5b",
-          "work-87789b6016b5d64dbdaeac65c51aa4243737a42106630e529e44b0995f91bb46",
-          "work-87bfed6493a2a86a654145a9c8befbde168a880df5d809f1d566e6e115a76b1d",
-          "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
-          "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3",
-          "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2",
-          "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16",
-          "work-bb2f1ec922e8f4bec82452ea82a735e08494df46e0c4390193613a65f92414b1",
-          "work-c5fbd4aeda6c56ddee5fd1064ebb7bca07d21e2b15c4376b14436d0fdb00eb04",
-          "work-c84498bb1cf0b8c20bf856546706d29ec0fa4f3ef1ad2fa8a139aabca57c8a87",
-          "work-d90e99cbc03b02cbde0d4948d614f0026e9a08354ea6f058c2709ceb572b9f28",
-          "work-e0d5e0f90638bfae83a08e0038face9baec7fbb8c4b6025c3c866c4d4fb5faf7",
-          "work-fb7b4b6b37592f81afcc08b7b6064ea746fa48379daae0425300e91a6b00cf7a"
-        ]
+        "shared_points_frozen": 42904,
+        "status": "pass"
       },
-      "composite_nonwork_parity": {
-        "status": "pass",
-        "tables": {
-          "authorships": {
-            "baseline_rows": 49662,
-            "exact_reviewed_non_sullivan_rows": 49468,
-            "exact_sullivan_rows": 161,
-            "old_sullivan_rows": 178,
-            "staged_rows": 49629
-          },
-          "people": {
-            "baseline_rows": 2001,
-            "exact_reviewed_non_sullivan_rows": 2001,
-            "exact_sullivan_rows": 0,
-            "old_sullivan_rows": 0,
-            "staged_rows": 2001
-          },
-          "profile_publications": {
-            "baseline_rows": 51823,
-            "exact_reviewed_non_sullivan_rows": 51627,
-            "exact_sullivan_rows": 252,
-            "old_sullivan_rows": 196,
-            "staged_rows": 51879
-          }
-        }
+      "parent_sha256_by_path": {
+        "README.md": "69c92647bf73c293e7e372e64b5a7ce0902923dda0e25933b1e957a29c6d7173",
+        "authorships/train-00000-of-00001.parquet": "1398a6d9410945c0eb17601cc42e13efb851ebddb481af6b1725e1e836175a7d",
+        "maps/manifest.json": "2707db369661b39703cbd08b05db324ad624a2d3815a1844a06569d3ca84ae04",
+        "maps/publications.json": "431ca9f1ed98e0a04e025438d16940296528efa145271be987596c664d32eff3",
+        "people/train-00000-of-00001.parquet": "8c369014272b84d44f61621ed0c93077f0195d73156f95065acc3b19d52d57e4",
+        "profile_publications/train-00000-of-00001.parquet": "d9f7202470c927fde0b7e776bbea0b32d9192eae38516c7f187926f4fde3b5ba",
+        "works/train-00000-of-00001.parquet": "ef071bce69745fe9815f0e038267541b6ad9c242d195cc73de3c9573f74a7c91"
       },
-      "composite_works_parity": {
-        "baseline_work_rows": 47693,
-        "old_non_sullivan_rows_exact": 47492,
-        "staged_work_rows": 47743,
-        "status": "pass",
-        "sullivan_new_work_ids": [
-          "work-00d67efb382964200af4d6adbe3b5fa8605c0a2d406e0616fe004095cc6437c7",
-          "work-0180ff8be40be236d6c9f9073a50ded2570d87835210ca39b5fa5c47a3c1e43e",
-          "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d",
-          "work-0d3394a75064b3b7cf1ad88de2a4f17448a555a848a40c710c63e3c831982cd9",
-          "work-0f0011aa7df2a20e576df659794cd304c5bd2c9c9703ffcdc5d6c34c40216086",
-          "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
-          "work-1480e1e057c232dc21b1ee1fba968cc70d9562f2db29ca5df9d24e1923a809bc",
-          "work-15fd535df38a2851a74ba539c0bc5e7ee85c57b09eca6e5d60712bc69b73ed1c",
-          "work-166a3322283da1f54d39fc6b60153a063cf70cbea3f91b2b8bfed653e249e3b4",
-          "work-19f8fe5112a5f5102d7040e00491ccfe3bbc22e7cfad0e337db4f70f2c125448",
-          "work-1f588a7da24a95e27ada1a591a728b242124ff5fd30ad240d0597dc877dc024c",
-          "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f",
-          "work-2551d2d27b9c627bb1eb61c9dd61028a6532723fc6e4ce5a27ce9a96e71cd264",
-          "work-27149a1516a599dddd365624e52b1aabe91327ff9fad4ed338a0ef790e04f9d2",
-          "work-285b92623c9f8be2c44539b26f0a130741a224a7a31c192be7766c76225b1a8e",
-          "work-29ecd6d7c6aa52246eaacb5039b424a6e6c53f09f2e804fa3024421678857b45",
-          "work-2a2ed671815294d4ee81a224e0aaa85b450ed913f7e0b524c79f4b31b9037ce0",
-          "work-2f5ab6e026a44aba668b80a18dbd1cb2c4a6fb22f0ad9393ba3523c2e8998db0",
-          "work-30edf30b866fb6560c73fdaa83c84bcd66a47d310d2a2504899b5c4977c8a360",
-          "work-357ad560d3a519ef3171bd837d40f81325f204b91908bf3ca8a6acbaa0744436",
-          "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d",
-          "work-505949f8a40ba015ae796966c7208a9fb138f107db90be9230026501ee41342d",
-          "work-57a7fcf9ad93b52e95306617a03a15ac9867b2207c473782db4d5753f1497944",
-          "work-5c6525211bf91b46ec7a2aac770deb476f19b3298958a6f21bcaaec2ad307943",
-          "work-60ecf96f5d1d05ecde368388ad11e928a61691f82c5c9d3c70da71d0267c1589",
-          "work-649bf09f344c0a68fd55f1f392b390fd859e02b64091053465142988943b2cad",
-          "work-64fc21ecfd5c9108900cb9446d5ab7c5ead46885a6ba87cc49754959de67263e",
-          "work-66920fd741547024883951520a2ba31eaf9a3d282c312a15fa224f70b7ff5296",
-          "work-687599c4ead42b5f37fa4c4e5331bb814db0799dca257afa20f7421702406dfb",
-          "work-7263826686220fb701e9b447e169a2e62178d1f7511030cc1cde2e42277e18fe",
-          "work-78c696120690e36b3d0d97c316aa4408a2e56aabb395c2f85affb21c34e0927a",
-          "work-7916d9a2ac716ddd52475f8acb56cbb47340076942a9c2c05e45d13aeae94718",
-          "work-87fb54ca9a5eb34daa78846e97d2711190933050cf2c04dd01cbfb8f24ee5888",
-          "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032",
-          "work-8c0c757de695d48fe326bca1e22a44aef8fc3fc4dac5fac6c6d6aaaab43baee4",
-          "work-8cd4ec3c773b5b185363a4837b24a344999ae396d4475003e76e74962bb6d4dc",
-          "work-8d14507ac706d32ab76a631f2e1cf3280f2ed6f17fc59dd30d1b967baa517aac",
-          "work-9883a9803ac2ec1dd899ce0804657134b8354e2046a7177f812c476853087fbc",
-          "work-9c185d1c32527582a4d29fc1e9185dcd4fb7450f4f24516883d8133dee1a15fd",
-          "work-a1e755de12a50a16f278d578f897da58aac2614f491ea5d2bb0d9304e1bc08b1",
-          "work-ac07d1bd625338c4d1180852161f7008f44399052614c987aaefdf89a5deb324",
-          "work-aca207f8643e88996af48be9b6f70d48ca6f51c4f2b1e8d1be59adc096d7522b",
-          "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc",
-          "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
-          "work-b762b9b0ce5d42b30153e125285150a87d2b6b961e335c9dcdc8eef0762986ed",
-          "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276",
-          "work-baae6bd463fa0a429b8468187092c2fd43a79712ad7dc76c0cec0a13edef2cc1",
-          "work-be21ae5e287d23c94456235afcf887d5afaf00d09044eb641a1e9a928ea1dc3f",
-          "work-c034ae0ee01d23cdfda8cca3ecfce6231848882c636a6eabfba167c15816aa9d",
-          "work-c687900ffb2da722cf04c0d543534da881a0b091914fd60cacf8e713a9ed05b6",
-          "work-cff8138e8eac871aaf9ab0ded32ade78a2ed03d3b747b1548b352aac8e966227",
-          "work-d2a3e21ca381c9a28b19593758d0ee6fdb9a8cf19b298036e363ebb07c73587b",
-          "work-d640bd15fa85f26d27559520d6ee7975f87906b9656d3032dd9a90a4e7f57420",
-          "work-d8596863692de92b66b34e284379e0e2e1cf2dee8925510e300342b64bbeab47",
-          "work-dd2b019ab27f2693d5fee099d091b4f9b518f39fb63921c991e71861f6a3ca2e",
-          "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
-          "work-e8fb2f967e80cad871d5f5735929d90935dc58d6ce51d63561c7f281d6fa1dbb",
-          "work-eec462cfab7fcced0ea43b3250b4af306b496e82e76c7a40dbc468ece009d9d6",
-          "work-efe84958d87e9e24165dffcdd219fb9fd57476673119d127edc24951aabdc6df",
-          "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114",
-          "work-f26814be18a6f4c476c63438f4fde6e60ae85aebd8b5d75b8de337a48d718fe4",
-          "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1",
-          "work-fd44e5b4ad67595a557bf332516756e2661cfe963bf3a585d60d319572d82b0b"
-        ],
-        "sullivan_removed_work_ids": [
-          "work-2eee0a9487baad0a2e705714e868003bf66ce84e7f4042880569b79a6f7c655b",
-          "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
-          "work-60b080a67f4400a130ecafe17b8575867aaf45b7527d94e5396e7a127b8b24da",
-          "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
-          "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
-          "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3",
-          "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2",
-          "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16",
-          "work-b7341ad16197c387d2b0be8b19f2356697fa6bee3ffd4f2972f222c35aa2f080",
-          "work-c84498bb1cf0b8c20bf856546706d29ec0fa4f3ef1ad2fa8a139aabca57c8a87",
-          "work-d67ade5d8757bc08f4d6c2affac0640a792351a8bccf09da6f6c0ad67f85eb4d",
-          "work-fa24bb9f8e0535e938a8539bc918303cbf407e6817299a6efe1e24bc29a7688f",
-          "work-fa3ccb008ce61f94d40f51c07a4dd5b110833eb23c8e34866d6033395de46a14"
-        ]
+      "prior_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
+      "registry_transition": {
+        "effective_primary_homes_frozen": 2001,
+        "explicit_math_home_rows": 49,
+        "people": 2001,
+        "producer_registry_sha256": "7b5cfc69839a5428d317db768c87994f506b5d833980ba63233799bbbd2e0953",
+        "source_registry_sha256": "2466f7e63b717a76292cc51d194d1e0bbc11a9bff22cc87904926f3cdd980e3b",
+        "status": "pass"
       },
-      "gate": "source-bound-sullivan-reviewed-math-composite-v2",
-      "map_points": 42909,
-      "prior_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
-      "raw_rows": 51879,
+      "reviewed_337_producer": "a68fbf0c4ea1623b84c01497f40f718f5edac7f8",
+      "source_commit": "8be6a2400cf72dd959c874bfcada8624540820ef",
       "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
-      "status": "pass"
+      "stage_sha256_by_path": {
+        "README.md": "1f3da0b5667b2ee54a7959b31bdef0e4334b6ac194a5e09cdb78bf679dc9d78d",
+        "authorships/train-00000-of-00001.parquet": "b76cff324f224ce30152f2bb5a8639fb9c9c5521e81bf504d8192881f79795f6",
+        "maps/manifest.json": "269df189e6b868138a0b5fe3f0fa3c4ebf3c353c94702182bae9089ddba16398",
+        "maps/publications.json": "b438f00fd19886e0dbac27bacee07bda631432e67763a2c5e7cd6e411b18ddd6",
+        "people/train-00000-of-00001.parquet": "3c439be2c5c0f981561d3e16de543c548cf9745678332e983c2582689a999e63",
+        "profile_publications/train-00000-of-00001.parquet": "769b99ea16999f4a2bd3bbfd4cee7f4144e62fd4282e8a16592b5e2cf48a80a0",
+        "works/train-00000-of-00001.parquet": "014b53321b1b5e191372158030a40ba200cdf759ca19c52db74be75947ba0509"
+      },
+      "status": "pass",
+      "tables": {
+        "authorships": 49620,
+        "people": 2001,
+        "profile_publications": 51879,
+        "works": 47743
+      }
     },
     "release_context": {
-      "producer_commit": "a68fbf0c4ea1623b84c01497f40f718f5edac7f8",
+      "producer_commit": "5275d5aecd82eb0ac6cdf8d9136568f08ae2d517",
+      "producer_review_commit": "a68fbf0c4ea1623b84c01497f40f718f5edac7f8",
       "snapshot_commit": "8be6a2400cf72dd959c874bfcada8624540820ef",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40197924026"
+      "source_commit": "8be6a2400cf72dd959c874bfcada8624540820ef"
     },
     "sha256_by_path": {
-      "README.md": "69c92647bf73c293e7e372e64b5a7ce0902923dda0e25933b1e957a29c6d7173",
-      "authorships/train-00000-of-00001.parquet": "1398a6d9410945c0eb17601cc42e13efb851ebddb481af6b1725e1e836175a7d",
-      "maps/manifest.json": "2707db369661b39703cbd08b05db324ad624a2d3815a1844a06569d3ca84ae04",
-      "maps/publications.json": "431ca9f1ed98e0a04e025438d16940296528efa145271be987596c664d32eff3",
-      "people/train-00000-of-00001.parquet": "8c369014272b84d44f61621ed0c93077f0195d73156f95065acc3b19d52d57e4",
-      "profile_publications/train-00000-of-00001.parquet": "d9f7202470c927fde0b7e776bbea0b32d9192eae38516c7f187926f4fde3b5ba",
-      "works/train-00000-of-00001.parquet": "ef071bce69745fe9815f0e038267541b6ad9c242d195cc73de3c9573f74a7c91"
+      "README.md": "1f3da0b5667b2ee54a7959b31bdef0e4334b6ac194a5e09cdb78bf679dc9d78d",
+      "authorships/train-00000-of-00001.parquet": "b76cff324f224ce30152f2bb5a8639fb9c9c5521e81bf504d8192881f79795f6",
+      "maps/manifest.json": "269df189e6b868138a0b5fe3f0fa3c4ebf3c353c94702182bae9089ddba16398",
+      "maps/publications.json": "b438f00fd19886e0dbac27bacee07bda631432e67763a2c5e7cd6e411b18ddd6",
+      "people/train-00000-of-00001.parquet": "3c439be2c5c0f981561d3e16de543c548cf9745678332e983c2582689a999e63",
+      "profile_publications/train-00000-of-00001.parquet": "769b99ea16999f4a2bd3bbfd4cee7f4144e62fd4282e8a16592b5e2cf48a80a0",
+      "works/train-00000-of-00001.parquet": "014b53321b1b5e191372158030a40ba200cdf759ca19c52db74be75947ba0509"
     },
     "size_by_path": {
       "README.md": 10259,
-      "authorships/train-00000-of-00001.parquet": 15548287,
-      "maps/manifest.json": 8416,
-      "maps/publications.json": 38643662,
-      "people/train-00000-of-00001.parquet": 661149,
-      "profile_publications/train-00000-of-00001.parquet": 186378873,
-      "works/train-00000-of-00001.parquet": 191437050
+      "authorships/train-00000-of-00001.parquet": 15545730,
+      "maps/manifest.json": 2815,
+      "maps/publications.json": 38642034,
+      "people/train-00000-of-00001.parquet": 661164,
+      "profile_publications/train-00000-of-00001.parquet": 186380820,
+      "works/train-00000-of-00001.parquet": 191435903
     }
-  },
-  "attribution_confirmed": 437,
-  "attribution_held": 112,
-  "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
-  "authorships": 49629,
-  "dataset_commits": {
-    "authorships": "38f119d71692cdb9112210217b532a7dd7c1633a",
-    "people": "38f119d71692cdb9112210217b532a7dd7c1633a",
-    "profile_publications": "38f119d71692cdb9112210217b532a7dd7c1633a",
-    "works": "38f119d71692cdb9112210217b532a7dd7c1633a"
   },
   "dataset_configs": [
     "people",
@@ -237,372 +157,14 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "detail_keywords": 121,
-  "error_message": null,
-  "error_type": null,
-  "excluded_works": 2516,
-  "finished_at_utc": "2026-10-25T13:44:02.378921+00:00",
-  "held_observation_rows": 0,
-  "held_profile_ids": [],
-  "held_source_observation_rows": 0,
-  "keywords": 31,
-  "layout_version": "global-publications-multilayout-v3",
-  "map_artifact_count": 1,
-  "mapped_works": 42909,
-  "math_coverage": {
-    "complete_scholar_profiles": 36,
-    "complete_scholar_rows": 4080,
-    "math_people": 65,
-    "unresolved_scholar_id_people": 29
-  },
-  "new_embedding_count": 70,
-  "people": 2001,
-  "prior_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
-  "producer_commit": "a68fbf0c4ea1623b84c01497f40f718f5edac7f8",
-  "profile_count": 310,
-  "profile_publications": 51879,
-  "profile_release_decisions": [
-    {
-      "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
-      "person_id": "person-chienho-da71f01b",
-      "person_observation_rows": 582,
-      "reason": "Complete 582-row visible Scholar source is verified. Exact review confirms 437 Chien Ho rows, excludes 92, and holds 53 from mapped works; only reviewed map-eligible records may publish.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "8iLLOQgAAAAJ",
-      "source_observation_rows": 582,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
-      "person_id": "person-terrencejcollins-61cf6ed9",
-      "person_observation_rows": 361,
-      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and seven provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "0e1jwkkAAAAJ",
-      "source_observation_rows": 361,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
-      "person_id": "person-nimermurshid-70983eeb",
-      "person_observation_rows": 49,
-      "reason": "Complete 49-row visible Scholar profile verified; 3 exact degraded duplicate citations excluded and 2 unresolved observations held from mapped works. Remaining rows pass normal quality gates.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "MPxFaHYAAAAJ",
-      "source_observation_rows": 49,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "9d64f37c39179c78af9635e1cf5afd53a26ca00bfeee093a8866ff8d7d3a09f8",
-      "person_id": "person-simonfaulkner-1cc1e517",
-      "person_observation_rows": 5,
-      "reason": "Complete five-row visible Scholar profile verified; one degraded duplicate citation is exactly excluded. Remaining rows pass normal quality gates.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "tPp2aaoAAAAJ",
-      "source_observation_rows": 5,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
-      "person_id": "person-gloriasilva-5a457252",
-      "person_observation_rows": 41,
-      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "vF51LxIAAAAJ",
-      "source_observation_rows": 41,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7",
-      "person_id": "person-sullivan-589c9545",
-      "person_observation_rows": 252,
-      "reason": "Complete 250-row visible Scholar capture is source-bound. Fifty-six exact exclusions and thirty-five provisional attribution or item-type holds remain in raw observations but cannot contribute to mapped works or coauthor links; the other rows enter the normal quality gate.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "wXSgFr4AAAAJ",
-      "source_observation_rows": 250,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
-      "person_id": "person-stefanbernhard-7f8d72cd",
-      "person_observation_rows": 228,
-      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "hfFKwRcAAAAJ",
-      "source_observation_rows": 228,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "ad22a8e1f97d1a4ebbb6c2caebf0a602bbd05e54acdb78c288f8fc833b6af1f0",
-      "person_id": "person-giovannileoni-02ab6865",
-      "person_observation_rows": 134,
-      "reason": "Complete 134-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "0Nj-v7sAAAAJ",
-      "source_observation_rows": 134,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "94603153d1a94fcfc3d000b1619222b96e0ca0adaa90098fc02a968cbaf5750b",
-      "person_id": "person-steveneshreve-df3eafb3",
-      "person_observation_rows": 185,
-      "reason": "Complete 185-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "A0ISJPUAAAAJ",
-      "source_observation_rows": 185,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "f16b4143f102fa5a6f36712bade0cad51fb4bfcb39c2b7c22aee8a9337e11d14",
-      "person_id": "person-alanfrieze-ef264103",
-      "person_observation_rows": 659,
-      "reason": "Complete 659-row Scholar capture is source-bound. 9 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "EqKRQ4YAAAAJ",
-      "source_observation_rows": 659,
-      "state": "released"
-    },
-    {
-      "cache_sha256": "6aeda014b4adcd695419ea85fbd2a47e491e5654ce3ecc68e8342e1804fe8217",
-      "person_id": "person-irenefonseca-51ba491a",
-      "person_observation_rows": 254,
-      "reason": "Complete 253-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
-      "reviewed_at": "2026-10-25",
-      "scholar_id": "JV3ryMgAAAAJ",
-      "source_observation_rows": 253,
-      "state": "released"
-    }
-  ],
-  "profile_release_manifest_sha256": "ebc187f853ffceedd44410d29a67eda4f3e1f5334bc531931938e4acebfcbfa3",
-  "provisional_hold_manifest_sha256": "d52bbf51d65b8922b2dbde1d51afe4e287ce3a5818f460a96f69181e8c8197b0",
-  "provisional_hold_observation_rows": 59,
-  "provisional_hold_profiles": [
-    {
-      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
-      "held_ids_sha256": "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0",
-      "held_observation_rows": 7,
-      "person_id": "person-terrencejcollins-61cf6ed9",
-      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
-      "reviewed_exclusion_rows": 31,
-      "scholar_id": "0e1jwkkAAAAJ",
-      "source_observation_rows": 361
-    },
-    {
-      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
-      "held_ids_sha256": "d891cf20d7b343526f38e48422bda10e3a866a5210e587738479271bc20c7cf4",
-      "held_observation_rows": 2,
-      "person_id": "person-nimermurshid-70983eeb",
-      "reviewed_exclusion_ids_sha256": "c07da5e36cb83245b45e07b730bc07f1004b0c2a3510e1c4536c34ce367c6fdb",
-      "reviewed_exclusion_rows": 3,
-      "scholar_id": "MPxFaHYAAAAJ",
-      "source_observation_rows": 49
-    },
-    {
-      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
-      "held_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40",
-      "held_observation_rows": 2,
-      "person_id": "person-gloriasilva-5a457252",
-      "reviewed_exclusion_ids_sha256": "",
-      "reviewed_exclusion_rows": 0,
-      "scholar_id": "vF51LxIAAAAJ",
-      "source_observation_rows": 41
-    },
-    {
-      "cache_sha256": "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7",
-      "held_ids_sha256": "78fe11269cdda8e270e1c4ec98e1cb24ddec53b5c0a942e79acff00cc9f677ae",
-      "held_observation_rows": 35,
-      "person_id": "person-sullivan-589c9545",
-      "reviewed_exclusion_ids_sha256": "bc82650651779bda8ea25c141d14af00633ec8795ffd3e2f5c2aef956a0a0e21",
-      "reviewed_exclusion_rows": 56,
-      "scholar_id": "wXSgFr4AAAAJ",
-      "source_observation_rows": 250
-    },
-    {
-      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
-      "held_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388",
-      "held_observation_rows": 1,
-      "person_id": "person-stefanbernhard-7f8d72cd",
-      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6",
-      "reviewed_exclusion_rows": 43,
-      "scholar_id": "hfFKwRcAAAAJ",
-      "source_observation_rows": 228
-    },
-    {
-      "cache_sha256": "ad22a8e1f97d1a4ebbb6c2caebf0a602bbd05e54acdb78c288f8fc833b6af1f0",
-      "held_ids_sha256": "61e6bf82f20820ff49f8924624f2d97dc868fe3740390e4b51dfa8d55b85a215",
-      "held_observation_rows": 1,
-      "person_id": "person-giovannileoni-02ab6865",
-      "reviewed_exclusion_ids_sha256": "5b6d91daa613edc76c2e19eb4947d41b08a33632fb59b2e3b6171d89d8f69dea",
-      "reviewed_exclusion_rows": 21,
-      "scholar_id": "0Nj-v7sAAAAJ",
-      "source_observation_rows": 134
-    },
-    {
-      "cache_sha256": "94603153d1a94fcfc3d000b1619222b96e0ca0adaa90098fc02a968cbaf5750b",
-      "held_ids_sha256": "d0eebf2e64a1f7ffaae592fac2f65dce2accaef6fbeb66e5107be07f708bce3c",
-      "held_observation_rows": 1,
-      "person_id": "person-steveneshreve-df3eafb3",
-      "reviewed_exclusion_ids_sha256": "bf892bc8ce40dd71aac7fdb2267c1c4849354aa973e200ecdba0732cf31ce73c",
-      "reviewed_exclusion_rows": 28,
-      "scholar_id": "A0ISJPUAAAAJ",
-      "source_observation_rows": 185
-    },
-    {
-      "cache_sha256": "f16b4143f102fa5a6f36712bade0cad51fb4bfcb39c2b7c22aee8a9337e11d14",
-      "held_ids_sha256": "bc398cd32886ce413640401e508e5d341eb9f4fb57693d518fd9ba16bbe19b51",
-      "held_observation_rows": 9,
-      "person_id": "person-alanfrieze-ef264103",
-      "reviewed_exclusion_ids_sha256": "cfce840065c228a3bcd7d7ad64b8ecd84b4ec85124d8151f80f456dc6096b3ac",
-      "reviewed_exclusion_rows": 80,
-      "scholar_id": "EqKRQ4YAAAAJ",
-      "source_observation_rows": 659
-    },
-    {
-      "cache_sha256": "6aeda014b4adcd695419ea85fbd2a47e491e5654ce3ecc68e8342e1804fe8217",
-      "held_ids_sha256": "b1002c90d937ae3f5bc674acd6e0a8fac9ef36af254400cfca7583861e619431",
-      "held_observation_rows": 1,
-      "person_id": "person-irenefonseca-51ba491a",
-      "reviewed_exclusion_ids_sha256": "fa9aa648100ab5b8b87f7d31d94477150d8b38b366c2c1f78638ed01e41c8515",
-      "reviewed_exclusion_rows": 21,
-      "scholar_id": "JV3ryMgAAAAJ",
-      "source_observation_rows": 253
-    }
-  ],
-  "raw_snapshot_observations": 51879,
-  "raw_snapshot_profiles": 310,
-  "raw_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
-  "region_audit_version": "low-information-semantic-region-v2",
-  "region_comparison_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
-  "region_continuity": {
-    "approved_sullivan_additional_losses": [
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:9c2xU6iGI7YC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:L8Ckcad2t8MC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:XiSMed-E-HIC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:nZcligLrVowC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:uc_IGeMz5qoC/scholar"
-    ],
-    "approved_sullivan_binding_changes": [
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
-        "observation": "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:KUbvn5osdkgC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
-        "observation": "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:NJ774b8OgUMC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
-        "observation": "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:ZuybSZzF8UAC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16"
-      }
-    ],
-    "approved_sullivan_held_losses": [
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:2KloaMYe4IUC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:4X0JR2_MtJMC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:B3FOqHPlNUQC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:BJbdYPG6LGMC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:BUYA1_V_uYcC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:DJbcl8HfkQkC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:F9fV5C73w3QC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:GFxP56DSvIMC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:ODE9OILHJdcC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:OTTXONDVkokC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:bFI3QPDXJZMC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:gVv57TyPmFsC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:nVrZBo8bIpAC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:p2g8aNsByqUC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:pyW8ca7W8N0C/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:tH6gc1N1XXoC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:uDGL6kOW6j0C/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:vDZJ-YLwNdEC/scholar"
-    ],
-    "approved_sullivan_rekey_losses": [
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:Ehil0879vHcC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:OR75R8vi5nAC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:OcBU2YAGkTUC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:PVgj2kMGcgYC/scholar"
-    ],
-    "composite_region_manifest_sha256": "8679bb3b01483e9e87ba5220df4ef9a4b673264a79cc8cd48392f119dbe1fefc",
-    "current_visible_observations": 49178,
-    "math_region_review_sha256": "4ede0738f5f0ec5fff2473262db2a89e9a6c61849007b176534bc85d052d415d",
-    "missing_sullivan_curated_targets": [],
-    "new_source_gains": 11,
-    "prior_eligible_overrides": 79,
-    "prior_excluded_overrides": 134,
-    "prior_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
-    "prior_visible_observations": 49192,
-    "reviewed_composite_observation_gains": [
-      "person-florianfrick-f5d7efa6/7G7zH2AAAAAJ/7G7zH2AAAAAJ:IWHjjKOFINEC/scholar",
-      "person-giovannileoni-02ab6865/0Nj-v7sAAAAJ/0Nj-v7sAAAAJ:VL0QpB8kHFEC/scholar",
-      "person-johnplehoczky-091b9734/P_AmD6MAAAAJ/P_AmD6MAAAAJ:dQ2og3OwTAUC/scholar",
-      "person-steveneshreve-df3eafb3/A0ISJPUAAAAJ/A0ISJPUAAAAJ:q3CdL3IzO_QC/scholar"
-    ],
-    "reviewed_composite_observation_losses": [
-      "person-jeremyavigad-0d62ce13/VQfvIfQAAAAJ/VQfvIfQAAAAJ:IUKN3-7HHlwC/scholar",
-      "person-jeremyavigad-0d62ce13/VQfvIfQAAAAJ/VQfvIfQAAAAJ:yFnVuubrUp4C/scholar"
-    ],
-    "reviewed_composite_work_gains": [
-      "work-1f25701efbbc68dd1f9a8b54cb178e702de15524c9853ed7d1fe1a24494d2612",
-      "work-320cf1e6dbf6a7644f75b5fe48ba3645f2e0ad11048708012fe1f715e3e33b93",
-      "work-38ede4e51235c8cc32a1f972d6586412b1a3517381d232efeaf2c02c91003019",
-      "work-c0c68760d33b4dd55a610aede37237428babd5d8609b54c3f47822fcd3994457"
-    ],
-    "reviewed_composite_work_losses": [
-      "work-1aa3cd9ca2a224f3720f1c8068b306278c6e589ac195faf3f8bd6cf70426ef78",
-      "work-2c115702ad01913c32a100b74a136ef45a296307597a9ac61726e1718a490df1"
-    ],
-    "reviewed_losses": [
-      "person-jeremyavigad-0d62ce13/VQfvIfQAAAAJ/VQfvIfQAAAAJ:IUKN3-7HHlwC/scholar",
-      "person-jeremyavigad-0d62ce13/VQfvIfQAAAAJ/VQfvIfQAAAAJ:yFnVuubrUp4C/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:9c2xU6iGI7YC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:L8Ckcad2t8MC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:XiSMed-E-HIC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:nZcligLrVowC/scholar",
-      "person-sullivan-589c9545/wXSgFr4AAAAJ/wXSgFr4AAAAJ:uc_IGeMz5qoC/scholar"
-    ],
-    "stable_works": 45426,
-    "sullivan_continuity_addendum_sha256": "1821b82135f810722379c612f0b7a58a2f82a5a0e2088a7b3392454e64c4a19c",
-    "sullivan_loss_approval_sha256": "5c28b17474772ccc47ae9634a0be1ef3ca30ec0f533ec29b656e74672d83184f",
-    "unapproved_mapped_binding_changes": [],
-    "unexplained_gains": [],
-    "unexplained_losses": [],
-    "unused_sullivan_binding_approvals": [],
-    "unused_sullivan_loss_approvals": [],
-    "verified_gains": [
-      "person-florianfrick-f5d7efa6/7G7zH2AAAAAJ/7G7zH2AAAAAJ:IWHjjKOFINEC/scholar",
-      "person-giovannileoni-02ab6865/0Nj-v7sAAAAJ/0Nj-v7sAAAAJ:VL0QpB8kHFEC/scholar",
-      "person-johnplehoczky-091b9734/P_AmD6MAAAAJ/P_AmD6MAAAAJ:dQ2og3OwTAUC/scholar",
-      "person-steveneshreve-df3eafb3/A0ISJPUAAAAJ/A0ISJPUAAAAJ:q3CdL3IzO_QC/scholar"
-    ],
-    "version": "exact-observation-region-continuity-v1"
-  },
-  "reviewed_contexts": 12,
-  "reviewed_contexts_sha256": "00962fc23909048da216ae2af953361174124fc086b02935162f9ccf54737450",
-  "reviewed_doi_aliases": 52,
-  "reviewed_doi_aliases_sha256": "497ca2b029e1892e5a0f267137519b4e2708af4dc8f6a3bcfa7778dadf988cf7",
-  "reviewed_exclusions": 1154,
-  "reviewed_exclusions_sha256": "adb6532806737f794d02ea1fed30ad9e03a419abb27b819a7d6a01cbf3122f66",
-  "reviewed_metadata_corrections": 19,
-  "reviewed_metadata_corrections_sha256": "5e6fd5feeab134618655dfab57cd9899fc6d1f014b3124f7ef73471f98579b4f",
+  "error_message": "Inspect the retained Chemistry atomic intent before retrying",
+  "error_type": "AtomicWriteOutcomeUnknown",
+  "finished_at_utc": null,
+  "prior_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
+  "producer_commit": "5275d5aecd82eb0ac6cdf8d9136568f08ae2d517",
   "schema_version": 2,
-  "scholar_coverage": {
-    "complete_profiles": 25,
-    "legacy_profiles": 285,
-    "reconciled_prior_ids": 16
-  },
   "snapshot_commit": "8be6a2400cf72dd959c874bfcada8624540820ef",
-  "started_at_utc": "2026-10-25T13:32:35.221493+00:00",
-  "status": "success",
-  "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "validated_metadata_corrections": 19,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40197924026",
-  "works": 47743
+  "started_at_utc": "2026-10-25T14:31:40.338467+00:00",
+  "status": "failure",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40202482892"
 }
