@@ -13,6 +13,8 @@ This review extends the [pinned 46-row author bibliography and 84-row CMU Schola
 
 For this crosswalk, a title key removes HTML tags, folds Unicode accents and case, and keeps letters and digits. It is only a candidate association for review. The earlier manifest's stricter title metric (55 title strings and 29 repeated cards) is unchanged. Neither title-key count equals a count of distinct verified publications, and this crosswalk does not merge any preprint with a journal article. CMU cards abbreviate coauthor display on 45 of 84 rows.
 
+A bounded [arXiv exact-author search](2026-10-25-math-poshen-loh-arxiv-author-crosswalk-manifest.json) returned 38 entries; the [row-level arXiv crosswalk](2026-10-25-math-poshen-loh-arxiv-author-crosswalk.csv) records its complete displayed author lists and first submission dates. All 38 map to a CMU card by arXiv DOI or normalized title, and 35 map to an author-page row. The three author-page gaps are arXiv:1910.06709, 2011.04650, and 2504.10664. This checks the observed arXiv result set only; it does not prove either list covers every publication genre.
+
 The seven unmatched CMU cards have independent authorship evidence in the CSV. Three deserve particular care:
 
 - Card 1 is dated 2026 by CMU because [arXiv version 4](https://arxiv.org/abs/2011.04650) was revised on 27 May 2026; the work was first submitted on 8 November 2020. It is absent from the author page, but should not be counted as a newly first-published 2026 work.
