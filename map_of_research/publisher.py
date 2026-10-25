@@ -1224,7 +1224,9 @@ def publish_snapshot(
         existing_layouts=existing_layouts,
     )
     tables["works"] = add_publication_keywords(tables["works"])
-    tables["works"] = exclude_low_information_regions(tables["works"])
+    tables["works"] = exclude_low_information_regions(
+        tables["works"], doi_aliases=doi_aliases
+    )
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
 

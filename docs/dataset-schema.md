@@ -115,7 +115,9 @@ labels; the corresponding `*_label_reviewed` fields and
 multi-signal catch-all audit.
 `map_region_documented_override` marks a work retained inside a flagged region
 because it has complete bibliographic metadata and either a DOI or a dated,
-independently verified native source identifier.
+independently verified native source identifier. A reviewed short-title DOI
+alias can also retain the exact work when its Scholar citation and publisher
+chapter evidence are pinned in the alias manifest.
 Excluded works remain in the dataset; `map_eligible` controls browser-map
 participation.
 Citation count is the maximum retained source observation, not a sum across

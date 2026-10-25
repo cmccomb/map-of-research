@@ -7,7 +7,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 from .io import load_json
 
@@ -24,6 +24,16 @@ class ReviewedDoiAlias:
     relationship: str
     evidence_urls: tuple[str, ...]
     verified_at: str
+    allow_short_title_region_override: bool = False
+
+
+def _publisher_url_for_doi(url: str, doi: str) -> bool:
+    parsed = urlparse(url)
+    return bool(
+        parsed.scheme == "https"
+        and parsed.hostname == "link.springer.com"
+        and parsed.path.casefold().endswith("/" + doi)
+    )
 
 
 def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
@@ -81,6 +91,18 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             raise ValueError(
                 "Scholar DOI alias verified_at must use YYYY-MM-DD"
             ) from error
+        short_title_override = entry.get("allow_short_title_region_override", False)
+        if type(short_title_override) is not bool:
+            raise ValueError("Scholar short-title override must be a boolean")
+        if short_title_override and (
+            year is None
+            or len(title) >= 30
+            or not any(_publisher_url_for_doi(url, doi) for url in evidence_urls)
+        ):
+            raise ValueError(
+                "Scholar short-title override needs a short exact title, year, "
+                "and Springer chapter evidence for its DOI"
+            )
         key = (scholar_id, author_pub_id)
         if key in aliases:
             raise ValueError(f"Duplicate Scholar DOI alias: {key}")
@@ -91,6 +113,7 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             relationship=relationship,
             evidence_urls=tuple(evidence_urls),
             verified_at=verified_at,
+            allow_short_title_region_override=short_title_override,
         )
     return aliases
 
@@ -123,6 +146,24 @@ def validate_doi_aliases(
         )
         if row["title"] != alias.observed_title or not observed_year_matches:
             raise ValueError(f"Scholar DOI alias observed title or year changed: {key}")
+        if alias.allow_short_title_region_override:
+            source = urlparse(str(row.get("source_url") or ""))
+            query = parse_qs(source.query)
+            if (
+                source.scheme != "https"
+                or source.hostname != "scholar.google.com"
+                or source.path != "/citations"
+                or query.get("user") != [scholar_id]
+                or query.get("citation_for_view") != [author_pub_id]
+                or not isinstance(row.get("authors"), str)
+                or not row["authors"].strip()
+                or not isinstance(row.get("venue"), str)
+                or not row["venue"].strip()
+            ):
+                raise ValueError(
+                    "Scholar short-title override needs the exact citation "
+                    f"and metadata: {key}"
+                )
         if key in exclusions:
             raise ValueError(f"Scholar DOI alias also has a reviewed exclusion: {key}")
         source_doi = str(row.get("source_doi") or "").strip().casefold()

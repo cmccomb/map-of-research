@@ -3,6 +3,7 @@ import pandas
 import pytest
 
 import map_of_research.keywords as keywords
+from map_of_research.doi_aliases import ReviewedDoiAlias
 from map_of_research.topic_labels import apply_reviewed_labels, review_catalog
 
 
@@ -678,3 +679,124 @@ def test_documented_work_source_url_handles_parquet_and_missing_values(
     value, expected
 ) -> None:
     assert keywords._has_source_url(value) is expected
+
+
+def test_reviewed_short_title_exception_is_exact_to_gordon_chapter() -> None:
+    scholar_id = "n6flaAsAAAAJ"
+    author_pub_id = f"{scholar_id}:M3NEmzRMIkIC"
+    doi = "10.1007/1-4020-3500-4_18"
+    chapter_url = "https://link.springer.com/chapter/10.1007/1-4020-3500-4_18"
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Exchange processes",
+        observed_year=2006,
+        relationship="version_of_record",
+        evidence_urls=(
+            chapter_url,
+            "https://link.springer.com/book/10.1007/1-4020-3500-4",
+        ),
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    other_pub_id = f"{scholar_id}:other-short-chapter"
+    aliases = {
+        (scholar_id, author_pub_id): alias,
+        (scholar_id, other_pub_id): ReviewedDoiAlias(
+            doi="10.1007/1-4020-3500-4_19",
+            observed_title="Other chapter",
+            observed_year=2006,
+            relationship="version_of_record",
+            evidence_urls=(
+                "https://link.springer.com/chapter/10.1007/1-4020-3500-4_19",
+            ),
+            verified_at="2026-10-25",
+        ),
+    }
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    rows = []
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+                "source_types": ["scholar"],
+                "source_verification_urls": [],
+                "scholar_ids": [],
+                "author_pub_ids": [],
+            }
+        )
+    gordon = {
+        "year": 2006,
+        "citation_count": 3,
+        "title": "Exchange processes",
+        "authors": "GS Rule, TK Hitchens",
+        "venue": "Fundamentals of Protein NMR Spectroscopy, 403-430, 2006",
+        "doi": doi,
+        "source_urls": [
+            "https://scholar.google.com/citations?user=n6flaAsAAAAJ"
+            "&citation_for_view=n6flaAsAAAAJ:M3NEmzRMIkIC"
+        ],
+        "source_verification_urls": [chapter_url],
+        "source_verified_at": "2026-10-25",
+        "source_types": ["scholar"],
+        "scholar_ids": [scholar_id],
+        "author_pub_ids": [author_pub_id],
+    }
+    rows[0].update(gordon)
+    for index, change in enumerate(
+        (
+            {"doi": "10.1007/different"},
+            {"title": "Other processes"},
+            {"year": 2007},
+            {"author_pub_ids": [f"{scholar_id}:other"]},
+            {"source_verification_urls": []},
+            {"scholar_ids": ["other"]},
+            {"source_verified_at": "2026-10-24"},
+        ),
+        start=1,
+    ):
+        rows[index].update(gordon | change)
+    rows[7].update(
+        gordon
+        | {
+            "title": "Other chapter",
+            "doi": "10.1007/1-4020-3500-4_19",
+            "source_verification_urls": [
+                "https://link.springer.com/chapter/10.1007/1-4020-3500-4_19"
+            ],
+            "author_pub_ids": [other_pub_id],
+        }
+    )
+
+    without_review = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+    assert not without_review["map_eligible"].any()
+
+    audited = keywords.exclude_low_information_regions(
+        pandas.DataFrame(rows), doi_aliases=aliases
+    )
+    assert audited["map_eligible"].sum() == 1
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited.loc[1:, "map_region_outlier"].all()
+    for field, value in (
+        ("author_pub_ids", author_pub_id),
+        ("scholar_ids", scholar_id),
+        ("source_types", "scholar"),
+        ("source_verification_urls", chapter_url),
+        ("source_types", []),
+        ("source_verified_at", "not-a-date"),
+        ("year", 2006.5),
+    ):
+        malformed = pandas.Series(gordon | {field: value})
+        assert not keywords._reviewed_short_title_alias_matches(malformed, aliases)
