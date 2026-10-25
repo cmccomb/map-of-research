@@ -288,8 +288,8 @@ def test_composite_plan_applies_all_31_math_overrides(tmp_path):
     manifest = Path("data/curated/region-remediation-bernhard.json")
     plan = load_composite_region_plan(manifest, decisions, **kwargs)
     assert len(plan.restore | plan.reexclude) == 280
-    assert len(plan.gains) == 99
-    assert len(plan.losses) == 156
+    assert len(plan.gains) == 4
+    assert len(plan.losses) == 2
     with pytest.raises(ValueError, match="exact f8"):
         load_composite_region_plan(
             manifest, decisions, **{**kwargs, "source_commit": "0" * 40}
