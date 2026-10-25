@@ -74,6 +74,20 @@ contributions from public tables and maps. Other faculty observations of the
 same DOI remain public. The public `people` table and map faculty catalog state
 “Publication history pending full capture” for the held person.
 
+Jonathan Simone's 11-row batch is a whole visible author-site bibliography for
+a CMU Math researcher with no verified Scholar account. It is pinned to source
+review commit `3efca3dfe67eecc89884bc82b2e90521a1657f86`, with each row
+retaining its source URLs, candidate-file hash, arXiv identifier, and genre.
+The eight DOI articles each combine their journal and arXiv versions into one
+work. One accepted preprint and one older standalone preprint use arXiv native
+IDs. The separately listed dissertation uses
+`publication_type: doctoral_dissertation`; normalization keeps it as a mapped
+work without making a coauthor edge. The CV-only manuscript marked “in
+preparation” is not curated. If a verified Scholar account appears, reconcile
+its complete visible profile against this batch before treating Scholar as the
+publication ground truth. See the [source review](../source_reviews/jonathan-simone-2026-10-25/README.md)
+and [integration review](../../registry/reviews/2026-10-25-math-simone-whole-author-site-integration.md).
+
 ## Reviewed Scholar observations
 
 `scholar-profile-releases.json` records a source-bound release decision for a
