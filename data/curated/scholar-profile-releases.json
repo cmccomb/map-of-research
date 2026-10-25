@@ -53,6 +53,17 @@
       "provisional_hold_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40"
     },
     {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "state": "released",
+      "expected_source_rows": 250,
+      "cache_sha256": "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7",
+      "reason": "Complete 250-row visible Scholar capture is source-bound. Fifty-six exact exclusions and thirty-five provisional attribution or item-type holds remain in raw observations but cannot contribute to mapped works or coauthor links; the other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 35,
+      "provisional_hold_ids_sha256": "78fe11269cdda8e270e1c4ec98e1cb24ddec53b5c0a942e79acff00cc9f677ae"
+    },
+    {
       "person_id": "person-stefanbernhard-7f8d72cd",
       "scholar_id": "hfFKwRcAAAAJ",
       "state": "released",

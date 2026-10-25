@@ -173,6 +173,9 @@ def _prior_id_review(paths: tuple, kind: str = "current_scholar") -> tuple[dict,
     elif kind == "nonpublication":
         kind = "current_scholar"
         classification = "nonpublication_rekeyed"
+    elif kind == "false_attribution":
+        kind = "current_scholar"
+        classification = "false_profile_attribution_rekeyed"
     curated_works = paths[0].parent.parent / "works.json"
     exclusions = paths[0].parent.parent / "exclusions.json"
     works = []
@@ -189,12 +192,19 @@ def _prior_id_review(paths: tuple, kind: str = "current_scholar") -> tuple[dict,
         )
     atomic_write_json(curated_works, {"works": works})
     exclusions_rows = []
-    if classification == "nonpublication_rekeyed":
+    if classification in {
+        "nonpublication_rekeyed",
+        "false_profile_attribution_rekeyed",
+    }:
         exclusions_rows.append(
             {
                 "scholar_id": "alphaAAAAJ",
                 "author_pub_id": target_id,
-                "reason_code": "nonpublication",
+                "reason_code": (
+                    "nonpublication"
+                    if classification == "nonpublication_rekeyed"
+                    else "false_profile_attribution"
+                ),
                 "evidence_url": evidence_url,
             }
         )
@@ -238,7 +248,14 @@ def _prior_id_review(paths: tuple, kind: str = "current_scholar") -> tuple[dict,
 
 
 @pytest.mark.parametrize(
-    "kind", ["current_scholar", "curated_doi", "curated_native", "nonpublication"]
+    "kind",
+    [
+        "current_scholar",
+        "curated_doi",
+        "curated_native",
+        "nonpublication",
+        "false_attribution",
+    ],
 )
 def test_reviewed_prior_id_can_be_reconciled_to_exact_surviving_target(
     tmp_path: Path, kind: str
@@ -325,7 +342,32 @@ def test_prior_id_review_rejects_missing_curated_or_excluded_target(
         validate_coverage(**options)
     options, _ = _prior_id_review(_paths(tmp_path / "other"), "nonpublication")
     atomic_write_json(options["exclusions_path"], {"exclusions": []})
-    with pytest.raises(ValueError, match="nonpublication exclusion is absent"):
+    with pytest.raises(ValueError, match="reviewed exclusion is absent"):
+        validate_coverage(**options)
+    options, _ = _prior_id_review(_paths(tmp_path / "false"), "false_attribution")
+    atomic_write_json(options["exclusions_path"], {"exclusions": []})
+    with pytest.raises(ValueError, match="reviewed exclusion is absent"):
+        validate_coverage(**options)
+
+
+def test_second_exact_crosswalk_is_selected_without_weakening_first(
+    tmp_path: Path,
+) -> None:
+    options, crosswalk = _prior_id_review(_paths(tmp_path), "false_attribution")
+    options["prior_id_crosswalk_path"] = tmp_path / "absent.json"
+    options["additional_prior_id_crosswalk_paths"] = (crosswalk,)
+    assert validate_coverage(**options)["reconciled_prior_ids"] == 1
+    options["additional_prior_id_crosswalk_paths"] = (crosswalk, crosswalk)
+    with pytest.raises(
+        ValueError, match="Previously published Scholar IDs disappeared"
+    ):
+        validate_coverage(**options)
+    other = tmp_path / "other.json"
+    atomic_write_json(other, {"scholar_id": "otherAAAAJ"})
+    options["additional_prior_id_crosswalk_paths"] = (other, crosswalk)
+    assert validate_coverage(**options)["reconciled_prior_ids"] == 1
+    atomic_write_json(other, [])
+    with pytest.raises(ValueError, match="crosswalk is invalid"):
         validate_coverage(**options)
 
 

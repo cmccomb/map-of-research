@@ -8,6 +8,7 @@ import pytest
 
 from map_of_research.contexts import ReviewedContext
 from map_of_research.dataset import build_dataset_tables
+from map_of_research.exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from map_of_research.io import sha256_file
 from map_of_research.profile_releases import ProfileRelease
 from map_of_research.provisional_holds import (
@@ -136,6 +137,37 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
     assert hold_ids_sha256(
         {item.author_pub_id for item in profile.held_observations}
     ) == ("92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0")
+
+
+def test_checked_in_sullivan_hold_is_source_bound_and_separate_from_exclusions():
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == "wXSgFr4AAAAJ"
+    )
+    assert profile.person_id == "person-sullivan-589c9545"
+    assert profile.expected_source_rows == 250
+    assert profile.cache_sha256 == (
+        "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7"
+    )
+    assert profile.expected_reviewed_exclusion_rows == 56
+    assert profile.reviewed_exclusion_ids_sha256 == (
+        "bc82650651779bda8ea25c141d14af00633ec8795ffd3e2f5c2aef956a0a0e21"
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    assert len(held_ids) == 35
+    assert hold_ids_sha256(held_ids) == (
+        "78fe11269cdda8e270e1c4ec98e1cb24ddec53b5c0a942e79acff00cc9f677ae"
+    )
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    exclusion_ids = {
+        author_pub_id
+        for scholar_id, author_pub_id in exclusions
+        if scholar_id == profile.scholar_id
+    }
+    assert len(exclusion_ids) == profile.expected_reviewed_exclusion_rows
+    assert hold_ids_sha256(exclusion_ids) == profile.reviewed_exclusion_ids_sha256
+    assert held_ids.isdisjoint(exclusion_ids)
 
 
 def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
