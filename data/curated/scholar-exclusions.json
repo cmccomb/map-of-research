@@ -8722,6 +8722,30 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The KNU Physics professor's separate ORCID record gives the exact article DOI, title, and year. A US patent names Hong Joo Kim and the same three coauthors as inventors and identifies their exact 2015 article as an inventor prior disclosure. This exact 2015 Scholar observation 'Luminescence and scintillation properties of the new Ce-doped Tl2LiGdCl6 single crystals' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1016/j.jlumin.2015.03.026.",
+      "evidence_url": "https://patents.google.com/patent/US10126436B2/en",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:foquWX3nUaYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "KNU's exact IEEE article links its H. J. Kim author directly to Physics professor Hong Joo Kim. This exact 2008 Scholar observation 'Luminescence and Scintillation Properties of a CeBr Single Crystal' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1109/TNS.2008.920253.",
+      "evidence_url": "https://research.knu.ac.kr/en/publications/luminescence-and-scintillation-properties-of-a-cebrsub3sub-single-2/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:9Nmd_mFXekcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The blank-venue Scholar row repeats the exact title and year of the complete 2017 journal observation bC4aq-4AAAAJ:738O_yMBCRsC; Elsevier publishes one article at DOI 10.1016/j.molstruc.2017.05.138 with the full Hyung J. Kim byline. This row is a broken duplicate.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0022286017307585",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "0e1jwkkAAAAJ",
       "author_pub_id": "0e1jwkkAAAAJ:yxmsSjX2EkcC",
       "reason_code": "false_profile_attribution",

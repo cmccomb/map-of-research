@@ -50,6 +50,30 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    148: (
+        "Luminescence and scintillation properties of the new Ce-doped "
+        "Tl2LiGdCl6 single crystals",
+        2015,
+        "Hong Joo Kim",
+        "10.1016/j.jlumin.2015.03.026",
+        "https://patents.google.com/patent/US10126436B2/en",
+        "US patent's inventor and prior-disclosure records; KNU-linked ORCID DOI",
+        "The KNU Physics professor's separate ORCID record gives the exact "
+        "article DOI, title, and year. A US patent names Hong Joo Kim and "
+        "the same three coauthors as inventors and identifies their exact "
+        "2015 article as an inventor prior disclosure.",
+    ),
+    267: (
+        "Luminescence and Scintillation Properties of a CeBr Single Crystal",
+        2008,
+        "Hong Joo Kim",
+        "10.1109/TNS.2008.920253",
+        "https://research.knu.ac.kr/en/publications/"
+        "luminescence-and-scintillation-properties-of-a-cebrsub3sub-single-2/",
+        "KNU institutional article; H. J. Kim author linked to Hong Joo Kim",
+        "KNU's exact IEEE article links its H. J. Kim author directly to "
+        "Physics professor Hong Joo Kim.",
+    ),
     109: (
         "Search for low-mass dark matter with CsI (Tl) crystal detectors",
         2014,
@@ -467,6 +491,8 @@ OTHER_PRIMARY = {
 # In addition to title and year, freeze each newly reviewed Scholar observation
 # ID so a reordered or replaced capture cannot inherit a person decision.
 OTHER_PRIMARY_ID_GUARDS = {
+    148: "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
+    267: "bC4aq-4AAAAJ:foquWX3nUaYC",
     109: "bC4aq-4AAAAJ:sbeIDTyQOFgC",
     174: "bC4aq-4AAAAJ:bVQMTfhMCi4C",
     235: "bC4aq-4AAAAJ:M0j1y4EgrScC",
@@ -570,6 +596,13 @@ CMU_PRIMARY = {
 # The publisher's one 1985 article at PRD 32, 389 is row 1; its person
 # attribution remains held separately from this duplicate-work decision.
 CORRUPTED_DUPLICATE_PRIMARY = {
+    797: (
+        "Synthesis, conductivity, and vibrational spectroscopy of "
+        "tetraphenylphosphonium bis (trifluoromethanesulfonyl) imide",
+        2017,
+        "https://www.sciencedirect.com/science/article/pii/S0022286017307585",
+        "bC4aq-4AAAAJ:738O_yMBCRsC",
+    ),
     907: (
         "Mass spectrum of chiral ten-dimensional N= 2 supergravity on S/sup 5",
         1985,
@@ -752,16 +785,32 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 evidence_url,
                 retained_pub_id,
             ) = CORRUPTED_DUPLICATE_PRIMARY[index]
+            if index == 907:
+                valid_duplicate = (
+                    row["authors"] == rows[0]["authors"]
+                    and "32 (2)" in row["venue"]
+                    and scholar_pub_id(rows[0]) == retained_pub_id
+                )
+            else:
+                valid_duplicate = (
+                    index == 797
+                    and title == rows[311]["title"]
+                    and year == rows[311]["year"]
+                    and not row["venue"]
+                    and not row["citation_count"]
+                    and "HJ Kim" in row["authors"]
+                    and scholar_pub_id(rows[311]) == retained_pub_id
+                )
             if (
                 title != expected_title
                 or year != str(expected_year)
-                or row["authors"] != rows[0]["authors"]
-                or "32 (2)" not in row["venue"]
-                or scholar_pub_id(rows[0]) != retained_pub_id
+                or not valid_duplicate
             ):
                 raise ValueError(f"Publisher duplicate match changed at row {index}")
             status = "proposed_corrupted_duplicate_primary"
-            evidence_source = "APS original article"
+            evidence_source = (
+                "APS original article" if index == 907 else "Elsevier original article"
+            )
             additions.append(
                 decision(
                     pub_id,
@@ -771,8 +820,15 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         "volume 32 issue 2, and malformed S/sup 5 title point to "
                         "the one APS article represented by Scholar observation "
                         f"{retained_pub_id}; this row is a broken duplicate."
+                        if index == 907
+                        else "The blank-venue Scholar row repeats the exact title "
+                        "and year of the complete 2017 journal observation "
+                        f"{retained_pub_id}; Elsevier publishes one article at "
+                        "DOI 10.1016/j.molstruc.2017.05.138 with the full "
+                        "Hyung J. Kim byline. This row is a broken duplicate."
                     ),
                     evidence_url,
+                    verified_at="2026-10-25" if index == 797 else "2026-10-24",
                 )
             )
         elif index in CMU_ORCID_DOI_HOLD:
@@ -858,23 +914,23 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 100,
+        "cmu_orcid_exact_title_year_retained": 99,
         "cmu_orcid_doi_identity_hold": 1,
         "cmu_primary_work_retained": 10,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 39,
+        "proposed_other_person_primary_work": 41,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "proposed_corrupted_duplicate_primary": 1,
-        "unresolved_attribution_hold": 419,
+        "proposed_corrupted_duplicate_primary": 2,
+        "unresolved_attribution_hold": 417,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 376 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 379 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
