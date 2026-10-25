@@ -225,9 +225,7 @@ def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None
         )
         for key, hold in holds.items()
     }
-    merged = merge_chemistry_review_inputs(
-        decisions, exclusions, saved_holds, contexts
-    )
+    merged = merge_chemistry_review_inputs(decisions, exclusions, saved_holds, contexts)
     assert merged == (
         exclusions,
         holds,
