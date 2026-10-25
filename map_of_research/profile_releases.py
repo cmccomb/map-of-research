@@ -1,4 +1,4 @@
-"""Keep complete but unreleased Scholar profiles out of public dataset rows."""
+"""Keep complete but unreleased Scholar observations out of public dataset rows."""
 
 from __future__ import annotations
 
@@ -9,12 +9,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .attribution import AttributionReviews
 from .io import load_json, sha256_file
 from .registry import Registry
 
 DEFAULT_PROFILE_RELEASES_PATH = Path("data/curated/scholar-profile-releases.json")
 PROFILE_RELEASE_SCHEMA_VERSION = 1
-RELEASE_STATES = frozenset({"held", "released"})
+RELEASE_STATES = frozenset({"held", "released", "reviewed_subset"})
 
 
 @dataclass(frozen=True)
@@ -28,6 +29,23 @@ class ProfileRelease:
     reviewed_at: str
     expected_provisional_hold_rows: int = 0
     provisional_hold_ids_sha256: str = ""
+    released_author_pub_ids: tuple[str, ...] = ()
+    excluded_author_pub_ids: tuple[str, ...] = ()
+    held_author_pub_ids: tuple[str, ...] = ()
+
+
+def _row_ids(entry: dict[str, Any], field: str, scholar_id: str) -> tuple[str, ...]:
+    value = entry.get(field)
+    if (
+        not isinstance(value, list)
+        or any(
+            not isinstance(item, str) or not item.startswith(f"{scholar_id}:")
+            for item in value
+        )
+        or len(value) != len(set(value))
+    ):
+        raise ValueError(f"Profile-release {field} must contain unique citation IDs")
+    return tuple(value)
 
 
 def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
@@ -85,6 +103,33 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
             dt.date.fromisoformat(str(reviewed_at))
         except ValueError as error:
             raise ValueError("Profile-release decision needs a date") from error
+        row_fields = (
+            "released_author_pub_ids",
+            "excluded_author_pub_ids",
+            "held_author_pub_ids",
+        )
+        if state == "reviewed_subset":
+            released_ids, excluded_ids, held_ids = (
+                _row_ids(entry, field, scholar_id) for field in row_fields
+            )
+            sets = tuple(map(set, (released_ids, excluded_ids, held_ids)))
+            if (
+                not released_ids
+                or any(
+                    sets[left].intersection(sets[right])
+                    for left, right in ((0, 1), (0, 2), (1, 2))
+                )
+                or sum(map(len, sets)) != count
+            ):
+                raise ValueError(
+                    "Profile-release reviewed subset needs an exact row partition"
+                )
+        else:
+            if any(field in entry for field in row_fields):
+                raise ValueError(
+                    "Profile-release row partition requires reviewed_subset"
+                )
+            released_ids = excluded_ids = held_ids = ()
         decisions.append(
             ProfileRelease(
                 person_id=person_id,
@@ -94,6 +139,9 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
                 cache_sha256=digest,
                 reason=reason.strip(),
                 reviewed_at=str(reviewed_at),
+                released_author_pub_ids=released_ids,
+                excluded_author_pub_ids=excluded_ids,
+                held_author_pub_ids=held_ids,
                 expected_provisional_hold_rows=hold_count,
                 provisional_hold_ids_sha256=hold_ids_digest,
             )
@@ -110,7 +158,7 @@ def select_released_observations(
     *,
     cache_dir: Path,
 ) -> tuple[Any, list[dict[str, Any]], set[str]]:
-    """Verify each complete raw source, then omit only held source owners."""
+    """Verify complete raw sources, then omit held owners or exact held rows."""
 
     held_mask = frame.index.isin([])
     receipt: list[dict[str, Any]] = []
@@ -158,6 +206,16 @@ def select_released_observations(
             raise ValueError(
                 f"Profile-release source IDs are invalid: {decision.scholar_id}"
             )
+        if decision.state == "reviewed_subset" and (
+            set(cached_ids)
+            != set(decision.released_author_pub_ids)
+            | set(decision.excluded_author_pub_ids)
+            | set(decision.held_author_pub_ids)
+        ):
+            raise ValueError(
+                "Profile-release row partition differs from source: "
+                f"{decision.scholar_id}"
+            )
         source = frame.loc[
             (frame["source_type"] == "scholar")
             & (frame["scholar_id"] == decision.scholar_id)
@@ -177,6 +235,17 @@ def select_released_observations(
             raise ValueError(
                 f"Profile-release snapshot differs from source: {decision.scholar_id}"
             )
+        if decision.state == "held":
+            removed = scope
+        elif decision.state == "reviewed_subset":
+            allowed = (
+                scope["source_type"].eq("scholar")
+                & scope["scholar_id"].eq(decision.scholar_id)
+                & scope["author_pub_id"].isin(decision.released_author_pub_ids)
+            )
+            removed = scope.loc[~allowed]
+        else:
+            removed = scope.iloc[0:0]
         receipt.append(
             {
                 "person_id": decision.person_id,
@@ -184,21 +253,58 @@ def select_released_observations(
                 "state": decision.state,
                 "source_observation_rows": len(source),
                 "person_observation_rows": len(scope),
+                "released_source_observation_rows": len(source)
+                - int(source.index.isin(removed.index).sum()),
+                "held_source_observation_rows": int(
+                    source.index.isin(removed.index).sum()
+                ),
+                "held_person_observation_rows": len(removed),
                 "cache_sha256": decision.cache_sha256,
                 "reason": decision.reason,
                 "reviewed_at": decision.reviewed_at,
             }
         )
-        if decision.state == "held":
-            held_mask |= frame.index.isin(scope.index)
+        if not removed.empty:
+            held_mask |= frame.index.isin(removed.index)
             held_observation_ids.update(
                 "observation-"
                 + hashlib.sha256(
                     f"{row.scholar_id}\0{row.author_pub_id}".encode()
                 ).hexdigest()
-                for row in scope.itertuples(index=False)
+                for row in removed.itertuples(index=False)
             )
     return frame.loc[~held_mask].copy(), receipt, held_observation_ids
+
+
+def validate_reviewed_subset_decisions(
+    decisions: tuple[ProfileRelease, ...],
+    attribution_reviews: AttributionReviews,
+    exclusions: dict[tuple[str, str], Any],
+) -> None:
+    """Bind each public subset to exact positive and exclusion reviews."""
+
+    for decision in decisions:
+        if decision.state != "reviewed_subset":
+            continue
+        scholar_id = decision.scholar_id
+        confirmed_ids = {
+            author_pub_id
+            for profile_id, author_pub_id in attribution_reviews.confirmed
+            if profile_id == scholar_id
+        }
+        excluded_ids = {
+            author_pub_id
+            for profile_id, author_pub_id in exclusions
+            if profile_id == scholar_id
+        }
+        if (
+            scholar_id not in attribution_reviews.held_profiles
+            or confirmed_ids != set(decision.released_author_pub_ids)
+            or excluded_ids != set(decision.excluded_author_pub_ids)
+        ):
+            raise ValueError(
+                f"Profile-release subset differs from exact reviews: {scholar_id}"
+            )
 
 
 def require_no_held_contributions(
@@ -209,17 +315,22 @@ def require_no_held_contributions(
     """Reject any held-profile contribution before the first external upload."""
 
     held = [decision for decision in decisions if decision.state == "held"]
-    if not held:
+    if not held and not held_observation_ids:
         return
     held_people = {decision.person_id for decision in held}
     held_scholars = {decision.scholar_id for decision in held}
+    has_subset = any(decision.state == "reviewed_subset" for decision in decisions)
     for name in ("profile_publications", "authorships"):
         frame = tables[name]
-        if not {"person_id", "scholar_id"} <= set(frame.columns):
+        required = {"person_id", "scholar_id"}
+        if has_subset:
+            required.add("observation_id")
+        if not required <= set(frame.columns):
             raise ValueError(f"Published {name} lacks profile identity columns")
         if (
             frame["person_id"].isin(held_people).any()
             or frame["scholar_id"].isin(held_scholars).any()
+            or (has_subset and frame["observation_id"].isin(held_observation_ids).any())
         ):
             raise ValueError(f"Held profile contributed to published {name}")
     works = tables["works"]

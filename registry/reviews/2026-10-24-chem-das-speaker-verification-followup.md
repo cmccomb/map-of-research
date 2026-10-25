@@ -1,0 +1,7 @@
+# Das attribution follow-up: 1971 speaker-verification paper
+
+This draft adds one exact exclusion, Scholar row 19 (`FrF1YXQAAAAJ:3A3nxV7CjKIC`), to the 120 Das decisions already staged in the stacked review. The unchanged raw capture has 670 rows; 549 rows remain outside these 121 exact decisions and have not been certified.
+
+The captured row calls the work *A scheme for speech processing in automatic speaker verification* and attributes it to `S Das, W Mohn` in *IEEE Transactions on Audio and Electroacoustics* 19(1), 32–43 (1971). A [contemporary IEEE review by Rosenberg](https://citeseerx.ist.psu.edu/document?doi=c8e92b2fabc8f6d21fcaced11e9a933b7508e814&repid=rep1&type=pdf) cites that exact title, coauthor, volume, pages, and year under **S. K. Das and W. S. Mohn** (reference 11). [CMU's faculty profile](https://www.cmu.edu/chemistry/people/faculty/das.html) identifies its chemist as **Subha R. Das**, with his earliest listed degrees in **1994** and Ph.D. in 2000. The 1971 paper's author initials and date rule out the CMU researcher. The paper's full author name is still unresolved; this exclusion does not assign it to a specific namesake.
+
+No other suspect row was excluded on topic alone. In particular, medical and fiber-optics records with only `S. Das` and no decisive individual affiliation remain deferred. This draft does not promote the Das cache or change the public maps.

@@ -245,7 +245,14 @@ cache SHA-256, registry identity, citation IDs, and expected source row count
 must match the trusted decision. The upload receipt distinguishes raw snapshot
 observations and profiles from published rows and profiles, gives the held
 source-row count, and records the decision-manifest SHA-256. A `released`
-decision retains the source rows after the same checks.
+decision retains the source rows after the same checks. A `reviewed_subset`
+decision names every source citation ID exactly once in released, excluded,
+or held arrays bound to that cache hash. The released IDs must exactly match
+positive source-backed attribution reviews; excluded IDs must exactly match
+source-backed exclusions. The publisher removes all other observations owned
+by that person before embeddings and public tables. Its upload receipt reports
+the retained and held source-row counts. The raw capture remains complete for
+later review.
 
 No single missing bibliographic field, citation count, or embedding position is
 an exclusion rule. After the title-level policy, a provisional detail hierarchy

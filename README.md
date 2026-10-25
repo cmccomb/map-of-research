@@ -111,9 +111,11 @@ source has a `released` decision after exact positive attribution review; its
 unconfirmed rows remain outside mapped works. A source-bound provisional-hold
 manifest can instead name a small set of unresolved rows within a complete
 released profile. Those rows remain in public raw profile data but cannot create
-mapped works or authorships. The Collins decision in this draft depends on his
-source capture and review PRs before any upload. Receipts report raw and
-published counts, source hashes, and decision-manifest checksums.
+mapped works or authorships. A `reviewed_subset` decision would publish only
+the exact rows confirmed by primary attribution evidence; every other citation
+ID must be explicitly excluded or held. The complete raw capture remains
+available for review. Receipts report raw and published counts, source hashes,
+and decision-manifest checksums.
 
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,

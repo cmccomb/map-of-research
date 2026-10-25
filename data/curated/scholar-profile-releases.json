@@ -62,6 +62,15 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    },
+    {
+      "person_id": "person-subhardas-42cf6c1e",
+      "scholar_id": "FrF1YXQAAAAJ",
+      "state": "held",
+      "expected_source_rows": 670,
+      "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. The 188 exact exclusions and 49 primary-source positives are reviewed, while one identity-confirmed chapter with unresolved year/pages, one unverified conference abstract, and 431 unresolved rows need further review. Keep the entire profile out of public tables until its full publication history is correct or incompleteness is explicitly approved and conveyed.",
+      "reviewed_at": "2026-10-25"
     }
   ]
 }

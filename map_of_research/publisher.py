@@ -51,6 +51,7 @@ from .profile_releases import (
     load_profile_releases,
     require_no_held_contributions,
     select_released_observations,
+    validate_reviewed_subset_decisions,
 )
 from .provisional_holds import (
     DEFAULT_PROVISIONAL_HOLDS_PATH,
@@ -1263,6 +1264,9 @@ def publish_snapshot(
     if set(attribution_reviews.confirmed).intersection(exclusions):
         raise ValueError("Scholar attribution and exclusion reviews conflict")
     release_decisions = load_profile_releases(profile_releases_path)
+    validate_reviewed_subset_decisions(
+        release_decisions, attribution_reviews, exclusions
+    )
     release_manifest_sha256 = sha256_file(profile_releases_path)
     provisional_profiles = load_provisional_holds(provisional_holds_path)
     provisional_manifest_sha256 = sha256_file(provisional_holds_path)
@@ -1443,14 +1447,10 @@ def publish_snapshot(
             item["scholar_id"] for item in release_receipt if item["state"] == "held"
         ],
         "held_observation_rows": sum(
-            item["person_observation_rows"]
-            for item in release_receipt
-            if item["state"] == "held"
+            item["held_person_observation_rows"] for item in release_receipt
         ),
         "held_source_observation_rows": sum(
-            item["source_observation_rows"]
-            for item in release_receipt
-            if item["state"] == "held"
+            item["held_source_observation_rows"] for item in release_receipt
         ),
         "people": len(tables["people"]),
         "works": len(tables["works"]),
