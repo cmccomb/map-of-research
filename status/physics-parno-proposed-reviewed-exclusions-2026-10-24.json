@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_proposed_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Four exact Diana Parno source-reviewed proposals copied from Physics draft #87. These decisions are source-only until a paired producer PR applies them. All 156 raw and cache rows remain intact. Same-title, missing-venue, and meeting-abstract groups remain in the scoped preliminary review.",
+  "exclusions": [
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:2KloaMYe4IUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 90 uses the journal title as a work title, while publisher-deposited DOI metadata identify Hybrid Charmonium and the rho-pi Puzzle; retain the complete row 96.",
+      "evidence_url": "https://api.crossref.org/works/10.1155%2F2008%2F982341",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:ns9cj8rnVeAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 130 imports a Japanese related-links label for an unrelated Paleontological Research article; Diana Parno is absent from the source publication.",
+      "evidence_url": "https://www.palaeo-soc-japan.jp/pr/2015-1.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:z_wVstp3MssC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 146 is a copyright and title-page fragment from Ying-Ting Lin's thesis; Parno served on the committee and is not the thesis author.",
+      "evidence_url": "https://hdl.handle.net/1773/45253",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "author_pub_id": "JbSQsXAAAAAJ:VL0QpB8kHFEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 149 is the Hall A Collaboration member-list chapter of the 2008 status report, not a research publication.",
+      "evidence_url": "https://hallaweb.jlab.org/publications/AnnualReports/AnnualReport2008.pdf",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}

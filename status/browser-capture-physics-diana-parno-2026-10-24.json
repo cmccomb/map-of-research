@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-dianaparno-e68481f0",
+  "display_name": "Diana Parno",
+  "scholar_profile_name": "Diana Parno",
+  "scholar_id": "JbSQsXAAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/parno.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/6682-diana-parno",
+  "scholar_identity_basis": "Official CMU Scholars profile directly links this Scholar ID; CMU Physics faculty page confirms role, and live profile name and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T22:49:53+00:00",
+  "captured_at_utc": "2026-10-24T22:50:16.881Z",
+  "publication_count": 156,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 3,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/physics-diana-parno-2026-10-24.json",
+  "source_json_sha256": "db9073231bdc03fc40e78f48ee161a150cc8e9457057934fa6b59650343b28d0",
+  "source_html_path": "data/captures/physics-diana-parno-2026-10-24.html",
+  "source_html_sha256": "78795e82bb3dcff7751e357c14796bed5c95d3b9ec60527673e61784a90c232f",
+  "cache_path": "data/authors/JbSQsXAAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

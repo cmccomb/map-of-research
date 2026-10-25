@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Parno-only preliminary grouped anomalies from Physics draft #87. Exact source-reviewed proposals are in physics-parno-proposed-reviewed-exclusions-2026-10-24.json. No blanket exclusion is proposed for same-title, blank-venue, or meeting-abstract groups. All 156 raw and cache rows remain intact.",
+  "candidates": [],
+  "same_title_groups": [
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "capture_row_groups": [
+        [
+          10,
+          154
+        ],
+        [
+          27,
+          150
+        ],
+        [
+          41,
+          121
+        ],
+        [
+          50,
+          117
+        ],
+        [
+          67,
+          135
+        ],
+        [
+          69,
+          119
+        ],
+        [
+          72,
+          99
+        ],
+        [
+          131,
+          139
+        ],
+        [
+          141,
+          155
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "capture_rows": [
+        111,
+        112,
+        135,
+        143,
+        145,
+        147,
+        151,
+        152,
+        153
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "JbSQsXAAAAAJ",
+      "row_count": 22,
+      "capture_rows": [
+        103,
+        104,
+        108,
+        109,
+        110,
+        113,
+        114,
+        115,
+        118,
+        119,
+        120,
+        122,
+        123,
+        124,
+        126,
+        129,
+        131,
+        138,
+        139,
+        140,
+        142,
+        144
+      ],
+      "note": "Meeting abstracts remain in the raw capture; no blanket exclusion proposed."
+    }
+  ]
+}
