@@ -1835,6 +1835,26 @@ HYUN_JUNG_ORCID_AUTHORS = (
     "HS Kim, HJ Kim, SY Kim, TY Kim, KW Lee, SK Baek, MH Ryu, BH Nam, ..."
 )
 
+# The Electrochemical Society deposited the full names for this exact meeting
+# abstract. Its H. J. Kim is Hyoung-Juhn Kim, a separate fuel-cell researcher.
+ECS_OTHER_PERSON_PRIMARY = {
+    857: (
+        "Effects of Gradient Loading of Cathode Catalyst on the fuel Cell Performance",
+        2006,
+        "Hyoung-Juhn Kim",
+        "10.1149/ma2005-03/1/33",
+        "https://api.crossref.org/works/10.1149%2Fma2005-03%2F1%2F33",
+        "Electrochemical Society publisher-deposited meeting abstract",
+        "The society's exact abstract has the same six authors in order, 2006 "
+        "publication date and abstract number 33, and expands its H. J. Kim "
+        "author to Hyoung-Juhn Kim, not CMU Chemistry's Hyung J. Kim.",
+    )
+}
+OTHER_PRIMARY.update(ECS_OTHER_PERSON_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS[857] = "bC4aq-4AAAAJ:KUbvn5osdkgC"
+ECS_OTHER_PERSON_VENUE = "Electrochemical Society Meeting Abstracts PBFC-2, 33-33, 2006"
+ECS_OTHER_PERSON_AUTHORS = "E Cho, M Prasanna, HJ Kim, TH Lim, IH Oh, SA Hong"
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -2913,6 +2933,25 @@ CMU_NEXT_PUBLISHER_VENUES = {
     802: "Biophysical Journal 108 (2), 210a, 2015",
 }
 
+# ECS's exact published abstract names full Hyung J. Kim and the same CMU
+# collaborators, with an independent DOI and meeting abstract number.
+CMU_ECS_MEETING_PRIMARY = {
+    798: (
+        "Mechanism of CO2 Capture in 1-Alkyl-3-Methylimidazolium Acetate: "
+        "Is N-Heterocyclic Carbene Involved?",
+        2016,
+        "https://api.crossref.org/works/10.1149%2Fma2016-02%2F47%2F3437",
+        "Electrochemical Society publisher-deposited full Hyung J. Kim "
+        "byline with Fangyong Yan and Nilesh R. Dhumal; exact 2016 title "
+        "and abstract number 3437. This is a published meeting abstract.",
+    )
+}
+CMU_PRIMARY.update(CMU_ECS_MEETING_PRIMARY)
+CMU_NEXT_PUBLISHER_VENUES[798] = (
+    "Electrochemical Society Meeting Abstracts 230, 3437-3437, 2016"
+)
+CMU_ECS_MEETING_AUTHORS = "HJ Kim, F Yan, NR Dhumal"
+
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
     13: "bC4aq-4AAAAJ:f2IySw72cVMC",
@@ -3041,6 +3080,7 @@ CMU_PRIMARY_ID_GUARDS.update(
 CMU_PRIMARY_ID_GUARDS.update(
     {
         802: "bC4aq-4AAAAJ:sSrBHYA8nusC",
+        798: "bC4aq-4AAAAJ:CHSYGLWDkRkC",
     }
 )
 
@@ -3160,6 +3200,7 @@ CMU_PRIMARY_CANONICAL_DOI_OVERRIDE = {
     888: "10.1063/1.1301533",
     897: "10.1117/12.306113",
     802: "10.1016/j.bpj.2014.11.1162",
+    798: "10.1149/ma2016-02/47/3437",
     903: "10.1007/978-94-011-0786-0_21",
     904: "10.1016/b978-0-444-89191-4.50010-0",
 }
@@ -3475,6 +3516,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     )
                 )
                 or (
+                    index == 857
+                    and (
+                        row["venue"] != ECS_OTHER_PERSON_VENUE
+                        or row["authors"] != ECS_OTHER_PERSON_AUTHORS
+                    )
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3746,6 +3794,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in CMU_NEXT_PUBLISHER_VENUES
                     and row["venue"] != CMU_NEXT_PUBLISHER_VENUES[index]
                 )
+                or (index == 798 and row["authors"] != CMU_ECS_MEETING_AUTHORS)
             ):
                 raise ValueError(f"CMU primary match changed at capture row {index}")
             if index in CMU_GROUP_PUBLISHER_DOI_GUARDS:
@@ -3821,22 +3870,22 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 122,
+        "cmu_primary_work_retained": 123,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 126,
+        "proposed_other_person_primary_work": 127,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 311,
+        "unresolved_attribution_hold": 309,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 473 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 474 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
