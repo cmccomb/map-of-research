@@ -6232,6 +6232,134 @@
       "reason": "Capture row 36 prefixes the article-type label Research article to the retained 2010 BMC Musculoskeletal Disorders title at _VnEj3gAAAAJ:zYLM7Y9cAGgC; the author set and year match. The publisher identifies one article in volume 11, article 111.",
       "evidence_url": "https://link.springer.com/article/10.1186/1471-2474-11-111",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:u9iWguZQMMsC",
+      "reason_code": "nonpublication",
+      "reason": "Generic International Review of Cytology series record combines past editors; it is not an individually authored research chapter.",
+      "evidence_url": "https://shop.elsevier.com/books/international-review-of-cytology/jeon/978-0-12-364552-4",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:2osOgNQ5qMEC",
+      "reason_code": "nonpublication",
+      "reason": "Elsevier identifies Mechanical Engineering of the Cytoskeleton in Developmental Biology as edited volume 150; Jarvik and the listed people are editors, not coauthors of its chapters.",
+      "evidence_url": "https://shop.elsevier.com/books/mechanical-engineering-of-the-cytoskeleton-in-developmental-biology/gordon/978-0-12-364553-1",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:Tiz5es2fbqcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The SPDI Genome Research article lists Clark and Genentech collaborators, not Jarvik; Scholar imported authors from the separate Jarvik PMSG erratum printed after this article.",
+      "evidence_url": "https://genome.cshlp.org/content/13/10/2265.full.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:9yKSN-GCB0IC",
+      "reason_code": "nonpublication",
+      "reason": "1995 International Review of Cytology series volume record; Elsevier identifies Jarvik and Jeon as editors rather than paper coauthors.",
+      "evidence_url": "https://shop.elsevier.com/books/international-review-of-cytology/jeon/978-0-12-364561-6",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:XiSMed-E-HIC",
+      "reason_code": "nonpublication",
+      "reason": "International Review of Cytology volume 164 is an edited book; Elsevier identifies Jarvik and Jeon as editors.",
+      "evidence_url": "https://shop.elsevier.com/books/international-review-of-cytology/unknown/978-0-12-364568-5",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:Se3iqnhoufwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Vintage genetic engineering erratum is solely by Laura DeFrancesco; Jarvik appears on an unrelated correction printed on the same journal page.",
+      "evidence_url": "https://www.nature.com/nbt/volumes/26/issues/4",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:IjCSPb-OGe4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-blank, author-reordered duplicate of the complete 2003 PMSG Genome Research 13(8):1944-1951 article retained as grTfBeAAAAAJ:M05iB0D1s5AC.",
+      "evidence_url": "https://genome.cshlp.org/content/13/8/1944",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:Zph67rFs4hoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Title-prefix duplicate with the same PMSG authors, year, volume and pages as complete row grTfBeAAAAAJ:M05iB0D1s5AC.",
+      "evidence_url": "https://genome.cshlp.org/content/13/8/1944",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:WbkHhVStYXYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF 9419792 is an equipment-acquisition award record, not a scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9419792.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:1sJd4Hv_s6UC",
+      "reason_code": "nonpublication",
+      "reason": "NSF 9119168 is a research award to Jonathan Jarvik, not a scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9119168.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:EUQCXRtRnyEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "OCR nonsense title shares all four authors, year, journal volume and issue with complete 1984 Altered Flagellar Size-Control article retained as grTfBeAAAAAJ:hMod-77fHWUC.",
+      "evidence_url": "https://api.crossref.org/works/10.1111%2Fj.1550-7408.1984.tb02949.x",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF 8216337 is a research award to Jonathan Jarvik, not a scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8216337.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:P5F9QuxV20EC",
+      "reason_code": "nonpublication",
+      "reason": "NSF 8119165 is a research award to Jonathan Jarvik, not a scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8119165.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:CHSYGLWDkRkC",
+      "reason_code": "nonpublication",
+      "reason": "NSF 7823253 is a separate 1979 research award to Jonathan Jarvik, not a scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/7823253.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:uWQEDVKXjbEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Yearless OCR-split title and mangled names duplicate the complete 1984 J Cell Biol flagellar waveform article retained as grTfBeAAAAAJ:TQgYirikUcIC.",
+      "evidence_url": "https://rupress.org/jcb/article-abstract/98/3/818/56795/Flagellar-waveform-and-rotational-orientation-in-a?redirectedFrom=fulltext",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:L8Ckcad2t8MC",
+      "reason_code": "nonpublication",
+      "reason": "The exact title is a Methods and Supplementary Figures PDF attached to the retained 2008 Nature Biotechnology fluorogen article grTfBeAAAAAJ:g5m5HwL7SMYC, not a separate publication.",
+      "evidence_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnbt1368/MediaObjects/41587_2008_BFnbt1368_MOESM4_ESM.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
