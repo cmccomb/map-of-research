@@ -38,20 +38,21 @@ still run. Future cache changes require a new reviewed crosswalk version.
 
 The staged 623-row HTML has SHA-256
 `4c2cb0ee0144c9850133931feb1f7e327da30b788d2b46cc13e8846f7eb45494`.
-The draft Donahue cache currently declares the SHA-256 of an **unstaged**
+The initial draft Donahue cache declared the SHA-256 of an **unstaged**
 original HTML file, `80a3f8345bc2d6e2536b1059aff8a9ef127b2277c6a4a5aed6482791489a20f6`.
-The staged HTML independently passed all 623 row IDs, JSON details, and the
-disabled final Show More check. In `data/authors/ILambBMAAAAJ.json`, change
-only `browser_capture.source_html_sha256` from the unstaged digest to the
-staged digest above. That change must land in the Donahue source cache before
-publication. It is
-the only difference between the original cache SHA-256
+The staged HTML passed all 623 row IDs, visible title text (including SVG
+labels), JSON details, and the disabled final Show More check. Draft source
+PR #139 commit `f6266aa` changed only
+`data/authors/ILambBMAAAAJ.json`'s `browser_capture.source_html_sha256` to
+the staged digest above. That is the only difference between the original
+cache SHA-256
 `424269fcfed5f480ffda279f6013a3a6841f49f5849e5e559a949871106fdba3`
 and the replacement SHA-256 pinned above.
 
 This exception preserves the full **current visible Scholar profile** and the
 verified historical academic works found in the prior cache. It does not claim
-that Scholar lists every lifetime publication or retain the 12 obsolete IDs as
-current raw observations. Those 12 remain inspectable in the frozen snapshot
-and this crosswalk. Publishing the 623-row cache still depends on merging the
-curated historical works, the maintenance exclusion, and the receipt repair.
+that Scholar lists every lifetime publication. The 12 obsolete IDs are not
+retained as current raw observations; they remain inspectable in the frozen
+snapshot and this crosswalk. Publishing the 623-row cache still depends on
+merging the curated historical works, the maintenance exclusion, and the
+repaired draft source cache.
