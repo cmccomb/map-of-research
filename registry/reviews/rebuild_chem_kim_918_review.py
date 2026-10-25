@@ -583,6 +583,16 @@ OTHER_PRIMARY_ID_GUARDS = {
     150: "bC4aq-4AAAAJ:2KloaMYe4IUC",
     195: "bC4aq-4AAAAJ:tKAzc9rXhukC",
     208: "bC4aq-4AAAAJ:aDl3D7KC1E4C",
+    190: "bC4aq-4AAAAJ:FiytvqdAVhgC",
+    245: "bC4aq-4AAAAJ:NDuN12AVoxsC",
+    262: "bC4aq-4AAAAJ:7wO8s98CvbsC",
+    266: "bC4aq-4AAAAJ:SpPTWFSNUtQC",
+    274: "bC4aq-4AAAAJ:DBa1UEJaJKAC",
+    295: "bC4aq-4AAAAJ:9shLKfS_uJEC",
+    714: "bC4aq-4AAAAJ:c1e4I3QdEKYC",
+    816: "bC4aq-4AAAAJ:OP4eGU-M3BUC",
+    811: "bC4aq-4AAAAJ:LhH-TYMQEocC",
+    812: "bC4aq-4AAAAJ:r_AWSJRzSzQC",
 }
 
 OTHER_PRIMARY.update(
@@ -812,6 +822,112 @@ HYOUNG_JUHN_KIST_FUEL_CELL_PRIMARY = {
     ),
 }
 OTHER_PRIMARY.update(HYOUNG_JUHN_KIST_FUEL_CELL_PRIMARY)
+
+KNU_SCINTILLATOR_PERSON_LINK_PRIMARY = {
+    190: (
+        "Growth and characterization of isotopically enriched 40Ca100MoO4 "
+        "single crystals for rare event search experiments",
+        2011,
+        "10.1002/crat.201100364",
+        "growth-and-characterization-of-isotopically-enriched-sup40supca-s/",
+    ),
+    245: (
+        "Temperature dependence of scintillation properties of SrMoO4",
+        2015,
+        "10.1016/j.nima.2015.04.018",
+        "temperature-dependence-of-scintillation-properties-of-srmoosub4su/",
+    ),
+    262: (
+        "Heat and Light Measurement of a  Crystal for the AMoRE Double "
+        "Beta Decay Experiment",
+        2016,
+        "10.1109/TNS.2015.2493529",
+        "heat-and-light-measurement-of-a-sup40supcasup100supmoosub4sub-cry/",
+    ),
+    266: (
+        "Study on Crystal Growth and Scintillation Characteristics of Cs LiCeCl",
+        2010,
+        "10.1109/TNS.2009.2037903",
+        "study-on-crystal-growth-and-scintillation-characteristics-of-cssu/",
+    ),
+    274: (
+        "Scintillator-based detectors for dark matter searches I",
+        2010,
+        "10.1088/1367-2630/12/7/075003",
+        "scintillator-based-detectors-for-dark-matter-searches-i/",
+    ),
+    295: (
+        "Scintillation Properties and Internal Background Study of CaMoO "
+        "Crystal Scintillators for Neutrino-Less Double Beta Decay Search",
+        2012,
+        "10.1109/TNS.2012.2200908",
+        "scintillation-properties-and-internal-background-study-of-sup40su/",
+    ),
+    714: (
+        "Czochralski growth and scintillation properties of bismuth "
+        "germanium silicon oxide (BGSO) single crystals",
+        2011,
+        "10.1109/NSSMIC.2011.6154635",
+        "czochralski-growth-and-scintillation-properties-of-bismuth-german/",
+    ),
+    816: (
+        "Scintillation properties of Rb2LiGdBr6: Ce3+ single crystals",
+        2013,
+        "10.1109/NSSMIC.2013.6829671",
+        "scintillation-properties-of-rbsub2subligdbrsub6sub-ce-sup3sup-sin/",
+    ),
+}
+for index, (title, year, doi, url_slug) in KNU_SCINTILLATOR_PERSON_LINK_PRIMARY.items():
+    OTHER_PRIMARY[index] = (
+        title,
+        year,
+        "Hong Joo Kim",
+        doi,
+        f"https://research.knu.ac.kr/en/publications/{url_slug}",
+        "KNU exact DOI work-to-person institutional link",
+        "KNU's exact-title/DOI work record links its H. J. Kim byline "
+        "directly to the institutional faculty profile for Hong Joo Kim, "
+        "professor of Physics. The Scholar title may omit isotope or "
+        "chemical formula superscripts, but its DOI, year, and other "
+        "authors identify this exact output.",
+    )
+
+OTHER_PRIMARY.update(
+    {
+        811: (
+            "Erratum to: Growth and scintillation characterizations of "
+            "SrMoO4 single crystals",
+            2014,
+            "Hong Joo Kim",
+            "10.3938/jkps.64.333",
+            "https://link.springer.com/article/10.3938/jkps.64.333",
+            "Original Springer erratum with corresponding-author address",
+            "Springer identifies this 2014 volume 64, page 333 output as an "
+            "erratum and assigns H. J. Kim to KNU Physics with the "
+            "corresponding address hongjoo@knu.ac.kr. KNU's exact erratum "
+            "record links that author to Hong Joo Kim. This is a real "
+            "correction record, but it belongs to the KNU namesake.",
+        ),
+        812: (
+            "Growth and scintillation characterizations of SrMoO4 single "
+            "crystals (vol 63, pg 2018, 2013)",
+            2014,
+            "Hong Joo Kim",
+            "10.3938/jkps.64.333",
+            "https://link.springer.com/article/10.3938/jkps.64.333",
+            "Original Springer erratum with corresponding-author address",
+            "This alternate Scholar title is a second rendering of the "
+            "same 2014 volume 64, page 333 erratum, not the 2013 "
+            "volume 63, page 2018 research article. Springer assigns "
+            "H. J. Kim to KNU Physics and prints the corresponding address "
+            "hongjoo@knu.ac.kr; KNU links him to Hong Joo Kim.",
+        ),
+    }
+)
+KNU_ERRATUM_VENUES = {
+    811: "Journal of the Korean Physical Society 64 (2), 333-333, 2014",
+    812: "JOURNAL OF THE KOREAN PHYSICAL SOCIETY 64 (2), 333-333, 2014",
+}
 
 OTHER_PRIMARY.update(
     {
@@ -2304,6 +2420,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and pub_id != OTHER_PRIMARY_ID_GUARDS[index]
                 )
                 or (
+                    index in KNU_ERRATUM_VENUES
+                    and row["venue"] != KNU_ERRATUM_VENUES[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -2602,17 +2722,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 65,
+        "proposed_other_person_primary_work": 75,
         "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 377,
+        "unresolved_attribution_hold": 367,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 407 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 417 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

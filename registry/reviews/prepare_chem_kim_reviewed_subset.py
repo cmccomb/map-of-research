@@ -117,7 +117,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
         if row["status"] == "already_excluded" or row["status"].startswith("proposed_")
     )
     held = sorted(publication_ids - set(released) - set(excluded))
-    if (len(released), len(excluded), len(held)) != (121, 415, 382):
+    if (len(released), len(excluded), len(held)) != (121, 425, 372):
         raise ValueError("Kim review partition changed")
     manifest_excluded = {
         author_pub_id

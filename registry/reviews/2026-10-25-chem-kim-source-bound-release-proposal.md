@@ -30,10 +30,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 121 | `159375617198d7887a0614b6e3d992fdbc985b5b6e81210b3ea353a21be4eb1e` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 415 | `6487b95d22a52964e12c5393245d897b0c62e796e14366cda926474bfd5244f9` |
-| Held from any map release | 382 | `e840cc3319f4f64d2081ee5d53ad4283f39600616491012fbc044735d09417c9` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 425 | `5747c215a7450e6930a56b559c0821974d54db97a071f3061e1019742924690c` |
+| Held from any map release | 372 | `c07af945c50173adb5c00f19c62ed6576daad01790ecfeb8b83d99e14076a478` |
 
-The 382 holds comprise observations that still lack enough output-level review
+The 372 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 121 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -63,6 +63,11 @@ Three [KIST fuel-cell team comparisons](2026-10-25-chem-kim-kist-fuel-cell-three
 exclude exact initials-only articles by a documented full-name coauthor/team
 bridge to Hyoung-Juhn Kim; this inference does not extend to the remaining
 fuel-cell holds.
+Eight [KNU person-linked scintillator records and two renderings of one
+Springer erratum](2026-10-25-chem-kim-scintillator-erratum-ten-primary-review.md)
+identify Hong Joo Kim, not CMU's Hyung J. Kim, by exact work metadata. The
+erratum is excluded for wrong-person attribution; corrections are not
+categorically treated as nonpublications.
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
 own DOI/page evidence and remain distinct works. The 121 confirmed rows do
 **not** represent Kim's whole publication history.
@@ -88,8 +93,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 121 confirmed IDs, and the 415 exact exclusion IDs to
-these lists; it must prevent all 382 held rows from creating works,
+all 918 exact IDs, the 121 confirmed IDs, and the 425 exact exclusion IDs to
+these lists; it must prevent all 372 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the
