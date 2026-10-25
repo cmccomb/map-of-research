@@ -1,6 +1,6 @@
 # Chien Ho visible Scholar profile: exact-row review — 2026-10-25 UTC
 
-**Frozen initial pass.** The [final source-backed follow-up](2026-10-25-bio-chien-ho-final-followup.md) raises confirmed attribution to 424 exact IDs and exclusions to 87 while holding 71. Counts below document the original 269/35/278 review and are preserved for audit.
+**Frozen initial pass.** The [final source-backed follow-up](2026-10-25-bio-chien-ho-final-followup.md) raises confirmed attribution to 424 exact IDs and exclusions to 88 while holding 70. Counts below document the original 269/35/278 review and are preserved for audit.
 
 This is an offline review of the saved 582-row Scholar capture (`8iLLOQgAAAAJ`) against [Chien Ho’s CMU bibliography](https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf) and original or institutional records. I did not reopen Scholar. The saved receipt reports 582 displayed rows, 582 unique citation IDs, a disabled final “Show more,” and no challenge. Its raw JSON SHA-256 is `77fa46b17dfa9db74eed2fc3bafe6ca45960ca3d996e5951835ccb22dc9ab93e`; I independently counted 582 unique IDs and sequential indices. This verifies the complete **visible profile at capture time**, not all publications Chien Ho has ever written. Source PR #162 stages the raw capture; this review does not edit it.
 

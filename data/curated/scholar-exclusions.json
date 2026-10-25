@@ -8688,6 +8688,14 @@
       "reason": "Publisher-deposited exact DOI metadata lists Pond, Vuletich, Majumdar, Falzone, and Lecomte only; Chien Ho is absent.",
       "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.bpj.2010.12.1417",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:A8cqit5AE6sC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Corrupted Scholar title shares exact Biochemistry 44:7207-7217 (2005) with retained row 170. Publisher-deposited DOI 10.1021/bi048289a and PubMed give one canonical article with the correct title and Chien Ho; no independent second article occupies these pages. Retain row 170 (8iLLOQgAAAAJ:JoZmwDi-zQgC); preserve this raw Scholar row.",
+      "evidence_url": "https://api.crossref.org/works/10.1021%2Fbi048289a",
+      "verified_at": "2026-10-25"
     }
   ]
 }

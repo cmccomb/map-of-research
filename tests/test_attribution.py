@@ -57,7 +57,7 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     }
     assert attribution.held_profiles == {SCHOLAR_ID}
     assert len(attribution.confirmed) == 424
-    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 87
+    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 88
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
     } <= {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
@@ -76,13 +76,20 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "confirmed_retained": 304,
         "confirmed_retained_candidate": 120,
         "confirmed_excluded": 37,
-        "confirmed_excluded_candidate": 50,
+        "confirmed_excluded_candidate": 51,
         "still_held": 48,
         "confirmed_author_context_hold": 12,
         "confirmed_author_metadata_hold": 9,
         "confirmed_author_duplicate_swap_hold": 1,
-        "confirmed_author_duplicate_hold": 1,
     }
+    duplicate = final_rows[494]
+    assert duplicate["index"] == "495"
+    assert duplicate["related_row"] == "170"
+    assert duplicate["review_decision"] == "confirmed_excluded_candidate"
+    assert (
+        exclusions[(SCHOLAR_ID, duplicate["author_pub_id"])].reason_code
+        == "corrupted_duplicate"
+    )
     assert all(
         ";" not in decision.evidence_url for decision in attribution.confirmed.values()
     )
