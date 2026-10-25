@@ -1,4 +1,4 @@
-# Four exact Bio publication identities after the region repair
+# Four exact Bio publication identities for the next release
 
 These reviews retain the Google Scholar observations as captured. The three
 DOI aliases resolve exact Scholar citation IDs to published records, and the
@@ -20,13 +20,17 @@ Scholar observations, titles, years, DOIs, dated reviews, and publisher
 PII/PubMed/DOI evidence chains. The strict guard is implemented separately in
 the staged region-policy PR. On the frozen Chemistry weak-region layout,
 each article is withheld without its own flag and retained with it. The
-other 507 works in their shared region do not change eligibility.
+other 507 works in their shared region do not change eligibility. These exact
+reviews permit the four works to remain visible on the current
+`bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd` hosted baseline; they do
+not approve a blanket change to the Bernhard region.
 
 The raw McManus observation `28yZqbcAAAAJ:HKviVsUxM5wC` has a poster-number
 placeholder, no captured year, and no verified full byline. The meeting's
 [poster list](https://rustbeltrna.org/2021/posters.php) suggests a real poster,
 so this review neither labels it a nonpublication nor grants it a DOI or
-metadata correction. It remains raw and unmapped pending exact attribution.
+metadata correction. Its exact provisional hold preserves the raw row while
+removing its map and coauthor contributions pending attribution.
 
-These additions follow the standalone Bernhard region repair. They require a
-new full-corpus preview and all-profile release gate before publication.
+The next Bio release uses the current hosted baseline and requires a new
+full-corpus preview and all-profile release gate before publication.
