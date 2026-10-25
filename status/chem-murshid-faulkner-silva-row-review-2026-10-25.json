@@ -13,7 +13,7 @@
         {
           "capture_row_index": 31,
           "author_pub_id": "MPxFaHYAAAAJ:hFOr9nPyWt4C",
-          "reason_code": "duplicate_publication",
+          "reason_code": "corrupted_duplicate",
           "reason": "Duplicate malformed Nanomaterials citation; retain complete Scholar row 3.",
           "evidence_url": "https://doi.org/10.3390/nano11113084",
           "reviewed_at": "2026-10-25"
@@ -21,7 +21,7 @@
         {
           "capture_row_index": 35,
           "author_pub_id": "MPxFaHYAAAAJ:-f6ydRqryjwC",
-          "reason_code": "duplicate_publication",
+          "reason_code": "corrupted_duplicate",
           "reason": "Duplicate malformed Sustainability citation; retain complete Scholar row 24.",
           "evidence_url": "https://doi.org/10.3390/su15054342",
           "reviewed_at": "2026-10-25"
@@ -29,7 +29,7 @@
         {
           "capture_row_index": 40,
           "author_pub_id": "MPxFaHYAAAAJ:hC7cP41nSMkC",
-          "reason_code": "duplicate_publication",
+          "reason_code": "corrupted_duplicate",
           "reason": "Duplicate malformed Gels citation; retain complete Scholar row 34.",
           "evidence_url": "https://doi.org/10.3390/gels9060465",
           "reviewed_at": "2026-10-25"
@@ -62,7 +62,7 @@
         {
           "capture_row_index": 5,
           "author_pub_id": "tPp2aaoAAAAJ:2osOgNQ5qMEC",
-          "reason_code": "duplicate_publication",
+          "reason_code": "corrupted_duplicate",
           "reason": "Same 2006 journal article as complete Scholar row 1; publisher DOI has Cardell, Hogarth, and Faulkner.",
           "evidence_url": "https://doi.org/10.1016/j.ica.2005.08.034",
           "reviewed_at": "2026-10-25"
