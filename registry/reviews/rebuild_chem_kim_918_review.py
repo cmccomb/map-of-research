@@ -1791,6 +1791,26 @@ KNU_COSINE_AMORE_AUTHORS = {
     519: "A Agrawal, VV Alenkov, P Aryal, H Bae, J Beyer, B Bhandari, RS Boiko, ...",
 }
 
+HYOJOON_SOLE_AUTHOR_PRIMARY = {
+    537: (
+        "Relationship between Kubo-transformed and classical correlation functions",
+        2007,
+        "Hyojoon Kim",
+        "10.1016/j.cplett.2007.01.027",
+        "https://api.crossref.org/works/10.1016%2Fj.cplett.2007.01.027",
+        "Elsevier publisher-deposited sole full-author DOI record",
+        "The publisher-deposited record names sole author Hyojoon Kim on the "
+        "exact Chemical Physics Letters 436:111-115 article. His Dong-A "
+        "University personal bibliography independently lists the exact "
+        "title, year, volume, and pages. He is not CMU Chemistry professor "
+        "Hyung J. Kim.",
+    )
+}
+OTHER_PRIMARY.update(HYOJOON_SOLE_AUTHOR_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS[537] = "bC4aq-4AAAAJ:PR6Y55bgFSsC"
+HYOJOON_SOLE_AUTHOR_VENUE = "Chemical physics letters 436 (1-3), 111-115, 2007"
+HYOJOON_SOLE_AUTHOR_AUTHORS = "H Kim"
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3417,6 +3437,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["authors"] != KNU_COSINE_AMORE_AUTHORS[index]
                 )
                 or (
+                    index == 537
+                    and (
+                        row["venue"] != HYOJOON_SOLE_AUTHOR_VENUE
+                        or row["authors"] != HYOJOON_SOLE_AUTHOR_AUTHORS
+                    )
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3768,17 +3795,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 124,
+        "proposed_other_person_primary_work": 125,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 313,
+        "unresolved_attribution_hold": 312,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 471 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 472 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
