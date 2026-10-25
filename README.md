@@ -103,14 +103,14 @@ to the reviewed retention baseline before a later recapture; the frozen
 baseline does not track later publications automatically.
 
 Complete capture and public release are separate. The trusted
-`data/curated/scholar-profile-releases.json` decision currently holds Chien
-Ho's complete 582-row source while exact attribution and context review
-continues. The raw snapshot and coverage gates still validate all 582 rows.
-The publisher checks the decision against the registry, exact cache checksum,
-and raw citation IDs, then omits held own-source observations from public
-datasets and embeddings. The roster remains visible, and publications sourced
-from other faculty are unaffected. The upload receipt reports raw and
-published counts and the decision-manifest checksum.
+`data/curated/scholar-profile-releases.json` decision checks the registry,
+exact cache checksum, and raw citation IDs before public rows are built. A
+`held` profile contributes no own-source publications. A `reviewed_subset`
+profile contributes only exact rows confirmed by primary attribution evidence;
+every other citation ID is explicitly excluded or held and stays out of public
+datasets and embeddings. The complete raw capture remains available for
+review. The upload receipt reports raw and published counts and the
+decision-manifest checksum.
 
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,

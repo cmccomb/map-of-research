@@ -10944,6 +10944,46 @@
       "reason": "The coauthor institution lists C. Das, not the Scholar-captured S. Das, as first author of this exact title, journal, volume, year, and coauthor set.",
       "evidence_url": "https://www.iptsalipur.org/wp-content/uploads/2016/02/Publication-list.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:1taIhTC69MYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Cancer Discovery record names Subhasree Das of H3 Biomedicine in this exact article, not CMU chemist Subha R. Das; this Scholar row embeds the citation in its title.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29991605/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:i91s68tWr-MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original journal contents identify Swagatika Das in this exact 2021 brain-tumor review, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.annalsofrscb.ro/index.php/journal/article/view/8984",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:I8rxH6phXEkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original journal article names Dr Sumit Das of Silchar Medical College in this exact 2021 clinical study, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://jmscr.igmpublication.org/v9-i3/22%20jmscr.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:ujxm2eEBZHIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original ACS article identifies Subha Das at New Zealand's Plant Health and Environment Laboratory with ORCID 0000-0002-1818-4683, distinct from CMU chemist Subha R. Das's ORCID 0000-0002-5353-0422.",
+      "evidence_url": "https://pubs.acs.org/doi/abs/10.1021/acssynbio.5c00406",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:FiDNX6EVdGUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Cancer Discovery record names Subhasree Das of H3 Biomedicine in this exact article, not CMU chemist Subha R. Das; this second Scholar row repeats malformed citation text.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29991605/",
+      "verified_at": "2026-10-25"
     }
   ]
 }

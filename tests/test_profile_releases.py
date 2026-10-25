@@ -1,11 +1,19 @@
+import csv
 import hashlib
 import json
 from dataclasses import replace
+from pathlib import Path
 from types import SimpleNamespace
 
 import pandas
 import pytest
 
+from map_of_research.attribution import (
+    AttributionReviews,
+    ConfirmedAttribution,
+    load_attribution_reviews,
+)
+from map_of_research.exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from map_of_research.io import sha256_file
 from map_of_research.profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
@@ -13,11 +21,13 @@ from map_of_research.profile_releases import (
     load_profile_releases,
     require_no_held_contributions,
     select_released_observations,
+    validate_reviewed_subset_decisions,
 )
 
 PERSON = "person-held"
 SCHOLAR = "held-scholar"
 OTHER = "person-other"
+PROPOSAL = Path("registry/reviews/2026-10-25-chem-das-reviewed-subset-proposal.json")
 
 
 def decision(**changes):
@@ -107,14 +117,52 @@ def test_checked_in_chien_release_is_source_bound() -> None:
     assert len(item.cache_sha256) == 64
 
 
-def test_das_complete_source_stays_held_during_attribution_review() -> None:
-    releases = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
+    active = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    active_das = next(item for item in active if item.scholar_id == "FrF1YXQAAAAJ")
+    assert active_das.state == "held"
+    releases = load_profile_releases(PROPOSAL)
     item = next(item for item in releases if item.scholar_id == "FrF1YXQAAAAJ")
     assert item.person_id == "person-subhardas-42cf6c1e"
-    assert item.state == "held"
+    assert item.state == "reviewed_subset"
     assert item.expected_source_rows == 670
     assert item.cache_sha256 == (
         "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df"
+    )
+    with Path("registry/reviews/2026-10-25-chem-das-complete-profile-ledger.csv").open(
+        newline=""
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    assert len(rows) == len({row["author_pub_id"] for row in rows}) == 670
+    assert [int(row["capture_row_index"]) for row in rows] == list(range(1, 671))
+    assert set(item.released_author_pub_ids) == {
+        row["author_pub_id"]
+        for row in rows
+        if row["decision"] == "positive_primary_source_reviewed_subset"
+    }
+    assert set(item.excluded_author_pub_ids) == {
+        row["author_pub_id"] for row in rows if row["decision"] == "reviewed_excluded"
+    }
+    assert set(item.held_author_pub_ids) == {
+        row["author_pub_id"]
+        for row in rows
+        if row["decision"]
+        in {"unresolved_held", "positive_orcid_title_year_signal_held"}
+    }
+    assert tuple(
+        map(
+            len,
+            (
+                item.released_author_pub_ids,
+                item.excluded_author_pub_ids,
+                item.held_author_pub_ids,
+            ),
+        )
+    ) == (8, 185, 477)
+    validate_reviewed_subset_decisions(
+        releases,
+        load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),
+        load_exclusions(DEFAULT_EXCLUSIONS_PATH),
     )
 
 
@@ -157,7 +205,11 @@ def test_profile_release_manifest_rejects_structure(tmp_path, body, error) -> No
     ],
 )
 def test_profile_release_manifest_rejects_bad_field(tmp_path, field, value) -> None:
-    item = vars(decision()).copy()
+    item = {
+        key: value
+        for key, value in vars(decision()).items()
+        if not key.endswith("_author_pub_ids")
+    }
     item[field] = value
     path = tmp_path / "releases.json"
     path.write_text(json.dumps({"schema_version": 1, "profiles": [item]}))
@@ -166,7 +218,11 @@ def test_profile_release_manifest_rejects_bad_field(tmp_path, field, value) -> N
 
 
 def test_profile_release_manifest_requires_date_and_unique_ids(tmp_path) -> None:
-    item = vars(decision()).copy()
+    item = {
+        key: value
+        for key, value in vars(decision()).items()
+        if not key.endswith("_author_pub_ids")
+    }
     path = tmp_path / "releases.json"
     item["reviewed_at"] = "tomorrow"
     path.write_text(json.dumps({"schema_version": 1, "profiles": [item]}))
@@ -184,6 +240,54 @@ def test_profile_release_manifest_requires_date_and_unique_ids(tmp_path) -> None
     second = {**item, "person_id": "person-second", "scholar_id": "second"}
     path.write_text(json.dumps({"schema_version": 1, "profiles": [item, second]}))
     assert len(load_profile_releases(path)) == 2
+
+
+@pytest.mark.parametrize(
+    "change,error",
+    [
+        ({"released_author_pub_ids": "held:one"}, "unique citation IDs"),
+        ({"released_author_pub_ids": ["wrong:one"]}, "unique citation IDs"),
+        (
+            {"released_author_pub_ids": [f"{SCHOLAR}:one", f"{SCHOLAR}:one"]},
+            "unique citation IDs",
+        ),
+        ({"released_author_pub_ids": []}, "exact row partition"),
+        ({"held_author_pub_ids": [f"{SCHOLAR}:one"]}, "exact row partition"),
+        ({"held_author_pub_ids": []}, "exact row partition"),
+    ],
+)
+def test_reviewed_subset_manifest_requires_exact_unique_partition(
+    tmp_path, change, error
+) -> None:
+    item = {
+        key: value
+        for key, value in vars(decision()).items()
+        if not key.endswith("_author_pub_ids")
+    }
+    item.update(
+        state="reviewed_subset",
+        released_author_pub_ids=[f"{SCHOLAR}:one"],
+        excluded_author_pub_ids=[],
+        held_author_pub_ids=[f"{SCHOLAR}:two"],
+    )
+    item.update(change)
+    path = tmp_path / "releases.json"
+    path.write_text(json.dumps({"schema_version": 1, "profiles": [item]}))
+    with pytest.raises(ValueError, match=error):
+        load_profile_releases(path)
+
+
+def test_full_hold_manifest_rejects_subset_arrays(tmp_path) -> None:
+    item = {
+        key: value
+        for key, value in vars(decision()).items()
+        if not key.endswith("_author_pub_ids")
+    }
+    item["released_author_pub_ids"] = [f"{SCHOLAR}:one"]
+    path = tmp_path / "releases.json"
+    path.write_text(json.dumps({"schema_version": 1, "profiles": [item]}))
+    with pytest.raises(ValueError, match="requires reviewed_subset"):
+        load_profile_releases(path)
 
 
 def test_held_profile_is_removed_only_from_published_observations(tmp_path) -> None:
@@ -210,6 +314,80 @@ def test_explicit_release_restores_source_after_same_verification(tmp_path) -> N
     assert len(released) == 4
     assert receipt[0]["state"] == "released"
     assert held_ids == set()
+
+
+def test_reviewed_subset_keeps_only_exact_positive_source_rows(tmp_path) -> None:
+    cache_dir, hold = source(tmp_path)
+    subset = replace(
+        hold,
+        state="reviewed_subset",
+        released_author_pub_ids=(f"{SCHOLAR}:one",),
+        excluded_author_pub_ids=(),
+        held_author_pub_ids=(f"{SCHOLAR}:two",),
+    )
+    released, receipt, held_ids = select_released_observations(
+        frame(), registry(), (subset,), cache_dir=cache_dir
+    )
+    assert released["person_id"].tolist() == [PERSON, OTHER]
+    assert released["author_pub_id"].tolist() == [f"{SCHOLAR}:one", "other-scholar:one"]
+    assert receipt[0]["source_observation_rows"] == 2
+    assert receipt[0]["released_source_observation_rows"] == 1
+    assert receipt[0]["held_source_observation_rows"] == 1
+    assert receipt[0]["held_person_observation_rows"] == 2
+    assert len(held_ids) == 2
+
+
+def test_reviewed_subset_rejects_changed_cache_or_partition(tmp_path) -> None:
+    cache_dir, hold = source(tmp_path)
+    subset = replace(
+        hold,
+        state="reviewed_subset",
+        released_author_pub_ids=(f"{SCHOLAR}:one",),
+        held_author_pub_ids=(f"{SCHOLAR}:two",),
+    )
+    with pytest.raises(ValueError, match="missing or changed"):
+        select_released_observations(
+            frame(),
+            registry(),
+            (replace(subset, cache_sha256="0" * 64),),
+            cache_dir=cache_dir,
+        )
+    with pytest.raises(ValueError, match="row partition differs from source"):
+        select_released_observations(
+            frame(),
+            registry(),
+            (replace(subset, held_author_pub_ids=(f"{SCHOLAR}:wrong",)),),
+            cache_dir=cache_dir,
+        )
+
+
+def test_reviewed_subset_rejects_unconfirmed_positive_or_exclusion() -> None:
+    subset = replace(
+        decision(),
+        state="reviewed_subset",
+        released_author_pub_ids=(f"{SCHOLAR}:one",),
+        excluded_author_pub_ids=(),
+        held_author_pub_ids=(f"{SCHOLAR}:two",),
+    )
+    confirmed = AttributionReviews(
+        frozenset({SCHOLAR}),
+        {
+            (SCHOLAR, f"{SCHOLAR}:one"): ConfirmedAttribution(
+                "https://example.org/one", None, "2026-10-25"
+            )
+        },
+    )
+    validate_reviewed_subset_decisions((subset,), confirmed, {})
+    with pytest.raises(ValueError, match="differs from exact reviews"):
+        validate_reviewed_subset_decisions(
+            (replace(subset, released_author_pub_ids=(f"{SCHOLAR}:two",)),),
+            confirmed,
+            {},
+        )
+    with pytest.raises(ValueError, match="differs from exact reviews"):
+        validate_reviewed_subset_decisions(
+            (subset,), confirmed, {(SCHOLAR, f"{SCHOLAR}:two"): object()}
+        )
 
 
 @pytest.mark.parametrize(
@@ -301,10 +479,22 @@ def test_profile_release_rejects_snapshot_source_mismatch(tmp_path, change) -> N
 def tables():
     return {
         "profile_publications": pandas.DataFrame(
-            [{"person_id": OTHER, "scholar_id": "other-scholar"}]
+            [
+                {
+                    "person_id": OTHER,
+                    "scholar_id": "other-scholar",
+                    "observation_id": "observation-other",
+                }
+            ]
         ),
         "authorships": pandas.DataFrame(
-            [{"person_id": OTHER, "scholar_id": "other-scholar"}]
+            [
+                {
+                    "person_id": OTHER,
+                    "scholar_id": "other-scholar",
+                    "observation_id": "observation-other",
+                }
+            ]
         ),
         "works": pandas.DataFrame(
             [{"observation_ids": ["observation-other"], "authors": "Held Person"}]
@@ -330,6 +520,32 @@ def test_public_tables_preserve_other_faculty_coauthored_work() -> None:
     require_no_held_contributions(
         output, (replace(decision(), state="released"),), set()
     )
+
+
+@pytest.mark.parametrize("config", ["profile_publications", "authorships", "works"])
+def test_reviewed_subset_rejects_held_observation_in_public_tables(config) -> None:
+    output = tables()
+    if config == "works":
+        output[config].at[0, "observation_ids"] = ["observation-held"]
+    else:
+        output[config].at[0, "observation_id"] = "observation-held"
+    with pytest.raises(ValueError, match=f"published {config}"):
+        require_no_held_contributions(
+            output,
+            (replace(decision(), state="reviewed_subset"),),
+            {"observation-held"},
+        )
+
+
+def test_reviewed_subset_requires_public_observation_identity() -> None:
+    output = tables()
+    output["authorships"] = output["authorships"].drop(columns=["observation_id"])
+    with pytest.raises(ValueError, match="lacks profile identity"):
+        require_no_held_contributions(
+            output,
+            (replace(decision(), state="reviewed_subset"),),
+            {"observation-held"},
+        )
 
 
 @pytest.mark.parametrize(

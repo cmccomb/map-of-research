@@ -1,0 +1,15 @@
+# Subha R. Das: exact namesake exclusions and conservative subset assessment
+
+This offline pass compares five previously held citation IDs in the saved 670-row Google Scholar capture with original journal author lists. It does not open Scholar or alter the raw capture.
+
+| Capture row | Captured citations | Exact citation ID | Original-source decision |
+| ---: | ---: | --- | --- |
+| 49 | 19 | `FrF1YXQAAAAJ:1taIhTC69MYC` | **Exclude.** The [Cancer Discovery article indexed by PubMed](https://pubmed.ncbi.nlm.nih.gov/29991605/) lists **Subhasree Das** of H3 Biomedicine, and its title, 2018 volume/pages, and article identifier match this malformed Scholar citation row. |
+| 75 | 12 | `FrF1YXQAAAAJ:i91s68tWr-MC` | **Exclude.** The [original journal contents](https://www.annalsofrscb.ro/index.php/journal/article/view/8984) name **Swagatika Das** for the exact 2021 title, coauthors, and pages. |
+| 86 | 11 | `FrF1YXQAAAAJ:I8rxH6phXEkC` | **Exclude.** The [original journal PDF](https://jmscr.igmpublication.org/v9-i3/22%20jmscr.pdf) names **Dr Sumit Das** of Silchar Medical College for the exact 2021 title, coauthors, and pages. |
+| 138 | 7 | `FrF1YXQAAAAJ:ujxm2eEBZHIC` | **Exclude.** The [original ACS article](https://pubs.acs.org/doi/abs/10.1021/acssynbio.5c00406) names **Subha Das** at New Zealand's Plant Health & Environment Laboratory with ORCID `0000-0002-1818-4683`; [CMU](https://www.cmu.edu/chemistry/people/faculty/das.html) links its chemist to a distinct ORCID, `0000-0002-5353-0422`. |
+| 143 | 7 | `FrF1YXQAAAAJ:FiDNX6EVdGUC` | **Exclude.** The [same Cancer Discovery record](https://pubmed.ncbi.nlm.nih.gov/29991605/) resolves the long, truncated second Scholar citation row to **Subhasree Das**, not CMU's Subha R. Das. |
+
+These five exact exclusions account for 56 captured citations. The current ledger partitions 670 preserved raw IDs into 185 reviewed exclusions, 43 CMU-linked ORCID title/year signals, eight additional primary-source positives, and 434 unresolved rows. A matching ORCID title/year signal is useful attribution evidence but still needs exact output-type and duplicate review before public release. Rows with only abbreviated `S. Das`, an off-topic subject, or a plausible career date remain held.
+
+**Conservative subset option:** the [proposal manifest](2026-10-25-chem-das-reviewed-subset-proposal.json) admits only the eight positively attributed, exact primary-source rows in the [high-impact review](2026-10-25-chem-das-high-impact-followup.md) while retaining all 670 raw rows, all 185 exact exclusions, and the 477 other not-yet-publishable rows in the source-bound review ledger. The producer verifies the complete cache hash and exact IDs, and removes every non-allowlisted Das observation before public works, publication views, authorships, embeddings, and graph edges. The subset is explicitly incomplete; it must not be described as Das's full publication history. The trusted upload manifest continues to hold the entire Das profile.

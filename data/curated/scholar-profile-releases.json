@@ -16,7 +16,7 @@
       "state": "held",
       "expected_source_rows": 670,
       "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
-      "reason": "Complete 670-row visible Scholar source is captured, but 490 rows remain outside exact exclusions: 43 CMU-linked ORCID title/year signals, eight additional primary-source positives, and 439 unresolved rows. Independent attribution and output-type review is incomplete. Keep the entire profile out of public works and coauthor edges.",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. The 185 exact exclusions and eight primary-source positives are reviewed, while 43 ORCID title/year signals and 434 unresolved rows need further review. Keep the entire profile out of public tables until its full publication history is correct or incompleteness is explicitly approved and conveyed.",
       "reviewed_at": "2026-10-25"
     }
   ]
