@@ -333,6 +333,52 @@ OTHER_PRIMARY = {
         "Hong Joo Kim; the Scholar title omits the beta glyph but its "
         "authors, journal, volume, pages, and year match this article.",
     ),
+    12: (
+        "Cerebral microbleeds are regionally associated with intracerebral hemorrhage",
+        2004,
+        "Ho Kim",
+        "10.1212/01.wnl.0000101463.50798.0d",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Neurology article, "
+        "volume 62, pages 72–76, among his own publications; the "
+        "Scholar H. Kim byline is his.",
+    ),
+    38: (
+        "Comparative analysis of the spatial distribution and severity "
+        "of cerebral microbleeds and old lacunes",
+        2004,
+        "Ho Kim",
+        "",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Journal of Neurology, "
+        "Neurosurgery & Psychiatry article, volume 75, pages 423–427, "
+        "under his full name.",
+    ),
+    40: (
+        "Left ventricular hypertrophy is associated with cerebral "
+        "microbleeds in hypertensive patients",
+        2004,
+        "Ho Kim",
+        "10.1212/01.wnl.0000132525.36804.a1",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Neurology article, "
+        "volume 63, pages 16–21, among his own publications; the "
+        "Scholar H. Kim byline is his.",
+    ),
+    106: (
+        "Augmentation of NAD+ by NQO1 attenuates cisplatin-mediated "
+        "hearing impairment",
+        2014,
+        "Hyung-Jin Kim",
+        "10.1038/cddis.2014.255",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4611728/",
+        "journal full-text author note",
+        "The journal article identifies its first author in full as "
+        "Hyung-Jin Kim of Wonkwang University School of Medicine.",
+    ),
 }
 
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
@@ -554,15 +600,15 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 27,
+        "proposed_other_person_primary_work": 31,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 442,
+        "unresolved_attribution_hold": 438,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 363 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 367 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
