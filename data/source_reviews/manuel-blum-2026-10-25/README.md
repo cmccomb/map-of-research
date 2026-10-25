@@ -15,8 +15,18 @@ journal articles that have not been resolved into distinct academic works.
 
 `post-2011-candidates.csv` adds eight later arXiv source observations from a
 bounded primary-source check. Several are coauthored with Lenore Blum; the
-2017 password preprint likely precedes the already held 2020 PNAS paper.
-The 2020–2024 consciousness records have explicit version and genre questions.
+2017 password preprint and the already held 2020 PNAS paper are the same
+publication family in separate preprint and journal manifestations: both name
+Blum and Santosh Vempala, use near-identical titles, and describe the same
+human-computation model and password application. The
+[arXiv preprint](https://arxiv.org/abs/1707.01204) and
+[indexed PNAS article](https://pubmed.ncbi.nlm.nih.gov/32291338/) remain
+separate source observations. The
+[2021 consciousness preprint](https://arxiv.org/abs/2107.13704) explicitly
+lists DOI `10.1073/pnas.2115934119` as a related PNAS publication, so those
+two manifestations form another reviewed family. Its stated text overlap
+with arXiv:2011.09850 does not establish that the 2020 preprint is the same
+work. Other 2020–2024 consciousness records retain version and genre holds.
 The 2019 password preprint needs an independent exact-person link before
 release. These are source observations, **not** eight distinct new works or a
 whole-career census. A broad “Blum, M” search also returns other researchers;

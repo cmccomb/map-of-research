@@ -34,5 +34,27 @@
     "identity_basis": "Publisher record names Manuel Blum, Carnegie Mellon School of Computer Science, and mblum@cs.cmu.edu",
     "status": "held_external_source_observation"
   },
+  "reviewed_work_family_links": [
+    {
+      "preprint_id": "arxiv:1707.01204",
+      "published_doi": "10.1073/pnas.1801839117",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv preprint and PNAS article name Manuel Blum and Santosh Vempala, have near-identical titles, and describe the same concrete model of human computation and password application.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1707.01204",
+        "https://pubmed.ncbi.nlm.nih.gov/32291338/"
+      ]
+    },
+    {
+      "preprint_id": "arxiv:2107.13704",
+      "published_doi": "10.1073/pnas.2115934119",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv record explicitly lists the PNAS DOI as a related DOI; text overlap with arXiv:2011.09850 remains a separate unresolved question.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2107.13704",
+        "https://doi.org/10.1073/pnas.2115934119"
+      ]
+    }
+  ],
   "graph_eligible": false
 }
