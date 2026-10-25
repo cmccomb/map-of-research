@@ -1,5 +1,7 @@
 # Hyung J. Kim: three KNU author-linked exclusions
 
+This review's counts record the first three follow-up decisions. [A second dated follow-up](2026-10-25-chem-kim-named-author-follow-up.md) adds nine more exact IDs; the current totals are in the parent audit.
+
 This is a narrow follow-up to the [918-row Scholar capture review](2026-10-24-chem-kim-918-attribution-audit.md). The original review held five exact title/year matches to a Kyungpook National University (KNU) ORCID record because those entries lacked a DOI. I checked the publication records themselves. KNU links the `H. J. Kim` author of two exact works directly to its [Hong Joo Kim faculty profile](https://research.knu.ac.kr/en/persons/hong-joo-kim/), which identifies him as a Physics professor. A third KNU record names Hong Joo Kim in full and links to that same profile. These are exact work-level identity checks, not subject or initials filters.
 
 | Capture row | Scholar observation ID | KNU publication record | Identity evidence |

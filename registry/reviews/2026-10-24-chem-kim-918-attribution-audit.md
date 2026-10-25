@@ -1,6 +1,6 @@
 # Hyung J. Kim: complete-profile attribution screen, draft
 
-**2026-10-25 addendum:** Three further exact KNU author-linked decisions are recorded in [the no-DOI follow-up](2026-10-25-chem-kim-knu-author-linked-follow-up.md). The counts below describe the original 2026-10-24 review; the current rebuilt ledger has 359 exclusions and 459 held observations.
+**2026-10-25 addenda:** Three exact KNU author-linked decisions are recorded in [the no-DOI follow-up](2026-10-25-chem-kim-knu-author-linked-follow-up.md), followed by [nine more named-author decisions](2026-10-25-chem-kim-named-author-follow-up.md). The counts below describe the original 2026-10-24 review; the current rebuilt ledger has 368 exclusions and 450 held observations.
 
 Reviewed 2026-10-24 against the complete visible Google Scholar capture for CMU Chemistry professor Hyung J. Kim (`bC4aq-4AAAAJ`) in source PR #118. The paired capture has **918 unique citation IDs**, no remaining Show More rows, no challenge, and no page error. Its JSON SHA-256 is `ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867`; its HTML SHA-256 is `a5f1a45612a885ca42174926f3c43bc437fd7146da4b92f241930e6adfd9bc94`. The raw capture is preserved unchanged. This producer PR adds exact observation decisions and a screen; **it does not promote a Kim canonical cache or publish Kim in either map**.
 

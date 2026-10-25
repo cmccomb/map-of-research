@@ -171,6 +171,102 @@ OTHER_PRIMARY = {
         "The conference paper names H. Jin Kim of Seoul National "
         "University as its coauthor.",
     ),
+    68: (
+        "Electrospraying electrospun nanofiber segments into injectable "
+        "microspheres for potential cell delivery",
+        2018,
+        "Hyung Joon Kim",
+        "10.1021/acsami.8b06386",
+        "https://pubs.acs.org/doi/10.1021/acsami.8b06386",
+        "ACS publisher full-author article",
+        "The ACS author list names Hyung Joon Kim at the University of Nebraska.",
+    ),
+    92: (
+        "Three-dimensional objects consisting of hierarchically assembled "
+        "nanofibers with controlled alignments for regenerative medicine",
+        2019,
+        "Hyung Joon Kim",
+        "10.1021/acs.nanolett.9b00217",
+        "https://pubs.acs.org/doi/10.1021/acs.nanolett.9b00217",
+        "ACS publisher full-author article",
+        "The ACS article names Hyung Joon Kim of the University of Nebraska "
+        "as its coauthor.",
+    ),
+    123: (
+        "Establishment of a human iPSC-and nanofiber-based microphysiological "
+        "blood–brain barrier system",
+        2018,
+        "Hyung Joon Kim",
+        "10.1021/acsami.8b03962",
+        "https://pubs.acs.org/doi/10.1021/acsami.8b03962",
+        "ACS publisher full-author article",
+        "The ACS article names Hyung Joon Kim of the University of Nebraska "
+        "as its coauthor.",
+    ),
+    153: (
+        "REST regulates non–cell-autonomous neuronal differentiation and "
+        "maturation of neural progenitor cells via secretogranin II",
+        2015,
+        "Hyung Joon Kim",
+        "10.1523/JNEUROSCI.4286-14.2015",
+        "https://www.jneurosci.org/content/jneuro/35/44/14872.full.pdf",
+        "Journal of Neuroscience full-author article",
+        "The journal's article names Hyung Joon Kim of the Salk Institute "
+        "as first author.",
+    ),
+    173: (
+        "Characterisation of tungstate and molybdate crystals ABO4 "
+        "(A= Ca, Sr, Zn, Cd; B= W, Mo) for luminescence lifetime cryothermometry",
+        2018,
+        "Hong Joo Kim",
+        "10.1016/j.mtla.2018.09.039",
+        "https://research.knu.ac.kr/en/publications/characterisation-of-tungstate-and-molybdate-crystals-abosub4sub-a/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor Hong Joo Kim.",
+    ),
+    180: (
+        "Monitoring the differentiation and migration patterns of neural "
+        "cells derived from human embryonic stem cells using a microfluidic "
+        "culture system",
+        2014,
+        "Hyung Joon Kim",
+        "10.14348/molcells.2014.0137",
+        "https://pubmed.ncbi.nlm.nih.gov/24938227/",
+        "PubMed full-author article record",
+        "The complete indexed author list names Hyung Joon Kim, not the "
+        "CMU Chemistry professor.",
+    ),
+    339: (
+        "Compartmental culture of embryonic stem cell-derived neurons "
+        "in microfluidic devices for use in axonal biology",
+        2010,
+        "Hyung Joon Kim",
+        "10.1007/s10529-010-0280-2",
+        "https://pubmed.ncbi.nlm.nih.gov/20424889/",
+        "PubMed full-author article record",
+        "The complete indexed author list names Hyung Joon Kim, not the "
+        "CMU Chemistry professor.",
+    ),
+    389: (
+        "Quantitative analysis of CNS axon regeneration using a "
+        "microfluidic neuron culture device",
+        2008,
+        "Hyung Joon Kim",
+        "",
+        "https://mbel.snu.ac.kr/publication/quantitative-analysis-of-cns-axon-regeneration-using-a-microfluidic-neuron-culture-device/",
+        "Seoul National University lab publication record",
+        "The producing laboratory's exact publication record names Hyung Joon Kim.",
+    ),
+    831: (
+        "In vitro assay for quantitative analysis of axonal regeneration "
+        "in the spinal cord injury using microfluidic platform",
+        2009,
+        "Hyung Joon Kim",
+        "",
+        "https://www.rsc.org/binaries/LOC/2009/Pdf/631-W71F.pdf",
+        "Royal Society of Chemistry conference paper",
+        "The conference paper names Hyung Joon Kim of UC Irvine as first author.",
+    ),
     349: (
         "Design and fabrication of the double-sided silicon microstrip sensor",
         2006,
@@ -423,15 +519,15 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 5,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 15,
+        "proposed_other_person_primary_work": 24,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 451,
+        "unresolved_attribution_hold": 442,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 351 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 360 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
