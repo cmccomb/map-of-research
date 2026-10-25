@@ -579,6 +579,14 @@ CMU_ORCID_DOI_HOLD = {
 
 # CMU-linked bibliographies or a publisher article identify these older works.
 CMU_PRIMARY = {
+    9: (
+        "Nanoporous carbon supercapacitors in an ionic liquid: "
+        "a computer simulation study",
+        2010,
+        "https://api.crossref.org/works/10.1021%2Fnn901916m",
+        "ACS publisher-deposited full Hyung J. Kim byline, ACS Nano 4:2345-2355; "
+        "CMU Kim Group bibliography corroborates the exact work",
+    ),
     15: (
         "Molecular interactions of a Cu-based metal–organic framework with "
         "a confined imidazolium-based ionic liquid: a combined density "
@@ -601,12 +609,34 @@ CMU_PRIMARY = {
         "https://api.crossref.org/works/10.1063%2F1.462752",
         "AIP publisher-deposited Crossref record; full Hyung J. Kim byline",
     ),
+    23: (
+        "Solvation of carbon nanotubes in a room-temperature ionic liquid",
+        2009,
+        "https://api.crossref.org/works/10.1021%2Fnn900195b",
+        "ACS publisher-deposited full Hyung J. Kim byline, ACS Nano 3:1693-1702; "
+        "CMU Kim Group bibliography corroborates the exact work",
+    ),
+    41: (
+        "Graphene-based supercapacitors: A computer simulation study",
+        2011,
+        "https://api.crossref.org/works/10.1021%2Fjp203458b",
+        "ACS publisher-deposited full Hyung J. Kim byline, J. Phys. Chem. C "
+        "115:23574-23583; CMU Kim Group bibliography corroborates the exact work",
+    ),
     44: (
         "A molecular dynamics computer simulation study of room-temperature "
         "ionic liquids. II. Equilibrium and nonequilibrium solvation dynamics",
         2005,
         "https://www.chem.cmu.edu/groups/kim/pub.html",
         "CMU Kim Group publication list",
+    ),
+    49: (
+        "Molecular interactions in 1-ethyl-3-methylimidazolium acetate ion "
+        "pair: a density functional study",
+        2009,
+        "https://api.crossref.org/works/10.1021%2Fjp907394v",
+        "ACS publisher-deposited full Hyung J. Kim byline, J. Phys. Chem. A "
+        "113:10397-10404; CMU Kim Group bibliography corroborates the exact work",
     ),
     78: (
         "Graphene-based supercapacitors in the parallel-plate electrode "
@@ -623,6 +653,14 @@ CMU_PRIMARY = {
         "AIP publisher-deposited Crossref record; full Hyung J. Kim byline "
         "and Colorado affiliation",
     ),
+    89: (
+        "Solvation, solute rotation and vibration relaxation, and "
+        "electron-transfer reactions in room-temperature ionic liquids",
+        2007,
+        "https://api.crossref.org/works/10.1021%2Far700061r",
+        "ACS publisher-deposited full Hyung J. Kim byline, Acc. Chem. Res. "
+        "40:1130-1137; CMU Kim Group bibliography corroborates the exact work",
+    ),
     104: (
         "Excited state intramolecular charge transfer rates of "
         "p-dirnethylaminobenzonitrile (DMABN) in solution: a "
@@ -632,6 +670,22 @@ CMU_PRIMARY = {
         "Coauthor James T. Hynes's Colorado CV; same journal and pages, "
         "with the chemical name corrected",
     ),
+    111: (
+        "Free energy and dynamics of electron-transfer reactions in a room "
+        "temperature ionic liquid",
+        2007,
+        "https://api.crossref.org/works/10.1021%2Fjp0703859",
+        "ACS publisher-deposited full Hyung J. Kim byline, J. Phys. Chem. B "
+        "111:4510-4519; CMU Kim Group bibliography corroborates the exact work",
+    ),
+    145: (
+        "Fragility, Stokes–Einstein violation, and correlated local excitations "
+        "in a coarse-grained model of an ionic liquid",
+        2010,
+        "https://api.crossref.org/works/10.1039%2FB921725H",
+        "RSC publisher-deposited full Hyung J. Kim byline, PCCP 12:2001; "
+        "CMU Kim Group bibliography confirms pages 2001-2010",
+    ),
     155: (
         "Electronically adiabatic reaction field approach to solvation. "
         "I. Theoretical formulation via multipole expansion in a "
@@ -640,6 +694,14 @@ CMU_PRIMARY = {
         "https://api.crossref.org/works/10.1063%2F1.472531",
         "AIP publisher-deposited Crossref record; full Hyung J. Kim "
         "byline and CMU Chemistry affiliation",
+    ),
+    166: (
+        "Effects of solute electronic polarizability on solvation in a "
+        "room-temperature ionic liquid",
+        2007,
+        "https://api.crossref.org/works/10.1021%2Fjp067316z",
+        "ACS publisher-deposited full Hyung J. Kim byline, J. Phys. Chem. B "
+        "111:4920-4925; CMU Kim Group bibliography corroborates the exact work",
     ),
     220: (
         "Electronically adiabatic reaction field approach to solvation. "
@@ -701,11 +763,30 @@ CMU_PRIMARY = {
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
+    9: "bC4aq-4AAAAJ:d1gkVwhDpl0C",
+    23: "bC4aq-4AAAAJ:Tyk-4Ss8FVUC",
+    41: "bC4aq-4AAAAJ:kNdYIx-mwKoC",
+    49: "bC4aq-4AAAAJ:LkGwnXOMwfcC",
+    89: "bC4aq-4AAAAJ:W7OEmFMy1HYC",
+    111: "bC4aq-4AAAAJ:_FxGoFyzp5QC",
+    145: "bC4aq-4AAAAJ:9ZlFYXVOiuMC",
+    166: "bC4aq-4AAAAJ:3fE2CSJIrl8C",
     480: "bC4aq-4AAAAJ:R3hNpaxXUhUC",
     587: "bC4aq-4AAAAJ:u0Mu_IsstPMC",
     643: "bC4aq-4AAAAJ:hMod-77fHWUC",
     709: "bC4aq-4AAAAJ:abG-DnoFyZgC",
     796: "bC4aq-4AAAAJ:4fKUyHm3Qg0C",
+}
+
+CMU_GROUP_PUBLISHER_DOI_GUARDS = {
+    9: "10.1021/nn901916m",
+    23: "10.1021/nn900195b",
+    41: "10.1021/jp203458b",
+    49: "10.1021/jp907394v",
+    89: "10.1021/ar700061r",
+    111: "10.1021/jp0703859",
+    145: "10.1039/b921725h",
+    166: "10.1021/jp067316z",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -1089,6 +1170,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 )
             ):
                 raise ValueError(f"CMU primary match changed at capture row {index}")
+            if index in CMU_GROUP_PUBLISHER_DOI_GUARDS:
+                doi = CMU_GROUP_PUBLISHER_DOI_GUARDS[index]
+                if not cmu_exact or cmu_exact["doi"].lower() != doi:
+                    raise ValueError(f"CMU group publisher DOI changed at row {index}")
             status = "cmu_primary_work_retained"
         elif cmu_exact:
             status = "cmu_orcid_exact_title_year_retained"
@@ -1155,9 +1240,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 99,
+        "cmu_orcid_exact_title_year_retained": 91,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 15,
+        "cmu_primary_work_retained": 23,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
