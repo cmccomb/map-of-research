@@ -11144,6 +11144,54 @@
       "reason": "The exact 2011 Springer article identifies S. K. Das at VECC/BARC with coauthor S. V. Thakare; an author-submitted VECC/BARC TiO2 paper with Thakare names him Satyendra Kumar Das, not CMU chemist Subha R. Das.",
       "evidence_url": "https://link.springer.com/article/10.1007/s10967-011-1155-2",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:c_xDhezhKKUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2017 IJCMAS paper assigns S. Das to NIT Rourkela Life Science; the NIT faculty CV of Surajit Das lists the same title, byline, journal, pages, and year, excluding CMU chemist Subha R. Das",
+      "evidence_url": "https://www.ijcmas.com/abstractview.php?ID=1524&SNo=148&vol=6-2-2017",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:RuPIJ_LgqDgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2017 Journal of Environmental Biology paper assigns S. Das to NIT Rourkela; Surajit Das’s ORCID work and NIT CV match its DOI, title, year, and byline, excluding CMU chemist Subha R. Das",
+      "evidence_url": "https://www.jeb.co.in/journal_issues/201711_nov17/paper_21.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:w2UhwfzvF0QC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original diabetes paper names Sidhartha Das with the other captured coauthors and was published online in 2021, excluding CMU chemist Subha R. Das",
+      "evidence_url": "https://content.scirp.org/pdf/jdm_2021112911181744.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:MpfHP-DdYjUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Frontiers paper names Srijit Das at Universiti Kebangsaan Malaysia with the other captured coauthors; Scholar’s extra reference text does not change its identity, excluding CMU chemist Subha R. Das",
+      "evidence_url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2018.00038/full",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:isU91gLudPYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2009 aerospace paper assigns S. Das and J. K. Prasad to BIT Mesra; BIT’s faculty bibliography and Sudip Das’s ORCID work list the exact paper, excluding CMU chemist Subha R. Das",
+      "evidence_url": "https://www.joast.org/index.php/joast/article/view/526",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:1EqfMoDn7-AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher-deposited exact aerospace DOI assigns S. Das to the ORCID of Sudip Das, not CMU chemist Subha R. Das; Scholar shows 2026 while the deposited issue date is January 2027",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.ast.2026.113840",
+      "verified_at": "2026-10-25"
     }
   ]
 }
