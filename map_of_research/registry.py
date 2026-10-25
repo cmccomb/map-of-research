@@ -57,7 +57,7 @@ INCLUDED_ROLES = frozenset({"faculty", "teaching", "emeritus"})
 CAMPUS_ONLY_IDS = frozenset({"cmu-silicon-valley"})
 ACADEMIC_UNIT_TYPES = frozenset({"department", "constituent_school", "institute"})
 UNIT_TYPES = ACADEMIC_UNIT_TYPES | {"campus", "roster_container"}
-PRIMARY_HOME_TYPES = ACADEMIC_UNIT_TYPES | {"academic_area", "school"}
+PRIMARY_HOME_TYPES = ACADEMIC_UNIT_TYPES | {"academic_area", "campus", "school"}
 EXPLICIT_PRIMARY_BASES = frozenset(
     {
         "reviewed",
@@ -650,7 +650,8 @@ def load_registry(
             item.department_id
             for item in options
             if item.included
-            and departments_by_id[item.department_id].unit_type in ACADEMIC_UNIT_TYPES
+            and departments_by_id[item.department_id].unit_type
+            in ACADEMIC_UNIT_TYPES | {"campus"}
         }
         if person.primary_department_id:
             department = departments_by_id.get(person.primary_department_id)
@@ -704,6 +705,16 @@ def load_registry(
             ):
                 raise ValueError(
                     "Primary academic home is not an eligible typed unit: "
+                    f"{person.person_id}"
+                )
+            if home_type == "campus" and any(
+                item.included
+                and departments_by_id[item.department_id].unit_type
+                in ACADEMIC_UNIT_TYPES
+                for item in options
+            ):
+                raise ValueError(
+                    "Campus display home requires no included academic unit: "
                     f"{person.person_id}"
                 )
     return Registry(
