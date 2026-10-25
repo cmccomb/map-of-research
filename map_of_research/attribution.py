@@ -16,8 +16,9 @@ DEFAULT_ATTRIBUTION_REVIEWS_PATH = Path("data/curated/scholar-attribution-review
 @dataclass(frozen=True)
 class ConfirmedAttribution:
     evidence_url: str
-    bibliography_entry: int
+    bibliography_entry: int | None
     verified_at: str
+    evidence_basis: str = ""
 
 
 @dataclass(frozen=True)
@@ -78,14 +79,24 @@ def load_attribution_reviews(path: Path) -> AttributionReviews:
         scholar_id = str(entry.get("scholar_id") or "").strip()
         author_pub_id = str(entry.get("author_pub_id") or "").strip()
         bibliography_entry = entry.get("bibliography_entry")
+        evidence_basis = entry.get("evidence_basis", "")
         key = (scholar_id, author_pub_id)
+        has_bibliography_entry = (
+            isinstance(bibliography_entry, int)
+            and not isinstance(bibliography_entry, bool)
+            and bibliography_entry > 0
+        )
+        has_source_basis = (
+            bibliography_entry is None
+            and isinstance(evidence_basis, str)
+            and bool(evidence_basis.strip())
+        )
         if (
             scholar_id not in held_profiles
             or not author_pub_id.startswith(f"{scholar_id}:")
             or author_pub_id == f"{scholar_id}:"
             or key in confirmed
-            or not isinstance(bibliography_entry, int)
-            or bibliography_entry <= 0
+            or not (has_bibliography_entry or has_source_basis)
         ):
             raise ValueError("Scholar attribution observation has invalid identity")
         if not _https_url(entry.get("evidence_url")) or not _date(
@@ -98,5 +109,8 @@ def load_attribution_reviews(path: Path) -> AttributionReviews:
             evidence_url=str(entry["evidence_url"]).strip(),
             bibliography_entry=bibliography_entry,
             verified_at=str(entry["verified_at"]).strip(),
+            evidence_basis=evidence_basis.strip()
+            if isinstance(evidence_basis, str)
+            else "",
         )
     return AttributionReviews(frozenset(held_profiles), confirmed)

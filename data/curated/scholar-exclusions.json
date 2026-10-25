@@ -8272,6 +8272,422 @@
       "reason": "Title is an issue masthead fragment; the real Peng-Simplaceanu-Lowe-Ho article is retained as Scholar row 160, and Unwin begins the next article.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1330318/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:BrmTIyaxlBUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed gives Chien-Yi Ho of China Medical University Taiwan, a different researcher.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/22398437/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:oPLKW5k6eA4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Complete nine-author byline has Pei-Hsuan Chien but no Chien Ho.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29899208/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed lists only J. S. Morrow and F. R. N. Gurd as authors of the 1975 review. A contemporary FEBS index names Chien Ho as its referee, explaining Scholar's false third-author attribution.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/3388/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:Zh0EY9V9P6UC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Complete PubMed author list has Pei-Hsuan Chien and no Chien Ho; second Scholar representation at row 408.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/23840262/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:ODE9OILHJdcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original Oncotarget article identifies Chien-Yi Ho of China Medical University Taiwan.",
+      "evidence_url": "https://www.oncotarget.com/article/4504/text/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:4fGpz3EwCPoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher PDF identifies Chien-Yi Ho among Taiwan-affiliated authors.",
+      "evidence_url": "https://downloads.hindawi.com/journals/bmri/2014/827415.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:IUKN3-7HHlwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited author record identifies C. Y. Ho in National Taiwan University Physics, not CMU Chien Ho.",
+      "evidence_url": "https://api.crossref.org/works/10.1021%2Fnl5003312",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:H_jBuBxbQIAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Complete original byline has Pei-Hsuan Chien and Wei-Chien Huang but no Chien Ho.",
+      "evidence_url": "https://www.oncotarget.com/article/11471/text/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:E7VqQtBCVmcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original paper places C. Ho at a Vietnam river/coastal engineering laboratory; Ho Viet Cuong's institutional CV lists this exact article.",
+      "evidence_url": "https://vawr.org.vn/Upload/BaibaoKH/ENG/published_integrating-global-land-cover.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:P5F9QuxV20EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1999 JACS 121(48) article; row 361 has complete pages 11197-11203. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:_B80troHkn4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho at China Medical University Hospital Taiwan.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/23393366/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:VLnqNzywnoUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho on the Taiwan cancer genetics article.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/22399625/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:0KyAp5RtaNEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho on the Taiwan breast-cancer genetics article.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/21965771/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:anf4URPfarAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho on the Taiwan oral-cancer genetics article.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/22993322/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:fEOibwPWpKIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1994 Laboratory Investigation 70(3) article; row 432 has complete pages 418-425. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:FAceZFleit8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original article identifies Chien-Yi Ho of China Medical University Taiwan.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11916005/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:AvfA0Oy_GE0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho on the Taiwan breast-cancer genetics article.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/21980040/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:zUl2_INMlC4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Complete nine-author PubMed byline names Pei-Hsuan Chien, not Chien Ho.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/30480806/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:QaSi33NTfwYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original paper identifies C. Ho with Vietnamese river engineering lab and Ho Viet Cuong email; his institutional CV lists the work.",
+      "evidence_url": "https://vawr.org.vn/Upload/BaibaoKH/ENG/ho-viet-cuong-2019.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:OzeSX8-yOCQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original journal article identifies Chien-Yi Ho of China Medical University, Taiwan.",
+      "evidence_url": "https://www.mdpi.com/1422-0067/20/19/4812",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:vVJNg6_NJEsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original paper identifies C. Ho at Vietnam's Key Laboratory of River and Coastal Engineering, separate from CMU biophysicist Chien Ho.",
+      "evidence_url": "https://vawr.org.vn/Upload/BaibaoKH/ENG/development-of-high-resolution-72h-precipitation-and-hillslope-flood-maps.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:0N-VGjzr574C",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho of China Medical University Hospital Taiwan.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/24032711/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:Ej9njvOgR2oC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original paper identifies C. Ho at Vietnam river engineering laboratory; Ho Viet Cuong's institutional CV lists the work.",
+      "evidence_url": "https://vawr.org.vn/Upload/BaibaoKH/ENG/ho-viet-cuong-2018.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:qwy9JoKyICEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original journal article identifies Chien-Yi Ho of China Medical University, Taiwan.",
+      "evidence_url": "https://www.oncotarget.com/article/10462/text/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:VRfTbSk87rEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original publisher PDF lists the complete nineteen-author byline; no Chien Ho appears.",
+      "evidence_url": "https://karger.com/ced/article-pdf/52/2/145/3961888/000525869.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:vDZJ-YLwNdEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1971 BBRC 45(1):22-26 article; row 176 has the corrected full title. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:NMlhSUseqAsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Complete PubMed author list has no Chien Ho; second Scholar representation of row 121.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/23840262/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:5MTHONV0fEkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed identifies Chien-Yi Ho of China Medical University Hospital Taiwan.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/20924572/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:O0nohqN1r9EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original journal PDF names Ho Cheng-tao of Taipei geotechnical engineering, not CMU Chien Ho.",
+      "evidence_url": "https://www.cgejournal.com/cn/article/pdf/preview/12752.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:48xauSegjOkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "IEEE's deposited DOI metadata spells the exact 2001 conference coauthor Chien-Yi Ho; the same wireless-network collaboration is recorded by National Tsing Hua University, so this is not CMU's Chien Ho.",
+      "evidence_url": "https://api.crossref.org/works/10.1109%2Fvetecs.2001.944070",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:J3LtWjKFLicC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Original preprint title page identifies Chien-Yi Ho of China Medical University Hospital, Taiwan.",
+      "evidence_url": "https://assets-eu.researchsquare.com/files/rs-2362385/v1/8e34ea62-207b-4824-b777-e3295cd50784.pdf?c=1697494397",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:8dzOF9BpDQoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Assignee university patent catalog lists all five inventors; no Chien Ho. Pei-Hsuan Chien is one inventor.",
+      "evidence_url": "https://iuc.isu.edu.tw/storage/files/5wAeXiN41G3CJgFZS1USSC9KPXECWFMfIqlfIQx1.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:JH5k92_tO-AC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Scholar title is only a fragment of the Li Liu–Chien Ho 2016 chapter on pages 125-146, fully captured as row 377; exclude duplicate fragment.",
+      "evidence_url": "https://api.crossref.org/works/10.1007%2F978-3-319-43525-1_5",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:3bvyWxjaHKcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "APS's exact abstract identifies C.H. Ho as a physics author at National Chung Cheng University, not CMU's Chien Ho.",
+      "evidence_url": "https://meetings-archive.aps.org/mar/2013/v1/152",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:-7ulzOJl1JYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same Biophysical Society poster 1PT101 and authors as row 461; this row is the Japanese-language duplicate title.",
+      "evidence_url": "https://www.biophys.jp/dl/endpro/50th_proceedings.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:6bLC7aUMtPcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2010 urology conference abstract lists C.Y. Ho with this exact investigator group; their subsequent same-study journal article's PubMed author record expands C.Y. Ho to Chien-Yi Ho at China Medical University Hospital in Taiwan.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/20924572/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:BzfGm06jWhQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "PNAS pages 1657-1658 are an unsigned 'In This Issue' editorial; the shark item discusses a separate Dooley paper, while the row's authors belong to the adjacent Ho MRI paper.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1413678/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:7BrZ7Jt4UNcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Blood commentary is by Jon O. Lundberg alone; Scholar merges that commentary with the separately retained Crawford et al. original article (row 2).",
+      "evidence_url": "https://ashpublications.org/blood/article-pdf/107/2/414/1279464/zh800206000413b.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:3A3nxV7CjKIC",
+      "reason_code": "nonpublication",
+      "reason": "Scholar title concatenates a journal table of contents; PubMed's exact epoxide-hydrolase paper lists Paier et al., none of whom is Chien Ho, and different pages.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/12926852/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:1Ye0OR6EYb4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Auburn coauthor Michael McKee's own bibliography lists the exact 2000 salt-isomerism paper at Russian Journal of Inorganic Chemistry 45:832 by D.O. Charkin, O.P. Charkin, and M.L. McKee only; no Chien Ho.",
+      "evidence_url": "https://webhome.auburn.edu/~mckeeml/mckeecv.html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:oTdOBqtIf_kC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2000 Acta Neurochirurgica supplement chapter; row 502 prefixes a section heading. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:F2UWTTQJPOcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 1994 conference byline is G.S. Nagarajan, C.H. Ho, and J.W. Van Zee; primary follow-on work by the same nickel-electrode research team identifies C.H. as Chien-Hsien Ho of the University of South Carolina, not CMU Chien Ho.",
+      "evidence_url": "https://api.crossref.org/works/10.1149%2F1.1837440",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:sJPMR1oEGYQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1978 Methods in Enzymology chapter; row 316 has complete title and pages. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:BOlwja0KXvYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second, malformed Scholar record for the same 1978 Biochemistry 17(5):795-799 work as complete row 181; preserve raw row but exclude this duplicate.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:QVtou7C4vgoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1978 Biochemistry 17(5):791-795 article; row 315 has complete title and venue. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:YTuZlYwrTOUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Scholar merged the title of a 1974 Biochemistry paper by Mavridis, Tulinsky, and Liebman (no Chien Ho) with venue/page metadata from a different 1973 Ho PNAS paper in CMU's bibliography.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/4850680/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:3lUAU8Oskd0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 1971 proceedings chapter; row 538 has the full title and citation. Preserve the raw Scholar observation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:w0F2JDEymm0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "PubMed attributes the exact article to Yani Zhang, Binh T Pham and Miguel P Eckstein, with no Ho; Scholar row also has unrelated garbled authors and concatenated title.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/15084071/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:7wO8s98CvbsC",
+      "reason_code": "nonpublication",
+      "reason": "The Scholar citation detail links to a Cambridge repository manuscript whose title is Diffusion imaging in dementia with Lewy bodies: associations with amyloid burden, atrophy, vascular factors and clinical features. Author names and affiliations is only a section heading; the manuscript lists eight Newcastle/Cambridge authors and no Chien Ho.",
+      "evidence_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/d7628ec1-d465-4e0a-836e-2f7b5ca7b6e0/content",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:c1e4I3QdEKYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited metadata for the exact title and page lists only John P. Harrington and Jacek Wollocko; Chien Ho is not an author.",
+      "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.bpj.2010.12.1414",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:RuPIJ_LgqDgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited exact DOI metadata lists Roche, Osei-Afriyie, Navati, Dantsker, Hirsch, and Friedman only; Chien Ho is absent.",
+      "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.bpj.2010.12.1416",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:C33y2ycGS3YC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited exact DOI metadata lists Pond, Vuletich, Majumdar, Falzone, and Lecomte only; Chien Ho is absent.",
+      "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.bpj.2010.12.1417",
+      "verified_at": "2026-10-25"
     }
   ]
 }

@@ -22,6 +22,9 @@ from tests.registry_helpers import write_registry
 
 SCHOLAR_ID = "8iLLOQgAAAAJ"
 LEDGER = Path("registry/reviews/2026-10-25-bio-chien-ho-582-disposition.csv")
+FINAL_LEDGER = Path(
+    "registry/reviews/2026-10-25-bio-chien-ho-582-followup-reconciled.csv"
+)
 
 
 def _manifest():
@@ -39,8 +42,13 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     with LEDGER.open(newline="") as handle:
         rows = list(csv.DictReader(handle))
+    with FINAL_LEDGER.open(newline="") as handle:
+        final_rows = list(csv.DictReader(handle))
     assert len(rows) == len({row["author_pub_id"] for row in rows}) == 582
     assert [int(row["index"]) for row in rows] == list(range(1, 583))
+    assert [row["author_pub_id"] for row in final_rows] == [
+        row["author_pub_id"] for row in rows
+    ]
     assert Counter(row["decision"] for row in rows) == {
         "confirmed_retained": 269,
         "confirmed_excluded": 35,
@@ -48,13 +56,41 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "held_duplicate_review": 4,
     }
     assert attribution.held_profiles == {SCHOLAR_ID}
-    assert len(attribution.confirmed) == 269
+    assert len(attribution.confirmed) == 424
+    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 87
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
-    } == {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
+    } <= {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_excluded"
+    } <= {pub_id for sid, pub_id in exclusions if sid == SCHOLAR_ID}
+    positive = {"confirmed_retained", "confirmed_retained_candidate"}
+    negative = {"confirmed_excluded", "confirmed_excluded_candidate"}
+    assert {
+        row["author_pub_id"] for row in final_rows if row["review_decision"] in positive
+    } == {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
+    assert {
+        row["author_pub_id"] for row in final_rows if row["review_decision"] in negative
     } == {pub_id for sid, pub_id in exclusions if sid == SCHOLAR_ID}
+    assert Counter(row["review_decision"] for row in final_rows) == {
+        "confirmed_retained": 304,
+        "confirmed_retained_candidate": 120,
+        "confirmed_excluded": 37,
+        "confirmed_excluded_candidate": 50,
+        "still_held": 48,
+        "confirmed_author_context_hold": 12,
+        "confirmed_author_metadata_hold": 9,
+        "confirmed_author_duplicate_swap_hold": 1,
+        "confirmed_author_duplicate_hold": 1,
+    }
+    assert all(
+        ";" not in decision.evidence_url for decision in attribution.confirmed.values()
+    )
+    assert all(
+        ";" not in decision.evidence_url
+        for (sid, _), decision in exclusions.items()
+        if sid == SCHOLAR_ID
+    )
     assert not set(attribution.confirmed).intersection(exclusions)
     assert all(
         row["bibliography_entry"] and row["evidence_url"]
@@ -128,6 +164,10 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
             "invalid identity",
         ),
         (
+            lambda doc: doc["confirmed_observations"][-1].update(evidence_basis=""),
+            "invalid identity",
+        ),
+        (
             lambda doc: doc["confirmed_observations"][0].update(
                 evidence_url="http://bad"
             ),
@@ -175,7 +215,7 @@ def test_attribution_gate_preserves_raw_rows_and_blocks_unconfirmed_edges(tmp_pa
     registry = load_registry(*paths)
     ids = [
         f"{SCHOLAR_ID}:u5HHmVD_uO8C",  # CMU bibliography entry 272.
-        f"{SCHOLAR_ID}:48xauSegjOkC",  # Wireless-network attribution unresolved.
+        f"{SCHOLAR_ID}:zLWjf1WUPmwC",  # Exact abstract attribution remains held.
         f"{SCHOLAR_ID}:kWvqk_afx_IC",  # Different Chien-Hsien Ho, exact exclusion.
     ]
     rows = []
