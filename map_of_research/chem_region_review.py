@@ -40,15 +40,20 @@ def load_chem_region_review(
     snapshot_sha256: str,
     cache_dir: Path,
     registry: Registry,
+    require_frozen_snapshot: bool = True,
 ) -> tuple[ReviewedRegionDecision, ...]:
-    """Bind the 19 decisions to exact source rows and eight complete caches."""
+    """Bind the 19 decisions to exact source rows and eight complete caches.
+
+    The one-off delta requires its original whole snapshot. Later full snapshots
+    may add unrelated rows, but every reviewed row and cache must remain exact.
+    """
 
     raw_manifest = path.read_bytes()
     if hashlib.sha256(raw_manifest).hexdigest() != CHEM_REVIEW_SHA256:
         raise ValueError("Chemistry region decision manifest bytes changed")
     source = json.loads(raw_manifest)
     if (
-        snapshot_sha256 != SOURCE_SHA256
+        (require_frozen_snapshot and snapshot_sha256 != SOURCE_SHA256)
         or not isinstance(source, dict)
         or any(
             source.get(key) != value

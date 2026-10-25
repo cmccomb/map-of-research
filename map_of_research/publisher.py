@@ -27,6 +27,19 @@ from .bio_release_gate import (
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
 )
+from .chem_continuity import (
+    CHEMISTRY_HUB_REVISION,
+    load_chemistry_parent,
+    merge_chemistry_review_inputs,
+    needs_chemistry_continuity,
+    reconcile_chemistry_person_counts,
+    validate_chemistry_candidate,
+)
+from .chem_region_review import (
+    CHEM_REVIEW_SHA256,
+    DEFAULT_CHEM_REGION_REVIEW_PATH,
+    load_chem_region_review,
+)
 from .composite_region import (
     HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
@@ -71,6 +84,7 @@ from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from .held_topic_freeze import (
     held_only_continuity_candidate,
     preserve_held_only_topics,
+    retain_held_only_parent_works,
     validate_held_only_stage,
 )
 from .hub_card import build_updated_dataset_card
@@ -1329,6 +1343,21 @@ def _publish_atomic_release(
             dataset.to_parquet(str(path))
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
+        held_table_counts = None
+        if held_topic_parent_artifact is not None:
+            import datasets
+
+            if not held_topic_parent_map_sha256:
+                raise ValueError("Held-only release lacks pinned parent map digest")
+            tables["works"], held_table_counts = retain_held_only_parent_works(
+                {name: staged[name][1] for name in DATASET_CONFIGS},
+                prior_revision=prior_revision,
+                hf_token=hf_token,
+            )
+            staged["works"] = (
+                datasets.Dataset.from_parquet(str(staged["works"][1])),
+                staged["works"][1],
+            )
         artifact_path, map_manifest_path, artifact = _write_map_artifacts(
             tables["works"],
             registry,
@@ -1341,8 +1370,6 @@ def _publish_atomic_release(
         files["maps/manifest.json"] = map_manifest_path
         held_topic_receipt = None
         if held_topic_parent_artifact is not None:
-            if not held_topic_parent_map_sha256:
-                raise ValueError("Held-only release lacks pinned parent map digest")
             held_topic_receipt = validate_held_only_stage(
                 artifact, held_topic_parent_artifact
             )
@@ -1472,6 +1499,7 @@ def _publish_atomic_release(
             gate["held_only_topic_parity"] = {
                 **held_topic_receipt,
                 "parent_map_sha256": held_topic_parent_map_sha256,
+                "exact_table_rows": held_table_counts,
             }
         return commit_atomic_release(
             files,
@@ -1524,6 +1552,7 @@ def publish_snapshot(
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
+    chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1626,6 +1655,28 @@ def publish_snapshot(
         if sullivan_transition
         else None
     )
+    chemistry_parent_state = None
+    chemistry_decisions = ()
+    if needs_chemistry_continuity(
+        set(frame["scholar_id"].dropna().astype(str)),
+        prior_revision,
+        composite=composite_plan is not None,
+        snapshot_sha256=str(manifest["snapshot_sha256"]),
+    ):
+        chemistry_decisions = load_chem_region_review(
+            chem_region_review_path,
+            snapshot_frame=frame,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_dir=cache_dir,
+            registry=registry,
+            require_frozen_snapshot=False,
+        )
+        chemistry_parent_state = load_chemistry_parent(
+            chemistry_decisions, prior_revision, hf_token
+        )
+        exclusions, provisional_holds, contexts = merge_chemistry_review_inputs(
+            chemistry_decisions, exclusions, provisional_holds, contexts
+        )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
     )
@@ -1653,6 +1704,10 @@ def publish_snapshot(
         contexts,
         provisional_holds,
     )
+    if chemistry_parent_state is not None:
+        tables["people"] = reconcile_chemistry_person_counts(
+            tables["people"], chemistry_decisions
+        )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
         revision=prior_revision,
@@ -1817,7 +1872,19 @@ def publish_snapshot(
         continuity_receipt["math_region_review_sha256"] = sha256_file(
             math_region_review_path
         )
+    if chemistry_parent_state is not None:
+        continuity_receipt["chem_region_review_sha256"] = CHEM_REVIEW_SHA256
+        continuity_receipt["chemistry_review_root_revision"] = CHEMISTRY_HUB_REVISION
     tables["works"] = add_publication_keywords(tables["works"])
+    if chemistry_parent_state is not None:
+        validate_chemistry_candidate(
+            tables,
+            chemistry_parent_state,
+            require_count_parity=bool(
+                held_observation_ids
+                and held_only_continuity_candidate(continuity_receipt, prior_revision)
+            ),
+        )
     if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         if prior_artifact is None:
             raise ValueError("Composite release lacks frozen bb88 map")

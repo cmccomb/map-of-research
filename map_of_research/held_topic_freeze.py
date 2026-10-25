@@ -8,7 +8,11 @@ non-topic map point changes. Other release paths must regenerate their topics.
 from __future__ import annotations
 
 import math
+import shutil
+from collections import Counter
 from collections.abc import Mapping, Sequence
+from itertools import zip_longest
+from pathlib import Path
 from typing import Any
 
 from .composite_region import TOPIC_FIELDS
@@ -16,6 +20,17 @@ from .region_continuity import (
     IDENTITY_FIELDS,
     PRIOR_OBSERVATION_FIELDS,
     PRIOR_WORK_FIELDS,
+)
+
+ORDER_ONLY_VARIANTS = frozenset(
+    {"title_variants", "venue_variants", "citation_variants", "author_variants"}
+)
+HIDDEN_COORDINATES = frozenset({"x", "y", "tsne_x", "tsne_y"})
+TRANSIENT_WORK_FIELDS = frozenset(
+    {"map_region_prior_eligible_override", "map_region_prior_excluded_override"}
+)
+DOCUMENTED_OVERRIDE_WORK_ID = (
+    "work-7312a4280e990b03ec1e95cecf82ace2ce437d15413b87634e9d5544f918c3be"
 )
 
 
@@ -241,3 +256,181 @@ def validate_held_only_stage(
         "point_count": candidate_artifact["point_count"],
         "keyword_count": candidate_artifact["keyword_count"],
     }
+
+
+def validate_held_only_table_parity(
+    parent: Mapping[str, Path],
+    staged: Mapping[str, Path],
+    *,
+    configs: tuple[str, ...] = (
+        "people",
+        "works",
+        "authorships",
+        "profile_publications",
+    ),
+) -> dict[str, int]:
+    """Compare published schema, row order, and every value before a Hub write."""
+
+    import pyarrow.parquet as parquet
+
+    counts = {}
+    for config in configs:
+        before = parquet.ParquetFile(parent[config])
+        after = parquet.ParquetFile(staged[config])
+        if (
+            not before.schema_arrow.equals(after.schema_arrow, check_metadata=True)
+            or before.metadata.num_rows != after.metadata.num_rows
+        ):
+            raise ValueError(f"Held-only staged {config} schema or row count changed")
+        old_rows = (
+            row
+            for batch in before.iter_batches(batch_size=128)
+            for row in batch.to_pylist()
+        )
+        new_rows = (
+            row
+            for batch in after.iter_batches(batch_size=128)
+            for row in batch.to_pylist()
+        )
+        for index, (old, new) in enumerate(
+            zip_longest(old_rows, new_rows, fillvalue=None)
+        ):
+            if old != new:
+                raise ValueError(f"Held-only staged {config} row changed: {index}")
+        counts[config] = before.metadata.num_rows
+    return counts
+
+
+def validate_held_only_candidate_works(parent: Path, staged: Path) -> int:
+    """Prove work payload before parent bytes replace derived producer drift.
+
+    The exact 38f held-only comparison found only variant permutations, cleared
+    coordinates on 37 hidden works, one documented override, and two transient
+    producer columns after the eight topic fields were restored. Other changes
+    require a separate review, including changes on hidden work identities.
+    """
+
+    import pyarrow.parquet as parquet
+
+    before = parquet.ParquetFile(parent)
+    after = parquet.ParquetFile(staged)
+    old_schema = before.schema_arrow
+    new_schema = after.schema_arrow
+    extra = set(new_schema.names) - set(old_schema.names)
+    if (
+        set(old_schema.names) - set(new_schema.names)
+        or extra - TRANSIENT_WORK_FIELDS
+        or [name for name in new_schema.names if name not in extra] != old_schema.names
+        or before.metadata.num_rows != after.metadata.num_rows
+        or any(
+            not old_schema.field(name).equals(
+                new_schema.field(name), check_metadata=True
+            )
+            for name in old_schema.names
+        )
+    ):
+        raise ValueError("Held-only candidate works schema, order, or count changed")
+    old_rows = (
+        row
+        for batch in before.iter_batches(batch_size=128)
+        for row in batch.to_pylist()
+    )
+    new_rows = (
+        row for batch in after.iter_batches(batch_size=128) for row in batch.to_pylist()
+    )
+    seen: set[str] = set()
+    cleared_coordinate_work_ids: set[str] = set()
+    for index, (old, new) in enumerate(zip_longest(old_rows, new_rows)):
+        if old is None or new is None or old["work_id"] != new["work_id"]:
+            raise ValueError(
+                f"Held-only candidate work identity/order changed: {index}"
+            )
+        work_id = str(old["work_id"])
+        if not work_id or work_id in seen:
+            raise ValueError(f"Held-only candidate repeated work identity: {work_id}")
+        seen.add(work_id)
+        cleared_coordinates: set[str] = set()
+        for field in old_schema.names:
+            previous, current = old[field], new[field]
+            if previous == current:
+                continue
+            if (
+                field in ORDER_ONLY_VARIANTS
+                and isinstance(previous, list)
+                and isinstance(current, list)
+                and Counter(previous) == Counter(current)
+            ):
+                continue
+            if (
+                field in HIDDEN_COORDINATES
+                and old["map_eligible"] is False
+                and new["map_eligible"] is False
+                and previous is not None
+                and current is None
+            ):
+                cleared_coordinates.add(field)
+                continue
+            if (
+                field == "map_region_documented_override"
+                and work_id == DOCUMENTED_OVERRIDE_WORK_ID
+                and previous is False
+                and current is True
+            ):
+                continue
+            raise ValueError(
+                f"Held-only candidate work payload changed: {work_id}: {field}"
+            )
+        if cleared_coordinates:
+            if cleared_coordinates != HIDDEN_COORDINATES:
+                raise ValueError(
+                    f"Held-only candidate cleared partial coordinates: {work_id}"
+                )
+            cleared_coordinate_work_ids.add(work_id)
+    if len(cleared_coordinate_work_ids) > 37:
+        raise ValueError("Held-only candidate cleared unexpected hidden coordinates")
+    return len(seen)
+
+
+def retain_held_only_parent_works(
+    staged: Mapping[str, Path], *, prior_revision: str, hf_token: str
+) -> tuple[Any, dict[str, int]]:
+    """Reuse parent work bytes only after proving all non-work tables are exact.
+
+    `preserve_held_only_topics` has already checked every released observation,
+    work identity/fingerprint, and non-topic map point. The remaining work-row
+    differences are derived variant/layout values and transient producer fields.
+    The final four-table and full-map gates still run before the upload.
+    """
+
+    import pandas
+    from huggingface_hub import hf_hub_download
+
+    from .region_continuity import require_revision
+
+    revision = require_revision(prior_revision)
+    parent = {
+        config: Path(
+            hf_hub_download(
+                "ccm/cmu-engineering-publications",
+                f"{config}/train-00000-of-00001.parquet",
+                repo_type="dataset",
+                revision=revision,
+                token=hf_token or None,
+            )
+        )
+        for config in (
+            "people",
+            "works",
+            "authorships",
+            "profile_publications",
+        )
+    }
+    validate_held_only_table_parity(
+        parent,
+        staged,
+        configs=("people", "authorships", "profile_publications"),
+    )
+    validate_held_only_candidate_works(parent["works"], staged["works"])
+    shutil.copyfile(parent["works"], staged["works"])
+    counts = validate_held_only_table_parity(parent, staged)
+    return pandas.read_parquet(parent["works"]), counts

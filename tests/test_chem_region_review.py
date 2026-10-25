@@ -186,6 +186,31 @@ def test_chem_review_loader_binds_all_19_rows_and_eight_complete_profiles(
     )
 
 
+def test_later_snapshot_keeps_exact_row_and_cache_checks(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    path, frame, cache_dir, registry = _fixture(tmp_path, monkeypatch)
+    reviewed = load_chem_region_review(
+        path,
+        snapshot_frame=frame,
+        snapshot_sha256="new-full-snapshot",
+        cache_dir=cache_dir,
+        registry=registry,
+        require_frozen_snapshot=False,
+    )
+    assert len(reviewed) == 19
+    frame.at[0, "source_record_json"] = "changed source"
+    with pytest.raises(ValueError, match="exact source decision drift"):
+        load_chem_region_review(
+            path,
+            snapshot_frame=frame,
+            snapshot_sha256="new-full-snapshot",
+            cache_dir=cache_dir,
+            registry=registry,
+            require_frozen_snapshot=False,
+        )
+
+
 @pytest.mark.parametrize(
     ("case", "message"),
     [

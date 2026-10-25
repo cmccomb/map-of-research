@@ -1,5 +1,8 @@
 import copy
 import math
+import sys
+from pathlib import Path
+from types import SimpleNamespace
 
 import numpy
 import pandas
@@ -7,10 +10,14 @@ import pytest
 
 from map_of_research.composite_region import TOPIC_FIELDS, UNCLASSIFIED_TOPICS
 from map_of_research.held_topic_freeze import (
+    DOCUMENTED_OVERRIDE_WORK_ID,
     _value,
     held_only_continuity_candidate,
     preserve_held_only_topics,
+    retain_held_only_parent_works,
+    validate_held_only_candidate_works,
     validate_held_only_stage,
+    validate_held_only_table_parity,
 )
 from map_of_research.region_continuity import (
     PRIOR_OBSERVATION_FIELDS,
@@ -182,6 +189,242 @@ def test_held_only_freeze_preserves_pending_review_topic_and_stage() -> None:
     )
 
 
+def _parquet_case(tmp_path: Path):
+    parent = {}
+    staged = {}
+    rows = {
+        "people": [{"person_id": "person-one", "mapped_work_count": 1}],
+        "works": [
+            {
+                "work_id": "work-one",
+                "title_variants": ["reviewed", "Reviewed"],
+                "x": 0.1,
+                "y": 0.2,
+                "tsne_x": 0.3,
+                "tsne_y": 0.4,
+                "map_eligible": False,
+                "observation_ids": ["observation-one"],
+                "author_pub_ids": ["ScholarOne:one"],
+                "work_match_method": "exact",
+            }
+        ],
+        "authorships": [{"observation_id": "observation-one", "work_id": "work-one"}],
+        "profile_publications": [
+            {
+                "observation_id": "observation-one",
+                "author_pub_id": "ScholarOne:one",
+                "source_record_json": '{"title":"reviewed"}',
+            }
+        ],
+    }
+    for name, values in rows.items():
+        for label, destination in (("parent", parent), ("staged", staged)):
+            path = tmp_path / label / name / "train-00000-of-00001.parquet"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            pandas.DataFrame(values).to_parquet(path, index=False)
+            destination[name] = path
+    return parent, staged
+
+
+def test_held_only_table_gate_rejects_changed_raw_row_and_schema(
+    tmp_path: Path,
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    assert validate_held_only_table_parity(parent, staged) == {
+        name: 1 for name in parent
+    }
+    changed = pandas.read_parquet(staged["profile_publications"])
+    changed.loc[0, "source_record_json"] = '{"title":"changed"}'
+    changed.to_parquet(staged["profile_publications"], index=False)
+    with pytest.raises(ValueError, match="profile_publications row changed"):
+        validate_held_only_table_parity(parent, staged)
+    changed["extra"] = "transient"
+    changed.to_parquet(staged["profile_publications"], index=False)
+    with pytest.raises(ValueError, match="schema or row count changed"):
+        validate_held_only_table_parity(parent, staged)
+
+
+def test_held_only_reuses_exact_parent_works_only_after_nonwork_parity(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    changed = pandas.read_parquet(staged["works"])
+    changed.at[0, "title_variants"] = ["Reviewed", "reviewed"]
+    for field in ("x", "y", "tsne_x", "tsne_y"):
+        changed[field] = pandas.Series([None], dtype="Float64")
+    changed["map_region_prior_eligible_override"] = True
+    changed.to_parquet(staged["works"], index=False)
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(
+            hf_hub_download=lambda _repo, name, **_kwargs: str(
+                parent[name.split("/", 1)[0]]
+            )
+        ),
+    )
+    works, counts = retain_held_only_parent_works(
+        staged, prior_revision="a" * 40, hf_token=""
+    )
+    assert counts == {name: 1 for name in parent}
+    assert works.iloc[0]["x"] == 0.1
+    assert staged["works"].read_bytes() == parent["works"].read_bytes()
+    assert not any("map_region_prior" in name for name in works.columns)
+
+
+@pytest.mark.parametrize(
+    "changed_table", ["profile_publications", "authorships", "people"]
+)
+def test_held_only_reuse_rejects_nonwork_change(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, changed_table: str
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged[changed_table])
+    first = frame.columns[0]
+    frame.loc[0, first] = "changed"
+    frame.to_parquet(staged[changed_table], index=False)
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(
+            hf_hub_download=lambda _repo, name, **_kwargs: str(
+                parent[name.split("/", 1)[0]]
+            )
+        ),
+    )
+    with pytest.raises(ValueError, match=f"staged {changed_table} row changed"):
+        retain_held_only_parent_works(staged, prior_revision="a" * 40, hf_token="")
+
+
+def test_held_only_reuse_rejects_changed_work_id(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged["works"])
+    frame.loc[0, "work_id"] = "work-other"
+    frame.to_parquet(staged["works"], index=False)
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(
+            hf_hub_download=lambda _repo, name, **_kwargs: str(
+                parent[name.split("/", 1)[0]]
+            )
+        ),
+    )
+    with pytest.raises(ValueError, match="work identity/order changed"):
+        retain_held_only_parent_works(staged, prior_revision="a" * 40, hf_token="")
+
+
+@pytest.mark.parametrize(
+    "field", ["observation_ids", "author_pub_ids", "work_match_method"]
+)
+def test_held_only_candidate_rejects_hidden_work_payload(
+    tmp_path: Path, field: str
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged["works"])
+    frame.at[0, field] = "changed" if field == "work_match_method" else ["changed"]
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(
+        ValueError, match=f"candidate work payload changed: work-one: {field}"
+    ):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_candidate_rejects_new_work_column(tmp_path: Path) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged["works"])
+    frame["unexpected"] = True
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(ValueError, match="candidate works schema"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_candidate_rejects_variant_content_and_partial_coordinates(
+    tmp_path: Path,
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged["works"])
+    frame.at[0, "title_variants"] = ["different", "reviewed"]
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(ValueError, match="candidate work payload changed"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+    frame = pandas.read_parquet(parent["works"])
+    frame["x"] = pandas.Series([None], dtype="Float64")
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(ValueError, match="cleared partial coordinates"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_candidate_accepts_only_pinned_documented_override(
+    tmp_path: Path,
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    for path, value in ((parent["works"], False), (staged["works"], True)):
+        frame = pandas.read_parquet(path)
+        frame.loc[0, "work_id"] = DOCUMENTED_OVERRIDE_WORK_ID
+        frame["map_region_documented_override"] = value
+        frame.to_parquet(path, index=False)
+    assert validate_held_only_candidate_works(parent["works"], staged["works"]) == 1
+    frame = pandas.read_parquet(staged["works"])
+    frame.loc[0, "work_id"] = "work-other"
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(ValueError, match="work identity/order changed"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_candidate_rejects_duplicate_parent_work_identity(
+    tmp_path: Path,
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    for path in (parent["works"], staged["works"]):
+        frame = pandas.read_parquet(path)
+        pandas.concat([frame, frame], ignore_index=True).to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="repeated work identity"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_candidate_rejects_unreviewed_coordinate_clearance(
+    tmp_path: Path,
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.concat(
+        [pandas.read_parquet(parent["works"])] * 38, ignore_index=True
+    )
+    frame["work_id"] = [f"work-{index}" for index in range(38)]
+    frame.to_parquet(parent["works"], index=False)
+    for field in ("x", "y", "tsne_x", "tsne_y"):
+        frame[field] = pandas.Series([None] * 38, dtype="Float64")
+    frame.to_parquet(staged["works"], index=False)
+    with pytest.raises(ValueError, match="unexpected hidden coordinates"):
+        validate_held_only_candidate_works(parent["works"], staged["works"])
+
+
+def test_held_only_reuse_rejects_extra_released_observation(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    parent, staged = _parquet_case(tmp_path)
+    frame = pandas.read_parquet(staged["profile_publications"])
+    extra = frame.iloc[[0]].copy()
+    extra.loc[:, "observation_id"] = "observation-extra"
+    extra.loc[:, "author_pub_id"] = "ScholarOne:extra"
+    pandas.concat([frame, extra], ignore_index=True).to_parquet(
+        staged["profile_publications"], index=False
+    )
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(
+            hf_hub_download=lambda _repo, name, **_kwargs: str(
+                parent[name.split("/", 1)[0]]
+            )
+        ),
+    )
+    with pytest.raises(ValueError, match="profile_publications schema or row count"):
+        retain_held_only_parent_works(staged, prior_revision="a" * 40, hf_token="")
+
+
 @pytest.mark.parametrize(
     ("change", "message"),
     [
@@ -323,3 +566,16 @@ def test_held_only_stage_requires_exact_parent_map_except_timestamp() -> None:
         ) else changed[field].update(unexpected=True)
         with pytest.raises(ValueError, match=message):
             validate_held_only_stage(changed, parent)
+    changed = copy.deepcopy(candidate)
+    changed["keywords"].reverse()
+    with pytest.raises(ValueError, match="keywords differ"):
+        validate_held_only_stage(changed, parent)
+    with_two_points = copy.deepcopy(candidate)
+    with_two_points["points"].append(
+        {**with_two_points["points"][0], "work_id": "work-other"}
+    )
+    with_two_points["point_count"] = 2
+    reordered = copy.deepcopy(with_two_points)
+    reordered["points"].reverse()
+    with pytest.raises(ValueError, match="points differ"):
+        validate_held_only_stage(reordered, with_two_points)

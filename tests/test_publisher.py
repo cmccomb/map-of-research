@@ -1721,6 +1721,42 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
+    chemistry_calls = []
+    chemistry_active = bio_intent and reuse_order
+    monkeypatch.setattr(
+        publisher,
+        "needs_chemistry_continuity",
+        lambda *args, **kwargs: chemistry_active,
+    )
+    monkeypatch.setattr(
+        publisher,
+        "load_chem_region_review",
+        lambda *args, **kwargs: chemistry_calls.append("source") or ("review",),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "load_chemistry_parent",
+        lambda *args: chemistry_calls.append("parent") or {"pinned": True},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "merge_chemistry_review_inputs",
+        lambda decisions, exclusions, holds, contexts: (
+            exclusions,
+            holds,
+            contexts,
+        ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_chemistry_candidate",
+        lambda tables, state, **kwargs: chemistry_calls.append("candidate"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "reconcile_chemistry_person_counts",
+        lambda people, decisions: people,
+    )
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1915,6 +1951,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         tmp_path / "manifest.json",
         **publish_options,
     )
+    if chemistry_active:
+        assert chemistry_calls == [
+            "source",
+            "parent",
+            "source",
+            "parent",
+            "candidate",
+        ]
     assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
     assert published_revisions == (
         [
@@ -1971,6 +2015,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             "prior_revision": "b" * 40 if region_override else "a" * 40,
             "stable_works": 1,
             **({"current_hub_revision": "a" * 40} if region_override else {}),
+            **(
+                {
+                    "chem_region_review_sha256": publisher.CHEM_REVIEW_SHA256,
+                    "chemistry_review_root_revision": publisher.CHEMISTRY_HUB_REVISION,
+                }
+                if chemistry_active
+                else {}
+            ),
         }
         if pinned
         else None
@@ -2355,6 +2407,21 @@ def test_atomic_stage_records_held_only_parent_map_parity(
     monkeypatch.setattr(publisher, "_to_hub_dataset", lambda frame: FakeDataset())
     monkeypatch.setattr(publisher, "_write_map_artifacts", write_map)
     monkeypatch.setattr(
+        publisher,
+        "retain_held_only_parent_works",
+        lambda staged, **kwargs: (
+            tables["works"],
+            {name: 1 for name in publisher.DATASET_CONFIGS},
+        ),
+    )
+    monkeypatch.setitem(
+        sys.modules,
+        "datasets",
+        SimpleNamespace(
+            Dataset=SimpleNamespace(from_parquet=lambda path: FakeDataset())
+        ),
+    )
+    monkeypatch.setattr(
         publisher, "build_updated_dataset_card", lambda *args: "Staged card"
     )
     gates = []
@@ -2397,6 +2464,7 @@ def test_atomic_stage_records_held_only_parent_map_parity(
             "point_count": 0,
             "keyword_count": 0,
             "parent_map_sha256": parent_digest,
+            "exact_table_rows": {name: 1 for name in publisher.DATASET_CONFIGS},
         }
 
 
