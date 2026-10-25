@@ -596,6 +596,12 @@ CMU_PRIMARY = {
 # The publisher's one 1985 article at PRD 32, 389 is row 1; its person
 # attribution remains held separately from this duplicate-work decision.
 CORRUPTED_DUPLICATE_PRIMARY = {
+    795: (
+        "Muon detector for the COSINE-100 experiment",
+        2018,
+        "https://research.knu.ac.kr/en/publications/muon-detector-for-the-cosine-100-experiment/",
+        "bC4aq-4AAAAJ:hNSvKAmkeYkC",
+    ),
     797: (
         "Synthesis, conductivity, and vibrational spectroscopy of "
         "tetraphenylphosphonium bis (trifluoromethanesulfonyl) imide",
@@ -791,6 +797,22 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and "32 (2)" in row["venue"]
                     and scholar_pub_id(rows[0]) == retained_pub_id
                 )
+            elif index == 795:
+                retained = rows[155]
+                valid_duplicate = (
+                    pub_id == f"{SCHOLAR_ID}:pUxgyZctzPYC"
+                    and title == retained["title"]
+                    and year == retained["year"]
+                    and row["venue"] == "Journal of Instrumentation 13 (02), 2018"
+                    and retained["venue"].startswith(
+                        "Journal of Instrumentation 13 (02), T02007"
+                    )
+                    and all(
+                        author in row["authors"] and author in retained["authors"]
+                        for author in ("H Prihtiadi", "G Adhikari", "P Adhikari")
+                    )
+                    and scholar_pub_id(retained) == retained_pub_id
+                )
             else:
                 valid_duplicate = (
                     index == 797
@@ -806,11 +828,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or year != str(expected_year)
                 or not valid_duplicate
             ):
-                raise ValueError(f"Publisher duplicate match changed at row {index}")
+                raise ValueError(f"Source duplicate match changed at row {index}")
             status = "proposed_corrupted_duplicate_primary"
-            evidence_source = (
-                "APS original article" if index == 907 else "Elsevier original article"
-            )
+            evidence_source = {
+                795: "KNU institutional article",
+                797: "Elsevier original article",
+                907: "APS original article",
+            }[index]
             additions.append(
                 decision(
                     pub_id,
@@ -821,14 +845,24 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         "the one APS article represented by Scholar observation "
                         f"{retained_pub_id}; this row is a broken duplicate."
                         if index == 907
-                        else "The blank-venue Scholar row repeats the exact title "
-                        "and year of the complete 2017 journal observation "
-                        f"{retained_pub_id}; Elsevier publishes one article at "
-                        "DOI 10.1016/j.molstruc.2017.05.138 with the full "
-                        "Hyung J. Kim byline. This row is a broken duplicate."
+                        else (
+                            "This Scholar row repeats the 2018 Journal of "
+                            "Instrumentation title, volume 13 issue 2, and leading "
+                            "coauthors of observation "
+                            f"{retained_pub_id}; the KNU institutional record "
+                            "identifies one article, T02007, whose H. J. Kim "
+                            "author links to Hong Joo Kim. This row is a "
+                            "redundant citation observation."
+                            if index == 795
+                            else "The blank-venue Scholar row repeats the exact title "
+                            "and year of the complete 2017 journal observation "
+                            f"{retained_pub_id}; Elsevier publishes one article at "
+                            "DOI 10.1016/j.molstruc.2017.05.138 with the full "
+                            "Hyung J. Kim byline. This row is a broken duplicate."
+                        )
                     ),
                     evidence_url,
-                    verified_at="2026-10-25" if index == 797 else "2026-10-24",
+                    verified_at="2026-10-25" if index in {795, 797} else "2026-10-24",
                 )
             )
         elif index in CMU_ORCID_DOI_HOLD:
@@ -923,14 +957,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
         "proposed_other_person_primary_work": 41,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "proposed_corrupted_duplicate_primary": 2,
-        "unresolved_attribution_hold": 417,
+        "proposed_corrupted_duplicate_primary": 3,
+        "unresolved_attribution_hold": 416,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 379 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 380 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
