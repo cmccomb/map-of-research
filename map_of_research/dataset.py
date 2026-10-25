@@ -14,6 +14,7 @@ from .attribution import AttributionReviews
 from .contexts import ReviewedContext
 from .doi_aliases import ReviewedDoiAlias
 from .exclusions import ReviewedExclusion
+from .provisional_holds import ProvisionalHold
 from .quality import QUALITY_ASSESSMENT_VERSION, assess_publication
 from .registry import Registry
 
@@ -190,6 +191,7 @@ def build_dataset_tables(
     doi_aliases: Mapping[tuple[str, str], ReviewedDoiAlias] | None = None,
     attribution_reviews: AttributionReviews | None = None,
     contexts: Mapping[tuple[str, str], ReviewedContext] | None = None,
+    provisional_holds: Mapping[tuple[str, str], ProvisionalHold] | None = None,
 ) -> dict[str, Any]:
     """Build retained observations plus canonical people/work relationship tables."""
 
@@ -292,6 +294,7 @@ def build_dataset_tables(
         attribution = (
             attribution_reviews.confirmed.get(key) if attribution_reviews else None
         )
+        provisional_hold = (provisional_holds or {}).get(key)
         held_profile = (
             attribution_reviews is not None
             and row.source_type == "scholar"
@@ -299,15 +302,21 @@ def build_dataset_tables(
         )
         if held_profile and attribution is None and review is None:
             reasons.append("attribution_unconfirmed")
+        if provisional_hold is not None:
+            reasons.append("attribution_provisional_hold")
         attribution_statuses.append(
             "confirmed"
             if attribution
             else "held"
-            if held_profile and not review
+            if (held_profile and not review) or provisional_hold is not None
             else ""
         )
         attribution_evidence_urls.append(
-            attribution.evidence_url if attribution else ""
+            attribution.evidence_url
+            if attribution
+            else provisional_hold.evidence_url
+            if provisional_hold
+            else ""
         )
         if context is not None:
             context_exclusion = ""
@@ -434,10 +443,19 @@ def build_dataset_tables(
         records = list(group.itertuples(index=False))
         eligible_records = [record for record in records if record.map_eligible]
         canonical_records = eligible_records or records
+        contextual_records = (
+            [
+                record
+                for record in records
+                if "attribution_provisional_hold" not in record.map_exclusion_reasons
+            ]
+            if eligible_records
+            else records
+        )
         map_eligible = bool(eligible_records)
         reviewed_types = {
             record.publication_type
-            for record in records
+            for record in contextual_records
             if record.publication_type != "publication"
         }
         if len(reviewed_types) > 1:
@@ -516,18 +534,21 @@ def build_dataset_tables(
                 "map_eligible": map_eligible,
                 "publication_type": publication_type,
                 "source_document_id": _best_text(
-                    [record.source_document_id for record in records]
+                    [record.source_document_id for record in contextual_records]
                 ),
                 "collaboration_eligible": collaboration_eligible,
                 "context_evidence_urls": _variants(
-                    [record.context_evidence_url for record in records]
+                    [record.context_evidence_url for record in contextual_records]
                 ),
                 "display_contributors": _best_text(
-                    [record.context_display_contributors for record in records]
+                    [
+                        record.context_display_contributors
+                        for record in contextual_records
+                    ]
                 ),
                 "has_included_source_profile": any(
                     membership["included"]
-                    for record in records
+                    for record in canonical_records
                     for membership in _normalize_memberships(record.memberships)
                 ),
                 "map_exclusion_reasons": []

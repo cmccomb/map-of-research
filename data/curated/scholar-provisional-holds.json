@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "expected_source_rows": 361,
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "held_observations": [
+        {
+          "capture_row_index": 214,
+          "author_pub_id": "0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reason": "Truncated T Collins byline in a lead-poisoning pilot study; exact author identity and document type remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reason": "UK histopathology meeting abstract has a truncated byline without Collins; its complete primary byline has not been found.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reason": "Sunday Times item is credited to B Collins; no primary source establishes Terrence J. Collins as the author.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reason": "ACS abstract is credited to TJ Collins, but its publication type and relationship to separately indexed work remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    }
+  ]
+}

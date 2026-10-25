@@ -26,6 +26,8 @@ class ProfileRelease:
     cache_sha256: str
     reason: str
     reviewed_at: str
+    expected_provisional_hold_rows: int = 0
+    provisional_hold_ids_sha256: str = ""
 
 
 def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
@@ -52,6 +54,8 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
         digest = entry.get("cache_sha256")
         reason = entry.get("reason")
         reviewed_at = entry.get("reviewed_at")
+        hold_count = entry.get("expected_provisional_hold_rows", 0)
+        hold_ids_digest = entry.get("provisional_hold_ids_sha256", "")
         if (
             not isinstance(person_id, str)
             or not person_id.startswith("person-")
@@ -66,6 +70,15 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
             or re.fullmatch(r"[0-9a-f]{64}", digest) is None
             or not isinstance(reason, str)
             or not reason.strip()
+            or type(hold_count) is not int
+            or hold_count < 0
+            or hold_count >= count
+            or not isinstance(hold_ids_digest, str)
+            or (
+                re.fullmatch(r"[0-9a-f]{64}", hold_ids_digest) is None
+                if hold_count
+                else bool(hold_ids_digest)
+            )
         ):
             raise ValueError("Profile-release decision has invalid fields")
         try:
@@ -81,6 +94,8 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
                 cache_sha256=digest,
                 reason=reason.strip(),
                 reviewed_at=str(reviewed_at),
+                expected_provisional_hold_rows=hold_count,
+                provisional_hold_ids_sha256=hold_ids_digest,
             )
         )
         seen_people.add(person_id)

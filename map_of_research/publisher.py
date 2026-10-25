@@ -52,6 +52,12 @@ from .profile_releases import (
     require_no_held_contributions,
     select_released_observations,
 )
+from .provisional_holds import (
+    DEFAULT_PROVISIONAL_HOLDS_PATH,
+    load_provisional_holds,
+    require_no_provisional_hold_contributions,
+    validate_provisional_holds,
+)
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -1156,6 +1162,7 @@ def publish_snapshot(
     attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
+    provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     source_cache_dir: Path | None = None,
     primary_home_baseline_path: Path | None = None,
 ) -> dict[str, Any]:
@@ -1189,14 +1196,24 @@ def publish_snapshot(
         raise ValueError("Scholar attribution and exclusion reviews conflict")
     release_decisions = load_profile_releases(profile_releases_path)
     release_manifest_sha256 = sha256_file(profile_releases_path)
+    provisional_profiles = load_provisional_holds(provisional_holds_path)
+    provisional_manifest_sha256 = sha256_file(provisional_holds_path)
+    cache_dir = source_cache_dir or snapshot_path.parent.parent / "data" / "authors"
     released_frame, release_receipt, held_observation_ids = (
         select_released_observations(
             corrected_frame,
             registry,
             release_decisions,
-            cache_dir=source_cache_dir
-            or snapshot_path.parent.parent / "data" / "authors",
+            cache_dir=cache_dir,
         )
+    )
+    provisional_holds, provisional_receipt = validate_provisional_holds(
+        provisional_profiles,
+        release_decisions,
+        release_receipt,
+        cache_dir=cache_dir,
+        excluded_ids=set(exclusions),
+        confirmed_ids=set(attribution_reviews.confirmed),
     )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
@@ -1207,7 +1224,13 @@ def publish_snapshot(
         encoder=encoder,
     )
     tables = build_dataset_tables(
-        enriched, registry, exclusions, doi_aliases, attribution_reviews, contexts
+        enriched,
+        registry,
+        exclusions,
+        doi_aliases,
+        attribution_reviews,
+        contexts,
+        provisional_holds,
     )
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
@@ -1227,6 +1250,7 @@ def publish_snapshot(
     tables["works"] = exclude_low_information_regions(tables["works"])
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
+    require_no_provisional_hold_contributions(tables, provisional_holds)
 
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
@@ -1268,6 +1292,9 @@ def publish_snapshot(
         "raw_snapshot_sha256": manifest["snapshot_sha256"],
         "profile_release_manifest_sha256": release_manifest_sha256,
         "profile_release_decisions": release_receipt,
+        "provisional_hold_manifest_sha256": provisional_manifest_sha256,
+        "provisional_hold_profiles": provisional_receipt,
+        "provisional_hold_observation_rows": len(provisional_holds),
         "held_profile_ids": [
             item["scholar_id"] for item in release_receipt if item["state"] == "held"
         ],
@@ -1378,6 +1405,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--profile-releases", type=Path, default=DEFAULT_PROFILE_RELEASES_PATH
     )
+    parser.add_argument(
+        "--provisional-holds", type=Path, default=DEFAULT_PROVISIONAL_HOLDS_PATH
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -1459,6 +1489,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             attribution_reviews_path=args.attribution_reviews,
             contexts_path=args.reviewed_contexts,
             profile_releases_path=args.profile_releases,
+            provisional_holds_path=args.provisional_holds,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
         )
