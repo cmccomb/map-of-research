@@ -156,6 +156,7 @@ jobs:
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
             --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
+            --math-region-review-manifest source/data/curated/scholar-region-review.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \

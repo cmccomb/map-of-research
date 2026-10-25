@@ -388,6 +388,8 @@ def reconcile_region_decisions(
     prior_revision: str,
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
+    composite_plan: Any | None = None,
+    historical_works: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -456,6 +458,19 @@ def reconcile_region_decisions(
             ]
             output.at[index, "map_region_prior_excluded_override"] = True
 
+    if composite_plan is not None:
+        from .composite_region import apply_composite_region_decisions
+
+        if historical_works is None:
+            raise ValueError("Composite repair lacks pinned historical work decisions")
+        output = apply_composite_region_decisions(
+            output,
+            prior_works=previous_works,
+            historical_works=historical_works,
+            prior_profiles=previous_rows,
+            current_profiles=current_rows,
+            plan=composite_plan,
+        )
     final_works = _indexed_works(output.to_dict("records"))
     before = _visible_observations(previous_rows, previous_works)
     after = _visible_observations(current_rows, final_works)
@@ -543,8 +558,24 @@ def reconcile_region_decisions(
             and bool(work.get("collaboration_eligible"))
         )
     )
+    reviewed_composite_losses = {
+        identity
+        for identity in losses
+        if composite_plan is not None
+        and str(previous_rows[identity].get("work_id") or "") in composite_plan.losses
+    }
+    reviewed_composite_gains = {
+        identity
+        for identity in gains
+        if composite_plan is not None
+        and identity in previous_rows
+        and str(previous_rows[identity].get("work_id") or "") in composite_plan.gains
+    }
     reviewed_losses = sorted(
-        identity for identity in losses if _reviewed_loss(current_rows.get(identity))
+        identity
+        for identity in losses
+        if _reviewed_loss(current_rows.get(identity))
+        or identity in reviewed_composite_losses
     )
     otherwise_unexplained_losses = losses - set(reviewed_losses)
     approved_sullivan_losses: set[ObservationKey] = set()
@@ -577,41 +608,49 @@ def reconcile_region_decisions(
             raise ValueError("Sullivan exact-loss approval is not the reviewed set")
         approved_sullivan_losses |= approved_additional_losses
         unused_sullivan_approvals = approved_sullivan_losses - losses
-    # In this one-time source transition the manifest is the entire permitted
-    # prior-visible loss set. Generic reviewed-loss exemptions still apply to
-    # ordinary releases, but cannot admit a 23rd Sullivan-release loss.
+    # The Sullivan manifests cover every Sullivan loss. The separately pinned
+    # composite plan covers only its exact 156 work losses.
     losses_requiring_approval = (
-        losses if sullivan_loss_approval is not None else otherwise_unexplained_losses
+        losses - reviewed_composite_losses
+        if sullivan_loss_approval is not None
+        else otherwise_unexplained_losses
     )
     unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
     verified_gains = sorted(
         identity
         for identity in gains
-        if identity in previous_rows
-        and bool(previous_rows[identity].get("map_eligible"))
-        and bool(
-            previous_works[str(previous_rows[identity]["work_id"])].get(
-                "map_region_outlier"
+        if identity in reviewed_composite_gains
+        or (
+            identity in previous_rows
+            and bool(previous_rows[identity].get("map_eligible"))
+            and bool(
+                previous_works[str(previous_rows[identity]["work_id"])].get(
+                    "map_region_outlier"
+                )
             )
-        )
-        and bool(
-            _verification_evidence(
+            and bool(
+                _verification_evidence(
+                    current_rows[identity],
+                    final_works[str(current_rows[identity]["work_id"])],
+                )
+                - _verification_evidence(
+                    previous_rows[identity],
+                    previous_works[str(previous_rows[identity]["work_id"])],
+                )
+            )
+            and _verified_gain(
                 current_rows[identity],
                 final_works[str(current_rows[identity]["work_id"])],
             )
-            - _verification_evidence(
-                previous_rows[identity],
-                previous_works[str(previous_rows[identity]["work_id"])],
-            )
-        )
-        and _verified_gain(
-            current_rows[identity],
-            final_works[str(current_rows[identity]["work_id"])],
         )
     )
     # A prior weak-region exclusion remains excluded unless independently
     # verified. Newly collected Scholar rows use the current quality audit.
     new_gains = sorted(identity for identity in gains if identity not in previous_rows)
+    if composite_plan is not None and any(
+        identity[0] != "person-sullivan-589c9545" for identity in new_gains
+    ):
+        raise ValueError("Composite release has a non-Sullivan new source gain")
     unexplained_gains = sorted(gains - set(verified_gains) - set(new_gains))
     receipt = {
         "version": CONTINUITY_VERSION,
@@ -665,6 +704,18 @@ def reconcile_region_decisions(
             _display(item) for item in sorted(unused_sullivan_approvals)
         ],
         "verified_gains": [_display(item) for item in verified_gains],
+        "reviewed_composite_work_gains": (
+            sorted(composite_plan.gains) if composite_plan is not None else []
+        ),
+        "reviewed_composite_work_losses": (
+            sorted(composite_plan.losses) if composite_plan is not None else []
+        ),
+        "reviewed_composite_observation_gains": [
+            _display(item) for item in sorted(reviewed_composite_gains)
+        ],
+        "reviewed_composite_observation_losses": [
+            _display(item) for item in sorted(reviewed_composite_losses)
+        ],
         "new_source_gains": len(new_gains),
         "unapproved_mapped_binding_changes": unapproved_mapped_binding_changes,
         "unused_sullivan_binding_approvals": [

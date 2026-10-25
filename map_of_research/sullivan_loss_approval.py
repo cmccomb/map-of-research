@@ -19,8 +19,9 @@ from .provisional_holds import ProvisionalHold
 SULLIVAN_ID = "wXSgFr4AAAAJ"
 PRIOR_REVISION = "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd"
 SOURCE_COMMIT = "8be6a2400cf72dd959c874bfcada8624540820ef"
+APPROVAL_SOURCE_COMMIT = "8be6a2400cf72dd959c874bfcada8624540820ef"
 SOURCE_SHA256 = "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2"
-APPROVAL_SHA256 = "3665b00ba709bccd451c83b265026bd08eae1809011f944d7ac5b9d5e730155d"
+APPROVAL_SHA256 = "5c28b17474772ccc47ae9634a0be1ef3ca30ec0f533ec29b656e74672d83184f"
 APPROVED_IDS_SHA256 = "30df0017bfcc094334d3bbafbe511d74627d83bd102ccca0e2f5d8a4fcfb4761"
 DEFAULT_APPROVAL_PATH = Path("data/curated/sullivan-exact-losses-bb88.json")
 DEFAULT_CROSSWALK_PATH = Path(
@@ -117,7 +118,7 @@ def validate_sullivan_exact_losses(
         document["schema_version"] != 1
         or document["reviewed_at"] != "2026-10-25"
         or document["prior_revision"] != PRIOR_REVISION
-        or document["source_snapshot_commit"] != SOURCE_COMMIT
+        or document["source_snapshot_commit"] != APPROVAL_SOURCE_COMMIT
         or document["source_snapshot_sha256"] != SOURCE_SHA256
     ):
         raise ValueError("Sullivan exact-loss approval release binding changed")
