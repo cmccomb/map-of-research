@@ -109,6 +109,261 @@
       ]
     },
     {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "expected_source_rows": 250,
+      "cache_sha256": "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7",
+      "held_observations": [
+        {
+          "capture_row_index": 47,
+          "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+          "reason": "SAIL campaign paper has ambiguous R Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:DJbcl8HfkQkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 90,
+          "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+          "reason": "STAMP data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 94,
+          "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+          "reason": "ECOR data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 97,
+          "author_pub_id": "wXSgFr4AAAAJ:CB2v5VPnA5kC",
+          "reason": "2026 ECOR handbook version needs exact authorship review",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 104,
+          "author_pub_id": "wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+          "reason": "Permafrost watershed dataset needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 117,
+          "author_pub_id": "wXSgFr4AAAAJ:rHJHxKgnXwkC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:rHJHxKgnXwkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 118,
+          "author_pub_id": "wXSgFr4AAAAJ:SjuI4pbJlxcC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:SjuI4pbJlxcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 119,
+          "author_pub_id": "wXSgFr4AAAAJ:q-HalDI95KYC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:q-HalDI95KYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 128,
+          "author_pub_id": "wXSgFr4AAAAJ:jU7OWUQzBzMC",
+          "reason": "2026 SEBS handbook version needs exact authorship review",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:jU7OWUQzBzMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 129,
+          "author_pub_id": "wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+          "reason": "2026 AMS presentation needs presenter identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 130,
+          "author_pub_id": "wXSgFr4AAAAJ:PYBJJbyH-FwC",
+          "reason": "ABoVE project label may be a collection container",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:PYBJJbyH-FwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 137,
+          "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+          "reason": "Chicago urban flux abstract needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 138,
+          "author_pub_id": "wXSgFr4AAAAJ:48xauSegjOkC",
+          "reason": "AGU 2024 abstract needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:48xauSegjOkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+          "reason": "SAIL report lists R Sullivan without unit",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:GFxP56DSvIMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+          "reason": "Flux supplementary dataset needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tH6gc1N1XXoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 144,
+          "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+          "reason": "SAIL meeting summary needs exact affiliation",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ODE9OILHJdcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 149,
+          "author_pub_id": "wXSgFr4AAAAJ:WC23djZS0W4C",
+          "reason": "SETAC 2022 PFAS presentation needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WC23djZS0W4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 150,
+          "author_pub_id": "wXSgFr4AAAAJ:7wO8s98CvbsC",
+          "reason": "SETAC 2022 PFAS presentation needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 151,
+          "author_pub_id": "wXSgFr4AAAAJ:OTTXONDVkokC",
+          "reason": "SETAC title may be a session container",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OTTXONDVkokC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 152,
+          "author_pub_id": "wXSgFr4AAAAJ:nVrZBo8bIpAC",
+          "reason": "SAIL first-light abstract needs exact affiliation",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nVrZBo8bIpAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "wXSgFr4AAAAJ:nRpfm8aw39MC",
+          "reason": "AGU 2021 ice abstract needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nRpfm8aw39MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+          "reason": "STAMP precipitation data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:uDGL6kOW6j0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 203,
+          "author_pub_id": "wXSgFr4AAAAJ:otzGkya1bYkC",
+          "reason": "AMS 2014 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:otzGkya1bYkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 204,
+          "author_pub_id": "wXSgFr4AAAAJ:buQ7SEKw-1sC",
+          "reason": "AMS 2014 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:buQ7SEKw-1sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "wXSgFr4AAAAJ:MpfHP-DdYjUC",
+          "reason": "Goldschmidt 2011 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:MpfHP-DdYjUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 230,
+          "author_pub_id": "wXSgFr4AAAAJ:p2g8aNsByqUC",
+          "reason": "Mars abstract appears tied to Cornell planetary scientist",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:p2g8aNsByqUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "wXSgFr4AAAAJ:B3FOqHPlNUQC",
+          "reason": "Mars abstract appears tied to Cornell planetary scientist",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:B3FOqHPlNUQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "wXSgFr4AAAAJ:tzM49s52ZIMC",
+          "reason": "5ebbr is an ARM dataset code with ambiguous R Sullivan",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tzM49s52ZIMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 241,
+          "author_pub_id": "wXSgFr4AAAAJ:WHdLCjDvYFkC",
+          "reason": "CMU lists 2020 SETAC 41st meeting; Scholar shows 43rd and no year",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WHdLCjDvYFkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 242,
+          "author_pub_id": "wXSgFr4AAAAJ:gVv57TyPmFsC",
+          "reason": "Beverton-Holt math abstract needs namesake identity check",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:gVv57TyPmFsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 243,
+          "author_pub_id": "wXSgFr4AAAAJ:F9fV5C73w3QC",
+          "reason": "PCCP themed-issue header is not standalone title",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 245,
+          "author_pub_id": "wXSgFr4AAAAJ:BUYA1_V_uYcC",
+          "reason": "Supplemental material may duplicate separately listed paper",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BUYA1_V_uYcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 246,
+          "author_pub_id": "wXSgFr4AAAAJ:bFI3QPDXJZMC",
+          "reason": "Title is fragment of separately listed mineral-dust work",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bFI3QPDXJZMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "wXSgFr4AAAAJ:pyW8ca7W8N0C",
+          "reason": "PCCP themed-issue header is not standalone title",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:pyW8ca7W8N0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "wXSgFr4AAAAJ:YOwf2qJgpHMC",
+          "reason": "Author-list fragment lacks original item metadata",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "expected_reviewed_exclusion_rows": 56,
+      "reviewed_exclusion_ids_sha256": "bc82650651779bda8ea25c141d14af00633ec8795ffd3e2f5c2aef956a0a0e21"
+    },
+    {
       "person_id": "person-stefanbernhard-7f8d72cd",
       "scholar_id": "hfFKwRcAAAAJ",
       "expected_source_rows": 228,

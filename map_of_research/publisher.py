@@ -1819,6 +1819,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_PRIOR_ID_CROSSWALK_PATH,
     )
+    parser.add_argument(
+        "--scholar-additional-prior-id-crosswalk",
+        type=Path,
+        action="append",
+        default=[],
+    )
     return parser.parse_args(argv)
 
 
@@ -1873,6 +1879,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             captures_dir=args.scholar_captures_dir or snapshot_root / "data/captures",
             baseline_path=args.scholar_baseline,
             prior_id_crosswalk_path=args.scholar_prior_id_crosswalk,
+            additional_prior_id_crosswalk_paths=tuple(
+                args.scholar_additional_prior_id_crosswalk
+            ),
             curated_works_path=args.scholar_curated_works,
             exclusions_path=args.reviewed_exclusions,
             snapshot_path=args.snapshot,

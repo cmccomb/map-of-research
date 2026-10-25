@@ -427,15 +427,30 @@ def _reconcile_prior_ids(
     cache_path: Path,
     baseline: dict[str, Any],
     prior: dict[str, Any],
-    crosswalk_path: Path,
+    crosswalk_paths: tuple[Path, ...],
     curated_works_path: Path,
     exclusions_path: Path,
 ) -> int:
     """Allow only a reviewed, exact historical-ID replacement for this cache."""
 
-    if not crosswalk_path.is_file():
+    crosswalks = []
+    for path in crosswalk_paths:
+        if path.is_file():
+            document = load_json(path)
+            if not isinstance(document, dict):
+                raise ValueError("Historical Scholar ID crosswalk is invalid")
+            crosswalks.append(document)
+    if not crosswalks:
         raise ValueError(f"Previously published Scholar IDs disappeared: {cache_path}")
-    crosswalk = load_json(crosswalk_path)
+    if len(crosswalks) == 1:
+        crosswalk = crosswalks[0]
+    else:
+        matching = [item for item in crosswalks if item.get("scholar_id") == scholar_id]
+        if len(matching) != 1:
+            raise ValueError(
+                f"Previously published Scholar IDs disappeared: {cache_path}"
+            )
+        crosswalk = matching[0]
     if not isinstance(crosswalk, dict) or set(crosswalk) != {
         "schema_version",
         "scholar_id",
@@ -510,6 +525,7 @@ def _reconcile_prior_ids(
         "malformed_duplicate": "current_scholar",
         "supporting_material_duplicate": "current_scholar",
         "nonpublication_rekeyed": "current_scholar",
+        "false_profile_attribution_rekeyed": "current_scholar",
         "supporting_material": "curated_doi",
         "historical_conference_abstract": "curated_native",
         "historical_conference_proceeding": "curated_native",
@@ -552,18 +568,26 @@ def _reconcile_prior_ids(
                 or str(target.get("pub_year") or "") != entry["target_year"]
             ):
                 raise ValueError("Historical Scholar ID crosswalk target is absent")
-            if entry["classification"] == "nonpublication_rekeyed":
+            if entry["classification"] in {
+                "nonpublication_rekeyed",
+                "false_profile_attribution_rekeyed",
+            }:
+                reason_code = (
+                    "nonpublication"
+                    if entry["classification"] == "nonpublication_rekeyed"
+                    else "false_profile_attribution"
+                )
                 matches = [
                     item
                     for item in exclusions["exclusions"]
                     if isinstance(item, dict)
                     and item.get("scholar_id") == scholar_id
                     and item.get("author_pub_id") == target_id
-                    and item.get("reason_code") == "nonpublication"
+                    and item.get("reason_code") == reason_code
                     and item.get("evidence_url") == evidence_url
                 ]
                 if len(matches) != 1:
-                    raise ValueError("Historical nonpublication exclusion is absent")
+                    raise ValueError("Historical reviewed exclusion is absent")
             elif any(
                 isinstance(item, dict)
                 and item.get("scholar_id") == scholar_id
@@ -607,6 +631,7 @@ def validate_coverage(
     captures_dir: Path = DEFAULT_CAPTURE_DIR,
     baseline_path: Path = DEFAULT_BASELINE_PATH,
     prior_id_crosswalk_path: Path = DEFAULT_PRIOR_ID_CROSSWALK_PATH,
+    additional_prior_id_crosswalk_paths: tuple[Path, ...] = (),
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
     snapshot_path: Path | None = None,
@@ -657,7 +682,10 @@ def validate_coverage(
                     cache_path=path,
                     baseline=baseline_document,
                     prior=prior,
-                    crosswalk_path=prior_id_crosswalk_path,
+                    crosswalk_paths=(
+                        prior_id_crosswalk_path,
+                        *additional_prior_id_crosswalk_paths,
+                    ),
                     curated_works_path=curated_works_path,
                     exclusions_path=exclusions_path,
                 )
@@ -714,6 +742,9 @@ def main(argv: list[str] | None = None) -> int:
         "--prior-id-crosswalk", type=Path, default=DEFAULT_PRIOR_ID_CROSSWALK_PATH
     )
     parser.add_argument(
+        "--additional-prior-id-crosswalk", type=Path, action="append", default=[]
+    )
+    parser.add_argument(
         "--curated-works", type=Path, default=DEFAULT_CURATED_WORKS_PATH
     )
     parser.add_argument("--exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH)
@@ -727,6 +758,7 @@ def main(argv: list[str] | None = None) -> int:
         captures_dir=args.captures_dir,
         baseline_path=args.baseline,
         prior_id_crosswalk_path=args.prior_id_crosswalk,
+        additional_prior_id_crosswalk_paths=tuple(args.additional_prior_id_crosswalk),
         curated_works_path=args.curated_works,
         exclusions_path=args.exclusions,
         snapshot_path=args.snapshot,
