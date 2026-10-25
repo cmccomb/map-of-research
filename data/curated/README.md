@@ -92,6 +92,13 @@ names seven held rows from his 361-row visible capture. Remaining rows still
 pass the ordinary quality and exact-exclusion checks; the hold does not certify
 them individually.
 
+The [Murshid, Faulkner, and Silva release review](../../registry/reviews/2026-10-25-chem-murshid-faulkner-silva-publisher-review.md)
+pins three more complete visible Chemistry Scholar profiles (49, 5, and 41
+rows). It identifies four degraded duplicate citations for exact exclusion
+and four unresolved individual rows for provisional hold. The three producer
+registry identities and primary Chemistry departments match the source draft
+because the trusted uploader reads the registry from producer main.
+
 `scholar-exclusions.json` records exact Scholar profile-publication IDs whose
 captured rows were checked against the linked evidence. Each decision names
 the profile, row, reason code, specific reason, evidence URL, and date. A review
