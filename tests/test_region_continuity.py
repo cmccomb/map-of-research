@@ -8,6 +8,7 @@ import numpy
 import pandas
 import pytest
 
+from map_of_research.provisional_holds import ProvisionalHold
 from map_of_research.region_continuity import (
     RegionReleaseDiffError,
     _fingerprint,
@@ -125,13 +126,21 @@ def work(
     }
 
 
-def reconcile(current_works, current_rows, prior_works, prior_rows):
+def reconcile(
+    current_works,
+    current_rows,
+    prior_works,
+    prior_rows,
+    *,
+    provisional_holds=None,
+):
     return reconcile_region_decisions(
         pandas.DataFrame(current_works),
         pandas.DataFrame(current_rows),
         prior_works,
         prior_rows,
         prior_revision=REVISION,
+        provisional_holds=provisional_holds,
     )
 
 
@@ -205,13 +214,40 @@ def test_validated_provisional_hold_can_explain_exact_observation_loss():
         "review_attribution_status": "held",
         "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
     }
+    hold = ProvisionalHold(
+        "profile",
+        "profile:shared-row",
+        1,
+        "Original byline unavailable",
+        current["review_attribution_evidence_url"],
+        "2026-10-25",
+    )
     _, receipt = reconcile(
         [work("one", eligible=False, outlier=False)],
         [current],
         [work("one", eligible=True, outlier=False)],
         [old],
+        provisional_holds={(hold.scholar_id, hold.author_pub_id): hold},
     )
     assert receipt["reviewed_losses"] == ["person/profile/profile:shared-row/scholar"]
+
+
+def test_unapproved_provisional_hold_cannot_explain_loss():
+    old = observation("person", "one")
+    current = {
+        **old,
+        "map_eligible": False,
+        "map_exclusion_reasons": ["attribution_provisional_hold"],
+        "review_attribution_status": "held",
+        "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile(
+            [work("one", eligible=False, outlier=False)],
+            [current],
+            [work("one", eligible=True, outlier=False)],
+            [old],
+        )
 
 
 @pytest.mark.parametrize(
@@ -220,6 +256,7 @@ def test_validated_provisional_hold_can_explain_exact_observation_loss():
         {"map_exclusion_reasons": []},
         {"review_attribution_status": ""},
         {"review_attribution_evidence_url": ""},
+        {"review_attribution_evidence_url": "https://other.test/poster"},
     ],
 )
 def test_incomplete_provisional_hold_cannot_explain_loss(change):
@@ -232,12 +269,21 @@ def test_incomplete_provisional_hold_cannot_explain_loss(change):
         "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
         **change,
     }
+    hold = ProvisionalHold(
+        "profile",
+        "profile:shared-row",
+        1,
+        "Original byline unavailable",
+        "https://scholar.google.com/citations?user=profile",
+        "2026-10-25",
+    )
     with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
         reconcile(
             [work("one", eligible=False, outlier=False)],
             [current],
             [work("one", eligible=True, outlier=False)],
             [old],
+            provisional_holds={(hold.scholar_id, hold.author_pub_id): hold},
         )
 
 

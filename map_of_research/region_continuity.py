@@ -18,6 +18,7 @@ from typing import Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
+from .provisional_holds import ProvisionalHold
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
@@ -178,11 +179,17 @@ def _visible_observations(
     }
 
 
-def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
+def _reviewed_loss(
+    row: Mapping[str, Any] | None,
+    provisional_holds: Mapping[tuple[str, str], ProvisionalHold],
+) -> bool:
     if row is None or bool(row.get("map_eligible")):
         return False
     reasons = _value(row.get("map_exclusion_reasons")) or []
     exclusion_code = str(row.get("review_exclusion_code") or "")
+    hold = provisional_holds.get(
+        (str(row.get("scholar_id") or ""), str(row.get("author_pub_id") or ""))
+    )
     return bool(
         (exclusion_code and f"reviewed_{exclusion_code}" in reasons)
         or (
@@ -193,9 +200,10 @@ def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
             )
         )
         or (
-            row.get("review_attribution_status") == "held"
+            hold is not None
+            and row.get("review_attribution_status") == "held"
             and "attribution_provisional_hold" in reasons
-            and bool(str(row.get("review_attribution_evidence_url") or "").strip())
+            and row.get("review_attribution_evidence_url") == hold.evidence_url
         )
     )
 
@@ -356,6 +364,7 @@ def reconcile_region_decisions(
     prior_profile_publications: Iterable[Mapping[str, Any]],
     *,
     prior_revision: str,
+    provisional_holds: Mapping[tuple[str, str], ProvisionalHold] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -430,7 +439,9 @@ def reconcile_region_decisions(
     losses = before - after
     gains = after - before
     reviewed_losses = sorted(
-        identity for identity in losses if _reviewed_loss(current_rows.get(identity))
+        identity
+        for identity in losses
+        if _reviewed_loss(current_rows.get(identity), provisional_holds or {})
     )
     unexplained_losses = sorted(losses - set(reviewed_losses))
     verified_gains = sorted(
