@@ -11,8 +11,7 @@ from collections import Counter
 from pathlib import Path
 
 SOURCE_DIR = (
-    Path(__file__).resolve().parents[1]
-    / "data/source_reviews/luc-tartar-2026-10-25"
+    Path(__file__).resolve().parents[1] / "data/source_reviews/luc-tartar-2026-10-25"
 )
 PERSON_ID = "person-lucctartar-8b1dc8e8"
 AUTHOR_ID = 5364974
@@ -95,9 +94,10 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert len(crosswalk) == manifest["reviewed_source_rows"] == 21
     assert len({row["source_row_id"] for row in crosswalk}) == 21
     assert len({row["work_group"] for row in crosswalk}) == 19
-    assert len({row["work_group"] for row in crosswalk}) == manifest[
-        "distinct_internal_work_groups"
-    ]
+    assert (
+        len({row["work_group"] for row in crosswalk})
+        == manifest["distinct_internal_work_groups"]
+    )
     assert {row["graph_eligible"] for row in crosswalk} == {"false"}
     assert all(row["review_status"].startswith("hold_") for row in crosswalk)
     assert Counter(row["source"] for row in crosswalk) == {
