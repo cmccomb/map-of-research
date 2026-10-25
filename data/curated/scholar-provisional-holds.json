@@ -10,6 +10,13 @@
       "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
       "held_observations": [
         {
+          "capture_row_index": 141,
+          "author_pub_id": "0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reason": "ChemInform abstract indexes a separate 1998 Oxford book chapter; reconcile the indexed proxy and original chapter before mapping one work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=100&pagesize=100&citation_for_view=0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
           "capture_row_index": 214,
           "author_pub_id": "0e1jwkkAAAAJ:vRqMK49ujn8C",
           "reason": "Truncated T Collins byline in a lead-poisoning pilot study; exact author identity and document type remain unresolved.",
@@ -31,10 +38,24 @@
           "reviewed_at": "2026-10-25"
         },
         {
+          "capture_row_index": 350,
+          "author_pub_id": "0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reason": "Undated mid-year report has no venue or located primary copy; confirm the exact report and distinguish it from the verified 2003 DOE final report.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
           "capture_row_index": 355,
           "author_pub_id": "0e1jwkkAAAAJ:yqoGN6RLRZoC",
           "reason": "ACS abstract is credited to TJ Collins, but its publication type and relationship to separately indexed work remain unresolved.",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "0e1jwkkAAAAJ:yFnVuubrUp4C",
+          "reason": "Undated and unvenued estradiol-degradation record lacks an identified primary output; distinguish it from the 2015 Scientific Reports paper before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yFnVuubrUp4C",
           "reviewed_at": "2026-10-25"
         }
       ]

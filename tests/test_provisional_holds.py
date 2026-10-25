@@ -124,14 +124,17 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
         (item.capture_row_index, item.author_pub_id)
         for item in profile.held_observations
     ] == [
+        (141, "0e1jwkkAAAAJ:70eg2SAEIzsC"),
         (214, "0e1jwkkAAAAJ:vRqMK49ujn8C"),
         (274, "0e1jwkkAAAAJ:cK4Rrx0J3m0C"),
         (299, "0e1jwkkAAAAJ:BJbdYPG6LGMC"),
+        (350, "0e1jwkkAAAAJ:hsZV8lGYWTMC"),
         (355, "0e1jwkkAAAAJ:yqoGN6RLRZoC"),
+        (356, "0e1jwkkAAAAJ:yFnVuubrUp4C"),
     ]
     assert hold_ids_sha256(
         {item.author_pub_id for item in profile.held_observations}
-    ) == ("78b7f2f4e7a7beb6ecdd9e67e2720135ef5225d6c4b9443a248a621359e55269")
+    ) == ("92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0")
 
 
 def _manifest(tmp_path, profiles):

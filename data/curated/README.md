@@ -88,7 +88,7 @@ SHA-256. Before any upload, the publisher checks this contract, preserves the
 held observations in `profile_publications`,
 and rejects a held ID in any mapped work or authorship. The initial draft
 [Collins review](../../registry/reviews/2026-10-25-chem-collins-provisional-holds.md)
-names four held rows from his 361-row visible capture. Remaining rows still
+names seven held rows from his 361-row visible capture. Remaining rows still
 pass the ordinary quality and exact-exclusion checks; the hold does not certify
 them individually.
 
