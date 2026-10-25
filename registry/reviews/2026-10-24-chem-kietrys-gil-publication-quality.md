@@ -1,6 +1,6 @@
 # Kietrys and Gil complete-profile row review
 
-Reviewed 2026-10-24 from the paired, sanitized Google Scholar captures in draft source PR #101. The user supplied both profile URLs; separate identity PR #102 records their match to CMU Chemistry. The capture receipts report 36/36 Kietrys rows and 195/195 Gil rows with matching HTML/JSON citation IDs, disabled final Show More buttons, and closed browser tabs. This review changes no raw capture. The manifest excludes only the 17 citation IDs below when the profiles enter a later snapshot.
+Reviewed 2026-10-24, with a 2026-10-25 course-record follow-up, from the paired, sanitized Google Scholar captures in draft source PR #101. The user supplied both profile URLs; separate identity PR #102 records their match to CMU Chemistry. The capture receipts report 36/36 Kietrys rows and 195/195 Gil rows with matching HTML/JSON citation IDs, disabled final Show More buttons, and closed browser tabs. This review changes no raw capture. The manifest excludes only the 20 citation IDs below when the profiles enter a later snapshot.
 
 | Scholar row | Exact decision | Source and retained work |
 | --- | --- | --- |
@@ -21,12 +21,17 @@ Reviewed 2026-10-24 from the paired, sanitized Google Scholar captures in draft 
 | Gil 176 `7T2F9Uy0os0C` | Duplicate, missing venue | [Elsevier DOI](https://doi.org/10.1016/j.phytochem.2007.01.004) resolves the same four-author, 2007 Phytochemistry paper. Retain row 95. |
 | Gil 182 `EYYDruWGBe4C` | Duplicate, malformed first author and no venue | [ACS article](https://pubs.acs.org/doi/abs/10.1021/np960018g) confirms the 1996 article. Retain row 11. |
 | Gil 184 `_Qo2XoVZTnwC` | Duplicate with “Twxo” typo | [Thieme article](https://doi.org/10.1055/s-2006-959586) confirms the 1994 work, volume 60, pages 594–596. Retain row 69. |
+| Gil 191 `4fKUyHm3Qg0C` | Nonpublication: doctoral course | [UNL's 2016 report](https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf) lists this exact title as an accredited 31-hour doctoral course. |
+| Gil 192 `l7t_Zn2s7bgC` | Nonpublication: course approval text | The captured title is an administrative resolution and degree-credit statement. [UNL's report](https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf) confirms the associated course, but the original CD Nº 1295 program was not recovered. |
+| Gil 193 `K3LRdlH-MEoC` | Nonpublication: course-organizer heading | The captured title identifies a course organizer. [UNL's report](https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf) confirms the course context, but the original program with this exact heading was not recovered. |
 
 The capture still contains rows requiring a separate decision. They are deliberately **not** in the manifest:
 
 - Kietrys 29–30 are poster-number records; Kietrys 33–34 are related patent-language records; Kietrys 35–36 are supplement abstracts. Their exact relationship to any full publication has not been established. Kietrys 31 is a [substantive corrigendum](https://pure.kaist.ac.kr/en/publications/corrigendum-an-excimer-clamp-for-measuring-damaged-base-excision-/) correcting a molecular structure diagram; it remains in the complete academic history, alongside original row 14.
 - Gil 65/158 share a title but are a 2018 article and 2019 ACS meeting abstract with different author renderings. Gil 34/190 have related titles but may be separate studies. Gil 146 is a ChemInform abstract, 153 has malformed quote characters, and 183 appears to be an erratum. None is excluded without resolving its source.
-- Gil 191–193 look like course-brochure text; 185–190 and 194–195 have incomplete citation metadata. The current evidence does not prove which are distinct research outputs, presentation abstracts, or nonpublication artifacts.
+- Gil 185–190 and 194–195 have incomplete citation metadata. The [ISMRM 2009 program](https://www.ismrm.org/09/Session53.htm) confirms row 186 and the [2012 Ibero-American NMR abstract book](https://iberoanmr2012.chemistry.pt/images/Book_of_Abstracts.pdf) confirms row 188 as genuine conference abstracts; the other rows remain unresolved.
+
+The row 191 course title has a direct match in the UNL record. Rows 192 and 193 are administrative headings rather than academic work titles; their link to the same original program is inferred from adjacent captured rows and the course context. The original CD Nº 1295 program was not found, so the manifest reasons preserve that limit.
 
 All other raw rows remain eligible for later graph integration, subject to ordinary title/authorship normalization. The observed exclusions should not be described as a fully adjudicated publication history.
 

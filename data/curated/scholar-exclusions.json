@@ -6872,6 +6872,30 @@
       "reason": "Typo variant of the same 1994 Planta Medica article with identical volume and pages; retain complete row 69.",
       "evidence_url": "https://doi.org/10.1055/s-2006-959586",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:4fKUyHm3Qg0C",
+      "reason_code": "nonpublication",
+      "reason": "UNL identifies this exact title as an accredited 31-hour doctoral course, not an authored publication.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "nonpublication",
+      "reason": "Course approval and degree-credit text, not an authored publication; UNL confirms the associated accredited doctoral course, but the original CD Nº 1295 program was not recovered.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "nonpublication",
+      "reason": "Course-organizer heading, not an authored publication; UNL confirms the associated doctoral course, but the original program with this exact heading was not recovered.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
