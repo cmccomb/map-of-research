@@ -23,6 +23,7 @@ TAASAN = "person-shlomotaasan-403c9cf9"
 TETALI = "person-prasadtetali-bf494329"
 KINDERLEHRER = "person-davidkinderlehrer-a58d3c4e"
 ROLLETT = "person-rollett-553e9d0d"
+BIO_SUCCESSOR = "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
 
 
 def hold():
@@ -212,7 +213,7 @@ def test_exact_held_losses_require_current_parent_and_prior_bindings() -> None:
         )
         == frozenset()
     )
-    with pytest.raises(ValueError, match="parent revision"):
+    with pytest.raises(ValueError, match="prior or current rows"):
         validate_person_hold_losses(
             (selected,),
             prior_revision="0" * 40,
@@ -220,6 +221,7 @@ def test_exact_held_losses_require_current_parent_and_prior_bindings() -> None:
             prior_profiles=prior_profiles,
             current_profiles=[],
         )
+
     with pytest.raises(ValueError, match="prior or current rows"):
         validate_person_hold_losses(
             (selected,),
@@ -293,26 +295,83 @@ def test_exact_held_losses_require_current_parent_and_prior_bindings() -> None:
 
 def test_published_bio_parent_preserves_absent_held_person_links() -> None:
     selected = hold()
+    prior_works, prior_profiles = prior_hold_tables()
     assert (
         validate_person_hold_losses(
             (selected,),
             prior_revision=BIO_HOLD_RELEASE_REVISION,
-            prior_works=[],
+            prior_works=prior_works,
             prior_profiles=[],
             current_profiles=[],
         )
         == frozenset()
     )
-    _, prior_profiles = prior_hold_tables()
     for previous, current in ((prior_profiles, []), ([], prior_profiles)):
         with pytest.raises(ValueError, match="prior or current rows"):
             validate_person_hold_losses(
                 (selected,),
                 prior_revision=BIO_HOLD_RELEASE_REVISION,
-                prior_works=[],
+                prior_works=prior_works,
                 prior_profiles=previous,
                 current_profiles=current,
             )
+
+
+def test_successor_release_keeps_exact_hold_without_reapproving_losses() -> None:
+    prior_works, prior_profiles = prior_hold_tables()
+    selected = hold()
+    approved = validate_person_hold_losses(
+        (selected,),
+        prior_revision=BIO_SUCCESSOR,
+        prior_works=prior_works,
+        prior_profiles=[],
+        current_profiles=[],
+    )
+    assert approved == frozenset()
+    published, receipt, held_ids = select_released_person_observations(
+        source_rows(),
+        registry(),
+        (selected,),
+        source_snapshot_sha256="9" * 64,
+        prior_revision=BIO_SUCCESSOR,
+    )
+    assert not published.person_id.eq(TAASAN).any()
+    assert receipt[0]["held_source_rows"] == 3
+    assert held_ids == {row[2] for row in selected.source_observations}
+    with pytest.raises(ValueError, match="parent revision differs"):
+        validate_person_hold_losses(
+            (replace(selected, source_snapshot_sha256="f" * 64),),
+            prior_revision=BIO_SUCCESSOR,
+            prior_works=prior_works,
+            prior_profiles=[],
+            current_profiles=[],
+        )
+    with pytest.raises(ValueError, match="successor works differ"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=BIO_SUCCESSOR,
+            prior_works=[{**prior_works[0], "doi": "10.1000/wrong"}, *prior_works[1:]],
+            prior_profiles=[],
+            current_profiles=[],
+        )
+    with pytest.raises(ValueError, match="prior or current rows"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=BIO_SUCCESSOR,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=[],
+        )
+    changed = source_rows()
+    changed.loc[changed.person_id == TAASAN, "source_doi"] = "10.1000/wrong"
+    with pytest.raises(ValueError, match="source rows differ"):
+        select_released_person_observations(
+            changed,
+            registry(),
+            (selected,),
+            source_snapshot_sha256="9" * 64,
+            prior_revision=BIO_SUCCESSOR,
+        )
 
 
 def test_only_partial_person_rows_are_held_and_coauthors_remain() -> None:
@@ -322,6 +381,7 @@ def test_only_partial_person_rows_are_held_and_coauthors_remain() -> None:
         registry(),
         (hold(),),
         source_snapshot_sha256=hold().source_snapshot_sha256,
+        prior_revision=hold().prior_revision,
     )
     assert len(raw) == 233
     assert len(published) == 230
@@ -359,6 +419,7 @@ def test_source_or_identity_drift_blocks_release(change) -> None:
             tested_registry,
             (hold(),),
             source_snapshot_sha256=snapshot_sha,
+            prior_revision=hold().prior_revision,
         )
 
 
@@ -401,6 +462,7 @@ def test_missing_held_person_in_registry_fails_even_without_source_rows() -> Non
             SimpleNamespace(people_by_id={}),
             (hold(),),
             source_snapshot_sha256=hold().source_snapshot_sha256,
+            prior_revision=hold().prior_revision,
         )
 
 
@@ -411,6 +473,7 @@ def test_missing_registry_person_with_held_rows_fails_closed() -> None:
             SimpleNamespace(people_by_id={}),
             (hold(),),
             source_snapshot_sha256=hold().source_snapshot_sha256,
+            prior_revision=hold().prior_revision,
         )
 
 
@@ -422,9 +485,10 @@ def test_missing_person_id_column_fails_if_held_person_is_in_registry() -> None:
             registry(),
             (hold(),),
             source_snapshot_sha256=hold().source_snapshot_sha256,
+            prior_revision=hold().prior_revision,
         )
     published, receipt, ids = select_released_person_observations(
-        frame, registry(), (), source_snapshot_sha256="other"
+        frame, registry(), (), source_snapshot_sha256="other", prior_revision="other"
     )
     assert published.equals(frame)
     assert receipt == []
@@ -487,6 +551,7 @@ def test_hold_can_be_cleared_only_by_reviewing_manifest(tmp_path) -> None:
         registry(),
         (),
         source_snapshot_sha256="0" * 64,
+        prior_revision=hold().prior_revision,
     )
     assert published.equals(raw)
     assert receipt == []
@@ -604,6 +669,7 @@ def test_three_canonical_works_and_tetali_erdos_survive_person_hold() -> None:
         roster,
         (selected,),
         source_snapshot_sha256=selected.source_snapshot_sha256,
+        prior_revision=selected.prior_revision,
     )
     assert len(raw) == 233
     assert len(published) == 230

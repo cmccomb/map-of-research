@@ -613,6 +613,7 @@ def test_curated_work_for_included_faculty_without_scholar_profile(
         (("works", 0, "title"), "", "title, authors, and venue"),
         (("works", 0, "authors"), "", "title, authors, and venue"),
         (("works", 0, "venue"), "", "title, authors, and venue"),
+        (("works", 0, "publication_type"), "invented_type", "publication type"),
         (("works", 0, "year"), "unknown", "year is invalid"),
         (("works", 0, "source_verified_at"), "yesterday", "YYYY-MM-DD"),
         (("works", 0, "source_verification_urls"), "bad", "verification URLs"),

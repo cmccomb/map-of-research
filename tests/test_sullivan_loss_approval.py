@@ -16,6 +16,7 @@ from map_of_research.provisional_holds import load_provisional_holds
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data/curated"
 FIXTURE = ROOT / "tests/fixtures/sullivan_exact_loss_rows.json"
+FROZEN_CURATED = ROOT / "tests/fixtures/sullivan_approved_works.json"
 REVIEW = ROOT / "registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json"
 
 
@@ -44,6 +45,8 @@ def verified_rows(monkeypatch, tmp_path):
             "reviewed_exclusions_sha256"
         ],
     }
+    expected_curated_sha = approval_manifest["curated_works_sha256"]
+    assert approval.sha256_file(FROZEN_CURATED) == expected_curated_sha
 
     def fixture_sha(path):
         if Path(path) == cache:
@@ -69,7 +72,7 @@ def verified_rows(monkeypatch, tmp_path):
         "profile_releases_path": CURATED / "scholar-profile-releases.json",
         "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
         "crosswalk_path": REVIEW,
-        "curated_works_path": CURATED / "works.json",
+        "curated_works_path": FROZEN_CURATED,
         "exclusions_path": CURATED / "scholar-exclusions.json",
         "prior_works": rows["prior_works"],
         "prior_profiles": rows["prior_profiles"],
