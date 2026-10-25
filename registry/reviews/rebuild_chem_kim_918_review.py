@@ -604,6 +604,17 @@ OTHER_PRIMARY_ID_GUARDS = {
     556: "bC4aq-4AAAAJ:epqYDVWIO7EC",
     580: "bC4aq-4AAAAJ:yB1At4FlUx8C",
     654: "bC4aq-4AAAAJ:EkHepimYqZsC",
+    152: "bC4aq-4AAAAJ:x2hKVfJWtf0C",
+    230: "bC4aq-4AAAAJ:ZysSsiWj_g4C",
+    247: "bC4aq-4AAAAJ:4vMrXwiscB8C",
+    250: "bC4aq-4AAAAJ:QtA78RmWg5MC",
+    251: "bC4aq-4AAAAJ:NXYAu82O0W8C",
+    253: "bC4aq-4AAAAJ:AvfA0Oy_GE0C",
+    270: "bC4aq-4AAAAJ:xii_ZKWM4-0C",
+    296: "bC4aq-4AAAAJ:Ehil0879vHcC",
+    411: "bC4aq-4AAAAJ:uLbwQdceFCQC",
+    412: "bC4aq-4AAAAJ:HIFyuExEbWQC",
+    434: "bC4aq-4AAAAJ:fFSKOagxvKUC",
 }
 
 OTHER_PRIMARY.update(
@@ -1129,6 +1140,159 @@ KIST_COMMUNITY_VENUES = {
     556: "Integrated Ferroelectrics 41 (1-4), 107-117, 2001",
     580: "Integrated Ferroelectrics 50 (1), 61-70, 2002",
     654: "SENSORS, 2003 IEEE 2, 1054-1058, 2003",
+}
+
+# Exact original work records expand the captured H. J. initials to other people.
+NEXT_FULL_AUTHOR_PRIMARY = {
+    152: (
+        "Diffusion tensor imaging of normal‐appearing white matter in patients "
+        "with neuromyelitis optica spectrum disorder and multiple sclerosis",
+        2017,
+        "Ho Jin Kim",
+        "10.1111/ene.13321",
+        "https://onlinelibrary.wiley.com/doi/10.1111/ene.13321",
+        "Wiley original article author ORCID and ORCID person record",
+        "The exact European Journal of Neurology 24(7):966-973 article "
+        "links its H. J. Kim author at National Cancer Center Neurology "
+        "to ORCID 0000-0002-8672-8419, whose public person record names "
+        "Ho Jin Kim.",
+    ),
+    230: (
+        "Widespread cortical thinning in patients with neuromyelitis "
+        "optica spectrum disorder",
+        2016,
+        "Ho Jin Kim",
+        "10.1111/ene.13011",
+        "https://onlinelibrary.wiley.com/doi/10.1111/ene.13011",
+        "Wiley original corresponding-author address and NCC identity page",
+        "The exact European Journal of Neurology 23(7):1165-1173 article "
+        "identifies its H. J. Kim corresponding author in National Cancer "
+        "Center Neurology at hojinkim@ncc.re.kr; NCC's faculty page "
+        "identifies that address as Ho Jin Kim.",
+    ),
+    247: (
+        "Treatment of abandoned coal mine discharged waters using lime wastes",
+        2007,
+        "Hee Joung Kim",
+        "10.1007/BF02913923",
+        "https://pure.uos.ac.kr/en/publications/"
+        "treatment-of-abandoned-coal-mine-discharged-waters-using-lime-was/",
+        "University of Seoul exact-output full-author record",
+        "The University of Seoul lists second author Hee Joung Kim on the "
+        "exact Geosciences Journal 11(2):111-114 article; the Springer "
+        "DOI deposit independently gives the same full byline.",
+    ),
+    250: (
+        "Korean Endocrine Society, Committee for Clinical Practice Guidelines",
+        2017,
+        "Hae Jin Kim",
+        "10.3803/EnM.2017.32.2.200",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5503865/",
+        "original Korean Endocrine Society full-author guideline article",
+        "The saved Scholar title misparses the corporate author as a title; "
+        "its venue names the exact Clinical Guidelines for the Management "
+        "of Adrenal Incidentaloma article. The original Endocrinology and "
+        "Metabolism 32(2):200-218 byline identifies eighth author "
+        "Hae Jin Kim at Ajou University.",
+    ),
+    251: (
+        "Normal‐appearing white matter demyelination in neuromyelitis "
+        "optica spectrum disorder",
+        2017,
+        "Ho Jin Kim",
+        "10.1111/ene.13266",
+        "https://onlinelibrary.wiley.com/doi/10.1111/ene.13266",
+        "Wiley original corresponding-author address and NCC exact publication",
+        "The exact European Journal of Neurology 24(4):652-658 article "
+        "identifies its H. J. Kim corresponding author at "
+        "hojinkim@ncc.re.kr; NCC's Ho Jin Kim faculty bibliography lists "
+        "the exact title, year, volume, and pages.",
+    ),
+    253: (
+        "Drop impact analysis of plate-type fuel assembly in research reactor",
+        2014,
+        "Hyun-Jung Kim",
+        "10.5516/NET.09.2013.103",
+        "https://api.crossref.org/works/10.5516%2FNET.09.2013.103",
+        "Korean Nuclear Society publisher-deposited full-author DOI record",
+        "The exact Nuclear Engineering and Technology 46(4):529-540 "
+        "publisher deposit names first author Hyun-Jung Kim with the "
+        "matching five-author team and DOI.",
+    ),
+    270: (
+        "Outcome of pregnancies after onset of the neuromyelitis optica "
+        "spectrum disorder",
+        2020,
+        "Ho Jin Kim",
+        "10.1111/ene.14274",
+        "https://onlinelibrary.wiley.com/doi/10.1111/ene.14274",
+        "Wiley original article author ORCID and ORCID person record",
+        "The exact European Journal of Neurology 27(8):1546-1555 article "
+        "links its H. J. Kim author at National Cancer Center Neurology "
+        "to ORCID 0000-0002-8672-8419, whose public person record names "
+        "Ho Jin Kim.",
+    ),
+    296: (
+        "InAs critical-point energies at 22 K from spectroscopic ellipsometry",
+        2010,
+        "HyeJung Kim",
+        "10.1063/1.3506497",
+        "https://api.crossref.org/works/10.1063%2F1.3506497",
+        "AIP publisher-deposited full-author DOI record",
+        "The exact Applied Physics Letters 97(17):171912 DOI deposit "
+        "expands seventh author H. J. Kim to HyeJung Kim, with the "
+        "matching eight-author team.",
+    ),
+    411: (
+        "Novel ELANE gene mutation in a Korean girl with severe congenital neutropenia",
+        2011,
+        "Hee-Jin Kim",
+        "10.3346/jkms.2011.26.12.1646",
+        "https://jkms.org/DOIx.php?id=10.3346/jkms.2011.26.12.1646",
+        "original Journal of Korean Medical Science full byline",
+        "The exact Journal of Korean Medical Science 26(12):1646-1649 "
+        "article names second author Hee-Jin Kim at Samsung Medical "
+        "Center, Sungkyunkwan University.",
+    ),
+    412: (
+        "Assessment of water pollution by discharge of abandoned mines",
+        2005,
+        "Hee Joung Kim",
+        "",
+        "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/"
+        "ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000974760",
+        "KCI original society exact-output full-author record",
+        "The exact Journal of Soil and Groundwater Environment 10(5):25-36 "
+        "article names Hee Joung Kim (Kim Hwi-Jung) among its complete "
+        "authors at Kangwon National University.",
+    ),
+    434: (
+        "Phytoremediation of heavy metal contaminated soils using transgenic plants",
+        2004,
+        "Hee Joung Kim",
+        "",
+        "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/"
+        "ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000930334",
+        "KCI original society exact-output full-author record",
+        "The exact Korean Journal of Soil Science and Fertilizer "
+        "37(6):396-406 article names sixth author Hee Joung Kim "
+        "(Kim Hwi-Jung) at Kangwon National University.",
+    ),
+}
+OTHER_PRIMARY.update(NEXT_FULL_AUTHOR_PRIMARY)
+NEXT_FULL_AUTHOR_VENUES = {
+    152: "European Journal of Neurology 24 (7), 966-973, 2017",
+    230: "European journal of neurology 23 (7), 1165-1173, 2016",
+    247: "Geosciences Journal 11 (2), 111-114, 2007",
+    250: "Clinical guidelines for the management of adrenal incidentaloma. "
+    "Endocrinol\xa0…, 2017",
+    251: "European journal of neurology 24 (4), 652-658, 2017",
+    253: "Nuclear engineering and technology 46 (4), 529-540, 2014",
+    270: "European Journal of Neurology 27 (8), 1546-1555, 2020",
+    296: "Applied Physics Letters 97 (17), 2010",
+    411: "Journal of Korean medical science 26 (12), 1646, 2011",
+    412: "Journal of Soil and Groundwater Environment 10 (5), 25-36, 2005",
+    434: "Korean Journal of Soil Science and Fertilizer 37 (6), 2004",
 }
 
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
@@ -2597,6 +2761,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["venue"] != KIST_COMMUNITY_VENUES[index]
                 )
                 or (
+                    index in NEXT_FULL_AUTHOR_VENUES
+                    and row["venue"] != NEXT_FULL_AUTHOR_VENUES[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -2895,17 +3063,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 86,
+        "proposed_other_person_primary_work": 97,
         "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 356,
+        "unresolved_attribution_hold": 345,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 428 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 439 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
