@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 874
+    assert len(exclusions) >= 875
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -169,6 +169,18 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_natalie_mcguier_only_malformed_second_review_is_excluded() -> None:
+    scholar_id = "2Lz_LuUAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    actual = {
+        author_pub_id: decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == {f"{scholar_id}:IjCSPb-OGe4C": "corrupted_duplicate"}
+    assert (scholar_id, f"{scholar_id}:u-x6o8ySG0sC") not in exclusions
 
 
 def test_jarvik_exact_review_excludes_only_source_verified_rows() -> None:
