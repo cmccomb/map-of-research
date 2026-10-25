@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 505, 290)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 514, 281)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -184,4 +184,36 @@ def test_six_exact_author_resolutions_leave_initials_only_neighbors_held() -> No
     assert all(
         rows[index]["status"] == "unresolved_attribution_hold"
         for index in (461, 477, 487, 493)
+    )
+
+
+def test_nine_knu_person_links_exclude_only_exact_citations() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    expected = {
+        508: ("bC4aq-4AAAAJ:owLR8QvbtFgC", "10.1016/j.nima.2015.02.011"),
+        512: (
+            "bC4aq-4AAAAJ:buQ7SEKw-1sC",
+            "10.1016/j.astropartphys.2012.03.005",
+        ),
+        516: ("bC4aq-4AAAAJ:1lhNe0rCu4AC", ""),
+        529: ("bC4aq-4AAAAJ:s9ia6_kGH2AC", "10.1088/1748-0221/9/11/P11015"),
+        533: ("bC4aq-4AAAAJ:CaZNVDsoPx4C", "10.1109/NSSMIC.2012.6551459"),
+        571: ("bC4aq-4AAAAJ:6yz0xqPARnAC", "10.1109/TNS.2012.2189019"),
+        572: ("bC4aq-4AAAAJ:ALROH1vI_8AC", "10.1109/TNS.2010.2041789"),
+        573: ("bC4aq-4AAAAJ:BrOSOlqYqPUC", "10.1109/TNS.2009.2014063"),
+        647: ("bC4aq-4AAAAJ:U3qCfcK-7lkC", "10.1109/NSSMIC.2008.4774976"),
+    }
+    assert {
+        index: (rows[index]["author_pub_id"], rows[index]["matched_doi"])
+        for index in expected
+    } == expected
+    assert all(
+        rows[index]["status"] == "proposed_other_person_primary_work"
+        and "research.knu.ac.kr/en/publications/" in rows[index]["evidence_url"]
+        for index in expected
+    )
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (514, 523, 532, 549, 557, 558, 598, 615)
     )

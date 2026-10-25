@@ -2451,6 +2451,139 @@ ABSENT_AUTHOR_AUTHORS.update(
     {index: MID_SIX_EXACT_GUARDS[index][2] for index in (469, 494)}
 )
 
+# Nine additional KNU records link the exact H. J. Kim byline to the separate
+# Hong Joo Kim person page. Guard the entire saved Scholar row before adding
+# any proposed exclusion; nearby initials-only and collaboration rows stay held.
+KNU_NINE_EXACT_GUARDS = {
+    508: (
+        "bC4aq-4AAAAJ:owLR8QvbtFgC",
+        "Measurement of the quenching and channeling effects in a CsI crystal "
+        "used for a WIMP search",
+        "JH Lee, GB Kim, IS Seong, BH Kim, JH Kim, J Li, JW Park, JK Lee, ...",
+        "2015",
+        "Nuclear Instruments and Methods in Physics Research Section A: "
+        "Accelerators\xa0…, 2015",
+    ),
+    512: (
+        "bC4aq-4AAAAJ:buQ7SEKw-1sC",
+        "Low energy fast events from radon progenies at the surface of a "
+        "CsI (Tℓ) scintillator",
+        "SC Kim, H Bhang, JH Choi, WG Kang, HJ Kim, KW Kim, SK Kim, YD Kim, ...",
+        "2012",
+        "Astroparticle Physics 35 (12), 781-784, 2012",
+    ),
+    516: (
+        "bC4aq-4AAAAJ:1lhNe0rCu4AC",
+        "Performance of a large volume liquid scintillation detector for the "
+        "measurement of fast neutrons",
+        "JJ Zhu, KJ Kang, YJ Li, JW Kwak, H Bhang, SY Kim, SC Kim, SK Kim, ...",
+        "2005",
+        "J. Kor. Phys. Soc 47, 202, 2005",
+    ),
+    529: (
+        "bC4aq-4AAAAJ:s9ia6_kGH2AC",
+        "Neutron calibration facility with an Am-Be source for pulse shape "
+        "discrimination measurement of CsI (Tl) crystals",
+        "HS Lee, H Bhang, JH Choi, S Choi, IS Hahn, EJ Jeon, HW Joo, WG Kang, ...",
+        "2014",
+        "Journal of Instrumentation 9 (11), P11015-P11015, 2014",
+    ),
+    533: (
+        "bC4aq-4AAAAJ:CaZNVDsoPx4C",
+        "A study of CaMoO4 crystals for the AMoRE Experiment",
+        "JH So, HJ Kim, VV Alenkov, AN Annenkov, H Bhang, RS Boiko, ...",
+        "2012",
+        "2012 IEEE Nuclear Science Symposium and Medical Imaging Conference "
+        "Record\xa0…, 2012",
+    ),
+    571: (
+        "bC4aq-4AAAAJ:6yz0xqPARnAC",
+        "Simulation and measurement of quenching and channeling effects in "
+        "CsI (Tl) for dark matter search",
+        "JH Lee, H Bhang, JH Choi, WG Kang, BH Kim, HJ Kim, KW Kim, SC Kim, ...",
+        "2012",
+        "IEEE Transactions on Nuclear Science 59 (5), 2346-2353, 2012",
+    ),
+    572: (
+        "bC4aq-4AAAAJ:ALROH1vI_8AC",
+        "Crystal Growth and Scintillation Properties of",
+        "S Kim, G Rooh, HJ Kim, W Kim, U Hong",
+        "2010",
+        "IEEE Transactions on Nuclear Science 57 (3), 1251-1254, 2010",
+    ),
+    573: (
+        "bC4aq-4AAAAJ:BrOSOlqYqPUC",
+        "The Growth and Scintillation Characteristics of CsI:CO Single Crystals",
+        "SJ Ha, H Kang, H Park, HJ Kim, S Kim, SH Doh, SJ Kang",
+        "2009",
+        "IEEE Transactions on Nuclear Science 56 (3), 998-1001, 2009",
+    ),
+    647: (
+        "bC4aq-4AAAAJ:U3qCfcK-7lkC",
+        "Development of a neutron tagger module using a digital pulse shape "
+        "discrimination method",
+        "HJ Kim, EJ Kim, SY Kim",
+        "2008",
+        "2008 IEEE Nuclear Science Symposium Conference Record, 2917-2919, 2008",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(KNU_NINE_EXACT_GUARDS)
+KNU_NINE_PUBLICATIONS = {
+    508: (
+        "10.1016/j.nima.2015.02.011",
+        "measurement-of-the-quenching-and-channeling-effects-in-a-csi-crys/",
+    ),
+    512: (
+        "10.1016/j.astropartphys.2012.03.005",
+        "low-energy-fast-events-from-radon-progenies-at-the-surface-of-a-c/",
+    ),
+    516: (
+        "",
+        "performance-of-a-large-volume-liquid-scintillation-detector-for-t/",
+    ),
+    529: (
+        "10.1088/1748-0221/9/11/P11015",
+        "neutron-calibration-facility-with-an-am-be-source-for-pulse-shape/",
+    ),
+    533: (
+        "10.1109/NSSMIC.2012.6551459",
+        "a-study-of-camoo4-crystals-for-the-amore-experiment/",
+    ),
+    571: (
+        "10.1109/TNS.2012.2189019",
+        "simulation-and-measurement-of-quenching-and-channeling-effects-in/",
+    ),
+    572: (
+        "10.1109/TNS.2010.2041789",
+        "crystal-growth-and-scintillation-properties-of-cssub2subnacebr-su/",
+    ),
+    573: (
+        "10.1109/TNS.2009.2014063",
+        "the-growth-and-scintillation-characteristics-of-csicosub3sub-sing/",
+    ),
+    647: (
+        "10.1109/NSSMIC.2008.4774976",
+        "development-of-a-neutron-tagger-module-using-a-digital-pulse-shap/",
+    ),
+}
+for index, (doi, slug) in KNU_NINE_PUBLICATIONS.items():
+    guard = KNU_NINE_EXACT_GUARDS[index]
+    OTHER_PRIMARY[index] = (
+        guard[1],
+        int(guard[3]),
+        "Hong Joo Kim",
+        doi,
+        f"https://research.knu.ac.kr/en/publications/{slug}",
+        "KNU exact publication with H. J. Kim person link",
+        "KNU's exact article links its H. J. Kim author directly to "
+        "https://research.knu.ac.kr/en/persons/hong-joo-kim/, the "
+        "Physics professor Hong Joo Kim; saved title, year, byline, "
+        "and journal or conference details identify the same output.",
+    )
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in KNU_NINE_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4437,17 +4570,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 144,
+        "proposed_other_person_primary_work": 153,
         "proposed_no_target_author_primary_work": 10,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 286,
+        "unresolved_attribution_hold": 277,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 497 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 506 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
