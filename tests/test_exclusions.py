@@ -1,3 +1,4 @@
+import csv
 import json
 from pathlib import Path
 
@@ -34,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 737
+    assert len(exclusions) == 1073
     assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
@@ -42,7 +43,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
-    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 8
+    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 344
     assert sum(key[0] == "0e1jwkkAAAAJ" for key in exclusions) == 23
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
@@ -97,6 +98,39 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
+    path = Path("registry/reviews/2026-10-24-chem-kim-918-screen.csv")
+    with path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    assert len(rows) == 918
+    assert len({row["author_pub_id"] for row in rows}) == 918
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    proposed = [row for row in rows if row["status"].startswith("proposed_")]
+    assert len(proposed) == 336
+    for row in rows:
+        key = ("bC4aq-4AAAAJ", row["author_pub_id"])
+        if row["status"].startswith("proposed_") or row["status"] == "already_excluded":
+            assert key in exclusions
+        else:
+            assert key not in exclusions
+    knu = [
+        row
+        for row in proposed
+        if row["status"].startswith("proposed_other_person_knu_")
+    ]
+    assert len(knu) == 320
+    assert all(
+        row["matched_doi"] and "0000-0001-9787-4684" in row["evidence_url"]
+        for row in knu
+    )
+    supporting = next(row for row in rows if row["capture_index"] == "917")
+    assert supporting["status"] == "proposed_acs_supporting_information_nonpublication"
+    assert (
+        exclusions[("bC4aq-4AAAAJ", supporting["author_pub_id"])].reason_code
+        == "nonpublication"
+    )
 
 
 @pytest.mark.parametrize(
