@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "person_id": "person-richardstatman-2e46bf59",
+  "status": "review_only_no_snapshot_no_release",
+  "scholar_account_status": "no_verified_account",
+  "lifetime_publication_completeness": "not_established",
+  "sources": {
+    "cmu_profile": "https://www.cmu.edu/math/people/faculty/statman.html",
+    "cmu_recent_pdf": "https://www.cmu.edu/math/research/docs/sample-faculty-publications-2018-2023.pdf",
+    "kilthub_search_api": "https://api.figshare.com/v2/articles/search",
+    "kilthub_search_request": {
+      "search_for": "Richard Statman",
+      "page_size": 100,
+      "pages": [
+        1,
+        2
+      ]
+    },
+    "kilthub_statman_author_id": 5364608
+  },
+  "counts": {
+    "cmu_profile_selected": 12,
+    "cmu_recent_selected": 4,
+    "kilthub_search_hits": 19,
+    "kilthub_attributed_reports_or_manuscripts": 17,
+    "kilthub_other_author_theses": 2,
+    "attributed_source_observations_not_works": 33
+  },
+  "files": {
+    "cmu-profile.html": "3d54e732c22d69e6ba780e32be5f421430cc0e293eeded64229b809b9eeefc88",
+    "cmu-sample-publications.pdf": "727f50a85a0af3397dc6395566a0e8d719101c27a30865e4667c2df0ec67af8a",
+    "cmu-sample-publications.txt": "7b46a143e5b3f7aaf38543bfcfe24687baf9bb1f5f3ba08b3ce066ba38f91ae6",
+    "cmu-selected-16.csv": "0e5ae3a4c353dafb6ca03601ee48476d85b4959c46d476eac1644e260183b4f1",
+    "kilthub-article-6476546.json": "fa8eedb9f1b4a5309d8c277e34687773b17aa9d8ea7ae018e0d418a6eaa82510",
+    "kilthub-article-6476786.json": "9eab861a25b4d684e46dad8741f0e26e44d10767fd61c75f052dbe0b923199b6",
+    "kilthub-article-6476789.json": "27d598a4e349ed350497f1e5413c71c60151f1ead78d53349229b6c80eea49db",
+    "kilthub-article-6477062.json": "d10d9ef31c085a7cf2c4b67613a8a1e22e0281dbbaa5f5172cc0e8ef5d86b139",
+    "kilthub-article-6477065.json": "da72e604fce074c1dad572b9ff01208723b19b55fe14a528f89d15105b1ce631",
+    "kilthub-article-6477068.json": "80f94c26022f2b8dffdcfac603f4ae5df987c1eca554d622e619a29c9ca3ea3c",
+    "kilthub-article-6477296.json": "2c286963675bee38ac45424a1ec5ff430e59718c29d3279e72ca24aadd427c66",
+    "kilthub-article-6477599.json": "c319932f64ae1eb75015576372a2572f2beb6338ad3baf0fc2b6a9ebfa96bd6e",
+    "kilthub-article-6478274.json": "56582b4e42b82fcfae115c92cb92e4210db6cce72628aa7c919cc681b787391f",
+    "kilthub-article-6478454.json": "0724d19dc103efbba7631e5f4e13a15a0275c2003661d407473c400608d1a151",
+    "kilthub-article-6478568.json": "085cea267aede4493b60ac00e02b97470572f5a559d18a00463e670ca55aa2d2",
+    "kilthub-article-6478676.json": "8152ac55cc1a4909863caa5ae366207d7652cab02597edaa2fa3cddc96105a42",
+    "kilthub-article-6478850.json": "f5b5bace4adcfbf5d739095f7acf54e38adf4263852e408766fde58efed6129c",
+    "kilthub-article-6479309.json": "c15f2404b81daea4a9fd159a8f88a689f1f270102caa830f0891d89a38b7ee99",
+    "kilthub-article-6479492.json": "79d9bdbfa5dbb79507b59c9e17920e752216d7bb2fe72fcf0b0718fdaa445772",
+    "kilthub-article-6480068.json": "4362e60409e21ffabd64abfc001afba7befeb5b819ce58b67e7240289d815a93",
+    "kilthub-article-6480071.json": "f8ca0d0b35495151be20c622b1a7d27838455ecbf2f4fb2c451648a59f2470f3",
+    "kilthub-article-6723047.json": "95972adaf0dd21d3537b1809494fe016b6fe26a2ea51fd3b7f1d389af132c187",
+    "kilthub-article-6723053.json": "c13ecfe6552e4b5f5798eed0417e3faff9e7c36378a75d50fb1e457b19ee95b1",
+    "kilthub-search-19.csv": "4271a7d986057640f332766dfb2782ad2a87b1fa8c755f03ce34cdbb61aa62cf",
+    "kilthub-search-page-1.json": "efce2bca428002a059c82ca404fe6c7301a316b2ea6fc400de427f8ca2257d5d",
+    "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "source-observations-33.csv": "8033d0609e6871d4c8a041abc35961949cda024c97702465d9d9cd99d2d875a3"
+  }
+}
