@@ -97,11 +97,11 @@ def registry(scholar_id=SCHOLAR, person_id=PERSON):
     )
 
 
-def test_checked_in_chien_hold_is_source_bound() -> None:
+def test_checked_in_chien_release_is_source_bound() -> None:
     (item,) = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
     assert item.person_id == "person-chienho-da71f01b"
     assert item.scholar_id == "8iLLOQgAAAAJ"
-    assert item.state == "held"
+    assert item.state == "released"
     assert item.expected_source_rows == 582
     assert len(item.cache_sha256) == 64
 
