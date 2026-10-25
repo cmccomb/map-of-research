@@ -12,15 +12,22 @@ primary appointment.
 
 | Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | First-listed display tie-break | Unresolved |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,480 | 1,096 | 154 | 188 | 10 | 21 | 11 | 0 |
+| Included roster | 1,480 | 1,096 | 154 | 186 | 11 | 22 | 11 | 0 |
 | Excluded-only roster | 521 | 0 | 0 | 0 | 0 | 0 | 0 | 521 |
-| Entire registry | 2,001 | 1,096 | 154 | 188 | 10 | 21 | 11 | 521 |
+| Entire registry | 2,001 | 1,096 | 154 | 186 | 11 | 22 | 11 | 521 |
 
 The included count incorporates the later correction of Itamar Vigdorovich's
 future Fall 2027 Math appointment, which remains excluded pending its start.
 The 2026-10-25 [Sullivan review](2026-10-25-sullivan-primary-chemistry.md)
 also replaces one reviewed-source display choice with a bounded PhD
 advisee-count inference; it leaves the population totals unchanged.
+The [Schwartz and Boffi follow-up](2026-10-25-mcs-coequal-primary-homes.md)
+replaces two earlier reviewed-source display choices. Schwartz's current CBD
+department-head title supports a title-based display primary, with observed CBD
+PhD advisees recorded but no asserted Biological Sciences total. Boffi's
+degree-labeled advisee roster supports a bounded Machine Learning display
+primary among his two included coequal faculty homes. Both original
+memberships remain included.
 
 The explicit choices include their source URL, verification date, and basis in
 `people.csv`. `reviewed` means a source-backed map display choice;
