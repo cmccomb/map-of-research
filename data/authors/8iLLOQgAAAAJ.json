@@ -6407,5 +6407,18 @@
       "capture_row_index": 204,
       "citation_count_display": "27"
     }
-  ]
+  ],
+  "browser_capture": {
+    "method": "chrome_direct_profile",
+    "profile_url": "https://scholar.google.com/citations?user=8iLLOQgAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-25T01:26:26.747+00:00",
+    "source_json_filename": "chien-ho-visible-582-2026-10-24.json",
+    "source_json_sha256": "77fa46b17dfa9db74eed2fc3bafe6ca45960ca3d996e5951835ccb22dc9ab93e",
+    "source_html_filename": "chien-ho-visible-582-2026-10-24.html",
+    "source_html_sha256": "6eeee04c3f5d1e109b02b586ce2fbe39b5662da05aba58320824d78cd4e3b239",
+    "displayed_count": 582,
+    "limit": 5000,
+    "more_remain": false,
+    "coverage": "complete_visible_profile"
+  }
 }
