@@ -6992,6 +6992,14 @@
       "reason": "Incomplete title-only copy of the retained 2014 PLOS Computational Biology article by Naik, Rozman, and Belic, DOI 10.1371/journal.pcbi.1003993.",
       "evidence_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003993",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "2Lz_LuUAAAAJ",
+      "author_pub_id": "2Lz_LuUAAAAJ:IjCSPb-OGe4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The title is a pasted citation line naming Mulholland and repeating the complete 2013 OA Alcohol review retained as Scholar row 7 (DOI 10.13172/2053-0285-1-1-446); this row has no separate year or venue.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3890354/",
+      "verified_at": "2026-10-25"
     }
   ]
 }
