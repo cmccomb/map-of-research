@@ -1,0 +1,109 @@
+[
+  {
+    "case_id": "2013_probabilistic_method_chapter",
+    "status": "verified_source_observation_missing_from_both_lists",
+    "observation_ids": [
+      "CROSSREF:10.1201/b16132-60"
+    ],
+    "decision": "Publisher-registered 2013 book chapter by Frieze and Loh; separate from the author-page edited Olympiad book.",
+    "evidence": [
+      "10.1201/b16132-60",
+      "https://www.math.cmu.edu/~lohp/cv-general.pdf"
+    ]
+  },
+  {
+    "case_id": "2003_2006_shortest_paths",
+    "status": "distinct_genres_verified_relationship_open",
+    "observation_ids": [
+      "AUTHOR:Papers:41",
+      "ELEMENTS:82",
+      "ELEMENTS:84"
+    ],
+    "decision": "Same title, author, and pages, but two registered DOIs identify a 2003 journal article and a 2006 book chapter. Derivation or reprint relationship is not asserted.",
+    "evidence": [
+      "10.7155/jgaa.00071",
+      "10.1142/9789812773296_0013"
+    ]
+  },
+  {
+    "case_id": "2013_2016_anarchy_versions",
+    "status": "distinct_genres_verified_common_lineage",
+    "observation_ids": [
+      "AUTHOR:Papers:22",
+      "ELEMENTS:22",
+      "ELEMENTS:41",
+      "ELEMENTS:45",
+      "ARXIV:1307.3113"
+    ],
+    "decision": "Author citation and older CV identify the 2013 conference and 2016 journal versions; CMU also lists the 2013 preprint. Retain all manifestations.",
+    "evidence": [
+      "10.1145/2729978",
+      "10.1007/978-3-319-03536-9_17",
+      "arXiv:1307.3113",
+      "https://www.math.cmu.edu/~lohp/cv-general.pdf"
+    ]
+  },
+  {
+    "case_id": "2020_f_saturated_versions",
+    "status": "distinct_genres_verified_title_variant",
+    "observation_ids": [
+      "AUTHOR:Papers:5",
+      "ELEMENTS:8",
+      "ELEMENTS:10",
+      "ARXIV:1907.01603"
+    ],
+    "decision": "Author-linked arXiv ID and journal citation resolve the title expansion; journal and preprint remain separate manifestations.",
+    "evidence": [
+      "10.1016/j.ejc.2020.103185",
+      "arXiv:1907.01603"
+    ]
+  },
+  {
+    "case_id": "rainbow_revision_date",
+    "status": "first_submission_verified",
+    "observation_ids": [
+      "ELEMENTS:1",
+      "ARXIV:2011.04650"
+    ],
+    "decision": "CMU's 2026 date is an arXiv v4 display date; the captured arXiv result gives first submission 2020-11-08.",
+    "evidence": [
+      "arXiv:2011.04650"
+    ]
+  },
+  {
+    "case_id": "lavrov_loh_title_and_year",
+    "status": "doi_identity_verified_dates_distinct",
+    "observation_ids": [
+      "ELEMENTS:20"
+    ],
+    "decision": "Publisher DOI fixes the journal article identity. Crossref gives 2015 online publication while the CMU card and CV use the 2016 volume; CV reverses the first two title words.",
+    "evidence": [
+      "10.1002/rsa.20592",
+      "https://www.math.cmu.edu/~lohp/cv-general.pdf"
+    ]
+  },
+  {
+    "case_id": "2023_2024_covid_survey",
+    "status": "possible_version_relationship_unresolved",
+    "observation_ids": [
+      "ELEMENTS:4",
+      "ELEMENTS:5"
+    ],
+    "decision": "Seven-person bylines overlap, but titles, output types, and DOIs differ. Content-level relationship remains open.",
+    "evidence": [
+      "10.4018/IJHISI.353901",
+      "10.1101/2023.07.20.23292950"
+    ]
+  },
+  {
+    "case_id": "edited_olympiad_volume",
+    "status": "editor_versus_author_genre_verified",
+    "observation_ids": [
+      "AUTHOR:Olympiad related:5"
+    ],
+    "decision": "Author page and older CV identify Loh as one of three editors of a 2005 Olympiad volume. Do not treat it as a research journal article.",
+    "evidence": [
+      "https://www.math.cmu.edu/~lohp/cv-general.pdf"
+    ]
+  }
+]
