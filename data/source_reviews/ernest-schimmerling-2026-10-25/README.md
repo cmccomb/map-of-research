@@ -35,6 +35,18 @@ not appendix coauthors. The author page calls *Covering at limit cardinals
 of K* submitted in 2019, while Elements has its 2024 journal DOI; both dates
 are retained.
 
+His self-asserted [ORCID work item](https://pub.orcid.org/v3.0/0000-0001-6740-4809/work/30000450)
+adds a 1992 UCLA Ph.D. thesis missing from both displayed lists. The raw
+ORCID item and a separate `doctoral_dissertation` decision are pinned here.
+The ORCID type field says `book`, but its citation explicitly calls it a
+109-page UCLA thesis with MR number 2688939 and ProQuest number 9317054.
+CMU object 66288 is a 1995 journal article with the same title and DOI
+`10.1016/0168-0072(94)00036-3`; it remains a distinct manifestation while
+the possible thesis/article version family is held. The source union now
+contains 47 observations across CMU, the author page, and this ORCID thesis:
+45 CMU rows, one author-only appendix, and one thesis. These are neither
+47 distinct publications nor a certified full career.
+
 There is no verified Schimmerling Scholar profile. The author's page ends
 with a 2019 submission; Elements has a 2026 preprint. More works may exist
 outside these sources. All 34 author rows and 45 CMU observations remain

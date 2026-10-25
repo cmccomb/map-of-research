@@ -171,7 +171,48 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         row["relation"] in {"author_only", "author_and_elements"} for row in crosswalk
     )
 
-    return {
+    orcid = json.loads((source_dir / "orcid-1992-thesis.json").read_text())
+    thesis = json.loads((source_dir / "orcid-thesis-decision.json").read_text())
+    citation = orcid["citation"]["citation-value"]
+    article = next(row for row in elements if row["cmu_elements_object_id"] == "66288")
+    assert orcid["put-code"] == 30000450
+    assert orcid["source"]["source-name"]["value"] == "Ernest Schimmerling"
+    assert orcid["source"]["source-orcid"]["path"] == "0000-0001-6740-4809"
+    assert orcid["publication-date"]["year"]["value"] == "1992"
+    assert orcid["type"] == "book"  # The citation gives the actual thesis genre.
+    assert "Thesis (Ph.D.)--University of California, Los Angeles" in citation
+    assert "PAGES= {109}" in citation and "MRNUMBER= {2688939}" in citation
+    assert "9317054" in orcid["url"]["value"]
+    assert thesis["schema_version"] == 1
+    assert thesis["person_id"] == manifest["person_id"]
+    assert thesis["source_native_id"] == "orcid:0000-0001-6740-4809:work:30000450"
+    assert thesis["source_url"] == (
+        "https://pub.orcid.org/v3.0/0000-0001-6740-4809/work/30000450"
+    )
+    assert " ".join(orcid["title"]["title"]["value"].split()) == thesis["title"]
+    assert thesis["author"] == "Ernest Schimmerling"
+    assert thesis["year"] == 1992
+    assert thesis["publication_type"] == "doctoral_dissertation"
+    assert thesis["institution"] == "University of California, Los Angeles"
+    assert thesis["pages"] == 109
+    assert thesis["mr_number"] == "2688939"
+    assert thesis["proquest_number"] == "9317054"
+    assert article["doi"] == thesis["same_title_1995_article"]["doi"]
+    assert (
+        int(article["cmu_elements_object_id"])
+        == thesis["same_title_1995_article"]["cmu_elements_object_id"]
+    )
+    assert article["year"] == "1995" and article["type"] == "Journal article"
+    assert (
+        thesis["same_title_1995_article"]["version_relation"]
+        == "possible_thesis_article_family_held"
+    )
+    assert all(
+        thesis[field] is False
+        for field in ("release_eligible", "map_eligible", "collaboration_eligible")
+    )
+
+    counts = {
         "elements_observations": len(elements),
         "author_observations": len(author),
         "author_matched_elements": len(linked),
@@ -179,7 +220,13 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "author_only_observations": sum(
             row["relation"] == "author_only" for row in crosswalk
         ),
+        "orcid_thesis_observations": 1,
+        "union_source_manifestations": len(elements)
+        + sum(row["relation"] == "author_only" for row in crosswalk)
+        + 1,
     }
+    assert manifest["counts"] == counts
+    return counts
 
 
 if __name__ == "__main__":

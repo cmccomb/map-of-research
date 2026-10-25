@@ -16,13 +16,17 @@
     "author-publications.html": "75bffe25a1410992b6fc2d7296db5934f36579c69d16aff7ad0eb12c1be06309",
     "elements-45.csv": "b2c2ffd7d7931ed94480355f2daa64a63e91b80794da346ce6efd77e3fc8b08b",
     "author-34.csv": "af2d33f6a1060ad74fbae94e50b14d5662bd29c78030a388bfdbd68ddc23aa5d",
-    "author-elements-crosswalk-34.csv": "0810253db26e5d0de4ba4cc0e591c5bb6cacc53a1e8214fd7d7c5914e73ee62b"
+    "author-elements-crosswalk-34.csv": "0810253db26e5d0de4ba4cc0e591c5bb6cacc53a1e8214fd7d7c5914e73ee62b",
+    "orcid-1992-thesis.json": "2784270378cf37136f454ff8e8e2799e1254a5b9024e62023743a4b9dc78c351",
+    "orcid-thesis-decision.json": "06ddf67bd7c835c431400ad3c70338f23bed6f71669771c873f80f70d9670a08"
   },
   "counts": {
     "elements_observations": 45,
     "author_observations": 34,
     "author_matched_elements": 41,
     "elements_only_observations": 4,
-    "author_only_observations": 1
+    "author_only_observations": 1,
+    "orcid_thesis_observations": 1,
+    "union_source_manifestations": 47
   }
 }
