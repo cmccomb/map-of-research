@@ -124,6 +124,23 @@
       ],
       "expected_reviewed_exclusion_rows": 43,
       "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    },
+    {
+      "person_id": "person-cjoelmcmanus-f28918ce",
+      "scholar_id": "28yZqbcAAAAJ",
+      "expected_source_rows": 62,
+      "cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "3316309a95705c86671fc2144795b95a22296fc4df3c358334290e9fe002bc84",
+      "held_observations": [
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reason": "Rustbelt RNA 2021 lists Tosiano's poster 101 and its topic, but the public organizer record does not verify the complete four-name Scholar byline or contributor roles; hold the placeholder from map and coauthor edges pending the original abstract.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=28yZqbcAAAAJ&cstart=20&pagesize=80&citation_for_view=28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }

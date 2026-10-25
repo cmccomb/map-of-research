@@ -1,9 +1,11 @@
 import json
 from pathlib import Path
 
+import numpy
 import pandas
 import pytest
 
+import map_of_research.keywords as keywords
 from map_of_research.doi_aliases import (
     DEFAULT_DOI_ALIASES_PATH,
     load_doi_aliases,
@@ -34,6 +36,69 @@ def test_walkington_alias_matches_exact_raw_scholar_row() -> None:
         ]
     )
     validate_doi_aliases(frame, aliases, {})
+
+
+def test_murphy_spatial_package_exact_alias_survives_weak_region() -> None:
+    key = ("qQLlBH4AAAAJ", "qQLlBH4AAAAJ:RMgMIBzvq-4C")
+    alias = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)[key]
+    assert alias.doi == "10.1515/jib-2022-0054"
+    assert alias.observed_title == (
+        "SBML level 3 package: spatial processes, version 1, release 1"
+    )
+    assert alias.observed_year == 2023
+    assert "https://sbml.org/documents/specifications/level-3/version-1/spatial/" in (
+        alias.evidence_urls
+    )
+    raw = pandas.DataFrame(
+        [
+            {
+                "source_type": "scholar",
+                "scholar_id": key[0],
+                "author_pub_id": key[1],
+                "title": alias.observed_title,
+                "year": alias.observed_year,
+                "source_doi": "",
+            }
+        ]
+    )
+    validate_doi_aliases(raw, {key: alias}, {})
+
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    rows = []
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+            }
+        )
+    rows[0].update(
+        {
+            "year": alias.observed_year,
+            "citation_count": 12,
+            "title": alias.observed_title,
+            "authors": "JC Schaff, A Lakshminarayana, RF Murphy, FT Bergmann, et al.",
+            "venue": "Journal of Integrative Bioinformatics 20 (1), 20220054",
+            "doi": alias.doi,
+            "source_urls": list(alias.evidence_urls),
+        }
+    )
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+    assert bool(audited.loc[0, "map_eligible"])
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited["map_eligible"].sum() == 1
 
 
 def test_trusted_upload_uses_producer_doi_alias_manifest() -> None:
@@ -147,4 +212,223 @@ def test_loader_rejects_structure_and_duplicate(tmp_path) -> None:
     ):
         path.write_text(json.dumps(invalid), encoding="utf-8")
         with pytest.raises(ValueError, match=message):
+            load_doi_aliases(path)
+
+
+def _gordon_alias_entry() -> dict:
+    return {
+        "scholar_id": "n6flaAsAAAAJ",
+        "author_pub_id": "n6flaAsAAAAJ:M3NEmzRMIkIC",
+        "observed_title": "Exchange processes",
+        "observed_year": 2006,
+        "published_doi": "10.1007/1-4020-3500-4_18",
+        "relationship": "version_of_record",
+        "evidence_urls": [
+            "https://link.springer.com/chapter/10.1007/1-4020-3500-4_18",
+            "https://link.springer.com/book/10.1007/1-4020-3500-4",
+        ],
+        "verified_at": "2026-10-25",
+        "allow_short_title_region_override": True,
+    }
+
+
+def _gordon_source_row() -> dict:
+    return {
+        "source_type": "scholar",
+        "scholar_id": "n6flaAsAAAAJ",
+        "author_pub_id": "n6flaAsAAAAJ:M3NEmzRMIkIC",
+        "title": "Exchange processes",
+        "year": 2006,
+        "authors": "GS Rule, TK Hitchens",
+        "venue": "Fundamentals of Protein NMR Spectroscopy, 403-430, 2006",
+        "source_doi": "",
+        "source_url": (
+            "https://scholar.google.com/citations?view_op=view_citation"
+            "&user=n6flaAsAAAAJ&citation_for_view=n6flaAsAAAAJ:M3NEmzRMIkIC"
+        ),
+    }
+
+
+def test_short_title_override_requires_exact_scholar_citation_and_springer_evidence(
+    tmp_path,
+) -> None:
+    entry = _gordon_alias_entry()
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps({"schema_version": 1, "aliases": [entry]}))
+    aliases = load_doi_aliases(path)
+    assert aliases[
+        (entry["scholar_id"], entry["author_pub_id"])
+    ].allow_short_title_region_override
+    validate_doi_aliases(pandas.DataFrame([_gordon_source_row()]), aliases, {})
+
+    for field, value in (
+        ("title", "Different chapter"),
+        ("year", 2007),
+        ("source_url", "https://scholar.google.com/citations?user=n6flaAsAAAAJ"),
+        ("authors", ""),
+        ("venue", ""),
+    ):
+        with pytest.raises(ValueError, match="observed title|short-title override"):
+            validate_doi_aliases(
+                pandas.DataFrame([{**_gordon_source_row(), field: value}]),
+                aliases,
+                {},
+            )
+
+    for field, value in (
+        ("allow_short_title_region_override", "true"),
+        ("observed_year", None),
+        ("observed_title", "A long enough title to pass an ordinary region guard"),
+        (
+            "evidence_urls",
+            [
+                "https://example.org/chapter/10.1007/1-4020-3500-4_18",
+                "https://link.springer.com/book/10.1007/1-4020-3500-4",
+            ],
+        ),
+        ("published_doi", "10.1007/not-the-chapter"),
+    ):
+        path.write_text(
+            json.dumps({"schema_version": 1, "aliases": [{**entry, field: value}]})
+        )
+        with pytest.raises(ValueError, match="short-title override"):
+            load_doi_aliases(path)
+
+
+def test_cell_short_title_override_requires_exact_doi_pii_and_pubmed_chain(
+    tmp_path,
+) -> None:
+    entry = {
+        "scholar_id": "28yZqbcAAAAJ",
+        "author_pub_id": "28yZqbcAAAAJ:UeHWp8X0CEIC",
+        "observed_title": "Getting the message out",
+        "observed_year": 2008,
+        "published_doi": "10.1016/j.molcel.2008.06.010",
+        "relationship": "version_of_record",
+        "evidence_urls": [
+            "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+            "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+            "https://doi.org/10.1016/j.molcel.2008.06.010",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2713004/",
+        ],
+        "verified_at": "2026-10-25",
+        "allow_short_title_region_override": True,
+    }
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps({"schema_version": 1, "aliases": [entry]}))
+    aliases = load_doi_aliases(path)
+    key = (entry["scholar_id"], entry["author_pub_id"])
+    assert aliases[key].allow_short_title_region_override
+    source_row = {
+        "source_type": "scholar",
+        "scholar_id": key[0],
+        "author_pub_id": key[1],
+        "title": entry["observed_title"],
+        "year": entry["observed_year"],
+        "authors": "CJ McManus, BR Graveley",
+        "venue": "Molecular cell 31 (1), 4-6, 2008",
+        "source_doi": "",
+        "source_url": (
+            "https://scholar.google.com/citations?view_op=view_citation"
+            "&user=28yZqbcAAAAJ"
+            "&citation_for_view=28yZqbcAAAAJ:UeHWp8X0CEIC"
+        ),
+    }
+    validate_doi_aliases(pandas.DataFrame([source_row]), aliases, {})
+
+    for change in (
+        {"author_pub_id": "28yZqbcAAAAJ:another"},
+        {"observed_title": "Another message"},
+        {"observed_year": 2009},
+        {"published_doi": "10.1016/j.molcel.2008.06.011"},
+        {"evidence_urls": entry["evidence_urls"][1:]},
+        {"evidence_urls": [entry["evidence_urls"][0], *entry["evidence_urls"][2:]]},
+        {"evidence_urls": entry["evidence_urls"][:2] + entry["evidence_urls"][3:]},
+        {
+            "evidence_urls": [
+                "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00429-0",
+                *entry["evidence_urls"][1:],
+            ]
+        },
+    ):
+        path.write_text(
+            json.dumps({"schema_version": 1, "aliases": [{**entry, **change}]})
+        )
+        with pytest.raises(ValueError, match="short-title override"):
+            load_doi_aliases(path)
+
+    for change in (
+        {"title": "Different title"},
+        {"year": 2009},
+        {"source_url": "https://scholar.google.com/citations?user=28yZqbcAAAAJ"},
+        {"authors": ""},
+        {"venue": ""},
+    ):
+        with pytest.raises(ValueError, match="observed title|short-title override"):
+            validate_doi_aliases(
+                pandas.DataFrame([{**source_row, **change}]), aliases, {}
+            )
+
+
+def test_neuron_four_word_title_has_only_its_exact_reviewed_exception(
+    tmp_path,
+) -> None:
+    entry = {
+        "scholar_id": "FXqaMl4AAAAJ",
+        "author_pub_id": "FXqaMl4AAAAJ:UebtZRa9Y70C",
+        "observed_title": "Constructing the External World",
+        "observed_year": 2017,
+        "published_doi": "10.1016/j.neuron.2017.06.006",
+        "relationship": "version_of_record",
+        "evidence_urls": [
+            "https://www.sciencedirect.com/science/article/pii/S0896627317305044",
+            "https://pubmed.ncbi.nlm.nih.gov/28641104/",
+            "https://doi.org/10.1016/j.neuron.2017.06.006",
+        ],
+        "verified_at": "2026-10-25",
+        "allow_short_title_region_override": True,
+    }
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps({"schema_version": 1, "aliases": [entry]}))
+    aliases = load_doi_aliases(path)
+    assert (
+        aliases[(entry["scholar_id"], entry["author_pub_id"])].doi
+        == entry["published_doi"]
+    )
+    validate_doi_aliases(
+        pandas.DataFrame(
+            [
+                {
+                    "source_type": "scholar",
+                    "scholar_id": entry["scholar_id"],
+                    "author_pub_id": entry["author_pub_id"],
+                    "title": entry["observed_title"],
+                    "year": entry["observed_year"],
+                    "authors": "J Lee, AL Barth",
+                    "venue": "Neuron 94 (6), 1048-1050, 2017",
+                    "source_doi": "",
+                    "source_url": (
+                        "https://scholar.google.com/citations?view_op=view_citation"
+                        "&user=FXqaMl4AAAAJ"
+                        "&citation_for_view=FXqaMl4AAAAJ:UebtZRa9Y70C"
+                    ),
+                }
+            ]
+        ),
+        aliases,
+        {},
+    )
+    for change in (
+        {"author_pub_id": "FXqaMl4AAAAJ:other"},
+        {"observed_title": "Constructing another World"},
+        {"observed_year": 2018},
+        {"published_doi": "10.1016/j.neuron.2017.06.007"},
+        {"evidence_urls": entry["evidence_urls"][1:]},
+        {"evidence_urls": entry["evidence_urls"][:2]},
+        {"evidence_urls": [entry["evidence_urls"][0], entry["evidence_urls"][2]]},
+    ):
+        path.write_text(
+            json.dumps({"schema_version": 1, "aliases": [{**entry, **change}]})
+        )
+        with pytest.raises(ValueError, match="short-title override"):
             load_doi_aliases(path)
