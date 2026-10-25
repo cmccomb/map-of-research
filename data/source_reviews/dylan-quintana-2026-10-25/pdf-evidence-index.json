@@ -1,0 +1,37 @@
+{
+  "cmu-selected-2018-2023": {
+    "source_url": "https://www.cmu.edu/math/research/docs/sample-faculty-publications-2018-2023.pdf",
+    "content_committed": false,
+    "bytes": 153647,
+    "source_sha256": "727f50a85a0af3397dc6395566a0e8d719101c27a30865e4667c2df0ec67af8a",
+    "inspected_evidence": "Dylan section lists two selected 2020 coding proceedings; timeframe since 2018, not a lifetime list."
+  },
+  "nist-surf-2014": {
+    "source_url": "https://www.nist.gov/system/files/documents/2017/05/09/Promo-book-for-SURF-2014.pdf",
+    "content_committed": false,
+    "bytes": 1251986,
+    "source_sha256": "32fba4dbaf4aff9e7ee3c63f3e869c89200ab1737a5856cfdfd442c7888ae0f6",
+    "inspected_evidence": "Page headed A Bayesian Approach to Crystal Structure Refinement, Dylan Quintana."
+  },
+  "aca-2015": {
+    "source_url": "https://acas.memberclicks.net/assets/Meeting/ProgramBooks/2015%20PB.pdf",
+    "content_committed": false,
+    "bytes": 1265971,
+    "source_sha256": "4d8d52c60141b35f52cc5ce236688378a00e6425309586d22ba053c94ec6dea1",
+    "inspected_evidence": "Poster T30 credits Dylan Quintana for Neutron investigations of multiferroic LuFeO3."
+  },
+  "aca-2016": {
+    "source_url": "https://acas.memberclicks.net/assets/Meeting/ProgramBooks/2016%20PB.pdf",
+    "content_committed": false,
+    "bytes": 954448,
+    "source_sha256": "40956002098a246c4cd1bf95e014427a40c5a9496d7b42d83055c5d0fc00ecb4",
+    "inspected_evidence": "Talk 01.11.01.02 credits Dylan Quintana for Bayesian Library for the Analysis of Neutron Diffraction Data."
+  },
+  "acns-2016": {
+    "source_url": "https://www.osti.gov/servlets/purl/1343116",
+    "content_committed": false,
+    "bytes": 1211787,
+    "source_sha256": "552f8492f92e4dd568d9df3c4da22a270575be8c8b344dfcfd8fb8855bd2a220",
+    "inspected_evidence": "Talk B1.02 credits Dylan Quintana for Bayesian Library for the Analysis of Neutron Diffraction Data (BLAND)."
+  }
+}
