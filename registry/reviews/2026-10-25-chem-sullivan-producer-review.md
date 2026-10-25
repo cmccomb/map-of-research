@@ -39,4 +39,4 @@ The Donahue crosswalk in [#188](https://github.com/cmccomb/map-of-research/pull/
 
 ## Release hold
 
-Do not promote Sullivan's 250-row cache until the two ORNL old IDs have a narrow reviewed crosswalk to the exact excluded current row, the remaining 17 held new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. The AGU abstract now has a primary-backed curated disposition, but no candidate cache hash or gate exception exists. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.
+Do not promote Sullivan's 250-row cache until the remaining 15 held new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. The four old-only IDs now have source-backed dispositions in the companion crosswalk draft, including the two ORNL IDs' exact excluded current target; no candidate cache hash or gate exception exists. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.

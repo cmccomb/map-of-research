@@ -1931,6 +1931,22 @@
     },
     {
       "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:Ade32sEp0pkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "American Meteorological Society publisher metadata for the exact CROCUS Micronet article, DOI 10.1175/BAMS-D-25-0174.1, assigns coauthor Ryan C. Sullivan to Argonne National Laboratory, not CMU.",
+      "evidence_url": "https://api.crossref.org/works/10.1175%2FBAMS-D-25-0174.1",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:LPtt_HFRSbwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "DOE OSTI's exact 2026 ECORSF wind-data record, DOI 10.5439/3375191, lists Ryan Sullivan with Cook, Keeler, and Pal; their ARM flux article identifies Ryan C. Sullivan at Argonne with rcsullivan@anl.gov, not CMU.",
+      "evidence_url": "https://www.osti.gov/api/v1/records/3375191",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "wXSgFr4AAAAJ",
       "author_pub_id": "wXSgFr4AAAAJ:3NQIlFlcGxIC",
       "reason_code": "false_profile_attribution",
       "reason": "The linked primary source attributes this exact work or dataset to the Argonne Ryan C. Sullivan, not CMU Ryan Sullivan.",
