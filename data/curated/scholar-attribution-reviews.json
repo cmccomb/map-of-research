@@ -3132,6 +3132,30 @@
       "evidence_basis": "Publisher-deposited exact DOI metadata lists Patrick Kochanek, John Melick, Lesley Foley, T. K. Hitchens, and Chien Ho on the 2006 Crit Care Med A6 abstract.",
       "evidence_url": "https://api.crossref.org/works/10.1097%2F00003246-200612002-00024",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:owLR8QvbtFgC",
+      "bibliography_entry": null,
+      "evidence_basis": "University of Pittsburgh's Yijen Wu faculty bibliography lists the exact title, 2010 APSIPA ASC venue, pages 643-652, and all seven Scholar authors including C. Ho. Wu and Hitchens are members of the documented CMU Chien Ho MRI research team; this is an exact work attribution rather than a title-only thematic match.",
+      "evidence_url": "https://www.engineering.pitt.edu/people/faculty/yijen-wu/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:jmjb1lOE9QIC",
+      "bibliography_entry": null,
+      "evidence_basis": "University of Pittsburgh's Mohamed Ezzelarab faculty bibliography lists the exact title, American Journal of Transplantation 9:653 (2009), and complete 14-author list ending in C. Ho. The Hitchens/Foley/Ye/Wu collaborators match the CMU Chien Ho MRI team. This supports the exact conference abstract as a distinct Scholar work.",
+      "evidence_url": "https://www.engineering.pitt.edu/people/faculty/mohamed-ezzelarab/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:zdjWy_NXXwUC",
+      "bibliography_entry": null,
+      "evidence_basis": "Publisher Ovid page independently verifies the exact abstract title, number 227, eight-author byline including Chien Ho, venue, September 2004, and pages S83-S84. Scholar description instead discusses heat-shock in cardiomyocytes and appears to be wrongly attached; it must not be used as this work's abstract.",
+      "evidence_url": "https://www.ovid.com/journals/frbm/abstract/00003949-200409001-00248~coordinated-regulation-of-hypoxic-vasodilation-by-the-red",
+      "verified_at": "2026-10-25"
     }
   ]
 }

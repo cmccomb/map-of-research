@@ -56,8 +56,8 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "held_duplicate_review": 4,
     }
     assert attribution.held_profiles == {SCHOLAR_ID}
-    assert len(attribution.confirmed) == 424
-    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 90
+    assert len(attribution.confirmed) == 427
+    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 92
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
     } <= {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
@@ -74,10 +74,10 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     } == {pub_id for sid, pub_id in exclusions if sid == SCHOLAR_ID}
     assert Counter(row["review_decision"] for row in final_rows) == {
         "confirmed_retained": 304,
-        "confirmed_retained_candidate": 120,
+        "confirmed_retained_candidate": 123,
         "confirmed_excluded": 37,
-        "confirmed_excluded_candidate": 53,
-        "still_held": 46,
+        "confirmed_excluded_candidate": 55,
+        "still_held": 41,
         "confirmed_author_context_hold": 12,
         "confirmed_author_metadata_hold": 9,
         "confirmed_author_duplicate_swap_hold": 1,
@@ -102,6 +102,21 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         final_rows[index - 1]["review_decision"] == "still_held"
         for index in (402, 513, 514)
     )
+    for index in (476, 482, 496):
+        row = final_rows[index - 1]
+        assert row["review_decision"] == "confirmed_retained_candidate"
+        assert (SCHOLAR_ID, row["author_pub_id"]) in attribution.confirmed
+    for index, retained in ((430, "13"), (540, "202")):
+        row = final_rows[index - 1]
+        assert row["review_decision"] == "confirmed_excluded_candidate"
+        assert row["related_row"] == retained
+        assert (
+            exclusions[(SCHOLAR_ID, row["author_pub_id"])].reason_code
+            == "corrupted_duplicate"
+        )
+    assert final_rows[502]["review_decision"] == "still_held"
+    assert (SCHOLAR_ID, final_rows[502]["author_pub_id"]) not in attribution.confirmed
+    assert (SCHOLAR_ID, final_rows[502]["author_pub_id"]) not in exclusions
     assert all(
         ";" not in decision.evidence_url for decision in attribution.confirmed.values()
     )
@@ -289,7 +304,7 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (pandas.DataFrame(), {}),
+        lambda *args, **kwargs: (pandas.DataFrame({"scholar_id": []}), {}),
     )
     monkeypatch.setattr(publisher, "load_exclusions", lambda path: {key: object()})
     monkeypatch.setattr(

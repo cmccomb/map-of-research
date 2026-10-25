@@ -8712,6 +8712,22 @@
       "reason": "Exact citation detail gives author 何健益 and links the thesis listing. Airiti exact 2008 National Tsing Hua University doctoral thesis listing expands 何健益 as Chien-Yi Ho and gives DOI 10.6843/NTHU.2008.00601.",
       "evidence_url": "https://www.airitilibrary.com/Article/Detail/U0016-2002201314540241",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:R-LXmdHK_14C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Publisher's 1996 volume 10 issue 2 assigns pages 109-120 to 'Abstracts selected from Excerpta Medica's EMBASE'; page 116 is inside that digest, not a separate authored article. NLM and CMU identify the original 1995 Journal of Neurotrauma paper with the same title, byline, and abstract (retained Scholar row 13). Retain Scholar row 13; preserve this raw observation.",
+      "evidence_url": "https://journals.sagepub.com/toc/rnn/10/2",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:0sTkTiv_uMkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "NLM identifies the original Journal of Biological Chemistry article by Ho and Kurland as 241(13):3002-3007 (1966); CMU bibliography entry 7 is this paper, already retained as Scholar row 202. The expanded Scholar volume, issue, and pages match exactly. Retain Scholar row 202; preserve this raw observation.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/4287904/",
+      "verified_at": "2026-10-25"
     }
   ]
 }
