@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "review_state": "source_reviewed_proposed_not_applied",
-  "reviewed_at": "2026-10-24",
-  "note": "These 88 exact source-reviewed observations are proposed for later producer review: 52 retained from the prior ledger, 35 official NSF award records, and one Nottingham-confirmed Walker namesake row. Walker rows 404, 410, and 411 moved back to unresolved because the cited PDF is an indirect bibliography, not the exact reports. Walker’s entire 413-row profile remains held for wider same-name attribution review. Other patent, committee, duplicate, and malformed rows remain preliminary. All raw capture and cache rows remain intact; this source draft applies no producer exclusion.",
+  "reviewed_at": "2026-10-25",
+  "note": "These 110 exact source-reviewed observations are proposed for producer review. The 22 new decisions on 2026-10-25 use original publisher, university, patent, or author records. Morningstar and Parno source/producer pairs have since merged, so 24 IDs already occur on current main; do not reapply them. Walker’s entire 413-row profile remains held while 11 individual candidates and grouped flags remain. All raw captures and author caches remain intact; this source review applies no producer exclusion.",
   "exclusions": [
     {
       "scholar_id": "hgtyZOUAAAAJ",
@@ -707,6 +707,182 @@
       "reason": "Capture row 214 is an occupational-therapy trial whose University of Nottingham record names Marion F. Walker among the authors, not the CMU astrophysicist.",
       "evidence_url": "https://nottingham-repository.worktribe.com/output/1230686/bathing-adaptations-in-the-homes-of-older-adults-bath-out-results-of-a-feasibility-randomised-controlled-trial-rct",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:YohjEiUPhakC",
+      "reason_code": "nonpublication",
+      "reason": "The saved string is a sequence of author names and page numbers from the author index of Computer Simulation Studies in Condensed-Matter Physics XIX, not a titled Deserno publication.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-540-85625-2",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "nonpublication",
+      "reason": "The captured opening sentence is PCCP themed-issue front matter and contents, not a Deserno-authored paper.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlepdf/2009/cp/b904926f",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:tzM49s52ZIMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 104:170a abstract retained as row 187, with the same Diggins–Deserno byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2012.11.956",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:tkaPQYYpVKoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 98:634a abstract retained as row 201, with the same Bereau–Bachmann–Deserno byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2009.12.3470",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:Y5dfb0dijaUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 104:413a abstract retained as row 186, with the same four-author byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2012.11.2301",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:eMMeJKvmdy0C",
+      "reason_code": "nonpublication",
+      "reason": "The exact CMU-hosted PDF is a Physics for Future Presidents course study aid summarizing textbook chapters, not a research publication.",
+      "evidence_url": "https://www.cs.cmu.edu/afs/andrew.cmu.edu/course/33/115/wwwbackup/study_aids/chapter_summaries.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:f2IySw72cVMC",
+      "reason_code": "nonpublication",
+      "reason": "The saved record is supplementary material for the 2013 Journal of Chemical Physics article retained as row 25, not a separate research work.",
+      "evidence_url": "https://doi.org/10.1063/1.4808077",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2018 pathology rostering report and full byline were entered in the ORCID record of Matthew Walker of RMIT School of Management, distinct from CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://pub.orcid.org/v3.0/0000-0003-1086-6222/work/121411569",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:hSRAE-fF4OAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original IJIC poster abstract gives this M. Walker a University of Nottingham Division of Rehabilitation and Ageing affiliation, not the CMU astrophysicist identity.",
+      "evidence_url": "https://ijic.org/articles/785/files/submission/proof/785-1-2513-1-10-20110721.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:1sJd4Hv_s6UC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2009 Slavic-journal exchange with Edyta Bojanowska belongs to the Matthew Walker documented in Wisconsin and Middlebury Russian-literature records, not CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://www.jstor.org/stable/40651107",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:P5F9QuxV20EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2008 review of Bojanowska’s Gogol book is by the Matthew Walker documented in Wisconsin and Middlebury Russian-literature records, not CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://www.jstor.org/stable/20459632",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The saved shortened byline and exact title match the 2018 pathology rostering report entered in RMIT management scholar Matthew Walker’s ORCID record; row 222 is its fuller saved copy.",
+      "evidence_url": "https://pub.orcid.org/v3.0/0000-0003-1086-6222/work/121411569",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:V3AGJWp-ZtQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2010 AA449 Milestone Report 2 names the five-person University of Washington blimp-project team, including its Matthew Walker; the CMU astrophysicist was then on a Cambridge/Harvard postdoctoral track.",
+      "evidence_url": "https://depts.washington.edu/soslab/mw/images/7/7d/Group2MS2Report.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:9DLIHnF0jcYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title, 1987 PRL volume and page repeat retained row 19; the publisher lists Stroscio, Feenstra and Fein, while this duplicate adds an unsupported Tersoff byline.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.58.1668",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:pZYLKkizsIQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title is the IBM Zurich Research Laboratory affiliation in Swendsen’s 1982 Monte Carlo Renormalization Group chapter, already retained as row 134.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4613-3347-0_17",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:FmXltp8y-ZkC",
+      "reason_code": "nonpublication",
+      "reason": "Publication Submission Form is the footer of a CMU Robotics Institute publications page that lists Swendsen’s actual haptics paper, retained as row 73.",
+      "evidence_url": "https://www.ri.cmu.edu/pubs/page/126/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:_B80troHkn4C",
+      "reason_code": "nonpublication",
+      "reason": "The original CPC 121–122 contents list Diggs–Genovese–Kadane–Swendsen’s Bayesian analysis of series expansions on pp. 1–4 followed by Domany–Blatt–Gdalyahu–Weinshall’s clustering article on pp. 5–12. The saved guest-editor title and combined byline are contents fragments, not a separate Swendsen work.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0010465599004816",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "author_pub_id": "czs45aEAAAAJ:YsrPvlHIBpEC",
+      "reason_code": "nonpublication",
+      "reason": "Okabe, Y. 206 is a bibliography/index fragment for Okabe and Niizeki’s pp. 206–214 chapter in the 1990 proceedings; Widom’s distinct chapter in that volume spans pp. 112–119.",
+      "evidence_url": "https://tohoku.repo.nii.ac.jp/record/12373/files/KJ00004424577.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is the Tenth Joint MMM–Intermag 2007 Program Committee roster, not an authored research paper.",
+      "evidence_url": "https://www.intermagconference.com/files/intermag_2007_baltimore_program.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:-_dYPAW6P2MC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The issue-heading fragment carries the exact author sequence of the first JMMM 282 article on pp. 1–5, already retained as row 87.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmmm.2004.04.025",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:JoZmwDi-zQgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The truncated title and byline repeat the full 1995 Scripta Metallurgica et Materialia paper retained as row 115.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/dl0p/laughlin/pdf/181.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:WA5NYHcadZ8C",
+      "reason_code": "nonpublication",
+      "reason": "IEEE Magnetics Society is the officers and administrative committee roster in the official Intermag 2006 program, not an authored research work.",
+      "evidence_url": "https://intermagconference.com/intermag2006/apb.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }

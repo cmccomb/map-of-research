@@ -1,21 +1,9 @@
 {
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
-  "reviewed_at": "2026-10-24",
-  "note": "Two blank-venue dissertation rows, Singh 38 and Hunt 31, are verified genuine and retained. Hunt row 95 and patent/publication-type questions remain preliminary. Exact source-reviewed proposals are in the follow-on ledger. All source and cache rows remain intact; preliminary flags are not producer exclusions.",
+  "reviewed_at": "2026-10-25",
+  "note": "Both Singh patent rows are verified genuine and retained under the project patent policy; Hunt row 95 remains unresolved. Source and cache rows remain intact; no producer change is applied here.",
   "candidates": [
-    {
-      "scholar_id": "hgtyZOUAAAAJ",
-      "capture_row": 37,
-      "author_pub_id": "hgtyZOUAAAAJ:YohjEiUPhakC",
-      "concern": "Patent record; decide publication-type policy before any exclusion."
-    },
-    {
-      "scholar_id": "hgtyZOUAAAAJ",
-      "capture_row": 48,
-      "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
-      "concern": "Patent record; decide publication-type policy before any exclusion."
-    },
     {
       "scholar_id": "11EoZncAAAAJ",
       "capture_row": 95,
@@ -111,6 +99,20 @@
       "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
       "reason": "CMU CV identifies Relaxation Dynamics Of Solid Helium-4 as Benjamin Hunt’s 2009 Cornell Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
       "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/hunt_cv.pdf"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 37,
+      "author_pub_id": "hgtyZOUAAAAJ:YohjEiUPhakC",
+      "reason": "Retain as a genuine Simranjeet Singh patent application; the project supports patent work identity by published document number.",
+      "evidence_url": "https://patents.google.com/patent/US20230335325A1/en"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 48,
+      "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
+      "reason": "Retain as a genuine Simranjeet Singh patent; the project supports patent work identity by published document number.",
+      "evidence_url": "https://patents.google.com/patent/US10134979B1/en"
     }
   ]
 }

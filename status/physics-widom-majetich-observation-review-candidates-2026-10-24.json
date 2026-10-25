@@ -1,62 +1,14 @@
 {
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
-  "reviewed_at": "2026-10-24",
-  "note": "Eighteen exact Majetich NSF award rows moved to the follow-on proposed ledger after official award checks; seven prior Widom/Majetich exact proposals remain. Widom row 215 is a genuine book chapter and Majetich row 270 an EPA-hosted presentation abstract; both remain retained. Patent, report, and malformed candidate rows still need source review. All 486 source and cache rows remain intact; no producer exclusion is applied here.",
+  "reviewed_at": "2026-10-25",
+  "note": "Widom row 214 and Majetich rows 222, 265, 266 and 267 moved to the exact proposed ledger. Majetich patents 93, 104 and 135 are genuine and retained. Majetich row 181 is a genuine DOE technical report, retained but awaiting report-type context support; row 271 remains unresolved. No producer change is applied here.",
   "candidates": [
-    {
-      "scholar_id": "czs45aEAAAAJ",
-      "capture_row": 214,
-      "author_pub_id": "czs45aEAAAAJ:YsrPvlHIBpEC",
-      "concern": "Title appears to be a bibliographic fragment; identify exact source before classification."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 93,
-      "author_pub_id": "FRlLpMYAAAAJ:9pM33mqn1YgC",
-      "concern": "Patent record; decide publication-type policy before exclusion."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 104,
-      "author_pub_id": "FRlLpMYAAAAJ:abG-DnoFyZgC",
-      "concern": "Patent application record; decide publication-type policy before exclusion."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 135,
-      "author_pub_id": "FRlLpMYAAAAJ:sNmaIFBj_lkC",
-      "concern": "Patent record; decide publication-type policy before exclusion."
-    },
     {
       "scholar_id": "FRlLpMYAAAAJ",
       "capture_row": 181,
       "author_pub_id": "FRlLpMYAAAAJ:P7Ujq4OLJYoC",
-      "concern": "Final technical report; decide publication-type policy before exclusion."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 222,
-      "author_pub_id": "FRlLpMYAAAAJ:tS2w5q8j5-wC",
-      "concern": "Program committee record; determine whether it represents an authored publication."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 265,
-      "author_pub_id": "FRlLpMYAAAAJ:-_dYPAW6P2MC",
-      "concern": "Title appears to contain a conference program fragment; identify exact source."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 266,
-      "author_pub_id": "FRlLpMYAAAAJ:JoZmwDi-zQgC",
-      "concern": "Title appears truncated and has no year or venue; identify exact source."
-    },
-    {
-      "scholar_id": "FRlLpMYAAAAJ",
-      "capture_row": 267,
-      "author_pub_id": "FRlLpMYAAAAJ:WA5NYHcadZ8C",
-      "concern": "Organization-only title with no year or venue; determine whether it represents an authored work."
+      "concern": "Exact OSTI source verifies a genuine DOE technical report. Retain; producer context lacks a report type, so type support remains pending."
     },
     {
       "scholar_id": "FRlLpMYAAAAJ",
@@ -79,10 +31,6 @@
     {
       "scholar_id": "FRlLpMYAAAAJ",
       "capture_row_groups": [
-        [
-          93,
-          135
-        ],
         [
           97,
           250
@@ -110,9 +58,6 @@
         126,
         200,
         261,
-        265,
-        266,
-        267,
         268,
         271
       ],
@@ -127,9 +72,6 @@
         260,
         261,
         262,
-        265,
-        266,
-        267,
         268,
         269,
         271
@@ -178,6 +120,29 @@
         244
       ],
       "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 93,
+      "author_pub_id": "FRlLpMYAAAAJ:9pM33mqn1YgC",
+      "reason": "Retain as a genuine Sara Majetich patent, published as US10586579B2.",
+      "evidence_url": "https://patents.google.com/patent/US10586579B2/en"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 104,
+      "author_pub_id": "FRlLpMYAAAAJ:abG-DnoFyZgC",
+      "reason": "Retain as a genuine Sara Majetich patent application, published as US20130327636A1.",
+      "evidence_url": "https://patents.google.com/patent/US20130327636A1/en"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 135,
+      "author_pub_id": "FRlLpMYAAAAJ:sNmaIFBj_lkC",
+      "reason": "Retain as a distinct genuine Sara Majetich patent, published as US10854257B2.",
+      "evidence_url": "https://patents.google.com/patent/US10854257B2/en"
     }
   ]
 }
