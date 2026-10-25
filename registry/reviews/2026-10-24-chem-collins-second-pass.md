@@ -1,0 +1,25 @@
+# Collins complete-profile second pass — 2026-10-24
+
+Source: Terrence J. Collins's complete 361-row Google Scholar capture (`0e1jwkkAAAAJ`) in draft source PR #118. This pass revisited the 338 rows retained after the [first complete-profile audit](2026-10-24-chem-collins-retained-row-audit.md). Decisions below use exact `author_pub_id` values from the saved capture and independently identifiable publisher or institutional records. They add eight exclusions, bringing the Collins total to 31. Of the 330 remaining raw rows, seven are held from map contribution pending review, leaving 323 release candidates. The raw Scholar cache remains unchanged.
+
+| Capture row | Excluded `author_pub_id` | Exact source finding | Retained row |
+| ---: | --- | --- | --- |
+| 182 | `0e1jwkkAAAAJ:-mN3Mh-tlDkC` | Scholar turned an author-list tail into a title. The volume, pages, year, and authors identify [the 2013 *Green Chemistry* paper](https://pubs.rsc.org/en/content/articlelanding/2013/gc/c2gc35055f). | 22, `0e1jwkkAAAAJ:mB3voiENLucC` |
+| 230 | `0e1jwkkAAAAJ:-95Q15plzcUC` | Misordered title copy of [one *Nature Sustainability* commentary](https://www.nature.com/articles/s41893-025-01685-8), with the same authors and bibliographic details. | 231, `0e1jwkkAAAAJ:QyXJ3EUuO1IC` |
+| 277 | `0e1jwkkAAAAJ:dBIO0h50nwkC` | “Little Green” is an incomplete-title copy of [“Little Green Molecules”](https://www.scientificamerican.com/article/little-green-molecules/), by Collins and Walter in *Scientific American* 294(3), 2006. | 94, `0e1jwkkAAAAJ:r0BpntZqJG4C` |
+| 300 | `0e1jwkkAAAAJ:a3BOlSfXSfwC` | Venue-free formatting copy dated 2003 of [the 2004 *Water Science and Technology* paper](https://iwaponline.com/wst/article-abstract/49/4/255/10641/Application-of-TAMLR-catalysts-to-remove-colour?redirectedFrom=fulltext) at 49(4):255–260. The author list and title agree after normalizing the trademark marker. | 151, `0e1jwkkAAAAJ:P5F9QuxV20EC` |
+| 316 | `0e1jwkkAAAAJ:uWiczbcajpAC` | “Received: June 8, 2000 [Z15242]” is a manuscript-date fragment, not a title. Its Peraino/Clark/Weintraub/Collins author list matches [the 1998 JACS O-atom-transfer article](https://pubs.acs.org/doi/10.1021/ja972922g). The captured *Helv. Chim. Acta* 81:1506–1520 citation refers instead to [a different Wagenknecht/Claude/Woggon paper](https://epub.uni-regensburg.de/5989/). | 23, `0e1jwkkAAAAJ:_FxGoFyzp5QC` |
+| 193 | `0e1jwkkAAAAJ:DJbcl8HfkQkC` | “SM James and WR Roper” is a trailing author-list fragment, not the title of a second 1977 *J. Organomet. Chem.* paper at 125:C23–C28. Collins's [institutional bibliography, entry 146](https://downloads.regulations.gov/EPA-HQ-OPPT-2020-0473-0007/content.pdf), gives the complete title and four authors. | 345, `0e1jwkkAAAAJ:uJ-U7cs_P_0C` |
+| 354 | `0e1jwkkAAAAJ:5MTHONV0fEkC` | The [RSC editorial](https://pubs.rsc.org/en/content/articlehtml/2012/cy/c1cy90041b) is signed by Jamie Humphrey. It cites a paper by Malecky, Horwitz, and Collins; those cited authors were misattached to the editorial's Scholar row. | None; false attribution |
+| 211 | `0e1jwkkAAAAJ:Ri6SYOTghG4C` | Wiley's [Chemischer Informationsdienst DOI deposit](https://api.crossref.org/works/10.1002%2Fchin.197622301) cites original DOI `10.1016/S0022-328X(00)91531-6`, confirming that the index abstract points to [the same 1976 *J. Organomet. Chem.* article](https://api.crossref.org/works/10.1016%2FS0022-328X(00)91531-6) at 107:C37–C39. | 346, `0e1jwkkAAAAJ:q3CdL3IzO_QC` |
+
+These are row-specific exclusions. The manifest does not infer exclusions from title similarity, output type, short author snippets, or subject mismatch.
+
+## Held records
+
+- Row 214 (`0e1jwkkAAAAJ:vRqMK49ujn8C`) lists “T Collins” in a lead-paint chapter. A related [EPA report](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=9101WU1W.txt) names Tamara Collins, but an expanded author list for the exact chapter has not been found.
+- Row 274 (`0e1jwkkAAAAJ:cK4Rrx0J3m0C`) lists “T Collins” as the seventh of 13 authors of a UK histopathology meeting abstract in the Ovid record; the expanded identity and affiliation remain unverified.
+- Row 299 (`0e1jwkkAAAAJ:BJbdYPG6LGMC`) is a 2003 *Sunday Times* item credited to “B Collins.” The primary article has not been located.
+- Row 355 (`0e1jwkkAAAAJ:yqoGN6RLRZoC`) resembles RSC journal boilerplate, but the exact source PDF has not been located.
+
+These four are among the seven held rows in the later [hold review](2026-10-25-chem-collins-provisional-holds.md), which also identifies rows 141, 350, and 356. Keep all seven in the raw cache and out of the exclusion manifest pending exact evidence. Draft producer PR #243 holds them from map contribution while preserving their raw observations. This review does not certify the other 323 release candidates as Collins-authored research publications. In particular, row 274 remains an unresolved attribution risk. The source and producer release PRs must stay draft and unmerged until the hold gate and exact exclusions are validated together.

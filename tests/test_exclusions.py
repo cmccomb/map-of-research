@@ -1,3 +1,4 @@
+import hashlib
 import json
 from pathlib import Path
 
@@ -36,6 +37,22 @@ def _entry(**changes: object) -> dict[str, object]:
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     assert len(exclusions) >= 1156
+    collins = sorted(
+        author_pub_id
+        for scholar_id, author_pub_id in exclusions
+        if scholar_id == "0e1jwkkAAAAJ"
+    )
+    assert len(collins) == 31
+    assert hashlib.sha256("\n".join(collins).encode()).hexdigest() == (
+        "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979"
+    )
+    for unresolved in (
+        "vRqMK49ujn8C",
+        "cK4Rrx0J3m0C",
+        "BJbdYPG6LGMC",
+        "yqoGN6RLRZoC",
+    ):
+        assert f"0e1jwkkAAAAJ:{unresolved}" not in collins
     assert sum(key[0] == "ILambBMAAAAJ" for key in exclusions) == 43
     nesrine = "IXO9K4UAAAAJ"
     assert {
