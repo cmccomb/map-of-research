@@ -46,6 +46,8 @@ jobs:
           sparse-checkout: |
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
+            data/authors
+            data/captures
             status
           sparse-checkout-cone-mode: false
       - name: Set up Python
@@ -56,6 +58,16 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install trusted publisher
         run: python -m pip install './source[publisher]'
+      - name: Require complete Mathematical Sciences Scholar captures
+        run: |
+          map-validate-math-coverage \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
+            --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --cache-dir snapshot/data/authors \
+            --capture-dir snapshot/data/captures
       - name: Validate, enrich, and publish snapshot
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
@@ -69,6 +81,8 @@ jobs:
             --people source/registry/people.csv \
             --memberships source/registry/memberships.csv \
             --departments source/registry/departments.csv \
+            --math-cache-dir snapshot/data/authors \
+            --math-capture-dir snapshot/data/captures \
             --reviewed-exclusions source/data/curated/scholar-exclusions.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
