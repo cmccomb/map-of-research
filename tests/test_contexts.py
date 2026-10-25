@@ -34,12 +34,12 @@ def _manifest(path: Path, entries: object, version: int = 1) -> Path:
     return path
 
 
-def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
+def test_checked_in_contexts_are_exact_and_source_backed() -> None:
     contexts = load_contexts(DEFAULT_CONTEXTS_PATH)
-    assert len(contexts) == 12
-    assert {key[0] for key in contexts} == {"8iLLOQgAAAAJ"}
+    assert len(contexts) == 19
+    assert {key[0] for key in contexts} == {"8iLLOQgAAAAJ", "FrF1YXQAAAAJ"}
     assert Counter(item.publication_type for item in contexts.values()) == {
-        "patent": 9,
+        "patent": 16,
         "edited_book": 1,
         "withdrawn_article": 1,
         "panel_transcript": 1,
@@ -49,8 +49,22 @@ def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
         for item in contexts.values()
         if item.publication_type == "patent"
     }
-    assert len(patent_numbers) == 9
+    assert len(patent_numbers) == 16
     assert {"US6486123B1", "US20020151468A1"} <= patent_numbers
+    das_patents = {
+        key[1]: item.document_id
+        for key, item in contexts.items()
+        if key[0] == "FrF1YXQAAAAJ"
+    }
+    assert das_patents == {
+        "FrF1YXQAAAAJ:_kc_bZDykSQC": "US20150275206A1",
+        "FrF1YXQAAAAJ:dfsIfKJdRG4C": "US10982266B2",
+        "FrF1YXQAAAAJ:mVC4hKzE2FoC": "US20260146060A1",
+        "FrF1YXQAAAAJ:4MWp96NkSFoC": "US20220145291A1",
+        "FrF1YXQAAAAJ:qxL8FJ1GzNcC": "US9765169B2",
+        "FrF1YXQAAAAJ:Zph67rFs4hoC": "US9546364B2",
+        "FrF1YXQAAAAJ:ML0RJ9NH7IQC": "WO2020168200A1",
+    }
     assert {key[1] for key, item in contexts.items() if not item.map_eligible} == {
         "8iLLOQgAAAAJ:CaZNVDsoPx4C",
         "8iLLOQgAAAAJ:otzGkya1bYkC",
