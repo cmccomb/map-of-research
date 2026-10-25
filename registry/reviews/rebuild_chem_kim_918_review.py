@@ -2946,6 +2946,147 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in KNU_FINAL_SIX_EXACT_GUARDS.items()}
 )
 
+# These seven later capture observations have exact original-work or
+# institutional person evidence. The saved Scholar display includes section
+# labels, truncated titles, and abbreviated names, so every decision is
+# guarded by the complete captured fingerprint. In particular, Hong Joo
+# Kim's ORCID assertion is for the PRL article, not the surrounding KIMS
+# proceedings; those initials-only proceedings stay held.
+LATE_851_900_EXACT_GUARDS = {
+    851: (
+        "bC4aq-4AAAAJ:e9bUPLv0EjcC",
+        "Chapter 4-SiC Processing-4.2 Dielectrics and Passivation Layers-Electrical "
+        "Properties of Metal-Oxide-Semiconductor (MOS) Structures on 4H-SiC "
+        "(0001) Formed by Oxidizing Pre\xa0…",
+        "JH Moon, DH Kim, HK Song, JH Yim, W Bahng, NK Kim, KS Seo, HJ Kim",
+        "2007",
+        "Materials Science Forum 556557, 647-650, 2007",
+    ),
+    852: (
+        "bC4aq-4AAAAJ:6IBXqrN-DEwC",
+        "Part 1-Compound Semiconductor and Related Materials-Improvement of "
+        "the Reverse Characteristics of Ti/4H-SiC Schottky Barrier Diodes "
+        "by Thermal Treatments",
+        "DH Kim, JH Lee, JH Moon, MS Oh, HK Song, JH Yim, JB Lee, HJ Kim",
+        "2007",
+        "Solid State Phenomena 124, 105, 2007",
+    ),
+    853: (
+        "bC4aq-4AAAAJ:RtRctb2lSbAC",
+        "Gravitation and Astrophysics-Limits on Interactions between Weakly "
+        "Interacting Massive Particles and Nucleons Obtained with CsI (Tl) "
+        "Crystal Detectors",
+        "HS Lee, HC Bhang, JH Choi, H Dao, IS Hahn, MJ Hwang, SW Jung, ...",
+        "2007",
+        "Physical Review Letters 99 (9), 91301-92300, 2007",
+    ),
+    868: (
+        "bC4aq-4AAAAJ:gsN89kCJA0AC",
+        "Revision of The Korean Pharmceutical Codex, The Third Edition",
+        "M Choi, JS Yang, TM Yoo, IK Kim, HS Kim, SH Lee, SY Chang, JH Cho, ...",
+        "2005",
+        "JOURNAL OF KOREAN PHARMACEUTICAL SCIENCES 35 (3), 201, 2005",
+    ),
+    878: (
+        "bC4aq-4AAAAJ:j8pvxH-kN2QC",
+        "Double beta decay experiment with HPGe and CsI (Tl) detectors",
+        "HJ Kim, MJ Hwang, IS Hahn",
+        "2003",
+        "Proceedings of the APPI winter institute: APPI 2003, 205-212, 2003",
+    ),
+    886: (
+        "bC4aq-4AAAAJ:YohjEiUPhakC",
+        "트랙터 견인형 TMR 배합기의 개발 (I)-TMR 배합기의 설계 및 성능시험",
+        "박경규， 구영모， 김혁주， 서상훈， 장철， 이종순， 우종구",
+        "2000",
+        "한국농업기계학회지= Journal of the Korean Society for Agricultural "
+        "Machinery\xa0…, 2000",
+    ),
+    887: (
+        "bC4aq-4AAAAJ:SpbeaW3--B0C",
+        "Development of a tractor attached bale wrapper",
+        "KK Park, C Jang, HJ Kim, SH Seo, KD Nah, DH Hong",
+        "2000",
+        "Proceedings of the Korean Society for Agricultural Machinery "
+        "Conference, 148-155, 2000",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(LATE_851_900_EXACT_GUARDS)
+LATE_851_900_OTHER_PRIMARY = {
+    851: (
+        "Hyeong Joon Kim",
+        "10.4028/www.scientific.net/MSF.556-557.647",
+        "https://pure.seoultech.ac.kr/en/publications/electrical-properties-of-metal-oxide-semiconductor-mos-structures-3/",
+        "Institutional exact proceedings record with full author name",
+        "The exact Materials Science Forum 556-557:647-650 paper's final "
+        "H. J. Kim is Hyeong Joon Kim. Scholar prepends a chapter label "
+        "and truncates the title; the DOI and complete coauthor order match.",
+    ),
+    852: (
+        "Hyeong Joon Kim",
+        "10.4028/www.scientific.net/SSP.124-126.105",
+        "https://www.scientific.net/SSP.124-126.105",
+        "Original publisher full author byline",
+        "The exact Solid State Phenomena 124-126:105-108 article names its "
+        "final author Hyeong Joon Kim; Scholar prepends a section label.",
+    ),
+    853: (
+        "Hong Joo Kim",
+        "10.1103/PhysRevLett.99.091301",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825589",
+        "Hong Joo Kim self-asserted ORCID exact PRL article",
+        "Hong Joo Kim's ORCID self-lists the exact 2007 PRL 99:091301 "
+        "article and DOI. Scholar prepends a section label and mangles "
+        "the article-number range; the title and DOI identify this work.",
+    ),
+    878: (
+        "Hong Joo Kim",
+        "",
+        "https://repository.exst.jaxa.jp/dspace/handle/a-is/27105",
+        "Institutional original proceedings record with full first author",
+        "The exact APPI 2003 pp.205-212 record names first author "
+        "Hong-Joo Kim in full. Scholar shortens him to H. J. Kim and "
+        "changes the order of the following two initials-only authors.",
+    ),
+    886: (
+        "김혁주",
+        "",
+        "https://kiss.kstudy.com/Detail/Ar?key=1644390",
+        "Original Korean agricultural-machinery journal metadata",
+        "The exact 2000 Journal of Biosystems Engineering 25(3):203-212 "
+        "article names 김혁주, a different Korean full name from "
+        "CMU Hyung J. Kim; the Scholar row has the same title and byline.",
+    ),
+    887: (
+        "김혁주",
+        "",
+        "https://kiss.kstudy.com/Detail/Ar?key=1690110",
+        "Original Korean agricultural-machinery proceedings metadata",
+        "The exact 2000 Agricultural Mechanization in Korea pp.148-155 "
+        "paper gives the English title as Scholar does and names "
+        "김혁주 as its third author, a different person from CMU Kim.",
+    ),
+}
+for index, (person, doi, url, source, basis) in LATE_851_900_OTHER_PRIMARY.items():
+    guard = LATE_851_900_EXACT_GUARDS[index]
+    OTHER_PRIMARY[index] = (guard[1], int(guard[3]), person, doi, url, source, basis)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: LATE_851_900_EXACT_GUARDS[index][0] for index in LATE_851_900_OTHER_PRIMARY}
+)
+ABSENT_AUTHOR_PRIMARY[868] = (
+    LATE_851_900_EXACT_GUARDS[868][0],
+    LATE_851_900_EXACT_GUARDS[868][1],
+    2005,
+    "",
+    "https://kiss.kstudy.com/Detail/Ar?key=2452017",
+    "Original Korean Pharmaceutical Sciences journal complete byline",
+    "The exact 2005 Journal of Korean Pharmaceutical Sciences 35(3):201-205 "
+    "article's complete 19-author Korean byline contains no Hyung J. Kim "
+    "or H. J. Kim. Scholar's English title preserves the publisher's typo.",
+)
+ABSENT_AUTHOR_AUTHORS[868] = LATE_851_900_EXACT_GUARDS[868][2]
+ABSENT_AUTHOR_VENUES[868] = LATE_851_900_EXACT_GUARDS[868][4]
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4932,17 +5073,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 172,
-        "proposed_no_target_author_primary_work": 10,
+        "proposed_other_person_primary_work": 178,
+        "proposed_no_target_author_primary_work": 11,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 258,
+        "unresolved_attribution_hold": 251,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 525 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 532 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

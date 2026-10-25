@@ -11,8 +11,8 @@ The [screening ledger](2026-10-24-chem-kim-918-screen.csv),
 [exact exclusion proposal](proposals/scholar-exclusions.kim-proposal.json),
 [attribution proposal](proposals/scholar-attribution-reviews.kim-proposal.json),
 and [release proposal](proposals/scholar-profile-releases.kim-proposal.json)
-partition the 918 exact citation IDs into **123 confirmed CMU works, 533 exact
-exclusions, and 262 held**. The eight earlier exclusions and 525 later exact
+partition the 918 exact citation IDs into **123 confirmed CMU works, 540 exact
+exclusions, and 255 held**. The eight earlier exclusions and 532 later exact
 decisions are all in the Kim-only proposal. Four earlier decisions are
 documented in the [exact follow-up](2026-10-25-chem-kim-four-more-held-exact-attributions.md);
 the subsequent [AMoRE-I ORCID check](2026-10-25-chem-kim-amore-i-orcid-exact.md)
@@ -31,6 +31,9 @@ initials-only neighboring rows remain held.
 resolve only their exact Scholar IDs; the other 18 checked rows remain held.
 [Six further late-list KNU, ORCID, and original-report links](2026-10-25-chem-kim-final-six-knu-2008-source-links.md)
 resolve six exact Scholar IDs; twelve other checked candidates remain held.
+[Seven exact source links in capture rows 851–900](2026-10-25-chem-kim-851-900-exact-source-links.md)
+resolve six named-person attributions and one complete byline with no target
+author; 36 other rows in that range remain held.
 Row 809 remains held. The draft PR #347 body reports older counts; these
 checked fragments supersede its counts.
 

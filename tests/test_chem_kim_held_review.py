@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 533, 262)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 540, 255)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -92,6 +92,40 @@ def test_kim_exact_follow_up_decisions_do_not_expand_to_neighboring_works() -> N
             row["source_year"],
             row["source_venue"],
         )
+
+
+def test_late_exact_sources_exclude_only_seven_capture_ids() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    expected = {
+        851: (
+            "bC4aq-4AAAAJ:e9bUPLv0EjcC",
+            "10.4028/www.scientific.net/MSF.556-557.647",
+        ),
+        852: (
+            "bC4aq-4AAAAJ:6IBXqrN-DEwC",
+            "10.4028/www.scientific.net/SSP.124-126.105",
+        ),
+        853: ("bC4aq-4AAAAJ:RtRctb2lSbAC", "10.1103/PhysRevLett.99.091301"),
+        868: ("bC4aq-4AAAAJ:gsN89kCJA0AC", ""),
+        878: ("bC4aq-4AAAAJ:j8pvxH-kN2QC", ""),
+        886: ("bC4aq-4AAAAJ:YohjEiUPhakC", ""),
+        887: ("bC4aq-4AAAAJ:SpbeaW3--B0C", ""),
+    }
+    assert {
+        index: (rows[index]["author_pub_id"], rows[index]["matched_doi"])
+        for index in expected
+    } == expected
+    assert rows[868]["status"] == "proposed_no_target_author_primary_work"
+    assert all(
+        rows[index]["status"] == "proposed_other_person_primary_work"
+        for index in expected
+        if index != 868
+    )
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (855, 856, 867, 871, 879, 880, 884, 889, 890, 891, 899)
+    )
 
 
 def test_amore_i_author_orcid_excludes_only_exact_kim_citation() -> None:
@@ -266,8 +300,24 @@ def test_late_four_person_links_preserve_initials_only_holds() -> None:
     assert all(
         rows[index]["status"] == "unresolved_attribution_hold"
         for index in (
-            713, 730, 738, 744, 747, 748, 758, 764, 769, 774, 779,
-            780, 781, 782, 783, 784, 785, 788,
+            713,
+            730,
+            738,
+            744,
+            747,
+            748,
+            758,
+            764,
+            769,
+            774,
+            779,
+            780,
+            781,
+            782,
+            783,
+            784,
+            785,
+            788,
         )
     )
 
