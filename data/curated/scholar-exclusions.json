@@ -10912,6 +10912,38 @@
       "reason": "The institutional publication report spells out Saikat Das for the matching SPIE paper; the publisher DOI metadata confirms the same full byline, not CMU chemist Subha R. Das.",
       "evidence_url": "https://forschung-sachsen-anhalt.de/static/gfx/report/2015/2015_u2.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:AXkvAH5U_nMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original indexed journal record expands S. Das to Somes K. Das, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/17503420/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:NtCmTCuxid4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original article expands S. Das to Saptashree Das of Bidhan Chandra Krishi Viswavidyalaya, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.agronomyjournals.com/archives/2024/vol7issue4S/PartD/S-7-4-35-360.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:ruyezt5ZtCIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original article and physical-medicine association identify Subha Das of AIIMS Patna Physical Medicine and Rehabilitation, a distinct namesake from CMU chemist Subha R. Das.",
+      "evidence_url": "https://assets.cureus.com/uploads/original_article/pdf/121402/20221202-30032-g9t1t0.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:wMgC3FpKEyYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The coauthor institution lists C. Das, not the Scholar-captured S. Das, as first author of this exact title, journal, volume, year, and coauthor set.",
+      "evidence_url": "https://www.iptsalipur.org/wp-content/uploads/2016/02/Publication-list.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
