@@ -6736,6 +6736,14 @@
       "reason": "Undated ACS website terms-of-use text prefixed to the exact title of the retained 2014 Journal of Chemical Education article.",
       "evidence_url": "https://pubs.acs.org/doi/10.1021/ed5002009",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "HMSZExQAAAAJ",
+      "author_pub_id": "HMSZExQAAAAJ:W7OEmFMy1HYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, venue-less short-title copy of the 2003 Journal of Physical Chemistry B article. The CMU Yaron group bibliography maps this exact short title and author list to volume 107(22), pages 5133-5143; retain HMSZExQAAAAJ:R3hNpaxXUhUC (DOI 10.1021/jp0272769).",
+      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pub.html",
+      "verified_at": "2026-10-24"
     }
   ]
 }

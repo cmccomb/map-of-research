@@ -339,6 +339,15 @@
       "reason": "Undated ACS website terms-of-use text prefixed to the exact title of the retained 2014 Journal of Chemical Education article.",
       "evidence_url": "https://pubs.acs.org/doi/10.1021/ed5002009",
       "retained_parent_id": "HMSZExQAAAAJ:tS2w5q8j5-wC"
+    },
+    {
+      "index": 242,
+      "author_pub_id": "HMSZExQAAAAJ:W7OEmFMy1HYC",
+      "title": "The Effects of Structural and Micro-Environmental Disorder on the Electronic Properties of MEH-PPV and Related Oligomers",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Undated, venue-less short-title copy of the 2003 Journal of Physical Chemistry B article. The CMU Yaron group bibliography maps this exact short title and author list to volume 107(22), pages 5133-5143; retain HMSZExQAAAAJ:R3hNpaxXUhUC (DOI 10.1021/jp0272769).",
+      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pub.html",
+      "retained_parent_id": "HMSZExQAAAAJ:R3hNpaxXUhUC"
     }
   ],
   "deferred": [
@@ -411,13 +420,6 @@
       "title": "Using Internet of Things (IOT) and Virtual Lab Activities to Enhance Learning in Online Chemistry Labs hosted in Google Classroom",
       "review_note": "Undated virtual-lab education item has named coauthors; source/publication venue not established.",
       "evidence_url": null
-    },
-    {
-      "index": 242,
-      "author_pub_id": "HMSZExQAAAAJ:W7OEmFMy1HYC",
-      "title": "The Effects of Structural and Micro-Environmental Disorder on the Electronic Properties of MEH-PPV and Related Oligomers",
-      "review_note": "Undated manuscript title with named coauthors; CMU hosts a related PDF, but relationship to row 30 is not resolved.",
-      "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pdf/yaron-ppv-disorder.pdf"
     }
   ],
   "confirmed_retained_examples": [
