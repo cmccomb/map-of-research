@@ -8,10 +8,10 @@
   "raw_observation_count": 2506,
   "capture_coverage": "complete_visible_profiles",
   "source_files_preserve_raw_rows": true,
-  "review_status": "preliminary_candidates_not_applied",
-  "proposed_exclusion_count": 0,
+  "review_status": "paired_producer_exact_decisions_draft_with_map_quality_hold",
+  "proposed_exclusion_count": 100,
   "producer_review_ready": false,
-  "ingestion_dependency": "Source caches and captures may be reviewed independently; exact observation exclusions and homonym checks require source verification before producer inclusion or a snapshot rebuild.",
+  "ingestion_dependency": "The paired producer draft records 100 source-backed exact exclusions (77 Cremonesi, 23 Schumacher), but remains unmerged. Its unresolved table has 17 exact IDs (16 automatically map eligible and one quality filtered); tracker companion row 547 and three same-work pairs also remain held. Draft producer PR #160 stages a publisher preflight that rejects a snapshot containing either Physics profile while this hold is active, before enrichment or upload. The gate is not live until that PR is merged. Keep source PR #156 draft and do not rebuild or upload Physics while the hold remains.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
   "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
@@ -66,5 +66,45 @@
       }
     }
   ],
-  "recorded_at_utc": "2026-10-25T01:03:46.716171+00:00"
+  "recorded_at_utc": "2026-10-25T01:03:46.716171+00:00",
+  "proposed_exclusion_scope": "paired_producer_draft_160_only; no source-row exclusion applied",
+  "paired_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/160",
+  "paired_producer_review_count_by_profile": {
+    "wJ_gQLoAAAAJ": 77,
+    "LibSWRMAAAAJ": 23
+  },
+  "producer_review_hold_reason": "Seventeen exact IDs in the paired producer review remain unresolved and unexcluded; 16 currently pass automatic map eligibility. Tracker companion row 547 and three same-work pairs are additional holds. Draft producer PR #160 stages a fail-closed publisher preflight for both Physics profiles; it has no live effect until merged.",
+  "publisher_guard_state": "staged_in_draft_producer_pr_160_not_live",
+  "publisher_guard_effect": "If either Physics Scholar ID is in a raw snapshot and this status is held, the trusted publisher rejects the whole upload before embeddings or dataset writes; raw captures and snapshot rows remain intact.",
+  "map_quality_hold": true,
+  "unresolved_exact_ids": [
+    "wJ_gQLoAAAAJ:zmHQPunddckC",
+    "wJ_gQLoAAAAJ:QNiCEvFIB1MC",
+    "wJ_gQLoAAAAJ:wlzmIqt2EaEC",
+    "wJ_gQLoAAAAJ:PDAgwb0ELvkC",
+    "wJ_gQLoAAAAJ:8NFFclwVBVUC",
+    "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
+    "wJ_gQLoAAAAJ:Gm6cJkd1Yu0C",
+    "wJ_gQLoAAAAJ:UBSsHvkqiq4C",
+    "wJ_gQLoAAAAJ:OlGoE9RybnsC",
+    "wJ_gQLoAAAAJ:QjNCP7ux8QYC",
+    "LibSWRMAAAAJ:_mQi-xiA4oYC",
+    "LibSWRMAAAAJ:pRWBApOjXDcC",
+    "LibSWRMAAAAJ:adHtZc2wMuEC",
+    "LibSWRMAAAAJ:oldoQiaHq2UC",
+    "LibSWRMAAAAJ:VnuxuLaQPLMC",
+    "LibSWRMAAAAJ:M0j1y4EgrScC",
+    "LibSWRMAAAAJ:6bLC7aUMtPcC"
+  ],
+  "unresolved_exact_id_count": 17,
+  "currently_map_eligible_unresolved_count": 16,
+  "currently_quality_filtered_unresolved_ids": [
+    "wJ_gQLoAAAAJ:OlGoE9RybnsC"
+  ],
+  "unresolved_counts_state": "review-table count after exact Proposal 924 decision; additional held companion and pair rows are described separately",
+  "review_updated_at_utc": "2026-10-25T02:29:08Z",
+  "map_quality_hold_scholar_ids": [
+    "wJ_gQLoAAAAJ",
+    "LibSWRMAAAAJ"
+  ]
 }
