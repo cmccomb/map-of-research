@@ -1,0 +1,161 @@
+name: Preview central publication release without Hub writes
+
+on:
+  workflow_dispatch:
+    inputs:
+      producer_commit:
+        description: Exact main commit containing the trusted publisher
+        required: true
+        type: string
+      snapshot_commit:
+        description: Exact validated raw snapshot commit
+        required: true
+        type: string
+      snapshot_sha256:
+        description: SHA-256 of the raw Parquet snapshot
+        required: true
+        type: string
+      prior_revision:
+        description: Immutable Hugging Face dataset parent revision
+        required: true
+        type: string
+      require_bio_release:
+        description: Match the intended upload's Biological Sciences release gate
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+# Share the upload lane, so a preview and a real release cannot run together.
+concurrency:
+  group: central-publication-upload-v1
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PRODUCER_COMMIT: ${{ inputs.producer_commit }}
+      SNAPSHOT_COMMIT: ${{ inputs.snapshot_commit }}
+      SNAPSHOT_SHA256: ${{ inputs.snapshot_sha256 }}
+      PRIOR_REVISION: ${{ inputs.prior_revision }}
+      REQUIRE_BIO_RELEASE: ${{ inputs.require_bio_release }}
+      HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+    steps:
+      - name: Require the exact main dispatch
+        run: |
+          test "$GITHUB_REF" = refs/heads/main
+          test "$GITHUB_SHA" = "$PRODUCER_COMMIT"
+      - name: Check out trusted publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.producer_commit }}
+          path: source
+          persist-credentials: false
+      - name: Check out collected snapshot
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.snapshot_commit }}
+          path: snapshot
+          persist-credentials: false
+          sparse-checkout: |
+            snapshots/cmu-engineering-publications.parquet
+            snapshots/cmu-engineering-publications.parquet.manifest.json
+            data/authors
+            data/captures
+            status
+          sparse-checkout-cone-mode: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: source/pyproject.toml
+      - name: Install trusted publisher
+        run: python -m pip install './source[publisher]'
+      - name: Pin previous hosted release
+        id: baseline
+        run: |
+          python -m map_of_research.release_baseline \
+            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
+      - name: Require the requested hosted parent
+        run: |
+          test "${{ steps.baseline.outputs.revision }}" = "$PRIOR_REVISION"
+      - name: Select current Hub region comparison
+        id: region
+        run: |
+          python -m map_of_research.region_repair \
+            --restore-prior-regions false \
+            --event-name "$GITHUB_EVENT_NAME" \
+            --run-ref "$GITHUB_REF" \
+            --run-commit "$GITHUB_SHA" \
+            --producer-commit "$(git -C source rev-parse HEAD)" \
+            --snapshot-ref "$SNAPSHOT_COMMIT" \
+            --snapshot-commit "$(git -C snapshot rev-parse HEAD)" \
+            --historical-commit "" \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
+            --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --current-receipt snapshot/status/last-upload.json \
+            --historical-receipt snapshot/status/last-upload.json \
+            --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
+      - name: Require evidenced primary homes for included Scholar profiles
+        run: |
+          python source/scripts/validate_primary_homes.py \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json
+      - name: Require complete Mathematical Sciences Scholar captures
+        run: |
+          map-validate-math-coverage \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
+            --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --cache-dir snapshot/data/authors \
+            --capture-dir snapshot/data/captures
+      - name: Verify complete Scholar sources before publication
+        run: |
+          map-validate-scholar-coverage \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --baseline source/registry/legacy-scholar-cache-baseline.json \
+            --prior-id-crosswalk source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
+            --additional-prior-id-crosswalk source/registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json \
+            --curated-works source/data/curated/works.json \
+            --exclusions source/data/curated/scholar-exclusions.json \
+            --cache-dir snapshot/data/authors \
+            --captures-dir snapshot/data/captures \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet
+      - name: Stage and validate the seven-file release without uploading
+        run: |
+          BIO_RELEASE_ARGS=()
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
+            BIO_RELEASE_ARGS+=(--require-bio-release)
+          fi
+          python source/scripts/preview_atomic_release.py \
+            "${BIO_RELEASE_ARGS[@]}" \
+            --producer-dir source \
+            --snapshot-dir snapshot \
+            --output-dir preview \
+            --producer-commit "$PRODUCER_COMMIT" \
+            --snapshot-commit "$SNAPSHOT_COMMIT" \
+            --snapshot-sha256 "$SNAPSHOT_SHA256" \
+            --prior-revision "$PRIOR_REVISION" \
+            --region-comparison-revision "${{ steps.region.outputs.revision }}"
+      - name: Save inspectable preview receipt and staged files
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: central-publication-no-write-preview
+          path: |
+            preview/receipt.json
+            preview/stage/
+          if-no-files-found: warn
+          retention-days: 3
+          compression-level: 0
