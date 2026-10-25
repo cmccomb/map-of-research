@@ -9128,6 +9128,62 @@
       "reason": "MathNet lists the exact title as Kramkov’s recorded Lecture 4 at its 2015 school, not a publication.",
       "evidence_url": "https://www.mathnet.ru/eng/person23594",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:Wp0gIr-vW9MC",
+      "reason_code": "nonpublication",
+      "reason": "NSF CAREER award 2441170, not an academic publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2441170.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:4DMP91E08xMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2345533, not an academic publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2345533.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:mVmsd5A6BfQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 2206085, not an academic publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2206085.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:YOwf2qJgpHMC",
+      "reason_code": "nonpublication",
+      "reason": "THE ANNALS is a journal masthead fragment with an unrelated multi-author list, not a Rosenzweig work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rW9dfuQAAAAJ&citation_for_view=rW9dfuQAAAAJ:YOwf2qJgpHMC",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:KlAtU1dfN6UC",
+      "reason_code": "nonpublication",
+      "reason": "This exact 2022 Scholar observation is explicitly labeled in preparation; no standalone manuscript or published item is identified by the cited source.",
+      "evidence_url": "https://www.numdam.org/item/10.5802/slsedp.173.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:9ZlFYXVOiuMC",
+      "reason_code": "nonpublication",
+      "reason": "This exact undated Scholar observation has preparation as its venue, without a publication year or source; the author's current publication list does not present it as a work.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rW9dfuQAAAAJ&citation_for_view=rW9dfuQAAAAJ:9ZlFYXVOiuMC",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "rW9dfuQAAAAJ",
+      "author_pub_id": "rW9dfuQAAAAJ:hFOr9nPyWt4C",
+      "reason_code": "nonpublication",
+      "reason": "The Scholar row says To appear, but the author's current research page treats this as an active project and his published survey cites it as in preparation; no standalone published document is identified.",
+      "evidence_url": "https://matthewrosenzweigwork-max.github.io/research.html",
+      "verified_at": "2026-10-25"
     }
   ]
 }
