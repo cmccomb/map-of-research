@@ -1,3 +1,7 @@
+import json
+import os
+import subprocess
+import sys
 from types import SimpleNamespace
 
 import numpy
@@ -1025,8 +1029,27 @@ def test_variant_selection_has_stable_tie_breaks() -> None:
         "Alpha",
         "beta",
     ]
+    assert dataset._variants(["Nature geoscience", "Nature Geoscience"]) == [
+        "Nature Geoscience",
+        "Nature geoscience",
+    ]
     assert dataset._mode_year([None, "bad"]) is None
     assert dataset._mode_year([2025, "2024", 2024, 2025]) == 2024
+
+
+@pytest.mark.parametrize("hash_seed", ["0", "1", "7"])
+def test_variant_case_ties_are_stable_across_processes(hash_seed: str) -> None:
+    output = subprocess.check_output(
+        [
+            sys.executable,
+            "-c",
+            "import json; from map_of_research.dataset import _variants; "
+            "print(json.dumps(_variants(['Nature geoscience', 'Nature Geoscience'])))",
+        ],
+        env={**os.environ, "PYTHONHASHSEED": hash_seed},
+        text=True,
+    )
+    assert json.loads(output) == ["Nature Geoscience", "Nature geoscience"]
 
 
 def test_membership_normalization_handles_strings_and_rejects_scalars() -> None:
