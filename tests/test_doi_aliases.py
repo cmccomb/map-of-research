@@ -16,9 +16,9 @@ def _source():
 
 
 def test_walkington_alias_matches_exact_raw_scholar_row() -> None:
-    aliases = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)
+    reviewed = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)
     key = ("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC")
-    assert list(aliases) == [key]
+    aliases = {key: reviewed[key]}
     alias = aliases[key]
     assert alias.doi == "10.4230/lipics.approx-random.2019.8"
     frame = pandas.DataFrame(

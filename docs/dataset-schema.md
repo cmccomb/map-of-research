@@ -57,6 +57,21 @@ normalized source record as JSON, fetched timestamp, memberships, work match
 method, title embedding, `map_eligible`, `map_exclusion_reasons`, and the quality
 assessment version. Reviewed exclusions add a reason code, specific reason,
 evidence URL, and verification date on the same retained row.
+An exact-ID reviewed metadata correction may replace the effective title, year,
+or venue before embedding and work matching. The raw snapshot and
+`source_record_json` keep the Scholar values. The published row records the
+corrected field names, basis, evidence URL, and verification date in
+`metadata_correction_*` fields. The publisher checks the original title, year,
+and venue before applying a correction, so a changed Scholar source fails
+publication until the decision is reviewed again. Once any Scholar row from a
+profile with declared corrections is present, every declared exact ID for that
+profile must occur exactly once. A profile staged for a later snapshot may be
+absent entirely.
+
+Exact context reviews add `publication_type`, `source_document_id`,
+`collaboration_eligible`, optional source-verified display contributors, and
+the context evidence without changing
+`source_record_json`.
 
 ## `works`
 
@@ -64,6 +79,9 @@ One canonical work derived conservatively from the observations. DOI is used
 when present; a verified DOI-free curated record uses its source-native ID.
 Otherwise an exact normalized title and year are used. Undated records without
 either identifier remain profile-specific to avoid unsafe merges.
+Reviewed patent observations use the exact published patent document number as
+their work key. This keeps separately published patents and applications
+distinct even when they share a title and year.
 When a verified DOI record and an eligible Scholar observation resolve to the
 same work, populated Scholar fields supply the canonical title, authors, year,
 venue, citation text, and citation count. Verified DOI fields fill gaps in the
@@ -79,6 +97,11 @@ eligible observations. An entirely excluded work remains with its source
 fields and exclusion reasons, but without faculty memberships.
 `has_included_source_profile` records whether such a work came from an included
 roster profile without claiming that person as an author.
+`collaboration_eligible` separately controls whether mapped contributors can
+form coauthor edges. Reviewed patents, edited books, and panel transcripts
+cannot form coauthor edges. In the Chien Ho review, nine patents and one edited
+book are mapped, while the exact withdrawn article and panel transcript remain
+in `profile_publications` but are excluded from mapped works and edges.
 `x` and `y` are the broad-structure PCA coordinates; `tsne_x` and `tsne_y` are
 the local-neighborhood t-SNE coordinates after a memory-bounded 50-dimensional
 PCA reduction and a final deterministic orientation. `keyword_id`, `keyword`,
@@ -106,7 +129,9 @@ region audit affects the browser artifact without discarding fitted coordinates.
 
 One relationship between an eligible observation and its registered person.
 It carries the work, person, observation and profile-publication IDs plus every
-retained department membership and fetch timestamp. Excluded observations
+retained department membership and fetch timestamp. The additive
+`contributor_role` field distinguishes an inventor, editor, or participant
+from an author for reviewed context rows. Excluded observations
 remain in `profile_publications` but do not create authorship rows.
 
 ## Browser artifacts
@@ -118,7 +143,11 @@ coordinate pairs, work ID, title, author text, stable faculty and department ID
 arrays, derived school ID array, year, venue, citation count, DOI, first
 available source URL, and source
 observation count, plus one `keyword_ids` entry per hierarchy level. The
-top-level `layouts` catalog gives
+additive `publication_type`, `source_document_id`, `collaboration_eligible`, and
+`context_evidence_urls` fields retain the reviewed context on a mapped point.
+An optional `display_contributors` overrides only the presentation of an edited
+book's incomplete Scholar byline; the original `authors` remains in the dataset.
+The top-level `layouts` catalog gives
 each view's label, method, interpretation, coordinate fields, and version;
 `default_layout_id` selects the initial view. The `keywords` catalog provides a
 concise label, extracted phrase, review status, hierarchy level, optional
@@ -175,6 +204,15 @@ taxonomy.
 
 ## Map-eligibility policy
 
+`data/curated/scholar-contexts.json` records exact Scholar observation IDs,
+source-backed publication types, patent document IDs, evidence URLs, and review
+dates. An exact entry may set `map_eligible: false`; this decision also excludes
+matched copies of that work without changing source rows. The producer hashes
+the manifest in the upload receipt. The saved Scholar source rows remain
+immutable. `authorships.contributor_role` distinguishes mapped inventor and
+editor relationships from authorship. The reviewed Chien panel has no authorship
+row because it remains raw and unmapped.
+
 The policy removes high-confidence non-research records from layout computation
 without deleting source data. Reason codes cover conference front matter,
 publication front matter, organization or container records, affiliations or
@@ -190,6 +228,12 @@ before embedding and upload, writes its checksum in the upload receipt, and
 applies the decision only to the named observation. A later valid observation
 of the same work may still appear on the map, with attribution only to the
 eligible source rows.
+
+`data/curated/scholar-metadata-corrections.json` contains similarly exact,
+source-backed effective-field repairs. The upload receipt records the file
+checksum and count of applied repairs. A correction never edits the raw cache
+or raw snapshot; it only changes the normalized fields used for embeddings,
+quality assessment, canonical works, and browser artifacts.
 
 No single missing bibliographic field, citation count, or embedding position is
 an exclusion rule. After the title-level policy, a provisional detail hierarchy

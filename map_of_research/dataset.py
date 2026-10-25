@@ -10,6 +10,7 @@ from collections import Counter
 from collections.abc import Mapping
 from typing import Any
 
+from .contexts import ReviewedContext
 from .doi_aliases import ReviewedDoiAlias
 from .exclusions import ReviewedExclusion
 from .quality import QUALITY_ASSESSMENT_VERSION, assess_publication
@@ -73,7 +74,14 @@ def _work_identity(
     *,
     curated_title_year_dois: Mapping[tuple[str, int], set[str]] | None = None,
     curated_title_year_native_ids: Mapping[tuple[str, int], set[str]] | None = None,
+    context: ReviewedContext | None = None,
 ) -> tuple[str, str, str]:
+    if context is not None and context.publication_type == "patent":
+        return (
+            _hash_id("work", f"patent-document:{context.document_id}"),
+            "patent_document",
+            "",
+        )
     native_id = _clean_text(getattr(row, "source_native_id", ""))
     if native_id and not _doi(getattr(row, "source_doi", "")):
         return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
@@ -179,11 +187,13 @@ def build_dataset_tables(
     registry: Registry,
     exclusions: Mapping[tuple[str, str], ReviewedExclusion] | None = None,
     doi_aliases: Mapping[tuple[str, str], ReviewedDoiAlias] | None = None,
+    contexts: Mapping[tuple[str, str], ReviewedContext] | None = None,
 ) -> dict[str, Any]:
     """Build retained observations plus canonical people/work relationship tables."""
 
     import pandas
 
+    reviewed_aliases = doi_aliases or {}
     profile_publications = observations.copy()
     if "source_type" not in profile_publications:
         profile_publications["source_type"] = "scholar"
@@ -223,12 +233,22 @@ def build_dataset_tables(
     review_reasons: list[str] = []
     review_evidence_urls: list[str] = []
     review_dates: list[str] = []
+    publication_types: list[str] = []
+    document_ids: list[str] = []
+    context_reasons: list[str] = []
+    context_evidence_urls: list[str] = []
+    context_dates: list[str] = []
+    context_display_contributors: list[str] = []
+    collaboration_eligibility: list[bool] = []
+    unmapped_work_reasons: dict[str, set[str]] = {}
     known_person_titles = {
         normalize_title(person.display_name) for person in registry.people
     }
     for position, row in enumerate(profile_publications.itertuples(index=False)):
+        key = (str(row.scholar_id), str(row.author_pub_id))
+        context = (contexts or {}).get(key)
         observation_ids.append(_observation_identity(row))
-        alias = (doi_aliases or {}).get((str(row.scholar_id), str(row.author_pub_id)))
+        alias = reviewed_aliases.get(key)
         if alias is not None and row.source_type == "scholar":
             source_doi = _doi(row.source_doi)
             if source_doi and source_doi != alias.doi:
@@ -248,6 +268,7 @@ def build_dataset_tables(
                 row,
                 curated_title_year_dois=curated_title_year_dois,
                 curated_title_year_native_ids=curated_title_year_native_ids,
+                context=context,
             )
         work_ids.append(work_id)
         match_methods.append(method)
@@ -261,16 +282,41 @@ def build_dataset_tables(
         reasons = list(quality.exclusion_reasons)
         if normalize_title(str(row.title)) in known_person_titles:
             reasons.append("person_or_citation_index")
-        review = (exclusions or {}).get((str(row.scholar_id), str(row.author_pub_id)))
+        review = (exclusions or {}).get(key)
         if review is not None:
             reasons.append(f"reviewed_{review.reason_code}")
+        if context is not None:
+            context_exclusion = ""
+            if context.publication_type == "withdrawn_article":
+                context_exclusion = "reviewed_withdrawn_article"
+            elif not context.map_eligible:
+                context_exclusion = "reviewed_context_not_mapped"
+            if context_exclusion:
+                reasons.append(context_exclusion)
+                unmapped_work_reasons.setdefault(work_id, set()).add(context_exclusion)
         review_codes.append(review.reason_code if review else "")
         review_reasons.append(review.reason if review else "")
         review_evidence_urls.append(review.evidence_url if review else "")
         review_dates.append(review.verified_at if review else "")
+        publication_types.append(context.publication_type if context else "publication")
+        document_ids.append(context.document_id if context else "")
+        context_reasons.append(context.reason if context else "")
+        context_evidence_urls.append(context.evidence_url if context else "")
+        context_dates.append(context.verified_at if context else "")
+        context_display_contributors.append(
+            context.display_contributors if context else ""
+        )
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
+        collaboration_eligibility.append(not stable_reasons and context is None)
+    for index, work_id in enumerate(work_ids):
+        if work_id in unmapped_work_reasons:
+            map_eligibility[index] = False
+            collaboration_eligibility[index] = False
+            for reason in sorted(unmapped_work_reasons[work_id]):
+                if reason not in exclusion_reasons[index]:
+                    exclusion_reasons[index].append(reason)
     profile_publications.insert(0, "observation_id", observation_ids)
     profile_publications.insert(1, "work_id", work_ids)
     profile_publications.insert(2, "work_match_method", match_methods)
@@ -281,10 +327,17 @@ def build_dataset_tables(
     profile_publications.insert(7, "review_exclusion_reason", review_reasons)
     profile_publications.insert(8, "review_evidence_url", review_evidence_urls)
     profile_publications.insert(9, "review_verified_at", review_dates)
+    profile_publications.insert(10, "publication_type", publication_types)
+    profile_publications.insert(11, "source_document_id", document_ids)
+    profile_publications.insert(12, "context_review_reason", context_reasons)
+    profile_publications.insert(13, "context_evidence_url", context_evidence_urls)
+    profile_publications.insert(14, "context_verified_at", context_dates)
     profile_publications.insert(
-        10,
-        "quality_assessment_version",
-        QUALITY_ASSESSMENT_VERSION,
+        15, "context_display_contributors", context_display_contributors
+    )
+    profile_publications.insert(16, "collaboration_eligible", collaboration_eligibility)
+    profile_publications.insert(
+        17, "quality_assessment_version", QUALITY_ASSESSMENT_VERSION
     )
 
     school_titles = registry.school_catalog()
@@ -322,6 +375,11 @@ def build_dataset_tables(
                 "memberships": memberships,
                 "fetched_at_utc": row.fetched_at_utc,
                 "source_type": row.source_type,
+                "contributor_role": {
+                    "patent": "inventor",
+                    "edited_book": "editor",
+                    "panel_transcript": "participant",
+                }.get(row.publication_type, "author"),
             }
         )
     authorships = pandas.DataFrame(
@@ -338,6 +396,7 @@ def build_dataset_tables(
             "memberships",
             "fetched_at_utc",
             "source_type",
+            "contributor_role",
         ),
     )
 
@@ -348,6 +407,19 @@ def build_dataset_tables(
         eligible_records = [record for record in records if record.map_eligible]
         canonical_records = eligible_records or records
         map_eligible = bool(eligible_records)
+        reviewed_types = {
+            record.publication_type
+            for record in records
+            if record.publication_type != "publication"
+        }
+        if len(reviewed_types) > 1:
+            raise ValueError(f"Conflicting reviewed publication types for {work_id}")
+        publication_type = next(iter(reviewed_types), "publication")
+        collaboration_eligible = (
+            map_eligible
+            and publication_type == "publication"
+            and all(record.collaboration_eligible for record in eligible_records)
+        )
         people: dict[str, str] = {}
         included_memberships: dict[tuple[str, str], dict[str, str]] = {}
         for record in eligible_records:
@@ -379,6 +451,13 @@ def build_dataset_tables(
         )
         school_ids = sorted({membership["school_id"] for membership in memberships})
         years = [record.year for record in canonical_records]
+        published_records = []
+        for record in canonical_records:
+            alias = reviewed_aliases.get(
+                (str(record.scholar_id), str(record.author_pub_id))
+            )
+            if alias is not None and alias.relationship == "version_of_record":
+                published_records.append(record)
         fetched = sorted(
             str(record.fetched_at_utc)
             for record in canonical_records
@@ -386,6 +465,8 @@ def build_dataset_tables(
         )
         external_coauthors: dict[str, dict[str, str]] = {}
         for record in eligible_records:
+            if not collaboration_eligible or not record.collaboration_eligible:
+                continue
             for coauthor in _as_list(record.external_coauthors):
                 if not isinstance(coauthor, Mapping):
                     raise ValueError("External coauthor provenance must be an object")
@@ -405,6 +486,17 @@ def build_dataset_tables(
             {
                 "work_id": work_id,
                 "map_eligible": map_eligible,
+                "publication_type": publication_type,
+                "source_document_id": _best_text(
+                    [record.source_document_id for record in records]
+                ),
+                "collaboration_eligible": collaboration_eligible,
+                "context_evidence_urls": _variants(
+                    [record.context_evidence_url for record in records]
+                ),
+                "display_contributors": _best_text(
+                    [record.context_display_contributors for record in records]
+                ),
                 "has_included_source_profile": any(
                     membership["included"]
                     for record in records
@@ -432,7 +524,11 @@ def build_dataset_tables(
                 "author_variants": _variants(
                     [record.authors for record in canonical_records]
                 ),
-                "year": _mode_year(_source_values(canonical_records, "year")),
+                "year": _mode_year(
+                    [record.year for record in published_records]
+                    if published_records
+                    else _source_values(canonical_records, "year")
+                ),
                 "year_variants": sorted(
                     {
                         year
@@ -440,7 +536,11 @@ def build_dataset_tables(
                         if year is not None
                     }
                 ),
-                "venue": _best_text(_source_values(canonical_records, "venue")),
+                "venue": _best_text(
+                    [record.venue for record in published_records]
+                    if published_records
+                    else _source_values(canonical_records, "venue")
+                ),
                 "venue_variants": _variants(
                     [record.venue for record in canonical_records]
                 ),
