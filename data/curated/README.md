@@ -63,6 +63,16 @@ primary source for that person's publications. Curated DOI observations fill
 specific gaps and remain labeled `curated_verified`; an official CMU page
 verifies identity or an individual DOI record, not Scholar completeness.
 
+`person-publication-holds.json` records a reviewed person-level visibility hold
+when the saved source has only individually verified works and no complete
+publication history. It binds the stable person ID, frozen snapshot SHA-256,
+exact DOI, `author_pub_id`, and observation ID for every held row. The trusted
+publisher refuses changed or unreviewed hold evidence. It keeps those rows in
+the frozen raw snapshot while omitting that person's contributions from public
+tables and maps. Other faculty observations of the same DOI remain public. The
+public `people` table and map faculty catalog state “Publication history
+pending full capture” for the held person.
+
 ## Reviewed Scholar observations
 
 `scholar-profile-releases.json` records a source-bound release decision for a

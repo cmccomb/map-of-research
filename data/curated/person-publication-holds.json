@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "holds": [
+    {
+      "person_id": "person-shlomotaasan-403c9cf9",
+      "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
+      "expected_source_rows": 3,
+      "source_observations": [
+        {
+          "doi": "10.1016/s1359-6462(97)00530-7",
+          "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1016/s1359-6462(97)00530-7",
+          "observation_id": "observation-31391ec62e41d3ec310875d3f75902e6da974975f2c99ed44fb2ba892ca8568c"
+        },
+        {
+          "doi": "10.4028/www.scientific.net/msf.715-716.473",
+          "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.4028/www.scientific.net/msf.715-716.473",
+          "observation_id": "observation-4499c61018e35d148fbe3ca93b13d58c4b20709f23b8294a5a40301f753ab78b"
+        },
+        {
+          "doi": "10.1016/j.pmatsci.2013.03.004",
+          "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1016/j.pmatsci.2013.03.004",
+          "observation_id": "observation-cfdfd75f6dfae304c5998e871126797f8f0d6e00fb3089fbd85748ee870efb6f"
+        }
+      ],
+      "display_reason": "Publication history pending full capture",
+      "reason": "Three verified joint papers do not establish Shlomo Ta'asan's whole-career publication history. Hold his person-level publications until a complete visible Scholar account or a separately reviewed whole-career bibliography is captured.",
+      "evidence_url": "https://www.cmu.edu/math/people/faculty/taasan.html",
+      "reviewed_at": "2026-10-25"
+    }
+  ]
+}

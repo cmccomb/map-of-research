@@ -24,6 +24,13 @@ from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
 
+@pytest.fixture(autouse=True)
+def isolate_generic_publisher_tests_from_reviewed_person_holds(monkeypatch) -> None:
+    """These synthetic release fixtures do not include the held Math person."""
+
+    monkeypatch.setattr(publisher, "load_person_publication_holds", lambda path: ())
+
+
 class Rows(list):
     pass
 
