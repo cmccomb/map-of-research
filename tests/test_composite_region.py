@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import math
+from pathlib import Path
 
 import pandas
 import pytest
@@ -86,3 +87,21 @@ def test_hidden_math_allows_only_exact_empty_attribution():
     )
     with pytest.raises(ValueError, match="Hidden Math attribution drift"):
         _require_hidden_math_attribution({**after, "faculty": ["unexpected"]}, work_id)
+
+
+def test_manual_upload_uses_immutable_producer_and_composite_manifests():
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text(encoding="utf-8")
+    assert (
+        "ref: ${{ github.event_name == 'workflow_dispatch' && github.sha || 'main' }}"
+        in workflow
+    )
+    assert 'MAP_PRODUCER_COMMIT="$(git -C source rev-parse HEAD)"' in workflow
+    assert (
+        "--math-region-review-manifest source/data/curated/scholar-region-review.json"
+    ) in workflow
+    assert (
+        "--sullivan-continuity-addendum "
+        "source/data/curated/sullivan-continuity-addendum-bb88.json"
+    ) in workflow
