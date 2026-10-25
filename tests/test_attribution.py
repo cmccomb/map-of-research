@@ -338,6 +338,9 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
     monkeypatch.setattr(publisher, "load_exclusions", lambda path: {key: object()})
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
+        publisher, "apply_corrections", lambda frame, corrections: (frame, 0)
+    )
+    monkeypatch.setattr(
         publisher,
         "load_attribution_reviews",
         lambda path: AttributionReviews(
