@@ -33,10 +33,18 @@ def test_breivik_row115_author_repair_keeps_capture_evidence() -> None:
     )
     assert len(ledger["repairs"]) == 1
     repair = ledger["repairs"][0]
-    assert {key: repair[key] for key in (
-        "scholar_id", "capture_row", "author_pub_id", "cache_field",
-        "captured_value", "repaired_value", "evidence_url",
-    )} == {
+    assert {
+        key: repair[key]
+        for key in (
+            "scholar_id",
+            "capture_row",
+            "author_pub_id",
+            "cache_field",
+            "captured_value",
+            "repaired_value",
+            "evidence_url",
+        )
+    } == {
         "scholar_id": SCHOLAR_ID,
         "capture_row": 115,
         "author_pub_id": AUTHOR_PUB_ID,
