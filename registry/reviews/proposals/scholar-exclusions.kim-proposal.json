@@ -3936,6 +3936,30 @@
       "reason": "APS's deposited record for Physical Review Letters 134:082501 assigns its H. J. Kim author ORCID 0000-0001-9787-4684. The ORCID person record names HongJoo Kim, whom KNU identifies as a Physics professor; CMU's Hyung J. Kim has a different ORCID. The same byline lists Ho-Jong Kim as a separate author. This exact 2025 Scholar observation 'Improved Limit on Neutrinoless Double Beta Decay of  from AMoRE-I' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1103/PhysRevLett.134.082501.",
       "evidence_url": "https://api.crossref.org/works/10.1103%2FPhysRevLett.134.082501",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:R22Rs3tN8aoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The public ORCID person record names HongJoo Kim, and its works list carries the exact 2016 IEEE DOI 10.1109/TNS.2016.2530828 as a self-linked work. The Scholar title loses the crystal formula, but journal, volume, pages, year, and leading authors match. This exact 2016 Scholar observation 'A Study of Radioactive Contamination of  Crystals for the AMoRE Experiment' belongs to HongJoo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1109/TNS.2016.2530828.",
+      "evidence_url": "https://pub.orcid.org/v3.0/0000-0001-9787-4684/works",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:dMpQl7XwOw4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Springer's exact 2025 article links H. J. Kim to ORCID 0000-0001-9787-4684, whose public person record names HongJoo Kim. This exact 2025 Scholar observation 'Projected background and sensitivity of AMoRE-II' belongs to HongJoo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1140/epjc/s10052-024-13516-9.",
+      "evidence_url": "https://link.springer.com/article/10.1140/epjc/s10052-024-13516-9",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:mel-f30kHHgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "KNU's exact DOI, volume 552, pages 456-462 article links its H. J. Kim author to KNU Physics professor Hong Joo Kim. This exact 2005 Scholar observation 'Inhibition of Cs137 contamination in cesium iodide' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1016/j.nima.2005.06.080.",
+      "evidence_url": "https://research.knu.ac.kr/en/publications/inhibition-of-sup137supcs-contamination-in-cesium-iodide/",
+      "verified_at": "2026-10-25"
     }
   ]
 }

@@ -2153,6 +2153,75 @@ OTHER_PRIMARY_ID_GUARDS.update(
     }
 )
 
+# Three held observations now have exact work-to-HongJoo Kim links. The 2016
+# IEEE DOI is on his public ORCID works list; Springer prints his ORCID on the
+# 2025 article; KNU links the 2005 paper's H. J. Kim byline to his person page.
+KNU_THREE_EXACT_GUARDS = {
+    374: (
+        "bC4aq-4AAAAJ:R22Rs3tN8aoC",
+        "A Study of Radioactive Contamination of  Crystals for the AMoRE Experiment",
+        "JY Lee, V Alenkov, L Ali, J Beyer, R Bibi, RS Boiko, K Boonin, O Buzanov, ...",
+        "2016",
+        "IEEE Transactions on Nuclear Science 63 (2), 543-547, 2016",
+    ),
+    379: (
+        "bC4aq-4AAAAJ:dMpQl7XwOw4C",
+        "Projected background and sensitivity of AMoRE-II",
+        "A Agrawal, VV Alenkov, P Aryal, J Beyer, B Bhandari, RS Boiko, K Boonin, ...",
+        "2025",
+        "The European Physical Journal C 85 (1), 9, 2025",
+    ),
+    390: (
+        "bC4aq-4AAAAJ:mel-f30kHHgC",
+        "Inhibition of Cs137 contamination in cesium iodide",
+        "YD Kim, IS Hahn, MJ Hwang, L Jin, WG Kang, HJ Kim, SC Kim, SK Kim, ...",
+        "2005",
+        "Nuclear Instruments and Methods in Physics Research Section A: "
+        "Accelerators\xa0…, 2005",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(KNU_THREE_EXACT_GUARDS)
+OTHER_PRIMARY.update(
+    {
+        374: (
+            KNU_THREE_EXACT_GUARDS[374][1],
+            2016,
+            "HongJoo Kim",
+            "10.1109/TNS.2016.2530828",
+            "https://pub.orcid.org/v3.0/0000-0001-9787-4684/works",
+            "HongJoo Kim public ORCID person and exact IEEE DOI work records",
+            "The public ORCID person record names HongJoo Kim, and its works "
+            "list carries the exact 2016 IEEE DOI 10.1109/TNS.2016.2530828 "
+            "as a self-linked work. The Scholar title loses the crystal formula, "
+            "but journal, volume, pages, year, and leading authors match.",
+        ),
+        379: (
+            KNU_THREE_EXACT_GUARDS[379][1],
+            2025,
+            "HongJoo Kim",
+            "10.1140/epjc/s10052-024-13516-9",
+            "https://link.springer.com/article/10.1140/epjc/s10052-024-13516-9",
+            "Springer exact article H. J. Kim-to-ORCID author link",
+            "Springer's exact 2025 article links H. J. Kim to ORCID "
+            "0000-0001-9787-4684, whose public person record names HongJoo Kim.",
+        ),
+        390: (
+            KNU_THREE_EXACT_GUARDS[390][1],
+            2005,
+            "Hong Joo Kim",
+            "10.1016/j.nima.2005.06.080",
+            "https://research.knu.ac.kr/en/publications/"
+            "inhibition-of-sup137supcs-contamination-in-cesium-iodide/",
+            "KNU exact Elsevier article H. J. Kim-to-person link",
+            "KNU's exact DOI, volume 552, pages 456-462 article links its "
+            "H. J. Kim author to KNU Physics professor Hong Joo Kim.",
+        ),
+    }
+)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in KNU_THREE_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4139,17 +4208,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 133,
+        "proposed_other_person_primary_work": 136,
         "proposed_no_target_author_primary_work": 8,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 299,
+        "unresolved_attribution_hold": 296,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 484 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 487 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
