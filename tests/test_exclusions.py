@@ -559,7 +559,7 @@ def test_walkington_corrupted_scholar_row_uses_verified_ams_record(tmp_path) -> 
     doi = "10.1090/qam/1598"
     person_id = "person-noeljwalkington-c55e6e3b"
     source = json.loads(Path("data/curated/works.json").read_text())
-    verified = [work for work in source["works"] if work["doi"] == doi]
+    verified = [work for work in source["works"] if work.get("doi") == doi]
     assert len(verified) == 1
     curated_path = tmp_path / "works.json"
     curated_path.write_text(
