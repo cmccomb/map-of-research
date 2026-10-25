@@ -83,6 +83,8 @@ jobs:
         if: ${{ steps.collect.outputs.refreshed_profiles != '0' || steps.registry.outputs.changed == 'true' }}
         working-directory: snapshot
         run: |
+          map-validate-scholar-coverage \
+            --baseline ../source/registry/legacy-scholar-cache-baseline.json
           map-build-snapshot
           map-validate-snapshot \
             --snapshot snapshots/cmu-engineering-publications.parquet \

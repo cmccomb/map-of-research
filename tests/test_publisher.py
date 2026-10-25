@@ -1569,6 +1569,11 @@ def test_main_always_writes_terminal_status(
     )
     monkeypatch.setattr(
         publisher,
+        "validate_coverage",
+        lambda **kwargs: {"legacy_profiles": 0, "complete_profiles": 1},
+    )
+    monkeypatch.setattr(
+        publisher,
         "publish_snapshot",
         lambda *args, **kwargs: {"works": 4},
     )
@@ -1588,3 +1593,7 @@ def test_main_always_writes_terminal_status(
     assert status["finished_at_utc"]
     if with_token:
         assert status["math_coverage"] == {"complete_scholar_profiles": 1}
+        assert status["scholar_coverage"] == {
+            "legacy_profiles": 0,
+            "complete_profiles": 1,
+        }

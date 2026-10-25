@@ -604,6 +604,11 @@ def test_publisher_cli_uses_snapshot_checkout_evidence_by_default(
         snapshots / paths["manifest_path"].name
     )
     monkeypatch.setenv(publisher.HF_TOKEN_ENV, "test-token")
+    monkeypatch.setattr(
+        publisher,
+        "validate_coverage",
+        lambda **kwargs: {"legacy_profiles": 0, "complete_profiles": 0},
+    )
     calls = []
     monkeypatch.setattr(
         publisher,

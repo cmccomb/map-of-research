@@ -1,0 +1,604 @@
+import json
+from pathlib import Path
+
+import pandas
+import pytest
+
+from map_of_research import publisher
+from map_of_research.coverage import (
+    main,
+    validate_complete_receipt,
+    validate_coverage,
+)
+from map_of_research.io import atomic_write_json, sha256_file
+from map_of_research.snapshot import build_snapshot
+from tests.registry_helpers import write_registry
+
+
+def _paths(tmp_path: Path) -> tuple[Path, Path, Path, Path, Path, Path]:
+    people, memberships, departments = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-alpha",
+                "display_name": "Alpha Person",
+                "scholar_id": "alphaAAAAJ",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-alpha",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.ece.cmu.edu/directory/faculty.html",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    cache_dir = tmp_path / "authors"
+    capture_dir = tmp_path / "captures"
+    baseline = tmp_path / "baseline.json"
+    cache_dir.mkdir()
+    capture_dir.mkdir()
+    atomic_write_json(
+        baseline,
+        {
+            "schema_version": 1,
+            "frozen_snapshot_commit": "a" * 40,
+            "frozen_snapshot_sha256": "b" * 64,
+            "profiles": {},
+        },
+    )
+    return people, memberships, departments, cache_dir, capture_dir, baseline
+
+
+def _options(paths: tuple[Path, Path, Path, Path, Path, Path]) -> dict:
+    people, memberships, departments, cache_dir, capture_dir, baseline = paths
+    return {
+        "people_path": people,
+        "memberships_path": memberships,
+        "departments_path": departments,
+        "cache_dir": cache_dir,
+        "captures_dir": capture_dir,
+        "baseline_path": baseline,
+    }
+
+
+def _cache(paths: tuple, *, complete: bool) -> dict:
+    cache_dir, capture_dir = paths[3:5]
+    citation_url = (
+        "https://scholar.google.com/citations?user=alphaAAAAJ"
+        "&citation_for_view=alphaAAAAJ:one"
+    )
+    row = {
+        "author_pub_id": "alphaAAAAJ:one",
+        "title": "One",
+        "author": "A Alpha",
+        "venue": "Journal",
+        "pub_year": "2025",
+        "num_citations": 2,
+        "pub_url": citation_url,
+        "capture_row_index": 1,
+    }
+    cache = {
+        "schema_version": 1,
+        "scholar_id": "alphaAAAAJ",
+        "display_name": "Alpha Person",
+        "fetched_at_utc": "2026-10-25T00:00:00+00:00",
+        "publication_count": 1,
+        "publications": [row],
+    }
+    if complete:
+        source_json = capture_dir / "alpha.json"
+        source_html = capture_dir / "alpha.html"
+        atomic_write_json(
+            source_json,
+            {
+                "scholar_user_id": "alphaAAAAJ",
+                "displayed_count": 1,
+                "more_remain": False,
+                "challenge": False,
+                "page_error": "",
+                "works": [
+                    {
+                        "index": 1,
+                        "citation_url": citation_url,
+                        "title": "One",
+                        "authors": "A Alpha",
+                        "venue": "Journal",
+                        "year": "2025",
+                        "citation_count": "2",
+                    }
+                ],
+            },
+        )
+        source_html.write_text(
+            '<table><tr class="gsc_a_tr"><td class="gsc_a_t"><a class="gsc_a_at" href="'
+            + citation_url
+            + '">One</a><div class="gs_gray">A Alpha</div>'
+            + '<div class="gs_gray">Journal</div></td>'
+            + '<td class="gsc_a_c"><a class="gsc_a_ac">2</a></td>'
+            + '<td class="gsc_a_y"><span class="gsc_a_h">2025</span></td>'
+            + "</tr></table>"
+            + '<button id="gsc_bpf_more" disabled="">Show more</button>'
+        )
+        cache["browser_capture"] = {
+            "coverage": "complete_visible_profile",
+            "profile_url": "https://scholar.google.com/citations?user=alphaAAAAJ",
+            "displayed_count": 1,
+            "more_remain": False,
+            "limit": 5000,
+            "source_json_filename": source_json.name,
+            "source_json_sha256": sha256_file(source_json),
+            "source_html_filename": source_html.name,
+            "source_html_sha256": sha256_file(source_html),
+        }
+    atomic_write_json(cache_dir / "alphaAAAAJ.json", cache)
+    return cache
+
+
+def _baseline(paths: tuple, *, included: bool = True) -> None:
+    baseline = json.loads(paths[5].read_text())
+    baseline["profiles"]["alphaAAAAJ"] = {
+        "person_id": "person-alpha",
+        "cache_sha256": sha256_file(paths[3] / "alphaAAAAJ.json"),
+        "included": included,
+        "author_pub_ids": ["alphaAAAAJ:one"],
+    }
+    atomic_write_json(paths[5], baseline)
+
+
+def test_new_complete_capture_reconciles_at_publication_boundary(
+    tmp_path: Path,
+) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=True)
+    options = _options(paths)
+    assert validate_coverage(**options) == {
+        "legacy_profiles": 0,
+        "complete_profiles": 1,
+    }
+    snapshot = tmp_path / "snapshot.parquet"
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=tmp_path / "manifest.json",
+    )
+    result = validate_coverage(**options, snapshot_path=snapshot)
+    assert result["complete_profiles"] == 1
+    assert (
+        main(
+            [
+                "--people",
+                str(paths[0]),
+                "--memberships",
+                str(paths[1]),
+                "--departments",
+                str(paths[2]),
+                "--cache-dir",
+                str(paths[3]),
+                "--captures-dir",
+                str(paths[4]),
+                "--baseline",
+                str(paths[5]),
+                "--snapshot",
+                str(snapshot),
+            ]
+        )
+        == 0
+    )
+
+
+def test_publisher_cli_requires_complete_source_before_upload(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    snapshot = tmp_path / "snapshot.parquet"
+    manifest = tmp_path / "manifest.json"
+    status = tmp_path / "status.json"
+    args = [
+        "--snapshot",
+        str(snapshot),
+        "--manifest",
+        str(manifest),
+        "--people",
+        str(paths[0]),
+        "--memberships",
+        str(paths[1]),
+        "--departments",
+        str(paths[2]),
+        "--scholar-cache-dir",
+        str(paths[3]),
+        "--scholar-captures-dir",
+        str(paths[4]),
+        "--scholar-baseline",
+        str(paths[5]),
+        "--status-file",
+        str(status),
+    ]
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=manifest,
+    )
+    monkeypatch.setenv(publisher.HF_TOKEN_ENV, "test-token")
+    monkeypatch.setattr(
+        publisher,
+        "validate_math_coverage",
+        lambda *args, **kwargs: {"complete_scholar_profiles": 0},
+    )
+    uploads: list[str] = []
+    monkeypatch.setattr(
+        publisher,
+        "publish_snapshot",
+        lambda *args, **kwargs: uploads.append("upload") or {"works": 1},
+    )
+    assert publisher.main(args) == 0
+    assert uploads == ["upload"]
+    assert json.loads(status.read_text())["scholar_coverage"] == {
+        "legacy_profiles": 0,
+        "complete_profiles": 1,
+    }
+
+    cache.pop("browser_capture")
+    atomic_write_json(paths[3] / "alphaAAAAJ.json", cache)
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=manifest,
+    )
+    assert publisher.main(args) == 1
+    assert uploads == ["upload"]
+    failed = json.loads(status.read_text())
+    assert failed["status"] == "failure"
+    assert "Complete source receipt is missing" in failed["error_message"]
+
+
+def test_partial_new_and_changed_caches_cannot_publish(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=False)
+    with pytest.raises(ValueError, match="Complete source receipt is missing"):
+        validate_coverage(**_options(paths))
+    _baseline(paths)
+    assert validate_coverage(**_options(paths))["legacy_profiles"] == 1
+    cache_path = paths[3] / "alphaAAAAJ.json"
+    cache = json.loads(cache_path.read_text())
+    cache["publications"][0]["title"] = "Changed"
+    atomic_write_json(cache_path, cache)
+    with pytest.raises(ValueError, match="Complete source receipt is missing"):
+        validate_coverage(**_options(paths))
+
+
+def test_formerly_excluded_legacy_person_needs_complete_capture(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=False)
+    _baseline(paths, included=False)
+    with pytest.raises(ValueError, match="Complete source receipt is missing"):
+        validate_coverage(**_options(paths))
+
+
+def test_previously_published_ids_and_cache_cannot_disappear(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=True)
+    _baseline(paths)
+    baseline = json.loads(paths[5].read_text())
+    baseline["profiles"]["alphaAAAAJ"]["author_pub_ids"] = ["alphaAAAAJ:old"]
+    atomic_write_json(paths[5], baseline)
+    with pytest.raises(ValueError, match="Previously published Scholar IDs"):
+        validate_coverage(**_options(paths))
+    baseline["profiles"]["alphaAAAAJ"]["author_pub_ids"] = ["alphaAAAAJ:one"]
+    atomic_write_json(paths[5], baseline)
+    (paths[3] / "alphaAAAAJ.json").unlink()
+    with pytest.raises(
+        ValueError, match="previously published Scholar cache is missing"
+    ):
+        validate_coverage(**_options(paths))
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("coverage", "capped_partial"),
+        ("more_remain", True),
+        ("displayed_count", 2),
+        ("limit", 0),
+        ("profile_url", "https://scholar.google.com/citations?user=wrong"),
+        ("source_json_sha256", "0" * 64),
+        ("source_html_sha256", "0" * 64),
+        ("source_json_filename", "../alpha.json"),
+        ("source_json_sha256", "invalid"),
+    ],
+)
+def test_receipt_rejects_false_claims_and_tampered_sources(
+    tmp_path: Path, field: str, value: object
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    cache["browser_capture"][field] = value
+    with pytest.raises(ValueError):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("scholar_user_id", "wrong"),
+        ("displayed_count", 2),
+        ("more_remain", True),
+        ("challenge", True),
+        ("page_error", "blocked"),
+        ("works", []),
+    ],
+)
+def test_receipt_rejects_bad_saved_json(
+    tmp_path: Path, field: str, value: object
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    source = paths[4] / "alpha.json"
+    capture = json.loads(source.read_text())
+    capture[field] = value
+    atomic_write_json(source, capture)
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source)
+    with pytest.raises(ValueError, match="Saved capture is incomplete"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def test_receipt_rejects_invalid_source_row(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    source = paths[4] / "alpha.json"
+    capture = json.loads(source.read_text())
+    capture["works"] = ["bad"]
+    atomic_write_json(source, capture)
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source)
+    with pytest.raises(ValueError, match="Invalid source publication row"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [("year", "2024"), ("citation_count", "3"), ("citation_count", "unknown")],
+)
+def test_receipt_reconciles_source_year_and_citations(
+    tmp_path: Path, field: str, value: str
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    source = paths[4] / "alpha.json"
+    capture = json.loads(source.read_text())
+    capture["works"][0][field] = value
+    atomic_write_json(source, capture)
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source)
+    with pytest.raises(ValueError, match="Cached row differs"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "old,new",
+    [
+        ('disabled=""', ""),
+        ('class="gsc_a_tr"', 'class="other"'),
+        ("alphaAAAAJ:one", "alphaAAAAJ:other"),
+        ("citation_for_view", "other_parameter"),
+    ],
+)
+def test_receipt_requires_disabled_final_control_and_exact_html_rows(
+    tmp_path: Path, old: str, new: str
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    html = paths[4] / "alpha.html"
+    html.write_text(html.read_text().replace(old, new))
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    with pytest.raises(ValueError, match="Saved HTML does not show|Cached row differs"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "old,new",
+    [
+        (">One</a>", ">Another</a>"),
+        (">A Alpha</div>", ">B Beta</div>"),
+        (">Journal</div>", ">Other Journal</div>"),
+        (">2</a>", ">3</a>"),
+        (">2025</span>", ">2024</span>"),
+    ],
+)
+def test_receipt_rejects_html_text_changed_after_source_capture(
+    tmp_path: Path, old: str, new: str
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    html = paths[4] / "alpha.html"
+    html.write_text(html.read_text().replace(old, new))
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def test_receipt_reads_nested_text_and_only_first_two_gray_fields(
+    tmp_path: Path,
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    html = paths[4] / "alpha.html"
+    content = (
+        html.read_text()
+        .replace(">A Alpha</div>", "><span>A Alpha</span></div>")
+        .replace(
+            ">Journal</div></td>",
+            '>Journal</div><div class="gs_gray">Extra page metadata</div></td>',
+        )
+    )
+    html.write_text(content)
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def test_receipt_reads_scholar_svg_title_labels(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    title = "α-pinene between -50 and +25 ∘C"
+    cache["publications"][0]["title"] = title
+    source = paths[4] / "alpha.json"
+    capture = json.loads(source.read_text())
+    capture["works"][0]["title"] = title
+    atomic_write_json(source, capture)
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source)
+    html = paths[4] / "alpha.html"
+    html.write_text(
+        html.read_text().replace(
+            ">One</a>",
+            '><svg class="gs_fsvg" aria-label="α"></svg>-pinene between '
+            '<svg class="gs_fsvg" aria-label="-50"></svg> and '
+            '<svg class="gs_fsvg" aria-label="+25"></svg> '
+            '<svg class="gs_fsvg" aria-label="∘"></svg>C</a>',
+        )
+    )
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+    html.write_text(html.read_text().replace('aria-label="+25"', 'aria-label="+26"'))
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("capture_row_index", 2),
+        ("author_pub_id", "alphaAAAAJ:wrong"),
+        ("pub_url", "https://example.test/wrong"),
+        ("title", "Wrong"),
+        ("author", "Wrong"),
+        ("venue", "Wrong"),
+        ("pub_year", "2024"),
+        ("num_citations", 3),
+    ],
+)
+def test_receipt_reconciles_every_cached_source_row(
+    tmp_path: Path, field: str, value: object
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    cache["publications"][0][field] = value
+    with pytest.raises(ValueError, match="Capture row indexes|Cached row differs"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def test_receipt_rejects_nonobject_cache_row(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    cache["publications"] = ["bad"]
+    with pytest.raises(ValueError, match="Invalid cached publication row"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "column", ["source_record_json", "person_id", "fetched_at_utc"]
+)
+def test_upload_rejects_snapshot_rows_not_in_source_cache(
+    tmp_path: Path, column: str
+) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=True)
+    snapshot = tmp_path / "snapshot.parquet"
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=tmp_path / "manifest.json",
+    )
+    frame = pandas.read_parquet(snapshot)
+    frame.loc[0, column] = "tampered"
+    frame.to_parquet(snapshot, index=False)
+    with pytest.raises(ValueError, match="Snapshot rows differ"):
+        validate_coverage(**_options(paths), snapshot_path=snapshot)
+
+
+def test_upload_rejects_missing_or_extra_snapshot_profile(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=True)
+    snapshot = tmp_path / "snapshot.parquet"
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=tmp_path / "manifest.json",
+    )
+    frame = pandas.read_parquet(snapshot)
+    frame.iloc[0:0].to_parquet(snapshot, index=False)
+    with pytest.raises(ValueError, match="Snapshot rows differ"):
+        validate_coverage(**_options(paths), snapshot_path=snapshot)
+    frame = pandas.read_parquet(tmp_path / "snapshot.parquet")
+    original = build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=tmp_path / "manifest.json",
+    )
+    assert original["publication_rows"] == 1
+    frame = pandas.read_parquet(snapshot)
+    extra = frame.copy()
+    extra.loc[0, "scholar_id"] = "outsiderAAAAJ"
+    pandas.concat([frame, extra], ignore_index=True).to_parquet(snapshot, index=False)
+    with pytest.raises(ValueError, match="Snapshot Scholar profiles differ"):
+        validate_coverage(**_options(paths), snapshot_path=snapshot)
+
+
+def test_uncached_profile_has_no_coverage_claim(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    assert validate_coverage(**_options(paths)) == {
+        "legacy_profiles": 0,
+        "complete_profiles": 0,
+    }
+
+
+def test_invalid_cache_or_baseline_fails_closed(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    _cache(paths, complete=False)
+    atomic_write_json(paths[5], {"schema_version": 2})
+    with pytest.raises(ValueError, match="baseline is invalid"):
+        validate_coverage(**_options(paths))
+    atomic_write_json(
+        paths[5],
+        {
+            "schema_version": 1,
+            "frozen_snapshot_commit": "a" * 40,
+            "frozen_snapshot_sha256": "b" * 64,
+            "profiles": {"alphaAAAAJ": {"included": "invalid"}},
+        },
+    )
+    with pytest.raises(ValueError, match="cache entry is invalid"):
+        validate_coverage(**_options(paths))
+    atomic_write_json(
+        paths[5],
+        {
+            "schema_version": 1,
+            "frozen_snapshot_commit": "a" * 40,
+            "frozen_snapshot_sha256": "b" * 64,
+            "profiles": {},
+        },
+    )
+    atomic_write_json(paths[3] / "alphaAAAAJ.json", {"scholar_id": "wrong"})
+    with pytest.raises(ValueError, match="Invalid Scholar cache"):
+        validate_coverage(**_options(paths))
