@@ -183,6 +183,36 @@ def test_natalie_mcguier_only_malformed_second_review_is_excluded() -> None:
     assert (scholar_id, f"{scholar_id}:u-x6o8ySG0sC") not in exclusions
 
 
+def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:
+    scholar_id = "au_cLfoAAAAJ"
+    expected = {
+        "UHK10RUVsp4C": "corrupted_duplicate",
+        "k_IJM867U9cC": "false_profile_attribution",
+        "sSrBHYA8nusC": "corrupted_duplicate",
+        "xtRiw3GOFMkC": "nonpublication",
+        "HDshCWvjkbEC": "false_profile_attribution",
+        "M3NEmzRMIkIC": "nonpublication",
+        "e5wmG9Sq2KIC": "nonpublication",
+        "olpn-zPbct0C": "nonpublication",
+        "WqliGbK-hY8C": "nonpublication",
+        "5awf1xo2G04C": "nonpublication",
+        "SdhP9T11ey4C": "nonpublication",
+        "eq2jaN3J8jMC": "nonpublication",
+        "g5m5HwL7SMYC": "corrupted_duplicate",
+        "blknAaTinKkC": "nonpublication",
+        "N5tVd3kTz84C": "corrupted_duplicate",
+    }
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == expected
+    assert (scholar_id, f"{scholar_id}:VL0QpB8kHFEC") not in exclusions
+    assert (scholar_id, f"{scholar_id}:TFP_iSt0sucC") not in exclusions
+
+
 def test_jarvik_exact_review_excludes_only_source_verified_rows() -> None:
     scholar_id = "grTfBeAAAAAJ"
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)

@@ -1,0 +1,29 @@
+# Tina Kahniashvili Scholar observation review, 2026-10-24
+
+The complete 134-row source capture is staged separately in draft [PR #142](https://github.com/cmccomb/map-of-research/pull/142). Chris McComb explicitly confirmed Scholar ID `au_cLfoAAAAJ`; the CMU Physics page confirms her faculty role, while the Scholar profile lists Ilia State University. This producer draft proposes 15 exact exclusions beyond the 842 decisions on `main` at `c8f1841`. Raw capture and author-cache rows remain intact. Merge this producer review before the paired source PR enters a new snapshot.
+
+| Saved row | Scholar ID suffix | Decision and primary evidence |
+| ---: | --- | --- |
+| 86 | `olpn-zPbct0C` | `nonpublication`: the saved venue says NASA ATP Proposal, and [NASA's Astrophysics Division yearbook](https://science.nasa.gov/wp-content/uploads/2023/11/3-apd-yearbook-11.06.23.pdf) names Kahniashvili and the exact selected proposal title on pp. 176–177. The yearbook does not independently confirm the saved proposal number. |
+| 92 | `WqliGbK-hY8C` | `nonpublication`: [NSF award 2408411](https://api.nsf.gov/services/v1/awards/2408411.json) has the exact title and Kahniashvili as PI. It is an award record. |
+| 93 | `5awf1xo2G04C` | `nonpublication`: [NSF award 2307698](https://api.nsf.gov/services/v1/awards/2307698.json) has the exact title and Kahniashvili as PI. It is an award record. |
+| 101 | `UHK10RUVsp4C` | `corrupted_duplicate`: a page-header fragment was prepended to the article retained at row 34, the [2019 *Physical Review Fluids* paper](https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.024608). |
+| 104 | `SdhP9T11ey4C` | `nonpublication`: [NSF award 1615940](https://api.nsf.gov/services/v1/awards/1615940.json) has the exact title and Kahniashvili as PI. It is an award record. |
+| 106 | `eq2jaN3J8jMC` | `nonpublication`: [NSF award 1109180](https://api.nsf.gov/services/v1/awards/1109180.json) has the exact title and Kahniashvili as PI. It is an award record. |
+| 107 | `g5m5HwL7SMYC` | `corrupted_duplicate`: the captured title appends “(9 pages) 023004” to the same [*Physical Review D* 81, 023004 article](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.81.023004) retained at row 12. |
+| 109 | `k_IJM867U9cC` | `false_profile_attribution`: [arXiv:astro-ph/0404534](https://arxiv.org/abs/astro-ph/0404534) identifies W. Bednarek, G. F. Burgio, and T. Montaruli as the authors. Kahniashvili is not an author. |
+| 122 | `blknAaTinKkC` | `nonpublication`: publisher-deposited [Crossref DOI metadata](https://api.crossref.org/works/10.1007/bf00641696) identifies *Astrophysics and Space Science* 238, p. 311, as an unauthored “List of forthcoming papers” index. The saved author string belongs to the [distinct paper](https://link.springer.com/article/10.1007/BF00653766) retained at row 58. |
+| 128 | `N5tVd3kTz84C` | `corrupted_duplicate`: the [ESA SP-251 contents scan](https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf), linked by the [K10plus catalog](https://unapi.k10plus.de/?format=marcxml&id=opac-de-627:ppn:1109639244), identifies “Cosmions and Galaxy Formation” on p. 41 by Kahniashvili and Lukash, followed by their Space Research Institute affiliation. Saved row 128 uses that affiliation as its title; retain the matching work at row 126. |
+| 129 | `sSrBHYA8nusC` | `corrupted_duplicate`: a special-issue header was prepended to the paper retained at row 40; [arXiv:1807.05479](https://arxiv.org/abs/1807.05479) gives its authors and journal reference. |
+| 130 | `xtRiw3GOFMkC` | `nonpublication`: the [source PDF](https://lcd-www.colorado.edu/~axbr9098/tmp/machine/NSF2015CDSE.pdf) is a collaborative research proposal. |
+| 131 | `M3NEmzRMIkIC` | `nonpublication`: [arXiv:1404.2238](https://arxiv.org/abs/1404.2238) and the [author-hosted PDF](https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf) identify this as supplemental material to the article retained at row 8. |
+| 132 | `e5wmG9Sq2KIC` | `nonpublication`: the [author-hosted PDF](https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf) is supplemental material to the same row 8 article. |
+| 133 | `HDshCWvjkbEC` | `false_profile_attribution`: [publisher-deposited DOI metadata](https://api.crossref.org/works/10.1016/j.newar.2005.01.001) credits D. B. Cline alone for *Overview of Dark Matter 2004*. |
+
+Rows 88 and 134 remain: row 88 is a [Moriond proceedings paper](https://s3.cern.ch/inspire-prod-files-f/fc955c550ca14e56a7758da9a54dcd5d) with a Scholar surname typo, and row 134 is a genuine [2001 arXiv preprint](https://arxiv.org/abs/astro-ph/0110426) of the 2002 journal work at row 64. Existing producer precedent keeps genuine preprint and journal versions as separate observations. Row 58 is the real Chedia/Kahniashvili article and is separate from the index artifact at row 122.
+
+Row 116 `VL0QpB8kHFEC` has a body-text fragment as its title. [Coauthor Novosyadlyj's institutional bibliography](https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf) identifies the matching three-author 1998 Potsdam proceedings chapter as “Large Scale Structure Formation in Mixed Dark Matter Models with a Cosmological Constant,” pp. 269–272. The original chapter text was unavailable, so the captured fragment cannot yet be tied directly to that exact item. Row 116 remains unexcluded and requires a source repair decision or exact guard before snapshot ingestion.
+
+The ESA contents scan does not establish whether differently titled row 127 is another version; leave row 127 untouched.
+
+Each proposed excluded ID appears once at its listed index in the saved raw JSON and once in the author cache. The 15 decisions do not make a profile-wide attribution claim. The paired source review must record row 128 as an exact corrupted duplicate before source ingestion; row 116 remains unresolved.

@@ -7000,6 +7000,126 @@
       "reason": "The title is a pasted citation line naming Mulholland and repeating the complete 2013 OA Alcohol review retained as Scholar row 7 (DOI 10.13172/2053-0285-1-1-446); this row has no separate year or venue.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3890354/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:UHK10RUVsp4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Page-header text was prepended to the title of the same Physical Review Fluids article retained at row 34.",
+      "evidence_url": "https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.024608",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:k_IJM867U9cC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The named neutrino review is by Bednarek, Burgio, and Montaruli; Kahniashvili is absent from its author list.",
+      "evidence_url": "https://arxiv.org/abs/astro-ph/0404534",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:sSrBHYA8nusC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The journal special-issue header was prepended to the title of the same paper retained at row 40.",
+      "evidence_url": "https://arxiv.org/abs/1807.05479",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "nonpublication",
+      "reason": "The source is a collaborative research proposal, not a published research work.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/tmp/machine/NSF2015CDSE.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:HDshCWvjkbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited DOI metadata credits D. B. Cline alone for Overview of Dark Matter 2004; Kahniashvili is absent.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.newar.2005.01.001",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:M3NEmzRMIkIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:e5wmG9Sq2KIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:olpn-zPbct0C",
+      "reason_code": "nonpublication",
+      "reason": "NASA Astrophysics Theory Program yearbook identifies this exact Kahniashvili project as a selected proposal; the saved record is a proposal, not a research publication.",
+      "evidence_url": "https://science.nasa.gov/wp-content/uploads/2023/11/3-apd-yearbook-11.06.23.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:WqliGbK-hY8C",
+      "reason_code": "nonpublication",
+      "reason": "Official NSF award 2408411 matches the saved title and Tina Kahniashvili as PI; an award record is not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2408411.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:5awf1xo2G04C",
+      "reason_code": "nonpublication",
+      "reason": "Official NSF award 2307698 matches the saved title and Tina Kahniashvili as PI; an award record is not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2307698.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:SdhP9T11ey4C",
+      "reason_code": "nonpublication",
+      "reason": "Official NSF award 1615940 matches the saved title and Tina Kahniashvili as PI; an award record is not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1615940.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:eq2jaN3J8jMC",
+      "reason_code": "nonpublication",
+      "reason": "Official NSF award 1109180 matches the saved title and Tina Kahniashvili as PI; an award record is not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1109180.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title appends page and article-number text to the same Physical Review D 81, 023004 article retained at row 12.",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.81.023004",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:blknAaTinKkC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher-deposited DOI metadata identifies Astrophysics and Space Science 238, page 311 as an unauthored List of forthcoming papers index. The saved title is pasted adjacent-paper text, while its Chedia/Kahniashvili author string belongs to the distinct article retained at row 58.",
+      "evidence_url": "https://api.crossref.org/works/10.1007%2Fbf00641696",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "author_pub_id": "au_cLfoAAAAJ:N5tVd3kTz84C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Captured row 128 uses the Space Research Institute author affiliation as its title. The ESA SP-251 contents list Cosmions and Galaxy Formation by Kahniashvili and Lukash at page 41, matching the title, authors, page, and 1986 volume of retained row 126.",
+      "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
