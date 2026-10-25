@@ -55,11 +55,10 @@ from .profile_releases import (
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
-    DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
     Registry,
-    load_implicit_primary_baseline,
+    implicit_primary_baseline_for_people,
     load_registry,
     validate_included_scholar_primary_homes,
 )
@@ -1158,14 +1157,15 @@ def publish_snapshot(
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
     source_cache_dir: Path | None = None,
+    primary_home_baseline_path: Path | None = None,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
         registry,
-        legacy_implicit_primary=load_implicit_primary_baseline(
-            people_path.parent / "reviews" / DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH.name
+        legacy_implicit_primary=implicit_primary_baseline_for_people(
+            people_path, primary_home_baseline_path
         ),
     )
     frame, manifest = validate_snapshot(
@@ -1348,6 +1348,7 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--snapshot", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
+    parser.add_argument("--primary-home-baseline", type=Path)
     parser.add_argument(
         "--memberships",
         type=Path,
@@ -1459,6 +1460,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             contexts_path=args.reviewed_contexts,
             profile_releases_path=args.profile_releases,
             source_cache_dir=args.scholar_cache_dir,
+            primary_home_baseline_path=args.primary_home_baseline,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

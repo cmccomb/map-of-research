@@ -99,6 +99,7 @@ jobs:
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --people source/registry/people.csv \
+            --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
             --departments source/registry/departments.csv \
             --math-cache-dir snapshot/data/authors \

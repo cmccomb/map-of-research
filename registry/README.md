@@ -79,6 +79,9 @@ The 318 already registered Scholar profiles that use a derived home are frozen
 in an identity-paired baseline. New Scholar IDs require an explicit sourced
 primary field, so a newly verified single-department identity cannot silently
 inherit a primary without recording the decision.
+A broad school home cannot override an included academic department. Reviewed
+institute, constituent school, and academic-area homes retain their formal
+types and evidence when they coexist with department memberships.
 
 Tepper's official faculty listings support one academic area for 23 of the 28
 reviewed Scholar-ID holders. Five are listed in two areas; their explicit

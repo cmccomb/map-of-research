@@ -538,6 +538,41 @@ def registry() -> Registry:
     )
 
 
+def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation(
+    monkeypatch, tmp_path
+) -> None:
+    class SnapshotChecked(Exception):
+        pass
+
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+
+    def check_snapshot(*args, **kwargs):
+        raise SnapshotChecked
+
+    monkeypatch.setattr(publisher, "validate_snapshot", check_snapshot)
+    with pytest.raises(SnapshotChecked):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            people_path=tmp_path / "people.csv",
+            memberships_path=tmp_path / "memberships.csv",
+            departments_path=tmp_path / "departments.csv",
+        )
+    explicit_baseline = tmp_path / "missing-baseline.json"
+    parsed = publisher._parse_args(
+        [
+            "--snapshot",
+            str(tmp_path / "snapshot.parquet"),
+            "--manifest",
+            str(tmp_path / "manifest.json"),
+            "--primary-home-baseline",
+            str(explicit_baseline),
+        ]
+    )
+    assert parsed.primary_home_baseline == explicit_baseline
+
+
 def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     artifact = publisher.build_map_artifact(
         work_frame(),

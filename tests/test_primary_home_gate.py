@@ -6,6 +6,7 @@ import pytest
 
 from map_of_research.registry import (
     DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH,
+    implicit_primary_baseline_for_people,
     load_implicit_primary_baseline,
     load_registry,
     validate_included_scholar_primary_homes,
@@ -171,6 +172,71 @@ def test_implicit_primary_baseline_is_immutable(tmp_path: Path) -> None:
     changed.write_text('{"profiles": {}}\n')
     with pytest.raises(ValueError, match="baseline was changed"):
         load_implicit_primary_baseline(changed)
+    assert implicit_primary_baseline_for_people(tmp_path / "people.csv") == {}
+    with pytest.raises(FileNotFoundError):
+        implicit_primary_baseline_for_people(
+            tmp_path / "people.csv", changed.parent / "missing.json"
+        )
+
+
+def test_school_primary_cannot_override_included_department(tmp_path: Path) -> None:
+    paths = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-joint",
+                "display_name": "Joint Faculty",
+                "scholar_id": "jointAAAAJ",
+                "primary_academic_home_type": "school",
+                "primary_academic_home_id": "tepper",
+                "primary_academic_home_title": "Tepper School of Business",
+                "primary_academic_home_source_url": "https://example.test/tepper",
+                "primary_academic_home_verified_at": "2026-10-25",
+                "primary_academic_home_basis": "reviewed",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-joint",
+                "department_id": department_id,
+                "role": "faculty",
+                "included": "true",
+                "source_url": f"https://example.test/{department_id}",
+                "verified_at": "2026-10-25",
+            }
+            for department_id in ("ece", "tepper-faculty")
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "title": "Electrical and Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "tepper-faculty",
+                "school_id": "tepper",
+                "title": "Tepper faculty roster",
+                "unit_type": "roster_container",
+                "directory_url": "https://example.test/tepper",
+            },
+        ],
+        schools=[
+            {
+                "school_id": "engineering",
+                "title": "College of Engineering",
+                "directory_url": "https://example.test/engineering",
+            },
+            {
+                "school_id": "tepper",
+                "title": "Tepper School of Business",
+                "directory_url": "https://example.test/tepper",
+            },
+        ],
+    )
+    registry = load_registry(*paths)
+    assert registry.primary_affiliation("person-joint").home_type == "school"
+    with pytest.raises(ValueError, match=r"person-joint \(Joint Faculty\)"):
+        validate_included_scholar_primary_homes(registry, legacy_implicit_primary={})
 
 
 def test_formal_types_and_cmu_africa_preserve_department_semantics(

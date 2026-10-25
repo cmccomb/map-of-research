@@ -749,6 +749,23 @@ def load_implicit_primary_baseline(path: Path) -> dict[str, str]:
     return load_json(path)["profiles"]
 
 
+def implicit_primary_baseline_for_people(
+    people_path: Path, baseline_path: Path | None = None
+) -> dict[str, str]:
+    """Use a colocated baseline when present; custom registries start empty."""
+
+    path = (
+        baseline_path
+        if baseline_path is not None
+        else people_path.parent
+        / "reviews"
+        / DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH.name
+    )
+    if baseline_path is None and not path.is_file():
+        return {}
+    return load_implicit_primary_baseline(path)
+
+
 def validate_included_scholar_primary_homes(
     registry: Registry, *, legacy_implicit_primary: Mapping[str, str]
 ) -> int:
@@ -786,6 +803,7 @@ def validate_included_scholar_primary_homes(
                 home.home_type == "department"
                 and published["primary_department_id"] not in included_departments
             )
+            or (home.home_type == "school" and included_departments)
             or (home.home_type != "department" and published["primary_department_id"])
         ):
             invalid.append(f"{profile.person_id} ({profile.display_name})")
