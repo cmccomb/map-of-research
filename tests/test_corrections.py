@@ -36,7 +36,7 @@ def _manifest(path: Path, entries: object, *, version: int = 1) -> Path:
     return path
 
 
-def test_checked_in_corrections_are_exact_and_leave_two_ambiguous_rows_held() -> None:
+def test_chien_corrections_leave_two_ambiguous_rows_held() -> None:
     corrections = load_corrections(DEFAULT_CORRECTIONS_PATH)
     scholar_id = "8iLLOQgAAAAJ"
     assert {key[1].split(":")[-1] for key in corrections if key[0] == scholar_id} == {
