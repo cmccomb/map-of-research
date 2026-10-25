@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DYwfpbJVc2mZ65uxWOOQYGgCu+U</id>
+  <title>arXiv Query: search_query=au:"Neumayer, Robin"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-25T11:42:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Neumayer,+Robin%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>23</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07468v1</id>
+    <title>Minimizing clusters with prescribed asymptotic geometry</title>
+    <updated>2026-06-05T17:21:08Z</updated>
+    <link href="https://arxiv.org/abs/2606.07468v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07468v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct locally minimizing $(1,2)$-clusters whose exterior interfaces are asymptotic to various prescribed singular area-minimizing cones. For $n+1 \leq 7$, Bronsard &amp; Novack characterized all minimizing $(1,2)$-clusters as standard lenses, whose exterior interface is planar. For $n+1 \in [8,2700]$, the authors together with Bronsard showed the existence of a locally minimizing $(1,2)$-cluster whose exterior interface blows down to some (unknown, possibly non-unique) singular area-minimizing hypercone. For $n+1=8$, this was shown independently by Novaga, Paolini &amp; Tortorelli.
+  Here we develop a refined construction using the Hardt-Simon foliation that realizes prescribed cones. For a singular area-minimizing hypercone $C$ that has an isolated singularity or is cylindrical, we show that if $C$ satisfies an explicit energy bound, then there is a locally minimizing $(1,2)$-cluster whose exterior interface is asymptotic to $C$ with quantitative rates. In fact, if $C$ is an area minimizing Lawson cone satisfying this energy bound, we produce a countably infinite family of distinct locally minimizing clusters asymptotic to $C$, distinguished by their prescribed asymptotic decay to leading order.
+  We verify this energy bound for the generalized Simons cones $C_{k,k}$ in every even ambient dimension $n+1 = 2k+2\geq 8$, and for the cylindrical cone $C_{3,3}\times\mathbb{R}$ in $\mathbb{R}^9$, where $C_{3,3}$ is the Simons cone, therefore answering the cone realization problem in these cases. This in particular removes the upper bound of 2700 on the ambient dimension when $n+1$ is even in our preceding work.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T17:21:08Z</published>
+    <arxiv:comment>30 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Michael Novack</name>
+    </author>
+    <author>
+      <name>Anna Skorobogatova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.28982v2</id>
+    <title>Qualitative stability for a family of trace Sobolev inequalities</title>
+    <updated>2026-07-08T00:33:56Z</updated>
+    <link href="https://arxiv.org/abs/2605.28982v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.28982v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of this short note is to prove qualitative stability for a family of trace Sobolev inequalities first proven by Carlen \&amp; Loss for $p=2$ and by Maggi and the author for $p\in (1,n)$. This answers an open problem raised in a recent paper of Fan, Li \&amp; Zhang, and in conjunction with their local analysis, yields sharp quantitative stability for this family of inequalities when $p=2$.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-27T18:36:45Z</published>
+    <arxiv:comment>Minor error corrected from v.1, reference updated</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.22532v2</id>
+    <title>Rigidity of critical points of hydrophobic capillary functionals</title>
+    <updated>2025-09-29T14:36:06Z</updated>
+    <link href="https://arxiv.org/abs/2509.22532v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.22532v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove the rigidity, among sets of finite perimeter, of volume-preserving critical points of the capillary energy in the half space, in the case where the prescribed interior contact angle is between $90^\circ$ and $120^\circ$. No structural or regularity assumption is required on the finite perimeter sets. Assuming that the ``tangential'' part of the capillary boundary is $\mathcal{H}^n$-null, this rigidity theorem extends to the full hydrophobic regime of interior contact angles between $90^\circ$ and $180^\circ$. Furthermore, we establish the anisotropic counterpart of this theorem under the assumption of lower density bounds.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-26T16:11:21Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Antonio De Rosa</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Reinaldo Resende</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.21198v2</id>
+    <title>Quantitative estimates for the relative isoperimetric problem and its gradient flow outside convex bodies in the plane</title>
+    <updated>2025-12-01T07:45:04Z</updated>
+    <link href="https://arxiv.org/abs/2508.21198v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.21198v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove three related quantitative results for the relative isoperimetric problem outside a convex body $Ω$ in the plane: (1) Łojasiewicz estimates and quantitative rigidity for critical points, (2) rates of convergence for the gradient flow, and (3) quantitative stability for minimizers. These results come with explicit constants and optimal exponents/rates, and hold whenever a simple two-dimensional auxiliary variational problem for circular arcs outside of $Ω$ is nondegenerate. The proofs are inter-related, and in particular, for the first time in the context of isoperimetric problems, a flow approach is used to prove quantitative stability for minimizers.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-28T20:30:14Z</published>
+    <arxiv:comment>Added an explicit formula for the non-degeneracy condition in Lemma 3.9</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Elena Mäder-Baumdicker</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Jiewon Park</name>
+    </author>
+    <author>
+      <name>Melanie Rupflin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.13995v1</id>
+    <title>On the non-uniqueness of locally minimizing clusters via singular cones</title>
+    <updated>2025-07-18T15:04:47Z</updated>
+    <link href="https://arxiv.org/abs/2507.13995v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.13995v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct partitions of $\mathbb{R}^n$ into three sets $\{\mathscr{X}(1),\mathscr{X}(2),\mathscr{X}(3)\}$ that locally minimize interfacial area among compactly supported volume preserving variations and that blow down at infinity to singular area-minimizing cones. As a consequence, we prove the non-uniqueness of the standard lens cluster in a large number of dimensions starting from $8$.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-18T15:04:47Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Lia Bronsard</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Michael Novack</name>
+    </author>
+    <author>
+      <name>Anna Skorobogatova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.13053v2</id>
+    <title>Quantitative Resolvent and Eigenfunction Stability for the Faber-Krahn Inequality</title>
+    <updated>2025-08-28T20:42:25Z</updated>
+    <link href="https://arxiv.org/abs/2504.13053v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.13053v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a bounded open set $Ω\subset \mathbb{R}^n$ with the same volume as the unit ball, the classical Faber-Krahn inequality says that the first Dirichlet eigenvalue $λ_1(Ω)$ of the Laplacian is at least that of the unit ball $B$. We prove that the deficit $λ_1(Ω)- λ_1(B)$ in the Faber-Krahn inequality controls the square of the distance between the resolvent operator $(-Δ_Ω)^{-1}$ for the Dirichlet Laplacian on $Ω$ and the resolvent operator on the nearest unit ball $B(x_Ω)$. The distance is measured by the operator norm from $L^{\infty}$ to $L^2$. As a main application, we show that the Faber-Krahn deficit $λ_1(Ω)- λ_1(B)$ controls the squared $L^2$ norm between $k$th eigenfunctions on $Ω$ and $B(x_Ω)$ for every $k \in \mathbb{N}.$ In both of these main theorems, the quadratic power is optimal.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-17T16:09:26Z</published>
+    <arxiv:comment>We thank Jimmy Lamboley for showing us a paper of Prunier. Adapting an argument therein allowed us to substantially weaken the hypotheses of our main theorems</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Mark Allen</name>
+    </author>
+    <author>
+      <name>Dennis Kriventsov</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.04565v3</id>
+    <title>Local Minimizers of the Anisotropic Isoperimetric Problem on Closed Manifolds</title>
+    <updated>2025-09-05T14:06:17Z</updated>
+    <link href="https://arxiv.org/abs/2308.04565v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.04565v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Local minimizers for the anisotropic isoperimetric problem in the small-volume regime on closed Riemannian manifolds are shown to be geodesically convex and small smooth perturbations of tangent Wulff shapes, quantitatively in terms of the volume.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-08T20:28:27Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Antonio De Rosa</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.16852v2</id>
+    <title>Epsilon regularity under scalar curvature and entropy lower bounds and volume upper bounds</title>
+    <updated>2022-11-08T00:01:57Z</updated>
+    <link href="https://arxiv.org/abs/2210.16852v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.16852v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Examples show that Riemannian manifolds with almost-Euclidean lower bounds on scalar curvature and Perelman entropy need not be close to Euclidean space in any metric space sense. Here we show that if one additionally assumes an almost-Euclidean upper bound on volumes of geodesic balls, then unit balls in such a space are Gromov-Hausdorff close, and in fact bi-Hölder and bi-$W^{1,p}$ homeomorphic, to Euclidean balls. We prove a compactness and limit space structure theorem under the same assumptions.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-30T14:31:11Z</published>
+    <arxiv:comment>Missing reference added</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.03552v1</id>
+    <title>Rectifiability and uniqueness of blow-ups for points with positive Alt-Caffarelli-Friedman limit</title>
+    <updated>2022-10-07T13:38:49Z</updated>
+    <link href="https://arxiv.org/abs/2210.03552v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.03552v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the regularity of the interface between the disjoint supports of a pair of nonnegative subharmonic functions. The portion of the interface where the Alt-Caffarelli-Friedman (ACF) monotonicity formula is asymptotically positive forms an $\mathcal{H}^{n-1}$-rectifiable set. Moreover, for $\mathcal{H}^{n-1}$-a.e. such point, the two functions have unique blowups, i.e. their Lipschitz rescalings converge in $W^{1,2}$ to a pair of nondegenerate truncated linear functions whose supports meet at the approximate tangent plane. The main tools used include the Naber-Valtorta framework and our recent result establishing a sharp quantitative remainder term in the ACF monotonicity formula. We also give applications of our results to free boundary problems.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-07T13:38:49Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Mark Allen</name>
+    </author>
+    <author>
+      <name>Dennis Kriventsov</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.12386v1</id>
+    <title>Rigidity theorems for best Sobolev inequalities</title>
+    <updated>2022-06-24T17:41:13Z</updated>
+    <link href="https://arxiv.org/abs/2206.12386v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.12386v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For $n\geq 2$, $p\in(1,n)$, the "best $p$-Sobolev inequality" on an open set $Ω\subset\mathbb{R}^n$ is identified with a family $Φ_Ω$ of variational problems with critical volume and trace constraints. When $Ω$ is bounded we prove: (i) for every $n$ and $p$, the existence of generalized minimizers that have at most one boundary concentration point, and: (ii) for $n&gt; 2\,p$, the existence of (classical) minimizers. We then establish rigidity results for the comparison theorem "balls have the worst best Sobolev inequalities" by the first named author and Villani, thus giving the first affirmative answers to a question raised in [MV05].</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-24T17:41:13Z</published>
+    <arxiv:comment>30 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Francesco Maggi</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Ignacio Tomasetti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.03505v3</id>
+    <title>Sharp quantitative Faber-Krahn inequalities and the Alt-Caffarelli-Friedman monotonicity formula</title>
+    <updated>2023-03-30T22:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2107.03505v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.03505v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The objective of this paper is two-fold. First, we establish new sharp quantitative estimates for Faber-Krahn inequalities on simply connected space forms. We prove that the gap between the first eigenvalue of a given set $Ω$ and that of the ball quantitatively controls both the $L^1$ distance of this set from a ball {\it and} the $L^2$ distance between the corresponding eigenfunctions: \[ λ_1(Ω) - λ_1(B) \gtrsim |ΩΔB|^2 + \int |u_Ω - u_B|^2, \] where $B$ denotes the nearest geodesic ball to $Ω$ with $|B|=|Ω|$ and $u_Ω$ denotes the first eigenfunction with suitable normalization. On Euclidean space, this extends a result of Brasco-De Phillipis-Velichkov; the eigenfunction control largely builds upon new regularity results for minimizers of critically perturbed Alt-Cafarelli type functionals in our companion paper. On the round sphere and hyperbolic space, the present results are the first sharp quantitative results with respect to any distance; here the local portion of the analysis is based on new implicit spectral analysis techniques.
+  Second, we apply these sharp quantitative Faber-Krahn inequalities in order to establish a quantitative form of the Alt-Caffarelli-Friedman (ACF) monotonicity formula. We show that the energy drop in the ACF monotonicity formula from one scale to the next controls how close a pair of admissible functions is from a pair of complementary half-plane solutions. In particular, when the square root of the energy drop summed over all scales is small, our result implies the existence of tangents (unique blowups) of these functions.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-07T22:27:02Z</published>
+    <arxiv:comment>Final version for publication</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Ars Inveniendi Analytica (2023), Paper No. 1, 49 pp</arxiv:journal_ref>
+    <author>
+      <name>Mark Allen</name>
+    </author>
+    <author>
+      <name>Dennis Kriventsov</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <arxiv:doi>10.15781/e7f3-a487</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.15781/e7f3-a487" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.03495v2</id>
+    <title>Linear Stability Implies Nonlinear Stability for Faber-Krahn Type Inequalities</title>
+    <updated>2022-07-20T19:39:26Z</updated>
+    <link href="https://arxiv.org/abs/2107.03495v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.03495v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a domain $Ω\subset \mathbb{R}^n$ and a small number $\frak{T} &gt; 0$, let
+  \[
+  \mathcal{E}_0(Ω) = λ_1(Ω) + {\frak{T}} {\text{tor}}(Ω) = \inf_{u, w \in H^1_0(Ω)\setminus \{0\}} \frac{\int |\nabla u|^2}{\int u^2} + {\frak{T}} \int \frac{1}{2} |\nabla w|^2 - w
+  \]
+  be a modification of the first Dirichlet eigenvalue of $Ω$. It is well-known that over all $Ω$ with a given volume, the only sets attaining the infimum of $\mathcal{E}_0$ are balls $B_R$; this is the Faber-Krahn inequality. The main result of this paper is that, if for all $Ω$ with the same volume and barycenter as $B_R$ and whose boundaries are parametrized as small $C^2$ normal graphs over $\partial B_R$ with bounded $C^2$ norm,
+  \[
+  \int |u_Ω - u_{B_R}|^2 + |Ω\triangle B_R|^2 \leq C [\mathcal{E}_0(Ω) - \mathcal{E}_0(B_R)]
+  \]
+  (i.e. the Faber-Krahn inequality is linearly stable), then the same is true for any $Ω$ with the same volume and barycenter as $B_R$ without any smoothness assumptions (i.e. it is nonlinearly stable). Here $u_Ω$ stands for an $L^2$-normalized first Dirichlet eigenfunction of $Ω$. Related results are shown for Riemannian manifolds. The proof is based on a detailed analysis of some critical perturbations of Bernoulli-type free boundary problems. The topic of when linear stability is valid, as well as some applications, are considered in a companion paper.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-07T21:47:17Z</published>
+    <arxiv:comment>Final version, accepted to Interfaces and Free Boundaries</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Mark Allen</name>
+    </author>
+    <author>
+      <name>Dennis Kriventsov</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.15663v2</id>
+    <title>$d_p$ convergence and $ε$-regularity theorems for entropy and scalar curvature lower bounds</title>
+    <updated>2021-01-11T21:50:12Z</updated>
+    <link href="https://arxiv.org/abs/2010.15663v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.15663v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a sequence of Riemannian manifolds $(M^n_i,g_i)$ with scalar curvatures and entropies bounded below by small constants $R_i,μ_i \geq-ε_i$. The goal of this paper is to understand notions of convergence and the structure of limits for such spaces. Even in the seemingly rigid case $ε_i\to 0$, we construct examples showing that such a sequence may converge wildly in the Gromov-Hausdorff or Intrinsic Flat sense. On the other hand, we will see that these classical notions of convergence are the incorrect ones to consider. Indeed, even a metric space is the wrong underlying category to be working on.
+  Instead, we introduce $d_p$ convergence, a weaker notion of convergence that is valid for a class of rectifiable Riemannian spaces. These rectifiable spaces have well-behaved topology, measure theory, and analysis, though potentially there will be no reasonably associated distance function. Under the $d_p$ notion of closeness, a space with almost nonnegative scalar curvature and small entropy bounds must in fact be close to Euclidean space; this will constitute our $ε$-regularity theorem.
+  More generally, we have a compactness theorem saying that sequences of Riemannian manifolds $(M^n_i,g_i)$ with small lower scalar curvature and entropy bounds $R_i,μ_i \geq -ε$ must $d_p$ converge to such a rectifiable Riemannian space $X$. Comparing to the first paragraph, the distance functions of $M_i$ may be degenerating, even though in a well-defined sense the analysis cannot be. Applications for manifolds with small scalar and entropy lower bounds include an $L^\infty$-Sobolev embedding and apriori $L^p$ scalar curvature bounds for $p&lt;1$.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-29T15:13:05Z</published>
+    <arxiv:comment>added reference and result of torus stability</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <arxiv:journal_ref>Geom. Topol. 27 (2023) 227-350</arxiv:journal_ref>
+    <author>
+      <name>Man-Chun Lee</name>
+    </author>
+    <author>
+      <name>Aaron Naber</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <arxiv:doi>10.2140/gt.2023.27.227</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/gt.2023.27.227" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2009.14362v2</id>
+    <title>Quantitative Stability for Minimizing Yamabe Metrics</title>
+    <updated>2022-02-14T21:49:53Z</updated>
+    <link href="https://arxiv.org/abs/2009.14362v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2009.14362v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On any closed Riemannian manifold of dimension $n\geq 3$, we prove that if a function nearly minimizes the Yamabe energy, then the corresponding conformal metric is close, in a quantitative sense, to a minimizing Yamabe metric in the conformal class. Generically, this distance is controlled quadratically by the Yamabe energy deficit. Finally, we produce an example for which this quadratic estimate is false.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-09-30T00:59:18Z</published>
+    <arxiv:comment>23 pages. Minor edits and clarifications as suggested by the referee and others. Final version, accepted to Trans. AMS</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Max Engelstein</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Luca Spolaor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.08879v1</id>
+    <title>A note on strong-form stability for the Sobolev inequality</title>
+    <updated>2019-01-25T14:14:39Z</updated>
+    <link href="https://arxiv.org/abs/1901.08879v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.08879v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note, we establish a strong form of the quantitive Sobolev inequality in Euclidean space for $p \in (1,n)$. Given any function $u \in \dot W^{1,p}(\mathbb{R}^n)$, the gap in the Sobolev inequality controls $\| \nabla u -\nabla v\|_{p}$, where $v$ is an extremal function for the Sobolev inequality.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-25T14:14:39Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.08304v2</id>
+    <title>Anisotropic liquid drop models</title>
+    <updated>2020-01-29T12:45:22Z</updated>
+    <link href="https://arxiv.org/abs/1810.08304v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.08304v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce and study certain variants of Gamow's liquid drop model in which an anisotropic surface energy replaces the perimeter. After existence and nonexistence results are established, the shape of minimizers is analyzed. Under suitable regularity and ellipticity assumptions on the surface tension, Wulff shapes are minimizers in this problem if and only if the surface energy is isotropic. In sharp contrast, Wulff shapes are the unique minimizers for certain crystalline surface tensions. We also introduce and study several related liquid drop models with anisotropic repulsion for which the Wulff shape is the minimizer in the small mass regime.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-18T23:27:13Z</published>
+    <arxiv:comment>This version will appear in Adv. Calc. Var</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Rustum Choksi</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Ihsan Topaloglu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.10117v1</id>
+    <title>Bubbling with $L^2$-almost constant mean curvature and an Alexandrov-type theorem for crystals</title>
+    <updated>2017-05-29T11:10:53Z</updated>
+    <link href="https://arxiv.org/abs/1705.10117v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.10117v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A compactness theorem for volume-constrained almost-critical points of elliptic integrands is proven. The result is new even for the area functional, as almost-criticality is measured in an integral rather than in a uniform sense. Two main applications of the compactness theorem are discussed. First, we obtain a description of critical points/local minimizers of elliptic energies interacting with a confinement potential. Second, we prove an Alexandrov-type theorem for crystalline isoperimetric problems.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-29T11:10:53Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>M. G. Delgadino</name>
+    </author>
+    <author>
+      <name>F. Maggi</name>
+    </author>
+    <author>
+      <name>C. Mihaila</name>
+    </author>
+    <author>
+      <name>R. Neumayer</name>
+    </author>
+    <arxiv:doi>10.1007/s00205-018-1267-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00205-018-1267-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1704.07253v3</id>
+    <title>The Cheeger constant of a Jordan domain without necks</title>
+    <updated>2018-03-01T11:14:50Z</updated>
+    <link href="https://arxiv.org/abs/1704.07253v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1704.07253v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the maximal Cheeger set of a Jordan domain $Ω$ without necks is the union of all balls of radius $r = h(Ω)^{-1}$ contained in $Ω$. Here, $h(Ω)$ denotes the Cheeger constant of $Ω$, that is, the infimum of the ratio of perimeter over area among subsets of $Ω$, and a Cheeger set is a set attaining the infimum. The radius $r$ is shown to be the unique number such that the area of the inner parallel set $Ω^r$ is equal to $πr^2$. The proof of the main theorem requires the combination of several intermediate facts, some of which are of interest in their own right. Examples are given demonstrating the generality of the result as well as the sharpness of our assumptions. In particular, as an application of the main theorem, we illustrate how to effectively approximate the Cheeger constant of the Koch snowflake.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-04-24T14:22:00Z</published>
+    <arxiv:comment>29 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <arxiv:journal_ref>Calc. Var. Partial Differential Equations (2017), 56(6):164</arxiv:journal_ref>
+    <author>
+      <name>Gian Paolo Leonardi</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+    <author>
+      <name>Giorgio Saracco</name>
+    </author>
+    <arxiv:doi>10.1007/s00526-017-1263-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00526-017-1263-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.02346v3</id>
+    <title>A bridge between Sobolev and Escobar inequalities and beyond</title>
+    <updated>2016-11-17T14:56:04Z</updated>
+    <link href="https://arxiv.org/abs/1609.02346v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.02346v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The classical Sobolev and Escobar inequalities are embedded into the same one-parameter family of sharp trace-Sobolev inequalities on half-spaces. Equality cases are characterized for each inequality in this family by tweaking a well-known mass transportation argument and lead to a new comparison theorem for trace Sobolev inequalities. The case $p=2$ corresponds to a family of variational problems on conformally flat metrics which was previously settled by Carlen and Loss with their method of competing symmetries. In this case minimizers interpolate between conformally flat spherical and hyperbolic geometries, passing through the Euclidean geometry defined by the fundamental solution of the Laplacian.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-08T09:29:51Z</published>
+    <arxiv:comment>Corollary 1.3 (half-spaces have the best Sobolev-trace inequalities has been added)</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Francesco Maggi</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.01222v4</id>
+    <title>Higher Regularity of the Free Boundary in the Obstacle Problem for the Fractional Laplacian</title>
+    <updated>2017-03-26T19:12:39Z</updated>
+    <link href="https://arxiv.org/abs/1606.01222v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.01222v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a higher regularity result for the free boundary in the obstacle problem for the fractional Laplacian via a higher order boundary Harnack inequality.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-03T19:13:57Z</published>
+    <arxiv:comment>This is the final version of the paper that is accepted for publication in Advances in Mathematics</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Yash Jhaveri</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.02119v2</id>
+    <title>Gradient stability for the Sobolev inequality: the case $p\geq 2$</title>
+    <updated>2016-10-02T11:51:14Z</updated>
+    <link href="https://arxiv.org/abs/1510.02119v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.02119v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a strong form of the quantitative Sobolev inequality in $\mathbb{R}^n$ for $p\geq 2$, where the deficit of a function $u\in \dot W^{1,p} $ controls $\| \nabla u -\nabla v\|_{L^p}$ for an extremal function $v$ in the Sobolev inequality.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-10-07T20:30:23Z</published>
+    <arxiv:comment>Some organizational changes made from previous version. Accepted for publication in J. Eur. Math. Soc. (JEMS)</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Alessio Figalli</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.06705v2</id>
+    <title>A strong form of the quantitative Wulff inequality</title>
+    <updated>2016-03-26T16:21:20Z</updated>
+    <link href="https://arxiv.org/abs/1503.06705v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.06705v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantitative isoperimetric inequalities for anisotropic surface energies are shown where the isoperimetric deficit controls both the Fraenkel asymmetry and a measure of the oscillation of the boundary with respect to the boundary of the corresponding Wulff shape.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-23T16:17:33Z</published>
+    <arxiv:comment>Updated version after fixing some small errors and making minor revisions</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.0720v1</id>
+    <title>A note on the stability of the Cheeger constant of $N$-gons</title>
+    <updated>2014-12-01T22:56:08Z</updated>
+    <link href="https://arxiv.org/abs/1412.0720v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.0720v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The regular $N$-gon provides the minimal Cheeger constant in the class of all $N$-gons with fixed volume. This result is due to a work of Bucur and Fragalà in 2014. In this note, we address the stability of their result in terms of the $L^1$ distance between sets. Furthermore, we provide a stability inequality in terms of the Hausdorff distance between the boundaries of sets in the class of polygons having uniformly bounded diameter. Finally, we show that our results are sharp, both in the exponent of decay and in the notion of distance between sets.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-01T22:56:08Z</published>
+    <arxiv:comment>5 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Marco Caroccia</name>
+    </author>
+    <author>
+      <name>Robin Neumayer</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "review_state": "review_only_whole_visible_author_site_and_cv_release_held",
+  "person_id": "person-robinneumayer-a5f54a8c",
+  "primary_department": "math",
+  "scholar_account_status": "no_verified_account",
+  "source_priority": "google_scholar_if_exact_account_verified",
+  "captured_at_utc": "2026-10-25T11:43:18.217055+00:00",
+  "source_audit_file": "source-audit.json",
+  "source_audit_sha256": "fcbbfb8ac2d67e873bda69ad7987594b5f5842a3a5609460f9a37db762c27527",
+  "raw_sources": [
+    {
+      "url": "https://www.cmu.edu/math/people/faculty/neumayer.html",
+      "kind": "official_identity",
+      "file": "official.html",
+      "sha256": "f226162b77ccf6d59fcca01ffd5aadeebbc61f61430a693f101179ec4965f1c8"
+    },
+    {
+      "url": "https://www.math.cmu.edu/~rneumaye/",
+      "kind": "author_site",
+      "file": "author-site.html",
+      "sha256": "2f1a748418141ebe13a1fabb7f35d72167cf19096cadc01785194b809c4cde1c"
+    },
+    {
+      "url": "https://www.math.cmu.edu/~rneumaye/CVNeumayer2026.pdf",
+      "kind": "researcher_cv",
+      "file": "CVNeumayer2026.pdf",
+      "sha256": "bdddd623ecb1d13fd8996f281e2170a1d76a48314d75b53bcfcebc94424230db"
+    },
+    {
+      "url": "https://export.arxiv.org/api/query?search_query=au%3A%22Neumayer%2C_Robin%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+      "kind": "arxiv_author_crosscheck",
+      "file": "arxiv-author.xml",
+      "sha256": "08bb99458466864ce32b0cbb0eb2e1e366ad3d6786c022472363545a6f02effb"
+    },
+    {
+      "url": "https://scholars.cmu.edu/search?type=user&v=Neumayer",
+      "kind": "public_elements_directory_search_no_match",
+      "file": "scholars-neumayer.html",
+      "sha256": "5ee29cc0df81f8bba6ba8b88d5e650aa48480b0fed73f631ad4eae7786acffcd"
+    },
+    {
+      "url": "https://pub.orcid.org/v3.0/0000-0002-7108-3267/record",
+      "kind": "orcid_name_candidate_unverified",
+      "file": "orcid-0000-0002-7108-3267-record.json",
+      "sha256": "1de34e7c82614b7d46500fe4793801489b6453326fb8fefe63cd90eebec7df0c"
+    }
+  ],
+  "cv_crosswalk_file": "cv-crosswalk.csv",
+  "cv_crosswalk_sha256": "f5db1a9b80172809f799e0c5e62a8acfcb792236b4f9547df08c86d55880c61e",
+  "counts": {
+    "site_items": 30,
+    "site_sections": {
+      "publications_preprints": 23,
+      "proceedings_surveys": 5,
+      "phd_thesis": 1,
+      "expository_notes": 1
+    },
+    "cv_numbered_items": 30,
+    "site_cv_overlaps": 29,
+    "cv_only": 1,
+    "site_only": 1,
+    "union_distinct": 31,
+    "arxiv_research_items": 23,
+    "arxiv_site_research_matches": 23
+  },
+  "release_eligible": false,
+  "publication_claim": "Complete capture of the 30 displayed author-site items and 30 numbered June 2026 CV items, reconciled as 31 distinct observations; no independently proven lifetime completeness or verified Google Scholar account",
+  "holds": [
+    "No verified Scholar ID; do not label this capture Scholar",
+    "CV item 24 absent from site; site expository note absent from CV",
+    "Preserve proceedings, survey, note, thesis genre before graph ingestion",
+    "Reconcile article/preprint versions and exact DOI/work identities before graph ingestion",
+    "Do not infer complete lifetime output from the two researcher-owned sources"
+  ]
+}
