@@ -252,6 +252,61 @@ def test_joint_math_display_tie_break_preserves_both_memberships(
     } == unit_ids
 
 
+@pytest.mark.parametrize(
+    ("person_id", "home_id", "source_url", "basis", "included_units"),
+    [
+        (
+            "person-fischbeck-f33a9da9",
+            "epp",
+            "https://engineering.cmu.edu/directory/bios/fischbeck-paul.html",
+            "reviewed",
+            {"epp", "sds"},
+        ),
+        (
+            "person-jenellefeather-10f57adf",
+            "psychology",
+            "https://www.cmu.edu/dietrich/psychology/directory/core-training-faculty/feather-jenelle.html",
+            "display_tie_break_first_listed",
+            {"ni", "psychology"},
+        ),
+        (
+            "person-markkamlet-eb7946b0",
+            "sds",
+            "https://www.cmu.edu/dietrich/sds/people/faculty/mark-kamlet.html",
+            "display_tie_break_first_listed",
+            {"cmist", "heinz-faculty", "sds"},
+        ),
+    ],
+)
+def test_three_residual_joint_display_homes_preserve_memberships(
+    person_id: str,
+    home_id: str,
+    source_url: str,
+    basis: str,
+    included_units: set[str],
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    assert person.primary_department_id == ""
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.school_id) == (
+        "department",
+        home_id,
+        registry.departments_by_id[home_id].school_id,
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        basis,
+    )
+    assert home.published_fields()["primary_department_id"] == home_id
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_units
+
+
 def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None:
     people_path, memberships_path, departments_path = write_registry(
         tmp_path,

@@ -78,15 +78,14 @@ All of these people's included memberships remain available to filters.
 
 The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
 records all 190 people needing explicit review. Across 2,001 registry
-people, 1,442 included people have a display primary and 559 remain unresolved,
-including all 521 excluded-only people. Of 1,480 included people, 38 remain
-unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
-Andrew Ilyas and Chris Hendrickson remain unresolved. The
+people, 1,447 included people have a display primary and 554 remain unresolved,
+including all 521 excluded-only people. Of 1,480 included people, 33 remain
+unresolved. Of 459 included people with a Scholar ID, all have a primary. The
 [four-school review](reviews/2026-10-24-other-schools-primary.md) and
 [Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence.
-Avigad and Sekerka have explicit first-listed visual tie-breaks; their joint
-appointments remain included. Publication and school filters continue to use
-all included memberships.
+Avigad, Sekerka, Feather, and Kamlet have explicit first-listed visual
+tie-breaks; their joint appointments remain included. Publication and school
+filters continue to use all included memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,
