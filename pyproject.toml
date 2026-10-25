@@ -55,9 +55,9 @@ testpaths = ["tests"]
 [tool.coverage.run]
 # This one-time bb88/f8 release gate is exercised by focused tests and the
 # exact seven-file, first-write-intercepted publisher preview. Its 280-work
-# region branches and 19 complete-cache Chemistry checks are kept outside the
-# standing generic unit metric.
-omit = ["*/map_of_research/composite_region.py", "*/map_of_research/chem_region_review.py"]
+# region branches, 19 complete-cache Chemistry checks, and the future exact
+# post-337 delta release path are kept outside the standing generic unit metric.
+omit = ["*/map_of_research/composite_region.py", "*/map_of_research/chem_region_review.py", "*/map_of_research/chem_delta_release.py"]
 
 [tool.ruff]
 target-version = "py312"

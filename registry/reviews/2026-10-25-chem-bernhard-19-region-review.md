@@ -21,6 +21,14 @@ previously visible works retain their points: two Kietrys posters, Collins's
 ACS response and viewpoint, Armitage's News & Views article, Matyjaszewski's
 book section, and his *Macromolecules* article.
 
+Against the merged-main #337 stage, the scoped correction adds no authorship
+rows and removes nine held/excluded observations: three Collins, three
+Matyjaszewski, and one each for Gil, Kurnikova, and Washburn. The two Donahue
+presentations each retain their existing Donahue authorship. Their candidate
+points have only Donahue as verified faculty and no external coauthor IDs, so
+neither adds a verified collaboration edge. The offline stage preserved all
+49,620 shared authorship payloads and all 42,904 shared map point payloads.
+
 The two already-visible Kietrys poster rows retain their generic Scholar
 `publication` type in this visibility review. Organizer entries confirm the
 poster format, but their full abstract/byline has not been recovered; a
@@ -48,3 +56,12 @@ reviewed code head and frozen source commit `8be6a240`, checking all four
 Parquet configs, both map files, and README. Every non-Chemistry row and shared
 map point must match that Hub parent. The old `bb88ddf0` preview for draft
 PR #338 is source-review evidence only and cannot authorize this restack.
+
+Two clean #337 producer previews serialized one otherwise identical work with
+the same `venue_variants` in opposite order. The cause is `_variants()` in
+`dataset.py`: it sorts a `set` by `str.casefold`, so strings differing only in
+capitalization tie and retain the set's process-dependent order. A later
+publisher run could therefore produce a different `works` file hash. This
+restack pins the merged-main #337 receipt and its exact live file bytes. A
+separate producer fix should sort by `(value.casefold(), value)` before a
+future full rebuild; it is outside this Chemistry delta release.
