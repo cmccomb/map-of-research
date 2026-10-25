@@ -1604,12 +1604,9 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
 @pytest.mark.parametrize(
     ("pinned", "missing_prior", "region_override", "atomic"),
     [
-        (False, False, False, False),
-        (True, False, False, False),
-        (True, True, False, False),
-        (True, False, True, False),
-        (True, False, False, True),
         (False, False, False, True),
+        (True, False, False, True),
+        (True, True, False, True),
         (True, False, True, True),
     ],
 )
@@ -1819,10 +1816,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "prior_revision": "a" * 40 if pinned else None,
         "require_bio_release": bio_intent,
     }
-    if atomic and not pinned:
-        publish_options["atomic_release"] = True
-    elif not atomic:
-        publish_options["atomic_release"] = False
+    publish_options["atomic_release"] = True
     if region_override:
         publish_options["region_comparison_revision"] = "b" * 40
     if not pinned:
@@ -1930,14 +1924,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["region_comparison_revision"] == (
         "b" * 40 if region_override else "a" * 40 if pinned else None
     )
-    assert result["dataset_commits"] == {
-        name: "atomic-commit" if atomic else f"{name}-commit"
-        for name in publisher.DATASET_CONFIGS
-    }
-    assert result["atomic_release"] == (
-        {"mode": "single_parent_commit"} if atomic else None
+    assert result["dataset_commits"] == dict.fromkeys(
+        publisher.DATASET_CONFIGS, "atomic-commit"
     )
-    assert len(atomic_calls) == int(atomic)
+    assert result["atomic_release"] == {"mode": "single_parent_commit"}
+    assert len(atomic_calls) == 1
     assert observed_layouts == [reused_layouts if reuse_order else original_layouts]
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
@@ -1975,62 +1966,18 @@ def test_region_override_requires_current_hub_revision(monkeypatch, tmp_path) ->
         )
 
 
-def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
-    frame = pandas.DataFrame(
-        {
-            "scholar_id": ["one"],
-            "author_pub_id": ["one:a"],
-            "source_type": ["scholar"],
-        }
-    )
-    tables = {
-        name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
-    }
-    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
-    monkeypatch.setattr(
-        publisher, "_require_current_dataset_revision", lambda **kwargs: None
-    )
-    monkeypatch.setattr(
-        publisher,
-        "_published_rows",
-        lambda config, fields, **kwargs: (
-            [{"work_id": "old"}] if config == "works" else [{"author_pub_id": "one:a"}]
-        ),
-    )
-    monkeypatch.setattr(
-        publisher,
-        "reconcile_region_decisions",
-        lambda works, *args, **kwargs: (works, {"prior_revision": "a" * 40}),
-    )
-    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
-    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
-    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
-    monkeypatch.setattr(
-        publisher,
-        "validate_snapshot",
-        lambda *args, **kwargs: (
-            frame,
-            {"created_at_utc": "now", "snapshot_sha256": "test-snapshot"},
-        ),
-    )
-    monkeypatch.setattr(publisher, "add_embeddings", lambda *args, **kwargs: (frame, 0))
-    monkeypatch.setattr(publisher, "build_dataset_tables", lambda *args: tables)
-    monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
-    monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
-    monkeypatch.setattr(publisher, "add_publication_keywords", lambda works: works)
-    monkeypatch.setattr(
-        publisher,
-        "exclude_low_information_regions",
-        lambda works: works,
-    )
+def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) -> None:
     monkeypatch.setattr(
         publisher,
         "_to_hub_dataset",
-        lambda table: SimpleNamespace(
-            push_to_hub=lambda *args, **kwargs: SimpleNamespace()
-        ),
+        lambda *args: pytest.fail("serial Hub write reached"),
     )
-    with pytest.raises(RuntimeError, match="upload did not return a commit"):
+    monkeypatch.setattr(
+        publisher,
+        "_publish_atomic_release",
+        lambda *args, **kwargs: pytest.fail("atomic Hub write reached"),
+    )
+    with pytest.raises(ValueError, match="one atomic Hub commit"):
         publisher.publish_snapshot(
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
@@ -2198,22 +2145,18 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
 
     def upload_dataset(*args, **kwargs):
         releases_path.write_text("changed after decision load")
-        return SimpleNamespace(oid="commit")
+        return "commit", {"mode": "single_parent_commit"}
 
     monkeypatch.setattr(
         publisher,
-        "_to_hub_dataset",
-        lambda frame: SimpleNamespace(push_to_hub=upload_dataset),
-    )
-    monkeypatch.setattr(
-        publisher, "_upload_map_artifacts", lambda *args, **kwargs: "map"
+        "_publish_atomic_release",
+        upload_dataset,
     )
     result = publisher.publish_snapshot(
         snapshot,
         tmp_path / "manifest.json",
         hf_token="token",
         prior_revision="a" * 40,
-        atomic_release=False,
         corrections_path=corrections_path,
         profile_releases_path=releases_path,
         source_cache_dir=cache_dir,

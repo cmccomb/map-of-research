@@ -283,8 +283,8 @@ def test_bio_intent_or_changed_cohort_rejects_drift_before_hub_stage(
             True,
             "immutable prior Hub revision",
         ),
-        (publisher.BIO_SOURCE_SHA256, "a" * 40, False, True, "atomic parent-pinned"),
-        (publisher.BIO_SOURCE_SHA256, "a" * 40, False, False, "atomic parent-pinned"),
+        (publisher.BIO_SOURCE_SHA256, "a" * 40, False, True, "one atomic Hub commit"),
+        (publisher.BIO_SOURCE_SHA256, "a" * 40, False, False, "one atomic Hub commit"),
     ],
 )
 def test_publish_bio_intent_fails_before_enrichment_or_hub_write(

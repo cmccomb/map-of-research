@@ -1393,6 +1393,8 @@ def publish_snapshot(
     if prior_revision is None:
         raise ValueError("Live publish requires an immutable prior Hub revision")
     require_revision(prior_revision)
+    if atomic_release is False:
+        raise ValueError("Live publish requires one atomic Hub commit")
     _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
@@ -1410,11 +1412,8 @@ def publish_snapshot(
         departments_path=departments_path,
     )
     frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
-    if require_bio_release or frozen_bio_source:
-        if not frozen_bio_source:
-            raise ValueError("Bio release source differs from the frozen snapshot")
-        if prior_revision is None or atomic_release is False:
-            raise ValueError("Bio release requires an atomic parent-pinned upload")
+    if require_bio_release and not frozen_bio_source:
+        raise ValueError("Bio release source differs from the frozen snapshot")
     if region_comparison_revision is not None:
         require_approved_comparison_revision(
             current_revision=prior_revision,
@@ -1564,52 +1563,26 @@ def publish_snapshot(
             os.environ.get("MAP_PRODUCER_COMMIT", ""),
         )
     generated_at_utc = str(manifest["created_at_utc"])
-    if atomic_release is None:
-        atomic_release = True
-    atomic_receipt = None
-    if atomic_release:
-        if comparison_revision != prior_revision:
-            raise ValueError(
-                "Ordinary atomic upload needs the current immutable Hub revision; "
-                "historical region repair requires its dedicated atomic path"
-            )
-        artifact_commit, atomic_receipt = _publish_atomic_release(
-            tables,
-            registry,
-            source_frame=frame,
-            source_manifest=manifest,
-            hf_token=hf_token,
-            prior_revision=prior_revision,
-            generated_at_utc=generated_at_utc,
-            continuity_receipt=continuity_receipt,
-            repair_manifest_path=repair_manifest_path,
-            provisional_holds=provisional_holds,
-            prior_profiles=prior_profiles,
-            require_bio_release=require_bio_release,
+    if comparison_revision != prior_revision:
+        raise ValueError(
+            "Ordinary atomic upload needs the current immutable Hub revision; "
+            "historical region repair requires its dedicated atomic path"
         )
-        dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
-    else:
-        dataset_commits = {}
-        for config_name in DATASET_CONFIGS:
-            commit = _to_hub_dataset(tables[config_name]).push_to_hub(
-                REPO_ID,
-                config_name=config_name,
-                split="train",
-                token=hf_token,
-                commit_message=f"Publish {config_name} dataset config",
-            )
-            commit_id = getattr(commit, "oid", None)
-            if not commit_id:
-                raise RuntimeError(f"{config_name} upload did not return a commit")
-            dataset_commits[config_name] = str(commit_id)
-        artifact_commit = _upload_map_artifacts(
-            tables["works"],
-            registry,
-            hf_token=hf_token,
-            generated_at_utc=generated_at_utc,
-            dataset_commits=dataset_commits,
-            continuity_receipt=continuity_receipt,
-        )
+    artifact_commit, atomic_receipt = _publish_atomic_release(
+        tables,
+        registry,
+        source_frame=frame,
+        source_manifest=manifest,
+        hf_token=hf_token,
+        prior_revision=prior_revision,
+        generated_at_utc=generated_at_utc,
+        continuity_receipt=continuity_receipt,
+        repair_manifest_path=repair_manifest_path,
+        provisional_holds=provisional_holds,
+        prior_profiles=prior_profiles,
+        require_bio_release=require_bio_release,
+    )
+    dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
         tables["works"]["has_included_source_profile"]
         if "has_included_source_profile" in tables["works"]
