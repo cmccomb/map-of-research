@@ -1,6 +1,7 @@
 import hashlib
 import json
 import sys
+from dataclasses import replace
 from types import SimpleNamespace
 
 import numpy
@@ -455,6 +456,10 @@ def registry() -> Registry:
                 orcid="",
                 homepage_url="https://example.test/one",
                 notes="",
+                primary_department_id="ece",
+                primary_department_source_url="https://example.test/ece",
+                primary_department_verified_at="2026-07-17",
+                primary_department_basis="reviewed",
             ),
             Person(
                 person_id="person-two",
@@ -531,6 +536,41 @@ def registry() -> Registry:
             ),
         ),
     )
+
+
+def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation(
+    monkeypatch, tmp_path
+) -> None:
+    class SnapshotChecked(Exception):
+        pass
+
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+
+    def check_snapshot(*args, **kwargs):
+        raise SnapshotChecked
+
+    monkeypatch.setattr(publisher, "validate_snapshot", check_snapshot)
+    with pytest.raises(SnapshotChecked):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            people_path=tmp_path / "people.csv",
+            memberships_path=tmp_path / "memberships.csv",
+            departments_path=tmp_path / "departments.csv",
+        )
+    explicit_baseline = tmp_path / "missing-baseline.json"
+    parsed = publisher._parse_args(
+        [
+            "--snapshot",
+            str(tmp_path / "snapshot.parquet"),
+            "--manifest",
+            str(tmp_path / "manifest.json"),
+            "--primary-home-baseline",
+            str(explicit_baseline),
+        ]
+    )
+    assert parsed.primary_home_baseline == explicit_baseline
 
 
 def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
@@ -1216,7 +1256,18 @@ def test_map_artifact_catalog_retains_full_included_roster() -> None:
 def test_map_artifact_tracks_cross_school_membership_once() -> None:
     source = registry()
     cross_school = Registry(
-        people=source.people,
+        people=tuple(
+            replace(
+                person,
+                primary_department_id="",
+                primary_department_source_url="",
+                primary_department_verified_at="",
+                primary_department_basis="",
+            )
+            if person.person_id == "person-one"
+            else person
+            for person in source.people
+        ),
         memberships=(
             *source.memberships,
             Membership(

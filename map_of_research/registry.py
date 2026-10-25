@@ -5,10 +5,12 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import re
-from collections.abc import Iterable
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlparse
+
+from .io import load_json, sha256_file
 
 PEOPLE_COLUMNS = (
     "person_id",
@@ -86,6 +88,12 @@ DEFAULT_PEOPLE_PATH = Path("registry/people.csv")
 DEFAULT_MEMBERSHIPS_PATH = Path("registry/memberships.csv")
 DEFAULT_DEPARTMENTS_PATH = Path("registry/departments.csv")
 DEFAULT_SCHOOLS_PATH = Path("registry/schools.csv")
+DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH = Path(
+    "registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json"
+)
+IMPLICIT_PRIMARY_BASELINE_SHA256 = (
+    "6bb1ac4532a27e6b107385554aa7f70606643c76994412511828359db93bd2dd"
+)
 
 
 @dataclass(frozen=True, order=True)
@@ -731,6 +739,89 @@ def unique_profiles(
     """Compatibility helper for callers that operate on Scholar profiles."""
 
     return registry.unique_profiles(included_only=included_only)
+
+
+def load_implicit_primary_baseline(path: Path) -> dict[str, str]:
+    """Load the immutable exception list for profiles existing before this gate."""
+
+    if sha256_file(path) != IMPLICIT_PRIMARY_BASELINE_SHA256:
+        raise ValueError("Implicit Scholar primary-home baseline was changed")
+    return load_json(path)["profiles"]
+
+
+def implicit_primary_baseline_for_people(
+    people_path: Path, baseline_path: Path | None = None
+) -> dict[str, str]:
+    """Use a colocated baseline when present; custom registries start empty."""
+
+    path = (
+        baseline_path
+        if baseline_path is not None
+        else people_path.parent
+        / "reviews"
+        / DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH.name
+    )
+    if baseline_path is None and not path.is_file():
+        return {}
+    return load_implicit_primary_baseline(path)
+
+
+def validate_included_scholar_primary_homes(
+    registry: Registry, *, legacy_implicit_primary: Mapping[str, str]
+) -> int:
+    """Require one evidenced display home for every included Scholar profile.
+
+    The department compatibility field is required only when the selected home
+    is an actual department. Other formal CMU home types retain their typed ID.
+    """
+
+    profiles = registry.unique_profiles(included_only=True)
+    invalid: list[str] = []
+    for profile in profiles:
+        home = registry.primary_affiliation(profile.person_id)
+        published = home.published_fields()
+        included_departments = {
+            membership.department_id
+            for membership in profile.memberships
+            if membership.included
+            and registry.departments_by_id[membership.department_id].unit_type
+            == "department"
+        }
+        if (
+            home.home_type not in PRIMARY_HOME_TYPES
+            or not all(
+                (
+                    home.home_id,
+                    home.title,
+                    home.source_url,
+                    home.verified_at,
+                    home.basis,
+                )
+            )
+            or home.basis == "unresolved"
+            or (
+                home.home_type == "department"
+                and published["primary_department_id"] not in included_departments
+            )
+            or (home.home_type == "school" and included_departments)
+            or (home.home_type != "department" and published["primary_department_id"])
+        ):
+            invalid.append(f"{profile.person_id} ({profile.display_name})")
+        elif (
+            not profile.person.primary_department_id
+            and not profile.person.primary_academic_home_id
+            and legacy_implicit_primary.get(profile.person_id) != profile.scholar_id
+        ):
+            invalid.append(
+                f"{profile.person_id} ({profile.display_name}; "
+                "new Scholar ID needs an explicit primary home)"
+            )
+    if invalid:
+        raise ValueError(
+            "Included Scholar profiles need one evidenced primary academic home: "
+            + ", ".join(invalid)
+        )
+    return len(profiles)
 
 
 def department_catalog(registry: Registry) -> dict[str, str]:
