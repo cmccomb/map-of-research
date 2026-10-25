@@ -24,6 +24,11 @@ on:
         required: false
         default: true
         type: boolean
+      math_region_review:
+        description: Exact Math-only region review against the frozen bb88 release
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -139,6 +144,7 @@ jobs:
           MAP_DURABLE_INTENT_REPO: snapshot
           MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot
           REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
+          MATH_REGION_REVIEW: ${{ github.event_name == 'workflow_dispatch' && inputs.math_region_review || false }}
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
@@ -146,7 +152,7 @@ jobs:
           MAP_SOURCE_COMMIT="$(git -C snapshot rev-parse HEAD)"
           export MAP_PRODUCER_COMMIT MAP_SOURCE_COMMIT
           BIO_RELEASE_ARGS=()
-          if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ] && [ "$MATH_REGION_REVIEW" != "true" ]; then
             BIO_RELEASE_ARGS+=(--require-bio-release)
           fi
           map-publish-snapshot \
@@ -156,6 +162,8 @@ jobs:
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
             --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
+            --math-region-review "$MATH_REGION_REVIEW" \
+            --math-region-review-manifest source/data/curated/scholar-region-review.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \

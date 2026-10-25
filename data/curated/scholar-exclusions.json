@@ -10264,6 +10264,30 @@
       "reason": "Capture row 157 is a second saved rendering of the 2007 CMS heavy-ion addendum. The original report credits R. Croft in its University of Bristol group, distinct from CMU cosmologist Rupert A. C. Croft; exclude this exact observation as a false attribution too.",
       "evidence_url": "https://physics.iyte.edu.tr/wp-content/uploads/sites/51/2019/05/demir62.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "A0ISJPUAAAAJ",
+      "author_pub_id": "A0ISJPUAAAAJ:BUYA1_V_uYcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Russian State Library catalog identifies the 1985 Nauka Russian translation, Bertsekas and Shreve, 279 pages. The same 1985 Nauka edition is already captured in Shreve Scholar row 92 with romanized title. Keep this Cyrillic raw observation, but count the edition once.",
+      "evidence_url": "https://search.rsl.ru/ru/record/01001252173",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "VQfvIfQAAAAJ",
+      "author_pub_id": "VQfvIfQAAAAJ:IUKN3-7HHlwC",
+      "reason_code": "nonpublication",
+      "reason": "Saved Scholar row 249 has the editor's thank-you to colleagues for refereeing as its title and no year or venue. Oxford's Logic Journal of the IGPL publishes this wording as an 'Acknowledgements' page identifying referees rather than research authors; the Oxford page is an example of the journal item type, not a verified exact match to this undated row. The cited Oxford issue is type evidence, not the exact undated saved row; the saved Scholar citation is the exact captured observation.",
+      "evidence_url": "https://academic.oup.com/jigpal/article-abstract/14/6/902/747606",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "VQfvIfQAAAAJ",
+      "author_pub_id": "VQfvIfQAAAAJ:yFnVuubrUp4C",
+      "reason_code": "nonpublication",
+      "reason": "Saved Scholar row 164 calls this a 2020 workshop and lists Avigad with other intended speakers as authors. The university event notice identifies the 3-5 April 2020 Princeton conference, names Avigad as a speaker, and says it was cancelled/postponed due to COVID-19.",
+      "evidence_url": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences?displayMode=month&month=04&year=2020",
+      "verified_at": "2026-10-25"
     }
   ]
 }

@@ -83,6 +83,16 @@ from .region_repair import (
     require_frozen_source_tip,
     require_historical_region_decisions,
 )
+from .region_review import (
+    CURRENT_REVISION as MATH_REGION_BASELINE,
+)
+from .region_review import (
+    DEFAULT_REGION_REVIEW_PATH,
+    load_region_review,
+)
+from .region_review import (
+    SOURCE_COMMIT as MATH_REGION_SOURCE_COMMIT,
+)
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -1339,6 +1349,27 @@ def _publish_atomic_release(
         )
 
 
+def require_math_region_mode(
+    *,
+    requested: bool,
+    prior_revision: str | None,
+    region_comparison_revision: str | None,
+    source_commit: str | None,
+) -> None:
+    """Keep the frozen Math review atomic and separate from all-280 repair."""
+
+    if prior_revision == MATH_REGION_BASELINE and not requested:
+        raise ValueError(
+            "Frozen bb88 Math review requires its exact reviewed publish flag"
+        )
+    if requested and (
+        prior_revision != MATH_REGION_BASELINE
+        or region_comparison_revision not in (None, prior_revision)
+        or source_commit != MATH_REGION_SOURCE_COMMIT
+    ):
+        raise ValueError("Math region review requires frozen bb88/f7 ordinary publish")
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1364,9 +1395,17 @@ def publish_snapshot(
     atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
     repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
+    math_region_review: bool = False,
+    math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
+    require_math_region_mode(
+        requested=math_region_review,
+        prior_revision=prior_revision,
+        region_comparison_revision=region_comparison_revision,
+        source_commit=os.environ.get("MAP_SOURCE_COMMIT"),
+    )
     if prior_revision is None:
         raise ValueError("Live publish requires an immutable prior Hub revision")
     require_revision(prior_revision)
@@ -1430,6 +1469,19 @@ def publish_snapshot(
         cache_dir=cache_dir,
         excluded_ids=set(exclusions),
         confirmed_ids=set(attribution_reviews.confirmed),
+    )
+    reviewed_math_decisions = (
+        load_region_review(
+            math_region_review_path,
+            snapshot_frame=frame,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_dir=cache_dir,
+            registry=registry,
+            exclusions=set(exclusions),
+            holds=set(provisional_holds),
+        )
+        if math_region_review
+        else ()
     )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
@@ -1511,6 +1563,7 @@ def publish_snapshot(
         prior_works,
         prior_profiles,
         prior_revision=comparison_revision,
+        reviewed_math_decisions=reviewed_math_decisions,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -1596,6 +1649,10 @@ def publish_snapshot(
         "provisional_hold_manifest_sha256": provisional_manifest_sha256,
         "provisional_hold_profiles": provisional_receipt,
         "provisional_hold_observation_rows": len(provisional_holds),
+        "math_region_review_decisions": len(reviewed_math_decisions),
+        "math_region_review_manifest_sha256": (
+            sha256_file(math_region_review_path) if reviewed_math_decisions else None
+        ),
         "held_profile_ids": [
             item["scholar_id"] for item in release_receipt if item["state"] == "held"
         ],
@@ -1771,6 +1828,17 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Fail closed unless the frozen complete Bio snapshot passes its gate",
     )
+    parser.add_argument(
+        "--math-region-review",
+        choices=("true", "false"),
+        default="false",
+        help="Apply the exact frozen 31-row Math review against bb88",
+    )
+    parser.add_argument(
+        "--math-region-review-manifest",
+        type=Path,
+        default=DEFAULT_REGION_REVIEW_PATH,
+    )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
     parser.add_argument(
@@ -1913,6 +1981,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             repair_manifest_path=args.repair_reviewed_work_manifest,
             atomic_intent_sink=checkpoint,
             require_bio_release=args.require_bio_release,
+            math_region_review=args.math_region_review == "true",
+            math_region_review_path=args.math_region_review_manifest,
         )
         status.pop("atomic_release_intent", None)
         status.update(

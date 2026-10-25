@@ -18,6 +18,7 @@ from typing import Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
+from .region_review import ReviewedRegionDecision
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
@@ -351,6 +352,7 @@ def reconcile_region_decisions(
     prior_profile_publications: Iterable[Mapping[str, Any]],
     *,
     prior_revision: str,
+    reviewed_math_decisions: tuple[ReviewedRegionDecision, ...] = (),
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -419,44 +421,131 @@ def reconcile_region_decisions(
             ]
             output.at[index, "map_region_prior_excluded_override"] = True
 
+    reviewed_gains: set[ObservationKey] = set()
+    reviewed_losses: set[ObservationKey] = set()
+    if reviewed_math_decisions:
+        if prior_revision != "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd":
+            raise ValueError("Math region review requires the frozen bb88 baseline")
+        output_indices = {str(row.work_id): index for index, row in output.iterrows()}
+        if len(output_indices) != len(output):
+            raise ValueError("Math region review found duplicate work IDs")
+        for decision in reviewed_math_decisions:
+            identity = decision.observation_identity
+            prior_row = previous_rows.get(identity)
+            current_row = current_rows.get(identity)
+            prior_work = previous_works.get(decision.work_id)
+            index = output_indices.get(decision.work_id)
+            if (
+                prior_row is None
+                or current_row is None
+                or prior_work is None
+                or index is None
+                or prior_row.get("work_id") != decision.work_id
+                or current_row.get("work_id") != decision.work_id
+                or hashlib.sha256(
+                    str(prior_row.get("source_record_json") or "").encode()
+                ).hexdigest()
+                != decision.source_record_sha256
+                or hashlib.sha256(
+                    str(current_row.get("source_record_json") or "").encode()
+                ).hexdigest()
+                != decision.source_record_sha256
+                or _fingerprint_fields(
+                    prior_work,
+                    (*WORK_FINGERPRINT_FIELDS, "quality_assessment_version"),
+                )
+                != decision.work_fingerprint_sha256
+                or bool(prior_row.get("map_eligible")) is not True
+                or bool(prior_work.get("map_eligible"))
+                != (decision.transition == "reexclude")
+                or bool(prior_work.get("map_region_outlier"))
+                != (decision.transition == "restore")
+                or bool(current_row.get("map_eligible")) != decision.visible
+                or len(
+                    [
+                        item
+                        for item in current_rows.values()
+                        if item.get("work_id") == decision.work_id
+                    ]
+                )
+                != 1
+            ):
+                raise ValueError(
+                    "Math region review no longer matches exact prior/current "
+                    f"observation: {decision.author_pub_id}"
+                )
+            if decision.transition == "restore" and decision.visible:
+                if not bool(output.at[index, "map_region_outlier"]):
+                    raise ValueError("Reviewed Math gain is no longer a region outlier")
+                output.at[index, "map_eligible"] = True
+                output.at[index, "map_region_outlier"] = False
+                output.at[index, "map_exclusion_reasons"] = [
+                    reason
+                    for reason in output.at[index, "map_exclusion_reasons"]
+                    if reason != "low_information_region"
+                ]
+                reviewed_gains.add(identity)
+            elif decision.transition == "reexclude" and not decision.visible:
+                reviewed_losses.add(identity)
+            if bool(output.at[index, "map_eligible"]) != decision.visible:
+                raise ValueError(
+                    "Math region final visibility differs from reviewed decision: "
+                    f"{decision.author_pub_id}"
+                )
+
     final_works = _indexed_works(output.to_dict("records"))
     before = _visible_observations(previous_rows, previous_works)
     after = _visible_observations(current_rows, final_works)
     losses = before - after
     gains = after - before
-    reviewed_losses = sorted(
-        identity for identity in losses if _reviewed_loss(current_rows.get(identity))
+    approved_losses = sorted(
+        identity
+        for identity in losses
+        if _reviewed_loss(current_rows.get(identity)) or identity in reviewed_losses
     )
-    unexplained_losses = sorted(losses - set(reviewed_losses))
+    unexplained_losses = sorted(losses - set(approved_losses))
     verified_gains = sorted(
         identity
         for identity in gains
-        if identity in previous_rows
-        and bool(previous_rows[identity].get("map_eligible"))
-        and bool(
-            previous_works[str(previous_rows[identity]["work_id"])].get(
-                "map_region_outlier"
+        if identity in reviewed_gains
+        or (
+            identity in previous_rows
+            and bool(previous_rows[identity].get("map_eligible"))
+            and bool(
+                previous_works[str(previous_rows[identity]["work_id"])].get(
+                    "map_region_outlier"
+                )
             )
-        )
-        and bool(
-            _verification_evidence(
+            and bool(
+                _verification_evidence(
+                    current_rows[identity],
+                    final_works[str(current_rows[identity]["work_id"])],
+                )
+                - _verification_evidence(
+                    previous_rows[identity],
+                    previous_works[str(previous_rows[identity]["work_id"])],
+                )
+            )
+            and _verified_gain(
                 current_rows[identity],
                 final_works[str(current_rows[identity]["work_id"])],
             )
-            - _verification_evidence(
-                previous_rows[identity],
-                previous_works[str(previous_rows[identity]["work_id"])],
-            )
-        )
-        and _verified_gain(
-            current_rows[identity],
-            final_works[str(current_rows[identity]["work_id"])],
         )
     )
     # A prior weak-region exclusion remains excluded unless independently
     # verified. Newly collected Scholar rows use the current quality audit.
     new_gains = sorted(identity for identity in gains if identity not in previous_rows)
     unexplained_gains = sorted(gains - set(verified_gains) - set(new_gains))
+    if reviewed_math_decisions and (
+        set(reviewed_gains) != set(verified_gains)
+        or set(reviewed_losses) != set(approved_losses)
+        or len(reviewed_gains) != 4
+        or len(reviewed_losses) != 2
+        or new_gains
+    ):
+        raise ValueError(
+            "Math region review changed observations outside its exact +4/-2 scope"
+        )
     receipt = {
         "version": CONTINUITY_VERSION,
         "prior_revision": prior_revision,
@@ -469,8 +558,9 @@ def reconcile_region_decisions(
         "prior_excluded_overrides": int(
             output["map_region_prior_excluded_override"].sum()
         ),
-        "reviewed_losses": [_display(item) for item in reviewed_losses],
+        "reviewed_losses": [_display(item) for item in approved_losses],
         "verified_gains": [_display(item) for item in verified_gains],
+        "reviewed_math_gains": [_display(item) for item in sorted(reviewed_gains)],
         "new_source_gains": len(new_gains),
         "unexplained_losses": [_display(item) for item in unexplained_losses],
         "unexplained_gains": [_display(item) for item in unexplained_gains],

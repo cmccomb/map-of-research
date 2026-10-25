@@ -73,6 +73,50 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    },
+    {
+      "person_id": "person-giovannileoni-02ab6865",
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "state": "released",
+      "expected_source_rows": 134,
+      "cache_sha256": "ad22a8e1f97d1a4ebbb6c2caebf0a602bbd05e54acdb78c288f8fc833b6af1f0",
+      "reason": "Complete 134-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "61e6bf82f20820ff49f8924624f2d97dc868fe3740390e4b51dfa8d55b85a215"
+    },
+    {
+      "person_id": "person-steveneshreve-df3eafb3",
+      "scholar_id": "A0ISJPUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 185,
+      "cache_sha256": "94603153d1a94fcfc3d000b1619222b96e0ca0adaa90098fc02a968cbaf5750b",
+      "reason": "Complete 185-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "d0eebf2e64a1f7ffaae592fac2f65dce2accaef6fbeb66e5107be07f708bce3c"
+    },
+    {
+      "person_id": "person-alanfrieze-ef264103",
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "state": "released",
+      "expected_source_rows": 659,
+      "cache_sha256": "f16b4143f102fa5a6f36712bade0cad51fb4bfcb39c2b7c22aee8a9337e11d14",
+      "reason": "Complete 659-row Scholar capture is source-bound. 9 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 9,
+      "provisional_hold_ids_sha256": "bc398cd32886ce413640401e508e5d341eb9f4fb57693d518fd9ba16bbe19b51"
+    },
+    {
+      "person_id": "person-irenefonseca-51ba491a",
+      "scholar_id": "JV3ryMgAAAAJ",
+      "state": "released",
+      "expected_source_rows": 253,
+      "cache_sha256": "6aeda014b4adcd695419ea85fbd2a47e491e5654ce3ecc68e8342e1804fe8217",
+      "reason": "Complete 253-row Scholar capture is source-bound. 1 exact unresolved Math-region citation(s) remain raw under provisional hold; other rows continue through ordinary quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "b1002c90d937ae3f5bc674acd6e0a8fac9ef36af254400cfca7583861e619431"
     }
   ]
 }

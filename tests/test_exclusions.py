@@ -129,7 +129,15 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "28yZqbcAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
-    assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
+    assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 18
+    assert (
+        exclusions[("VQfvIfQAAAAJ", "VQfvIfQAAAAJ:IUKN3-7HHlwC")].reason_code
+        == "nonpublication"
+    )
+    assert (
+        exclusions[("VQfvIfQAAAAJ", "VQfvIfQAAAAJ:yFnVuubrUp4C")].reason_code
+        == "nonpublication"
+    )
     assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
@@ -172,7 +180,11 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "H8qYeA0AAAAJ" for key in exclusions) == 10
     assert sum(key[0] == "tfBFyTMAAAAJ" for key in exclusions) == 25
     assert sum(key[0] == "9lFYMIkAAAAJ" for key in exclusions) == 31
-    assert sum(key[0] == "A0ISJPUAAAAJ" for key in exclusions) == 27
+    assert sum(key[0] == "A0ISJPUAAAAJ" for key in exclusions) == 28
+    assert (
+        exclusions[("A0ISJPUAAAAJ", "A0ISJPUAAAAJ:BUYA1_V_uYcC")].reason_code
+        == "corrupted_duplicate"
+    )
     assert sum(key[0] == "P_AmD6MAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "uHqbF7sAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "eVxdemsAAAAJ" for key in exclusions) == 5

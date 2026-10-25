@@ -379,6 +379,130 @@
       ],
       "expected_reviewed_exclusion_rows": 43,
       "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    },
+    {
+      "person_id": "person-giovannileoni-02ab6865",
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "expected_source_rows": 134,
+      "cache_sha256": "ad22a8e1f97d1a4ebbb6c2caebf0a602bbd05e54acdb78c288f8fc833b6af1f0",
+      "expected_reviewed_exclusion_rows": 21,
+      "reviewed_exclusion_ids_sha256": "5b6d91daa613edc76c2e19eb4947d41b08a33632fb59b2e3b6171d89d8f69dea",
+      "held_observations": [
+        {
+          "capture_row_index": 131,
+          "author_pub_id": "0Nj-v7sAAAAJ:2P1L_qKh6hAC",
+          "reason": "Saved Leoni row 131 has the same corrupted title and exact Fonseca–Müller–Leoni byline, without year/venue. The publisher archive confirms their 2004 A-quasiconvexity paper, already clean in Leoni Scholar row 17, but exact report/journal identity is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0Nj-v7sAAAAJ&cstart=100&pagesize=100&citation_for_view=0Nj-v7sAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-steveneshreve-df3eafb3",
+      "scholar_id": "A0ISJPUAAAAJ",
+      "expected_source_rows": 185,
+      "cache_sha256": "94603153d1a94fcfc3d000b1619222b96e0ca0adaa90098fc02a968cbaf5750b",
+      "expected_reviewed_exclusion_rows": 28,
+      "reviewed_exclusion_ids_sha256": "bf892bc8ce40dd71aac7fdb2267c1c4849354aa973e200ecdba0732cf31ce73c",
+      "held_observations": [
+        {
+          "capture_row_index": 185,
+          "author_pub_id": "A0ISJPUAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Saved Scholar row 185 contains only corrupted Cyrillic title and author text and no year or venue. Existing exact-person review found no attributable independent source; no title or Shreve byline can be recovered. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-alanfrieze-ef264103",
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "expected_source_rows": 659,
+      "cache_sha256": "f16b4143f102fa5a6f36712bade0cad51fb4bfcb39c2b7c22aee8a9337e11d14",
+      "expected_reviewed_exclusion_rows": 80,
+      "reviewed_exclusion_ids_sha256": "cfce840065c228a3bcd7d7ad64b8ecd84b4ec85124d8151f80f456dc6096b3ac",
+      "held_observations": [
+        {
+          "capture_row_index": 545,
+          "author_pub_id": "EqKRQ4YAAAAJ:jFemdcug13IC",
+          "reason": "Official author list identifies a 2004 Flaxman–Frieze APPROX/RANDOM paper, The Diameter of Randomly Perturbed Digraphs and Some Applications; clean Scholar row 544 exists. Garbled row 545 lacks a title and venue, so exact duplicate/version status is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:jFemdcug13IC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 552,
+          "author_pub_id": "EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+          "reason": "Saved row 552 has a corrupt 2002 Cooper–Frieze title. The official author list has both Multi-coloured Hamilton Cycles and Crawling on Web Graphs with that pair in 2002; clean Scholar data do not distinguish this damaged row. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 553,
+          "author_pub_id": "EqKRQ4YAAAAJ:LWqeokA2EBkC",
+          "reason": "Saved row 553 has a corrupt 2002 Frieze–Wormald title. The official author list links a 2002 random k-SAT conference paper to its 2005 journal version (clean Scholar row 75), but the exact source/version of this damaged row is not established. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:LWqeokA2EBkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 557,
+          "author_pub_id": "EqKRQ4YAAAAJ:H7nrzBkawXsC",
+          "reason": "Saved row 557 gives Cooper–Frieze–Reed and 2001 but no readable title/venue. The official author list and a dated 2001 author PDF identify the later 2002 connectivity/Hamiltonicity paper; a distinct preprint version cannot be ruled out. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:H7nrzBkawXsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 558,
+          "author_pub_id": "EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+          "reason": "Saved row 558 has a corrupt 2001 Cooper–Frieze title without venue. The official author list identifies their 2001 ESA web-graphs paper (clean Scholar row 128) and a later journal version; exact source/version of the corrupted observation remains unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 640,
+          "author_pub_id": "EqKRQ4YAAAAJ:VRfTbSk87rEC",
+          "reason": "Saved row 640 has corrupt title and no year/venue. The four-author team matches the verified 2002 independence/chromatic-number article in clean Scholar row 157, but the damaged observation could be a separate preprint version. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:VRfTbSk87rEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 641,
+          "author_pub_id": "EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+          "reason": "Official author list identifies a Drinea–Frieze–Mitzenmacher SODA 2002 paper, Balls and Bins Models with Feedback; that clean paper is in Scholar row 75. Garbled row 641 has no year or venue, so an exact source/version match is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 655,
+          "author_pub_id": "EqKRQ4YAAAAJ:7wO8s98CvbsC",
+          "reason": "The captured title is a corrupted Les Cahiers Leibniz series/header, not a usable work title. The official five-author team has both a 2005 identifying-codes proceedings paper and a 2007 journal paper in clean Scholar rows; a distinct report version cannot be ruled out. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 657,
+          "author_pub_id": "EqKRQ4YAAAAJ:FiytvqdAVhgC",
+          "reason": "Saved row 657 has a corrupt Cooper–Frieze–Sorkin title and no year/venue. The author list confirms their 2002 SODA paper with a later journal version, both clean in Scholar; exact source/version for this damaged row is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:FiytvqdAVhgC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-irenefonseca-51ba491a",
+      "scholar_id": "JV3ryMgAAAAJ",
+      "expected_source_rows": 253,
+      "cache_sha256": "6aeda014b4adcd695419ea85fbd2a47e491e5654ce3ecc68e8342e1804fe8217",
+      "expected_reviewed_exclusion_rows": 21,
+      "reviewed_exclusion_ids_sha256": "fa9aa648100ab5b8b87f7d31d94477150d8b38b366c2c1f78638ed01e41c8515",
+      "held_observations": [
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "JV3ryMgAAAAJ:AXPGKjj_ei8C",
+          "reason": "Saved Fonseca row 248 has a corrupted title, exact Fonseca–Müller–Leoni byline, and no year/venue. The publisher archive confirms their 2004 A-quasiconvexity paper, already clean in Fonseca Scholar row 45, but the damaged row could be a separate report version. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JV3ryMgAAAAJ&cstart=200&pagesize=100&citation_for_view=JV3ryMgAAAAJ:AXPGKjj_ei8C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }
