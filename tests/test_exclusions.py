@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 779
+    assert len(exclusions) == 795
     assert sum(key[0] == "JbSQsXAAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "8AqWr_4AAAAJ" for key in exclusions) == 20
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
@@ -116,11 +116,53 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "jcb81yAAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "6pPZKd0AAAAJ" for key in exclusions) == 3
+    assert sum(key[0] == "grTfBeAAAAAJ" for key in exclusions) == 16
     assert {decision.reason_code for decision in exclusions.values()} == {
         "nonpublication",
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_jarvik_exact_review_excludes_only_source_verified_rows() -> None:
+    scholar_id = "grTfBeAAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    expected = {
+        "u9iWguZQMMsC": "nonpublication",
+        "2osOgNQ5qMEC": "nonpublication",
+        "Tiz5es2fbqcC": "false_profile_attribution",
+        "9yKSN-GCB0IC": "nonpublication",
+        "XiSMed-E-HIC": "nonpublication",
+        "Se3iqnhoufwC": "false_profile_attribution",
+        "IjCSPb-OGe4C": "corrupted_duplicate",
+        "Zph67rFs4hoC": "corrupted_duplicate",
+        "WbkHhVStYXYC": "nonpublication",
+        "1sJd4Hv_s6UC": "nonpublication",
+        "EUQCXRtRnyEC": "corrupted_duplicate",
+        "xtRiw3GOFMkC": "nonpublication",
+        "P5F9QuxV20EC": "nonpublication",
+        "CHSYGLWDkRkC": "nonpublication",
+        "uWQEDVKXjbEC": "corrupted_duplicate",
+        "L8Ckcad2t8MC": "nonpublication",
+    }
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == expected
+
+    retained = {
+        "g5m5HwL7SMYC",  # Original article behind excluded supplement.
+        "TQgYirikUcIC",  # Original article behind corrupted OCR duplicate.
+        "hMod-77fHWUC",  # Original article behind another corrupted duplicate.
+        "M05iB0D1s5AC",  # Original PMSG article behind two duplicate rows.
+        "p2g8aNsByqUC",  # Distinct 2008 correction, not false attribution.
+        "mB3voiENLucC",  # Distinct 2003 correction, not a duplicate paper.
+        "u5HHmVD_uO8C",  # Unresolved venue and attribution.
+        "abG-DnoFyZgC",  # Malformed title, no demonstrated duplicate.
+    }
+    assert retained.isdisjoint(actual)
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:
