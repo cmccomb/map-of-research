@@ -414,6 +414,14 @@ CMU_ORCID_DOI_HOLD = {
 
 # CMU-linked bibliographies or a publisher article identify these older works.
 CMU_PRIMARY = {
+    15: (
+        "Molecular interactions of a Cu-based metal–organic framework with "
+        "a confined imidazolium-based ionic liquid: a combined density "
+        "functional theory and experimental vibrational\xa0…",
+        2016,
+        "https://www.cmu.edu/chemistry/people/faculty/kim.html",
+        "CMU faculty publication list; matching authors, venue, and pages",
+    ),
     16: (
         "Equilibrium and nonequilibrium solvation and solute electronic "
         "structure. I. Formulation",
@@ -441,6 +449,40 @@ CMU_PRIMARY = {
         2011,
         "https://pubs.rsc.org/en/content/articlelanding/2012/fd/c1fd00086a",
         "RSC original article with CMU author affiliation",
+    ),
+    79: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. II. Strong coupling limit",
+        1990,
+        "https://api.crossref.org/works/10.1063%2F1.459666",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline "
+        "and Colorado affiliation",
+    ),
+    104: (
+        "Excited state intramolecular charge transfer rates of "
+        "p-dirnethylaminobenzonitrile (DMABN) in solution: a "
+        "two-dimensional dynamics perspective",
+        1997,
+        "https://experts.colorado.edu/vitas/106076.pdf",
+        "Coauthor James T. Hynes's Colorado CV; same journal and pages, "
+        "with the chemical name corrected",
+    ),
+    155: (
+        "Electronically adiabatic reaction field approach to solvation. "
+        "I. Theoretical formulation via multipole expansion in a "
+        "fluctuating cavity",
+        1996,
+        "https://api.crossref.org/works/10.1063%2F1.472531",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim "
+        "byline and CMU Chemistry affiliation",
+    ),
+    220: (
+        "Electronically adiabatic reaction field approach to solvation. "
+        "II. Solvent effects on electronic spectra",
+        1996,
+        "https://api.crossref.org/works/10.1063%2F1.471831",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim "
+        "byline and CMU Chemistry affiliation",
     ),
     479: (
         "Temperature-and pressure-dependence of the outer-sphere "
@@ -727,7 +769,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 100,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 5,
+        "cmu_primary_work_retained": 10,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
@@ -735,7 +777,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "proposed_other_person_primary_work": 33,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 1,
-        "unresolved_attribution_hold": 430,
+        "unresolved_attribution_hold": 425,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
