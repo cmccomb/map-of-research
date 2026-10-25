@@ -1,6 +1,6 @@
 # Das attribution follow-up: Srijit Das ORCID exact works
 
-This draft extends the 76 exact decisions in PR #73 by 36 new exact `author_pub_id` exclusions. The 670-row raw browser capture remains unchanged. The other 558 rows are not certified by this decision set.
+This draft extends the 76 exact decisions in PR #73 by 39 new exact `author_pub_id` exclusions. The 670-row raw browser capture remains unchanged. The other 555 rows are not certified by this decision set.
 
 CMU [identifies Subha R. Das as a Chemistry faculty member](https://www.cmu.edu/chemistry/people/faculty/das.html) and links the Scholar account `FrF1YXQAAAAJ`. [Sultan Qaboos University identifies Srijit Das as a Human and Clinical Anatomy researcher](https://squ.elsevierpure.com/en/persons/srijit-das/) and links [ORCID `0000-0001-8302-7257`](https://orcid.org/0000-0001-8302-7257). That ORCID record names him Srijit Das. Each exact work below is in his ORCID work record with `assertion-origin-orcid` set to that same identity and Scopus as the importing source. Titles were matched after case, accent, punctuation, and spacing normalization; no fuzzy matches were used.
 
@@ -44,5 +44,8 @@ Capture receipt: `4a1629f702a3f4330ba59f76f30a4e60989e1f12e96a0535119614da4ad8f9
 | 552 | `FrF1YXQAAAAJ:gVv57TyPmFsC` | Chemopreventive efficacy of ginger (Zingiber officinale) in ethionine induced rat hepatocarcinogenesis. | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754631) |
 | 553 | `FrF1YXQAAAAJ:N4u4nq0IxgcC` | Morphology of the temporo-mandibular joint at different ages | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754861) |
 | 556 | `FrF1YXQAAAAJ:n3vGvpFsckwC` | Is there any link between cardiovascular disease and depression? | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754699) |
+| 137 | `FrF1YXQAAAAJ:g5Ck-dwhA_QC` | Treatment of glaucoma with natural products and their mechanism of action: an update. Nutrients. 2022; 14 (3): 534 | [Published original](https://pmc.ncbi.nlm.nih.gov/articles/PMC8840399/) |
+| 421 | `FrF1YXQAAAAJ:M0leSnx2MbUC` | Treatment of Glaucoma with Natural Products and Their Mechanism of Action: An Update. Nutrients 2022, 14, 534 | [Published original](https://pmc.ncbi.nlm.nih.gov/articles/PMC8840399/) |
+| 605 | `FrF1YXQAAAAJ:BAanoTsO0WEC` | Anatomical Study of the Palmaris Longus Muscle and Its Clinical Importance. Diagnostics 2025, 15, 304 | [Published original](https://pmc.ncbi.nlm.nih.gov/articles/PMC11816445/) |
 
-Rows 137, 421, and 605 also resemble ORCID works but differ in title and were deliberately left untouched. Other suspicious clinical, anatomy, optics, agronomy, and computing records remain under review. This follow-up does not authorize promotion of the Das cache to the canonical source snapshot.
+Three additional title variants were reconciled directly to original published articles. Rows 137 and 421 are two captured records for the same 2022 *Nutrients* glaucoma review (ORCID work 222754831), and row 605 is the 2025 *Diagnostics* palmaris longus article (ORCID work 222754873) despite a spliced 1999 Scholar venue. The [glaucoma article](https://pmc.ncbi.nlm.nih.gov/articles/PMC8840399/) and [palmaris longus article](https://pmc.ncbi.nlm.nih.gov/articles/PMC11816445/) both spell out Srijit Das and his Sultan Qaboos anatomy affiliation. Other suspicious clinical, anatomy, optics, agronomy, and computing records remain under review. This follow-up does not authorize promotion of the Das cache to the canonical source snapshot.
