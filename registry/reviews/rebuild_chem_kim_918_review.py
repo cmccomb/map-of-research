@@ -590,6 +590,55 @@ CMU_PRIMARY = {
         "https://www.chem.cmu.edu/groups/kim/pub.html",
         "CMU Kim Group publication list",
     ),
+    480: (
+        "Electrostriction effects on electron transfer reactions in solution. "
+        "I. Adiabatic regime",
+        1997,
+        "https://api.crossref.org/works/10.1063%2F1.473606",
+        "AIP publisher-deposited DOI record; full Hyung J. Kim byline and "
+        "CMU Chemistry affiliation",
+    ),
+    587: (
+        "Mass Spectrometry of Au10(4-tert-butylbenzenethiolate)10 "
+        "Nanoclusters Using Superconducting Tunnel Junction Cryodetection "
+        "Reveals Distinct Metastable\xa0…",
+        2022,
+        "https://pubs.acs.org/doi/abs/10.1021/jasms.1c00346",
+        "ACS article; full Hyung J. Kim byline, CMU Chemistry affiliation, "
+        "and linked CMU ORCID",
+    ),
+    643: (
+        "Correction to “Graphene-Based Supercapacitors: A Computer Simulation Study”",
+        2012,
+        "https://pubs.acs.org/toc/jpccck/116/34",
+        "ACS published correction DOI 10.1021/jp307086f; full Hyung J. "
+        "Kim byline, CMU Chemistry affiliation, and separate pages",
+    ),
+    709: (
+        "Correction: A mechanistic insight into the organocatalytic "
+        "properties of imidazolium-based ionic liquids and a positive "
+        "co-solvent effect on cellulose modification reactions in\xa0…",
+        2017,
+        "https://pubs.rsc.org/en/content/articlelanding/2017/ra/c7ra90031g",
+        "RSC published correction DOI 10.1039/C7RA90031G; full Hyung "
+        "J. Kim byline, CMU Chemistry affiliation, and separate page",
+    ),
+    796: (
+        "Correction: A molecular dynamics study of the ionic liquid, choline acetate",
+        2017,
+        "https://pubs.rsc.org/en/content/articlelanding/2017/cp/c7cp90081c",
+        "RSC published correction DOI 10.1039/C7CP90081C; full Hyung "
+        "J. Kim byline, CMU Chemistry affiliation, and separate page",
+    ),
+}
+
+# Guard newly resolved source rows with their immutable Scholar citation IDs.
+CMU_PRIMARY_ID_GUARDS = {
+    480: "bC4aq-4AAAAJ:R3hNpaxXUhUC",
+    587: "bC4aq-4AAAAJ:u0Mu_IsstPMC",
+    643: "bC4aq-4AAAAJ:hMod-77fHWUC",
+    709: "bC4aq-4AAAAJ:abG-DnoFyZgC",
+    796: "bC4aq-4AAAAJ:4fKUyHm3Qg0C",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -880,7 +929,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 evidence_url,
                 evidence_source,
             ) = CMU_PRIMARY[index]
-            if title != expected_title or year != str(expected_year):
+            if (
+                title != expected_title
+                or year != str(expected_year)
+                or (
+                    index in CMU_PRIMARY_ID_GUARDS
+                    and pub_id != CMU_PRIMARY_ID_GUARDS[index]
+                )
+            ):
                 raise ValueError(f"CMU primary match changed at capture row {index}")
             status = "cmu_primary_work_retained"
         elif cmu_exact:
@@ -950,7 +1006,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 99,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 10,
+        "cmu_primary_work_retained": 15,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
@@ -958,7 +1014,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "proposed_other_person_primary_work": 41,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 3,
-        "unresolved_attribution_hold": 416,
+        "unresolved_attribution_hold": 411,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
