@@ -98,3 +98,12 @@ Run the offline provenance gate with:
 ```sh
 python data/source_reviews/james-cummings-2026-10-25/validate_capture.py
 ```
+
+`load_staged.py` stages **all 214 raw source observations** from those pinned
+sources: 108 CMU Elements, 51 researcher-site citations, 51 ORCID groups, and
+four publisher registrations. Overlapping observations remain separate, with
+the reviewed crosswalk and raw source records attached. This is neither 214
+distinct works nor a complete career publication count. Contributor roles
+and genres remain explicit, including talks, reviews, and edited volumes.
+Every row has release, map, and collaboration eligibility set to false; the
+loader does not feed the production snapshot builder.
