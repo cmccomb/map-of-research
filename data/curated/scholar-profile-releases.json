@@ -69,7 +69,7 @@
       "state": "released",
       "expected_source_rows": 228,
       "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
-      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 G\u00f6ttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
@@ -150,6 +150,78 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "4521fe48a7a8031ab59964583051c94527be196c05eedd6b550cc71e2326448c"
+    },
+    {
+      "person_id": "person-simranjeetsingh-8f74243d",
+      "scholar_id": "hgtyZOUAAAAJ",
+      "state": "held",
+      "expected_source_rows": 53,
+      "cache_sha256": "6757f8895026bfb7439a624c9177adcc7abb34c8b2042f1b1cc2108005689f47",
+      "reason": "Complete 53-row Physics capture is source-bound. One exact exclusion is proposed; patent contexts and six meeting-abstract leads need review before any public work release.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-benjaminhunt-e286d360",
+      "scholar_id": "11EoZncAAAAJ",
+      "state": "held",
+      "expected_source_rows": 95,
+      "cache_sha256": "b790f95be56570436fd9e06dc5b54dd58458ba1bb07c086b304e922f28443c3f",
+      "reason": "Complete 95-row Physics capture is source-bound. One blank-venue row, a same-title pair, and meeting-abstract leads remain unresolved.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-markusdeserno-3b04d008",
+      "scholar_id": "1J28ExgAAAAJ",
+      "state": "held",
+      "expected_source_rows": 233,
+      "cache_sha256": "1595aeb166721ece6b7baf88bb823a9b30e11e99934744f33e429ac5b4c09e44",
+      "reason": "Complete 233-row Physics capture is source-bound. One individual row and grouped source-classification leads remain unresolved.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-matthewwalker-f9f5f4da",
+      "scholar_id": "IcEsJfAAAAAJ",
+      "state": "held",
+      "expected_source_rows": 413,
+      "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
+      "reason": "Complete 413-row Physics capture is source-bound. Same-name contamination and eleven individual candidates remain unresolved; hold the entire profile.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-randallfeenstra-0f288978",
+      "scholar_id": "p1aFEDYAAAAJ",
+      "state": "held",
+      "expected_source_rows": 422,
+      "cache_sha256": "36c211772f28fc57b81f5a9d415bcc063e4c06129a3063c1925fe0df066e3b04",
+      "reason": "Complete 422-row Physics capture is source-bound. Same-title, blank-venue, and meeting-abstract groups need review before release.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-roberthswendsen-cfa7c981",
+      "scholar_id": "KoHdmZEAAAAJ",
+      "state": "held",
+      "expected_source_rows": 202,
+      "cache_sha256": "a77b39350baf2f93cd5daa35ae4d0ccdec737571681cad7ab91a3f496b186367",
+      "reason": "Complete 202-row Physics capture is source-bound. Same-title, blank-venue, and meeting-abstract groups need review before release.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-michaelwidom-8ddeb878",
+      "scholar_id": "czs45aEAAAAJ",
+      "state": "held",
+      "expected_source_rows": 215,
+      "cache_sha256": "b1d6203d633deb8b68af281177d2ddc45b5afa2f598ab457229103180a1fdbc3",
+      "reason": "Complete 215-row Physics capture is source-bound. Grouped source-classification leads need review before release.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-saramajetich-69037290",
+      "scholar_id": "FRlLpMYAAAAJ",
+      "state": "held",
+      "expected_source_rows": 271,
+      "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
+      "reason": "Complete 271-row Physics capture is source-bound. The DOE report needs a context-type decision; another individual row and grouped leads remain unresolved.",
+      "reviewed_at": "2026-10-25"
     }
   ]
 }

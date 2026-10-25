@@ -9,6 +9,7 @@ import pytest
 
 from map_of_research.dataset import build_dataset_tables
 from map_of_research.person_publication_holds import (
+    BIO_HOLD_RELEASE_REVISION,
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     load_person_publication_holds,
     require_no_held_person_contributions,
@@ -290,6 +291,30 @@ def test_exact_held_losses_require_current_parent_and_prior_bindings() -> None:
         )
 
 
+def test_published_bio_parent_preserves_absent_held_person_links() -> None:
+    selected = hold()
+    assert (
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=BIO_HOLD_RELEASE_REVISION,
+            prior_works=[],
+            prior_profiles=[],
+            current_profiles=[],
+        )
+        == frozenset()
+    )
+    _, prior_profiles = prior_hold_tables()
+    for previous, current in ((prior_profiles, []), ([], prior_profiles)):
+        with pytest.raises(ValueError, match="prior or current rows"):
+            validate_person_hold_losses(
+                (selected,),
+                prior_revision=BIO_HOLD_RELEASE_REVISION,
+                prior_works=[],
+                prior_profiles=previous,
+                current_profiles=current,
+            )
+
+
 def test_only_partial_person_rows_are_held_and_coauthors_remain() -> None:
     raw = source_rows()
     published, receipt, observation_ids = select_released_person_observations(
@@ -334,6 +359,37 @@ def test_source_or_identity_drift_blocks_release(change) -> None:
             tested_registry,
             (hold(),),
             source_snapshot_sha256=snapshot_sha,
+        )
+
+
+def test_published_bio_hold_survives_new_snapshot_with_identical_owner_rows() -> None:
+    raw = source_rows()
+    published, receipt, ids = select_released_person_observations(
+        raw,
+        registry(),
+        (hold(),),
+        source_snapshot_sha256="0" * 64,
+        prior_revision=BIO_HOLD_RELEASE_REVISION,
+    )
+    assert not published.person_id.eq(TAASAN).any()
+    assert receipt[0]["held_source_rows"] == 3
+    assert ids == {item[2] for item in hold().source_observations}
+    raw.loc[0, "source_doi"] = "10.1000/changed"
+    with pytest.raises(ValueError, match="source rows differ"):
+        select_released_person_observations(
+            raw,
+            registry(),
+            (hold(),),
+            source_snapshot_sha256="0" * 64,
+            prior_revision=BIO_HOLD_RELEASE_REVISION,
+        )
+    with pytest.raises(ValueError, match="source rows differ"):
+        select_released_person_observations(
+            source_rows(),
+            registry(),
+            (replace(hold(), source_snapshot_sha256="f" * 64),),
+            source_snapshot_sha256="0" * 64,
+            prior_revision=BIO_HOLD_RELEASE_REVISION,
         )
 
 

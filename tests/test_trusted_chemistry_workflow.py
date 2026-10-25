@@ -149,6 +149,11 @@ def test_trusted_job_keeps_normal_and_chemistry_paths_mutually_exclusive() -> No
     assert steps["Install exact Chemistry producer"]["run"] == (
         "python -m pip install -e './source[publisher]'"
     )
+    assert (
+        "--chem-region-review-manifest "
+        "source/data/curated/scholar-chem-region-review.json"
+        in steps["Validate, enrich, and publish snapshot"]["run"]
+    )
     auth_steps = {
         name for name, step in steps.items() if "hf auth token" in step.get("run", "")
     }
