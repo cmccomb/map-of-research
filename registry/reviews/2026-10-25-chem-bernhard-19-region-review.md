@@ -92,13 +92,19 @@ canonical Git remote mutation, so its receipt must label that simulation.
 The separate manual `chem-region-release.yml` workflow is a future production
 entrypoint. It requires a reviewed main producer SHA, a requested immutable Hub
 parent, an explicit Hub token, and three distinct checkouts: clean reviewed
-producer code, frozen raw snapshot and complete Scholar caches at `8be6a240`,
-and current `automation/map-snapshot` status. The production CLI checks those
-commits and source bytes before building the seven files. The existing #337
-upload workflow is unchanged. The Git checkpoint is retained on the status
-branch before `HfApi.create_commit`; missing credentials, prior status, remote
-push, or fetched-byte readback abort before that write. This draft workflow is
-not an upload authorization and has not been dispatched.
+producer code, frozen raw snapshot, complete Scholar caches, original registry,
+and curated works at `8be6a240`, and current `automation/map-snapshot` status.
+The production CLI validates the frozen snapshot against the original registry
+bytes bound by its manifest. It separately pins the current producer registry
+checksum and compares all 2,001 people, Scholar IDs, memberships, departments,
+schools, and effective published primary homes. Only the 49 Math records whose
+four raw `primary_department_*` fields were explicitly backfilled from their
+sole included membership may differ. A direct attempt to validate the frozen
+snapshot against that new producer registry fails before staging, as intended.
+The existing #337 upload workflow is unchanged. The Git checkpoint is retained
+on the status branch before `HfApi.create_commit`; missing credentials, prior
+status, remote push, or fetched-byte readback abort before that write. This
+draft workflow is not an upload authorization and has not been dispatched.
 
 The standing 100% generic coverage metric excludes both new Chemistry release
 modules. A separate CI gate measures their branch coverage: the synthetic

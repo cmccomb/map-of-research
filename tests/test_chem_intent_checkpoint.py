@@ -695,12 +695,27 @@ def test_publish_entry_point_retains_intent_and_reports_finalization_outcome(
         lambda *_args, **_kwargs: sink,
     )
     monkeypatch.setattr(registry_module, "load_registry", lambda *_args: registry)
-    monkeypatch.setattr(
-        snapshot_module,
-        "validate_snapshot",
-        lambda *_args, **_kwargs: (object(), {"snapshot_sha256": delta.SOURCE_SHA256}),
-    )
+
+    def validate_frozen_snapshot(*_args: object, **kwargs: object) -> tuple:
+        assert kwargs["people_path"] == tmp_path / "source-data/registry/people.csv"
+        assert kwargs["memberships_path"] == (
+            tmp_path / "source-data/registry/memberships.csv"
+        )
+        assert kwargs["departments_path"] == (
+            tmp_path / "source-data/registry/departments.csv"
+        )
+        return object(), {
+            "snapshot_sha256": delta.SOURCE_SHA256,
+            "registry_sha256": "frozen-registry",
+        }
+
+    monkeypatch.setattr(snapshot_module, "validate_snapshot", validate_frozen_snapshot)
     monkeypatch.setattr(delta, "sha256_file", lambda _path: delta.SOURCE_SHA256)
+    monkeypatch.setattr(
+        delta,
+        "require_frozen_registry_transition",
+        lambda *_args, **_kwargs: {"status": "pass"},
+    )
     monkeypatch.setattr(
         delta,
         "load_chem_region_review",
@@ -723,6 +738,7 @@ def test_publish_entry_point_retains_intent_and_reports_finalization_outcome(
         assert kwargs["intent_sink"] is sink
         assert kwargs["intent_metadata"]["producer_commit"] == PRODUCER
         assert kwargs["prewrite_gate"]["source"] is True
+        assert kwargs["prewrite_gate"]["registry_transition"] == {"status": "pass"}
         sink({"parent_revision": PARENT})
         return REVISION, {"commit_nonce": "d" * 32}
 
@@ -732,8 +748,9 @@ def test_publish_entry_point_retains_intent_and_reports_finalization_outcome(
         return delta.publish_chem_delta(
             expected_parent_revision=PARENT,
             hf_token="token",
-            snapshot_path=tmp_path / "snapshot.parquet",
-            snapshot_manifest_path=tmp_path / "snapshot.manifest.json",
+            snapshot_path=tmp_path / "source-data/snapshots/snapshot.parquet",
+            snapshot_manifest_path=tmp_path
+            / "source-data/snapshots/snapshot.manifest.json",
             source_cache_dir=tmp_path / "authors",
             people_path=tmp_path / "people.csv",
             memberships_path=tmp_path / "memberships.csv",

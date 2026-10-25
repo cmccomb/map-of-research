@@ -57,6 +57,11 @@ jobs:
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
             data/authors
+            data/curated/works.json
+            registry/people.csv
+            registry/memberships.csv
+            registry/departments.csv
+            registry/schools.csv
           sparse-checkout-cone-mode: false
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0

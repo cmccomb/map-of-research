@@ -66,6 +66,18 @@ PARENT_TABLE_ROWS = {
 TARGET_TABLE_ROWS = {**PARENT_TABLE_ROWS, "authorships": 49620}
 INTENT_BRANCH = "automation/map-snapshot"
 INTENT_REMOTE_PATH = "cmccomb/map-of-research"
+PRODUCER_REGISTRY_SHA256 = (
+    "7b5cfc69839a5428d317db768c87994f506b5d833980ba63233799bbbd2e0953"
+)
+MATH_BACKFILL_FIELDS = frozenset(
+    {
+        "primary_department_id",
+        "primary_department_source_url",
+        "primary_department_verified_at",
+        "primary_department_basis",
+    }
+)
+MATH_BACKFILL_COUNT = 49
 
 # These are the seven immutable files in the successful #337 Hub release
 # 38f119d71692cdb9112210217b532a7dd7c1633a (producer a68fbf0c, frozen
@@ -112,6 +124,77 @@ def require_exact_parent_files(
     for name in sorted(RELEASE_PATHS):
         if sha256_file(files[name]) != expected_hashes[name]:
             raise ValueError(f"Chemistry parent differs from #337 receipt: {name}")
+
+
+def require_frozen_registry_transition(
+    frozen: Registry,
+    current: Registry,
+    *,
+    people_path: Path,
+    memberships_path: Path,
+    departments_path: Path,
+    source_registry_sha256: str,
+) -> dict[str, Any]:
+    """Allow only the reviewed 49-row Math home backfill after source capture."""
+
+    from .snapshot import _registry_paths, _registry_sha256
+
+    current_digest = _registry_sha256(
+        _registry_paths(people_path, memberships_path, departments_path)
+    )
+    if current_digest != PRODUCER_REGISTRY_SHA256:
+        raise ValueError("Chemistry producer registry differs from reviewed backfill")
+    if (
+        tuple(person.person_id for person in frozen.people)
+        != tuple(person.person_id for person in current.people)
+        or frozen.memberships != current.memberships
+        or frozen.departments != current.departments
+        or frozen.schools != current.schools
+    ):
+        raise ValueError("Chemistry source and producer registry membership drift")
+
+    changed_people = []
+    for before, after in zip(frozen.people, current.people, strict=True):
+        before_fields = vars(before)
+        after_fields = vars(after)
+        changed_fields = {
+            key for key in before_fields if before_fields[key] != after_fields[key]
+        }
+        if frozen.primary_affiliation(before.person_id).published_fields() != (
+            current.primary_affiliation(after.person_id).published_fields()
+        ):
+            raise ValueError("Chemistry effective primary academic home changed")
+        if not changed_fields:
+            continue
+        included = [
+            membership
+            for membership in frozen.memberships
+            if membership.person_id == before.person_id and membership.included
+        ]
+        if (
+            changed_fields != MATH_BACKFILL_FIELDS
+            or any(before_fields[key] for key in MATH_BACKFILL_FIELDS)
+            or len(included) != 1
+            or included[0].department_id != "math"
+            or after.primary_department_id != "math"
+            or after.primary_department_source_url != included[0].source_url
+            or after.primary_department_verified_at != included[0].verified_at
+            or after.primary_department_basis != "single_included_membership"
+        ):
+            raise ValueError(
+                "Chemistry producer registry has unreviewed person changes"
+            )
+        changed_people.append(before.person_id)
+    if len(changed_people) != MATH_BACKFILL_COUNT:
+        raise ValueError("Chemistry producer registry Math backfill count changed")
+    return {
+        "status": "pass",
+        "source_registry_sha256": source_registry_sha256,
+        "producer_registry_sha256": current_digest,
+        "people": len(frozen.people),
+        "explicit_math_home_rows": len(changed_people),
+        "effective_primary_homes_frozen": len(frozen.people),
+    }
 
 
 def require_live_337_parent(
@@ -1104,15 +1187,30 @@ def publish_chem_delta(
         producer_commit=producer_commit,
     )
     registry = load_registry(people_path, memberships_path, departments_path)
+    frozen_registry_dir = snapshot_path.parent.parent / "registry"
+    frozen_people = frozen_registry_dir / "people.csv"
+    frozen_memberships = frozen_registry_dir / "memberships.csv"
+    frozen_departments = frozen_registry_dir / "departments.csv"
     frame, manifest = validate_snapshot(
         snapshot_path,
         snapshot_manifest_path,
-        people_path=people_path,
-        memberships_path=memberships_path,
-        departments_path=departments_path,
+        people_path=frozen_people,
+        memberships_path=frozen_memberships,
+        departments_path=frozen_departments,
     )
     if sha256_file(snapshot_path) != SOURCE_SHA256:
         raise ValueError("Chemistry release raw source bytes changed")
+    frozen_registry = load_registry(
+        frozen_people, frozen_memberships, frozen_departments
+    )
+    registry_transition = require_frozen_registry_transition(
+        frozen_registry,
+        registry,
+        people_path=people_path,
+        memberships_path=memberships_path,
+        departments_path=departments_path,
+        source_registry_sha256=str(manifest["registry_sha256"]),
+    )
     decisions = load_chem_region_review(
         chem_review_path,
         snapshot_frame=frame,
@@ -1121,6 +1219,7 @@ def publish_chem_delta(
         registry=registry,
     )
     files, gate = stage_chem_delta(parent, decisions, registry, stage_dir)
+    gate["registry_transition"] = registry_transition
     revision, receipt = commit_atomic_release(
         files,
         prewrite_gate=gate,

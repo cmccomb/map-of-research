@@ -19,6 +19,8 @@ from map_of_research.region_continuity import (
     _fingerprint_fields,
 )
 from map_of_research.region_review import ReviewedRegionDecision
+from map_of_research.registry import Department, Membership, Person, Registry, School
+from map_of_research.snapshot import _registry_paths, _registry_sha256
 
 
 def _decisions() -> tuple[ReviewedRegionDecision, ...]:
@@ -136,6 +138,80 @@ def test_each_parent_file_hash_is_required(tmp_path: Path, tampered_path: str) -
     paths[tampered_path].write_bytes(b"tampered")
     with pytest.raises(ValueError, match="differs from #337 receipt"):
         delta.require_exact_parent_files(paths, expected_hashes=hashes)
+
+
+def test_only_effectively_identical_math_home_backfill_qualifies(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    root = tmp_path / "registry"
+    root.mkdir()
+    for name in ("people.csv", "memberships.csv", "departments.csv", "schools.csv"):
+        (root / name).write_text(name)
+    paths = _registry_paths(
+        root / "people.csv", root / "memberships.csv", root / "departments.csv"
+    )
+    monkeypatch.setattr(delta, "PRODUCER_REGISTRY_SHA256", _registry_sha256(paths))
+    monkeypatch.setattr(delta, "MATH_BACKFILL_COUNT", 1)
+
+    source_url = "https://www.cmu.edu/math/people/faculty/"
+    before = Person(
+        "person-math-example",
+        "Math Example",
+        "ScholarExample",
+        "https://scholar.google.com/citations?user=ScholarExample",
+        "2026-10-25",
+        "",
+        "",
+        "",
+    )
+    after = replace(
+        before,
+        primary_department_id="math",
+        primary_department_source_url=source_url,
+        primary_department_verified_at="2026-10-25",
+        primary_department_basis="single_included_membership",
+    )
+    membership = Membership(
+        before.person_id, "math", "faculty", True, "", source_url, "2026-10-25"
+    )
+    department = Department(
+        "math", "Mathematical Sciences", source_url, "2026-10-25", "", "mcs"
+    )
+    school = School("mcs", "Mellon College of Science", "https://www.cmu.edu/mcs/")
+    frozen = Registry((before,), (membership,), (department,), (school,))
+    current = replace(frozen, people=(after,))
+
+    def check(candidate: Registry) -> dict:
+        return delta.require_frozen_registry_transition(
+            frozen,
+            candidate,
+            people_path=root / "people.csv",
+            memberships_path=root / "memberships.csv",
+            departments_path=root / "departments.csv",
+            source_registry_sha256="frozen-source",
+        )
+
+    assert check(current)["effective_primary_homes_frozen"] == 1
+    assert check(current)["explicit_math_home_rows"] == 1
+    with pytest.raises(ValueError, match="person changes"):
+        check(replace(current, people=(replace(after, scholar_id="WrongScholar"),)))
+    with pytest.raises(ValueError, match="membership drift"):
+        check(replace(current, memberships=(replace(membership, role="emeritus"),)))
+    with pytest.raises(ValueError, match="effective primary"):
+        check(
+            replace(
+                current,
+                people=(replace(after, primary_department_source_url="https://wrong"),),
+            )
+        )
+    with pytest.raises(ValueError, match="person changes"):
+        check(replace(current, people=(replace(after, homepage_url="https://wrong"),)))
+    monkeypatch.setattr(delta, "MATH_BACKFILL_COUNT", 2)
+    with pytest.raises(ValueError, match="count changed"):
+        check(current)
+    (root / "people.csv").write_text("unreviewed registry bytes")
+    with pytest.raises(ValueError, match="differs from reviewed backfill"):
+        check(current)
 
 
 def test_missing_or_extra_chemistry_observation_fails(
