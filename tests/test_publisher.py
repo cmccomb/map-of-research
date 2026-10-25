@@ -9,6 +9,7 @@ import pandas
 import pytest
 
 import map_of_research.publisher as publisher
+from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
 
@@ -67,7 +68,18 @@ def test_published_rows_ignore_extra_parquet_columns_and_read_all_shards(
             },
         )
     ]
+    list(
+        publisher._published_rows(
+            "profile_publications",
+            ("author_pub_id", "title", "embedding"),
+            hf_token="token",
+            revision="a" * 40,
+        )
+    )
+    assert calls[-1][1]["revision"] == "a" * 40
     assert len(publisher._existing_embeddings(hf_token="token")) == 2
+    assert len(publisher._existing_embeddings(hf_token="token", revision="a" * 40)) == 2
+    assert calls[-1][1]["revision"] == "a" * 40
 
     works_directory = tmp_path / "works"
     works_directory.mkdir()
@@ -87,6 +99,8 @@ def test_published_rows_ignore_extra_parquet_columns_and_read_all_shards(
     assert publisher._existing_layouts(hf_token="token") == {
         "work-one": {"x": 0.1, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4}
     }
+    assert publisher._existing_layouts(hf_token="token", revision="a" * 40)
+    assert calls[-1][1]["revision"] == "a" * 40
 
 
 def test_published_rows_skip_unusable_or_missing_parquet_config(
@@ -114,6 +128,25 @@ def test_published_rows_skip_unusable_or_missing_parquet_config(
         )
         == []
     )
+
+
+def test_pinned_dataset_revision_must_still_be_hub_head(monkeypatch) -> None:
+    class HfApi:
+        def __init__(self, token):
+            assert token == "token"
+
+        def repo_info(self, repo_id, repo_type):
+            assert (repo_id, repo_type) == (publisher.REPO_ID, "dataset")
+            return SimpleNamespace(sha="a" * 40)
+
+    monkeypatch.setitem(sys.modules, "huggingface_hub", SimpleNamespace(HfApi=HfApi))
+    publisher._require_current_dataset_revision(
+        hf_token="token", prior_revision="a" * 40
+    )
+    with pytest.raises(RuntimeError, match="moved after preview"):
+        publisher._require_current_dataset_revision(
+            hf_token="token", prior_revision="b" * 40
+        )
 
 
 def test_embedding_refresh_reuses_existing_vectors(monkeypatch) -> None:
@@ -566,6 +599,8 @@ def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation
             str(tmp_path / "snapshot.parquet"),
             "--manifest",
             str(tmp_path / "manifest.json"),
+            "--prior-revision",
+            "a" * 40,
             "--primary-home-baseline",
             str(explicit_baseline),
         ]
@@ -840,8 +875,8 @@ def test_existing_work_state_reads_published_order_and_missing_config(
 ) -> None:
     calls = []
 
-    def published_rows(config, fields, *, hf_token):
-        calls.append((config, hf_token, fields))
+    def published_rows(config, fields, *, hf_token, revision=None):
+        calls.append((config, hf_token, fields, revision))
         return Rows([{"work_id": "second"}, {"work_id": "first"}])
 
     install_published_rows(monkeypatch, published_rows)
@@ -853,6 +888,8 @@ def test_existing_work_state_reads_published_order_and_missing_config(
     ]
     assert calls[0][0:2] == ("works", "token")
     assert "map_region_outlier" in calls[0][2]
+    publisher._existing_work_state(hf_token="token", revision="a" * 40)
+    assert calls[-1][3] == "a" * 40
 
     def missing(*args, **kwargs):
         raise FileNotFoundError
@@ -1478,10 +1515,12 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
         hf_token="token",
         generated_at_utc="2026-07-17T12:00:00+00:00",
         dataset_commits={"works": "works-commit"},
+        continuity_receipt={"prior_revision": "a" * 40},
     )
     assert commit == "artifact-commit"
     assert uploads[0][1]["point_count"] == 1
     assert uploads[0][2]["dataset_commits"] == {"works": "works-commit"}
+    assert uploads[0][2]["region_continuity"] == {"prior_revision": "a" * 40}
     assert uploads[0][2]["topic_label_review_version"] == (
         publisher.TOPIC_LABEL_REVIEW_VERSION
     )
@@ -1542,10 +1581,15 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
 
 
 @pytest.mark.parametrize("reuse_order", [False, True])
+@pytest.mark.parametrize(
+    ("pinned", "missing_prior"), [(False, False), (True, False), (True, True)]
+)
 def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch,
     tmp_path,
     reuse_order,
+    pinned,
+    missing_prior,
 ) -> None:
     frame = pandas.DataFrame(
         {
@@ -1647,6 +1691,32 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "_upload_map_artifacts",
         lambda *args, **kwargs: "artifact-commit",
     )
+    baseline_checks = []
+    if pinned:
+        monkeypatch.setattr(
+            publisher,
+            "_require_current_dataset_revision",
+            lambda **kwargs: baseline_checks.append(kwargs["prior_revision"]),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "_published_rows",
+            lambda config, fields, **kwargs: (
+                []
+                if missing_prior and config == "works"
+                else [{"work_id": "old"}]
+                if config == "works"
+                else [{"author_pub_id": "one:a"}]
+            ),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "reconcile_region_decisions",
+            lambda works, *args, **kwargs: (
+                works,
+                {"prior_revision": "a" * 40, "stable_works": 1},
+            ),
+        )
 
     class Dataset:
         def __init__(self, config_name):
@@ -1662,11 +1732,27 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             next(name for name, value in tables.items() if value is table)
         ),
     )
+    publish_options = {
+        "hf_token": "token",
+        "corrections_path": corrections_path,
+        "prior_revision": "a" * 40 if pinned else None,
+    }
+    if missing_prior:
+        with pytest.raises(RuntimeError, match="lacks region continuity tables"):
+            publisher.publish_snapshot(
+                tmp_path / "snapshot.parquet",
+                tmp_path / "manifest.json",
+                **publish_options,
+            )
+        return
     result = publisher.publish_snapshot(
         tmp_path / "snapshot.parquet",
         tmp_path / "manifest.json",
-        hf_token="token",
-        corrections_path=corrections_path,
+        **publish_options,
+    )
+    assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
+    assert result["region_continuity"] == (
+        {"prior_revision": "a" * 40, "stable_works": 1} if pinned else None
     )
     assert result["dataset_commits"] == {
         name: f"{name}-commit" for name in publisher.DATASET_CONFIGS
@@ -2188,16 +2274,22 @@ def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
             str(tmp_path / "a.parquet"),
             "--manifest",
             str(tmp_path / "m.json"),
+            "--prior-revision",
+            "a" * 40,
         ]
     )
     assert args.max_age_days == publisher.DEFAULT_MAX_AGE_DAYS
 
 
-@pytest.mark.parametrize(("with_token", "expected"), [(True, 0), (False, 1)])
+@pytest.mark.parametrize(
+    ("with_token", "region_failure", "expected"),
+    [(True, False, 0), (True, True, 1), (False, False, 1)],
+)
 def test_main_always_writes_terminal_status(
     monkeypatch,
     tmp_path,
     with_token,
+    region_failure,
     expected,
 ) -> None:
     status_path = tmp_path / "status.json"
@@ -2221,24 +2313,39 @@ def test_main_always_writes_terminal_status(
         "validate_coverage",
         lambda **kwargs: {"legacy_profiles": 0, "complete_profiles": 1},
     )
-    monkeypatch.setattr(
-        publisher,
-        "publish_snapshot",
-        lambda *args, **kwargs: {"works": 4},
-    )
+    receipt = {
+        "unexplained_losses": ["person/profile/id/scholar"],
+        "unexplained_gains": [],
+    }
+    if region_failure:
+
+        def reject_release(*args, **kwargs):
+            raise RegionReleaseDiffError(receipt)
+
+        monkeypatch.setattr(publisher, "publish_snapshot", reject_release)
+    else:
+        monkeypatch.setattr(
+            publisher,
+            "publish_snapshot",
+            lambda *args, **kwargs: {"works": 4},
+        )
     exit_code = publisher.main(
         [
             "--snapshot",
             str(tmp_path / "snapshot.parquet"),
             "--manifest",
             str(tmp_path / "manifest.json"),
+            "--prior-revision",
+            "a" * 40,
             "--status-file",
             str(status_path),
         ]
     )
     status = json.loads(status_path.read_text())
     assert exit_code == expected
-    assert status["status"] == ("success" if with_token else "failure")
+    assert status["status"] == ("success" if expected == 0 else "failure")
+    if region_failure:
+        assert status["region_continuity"] == receipt
     assert status["finished_at_utc"]
     if with_token:
         assert status["math_coverage"] == {"complete_scholar_profiles": 1}
