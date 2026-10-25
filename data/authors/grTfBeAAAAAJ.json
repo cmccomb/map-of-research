@@ -1149,5 +1149,18 @@
       "capture_row_index": 96,
       "citation_count_display": ""
     }
-  ]
+  ],
+  "browser_capture": {
+    "method": "chrome_direct_profile",
+    "profile_url": "https://scholar.google.com/citations?user=grTfBeAAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-25T01:04:51.411000+00:00",
+    "source_json_filename": "jonathan-jarvik-visible-104-2026-10-24.json",
+    "source_json_sha256": "c7844d6c7a2e404fb556f3426ccd6605acadacb10818accedbd4f1e533148248",
+    "source_html_filename": "jonathan-jarvik-visible-104-2026-10-24.html",
+    "source_html_sha256": "75e8d49deee435e7a99cff85de1b888683df8592986fe684e7f70ed08a9c1910",
+    "displayed_count": 104,
+    "limit": 5000,
+    "more_remain": false,
+    "coverage": "complete_visible_profile"
+  }
 }
