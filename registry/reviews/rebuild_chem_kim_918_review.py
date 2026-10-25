@@ -45,6 +45,134 @@ NEUROSCIENCE = {
     165: "https://snu.elsevierpure.com/en/publications/modeling-neural-circuit-blood-brain-barrier-and-myelination-on-a-/",
 }
 
+# Exact capture rows with a primary work record identifying a different Kim.
+# The expected title/year prevents an index-only decision if the raw capture
+# changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
+# publisher/author copies also identify the H. J. author with KNU Physics.
+OTHER_PRIMARY = {
+    6: (
+        "Decentralized nonlinear model predictive control of multiple flying robots",
+        2003,
+        "H. Jin Kim",
+        "",
+        "https://people.eecs.berkeley.edu/~sastry/sastry-pubs/Postdocs/ShimDavid/ShimDecentralized.pdf",
+        "UC Berkeley author-hosted conference paper",
+        "The paper names H. Jin Kim of UC Berkeley EECS as its coauthor.",
+    ),
+    10: (
+        "New limits on interactions between weakly interacting massive "
+        "particles and nucleons obtained with CsI (Tl) crystal detectors",
+        2012,
+        "Hong Joo Kim",
+        "10.1103/PhysRevLett.108.181301",
+        "https://arxiv.org/pdf/1204.2646",
+        "author-supplied paper; KNU Physics affiliation",
+        "The author-supplied paper assigns H. J. Kim to Kyungpook "
+        "National University Physics.",
+    ),
+    11: (
+        "Limits on WIMP-nucleon interactions with CsI (Tl) crystal detectors",
+        2007,
+        "Hong Joo Kim",
+        "10.1103/PhysRevLett.99.091301",
+        "https://arxiv.org/pdf/0704.0423",
+        "author-supplied paper; KNU Physics affiliation",
+        "The author-supplied paper assigns H. J. Kim to Kyungpook "
+        "National University Physics.",
+    ),
+    19: (
+        "Search for a dark matter-induced annual modulation signal in "
+        "NaI (Tl) with the COSINE-100 experiment",
+        2019,
+        "Hong Joo Kim",
+        "10.1103/PhysRevLett.123.031302",
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.031302",
+        "APS article; KNU Physics affiliation",
+        "The APS article assigns H. J. Kim to Kyungpook National University Physics.",
+    ),
+    29: (
+        "Development of CaMoO4 crystal scintillators for a double beta "
+        "decay experiment with Mo100",
+        2008,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2007.10.038",
+        "https://arxiv.org/pdf/0707.1428",
+        "author-supplied paper; KNU Physics affiliation",
+        "The author-supplied paper assigns H. J. Kim to Kyungpook "
+        "National University Physics; the journal version appeared in 2008.",
+    ),
+    53: (
+        "First limit on WIMP cross section with low background CsI (Tℓ) "
+        "crystal detector",
+        2006,
+        "Hong Joo Kim",
+        "10.1016/j.physletb.2005.12.035",
+        "https://arxiv.org/pdf/astro-ph/0509080",
+        "author-supplied paper; KNU Physics affiliation",
+        "The author-supplied paper assigns H. J. Kim to Kyungpook "
+        "National University Physics; the journal version appeared in 2006.",
+    ),
+    75: (
+        "Three-year annual modulation search with COSINE-100",
+        2022,
+        "Hong Joo Kim",
+        "10.1103/PhysRevD.106.052005",
+        "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.052005",
+        "APS article; KNU Physics affiliation",
+        "The APS article assigns H. J. Kim to Kyungpook National University Physics.",
+    ),
+    96: (
+        "Background model for the NaI (Tl) crystals in COSINE-100",
+        2018,
+        "Hong Joo Kim",
+        "10.1140/epjc/s10052-018-5970-2",
+        "https://research.knu.ac.kr/en/publications/background-model-for-the-naitl-crystals-in-cosine-100/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links its H. J. Kim author to that university "
+        "and gives the exact DOI.",
+    ),
+    107: (
+        "Neutrino-Less Double Beta Decay Experiment Using Ca MoO "
+        "Scintillation Crystals",
+        2010,
+        "Hong Joo Kim",
+        "10.1109/TNS.2010.2043264",
+        "https://research.knu.ac.kr/en/publications/neutrino-less-double-beta-decay-experiment-using-ca-sup100supmoo-/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links its H. J. Kim author directly to Hong Joo "
+        "Kim's profile and gives the exact DOI.",
+    ),
+    156: (
+        "Muon detector for the COSINE-100 experiment",
+        2018,
+        "Hong Joo Kim",
+        "10.1088/1748-0221/13/02/T02007",
+        "https://research.knu.ac.kr/en/publications/muon-detector-for-the-cosine-100-experiment/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links its H. J. Kim author directly to Hong Joo "
+        "Kim's profile and gives the exact DOI.",
+    ),
+    163: (
+        "Searching for low-mass dark matter via the Migdal effect in COSINE-100",
+        2022,
+        "Hong Joo Kim",
+        "10.1103/PhysRevD.105.042006",
+        "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.042006",
+        "APS article; KNU Physics affiliation",
+        "The APS article assigns H. J. Kim to Kyungpook National University Physics.",
+    ),
+    234: (
+        "Stable adaptive control with online learning",
+        2004,
+        "H. Jin Kim",
+        "",
+        "https://papers.neurips.cc/paper/2623-stable-adaptive-control-with-online-learning.pdf",
+        "NeurIPS conference paper",
+        "The conference paper names H. Jin Kim of Seoul National "
+        "University as its coauthor.",
+    ),
+}
+
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
 ACS_PARENT_ID = f"{SCHOLAR_ID}:SeFeTyx0c_EC"
 CORRECTION_PREFIX = re.compile(
@@ -107,13 +235,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         knu_exact = next((w for w in knu_hits if w["year"] == year and w["doi"]), None)
         knu_year_only = next((w for w in knu_hits if w["year"] == year), None)
         cmu_exact = next((w for w in cmu_hits if w["year"] == year), None)
-        if cmu_hits and (knu_exact or index in NEUROSCIENCE):
+        if cmu_hits and (knu_exact or index in NEUROSCIENCE or index in OTHER_PRIMARY):
             raise ValueError(f"Conflicting person evidence at capture row {index}")
         doi, evidence_url, evidence_source = "", "", ""
         if index in BASELINE_EXCLUDED_INDICES:
             status = "already_excluded"
         elif knu_exact:
-            status = "proposed_other_person_knu_orcid_exact_title_year_doi"
+            status = "proposed_other_person_knu_orcid_title_year_record_doi"
             doi = knu_exact["doi"]
             evidence_source = knu_exact["source_name"]
             evidence_url = (
@@ -124,10 +252,11 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     pub_id,
                     "false_profile_attribution",
                     (
-                        f"The exact {year} title '{title}' and DOI {doi} occur in "
-                        "Kyungpook Physics professor Hongjoo Kim's separate "
-                        "ORCID work record; the H. J. Kim on this observation "
-                        "is not CMU Chemistry professor Hyung J. Kim."
+                        f"The Scholar observation's {year} title '{title}' "
+                        "matches Kyungpook Physics professor Hong Joo Kim's "
+                        f"separate ORCID work record, which supplies DOI {doi}; "
+                        "the H. J. Kim on this observation is not CMU Chemistry "
+                        "professor Hyung J. Kim."
                     ),
                     evidence_url,
                 )
@@ -144,6 +273,32 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         f"The primary author record for the {year} work "
                         f"'{title}' names "
                         "Hyung Joon Kim, not CMU Chemistry professor Hyung J. Kim."
+                    ),
+                    evidence_url,
+                )
+            )
+        elif index in OTHER_PRIMARY:
+            (
+                expected_title,
+                expected_year,
+                other_person,
+                doi,
+                evidence_url,
+                evidence_source,
+                basis,
+            ) = OTHER_PRIMARY[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(f"Primary-source match changed at capture row {index}")
+            status = "proposed_other_person_primary_work"
+            additions.append(
+                decision(
+                    pub_id,
+                    "false_profile_attribution",
+                    (
+                        f"{basis} This exact {year} Scholar observation "
+                        f"'{title}' belongs to {other_person}, not CMU Chemistry "
+                        f"professor Hyung J. Kim."
+                        + (f" Article DOI {doi}." if doi else "")
                     ),
                     evidence_url,
                 )
@@ -236,15 +391,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_exact_title_year_missing_doi_hold": 5,
         "knu_orcid_title_only_year_check": 5,
         "proposed_other_person_hyung_joon_primary": 15,
-        "proposed_other_person_knu_orcid_exact_title_year_doi": 320,
+        "proposed_other_person_knu_orcid_title_year_record_doi": 320,
+        "proposed_other_person_primary_work": 12,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 463,
+        "unresolved_attribution_hold": 451,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 336 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 348 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
