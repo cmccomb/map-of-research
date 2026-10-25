@@ -2,6 +2,10 @@
 
 [CMU Chemistry lists Ryan Sullivan as a faculty member](https://www.cmu.edu/chemistry/people/faculty/sullivan.html). The captured Google Scholar profile `wXSgFr4AAAAJ` displayed **Ryan C. Sullivan**, an affiliation naming both CMU Chemistry and Mechanical Engineering, and a verified `cmu.edu` email. This draft preserves the profile evidence for review; it does not replace the canonical cache or rebuild the map.
 
+### Earlier Scholar-link alias observation
+
+The official CMU Chemistry page links Scholar user ID `8EppB1cAAAAJ`, whereas the registered cache uses `wXSgFr4AAAAJ`. The contemporaneous local task log (`work/chemistry-progress-2026-10-24.md`, line 40) records that an isolated task browser opened the CMU-linked ID at `2026-10-24T22:29:31.153Z` and resolved to `wXSgFr4AAAAJ`, displaying Ryan C. Sullivan with a verified `cmu.edu` affiliation. This supports treating the two IDs as an observed redirect to one current profile, not as two separate captured accounts. The note did not preserve the full query-string URL chain or a separate browser receipt, so it does not establish a durable redirect rule. This observation predates the 250-row capture and did not require another Scholar open for this review.
+
 The isolated browser capture displayed 250 rows, labeled “Articles 1–250.” The final **Show more** button was disabled, with no access challenge or page error. An independent offline check matched all 250 JSON rows to the saved HTML in order: title, authors, venue, displayed year, citation anchor, and Scholar publication ID. IDs were unique and row indices contiguous. Two hidden `xsrf` values in the HTML are `[REDACTED]`. Row 89 displays citation anchor `4` and a separate adjacent `*` marker; the JSON count `4` agrees with the anchor.
 
 | Artifact | SHA-256 |
