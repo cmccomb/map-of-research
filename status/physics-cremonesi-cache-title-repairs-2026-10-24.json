@@ -205,6 +205,36 @@
       "repaired_value": "Eur. Phys. J. C 79 (2019) 444",
       "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html",
       "repair_basis": "official CMS title and journal locator replace a damaged publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 51,
+      "author_pub_id": "wJ_gQLoAAAAJ:4X0JR2_MtJMC",
+      "cache_field": "venue",
+      "captured_value": "The European Physical Journal C 79 (3), 1-29",
+      "repaired_value": "Eur. Phys. J. C 79 (2019) 280",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-050/index.html",
+      "repair_basis": "official CMS journal article locator replaces page-span-only publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 71,
+      "author_pub_id": "wJ_gQLoAAAAJ:p39txVt3toMC",
+      "cache_field": "venue",
+      "captured_value": "Journal of High Energy Physics 2024 (8)",
+      "repaired_value": "JHEP 08 (2024) 215",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-22-024/index.html",
+      "repair_basis": "official CMS journal article locator completes the captured issue-only venue"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 931,
+      "author_pub_id": "wJ_gQLoAAAAJ:t4WtaE3RIIAC",
+      "cache_field": "venue",
+      "captured_value": "The European Physical Journal C 78, 1-26",
+      "repaired_value": "Eur. Phys. J. C 78 (2018) 939",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-16-003/index.html",
+      "repair_basis": "official CMS journal article locator replaces page-span-only publisher extraction"
     }
   ]
 }
