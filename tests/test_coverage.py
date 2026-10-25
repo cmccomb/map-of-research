@@ -1,4 +1,5 @@
 import json
+from html import escape
 from pathlib import Path
 
 import pandas
@@ -474,6 +475,192 @@ def test_receipt_reads_scholar_svg_title_labels(tmp_path: Path) -> None:
     cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
     with pytest.raises(ValueError, match="Cached row differs from saved source"):
         validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def _tina_repaired_title_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
+    captures = tmp_path / "data" / "captures"
+    captures.mkdir(parents=True)
+    status = tmp_path / "status"
+    status.mkdir()
+    raw_title = (
+        "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
+    )
+    repaired_title = (
+        "Large Scale Structure Formation in Mixed Dark Matter Models "
+        "with a Cosmological Constant"
+    )
+    raw_rows = []
+    cached_rows = []
+    html_rows = []
+    for index in range(1, 117):
+        author_pub_id = (
+            "au_cLfoAAAAJ:VL0QpB8kHFEC" if index == 116 else f"au_cLfoAAAAJ:row{index}"
+        )
+        title = raw_title if index == 116 else f"Work {index}"
+        url = (
+            "https://scholar.google.com/citations?user=au_cLfoAAAAJ"
+            f"&citation_for_view={author_pub_id}"
+        )
+        raw_rows.append(
+            {
+                "index": index,
+                "citation_url": url,
+                "title": title,
+                "authors": "A Author",
+                "venue": "Proceedings",
+                "year": "1998",
+                "citation_count": "0",
+            }
+        )
+        cached_rows.append(
+            {
+                "capture_row_index": index,
+                "author_pub_id": author_pub_id,
+                "pub_url": url,
+                "title": repaired_title if index == 116 else title,
+                "author": "A Author",
+                "venue": "Proceedings",
+                "pub_year": "1998",
+                "num_citations": 0,
+            }
+        )
+        html_rows.append(
+            '<tr class="gsc_a_tr"><td class="gsc_a_t">'
+            f'<a class="gsc_a_at" href="{escape(url)}">{escape(title)}</a>'
+            '<div class="gs_gray">A Author</div>'
+            '<div class="gs_gray">Proceedings</div></td>'
+            '<td class="gsc_a_c"><a class="gsc_a_ac">0</a></td>'
+            '<td class="gsc_a_y"><span class="gsc_a_h">1998</span></td></tr>'
+        )
+    source_json = captures / "tina.json"
+    source_html = captures / "tina.html"
+    atomic_write_json(
+        source_json,
+        {
+            "scholar_user_id": "au_cLfoAAAAJ",
+            "displayed_count": 116,
+            "more_remain": False,
+            "challenge": False,
+            "page_error": "",
+            "works": raw_rows,
+        },
+    )
+    source_html.write_text(
+        "<table>"
+        + "".join(html_rows)
+        + '</table><button id="gsc_bpf_more" disabled="">Show more</button>'
+    )
+    cache = {
+        "scholar_id": "au_cLfoAAAAJ",
+        "publication_count": 116,
+        "publications": cached_rows,
+        "browser_capture": {
+            "coverage": "complete_visible_profile",
+            "profile_url": "https://scholar.google.com/citations?user=au_cLfoAAAAJ",
+            "displayed_count": 116,
+            "more_remain": False,
+            "limit": 5000,
+            "source_json_filename": source_json.name,
+            "source_json_sha256": sha256_file(source_json),
+            "source_html_filename": source_html.name,
+            "source_html_sha256": sha256_file(source_html),
+        },
+    }
+    ledger = status / "physics-kahniashvili-cache-repair-2026-10-24.json"
+    atomic_write_json(
+        ledger,
+        {
+            "schema_version": 1,
+            "review_state": "source_reviewed_cache_repaired",
+            "capture_receipt": (
+                "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json"
+            ),
+            "repairs": [
+                {
+                    "scholar_id": "au_cLfoAAAAJ",
+                    "capture_row": 116,
+                    "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
+                    "cache_field": "title",
+                    "captured_value": raw_title,
+                    "repaired_value": repaired_title,
+                    "evidence_url": (
+                        "https://books.google.com/books?id=9sFUDwAAQBAJ&pg=PA269"
+                    ),
+                    "corroborating_url": (
+                        "https://www.mao.kiev.ua/biblio/docs/special/"
+                        "2007-04-19_Novosyadlyj_aref.pdf"
+                    ),
+                }
+            ],
+        },
+    )
+    return cache, captures, ledger
+
+
+def test_only_reviewed_tina_row_116_cache_title_repair_is_accepted(
+    tmp_path: Path,
+) -> None:
+    cache, captures, _ = _tina_repaired_title_fixture(tmp_path)
+    validate_complete_receipt("au_cLfoAAAAJ", cache, captures)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "missing_ledger",
+        "invalid_ledger_json",
+        "invalid_ledger_schema",
+        "changed_evidence",
+        "changed_repaired_title",
+        "changed_row_116_author",
+        "changed_other_row_title",
+        "changed_row_116_id",
+    ],
+)
+def test_tina_title_repair_does_not_waive_other_checks(
+    tmp_path: Path, mutation: str
+) -> None:
+    cache, captures, ledger = _tina_repaired_title_fixture(tmp_path)
+    if mutation == "missing_ledger":
+        ledger.unlink()
+    elif mutation == "invalid_ledger_json":
+        ledger.write_text("{invalid")
+    elif mutation == "invalid_ledger_schema":
+        review = json.loads(ledger.read_text())
+        review["schema_version"] = 2
+        atomic_write_json(ledger, review)
+    elif mutation == "changed_evidence":
+        review = json.loads(ledger.read_text())
+        review["repairs"][0]["corroborating_url"] = "https://example.test/unverified"
+        atomic_write_json(ledger, review)
+    elif mutation == "changed_repaired_title":
+        cache["publications"][-1]["title"] = "Unverified replacement"
+    elif mutation == "changed_row_116_author":
+        cache["publications"][-1]["author"] = "Wrong author"
+    elif mutation == "changed_other_row_title":
+        cache["publications"][0]["title"] = "Wrong title"
+    elif mutation == "changed_row_116_id":
+        cache["publications"][-1]["author_pub_id"] = "au_cLfoAAAAJ:wrong"
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("au_cLfoAAAAJ", cache, captures)
+
+
+def test_tina_title_repair_rejects_changed_raw_fragment(tmp_path: Path) -> None:
+    cache, captures, _ = _tina_repaired_title_fixture(tmp_path)
+    source_json = captures / "tina.json"
+    source_html = captures / "tina.html"
+    capture = json.loads(source_json.read_text())
+    old_title = capture["works"][-1]["title"]
+    new_title = "A different damaged title"
+    capture["works"][-1]["title"] = new_title
+    atomic_write_json(source_json, capture)
+    source_html.write_text(
+        source_html.read_text().replace(escape(old_title), escape(new_title))
+    )
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source_json)
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(source_html)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("au_cLfoAAAAJ", cache, captures)
 
 
 @pytest.mark.parametrize(

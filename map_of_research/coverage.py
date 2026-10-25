@@ -23,6 +23,14 @@ from .registry import (
 DEFAULT_BASELINE_PATH = Path("registry/legacy-scholar-cache-baseline.json")
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CAPTURE_DIR = Path("data/captures")
+_TINA_REPAIR_LEDGER = Path("status/physics-kahniashvili-cache-repair-2026-10-24.json")
+_TINA_RAW_TITLE = (
+    "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
+)
+_TINA_REPAIRED_TITLE = (
+    "Large Scale Structure Formation in Mixed Dark Matter Models "
+    "with a Cosmological Constant"
+)
 
 
 def _normalized(value: Any) -> str:
@@ -136,6 +144,60 @@ def _source_file(captures_dir: Path, filename: Any, digest: Any) -> Path:
     return path
 
 
+def _is_reviewed_tina_title_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    source_title: Any,
+    cache_title: Any,
+    captures_dir: Path,
+) -> bool:
+    """Accept one evidence-reviewed cache title while retaining its raw capture."""
+
+    if (
+        scholar_id != "au_cLfoAAAAJ"
+        or index != 116
+        or citation_id != "au_cLfoAAAAJ:VL0QpB8kHFEC"
+        or source_title != _TINA_RAW_TITLE
+        or cache_title != _TINA_REPAIRED_TITLE
+    ):
+        return False
+
+    ledger_path = captures_dir.parent.parent / _TINA_REPAIR_LEDGER
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "source_reviewed_cache_repaired"
+        or ledger.get("capture_receipt")
+        != "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json"
+        or not isinstance(ledger.get("repairs"), list)
+        or len(ledger["repairs"]) != 1
+        or not isinstance(ledger["repairs"][0], dict)
+    ):
+        return False
+    repair = ledger["repairs"][0]
+    expected = {
+        "scholar_id": scholar_id,
+        "capture_row": index,
+        "author_pub_id": citation_id,
+        "cache_field": "title",
+        "captured_value": _TINA_RAW_TITLE,
+        "repaired_value": _TINA_REPAIRED_TITLE,
+        "evidence_url": "https://books.google.com/books?id=9sFUDwAAQBAJ&pg=PA269",
+        "corroborating_url": (
+            "https://www.mao.kiev.ua/biblio/docs/special/"
+            "2007-04-19_Novosyadlyj_aref.pdf"
+        ),
+    }
+    return all(repair.get(key) == value for key, value in expected.items())
+
+
 def validate_complete_receipt(
     scholar_id: str, cache: dict[str, Any], captures_dir: Path
 ) -> None:
@@ -218,11 +280,22 @@ def validate_complete_receipt(
                 _normalized(html_row.get(key)) != _normalized(source_row.get(key))
                 for key in ("title", "authors", "venue", "year", "citation_count")
             )
+            or (
+                _normalized(cached_row.get("title"))
+                != _normalized(source_row.get("title"))
+                and not _is_reviewed_tina_title_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    source_row.get("title"),
+                    cached_row.get("title"),
+                    captures_dir,
+                )
+            )
             or any(
                 _normalized(cached_row.get(cache_key))
                 != _normalized(source_row.get(source_key))
                 for cache_key, source_key in (
-                    ("title", "title"),
                     ("author", "authors"),
                     ("venue", "venue"),
                     ("pub_year", "year"),
