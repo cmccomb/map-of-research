@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 867
+    assert len(exclusions) >= 870
     assert sum(key[0] == "L0nXO5EAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "FRtd8_QAAAAJ" for key in exclusions) == 19
     ihab = "xHKK05MAAAAJ"
@@ -53,6 +53,18 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     } == ihab_codes
     for retained in ("eQOLeE2rZwMC", "u-x6o8ySG0sC", "YOwf2qJgpHMC", "4TOpqqG69KYC"):
         assert (ihab, f"{ihab}:{retained}") not in exclusions
+    mohamed = "JDo1onIAAAAJ"
+    assert {
+        key[1].split(":")[-1]: entry.reason_code
+        for key, entry in exclusions.items()
+        if key[0] == mohamed
+    } == {
+        "Zph67rFs4hoC": "corrupted_duplicate",
+        "3fE2CSJIrl8C": "nonpublication",
+        "MXK_kJrjxJIC": "nonpublication",
+    }
+    for retained in ("Y0pCki6q_DkC", "WF5omc3nYNoC", "5nxA0vEk-isC"):
+        assert (mohamed, f"{mohamed}:{retained}") not in exclusions
     assert sum(key[0] == "JbSQsXAAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "8AqWr_4AAAAJ" for key in exclusions) == 20
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
