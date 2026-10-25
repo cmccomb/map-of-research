@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "complete_author_site_candidate_source_only_no_snapshot_no_release",
+  "person_id": "person-jonathansimone-9415e63e",
+  "captured_at_utc_date": "2026-10-25",
+  "career_completeness": "complete_visible_researcher_publications_page_plus_dissertation; not independent proof against unpublished or unlisted works",
+  "scholar_account_status": "no_verified_account_after_bounded_search",
+  "source_urls": {
+    "cmu_profile": "https://www.cmu.edu/math/people/faculty/simone.html",
+    "researcher_publications": "https://www.math.cmu.edu/~jsimone/research.html",
+    "researcher_cv": "https://www.math.cmu.edu/~jsimone/JonathanSimoneCV.pdf",
+    "arxiv_exact_author_query": "https://export.arxiv.org/api/query?search_query=au:%22Simone%2C_Jonathan%22&start=0&max_results=100",
+    "crossref_doi_api": "https://api.crossref.org/works/{doi}",
+    "uva_thesis_datacite": "https://api.datacite.org/dois/10.18130/V39Z90B6J",
+    "uva_defense": "https://math.virginia.edu/2018/03/Simone-defense/"
+  },
+  "researcher_cv_pdf_sha256": "fb2c8468eff81b6be6cf2d251a1e537b016b9ddcf1894f3d65ec804480fed198",
+  "files": {
+    "cmu-profile.html": "7ba8c1f35208b7bc94480a4f3a0ae25bd7374db53f0336e8a1ea244a68fb345c",
+    "research.html": "7f58f34282045cbe61474eef51be767eb2d952d86cfa0016121582ec4b59e4a0",
+    "cv-extract.txt": "9499206637e19ba7bafc665185a711332821e2369ebfaa0218e4f06c105ed3c9",
+    "arxiv-author-query.xml": "9183bb4834d6d209df2eec3f8c2308cd664a1ba38d406108033a302746a3f444",
+    "crossref-doi-records.json": "a04e4bcd6cd0dc56ae682201c59279713d9a7bc9e1a6363c692adacbb9698037",
+    "uva-thesis-datacite.json": "998db761b8207d6ea1ce1f9874dff1e8da438778afdc09057b2e7b333710a394",
+    "uva-defense.html": "ffc4e4f09b1a8b831545c0e3c07f486023dfcee17dce36ef752a362ba8d57d58",
+    "candidate-11.json": "18f1caff031dc31bc28659a8e1597cd8ab3b04620c188d7951c76c82f84dbd0b"
+  },
+  "original_html_capture_sha256": {
+    "cmu-profile.html": "acb0c8dad0ea550320dc51d0f5744c0c3ac03227e21668de1b8bcc3f63501576",
+    "research.html": "844abf1bf4dff88dac3bbe8593a333b2e744075b0b1a8ffe829f045c363d136a"
+  },
+  "html_capture_handling": "Trailing horizontal whitespace removed from the two saved HTML copies and indentation tabs expanded in the CMU copy for clean diffs; original response SHA-256 values retained above."
+}

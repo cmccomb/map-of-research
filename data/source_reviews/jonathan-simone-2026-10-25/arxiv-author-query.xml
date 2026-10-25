@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TUL1HS0ez/hri5UQWueM9L64qS8</id>
+  <title>arXiv Query: search_query=au:"Simone, Jonathan"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-25T13:38:07Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Simone,+Jonathan%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2006.14509v3</id>
+    <title>Using rational homology circles to construct rational homology balls</title>
+    <updated>2020-11-04T18:51:08Z</updated>
+    <link href="https://arxiv.org/abs/2006.14509v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.14509v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by Akbulut-Larson's construction of Brieskorn spheres bounding rational homology 4-balls, we explore plumbed 3-manifolds that bound rational homology circles and use them to construct infinite families of rational homology 3-spheres that bound rational homology 4-balls. Some of these rational homology 3-spheres are new examples of integer homology 3-spheres that bound rational homology 4-balls, but do not bound integer homology 4-balls. In particular, we find infinite families of torus bundles over the circle that bound rational homology circles, provide a simple method for constructing more general plumbed 3-manifolds that bound rational homology circles, and show that, for example, $-1$-surgery along any unknotting number one knot $K$ with a positive crossing that can be switched to unknot $K$ bounds a rational homology 4-ball.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-25T16:00:34Z</published>
+    <arxiv:comment>Added Theorem 1.2, added to exposition, and fixed typos</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>Topology and its Applications, Vol. 291 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <arxiv:doi>10.1016/j.topol.2021.107626</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.topol.2021.107626" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.09187v2</id>
+    <title>On the nonorientable four-ball genus of torus knots</title>
+    <updated>2024-06-24T18:14:16Z</updated>
+    <link href="https://arxiv.org/abs/2109.09187v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.09187v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The nonorientable four-ball genus of a knot $K$ in $S^3$ is the minimal first Betti number of nonorientable surfaces in $B^4$ bounded by $K$. By amalgamating ideas from involutive knot Floer homology and unoriented knot Floer homology, we give a new lower bound on the smooth nonorientable four-ball genus $γ_4$ of any knot. This bound is sharp for several families of torus knots, including $T_{4n,(2n\pm 1)^2}$ for even $n\ge 2$, a family Longo showed were counterexamples to Batson's conjecture. We also prove that, whenever $p$ is an even positive integer and $\frac{p}{2}$ is not a perfect square, the torus knot $T_{p,q}$ does not bound a locally flat Möbius band for almost all integers $q$ relatively prime to $p$.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-19T18:24:22Z</published>
+    <arxiv:comment>31 pages, 8 figures. Comments are welcome! v2: Corresponds to version accepted for publication in Algebraic &amp; Geometric Topology</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>Algebr. Geom. Topol. 25 (2025) 2209-2251</arxiv:journal_ref>
+    <author>
+      <name>Fraser Binns</name>
+    </author>
+    <author>
+      <name>Sungkyung Kang</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <author>
+      <name>Paula Truöl</name>
+    </author>
+    <arxiv:doi>10.2140/agt.2025.25.2209</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/agt.2025.25.2209" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.06573v4</id>
+    <title>On chain link surgeries bounding rational homology balls and $χ$-slice 3-braid closures</title>
+    <updated>2025-04-24T13:25:24Z</updated>
+    <link href="https://arxiv.org/abs/2301.06573v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.06573v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine which integral surgeries on a large class of circular chain links bound rational homology balls. Our key tool is the lattice-theoretic cubiquity obstruction recently developed by Greene and Owens. We discuss a practical method of computing it, and, as an application, prove that a generalisation of the slice--ribbon conjecture holds for all but one infinite family of quasi-alternating 3-braid links. This extends previous results of Lisca concerning the conjecture for 3-braid knots.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-16T19:11:05Z</published>
+    <arxiv:comment>Final version; to appear in Transactions of the AMS. 22 figures, 9 of which are full-page figures</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Vitalijs Brejevs</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.01585v1</id>
+    <title>On $χ-$slice pretzel links</title>
+    <updated>2023-06-02T14:54:58Z</updated>
+    <link href="https://arxiv.org/abs/2306.01585v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.01585v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A link is called $χ-$slice if it bounds a smooth properly embedded surface in the 4-ball with no closed components and Euler characteristic 1. If a link has a single component, then it is $χ-$slice if and only if it is slice. One motivation for studying such links is that the double cover of the 3-sphere branched along a nonzero determinant $χ-$slice link is a rational homology 3-sphere that bounds a rational homology 4-ball. This article aims to generalize known results about the sliceness of pretzel knots to the $χ-$sliceness of pretzel links. In particular, we completely classify positive and negative pretzel links that are $χ-$slice, and obtain partial classifications of 3-stranded and 4-stranded pretzel links that are $χ-$slice. As a consequence, we obtain infinite families of Seifert fiber spaces that bound rational homology 4-balls.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-02T14:54:58Z</published>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Sophia Fanelle</name>
+    </author>
+    <author>
+      <name>Evan Huang</name>
+    </author>
+    <author>
+      <name>Ben Huenemann</name>
+    </author>
+    <author>
+      <name>Weizhe Shen</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <author>
+      <name>Hannah Turner</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.05110v3</id>
+    <title>Symplectically replacing plumbings with Euler characteristic 2 4-manifolds</title>
+    <updated>2020-11-05T16:40:36Z</updated>
+    <link href="https://arxiv.org/abs/1608.05110v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.05110v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce new symplectic cut-and-paste operations that generalize the rational blowdown. In particular, we will define $k$-replaceable plumbings to be those that, heuristically, can be symplectically replaced by Euler characteristic $k$ 4-manifolds. We will then classify 2-replaceable linear plumbings, construct 2-replaceable plumbing trees, and use one such tree to construct a symplectic exotic $\mathbb{C}P^2\#6\overline{\mathbb{C}P^2}$.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-17T21:45:43Z</published>
+    <arxiv:comment>final version, minor typos fixed</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>Journal of Symplectic Geometry, Vol. 18, No. 5 (2020), pp. 1285-1318</arxiv:journal_ref>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <arxiv:doi>10.4310/JSG.2020.v18.n5.a4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/JSG.2020.v18.n5.a4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.10225v3</id>
+    <title>Tight contact structures on toroidal plumbed 3-manifolds</title>
+    <updated>2025-10-01T05:03:28Z</updated>
+    <link href="https://arxiv.org/abs/2412.10225v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.10225v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider tight contact structures on plumbed 3-manifolds with no bad vertices. We discuss how one can count the number of tight contact structures with zero Giroux torsion on such 3-manifolds and explore conditions under which Giroux torsion can be added to these tight contact structures without making them overtwisted. We give an explicit algorithm to construct stein diagrams corresponding to tight structures without Giroux torsion. We focus mainly on plumbed 3-manifolds whose vertices have valence at most 3 and then briefly consider the situation for plumbed 3-manifolds with vertices of higher valence.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-13T15:49:53Z</published>
+    <arxiv:comment>Published in Topology and its Applications</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Tanushree Shah</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.14986v2</id>
+    <title>Classification of torus bundles that bound rational homology circles</title>
+    <updated>2022-08-30T20:41:26Z</updated>
+    <link href="https://arxiv.org/abs/2006.14986v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.14986v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we completely classify torus bundles over the circle that bound 4-manifolds with the rational homology of the circle. Along the way, we classify certain integral surgeries along chain links that bound rational homology balls and explore a connection to 3-braid closures whose double branched covers bound rational homology 4-balls.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-26T13:45:20Z</published>
+    <arxiv:comment>Final version. Reworked many lattice analysis arguments to improve the flow of the paper. Added two cases that were missing from version 1. To appear in Algebraic &amp; Geometric Topology</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>Algebr. Geom. Topol. 23 (2023) 2449-2518</arxiv:journal_ref>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <arxiv:doi>10.2140/agt.2023.23.2449</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/agt.2023.23.2449" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.11728v1</id>
+    <title>Geography of symplectic Lefschetz fibrations and rational blowdowns</title>
+    <updated>2022-01-27T18:48:08Z</updated>
+    <link href="https://arxiv.org/abs/2201.11728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.11728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We produce simply connected, minimal, symplectic Lefschetz fibrations realizing all the lattice points in the symplectic geography plane below the Noether line. This provides a symplectic extension of the classical works populating the complex geography plane with holomorphic Lefschetz fibrations. Our examples are obtained by rationally blowing down Lefschetz fibrations with clustered nodal fibers, the total spaces of which are potentially new homotopy elliptic surfaces. Similarly, clustering nodal fibers on higher genera Lefschetz fibrations on standard rational surfaces, we get rational blowdown configurations that yield new constructions of small symplectic exotic $4$-manifolds. We present an example of a construction of a minimal symplectic exotic $\mathbb{CP} \# 5\,\overline{\mathbb{CP}}$ through this procedure applied to a genus-$3$ fibration.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-27T18:48:08Z</published>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>R. Inanc Baykur</name>
+    </author>
+    <author>
+      <name>Mustafa Korkmaz</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.06702v2</id>
+    <title>Tight contact structures on some plumbed 3-manifolds</title>
+    <updated>2018-09-17T22:23:09Z</updated>
+    <link href="https://arxiv.org/abs/1710.06702v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.06702v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we prove a generalization of a theorem of Lisca-Matic to Stein cobordisms and develop a method for distinguishing certain Stein cobordisms using rotation numbers. Using these results along with standard techniques from convex surface theory and classifications of tight contact structures on certain 3-manifolds due to Honda, we classify the tight contact structures on a certain class of plumbed 3-manifolds that bound non-simply connected 4-manifolds. Moreover, we give descriptions of the Stein fillings of the Stein fillable contact structures.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-18T12:41:31Z</published>
+    <arxiv:comment>The first version of this paper only considered tight contact structures with no Giroux torsion on certain plumbed 3-manifolds. This updated version classifies all tight contact structures on such 3-manifolds</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.00500v2</id>
+    <title>Cubiquitous Lattices and Branched Covers bounding rational balls</title>
+    <updated>2026-03-27T00:38:43Z</updated>
+    <link href="https://arxiv.org/abs/2405.00500v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.00500v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Greene and Owens explore cubiquitous lattices as an obstruction to rational homology 3-spheres bounding rational homology 4-balls. The purpose of this article is to better understand which sublattices of $\mathbb{Z}^n$ are cubiquitous with the aim of effectively using their cubiquity obstruction. We develop a geometric obstruction (called the Wu obstruction) to cubiquity and use it as tool to completely classify which sublattices with orthogonal bases are cubiquitous. We then apply this result the double branched covers of alternating connected sums of torus links. Finally, we explore how the Wu obstruction can be used in conjunction with contractions to obstruct the cubiquity of infinite families of lattices.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-01T13:13:02Z</published>
+    <arxiv:comment>v2: various typos corrected and a gap in the original proof fixed. To appear in Knot Theory and its Ramifications</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Erica Choi</name>
+    </author>
+    <author>
+      <name>Nur Saglam</name>
+    </author>
+    <author>
+      <name>Jonathan Simone</name>
+    </author>
+    <author>
+      <name>Katerina Stuopis</name>
+    </author>
+    <author>
+      <name>Hugo Zhou</name>
+    </author>
+  </entry>
+</feed>
