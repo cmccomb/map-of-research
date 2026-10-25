@@ -298,6 +298,41 @@ OTHER_PRIMARY = {
         "The KNU article names Hong Joo Kim in its full author record "
         "and links him to his physics faculty profile.",
     ),
+    546: (
+        "Czochralski growth and scintillation properties of Li6LuxY1− x "
+        "(BO3) 3: Ce3+ single crystals",
+        2016,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2015.10.008",
+        "https://research.knu.ac.kr/en/publications/czochralski-growth-and-scintillation-properties-of-lisub6sublusub/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim to physics professor Hong Joo Kim; "
+        "KNU's October 2015 online date and the Scholar 2016 year refer "
+        "to the same article, printed in January 2016.",
+    ),
+    605: (
+        "Scintillation characteristics of an undoped CsI crystal at "
+        "low-temperature for dark matter search",
+        2025,
+        "Hong Joo Kim",
+        "10.1016/j.astropartphys.2025.103150",
+        "https://research.knu.ac.kr/en/publications/scintillation-characteristics-of-an-undoped-csi-crystal-at-low-te-2/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor "
+        "Hong Joo Kim and matches the 2025 journal publication.",
+    ),
+    746: (
+        "Development of a Dual Cryogenic Detection System for the "
+        "Forbidden Non-unique -Decay Spectrum Study",
+        2024,
+        "Hong Joo Kim",
+        "10.1007/s10909-024-03139-5",
+        "https://research.knu.ac.kr/en/publications/development-of-a-dual-cryogenic-detection-system-for-the-forbidde/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor "
+        "Hong Joo Kim; the Scholar title omits the beta glyph but its "
+        "authors, journal, volume, pages, and year match this article.",
+    ),
 }
 
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
@@ -516,10 +551,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "cmu_orcid_exact_title_year_retained": 100,
         "cmu_orcid_title_only_year_check": 1,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
-        "knu_orcid_title_only_year_check": 5,
+        "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 24,
+        "proposed_other_person_primary_work": 27,
         "proposed_acs_supporting_information_nonpublication": 1,
         "unresolved_attribution_hold": 442,
     }
@@ -527,7 +562,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 360 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 363 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
