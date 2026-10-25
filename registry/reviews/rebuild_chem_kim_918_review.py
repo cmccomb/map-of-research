@@ -50,6 +50,30 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    99: (
+        "Identification of Salmonella enterica serovar Typhimurium using "
+        "specific PCR primers obtained by comparative genomics in "
+        "Salmonella serovars",
+        2006,
+        "Hyun-Joong Kim",
+        "10.4315/0362-028X-69.7.1653",
+        "https://foodsci.oregonstate.edu/parks-lab/publications/2008-2016",
+        "Oregon State University coauthor-lab publication list",
+        "The Oregon State University coauthor lab lists this exact Journal "
+        "of Food Protection article, volume 69 issue 7, pages 1653–1661, "
+        "under the full name Hyun-Joong Kim with matching coauthors.",
+    ),
+    161: (
+        "Brown color characteristics and antioxidizing activity of doenjang extracts",
+        2002,
+        "Hyun Jung Kim",
+        "",
+        "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09673546",
+        "DBpia journal article record for the Korean Society of Food Cookery Science",
+        "The journal-platform record for this exact volume 18 issue 6, "
+        "pages 644–654 article names first author Hyun Jung Kim of "
+        "Yonsei University Food and Nutrition.",
+    ),
     88: (
         "Investigations of optical and luminescence features of Sm3+ "
         "doped Li2O-MO-B2O3 (M= Mg/Ca/Sr/Ba) glasses mixed with different "
@@ -505,6 +529,8 @@ OTHER_PRIMARY = {
 # In addition to title and year, freeze each newly reviewed Scholar observation
 # ID so a reordered or replaced capture cannot inherit a person decision.
 OTHER_PRIMARY_ID_GUARDS = {
+    99: "bC4aq-4AAAAJ:cB__R-XWw9UC",
+    161: "bC4aq-4AAAAJ:YlPif8NxrbYC",
     88: "bC4aq-4AAAAJ:oi2SiIJ9l4AC",
     148: "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
     267: "bC4aq-4AAAAJ:foquWX3nUaYC",
@@ -827,6 +853,23 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         )
                     )
                 )
+                or (
+                    index == 99
+                    and (
+                        row["venue"]
+                        != "Journal of food protection 69 (7), 1653-1661, 2006"
+                        or row["authors"]
+                        != "HJ Kim, SH Park, TH Lee, BH Nahm, YH Chung, KH Seo, HY Kim"
+                    )
+                )
+                or (
+                    index == 161
+                    and (
+                        row["venue"]
+                        != "Korean J Soc Food Cookery Sci 18 (6), 644-654, 2002"
+                        or row["authors"] != "HJ Kim, KH Sohn, SH Chae, TK Kwak, SK Yim"
+                    )
+                )
             ):
                 raise ValueError(f"Primary-source match changed at capture row {index}")
             status = "proposed_other_person_primary_work"
@@ -1076,16 +1119,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 42,
+        "proposed_other_person_primary_work": 44,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 409,
+        "unresolved_attribution_hold": 407,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 382 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 384 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
