@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import json
 import sys
+from collections import Counter
 from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
@@ -89,6 +90,8 @@ def _files(root: Path, decisions: tuple[ReviewedRegionDecision, ...]) -> dict:
                 "map_region_outlier": False,
                 "keyword_id": "broad" if item.visible else "",
                 "detail_keyword_id": "detail" if item.visible else "",
+                "map_region_audit_version": "low-information-semantic-region-v2",
+                "map_region_documented_override": False,
                 "x": 0.25,
                 "title": item.captured_title,
             }
@@ -102,7 +105,7 @@ def _files(root: Path, decisions: tuple[ReviewedRegionDecision, ...]) -> dict:
                 }
             )
     rows["people"] = [
-        {"person_id": person_id, "display_name": person_id, "mapped_work_count": 1}
+        {"person_id": person_id, "display_name": person_id, "mapped_work_count": 10}
         for person_id in sorted({item.person_id for item in decisions})
     ]
     paths = {}
@@ -156,6 +159,42 @@ def _rewrite_rows(path: Path, change) -> None:
     rows = pandas.read_parquet(path).to_dict("records")
     change(rows)
     pandas.DataFrame(rows).to_parquet(path, index=False)
+
+
+def _post_bio_parent(
+    files: dict, decisions: tuple[ReviewedRegionDecision, ...]
+) -> None:
+    """Model only the reviewed Bio stage derivations, including parent counts."""
+
+    _rewrite_rows(
+        files["works/train-00000-of-00001.parquet"],
+        lambda rows: [
+            row.update(
+                map_region_prior_eligible_override=(
+                    row["work_id"] in continuity.POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
+                ),
+                map_region_prior_excluded_override=False,
+                map_region_audit_version=continuity.POST_BIO_REGION_AUDIT_VERSION,
+                map_region_documented_override=(
+                    row["work_id"] == continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
+                ),
+            )
+            for row in rows
+        ],
+    )
+    restored = Counter(
+        item.person_id for item in decisions if item.transition == "restore"
+    )
+    _rewrite_rows(
+        files["people/train-00000-of-00001.parquet"],
+        lambda rows: [
+            row.update(
+                publication_hold_reason="",
+                mapped_work_count=row["mapped_work_count"] - restored[row["person_id"]],
+            )
+            for row in rows
+        ],
+    )
 
 
 def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None:
@@ -300,6 +339,149 @@ def test_later_parent_may_add_unrelated_biology_rows(tmp_path: Path) -> None:
     )
 
 
+def test_post_bio_parent_retains_reviewed_rows_and_uses_immediate_parent_counts(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision="a" * 40,
+    )
+    assert state["reviewed_works"] == 19
+    assert state["lineage"] == "exact_dcb_reviewed_rows"
+    baseline_counts = {
+        key: row["mapped_work_count"]
+        for key, row in continuity._selected_rows(
+            baseline["people/train-00000-of-00001.parquet"],
+            "person_id",
+            {item.person_id for item in decisions},
+        ).items()
+    }
+    parent_counts = {
+        key: row["mapped_work_count"]
+        for key, row in state["parent_rows"]["people"].items()
+    }
+    decreases = {
+        person_id: baseline_counts[person_id] - parent_counts[person_id]
+        for person_id in baseline_counts
+        if baseline_counts[person_id] != parent_counts[person_id]
+    }
+    assert decreases == Counter(
+        item.person_id for item in decisions if item.transition == "restore"
+    )
+    assert len(decreases) == 5
+    assert sum(decreases.values()) == 7
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    validate_chemistry_candidate(tables, state, require_count_parity=True)
+    tables["people"].loc[0, "mapped_work_count"] += 1
+    with pytest.raises(ValueError, match="candidate people changed"):
+        validate_chemistry_candidate(tables, state, require_count_parity=True)
+
+
+@pytest.mark.parametrize(
+    ("mutation", "message"),
+    [
+        ("extra_work", "unreviewed schema fields"),
+        ("extra_person", "unreviewed schema fields"),
+        ("missing_added_work", "unreviewed schema fields"),
+        ("missing_added_person", "unreviewed schema fields"),
+        ("missing_dcb_work", "work schema changed"),
+        ("missing_dcb_person", "person schema changed"),
+        ("wrong_eligible", "work derivation changed"),
+        ("wrong_excluded", "work derivation changed"),
+        ("wrong_audit", "work derivation changed"),
+        ("wrong_override", "work derivation changed"),
+        ("other_override", "work derivation changed"),
+        ("person_hold", "person hold reason changed"),
+    ],
+)
+def test_post_bio_parent_rejects_schema_and_derivation_drift(
+    tmp_path: Path, mutation: str, message: str
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    works = parent["works/train-00000-of-00001.parquet"]
+    people = parent["people/train-00000-of-00001.parquet"]
+    if mutation == "extra_work":
+        _rewrite_rows(works, lambda rows: [row.update(extra="") for row in rows])
+    elif mutation == "extra_person":
+        _rewrite_rows(people, lambda rows: [row.update(extra="") for row in rows])
+    elif mutation == "missing_added_work":
+        _rewrite_rows(
+            works,
+            lambda rows: [
+                row.pop("map_region_prior_excluded_override") for row in rows
+            ],
+        )
+    elif mutation == "missing_added_person":
+        _rewrite_rows(
+            people, lambda rows: [row.pop("publication_hold_reason") for row in rows]
+        )
+    elif mutation == "missing_dcb_work":
+        _rewrite_rows(
+            works, lambda rows: [row.pop("map_region_audit_version") for row in rows]
+        )
+    elif mutation == "missing_dcb_person":
+        _rewrite_rows(people, lambda rows: [row.pop("display_name") for row in rows])
+    elif mutation == "wrong_eligible":
+        _rewrite_rows(
+            works,
+            lambda rows: rows[0].update(
+                map_region_prior_eligible_override=(
+                    not rows[0]["map_region_prior_eligible_override"]
+                )
+            ),
+        )
+    elif mutation == "wrong_excluded":
+        _rewrite_rows(
+            works, lambda rows: rows[0].update(map_region_prior_excluded_override=True)
+        )
+    elif mutation == "wrong_audit":
+        _rewrite_rows(
+            works,
+            lambda rows: rows[0].update(map_region_audit_version="wrong"),
+        )
+    elif mutation == "wrong_override":
+        _rewrite_rows(
+            works,
+            lambda rows: next(
+                row
+                for row in rows
+                if row["work_id"] == continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
+            ).update(map_region_documented_override=False),
+        )
+    elif mutation == "other_override":
+        _rewrite_rows(
+            works,
+            lambda rows: next(
+                row
+                for row in rows
+                if row["work_id"] != continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
+            ).update(map_region_documented_override=True),
+        )
+    elif mutation == "person_hold":
+        _rewrite_rows(
+            people, lambda rows: rows[0].update(publication_hold_reason="hold")
+        )
+    with pytest.raises(ValueError, match=message):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision="a" * 40,
+        )
+
+
 def test_parent_row_comparison_normalizes_nulls_and_rejects_missing_identity() -> None:
     assert continuity._equal_value(float("nan")) is None
     assert continuity._equal_value({"values": [float("nan")]}) == {"values": [None]}
@@ -359,7 +541,7 @@ def test_exact_dcb_parent_and_later_content_lineage(tmp_path: Path) -> None:
         ("profile_duplicate", "repeats author_pub_id"),
         ("profile_missing", "lacks reviewed author_pub_id"),
         ("work", "parent decision changed"),
-        ("work_schema", "work schema changed"),
+        ("work_schema", "unreviewed schema fields"),
         ("authorship", "authored visibility changed"),
         ("authorship_duplicate", "repeats authorship"),
         ("point", "map visibility changed"),

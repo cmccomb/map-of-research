@@ -80,6 +80,24 @@ PERSON_COUNT_FIELDS = frozenset(
     }
 )
 MAP_POINT_RECOMPUTED_FIELDS = frozenset({"keyword_ids", "x", "y", "tsne_x", "tsne_y"})
+POST_BIO_WORK_FIELDS = frozenset(
+    {"map_region_prior_eligible_override", "map_region_prior_excluded_override"}
+)
+POST_BIO_PERSON_FIELDS = frozenset({"publication_hold_reason"})
+POST_BIO_REGION_AUDIT_VERSION = "low-information-semantic-region-v3"
+POST_BIO_PRIOR_ELIGIBLE_WORK_IDS = frozenset(
+    {
+        "work-2b4a1b0c1ba3c97a3a59cdeff547ee405ba08c3eb3801f5a2451931e1f7487f2",
+        "work-7cf42c9fd2912068c1a0198c94b9ca19f67cd16f4112f52c44b98a59a2c0662a",
+        "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+        "work-b29eec36af051204a05cc4120514d040740998193eb641d2bb90fde9fde1b7e8",
+        "work-dab872d55c3138e1e51fc1f7d6f959218b6772b130d46e4c3ff2540f9f0bdd60",
+        "work-df35fb5e533c0e0d2f295a5e0e4745259fdad2e9a190e78f189fd21ecd1fede9",
+    }
+)
+POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID = (
+    "work-f07078afd572186934d04127dcd8526c089e5089ad69b1c4504702ac49c4329b"
+)
 
 
 def needs_chemistry_continuity(
@@ -230,13 +248,14 @@ def _same_rows(
     after: Mapping[str, Mapping[str, Any]],
     *,
     excluded: frozenset[str] = frozenset(),
+    added: frozenset[str] = frozenset(),
     label: str,
 ) -> None:
     if before.keys() != after.keys():
         raise ValueError(f"Chemistry {label} identities changed")
     for key, row in before.items():
         current = after[key]
-        if row.keys() != current.keys():
+        if set(current) != set(row) | added:
             raise ValueError(f"Chemistry {label} schema changed: {key}")
         for field in row:
             if field not in excluded and _equal_value(row[field]) != _equal_value(
@@ -366,11 +385,33 @@ def validate_chemistry_parent(
         and current_marker["chem_region_review_sha256"] != CHEM_REVIEW_SHA256
     ):
         raise ValueError("Later Chemistry parent lineage marker changed")
+    post_bio_schema = False
+    if prior_revision != CHEMISTRY_HUB_REVISION:
+        work_extras = {
+            frozenset(set(row) - set(baseline["works"][key]))
+            for key, row in parent["works"].items()
+        }
+        person_extras = {
+            frozenset(set(row) - set(baseline["people"][key]))
+            for key, row in parent["people"].items()
+        }
+        if work_extras == {POST_BIO_WORK_FIELDS} and person_extras == {
+            POST_BIO_PERSON_FIELDS
+        }:
+            post_bio_schema = True
+        elif work_extras != {frozenset()} or person_extras != {frozenset()}:
+            raise ValueError("Chemistry later parent has unreviewed schema fields")
     _same_rows(baseline["profiles"], parent["profiles"], label="profile")
     _same_rows(
         baseline["works"],
         parent["works"],
-        excluded=WORK_RECOMPUTED_FIELDS,
+        excluded=(
+            WORK_RECOMPUTED_FIELDS
+            | {"map_region_audit_version", "map_region_documented_override"}
+            if post_bio_schema
+            else WORK_RECOMPUTED_FIELDS
+        ),
+        added=POST_BIO_WORK_FIELDS if post_bio_schema else frozenset(),
         label="work",
     )
     _same_rows(baseline["authored"], parent["authored"], label="authorship")
@@ -378,8 +419,31 @@ def validate_chemistry_parent(
         baseline["people"],
         parent["people"],
         excluded=PERSON_COUNT_FIELDS,
+        added=POST_BIO_PERSON_FIELDS if post_bio_schema else frozenset(),
         label="person",
     )
+    if post_bio_schema:
+        for work_id, work in parent["works"].items():
+            before = baseline["works"][work_id]
+            if (
+                work["map_region_prior_eligible_override"]
+                is not (work_id in POST_BIO_PRIOR_ELIGIBLE_WORK_IDS)
+                or work["map_region_prior_excluded_override"] is not False
+                or work["map_region_audit_version"] != POST_BIO_REGION_AUDIT_VERSION
+                or work["map_region_documented_override"]
+                is not (
+                    True
+                    if work_id == POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
+                    else before["map_region_documented_override"]
+                )
+            ):
+                raise ValueError(
+                    f"Chemistry post-Bio work derivation changed: {work_id}"
+                )
+        if any(
+            row["publication_hold_reason"] != "" for row in parent["people"].values()
+        ):
+            raise ValueError("Chemistry post-Bio person hold reason changed")
     _same_rows(
         baseline["points"],
         parent["points"],
