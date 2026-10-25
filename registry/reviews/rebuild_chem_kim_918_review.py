@@ -107,6 +107,8 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         knu_exact = next((w for w in knu_hits if w["year"] == year and w["doi"]), None)
         knu_year_only = next((w for w in knu_hits if w["year"] == year), None)
         cmu_exact = next((w for w in cmu_hits if w["year"] == year), None)
+        if cmu_hits and (knu_exact or index in NEUROSCIENCE):
+            raise ValueError(f"Conflicting person evidence at capture row {index}")
         doi, evidence_url, evidence_source = "", "", ""
         if index in BASELINE_EXCLUDED_INDICES:
             status = "already_excluded"
