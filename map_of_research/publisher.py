@@ -59,6 +59,13 @@ from .provisional_holds import (
     validate_provisional_holds,
 )
 from .quality import QUALITY_ASSESSMENT_VERSION
+from .region_continuity import (
+    PRIOR_OBSERVATION_FIELDS,
+    PRIOR_WORK_FIELDS,
+    RegionReleaseDiffError,
+    reconcile_region_decisions,
+    require_revision,
+)
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -174,6 +181,7 @@ def _published_rows(
     columns: tuple[str, ...],
     *,
     hf_token: str,
+    revision: str | None = None,
 ) -> Iterator[dict[str, Any]]:
     """Read published Parquet columns without applying stale Hub feature metadata."""
 
@@ -181,14 +189,14 @@ def _published_rows(
     from huggingface_hub import snapshot_download
 
     directory_name = "data" if config_name == "default" else config_name
-    snapshot_root = Path(
-        snapshot_download(
-            REPO_ID,
-            repo_type="dataset",
-            allow_patterns=f"{directory_name}/train-*.parquet",
-            token=hf_token or None,
-        )
-    )
+    download_options: dict[str, Any] = {
+        "repo_type": "dataset",
+        "allow_patterns": f"{directory_name}/train-*.parquet",
+        "token": hf_token or None,
+    }
+    if revision is not None:
+        download_options["revision"] = require_revision(revision)
+    snapshot_root = Path(snapshot_download(REPO_ID, **download_options))
     parquet_files = sorted((snapshot_root / directory_name).glob("train-*.parquet"))
     if not parquet_files:
         raise FileNotFoundError(f"No published {config_name} Parquet shard")
@@ -202,7 +210,22 @@ def _published_rows(
             yield from batch.to_pylist()
 
 
-def _existing_embeddings(*, hf_token: str) -> dict[tuple[str, str], list[float]]:
+def _require_current_dataset_revision(*, hf_token: str, prior_revision: str) -> None:
+    """Fail before writing if the pinned baseline is no longer the Hub head."""
+
+    from huggingface_hub import HfApi
+
+    expected = require_revision(prior_revision)
+    actual = HfApi(token=hf_token).repo_info(REPO_ID, repo_type="dataset").sha
+    if actual != expected:
+        raise RuntimeError(
+            f"Hosted dataset moved after preview: expected {expected}, found {actual}"
+        )
+
+
+def _existing_embeddings(
+    *, hf_token: str, revision: str | None = None
+) -> dict[tuple[str, str], list[float]]:
     """Load reusable observation vectors from any prior dataset generation."""
 
     for config_name in REUSABLE_EMBEDDING_CONFIGS:
@@ -212,6 +235,7 @@ def _existing_embeddings(*, hf_token: str) -> dict[tuple[str, str], list[float]]
                 config_name,
                 ("author_pub_id", "title", "embedding"),
                 hf_token=hf_token,
+                **({"revision": revision} if revision is not None else {}),
             ):
                 author_pub_id = str(row.get("author_pub_id") or "")
                 title = str(row.get("title") or "")
@@ -245,10 +269,14 @@ def add_embeddings(
     *,
     hf_token: str,
     encoder: Any | None = None,
+    prior_revision: str | None = None,
 ) -> tuple[Any, int]:
     """Reuse unchanged source-observation vectors and encode only new titles."""
 
-    existing = _existing_embeddings(hf_token=hf_token)
+    existing = _existing_embeddings(
+        hf_token=hf_token,
+        **({"revision": prior_revision} if prior_revision is not None else {}),
+    )
     keys = [
         (str(row.author_pub_id), str(row.title))
         for row in frame[["author_pub_id", "title"]].itertuples(index=False)
@@ -299,7 +327,9 @@ def add_embeddings(
     return output, len(missing_keys)
 
 
-def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
+def _existing_layouts(
+    *, hf_token: str, revision: str | None = None
+) -> dict[str, dict[str, float]]:
     """Load a complete compatible layout that can be reused without refitting."""
 
     coordinate_fields = {
@@ -310,7 +340,12 @@ def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     required_fields = ("work_id", "layout_version", *sorted(coordinate_fields))
     layouts: dict[str, dict[str, float]] = {}
     try:
-        for row in _published_rows("works", required_fields, hf_token=hf_token):
+        for row in _published_rows(
+            "works",
+            required_fields,
+            hf_token=hf_token,
+            **({"revision": revision} if revision is not None else {}),
+        ):
             if row.get("layout_version") != LAYOUT_VERSION:
                 continue
             work_id = str(row.get("work_id") or "")
@@ -338,7 +373,9 @@ def _existing_layouts(*, hf_token: str) -> dict[str, dict[str, float]]:
     return layouts
 
 
-def _existing_work_state(*, hf_token: str) -> list[dict[str, Any]]:
+def _existing_work_state(
+    *, hf_token: str, revision: str | None = None
+) -> list[dict[str, Any]]:
     """Read the published work order and fields needed to verify layout reuse."""
 
     fields = (
@@ -358,7 +395,14 @@ def _existing_work_state(*, hf_token: str) -> list[dict[str, Any]]:
         "layout_version",
     )
     try:
-        return list(_published_rows("works", fields, hf_token=hf_token))
+        return list(
+            _published_rows(
+                "works",
+                fields,
+                hf_token=hf_token,
+                **({"revision": revision} if revision is not None else {}),
+            )
+        )
     except FileNotFoundError:
         LOGGER.info("No published works are available for order reuse")
         return []
@@ -1003,6 +1047,7 @@ def _upload_map_artifacts(
     hf_token: str,
     generated_at_utc: str,
     dataset_commits: Mapping[str, str],
+    continuity_receipt: Mapping[str, Any] | None = None,
 ) -> str:
     from huggingface_hub import HfApi
 
@@ -1021,6 +1066,8 @@ def _upload_map_artifacts(
             "dataset_commits": dict(dataset_commits),
             "artifact": {},
         }
+        if continuity_receipt is not None:
+            map_manifest["region_continuity"] = dict(continuity_receipt)
         artifact = build_map_artifact(
             works,
             registry,
@@ -1165,9 +1212,14 @@ def publish_snapshot(
     provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     source_cache_dir: Path | None = None,
     primary_home_baseline_path: Path | None = None,
+    prior_revision: str | None = None,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
+    if prior_revision is not None:
+        _require_current_dataset_revision(
+            hf_token=hf_token, prior_revision=prior_revision
+        )
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
         registry,
@@ -1222,6 +1274,7 @@ def publish_snapshot(
         released_frame,
         hf_token=hf_token,
         encoder=encoder,
+        **({"prior_revision": prior_revision} if prior_revision is not None else {}),
     )
     tables = build_dataset_tables(
         enriched,
@@ -1232,11 +1285,17 @@ def publish_snapshot(
         contexts,
         provisional_holds,
     )
-    existing_layouts = _existing_layouts(hf_token=hf_token)
+    existing_layouts = _existing_layouts(
+        hf_token=hf_token,
+        **({"revision": prior_revision} if prior_revision is not None else {}),
+    )
     if existing_layouts:
         reuse = _reusable_work_order(
             tables["works"],
-            _existing_work_state(hf_token=hf_token),
+            _existing_work_state(
+                hf_token=hf_token,
+                **({"revision": prior_revision} if prior_revision is not None else {}),
+            ),
             existing_layouts,
             doi_aliases,
         )
@@ -1248,10 +1307,38 @@ def publish_snapshot(
     )
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
+    continuity_receipt = None
+    if prior_revision is not None:
+        prior_works = list(
+            _published_rows(
+                "works", PRIOR_WORK_FIELDS, hf_token=hf_token, revision=prior_revision
+            )
+        )
+        prior_profiles = list(
+            _published_rows(
+                "profile_publications",
+                PRIOR_OBSERVATION_FIELDS,
+                hf_token=hf_token,
+                revision=prior_revision,
+            )
+        )
+        if not prior_works or not prior_profiles:
+            raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+        tables["works"], continuity_receipt = reconcile_region_decisions(
+            tables["works"],
+            tables["profile_publications"],
+            prior_works,
+            prior_profiles,
+            prior_revision=prior_revision,
+        )
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
 
+    if prior_revision is not None:
+        _require_current_dataset_revision(
+            hf_token=hf_token, prior_revision=prior_revision
+        )
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
         commit = _to_hub_dataset(tables[config_name]).push_to_hub(
@@ -1273,6 +1360,7 @@ def publish_snapshot(
         hf_token=hf_token,
         generated_at_utc=generated_at_utc,
         dataset_commits=dataset_commits,
+        continuity_receipt=continuity_receipt,
     )
     related_mask = (
         tables["works"]["has_included_source_profile"]
@@ -1358,6 +1446,7 @@ def publish_snapshot(
         "layout_version": LAYOUT_VERSION,
         "region_audit_version": REGION_AUDIT_VERSION,
         "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
+        "region_continuity": continuity_receipt,
     }
 
 
@@ -1374,6 +1463,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument(
+        "--prior-revision",
+        required=True,
+        type=require_revision,
+        help="Immutable SHA of the dataset release this upload replaces",
+    )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
     parser.add_argument(
@@ -1440,6 +1535,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "dataset_id": REPO_ID,
         "dataset_configs": list(DATASET_CONFIGS),
         "workflow_url": _workflow_url(),
+        "prior_revision": args.prior_revision,
     }
     try:
         hf_token = os.environ.get(HF_TOKEN_ENV)
@@ -1492,11 +1588,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             provisional_holds_path=args.provisional_holds,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
+            prior_revision=args.prior_revision,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0
     except Exception as error:
         LOGGER.exception("Snapshot publication failed")
+        if isinstance(error, RegionReleaseDiffError):
+            status["region_continuity"] = error.receipt
         status.update(
             {
                 "status": "failure",

@@ -58,6 +58,11 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install trusted publisher
         run: python -m pip install './source[publisher]'
+      - name: Pin previous hosted release
+        id: baseline
+        run: |
+          python -m map_of_research.release_baseline \
+            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
         run: |
           python source/scripts/validate_primary_homes.py \
@@ -98,6 +103,7 @@ jobs:
           map-publish-snapshot \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
@@ -126,7 +132,13 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if python -c 'import json; assert json.load(open("status/last-upload.json"))["status"] == "success"'; then
+            cp status/last-upload.json status/last-successful-upload.json
+          fi
           git add status/last-upload.json
+          if [ -f status/last-successful-upload.json ]; then
+            git add status/last-successful-upload.json
+          fi
           if git diff --cached --quiet; then
             exit 0
           fi

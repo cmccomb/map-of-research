@@ -286,7 +286,33 @@ map-validate-snapshot \
 `map-publish-snapshot` reads `data/curated/scholar-exclusions.json` by default;
 pass `--reviewed-exclusions` when the trusted source checkout is in another
 directory, as in the upload workflow. The upload receipt records the manifest
-checksum and number of matched exclusions.
+checksum and number of matched exclusions. The CLI also requires
+`--prior-revision` with the immutable 40-character Hugging Face commit SHA of
+the release it replaces. The hosted workflow pins this from the previous
+successful upload receipt before it begins publishing. A local publication
+must supply the same prior release SHA explicitly.
+
+The publisher reruns the weak-region audit on the full corpus. It carries a
+prior region decision forward only when a work has the same eligible Scholar
+observations, raw source records, effective publication metadata, and quality
+version. Exact reviewed exclusions and source or metadata changes use the
+current result. A release stops before upload if an existing visible
+observation disappears without an exact review, or a previously excluded
+observation appears without independent DOI or native-record verification.
+The upload and map receipts record the baseline SHA and any carried decisions
+or reviewed changes. Prior map visibility controls release changes; it does
+not establish that a publication is valid.
+
+The publisher writes dataset configs sequentially and checks that the hosted
+repository still equals the pinned prior SHA immediately before the first
+write. If an upload fails after any config was written, the next run stops at
+that check. An operator must inspect the partial Hub commit history and
+restore the hosted dataset to the exact pinned prior revision before retrying
+the same snapshot. Never use the partial upload head as the next baseline;
+`last-successful-upload.json` retains the last completed artifact revision.
+The workflow copies the previously successful receipt into that file before
+its first upload attempt, so an initial failed attempt cannot erase the
+baseline needed for a safe retry.
 
 The hosted upload workflow runs `map-validate-math-coverage` before requesting
 its Hugging Face token. For every included Mathematical Sciences person with a
