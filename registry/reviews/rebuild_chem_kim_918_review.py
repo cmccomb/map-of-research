@@ -1682,6 +1682,53 @@ FOLLOWUP_KNU_DUPLICATE_AUTHORS = {
     826: "G Rooh, HJ Kim, S Kim",
 }
 
+# The original Nature pages expand the exact COSINE bylines to Hongjoo Kim
+# at Kyungpook Physics. These two captured titles are unique, not inferred
+# from adjacent initials-only collaboration papers.
+COSINE_FULLNAME_PRIMARY = {
+    325: (
+        "Author Correction: An experiment to search for dark-matter "
+        "interactions using sodium iodide detectors",
+        2019,
+        "Hongjoo Kim",
+        "10.1038/s41586-019-0890-3",
+        "https://www.nature.com/articles/s41586-019-0890-3",
+        "Nature exact correction and complete COSINE-100 collaborator list",
+        "Nature identifies this exact correction to the 2018 detector paper "
+        "as a 2019 Author Correction, volume 566 page E2, and expands "
+        "the collaboration's H. J. Kim to Hongjoo Kim of Kyungpook "
+        "National University. The captured venue's page 1 is inaccurate; "
+        "this is also a correction rather than a new research article.",
+    ),
+    366: (
+        "Upgrading the COSINE-100 experiment for enhanced sensitivity "
+        "to low-mass dark matter detection",
+        2025,
+        "Hongjoo Kim",
+        "10.1038/s42005-025-02067-4",
+        "https://www.nature.com/articles/s42005-025-02067-4",
+        "Communications Physics original full byline and affiliation",
+        "The exact Communications Physics 8:135 article prints Hongjoo "
+        "Kim in its full author list and assigns him to the Department "
+        "of Physics, Kyungpook National University, not CMU Chemistry.",
+    ),
+}
+OTHER_PRIMARY.update(COSINE_FULLNAME_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        325: "bC4aq-4AAAAJ:mgoTDWlsYNUC",
+        366: "bC4aq-4AAAAJ:8JTMrWI6FdcC",
+    }
+)
+COSINE_FULLNAME_VENUES = {
+    325: "Nature 566, 1, 2019",
+    366: "Communications Physics 8 (1), 135, 2025",
+}
+COSINE_FULLNAME_AUTHORS = {
+    325: "G Adhikari",
+    366: "D Lee, JY Cho, CH Ha, E Jeon, H Kim, J Kim, K Kim, SH Kim, SK Kim, ...",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3292,6 +3339,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["authors"] != FOLLOWUP_KNU_DUPLICATE_AUTHORS[index]
                 )
                 or (
+                    index in COSINE_FULLNAME_VENUES
+                    and row["venue"] != COSINE_FULLNAME_VENUES[index]
+                )
+                or (
+                    index in COSINE_FULLNAME_AUTHORS
+                    and row["authors"] != COSINE_FULLNAME_AUTHORS[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3643,17 +3698,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 119,
+        "proposed_other_person_primary_work": 121,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 318,
+        "unresolved_attribution_hold": 316,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 466 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 468 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
