@@ -115,7 +115,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
-    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 3
+    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -184,6 +184,33 @@ def test_natalie_mcguier_only_malformed_second_review_is_excluded() -> None:
     }
     assert actual == {f"{scholar_id}:IjCSPb-OGe4C": "corrupted_duplicate"}
     assert (scholar_id, f"{scholar_id}:u-x6o8ySG0sC") not in exclusions
+
+
+def test_walkington_nsf_awards_are_excluded_on_each_captured_profile() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    awards = (
+        (
+            "CGSMDGwAAAAJ:1yQoGdGgb4wC",
+            (
+                "JV3ryMgAAAAJ:vDZJ-YLwNdEC",
+                "0Nj-v7sAAAAJ:_Re3VWB3Y0AC",
+                "neJ3NIUAAAAJ:rmuvC79q63oC",
+            ),
+            "0635983",
+        ),
+        (
+            "CGSMDGwAAAAJ:JQOojiI6XY0C",
+            ("JV3ryMgAAAAJ:AHdEip9mkN0C", "tWQsy4UAAAAJ:p2g8aNsByqUC"),
+            "2342349",
+        ),
+    )
+    for walkington_citation, peer_citations, award_number in awards:
+        for citation in (walkington_citation, *peer_citations):
+            scholar_id = citation.split(":", 1)[0]
+            decision = exclusions[(scholar_id, citation)]
+            assert decision.reason_code == "nonpublication"
+            assert award_number in decision.reason
+    assert ("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC") not in exclusions
 
 
 def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:
