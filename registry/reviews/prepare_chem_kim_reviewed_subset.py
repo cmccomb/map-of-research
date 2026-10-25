@@ -117,7 +117,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
         if row["status"] == "already_excluded" or row["status"].startswith("proposed_")
     )
     held = sorted(publication_ids - set(released) - set(excluded))
-    if (len(released), len(excluded), len(held)) != (44, 394, 480):
+    if (len(released), len(excluded), len(held)) != (54, 394, 470):
         raise ValueError("Kim review partition changed")
     manifest_excluded = {
         author_pub_id
@@ -139,7 +139,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
                 "expected_source_rows": SOURCE_ROWS,
                 "cache_sha256": cache_sha256,
                 "reason": (
-                    "Proposal only: release 44 exact publisher/CMU-verified works; "
+                    "Proposal only: release 54 exact publisher/CMU-verified works; "
                     "keep Kim off public maps until the full history is reviewed."
                 ),
                 "reviewed_at": REVIEWED_AT,

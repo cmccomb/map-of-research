@@ -24,27 +24,28 @@ hold gate would put unresolved attributions into graph works and edges.
 ## Conservative exact-ID proposal
 
 The [prepared release fragment](proposals/scholar-profile-releases.kim-proposal.json)
-and [44 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
+and [54 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
 partition every captured ID as follows:
 
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
-| Confirmed source-backed works for a possible reviewed subset | 44 | `34542d11e53cfc03bf1fc3caf66fd54f6f1d6211bf7233fc21c03dc1b291c682` |
+| Confirmed source-backed works for a possible reviewed subset | 54 | `0848000caa8b4ea03c2e843be551d7eb8f039ded78ba559651398fdb792014d8` |
 | Exact false-attribution, duplicate, or nonpublication exclusions | 394 | `e074bac97acf1dd2c4aa762e71f1551b148172125d13561330b9bf6b13e14a8e` |
-| Held from any map release | 480 | `4f5939ec0010ae7c7eb4a95f226ce2c815ff27e02bc1a03a897a8c9d1448d2df` |
+| Held from any map release | 470 | `1b295a5f1f4dc4fda75cd8df329779e8e72896acba19755d42ee19567a846759` |
 
-The 480 holds comprise 410 unresolved observations plus 70 exact CMU-linked
+The 470 holds comprise 410 unresolved observations plus 60 exact CMU-linked
 ORCID title/year **person signals** that still lack enough output-level review
-for this conservative subset. The 44 confirmed entries have exact Scholar
+for this conservative subset. The 54 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 [group bibliography](2026-10-25-chem-kim-lab-bibliography-follow-up.md), and
 [five latest](2026-10-25-chem-kim-five-primary-retentions.md) review notes,
 plus the [first eight CMU group matches](2026-10-25-chem-kim-group-eight-primary-retentions.md)
 and [ten further group/publisher matches](2026-10-25-chem-kim-group-ten-primary-retentions.md),
-followed by [eleven AIP/PLOS/BKCS matches](2026-10-25-chem-kim-group-eleven-primary-retentions.md).
+followed by [eleven AIP/PLOS/BKCS matches](2026-10-25-chem-kim-group-eleven-primary-retentions.md)
+and [ten recent CMU faculty/publisher matches](2026-10-25-chem-kim-faculty-ten-primary-retentions.md).
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
-own DOI/page evidence and remain distinct works. The 44 confirmed rows do
+own DOI/page evidence and remain distinct works. The 54 confirmed rows do
 **not** represent Kim's whole publication history.
 The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
 keeps three more initials-only records held despite suggestive related sources.
@@ -68,8 +69,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 44 confirmed IDs, and the 394 exact exclusion IDs to
-these lists; it must prevent all 480 held rows from creating works,
+all 918 exact IDs, the 54 confirmed IDs, and the 394 exact exclusion IDs to
+these lists; it must prevent all 470 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the

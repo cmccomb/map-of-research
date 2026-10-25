@@ -921,6 +921,88 @@ CMU_PRIMARY = {
         "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
         "CMU group list and J. Chem. Phys. 125:011101 agree",
     ),
+    # Recent CMU faculty bibliography entries checked against DOI registrations.
+    7: (
+        "Gold Nanoclusters Promote Electrocatalytic Water Oxidation at the "
+        "Nanocluster/CoSe2 Interface",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Fjacs.6b12529",
+        "ACS full Hyung J. Kim byline, CMU Chemistry affiliation and "
+        "his ORCID; CMU faculty list and JACS 139:1077-1080 agree",
+    ),
+    52: (
+        "Molecular dynamics study of water flow across multiple layers "
+        "of pristine, oxidized, and mixed regions of graphene oxide",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Facsnano.6b08538",
+        "ACS full Hyung J. Kim byline, CMU Chemistry affiliation and "
+        "his ORCID; CMU faculty list and ACS Nano 11:2187-2193 agree",
+    ),
+    64: (
+        "Influence of Water on the Chemistry and Structure of the "
+        "Metal–Organic Framework Cu3(btc)2",
+        2016,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcc.6b02906",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and J. Phys. Chem. C 120:17323-17333 agree",
+    ),
+    71: (
+        "Shuttling single metal atom into and out of a metal nanoparticle",
+        2017,
+        "https://api.crossref.org/works/10.1038%2Fs41467-017-00939-0",
+        "Nature-deposited full Hyung J. Kim byline and ORCID; CMU faculty "
+        "list links the exact DOI and Nat. Commun. 8:848",
+    ),
+    149: (
+        "Computer simulation study of graphene oxide supercapacitors: "
+        "charge screening mechanism",
+        2016,
+        "https://api.crossref.org/works/10.1021%2Facs.jpclett.6b00202",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and J. Phys. Chem. Lett. 7:1180-1186 agree",
+    ),
+    158: (
+        "A mechanistic insight into the organocatalytic properties of "
+        "imidazolium-based ionic liquids and a positive co-solvent effect "
+        "on cellulose modification reactions in an ionic liquid",
+        2017,
+        "https://api.crossref.org/works/10.1039%2Fc6ra28659c",
+        "RSC full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and RSC Adv. 7:9423-9430 agree",
+    ),
+    236: (
+        "CO2 capture in ionic liquid 1-alkyl-3-methylimidazolium acetate: "
+        "a concerted mechanism without carbene",
+        2017,
+        "https://api.crossref.org/works/10.1039%2Fc6cp06556b",
+        "RSC full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and PCCP 19:1361-1368 agree",
+    ),
+    261: (
+        "Molecular dynamics study of water flow across multiple layers "
+        "of pristine, oxidized, and mixed regions of graphene oxide: "
+        "effect of graphene oxide layer-to-layer distance",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcc.7b06063",
+        "ACS full Hyung J. Kim byline, CMU Chemistry affiliation and "
+        "his ORCID; CMU faculty list and J. Phys. Chem. C 121:23659-23668 agree",
+    ),
+    375: (
+        "Theoretical study of interactions of a Li+(CF3SO2)2N− ion pair "
+        "with CR3(OCR2CR2)nOCR3 (R = H or F)",
+        2016,
+        "https://api.crossref.org/works/10.1039%2Fc6cp00139d",
+        "RSC full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and PCCP 18:6754-6762 agree",
+    ),
+    383: (
+        "Spectroscopic and MD study of dynamic and structural "
+        "heterogeneities in ionic liquids",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcb.6b10678",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU faculty list and J. Phys. Chem. B 121:1100-1107 agree",
+    ),
 }
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
@@ -959,6 +1041,16 @@ CMU_PRIMARY_ID_GUARDS = {
     517: "bC4aq-4AAAAJ:_Qo2XoVZTnwC",
     596: "bC4aq-4AAAAJ:k_IJM867U9cC",
     691: "bC4aq-4AAAAJ:maZDTaKrznsC",
+    7: "bC4aq-4AAAAJ:b0M2c_1WBrUC",
+    52: "bC4aq-4AAAAJ:dshw04ExmUIC",
+    64: "bC4aq-4AAAAJ:P5F9QuxV20EC",
+    71: "bC4aq-4AAAAJ:eflP2zaiRacC",
+    149: "bC4aq-4AAAAJ:SeFeTyx0c_EC",
+    158: "bC4aq-4AAAAJ:bFI3QPDXJZMC",
+    236: "bC4aq-4AAAAJ:D03iK_w7-QYC",
+    261: "bC4aq-4AAAAJ:B3FOqHPlNUQC",
+    375: "bC4aq-4AAAAJ:EUQCXRtRnyEC",
+    383: "bC4aq-4AAAAJ:nb7KW1ujOQ8C",
 }
 
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
@@ -991,6 +1083,16 @@ CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     517: "10.1063/1.1948375",
     596: "10.5012/bkcs.2012.33.11.3601",
     691: "10.1063/1.2217941",
+    7: "10.1021/jacs.6b12529",
+    52: "10.1021/acsnano.6b08538",
+    64: "10.1021/acs.jpcc.6b02906",
+    71: "10.1038/s41467-017-00939-0",
+    149: "10.1021/acs.jpclett.6b00202",
+    158: "10.1039/c6ra28659c",
+    236: "10.1039/c6cp06556b",
+    261: "10.1021/acs.jpcc.7b06063",
+    375: "10.1039/c6cp00139d",
+    383: "10.1021/acs.jpcb.6b10678",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -1444,9 +1546,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 70,
+        "cmu_orcid_exact_title_year_retained": 60,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 44,
+        "cmu_primary_work_retained": 54,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
