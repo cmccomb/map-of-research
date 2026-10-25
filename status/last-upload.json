@@ -1,11 +1,11 @@
 {
-  "artifact_commit": "96fdc335fa0061be30a14698d2a89b9d21454b35",
+  "artifact_commit": "8867eea4731dc5587a52bf5259860043f39646d2",
   "authorships": 48369,
   "dataset_commits": {
-    "authorships": "00eb285d80c064c02fa3d654f43790e410f7df23",
-    "people": "77c7d4ec67fc0da5d6746e7198209b18e684d82e",
-    "profile_publications": "b86ec56e714f3111ab4506c23ce588d98e872034",
-    "works": "8761c2e7c462aa46988be5be4f9ac707eeaec759"
+    "authorships": "28cdeac7b42f3d163d85422a98a44edd5337e200",
+    "people": "96fdc335fa0061be30a14698d2a89b9d21454b35",
+    "profile_publications": "e1976f637f90af94f1957e19bc078318476a4aa0",
+    "works": "8f19a01c12d20173729be0a6e0234a8cba0ee221"
   },
   "dataset_configs": [
     "people",
@@ -17,7 +17,7 @@
   "detail_keywords": 120,
   "error_type": null,
   "excluded_works": 2090,
-  "finished_at_utc": "2026-10-25T03:26:35.553820+00:00",
+  "finished_at_utc": "2026-10-25T03:51:19.767115+00:00",
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
@@ -28,21 +28,23 @@
     "math_people": 65,
     "unresolved_scholar_id_people": 36
   },
-  "new_embedding_count": 288,
+  "new_embedding_count": 0,
   "people": 2001,
   "profile_count": 297,
   "profile_publications": 50234,
   "region_audit_version": "low-information-semantic-region-v2",
+  "reviewed_doi_aliases": 1,
+  "reviewed_doi_aliases_sha256": "a658837977dbf6d9c93ca7caca0a7407c9f47eaf4de5de66dde8f009ce5a9dff",
   "reviewed_exclusions": 878,
-  "reviewed_exclusions_sha256": "3faa2cc8a6cd1e4303fb8a1f31e88281f7254ebd8bcd802ee5b4cab6eefd9d0f",
+  "reviewed_exclusions_sha256": "d3cb97167c8e16110b0b14ab74fc88b9912a0d596a662e87359f0525177cb0aa",
   "schema_version": 2,
   "scholar_coverage": {
     "complete_profiles": 10,
     "legacy_profiles": 287
   },
-  "started_at_utc": "2026-10-25T03:18:06.275548+00:00",
+  "started_at_utc": "2026-10-25T03:46:59.034685+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40157581304",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40159350794",
   "works": 46243
 }
