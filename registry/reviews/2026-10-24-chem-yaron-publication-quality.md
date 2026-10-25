@@ -42,6 +42,7 @@ papers, including [ORCCA Tutor](https://pubs.acs.org/toc/jceda8/99/2) and
 [Making Lemonade out of Lemons](https://pubs.acs.org/toc/jceda8/97/9).
 
 The 36 exact graph exclusions are staged in the producer manifest. The normalized
-242-row cache preserves every ID and retains all 13 cited parent rows. The raw
+242-row cache preserves every ID and retains the 10 distinct parent records
+cited by 13 duplicate decisions. The raw
 capture remains staged outside this PR; release it only with its source receipt,
 then verify that excluded observations contribute no graph authorship.
