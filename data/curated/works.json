@@ -284,6 +284,52 @@
         "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402"
       ],
       "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-clivenewstead-26f51712",
+      "doi": "10.48550/arXiv.2103.06155",
+      "title": "Algebraic models of dependent type theory",
+      "authors": "Clive Newstead",
+      "year": 2018,
+      "venue": "Carnegie Mellon University Ph.D. thesis",
+      "citation": "Ph.D. thesis, Department of Mathematical Sciences, Carnegie Mellon University (2018); arXiv deposit 2021",
+      "source_url": "https://www.math.cmu.edu/~cnewstea/thesis-clive-newstead.pdf",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~cnewstea/research/",
+        "https://www.math.cmu.edu/~cnewstea/thesis-clive-newstead.pdf",
+        "https://arxiv.org/abs/2103.06155"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1201/b11644-12",
+      "title": "3D Delaunay Mesh Generation",
+      "authors": "Klaus Gärtner, Hang Si, Alexander Rand, and Noel Walkington",
+      "year": 2012,
+      "venue": "Combinatorial Scientific Computing",
+      "citation": "Combinatorial Scientific Computing, 299–319 (2012)",
+      "source_url": "https://doi.org/10.1201/b11644-12",
+      "source_verification_urls": [
+        "https://api.crossref.org/works/10.1201/b11644-12",
+        "https://api.pageplace.de/preview/DT0400.9781439827369_A23983033/preview-9781439827369_A23983033.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1090/qam/1598",
+      "title": "Models of bacteria swimming in a nematic liquid crystal",
+      "authors": "Mochong Duan and Noel J. Walkington",
+      "year": 2021,
+      "venue": "Quarterly of Applied Mathematics",
+      "citation": "Quarterly of Applied Mathematics 79(4), 695–715 (2021)",
+      "source_url": "https://doi.org/10.1090/qam/1598",
+      "source_verification_urls": [
+        "https://doi.org/10.1090/qam/1598",
+        "https://api.crossref.org/works/10.1090/qam/1598"
+      ],
+      "source_verified_at": "2026-10-24"
     }
   ]
 }
