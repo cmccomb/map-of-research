@@ -2196,6 +2196,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Exact 31-row Math review applied within the f8 composite release",
     )
     parser.add_argument(
+        "--chem-region-review-manifest",
+        type=Path,
+        default=DEFAULT_CHEM_REGION_REVIEW_PATH,
+        help="Exact 19-row Chemistry review retained in ordinary snapshots",
+    )
+    parser.add_argument(
         "--require-bio-release",
         action="store_true",
         help="Fail closed unless the frozen complete Bio snapshot passes its gate",
@@ -2365,6 +2371,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             ),
             curated_works_path=args.scholar_curated_works,
             math_region_review_path=args.math_region_review_manifest,
+            chem_region_review_path=args.chem_region_review_manifest,
         )
         status.pop("atomic_release_intent", None)
         status.update(

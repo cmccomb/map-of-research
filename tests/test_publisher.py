@@ -2789,6 +2789,56 @@ def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
     assert args.max_age_days == publisher.DEFAULT_MAX_AGE_DAYS
 
 
+@pytest.mark.parametrize("explicit_manifest", [True, False])
+def test_main_uses_trusted_chemistry_manifest_from_workspace_root(
+    monkeypatch, tmp_path, explicit_manifest: bool
+) -> None:
+    monkeypatch.chdir(tmp_path)
+    manifest = Path("source/data/curated/scholar-chem-region-review.json")
+    manifest.parent.mkdir(parents=True)
+    manifest.write_text("reviewed")
+    monkeypatch.setenv(publisher.HF_TOKEN_ENV, "token")
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (pandas.DataFrame(), {}),
+    )
+    monkeypatch.setattr(publisher, "validate_math_coverage", lambda *args, **kwargs: {})
+    monkeypatch.setattr(publisher, "validate_coverage", lambda **kwargs: {})
+    seen = []
+
+    def publish(*args, **kwargs):
+        chem_review = kwargs["chem_region_review_path"]
+        seen.append(chem_review)
+        if not chem_review.is_file():
+            raise FileNotFoundError(f"Chemistry review is missing: {chem_review}")
+        return {"works": 4}
+
+    monkeypatch.setattr(publisher, "publish_snapshot", publish)
+    cli = [
+        "--snapshot",
+        "snapshot/snapshots/cmu-engineering-publications.parquet",
+        "--manifest",
+        "snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json",
+        "--prior-revision",
+        "a" * 40,
+        "--status-file",
+        str(tmp_path / "status.json"),
+    ]
+    if explicit_manifest:
+        cli.extend(["--chem-region-review-manifest", str(manifest)])
+    result = publisher.main(cli)
+    assert result == (0 if explicit_manifest else 1)
+    assert seen == [
+        manifest if explicit_manifest else publisher.DEFAULT_CHEM_REGION_REVIEW_PATH
+    ]
+    status = json.loads((tmp_path / "status.json").read_text())
+    assert status["status"] == ("success" if explicit_manifest else "failure")
+    if not explicit_manifest:
+        assert status["error_type"] == "FileNotFoundError"
+
+
 @pytest.mark.parametrize(
     ("with_token", "region_failure", "expected"),
     [(True, False, 0), (True, True, 1), (False, False, 1)],

@@ -340,6 +340,7 @@ def main() -> int:
                 ),
                 curated_works_path=curated / "works.json",
                 math_region_review_path=curated / "scholar-region-review.json",
+                chem_region_review_path=curated / "scholar-chem-region-review.json",
             )
         except AtomicReleaseReconciliationRequired as error:
             if not isinstance(error.__cause__, FirstHubWriteIntercepted):

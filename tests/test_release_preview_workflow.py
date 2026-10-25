@@ -171,13 +171,23 @@ def test_receipt_lineage_requires_committed_success_file(tmp_path):
         )
 
 
-def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
+def _run_preview(
+    monkeypatch,
+    tmp_path,
+    *,
+    fail_before_write: bool,
+    chem_manifest_present: bool = True,
+):
     preview = _load_script()
     producer = tmp_path / "producer"
     snapshot = tmp_path / "snapshot"
     receipt_checkout = tmp_path / "receipt"
     output = tmp_path / "output"
     producer.mkdir()
+    curated = producer / "data/curated"
+    curated.mkdir(parents=True)
+    if chem_manifest_present:
+        (curated / "scholar-chem-region-review.json").write_text("reviewed")
     (snapshot / "snapshots").mkdir(parents=True)
     (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
@@ -235,7 +245,11 @@ def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
     class FakeReconciliation(RuntimeError):
         pass
 
-    def fake_publish(*_args, atomic_intent_sink, **_kwargs):
+    def fake_publish(*_args, atomic_intent_sink, **kwargs):
+        chem_manifest = kwargs["chem_region_review_path"]
+        assert chem_manifest == curated / "scholar-chem-region-review.json"
+        if not chem_manifest.is_file():
+            raise FileNotFoundError(f"Missing Chemistry review: {chem_manifest}")
         if fail_before_write:
             raise ValueError("review gate failed")
         staging = tmp_path / "publisher-stage"
@@ -306,6 +320,17 @@ def test_no_write_preview_fails_job_when_release_gate_fails(monkeypatch, tmp_pat
     assert code == 1
     assert receipt["status"] == "failed_before_hub_write"
     assert receipt["error"] == "review gate failed"
+    assert receipt["blocked_hub_write_calls"] == 0
+    assert receipt["hub_writes_completed"] == 0
+
+
+def test_no_write_preview_requires_producer_chemistry_review(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, chem_manifest_present=False
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert "Missing Chemistry review:" in receipt["error"]
     assert receipt["blocked_hub_write_calls"] == 0
     assert receipt["hub_writes_completed"] == 0
 
