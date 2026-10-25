@@ -10312,6 +10312,38 @@
       "reason": "Saved Scholar row 164 calls this a 2020 workshop and lists Avigad with other intended speakers as authors. The university event notice identifies the 3-5 April 2020 Princeton conference, names Avigad as a speaker, and says it was cancelled/postponed due to COVID-19.",
       "evidence_url": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences?displayMode=month&month=04&year=2020",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:svHGgEBqPSUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Elsevier publisher notice pages 1-2 deposits no authors; adjacent page 3 is a separate Berry-Matyjaszewski editorial",
+      "evidence_url": "https://api.crossref.org/works/10.1016/S0079-6700(02)00114-4",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:kmyamZXjmjoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Mark Cesa authored column; Scholar issue contents misattribute it to Matyjaszewski",
+      "evidence_url": "https://www.degruyterbrill.com/journal/key/ci/39/4/html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "ctYLFRIAAAAJ",
+      "author_pub_id": "ctYLFRIAAAAJ:SeFeTyx0c_EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Scholar fields splice unrelated names; legitimate Washburn paper is separately mapped",
+      "evidence_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=852630",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:5VhQba04mz8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated Living row duplicates fully titled 1995 article in the same complete Scholar capture",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ma00126a041",
+      "verified_at": "2026-10-25"
     }
   ]
 }

@@ -314,7 +314,9 @@ def build_dataset_tables(
         attribution_evidence_urls.append(
             attribution.evidence_url
             if attribution
-            else provisional_hold.evidence_url
+            else (
+                provisional_hold.primary_evidence_url or provisional_hold.evidence_url
+            )
             if provisional_hold
             else ""
         )

@@ -123,7 +123,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         == "nonpublication"
     )
     assert ("VzAGH3wAAAAJ", "VzAGH3wAAAAJ:iH-uZ7U-co4C") not in exclusions
-    assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
+    assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 142
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "28yZqbcAAAAJ" for key in exclusions) == 3
@@ -142,7 +142,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
     assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 6
-    assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
+    assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "7ICaR4EAAAAJ" for key in exclusions) == 14

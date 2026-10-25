@@ -36,13 +36,14 @@ def _manifest(path: Path, entries: object, version: int = 1) -> Path:
 
 def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
     contexts = load_contexts(DEFAULT_CONTEXTS_PATH)
-    assert len(contexts) == 12
-    assert {key[0] for key in contexts} == {"8iLLOQgAAAAJ"}
+    assert len(contexts) == 14
+    assert {key[0] for key in contexts} == {"8iLLOQgAAAAJ", "ILambBMAAAAJ"}
     assert Counter(item.publication_type for item in contexts.values()) == {
         "patent": 9,
         "edited_book": 1,
         "withdrawn_article": 1,
         "panel_transcript": 1,
+        "conference_presentation": 2,
     }
     patent_numbers = {
         item.document_id

@@ -802,6 +802,34 @@ def test_reviewed_short_title_exception_is_exact_to_gordon_chapter() -> None:
         assert not keywords._reviewed_short_title_alias_matches(malformed, aliases)
 
 
+def test_exact_agu_presentations_survive_a_weak_region_with_reviewed_context() -> None:
+    source = keywords.REVIEWED_CHEM_AGU_PRESENTATIONS
+    rows = [
+        {
+            "doi": "",
+            "title": title,
+            "year": year,
+            "authors": "N. M. Donahue",
+            "venue": "AGU Fall Meeting",
+            "source_urls": ["https://scholar.google.com/citations?user=ILambBMAAAAJ"],
+            "publication_type": "conference_presentation",
+            "author_pub_ids": [author_pub_id],
+            "context_evidence_urls": [evidence_url],
+        }
+        for author_pub_id, (title, year, evidence_url) in source.items()
+    ]
+    reviewed = keywords._documented_work_mask(pandas.DataFrame(rows))
+    assert reviewed.tolist() == [True, True]
+    changed = rows[0] | {"context_evidence_urls": ["https://example.com/other"]}
+    assert not bool(keywords._documented_work_mask(pandas.DataFrame([changed])).iloc[0])
+    assert not keywords._reviewed_chem_presentation_matches(
+        pandas.Series(rows[0] | {"publication_type": "publication"})
+    )
+    assert not keywords._reviewed_chem_presentation_matches(
+        pandas.Series(rows[0] | {"author_pub_ids": "incorrect"})
+    )
+
+
 def test_reviewed_cell_short_title_requires_complete_pii_doi_pubmed_evidence() -> None:
     scholar_id = "28yZqbcAAAAJ"
     author_pub_id = f"{scholar_id}:UeHWp8X0CEIC"

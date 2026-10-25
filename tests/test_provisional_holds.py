@@ -133,10 +133,13 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
         (350, "0e1jwkkAAAAJ:hsZV8lGYWTMC"),
         (355, "0e1jwkkAAAAJ:yqoGN6RLRZoC"),
         (356, "0e1jwkkAAAAJ:yFnVuubrUp4C"),
+        (282, "0e1jwkkAAAAJ:Y5dfb0dijaUC"),
+        (278, "0e1jwkkAAAAJ:u-coK7KVo8oC"),
+        (247, "0e1jwkkAAAAJ:MhiOAD_qIWkC"),
     ]
     assert hold_ids_sha256(
         {item.author_pub_id for item in profile.held_observations}
-    ) == ("92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0")
+    ) == ("b48946eaecc8fdf09d32c892cf4862f69eda4109983d6839dc7cae95c82c9180")
 
 
 def test_checked_in_sullivan_hold_is_source_bound_and_separate_from_exclusions():
@@ -297,6 +300,7 @@ def test_loader_rejects_bad_profile_field(tmp_path, field, value):
         ("author_pub_id", f"{SCHOLAR}:", "invalid identity"),
         ("reason", " ", "invalid identity"),
         ("evidence_url", "http://example.test", "dated HTTPS"),
+        ("primary_evidence_url", "http://example.test", "primary evidence"),
         ("reviewed_at", "tomorrow", "dated HTTPS"),
     ],
 )
@@ -571,6 +575,18 @@ def test_dataset_retains_raw_hold_but_omits_its_map_contribution(tmp_path):
     assert len(raw) == 2
     assert raw.loc[HELD, "review_attribution_status"] == "held"
     assert raw.loc[HELD, "review_attribution_evidence_url"] == URL
+    primary = "https://example.org/primary-record"
+    primary_tables = build_dataset_tables(
+        pandas.DataFrame(rows),
+        registry,
+        provisional_holds={(SCHOLAR, HELD): _hold(primary_evidence_url=primary)},
+    )
+    assert (
+        primary_tables["profile_publications"]
+        .set_index("author_pub_id")
+        .loc[HELD, "review_attribution_evidence_url"]
+        == primary
+    )
     assert not bool(raw.loc[HELD, "map_eligible"])
     assert "attribution_provisional_hold" in raw.loc[HELD, "map_exclusion_reasons"]
     assert tables["authorships"]["person_id"].tolist() == ["person-two"]

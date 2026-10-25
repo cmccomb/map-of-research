@@ -28,6 +28,24 @@ from .bio_release_gate import (
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
 )
+from .chem_carryforward import (
+    AUTHORSHIP_FIELDS as CHEM_CARRYFORWARD_AUTHORSHIP_FIELDS,
+)
+from .chem_carryforward import (
+    PRIOR_REVISION as CHEM_CARRYFORWARD_PARENT,
+)
+from .chem_carryforward import (
+    PROFILE_FIELDS as CHEM_CARRYFORWARD_PROFILE_FIELDS,
+)
+from .chem_carryforward import (
+    SOURCE_SHA256 as CHEM_CARRYFORWARD_SOURCE_SHA256,
+)
+from .chem_carryforward import (
+    WORK_FIELDS as CHEM_CARRYFORWARD_WORK_FIELDS,
+)
+from .chem_carryforward import (
+    validate_chem_carryforward,
+)
 from .composite_region import (
     HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
@@ -1725,10 +1743,15 @@ def publish_snapshot(
         tables["works"], doi_aliases=doi_aliases
     )
     comparison_revision = region_comparison_revision or prior_revision
+    chem_carryforward = (
+        comparison_revision == CHEM_CARRYFORWARD_PARENT
+        and manifest["snapshot_sha256"] == CHEM_CARRYFORWARD_SOURCE_SHA256
+    )
     prior_work_fields = tuple(
         dict.fromkeys(
             (
                 *PRIOR_WORK_FIELDS,
+                *(CHEM_CARRYFORWARD_WORK_FIELDS if chem_carryforward else ()),
                 *(
                     ("map_exclusion_reasons",)
                     if (
@@ -1758,7 +1781,18 @@ def publish_snapshot(
     prior_profiles = list(
         _published_rows(
             "profile_publications",
-            PRIOR_OBSERVATION_FIELDS,
+            tuple(
+                dict.fromkeys(
+                    (
+                        *PRIOR_OBSERVATION_FIELDS,
+                        *(
+                            CHEM_CARRYFORWARD_PROFILE_FIELDS
+                            if chem_carryforward
+                            else ()
+                        ),
+                    )
+                )
+            ),
             hf_token=hf_token,
             revision=comparison_revision,
         )
@@ -1876,6 +1910,29 @@ def publish_snapshot(
         historical_works=historical_works,
         approved_poster_loss=poster_loss_approval,
     )
+    if chem_carryforward:  # pragma: no cover - exact dcb/W3 release
+        chem_receipt = validate_chem_carryforward(
+            prior_revision=comparison_revision,
+            source_commit=source_commit or "",
+            source_sha256=str(manifest["snapshot_sha256"]),
+            source_rows=frame.to_dict("records"),
+            prior_profiles=prior_profiles,
+            prior_works=prior_works,
+            prior_authorships=_published_rows(
+                "authorships",
+                CHEM_CARRYFORWARD_AUTHORSHIP_FIELDS,
+                hf_token=hf_token,
+                revision=comparison_revision,
+            ),
+            current_profiles=tables["profile_publications"].to_dict("records"),
+            current_works=tables["works"].to_dict("records"),
+            current_authorships=tables["authorships"].to_dict("records"),
+            exclusions_path=exclusions_path,
+            holds_path=provisional_holds_path,
+            contexts_path=contexts_path,
+            releases_path=profile_releases_path,
+        )
+        continuity_receipt["chemistry_review_carryforward"] = chem_receipt
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
     )

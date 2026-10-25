@@ -403,6 +403,46 @@ def _reviewed_short_title_alias_matches(
     return False
 
 
+REVIEWED_CHEM_AGU_PRESENTATIONS = {
+    "ILambBMAAAAJ:eflP2zaiRacC": (
+        "Old OA Never Die, They Just Fade Away",
+        2009,
+        "https://www.unols.org/sites/default/files/AGU_FM09_Scientific_Program.pdf",
+    ),
+    "ILambBMAAAAJ:r_AWSJRzSzQC": (
+        "The Lunatic is in the Grass",
+        2012,
+        "https://higherlogicdownload.s3.amazonaws.com/AGU/9e00c8ae-3b13-4947-9680-d0e3ffee4e16/UploadedImages/Atmospheric_Sciences_Newsletters/ASnewsletterVol6No4.pdf",
+    ),
+}
+
+
+def _reviewed_chem_presentation_matches(row: Any) -> bool:
+    """Keep only the two source-backed AGU presentations reviewed for Chemistry."""
+
+    if row.get("publication_type") != "conference_presentation":
+        return False
+    author_pub_ids = row.get("author_pub_ids")
+    evidence_urls = row.get("context_evidence_urls")
+    if not isinstance(author_pub_ids, (list, tuple)) or not isinstance(
+        evidence_urls, (list, tuple)
+    ):
+        return False
+    for author_pub_id, (
+        title,
+        year,
+        evidence_url,
+    ) in REVIEWED_CHEM_AGU_PRESENTATIONS.items():
+        if (
+            author_pub_ids == [author_pub_id]
+            and row.get("title") == title
+            and row.get("year") == year
+            and evidence_urls == [evidence_url]
+        ):
+            return True
+    return False
+
+
 def _documented_work_mask(
     region: Any,
     *,
@@ -438,6 +478,13 @@ def _documented_work_mask(
             axis=1,
             aliases=short_title_aliases,
         )
+    has_reviewed_chem_presentation = pandas.Series(False, index=region.index)
+    if {"publication_type", "author_pub_ids", "context_evidence_urls"}.issubset(
+        region.columns
+    ):
+        has_reviewed_chem_presentation = region.apply(
+            _reviewed_chem_presentation_matches, axis=1
+        )
     word_count = titles.str.split().str.len()
     return (
         (
@@ -448,7 +495,9 @@ def _documented_work_mask(
             & titles.str.len().ge(SHORT_TITLE_LENGTH)
             | has_reviewed_short_title
         )
-        & region["year"].notna()
+        | has_reviewed_chem_presentation
+    ) & (
+        region["year"].notna()
         & region["authors"].fillna("").astype(str).str.strip().ne("")
         & region["venue"].fillna("").astype(str).str.strip().ne("")
         & region["source_urls"].apply(_has_source_url)
