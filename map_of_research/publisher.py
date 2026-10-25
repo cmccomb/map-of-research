@@ -33,6 +33,7 @@ from .composite_region import (
 from .composite_region import (
     MATH_REVIEW_MANIFEST_SHA256,
     SULLIVAN_PERSON_ID,
+    TOPIC_FIELDS,
     freeze_composite_presentation,
     load_composite_region_plan,
     load_reviewed_sullivan_embeddings,
@@ -67,6 +68,11 @@ from .doi_aliases import (
     validate_doi_aliases,
 )
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .held_topic_freeze import (
+    held_only_continuity_candidate,
+    preserve_held_only_topics,
+    validate_held_only_stage,
+)
 from .hub_card import build_updated_dataset_card
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
@@ -1269,6 +1275,8 @@ def _publish_atomic_release(
     composite_plan: Any | None = None,
     prior_works: Sequence[Mapping[str, Any]] | None = None,
     prior_artifact: Mapping[str, Any] | None = None,
+    held_topic_parent_artifact: Mapping[str, Any] | None = None,
+    held_topic_parent_map_sha256: str | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1331,6 +1339,13 @@ def _publish_atomic_release(
         )
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
+        held_topic_receipt = None
+        if held_topic_parent_artifact is not None:
+            if not held_topic_parent_map_sha256:
+                raise ValueError("Held-only release lacks pinned parent map digest")
+            held_topic_receipt = validate_held_only_stage(
+                artifact, held_topic_parent_artifact
+            )
         composite_map_receipt = None
         composite_works_receipt = None
         composite_nonwork_receipt = None
@@ -1453,6 +1468,11 @@ def _publish_atomic_release(
             gate["composite_works_parity"] = composite_works_receipt
             gate["composite_nonwork_parity"] = composite_nonwork_receipt
             gate["bernhard_repair_manifest_sha256"] = composite_plan.manifest_sha256
+        if held_topic_receipt is not None:
+            gate["held_only_topic_parity"] = {
+                **held_topic_receipt,
+                "parent_map_sha256": held_topic_parent_map_sha256,
+            }
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1671,6 +1691,7 @@ def publish_snapshot(
                     else ()
                 ),
                 *(COMPOSITE_PRESENTATION_FIELDS if composite_plan is not None else ()),
+                *(TOPIC_FIELDS if held_observation_ids else ()),
                 *(COMPOSITE_VARIANT_FIELDS if composite_plan is not None else ()),
                 *(
                     ("map_region_documented_override",)
@@ -1813,6 +1834,42 @@ def publish_snapshot(
         )
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
+    held_topic_parent_artifact = None
+    held_topic_parent_map_sha256 = None
+    if (
+        held_observation_ids
+        and composite_plan is None
+        and not bio_source_changed
+        and manifest["snapshot_sha256"] != BIO_SOURCE_SHA256
+        and comparison_revision == prior_revision
+        and held_only_continuity_candidate(continuity_receipt, prior_revision)
+    ):
+        from huggingface_hub import hf_hub_download
+
+        parent_map_path = Path(
+            hf_hub_download(
+                REPO_ID,
+                f"maps/{MAP_ARTIFACT_NAME}",
+                repo_type="dataset",
+                revision=prior_revision,
+                token=hf_token or None,
+            )
+        )
+        held_topic_parent_artifact = load_json(parent_map_path)
+        held_topic_parent_map_sha256 = sha256_file(parent_map_path)
+        tables["works"] = preserve_held_only_topics(
+            tables["works"],
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=tables["profile_publications"],
+            prior_artifact=held_topic_parent_artifact,
+            candidate_artifact=build_map_artifact(
+                tables["works"],
+                registry,
+                generated_at_utc=str(manifest["created_at_utc"]),
+            ),
+            held_observation_ids=held_observation_ids,
+        )
     if comparison_revision != prior_revision:
         require_historical_region_decisions(prior_works, tables["works"])
         repair_related_mask = (
@@ -1869,6 +1926,8 @@ def publish_snapshot(
         composite_plan=composite_plan,
         prior_works=prior_works if composite_plan is not None else None,
         prior_artifact=prior_artifact,
+        held_topic_parent_artifact=held_topic_parent_artifact,
+        held_topic_parent_map_sha256=held_topic_parent_map_sha256,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (

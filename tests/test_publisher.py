@@ -2068,8 +2068,9 @@ def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) 
         )
 
 
+@pytest.mark.parametrize("released_gain", [False, True])
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
-    monkeypatch, tmp_path
+    monkeypatch, tmp_path, released_gain
 ) -> None:
     monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(
@@ -2086,11 +2087,59 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
             else [{"author_pub_id": "curated:independent"}]
         ),
     )
+    receipt = {
+        "prior_revision": "a" * 40,
+        "prior_visible_observations": 0,
+        "current_visible_observations": int(released_gain),
+        "new_source_gains": int(released_gain),
+        **dict.fromkeys(
+            (
+                "reviewed_losses",
+                "verified_gains",
+                "reviewed_composite_observation_gains",
+                "reviewed_composite_observation_losses",
+                "approved_sullivan_held_losses",
+                "approved_sullivan_rekey_losses",
+                "approved_sullivan_additional_losses",
+                "approved_sullivan_binding_changes",
+                "unapproved_mapped_binding_changes",
+                "unexplained_losses",
+                "unexplained_gains",
+            ),
+            [],
+        ),
+    }
     monkeypatch.setattr(
         publisher,
         "reconcile_region_decisions",
-        lambda works, *args, **kwargs: (works, {"prior_revision": "a" * 40}),
+        lambda works, *args, **kwargs: (works, receipt),
     )
+    parent_map = tmp_path / "parent-publications.json"
+    parent_map.write_text('{"point_count":1,"points":[],"keywords":[]}')
+    freeze_calls = []
+
+    def pinned_parent(*args, **kwargs):
+        if released_gain:
+            pytest.fail("Mixed release must not load a held-only parent map")
+        assert kwargs["revision"] == "a" * 40
+        return str(parent_map)
+
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=pinned_parent),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"point_count": 1, "points": []},
+    )
+
+    def freeze(works, **kwargs):
+        freeze_calls.append(kwargs)
+        return works
+
+    monkeypatch.setattr(publisher, "preserve_held_only_topics", freeze)
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     snapshot = tmp_path / "snapshots" / "source.parquet"
     cache_dir = tmp_path / "data" / "authors"
@@ -2227,7 +2276,10 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         publisher, "exclude_low_information_regions", lambda works: works
     )
 
+    atomic_calls = []
+
     def upload_dataset(*args, **kwargs):
+        atomic_calls.append(kwargs)
         releases_path.write_text("changed after decision load")
         return "commit", {"mode": "single_parent_commit"}
 
@@ -2256,6 +2308,96 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
     assert result["profile_count"] == 0
     assert result["reviewed_metadata_corrections"] == 0
     assert result["profile_release_manifest_sha256"] == original_release_sha
+    assert bool(freeze_calls) is not released_gain
+    assert bool(atomic_calls[0]["held_topic_parent_artifact"]) is not released_gain
+    if not released_gain:
+        assert atomic_calls[0]["held_topic_parent_map_sha256"] == (
+            hashlib.sha256(parent_map.read_bytes()).hexdigest()
+        )
+
+
+@pytest.mark.parametrize("parent_digest", [None, "a" * 64])
+def test_atomic_stage_records_held_only_parent_map_parity(
+    monkeypatch, tmp_path, parent_digest
+) -> None:
+    class FakeDataset:
+        def to_parquet(self, path):
+            Path(path).write_bytes(b"staged parquet")
+
+    parent_map = {
+        "generated_at_utc": "2026-10-24T00:00:00+00:00",
+        "point_count": 0,
+        "keyword_count": 0,
+        "points": [],
+        "keywords": [],
+    }
+    candidate_map = {
+        **parent_map,
+        "generated_at_utc": "2026-10-25T00:00:00+00:00",
+    }
+
+    def write_map(*args, maps_dir, **kwargs):
+        maps_dir.mkdir(parents=True)
+        artifact_path = maps_dir / "publications.json"
+        manifest_path = maps_dir / "manifest.json"
+        artifact_path.write_text(json.dumps(candidate_map))
+        manifest_path.write_text("{}")
+        return artifact_path, manifest_path, candidate_map
+
+    readme = tmp_path / "README.md"
+    readme.write_text("Parent card")
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=lambda *args, **kwargs: str(readme)),
+    )
+    monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
+    monkeypatch.setattr(publisher, "_to_hub_dataset", lambda frame: FakeDataset())
+    monkeypatch.setattr(publisher, "_write_map_artifacts", write_map)
+    monkeypatch.setattr(
+        publisher, "build_updated_dataset_card", lambda *args: "Staged card"
+    )
+    gates = []
+
+    def commit(*args, prewrite_gate, **kwargs):
+        gates.append(prewrite_gate)
+        return "commit", {"mode": "single_parent_commit"}
+
+    monkeypatch.setattr(publisher, "commit_atomic_release", commit)
+    kwargs = dict(
+        source_frame=pandas.DataFrame([{"source_type": "scholar"}]),
+        source_manifest={"snapshot_sha256": "not-the-Bio-snapshot"},
+        hf_token="token",
+        prior_revision="a" * 40,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={
+            "prior_revision": "a" * 40,
+            "unexplained_losses": [],
+            "unexplained_gains": [],
+        },
+        repair_manifest_path=tmp_path / "repair.json",
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=[],
+        atomic_intent_sink=lambda intent: None,
+        held_topic_parent_artifact=parent_map,
+        held_topic_parent_map_sha256=parent_digest,
+    )
+    tables = {
+        name: pandas.DataFrame([{"value": 1}]) for name in publisher.DATASET_CONFIGS
+    }
+    if parent_digest is None:
+        with pytest.raises(ValueError, match="lacks pinned parent map digest"):
+            publisher._publish_atomic_release(tables, registry(), **kwargs)
+        assert not gates
+    else:
+        publisher._publish_atomic_release(tables, registry(), **kwargs)
+        assert gates[0]["held_only_topic_parity"] == {
+            "status": "pass",
+            "point_count": 0,
+            "keyword_count": 0,
+            "parent_map_sha256": parent_digest,
+        }
 
 
 def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
