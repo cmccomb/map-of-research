@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "review_state": "source_review_proposals_not_applied",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "au_cLfoAAAAJ",
+  "raw_rows_preserved": true,
+  "proposed_exclusions": [
+    {
+      "capture_row": 101,
+      "author_pub_id": "au_cLfoAAAAJ:UHK10RUVsp4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Page-header text was prepended to the title of the same Physical Review Fluids article retained at row 34.",
+      "evidence_url": "https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.024608"
+    },
+    {
+      "capture_row": 109,
+      "author_pub_id": "au_cLfoAAAAJ:k_IJM867U9cC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The named neutrino review is by Bednarek, Burgio, and Montaruli; Kahniashvili is absent from its author list.",
+      "evidence_url": "https://arxiv.org/abs/astro-ph/0404534"
+    },
+    {
+      "capture_row": 129,
+      "author_pub_id": "au_cLfoAAAAJ:sSrBHYA8nusC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The journal special-issue header was prepended to the title of the same paper retained at row 40.",
+      "evidence_url": "https://arxiv.org/abs/1807.05479"
+    },
+    {
+      "capture_row": 130,
+      "author_pub_id": "au_cLfoAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "nonpublication",
+      "reason": "The source is a collaborative research proposal, not a published research work.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/tmp/machine/NSF2015CDSE.pdf"
+    },
+    {
+      "capture_row": 133,
+      "author_pub_id": "au_cLfoAAAAJ:HDshCWvjkbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited DOI metadata credits D. B. Cline alone for Overview of Dark Matter 2004; Kahniashvili is absent.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.newar.2005.01.001"
+    }
+  ],
+  "reviewed_retained": [
+    {
+      "capture_row": 88,
+      "author_pub_id": "au_cLfoAAAAJ:bFI3QPDXJZMC",
+      "reason": "The Moriond proceedings names Kahniashvili; Scholar misspells her surname.",
+      "evidence_url": "https://s3.cern.ch/inspire-prod-files-f/fc955c550ca14e56a7758da9a54dcd5d"
+    },
+    {
+      "capture_row": 134,
+      "author_pub_id": "au_cLfoAAAAJ:hFOr9nPyWt4C",
+      "reason": "The 2001 preprint is a genuine version of the 2002 journal paper at row 64. Existing producer precedent retains genuine preprint and journal versions separately, despite the incomplete Scholar author metadata.",
+      "evidence_url": "https://arxiv.org/abs/astro-ph/0110426"
+    }
+  ],
+  "unresolved_candidates": [
+    {
+      "capture_row": 131,
+      "author_pub_id": "au_cLfoAAAAJ:M3NEmzRMIkIC",
+      "concern": "More Material to the row 8 paper; identify the exact hosted object and publication type before a producer decision."
+    },
+    {
+      "capture_row": 132,
+      "author_pub_id": "au_cLfoAAAAJ:e5wmG9Sq2KIC",
+      "concern": "Supplementary material to the row 8 paper; identify the exact hosted object and publication type before a producer decision."
+    }
+  ],
+  "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
+}

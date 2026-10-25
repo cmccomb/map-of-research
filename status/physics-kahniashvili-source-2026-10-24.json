@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "batch": "physics-kahniashvili-source-slice",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "target_base_commit": "db4ff1b6c73a4dd09e6b537e86b3602004a8e513",
+  "producer_main_checked_commit": "e33cf0065d724139f6ecf06ae3103cc237f148bb",
+  "carved_from_draft_pr": 80,
+  "department_id": "physics",
+  "profile_count": 1,
+  "raw_observation_count": 134,
+  "already_merged_reviewed_exclusion_count": 0,
+  "new_proposed_exclusion_count": 5,
+  "expected_eligible_observation_count_after_producer_merge": 129,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "ingestion_ready": false,
+  "ingestion_dependency": "Review and merge the paired producer proposal for five exact exclusions before ingesting this source profile. Two supplemental-material rows remain open source-review candidates. The genuine preprint and proceedings records remain in the raw cache.",
+  "source_review_path": "status/physics-kahniashvili-source-review-2026-10-24.json",
+  "profiles": [
+    {
+      "person_id": "person-tinakahniashvili-732df667",
+      "display_name": "Tina Kahniashvili",
+      "scholar_profile_name": "Tina Kahniashvili",
+      "scholar_id": "au_cLfoAAAAJ",
+      "publication_count": 134,
+      "coverage": "complete_visible_profile",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/kahniashvili.html",
+      "scholar_id_source_url": "https://scholar.google.com/citations?user=au_cLfoAAAAJ&hl=en&oi=ao",
+      "scholar_identity_basis": "Chris McComb explicitly confirmed the exact profile URL on 2026-10-24. Scholar lists Ilia State University; the CMU page establishes the Physics faculty role but does not link the Scholar ID.",
+      "cache_path": "data/authors/au_cLfoAAAAJ.json",
+      "source_json_path": "data/captures/physics-tina-kahniashvili-2026-10-24.json",
+      "source_html_path": "data/captures/physics-tina-kahniashvili-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json"
+    }
+  ],
+  "batch_provenance_note": "The per-profile receipt retains the 92-second spacing from the Di Matteo capture and identifies original batch commit cca3ea8. Di Matteo's own source was merged through PR #109. This carve does not relabel the original two-profile capture as a solo run."
+}
