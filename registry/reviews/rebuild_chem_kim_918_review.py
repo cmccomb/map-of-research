@@ -579,6 +579,101 @@ CMU_ORCID_DOI_HOLD = {
 
 # CMU-linked bibliographies or a publisher article identify these older works.
 CMU_PRIMARY = {
+    132: (
+        "Molecular mechanism for the activation of Au25 (SCH2CH2Ph) 18 "
+        "nanoclusters by imidazolium-based ionic liquids for catalysis",
+        2016,
+        "https://api.crossref.org/works/10.1016%2Fj.jcat.2016.01.011",
+        "Elsevier publisher-deposited full Hyung J. Kim byline; CMU faculty "
+        "list identifies the same Journal of Catalysis 337:72-79 work",
+    ),
+    287: (
+        "Excited-state charge transfer dynamics of p-dimethylaminobenzonitrile "
+        "in quadrupolar solvents",
+        2002,
+        "https://api.crossref.org/works/10.1021%2Fjp012991o",
+        "ACS publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; CMU Kim Group lists J. Phys. Chem. A 106:2322-2327",
+    ),
+    298: (
+        "A continuum theory of solvation in quadrupolar solvents. I. Formulation",
+        2003,
+        "https://api.crossref.org/works/10.1063%2F1.1605376",
+        "AIP publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; CMU Kim Group lists JCP 119:8606-8625",
+    ),
+    306: (
+        "A continuum theory of solvation in quadrupolar solvents. II. "
+        "Solvation free energetics, dynamics, and solvatochromism",
+        2003,
+        "https://api.crossref.org/works/10.1063%2F1.1605377",
+        "AIP publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; CMU Kim Group lists JCP 119:8626-8635",
+    ),
+    321: (
+        "A continuum reaction field theory of polarizable, nondipolar, "
+        "quadrupolar solvents: Ab Initio study of equilibrium solvation in benzene",
+        2001,
+        "https://api.crossref.org/works/10.1023%2Fa%3A1012715929287",
+        "Springer publisher-deposited full Hyung J. Kim byline; CMU Kim Group "
+        "lists J. Solution Chem. 30:849-860 and the same article",
+    ),
+    363: (
+        "Dielectric relaxation of the ionic liquid 1-ethyl-3-methylimidazolium "
+        "ethyl sulfate: microwave and far-IR properties",
+        2017,
+        "https://pubs.acs.org/doi/10.1021/acs.jpcb.7b00160",
+        "Original ACS article names Hyung J. Kim, CMU Chemistry, matching "
+        "ORCID and 121:4845-4852; CMU faculty list has a final-page typo (4851)",
+    ),
+    418: (
+        "Vibrational spectroscopy of imidazolium-based ionic liquids: A "
+        "combined MD/DFT study",
+        2019,
+        "https://www.sciencedirect.com/science/article/pii/S016773221931339X",
+        "Original Elsevier article distinctly names Hyunjin Kim and Hyung J. "
+        "Kim; CMU faculty list links exact DOI, with a middle-author order variant",
+    ),
+    421: (
+        "Heterogeneous dynamics of ionic liquids: A four-point time "
+        "correlation function approach",
+        2018,
+        "https://api.crossref.org/works/10.1063%2F1.5016501",
+        "AIP publisher-deposited full Hyung J. Kim byline, CMU Chemistry "
+        "affiliation and matching ORCID; CMU faculty DOI agrees",
+    ),
+    488: (
+        "Dicationic-type quaternary ammonium salts as candidates of "
+        "desiccants for an air-conditioning system",
+        2021,
+        "https://pubs.acs.org/doi/10.1021/acssuschemeng.1c04971",
+        "Original ACS article names Hyung J. Kim, CMU Chemistry, matching "
+        "ORCID and 9:14502-14514; CMU faculty DOI agrees",
+    ),
+    527: (
+        "Excitation-energy dependence of solvation dynamics in "
+        "room-temperature ionic liquids",
+        2016,
+        "https://api.crossref.org/works/10.1063%2F1.4955211",
+        "AIP publisher-deposited byline distinguishes Daekeon Kim from "
+        "Hyung J. Kim, who has CMU Chemistry affiliation; CMU faculty DOI agrees",
+    ),
+    591: (
+        "CS2 capture in the ionic liquid 1-alkyl-3-methylimidazolium acetate: "
+        "reaction mechanism and free energetics",
+        2018,
+        "https://api.crossref.org/works/10.1039%2FC8CP01724G",
+        "RSC publisher-deposited full Hyung J. Kim byline, CMU Chemistry "
+        "affiliation and matching ORCID; CMU faculty DOI agrees",
+    ),
+    671: (
+        "Theoretical study of alkylsulfonic acids: force-field development "
+        "and molecular dynamics simulations",
+        2018,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcb.8b07736",
+        "ACS publisher-deposited full Hyung J. Kim byline, CMU Chemistry "
+        "affiliation and matching ORCID; CMU faculty DOI agrees",
+    ),
     9: (
         "Nanoporous carbon supercapacitors in an ionic liquid: "
         "a computer simulation study",
@@ -1007,6 +1102,18 @@ CMU_PRIMARY = {
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
+    132: "bC4aq-4AAAAJ:pqnbT2bcN3wC",
+    287: "bC4aq-4AAAAJ:4TOpqqG69KYC",
+    298: "bC4aq-4AAAAJ:qUcmZB5y_30C",
+    306: "bC4aq-4AAAAJ:hC7cP41nSMkC",
+    321: "bC4aq-4AAAAJ:Wp0gIr-vW9MC",
+    363: "bC4aq-4AAAAJ:WbkHhVStYXYC",
+    418: "bC4aq-4AAAAJ:mlAyqtXpCwEC",
+    421: "bC4aq-4AAAAJ:9vf0nzSNQJEC",
+    488: "bC4aq-4AAAAJ:3BvdIg-l-ZAC",
+    527: "bC4aq-4AAAAJ:KxtntwgDAa4C",
+    591: "bC4aq-4AAAAJ:UHK10RUVsp4C",
+    671: "bC4aq-4AAAAJ:JQOojiI6XY0C",
     9: "bC4aq-4AAAAJ:d1gkVwhDpl0C",
     23: "bC4aq-4AAAAJ:Tyk-4Ss8FVUC",
     41: "bC4aq-4AAAAJ:kNdYIx-mwKoC",
@@ -1054,6 +1161,18 @@ CMU_PRIMARY_ID_GUARDS = {
 }
 
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
+    132: "10.1016/j.jcat.2016.01.011",
+    287: "10.1021/jp012991o",
+    298: "10.1063/1.1605376",
+    306: "10.1063/1.1605377",
+    321: "10.1023/a:1012715929287",
+    363: "10.1021/acs.jpcb.7b00160",
+    418: "10.1016/j.molliq.2019.111282",
+    421: "10.1063/1.5016501",
+    488: "10.1021/acssuschemeng.1c04971",
+    527: "10.1063/1.4955211",
+    591: "10.1039/c8cp01724g",
+    671: "10.1021/acs.jpcb.8b07736",
     9: "10.1021/nn901916m",
     23: "10.1021/nn900195b",
     41: "10.1021/jp203458b",
@@ -1546,9 +1665,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 60,
+        "cmu_orcid_exact_title_year_retained": 48,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 54,
+        "cmu_primary_work_retained": 66,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
