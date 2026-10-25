@@ -316,6 +316,38 @@
       "basis": "The EPA's original presentation abstract names the full title and all nine CMU authors. The EPA workshop agenda dates the meeting to October 26-28, 2005. Scholar instead imports the page heading as the title and omits the year and venue. This remains a conference abstract, not a journal article.",
       "evidence_url": "https://archive.epa.gov/ncer/publications/web/html/lowry.html",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "L0nXO5EAAAAJ",
+      "author_pub_id": "L0nXO5EAAAAJ:hFOr9nPyWt4C",
+      "expected": {
+        "title": "Poster number 136 submitted by Avleen Chawla",
+        "year": 2022,
+        "venue": ""
+      },
+      "corrected": {
+        "title": "The catalytic activity of H1 circRNA",
+        "venue": "Rustbelt RNA Meeting 2022"
+      },
+      "basis": "The meeting organizer's 2022 poster index identifies Avleen Chawla's poster 136, its substantive title, and Anna M. Kietrys as PI. Scholar imported the poster-page heading as the title. The saved Scholar byline is retained because the poster's individual abstract page is unavailable.",
+      "evidence_url": "https://rustbeltrna.org/2022/posters.php?orderby=pi",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "L0nXO5EAAAAJ",
+      "author_pub_id": "L0nXO5EAAAAJ:-f6ydRqryjwC",
+      "expected": {
+        "title": "Poster number 121 submitted by Kaizheng Liu",
+        "year": 2022,
+        "venue": ""
+      },
+      "corrected": {
+        "title": "Reversible Acylating Reagents to Dictate RNA's Fate",
+        "venue": "Rustbelt RNA Meeting 2022"
+      },
+      "basis": "The meeting organizer's 2022 poster index identifies Kaizheng Liu's poster 121, its substantive title, and Anna M. Kietrys as PI. Scholar imported the poster-page heading as the title. The saved Scholar byline is retained.",
+      "evidence_url": "https://rustbeltrna.org/2022/posters.php?orderby=pi",
+      "verified_at": "2026-10-25"
     }
   ]
 }
