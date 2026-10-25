@@ -35,9 +35,10 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 777
+    assert len(exclusions) == 779
     assert sum(key[0] == "JbSQsXAAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "8AqWr_4AAAAJ" for key in exclusions) == 20
+    assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
     assert all(
@@ -237,6 +238,24 @@ def test_walkington_corrupted_scholar_row_uses_verified_ams_record(tmp_path) -> 
     assert len(tables["profile_publications"]) == 2
     assert len(tables["authorships"]) == 1
     assert tables["authorships"].iloc[0]["source_type"] == "curated_verified"
+
+
+def test_yasser_review_excludes_only_two_sourced_duplicates() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    scholar_id = "_VnEj3gAAAAJ"
+    assert {
+        author_pub_id for sid, author_pub_id in exclusions if sid == scholar_id
+    } == {
+        f"{scholar_id}:R3hNpaxXUhUC",
+        f"{scholar_id}:qUcmZB5y_30C",
+    }
+    for suffix in ("2osOgNQ5qMEC", "zYLM7Y9cAGgC", "RHpTSmoSYBkC"):
+        assert (scholar_id, f"{scholar_id}:{suffix}") not in exclusions
+    assert all(
+        exclusions[(scholar_id, f"{scholar_id}:{suffix}")].reason_code
+        == "corrupted_duplicate"
+        for suffix in ("R3hNpaxXUhUC", "qUcmZB5y_30C")
+    )
 
 
 @pytest.mark.parametrize(
