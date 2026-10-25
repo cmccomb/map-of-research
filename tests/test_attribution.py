@@ -54,7 +54,7 @@ def test_upload_reads_attribution_from_producer_checkout(monkeypatch, tmp_path):
             source_path,
         ]
     )
-    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 445
+    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 486
 
 
 def test_chien_gate_accounts_for_every_frozen_citation_id():

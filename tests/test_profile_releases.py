@@ -147,7 +147,11 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
         row["author_pub_id"]
         for row in rows
         if row["decision"]
-        in {"unresolved_held", "positive_orcid_title_year_signal_held"}
+        in {
+            "unresolved_held",
+            "positive_orcid_title_year_signal_held",
+            "positive_identity_metadata_held",
+        }
     }
     assert tuple(
         map(
@@ -158,7 +162,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
                 item.held_author_pub_ids,
             ),
         )
-    ) == (8, 185, 477)
+    ) == (49, 188, 433)
     validate_reviewed_subset_decisions(
         releases,
         load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),

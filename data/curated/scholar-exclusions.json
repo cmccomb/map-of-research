@@ -10984,6 +10984,30 @@
       "reason": "The original Cancer Discovery record names Subhasree Das of H3 Biomedicine in this exact article, not CMU chemist Subha R. Das; this second Scholar row repeats malformed citation text.",
       "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/29991605/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:LWqeokA2EBkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Biotechnology Notes article identifies first author Soumyajit Das of Chandigarh University, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/39416919/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:_FM0Bhl9EiAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited DOI metadata identifies second author Souvik Das for this exact Rhizoctonia solani study, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.crossref.org/works/10.3126%2Fijls.v8i2.10226",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:vVJNg6_NJEsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original bioRxiv preprint has a Das, S. author and links the published PLOS Pathogens article, which expands that author to Snigdhadev Das of the National Centre for Biological Sciences, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.biorxiv.org/details/biorxiv/10.1101/2020.12.16.422529",
+      "verified_at": "2026-10-25"
     }
   ]
 }
