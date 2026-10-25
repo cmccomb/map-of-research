@@ -41,15 +41,18 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install collector
         run: python -m pip install './source[collector]'
-      - name: Synchronize the canonical registry
+      - name: Synchronize the canonical registry and curated works
         id: registry
         run: |
           mkdir -p snapshot/registry
           cp source/registry/departments.csv snapshot/registry/departments.csv
+          cp source/registry/schools.csv snapshot/registry/schools.csv
           cp source/registry/memberships.csv snapshot/registry/memberships.csv
           cp source/registry/people.csv snapshot/registry/people.csv
+          mkdir -p snapshot/data/curated
+          cp source/data/curated/works.json snapshot/data/curated/works.json
           rm -f snapshot/registry/faculty.csv snapshot/registry/maps.csv
-          if [ -z "$(git -C snapshot status --porcelain -- registry)" ]; then
+          if [ -z "$(git -C snapshot status --porcelain -- registry data/curated)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -77,27 +80,33 @@ jobs:
           echo "exit_code=$collector_exit_code" >> "$GITHUB_OUTPUT"
           echo "refreshed_profiles=$refreshed_profiles" >> "$GITHUB_OUTPUT"
       - name: Build and validate changed snapshot
-        if: ${{ steps.collect.outputs.refreshed_profiles != '0' || steps.registry.outputs.changed == 'true' }}
+        id: snapshot
+        if: ${{ steps.collect.outputs.exit_code == '0' && (steps.collect.outputs.refreshed_profiles != '0' || steps.registry.outputs.changed == 'true') }}
         working-directory: snapshot
         run: |
+          map-validate-scholar-coverage \
+            --baseline ../source/registry/legacy-scholar-cache-baseline.json
           map-build-snapshot
           map-validate-snapshot \
             --snapshot snapshots/cmu-engineering-publications.parquet \
             --manifest snapshots/cmu-engineering-publications.parquet.manifest.json
-      - name: Record cache, state, and receipts
+      - name: Record validated snapshot or failure receipt
         if: ${{ always() }}
         working-directory: snapshot
+        env:
+          COLLECTOR_EXIT_CODE: ${{ steps.collect.outputs.exit_code }}
+          SNAPSHOT_OUTCOME: ${{ steps.snapshot.outcome }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add registry data status snapshots
+          python ../source/scripts/stage_collector_result.py \
+            --collector-exit-code "$COLLECTOR_EXIT_CODE" \
+            --snapshot-outcome "$SNAPSHOT_OUTCOME"
           if git diff --cached --quiet; then
             exit 0
           fi
           git commit -m "Record bounded Scholar collection [skip ci]"
           git push origin HEAD:automation/map-snapshot
-      - name: Surface collection failure after preserving state
-        if: ${{ steps.collect.outputs.exit_code != '0' }}
-        env:
-          COLLECTOR_EXIT_CODE: ${{ steps.collect.outputs.exit_code }}
-        run: exit "$COLLECTOR_EXIT_CODE"
+      - name: Surface collection or snapshot validation failure
+        if: ${{ always() && (steps.collect.outputs.exit_code != '0' || steps.snapshot.outcome == 'failure') }}
+        run: exit 1
