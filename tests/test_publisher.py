@@ -1511,9 +1511,10 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
     assert result["reviewed_metadata_corrections"] == 1
-    assert result["reviewed_metadata_corrections_sha256"] == hashlib.sha256(
-        corrections_path.read_bytes()
-    ).hexdigest()
+    assert (
+        result["reviewed_metadata_corrections_sha256"]
+        == hashlib.sha256(corrections_path.read_bytes()).hexdigest()
+    )
     assert result["mapped_works"] == 1
     assert result["excluded_works"] == 1
     assert result["keywords"] == 1

@@ -149,11 +149,7 @@ def apply_corrections(
             sorted(correction.corrected)
         )
         output.at[index, "metadata_correction_basis"] = correction.basis
-        output.at[index, "metadata_correction_evidence_url"] = (
-            correction.evidence_url
-        )
-        output.at[index, "metadata_correction_verified_at"] = (
-            correction.verified_at
-        )
+        output.at[index, "metadata_correction_evidence_url"] = correction.evidence_url
+        output.at[index, "metadata_correction_verified_at"] = correction.verified_at
         applied += 1
     return output, applied
