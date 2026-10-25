@@ -1566,12 +1566,13 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
 
 @pytest.mark.parametrize("reuse_order", [False, True])
 @pytest.mark.parametrize(
-    ("pinned", "missing_prior", "region_override", "atomic"),
+    ("pinned", "missing_prior", "region_override", "math_review"),
     [
-        (False, False, False, True),
+        (False, False, False, False),
+        (True, False, False, False),
+        (True, True, False, False),
+        (True, False, True, False),
         (True, False, False, True),
-        (True, True, False, True),
-        (True, False, True, True),
     ],
 )
 def test_publish_snapshot_orchestrates_all_dataset_configs(
@@ -1581,9 +1582,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     pinned,
     missing_prior,
     region_override,
-    atomic,
+    math_review,
 ) -> None:
-    bio_intent = pinned and atomic and not region_override and not missing_prior
+    bio_intent = (
+        pinned and not math_review and not region_override and not missing_prior
+    )
     snapshot_digest = {
         "value": publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
     }
@@ -1701,6 +1704,33 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     producer_tip_checks = []
     published_revisions = []
     published_fields = []
+    presentation_calls = []
+    if math_review:
+        monkeypatch.setenv("MAP_SOURCE_COMMIT", publisher.MATH_REGION_SOURCE_COMMIT)
+        monkeypatch.setattr(publisher, "load_region_review", lambda *a, **k: ())
+        monkeypatch.setattr(
+            publisher,
+            "_published_map_artifact",
+            lambda **kwargs: (
+                presentation_calls.append(("artifact", kwargs))
+                or {"points": [{"work_id": "old"}]}
+            ),
+        )
+
+        def preserve_math(works, prior_works, artifact, decisions, *args, **kwargs):
+            presentation_calls.append(("preserve", prior_works, kwargs))
+            return works, {"unchanged_shared_points": 1}
+
+        monkeypatch.setattr(
+            publisher, "preserve_reviewed_math_presentation", preserve_math
+        )
+        monkeypatch.setattr(
+            publisher,
+            "require_reviewed_math_work_table_parity",
+            lambda works, prior, common: (
+                presentation_calls.append(("table", list(prior), common)) or 1
+            ),
+        )
     if region_override:
         monkeypatch.setattr(
             publisher,
@@ -1775,11 +1805,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     publish_options = {
         "hf_token": "token",
         "corrections_path": corrections_path,
-        "prior_revision": "a" * 40 if pinned else None,
+        "prior_revision": (publisher.MATH_REGION_BASELINE if math_review else "a" * 40)
+        if pinned
+        else None,
         "atomic_intent_sink": lambda intent: None,
         "require_bio_release": bio_intent,
     }
     publish_options["atomic_release"] = True
+    if math_review:
+        publish_options["math_region_review"] = True
     if region_override:
         publish_options["region_comparison_revision"] = "b" * 40
     if not pinned:
@@ -1799,7 +1833,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
                 **publish_options,
             )
         return
-    if atomic and region_override:
+    if region_override:
         with pytest.raises(ValueError, match="Ordinary atomic upload"):
             publisher.publish_snapshot(
                 tmp_path / "snapshot.parquet",
@@ -1830,12 +1864,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         tmp_path / "manifest.json",
         **publish_options,
     )
-    assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
+    expected_revision = publisher.MATH_REGION_BASELINE if math_review else "a" * 40
+    assert baseline_checks == ([expected_revision] * 2 if pinned else [])
     assert published_revisions == (
         [
-            "b" * 40 if region_override else "a" * 40,
-            "b" * 40 if region_override else "a" * 40,
-            "a" * 40,
+            "b" * 40 if region_override else expected_revision,
+            "b" * 40 if region_override else expected_revision,
+            expected_revision,
+            *([expected_revision] if math_review else []),
         ]
         if pinned
         else []
@@ -1843,6 +1879,20 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     if pinned:
         assert published_fields[0][0] == "works"
         assert ("map_exclusion_reasons" in published_fields[0][1]) == region_override
+        assert ("tsne_x" in published_fields[0][1]) == math_review
+    if math_review:
+        assert presentation_calls == [
+            (
+                "artifact",
+                {"hf_token": "token", "revision": publisher.MATH_REGION_BASELINE},
+            ),
+            (
+                "preserve",
+                [{"work_id": "old"}],
+                {"generated_at_utc": "2026-07-17T12:00:00+00:00"},
+            ),
+            ("table", [{"work_id": "old"}], {"old"}),
+        ]
     if region_override:
         assert len(historical_decision_checks) == 1
         assert historical_decision_checks[0][0] == [{"work_id": "old"}]
@@ -1883,15 +1933,25 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert result["region_continuity"] == (
         {
-            "prior_revision": "b" * 40 if region_override else "a" * 40,
+            "prior_revision": "b" * 40 if region_override else expected_revision,
             "stable_works": 1,
             **({"current_hub_revision": "a" * 40} if region_override else {}),
+            **(
+                {
+                    "math_presentation_parity": {
+                        "unchanged_shared_points": 1,
+                        "shared_work_rows": 1,
+                    }
+                }
+                if math_review
+                else {}
+            ),
         }
         if pinned
         else None
     )
     assert result["region_comparison_revision"] == (
-        "b" * 40 if region_override else "a" * 40 if pinned else None
+        "b" * 40 if region_override else expected_revision if pinned else None
     )
     assert result["dataset_commits"] == dict.fromkeys(
         publisher.DATASET_CONFIGS, "atomic-commit"

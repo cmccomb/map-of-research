@@ -11,6 +11,7 @@ import math
 import os
 import subprocess
 import tempfile
+from collections import Counter
 from collections.abc import Callable, Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
@@ -88,7 +89,11 @@ from .region_review import (
 )
 from .region_review import (
     DEFAULT_REGION_REVIEW_PATH,
+    ReviewedRegionDecision,
     load_region_review,
+)
+from .region_review import (
+    SNAPSHOT_SHA256 as MATH_REGION_SNAPSHOT_SHA256,
 )
 from .region_review import (
     SOURCE_COMMIT as MATH_REGION_SOURCE_COMMIT,
@@ -153,6 +158,45 @@ KEYWORD_LEVELS = (
     {"level": 1, "label": "Detailed topics"},
 )
 MAP_ARTIFACT_NAME = "publications.json"
+MATH_BASELINE_MAP_POINTS = 42925
+MATH_BASELINE_MAP_SHA256 = (
+    "358e23af6774ea4fd53bab5ed8b55fdd1891a4e7730c0924d74e428e94cd4a88"
+)
+MATH_BASELINE_WORK_SCHEMA_SHA256 = (
+    "5d941f5bde40baf970605373690b5798da8a85f034686c731a000a3099e2dfc4"
+)
+MATH_COORDINATE_FIELDS = ("x", "y", "tsne_x", "tsne_y")
+MATH_VARIANT_FIELDS = (
+    "title_variants",
+    "venue_variants",
+    "citation_variants",
+    "author_variants",
+)
+MATH_TRANSIENT_REGION_FIELDS = (
+    "map_region_prior_eligible_override",
+    "map_region_prior_excluded_override",
+)
+MATH_TOPIC_FIELDS = (
+    "keyword_id",
+    "keyword",
+    "keyword_extracted",
+    "keyword_label_reviewed",
+    "detail_keyword_id",
+    "detail_keyword",
+    "detail_keyword_extracted",
+    "detail_keyword_label_reviewed",
+)
+MATH_PRESENTATION_FIELDS = (*MATH_COORDINATE_FIELDS, *MATH_TOPIC_FIELDS)
+MATH_UNCLASSIFIED_TOPICS = {
+    "keyword_id": "keyword-unclassified",
+    "keyword": "Unclassified publications",
+    "keyword_extracted": "Unclassified publications",
+    "keyword_label_reviewed": False,
+    "detail_keyword_id": "keyword-unclassified-pending-review",
+    "detail_keyword": "Pending topic review",
+    "detail_keyword_extracted": "Pending topic review",
+    "detail_keyword_label_reviewed": False,
+}
 MAP_TITLE = "CMU Faculty Research"
 MAX_REUSABLE_DOI_REKEYS = 25
 STATUS_SCHEMA_VERSION = 2
@@ -1067,6 +1111,470 @@ def build_map_artifact(
     }
 
 
+def _published_map_artifact(*, hf_token: str, revision: str) -> dict[str, Any]:
+    """Read the immutable map artifact used for exact point-payload parity."""
+
+    from huggingface_hub import hf_hub_download
+
+    if revision != MATH_REGION_BASELINE:
+        raise ValueError("Math presentation requires the frozen bb88 artifact")
+    path = hf_hub_download(
+        REPO_ID,
+        filename=f"maps/{MAP_ARTIFACT_NAME}",
+        repo_type="dataset",
+        revision=require_revision(revision),
+        token=hf_token or None,
+    )
+    if sha256_file(Path(path)) != MATH_BASELINE_MAP_SHA256:
+        raise ValueError("Math presentation bb88 map artifact bytes changed")
+    return load_json(Path(path))
+
+
+def _math_artifact_digest(artifact: Mapping[str, Any]) -> str:
+    """Hash all staged map content independently of JSON formatting."""
+
+    return hashlib.sha256(
+        json.dumps(
+            artifact, sort_keys=True, ensure_ascii=False, separators=(",", ":")
+        ).encode("utf-8")
+    ).hexdigest()
+
+
+def preserve_reviewed_math_presentation(
+    works: Any,
+    prior_works: Sequence[Mapping[str, Any]],
+    prior_artifact: Mapping[str, Any],
+    decisions: tuple[ReviewedRegionDecision, ...],
+    registry: Registry,
+    *,
+    generated_at_utc: str,
+) -> tuple[Any, dict[str, int | str]]:
+    """Keep bb88 point payloads exact while adding four reviewed Math works."""
+
+    gains = {
+        item.work_id
+        for item in decisions
+        if item.transition == "restore" and item.visible
+    }
+    losses = {
+        item.work_id
+        for item in decisions
+        if item.transition == "reexclude" and not item.visible
+    }
+    if len(gains) != 4 or len(losses) != 2 or gains & losses:
+        raise ValueError("Math presentation requires exact four gains and two losses")
+    points = prior_artifact.get("points")
+    keywords = prior_artifact.get("keywords")
+    if (
+        prior_artifact.get("schema_version") != MAP_SCHEMA_VERSION
+        or prior_artifact.get("quality_assessment_version")
+        != QUALITY_ASSESSMENT_VERSION
+        or prior_artifact.get("layout_version") != LAYOUT_VERSION
+        or prior_artifact.get("keyword_model_version") != KEYWORD_MODEL_VERSION
+        or prior_artifact.get("topic_label_review_version")
+        != TOPIC_LABEL_REVIEW_VERSION
+        or prior_artifact.get("region_audit_version") != REGION_AUDIT_VERSION
+        or prior_artifact.get("default_layout_id") != DEFAULT_LAYOUT_ID
+        or prior_artifact.get("layouts") != [dict(layout) for layout in LAYOUTS]
+        or not isinstance(points, list)
+        or len(points) != MATH_BASELINE_MAP_POINTS
+        or prior_artifact.get("point_count") != len(points)
+        or not isinstance(keywords, list)
+    ):
+        raise ValueError("Math presentation baseline artifact differs from bb88")
+    old_points = {str(item["work_id"]): item for item in points}
+    old_keywords = {str(item["keyword_id"]): item for item in keywords}
+    old_works = {str(item["work_id"]): item for item in prior_works}
+    current_indices = {str(row.work_id): index for index, row in works.iterrows()}
+    if (
+        len(old_points) != len(points)
+        or len(old_keywords) != len(keywords)
+        or len(old_works) != len(prior_works)
+        or len(current_indices) != len(works)
+        or not set(old_points).issubset(old_works)
+        or set(old_keywords).intersection(
+            {
+                MATH_UNCLASSIFIED_TOPICS["keyword_id"],
+                MATH_UNCLASSIFIED_TOPICS["detail_keyword_id"],
+            }
+        )
+    ):
+        raise ValueError("Math presentation baseline identities are invalid")
+    visible = {
+        str(row.work_id)
+        for row in works.itertuples(index=False)
+        if bool(row.map_eligible)
+        and bool(_as_list(row.memberships))
+        and bool(getattr(row, "has_included_source_profile", True))
+    }
+    common = visible & old_points.keys()
+    if visible - old_points.keys() != gains or old_points.keys() - visible != losses:
+        raise ValueError("Math presentation map IDs exceed exact +4/-2 review")
+    if not set(MATH_TRANSIENT_REGION_FIELDS).issubset(works.columns):
+        raise ValueError("Math presentation lacks reconciled region diagnostics")
+
+    output = works.drop(columns=list(MATH_TRANSIENT_REGION_FIELDS)).copy()
+    for work_id in sorted(common | gains):
+        old = old_works[work_id]
+        old_coords = {}
+        for field in MATH_COORDINATE_FIELDS:
+            try:
+                value = float(old[field])
+            except (TypeError, ValueError) as error:
+                raise ValueError(
+                    f"Math presentation has no frozen coordinates: {work_id}"
+                ) from error
+            if not math.isfinite(value):
+                raise ValueError(
+                    f"Math presentation has no frozen coordinates: {work_id}"
+                )
+            old_coords[field] = value
+        if work_id in gains:
+            if bool(old["map_eligible"]) or not bool(old["map_region_outlier"]):
+                raise ValueError("Math restored point is not a prior region outlier")
+            if any(
+                old.get(field) != (False if field.endswith("_label_reviewed") else "")
+                for field in MATH_TOPIC_FIELDS
+            ):
+                raise ValueError("Math restored point already has a frozen topic")
+            topics = MATH_UNCLASSIFIED_TOPICS
+        else:
+            point = old_points[work_id]
+            if (
+                not bool(old["map_eligible"])
+                or any(
+                    round(old_coords[field], 7) != point[field]
+                    for field in MATH_COORDINATE_FIELDS
+                )
+                or point["keyword_ids"] != [old["keyword_id"], old["detail_keyword_id"]]
+            ):
+                raise ValueError(
+                    f"Math shared point differs from frozen works: {work_id}"
+                )
+            topics = {field: old[field] for field in MATH_TOPIC_FIELDS}
+        index = current_indices[work_id]
+        for field, value in (*old_coords.items(), *topics.items()):
+            output.at[index, field] = value
+        if work_id in common:
+            for field in MATH_VARIANT_FIELDS:
+                previous = _as_list(old[field])
+                current = _as_list(output.at[index, field])
+                if Counter(previous) != Counter(current):
+                    raise ValueError(
+                        f"Math shared work changed source variants: {work_id}: {field}"
+                    )
+                output.at[index, field] = previous
+
+    candidate = build_map_artifact(output, registry, generated_at_utc=generated_at_utc)
+    for field in (
+        "schema_version",
+        "quality_assessment_version",
+        "keyword_model_version",
+        "topic_label_review_version",
+        "region_audit_version",
+        "layout_version",
+        "default_layout_id",
+        "layouts",
+        "title",
+    ):
+        if candidate.get(field) != prior_artifact.get(field):
+            raise ValueError(f"Math presentation changed artifact metadata: {field}")
+    candidate_points = {str(item["work_id"]): item for item in candidate["points"]}
+    candidate_keywords = {
+        str(item["keyword_id"]): item for item in candidate["keywords"]
+    }
+    if len(candidate_points) != len(visible) or set(candidate_points) != visible:
+        raise ValueError("Math presentation artifact point IDs differ")
+    for field, expected in (
+        ("point_count", len(points) + len(gains) - len(losses)),
+        ("keyword_count", len(keywords) + 2),
+        ("department_count", prior_artifact["department_count"]),
+        ("school_count", prior_artifact["school_count"]),
+        ("faculty_count", prior_artifact["faculty_count"]),
+    ):
+        if candidate.get(field) != expected:
+            raise ValueError(f"Math presentation changed artifact count: {field}")
+    for work_id in sorted(common):
+        if candidate_points[work_id] != old_points[work_id]:
+            changed = sorted(
+                field
+                for field in old_points[work_id].keys()
+                | candidate_points[work_id].keys()
+                if old_points[work_id].get(field)
+                != candidate_points[work_id].get(field)
+            )
+            raise ValueError(
+                f"Math shared point payload changed: {work_id}: {', '.join(changed)}"
+            )
+    for work_id in gains:
+        if candidate_points[work_id]["keyword_ids"] != [
+            MATH_UNCLASSIFIED_TOPICS["keyword_id"],
+            MATH_UNCLASSIFIED_TOPICS["detail_keyword_id"],
+        ] or any(
+            candidate_points[work_id][field]
+            != round(float(old_works[work_id][field]), 7)
+            for field in MATH_COORDINATE_FIELDS
+        ):
+            raise ValueError("Math restored point placement or topics changed")
+    removed_keyword_counts = Counter(
+        keyword_id
+        for work_id in losses
+        for keyword_id in old_points[work_id]["keyword_ids"]
+    )
+    new_keyword_ids = {
+        MATH_UNCLASSIFIED_TOPICS["keyword_id"],
+        MATH_UNCLASSIFIED_TOPICS["detail_keyword_id"],
+    }
+    if candidate_keywords.keys() != old_keywords.keys() | new_keyword_ids:
+        raise ValueError("Math presentation changed topic IDs beyond exact review")
+    gain_members = [candidate_points[work_id] for work_id in sorted(gains)]
+    new_coordinates = {
+        str(layout["layout_id"]): {
+            axis: round(
+                sum(
+                    float(point[str(layout[f"{axis}_field"])])
+                    for point in gain_members
+                )
+                / len(gain_members),
+                7,
+            )
+            for axis in ("x", "y")
+        }
+        for layout in LAYOUTS
+    }
+    for keyword_id, label, extracted, reviewed, level, parent in (
+        (
+            MATH_UNCLASSIFIED_TOPICS["keyword_id"],
+            MATH_UNCLASSIFIED_TOPICS["keyword"],
+            MATH_UNCLASSIFIED_TOPICS["keyword_extracted"],
+            MATH_UNCLASSIFIED_TOPICS["keyword_label_reviewed"],
+            0,
+            None,
+        ),
+        (
+            MATH_UNCLASSIFIED_TOPICS["detail_keyword_id"],
+            MATH_UNCLASSIFIED_TOPICS["detail_keyword"],
+            MATH_UNCLASSIFIED_TOPICS["detail_keyword_extracted"],
+            MATH_UNCLASSIFIED_TOPICS["detail_keyword_label_reviewed"],
+            1,
+            MATH_UNCLASSIFIED_TOPICS["keyword_id"],
+        ),
+    ):
+        if candidate_keywords[keyword_id] != {
+            "keyword_id": keyword_id,
+            "label": label,
+            "extracted_label": extracted,
+            "label_reviewed": reviewed,
+            "level": level,
+            "parent_keyword_id": parent,
+            "publication_count": len(gains),
+            "coordinates": new_coordinates,
+        }:
+            raise ValueError(f"Math new topic metadata changed: {keyword_id}")
+    for keyword_id, previous in old_keywords.items():
+        current = candidate_keywords.get(keyword_id)
+        if keyword_id not in removed_keyword_counts:
+            expected = previous
+        else:
+            members = [
+                point
+                for point in points
+                if point["work_id"] not in losses
+                and keyword_id in point["keyword_ids"]
+            ]
+            if not members or len(members) != (
+                previous["publication_count"] - removed_keyword_counts[keyword_id]
+            ):
+                raise ValueError(f"Math shared topic membership changed: {keyword_id}")
+            expected = {
+                **previous,
+                "publication_count": len(members),
+                "coordinates": {
+                    str(layout["layout_id"]): {
+                        axis: round(
+                            sum(
+                                float(point[str(layout[f"{axis}_field"])])
+                                for point in members
+                            )
+                            / len(members),
+                            7,
+                        )
+                        for axis in ("x", "y")
+                    }
+                    for layout in LAYOUTS
+                },
+            }
+        if current != expected:
+            raise ValueError(f"Math shared topic metadata changed: {keyword_id}")
+    for level in range(len(KEYWORD_LEVELS)):
+        current = candidate["keyword_levels"][level]
+        previous = prior_artifact["keyword_levels"][level]
+        if current != {**previous, "keyword_count": previous["keyword_count"] + 1}:
+            raise ValueError("Math presentation changed keyword-level metadata")
+    for catalog_name, key, point_field in (
+        ("schools", "school_id", "school_ids"),
+        ("departments", "department_id", "department_ids"),
+        ("faculty", "person_id", "faculty_ids"),
+    ):
+        old_catalog = {
+            str(item[key]): item for item in prior_artifact["catalogs"][catalog_name]
+        }
+        new_catalog = {
+            str(item[key]): item for item in candidate["catalogs"][catalog_name]
+        }
+        added_counts = Counter(
+            item_id
+            for work_id in gains
+            for item_id in candidate_points[work_id][point_field]
+        )
+        removed_counts = Counter(
+            item_id
+            for work_id in losses
+            for item_id in old_points[work_id][point_field]
+        )
+        if old_catalog.keys() != new_catalog.keys() or any(
+            new_catalog[item_id]
+            != {
+                **old_item,
+                "publication_count": old_item["publication_count"]
+                + added_counts[item_id]
+                - removed_counts[item_id],
+            }
+            for item_id, old_item in old_catalog.items()
+        ):
+            raise ValueError(f"Math presentation changed {catalog_name} catalog")
+    old_external = {
+        str(item["person_id"]): item
+        for item in prior_artifact["catalogs"]["external_coauthors"]
+    }
+    new_external = {
+        str(item["person_id"]): item
+        for item in candidate["catalogs"]["external_coauthors"]
+    }
+    removed_external = old_external.keys() - new_external.keys()
+    if removed_external - {
+        person_id
+        for work_id in losses
+        for person_id in old_points[work_id]["external_coauthor_ids"]
+    } or removed_external & {
+        person_id
+        for work_id in common
+        for person_id in old_points[work_id]["external_coauthor_ids"]
+    } or any(
+        new_external[person_id] != old_external[person_id]
+        for person_id in old_external.keys() & new_external.keys()
+    ) or not (new_external.keys() - old_external.keys()).issubset(
+        {
+            person_id
+            for work_id in gains
+            for person_id in candidate_points[work_id]["external_coauthor_ids"]
+        }
+    ):
+        raise ValueError("Math presentation changed external coauthor catalog")
+    return output, {
+        "unchanged_shared_points": len(common),
+        "restored_points": len(gains),
+        "removed_points": len(losses),
+        "frozen_coordinate_rows": len(common | gains),
+        "map_artifact_sha256": _math_artifact_digest(candidate),
+    }
+
+
+def _published_field_value(value: Any) -> Any:
+    """Compare Arrow and pandas values without weakening source-field parity."""
+
+    if hasattr(value, "tolist"):
+        return _published_field_value(value.tolist())
+    if isinstance(value, Mapping):
+        return {str(key): _published_field_value(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_published_field_value(item) for item in value]
+    if isinstance(value, float) and math.isnan(value):
+        return None
+    return value
+
+
+def require_reviewed_math_work_table_parity(
+    works: Any,
+    prior_rows: Iterator[dict[str, Any]],
+    common_ids: set[str],
+) -> int:
+    """Reject changes to any published column of the 42,923 retained map works."""
+
+    import numpy as np
+
+    fields = tuple(str(field) for field in works.columns)
+    schema_sha256 = hashlib.sha256(
+        json.dumps(sorted(fields), separators=(",", ":")).encode()
+    ).hexdigest()
+    if (
+        schema_sha256 != MATH_BASELINE_WORK_SCHEMA_SHA256
+        or len(common_ids) != MATH_BASELINE_MAP_POINTS - 2
+        or "embedding" not in fields
+    ):
+        raise ValueError("Math work-table schema or reviewed point count changed")
+    field_positions = {field: index for index, field in enumerate(fields)}
+    candidate = {}
+    for row in works.itertuples(index=False, name=None):
+        work_id = str(row[field_positions["work_id"]])
+        if work_id in common_ids:
+            if work_id in candidate:
+                raise ValueError("Math common works are missing or duplicated")
+            candidate[work_id] = row
+    if len(candidate) != len(common_ids):
+        raise ValueError("Math common works are missing or duplicated")
+    seen: set[str] = set()
+    for old in prior_rows:
+        work_id = str(old["work_id"])
+        if work_id not in common_ids:
+            continue
+        if work_id in seen:
+            raise ValueError("Math baseline has duplicate common work IDs")
+        seen.add(work_id)
+        current = candidate[work_id]
+        for field, position in field_positions.items():
+            previous_value = old[field]
+            current_value = current[position]
+            equal = (
+                np.array_equal(
+                    np.asarray(previous_value, dtype=np.float32),
+                    np.asarray(current_value, dtype=np.float32),
+                    equal_nan=True,
+                )
+                if field == "embedding"
+                else _published_field_value(previous_value)
+                == _published_field_value(current_value)
+            )
+            if not equal:
+                raise ValueError(
+                    f"Math shared work-table field changed: {work_id}: {field}"
+                )
+    if seen != common_ids:
+        raise ValueError("Math baseline is missing common work rows")
+    return len(seen)
+
+
+def _staged_math_work_rows(
+    path: Path,
+    *,
+    expected_fields: Sequence[str],
+    expected_rows: int,
+) -> Iterator[dict[str, Any]]:
+    """Read staged Arrow rows only after validating their complete schema."""
+
+    import pyarrow.parquet as pq
+
+    staged = pq.ParquetFile(path)
+    if (
+        set(staged.schema_arrow.names) != set(expected_fields)
+        or len(staged.schema_arrow.names) != len(expected_fields)
+        or staged.metadata.num_rows != expected_rows
+    ):
+        raise ValueError("Math staged works Parquet schema or row count changed")
+    for batch in staged.iter_batches(batch_size=1024):
+        yield from batch.to_pylist()
+
+
 def _write_map_artifacts(
     works: Any,
     registry: Registry,
@@ -1223,6 +1731,8 @@ def _publish_atomic_release(
     prior_people: Any,
     atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
+    math_region_review: bool = False,
+    math_common_work_ids: set[str] | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1285,6 +1795,22 @@ def _publish_atomic_release(
         )
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
+        if math_region_review:
+            if math_common_work_ids is None:
+                raise ValueError("Atomic Math release lacks retained work identities")
+            staged_artifact = load_json(artifact_path)
+            if not isinstance(staged_artifact, dict):
+                raise ValueError("Atomic Math staged map artifact is invalid")
+            artifact = staged_artifact
+            require_reviewed_math_work_table_parity(
+                tables["works"],
+                _staged_math_work_rows(
+                    files["works/train-00000-of-00001.parquet"],
+                    expected_fields=tuple(tables["works"].columns),
+                    expected_rows=len(tables["works"]),
+                ),
+                math_common_work_ids,
+            )
         prior_readme = Path(
             hf_hub_download(
                 REPO_ID,
@@ -1329,6 +1855,27 @@ def _publish_atomic_release(
                 "raw_rows": len(source_frame),
                 "map_points": artifact["point_count"],
             }
+        if math_region_review:
+            expected_parity = {
+                "unchanged_shared_points": MATH_BASELINE_MAP_POINTS - 2,
+                "restored_points": 4,
+                "removed_points": 2,
+                "frozen_coordinate_rows": MATH_BASELINE_MAP_POINTS + 2,
+                "shared_work_rows": MATH_BASELINE_MAP_POINTS - 2,
+                "map_artifact_sha256": _math_artifact_digest(artifact),
+            }
+            if (
+                bio_release
+                or prior_revision != MATH_REGION_BASELINE
+                or source_manifest["snapshot_sha256"] != MATH_REGION_SNAPSHOT_SHA256
+                or artifact["point_count"] != MATH_BASELINE_MAP_POINTS + 2
+                or continuity_receipt is None
+                or continuity_receipt.get("math_presentation_parity")
+                != expected_parity
+            ):
+                raise ValueError("Atomic Math release lacks exact presentation parity")
+            gate["gate"] = "frozen-math-presentation-parity-v1"
+            gate["math_presentation_parity"] = expected_parity
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1529,6 +2076,8 @@ def publish_snapshot(
     prior_work_fields = (
         (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
         if comparison_revision != prior_revision
+        else (*PRIOR_WORK_FIELDS, *MATH_PRESENTATION_FIELDS, *MATH_VARIANT_FIELDS)
+        if math_region_review
         else PRIOR_WORK_FIELDS
     )
     prior_works = list(
@@ -1573,6 +2122,40 @@ def publish_snapshot(
     if comparison_revision != prior_revision:
         continuity_receipt["current_hub_revision"] = prior_revision
     tables["works"] = add_publication_keywords(tables["works"])
+    math_common_work_ids = None
+    if math_region_review:
+        prior_artifact = _published_map_artifact(
+            hf_token=hf_token, revision=MATH_REGION_BASELINE
+        )
+        tables["works"], presentation_receipt = preserve_reviewed_math_presentation(
+            tables["works"],
+            prior_works,
+            prior_artifact,
+            reviewed_math_decisions,
+            registry,
+            generated_at_utc=str(manifest["created_at_utc"]),
+        )
+        removed_ids = {
+            decision.work_id
+            for decision in reviewed_math_decisions
+            if decision.transition == "reexclude" and not decision.visible
+        }
+        math_common_work_ids = {
+            str(point["work_id"]) for point in prior_artifact["points"]
+        } - removed_ids
+        presentation_receipt["shared_work_rows"] = (
+            require_reviewed_math_work_table_parity(
+                tables["works"],
+                _published_rows(
+                    "works",
+                    tuple(tables["works"].columns),
+                    hf_token=hf_token,
+                    revision=MATH_REGION_BASELINE,
+                ),
+                math_common_work_ids,
+            )
+        )
+        continuity_receipt["math_presentation_parity"] = presentation_receipt
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
     if comparison_revision != prior_revision:
@@ -1625,6 +2208,8 @@ def publish_snapshot(
         prior_people=prior_people,
         atomic_intent_sink=atomic_intent_sink,
         require_bio_release=require_bio_release,
+        math_region_review=math_region_review,
+        math_common_work_ids=math_common_work_ids,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (

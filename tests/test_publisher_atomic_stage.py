@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
@@ -240,7 +241,19 @@ def test_pinned_publish_without_intent_sink_cannot_reach_hub(
         )
 
 
-def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=False):
+def _stage(
+    monkeypatch,
+    tmp_path,
+    *,
+    bio=False,
+    gate_status="pass",
+    pending=False,
+    point_count=2,
+    staged_map_drift=False,
+    staged_works_drift=False,
+    staged_works_schema_drift=False,
+    invalid_staged_map=False,
+):
     readme = tmp_path / "parent-README.md"
     readme.write_text("---\nlicense: mit\n---\n", encoding="utf-8")
     monkeypatch.setitem(
@@ -252,10 +265,18 @@ def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=Fals
 
     def map_files(works, registry, *, maps_dir, **kwargs):
         maps_dir.mkdir(parents=True)
-        artifact = {"point_count": 2, "points": []}
+        artifact = {"point_count": point_count, "points": []}
         artifact_path = maps_dir / "publications.json"
         manifest_path = maps_dir / "manifest.json"
-        artifact_path.write_text(json.dumps(artifact))
+        artifact_path.write_text(
+            "null"
+            if invalid_staged_map
+            else json.dumps(
+                {**artifact, "point_count": point_count + 1}
+                if staged_map_drift
+                else artifact
+            )
+        )
         manifest_path.write_text(json.dumps(kwargs))
         calls.append(("map", kwargs))
         return artifact_path, manifest_path, artifact
@@ -265,7 +286,12 @@ def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=Fals
             self.frame = frame
 
         def to_parquet(self, path):
-            self.frame.to_parquet(path, index=False)
+            frame = self.frame
+            if staged_works_drift and "work_id" in frame.columns:
+                frame = frame.assign(title="Changed after parity")
+            if staged_works_schema_drift and "work_id" in frame.columns:
+                frame = frame.assign(unreviewed_field="new")
+            frame.to_parquet(path, index=False)
 
     def commit(files, **kwargs):
         assert set(files) == RELEASE_PATHS
@@ -370,6 +396,197 @@ def test_atomic_publisher_stages_all_files_and_runs_gate_before_commit(
         assert [call[0] for call in calls] == ["preserve", "map", "gate", "commit"]
     else:
         assert [call[0] for call in calls] == ["map", "commit"]
+
+
+def test_atomic_math_presentation_receipt_is_in_prewrite_intent(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(publisher, "MATH_BASELINE_MAP_POINTS", 3)
+    calls, tables, manifest = _stage(monkeypatch, tmp_path, point_count=5)
+    tables["works"] = pandas.DataFrame(
+        {"work_id": ["retained"], "title": ["Original"], "embedding": [[0.1, 0.2]]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "MATH_BASELINE_WORK_SCHEMA_SHA256",
+        hashlib.sha256(
+            json.dumps(sorted(tables["works"].columns), separators=(",", ":")).encode()
+        ).hexdigest(),
+    )
+    parity = {
+        "unchanged_shared_points": 1,
+        "restored_points": 4,
+        "removed_points": 2,
+        "frozen_coordinate_rows": 5,
+        "shared_work_rows": 1,
+        "map_artifact_sha256": publisher._math_artifact_digest(
+            {"point_count": 5, "points": []}
+        ),
+    }
+    revision, _ = publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={"snapshot_sha256": publisher.MATH_REGION_SNAPSHOT_SHA256},
+        hf_token="token",
+        prior_revision=publisher.MATH_REGION_BASELINE,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={
+            "prior_revision": publisher.MATH_REGION_BASELINE,
+            "math_presentation_parity": parity,
+        },
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=_prior_bio_people(),
+        math_region_review=True,
+        math_common_work_ids={"retained"},
+    )
+    assert revision == "b" * 40
+    assert calls[-1][1]["prewrite_gate"]["math_presentation_parity"] == parity
+    assert calls[-1][1]["prewrite_gate"]["gate"] == (
+        "frozen-math-presentation-parity-v1"
+    )
+
+
+@pytest.mark.parametrize(
+    "case",
+    ("bio_source", "wrong_prior", "wrong_source", "wrong_points", "wrong_parity"),
+)
+def test_atomic_math_presentation_gate_fails_before_commit(
+    monkeypatch, tmp_path, case
+) -> None:
+    monkeypatch.setattr(publisher, "MATH_BASELINE_MAP_POINTS", 3)
+    calls, tables, manifest = _stage(
+        monkeypatch,
+        tmp_path,
+        bio=case == "bio_source",
+        point_count=2 if case == "wrong_points" else 5,
+    )
+    tables["works"] = pandas.DataFrame(
+        {"work_id": ["retained"], "title": ["Original"], "embedding": [[0.1, 0.2]]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "MATH_BASELINE_WORK_SCHEMA_SHA256",
+        hashlib.sha256(
+            json.dumps(sorted(tables["works"].columns), separators=(",", ":")).encode()
+        ).hexdigest(),
+    )
+    prior_revision = (
+        "a" * 40 if case == "wrong_prior" else publisher.MATH_REGION_BASELINE
+    )
+    snapshot_sha = (
+        publisher.BIO_SOURCE_SHA256
+        if case == "bio_source"
+        else "other"
+        if case == "wrong_source"
+        else publisher.MATH_REGION_SNAPSHOT_SHA256
+    )
+    parity = {
+        "unchanged_shared_points": 1,
+        "restored_points": 4,
+        "removed_points": 2,
+        "frozen_coordinate_rows": 5,
+        "shared_work_rows": 1,
+        "map_artifact_sha256": publisher._math_artifact_digest(
+            {"point_count": 2 if case == "wrong_points" else 5, "points": []}
+        ),
+    }
+    if case == "wrong_parity":
+        parity["shared_work_rows"] -= 1
+    with pytest.raises(ValueError, match="exact presentation parity"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": snapshot_sha},
+            hf_token="token",
+            prior_revision=prior_revision,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={
+                "prior_revision": prior_revision,
+                "math_presentation_parity": parity,
+            },
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            math_region_review=True,
+            math_common_work_ids={"retained"},
+        )
+    assert all(call[0] != "commit" for call in calls)
+
+
+@pytest.mark.parametrize(
+    ("case", "message"),
+    (
+        ("map_bytes", "exact presentation parity"),
+        ("work_values", "shared work-table field changed"),
+        ("work_schema", "staged works Parquet schema or row count changed"),
+        ("missing_ids", "lacks retained work identities"),
+        ("invalid_map", "staged map artifact is invalid"),
+    ),
+)
+def test_atomic_math_rejects_staged_payload_drift_before_commit(
+    monkeypatch, tmp_path, case, message
+) -> None:
+    monkeypatch.setattr(publisher, "MATH_BASELINE_MAP_POINTS", 3)
+    calls, tables, manifest = _stage(
+        monkeypatch,
+        tmp_path,
+        point_count=5,
+        staged_map_drift=case == "map_bytes",
+        staged_works_drift=case == "work_values",
+        staged_works_schema_drift=case == "work_schema",
+        invalid_staged_map=case == "invalid_map",
+    )
+    tables["works"] = pandas.DataFrame(
+        {"work_id": ["retained"], "title": ["Original"], "embedding": [[0.1, 0.2]]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "MATH_BASELINE_WORK_SCHEMA_SHA256",
+        hashlib.sha256(
+            json.dumps(sorted(tables["works"].columns), separators=(",", ":")).encode()
+        ).hexdigest(),
+    )
+    parity = {
+        "unchanged_shared_points": 1,
+        "restored_points": 4,
+        "removed_points": 2,
+        "frozen_coordinate_rows": 5,
+        "shared_work_rows": 1,
+        "map_artifact_sha256": publisher._math_artifact_digest(
+            {"point_count": 5, "points": []}
+        ),
+    }
+    with pytest.raises(ValueError, match=message):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={
+                "snapshot_sha256": publisher.MATH_REGION_SNAPSHOT_SHA256
+            },
+            hf_token="token",
+            prior_revision=publisher.MATH_REGION_BASELINE,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={
+                "prior_revision": publisher.MATH_REGION_BASELINE,
+                "math_presentation_parity": parity,
+            },
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            math_region_review=True,
+            math_common_work_ids=None if case == "missing_ids" else {"retained"},
+        )
+    assert all(call[0] != "commit" for call in calls)
 
 
 def test_atomic_bio_staging_requires_manifest_only_for_pending_parent(

@@ -48,8 +48,20 @@ The two reviewed losses come from exact exclusions. The older
 from the bb88 baseline pending a separate review. Any bb88 snapshot upload
 without the Math flag fails before a Hub write, so merging this draft alone cannot silently
 publish the three exclusions and 12 holds without the four positive decisions.
-After another release advances Hub beyond bb88, this frozen dispatch needs a
-new review and baseline; sequence it with Sullivan and Bio accordingly.
+The Math presentation gate also requires all 42,923 retained bb88 map points
+and works-table rows to match every published field, preserves their frozen
+coordinates and topics, and records the exact four gains/two losses in the
+atomic prewrite intent. New points use their frozen coordinates and explicit
+unclassified, pending-review topics.
+
+Producer main `68ab26ed` now includes the Sullivan source gate. Its curated
+works differ from the frozen `f7a0eee8` snapshot manifest, so that snapshot
+fails `validate_snapshot` before publishing. This draft must remain unmerged
+and undispatched while the rebuilt Sullivan snapshot and its reviewed release
+advance the Hub. Once Sullivan changes the Hub revision, the Math decisions,
+source binding, and presentation baseline need a fresh exact review and
+no-upload preview against that new immutable parent. The current bb88/f7 gate
+intentionally rejects that future parent until the review is updated.
 
 Run a no-upload preview against immutable bb88 and verify exactly four gains,
 two losses, no unrelated visibility changes, preserved raw rows and primary
