@@ -18,6 +18,18 @@ from typing import Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
+from .sullivan_loss_approval import (
+    APPROVAL_SHA256 as SULLIVAN_APPROVAL_SHA256,
+)
+from .sullivan_loss_approval import (
+    APPROVED_IDS_SHA256 as SULLIVAN_APPROVED_IDS_SHA256,
+)
+from .sullivan_loss_approval import (
+    PRIOR_REVISION as SULLIVAN_PRIOR_REVISION,
+)
+from .sullivan_loss_approval import (
+    ExactSullivanLossApproval,
+)
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
@@ -87,7 +99,9 @@ class RegionReleaseDiffError(ValueError):
         super().__init__(
             "Region release-diff gate failed: "
             f"{len(receipt['unexplained_losses'])} unexplained losses, "
-            f"{len(receipt['unexplained_gains'])} unexplained gains; "
+            f"{len(receipt['unexplained_gains'])} unexplained gains, "
+            f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
+            "unused Sullivan approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
             f"{receipt['unexplained_gains'][:2]}"
         )
@@ -351,6 +365,7 @@ def reconcile_region_decisions(
     prior_profile_publications: Iterable[Mapping[str, Any]],
     *,
     prior_revision: str,
+    sullivan_loss_approval: ExactSullivanLossApproval | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -427,7 +442,39 @@ def reconcile_region_decisions(
     reviewed_losses = sorted(
         identity for identity in losses if _reviewed_loss(current_rows.get(identity))
     )
-    unexplained_losses = sorted(losses - set(reviewed_losses))
+    otherwise_unexplained_losses = losses - set(reviewed_losses)
+    approved_sullivan_losses: set[ObservationKey] = set()
+    unused_sullivan_approvals: set[ObservationKey] = set()
+    if sullivan_loss_approval is not None:
+        if not isinstance(sullivan_loss_approval, ExactSullivanLossApproval):
+            raise ValueError("Sullivan loss approval has the wrong type")
+        approved_sullivan_losses = set(sullivan_loss_approval.identities)
+        approval_digest = hashlib.sha256(
+            "\n".join(
+                "/".join(identity) for identity in sorted(approved_sullivan_losses)
+            ).encode()
+        ).hexdigest()
+        if (
+            prior_revision != SULLIVAN_PRIOR_REVISION
+            or sullivan_loss_approval.manifest_sha256 != SULLIVAN_APPROVAL_SHA256
+            or approval_digest != SULLIVAN_APPROVED_IDS_SHA256
+            or len(approved_sullivan_losses) != 22
+            or len(sullivan_loss_approval.held_identities) != 18
+            or len(sullivan_loss_approval.rekey_identities) != 4
+            or not sullivan_loss_approval.held_identities.isdisjoint(
+                sullivan_loss_approval.rekey_identities
+            )
+            or approved_sullivan_losses
+            != set(
+                sullivan_loss_approval.held_identities
+                | sullivan_loss_approval.rekey_identities
+            )
+        ):
+            raise ValueError("Sullivan exact-loss approval is not the reviewed set")
+        unused_sullivan_approvals = (
+            approved_sullivan_losses - otherwise_unexplained_losses
+        )
+    unexplained_losses = sorted(otherwise_unexplained_losses - approved_sullivan_losses)
     verified_gains = sorted(
         identity
         for identity in gains
@@ -470,11 +517,29 @@ def reconcile_region_decisions(
             output["map_region_prior_excluded_override"].sum()
         ),
         "reviewed_losses": [_display(item) for item in reviewed_losses],
+        "approved_sullivan_held_losses": (
+            [_display(item) for item in sorted(sullivan_loss_approval.held_identities)]
+            if sullivan_loss_approval is not None
+            else []
+        ),
+        "approved_sullivan_rekey_losses": (
+            [_display(item) for item in sorted(sullivan_loss_approval.rekey_identities)]
+            if sullivan_loss_approval is not None
+            else []
+        ),
+        "sullivan_loss_approval_sha256": (
+            sullivan_loss_approval.manifest_sha256
+            if sullivan_loss_approval is not None
+            else None
+        ),
+        "unused_sullivan_loss_approvals": [
+            _display(item) for item in sorted(unused_sullivan_approvals)
+        ],
         "verified_gains": [_display(item) for item in verified_gains],
         "new_source_gains": len(new_gains),
         "unexplained_losses": [_display(item) for item in unexplained_losses],
         "unexplained_gains": [_display(item) for item in unexplained_gains],
     }
-    if unexplained_losses or unexplained_gains:
+    if unexplained_losses or unexplained_gains or unused_sullivan_approvals:
         raise RegionReleaseDiffError(receipt)
     return output, receipt

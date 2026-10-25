@@ -1,0 +1,924 @@
+{
+  "prior_works": [
+    {
+      "work_id": "work-00119ce6c246870e1093bfa8d6bf5f7f2dd00c4e254eb75afa7918b47e91cefa",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-1e0894e1fdfd288db72861e54712abc35ee5c522606105482baf40eebfc03931",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-281380005be9fb3927f4ff847f9242f96544b2c497ee5e95058ed521ee0f7dc8",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-2dc1e8bab6977930c1004ad6f2e30e7f45c319c73a9e7ceec632bf0c50e1f050",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-30d95b3f6d7cfd6fc64159a1e394641759a4de24f9a2bcfb8dc843f96093fbc2",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-346177a186af2374aa0ff7a41eb6421d1e1c6b2833be60967253561309ebad6a",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-4043df9ef166a7a55a9bff178220e30ad757cd7a4bcaefc82104bf4fff66e251",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-4faeed12c5dd0125d97c9ee5940d3b430f9c8a201495ba4d65ae4ab02274fa09",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-538123ca6317c3428a3133716b2a98c3b30370ada68df09e167c7f5bd28df5c0",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-5dcc0f98cca7d8ac579ed262d3c256906e3a688b371a11a98528188c6cc738dc",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-6a32f12212002f24b2e55823946fb4f0dd9ed6348214cb26d007eb8d472ea710",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-6c7b071518a7834a405498de72db85597c887853e950ea29d1313cf4b88afa3b",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-87789b6016b5d64dbdaeac65c51aa4243737a42106630e529e44b0995f91bb46",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-87bfed6493a2a86a654145a9c8befbde168a880df5d809f1d566e6e115a76b1d",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-bb2f1ec922e8f4bec82452ea82a735e08494df46e0c4390193613a65f92414b1",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-c5fbd4aeda6c56ddee5fd1064ebb7bca07d21e2b15c4376b14436d0fdb00eb04",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-d90e99cbc03b02cbde0d4948d614f0026e9a08354ea6f058c2709ceb572b9f28",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-e0d5e0f90638bfae83a08e0038face9baec7fbb8c4b6025c3c866c4d4fb5faf7",
+      "map_eligible": true
+    },
+    {
+      "work_id": "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724",
+      "map_eligible": true
+    }
+  ],
+  "prior_profiles": [
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "source_type": "scholar",
+      "work_id": "work-5dcc0f98cca7d8ac579ed262d3c256906e3a688b371a11a98528188c6cc738dc",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:B3FOqHPlNUQC\",\"citation\":\"AGU Fall Meeting Abstracts 2004, P31B-0987, 2004\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2004\",\"title\":\"Aeolian Processes at Meridiani Planum\"}",
+      "title": "Aeolian Processes at Meridiani Planum",
+      "year": 2004
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:PVgj2kMGcgYC",
+      "source_type": "scholar",
+      "work_id": "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:PVgj2kMGcgYC\",\"citation\":\"EGU25, 2025\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2025\",\"title\":\"Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS\"}",
+      "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS",
+      "year": 2025
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "source_type": "scholar",
+      "work_id": "work-4faeed12c5dd0125d97c9ee5940d3b430f9c8a201495ba4d65ae4ab02274fa09",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:gVv57TyPmFsC\",\"citation\":\"2023 Fall Eastern Sectional Meeting, 0\",\"num_citations\":0,\"pub_url\":\"\",\"title\":\"Dynamics of Third Order Beverton Holt Difference Equation with Squared Terms\"}",
+      "title": "Dynamics of Third Order Beverton Holt Difference Equation with Squared Terms",
+      "year": null
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "source_type": "scholar",
+      "work_id": "work-87bfed6493a2a86a654145a9c8befbde168a880df5d809f1d566e6e115a76b1d",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:2KloaMYe4IUC\",\"citation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 1997\",\"num_citations\":10,\"pub_url\":\"\",\"pub_year\":\"1997\",\"title\":\"Eddy Correlation Flux Measurement System\"}",
+      "title": "Eddy Correlation Flux Measurement System",
+      "year": 1997
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "source_type": "scholar",
+      "work_id": "work-346177a186af2374aa0ff7a41eb6421d1e1c6b2833be60967253561309ebad6a",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:nVrZBo8bIpAC\",\"citation\":\"20th Conference on Mountain Meteorology, 2022\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2022\",\"title\":\"First Light from the Surface Atmosphere Integrated Field Laboratory and their Implications for Atmosphere-through-Bedrock Science\"}",
+      "title": "First Light from the Surface Atmosphere Integrated Field Laboratory and their Implications for Atmosphere-through-Bedrock Science",
+      "year": 2022
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:OcBU2YAGkTUC",
+      "source_type": "scholar",
+      "work_id": "work-538123ca6317c3428a3133716b2a98c3b30370ada68df09e167c7f5bd28df5c0",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:OcBU2YAGkTUC\",\"citation\":\"ORNL DAAC, 2024\",\"num_citations\":1,\"pub_url\":\"\",\"pub_year\":\"2024\",\"title\":\"Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018\"}",
+      "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018",
+      "year": 2024
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:OR75R8vi5nAC",
+      "source_type": "scholar",
+      "work_id": "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:OR75R8vi5nAC\",\"citation\":\"\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2023\",\"title\":\"Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018. ORNL DAAC, Oak Ridge, Tennessee, USA\"}",
+      "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018. ORNL DAAC, Oak Ridge, Tennessee, USA",
+      "year": 2023
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:Ehil0879vHcC",
+      "source_type": "scholar",
+      "work_id": "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:Ehil0879vHcC\",\"citation\":\"AGU Fall Meeting Abstracts 2017, A13J-05, 2017\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2017\",\"title\":\"Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol\"}",
+      "title": "Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol",
+      "year": 2017
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "source_type": "scholar",
+      "work_id": "work-6a32f12212002f24b2e55823946fb4f0dd9ed6348214cb26d007eb8d472ea710",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:BJbdYPG6LGMC\",\"citation\":\"105th AMS Annual Meeting, 2025\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2025\",\"title\":\"Initial Measurements from Chicago's First Long-Term Urban Flux Site\"}",
+      "title": "Initial Measurements from Chicago's First Long-Term Urban Flux Site",
+      "year": 2025
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "source_type": "scholar",
+      "work_id": "work-4043df9ef166a7a55a9bff178220e30ad757cd7a4bcaefc82104bf4fff66e251",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:bFI3QPDXJZMC\",\"citation\":\"\",\"num_citations\":0,\"pub_url\":\"\",\"title\":\"particles through heterogeneous reaction with nitric acid\"}",
+      "title": "particles through heterogeneous reaction with nitric acid",
+      "year": null
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "source_type": "scholar",
+      "work_id": "work-87789b6016b5d64dbdaeac65c51aa4243737a42106630e529e44b0995f91bb46",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:uDGL6kOW6j0C\",\"citation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2016\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2016\",\"title\":\"Precipitation Measurements from the STAMP Instrument\"}",
+      "title": "Precipitation Measurements from the STAMP Instrument",
+      "year": 2016
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "source_type": "scholar",
+      "work_id": "work-e0d5e0f90638bfae83a08e0038face9baec7fbb8c4b6025c3c866c4d4fb5faf7",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:4X0JR2_MtJMC\",\"citation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2016\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2016\",\"title\":\"Soil Temperature and Moisture Profiles\"}",
+      "title": "Soil Temperature and Moisture Profiles",
+      "year": 2016
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "source_type": "scholar",
+      "work_id": "work-1e0894e1fdfd288db72861e54712abc35ee5c522606105482baf40eebfc03931",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:vDZJ-YLwNdEC\",\"citation\":\"(No Title), 2022\",\"num_citations\":1,\"pub_url\":\"\",\"pub_year\":\"2022\",\"title\":\"Stream and river summertime water quality, carbon, nutrients, isotopes, gases, and constituent export in 33 permafrost-affected watersheds across 4 eco-regions in the western …\"}",
+      "title": "Stream and river summertime water quality, carbon, nutrients, isotopes, gases, and constituent export in 33 permafrost-affected watersheds across 4 eco-regions in the western …",
+      "year": 2022
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "source_type": "scholar",
+      "work_id": "work-30d95b3f6d7cfd6fc64159a1e394641759a4de24f9a2bcfb8dc843f96093fbc2",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:ODE9OILHJdcC\",\"citation\":\"104th AMS Annual Meeting, 2024\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2024\",\"title\":\"Summary of and Selected Highlights from the Surface Atmosphere Integrated Field Laboratory (SAIL) Field Campaign\"}",
+      "title": "Summary of and Selected Highlights from the Surface Atmosphere Integrated Field Laboratory (SAIL) Field Campaign",
+      "year": 2024
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "source_type": "scholar",
+      "work_id": "work-00119ce6c246870e1093bfa8d6bf5f7f2dd00c4e254eb75afa7918b47e91cefa",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:BUYA1_V_uYcC\",\"citation\":\"\",\"num_citations\":0,\"pub_url\":\"\",\"title\":\"Supplemental Material Moving beyond Fine Particle Mass: High-Spatial Resolution Exposure to Source-Resolved Atmospheric Particle Number and Chemical Mixing State\"}",
+      "title": "Supplemental Material Moving beyond Fine Particle Mass: High-Spatial Resolution Exposure to Source-Resolved Atmospheric Particle Number and Chemical Mixing State",
+      "year": null
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "source_type": "scholar",
+      "work_id": "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:tH6gc1N1XXoC\",\"citation\":\"(No Title), 2020\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2020\",\"title\":\"Supplementary Dataset for\\\" Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites\\\"\"}",
+      "title": "Supplementary Dataset for\" Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites\"",
+      "year": 2020
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "source_type": "scholar",
+      "work_id": "work-bb2f1ec922e8f4bec82452ea82a735e08494df46e0c4390193613a65f92414b1",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:GFxP56DSvIMC\",\"citation\":\"Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2024\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2024\",\"title\":\"Surface Atmosphere Integrated Field Laboratory (SAIL)(Field Campaign Report)\"}",
+      "title": "Surface Atmosphere Integrated Field Laboratory (SAIL)(Field Campaign Report)",
+      "year": 2024
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "source_type": "scholar",
+      "work_id": "work-281380005be9fb3927f4ff847f9242f96544b2c497ee5e95058ed521ee0f7dc8",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:DJbcl8HfkQkC\",\"citation\":\"Bulletin of the American Meteorological Society 104 (12), E2192-E2222, 2023\",\"num_citations\":14,\"pub_url\":\"\",\"pub_year\":\"2023\",\"title\":\"The surface atmosphere integrated field laboratory (SAIL) campaign\"}",
+      "title": "The surface atmosphere integrated field laboratory (SAIL) campaign",
+      "year": 2023
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "source_type": "scholar",
+      "work_id": "work-c5fbd4aeda6c56ddee5fd1064ebb7bca07d21e2b15c4376b14436d0fdb00eb04",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:pyW8ca7W8N0C\",\"citation\":\"\",\"num_citations\":0,\"pub_url\":\"\",\"title\":\"This paper is published as part of a PCCP Themed Issue on\"}",
+      "title": "This paper is published as part of a PCCP Themed Issue on",
+      "year": null
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "source_type": "scholar",
+      "work_id": "work-6c7b071518a7834a405498de72db85597c887853e950ea29d1313cf4b88afa3b",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:F9fV5C73w3QC\",\"citation\":\"\",\"num_citations\":0,\"pub_url\":\"\",\"title\":\"This paper is published as part of a PCCP Themed Issue on: Physical Chemistry of Aerosols\"}",
+      "title": "This paper is published as part of a PCCP Themed Issue on: Physical Chemistry of Aerosols",
+      "year": null
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:OTTXONDVkokC",
+      "source_type": "scholar",
+      "work_id": "work-2dc1e8bab6977930c1004ad6f2e30e7f45c319c73a9e7ceec632bf0c50e1f050",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:OTTXONDVkokC\",\"citation\":\"SETAC North America 43rd Annual Meeting, 2022\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2022\",\"title\":\"Transformation of Environmental Contaminants: Reaction Mechanisms and Product Identification\"}",
+      "title": "Transformation of Environmental Contaminants: Reaction Mechanisms and Product Identification",
+      "year": 2022
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "source_type": "scholar",
+      "work_id": "work-d90e99cbc03b02cbde0d4948d614f0026e9a08354ea6f058c2709ceb572b9f28",
+      "map_eligible": true,
+      "source_record_json": "{\"author_pub_id\":\"wXSgFr4AAAAJ:p2g8aNsByqUC\",\"citation\":\"AGU Fall Meeting Abstracts 2007, P11A-0254, 2007\",\"num_citations\":0,\"pub_url\":\"\",\"pub_year\":\"2007\",\"title\":\"Wind-Driven Particle Mobility on Mars: Insights from MER Observations\"}",
+      "title": "Wind-Driven Particle Mobility on Mars: Insights from MER Observations",
+      "year": 2007
+    }
+  ],
+  "source_rows": [
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Eddy correlation flux measurement system",
+      "year": 1997,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Soil Temperature and Moisture Profiles",
+      "year": 2016,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Aeolian Processes at Meridiani Planum",
+      "year": 2004,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Initial Measurements from Chicago's First Long-Term Urban Flux Site",
+      "year": 2025,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Supplemental Material Moving beyond Fine Particle Mass: High-Spatial Resolution Exposure to Source-Resolved Atmospheric Particle Number and Chemical Mixing State",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "The surface atmosphere integrated field laboratory (SAIL) campaign",
+      "year": 2023,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "This paper is published as part of a PCCP Themed Issue on: Physical Chemistry of Aerosols",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Surface Atmosphere Integrated Field Laboratory (SAIL)(Field Campaign Report)",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Summary of and Selected Highlights from the Surface Atmosphere Integrated Field Laboratory (SAIL) Field Campaign",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:OTTXONDVkokC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Transformation of Environmental Contaminants: Reaction Mechanisms and Product Identification",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OTTXONDVkokC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "particles through heterogeneous reaction with nitric acid",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Dynamics of Third Order Beverton Holt Difference Equation with Squared Terms",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "First Light from the Surface Atmosphere Integrated Field Laboratory and their Implications for Atmosphere-through-Bedrock Science",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Wind-Driven Particle Mobility on Mars: Insights from MER Observations",
+      "year": 2007,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "This paper is published as part of a PCCP Themed Issue on",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Supplementary Dataset for Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Precipitation Measurements from the STAMP Instrument",
+      "year": 2016,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Stream and river summertime water quality, carbon, nutrients, isotopes, gases, and constituent export in 33 permafrost-affected watersheds across 4 eco-regions in the western …",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "",
+      "author_pub_id": "curated-native:person-sullivan-589c9545:agu2017:a13j-05",
+      "source_type": "curated_verified",
+      "source_native_id": "agu2017:a13j-05",
+      "title": "Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol",
+      "year": 2017,
+      "source_url": "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+      "source_verification_urls": [
+        "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+        "https://studio.m-anage.com/agu/fm17/meetingapi.cgi/Paper/297700"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "source_verification_urls": []
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS",
+      "year": 2025,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "source_verification_urls": []
+    }
+  ],
+  "current_profiles": [
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Eddy correlation flux measurement system",
+      "year": 1997,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Soil Temperature and Moisture Profiles",
+      "year": 2016,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Aeolian Processes at Meridiani Planum",
+      "year": 2004,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:B3FOqHPlNUQC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Initial Measurements from Chicago's First Long-Term Urban Flux Site",
+      "year": 2025,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Supplemental Material Moving beyond Fine Particle Mass: High-Spatial Resolution Exposure to Source-Resolved Atmospheric Particle Number and Chemical Mixing State",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BUYA1_V_uYcC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "The surface atmosphere integrated field laboratory (SAIL) campaign",
+      "year": 2023,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "This paper is published as part of a PCCP Themed Issue on: Physical Chemistry of Aerosols",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:F9fV5C73w3QC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Surface Atmosphere Integrated Field Laboratory (SAIL)(Field Campaign Report)",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Summary of and Selected Highlights from the Surface Atmosphere Integrated Field Laboratory (SAIL) Field Campaign",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:OTTXONDVkokC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Transformation of Environmental Contaminants: Reaction Mechanisms and Product Identification",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OTTXONDVkokC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OTTXONDVkokC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "particles through heterogeneous reaction with nitric acid",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bFI3QPDXJZMC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Dynamics of Third Order Beverton Holt Difference Equation with Squared Terms",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:gVv57TyPmFsC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "First Light from the Surface Atmosphere Integrated Field Laboratory and their Implications for Atmosphere-through-Bedrock Science",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nVrZBo8bIpAC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Wind-Driven Particle Mobility on Mars: Insights from MER Observations",
+      "year": 2007,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:p2g8aNsByqUC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "This paper is published as part of a PCCP Themed Issue on",
+      "year": null,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:pyW8ca7W8N0C",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Supplementary Dataset for Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Precipitation Measurements from the STAMP Instrument",
+      "year": 2016,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Stream and river summertime water quality, carbon, nutrients, isotopes, gases, and constituent export in 33 permafrost-affected watersheds across 4 eco-regions in the western …",
+      "year": 2022,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "source_verification_urls": [],
+      "map_eligible": false,
+      "review_attribution_status": "held",
+      "review_attribution_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+      "map_exclusion_reasons": [
+        "attribution_provisional_hold"
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "",
+      "author_pub_id": "curated-native:person-sullivan-589c9545:agu2017:a13j-05",
+      "source_type": "curated_verified",
+      "source_native_id": "agu2017:a13j-05",
+      "title": "Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol",
+      "year": 2017,
+      "source_url": "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+      "source_verification_urls": [
+        "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+        "https://studio.m-anage.com/agu/fm17/meetingapi.cgi/Paper/297700"
+      ],
+      "map_eligible": true
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018",
+      "year": 2024,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "source_verification_urls": [],
+      "review_exclusion_code": "false_profile_attribution",
+      "map_eligible": false
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "author_pub_id": "wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "source_type": "scholar",
+      "source_native_id": "",
+      "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS",
+      "year": 2025,
+      "source_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "source_verification_urls": [],
+      "review_exclusion_code": "",
+      "map_eligible": true,
+      "map_exclusion_reasons": [],
+      "work_id": "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724",
+      "collaboration_eligible": true
+    }
+  ]
+}
