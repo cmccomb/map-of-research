@@ -37,10 +37,13 @@ latter account as “Hiller NL”; its CMU-linked identity is recorded in the
 registry review. The captured rows remain attributed to that Scholar account
 and are available for separate publication review.
 
-The staged Neil Donahue browser evidence includes a noncanonical candidate
-cache under `data/captures/` while twelve IDs missing from a 2025 migrated
-cache receive individual source review. The candidate is not read by the
-snapshot builder. Seven SVG-rendered title symbols are recovered from the
-saved HTML `aria-label` values; the unmodified browser text extraction is
-also retained for comparison. Hidden Scholar form tokens are redacted from
-the staged HTML, with the original capture hash in its receipt.
+Neil Donahue's canonical cache is a byte-for-byte copy of the reviewed
+623-row candidate under `data/captures/`. It replaces the 551-row migrated
+cache. The twelve old IDs missing from the current visible profile are
+classified individually in `status/chem-donahue-disappeared-2026-10-24.csv`;
+four independently verified historical conference records are proposed
+separately in producer PR #123. Seven SVG-rendered title symbols were recovered
+from saved HTML `aria-label` values; the original browser text extraction is
+retained for comparison. Hidden Scholar form tokens are redacted from the
+staged HTML, with the original capture hash in its receipt. Rebuild the
+snapshot after the producer registry and exact-exclusion changes are merged.

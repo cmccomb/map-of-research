@@ -13,6 +13,8 @@ Receipts contain public profile IDs and operational metadata, never credentials
 or cookies. Failed collection never deletes the last good profile cache.
 
 A `browser-capture-chem-donahue-2026-10-24.json` receipt records the complete
-visible Donahue capture as `staged_for_source_review`. Its paired disappeared-ID
-and suspect-row CSVs document why the canonical cache and snapshot are still
-unchanged.
+visible Donahue capture and its original `staged_for_source_review` state.
+The paired disappeared-ID and suspect-row CSVs document the review before
+the 623-row candidate was copied to the canonical cache. The receipt is a
+point-in-time capture record; a later snapshot build and upload need their
+own receipts.
