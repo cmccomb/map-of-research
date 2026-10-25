@@ -286,7 +286,7 @@ def test_math_center_name_and_author_header_artifacts_are_exactly_excluded(
                 "department_ids": ["math"],
                 "memberships": [{"department_id": "math", "included": True}],
                 "title": (
-                    "Approximation of Parabolic EquationsUsing the Wasserstein Metric"
+                    "Approximation of Parabolic Equations Using the Wasserstein Metric"
                 ),
                 "authors": "D Kinderlehrer, NJ Walkington",
                 "year": 1999,
