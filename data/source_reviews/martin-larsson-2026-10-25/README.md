@@ -42,6 +42,14 @@ The raw list is retained even when its links or metadata are wrong:
 | 36 | The site calls **Affine rough models** forthcoming. A 2023 book-chapter registration is titled **Chapter 5: Rough affine models** with the same authors. Hold for exact version pairing. | [arXiv](https://arxiv.org/abs/1812.08486), `1.9781611977783.ch5.crossref.json` |
 | 50 | Its *Article* link repeats row 51's short-sale DOI. The Bessel paper's DOI is `10.1214/EJP.v20-3785`. | [arXiv](https://arxiv.org/abs/1212.4986), `ejp.v20-3785.crossref.json` |
 
+An additional 2012 SSRN record,
+[Economic Impact of Naked Sovereign CDS Ban](https://doi.org/10.2139/ssrn.2040907),
+names Agostino Capponi and Martin Larsson. It may be an earlier version of
+row 56, **Will banning naked CDS impact bond prices?**, which has the same
+authors and topic. `ssrn.2040907.crossref.json` preserves the registration;
+the version relationship is unresolved, so it is **not** counted as a fourth
+omitted work.
+
 ## Remaining gate
 
 The 63-list is complete as displayed, and the three extra works are source

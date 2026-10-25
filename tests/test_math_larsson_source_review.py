@@ -188,3 +188,12 @@ def test_broken_article_links_and_truncated_title_remain_visible_for_review() ->
     assert _record("ejp.v20-3785.crossref.json")["message"]["title"] == [
         "Matrix-valued Bessel processes"
     ]
+    possible_variant = _record("ssrn.2040907.crossref.json")["message"]
+    assert possible_variant["title"] == ["Economic Impact of Naked Sovereign CDS Ban"]
+    assert [author["family"] for author in possible_variant["author"]] == [
+        "Capponi",
+        "Larsson",
+    ]
+    assert possible_variant["DOI"] not in {
+        item["doi"] for item in _record("omissions.json")["observations"]
+    }
