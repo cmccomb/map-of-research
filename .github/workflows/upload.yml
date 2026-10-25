@@ -14,6 +14,16 @@ on:
         required: true
         default: automation/map-snapshot
         type: string
+      restore_prior_regions:
+        description: One-time Bernhard weak-region correction on frozen source
+        required: false
+        default: false
+        type: boolean
+      require_bio_release:
+        description: Require the reviewed complete Bio source and graph gate
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -50,6 +60,15 @@ jobs:
             data/captures
             status
           sparse-checkout-cone-mode: false
+      - name: Check out reviewed prior upload receipt
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 3b3ba167947dc399edc08f17b9985a53b5260e4f
+          path: reviewed-prior
+          persist-credentials: false
+          sparse-checkout: status/last-upload.json
+          sparse-checkout-cone-mode: false
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -58,6 +77,30 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install trusted publisher
         run: python -m pip install './source[publisher]'
+      - name: Pin previous hosted release
+        id: baseline
+        run: |
+          python -m map_of_research.release_baseline \
+            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
+      - name: Select region comparison
+        id: region
+        env:
+          RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
+        run: |
+          python -m map_of_research.region_repair \
+            --restore-prior-regions "$RESTORE_PRIOR_REGIONS" \
+            --event-name "$GITHUB_EVENT_NAME" \
+            --run-ref "$GITHUB_REF" \
+            --run-commit "$GITHUB_SHA" \
+            --producer-commit "$(git -C source rev-parse HEAD)" \
+            --snapshot-ref "$SNAPSHOT_REF" \
+            --snapshot-commit "$(git -C snapshot rev-parse HEAD)" \
+            --historical-commit "$(git -C reviewed-prior rev-parse HEAD 2>/dev/null || true)" \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
+            --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --current-receipt snapshot/status/last-upload.json \
+            --historical-receipt reviewed-prior/status/last-upload.json \
+            --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
         run: |
           python source/scripts/validate_primary_homes.py \
@@ -93,12 +136,26 @@ jobs:
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
           HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+          MAP_DURABLE_INTENT_REPO: snapshot
+          MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot
+          REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
+          MAP_PRODUCER_COMMIT="$(git -C source rev-parse HEAD)"
+          MAP_SOURCE_COMMIT="$(git -C snapshot rev-parse HEAD)"
+          export MAP_PRODUCER_COMMIT MAP_SOURCE_COMMIT
+          BIO_RELEASE_ARGS=()
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
+            BIO_RELEASE_ARGS+=(--require-bio-release)
+          fi
           map-publish-snapshot \
+            "${BIO_RELEASE_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --prior-revision "${{ steps.baseline.outputs.revision }}" \
+            --region-comparison-revision "${{ steps.region.outputs.revision }}" \
+            --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
@@ -122,13 +179,27 @@ jobs:
       - name: Record upload receipt
         if: ${{ always() }}
         working-directory: snapshot
+        env:
+          RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
         run: |
           if [ ! -f status/last-upload.json ]; then
             exit 0
           fi
+          if ! python ../source/scripts/require_current_upload_receipt.py \
+            --receipt status/last-upload.json \
+            --workflow-url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            --repair-mode "$RESTORE_PRIOR_REGIONS"; then
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if python -c 'import json; assert json.load(open("status/last-upload.json"))["status"] == "success"'; then
+            cp status/last-upload.json status/last-successful-upload.json
+          fi
           git add status/last-upload.json
+          if [ -f status/last-successful-upload.json ]; then
+            git add status/last-successful-upload.json
+          fi
           if git diff --cached --quiet; then
             exit 0
           fi
