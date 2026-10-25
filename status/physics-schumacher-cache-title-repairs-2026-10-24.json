@@ -54,6 +54,16 @@
       "repaired_value": "Kinematically complete measurement of the proton structure function F₂ in the resonance region and evaluation of its moments",
       "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.092001",
       "repair_basis": "publisher-title reconstruction of formula placeholder"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 33,
+      "author_pub_id": "LibSWRMAAAAJ:mVC4hKzE2FoC",
+      "cache_field": "title",
+      "captured_value": "Springer: Strong Interaction Physics at the Luminosity Frontier with 22 GeV Electrons at Jefferson Lab",
+      "repaired_value": "Strong Interaction Physics at the Luminosity Frontier with 22 GeV Electrons at Jefferson Lab",
+      "evidence_url": "https://link.springer.com/article/10.1140/epja/s10050-024-01282-x",
+      "repair_basis": "publisher title removes a site prefix; saved year remains unresolved"
     }
   ]
 }
