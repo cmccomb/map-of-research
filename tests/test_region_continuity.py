@@ -14,11 +14,29 @@ from map_of_research.region_continuity import (
     _indexed_observations,
     _indexed_works,
     _value,
+    _verification_url_identity,
     reconcile_region_decisions,
     require_revision,
 )
 
 REVISION = "a" * 40
+
+
+@pytest.mark.parametrize(
+    ("url", "identity"),
+    [
+        (
+            "https://PRIMARY.TEST:443/one?utm_source=mail&item=5#section",
+            "https://primary.test/one?item=5",
+        ),
+        ("https://primary.test:8443/one", "https://primary.test:8443/one"),
+        ("https://[2001:db8::1]/one", "https://[2001:db8::1]/one"),
+        ("  ", ""),
+        ("https://primary.test:invalid/one", "https://primary.test:invalid/one"),
+    ],
+)
+def test_verification_url_identity_preserves_document_location(url, identity):
+    assert _verification_url_identity(url) == identity
 
 
 def observation(
@@ -359,6 +377,28 @@ def test_unchanged_evidence_cannot_explain_gain_when_quality_version_changes():
                     "https://primary.test/one",
                     "https://primary.test/two",
                     "https://scholar.google.com/citations?x=2",
+                ]
+            },
+        ),
+        (
+            {"source_verification_urls": ["https://primary.test/one#section"]},
+            {},
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://PRIMARY.TEST:443/one?utm_source=newsletter#section",
+                    "https://primary.test/two",
+                ]
+            },
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/one?fbclid=tracking",
+                    "https://primary.test/two",
                 ]
             },
         ),

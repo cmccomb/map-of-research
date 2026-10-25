@@ -14,7 +14,7 @@ from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from datetime import date
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
 
@@ -208,6 +208,37 @@ def _independent_evidence(urls: Any) -> bool:
     return False
 
 
+_TRACKING_QUERY_KEYS = frozenset(
+    {"fbclid", "gclid", "gbraid", "wbraid", "msclkid", "mc_cid", "mc_eid", "igshid"}
+)
+
+
+def _verification_url_identity(value: str) -> str:
+    """Compare the cited document, ignoring URL presentation and tracking."""
+
+    parsed = urlsplit(value.strip())
+    hostname = (parsed.hostname or "").casefold()
+    if not hostname:
+        return value.strip()
+    try:
+        port = parsed.port
+    except ValueError:
+        return value.strip()
+    netloc = f"[{hostname}]" if ":" in hostname else hostname
+    if port is not None and port != 443:
+        netloc += f":{port}"
+    query = "&".join(
+        part
+        for part in parsed.query.split("&")
+        if part
+        and not (
+            (key := unquote_plus(part.partition("=")[0]).casefold()).startswith("utm_")
+            or key in _TRACKING_QUERY_KEYS
+        )
+    )
+    return urlunsplit((parsed.scheme.casefold(), netloc, parsed.path or "/", query, ""))
+
+
 def _valid_review_date(value: Any) -> bool:
     try:
         text = str(value or "")
@@ -269,7 +300,7 @@ def _verification_evidence(
         for value in _value(urls) or []:
             url = str(value).strip()
             if _independent_evidence([url]):
-                evidence.add(("verification_url", url))
+                evidence.add(("verification_url", _verification_url_identity(url)))
     if "curated_verified" in (_value(work.get("source_types")) or []):
         evidence.add(("source_type", "curated_verified"))
     return evidence
