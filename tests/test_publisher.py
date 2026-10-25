@@ -1525,7 +1525,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
-    frame = pandas.DataFrame({"scholar_id": ["one"]})
+    frame = pandas.DataFrame(
+        {
+            "scholar_id": ["one"],
+            "author_pub_id": ["one:a"],
+            "source_type": ["scholar"],
+        }
+    )
     tables = {
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
