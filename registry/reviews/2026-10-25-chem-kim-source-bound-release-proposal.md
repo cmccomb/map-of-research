@@ -30,10 +30,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 123 | `78eb9a0d9d6077a4ca62aa2a876311ccea299627418ad9811ebee18f2b4878e6` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 482 | `b24fc5fe9a2c0dc2d4e72d2d5fe0e8655458e3ee4c57aec7fe4df6d04d9dca68` |
-| Held from any map release | 313 | `d71cf9ebd04784eba3f7eceeb84562e70d8823588f713320bd1dfef89aff5435` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 484 | `2be3980e9c96c0c00d9e2fe48fbdfe0ef028347b559ccf6e4d9981f18925f7c3` |
+| Held from any map release | 311 | `f0435023b9fdb80528bf1eab8cdf8b5924020f94dbf05d0adf3a49eb96b97225` |
 
-The 313 holds comprise observations that still lack enough output-level review
+The 311 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 123 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -108,6 +108,9 @@ The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds
 keeps three more initials-only records held despite suggestive related sources.
 A [separate high-citation QC pass](2026-10-25-chem-kim-high-citation-holds-qc.md)
 documents 14 exact works that still lack a direct full-name attribution.
+[Ten further held rows checked against original and institutional sources](2026-10-25-chem-kim-ten-held-primary-source-pass.md)
+exclude only the two exact entomology outputs whose publisher names a
+different Kim; eight initials-only or output-ambiguous rows remain held.
 
 The offline [preparer](prepare_chem_kim_reviewed_subset.py) recreates a
 candidate `data/authors/bC4aq-4AAAAJ.json`-shaped cache and both proposal
@@ -128,8 +131,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 123 confirmed IDs, and the 482 exact exclusion IDs to
-these lists; it must prevent all 313 held rows from creating works,
+all 918 exact IDs, the 123 confirmed IDs, and the 484 exact exclusion IDs to
+these lists; it must prevent all 311 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the remaining outputs receive work-level review and the
 whole captured profile can be represented accurately. This proposal does not

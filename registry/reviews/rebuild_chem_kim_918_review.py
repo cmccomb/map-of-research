@@ -1855,6 +1855,56 @@ OTHER_PRIMARY_ID_GUARDS[857] = "bC4aq-4AAAAJ:KUbvn5osdkgC"
 ECS_OTHER_PERSON_VENUE = "Electrochemical Society Meeting Abstracts PBFC-2, 33-33, 2006"
 ECS_OTHER_PERSON_AUTHORS = "E Cho, M Prasanna, HJ Kim, TH Lim, IH Oh, SA Hong"
 
+# The original Korean Society of Applied Entomology pages for these exact
+# articles spell the H. J. Kim author's name 김현주. The Korean national
+# citation index assigns that author to the Yeongnam crop-research station;
+# a Korean academic repository romanizes the same crop-research author as
+# Hyun-Joo Kim. These are exact article identifications, not exclusions from
+# subject area or from initials alone.
+ENTOMOLOGY_OTHER_PERSON_PRIMARY = {
+    286: (
+        "Effects of food combinations of leguminous seeds on nymphal "
+        "development, adult longevity and oviposition of bean bug, "
+        "Riptortus clavatus Thunberg",
+        2004,
+        "Hyun-Joo Kim (김현주)",
+        "",
+        "https://entomology2.or.kr/journal/article.php?Array=&code=10874",
+        "Korean Society of Applied Entomology original article",
+        "The society's exact volume 43 issue 2, pages 123–127 article "
+        "names its Kim coauthor 김현주; the Korean national citation index "
+        "assigns that author to the Yeongnam crop-research station.",
+    ),
+    341: (
+        "Insecticide susceptibility in the different larva of tabacco "
+        "cutworm, Spodoptera litura Fabricius (Lepidoptera: Noctuidae) "
+        "collected in the soybean fields of Milyang, Korea",
+        2003,
+        "Hyun-Joo Kim (김현주)",
+        "",
+        "https://www.entomology2.or.kr/journal/article.php?Array=&code=10834",
+        "Korean Society of Applied Entomology original article",
+        "The society's exact volume 42 issue 3, pages 225–231 article "
+        "names its Kim coauthor 김현주; the Korean national citation index "
+        "assigns that author to the Yeongnam agricultural experiment station.",
+    ),
+}
+OTHER_PRIMARY.update(ENTOMOLOGY_OTHER_PERSON_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        286: "bC4aq-4AAAAJ:9tXw7Op4-u0C",
+        341: "bC4aq-4AAAAJ:TiIbgCYny7sC",
+    }
+)
+ENTOMOLOGY_OTHER_PERSON_VENUES = {
+    286: "Korean Journal of Applied Entomology 43 (2), 2004",
+    341: "Korean Journal of Applied Entomology 42 (3), 2003",
+}
+ENTOMOLOGY_OTHER_PERSON_AUTHORS = {
+    286: "SD Bae, HJ Kim, HJ Cho, JK Park, JK Jung",
+    341: "SD Bae, HJ Kim, BR Choi, YH Song",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3486,6 +3536,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["authors"] != FOLLOWUP_KNU_DUPLICATE_AUTHORS[index]
                 )
                 or (
+                    index in ENTOMOLOGY_OTHER_PERSON_VENUES
+                    and row["venue"] != ENTOMOLOGY_OTHER_PERSON_VENUES[index]
+                )
+                or (
+                    index in ENTOMOLOGY_OTHER_PERSON_AUTHORS
+                    and row["authors"] != ENTOMOLOGY_OTHER_PERSON_AUTHORS[index]
+                )
+                or (
                     index in COSINE_FULLNAME_VENUES
                     and row["venue"] != COSINE_FULLNAME_VENUES[index]
                 )
@@ -3875,17 +3933,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 127,
+        "proposed_other_person_primary_work": 129,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 309,
+        "unresolved_attribution_hold": 307,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 474 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 476 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
