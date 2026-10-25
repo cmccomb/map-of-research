@@ -68,6 +68,16 @@ jobs:
             --departments source/registry/departments.csv \
             --cache-dir snapshot/data/authors \
             --capture-dir snapshot/data/captures
+      - name: Verify complete Scholar sources before publication
+        run: |
+          map-validate-scholar-coverage \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --baseline source/registry/legacy-scholar-cache-baseline.json \
+            --cache-dir snapshot/data/authors \
+            --captures-dir snapshot/data/captures \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet
       - name: Validate, enrich, and publish snapshot
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
@@ -83,6 +93,9 @@ jobs:
             --departments source/registry/departments.csv \
             --math-cache-dir snapshot/data/authors \
             --math-capture-dir snapshot/data/captures \
+            --scholar-cache-dir snapshot/data/authors \
+            --scholar-captures-dir snapshot/data/captures \
+            --scholar-baseline source/registry/legacy-scholar-cache-baseline.json \
             --reviewed-exclusions source/data/curated/scholar-exclusions.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
