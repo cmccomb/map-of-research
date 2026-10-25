@@ -9184,6 +9184,22 @@
       "reason": "The Scholar row says To appear, but the author's current research page treats this as an active project and his published survey cites it as in preparation; no standalone published document is identified.",
       "evidence_url": "https://matthewrosenzweigwork-max.github.io/research.html",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:OU6Ihb5iCvQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 94 repeats arXiv:2511.16648 with the exact title but a degraded author string; retain row 95 AcW2EXwAAAAJ:p2g8aNsByqUC, which preserves the arXiv record's Ignacio Magaña Hernandez and Katelyn Breivik byline.",
+      "evidence_url": "https://arxiv.org/abs/2511.16648",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 128 repeats the 2020 Classical and Quantum Gravity 37:215011 article retained at row 6 AcW2EXwAAAAJ:Tyk-4Ss8FVUC, but treats CQ Grav as an author and omits venue and year; the University of Glasgow record gives the article DOI and Sedda-first byline with Breivik.",
+      "evidence_url": "https://eprints.gla.ac.uk/226485/",
+      "verified_at": "2026-10-24"
     }
   ]
 }
