@@ -1921,7 +1921,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
     monkeypatch.setattr(
         publisher,
         "exclude_low_information_regions",
-        lambda works: works,
+        lambda works, **kwargs: works,
     )
     monkeypatch.setattr(
         publisher,
@@ -2074,7 +2074,7 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         lambda works: works.assign(keyword_id="k", detail_keyword_id="d"),
     )
     monkeypatch.setattr(
-        publisher, "exclude_low_information_regions", lambda works: works
+        publisher, "exclude_low_information_regions", lambda works, **kwargs: works
     )
 
     def upload_dataset(*args, **kwargs):
