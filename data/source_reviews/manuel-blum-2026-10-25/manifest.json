@@ -20,6 +20,12 @@
     "row_count": 59,
     "interpretation": "Verbatim bibliography observations; neither deduplicated works nor complete career output"
   },
+  "post_2011_candidates": {
+    "path": "post-2011-candidates.csv",
+    "sha256": "faa22dc6f8438340bec93ce5a2fc07c827dc2552c0b9badc2c549bf38900584a",
+    "row_count": 8,
+    "interpretation": "Held later arXiv source observations; identity and work-family reconciliation required; not eight distinct works"
+  },
   "known_omission": {
     "doi": "10.1073/pnas.1801839117",
     "year": 2020,
