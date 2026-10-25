@@ -15,9 +15,11 @@ dispositions. The two old ORNL variants must map to the current row's exact
 verified curated work; the EGU25 abstract maps to its current Scholar ID. No
 old-only row is appended to the 250-row current source.
 
-The source snapshot has **not** been rebuilt on this draft branch. Rebase on the
-latest completed Math-inclusive source snapshot, merge the producer gate first,
-rebuild and validate one combined snapshot, inspect the 250 raw Sullivan rows
-and the exclusion/hold contributions, then upload and pin the immutable revision
-in both public maps. Until those steps pass, this branch is not merge-ready and
-no public publication count or graph link changes.
+The source snapshot has **not** been rebuilt on this draft branch. This source
+stack is rebased on the committed Collins plus three-person snapshot at
+`c5f2a426`; its protected upload and live-map checks must finish first. Then
+merge the reviewed Sullivan producer gate, rebuild and validate a new snapshot,
+inspect the 250 raw Sullivan rows and exclusion/hold contributions, and upload
+and pin that immutable revision in both public maps. Until those steps pass,
+this branch is not merge-ready and no public publication count or graph link
+changes.
