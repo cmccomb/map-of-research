@@ -4,14 +4,8 @@
   "reviewed_at": "2026-10-24",
   "scholar_id": "jcb81yAAAAAJ",
   "raw_observation_count": 184,
-  "unresolved_candidate_count": 1,
-  "candidates": [
-    {
-      "capture_row": 181,
-      "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
-      "concern": "A forum for collaboration has no exact identified publication source; hold for source/type review. No exclusion decision is applied."
-    }
-  ],
+  "unresolved_candidate_count": 0,
+  "candidates": [],
   "existing_in_producer_main": [
     {
       "scholar_id": "jcb81yAAAAAJ",
@@ -104,6 +98,15 @@
       "evidence_url": "https://authors.library.caltech.edu/records/txr8t-24d03"
     },
     {
+      "capture_row": 181,
+      "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact-title IOP deposit dates the Physics Bulletin item to March 1984, pages 92-93, and has no author field. A separate IOP PDF recommendation panel contains the saved Salim/Fang/Rich and Trac/Chen/Holst name groups for two unrelated articles. We infer the captured byline is a parser conflation rather than evidence Trac authored the 1984 item.",
+      "evidence_url": "https://api.crossref.org/works/10.1088%2F0031-9112%2F35%2F3%2F007",
+      "supporting_evidence_url": "https://ricerca.uniba.it/bitstream/11586/411976/1/Venkatesh_2022_Environ._Res._Lett._17_095007.pdf",
+      "supporting_evidence_note": "The publisher PDF first-page recommendation panel lists Salim/Fang/Rich and Trac/Chen/Holst on two different suggested articles. We infer these snippets explain the composite captured author field."
+    },
+    {
       "capture_row": 183,
       "author_pub_id": "jcb81yAAAAAJ:9KdEqzwCTsEC",
       "retain_row": 25,
@@ -140,5 +143,5 @@
       "evidence_url": "https://ascl.net/1102.008"
     }
   ],
-  "note": "All 184 raw rows remain intact. The nine new corrupted-duplicate decisions refer only to exact malformed repeat IDs; genuine correction and software records remain. Row 181 is unresolved."
+  "note": "All 184 raw rows remain intact. Nine corrupted-duplicate decisions refer only to exact malformed repeat IDs. Rows 181 and 184 have separate source-backed false-attribution and proposal decisions; genuine correction and software records remain. No Trac candidate in this slice is unresolved."
 }
