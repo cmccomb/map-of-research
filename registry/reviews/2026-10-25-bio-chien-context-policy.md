@@ -45,11 +45,11 @@ transcript by type.
 3. Confirm patent rows 359 and 394 have distinct `work_id` values and their
    exact publication numbers; no patent, editor, or panel edge may appear in
    the collaboration graph.
-4. Show the reviewed type and the proper inventor or editor label on the
-   research map before releasing the 10 mapped non-article records (nine
-   patents and one edited book). The present `map-of-eng` details view labels
-   all contributor strings “Authors,” which would misdescribe inventors and
-   editors.
+4. After the producer uploads the 10 typed research-map items (nine patents and
+   one edited book), verify their reviewed types and inventor or editor labels
+   in the deployed `map-of-eng` details view. The consumer label change is
+   deployed, but these exact items still need a live check against the new
+   dataset revision.
 5. Check the producer manifest hash in the upload receipt, then verify both
    rendered maps against the same immutable dataset revision.
 
