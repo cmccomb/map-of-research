@@ -1,0 +1,30 @@
+elements_ordinal,cmu_elements_object_id,canonical_cmu_object_id,relation,paired_preprint_object_id,elements_title_as_listed,elements_type_as_listed,elements_year_as_listed,elements_date_as_listed,canonical_display_year_for_review,review_basis,author_page_match,external_evidence_url
+1,739552,739552,journal_canonical,739554,Cycle Decompositions of Cartesian Products of Two Cycles,Journal article,2025,2025-07-25T00:00:00-04:00,2025,source_record,preprint:1,
+2,791733,791733,standalone_preprint,,Minimum packing density for sets of four integers,Preprint,2025,2025-01-02T00:00:00-05:00,2025,source_record,,
+3,532091,532091,journal_canonical,791731,Decompositions of even hypercubes into cycles whose length is a power of 2,Journal article,2024,2024-01-01T00:00:00-05:00,2024,source_record,journal:1,
+4,739554,739552,preprint_version,,Cycle decompositions of cartesian products of two cycles,Preprint,2023,2023-10-20T00:00:00-04:00,2025,same_work_title_and_ordered_authors,preprint:1,https://arxiv.org/abs/2310.13493
+5,798473,798473,standalone_preprint,,A linear optimization approach to decision support with CANS data,Preprint,2023,2023-10-19T00:00:00-04:00,2023,source_record,preprint:2,
+6,428523,428523,journal_canonical,428524,Generalized Turán densities in the hypercube,Journal article,2023,2023-02-01T00:00:00-05:00,2023,source_record,journal:2,
+7,428524,428523,preprint_version,,Generalized Turán densities in the hypercube,Preprint,2022,2022-01-23T00:00:00-05:00,2023,same_work_title_and_ordered_authors,journal:2,
+8,791731,532091,preprint_version,,Decompositions of even hypercubes into cycles whose length is a power of two,Preprint,2021,2021-07-15T00:00:00-04:00,2024,arxiv_related_doi_title_two_vs_2,journal:1,https://arxiv.org/abs/2107.07450
+9,428525,428525,journal_canonical,428526,Long path and cycle decompositions of even hypercubes,Journal article,2021,2021-06-01T00:00:00-04:00,2021,source_record,journal:4,
+10,428526,428525,preprint_version,,Long path and cycle decompositions of even hypercubes,Preprint,2021,2021-01-24T00:00:00-05:00,2021,arxiv_v1_2019_elements_revision_2021,journal:4,https://arxiv.org/abs/1905.10114
+11,428533,428533,journal_canonical,791727,Capture-Time Extremal Cop-Win Graphs,Journal article,2021,2021-01-01T00:00:00-05:00,2021,source_record,journal:3,
+12,428532,428532,journal_canonical,791728,Comparing the power of cops to zombies in pursuit-evasion games,Journal article,2019,2019-12-01T00:00:00-05:00,2019,source_record,journal:5,
+13,791727,428533,preprint_version,,Capture-time Extremal Cop-Win Graphs,Preprint,2019,2019-03-19T00:00:00-04:00,2021,same_work_title_and_ordered_authors,journal:3,
+14,458958,458958,journal_canonical,428450,POLYCHROMATIC COLORINGS ON THE INTEGERS,Journal article,2019,2019-01-01T00:00:00-05:00,2019,source_record,journal:6,
+15,791730,791730,standalone_preprint,,An analysis of a fair division protocol for drawing legislative districts,Preprint,2018,2018-11-14T00:00:00-05:00,2018,source_record,preprint:3,
+16,791728,428532,preprint_version,,Comparing the power of cops to zombies in pursuit-evasion games,Preprint,2018,2018-09-09T00:00:00-04:00,2019,same_work_title_and_ordered_authors,journal:5,
+17,428450,458958,preprint_version,,Polychromatic Colorings on the Integers,Preprint,2018,2018-08-03T00:00:00-04:00,2019,author_page_and_integers_publisher_byline,journal:6,https://math.colgate.edu/~integers/t18/t18.pdf
+18,428527,428527,journal_canonical,791729,Linear <i>d</i>-Polychromatic -Colorings of the Hypercube,Journal article,2018,2018-07-01T00:00:00-04:00,2018,source_record,journal:8,
+19,428456,428472,preprint_version,,Polychromatic Colorings on the Hypercube,Preprint,2018,2018-04-11T00:00:00-04:00,2018,same_work_title_and_ordered_authors,journal:7,
+20,428476,428476,journal_canonical,428454,"Polychromatic colorings of complete graphs with respect to 1-, 2-factors and Hamiltonian cycles",Journal article,2018,2018-04-01T00:00:00-04:00,2018,source_record,journal:9,
+21,428472,428472,journal_canonical,428456,Polychromatic colorings on the hypercube,Journal article,2018,2018-01-01T00:00:00-05:00,2018,source_record,journal:7,
+22,791729,428527,preprint_version,,Linear $d$-polychromatic $Q_{d-1}$-colorings of the Hypercube,Preprint,2017,2017-12-07T00:00:00-05:00,2018,arxiv_publisher_title_math_markup,journal:8,https://arxiv.org/abs/1712.02496
+23,791732,791732,standalone_preprint,,Cop-Win Graphs: Optimal Strategies and Corner Rank,Preprint,2017,2017-03-10T00:00:00-05:00,2016,source_record,preprint:4,https://arxiv.org/abs/1607.03471
+24,428454,428476,preprint_version,,"Polychromatic colorings of complete graphs with respect to 1-,2-factors and Hamiltonian cycles",Preprint,2016,2016-12-10T00:00:00-05:00,2018,same_work_title_and_ordered_authors,journal:9,
+25,428529,428529,journal_canonical,,Counting matrices over a finite field with all eigenvalues in the field,Journal article,2014,2014-08-01T00:00:00-04:00,2014,source_record,journal:10,
+26,428534,428534,journal_canonical,,Variations of cops and robber on the hypercube,Journal article,2014,2014-06-01T00:00:00-04:00,2014,source_record,journal:11,
+27,428528,428528,journal_canonical,,PACKING THE HYPERCUBE,Journal article,2014,2014-01-01T00:00:00-05:00,2014,source_record,journal:12,
+28,428531,428531,journal_canonical,,Some Turan type results on the hypercube,Journal article,2009,2009-05-06T00:00:00-04:00,2009,source_record,journal:13,
+29,428530,428530,journal_canonical,,Polychromatic colorings of subcubes of the hypercube,Journal article,2008,2008-01-01T00:00:00-05:00,2008,source_record,journal:14,

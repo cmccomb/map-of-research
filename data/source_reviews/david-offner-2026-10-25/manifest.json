@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "review_only_no_snapshot_no_release",
+  "person_id": "person-davidoffner-91600258",
+  "scholar_account_status": "no_verified_account",
+  "cmu_elements_user_id": 5568,
+  "cmu_elements_page_urls": [
+    "https://scholars.cmu.edu/5568-david-offner/publications",
+    "https://scholars.cmu.edu/5568-david-offner/publications?startFrom=25&sort=dateDesc&favouritesFirst=true"
+  ],
+  "author_page_url": "https://davidoffner.wordpress.com/research/",
+  "cv_url": "https://davidoffner.wordpress.com/wp-content/uploads/2022/11/cvsep22.pdf",
+  "counts": {
+    "elements_observations": 29,
+    "elements_journal_observations": 15,
+    "elements_preprint_observations": 14,
+    "preprint_journal_pairs": 10,
+    "distinct_research_works": 19,
+    "author_page_observations": 20,
+    "author_page_journal": 14,
+    "author_page_preprint": 4,
+    "author_page_other": 2,
+    "source_union_distinct_outputs_excluding_thesis": 21
+  },
+  "files": {
+    "elements-page-1.html": "f46444aa469f44284981d97ae1a71b757057bcba4b0a8eecd1207cf47c908b00",
+    "elements-page-2.html": "a17cff1cce1316f15d401857b7298e329bd4967ed80aa828cfa610dfdc6191ff",
+    "author-research.html": "92084389da8bee14eab13186e7635547e1f152bd1a28d313d9a3993215799830",
+    "cvsep22.pdf": "1c2ee474da1f0b356af07c2b66e6ac767deb356a25995e228fdc673c8365f9c4",
+    "elements-29.csv": "c142d587d109c0e71c874081e447bfcf1d8fe1598ff024f22cc6807b1f1ef826",
+    "elements-crosswalk-29.csv": "ceef45eba4a0ef92b91a9fa37bb5c592cfa0d5412df4c3aacd579cca70107d55",
+    "author-20.csv": "f2197390528007e345ea6840236fe7c241c4dfe6f1c68d025fd827e3a474953a"
+  },
+  "version_pairs": [
+    {
+      "preprint_object_id": 739554,
+      "journal_object_id": 739552
+    },
+    {
+      "preprint_object_id": 791731,
+      "journal_object_id": 532091
+    },
+    {
+      "preprint_object_id": 428524,
+      "journal_object_id": 428523
+    },
+    {
+      "preprint_object_id": 428526,
+      "journal_object_id": 428525
+    },
+    {
+      "preprint_object_id": 791727,
+      "journal_object_id": 428533
+    },
+    {
+      "preprint_object_id": 791728,
+      "journal_object_id": 428532
+    },
+    {
+      "preprint_object_id": 428450,
+      "journal_object_id": 458958
+    },
+    {
+      "preprint_object_id": 791729,
+      "journal_object_id": 428527
+    },
+    {
+      "preprint_object_id": 428456,
+      "journal_object_id": 428472
+    },
+    {
+      "preprint_object_id": 428454,
+      "journal_object_id": 428476
+    }
+  ],
+  "known_source_holds": [
+    "No exact Google Scholar author account",
+    "2022 CV and author page do not establish exhaustive career coverage as of 2026",
+    "2016 thesis omitted until dissertation policy and archival record",
+    "book review and problem solution are not research articles and their participants cannot form research coauthor links from this capture"
+  ],
+  "assembled_at_utc": "2026-10-25T12:45:49+00:00"
+}
