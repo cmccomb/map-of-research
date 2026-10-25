@@ -598,6 +598,12 @@ OTHER_PRIMARY_ID_GUARDS = {
     272: "bC4aq-4AAAAJ:M7yex6snE4oC",
     289: "bC4aq-4AAAAJ:nrtMV_XWKgEC",
     716: "bC4aq-4AAAAJ:Mojj43d5GZwC",
+    407: "bC4aq-4AAAAJ:1qzjygNMrQYC",
+    446: "bC4aq-4AAAAJ:HtEfBTGE9r8C",
+    457: "bC4aq-4AAAAJ:uc_IGeMz5qoC",
+    556: "bC4aq-4AAAAJ:epqYDVWIO7EC",
+    580: "bC4aq-4AAAAJ:yB1At4FlUx8C",
+    654: "bC4aq-4AAAAJ:EkHepimYqZsC",
 }
 
 OTHER_PRIMARY.update(
@@ -1035,6 +1041,94 @@ PATENT_VENUES = {
     272: "US Patent App. 13/471,967, 2012",
     289: "US Patent 5,714,570, 1998",
     716: "US Patent 7,849,136, 2010",
+}
+
+# These exact IEEE/Springer/Informa works expand the saved Scholar initials.
+# IEEE and Informa deposits give full authors, while Springer also supplies
+# the KIST affiliation on its original article page.
+KIST_COMMUNITY_FULL_AUTHOR_PRIMARY = {
+    407: (
+        "Community manager: A dynamic collaboration solution on "
+        "heterogeneous environment",
+        2006,
+        "Hyeonsook Kim",
+        "10.1109/PERSER.2006.1652205",
+        "https://api.crossref.org/works/10.1109%2FPERSER.2006.1652205",
+        "IEEE publisher-deposited full-author DOI record",
+        "The IEEE deposit expands the first H. Kim author to Hyeonsook "
+        "Kim and matches the exact 2006 conference title, pages 39-46, "
+        "and four other coauthors in the Scholar row.",
+    ),
+    446: (
+        "Resonance properties and mass sensitivity of monolithic "
+        "microcantilever sensors actuated by piezoelectric PZT thick film",
+        2006,
+        "Hyung Joon Kim",
+        "10.1007/s10832-006-6290-8",
+        "https://link.springer.com/article/10.1007/s10832-006-6290-8",
+        "Original Springer article with full-name byline and KIST affiliation",
+        "Springer names third author Hyung Joon Kim at KIST Microsystem "
+        "Research Center in the exact 2006 Journal of Electroceramics "
+        "17:565-572 article.",
+    ),
+    457: (
+        "Fabrication and resonant behavior of PZT thick film cantilever for BioChip",
+        2002,
+        "Hyung Joon Kim",
+        "10.1080/743817676",
+        "https://api.crossref.org/works/10.1080%2F743817676",
+        "Informa publisher-deposited full-author DOI record",
+        "The exact Integrated Ferroelectrics 50:11-20 article names first "
+        "author Hyung Joon Kim at KIST with Yong-Bum Kim, Ji-Yoon Kang, "
+        "and Tae Song Kim.",
+    ),
+    556: (
+        "Electrical properties of 3-component piezoelectric thick films "
+        "by screen printing method",
+        2001,
+        "Hyung-Joon Kim",
+        "10.1080/10584580108012813",
+        "https://api.crossref.org/works/10.1080%2F10584580108012813",
+        "Informa publisher-deposited full-author DOI record",
+        "The exact Integrated Ferroelectrics 41:107-117 article names "
+        "second author Hyung-Joon Kim with the same five-author team; "
+        "Yonsei University's publication record independently expands "
+        "the same exact output to Hyung Joon Kim.",
+    ),
+    580: (
+        "Preparation of diffuser type micropump using screen-printed "
+        "PZT-PCW thick films",
+        2002,
+        "Hyung-Joon Kim",
+        "10.1080/743817664",
+        "https://api.crossref.org/works/10.1080%2F743817664",
+        "Informa publisher-deposited full-author DOI record",
+        "The exact Integrated Ferroelectrics 50:61-70 article names "
+        "second author Hyung-Joon Kim with the same five-author team; "
+        "Yonsei University's publication record independently expands "
+        "the same exact output to Hyung Joon Kim.",
+    ),
+    654: (
+        "Biological element detection sensor application of micromachined "
+        "PZT thick film cantilever",
+        2003,
+        "Hyung Joon Kim",
+        "10.1109/ICSENS.2003.1279104",
+        "https://api.crossref.org/works/10.1109%2FICSENS.2003.1279104",
+        "IEEE publisher-deposited full-author DOI record",
+        "The IEEE Sensors 2003 proceedings deposit expands first author "
+        "H. J. Kim to Hyung Joon Kim and matches pages 1054-1058 and "
+        "Yong Bum Kim, Jaebum Park, and Tae Song Kim.",
+    ),
+}
+OTHER_PRIMARY.update(KIST_COMMUNITY_FULL_AUTHOR_PRIMARY)
+KIST_COMMUNITY_VENUES = {
+    407: "2006 ACS/IEEE International Conference on Pervasive Services, 39-46, 2006",
+    446: "Journal of electroceramics 17 (2), 565-572, 2006",
+    457: "Integrated Ferroelectrics 50 (1), 11-20, 2002",
+    556: "Integrated Ferroelectrics 41 (1-4), 107-117, 2001",
+    580: "Integrated Ferroelectrics 50 (1), 61-70, 2002",
+    654: "SENSORS, 2003 IEEE 2, 1054-1058, 2003",
 }
 
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
@@ -2499,6 +2593,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 )
                 or (index in PATENT_VENUES and row["venue"] != PATENT_VENUES[index])
                 or (
+                    index in KIST_COMMUNITY_VENUES
+                    and row["venue"] != KIST_COMMUNITY_VENUES[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -2797,17 +2895,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 80,
+        "proposed_other_person_primary_work": 86,
         "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 362,
+        "unresolved_attribution_hold": 356,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 422 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 428 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
