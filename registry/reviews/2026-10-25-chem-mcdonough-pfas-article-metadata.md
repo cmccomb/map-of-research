@@ -1,0 +1,9 @@
+# Carrie McDonough: undated PFAS article metadata
+
+The complete 55-row Google Scholar capture for Carrie McDonough (`Xq5HrPYAAAAJ`) has one article with an exact title and two-author string but no year or venue: `Xq5HrPYAAAAJ:O3NaXMp0MMsC`, *Tackling PFAS Complexity with HRMS and Bioanalytical Techniques*. The raw cache and snapshot are preserved.
+
+The [original publisher article](https://www.chromatographyonline.com/view/tackling-pfas-complexity-with-hrms-and-bioanalytical-techniques) names Carrie McDonough and Wesley Scott, dates it September 1, 2023, and identifies *LCGC Supplements*, *Hot Topics in PFAS*, volume 41, issue s9, pages 12–16, DOI `10.56530/lcgc.na.nr4267c9`. The [McDonough Lab publication list](https://groups.chem.cmu.edu/mcdonough/) independently includes the same article and bibliographic coordinates.
+
+Apply an exact effective metadata correction for year and venue, guarded by the raw title, missing year, and blank venue. This retains the article as a real publication and makes it appear in its publication-year filter. The Scholar observation, author string, and source receipt do not change. No other McDonough row is adjudicated here.
+
+A no-upload, 55-row profile preview applied exactly one correction. It preserved all 55 source observations and authorships and all 55 pre-region eligible works. This correction changes the article's work ID from the undated title key `work-f3f076b22cbe1e258ecaeba5ca0ef20a5f3eb34e7722538d17e3500a84ab268b` to its dated title key `work-b54182566e25c2ad6750342c971c1629567ae1753ad5c1ae33941ceb1f47e9fb`; no other McDonough row changed work ID. The current `bb88ddf0` Hub works table marks the old work as visible. A future publication must treat the old/new IDs as one reviewed replacement and verify that unrelated visible points are preserved. Local preview receipt: `work/chem-mcdonough-article-metadata-preview-20261025.json`. No Hub write occurred.
