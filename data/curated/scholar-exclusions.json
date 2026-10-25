@@ -4976,6 +4976,46 @@
       "reason": "The published article names Srijit Das of Sultan Qaboos University Human and Clinical Anatomy; the captured title refers to this article, distinct from CMU chemist Subha R. Das.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11816445/",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:jmjb1lOE9QIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CGCRI names the exact IEEE Photonics Journal author Shyamal Das, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/3728/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:1yQoGdGgb4wC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original journal paper affiliates its S. Das author with CGCRI Fiber Optics and Photonics in Kolkata, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://ifo.lviv.ua/journal/UJPO_PDF/2014_4/0104_2014.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:artPoR2Yc-kC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CGCRI holds this exact 2022 publisher note correcting the 2019 paper; the original author is named Shyamal Das in a collaborating university repository, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/5501/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:pQTOvowfQioC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CGCRI holds the exact Journal of Lightwave Technology paper under its Fiber Optics and Photonics division, with its S. Das in that institutional research group, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/1662/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:SpbeaW3--B0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "CGCRI catalogs this exact Optics and Spectroscopy paper under Shyamal Das and its Fiber Optics and Photonics division, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/250/",
+      "verified_at": "2026-10-24"
     }
   ]
 }
