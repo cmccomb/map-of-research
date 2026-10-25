@@ -5,6 +5,7 @@ from pathlib import Path
 import pandas
 import pytest
 
+import map_of_research.coverage as coverage
 from map_of_research import publisher
 from map_of_research.coverage import (
     main,
@@ -846,6 +847,137 @@ def _svg_title_repair_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
         },
     )
     return cache, captures, ledger
+
+
+def test_nine_profile_svg_ledger_is_source_bound(tmp_path: Path, monkeypatch) -> None:
+    cache, captures, old_ledger = _svg_title_repair_fixture(tmp_path)
+    new_ledger = old_ledger.with_name("physics-nine-svg-title-repairs-2026-10-25.json")
+    old_ledger.rename(new_ledger)
+    monkeypatch.setattr(coverage, "_PHYSICS_NINE_SVG_SCHOLARS", {"alphaAAAAJ"})
+    validate_complete_receipt("alphaAAAAJ", cache, captures)
+    new_ledger.unlink()
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, captures)
+
+
+def test_older_physics_cache_repairs_require_exact_capture_and_review(
+    tmp_path: Path,
+) -> None:
+    scholar_id = "wJ_gQLoAAAAJ"
+    receipt = {
+        "source_json_sha256": coverage._PHYSICS_REVIEW_SOURCE_HASHES[scholar_id][0],
+        "source_html_sha256": coverage._PHYSICS_REVIEW_SOURCE_HASHES[scholar_id][1],
+    }
+    captures = tmp_path / "data" / "captures"
+    captures.mkdir(parents=True)
+    ledger = tmp_path / coverage._PHYSICS_REVIEW_REPAIR_LEDGERS[scholar_id]
+    ledger.parent.mkdir(parents=True, exist_ok=True)
+    entry = {
+        "scholar_id": scholar_id,
+        "capture_row": 10,
+        "author_pub_id": f"{scholar_id}:one",
+        "cache_field": "title",
+        "captured_value": "captured title",
+        "repaired_value": "reviewed title",
+        "evidence_url": "https://example.org/primary",
+    }
+    document = {
+        "schema_version": 1,
+        "review_state": "source_reviewed_cache_repaired",
+        "raw_capture_and_receipt_unchanged": True,
+        "capture_receipts": {scholar_id: coverage._PHYSICS_REVIEW_RECEIPTS[scholar_id]},
+        "repairs": [entry],
+    }
+
+    def accepted(
+        *,
+        field: str = "title",
+        source: str = "captured title",
+        repaired: str = "reviewed title",
+        current_receipt: dict | None = None,
+    ) -> bool:
+        return coverage._is_reviewed_physics_cache_repair(
+            scholar_id,
+            10,
+            f"{scholar_id}:one",
+            field,
+            source,
+            repaired,
+            current_receipt or receipt,
+            captures,
+        )
+
+    assert not accepted()
+    ledger.write_text("{")
+    assert not accepted()
+    atomic_write_json(ledger, document)
+    assert accepted()
+    assert not accepted(field="author")
+    assert not accepted(source="different title")
+    assert not accepted(repaired="different repair")
+    assert not accepted(current_receipt={**receipt, "source_json_sha256": "bad"})
+    assert not coverage._is_reviewed_physics_cache_repair(
+        "other",
+        10,
+        "other:one",
+        "title",
+        "captured title",
+        "reviewed title",
+        receipt,
+        captures,
+    )
+
+    for mutation in (
+        {"schema_version": 2},
+        {"review_state": "unreviewed"},
+        {"raw_capture_and_receipt_unchanged": False},
+        {"capture_receipts": []},
+        {"capture_receipts": {scholar_id: "different receipt"}},
+        {"repairs": "invalid"},
+        {"repairs": []},
+        {"repairs": [entry, dict(entry)]},
+        {"repairs": [{**entry, "evidence_url": "http://example.org"}]},
+        {"repairs": [{**entry, "capture_row": 11}]},
+        {"repairs": [{**entry, "author_pub_id": "other:one"}]},
+        {"repairs": [{**entry, "cache_field": "venue"}]},
+        {"repairs": [{**entry, "scholar_id": "other"}]},
+    ):
+        atomic_write_json(ledger, {**document, **mutation})
+        assert not accepted()
+    atomic_write_json(ledger, [entry])
+    assert not accepted()
+    atomic_write_json(ledger, {**document, "repairs": ["invalid", entry]})
+    assert accepted()
+    atomic_write_json(
+        ledger, {**document, "repairs": [{**entry, "cache_field": "venue"}]}
+    )
+    assert coverage._is_reviewed_physics_cache_repair(
+        scholar_id,
+        10,
+        f"{scholar_id}:one",
+        "venue",
+        "captured title",
+        "reviewed title",
+        receipt,
+        captures,
+    )
+
+    assert coverage._is_reviewed_physics_split_venue(
+        scholar_id, "Journal 10", "2020", "Journal 10, 2020", receipt
+    )
+    assert coverage._is_reviewed_physics_split_venue(
+        scholar_id, "Journal 10", "", "Journal 10, 0", receipt
+    )
+    assert not coverage._is_reviewed_physics_split_venue(
+        scholar_id, "Journal 10", "2020", "different", receipt
+    )
+    assert not coverage._is_reviewed_physics_split_venue(
+        scholar_id,
+        "Journal 10",
+        "2020",
+        "Journal 10, 2020",
+        {**receipt, "source_html_sha256": "bad"},
+    )
 
 
 def test_receipt_accepts_exact_ledger_listed_saved_html_svg_title(

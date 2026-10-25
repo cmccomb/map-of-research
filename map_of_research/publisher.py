@@ -1649,8 +1649,6 @@ def publish_snapshot(
     exclusions = load_exclusions(exclusions_path)
     doi_aliases = load_doi_aliases(doi_aliases_path)
     validate_doi_aliases(frame, doi_aliases, exclusions)
-    _require_physics_review_ready(frame, snapshot_path, exclusions)
-    _require_breivik_review_ready(frame, snapshot_path, exclusions)
     corrections = load_corrections(corrections_path)
     corrected_frame, validated_correction_count = apply_corrections(frame, corrections)
     contexts = load_contexts(contexts_path)
@@ -1672,6 +1670,10 @@ def publish_snapshot(
             cache_dir=cache_dir,
         )
     )
+    # Exact cache-bound holds remove these rows before their historical
+    # map-quality gates; any unheld row still has to pass its source review.
+    _require_physics_review_ready(released_frame, snapshot_path, exclusions)
+    _require_breivik_review_ready(released_frame, snapshot_path, exclusions)
     released_frame, person_hold_receipt, held_person_observation_ids = (
         select_released_person_observations(
             released_frame,
