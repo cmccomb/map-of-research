@@ -7464,6 +7464,118 @@
       "reason": "Capture row 1949 uniquely maps to the 2013 CMS FWD-11-001 paper; its full collaboration author appendix omits Matteo Cremonesi, whose CMU CV dates CMS membership from January 2015.",
       "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FWD-11-001/index.html",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:cIAfX1pVE14C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1550 is a fragment-author, institution-venue copy of the 2018 JHEP 07 161 paper; retain the complete published row wJ_gQLoAAAAJ:1sJd4Hv_s6UC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-15-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:XEKcsfOMjpkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1323 has the same 2021 paper title but a fragment author list and blank venue; retain the JINST 16 P05014 row wJ_gQLoAAAAJ:u76CbRzuV8AC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EGM-17-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:uQdrZ3qaPmcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1525 is a truncated-title, fragment-author copy of the 2019 EPJC 79 421 paper; retain wJ_gQLoAAAAJ:IyxfXMz2bNAC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-031/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ey9_mCyZ-VYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1841 has the same 2017 title but a fragment author list and blank venue; retain the Phys. Lett. B 765 paper as wJ_gQLoAAAAJ:9shLKfS_uJEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-010/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:-mA2wk0MEBkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1360 has the same 2020 title but a fragment author list and blank venue; retain the Phys. Lett. B 805 135425 paper as wJ_gQLoAAAAJ:5Klqo5HVOaoC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-19-004/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:CXI6bF9CpJ4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1960 is an undated OCR and formula-loss copy of the 2020 Phys. Lett. B 803 135345 paper; retain wJ_gQLoAAAAJ:It3QlvBKHbMC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:XeQYkT-08pIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1336 is a fragment-author copy with an incomplete journal locator for the same 2020 Phys. Lett. B 803 135345 paper; retain wJ_gQLoAAAAJ:It3QlvBKHbMC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:U0iAMwwPxtsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 347 is the named 2016 Letter of Intent to Jefferson Lab PAC 44, which proposes future measurements rather than reporting a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/16/LOI12-16-001.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:ODE9OILHJdcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 435 is the exact 2005 CLAS Data Analysis Proposal, an experiment-analysis proposal rather than a research publication.",
+      "evidence_url": "https://www.jlab.org/Hall-B/general/caa/caa_cmu_nov05.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:LK8CI43ZvvMC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 334 is Jefferson Lab proposal PR12-17-007; JLab labels the record a deferred original proposal and lists its related publications separately.",
+      "evidence_url": "https://misportal.jlab.org/mis/physics/experiments/viewProposal.cfm?paperId=923",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:86PQX7AUzd4C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 290 is an arXiv-posted PAC 39 experiment proposal, identified by Jefferson Lab as an approved proposal rather than a paper reporting research results.",
+      "evidence_url": "https://misportal.jlab.org/mis/physics/experiments/viewProposal.cfm?paperId=721",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:LO7wyVUgiFcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 539 is the PAC33 Jefferson Lab proposal for a future neutron magnetic form-factor measurement to Q² = 8.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/08/PR-08-013.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:i2xiXl-TujoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 542 is the PAC34 Jefferson Lab proposal for a future neutron magnetic form-factor measurement to Q² = 18.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/09/PR12-09-019.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 541 is the PAC35 Jefferson Lab proposal for future neutron magnetic form-factor measurements at Q² = 16.0 and 18.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://hallaweb.jlab.org/collab/PAC/PAC35/PR-10-005-GMN.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
