@@ -13,6 +13,58 @@
         "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX-RANDOM.2019.8"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:roLk4NBRz8UC",
+      "observed_title": "Approximate tensorization of entropy at high temperature",
+      "observed_year": 2014,
+      "published_doi": "10.5802/afst.1460",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1405.0608",
+        "https://numdam.org/articles/10.5802/afst.1460/"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FmZaK1wAAAAJ",
+      "author_pub_id": "FmZaK1wAAAAJ:f2IySw72cVMC",
+      "observed_title": "Approximate tensorization of entropy at high temperature",
+      "observed_year": 2015,
+      "published_doi": "10.5802/afst.1460",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1405.0608",
+        "https://numdam.org/articles/10.5802/afst.1460/"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:nb7KW1ujOQ8C",
+      "observed_title": "Large data and zero noise limits of graph-based semi-supervised learning algorithms",
+      "observed_year": 2018,
+      "published_doi": "10.1016/j.acha.2019.03.005",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1805.09450",
+        "https://www.sciencedirect.com/science/article/pii/S1063520318301398"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "tWQsy4UAAAAJ",
+      "author_pub_id": "tWQsy4UAAAAJ:GnPB-g6toBAC",
+      "observed_title": "Large data and zero noise limits of graph-based semi-supervised learning algorithms",
+      "observed_year": 2020,
+      "published_doi": "10.1016/j.acha.2019.03.005",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1805.09450",
+        "https://www.sciencedirect.com/science/article/pii/S1063520318301398"
+      ],
+      "verified_at": "2026-10-25"
     }
   ]
 }
