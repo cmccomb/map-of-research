@@ -11568,6 +11568,54 @@
       "reason": "The publisher-deposited exact aerospace DOI assigns S. Das to the ORCID of Sudip Das, not CMU chemist Subha R. Das; Scholar shows 2026 while the deposited issue date is January 2027",
       "evidence_url": "https://api.crossref.org/works/10.1016/j.ast.2026.113840",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:k8Z6L05lTy4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2003 British Ceramic Transactions article is archived by CGCRI with A. Chakraborty/S. Das/S. Gupta; Sukhen Das’s named ORCID/Scopus work matches the title, DOI and year, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/829/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:GFxP56DSvIMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2011 Indian Journal of Cancer article is item 05 on Apollo Hospital radiation oncologist Suman Das’s publication list with matching title, DOI, byline and pages, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/21330753/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:U0iAMwwPxtsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2024 Indian Journal of Science and Technology PDF spells out Samarjit Das at Assam Royal Global University with the captured coauthors and exact DOI, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://sciresol.s3.us-east-2.amazonaws.com/IJST/Articles/2024/Issue-23/IJST-2023-1981.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:J3LtWjKFLicC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original International Surgery Journal page names Swapan Das with coauthor Arnab Mandal and the exact 2021 title and DOI, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.ijsurgery.com/index.php/isj/article/view/7226/0",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:hNSvKAmkeYkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Asian Journal of Dental and Health Sciences page and PDF name sixth author Soumya Das at NIET Pharmacy for the exact 2021 title and DOI; this excludes CMU chemist Subha R. Das.",
+      "evidence_url": "https://ajdhs.com/index.php/journal/article/view/6",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:PVjk1bu6vJQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CGCRI archives the exact 2003 Interceram article by A. K. Chakraborty/S. Das; Sukhen Das’s named ORCID/Scopus work matches its title, journal and year, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://cgcri.csircentral.net/1255/",
+      "verified_at": "2026-10-25"
     }
   ]
 }
