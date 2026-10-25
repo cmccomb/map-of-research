@@ -1,14 +1,14 @@
 {
-  "artifact_commit": "ab963671dfbe0cc9fa30bb3de6a7de514f852079",
+  "artifact_commit": "15498d5f78e2e269f4b11c630bc9b4ef56efb628",
   "attribution_confirmed": 437,
-  "attribution_held": 53,
+  "attribution_held": 64,
   "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
-  "authorships": 49069,
+  "authorships": 49478,
   "dataset_commits": {
-    "authorships": "d98e61822d55214db9e47b8417fa1956dc93d0ad",
-    "people": "051cbe157c696a4050441a9ac531b4d87e1a3fd3",
-    "profile_publications": "bd83f391b93e0c29e31efed2a1fb47f2ab37b864",
-    "works": "212ea80de384d85aa717e0f89b3376fe4b578d42"
+    "authorships": "71d7fb2165cf9bd4dbbe3c075d4c5dd1ffe83d71",
+    "people": "69172300697143fe0e45347efdb26713b613b00e",
+    "profile_publications": "da90b0b0de18aff4e60c13e3db7f263a0dc95af4",
+    "works": "08579b431afa4bdf5e54e18fd61772229847a6fe"
   },
   "dataset_configs": [
     "people",
@@ -19,25 +19,25 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 2362,
-  "finished_at_utc": "2026-10-25T05:29:21.379154+00:00",
+  "excluded_works": 2464,
+  "finished_at_utc": "2026-10-25T06:11:10.480581+00:00",
   "held_observation_rows": 0,
   "held_profile_ids": [],
   "held_source_observation_rows": 0,
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 42400,
+  "mapped_works": 42713,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 241,
+  "new_embedding_count": 422,
   "people": 2001,
-  "profile_count": 305,
-  "profile_publications": 51139,
+  "profile_count": 309,
+  "profile_publications": 51595,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -48,31 +48,105 @@
       "scholar_id": "8iLLOQgAAAAJ",
       "source_observation_rows": 582,
       "state": "released"
+    },
+    {
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "person_observation_rows": 361,
+      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and seven provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "source_observation_rows": 361,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "person_id": "person-nimermurshid-70983eeb",
+      "person_observation_rows": 49,
+      "reason": "Complete 49-row visible Scholar profile verified; 3 exact degraded duplicate citations excluded and 2 unresolved observations held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "source_observation_rows": 49,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "9d64f37c39179c78af9635e1cf5afd53a26ca00bfeee093a8866ff8d7d3a09f8",
+      "person_id": "person-simonfaulkner-1cc1e517",
+      "person_observation_rows": 5,
+      "reason": "Complete five-row visible Scholar profile verified; one degraded duplicate citation is exactly excluded. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "tPp2aaoAAAAJ",
+      "source_observation_rows": 5,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "person_id": "person-gloriasilva-5a457252",
+      "person_observation_rows": 41,
+      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "vF51LxIAAAAJ",
+      "source_observation_rows": 41,
+      "state": "released"
     }
   ],
-  "profile_release_manifest_sha256": "3c1fd70d2cf3e4026338af47dd50666b5dbad185b901fba5daf9478e6c41f97a",
-  "raw_snapshot_observations": 51139,
-  "raw_snapshot_profiles": 305,
-  "raw_snapshot_sha256": "7333211cbfdcb43e13dc3de044b5171b7c9b84300731bae9a09b82ebdd8b336f",
+  "profile_release_manifest_sha256": "c2e06d5d04fd5bcd4b6a61fb6f0af2023423c7a6bf2ca3aa999ccf0b2f091266",
+  "provisional_hold_manifest_sha256": "71b4c96084b625497cc41a105d00f6bd225ea33b6f8cdb059868adf043777f2f",
+  "provisional_hold_observation_rows": 11,
+  "provisional_hold_profiles": [
+    {
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "held_ids_sha256": "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0",
+      "held_observation_rows": 7,
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
+      "reviewed_exclusion_rows": 31,
+      "scholar_id": "0e1jwkkAAAAJ",
+      "source_observation_rows": 361
+    },
+    {
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "held_ids_sha256": "d891cf20d7b343526f38e48422bda10e3a866a5210e587738479271bc20c7cf4",
+      "held_observation_rows": 2,
+      "person_id": "person-nimermurshid-70983eeb",
+      "reviewed_exclusion_ids_sha256": "c07da5e36cb83245b45e07b730bc07f1004b0c2a3510e1c4536c34ce367c6fdb",
+      "reviewed_exclusion_rows": 3,
+      "scholar_id": "MPxFaHYAAAAJ",
+      "source_observation_rows": 49
+    },
+    {
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "held_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40",
+      "held_observation_rows": 2,
+      "person_id": "person-gloriasilva-5a457252",
+      "reviewed_exclusion_ids_sha256": "",
+      "reviewed_exclusion_rows": 0,
+      "scholar_id": "vF51LxIAAAAJ",
+      "source_observation_rows": 41
+    }
+  ],
+  "raw_snapshot_observations": 51595,
+  "raw_snapshot_profiles": 309,
+  "raw_snapshot_sha256": "b72df04cf28e5af1450b4010ac05a91c5f68b1b671fa19d2a2e7a93a22d46e58",
   "region_audit_version": "low-information-semantic-region-v2",
   "reviewed_contexts": 12,
   "reviewed_contexts_sha256": "00962fc23909048da216ae2af953361174124fc086b02935162f9ccf54737450",
-  "reviewed_doi_aliases": 46,
-  "reviewed_doi_aliases_sha256": "559b9e0eb0ce8815818ae20bf19c4d1f7d5373860aea6f71d51ab9655082329d",
-  "reviewed_exclusions": 1031,
-  "reviewed_exclusions_sha256": "620dd70eb8eb80f2956a82bbd1596aef2696d6d4e1611c56f5e31bc065e41b92",
-  "reviewed_metadata_corrections": 15,
-  "reviewed_metadata_corrections_sha256": "9469bbe2a20b014e3c6994c360ffb3df29f13f3c5b50b63890e612ad360bc68f",
+  "reviewed_doi_aliases": 52,
+  "reviewed_doi_aliases_sha256": "497ca2b029e1892e5a0f267137519b4e2708af4dc8f6a3bcfa7778dadf988cf7",
+  "reviewed_exclusions": 1067,
+  "reviewed_exclusions_sha256": "06bf3fbfbb16bfd14be5d32aea3a287af4488c2836d084f936912d583a33fb0a",
+  "reviewed_metadata_corrections": 19,
+  "reviewed_metadata_corrections_sha256": "5e6fd5feeab134618655dfab57cd9899fc6d1f014b3124f7ef73471f98579b4f",
   "schema_version": 2,
   "scholar_coverage": {
-    "complete_profiles": 19,
+    "complete_profiles": 23,
     "legacy_profiles": 286,
     "reconciled_prior_ids": 12
   },
-  "started_at_utc": "2026-10-25T05:19:57.327128+00:00",
+  "started_at_utc": "2026-10-25T06:03:34.615413+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "validated_metadata_corrections": 15,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40165016017",
-  "works": 47080
+  "validated_metadata_corrections": 19,
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40167632965",
+  "works": 47495
 }
