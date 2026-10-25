@@ -56,6 +56,19 @@ verifies identity or an individual DOI record, not Scholar completeness.
 
 ## Reviewed Scholar observations
 
+`scholar-profile-releases.json` records a source-bound release decision for a
+complete Scholar profile whose captured rows are still under attribution review.
+The current decision holds Chien Ho's 582-row cache. The raw source branch and
+validated snapshot retain every row; the trusted publisher checks the exact
+cache checksum, registry identity, row count, and citation IDs, then removes
+this profile's own observations before embeddings and all four public dataset
+tables are built. The faculty roster still lists Chien Ho with zero own-source
+publications. A paper independently captured from another faculty profile is
+still eligible even if its author list includes him. The upload receipt records
+the release-manifest checksum, raw and published counts, and each decision.
+Changing `state` to `released` requires a reviewed producer change and a
+matching source cache; deleting or altering the saved source fails validation.
+
 `scholar-exclusions.json` records exact Scholar profile-publication IDs whose
 captured rows were checked against the linked evidence. Each decision names
 the profile, row, reason code, specific reason, evidence URL, and date. A review

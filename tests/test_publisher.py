@@ -1541,13 +1541,17 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         }
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
         lambda *args, **kwargs: (
             frame,
-            {"created_at_utc": "2026-07-17T12:00:00+00:00"},
+            {
+                "created_at_utc": "2026-07-17T12:00:00+00:00",
+                "snapshot_sha256": "test-snapshot",
+            },
         ),
     )
     monkeypatch.setattr(
@@ -1645,6 +1649,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1676,6 +1681,176 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         )
 
 
+def test_publish_snapshot_holds_complete_profile_before_public_tables(
+    monkeypatch, tmp_path
+) -> None:
+    snapshot = tmp_path / "snapshots" / "source.parquet"
+    cache_dir = tmp_path / "data" / "authors"
+    cache_dir.mkdir(parents=True)
+    cache_path = cache_dir / "ScholarOne.json"
+    cache_path.write_text(
+        json.dumps(
+            {
+                "scholar_id": "ScholarOne",
+                "publication_count": 2,
+                "publications": [
+                    {"author_pub_id": "ScholarOne:a"},
+                    {"author_pub_id": "ScholarOne:b"},
+                ],
+                "browser_capture": {
+                    "coverage": "complete_visible_profile",
+                    "more_remain": False,
+                },
+            }
+        )
+    )
+    releases_path = tmp_path / "releases.json"
+    releases_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "profiles": [
+                    {
+                        "person_id": "person-one",
+                        "scholar_id": "ScholarOne",
+                        "state": "held",
+                        "expected_source_rows": 2,
+                        "cache_sha256": hashlib.sha256(
+                            cache_path.read_bytes()
+                        ).hexdigest(),
+                        "reason": "Profile attribution under review.",
+                        "reviewed_at": "2026-10-25",
+                    }
+                ],
+            }
+        )
+    )
+    original_release_sha = hashlib.sha256(releases_path.read_bytes()).hexdigest()
+    corrections_path = tmp_path / "corrections.json"
+    corrections_path.write_text(json.dumps({"schema_version": 1, "corrections": []}))
+    raw = pandas.DataFrame(
+        [
+            {
+                "person_id": "person-one",
+                "scholar_id": "ScholarOne",
+                "author_pub_id": f"ScholarOne:{letter}",
+                "source_type": "scholar",
+                "title": f"Held work {letter}",
+                "year": 2020,
+                "venue": "Journal",
+                "authors": "One Person",
+            }
+            for letter in ("a", "b")
+        ]
+        + [
+            {
+                "person_id": "person-two",
+                "scholar_id": "",
+                "author_pub_id": "curated:independent",
+                "source_type": "curated_verified",
+                "title": "Independent work",
+                "year": 2021,
+                "venue": "Journal",
+                "authors": "Two Person and One Person",
+            }
+        ]
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            raw,
+            {
+                "created_at_utc": "2026-10-25T00:00:00+00:00",
+                "snapshot_sha256": "source-sha",
+            },
+        ),
+    )
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
+
+    def embedding_input(frame, **kwargs):
+        assert frame["person_id"].tolist() == ["person-two"]
+        assert frame["authors"].tolist() == ["Two Person and One Person"]
+        return frame, 0
+
+    monkeypatch.setattr(publisher, "add_embeddings", embedding_input)
+
+    def public_tables(frame, *args):
+        assert frame["author_pub_id"].tolist() == ["curated:independent"]
+        return {
+            "profile_publications": frame.assign(
+                review_exclusion_code="", context_verified_at=""
+            ),
+            "authorships": frame[["person_id", "scholar_id"]].copy(),
+            "works": pandas.DataFrame(
+                [
+                    {
+                        "observation_ids": ["observation-independent"],
+                        "has_included_source_profile": True,
+                        "map_eligible": True,
+                        "department_ids": ["bme"],
+                    }
+                ]
+            ),
+            "people": pandas.DataFrame(
+                [
+                    {
+                        "person_id": "person-one",
+                        "publication_observation_count": 0,
+                        "scholar_observation_count": 0,
+                        "curated_observation_count": 0,
+                        "unique_work_count": 0,
+                        "mapped_work_count": 0,
+                    }
+                ]
+            ),
+        }
+
+    monkeypatch.setattr(publisher, "build_dataset_tables", public_tables)
+    monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
+    monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
+    monkeypatch.setattr(
+        publisher,
+        "add_publication_keywords",
+        lambda works: works.assign(keyword_id="k", detail_keyword_id="d"),
+    )
+    monkeypatch.setattr(
+        publisher, "exclude_low_information_regions", lambda works: works
+    )
+
+    def upload_dataset(*args, **kwargs):
+        releases_path.write_text("changed after decision load")
+        return SimpleNamespace(oid="commit")
+
+    monkeypatch.setattr(
+        publisher,
+        "_to_hub_dataset",
+        lambda frame: SimpleNamespace(push_to_hub=upload_dataset),
+    )
+    monkeypatch.setattr(
+        publisher, "_upload_map_artifacts", lambda *args, **kwargs: "map"
+    )
+    result = publisher.publish_snapshot(
+        snapshot,
+        tmp_path / "manifest.json",
+        hf_token="token",
+        corrections_path=corrections_path,
+        profile_releases_path=releases_path,
+        source_cache_dir=cache_dir,
+    )
+    assert result["raw_snapshot_observations"] == 3
+    assert result["raw_snapshot_profiles"] == 1
+    assert result["raw_snapshot_sha256"] == "source-sha"
+    assert result["held_profile_ids"] == ["ScholarOne"]
+    assert result["held_source_observation_rows"] == 2
+    assert result["held_observation_rows"] == 2
+    assert result["profile_publications"] == 1
+    assert result["profile_count"] == 0
+    assert result["reviewed_metadata_corrections"] == 0
+    assert result["profile_release_manifest_sha256"] == original_release_sha
+
+
 def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     monkeypatch, tmp_path
 ) -> None:
@@ -1695,6 +1870,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     )
     frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1795,6 +1971,7 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
         ]
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
