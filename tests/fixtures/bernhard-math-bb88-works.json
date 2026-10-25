@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "config": "works",
+  "hub_revision": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
+  "fingerprint_fields": [
+    "title",
+    "authors",
+    "year",
+    "venue",
+    "citation",
+    "citation_count",
+    "doi",
+    "publication_type",
+    "source_document_id",
+    "source_urls",
+    "source_types",
+    "source_native_ids",
+    "source_verified_at",
+    "source_verification_urls",
+    "quality_assessment_version"
+  ],
+  "works": [
+    {
+      "work_id": "work-042c0e46d160c193fdc07c63a09b1f72e72ad7b8cd1decc6c191259e648a8b08",
+      "title": "ааз в вз Хг аз л и",
+      "authors": "E DrineaЃ, A Friezeн, M Mitzenmacherо",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:xGWFX6Gbr9MC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-19c943c1a7d30896e4f5f6055234076dea8f32c557a8ca66e2e644811e0093f8",
+      "title": "гб иж дж ж ви а ии б ви бг а г в илгж з",
+      "authors": "AD Flaxman, AM Frieze",
+      "year": 2004.0,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:jFemdcug13IC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-1f25701efbbc68dd1f9a8b54cb178e702de15524c9853ed7d1fe1a24494d2612",
+      "title": "Change of Numéraire",
+      "authors": "SE Shreve",
+      "year": 2004.0,
+      "venue": "Stochastic Calculus for Finance II, 375-402, 2004",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:q3CdL3IzO_QC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-320cf1e6dbf6a7644f75b5fe48ba3645f2e0ad11048708012fe1f715e3e33b93",
+      "title": "What can you draw?",
+      "authors": "F Frick, F Peng",
+      "year": 2023.0,
+      "venue": "Amer. Math. Monthly 130 (1), 5-19, 2023",
+      "citation": "",
+      "citation_count": 1,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7G7zH2AAAAAJ&pagesize=100&citation_for_view=7G7zH2AAAAAJ:IWHjjKOFINEC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-33f705c617c4c02ebcf9a5fbdf084fd0b4c4dcc4847cc86ed028b57233ca380c",
+      "title": "Ы и з н в гвк м Ъ з Ф б из н Ьж в",
+      "authors": "Н МНМП",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:9ZlFYXVOiuMC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-38ede4e51235c8cc32a1f972d6586412b1a3517381d232efeaf2c02c91003019",
+      "title": "On the Trace of",
+      "authors": "G Leoni, D Spector",
+      "year": 2024.0,
+      "venue": "arXiv preprint arXiv:2404.18342, 2024",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0Nj-v7sAAAAJ&cstart=20&pagesize=80&citation_for_view=0Nj-v7sAAAAJ:VL0QpB8kHFEC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-3a4f9421e38cd231ca9848d272ecc970610521606675e0a6834c0c46494c4919",
+      "title": "Å Ü¹ÈÐ Ò ¹ÁÒ× Ø ØÙØ",
+      "authors": "I Fonseca, S Müller, G Leoni",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JV3ryMgAAAAJ&cstart=200&pagesize=100&citation_for_view=JV3ryMgAAAAJ:AXPGKjj_ei8C"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-46b9b4d9d5252b707925b7d045d5086993db8db17116d899d48459ea6ca0a95f",
+      "title": "Å Ü¹ÈÐ Ò ¹ÁÒ× Ø ØÙØ",
+      "authors": "I Fonseca, S Müller, G Leoni",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0Nj-v7sAAAAJ&cstart=100&pagesize=100&citation_for_view=0Nj-v7sAAAAJ:2P1L_qKh6hAC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-4d9b2f976a3f1ed4f58b0ae1be3d3b75bcb872ccbf7038f9cbaed82440fe32e1",
+      "title": "L LLe ees ss c cca aah hhi iie eer rrs ss L LLe eei iib bbn nni iiz zz",
+      "authors": "A Frieze, R Martin, J Moncel, M Ruszinko, C Smyth",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7wO8s98CvbsC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-75e86ba03c77ecbe7cfe1f6ce24d3dafb6c07c42fbc756c872c6b87b8b5d710b",
+      "title": "Стохастическое оптимальное управление: случай дискретного времени",
+      "authors": "DP Bertsekas, SE Shreve",
+      "year": 1985.0,
+      "venue": "(No Title), 1985",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:BUYA1_V_uYcC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-819a40ece64ebd1f142fbc2b9934fff03662a65eddb87e32587957954d59e82f",
+      "title": "Ъ в гб ж йа ж ж д з г вгвЙ гвзи ви ж гвв и к ин в Р б аигв ин",
+      "authors": "C CooperЃ, A Friezeн, B Reedо",
+      "year": 2001.0,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:H7nrzBkawXsC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-92b2d0614d094106995a5178920f723e53df762597330098e5d3f0c477c2296c",
+      "title": "Ъ в гб ж йа ж ж д з г вгвЙ гвзи ви ж в д в в в жгб и вйб ж",
+      "authors": "C CooperЃ, A Friezeн, B Reedо, O Riordanм",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:VRfTbSk87rEC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-c0c68760d33b4dd55a610aede37237428babd5d8609b54c3f47822fcd3994457",
+      "title": "M arkov Chains",
+      "authors": "J Lehoczky",
+      "year": 2014.0,
+      "venue": "Wiley StatsRef: Statistics Reference Online, 2014",
+      "citation": "",
+      "citation_count": 4,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P_AmD6MAAAAJ&cstart=100&pagesize=100&citation_for_view=P_AmD6MAAAAJ:dQ2og3OwTAUC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-d50d2c04dfe91a5bdf7fdac31ad00f72612592b67841c39ad29beceaf5efb5a0",
+      "title": "ж ла в гв л ж д з",
+      "authors": "C Cooper, A Frieze",
+      "year": 2002.0,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:P7Ujq4OLJYoC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-d73e693c5b55d392a7d72be3a1c0e4ae016417910b0c045863e38193f0391ae0",
+      "title": "ت ز سر ¹ث ج ط ط ط ض× سذ سض رس ض ط ذف ضسغ ز‎",
+      "authors": "A Frieze, NC Wormaldف‎",
+      "year": 2002.0,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:LWqeokA2EBkC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-dd946705300d120d54d0d0ad8de32ddd956ca52513ba9150949cb7f30566ff14",
+      "title": "вги гв ж в гб ОЙЫ Ь л и дж з ж а и ж а ж з",
+      "authors": "C CooperЃ, A Friezeн, GB Sorkinо",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:FiytvqdAVhgC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-f3f97294e9b10d53c41b41d4200c3acb1bf068a2f495f7c7cad8f6fd7e81bf4e",
+      "title": "Хйаи Й гагйж Р б аигв н а з в ж в гб Й гагйж ж д з",
+      "authors": "C Cooper, A Frieze",
+      "year": 2001.0,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:U4n9YNQMCAIC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-0f2e51ea35533482e8ec6a97dd533395fddd761113ba6714796ac6c166f569c6",
+      "title": "Comments and Suggestions for Further Reading",
+      "authors": "DR Owen",
+      "year": 1984.0,
+      "venue": "A First Course in the Mathematical Foundations of Thermodynamics, 121-124, 1984",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tfBFyTMAAAAJ&cstart=100&pagesize=100&citation_for_view=tfBFyTMAAAAJ:blknAaTinKkC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-1aa3cd9ca2a224f3720f1c8068b306278c6e589ac195faf3f8bd6cf70426ef78",
+      "title": "The Editor-in-Chief would like to thank the following colleagues who have helped maintain the standards set for a scientific journal, through their refereeing of the papers …",
+      "authors": "J Avigad, J Forth, T Mossakowski, A Avron, P Hajek, R Parikh, M Baaz, ...",
+      "year": null,
+      "venue": "",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=VQfvIfQAAAAJ&cstart=200&pagesize=100&citation_for_view=VQfvIfQAAAAJ:IUKN3-7HHlwC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-2c115702ad01913c32a100b74a136ef45a296307597a9ac61726e1718a490df1",
+      "title": "The ‘End’of Philosophy of Mathematics?",
+      "authors": "J Avigad, S De Toffoli, M Giaquinto, J Kennedy, S Kripke, D Macbeth, ...",
+      "year": 2020.0,
+      "venue": "Workshop at Rutgers University, 2020",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=VQfvIfQAAAAJ&cstart=100&pagesize=100&citation_for_view=VQfvIfQAAAAJ:yFnVuubrUp4C"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-369e6af51039737aab70d17089b13d8ead23ffd227d6e7b4e612b0432836de23",
+      "title": "Breaking down barriers.",
+      "authors": "S Shreve",
+      "year": 2003.0,
+      "venue": "Quantitative Finance 3 (4), C61, 2003",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:qUcmZB5y_30C"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-3f4bdeb6bfdd7d09e80f7a7a0dc9af6f82f730223afbb1a5b41a9a721fbc1348",
+      "title": "Quantifying discontinuity",
+      "authors": "H Adams, F Frick, M Harrison, N Sadovek, M Superdock",
+      "year": 2025.0,
+      "venue": "arXiv preprint arXiv:2511.07636, 2025",
+      "citation": "",
+      "citation_count": 3,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7G7zH2AAAAAJ&pagesize=100&citation_for_view=7G7zH2AAAAAJ:b0M2c_1WBrUC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-41f2447662e6568105c1683f1465a23933c1a1ddfbe5b3a67ab705a863401cc1",
+      "title": "Priority inversion and its control: An experimental investigation",
+      "authors": "D Locke, L Sha, R Rajikumar, J Lehoczky, G Burns",
+      "year": 1988.0,
+      "venue": "ACM SIGAda Ada Letters 8 (7), 39-42, 1988",
+      "citation": "",
+      "citation_count": 49,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P_AmD6MAAAAJ&pagesize=100&citation_for_view=P_AmD6MAAAAJ:Zph67rFs4hoC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-48057fd5d5b0fca2d8a242a448e3674c649a0259568762d1af1b9bed4338475b",
+      "title": "Thinking with looped flows",
+      "authors": "A Suleymanzade, C Lee, F Eijkelboom, NM Boffi, II Ceylan, J Kim",
+      "year": 2026.0,
+      "venue": "arXiv preprint arXiv:2609.11801, 2026",
+      "citation": "",
+      "citation_count": 3,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_jkX2q0AAAAJ&pagesize=100&citation_for_view=_jkX2q0AAAAJ:ldfaerwXgEUC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-5ffb9d02815aca5c94e7b91a31c8a7d562d143fdeccc0b167afa3cdc30858daf",
+      "title": "Revival of the Gomory cuts in the 1990's.",
+      "authors": "G Cornuéjols",
+      "year": 2007.0,
+      "venue": "Annals of Operations Research 149 (1), 63-66, 2007",
+      "citation": "",
+      "citation_count": 95,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9lFYMIkAAAAJ&pagesize=100&citation_for_view=9lFYMIkAAAAJ:IWHjjKOFINEC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-6e88a8e00cbdae04415396b648790ba85b0bd5fbec3ff5cb6fae971d55e326c3",
+      "title": "Gomory cuts revisited",
+      "authors": "E Balas, S Ceria, G Cornuéjols, N Natraj",
+      "year": 1996.0,
+      "venue": "Operations Research Letters 19 (1), 1-9, 1996",
+      "citation": "",
+      "citation_count": 418,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9lFYMIkAAAAJ&pagesize=100&citation_for_view=9lFYMIkAAAAJ:qjMakFHDy7sC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-bacd1f97759d8904a5fc252ea3532ae0dc30a17a806c4bfa0169ff3d8d9784f9",
+      "title": "The ongoing story of Gomory cuts",
+      "authors": "G Cornuejols",
+      "year": 2012.0,
+      "venue": "Optimization Stories, 221-226, 2012",
+      "citation": "",
+      "citation_count": 13,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9lFYMIkAAAAJ&cstart=100&pagesize=100&citation_for_view=9lFYMIkAAAAJ:OR75R8vi5nAC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-baf150574e0d1a7b76ba05a412a854ee86bb8c65126a553d1b145c6cec88a197",
+      "title": "An impossible asylum",
+      "authors": "J Avigad, S Baek, A Bentkamp, M Heule, W Nawrocki",
+      "year": 2023.0,
+      "venue": "The American Mathematical Monthly 130 (5), 446-453, 2023",
+      "citation": "",
+      "citation_count": 2,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=VQfvIfQAAAAJ&cstart=100&pagesize=100&citation_for_view=VQfvIfQAAAAJ:fbc8zXXH2BUC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-c09be2b799b87f6bcf161f9a09513303b9837ce19c9eae8255e6980da402d661",
+      "title": "Gnomes in the fog: the reception of Brouwer’s intuitionism in the 1920s",
+      "authors": "J Avigad",
+      "year": 2006.0,
+      "venue": "The Mathematical Intelligencer 28 (4), 71-74, 2006",
+      "citation": "",
+      "citation_count": 0,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=VQfvIfQAAAAJ&cstart=200&pagesize=100&citation_for_view=VQfvIfQAAAAJ:bz8QjSJIRt4C"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-ca0f57b202b268f9ba2b8dc04e3f157db7d63eb9e7f2a09233ff0cc27c0b4230",
+      "title": "Selection on sperm size in response to promiscuity and variation in female sperm storage organs",
+      "authors": "ERA Cramer, ZB Yilma, JT Lifjeld",
+      "year": 2023.0,
+      "venue": "Journal of Evolutionary Biology 36 (1), 131-143, 2023",
+      "citation": "",
+      "citation_count": 14,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AlNKTGsAAAAJ&pagesize=100&citation_for_view=AlNKTGsAAAAJ:8k81kl-MbHgC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    },
+    {
+      "work_id": "work-cf85891a8d503ee303d3f9e68a093a015b2210f4b57b351726b434cb694bb53f",
+      "title": "On playing golf with two balls",
+      "authors": "I Dumitriu, P Tetali, P Winkler",
+      "year": 2003.0,
+      "venue": "SIAM Journal on Discrete Mathematics 16 (4), 604-615, 2003",
+      "citation": "",
+      "citation_count": 92,
+      "doi": "",
+      "publication_type": "publication",
+      "source_document_id": "",
+      "source_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FmZaK1wAAAAJ&pagesize=100&citation_for_view=FmZaK1wAAAAJ:V3AGJWp-ZtQC"
+      ],
+      "source_types": [
+        "scholar"
+      ],
+      "source_native_ids": [],
+      "source_verified_at": "",
+      "source_verification_urls": [],
+      "quality_assessment_version": "research-map-eligibility-v3"
+    }
+  ]
+}

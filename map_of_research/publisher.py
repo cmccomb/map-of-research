@@ -27,6 +27,25 @@ from .bio_release_gate import (
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
 )
+from .composite_region import (
+    HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
+)
+from .composite_region import (
+    MATH_REVIEW_MANIFEST_SHA256,
+    SULLIVAN_PERSON_ID,
+    freeze_composite_presentation,
+    load_composite_region_plan,
+    require_baseline_map,
+    validate_composite_map_points,
+    validate_composite_staged_nonwork_tables,
+    validate_composite_staged_works,
+)
+from .composite_region import (
+    PRESENTATION_FIELDS as COMPOSITE_PRESENTATION_FIELDS,
+)
+from .composite_region import (
+    VARIANT_FIELDS as COMPOSITE_VARIANT_FIELDS,
+)
 from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
@@ -83,6 +102,7 @@ from .region_repair import (
     require_frozen_source_tip,
     require_historical_region_decisions,
 )
+from .region_review import DEFAULT_REGION_REVIEW_PATH, load_region_review
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -1229,11 +1249,17 @@ def _publish_atomic_release(
     generated_at_utc: str,
     continuity_receipt: Mapping[str, Any] | None,
     repair_manifest_path: Path,
+    math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
+    exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
+    provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     provisional_holds: Mapping[tuple[str, str], Any],
     prior_profiles: Any,
     prior_people: Any,
     atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
+    composite_plan: Any | None = None,
+    prior_works: Sequence[Mapping[str, Any]] | None = None,
+    prior_artifact: Mapping[str, Any] | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1296,6 +1322,70 @@ def _publish_atomic_release(
         )
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
+        composite_map_receipt = None
+        composite_works_receipt = None
+        composite_nonwork_receipt = None
+        if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
+            if prior_works is None or prior_artifact is None:
+                raise ValueError(
+                    "Composite atomic stage lacks frozen bb88 presentation"
+                )
+            composite_map_receipt = validate_composite_map_points(
+                load_json(artifact_path),
+                prior_artifact,
+                prior_works,
+                prior_profiles,
+                tables["profile_publications"].to_dict("records"),
+                composite_plan,
+                curated_dir=math_region_review_path.parent,
+            )
+            current_sullivan_work_ids = {
+                str(row.work_id)
+                for row in tables["profile_publications"].itertuples(index=False)
+                if row.person_id == SULLIVAN_PERSON_ID
+            }
+            prior_sullivan_work_ids = {
+                str(row["work_id"])
+                for row in prior_profiles
+                if row.get("person_id") == SULLIVAN_PERSON_ID
+            }
+            composite_works_receipt = validate_composite_staged_works(
+                Path(
+                    hf_hub_download(
+                        REPO_ID,
+                        "works/train-00000-of-00001.parquet",
+                        repo_type="dataset",
+                        revision=prior_revision,
+                        token=hf_token or None,
+                    )
+                ),
+                files["works/train-00000-of-00001.parquet"],
+                plan=composite_plan,
+                sullivan_work_ids=prior_sullivan_work_ids | current_sullivan_work_ids,
+                current_sullivan_work_ids=current_sullivan_work_ids,
+                curated_dir=math_region_review_path.parent,
+            )
+            composite_nonwork_receipt = validate_composite_staged_nonwork_tables(
+                {
+                    config_name: (
+                        Path(
+                            hf_hub_download(
+                                REPO_ID,
+                                f"{config_name}/train-00000-of-00001.parquet",
+                                repo_type="dataset",
+                                revision=prior_revision,
+                                token=hf_token or None,
+                            )
+                        ),
+                        files[f"{config_name}/train-00000-of-00001.parquet"],
+                    )
+                    for config_name in ("people", "authorships", "profile_publications")
+                },
+                plan=composite_plan,
+                curated_dir=math_region_review_path.parent,
+                exclusions_path=exclusions_path,
+                holds_path=provisional_holds_path,
+            )
         prior_readme = Path(
             hf_hub_download(
                 REPO_ID,
@@ -1340,6 +1430,20 @@ def _publish_atomic_release(
                 "raw_rows": len(source_frame),
                 "map_points": artifact["point_count"],
             }
+        if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
+            if (
+                composite_map_receipt is None
+                or composite_works_receipt is None
+                or composite_nonwork_receipt is None
+                or source_manifest["snapshot_sha256"] != SULLIVAN_SOURCE_SHA256
+                or prior_revision != SULLIVAN_PRIOR_REVISION
+            ):
+                raise ValueError("Composite release lacks exact source and map parity")
+            gate["gate"] = "source-bound-sullivan-bernhard-math-composite-v1"
+            gate["composite_map_parity"] = composite_map_receipt
+            gate["composite_works_parity"] = composite_works_receipt
+            gate["composite_nonwork_parity"] = composite_nonwork_receipt
+            gate["bernhard_repair_manifest_sha256"] = composite_plan.manifest_sha256
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1390,6 +1494,7 @@ def publish_snapshot(
     sullivan_continuity_addendum_path: Path = DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
+    math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1463,6 +1568,35 @@ def publish_snapshot(
         excluded_ids=set(exclusions),
         confirmed_ids=set(attribution_reviews.confirmed),
     )
+    if (  # pragma: no cover - exact f8/bb88 manifest bytes
+        sullivan_transition
+        and sha256_file(math_region_review_path) != MATH_REVIEW_MANIFEST_SHA256
+    ):
+        raise ValueError("Math region review manifest bytes changed")
+    reviewed_math_decisions = (
+        load_region_review(
+            math_region_review_path,
+            snapshot_frame=frame,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_dir=cache_dir,
+            registry=registry,
+            exclusions=set(exclusions),
+            holds=set(provisional_holds),
+        )
+        if sullivan_transition
+        else ()
+    )
+    composite_plan = (
+        load_composite_region_plan(
+            repair_manifest_path,
+            reviewed_math_decisions,
+            source_commit=source_commit or "",
+            source_sha256=str(manifest["snapshot_sha256"]),
+            prior_revision=prior_revision,
+        )
+        if sullivan_transition
+        else None
+    )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
     )
@@ -1506,10 +1640,24 @@ def publish_snapshot(
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
     comparison_revision = region_comparison_revision or prior_revision
-    prior_work_fields = (
-        (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
-        if comparison_revision != prior_revision
-        else PRIOR_WORK_FIELDS
+    prior_work_fields = tuple(
+        dict.fromkeys(
+            (
+                *PRIOR_WORK_FIELDS,
+                *(
+                    ("map_exclusion_reasons",)
+                    if comparison_revision != prior_revision
+                    else ()
+                ),
+                *(COMPOSITE_PRESENTATION_FIELDS if composite_plan is not None else ()),
+                *(COMPOSITE_VARIANT_FIELDS if composite_plan is not None else ()),
+                *(
+                    ("map_region_documented_override",)
+                    if composite_plan is not None
+                    else ()
+                ),
+            )
+        )
     )
     prior_works = list(
         _published_rows(
@@ -1537,6 +1685,35 @@ def publish_snapshot(
     )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    prior_artifact = None
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
+        from huggingface_hub import hf_hub_download
+
+        prior_artifact = require_baseline_map(
+            Path(
+                hf_hub_download(
+                    REPO_ID,
+                    f"maps/{MAP_ARTIFACT_NAME}",
+                    repo_type="dataset",
+                    revision=prior_revision,
+                    token=hf_token or None,
+                )
+            )
+        )
+    historical_works = (
+        {
+            str(row["work_id"]): row
+            for row in _published_rows(
+                "works",
+                ("work_id", "map_eligible", "map_region_outlier"),
+                hf_token=hf_token,
+                revision=COMPOSITE_HISTORICAL_REVISION,
+            )
+            if str(row["work_id"]) in composite_plan.restore | composite_plan.reexclude
+        }
+        if composite_plan is not None
+        else None
+    )
     sullivan_loss_approval = (
         validate_sullivan_exact_losses(
             approval_path=sullivan_loss_approval_path,
@@ -1581,6 +1758,8 @@ def publish_snapshot(
         prior_revision=comparison_revision,
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
+        composite_plan=composite_plan,
+        historical_works=historical_works,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -1589,7 +1768,28 @@ def publish_snapshot(
         raise ValueError("Changed Bio Scholar source needs the reviewed Bio snapshot")
     if comparison_revision != prior_revision:
         continuity_receipt["current_hub_revision"] = prior_revision
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
+        continuity_receipt["composite_region_manifest_sha256"] = (
+            composite_plan.manifest_sha256
+        )
+        continuity_receipt["math_region_review_sha256"] = sha256_file(
+            math_region_review_path
+        )
     tables["works"] = add_publication_keywords(tables["works"])
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
+        if prior_artifact is None:
+            raise ValueError("Composite release lacks frozen bb88 map")
+        tables["works"] = freeze_composite_presentation(
+            tables["works"],
+            prior_works,
+            prior_artifact,
+            composite_plan,
+            {
+                str(row.work_id)
+                for row in tables["profile_publications"].itertuples(index=False)
+                if row.person_id == SULLIVAN_PERSON_ID
+            },
+        )
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
     if comparison_revision != prior_revision:
@@ -1637,11 +1837,17 @@ def publish_snapshot(
         generated_at_utc=generated_at_utc,
         continuity_receipt=continuity_receipt,
         repair_manifest_path=repair_manifest_path,
+        math_region_review_path=math_region_review_path,
+        exclusions_path=exclusions_path,
+        provisional_holds_path=provisional_holds_path,
         provisional_holds=provisional_holds,
         prior_profiles=prior_profiles,
         prior_people=prior_people,
         atomic_intent_sink=atomic_intent_sink,
         require_bio_release=require_bio_release,
+        composite_plan=composite_plan,
+        prior_works=prior_works if composite_plan is not None else None,
+        prior_artifact=prior_artifact,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -1837,6 +2043,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Reviewed 112-work topic assignments preserved during the Bio release",
     )
     parser.add_argument(
+        "--math-region-review-manifest",
+        type=Path,
+        default=DEFAULT_REGION_REVIEW_PATH,
+        help="Exact 31-row Math review applied within the f8 composite release",
+    )
+    parser.add_argument(
         "--require-bio-release",
         action="store_true",
         help="Fail closed unless the frozen complete Bio snapshot passes its gate",
@@ -2005,6 +2217,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 DEFAULT_SULLIVAN_CROSSWALK_PATH,
             ),
             curated_works_path=args.scholar_curated_works,
+            math_region_review_path=args.math_region_review_manifest,
         )
         status.pop("atomic_release_intent", None)
         status.update(

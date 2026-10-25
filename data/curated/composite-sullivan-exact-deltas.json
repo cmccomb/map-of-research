@@ -1,0 +1,2204 @@
+{
+  "added_new_work_ids": [
+    "work-00d67efb382964200af4d6adbe3b5fa8605c0a2d406e0616fe004095cc6437c7",
+    "work-0180ff8be40be236d6c9f9073a50ded2570d87835210ca39b5fa5c47a3c1e43e",
+    "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d",
+    "work-0d3394a75064b3b7cf1ad88de2a4f17448a555a848a40c710c63e3c831982cd9",
+    "work-0f0011aa7df2a20e576df659794cd304c5bd2c9c9703ffcdc5d6c34c40216086",
+    "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
+    "work-1480e1e057c232dc21b1ee1fba968cc70d9562f2db29ca5df9d24e1923a809bc",
+    "work-15fd535df38a2851a74ba539c0bc5e7ee85c57b09eca6e5d60712bc69b73ed1c",
+    "work-166a3322283da1f54d39fc6b60153a063cf70cbea3f91b2b8bfed653e249e3b4",
+    "work-19f8fe5112a5f5102d7040e00491ccfe3bbc22e7cfad0e337db4f70f2c125448",
+    "work-1f588a7da24a95e27ada1a591a728b242124ff5fd30ad240d0597dc877dc024c",
+    "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f",
+    "work-2551d2d27b9c627bb1eb61c9dd61028a6532723fc6e4ce5a27ce9a96e71cd264",
+    "work-27149a1516a599dddd365624e52b1aabe91327ff9fad4ed338a0ef790e04f9d2",
+    "work-285b92623c9f8be2c44539b26f0a130741a224a7a31c192be7766c76225b1a8e",
+    "work-29ecd6d7c6aa52246eaacb5039b424a6e6c53f09f2e804fa3024421678857b45",
+    "work-2a2ed671815294d4ee81a224e0aaa85b450ed913f7e0b524c79f4b31b9037ce0",
+    "work-2f5ab6e026a44aba668b80a18dbd1cb2c4a6fb22f0ad9393ba3523c2e8998db0",
+    "work-30edf30b866fb6560c73fdaa83c84bcd66a47d310d2a2504899b5c4977c8a360",
+    "work-357ad560d3a519ef3171bd837d40f81325f204b91908bf3ca8a6acbaa0744436",
+    "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d",
+    "work-505949f8a40ba015ae796966c7208a9fb138f107db90be9230026501ee41342d",
+    "work-57a7fcf9ad93b52e95306617a03a15ac9867b2207c473782db4d5753f1497944",
+    "work-5c6525211bf91b46ec7a2aac770deb476f19b3298958a6f21bcaaec2ad307943",
+    "work-60ecf96f5d1d05ecde368388ad11e928a61691f82c5c9d3c70da71d0267c1589",
+    "work-649bf09f344c0a68fd55f1f392b390fd859e02b64091053465142988943b2cad",
+    "work-64fc21ecfd5c9108900cb9446d5ab7c5ead46885a6ba87cc49754959de67263e",
+    "work-66920fd741547024883951520a2ba31eaf9a3d282c312a15fa224f70b7ff5296",
+    "work-687599c4ead42b5f37fa4c4e5331bb814db0799dca257afa20f7421702406dfb",
+    "work-7263826686220fb701e9b447e169a2e62178d1f7511030cc1cde2e42277e18fe",
+    "work-78c696120690e36b3d0d97c316aa4408a2e56aabb395c2f85affb21c34e0927a",
+    "work-7916d9a2ac716ddd52475f8acb56cbb47340076942a9c2c05e45d13aeae94718",
+    "work-87fb54ca9a5eb34daa78846e97d2711190933050cf2c04dd01cbfb8f24ee5888",
+    "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032",
+    "work-8c0c757de695d48fe326bca1e22a44aef8fc3fc4dac5fac6c6d6aaaab43baee4",
+    "work-8cd4ec3c773b5b185363a4837b24a344999ae396d4475003e76e74962bb6d4dc",
+    "work-8d14507ac706d32ab76a631f2e1cf3280f2ed6f17fc59dd30d1b967baa517aac",
+    "work-9883a9803ac2ec1dd899ce0804657134b8354e2046a7177f812c476853087fbc",
+    "work-9c185d1c32527582a4d29fc1e9185dcd4fb7450f4f24516883d8133dee1a15fd",
+    "work-a1e755de12a50a16f278d578f897da58aac2614f491ea5d2bb0d9304e1bc08b1",
+    "work-ac07d1bd625338c4d1180852161f7008f44399052614c987aaefdf89a5deb324",
+    "work-aca207f8643e88996af48be9b6f70d48ca6f51c4f2b1e8d1be59adc096d7522b",
+    "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc",
+    "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
+    "work-b762b9b0ce5d42b30153e125285150a87d2b6b961e335c9dcdc8eef0762986ed",
+    "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276",
+    "work-baae6bd463fa0a429b8468187092c2fd43a79712ad7dc76c0cec0a13edef2cc1",
+    "work-be21ae5e287d23c94456235afcf887d5afaf00d09044eb641a1e9a928ea1dc3f",
+    "work-c034ae0ee01d23cdfda8cca3ecfce6231848882c636a6eabfba167c15816aa9d",
+    "work-c687900ffb2da722cf04c0d543534da881a0b091914fd60cacf8e713a9ed05b6",
+    "work-cff8138e8eac871aaf9ab0ded32ade78a2ed03d3b747b1548b352aac8e966227",
+    "work-d2a3e21ca381c9a28b19593758d0ee6fdb9a8cf19b298036e363ebb07c73587b",
+    "work-d640bd15fa85f26d27559520d6ee7975f87906b9656d3032dd9a90a4e7f57420",
+    "work-d8596863692de92b66b34e284379e0e2e1cf2dee8925510e300342b64bbeab47",
+    "work-dd2b019ab27f2693d5fee099d091b4f9b518f39fb63921c991e71861f6a3ca2e",
+    "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
+    "work-e8fb2f967e80cad871d5f5735929d90935dc58d6ce51d63561c7f281d6fa1dbb",
+    "work-eec462cfab7fcced0ea43b3250b4af306b496e82e76c7a40dbc468ece009d9d6",
+    "work-efe84958d87e9e24165dffcdd219fb9fd57476673119d127edc24951aabdc6df",
+    "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114",
+    "work-f26814be18a6f4c476c63438f4fde6e60ae85aebd8b5d75b8de337a48d718fe4",
+    "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1",
+    "work-fd44e5b4ad67595a557bf332516756e2661cfe963bf3a585d60d319572d82b0b"
+  ],
+  "baseline_map_sha256": "358e23af6774ea4fd53bab5ed8b55fdd1891a4e7730c0924d74e428e94cd4a88",
+  "hub_parent": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
+  "map_digest_excluded_fields": [
+    "keyword_ids",
+    "tsne_x",
+    "tsne_y",
+    "x",
+    "y"
+  ],
+  "new_sullivan_map_nonlayout_sha256_by_work_id": {
+    "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d": "8545e95e953222f8ca4502c1b675822d2485e7b977f82f9bbd75b15994553f3b",
+    "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0": "4cdf3b1e3340037ccb0c72ce98aeeebabf39e7de2a63069598e02945f2d1e18e",
+    "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f": "de9f3b6d2106bd36af31eb5877d9150be68426f1568576057f5906c3fadbda34",
+    "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d": "7547e2f8e8761552d049e981373eac76d4ed35eef7e74eff545247efff5a2df2",
+    "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032": "3e290779cd59d2c144ecbbc78984299a52f7e3a616bd9ea9bdc0028c0b345fbb",
+    "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc": "3cf29ee3011c67c701fc750d065fd61e59ec8cc60a0510993a8f8bc5d5381696",
+    "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd": "f1c14c821518a335c9fe1d797199df4758b9c83a8d5c01601d41539a1443ab40",
+    "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276": "e9b9169ee07e23b4695b319bea826b692b8194b27cef5c14ad858a3dd6c87ed6",
+    "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab": "090fe0c94fe8ba35d14678374df789b372a2dd917b996ea3c16fe1f990cc6d47",
+    "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114": "5162cae7fe2f87505e61696699742f4fa11fd5ff132c1bdc1eac77259d36e6c2",
+    "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1": "d12b6e4b214ec79ab6b0578d8788bd5cbb7e2d3118193493d379e17ebec99dba"
+  },
+  "new_sullivan_map_work_ids": [
+    "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d",
+    "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
+    "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f",
+    "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d",
+    "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032",
+    "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc",
+    "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
+    "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276",
+    "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
+    "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114",
+    "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1"
+  ],
+  "producer_base_commit_at_stage": "3630084aafd351726651708d270a87cbb597ad27",
+  "removed_old_work_ids": [
+    "work-2eee0a9487baad0a2e705714e868003bf66ce84e7f4042880569b79a6f7c655b",
+    "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
+    "work-60b080a67f4400a130ecafe17b8575867aaf45b7527d94e5396e7a127b8b24da",
+    "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
+    "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
+    "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3",
+    "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2",
+    "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16",
+    "work-b7341ad16197c387d2b0be8b19f2356697fa6bee3ffd4f2972f222c35aa2f080",
+    "work-c84498bb1cf0b8c20bf856546706d29ec0fa4f3ef1ad2fa8a139aabca57c8a87",
+    "work-d67ade5d8757bc08f4d6c2affac0640a792351a8bccf09da6f6c0ad67f85eb4d",
+    "work-fa24bb9f8e0535e938a8539bc918303cbf407e6817299a6efe1e24bc29a7688f",
+    "work-fa3ccb008ce61f94d40f51c07a4dd5b110833eb23c8e34866d6033395de46a14"
+  ],
+  "removed_sullivan_map_work_ids": [
+    "work-00119ce6c246870e1093bfa8d6bf5f7f2dd00c4e254eb75afa7918b47e91cefa",
+    "work-1e0894e1fdfd288db72861e54712abc35ee5c522606105482baf40eebfc03931",
+    "work-281380005be9fb3927f4ff847f9242f96544b2c497ee5e95058ed521ee0f7dc8",
+    "work-2dc1e8bab6977930c1004ad6f2e30e7f45c319c73a9e7ceec632bf0c50e1f050",
+    "work-30d95b3f6d7cfd6fc64159a1e394641759a4de24f9a2bcfb8dc843f96093fbc2",
+    "work-346177a186af2374aa0ff7a41eb6421d1e1c6b2833be60967253561309ebad6a",
+    "work-4043df9ef166a7a55a9bff178220e30ad757cd7a4bcaefc82104bf4fff66e251",
+    "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
+    "work-4faeed12c5dd0125d97c9ee5940d3b430f9c8a201495ba4d65ae4ab02274fa09",
+    "work-538123ca6317c3428a3133716b2a98c3b30370ada68df09e167c7f5bd28df5c0",
+    "work-5dcc0f98cca7d8ac579ed262d3c256906e3a688b371a11a98528188c6cc738dc",
+    "work-60b080a67f4400a130ecafe17b8575867aaf45b7527d94e5396e7a127b8b24da",
+    "work-6a32f12212002f24b2e55823946fb4f0dd9ed6348214cb26d007eb8d472ea710",
+    "work-6c7b071518a7834a405498de72db85597c887853e950ea29d1313cf4b88afa3b",
+    "work-6fab60ed5c6f46717e336e1dbde85da924d2fc09c04b2dc0576be41846b1874a",
+    "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
+    "work-87681e7443fa9a1fc1a405700030080f24e853371690c1067dbad649d947da5b",
+    "work-87789b6016b5d64dbdaeac65c51aa4243737a42106630e529e44b0995f91bb46",
+    "work-87bfed6493a2a86a654145a9c8befbde168a880df5d809f1d566e6e115a76b1d",
+    "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
+    "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3",
+    "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2",
+    "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16",
+    "work-bb2f1ec922e8f4bec82452ea82a735e08494df46e0c4390193613a65f92414b1",
+    "work-c5fbd4aeda6c56ddee5fd1064ebb7bca07d21e2b15c4376b14436d0fdb00eb04",
+    "work-c84498bb1cf0b8c20bf856546706d29ec0fa4f3ef1ad2fa8a139aabca57c8a87",
+    "work-d90e99cbc03b02cbde0d4948d614f0026e9a08354ea6f058c2709ceb572b9f28",
+    "work-e0d5e0f90638bfae83a08e0038face9baec7fbb8c4b6025c3c866c4d4fb5faf7",
+    "work-fb7b4b6b37592f81afcc08b7b6064ea746fa48379daae0425300e91a6b00cf7a"
+  ],
+  "schema_version": 1,
+  "shared_sullivan_map_changed_nonlayout_fields": {
+    "work-0141bbbaf573ac434312694db5674adffd1d87fa6661088ce5ee91bba1b186bf": {
+      "authors": {
+        "prior": "",
+        "stage": "RYW Chang, RC Sullivan, JPD Abbatt"
+      },
+      "citation_count": {
+        "prior": 38,
+        "stage": 41
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:YsMSGLbcyi4C"
+      }
+    },
+    "work-04a39ff3500496468db45eedb1bcf90a103ca11f1e60d8d4fd1c214bc79b6a23": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahn, MJ Polen, LG Jahl, TA Brubaker, J Somers, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 42,
+        "stage": 61
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:URolC5Kub84C"
+      }
+    },
+    "work-066ded1c1e18697d46d7af54ce60ba8b8c8fb29639b5e9db67012c52800d7b92": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, SA Guazzotti, DA Sodeman, KA Prather"
+      },
+      "citation_count": {
+        "prior": 480,
+        "stage": 502
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:u5HHmVD_uO8C"
+      }
+    },
+    "work-0702a42fc3c0d81c26ffabd9145f194e09b10ba5d0467aaa38d1f95ffc9deaa2": {
+      "authors": {
+        "prior": "",
+        "stage": "AT Ahern, L Goldberger, L Jahl, J Thornton, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 57,
+        "stage": 66
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:8AbLer7MMksC"
+      }
+    },
+    "work-0800586a169a66ed2f71ee4535eb8dcf70468090dd8d64fa2d785bd7d894449a": {
+      "authors": {
+        "prior": "",
+        "stage": "MJ Moore, RC Sullivan, GC Roberts, KA Prather"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:mB3voiENLucC"
+      }
+    },
+    "work-086245366f39979a8b4be12b9cd97ea205c8118e3832f70ead9c79dc7598197e": {
+      "authors": {
+        "prior": "",
+        "stage": "KA Prather, K Suski, A Cazorla, JF Cahill, J Creamean, DB Collins, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:HDshCWvjkbEC"
+      }
+    },
+    "work-08689d577d4d3429fc33662ec0b6ec219f7267235b4caf792022ad4ee90de576": {
+      "authors": {
+        "prior": "",
+        "stage": "KA Prather, TH Bertram, VH Grassian, GB Deane, MD Stokes, PJ DeMott, ..."
+      },
+      "citation_count": {
+        "prior": 574,
+        "stage": 661
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:WF5omc3nYNoC"
+      }
+    },
+    "work-09b121be486723ade51f802e10e51278a8961b7a2f8660cbe064b93867d8d9b3": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, KA Prather"
+      },
+      "citation_count": {
+        "prior": 199,
+        "stage": 202
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:d1gkVwhDpl0C"
+      }
+    },
+    "work-09b449536dc599124120d7daff78867a02b2d57e520a822eba29737f692c8a94": {
+      "authors": {
+        "prior": "",
+        "stage": "S Kreidenweis, R Sullivan, T Lee, A Sullivan, J Collett, P Ziemann, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:4TOpqqG69KYC"
+      }
+    },
+    "work-0a9b2423de06bfac59b344e5299ecad76bd2522428f25864384db41af85e1fc4": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, S Guazzotti, KA Prather"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:4DMP91E08xMC"
+      }
+    },
+    "work-0b3f9ec5b70120371cf69ef3aa57a743ce98dee125c97c51c6c707a9f24f538b": {
+      "authors": {
+        "prior": "",
+        "stage": "A Ahern, L Goldberger, L Jahn, L Jahl, J Thornton, R Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:1qzjygNMrQYC"
+      }
+    },
+    "work-0fbcb51b9d23479ae4ef88be48c5593f9d226ee80bd553878449eb31b91a68c6": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahn, GD Bland, LW Monroe, RC Sullivan, ME Meyer"
+      },
+      "citation_count": {
+        "prior": 21,
+        "stage": 34
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:VaXvl8Fpj5cC"
+      },
+      "venue": {
+        "prior": "Aerosol Science and Technology 55 (5), 571-585, 2021",
+        "stage": "Aerosol science and technology 55 (5), 571-585, 2021"
+      }
+    },
+    "work-0fcaae39e3790dcc8f82305888c990473639953cca4e58e787231d61faab182e": {
+      "authors": {
+        "prior": "",
+        "stage": "WD Fahy, E Maters, R Giese-Miranda, MP Adams, LG Jahn, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:_5tno0g5mFcC"
+      }
+    },
+    "work-10a1ce832b5da259eb54cbb29f5515e46ddd6409eeaca55cfaf9f4b51754408b": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, KA Prather"
+      },
+      "citation_count": {
+        "prior": 187,
+        "stage": 197
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:2osOgNQ5qMEC"
+      }
+    },
+    "work-10cec843cda12bf992f2af7b83ceadf058bb24d35b6044dd8f6f25db117126ff": {
+      "authors": {
+        "prior": "",
+        "stage": "KA Prather, K Suski, A Cazorla, JF Cahill, J Creamean, DB Collins, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:qUcmZB5y_30C"
+      }
+    },
+    "work-118c7c743f3ec789cb9f20f00c7204c2f583889b40851cf9d5d455118880790f": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, GR McMeeking, RC Sullivan, AJ Prenni, MD Petters, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bEWYMUwI8FkC"
+      }
+    },
+    "work-144921928cbffa7d2d6949f1df1456e0a03c57b4a616af5953559b09039bed18": {
+      "authors": {
+        "prior": "",
+        "stage": "K Gohil, RC Sullivan, H Gordon"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:3htObqc8RwsC"
+      },
+      "venue": {
+        "prior": "104th AMS Annual Meeting, 2024",
+        "stage": "104th Annual AMS Meeting 2024 104, 435798, 2024"
+      }
+    },
+    "work-17392c8f2ab0e1709a913dacb75144cf53d59e119120a6dbbd289eb4fbe6d8bc": {
+      "authors": {
+        "prior": "",
+        "stage": "H Beydoun, RC Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:abG-DnoFyZgC"
+      }
+    },
+    "work-174baf5d669c829cfce596045ac72ee4aa615973357e16671a3e5184aed4eae5": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, K Gorkowski, L Jahn"
+      },
+      "citation_count": {
+        "prior": 13,
+        "stage": 12
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:5ugPr518TE4C"
+      }
+    },
+    "work-1bafa09befb5a5dc0532d5298ed84daf927e1b6dd38d5d3035815bc8ff223c3f": {
+      "authors": {
+        "prior": "",
+        "stage": "K Suski, J Creamean, D Rosenfeld, A Cazorla, PJ DeMott, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:iH-uZ7U-co4C"
+      }
+    },
+    "work-1c01098b158f51b8e0ba88145b8b79c1fe6107535e8c9b7980bd134cb8d3ace5": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, RC Sullivan, MJ Ruppel, TC Hill, R Mason, AP Ault, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:IWHjjKOFINEC"
+      }
+    },
+    "work-1d3bdf641a2f2d1fabb0da48a147e3d5fe5c088a2681e165e8cff09231c3994c": {
+      "authors": {
+        "prior": "",
+        "stage": "MJ Moore, RC Sullivan, Y Wang, MD Zauscher, G Roberts, KA Prather"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:9ZlFYXVOiuMC"
+      }
+    },
+    "work-1d6978b550ca03037a1e34402385926db49e6f6743193f58343823783cad72f1": {
+      "authors": {
+        "prior": "",
+        "stage": "D Niedermeier, S Hartmann, T Clauss, H Wex, A Kiselev, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ZeXyd9-uunAC"
+      }
+    },
+    "work-2044755e000e59a9422fbb232e20a9174fff88330ced4f062e0da52a0204afe2": {
+      "authors": {
+        "prior": "",
+        "stage": "K Gorkowski, H Beydoun, M Aboff, JS Walker, JP Reid, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 58,
+        "stage": 66
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:ZHo1McVdvXMC"
+      }
+    },
+    "work-22592591bf7c149b2d8d7ce4d44244f169d307f8bd4d4ff8eefd4b52991aa48e": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MJ Moore, MD Petters, A Laskin, GC Roberts, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:Zph67rFs4hoC"
+      }
+    },
+    "work-22a92cf7d4cfd1a0a9fc5297ec912aa63b1a17f907151a2b54756e5fb1af24e9": {
+      "authors": {
+        "prior": "",
+        "stage": "K Prather, S Guazzotti, JC Holecek, XY Qin, LG Shields, M Sipin, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:3fE2CSJIrl8C"
+      }
+    },
+    "work-247897ccc7cbbeecd3a77c9b009408463579b220c4f0136207a122c675668d13": {
+      "authors": {
+        "prior": "",
+        "stage": "M Polen, E Lawlis, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 81,
+        "stage": 95
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:3s1wT3WcHBgC"
+      }
+    },
+    "work-26ff9977a31ca19e9030adcc6aa224ce99ede61c3bf046f2aa1ab2944b4dfa19": {
+      "authors": {
+        "prior": "",
+        "stage": "CE Stockwell, RJ Yokelson, SM Kreidenweis, AL Robinson, PJ DeMott, ..."
+      },
+      "citation_count": {
+        "prior": 252,
+        "stage": 290
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:blknAaTinKkC"
+      },
+      "title": {
+        "prior": "Trace gas emissions from combustion of peat, crop residue, domestic biofuels, grasses, and other fuels: configuration and Fourier transform infrared (FTIR) component of the …",
+        "stage": "Trace gas emissions from combustion of peat, crop residue, domestic biofuels, grasses, and other fuels: configuration and Fourier transform infrared (FTIR) component of the …"
+      }
+    },
+    "work-277d3d6c9ce72ff8fb382445b396c10b68602bde923298849320a0c7ff245fc6": {
+      "authors": {
+        "prior": "",
+        "stage": "EJT Levin, PJ DeMott, KJ Suski, Y Boose, TCJ Hill, CS McCluskey, ..."
+      },
+      "citation_count": {
+        "prior": 34,
+        "stage": 41
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:PR6Y55bgFSsC"
+      }
+    },
+    "work-27e98b0dcd48ea9871a10d815bc2042abd51fb2627dbfe2efaf500643e0ee699": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, SA Guazzotti, DA Sodeman, Y Tang, GR Carmichael, ..."
+      },
+      "citation_count": {
+        "prior": 135,
+        "stage": 141
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:qjMakFHDy7sC"
+      }
+    },
+    "work-2863e4d41dbf6d5a83925163a3fd374bf41937362b861352f0ad4e417fa13193": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, TC Hill, MJ Ruppel, KA Prather, DB Collins, JL Axson, T Lee, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:j3f4tGmQtD8C"
+      }
+    },
+    "work-2ae4a67c9dd7731e264d8a78a330a87f95a9ca4427f82b2352a824e7a7f33cc3": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, KA Prather, RC Sullivan, K Suski, JM Comstock, JM Tomlinson, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:mVmsd5A6BfQC"
+      }
+    },
+    "work-2f1450823bff735b5f360d8c6ad191646af384dbb0093cb9b684c984c0dbc6f2": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, O Möhler, DJ Cziczo, N Hiranuma, MD Petters, SS Petters, ..."
+      },
+      "citation_count": {
+        "prior": 111,
+        "stage": 136
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:olpn-zPbct0C"
+      }
+    },
+    "work-30a5ad688935bb2b3f2dc6193861691783ac234cb7e603d248499bf79fca0a23": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, PJ DeMott, MJ Ruppel, G Franc, T Hill, DB Collins, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:TFP_iSt0sucC"
+      }
+    },
+    "work-30f23d59272d8c38faa0a79d3108fb2f2cd54ebd7fa9a85ab099d76e4eb3ce6a": {
+      "authors": {
+        "prior": "",
+        "stage": "MD Petters, SM Kreidenweis, AJ Prenni, RC Sullivan, CM Carrico, ..."
+      },
+      "citation_count": {
+        "prior": 67,
+        "stage": 68
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:W7OEmFMy1HYC"
+      },
+      "venue": {
+        "prior": "Geophysical research letters 36 (22), 2009",
+        "stage": "Geophysical Research Letters 36 (22), 2009"
+      }
+    },
+    "work-3194ef0bd59fa1dd24f2535783095e56064a2ae35a7fc2ae1e18ae7bf34ef808": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, T Thornberry, JPD Abbatt"
+      },
+      "citation_count": {
+        "prior": 13,
+        "stage": 12
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:LkGwnXOMwfcC"
+      }
+    },
+    "work-3ab9a2f86c5c995f11f821d8ed83cf9adaa37f6e4492c588c27666fb7c3f4cf4": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, R Chang, TD Thornberry, JPD Abbatt"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:hC7cP41nSMkC"
+      }
+    },
+    "work-41fd5a40fed230a6ae7eaae4411e62aa6746f727e3ce7d2b54a445f8cf258278": {
+      "authors": {
+        "prior": "",
+        "stage": "R Arimoto, YJ Kim, YP Kim, PK Quinn, TS Bates, TL Anderson, S Gong, ..."
+      },
+      "citation_count": {
+        "prior": 263,
+        "stage": 276
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:u-x6o8ySG0sC"
+      }
+    },
+    "work-424c651263c34c573f022dec27881682ecaf9444b0d31a78c2d927979a8f3d90": {
+      "department_ids": {
+        "prior": [
+          "chem"
+        ],
+        "stage": [
+          "chem",
+          "mech"
+        ]
+      },
+      "faculty_ids": {
+        "prior": [
+          "person-kevinnoonan-72af9ba9",
+          "person-stefanieasydlik-a410343f"
+        ],
+        "stage": [
+          "person-kevinnoonan-72af9ba9",
+          "person-stefanieasydlik-a410343f",
+          "person-sullivan-589c9545"
+        ]
+      },
+      "observation_count": {
+        "prior": 2,
+        "stage": 3
+      },
+      "school_ids": {
+        "prior": [
+          "mcs"
+        ],
+        "stage": [
+          "engineering",
+          "mcs"
+        ]
+      }
+    },
+    "work-44e3314f3e34e64d71915bd4a750b6f94f81ffa062b9e3298ca387834938633c": {
+      "authors": {
+        "prior": "",
+        "stage": "H Beydoun, M Polen, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 30,
+        "stage": 34
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:_xSYboBqXhAC"
+      }
+    },
+    "work-47af2f844e080f0246f10ecef52f39373b984f16efb85b511e431a6e087ec954": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ Demott, AJ Prenni, DG Georgakopoulos, GD Franc, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:qxL8FJ1GzNcC"
+      }
+    },
+    "work-47b954b6eadd48c3fd8ddc6261731ba2d983ceb709efc47b8e368e27af49f509": {
+      "authors": {
+        "prior": "",
+        "stage": "CE Stockwell, RJ Yokelson, SM Kreidenweis, AL Robinson, PJ DeMott, ..."
+      },
+      "citation_count": {
+        "prior": 9,
+        "stage": 11
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:r0BpntZqJG4C"
+      },
+      "title": {
+        "prior": "Trace gas emissions from combustion of peat, crop residue, biofuels, grasses, and other fuels: configuration and FTIR component of the fourth Fire Lab at Missoula Experiment …",
+        "stage": "Trace gas emissions from combustion of peat, crop residue, biofuels, grasses, and other fuels: configuration and FTIR component of the fourth Fire Lab at Missoula Experiment …"
+      }
+    },
+    "work-4a2d06da2f674a50215a82fce9dd566d0fe16ee926c9920d664ae12c0a70732e": {
+      "title": {
+        "prior": "Emulsified and liquid–liquid phase-separated states of α-pinene secondary organic aerosol determined using aerosol optical tweezers",
+        "stage": "Emulsified and Liquid–Liquid Phase-Separated States of α‑Pinene Secondary Organic Aerosol Determined Using Aerosol Optical Tweezers"
+      }
+    },
+    "work-4a42b8f6784053ec3e2ad5f9aab781e0f87d7fa07aee5031f9c10470ee4d2871": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, T Thornberry, JPD Abbatt"
+      },
+      "citation_count": {
+        "prior": 89,
+        "stage": 97
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:UeHWp8X0CEIC"
+      }
+    },
+    "work-4b0d2f0137aacbe51223c6d68e02b0cc50bb792e1e6aea199049a2d546e39690": {
+      "authors": {
+        "prior": "",
+        "stage": "EJ Levin, GR McMeeking, CS McCluskey, CM Carrico, S Nakao, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:yD5IFk8b50cC"
+      }
+    },
+    "work-4d0bbb93d264fb85ecac2c9367417af53a1206d0e4ca968188373e9f1b7bc55a": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MJK Moore, MD Petters, SM Kreidenweis, GC Roberts, ..."
+      },
+      "citation_count": {
+        "prior": 83,
+        "stage": 89
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:Tyk-4Ss8FVUC"
+      }
+    },
+    "work-4eb6e49723059c88cf7d70f1ee4e2374c2110e899dc6f6618727525bb20c1d66": {
+      "authors": {
+        "prior": "",
+        "stage": "DA Knopf, KR Barry, T Brubaker, L Jahl, KA Jankowski, J Li, Y Lu, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:4fGpz3EwCPoC"
+      },
+      "title": {
+        "prior": "A Southern Great Plains Pilot Field Campaign to Evaluate a Field-Observational Approach to Aerosol–Ice Formation Closure",
+        "stage": "A Southern Great Plains Pilot Field Campaign to Evaluate a Field-Observational Approach to Aerosol-Ice Formation Closure"
+      },
+      "venue": {
+        "prior": "102nd American Meteorological Society Annual Meeting, 2022",
+        "stage": "American Meteorological Society Meeting Abstracts 102, 16.2, 2022"
+      }
+    },
+    "work-5297e34e6a002eab341aebb273761a0e52abdfe1938cf0f1509ff33fa7731298": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, L Miñambres, PJ DeMott, AJ Prenni, CM Carrico, EJT Levin, ..."
+      },
+      "citation_count": {
+        "prior": 120,
+        "stage": 126
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:zYLM7Y9cAGgC"
+      }
+    },
+    "work-570d6d077d078e4eaab0c68ae3fdee82abafa4aa88601651bff853106ccb003a": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahn, WD Fahy, DB Williams, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 16,
+        "stage": 24
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:PELIpwtuRlgC"
+      }
+    },
+    "work-5847db054f3a54d97f16546a8f027629cb45baea5e594222cbd5171092236af0": {
+      "authors": {
+        "prior": "",
+        "stage": "K Gohil, RC Sullivan, PJ DeMott, H Gordon"
+      },
+      "citation_count": {
+        "prior": 0,
+        "stage": 1
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:6yz0xqPARnAC"
+      },
+      "venue": {
+        "prior": "Authorea Preprints, 2025",
+        "stage": "ESS Open Archive 2025 (0224), 2025"
+      }
+    },
+    "work-5b41bbf93cf5b947bec91d46924031091663480b010010eec5c4c27e5c085ea9": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, H Boyer-Chelmo, K Gorkowski, H Beydoun"
+      },
+      "citation_count": {
+        "prior": 46,
+        "stage": 62
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:BwyfMAYsbu0C"
+      }
+    },
+    "work-5d5a99bbe9b12d9f88955dc1a93b754ec4b701dff1c7c67f4aedc5a50c839256": {
+      "authors": {
+        "prior": "",
+        "stage": "N Hiranuma, K Adachi, D Bell, F Belosi, H Beydoun, B Bhaduri, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:35r97b3x0nAC"
+      },
+      "venue": {
+        "prior": "98th American Meteorological Society Annual Meeting, 2018",
+        "stage": "American Meteorological Society Meeting Abstracts 98, J4. 2, 2018"
+      }
+    },
+    "work-5e7631504be5666c07ad2fcdaea5edcad15a9851953d01e658caddc5f77f8a81": {
+      "authors": {
+        "prior": "",
+        "stage": "SR Suda, MD Petters, GK Yeh, C Strollo, A Matsunaga, A Faulhaber, ..."
+      },
+      "citation_count": {
+        "prior": 109,
+        "stage": 125
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:maZDTaKrznsC"
+      }
+    },
+    "work-5f768f4f7023f1e96fdda99eb00b7009aa12a649aadd900a4cfc9303746361ca": {
+      "authors": {
+        "prior": "",
+        "stage": "A Schäffer, KJ Groh, G Sigmund, D Azoulay, T Backhaus, MG Bertram, ..."
+      },
+      "citation_count": {
+        "prior": 20,
+        "stage": 68
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:bKqednn6t2AC"
+      },
+      "venue": {
+        "prior": "Environmental science & technology 57 (48), 19066-19077, 2023",
+        "stage": "Environmental Science & Technology 57 (48), 19066-19077, 2023"
+      }
+    },
+    "work-608bf5e76d05e7fb83519f610e12d10dc27d7dc2296512361474270c5b6faecc": {
+      "authors": {
+        "prior": "",
+        "stage": "WD Fahy, EC Maters, R Giese Miranda, MP Adams, LG Jahn, RC Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 10,
+        "stage": 15
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:YohjEiUPhakC"
+      }
+    },
+    "work-61ddd338481f674526240a2e94530d3fbf24579eaef131e9be520aa26d1a3305": {
+      "authors": {
+        "prior": "",
+        "stage": "RM Weatherholt, B Bowers, KL Chung, RC Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OP4eGU-M3BUC"
+      }
+    },
+    "work-62050b5c9273d4ff43b44e2492e0909aa27a122c33349ad8b0fbcec2073b3870": {
+      "authors": {
+        "prior": "",
+        "stage": "HA Santiago-Cruz, Z Lou, J Xu, RC Sullivan, BB Bowers, RA Molé, ..."
+      },
+      "citation_count": {
+        "prior": 0,
+        "stage": 13
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:_OXeSy2IsFwC"
+      }
+    },
+    "work-636e349809659425fcf2de494f27b561de886bf00d034d0fd3d8d46d1a364df5": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahl, BB Bowers, LG Jahn, JA Thornton, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 12,
+        "stage": 16
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:hCrLmN-GePgC"
+      }
+    },
+    "work-6490123d7b26967b2c816a15b67a095cd90521061ff169e61e28e0925e7763f7": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ Demott, AJ Prenni, RC Sullivan, X Liu, SM Kreidenweis, JM Carpenter, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7PzlFSSx8tAC"
+      }
+    },
+    "work-6923c1a05a862a784f6a34423b4bae9c6431fd512401d2019c5dacc86dc98590": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, AJ Prenni, SM Kreidenweis, O Moehler, X Liu, MD Petters, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:kNdYIx-mwKoC"
+      }
+    },
+    "work-69918fbf586b31c56ef6aee21ada62c5dc1143b7d04b43cf458bf0cdf826be68": {
+      "authors": {
+        "prior": "",
+        "stage": "M Polen, L Jahl, L Jahn, J Somers, RC Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:eJXPG6dFmWUC"
+      }
+    },
+    "work-6bca3b76f8f1d352d40e3e152389a87b12c022b4d39375435292a04f099cfa07": {
+      "authors": {
+        "prior": "",
+        "stage": "DA Knopf, K Barry, T Brubaker, L Jahl, J Li, Y Lu, L Monroe, K Moore, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tYavs44e6CUC"
+      },
+      "title": {
+        "prior": "A Field-Observational Approach to Aerosol–Ice Formation Closure",
+        "stage": "A Field-Observational Approach to Aerosol-Ice Formation Closure"
+      },
+      "venue": {
+        "prior": "101st American Meteorological Society Annual Meeting, 2021",
+        "stage": "American Meteorological Society Meeting Abstracts 101, 10.1, 2021"
+      }
+    },
+    "work-6c7a86d4b08419269067f70d2bb9db755e6254ed889b64219ec8455cfed8c0b1": {
+      "authors": {
+        "prior": "",
+        "stage": "DA Knopf, P DeMott, J Creamean, T Hill, N Riemer, N Hiranuma, A Laskin, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:EYYDruWGBe4C"
+      }
+    },
+    "work-6cd369ffc890bcf4af7772ce9efc51a8e7b359c1a66d77b5256952d9af117895": {
+      "authors": {
+        "prior": "",
+        "stage": "A Zelenyuk"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:_B80troHkn4C"
+      },
+      "venue": {
+        "prior": "European Geophysical Society, Copernicus Publ., 2018",
+        "stage": "Atmospheric Chemistry and Physics Discussions, 2018"
+      }
+    },
+    "work-6f151da9bc9cfbc0eb12e9b14ecc8431b92360be517768852f3f8f7d66d76dd3": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, S Guazzotti, D Sodeman, K Coffee, J Holecek, M Spencer, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:dhFuZR0502QC"
+      }
+    },
+    "work-7037168f8847607b198cb3bac148cb1053d5eda7ea7546c1fb54c1ece98e1c9f": {
+      "authors": {
+        "prior": "",
+        "stage": "Y Tobo, PJ DeMott, AJ Prenni, TC Hill, RC Sullivan, GD Franc, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:aqlVkmm33-oC"
+      }
+    },
+    "work-788a5b82a4f226e0ec7998fe08cc729dcf815a537d34d1a22914067a61c2cf52": {
+      "authors": {
+        "prior": "",
+        "stage": "M Polen, E Lawlis, RC Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:cFHS6HbyZ2cC"
+      }
+    },
+    "work-798c8a40437c2782b48461fc743a8b15a0a84f9a8b87b2dd3081142e220a0081": {
+      "authors": {
+        "prior": "",
+        "stage": "LW Monroe, JS Johnson, HB Gutstein, JP Lawrence, K Lejeune, ..."
+      },
+      "citation_count": {
+        "prior": 1,
+        "stage": 4
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2VqYfGB8ITEC"
+      }
+    },
+    "work-7b972b8c9ffca4c1316b44fdb73f81a5270697351970fc7896ce65470b5880d9": {
+      "authors": {
+        "prior": "",
+        "stage": "D Niedermeier, S Hartmann, F Stratmann, H Wex, T Clauss, A Kiselev, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ldfaerwXgEUC"
+      }
+    },
+    "work-7e996c18309c7303492f7a1e146d686e7dc2db3d48fe93890ae728b73f250d10": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MJK Moore, MD Petters, SM Kreidenweis, GC Roberts, ..."
+      },
+      "citation_count": {
+        "prior": 294,
+        "stage": 352
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:9yKSN-GCB0IC"
+      }
+    },
+    "work-7f287c2e8eb7e486194c20e905d2ab01b8efc0b71ce9948be6dea5b677777334": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahl, TA Brubaker, MJ Polen, LG Jahn, KP Cain, BB Bowers, WD Fahy, ..."
+      },
+      "citation_count": {
+        "prior": 53,
+        "stage": 80
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:i2xiXl-TujoC"
+      }
+    },
+    "work-7fdf9af2cd5c34454fd695bb58435154b97fb331463bce19ecf5cc0fc4470212": {
+      "authors": {
+        "prior": "",
+        "stage": "MC Lomax-Vogt, J Olesik, A Ellis, C Bradley, L Monroe, G Bland, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vbGhcppDl1QC"
+      }
+    },
+    "work-8122a7a72d608ab7c4f53b796cd0b513f47037623d9c37db699d4bc54689f060": {
+      "authors": {
+        "prior": "",
+        "stage": "M Polen, T Brubaker, J Somers, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 67,
+        "stage": 76
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:mvPsJ3kp5DgC"
+      }
+    },
+    "work-815e5d6a5e5e61d54c7e9c10d0fb09afdee7edf5b9cf7cef5ab9dc658a681bc0": {
+      "authors": {
+        "prior": "",
+        "stage": "SR Suda, MD Petters, A Matsunaga, RC Sullivan, PJ Ziemann, ..."
+      },
+      "citation_count": {
+        "prior": 51,
+        "stage": 57
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:hqOjcs7Dif8C"
+      }
+    },
+    "work-8248031e6121d781aac058ec21690f47394600e0126d961ee2c97779317be254": {
+      "authors": {
+        "prior": "",
+        "stage": "LG Jahn, LG Jahl, BB Bowers, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 11,
+        "stage": 17
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:edDO8Oi4QzsC"
+      }
+    },
+    "work-83eef057c74d95f2983fffd33a89ca560e046fb44f8126aed80b19ef8103a83c": {
+      "authors": {
+        "prior": "",
+        "stage": "MD Petters, PJ Ziemann, SM Kreidenweis, CM Carrico, A Faulhaber, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:-f6ydRqryjwC"
+      }
+    },
+    "work-850930f542b887444c55da5b952ce034779d2b532ca250e2e784b11240bb1755": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, TCJ Hill, CS McCluskey, KA Prather, DB Collins, RC Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 460,
+        "stage": 549
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:J_g5lzvAfSwC"
+      }
+    },
+    "work-85a3f5a558a7a5dce7f37e5512b2ddadfb23df2c24afc0e4e788bface1236235": {
+      "authors": {
+        "prior": "",
+        "stage": "L Jahl, T Brubaker, L Jahn, M Polen, B Bowers, S Graves, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:dQ2og3OwTAUC"
+      }
+    },
+    "work-85a4656fa0204854cdfd4acffc769133333fa1e410386d3b198e2c9d3a8941e7": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, G Poon, S Guazzotti, D Sodeman, J Holecek, M Spencer, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:QIV2ME_5wuYC"
+      },
+      "title": {
+        "prior": "Providing Size-Resolved Mixing State Inputs to Improve Aerosol Optics Models: Comparison of ACE-Asia Aerosol Chemical Measurements for Different Source Regions With …",
+        "stage": "Providing Size-Resolved Mixing State Inputs to Improve Aerosol Optics Models: Comparison of ACE-Asia Aerosol Chemical Measurements for Different Source Regions With …"
+      }
+    },
+    "work-862eb0b075e430db065610038570ad083456a02941c2af94c43286ba6f4445bf": {
+      "authors": {
+        "prior": "",
+        "stage": "GR McMeeking, PJ DeMott, RC Sullivan, A Danielczok, H Bingemer, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vV6vV6tmYwMC"
+      }
+    },
+    "work-87bab178323612bea0543d51c6445a438094834ae60c3398f8e1efdab5db1884": {
+      "authors": {
+        "prior": "",
+        "stage": "D Niedermeier, S Hartmann, T Clauss, H Wex, A Kiselev, RC Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 67,
+        "stage": 68
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:ufrVoPGSRksC"
+      }
+    },
+    "work-899ff275bc0b3e1cda0c748769953c9ae4b8d0a4372dfd794d93e57614f1f466": {
+      "venue": {
+        "prior": "Nature Geoscience 7 (9), 647-650, 2014",
+        "stage": "Nature geoscience 7 (9), 647-650, 2014"
+      }
+    },
+    "work-8dcf610692db7722f7b2a6b73b104c3a01cb8b28e5a3ea6295ac0da33d4fd3e2": {
+      "authors": {
+        "prior": "",
+        "stage": "P Gabrielli, O John, C Bradley, M Lomax-Vogt, H Colijn, A Ellis, J Sheets, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:Dip1O2bNi0gC"
+      },
+      "venue": {
+        "prior": "Goldschmidt2021• Virtual• 4-9 July, 2021",
+        "stage": "Thirty-first Annual Goldschmidt Conference, 7424, 2021"
+      }
+    },
+    "work-8e9707ab22458b9bb4f169773b2928b42f5294dcc40f39066acfbc1f95089dca": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, M Polen, H Beydoun, E Lawlis, A Ahern, L Jahn, TCJ Hill"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:70eg2SAEIzsC"
+      }
+    },
+    "work-90b5ef7ac6f1768987e69f1f92e36db97265518fdddbae4b3e43e7e6e88a1c80": {
+      "department_ids": {
+        "prior": [
+          "chem",
+          "cheme"
+        ],
+        "stage": [
+          "chem",
+          "cheme",
+          "mech"
+        ]
+      },
+      "faculty_ids": {
+        "prior": [
+          "person-donahue-f4c5ce86"
+        ],
+        "stage": [
+          "person-donahue-f4c5ce86",
+          "person-sullivan-589c9545"
+        ]
+      },
+      "observation_count": {
+        "prior": 1,
+        "stage": 2
+      }
+    },
+    "work-96499f515eefa421824646d7d9b4b31c47fbc1eae508d46603fe610d37bf4870": {
+      "authors": {
+        "prior": "",
+        "stage": "BB Bowers, JA Thornton, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 13,
+        "stage": 28
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:WJVC3Jt7v1AC"
+      }
+    },
+    "work-a0e8be94d230026fcecd068cd5d57ce677c5dd9f24d4b17982d07d7fa7b1c1f5": {
+      "authors": {
+        "prior": "",
+        "stage": "AJ Prenni, PJ DeMott, AP Sullivan, RC Sullivan, SM Kreidenweis, ..."
+      },
+      "citation_count": {
+        "prior": 66,
+        "stage": 77
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:5nxA0vEk-isC"
+      }
+    },
+    "work-a2f98be20369986b137a1ea8f58c351d3c551b89b24c50f385611bf48201536b": {
+      "authors": {
+        "prior": "",
+        "stage": "L Jahn, L Jahl, M Polen, T Brubaker, S Graves, R Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:z_wVstp3MssC"
+      }
+    },
+    "work-a409e5b928b32e7f36558d30ec2d29673f855befbc53dcc1a148251ee20e4431": {
+      "authors": {
+        "prior": "",
+        "stage": "T Brubaker, M Polen, P Cheng, V Ekambaram, J Somers, SL Anna, ..."
+      },
+      "citation_count": {
+        "prior": 29,
+        "stage": 32
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:1yQoGdGgb4wC"
+      }
+    },
+    "work-a622353f5a75ab38710a4ad9026dd5450dd5d3c5110a07ef2f5006c1e28d1415": {
+      "authors": {
+        "prior": "",
+        "stage": "P DeMott, A Prenni, A Sullivan, G McMeeking, GD Franc, T Hill, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:KlAtU1dfN6UC"
+      },
+      "venue": {
+        "prior": "American Association for Aerosol Research, Rosen Shingle Creek Resort …, 2011",
+        "stage": "American Association for Aerosol Research, Rosen Shingle Creek Resort …, 2011"
+      }
+    },
+    "work-a9c64d5d24d9a6eb5a3035a943c6c7a901b32741d25603cfddeae75fd67ad3e2": {
+      "authors": {
+        "prior": "",
+        "stage": "JM Creamean, KJ Suski, D Rosenfeld, A Cazorla, PJ DeMott, RC Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 597,
+        "stage": 667
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:Y0pCki6q_DkC"
+      }
+    },
+    "work-abccdebe614b077aad864672bc92c4e7e28227a2c6b199c4fb9c59342caee8f2": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, RC Sullivan, G McMeeking, AJ Prenni, TC Hill, GD Franc, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:_kc_bZDykSQC"
+      }
+    },
+    "work-ac57cbb45387c06b6398142407622af4695c3629f06adf0c6d6741923912624b": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MJ Moore, GC Roberts, MD Petters, SM Kreidenweis, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:Wp0gIr-vW9MC"
+      }
+    },
+    "work-adf6993db0a6c4fcd443b70e68c58d2d25396c5c0e1d200671b1cf29911cb8cd": {
+      "authors": {
+        "prior": "",
+        "stage": "EJT Levin, AJ Prenni, MD Petters, SM Kreidenweis, RC Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 60,
+        "stage": 64
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:eQOLeE2rZwMC"
+      }
+    },
+    "work-b0c760d23d3e907387df1210d2fd64aa21886ea6284cf4589be50db50d8999fb": {
+      "authors": {
+        "prior": "",
+        "stage": "M Lomax-Vogt, LM Carter, J Wielinski, S Kutuzov, GV Lowry, R Sullivan, ..."
+      },
+      "citation_count": {
+        "prior": 0,
+        "stage": 35
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:F1b5ZUV5XREC"
+      }
+    },
+    "work-b1e2b7ac02714a2ab7d76752976eed954807b991b6532e03eec058c78b108bbe": {
+      "authors": {
+        "prior": "",
+        "stage": "N Hiranuma, K Adachi, DM Bell, F Belosi, H Beydoun, B Bhaduri, ..."
+      },
+      "citation_count": {
+        "prior": 70,
+        "stage": 85
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:WqliGbK-hY8C"
+      }
+    },
+    "work-b71dd64aa1ac8833ccc1d1d06f0d60918d79f94856c68922a852d087cc839cfd": {
+      "authors": {
+        "prior": "",
+        "stage": "R Sullivan, L Jahl, L Goldberger, J Thornton, B Bowers, L Jahn"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:VLnqNzywnoUC"
+      }
+    },
+    "work-bb02c013c944871ee5477ebb1e891cd28af5eaa904b5fea9cc97d02bab20880d": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MJK Moore, MD Petters, SM Kreidenweis, O Qafoku, ..."
+      },
+      "citation_count": {
+        "prior": 40,
+        "stage": 45
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:UebtZRa9Y70C"
+      }
+    },
+    "work-bb8a4fcbdb5e589a5ad6d362c0e9450aa15d3cb245af6976fa7f90086ad38541": {
+      "authors": {
+        "prior": "",
+        "stage": "MC Lomax-Vogt, O John, P Gabrielli, C Bradley, A Ellis, J Sheets, S Welch, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:PoWvk5oyLR8C"
+      },
+      "title": {
+        "prior": "Determining mineralogy, size, and number concentration of individual aeolian nano-and micro-dust particles measured by single particle-ICPMS in East Antarctic ice during the …",
+        "stage": "Determining mineralogy, size, and number concentration of individual aeolian nano-and micro-dust particles measured by single particle-ICPMS in East Antarctic ice during the …"
+      },
+      "venue": {
+        "prior": "Goldschmidt2021• Virtual• 4-9 July, 2021",
+        "stage": "Thirty-first Annual Goldschmidt Conference, 7860, 2021"
+      }
+    },
+    "work-bde29dbbffd75b22c33bbdace8b86cebffe2da2afa9e22b46a4e5fe9cc2b6223": {
+      "authors": {
+        "prior": "",
+        "stage": "R Sullivan, L Jahl, M Polen, L Jahn, T Brubaker, S Graves"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tKAzc9rXhukC"
+      }
+    },
+    "work-c062734de0521d3da494f73c7b81c9d99958a2bf65cd7a7b03ab3eaf4b2cc78a": {
+      "authors": {
+        "prior": "",
+        "stage": "D Rosenfeld, R Chemke, P DeMott, RC Sullivan, R Rasmussen, ..."
+      },
+      "citation_count": {
+        "prior": 44,
+        "stage": 54
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:0EnyYjriUFMC"
+      }
+    },
+    "work-c39feaad4647b43504b4c68391194752049f8da103d5a87149d08f350d2aebd1": {
+      "authors": {
+        "prior": "",
+        "stage": "MD Petters, A Faulhaber, AJ Prenni, CM Carrico, RC Sullivan, PJ Demott, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ULOm3_A8WrAC"
+      }
+    },
+    "work-c54eb30a2dacafe4e18d3b5b8393342b01952dd8faad636a67456a0b4add752b": {
+      "authors": {
+        "prior": "",
+        "stage": "P Gabrielli, J Olesik, C Bradley, MC Lomax-Vogt, H Colijn, A Ellis, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:hMsQuOkrut0C"
+      }
+    },
+    "work-c5805371feb277ce366ec30913e3cf1bdac77733bd501f41b2bd6410d5b8104e": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, SA Guazzotti, DA Sodeman, KA Prather"
+      },
+      "citation_count": {
+        "prior": 12,
+        "stage": 13
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:_FxGoFyzp5QC"
+      }
+    },
+    "work-c70813fd412e722739f7cd7eefb542ce79d34e7b05959daf488a6012303f12ed": {
+      "venue": {
+        "prior": "101st American Meteorological Society Annual Meeting, 2021",
+        "stage": "American Meteorological Society Meeting Abstracts 101, Joint, 2021"
+      }
+    },
+    "work-c82ee578ba8f8cbace7e874c7c60e1038c6008ab749e0a229a7a957a770f1df7": {
+      "authors": {
+        "prior": "",
+        "stage": "R Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:evX43VCCuoAC"
+      }
+    },
+    "work-c88c0ee036c3dc7448b485a28468e41346b71a3ae98478f7d78baa462919c795": {
+      "authors": {
+        "prior": "",
+        "stage": "K Prather, R Sullivan, K Pratt, M Moore, C Gaston, A Ault"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:MXK_kJrjxJIC"
+      }
+    },
+    "work-cd22739bc65dca6cf5f25133add9693ece252217450c52098f58bb5f98a20972": {
+      "authors": {
+        "prior": "",
+        "stage": "PJ DeMott, AJ Prenni, GR McMeeking, RC Sullivan, MD Petters, Y Tobo, ..."
+      },
+      "citation_count": {
+        "prior": 426,
+        "stage": 512
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:isC4tDSrTZIC"
+      }
+    },
+    "work-d02cbe8c92b9893c1fb49cb0e0731753496c4ebcccb463281e5b1581bdaa5d9c": {
+      "authors": {
+        "prior": "",
+        "stage": "P Gabrielli, MC Lomax-Vogt, S Kutuzov, SA Welch, RC Sullivan, G Bland, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:r_AWSJRzSzQC"
+      }
+    },
+    "work-d1438f4ba44a323060554ab598c2539c15ccb78d3d7feae05ca9ed651cf31470": {
+      "authors": {
+        "prior": "",
+        "stage": "KA Prather, RC Sullivan, S Guazzotti, K Denkenberger, H John, RC Moffet, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:M3ejUd6NZC8C"
+      }
+    },
+    "work-d693b1abefac699831e1909330ea53199a253c4824d8610369f925f39abe5509": {
+      "authors": {
+        "prior": "",
+        "stage": "ZA Kanji, RC Sullivan, M Niemand, PJ DeMott, AJ Prenni, C Chou, ..."
+      },
+      "citation_count": {
+        "prior": 51,
+        "stage": 67
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:t6usbXjVLHcC"
+      }
+    },
+    "work-d748ad024253552fde7564fe031c2f8aef2adf2d25d895190fe4bd3d3fe55cfa": {
+      "authors": {
+        "prior": "",
+        "stage": "B Bowers, Z Lou, J Xu, Y Gu, X Xu, GV Lowry, RC Sullivan"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:g3aElNc5_aQC"
+      }
+    },
+    "work-db6114a6ef9547aa625d2ce5c5243295226055bbc9b3c440b5361a0de64b9f99": {
+      "authors": {
+        "prior": "",
+        "stage": "RC Sullivan, MD Petters, PJ DeMott, SM Kreidenweis, H Wex, ..."
+      },
+      "citation_count": {
+        "prior": 189,
+        "stage": 202
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&citation_for_view=wXSgFr4AAAAJ:IjCSPb-OGe4C"
+      }
+    },
+    "work-dbaa06998d7d42bf9ecad398eacf8ee6aad663f985034236cad0597e90657b93": {
+      "authors": {
+        "prior": "",
+        "stage": "WD Fahy, CR Shalizi, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 3,
+        "stage": 6
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:LO7wyVUgiFcC"
+      }
+    },
+    "work-dec4f33ed1c7b2bb673cd86ec1f01a7b3c75abde4d483a06fa558d1ec69b62b9": {
+      "title": {
+        "prior": "Where Did This Particle Come From? Sources of Particle Number and Mass for Human Exposure Estimates",
+        "stage": "Where did this particle come from? Sources of particle number and mass for human exposure estimates"
+      }
+    },
+    "work-e0141d2c60a071f1206e3a49b181e29c89c52943c1ce84e53e7169b305feb448": {
+      "authors": {
+        "prior": "",
+        "stage": "DA Knopf, KR Barry, TA Brubaker, LG Jahl, KA Jankowski, J Li, Y Lu, ..."
+      },
+      "citation_count": {
+        "prior": 35,
+        "stage": 47
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:ruyezt5ZtCIC"
+      },
+      "title": {
+        "prior": "Aerosol–ice formation closure: a southern great plains field campaign",
+        "stage": "Aerosol–ice formation closure: A Southern Great Plains field campaign"
+      }
+    },
+    "work-e07538245eb366afc10d87a2b3007a4753e637229737a6a739d3f58a6ef021e0": {
+      "authors": {
+        "prior": "",
+        "stage": "H Beydoun, M Polen, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 32,
+        "stage": 33
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4OULZ7Gr8RgC"
+      }
+    },
+    "work-e1dd89ee6d60da93671ccad098e6c5a2707334f81ead4a9632a39cb1e87dfa67": {
+      "authors": {
+        "prior": "",
+        "stage": "P Reitz, C Spindler, TF Mentel, L Poulain, H Wex, K Mildenberger, ..."
+      },
+      "citation_count": {
+        "prior": 59,
+        "stage": 69
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:roLk4NBRz8UC"
+      }
+    },
+    "work-e3dedcf2c094d812ec7489c1241e1ca534d89facc584c65f9e8715ecde7705eb": {
+      "authors": {
+        "prior": "",
+        "stage": "S Kutuzov, MC Lomax-Vogt, L Carter, P Gabrielli, SA Welch, G Bland, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:yFnVuubrUp4C"
+      }
+    },
+    "work-f1c941f4bc79d6d8b50ee842b63b2417137b161473193b71e9009aa853d19953": {
+      "authors": {
+        "prior": "",
+        "stage": "BB Bowers, Z Lou, J Xu, AO De Silva, X Xu, GV Lowry, RC Sullivan"
+      },
+      "citation_count": {
+        "prior": 8,
+        "stage": 29
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:dBIO0h50nwkC"
+      }
+    },
+    "work-f4137ff023ffb602645b62c4471cb058bf3e8217cd4478c2c1b349614a7a6ea7": {
+      "authors": {
+        "prior": "",
+        "stage": "LW Monroe, JS Johnson, HB Gutstein, JP Lawrence, K Lejeune, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ILKRHgRFtOwC"
+      }
+    },
+    "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724": {
+      "authors": {
+        "prior": "",
+        "stage": "S Kutuzov, MC Lomax-Vogt, L Carter, P Gabrielli, G Bland, R Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:j7_hQOaDUrUC"
+      },
+      "venue": {
+        "prior": "EGU25, 2025",
+        "stage": "EGU General Assembly Conference Abstracts, EGU25-7227, 2025"
+      }
+    },
+    "work-fa292a9e3d0a0a74d6a7688024f465f46fda554d9fb89e68f71804764ebb0ad9": {
+      "authors": {
+        "prior": "",
+        "stage": "N Riemer, J Gasparik, Q Ye, M West, J Curtis, R Sullivan, A Presto"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:EkHepimYqZsC"
+      }
+    },
+    "work-fad0f2977a4460175722b9558fff48c29751cf5d67d6bdf6b6b63f48b46f4a7d": {
+      "authors": {
+        "prior": "",
+        "stage": "G Saliba, R Subramanian, R Saleh, AT Ahern, EM Lipsky, A Tasoglou, ..."
+      },
+      "citation_count": {
+        "prior": 54,
+        "stage": 60
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:HoB7MX3m0LUC"
+      }
+    },
+    "work-fc621fc056b5067cff328756af5803f4ac182c36e2a068075053c79b6cc93d7f": {
+      "authors": {
+        "prior": "",
+        "stage": "J Olesik, A Ellis, MC Lomax-Vogt, G Bland, L Monroe, RC Sullivan, ..."
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:xtoqd-5pKcoC"
+      },
+      "title": {
+        "prior": "Single Particle Inductively Coupled Plasma Mass Spectrometry for Suspended Micro-and Nanoparticle Number Concentration and Elemental Composition Measurement with Application to …",
+        "stage": "Single Particle Inductively Coupled Plasma Mass Spectrometry for Suspended Micro-and Nanoparticle Number Concentration and Elemental Composition Measurement with Application to …"
+      }
+    },
+    "work-fc64a534c3c4d74685b15db859cc5a058512825bcdd9b70759cb96e819f8fca5": {
+      "authors": {
+        "prior": "",
+        "stage": "H Beydoun, RC Sullivan, M Polen"
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:a0OBvERweLwC"
+      }
+    },
+    "work-fdea6a04ddf4ee8553cde57c77b0baeeed51277af8efc86e766091e45d020abe": {
+      "authors": {
+        "prior": "",
+        "stage": "P Reitz, C Spindler, TF Mentel, L Poulain, H Wex, K Mildenberger, ..."
+      },
+      "citation_count": {
+        "prior": 4,
+        "stage": 5
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:NhqRSupF_l8C"
+      }
+    },
+    "work-fe7c23b4716e928302e2bd82ceed1667bf8d8df07e2f6db7aadb44dd900361dc": {
+      "authors": {
+        "prior": "",
+        "stage": "R Shaheen, A Abramian, J Horn, G Dominguez, R Sullivan, MH Thiemens"
+      },
+      "citation_count": {
+        "prior": 32,
+        "stage": 35
+      },
+      "source_url": {
+        "prior": "",
+        "stage": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:Se3iqnhoufwC"
+      }
+    }
+  },
+  "shared_sullivan_map_nonlayout_sha256_by_work_id": {
+    "work-0141bbbaf573ac434312694db5674adffd1d87fa6661088ce5ee91bba1b186bf": "8a40b7470deb56b472ffb646557e10910c3eff538841873c9c022887c45af0e4",
+    "work-04a39ff3500496468db45eedb1bcf90a103ca11f1e60d8d4fd1c214bc79b6a23": "d1d139651bb37d43b7083cc0d5a61d0917e50f6cbf8d6daca06ad3172ab85a94",
+    "work-066ded1c1e18697d46d7af54ce60ba8b8c8fb29639b5e9db67012c52800d7b92": "fdd9cf2e8b74b6b828228ec7dfaa00901db372d86ec4a81e55bf0979cb5f2778",
+    "work-0702a42fc3c0d81c26ffabd9145f194e09b10ba5d0467aaa38d1f95ffc9deaa2": "ff11277270681c054be197089fce4fa0bd2a351a07accf7dd3b98cad36ba1996",
+    "work-079d97597d35ac0192f62843569aae38a9577281ee24cb4560988ab75a80b469": "f24558b263af3790ea547f9e0335e52e50d17ef550cdbb68095645596ccc2ab4",
+    "work-0800586a169a66ed2f71ee4535eb8dcf70468090dd8d64fa2d785bd7d894449a": "e3f45c587e11634d0890b1f6a48d6a8798ccc5c8aec48543f1662d2c3f363fd3",
+    "work-086245366f39979a8b4be12b9cd97ea205c8118e3832f70ead9c79dc7598197e": "6c80f78339e176cabc61d6a5f5c3ab57e578f26a78a4c152b4209ec95ea14a32",
+    "work-08689d577d4d3429fc33662ec0b6ec219f7267235b4caf792022ad4ee90de576": "26b37763a812d4f76e87b2fad915c93b1d0168cf737555f7fafb2fb35b107ba0",
+    "work-09b121be486723ade51f802e10e51278a8961b7a2f8660cbe064b93867d8d9b3": "70ed6940e2c6f20102583b1d042aee378878498d901e77405540118428756527",
+    "work-09b449536dc599124120d7daff78867a02b2d57e520a822eba29737f692c8a94": "5528b9ba13b71e9988f8cf6c6249264d92c77361359a3aceec8733bd65136e96",
+    "work-0a9b2423de06bfac59b344e5299ecad76bd2522428f25864384db41af85e1fc4": "fe6c1d2341f4c25ee3e04c822cca6ec19eafbc3e3a216002f885a1ae261ec07a",
+    "work-0b3f9ec5b70120371cf69ef3aa57a743ce98dee125c97c51c6c707a9f24f538b": "35780365fa3645091ff8dfd7d3fa06162fcd48e3e70a413a1f7b09e350970897",
+    "work-0fbcb51b9d23479ae4ef88be48c5593f9d226ee80bd553878449eb31b91a68c6": "8dc533ab1b06cfe3f09b8deb15e77dddaea1c057db70ae1287f0291849aae520",
+    "work-0fcaae39e3790dcc8f82305888c990473639953cca4e58e787231d61faab182e": "1920bee14907683f670b3c987b09ff1a3d786ab2c2485a553a7a63bfb9594f7d",
+    "work-10a1ce832b5da259eb54cbb29f5515e46ddd6409eeaca55cfaf9f4b51754408b": "e860e13cdaf6fd2227f9142461527f0b58139b6d3a2473f9d6b07fb6298cb565",
+    "work-10cec843cda12bf992f2af7b83ceadf058bb24d35b6044dd8f6f25db117126ff": "fb6dc03ddc7aa659a07dbfde0e75e9aa99b1a0ff22d5abda04e2d2b18f522d46",
+    "work-118c7c743f3ec789cb9f20f00c7204c2f583889b40851cf9d5d455118880790f": "32ac5cb79f61321cf9d1847aa2a0f016700193d26d4f47f7fb55c0fa2d242dce",
+    "work-144921928cbffa7d2d6949f1df1456e0a03c57b4a616af5953559b09039bed18": "36a65ec58dd797b6353920f3cfcd080ebf8b310801cd61eead4904b930fa7ff4",
+    "work-17392c8f2ab0e1709a913dacb75144cf53d59e119120a6dbbd289eb4fbe6d8bc": "afd30527c297c0255e69c4c90d89e77f56b9af0769986061db8a41a43f5bf442",
+    "work-174baf5d669c829cfce596045ac72ee4aa615973357e16671a3e5184aed4eae5": "4ae4ccbe6f11802503cf1c58b52afee210c666bd4bb9c1b960cc0b9ee73d3c30",
+    "work-1bafa09befb5a5dc0532d5298ed84daf927e1b6dd38d5d3035815bc8ff223c3f": "262ee98f41dc5e0642d9f9bcfb830415c1537a8888f26957c02c84092be8a3c0",
+    "work-1c01098b158f51b8e0ba88145b8b79c1fe6107535e8c9b7980bd134cb8d3ace5": "f68082f6d511475d698525b16427ef4aab548d7233f1aafeceaaf52deb29427a",
+    "work-1d3bdf641a2f2d1fabb0da48a147e3d5fe5c088a2681e165e8cff09231c3994c": "67502f50fe77cbf771fa17ce7acbd0edefbeb4e2ea0aded14cb13edbc065f2d7",
+    "work-1d6978b550ca03037a1e34402385926db49e6f6743193f58343823783cad72f1": "8cc15c9046f3b6570e712199a400941092da48396166cff09202b207ecdb557e",
+    "work-2044755e000e59a9422fbb232e20a9174fff88330ced4f062e0da52a0204afe2": "37248a8c6fc13a516f0d9a54490571a457f9955bf64e2af1513c8f82a15743ab",
+    "work-22592591bf7c149b2d8d7ce4d44244f169d307f8bd4d4ff8eefd4b52991aa48e": "048dafa5673e633cadfff28e77c92d9dfb16de9c98e57e2d34479f906fc2046d",
+    "work-22a92cf7d4cfd1a0a9fc5297ec912aa63b1a17f907151a2b54756e5fb1af24e9": "5d8c64778883d10ba636b42e0cd937ac2ede519a14a54bf3120c271198952393",
+    "work-247897ccc7cbbeecd3a77c9b009408463579b220c4f0136207a122c675668d13": "5dc9d3bd855a2ce50cdcabf4eb8a7738909aaa556466a11b01ca057c56e73f10",
+    "work-26ff9977a31ca19e9030adcc6aa224ce99ede61c3bf046f2aa1ab2944b4dfa19": "ab73022222ac1e08938524b26ef6f31afa19a14e01c4f45ea58b1afe94f3969b",
+    "work-277d3d6c9ce72ff8fb382445b396c10b68602bde923298849320a0c7ff245fc6": "a87fa122364b9e6799fd5c5c743fdcc94264f9db22810dbbf48bba2054cff4ca",
+    "work-27e98b0dcd48ea9871a10d815bc2042abd51fb2627dbfe2efaf500643e0ee699": "d7e5ba91683ca657e0d8e484d4dcdaf1588e4f32a8c31c15c04ff5b71e2f8509",
+    "work-2863e4d41dbf6d5a83925163a3fd374bf41937362b861352f0ad4e417fa13193": "7957559c7271bbe7d0ed50567813b1b3696311a8911eccad6bf47bdd3350ee3f",
+    "work-2ae4a67c9dd7731e264d8a78a330a87f95a9ca4427f82b2352a824e7a7f33cc3": "599f0a59e3e5778cd832ee23d7c65f97be7ced4626701bc4b6d7954c81125c81",
+    "work-2f1450823bff735b5f360d8c6ad191646af384dbb0093cb9b684c984c0dbc6f2": "3f53d7af2b381f0b04d996aacef91457ce89a895368c3a49fa85a4735df48234",
+    "work-30a5ad688935bb2b3f2dc6193861691783ac234cb7e603d248499bf79fca0a23": "fddc98514b148203afd9ead08adaede82198c2430181a3c65bc16de9f042008a",
+    "work-30f23d59272d8c38faa0a79d3108fb2f2cd54ebd7fa9a85ab099d76e4eb3ce6a": "37bc01e9e515a47f4000534a93a39995fe2ec8ee738fb2f269b3964b2159b8c4",
+    "work-3194ef0bd59fa1dd24f2535783095e56064a2ae35a7fc2ae1e18ae7bf34ef808": "988e38d991dd1e92de34b6c5b64cb90707bc37166deb1691edc742d78b23ff23",
+    "work-3ab9a2f86c5c995f11f821d8ed83cf9adaa37f6e4492c588c27666fb7c3f4cf4": "a58141c2d80cab2852e24eedff976df08b3496bf4280b53f9fe2be3fa69b55e8",
+    "work-3b5b089b9c878ddd2fba1b0781e35f43f8f3c9cbc9b604ce5e0c6a0ea7fd19c9": "101ce07f2ff518a68e679ded1dfde957615d474945d80a76e81c4a8fcf808f85",
+    "work-41fd5a40fed230a6ae7eaae4411e62aa6746f727e3ce7d2b54a445f8cf258278": "ee0a196497ec8ed1c50dfb98a8c1dac0386bca317e15734473243ca67d525575",
+    "work-424c651263c34c573f022dec27881682ecaf9444b0d31a78c2d927979a8f3d90": "96b235d53acd1eb1a1fc92e203228db72c1cb19744e9931359799a995b331391",
+    "work-44e3314f3e34e64d71915bd4a750b6f94f81ffa062b9e3298ca387834938633c": "61f37dcb8503d2f5466e062e0fddafddcfada5ab1d19d741a1d9c89df0047572",
+    "work-47064c4f63d54c28b5f7bf2cf4c43ec2ab069f71ca3333c78e284a6212a464a5": "29cdad1e709a121577592e26e1ff2a43820761c04b74f29260bdd66bfd437f44",
+    "work-47af2f844e080f0246f10ecef52f39373b984f16efb85b511e431a6e087ec954": "b8cc6f292b17a49b550f64eb3d7b9a722e428c0838eb4f3793093f4090700d72",
+    "work-47b954b6eadd48c3fd8ddc6261731ba2d983ceb709efc47b8e368e27af49f509": "397046967ac5d4835e7e8ea8c1a450122df56d4b9979edebfd85e07392e13741",
+    "work-4a2d06da2f674a50215a82fce9dd566d0fe16ee926c9920d664ae12c0a70732e": "6a8aa50af9dfb460324b89be9afed9430c336ced50fca177f3078bbf8d0dc6a8",
+    "work-4a42b8f6784053ec3e2ad5f9aab781e0f87d7fa07aee5031f9c10470ee4d2871": "26fd916aeb855a53dcd539cc70f0661d6c1f2b2703bcd1bb77cf901e4c49292f",
+    "work-4b0d2f0137aacbe51223c6d68e02b0cc50bb792e1e6aea199049a2d546e39690": "e4a23a09cc380f258adb4babdf255b2e37d664e5a35803829c8ef9cd4c398831",
+    "work-4d0bbb93d264fb85ecac2c9367417af53a1206d0e4ca968188373e9f1b7bc55a": "e328f75545d34278cff8853bc44ca2f40c55e96a853669d5e9a22ab7ce6cfa9d",
+    "work-4eb6e49723059c88cf7d70f1ee4e2374c2110e899dc6f6618727525bb20c1d66": "c3704a9dbe42d4b6de9a1b7297c9aeda2b8eec46eebd0c87e61ded6c23014322",
+    "work-5297e34e6a002eab341aebb273761a0e52abdfe1938cf0f1509ff33fa7731298": "81f4ce6aa118695889b31fda29c55dd2321831f0b7fab5e4896e791f34c2c8e9",
+    "work-570d6d077d078e4eaab0c68ae3fdee82abafa4aa88601651bff853106ccb003a": "e8c9043dcfbaca68108d74c618ff52eb4739fe4ee0afb6e3a6881c06ffe0f297",
+    "work-5847db054f3a54d97f16546a8f027629cb45baea5e594222cbd5171092236af0": "9ed27bd0e4984a14c6f04691b068e7245d65c005531e335073be0d05c8a18a0c",
+    "work-5b41bbf93cf5b947bec91d46924031091663480b010010eec5c4c27e5c085ea9": "f74d42faf1513bd5e21a2d01113ad552f9baf0a3768892466c9b1c9bd5d9de8e",
+    "work-5d5a99bbe9b12d9f88955dc1a93b754ec4b701dff1c7c67f4aedc5a50c839256": "9e7ae2fed7210d071138174ce1d91c5c2bd916af6238756f3e36a96a43ff4439",
+    "work-5e7631504be5666c07ad2fcdaea5edcad15a9851953d01e658caddc5f77f8a81": "b679aaed792a89a4e9f7d0fccd9331ce024cdbf5c57a397dc94a69fa8b921c0b",
+    "work-5f768f4f7023f1e96fdda99eb00b7009aa12a649aadd900a4cfc9303746361ca": "f15f41bc5e0648cf7c8cadff5e60708619630f2444db5ae8eab389f81fa4c126",
+    "work-608bf5e76d05e7fb83519f610e12d10dc27d7dc2296512361474270c5b6faecc": "36b7d285bd89ac720c5ef7ab1ec6ab2818a833c0209cfb242bd4dfbb45988c11",
+    "work-61ddd338481f674526240a2e94530d3fbf24579eaef131e9be520aa26d1a3305": "3dffd6cd7bbcdbb3525350e1360c9db5eec52aff3a4089fb34a052419de88f6f",
+    "work-62050b5c9273d4ff43b44e2492e0909aa27a122c33349ad8b0fbcec2073b3870": "df26fc2241c8708a08780ff185e871c935308cbf5e66d41af35a26137d7872d4",
+    "work-636e349809659425fcf2de494f27b561de886bf00d034d0fd3d8d46d1a364df5": "903b7490c6066dcfe34a1a1f32b41927dac49f43668a16022a8c6cf0a5821c25",
+    "work-6490123d7b26967b2c816a15b67a095cd90521061ff169e61e28e0925e7763f7": "f38a2ef822053d3f5f7a4b2b698f9b2865eef63b32fcb459b70dc7081c277927",
+    "work-6923c1a05a862a784f6a34423b4bae9c6431fd512401d2019c5dacc86dc98590": "7a233683fa41180a625c2e95732c5e4bee45d15aefabc61ff496b21dc0061434",
+    "work-69918fbf586b31c56ef6aee21ada62c5dc1143b7d04b43cf458bf0cdf826be68": "c9eb349a77d18ea97d14babc19f15269837df9ff01d0fa4fd10259cefa62a760",
+    "work-69e109e4e94ccfa5d1dba2b7bbc3a9396dc824841b7018e92a7b3fd6c4b33e42": "876417f61ceafc5b9932c96aed92564c81b22e34f0da87699e107ed4f7dd7ea5",
+    "work-6bca3b76f8f1d352d40e3e152389a87b12c022b4d39375435292a04f099cfa07": "f1451fa1dc9adf5057f2689c281751d58977e83a7926cfc7bb97ef20f2f91060",
+    "work-6c7a86d4b08419269067f70d2bb9db755e6254ed889b64219ec8455cfed8c0b1": "7674446fa5f997c4b6e0e0d8cbc246cfc3c44d840f86e1b49311f0156d5e904a",
+    "work-6cd369ffc890bcf4af7772ce9efc51a8e7b359c1a66d77b5256952d9af117895": "4c59c73dfeed3a1817d180672a5efbabc7e419e1991fae0c68cc3df6423840f4",
+    "work-6f151da9bc9cfbc0eb12e9b14ecc8431b92360be517768852f3f8f7d66d76dd3": "edbe6d815ee111fdcd57a9030f1d1cfcc04419bcd55f8042636c093687fa9e30",
+    "work-7037168f8847607b198cb3bac148cb1053d5eda7ea7546c1fb54c1ece98e1c9f": "b6000e1e89067aa84cbe5f95000a89d3e1062c89425cbe97052886bcc4a90e15",
+    "work-711a08a4a45a8f3539097155b37ba038b870ddd13ae110f83fa6bed36ee901d6": "ee88307c0b044c69b6a38f97ccb99b9103d57b648412b9063b34fbff65f26f7d",
+    "work-7810676ec30e88c88786d613c11795d1590df1d31b55d863146198dffd73f0ab": "f6ef35a953513610f4ebb1fbd93718e52b80d474b0fc2a750d2d8074ded9e14b",
+    "work-788a5b82a4f226e0ec7998fe08cc729dcf815a537d34d1a22914067a61c2cf52": "3f7ffc202dcff6deefd4bbee9323baa3f4cdbd53057f3fd24b2d7e9b936a74a9",
+    "work-798c8a40437c2782b48461fc743a8b15a0a84f9a8b87b2dd3081142e220a0081": "ef1f10f78c945898b740e0406fafcb29237d31e5258523f3f291683e3e4d36b9",
+    "work-7b972b8c9ffca4c1316b44fdb73f81a5270697351970fc7896ce65470b5880d9": "6161e82c0a6bd3c6a2c870ce383c359aa7fc1b6a9361665d2812825b5487ff08",
+    "work-7cc6d7da3bff08a0f3decfef195a6c872e7b5665d6f0978d677c387efa659c2b": "7b483bebc80ee137efdd18bbbfcf84890e8327f57129e16770bf48e75e535e16",
+    "work-7e996c18309c7303492f7a1e146d686e7dc2db3d48fe93890ae728b73f250d10": "063f1c59be39a1347627f442d4395bcc26d68449b77f67ca013faa1edf21c812",
+    "work-7f287c2e8eb7e486194c20e905d2ab01b8efc0b71ce9948be6dea5b677777334": "a38268e8d54c20e691f3690d3deca13405f52a42790d2d7490c7808d32519977",
+    "work-7fdf9af2cd5c34454fd695bb58435154b97fb331463bce19ecf5cc0fc4470212": "c179ba517e7365eabc9ccbeb3f1654deba414ae92defbdbf83fd122834caffef",
+    "work-80aaed9131d254cf482d03816f6e96a76ec5a872e652e5b58c68bc83991b303a": "dc306ddfa645fec8707421f80cccf95319470963bd23c9324f6327b6e0b231c3",
+    "work-8122a7a72d608ab7c4f53b796cd0b513f47037623d9c37db699d4bc54689f060": "fdb48ff35211be9141c93e6424d39578698818d676d08f9d577c11e237a71911",
+    "work-815e5d6a5e5e61d54c7e9c10d0fb09afdee7edf5b9cf7cef5ab9dc658a681bc0": "af93f1270bfa617cfd19f7fd2ef69ec512da9a2a3476b4a201f3c0c4c45625b0",
+    "work-8248031e6121d781aac058ec21690f47394600e0126d961ee2c97779317be254": "50c7a15afb9ebeb88b7571662d101bdadd3eb9ebf18e4c17828c1abf0bac3ae2",
+    "work-83eef057c74d95f2983fffd33a89ca560e046fb44f8126aed80b19ef8103a83c": "a30f521c2b41e72b53c9aa41a82336d90976f9526bb352e4daf7b68a45c85c8b",
+    "work-850930f542b887444c55da5b952ce034779d2b532ca250e2e784b11240bb1755": "722d379b0619c5ac810b490ee6dd366f6508b19c7ed3451765d4ccaf40758721",
+    "work-85a3f5a558a7a5dce7f37e5512b2ddadfb23df2c24afc0e4e788bface1236235": "b4ca4d3a908da2e5925e1ee2a79a972997fa2cdacc415a80898eddf0d58a6ca3",
+    "work-85a4656fa0204854cdfd4acffc769133333fa1e410386d3b198e2c9d3a8941e7": "1aaeb197ed8644554f1017a87941d49d81f68c80950f7a907736fc4a6726351b",
+    "work-862eb0b075e430db065610038570ad083456a02941c2af94c43286ba6f4445bf": "079198076a12cf0ecd9ea0c8d60dd920e7952a4956031fa19487a77f286037e1",
+    "work-87bab178323612bea0543d51c6445a438094834ae60c3398f8e1efdab5db1884": "00009e156008683c43e27f014aee4ecfddfadb7ae485f2fb5c6dd4d1b3010c4e",
+    "work-88534fc7de91888bc597b44a250c3c184e4f92ef7856f915a8a60cfe45160d6a": "baa759c52801b2e0b79963a6206f7a8566535a839bb0bbce1f001a2ad6134ded",
+    "work-899ff275bc0b3e1cda0c748769953c9ae4b8d0a4372dfd794d93e57614f1f466": "943c2d2cf96c49fc815d9ae76125c6ab1c33a5be0e7a020cc2d866760c7bd27e",
+    "work-8dcf610692db7722f7b2a6b73b104c3a01cb8b28e5a3ea6295ac0da33d4fd3e2": "b6a9a73c4966623eebe9fe1d822fce4314169640c291113974f336df363e578d",
+    "work-8e9707ab22458b9bb4f169773b2928b42f5294dcc40f39066acfbc1f95089dca": "7ab49e0e2acc7238bec3717bff2310006ae04a758c1a1f04daa0539f7f29616f",
+    "work-90b5ef7ac6f1768987e69f1f92e36db97265518fdddbae4b3e43e7e6e88a1c80": "fa7cdff42380869bfb23f8a9b80f9a60add128c7561266372550f9e66e1758c5",
+    "work-951fa06395ff360444b35338592a182af0a3bebd93a5f376df29bdd9cb3e8bfb": "a26f687eeac580506c3f13d5ee91af0fef7fe21df75a4106a699463e636a701d",
+    "work-95442bada934cfbb5aa069a77cb3c1819cc59d405e70939f82f96213ecbfeb5c": "3aed6dab271ba8a6d2fc14ee6735d96e73368f641a01fe330558459a9e61ccb8",
+    "work-96499f515eefa421824646d7d9b4b31c47fbc1eae508d46603fe610d37bf4870": "0bdf5979a174446ead444e57f873339f07ac6c7b32130b9b28993bd531e33df4",
+    "work-a0e8be94d230026fcecd068cd5d57ce677c5dd9f24d4b17982d07d7fa7b1c1f5": "59b59cc3338b542fde2a677654e2214b64b149afc7dc4868855fe971152b272d",
+    "work-a2f98be20369986b137a1ea8f58c351d3c551b89b24c50f385611bf48201536b": "8fc141ef5123641df49bb72a31cb2694b17c93b969329c7fc23d2e0b74d4da58",
+    "work-a409e5b928b32e7f36558d30ec2d29673f855befbc53dcc1a148251ee20e4431": "3bdf73cd81d8fbf1c5e4b713c1f03123beb2d18aea60c0f256efd27dd31a94b9",
+    "work-a622353f5a75ab38710a4ad9026dd5450dd5d3c5110a07ef2f5006c1e28d1415": "c139c4c14f04dfa0f45a6b43a0bef4b3f18c0d6dd9df085ef6f255307f0ddca4",
+    "work-a9c64d5d24d9a6eb5a3035a943c6c7a901b32741d25603cfddeae75fd67ad3e2": "7a0c1fb5a0d3a76def1f6456a521306699838c843be177a58fb9903c04866b26",
+    "work-abccdebe614b077aad864672bc92c4e7e28227a2c6b199c4fb9c59342caee8f2": "0f9e891878624f140f6220c3f6df3395ae421e59101b5abf0a061328ab9b0a5b",
+    "work-ac57cbb45387c06b6398142407622af4695c3629f06adf0c6d6741923912624b": "9b2e88e785b003088235b72a046f9a9fe42376bcebe87eb235287b3bd7fbc82d",
+    "work-adf6993db0a6c4fcd443b70e68c58d2d25396c5c0e1d200671b1cf29911cb8cd": "f63928d622e66317796be6d3c143d3641a0a0385a852af7ae3ee7601ef9f00c5",
+    "work-b0c760d23d3e907387df1210d2fd64aa21886ea6284cf4589be50db50d8999fb": "15501d080a2226d74ee18719eacaf33ff8531b940f62a1f3bb23abd75f623972",
+    "work-b1e2b7ac02714a2ab7d76752976eed954807b991b6532e03eec058c78b108bbe": "10a68cafc210ec99e8196c66c2757ac2d8c4e88297312e0a374f648ccd81ea93",
+    "work-b2537ac9587f1f0a4a70153a259ff0acde407c193733683aebbb7a017665ed94": "9e368016d215f15ac50ef10cb98520e09fb13c8a8376b45d3bbd33a435cc52a1",
+    "work-b71dd64aa1ac8833ccc1d1d06f0d60918d79f94856c68922a852d087cc839cfd": "0296696519da306459b05e778b0dc60ad7d4e96a31c935ae8a847ba6510962dd",
+    "work-bb02c013c944871ee5477ebb1e891cd28af5eaa904b5fea9cc97d02bab20880d": "6c2cbeb6bcf2c25531432f5a2a00f8f2026340042dc81dddd7e12accefee5fa2",
+    "work-bb8a4fcbdb5e589a5ad6d362c0e9450aa15d3cb245af6976fa7f90086ad38541": "d7e40cbe69493e4863257213aaf28b9e3d9b46a1269ae0bb511396780553862c",
+    "work-bcd4cbbf3de8ad24495baabc6a0d20a3eed29f10ddcf2455aed31b95ca952300": "a8bdffaa77d7490e04a5c85f52eaaafb0347b32a20fc5d013585dd71347a81d5",
+    "work-bde29dbbffd75b22c33bbdace8b86cebffe2da2afa9e22b46a4e5fe9cc2b6223": "bdadc416137276489e5883223aa42b406012c089f7ae3c2f62cc2bd8c0c4b573",
+    "work-c062734de0521d3da494f73c7b81c9d99958a2bf65cd7a7b03ab3eaf4b2cc78a": "bd2698f82fcf5f40feb1b8258a6e963cf16624a333910dce9db9653d0c563fbf",
+    "work-c39feaad4647b43504b4c68391194752049f8da103d5a87149d08f350d2aebd1": "bac976810e24f818cddeea4a50244c46fb0274a660e922e827b983005285ce8c",
+    "work-c3b8c157e1ef8e6bbc4a258cc7c73215969bb0c26896e63e45d0a22b2633f3ee": "f8a70d9214804d9b323c1327d1e40c9ffe452733d731ccfcc49a99f9a4a8e082",
+    "work-c4bc7811efd8e56f811a97d9fe7fb6a215c849ca54fa9f25646e7437f8042f7c": "696d463665bd4ce89d3b8314a274690100402d9fc0363514cdd73790e135992e",
+    "work-c54eb30a2dacafe4e18d3b5b8393342b01952dd8faad636a67456a0b4add752b": "f2f4d9275ed79cf28a9474049afcb78b53b750bed4d47663702a68724e4b8e69",
+    "work-c5805371feb277ce366ec30913e3cf1bdac77733bd501f41b2bd6410d5b8104e": "2c41d6a9f4624e87f049b818477bdd47702a329a9c8632ee5b244bab1597e8fe",
+    "work-c70813fd412e722739f7cd7eefb542ce79d34e7b05959daf488a6012303f12ed": "38db5572ad51dc1438bc0b4869a42bc9a2d9aafc8ef696246a88f6eb625d3d1f",
+    "work-c79bc152faaf8e4f03b88d9d876f5c13253a5dfcebc51371e0e699c2a93faf78": "966c355ad42018805b280aae7879c701a51a5e986f340fe97f8567ee43b456e9",
+    "work-c82ee578ba8f8cbace7e874c7c60e1038c6008ab749e0a229a7a957a770f1df7": "53f734e17c93de3f43ae0b64321622f197262d65cbc4d878842b48beb882e701",
+    "work-c88c0ee036c3dc7448b485a28468e41346b71a3ae98478f7d78baa462919c795": "7ef651d7225b78b877332b6c468290050ce688d80596ede9c13834d211fe3a63",
+    "work-cd22739bc65dca6cf5f25133add9693ece252217450c52098f58bb5f98a20972": "189eba4c01339d9f154aad1ac1b74007913673743d03016fc7a6d419c767202a",
+    "work-d02cbe8c92b9893c1fb49cb0e0731753496c4ebcccb463281e5b1581bdaa5d9c": "7edff953fbdc64e75de5d61262be0ff4935e43ffc366458367ffc7766176c5d0",
+    "work-d1438f4ba44a323060554ab598c2539c15ccb78d3d7feae05ca9ed651cf31470": "f049b83ee203f17610478977351ffd333bf2723e6dde84760fe49a5c334c4129",
+    "work-d693b1abefac699831e1909330ea53199a253c4824d8610369f925f39abe5509": "8d0bcac826809912268c4e908971d0205a1bf52c6e63296c89646134d8b7cae0",
+    "work-d748ad024253552fde7564fe031c2f8aef2adf2d25d895190fe4bd3d3fe55cfa": "d66a24d3d907e9aab41525dff5f2e798615455e28b6630d9b0c0bf73fb9a85bc",
+    "work-db6114a6ef9547aa625d2ce5c5243295226055bbc9b3c440b5361a0de64b9f99": "e764d21133dcbe3e4f9bf7b0ae7adf0e6f9d22fad89efafd50146655055adfa9",
+    "work-dbaa06998d7d42bf9ecad398eacf8ee6aad663f985034236cad0597e90657b93": "3b9ce65f4a541ab39d6d23cae416e532a98b31c9d0f1ee71076ba46b87e383d0",
+    "work-dbc49332b6a072e2b8eee5488443b9bb37ae31c5cfb6d01899181b1cb511dd75": "472cacad7e95172924d8ba4a16173a3825416e1cc29a646218f73c652f2ad76c",
+    "work-de646470dba013d4959cc7e57746ca5ab76e7d5dadc32bbe11d387f47725a160": "6ae40ad882dba3e81b05ae2c90f560e29aeb15873a1af9a5782cafb2c1004449",
+    "work-dec4f33ed1c7b2bb673cd86ec1f01a7b3c75abde4d483a06fa558d1ec69b62b9": "78c4ae3b3eb753d6799feb7ff435652f7ad1f7823dc3cc5704e5f923dfcf1279",
+    "work-e0141d2c60a071f1206e3a49b181e29c89c52943c1ce84e53e7169b305feb448": "836bd9a410c04775bfb87d524faf9da8b55eafb95225fe62d989a4ecea7c2a78",
+    "work-e07538245eb366afc10d87a2b3007a4753e637229737a6a739d3f58a6ef021e0": "3dde7b487da75da96b5239d3ae15cef27670548665c523076279c0f5c4364f03",
+    "work-e1dd89ee6d60da93671ccad098e6c5a2707334f81ead4a9632a39cb1e87dfa67": "2a9cbce2bf84363ecf5ff7995a698c67ee70b3e2e4b33a286e5852878aa605b3",
+    "work-e3dedcf2c094d812ec7489c1241e1ca534d89facc584c65f9e8715ecde7705eb": "54e25cdbe2f0ef932b6cb571121a34c1854f7b6cea3eee2f9fe2b9453c769016",
+    "work-e950dbf386bb960d7dd64c63c491f212ba092c0f6a25a0a973db4377f7bd32eb": "0b000eb98258a83e0c0dbb3fe81002fd41a9aea9054a5beb27b7e86790e07760",
+    "work-eed28c4f55e2ba91bc281f9c24c19c7d8fa282134fc7df5456d925a80dd12d00": "53cb9d9d93e5129373cadc38eb5f56065a360356d688b75936e43332fa5ce37b",
+    "work-f1c941f4bc79d6d8b50ee842b63b2417137b161473193b71e9009aa853d19953": "a6e293a1d9eaa9e866916de50bea34af30fe63660df58f8744aa4d4a55fb8e4a",
+    "work-f4137ff023ffb602645b62c4471cb058bf3e8217cd4478c2c1b349614a7a6ea7": "b62ec7f71f6766d75ae6baff8eeba7199f127958d23028a115a55d1f6e4052d4",
+    "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724": "63e5cab80e57217f353a77689baebbcf27d1c6e7c126c39842a008f9b14475f9",
+    "work-fa292a9e3d0a0a74d6a7688024f465f46fda554d9fb89e68f71804764ebb0ad9": "2dcb31379b1e0e4cf5614259a9d4453b628e8c2c387d155f19b02fc0ff14bdae",
+    "work-fad0f2977a4460175722b9558fff48c29751cf5d67d6bdf6b6b63f48b46f4a7d": "e6fd6cb65db4abf3055d7fe305ac6a3b1cae1bac012cfa6df4c06461fdb619e2",
+    "work-fc621fc056b5067cff328756af5803f4ac182c36e2a068075053c79b6cc93d7f": "7020b56faca8982ee3d76cc2ac7ff96178b8566a2c827b4a762b0fca3af525c7",
+    "work-fc64a534c3c4d74685b15db859cc5a058512825bcdd9b70759cb96e819f8fca5": "1925d7d692bb3e404e3cfdfe4a6222c55499ed7949cadf35a7e38408182f241b",
+    "work-fdea6a04ddf4ee8553cde57c77b0baeeed51277af8efc86e766091e45d020abe": "c8a9f8cf3b63ceaa691dafbbe8e97cf84d900d08e26c5e7af3a2275b9f7560ba",
+    "work-fe7c23b4716e928302e2bd82ceed1667bf8d8df07e2f6db7aadb44dd900361dc": "1d66c12cb47b8736937797d651fba4baaed2c251afaea24804a1e2f9835b001a",
+    "work-ffa259bf9d81365c854345d1eee1305d59e069383c3113f570de100a4c6d16d2": "d18d3263e26ede3c191ec894df3a0798224721aecf501427192d6b6e501c0645"
+  },
+  "shared_sullivan_map_point_count": 149,
+  "source_commit_at_stage": "8ba438215b50ff877f1a4dd0ce21ca2ed5f9b2d0",
+  "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
+  "stage_map_sha256": "0d642cbfeb5e723ddf92fbfe2e533d606e2dd324a82618f1bc0203297b918c64",
+  "status": "read_only_no_upload_exact_stage_fixture",
+  "sullivan_work_id_union": [
+    "work-00119ce6c246870e1093bfa8d6bf5f7f2dd00c4e254eb75afa7918b47e91cefa",
+    "work-00d67efb382964200af4d6adbe3b5fa8605c0a2d406e0616fe004095cc6437c7",
+    "work-0141bbbaf573ac434312694db5674adffd1d87fa6661088ce5ee91bba1b186bf",
+    "work-0180ff8be40be236d6c9f9073a50ded2570d87835210ca39b5fa5c47a3c1e43e",
+    "work-0417a76ec8884a3279bb7a2d2662e4cd25a4bc99970aeb1f1c5e54778858988d",
+    "work-04a39ff3500496468db45eedb1bcf90a103ca11f1e60d8d4fd1c214bc79b6a23",
+    "work-066ded1c1e18697d46d7af54ce60ba8b8c8fb29639b5e9db67012c52800d7b92",
+    "work-0702a42fc3c0d81c26ffabd9145f194e09b10ba5d0467aaa38d1f95ffc9deaa2",
+    "work-079d97597d35ac0192f62843569aae38a9577281ee24cb4560988ab75a80b469",
+    "work-0800586a169a66ed2f71ee4535eb8dcf70468090dd8d64fa2d785bd7d894449a",
+    "work-086245366f39979a8b4be12b9cd97ea205c8118e3832f70ead9c79dc7598197e",
+    "work-08689d577d4d3429fc33662ec0b6ec219f7267235b4caf792022ad4ee90de576",
+    "work-097c3b6357a82d16c0269ff1d15d8948573ba254b13c13a1c895508304d22c63",
+    "work-09b121be486723ade51f802e10e51278a8961b7a2f8660cbe064b93867d8d9b3",
+    "work-09b449536dc599124120d7daff78867a02b2d57e520a822eba29737f692c8a94",
+    "work-0a9b2423de06bfac59b344e5299ecad76bd2522428f25864384db41af85e1fc4",
+    "work-0b3f9ec5b70120371cf69ef3aa57a743ce98dee125c97c51c6c707a9f24f538b",
+    "work-0d3394a75064b3b7cf1ad88de2a4f17448a555a848a40c710c63e3c831982cd9",
+    "work-0f0011aa7df2a20e576df659794cd304c5bd2c9c9703ffcdc5d6c34c40216086",
+    "work-0f34ccd1c72d32a88ded5a5aa9eb52e2768d5271201311b32f02e31fb1da449e",
+    "work-0fbcb51b9d23479ae4ef88be48c5593f9d226ee80bd553878449eb31b91a68c6",
+    "work-0fcaae39e3790dcc8f82305888c990473639953cca4e58e787231d61faab182e",
+    "work-10a1ce832b5da259eb54cbb29f5515e46ddd6409eeaca55cfaf9f4b51754408b",
+    "work-10cec843cda12bf992f2af7b83ceadf058bb24d35b6044dd8f6f25db117126ff",
+    "work-118c7c743f3ec789cb9f20f00c7204c2f583889b40851cf9d5d455118880790f",
+    "work-12c078a88449cdbfd0d38b49721be98dfc0487d67f945a7c53fbba929e9b5fc0",
+    "work-144921928cbffa7d2d6949f1df1456e0a03c57b4a616af5953559b09039bed18",
+    "work-1480e1e057c232dc21b1ee1fba968cc70d9562f2db29ca5df9d24e1923a809bc",
+    "work-15fd535df38a2851a74ba539c0bc5e7ee85c57b09eca6e5d60712bc69b73ed1c",
+    "work-166a3322283da1f54d39fc6b60153a063cf70cbea3f91b2b8bfed653e249e3b4",
+    "work-17392c8f2ab0e1709a913dacb75144cf53d59e119120a6dbbd289eb4fbe6d8bc",
+    "work-174baf5d669c829cfce596045ac72ee4aa615973357e16671a3e5184aed4eae5",
+    "work-19f8fe5112a5f5102d7040e00491ccfe3bbc22e7cfad0e337db4f70f2c125448",
+    "work-1bafa09befb5a5dc0532d5298ed84daf927e1b6dd38d5d3035815bc8ff223c3f",
+    "work-1c01098b158f51b8e0ba88145b8b79c1fe6107535e8c9b7980bd134cb8d3ace5",
+    "work-1d3bdf641a2f2d1fabb0da48a147e3d5fe5c088a2681e165e8cff09231c3994c",
+    "work-1d53a077271fb8cd3b7587466eff3a004ecba06dbfe7b2f5c0eeea476fff3115",
+    "work-1d6978b550ca03037a1e34402385926db49e6f6743193f58343823783cad72f1",
+    "work-1e0894e1fdfd288db72861e54712abc35ee5c522606105482baf40eebfc03931",
+    "work-1ed902e21f0feb8ba2458f74c02ae4997c5209bc6c926e5daaadc836e00b4a75",
+    "work-1f588a7da24a95e27ada1a591a728b242124ff5fd30ad240d0597dc877dc024c",
+    "work-2044755e000e59a9422fbb232e20a9174fff88330ced4f062e0da52a0204afe2",
+    "work-22592591bf7c149b2d8d7ce4d44244f169d307f8bd4d4ff8eefd4b52991aa48e",
+    "work-22a92cf7d4cfd1a0a9fc5297ec912aa63b1a17f907151a2b54756e5fb1af24e9",
+    "work-238c4f4eacb0f892646fa83bd8254ab4ac1662f155f08504cabdb480d32e371f",
+    "work-247897ccc7cbbeecd3a77c9b009408463579b220c4f0136207a122c675668d13",
+    "work-2551d2d27b9c627bb1eb61c9dd61028a6532723fc6e4ce5a27ce9a96e71cd264",
+    "work-26ff9977a31ca19e9030adcc6aa224ce99ede61c3bf046f2aa1ab2944b4dfa19",
+    "work-27149a1516a599dddd365624e52b1aabe91327ff9fad4ed338a0ef790e04f9d2",
+    "work-277d3d6c9ce72ff8fb382445b396c10b68602bde923298849320a0c7ff245fc6",
+    "work-27e98b0dcd48ea9871a10d815bc2042abd51fb2627dbfe2efaf500643e0ee699",
+    "work-281380005be9fb3927f4ff847f9242f96544b2c497ee5e95058ed521ee0f7dc8",
+    "work-285b92623c9f8be2c44539b26f0a130741a224a7a31c192be7766c76225b1a8e",
+    "work-2863e4d41dbf6d5a83925163a3fd374bf41937362b861352f0ad4e417fa13193",
+    "work-29ecd6d7c6aa52246eaacb5039b424a6e6c53f09f2e804fa3024421678857b45",
+    "work-2a2ed671815294d4ee81a224e0aaa85b450ed913f7e0b524c79f4b31b9037ce0",
+    "work-2ae4a67c9dd7731e264d8a78a330a87f95a9ca4427f82b2352a824e7a7f33cc3",
+    "work-2dc1e8bab6977930c1004ad6f2e30e7f45c319c73a9e7ceec632bf0c50e1f050",
+    "work-2eee0a9487baad0a2e705714e868003bf66ce84e7f4042880569b79a6f7c655b",
+    "work-2f1450823bff735b5f360d8c6ad191646af384dbb0093cb9b684c984c0dbc6f2",
+    "work-2f5ab6e026a44aba668b80a18dbd1cb2c4a6fb22f0ad9393ba3523c2e8998db0",
+    "work-30a5ad688935bb2b3f2dc6193861691783ac234cb7e603d248499bf79fca0a23",
+    "work-30d95b3f6d7cfd6fc64159a1e394641759a4de24f9a2bcfb8dc843f96093fbc2",
+    "work-30edf30b866fb6560c73fdaa83c84bcd66a47d310d2a2504899b5c4977c8a360",
+    "work-30f23d59272d8c38faa0a79d3108fb2f2cd54ebd7fa9a85ab099d76e4eb3ce6a",
+    "work-311d05a4effd10687685a9f1f121edbbf57f8433b66543fe0c5f7e0c7387a263",
+    "work-3194ef0bd59fa1dd24f2535783095e56064a2ae35a7fc2ae1e18ae7bf34ef808",
+    "work-346177a186af2374aa0ff7a41eb6421d1e1c6b2833be60967253561309ebad6a",
+    "work-357ad560d3a519ef3171bd837d40f81325f204b91908bf3ca8a6acbaa0744436",
+    "work-3ab9a2f86c5c995f11f821d8ed83cf9adaa37f6e4492c588c27666fb7c3f4cf4",
+    "work-3b5b089b9c878ddd2fba1b0781e35f43f8f3c9cbc9b604ce5e0c6a0ea7fd19c9",
+    "work-3ec9a6011b31062ec3c96fa130cc59f1167c9d578e8708f257af233cba145f5d",
+    "work-4043df9ef166a7a55a9bff178220e30ad757cd7a4bcaefc82104bf4fff66e251",
+    "work-41fd5a40fed230a6ae7eaae4411e62aa6746f727e3ce7d2b54a445f8cf258278",
+    "work-4249c3aed9295ac1a82aeb374fd348c9ecf9c07980e8e9b3ea230fdb4dac901e",
+    "work-424c651263c34c573f022dec27881682ecaf9444b0d31a78c2d927979a8f3d90",
+    "work-44e3314f3e34e64d71915bd4a750b6f94f81ffa062b9e3298ca387834938633c",
+    "work-47064c4f63d54c28b5f7bf2cf4c43ec2ab069f71ca3333c78e284a6212a464a5",
+    "work-47af2f844e080f0246f10ecef52f39373b984f16efb85b511e431a6e087ec954",
+    "work-47b954b6eadd48c3fd8ddc6261731ba2d983ceb709efc47b8e368e27af49f509",
+    "work-4a2d06da2f674a50215a82fce9dd566d0fe16ee926c9920d664ae12c0a70732e",
+    "work-4a42b8f6784053ec3e2ad5f9aab781e0f87d7fa07aee5031f9c10470ee4d2871",
+    "work-4b0d2f0137aacbe51223c6d68e02b0cc50bb792e1e6aea199049a2d546e39690",
+    "work-4d0bbb93d264fb85ecac2c9367417af53a1206d0e4ca968188373e9f1b7bc55a",
+    "work-4eb6e49723059c88cf7d70f1ee4e2374c2110e899dc6f6618727525bb20c1d66",
+    "work-4faeed12c5dd0125d97c9ee5940d3b430f9c8a201495ba4d65ae4ab02274fa09",
+    "work-505949f8a40ba015ae796966c7208a9fb138f107db90be9230026501ee41342d",
+    "work-5297e34e6a002eab341aebb273761a0e52abdfe1938cf0f1509ff33fa7731298",
+    "work-52e97b4d50716e2c05e9cf4929215999b0440eb7e85e4b91e5f29727bed3af56",
+    "work-538123ca6317c3428a3133716b2a98c3b30370ada68df09e167c7f5bd28df5c0",
+    "work-570d6d077d078e4eaab0c68ae3fdee82abafa4aa88601651bff853106ccb003a",
+    "work-57a7fcf9ad93b52e95306617a03a15ac9867b2207c473782db4d5753f1497944",
+    "work-5847db054f3a54d97f16546a8f027629cb45baea5e594222cbd5171092236af0",
+    "work-58ca8d03333ce08ca4c5fe642bff73a1ec884dc3a7bc8783d59ee1476245946d",
+    "work-5b41bbf93cf5b947bec91d46924031091663480b010010eec5c4c27e5c085ea9",
+    "work-5c6525211bf91b46ec7a2aac770deb476f19b3298958a6f21bcaaec2ad307943",
+    "work-5d5a99bbe9b12d9f88955dc1a93b754ec4b701dff1c7c67f4aedc5a50c839256",
+    "work-5dcc0f98cca7d8ac579ed262d3c256906e3a688b371a11a98528188c6cc738dc",
+    "work-5e7631504be5666c07ad2fcdaea5edcad15a9851953d01e658caddc5f77f8a81",
+    "work-5f768f4f7023f1e96fdda99eb00b7009aa12a649aadd900a4cfc9303746361ca",
+    "work-608bf5e76d05e7fb83519f610e12d10dc27d7dc2296512361474270c5b6faecc",
+    "work-60b080a67f4400a130ecafe17b8575867aaf45b7527d94e5396e7a127b8b24da",
+    "work-60ecf96f5d1d05ecde368388ad11e928a61691f82c5c9d3c70da71d0267c1589",
+    "work-61ddd338481f674526240a2e94530d3fbf24579eaef131e9be520aa26d1a3305",
+    "work-62050b5c9273d4ff43b44e2492e0909aa27a122c33349ad8b0fbcec2073b3870",
+    "work-636e349809659425fcf2de494f27b561de886bf00d034d0fd3d8d46d1a364df5",
+    "work-6490123d7b26967b2c816a15b67a095cd90521061ff169e61e28e0925e7763f7",
+    "work-649bf09f344c0a68fd55f1f392b390fd859e02b64091053465142988943b2cad",
+    "work-64a27d8023e07ca813ac48e2abb780e1c3c58a593927a046f7207854deaf9dc2",
+    "work-64fc21ecfd5c9108900cb9446d5ab7c5ead46885a6ba87cc49754959de67263e",
+    "work-66920fd741547024883951520a2ba31eaf9a3d282c312a15fa224f70b7ff5296",
+    "work-687599c4ead42b5f37fa4c4e5331bb814db0799dca257afa20f7421702406dfb",
+    "work-6923c1a05a862a784f6a34423b4bae9c6431fd512401d2019c5dacc86dc98590",
+    "work-69918fbf586b31c56ef6aee21ada62c5dc1143b7d04b43cf458bf0cdf826be68",
+    "work-69e109e4e94ccfa5d1dba2b7bbc3a9396dc824841b7018e92a7b3fd6c4b33e42",
+    "work-6a32f12212002f24b2e55823946fb4f0dd9ed6348214cb26d007eb8d472ea710",
+    "work-6bca3b76f8f1d352d40e3e152389a87b12c022b4d39375435292a04f099cfa07",
+    "work-6c7a86d4b08419269067f70d2bb9db755e6254ed889b64219ec8455cfed8c0b1",
+    "work-6c7b071518a7834a405498de72db85597c887853e950ea29d1313cf4b88afa3b",
+    "work-6cd369ffc890bcf4af7772ce9efc51a8e7b359c1a66d77b5256952d9af117895",
+    "work-6f151da9bc9cfbc0eb12e9b14ecc8431b92360be517768852f3f8f7d66d76dd3",
+    "work-6fab60ed5c6f46717e336e1dbde85da924d2fc09c04b2dc0576be41846b1874a",
+    "work-700225b16074d488eb0188eca64054de80e515c5673508656932a41662af18d3",
+    "work-7037168f8847607b198cb3bac148cb1053d5eda7ea7546c1fb54c1ece98e1c9f",
+    "work-711a08a4a45a8f3539097155b37ba038b870ddd13ae110f83fa6bed36ee901d6",
+    "work-7263826686220fb701e9b447e169a2e62178d1f7511030cc1cde2e42277e18fe",
+    "work-7810676ec30e88c88786d613c11795d1590df1d31b55d863146198dffd73f0ab",
+    "work-788a5b82a4f226e0ec7998fe08cc729dcf815a537d34d1a22914067a61c2cf52",
+    "work-78c696120690e36b3d0d97c316aa4408a2e56aabb395c2f85affb21c34e0927a",
+    "work-7916d9a2ac716ddd52475f8acb56cbb47340076942a9c2c05e45d13aeae94718",
+    "work-798c8a40437c2782b48461fc743a8b15a0a84f9a8b87b2dd3081142e220a0081",
+    "work-7b972b8c9ffca4c1316b44fdb73f81a5270697351970fc7896ce65470b5880d9",
+    "work-7cc6d7da3bff08a0f3decfef195a6c872e7b5665d6f0978d677c387efa659c2b",
+    "work-7e996c18309c7303492f7a1e146d686e7dc2db3d48fe93890ae728b73f250d10",
+    "work-7f287c2e8eb7e486194c20e905d2ab01b8efc0b71ce9948be6dea5b677777334",
+    "work-7fdf9af2cd5c34454fd695bb58435154b97fb331463bce19ecf5cc0fc4470212",
+    "work-80aaed9131d254cf482d03816f6e96a76ec5a872e652e5b58c68bc83991b303a",
+    "work-8122a7a72d608ab7c4f53b796cd0b513f47037623d9c37db699d4bc54689f060",
+    "work-815e5d6a5e5e61d54c7e9c10d0fb09afdee7edf5b9cf7cef5ab9dc658a681bc0",
+    "work-8248031e6121d781aac058ec21690f47394600e0126d961ee2c97779317be254",
+    "work-83eef057c74d95f2983fffd33a89ca560e046fb44f8126aed80b19ef8103a83c",
+    "work-850930f542b887444c55da5b952ce034779d2b532ca250e2e784b11240bb1755",
+    "work-85a3f5a558a7a5dce7f37e5512b2ddadfb23df2c24afc0e4e788bface1236235",
+    "work-85a4656fa0204854cdfd4acffc769133333fa1e410386d3b198e2c9d3a8941e7",
+    "work-85ea44962dc9dc1c2bc6177c5c108d663c563f852b42f8293c87b049a23e83fa",
+    "work-862eb0b075e430db065610038570ad083456a02941c2af94c43286ba6f4445bf",
+    "work-87681e7443fa9a1fc1a405700030080f24e853371690c1067dbad649d947da5b",
+    "work-87789b6016b5d64dbdaeac65c51aa4243737a42106630e529e44b0995f91bb46",
+    "work-87bab178323612bea0543d51c6445a438094834ae60c3398f8e1efdab5db1884",
+    "work-87bfed6493a2a86a654145a9c8befbde168a880df5d809f1d566e6e115a76b1d",
+    "work-87fb54ca9a5eb34daa78846e97d2711190933050cf2c04dd01cbfb8f24ee5888",
+    "work-88534fc7de91888bc597b44a250c3c184e4f92ef7856f915a8a60cfe45160d6a",
+    "work-899ff275bc0b3e1cda0c748769953c9ae4b8d0a4372dfd794d93e57614f1f466",
+    "work-8bab1f9e2aaa8e44bb1029cfaf8de6e5ed4725a1e1bae91c56c95103b1100032",
+    "work-8c0c757de695d48fe326bca1e22a44aef8fc3fc4dac5fac6c6d6aaaab43baee4",
+    "work-8cd4ec3c773b5b185363a4837b24a344999ae396d4475003e76e74962bb6d4dc",
+    "work-8d14507ac706d32ab76a631f2e1cf3280f2ed6f17fc59dd30d1b967baa517aac",
+    "work-8dcf610692db7722f7b2a6b73b104c3a01cb8b28e5a3ea6295ac0da33d4fd3e2",
+    "work-8e9707ab22458b9bb4f169773b2928b42f5294dcc40f39066acfbc1f95089dca",
+    "work-90b5ef7ac6f1768987e69f1f92e36db97265518fdddbae4b3e43e7e6e88a1c80",
+    "work-937dff6855a1304e10c51dc16ec21808b8db093f676fe24178312ade3d7fc220",
+    "work-951fa06395ff360444b35338592a182af0a3bebd93a5f376df29bdd9cb3e8bfb",
+    "work-95442bada934cfbb5aa069a77cb3c1819cc59d405e70939f82f96213ecbfeb5c",
+    "work-96499f515eefa421824646d7d9b4b31c47fbc1eae508d46603fe610d37bf4870",
+    "work-9883a9803ac2ec1dd899ce0804657134b8354e2046a7177f812c476853087fbc",
+    "work-9c185d1c32527582a4d29fc1e9185dcd4fb7450f4f24516883d8133dee1a15fd",
+    "work-9c34e5e353476d63909c72dfbc4031bb11b26f8a599b83c3fa188dd51c0d8d0b",
+    "work-9d8d7a1758de8bfbfb3e948fe342a45fe4401e154838a4566555a53c414e8956",
+    "work-9e7a686946b0c71e708e7bc4a11d92b3e5e31c4626458e5a2f33d62b74b07b44",
+    "work-a0e8be94d230026fcecd068cd5d57ce677c5dd9f24d4b17982d07d7fa7b1c1f5",
+    "work-a1e755de12a50a16f278d578f897da58aac2614f491ea5d2bb0d9304e1bc08b1",
+    "work-a2f98be20369986b137a1ea8f58c351d3c551b89b24c50f385611bf48201536b",
+    "work-a409e5b928b32e7f36558d30ec2d29673f855befbc53dcc1a148251ee20e4431",
+    "work-a622353f5a75ab38710a4ad9026dd5450dd5d3c5110a07ef2f5006c1e28d1415",
+    "work-a9c64d5d24d9a6eb5a3035a943c6c7a901b32741d25603cfddeae75fd67ad3e2",
+    "work-abccdebe614b077aad864672bc92c4e7e28227a2c6b199c4fb9c59342caee8f2",
+    "work-ac07d1bd625338c4d1180852161f7008f44399052614c987aaefdf89a5deb324",
+    "work-ac57cbb45387c06b6398142407622af4695c3629f06adf0c6d6741923912624b",
+    "work-aca207f8643e88996af48be9b6f70d48ca6f51c4f2b1e8d1be59adc096d7522b",
+    "work-adf6993db0a6c4fcd443b70e68c58d2d25396c5c0e1d200671b1cf29911cb8cd",
+    "work-ae519a82a29ffb9fdb86c1a619fdb2178741c49d6ae1c9c0466634a816cc07cc",
+    "work-ae97ffb228bf9b2367070263bd8d130343b47c2b0997009170268ba282063eb3",
+    "work-b0c760d23d3e907387df1210d2fd64aa21886ea6284cf4589be50db50d8999fb",
+    "work-b1e2b7ac02714a2ab7d76752976eed954807b991b6532e03eec058c78b108bbe",
+    "work-b2537ac9587f1f0a4a70153a259ff0acde407c193733683aebbb7a017665ed94",
+    "work-b3ac3ad0834084285fbb466f5b2e7ac5c900070290aee9b7a85197710de8fab2",
+    "work-b416bbe2f483c8fd8e16a48cb3a6b6ecdf1307fbfb482e1e69dca0531b0afc16",
+    "work-b703450e45a4c852e19a7b4eae5ebeafed90a26579a6b36c050ef8380b55b8dd",
+    "work-b71dd64aa1ac8833ccc1d1d06f0d60918d79f94856c68922a852d087cc839cfd",
+    "work-b7341ad16197c387d2b0be8b19f2356697fa6bee3ffd4f2972f222c35aa2f080",
+    "work-b762b9b0ce5d42b30153e125285150a87d2b6b961e335c9dcdc8eef0762986ed",
+    "work-b9811ddca732247328c29bf439b970ded3018e2bd29b0e73b55990f634de9276",
+    "work-baae6bd463fa0a429b8468187092c2fd43a79712ad7dc76c0cec0a13edef2cc1",
+    "work-bb02c013c944871ee5477ebb1e891cd28af5eaa904b5fea9cc97d02bab20880d",
+    "work-bb2f1ec922e8f4bec82452ea82a735e08494df46e0c4390193613a65f92414b1",
+    "work-bb8a4fcbdb5e589a5ad6d362c0e9450aa15d3cb245af6976fa7f90086ad38541",
+    "work-bcd4cbbf3de8ad24495baabc6a0d20a3eed29f10ddcf2455aed31b95ca952300",
+    "work-bde29dbbffd75b22c33bbdace8b86cebffe2da2afa9e22b46a4e5fe9cc2b6223",
+    "work-be21ae5e287d23c94456235afcf887d5afaf00d09044eb641a1e9a928ea1dc3f",
+    "work-c034ae0ee01d23cdfda8cca3ecfce6231848882c636a6eabfba167c15816aa9d",
+    "work-c062734de0521d3da494f73c7b81c9d99958a2bf65cd7a7b03ab3eaf4b2cc78a",
+    "work-c39feaad4647b43504b4c68391194752049f8da103d5a87149d08f350d2aebd1",
+    "work-c3b8c157e1ef8e6bbc4a258cc7c73215969bb0c26896e63e45d0a22b2633f3ee",
+    "work-c4bc7811efd8e56f811a97d9fe7fb6a215c849ca54fa9f25646e7437f8042f7c",
+    "work-c54eb30a2dacafe4e18d3b5b8393342b01952dd8faad636a67456a0b4add752b",
+    "work-c5805371feb277ce366ec30913e3cf1bdac77733bd501f41b2bd6410d5b8104e",
+    "work-c5fbd4aeda6c56ddee5fd1064ebb7bca07d21e2b15c4376b14436d0fdb00eb04",
+    "work-c687900ffb2da722cf04c0d543534da881a0b091914fd60cacf8e713a9ed05b6",
+    "work-c70813fd412e722739f7cd7eefb542ce79d34e7b05959daf488a6012303f12ed",
+    "work-c79bc152faaf8e4f03b88d9d876f5c13253a5dfcebc51371e0e699c2a93faf78",
+    "work-c82ee578ba8f8cbace7e874c7c60e1038c6008ab749e0a229a7a957a770f1df7",
+    "work-c84498bb1cf0b8c20bf856546706d29ec0fa4f3ef1ad2fa8a139aabca57c8a87",
+    "work-c88c0ee036c3dc7448b485a28468e41346b71a3ae98478f7d78baa462919c795",
+    "work-cd22739bc65dca6cf5f25133add9693ece252217450c52098f58bb5f98a20972",
+    "work-cff8138e8eac871aaf9ab0ded32ade78a2ed03d3b747b1548b352aac8e966227",
+    "work-d02cbe8c92b9893c1fb49cb0e0731753496c4ebcccb463281e5b1581bdaa5d9c",
+    "work-d1438f4ba44a323060554ab598c2539c15ccb78d3d7feae05ca9ed651cf31470",
+    "work-d2a3e21ca381c9a28b19593758d0ee6fdb9a8cf19b298036e363ebb07c73587b",
+    "work-d640bd15fa85f26d27559520d6ee7975f87906b9656d3032dd9a90a4e7f57420",
+    "work-d67ade5d8757bc08f4d6c2affac0640a792351a8bccf09da6f6c0ad67f85eb4d",
+    "work-d693b1abefac699831e1909330ea53199a253c4824d8610369f925f39abe5509",
+    "work-d748ad024253552fde7564fe031c2f8aef2adf2d25d895190fe4bd3d3fe55cfa",
+    "work-d8596863692de92b66b34e284379e0e2e1cf2dee8925510e300342b64bbeab47",
+    "work-d90e99cbc03b02cbde0d4948d614f0026e9a08354ea6f058c2709ceb572b9f28",
+    "work-d9428274754aa840a410bfe578069d084e113a98760109f5ffa126619310a3c8",
+    "work-d9c9cae59ca98b4d93f18b53564a502cb6cf387ae6126e086e3c39263178093e",
+    "work-db6114a6ef9547aa625d2ce5c5243295226055bbc9b3c440b5361a0de64b9f99",
+    "work-dbaa06998d7d42bf9ecad398eacf8ee6aad663f985034236cad0597e90657b93",
+    "work-dbc49332b6a072e2b8eee5488443b9bb37ae31c5cfb6d01899181b1cb511dd75",
+    "work-dd2b019ab27f2693d5fee099d091b4f9b518f39fb63921c991e71861f6a3ca2e",
+    "work-de646470dba013d4959cc7e57746ca5ab76e7d5dadc32bbe11d387f47725a160",
+    "work-dec4f33ed1c7b2bb673cd86ec1f01a7b3c75abde4d483a06fa558d1ec69b62b9",
+    "work-e0141d2c60a071f1206e3a49b181e29c89c52943c1ce84e53e7169b305feb448",
+    "work-e07538245eb366afc10d87a2b3007a4753e637229737a6a739d3f58a6ef021e0",
+    "work-e0d5e0f90638bfae83a08e0038face9baec7fbb8c4b6025c3c866c4d4fb5faf7",
+    "work-e1dd89ee6d60da93671ccad098e6c5a2707334f81ead4a9632a39cb1e87dfa67",
+    "work-e2d359df06d1e069f2f21acda8da513e8c6497ca4175ec0cb5d3d4c65feb07ab",
+    "work-e327f05b01569c37c610489892185aef1058bbd9834c86e050f68a4df044f92d",
+    "work-e3dedcf2c094d812ec7489c1241e1ca534d89facc584c65f9e8715ecde7705eb",
+    "work-e8fb2f967e80cad871d5f5735929d90935dc58d6ce51d63561c7f281d6fa1dbb",
+    "work-e950dbf386bb960d7dd64c63c491f212ba092c0f6a25a0a973db4377f7bd32eb",
+    "work-eec462cfab7fcced0ea43b3250b4af306b496e82e76c7a40dbc468ece009d9d6",
+    "work-eed28c4f55e2ba91bc281f9c24c19c7d8fa282134fc7df5456d925a80dd12d00",
+    "work-ef7fbe27fc604c2b2f3e2a0ef707f47470fa9340ee3f4f50029fd0bdc9f91ed7",
+    "work-efe84958d87e9e24165dffcdd219fb9fd57476673119d127edc24951aabdc6df",
+    "work-f1c571806d533ea53fa2034e3e12637f99d3e97d057acf1b7fe760e78ded9114",
+    "work-f1c941f4bc79d6d8b50ee842b63b2417137b161473193b71e9009aa853d19953",
+    "work-f26814be18a6f4c476c63438f4fde6e60ae85aebd8b5d75b8de337a48d718fe4",
+    "work-f4137ff023ffb602645b62c4471cb058bf3e8217cd4478c2c1b349614a7a6ea7",
+    "work-f55c5933856ea726c3a780674c4127d8289ed61f0036e5472cdedb4160d31724",
+    "work-f5c67feb28dcbc803fd529f8cbbbbfbc33b01378cddcfe8cd124125bfeddc601",
+    "work-f9f110dbc58c3f089ea331622e95f5a2b48fc3e179dce77e27bec3cbac3796d1",
+    "work-fa24bb9f8e0535e938a8539bc918303cbf407e6817299a6efe1e24bc29a7688f",
+    "work-fa292a9e3d0a0a74d6a7688024f465f46fda554d9fb89e68f71804764ebb0ad9",
+    "work-fa3ccb008ce61f94d40f51c07a4dd5b110833eb23c8e34866d6033395de46a14",
+    "work-fad0f2977a4460175722b9558fff48c29751cf5d67d6bdf6b6b63f48b46f4a7d",
+    "work-fb7b4b6b37592f81afcc08b7b6064ea746fa48379daae0425300e91a6b00cf7a",
+    "work-fc621fc056b5067cff328756af5803f4ac182c36e2a068075053c79b6cc93d7f",
+    "work-fc64a534c3c4d74685b15db859cc5a058512825bcdd9b70759cb96e819f8fca5",
+    "work-fd0a7c7a1819f83cb796598421d5017cae6c15aca674aa9448384e66caef48c1",
+    "work-fd44e5b4ad67595a557bf332516756e2661cfe963bf3a585d60d319572d82b0b",
+    "work-fdea6a04ddf4ee8553cde57c77b0baeeed51277af8efc86e766091e45d020abe",
+    "work-fe7c23b4716e928302e2bd82ceed1667bf8d8df07e2f6db7aadb44dd900361dc",
+    "work-ffa259bf9d81365c854345d1eee1305d59e069383c3113f570de100a4c6d16d2"
+  ],
+  "sullivan_work_ids_in_old_or_new_profile": 264
+}
