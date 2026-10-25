@@ -236,6 +236,15 @@ checksum and count of applied repairs. A correction never edits the raw cache
 or raw snapshot; it only changes the normalized fields used for embeddings,
 quality assessment, canonical works, and browser artifacts.
 
+`data/curated/scholar-doi-aliases.json` links exact Scholar observations to
+verified DOI identities without rewriting the saved source. A
+`preprint_of` or `version_of_record` entry uses `published_doi` for the related
+published work. An `arxiv_preprint_doi` entry instead uses `preprint_doi` for
+the observed arXiv work itself; its arXiv identifier must match the saved venue
+and a primary arXiv record. The effective work receives the DOI and verification
+provenance, while `source_doi` and `source_record_json` retain their observed
+values. A preprint DOI does not identify a later proceedings or journal version.
+
 `data/curated/scholar-profile-releases.json` separates a complete, source
 validated capture from a public profile release. The publisher validates the
 full raw snapshot and every staged cache first. A `held` decision then removes
