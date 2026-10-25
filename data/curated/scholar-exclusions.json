@@ -11128,6 +11128,22 @@
       "reason": "The exact 2019 publisher article lists S. Das at BIT Mesra; the BIT Mesra faculty bibliography identifies this work as Dr. Sudip Das’s, not CMU chemist Subha R. Das.",
       "evidence_url": "https://scientiairanica.sharif.edu/article_20339.html",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:IaI1MmNe2tcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2018 Springer article assigns S. Das to Kalyani Government Engineering College; Santanu Das’s ORCID work 80417992 records the identical DOI, title, journal, and year, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s11665-018-3666-2",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:Ak0FvsSvgGUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2011 Springer article identifies S. K. Das at VECC/BARC with coauthor S. V. Thakare; an author-submitted VECC/BARC TiO2 paper with Thakare names him Satyendra Kumar Das, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s10967-011-1155-2",
+      "verified_at": "2026-10-25"
     }
   ]
 }

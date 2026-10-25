@@ -162,7 +162,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
                 item.held_author_pub_ids,
             ),
         )
-    ) == (49, 203, 418)
+    ) == (49, 205, 416)
     validate_reviewed_subset_decisions(
         releases,
         load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),
