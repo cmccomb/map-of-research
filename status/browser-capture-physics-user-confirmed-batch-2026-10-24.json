@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "kcXOB1MAAAAJ",
+    "jcb81yAAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "kcXOB1MAAAAJ",
+    "jcb81yAAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-scottdodelson-73513ee9",
+      "display_name": "Scott Dodelson",
+      "scholar_id": "kcXOB1MAAAAJ",
+      "publication_count": 443,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "196c4783bca3bcdab4d9494d0944e5d6c908393112db816d4ca034e6e89570f0",
+      "source_html_sha256": "1446204e70aa523385b4a760dc603cab0039a56e7f583199f40f3fbc8ee6effe"
+    },
+    {
+      "person_id": "person-hytrac-94ec4b85",
+      "display_name": "Hy Trac",
+      "scholar_id": "jcb81yAAAAAJ",
+      "publication_count": 184,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "e6783525b731e57b9fa97fff4bf3cc650ff3e850a130cb02af29d397d983a1a2",
+      "source_html_sha256": "4bcfe22fa549157e6df6f79e4a592082bae8821e7d2b3f00b8f4daeb29984c70"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T21:55:12+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T21:56:49+00:00",
+  "last_profile_request_at_utc": "2026-10-24T21:56:49+00:00",
+  "inter_profile_reservation_gap_seconds": 97,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T21:58:03.806569+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Chris McComb explicitly confirmed both IDs on 2026-10-24; Scholar profile names matched."
+}

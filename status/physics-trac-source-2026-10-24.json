@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "batch": "physics-trac-source-slice",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "target_base_commit": "8f35cdfb46ec5eaf21a1e2d1043128aa2a374610",
+  "producer_main_checked_commit": "6880d05abfbd9c44144cd88a5a9377c2a7d74fdc",
+  "carved_from_draft_pr": 80,
+  "carved_from_commit": "1da9ddf3b925f2a5ac3ba01054acc7ee0b6aec4d",
+  "department_id": "physics",
+  "profile_count": 1,
+  "raw_observation_count": 184,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "prior_producer_exclusion_count": 2,
+  "new_reviewed_exclusion_count": 11,
+  "producer_main_trac_exclusion_count": 13,
+  "unresolved_candidate_count": 0,
+  "ingestion_ready": true,
+  "ingestion_dependency": "The 11 reviewed decisions from producer PR #147, plus two prior Trac decisions, are in producer main at 6880d05abfbd9c44144cd88a5a9377c2a7d74fdc. The release coordinator controls when this draft source PR enters automation/map-snapshot because its merge triggers a snapshot upload.",
+  "capture_batch_receipt_path": "status/browser-capture-physics-user-confirmed-batch-2026-10-24.json",
+  "capture_batch_provenance_note": "The original two-profile Dodelson/Trac batch receipt is preserved byte-for-byte. Its Dodelson entry records shared capture timing; Dodelson source files are not in this Trac-only PR.",
+  "observation_review_path": "status/physics-trac-observation-review-2026-10-24.json",
+  "profiles": [
+    {
+      "person_id": "person-hytrac-94ec4b85",
+      "display_name": "Hy Trac",
+      "scholar_profile_name": "Hy Trac",
+      "scholar_id": "jcb81yAAAAAJ",
+      "publication_count": 184,
+      "coverage": "complete_visible_profile",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/trac.html",
+      "scholar_id_source_url": "https://scholar.google.com/citations?user=jcb81yAAAAAJ&hl=en&oi=ao",
+      "cache_path": "data/authors/jcb81yAAAAAJ.json",
+      "source_json_path": "data/captures/physics-hy-trac-2026-10-24.json",
+      "source_html_path": "data/captures/physics-hy-trac-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-hy-trac-2026-10-24.json"
+    }
+  ]
+}
