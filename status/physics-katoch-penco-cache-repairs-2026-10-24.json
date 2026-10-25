@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_state": "draft_pending_penco_source",
+  "review_state": "source_reviewed_cache_repaired",
   "reviewed_at": "2026-10-24",
   "target_branch": "automation/map-snapshot",
   "raw_capture_and_receipt_unchanged": true,
@@ -32,6 +32,15 @@
       "captured_value": "J Katoch, D Le, S Singh, R Rao, TSRM Ishigami",
       "repaired_value": "J Katoch, D Le, S Singh, R Rao, TS Rahman, M Ishigami",
       "evidence_url": "https://api.crossref.org/works/10.1088%2F0953-8984%2F28%2F11%2F115301"
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 42,
+      "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
+      "cache_field": "title",
+      "captured_value": "Effective description of ajar systems with a symmetry",
+      "repaired_value": "Effective description of ajar systems with a U(1) symmetry",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/mrzp-zh4v"
     }
   ]
 }
