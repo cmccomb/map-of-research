@@ -14,6 +14,7 @@ from urllib.parse import urljoin, urlparse
 
 PERSON_ID = "person-clintonconley-626c1f70"
 SITE_URL = "https://www.math.cmu.edu/~clintonc/"
+CORNELL_SITE_URL = "https://pi.math.cornell.edu/~clintonc/"
 CHAPTER_DOI = "10.1142/9789813223523_0002"
 REVIEW_DOI = "10.1017/bsl.2016.25"
 CHEMISTRY_HOLD_DOI = "10.1016/S0009-2614(99)00018-4"
@@ -86,7 +87,7 @@ def _crossref(path: Path, manifest: dict[str, str], file: str, doi: str) -> dict
 
 
 def load_staged_conley_rows(path: Path) -> list[dict[str, Any]]:
-    """Return 33 release-held observations without a snapshot or graph write."""
+    """Return 36 release-held observations without a snapshot or graph write."""
 
     manifest = json.loads((path / "manifest.json").read_text(encoding="utf-8"))
     if (
@@ -102,14 +103,15 @@ def load_staged_conley_rows(path: Path) -> list[dict[str, Any]]:
             "arxiv_links": 7,
             "researcher_pdf_links": 24,
             "publisher_omissions_verified": 2,
-            "union_distinct_observations": 33,
+            "cornell_legacy_manifestations": 3,
+            "union_distinct_observations": 36,
             "comment_only_not_counted": 2,
             "namesake_identity_hold_not_counted": 1,
         }
     ):
         raise ValueError("Conley identity, scope, or release hold changed")
     pinned = {item["file"]: item["sha256"] for item in manifest["source_files"]}
-    if len(pinned) != 10 or any(len(digest) != 64 for digest in pinned.values()):
+    if len(pinned) != 12 or any(len(digest) != 64 for digest in pinned.values()):
         raise ValueError("Conley source manifest file coverage changed")
     raw = {name: _read_pinned(path, name, digest) for name, digest in pinned.items()}
     if b"Clinton" not in raw["official.html"]:
@@ -117,13 +119,18 @@ def load_staged_conley_rows(path: Path) -> list[dict[str, Any]]:
 
     parser = _VisibleList()
     parser.feed(raw["author-site.html"].decode("utf-8"))
+    cornell_parser = _VisibleList()
+    cornell_parser.feed(raw["cornell-author-site.html"].decode("utf-8"))
     listed = _csv(raw["author-listed.csv"])
     pdf_review = _csv(raw["pdf-first-page-review.csv"])
     exceptions = _csv(raw["publisher-exceptions.csv"])
+    legacy = _csv(raw["cornell-legacy-manuscripts.csv"])
     if len(parser.rows) != 31 or len(listed) != 31 or len(pdf_review) != 24:
         raise ValueError("Conley visible-page or PDF review count changed")
     if len(exceptions) != 3:
         raise ValueError("Conley publisher and identity-hold ledger changed")
+    if len(cornell_parser.rows) != 19 or len(legacy) != 3:
+        raise ValueError("Conley Cornell legacy source coverage changed")
     if len({row["link"] for row in listed}) != 31:
         raise ValueError("Conley visible source work URL duplicated")
 
@@ -304,10 +311,87 @@ def load_staged_conley_rows(path: Path) -> list[dict[str, Any]]:
                 },
             }
         )
+    legacy_cases = {
+        "researcher-bibliography:conley:cornell-threecolor-2010": (
+            "bairemeasurablethreecolorings.pdf",
+            "1d1a70e3ed3887de4d70343f848a107c7f59ef13ed1cdf6949df34800a464881",
+            "319091",
+            "8",
+            "draft_lecture_note",
+            "",
+            "separate_observation_work_identity_unresolved",
+        ),
+        "researcher-bibliography:conley:cornell-matching-old": (
+            "matching.pdf",
+            "6354d73878b6b824682d4eb248d68d23f1135a6fed9c8a79f6f37a4be68c3b1c",
+            "265085",
+            "4",
+            "draft_manuscript",
+            "13",
+            "candidate_precursor_unresolved",
+        ),
+        "researcher-bibliography:conley:cornell-homomorphism-old": (
+            "homomorphism.pdf",
+            "23a268c83c54d3ab6f2368ea4345006de6c6536607aa57969a27dbea2ed351a9",
+            "204746",
+            "17",
+            "submission_manuscript",
+            "14",
+            "candidate_precursor_unresolved",
+        ),
+    }
+    cornell_links = {
+        urljoin(CORNELL_SITE_URL, href): title for title, href in cornell_parser.rows
+    }
+    if {row["source_native_id"] for row in legacy} != set(legacy_cases):
+        raise ValueError("Conley Cornell legacy identities changed")
+    for evidence in legacy:
+        identity = evidence["source_native_id"]
+        filename, digest, size, pages, genre, related, relation = legacy_cases[identity]
+        link = _https(evidence["source_work_url"])
+        if (
+            link != f"{CORNELL_SITE_URL}onlinepapers/{filename}"
+            or cornell_links.get(link) != evidence["cornell_title"]
+            or evidence["pdf_sha256"] != digest
+            or evidence["pdf_bytes"] != size
+            or evidence["pdf_pages"] != pages
+            or evidence["publication_type"] != genre
+            or evidence["related_current_ordinal"] != related
+            or evidence["version_relation"] != relation
+            or "Conley" not in evidence["authors"]
+            or not evidence["row_hold"]
+        ):
+            raise ValueError(f"Conley Cornell legacy evidence changed: {identity}")
+        rows.append(
+            {
+                "person_id": PERSON_ID,
+                "primary_department_id": "math",
+                "scholar_id": None,
+                "source_native_id": identity,
+                "source_kind": "researcher_owned_historical_site",
+                "source_url": CORNELL_SITE_URL,
+                "source_work_url": link,
+                "title": evidence["first_page_title"],
+                "title_as_listed": evidence["cornell_title"],
+                "authors": evidence["authors"],
+                "publication_type": genre,
+                "year": None,
+                "year_basis": evidence["source_year_note"],
+                "doi": None,
+                "citation_count": None,
+                "map_eligible": False,
+                "collaboration_eligible": False,
+                "release_state": "source_only_release_held",
+                "row_hold": evidence["row_hold"],
+                "related_current_ordinal": int(related) if related else None,
+                "version_relation": relation,
+                "source_record": evidence,
+            }
+        )
     if (
-        len(rows) != 33
-        or len({row["source_native_id"] for row in rows}) != 33
-        or sum(row["row_hold"] is not None for row in rows) != 4
+        len(rows) != 36
+        or len({row["source_native_id"] for row in rows}) != 36
+        or sum(row["row_hold"] is not None for row in rows) != 7
         or any(row["doi"] == CHEMISTRY_HOLD_DOI for row in rows)
         or any(row["map_eligible"] or row["collaboration_eligible"] for row in rows)
     ):

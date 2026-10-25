@@ -13,9 +13,10 @@
     "arxiv_links": 7,
     "researcher_pdf_links": 24,
     "publisher_omissions_verified": 2,
-    "union_distinct_observations": 33,
+    "union_distinct_observations": 36,
     "comment_only_not_counted": 2,
-    "namesake_identity_hold_not_counted": 1
+    "namesake_identity_hold_not_counted": 1,
+    "cornell_legacy_manifestations": 3
   },
   "source_files": [
     {
@@ -57,6 +58,14 @@
     {
       "file": "cambridge-review-metadata.json",
       "sha256": "caa0d732a3f0d4170003a18be6041ceb3861195feb56e7cbbfc0870a652487da"
+    },
+    {
+      "file": "cornell-author-site.html",
+      "sha256": "9758d0f4640cc029c997e08ba60abe2b64eb621c25c619db7a775d3833b98cbe"
+    },
+    {
+      "file": "cornell-legacy-manuscripts.csv",
+      "sha256": "ed22e4a686573fba70c925640766381c9a44249885c1c55894521faf6e94d992"
     }
   ]
 }
