@@ -1,14 +1,14 @@
 {
-  "artifact_commit": "15498d5f78e2e269f4b11c630bc9b4ef56efb628",
+  "artifact_commit": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
   "attribution_confirmed": 437,
-  "attribution_held": 64,
+  "attribution_held": 65,
   "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
-  "authorships": 49478,
+  "authorships": 49662,
   "dataset_commits": {
-    "authorships": "71d7fb2165cf9bd4dbbe3c075d4c5dd1ffe83d71",
-    "people": "69172300697143fe0e45347efdb26713b613b00e",
-    "profile_publications": "da90b0b0de18aff4e60c13e3db7f263a0dc95af4",
-    "works": "08579b431afa4bdf5e54e18fd61772229847a6fe"
+    "authorships": "44fae64c32e46114516aac7ce2701a748bfe9d48",
+    "people": "eb42da3eccec920144a0b54957b1dfefdf5eff4f",
+    "profile_publications": "c8c1781e6c2fce54bdb5f1b73ca101167d9e97d9",
+    "works": "08176456e603f48f9fa316543970d71913337e4b"
   },
   "dataset_configs": [
     "people",
@@ -19,25 +19,25 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 2464,
-  "finished_at_utc": "2026-10-25T06:11:10.480581+00:00",
+  "excluded_works": 2450,
+  "finished_at_utc": "2026-10-25T06:37:55.504891+00:00",
   "held_observation_rows": 0,
   "held_profile_ids": [],
   "held_source_observation_rows": 0,
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 42713,
+  "mapped_works": 42925,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 422,
+  "new_embedding_count": 198,
   "people": 2001,
-  "profile_count": 309,
-  "profile_publications": 51595,
+  "profile_count": 310,
+  "profile_publications": 51823,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -88,11 +88,21 @@
       "scholar_id": "vF51LxIAAAAJ",
       "source_observation_rows": 41,
       "state": "released"
+    },
+    {
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "person_observation_rows": 228,
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "source_observation_rows": 228,
+      "state": "released"
     }
   ],
-  "profile_release_manifest_sha256": "c2e06d5d04fd5bcd4b6a61fb6f0af2023423c7a6bf2ca3aa999ccf0b2f091266",
-  "provisional_hold_manifest_sha256": "71b4c96084b625497cc41a105d00f6bd225ea33b6f8cdb059868adf043777f2f",
-  "provisional_hold_observation_rows": 11,
+  "profile_release_manifest_sha256": "7f025e20a6952d6971c0b82ce96dbfec3a81c66415ea5ff88edf462397a686dd",
+  "provisional_hold_manifest_sha256": "3c659c994ca16b1f29bb77527cc739b5d3b737a2f923376260724bf5044001f0",
+  "provisional_hold_observation_rows": 12,
   "provisional_hold_profiles": [
     {
       "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
@@ -123,30 +133,40 @@
       "reviewed_exclusion_rows": 0,
       "scholar_id": "vF51LxIAAAAJ",
       "source_observation_rows": 41
+    },
+    {
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "held_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388",
+      "held_observation_rows": 1,
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6",
+      "reviewed_exclusion_rows": 43,
+      "scholar_id": "hfFKwRcAAAAJ",
+      "source_observation_rows": 228
     }
   ],
-  "raw_snapshot_observations": 51595,
-  "raw_snapshot_profiles": 309,
-  "raw_snapshot_sha256": "b72df04cf28e5af1450b4010ac05a91c5f68b1b671fa19d2a2e7a93a22d46e58",
+  "raw_snapshot_observations": 51823,
+  "raw_snapshot_profiles": 310,
+  "raw_snapshot_sha256": "5b940614b2238c124bc194e944da277ee2221df27a11eedca6693af020ee86fb",
   "region_audit_version": "low-information-semantic-region-v2",
   "reviewed_contexts": 12,
   "reviewed_contexts_sha256": "00962fc23909048da216ae2af953361174124fc086b02935162f9ccf54737450",
   "reviewed_doi_aliases": 52,
   "reviewed_doi_aliases_sha256": "497ca2b029e1892e5a0f267137519b4e2708af4dc8f6a3bcfa7778dadf988cf7",
-  "reviewed_exclusions": 1067,
-  "reviewed_exclusions_sha256": "06bf3fbfbb16bfd14be5d32aea3a287af4488c2836d084f936912d583a33fb0a",
+  "reviewed_exclusions": 1110,
+  "reviewed_exclusions_sha256": "9c60b0adc10fd0b8b2ef367fd46791e6d2a00b8f71b8ef6dbdfa96eee98f168e",
   "reviewed_metadata_corrections": 19,
   "reviewed_metadata_corrections_sha256": "5e6fd5feeab134618655dfab57cd9899fc6d1f014b3124f7ef73471f98579b4f",
   "schema_version": 2,
   "scholar_coverage": {
-    "complete_profiles": 23,
+    "complete_profiles": 24,
     "legacy_profiles": 286,
     "reconciled_prior_ids": 12
   },
-  "started_at_utc": "2026-10-25T06:03:34.615413+00:00",
+  "started_at_utc": "2026-10-25T06:29:46.524810+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 19,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40167632965",
-  "works": 47495
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40169148827",
+  "works": 47693
 }
