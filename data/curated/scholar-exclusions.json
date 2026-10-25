@@ -6936,6 +6936,30 @@
       "reason": "CMU KiltHub credits this poster to Aziza Abugaliyeva and lists Ihab Younis under Advisor(s), not as an author.",
       "evidence_url": "https://kilthub.cmu.edu/articles/poster/Exploring_Alzheimer_s_Disease_Computational_Analysis_of_Alzheimer_s_Disease-Related_Biomarkers_for_Insightful_Discoveries/25992277",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "JDo1onIAAAAJ",
+      "author_pub_id": "JDo1onIAAAAJ:Zph67rFs4hoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same exact Zasp article, 2012, Journal of Cell Science 125:5647-5657, as complete row 11, but with rearranged and incomplete author order. The publisher lists one paper with Bouaouina first and DOI 10.1242/jcs.103291.",
+      "evidence_url": "https://journals.biologists.com/jcs/issue/125/23",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "JDo1onIAAAAJ",
+      "author_pub_id": "JDo1onIAAAAJ:3fE2CSJIrl8C",
+      "reason_code": "nonpublication",
+      "reason": "The displayed title is a fragment of an alphabetical Journal of Biological Chemistry author index: Filman 6154, Fu 6337, and Fujiki 6136 are authors of three different 2008 papers. It is not an authored work by Bouaouina.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0021925820571937",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "JDo1onIAAAAJ",
+      "author_pub_id": "JDo1onIAAAAJ:MXK_kJrjxJIC",
+      "reason_code": "nonpublication",
+      "reason": "The displayed title is a Journal of Biological Chemistry page-viii running header, while the author string is an alphabetical index of unrelated contributors. JBC issue contents label pages vii-viii as Author Index, distinct from research articles.",
+      "evidence_url": "https://www.sciencedirect.com/journal/journal-of-biological-chemistry/vol/295/issue/50",
+      "verified_at": "2026-10-25"
     }
   ]
 }
