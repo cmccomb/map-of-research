@@ -50,6 +50,47 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    109: (
+        "Search for low-mass dark matter with CsI (Tl) crystal detectors",
+        2014,
+        "Hong Joo Kim",
+        "10.1103/PhysRevD.90.052006",
+        "https://research.knu.ac.kr/en/publications/search-for-low-mass-dark-matter-with-csitl-crystal-detectors/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    174: (
+        "The COSINE-100 data acquisition system",
+        2018,
+        "Hong Joo Kim",
+        "10.1088/1748-0221/13/09/P09006",
+        "https://research.knu.ac.kr/en/publications/the-cosine-100-data-acquisition-system/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    235: (
+        "Measurement of the cosmic muon annual and diurnal flux variation "
+        "with the COSINE-100 detector",
+        2021,
+        "Hong Joo Kim",
+        "10.1088/1475-7516/2021/02/013",
+        "https://research.knu.ac.kr/en/publications/measurement-of-the-cosmic-muon-annual-and-diurnal-flux-variation-/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    241: (
+        "The COSINE-100 liquid scintillator veto system",
+        2021,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2021.165431",
+        "https://research.knu.ac.kr/en/publications/the-cosine-100-liquid-scintillator-veto-system/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
     62: (
         "AMoRE experiment: a search for neutrinoless double beta decay "
         "of 100Mo isotope with 40Ca100MoO4 cryogenic scintillation detector",
@@ -423,6 +464,15 @@ OTHER_PRIMARY = {
     ),
 }
 
+# In addition to title and year, freeze each newly reviewed Scholar observation
+# ID so a reordered or replaced capture cannot inherit a person decision.
+OTHER_PRIMARY_ID_GUARDS = {
+    109: "bC4aq-4AAAAJ:sbeIDTyQOFgC",
+    174: "bC4aq-4AAAAJ:bVQMTfhMCi4C",
+    235: "bC4aq-4AAAAJ:M0j1y4EgrScC",
+    241: "bC4aq-4AAAAJ:cSdaV2aYdYsC",
+}
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -557,14 +607,21 @@ def orcid_index(profile: dict) -> dict[str, list[dict]]:
     return result
 
 
-def decision(pub_id: str, reason_code: str, reason: str, url: str) -> dict:
+def decision(
+    pub_id: str,
+    reason_code: str,
+    reason: str,
+    url: str,
+    *,
+    verified_at: str = "2026-10-24",
+) -> dict:
     return {
         "scholar_id": SCHOLAR_ID,
         "author_pub_id": pub_id,
         "reason_code": reason_code,
         "reason": reason,
         "evidence_url": url,
-        "verified_at": "2026-10-24",
+        "verified_at": verified_at,
     }
 
 
@@ -642,7 +699,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 evidence_source,
                 basis,
             ) = OTHER_PRIMARY[index]
-            if title != expected_title or year != str(expected_year):
+            if (
+                title != expected_title
+                or year != str(expected_year)
+                or (
+                    index in OTHER_PRIMARY_ID_GUARDS
+                    and pub_id != OTHER_PRIMARY_ID_GUARDS[index]
+                )
+            ):
                 raise ValueError(f"Primary-source match changed at capture row {index}")
             status = "proposed_other_person_primary_work"
             additions.append(
@@ -656,6 +720,11 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         + (f" Article DOI {doi}." if doi else "")
                     ),
                     evidence_url,
+                    verified_at=(
+                        "2026-10-25"
+                        if index in OTHER_PRIMARY_ID_GUARDS
+                        else "2026-10-24"
+                    ),
                 )
             )
         elif index == 917:
@@ -796,16 +865,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 35,
+        "proposed_other_person_primary_work": 39,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 1,
-        "unresolved_attribution_hold": 423,
+        "unresolved_attribution_hold": 419,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 372 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 376 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
