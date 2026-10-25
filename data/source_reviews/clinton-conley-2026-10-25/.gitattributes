@@ -1,0 +1,3 @@
+# Preserve exactly the captured source and CSV bytes pinned by manifest.json.
+*.html -text -diff
+*.csv -text
