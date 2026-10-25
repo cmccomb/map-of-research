@@ -192,11 +192,6 @@ def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
                 for reason in reasons
             )
         )
-        or (
-            row.get("review_attribution_status") == "held"
-            and "attribution_provisional_hold" in reasons
-            and bool(str(row.get("review_attribution_evidence_url") or "").strip())
-        )
     )
 
 

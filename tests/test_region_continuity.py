@@ -196,7 +196,7 @@ def test_current_context_review_can_explain_loss():
     assert len(receipt["reviewed_losses"]) == 1
 
 
-def test_validated_provisional_hold_can_explain_exact_observation_loss():
+def test_provisional_hold_alone_cannot_remove_prior_visible_observation():
     old = observation("person", "one")
     current = {
         **old,
@@ -204,33 +204,6 @@ def test_validated_provisional_hold_can_explain_exact_observation_loss():
         "map_exclusion_reasons": ["attribution_provisional_hold"],
         "review_attribution_status": "held",
         "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
-    }
-    _, receipt = reconcile(
-        [work("one", eligible=False, outlier=False)],
-        [current],
-        [work("one", eligible=True, outlier=False)],
-        [old],
-    )
-    assert receipt["reviewed_losses"] == ["person/profile/profile:shared-row/scholar"]
-
-
-@pytest.mark.parametrize(
-    "change",
-    [
-        {"map_exclusion_reasons": []},
-        {"review_attribution_status": ""},
-        {"review_attribution_evidence_url": ""},
-    ],
-)
-def test_incomplete_provisional_hold_cannot_explain_loss(change):
-    old = observation("person", "one")
-    current = {
-        **old,
-        "map_eligible": False,
-        "map_exclusion_reasons": ["attribution_provisional_hold"],
-        "review_attribution_status": "held",
-        "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
-        **change,
     }
     with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
         reconcile(
