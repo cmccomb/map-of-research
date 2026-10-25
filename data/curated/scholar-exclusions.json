@@ -6216,6 +6216,22 @@
       "reason": "Capture row 42 is NSF award 1411824 for Mean-field Games for Market Microstructure and Liquidity Risk, with Sergey Nadtochiy as PI; it is a research grant rather than an authored publication.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/1411824.json",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "_VnEj3gAAAAJ",
+      "author_pub_id": "_VnEj3gAAAAJ:R3hNpaxXUhUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 26 abbreviates the title of the retained 2011 Molecular Pharmacology article at _VnEj3gAAAAJ:2osOgNQ5qMEC; its authors and journal match. PubMed gives the complete title, volume 79, pages 1023-1030, and DOI 10.1124/mol.110.069922.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/21406603/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "_VnEj3gAAAAJ",
+      "author_pub_id": "_VnEj3gAAAAJ:qUcmZB5y_30C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 36 prefixes the article-type label Research article to the retained 2010 BMC Musculoskeletal Disorders title at _VnEj3gAAAAJ:zYLM7Y9cAGgC; the author set and year match. The publisher identifies one article in volume 11, article 111.",
+      "evidence_url": "https://link.springer.com/article/10.1186/1471-2474-11-111",
+      "verified_at": "2026-10-24"
     }
   ]
 }
