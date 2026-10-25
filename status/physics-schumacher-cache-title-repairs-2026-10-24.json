@@ -44,6 +44,16 @@
       "captured_value": "Search for the Θ+ Pentaquark in the γd→ΛnK+ Reaction Measured <?format ?>with the CLAS Spectrometer",
       "repaired_value": "Search for the Θ+ Pentaquark in the γd→ΛnK+ Reaction Measured with the CLAS Spectrometer",
       "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.032001"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 444,
+      "author_pub_id": "LibSWRMAAAAJ:iyewoVqAXLQC",
+      "cache_field": "title",
+      "captured_value": "Kinematically complete measurement of the proton structure function [Formula Presented] in the resonance region and evaluation of its moments",
+      "repaired_value": "Kinematically complete measurement of the proton structure function F₂ in the resonance region and evaluation of its moments",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.092001",
+      "repair_basis": "publisher-title reconstruction of formula placeholder"
     }
   ]
 }

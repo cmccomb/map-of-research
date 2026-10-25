@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "target_branch": "automation/map-snapshot",
+  "raw_capture_and_receipt_unchanged": true,
+  "producer_exclusions_added": 0,
+  "capture_receipts": {
+    "wJ_gQLoAAAAJ": "status/browser-capture-physics-matteo-cremonesi-2026-10-24.json"
+  },
+  "repairs": [
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 400,
+      "author_pub_id": "wJ_gQLoAAAAJ:_Ybze24A_UAC",
+      "cache_field": "title",
+      "captured_value": "Exclusion of exotic top-like quarks with -4/3 electric charge using jet-charge tagging <?format ?>in single-lepton tt¯ events at CDF",
+      "repaired_value": "Exclusion of exotic top-like quarks with -4/3 electric charge using jet-charge tagging in single-lepton tt¯ events at CDF",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.88.032003"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 903,
+      "author_pub_id": "wJ_gQLoAAAAJ:FiDNX6EVdGUC",
+      "cache_field": "title",
+      "captured_value": "Search for a dijet resonance in events with jets and missing transverse energy <?format ?>in pp¯ collisions at s=1.96  TeV",
+      "repaired_value": "Search for a dijet resonance in events with jets and missing transverse energy in pp¯ collisions at s=1.96  TeV",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.88.092004"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 388,
+      "author_pub_id": "wJ_gQLoAAAAJ:ruyezt5ZtCIC",
+      "cache_field": "title",
+      "captured_value": "Search for Pair Production of Strongly Interacting Particles Decaying <?format ?>to Pairs of Jets in pp¯ Collisions at s=1.96  TeV",
+      "repaired_value": "Search for Pair Production of Strongly Interacting Particles Decaying to Pairs of Jets in pp¯ Collisions at s=1.96  TeV",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.031802"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 974,
+      "author_pub_id": "wJ_gQLoAAAAJ:DvbUhBKpgQUC",
+      "cache_field": "title",
+      "captured_value": "Search for rare decays of [Formula omitted] and Higgs bosons to [Formula omitted] and a photon in proton-proton collisions at [Formula omitted]= 13 [Formula omitted].",
+      "repaired_value": "Search for rare decays of Z and Higgs bosons to J/ψ and a photon in proton-proton collisions at √s = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-17-012/index.html",
+      "repair_basis": "publisher-title reconstruction of formula placeholders"
+    }
+  ]
+}
