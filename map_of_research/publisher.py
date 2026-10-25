@@ -18,6 +18,7 @@ from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
 from .dataset import build_dataset_tables
 from .doi_aliases import (
     DEFAULT_DOI_ALIASES_PATH,
+    ReviewedDoiAlias,
     load_doi_aliases,
     validate_doi_aliases,
 )
@@ -349,6 +350,7 @@ def _reusable_work_order(
     works: Any,
     previous: Sequence[Mapping[str, Any]],
     layouts: Mapping[str, Mapping[str, float]],
+    doi_aliases: Mapping[tuple[str, str], ReviewedDoiAlias] | None = None,
 ) -> tuple[Any, dict[str, Mapping[str, float]]] | None:
     """Reuse prior coordinates and row order only for an identical work corpus.
 
@@ -415,11 +417,29 @@ def _reusable_work_order(
         current = current_by_id[new_id]
         doi = str(current.doi or "").casefold()
         expected_id = "work-" + hashlib.sha256(f"doi:{doi}".encode()).hexdigest()
+        curated_rekey = current.work_match_method in {
+            "doi",
+            "curated_title_year",
+        } and "curated_verified" in _as_list(current.source_types)
+        reviewed_alias_rekey = (
+            current.work_match_method == "reviewed_version_alias"
+            and "scholar" in _as_list(current.source_types)
+            and any(
+                alias.doi == doi
+                and alias.observed_title == str(current.title or "")
+                and alias.observed_year == _year_key(current.year)
+                and scholar_id in _as_list(current.scholar_ids)
+                and author_pub_id in _as_list(current.author_pub_ids)
+                and set(alias.evidence_urls).issubset(
+                    _as_list(current.source_verification_urls)
+                )
+                for (scholar_id, author_pub_id), alias in (doi_aliases or {}).items()
+            )
+        )
         if (
             not doi.startswith("10.")
             or new_id != expected_id
-            or current.work_match_method not in {"doi", "curated_title_year"}
-            or "curated_verified" not in _as_list(current.source_types)
+            or not (curated_rekey or reviewed_alias_rekey)
             or not str(current.source_verified_at or "").strip()
             or not _as_list(current.source_verification_urls)
         ):
@@ -1081,6 +1101,7 @@ def publish_snapshot(
             tables["works"],
             _existing_work_state(hf_token=hf_token),
             existing_layouts,
+            doi_aliases,
         )
         if reuse is not None:
             tables["works"], existing_layouts = reuse

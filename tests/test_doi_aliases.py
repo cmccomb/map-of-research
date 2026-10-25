@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pandas
 import pytest
@@ -33,6 +34,16 @@ def test_walkington_alias_matches_exact_raw_scholar_row() -> None:
         ]
     )
     validate_doi_aliases(frame, aliases, {})
+
+
+def test_trusted_upload_uses_producer_doi_alias_manifest() -> None:
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text(encoding="utf-8")
+    assert (
+        "--reviewed-doi-aliases source/data/curated/scholar-doi-aliases.json"
+        in workflow
+    )
 
 
 @pytest.mark.parametrize(
