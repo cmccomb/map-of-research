@@ -759,6 +759,84 @@ CMU_PRIMARY = {
         "RSC published correction DOI 10.1039/C7CP90081C; full Hyung "
         "J. Kim byline, CMU Chemistry affiliation, and separate page",
     ),
+    # CMU Kim Group entries checked against publisher-deposited DOI metadata.
+    63: (
+        "Dielectric relaxation, ion conductivity, solvent rotation, and "
+        "solvation dynamics in a room-temperature ionic liquid",
+        2008,
+        "https://api.crossref.org/works/10.1021%2Fjp802595r",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. B 112:11028-11038 agree",
+    ),
+    86: (
+        "Electronic structure and normal vibrations of the "
+        "1-ethyl-3-methylimidazolium ethyl sulfate ion pair",
+        2011,
+        "https://api.crossref.org/works/10.1021%2Fjp1122322",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. A 115:3551-3558 agree",
+    ),
+    170: (
+        "On the photoabsorption spectroscopy of water",
+        2000,
+        "https://api.crossref.org/works/10.1021%2Fjp992582g",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and 2000 print issue, J. Phys. Chem. A 104:45-52, agree",
+    ),
+    232: (
+        "Adiabatic electron transfer in a room-temperature ionic liquid: "
+        "Reaction dynamics and kinetics",
+        2009,
+        "https://api.crossref.org/works/10.1021%2Fjp9065407",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. B 113:12964-12972 agree",
+    ),
+    254: (
+        "Free Energies of Electron Transfer Reactions in Polarizable, "
+        "Nondipolar, Quadrupolar Solvents",
+        2000,
+        "https://api.crossref.org/works/10.1021%2Fjp002146q",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. A 104:9812-9815 agree",
+    ),
+    273: (
+        "MD Study of Solvation in the Mixture of a Room-Temperature Ionic "
+        "Liquid and CO2",
+        2010,
+        "https://api.crossref.org/works/10.1021%2Fjp105021b",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. B 114:10160-10170 agree",
+    ),
+    281: (
+        "Carbon nanotubes in benzene: internal and external solvation",
+        2011,
+        "https://api.crossref.org/works/10.1039%2FC0CP01845G",
+        "RSC full Hyung J. Kim byline and PCCP 13:3969 first page; "
+        "CMU group list confirms pages 3969-3978",
+    ),
+    468: (
+        "MD Study of SN1 Reactivity of 2-Chloro-2-methylpropane in the "
+        "Room-Temperature Ionic Liquid 1-Ethyl-3-methylimidazolium "
+        "Hexafluorophosphate",
+        2008,
+        "https://api.crossref.org/works/10.1021%2Fjp710128p",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Phys. Chem. B 112:2637-2643 agree",
+    ),
+    687: (
+        "Electron-transfer reactions in supercritical water",
+        2008,
+        "https://api.crossref.org/works/10.1021%2Fjp075270j",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and 2008 print issue, J. Phys. Chem. B 112:585-594, agree",
+    ),
+    723: (
+        "Solubility of Water in a Benzene− Cyclohexane Mixture",
+        2006,
+        "https://api.crossref.org/works/10.1021%2Fjp053578%2B",
+        "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and 2006 print issue, J. Phys. Chem. A 110:429-435, agree",
+    ),
 }
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
@@ -776,6 +854,16 @@ CMU_PRIMARY_ID_GUARDS = {
     643: "bC4aq-4AAAAJ:hMod-77fHWUC",
     709: "bC4aq-4AAAAJ:abG-DnoFyZgC",
     796: "bC4aq-4AAAAJ:4fKUyHm3Qg0C",
+    63: "bC4aq-4AAAAJ:Y0pCki6q_DkC",
+    86: "bC4aq-4AAAAJ:ULOm3_A8WrAC",
+    170: "bC4aq-4AAAAJ:0EnyYjriUFMC",
+    232: "bC4aq-4AAAAJ:mVmsd5A6BfQC",
+    254: "bC4aq-4AAAAJ:Zph67rFs4hoC",
+    273: "bC4aq-4AAAAJ:IWHjjKOFINEC",
+    281: "bC4aq-4AAAAJ:HDshCWvjkbEC",
+    468: "bC4aq-4AAAAJ:TQgYirikUcIC",
+    687: "bC4aq-4AAAAJ:isC4tDSrTZIC",
+    723: "bC4aq-4AAAAJ:blknAaTinKkC",
 }
 
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
@@ -787,6 +875,16 @@ CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     111: "10.1021/jp0703859",
     145: "10.1039/b921725h",
     166: "10.1021/jp067316z",
+    63: "10.1021/jp802595r",
+    86: "10.1021/jp1122322",
+    170: "10.1021/jp992582g",
+    232: "10.1021/jp9065407",
+    254: "10.1021/jp002146q",
+    273: "10.1021/jp105021b",
+    281: "10.1039/c0cp01845g",
+    468: "10.1021/jp710128p",
+    687: "10.1021/jp075270j",
+    723: "10.1021/jp053578+",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -1240,9 +1338,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 91,
+        "cmu_orcid_exact_title_year_retained": 81,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 23,
+        "cmu_primary_work_retained": 33,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
