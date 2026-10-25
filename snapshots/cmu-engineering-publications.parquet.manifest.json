@@ -1,11 +1,11 @@
 {
-  "cached_profile_ids_sha256": "b7698644e9b79b381fedb894bb359f10d35a3616d8d2eca73e402af7b65248fc",
-  "cached_profiles": 297,
-  "created_at_utc": "2026-10-25T03:12:03.408590+00:00",
-  "curated_work_rows": 21,
+  "cached_profile_ids_sha256": "19ccc4d6b4836fe5a4ec6353bf9b919cae1c93a0f77de07a37740612472436f9",
+  "cached_profiles": 298,
+  "created_at_utc": "2026-10-25T04:32:57.237158+00:00",
+  "curated_work_rows": 26,
   "curated_works_file": "works.json",
-  "curated_works_sha256": "bb16eff643cea0d5b47286a6abfeca3cb7af0bc44454eb9472e8f2caaa0de054",
-  "publication_rows": 50234,
+  "curated_works_sha256": "f8614b86395bd1108315490a51f8b51a04ed1e9a774e7266439ad94f8a98afaf",
+  "publication_rows": 50893,
   "registry_files": [
     "people.csv",
     "memberships.csv",
@@ -14,11 +14,11 @@
   ],
   "registry_memberships": 2357,
   "registry_people": 2001,
-  "registry_profiles": 506,
-  "registry_sha256": "c1d2a8f7d7121dd9ca7148f2fbbd70a44e9089b586ade0667c1b84df53bb9cb2",
+  "registry_profiles": 507,
+  "registry_sha256": "df58d5f1baa557124d6751bcba48442836a5d764a97a17cf06c5012c8bef7014",
   "schema_version": 1,
   "snapshot_file": "cmu-engineering-publications.parquet",
-  "snapshot_schema_version": 5,
-  "snapshot_sha256": "c9fca4ee3b9771b35b3aefc4f2d5fa06f518d57485d3952d95dfec132ac38c11",
+  "snapshot_schema_version": 6,
+  "snapshot_sha256": "0c36c5bcf5515663a21472641f8fba01c82e649c42657bab69ce95bb6f54a13e",
   "status": "success"
 }
