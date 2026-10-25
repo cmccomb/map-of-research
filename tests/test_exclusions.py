@@ -35,10 +35,22 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 773
+    assert len(exclusions) == 777
     assert sum(key[0] == "JbSQsXAAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "8AqWr_4AAAAJ" for key in exclusions) == 20
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
+    assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
+    assert all(
+        exclusions[("cAiedtsAAAAJ", f"cAiedtsAAAAJ:{suffix}")].reason_code
+        == "nonpublication"
+        for suffix in (
+            "e5wmG9Sq2KIC",
+            "TQgYirikUcIC",
+            "HDshCWvjkbEC",
+            "R3hNpaxXUhUC",
+        )
+    )
+    assert ("cAiedtsAAAAJ", "cAiedtsAAAAJ:qxL8FJ1GzNcC") not in exclusions
     assert (
         exclusions[("VzAGH3wAAAAJ", "VzAGH3wAAAAJ:ns9cj8rnVeAC")].reason_code
         == "nonpublication"
