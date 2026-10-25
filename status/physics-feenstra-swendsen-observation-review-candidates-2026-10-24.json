@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-25",
+  "note": "Feenstra patents 45 and 159 are genuine and retained; Feenstra row 204 and Swendsen rows 193, 198 and 200 moved to the exact proposed ledger. Swendsen rows 3 and 55 are distinct original and erratum. Other grouped leads remain; no producer change is applied here.",
+  "candidates": [],
+  "same_title_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row_groups": [
+        [
+          36,
+          295
+        ],
+        [
+          85,
+          349
+        ],
+        [
+          95,
+          351
+        ],
+        [
+          134,
+          401
+        ],
+        [
+          232,
+          305
+        ],
+        [
+          239,
+          420
+        ],
+        [
+          243,
+          397
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare sources before any deduplication."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row_groups": [
+        [
+          9,
+          31
+        ],
+        [
+          10,
+          134,
+          140
+        ],
+        [
+          148,
+          195
+        ],
+        [
+          177,
+          178
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare sources before any deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_rows": [
+        260,
+        297,
+        305,
+        366,
+        373,
+        385,
+        391,
+        402,
+        418,
+        419,
+        420,
+        421,
+        422
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_rows": [
+        178,
+        189,
+        197,
+        199
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "row_count": 26,
+      "capture_rows": [
+        276,
+        278,
+        294,
+        298,
+        299,
+        301,
+        306,
+        308,
+        309,
+        340,
+        341,
+        345,
+        346,
+        347,
+        348,
+        354,
+        355,
+        360,
+        363,
+        364,
+        369,
+        375,
+        377,
+        394,
+        398,
+        399
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "row_count": 4,
+      "capture_rows": [
+        164,
+        165,
+        168,
+        169
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 45,
+      "author_pub_id": "p1aFEDYAAAAJ:fFSKOagxvKUC",
+      "reason": "Retain as Randall Feenstra’s genuine US Patent 5,337,015; the published patent names him as an inventor. Type by published document number when carving the producer profile.",
+      "evidence_url": "https://patents.google.com/patent/US5337015"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 159,
+      "author_pub_id": "p1aFEDYAAAAJ:D03iK_w7-QYC",
+      "reason": "Retain as Randall Feenstra’s genuine US Patent 4,550,257; the published patent names him as an inventor. Type by published document number when carving the producer profile.",
+      "evidence_url": "https://patents.google.com/patent/US4550257A/en"
+    }
+  ]
+}

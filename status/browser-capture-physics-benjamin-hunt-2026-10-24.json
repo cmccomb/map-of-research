@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-benjaminhunt-e286d360",
+  "display_name": "Benjamin Hunt",
+  "scholar_profile_name": "Benjamin M. Hunt",
+  "scholar_id": "11EoZncAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/hunt.html",
+  "scholar_identity_basis": "Official CMU Scholars profile directly links this Scholar ID; CMU Physics faculty page confirms appointment, and profile name and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T22:43:16+00:00",
+  "captured_at_utc": "2026-10-24T22:43:34.556Z",
+  "publication_count": 95,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/physics-benjamin-hunt-2026-10-24.json",
+  "source_json_sha256": "86a289c18b286602ea6c24ea21ec98f5de4e848c5fea6a3c25b75ca926b127e2",
+  "source_html_path": "data/captures/physics-benjamin-hunt-2026-10-24.html",
+  "source_html_sha256": "b1edd814ad0889efee8d27821e0d2586a698b7c7f2dc8d70bb7a813609a4e4f3",
+  "cache_path": "data/authors/11EoZncAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  },
+  "scholar_id_source_url": "https://scholars.cmu.edu/578-benjamin-hunt"
+}

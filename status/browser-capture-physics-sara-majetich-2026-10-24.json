@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-saramajetich-69037290",
+  "display_name": "Sara Majetich",
+  "scholar_profile_name": "Sara Majetich",
+  "scholar_id": "FRlLpMYAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/majetich.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/4600-sara-majetich",
+  "scholar_identity_basis": "CMU Scholars page directly links this Scholar ID; official CMU Physics faculty page confirms role, and live Scholar name matched.",
+  "reserved_at_utc": "2026-10-24T23:20:59+00:00",
+  "captured_at_utc": "2026-10-24T23:21:25.091Z",
+  "publication_count": 271,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/physics-sara-majetich-2026-10-24.json",
+  "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+  "source_html_path": "data/captures/physics-sara-majetich-2026-10-24.html",
+  "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92",
+  "cache_path": "data/authors/FRlLpMYAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
