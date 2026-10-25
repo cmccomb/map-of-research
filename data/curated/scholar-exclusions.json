@@ -6736,6 +6736,166 @@
       "reason": "Undated, venue-less short-title copy of the 2003 Journal of Physical Chemistry B article. The CMU Yaron group bibliography maps this exact short title and author list to volume 107(22), pages 5133-5143; retain HMSZExQAAAAJ:R3hNpaxXUhUC (DOI 10.1021/jp0272769).",
       "evidence_url": "https://www.chem.cmu.edu/groups/yaron/pub.html",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "L0nXO5EAAAAJ",
+      "author_pub_id": "L0nXO5EAAAAJ:IWHjjKOFINEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Thieme identifies only Dirk Trauner and Christopher J. Arp as authors of this Synfacts commentary, not Anna M. Kietrys; her original ACS research article is retained.",
+      "evidence_url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0039-1691638.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:0KyAp5RtaNEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Royal Society of Chemistry identifies Williams, Martin, and Rovnyak as editors of the whole Volume 2; Gil authored a separate chapter, not the complete edited volume.",
+      "evidence_url": "https://books.rsc.org/books/edited-volume/995/chapter/793085/Front-Matter",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:z_wVstp3MssC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The University of Alcala credits this IEEE bioimpedance paper to Roberto Gil-Pita, a different researcher from CMU chemist Roberto R. Gil.",
+      "evidence_url": "https://portalinvestigacion.consorciomadrono.es/authors/43375.html?page=6&pageType=conference&sortBy=titleDesc",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:vRqMK49ujn8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Royal Society of Chemistry names Williams, Martin, and Rovnyak as editors of the entire volume; Roberto R. Gil is not a volume editor or author.",
+      "evidence_url": "https://books.rsc.org/books/edited-volume/995/chapter/793085/Front-Matter",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:M7yex6snE4oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Abbreviated second observation of the 2023 Wiley chapter with the same two authors and pages; retain complete row 137.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119806721.ch9",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:dTyEYWd-f8wC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "PMMA abbreviation duplicates the same 2018 Wiley article, authors, volume, and pages; retain complete row 70.",
+      "evidence_url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/mrc.4711",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:ipzZ9siozwsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated 2020 correction title repeats the publisher correction in row 155; retain the substantive 2018 article in row 54.",
+      "evidence_url": "https://www.nature.com/articles/s42004-020-0274-5",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:uc_IGeMz5qoC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher correction adds omitted receipt/acceptance dates to the separately retained 2018 research article; it is not a second research work.",
+      "evidence_url": "https://www.nature.com/articles/s42004-020-0274-5",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:TIZ-Mc8IlK0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-free diacritic variant of the same 2018 Journal of Natural Products paper; retain complete row 111.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acs.jnatprod.8b00162",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:tuHXwOkdijsC",
+      "reason_code": "nonpublication",
+      "reason": "Exact title is NSF instrumentation award 1726525 to Roberto Gil at Carnegie Mellon, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1726525.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "nonpublication",
+      "reason": "Captured title is the Springer chapter authors’ institutional affiliation; retain the actual 1996 chapter in row 149.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4613-0413-5_25",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:kuK5TVdYjLIC",
+      "reason_code": "nonpublication",
+      "reason": "Exact title is NSF research award 1111684 to Roberto Gil at Carnegie Mellon, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1111684.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:WA5NYHcadZ8C",
+      "reason_code": "nonpublication",
+      "reason": "CV section heading was misparsed as a paper with the volume and pages of Gil’s separately retained 2011 tartrazine article, row 38.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2011/cy/c0cy00070a",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:b1wdh0AR-JQC",
+      "reason_code": "nonpublication",
+      "reason": "Exact title is NSF instrumentation award 1039870 to Roberto Gil at Carnegie Mellon, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1039870.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:7T2F9Uy0os0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-free alternate author rendering of the same 2007 Phytochemistry article; retain complete row 95.",
+      "evidence_url": "https://doi.org/10.1016/j.phytochem.2007.01.004",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:EYYDruWGBe4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Venue-free author-name corruption of the 1996 Journal of Natural Products article; retain complete row 11.",
+      "evidence_url": "https://pubs.acs.org/doi/abs/10.1021/np960018g",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:_Qo2XoVZTnwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Typo variant of the same 1994 Planta Medica article with identical volume and pages; retain complete row 69.",
+      "evidence_url": "https://doi.org/10.1055/s-2006-959586",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:4fKUyHm3Qg0C",
+      "reason_code": "nonpublication",
+      "reason": "UNL identifies this exact title as an accredited 31-hour doctoral course, not an authored publication.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "nonpublication",
+      "reason": "Course approval and degree-credit text, not an authored publication; UNL confirms the associated accredited doctoral course, but the original CD Nº 1295 program was not recovered.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRtd8_QAAAAJ",
+      "author_pub_id": "FRtd8_QAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "nonpublication",
+      "reason": "Course-organizer heading, not an authored publication; UNL confirms the associated doctoral course, but the original program with this exact heading was not recovered.",
+      "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
