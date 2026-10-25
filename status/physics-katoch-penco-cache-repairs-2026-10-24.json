@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "target_branch": "automation/map-snapshot",
+  "raw_capture_and_receipt_unchanged": true,
+  "producer_exclusions_added": 0,
+  "capture_receipts": {
+    "xKrmD5IAAAAJ": "status/browser-capture-physics-jyoti-katoch-2026-10-24.json",
+    "O0NnwB0AAAAJ": "status/browser-capture-physics-riccardo-penco-2026-10-24.json"
+  },
+  "repairs": [
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 14,
+      "author_pub_id": "xKrmD5IAAAAJ:u-x6o8ySG0sC",
+      "cache_field": "title",
+      "captured_value": "Uncovering the dominant scatterer in graphene sheets on",
+      "repaired_value": "Uncovering the dominant scatterer in graphene sheets on SiO2",
+      "evidence_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.82.081417"
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 22,
+      "author_pub_id": "xKrmD5IAAAAJ:2osOgNQ5qMEC",
+      "cache_field": "title",
+      "captured_value": "Low Bias Electron Scattering in Structure-Identified Single Wall Carbon Nanotubes:<? format?> Role of Substrate Polar Phonons",
+      "repaired_value": "Low Bias Electron Scattering in Structure-Identified Single Wall Carbon Nanotubes: Role of Substrate Polar Phonons",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.146601"
+    },
+    {
+      "scholar_id": "xKrmD5IAAAAJ",
+      "capture_row": 40,
+      "author_pub_id": "xKrmD5IAAAAJ:WF5omc3nYNoC",
+      "cache_field": "author",
+      "captured_value": "J Katoch, D Le, S Singh, R Rao, TSRM Ishigami",
+      "repaired_value": "J Katoch, D Le, S Singh, R Rao, TS Rahman, M Ishigami",
+      "evidence_url": "https://api.crossref.org/works/10.1088%2F0953-8984%2F28%2F11%2F115301"
+    },
+    {
+      "scholar_id": "O0NnwB0AAAAJ",
+      "capture_row": 42,
+      "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
+      "cache_field": "title",
+      "captured_value": "Effective description of ajar systems with a symmetry",
+      "raw_capture_value": "Effective description of ajar systems with a  symmetry",
+      "repaired_value": "Effective description of ajar systems with a U(1) symmetry",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/mrzp-zh4v"
+    }
+  ]
+}
