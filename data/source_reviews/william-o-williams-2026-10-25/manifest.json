@@ -1,0 +1,129 @@
+{
+  "review_id": "william-o-williams-2026-10-25",
+  "captured_at_utc": "2026-10-25T13:22:49Z",
+  "producer_base_commit": "a68fbf0",
+  "status": "held_source_review",
+  "person_id": "person-williamowilliams-d43b120b",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/williams.html",
+  "official_department": "Mathematical Sciences",
+  "official_role": "Professor Emeritus",
+  "verified_scholar_id": null,
+  "lifetime_complete": false,
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "counts": {
+    "official_selected_citations": 8,
+    "researcher_pdf_files": 8,
+    "openalex_discovery_rows": 60,
+    "crossref_deposits_for_openalex_rows": 57,
+    "kilthub_technical_reports": 6,
+    "rice_masters_theses": 1,
+    "held_candidate_rows": 65
+  },
+  "files": {
+    "author-papers-index.html.gz": {
+      "sha256": "2a295298cb88de1547c4189954475996e5751654ea9a9f3f3fea4db81865e2ff",
+      "bytes": 596,
+      "kind": "researcher_pdf_index",
+      "source": "https://www.math.cmu.edu/~wow/papers/"
+    },
+    "author-pdf-index.json": {
+      "sha256": "aa62b56269a8443764669c38f5e812670009ae78b35a25ec724e213729415aaa",
+      "bytes": 3412,
+      "kind": "derived_pdf_first_pages_and_hashes",
+      "source": "author-papers-index.html"
+    },
+    "author-profile.html.gz": {
+      "sha256": "1e33f3306b2d456eee1744dd9d6940a255d22a09f141574ff05bbefba32262ba",
+      "bytes": 2857,
+      "kind": "researcher_profile",
+      "source": "https://www.math.cmu.edu/~wow/williams.html"
+    },
+    "candidate-crosswalk-65.csv": {
+      "sha256": "bcbca5c3cbec4be214f5b98715f371ef3f57f2efa446d9ce8a5931fb9fa6b121",
+      "bytes": 18751,
+      "kind": "derived_held_candidates",
+      "source": "multiple inventory sources"
+    },
+    "cmu-profile.html.gz": {
+      "sha256": "bdb7f44dd9b578d347045b0879dba9b53a58d7c1de2c8b790dcd93532e40dd93",
+      "bytes": 7664,
+      "kind": "official_profile",
+      "source": "https://www.cmu.edu/math/people/faculty/williams.html"
+    },
+    "cmu-selected-8.json": {
+      "sha256": "968e07ea58316658a8cae1d6f6382970a93857b190fbb1134ed899f893bdf110",
+      "bytes": 2024,
+      "kind": "derived_cmu_citations",
+      "source": "cmu-profile.html"
+    },
+    "crossref-57.json.gz": {
+      "sha256": "d64298b4267eeb4c39b87e73f8e36b98e509078163584c72a69ad9f2a1140c02",
+      "bytes": 52677,
+      "kind": "publisher_deposited_metadata",
+      "source": "https://api.crossref.org/works/{doi}"
+    },
+    "crossref-marching.json": {
+      "sha256": "2ed86d7597ccc4c21940b6ab3dd1c0414e9d70397fc5a634f423d615ef57fcb2",
+      "bytes": 7093,
+      "kind": "publisher_deposited_metadata",
+      "source": "https://api.crossref.org/works/10.2140/jomms.2007.2.857"
+    },
+    "datacite-cauchy.json": {
+      "sha256": "6308fac0d10de2ca414665ed32bd563814bdcad56aeabab26da6971b04e9281a",
+      "bytes": 4903,
+      "kind": "repository_deposited_metadata",
+      "source": "https://api.datacite.org/dois/10.1184%2Fr1%2F6476600"
+    },
+    "kilthub-crosswalk-6.csv": {
+      "sha256": "5140c2b437bdc6ecae91a70d5933e05022e947a1d60b07da4fc99309a216af13",
+      "bytes": 1766,
+      "kind": "derived_repository_versions",
+      "source": "kilthub-records.json"
+    },
+    "kilthub-records.json": {
+      "sha256": "fe2da9662dafc7bb16efac5722a25c6b4a10b8f3a372761f9e9501e18613b17b",
+      "bytes": 19093,
+      "kind": "institutional_repository_metadata",
+      "source": "https://api.figshare.com/v2/articles/{id}"
+    },
+    "kilthub-search.json": {
+      "sha256": "ee853f2d153e62af20e18fc0f13fadd1cdf706bfa92458a064e4b19bbb8bc05b",
+      "bytes": 5474,
+      "kind": "institutional_repository_search",
+      "source": "https://api.figshare.com/v2/articles/search"
+    },
+    "openalex-author.json": {
+      "sha256": "4a6e8899086bf4199dd38189a629bdac57d1152f335559c5bebd46ebb10fd090",
+      "bytes": 9055,
+      "kind": "discovery_author",
+      "source": "https://api.openalex.org/authors/A5111526463"
+    },
+    "openalex-works.json.gz": {
+      "sha256": "2281eeb26281934c4ca9912337c394f7b253d5ef4688d3cb6b17dc4bb28e3c11",
+      "bytes": 76107,
+      "kind": "discovery_works",
+      "source": "https://api.openalex.org/works?filter=author.id:A5111526463&per-page=200"
+    },
+    "rice-ms-thesis-item.json": {
+      "sha256": "dd097f1faab0995d09ba31cf7d0c5f17d9b4324d39ad6934bbd7db30b13327bb",
+      "bytes": 7716,
+      "kind": "institutional_thesis_metadata",
+      "source": "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e"
+    },
+    "rice-thesis-pdf-index.json": {
+      "sha256": "b76cc6115da445dd9fd7f7bc57cea5146c66ca02ff25c2b12f4a6cac3a1b5b81",
+      "bytes": 384,
+      "kind": "derived_thesis_first_page_and_hash",
+      "source": "rice-ms-thesis-item.json"
+    }
+  },
+  "collection_notes": [
+    "The 65 candidate rows are source manifestations, not 65 distinct works or a complete career bibliography.",
+    "OpenAlex is a discovery index; Google Scholar remains the project ground truth when an exact researcher account exists. None is verified here.",
+    "The CMU profile explicitly labels its eight items Select Publications, not a complete bibliography.",
+    "Two book-review deposits include reviewed-book creators in the author field; none of the review rows can create collaboration edges.",
+    "No raw PDF content is committed; hashes and inspected first-page facts are retained."
+  ]
+}

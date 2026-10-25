@@ -37,6 +37,8 @@ jobs:
         run: |
           ruff format --check .
           ruff check .
+      - name: Validate held Williams source review
+        run: python scripts/validate_williams_source_review.py
       - name: Validate the canonical registry
         run: map-collect --dry-run --status-file /tmp/map-collection-plan.json
       - name: Require evidenced primary homes for included Scholar profiles
