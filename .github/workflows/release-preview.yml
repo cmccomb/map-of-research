@@ -66,6 +66,7 @@ jobs:
           ref: ${{ inputs.snapshot_commit }}
           path: snapshot
           persist-credentials: false
+          fetch-depth: 0
           sparse-checkout: |
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json

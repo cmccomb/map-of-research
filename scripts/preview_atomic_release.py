@@ -41,6 +41,66 @@ def _require_clean_tracked_files(path: Path) -> None:
     subprocess.run(["git", "-C", str(path), "diff", "--quiet", "HEAD"], check=True)
 
 
+def _committed_file_bytes(checkout: Path, commit: str, relative_path: str) -> bytes:
+    result = subprocess.run(
+        ["git", "-C", str(checkout), "show", f"{commit}:{relative_path}"],
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode:
+        raise ValueError(
+            f"{relative_path} is missing from commit {commit} in {checkout}"
+        )
+    return result.stdout
+
+
+def _require_receipt_lineage(
+    snapshot: Path,
+    receipt_checkout: Path,
+    *,
+    snapshot_commit: str,
+    status_commit: str,
+) -> bytes:
+    relative_path = "status/last-successful-upload.json"
+    receipt_bytes = _committed_file_bytes(
+        receipt_checkout, status_commit, relative_path
+    )
+    snapshot_bytes = _committed_file_bytes(snapshot, snapshot_commit, relative_path)
+    if (receipt_checkout / relative_path).read_bytes() != receipt_bytes:
+        raise ValueError(
+            "Receipt checkout differs from its committed successful receipt"
+        )
+    if (snapshot / relative_path).read_bytes() != snapshot_bytes:
+        raise ValueError(
+            "Snapshot checkout differs from its committed successful receipt"
+        )
+    if snapshot_bytes != receipt_bytes:
+        raise ValueError(
+            "Snapshot successful receipt differs from the receipt checkout"
+        )
+    ancestry = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(snapshot),
+            "merge-base",
+            "--is-ancestor",
+            status_commit,
+            snapshot_commit,
+        ],
+        capture_output=True,
+        check=False,
+    )
+    if ancestry.returncode == 1:
+        raise ValueError("Receipt commit is not an ancestor of the snapshot commit")
+    if ancestry.returncode:
+        raise RuntimeError(
+            "Cannot verify receipt ancestry in snapshot checkout: "
+            + ancestry.stderr.decode("utf-8", errors="replace").strip()
+        )
+    return receipt_bytes
+
+
 def _save_receipt(path: Path, receipt: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(".json.tmp")
@@ -154,6 +214,12 @@ def main() -> int:
         _require_clean_tracked_files(producer)
         _require_clean_tracked_files(snapshot)
         _require_clean_tracked_files(receipt_checkout)
+        baseline_bytes = _require_receipt_lineage(
+            snapshot,
+            receipt_checkout,
+            snapshot_commit=args.snapshot_commit,
+            status_commit=args.status_commit,
+        )
         raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
         manifest = (
             snapshot / "snapshots/cmu-engineering-publications.parquet.manifest.json"
@@ -163,10 +229,7 @@ def main() -> int:
         manifest_data = json.loads(manifest.read_text(encoding="utf-8"))
         if manifest_data["snapshot_sha256"] != args.snapshot_sha256:
             raise ValueError("Snapshot manifest differs from the requested SHA-256")
-        baseline_path = receipt_checkout / "status/last-successful-upload.json"
-        if not baseline_path.is_file():
-            baseline_path = receipt_checkout / "status/last-upload.json"
-        baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
+        baseline = json.loads(baseline_bytes)
         if (
             baseline.get("status") != "success"
             or baseline.get("artifact_commit") != args.prior_revision
