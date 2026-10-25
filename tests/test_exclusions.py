@@ -189,7 +189,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "6pPZKd0AAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "grTfBeAAAAAJ" for key in exclusions) == 16
     assert sum(key[0] == "lKAvvmoAAAAJ" for key in exclusions) == 2
-    assert sum(key[0] == "hfFKwRcAAAAJ" for key in exclusions) == 42
+    assert sum(key[0] == "hfFKwRcAAAAJ" for key in exclusions) == 43
     assert {decision.reason_code for decision in exclusions.values()} == {
         "nonpublication",
         "false_profile_attribution",
@@ -745,6 +745,7 @@ def test_bernhard_review_excludes_only_exact_supported_rows() -> None:
             ("XoXfffV-tXoC", "corrupted_duplicate"),
             ("wbdj-CoPYUoC", "false_profile_attribution"),
             ("J-pR_7NvFogC", "false_profile_attribution"),
+            ("XiSMed-E-HIC", "false_profile_attribution"),
         )
     }
     actual = {
