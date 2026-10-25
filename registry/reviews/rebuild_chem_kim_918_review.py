@@ -1811,6 +1811,30 @@ OTHER_PRIMARY_ID_GUARDS[537] = "bC4aq-4AAAAJ:PR6Y55bgFSsC"
 HYOJOON_SOLE_AUTHOR_VENUE = "Chemical physics letters 436 (1-3), 111-115, 2007"
 HYOJOON_SOLE_AUTHOR_AUTHORS = "H Kim"
 
+HYUN_JUNG_ORCID_PRIMARY = {
+    24: (
+        "Second-line chemotherapy versus supportive cancer treatment in "
+        "advanced gastric cancer: a meta-analysis",
+        2013,
+        "Hyun Jung Kim",
+        "10.1093/annonc/mdt351",
+        "https://pub.orcid.org/v3.0/0000-0003-2018-2385/works",
+        "Hyun Jung Kim ORCID exact DOI and original-journal affiliation",
+        "The Annals of Oncology original article assigns its H. J. Kim author "
+        "to the Department of Preventive Medicine, Korea University College "
+        "of Medicine. ORCID 0000-0003-2018-2385 names Hyun Jung Kim and "
+        "lists this exact title, 2013 journal article, and DOI; the ORCID "
+        "record also gives Korea University employment and education in "
+        "Preventive Medicine. This is not CMU Chemistry professor Hyung J. Kim.",
+    )
+}
+OTHER_PRIMARY.update(HYUN_JUNG_ORCID_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS[24] = "bC4aq-4AAAAJ:jRIwE-1ttnoC"
+HYUN_JUNG_ORCID_VENUE = "Annals of Oncology 24 (11), 2850-2854, 2013"
+HYUN_JUNG_ORCID_AUTHORS = (
+    "HS Kim, HJ Kim, SY Kim, TY Kim, KW Lee, SK Baek, MH Ryu, BH Nam, ..."
+)
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3444,6 +3468,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     )
                 )
                 or (
+                    index == 24
+                    and (
+                        row["venue"] != HYUN_JUNG_ORCID_VENUE
+                        or row["authors"] != HYUN_JUNG_ORCID_AUTHORS
+                    )
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3795,17 +3826,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 125,
+        "proposed_other_person_primary_work": 126,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 312,
+        "unresolved_attribution_hold": 311,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 472 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 473 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
