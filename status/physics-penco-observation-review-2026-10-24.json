@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_no_unresolved_candidates",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "O0NnwB0AAAAJ",
+  "original_candidate_count": 2,
+  "unresolved_candidate_count": 0,
+  "candidates": [],
+  "reviewed_retained": [
+    {
+      "capture_row": 42,
+      "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
+      "reason": "The captured title lost the U(1) mathematical glyph. APS confirms the Akyuz and Penco Physical Review D 112, L011901 article; retain the raw observed row and correct display metadata separately if needed.",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/mrzp-zh4v"
+    },
+    {
+      "capture_row": 46,
+      "author_pub_id": "O0NnwB0AAAAJ:WF5omc3nYNoC",
+      "reason": "The blank captured venue corresponds to Riccardo Penco's 2012 Syracuse University Physics dissertation. It is a genuine authored work; retain the raw observed row.",
+      "evidence_url": "https://surface.syr.edu/phy_etd/123/"
+    }
+  ],
+  "note": "These two entries are the Penco-only filter of the preliminary concerns in draft source PR #80. Neither warrants an exact exclusion. The raw capture and normalized cache remain unchanged."
+}
