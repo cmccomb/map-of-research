@@ -296,7 +296,7 @@ def test_math_center_name_and_author_header_artifacts_are_exactly_excluded(
                 ),
                 "citation": "ESAIM: M2AN 33(4), 837-852 (1999)",
                 "citation_count": 0,
-                "source_url": "https://archive.numdam.org/item/M2AN_1999__33_4_837_0/",
+                "source_url": "https://www.numdam.org/item/M2AN_1999__33_4_837_0/",
                 "source_record_json": "{}",
                 "fetched_at_utc": "2026-10-25T00:00:00+00:00",
                 "embedding": [0.0, 1.0],
