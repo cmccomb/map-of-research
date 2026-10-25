@@ -1,0 +1,13 @@
+# Carrie McDonough: three source-backed metadata repairs
+
+The complete Google Scholar capture for Carrie McDonough (`Xq5HrPYAAAAJ`) contains 55 rows. This review changes effective metadata for three exact rows while preserving the raw capture, Scholar author strings, and all other records. It stacks on the publisher-verified article correction in draft #301 and SETAC 46th abstract correction in draft #304.
+
+| Scholar citation ID | Source and decision |
+| --- | --- |
+| `Xq5HrPYAAAAJ:3s1wT3WcHBgC` | The Google Scholar row identifies the SETAC North America 42nd Annual Meeting, and [SETAC's official abstract-book listing](https://www.setac.org/resource/setac-na-virtual-2021-abstract-book.html) dates that book November 14, 2021. Set effective year to 2021 and replace the placeholder venue page 0 with `SETAC North America 42nd Annual Meeting Abstract Book, 2021`. The official book body requires login, so this correction makes no claim about a page, abstract number, or author byline from it. Scholar's `Per-and` title, author string, and raw record remain unaltered. This Scholar observation is a conference abstract, distinct from the later journal paper. |
+| `Xq5HrPYAAAAJ:YFjsv_pBGBYC` | The [journal version of record](https://academic.oup.com/etc/article/43/11/2274/7896767) gives volume 43, issue 11, pages 2274–2284 for the 2024 Dukes and McDonough article, DOI `10.1002/etc.5939`. Correct only the effective venue; title and year remain. |
+| `Xq5HrPYAAAAJ:ULOm3_A8WrAC` | [Publisher-deposited DOI metadata](https://api.crossref.org/works/10.1097%2F01.EE9.0000610252.31693.5f) identifies this 2019 six-author McDonough record as *Environmental Epidemiology* volume 3, Supplement 1, p. 382. Correct only the effective venue and treat it as a one-page supplement abstract. |
+
+A read-only preview against frozen source snapshot SHA-256 `5b940614b2238c124bc194e944da277ee2221df27a11eedca6693af020ee86fb` applied the two parent corrections in both arms and these three only in the new arm. All 55 raw Scholar observations, 55 authorships, and 55 pre-region eligible works remain. Only the undated SETAC 42nd row changes work ID, from `work-d7f12f83da3aeef0e881f17b542462debd13205b855cda45ff01c55b93146dbd` to `work-f0d45935aa2d1eda45973600069830898407fc8e9ced04b9b5f67059c42a01a4`. The old work is visible at immutable Hub revision `bb88ddf0`. The two venue-only corrections preserve their work IDs. Local receipt: `work/chem-mcdonough-setac42-venue-preview-20261025.json`.
+
+This draft does not release a new dataset. A future publisher must treat each changed old/new work ID as one reviewed replacement and prove that unrelated visible points and layout remain stable before upload.
