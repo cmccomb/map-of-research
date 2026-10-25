@@ -12,9 +12,9 @@ primary appointment.
 
 | Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | First-listed display tie-break | Unresolved |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,480 | 1,098 | 152 | 172 | 3 | 17 | 2 | 36 |
+| Included roster | 1,480 | 1,098 | 152 | 173 | 3 | 17 | 4 | 33 |
 | Excluded-only roster | 521 | 0 | 0 | 0 | 0 | 0 | 0 | 521 |
-| Entire registry | 2,001 | 1,098 | 152 | 172 | 3 | 17 | 2 | 557 |
+| Entire registry | 2,001 | 1,098 | 152 | 173 | 3 | 17 | 4 | 554 |
 
 The included count incorporates the later correction of Itamar Vigdorovich's
 future Fall 2027 Math appointment, which remains excluded pending its start.
@@ -32,7 +32,7 @@ schools, Tepper academic areas, and broad school fallbacks. The legacy
 `primary_department_id` is populated only for actual departments.
 
 `display_tie_break_first_listed` is an explicitly reviewed visual choice for
-two joint appointments whose official CMU titles list both departments. The
+joint appointments whose official CMU titles list multiple academic units. The
 [Philosophy profile for Jeremy Avigad](https://www.cmu.edu/dietrich/philosophy/people/faculty/jeremy-avigad.html)
 titles him “Professor of Philosophy and Mathematical Sciences,” so the map
 displays Philosophy. The
@@ -51,8 +51,22 @@ the chosen display rule remains first-listed department. Sekerka's
 [CMU-hosted CV](https://sekerkaweb.phys.cmu.edu/SekerkaCV2015.html)
 documents the Physics and Mathematics appointments but has no degree-coded
 advisee list, so the same title-order display rule supplies his visual home.
+[Jenelle Feather's Psychology profile](https://www.cmu.edu/dietrich/psychology/directory/core-training-faculty/feather-jenelle.html)
+titles her Assistant Professor of Psychology and the Neuroscience Institute;
+Psychology is the labeled display tie-break, with both memberships retained.
+[Mark Kamlet's SDS profile](https://www.cmu.edu/dietrich/sds/people/faculty/mark-kamlet.html)
+and [Heinz profile](https://www.heinz.cmu.edu/faculty-research/profiles/kamlet-mark)
+both list Social and Decision Sciences before Heinz in their joint-appointment
+description. The map uses SDS as a labeled visual choice while retaining his
+CMIST, Heinz, and SDS memberships; his current CMIST graduate committee role
+does not establish an institutional primary academic appointment.
+[Paul Fischbeck's Engineering profile](https://engineering.cmu.edu/directory/bios/fischbeck-paul.html)
+lists Engineering and Public Policy before Social and Decision Sciences, so
+the map uses EPP as a reviewed display choice. The SDS course catalog lists
+SDS first, making a consistent first-listed tie-break unavailable. His two
+emeritus appointments remain included.
 
-The ledger records all 36 included people without a supported single choice.
+The ledger records all 33 included people without a supported single choice.
 Examples with specific evidence gaps are:
 
 | Person | Included units | Remaining evidence gap |
