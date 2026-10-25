@@ -1,14 +1,14 @@
 {
-  "artifact_commit": "2b9c412267a39c431018cc78cfd7c8dacddd176e",
+  "artifact_commit": "ab963671dfbe0cc9fa30bb3de6a7de514f852079",
   "attribution_confirmed": 437,
   "attribution_held": 53,
   "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
-  "authorships": 48837,
+  "authorships": 49069,
   "dataset_commits": {
-    "authorships": "5be5c3899790f310236980c49bca3a569a5e9662",
-    "people": "8ce876807f2efdf89c8da172e66c69aced20c50d",
-    "profile_publications": "60599938c664da260c49ac6d25f438d425fd3c77",
-    "works": "24c3a1612fa7516e66a372c953faf9b0d46db5cc"
+    "authorships": "d98e61822d55214db9e47b8417fa1956dc93d0ad",
+    "people": "051cbe157c696a4050441a9ac531b4d87e1a3fd3",
+    "profile_publications": "bd83f391b93e0c29e31efed2a1fb47f2ab37b864",
+    "works": "212ea80de384d85aa717e0f89b3376fe4b578d42"
   },
   "dataset_configs": [
     "people",
@@ -19,25 +19,25 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 2383,
-  "finished_at_utc": "2026-10-25T04:53:25.208255+00:00",
+  "excluded_works": 2362,
+  "finished_at_utc": "2026-10-25T05:29:21.379154+00:00",
   "held_observation_rows": 0,
   "held_profile_ids": [],
   "held_source_observation_rows": 0,
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 42161,
+  "mapped_works": 42400,
   "math_coverage": {
-    "complete_scholar_profiles": 29,
-    "complete_scholar_rows": 3834,
+    "complete_scholar_profiles": 36,
+    "complete_scholar_rows": 4080,
     "math_people": 65,
-    "unresolved_scholar_id_people": 36
+    "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 647,
+  "new_embedding_count": 241,
   "people": 2001,
-  "profile_count": 298,
-  "profile_publications": 50893,
+  "profile_count": 305,
+  "profile_publications": 51139,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -51,28 +51,28 @@
     }
   ],
   "profile_release_manifest_sha256": "3c1fd70d2cf3e4026338af47dd50666b5dbad185b901fba5daf9478e6c41f97a",
-  "raw_snapshot_observations": 50893,
-  "raw_snapshot_profiles": 298,
-  "raw_snapshot_sha256": "0c36c5bcf5515663a21472641f8fba01c82e649c42657bab69ce95bb6f54a13e",
+  "raw_snapshot_observations": 51139,
+  "raw_snapshot_profiles": 305,
+  "raw_snapshot_sha256": "7333211cbfdcb43e13dc3de044b5171b7c9b84300731bae9a09b82ebdd8b336f",
   "region_audit_version": "low-information-semantic-region-v2",
   "reviewed_contexts": 12,
   "reviewed_contexts_sha256": "00962fc23909048da216ae2af953361174124fc086b02935162f9ccf54737450",
-  "reviewed_doi_aliases": 11,
-  "reviewed_doi_aliases_sha256": "97890a3280f893042806fb4303d7938ddf5faa82c4e3630f97809228b6399abd",
-  "reviewed_exclusions": 1017,
-  "reviewed_exclusions_sha256": "674bf85b92b5ec15ae215a9d4b9a07029f8d7986497c8171b23b448945b9ec2a",
-  "reviewed_metadata_corrections": 7,
-  "reviewed_metadata_corrections_sha256": "883a1802383542c0072687c40ec63a2ef21d9e67382b2997cad32e5d5761813d",
+  "reviewed_doi_aliases": 46,
+  "reviewed_doi_aliases_sha256": "559b9e0eb0ce8815818ae20bf19c4d1f7d5373860aea6f71d51ab9655082329d",
+  "reviewed_exclusions": 1031,
+  "reviewed_exclusions_sha256": "620dd70eb8eb80f2956a82bbd1596aef2696d6d4e1611c56f5e31bc065e41b92",
+  "reviewed_metadata_corrections": 15,
+  "reviewed_metadata_corrections_sha256": "9469bbe2a20b014e3c6994c360ffb3df29f13f3c5b50b63890e612ad360bc68f",
   "schema_version": 2,
   "scholar_coverage": {
-    "complete_profiles": 12,
+    "complete_profiles": 19,
     "legacy_profiles": 286,
     "reconciled_prior_ids": 12
   },
-  "started_at_utc": "2026-10-25T04:44:17.557161+00:00",
+  "started_at_utc": "2026-10-25T05:19:57.327128+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "validated_metadata_corrections": 7,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40162856989",
-  "works": 46862
+  "validated_metadata_corrections": 15,
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40165016017",
+  "works": 47080
 }
