@@ -1332,6 +1332,174 @@ CMU_PRIMARY = {
     ),
 }
 
+
+# Exact source checks for the last 20 CMU ORCID title/year signals.
+CMU_REMAINING_TWENTY_PRIMARY = {
+    27: (
+        "A theoretical model for SN1 ionic dissociation in solution. 1. "
+        "Activation free energetics and transition-state structure",
+        1992,
+        "https://api.crossref.org/works/10.1021%2Fja00052a055",
+        "Colorado Hynes CV item 122 names full Hyung J. Kim; ACS publisher DOI, "
+        "JACS 114:10508-10528, and CMU faculty Colorado appointment agree",
+    ),
+    35: (
+        "Free energies of electron transfer",
+        1992,
+        "https://api.crossref.org/works/10.1021%2Fj100183a047",
+        "Colorado Hynes CV item 127 names full Hyung J. Kim; ACS publisher DOI "
+        "and J. Phys. Chem. 96:1748-1753 agree",
+    ),
+    55: (
+        "Dynamics of twisted intramolecular charge transfer complexes in polar "
+        "solvents",
+        1994,
+        "https://api.crossref.org/works/10.1016%2F0167-7322%2894%2900744-6",
+        "Colorado Hynes CV item 145 names full Hyung J. Kim; Elsevier publisher "
+        "DOI and J. Mol. Liquids 60:161-200 agree",
+    ),
+    83: (
+        "Role of solvent electronic polarization in electron-transfer processes",
+        1990,
+        "https://api.crossref.org/works/10.1021%2Fj100370a004",
+        "Colorado Hynes CV item 109 names full Hyung J. Kim; ACS publisher DOI "
+        "and J. Phys. Chem. 94:2736-2740 agree",
+    ),
+    108: (
+        "A theoretical model for SN1 ionic dissociations in solution. 3. Analysis"
+        " of tert-butyl halides",
+        1993,
+        "https://api.crossref.org/works/10.1021%2Fja00071a038",
+        "Colorado Hynes CV item 139 names full Hyung J. Kim; ACS publisher DOI "
+        "and JACS 115:8248-8262 agree",
+    ),
+    112: (
+        "A theoretical model for SN1 ionic dissociation in solution. 2. "
+        "Nonequilibrium solvation reaction path and reaction rate",
+        1992,
+        "https://api.crossref.org/works/10.1021%2Fja00052a056",
+        "Colorado Hynes CV item 123 names full Hyung J. Kim; ACS publisher DOI "
+        "and JACS 114:10528-10537 agree",
+    ),
+    119: (
+        "Role of solute electronic polarizability in solvation dynamics",
+        1995,
+        "https://api.crossref.org/works/10.1021%2Fj100025a003",
+        "ACS publisher DOI names full Hyung J. Kim with Bursulaya and Zichi; the "
+        "same exact trio has CMU Chemistry affiliation in confirmed 1996 DOI "
+        "10.1021/jp952286d",
+    ),
+    133: (
+        "Understanding the mechanism of CO2 capture by 1,3 di-substituted "
+        "imidazolium acetate based ionic liquids",
+        2016,
+        "https://api.crossref.org/works/10.1039%2Fc5cp05713b",
+        "RSC publisher DOI assigns Hyung Kim to CMU Chemistry with CMU coauthors "
+        "Yan and Dhumal; official CMU ORCID imports the exact DOI; middle initial"
+        " omitted in article metadata",
+    ),
+    140: (
+        "Perfusion analysis using dynamic arterial spin labeling (DASL)",
+        1999,
+        "https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291522-2594%2819990"
+        "2%2941%3A2%3C299%3A%3AAID-MRM13%3E3.0.CO%3B2-R",
+        "Original Wiley article names full Hyung J. Kim at CMU Chemistry, 1999 "
+        "pages 299-308; publisher canonical DOI corrects a malformed ORCID "
+        "variant",
+    ),
+    151: (
+        "Twisted intramolecular charge transfer dynamics in polar solvents",
+        1994,
+        "https://api.crossref.org/works/10.1016%2F1010-6030%2894%2902018-3",
+        "Colorado Hynes CV item 146 names full Hyung J. Kim; Elsevier publisher "
+        "DOI and J. Photochem. Photobiol. A 82:67-79 agree",
+    ),
+    181: (
+        "A simple basis set approach to solute electronic structure and free "
+        "energy in solution",
+        1993,
+        "https://api.crossref.org/works/10.1021%2Fj100111a001",
+        "Colorado Hynes CV item 136 names full Hyung J. Kim; ACS original DOI "
+        "establishes pages 1723-1728, correcting CV last-page typo",
+    ),
+    185: (
+        "Inducing coherent oscillations in the electron transfer dynamics of a "
+        "strongly dissipative system with pulsed monochromatic light",
+        1995,
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3649",
+        "Original APS article assigns H. J. Kim to CMU Chemistry; official CMU "
+        "ORCID imports exact DOI, PRL 75:3649-3652",
+    ),
+    211: (
+        "Influence of methyl and propyl groups on the vibrational spectra of two "
+        "imidazolium ionic liquids and their non-ionic precursors",
+        2017,
+        "https://scholarscommons.fgcu.edu/esploro/outputs/journalArticle/Influence-o"
+        "f-methyl-and-propyl-groups/99383431964006570",
+        "Publisher DOI names full Hyung J. Kim; FGCU coauthor institutional "
+        "record assigns him to CMU Chemistry at same exact DOI and pages",
+    ),
+    228: (
+        "Smoluchowski fluctuation theory of dielectric relaxation",
+        1991,
+        "https://api.crossref.org/works/10.1063%2F1.460002",
+        "AIP publisher-deposited full Hyung J. Kim at SUNY Stony Brook, exact "
+        "DOI/pages; CMU biography confirms his Stony Brook chemistry PhD; CMU "
+        "ORCID imports exact work",
+    ),
+    312: (
+        "Synthesis, conductivity, and vibrational spectroscopy of "
+        "tetraphenylphosphonium bis (trifluoromethanesulfonyl) imide",
+        2017,
+        "https://scholarscommons.fgcu.edu/esploro/outputs/journalArticle/Synthesis-c"
+        "onductivity-and-vibrational-spectroscopy-of/99383432059606570",
+        "Publisher DOI names full Hyung J. Kim; FGCU coauthor institutional "
+        "record assigns KIAS, his documented concurrent appointment; duplicate "
+        "Scholar row 797 already excluded",
+    ),
+    343: (
+        "Solute electronic structure and solvation in chemical reactions in solution",
+        1993,
+        "https://api.crossref.org/works/10.1016%2F0167-7322%2893%2980047-y",
+        "Colorado Hynes CV item 134 names full Hyung J. Kim; Elsevier publisher "
+        "DOI and J. Mol. Liquids 57:53-73 agree",
+    ),
+    470: (
+        "Equilibrium and nonequilibrium solvation and solute electronic structure",
+        1990,
+        "https://api.crossref.org/works/10.1002%2Fqua.560382480",
+        "Colorado Hynes CV item 115 and Wiley publisher DOI name full Hyung J. "
+        "Kim; International Journal of Quantum Chemistry 38(S24):821-833 is "
+        "distinct from JCP series",
+    ),
+    663: (
+        "Smoluchowski fluctuation theory of ion transport in solutions",
+        1988,
+        "https://api.crossref.org/works/10.1063%2F1.454979",
+        "AIP publisher-deposited full Hyung J. Kim at SUNY Stony Brook, exact "
+        "DOI/pages in 1988; CMU biography confirms his Stony Brook chemistry PhD "
+        "that year; CMU ORCID imports exact work",
+    ),
+    712: (
+        "Computational Study of Structure, Dynamics and Spectroscopy of Ionic Liquids",
+        2014,
+        "https://api.crossref.org/works/10.1149%2F06404.0119ecst",
+        "ECS publisher DOI names full Hyung J. Kim separately from Hyunjin Kim, "
+        "with known CMU coauthors Dhumal and Shim; ECS meeting contents and CMU "
+        "ORCID corroborate",
+    ),
+    729: (
+        "Deconvolution of conformational equilibria in methimazolium-based ionic "
+        "liquid ion pair: Infrared spectroscopic and computational study",
+        2018,
+        "https://scholarscommons.fgcu.edu/esploro/outputs/journalArticle/Deconvoluti"
+        "on-of-conformational-equilibria-in-methimazolium-based/99383432060606570",
+        "Publisher DOI names full Hyung J. Kim; FGCU coauthor institutional "
+        "record assigns him to CMU Chemistry at same exact DOI and pages",
+    ),
+}
+CMU_PRIMARY.update(CMU_REMAINING_TWENTY_PRIMARY)
+
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
     13: "bC4aq-4AAAAJ:f2IySw72cVMC",
@@ -1420,6 +1588,31 @@ CMU_PRIMARY_ID_GUARDS = {
     383: "bC4aq-4AAAAJ:nb7KW1ujOQ8C",
 }
 
+CMU_PRIMARY_ID_GUARDS.update(
+    {
+        27: "bC4aq-4AAAAJ:9yKSN-GCB0IC",
+        35: "bC4aq-4AAAAJ:2osOgNQ5qMEC",
+        55: "bC4aq-4AAAAJ:WF5omc3nYNoC",
+        83: "bC4aq-4AAAAJ:zYLM7Y9cAGgC",
+        108: "bC4aq-4AAAAJ:ufrVoPGSRksC",
+        112: "bC4aq-4AAAAJ:YsMSGLbcyi4C",
+        119: "bC4aq-4AAAAJ:Se3iqnhoufwC",
+        133: "bC4aq-4AAAAJ:xtRiw3GOFMkC",
+        140: "bC4aq-4AAAAJ:J_g5lzvAfSwC",
+        151: "bC4aq-4AAAAJ:8k81kl-MbHgC",
+        181: "bC4aq-4AAAAJ:UebtZRa9Y70C",
+        185: "bC4aq-4AAAAJ:MXK_kJrjxJIC",
+        211: "bC4aq-4AAAAJ:1sJd4Hv_s6UC",
+        228: "bC4aq-4AAAAJ:KlAtU1dfN6UC",
+        312: "bC4aq-4AAAAJ:738O_yMBCRsC",
+        343: "bC4aq-4AAAAJ:-f6ydRqryjwC",
+        470: "bC4aq-4AAAAJ:TFP_iSt0sucC",
+        663: "bC4aq-4AAAAJ:a0OBvERweLwC",
+        712: "bC4aq-4AAAAJ:NaGl4SEjCO4C",
+        729: "bC4aq-4AAAAJ:W5xh706n7nkC",
+    }
+)
+
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     13: "10.1021/acsnano.6b03964",
     18: "10.1021/acs.jpcb.5b09196",
@@ -1500,6 +1693,36 @@ CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     261: "10.1021/acs.jpcc.7b06063",
     375: "10.1039/c6cp00139d",
     383: "10.1021/acs.jpcb.6b10678",
+}
+
+CMU_GROUP_PUBLISHER_DOI_GUARDS.update(
+    {
+        27: "10.1021/ja00052a055",
+        35: "10.1021/j100183a047",
+        55: "10.1016/0167-7322(94)00744-6",
+        83: "10.1021/j100370a004",
+        108: "10.1021/ja00071a038",
+        112: "10.1021/ja00052a056",
+        119: "10.1021/j100025a003",
+        133: "10.1039/c5cp05713b",
+        140: "10.1002/(sici)1522-2594(199902)41:2&lt;299::aid-mrm13&gt;3.3.co;2-i",
+        151: "10.1016/1010-6030(94)02018-3",
+        181: "10.1021/j100111a001",
+        185: "10.1103/physrevlett.75.3649",
+        211: "10.1016/j.molstruc.2017.01.008",
+        228: "10.1063/1.460002",
+        312: "10.1016/j.molstruc.2017.05.138",
+        343: "10.1016/0167-7322(93)80047-y",
+        663: "10.1063/1.454979",
+        712: "10.1149/06404.0119ecst",
+        729: "10.1016/j.molliq.2018.06.050",
+    }
+)
+
+# Publisher canonical identifiers correct ORCID omissions or malformed variants.
+CMU_PRIMARY_CANONICAL_DOI_OVERRIDE = {
+    140: "10.1002/(sici)1522-2594(199902)41:2<299::aid-mrm13>3.0.co;2-r",
+    470: "10.1002/qua.560382480",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -1887,6 +2110,8 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 doi = CMU_GROUP_PUBLISHER_DOI_GUARDS[index]
                 if not cmu_exact or cmu_exact["doi"].lower() != doi:
                     raise ValueError(f"CMU group publisher DOI changed at row {index}")
+            if index in CMU_PRIMARY_CANONICAL_DOI_OVERRIDE:
+                doi = CMU_PRIMARY_CANONICAL_DOI_OVERRIDE[index]
             status = "cmu_primary_work_retained"
         elif cmu_exact:
             status = "cmu_orcid_exact_title_year_retained"
@@ -1953,9 +2178,8 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 20,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 94,
+        "cmu_primary_work_retained": 114,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
