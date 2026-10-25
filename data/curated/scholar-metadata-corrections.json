@@ -329,6 +329,52 @@
       "basis": "The original SETAC North America 46th Annual Meeting abstract book gives this exact title, Carrie A McDonough in the author list, Carnegie Mellon University affiliation, and page 198 in the 2025 meeting book; the Scholar row omits the year and has a placeholder venue page 0.",
       "evidence_url": "https://www.setac.org/asset/B97B2E92-74A5-49F5-90D36FAB051BBC2A/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "Xq5HrPYAAAAJ",
+      "author_pub_id": "Xq5HrPYAAAAJ:3s1wT3WcHBgC",
+      "expected": {
+        "title": "FluoroMatch: Processing Non-Targeted Mass Spectrometry Data for Per-and Polyfluoroalkyl Substances",
+        "year": null,
+        "venue": "SETAC North America 42nd Annual Meeting, 0"
+      },
+      "corrected": {
+        "year": 2021,
+        "venue": "SETAC North America 42nd Annual Meeting Abstract Book, 206, 2021"
+      },
+      "basis": "SETAC dates its North America 42nd Annual Meeting abstract book November 14, 2021; its original book reproduced on Scribd has this exact FluoroMatch abstract as 04.08.02 on page 206 with C. A. McDonough in the byline. The Scholar row lacks a year and has a placeholder venue page 0. Its source title remains unchanged.",
+      "evidence_url": "https://www.setac.org/resource/setac-na-virtual-2021-abstract-book.html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "Xq5HrPYAAAAJ",
+      "author_pub_id": "Xq5HrPYAAAAJ:YFjsv_pBGBYC",
+      "expected": {
+        "title": "N‐glucuronidation and Excretion of Perfluoroalkyl Sulfonamides in Mice Following Ingestion of Aqueous Film‐Forming Foam",
+        "year": 2024,
+        "venue": "Environmental Toxicology and Chemistry, 2024"
+      },
+      "corrected": {
+        "venue": "Environmental Toxicology and Chemistry 43 (11), 2274-2284, 2024"
+      },
+      "basis": "The journal version of record gives volume 43 issue 11 and pages 2274-2284 for the 2024 Dukes and McDonough article, DOI 10.1002/etc.5939; Scholar lists only the journal and year.",
+      "evidence_url": "https://academic.oup.com/etc/article/43/11/2274/7896767",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "Xq5HrPYAAAAJ",
+      "author_pub_id": "Xq5HrPYAAAAJ:ULOm3_A8WrAC",
+      "expected": {
+        "title": "Exposure to per-and polyfluoroalkyl substances and cross-sectional associations with serum lipids in a highly exposed Colorado (US) population",
+        "year": 2019,
+        "venue": "Environmental Epidemiology 3, 382, 2019"
+      },
+      "corrected": {
+        "venue": "Environmental Epidemiology 3 (Supplement 1), 382, 2019"
+      },
+      "basis": "Publisher-deposited DOI metadata identifies this exact six-author McDonough record as a one-page Environmental Epidemiology supplement abstract, volume 3 Supplement 1 page 382 (2019), DOI 10.1097/01.EE9.0000610252.31693.5f.",
+      "evidence_url": "https://api.crossref.org/works/10.1097%2F01.EE9.0000610252.31693.5f",
+      "verified_at": "2026-10-25"
     }
   ]
 }
