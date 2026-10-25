@@ -167,6 +167,43 @@ def test_new_single_department_scholar_needs_explicit_primary(tmp_path: Path) ->
     )
 
 
+def test_explicit_single_membership_basis_requires_the_same_source(
+    tmp_path: Path,
+) -> None:
+    paths = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-single-math",
+                "display_name": "Single Math Faculty",
+                "primary_department_id": "math",
+                "primary_department_source_url": "https://example.test/other",
+                "primary_department_verified_at": "2026-10-25",
+                "primary_department_basis": "single_included_membership",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-single-math",
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/math",
+                "verified_at": "2026-10-25",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://example.test/math",
+            }
+        ],
+    )
+    with pytest.raises(ValueError, match="must match its source"):
+        load_registry(*paths)
+
+
 def test_implicit_primary_baseline_is_immutable(tmp_path: Path) -> None:
     changed = tmp_path / DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH.name
     changed.write_text('{"profiles": {}}\n')
