@@ -24,17 +24,17 @@ hold gate would put unresolved attributions into graph works and edges.
 ## Conservative exact-ID proposal
 
 The [prepared release fragment](proposals/scholar-profile-releases.kim-proposal.json)
-and [121 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
+and [122 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
 partition every captured ID as follows:
 
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
-| Confirmed source-backed works for a possible reviewed subset | 121 | `159375617198d7887a0614b6e3d992fdbc985b5b6e81210b3ea353a21be4eb1e` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 453 | `2bb1f65aebbaebcc217991c46fb8e14a5226b2cbb6400de81dd3f18c0c86cd19` |
-| Held from any map release | 344 | `b22f85507f8e2795e340ff58c046eeea3fe8edad44a6374a584efe6f5d19e52e` |
+| Confirmed source-backed works for a possible reviewed subset | 122 | `7ed2f1779372ab3cf3060b8014e96ec62780eb058e9499ff8b4b7fc15bd2b101` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 459 | `ab551e678f7b05ad85ff459717e35b9aabebc3e0d6748857041e3b822a47dc8a` |
+| Held from any map release | 337 | `7023441ccbde8f48e1ad1be39019025805beef152003226fefe43db8ced8d46c` |
 
-The 344 holds comprise observations that still lack enough output-level review
-for this conservative subset. The 121 confirmed entries have exact Scholar
+The 337 holds comprise observations that still lack enough output-level review
+for this conservative subset. The 122 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 [group bibliography](2026-10-25-chem-kim-lab-bibliography-follow-up.md), and
@@ -82,8 +82,12 @@ on other works; only those eleven exact Scholar IDs are excluded.
 identify Hong Joo, Ho Jin, Han-Joon, and Hwi Kim on four outputs, and rule out
 the CMU chemist from two complete author lists. Only the six exact citation
 IDs are newly excluded; neighboring initials-only works remain held.
+[Seven further exact author and duplicate checks](2026-10-25-chem-kim-seven-exact-author-and-duplicate-review.md)
+confirm one published Biophysical Journal abstract for CMU Kim, exclude three
+Ho Jin/H. Jin Kim works, and remove three redundant Scholar renderings of
+already confirmed CMU outputs by exact DOI and citation ID.
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
-own DOI/page evidence and remain distinct works. The 121 confirmed rows do
+own DOI/page evidence and remain distinct works. The 122 confirmed rows do
 **not** represent Kim's whole publication history.
 The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
 keeps three more initials-only records held despite suggestive related sources.
@@ -109,8 +113,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 121 confirmed IDs, and the 453 exact exclusion IDs to
-these lists; it must prevent all 344 held rows from creating works,
+all 918 exact IDs, the 122 confirmed IDs, and the 459 exact exclusion IDs to
+these lists; it must prevent all 337 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the

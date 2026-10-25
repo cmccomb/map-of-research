@@ -9274,6 +9274,54 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:GUYAmugLYisC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Neurology 75:1432-1438 article names H. J. Kim in the byline and identifies correspondent Ho Jin Kim at National Cancer Center and hojinkim@ncc.re.kr. The NLM author and collaborator record corroborates his full name. This exact 2010 Scholar observation 'Prevalence of multiple sclerosis in Korea' belongs to Ho Jin Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1212/WNL.0b013e3181f88191.",
+      "evidence_url": "https://www.neurology.org/doi/10.1212/WNL.0b013e3181f88191",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:urP0JZOBBUsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Neurology 76:672-674 article identifies its last H. J. Kim author as Dr. Ho Jin Kim, National Cancer Center Neurology correspondent at hojinkim@ncc.re.kr. This exact 2011 Scholar observation 'Tumefactive demyelination, an uncommon form of tacrolimus neurotoxicity' belongs to Ho Jin Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1212/WNL.0b013e31820c30af.",
+      "evidence_url": "https://www.neurology.org/doi/10.1212/WNL.0b013e31820c30af",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:jtI9f0ekYq0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 42nd IEEE CDC paper at pages 3621-3626 spells its second author H. Jin Kim at Berkeley EECS; KAIST's exact-output record independently identifies him. Coauthor Shankar Sastry's CV gives the saved longer title for that same 2003 three-author, six-page conference work. This exact 2003 Scholar observation 'Decentralized nonlinear model predictive control of multiple flying robots in dynamic environments' belongs to H. Jin Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1109/CDC.2003.1271710.",
+      "evidence_url": "https://people.eecs.berkeley.edu/~sastry/pubs/PDFs%20of%20Pubs2000-2005/Publications%20of%20Postdocs/ShimDavid/ShimDecentralized2003.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:AXPGKjj_ei8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This uncited Scholar observation repeats confirmed observation bC4aq-4AAAAJ:QIV2ME_5wuYC: publisher DOI 10.1063/1.478952 gives one work with matching author sequence, year, volume, and starting page. The publisher names Hyung J. Kim; this second Scholar ID is a redundant rendering.",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F1.478952",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:BqipwSGYUEgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This uncited Scholar observation repeats confirmed observation bC4aq-4AAAAJ:bnK-pcrLprsC: publisher DOI 10.1117/12.306113 gives one work with matching author sequence, year, volume, and starting page. The publisher names Hyung J. Kim; this second Scholar ID is a redundant rendering.",
+      "evidence_url": "https://api.crossref.org/works/10.1117%2F12.306113",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:XiVPGOgt02cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This uncited Scholar observation repeats confirmed observation bC4aq-4AAAAJ:eQOLeE2rZwMC: publisher DOI 10.1063/1.477102 gives one work with matching author sequence, year, volume, and starting page. The publisher names Hyung J. Kim; this second Scholar ID is a redundant rendering.",
+      "evidence_url": "https://api.crossref.org/works/10.1063%2F1.477102",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "0e1jwkkAAAAJ",
       "author_pub_id": "0e1jwkkAAAAJ:yxmsSjX2EkcC",
       "reason_code": "false_profile_attribution",
