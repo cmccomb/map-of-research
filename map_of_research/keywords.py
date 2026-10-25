@@ -571,6 +571,18 @@ def exclude_low_information_regions(
     return output
 
 
+def _fit_topic_clusters(coordinates: Any, count: int, seed: int) -> Any:
+    """Keep native reductions stable while fitting a seeded topic partition."""
+
+    from sklearn.cluster import KMeans
+    from threadpoolctl import threadpool_limits
+
+    with threadpool_limits(limits=1):
+        return KMeans(n_clusters=count, n_init=10, random_state=seed).fit_predict(
+            coordinates
+        )
+
+
 def add_publication_keywords(
     works: Any,
     *,
@@ -581,7 +593,6 @@ def add_publication_keywords(
     """Assign broad and detailed visible-region keywords without dropping works."""
 
     import numpy
-    from sklearn.cluster import KMeans
 
     if keyword_count < 1:
         raise ValueError("keyword_count must be positive")
@@ -619,11 +630,7 @@ def add_publication_keywords(
     if cluster_count == 1:
         labels = numpy.zeros(len(included), dtype=int)
     else:
-        labels = KMeans(
-            n_clusters=cluster_count,
-            n_init=10,
-            random_state=RANDOM_STATE,
-        ).fit_predict(coordinates)
+        labels = _fit_topic_clusters(coordinates, cluster_count, RANDOM_STATE)
 
     titles = [str(value) for value in included["title"]]
     extracted_labels_by_cluster = _cluster_keywords(
@@ -668,11 +675,9 @@ def add_publication_keywords(
         if allocation == 1:
             local_labels = numpy.zeros(len(positions), dtype=int)
         else:
-            local_labels = KMeans(
-                n_clusters=allocation,
-                n_init=10,
-                random_state=RANDOM_STATE + cluster_id + 1,
-            ).fit_predict(cluster_coordinates)
+            local_labels = _fit_topic_clusters(
+                cluster_coordinates, allocation, RANDOM_STATE + cluster_id + 1
+            )
             local_labels = _merge_small_clusters(
                 cluster_coordinates,
                 local_labels,
