@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "source_title_repaired",
+  "profile": "Michael Young",
+  "scholar_id": "l0rzNYsAAAAJ",
+  "source_html_path": "data/captures/young-visible-71-2026-10-25.html",
+  "source_html_sha256": "b0b1b39e42ad2243356e99dda7fdbcba52d05a21b181785f22d60dc35dac7a8a",
+  "source_json_path": "data/captures/young-visible-71-2026-10-25.json",
+  "source_json_sha256": "566e49af497794d577c311d2275161821043fe40c20ba99ad4e68d92ceaab8b5",
+  "author_cache_path": "data/authors/l0rzNYsAAAAJ.json",
+  "author_cache_sha256": "b06237dad4e546613efb27e23c59e480d4281f9b13c633bf15f6c4126678ef12",
+  "affected_rows": 4,
+  "changes": [
+    {
+      "row": 25,
+      "author_pub_id": "l0rzNYsAAAAJ:4JMBOYKVnBMC",
+      "previous_title": "Rainbow numbers for in",
+      "corrected_title": "Rainbow numbers for x_1+x_2=kx_3 in \\mathbb{Z}_n",
+      "evidence": "saved_html_svg_aria_label"
+    },
+    {
+      "row": 53,
+      "author_pub_id": "l0rzNYsAAAAJ:_Qo2XoVZTnwC",
+      "previous_title": "Nowhere-Zero -Flows on Graphs",
+      "corrected_title": "Nowhere-Zero k →-Flows on Graphs",
+      "evidence": "saved_html_svg_aria_label"
+    },
+    {
+      "row": 60,
+      "author_pub_id": "l0rzNYsAAAAJ:j3f4tGmQtD8C",
+      "previous_title": "Rainbow Numbers of for",
+      "corrected_title": "Rainbow Numbers of \\mathbb{Z}_n for a_1x_1+a_2x_2+a_3x_3 =b",
+      "evidence": "saved_html_svg_aria_label"
+    },
+    {
+      "row": 62,
+      "author_pub_id": "l0rzNYsAAAAJ:mVmsd5A6BfQC",
+      "previous_title": "Lower Bounds for the Exponential Domination Number of",
+      "corrected_title": "Lower Bounds for the Exponential Domination Number of C_m \\times C_n",
+      "evidence": "saved_html_svg_aria_label"
+    }
+  ],
+  "note": "Four exact structured titles repaired from accessible SVG aria-labels in the already saved Scholar HTML. No Scholar request, row addition/removal, author/year/venue change, eligibility decision, or source HTML change."
+}
