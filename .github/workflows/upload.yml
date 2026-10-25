@@ -58,6 +58,13 @@ jobs:
           cache-dependency-path: source/pyproject.toml
       - name: Install trusted publisher
         run: python -m pip install './source[publisher]'
+      - name: Require evidenced primary homes for included Scholar profiles
+        run: |
+          python source/scripts/validate_primary_homes.py \
+            --people source/registry/people.csv \
+            --memberships source/registry/memberships.csv \
+            --departments source/registry/departments.csv \
+            --baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json
       - name: Require complete Mathematical Sciences Scholar captures
         run: |
           map-validate-math-coverage \
@@ -92,6 +99,7 @@ jobs:
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --people source/registry/people.csv \
+            --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
             --departments source/registry/departments.csv \
             --math-cache-dir snapshot/data/authors \
