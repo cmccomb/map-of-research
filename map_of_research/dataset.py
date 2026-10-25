@@ -170,6 +170,7 @@ def build_dataset_tables(
 
     import pandas
 
+    reviewed_aliases = doi_aliases or {}
     profile_publications = observations.copy()
     if "source_type" not in profile_publications:
         profile_publications["source_type"] = "scholar"
@@ -207,7 +208,7 @@ def build_dataset_tables(
     }
     for position, row in enumerate(profile_publications.itertuples(index=False)):
         observation_ids.append(_observation_identity(row))
-        alias = (doi_aliases or {}).get((str(row.scholar_id), str(row.author_pub_id)))
+        alias = reviewed_aliases.get((str(row.scholar_id), str(row.author_pub_id)))
         if alias is not None and row.source_type == "scholar":
             source_doi = _doi(row.source_doi)
             if source_doi and source_doi != alias.doi:
@@ -356,6 +357,13 @@ def build_dataset_tables(
         )
         school_ids = sorted({membership["school_id"] for membership in memberships})
         years = [record.year for record in canonical_records]
+        published_records = []
+        for record in canonical_records:
+            alias = reviewed_aliases.get(
+                (str(record.scholar_id), str(record.author_pub_id))
+            )
+            if alias is not None and alias.relationship == "version_of_record":
+                published_records.append(record)
         fetched = sorted(
             str(record.fetched_at_utc)
             for record in canonical_records
@@ -409,7 +417,11 @@ def build_dataset_tables(
                 "author_variants": _variants(
                     [record.authors for record in canonical_records]
                 ),
-                "year": _mode_year(_source_values(canonical_records, "year")),
+                "year": _mode_year(
+                    [record.year for record in published_records]
+                    if published_records
+                    else _source_values(canonical_records, "year")
+                ),
                 "year_variants": sorted(
                     {
                         year
@@ -417,7 +429,11 @@ def build_dataset_tables(
                         if year is not None
                     }
                 ),
-                "venue": _best_text(_source_values(canonical_records, "venue")),
+                "venue": _best_text(
+                    [record.venue for record in published_records]
+                    if published_records
+                    else _source_values(canonical_records, "venue")
+                ),
                 "venue_variants": _variants(
                     [record.venue for record in canonical_records]
                 ),
