@@ -5,6 +5,10 @@
   "target_branch": "automation/map-snapshot",
   "raw_capture_and_receipt_unchanged": true,
   "producer_exclusions_added": 0,
+  "capture_receipts": {
+    "xKrmD5IAAAAJ": "status/browser-capture-physics-jyoti-katoch-2026-10-24.json",
+    "O0NnwB0AAAAJ": "status/browser-capture-physics-riccardo-penco-2026-10-24.json"
+  },
   "repairs": [
     {
       "scholar_id": "xKrmD5IAAAAJ",
@@ -39,6 +43,7 @@
       "author_pub_id": "O0NnwB0AAAAJ:_Qo2XoVZTnwC",
       "cache_field": "title",
       "captured_value": "Effective description of ajar systems with a symmetry",
+      "raw_capture_value": "Effective description of ajar systems with a  symmetry",
       "repaired_value": "Effective description of ajar systems with a U(1) symmetry",
       "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/mrzp-zh4v"
     }
