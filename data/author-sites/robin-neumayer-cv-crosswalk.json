@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "person_id": "person-robinneumayer-a5f54a8c",
+  "person_name": "Robin Neumayer",
+  "status": "staged_source_review_unpublished",
+  "reviewed_at_utc": "2026-10-25T03:16:47Z",
+  "cv_url": "https://www.math.cmu.edu/~rneumaye/CVNeumayer2026.pdf",
+  "cv_retrieved_at_utc": "2026-10-25T03:16:20Z",
+  "cv_sha256": "bdddd623ecb1d13fd8996f281e2170a1d76a48314d75b53bcfcebc94424230db",
+  "cv_numbered_items": 30,
+  "site_observations": 30,
+  "matched_cv_to_site_items": [
+    {
+      "cv_item": 1,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:1:af77d0a2b770206b"
+    },
+    {
+      "cv_item": 2,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:2:e96b9675bfdb8da7"
+    },
+    {
+      "cv_item": 3,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:3:776a61383f6496b0"
+    },
+    {
+      "cv_item": 4,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:4:d90f7f38023781eb"
+    },
+    {
+      "cv_item": 5,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:5:6ed327c5045b12a7"
+    },
+    {
+      "cv_item": 6,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:6:9f5239e11800f41f"
+    },
+    {
+      "cv_item": 7,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:7:5219aa94cb2d0eff"
+    },
+    {
+      "cv_item": 8,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:8:a1424b84809c496f"
+    },
+    {
+      "cv_item": 9,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:9:2ffe0591b577d299"
+    },
+    {
+      "cv_item": 10,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:10:23cb759f27418ede"
+    },
+    {
+      "cv_item": 11,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:11:75ef0c2c148ebc07"
+    },
+    {
+      "cv_item": 12,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:12:014080b16be798ba"
+    },
+    {
+      "cv_item": 13,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:13:abd55b1826f44e9c"
+    },
+    {
+      "cv_item": 14,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:14:bf996b485109805a"
+    },
+    {
+      "cv_item": 15,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:15:08bfbf0ab07ec73f"
+    },
+    {
+      "cv_item": 16,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:16:528a88a2c9a06303"
+    },
+    {
+      "cv_item": 17,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:17:28acd72980c36ee1"
+    },
+    {
+      "cv_item": 18,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:18:78ab6e71bef1eb00"
+    },
+    {
+      "cv_item": 19,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:19:a64cdb02c67159e8"
+    },
+    {
+      "cv_item": 20,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:20:2028a203565e8858"
+    },
+    {
+      "cv_item": 21,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:21:1b11cdec2efb36b3"
+    },
+    {
+      "cv_item": 22,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:22:977fc6730dac27cf"
+    },
+    {
+      "cv_item": 23,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:23:0df555f73d3a5ad3"
+    },
+    {
+      "cv_item": 25,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:1:b5d7e1c42305721e"
+    },
+    {
+      "cv_item": 26,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:2:e8519d658f00c5b9"
+    },
+    {
+      "cv_item": 27,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:3:5657c7fd6b601a8d"
+    },
+    {
+      "cv_item": 28,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:4:8181feaa8e62e0c1"
+    },
+    {
+      "cv_item": 29,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:5:1d612c177ed6de1f"
+    },
+    {
+      "cv_item": 30,
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:phd_thesis:1:6b39b0250782b348"
+    }
+  ],
+  "cv_only_items": [
+    {
+      "cv_item": 24,
+      "title_as_listed": "Epsilon regularity for spaces with scalar curvature lower bounds",
+      "author_as_listed": "R. Neumayer",
+      "cv_status_as_listed": "To appear in Differentialgeometrie im Grossen. Oberwolfach Report.",
+      "published_source_url": "https://ems.press/content/serial-article-files/47471",
+      "published_source_year": 2023,
+      "published_source_note": "Oberwolfach Report 29/2023, Robin Neumayer contribution, independently verified; CV publication status was stale."
+    }
+  ],
+  "site_only_observations": [
+    {
+      "site_observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:expository_notes:1:8b939c862d3067a7",
+      "title_as_listed": "The Yamabe problem",
+      "section": "expository_notes"
+    }
+  ],
+  "union_distinct_observations": 31,
+  "coverage_note": "This is an exact page/CV crosswalk, not proof of complete lifetime publication coverage or a Google Scholar capture. No work or coauthor is map-ready from this review."
+}
