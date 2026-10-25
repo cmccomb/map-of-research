@@ -3,7 +3,7 @@
   "batch": "physics-kahniashvili-source-slice",
   "source_pr_state": "draft_source_only",
   "target_branch": "automation/map-snapshot",
-  "target_base_commit": "8822208ad877d2f22fddcf7c98b473d83f97bd62",
+  "target_base_commit": "4270632f3ddbd3f19c2b1f78517ee583bfb527c2",
   "producer_main_checked_commit": "c8f18417f70273ad354ab5dfd840fbacb599ab78",
   "carved_from_draft_pr": 80,
   "department_id": "physics",
@@ -15,8 +15,9 @@
   "capture_coverage": "complete_visible_profile",
   "source_files_preserve_raw_rows": true,
   "ingestion_ready": false,
-  "ingestion_dependency": "Keep this source PR draft and unmerged. Paired producer PR #143 must merge all fifteen exact exclusions first, retaining row 126 and leaving row 127 untouched. Row 116 remains an eligible but damaged-title observation; its exact 1998 proceedings mapping is not proved. Do not admit this source cache to any snapshot until a direct title mapping supports a normalized cache repair or an enforced exact-row snapshot guard with a documented limit exists. The snapshot builder does not consult ingestion_ready or this status file. Genuine preprint and proceedings records remain in the raw cache.",
+  "ingestion_dependency": "Keep this source PR draft and unmerged for coordinator review. Row 116's normalized cache title is repaired from the World Scientific book contents and coauthor bibliography; the raw capture, HTML, and receipt remain unchanged. Paired producer PR #143 must merge all fifteen exact exclusions before source ingestion, retaining row 126 and leaving row 127 untouched. The snapshot builder does not consult ingestion_ready or this status file. Genuine preprint and proceedings records remain in the raw cache.",
   "snapshot_release_hold": true,
+  "cache_repair_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json",
   "source_review_path": "status/physics-kahniashvili-source-review-2026-10-24.json",
   "profiles": [
     {

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "target_branch": "automation/map-snapshot",
+  "raw_capture_and_receipt_unchanged": true,
+  "producer_exclusions_added": 0,
+  "capture_receipt": "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json",
+  "repairs": [
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "capture_row": 116,
+      "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
+      "cache_field": "title",
+      "captured_value": "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized",
+      "repaired_value": "Large Scale Structure Formation in Mixed Dark Matter Models with a Cosmological Constant",
+      "evidence_url": "https://books.google.com/books?id=9sFUDwAAQBAJ&pg=PA269",
+      "corroborating_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf",
+      "evidence_note": "The World Scientific volume's Google Books contents assign this exact chapter title to page 269; the next chapter begins on page 273. Coauthor Novosyadlyj's institutional bibliography item 34 identifies the same three authors, title, proceedings volume, and pages 269-272. The captured row has those authors and venue but an internal text fragment as its title. Repair only the normalized cache title; preserve the source capture and exact observation ID.",
+      "evidence_limit": "A Google Books within-volume search once returned the captured fragment on page 269, but repeat requests returned zero results and the positive response bytes were not saved. The reproducible book contents and coauthor bibliography, rather than that transient snippet alone, support this cache title repair."
+    }
+  ]
+}

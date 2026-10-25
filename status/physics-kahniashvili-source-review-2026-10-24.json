@@ -4,6 +4,7 @@
   "reviewed_at": "2026-10-24",
   "scholar_id": "au_cLfoAAAAJ",
   "raw_rows_preserved": true,
+  "cache_repair_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json",
   "proposed_exclusions": [
     {
       "capture_row": 101,
@@ -137,15 +138,15 @@
       "author_pub_id": "au_cLfoAAAAJ:TFP_iSt0sucC",
       "reason": "The ESA SP-251 contents identify Cosmions and Galaxy Formation on page 41 by Kahniashvili and Lukash. This is the correctly titled contribution to retain; row 128 is its affiliation-titled duplicate.",
       "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf"
-    }
-  ],
-  "unresolved_candidates": [
+    },
     {
       "capture_row": 116,
       "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
-      "reason": "The captured title is an internal text fragment. Novosyadlyj's institutional bibliography identifies a genuine 1998 Potsdam proceedings contribution by these authors on pages 269–272, so this row remains eligible and is not an exclusion. The chapter text was unavailable to tie this exact fragment to that contribution. Leave the normalized cache unchanged and hold source ingestion until the mapping and exact title are confirmed or a specifically documented snapshot limit prevents this damaged title from publication.",
-      "evidence_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf"
+      "reason": "The World Scientific volume contents identify the three-author Potsdam proceedings chapter on pages 269-272, and coauthor Novosyadlyj's institutional bibliography independently gives the exact title, authors, venue, and pages. Retain this distinct contribution with the normalized cache title repaired; preserve its damaged raw capture title and exact observation ID.",
+      "evidence_url": "https://books.google.com/books?id=9sFUDwAAQBAJ&pg=PA269",
+      "corroborating_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf"
     }
   ],
+  "unresolved_candidates": [],
   "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
 }
