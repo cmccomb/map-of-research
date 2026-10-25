@@ -114,9 +114,7 @@ def test_staged_larsson_additional_artifacts_keep_genres_and_source_dates() -> N
     assert magazine["source_years"] == {"published_date": "2026-07-01"}
     assert magazine["canonical_title"] is None
     assert magazine["canonical_authors"] is None
-    assert rows["arxiv:2608.09840"]["authors_as_registered"] == [
-        "Martin Larsson"
-    ]
+    assert rows["arxiv:2608.09840"]["authors_as_registered"] == ["Martin Larsson"]
 
 
 def test_staged_larsson_rejects_changed_source_or_release_gate(tmp_path: Path) -> None:

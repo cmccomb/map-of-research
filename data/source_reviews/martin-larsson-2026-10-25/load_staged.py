@@ -351,7 +351,8 @@ def load_staged_larsson_rows(path: Path) -> list[dict[str, Any]]:
             or item["release_eligible"] is not False
             or item["map_eligible"] is not False
             or item["collaboration_eligible"] is not False
-            or item["row_hold"] not in {
+            or item["row_hold"]
+            not in {
                 "whole_researcher_reconciliation_and_genre_policy",
                 "withdrawn_work_no_collaboration_edge",
                 "magazine_genre_and_whole_researcher_reconciliation",
