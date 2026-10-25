@@ -316,13 +316,6 @@ def reconcile_region_decisions(
             ]
             output.at[index, "map_region_prior_eligible_override"] = True
         elif previous_outlier and current_mapped:
-            # A revised region rule may deliberately admit a documented work.
-            # Let the per-observation release gate verify every new member.
-            if bool(row.get("map_region_documented_override", False)) and any(
-                _verified_gain(current_rows[identity], row)
-                for identity in current_work_members
-            ):
-                continue
             output.at[index, "map_eligible"] = False
             output.at[index, "map_region_outlier"] = True
             output.at[index, "map_exclusion_reasons"] = [
@@ -348,6 +341,18 @@ def reconcile_region_decisions(
         and bool(
             previous_works[str(previous_rows[identity]["work_id"])].get(
                 "map_region_outlier"
+            )
+        )
+        and (
+            _fingerprint(current_rows[identity])
+            != _fingerprint(previous_rows[identity])
+            or _fingerprint_fields(
+                final_works[str(current_rows[identity]["work_id"])],
+                WORK_FINGERPRINT_FIELDS,
+            )
+            != _fingerprint_fields(
+                previous_works[str(previous_rows[identity]["work_id"])],
+                WORK_FINGERPRINT_FIELDS,
             )
         )
         and _verified_gain(

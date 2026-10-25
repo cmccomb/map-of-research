@@ -269,7 +269,7 @@ def test_native_curated_evidence_can_promote_prior_outlier():
     assert len(receipt["verified_gains"]) == 1
 
 
-def test_new_documented_region_rule_can_promote_exact_prior_outlier():
+def test_documented_rule_cannot_promote_exact_prior_outlier_without_new_evidence():
     row = {
         **observation("person", "one"),
         "work_match_method": "reviewed_version_alias",
@@ -285,9 +285,32 @@ def test_new_documented_region_rule_can_promote_exact_prior_outlier():
         "source_verification_urls": ["https://primary.test/doi"],
     }
     prior_work = {**documented_work, "map_eligible": False, "map_region_outlier": True}
-    _, receipt = reconcile([documented_work], [row], [prior_work], [row])
-    assert receipt["prior_excluded_overrides"] == 0
-    assert receipt["verified_gains"] == ["person/profile/profile:shared-row/scholar"]
+    result, receipt = reconcile([documented_work], [row], [prior_work], [row])
+    assert not bool(result.iloc[0].map_eligible)
+    assert receipt["prior_excluded_overrides"] == 1
+    assert receipt["verified_gains"] == []
+
+
+def test_unchanged_evidence_cannot_explain_gain_when_quality_version_changes():
+    row = {
+        **observation("person", "one"),
+        "work_match_method": "reviewed_version_alias",
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/doi"],
+    }
+    mapped = {
+        **work("one", eligible=True, outlier=False),
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/doi"],
+        "quality_assessment_version": "quality-v2",
+    }
+    prior = {**mapped, "quality_assessment_version": "quality-v1"}
+    prior["map_eligible"] = False
+    prior["map_region_outlier"] = True
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained gains"):
+        reconcile([mapped], [row], [prior], [row])
 
 
 @pytest.mark.parametrize(
