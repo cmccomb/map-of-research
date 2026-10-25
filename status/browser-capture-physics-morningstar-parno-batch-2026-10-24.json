@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "8AqWr_4AAAAJ",
+    "JbSQsXAAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "8AqWr_4AAAAJ",
+    "JbSQsXAAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-colinmorningstar-bfc2ce37",
+      "display_name": "Colin Morningstar",
+      "scholar_id": "8AqWr_4AAAAJ",
+      "publication_count": 272,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "4fc4cfe7d194976cb416eaf1953efcb6696838dd5060fddef89a4c548d5bca62",
+      "source_html_sha256": "826fad75cfa38a883903235ffa5559b6d5ccc4a2fb96e4f36cb26916fb22e25d"
+    },
+    {
+      "person_id": "person-dianaparno-e68481f0",
+      "display_name": "Diana Parno",
+      "scholar_id": "JbSQsXAAAAAJ",
+      "publication_count": 156,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "db9073231bdc03fc40e78f48ee161a150cc8e9457057934fa6b59650343b28d0",
+      "source_html_sha256": "78795e82bb3dcff7751e357c14796bed5c95d3b9ec60527673e61784a90c232f"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:48:20+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:49:53+00:00",
+  "inter_profile_reservation_gap_seconds": 93,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T22:51:01.549895+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Both Scholar IDs link directly from official CMU Scholars profiles; Physics faculty pages confirm roles and live profile identities matched."
+}

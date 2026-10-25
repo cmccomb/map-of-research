@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Two blank-venue dissertation rows, Singh 38 and Hunt 31, are verified genuine and retained. Hunt row 95 and patent/publication-type questions remain preliminary. Exact source-reviewed proposals are in the follow-on ledger. All source and cache rows remain intact; preliminary flags are not producer exclusions.",
+  "candidates": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 37,
+      "author_pub_id": "hgtyZOUAAAAJ:YohjEiUPhakC",
+      "concern": "Patent record; decide publication-type policy before any exclusion."
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 48,
+      "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
+      "concern": "Patent record; decide publication-type policy before any exclusion."
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row": 95,
+      "author_pub_id": "11EoZncAAAAJ:qjMakFHDy7sC",
+      "concern": "Venue is blank in Scholar; identify source before deciding classification."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row_groups": [
+        [
+          5,
+          54
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "row_count": 6,
+      "capture_rows": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        52
+      ],
+      "note": "Meeting abstracts are retained in the raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "row_count": 40,
+      "capture_rows": [
+        32,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        59,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        90
+      ],
+      "note": "Meeting abstracts are retained in the raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 38,
+      "author_pub_id": "hgtyZOUAAAAJ:7PzlFSSx8tAC",
+      "reason": "Official UCF repository identifies this as Simranjeet Singh’s 2014 Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://stars.library.ucf.edu/etd/4606/"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row": 31,
+      "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
+      "reason": "CMU CV identifies Relaxation Dynamics Of Solid Helium-4 as Benjamin Hunt’s 2009 Cornell Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/hunt_cv.pdf"
+    }
+  ]
+}

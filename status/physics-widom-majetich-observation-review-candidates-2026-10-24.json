@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Eighteen exact Majetich NSF award rows moved to the follow-on proposed ledger after official award checks; seven prior Widom/Majetich exact proposals remain. Widom row 215 is a genuine book chapter and Majetich row 270 an EPA-hosted presentation abstract; both remain retained. Patent, report, and malformed candidate rows still need source review. All 486 source and cache rows remain intact; no producer exclusion is applied here.",
+  "candidates": [
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 214,
+      "author_pub_id": "czs45aEAAAAJ:YsrPvlHIBpEC",
+      "concern": "Title appears to be a bibliographic fragment; identify exact source before classification."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 93,
+      "author_pub_id": "FRlLpMYAAAAJ:9pM33mqn1YgC",
+      "concern": "Patent record; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 104,
+      "author_pub_id": "FRlLpMYAAAAJ:abG-DnoFyZgC",
+      "concern": "Patent application record; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 135,
+      "author_pub_id": "FRlLpMYAAAAJ:sNmaIFBj_lkC",
+      "concern": "Patent record; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 181,
+      "author_pub_id": "FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+      "concern": "Final technical report; decide publication-type policy before exclusion."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 222,
+      "author_pub_id": "FRlLpMYAAAAJ:tS2w5q8j5-wC",
+      "concern": "Program committee record; determine whether it represents an authored publication."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 265,
+      "author_pub_id": "FRlLpMYAAAAJ:-_dYPAW6P2MC",
+      "concern": "Title appears to contain a conference program fragment; identify exact source."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 266,
+      "author_pub_id": "FRlLpMYAAAAJ:JoZmwDi-zQgC",
+      "concern": "Title appears truncated and has no year or venue; identify exact source."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 267,
+      "author_pub_id": "FRlLpMYAAAAJ:WA5NYHcadZ8C",
+      "concern": "Organization-only title with no year or venue; determine whether it represents an authored work."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 271,
+      "author_pub_id": "FRlLpMYAAAAJ:Tiz5es2fbqcC",
+      "concern": "Title appears to combine multiple bibliographic fragments; identify exact source."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row_groups": [
+        [
+          131,
+          211
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare exact sources before deduplication."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row_groups": [
+        [
+          93,
+          135
+        ],
+        [
+          97,
+          250
+        ],
+        [
+          124,
+          189
+        ],
+        [
+          145,
+          232
+        ],
+        [
+          238,
+          242
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare exact sources before deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_rows": [
+        126,
+        200,
+        261,
+        265,
+        266,
+        267,
+        268,
+        271
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "missing_year_groups": [
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_rows": [
+        259,
+        260,
+        261,
+        262,
+        265,
+        266,
+        267,
+        268,
+        269,
+        271
+      ],
+      "concern": "Scholar year is blank; inspect source before supplying publication metadata."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "row_count": 1,
+      "capture_rows": [
+        211
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "row_count": 26,
+      "capture_rows": [
+        165,
+        178,
+        180,
+        184,
+        187,
+        192,
+        195,
+        197,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        217,
+        220,
+        221,
+        223,
+        227,
+        234,
+        238,
+        239,
+        240,
+        243,
+        244
+      ],
+      "note": "Meeting abstracts retained in raw capture; no blanket exclusion proposed."
+    }
+  ]
+}

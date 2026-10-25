@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-matthewwalker-f9f5f4da",
+  "display_name": "Matthew Walker",
+  "scholar_profile_name": "Matthew G. Walker",
+  "scholar_id": "IcEsJfAAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/walker.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/3366-matthew-walker",
+  "scholar_identity_basis": "Official CMU Scholars profile directly links this Scholar ID; CMU Physics faculty page confirms role, and live profile identity and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T22:59:18+00:00",
+  "captured_at_utc": "2026-10-24T23:00:11.903Z",
+  "publication_count": 413,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 6,
+  "show_more_click_count": 5,
+  "source_json_path": "data/captures/physics-matthew-walker-2026-10-24.json",
+  "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+  "source_html_path": "data/captures/physics-matthew-walker-2026-10-24.html",
+  "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da",
+  "cache_path": "data/authors/IcEsJfAAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

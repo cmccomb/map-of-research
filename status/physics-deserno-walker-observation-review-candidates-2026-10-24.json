@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "note": "Deserno and Walker anomalies still need exact source and publication-type review. The 88-row follow-on ledger now includes five verified Walker NSF award records and one Nottingham-confirmed namesake row. Walker rows 404, 410, and 411 returned to preliminary status because their cited PDF is indirect. Walker’s full profile remains held; all 646 source and cache rows remain intact, and no producer exclusion is applied here.",
+  "walker_profile_attribution_review": {
+    "scholar_id": "IcEsJfAAAAAJ",
+    "state": "profile_wide_row_attribution_review_required_before_publication",
+    "reason": "The verified faculty-owned Scholar profile includes astrophysics records together with visibly unrelated same-name records in occupational therapy, medicine, journalism, composting, and emergency management. The unresolved example rows below are not an exhaustive exclusion list; exact reviewed proposals are in the follow-on ledger.",
+    "example_capture_rows": [
+      330,
+      331,
+      334,
+      350,
+      357,
+      365,
+      375,
+      389,
+      394,
+      397,
+      398,
+      402,
+      412
+    ]
+  },
+  "candidates": [
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 220,
+      "author_pub_id": "1J28ExgAAAAJ:YohjEiUPhakC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 222,
+      "author_pub_id": "1J28ExgAAAAJ:e_rmSamDkqQC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 223,
+      "author_pub_id": "1J28ExgAAAAJ:lmc2jWPfTJgC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 224,
+      "author_pub_id": "1J28ExgAAAAJ:tzM49s52ZIMC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 225,
+      "author_pub_id": "1J28ExgAAAAJ:tkaPQYYpVKoC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 226,
+      "author_pub_id": "1J28ExgAAAAJ:Y5dfb0dijaUC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 227,
+      "author_pub_id": "1J28ExgAAAAJ:eMMeJKvmdy0C",
+      "concern": "Saved metadata resembles a course study aid, but the exact CMU-hosted PDF link currently redirects; find a live primary copy before classification."
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row": 230,
+      "author_pub_id": "1J28ExgAAAAJ:f2IySw72cVMC",
+      "concern": "Saved metadata resembles an index, meeting program, or supplemental file; identify source and attribution before classification."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 222,
+      "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
+      "concern": "The 2018 Victorian pathology-services rostering report shares an RMIT team and subject, but the exact report title is absent from checked faculty outputs; verify exact author attribution before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 330,
+      "author_pub_id": "IcEsJfAAAAAJ:hSRAE-fF4OAC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 331,
+      "author_pub_id": "IcEsJfAAAAAJ:WAzi4Gm8nLoC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 334,
+      "author_pub_id": "IcEsJfAAAAAJ:z6xuaG2dYH0C",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 350,
+      "author_pub_id": "IcEsJfAAAAAJ:1sJd4Hv_s6UC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 357,
+      "author_pub_id": "IcEsJfAAAAAJ:P5F9QuxV20EC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 365,
+      "author_pub_id": "IcEsJfAAAAAJ:t-hv7AR41mYC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 375,
+      "author_pub_id": "IcEsJfAAAAAJ:4MWp96NkSFoC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 389,
+      "author_pub_id": "IcEsJfAAAAAJ:9shLKfS_uJEC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 394,
+      "author_pub_id": "IcEsJfAAAAAJ:LWqeokA2EBkC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 397,
+      "author_pub_id": "IcEsJfAAAAAJ:9DLIHnF0jcYC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 398,
+      "author_pub_id": "IcEsJfAAAAAJ:jtI9f0ekYq0C",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 402,
+      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
+      "concern": "The saved record shares the RMIT pathology-services rostering report title with row 222, but the exact report is absent from checked faculty outputs; verify exact author attribution before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 404,
+      "author_pub_id": "IcEsJfAAAAAJ:sfnaS5RM6jYC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 410,
+      "author_pub_id": "IcEsJfAAAAAJ:yMeIxYmEMEAC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 411,
+      "author_pub_id": "IcEsJfAAAAAJ:vbGhcppDl1QC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 412,
+      "author_pub_id": "IcEsJfAAAAAJ:V3AGJWp-ZtQC",
+      "concern": "Illustrative cross-person attribution concern; title and venue appear outside this astrophysicist's work. Verify the source and author identity before any exclusion."
+    }
+  ],
+  "same_title_groups": [
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_row_groups": [
+        [
+          20,
+          114
+        ],
+        [
+          37,
+          131
+        ],
+        [
+          42,
+          219
+        ],
+        [
+          48,
+          186
+        ],
+        [
+          50,
+          194
+        ],
+        [
+          63,
+          173
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row_groups": [
+        [
+          29,
+          323
+        ],
+        [
+          74,
+          257
+        ],
+        [
+          78,
+          221
+        ],
+        [
+          120,
+          207
+        ],
+        [
+          123,
+          266
+        ],
+        [
+          222,
+          402
+        ]
+      ],
+      "concern": "Same normalized title appears under distinct Scholar citation IDs; compare publication sources before any deduplication."
+    }
+  ],
+  "missing_venue_groups": [
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "capture_rows": [
+        83,
+        142,
+        182,
+        189,
+        199,
+        205,
+        210,
+        213,
+        216,
+        217,
+        218,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_rows": [
+        151,
+        152,
+        167,
+        192,
+        209,
+        210,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        253,
+        256,
+        260,
+        263,
+        264,
+        266,
+        267,
+        268,
+        277,
+        279,
+        281,
+        300,
+        309,
+        338,
+        352,
+        360,
+        362,
+        365,
+        369,
+        373,
+        402,
+        403,
+        405,
+        412
+      ],
+      "concern": "Scholar venue is blank; source and classification remain unresolved."
+    }
+  ],
+  "meeting_abstract_groups": [
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "row_count": 5,
+      "capture_rows": [
+        157,
+        202,
+        208,
+        209,
+        212
+      ],
+      "note": "Meeting abstracts remain in the raw capture; no blanket exclusion proposed."
+    }
+  ]
+}
