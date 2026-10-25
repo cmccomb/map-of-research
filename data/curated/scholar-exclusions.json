@@ -11720,6 +11720,22 @@
       "reason": "MDPI's original Crossref DOI registration names Shantanabha Das at Diamond Harbour Women's University for this exact title, DOI, year, and coauthor sequence, excluding CMU chemist Subha R. Das.",
       "evidence_url": "https://api.crossref.org/works/10.3390%2Fpathogens10070814",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:0aBXIfxlw9sC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured Scholar row reverses the title and author list of the exact 1998 Nature NR3A article. Nature's original full byline names Saumya Das, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.nature.com/articles/30748",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:X5YyAB84Iw4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured Scholar row garbles the byline and DOI into its title, venue, and 1945 year. The exact Journal of The Electrochemical Society article is from 2020; its publisher PDF names Sovik Das of IIT Kharagpur, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://pub.vito.be/openaccess/2020-Das%20et%20al.%2C%20J.%20Electrochem.%20Soc._MES.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
