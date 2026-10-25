@@ -389,6 +389,96 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot contains a negative citation count")
 
 
+def _author_site_paths(
+    value: Path | Sequence[Path] | None,
+) -> tuple[Path, ...]:
+    if value is None:
+        return ()
+    if isinstance(value, (str, Path)):
+        return (Path(value),)
+    return tuple(Path(path) for path in value)
+
+
+def _author_site_specs(paths: Sequence[Path]) -> list[dict[str, Any]]:
+    """Identify each capture without depending on CLI argument order."""
+
+    specs: list[dict[str, Any]] = []
+    person_ids: set[str] = set()
+    filenames: set[str] = set()
+    for path in paths:
+        manifest = load_json(path)
+        if not isinstance(manifest, dict):
+            raise ValueError("Author-site capture manifest must be an object")
+        person_id = manifest.get("person_id")
+        row_count = manifest.get("expected_entry_count")
+        if (
+            not isinstance(person_id, str)
+            or not person_id
+            or not isinstance(row_count, int)
+            or row_count < 1
+        ):
+            raise ValueError("Author-site capture identity or row count is invalid")
+        if person_id in person_ids:
+            raise ValueError(f"Duplicate author-site person: {person_id}")
+        if path.name in filenames:
+            raise ValueError(f"Duplicate author-site manifest filename: {path.name}")
+        person_ids.add(person_id)
+        filenames.add(path.name)
+        specs.append(
+            {
+                "person_id": person_id,
+                "file": path.name,
+                "sha256": sha256_file(path),
+                "rows": row_count,
+                "path": path,
+            }
+        )
+    return sorted(specs, key=lambda item: item["person_id"])
+
+
+def _capture_metadata(specs: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        {key: spec[key] for key in ("person_id", "file", "sha256", "rows")}
+        for spec in specs
+    ]
+
+
+def _load_author_site_captures(
+    specs: Sequence[Mapping[str, Any]], registry: Registry
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    native_ids: set[str] = set()
+    for spec in specs:
+        captured = load_author_site_rows(spec["path"], registry)
+        if len(captured) != spec["rows"] or any(
+            row["person_id"] != spec["person_id"] for row in captured
+        ):
+            raise ValueError(f"Incomplete author-site capture: {spec['person_id']}")
+        for row in captured:
+            native_id = str(row["source_native_id"])
+            if native_id in native_ids:
+                raise ValueError(f"Duplicate author-site native ID: {native_id}")
+            native_ids.add(native_id)
+        rows.extend(captured)
+    return rows
+
+
+def _source_value(value: Any) -> Any:
+    """Normalize parquet's array and nullable scalars for exact row comparison."""
+
+    import pandas
+
+    if isinstance(value, Mapping):
+        return {key: _source_value(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_source_value(item) for item in value]
+    if hasattr(value, "tolist"):
+        return _source_value(value.tolist())
+    if pandas.isna(value):
+        return None
+    return value
+
+
 def build_snapshot(
     *,
     people_path: Path = DEFAULT_PEOPLE_PATH,
@@ -396,7 +486,7 @@ def build_snapshot(
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     curated_path: Path | None = None,
-    author_site_path: Path | None = None,
+    author_site_path: Path | Sequence[Path] | None = None,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     now: dt.datetime | None = None,
@@ -409,6 +499,7 @@ def build_snapshot(
     registry = load_registry(people_path, memberships_path, departments_path)
     profiles = unique_profiles(registry)
     source_path = _curated_path(people_path, curated_path)
+    capture_specs = _author_site_specs(_author_site_paths(author_site_path))
     rows: list[dict[str, Any]] = []
     cached_profile_ids: list[str] = []
     for profile in profiles:
@@ -430,8 +521,7 @@ def build_snapshot(
         cached_profile_ids.append(profile.scholar_id)
 
     rows.extend(_load_curated_rows(source_path, registry))
-    if author_site_path is not None:
-        rows.extend(load_author_site_rows(author_site_path, registry))
+    rows.extend(_load_author_site_captures(capture_specs, registry))
 
     frame = pandas.DataFrame(rows)
     _validate_frame(frame)
@@ -483,10 +573,13 @@ def build_snapshot(
         if source_path.is_file()
         else "",
         "curated_work_rows": int((frame["source_type"] == "curated_verified").sum()),
-        "author_site_capture_file": author_site_path.name if author_site_path else "",
-        "author_site_capture_sha256": sha256_file(author_site_path)
-        if author_site_path
+        "author_site_capture_file": capture_specs[0]["file"]
+        if len(capture_specs) == 1
         else "",
+        "author_site_capture_sha256": capture_specs[0]["sha256"]
+        if len(capture_specs) == 1
+        else "",
+        "author_site_captures": _capture_metadata(capture_specs),
         "author_site_rows": int((frame["source_type"] == "author_site").sum()),
         "cached_profile_ids_sha256": hashlib.sha256(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
@@ -506,7 +599,7 @@ def validate_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     curated_path: Path | None = None,
-    author_site_path: Path | None = None,
+    author_site_path: Path | Sequence[Path] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -561,12 +654,21 @@ def validate_snapshot(
         or manifest["curated_works_sha256"] != current_curated_sha
     ):
         raise ValueError("Curated work source does not match the snapshot manifest")
-    if manifest["author_site_capture_file"] != (
-        author_site_path.name if author_site_path else ""
-    ) or manifest["author_site_capture_sha256"] != (
-        sha256_file(author_site_path) if author_site_path else ""
+    capture_specs = _author_site_specs(_author_site_paths(author_site_path))
+    legacy_file = capture_specs[0]["file"] if len(capture_specs) == 1 else ""
+    legacy_sha = capture_specs[0]["sha256"] if len(capture_specs) == 1 else ""
+    if (
+        manifest["author_site_capture_file"] != legacy_file
+        or manifest["author_site_capture_sha256"] != legacy_sha
     ):
         raise ValueError("Author-site capture does not match the snapshot manifest")
+    if "author_site_captures" in manifest:
+        if manifest["author_site_captures"] != _capture_metadata(capture_specs):
+            raise ValueError(
+                "Author-site capture list does not match the snapshot manifest"
+            )
+    elif len(capture_specs) > 1:
+        raise ValueError("Legacy snapshot manifest cannot bind multiple author sites")
 
     created_at = dt.datetime.fromisoformat(str(manifest["created_at_utc"]))
     if created_at.tzinfo is None:
@@ -593,16 +695,32 @@ def validate_snapshot(
     author_site_rows = int((frame["source_type"] == "author_site").sum())
     if author_site_rows != int(manifest["author_site_rows"]):
         raise ValueError("Snapshot author-site row count does not match the manifest")
-    if author_site_rows:
-        capture = json.loads(Path(author_site_path).read_text(encoding="utf-8"))
-        expected_rows = int(capture["expected_entry_count"])
-        if author_site_rows != expected_rows:
-            person = (
-                "Iyer"
-                if capture.get("person_id") == "person-gautamiyer-3894621b"
-                else "Anderson"
-            )
-            raise ValueError(f"Incomplete {person} author-site profile")
+    if capture_specs:
+        registry = load_registry(people_path, memberships_path, departments_path)
+        expected_rows = _load_author_site_captures(capture_specs, registry)
+        observed = frame.loc[frame["source_type"] == "author_site"]
+        if observed["source_native_id"].duplicated().any():
+            raise ValueError("Snapshot has duplicate author-site native IDs")
+        for spec in capture_specs:
+            person_rows = observed.loc[observed["person_id"] == spec["person_id"]]
+            if len(person_rows) != spec["rows"]:
+                person = registry.people_by_id[spec["person_id"]].display_name.split()[
+                    -1
+                ]
+                raise ValueError(f"Incomplete {person} author-site profile")
+        actual = {row.author_pub_id: row for row in observed.itertuples(index=False)}
+        if {row["author_pub_id"] for row in expected_rows} != set(actual):
+            raise ValueError("Snapshot author-site observation identities changed")
+        for source_row in expected_rows:
+            observed_row = actual[source_row["author_pub_id"]]
+            if any(
+                _source_value(source_value)
+                != _source_value(getattr(observed_row, field))
+                for field, source_value in source_row.items()
+            ):
+                raise ValueError("Snapshot author-site observation changed")
+    elif author_site_rows:
+        raise ValueError("Snapshot author-site captures are incomplete")
     if int(manifest["cached_profiles"]) > int(manifest["registry_profiles"]):
         raise ValueError("Snapshot contains more profiles than the registry")
     return frame, manifest
@@ -623,7 +741,7 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--curated-works", type=Path)
-    parser.add_argument("--author-site-capture", type=Path)
+    parser.add_argument("--author-site-capture", type=Path, action="append")
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
     return parser
@@ -662,7 +780,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--curated-works", type=Path)
-    parser.add_argument("--author-site-capture", type=Path)
+    parser.add_argument("--author-site-capture", type=Path, action="append")
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,

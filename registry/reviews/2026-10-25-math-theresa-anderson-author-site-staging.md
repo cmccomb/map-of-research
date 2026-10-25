@@ -34,7 +34,8 @@ capture proves coverage of the displayed bibliography and CV, not all lifetime
 academic publications. Resolve DOI/work identity, title variants, and author
 identity before any graph release; run an exact no-upload publisher preview.
 
-The current CLI accepts one `--author-site-capture` manifest per snapshot.
-Therefore the 47-row Iyer capture and this 42-row Anderson capture are separately
-testable but cannot yet coexist in one source snapshot. A separate composition
-change is required before any combined author-site release.
+The snapshot CLI now accepts repeated `--author-site-capture` arguments. Its
+manifest pins each selected source by person, filename, SHA-256, and exact row
+count, allowing all 47 Iyer and 42 Anderson source rows to coexist in an
+offline snapshot. The publisher remains blocked for `author_site`; composition
+alone does not authorize graph release.
