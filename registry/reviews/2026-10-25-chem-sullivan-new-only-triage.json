@@ -5,6 +5,8 @@
   "basis": "Exact 58 IDs present in 250-row complete visible capture but absent from frozen 196-row cache. Signals are triage only; they are not exclusions or proof of authorship.",
   "all_rows_release_held": true,
   "new_only_count": 58,
+  "new_only_exact_exclusion_proposed_count": 1,
+  "new_only_remaining_review_count": 57,
   "candidate_primary_argonne_source_count": 10,
   "explicit_argonne_venue_count": 5,
   "program_subject_signal_count": 27,
@@ -167,7 +169,7 @@
       ],
       "candidate_primary_argonne_source_url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023AV000956",
       "related_primary_source_url": null,
-      "review_state": "needs_exact_attribution_and_quality_review"
+      "review_state": "exact_false_attribution_exclusion_proposed"
     },
     {
       "author_pub_id": "wXSgFr4AAAAJ:jL-93Qbq4QoC",
