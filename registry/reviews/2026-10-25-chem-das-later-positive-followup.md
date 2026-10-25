@@ -25,4 +25,4 @@ Row 242 is a genuine CMU Subha R. Das paper despite its unexpected phytochemical
 
 **Row 535 remains held for record identity and output policy.** The saved row names “Click chemistry for RNA: Labeling and ligation” in a 2010 ACS meeting abstract volume. The [2009 Rustbelt RNA program](https://rustbeltrna.org/2009/program.php) confirms Das and Paredes presented this exact title, but it does not prove the particular 2010 ACS abstract record. Do not merge it with the full 2011 ChemBioChem paper at row 2.
 
-The provisional exact-positive proposal now contains 49 IDs, with 188 exact exclusions and 433 held IDs. The trusted upload manifest still holds all 670 rows and does not publish this incomplete subset.
+At this pass, the provisional exact-positive proposal contained 49 IDs, with 188 exact exclusions and 433 held IDs. The later [UKM Anatomy follow-up](2026-10-25-chem-das-next-ukm-evidence.md) updates that partition to 49/199/422. The trusted upload manifest still holds all 670 rows and does not publish this incomplete subset.
