@@ -1,11 +1,13 @@
 # Verified DOI work records
 
-`works.json` holds 18 faculty observations for 13 verified DOI works: two
+`works.json` holds 19 faculty observations for 14 verified DOI works: two
 Prasad Tetali–Paul Erdős papers, six Mathematics observations across three
 Math–MSE papers, and four observations across three David R. Owen papers (one
 shared with Irene Fonseca). Six further observations across five papers link
 Noel Walkington to Engineering, Ian Tice to Giovanni Leoni, and David
-Kinderlehrer and Robert Suter to Engineering collaborators. Each row names its
+Kinderlehrer and Robert Suter to Engineering collaborators. One additional
+record supplements Clive Newstead's Scholar profile with his 2018 CMU doctoral
+thesis, using the DOI of its 2021 arXiv deposit. Each row names its
 CMU faculty person, exact DOI, publisher or CMU verification URLs, verification
 date, and any external coauthor IDs. Paul Erdős is an external coauthor, not a
 CMU faculty registry member.
