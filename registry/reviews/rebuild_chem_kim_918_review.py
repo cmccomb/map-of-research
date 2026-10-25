@@ -2222,6 +2222,93 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in KNU_THREE_EXACT_GUARDS.items()}
 )
 
+# Original publisher or university records resolve four more exact works to
+# named researchers other than CMU Chemistry's Hyung J. Kim.
+NEXT_FOUR_EXACT_GUARDS = {
+    420: (
+        "bC4aq-4AAAAJ:aIdbFUkbNIkC",
+        "The  crystal: a crystal scintillator for dark matter search experiment",
+        "IR Pandey, HJ Kim, HS Lee, YD Kim, MH Lee, VD Grigorieva, VN Shlegel",
+        "2018",
+        "The European Physical Journal C 78 (11), 973, 2018",
+    ),
+    430: (
+        "bC4aq-4AAAAJ:anf4URPfarAC",
+        "Optical properties of GaN by using ellipsometry and a band calculation",
+        "TJ Kim, JS Byun, YD Kim, YC Chang, HJ Kim",
+        "2008",
+        "Journal of the Korean Physical Society 53 (3), 1575-1579, 2008",
+    ),
+    432: (
+        "bC4aq-4AAAAJ:edDO8Oi4QzsC",
+        "Large Size CdWO4 Crystal for Energetic X- and γ-Ray Detection",
+        "HJ Kim, HD Kang, H Park, S Doh, SH Kim, SJ Kang",
+        "2008",
+        "Journal of Nuclear Science and Technology 45 (sup5), 356-359, 2008",
+    ),
+    435: (
+        "bC4aq-4AAAAJ:F9HO9s0W2bwC",
+        "Background study of the AMoRE-pilot experiment",
+        "A Agrawal, VV Alenkov, P Aryal, J Beyer, B Bhandari, RS Boiko, K Boonin, ...",
+        "2024",
+        "Astroparticle Physics 162, 102991, 2024",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(NEXT_FOUR_EXACT_GUARDS)
+OTHER_PRIMARY.update(
+    {
+        420: (
+            NEXT_FOUR_EXACT_GUARDS[420][1],
+            2018,
+            "HongJoo Kim",
+            "10.1140/epjc/s10052-018-6462-0",
+            "https://link.springer.com/article/10.1140/epjc/s10052-018-6462-0",
+            "Springer exact article H. J. Kim-to-ORCID author link",
+            "Springer's original EPJC 78:973 article restores the Na2W2O7 "
+            "formula lost by Scholar and links H. J. Kim to ORCID "
+            "0000-0001-9787-4684, whose public person record names HongJoo Kim.",
+        ),
+        430: (
+            NEXT_FOUR_EXACT_GUARDS[430][1],
+            2008,
+            "Hye Jung Kim",
+            "10.3938/jkps.53.1575",
+            "https://khu.elsevierpure.com/en/publications/"
+            "optical-properties-of-gan-by-using-ellipsometry-and-a-band-calcul-2/",
+            "Kyung Hee University exact full-author journal record",
+            "Kyung Hee University's exact Journal of the Korean Physical Society "
+            "53(3):1575-1579 record names the fifth author Hye Jung Kim in full.",
+        ),
+        432: (
+            NEXT_FOUR_EXACT_GUARDS[432][1],
+            2008,
+            "Hong Joo Kim",
+            "10.1080/00223131.2008.10875862",
+            "https://research.knu.ac.kr/en/publications/"
+            "large-size-cdwosub4sub-crystal-for-energetic-x-and-%CE%B3-ray-detectio/",
+            "KNU exact journal article H. J. Kim-to-person link",
+            "KNU's exact Journal of Nuclear Science and Technology 45:356-359 "
+            "article links its first H. J. Kim author to Physics professor "
+            "Hong Joo Kim.",
+        ),
+        435: (
+            NEXT_FOUR_EXACT_GUARDS[435][1],
+            2024,
+            "Hong Joo Kim",
+            "10.1016/j.astropartphys.2024.102991",
+            "https://research.knu.ac.kr/en/publications/"
+            "background-study-of-the-amore-pilot-experiment/",
+            "KNU exact Elsevier article H. J. Kim-to-person link",
+            "KNU's exact Astroparticle Physics 162:102991 article links its "
+            "H. J. Kim author to Physics professor Hong Joo Kim, distinct "
+            "from another Ho Jong Kim author in the same collaboration list.",
+        ),
+    }
+)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in NEXT_FOUR_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4208,17 +4295,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 136,
+        "proposed_other_person_primary_work": 140,
         "proposed_no_target_author_primary_work": 8,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 296,
+        "unresolved_attribution_hold": 292,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 487 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 491 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

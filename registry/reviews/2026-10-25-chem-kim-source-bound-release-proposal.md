@@ -9,13 +9,13 @@ the paired redacted HTML SHA-256 is
 The capture is a complete **visible Scholar profile**, not proof that every
 publication in Kim's academic history appears there.
 
-In the current-main consolidation, the [495 exact exclusions](proposals/scholar-exclusions.kim-proposal.json)
+In the current-main consolidation, the [499 exact exclusions](proposals/scholar-exclusions.kim-proposal.json)
 remain a Kim-only review proposal. The canonical exclusion manifest stays
 byte-identical to main `5275d5ae` because the Sullivan/Math historical release
 checks pin its digest. Kim has no active cache, release, or attribution entry;
 the three Kim proposal fragments are nonoperational. The body of older draft
 PR #347 has stale partition counts; the table and generated fragments below
-record the checked 123/495/300 partition.
+record the checked 123/499/296 partition.
 
 ## Release blocker measured against the current publisher
 
@@ -38,10 +38,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 123 | `78eb9a0d9d6077a4ca62aa2a876311ccea299627418ad9811ebee18f2b4878e6` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 495 | `de607fcbb85ba9c583fb6b444ee3a662e7efde91284bdb5829edae0ac0de24f2` |
-| Held from any map release | 300 | `5e2d42a8500369f842aa8cb9a5b2333b4b4f24d8cfe281447e93ef0e2875ec6b` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 499 | `625e5065ebf3f8fea487d32e1e62fb20189cf27b4d338617d6a0bf41aecd8c14` |
+| Held from any map release | 296 | `e216bb0ab11ceece7f2017a58bbfe089da9ff412ba4d3834490cd8ae298310a0` |
 
-The 300 holds comprise observations that still lack enough output-level review
+The 296 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 123 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -149,8 +149,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 123 confirmed IDs, and the 495 exact exclusion IDs to
-these lists; it must prevent all 300 held rows from creating works,
+all 918 exact IDs, the 123 confirmed IDs, and the 499 exact exclusion IDs to
+these lists; it must prevent all 296 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the remaining outputs receive work-level review and the
 whole captured profile can be represented accurately. This proposal does not
