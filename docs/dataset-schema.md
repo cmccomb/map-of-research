@@ -234,6 +234,17 @@ checksum and count of applied repairs. A correction never edits the raw cache
 or raw snapshot; it only changes the normalized fields used for embeddings,
 quality assessment, canonical works, and browser artifacts.
 
+`data/curated/scholar-profile-releases.json` separates a complete, source
+validated capture from a public profile release. The publisher validates the
+full raw snapshot and every staged cache first. A `held` decision then removes
+only observations owned by that profile before embeddings, work matching,
+authorships, and public `profile_publications`; roster people remain. Exact
+cache SHA-256, registry identity, citation IDs, and expected source row count
+must match the trusted decision. The upload receipt distinguishes raw snapshot
+observations and profiles from published rows and profiles, gives the held
+source-row count, and records the decision-manifest SHA-256. A `released`
+decision retains the source rows after the same checks.
+
 No single missing bibliographic field, citation count, or embedding position is
 an exclusion rule. After the title-level policy, a provisional detail hierarchy
 is used to audit large catch-all regions. A region is withheld only when four

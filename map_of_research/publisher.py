@@ -41,6 +41,12 @@ from .keywords import (
     exclude_low_information_regions,
 )
 from .math_release_gate import validate_math_coverage
+from .profile_releases import (
+    DEFAULT_PROFILE_RELEASES_PATH,
+    load_profile_releases,
+    require_no_held_contributions,
+    select_released_observations,
+)
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -1103,6 +1109,8 @@ def publish_snapshot(
     doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
     attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
+    profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
+    source_cache_dir: Path | None = None,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1120,13 +1128,27 @@ def publish_snapshot(
     validate_doi_aliases(frame, doi_aliases, exclusions)
     _require_physics_review_ready(frame, snapshot_path, exclusions)
     corrections = load_corrections(corrections_path)
-    corrected_frame, corrected_count = apply_corrections(frame, corrections)
+    corrected_frame, validated_correction_count = apply_corrections(frame, corrections)
     contexts = load_contexts(contexts_path)
     attribution_reviews = load_attribution_reviews(attribution_reviews_path)
     if set(attribution_reviews.confirmed).intersection(exclusions):
         raise ValueError("Scholar attribution and exclusion reviews conflict")
+    release_decisions = load_profile_releases(profile_releases_path)
+    release_manifest_sha256 = sha256_file(profile_releases_path)
+    released_frame, release_receipt, held_observation_ids = (
+        select_released_observations(
+            corrected_frame,
+            registry,
+            release_decisions,
+            cache_dir=source_cache_dir
+            or snapshot_path.parent.parent / "data" / "authors",
+        )
+    )
+    published_correction_count = int(
+        released_frame["metadata_correction_fields"].ne("").sum()
+    )
     enriched, new_embedding_count = add_embeddings(
-        corrected_frame,
+        released_frame,
         hf_token=hf_token,
         encoder=encoder,
     )
@@ -1150,6 +1172,7 @@ def publish_snapshot(
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
     tables["works"] = add_publication_keywords(tables["works"])
+    require_no_held_contributions(tables, release_decisions, held_observation_ids)
 
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
@@ -1184,6 +1207,26 @@ def publish_snapshot(
     return {
         "dataset_commits": dataset_commits,
         "artifact_commit": artifact_commit,
+        "raw_snapshot_observations": len(frame),
+        "raw_snapshot_profiles": int(
+            frame.loc[frame["source_type"] == "scholar", "scholar_id"].nunique()
+        ),
+        "raw_snapshot_sha256": manifest["snapshot_sha256"],
+        "profile_release_manifest_sha256": release_manifest_sha256,
+        "profile_release_decisions": release_receipt,
+        "held_profile_ids": [
+            item["scholar_id"] for item in release_receipt if item["state"] == "held"
+        ],
+        "held_observation_rows": sum(
+            item["person_observation_rows"]
+            for item in release_receipt
+            if item["state"] == "held"
+        ),
+        "held_source_observation_rows": sum(
+            item["source_observation_rows"]
+            for item in release_receipt
+            if item["state"] == "held"
+        ),
         "people": len(tables["people"]),
         "works": len(tables["works"]),
         "mapped_works": int(mapped_mask.sum()),
@@ -1200,7 +1243,8 @@ def publish_snapshot(
             else 0
         ),
         "reviewed_exclusions_sha256": sha256_file(exclusions_path),
-        "reviewed_metadata_corrections": corrected_count,
+        "reviewed_metadata_corrections": published_correction_count,
+        "validated_metadata_corrections": validated_correction_count,
         "reviewed_metadata_corrections_sha256": sha256_file(corrections_path),
         "reviewed_doi_aliases": len(doi_aliases),
         "reviewed_doi_aliases_sha256": sha256_file(doi_aliases_path),
@@ -1276,6 +1320,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--attribution-reviews", type=Path, default=DEFAULT_ATTRIBUTION_REVIEWS_PATH
     )
     parser.add_argument("--reviewed-contexts", type=Path, default=DEFAULT_CONTEXTS_PATH)
+    parser.add_argument(
+        "--profile-releases", type=Path, default=DEFAULT_PROFILE_RELEASES_PATH
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -1345,6 +1392,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             doi_aliases_path=args.reviewed_doi_aliases,
             attribution_reviews_path=args.attribution_reviews,
             contexts_path=args.reviewed_contexts,
+            profile_releases_path=args.profile_releases,
+            source_cache_dir=args.scholar_cache_dir,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0
