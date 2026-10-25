@@ -19,4 +19,4 @@ All ten exact IDs occur once in the saved raw capture and once in the author cac
 
 Capture row 181 (`jcb81yAAAAAJ:r7QigD7TRWAC`, “A forum for collaboration”) remains unresolved because no exact publication source was identified; this draft does not exclude it. We also retain the separately published 2024 [correction](https://academic.oup.com/mnrasl/article/534/1/L22/7733831) at row 142 and the separate [AMBER](https://ascl.net/2211.003) and [PMFAST](https://ascl.net/1102.008) software records at rows 137 and 164. The apparent titles of those records overlap articles but identify different citable objects.
 
-This draft does not build, upload, or publish a dataset. Source and producer drafts should merge before the centrally coordinated snapshot rebuild.
+This draft does not build, upload, or publish a dataset. The producer review PR #147 must merge to `main` before source PR #146 enters `automation/map-snapshot`, because a source-branch merge triggers snapshot upload. Both remain drafts pending coordinated review.
