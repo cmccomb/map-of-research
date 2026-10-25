@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 1182
+    assert len(exclusions) == 1188
     assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
@@ -43,7 +43,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
-    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 453
+    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 459
     assert sum(key[0] == "0e1jwkkAAAAJ" for key in exclusions) == 23
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
@@ -108,7 +108,7 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
     assert len({row["author_pub_id"] for row in rows}) == 918
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     proposed = [row for row in rows if row["status"].startswith("proposed_")]
-    assert len(proposed) == 445
+    assert len(proposed) == 451
     for row in rows:
         key = ("bC4aq-4AAAAJ", row["author_pub_id"])
         if row["status"].startswith("proposed_") or row["status"] == "already_excluded":
@@ -128,7 +128,7 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
     primary = [
         row for row in proposed if row["status"] == "proposed_other_person_primary_work"
     ]
-    assert len(primary) == 101
+    assert len(primary) == 104
     assert all(row["evidence_url"].startswith("https://") for row in primary)
     by_index = {int(row["capture_index"]): row for row in rows}
     assert {
@@ -160,6 +160,40 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
             "proposed_other_person_primary_work",
         ),
     }
+    assert {
+        index: (by_index[index]["author_pub_id"], by_index[index]["status"])
+        for index in (129, 442, 447, 802, 892, 893, 896)
+    } == {
+        129: (
+            "bC4aq-4AAAAJ:GUYAmugLYisC",
+            "proposed_other_person_primary_work",
+        ),
+        442: (
+            "bC4aq-4AAAAJ:urP0JZOBBUsC",
+            "proposed_other_person_primary_work",
+        ),
+        447: (
+            "bC4aq-4AAAAJ:jtI9f0ekYq0C",
+            "proposed_other_person_primary_work",
+        ),
+        802: ("bC4aq-4AAAAJ:sSrBHYA8nusC", "cmu_primary_work_retained"),
+        892: (
+            "bC4aq-4AAAAJ:AXPGKjj_ei8C",
+            "proposed_corrupted_duplicate_primary",
+        ),
+        893: (
+            "bC4aq-4AAAAJ:BqipwSGYUEgC",
+            "proposed_corrupted_duplicate_primary",
+        ),
+        896: (
+            "bC4aq-4AAAAJ:XiVPGOgt02cC",
+            "proposed_corrupted_duplicate_primary",
+        ),
+    }
+    assert all(
+        by_index[index]["status"] == "cmu_primary_work_retained"
+        for index in (94, 359, 897)
+    )
     assert all(
         by_index[index]["status"] == "unresolved_attribution_hold"
         for index in (212, 213, 219, 222, 225)

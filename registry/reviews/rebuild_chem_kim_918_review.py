@@ -619,6 +619,9 @@ OTHER_PRIMARY_ID_GUARDS = {
     324: "bC4aq-4AAAAJ:TeJ9juy8vcMC",
     371: "bC4aq-4AAAAJ:Vr2j17o0sqMC",
     423: "bC4aq-4AAAAJ:cOfwuRB03ygC",
+    129: "bC4aq-4AAAAJ:GUYAmugLYisC",
+    442: "bC4aq-4AAAAJ:urP0JZOBBUsC",
+    447: "bC4aq-4AAAAJ:jtI9f0ekYq0C",
 }
 
 OTHER_PRIMARY.update(
@@ -1358,6 +1361,53 @@ FOLLOWUP_FULL_AUTHOR_VENUES = {
     324: "Clinical & Experimental Immunology 205 (1), 75-88, 2021",
     371: "Sleep 43 (2), zsz224, 2020",
     423: "Optics express 25 (4), 3469-3480, 2017",
+}
+
+NEXT_EXACT_AUTHOR_PRIMARY = {
+    129: (
+        "Prevalence of multiple sclerosis in Korea",
+        2010,
+        "Ho Jin Kim",
+        "10.1212/WNL.0b013e3181f88191",
+        "https://www.neurology.org/doi/10.1212/WNL.0b013e3181f88191",
+        "original Neurology article's full-name correspondence",
+        "The exact Neurology 75:1432-1438 article names H. J. Kim in the "
+        "byline and identifies correspondent Ho Jin Kim at National Cancer "
+        "Center and hojinkim@ncc.re.kr. The NLM author and collaborator "
+        "record corroborates his full name.",
+    ),
+    442: (
+        "Tumefactive demyelination, an uncommon form of tacrolimus neurotoxicity",
+        2011,
+        "Ho Jin Kim",
+        "10.1212/WNL.0b013e31820c30af",
+        "https://www.neurology.org/doi/10.1212/WNL.0b013e31820c30af",
+        "original Neurology article's full-name correspondence",
+        "The exact Neurology 76:672-674 article identifies its last "
+        "H. J. Kim author as Dr. Ho Jin Kim, National Cancer Center "
+        "Neurology correspondent at hojinkim@ncc.re.kr.",
+    ),
+    447: (
+        "Decentralized nonlinear model predictive control of multiple "
+        "flying robots in dynamic environments",
+        2003,
+        "H. Jin Kim",
+        "10.1109/CDC.2003.1271710",
+        "https://people.eecs.berkeley.edu/~sastry/pubs/PDFs%20of%20Pubs2000-2005/"
+        "Publications%20of%20Postdocs/ShimDavid/ShimDecentralized2003.pdf",
+        "Berkeley original IEEE paper, KAIST exact-output record, and Sastry CV",
+        "The original 42nd IEEE CDC paper at pages 3621-3626 spells its "
+        "second author H. Jin Kim at Berkeley EECS; KAIST's exact-output "
+        "record independently identifies him. Coauthor Shankar Sastry's "
+        "CV gives the saved longer title for that same 2003 three-author, "
+        "six-page conference work.",
+    ),
+}
+OTHER_PRIMARY.update(NEXT_EXACT_AUTHOR_PRIMARY)
+NEXT_EXACT_AUTHOR_VENUES = {
+    129: "Neurology 75 (16), 1432-1438, 2010",
+    442: "Neurology 76 (7), 672-674, 2011",
+    447: "IEEE Conference on Decision and Control, 5, 2003",
 }
 
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
@@ -2418,6 +2468,26 @@ CMU_CHAPTERS_AND_PROCEEDINGS_PRIMARY = {
 }
 CMU_PRIMARY.update(CMU_CHAPTERS_AND_PROCEEDINGS_PRIMARY)
 
+# The original society program and publisher-deposited DOI name the CMU
+# chemist in this published Biophysical Journal meeting abstract.
+CMU_NEXT_PUBLISHER_FULLNAME_PRIMARY = {
+    802: (
+        "Gestation of a Glu Plasminogen Supra Fold via Molecular Dynamics Simulation",
+        2015,
+        "https://api.crossref.org/works/10.1016%2Fj.bpj.2014.11.1162",
+        "Elsevier publisher-deposited full Hyung J. Kim byline; original "
+        "Biophysical Society 2015 program poster 1052-Pos Board B3 names "
+        "Hyunjin Kim, Hyung J. Kim, and Miguel Llinás; CMU Kim faculty "
+        "page documents this plasminogen/Llinás collaboration and CMU Kim "
+        "group page lists Hyunjin Kim; Biophysical Journal 108(2):210a is a "
+        "published meeting abstract, not a full article",
+    ),
+}
+CMU_PRIMARY.update(CMU_NEXT_PUBLISHER_FULLNAME_PRIMARY)
+CMU_NEXT_PUBLISHER_VENUES = {
+    802: "Biophysical Journal 108 (2), 210a, 2015",
+}
+
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
     13: "bC4aq-4AAAAJ:f2IySw72cVMC",
@@ -2543,6 +2613,12 @@ CMU_PRIMARY_ID_GUARDS.update(
     }
 )
 
+CMU_PRIMARY_ID_GUARDS.update(
+    {
+        802: "bC4aq-4AAAAJ:sSrBHYA8nusC",
+    }
+)
+
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     13: "10.1021/acsnano.6b03964",
     18: "10.1021/acs.jpcb.5b09196",
@@ -2658,6 +2734,7 @@ CMU_PRIMARY_CANONICAL_DOI_OVERRIDE = {
     817: "10.1039/9781849737753-00260",
     888: "10.1063/1.1301533",
     897: "10.1117/12.306113",
+    802: "10.1016/j.bpj.2014.11.1162",
     903: "10.1007/978-94-011-0786-0_21",
     904: "10.1016/b978-0-444-89191-4.50010-0",
 }
@@ -2691,6 +2768,54 @@ CORRUPTED_DUPLICATE_PRIMARY = {
         1985,
         "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.32.389",
         "bC4aq-4AAAAJ:SP6oXDckpogC",
+    ),
+}
+
+# Three late, uncited Scholar observations repeat already confirmed CMU works.
+# Their source titles have a category prefix or a second SPIE rendering, but
+# publisher DOI, author sequence, year, volume, and pages identify one work.
+CMU_CONFIRMED_DUPLICATE_PRIMARY = {
+    892: (
+        "bC4aq-4AAAAJ:AXPGKjj_ei8C",
+        "Condensed Phase Dynamics, Structure, and Thermodynamics: Spectroscopy, "
+        "Reactions, and Relaxation-Molecular dynamics simulation study of water "
+        "near critical conditions. II\xa0…",
+        "1999",
+        "Journal of Chemical Physics 110 (19), 9656-9665, 1999",
+        "BD Bursulaya, HJ Kim",
+        359,
+        "bC4aq-4AAAAJ:QIV2ME_5wuYC",
+        "Molecular dynamics simulation study of water near critical conditions. "
+        "II. Dynamics and spectroscopy",
+        "10.1063/1.478952",
+        "https://api.crossref.org/works/10.1063%2F1.478952",
+    ),
+    893: (
+        "bC4aq-4AAAAJ:BqipwSGYUEgC",
+        "Computer simulation study of electronic spectroscopy in water",
+        "1998",
+        "Laser Techniques for Condensed-Phase and Biological Systems 3273, 90, 1998",
+        "MHJ Kim, MBD Bursulaya, MJ Jeon, MDA Zichi",
+        897,
+        "bC4aq-4AAAAJ:bnK-pcrLprsC",
+        "Computer simulation study of electronic spectroscopy in water [3273-14]",
+        "10.1117/12.306113",
+        "https://api.crossref.org/works/10.1117%2F12.306113",
+    ),
+    896: (
+        "bC4aq-4AAAAJ:XiVPGOgt02cC",
+        "Condensed Phase Dynamics, Structure, and Thermodynamics: Spectroscopy, "
+        "Reactions, and Relaxation-Spectroscopic and dielectric properties of "
+        "liquid water: A molecular dynamics\xa0…",
+        "1998",
+        "Journal of Chemical Physics 109 (12), 4911-4919, 1998",
+        "BD Bursulaya, HJ Kim",
+        94,
+        "bC4aq-4AAAAJ:eQOLeE2rZwMC",
+        "Spectroscopic and dielectric properties of liquid water: A molecular "
+        "dynamics simulation study",
+        "10.1063/1.477102",
+        "https://api.crossref.org/works/10.1063%2F1.477102",
     ),
 }
 
@@ -2745,6 +2870,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     rows = capture["works"]
     if len(rows) != 918 or capture["more_remain"]:
         raise ValueError("Expected completed 918-row Kim capture")
+    rows_by_index = {row["index"]: row for row in rows}
+    if len(rows_by_index) != 918:
+        raise ValueError("Duplicate source capture row indices")
     profiles = {item["orcid"]: item for item in evidence["profiles"]}
     cmu = orcid_index(profiles[CMU_ORCID])
     knu = orcid_index(profiles[KNU_ORCID])
@@ -2870,6 +2998,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or (
                     index in FOLLOWUP_FULL_AUTHOR_VENUES
                     and row["venue"] != FOLLOWUP_FULL_AUTHOR_VENUES[index]
+                )
+                or (
+                    index in NEXT_EXACT_AUTHOR_VENUES
+                    and row["venue"] != NEXT_EXACT_AUTHOR_VENUES[index]
                 )
                 or (
                     index == 88
@@ -3068,6 +3200,55 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     else "2026-10-24",
                 )
             )
+        elif index in CMU_CONFIRMED_DUPLICATE_PRIMARY:
+            (
+                expected_id,
+                expected_title,
+                expected_year,
+                expected_venue,
+                expected_authors,
+                retained_index,
+                retained_pub_id,
+                retained_title,
+                doi,
+                evidence_url,
+            ) = CMU_CONFIRMED_DUPLICATE_PRIMARY[index]
+            retained = rows_by_index[retained_index]
+            retained_doi = CMU_PRIMARY_CANONICAL_DOI_OVERRIDE.get(
+                retained_index, CMU_GROUP_PUBLISHER_DOI_GUARDS.get(retained_index)
+            )
+            if (
+                pub_id != expected_id
+                or title != expected_title
+                or year != expected_year
+                or row["venue"] != expected_venue
+                or row["authors"] != expected_authors
+                or row["citation_count"]
+                or scholar_pub_id(retained) != retained_pub_id
+                or retained["title"] != retained_title
+                or retained["year"] != expected_year
+                or retained_index not in CMU_PRIMARY
+                or retained_doi != doi
+            ):
+                raise ValueError(f"CMU publisher duplicate changed at row {index}")
+            status = "proposed_corrupted_duplicate_primary"
+            evidence_source = "publisher-deposited DOI and full author record"
+            additions.append(
+                decision(
+                    pub_id,
+                    "corrupted_duplicate",
+                    (
+                        f"This uncited Scholar observation repeats confirmed "
+                        f"observation {retained_pub_id}: publisher DOI {doi} "
+                        "gives one work with matching author sequence, year, "
+                        "volume, and starting page. The publisher names "
+                        "Hyung J. Kim; this "
+                        "second Scholar ID is a redundant rendering."
+                    ),
+                    evidence_url,
+                    verified_at="2026-10-25",
+                )
+            )
         elif index in CMU_ORCID_DOI_HOLD:
             expected_title, expected_year, doi, evidence_url = CMU_ORCID_DOI_HOLD[index]
             if title != expected_title or year != str(expected_year):
@@ -3089,6 +3270,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or (
                     index in CMU_PRIMARY_ID_GUARDS
                     and pub_id != CMU_PRIMARY_ID_GUARDS[index]
+                )
+                or (
+                    index in CMU_NEXT_PUBLISHER_VENUES
+                    and row["venue"] != CMU_NEXT_PUBLISHER_VENUES[index]
                 )
             ):
                 raise ValueError(f"CMU primary match changed at capture row {index}")
@@ -3165,22 +3350,22 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 121,
+        "cmu_primary_work_retained": 122,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 101,
+        "proposed_other_person_primary_work": 104,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 339,
+        "proposed_corrupted_duplicate_primary": 7,
+        "unresolved_attribution_hold": 332,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 445 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 451 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
