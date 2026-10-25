@@ -36,6 +36,51 @@ _BREIVIK_ROW116_REPAIR_LEDGER = Path(
 _PHYSICS_SVG_TITLE_REPAIR_LEDGER = Path(
     "status/physics-eight-svg-title-repairs-2026-10-25.json"
 )
+_PHYSICS_LEGACY_SVG_TITLE_REPAIR_LEDGER = Path(
+    "status/physics-seven-legacy-svg-title-repairs-2026-10-25.json"
+)
+_PHYSICS_LEGACY_SVG_SCHOLARS = frozenset(
+    {
+        "8AqWr_4AAAAJ",
+        "JbSQsXAAAAAJ",
+        "jrRg4PAAAAAJ",
+        "jcb81yAAAAAJ",
+        "xKrmD5IAAAAJ",
+        "O0NnwB0AAAAJ",
+        "79uTAy8AAAAJ",
+    }
+)
+_KATOCH_CACHE_REPAIR_LEDGER = Path(
+    "status/physics-katoch-penco-cache-repairs-2026-10-24.json"
+)
+_KATOCH_SOURCE_HASHES = (
+    "3e28b68e0d98fbf0a6e14654745d9140765369aa69ba7fc5b5c96b5712bdf485",
+    "0155fe015c516f3c271e6d7021025758dee1319b05856d42f04b0cda4777157a",
+)
+_KATOCH_LEGACY_REPAIRS = {
+    (22, "title"): {
+        "author_pub_id": "xKrmD5IAAAAJ:2osOgNQ5qMEC",
+        "captured_value": (
+            "Low Bias Electron Scattering in Structure-Identified Single Wall "
+            "Carbon Nanotubes:<? format?> Role of Substrate Polar Phonons"
+        ),
+        "repaired_value": (
+            "Low Bias Electron Scattering in Structure-Identified Single Wall "
+            "Carbon Nanotubes: Role of Substrate Polar Phonons"
+        ),
+        "evidence_url": (
+            "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.146601"
+        ),
+    },
+    (40, "author"): {
+        "author_pub_id": "xKrmD5IAAAAJ:WF5omc3nYNoC",
+        "captured_value": "J Katoch, D Le, S Singh, R Rao, TSRM Ishigami",
+        "repaired_value": ("J Katoch, D Le, S Singh, R Rao, TS Rahman, M Ishigami"),
+        "evidence_url": (
+            "https://api.crossref.org/works/10.1088%2F0953-8984%2F28%2F11%2F115301"
+        ),
+    },
+}
 _TINA_RAW_TITLE = (
     "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
 )
@@ -299,7 +344,12 @@ def _is_reviewed_svg_title_repair(
         or cache_title != html_title
     ):
         return False
-    ledger_path = captures_dir.parent.parent / _PHYSICS_SVG_TITLE_REPAIR_LEDGER
+    legacy = scholar_id in _PHYSICS_LEGACY_SVG_SCHOLARS
+    ledger_path = captures_dir.parent.parent / (
+        _PHYSICS_LEGACY_SVG_TITLE_REPAIR_LEDGER
+        if legacy
+        else _PHYSICS_SVG_TITLE_REPAIR_LEDGER
+    )
     if not ledger_path.is_file():
         return False
     try:
@@ -310,6 +360,16 @@ def _is_reviewed_svg_title_repair(
         not isinstance(ledger, dict)
         or ledger.get("schema_version") != 1
         or ledger.get("review_state") != "saved_html_svg_title_repair"
+        or (
+            legacy
+            and (
+                ledger.get("scope") != "seven_published_legacy_physics_profiles"
+                or ledger.get("raw_capture_and_receipt_unchanged") is not True
+                or ledger.get("profile_count") != 7
+                or ledger.get("svg_mismatch_count") != 61
+                or ledger.get("cache_title_change_count") != 59
+            )
+        )
         or not isinstance(ledger.get("entries"), list)
         or not ledger["entries"]
     ):
@@ -343,6 +403,66 @@ def _is_reviewed_svg_title_repair(
         and repair["repaired_value"] == html_title
         and repair["source_json_sha256"] == receipt.get("source_json_sha256")
         and repair["source_html_sha256"] == receipt.get("source_html_sha256")
+    )
+
+
+def _is_reviewed_katoch_cache_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    field: str,
+    source_value: Any,
+    cache_value: Any,
+    receipt: dict[str, Any],
+    captures_dir: Path,
+) -> bool:
+    """Allow two preexisting, exact Katoch repairs recorded in source."""
+
+    if (
+        scholar_id != "xKrmD5IAAAAJ"
+        or (index, field) not in _KATOCH_LEGACY_REPAIRS
+        or (
+            receipt.get("source_json_sha256"),
+            receipt.get("source_html_sha256"),
+        )
+        != _KATOCH_SOURCE_HASHES
+    ):
+        return False
+    ledger_path = captures_dir.parent.parent / _KATOCH_CACHE_REPAIR_LEDGER
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "source_reviewed_cache_repaired"
+        or ledger.get("raw_capture_and_receipt_unchanged") is not True
+        or not isinstance(ledger.get("capture_receipts"), dict)
+        or ledger["capture_receipts"].get(scholar_id)
+        != "status/browser-capture-physics-jyoti-katoch-2026-10-24.json"
+        or not isinstance(ledger.get("repairs"), list)
+    ):
+        return False
+    matches = [
+        item
+        for item in ledger["repairs"]
+        if isinstance(item, dict)
+        and item.get("scholar_id") == scholar_id
+        and item.get("capture_row") == index
+        and item.get("author_pub_id") == citation_id
+        and item.get("cache_field") == field
+    ]
+    if len(matches) != 1:
+        return False
+    item = matches[0]
+    expected = _KATOCH_LEGACY_REPAIRS[index, field]
+    return (
+        item.get("captured_value") == source_value
+        and item.get("repaired_value") == cache_value
+        and all(item.get(key) == value for key, value in expected.items())
     )
 
 
@@ -459,6 +579,16 @@ def validate_complete_receipt(
                     cached_title,
                     captures_dir,
                 )
+                and not _is_reviewed_katoch_cache_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    "title",
+                    source_title,
+                    cached_title,
+                    receipt,
+                    captures_dir,
+                )
             )
             or (
                 _normalized(cached_row.get("author"))
@@ -469,6 +599,16 @@ def validate_complete_receipt(
                     citation_id,
                     source_row.get("authors"),
                     cached_row.get("author"),
+                    captures_dir,
+                )
+                and not _is_reviewed_katoch_cache_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    "author",
+                    source_row.get("authors"),
+                    cached_row.get("author"),
+                    receipt,
                     captures_dir,
                 )
             )

@@ -5,6 +5,7 @@ from pathlib import Path
 import pandas
 import pytest
 
+from map_of_research import coverage as coverage_module
 from map_of_research import publisher
 from map_of_research.coverage import (
     main,
@@ -846,6 +847,121 @@ def _svg_title_repair_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
         },
     )
     return cache, captures, ledger
+
+
+def test_legacy_svg_ledger_is_selected_and_exactly_bound(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    cache, captures, prior_ledger = _svg_title_repair_fixture(tmp_path)
+    ledger = prior_ledger.with_name(
+        "physics-seven-legacy-svg-title-repairs-2026-10-25.json"
+    )
+    review = json.loads(prior_ledger.read_text())
+    review.update(
+        {
+            "scope": "seven_published_legacy_physics_profiles",
+            "raw_capture_and_receipt_unchanged": True,
+            "profile_count": 7,
+            "svg_mismatch_count": 61,
+            "cache_title_change_count": 59,
+        }
+    )
+    atomic_write_json(ledger, review)
+    monkeypatch.setattr(
+        coverage_module, "_PHYSICS_LEGACY_SVG_SCHOLARS", frozenset({"alphaAAAAJ"})
+    )
+    validate_complete_receipt("alphaAAAAJ", cache, captures)
+    for field, value in (
+        ("scope", "other"),
+        ("raw_capture_and_receipt_unchanged", False),
+        ("profile_count", 6),
+        ("svg_mismatch_count", 60),
+        ("cache_title_change_count", 58),
+    ):
+        altered = dict(review)
+        altered[field] = value
+        atomic_write_json(ledger, altered)
+        with pytest.raises(ValueError, match="Cached row differs"):
+            validate_complete_receipt("alphaAAAAJ", cache, captures)
+    atomic_write_json(ledger, review)
+    review["entries"][0]["source_html_sha256"] = "0" * 64
+    atomic_write_json(ledger, review)
+    with pytest.raises(ValueError, match="Cached row differs"):
+        validate_complete_receipt("alphaAAAAJ", cache, captures)
+
+
+def test_katoch_prior_repairs_require_exact_row_source_and_ledger(
+    tmp_path: Path,
+) -> None:
+    captures = tmp_path / "data" / "captures"
+    captures.mkdir(parents=True)
+    ledger = tmp_path / "status" / "physics-katoch-penco-cache-repairs-2026-10-24.json"
+    ledger.parent.mkdir()
+    scholar_id = "xKrmD5IAAAAJ"
+    expected = coverage_module._KATOCH_LEGACY_REPAIRS[22, "title"]
+    entry = {
+        "scholar_id": scholar_id,
+        "capture_row": 22,
+        "cache_field": "title",
+        **expected,
+    }
+    review = {
+        "schema_version": 1,
+        "review_state": "source_reviewed_cache_repaired",
+        "raw_capture_and_receipt_unchanged": True,
+        "capture_receipts": {
+            scholar_id: "status/browser-capture-physics-jyoti-katoch-2026-10-24.json"
+        },
+        "repairs": [entry],
+    }
+    atomic_write_json(ledger, review)
+    receipt = {
+        "source_json_sha256": coverage_module._KATOCH_SOURCE_HASHES[0],
+        "source_html_sha256": coverage_module._KATOCH_SOURCE_HASHES[1],
+    }
+
+    def check() -> bool:
+        return coverage_module._is_reviewed_katoch_cache_repair(
+            scholar_id,
+            22,
+            expected["author_pub_id"],
+            "title",
+            expected["captured_value"],
+            expected["repaired_value"],
+            receipt,
+            captures,
+        )
+
+    assert check()
+    ledger.unlink()
+    assert not check()
+    ledger.write_text("{invalid")
+    assert not check()
+    atomic_write_json(ledger, [])
+    assert not check()
+    atomic_write_json(ledger, {**review, "schema_version": 2})
+    assert not check()
+    atomic_write_json(ledger, review)
+    assert check()
+    receipt["source_json_sha256"] = "0" * 64
+    assert not check()
+    receipt["source_json_sha256"] = coverage_module._KATOCH_SOURCE_HASHES[0]
+    review["repairs"][0]["repaired_value"] = "unreviewed"
+    atomic_write_json(ledger, review)
+    assert not check()
+    review["repairs"].append(dict(entry))
+    atomic_write_json(ledger, review)
+    assert not check()
+    assert not coverage_module._is_reviewed_katoch_cache_repair(
+        scholar_id,
+        23,
+        expected["author_pub_id"],
+        "title",
+        expected["captured_value"],
+        expected["repaired_value"],
+        receipt,
+        captures,
+    )
 
 
 def test_receipt_accepts_exact_ledger_listed_saved_html_svg_title(
