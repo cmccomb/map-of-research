@@ -340,9 +340,9 @@
       },
       "corrected": {
         "year": 2021,
-        "venue": "SETAC North America 42nd Annual Meeting Abstract Book, 206, 2021"
+        "venue": "SETAC North America 42nd Annual Meeting Abstract Book, 2021"
       },
-      "basis": "SETAC dates its North America 42nd Annual Meeting abstract book November 14, 2021; its original book reproduced on Scribd has this exact FluoroMatch abstract as 04.08.02 on page 206 with C. A. McDonough in the byline. The Scholar row lacks a year and has a placeholder venue page 0. Its source title remains unchanged.",
+      "basis": "The Google Scholar row identifies the SETAC North America 42nd Annual Meeting but lacks a year and gives venue page 0. SETAC's official abstract-book listing dates the meeting book November 14, 2021. Correct only the effective year and book venue without asserting an abstract number, page, or author byline from the inaccessible book body; preserve the Scholar title and raw record.",
       "evidence_url": "https://www.setac.org/resource/setac-na-virtual-2021-abstract-book.html",
       "verified_at": "2026-10-25"
     },
