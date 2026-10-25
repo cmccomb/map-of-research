@@ -74,5 +74,14 @@ attributable account or another complete source, decide version aliases and
 output types, and preserve every raw observation.
 
 `manifest.json` records the SHA-256 of every frozen source file and explicitly
-sets `release_eligible: false`. This PR adds review evidence only; it does not
-change the collection, snapshot, dataset, or publishing code.
+sets `release_eligible: false`. The review and staged loader leave the
+collection, snapshot, dataset, and publishing code unchanged.
+
+The separate, stacked [`load_staged.py`](load_staged.py) loader turns the frozen
+review into 66 source-only observations. It retains the 63 citations exactly as
+displayed without assigning a normalized year, DOI, or full byline. The two
+discussion records retain publisher online years and 2024 issue years; the
+preprint retains its 2017 arXiv and 2018 SSRN dates without choosing a single
+canonical year. Every emitted row is release-held and explicitly ineligible
+for map and collaboration edges. No production snapshot code imports this
+loader.
