@@ -156,14 +156,24 @@ def validate_person_hold_losses(
     current = list(current_profiles)
     approved: set[tuple[str, str, str, str]] = set()
     for hold in holds:
-        if hold.prior_revision != prior_revision:
-            raise ValueError("Person-publication hold parent revision differs")
         person_rows = [
             row for row in previous if row.get("person_id") == hold.person_id
         ]
-        if len(person_rows) != hold.expected_source_rows or any(
-            row.get("person_id") == hold.person_id for row in current
-        ):
+        if any(row.get("person_id") == hold.person_id for row in current):
+            raise ValueError("Person-publication hold prior or current rows differ")
+        if hold.prior_revision != prior_revision:
+            if person_rows:
+                raise ValueError("Person-publication hold prior or current rows differ")
+            for doi, _, _, work_id, _ in hold.prior_observations:
+                work = works.get(work_id)
+                if (
+                    work is None
+                    or work.get("doi") != doi
+                    or not work.get("map_eligible")
+                ):
+                    raise ValueError("Person-publication hold successor works differ")
+            continue
+        if len(person_rows) != hold.expected_source_rows:
             raise ValueError("Person-publication hold prior or current rows differ")
         prior_by_id = {str(row.get("author_pub_id")): row for row in person_rows}
         if len(prior_by_id) != hold.expected_source_rows:
@@ -205,6 +215,7 @@ def select_released_person_observations(
     holds: tuple[PersonPublicationHold, ...],
     *,
     source_snapshot_sha256: str,
+    prior_revision: str,
 ) -> tuple[Any, list[dict[str, Any]], set[str]]:
     """Remove only reviewed held owners after exact raw-row validation."""
 
@@ -235,7 +246,10 @@ def select_released_person_observations(
             for row in source.itertuples(index=False)
         )
         if (
-            hold.source_snapshot_sha256 != source_snapshot_sha256
+            (
+                hold.prior_revision == prior_revision
+                and hold.source_snapshot_sha256 != source_snapshot_sha256
+            )
             or len(source) != hold.expected_source_rows
             or source["source_type"].ne("curated_verified").any()
             or actual_observations != sorted(hold.source_observations)
