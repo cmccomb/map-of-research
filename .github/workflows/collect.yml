@@ -80,7 +80,8 @@ jobs:
           echo "exit_code=$collector_exit_code" >> "$GITHUB_OUTPUT"
           echo "refreshed_profiles=$refreshed_profiles" >> "$GITHUB_OUTPUT"
       - name: Build and validate changed snapshot
-        if: ${{ steps.collect.outputs.refreshed_profiles != '0' || steps.registry.outputs.changed == 'true' }}
+        id: snapshot
+        if: ${{ steps.collect.outputs.exit_code == '0' && (steps.collect.outputs.refreshed_profiles != '0' || steps.registry.outputs.changed == 'true') }}
         working-directory: snapshot
         run: |
           map-validate-scholar-coverage \
@@ -89,20 +90,23 @@ jobs:
           map-validate-snapshot \
             --snapshot snapshots/cmu-engineering-publications.parquet \
             --manifest snapshots/cmu-engineering-publications.parquet.manifest.json
-      - name: Record cache, state, and receipts
+      - name: Record validated snapshot or failure receipt
         if: ${{ always() }}
         working-directory: snapshot
+        env:
+          COLLECTOR_EXIT_CODE: ${{ steps.collect.outputs.exit_code }}
+          SNAPSHOT_OUTCOME: ${{ steps.snapshot.outcome }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add registry data status snapshots
+          python ../source/scripts/stage_collector_result.py \
+            --collector-exit-code "$COLLECTOR_EXIT_CODE" \
+            --snapshot-outcome "$SNAPSHOT_OUTCOME"
           if git diff --cached --quiet; then
             exit 0
           fi
           git commit -m "Record bounded Scholar collection [skip ci]"
           git push origin HEAD:automation/map-snapshot
-      - name: Surface collection failure after preserving state
-        if: ${{ steps.collect.outputs.exit_code != '0' }}
-        env:
-          COLLECTOR_EXIT_CODE: ${{ steps.collect.outputs.exit_code }}
-        run: exit "$COLLECTOR_EXIT_CODE"
+      - name: Surface collection or snapshot validation failure
+        if: ${{ always() && (steps.collect.outputs.exit_code != '0' || steps.snapshot.outcome == 'failure') }}
+        run: exit 1

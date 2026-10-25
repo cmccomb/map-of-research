@@ -92,8 +92,11 @@ visible-profile browser receipt. The check compares all cached citation IDs
 and visible row text with the saved Scholar JSON and HTML, verifies their
 checksums and disabled final Show More control, and compares the upload's raw
 Scholar rows with those caches. A bounded collector result without that
-receipt cannot enter a new published snapshot. The frozen baseline also keeps
-all 49,687 Scholar citation IDs already present in that snapshot. After a new
+receipt cannot enter a new published snapshot. If hosted collection or source
+validation fails, its workflow commits only `status/last-collection.json` with
+the `snapshot_validation` failure reason; unvalidated caches and snapshots stay
+out of the source branch. The frozen baseline also keeps all 49,687 Scholar
+citation IDs already present in that snapshot. After a new
 complete profile is published and verified, its citation IDs should be added
 to the reviewed retention baseline before a later recapture; the frozen
 baseline does not track later publications automatically.
