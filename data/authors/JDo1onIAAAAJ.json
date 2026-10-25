@@ -258,5 +258,18 @@
       "capture_row_index": 18,
       "citation_count_display": ""
     }
-  ]
+  ],
+  "browser_capture": {
+    "method": "chrome_direct_profile",
+    "profile_url": "https://scholar.google.com/citations?user=JDo1onIAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-25T01:35:35.546000+00:00",
+    "source_json_filename": "mohamed-bouaouina-visible-23-2026-10-24.json",
+    "source_json_sha256": "565a2a69c45e7afc17b0d4f8aa6b76eb6fb2fe82348b52a4f207bd1298a726ab",
+    "source_html_filename": "mohamed-bouaouina-visible-23-2026-10-24.html",
+    "source_html_sha256": "b84da72fbe694a39dff3cf8d0cb3a60117801ed78fa71d2e90dc1b4082c3dccb",
+    "displayed_count": 23,
+    "limit": 5000,
+    "more_remain": false,
+    "coverage": "complete_visible_profile"
+  }
 }
