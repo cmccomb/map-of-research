@@ -1789,3 +1789,37 @@ def test_primary_home_rejects_invalid_evidence_or_type(
     )
     with pytest.raises(ValueError, match=message):
         load_registry(*paths)
+
+
+@pytest.mark.parametrize(
+    "person_id",
+    [
+        "person-deborahbrandon-e4ba69a1",
+        "person-dmitrykramkov-b6fe0656",
+        "person-layanelhajj-2e531a3b",
+        "person-matthewrosenzweig-94bdde39",
+        "person-zelealemyilma-fb547edb",
+    ],
+)
+def test_five_verified_math_scholars_have_roster_backed_primary_home(
+    person_id: str,
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    roster_url = "https://www.cmu.edu/math/people/faculty/index.html"
+    assert person.primary_department_id == "math"
+    assert person.primary_department_source_url == roster_url
+    assert person.primary_department_verified_at == "2026-10-25"
+    assert person.primary_department_basis == "reviewed"
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == {"math"}
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.school_id) == (
+        "department",
+        "math",
+        "mcs",
+    )
+    assert home.published_fields()["primary_department_id"] == "math"

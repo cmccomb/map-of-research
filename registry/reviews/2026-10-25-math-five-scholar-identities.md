@@ -19,3 +19,14 @@ are independent cross-checks. The visible counts above are identity-review
 observations, **not saved publication captures**. Assigning an ID does not make
 its works publishable. Each whole visible profile still needs a saved capture,
 per-row disposition review, and validated source snapshot before release.
+
+The [official CMU Mathematical Sciences faculty roster](https://www.cmu.edu/math/people/faculty/index.html)
+places all five people in that department: Kramkov and Rosenzweig on the tenure
+track, El Hajj and Yilma on the CMU Qatar teaching roster, and Brandon on the
+emeriti roster. Each has an included `math` membership and no competing
+included department in the canonical registry. We therefore assign
+`primary_department_id=math`, with that official roster as the primary source,
+`2026-10-25` verification, and `reviewed` basis. The published primary academic
+home derives as the Mathematical Sciences department in Mellon College of
+Science; the Qatar location and appointment categories remain in the source
+memberships and are not treated as separate departments.
