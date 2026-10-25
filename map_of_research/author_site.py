@@ -128,7 +128,8 @@ def load_author_site_rows(path: Path, registry: Registry) -> list[dict[str, obje
     if output_types != {44: "thesis"}:
         raise ValueError("Author-site output-type review changed")
     memberships = [
-        item for item in registry.memberships
+        item
+        for item in registry.memberships
         if item.person_id == IYER_PERSON_ID and item.included
     ]
     department_ids = sorted({item.department_id for item in memberships})
@@ -193,8 +194,7 @@ def load_author_site_rows(path: Path, registry: Registry) -> list[dict[str, obje
                 )
                 or (
                     index == 22
-                    and review["title_match"]
-                    != "author_manuscript_matches_publisher"
+                    and review["title_match"] != "author_manuscript_matches_publisher"
                 )
             ):
                 raise ValueError(f"Author-site DOI source review changed: {index}")

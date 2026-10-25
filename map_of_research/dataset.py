@@ -153,8 +153,7 @@ def _source_values(records: list[Any], field: str) -> list[Any]:
         values = [
             getattr(record, field)
             for record in records
-            if record.source_type == source_type
-            and _clean_text(getattr(record, field))
+            if record.source_type == source_type and _clean_text(getattr(record, field))
         ]
         if values:
             return values

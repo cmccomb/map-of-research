@@ -350,9 +350,11 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot has no publication rows")
     if frame[["scholar_id", "author_pub_id"]].isnull().any().any():
         raise ValueError("Snapshot publication identities cannot be null")
-    if not frame["source_type"].isin(
-        {"scholar", "curated_verified", "author_site"}
-    ).all():
+    if (
+        not frame["source_type"]
+        .isin({"scholar", "curated_verified", "author_site"})
+        .all()
+    ):
         raise ValueError("Snapshot contains an unknown source type")
     if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
         raise ValueError("Scholar observations need a Scholar identity")
@@ -483,7 +485,8 @@ def build_snapshot(
         "curated_work_rows": int((frame["source_type"] == "curated_verified").sum()),
         "author_site_capture_file": author_site_path.name if author_site_path else "",
         "author_site_capture_sha256": sha256_file(author_site_path)
-        if author_site_path else "",
+        if author_site_path
+        else "",
         "author_site_rows": int((frame["source_type"] == "author_site").sum()),
         "cached_profile_ids_sha256": hashlib.sha256(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
@@ -558,11 +561,10 @@ def validate_snapshot(
         or manifest["curated_works_sha256"] != current_curated_sha
     ):
         raise ValueError("Curated work source does not match the snapshot manifest")
-    if (
-        manifest["author_site_capture_file"]
-        != (author_site_path.name if author_site_path else "")
-        or manifest["author_site_capture_sha256"]
-        != (sha256_file(author_site_path) if author_site_path else "")
+    if manifest["author_site_capture_file"] != (
+        author_site_path.name if author_site_path else ""
+    ) or manifest["author_site_capture_sha256"] != (
+        sha256_file(author_site_path) if author_site_path else ""
     ):
         raise ValueError("Author-site capture does not match the snapshot manifest")
 
