@@ -145,6 +145,14 @@ def test_correction_changes_effective_work_key_and_preserves_raw_scholar_row(
     assert before.loc[0, "work_id"] != after.loc[0, "work_id"]
     assert before.loc[1, "work_id"] == after.loc[1, "work_id"]
     assert after.loc[0, "source_record_json"] == raw_json
+    assert after.loc[0, "metadata_correction_basis"] == (
+        corrections[("oneAAAAJ", "oneAAAAJ:paper")].basis
+    )
+    assert after.loc[0, "metadata_correction_evidence_url"] == (
+        "https://example.test/archive/paper"
+    )
+    assert after.loc[0, "metadata_correction_verified_at"] == "2026-10-25"
+    assert after.loc[1, "metadata_correction_fields"] == ""
     assert len(build_dataset_tables(effective, registry)["works"]) == 2
 
 
@@ -206,3 +214,69 @@ def test_correction_fails_closed_on_changed_source_or_non_scholar_row(tmp_path) 
             pandas.DataFrame([{**row, "source_type": "curated_verified"}]),
             corrections,
         )
+
+
+def test_present_profile_requires_every_declared_correction_id_once(tmp_path) -> None:
+    entries = [
+        _entry(),
+        _entry(
+            author_pub_id="oneAAAAJ:other",
+            expected={"title": "Other", "year": 2020, "venue": "Journal"},
+            corrected={"title": "Verified Other"},
+        ),
+    ]
+    corrections = load_corrections(_manifest(tmp_path / "corrections.json", entries))
+    paper = {
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "oneAAAAJ:paper",
+        "title": "Damaged Title",
+        "year": 1712,
+        "venue": "Conference, 1712",
+        "source_type": "scholar",
+        "source_record_json": "{}",
+    }
+    with pytest.raises(ValueError, match="oneAAAAJ:other.*found 0"):
+        apply_corrections(pandas.DataFrame([paper]), corrections)
+    with pytest.raises(ValueError, match="oneAAAAJ:paper.*found 2"):
+        apply_corrections(pandas.DataFrame([paper, paper]), corrections)
+
+
+def test_absent_profile_may_have_staged_corrections(tmp_path) -> None:
+    corrections = load_corrections(_manifest(tmp_path / "corrections.json", [_entry()]))
+    unrelated = pandas.DataFrame(
+        [
+            {
+                "scholar_id": "twoAAAAJ",
+                "author_pub_id": "twoAAAAJ:paper",
+                "title": "Unrelated Paper",
+                "year": 2020,
+                "venue": "Journal",
+                "source_type": "scholar",
+                "source_record_json": "{}",
+            }
+        ]
+    )
+    effective, applied = apply_corrections(unrelated, corrections)
+    assert applied == 0
+    assert effective.loc[0, "title"] == "Unrelated Paper"
+    assert effective.loc[0, "metadata_correction_fields"] == ""
+
+
+def test_checked_in_profile_requires_and_applies_all_seven_exact_ids() -> None:
+    corrections = load_corrections(DEFAULT_CORRECTIONS_PATH)
+    frame = pandas.DataFrame(
+        [
+            {
+                "scholar_id": scholar_id,
+                "author_pub_id": author_pub_id,
+                "source_type": "scholar",
+                "source_record_json": json.dumps(correction.expected),
+                **correction.expected,
+            }
+            for (scholar_id, author_pub_id), correction in corrections.items()
+        ]
+    )
+    effective, applied = apply_corrections(frame, corrections)
+    assert applied == len(corrections) == 7
+    assert effective["metadata_correction_fields"].ne("").all()
+    assert effective["source_record_json"].equals(frame["source_record_json"])

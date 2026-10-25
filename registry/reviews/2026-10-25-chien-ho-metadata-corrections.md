@@ -10,6 +10,9 @@ quality assessment, and work identity generation. `source_record_json` and the
 snapshot remain unchanged. Published `profile_publications` records expose the
 effective fields alongside `metadata_correction_*` provenance; the upload
 receipt records the number applied and the manifest checksum.
+If any Scholar row for this profile enters a snapshot, all seven declared IDs
+must occur exactly once; a partial refresh fails before embedding or upload.
+Before Chien Ho enters the snapshot, the staged manifest applies zero repairs.
 
 | Capture row | Scholar citation suffix | Effective repair | Evidence |
 | --- | --- | --- | --- |

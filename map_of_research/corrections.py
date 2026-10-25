@@ -8,6 +8,7 @@ before embeddings, quality assessment, and work matching.
 from __future__ import annotations
 
 import datetime as dt
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -104,6 +105,21 @@ def apply_corrections(
     corrections: dict[tuple[str, str], ReviewedCorrection],
 ) -> tuple[Any, int]:
     """Change effective fields only; retain source identity and raw source JSON."""
+
+    scholar_rows = frame.loc[
+        frame["source_type"] == "scholar", ["scholar_id", "author_pub_id"]
+    ]
+    present_profiles = {str(value) for value in scholar_rows["scholar_id"]}
+    observed = Counter(
+        (str(row.scholar_id), str(row.author_pub_id))
+        for row in scholar_rows.itertuples(index=False)
+    )
+    for key in corrections:
+        if key[0] in present_profiles and observed[key] != 1:
+            raise ValueError(
+                "Scholar correction ID must occur exactly once for a present "
+                f"profile: {key} (found {observed[key]})"
+            )
 
     output = frame.copy()
     for field in (
