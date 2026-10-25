@@ -13,8 +13,9 @@ absent from the 59-item CV list. This establishes a concrete completeness gap.
 The numbered citations also contain reports, talks, preliminary versions, and
 journal articles that have not been resolved into distinct academic works.
 
-`post-2011-candidates.csv` adds eleven later arXiv source observations from a
-bounded primary-source check. Several are coauthored with Lenore Blum; the
+`post-2011-candidates.csv` adds eleven later arXiv source observations and
+one CMU-hosted 2012 draft manuscript from a bounded primary-source check.
+Several are coauthored with Lenore Blum; the
 2017 password preprint and the already held 2020 PNAS paper are the same
 publication family in separate preprint and journal manifestations: both name
 Blum and Santosh Vempala, use near-identical titles, and describe the same
@@ -37,8 +38,11 @@ preprints name Blum with Jeremiah Blocki; Blocki's
 [CMU-hosted research page](https://www.cs.cmu.edu/~jblocki/) confirms the
 exact bylines and identifies the 2013 ASIACRYPT and AISEC venues. The
 [GOTCHA arXiv record](https://arxiv.org/abs/1310.1137) explicitly relates ACM
-DOI `10.1145/2517312.2517319`. These are source observations,
-**not** eleven distinct new works or a
+DOI `10.1145/2517312.2517319`. A
+[2012 CMU-hosted manuscript](https://www.cs.cmu.edu/~jblocki/Anne_Wildenhain_2012.htm)
+names Anne Wildenhain, Jeremiah Blocki, Anupam Datta, and Manuel Blum; its
+drafting notes leave publication genre and later version unresolved. These
+are source observations, **not** twelve distinct new works or a
 whole-career census. A broad “Blum, M” search also returns other researchers;
 same-name results are not automatically attributed to CMU Manuel Blum. The
 [broad arXiv search](https://arxiv.org/search/cs?query=Blum%2C+M&searchtype=author)

@@ -22,9 +22,9 @@
   },
   "post_2011_candidates": {
     "path": "post-2011-candidates.csv",
-    "sha256": "0c169f6e4c263c75d716a1fe9ee0a307158126d1a65b3cf392e5d93de77a1c5b",
-    "row_count": 11,
-    "interpretation": "Held post-2011 arXiv source observations; some preprint/journal families are reviewed, other version questions remain; not eleven distinct works"
+    "sha256": "135b0988ccebf97570992d3d3203392f48008a40ce4fe2fc2e7a93ea760b9dfb",
+    "row_count": 12,
+    "interpretation": "Held post-2011 arXiv and CMU-manuscript observations; some preprint/journal families are reviewed, other version and genre questions remain; not twelve distinct works"
   },
   "known_omission": {
     "doi": "10.1073/pnas.1801839117",
@@ -87,6 +87,14 @@
         "https://arxiv.org/abs/1302.5122",
         "https://arxiv.org/abs/1310.1137",
         "https://arxiv.org/abs/1404.0024"
+      ]
+    },
+    {
+      "source_id": "cmu:blocki-wildenhain-2012",
+      "decision": "cmu_manuel_blum_attributed_draft_genre_held",
+      "basis": "A full draft manuscript hosted under CMU coauthor Jeremiah Blocki's site gives the exact title, Anne Wildenhain-Jeremiah Blocki-Anupam Datta-Manuel Blum byline, and August 11 2012 date. The page contains drafting notes and does not establish a peer-reviewed venue or distinct later version.",
+      "evidence_urls": [
+        "https://www.cs.cmu.edu/~jblocki/Anne_Wildenhain_2012.htm"
       ]
     }
   ],
