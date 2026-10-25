@@ -16,12 +16,54 @@ neighboring initials-only row inherits their attribution.
 Rows 903 and 904 were already confirmed CMU works; 907 was already an exact
 duplicate exclusion, and 917 was already a supporting-information exclusion.
 The nine remaining held rows are **901, 905, 908–912, 915, and 918**. Row 909
-has a direct CMU Hyung J. Kim identity signal in the [Biophysical Society
-program](https://www.biophysics.org/Portals/0/EasyDNNnews/Uploads/2169/2015_Program_Guide.pdf),
-but its undated extended poster title may be a second rendering of the
-already confirmed published abstract at row 802. We hold it until that
-work/version relationship is resolved. The other held rows lack exact
-full-person or work-type evidence in this pass.
+`bC4aq-4AAAAJ:cF7EPgIk0B4C` exactly matches a [poster uploaded by first
+author Hyunjin Kim](https://www.researchgate.net/publication/272167832_Inter-Domain_Dynamics_of_Multi-domain_Proteins_Gestation_of_the_Glu-Plasminogen_Supra-Fold_via_Molecular_Dynamics_Simulation).
+The poster names **Hyung J. Kim** and CMU Chemistry. Its host page dates the
+presentation to the February 2015 Biophysical Society meeting. The
+[society's program](https://www.biophysics.org/Portals/0/EasyDNNnews/Uploads/2169/2015_Program_Guide.pdf)
+lists the same authors and core title at 1052-Pos Board B3; the poster's
+420 ns simulation, 282487 water molecules, 157-to-34 Å radius change, and
+PAN–K5 analysis match the confirmed published *Biophysical Journal*
+abstract at row 802. The poster adds an introductory phrase to the published
+title. It is directly
+attributable to the CMU chemist, but it is a distinct poster artifact. Whether
+the output model retains that artifact separately from its published abstract
+remains unresolved; do not exclude it as a corrupted duplicate or count it as
+a second publication without that decision.
+
+Rows 901 and 905 are 1995 and 1990 ACS meeting-abstract observations with
+initials-only H. J. Kim bylines; related full-name chemistry articles do not
+identify these exact abstracts. Row 908 is an initials-only 1980 KAERI report.
+Row 918 has an undated, unvenued title and two initials-only authors; the
+[TACC2008 original program](https://citeseerx.ist.psu.edu/document?doi=443708943e6c25cfa9c52fbc612f036611bcaf8b&repid=rep1&type=pdf)
+names Hyung J. Kim for a similar lecture but gives a different title and one
+author. These are leads, not exact-work confirmations. Rows 910–912 and 915
+also lack a direct full-person attribution for their exact observations.
+
+### Bounded high-citation hold follow-up
+
+The older held rows **31, 32, 95, 115, 118, 126, 135, 136, 138, 139,
+159, 169, 172, 182, 187, 212, 213, 219, and 222** remain held. Publisher
+and institutional records for these exact works still leave the relevant
+H. J. Kim as initials or omit individual collaboration-author links. Row 31's
+[publisher article](https://link.springer.com/article/10.3938/jkps.65.1010)
+even has two different H. J. Kim author slots. The [2007 CsI article](https://yonsei.elsevierpure.com/en/publications/development-of-low-background-csitl-crystals-for-wimp-search/)
+for row 159 gives a DOI and full author order but no person link for H. J.
+Kim. The [2017 helicon article](https://doi.org/10.1088/1741-4326/aa5b42)
+for row 169 likewise prints only initials. A [related 2016 Korean Nuclear
+Society paper](https://www.kns.org/files/pre_paper/35/16S-747%EA%B9%80%ED%95%B4%EC%A7%84.pdf)
+identifies Haejin Kim through the corresponding-author address, but does not
+resolve the exact 2017 article's byline.
+
+[INSPIRE's Hong Joo Kim record](https://inspirehep.net/api/authors/1002964)
+is linked from the exact Belle and AMoRE records for rows 135 and 138. We
+retain these as leads because INSPIRE maps the H. J. Kim slots of the exact
+[2019 COSINE DOI](https://inspirehep.net/api/literature/1704652) and
+[2021 COSINE DOI](https://inspirehep.net/api/literature/1798390) to *different*
+person records, Hye-Jin Kim and Hee-Jong Kim. Those conflicting authority
+links cannot settle this initials collision. The corresponding original
+papers and Hong Joo Kim's self ORCID do not supply direct confirmation for
+these held observations. No status changes follow from this pass.
 
 The resulting inert partition is **123 confirmed, 545 exact exclusions, and
 250 held** across all 918 saved citation IDs. The canonical manifests,
