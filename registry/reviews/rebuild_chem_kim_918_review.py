@@ -615,6 +615,10 @@ OTHER_PRIMARY_ID_GUARDS = {
     411: "bC4aq-4AAAAJ:uLbwQdceFCQC",
     412: "bC4aq-4AAAAJ:HIFyuExEbWQC",
     434: "bC4aq-4AAAAJ:fFSKOagxvKUC",
+    280: "bC4aq-4AAAAJ:n3vGvpFsckwC",
+    324: "bC4aq-4AAAAJ:TeJ9juy8vcMC",
+    371: "bC4aq-4AAAAJ:Vr2j17o0sqMC",
+    423: "bC4aq-4AAAAJ:cOfwuRB03ygC",
 }
 
 OTHER_PRIMARY.update(
@@ -1295,6 +1299,67 @@ NEXT_FULL_AUTHOR_VENUES = {
     434: "Korean Journal of Soil Science and Fertilizer 37 (6), 2004",
 }
 
+FOLLOWUP_FULL_AUTHOR_PRIMARY = {
+    280: (
+        "Characteristics of a stilbene scintillation crystal in a neutron spectrometer",
+        2013,
+        "Hong Joo Kim",
+        "10.1016/j.radmeas.2013.01.004",
+        "https://research.knu.ac.kr/en/publications/characteristics-of-a-"
+        "stilbene-scintillation-crystal-in-a-neutron-/",
+        "KNU exact-output record linked to Hong Joo Kim person authority",
+        "Kyungpook National University's exact Radiation Measurements "
+        "58:133-137 output links its H. J. Kim author to Hong Joo Kim's "
+        "KNU Physics person record.",
+    ),
+    324: (
+        "Altered distributions in circulating follicular helper and follicular "
+        "regulatory T cells accountable for imbalanced cytokine production "
+        "in multiple sclerosis",
+        2021,
+        "Ho Jin Kim",
+        "10.1111/cei.13596",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8209573/",
+        "original Clinical and Experimental Immunology author correspondence",
+        "The exact Clinical and Experimental Immunology 205(1):75-88 article "
+        "identifies H. J. Kim as National Cancer Center Neurology head "
+        "at hojinkim@ncc.re.kr. NCC's faculty page names that person "
+        "Ho Jin Kim and lists this exact publication.",
+    ),
+    371: (
+        "Emotion dysregulation in idiopathic rapid eye movement sleep "
+        "behavior disorder",
+        2020,
+        "Han-Joon Kim",
+        "10.1093/sleep/zsz224",
+        "https://academic.oup.com/sleep/article-abstract/43/2/zsz224/5573800",
+        "original Oxford University Press full-author article",
+        "The exact SLEEP 43(2):zsz224 article names ninth author "
+        "Han-Joon Kim at Seoul National University Hospital; the "
+        "original publisher PDF confirms its full byline.",
+    ),
+    423: (
+        "Characteristics of complex light modulation through an "
+        "amplitude-phase double-layer spatial light modulator",
+        2017,
+        "Hwi Kim",
+        "10.1364/OE.25.003469",
+        "https://pure.korea.ac.kr/en/publications/characteristics-of-complex-"
+        "light-modulation-through-an-amplitude-/",
+        "Korea University exact-output full-author record",
+        "The exact Optics Express 25(4):3469-3480 article names ninth "
+        "author Hwi Kim; Optica's issue table of contents independently "
+        "prints the same full author and title.",
+    ),
+}
+OTHER_PRIMARY.update(FOLLOWUP_FULL_AUTHOR_PRIMARY)
+FOLLOWUP_FULL_AUTHOR_VENUES = {
+    280: "Radiation measurements 58, 133-137, 2013",
+    324: "Clinical & Experimental Immunology 205 (1), 75-88, 2021",
+    371: "Sleep 43 (2), zsz224, 2020",
+    423: "Optics express 25 (4), 3469-3480, 2017",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -1324,6 +1389,40 @@ ABSENT_AUTHOR_PRIMARY = {
         "authors have other initials, so this Scholar citation cannot "
         "belong to CMU Chemistry professor Hyung J. Kim.",
     ),
+    203: (
+        "bC4aq-4AAAAJ:JdL-Xu2nR38C",
+        "Measurement of the gamma ray background in the Davis cavern at "
+        "the Sanford Underground Research Facility",
+        2020,
+        "10.1016/j.astropartphys.2019.102391",
+        "https://api.crossref.org/works/10.1016%2Fj.astropartphys.2019.102391",
+        "Elsevier publisher-deposited complete author list",
+        "The Elsevier publisher-deposited complete 167-author list for the "
+        "exact Astroparticle Physics 116:102391 article contains only "
+        "W. T. Kim among Kim authors and no H. J. Kim. The original "
+        "LUX-ZEPLIN accepted manuscript deposited at UCL agrees.",
+    ),
+    403: (
+        "bC4aq-4AAAAJ:kz9GbA2Ns4gC",
+        "The optimal effect site concentration of remifentanil in combination "
+        "with intravenous midazolam and topical lidocaine for awake "
+        "fibreoptic nasotracheal intubation in patients\xa0…",
+        2012,
+        "",
+        "https://www.minervamedica.it/en/journals/minerva-anestesiologica/"
+        "article.php?cod=R02Y2012N05A0521",
+        "Minerva Medica original complete article byline",
+        "The original Minerva Anestesiologica 78(5):521-526 article "
+        "lists J. W. Song, Y. L. Kwak, J. W. Lee, C. H. Chang, "
+        "H. S. Kim, and Y. H. Shim. It has no H. J. Kim author; the "
+        "saved Scholar title is truncated but its year, journal, pages, "
+        "and six-author order match this one article.",
+    ),
+}
+
+ABSENT_AUTHOR_VENUES = {
+    203: "Astroparticle physics 116, 102391, 2020",
+    403: "Minerva anestesiologica 78 (5), 521-526, 2012",
 }
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
@@ -2720,6 +2819,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 pub_id != expected_id
                 or title != expected_title
                 or year != str(expected_year)
+                or (
+                    index in ABSENT_AUTHOR_VENUES
+                    and row["venue"] != ABSENT_AUTHOR_VENUES[index]
+                )
             ):
                 raise ValueError(
                     f"Complete-author match changed at capture row {index}"
@@ -2763,6 +2866,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or (
                     index in NEXT_FULL_AUTHOR_VENUES
                     and row["venue"] != NEXT_FULL_AUTHOR_VENUES[index]
+                )
+                or (
+                    index in FOLLOWUP_FULL_AUTHOR_VENUES
+                    and row["venue"] != FOLLOWUP_FULL_AUTHOR_VENUES[index]
                 )
                 or (
                     index == 88
@@ -3063,17 +3170,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 97,
-        "proposed_no_target_author_primary_work": 2,
+        "proposed_other_person_primary_work": 101,
+        "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 345,
+        "unresolved_attribution_hold": 339,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 439 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 445 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
