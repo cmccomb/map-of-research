@@ -1,0 +1,31 @@
+# Luc C. Tartar: held primary-source review (2026-10-25)
+
+**Status:** review only. This directory adds no Scholar ID, snapshot observation, work, authorship, Hub dataset row, or map link. The 21 source observations below are not 21 verified independent publications, and the 19 internal work groups are not a lifetime publication count.
+
+## Identity and scope
+
+[CMU Mathematical Sciences](https://www.cmu.edu/math/people/faculty/tartar.html) identifies Luc C. Tartar as University Professor of Mathematics, Emeritus, with CMU address and email. The person already exists as `person-lucctartar-8b1dc8e8` in the registry. An [Académie des sciences biographical notice](https://www.academie-sciences.fr/pdf/membre/TartarL_bio0908.pdf) also ties the mathematician to CMU and gives birth year 1946. There is a different [French playwright named Luc Tartar](https://lansman.org/editions/collection.php?rec_collection=THEADO&session=&table=label); his literary books and theater works must not enter this academic source graph. No exact Google Scholar account was verified through the CMU page, an author-owned bibliography, or the bounded account search. The registry Scholar ID remains blank.
+
+The CMU page says **Select Publications** and lists six entries, including one marked **Lecture Notes in preparation**. It is explicitly selective. A public CMU [KiltHub/Figshare metadata query](https://api.figshare.com/v2/articles/search) for `Luc Tartar` returned ten records on page 1 and none on page 2, all linked to repository author ID `5364974`; every returned public URL is at `kilthub.cmu.edu`. The [CMU Center for Nonlinear Analysis lecture listing](https://www.math.cmu.edu/CNA/Publications/publications.php) has three named notes plus two 2001 summer-school lectures. The five linked files were checked and SHA-256-pinned in `cmu-cna-5.csv`, but the large files themselves are not copied into this review.
+
+The complete visible rows of those **three bounded CMU surfaces** are preserved in `cmu-select-6.csv`, `kilthub-10.csv`, and `cmu-cna-5.csv`, with the fetched HTML/JSON responses and exact response hashes in `manifest.json`. `source-crosswalk-21.csv` retains every row, its provisional work group, genre assessment, and hold. It has 21 rows and 19 internal groups because two pairs recur across the profile and repository. The groups include unpublished and version-uncertain material.
+
+## Reconciliation and holds
+
+| Rows | Evidence and decision |
+| --- | --- |
+| Profile 2 / KiltHub 6476966 | Same 1995 Meccanica work. The profile says “Beyong YOUNG measures”; the repository gives “Beyond Young measures.” Preserve both source spellings. |
+| Profile 3 / KiltHub 6478754 | Same 1992 edited-volume chapter. CMU's citation supplies the book and pages; the repository's broad “journal contribution” type must not override the genre. |
+| KiltHub 6479909 | CMU describes a 1988 technical report. [Cambridge's journal record](https://www.cambridge.org/core/journals/proceedings-of-the-royal-society-of-edinburgh-section-a-mathematics/article/abs/gradient-theory-of-phase-transitions-for-systems-with-two-potential-wells/141D8E254581825D7A68F657F27791E1) is the 1989 article, DOI `10.1017/S030821050002504X`. Keep the repository and print dates as version evidence. |
+| KiltHub 6479819 | CMU describes a technical report; [Cambridge's journal record](https://www.cambridge.org/core/journals/proceedings-of-the-royal-society-of-edinburgh-section-a-mathematics/article/abs/displacement-problem-for-elastic-crystals/D5EDAE8EDC834954E9CCBED3B92240A1) confirms the 1989 article and DOI `10.1017/S0308210500024021`. |
+| KiltHub 6477476 | CMU dates its copy 1994; the [coauthor-hosted published article](https://www.gillesfrancfort.com/assets/files/published.version.FMT.95%20copy.pdf) is in *Archive for Rational Mechanics and Analysis* 131 (1995), 305–333. The repository's François Murat byline is visibly mojibake; preserve it as raw source and use the publisher/coauthor evidence for reviewed identity. |
+| KiltHub 6476906 | The repository gives only “Mathematics Technical Report.” A [1997 article by Tartar](https://www.numdam.org/item/ASNSP_1997_4_25_3-4_785_0.pdf) says the “Approximation of H-measures” text was too late for a conference proceedings volume. Do not label it a published journal article from the repository type alone. |
+| CNA notes 1–3 | The Oceanography and Sobolev course notes may precede [2006](https://link.springer.com/book/10.1007/3-540-36545-1) and [2007](https://link.springer.com/book/10.1007/978-3-540-71483-5) Springer books. The Homogenization note shares a title with a [2000 Springer chapter](https://link.springer.com/book/10.1007/BFb0106739). Full text version comparisons remain open. |
+| CNA notes 4–5 | These are separately titled 2001 summer-school lecture files; their listing alone does not establish formal publication or absence of later versions. |
+| Profile 1 | “In preparation” is not evidence of publication. It remains a source observation only. |
+
+The [1990 ICM paper](https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1990.2/ICM1990.2.ocr.pdf) and [1990 H-measures journal paper](https://www.cambridge.org/core/journals/proceedings-of-the-royal-society-of-edinburgh-section-a-mathematics/article/abs/hmeasures-a-new-approach-for-studying-homogenisation-oscillations-and-concentration-effects-in-partial-differential-equations/2D9730E919AFEFFB96C8850A04081908) support the respective profile entries. Cambridge displays a 2011 online posting date for the latter, while its issue date is 1990; the 2011 date is not an additional publication. KiltHub's repository DOIs identify deposits, not necessarily the final published work.
+
+## Release gate
+
+No source seen here claims to list Tartar's entire academic publication history. The selective CMU page omits known books and papers; KiltHub's ten-record repository search and the lecture listing are also bounded collections. Author-owned complete bibliography and exact Scholar account remain unresolved. Keep all 21 rows held until a whole-researcher inventory is established, then reconcile canonical works, versions, genres, and coauthors before any person-level map exposure. The existing roster and primary Math home are preserved.

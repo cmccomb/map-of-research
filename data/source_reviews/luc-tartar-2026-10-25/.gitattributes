@@ -1,0 +1,4 @@
+# Preserve the exact fetched source bytes used by the SHA-256 manifest.
+*.html -text -diff
+kilthub-*.json -text -diff
+*.csv text eol=lf
