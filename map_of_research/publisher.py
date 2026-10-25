@@ -23,6 +23,7 @@ from .keywords import (
     add_publication_keywords,
     exclude_low_information_regions,
 )
+from .math_release_gate import validate_math_coverage
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -1134,6 +1135,8 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--reviewed-exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
+    parser.add_argument("--math-cache-dir", type=Path)
+    parser.add_argument("--math-capture-dir", type=Path)
     return parser.parse_args(argv)
 
 
@@ -1157,6 +1160,23 @@ def main(argv: Sequence[str] | None = None) -> int:
         hf_token = os.environ.get(HF_TOKEN_ENV)
         if not hf_token:
             raise RuntimeError(f"Missing {HF_TOKEN_ENV} environment variable")
+        registry = load_registry(args.people, args.memberships, args.departments)
+        frame, _ = validate_snapshot(
+            args.snapshot,
+            args.manifest,
+            max_age_days=args.max_age_days,
+            people_path=args.people,
+            memberships_path=args.memberships,
+            departments_path=args.departments,
+        )
+        snapshot_root = args.snapshot.parent.parent
+        math_coverage = validate_math_coverage(
+            frame,
+            registry,
+            cache_dir=args.math_cache_dir or snapshot_root / "data/authors",
+            capture_dir=args.math_capture_dir or snapshot_root / "data/captures",
+        )
+        status["math_coverage"] = math_coverage
         result = publish_snapshot(
             args.snapshot,
             args.manifest,

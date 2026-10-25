@@ -1556,6 +1556,17 @@ def test_main_always_writes_terminal_status(
         monkeypatch.setenv(publisher.HF_TOKEN_ENV, "token")
     else:
         monkeypatch.delenv(publisher.HF_TOKEN_ENV, raising=False)
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (pandas.DataFrame(), {}),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_math_coverage",
+        lambda *args, **kwargs: {"complete_scholar_profiles": 1},
+    )
     monkeypatch.setattr(
         publisher,
         "publish_snapshot",
@@ -1575,3 +1586,5 @@ def test_main_always_writes_terminal_status(
     assert exit_code == expected
     assert status["status"] == ("success" if with_token else "failure")
     assert status["finished_at_utc"]
+    if with_token:
+        assert status["math_coverage"] == {"complete_scholar_profiles": 1}
