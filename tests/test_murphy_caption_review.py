@@ -99,5 +99,8 @@ def test_gordon_rule_exchange_chapter_has_exact_publisher_identity() -> None:
         for row in load_json(DEFAULT_DOI_ALIASES_PATH)["aliases"]
         if row.get("allow_short_title_region_override")
     ]
-    assert len(flagged) == 1
-    assert (flagged[0]["scholar_id"], flagged[0]["author_pub_id"]) == key
+    assert {(row["scholar_id"], row["author_pub_id"]) for row in flagged} == {
+        key,
+        ("28yZqbcAAAAJ", "28yZqbcAAAAJ:UeHWp8X0CEIC"),
+        ("FXqaMl4AAAAJ", "FXqaMl4AAAAJ:UebtZRa9Y70C"),
+    }
