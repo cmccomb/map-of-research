@@ -62,3 +62,23 @@ four KNU ORCID edge cases by original author-linked article records, the
 initials-only supergravity attribution by a full author identity record,
 then the 29 high-citation held rows and repeated-title pairs. No topic-based
 or initials-only bulk exclusions are justified.
+
+## Title-variant leads from the saved ORCID responses
+
+An offline similarity screen of the held Scholar titles against the saved
+CMU-linked and KNU-linked ORCID work summaries found the following *leads*.
+None changes the ledger, because the source titles differ, a Scholar title is
+truncated, or a distinct correction/version may exist. An original article's
+full author identity and output type remain to be checked before a decision.
+
+| Scholar row and exact ID | ORCID work lead | Remaining check |
+| --- | --- | --- |
+| 480 `bC4aq-4AAAAJ:R3hNpaxXUhUC` | CMU ORCID put-code `28834308`, DOI `10.1063/1.473606`, 1997; title spells part one as `.1.` rather than Scholar's `. I.`. | Publisher full Hyung J. Kim byline and article match. |
+| 587 `bC4aq-4AAAAJ:u0Mu_IsstPMC` | CMU ORCID Crossref-supplied put-code `170388136`, DOI `10.1021/jasms.1c00346`, 2022; Scholar truncates the title. | Publisher full author and affiliation record. |
+| 388 `bC4aq-4AAAAJ:sszUF3NjhM4C` | KNU ORCID Scopus-supplied put-code `153825460`, DOI `10.1109/TNS.2008.920252`, 2008; Scholar drops subscript and decay notation. | Original IEEE/KNU author-linked work record. |
+| 88 `bC4aq-4AAAAJ:oi2SiIJ9l4AC` | KNU ORCID Scopus-supplied put-code `153825511`, DOI `10.1016/j.jallcom.2018.03.266`, 2018; Scholar truncates the title. | Original article's full author identity. |
+| 669 `bC4aq-4AAAAJ:SAZ1SQo2q1kC` | KNU ORCID Scopus-supplied put-code `153825155`, DOI `10.1016/j.jlumin.2019.116815`, 2020; Scholar truncates the title. | Original article's full author identity. |
+
+The correction rows 643, 709, and 796 resemble underlying CMU ORCID papers,
+but a correction is a distinct record. Their own DOI/byline must be reviewed;
+they are not duplicates of the parent papers by title resemblance alone.
