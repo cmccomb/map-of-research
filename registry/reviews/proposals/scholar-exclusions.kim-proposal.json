@@ -4320,6 +4320,46 @@
       "reason": "The exact 2000 Agricultural Mechanization in Korea pp.148-155 paper gives the English title as Scholar does and names 김혁주 as its third author, a different person from CMU Kim. This exact 2000 Scholar observation 'Development of a tractor attached bale wrapper' belongs to 김혁주, not CMU Chemistry professor Hyung J. Kim.",
       "evidence_url": "https://kiss.kstudy.com/Detail/Ar?key=1690110",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:FQ36aI_S1AEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Wiley article at the exact 1995 Journal of Robotic Systems 12(7):505-514 slot is 'Improved manipulator perfomance through local d-h calibation,' by Louis J. Everett and James Lei, with no Kim. Scholar's 'Department zyxwvutsrqponmlkj' title is corrupted text.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/rob.4620120705",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:EaFouW7jFu4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 1989 Journal of Plant Biology 32(1):33-40 article names third author Han Jip Kim (김한집) in full; Scholar abbreviates him to H. J. Kim. This exact 1989 Scholar observation 'Cloning of cDNA encoding the precursor to the small subunit of ribulose-1, 5-bisphosphate carboxylase in pea (Pisum sativum)' belongs to Han Jip Kim (김한집), not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://www.riss.or.kr/search/detail/DetailView.do?control_no=4b391850ec1cf011ffe0bdc3ef48d419&p_mat_type=1a0202e37d52c72d",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:LGlY6t8CeOMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The undated Scholar title accidentally includes the first authors and affiliation numbers of the CaMoO4 paper already excluded at row 838. KNU identifies one 2008 meeting paper, published in 2009 on pp.807-810, and links its H. J. Kim author to Hong Joo Kim. This exact undated Scholar observation 'CaMoO4 SCINTILLATORS FOR A 2β-DECAY EXPERIMENT WITH 100Mo AN Annenkov1, OA Buzanov1, FA Danevich2, A. Sh. Georgadze2, SK Kim3, HJ Kim4, YD Kim5, VV Kobychev2, VN Kornoukhov6, M …' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://research.knu.ac.kr/en/publications/camoosub4sub-scintillators-for-a-2%CE%B2-decay-experiment-with-sup100s/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:4xDN1ZYqzskC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2019 Jagiellonian Symposium contribution has this exact title and six-author sequence, names speaker Hong Joo Kim, and gives the H. J. Kim byline's hongjoo@knu.ac.kr address. This exact undated Scholar observation 'Development of new heavy and efficient scintillators for medical imaging and radiation detection' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://indico.koza.if.uj.edu.pl/event/1/contributions/5/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:PoWvk5oyLR8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Journal of Biosystems Engineering 29(1):1-8 article was published in 2004 and names first author 김혁주. Scholar omits the year, truncates the title and author list, and reports a zero page, but the numbered series, volume, and coauthors match. This exact undated Scholar observation 'Development of Mechanized System Model for the Production of Winter Cereal Wrap Silage in the Fallow Paddy Field (3)-Application Test of Mechanized Wrap Silage Production in …' belongs to 김혁주, not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://kiss.kstudy.com/Detail/Ar?key=2119395",
+      "verified_at": "2026-10-25"
     }
   ]
 }

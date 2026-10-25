@@ -3087,6 +3087,109 @@ ABSENT_AUTHOR_PRIMARY[868] = (
 ABSENT_AUTHOR_AUTHORS[868] = LATE_851_900_EXACT_GUARDS[868][2]
 ABSENT_AUTHOR_VENUES[868] = LATE_851_900_EXACT_GUARDS[868][4]
 
+# Five final-list observations can be resolved from exact original or
+# institutional records. Three have no saved Scholar year, so the complete
+# captured fingerprint, including the blank year, is required. Row 913 is
+# another damaged rendering of the KNU paper already excluded at row 838.
+LATE_901_918_EXACT_GUARDS = {
+    902: (
+        "bC4aq-4AAAAJ:FQ36aI_S1AEC",
+        "Department zyxwvutsrqponmlkj",
+        "J Lei",
+        "1995",
+        "Journal of Robotic Systems 12 (7), 505-514, 1995",
+    ),
+    906: (
+        "bC4aq-4AAAAJ:EaFouW7jFu4C",
+        "Cloning of cDNA encoding the precursor to the small subunit of "
+        "ribulose-1, 5-bisphosphate carboxylase in pea (Pisum sativum)",
+        "MW Chang, YB Koo, HJ Kim",
+        "1989",
+        "The Korean Journal of Botany (Korea R.) 32 (1), 1989",
+    ),
+    913: (
+        "bC4aq-4AAAAJ:LGlY6t8CeOMC",
+        "CaMoO4 SCINTILLATORS FOR A 2β-DECAY EXPERIMENT WITH 100Mo AN "
+        "Annenkov1, OA Buzanov1, FA Danevich2, A. Sh. Georgadze2, SK Kim3, "
+        "HJ Kim4, YD Kim5, VV Kobychev2, VN Kornoukhov6, M\xa0…",
+        "AN Annenkov, OA Buzanov, FA Danevich, AS Georgadze, SK Kim, ...",
+        "",
+        "",
+    ),
+    914: (
+        "bC4aq-4AAAAJ:4xDN1ZYqzskC",
+        "Development of new heavy and efficient scintillators for medical "
+        "imaging and radiation detection",
+        "HJ Kim, G Rooh, QV Phan, A Khan, SJ Kang, J Kaewkhao",
+        "",
+        "",
+    ),
+    916: (
+        "bC4aq-4AAAAJ:PoWvk5oyLR8C",
+        "Development of Mechanized System Model for the Production of Winter "
+        "Cereal Wrap Silage in the Fallow Paddy Field (3)-Application Test of "
+        "Mechanized Wrap Silage Production in\xa0…",
+        "HJ Kim, KK Park, YS Ha, DH Hong, KD Nah",
+        "",
+        "Journal of Biosystems Engineering 29 (1), 0",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(LATE_901_918_EXACT_GUARDS)
+OTHER_PRIMARY[906] = (
+    LATE_901_918_EXACT_GUARDS[906][1],
+    1989,
+    "Han Jip Kim (김한집)",
+    "",
+    "https://www.riss.or.kr/search/detail/DetailView.do?control_no=4b391850ec1cf011ffe0bdc3ef48d419&p_mat_type=1a0202e37d52c72d",
+    "Korean academic-library exact journal record and full third author",
+    "The exact 1989 Journal of Plant Biology 32(1):33-40 article names "
+    "third author Han Jip Kim (김한집) in full; Scholar abbreviates him "
+    "to H. J. Kim.",
+)
+OTHER_PRIMARY_ID_GUARDS[906] = LATE_901_918_EXACT_GUARDS[906][0]
+ABSENT_AUTHOR_PRIMARY[902] = (
+    LATE_901_918_EXACT_GUARDS[902][0],
+    LATE_901_918_EXACT_GUARDS[902][1],
+    1995,
+    "10.1002/rob.4620120705",
+    "https://onlinelibrary.wiley.com/doi/abs/10.1002/rob.4620120705",
+    "Wiley original journal record with complete two-author byline",
+    "The Wiley article at the exact 1995 Journal of Robotic Systems "
+    "12(7):505-514 slot is 'Improved manipulator perfomance through local "
+    "d-h calibation,' by Louis J. Everett and James Lei, with no Kim. "
+    "Scholar's 'Department zyxwvutsrqponmlkj' title is corrupted text.",
+)
+ABSENT_AUTHOR_AUTHORS[902] = LATE_901_918_EXACT_GUARDS[902][2]
+ABSENT_AUTHOR_VENUES[902] = LATE_901_918_EXACT_GUARDS[902][4]
+LATE_UNDATED_OTHER_PRIMARY = {
+    913: (
+        "Hong Joo Kim",
+        "https://research.knu.ac.kr/en/publications/camoosub4sub-scintillators-for-a-2%CE%B2-decay-experiment-with-sup100s/",
+        "KNU exact conference paper links H. J. Kim to Hong Joo Kim",
+        "The undated Scholar title accidentally includes the first authors "
+        "and affiliation numbers of the CaMoO4 paper already excluded at "
+        "row 838. KNU identifies one 2008 meeting paper, published in "
+        "2009 on pp.807-810, and links its H. J. Kim author to Hong Joo Kim.",
+    ),
+    914: (
+        "Hong Joo Kim",
+        "https://indico.koza.if.uj.edu.pl/event/1/contributions/5/",
+        "Original symposium contribution names speaker and corresponding author",
+        "The original 2019 Jagiellonian Symposium contribution has this "
+        "exact title and six-author sequence, names speaker Hong Joo Kim, "
+        "and gives the H. J. Kim byline's hongjoo@knu.ac.kr address.",
+    ),
+    916: (
+        "김혁주",
+        "https://kiss.kstudy.com/Detail/Ar?key=2119395",
+        "Original Korean agricultural-machinery journal metadata",
+        "The exact Journal of Biosystems Engineering 29(1):1-8 article "
+        "was published in 2004 and names first author 김혁주. Scholar "
+        "omits the year, truncates the title and author list, and reports "
+        "a zero page, but the numbered series, volume, and coauthors match.",
+    ),
+}
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4536,7 +4639,12 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         knu_exact = next((w for w in knu_hits if w["year"] == year and w["doi"]), None)
         knu_year_only = next((w for w in knu_hits if w["year"] == year), None)
         cmu_exact = next((w for w in cmu_hits if w["year"] == year), None)
-        if cmu_hits and (knu_exact or index in NEUROSCIENCE or index in OTHER_PRIMARY):
+        if cmu_hits and (
+            knu_exact
+            or index in NEUROSCIENCE
+            or index in OTHER_PRIMARY
+            or index in LATE_UNDATED_OTHER_PRIMARY
+        ):
             raise ValueError(f"Conflicting person evidence at capture row {index}")
         doi, evidence_url, evidence_source = "", "", ""
         if index in BASELINE_EXCLUDED_INDICES:
@@ -4576,6 +4684,24 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         "Hyung Joon Kim, not CMU Chemistry professor Hyung J. Kim."
                     ),
                     evidence_url,
+                )
+            )
+        elif index in LATE_UNDATED_OTHER_PRIMARY:
+            person, evidence_url, evidence_source, basis = LATE_UNDATED_OTHER_PRIMARY[
+                index
+            ]
+            status = "proposed_other_person_primary_work"
+            additions.append(
+                decision(
+                    pub_id,
+                    "false_profile_attribution",
+                    (
+                        f"{basis} This exact undated Scholar observation "
+                        f"'{title}' belongs to {person}, not CMU Chemistry "
+                        "professor Hyung J. Kim."
+                    ),
+                    evidence_url,
+                    verified_at="2026-10-25",
                 )
             )
         elif index in ABSENT_AUTHOR_PRIMARY:
@@ -5073,17 +5199,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 178,
-        "proposed_no_target_author_primary_work": 11,
+        "proposed_other_person_primary_work": 182,
+        "proposed_no_target_author_primary_work": 12,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 251,
+        "unresolved_attribution_hold": 246,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 532 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 537 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
