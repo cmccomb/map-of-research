@@ -571,6 +571,13 @@ OTHER_PRIMARY_ID_GUARDS = {
     688: "bC4aq-4AAAAJ:hkOj_22Ku90C",
     722: "bC4aq-4AAAAJ:ZuybSZzF8UAC",
     854: "bC4aq-4AAAAJ:SdhP9T11ey4C",
+    205: "bC4aq-4AAAAJ:Bg7qf7VwUHIC",
+    206: "bC4aq-4AAAAJ:u-coK7KVo8oC",
+    237: "bC4aq-4AAAAJ:gVv57TyPmFsC",
+    283: "bC4aq-4AAAAJ:gKiMpY-AVTkC",
+    318: "bC4aq-4AAAAJ:uJ-U7cs_P_0C",
+    319: "bC4aq-4AAAAJ:4MWp96NkSFoC",
+    438: "bC4aq-4AAAAJ:i2xiXl-TujoC",
 }
 
 OTHER_PRIMARY.update(
@@ -658,6 +665,95 @@ HYOJOON_KAPRAL_PRIMARY = {
     ),
 }
 OTHER_PRIMARY.update(HYOJOON_KAPRAL_PRIMARY)
+
+HYUNG_JOON_NEURO_PRIMARY = {
+    205: (
+        "Reprogramming axonal behavior by axon-specific viral transduction",
+        2012,
+        "Hyung Joon Kim",
+        "10.1038/gt.2011.217",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3426632/",
+        "Original author manuscript with full-name byline",
+        "The author-deposited Gene Therapy manuscript identifies its H. J. "
+        "Kim coauthor as Hyung Joon Kim, linked to Seoul National University "
+        "Mechanical and Aerospace Engineering, on the exact 2012 article.",
+    ),
+    206: (
+        "Novel microfluidic platform for culturing neurons: culturing and "
+        "biochemical analysis of neuronal components",
+        2009,
+        "Hyung Joon Kim",
+        "10.1002/biot.200900159",
+        "https://mbel.snu.ac.kr/publication/novel-microfluidic-platform-for-"
+        "culturing-neurons-culturing-and-biochemical-analysis-of-neuronal-components/",
+        "Seoul National University coauthor lab's exact publication record",
+        "The Seoul National University lab lists Hyung Joon Kim in full "
+        "with Park, Byun, Ryu, and Jeon on the exact 2009 Biotechnology "
+        "Journal 4:1573-1577 article.",
+    ),
+    237: (
+        "Quantitative analysis of axonal transport by using compartmentalized "
+        "and surface micropatterned culture of neurons",
+        2012,
+        "Hyung Joon Kim",
+        "10.1021/cn3000026",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3643179/",
+        "Original ACS article with full-name byline and UCI affiliation",
+        "The ACS article names Hyung Joon Kim at UC Irvine Biomedical "
+        "Engineering with the same six coauthors in ACS Chemical "
+        "Neuroscience 3:433-438.",
+    ),
+    283: (
+        "Shear stress effect on transfection of neurons cultured in "
+        "microfluidic devices",
+        2009,
+        "Hyung Joon Kim",
+        "10.1166/jnn.2009.1769",
+        "https://mbel.snu.ac.kr/publication/shear-stress-effect-on-"
+        "transfection-of-neurons-cultured-in-microfluidic-devices/",
+        "Seoul National University coauthor lab's exact publication record",
+        "The Seoul National University lab names Hyung Joon Kim in full "
+        "with Shin, Sim, and Jeon in the exact 2009 Journal of Nanoscience "
+        "and Nanotechnology 9:7330-7335 article.",
+    ),
+    318: (
+        "Yeast G-proteins mediate directional sensing and polarization "
+        "behaviors in response to changes in pheromone gradient direction",
+        2013,
+        "Hyung Joon Kim",
+        "10.1091/mbc.E12-10-0739",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3571874/",
+        "Original Molecular Biology of the Cell article with full-name byline",
+        "The original article names Hyung Joon Kim at UC Irvine Biomedical "
+        "Engineering with Moore, Tanaka, Jeon, and Yi in volume 24:521-534. "
+        "Its online date was 2012 and print year 2013.",
+    ),
+    319: (
+        "Chemical genetic-mediated spatial regulation of protein expression "
+        "in neurons reveals an axonal function for WldS",
+        2012,
+        "Hyung Joon Kim",
+        "10.1016/j.chembiol.2012.01.012",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3292772/",
+        "Original author manuscript with full-name byline and UCI affiliation",
+        "The author-deposited Chemistry & Biology article names Hyung Joon "
+        "Kim at UC Irvine Biomedical Engineering with Cohen, Ghosh, Jeon, "
+        "and Jaffrey in volume 19:179-187.",
+    ),
+    438: (
+        "Kinase pathway inhibition restores PSD95 induction in neurons "
+        "lacking fragile X mental retardation protein",
+        2019,
+        "Hyung Joon Kim",
+        "10.1073/pnas.1812056116",
+        "https://www.pnas.org/content/pnas/116/24/12007.full.pdf",
+        "Original PNAS article full-name byline and SNU affiliation",
+        "The original PNAS paper names Hyung Joon Kim at Seoul National "
+        "University Mechanical and Aerospace Engineering in the exact "
+        "2019 volume 116:12007-12012 article.",
+    ),
+}
+OTHER_PRIMARY.update(HYUNG_JOON_NEURO_PRIMARY)
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
@@ -2355,16 +2451,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 53,
+        "proposed_other_person_primary_work": 60,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 391,
+        "unresolved_attribution_hold": 384,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 393 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 400 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
