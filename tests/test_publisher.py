@@ -39,6 +39,26 @@ def install_published_rows(monkeypatch, loader) -> None:
     monkeypatch.setattr(publisher, "_published_rows", loader)
 
 
+def stub_before_physics_review_gate(monkeypatch, frame) -> None:
+    """Keep synthetic one-column frames focused on the post-hold review gate."""
+
+    monkeypatch.setattr(publisher, "load_corrections", lambda path: {})
+    monkeypatch.setattr(publisher, "apply_corrections", lambda frame, _: (frame, 0))
+    monkeypatch.setattr(publisher, "load_contexts", lambda path: {})
+    monkeypatch.setattr(
+        publisher,
+        "load_attribution_reviews",
+        lambda path: SimpleNamespace(confirmed={}),
+    )
+    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
+    monkeypatch.setattr(
+        publisher,
+        "select_released_observations",
+        lambda *args, **kwargs: (frame, [], set()),
+    )
+
+
 def test_published_rows_ignore_extra_parquet_columns_and_read_all_shards(
     monkeypatch,
     tmp_path,
@@ -2547,8 +2567,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     )
     frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
-    monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
-    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
+    stub_before_physics_review_gate(monkeypatch, frame)
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -2566,6 +2585,51 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     with pytest.raises(ValueError, match="source review is held"):
         publisher.publish_snapshot(
             snapshot_path,
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+        )
+
+
+@pytest.mark.parametrize(
+    "scholar_id",
+    ["wJ_gQLoAAAAJ", publisher.BREIVIK_REVIEW_SCHOLAR_ID],
+)
+def test_physics_quality_gates_receive_only_released_rows(
+    monkeypatch, tmp_path, scholar_id
+) -> None:
+    frame = pandas.DataFrame({"scholar_id": [scholar_id]})
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            frame,
+            {"created_at_utc": "now", "snapshot_sha256": "test-snapshot"},
+        ),
+    )
+    stub_before_physics_review_gate(monkeypatch, frame)
+    monkeypatch.setattr(
+        publisher,
+        "select_released_observations",
+        lambda *args, **kwargs: (frame.iloc[:0].copy(), [], set()),
+    )
+
+    class AfterQualityGates(Exception):
+        pass
+
+    def next_gate(*args, **kwargs):
+        raise AfterQualityGates
+
+    monkeypatch.setattr(publisher, "select_released_person_observations", next_gate)
+    with pytest.raises(AfterQualityGates):
+        publisher.publish_snapshot(
+            tmp_path / "snapshots" / "snapshot.parquet",
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
@@ -2721,6 +2785,7 @@ def test_breivik_gate_blocks_current_hold_before_enrichment(
     )
     frame = pandas.DataFrame({"scholar_id": [publisher.BREIVIK_REVIEW_SCHOLAR_ID]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    stub_before_physics_review_gate(monkeypatch, frame)
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
