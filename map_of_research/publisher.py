@@ -27,6 +27,15 @@ from .bio_release_gate import (
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
 )
+from .chemistry_post_sullivan_approval import (
+    DEFAULT_APPROVAL_PATH as DEFAULT_CHEMISTRY_POST_SULLIVAN_APPROVAL_PATH,
+)
+from .chemistry_post_sullivan_approval import (
+    SOURCE_SHA256 as CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256,
+)
+from .chemistry_post_sullivan_approval import (
+    validate_chemistry_post_sullivan_approval,
+)
 from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
@@ -1369,6 +1378,17 @@ def _is_sullivan_transition(*, prior_revision: str, snapshot_sha256: str) -> boo
     )
 
 
+def _is_chemistry_post_sullivan_transition(
+    *, prior_revision: str, snapshot_sha256: str
+) -> bool:
+    """Only the frozen source after the Sullivan parent can use this gate."""
+
+    return (
+        prior_revision != SULLIVAN_PRIOR_REVISION
+        and snapshot_sha256 == CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256
+    )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1397,6 +1417,9 @@ def publish_snapshot(
     source_commit: str | None = None,
     sullivan_loss_approval_path: Path = DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
     sullivan_continuity_addendum_path: Path = DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
+    chemistry_post_sullivan_approval_path: Path = (
+        DEFAULT_CHEMISTRY_POST_SULLIVAN_APPROVAL_PATH
+    ),
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
 ) -> dict[str, Any]:
@@ -1429,8 +1452,19 @@ def publish_snapshot(
         prior_revision=prior_revision,
         snapshot_sha256=str(manifest["snapshot_sha256"]),
     )
+    chemistry_post_sullivan_transition = _is_chemistry_post_sullivan_transition(
+        prior_revision=prior_revision,
+        snapshot_sha256=str(manifest["snapshot_sha256"]),
+    )
     if sullivan_transition and not source_commit:
         raise ValueError("Sullivan release needs its exact source commit")
+    if chemistry_post_sullivan_transition and not source_commit:
+        raise ValueError("Chemistry release needs its exact source commit")
+    if chemistry_post_sullivan_transition and region_comparison_revision not in (
+        None,
+        prior_revision,
+    ):
+        raise ValueError("Chemistry approval requires the current Hub parent")
     frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
     if require_bio_release and not frozen_bio_source:
         raise ValueError("Bio release source differs from the frozen snapshot")
@@ -1582,6 +1616,24 @@ def publish_snapshot(
         if sullivan_transition
         else None
     )
+    chemistry_post_sullivan_approval = (
+        validate_chemistry_post_sullivan_approval(
+            approval_path=chemistry_post_sullivan_approval_path,
+            prior_revision=prior_revision,
+            source_snapshot_commit=source_commit or "",
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            hf_token=hf_token,
+            repo_id=REPO_ID,
+            cache_dir=cache_dir,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            source_rows=frame.to_dict("records"),
+            current_works=tables["works"].to_dict("records"),
+            current_profiles=tables["profile_publications"].to_dict("records"),
+        )
+        if chemistry_post_sullivan_transition
+        else None
+    )
     tables["works"], continuity_receipt = reconcile_region_decisions(
         tables["works"],
         tables["profile_publications"],
@@ -1590,6 +1642,7 @@ def publish_snapshot(
         prior_revision=comparison_revision,
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
+        chemistry_post_sullivan_approval=chemistry_post_sullivan_approval,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -1914,6 +1967,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
     )
+    parser.add_argument(
+        "--chemistry-post-sullivan-approval",
+        type=Path,
+        default=DEFAULT_CHEMISTRY_POST_SULLIVAN_APPROVAL_PATH,
+    )
     return parser.parse_args(argv)
 
 
@@ -2005,6 +2063,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             source_commit=os.environ.get("MAP_SOURCE_COMMIT"),
             sullivan_loss_approval_path=args.sullivan_loss_approval,
             sullivan_continuity_addendum_path=args.sullivan_continuity_addendum,
+            chemistry_post_sullivan_approval_path=args.chemistry_post_sullivan_approval,
             sullivan_crosswalk_path=next(
                 (
                     path

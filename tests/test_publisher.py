@@ -9,6 +9,9 @@ import pandas
 import pytest
 
 import map_of_research.publisher as publisher
+from map_of_research.chemistry_post_sullivan_approval import (
+    SOURCE_COMMIT as CHEMISTRY_SOURCE_COMMIT,
+)
 from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
@@ -1960,6 +1963,86 @@ def test_sullivan_transition_requires_exact_source_commit(
             prior_revision=publisher.SULLIVAN_PRIOR_REVISION,
             atomic_intent_sink=lambda intent: None,
         )
+
+
+def test_chemistry_post_sullivan_transition_requires_exact_source_commit(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame(),
+            {"snapshot_sha256": publisher.CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256},
+        ),
+    )
+    with pytest.raises(
+        ValueError, match="Chemistry release needs its exact source commit"
+    ):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+        )
+
+
+def test_chemistry_approval_rejects_historical_comparison_parent(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame(),
+            {"snapshot_sha256": publisher.CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256},
+        ),
+    )
+    with pytest.raises(
+        ValueError, match="Chemistry approval requires the current Hub parent"
+    ):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
+            region_comparison_revision="b" * 40,
+            source_commit=CHEMISTRY_SOURCE_COMMIT,
+            atomic_intent_sink=lambda intent: None,
+        )
+
+
+@pytest.mark.parametrize(
+    ("prior_revision", "snapshot_sha256", "expected"),
+    [
+        ("a" * 40, publisher.CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256, True),
+        (
+            publisher.SULLIVAN_PRIOR_REVISION,
+            publisher.CHEMISTRY_POST_SULLIVAN_SOURCE_SHA256,
+            False,
+        ),
+        ("a" * 40, "b" * 64, False),
+    ],
+)
+def test_chemistry_approval_only_matches_frozen_post_sullivan_source(
+    prior_revision, snapshot_sha256, expected
+) -> None:
+    assert (
+        publisher._is_chemistry_post_sullivan_transition(
+            prior_revision=prior_revision,
+            snapshot_sha256=snapshot_sha256,
+        )
+        is expected
+    )
 
 
 @pytest.mark.parametrize(

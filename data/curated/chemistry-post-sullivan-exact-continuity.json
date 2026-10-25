@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-25",
+  "status": "candidate_pending_actual_sullivan_hub_parent",
+  "prior_revision": null,
+  "reviewed_producer_base_commit": "44c9d64c4b79ba66b1a6ee151746bc9ed8fd6270",
+  "source_snapshot_commit": "8be6a2400cf72dd959c874bfcada8624540820ef",
+  "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
+  "expected_parent_sha256_by_path": {
+    "README.md": "aa58fba389bd4ce56ee23b30a15cb316e1567db7e3465c287111025000a6f8d1",
+    "authorships/train-00000-of-00001.parquet": "c9fe9e839c322f4aa0a7d83aabb4369b196bad1488be31bf35d54cafc73016d7",
+    "maps/manifest.json": "c3da75e220cc9b0744eaad6b4e84e028d95b338550c673fad0c6b6ceeff4d235",
+    "maps/publications.json": "0d642cbfeb5e723ddf92fbfe2e533d606e2dd324a82618f1bc0203297b918c64",
+    "people/train-00000-of-00001.parquet": "fb3138044f1e46708bbcd9041a5b011fe9a58d09def39851d53023c49e069b02",
+    "profile_publications/train-00000-of-00001.parquet": "402bc5650daecc2e8d3b43293360a3499b73e880b9de0e20a4eaab345c484401",
+    "works/train-00000-of-00001.parquet": "239474f6affe78d87614ae5eb10425a20e070bf23b8cd080ced30cf429c7771a"
+  },
+  "raw_profile_rows_before_after": [
+    967,
+    967
+  ],
+  "scholar_cache_sha256": {
+    "vF51LxIAAAAJ": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+    "zKKBwB4AAAAJ": "bb2a3ecb4c3518680318441d91193db7e9bed0d027f57db757d279017383cc31",
+    "FRtd8_QAAAAJ": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+    "ILambBMAAAAJ": "706baa33811d7970d623176601f0a293807c74ca489e7c93d63db2ffbb4ef4ec"
+  },
+  "affected_observations": [
+    {
+      "author_pub_id": "FRtd8_QAAAAJ:pqnbT2bcN3wC",
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "prior_work_id": "work-be1435212bedd444ebb0dc33dbd05f97b853cc382acfc6384ff7af5c0f1ecc5a",
+      "candidate_work_id": "work-be1435212bedd444ebb0dc33dbd05f97b853cc382acfc6384ff7af5c0f1ecc5a",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": false,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": false,
+      "source_record_sha256": "dd4d6a8823188e1ecaa6b926a910afc9ebb2b0324581384512459530d14c3553",
+      "decision": "approved_held_loss",
+      "evidence_urls": [
+        "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRtd8_QAAAAJ&cstart=100&pagesize=100&citation_for_view=FRtd8_QAAAAJ:pqnbT2bcN3wC"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-gil-archive-provisional-hold.md"
+    },
+    {
+      "author_pub_id": "ILambBMAAAAJ:HJSXoJQnj-YC",
+      "person_id": "person-donahue-f4c5ce86",
+      "scholar_id": "ILambBMAAAAJ",
+      "prior_work_id": "work-4866a079a426a5f16ec23c3cc559f683ecc044b8d0df2bc257e080de0caa31ee",
+      "candidate_work_id": "work-332c4044bdf46f9dd5661982a6adfca36a7a07abd1fab90f38e48f99eb7203a3",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "5e00ef503fbc856fbc50c10030febf7e6d352754df5e9a74bebfef30cbc5b94a",
+      "decision": "approved_binding_change",
+      "evidence_urls": [
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011-discussion.html",
+        "https://acp.copernicus.org/preprints/10/21653/2010/acpd-10-21653-2010.pdf",
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011.html"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-donahue-water-version.md"
+    },
+    {
+      "author_pub_id": "ILambBMAAAAJ:a0OBvERweLwC",
+      "person_id": "person-donahue-f4c5ce86",
+      "scholar_id": "ILambBMAAAAJ",
+      "prior_work_id": "work-105225d288030a7b834ac21b397e5f02f5a5c71203c1a67f38f065f5477f6599",
+      "candidate_work_id": "work-332c4044bdf46f9dd5661982a6adfca36a7a07abd1fab90f38e48f99eb7203a3",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "0edd74fbe98b5876edf656626a60fea512d118ad25324dca25b42d674c7ccc45",
+      "decision": "approved_binding_change",
+      "evidence_urls": [
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011-discussion.html",
+        "https://acp.copernicus.org/preprints/10/21653/2010/acpd-10-21653-2010.pdf",
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011.html"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-donahue-water-version.md"
+    },
+    {
+      "author_pub_id": "vF51LxIAAAAJ:7PzlFSSx8tAC",
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "prior_work_id": "work-86fddafacf0c74d54311d0160e512341bf66860c22a05f174fce83798b40143a",
+      "candidate_work_id": "work-0c60836680349cc8da767f0cfb7de8b9ad4b78551a9cfd3dd2b3da38e34f77e7",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "073c1c62857698818fcb570e4616164e9975d6a57402352e806744647fb4e910",
+      "decision": "approved_binding_change",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-silva-strawberry-version.md"
+    },
+    {
+      "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "prior_work_id": "work-9d74f28893be7b6a5bdf387a03a95a8299454f084b5f74d0f2826112246d8171",
+      "candidate_work_id": "work-0c60836680349cc8da767f0cfb7de8b9ad4b78551a9cfd3dd2b3da38e34f77e7",
+      "prior_map_eligible": false,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": false,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "165743345ca64b75091c1c95023393a10fafc761ff4487904082850718268d41",
+      "decision": "approved_gain_and_binding_change",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-silva-strawberry-version.md"
+    },
+    {
+      "author_pub_id": "zKKBwB4AAAAJ:EkHepimYqZsC",
+      "person_id": "person-whitehead-f74964e3",
+      "scholar_id": "zKKBwB4AAAAJ",
+      "prior_work_id": "work-86fddafacf0c74d54311d0160e512341bf66860c22a05f174fce83798b40143a",
+      "candidate_work_id": "work-0c60836680349cc8da767f0cfb7de8b9ad4b78551a9cfd3dd2b3da38e34f77e7",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "18fbbd91396ec8d4ebe69f17f1cba6cfea6747167f28e56a5447cbb3359daf64",
+      "decision": "approved_binding_change",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-silva-strawberry-version.md"
+    },
+    {
+      "author_pub_id": "zKKBwB4AAAAJ:hkOj_22Ku90C",
+      "person_id": "person-whitehead-f74964e3",
+      "scholar_id": "zKKBwB4AAAAJ",
+      "prior_work_id": "work-9d74f28893be7b6a5bdf387a03a95a8299454f084b5f74d0f2826112246d8171",
+      "candidate_work_id": "work-0c60836680349cc8da767f0cfb7de8b9ad4b78551a9cfd3dd2b3da38e34f77e7",
+      "prior_map_eligible": true,
+      "candidate_map_eligible": true,
+      "prior_collaboration_eligible": true,
+      "candidate_collaboration_eligible": true,
+      "source_record_sha256": "6b01af6bfc72e3130f58996c06bb5a21d553179f5adbf265701c6a72a2b31550",
+      "decision": "approved_binding_change",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "review_path": "registry/reviews/2026-10-25-chem-silva-strawberry-version.md"
+    }
+  ],
+  "expected_counts": {
+    "held_losses": 1,
+    "gains": 1,
+    "still_visible_work_bindings": 5,
+    "changed_rows": 7
+  }
+}
