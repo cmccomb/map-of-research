@@ -1357,7 +1357,6 @@ def publish_snapshot(
             prior_works,
             prior_profiles,
             prior_revision=comparison_revision,
-            provisional_holds=provisional_holds,
         )
         if comparison_revision != prior_revision:
             continuity_receipt["current_hub_revision"] = prior_revision
