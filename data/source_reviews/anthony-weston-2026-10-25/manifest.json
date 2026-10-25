@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "person_id": "person-anthonyweston-79b583d1",
+  "display_name": "Anthony Weston",
+  "orcid": "0000-0002-6345-3408",
+  "scholar_id": "",
+  "reviewed_at": "2026-10-25",
+  "publication_release": "held",
+  "publication_observations_added": 0,
+  "hold_reason": "No verified Scholar account or independently complete lifetime bibliography; CMU and ORCID lists need attribution and genre review.",
+  "source_counts": {
+    "cmu_scholars": 29,
+    "orcid_groups": 24,
+    "exact_doi_overlaps": 23,
+    "cmu_dois_absent_orcid": 3,
+    "cmu_non_doi_not_in_orcid": 2
+  },
+  "sources": [
+    {
+      "file": "cmu-math.html",
+      "url": "https://www.cmu.edu/math/people/faculty/weston.html",
+      "sha256": "976913cf85ad9ceb7d52a9c60cff963aa61a410af2aad87f5aecc0e25e05277b"
+    },
+    {
+      "file": "scholars-page-1.html",
+      "url": "https://scholars.cmu.edu/11914-anthony-ross-weston/publications",
+      "sha256": "1aefc4ae120019c213be4b52f2961bb7edbcc9ab382e0138e185ed32391884f5"
+    },
+    {
+      "file": "scholars-page-2.html",
+      "url": "https://scholars.cmu.edu/11914-anthony-ross-weston/publications?startFrom=25&sort=dateDesc&favouritesFirst=true",
+      "sha256": "d5bb9d7508ad9fa0a751be8c6a6f78d6bd94b25667ea76b1c52cd6034a867216"
+    },
+    {
+      "file": "orcid-works.json",
+      "url": "https://pub.orcid.org/v3.0/0000-0002-6345-3408/works",
+      "sha256": "51d98e26eab9cc50515707a50282f257a4aa202debd9f16770f8662684854a66"
+    }
+  ]
+}
