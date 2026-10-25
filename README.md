@@ -103,14 +103,17 @@ to the reviewed retention baseline before a later recapture; the frozen
 baseline does not track later publications automatically.
 
 Complete capture and public release are separate. The trusted
-`data/curated/scholar-profile-releases.json` decision currently holds Chien
-Ho's complete 582-row source while exact attribution and context review
-continues. The raw snapshot and coverage gates still validate all 582 rows.
-The publisher checks the decision against the registry, exact cache checksum,
-and raw citation IDs, then omits held own-source observations from public
-datasets and embeddings. The roster remains visible, and publications sourced
-from other faculty are unaffected. The upload receipt reports raw and
-published counts and the decision-manifest checksum.
+`data/curated/scholar-profile-releases.json` pins a profile's registry identity,
+complete visible cache checksum, and raw citation IDs. A `held` decision omits
+that person's own-source observations from public datasets and embeddings while
+keeping the roster person and independently captured work. Chien Ho's 582-row
+source has a `released` decision after exact positive attribution review; its
+unconfirmed rows remain outside mapped works. A source-bound provisional-hold
+manifest can instead name a small set of unresolved rows within a complete
+released profile. Those rows remain in public raw profile data but cannot create
+mapped works or authorships. The Collins decision in this draft depends on his
+source capture and review PRs before any upload. Receipts report raw and
+published counts, source hashes, and decision-manifest checksums.
 
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
@@ -205,6 +208,14 @@ source review found to be nonpublications, false profile attributions, or
 corrupted duplicates. Those rows stay in `profile_publications` with review
 evidence. They do not supply work fields or faculty links when a valid
 observation of the same work exists. See `data/curated/README.md`.
+
+`data/curated/scholar-provisional-holds.json` is for unresolved individual rows,
+not evidence of a false attribution. Each held ID and original capture index
+must match a released, complete source cache; the profile-release decision pins
+the exact hold count and ID-set hash. The hold profile pins the exact reviewed
+exclusion set for that source as well. Held rows remain auditable in
+`profile_publications` with `attribution_provisional_hold`, while a pre-upload
+check rejects any held authorship or mapped-work source.
 
 The publisher assigns every mapped work to one of 30 deterministic overview
 regions and approximately 120 nested detail regions in the shared t-SNE layout.

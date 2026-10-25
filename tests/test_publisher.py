@@ -1593,6 +1593,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1701,6 +1702,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
     }
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1735,6 +1737,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     snapshot = tmp_path / "snapshots" / "source.parquet"
     cache_dir = tmp_path / "data" / "authors"
     cache_dir.mkdir(parents=True)
@@ -1922,6 +1925,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -2023,6 +2027,7 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
+    monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",

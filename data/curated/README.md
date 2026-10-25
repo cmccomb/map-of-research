@@ -67,16 +67,30 @@ verifies identity or an individual DOI record, not Scholar completeness.
 
 `scholar-profile-releases.json` records a source-bound release decision for a
 complete Scholar profile whose captured rows are still under attribution review.
-The current decision holds Chien Ho's 582-row cache. The raw source branch and
-validated snapshot retain every row; the trusted publisher checks the exact
-cache checksum, registry identity, row count, and citation IDs, then removes
-this profile's own observations before embeddings and all four public dataset
-tables are built. The faculty roster still lists Chien Ho with zero own-source
-publications. A paper independently captured from another faculty profile is
-still eligible even if its author list includes him. The upload receipt records
-the release-manifest checksum, raw and published counts, and each decision.
-Changing `state` to `released` requires a reviewed producer change and a
-matching source cache; deleting or altering the saved source fails validation.
+The raw source branch and validated snapshot retain every captured row. The
+trusted publisher checks the exact cache checksum, registry identity, row
+count, and citation IDs before applying the decision. A `held` profile supplies
+no own-source public rows; Chien Ho's `released` 582-row profile uses a separate
+positive-attribution gate, so only exact confirmed rows map. The Collins
+`released` decision in this draft is conditional on merging his complete source
+and exact review. The upload receipt records the release-manifest checksum, raw
+and published counts, and each decision. Deleting or altering the saved source
+fails validation.
+
+`scholar-provisional-holds.json` records exact rows whose identity or output
+type remains unresolved within a complete released Scholar capture. It is
+separate from the exact-exclusion manifest. Each profile pins its person, Scholar
+ID, source row count, and cache SHA-256. Each hold pins a capture row index,
+`author_pub_id`, source citation URL, reason, and date. The hold profile also
+pins the count and sorted-ID SHA-256 of reviewed exclusions that must be present
+for that source. The release decision pins the hold count and sorted-ID
+SHA-256. Before any upload, the publisher checks this contract, preserves the
+held observations in `profile_publications`,
+and rejects a held ID in any mapped work or authorship. The initial draft
+[Collins review](../../registry/reviews/2026-10-25-chem-collins-provisional-holds.md)
+names seven held rows from his 361-row visible capture. Remaining rows still
+pass the ordinary quality and exact-exclusion checks; the hold does not certify
+them individually.
 
 `scholar-exclusions.json` records exact Scholar profile-publication IDs whose
 captured rows were checked against the linked evidence. Each decision names
