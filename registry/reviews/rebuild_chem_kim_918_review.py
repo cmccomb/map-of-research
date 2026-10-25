@@ -593,6 +593,11 @@ OTHER_PRIMARY_ID_GUARDS = {
     816: "bC4aq-4AAAAJ:OP4eGU-M3BUC",
     811: "bC4aq-4AAAAJ:LhH-TYMQEocC",
     812: "bC4aq-4AAAAJ:r_AWSJRzSzQC",
+    122: "bC4aq-4AAAAJ:WZBGuue-350C",
+    196: "bC4aq-4AAAAJ:vDijr-p_gm4C",
+    272: "bC4aq-4AAAAJ:M7yex6snE4oC",
+    289: "bC4aq-4AAAAJ:nrtMV_XWKgEC",
+    716: "bC4aq-4AAAAJ:Mojj43d5GZwC",
 }
 
 OTHER_PRIMARY.update(
@@ -962,6 +967,75 @@ OTHER_PRIMARY.update(
         ),
     }
 )
+
+# Original US patent/application front pages expand the initials of five
+# unrelated inventors. Keep patent and application observations separate:
+# rows 122 and 272 are two distinct filings in one LG Innotek family.
+PATENT_FULL_INVENTOR_PRIMARY = {
+    122: (
+        "Lighting module and lighting apparatus including the same",
+        2012,
+        "Hyong Jin Kim",
+        "",
+        "https://patentimages.storage.googleapis.com/b2/ef/49/bd6c2ccdc060a1/US8231258.pdf",
+        "Original US Patent 8,231,258 B2 front page",
+        "The exact 2012 US Patent 8,231,258 names seventh inventor Hyong "
+        "Jin Kim in full with the same LG Innotek inventor team as the "
+        "Scholar row.",
+    ),
+    196: (
+        "Cantilever sensor and fabrication method thereof",
+        2003,
+        "Hyung Joon Kim",
+        "",
+        "https://patentimages.storage.googleapis.com/0d/4e/77/ab94825f832e1a/US20030224551A1.pdf",
+        "Original US application 10/448,188 front page",
+        "The exact 2003 application 10/448,188 names second inventor Hyung "
+        "Joon Kim in full with Tae Song Kim, Jeong Hoon Lee, and Ji Yoon "
+        "Kang, matching the Scholar initials and application number.",
+    ),
+    272: (
+        "Lighting module and lighting apparatus including the same",
+        2012,
+        "Hyong Jin Kim",
+        "",
+        "https://patentimages.storage.googleapis.com/f9/41/88/0f0fdeef979ec3/US20120224392A1.pdf",
+        "Original US application 13/471,967 front page",
+        "The exact 2012 application 13/471,967 names seventh inventor "
+        "Hyong Jin Kim in full with the same LG Innotek inventor team "
+        "as the Scholar row.",
+    ),
+    289: (
+        "Method for the preparation of polyester by use of composite catalyst",
+        1998,
+        "Hyung Joon Kim",
+        "",
+        "https://patentimages.storage.googleapis.com/45/1e/79/8c467892858e36/US5714570.pdf",
+        "Original US Patent 5,714,570 front page",
+        "The exact 1998 US Patent 5,714,570 names fourth inventor Hyung "
+        "Joon Kim in full with Chung Yup Kim, Hyun Nam Cho, and Hoi Wan "
+        "Yoo, matching the Scholar initials and patent number.",
+    ),
+    716: (
+        "Computer program product and system comprising community management method",
+        2010,
+        "Hyeonsook Kim",
+        "",
+        "https://patentimages.storage.googleapis.com/82/10/09/3193665cfec3f0/US7849136.pdf",
+        "Original US Patent 7,849,136 B2 front page",
+        "The exact 2010 US Patent 7,849,136 names second inventor "
+        "Hyeonsook Kim in full with Weduke Cho, Soondong Kim, Yunju "
+        "Shim, and Dongsoon Choi; its Scholar byline abbreviates her as H. Kim.",
+    ),
+}
+OTHER_PRIMARY.update(PATENT_FULL_INVENTOR_PRIMARY)
+PATENT_VENUES = {
+    122: "US Patent 8,231,258, 2012",
+    196: "US Patent App. 10/448,188, 2003",
+    272: "US Patent App. 13/471,967, 2012",
+    289: "US Patent 5,714,570, 1998",
+    716: "US Patent 7,849,136, 2010",
+}
 
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
@@ -2423,6 +2497,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in KNU_ERRATUM_VENUES
                     and row["venue"] != KNU_ERRATUM_VENUES[index]
                 )
+                or (index in PATENT_VENUES and row["venue"] != PATENT_VENUES[index])
                 or (
                     index == 88
                     and (
@@ -2722,17 +2797,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 75,
+        "proposed_other_person_primary_work": 80,
         "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 367,
+        "unresolved_attribution_hold": 362,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 417 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 422 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
