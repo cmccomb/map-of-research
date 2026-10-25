@@ -93,6 +93,12 @@ from .registry import (
     validate_included_scholar_primary_homes,
 )
 from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
+from .sullivan_continuity_addendum import (
+    DEFAULT_ADDENDUM_PATH as DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
+)
+from .sullivan_continuity_addendum import (
+    validate_sullivan_continuity_addendum,
+)
 from .sullivan_loss_approval import (
     DEFAULT_APPROVAL_PATH as DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
 )
@@ -1381,6 +1387,7 @@ def publish_snapshot(
     repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
     source_commit: str | None = None,
     sullivan_loss_approval_path: Path = DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
+    sullivan_continuity_addendum_path: Path = DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
 ) -> dict[str, Any]:
@@ -1551,6 +1558,21 @@ def publish_snapshot(
         if sullivan_transition
         else None
     )
+    sullivan_continuity_addendum = (
+        validate_sullivan_continuity_addendum(
+            addendum_path=sullivan_continuity_addendum_path,
+            prior_revision=prior_revision,
+            source_snapshot_commit=source_commit or "",
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            source_rows=frame.to_dict("records"),
+            current_works=tables["works"].to_dict("records"),
+            current_profiles=tables["profile_publications"].to_dict("records"),
+        )
+        if sullivan_transition
+        else None
+    )
     tables["works"], continuity_receipt = reconcile_region_decisions(
         tables["works"],
         tables["profile_publications"],
@@ -1558,6 +1580,7 @@ def publish_snapshot(
         prior_profiles,
         prior_revision=comparison_revision,
         sullivan_loss_approval=sullivan_loss_approval,
+        sullivan_continuity_addendum=sullivan_continuity_addendum,
     )
     bio_source_changed = bio_scholar_source_changed(
         frame, prior_profiles, registry, prior_people
@@ -1877,6 +1900,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
     )
+    parser.add_argument(
+        "--sullivan-continuity-addendum",
+        type=Path,
+        default=DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
+    )
     return parser.parse_args(argv)
 
 
@@ -1967,6 +1995,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             require_bio_release=args.require_bio_release,
             source_commit=os.environ.get("MAP_SOURCE_COMMIT"),
             sullivan_loss_approval_path=args.sullivan_loss_approval,
+            sullivan_continuity_addendum_path=args.sullivan_continuity_addendum,
             sullivan_crosswalk_path=next(
                 (
                     path

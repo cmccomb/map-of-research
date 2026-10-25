@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import copy
 import json
+from dataclasses import replace
 from pathlib import Path
 
 import numpy
@@ -19,6 +20,15 @@ from map_of_research.region_continuity import (
     _verification_url_identity,
     reconcile_region_decisions,
     require_revision,
+)
+from map_of_research.sullivan_continuity_addendum import (
+    SOURCE_COMMIT as SULLIVAN_SOURCE_COMMIT,
+)
+from map_of_research.sullivan_continuity_addendum import (
+    SOURCE_SHA256 as SULLIVAN_SOURCE_SHA256,
+)
+from map_of_research.sullivan_continuity_addendum import (
+    validate_sullivan_continuity_addendum,
 )
 from map_of_research.sullivan_loss_approval import (
     APPROVAL_SHA256,
@@ -165,6 +175,43 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["prior_revision"] == REVISION
     assert receipt["unexplained_losses"] == []
     assert receipt["unexplained_gains"] == []
+
+
+def test_visible_observation_cannot_change_work_without_exact_review():
+    prior_rows = [observation("person-one", "one"), observation("person-two", "two")]
+    current_rows = [{**prior_rows[0], "work_id": "two"}, prior_rows[1]]
+    works = [
+        work("one", eligible=True, outlier=False),
+        work("two", eligible=True, outlier=False),
+    ]
+    with pytest.raises(RegionReleaseDiffError, match="mapped binding changes") as error:
+        reconcile(works, current_rows, works, prior_rows)
+    assert error.value.receipt["unapproved_mapped_binding_changes"] == [
+        {
+            "observation": "person-one/profile/profile:shared-row/scholar",
+            "prior_work_id": "one",
+            "current_work_id": "two",
+            "prior_collaboration_eligible": False,
+            "current_collaboration_eligible": False,
+        }
+    ]
+
+
+def test_visible_observation_cannot_change_collaboration_eligibility_silently():
+    prior = {**observation("person-one", "one"), "collaboration_eligible": True}
+    current = {**prior, "collaboration_eligible": False}
+    works = [work("one", eligible=True, outlier=False)]
+    with pytest.raises(RegionReleaseDiffError, match="mapped binding changes") as error:
+        reconcile(works, [current], works, [prior])
+    assert error.value.receipt["unapproved_mapped_binding_changes"] == [
+        {
+            "observation": "person-one/profile/profile:shared-row/scholar",
+            "prior_work_id": "one",
+            "current_work_id": "one",
+            "prior_collaboration_eligible": True,
+            "current_collaboration_eligible": False,
+        }
+    ]
 
 
 def test_sullivan_approval_rejects_wrong_object_type():
@@ -354,6 +401,181 @@ def test_exact_sullivan_approval_fails_for_unapproved_loss_and_unused_id():
             prior_revision=PRIOR_REVISION,
             sullivan_loss_approval=approval,
         )
+
+
+def test_exact_sullivan_approval_rejects_extra_generic_reviewed_loss():
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    extra = observation("person-extra", "extra")
+    reviewed_extra = {
+        **extra,
+        "map_eligible": False,
+        "review_exclusion_code": "duplicate",
+        "map_exclusion_reasons": ["reviewed_duplicate"],
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile_region_decisions(
+            pandas.DataFrame(
+                [*current_works, work("extra", eligible=False, outlier=False)]
+            ),
+            pandas.DataFrame([*current_rows, reviewed_extra]),
+            [*prior_works, work("extra", eligible=True, outlier=False)],
+            [*prior_rows, extra],
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+        )
+
+
+def _sullivan_addendum_fixture():
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    root = Path(__file__).resolve().parents[1]
+    additions = json.loads(
+        (root / "tests/fixtures/sullivan_continuity_addendum_rows.json").read_text()
+    )
+    addendum = validate_sullivan_continuity_addendum(
+        addendum_path=root / "data/curated/sullivan-continuity-addendum-bb88.json",
+        prior_revision=PRIOR_REVISION,
+        source_snapshot_commit=SULLIVAN_SOURCE_COMMIT,
+        source_snapshot_sha256=SULLIVAN_SOURCE_SHA256,
+        **additions,
+    )
+    prior_rows.extend(additions["prior_profiles"])
+    current_rows.extend(additions["current_profiles"])
+    prior_works.extend(additions["prior_works"])
+    for entry in additions["current_works"]:
+        current_works.append(
+            {
+                **work(entry["work_id"], eligible=entry["map_eligible"], outlier=False),
+                "collaboration_eligible": entry["collaboration_eligible"],
+                "person_ids": entry["person_ids"],
+            }
+        )
+    return approval, addendum, prior_rows, current_rows, prior_works, current_works
+
+
+def test_exact_sullivan_addendum_allows_only_five_losses_and_three_work_rekeys():
+    approval, addendum, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_addendum_fixture()
+    )
+    _, receipt = reconcile_region_decisions(
+        pandas.DataFrame(current_works),
+        pandas.DataFrame(current_rows),
+        prior_works,
+        prior_rows,
+        prior_revision=PRIOR_REVISION,
+        sullivan_loss_approval=approval,
+        sullivan_continuity_addendum=addendum,
+    )
+    assert len(receipt["approved_sullivan_held_losses"]) == 18
+    assert len(receipt["approved_sullivan_rekey_losses"]) == 4
+    assert len(receipt["approved_sullivan_additional_losses"]) == 5
+    assert len(receipt["approved_sullivan_binding_changes"]) == 3
+    assert receipt["unexplained_losses"] == []
+    assert receipt["unapproved_mapped_binding_changes"] == []
+    assert receipt["unused_sullivan_loss_approvals"] == []
+    assert receipt["unused_sullivan_binding_approvals"] == []
+    assert receipt["missing_sullivan_curated_targets"] == []
+
+
+def test_exact_sullivan_addendum_rejects_ninth_binding_change():
+    approval, addendum, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_addendum_fixture()
+    )
+    extra = observation("person-extra", "extra-before")
+    prior_rows.append(extra)
+    current_rows.append({**extra, "work_id": "extra-after"})
+    prior_works.append(work("extra-before", eligible=True, outlier=False))
+    current_works.append(work("extra-after", eligible=True, outlier=False))
+    with pytest.raises(RegionReleaseDiffError, match="1 mapped binding changes"):
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+            sullivan_continuity_addendum=addendum,
+        )
+
+
+def test_exact_sullivan_addendum_requires_both_curated_work_targets():
+    approval, addendum, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_addendum_fixture()
+    )
+    target = next(
+        row
+        for row in current_works
+        if row["work_id"] in addendum.required_curated_work_ids
+    )
+    target["collaboration_eligible"] = False
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+            sullivan_continuity_addendum=addendum,
+        )
+    assert error.value.receipt["missing_sullivan_curated_targets"] == [
+        target["work_id"]
+    ]
+
+
+def test_forged_sullivan_addendum_cannot_waive_another_loss():
+    approval, addendum, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_addendum_fixture()
+    )
+    forged = replace(
+        addendum,
+        loss_identities=frozenset(
+            {
+                *list(addendum.loss_identities)[:-1],
+                ("other", "profile", "row", "scholar"),
+            }
+        ),
+    )
+    with pytest.raises(ValueError, match="not the reviewed set"):
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+            sullivan_continuity_addendum=forged,
+        )
+
+
+def test_unused_sullivan_binding_approval_blocks_release():
+    approval, addendum, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_addendum_fixture()
+    )
+    target = next(
+        row
+        for row in current_rows
+        if row["author_pub_id"] == "wXSgFr4AAAAJ:NJ774b8OgUMC"
+    )
+    prior = next(
+        row for row in prior_rows if row["author_pub_id"] == "wXSgFr4AAAAJ:NJ774b8OgUMC"
+    )
+    target["work_id"] = prior["work_id"]
+    current_works.append(work(prior["work_id"], eligible=True, outlier=False))
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+            sullivan_continuity_addendum=addendum,
+        )
+    assert len(error.value.receipt["unused_sullivan_binding_approvals"]) == 1
 
 
 @pytest.mark.parametrize(
