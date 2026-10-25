@@ -1,5 +1,6 @@
 """Keep the six reviewed Murphy caption and figure works distinct."""
 
+from map_of_research.corrections import DEFAULT_CORRECTIONS_PATH, load_corrections
 from map_of_research.dataset import normalize_title
 from map_of_research.doi_aliases import DEFAULT_DOI_ALIASES_PATH, load_doi_aliases
 from map_of_research.exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
@@ -59,3 +60,22 @@ def test_source_native_titles_match_retained_scholar_titles() -> None:
     ]
     assert all(normalize_title(raw) == normalize_title(source) for raw, source in pairs)
     assert len({normalize_title(source) for _, source in pairs}) == 3
+
+
+def test_all_six_retained_works_display_full_source_metadata() -> None:
+    corrections = load_corrections(DEFAULT_CORRECTIONS_PATH)
+    retained = (
+        "pqnbT2bcN3wC",
+        "AXPGKjj_ei8C",
+        "eflP2zaiRacC",
+        "g5m5HwL7SMYC",
+        "4fKUyHm3Qg0C",
+        "08ZZubdj9fEC",
+    )
+    for suffix in retained:
+        correction = corrections[_key(suffix)]
+        assert set(correction.expected) == {"title", "year", "venue", "authors"}
+        assert set(correction.corrected) == {"venue", "authors"}
+        assert "…" not in correction.corrected["venue"]
+        assert "..." not in correction.corrected["authors"]
+        assert "Robert F. Murphy" in correction.corrected["authors"]
