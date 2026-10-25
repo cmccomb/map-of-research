@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Saved-capture anomalies still need source and publication-type review. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. Walker rows 222 and 402 have unresolved report attribution; rows 403, 405, and 412 also remain unresolved. Walker row 409 is source-confirmed genuine and retained. All 646 Deserno/Walker source and cache rows remain intact; no curated producer exclusion is applied here.",
+  "note": "Deserno and Walker anomalies still need exact source and publication-type review. The 88-row follow-on ledger now includes five verified Walker NSF award records and one Nottingham-confirmed namesake row. Walker rows 404, 410, and 411 returned to preliminary status because their cited PDF is indirect. Walker’s full profile remains held; all 646 source and cache rows remain intact, and no producer exclusion is applied here.",
   "walker_profile_attribution_review": {
     "scholar_id": "IcEsJfAAAAAJ",
     "state": "profile_wide_row_attribution_review_required_before_publication",
@@ -74,39 +74,9 @@
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 185,
-      "author_pub_id": "IcEsJfAAAAAJ:8JTMrWI6FdcC",
-      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 202,
-      "author_pub_id": "IcEsJfAAAAAJ:4tNoA7Af41QC",
-      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 213,
-      "author_pub_id": "IcEsJfAAAAAJ:ZqLB7dQ1iF4C",
-      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
       "capture_row": 222,
       "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
       "concern": "The 2018 Victorian pathology-services rostering report shares an RMIT team and subject, but the exact report title is absent from checked faculty outputs; verify exact author attribution before exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 292,
-      "author_pub_id": "IcEsJfAAAAAJ:SgM-ki2adj0C",
-      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
-    },
-    {
-      "scholar_id": "IcEsJfAAAAAJ",
-      "capture_row": 305,
-      "author_pub_id": "IcEsJfAAAAAJ:bbjcffOLshcC",
-      "concern": "NSF award record may be a nonpublication; verify the award source before exact exclusion."
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",
@@ -179,6 +149,24 @@
       "capture_row": 402,
       "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
       "concern": "The saved record shares the RMIT pathology-services rostering report title with row 222, but the exact report is absent from checked faculty outputs; verify exact author attribution before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 404,
+      "author_pub_id": "IcEsJfAAAAAJ:sfnaS5RM6jYC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 410,
+      "author_pub_id": "IcEsJfAAAAAJ:yMeIxYmEMEAC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 411,
+      "author_pub_id": "IcEsJfAAAAAJ:vbGhcppDl1QC",
+      "concern": "Previously proposed as false attribution; cited Natural Hazards PDF only references the report in a bibliography. Find the exact report and independently verify its authors before exclusion."
     },
     {
       "scholar_id": "IcEsJfAAAAAJ",

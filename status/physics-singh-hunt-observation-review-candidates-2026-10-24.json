@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Unresolved classifications from the saved Singh/Hunt captures. Exact source-reviewed proposals are in physics-followon-reviewed-observation-exclusions-2026-10-24.json. All source and cache rows remain intact; these preliminary flags are not producer exclusions.",
+  "note": "Two blank-venue dissertation rows, Singh 38 and Hunt 31, are verified genuine and retained. Hunt row 95 and patent/publication-type questions remain preliminary. Exact source-reviewed proposals are in the follow-on ledger. All source and cache rows remain intact; preliminary flags are not producer exclusions.",
   "candidates": [
     {
       "scholar_id": "hgtyZOUAAAAJ",
@@ -12,21 +12,9 @@
     },
     {
       "scholar_id": "hgtyZOUAAAAJ",
-      "capture_row": 38,
-      "author_pub_id": "hgtyZOUAAAAJ:7PzlFSSx8tAC",
-      "concern": "Venue is blank in Scholar; identify source before deciding classification."
-    },
-    {
-      "scholar_id": "hgtyZOUAAAAJ",
       "capture_row": 48,
       "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
       "concern": "Patent record; decide publication-type policy before any exclusion."
-    },
-    {
-      "scholar_id": "11EoZncAAAAJ",
-      "capture_row": 31,
-      "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
-      "concern": "Venue is blank in Scholar; identify source before deciding classification."
     },
     {
       "scholar_id": "11EoZncAAAAJ",
@@ -107,6 +95,22 @@
         90
       ],
       "note": "Meeting abstracts are retained in the raw capture; no blanket exclusion proposed."
+    }
+  ],
+  "retained_rows": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 38,
+      "author_pub_id": "hgtyZOUAAAAJ:7PzlFSSx8tAC",
+      "reason": "Official UCF repository identifies this as Simranjeet Singh’s 2014 Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://stars.library.ucf.edu/etd/4606/"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "capture_row": 31,
+      "author_pub_id": "11EoZncAAAAJ:d1gkVwhDpl0C",
+      "reason": "CMU CV identifies Relaxation Dynamics Of Solid Helium-4 as Benjamin Hunt’s 2009 Cornell Physics dissertation. Blank Scholar venue alone is not exclusion evidence.",
+      "evidence_url": "https://www.cmu.edu/physics/people/faculty/documents/hunt_cv.pdf"
     }
   ]
 }

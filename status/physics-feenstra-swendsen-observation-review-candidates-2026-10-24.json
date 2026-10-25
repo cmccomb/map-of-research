@@ -2,7 +2,7 @@
   "schema_version": 1,
   "review_state": "preliminary_candidates_not_applied",
   "reviewed_at": "2026-10-24",
-  "note": "Uncertain saved-capture classifications remain. Feenstra row 267 has an exact source-reviewed false-attribution proposal in physics-followon-reviewed-observation-exclusions-2026-10-24.json; row 246 is source-confirmed genuine coeditor work and retained. All 624 Feenstra/Swendsen source and cache rows remain intact. No curated producer exclusion is applied here.",
+  "note": "Twelve exact NSF award rows (Feenstra nine, Swendsen three) moved to the follow-on proposed ledger after official award checks. Remaining patent, malformed, and attribution candidates require review. Feenstra row 246 is source-confirmed genuine coeditor work and retained. All 624 source and cache rows remain intact; no producer exclusion is applied here.",
   "candidates": [
     {
       "scholar_id": "p1aFEDYAAAAJ",
@@ -15,78 +15,6 @@
       "capture_row": 159,
       "author_pub_id": "p1aFEDYAAAAJ:D03iK_w7-QYC",
       "concern": "Patent record; decide publication-type policy before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 300,
-      "author_pub_id": "p1aFEDYAAAAJ:M0leSnx2MbUC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 303,
-      "author_pub_id": "p1aFEDYAAAAJ:PQEM9vzQD9gC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 353,
-      "author_pub_id": "p1aFEDYAAAAJ:hNSvKAmkeYkC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 358,
-      "author_pub_id": "p1aFEDYAAAAJ:N4u4nq0IxgcC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 368,
-      "author_pub_id": "p1aFEDYAAAAJ:n3vGvpFsckwC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 371,
-      "author_pub_id": "p1aFEDYAAAAJ:9NZAP19TdFAC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 381,
-      "author_pub_id": "p1aFEDYAAAAJ:tz746QTLzJkC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 384,
-      "author_pub_id": "p1aFEDYAAAAJ:ymY9cBF3mdcC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "p1aFEDYAAAAJ",
-      "capture_row": 395,
-      "author_pub_id": "p1aFEDYAAAAJ:pYKElYtJMmwC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "KoHdmZEAAAAJ",
-      "capture_row": 185,
-      "author_pub_id": "KoHdmZEAAAAJ:P_fFXc30I2UC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "KoHdmZEAAAAJ",
-      "capture_row": 188,
-      "author_pub_id": "KoHdmZEAAAAJ:23Hg5vt_rPQC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
-    },
-    {
-      "scholar_id": "KoHdmZEAAAAJ",
-      "capture_row": 192,
-      "author_pub_id": "KoHdmZEAAAAJ:OP2qWFMeUpEC",
-      "concern": "NSF award record may be a nonpublication; verify exact award source before exclusion."
     },
     {
       "scholar_id": "KoHdmZEAAAAJ",
