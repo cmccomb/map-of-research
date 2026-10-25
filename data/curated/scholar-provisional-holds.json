@@ -93,13 +93,6 @@
       "reviewed_exclusion_ids_sha256": "",
       "held_observations": [
         {
-          "capture_row_index": 33,
-          "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
-          "reason": "A 2020 strawberry-delivery preprint appears related to the 2022 PNAS article at row 18; exact version relationship needs primary-source reconciliation.",
-          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:dhFuZR0502QC",
-          "reviewed_at": "2026-10-25"
-        },
-        {
           "capture_row_index": 41,
           "author_pub_id": "vF51LxIAAAAJ:M3ejUd6NZC8C",
           "reason": "Undated Spanish archive record with malformed institutional venue; exact type, date, and authorship context need source review.",
@@ -379,6 +372,23 @@
       ],
       "expected_reviewed_exclusion_rows": 43,
       "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "expected_reviewed_exclusion_rows": 19,
+      "reviewed_exclusion_ids_sha256": "732b3debd5049dbe6a2dc1df9fc40e2ffb31d7846e1bec179f88a0f3d9cce82a",
+      "held_observations": [
+        {
+          "capture_row_index": 195,
+          "author_pub_id": "FRtd8_QAAAAJ:pqnbT2bcN3wC",
+          "reason": "Undated Spanish Cor-Ciencia archive entry with malformed venue; original document type, date, and full byline remain unverified. Its matching Gloria Silva observation is already held.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRtd8_QAAAAJ&cstart=100&pagesize=100&citation_for_view=FRtd8_QAAAAJ:pqnbT2bcN3wC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }

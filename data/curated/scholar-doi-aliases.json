@@ -682,6 +682,90 @@
         "https://api.crossref.org/works/10.1038/s41589-025-01960-x"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "vF51LxIAAAAJ",
+      "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
+      "observed_title": "From farm to pharmacy: strawberry-enabled oral delivery of protein drugs",
+      "observed_year": 2020,
+      "published_doi": "10.1073/pnas.2207829119",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "vF51LxIAAAAJ",
+      "author_pub_id": "vF51LxIAAAAJ:7PzlFSSx8tAC",
+      "observed_title": "The strawberry-derived permeation enhancer pelargonidin enables oral protein delivery",
+      "observed_year": 2022,
+      "published_doi": "10.1073/pnas.2207829119",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "zKKBwB4AAAAJ",
+      "author_pub_id": "zKKBwB4AAAAJ:hkOj_22Ku90C",
+      "observed_title": "From farm to pharmacy: strawberry-enabled oral delivery of protein drugs",
+      "observed_year": 2020,
+      "published_doi": "10.1073/pnas.2207829119",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "zKKBwB4AAAAJ",
+      "author_pub_id": "zKKBwB4AAAAJ:EkHepimYqZsC",
+      "observed_title": "The strawberry-derived permeation enhancer pelargonidin enables oral protein delivery",
+      "observed_year": 2022,
+      "published_doi": "10.1073/pnas.2207829119",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461",
+        "https://www.pnas.org/doi/10.1073/pnas.2207829119",
+        "https://api.crossref.org/works/10.1073/pnas.2207829119"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:HJSXoJQnj-YC",
+      "observed_title": "Water content of aged aerosol",
+      "observed_year": 2010,
+      "published_doi": "10.5194/acp-11-911-2011",
+      "relationship": "preprint_of",
+      "evidence_urls": [
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011-discussion.html",
+        "https://acp.copernicus.org/preprints/10/21653/2010/acpd-10-21653-2010.pdf",
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011.html"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "ILambBMAAAAJ",
+      "author_pub_id": "ILambBMAAAAJ:a0OBvERweLwC",
+      "observed_title": "Water content of aged aerosol",
+      "observed_year": 2011,
+      "published_doi": "10.5194/acp-11-911-2011",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011-discussion.html",
+        "https://acp.copernicus.org/preprints/10/21653/2010/acpd-10-21653-2010.pdf",
+        "https://acp.copernicus.org/articles/11/911/2011/acp-11-911-2011.html"
+      ],
+      "verified_at": "2026-10-25"
     }
   ]
 }

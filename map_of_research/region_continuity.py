@@ -17,6 +17,18 @@ from datetime import date
 from typing import Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
+from .chemistry_post_sullivan_approval import (
+    APPROVAL_SHA256 as CHEMISTRY_POST_SULLIVAN_APPROVAL_SHA256,
+)
+from .chemistry_post_sullivan_approval import (
+    DECISION_SET_SHA256 as CHEMISTRY_POST_SULLIVAN_DECISION_SET_SHA256,
+)
+from .chemistry_post_sullivan_approval import (
+    ExactChemistryPostSullivanApproval,
+)
+from .chemistry_post_sullivan_approval import (
+    decision_set_digest as chemistry_decision_set_digest,
+)
 from .doi_aliases import DOI_PATTERN
 from .sullivan_continuity_addendum import (
     ADDENDUM_SHA256 as SULLIVAN_ADDENDUM_SHA256,
@@ -122,7 +134,9 @@ class RegionReleaseDiffError(ValueError):
             f"{len(receipt.get('unused_sullivan_binding_approvals', []))} "
             "unused binding approvals, "
             f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
-            "unused Sullivan approvals; "
+            "unused Sullivan approvals, "
+            f"{len(receipt.get('unused_chemistry_approvals', []))} "
+            "unused Chemistry approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
             f"{receipt['unexplained_gains'][:2]}"
         )
@@ -388,6 +402,7 @@ def reconcile_region_decisions(
     prior_revision: str,
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
+    chemistry_post_sullivan_approval: ExactChemistryPostSullivanApproval | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -485,6 +500,28 @@ def reconcile_region_decisions(
     approved_binding_changes = set()
     approved_additional_losses: set[ObservationKey] = set()
     required_curated_work_ids: set[str] = set()
+    chemistry_losses: set[ObservationKey] = set()
+    chemistry_gains: set[ObservationKey] = set()
+    chemistry_bindings: set[tuple[ObservationKey, str, str, bool, bool]] = set()
+    if chemistry_post_sullivan_approval is not None:
+        approval = chemistry_post_sullivan_approval
+        if (
+            not isinstance(approval, ExactChemistryPostSullivanApproval)
+            or approval.prior_revision != prior_revision
+            or approval.manifest_sha256 != CHEMISTRY_POST_SULLIVAN_APPROVAL_SHA256
+            or chemistry_decision_set_digest(approval)
+            != CHEMISTRY_POST_SULLIVAN_DECISION_SET_SHA256
+            or sullivan_loss_approval is not None
+            or sullivan_continuity_addendum is not None
+            or len(approval.loss_identities) != 1
+            or len(approval.gain_identities) != 1
+            or len(approval.binding_changes) != 5
+        ):
+            raise ValueError("Chemistry post-Sullivan approval is not the reviewed set")
+        chemistry_losses = set(approval.loss_identities)
+        chemistry_gains = set(approval.gain_identities)
+        chemistry_bindings = set(approval.binding_changes)
+        approved_binding_changes |= chemistry_bindings
     if sullivan_continuity_addendum is not None:
         if (
             not isinstance(
@@ -532,8 +569,9 @@ def reconcile_region_decisions(
         not in approved_binding_changes
     ]
     unused_sullivan_binding_approvals = (
-        approved_binding_changes - actual_binding_changes
+        approved_binding_changes - chemistry_bindings - actual_binding_changes
     )
+    unused_chemistry_bindings = chemistry_bindings - actual_binding_changes
     missing_curated_targets = sorted(
         work_id
         for work_id in required_curated_work_ids
@@ -581,9 +619,14 @@ def reconcile_region_decisions(
     # prior-visible loss set. Generic reviewed-loss exemptions still apply to
     # ordinary releases, but cannot admit a 23rd Sullivan-release loss.
     losses_requiring_approval = (
-        losses if sullivan_loss_approval is not None else otherwise_unexplained_losses
+        losses
+        if sullivan_loss_approval is not None
+        or chemistry_post_sullivan_approval is not None
+        else otherwise_unexplained_losses
     )
-    unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
+    unexplained_losses = sorted(
+        losses_requiring_approval - approved_sullivan_losses - chemistry_losses
+    )
     verified_gains = sorted(
         identity
         for identity in gains
@@ -612,7 +655,15 @@ def reconcile_region_decisions(
     # A prior weak-region exclusion remains excluded unless independently
     # verified. Newly collected Scholar rows use the current quality audit.
     new_gains = sorted(identity for identity in gains if identity not in previous_rows)
-    unexplained_gains = sorted(gains - set(verified_gains) - set(new_gains))
+    unexplained_gains = sorted(
+        gains - chemistry_gains
+        if chemistry_post_sullivan_approval is not None
+        else gains - set(verified_gains) - set(new_gains)
+    )
+    unused_chemistry_approvals = [
+        _display(identity)
+        for identity in sorted((chemistry_losses - losses) | (chemistry_gains - gains))
+    ] + [_display(identity) for identity, *_ in sorted(unused_chemistry_bindings)]
     receipt = {
         "version": CONTINUITY_VERSION,
         "prior_revision": prior_revision,
@@ -664,6 +715,30 @@ def reconcile_region_decisions(
         "unused_sullivan_loss_approvals": [
             _display(item) for item in sorted(unused_sullivan_approvals)
         ],
+        "chemistry_post_sullivan_approval_sha256": (
+            chemistry_post_sullivan_approval.manifest_sha256
+            if chemistry_post_sullivan_approval is not None
+            else None
+        ),
+        "approved_chemistry_losses": [
+            _display(item) for item in sorted(chemistry_losses & losses)
+        ],
+        "approved_chemistry_gains": [
+            _display(item) for item in sorted(chemistry_gains & gains)
+        ],
+        "approved_chemistry_binding_changes": [
+            change
+            for change in mapped_binding_changes
+            if (
+                tuple(change["observation"].split("/")),
+                change["prior_work_id"],
+                change["current_work_id"],
+                change["prior_collaboration_eligible"],
+                change["current_collaboration_eligible"],
+            )
+            in chemistry_bindings
+        ],
+        "unused_chemistry_approvals": unused_chemistry_approvals,
         "verified_gains": [_display(item) for item in verified_gains],
         "new_source_gains": len(new_gains),
         "unapproved_mapped_binding_changes": unapproved_mapped_binding_changes,
@@ -692,6 +767,7 @@ def reconcile_region_decisions(
         or unexplained_gains
         or unapproved_mapped_binding_changes
         or unused_sullivan_binding_approvals
+        or unused_chemistry_approvals
         or missing_curated_targets
         or unused_sullivan_approvals
     ):

@@ -47,10 +47,10 @@
       "state": "released",
       "expected_source_rows": 41,
       "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
-      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
+      "reason": "Complete 41-row visible Scholar profile verified; the 2020 strawberry preprint is joined to its 2022 PNAS version by exact reviewed DOI aliases. One unresolved archive observation remains held from mapped works.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 2,
-      "provisional_hold_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40"
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "fec43159aba48541b4bcb47077360ba76514087e39b3715a585fd682d719d988"
     },
     {
       "person_id": "person-sullivan-589c9545",
@@ -73,6 +73,17 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "state": "released",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "reason": "Complete 195-row visible Scholar source is verified. Nineteen exact exclusions remain reviewed separately; the undated Spanish archive observation is provisionally held pending original metadata for publication type, date, and full byline. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "228bc9dc3971f00d531a405f96ac2f7050c0f7f33edd8dcd43f5777c81d2ee97"
     }
   ]
 }

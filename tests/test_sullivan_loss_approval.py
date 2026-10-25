@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -16,13 +17,19 @@ from map_of_research.provisional_holds import load_provisional_holds
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data/curated"
 FIXTURE = ROOT / "tests/fixtures/sullivan_exact_loss_rows.json"
-REVIEW = ROOT / "registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json"
+HISTORICAL_SOURCES = ROOT / "tests/fixtures/sullivan_bb88_sources"
 
 
 @pytest.fixture
 def verified_rows(monkeypatch, tmp_path):
     """Use recorded hosted prior rows without a network dependency in CI."""
 
+    historical_sources = tmp_path / "sullivan_bb88_sources"
+    historical_sources.mkdir()
+    for compressed in HISTORICAL_SOURCES.glob("*.json.gz"):
+        (historical_sources / compressed.name.removesuffix(".gz")).write_bytes(
+            gzip.decompress(compressed.read_bytes())
+        )
     rows = json.loads(FIXTURE.read_text(encoding="utf-8"))
     real_sha256_file = approval.sha256_file
     cache = tmp_path / f"{approval.SULLIVAN_ID}.json"
@@ -37,7 +44,11 @@ def verified_rows(monkeypatch, tmp_path):
         return real_sha256_file(path)
 
     monkeypatch.setattr(approval, "sha256_file", fixture_sha)
-    profiles = load_provisional_holds(CURATED / "scholar-provisional-holds.json")
+    # The approved bb88 transition is historical. Later releases may extend
+    # these curated files without changing the exact sources approved here.
+    profiles = load_provisional_holds(
+        historical_sources / "scholar-provisional-holds.json"
+    )
     holds = {
         (item.scholar_id, item.author_pub_id): item
         for profile in profiles
@@ -50,11 +61,12 @@ def verified_rows(monkeypatch, tmp_path):
         "source_snapshot_commit": approval.SOURCE_COMMIT,
         "source_snapshot_sha256": approval.SOURCE_SHA256,
         "cache_path": cache,
-        "profile_releases_path": CURATED / "scholar-profile-releases.json",
-        "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
-        "crosswalk_path": REVIEW,
-        "curated_works_path": CURATED / "works.json",
-        "exclusions_path": CURATED / "scholar-exclusions.json",
+        "profile_releases_path": historical_sources / "scholar-profile-releases.json",
+        "provisional_holds_path": historical_sources / "scholar-provisional-holds.json",
+        "crosswalk_path": historical_sources
+        / "2026-10-25-chem-sullivan-prior-id-crosswalk.json",
+        "curated_works_path": historical_sources / "works.json",
+        "exclusions_path": historical_sources / "scholar-exclusions.json",
         "prior_works": rows["prior_works"],
         "prior_profiles": rows["prior_profiles"],
         "source_rows": rows["source_rows"],
