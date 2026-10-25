@@ -10,6 +10,7 @@ from collections import Counter
 from collections.abc import Mapping
 from typing import Any
 
+from .doi_aliases import ReviewedDoiAlias
 from .exclusions import ReviewedExclusion
 from .quality import QUALITY_ASSESSMENT_VERSION, assess_publication
 from .registry import Registry
@@ -163,6 +164,7 @@ def build_dataset_tables(
     observations: Any,
     registry: Registry,
     exclusions: Mapping[tuple[str, str], ReviewedExclusion] | None = None,
+    doi_aliases: Mapping[tuple[str, str], ReviewedDoiAlias] | None = None,
 ) -> dict[str, Any]:
     """Build retained observations plus canonical people/work relationship tables."""
 
@@ -203,11 +205,27 @@ def build_dataset_tables(
     known_person_titles = {
         normalize_title(person.display_name) for person in registry.people
     }
-    for row in profile_publications.itertuples(index=False):
+    for position, row in enumerate(profile_publications.itertuples(index=False)):
         observation_ids.append(_observation_identity(row))
-        work_id, method, doi = _work_identity(
-            row, curated_title_year_dois=curated_title_year_dois
-        )
+        alias = (doi_aliases or {}).get((str(row.scholar_id), str(row.author_pub_id)))
+        if alias is not None and row.source_type == "scholar":
+            source_doi = _doi(row.source_doi)
+            if source_doi and source_doi != alias.doi:
+                raise ValueError("Reviewed DOI alias conflicts with a source DOI")
+            doi = alias.doi
+            work_id = _hash_id("work", f"doi:{doi}")
+            method = "reviewed_version_alias"
+            index = profile_publications.index[position]
+            profile_publications.at[index, "source_verified_at"] = max(
+                _clean_text(row.source_verified_at), alias.verified_at
+            )
+            profile_publications.at[index, "source_verification_urls"] = sorted(
+                {*_as_list(row.source_verification_urls), *alias.evidence_urls}
+            )
+        else:
+            work_id, method, doi = _work_identity(
+                row, curated_title_year_dois=curated_title_year_dois
+            )
         work_ids.append(work_id)
         match_methods.append(method)
         dois.append(doi)

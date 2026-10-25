@@ -16,6 +16,11 @@ from typing import Any
 
 from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
 from .dataset import build_dataset_tables
+from .doi_aliases import (
+    DEFAULT_DOI_ALIASES_PATH,
+    load_doi_aliases,
+    validate_doi_aliases,
+)
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
@@ -1047,6 +1052,7 @@ def publish_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
+    doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1060,13 +1066,15 @@ def publish_snapshot(
         departments_path=departments_path,
     )
     exclusions = load_exclusions(exclusions_path)
+    doi_aliases = load_doi_aliases(doi_aliases_path)
+    validate_doi_aliases(frame, doi_aliases, exclusions)
     _require_physics_review_ready(frame, snapshot_path, exclusions)
     enriched, new_embedding_count = add_embeddings(
         frame,
         hf_token=hf_token,
         encoder=encoder,
     )
-    tables = build_dataset_tables(enriched, registry, exclusions)
+    tables = build_dataset_tables(enriched, registry, exclusions, doi_aliases)
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
         reuse = _reusable_work_order(
@@ -1133,6 +1141,8 @@ def publish_snapshot(
             else 0
         ),
         "reviewed_exclusions_sha256": sha256_file(exclusions_path),
+        "reviewed_doi_aliases": len(doi_aliases),
+        "reviewed_doi_aliases_sha256": sha256_file(doi_aliases_path),
         "profile_count": int(
             enriched.loc[
                 enriched.get("source_type", "scholar") == "scholar", "scholar_id"
@@ -1175,6 +1185,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
     parser.add_argument(
         "--reviewed-exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH
+    )
+    parser.add_argument(
+        "--reviewed-doi-aliases", type=Path, default=DEFAULT_DOI_ALIASES_PATH
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
@@ -1241,6 +1254,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             memberships_path=args.memberships,
             departments_path=args.departments,
             exclusions_path=args.reviewed_exclusions,
+            doi_aliases_path=args.reviewed_doi_aliases,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

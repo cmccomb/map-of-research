@@ -1402,6 +1402,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         }
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
@@ -1492,6 +1493,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
@@ -1541,6 +1543,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     )
     frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
