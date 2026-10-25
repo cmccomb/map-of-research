@@ -235,6 +235,16 @@
       "repaired_value": "Eur. Phys. J. C 78 (2018) 939",
       "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-16-003/index.html",
       "repair_basis": "official CMS journal article locator replaces page-span-only publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 687,
+      "author_pub_id": "wJ_gQLoAAAAJ:_-FgD5s_Z1cC",
+      "cache_field": "title",
+      "captured_value": "Observation of Λ Hyperon Local Polarization in p-Pb Collisions at sNN=8.16  TeV",
+      "repaired_value": "Observation of Λ Hyperon Local Polarization in p-Pb Collisions at \\sqrt{s_{NN}} = 8.16 TeV",
+      "evidence_url": "https://link.aps.org/doi/10.1103/6ywq-gm61",
+      "repair_basis": "publisher title restores the missing square root in the collision energy"
     }
   ]
 }
