@@ -1927,6 +1927,9 @@ def publish_snapshot(
             current_profiles=tables["profile_publications"].to_dict("records"),
             current_works=tables["works"].to_dict("records"),
             current_authorships=tables["authorships"].to_dict("records"),
+            review_path=math_region_review_path.with_name(
+                "scholar-chem-region-review.json"
+            ),
             exclusions_path=exclusions_path,
             holds_path=provisional_holds_path,
             contexts_path=contexts_path,
