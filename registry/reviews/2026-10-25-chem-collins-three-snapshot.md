@@ -1,10 +1,13 @@
 # Collins and three Chemistry faculty: no-upload release preview
 
-Built 2026-10-25 from the Math-live source snapshot at `31b1492`, plus source
-drafts #118 and #250. The trusted producer snapshot builder at #253
-(`15ecc203`) created the candidate parquet and manifest in this branch. The
-producer's paired registry and exclusion/hold manifests supply the release
-decisions. This branch does not upload or change either public map.
+Built 2026-10-25 from the Math-live source snapshot at `31b1492`, plus the
+complete source captures later merged through #118 and #250. The original
+candidate used trusted producer #253 (`15ecc203`). An independent frozen-pair
+rebuild from producer `9347ff51f9ea5c345bfd6f69d6933fbdc7fc8e98` and source
+`134d1f20f6c8716ebdfb07a0c8f4763885f29d8b` produced byte-identical
+Parquet and the same manifest fields except the build timestamp. The producer's
+paired registry and exclusion/hold manifests supply the release decisions.
+This review branch does not upload or change either public map.
 
 | Scholar profile | Complete raw rows | Exact exclusions | Provisional holds | Eligible observations before map region filtering |
 | --- | ---: | ---: | ---: | ---: |
@@ -30,9 +33,8 @@ topic, and low-information-region processing. The release gate confirmed that
 held observations contributed no public works or authorships. The machine-readable
 receipt is `work/chem-collins-three-preview-results.json` in the task workspace.
 
-Source PRs #118 and #250 and producer PRs #243 and #253 must merge and pass
-their exact-head CI before this candidate can become the central snapshot. The
-upload workflow adds `--provisional-holds` to the already present primary-home
-gate. Run the protected trusted upload only after the final producer and source
-heads match this preview, then verify the immutable Hub receipt and both map
-deployments.
+Source PRs #118 and #250 and producer PRs #243 and #253 have merged with green
+exact-head CI. The final frozen producer and source heads above match this
+preview. The upload workflow adds `--provisional-holds` to the already present
+primary-home gate. After this snapshot PR passes final CI, run its protected
+trusted upload, then verify the immutable Hub receipt and both map deployments.
