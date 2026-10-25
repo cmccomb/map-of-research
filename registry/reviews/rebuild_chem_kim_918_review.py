@@ -837,6 +837,90 @@ CMU_PRIMARY = {
         "ACS full Hyung J. Kim byline and CMU Chemistry affiliation; "
         "CMU group list and 2006 print issue, J. Phys. Chem. A 110:429-435, agree",
     ),
+    # CMU group entries checked against AIP, PLOS, and BKCS DOI records.
+    25: (
+        "Solvation in molecular ionic liquids",
+        2003,
+        "https://api.crossref.org/works/10.1063%2F1.1611875",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 119:6411-6414 agree",
+    ),
+    67: (
+        "A molecular dynamics computer simulation study of room-temperature "
+        "ionic liquids. I. Equilibrium solvation structure and free energetics",
+        2005,
+        "https://api.crossref.org/works/10.1063%2F1.1819317",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 122:044510 agree",
+    ),
+    214: (
+        "Rotational dynamics of a diatomic solute in the room-temperature "
+        "ionic liquid 1-ethyl-3-methylimidazolium hexafluorophosphate",
+        2006,
+        "https://api.crossref.org/works/10.1063%2F1.2232303",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 125:061102 agree",
+    ),
+    297: (
+        "Solvation in supercritical water",
+        2006,
+        "https://api.crossref.org/works/10.1063%2F1.2194012",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 124:204504 agree",
+    ),
+    348: (
+        "1∕ f spectrum and memory function analysis of solvation dynamics "
+        "in a room-temperature ionic liquid",
+        2008,
+        "https://api.crossref.org/works/10.1063%2F1.2911927",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 128:174504 agree",
+    ),
+    352: (
+        "Dielectric relaxation of hot water",
+        2000,
+        "https://api.crossref.org/works/10.1063%2F1.1315991",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 113:6025-6028 agree",
+    ),
+    377: (
+        "Vibrational energy relaxation of a diatomic molecule in a "
+        "room-temperature ionic liquid",
+        2006,
+        "https://api.crossref.org/works/10.1063%2F1.2206579",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 125:024507 agree",
+    ),
+    405: (
+        "Conformational dynamics and ligand binding in the multi-domain protein PDC109",
+        2010,
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009180",
+        "PLOS original article distinguishes Hyun Jin Kim from Hyung J. Kim, "
+        "names CMU Chemistry and hjkim@cmu.edu; CMU group list agrees",
+    ),
+    517: (
+        "On the temperature and pressure dependences of cavities in the "
+        "dielectric continuum picture",
+        2005,
+        "https://api.crossref.org/works/10.1063%2F1.1948375",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 123:014504 agree",
+    ),
+    596: (
+        "Solvation of a small metal-binding peptide in room-temperature ionic liquids",
+        2012,
+        "https://api.crossref.org/works/10.5012%2Fbkcs.2012.33.11.3601",
+        "BKCS DOI record names Hyung J. Kim in full; CMU group list "
+        "confirms Bull. Korean Chem. Soc. 33:3601-3606",
+    ),
+    691: (
+        "Free energy, entropy and volume of activation for electron "
+        "transfer reactions in a polar solvent",
+        2006,
+        "https://api.crossref.org/works/10.1063%2F1.2217941",
+        "AIP full Hyung J. Kim byline and CMU Chemistry affiliation; "
+        "CMU group list and J. Chem. Phys. 125:011101 agree",
+    ),
 }
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
@@ -864,6 +948,17 @@ CMU_PRIMARY_ID_GUARDS = {
     468: "bC4aq-4AAAAJ:TQgYirikUcIC",
     687: "bC4aq-4AAAAJ:isC4tDSrTZIC",
     723: "bC4aq-4AAAAJ:blknAaTinKkC",
+    25: "bC4aq-4AAAAJ:u-x6o8ySG0sC",
+    67: "bC4aq-4AAAAJ:UeHWp8X0CEIC",
+    214: "bC4aq-4AAAAJ:aqlVkmm33-oC",
+    297: "bC4aq-4AAAAJ:4JMBOYKVnBMC",
+    348: "bC4aq-4AAAAJ:hFOr9nPyWt4C",
+    352: "bC4aq-4AAAAJ:L8Ckcad2t8MC",
+    377: "bC4aq-4AAAAJ:mB3voiENLucC",
+    405: "bC4aq-4AAAAJ:M3NEmzRMIkIC",
+    517: "bC4aq-4AAAAJ:_Qo2XoVZTnwC",
+    596: "bC4aq-4AAAAJ:k_IJM867U9cC",
+    691: "bC4aq-4AAAAJ:maZDTaKrznsC",
 }
 
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
@@ -885,6 +980,17 @@ CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     468: "10.1021/jp710128p",
     687: "10.1021/jp075270j",
     723: "10.1021/jp053578+",
+    25: "10.1063/1.1611875",
+    67: "10.1063/1.1819317",
+    214: "10.1063/1.2232303",
+    297: "10.1063/1.2194012",
+    348: "10.1063/1.2911927",
+    352: "10.1063/1.1315991",
+    377: "10.1063/1.2206579",
+    405: "10.1371/journal.pone.0009180",
+    517: "10.1063/1.1948375",
+    596: "10.5012/bkcs.2012.33.11.3601",
+    691: "10.1063/1.2217941",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -1338,9 +1444,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 81,
+        "cmu_orcid_exact_title_year_retained": 70,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 33,
+        "cmu_primary_work_retained": 44,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
