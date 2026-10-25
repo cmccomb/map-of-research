@@ -1,0 +1,141 @@
+{
+  "person_id": "person-agostonpisztora-810e0d1f",
+  "captured_on": "2026-10-25",
+  "review_state": "held_source_only",
+  "whole_researcher_complete": false,
+  "verified_scholar_id": null,
+  "baseline_audit_sha256": "af9a52bd52812d9415162eaad9cf2c0646c1569aa50f1e9fd809b1d1e282c0d4",
+  "baseline_csv_sha256": "3d2e8b5f54f8260ddc4acb1024ba1799b46bedde817290036815978c350ffd75",
+  "files": [
+    {
+      "path": "observed-11.csv",
+      "bytes": 4732,
+      "sha256": "5b9d13cc4dac725966e81ad992df2b33a8e746dddd823a764d2f52730aaa3761"
+    },
+    {
+      "path": "related-held-5.csv",
+      "bytes": 1929,
+      "sha256": "45db059384573e02e3004d91a45d24955bc61476a37019e0de6e9d100c6d5411"
+    },
+    {
+      "path": "cna-preprint-source-hashes.json",
+      "bytes": 782,
+      "sha256": "923f4bf77bd65980bd772bbc5d108b2fb02768f549144dec248b6cf1861d6b4b"
+    },
+    {
+      "path": "raw/arxiv-icm-version.html",
+      "bytes": 42964,
+      "sha256": "f799fe9c923d50961d6b362da1697c83e42202a811d8c16aa530a48e44d2fe43",
+      "source_url": "https://arxiv.org/abs/math/0304371"
+    },
+    {
+      "path": "raw/cerf-coauthor-list.html",
+      "bytes": 22751,
+      "sha256": "35fe4ed027a612517d1332aaf101e5a280a39f65378bc0e77243889652a76263",
+      "source_url": "https://www.imo.universite-paris-saclay.fr/~raphael.cerf/articles.html"
+    },
+    {
+      "path": "raw/cmu-personal-dir.html",
+      "bytes": 1307,
+      "sha256": "507e91ec64d808c1d4c4ec278e8b5829690846206eb123b72e813c23208188e3",
+      "source_url": "https://www.math.cmu.edu/users/math/pisztora/"
+    },
+    {
+      "path": "raw/cmu-profile.html",
+      "bytes": 46651,
+      "sha256": "52b3c1a7477af642e4123a10b78436839807490352d6f567a1acef4d3394ff08",
+      "source_url": "https://www.cmu.edu/math/people/faculty/pisztora.html"
+    },
+    {
+      "path": "raw/cna-00-001-detail.html",
+      "bytes": 7270,
+      "sha256": "7fde35bd90b4cd173eccac798212eead6e5932aacc62449f53da6fe966db94cb",
+      "source_url": "https://www.math.cmu.edu/CNA/Publications/publication_auto.php?cnacode=00-CNA-001"
+    },
+    {
+      "path": "raw/cna-99-012-detail.html",
+      "bytes": 7063,
+      "sha256": "6641e11a56bf4a631b5d0cfca4f0713ba8ef72818966aa455f80f88fc22e006d",
+      "source_url": "https://www.math.cmu.edu/CNA/Publications/publication_auto.php?cnacode=99-CNA-012"
+    },
+    {
+      "path": "raw/cna-author-search.html",
+      "bytes": 8340,
+      "sha256": "26d7524eb6e2b7a7b75f3fb421d79221da0b79c51a0ae5a10080df4db22cf649",
+      "source_url": "https://www.math.cmu.edu/CNA/Publications/publications.php",
+      "request": {
+        "method": "POST",
+        "form": {
+          "Year": "%",
+          "Author": "Pisztora",
+          "Titlesearch": "%",
+          "submit1": "Search"
+        }
+      }
+    },
+    {
+      "path": "raw/crossref-10-1007-BF01198161.json",
+      "bytes": 13539,
+      "sha256": "ddbab3d83b5875d02bbf513f8d0c4d9baa4c1586e2247e7180fdd1d2c62bbc0d",
+      "source_url": "https://api.crossref.org/works/10.1007%2Fbf01198161"
+    },
+    {
+      "path": "raw/crossref-10-1007-BF01198162.json",
+      "bytes": 7297,
+      "sha256": "c8d4db638bcf8cade8486d956083c4d9644d5b4988f29a21c8866c2aad6abc77",
+      "source_url": "https://api.crossref.org/works/10.1007%2Fbf01198162"
+    },
+    {
+      "path": "raw/crossref-10-1007-s004400050206.json",
+      "bytes": 3214,
+      "sha256": "98a6990c10f1416cf4a7b036da81bd6444328e166da8e1793dd3e5cbb51b5c70",
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs004400050206"
+    },
+    {
+      "path": "raw/crossref-10-2307-1427912.json",
+      "bytes": 5210,
+      "sha256": "0a3182f36902dd03086e156ccb3561058d3b15184c8818232ea43b6e05990355",
+      "source_url": "https://api.crossref.org/works/10.2307%2F1427912"
+    },
+    {
+      "path": "raw/crossref-1019160324.json",
+      "bytes": 18964,
+      "sha256": "8344484a4f4096575af8abcc03d26b65a61abee9a6f80b5b13ac055fc043f6d5",
+      "source_url": "https://api.crossref.org/works/10.1214%2Faop%2F1019160324"
+    },
+    {
+      "path": "raw/crossref-1022677453.json",
+      "bytes": 4923,
+      "sha256": "a91e2c6dc6317bc97af7423792acd527437cf3f5a1badb160050b42ba32faf2a",
+      "source_url": "https://api.crossref.org/works/10.1214%2Faop%2F1022677453"
+    },
+    {
+      "path": "raw/crossref-1039639377.json",
+      "bytes": 4606,
+      "sha256": "a31e2cd71fcd9b4db376926769a666fffa3696e7147a42f3489011336668913a",
+      "source_url": "https://api.crossref.org/works/10.1214%2Faop%2F1039639377"
+    },
+    {
+      "path": "raw/datacite-thesis.json",
+      "bytes": 5105,
+      "sha256": "2e1397ea645d45db48285e63fe76a07cbc1e12cb292142b8eff1c3cade7fcf5e",
+      "source_url": "https://api.datacite.org/dois/10.3929/ethz-a-000945050"
+    },
+    {
+      "path": "raw/jsm-2001-abstract.html",
+      "bytes": 6163,
+      "sha256": "3d61369861ebf5565c4ee4708ec236f8c165d986d4fff9c0dba9cb3f1882a37d",
+      "source_url": "https://ww2.amstat.org/meetings/jsm/2001/index.cfm?abstractid=300170&fuseaction=abstract_details"
+    },
+    {
+      "path": "raw/numdam-phase-coexistence.html",
+      "bytes": 58167,
+      "sha256": "66c648809c0b267986654a7b64e058e6295fd299f385957e55ceee16b6d75f09",
+      "source_url": "https://www.numdam.org/item/AIHPB_2001__37_6_643_0/"
+    }
+  ],
+  "derivation": {
+    "observed-11.csv": "10 rows from baseline audit CSV plus CMU CNA 00-CNA-001",
+    "related-held-5.csv": "version and talk observations from prior audit plus CMU CNA 99-CNA-012"
+  }
+}
