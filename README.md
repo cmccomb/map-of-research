@@ -83,6 +83,21 @@ complete browser capture is required to update its publication rows and
 coverage claim; a response capped at the collector's 200-publication default
 cannot replace them.
 
+The trusted snapshot and upload workflows also check source coverage. The
+frozen [legacy cache baseline](registry/legacy-scholar-cache-baseline.json)
+allows the exact caches already present in the 2026-10-25 source snapshot to
+remain available while they await recapture. A new cache, a changed cache, or
+a previously excluded person newly included on the map needs a complete
+visible-profile browser receipt. The check compares all cached citation IDs
+and visible row text with the saved Scholar JSON and HTML, verifies their
+checksums and disabled final Show More control, and compares the upload's raw
+Scholar rows with those caches. A bounded collector result without that
+receipt cannot enter a new published snapshot. The frozen baseline also keeps
+all 49,687 Scholar citation IDs already present in that snapshot. After a new
+complete profile is published and verified, its citation IDs should be added
+to the reviewed retention baseline before a later recapture; the frozen
+baseline does not track later publications automatically.
+
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
 the collector rejects a replacement missing any previously observed Scholar
@@ -241,11 +256,15 @@ its Hugging Face token. For every included Mathematical Sciences person with a
 verified Scholar ID, it checks saved full-profile JSON and HTML evidence,
 cache rows, and raw snapshot citation IDs. People without an exact verified ID
 remain visible as identity gaps. The `map-publish-snapshot` CLI repeats this
-check before any upload, including when invoked outside the workflow. Its
+check and the complete Scholar source check before any upload, including when
+invoked outside the workflow. Both checks have dedicated pre-authentication
+steps in the hosted upload workflow. Its
 default evidence directories are `data/authors` and `data/captures` beneath
 the snapshot checkout; pass `--math-cache-dir` and `--math-capture-dir` for a
-different layout. Direct Python calls to the `publish_snapshot` library
-function are intended for controlled previews and do not enforce this gate.
+different layout for the Math check, or `--scholar-cache-dir`,
+`--scholar-captures-dir`, and `--scholar-baseline` for the full-source check.
+Direct Python calls to the `publish_snapshot` library function are intended
+for controlled previews and do not enforce these gates.
 
 Publishing requires `HF_TOKEN` locally. The protected `huggingface` GitHub
 environment exposes the same credential to the upload workflow from a secret

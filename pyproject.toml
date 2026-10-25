@@ -40,6 +40,7 @@ map-collect = "map_of_research.collector:main"
 map-build-snapshot = "map_of_research.snapshot:build_main"
 map-validate-snapshot = "map_of_research.snapshot:validate_main"
 map-validate-math-coverage = "map_of_research.math_release_gate:main"
+map-validate-scholar-coverage = "map_of_research.coverage:main"
 map-publish-snapshot = "map_of_research.publisher:main"
 map-build-roster-review = "map_of_research.roster_review:main"
 

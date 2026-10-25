@@ -14,6 +14,7 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
 from .dataset import build_dataset_tables
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from .io import atomic_write_json, sha256_file
@@ -1137,6 +1138,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
+    parser.add_argument("--scholar-cache-dir", type=Path)
+    parser.add_argument("--scholar-captures-dir", type=Path)
+    parser.add_argument("--scholar-baseline", type=Path, default=DEFAULT_BASELINE_PATH)
     return parser.parse_args(argv)
 
 
@@ -1177,6 +1181,16 @@ def main(argv: Sequence[str] | None = None) -> int:
             capture_dir=args.math_capture_dir or snapshot_root / "data/captures",
         )
         status["math_coverage"] = math_coverage
+        scholar_coverage = validate_coverage(
+            people_path=args.people,
+            memberships_path=args.memberships,
+            departments_path=args.departments,
+            cache_dir=args.scholar_cache_dir or snapshot_root / "data/authors",
+            captures_dir=args.scholar_captures_dir or snapshot_root / "data/captures",
+            baseline_path=args.scholar_baseline,
+            snapshot_path=args.snapshot,
+        )
+        status["scholar_coverage"] = scholar_coverage
         result = publish_snapshot(
             args.snapshot,
             args.manifest,
