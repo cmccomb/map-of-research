@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "department_id": "physics",
+  "review_status": "preliminary_candidates_not_applied",
+  "source_verified_exact_exclusion_count": 0,
+  "source_rows_preserved": 2506,
+  "producer_changes_applied": false,
+  "review_basis": "Offline review of browser-visible Scholar rows, preserved HTML, and cache. No independent source-page verification of the candidate records was performed.",
+  "profiles": [
+    {
+      "person_id": "person-matteocremonesi-b2aba740",
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "observation_count": 1963,
+      "blank_author_count": 9,
+      "blank_venue_count": 545,
+      "blank_year_count": 11,
+      "same_title_year_groups_after_math_restoration": 125,
+      "rows_in_same_title_year_groups": 260,
+      "candidate_nonpublication_ids": [
+        "wJ_gQLoAAAAJ:zmHQPunddckC",
+        "wJ_gQLoAAAAJ:wlzmIqt2EaEC"
+      ],
+      "unresolved_attribution_or_record_ids": [
+        "wJ_gQLoAAAAJ:QNiCEvFIB1MC"
+      ],
+      "alias_review_note": "Eighteen previously matching title-year pairs split when SVG math labels were restored; preserve both rows until exact work identity is checked."
+    },
+    {
+      "person_id": "person-reinhardschumacher-35cd3c6f",
+      "scholar_id": "LibSWRMAAAAJ",
+      "observation_count": 543,
+      "blank_author_count": 1,
+      "blank_venue_count": 45,
+      "blank_year_count": 16,
+      "same_title_year_groups_after_math_restoration": 5,
+      "rows_in_same_title_year_groups": 10,
+      "candidate_nonpublication_ids": [
+        "LibSWRMAAAAJ:SWgZeABleR0C",
+        "LibSWRMAAAAJ:R22Rs3tN8aoC",
+        "LibSWRMAAAAJ:6bLC7aUMtPcC",
+        "LibSWRMAAAAJ:mNrWkgRL2YcC",
+        "LibSWRMAAAAJ:4QKQTXcH0q8C"
+      ],
+      "unresolved_attribution_ids": [
+        "LibSWRMAAAAJ:N6_Y7JlWxwsC",
+        "LibSWRMAAAAJ:_mQi-xiA4oYC",
+        "LibSWRMAAAAJ:pRWBApOjXDcC",
+        "LibSWRMAAAAJ:adHtZc2wMuEC",
+        "LibSWRMAAAAJ:oldoQiaHq2UC",
+        "LibSWRMAAAAJ:VnuxuLaQPLMC",
+        "LibSWRMAAAAJ:M0j1y4EgrScC"
+      ],
+      "same_work_pair_row_indices_to_review": [
+        [51, 532],
+        [408, 409],
+        [461, 466],
+        [503, 504]
+      ]
+    }
+  ],
+  "next_decision": "Verify candidate records against their individual sources and author identity before any exact producer exclusion, deduplication, or snapshot rebuild."
+}
