@@ -24,7 +24,7 @@ FIELDS = REQUIRED_FIELDS | {"authors"}
 
 @dataclass(frozen=True)
 class ReviewedCorrection:
-    expected: dict[str, str | int]
+    expected: dict[str, str | int | None]
     corrected: dict[str, str | int]
     basis: str
     evidence_url: str
@@ -40,9 +40,11 @@ def _valid_fields(value: Any, *, complete: bool) -> bool:
     if not complete and not fields <= FIELDS:
         return False
     return all(
-        type(field_value) is int and 1500 <= field_value <= 2100
+        (complete and field_value is None)
+        or (type(field_value) is int and 1500 <= field_value <= 2100)
         if field == "year"
-        else isinstance(field_value, str) and bool(field_value.strip())
+        else isinstance(field_value, str)
+        and (bool(field_value.strip()) or (complete and field == "venue"))
         for field, field_value in value.items()
     )
 
@@ -109,6 +111,8 @@ def apply_corrections(
 ) -> tuple[Any, int]:
     """Change effective fields only; retain source identity and raw source JSON."""
 
+    import pandas
+
     scholar_rows = frame.loc[
         frame["source_type"] == "scholar", ["scholar_id", "author_pub_id"]
     ]
@@ -141,7 +145,12 @@ def apply_corrections(
         if row["source_type"] != "scholar":
             raise ValueError(f"Scholar correction targets a non-Scholar row: {key}")
         for field, expected in correction.expected.items():
-            if row[field] != expected:
+            matches = (
+                bool(pandas.isna(row[field]))
+                if expected is None
+                else bool(not pandas.isna(row[field]) and row[field] == expected)
+            )
+            if not matches:
                 raise ValueError(
                     f"Scholar correction source {field} changed for {key}: "
                     f"expected {expected!r}, got {row[field]!r}"
