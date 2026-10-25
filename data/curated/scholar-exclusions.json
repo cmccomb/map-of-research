@@ -6896,6 +6896,46 @@
       "reason": "Course-organizer heading, not an authored publication; UNL confirms the associated doctoral course, but the original program with this exact heading was not recovered.",
       "evidence_url": "https://www.fbcb.unl.edu.ar/institucional/wp-content/uploads/sites/7/2017/08/Memoria-Institucional-2016-version-final.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "xHKK05MAAAAJ",
+      "author_pub_id": "xHKK05MAAAAJ:ULOm3_A8WrAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The publisher identifies one Journal of Virology 83:5232-5243 article (DOI 10.1128/JVI.02271-08), already retained as row 25. This row is a truncated, mistyped copy with the same journal, volume, issue, and starting page.",
+      "evidence_url": "https://journals.asm.org/doi/full/10.1128/jvi.02271-08",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "xHKK05MAAAAJ",
+      "author_pub_id": "xHKK05MAAAAJ:_kc_bZDykSQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This venue-less row repeats the exact title of the 2006 Blood article retained as row 6 but gives only three of its seven authors and a spurious 2011 year. The publisher and PubMed identify the complete single article as DOI 10.1182/blood-2005-11-4551.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/16424388/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "xHKK05MAAAAJ",
+      "author_pub_id": "xHKK05MAAAAJ:_FxGoFyzp5QC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This row appends Commentary and Gerold Feuer to the title and author list of the Blood article retained as row 6. Blood lists Feuer’s Inside Blood commentary under its separate title HTLV-1 HBZ: stop making sense, and the Arnold-Younis article under the exact title here; this record conflates the two.",
+      "evidence_url": "https://ashpublications.org/blood/issue/107/10",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "xHKK05MAAAAJ",
+      "author_pub_id": "xHKK05MAAAAJ:_Qo2XoVZTnwC",
+      "reason_code": "nonpublication",
+      "reason": "The title is Frontiers editor/reviewer metadata, not an authored publication. The original article credits Akinyi and Frilander as authors and explicitly lists Ihab Younis as a reviewer.",
+      "evidence_url": "https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2021.700744/full",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "xHKK05MAAAAJ",
+      "author_pub_id": "xHKK05MAAAAJ:mB3voiENLucC",
+      "reason_code": "false_profile_attribution",
+      "reason": "CMU KiltHub credits this poster to Aziza Abugaliyeva and lists Ihab Younis under Advisor(s), not as an author.",
+      "evidence_url": "https://kilthub.cmu.edu/articles/poster/Exploring_Alzheimer_s_Disease_Computational_Analysis_of_Alzheimer_s_Disease-Related_Biomarkers_for_Insightful_Discoveries/25992277",
+      "verified_at": "2026-10-25"
     }
   ]
 }
