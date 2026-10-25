@@ -29,6 +29,7 @@ from .registry import (
 )
 
 SNAPSHOT_SCHEMA_VERSION = 6
+NEUMAYER_CANDIDATE_SCHEMA_VERSION = 7
 MANIFEST_SCHEMA_VERSION = 1
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
@@ -335,7 +336,7 @@ def _load_profile_cache(path: Path, profile: AuthorProfile) -> dict[str, Any]:
     return cache
 
 
-def _validate_frame(frame: Any) -> None:
+def _validate_frame(frame: Any, *, allow_neumayer_candidate: bool = False) -> None:
     missing = REQUIRED_COLUMNS.difference(frame.columns)
     if missing:
         raise ValueError(f"Snapshot is missing columns: {sorted(missing)}")
@@ -343,7 +344,10 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot has no publication rows")
     if frame[["scholar_id", "author_pub_id"]].isnull().any().any():
         raise ValueError("Snapshot publication identities cannot be null")
-    if not frame["source_type"].isin({"scholar", "curated_verified"}).all():
+    allowed_types = {"scholar", "curated_verified"}
+    if allow_neumayer_candidate:
+        allowed_types.update({"author_site", "researcher_cv"})
+    if not frame["source_type"].isin(allowed_types).all():
         raise ValueError("Snapshot contains an unknown source type")
     if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
         raise ValueError("Scholar observations need a Scholar identity")
@@ -354,6 +358,25 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError(
             "Curated observations need exactly one DOI or source_native_id"
         )
+    if allow_neumayer_candidate:
+        bibliography = frame.loc[
+            frame["source_type"].isin({"author_site", "researcher_cv"})
+        ]
+        if (
+            len(bibliography) != 31
+            or bibliography["person_id"].ne("person-robinneumayer-a5f54a8c").any()
+            or bibliography["scholar_id"].ne("").any()
+            or bibliography["source_native_id"].eq("").any()
+            or bibliography["source_review_state"].ne("source_only_release_held").any()
+            or bibliography["source_citation_count_known"].any()
+            or bibliography["source_collaboration_eligible"].any()
+            or bibliography["citation_count"].ne(0).any()
+            or bibliography["fetched_at_utc"].ne("").any()
+            or bibliography["source_type"].value_counts().to_dict()
+            != {"author_site": 30, "researcher_cv": 1}
+            or bibliography["year"].isna().sum() != 2
+        ):
+            raise ValueError("Neumayer whole-person candidate or release hold changed")
     duplicate_mask = frame.duplicated(
         subset=["scholar_id", "author_pub_id"],
         keep=False,
@@ -373,6 +396,7 @@ def build_snapshot(
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     curated_path: Path | None = None,
+    neumayer_source_path: Path | None = None,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     now: dt.datetime | None = None,
@@ -406,9 +430,13 @@ def build_snapshot(
         cached_profile_ids.append(profile.scholar_id)
 
     rows.extend(_load_curated_rows(source_path, registry))
+    if neumayer_source_path is not None:
+        from .neumayer_source import load_neumayer_candidate_rows
+
+        rows.extend(load_neumayer_candidate_rows(neumayer_source_path, registry))
 
     frame = pandas.DataFrame(rows)
-    _validate_frame(frame)
+    _validate_frame(frame, allow_neumayer_candidate=neumayer_source_path is not None)
     frame["year"] = frame["year"].astype("Int64")
     frame.sort_values(
         ["scholar_id", "title", "author_pub_id"],
@@ -433,7 +461,9 @@ def build_snapshot(
 
     manifest = {
         "schema_version": MANIFEST_SCHEMA_VERSION,
-        "snapshot_schema_version": SNAPSHOT_SCHEMA_VERSION,
+        "snapshot_schema_version": NEUMAYER_CANDIDATE_SCHEMA_VERSION
+        if neumayer_source_path is not None
+        else SNAPSHOT_SCHEMA_VERSION,
         "status": "success",
         "created_at_utc": created_at.astimezone(dt.UTC).isoformat(),
         "snapshot_file": snapshot_path.name,
@@ -461,6 +491,16 @@ def build_snapshot(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
         ).hexdigest(),
     }
+    if neumayer_source_path is not None:
+        manifest["neumayer_candidate"] = {
+            "source_dir": neumayer_source_path.name,
+            "source_manifest_sha256": sha256_file(
+                neumayer_source_path / "manifest.json"
+            ),
+            "rows": 31,
+            "release_state": "source_only_release_held",
+            "publisher_allowed": False,
+        }
     atomic_write_json(manifest_path, manifest)
     return manifest
 
@@ -475,6 +515,7 @@ def validate_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     curated_path: Path | None = None,
+    neumayer_source_path: Path | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -503,7 +544,12 @@ def validate_snapshot(
         raise ValueError(f"Snapshot manifest is missing fields: {sorted(missing)}")
     if manifest["schema_version"] != MANIFEST_SCHEMA_VERSION:
         raise ValueError("Snapshot manifest schema is unsupported")
-    if manifest["snapshot_schema_version"] != SNAPSHOT_SCHEMA_VERSION:
+    expected_schema = (
+        NEUMAYER_CANDIDATE_SCHEMA_VERSION
+        if neumayer_source_path is not None
+        else SNAPSHOT_SCHEMA_VERSION
+    )
+    if manifest["snapshot_schema_version"] != expected_schema:
         raise ValueError("Snapshot data schema is unsupported")
     if manifest["status"] != "success":
         raise ValueError("Snapshot builder did not report success")
@@ -537,8 +583,57 @@ def validate_snapshot(
     if age > dt.timedelta(days=max_age_days):
         raise ValueError("Snapshot is too old to publish")
 
+    candidate = manifest.get("neumayer_candidate")
+    if neumayer_source_path is not None:
+        if (
+            not isinstance(candidate, dict)
+            or candidate.get("source_dir") != neumayer_source_path.name
+            or candidate.get("source_manifest_sha256")
+            != sha256_file(neumayer_source_path / "manifest.json")
+            or candidate.get("rows") != 31
+            or candidate.get("release_state") != "source_only_release_held"
+            or candidate.get("publisher_allowed") is not False
+        ):
+            raise ValueError("Neumayer candidate source pin or release hold changed")
+    elif candidate is not None:
+        raise ValueError("Neumayer candidate needs explicit validation input")
     frame = pandas.read_parquet(snapshot_path, engine="pyarrow")
-    _validate_frame(frame)
+    _validate_frame(frame, allow_neumayer_candidate=neumayer_source_path is not None)
+    if neumayer_source_path is not None:
+        from .neumayer_source import load_neumayer_candidate_rows
+
+        registry = load_registry(people_path, memberships_path, departments_path)
+        expected_rows = load_neumayer_candidate_rows(neumayer_source_path, registry)
+        candidate_rows = frame.loc[
+            frame["source_type"].isin({"author_site", "researcher_cv"})
+        ].set_index("author_pub_id")
+        for expected in expected_rows:
+            if expected["author_pub_id"] not in candidate_rows.index:
+                raise ValueError("Neumayer candidate differs from pinned source rows")
+            actual = candidate_rows.loc[expected["author_pub_id"]]
+            year_matches = (
+                pandas.isna(actual["year"])
+                if expected["year"] is None
+                else actual["year"] == expected["year"]
+            )
+            if (
+                any(
+                    actual[field] != expected[field]
+                    for field in (
+                        "source_type",
+                        "source_native_id",
+                        "source_record_json",
+                        "source_url",
+                        "source_doi",
+                        "title",
+                        "authors",
+                        "source_review_state",
+                        "source_output_type",
+                    )
+                )
+                or not year_matches
+            ):
+                raise ValueError("Neumayer candidate differs from pinned source rows")
     if len(frame) != int(manifest["publication_rows"]):
         raise ValueError("Snapshot row count does not match the manifest")
     cached_profiles = frame.loc[
@@ -569,6 +664,7 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--neumayer-source", type=Path)
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
     return parser
@@ -582,6 +678,7 @@ def build_main(argv: Sequence[str] | None = None) -> int:
         departments_path=args.departments,
         cache_dir=args.cache_dir,
         curated_path=args.curated_works,
+        neumayer_source_path=args.neumayer_source,
         snapshot_path=args.snapshot,
         manifest_path=args.manifest,
     )
@@ -606,6 +703,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--neumayer-source", type=Path)
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,
@@ -615,6 +713,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
         memberships_path=args.memberships,
         departments_path=args.departments,
         curated_path=args.curated_works,
+        neumayer_source_path=args.neumayer_source,
     )
     print(json.dumps(manifest, sort_keys=True))
     return 0
