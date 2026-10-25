@@ -30,10 +30,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 122 | `7ed2f1779372ab3cf3060b8014e96ec62780eb058e9499ff8b4b7fc15bd2b101` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 470 | `4e017b35944004a9956f1f23297c5cb526836c5068db9a82ef1aa7161662c9c1` |
-| Held from any map release | 326 | `1378d7e8500853fbeb2ff1104437c366f8eea3282ef8901b1c638a6c11801e8a` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 474 | `0f1187bc39b4adce887540e44258958e93121ee4bd0db36fadd578a857466614` |
+| Held from any map release | 322 | `65e8e6baa13045ba86556f8df2c93b309e1878a56b365355244b409f181458a6` |
 
-The 326 holds comprise observations that still lack enough output-level review
+The 322 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 122 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -90,6 +90,12 @@ already confirmed CMU outputs by exact DOI and citation ID.
 assign their H. J. Kim author to KNU Physics professor Hong Joo Kim and
 exclude only the eleven exact Scholar IDs. Six are alternate renderings or
 versions of already excluded KNU works; all original capture rows remain.
+[Four more exact KNU DOI duplicates](2026-10-25-chem-kim-four-knu-exact-duplicate-attributions.md)
+exclude literal-markup renderings of three author-linked KNU articles and one
+same-title journal work whose original conference abstract identifies Hong Joo
+Kim's KNU email. The CMU Kim Group bibliography produced no new exact held
+positive; ambiguous ACS abstracts and the KNU-affiliated but initials-only
+COSINE row remain held.
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
 own DOI/page evidence and remain distinct works. The 122 confirmed rows do
 **not** represent Kim's whole publication history.
@@ -117,8 +123,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 122 confirmed IDs, and the 470 exact exclusion IDs to
-these lists; it must prevent all 326 held rows from creating works,
+all 918 exact IDs, the 122 confirmed IDs, and the 474 exact exclusion IDs to
+these lists; it must prevent all 322 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the
