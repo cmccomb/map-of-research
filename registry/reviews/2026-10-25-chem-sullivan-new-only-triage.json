@@ -1,0 +1,847 @@
+{
+  "schema_version": 1,
+  "scholar_id": "wXSgFr4AAAAJ",
+  "capture_sha256": "56c1f2125a674fb5261bfd0ca4a828a34dd75d08c7fdea70abc1e892498773cb",
+  "basis": "Exact 58 IDs present in 250-row complete visible capture but absent from frozen 196-row cache. Signals are triage only; they are not exclusions or proof of authorship.",
+  "all_rows_release_held": true,
+  "new_only_count": 58,
+  "new_only_exact_exclusion_proposed_count": 1,
+  "new_only_remaining_review_count": 57,
+  "candidate_primary_argonne_source_count": 10,
+  "explicit_argonne_venue_count": 5,
+  "program_subject_signal_count": 27,
+  "nonpublication_or_fragment_signal_count": 2,
+  "nsf_award_venue_signal_count": 9,
+  "future_display_year_count": 3,
+  "rows": [
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:3NQIlFlcGxIC",
+      "capture_index": 54,
+      "title": "Eddy correlation flux measurement system (ECOR) instrument handbook",
+      "display_year": "2025",
+      "display_authors": "DR Cook",
+      "display_venue": "DOE Office of Science Atmospheric Radiation Measurement (ARM) Program …, 2025",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CdxZDUztZiMC",
+      "capture_index": 65,
+      "title": "Surface energy balance system (SEBS) instrument handbook",
+      "display_year": "2025",
+      "display_authors": "DR Cook, RC Sullivan",
+      "display_venue": "DOE Office of Science Atmospheric Radiation Measurement (ARM) Program …, 2025",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:v1_lew4L6wgC",
+      "capture_index": 70,
+      "title": "Upscaling wetland methane emissions from the FLUXNET-CH4 eddy covariance network (UpCH4 v1. 0): Model development, network assessment, and budget comparison, AGU Adv., 4 …",
+      "display_year": "2023",
+      "display_authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, S Knox, Z Zhang, T Aalto, ...",
+      "display_venue": "",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023AV000956",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:QD3KBmkZPeQC",
+      "capture_index": 83,
+      "title": "Spontaneous Oxidation of Nitrous Acid to Nitric Acid in Supermicron Aqueous Droplets Is Acid-Accelerated",
+      "display_year": "2025",
+      "display_authors": "LW Monroe, JW Hall, GM Thornhill, RC Sullivan",
+      "display_venue": "ACS Earth & Space Chemistry 9 (5), 1152, 2025",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PaBasH6fAo0C",
+      "capture_index": 84,
+      "title": "ABCFlux v2: Arctic–boreal CO2 and CH4 monthly flux observations and ancillary information across terrestrial and freshwater ecosystems",
+      "display_year": "2025",
+      "display_authors": "AM Virkkala, I Wargowsky, J Vogt, MA Kuhn, S Madaan, R O'Keefe, ...",
+      "display_venue": "Earth System Science Data Discussions 2025, 1-86, 2025",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7H_MAutzIkAC",
+      "capture_index": 86,
+      "title": "Geochemical characterization of millions of individual atmospheric particles entrapped in Antarctic ice across the last glacial-interglacial transition",
+      "display_year": "2026",
+      "display_authors": "S Kutuzov, JW Olesik, MC Lomax-Vogt, LM Carter, GV Lowry, GD Bland, ...",
+      "display_venue": "Scientific reports, 2026",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kVjdVfd2voEC",
+      "capture_index": 92,
+      "title": "Network of networks: Time series clustering of AmeriFlux sites",
+      "display_year": "2025",
+      "display_authors": "DE Reed, H Chu, BG Peter, J Chen, M Abraha, B Amiro, RG Anderson, ...",
+      "display_venue": "Agricultural and Forest Meteorology 372, 110686, 2025",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:IaI1MmNe2tcC",
+      "capture_index": 95,
+      "title": "Global simulations suggest biomass burning aerosol emissions from grassland fires could be important ice nucleating particles",
+      "display_year": "2025",
+      "display_authors": "K Gohil, N Asch, R Sullivan, PJ DeMott, H Gordon",
+      "display_venue": "Journal of Geophysical Research: Atmospheres 130 (22), e2025JD043647, 2025",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CB2v5VPnA5kC",
+      "capture_index": 97,
+      "title": "Eddy Correlation Flux Measurement System (ECOR) Instrument Handbook",
+      "display_year": "2026",
+      "display_authors": "R Sullivan, S Pal, DR Cook",
+      "display_venue": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:wMgC3FpKEyYC",
+      "capture_index": 98,
+      "title": "Over three decades, and counting, of near-surface turbulent flux measurements from the Atmospheric Radiation Measurement (ARM) user facility",
+      "display_year": "2025",
+      "display_authors": "RC Sullivan, DP Billesbach, S Biraud, S Chan, R Hart, E Keeler, ...",
+      "display_venue": "Earth System Science Data 17 (9), 5007-5038, 2025",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://essd.copernicus.org/articles/17/5007/2025/",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "capture_index": 101,
+      "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018",
+      "display_year": "2024",
+      "display_authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, SH Knox, Z Zhang, T Aalto, ...",
+      "display_venue": "ORNL Distributed Active Archive Center, 2024",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023AV000956",
+      "related_primary_source_url": null,
+      "review_state": "exact_false_attribution_exclusion_proposed"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jL-93Qbq4QoC",
+      "capture_index": 102,
+      "title": "CROCUS high-frequency measurements of CO₂, H₂O, wind, and temperature at University of Illinois Chicago",
+      "display_year": "2024",
+      "display_authors": "S Pal, B Raut, P Muradyan, M Tuftedal, J O'Brien, R Sullivan, M Grover, ...",
+      "display_venue": "Community Research on Climate and Urban Science Urban Integrated Field …, 2024",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:4xDN1ZYqzskC",
+      "capture_index": 103,
+      "title": "CROCUS urban fluxes of CO₂, H₂O, and turbulence at University of Illinois Chicago",
+      "display_year": "2024",
+      "display_authors": "B Raut, S Pal, P Muradyan, M Tuftedal, J O'Brien, R Sullivan, M Grover, ...",
+      "display_venue": "Community Research on Climate and Urban Science Urban Integrated Field …, 2024",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kw52XkFRtyQC",
+      "capture_index": 105,
+      "title": "FLUXNET-CH4 US-A10 ARM-NSA-Barrow",
+      "display_year": "2020",
+      "display_authors": "D Billesbach, R Sullivan",
+      "display_venue": "(No Title), 2020",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://fluxnet.org/sites/siteinfo/US-A10",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:rHJHxKgnXwkC",
+      "capture_index": 117,
+      "title": "The Complexity of the Coastal Urban Boundary Layer and Implications for Urban Atmospheric Composition: Results from CoURAGE",
+      "display_year": "2027",
+      "display_authors": "KJ Davis, SR Hill, NE Prince, A LaPorte, BJ Ahlswede, S Murphy, ...",
+      "display_venue": "107th AMS Annual Meeting, 2027",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject",
+        "future_display_year"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:SjuI4pbJlxcC",
+      "capture_index": 118,
+      "title": "The Forcing behind the Coastal Urban Atmospheric Environment: Observational results from the CoURAGE/BSEC Urban Eddy-Covariance Flux Network",
+      "display_year": "2027",
+      "display_authors": "KJ Davis, SR Hill, S Murphy, JP Horne, C Ross, BJ Ahlswede, Y Pan, ...",
+      "display_venue": "107th AMS Annual Meeting, 2027",
+      "signals": [
+        "future_display_year"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:q-HalDI95KYC",
+      "capture_index": 119,
+      "title": "Regional and Seasonal Trends in Mean and Extreme Dust Activity Across the Contiguous US from Observations and E3SM",
+      "display_year": "2027",
+      "display_authors": "R Pereira, Y Feng, XS Li, X Xi, RC Sullivan, W Lin, JC Golaz",
+      "display_venue": "107th AMS Annual Meeting, 2027",
+      "signals": [
+        "future_display_year"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Ade32sEp0pkC",
+      "capture_index": 120,
+      "title": "CROCUS Micronet: A Distributed Urban Observation System in Chicago",
+      "display_year": "2026",
+      "display_authors": "P Muradyan, S Collis, JR O’Brien, M Tuftedal, R Jackson, BA Raut, ...",
+      "display_venue": "Bulletin of the American Meteorological Society, BAMS-D-25-0174.1, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WC9gN4BGCRcC",
+      "capture_index": 121,
+      "title": "Data quality and metadata guidelines for the soil moisture monitoring community",
+      "display_year": "2026",
+      "display_authors": "BM Wyatt, N Gaur, M Cosh, E Osenga, P Knox, MR Levi, M Skumanich, ...",
+      "display_venue": "Vadose Zone Journal 25 (5), e70141, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LPtt_HFRSbwC",
+      "capture_index": 122,
+      "title": "Eddy Correlation Flux Measurement System (ECOR) with SmartFlux microprocessor: 10 Hz wind data from sonic anemometers (a1-level)",
+      "display_year": "2026",
+      "display_authors": "R Sullivan, D Cook, B Ermold, E Keeler, S Pal, M Kieburtz",
+      "display_venue": "Atmospheric Radiation Measurement User Facility, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Br1UauaknNIC",
+      "capture_index": 123,
+      "title": "Evolution of the photosensitized production of singlet oxygen by aqueous extracts of biomass-burning aerosol",
+      "display_year": "2026",
+      "display_authors": "D Bonomo, RC Sullivan",
+      "display_venue": "Environmental Science: Processes & Impacts, 2026",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:L1USKYWJimsC",
+      "capture_index": 124,
+      "title": "AmeriFlux FLUXNET-1F US-A03 ARM-AMF3-Oliktok",
+      "display_year": "2026",
+      "display_authors": "R Sullivan, D Billesbach, D Cook, S Biraud",
+      "display_venue": "Argonne National Laboratory, 2026",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "explicit_argonne_venue",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://ameriflux.lbl.gov/sites/siteinfo/US-A03",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:MhiOAD_qIWkC",
+      "capture_index": 125,
+      "title": "Assessing aqueous photo-degradability of novel polymers containing hydrolysable additives or oxidizable functional groups",
+      "display_year": "2026",
+      "display_authors": "K Baker, D Bonomo, J Vinskus, A Ashmar, J Orlando, S Suprenant, ...",
+      "display_venue": "SETAC Europe 36th Annual Meeting, 2026",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:FiytvqdAVhgC",
+      "capture_index": 126,
+      "title": "ABCFlux v2: Arctic-Boreal CO2 and CH4 In-situ Flux and Environmental Data",
+      "display_year": "2026",
+      "display_authors": "AM VIRKKALA, I WARGOWSKY, J VOGT, M KUHN, S MADAAN, ...",
+      "display_venue": "ORNL DAAC, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:wKETBy42zhYC",
+      "capture_index": 127,
+      "title": "AmeriFlux FLUXNET-1F US-A10 ARM-NSA-Barrow",
+      "display_year": "2026",
+      "display_authors": "R Sullivan, D Billesbach, D Cook, S Biraud",
+      "display_venue": "Argonne National Laboratory, 2026",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "explicit_argonne_venue",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://fluxnet.org/sites/siteinfo/US-A10",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jU7OWUQzBzMC",
+      "capture_index": 128,
+      "title": "Surface Energy Balance System (SEBS) Instrument Handbook",
+      "display_year": "2026",
+      "display_authors": "R Sullivan, S Pal, DR Cook",
+      "display_venue": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+      "capture_index": 129,
+      "title": "Regional differences in boundary layer properties observed along a coast-urban-rural gradient",
+      "display_year": "2026",
+      "display_authors": "KJ Davis, NE Prince, T Staresinic, C Ross, SR Hill, BJ Ahlswede, ...",
+      "display_venue": "106th AMS Annual Meeting, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PYBJJbyH-FwC",
+      "capture_index": 130,
+      "title": "Arctic-Boreal Vulnerability Experiment (ABoVE)",
+      "display_year": "2026",
+      "display_authors": "AJ Leffler, A Serrone, A Bolek, AV Rocha, A Korrensalo, A Vähä, ...",
+      "display_venue": "ORNL Distributed Active Archive Center (DAAC) dataset, 17, 2026",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LdasjJ6CEcoC",
+      "capture_index": 131,
+      "title": "AmeriFlux FLUXNET-1F US-A37 ARM-SGP-Waukomis",
+      "display_year": "2025",
+      "display_authors": "R Sullivan, E Keeler, J Kyrouac, S Pal",
+      "display_venue": "Argonne National Laboratory, 2025",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "explicit_argonne_venue",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://ameriflux.lbl.gov/sites/siteinfo/US-A37",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7Hz3ACDFbsoC",
+      "capture_index": 132,
+      "title": "The CROCUS Measurement Strategy",
+      "display_year": "2025",
+      "display_authors": "S Collis, P Muradyan, J O'Brien, G Anderson, TJ Wagner, L Blind-Doskocil, ...",
+      "display_venue": "ICUC12, 2025",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://meetingorganizer.copernicus.org/ICUC12/ICUC12-438.html",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CaZNVDsoPx4C",
+      "capture_index": 133,
+      "title": "AmeriFlux US-A39 ARM-SGP-Morrison",
+      "display_year": "2025",
+      "display_authors": "R Sullivan, D Billesbach, D Cook, E Keeler, J Kyrouac, S Biraud, S Pal",
+      "display_venue": "Argonne National Laboratory, 2025",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "explicit_argonne_venue",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://ameriflux.lbl.gov/sites/siteinfo/US-A39",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "capture_index": 134,
+      "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS",
+      "display_year": "2025",
+      "display_authors": "S Kutuzov, MC Lomax-Vogt, L Carter, P Gabrielli, G Bland, R Sullivan, ...",
+      "display_venue": "EGU General Assembly Conference Abstracts, EGU25-7227, 2025",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:cK4Rrx0J3m0C",
+      "capture_index": 135,
+      "title": "AmeriFlux US-A37 ARM-SGP-Waukomis",
+      "display_year": "2025",
+      "display_authors": "R Sullivan, E Keeler, J Kyrouac, S Pal",
+      "display_venue": "Argonne National Laboratory, 2025",
+      "signals": [
+        "candidate_primary_argonne_namesake_source",
+        "explicit_argonne_venue",
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": "https://ameriflux.lbl.gov/sites/siteinfo/US-A37",
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:48xauSegjOkC",
+      "capture_index": 138,
+      "title": "Investigation of Biomass Burning Aerosols as Global Ice Nucleating Particles",
+      "display_year": "2024",
+      "display_authors": "K Gohil, RC Sullivan, H Gordon",
+      "display_venue": "AGU Fall Meeting Abstracts 2024 (1825), A31G-1825, 2024",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1lhNe0rCu4AC",
+      "capture_index": 141,
+      "title": "Carbon Monitoring System (CMS)",
+      "display_year": "2024",
+      "display_authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, SH Knox, Z Zhang, T Aalto, ...",
+      "display_venue": "ORNL Distributed Active Archive Center (DAAC) dataset 10.3334/ORNLDAAC/2253 …, 2024",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject",
+        "related_ornl_dataset_doi_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": "https://daac.ornl.gov/CMS/guides/Global_Freshwater_CH4Emissions.html",
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:AXkvAH5U_nMC",
+      "capture_index": 148,
+      "title": "ECO-CBET: A Convergent Approach to the Rational Design of Controllably Degradable Polymers using Sustainable Nanocomposites and Biodegradable-Additives",
+      "display_year": "2023",
+      "display_authors": "SA Sydlik, RC Sullivan, KJ Noonan, GJ Wang, WYD Chan",
+      "display_venue": "NSF Award 23 (2318652), 18652, 2023",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WC23djZS0W4C",
+      "capture_index": 149,
+      "title": "Chemical ionization mass spectrometry for online gas and aerosol-phase per-and polyfluoroalkyl substances (PFAS) analysis using iodide reagent ion",
+      "display_year": "2022",
+      "display_authors": "B Bowers, RC Sullivan, J Thornton",
+      "display_venue": "SETAC North America 43rd Annual Meeting, 2022",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7wO8s98CvbsC",
+      "capture_index": 150,
+      "title": "Concentration and photo-oxidative remediation of 6: 2 fluorotelomer carboxylic acid in aqueous aerosol droplets",
+      "display_year": "2022",
+      "display_authors": "B Bowers, RC Sullivan, RM Weatherholt",
+      "display_venue": "SETAC North America 43rd Annual Meeting, 2022",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:nRpfm8aw39MC",
+      "capture_index": 154,
+      "title": "Inferring Mineralogy of Aeolian Particles in Ancient Antarctic Ice from Elemental Chemical Composition using Single Particle Inductively Coupled Plasma Mass Spectrometry",
+      "display_year": "2021",
+      "display_authors": "MC Lomax-Vogt, J Olesik, C Bradley, A Ellis, G Bland, L Monroe, ...",
+      "display_venue": "AGU Fall Meeting 2021, 2021",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1taIhTC69MYC",
+      "capture_index": 155,
+      "title": "The International Soil Moisture Network: Over a Decade Serving Earth System Science",
+      "display_year": "2021",
+      "display_authors": "W Dorigo, I Himmelbauer, D Aberer, L Schremmer, I Petrakovic, L Zappa, ...",
+      "display_venue": "< bound method Organization. get_name_with_acronym of< Organization: Météo …, 2021",
+      "signals": [
+        "flux_ARM_or_carbon_program_subject"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jgBuDB5drN8C",
+      "capture_index": 156,
+      "title": "Determining the Buffering Capacity and PH of Aerosols and Their Control of the Multiphase Chemical Evolution and Kinetics of Optically Levitated Particles",
+      "display_year": "2021",
+      "display_authors": "RC Sullivan",
+      "display_venue": "NSF Award Number 2109074. Directorate for Mathematical and Physical Sciences …, 2021",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:hsZV8lGYWTMC",
+      "capture_index": 160,
+      "title": "Jeremy Irvin 1, Sharon Zhou 2, Gavin McNicol 3,*, Fred Lu 4, Vincent Liu 5, Etienne Fluet-Chouinard 6, Zutao Ouyang 7, Sara Helen Knox 8, Antje Lucas-Moffat 9, Carlo Trotta 10 …",
+      "display_year": "2021",
+      "display_authors": "DI Campbell, J Chen, H Chu, HJ Dalmagro, KB Delwiche, AR Desai, ...",
+      "display_venue": "Agricultural and Forest Meteorology 308 (309), 108528, 2021",
+      "signals": [
+        "malformed_author_list_as_title"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": "https://research.rug.nl/en/publications/gap-filling-eddy-covariance-methane-fluxes-comparison-of-machine-/",
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:U4n9YNQMCAIC",
+      "capture_index": 180,
+      "title": "Ice nucleation properties of well characterized single particle-droplet pairs assessed using a microfluidic platform",
+      "display_year": "2018",
+      "display_authors": "RC Sullivan, SL Anna",
+      "display_venue": "NSF Award 18 (1804737), 4737, 2018",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:lgwcVrK6X84C",
+      "capture_index": 185,
+      "title": "Phase Separation, Morphology, and Diffusivity of Secondary Organic Matter Determined using Aerosol Optical Tweezers",
+      "display_year": "2017",
+      "display_authors": "K Gorkowski, NM Donahue, RC Sullivan",
+      "display_venue": "American Meteorological Society Meeting Abstracts 97, 15.1, 2017",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:BzfGm06jWhQC",
+      "capture_index": 190,
+      "title": "COLLABORATIVE RESEARCH: Chlorine Activation in Biomass Burning Plumes",
+      "display_year": "2016",
+      "display_authors": "RC Sullivan",
+      "display_venue": "NSF Award Number 1552608. Directorate for Geosciences 15 (1552608), 52608, 2016",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ubry08Y2EpUC",
+      "capture_index": 191,
+      "title": "CAREER: Effects of Chemical Aging on the Ice Nucleation Properties of Natural and Anthropogenic Atmospheric Particles",
+      "display_year": "2016",
+      "display_authors": "RC Sullivan",
+      "display_venue": "NSF Award Number 1554941. Directorate for Mathematical and Physical Sciences …, 2016",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:DBa1UEJaJKAC",
+      "capture_index": 199,
+      "title": "MRI: Acquisition of CI-API-TOFMS (Chemical Ionization Atmospheric Pressure Interface Time-of-Flight Mass Spectrometer) to Measure Condensible Vapors Associated with Fine Particles",
+      "display_year": "2015",
+      "display_authors": "NM Donahue, SN Pandis, AL Robinson, AA Presto, RC Sullivan",
+      "display_venue": "NSF Award 15 (1531284), 31284, 2015",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ALROH1vI_8AC",
+      "capture_index": 200,
+      "title": "A new formulation for interpreting heterogeneous ice nucleation data",
+      "display_year": "2015",
+      "display_authors": "H Beydoun, RC Sullivan",
+      "display_venue": "American Meteorological Society Meeting Abstracts 95, 11.6, 2015",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:6_hjMsCP8ZoC",
+      "capture_index": 201,
+      "title": "Organic Aerosol Dynamics: Single Particles and Modest Driving Forces",
+      "display_year": "2014",
+      "display_authors": "NM Donahue, RC Sullivan",
+      "display_venue": "NSF Award 14 (1412309), 12309, 2014",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:otzGkya1bYkC",
+      "capture_index": 203,
+      "title": "Different dust particles as ice nuclei: learning from similarities and differences",
+      "display_year": "2014",
+      "display_authors": "H Wex, PJ DeMott, Y Tobo, S Hartmann, S Augustin, M Raddatz, T Clauss, ...",
+      "display_venue": "American Meteorological Society Meeting Abstracts 94, 9.3, 2014",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:buQ7SEKw-1sC",
+      "capture_index": 204,
+      "title": "Investigations of Marine Ice Nucleating Particles (Invited Presentation)",
+      "display_year": "2014",
+      "display_authors": "PJ DeMott, TCJ Hill, MJ Ruppel, KA Prather, DB Collins, JI Axson, T Lee, ...",
+      "display_venue": "American Meteorological Society Meeting Abstracts 94, 10.1, 2014",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:43bX7VzcjpAC",
+      "capture_index": 210,
+      "title": "RAPID: Online Single-particle Measurements of the Chemical Composition, Mixing State, and Ice Nuclei Residues During the FLAME IV Biomass Burning Experiment",
+      "display_year": "2012",
+      "display_authors": "RC Sullivan, NM Donahue, AL Robinson",
+      "display_venue": "NSF Award 12 (1256042), 56042, 2012",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:zCSUwVk65WsC",
+      "capture_index": 211,
+      "title": "Experimental Investigations of the Contact Freezing Properties of Mineral Particles Using Optical Tweezers",
+      "display_year": "2012",
+      "display_authors": "RC Sullivan",
+      "display_venue": "NSF Award Number 1213718. Directorate for Mathematical and Physical Sciences …, 2012",
+      "signals": [
+        "nsf_award_record_in_display_venue"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:MpfHP-DdYjUC",
+      "capture_index": 218,
+      "title": "Cloud Droplet Activation of Organic Aerosols: The Role of Molecule Size, Polarity, and Functional Group Composition",
+      "display_year": "2011",
+      "display_authors": "M Petters, P Ziemann, S Kreidenweis, S Suda, C Carrico, A Faulhaber, ...",
+      "display_venue": "Twenty-first Annual Goldschmidt Conference, 1633, 2011",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1yWc8FF-_SYC",
+      "capture_index": 238,
+      "title": "Focal Area (s)",
+      "display_year": "",
+      "display_authors": "P Balaprakash, S Collis, Y Kim, P Beckmann, M Cadeddu, ...",
+      "display_venue": "",
+      "signals": [
+        "nonpublication_or_page_fragment_signal"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:-mN3Mh-tlDkC",
+      "capture_index": 239,
+      "title": "Processes & Impacts",
+      "display_year": "",
+      "display_authors": "JD Rogers, EM Thurman, I Ferrer, JS Rosenblum, MV Evans, PJ Mouser, ...",
+      "display_venue": "",
+      "signals": [
+        "nonpublication_or_page_fragment_signal"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:prdVHNxh-e8C",
+      "capture_index": 240,
+      "title": "Aerosol Microdroplet Photochemistry Enables Unexpected Transformations of Polyfluorinated Alkyl Contaminants that Produce Ultra-Short PFAS",
+      "display_year": "",
+      "display_authors": "RC Sullivan, D Doyle, RM Weatherholt, B Bowers, KL Chung",
+      "display_venue": "SETAC Europe 36ᵗʰ Annual Meeting, 0",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WHdLCjDvYFkC",
+      "capture_index": 241,
+      "title": "The Effect of Flame Retardants on Toxics Emitted from Foam Combustion",
+      "display_year": "",
+      "display_authors": "B Bowers, AO De Silva, HM Stapleton, RC Sullivan, RM Weatherholt",
+      "display_venue": "SETAC North America 43rd Annual Meeting, 0",
+      "signals": [
+        "no_specific_argonne_signal_from_display_metadata"
+      ],
+      "candidate_primary_argonne_source_url": null,
+      "related_primary_source_url": null,
+      "review_state": "needs_exact_attribution_and_quality_review"
+    }
+  ]
+}
