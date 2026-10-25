@@ -98,12 +98,24 @@ def registry(scholar_id=SCHOLAR, person_id=PERSON):
 
 
 def test_checked_in_chien_release_is_source_bound() -> None:
-    (item,) = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    releases = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    item = next(item for item in releases if item.scholar_id == "8iLLOQgAAAAJ")
     assert item.person_id == "person-chienho-da71f01b"
     assert item.scholar_id == "8iLLOQgAAAAJ"
     assert item.state == "released"
     assert item.expected_source_rows == 582
     assert len(item.cache_sha256) == 64
+
+
+def test_das_complete_source_stays_held_during_attribution_review() -> None:
+    releases = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    item = next(item for item in releases if item.scholar_id == "FrF1YXQAAAAJ")
+    assert item.person_id == "person-subhardas-42cf6c1e"
+    assert item.state == "held"
+    assert item.expected_source_rows == 670
+    assert item.cache_sha256 == (
+        "cb458620d4692dd69f61ad0379049bca7c7d6a66c86c544823f722635a03f435"
+    )
 
 
 def test_missing_trusted_profile_release_manifest_fails_closed(tmp_path) -> None:

@@ -9,6 +9,15 @@
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
       "reason": "Complete 582-row visible Scholar source is verified. Exact review confirms 437 Chien Ho rows, excludes 92, and holds 53 from mapped works; only reviewed map-eligible records may publish.",
       "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-subhardas-42cf6c1e",
+      "scholar_id": "FrF1YXQAAAAJ",
+      "state": "held",
+      "expected_source_rows": 670,
+      "cache_sha256": "cb458620d4692dd69f61ad0379049bca7c7d6a66c86c544823f722635a03f435",
+      "reason": "Complete 670-row visible Scholar source is captured, but 494 rows remain outside exact exclusions; independent attribution and output-type review is incomplete. Keep the entire profile out of public works and coauthor edges.",
+      "reviewed_at": "2026-10-25"
     }
   ]
 }
