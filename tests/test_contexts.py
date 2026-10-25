@@ -117,6 +117,85 @@ def test_context_manifest_validates_identity_type_and_provenance(
     assert load_contexts(path)[
         ("oneAAAAJ", "oneAAAAJ:patent-one")
     ].publication_type == ("edited_book")
+    _manifest(
+        path,
+        [_entry(publication_type="conference_presentation", document_id="")],
+    )
+    assert (
+        load_contexts(path)[("oneAAAAJ", "oneAAAAJ:patent-one")].publication_type
+        == "conference_presentation"
+    )
+
+
+def test_source_backed_conference_presentation_keeps_authored_link(
+    tmp_path: Path,
+) -> None:
+    people, memberships, departments = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "oneAAAAJ"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "chem",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/chem",
+                "verified_at": "2026-10-25",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "chem",
+                "school_id": "engineering",
+                "title": "Chemistry",
+                "directory_url": "https://example.test/chem",
+            }
+        ],
+    )
+    registry = load_registry(people, memberships, departments)
+    row = {
+        "scholar_id": "oneAAAAJ",
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "memberships": [{"department_id": "chem", "role": "faculty", "included": True}],
+        "author_pub_id": "oneAAAAJ:meeting",
+        "title": "An AGU presentation",
+        "authors": "One; Second Person",
+        "year": 2009,
+        "venue": "AGU Fall Meeting",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": "https://scholar.google.com/citations?user=oneAAAAJ",
+        "source_type": "scholar",
+        "source_doi": "",
+        "external_coauthors": [],
+        "source_record_json": '{"title":"An AGU presentation"}',
+        "fetched_at_utc": "2026-10-25T00:00:00+00:00",
+        "embedding": [0.1, 0.2],
+    }
+    context = ReviewedContext(
+        "conference_presentation",
+        "",
+        "Organizer program identifies the oral presentation and authors",
+        "https://example.test/agu-program",
+        "2026-10-25",
+    )
+    tables = build_dataset_tables(
+        pandas.DataFrame([row]),
+        registry,
+        contexts={("oneAAAAJ", "oneAAAAJ:meeting"): context},
+    )
+    observation = tables["profile_publications"].iloc[0]
+    work = tables["works"].iloc[0]
+    assert observation["publication_type"] == "conference_presentation"
+    assert bool(observation["map_eligible"])
+    assert bool(observation["collaboration_eligible"])
+    assert work["publication_type"] == "conference_presentation"
+    assert bool(work["collaboration_eligible"])
+    assert len(tables["authorships"]) == 1
 
 
 def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
