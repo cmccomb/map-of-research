@@ -9506,6 +9506,382 @@
       "verified_at": "2026-10-24"
     },
     {
+      "scholar_id": "MPxFaHYAAAAJ",
+      "author_pub_id": "MPxFaHYAAAAJ:hFOr9nPyWt4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Duplicate malformed Nanomaterials citation; retain complete Scholar row 3.",
+      "evidence_url": "https://doi.org/10.3390/nano11113084",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "MPxFaHYAAAAJ",
+      "author_pub_id": "MPxFaHYAAAAJ:-f6ydRqryjwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Duplicate malformed Sustainability citation; retain complete Scholar row 24.",
+      "evidence_url": "https://doi.org/10.3390/su15054342",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "MPxFaHYAAAAJ",
+      "author_pub_id": "MPxFaHYAAAAJ:hC7cP41nSMkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Duplicate malformed Gels citation; retain complete Scholar row 34.",
+      "evidence_url": "https://doi.org/10.3390/gels9060465",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "tPp2aaoAAAAJ",
+      "author_pub_id": "tPp2aaoAAAAJ:2osOgNQ5qMEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2006 journal article as complete Scholar row 1; publisher DOI has Cardell, Hogarth, and Faulkner.",
+      "evidence_url": "https://doi.org/10.1016/j.ica.2005.08.034",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:WZBGuue-350C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Thieme publisher article identifies Kentaro Sakai, Kounosuke Oisaki, and Motomu Kanai as the complete authors; Stefan Bernhard is absent.",
+      "evidence_url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0040-1707114.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:-FonjvnnhkoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Dilman lab publication list identifies V. V. Levin, D. P. Agababyan, M. I. Struchkova, and A. D. Dilman as the complete authors; Stefan Bernhard is absent.",
+      "evidence_url": "https://dilmanlab.ru/en/node/12",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:e_rmSamDkqQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Coauthor Wegner's university publication list identifies S. Beeck and H. A. Wegner as the complete authors; Stefan Bernhard is absent.",
+      "evidence_url": "https://www.uni-giessen.de/de/fbz/fb08/Inst/organische-chemie/Wegner/Publications/2019-2010/2017",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:W7OEmFMy1HYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Thieme Synfacts page identifies Paul Knochel and Nadja M. Barl as contributors to this commentary, distinct from the cited CMU original by Tsai, Chirdon, Maurer, Bernhard, and Noonan (retained Scholar row 92).",
+      "evidence_url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0033-1340527.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:foquWX3nUaYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Mainz dissertation names a different Stefan Bernhard who earned a Chemistry doctorate in 2015; the CMU professor earned his Chemistry doctorate at Fribourg in 1996.",
+      "evidence_url": "https://openscience.ub.uni-mainz.de/server/api/core/bitstreams/6d1cb035-083d-40fd-a5a6-d5c0f2f715c5/content",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:ipzZ9siozwsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The Göttingen dissertation names a different Stefan Bernhard who earned a doctorate in 2006 on arterial blood flow; the CMU professor earned his Chemistry doctorate at Fribourg in 1996.",
+      "evidence_url": "https://publications.imp.fu-berlin.de/946/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:Z5m8FVwuT1cC",
+      "reason_code": "nonpublication",
+      "reason": "This is the heading and combined author list of a 2007 social-policy journal issue, not a single authored work. Its Stefan Bernhard is a social-policy researcher distinct from the CMU chemist.",
+      "evidence_url": "https://www.hdba.de/hochschule/organisation/lehrende/profil/stefan-bernhard/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:tzM49s52ZIMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact author manuscript identifies Stefan Bernhard with Pforzheim University and Freie Universität Berlin in blood-pressure research, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://www.researchgate.net/publication/327861940_Estimation_of_Continuous_Blood_Pressure_from_Harmonic_Phase-Shifts_in_PPG_Signals",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:Fu2w8maKXqMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured row is a corrupted journal-title entry for a cardiovascular-model paper by Hackstein, Krickl, and the biomedical Stefan Bernhard at Mittelhessen/Freie Universität Berlin, not the CMU chemist.",
+      "evidence_url": "https://doi.org/10.1016/j.imu.2020.100310",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:t6usbXjVLHcC",
+      "reason_code": "nonpublication",
+      "reason": "The RSC record at Dalton Transactions 39(42), page 10007 is the issue Contents, not a Bernhard-authored publication; Scholar captured its www.rsc.org/dalton boilerplate as the title.",
+      "evidence_url": "https://doi.org/10.1039/c0dt90075c",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:HE397vMXCloC",
+      "reason_code": "nonpublication",
+      "reason": "The RSC record at Journal of Materials Chemistry 17(29), page 2955 is the issue Contents, not a Bernhard-authored publication; Scholar captured its www.rsc.org/materials boilerplate as the title.",
+      "evidence_url": "https://doi.org/10.1039/b710114g",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:5Ul4iDaHHb8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "RSC copyright boilerplate from the Mills/Kagalwala/Bernhard Cyano-Decorated Ligands paper was indexed as a title; retain the genuine 2016 Dalton Transactions article in Scholar row 122.",
+      "evidence_url": "https://doi.org/10.1039/C6DT01516F",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:FPJr55Dyh1AC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies award 0949238 as a 2009 CAREER grant record, not a publication; it is distinct from the older award 0449755 with the same title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0949238.xml",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:ClCfbGk0d_YC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies award 0449755 as a 2005 CAREER grant record, not a publication; it is distinct from the later award 0949238 with the same title.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0449755.xml",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:BUYA1_V_uYcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The 2021 online-date entry is the same ChemCatChem article as the complete 2022 issue record e202101551; retain Scholar row 135 with the article identifier and full issue details.",
+      "evidence_url": "https://doi.org/10.1002/cctc.202101551",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:kh2fBNsKQNwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The indexed review names Stefan S. R. Bernhard at Trinity College Dublin's Senge laboratory, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/30387906/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:0izLItjtcgwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The RSC article's Stefan S. R. Bernhard is affiliated with Trinity College Dublin's Senge laboratory, not the CMU Chemistry professor.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlehtml/2018/cc/c7cc08099a",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:9pM33mqn1YgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The indexed cubane study names Stefan S. R. Bernhard at Trinity College Dublin's Senge laboratory, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/30742711/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:1qzjygNMrQYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The captured crinine abstract matches the Mainz Bernhard and Nubbemeyer research presented by Mainz in 2014, not the CMU professor; the extra Senge name in Scholar's byline does not change that attribution.",
+      "evidence_url": "https://www.gdch.de/fileadmin/downloads/Veranstaltungen/Tagungen/2014_Tagungen/Orchem/ORCHEM_Poster_M.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:_FM0Bhl9EiAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact RSC manuscript and final paper identify Stefan S. R. Bernhard at Trinity College Dublin in the Grover/Senge porphyrin team, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlehtml/2020/ob/d0ob01264e",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:hCrLmN-GePgC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this CAS entry as award 2350257, a grant record for Stefan Bernhard rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2350257.xml",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:PVjk1bu6vJQC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this D3SC entry as award 2102460, a distinct earlier grant record for Stefan Bernhard rather than a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2102460.xml",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:tKAzc9rXhukC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact myocardial-bridge paper belongs to Stefan Bernhard of the Göttingen biomedical-flow research group, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://link.springer.com/article/10.1186/1475-925X-5-42",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:fEOibwPWpKIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "This Gul/Schütte/Bernhard arterial-anastomosis model is recorded by FU Berlin's biomedical applied-mathematics group, not the CMU Chemistry professor.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0307904X16301895",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:uc_IGeMz5qoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The indexed carotid-bifurcation article places Gul and Stefan Bernhard in the FU Berlin biomedical-modeling group, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/26367184/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:_Ybze24A_UAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact PLOS molecular-dynamics paper gives Stefan Bernhard a FU Berlin mathematical-sciences affiliation and email, not CMU Chemistry.",
+      "evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0010491",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:SpbeaW3--B0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Kobe University lists the complete eight-author byline for this 2018 Synlett article; Stefan Bernhard is absent from the byline truncated in Scholar.",
+      "evidence_url": "https://www2.kobe-u.ac.jp/~kokano/Kentaro_Okano.html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:uLbwQdceFCQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact ESAIM myocardial-bridge flow paper lists Stefan Bernhard at Göttingen Physics with a Göttingen email, distinct from the CMU professor.",
+      "evidence_url": "https://www.esaim-proc.org/articles/proc/pdf/2005/01/bernhard.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:7T2F9Uy0os0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "FU Berlin's exact cardiovascular-sensitivity paper identifies the biomedical modeler Stefan Bernhard, not the CMU Chemistry professor.",
+      "evidence_url": "https://publications.imp.fu-berlin.de/1330/1/sensitivityanalysis.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:kzcrU_BdoSEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact cardiovascular-diagnosis paper lists Bernhard, Al Zoukra, and Schütte at FU Berlin Mathematics, distinct from the CMU Chemistry professor.",
+      "evidence_url": "https://www.witpress.com/Secure/elibrary/papers/EHR11/EHR11040FU1.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:W5xh706n7nkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "FU Berlin's author deposit identifies this exact Bernhard/Al Zoukra/Schütte hemodynamics chapter as biomedical mathematics, not CMU Chemistry.",
+      "evidence_url": "https://publications.imp.fu-berlin.de/945/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:kz9GbA2Ns4gC",
+      "reason_code": "false_profile_attribution",
+      "reason": "De Gruyter identifies the Biosignalverarbeitung book author as Stefan Bernhard of biomedical signal processing at Pforzheim, not the CMU Chemistry professor.",
+      "evidence_url": "https://www.degruyterbrill.com/de/document/doi/10.1515/9783110736298/html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:evX43VCCuoAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact conference manuscript affiliates Stefan Bernhard with Pforzheim Medical Technology, not CMU Chemistry.",
+      "evidence_url": "https://iwbbio.ugr.es/papers/iwbbio_087.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:-_dYPAW6P2MC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Göttingen arterial-flow dissertation is the biomedical modeler's 2006 doctorate, distinct from the CMU professor's 1996 Fribourg Chemistry doctorate.",
+      "evidence_url": "https://ediss.uni-goettingen.de/bitstream/handle/11858/00-1735-0000-0006-B443-0/bernhard.pdf?sequence=1",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Scholar captured a Cambridge volume frontmatter author-index fragment as the title; the genuine Bernhard OLED degradation paper on page 119 remains in full as row 161.",
+      "evidence_url": "https://assets.cambridge.org/97811074/08333/frontmatter/9781107408333_frontmatter.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:4hFrxpcac9AC",
+      "reason_code": "nonpublication",
+      "reason": "Bernhard's CMU CV identifies this ionic-transition-metal-complexes record as NSF grant DMR-0605621, not a research publication.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/bernlab/PDFs/CVStefan.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:3fE2CSJIrl8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This malformed tentative-title entry duplicates the 2000 Inorganic Chemistry carbonylations article with the same Ford/Massick/Rabor/Elbers/Marhenke/Bernhard team; retain the complete published record in row 105.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/bernlab/PDFs/Pubs/LosAlamosSteve.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:5qfkUJPXOUwC",
+      "reason_code": "nonpublication",
+      "reason": "Bernhard's CMU CV lists this solar-energy-conversion record as NSF grant CHE-1055547, not a research publication.",
+      "evidence_url": "https://www.chem.cmu.edu/groups/bernlab/PDFs/CVStefan.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:LkGwnXOMwfcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This yearless title-tail fragment of the 1995 ruthenium/osmium energy-transfer article duplicates the complete Recueil record retained as row 68.",
+      "evidence_url": "https://doi.org/10.1002/recl.19951141119",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:XoXfffV-tXoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The captured title repeats the retained 2018 ACS Catalysis paper, but the venue is the title of Shuo Zhao’s distinct CMU dissertation; no separate Bernhard paper or chapter is represented.",
+      "evidence_url": "https://www.cmu.edu/commencement/assets/finalprogram2019web.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:wbdj-CoPYUoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2017 ACS meeting abstract identifies Stefan S. R. Bernhard with a Trinity College Dublin email, a different author from the CMU Chemistry professor.",
+      "evidence_url": "https://scimeetings.acs.org/exhibit/Forgotten-treasures-Synthesis-properties-N/2650305",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:J-pR_7NvFogC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2017 ACS meeting abstract identifies Stefan S. R. Bernhard with a Trinity College Dublin email, a different author from the CMU Chemistry professor.",
+      "evidence_url": "https://scimeetings.acs.org/exhibit/Development-new-tools-functionalization-cubane/2643186",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hfFKwRcAAAAJ",
+      "author_pub_id": "hfFKwRcAAAAJ:XiSMed-E-HIC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The indexed 2002 Inorganic Chemistry article has the complete Massick, Mertens, Marhenke, and Ford byline; Bernhard appears only in Scholar's contaminated citation text and did not author this work.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/12079478/",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "FrF1YXQAAAAJ",
       "author_pub_id": "FrF1YXQAAAAJ:3A3nxV7CjKIC",
       "reason_code": "false_profile_attribution",

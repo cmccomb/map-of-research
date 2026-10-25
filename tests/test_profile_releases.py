@@ -108,13 +108,21 @@ def registry(scholar_id=SCHOLAR, person_id=PERSON):
 
 
 def test_checked_in_chien_release_is_source_bound() -> None:
-    releases = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
-    item = next(item for item in releases if item.scholar_id == "8iLLOQgAAAAJ")
+    items = load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    item = next(item for item in items if item.scholar_id == "8iLLOQgAAAAJ")
     assert item.person_id == "person-chienho-da71f01b"
     assert item.scholar_id == "8iLLOQgAAAAJ"
     assert item.state == "released"
     assert item.expected_source_rows == 582
     assert len(item.cache_sha256) == 64
+    collins = next(item for item in items if item.scholar_id == "0e1jwkkAAAAJ")
+    assert collins.person_id == "person-terrencejcollins-61cf6ed9"
+    assert collins.state == "released"
+    assert collins.expected_source_rows == 361
+    assert collins.expected_provisional_hold_rows == 7
+    assert collins.provisional_hold_ids_sha256 == (
+        "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0"
+    )
 
 
 def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
@@ -206,6 +214,10 @@ def test_profile_release_manifest_rejects_structure(tmp_path, body, error) -> No
         ("cache_sha256", "wrong"),
         ("reason", None),
         ("reason", "   "),
+        ("expected_provisional_hold_rows", True),
+        ("expected_provisional_hold_rows", -1),
+        ("expected_provisional_hold_rows", 2),
+        ("provisional_hold_ids_sha256", "bad"),
     ],
 )
 def test_profile_release_manifest_rejects_bad_field(tmp_path, field, value) -> None:

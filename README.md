@@ -103,14 +103,19 @@ to the reviewed retention baseline before a later recapture; the frozen
 baseline does not track later publications automatically.
 
 Complete capture and public release are separate. The trusted
-`data/curated/scholar-profile-releases.json` decision checks the registry,
-exact cache checksum, and raw citation IDs before public rows are built. A
-`held` profile contributes no own-source publications. A `reviewed_subset`
-profile contributes only exact rows confirmed by primary attribution evidence;
-every other citation ID is explicitly excluded or held and stays out of public
-datasets and embeddings. The complete raw capture remains available for
-review. The upload receipt reports raw and published counts and the
-decision-manifest checksum.
+`data/curated/scholar-profile-releases.json` pins a profile's registry identity,
+complete visible cache checksum, and raw citation IDs. A `held` decision omits
+that person's own-source observations from public datasets and embeddings while
+keeping the roster person and independently captured work. Chien Ho's 582-row
+source has a `released` decision after exact positive attribution review; its
+unconfirmed rows remain outside mapped works. A source-bound provisional-hold
+manifest can instead name a small set of unresolved rows within a complete
+released profile. Those rows remain in public raw profile data but cannot create
+mapped works or authorships. A `reviewed_subset` decision would publish only
+the exact rows confirmed by primary attribution evidence; every other citation
+ID must be explicitly excluded or held. The complete raw capture remains
+available for review. Receipts report raw and published counts, source hashes,
+and decision-manifest checksums.
 
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
@@ -206,6 +211,14 @@ corrupted duplicates. Those rows stay in `profile_publications` with review
 evidence. They do not supply work fields or faculty links when a valid
 observation of the same work exists. See `data/curated/README.md`.
 
+`data/curated/scholar-provisional-holds.json` is for unresolved individual rows,
+not evidence of a false attribution. Each held ID and original capture index
+must match a released, complete source cache; the profile-release decision pins
+the exact hold count and ID-set hash. The hold profile pins the exact reviewed
+exclusion set for that source as well. Held rows remain auditable in
+`profile_publications` with `attribution_provisional_hold`, while a pre-upload
+check rejects any held authorship or mapped-work source.
+
 The publisher assigns every mapped work to one of 30 deterministic overview
 regions and approximately 120 nested detail regions in the shared t-SNE layout.
 Each receives a coverage-aware, corpus-specific phrase from its titles. A
@@ -275,7 +288,53 @@ map-validate-snapshot \
 `map-publish-snapshot` reads `data/curated/scholar-exclusions.json` by default;
 pass `--reviewed-exclusions` when the trusted source checkout is in another
 directory, as in the upload workflow. The upload receipt records the manifest
-checksum and number of matched exclusions.
+checksum and number of matched exclusions. The CLI also requires
+`--prior-revision` with the immutable 40-character Hugging Face commit SHA of
+the release it replaces. The hosted workflow pins this from the previous
+successful upload receipt before it begins publishing. A local publication
+must supply the same prior release SHA explicitly.
+
+The publisher reruns the weak-region audit on the full corpus. It carries a
+prior region decision forward only when a work has the same eligible Scholar
+observations, raw source records, effective publication metadata, and quality
+version. Exact reviewed exclusions and source or metadata changes use the
+current result. A release stops before upload if an existing visible
+observation disappears without an exact review, or a previously excluded
+observation appears without independent DOI or native-record verification.
+The upload and map receipts record the baseline SHA and any carried decisions
+or reviewed changes. Prior map visibility controls release changes; it does
+not establish that a publication is valid.
+
+The one-time Bernhard correction uses `workflow_dispatch` on `main` with
+`snapshot_ref=automation/map-snapshot` and `restore_prior_regions=true`. The
+publisher still pins the current hosted head for upload safety, embeddings,
+and layouts. It compares region decisions with the last verified pre-Bernhard
+release only after checking the exact snapshot bytes, immutable source and
+historical receipt commits, both successful receipts, and the producer commit
+selected by the dispatch event. It checks the live producer and source branch
+tips again immediately before the first Hub write. The one-time prewrite gate
+also requires all 47,495 pre-Bernhard works to retain their exact mapping,
+outlier, and ordered exclusion-reason decisions; raw audit override counts can
+vary when a work already matches the historical decision before reconciliation.
+Ordinary push and dispatch
+uploads leave the switch false and compare with their current hosted head. A completed
+correction cannot be replayed because the hosted head and source tip change.
+Keep producer `main` and the snapshot branch frozen through the receipt push;
+the pre-write check cannot lock the Git branch against a later writer.
+The one-time mode leaves a failed run in Actions logs without advancing the
+snapshot branch. A partial Hub upload still changes the Hub head and blocks a
+retry until it is audited and restored.
+
+The publisher writes dataset configs sequentially and checks that the hosted
+repository still equals the pinned prior SHA immediately before the first
+write. If an upload fails after any config was written, the next run stops at
+that check. An operator must inspect the partial Hub commit history and
+restore the hosted dataset to the exact pinned prior revision before retrying
+the same snapshot. Never use the partial upload head as the next baseline;
+`last-successful-upload.json` retains the last completed artifact revision.
+The workflow copies the previously successful receipt into that file before
+its first upload attempt, so an initial failed attempt cannot erase the
+baseline needed for a safe retry.
 
 The hosted upload workflow runs `map-validate-math-coverage` before requesting
 its Hugging Face token. For every included Mathematical Sciences person with a

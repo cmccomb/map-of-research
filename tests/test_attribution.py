@@ -52,6 +52,8 @@ def test_upload_reads_attribution_from_producer_checkout(monkeypatch, tmp_path):
             "snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json",
             "--attribution-reviews",
             source_path,
+            "--prior-revision",
+            "a" * 40,
         ]
     )
     assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 486

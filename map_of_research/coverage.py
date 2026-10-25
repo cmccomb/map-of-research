@@ -27,8 +27,11 @@ DEFAULT_PRIOR_ID_CROSSWALK_PATH = Path(
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CAPTURE_DIR = Path("data/captures")
 _TINA_REPAIR_LEDGER = Path("status/physics-kahniashvili-cache-repair-2026-10-24.json")
-_BREIVIK_REPAIR_LEDGER = Path(
+_BREIVIK_ROW115_REPAIR_LEDGER = Path(
     "status/physics-breivik-row115-cache-repair-2026-10-24.json"
+)
+_BREIVIK_ROW116_REPAIR_LEDGER = Path(
+    "status/physics-breivik-row116-cache-repair-2026-10-25.json"
 )
 _TINA_RAW_TITLE = (
     "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
@@ -217,20 +220,29 @@ def _is_reviewed_breivik_author_repair(
     cache_author: Any,
     captures_dir: Path,
 ) -> bool:
-    """Accept only the AAS-backed row 115 byline correction in the cache."""
+    """Accept only the two AAS-backed Breivik cache byline corrections."""
 
-    captured = "K Breivik, S Chatterjee, J Andrews"
-    repaired = "J Andrews, S Chatterjee, K Breivik"
+    if index == 115:
+        expected_id = "AcW2EXwAAAAJ:roLk4NBRz8UC"
+        captured = "K Breivik, S Chatterjee, J Andrews"
+        repaired = "J Andrews, S Chatterjee, K Breivik"
+        ledger_name = _BREIVIK_ROW115_REPAIR_LEDGER
+    elif index == 116:
+        expected_id = "AcW2EXwAAAAJ:qjMakFHDy7sC"
+        captured = "A Polzin, A Geller, A Miller, K Breivik"
+        repaired = "A Geller, A Polzin, K Breivik, A Miller"
+        ledger_name = _BREIVIK_ROW116_REPAIR_LEDGER
+    else:
+        return False
     if (
         scholar_id != "AcW2EXwAAAAJ"
-        or index != 115
-        or citation_id != "AcW2EXwAAAAJ:roLk4NBRz8UC"
+        or citation_id != expected_id
         or source_author != captured
         or cache_author != repaired
     ):
         return False
 
-    ledger_path = captures_dir.parent.parent / _BREIVIK_REPAIR_LEDGER
+    ledger_path = captures_dir.parent.parent / ledger_name
     if not ledger_path.is_file():
         return False
     try:

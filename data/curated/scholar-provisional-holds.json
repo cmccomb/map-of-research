@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "expected_source_rows": 361,
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "expected_reviewed_exclusion_rows": 31,
+      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
+      "held_observations": [
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reason": "ChemInform abstract indexes a separate 1998 Oxford book chapter; reconcile the indexed proxy and original chapter before mapping one work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=100&pagesize=100&citation_for_view=0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 214,
+          "author_pub_id": "0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reason": "Truncated T Collins byline in a lead-poisoning pilot study; exact author identity and document type remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reason": "UK histopathology meeting abstract has a truncated byline without Collins; its complete primary byline has not been found.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reason": "Sunday Times item is credited to B Collins; no primary source establishes Terrence J. Collins as the author.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 350,
+          "author_pub_id": "0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reason": "Undated mid-year report has no venue or located primary copy; confirm the exact report and distinguish it from the verified 2003 DOE final report.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reason": "ACS abstract is credited to TJ Collins, but its publication type and relationship to separately indexed work remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "0e1jwkkAAAAJ:yFnVuubrUp4C",
+          "reason": "Undated and unvenued estradiol-degradation record lacks an identified primary output; distinguish it from the 2015 Scientific Reports paper before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yFnVuubrUp4C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-nimermurshid-70983eeb",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "expected_source_rows": 49,
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "c07da5e36cb83245b45e07b730bc07f1004b0c2a3510e1c4536c34ce367c6fdb",
+      "held_observations": [
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reason": "Title is a fragment of a journal name, with no year or venue; exact underlying item is unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Title has trailing footnote character and no year or venue; exact underlying item and type are unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "expected_source_rows": 41,
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 33,
+          "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
+          "reason": "A 2020 strawberry-delivery preprint appears related to the 2022 PNAS article at row 18; exact version relationship needs primary-source reconciliation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reason": "Undated Spanish archive record with malformed institutional venue; exact type, date, and authorship context need source review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "expected_source_rows": 228,
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "held_observations": [
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reason": "The captured 2004 Göttingen item gives only S Bernhard. Nearby biomedical works belong to a distinct Göttingen Stefan Bernhard, but the exact native record or complete byline has not been found; attribution remains unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hfFKwRcAAAAJ&cstart=200&pagesize=100&citation_for_view=hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "expected_reviewed_exclusion_rows": 43,
+      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    }
+  ]
+}

@@ -189,6 +189,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "6pPZKd0AAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "grTfBeAAAAAJ" for key in exclusions) == 16
     assert sum(key[0] == "lKAvvmoAAAAJ" for key in exclusions) == 2
+    assert sum(key[0] == "hfFKwRcAAAAJ" for key in exclusions) == 43
     assert {decision.reason_code for decision in exclusions.values()} == {
         "nonpublication",
         "false_profile_attribution",
@@ -694,6 +695,87 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
     for suffix in ("UBSsHvkqiq4C", "QjNCP7ux8QYC", "JOhajB-2wfwC"):
         assert ("wJ_gQLoAAAAJ", f"wJ_gQLoAAAAJ:{suffix}") not in exclusions
     assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:iyewoVqAXLQC") not in exclusions
+
+
+def test_bernhard_review_excludes_only_exact_supported_rows() -> None:
+    scholar_id = "hfFKwRcAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    expected = {
+        f"{scholar_id}:{suffix}": reason_code
+        for suffix, reason_code in (
+            ("WZBGuue-350C", "false_profile_attribution"),
+            ("-FonjvnnhkoC", "false_profile_attribution"),
+            ("e_rmSamDkqQC", "false_profile_attribution"),
+            ("W7OEmFMy1HYC", "false_profile_attribution"),
+            ("foquWX3nUaYC", "false_profile_attribution"),
+            ("ipzZ9siozwsC", "false_profile_attribution"),
+            ("Z5m8FVwuT1cC", "nonpublication"),
+            ("tzM49s52ZIMC", "false_profile_attribution"),
+            ("Fu2w8maKXqMC", "false_profile_attribution"),
+            ("t6usbXjVLHcC", "nonpublication"),
+            ("HE397vMXCloC", "nonpublication"),
+            ("5Ul4iDaHHb8C", "corrupted_duplicate"),
+            ("FPJr55Dyh1AC", "nonpublication"),
+            ("ClCfbGk0d_YC", "nonpublication"),
+            ("BUYA1_V_uYcC", "corrupted_duplicate"),
+            ("kh2fBNsKQNwC", "false_profile_attribution"),
+            ("0izLItjtcgwC", "false_profile_attribution"),
+            ("9pM33mqn1YgC", "false_profile_attribution"),
+            ("1qzjygNMrQYC", "false_profile_attribution"),
+            ("_FM0Bhl9EiAC", "false_profile_attribution"),
+            ("hCrLmN-GePgC", "nonpublication"),
+            ("PVjk1bu6vJQC", "nonpublication"),
+            ("tKAzc9rXhukC", "false_profile_attribution"),
+            ("fEOibwPWpKIC", "false_profile_attribution"),
+            ("uc_IGeMz5qoC", "false_profile_attribution"),
+            ("_Ybze24A_UAC", "false_profile_attribution"),
+            ("SpbeaW3--B0C", "false_profile_attribution"),
+            ("uLbwQdceFCQC", "false_profile_attribution"),
+            ("7T2F9Uy0os0C", "false_profile_attribution"),
+            ("kzcrU_BdoSEC", "false_profile_attribution"),
+            ("W5xh706n7nkC", "false_profile_attribution"),
+            ("kz9GbA2Ns4gC", "false_profile_attribution"),
+            ("evX43VCCuoAC", "false_profile_attribution"),
+            ("-_dYPAW6P2MC", "false_profile_attribution"),
+            ("edDO8Oi4QzsC", "corrupted_duplicate"),
+            ("4hFrxpcac9AC", "nonpublication"),
+            ("3fE2CSJIrl8C", "corrupted_duplicate"),
+            ("5qfkUJPXOUwC", "nonpublication"),
+            ("LkGwnXOMwfcC", "corrupted_duplicate"),
+            ("XoXfffV-tXoC", "corrupted_duplicate"),
+            ("wbdj-CoPYUoC", "false_profile_attribution"),
+            ("J-pR_7NvFogC", "false_profile_attribution"),
+            ("XiSMed-E-HIC", "false_profile_attribution"),
+        )
+    }
+    actual = {
+        author_pub_id: decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == expected
+    # Retain original works, distinct versions, and unresolved rows.
+    for suffix in (
+        "pyW8ca7W8N0C",
+        "aqlVkmm33-oC",
+        "WbkHhVStYXYC",
+        "XD-gHx7UXLsC",
+        "V3AGJWp-ZtQC",
+        "N5tVd3kTz84C",
+        "qUcmZB5y_30C",
+        "fQNAKQ3IYiAC",
+        "2osOgNQ5qMEC",
+        "Se3iqnhoufwC",
+        "dshw04ExmUIC",
+        "g5m5HwL7SMYC",
+        "hMod-77fHWUC",
+        "2KloaMYe4IUC",
+        "MLfJN-KU85MC",
+        "UHK10RUVsp4C",
+        "WqliGbK-hY8C",
+        "kRWSkSYxWN8C",
+    ):
+        assert (scholar_id, f"{scholar_id}:{suffix}") not in exclusions
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:

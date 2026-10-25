@@ -11,6 +11,59 @@
       "reviewed_at": "2026-10-25"
     },
     {
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 361,
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and seven provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 7,
+      "provisional_hold_ids_sha256": "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0"
+    },
+    {
+      "person_id": "person-nimermurshid-70983eeb",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "state": "released",
+      "expected_source_rows": 49,
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "reason": "Complete 49-row visible Scholar profile verified; 3 exact degraded duplicate citations excluded and 2 unresolved observations held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 2,
+      "provisional_hold_ids_sha256": "d891cf20d7b343526f38e48422bda10e3a866a5210e587738479271bc20c7cf4"
+    },
+    {
+      "person_id": "person-simonfaulkner-1cc1e517",
+      "scholar_id": "tPp2aaoAAAAJ",
+      "state": "released",
+      "expected_source_rows": 5,
+      "cache_sha256": "9d64f37c39179c78af9635e1cf5afd53a26ca00bfeee093a8866ff8d7d3a09f8",
+      "reason": "Complete five-row visible Scholar profile verified; one degraded duplicate citation is exactly excluded. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "state": "released",
+      "expected_source_rows": 41,
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 2,
+      "provisional_hold_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40"
+    },
+    {
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 228,
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    },
+    {
       "person_id": "person-subhardas-42cf6c1e",
       "scholar_id": "FrF1YXQAAAAJ",
       "state": "held",
