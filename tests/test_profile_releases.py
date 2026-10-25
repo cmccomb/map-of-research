@@ -170,12 +170,82 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
                 item.held_author_pub_ids,
             ),
         )
-    ) == (63, 230, 377)
+    ) == (64, 232, 374)
     validate_reviewed_subset_decisions(
         releases,
         load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),
         load_exclusions(DEFAULT_EXCLUSIONS_PATH),
     )
+
+
+@pytest.mark.parametrize(
+    "index,pub_id,year,title,authors,decision,code,evidence_url",
+    [
+        (
+            136,
+            "FrF1YXQAAAAJ:0aBXIfxlw9sC",
+            "1998",
+            "Sasaki YF, Rothe T, Premkumar LS, Takasu M, Crandall JE, Dikkes P, "
+            "Conner DA, Rayudu PV, Cheung W, Chen HS, Lipton SA, Nakanishi N",
+            "S Das",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://www.nature.com/articles/30748",
+        ),
+        (
+            157,
+            "FrF1YXQAAAAJ:X5YyAB84Iw4C",
+            "1945",
+            "Diels L. Pant D. Patil SA Ghangrekar MM J",
+            "S Das",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://pub.vito.be/openaccess/2020-Das%20et%20al.%2C%20J.%20Electrochem.%20Soc._MES.pdf",
+        ),
+        (
+            470,
+            "FrF1YXQAAAAJ:4OULZ7Gr8RgC",
+            "2016",
+            "Synthesis of backbone branched RNA and the biochemical investigation "
+            "of lariat debranching enzyme",
+            "S Mack, S Dey, S Das",
+            "positive_primary_source_reviewed_subset",
+            "exact_original_meeting_abstract_with_cmu_identity",
+            "https://www.acs.org/content/dam/acsorg/meetings/national-meetings/program-book/2016-philadelphia.pdf",
+        ),
+    ],
+)
+def test_das_next_source_decisions_pin_exact_captured_rows(
+    index, pub_id, year, title, authors, decision, code, evidence_url
+) -> None:
+    with Path("registry/reviews/2026-10-25-chem-das-complete-profile-ledger.csv").open(
+        newline=""
+    ) as handle:
+        rows = list(csv.DictReader(handle))
+    row = rows[index - 1]
+    assert (
+        row["capture_row_index"],
+        row["author_pub_id"],
+        row["scholar_year"],
+        row["title"],
+        row["visible_authors"],
+        row["decision"],
+        row["reason_code"],
+        row["evidence_url"],
+    ) == (str(index), pub_id, year, title, authors, decision, code, evidence_url)
+    key = ("FrF1YXQAAAAJ", pub_id)
+    if decision == "reviewed_excluded":
+        exclusion = load_exclusions(DEFAULT_EXCLUSIONS_PATH)[key]
+        assert (exclusion.reason_code, exclusion.evidence_url) == (
+            code,
+            evidence_url,
+        )
+    else:
+        review = load_attribution_reviews(
+            Path("data/curated/scholar-attribution-reviews.json")
+        ).confirmed[key]
+        assert review.evidence_url == evidence_url
+        assert "published meeting abstract" in review.evidence_basis
 
 
 def test_missing_trusted_profile_release_manifest_fails_closed(tmp_path) -> None:
