@@ -85,11 +85,12 @@ POST_BIO_WORK_FIELDS = frozenset(
 )
 POST_BIO_PERSON_FIELDS = frozenset({"publication_hold_reason"})
 POST_BIO_REGION_AUDIT_VERSION = "low-information-semantic-region-v3"
+# Values are pinned to published Hub revision 211cdbc, not the earlier Bio preview.
+# The published 8dcc024f row has this override set to false.
 POST_BIO_PRIOR_ELIGIBLE_WORK_IDS = frozenset(
     {
         "work-2b4a1b0c1ba3c97a3a59cdeff547ee405ba08c3eb3801f5a2451931e1f7487f2",
         "work-7cf42c9fd2912068c1a0198c94b9ca19f67cd16f4112f52c44b98a59a2c0662a",
-        "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
         "work-b29eec36af051204a05cc4120514d040740998193eb641d2bb90fde9fde1b7e8",
         "work-dab872d55c3138e1e51fc1f7d6f959218b6772b130d46e4c3ff2540f9f0bdd60",
         "work-df35fb5e533c0e0d2f295a5e0e4745259fdad2e9a190e78f189fd21ecd1fede9",
