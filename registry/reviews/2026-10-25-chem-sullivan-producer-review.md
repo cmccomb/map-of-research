@@ -21,7 +21,7 @@ The [merged retention gate #185](https://github.com/cmccomb/map-of-research/pull
 
 | Old-only ID suffix | Current evidence | Release status |
 | --- | --- | --- |
-| `Ehil0879vHcC` | Science.gov indexes a NASA ADS abstract for a 2017 AGU presentation with this exact N2O5/biomass-burning title and Sullivan/Jahl/Goldberger/Ahern/Thornton. A direct primary AGU or ADS record has not been recovered. The 2019 journal article is a distinct output. | **Unresolved.** Retain the hold pending a primary source-native record or another exact, reviewable disposition. |
+| `Ehil0879vHcC` | The [AGU Fall Meeting native abstract A13J-05](https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700) gives the exact title, 2017 date, and Sullivan/Jahl/Goldberger/Ahern/Thornton byline, with Sullivan at CMU. The 2018 and 2019 journal articles are distinct outputs. | **Source-backed historical recovery proposed** as `agu2017:a13j-05`; the complete-profile gate remains held. |
 | `OR75R8vi5nAC` and `OcBU2YAGkTUC` | Both old records cite the same [ORNL DAAC dataset](https://daac.ornl.gov/CMS/guides/Global_Freshwater_CH4Emissions.html), DOI `10.3334/ORNLDAAC/2253`; the current profile uses `XUvXOeBm_78C`. The [AGU publisher record](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023AV000956) ties its Ryan C. Sullivan to Argonne. | Proposed `false_profile_attribution_rekeyed` crosswalk, contingent on a narrow gate rule requiring the target current row's exact reviewed exclusion and evidence. |
 | `PVgj2kMGcgYC` | Current `j7_hQOaDUrUC` points to the same [EGU25-7227 abstract](https://meetingorganizer.copernicus.org/EGU25/EGU25-7227.html), DOI `10.5194/egusphere-egu25-7227`; the conference page assigns Ryan Sullivan to Carnegie Mellon. | Source-backed `duplicate_rekeyed` candidate, pending the complete exact crosswalk and cache hash. |
 
@@ -39,4 +39,4 @@ The Donahue crosswalk in [#188](https://github.com/cmccomb/map-of-research/pull/
 
 ## Release hold
 
-Do not promote Sullivan's 250-row cache until the 2017 abstract has a primary-backed disposition, the two ORNL old IDs have a narrow reviewed crosswalk to the exact excluded current row, the remaining 57 new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.
+Do not promote Sullivan's 250-row cache until the two ORNL old IDs have a narrow reviewed crosswalk to the exact excluded current row, the remaining 17 held new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. The AGU abstract now has a primary-backed curated disposition, but no candidate cache hash or gate exception exists. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.
