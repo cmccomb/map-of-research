@@ -150,7 +150,7 @@ def _source_values(records: list[Any], field: str) -> list[Any]:
 def _variants(values: list[Any]) -> list[str]:
     return sorted(
         {_clean_text(value) for value in values if _clean_text(value)},
-        key=str.casefold,
+        key=lambda value: (value.casefold(), value),
     )
 
 
