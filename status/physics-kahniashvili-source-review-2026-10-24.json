@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "review_state": "source_review_proposals_not_applied",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "au_cLfoAAAAJ",
+  "raw_rows_preserved": true,
+  "cache_repair_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json",
+  "proposed_exclusions": [
+    {
+      "capture_row": 101,
+      "author_pub_id": "au_cLfoAAAAJ:UHK10RUVsp4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Page-header text was prepended to the title of the same Physical Review Fluids article retained at row 34.",
+      "evidence_url": "https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.4.024608"
+    },
+    {
+      "capture_row": 109,
+      "author_pub_id": "au_cLfoAAAAJ:k_IJM867U9cC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The named neutrino review is by Bednarek, Burgio, and Montaruli; Kahniashvili is absent from its author list.",
+      "evidence_url": "https://arxiv.org/abs/astro-ph/0404534"
+    },
+    {
+      "capture_row": 129,
+      "author_pub_id": "au_cLfoAAAAJ:sSrBHYA8nusC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The journal special-issue header was prepended to the title of the same paper retained at row 40.",
+      "evidence_url": "https://arxiv.org/abs/1807.05479"
+    },
+    {
+      "capture_row": 130,
+      "author_pub_id": "au_cLfoAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "nonpublication",
+      "reason": "The source is a collaborative research proposal, not a published research work.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/tmp/machine/NSF2015CDSE.pdf"
+    },
+    {
+      "capture_row": 133,
+      "author_pub_id": "au_cLfoAAAAJ:HDshCWvjkbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Publisher-deposited DOI metadata credits D. B. Cline alone for Overview of Dark Matter 2004; Kahniashvili is absent.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.newar.2005.01.001"
+    },
+    {
+      "capture_row": 131,
+      "author_pub_id": "au_cLfoAAAAJ:M3NEmzRMIkIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf"
+    },
+    {
+      "capture_row": 132,
+      "author_pub_id": "au_cLfoAAAAJ:e5wmG9Sq2KIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf"
+    },
+    {
+      "capture_row": 86,
+      "author_pub_id": "au_cLfoAAAAJ:olpn-zPbct0C",
+      "reason_code": "nonpublication",
+      "reason": "NASA's Astrophysics Division yearbook identifies this title under Kahniashvili's research proposal, not as a published research work (PDF pages 176–177).",
+      "evidence_url": "https://science.nasa.gov/wp-content/uploads/2023/11/3-apd-yearbook-11.06.23.pdf"
+    },
+    {
+      "capture_row": 92,
+      "author_pub_id": "au_cLfoAAAAJ:WqliGbK-hY8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 2408411, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2408411.json"
+    },
+    {
+      "capture_row": 93,
+      "author_pub_id": "au_cLfoAAAAJ:5awf1xo2G04C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 2307698, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2307698.json"
+    },
+    {
+      "capture_row": 104,
+      "author_pub_id": "au_cLfoAAAAJ:SdhP9T11ey4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 1615940, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1615940.json"
+    },
+    {
+      "capture_row": 106,
+      "author_pub_id": "au_cLfoAAAAJ:eq2jaN3J8jMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 1109180, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1109180.json"
+    },
+    {
+      "capture_row": 107,
+      "author_pub_id": "au_cLfoAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The parenthetical page count and article number were appended to the title of the same Physical Review D article retained at row 12.",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.81.023004"
+    },
+    {
+      "capture_row": 122,
+      "author_pub_id": "au_cLfoAAAAJ:blknAaTinKkC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher-deposited DOI metadata identifies Astrophysics and Space Science volume 238, page 311 as an unauthored List of forthcoming papers. The captured author string belongs to the genuine article retained at row 58 in volume 239, pages 57–64; this mixed index record is not a separate publication.",
+      "evidence_url": "https://api.crossref.org/works/10.1007%2Fbf00641696"
+    },
+    {
+      "capture_row": 128,
+      "author_pub_id": "au_cLfoAAAAJ:N5tVd3kTz84C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The ESA SP-251 contents identify Cosmions and Galaxy Formation on page 41 by Kahniashvili and Lukash, followed by Space Research Institute, Moscow, USSR as their affiliation. The captured title is that affiliation rather than a separate work; row 126 retains the contribution with its actual title, authors, volume, and page. This does not establish that differently titled row 127 is a duplicate.",
+      "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf",
+      "catalog_url": "https://unapi.k10plus.de/?format=marcxml&id=opac-de-627:ppn:1109639244",
+      "retained_author_pub_id": "au_cLfoAAAAJ:TFP_iSt0sucC"
+    }
+  ],
+  "reviewed_retained": [
+    {
+      "capture_row": 58,
+      "author_pub_id": "au_cLfoAAAAJ:5nxA0vEk-isC",
+      "reason": "The captured Chedia, Kahniashvili, Machabeli, and Nanobashvili article is a genuine 1996 Astrophysics and Space Science publication, volume 239, pages 57–64; row 122 mixed its author string with a forthcoming-papers index entry.",
+      "evidence_url": "https://link.springer.com/article/10.1007/BF00653766"
+    },
+    {
+      "capture_row": 88,
+      "author_pub_id": "au_cLfoAAAAJ:bFI3QPDXJZMC",
+      "reason": "The Moriond proceedings names Kahniashvili; Scholar misspells her surname.",
+      "evidence_url": "https://s3.cern.ch/inspire-prod-files-f/fc955c550ca14e56a7758da9a54dcd5d"
+    },
+    {
+      "capture_row": 134,
+      "author_pub_id": "au_cLfoAAAAJ:hFOr9nPyWt4C",
+      "reason": "The 2001 preprint is a genuine version of the 2002 journal paper at row 64. Existing producer precedent retains genuine preprint and journal versions separately, despite the incomplete Scholar author metadata.",
+      "evidence_url": "https://arxiv.org/abs/astro-ph/0110426"
+    },
+    {
+      "capture_row": 126,
+      "author_pub_id": "au_cLfoAAAAJ:TFP_iSt0sucC",
+      "reason": "The ESA SP-251 contents identify Cosmions and Galaxy Formation on page 41 by Kahniashvili and Lukash. This is the correctly titled contribution to retain; row 128 is its affiliation-titled duplicate.",
+      "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf"
+    },
+    {
+      "capture_row": 116,
+      "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
+      "reason": "The World Scientific volume contents identify the three-author Potsdam proceedings chapter on pages 269-272, and coauthor Novosyadlyj's institutional bibliography independently gives the exact title, authors, venue, and pages. Retain this distinct contribution with the normalized cache title repaired; preserve its damaged raw capture title and exact observation ID.",
+      "evidence_url": "https://books.google.com/books?id=9sFUDwAAQBAJ&pg=PA269",
+      "corroborating_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf"
+    }
+  ],
+  "unresolved_candidates": [],
+  "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
+}
