@@ -10,9 +10,10 @@
   "reviewed_exclusion_count_present_in_producer_main": 14,
   "preliminary_candidate_count": 48,
   "capture_coverage": "complete_visible_profile",
-  "source_files_preserve_raw_rows": true,
+  "source_files_preserve_raw_rows": false,
   "ingestion_ready": false,
-  "ingestion_dependency": "The 48 preliminary candidates remain unresolved; coordinate producer and source review before any snapshot ingestion. This draft changes source evidence only.",
+  "ingestion_dependency": "The 48 preliminary candidates remain unresolved; coordinate producer and source review before any snapshot ingestion. Chatterjee rows 34/36/39/88 restore title SVG labels from saved HTML into derived JSON/cache with an exact provenance ledger; the original JSON hash is preserved in that ledger. This draft remains held and changes source evidence only.",
+  "chatterjee_svg_title_repair_path": "status/physics-chatterjee-svg-title-repair-2026-10-25.json",
   "profiles": [
     {
       "display_name": "Antonella Palmese",
