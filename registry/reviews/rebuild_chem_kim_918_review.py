@@ -2829,6 +2829,123 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in KNU_LATE_FOUR_EXACT_GUARDS.items()}
 )
 
+# Six further held observations have exact work-to-person evidence. KNU's
+# 2008 conference event was published in 2009; the Scholar year denotes the
+# event, so the two dates are not different works. Row 839 is another Scholar
+# rendering of the already excluded KNU journal article at row 432. The KAERI
+# report names its lead researcher 김홍주 (Hong Joo Kim) on the original cover;
+# OSTI lists the 2007 report as announced in 2008.
+KNU_FINAL_SIX_EXACT_GUARDS = {
+    815: (
+        "bC4aq-4AAAAJ:4X0JR2_MtJMC",
+        "Crystal growth and luminescence properties of pure and Pr3+-doped "
+        "NaGd(WO4)2 single crystals",
+        "H Jiang, G Rooh, HJ Kim, JM Lee, YJ Lee, S Khan, SH Kim",
+        "2013",
+        "2013 IEEE Nuclear Science Symposium and Medical Imaging Conference "
+        "(2013 NSS\xa0…, 2013",
+    ),
+    830: (
+        "bC4aq-4AAAAJ:1_W9tMSvGuwC",
+        "A search for Formula Not Shown decay of Formula Not Shown with "
+        "tin-loaded liquid scintillator",
+        "MJ Hwang, YJ Kwon, HJ Kim, JW Kwak, SC Kim, SK Kim, TY Kim, SY Kim, ...",
+        "2009",
+        "ASTROPARTICLE PHYSICS 31 (6), 412-416, 2009",
+    ),
+    838: (
+        "bC4aq-4AAAAJ:KWzIFqRkAKkC",
+        "CaMoO {sub 4} scintillators for a 2 beta-decay experiment with {sup 100} Mo",
+        "AN Annenkov, OA Buzanov, FA Danevich, AS Georgadze, SS Nagorny, ...",
+        "2008",
+        "",
+    ),
+    839: (
+        "bC4aq-4AAAAJ:mWEH9CqjF64C",
+        "Large size CdWO {sub 4} crystal for energetic x-and γ-ray detection",
+        "HJ Kim, HD Kang, H Park, S Doh, SH Kim, SJ Kang",
+        "2008",
+        "",
+    ),
+    843: (
+        "bC4aq-4AAAAJ:43bX7VzcjpAC",
+        "A study of radiation-hard detectors using proton beam",
+        "HJ Kim, SJ Kang",
+        "2008",
+        "Korea Atomic Energy Research Institute, Daejeon (Korea, Republic of), 2008",
+    ),
+    850: (
+        "bC4aq-4AAAAJ:SPgmg5JLkoEC",
+        "Searches for the {beta}{sup+}/EC decays of {sup 64} Zn and "
+        "{sup 112} Sn, and the {beta}{beta} decay transitions of {sup 124} "
+        "Sn to the excited states of {sup 124} Te",
+        "HJ Kim, SC Kim, SK Kim, TY Kim, HS Lee, J Lee, MJ Lee, YD Kim, JI Lee, ...",
+        "2007",
+        "Nuclear Physics. A 793, 2007",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(KNU_FINAL_SIX_EXACT_GUARDS)
+KNU_FINAL_SIX_PRIMARY = {
+    815: (
+        "Hong Joo Kim",
+        "10.1109/NSSMIC.2013.6829653",
+        "https://research.knu.ac.kr/en/publications/crystal-growth-and-luminescence-properties-of-pure-and-pr-sup3sup/",
+        "KNU exact IEEE conference paper with H. J. Kim linked to Hong Joo Kim",
+        "The exact IEEE NSS/MIC paper has matching author order and DOI; KNU "
+        "links its H. J. Kim byline to Physics professor Hong Joo Kim.",
+    ),
+    830: (
+        "Hong Joo Kim",
+        "10.1016/j.astropartphys.2009.05.001",
+        "https://research.knu.ac.kr/en/publications/a-search-for-0-%CE%BD-%CE%B2-%CE%B2-decay-of-sup124sup-sn-with-tin-loaded-liquid/",
+        "KNU exact article with H. J. Kim linked to Hong Joo Kim",
+        "The exact Astroparticle Physics 31:412–416 article restores Scholar's "
+        "missing formulas and links H. J. Kim to Hong Joo Kim; his ORCID "
+        "0000-0001-9787-4684 also self-lists this DOI.",
+    ),
+    838: (
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/camoosub4sub-scintillators-for-a-2%CE%B2-decay-experiment-with-sup100s/",
+        "KNU exact conference work with H. J. Kim linked to Hong Joo Kim",
+        "KNU links the exact CaMoO4 conference paper's H. J. Kim to Hong "
+        "Joo Kim. The meeting was in 2008, matching Scholar's year; the "
+        "807–810 proceedings were published in 2009.",
+    ),
+    839: (
+        "Hong Joo Kim",
+        "10.1080/00223131.2008.10875862",
+        "https://research.knu.ac.kr/en/publications/large-size-cdwosub4sub-crystal-for-energetic-x-and-%CE%B3-ray-detectio/",
+        "KNU exact article and alternate Scholar rendering of row 432",
+        "The literal-markup blank-venue row has the same six authors, title, "
+        "and year as already excluded row 432. KNU's journal record gives "
+        "the DOI and links H. J. Kim to Hong Joo Kim.",
+    ),
+    843: (
+        "Hong Joo Kim",
+        "",
+        "https://www.osti.gov/etdeweb/servlets/purl/21068385",
+        "Original KAERI report names KNU lead researcher in full Korean",
+        "The original report has the exact English title and names its "
+        "Kyungpook University lead researcher 김홍주 (Hong Joo Kim). OSTI "
+        "dates publication 2007 and announcement 2008, explaining Scholar's year.",
+    ),
+    850: (
+        "Hong Joo Kim",
+        "10.1016/j.nuclphysa.2007.06.007",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825541",
+        "Hong Joo Kim ORCID self-listed exact Nuclear Physics A article",
+        "Hong Joo Kim's ORCID work self-lists the exact Nuclear Physics A "
+        "793:171–177 article and DOI; Scholar preserves a markup-damaged title.",
+    ),
+}
+for index, (person, doi, url, source, basis) in KNU_FINAL_SIX_PRIMARY.items():
+    guard = KNU_FINAL_SIX_EXACT_GUARDS[index]
+    OTHER_PRIMARY[index] = (guard[1], int(guard[3]), person, doi, url, source, basis)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in KNU_FINAL_SIX_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4815,17 +4932,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 166,
+        "proposed_other_person_primary_work": 172,
         "proposed_no_target_author_primary_work": 10,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 264,
+        "unresolved_attribution_hold": 258,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 519 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 525 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

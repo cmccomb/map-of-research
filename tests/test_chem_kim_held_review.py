@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 527, 268)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 533, 262)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -269,4 +269,31 @@ def test_late_four_person_links_preserve_initials_only_holds() -> None:
             713, 730, 738, 744, 747, 748, 758, 764, 769, 774, 779,
             780, 781, 782, 783, 784, 785, 788,
         )
+    )
+
+
+def test_final_six_exact_person_links_leave_other_candidates_held() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    expected = {
+        815: ("bC4aq-4AAAAJ:4X0JR2_MtJMC", "10.1109/NSSMIC.2013.6829653"),
+        830: ("bC4aq-4AAAAJ:1_W9tMSvGuwC", "10.1016/j.astropartphys.2009.05.001"),
+        838: ("bC4aq-4AAAAJ:KWzIFqRkAKkC", ""),
+        839: ("bC4aq-4AAAAJ:mWEH9CqjF64C", "10.1080/00223131.2008.10875862"),
+        843: ("bC4aq-4AAAAJ:43bX7VzcjpAC", ""),
+        850: ("bC4aq-4AAAAJ:SPgmg5JLkoEC", "10.1016/j.nuclphysa.2007.06.007"),
+    }
+    assert {
+        index: (rows[index]["author_pub_id"], rows[index]["matched_doi"])
+        for index in expected
+    } == expected
+    assert all(
+        rows[index]["status"] == "proposed_other_person_primary_work"
+        and rows[index]["evidence_url"].startswith("https://")
+        for index in expected
+    )
+    assert rows[839]["matched_doi"] == rows[432]["matched_doi"]
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (818, 819, 821, 822, 823, 825, 827, 834, 844, 845, 846, 847)
     )
