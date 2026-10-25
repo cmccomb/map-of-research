@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "source_review_proposal_not_active_publisher_policy",
+  "reviewed_at": "2026-10-25",
+  "profiles": [
+    {
+      "person_id": "person-nimermurshid-70983eeb",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "expected_source_rows": 49,
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "source_json_sha256": "043204287f71af9c799ff4b79b6ec357b1da78103e31d8c6ff29ef43620bc004",
+      "candidate_exclusions": [
+        {
+          "capture_row_index": 31,
+          "author_pub_id": "MPxFaHYAAAAJ:hFOr9nPyWt4C",
+          "reason_code": "duplicate_publication",
+          "reason": "Duplicate malformed Nanomaterials citation; retain complete Scholar row 3.",
+          "evidence_url": "https://doi.org/10.3390/nano11113084",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 35,
+          "author_pub_id": "MPxFaHYAAAAJ:-f6ydRqryjwC",
+          "reason_code": "duplicate_publication",
+          "reason": "Duplicate malformed Sustainability citation; retain complete Scholar row 24.",
+          "evidence_url": "https://doi.org/10.3390/su15054342",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "MPxFaHYAAAAJ:hC7cP41nSMkC",
+          "reason_code": "duplicate_publication",
+          "reason": "Duplicate malformed Gels citation; retain complete Scholar row 34.",
+          "evidence_url": "https://doi.org/10.3390/gels9060465",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "candidate_holds": [
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reason": "Title is a fragment of a journal name, with no year or venue; exact underlying item is unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Title has trailing footnote character and no year or venue; exact underlying item and type are unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-simonfaulkner-1cc1e517",
+      "scholar_id": "tPp2aaoAAAAJ",
+      "expected_source_rows": 5,
+      "cache_sha256": "9d64f37c39179c78af9635e1cf5afd53a26ca00bfeee093a8866ff8d7d3a09f8",
+      "source_json_sha256": "8c95762e6aaca69a8118f6823c3975717a06df5fd05ddccc81eabfc5fff70f70",
+      "candidate_exclusions": [
+        {
+          "capture_row_index": 5,
+          "author_pub_id": "tPp2aaoAAAAJ:2osOgNQ5qMEC",
+          "reason_code": "duplicate_publication",
+          "reason": "Same 2006 journal article as complete Scholar row 1; publisher DOI has Cardell, Hogarth, and Faulkner.",
+          "evidence_url": "https://doi.org/10.1016/j.ica.2005.08.034",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "candidate_holds": []
+    },
+    {
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "expected_source_rows": 41,
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "source_json_sha256": "1a32bcb755862745c1b29f27427bfafeb9ee96bdcc0d0dc7d2b155bd342a3cf7",
+      "candidate_exclusions": [],
+      "candidate_holds": [
+        {
+          "capture_row_index": 33,
+          "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
+          "reason": "A 2020 strawberry-delivery preprint appears related to the 2022 PNAS article at row 18; exact version relationship needs primary-source reconciliation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reason": "Undated Spanish archive record with malformed institutional venue; exact type, date, and authorship context need source review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    }
+  ]
+}
