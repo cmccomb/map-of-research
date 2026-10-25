@@ -1962,6 +1962,27 @@ def test_sullivan_transition_requires_exact_source_commit(
         )
 
 
+@pytest.mark.parametrize(
+    ("prior_revision", "snapshot_sha256", "expected"),
+    [
+        (publisher.SULLIVAN_PRIOR_REVISION, publisher.SULLIVAN_SOURCE_SHA256, True),
+        ("a" * 40, publisher.SULLIVAN_SOURCE_SHA256, False),
+        (publisher.SULLIVAN_PRIOR_REVISION, "b" * 64, False),
+        ("a" * 40, "b" * 64, False),
+    ],
+)
+def test_sullivan_approval_is_limited_to_its_historical_transition(
+    prior_revision, snapshot_sha256, expected
+) -> None:
+    assert (
+        publisher._is_sullivan_transition(
+            prior_revision=prior_revision,
+            snapshot_sha256=snapshot_sha256,
+        )
+        is expected
+    )
+
+
 def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) -> None:
     monkeypatch.setattr(
         publisher,

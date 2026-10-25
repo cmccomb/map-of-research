@@ -1360,6 +1360,15 @@ def _publish_atomic_release(
         )
 
 
+def _is_sullivan_transition(*, prior_revision: str, snapshot_sha256: str) -> bool:
+    """Apply the one-time bb88 approval only to its approved source snapshot."""
+
+    return (
+        prior_revision == SULLIVAN_PRIOR_REVISION
+        and snapshot_sha256 == SULLIVAN_SOURCE_SHA256
+    )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1416,9 +1425,9 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
-    sullivan_transition = (
-        prior_revision == SULLIVAN_PRIOR_REVISION
-        and manifest["snapshot_sha256"] == SULLIVAN_SOURCE_SHA256
+    sullivan_transition = _is_sullivan_transition(
+        prior_revision=prior_revision,
+        snapshot_sha256=str(manifest["snapshot_sha256"]),
     )
     if sullivan_transition and not source_commit:
         raise ValueError("Sullivan release needs its exact source commit")
