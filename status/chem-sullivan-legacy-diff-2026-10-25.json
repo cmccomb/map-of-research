@@ -1,0 +1,1948 @@
+{
+  "schema_version": 1,
+  "scholar_id": "wXSgFr4AAAAJ",
+  "source_base": "c399574",
+  "producer_manifest_base": "29d0a415",
+  "legacy_cache_path": "data/authors/wXSgFr4AAAAJ.json",
+  "legacy_cache_sha256": "08a8a47169d020493435e7973d41781feabc11bccc2b1d22fe16c3bd66ba5996",
+  "capture_json_path": "data/captures/sullivan-visible-250-2026-10-25.json",
+  "capture_html_path": "data/captures/sullivan-visible-250-2026-10-25.html",
+  "legacy_count": 196,
+  "captured_count": 250,
+  "shared_id_count": 192,
+  "old_only_count": 4,
+  "new_only_count": 58,
+  "old_only": [
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Ehil0879vHcC",
+      "legacy": {
+        "author_pub_id": "wXSgFr4AAAAJ:Ehil0879vHcC",
+        "citation": "AGU Fall Meeting Abstracts 2017, A13J-05, 2017",
+        "num_citations": 0,
+        "pub_url": "",
+        "pub_year": "2017",
+        "title": "Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:OR75R8vi5nAC",
+      "legacy": {
+        "author_pub_id": "wXSgFr4AAAAJ:OR75R8vi5nAC",
+        "citation": "",
+        "num_citations": 0,
+        "pub_url": "",
+        "pub_year": "2023",
+        "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018. ORNL DAAC, Oak Ridge, Tennessee, USA"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:OcBU2YAGkTUC",
+      "legacy": {
+        "author_pub_id": "wXSgFr4AAAAJ:OcBU2YAGkTUC",
+        "citation": "ORNL DAAC, 2024",
+        "num_citations": 1,
+        "pub_url": "",
+        "pub_year": "2024",
+        "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PVgj2kMGcgYC",
+      "legacy": {
+        "author_pub_id": "wXSgFr4AAAAJ:PVgj2kMGcgYC",
+        "citation": "EGU25, 2025",
+        "num_citations": 0,
+        "pub_url": "",
+        "pub_year": "2025",
+        "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS"
+      }
+    }
+  ],
+  "new_only": [
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:-mN3Mh-tlDkC",
+      "captured": {
+        "authors": "JD Rogers, EM Thurman, I Ferrer, JS Rosenblum, MV Evans, PJ Mouser, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:-mN3Mh-tlDkC",
+        "index": 239,
+        "title": "Processes & Impacts",
+        "venue": "",
+        "year": ""
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1lhNe0rCu4AC",
+      "captured": {
+        "authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, SH Knox, Z Zhang, T Aalto, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:1lhNe0rCu4AC",
+        "index": 141,
+        "title": "Carbon Monitoring System (CMS)",
+        "venue": "ORNL Distributed Active Archive Center (DAAC) dataset 10.3334/ORNLDAAC/2253 …, 2024",
+        "year": "2024"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1taIhTC69MYC",
+      "captured": {
+        "authors": "W Dorigo, I Himmelbauer, D Aberer, L Schremmer, I Petrakovic, L Zappa, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:1taIhTC69MYC",
+        "index": 155,
+        "title": "The International Soil Moisture Network: Over a Decade Serving Earth System Science",
+        "venue": "< bound method Organization. get_name_with_acronym of< Organization: Météo …, 2021",
+        "year": "2021"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1yWc8FF-_SYC",
+      "captured": {
+        "authors": "P Balaprakash, S Collis, Y Kim, P Beckmann, M Cadeddu, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:1yWc8FF-_SYC",
+        "index": 238,
+        "title": "Focal Area (s)",
+        "venue": "",
+        "year": ""
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:3NQIlFlcGxIC",
+      "captured": {
+        "authors": "DR Cook",
+        "citation_count": "36",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:3NQIlFlcGxIC",
+        "index": 54,
+        "title": "Eddy correlation flux measurement system (ECOR) instrument handbook",
+        "venue": "DOE Office of Science Atmospheric Radiation Measurement (ARM) Program …, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:43bX7VzcjpAC",
+      "captured": {
+        "authors": "RC Sullivan, NM Donahue, AL Robinson",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:43bX7VzcjpAC",
+        "index": 210,
+        "title": "RAPID: Online Single-particle Measurements of the Chemical Composition, Mixing State, and Ice Nuclei Residues During the FLAME IV Biomass Burning Experiment",
+        "venue": "NSF Award 12 (1256042), 56042, 2012",
+        "year": "2012"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:48xauSegjOkC",
+      "captured": {
+        "authors": "K Gohil, RC Sullivan, H Gordon",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:48xauSegjOkC",
+        "index": 138,
+        "title": "Investigation of Biomass Burning Aerosols as Global Ice Nucleating Particles",
+        "venue": "AGU Fall Meeting Abstracts 2024 (1825), A31G-1825, 2024",
+        "year": "2024"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:4xDN1ZYqzskC",
+      "captured": {
+        "authors": "B Raut, S Pal, P Muradyan, M Tuftedal, J O'Brien, R Sullivan, M Grover, ...",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:4xDN1ZYqzskC",
+        "index": 103,
+        "title": "CROCUS urban fluxes of CO₂, H₂O, and turbulence at University of Illinois Chicago",
+        "venue": "Community Research on Climate and Urban Science Urban Integrated Field …, 2024",
+        "year": "2024"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:6_hjMsCP8ZoC",
+      "captured": {
+        "authors": "NM Donahue, RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:6_hjMsCP8ZoC",
+        "index": 201,
+        "title": "Organic Aerosol Dynamics: Single Particles and Modest Driving Forces",
+        "venue": "NSF Award 14 (1412309), 12309, 2014",
+        "year": "2014"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+      "captured": {
+        "authors": "KJ Davis, NE Prince, T Staresinic, C Ross, SR Hill, BJ Ahlswede, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+        "index": 129,
+        "title": "Regional differences in boundary layer properties observed along a coast-urban-rural gradient",
+        "venue": "106th AMS Annual Meeting, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7H_MAutzIkAC",
+      "captured": {
+        "authors": "S Kutuzov, JW Olesik, MC Lomax-Vogt, LM Carter, GV Lowry, GD Bland, ...",
+        "citation_count": "5",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:7H_MAutzIkAC",
+        "index": 86,
+        "title": "Geochemical characterization of millions of individual atmospheric particles entrapped in Antarctic ice across the last glacial-interglacial transition",
+        "venue": "Scientific reports, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7Hz3ACDFbsoC",
+      "captured": {
+        "authors": "S Collis, P Muradyan, J O'Brien, G Anderson, TJ Wagner, L Blind-Doskocil, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7Hz3ACDFbsoC",
+        "index": 132,
+        "title": "The CROCUS Measurement Strategy",
+        "venue": "ICUC12, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:7wO8s98CvbsC",
+      "captured": {
+        "authors": "B Bowers, RC Sullivan, RM Weatherholt",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7wO8s98CvbsC",
+        "index": 150,
+        "title": "Concentration and photo-oxidative remediation of 6: 2 fluorotelomer carboxylic acid in aqueous aerosol droplets",
+        "venue": "SETAC North America 43rd Annual Meeting, 2022",
+        "year": "2022"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ALROH1vI_8AC",
+      "captured": {
+        "authors": "H Beydoun, RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ALROH1vI_8AC",
+        "index": 200,
+        "title": "A new formulation for interpreting heterogeneous ice nucleation data",
+        "venue": "American Meteorological Society Meeting Abstracts 95, 11.6, 2015",
+        "year": "2015"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:AXkvAH5U_nMC",
+      "captured": {
+        "authors": "SA Sydlik, RC Sullivan, KJ Noonan, GJ Wang, WYD Chan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:AXkvAH5U_nMC",
+        "index": 148,
+        "title": "ECO-CBET: A Convergent Approach to the Rational Design of Controllably Degradable Polymers using Sustainable Nanocomposites and Biodegradable-Additives",
+        "venue": "NSF Award 23 (2318652), 18652, 2023",
+        "year": "2023"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Ade32sEp0pkC",
+      "captured": {
+        "authors": "P Muradyan, S Collis, JR O’Brien, M Tuftedal, R Jackson, BA Raut, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:Ade32sEp0pkC",
+        "index": 120,
+        "title": "CROCUS Micronet: A Distributed Urban Observation System in Chicago",
+        "venue": "Bulletin of the American Meteorological Society, BAMS-D-25-0174.1, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Br1UauaknNIC",
+      "captured": {
+        "authors": "D Bonomo, RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:Br1UauaknNIC",
+        "index": 123,
+        "title": "Evolution of the photosensitized production of singlet oxygen by aqueous extracts of biomass-burning aerosol",
+        "venue": "Environmental Science: Processes & Impacts, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:BzfGm06jWhQC",
+      "captured": {
+        "authors": "RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BzfGm06jWhQC",
+        "index": 190,
+        "title": "COLLABORATIVE RESEARCH: Chlorine Activation in Biomass Burning Plumes",
+        "venue": "NSF Award Number 1552608. Directorate for Geosciences 15 (1552608), 52608, 2016",
+        "year": "2016"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CB2v5VPnA5kC",
+      "captured": {
+        "authors": "R Sullivan, S Pal, DR Cook",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:CB2v5VPnA5kC",
+        "index": 97,
+        "title": "Eddy Correlation Flux Measurement System (ECOR) Instrument Handbook",
+        "venue": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CaZNVDsoPx4C",
+      "captured": {
+        "authors": "R Sullivan, D Billesbach, D Cook, E Keeler, J Kyrouac, S Biraud, S Pal",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:CaZNVDsoPx4C",
+        "index": 133,
+        "title": "AmeriFlux US-A39 ARM-SGP-Morrison",
+        "venue": "Argonne National Laboratory, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:CdxZDUztZiMC",
+      "captured": {
+        "authors": "DR Cook, RC Sullivan",
+        "citation_count": "26",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:CdxZDUztZiMC",
+        "index": 65,
+        "title": "Surface energy balance system (SEBS) instrument handbook",
+        "venue": "DOE Office of Science Atmospheric Radiation Measurement (ARM) Program …, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:DBa1UEJaJKAC",
+      "captured": {
+        "authors": "NM Donahue, SN Pandis, AL Robinson, AA Presto, RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:DBa1UEJaJKAC",
+        "index": 199,
+        "title": "MRI: Acquisition of CI-API-TOFMS (Chemical Ionization Atmospheric Pressure Interface Time-of-Flight Mass Spectrometer) to Measure Condensible Vapors Associated with Fine Particles",
+        "venue": "NSF Award 15 (1531284), 31284, 2015",
+        "year": "2015"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:FiytvqdAVhgC",
+      "captured": {
+        "authors": "AM VIRKKALA, I WARGOWSKY, J VOGT, M KUHN, S MADAAN, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:FiytvqdAVhgC",
+        "index": 126,
+        "title": "ABCFlux v2: Arctic-Boreal CO2 and CH4 In-situ Flux and Environmental Data",
+        "venue": "ORNL DAAC, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:IaI1MmNe2tcC",
+      "captured": {
+        "authors": "K Gohil, N Asch, R Sullivan, PJ DeMott, H Gordon",
+        "citation_count": "2",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:IaI1MmNe2tcC",
+        "index": 95,
+        "title": "Global simulations suggest biomass burning aerosol emissions from grassland fires could be important ice nucleating particles",
+        "venue": "Journal of Geophysical Research: Atmospheres 130 (22), e2025JD043647, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:L1USKYWJimsC",
+      "captured": {
+        "authors": "R Sullivan, D Billesbach, D Cook, S Biraud",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:L1USKYWJimsC",
+        "index": 124,
+        "title": "AmeriFlux FLUXNET-1F US-A03 ARM-AMF3-Oliktok",
+        "venue": "Argonne National Laboratory, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LPtt_HFRSbwC",
+      "captured": {
+        "authors": "R Sullivan, D Cook, B Ermold, E Keeler, S Pal, M Kieburtz",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:LPtt_HFRSbwC",
+        "index": 122,
+        "title": "Eddy Correlation Flux Measurement System (ECOR) with SmartFlux microprocessor: 10 Hz wind data from sonic anemometers (a1-level)",
+        "venue": "Atmospheric Radiation Measurement User Facility, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LdasjJ6CEcoC",
+      "captured": {
+        "authors": "R Sullivan, E Keeler, J Kyrouac, S Pal",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:LdasjJ6CEcoC",
+        "index": 131,
+        "title": "AmeriFlux FLUXNET-1F US-A37 ARM-SGP-Waukomis",
+        "venue": "Argonne National Laboratory, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:MhiOAD_qIWkC",
+      "captured": {
+        "authors": "K Baker, D Bonomo, J Vinskus, A Ashmar, J Orlando, S Suprenant, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:MhiOAD_qIWkC",
+        "index": 125,
+        "title": "Assessing aqueous photo-degradability of novel polymers containing hydrolysable additives or oxidizable functional groups",
+        "venue": "SETAC Europe 36th Annual Meeting, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:MpfHP-DdYjUC",
+      "captured": {
+        "authors": "M Petters, P Ziemann, S Kreidenweis, S Suda, C Carrico, A Faulhaber, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:MpfHP-DdYjUC",
+        "index": 218,
+        "title": "Cloud Droplet Activation of Organic Aerosols: The Role of Molecule Size, Polarity, and Functional Group Composition",
+        "venue": "Twenty-first Annual Goldschmidt Conference, 1633, 2011",
+        "year": "2011"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PYBJJbyH-FwC",
+      "captured": {
+        "authors": "AJ Leffler, A Serrone, A Bolek, AV Rocha, A Korrensalo, A Vähä, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:PYBJJbyH-FwC",
+        "index": 130,
+        "title": "Arctic-Boreal Vulnerability Experiment (ABoVE)",
+        "venue": "ORNL Distributed Active Archive Center (DAAC) dataset, 17, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PaBasH6fAo0C",
+      "captured": {
+        "authors": "AM Virkkala, I Wargowsky, J Vogt, MA Kuhn, S Madaan, R O'Keefe, ...",
+        "citation_count": "7",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:PaBasH6fAo0C",
+        "index": 84,
+        "title": "ABCFlux v2: Arctic–boreal CO2 and CH4 monthly flux observations and ancillary information across terrestrial and freshwater ecosystems",
+        "venue": "Earth System Science Data Discussions 2025, 1-86, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:QD3KBmkZPeQC",
+      "captured": {
+        "authors": "LW Monroe, JW Hall, GM Thornhill, RC Sullivan",
+        "citation_count": "8",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:QD3KBmkZPeQC",
+        "index": 83,
+        "title": "Spontaneous Oxidation of Nitrous Acid to Nitric Acid in Supermicron Aqueous Droplets Is Acid-Accelerated",
+        "venue": "ACS Earth & Space Chemistry 9 (5), 1152, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:SjuI4pbJlxcC",
+      "captured": {
+        "authors": "KJ Davis, SR Hill, S Murphy, JP Horne, C Ross, BJ Ahlswede, Y Pan, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:SjuI4pbJlxcC",
+        "index": 118,
+        "title": "The Forcing behind the Coastal Urban Atmospheric Environment: Observational results from the CoURAGE/BSEC Urban Eddy-Covariance Flux Network",
+        "venue": "107th AMS Annual Meeting, 2027",
+        "year": "2027"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:U4n9YNQMCAIC",
+      "captured": {
+        "authors": "RC Sullivan, SL Anna",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:U4n9YNQMCAIC",
+        "index": 180,
+        "title": "Ice nucleation properties of well characterized single particle-droplet pairs assessed using a microfluidic platform",
+        "venue": "NSF Award 18 (1804737), 4737, 2018",
+        "year": "2018"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WC23djZS0W4C",
+      "captured": {
+        "authors": "B Bowers, RC Sullivan, J Thornton",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WC23djZS0W4C",
+        "index": 149,
+        "title": "Chemical ionization mass spectrometry for online gas and aerosol-phase per-and polyfluoroalkyl substances (PFAS) analysis using iodide reagent ion",
+        "venue": "SETAC North America 43rd Annual Meeting, 2022",
+        "year": "2022"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WC9gN4BGCRcC",
+      "captured": {
+        "authors": "BM Wyatt, N Gaur, M Cosh, E Osenga, P Knox, MR Levi, M Skumanich, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WC9gN4BGCRcC",
+        "index": 121,
+        "title": "Data quality and metadata guidelines for the soil moisture monitoring community",
+        "venue": "Vadose Zone Journal 25 (5), e70141, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WHdLCjDvYFkC",
+      "captured": {
+        "authors": "B Bowers, AO De Silva, HM Stapleton, RC Sullivan, RM Weatherholt",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WHdLCjDvYFkC",
+        "index": 241,
+        "title": "The Effect of Flame Retardants on Toxics Emitted from Foam Combustion",
+        "venue": "SETAC North America 43rd Annual Meeting, 0",
+        "year": ""
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "captured": {
+        "authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, SH Knox, Z Zhang, T Aalto, ...",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:XUvXOeBm_78C",
+        "index": 101,
+        "title": "Global Wetland Methane Emissions derived from FLUXNET and the UpCH4 Model, 2001-2018",
+        "venue": "ORNL Distributed Active Archive Center, 2024",
+        "year": "2024"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:buQ7SEKw-1sC",
+      "captured": {
+        "authors": "PJ DeMott, TCJ Hill, MJ Ruppel, KA Prather, DB Collins, JI Axson, T Lee, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:buQ7SEKw-1sC",
+        "index": 204,
+        "title": "Investigations of Marine Ice Nucleating Particles (Invited Presentation)",
+        "venue": "American Meteorological Society Meeting Abstracts 94, 10.1, 2014",
+        "year": "2014"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:cK4Rrx0J3m0C",
+      "captured": {
+        "authors": "R Sullivan, E Keeler, J Kyrouac, S Pal",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:cK4Rrx0J3m0C",
+        "index": 135,
+        "title": "AmeriFlux US-A37 ARM-SGP-Waukomis",
+        "venue": "Argonne National Laboratory, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:hsZV8lGYWTMC",
+      "captured": {
+        "authors": "DI Campbell, J Chen, H Chu, HJ Dalmagro, KB Delwiche, AR Desai, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:hsZV8lGYWTMC",
+        "index": 160,
+        "title": "Jeremy Irvin 1, Sharon Zhou 2, Gavin McNicol 3,*, Fred Lu 4, Vincent Liu 5, Etienne Fluet-Chouinard 6, Zutao Ouyang 7, Sara Helen Knox 8, Antje Lucas-Moffat 9, Carlo Trotta 10 …",
+        "venue": "Agricultural and Forest Meteorology 308 (309), 108528, 2021",
+        "year": "2021"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "captured": {
+        "authors": "S Kutuzov, MC Lomax-Vogt, L Carter, P Gabrielli, G Bland, R Sullivan, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:j7_hQOaDUrUC",
+        "index": 134,
+        "title": "Analysis of nano-and micro-particles in ice cores from polar and high altitude glaciers by spICP-TOFMS",
+        "venue": "EGU General Assembly Conference Abstracts, EGU25-7227, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jL-93Qbq4QoC",
+      "captured": {
+        "authors": "S Pal, B Raut, P Muradyan, M Tuftedal, J O'Brien, R Sullivan, M Grover, ...",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:jL-93Qbq4QoC",
+        "index": 102,
+        "title": "CROCUS high-frequency measurements of CO₂, H₂O, wind, and temperature at University of Illinois Chicago",
+        "venue": "Community Research on Climate and Urban Science Urban Integrated Field …, 2024",
+        "year": "2024"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jU7OWUQzBzMC",
+      "captured": {
+        "authors": "R Sullivan, S Pal, DR Cook",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:jU7OWUQzBzMC",
+        "index": 128,
+        "title": "Surface Energy Balance System (SEBS) Instrument Handbook",
+        "venue": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:jgBuDB5drN8C",
+      "captured": {
+        "authors": "RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:jgBuDB5drN8C",
+        "index": 156,
+        "title": "Determining the Buffering Capacity and PH of Aerosols and Their Control of the Multiphase Chemical Evolution and Kinetics of Optically Levitated Particles",
+        "venue": "NSF Award Number 2109074. Directorate for Mathematical and Physical Sciences …, 2021",
+        "year": "2021"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kVjdVfd2voEC",
+      "captured": {
+        "authors": "DE Reed, H Chu, BG Peter, J Chen, M Abraha, B Amiro, RG Anderson, ...",
+        "citation_count": "3",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:kVjdVfd2voEC",
+        "index": 92,
+        "title": "Network of networks: Time series clustering of AmeriFlux sites",
+        "venue": "Agricultural and Forest Meteorology 372, 110686, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kw52XkFRtyQC",
+      "captured": {
+        "authors": "D Billesbach, R Sullivan",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:kw52XkFRtyQC",
+        "index": 105,
+        "title": "FLUXNET-CH4 US-A10 ARM-NSA-Barrow",
+        "venue": "(No Title), 2020",
+        "year": "2020"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:lgwcVrK6X84C",
+      "captured": {
+        "authors": "K Gorkowski, NM Donahue, RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:lgwcVrK6X84C",
+        "index": 185,
+        "title": "Phase Separation, Morphology, and Diffusivity of Secondary Organic Matter Determined using Aerosol Optical Tweezers",
+        "venue": "American Meteorological Society Meeting Abstracts 97, 15.1, 2017",
+        "year": "2017"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:nRpfm8aw39MC",
+      "captured": {
+        "authors": "MC Lomax-Vogt, J Olesik, C Bradley, A Ellis, G Bland, L Monroe, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nRpfm8aw39MC",
+        "index": 154,
+        "title": "Inferring Mineralogy of Aeolian Particles in Ancient Antarctic Ice from Elemental Chemical Composition using Single Particle Inductively Coupled Plasma Mass Spectrometry",
+        "venue": "AGU Fall Meeting 2021, 2021",
+        "year": "2021"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:otzGkya1bYkC",
+      "captured": {
+        "authors": "H Wex, PJ DeMott, Y Tobo, S Hartmann, S Augustin, M Raddatz, T Clauss, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:otzGkya1bYkC",
+        "index": 203,
+        "title": "Different dust particles as ice nuclei: learning from similarities and differences",
+        "venue": "American Meteorological Society Meeting Abstracts 94, 9.3, 2014",
+        "year": "2014"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:prdVHNxh-e8C",
+      "captured": {
+        "authors": "RC Sullivan, D Doyle, RM Weatherholt, B Bowers, KL Chung",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:prdVHNxh-e8C",
+        "index": 240,
+        "title": "Aerosol Microdroplet Photochemistry Enables Unexpected Transformations of Polyfluorinated Alkyl Contaminants that Produce Ultra-Short PFAS",
+        "venue": "SETAC Europe 36ᵗʰ Annual Meeting, 0",
+        "year": ""
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:q-HalDI95KYC",
+      "captured": {
+        "authors": "R Pereira, Y Feng, XS Li, X Xi, RC Sullivan, W Lin, JC Golaz",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:q-HalDI95KYC",
+        "index": 119,
+        "title": "Regional and Seasonal Trends in Mean and Extreme Dust Activity Across the Contiguous US from Observations and E3SM",
+        "venue": "107th AMS Annual Meeting, 2027",
+        "year": "2027"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:rHJHxKgnXwkC",
+      "captured": {
+        "authors": "KJ Davis, SR Hill, NE Prince, A LaPorte, BJ Ahlswede, S Murphy, ...",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:rHJHxKgnXwkC",
+        "index": 117,
+        "title": "The Complexity of the Coastal Urban Boundary Layer and Implications for Urban Atmospheric Composition: Results from CoURAGE",
+        "venue": "107th AMS Annual Meeting, 2027",
+        "year": "2027"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ubry08Y2EpUC",
+      "captured": {
+        "authors": "RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ubry08Y2EpUC",
+        "index": 191,
+        "title": "CAREER: Effects of Chemical Aging on the Ice Nucleation Properties of Natural and Anthropogenic Atmospheric Particles",
+        "venue": "NSF Award Number 1554941. Directorate for Mathematical and Physical Sciences …, 2016",
+        "year": "2016"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:v1_lew4L6wgC",
+      "captured": {
+        "authors": "G McNicol, E Fluet-Chouinard, Z Ouyang, S Knox, Z Zhang, T Aalto, ...",
+        "citation_count": "20",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:v1_lew4L6wgC",
+        "index": 70,
+        "title": "Upscaling wetland methane emissions from the FLUXNET-CH4 eddy covariance network (UpCH4 v1. 0): Model development, network assessment, and budget comparison, AGU Adv., 4 …",
+        "venue": "",
+        "year": "2023"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:wKETBy42zhYC",
+      "captured": {
+        "authors": "R Sullivan, D Billesbach, D Cook, S Biraud",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:wKETBy42zhYC",
+        "index": 127,
+        "title": "AmeriFlux FLUXNET-1F US-A10 ARM-NSA-Barrow",
+        "venue": "Argonne National Laboratory, 2026",
+        "year": "2026"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:wMgC3FpKEyYC",
+      "captured": {
+        "authors": "RC Sullivan, DP Billesbach, S Biraud, S Chan, R Hart, E Keeler, ...",
+        "citation_count": "1",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:wMgC3FpKEyYC",
+        "index": 98,
+        "title": "Over three decades, and counting, of near-surface turbulent flux measurements from the Atmospheric Radiation Measurement (ARM) user facility",
+        "venue": "Earth System Science Data 17 (9), 5007-5038, 2025",
+        "year": "2025"
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:zCSUwVk65WsC",
+      "captured": {
+        "authors": "RC Sullivan",
+        "citation_count": "",
+        "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:zCSUwVk65WsC",
+        "index": 211,
+        "title": "Experimental Investigations of the Contact Freezing Properties of Mineral Particles Using Optical Tweezers",
+        "venue": "NSF Award Number 1213718. Directorate for Mathematical and Physical Sciences …, 2012",
+        "year": "2012"
+      }
+    }
+  ],
+  "changed_field_counts": {
+    "title": 11,
+    "year": 5,
+    "venue": 31,
+    "citation_count": 94
+  },
+  "shared_metadata_changes": [
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:0CzhzZyukY4C",
+      "changes": {
+        "title": {
+          "legacy": "Can Sub-daily LST Be Constructed in High-latitude Regions Using Polar Orbiting Satellites?",
+          "captured": "Can Subdaily LST Be Constructed in High-Latitude Regions Using Polar Orbiting Satellites?"
+        },
+        "venue": {
+          "legacy": "IEEE Geoscience and Remote Sensing Letters, 2025",
+          "captured": "IEEE Geoscience and Remote Sensing Letters 22, 1-5, 2025"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:0EnyYjriUFMC",
+      "changes": {
+        "citation_count": {
+          "legacy": 44,
+          "captured": "54"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:0izLItjtcgwC",
+      "changes": {
+        "title": {
+          "legacy": "AmeriFlux AmeriFlux US-A10 ARM-NSA-Barrow",
+          "captured": "AmeriFlux US-A10 ARM-NSA-Barrow"
+        },
+        "year": {
+          "legacy": "2019",
+          "captured": "2012"
+        },
+        "venue": {
+          "legacy": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States …, 2019",
+          "captured": "Dataset. doi, 2012"
+        },
+        "citation_count": {
+          "legacy": 1,
+          "captured": "2"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:1yQoGdGgb4wC",
+      "changes": {
+        "citation_count": {
+          "legacy": 29,
+          "captured": "32"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 1997",
+          "captured": "Atmospheric Radiation Measurement User Facility, 1997"
+        },
+        "citation_count": {
+          "legacy": 10,
+          "captured": "3"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:2VqYfGB8ITEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 1,
+          "captured": "4"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:2osOgNQ5qMEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 187,
+          "captured": "197"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:35r97b3x0nAC",
+      "changes": {
+        "venue": {
+          "legacy": "98th American Meteorological Society Annual Meeting, 2018",
+          "captured": "American Meteorological Society Meeting Abstracts 98, J4. 2, 2018"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:3htObqc8RwsC",
+      "changes": {
+        "venue": {
+          "legacy": "104th AMS Annual Meeting, 2024",
+          "captured": "104th Annual AMS Meeting 2024 104, 435798, 2024"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:3s1wT3WcHBgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 81,
+          "captured": "95"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:4OULZ7Gr8RgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 32,
+          "captured": "33"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2016",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 2016"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "4"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:4fGpz3EwCPoC",
+      "changes": {
+        "title": {
+          "legacy": "A Southern Great Plains Pilot Field Campaign to Evaluate a Field-Observational Approach to Aerosol–Ice Formation Closure",
+          "captured": "A Southern Great Plains Pilot Field Campaign to Evaluate a Field-Observational Approach to Aerosol-Ice Formation Closure"
+        },
+        "venue": {
+          "legacy": "102nd American Meteorological Society Annual Meeting, 2022",
+          "captured": "American Meteorological Society Meeting Abstracts 102, 16.2, 2022"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:5MTHONV0fEkC",
+      "changes": {
+        "citation_count": {
+          "legacy": 1,
+          "captured": "18"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:5awf1xo2G04C",
+      "changes": {
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:5nxA0vEk-isC",
+      "changes": {
+        "citation_count": {
+          "legacy": 66,
+          "captured": "77"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:5ugPr518TE4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 13,
+          "captured": "12"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:6ZxmRoH8BuwC",
+      "changes": {
+        "citation_count": {
+          "legacy": 8,
+          "captured": "22"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:6yz0xqPARnAC",
+      "changes": {
+        "venue": {
+          "legacy": "Authorea Preprints, 2025",
+          "captured": "ESS Open Archive 2025 (0224), 2025"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:8AbLer7MMksC",
+      "changes": {
+        "citation_count": {
+          "legacy": 57,
+          "captured": "66"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:9vf0nzSNQJEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 99,
+          "captured": "138"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:9yKSN-GCB0IC",
+      "changes": {
+        "citation_count": {
+          "legacy": 294,
+          "captured": "352"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+      "changes": {
+        "venue": {
+          "legacy": "105th AMS Annual Meeting, 2025",
+          "captured": "105th Annual AMS Meeting 2025 105, 452192, 2025"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:BwyfMAYsbu0C",
+      "changes": {
+        "citation_count": {
+          "legacy": 46,
+          "captured": "62"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+      "changes": {
+        "citation_count": {
+          "legacy": 14,
+          "captured": "47"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Dip1O2bNi0gC",
+      "changes": {
+        "venue": {
+          "legacy": "Goldschmidt2021• Virtual• 4-9 July, 2021",
+          "captured": "Thirty-first Annual Goldschmidt Conference, 7424, 2021"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:EUQCXRtRnyEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 59,
+          "captured": "67"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:F1b5ZUV5XREC",
+      "changes": {
+        "citation_count": {
+          "legacy": 0,
+          "captured": "35"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2024",
+          "captured": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States). ARM …, 2024"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:HeT0ZceujKMC",
+      "changes": {
+        "citation_count": {
+          "legacy": 165,
+          "captured": "268"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:HoB7MX3m0LUC",
+      "changes": {
+        "citation_count": {
+          "legacy": 54,
+          "captured": "60"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:HtS1dXgVpQUC",
+      "changes": {
+        "citation_count": {
+          "legacy": 32,
+          "captured": "98"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:IRz6iEL74y4C",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 1997",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 1997"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:IjCSPb-OGe4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 189,
+          "captured": "202"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:J_g5lzvAfSwC",
+      "changes": {
+        "citation_count": {
+          "legacy": 460,
+          "captured": "549"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:KUbvn5osdkgC",
+      "changes": {
+        "year": {
+          "legacy": "2020",
+          "captured": "2021"
+        },
+        "venue": {
+          "legacy": "ACS Earth and Space Chemistry 5 (1), 136-148, 2020",
+          "captured": "ACS Earth and Space Chemistry 5 (1), 136-148, 2021"
+        },
+        "citation_count": {
+          "legacy": 26,
+          "captured": "47"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:L8Ckcad2t8MC",
+      "changes": {
+        "title": {
+          "legacy": "Heterogeneous chemistry of atmospheric mineral dust particles and their resulting cloud-nucleation properties",
+          "captured": "Garden Between"
+        },
+        "venue": {
+          "legacy": "University of California, San Diego, 2008",
+          "captured": "Pacific Lutheran University, 2008"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LO7wyVUgiFcC",
+      "changes": {
+        "citation_count": {
+          "legacy": 3,
+          "captured": "6"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:LkGwnXOMwfcC",
+      "changes": {
+        "citation_count": {
+          "legacy": 13,
+          "captured": "12"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:NJ774b8OgUMC",
+      "changes": {
+        "year": {
+          "legacy": "2019",
+          "captured": "2020"
+        },
+        "venue": {
+          "legacy": "Analytical chemistry 92 (1), 1089-1096, 2019",
+          "captured": "Analytical chemistry 92 (1), 1089-1096, 2020"
+        },
+        "citation_count": {
+          "legacy": 54,
+          "captured": "68"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:NhqRSupF_l8C",
+      "changes": {
+        "citation_count": {
+          "legacy": 4,
+          "captured": "5"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:NyGDZy8z5eUC",
+      "changes": {
+        "title": {
+          "legacy": "The QCECOR Value-Added Product: Quality-Controlled Eddy Correlation Flux Measurements",
+          "captured": "The QCECOR Value-Added Product: Quality-Controlled Eddy Correlation Flux Measurements, No"
+        },
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2019",
+          "captured": "DOE/SC-ARM-TR-223, DOE Office of Science Atmospheric Radiation Measurement …, 2019"
+        },
+        "citation_count": {
+          "legacy": 1,
+          "captured": "4"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+      "changes": {
+        "venue": {
+          "legacy": "104th AMS Annual Meeting, 2024",
+          "captured": "104th Annual AMS Meeting 2024 104, 439837, 2024"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PELIpwtuRlgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 16,
+          "captured": "24"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PR6Y55bgFSsC",
+      "changes": {
+        "citation_count": {
+          "legacy": 34,
+          "captured": "41"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:PoWvk5oyLR8C",
+      "changes": {
+        "venue": {
+          "legacy": "Goldschmidt2021• Virtual• 4-9 July, 2021",
+          "captured": "Thirty-first Annual Goldschmidt Conference, 7860, 2021"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Se3iqnhoufwC",
+      "changes": {
+        "citation_count": {
+          "legacy": 32,
+          "captured": "35"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:SeFeTyx0c_EC",
+      "changes": {
+        "citation_count": {
+          "legacy": 10,
+          "captured": "11"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:TIZ-Mc8IlK0C",
+      "changes": {
+        "venue": {
+          "legacy": "101st American Meteorological Society Annual Meeting, 2021",
+          "captured": "American Meteorological Society Meeting Abstracts 101, Joint, 2021"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Tyk-4Ss8FVUC",
+      "changes": {
+        "citation_count": {
+          "legacy": 83,
+          "captured": "89"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:UHK10RUVsp4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 2,
+          "captured": ""
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:URolC5Kub84C",
+      "changes": {
+        "citation_count": {
+          "legacy": 42,
+          "captured": "61"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:UeHWp8X0CEIC",
+      "changes": {
+        "citation_count": {
+          "legacy": 89,
+          "captured": "97"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:UebtZRa9Y70C",
+      "changes": {
+        "citation_count": {
+          "legacy": 40,
+          "captured": "45"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:VOx2b1Wkg3QC",
+      "changes": {
+        "citation_count": {
+          "legacy": 55,
+          "captured": "57"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:VaXvl8Fpj5cC",
+      "changes": {
+        "citation_count": {
+          "legacy": 21,
+          "captured": "34"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:W7OEmFMy1HYC",
+      "changes": {
+        "citation_count": {
+          "legacy": 67,
+          "captured": "68"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WF5omc3nYNoC",
+      "changes": {
+        "citation_count": {
+          "legacy": 574,
+          "captured": "661"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WJVC3Jt7v1AC",
+      "changes": {
+        "citation_count": {
+          "legacy": 13,
+          "captured": "28"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:WqliGbK-hY8C",
+      "changes": {
+        "citation_count": {
+          "legacy": 70,
+          "captured": "85"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:Y0pCki6q_DkC",
+      "changes": {
+        "citation_count": {
+          "legacy": 597,
+          "captured": "667"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:YohjEiUPhakC",
+      "changes": {
+        "citation_count": {
+          "legacy": 10,
+          "captured": "15"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:YsMSGLbcyi4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 38,
+          "captured": "41"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ZHo1McVdvXMC",
+      "changes": {
+        "citation_count": {
+          "legacy": 58,
+          "captured": "66"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ZfRJV9d4-WMC",
+      "changes": {
+        "citation_count": {
+          "legacy": 23,
+          "captured": "26"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ZuybSZzF8UAC",
+      "changes": {
+        "title": {
+          "legacy": "N 2 O 5 reactive uptake kinetics and chlorine activation on authentic biomass-burning aerosol",
+          "captured": "N2O5 reactive uptake kinetics and chlorine activation on authentic biomass-burning aerosol"
+        },
+        "citation_count": {
+          "legacy": 22,
+          "captured": "24"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:_B80troHkn4C",
+      "changes": {
+        "venue": {
+          "legacy": "European Geophysical Society, Copernicus Publ., 2018",
+          "captured": "Atmospheric Chemistry and Physics Discussions, 2018"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:_FxGoFyzp5QC",
+      "changes": {
+        "citation_count": {
+          "legacy": 12,
+          "captured": "13"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:_OXeSy2IsFwC",
+      "changes": {
+        "venue": {
+          "legacy": "ACS Es&t Engineering 4 (9), 2220-2233, 2024",
+          "captured": "ACS Es&t Engineering 4 (9), 2220, 2024"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "13"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:_Re3VWB3Y0AC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 1993",
+          "captured": "Atmospheric Radiation Measurement User Facility, 1993"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:_xSYboBqXhAC",
+      "changes": {
+        "citation_count": {
+          "legacy": 30,
+          "captured": "34"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:anf4URPfarAC",
+      "changes": {
+        "title": {
+          "legacy": "AmeriFlux AmeriFlux US-A03 ARM-AMF3-Oliktok",
+          "captured": "AmeriFlux US-A03 ARM-AMF3-Oliktok"
+        },
+        "venue": {
+          "legacy": "Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States …, 2019",
+          "captured": "Argonne National Laboratory, 2019"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:bKqednn6t2AC",
+      "changes": {
+        "citation_count": {
+          "legacy": 20,
+          "captured": "68"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:blknAaTinKkC",
+      "changes": {
+        "citation_count": {
+          "legacy": 252,
+          "captured": "290"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:cWzG1nlazyYC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2010",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 2010"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:d1gkVwhDpl0C",
+      "changes": {
+        "citation_count": {
+          "legacy": 199,
+          "captured": "202"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:dBIO0h50nwkC",
+      "changes": {
+        "citation_count": {
+          "legacy": 8,
+          "captured": "29"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:dfsIfKJdRG4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 38,
+          "captured": "42"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:eQOLeE2rZwMC",
+      "changes": {
+        "citation_count": {
+          "legacy": 60,
+          "captured": "64"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:edDO8Oi4QzsC",
+      "changes": {
+        "citation_count": {
+          "legacy": 11,
+          "captured": "17"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:epqYDVWIO7EC",
+      "changes": {
+        "citation_count": {
+          "legacy": 6,
+          "captured": "13"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:fPk4N6BV_jEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 116,
+          "captured": "132"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:hCrLmN-GePgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 12,
+          "captured": "16"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:hqOjcs7Dif8C",
+      "changes": {
+        "citation_count": {
+          "legacy": 51,
+          "captured": "57"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:i2xiXl-TujoC",
+      "changes": {
+        "citation_count": {
+          "legacy": 53,
+          "captured": "80"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:isC4tDSrTZIC",
+      "changes": {
+        "citation_count": {
+          "legacy": 426,
+          "captured": "512"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kRWSkSYxWN8C",
+      "changes": {
+        "citation_count": {
+          "legacy": 56,
+          "captured": "65"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:k_IJM867U9cC",
+      "changes": {
+        "citation_count": {
+          "legacy": 531,
+          "captured": "637"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:kzcrU_BdoSEC",
+      "changes": {
+        "citation_count": {
+          "legacy": 75,
+          "captured": "94"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:mNrWkgRL2YcC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2019",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 2019"
+        },
+        "citation_count": {
+          "legacy": 0,
+          "captured": "1"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:maZDTaKrznsC",
+      "changes": {
+        "citation_count": {
+          "legacy": 109,
+          "captured": "125"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:mvPsJ3kp5DgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 67,
+          "captured": "76"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:nZcligLrVowC",
+      "changes": {
+        "venue": {
+          "legacy": "98th American Meteorological Society Annual Meeting, 2018",
+          "captured": "American Meteorological Society Meeting Abstracts 98, S103, 2018"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:olpn-zPbct0C",
+      "changes": {
+        "citation_count": {
+          "legacy": 111,
+          "captured": "136"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:qjMakFHDy7sC",
+      "changes": {
+        "citation_count": {
+          "legacy": 135,
+          "captured": "141"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:r0BpntZqJG4C",
+      "changes": {
+        "citation_count": {
+          "legacy": 9,
+          "captured": "11"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:roLk4NBRz8UC",
+      "changes": {
+        "citation_count": {
+          "legacy": 59,
+          "captured": "69"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ruyezt5ZtCIC",
+      "changes": {
+        "citation_count": {
+          "legacy": 35,
+          "captured": "47"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:sJsF-0ZLhtgC",
+      "changes": {
+        "year": {
+          "legacy": "2005",
+          "captured": "2016"
+        },
+        "venue": {
+          "legacy": "ARM Tech. Rep. TR-037, 2005",
+          "captured": "DOE/SC‑ARM‑TR, 2016"
+        },
+        "citation_count": {
+          "legacy": 24,
+          "captured": "27"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:sSrBHYA8nusC",
+      "changes": {
+        "title": {
+          "legacy": "Emulsified and liquid–liquid phase-separated states of α-pinene secondary organic aerosol determined using aerosol optical tweezers",
+          "captured": "Emulsified and Liquid–Liquid Phase-Separated States of α‑Pinene Secondary Organic Aerosol Determined Using Aerosol Optical Tweezers"
+        },
+        "citation_count": {
+          "legacy": 75,
+          "captured": "83"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:t6usbXjVLHcC",
+      "changes": {
+        "citation_count": {
+          "legacy": 51,
+          "captured": "67"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+      "changes": {
+        "title": {
+          "legacy": "Supplementary Dataset for\" Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites\"",
+          "captured": "Supplementary Dataset for Representativeness of Eddy-Covariance Flux Footprints for Areas Surrounding AmeriFlux Sites"
+        },
+        "year": {
+          "legacy": "2020",
+          "captured": "2024"
+        },
+        "venue": {
+          "legacy": "(No Title), 2020",
+          "captured": "Borealis, 2024"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:tYavs44e6CUC",
+      "changes": {
+        "title": {
+          "legacy": "A Field-Observational Approach to Aerosol–Ice Formation Closure",
+          "captured": "A Field-Observational Approach to Aerosol-Ice Formation Closure"
+        },
+        "venue": {
+          "legacy": "101st American Meteorological Society Annual Meeting, 2021",
+          "captured": "American Meteorological Society Meeting Abstracts 101, 10.1, 2021"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:tzM49s52ZIMC",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 1993",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 1993"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:u-x6o8ySG0sC",
+      "changes": {
+        "citation_count": {
+          "legacy": 263,
+          "captured": "276"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:u5HHmVD_uO8C",
+      "changes": {
+        "citation_count": {
+          "legacy": 480,
+          "captured": "502"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+      "changes": {
+        "venue": {
+          "legacy": "Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States …, 2016",
+          "captured": "Atmospheric Radiation Measurement (ARM) Archive, Oak Ridge National …, 2016"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:uc_IGeMz5qoC",
+      "changes": {
+        "title": {
+          "legacy": "Atmospheric Ice Formation Processes and Impacts III Posters",
+          "captured": "Atmospheric Ice Formation Processes and Impacts I"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:ufrVoPGSRksC",
+      "changes": {
+        "citation_count": {
+          "legacy": 67,
+          "captured": "68"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:wbdj-CoPYUoC",
+      "changes": {
+        "citation_count": {
+          "legacy": 24,
+          "captured": "27"
+        }
+      }
+    },
+    {
+      "author_pub_id": "wXSgFr4AAAAJ:zYLM7Y9cAGgC",
+      "changes": {
+        "citation_count": {
+          "legacy": 120,
+          "captured": "126"
+        }
+      }
+    }
+  ],
+  "existing_exact_exclusion_ids": [
+    "wXSgFr4AAAAJ:0izLItjtcgwC",
+    "wXSgFr4AAAAJ:5MTHONV0fEkC",
+    "wXSgFr4AAAAJ:6ZxmRoH8BuwC",
+    "wXSgFr4AAAAJ:AHdEip9mkN0C",
+    "wXSgFr4AAAAJ:HeT0ZceujKMC",
+    "wXSgFr4AAAAJ:HtS1dXgVpQUC",
+    "wXSgFr4AAAAJ:IRz6iEL74y4C",
+    "wXSgFr4AAAAJ:NyGDZy8z5eUC",
+    "wXSgFr4AAAAJ:P7Ujq4OLJYoC",
+    "wXSgFr4AAAAJ:_Re3VWB3Y0AC",
+    "wXSgFr4AAAAJ:anf4URPfarAC",
+    "wXSgFr4AAAAJ:cWzG1nlazyYC",
+    "wXSgFr4AAAAJ:kh2fBNsKQNwC",
+    "wXSgFr4AAAAJ:mNrWkgRL2YcC",
+    "wXSgFr4AAAAJ:sJsF-0ZLhtgC",
+    "wXSgFr4AAAAJ:yMeIxYmEMEAC"
+  ],
+  "all_existing_exclusions_retained": true,
+  "retention_rule_satisfied": false,
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "crosswalk_candidates": [
+    {
+      "old": "wXSgFr4AAAAJ:PVgj2kMGcgYC",
+      "new": "wXSgFr4AAAAJ:j7_hQOaDUrUC",
+      "status": "same_output_title_and_year_primary_abstract",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU25/EGU25-7227.html",
+      "note": "EGU25 abstract DOI 10.5194/egusphere-egu25-7227; title and CMU coauthor match."
+    },
+    {
+      "old": "wXSgFr4AAAAJ:OcBU2YAGkTUC",
+      "new": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "status": "same_dataset_false_profile_attribution",
+      "source_url": "https://daac.ornl.gov/CMS/guides/Global_Freshwater_CH4Emissions.html",
+      "note": "ORNL DOI 10.3334/ORNLDAAC/2253; R.C. Sullivan is affiliated with Argonne, not CMU."
+    },
+    {
+      "old": "wXSgFr4AAAAJ:OR75R8vi5nAC",
+      "new": "wXSgFr4AAAAJ:XUvXOeBm_78C",
+      "status": "same_dataset_false_profile_attribution_year_variant",
+      "source_url": "https://daac.ornl.gov/CMS/guides/Global_Freshwater_CH4Emissions.html",
+      "note": "Old title includes ORNL DAAC location; captured row has shorter title and 2024 display year."
+    },
+    {
+      "old": "wXSgFr4AAAAJ:Ehil0879vHcC",
+      "new": null,
+      "status": "unresolved_distinct_conference_abstract",
+      "source_url": null,
+      "note": "2017 AGU abstract A13J-05; similar 2019 journal paper is not a safe replacement."
+    }
+  ],
+  "additional_shared_id_conflict": {
+    "author_pub_id": "wXSgFr4AAAAJ:L8Ckcad2t8MC",
+    "status": "scholar_id_reused_for_different_namesake_output",
+    "legacy_output_source_url": "https://escholarship.org/uc/item/89c072pv",
+    "captured_row_index": 112,
+    "captured_authors": "AT Sullivan",
+    "captured_venue": "Pacific Lutheran University, 2008",
+    "proposed_disposition": "Exclude the captured Garden Between row by exact author_pub_id and recover Ryan Christopher Sullivan’s dissertation from its source-native UC San Diego record before replacing the canonical cache.",
+    "note": "The source-native UC San Diego record corroborates the legacy 2008 atmospheric mineral-dust dissertation title; the captured same-ID row is a different namesake output."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "person_id": "person-sullivan-589c9545",
+  "display_name": "Ryan Sullivan",
+  "profile_display_name": "Ryan C. Sullivan",
+  "scholar_id": "wXSgFr4AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/sullivan.html",
+  "profile_identity_evidence": "Displayed Professor of Chemistry and Mechanical Engineering at Carnegie Mellon University with verified cmu.edu email.",
+  "captured_at_utc": "2026-10-25T02:16:03.899Z",
+  "profile_url": "https://scholar.google.com/citations?user=wXSgFr4AAAAJ&hl=en",
+  "publication_count": 250,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "html_json_rows_reconciled": 250,
+  "citation_cell_annotations": [
+    {
+      "row": 89,
+      "author_pub_id": "wXSgFr4AAAAJ:NyGDZy8z5eUC",
+      "citation_anchor": "4",
+      "adjacent_marker": "*"
+    }
+  ],
+  "source_json_path": "data/captures/sullivan-visible-250-2026-10-25.json",
+  "source_json_sha256": "56c1f2125a674fb5261bfd0ca4a828a34dd75d08c7fdea70abc1e892498773cb",
+  "source_html_path": "data/captures/sullivan-visible-250-2026-10-25.html",
+  "source_html_sha256": "354537fc6e060d146c462e061c13d137926d76ab960c3b1dc7a0436f98e3cfed",
+  "legacy_diff_path": "status/chem-sullivan-legacy-diff-2026-10-25.json",
+  "legacy_cache_sha256": "08a8a47169d020493435e7973d41781feabc11bccc2b1d22fe16c3bd66ba5996",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "release_state": "raw_capture_staged_for_retention_and_attribution_review"
+}
