@@ -141,6 +141,7 @@ jobs:
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
+            --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \

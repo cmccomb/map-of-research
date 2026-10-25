@@ -14,9 +14,16 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .atomic_release import commit_atomic_release
 from .attribution import (
     DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     load_attribution_reviews,
+)
+from .bio_release_gate import (
+    BIO_SOURCE_SHA256,
+    load_bio_baselines,
+    preserve_pending_review_topics,
+    validate_bio_release_prewrite,
 )
 from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
@@ -38,6 +45,7 @@ from .doi_aliases import (
     validate_doi_aliases,
 )
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .hub_card import build_updated_dataset_card
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
     KEYWORD_MODEL_VERSION,
@@ -1047,6 +1055,60 @@ def build_map_artifact(
     }
 
 
+def _write_map_artifacts(
+    works: Any,
+    registry: Registry,
+    *,
+    maps_dir: Path,
+    generated_at_utc: str,
+    dataset_commits: Mapping[str, str],
+    continuity_receipt: Mapping[str, Any] | None = None,
+) -> tuple[Path, Path, dict[str, Any]]:
+    """Render both map files before the Hub is touched."""
+
+    maps_dir.mkdir(parents=True, exist_ok=True)
+    map_manifest: dict[str, Any] = {
+        "schema_version": MAP_SCHEMA_VERSION,
+        "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+        "keyword_model_version": KEYWORD_MODEL_VERSION,
+        "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
+        "region_audit_version": REGION_AUDIT_VERSION,
+        "layout_version": LAYOUT_VERSION,
+        "default_layout_id": DEFAULT_LAYOUT_ID,
+        "layouts": [dict(layout) for layout in LAYOUTS],
+        "generated_at_utc": generated_at_utc,
+        "dataset_commits": dict(dataset_commits),
+        "artifact": {},
+    }
+    if continuity_receipt is not None:
+        map_manifest["region_continuity"] = dict(continuity_receipt)
+    if not dataset_commits:
+        map_manifest["dataset_revision_policy"] = "same_revision_as_map_manifest"
+    artifact = build_map_artifact(works, registry, generated_at_utc=generated_at_utc)
+    artifact_path = maps_dir / MAP_ARTIFACT_NAME
+    artifact_path.write_text(
+        json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    map_manifest["artifact"] = {
+        "title": artifact["title"],
+        "point_count": artifact["point_count"],
+        "excluded_work_count": artifact["excluded_work_count"],
+        "department_count": artifact["department_count"],
+        "school_count": artifact["school_count"],
+        "faculty_count": artifact["faculty_count"],
+        "keyword_count": artifact["keyword_count"],
+        "keyword_levels": artifact["keyword_levels"],
+        "file": artifact_path.name,
+    }
+    manifest_path = maps_dir / "manifest.json"
+    manifest_path.write_text(
+        json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return artifact_path, manifest_path, artifact
+
+
 def _upload_map_artifacts(
     works: Any,
     registry: Registry,
@@ -1060,45 +1122,13 @@ def _upload_map_artifacts(
 
     with tempfile.TemporaryDirectory(prefix="map-of-research-") as temporary_dir:
         maps_dir = Path(temporary_dir)
-        map_manifest: dict[str, Any] = {
-            "schema_version": MAP_SCHEMA_VERSION,
-            "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
-            "keyword_model_version": KEYWORD_MODEL_VERSION,
-            "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
-            "region_audit_version": REGION_AUDIT_VERSION,
-            "layout_version": LAYOUT_VERSION,
-            "default_layout_id": DEFAULT_LAYOUT_ID,
-            "layouts": [dict(layout) for layout in LAYOUTS],
-            "generated_at_utc": generated_at_utc,
-            "dataset_commits": dict(dataset_commits),
-            "artifact": {},
-        }
-        if continuity_receipt is not None:
-            map_manifest["region_continuity"] = dict(continuity_receipt)
-        artifact = build_map_artifact(
+        _write_map_artifacts(
             works,
             registry,
+            maps_dir=maps_dir,
             generated_at_utc=generated_at_utc,
-        )
-        artifact_path = maps_dir / MAP_ARTIFACT_NAME
-        artifact_path.write_text(
-            json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
-            encoding="utf-8",
-        )
-        map_manifest["artifact"] = {
-            "title": artifact["title"],
-            "point_count": artifact["point_count"],
-            "excluded_work_count": artifact["excluded_work_count"],
-            "department_count": artifact["department_count"],
-            "school_count": artifact["school_count"],
-            "faculty_count": artifact["faculty_count"],
-            "keyword_count": artifact["keyword_count"],
-            "keyword_levels": artifact["keyword_levels"],
-            "file": artifact_path.name,
-        }
-        (maps_dir / "manifest.json").write_text(
-            json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
+            dataset_commits=dataset_commits,
+            continuity_receipt=continuity_receipt,
         )
         commit = HfApi(token=hf_token).upload_folder(
             repo_id=REPO_ID,
@@ -1200,6 +1230,129 @@ def _require_breivik_review_ready(
         )
 
 
+def _publish_atomic_release(
+    tables: dict[str, Any],
+    registry: Registry,
+    *,
+    source_frame: Any,
+    source_manifest: Mapping[str, Any],
+    hf_token: str,
+    prior_revision: str,
+    generated_at_utc: str,
+    continuity_receipt: Mapping[str, Any] | None,
+    repair_manifest_path: Path,
+) -> tuple[str, dict[str, Any]]:
+    """Stage every output, run Bio gates, then commit seven files once."""
+
+    from huggingface_hub import hf_hub_download
+
+    prior_revision = require_revision(prior_revision)
+    bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    baselines = None
+    repair_manifest = None
+    if bio_release:
+        baselines = load_bio_baselines(
+            repo_id=REPO_ID,
+            prior_revision=prior_revision,
+            hf_token=hf_token,
+        )
+        pending_in_parent = sum(
+            row.get("keyword_id") == "keyword-unclassified"
+            and row.get("detail_keyword_id") == "keyword-unclassified-pending-review"
+            and bool(row["map_eligible"])
+            for row in baselines["repair_works"]
+        )
+        if pending_in_parent:
+            if not repair_manifest_path.is_file():
+                raise FileNotFoundError(
+                    "Bio release needs the reviewed repair manifest: "
+                    f"{repair_manifest_path}"
+                )
+            repair_manifest = load_json(repair_manifest_path)
+        else:
+            repair_manifest = {"restore_eligible_work_ids": []}
+        tables["works"] = preserve_pending_review_topics(
+            tables["works"], baselines["repair_works"], repair_manifest
+        )
+
+    with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
+        root = Path(temp)
+        staged: dict[str, tuple[Any, Path]] = {}
+        files: dict[str, Path] = {}
+        for config_name in DATASET_CONFIGS:
+            dataset = _to_hub_dataset(tables[config_name])
+            path = root / config_name / "train-00000-of-00001.parquet"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            dataset.to_parquet(str(path))
+            staged[config_name] = (dataset, path)
+            files[f"{config_name}/{path.name}"] = path
+        artifact_path, map_manifest_path, artifact = _write_map_artifacts(
+            tables["works"],
+            registry,
+            maps_dir=root / "maps",
+            generated_at_utc=generated_at_utc,
+            dataset_commits={},
+            continuity_receipt=continuity_receipt,
+        )
+        files["maps/publications.json"] = artifact_path
+        files["maps/manifest.json"] = map_manifest_path
+        prior_readme = Path(
+            hf_hub_download(
+                REPO_ID,
+                "README.md",
+                repo_type="dataset",
+                revision=prior_revision,
+                token=hf_token,
+            )
+        ).read_text(encoding="utf-8")
+        readme_path = root / "README.md"
+        readme_path.write_text(
+            build_updated_dataset_card(prior_readme, staged), encoding="utf-8"
+        )
+        files["README.md"] = readme_path
+
+        if bio_release:
+            gate = validate_bio_release_prewrite(
+                source_frame=source_frame,
+                source_manifest=source_manifest,
+                registry=registry,
+                tables=tables,
+                candidate_artifact=artifact,
+                continuity_receipt=continuity_receipt,
+                prior_revision=prior_revision,
+                baselines=baselines,
+                repair_manifest=repair_manifest,
+            )
+        else:
+            if (
+                continuity_receipt is None
+                or continuity_receipt.get("prior_revision") != prior_revision
+                or continuity_receipt.get("unexplained_losses")
+                or continuity_receipt.get("unexplained_gains")
+            ):
+                raise ValueError("Atomic release lacks a clean region-continuity gate")
+            gate = {
+                "status": "pass",
+                "gate": "full-source-and-region-continuity-v1",
+                "prior_revision": prior_revision,
+                "source_snapshot_sha256": source_manifest["snapshot_sha256"],
+                "raw_rows": len(source_frame),
+                "map_points": artifact["point_count"],
+            }
+        return commit_atomic_release(
+            files,
+            prewrite_gate=gate,
+            repo_id=REPO_ID,
+            hf_token=hf_token,
+            prior_revision=prior_revision,
+            commit_message=(
+                "Publish complete Biological Sciences Scholar corpus atomically"
+                if bio_release
+                else "Publish central research dataset atomically"
+            ),
+        )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1221,6 +1374,8 @@ def publish_snapshot(
     primary_home_baseline_path: Path | None = None,
     prior_revision: str | None = None,
     region_comparison_revision: str | None = None,
+    atomic_release: bool | None = None,
+    repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1395,29 +1550,50 @@ def publish_snapshot(
             snapshot_path.parent.parent,
             os.environ.get("MAP_PRODUCER_COMMIT", ""),
         )
-    dataset_commits: dict[str, str] = {}
-    for config_name in DATASET_CONFIGS:
-        commit = _to_hub_dataset(tables[config_name]).push_to_hub(
-            REPO_ID,
-            config_name=config_name,
-            split="train",
-            token=hf_token,
-            commit_message=f"Publish {config_name} dataset config",
-        )
-        commit_id = getattr(commit, "oid", None)
-        if not commit_id:
-            raise RuntimeError(f"{config_name} upload did not return a commit")
-        dataset_commits[config_name] = str(commit_id)
-
     generated_at_utc = str(manifest["created_at_utc"])
-    artifact_commit = _upload_map_artifacts(
-        tables["works"],
-        registry,
-        hf_token=hf_token,
-        generated_at_utc=generated_at_utc,
-        dataset_commits=dataset_commits,
-        continuity_receipt=continuity_receipt,
-    )
+    if atomic_release is None:
+        atomic_release = prior_revision is not None
+    atomic_receipt = None
+    if atomic_release:
+        if prior_revision is None or comparison_revision != prior_revision:
+            raise ValueError(
+                "Ordinary atomic upload needs the current immutable Hub revision; "
+                "historical region repair requires its dedicated atomic path"
+            )
+        artifact_commit, atomic_receipt = _publish_atomic_release(
+            tables,
+            registry,
+            source_frame=frame,
+            source_manifest=manifest,
+            hf_token=hf_token,
+            prior_revision=prior_revision,
+            generated_at_utc=generated_at_utc,
+            continuity_receipt=continuity_receipt,
+            repair_manifest_path=repair_manifest_path,
+        )
+        dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
+    else:
+        dataset_commits = {}
+        for config_name in DATASET_CONFIGS:
+            commit = _to_hub_dataset(tables[config_name]).push_to_hub(
+                REPO_ID,
+                config_name=config_name,
+                split="train",
+                token=hf_token,
+                commit_message=f"Publish {config_name} dataset config",
+            )
+            commit_id = getattr(commit, "oid", None)
+            if not commit_id:
+                raise RuntimeError(f"{config_name} upload did not return a commit")
+            dataset_commits[config_name] = str(commit_id)
+        artifact_commit = _upload_map_artifacts(
+            tables["works"],
+            registry,
+            hf_token=hf_token,
+            generated_at_utc=generated_at_utc,
+            dataset_commits=dataset_commits,
+            continuity_receipt=continuity_receipt,
+        )
     related_mask = (
         tables["works"]["has_included_source_profile"]
         if "has_included_source_profile" in tables["works"]
@@ -1429,6 +1605,7 @@ def publish_snapshot(
     return {
         "dataset_commits": dataset_commits,
         "artifact_commit": artifact_commit,
+        "atomic_release": atomic_receipt,
         "raw_snapshot_observations": len(frame),
         "raw_snapshot_profiles": int(
             frame.loc[frame["source_type"] == "scholar", "scholar_id"].nunique()
@@ -1530,6 +1707,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--region-comparison-revision",
         type=require_revision,
         help="Exact region baseline; defaults to the current Hub revision",
+    )
+    parser.add_argument(
+        "--repair-reviewed-work-manifest",
+        type=Path,
+        default=Path("data/curated/region-remediation-bernhard.json"),
+        help="Reviewed 112-work topic assignments preserved during the Bio release",
     )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
@@ -1657,6 +1840,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
             region_comparison_revision=args.region_comparison_revision,
+            repair_manifest_path=args.repair_reviewed_work_manifest,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

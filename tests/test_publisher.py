@@ -1539,6 +1539,22 @@ def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) ->
         )
 
 
+def test_staged_map_files_bind_dataset_to_same_revision(tmp_path) -> None:
+    artifact_path, manifest_path, artifact = publisher._write_map_artifacts(
+        work_frame(),
+        registry(),
+        maps_dir=tmp_path / "maps",
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        dataset_commits={},
+        continuity_receipt={"prior_revision": "a" * 40},
+    )
+    manifest = json.loads(manifest_path.read_text())
+    assert json.loads(artifact_path.read_text()) == artifact
+    assert manifest["dataset_commits"] == {}
+    assert manifest["dataset_revision_policy"] == "same_revision_as_map_manifest"
+    assert manifest["region_continuity"]["prior_revision"] == "a" * 40
+
+
 def test_hub_dataset_casts_list_and_embedding_features(monkeypatch) -> None:
     cast_features = []
 
@@ -1582,12 +1598,15 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
 
 @pytest.mark.parametrize("reuse_order", [False, True])
 @pytest.mark.parametrize(
-    ("pinned", "missing_prior", "region_override"),
+    ("pinned", "missing_prior", "region_override", "atomic"),
     [
-        (False, False, False),
-        (True, False, False),
-        (True, True, False),
-        (True, False, True),
+        (False, False, False, False),
+        (True, False, False, False),
+        (True, True, False, False),
+        (True, False, True, False),
+        (True, False, False, True),
+        (False, False, False, True),
+        (True, False, True, True),
     ],
 )
 def test_publish_snapshot_orchestrates_all_dataset_configs(
@@ -1597,6 +1616,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     pinned,
     missing_prior,
     region_override,
+    atomic,
 ) -> None:
     frame = pandas.DataFrame(
         {
@@ -1699,6 +1719,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "_upload_map_artifacts",
         lambda *args, **kwargs: "artifact-commit",
     )
+    atomic_calls = []
+    monkeypatch.setattr(
+        publisher,
+        "_publish_atomic_release",
+        lambda *args, **kwargs: (
+            atomic_calls.append(kwargs) or "atomic-commit",
+            {"mode": "single_parent_commit"},
+        ),
+    )
     baseline_checks = []
     comparison_checks = []
     preview_checks = []
@@ -1781,6 +1810,10 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "corrections_path": corrections_path,
         "prior_revision": "a" * 40 if pinned else None,
     }
+    if atomic and not pinned:
+        publish_options["atomic_release"] = True
+    elif not atomic:
+        publish_options["atomic_release"] = False
     if region_override:
         publish_options["region_comparison_revision"] = "b" * 40
     if missing_prior:
@@ -1790,6 +1823,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
                 tmp_path / "manifest.json",
                 **publish_options,
             )
+        return
+    if atomic and (not pinned or region_override):
+        with pytest.raises(ValueError, match="Ordinary atomic upload"):
+            publisher.publish_snapshot(
+                tmp_path / "snapshot.parquet",
+                tmp_path / "manifest.json",
+                **publish_options,
+            )
+        assert not atomic_calls
         return
     result = publisher.publish_snapshot(
         tmp_path / "snapshot.parquet",
@@ -1854,8 +1896,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "b" * 40 if region_override else "a" * 40 if pinned else None
     )
     assert result["dataset_commits"] == {
-        name: f"{name}-commit" for name in publisher.DATASET_CONFIGS
+        name: "atomic-commit" if atomic else f"{name}-commit"
+        for name in publisher.DATASET_CONFIGS
     }
+    assert result["atomic_release"] == (
+        {"mode": "single_parent_commit"} if atomic else None
+    )
+    assert len(atomic_calls) == int(atomic)
     assert observed_layouts == [reused_layouts if reuse_order else original_layouts]
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
