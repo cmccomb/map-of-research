@@ -9,14 +9,15 @@ from scripts.validate_panangaden_source_review import SOURCE_DIR, validate
 
 def test_panangaden_source_review_retains_versions_and_thesis_genres() -> None:
     assert validate() == {
-        "source_observations": 14,
-        "provisional_work_families": 8,
+        "source_observations": 15,
+        "provisional_work_families": 9,
         "orcid": 5,
         "arxiv": 7,
         "caltech_thesis": 1,
         "mcgill_thesis": 1,
+        "science_for_the_people_magazine": 1,
     }
-    with (SOURCE_DIR / "observations-14.csv").open(
+    with (SOURCE_DIR / "observations-15.csv").open(
         newline="", encoding="utf-8"
     ) as handle:
         rows = list(csv.DictReader(handle))
@@ -27,3 +28,8 @@ def test_panangaden_source_review_retains_versions_and_thesis_genres() -> None:
     assert [
         row["source"] for row in rows if row["work_family"] == "doctoral-thesis"
     ] == ["caltech_thesis"]
+    chapter_report = [
+        row for row in rows if row["work_family"] == "against-covid-austerity"
+    ]
+    assert len(chapter_report) == 1
+    assert chapter_report[0]["genre"] == "magazine_chapter_report"

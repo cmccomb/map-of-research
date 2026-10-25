@@ -2,8 +2,9 @@
 
 **Status:** Review only. This bundle is outside the snapshot builder and adds
 no publication or coauthor edge to the public maps. It captures every visible
-entry in two bounded author sources on 25 October 2026; it does not establish
-an exhaustive career bibliography or a verified Google Scholar account.
+entry in two bounded author sources and one publisher-backed chapter report on
+25 October 2026; it does not establish an exhaustive career bibliography or a
+verified Google Scholar account.
 
 [CMU's Math profile](https://www.cmu.edu/math/people/faculty/panangaden.html)
 identifies Jane Panangaden as an Assistant Teaching Professor in Mathematical
@@ -34,6 +35,17 @@ differ; those three remain separate provisional work families.
 | Energy full counting statistics in return-to-equilibrium | 2016 McGill thesis; 2021 arXiv posting | Master's thesis |
 | Higher-weight limiting modular symbols | 2023 arXiv | Preprint |
 | Quantum statistical mechanics, noncommutative geometry, and boundary of modular curves | 2022 Caltech thesis | Doctoral thesis |
+| Against COVID Austerity | Science for the People Magazine publisher record | Magazine chapter report; held outside research collaboration graph |
+
+The magazine's [Bio-Politics issue](https://magazine.scienceforthepeople.org/vol23no3-bio-politics/)
+lists **Jane Mariam Panangaden**, Ashay Naren Patel, and Kriti Sharma on the
+[chapter report](https://magazine.scienceforthepeople.org/vol23-3-bio-politics/socialists-of-caltech/).
+The publisher's author bio identifies Jane as a Caltech Mathematics PhD student;
+the Caltech dissertation identifies the same full name. The publisher page's
+structured online date is **25 January 2021**, while the issue is labeled
+**Winter 2020**. Both claims are preserved in the pinned metadata. This is a
+political magazine report, not a mathematics research article, and its named
+coauthors are not eligible for a scientific collaboration edge on this evidence.
 
 The four-author 2015 *Energy Conservation, Counting Statistics, and Return to
 Equilibrium* [journal article](https://link.springer.com/article/10.1007/s11005-015-0769-7)
@@ -48,11 +60,12 @@ account. Search results for Prakash Panangaden are a separate person and are
 excluded. Neither CMU's page nor the public ORCID record links an exact
 Scholar profile. ORCID omits both theses and the 2023 preprint, while arXiv
 only covers deposited versions. No researcher-owned full CV or bibliography
-was found. These 14 source observations across eight provisional work families
+was found. These 15 source observations across nine provisional work families
 remain held; citation counts and whole-career completeness are unknown.
 
-`manifest.json` gives SHA-256 hashes of the five raw source captures and the
-master's PDF cover transcript. The full master's PDF SHA-256 is recorded there
-without adding the PDF to Git. Run
+`manifest.json` gives SHA-256 hashes of the five raw source captures, the
+master's PDF cover transcript, and the magazine metadata. The full master's
+PDF SHA-256 and fetched magazine HTML SHA-256 are recorded without adding
+those complete files to Git. Run
 `python3 scripts/validate_panangaden_source_review.py` from the repo root to
-verify raw captures, source counts, identity, and the 14-row crosswalk.
+verify raw captures, source counts, identity, and the 15-row crosswalk.

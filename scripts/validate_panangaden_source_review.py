@@ -158,10 +158,32 @@ def source_observations(source_dir: Path = SOURCE_DIR) -> list[dict[str, str]]:
             "source_url": "https://www.erudit.org/en/theses/mcgill/P/?page=12&sort_by=date_desc",
         }
     )
-    assert len(rows) == 14
+    magazine = json.loads((source_dir / "magazine-article-metadata.json").read_text())
+    assert magazine["headline"] == "Against COVID Austerity"
+    assert magazine["byline"] == [
+        "Jane Mariam Panangaden",
+        "Ashay Naren Patel",
+        "Kriti Sharma",
+    ]
+    assert magazine["publisher_genre"] == "chapter report"
+    assert magazine["online_published_at"].startswith("2021-01-25")
+    assert re.fullmatch(r"[0-9a-f]{64}", magazine["source_html_sha256"])
+    rows.append(
+        {
+            "source": "science_for_the_people_magazine",
+            "source_id": "vol23no3-socialists-of-caltech",
+            "title": magazine["headline"],
+            "source_year": "2021",
+            "genre": "magazine_chapter_report",
+            "doi": "",
+            "work_family": "against-covid-austerity",
+            "source_url": magazine["source_url"],
+        }
+    )
+    assert len(rows) == 15
     counts = Counter(row["work_family"] for row in rows)
-    assert len(counts) == 8
-    assert sorted(counts.values()) == [1, 1, 2, 2, 2, 2, 2, 2]
+    assert len(counts) == 9
+    assert sorted(counts.values()) == [1, 1, 1, 2, 2, 2, 2, 2, 2]
     return rows
 
 
@@ -173,6 +195,11 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert manifest["person_id"] == "person-janepanangaden-dc0f9aec"
     assert manifest["scholar_account_status"] == "no_verified_account"
     assert manifest["orcid"] == "0000-0002-6214-2130"
+    magazine = json.loads((source_dir / "magazine-article-metadata.json").read_text())
+    assert (
+        magazine["source_url"]
+        == manifest["source_urls"]["science_for_the_people_magazine"]
+    )
     assert manifest["mcgill_masters_pdf_sha256"] == (
         "62a72594213d3105c16dcb21bd48e46e3fd4cbe5ee7f88eee76ea8f6cf7a0ab6"
     )
@@ -197,7 +224,7 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     )
 
     actual = source_observations(source_dir)
-    with (source_dir / "observations-14.csv").open(
+    with (source_dir / "observations-15.csv").open(
         newline="", encoding="utf-8"
     ) as handle:
         reader = csv.DictReader(handle)
@@ -205,8 +232,14 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         expected = list(reader)
     assert expected == actual
     counts = Counter(row["source"] for row in actual)
-    assert counts == {"orcid": 5, "arxiv": 7, "caltech_thesis": 1, "mcgill_thesis": 1}
-    return {"source_observations": 14, "provisional_work_families": 8, **counts}
+    assert counts == {
+        "orcid": 5,
+        "arxiv": 7,
+        "caltech_thesis": 1,
+        "mcgill_thesis": 1,
+        "science_for_the_people_magazine": 1,
+    }
+    return {"source_observations": 15, "provisional_work_families": 9, **counts}
 
 
 def main() -> None:
@@ -214,7 +247,7 @@ def main() -> None:
     parser.add_argument("--write-observations", action="store_true")
     args = parser.parse_args()
     if args.write_observations:
-        with (SOURCE_DIR / "observations-14.csv").open(
+        with (SOURCE_DIR / "observations-15.csv").open(
             "w", newline="", encoding="utf-8"
         ) as handle:
             writer = csv.DictWriter(handle, fieldnames=FIELDNAMES, lineterminator="\n")
