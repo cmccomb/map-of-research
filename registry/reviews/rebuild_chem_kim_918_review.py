@@ -579,6 +579,238 @@ CMU_ORCID_DOI_HOLD = {
 
 # CMU-linked bibliographies or a publisher article identify these older works.
 CMU_PRIMARY = {
+    13: (
+        "Tailoring the Electronic and Catalytic Properties of Au25 "
+        "Nanoclusters via Ligand Engineering",
+        2016,
+        "https://api.crossref.org/works/10.1021%2Facsnano.6b03964",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; ACS Nano 7998-8005 (2016)",
+    ),
+    18: (
+        "Revisiting the aqueous solutions of dimethyl sulfoxide by "
+        "spectroscopy in the mid-and near-infrared: experiments and "
+        "Car–Parrinello simulations",
+        2015,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcb.5b09196",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry B 14780-14789 "
+        "(2015)",
+    ),
+    20: (
+        "Silicon nanoparticles with surface nitrogen: 90% quantum yield "
+        "with narrow luminescence bandwidth and the ligand structure based"
+        " energy law",
+        2016,
+        "https://api.crossref.org/works/10.1021%2Facsnano.6b03113",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; ACS Nano 8385-8393 (2016)",
+    ),
+    33: (
+        "Chiral Ag23 nanocluster with open shell electronic structure and "
+        "helical face-centered cubic framework",
+        2018,
+        "https://www.nature.com/articles/s41467-018-03136-9",
+        "Original Nature article names Hyung J. Kim and matching CMU "
+        "faculty ORCID; Nature Communications 9:744",
+    ),
+    51: (
+        "Molecular structure and interactions in the ionic liquid "
+        "1-ethyl-3-methylimidazolium bis (trifluoromethylsulfonyl) imide",
+        2014,
+        "https://api.crossref.org/works/10.1021%2Fjp502124y",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry A 2547-2557 (2014)",
+    ),
+    57: (
+        "Experimental and Mechanistic Understanding of Aldehyde "
+        "Hydrogenation Using Au25 Nanoclusters with Lewis Acids: Unique "
+        "Sites for Catalytic Reactions",
+        2015,
+        "https://api.crossref.org/works/10.1021%2Fjacs.5b07716",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; Journal of the American Chemical Society 14295-14304"
+        " (2015)",
+    ),
+    80: (
+        "Effect of magnesium on calcium and oxalate ion binding",
+        2013,
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3883082/",
+        "Original publisher manuscript names Hyung J. Kim, PhD, CMU "
+        "Chemistry, distinct from Hyunjin Kim; J. Endourol. 27:1487-1492",
+    ),
+    94: (
+        "Spectroscopic and dielectric properties of liquid water: A "
+        "molecular dynamics simulation study",
+        1998,
+        "https://api.crossref.org/works/10.1063%2F1.477102",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 4911-4919 (1998)",
+    ),
+    98: (
+        "Graphene oxide supercapacitors: a computer simulation study",
+        2014,
+        "https://api.crossref.org/works/10.1021%2Fjp5072583",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry C 18472-18480 "
+        "(2014)",
+    ),
+    154: (
+        "Generalized molecular mechanics including quantum electronic "
+        "structure variation of polar solvents. II. A molecular dynamics "
+        "simulation study of water",
+        1998,
+        "https://api.crossref.org/works/10.1063%2F1.475725",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 3286-3295 (1998)",
+    ),
+    167: (
+        "Molecular dynamics simulation study of polarizable solute "
+        "solvation in water. 1. Equilibrium solvent structure and solute "
+        "rotational dynamics",
+        1996,
+        "https://api.crossref.org/works/10.1021%2Fjp952286d",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry 1392-1405 (1996)",
+    ),
+    194: (
+        "Molecular-like Transformation from PhSe-Protected Au25 to Au23 "
+        "Nanocluster and Its Application",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Facs.chemmater.7b00058",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; Chemistry of Materials 3055-3061 (2017)",
+    ),
+    227: (
+        "Molecular dynamics simulation study of water near critical "
+        "conditions. I. Structure and solvation free energetics",
+        1999,
+        "https://api.crossref.org/works/10.1063%2F1.478929",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 9646-9655 (1999)",
+    ),
+    243: (
+        "Gold–Palladium Nanoalloys Supported by Graphene Oxide and "
+        "Lamellar TiO2 for Direct Synthesis of Hydrogen Peroxide",
+        2018,
+        "https://api.crossref.org/works/10.1021%2Facsami.8b17342",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; ACS Applied Materials & Interfaces 40599-40607 "
+        "(2018)",
+    ),
+    246: (
+        "Dielectric relaxation and solvation dynamics in a "
+        "room-temperature ionic liquid: temperature dependence",
+        2013,
+        "https://api.crossref.org/works/10.1021%2Fjp406353j",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry B 11743-11752 "
+        "(2013)",
+    ),
+    249: (
+        "Silica-encapsulated gold nanoclusters for efficient acetylene "
+        "hydrogenation to ethylene",
+        2019,
+        "https://api.crossref.org/works/10.1021%2Facsanm.9b00384",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; ACS Applied Nano Materials 2999-3006 (2019)",
+    ),
+    255: (
+        "Generalized molecular mechanics including quantum electronic "
+        "structure variation of polar solvents. I. Theoretical formulation"
+        " via a truncated adiabatic basis set description",
+        1998,
+        "https://api.crossref.org/works/10.1063%2F1.475724",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 3277-3285 (1998)",
+    ),
+    317: (
+        "On the structural stability of ionic liquid–IRMOF composites: A "
+        "computational study",
+        2015,
+        "https://api.crossref.org/works/10.1039%2Fc4cp02428a",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; Physical Chemistry Chemical Physics 6248-6254 (2015)",
+    ),
+    322: (
+        "The effect of a laser field on electron transfer in metal "
+        "complexes: Quantum degrees of freedom",
+        1995,
+        "https://api.crossref.org/works/10.1063%2F1.470530",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 5461-5469 (1995)",
+    ),
+    326: (
+        "A molecular dynamics study of the ionic liquid, choline acetate",
+        2016,
+        "https://api.crossref.org/works/10.1039%2Fc6cp01031h",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; Physical Chemistry Chemical Physics 14850-14858 "
+        "(2016)",
+    ),
+    329: (
+        "Optical Kerr effect spectroscopy of liquid water: Role of "
+        "fluctuating electronic polarizability",
+        1997,
+        "https://api.crossref.org/works/10.1021%2Fjp9727207",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry B 10994-10999 "
+        "(1997)",
+    ),
+    342: (
+        "Effects of solute electronic structure variation on photon echo spectroscopy",
+        1996,
+        "https://api.crossref.org/works/10.1021%2Fjp961001%2B",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry 16451-16456 (1996)",
+    ),
+    359: (
+        "Molecular dynamics simulation study of water near critical "
+        "conditions. II. Dynamics and spectroscopy",
+        1999,
+        "https://api.crossref.org/works/10.1063%2F1.478952",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 9656-9665 (1999)",
+    ),
+    397: (
+        "Removal of confined ionic liquid from a metal organic framework "
+        "by extraction with molecular solvents",
+        2017,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcc.7b02289",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry C 10577-10586 "
+        "(2017)",
+    ),
+    449: (
+        "Infrared Spectroscopy of Li+ Solvation in EmimBF4 and in "
+        "Propylene Carbonate: Ab Initio Molecular Dynamics and Experiment",
+        2022,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcb.2c06326",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry B 9643-9662 (2022)",
+    ),
+    465: (
+        "MD study of Stokes shifts in ionic liquids: Temperature dependence",
+        2016,
+        "https://api.crossref.org/works/10.1021%2Facs.jpcb.6b00979",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Physical Chemistry B 4644-4653 (2016)",
+    ),
+    585: (
+        "Quantum tunneling in an anharmonic classical bath. Enhanced "
+        "kinetic isotope effects in an Arrhenius region",
+        1995,
+        "https://api.crossref.org/works/10.1063%2F1.468984",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Journal of Chemical Physics 7838-7849 (1995)",
+    ),
+    698: (
+        "Spectroscopic and Chemical Properties of Ionic Liquids: Computational Study",
+        2023,
+        "https://api.crossref.org/works/10.1002%2Ftcr.202300075",
+        "Publisher-deposited full Hyung J. Kim byline and CMU Chemistry "
+        "affiliation; The Chemical Record e202300075 (2023)",
+    ),
     132: (
         "Molecular mechanism for the activation of Au25 (SCH2CH2Ph) 18 "
         "nanoclusters by imidazolium-based ionic liquids for catalysis",
@@ -1102,6 +1334,34 @@ CMU_PRIMARY = {
 
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
+    13: "bC4aq-4AAAAJ:f2IySw72cVMC",
+    18: "bC4aq-4AAAAJ:g5m5HwL7SMYC",
+    20: "bC4aq-4AAAAJ:pyW8ca7W8N0C",
+    33: "bC4aq-4AAAAJ:dTyEYWd-f8wC",
+    51: "bC4aq-4AAAAJ:e5wmG9Sq2KIC",
+    57: "bC4aq-4AAAAJ:2P1L_qKh6hAC",
+    80: "bC4aq-4AAAAJ:JV2RwH3_ST0C",
+    94: "bC4aq-4AAAAJ:eQOLeE2rZwMC",
+    98: "bC4aq-4AAAAJ:j3f4tGmQtD8C",
+    154: "bC4aq-4AAAAJ:hqOjcs7Dif8C",
+    167: "bC4aq-4AAAAJ:5nxA0vEk-isC",
+    194: "bC4aq-4AAAAJ:NhqRSupF_l8C",
+    227: "bC4aq-4AAAAJ:qxL8FJ1GzNcC",
+    243: "bC4aq-4AAAAJ:FPJr55Dyh1AC",
+    246: "bC4aq-4AAAAJ:iH-uZ7U-co4C",
+    249: "bC4aq-4AAAAJ:48xauSegjOkC",
+    255: "bC4aq-4AAAAJ:M3ejUd6NZC8C",
+    317: "bC4aq-4AAAAJ:RGFaLdJalmkC",
+    322: "bC4aq-4AAAAJ:dhFuZR0502QC",
+    326: "bC4aq-4AAAAJ:yD5IFk8b50cC",
+    329: "bC4aq-4AAAAJ:7PzlFSSx8tAC",
+    342: "bC4aq-4AAAAJ:ZeXyd9-uunAC",
+    359: "bC4aq-4AAAAJ:QIV2ME_5wuYC",
+    397: "bC4aq-4AAAAJ:p2g8aNsByqUC",
+    449: "bC4aq-4AAAAJ:8gBurD7jEYQC",
+    465: "bC4aq-4AAAAJ:HoB7MX3m0LUC",
+    585: "bC4aq-4AAAAJ:bEWYMUwI8FkC",
+    698: "bC4aq-4AAAAJ:o-PowTg_VKEC",
     132: "bC4aq-4AAAAJ:pqnbT2bcN3wC",
     287: "bC4aq-4AAAAJ:4TOpqqG69KYC",
     298: "bC4aq-4AAAAJ:qUcmZB5y_30C",
@@ -1161,6 +1421,34 @@ CMU_PRIMARY_ID_GUARDS = {
 }
 
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
+    13: "10.1021/acsnano.6b03964",
+    18: "10.1021/acs.jpcb.5b09196",
+    20: "10.1021/acsnano.6b03113",
+    33: "10.1038/s41467-018-03136-9",
+    51: "10.1021/jp502124y",
+    57: "10.1021/jacs.5b07716",
+    80: "10.1089/end.2013.0173",
+    94: "10.1063/1.477102",
+    98: "10.1021/jp5072583",
+    154: "10.1063/1.475725",
+    167: "10.1021/jp952286d",
+    194: "10.1021/acs.chemmater.7b00058",
+    227: "10.1063/1.478929",
+    243: "10.1021/acsami.8b17342",
+    246: "10.1021/jp406353j",
+    249: "10.1021/acsanm.9b00384",
+    255: "10.1063/1.475724",
+    317: "10.1039/c4cp02428a",
+    322: "10.1063/1.470530",
+    326: "10.1039/c6cp01031h",
+    329: "10.1021/jp9727207",
+    342: "10.1021/jp961001+",
+    359: "10.1063/1.478952",
+    397: "10.1021/acs.jpcc.7b02289",
+    449: "10.1021/acs.jpcb.2c06326",
+    465: "10.1021/acs.jpcb.6b00979",
+    585: "10.1063/1.468984",
+    698: "10.1002/tcr.202300075",
     132: "10.1016/j.jcat.2016.01.011",
     287: "10.1021/jp012991o",
     298: "10.1063/1.1605376",
@@ -1665,9 +1953,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     counts = Counter(item["status"] for item in screening)
     expected = {
         "already_excluded": 8,
-        "cmu_orcid_exact_title_year_retained": 48,
+        "cmu_orcid_exact_title_year_retained": 20,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 66,
+        "cmu_primary_work_retained": 94,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
