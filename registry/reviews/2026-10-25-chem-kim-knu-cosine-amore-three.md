@@ -15,6 +15,7 @@ The rebuild checks all three Scholar IDs, captured titles, years, venue strings,
 and captured author strings before writing `false_profile_attribution` decisions.
 Only those three held rows change. The 918 observations now partition into **122
 source-confirmed CMU works, 479 exact exclusions, and 317 held observations**.
-Other initials-only COSINE and AMoRE records, including rows 162, 172, and 331,
-remain held. The review does not change any trusted Kim cache, public map,
+Other initials-only COSINE and AMoRE records, including rows 172 and 331,
+remain held. A later [APS author-linked ORCID check](2026-10-25-chem-kim-amore-i-orcid-exact.md)
+resolved row 162 separately. The review does not change any trusted Kim cache, public map,
 snapshot, or Hub dataset.

@@ -1735,6 +1735,19 @@ COSINE_FULLNAME_AUTHORS = {
 # ORCID person records. Similar collaborations without that identity link
 # remain held.
 KNU_COSINE_AMORE_PRIMARY = {
+    162: (
+        "Improved Limit on Neutrinoless Double Beta Decay of  from AMoRE-I",
+        2025,
+        "Hong Joo Kim",
+        "10.1103/PhysRevLett.134.082501",
+        "https://api.crossref.org/works/10.1103%2FPhysRevLett.134.082501",
+        "APS publisher-deposited exact author ORCID and KNU person record",
+        "APS's deposited record for Physical Review Letters 134:082501 "
+        "assigns its H. J. Kim author ORCID 0000-0001-9787-4684. The "
+        "ORCID person record names HongJoo Kim, whom KNU identifies as a "
+        "Physics professor; CMU's Hyung J. Kim has a different ORCID. "
+        "The same byline lists Ho-Jong Kim as a separate author.",
+    ),
     353: (
         "Measurements of low-energy nuclear recoil quenching factors for Na "
         "and I recoils in the NaI (Tl) scintillator",
@@ -1776,17 +1789,20 @@ KNU_COSINE_AMORE_PRIMARY = {
 OTHER_PRIMARY.update(KNU_COSINE_AMORE_PRIMARY)
 OTHER_PRIMARY_ID_GUARDS.update(
     {
+        162: "bC4aq-4AAAAJ:qSd0DAb9jMoC",
         353: "bC4aq-4AAAAJ:RgznTc0nqo4C",
         408: "bC4aq-4AAAAJ:e0LTWoPxLYMC",
         519: "bC4aq-4AAAAJ:oXKBmVzQOggC",
     }
 )
 KNU_COSINE_AMORE_VENUES = {
+    162: "Physical review letters 134 (8), 082501, 2025",
     353: "Physical Review C 110 (1), 014614, 2024",
     408: "Physical review letters 135 (23), 231001, 2025",
     519: "Frontiers in Physics 12, 1362209, 2024",
 }
 KNU_COSINE_AMORE_AUTHORS = {
+    162: "A Agrawal, VV Alenkov, P Aryal, J Beyer, B Bhandari, RS Boiko, K Boonin, ...",
     353: "SH Lee, HW Joo, HJ Kim, KW Kim, SK Kim, YD Kim, YJ Ko, HS Lee, ...",
     408: "GH Yu, N Carlin, JY Cho, JJ Choi, S Choi, AC Ezeribe, LE França, C Ha, ...",
     519: "A Agrawal, VV Alenkov, P Aryal, H Bae, J Beyer, B Bhandari, RS Boiko, ...",
@@ -4123,17 +4139,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 132,
+        "proposed_other_person_primary_work": 133,
         "proposed_no_target_author_primary_work": 8,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 300,
+        "unresolved_attribution_hold": 299,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 483 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 484 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

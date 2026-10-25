@@ -3928,6 +3928,14 @@
       "reason": "Elsevier's complete seven-author byline for the exact Human Immunology 64(10):S139 abstract includes H. S. Kim and H. J. Park, but no H. J. Kim. This Scholar observation is not a work by CMU Chemistry professor Hyung J. Kim.",
       "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.humimm.2003.08.261",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:qSd0DAb9jMoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "APS's deposited record for Physical Review Letters 134:082501 assigns its H. J. Kim author ORCID 0000-0001-9787-4684. The ORCID person record names HongJoo Kim, whom KNU identifies as a Physics professor; CMU's Hyung J. Kim has a different ORCID. The same byline lists Ho-Jong Kim as a separate author. This exact 2025 Scholar observation 'Improved Limit on Neutrinoless Double Beta Decay of  from AMoRE-I' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1103/PhysRevLett.134.082501.",
+      "evidence_url": "https://api.crossref.org/works/10.1103%2FPhysRevLett.134.082501",
+      "verified_at": "2026-10-25"
     }
   ]
 }

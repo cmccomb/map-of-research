@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 491, 304)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 492, 303)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -92,3 +92,27 @@ def test_kim_exact_follow_up_decisions_do_not_expand_to_neighboring_works() -> N
             row["source_year"],
             row["source_venue"],
         )
+
+
+def test_amore_i_author_orcid_excludes_only_exact_kim_citation() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    row = rows[162]
+    assert row["author_pub_id"] == "bC4aq-4AAAAJ:qSd0DAb9jMoC"
+    assert row["status"] == "proposed_other_person_primary_work"
+    assert row["matched_doi"] == "10.1103/PhysRevLett.134.082501"
+    assert row["evidence_url"] == (
+        "https://api.crossref.org/works/10.1103%2FPhysRevLett.134.082501"
+    )
+    manifest = json.loads(
+        (REVIEWS / "proposals/scholar-exclusions.kim-proposal.json").read_text()
+    )["exclusions"]
+    proposed = next(
+        item for item in manifest if item["author_pub_id"] == row["author_pub_id"]
+    )
+    assert proposed["reason_code"] == "false_profile_attribution"
+    assert "0000-0001-9787-4684" in proposed["reason"]
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (135, 138, 159, 172, 182, 222)
+    )
