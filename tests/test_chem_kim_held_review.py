@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 523, 272)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 527, 268)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -242,4 +242,31 @@ def test_late_nine_namesake_ids_preserve_initials_only_holds() -> None:
     assert all(
         rows[index]["status"] == "unresolved_attribution_hold"
         for index in (650, 659, 674, 682, 689, 693, 696, 710)
+    )
+
+
+def test_late_four_person_links_preserve_initials_only_holds() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    expected = {
+        731: ("bC4aq-4AAAAJ:3_LpOwP6eMYC", "10.1016/j.apradiso.2013.03.057"),
+        753: ("bC4aq-4AAAAJ:6ZzL7HXColQC", "10.3938/NPSM.66.417"),
+        757: ("bC4aq-4AAAAJ:BmWJbWwHJAwC", "10.48550/arXiv.1501.02944"),
+        766: ("bC4aq-4AAAAJ:zdX0sdgBH_kC", ""),
+    }
+    assert {
+        index: (rows[index]["author_pub_id"], rows[index]["matched_doi"])
+        for index in expected
+    } == expected
+    assert all(
+        rows[index]["status"] == "proposed_other_person_primary_work"
+        and rows[index]["evidence_url"].startswith("https://")
+        for index in expected
+    )
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (
+            713, 730, 738, 744, 747, 748, 758, 764, 769, 774, 779,
+            780, 781, 782, 783, 784, 785, 788,
+        )
     )

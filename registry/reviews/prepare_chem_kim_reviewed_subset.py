@@ -119,7 +119,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
         if row["status"] == "already_excluded" or row["status"].startswith("proposed_")
     )
     held = sorted(publication_ids - set(released) - set(excluded))
-    if (len(released), len(excluded), len(held)) != (123, 523, 272):
+    if (len(released), len(excluded), len(held)) != (123, 527, 268):
         raise ValueError("Kim review partition changed")
     proposed_exclusions = load_exclusions(EXCLUSIONS_PROPOSAL)
     if any(scholar_id != SCHOLAR_ID for scholar_id, _ in proposed_exclusions):

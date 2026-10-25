@@ -2747,6 +2747,88 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in LATE_NINE_EXACT_GUARDS.items()}
 )
 
+# These later rows have a direct KNU person link, a self-asserted HongJoo Kim
+# ORCID work, or the original article's corresponding-author email. The
+# arXiv row is the preprint of the identically titled Patras proceedings work;
+# its arXiv DOI and the proceedings DOI identify different versions.
+KNU_LATE_FOUR_EXACT_GUARDS = {
+    731: (
+        "bC4aq-4AAAAJ:3_LpOwP6eMYC",
+        "Ultra-low gamma-ray measurement system for neutrinoless double beta decay",
+        "WG Kang, JH Choi, EJ Jeon, JI Lee, HJ Kim, SK Kim, YD Kim, JH Lee, ...",
+        "2013",
+        "Applied Radiation and Isotopes 81, 290-293, 2013",
+    ),
+    753: (
+        "bC4aq-4AAAAJ:6ZzL7HXColQC",
+        "Scintillation Properties of HgMoO",
+        "JK Son, H Kim",
+        "2016",
+        "New Physics: Sae Mulli 66 (4), 417-421, 2016",
+    ),
+    757: (
+        "bC4aq-4AAAAJ:BmWJbWwHJAwC",
+        "New limit on the mass of 9.4-keV solar axions emitted in an M1 "
+        "transition in Kr nuclei",
+        "AV Derbin, AM Gangapshev, YM Gavrilyuk, VV Kazalov, HJ Kim, YD Kim, ...",
+        "2015",
+        "arXiv preprint arXiv:1501.02944, 2015",
+    ),
+    766: (
+        "bC4aq-4AAAAJ:zdX0sdgBH_kC",
+        "„Study of CsI: CO3 Crystals for α Detector,“",
+        "S Kang, H Kim, S Ha, S Lee, S Kim",
+        "2011",
+        "Nuclear Science and Technology 1, 240-243, 2011",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(KNU_LATE_FOUR_EXACT_GUARDS)
+KNU_LATE_FOUR_PRIMARY = {
+    731: (
+        "Hong Joo Kim",
+        "10.1016/j.apradiso.2013.03.057",
+        "https://research.knu.ac.kr/en/publications/ultra-low-gamma-ray-measurement-system-for-neutrinoless-double-be/",
+        "KNU exact article with H. J. Kim linked to Hong Joo Kim",
+        "KNU's exact Applied Radiation and Isotopes 81:290–293 record links "
+        "its H. J. Kim byline directly to Physics professor Hong Joo Kim.",
+    ),
+    753: (
+        "Hong Joo Kim",
+        "10.3938/NPSM.66.417",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825406",
+        "HongJoo Kim ORCID work with self DOI",
+        "HongJoo Kim's ORCID work asserts the exact 2016 New Physics: Sae "
+        "Mulli 66:417–421 HgMoO4 article and DOI as self; Scholar drops the "
+        "chemical subscript and abbreviates the byline to H Kim.",
+    ),
+    757: (
+        "Hong Joo Kim",
+        "10.48550/arXiv.1501.02944",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825342",
+        "HongJoo Kim self-asserted proceedings work and exact arXiv version",
+        "The arXiv:1501.02944 record calls itself the 2014 Patras workshop "
+        "proceedings, with the same title and author sequence. HongJoo Kim "
+        "self-asserts that proceedings version under DOI "
+        "10.3204/DESY-PROC-2014-03/derbin_alexander. The DOI recorded here "
+        "is for the saved 2015 arXiv version, not the proceedings edition.",
+    ),
+    766: (
+        "Hong Joo Kim",
+        "",
+        "https://www.aesj.net/document/pnst001/240.pdf",
+        "Original Atomic Energy Society of Japan article and KNU person email",
+        "The exact 2011 Progress in Nuclear Science and Technology 1:240–243 "
+        "paper prints H. J. Kim as corresponding author with "
+        "hongjoo@knu.ac.kr, the email on Hong Joo Kim's KNU person record.",
+    ),
+}
+for index, (person, doi, url, source, basis) in KNU_LATE_FOUR_PRIMARY.items():
+    guard = KNU_LATE_FOUR_EXACT_GUARDS[index]
+    OTHER_PRIMARY[index] = (guard[1], int(guard[3]), person, doi, url, source, basis)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in KNU_LATE_FOUR_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4733,17 +4815,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 162,
+        "proposed_other_person_primary_work": 166,
         "proposed_no_target_author_primary_work": 10,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 268,
+        "unresolved_attribution_hold": 264,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 515 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 519 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
