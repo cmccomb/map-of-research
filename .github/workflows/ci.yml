@@ -39,6 +39,8 @@ jobs:
           ruff check .
       - name: Validate the canonical registry
         run: map-collect --dry-run --status-file /tmp/map-collection-plan.json
+      - name: Validate held Dylan source review
+        run: python scripts/validate_dylan_source_review.py
       - name: Require evidenced primary homes for included Scholar profiles
         run: python scripts/validate_primary_homes.py
       - name: Audit installed dependencies
