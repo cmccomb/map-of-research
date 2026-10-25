@@ -165,6 +165,23 @@ def _load_profile_cache(path: Path) -> Mapping[str, Any] | None:
     cache = load_json(path)
     if not isinstance(cache, Mapping):
         raise ValueError(f"Profile cache is not a JSON object: {path}")
+    publications = cache.get("publications")
+    if not isinstance(publications, list):
+        raise ValueError(f"Profile publications are not a list: {path}")
+    if "publication_count" in cache:
+        count = cache["publication_count"]
+        if type(count) is not int or count != len(publications):
+            raise ValueError(f"Profile publication_count disagrees with rows: {path}")
+    seen_ids: set[str] = set()
+    for index, row in enumerate(publications):
+        if not isinstance(row, Mapping):
+            raise ValueError(f"Invalid profile publication row {index}: {path}")
+        citation_id = row.get("author_pub_id")
+        if not isinstance(citation_id, str) or not citation_id.strip():
+            raise ValueError(f"Missing Scholar citation ID in row {index}: {path}")
+        if citation_id in seen_ids:
+            raise ValueError(f"Duplicate Scholar citation ID in row {index}: {path}")
+        seen_ids.add(citation_id)
     return cache
 
 
@@ -295,6 +312,11 @@ def fetch_author_publications(
     publications = filled_author.get("publications", [])
     if not isinstance(publications, list):
         raise RuntimeError("Scholar returned an invalid publication list")
+    if len(publications) >= publication_limit:
+        raise RuntimeError(
+            f"Scholar returned {len(publications)} rows at the configured "
+            f"{publication_limit}-row limit; complete profile coverage is unverified"
+        )
     normalized = normalize_publications(publications)
     if not normalized:
         raise RuntimeError("Scholar returned no usable publications")
@@ -476,6 +498,11 @@ def collect_profiles(
                 profile,
                 publication_limit=publication_limit,
             )
+            if len(publications) >= publication_limit:
+                raise RuntimeError(
+                    f"Scholar refresh reached the {publication_limit}-row limit; "
+                    f"complete profile coverage is unverified: {profile.scholar_id}"
+                )
             cache_path = cache_dir / f"{profile.scholar_id}.json"
             # Recheck after fetching in case a protected cache was installed
             # after selection. Preserve every previously observed citation ID.
@@ -488,17 +515,17 @@ def collect_profiles(
                     f"at-limit cache: {profile.scholar_id}"
                 )
             if existing_cache is not None:
-                previous = existing_cache.get("publications")
-                if isinstance(previous, list):
-                    previous_ids = {row["author_pub_id"] for row in previous}
-                    refreshed_ids = {row["author_pub_id"] for row in publications}
-                    missing_ids = previous_ids - refreshed_ids
-                    if missing_ids:
-                        raise RuntimeError(
-                            "Scholar refresh would remove "
-                            f"{len(missing_ids)} cached publication(s): "
-                            f"{profile.scholar_id}"
-                        )
+                previous_ids = {
+                    row["author_pub_id"] for row in existing_cache["publications"]
+                }
+                refreshed_ids = {row["author_pub_id"] for row in publications}
+                missing_ids = previous_ids - refreshed_ids
+                if missing_ids:
+                    raise RuntimeError(
+                        "Scholar refresh would remove "
+                        f"{len(missing_ids)} cached publication(s): "
+                        f"{profile.scholar_id}"
+                    )
             cache_payload = {
                 "schema_version": CACHE_SCHEMA_VERSION,
                 "scholar_id": profile.scholar_id,

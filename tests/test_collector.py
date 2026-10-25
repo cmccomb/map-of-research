@@ -213,7 +213,7 @@ def test_selection_prioritizes_missing_cache_then_oldest_attempt(
     profiles = unique_profiles(
         load_registry(people_path, memberships_path, departments_path)
     )
-    atomic_write_json(cache_dir / "betaAAAAJ.json", {})
+    atomic_write_json(cache_dir / "betaAAAAJ.json", {"publications": []})
     state = {
         "schema_version": 1,
         "profiles": {
@@ -304,7 +304,7 @@ def test_at_limit_legacy_cache_is_excluded_even_when_forced(
         ],
     }
     atomic_write_json(cache_path, existing)
-    atomic_write_json(cache_dir / "betaAAAAJ.json", {})
+    atomic_write_json(cache_dir / "betaAAAAJ.json", {"publications": []})
     profiles = unique_profiles(load_registry(*paths))
     selected = select_profiles(
         profiles,
@@ -349,7 +349,7 @@ def test_at_limit_legacy_cache_is_excluded_even_when_forced(
     assert load_json(cache_path) == existing
 
 
-@pytest.mark.parametrize("new_count", [200, 253, 254])
+@pytest.mark.parametrize("new_count", [199, 200, 253, 254])
 def test_complete_browser_capture_survives_a_late_bounded_refresh(
     tmp_path: Path,
     monkeypatch,
@@ -417,7 +417,7 @@ def test_late_at_limit_legacy_cache_survives_bounded_refresh(
         status_path=tmp_path / "status.json",
         now=NOW,
         fetcher=lambda profile, *, publication_limit: [
-            {"author_pub_id": f"old:{i}"} for i in range(publication_limit)
+            {"author_pub_id": f"old:{i}"} for i in range(publication_limit - 1)
         ],
     )
     assert result.status == "failure"
@@ -473,12 +473,13 @@ def test_refresh_retains_every_previous_citation_id(
         } == set(fetched_ids)
 
 
-def test_refresh_of_legacy_cache_without_publication_list(tmp_path: Path) -> None:
+def test_exactly_capped_refresh_preserves_prior_cache(tmp_path: Path) -> None:
     paths = make_registry(tmp_path / "registry")
     cache_dir = tmp_path / "authors"
     cache_dir.mkdir()
     cache_path = cache_dir / "alphaAAAAJ.json"
-    atomic_write_json(cache_path, {})
+    atomic_write_json(cache_path, {"publications": [{"author_pub_id": "id:old"}]})
+    before = cache_path.read_bytes()
 
     result = collect_profiles(
         people_path=paths[0],
@@ -488,12 +489,97 @@ def test_refresh_of_legacy_cache_without_publication_list(tmp_path: Path) -> Non
         state_path=tmp_path / "state.json",
         status_path=tmp_path / "status.json",
         target_person_ids=["person-alpha"],
+        publication_limit=3,
         force=True,
         now=NOW,
-        fetcher=lambda profile, *, publication_limit: [{"author_pub_id": "id:a"}],
+        fetcher=lambda profile, *, publication_limit: [
+            {"author_pub_id": "id:old"},
+            {"author_pub_id": "id:new-a"},
+            {"author_pub_id": "id:new-b"},
+        ],
     )
-    assert result.status == "success"
-    assert load_json(cache_path)["publication_count"] == 1
+    assert result.status == "failure"
+    assert result.failed_profile_ids == ("alphaAAAAJ",)
+    assert cache_path.read_bytes() == before
+    state = load_collection_state(tmp_path / "state.json")
+    assert (
+        "complete profile coverage is unverified"
+        in state["profiles"]["alphaAAAAJ"]["last_error_message"]
+    )
+
+
+@pytest.mark.parametrize(
+    ("cache", "message"),
+    [
+        ({}, "publications are not a list"),
+        (
+            {"publication_count": 200, "publications": [{"author_pub_id": "id:old"}]},
+            "publication_count disagrees with rows",
+        ),
+    ],
+)
+def test_malformed_cache_blocks_refresh_before_scholar_request(
+    tmp_path: Path, cache, message: str
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    atomic_write_json(cache_path, cache)
+    before = cache_path.read_bytes()
+    calls = []
+
+    with pytest.raises(ValueError, match=message):
+        collect_profiles(
+            people_path=paths[0],
+            memberships_path=paths[1],
+            departments_path=paths[2],
+            cache_dir=cache_dir,
+            state_path=tmp_path / "state.json",
+            status_path=tmp_path / "status.json",
+            target_person_ids=["person-alpha"],
+            force=True,
+            now=NOW,
+            fetcher=lambda *args, **kwargs: calls.append((args, kwargs)),
+        )
+    assert calls == []
+    assert cache_path.read_bytes() == before
+
+
+@pytest.mark.parametrize(
+    ("publications", "message"),
+    [
+        ("invalid", "publications are not a list"),
+        ([None], "Invalid profile publication row"),
+        ([{}], "Missing Scholar citation ID"),
+        ([{"author_pub_id": 3}], "Missing Scholar citation ID"),
+        ([{"author_pub_id": " "}], "Missing Scholar citation ID"),
+        (
+            [{"author_pub_id": "id:a"}, {"author_pub_id": "id:a"}],
+            "Duplicate Scholar citation ID",
+        ),
+    ],
+)
+def test_profile_cache_rejects_malformed_publication_rows(
+    tmp_path: Path, publications, message: str
+) -> None:
+    cache_path = tmp_path / "profile.json"
+    atomic_write_json(cache_path, {"publications": publications})
+    with pytest.raises(ValueError, match=message):
+        collector._load_profile_cache(cache_path)
+
+
+@pytest.mark.parametrize("count", [None, True, "1", 2])
+def test_profile_cache_rejects_invalid_declared_row_count(
+    tmp_path: Path, count
+) -> None:
+    cache_path = tmp_path / "profile.json"
+    atomic_write_json(
+        cache_path,
+        {"publication_count": count, "publications": [{"author_pub_id": "id:a"}]},
+    )
+    with pytest.raises(ValueError, match="publication_count disagrees with rows"):
+        collector._load_profile_cache(cache_path)
 
 
 def test_complete_browser_capture_check_rejects_invalid_cache(tmp_path: Path) -> None:
@@ -529,7 +615,9 @@ def test_selection_validates_limits_and_skips_fresh_cache(tmp_path: Path) -> Non
     cache_dir = tmp_path / "cache"
     cache_dir.mkdir()
     for profile in profiles:
-        atomic_write_json(cache_dir / f"{profile.scholar_id}.json", {})
+        atomic_write_json(
+            cache_dir / f"{profile.scholar_id}.json", {"publications": []}
+        )
     fresh = NOW.isoformat()
     state = {
         "profiles": {
@@ -644,6 +732,20 @@ def test_fetch_author_publications_validates_each_scholarly_outcome(
     monkeypatch.setitem(sys.modules, "scholarly", SimpleNamespace(scholarly=client))
     assert fetch_author_publications(profile, publication_limit=4)[0]["title"] == "One"
 
+    capped = Client(
+        {"id": 1},
+        {
+            "publications": [
+                {"author_pub_id": f"id:{index}", "bib": {"title": f"Paper {index}"}}
+                for index in range(3)
+            ]
+            + [{"author_pub_id": "id:blank", "bib": {"title": ""}}]
+        },
+    )
+    monkeypatch.setitem(sys.modules, "scholarly", SimpleNamespace(scholarly=capped))
+    with pytest.raises(RuntimeError, match="complete profile coverage is unverified"):
+        fetch_author_publications(profile, publication_limit=4)
+
 
 def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
     people_path, memberships_path, departments_path = make_registry(
@@ -654,9 +756,11 @@ def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
     status_path = tmp_path / "last-collection.json"
     cache_dir.mkdir()
     sentinel_path = cache_dir / "alphaAAAAJ.json"
-    sentinel_path.write_text('{"last_good": true}\n', encoding="utf-8")
+    sentinel_path.write_text(
+        '{"last_good": true, "publications": []}\n', encoding="utf-8"
+    )
     (cache_dir / "betaAAAAJ.json").write_text(
-        '{"last_good": true}\n',
+        '{"last_good": true, "publications": []}\n',
         encoding="utf-8",
     )
 
@@ -686,7 +790,10 @@ def test_failed_fetch_preserves_cache_and_stops_run(tmp_path: Path) -> None:
     assert result.status == "failure"
     assert result.blocked is True
     assert calls == ["alphaAAAAJ"]
-    assert sentinel_path.read_text(encoding="utf-8") == '{"last_good": true}\n'
+    assert (
+        sentinel_path.read_text(encoding="utf-8")
+        == '{"last_good": true, "publications": []}\n'
+    )
     assert load_json(status_path)["failed_profile_ids"] == ["alphaAAAAJ"]
     assert (
         load_collection_state(state_path)["profiles"]["alphaAAAAJ"]["last_error_type"]
@@ -749,7 +856,9 @@ def test_collection_supports_dry_run_and_noop(tmp_path: Path) -> None:
 
     common["cache_dir"].mkdir()
     for scholar_id in ("alphaAAAAJ", "betaAAAAJ"):
-        atomic_write_json(common["cache_dir"] / f"{scholar_id}.json", {})
+        atomic_write_json(
+            common["cache_dir"] / f"{scholar_id}.json", {"publications": []}
+        )
     atomic_write_json(
         common["state_path"],
         {
