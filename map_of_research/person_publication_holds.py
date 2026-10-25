@@ -203,6 +203,10 @@ def require_no_held_person_contributions(
         for ids in tables["works"]["observation_ids"]
     ):
         raise ValueError("Held person contributed to published works")
+    if "person_ids" in tables["works"] and any(
+        held_people.intersection(ids) for ids in tables["works"]["person_ids"]
+    ):
+        raise ValueError("Held person assigned to published work")
     counts = (
         "publication_observation_count",
         "scholar_observation_count",

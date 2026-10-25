@@ -236,7 +236,12 @@ def clean_tables():
     return {
         "profile_publications": pandas.DataFrame({"person_id": [KINDERLEHRER]}),
         "authorships": pandas.DataFrame({"person_id": [ROLLETT]}),
-        "works": pandas.DataFrame({"observation_ids": [["coauthor-observation"]]}),
+        "works": pandas.DataFrame(
+            {
+                "observation_ids": [["coauthor-observation"]],
+                "person_ids": [[KINDERLEHRER, ROLLETT]],
+            }
+        ),
         "people": pandas.DataFrame(
             {
                 "person_id": [TAASAN, TETALI],
@@ -261,6 +266,10 @@ def test_prewrite_gate_preserves_roster_but_rejects_held_authorship() -> None:
     tables = clean_tables()
     tables["works"].at[0, "observation_ids"] = [next(iter(ids))]
     with pytest.raises(ValueError, match="published works"):
+        require_no_held_person_contributions(tables, {TAASAN}, ids)
+    tables = clean_tables()
+    tables["works"].at[0, "person_ids"] = [KINDERLEHRER, TAASAN]
+    with pytest.raises(ValueError, match="assigned to published work"):
         require_no_held_person_contributions(tables, {TAASAN}, ids)
     tables = clean_tables()
     tables["people"].loc[0, "mapped_work_count"] = 3
