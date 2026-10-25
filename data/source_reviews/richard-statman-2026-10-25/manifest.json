@@ -25,7 +25,8 @@
     "cambridge_book_publisher": "https://www.cambridge.org/core/books/lambda-calculus-with-types/65DC18AC262498B0F93A688CBE748048",
     "cambridge_book_crossref": "https://api.crossref.org/works/10.1017/CBO9781139032636",
     "dowek_coauthor_bibliography": "https://lsv.ens-paris-saclay.fr/~dowek/papers.html",
-    "statman_dowek_arxiv": "https://arxiv.org/abs/2309.03602"
+    "statman_dowek_arxiv": "https://arxiv.org/abs/2309.03602",
+    "csauthors_bibliography_discovery": "https://www.csauthors.net/richard-statman/"
   },
   "counts": {
     "cmu_profile_selected": 12,
@@ -37,7 +38,10 @@
     "publisher_confirmed_conference_papers": 1,
     "publisher_confirmed_monographs": 1,
     "historical_report_observations": 1,
-    "arxiv_preprint_observations": 1
+    "arxiv_preprint_observations": 1,
+    "third_party_bibliography_candidates": 67,
+    "third_party_exact_title_matches_to_attributed_37": 18,
+    "third_party_unmatched_titles_needing_primary_review": 49
   },
   "files": {
     "arxiv-2309.03602.html.gz": "762ec4becbf848af472a83d68cf9b8af7193c8f24deab605b11a3b66e36edd99",
@@ -46,6 +50,8 @@
     "cmu-sample-publications.pdf": "727f50a85a0af3397dc6395566a0e8d719101c27a30865e4667c2df0ec67af8a",
     "cmu-sample-publications.txt": "7b46a143e5b3f7aaf38543bfcfe24687baf9bb1f5f3ba08b3ce066ba38f91ae6",
     "cmu-selected-16.csv": "0e5ae3a4c353dafb6ca03601ee48476d85b4959c46d476eac1644e260183b4f1",
+    "csauthors-67.json": "100c76cd751ea04dfb23c20645f952e690c1141de10b0bf11267f3bd22653bd6",
+    "csauthors-page.html.gz": "c2803110c81d184bf54448d1568cab0b6c27d67655ac904d743f77a0fcc98db2",
     "dowek-papers.html.gz": "a118abfaf876dca380ef5413f2df89b0ca41fa34cbc977d68ad7e59af0ddf9b6",
     "kilthub-article-6476546.json": "fa8eedb9f1b4a5309d8c277e34687773b17aa9d8ea7ae018e0d418a6eaa82510",
     "kilthub-article-6476786.json": "9eab861a25b4d684e46dad8741f0e26e44d10767fd61c75f052dbe0b923199b6",

@@ -28,6 +28,14 @@ def _citation(text: str) -> str:
     return re.sub(r"\s+([.,;:])", r"\1", " ".join(text.split()))
 
 
+def _clean_markup(value: str) -> str:
+    return " ".join(html.unescape(re.sub(r"<[^>]*>", "", value)).split())
+
+
+def _normalized_title(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", html.unescape(value).casefold())
+
+
 def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     manifest = json.loads((source_dir / "manifest.json").read_text(encoding="utf-8"))
     assert manifest["schema_version"] == 1
@@ -53,6 +61,9 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert manifest["sources"]["statman_dowek_arxiv"] == (
         "https://arxiv.org/abs/2309.03602"
     )
+    assert manifest["sources"]["csauthors_bibliography_discovery"] == (
+        "https://www.csauthors.net/richard-statman/"
+    )
     assert manifest["counts"] == {
         "cmu_profile_selected": 12,
         "cmu_recent_selected": 4,
@@ -64,8 +75,11 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "historical_report_observations": 1,
         "arxiv_preprint_observations": 1,
         "attributed_source_observations_not_works": 37,
+        "third_party_bibliography_candidates": 67,
+        "third_party_exact_title_matches_to_attributed_37": 18,
+        "third_party_unmatched_titles_needing_primary_review": 49,
     }
-    assert len(manifest["files"]) == 32
+    assert len(manifest["files"]) == 34
     for filename, expected_hash in manifest["files"].items():
         assert hashlib.sha256((source_dir / filename).read_bytes()).hexdigest() == (
             expected_hash
@@ -262,6 +276,90 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert report["source_author"] == preprint["source_author"]
     assert "possible" in report["review_note"].lower()
     assert "possible" in preprint["review_note"].lower()
+
+    secondary = json.loads((source_dir / "csauthors-67.json").read_text())
+    secondary_page = gzip.decompress(
+        (source_dir / "csauthors-page.html.gz").read_bytes()
+    )
+    assert secondary["schema_version"] == 1
+    assert secondary["person_id"] == PERSON_ID
+    assert (
+        secondary["source_url"]
+        == manifest["sources"]["csauthors_bibliography_discovery"]
+    )
+    assert secondary["source_kind"] == "third_party_bibliography_discovery"
+    assert secondary["source_html_sha256"] == hashlib.sha256(secondary_page).hexdigest()
+    page_text = secondary_page.decode("utf-8")
+    assert "at least 67 papers between 1977 and 2023" in " ".join(page_text.split())
+    assert "math.cmu.edu" in page_text
+    chunks = re.findall(
+        r'<div class="bibentry-([^"]+)">(.*?)(?=<div class="bibentry-|\Z)',
+        page_text,
+        re.S,
+    )
+    candidates = secondary["records"]
+    assert len(chunks) == len(candidates) == 67
+    assert len({row["source_record_key"] for row in candidates}) == 67
+    title_lookup: dict[str, list[str]] = {}
+    for row in observations:
+        title_lookup.setdefault(_normalized_title(row["source_title"]), []).append(
+            row["source_row_id"]
+        )
+    for index, ((kind, fragment), row) in enumerate(
+        zip(chunks, candidates, strict=True), start=1
+    ):
+        title_match = re.search(r'<div class="title">(.*?)</div>', fragment, re.S)
+        detail_match = re.search(r'<div class="bibdetails">(.*?)</div>', fragment, re.S)
+        ref_match = re.search(r'data-ref="([^"]+)"', fragment)
+        doi_match = re.search(
+            r'<div class="bibdoi">\s*<a href="([^"]+)"', fragment, re.S
+        )
+        assert title_match and detail_match and ref_match
+        authors = [
+            _clean_markup(value)
+            for value in re.findall(
+                r'<div class="bibauthor">(.*?)</div>', fragment, re.S
+            )
+        ]
+        assert row["index"] == index
+        assert row["source_kind"] == kind
+        assert row["title_as_displayed"] == _clean_markup(title_match.group(1))
+        assert row["authors_as_displayed"] == authors
+        assert row["details_as_displayed"] == _clean_markup(detail_match.group(1))
+        assert row["source_record_key"] == ref_match.group(1)
+        assert row["link_as_displayed"] == (doi_match.group(1) if doi_match else None)
+        assert row["exact_normalized_title_matches_in_prior_37"] == (
+            title_lookup.get(_normalized_title(row["title_as_displayed"]), [])
+        )
+        assert row["source_scope"] == "third_party_bibliography_discovery"
+        for field in (
+            "scholar_profile_observation",
+            "release_eligible",
+            "map_eligible",
+            "collaboration_eligible",
+        ):
+            assert row[field] is False
+        normalized_row = {
+            key: value for key, value in row.items() if key != "row_sha256"
+        }
+        assert (
+            row["row_sha256"]
+            == hashlib.sha256(
+                json.dumps(
+                    normalized_row,
+                    sort_keys=True,
+                    ensure_ascii=False,
+                    separators=(",", ":"),
+                ).encode("utf-8")
+            ).hexdigest()
+        )
+    assert (
+        sum(
+            bool(row["exact_normalized_title_matches_in_prior_37"])
+            for row in candidates
+        )
+        == 18
+    )
     assert {row["graph_eligible"] for row in observations} == {"false"}
     assert {row["hold_reason"] for row in observations} == {
         "no_verified_scholar_or_complete_author_bibliography"
@@ -277,6 +375,8 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "publisher_confirmed_monographs": 1,
         "historical_report_observations": 1,
         "arxiv_preprint_observations": 1,
+        "third_party_bibliography_candidates": 67,
+        "third_party_unmatched_titles_needing_primary_review": 49,
         "held_source_observations_not_works": len(observations),
     }
 

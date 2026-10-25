@@ -16,6 +16,8 @@ def test_statman_source_review_is_complete_for_its_bounded_sources():
         "publisher_confirmed_monographs": 1,
         "historical_report_observations": 1,
         "arxiv_preprint_observations": 1,
+        "third_party_bibliography_candidates": 67,
+        "third_party_unmatched_titles_needing_primary_review": 49,
         "held_source_observations_not_works": 37,
     }
 
