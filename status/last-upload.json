@@ -1,6 +1,6 @@
 {
   "atomic_release_intent": {
-    "artifact_revision": null,
+    "artifact_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
     "commit_message": "Publish exact Chemistry region review atomically\n\nRelease-Intent-Nonce: b70f6887d6d74392ba853d597b6e01f6",
     "commit_nonce": "b70f6887d6d74392ba853d597b6e01f6",
     "committed_files": [
@@ -12,7 +12,7 @@
       "profile_publications/train-00000-of-00001.parquet",
       "works/train-00000-of-00001.parquet"
     ],
-    "intent_status": "before_write",
+    "intent_status": "commit_returned_unverified",
     "mode": "single_parent_commit",
     "parent_revision": "38f119d71692cdb9112210217b532a7dd7c1633a",
     "prewrite_gate": {
