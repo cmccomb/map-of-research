@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scholar_id": "FrF1YXQAAAAJ",
+  "review_state": "saved_html_reconciled_to_browser_extraction",
+  "reviewed_at": "2026-10-25",
+  "saved_html_sha256": "6bb62354f79ab00d5b0536827bcd4dc57b9b98566d06b7529e2605039c924a6e",
+  "original_source_json_sha256": "4a1629f702a3f4330ba59f76f30a4e60989e1f12e96a0535119614da4ad8f91a",
+  "reconciled_source_json_sha256": "f14571052ab088778779b919b2874b328745cdacc706be0680732b6458e9b997",
+  "canonical_cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
+  "repairs": [
+    {
+      "capture_row_index": 126,
+      "author_pub_id": "FrF1YXQAAAAJ:jmjb1lOE9QIC",
+      "field": "title",
+      "browser_extraction_value": "- Doped Nanoengineered Yttria-Stabilized Zirconia Alumino-Silicate Fiber for Efficient CW and Mode-Locked Laser Operation",
+      "saved_html_value": "\\text{Er}^{3+}- Doped Nanoengineered Yttria-Stabilized Zirconia Alumino-Silicate Fiber for Efficient CW and Mode-Locked Laser Operation"
+    },
+    {
+      "capture_row_index": 314,
+      "author_pub_id": "FrF1YXQAAAAJ:6VlyvFCUEfcC",
+      "field": "title",
+      "browser_extraction_value": "Low-lying excitations in",
+      "saved_html_value": "Low-lying excitations in Pm150"
+    },
+    {
+      "capture_row_index": 378,
+      "author_pub_id": "FrF1YXQAAAAJ:jlhcAiayVhoC",
+      "field": "title",
+      "browser_extraction_value": "Low lying excitations in Pm",
+      "saved_html_value": "Low lying excitations in ^{150}Pm"
+    },
+    {
+      "capture_row_index": 636,
+      "author_pub_id": "FrF1YXQAAAAJ:_axFR9aDTf0C",
+      "field": "title",
+      "browser_extraction_value": "Coincidence Experiments on 5.3 y Co",
+      "saved_html_value": "Coincidence Experiments on 5.3 y Co sup 6sup 0"
+    }
+  ]
+}
