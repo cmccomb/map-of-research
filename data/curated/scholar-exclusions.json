@@ -6440,6 +6440,14 @@
       "reason": "Capture row 184 is an author-hosted NSF CDS&E collaborative research proposal by Poczos, Schneider, Brandenburg, Kahniashvili, Tevzadze, and Trac, not a published research work.",
       "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/tmp/machine/NSF2015CDSE.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "jcb81yAAAAAJ",
+      "author_pub_id": "jcb81yAAAAAJ:r7QigD7TRWAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact-title IOP deposit dates the Physics Bulletin item to March 1984, pages 92-93, and has no author field. A separate IOP PDF recommendation panel contains the saved Salim/Fang/Rich and Trac/Chen/Holst name groups for two unrelated articles. We infer the captured byline is a parser conflation rather than evidence Trac authored the 1984 item.",
+      "evidence_url": "https://api.crossref.org/works/10.1088%2F0031-9112%2F35%2F3%2F007",
+      "verified_at": "2026-10-24"
     }
   ]
 }
