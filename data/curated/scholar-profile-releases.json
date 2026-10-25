@@ -16,10 +16,10 @@
       "state": "released",
       "expected_source_rows": 361,
       "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
-      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and seven provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
+      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and ten provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 7,
-      "provisional_hold_ids_sha256": "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0"
+      "expected_provisional_hold_rows": 10,
+      "provisional_hold_ids_sha256": "b48946eaecc8fdf09d32c892cf4862f69eda4109983d6839dc7cae95c82c9180"
     },
     {
       "person_id": "person-nimermurshid-70983eeb",
@@ -117,6 +117,39 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "b1002c90d937ae3f5bc674acd6e0a8fac9ef36af254400cfca7583861e619431"
+    },
+    {
+      "person_id": "person-cjoelmcmanus-f28918ce",
+      "scholar_id": "28yZqbcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 62,
+      "cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+      "reason": "Complete 62-row visible Scholar profile is retained. Three exact duplicate/supplement exclusions are reviewed separately. Poster 101 remains raw but is provisionally held from the map and coauthor links until its original full byline and output metadata are verified.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "5009f431f17b2eaecdd281dc6ed51e01f8a4914074e85d7f7ab4e3273ca0e2aa"
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "state": "released",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "reason": "Complete Scholar capture is source-bound; one exact Chemistry-reviewed observation remains under provisional hold while remaining rows pass normal quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "c6e21900b5f9655e79f8435025ad0dd77eb4ffd0fdc70e20809fb16c719d8fc2"
+    },
+    {
+      "person_id": "person-mariakurnikova-215a60c6",
+      "scholar_id": "IggMbacAAAAJ",
+      "state": "released",
+      "expected_source_rows": 170,
+      "cache_sha256": "8c9d5b93a5ad0ad0d7f11164a6df7e8a38e3c386e26feb0046ba16eb0d0501dd",
+      "reason": "Complete Scholar capture is source-bound; one exact Chemistry-reviewed observation remains under provisional hold while remaining rows pass normal quality review.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "4521fe48a7a8031ab59964583051c94527be196c05eedd6b550cc71e2326448c"
     }
   ]
 }

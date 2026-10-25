@@ -133,10 +133,13 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
         (350, "0e1jwkkAAAAJ:hsZV8lGYWTMC"),
         (355, "0e1jwkkAAAAJ:yqoGN6RLRZoC"),
         (356, "0e1jwkkAAAAJ:yFnVuubrUp4C"),
+        (282, "0e1jwkkAAAAJ:Y5dfb0dijaUC"),
+        (278, "0e1jwkkAAAAJ:u-coK7KVo8oC"),
+        (247, "0e1jwkkAAAAJ:MhiOAD_qIWkC"),
     ]
     assert hold_ids_sha256(
         {item.author_pub_id for item in profile.held_observations}
-    ) == ("92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0")
+    ) == ("b48946eaecc8fdf09d32c892cf4862f69eda4109983d6839dc7cae95c82c9180")
 
 
 def test_checked_in_sullivan_hold_is_source_bound_and_separate_from_exclusions():
@@ -189,6 +192,28 @@ def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
     assert (
         hold_ids_sha256({item.author_pub_id for item in profile.held_observations})
         == "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    )
+
+
+def test_checked_in_mcmanus_hold_targets_only_unverified_poster_byline():
+    profiles = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    profile = next(item for item in profiles if item.scholar_id == "28yZqbcAAAAJ")
+    assert profile.person_id == "person-cjoelmcmanus-f28918ce"
+    assert profile.expected_source_rows == 62
+    assert profile.cache_sha256 == (
+        "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096"
+    )
+    assert profile.expected_reviewed_exclusion_rows == 3
+    assert profile.reviewed_exclusion_ids_sha256 == (
+        "3316309a95705c86671fc2144795b95a22296fc4df3c358334290e9fe002bc84"
+    )
+    assert [
+        (item.capture_row_index, item.author_pub_id)
+        for item in profile.held_observations
+    ] == [(60, "28yZqbcAAAAJ:HKviVsUxM5wC")]
+    assert (
+        hold_ids_sha256({item.author_pub_id for item in profile.held_observations})
+        == "5009f431f17b2eaecdd281dc6ed51e01f8a4914074e85d7f7ab4e3273ca0e2aa"
     )
 
 
@@ -275,6 +300,7 @@ def test_loader_rejects_bad_profile_field(tmp_path, field, value):
         ("author_pub_id", f"{SCHOLAR}:", "invalid identity"),
         ("reason", " ", "invalid identity"),
         ("evidence_url", "http://example.test", "dated HTTPS"),
+        ("primary_evidence_url", "http://example.test", "primary evidence"),
         ("reviewed_at", "tomorrow", "dated HTTPS"),
     ],
 )
@@ -549,6 +575,18 @@ def test_dataset_retains_raw_hold_but_omits_its_map_contribution(tmp_path):
     assert len(raw) == 2
     assert raw.loc[HELD, "review_attribution_status"] == "held"
     assert raw.loc[HELD, "review_attribution_evidence_url"] == URL
+    primary = "https://example.org/primary-record"
+    primary_tables = build_dataset_tables(
+        pandas.DataFrame(rows),
+        registry,
+        provisional_holds={(SCHOLAR, HELD): _hold(primary_evidence_url=primary)},
+    )
+    assert (
+        primary_tables["profile_publications"]
+        .set_index("author_pub_id")
+        .loc[HELD, "review_attribution_evidence_url"]
+        == primary
+    )
     assert not bool(raw.loc[HELD, "map_eligible"])
     assert "attribution_provisional_hold" in raw.loc[HELD, "map_exclusion_reasons"]
     assert tables["authorships"]["person_id"].tolist() == ["person-two"]

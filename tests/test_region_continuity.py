@@ -214,6 +214,43 @@ def test_visible_observation_cannot_change_collaboration_eligibility_silently():
     ]
 
 
+def test_exact_person_hold_loss_approval_preserves_other_rows() -> None:
+    held = observation("person-held", "one")
+    coauthor = observation("person-coauthor", "one")
+    works = [work("one", eligible=True, outlier=False)]
+    approved = frozenset({("person-held", "profile", "profile:shared-row", "scholar")})
+    _, receipt = reconcile_region_decisions(
+        pandas.DataFrame(works),
+        pandas.DataFrame([coauthor]),
+        works,
+        [held, coauthor],
+        prior_revision=REVISION,
+        approved_person_hold_losses=approved,
+    )
+    assert receipt["approved_person_hold_losses"] == [
+        "person-held/profile/profile:shared-row/scholar"
+    ]
+    assert receipt["unexplained_losses"] == []
+    assert receipt["unused_person_hold_approvals"] == []
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame(works),
+            pandas.DataFrame([coauthor]),
+            works,
+            [held, coauthor],
+            prior_revision=REVISION,
+            approved_person_hold_losses=frozenset(
+                {("person-other", "profile", "profile:shared-row", "scholar")}
+            ),
+        )
+    assert error.value.receipt["unexplained_losses"] == [
+        "person-held/profile/profile:shared-row/scholar"
+    ]
+    assert error.value.receipt["unused_person_hold_approvals"] == [
+        "person-other/profile/profile:shared-row/scholar"
+    ]
+
+
 def test_sullivan_approval_rejects_wrong_object_type():
     rows = [observation("person-one", "one")]
     works = [work("one", eligible=True, outlier=False)]
@@ -351,6 +388,22 @@ def test_exact_sullivan_loss_set_receipts_18_holds_and_four_rekeys():
     assert receipt["sullivan_loss_approval_sha256"] == APPROVAL_SHA256
     assert receipt["unexplained_losses"] == []
     assert receipt["unused_sullivan_loss_approvals"] == []
+
+
+def test_person_hold_cannot_reapprove_a_sullivan_loss() -> None:
+    approval, prior_rows, current_rows, prior_works, current_works = (
+        _sullivan_exact_loss_fixture()
+    )
+    with pytest.raises(ValueError, match="overlaps another loss approval"):
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            prior_works,
+            prior_rows,
+            prior_revision=PRIOR_REVISION,
+            sullivan_loss_approval=approval,
+            approved_person_hold_losses=frozenset({next(iter(approval.identities))}),
+        )
 
 
 def test_forged_sullivan_loss_approval_cannot_waive_generic_loss():

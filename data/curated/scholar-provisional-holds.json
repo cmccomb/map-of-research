@@ -57,6 +57,30 @@
           "reason": "Undated and unvenued estradiol-degradation record lacks an identified primary output; distinguish it from the 2015 Scientific Reports paper before mapping.",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yFnVuubrUp4C",
           "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 282,
+          "author_pub_id": "0e1jwkkAAAAJ:Y5dfb0dijaUC",
+          "reason": "Probable Polish translation of existing Collins-Walter feature; exact original issue unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:Y5dfb0dijaUC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.scientificamerican.com/article/little-green-molecules/"
+        },
+        {
+          "capture_row_index": 278,
+          "author_pub_id": "0e1jwkkAAAAJ:u-coK7KVo8oC",
+          "reason": "Spanish translation of existing Collins-Walter feature; version link needs exact publisher receipt",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:u-coK7KVo8oC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.uhu.es/pablo.hidalgo/docencia/effects/AADD/cuando%20el%20metano%20regulaba%20el%20clima.pdf"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "0e1jwkkAAAAJ:MhiOAD_qIWkC",
+          "reason": "ACS meeting abstract exact primary byline unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:MhiOAD_qIWkC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=0e1jwkkAAAAJ&citation_for_view=0e1jwkkAAAAJ:MhiOAD_qIWkC"
         }
       ]
     },
@@ -501,6 +525,59 @@
           "reason": "Saved Fonseca row 248 has a corrupted title, exact Fonseca–Müller–Leoni byline, and no year/venue. The publisher archive confirms their 2004 A-quasiconvexity paper, already clean in Fonseca Scholar row 45, but the damaged row could be a separate report version. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JV3ryMgAAAAJ&cstart=200&pagesize=100&citation_for_view=JV3ryMgAAAAJ:AXPGKjj_ei8C",
           "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-cjoelmcmanus-f28918ce",
+      "scholar_id": "28yZqbcAAAAJ",
+      "expected_source_rows": 62,
+      "cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "3316309a95705c86671fc2144795b95a22296fc4df3c358334290e9fe002bc84",
+      "held_observations": [
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reason": "Rustbelt RNA 2021 lists Tosiano's poster 101 and its topic, but the public organizer record does not verify the complete four-name Scholar byline or contributor roles; hold the placeholder from map and coauthor edges pending the original abstract.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=28yZqbcAAAAJ&cstart=20&pagesize=80&citation_for_view=28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "expected_reviewed_exclusion_rows": 19,
+      "reviewed_exclusion_ids_sha256": "732b3debd5049dbe6a2dc1df9fc40e2ffb31d7846e1bec179f88a0f3d9cce82a",
+      "held_observations": [
+        {
+          "capture_row_index": 132,
+          "author_pub_id": "FRtd8_QAAAAJ:olpn-zPbct0C",
+          "reason": "Gil signed a multi-group support feature; coauthor graph policy for mass signatories unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRtd8_QAAAAJ&cstart=100&pagesize=100&citation_for_view=FRtd8_QAAAAJ:olpn-zPbct0C",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.nature.com/articles/nsmb.2371"
+        }
+      ]
+    },
+    {
+      "person_id": "person-mariakurnikova-215a60c6",
+      "scholar_id": "IggMbacAAAAJ",
+      "expected_source_rows": 170,
+      "cache_sha256": "8c9d5b93a5ad0ad0d7f11164a6df7e8a38e3c386e26feb0046ba16eb0d0501dd",
+      "expected_reviewed_exclusion_rows": 10,
+      "reviewed_exclusion_ids_sha256": "eb9d0986cd10f99b64ceee237c3af5e0023e298b66b7b23240de9a98991fdbd4",
+      "held_observations": [
+        {
+          "capture_row_index": 84,
+          "author_pub_id": "IggMbacAAAAJ:j3f4tGmQtD8C",
+          "reason": "HARLEM software attribution supported; captured 1999 journal venue and artifact identity unverified",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IggMbacAAAAJ&cstart=20&pagesize=80&citation_for_view=IggMbacAAAAJ:j3f4tGmQtD8C",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://crete.chem.cmu.edu/index.php/software/2-uncategorized/18-harlem"
         }
       ]
     }

@@ -115,6 +115,18 @@ mapped works or authorships. The Collins decision in this draft depends on his
 source capture and review PRs before any upload. Receipts report raw and
 published counts, source hashes, and decision-manifest checksums.
 
+`data/curated/person-publication-holds.json` covers a different case: a
+registered person has individually verified papers but no reviewed whole-career
+publication capture. Each dated decision pins the person, frozen source SHA-256,
+immutable prior Hub revision, and every held DOI, observation ID, and prior work
+binding. The publisher retains the raw observations for audit, omits only that
+person's public publication and authorship rows, and leaves independent coauthor
+observations and canonical works in place. The exact three Ta'asan losses need
+this parent-bound decision; unrelated or unused loss approvals fail before
+upload. The public `people` table and map faculty catalog carry a person-level
+`publication_hold_reason`. A changed source or parent fails against the pinned
+decision; clear the hold only after reviewing a complete publication capture.
+
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
 the collector rejects a replacement missing any previously observed Scholar
@@ -235,7 +247,15 @@ title rules cannot identify safely. The publisher flags a region only when it
 is simultaneously incoherent in embedding space, dominated by short titles,
 missing many years, and mostly uncited. Inside a flagged region, a work with a
 DOI, known year, substantive title, named authors, venue, and source URL stays
-visible; weaker works retain the `low_information_region` exclusion. The
+visible. A DOI-less work also stays visible when a separately verified curated
+record supplies a stable native identifier and dated HTTPS evidence for those
+bibliographic details. An exact reviewed DOI alias may also retain a shorter
+title when its Scholar citation, DOI, year, and independent publication URLs
+are pinned in the alias manifest with `allow_short_title_region_override: true`.
+The current entries cover Gordon Rule's *Exchange processes* chapter, Alison
+Barth's “Constructing the External World,” and C. Joel McManus's “Getting the
+message out.” Weaker works
+retain the `low_information_region` exclusion. The
 versioned audit records `map_region_documented_override` for each retained
 exception, keeps all source rows in the dataset, and regenerates the final
 topic hierarchy from visible works.

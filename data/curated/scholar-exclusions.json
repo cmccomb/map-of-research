@@ -10210,6 +10210,30 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:unp9ATQDT5gC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The alternate-title Scholar row describes the same 2007 Pacific Symposium on Biocomputing paper at pages 257–268 as retained canonical proceedings row qQLlBH4AAAAJ:pqnbT2bcN3wC; it is not a second publication.",
+      "evidence_url": "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:idthP5jqfYAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This blank-venue Scholar row misspells the 2009 BioLINK paper as “SLIF: Structure Literature Image Finer” and repeats the author sequence of retained proceedings row qQLlBH4AAAAJ:AXPGKjj_ei8C. The original paper establishes one publication at pages 209–212.",
+      "evidence_url": "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:P7Ujq4OLJYoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This blank-venue Scholar row has a garbled author string for the 2009 KDD paper and duplicates retained proceedings row qQLlBH4AAAAJ:g5m5HwL7SMYC, confirmed by the original article and DOI 10.1145/1557019.1557031.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4256960/",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "wex9ft0AAAAJ",
       "author_pub_id": "wex9ft0AAAAJ:6bLC7aUMtPcC",
       "reason_code": "false_profile_attribution",
@@ -10287,6 +10311,38 @@
       "reason_code": "nonpublication",
       "reason": "Saved Scholar row 164 calls this a 2020 workshop and lists Avigad with other intended speakers as authors. The university event notice identifies the 3-5 April 2020 Princeton conference, names Avigad as a speaker, and says it was cancelled/postponed due to COVID-19.",
       "evidence_url": "https://www.illc.uva.nl/NewsandEvents/Events/Conferences?displayMode=month&month=04&year=2020",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:svHGgEBqPSUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Elsevier publisher notice pages 1-2 deposits no authors; adjacent page 3 is a separate Berry-Matyjaszewski editorial",
+      "evidence_url": "https://api.crossref.org/works/10.1016/S0079-6700(02)00114-4",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:kmyamZXjmjoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Mark Cesa authored column; Scholar issue contents misattribute it to Matyjaszewski",
+      "evidence_url": "https://www.degruyterbrill.com/journal/key/ci/39/4/html",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "ctYLFRIAAAAJ",
+      "author_pub_id": "ctYLFRIAAAAJ:SeFeTyx0c_EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Scholar fields splice unrelated names; legitimate Washburn paper is separately mapped",
+      "evidence_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=852630",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "TSkli5EAAAAJ",
+      "author_pub_id": "TSkli5EAAAAJ:5VhQba04mz8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated Living row duplicates fully titled 1995 article in the same complete Scholar capture",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ma00126a041",
       "verified_at": "2026-10-25"
     }
   ]

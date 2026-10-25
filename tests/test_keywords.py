@@ -3,6 +3,7 @@ import pandas
 import pytest
 
 import map_of_research.keywords as keywords
+from map_of_research.doi_aliases import ReviewedDoiAlias
 from map_of_research.topic_labels import apply_reviewed_labels, review_catalog
 
 
@@ -596,9 +597,67 @@ def test_region_audit_preserves_documented_paper_inside_weak_region() -> None:
     assert audited.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
     assert (
         audited["map_region_audit_version"]
-        .eq("low-information-semantic-region-v2")
+        .eq("low-information-semantic-region-v3")
         .all()
     )
+
+
+def test_region_audit_preserves_only_verified_native_source_work() -> None:
+    rows = []
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+                "source_types": ["scholar"],
+                "source_native_ids": [],
+                "source_verified_at": "",
+                "source_verification_urls": [],
+            }
+        )
+    documented = {
+        "year": 2009,
+        "title": "Structured Literature Image Finder",
+        "authors": "Amr Ahmed, Andrew Arnold, and Robert F. Murphy",
+        "venue": "ISMB BioLINK Special Interest Group",
+        "source_urls": ["https://murphylab.cbd.cmu.edu/publications/"],
+        "source_types": ["scholar", "curated_verified"],
+        "source_native_ids": ["biolink2009:209-212"],
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://murphylab.cbd.cmu.edu/publications/"],
+    }
+    rows[0].update(documented)
+    rows[1].update(documented | {"source_types": ["scholar"]})
+    rows[2].update(
+        documented | {"source_verification_urls": ["http://example.test/unverified"]}
+    )
+    rows[3].update(documented | {"venue": ""})
+    rows[4].update(documented | {"source_verified_at": "not-a-date"})
+    rows[5].update(documented | {"source_types": "curated_verified"})
+    rows[6].update(documented | {"source_native_ids": ["invalid-native-id"]})
+    rows[7].update(
+        documented | {"source_verification_urls": "https://example.test/not-a-list"}
+    )
+
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+
+    assert bool(audited.loc[0, "map_eligible"])
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    for index in range(1, 8):
+        assert not bool(audited.loc[index, "map_eligible"])
+        assert bool(audited.loc[index, "map_region_outlier"])
 
 
 @pytest.mark.parametrize(
@@ -620,3 +679,257 @@ def test_documented_work_source_url_handles_parquet_and_missing_values(
     value, expected
 ) -> None:
     assert keywords._has_source_url(value) is expected
+
+
+def test_reviewed_short_title_exception_is_exact_to_gordon_chapter() -> None:
+    scholar_id = "n6flaAsAAAAJ"
+    author_pub_id = f"{scholar_id}:M3NEmzRMIkIC"
+    doi = "10.1007/1-4020-3500-4_18"
+    chapter_url = "https://link.springer.com/chapter/10.1007/1-4020-3500-4_18"
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Exchange processes",
+        observed_year=2006,
+        relationship="version_of_record",
+        evidence_urls=(
+            chapter_url,
+            "https://link.springer.com/book/10.1007/1-4020-3500-4",
+        ),
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    other_pub_id = f"{scholar_id}:other-short-chapter"
+    aliases = {
+        (scholar_id, author_pub_id): alias,
+        (scholar_id, other_pub_id): ReviewedDoiAlias(
+            doi="10.1007/1-4020-3500-4_19",
+            observed_title="Other chapter",
+            observed_year=2006,
+            relationship="version_of_record",
+            evidence_urls=(
+                "https://link.springer.com/chapter/10.1007/1-4020-3500-4_19",
+            ),
+            verified_at="2026-10-25",
+        ),
+    }
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    rows = []
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+                "source_types": ["scholar"],
+                "source_verification_urls": [],
+                "scholar_ids": [],
+                "author_pub_ids": [],
+            }
+        )
+    gordon = {
+        "year": 2006,
+        "citation_count": 3,
+        "title": "Exchange processes",
+        "authors": "GS Rule, TK Hitchens",
+        "venue": "Fundamentals of Protein NMR Spectroscopy, 403-430, 2006",
+        "doi": doi,
+        "source_urls": [
+            "https://scholar.google.com/citations?user=n6flaAsAAAAJ"
+            "&citation_for_view=n6flaAsAAAAJ:M3NEmzRMIkIC"
+        ],
+        "source_verification_urls": [chapter_url],
+        "source_verified_at": "2026-10-25",
+        "source_types": ["scholar"],
+        "scholar_ids": [scholar_id],
+        "author_pub_ids": [author_pub_id],
+    }
+    rows[0].update(gordon)
+    for index, change in enumerate(
+        (
+            {"doi": "10.1007/different"},
+            {"title": "Other processes"},
+            {"year": 2007},
+            {"author_pub_ids": [f"{scholar_id}:other"]},
+            {"source_verification_urls": []},
+            {"scholar_ids": ["other"]},
+            {"source_verified_at": "2026-10-24"},
+        ),
+        start=1,
+    ):
+        rows[index].update(gordon | change)
+    rows[7].update(
+        gordon
+        | {
+            "title": "Other chapter",
+            "doi": "10.1007/1-4020-3500-4_19",
+            "source_verification_urls": [
+                "https://link.springer.com/chapter/10.1007/1-4020-3500-4_19"
+            ],
+            "author_pub_ids": [other_pub_id],
+        }
+    )
+
+    without_review = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+    assert not without_review["map_eligible"].any()
+
+    audited = keywords.exclude_low_information_regions(
+        pandas.DataFrame(rows), doi_aliases=aliases
+    )
+    assert audited["map_eligible"].sum() == 1
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    assert not bool(audited.loc[0, "map_region_outlier"])
+    assert audited.loc[1:, "map_region_outlier"].all()
+    for field, value in (
+        ("author_pub_ids", author_pub_id),
+        ("scholar_ids", scholar_id),
+        ("source_types", "scholar"),
+        ("source_verification_urls", chapter_url),
+        ("source_types", []),
+        ("source_verified_at", "not-a-date"),
+        ("year", 2006.5),
+    ):
+        malformed = pandas.Series(gordon | {field: value})
+        assert not keywords._reviewed_short_title_alias_matches(malformed, aliases)
+
+
+def test_exact_agu_presentations_survive_a_weak_region_with_reviewed_context() -> None:
+    source = keywords.REVIEWED_CHEM_AGU_PRESENTATIONS
+    rows = [
+        {
+            "doi": "",
+            "title": title,
+            "year": year,
+            "authors": "N. M. Donahue",
+            "venue": "AGU Fall Meeting",
+            "source_urls": ["https://scholar.google.com/citations?user=ILambBMAAAAJ"],
+            "publication_type": "conference_presentation",
+            "author_pub_ids": [author_pub_id],
+            "context_evidence_urls": [evidence_url],
+        }
+        for author_pub_id, (title, year, evidence_url) in source.items()
+    ]
+    reviewed = keywords._documented_work_mask(pandas.DataFrame(rows))
+    assert reviewed.tolist() == [True, True]
+    changed = rows[0] | {"context_evidence_urls": ["https://example.com/other"]}
+    assert not bool(keywords._documented_work_mask(pandas.DataFrame([changed])).iloc[0])
+    assert not keywords._reviewed_chem_presentation_matches(
+        pandas.Series(rows[0] | {"publication_type": "publication"})
+    )
+    assert not keywords._reviewed_chem_presentation_matches(
+        pandas.Series(rows[0] | {"author_pub_ids": "incorrect"})
+    )
+
+
+def test_reviewed_cell_short_title_requires_complete_pii_doi_pubmed_evidence() -> None:
+    scholar_id = "28yZqbcAAAAJ"
+    author_pub_id = f"{scholar_id}:UeHWp8X0CEIC"
+    doi = "10.1016/j.molcel.2008.06.010"
+    evidence = (
+        "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+        "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+        "https://doi.org/10.1016/j.molcel.2008.06.010",
+    )
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Getting the message out",
+        observed_year=2008,
+        relationship="version_of_record",
+        evidence_urls=evidence,
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    work = pandas.Series(
+        {
+            "doi": doi,
+            "title": "Getting the message out",
+            "year": 2008,
+            "authors": "CJ McManus, BR Graveley",
+            "venue": "Molecular cell 31 (1), 4-6, 2008",
+            "source_types": ["scholar"],
+            "scholar_ids": [scholar_id],
+            "author_pub_ids": [author_pub_id],
+            "source_verified_at": "2026-10-25",
+            "source_verification_urls": list(evidence),
+        }
+    )
+    aliases = {(scholar_id, author_pub_id): alias}
+    assert keywords._reviewed_short_title_alias_matches(work, aliases)
+
+    for changed in (
+        {"doi": "10.1016/j.molcel.2008.06.011"},
+        {"title": "Another message"},
+        {"year": 2009},
+        {"scholar_ids": ["another"]},
+        {"author_pub_ids": [f"{scholar_id}:another"]},
+        {"source_verified_at": "2026-10-24"},
+        {"source_verification_urls": list(evidence[1:])},
+        {"source_verification_urls": list(evidence[:1] + evidence[2:])},
+        {"source_verification_urls": list(evidence[:2])},
+    ):
+        assert not keywords._reviewed_short_title_alias_matches(
+            pandas.Series(work.to_dict() | changed), aliases
+        )
+
+    unflagged = {
+        (scholar_id, author_pub_id): ReviewedDoiAlias(
+            doi=doi,
+            observed_title=alias.observed_title,
+            observed_year=alias.observed_year,
+            relationship=alias.relationship,
+            evidence_urls=evidence,
+            verified_at=alias.verified_at,
+        )
+    }
+    assert not keywords._reviewed_short_title_alias_matches(work, unflagged)
+
+
+def test_reviewed_neuron_four_word_title_requires_exact_pii_chain() -> None:
+    scholar_id = "FXqaMl4AAAAJ"
+    author_pub_id = f"{scholar_id}:UebtZRa9Y70C"
+    doi = "10.1016/j.neuron.2017.06.006"
+    evidence = (
+        "https://www.sciencedirect.com/science/article/pii/S0896627317305044",
+        "https://pubmed.ncbi.nlm.nih.gov/28641104/",
+        "https://doi.org/10.1016/j.neuron.2017.06.006",
+    )
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Constructing the External World",
+        observed_year=2017,
+        relationship="version_of_record",
+        evidence_urls=evidence,
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    work = pandas.Series(
+        {
+            "doi": doi,
+            "title": alias.observed_title,
+            "year": 2017,
+            "authors": "J Lee, AL Barth",
+            "venue": "Neuron 94 (6), 1048-1050, 2017",
+            "source_types": ["scholar"],
+            "scholar_ids": [scholar_id],
+            "author_pub_ids": [author_pub_id],
+            "source_verified_at": "2026-10-25",
+            "source_verification_urls": list(evidence),
+        }
+    )
+    aliases = {(scholar_id, author_pub_id): alias}
+    assert keywords._reviewed_short_title_alias_matches(work, aliases)
+    assert not keywords._reviewed_short_title_alias_matches(
+        pandas.Series(
+            work.to_dict() | {"source_verification_urls": list(evidence[:2])}
+        ),
+        aliases,
+    )

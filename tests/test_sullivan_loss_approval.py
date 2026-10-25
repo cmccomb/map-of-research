@@ -27,13 +27,29 @@ def verified_rows(monkeypatch, tmp_path):
     real_sha256_file = approval.sha256_file
     cache = tmp_path / f"{approval.SULLIVAN_ID}.json"
     cache.write_text("test fixture: checked in the full no-write preview")
-    expected_cache_sha = json.loads(
+    approval_manifest = json.loads(
         (CURATED / "sullivan-exact-losses-bb88.json").read_text(encoding="utf-8")
-    )["sullivan_cache_sha256"]
+    )
+    # The producer tree can advance to the Bio review after the Sullivan source
+    # was frozen. The release passes paths from that pinned source checkout.
+    pinned_source_hashes = {
+        CURATED / "scholar-profile-releases.json": approval_manifest[
+            "profile_releases_sha256"
+        ],
+        CURATED / "scholar-provisional-holds.json": approval_manifest[
+            "provisional_holds_sha256"
+        ],
+        CURATED / "works.json": approval_manifest["curated_works_sha256"],
+        CURATED / "scholar-exclusions.json": approval_manifest[
+            "reviewed_exclusions_sha256"
+        ],
+    }
 
     def fixture_sha(path):
         if Path(path) == cache:
-            return expected_cache_sha
+            return approval_manifest["sullivan_cache_sha256"]
+        if Path(path) in pinned_source_hashes:
+            return pinned_source_hashes[Path(path)]
         return real_sha256_file(path)
 
     monkeypatch.setattr(approval, "sha256_file", fixture_sha)

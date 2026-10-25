@@ -11,9 +11,11 @@ from typing import Any
 
 from .region_continuity import require_revision
 
-BIO_SOURCE_SHA256 = "5853827607c8fa804685feaf18e52f8be8a700c66ede5453c7919ea49f76c409"
+# Frozen combined source content at staged W3 commit 01c05970. Its Git commit
+# may change when it is restacked onto the Sullivan upload receipt.
+BIO_SOURCE_SHA256 = "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550"
 BIO29_REVISION = "96fdc335fa0061be30a14698d2a89b9d21454b35"
-BIO_SOURCE_ROWS = 51_827
+BIO_SOURCE_ROWS = 51_883
 BIO_ROSTER_COUNT = 47
 BIO_SCHOLAR_PROFILES = 30
 BIO_SCHOLAR_ROWS = 2_688
@@ -66,6 +68,27 @@ POSTER_WORK_ID = "work-d701cf6129386f93f78754f5b2f78e2653904fecbc6428dfb27ca8495
 POSTER_SOURCE_SHA256 = (
     "a2d3b3ebb010eea4f246edf2d67e7c4463440499ea15de380aff25486dddd164"
 )
+MURPHY_ID = "person-robertfmurphy-5930bd3c"
+MURPHY_SCHOLAR_ID = "qQLlBH4AAAAJ"
+# Each excluded Scholar row duplicates a retained, independently verified work.
+# The tuple is (retained citation, retained work ID, exclusion evidence URL).
+REVIEWED_DUPLICATE_LOSSES = {
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:P7Ujq4OLJYoC", "scholar"): (
+        "qQLlBH4AAAAJ:g5m5HwL7SMYC",
+        "work-3f9429e5d668edf6eb960934479268ba9b5f5fbae31ec542a1b8bc9bfe4874e2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4256960/",
+    ),
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:idthP5jqfYAC", "scholar"): (
+        "qQLlBH4AAAAJ:AXPGKjj_ei8C",
+        "work-e34bf1b2730e8840322680db92eb671f9c1b97ee1212febf6456e9eab3b294db",
+        "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+    ),
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:unp9ATQDT5gC", "scholar"): (
+        "qQLlBH4AAAAJ:pqnbT2bcN3wC",
+        "work-4cfbe6eef8651fa63f73d1c31c8790b9e98fdd56876e14c1d591d29cd2e77f8a",
+        "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+    ),
+}
 
 
 def _as_list(value: Any) -> list[Any]:
@@ -231,10 +254,10 @@ def preserve_pending_review_topics(
         return candidate_works
     if (
         not isinstance(restored, list)
-        or len(restored) != 112
+        or len(restored) != len(pending_in_parent)
         or set(restored) != pending_in_parent
     ):
-        raise ValueError("Expected the exact 112 restored pending-review works")
+        raise ValueError("Expected the exact mapped pending-review works in parent")
     output = candidate_works.copy()
     current_ids = output["work_id"].astype(str)
     if current_ids.duplicated().any() or set(restored) - set(current_ids):
@@ -263,6 +286,7 @@ def validate_bio_release_prewrite(
     baselines: Mapping[str, Any],
     repair_manifest: Mapping[str, Any],
     provisional_holds: Mapping[tuple[str, str], Any],
+    approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
 ) -> dict[str, Any]:
     """Fail before a Hub write if the whole Bio cohort or old links drift."""
 
@@ -272,7 +296,7 @@ def validate_bio_release_prewrite(
         or len(source_frame) != BIO_SOURCE_ROWS
     ):
         raise ValueError(
-            "Bio release source differs from the frozen 51,827-row snapshot"
+            "Bio release source differs from the frozen 51,883-row snapshot"
         )
     bio_ids = {
         item.person_id
@@ -299,7 +323,7 @@ def validate_bio_release_prewrite(
     source_identities = _indexed(source_rows, IDENTITY)
     candidate_profiles = _indexed(tables["profile_publications"], IDENTITY)
     missing = set(source_identities) - set(candidate_profiles)
-    if missing:
+    if missing != approved_person_hold_losses:
         raise ValueError(f"Candidate loses {len(missing)} released source rows")
     original_bio29 = set(baselines["bio29_ids"])
     old_bio29_rows = {
@@ -318,11 +342,56 @@ def validate_bio_release_prewrite(
         tables["profile_publications"], tables["works"], original_bio29
     )
     mapped_losses = prior_mapped - new_mapped
-    if mapped_losses - {POSTER_ID}:
-        raise ValueError("Bio release loses a mapped repaired-baseline observation")
+    unexpected_losses = sorted(
+        mapped_losses - {POSTER_ID} - REVIEWED_DUPLICATE_LOSSES.keys()
+    )
+    if unexpected_losses:
+        raise ValueError(
+            "Bio release loses "
+            f"{len(unexpected_losses)} mapped repaired-baseline observation(s): "
+            f"{unexpected_losses[:3]}"
+        )
+    current_works = _by_work_id(tables["works"])
+    old_profiles = _indexed(baselines["repair_profile"], IDENTITY)
+    reviewed_duplicate_losses = mapped_losses & REVIEWED_DUPLICATE_LOSSES.keys()
+    if reviewed_duplicate_losses != REVIEWED_DUPLICATE_LOSSES.keys():
+        missing = sorted(REVIEWED_DUPLICATE_LOSSES.keys() - reviewed_duplicate_losses)
+        raise ValueError(
+            "Bio release lacks exact reviewed Murphy duplicate losses: "
+            f"{len(missing)} missing; {missing[:3]}"
+        )
+    for identity in reviewed_duplicate_losses:
+        canonical_id, canonical_work_id, evidence_url = REVIEWED_DUPLICATE_LOSSES[
+            identity
+        ]
+        duplicate = candidate_profiles.get(identity)
+        canonical = candidate_profiles.get(
+            (MURPHY_ID, MURPHY_SCHOLAR_ID, canonical_id, "scholar")
+        )
+        canonical_work = current_works.get(canonical_work_id)
+        prior = old_profiles.get(identity)
+        if (
+            duplicate is None
+            or prior is None
+            or duplicate.get("source_record_json") != prior.get("source_record_json")
+            or bool(duplicate.get("map_eligible"))
+            or bool(duplicate.get("collaboration_eligible"))
+            or duplicate.get("review_exclusion_code") != "corrupted_duplicate"
+            or duplicate.get("review_evidence_url") != evidence_url
+            or duplicate.get("review_verified_at") != "2026-10-25"
+            or "reviewed_corrupted_duplicate"
+            not in _as_list(duplicate.get("map_exclusion_reasons"))
+            or canonical is None
+            or canonical.get("work_id") != canonical_work_id
+            or not bool(canonical.get("map_eligible"))
+            or not bool(canonical.get("collaboration_eligible"))
+            or canonical_work is None
+            or not bool(canonical_work.get("map_eligible"))
+            or not bool(canonical_work.get("collaboration_eligible"))
+        ):
+            raise ValueError(f"Bio reviewed duplicate differs: {identity}")
     if len({key[0] for key in new_mapped}) < BIO29_COUNT:
         raise ValueError("Bio release loses a mapped Bio29 researcher")
-    current_works = _by_work_id(tables["works"])
     for author_pub_id, (work_id, doi, native_id) in REVIEWED_GAINS.items():
         found = [
             row
@@ -386,8 +455,20 @@ def validate_bio_release_prewrite(
         or continuity_receipt.get("prior_revision") != prior_revision
         or continuity_receipt.get("unexplained_losses")
         or continuity_receipt.get("unexplained_gains")
+        or not {"/".join(identity) for identity in reviewed_duplicate_losses}.issubset(
+            set(continuity_receipt.get("reviewed_losses") or [])
+        )
+        or set(continuity_receipt.get("approved_person_hold_losses") or [])
+        != {"/".join(key) for key in approved_person_hold_losses}
     ):
         raise ValueError("Bio release lacks a clean exact-observation region diff")
+    approved_losses = continuity_receipt.get("approved_one_time_losses") or []
+    expected_poster_loss = ["/".join(POSTER_ID)] if POSTER_ID in mapped_losses else []
+    if approved_losses != expected_poster_loss or (
+        expected_poster_loss
+        and not continuity_receipt.get("poster_loss_approval_sha256")
+    ):
+        raise ValueError("Bio release needs the exact one-time poster-loss approval")
     candidate_bio = {
         person["person_id"]
         for person in candidate_artifact["catalogs"]["faculty"]
@@ -411,9 +492,11 @@ def validate_bio_release_prewrite(
         and bool(row["map_eligible"])
     }
     if pending_in_parent and (
-        len(restored) != 112 or set(restored) != pending_in_parent
+        not isinstance(restored, list)
+        or len(restored) != len(pending_in_parent)
+        or set(restored) != pending_in_parent
     ):
-        raise ValueError("Repair manifest does not identify 112 restored works")
+        raise ValueError("Pending-topic list differs from the immutable parent")
     if not pending_in_parent and restored:
         raise ValueError("Repair manifest names pending works absent from parent")
     point_by_id = {point["work_id"]: point for point in candidate_artifact["points"]}
@@ -448,6 +531,7 @@ def validate_bio_release_prewrite(
         "bio29_observations_preserved": len(old_bio29_rows),
         "bio29_mapped_observations_preserved": len(prior_mapped - mapped_losses),
         "held_poster_mapped_loss": POSTER_ID in mapped_losses,
+        "reviewed_duplicate_mapped_losses": len(reviewed_duplicate_losses),
         "bio_edges_preserved": len(old_edges),
         "pending_topic_works_preserved": len(restored),
     }

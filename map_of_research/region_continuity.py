@@ -14,9 +14,19 @@ import string
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from datetime import date
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
+from .bio_binding_approval import (
+    APPROVAL_SHA256 as BIO_BINDING_APPROVAL_SHA256,
+)
+from .bio_binding_approval import (
+    BINDINGS_SHA256 as BIO_BINDINGS_SHA256,
+)
+from .bio_binding_approval import (
+    PRIOR_REVISION as BIO_BINDING_PRIOR_REVISION,
+)
+from .bio_binding_approval import ExactBioBindingApproval, binding_digest
 from .doi_aliases import DOI_PATTERN
 from .sullivan_continuity_addendum import (
     ADDENDUM_SHA256 as SULLIVAN_ADDENDUM_SHA256,
@@ -46,6 +56,9 @@ from .sullivan_loss_approval import (
 from .sullivan_loss_approval import (
     ExactSullivanLossApproval,
 )
+
+if TYPE_CHECKING:
+    from .poster_loss_approval import PosterLossApproval
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
@@ -121,8 +134,12 @@ class RegionReleaseDiffError(ValueError):
             "mapped binding changes, "
             f"{len(receipt.get('unused_sullivan_binding_approvals', []))} "
             "unused binding approvals, "
+            f"{len(receipt.get('unused_bio_binding_approvals', []))} "
+            "unused Bio binding approvals, "
             f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
             "unused Sullivan approvals; "
+            f"{len(receipt.get('unused_person_hold_approvals', []))} "
+            "unused person-hold approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
             f"{receipt['unexplained_gains'][:2]}"
         )
@@ -388,8 +405,11 @@ def reconcile_region_decisions(
     prior_revision: str,
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
+    bio_binding_approval: ExactBioBindingApproval | None = None,
+    approved_person_hold_losses: frozenset[ObservationKey] = frozenset(),
     composite_plan: Any | None = None,
     historical_works: Mapping[str, Mapping[str, Any]] | None = None,
+    approved_poster_loss: PosterLossApproval | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -524,6 +544,18 @@ def reconcile_region_decisions(
         required_curated_work_ids = set(
             sullivan_continuity_addendum.required_curated_work_ids
         )
+    approved_bio_bindings: set[tuple[ObservationKey, str, str, bool, bool]] = set()
+    if bio_binding_approval is not None:
+        if (
+            not isinstance(bio_binding_approval, ExactBioBindingApproval)
+            or prior_revision != BIO_BINDING_PRIOR_REVISION
+            or bio_binding_approval.manifest_sha256 != BIO_BINDING_APPROVAL_SHA256
+            or len(bio_binding_approval.binding_changes) != 11
+            or binding_digest(bio_binding_approval.binding_changes)
+            != BIO_BINDINGS_SHA256
+        ):
+            raise ValueError("Bio binding approval is not the reviewed set")
+        approved_bio_bindings = set(bio_binding_approval.binding_changes)
     actual_binding_changes = {
         (
             tuple(change["observation"].split("/")),
@@ -544,11 +576,12 @@ def reconcile_region_decisions(
             change["prior_collaboration_eligible"],
             change["current_collaboration_eligible"],
         )
-        not in approved_binding_changes
+        not in approved_binding_changes | approved_bio_bindings
     ]
     unused_sullivan_binding_approvals = (
         approved_binding_changes - actual_binding_changes
     )
+    unused_bio_binding_approvals = approved_bio_bindings - actual_binding_changes
     missing_curated_targets = sorted(
         work_id
         for work_id in required_curated_work_ids
@@ -615,7 +648,29 @@ def reconcile_region_decisions(
         if sullivan_loss_approval is not None
         else otherwise_unexplained_losses
     )
-    unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
+    approved_losses: set[ObservationKey] = set()
+    if approved_poster_loss is not None:
+        approved_losses.add(
+            approved_poster_loss.require_exact_loss(
+                prior_revision=prior_revision,
+                losses=losses_requiring_approval - approved_sullivan_losses,
+                previous_rows=previous_rows,
+                current_rows=current_rows,
+                previous_works=previous_works,
+                final_works=final_works,
+            )
+        )
+    if approved_person_hold_losses & (approved_sullivan_losses | approved_losses):
+        raise ValueError("Person-publication hold overlaps another loss approval")
+    unused_person_hold_approvals = (
+        approved_person_hold_losses - losses_requiring_approval
+    )
+    unexplained_losses = sorted(
+        losses_requiring_approval
+        - approved_sullivan_losses
+        - approved_losses
+        - approved_person_hold_losses
+    )
     verified_gains = sorted(
         identity
         for identity in gains
@@ -690,6 +745,23 @@ def reconcile_region_decisions(
             )
             in approved_binding_changes
         ],
+        "approved_bio_binding_changes": [
+            change
+            for change in mapped_binding_changes
+            if (
+                tuple(change["observation"].split("/")),
+                change["prior_work_id"],
+                change["current_work_id"],
+                change["prior_collaboration_eligible"],
+                change["current_collaboration_eligible"],
+            )
+            in approved_bio_bindings
+        ],
+        "bio_binding_approval_sha256": (
+            bio_binding_approval.manifest_sha256
+            if bio_binding_approval is not None
+            else None
+        ),
         "sullivan_continuity_addendum_sha256": (
             sullivan_continuity_addendum.manifest_sha256
             if sullivan_continuity_addendum is not None
@@ -702,6 +774,20 @@ def reconcile_region_decisions(
         ),
         "unused_sullivan_loss_approvals": [
             _display(item) for item in sorted(unused_sullivan_approvals)
+        ],
+        "approved_one_time_losses": [
+            _display(item) for item in sorted(approved_losses)
+        ],
+        "poster_loss_approval_sha256": (
+            approved_poster_loss.manifest_sha256
+            if approved_poster_loss is not None
+            else None
+        ),
+        "approved_person_hold_losses": [
+            _display(item) for item in sorted(approved_person_hold_losses)
+        ],
+        "unused_person_hold_approvals": [
+            _display(item) for item in sorted(unused_person_hold_approvals)
         ],
         "verified_gains": [_display(item) for item in verified_gains],
         "reviewed_composite_work_gains": (
@@ -734,6 +820,22 @@ def reconcile_region_decisions(
                 current_collaboration_eligible,
             ) in sorted(unused_sullivan_binding_approvals)
         ],
+        "unused_bio_binding_approvals": [
+            {
+                "observation": _display(identity),
+                "prior_work_id": prior_work_id,
+                "current_work_id": current_work_id,
+                "prior_collaboration_eligible": prior_collaboration_eligible,
+                "current_collaboration_eligible": current_collaboration_eligible,
+            }
+            for (
+                identity,
+                prior_work_id,
+                current_work_id,
+                prior_collaboration_eligible,
+                current_collaboration_eligible,
+            ) in sorted(unused_bio_binding_approvals)
+        ],
         "missing_sullivan_curated_targets": missing_curated_targets,
         "unexplained_losses": [_display(item) for item in unexplained_losses],
         "unexplained_gains": [_display(item) for item in unexplained_gains],
@@ -743,8 +845,10 @@ def reconcile_region_decisions(
         or unexplained_gains
         or unapproved_mapped_binding_changes
         or unused_sullivan_binding_approvals
+        or unused_bio_binding_approvals
         or missing_curated_targets
         or unused_sullivan_approvals
+        or unused_person_hold_approvals
     ):
         raise RegionReleaseDiffError(receipt)
     return output, receipt

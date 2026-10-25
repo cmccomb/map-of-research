@@ -13,8 +13,11 @@ import pytest
 import map_of_research.bio_release_gate as gate
 from map_of_research.provisional_holds import ProvisionalHold
 
+REVIEWED_DUPLICATES = dict(gate.REVIEWED_DUPLICATE_LOSSES)
+
 
 def _candidate(monkeypatch):
+    monkeypatch.setattr(gate, "REVIEWED_DUPLICATE_LOSSES", {})
     monkeypatch.setattr(gate, "BIO_SOURCE_ROWS", 5)
     monkeypatch.setattr(gate, "BIO_ROSTER_COUNT", 4)
     monkeypatch.setattr(gate, "BIO_SCHOLAR_PROFILES", 4)
@@ -68,7 +71,7 @@ def _candidate(monkeypatch):
     )
     raw.append(poster)
     works.append({"work_id": gate.POSTER_WORK_ID, "map_eligible": False})
-    restored = [f"pending-{index:03d}" for index in range(112)]
+    restored = [f"pending-{index:03d}" for index in range(15)]
     for work_id in restored:
         works.append(
             {
@@ -159,6 +162,199 @@ def _candidate(monkeypatch):
     }
 
 
+def _candidate_with_murphy_duplicates(monkeypatch, identities=None):
+    candidate = _candidate(monkeypatch)
+    reviewed = {
+        identity: details
+        for identity, details in REVIEWED_DUPLICATES.items()
+        if identities is None or identity in identities
+    }
+    monkeypatch.setattr(gate, "REVIEWED_DUPLICATE_LOSSES", reviewed)
+    row_count = 5 + 2 * len(reviewed)
+    monkeypatch.setattr(gate, "BIO_SOURCE_ROWS", row_count)
+    monkeypatch.setattr(gate, "BIO_ROSTER_COUNT", 5)
+    monkeypatch.setattr(gate, "BIO_SCHOLAR_PROFILES", 5)
+    monkeypatch.setattr(gate, "BIO_SCHOLAR_ROWS", row_count)
+    monkeypatch.setattr(gate, "BIO29_COUNT", 5)
+    monkeypatch.setattr(gate, "BIO29_SCHOLAR_ROWS", row_count)
+    duplicate_rows = []
+    canonical_rows = []
+    excluded_rows = []
+    work_rows = []
+    for identity, (canonical_id, canonical_work_id, evidence_url) in reviewed.items():
+        duplicate = dict(zip(gate.IDENTITY, identity, strict=True))
+        duplicate.update(
+            source_record_json=f"murphy-duplicate-raw-{identity[2]}",
+            work_id=f"work-murphy-duplicate-{identity[2]}",
+            map_eligible=True,
+            collaboration_eligible=True,
+        )
+        canonical = {
+            **duplicate,
+            "author_pub_id": canonical_id,
+            "source_record_json": f"murphy-canonical-raw-{canonical_id}",
+            "work_id": canonical_work_id,
+        }
+        excluded = {
+            **duplicate,
+            "map_eligible": False,
+            "collaboration_eligible": False,
+            "map_exclusion_reasons": ["reviewed_corrupted_duplicate"],
+            "review_exclusion_code": "corrupted_duplicate",
+            "review_evidence_url": evidence_url,
+            "review_verified_at": "2026-10-25",
+        }
+        duplicate_rows.append(duplicate)
+        canonical_rows.append(canonical)
+        excluded_rows.append(excluded)
+        work_rows.extend(
+            [
+                {"work_id": duplicate["work_id"], "map_eligible": False},
+                {
+                    "work_id": canonical_work_id,
+                    "map_eligible": True,
+                    "collaboration_eligible": True,
+                },
+            ]
+        )
+    candidate["source_frame"] = pandas.concat(
+        [candidate["source_frame"], pandas.DataFrame(duplicate_rows + canonical_rows)],
+        ignore_index=True,
+    )
+    candidate["baselines"]["bio29_profile"].extend(
+        deepcopy(duplicate_rows + canonical_rows)
+    )
+    candidate["baselines"]["repair_profile"].extend(
+        deepcopy(duplicate_rows + canonical_rows)
+    )
+    candidate["tables"]["profile_publications"] = pandas.concat(
+        [
+            candidate["tables"]["profile_publications"],
+            pandas.DataFrame(excluded_rows + canonical_rows),
+        ],
+        ignore_index=True,
+    )
+    candidate["baselines"]["repair_works"].extend(
+        [{**row, "map_eligible": True} for row in work_rows]
+    )
+    candidate["tables"]["works"] = pandas.concat(
+        [candidate["tables"]["works"], pandas.DataFrame(work_rows)],
+        ignore_index=True,
+    )
+    candidate["registry"].memberships.append(
+        SimpleNamespace(person_id=gate.MURPHY_ID, included=True, department_id="bio")
+    )
+    candidate["registry"].people.append(
+        SimpleNamespace(person_id=gate.MURPHY_ID, scholar_id=gate.MURPHY_SCHOLAR_ID)
+    )
+    candidate["baselines"]["bio29_ids"].add(gate.MURPHY_ID)
+    candidate["candidate_artifact"]["catalogs"]["faculty"].append(
+        {"person_id": gate.MURPHY_ID, "memberships": [{"department_id": "bio"}]}
+    )
+    candidate["candidate_artifact"]["points"].extend(
+        {"work_id": work_id, "faculty_ids": [gate.MURPHY_ID]}
+        for _, work_id, _ in reviewed.values()
+    )
+    candidate["continuity_receipt"]["reviewed_losses"] = [
+        "/".join(identity) for identity in reviewed
+    ]
+    return candidate
+
+
+@pytest.mark.parametrize("identity", list(REVIEWED_DUPLICATES))
+def test_exact_reviewed_murphy_duplicate_loss_keeps_canonical_work(
+    monkeypatch, identity
+):
+    candidate = _candidate_with_murphy_duplicates(monkeypatch, [identity])
+    receipt = gate.validate_bio_release_prewrite(**candidate)
+    assert receipt["reviewed_duplicate_mapped_losses"] == 1
+
+    duplicate_index = len(candidate["tables"]["profile_publications"]) - 2
+    candidate["tables"]["profile_publications"].at[
+        duplicate_index, "review_evidence_url"
+    ] = "https://example.org/unreviewed"
+    with pytest.raises(ValueError, match="reviewed duplicate differs"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+
+def test_murphy_duplicate_requires_continuity_review_and_retained_work(monkeypatch):
+    identity = next(iter(REVIEWED_DUPLICATES))
+    candidate = _candidate_with_murphy_duplicates(monkeypatch, [identity])
+    candidate["continuity_receipt"]["reviewed_losses"] = []
+    with pytest.raises(ValueError, match="clean exact-observation region diff"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["reviewed_losses"] = ["/".join(identity)]
+
+    canonical_work_id = REVIEWED_DUPLICATES[identity][1]
+    index = candidate["tables"]["works"].index[
+        candidate["tables"]["works"].work_id == canonical_work_id
+    ][0]
+    candidate["tables"]["works"].at[index, "map_eligible"] = False
+    with pytest.raises(ValueError, match="mapped repaired-baseline observation"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+
+def test_all_three_reviewed_duplicate_losses_are_required(monkeypatch):
+    candidate = _candidate_with_murphy_duplicates(monkeypatch)
+    receipt = gate.validate_bio_release_prewrite(**candidate)
+    assert receipt["reviewed_duplicate_mapped_losses"] == 3
+
+    identity = next(iter(REVIEWED_DUPLICATES))
+    index = candidate["tables"]["profile_publications"].index[
+        candidate["tables"]["profile_publications"].author_pub_id == identity[2]
+    ][0]
+    candidate["tables"]["profile_publications"].at[index, "map_eligible"] = True
+    candidate["tables"]["profile_publications"].at[index, "collaboration_eligible"] = (
+        True
+    )
+    duplicate_work_id = candidate["tables"]["profile_publications"].at[index, "work_id"]
+    work_index = candidate["tables"]["works"].index[
+        candidate["tables"]["works"].work_id == duplicate_work_id
+    ][0]
+    candidate["tables"]["works"].at[work_index, "map_eligible"] = True
+    candidate["continuity_receipt"]["reviewed_losses"].remove("/".join(identity))
+    with pytest.raises(
+        ValueError, match="lacks exact reviewed Murphy duplicate losses"
+    ):
+        gate.validate_bio_release_prewrite(**candidate)
+
+
+def test_bio_gate_allows_only_exact_source_bound_person_hold_losses(
+    monkeypatch,
+) -> None:
+    candidate = _candidate(monkeypatch)
+    held = {
+        "person_id": "person-shlomotaasan-403c9cf9",
+        "scholar_id": "",
+        "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1000/held",
+        "source_type": "curated_verified",
+    }
+    identity = tuple(held[field] for field in gate.IDENTITY)
+    candidate["source_frame"] = pandas.concat(
+        [candidate["source_frame"], pandas.DataFrame([held])],
+        ignore_index=True,
+    )
+    monkeypatch.setattr(gate, "BIO_SOURCE_ROWS", len(candidate["source_frame"]))
+    with pytest.raises(ValueError, match="Candidate loses 1 released source rows"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["approved_person_hold_losses"] = frozenset({identity})
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = [
+        "/".join(identity)
+    ]
+    assert gate.validate_bio_release_prewrite(**candidate)["status"] == "pass"
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = []
+    with pytest.raises(ValueError, match="clean exact-observation"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = [
+        "/".join(identity)
+    ]
+    candidate["approved_person_hold_losses"] = frozenset(
+        {("person-unrelated", "", "curated-doi:unrelated", "curated_verified")}
+    )
+    with pytest.raises(ValueError, match="Candidate loses 1 released source rows"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+
 def test_bio_prewrite_gate_preserves_complete_source_graph_and_topics(
     monkeypatch,
 ) -> None:
@@ -166,7 +362,7 @@ def test_bio_prewrite_gate_preserves_complete_source_graph_and_topics(
     receipt = gate.validate_bio_release_prewrite(**candidate)
     assert receipt["status"] == "pass"
     assert receipt["bio_edges_preserved"] == 1
-    assert receipt["pending_topic_works_preserved"] == 112
+    assert receipt["pending_topic_works_preserved"] == 15
 
     candidate["candidate_artifact"]["points"][-1]["faculty_ids"] = ["person-0"]
     with pytest.raises(ValueError, match="graph loses"):
@@ -205,8 +401,21 @@ def test_bb88_visible_poster_requires_exact_source_bound_hold(monkeypatch) -> No
     )
     poster_work["map_eligible"] = True
     candidate["baselines"]["repair_profile"][-1]["map_eligible"] = True
+    with pytest.raises(ValueError, match="one-time poster-loss approval"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_one_time_losses"] = [
+        "/".join(gate.POSTER_ID)
+    ]
+    candidate["continuity_receipt"]["poster_loss_approval_sha256"] = "f" * 64
     receipt = gate.validate_bio_release_prewrite(**candidate)
     assert receipt["held_poster_mapped_loss"] is True
+
+    candidate["continuity_receipt"]["approved_one_time_losses"] = []
+    with pytest.raises(ValueError, match="one-time poster-loss approval"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_one_time_losses"] = [
+        "/".join(gate.POSTER_ID)
+    ]
 
     candidate["tables"]["profile_publications"].at[4, "map_exclusion_reasons"] = (
         "other_reason"
@@ -278,7 +487,7 @@ def test_bb88_without_pending_topics_needs_no_repair_manifest(monkeypatch) -> No
         ("poster", "McManus poster"),
         ("continuity", "region diff"),
         ("catalog", "catalog omits"),
-        ("repair_manifest", "112 restored"),
+        ("repair_manifest", "immutable parent"),
         ("pending_point", "Pending-review topic changed"),
         ("pending_catalog", "pending topic catalog"),
     ],
@@ -341,9 +550,9 @@ def test_bio_gate_fails_closed_on_cohort_or_graph_drift(
 @pytest.mark.parametrize(
     ("change", "message"),
     [
-        ("short_manifest", "exact 112"),
+        ("short_manifest", "exact mapped pending-review"),
         ("missing_candidate", "loses a restored"),
-        ("missing_baseline", "exact 112"),
+        ("missing_baseline", "exact mapped pending-review"),
         ("baseline_topic", "baseline topic is not pending"),
         ("candidate_excluded", "candidate excludes"),
     ],

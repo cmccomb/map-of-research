@@ -23,6 +23,7 @@ class ProvisionalHold:
     reason: str
     evidence_url: str
     reviewed_at: str
+    primary_evidence_url: str = ""
 
 
 @dataclass(frozen=True)
@@ -123,6 +124,13 @@ def load_provisional_holds(path: Path) -> tuple[ProvisionalHoldProfile, ...]:
                 raise ValueError(
                     "Provisional-hold observation needs dated HTTPS evidence"
                 )
+            primary_evidence_url = str(item.get("primary_evidence_url") or "").strip()
+            if primary_evidence_url and not _dated_https(
+                primary_evidence_url, item.get("reviewed_at")
+            ):
+                raise ValueError(
+                    "Provisional-hold primary evidence needs dated HTTPS URL"
+                )
             rows.append(
                 ProvisionalHold(
                     scholar_id=scholar_id,
@@ -131,6 +139,7 @@ def load_provisional_holds(path: Path) -> tuple[ProvisionalHoldProfile, ...]:
                     reason=reason.strip(),
                     evidence_url=str(item["evidence_url"]).strip(),
                     reviewed_at=str(item["reviewed_at"]).strip(),
+                    primary_evidence_url=primary_evidence_url,
                 )
             )
             seen_ids.add(author_pub_id)

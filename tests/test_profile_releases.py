@@ -109,9 +109,9 @@ def test_checked_in_chien_release_is_source_bound() -> None:
     assert collins.person_id == "person-terrencejcollins-61cf6ed9"
     assert collins.state == "released"
     assert collins.expected_source_rows == 361
-    assert collins.expected_provisional_hold_rows == 7
+    assert collins.expected_provisional_hold_rows == 10
     assert collins.provisional_hold_ids_sha256 == (
-        "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0"
+        "b48946eaecc8fdf09d32c892cf4862f69eda4109983d6839dc7cae95c82c9180"
     )
 
 
