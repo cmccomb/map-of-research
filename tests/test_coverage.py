@@ -804,6 +804,193 @@ def test_receipt_reads_scholar_svg_title_labels(tmp_path: Path) -> None:
         validate_complete_receipt("alphaAAAAJ", cache, paths[4])
 
 
+def _svg_title_repair_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
+    paths = _paths(tmp_path / "data")
+    cache = _cache(paths, complete=True)
+    captures = paths[4]
+    source_json = captures / "alpha.json"
+    source_html = captures / "alpha.html"
+    captured = "a-pinene"
+    repaired = "α-pinene"
+    source = json.loads(source_json.read_text())
+    source["works"][0]["title"] = captured
+    atomic_write_json(source_json, source)
+    source_html.write_text(
+        source_html.read_text().replace(
+            ">One</a>",
+            '><svg class="gs_fsvg" aria-label="  α  "></svg>-pinene</a>',
+        )
+    )
+    cache["publications"][0]["title"] = repaired
+    receipt = cache["browser_capture"]
+    receipt["source_json_sha256"] = sha256_file(source_json)
+    receipt["source_html_sha256"] = sha256_file(source_html)
+    ledger = tmp_path / "status" / "physics-eight-svg-title-repairs-2026-10-25.json"
+    ledger.parent.mkdir()
+    atomic_write_json(
+        ledger,
+        {
+            "schema_version": 1,
+            "review_state": "saved_html_svg_title_repair",
+            "entries": [
+                {
+                    "scholar_id": "alphaAAAAJ",
+                    "capture_row": 1,
+                    "author_pub_id": "alphaAAAAJ:one",
+                    "captured_value": captured,
+                    "repaired_value": repaired,
+                    "source_json_sha256": receipt["source_json_sha256"],
+                    "source_html_sha256": receipt["source_html_sha256"],
+                }
+            ],
+        },
+    )
+    return cache, captures, ledger
+
+
+def test_receipt_accepts_exact_ledger_listed_saved_html_svg_title(
+    tmp_path: Path,
+) -> None:
+    cache, captures, ledger = _svg_title_repair_fixture(tmp_path)
+    review = json.loads(ledger.read_text())
+    review["entries"].append(
+        {
+            **review["entries"][0],
+            "scholar_id": "otherAAAAJ",
+            "author_pub_id": "otherAAAAJ:another",
+        }
+    )
+    atomic_write_json(ledger, review)
+    validate_complete_receipt("alphaAAAAJ", cache, captures)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "missing_ledger",
+        "invalid_json",
+        "invalid_type",
+        "invalid_schema",
+        "wrong_review_state",
+        "missing_entries",
+        "empty_entries",
+        "invalid_entry",
+        "missing_entry_field",
+        "duplicate_entry",
+        "wrong_profile",
+        "wrong_row",
+        "wrong_citation_id",
+        "wrong_captured_title",
+        "wrong_repaired_title",
+        "wrong_json_hash",
+        "wrong_html_hash",
+        "changed_json_title",
+        "changed_json_bytes",
+        "changed_html_title",
+        "changed_html_bytes",
+        "changed_cache_title",
+        "no_svg",
+        "changed_cache_author",
+        "changed_html_author_with_reviewed_hash",
+    ],
+)
+def test_svg_title_repair_requires_exact_sources_and_other_row_fields(
+    tmp_path: Path, mutation: str
+) -> None:
+    cache, captures, ledger = _svg_title_repair_fixture(tmp_path)
+    review = json.loads(ledger.read_text())
+    entry = review["entries"][0]
+    source_json = captures / "alpha.json"
+    source_html = captures / "alpha.html"
+    receipt = cache["browser_capture"]
+    if mutation == "missing_ledger":
+        ledger.unlink()
+    elif mutation == "invalid_json":
+        ledger.write_text("{invalid")
+    elif mutation == "invalid_type":
+        atomic_write_json(ledger, [])
+    elif mutation == "invalid_schema":
+        review["schema_version"] = 2
+        atomic_write_json(ledger, review)
+    elif mutation == "wrong_review_state":
+        review["review_state"] = "unreviewed"
+        atomic_write_json(ledger, review)
+    elif mutation == "missing_entries":
+        review.pop("entries")
+        atomic_write_json(ledger, review)
+    elif mutation == "empty_entries":
+        review["entries"] = []
+        atomic_write_json(ledger, review)
+    elif mutation == "invalid_entry":
+        review["entries"] = ["not an entry"]
+        atomic_write_json(ledger, review)
+    elif mutation == "missing_entry_field":
+        entry.pop("source_html_sha256")
+        atomic_write_json(ledger, review)
+    elif mutation == "duplicate_entry":
+        review["entries"].append(dict(entry))
+        atomic_write_json(ledger, review)
+    elif mutation in {
+        "wrong_profile",
+        "wrong_row",
+        "wrong_citation_id",
+        "wrong_captured_title",
+        "wrong_repaired_title",
+        "wrong_json_hash",
+        "wrong_html_hash",
+    }:
+        field, value = {
+            "wrong_profile": ("scholar_id", "otherAAAAJ"),
+            "wrong_row": ("capture_row", 2),
+            "wrong_citation_id": ("author_pub_id", "alphaAAAAJ:other"),
+            "wrong_captured_title": ("captured_value", "another raw title"),
+            "wrong_repaired_title": ("repaired_value", "another repaired title"),
+            "wrong_json_hash": ("source_json_sha256", "0" * 64),
+            "wrong_html_hash": ("source_html_sha256", "0" * 64),
+        }[mutation]
+        entry[field] = value
+        atomic_write_json(ledger, review)
+    elif mutation in {"changed_json_title", "changed_json_bytes"}:
+        source = json.loads(source_json.read_text())
+        if mutation == "changed_json_title":
+            source["works"][0]["title"] = "b-pinene"
+        else:
+            source["new_metadata"] = "changed after review"
+        atomic_write_json(source_json, source)
+        receipt["source_json_sha256"] = sha256_file(source_json)
+    elif mutation in {"changed_html_title", "changed_html_bytes"}:
+        if mutation == "changed_html_title":
+            source_html.write_text(
+                source_html.read_text().replace('aria-label="  α  "', 'aria-label="β"')
+            )
+            cache["publications"][0]["title"] = "β-pinene"
+        else:
+            source_html.write_text(source_html.read_text() + "<!-- changed -->")
+        receipt["source_html_sha256"] = sha256_file(source_html)
+    elif mutation == "changed_cache_title":
+        cache["publications"][0]["title"] = "Unverified cache title"
+    elif mutation == "no_svg":
+        source_html.write_text(
+            source_html.read_text().replace(
+                '<svg class="gs_fsvg" aria-label="  α  "></svg>', "α"
+            )
+        )
+        receipt["source_html_sha256"] = sha256_file(source_html)
+        entry["source_html_sha256"] = receipt["source_html_sha256"]
+        atomic_write_json(ledger, review)
+    elif mutation == "changed_cache_author":
+        cache["publications"][0]["author"] = "B Beta"
+    elif mutation == "changed_html_author_with_reviewed_hash":
+        source_html.write_text(
+            source_html.read_text().replace(">A Alpha</div>", ">B Beta</div>")
+        )
+        receipt["source_html_sha256"] = sha256_file(source_html)
+        entry["source_html_sha256"] = receipt["source_html_sha256"]
+        atomic_write_json(ledger, review)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, captures)
+
+
 def _tina_repaired_title_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
     captures = tmp_path / "data" / "captures"
     captures.mkdir(parents=True)

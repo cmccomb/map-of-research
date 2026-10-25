@@ -16,6 +16,7 @@ from map_of_research.chem_carryforward import (
 )
 
 FIXTURE = Path("tests/fixtures/chem_dcb_carryforward_rows.json")
+FROZEN_BIO_PROFILES = Path("tests/fixtures/bio_approved_profiles.json")
 
 
 def _candidate():
@@ -32,6 +33,7 @@ def _candidate():
         "current_profiles": current["profiles"],
         "current_works": current["works"],
         "current_authorships": current["authorships"],
+        "releases_path": FROZEN_BIO_PROFILES,
     }
     return current, kwargs
 

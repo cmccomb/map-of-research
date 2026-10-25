@@ -87,6 +87,16 @@ def test_exact_hosted_rows_and_candidate_dispositions_pass(verified_rows):
     assert result.manifest_sha256 == approval.APPROVAL_SHA256
 
 
+def test_historical_approval_rejects_current_extended_curated_file(
+    verified_rows, tmp_path
+):
+    current = tmp_path / "current-works.json"
+    current.write_bytes((CURATED / "works.json").read_bytes())
+    inputs = {**verified_rows, "curated_works_path": current}
+    with pytest.raises(ValueError, match="source changed: curated_works_sha256"):
+        approval.validate_sullivan_exact_losses(**inputs)
+
+
 @pytest.mark.parametrize(
     ("change", "expected"),
     [
