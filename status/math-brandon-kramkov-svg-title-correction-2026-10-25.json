@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "source_title_repaired",
+  "profile": "Dmitry Kramkov",
+  "scholar_id": "InIipCMAAAAJ",
+  "source_html_path": "data/captures/kramkov-visible-33-2026-10-25.html",
+  "source_html_sha256": "911c31c3af7cdb077541f541014a0457a84211f9d914e27bf119af5fcb70235b",
+  "source_json_path": "data/captures/kramkov-visible-33-2026-10-25.json",
+  "source_json_sha256": "dad71832e6e192e795a175b3412bd0f11b1f40d04a1932b905ac8d8abcd02c30",
+  "author_cache_path": "data/authors/InIipCMAAAAJ.json",
+  "author_cache_sha256": "b3421a7056907fb8a7b3802a5952a7386bfd36b9b85a4fcdb5aebb92943f658a",
+  "affected_rows": 1,
+  "changes": [
+    {
+      "row": 21,
+      "author_pub_id": "InIipCMAAAAJ:eQOLeE2rZwMC",
+      "previous_title": "Existence and uniqueness of Arrow--Debreu equilibria with consumptions in",
+      "corrected_title": "Existence and uniqueness of Arrow--Debreu equilibria with consumptions in {\\bf L}^0_+",
+      "evidence": "saved_html_svg_aria_label"
+    }
+  ],
+  "note": "One exact structured title repaired from accessible SVG aria-label in already saved Scholar HTML. No Scholar request, row addition/removal, author/year/venue change, eligibility decision, or source HTML change."
+}
