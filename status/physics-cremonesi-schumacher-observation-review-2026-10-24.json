@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
   "department_id": "physics",
-  "review_status": "paired_producer_exact_decisions_draft_with_map_quality_hold",
+  "review_status": "paired_producer_exact_decisions_merged_with_map_quality_hold",
   "source_verified_exact_exclusion_count": 100,
   "source_rows_preserved": 2506,
   "producer_changes_applied": false,
-  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. The paired producer draft independently checked 100 exact IDs against primary sources, including a 1996 BNL proposal identified by the original Ruđer Bošković Institute annual report. Remaining candidates are held and unexcluded; 16 of 17 unresolved IDs currently pass automatic map eligibility.",
+  "producer_changes_applied_scope": "source branch and raw source rows; producer manifest and guard merged on main at 7b6d923e",
+  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. Producer PR #160 merged 100 independently source-verified exact decisions into main at 7b6d923e, including a 1996 BNL proposal identified by the original Ruđer Bošković Institute annual report. The raw source rows remain unchanged. Seventeen exact IDs remain held and unexcluded; 16 currently pass automatic map eligibility.",
   "profiles": [
     {
       "person_id": "person-matteocremonesi-b2aba740",
@@ -42,7 +43,7 @@
         "wJ_gQLoAAAAJ:zmHQPunddckC",
         "wJ_gQLoAAAAJ:wlzmIqt2EaEC"
       ],
-      "candidate_nonpublication_disposition": "The two initially flagged generic/container rows remain unresolved and unexcluded; the paired producer draft does not infer nonpublication from their labels."
+      "candidate_nonpublication_disposition": "The two initially flagged generic/container rows remain unresolved and unexcluded; the merged producer manifest does not infer nonpublication from their labels."
     },
     {
       "person_id": "person-reinhardschumacher-35cd3c6f",
@@ -136,7 +137,7 @@
           ],
           "retained_author_pub_id": "LibSWRMAAAAJ:P7Ujq4OLJYoC",
           "excluded_author_pub_id": "LibSWRMAAAAJ:1_W9tMSvGuwC",
-          "disposition": "exact corrupted_duplicate in paired producer draft"
+          "disposition": "exact corrupted_duplicate in merged producer manifest"
         }
       ],
       "reviewed_nonpublication_ids_from_followup": [
@@ -153,14 +154,14 @@
       ]
     }
   ],
-  "next_decision": "The paired producer draft stages a fail-closed publisher preflight for both Physics profiles, but it is not live until merged into main. Keep source PR #156 draft and both branches unmerged while the 17 unresolved review-table IDs, tracker companion row 547, and three held same-work pairs await exact adjudication; do not build or upload a Physics snapshot while the hold remains.",
+  "next_decision": "Producer PR #160 merged a fail-closed publisher preflight for both Physics profiles into main at 7b6d923e. Keep source PR #156 draft and unmerged while the 17 unresolved review-table IDs, tracker companion row 547, and three held same-work pairs await exact adjudication; do not build or upload a Physics snapshot while the hold remains.",
   "source_verified_exact_exclusion_count_by_profile": {
     "wJ_gQLoAAAAJ": 77,
     "LibSWRMAAAAJ": 23
   },
   "paired_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/160",
   "paired_producer_review_ledger_url": "https://github.com/cmccomb/map-of-research/blob/codex/physics-cremonesi-schumacher-reviewed-20261024/registry/reviews/2026-10-24-physics-cremonesi-schumacher-reviewed-exclusions.md",
-  "producer_review_state": "draft_unmerged; exact decisions not applied in source",
+  "producer_review_state": "merged_on_main_7b6d923e; raw source rows unchanged",
   "unresolved_exact_id_count": 17,
   "currently_map_eligible_unresolved_count": 16,
   "currently_quality_filtered_unresolved_ids": [
@@ -168,5 +169,5 @@
   ],
   "unresolved_exact_id_scope": "17 IDs in the paired producer review unresolved table; tracker companion row 547 and three same-work pairs are separately held",
   "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs, 17 automatically map eligible. Original Proposal 924 evidence moved Schumacher row 480 to an exact nonpublication decision, leaving 17 unresolved IDs, 16 automatically map eligible, and one quality filtered. Tracker companion row 547 and same-work pairs are additional holds.",
-  "review_updated_at_utc": "2026-10-25T02:37:17Z"
+  "review_updated_at_utc": "2026-10-25T03:23:22+00:00"
 }

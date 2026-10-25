@@ -8,10 +8,10 @@
   "raw_observation_count": 2506,
   "capture_coverage": "complete_visible_profiles",
   "source_files_preserve_raw_rows": true,
-  "review_status": "paired_producer_exact_decisions_draft_with_map_quality_hold",
+  "review_status": "paired_producer_exact_decisions_merged_with_map_quality_hold",
   "proposed_exclusion_count": 100,
   "producer_review_ready": false,
-  "ingestion_dependency": "The paired producer draft records 100 source-backed exact exclusions (77 Cremonesi, 23 Schumacher), but remains unmerged. Its unresolved table has 17 exact IDs (16 automatically map eligible and one quality filtered); tracker companion row 547 and three same-work pairs also remain held. Draft producer PR #160 stages a publisher preflight that rejects a snapshot containing either Physics profile while this hold is active, before enrichment or upload. The gate is not live until that PR is merged. Keep source PR #156 draft and do not rebuild or upload Physics while the hold remains.",
+  "ingestion_dependency": "Producer PR #160 merged into main at 7b6d923e with 100 exact source-backed exclusions (77 Cremonesi, 23 Schumacher). Seventeen exact IDs remain unresolved and unexcluded; 16 currently pass automatic map eligibility and one is quality filtered. Tracker companion row 547 and three same-work pairs also remain held. The publisher preflight is live on main and rejects a snapshot containing either Physics profile while this hold is active, before enrichment or upload. Keep source PR #156 draft and do not build or upload a Physics snapshot while the hold remains.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
   "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
@@ -67,14 +67,14 @@
     }
   ],
   "recorded_at_utc": "2026-10-25T01:03:46.716171+00:00",
-  "proposed_exclusion_scope": "paired_producer_draft_160_only; no source-row exclusion applied",
+  "proposed_exclusion_scope": "paired_producer_merged_main_7b6d923e; no raw source-row exclusion applied",
   "paired_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/160",
   "paired_producer_review_count_by_profile": {
     "wJ_gQLoAAAAJ": 77,
     "LibSWRMAAAAJ": 23
   },
-  "producer_review_hold_reason": "Seventeen exact IDs in the paired producer review remain unresolved and unexcluded; 16 currently pass automatic map eligibility. Tracker companion row 547 and three same-work pairs are additional holds. Draft producer PR #160 stages a fail-closed publisher preflight for both Physics profiles; it has no live effect until merged.",
-  "publisher_guard_state": "staged_in_draft_producer_pr_160_not_live",
+  "producer_review_hold_reason": "Seventeen exact IDs in the paired producer review remain unresolved and unexcluded; 16 currently pass automatic map eligibility. Tracker companion row 547 and three same-work pairs are additional holds. The fail-closed publisher preflight for both Physics profiles is live on main at 7b6d923e.",
+  "publisher_guard_state": "merged_on_main_7b6d923e_live_for_trusted_publisher",
   "publisher_guard_effect": "If either Physics Scholar ID is in a raw snapshot and this status is held, the trusted publisher rejects the whole upload before embeddings or dataset writes; raw captures and snapshot rows remain intact.",
   "map_quality_hold": true,
   "unresolved_exact_ids": [
@@ -102,7 +102,7 @@
     "wJ_gQLoAAAAJ:OlGoE9RybnsC"
   ],
   "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs, 17 automatically map eligible. Original Proposal 924 evidence moved Schumacher row 480 to an exact nonpublication decision, leaving 17 unresolved IDs, 16 automatically map eligible, and one quality filtered. Tracker companion row 547 and same-work pairs are additional holds.",
-  "review_updated_at_utc": "2026-10-25T02:37:17Z",
+  "review_updated_at_utc": "2026-10-25T03:23:22+00:00",
   "map_quality_hold_scholar_ids": [
     "wJ_gQLoAAAAJ",
     "LibSWRMAAAAJ"
