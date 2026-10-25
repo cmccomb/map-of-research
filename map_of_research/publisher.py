@@ -118,6 +118,9 @@ DEFAULT_STATUS_PATH = Path("status/last-upload.json")
 PHYSICS_REVIEW_STATUS_NAME = "physics-cremonesi-schumacher-source-2026-10-24.json"
 PHYSICS_REVIEW_BATCH = "physics-cremonesi-schumacher-source"
 PHYSICS_REVIEW_SCHOLAR_IDS = frozenset({"wJ_gQLoAAAAJ", "LibSWRMAAAAJ"})
+BREIVIK_REVIEW_STATUS_NAME = "physics-breivik-source-2026-10-24.json"
+BREIVIK_REVIEW_BATCH = "physics-breivik-source-slice"
+BREIVIK_REVIEW_SCHOLAR_ID = "AcW2EXwAAAAJ"
 STRING_LIST_COLUMNS = frozenset(
     {
         "author_pub_ids",
@@ -1103,6 +1106,38 @@ def _require_physics_review_ready(
         )
 
 
+def _require_breivik_review_ready(
+    frame: Any,
+    snapshot_path: Path,
+    exclusions: Mapping[tuple[str, str], Any],
+) -> None:
+    """Keep Breivik's captured rows out of releases until review is complete."""
+
+    if BREIVIK_REVIEW_SCHOLAR_ID not in frame["scholar_id"].values:
+        return
+    status_path = snapshot_path.parent.parent / "status" / BREIVIK_REVIEW_STATUS_NAME
+    status = load_json(status_path)
+    if not isinstance(status, dict) or status.get("batch") != BREIVIK_REVIEW_BATCH:
+        raise ValueError(
+            f"Breivik map-quality gate: invalid source status: {status_path}"
+        )
+    if (
+        status.get("ingestion_ready") is not True
+        or status.get("snapshot_release_hold") is not False
+        or type(status.get("preliminary_candidate_count")) is not int
+        or status["preliminary_candidate_count"] != 0
+        or status.get("quality_review_complete") is not True
+    ):
+        raise ValueError("Breivik map-quality gate: source review is held")
+    reviewed_count = status.get("reviewed_exclusion_count_present_in_producer_main")
+    actual_count = sum(key[0] == BREIVIK_REVIEW_SCHOLAR_ID for key in exclusions)
+    if type(reviewed_count) is not int or reviewed_count != actual_count:
+        raise ValueError(
+            "Breivik map-quality gate: reviewed-exclusion count differs "
+            "from the source status"
+        )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1136,6 +1171,7 @@ def publish_snapshot(
     doi_aliases = load_doi_aliases(doi_aliases_path)
     validate_doi_aliases(frame, doi_aliases, exclusions)
     _require_physics_review_ready(frame, snapshot_path, exclusions)
+    _require_breivik_review_ready(frame, snapshot_path, exclusions)
     corrections = load_corrections(corrections_path)
     corrected_frame, validated_correction_count = apply_corrections(frame, corrections)
     contexts = load_contexts(contexts_path)
