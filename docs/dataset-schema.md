@@ -69,7 +69,8 @@ profile must occur exactly once. A profile staged for a later snapshot may be
 absent entirely.
 
 Exact context reviews add `publication_type`, `source_document_id`,
-`collaboration_eligible`, and the context evidence without changing
+`collaboration_eligible`, optional source-verified display contributors, and
+the context evidence without changing
 `source_record_json`.
 
 ## `works`
@@ -142,6 +143,8 @@ available source URL, and source
 observation count, plus one `keyword_ids` entry per hierarchy level. The
 additive `publication_type`, `source_document_id`, `collaboration_eligible`, and
 `context_evidence_urls` fields retain the reviewed context on a mapped point.
+An optional `display_contributors` overrides only the presentation of an edited
+book's incomplete Scholar byline; the original `authors` remains in the dataset.
 The top-level `layouts` catalog gives
 each view's label, method, interpretation, coordinate fields, and version;
 `default_layout_id` selects the initial view. The `keywords` catalog provides a

@@ -376,18 +376,26 @@ def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> No
     works["publication_type"] = "patent"
     works["source_document_id"] = "US6486123B1"
     works["collaboration_eligible"] = False
-    works["context_evidence_urls"] = [["https://patents.google.com/patent/US6486123B1/en"]]
-    typed_point = publisher.build_map_artifact(
+    works["context_evidence_urls"] = [
+        ["https://patents.google.com/patent/US6486123B1/en"]
+    ]
+    works["display_contributors"] = "Chien Ho; Tong-Jian Shen"
+    typed_artifact = publisher.build_map_artifact(
         works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
-    )["points"][0]
+    )
+    typed_point = typed_artifact["points"][0]
     assert typed_point["publication_type"] == "patent"
     assert typed_point["source_document_id"] == "US6486123B1"
     assert typed_point["collaboration_eligible"] is False
+    assert typed_point["display_contributors"] == "Chien Ho; Tong-Jian Shen"
+    assert typed_point["external_coauthor_ids"] == []
+    assert typed_artifact["catalogs"]["external_coauthors"] == []
     assert typed_point["context_evidence_urls"] == [
         "https://patents.google.com/patent/US6486123B1/en"
     ]
 
     # Two records may name the same external person, but may not disagree.
+    works["collaboration_eligible"] = True
     duplicate = works.copy()
     duplicate.at[0, "work_id"] = "work-two"
     assert (

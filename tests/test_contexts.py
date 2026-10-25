@@ -51,6 +51,11 @@ def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
     }
     assert len(patent_numbers) == 9
     assert {"US6486123B1", "US20020151468A1"} <= patent_numbers
+    editors = contexts[("8iLLOQgAAAAJ", "8iLLOQgAAAAJ:yD5IFk8b50cC")]
+    assert editors.display_contributors == (
+        "C. Ho; W. A. Eaton; J. P. Collman; Q. H. Gibson; J. S. Leigh, Jr.; "
+        "E. Margoliash; K. Moffat; W. R. Scheidt"
+    )
 
 
 def test_context_manifest_validates_identity_type_and_provenance(
@@ -79,6 +84,12 @@ def test_context_manifest_validates_identity_type_and_provenance(
             "Only patent contexts",
         ),
         ("missing reason", [_entry(reason="")], 1, "specific reason"),
+        (
+            "nonbook contributor override",
+            [_entry(display_contributors="C. Ho; W. A. Eaton")],
+            1,
+            "Only edited-book contexts",
+        ),
         (
             "bad URL",
             [_entry(evidence_url="http://example.test")],
@@ -142,6 +153,9 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
         "citation": "",
         "citation_count": 0,
         "source_url": "",
+        "source_type": "scholar",
+        "source_doi": "",
+        "external_coauthors": [],
         "source_record_json": '{"original":"Scholar observation"}',
         "fetched_at_utc": "2026-10-25T00:00:00+00:00",
         "embedding": [0.1, 0.2],
@@ -196,7 +210,14 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
     contexts = {
         ("oneAAAAJ", "oneAAAAJ:p1"): context("patent", "US6486123B1"),
         ("oneAAAAJ", "oneAAAAJ:p2"): context("patent", "US20020151468A1"),
-        ("oneAAAAJ", "oneAAAAJ:book"): context("edited_book"),
+        ("oneAAAAJ", "oneAAAAJ:book"): ReviewedContext(
+            "edited_book",
+            "",
+            "Primary source confirms editors",
+            "https://example.test/book",
+            "2026-10-25",
+            "One Person; Second Person",
+        ),
         ("oneAAAAJ", "oneAAAAJ:panel"): context("panel_transcript"),
         ("oneAAAAJ", "oneAAAAJ:withdrawn"): context("withdrawn_article"),
     }
@@ -205,6 +226,10 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
     works = tables["works"].set_index("work_id")
     assert len(observations) == 7
     assert observations["source_record_json"].eq(base["source_record_json"]).all()
+    assert observations.loc["oneAAAAJ:book", "authors"] == base["authors"]
+    assert observations.loc["oneAAAAJ:book", "context_display_contributors"] == (
+        "One Person; Second Person"
+    )
     assert (
         observations.loc["oneAAAAJ:p1", "work_id"]
         != observations.loc["oneAAAAJ:p2", "work_id"]
@@ -231,6 +256,14 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
     ]
     assert len(tables["authorships"]) == 5
     assert sum(bool(value) for value in works["collaboration_eligible"]) == 1
+    assert (
+        works.loc[observations.loc["oneAAAAJ:book", "work_id"], "authors"]
+        == (base["authors"])
+    )
+    assert (
+        works.loc[observations.loc["oneAAAAJ:book", "work_id"], "display_contributors"]
+        == "One Person; Second Person"
+    )
     assert not bool(
         works.loc[observations.loc["oneAAAAJ:withdrawn", "work_id"], "map_eligible"]
     )
@@ -245,6 +278,15 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
         **base,
         "author_pub_id": "oneAAAAJ:book-copy",
         "title": "Hemoglobin and oxygen binding",
+        "source_type": "curated_verified",
+        "source_doi": "10.1234/hemoglobin",
+        "external_coauthors": [
+            {
+                "person_id": "external-editor",
+                "display_name": "Second Person",
+                "source_url": "https://example.test/editor",
+            }
+        ],
     }
     reviewed_exclusion = ReviewedExclusion(
         "corrupted_duplicate",
@@ -259,12 +301,16 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
         contexts=contexts,
     )
     copy_observations = with_copy["profile_publications"].set_index("author_pub_id")
-    book_work = with_copy["works"].set_index("work_id").loc[
-        copy_observations.loc["oneAAAAJ:book-copy", "work_id"]
-    ]
+    book_work = (
+        with_copy["works"]
+        .set_index("work_id")
+        .loc[copy_observations.loc["oneAAAAJ:book-copy", "work_id"]]
+    )
     assert bool(book_work["map_eligible"])
     assert book_work["publication_type"] == "edited_book"
     assert not bool(book_work["collaboration_eligible"])
+    assert book_work["external_coauthor_ids"] == []
+    assert book_work["external_coauthors"] == []
 
 
 def test_conflicting_reviewed_types_for_one_work_fail_closed(tmp_path: Path) -> None:

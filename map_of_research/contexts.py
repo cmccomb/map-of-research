@@ -25,6 +25,7 @@ class ReviewedContext:
     reason: str
     evidence_url: str
     verified_at: str
+    display_contributors: str = ""
 
 
 def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
@@ -58,6 +59,11 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
         reason = str(entry.get("reason") or "").strip()
         if not reason:
             raise ValueError("Scholar context needs a specific reason")
+        display_contributors = str(entry.get("display_contributors") or "").strip()
+        if display_contributors and publication_type != "edited_book":
+            raise ValueError(
+                "Only edited-book contexts may override displayed contributors"
+            )
         evidence_url = str(entry.get("evidence_url") or "").strip()
         parsed = urlparse(evidence_url)
         if parsed.scheme != "https" or not parsed.netloc:
@@ -78,5 +84,6 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             reason=reason,
             evidence_url=evidence_url,
             verified_at=verified_at,
+            display_contributors=display_contributors,
         )
     return contexts

@@ -217,6 +217,7 @@ def build_dataset_tables(
     context_reasons: list[str] = []
     context_evidence_urls: list[str] = []
     context_dates: list[str] = []
+    context_display_contributors: list[str] = []
     collaboration_eligibility: list[bool] = []
     known_person_titles = {
         normalize_title(person.display_name) for person in registry.people
@@ -270,6 +271,9 @@ def build_dataset_tables(
         context_reasons.append(context.reason if context else "")
         context_evidence_urls.append(context.evidence_url if context else "")
         context_dates.append(context.verified_at if context else "")
+        context_display_contributors.append(
+            context.display_contributors if context else ""
+        )
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
@@ -300,9 +304,12 @@ def build_dataset_tables(
     profile_publications.insert(12, "context_review_reason", context_reasons)
     profile_publications.insert(13, "context_evidence_url", context_evidence_urls)
     profile_publications.insert(14, "context_verified_at", context_dates)
-    profile_publications.insert(15, "collaboration_eligible", collaboration_eligibility)
     profile_publications.insert(
-        16, "quality_assessment_version", QUALITY_ASSESSMENT_VERSION
+        15, "context_display_contributors", context_display_contributors
+    )
+    profile_publications.insert(16, "collaboration_eligible", collaboration_eligibility)
+    profile_publications.insert(
+        17, "quality_assessment_version", QUALITY_ASSESSMENT_VERSION
     )
 
     school_titles = registry.school_catalog()
@@ -430,7 +437,7 @@ def build_dataset_tables(
         )
         external_coauthors: dict[str, dict[str, str]] = {}
         for record in eligible_records:
-            if not record.collaboration_eligible:
+            if not collaboration_eligible or not record.collaboration_eligible:
                 continue
             for coauthor in _as_list(record.external_coauthors):
                 if not isinstance(coauthor, Mapping):
@@ -458,6 +465,9 @@ def build_dataset_tables(
                 "collaboration_eligible": collaboration_eligible,
                 "context_evidence_urls": _variants(
                     [record.context_evidence_url for record in records]
+                ),
+                "display_contributors": _best_text(
+                    [record.context_display_contributors for record in records]
                 ),
                 "has_included_source_profile": any(
                     membership["included"]

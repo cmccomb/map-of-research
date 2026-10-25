@@ -22,7 +22,10 @@ application family. Rows 424 and 426 also have separate patent publication
 numbers. A family relationship is not itself a coauthor relationship.
 
 The [CMU bibliography](https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf)
-lists row 116 under books and names multiple editors. The [PubMed withdrawal
+lists row 116 under books and names all eight editors. The Scholar byline lists
+only C. Ho and a misspelled W. A. Eaton, so the reviewed manifest carries the
+complete display list while the raw and canonical Scholar authors stay intact.
+The [PubMed withdrawal
 record](https://pubmed.ncbi.nlm.nih.gov/15194702/) for row 425 says
 not all coauthors approved submission. The Crossref publisher-deposited record
 for row 525 names Chien Ho as a panel participant rather than a research-paper

@@ -665,7 +665,12 @@ def build_map_artifact(
     external_coauthors: dict[str, dict[str, str]] = {}
     keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
-        for coauthor in _as_list(getattr(row, "external_coauthors", [])):
+        collaboration_eligible = bool(getattr(row, "collaboration_eligible", True))
+        for coauthor in (
+            _as_list(getattr(row, "external_coauthors", []))
+            if collaboration_eligible
+            else []
+        ):
             if not isinstance(coauthor, Mapping):
                 raise ValueError("External coauthor catalog entry must be an object")
             entry = {
@@ -769,12 +774,11 @@ def build_map_artifact(
                     getattr(row, "publication_type", "publication")
                 ),
                 "source_document_id": str(getattr(row, "source_document_id", "")),
-                "collaboration_eligible": bool(
-                    getattr(row, "collaboration_eligible", True)
-                ),
+                "collaboration_eligible": collaboration_eligible,
                 "context_evidence_urls": list(
                     _as_list(getattr(row, "context_evidence_urls", []))
                 ),
+                "display_contributors": str(getattr(row, "display_contributors", "")),
                 "source_url": source_urls[0] if source_urls else "",
                 "source_types": list(
                     _as_list(getattr(row, "source_types", ["scholar"]))
@@ -785,7 +789,9 @@ def build_map_artifact(
                 ),
                 "external_coauthor_ids": list(
                     _as_list(getattr(row, "external_coauthor_ids", []))
-                ),
+                )
+                if collaboration_eligible
+                else [],
                 "observation_count": int(row.observation_count),
                 "keyword_ids": [keyword_id, detail_keyword_id],
             }
