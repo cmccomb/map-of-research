@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "review_only": true,
+  "source_query_url": "https://export.arxiv.org/api/query?search_query=au%3A%22Po-Shen+Loh%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+  "captured_at_utc": "2026-10-25T12:36:57.399834+00:00",
+  "atom_sha256": "3bb0be4bd91bb367a3cf3ff9dadb9d56e8ab0dec82f4d9dc19edc15258d456ae",
+  "opensearch_total_results": 38,
+  "captured_entries": 38,
+  "entries_with_cmu_card": 38,
+  "entries_with_author_page_row": 35,
+  "author_page_missing_arxiv_ids": [
+    "1910.06709",
+    "2011.04650",
+    "2504.10664"
+  ],
+  "publication_claim": "Bounded arXiv exact-author search only; no whole-career completeness claim"
+}
