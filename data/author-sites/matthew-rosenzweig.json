@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "source_system": "author_maintained_website",
+  "source_type": "researcher_bibliography",
+  "scholar_capture": false,
+  "publication_cache_ready": false,
+  "person_id": "person-matthewrosenzweig-94bdde39",
+  "person_name": "Matthew Rosenzweig",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/rosenzweig.html",
+  "requested_url": "https://matthewrosenzweigwork-max.github.io/publications.html",
+  "final_url": "https://matthewrosenzweigwork-max.github.io/publications.html",
+  "retrieved_at_utc": "2026-10-24T23:22:40.147551+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "last_modified": "Sat, 24 Oct 2026 02:39:13 GMT",
+  "etag": "\"6adc1a51-848a\"",
+  "html_sha256": "8520807156371dbd4cfebf96e6b161b018c301919790bdafb6d85af9b2d2ad9c",
+  "coverage_claim": "author_self_labeled_complete_publication_list_at_capture",
+  "coverage_label_source_url": "https://matthewrosenzweigwork-max.github.io/",
+  "coverage_label_as_listed": "Complete publication list",
+  "observations": [
+    {
+      "section": "preprints",
+      "section_index": 1,
+      "title_as_listed": "Sharp mean-field estimates for diffusive log/Riesz gases in the Hilbert–Schmidt regime",
+      "citation_text_as_listed": "With M. Delgadino and R. Gvalani. Sharp mean-field estimates for diffusive log/Riesz gases in the Hilbert–Schmidt regime, 68 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With M. Delgadino and R. Gvalani.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2609.02743",
+          "label": "Sharp mean-field estimates for diffusive log/Riesz gases in the Hilbert–Schmidt regime",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "c3c1667f927e0d0bd356b4f2dfd51cf05a402a2cd144c61a75799b768a757bbe",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:1:c3c1667f927e0d0b"
+    },
+    {
+      "section": "preprints",
+      "section_index": 2,
+      "title_as_listed": "Uniform logarithmic Sobolev inequalities for the 2D Coulomb gas at the diffusive temperature scale",
+      "citation_text_as_listed": "Uniform logarithmic Sobolev inequalities for the 2D Coulomb gas at the diffusive temperature scale, 30 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2608.24863",
+          "label": "Uniform logarithmic Sobolev inequalities for the 2D Coulomb gas at the diffusive temperature scale",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "ab5764279d91d44dc6eea944d99bf04f1f1afca9146839efb210bdb98d6f7b45",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:2:ab5764279d91d44d"
+    },
+    {
+      "section": "preprints",
+      "section_index": 3,
+      "title_as_listed": "Fixed-particle-number optimizers for the Lieb–Oxford inequality",
+      "citation_text_as_listed": "Fixed-particle-number optimizers for the Lieb–Oxford inequality, 27 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2608.17155",
+          "label": "Fixed-particle-number optimizers for the Lieb–Oxford inequality",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "b3db47923a73a5ec9b90998b2068112a8a09d4820922a86e435dad73e57663b2",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:3:b3db47923a73a5ec"
+    },
+    {
+      "section": "preprints",
+      "section_index": 4,
+      "title_as_listed": "Wasserstein gradient flows of maximum mean discrepancy with energy kernels",
+      "citation_text_as_listed": "With D. Slepčev and L. Wang. Wasserstein gradient flows of maximum mean discrepancy with energy kernels, 75 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With D. Slepčev and L. Wang.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://drive.google.com/file/d/1EFtWUPhcRnvZ2x1VIY9leDWt-MQDVIby/view?usp=sharing",
+          "label": "Wasserstein gradient flows of maximum mean discrepancy with energy kernels",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "5795d4bec6c03d456bab1ad170392e25392d8da8f38c6338d3d75970a8247f82",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:4:5795d4bec6c03d45"
+    },
+    {
+      "section": "preprints",
+      "section_index": 5,
+      "title_as_listed": "Wasserstein gradient flows for Coulomb discrepancies",
+      "citation_text_as_listed": "With A. Chodron de Courcel. Wasserstein gradient flows for Coulomb discrepancies, 34 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With A. Chodron de Courcel.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2607.12579",
+          "label": "Wasserstein gradient flows for Coulomb discrepancies",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "91dddfa7f19312df7fef462ba7e89b79106dd064aa69450609516cb391d61b55",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:5:91dddfa7f19312df"
+    },
+    {
+      "section": "preprints",
+      "section_index": 6,
+      "title_as_listed": "Phase transitions for the noisy transformer model in arbitrary dimension",
+      "citation_text_as_listed": "With K. Mun. Phase transitions for the noisy transformer model in arbitrary dimension, 18 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With K. Mun.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2606.05140",
+          "label": "Phase transitions for the noisy transformer model in arbitrary dimension",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "02750498967567779668d3f37b65bf212a8557bf0a73304dc148d81c61f35eb9",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:6:0275049896756777"
+    },
+    {
+      "section": "preprints",
+      "section_index": 7,
+      "title_as_listed": "Phase transitions in Doi–Onsager, Noisy Transformer, and other multimodal models",
+      "citation_text_as_listed": "With K. Mun. Phase transitions in Doi–Onsager, Noisy Transformer, and other multimodal models, 16 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With K. Mun.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2604.16288",
+          "label": "Phase transitions in Doi–Onsager, Noisy Transformer, and other multimodal models",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "a77194727849543edf8929ef29b8141435b3df2b35699e64711b076a5d19ccd5",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:7:a77194727849543e"
+    },
+    {
+      "section": "preprints",
+      "section_index": 8,
+      "title_as_listed": "Phase transitions and linear stability for the mean-field Kuramoto–Daido model",
+      "citation_text_as_listed": "With K. Mun. Phase transitions and linear stability for the mean-field Kuramoto–Daido model, 41 pp. (2026).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With K. Mun.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2602.14954",
+          "label": "Phase transitions and linear stability for the mean-field Kuramoto–Daido model",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8882f68b50cb2c22165b05f968f2df705f9c7913896256eea50c9a2f75effc2a",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:8:8882f68b50cb2c22"
+    },
+    {
+      "section": "preprints",
+      "section_index": 9,
+      "title_as_listed": "A sharp commutator estimate for all Riesz modulated energies",
+      "citation_text_as_listed": "With E. Hess-Childs and S. Serfaty. A sharp commutator estimate for all Riesz modulated energies, 45 pp. (2025).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With E. Hess-Childs and S. Serfaty.",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2511.13461",
+          "label": "A sharp commutator estimate for all Riesz modulated energies",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "96c4c4ae3733b6221b8012c0b0db22f474501f83aed125e710b3210b7134b23b",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:9:96c4c4ae3733b622"
+    },
+    {
+      "section": "preprints",
+      "section_index": 10,
+      "title_as_listed": "Relative entropy and modulated free energy without confinement via self-similar transformation",
+      "citation_text_as_listed": "With S. Serfaty. Relative entropy and modulated free energy without confinement via self-similar transformation, 30 pp. (2024).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Serfaty.",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2402.13977",
+          "label": "Relative entropy and modulated free energy without confinement via self-similar transformation",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "bbf0a623790fd641bcc7fea93a320f13fa0a77e86bda186e3d23addef6233fb9",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:10:bbf0a623790fd641"
+    },
+    {
+      "section": "preprints",
+      "section_index": 11,
+      "title_as_listed": "On the wave turbulence theory for a stochastic KdV type equation—generalization for the inhomogeneous kinetic limit",
+      "citation_text_as_listed": "With A. Hannani, G. Staffilani, and M.B. Tran. On the wave turbulence theory for a stochastic KdV type equation—generalization for the inhomogeneous kinetic limit, 109 pp. (2022).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With A. Hannani, G. Staffilani, and M.B. Tran.",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2210.17445",
+          "label": "On the wave turbulence theory for a stochastic KdV type equation—generalization for the inhomogeneous kinetic limit",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "6c579117c6df2f09dbf8a20c55ee6c0d1f1ebf899ae4811181440a540860d9b9",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:11:6c579117c6df2f09"
+    },
+    {
+      "section": "preprints",
+      "section_index": 12,
+      "title_as_listed": "From Quantum Many-Body Systems to Ideal Fluids",
+      "citation_text_as_listed": "From Quantum Many-Body Systems to Ideal Fluids, 29 pp. (2021).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2021"
+      ],
+      "year_as_listed": "2021",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2110.04195",
+          "label": "From Quantum Many-Body Systems to Ideal Fluids",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "cecb554d2628f1d07b061e42b603f6a5131950ecdbf63b8c69d0e642c7948660",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:12:cecb554d2628f1d0"
+    },
+    {
+      "section": "preprints",
+      "section_index": 13,
+      "title_as_listed": "Global Well-Posedness and Scattering for the Hartree Equation at \\(L^2\\)-Critical Regularity",
+      "citation_text_as_listed": "Global Well-Posedness and Scattering for the Hartree Equation at \\(L^2\\)-Critical Regularity, 137 pp. (2019).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2019"
+      ],
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.dropbox.com/s/9slmqlwebnb6ziq/Hartree_Paper_Web.pdf?dl=0",
+          "label": "Global Well-Posedness and Scattering for the Hartree Equation at \\(L^2\\)-Critical Regularity",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "afb95918cc5f342bb59f3253222faf0d38efb3592bce150412d644e811ca8295",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:13:afb95918cc5f342b"
+    },
+    {
+      "section": "preprints",
+      "section_index": 14,
+      "title_as_listed": "Global Well-Posedness and Scattering for the Elliptic–Elliptic Davey–Stewartson System at \\(L^2\\)-Critical Regularity",
+      "citation_text_as_listed": "Global Well-Posedness and Scattering for the Elliptic–Elliptic Davey–Stewartson System at \\(L^2\\)-Critical Regularity, 129 pp. (2018).",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2018"
+      ],
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/1808.01955",
+          "label": "Global Well-Posedness and Scattering for the Elliptic–Elliptic Davey–Stewartson System at \\(L^2\\)-Critical Regularity",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "920a75849885e3fe59c4b032f84b500ac09135261b92914e04a8260971670a41",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:preprints:14:920a75849885e3fe"
+    },
+    {
+      "section": "proceedings_surveys",
+      "section_index": 1,
+      "title_as_listed": "Commutators, mean-field, and supercritical mean-field limits for Coulomb/Riesz gases",
+      "citation_text_as_listed": "Commutators, mean-field, and supercritical mean-field limits for Coulomb/Riesz gases. Journées équations aux dérivées partielles (2025), Talk no. 7, 32 pp. doi:10.5802/jedp.698.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://proceedings.centre-mersenne.org/articles/10.5802/jedp.698/",
+          "label": "Commutators, mean-field, and supercritical mean-field limits for Coulomb/Riesz gases",
+          "description": ""
+        },
+        {
+          "url": "https://doi.org/10.5802/jedp.698",
+          "label": "doi:10.5802/jedp.698",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.5802/jedp.698",
+      "row_dom_sha256": "d691244ec74c72639fd84811cf12f868d30b311a66de9e4aa2c36c973d9c4b52",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:proceedings_surveys:1:d691244ec74c7263"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 1,
+      "title_as_listed": "Another look at regularity in transport-commutator estimates",
+      "citation_text_as_listed": "With E. Hess-Childs and S. Serfaty. Another look at regularity in transport-commutator estimates. Comptes Rendus. Mathématique 364 (2026), 437–478. doi:10.5802/crmath.837.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With E. Hess-Childs and S. Serfaty.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://comptes-rendus.academie-sciences.fr/mathematique/articles/10.5802/crmath.837/",
+          "label": "Another look at regularity in transport-commutator estimates",
+          "description": ""
+        },
+        {
+          "url": "https://doi.org/10.5802/crmath.837",
+          "label": "doi:10.5802/crmath.837",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.5802/crmath.837",
+      "row_dom_sha256": "c7bb1642f5287cacd393b7a20c57e24a332da34fdb4616495278d5e9e4188696",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:1:c7bb1642f5287cac"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 2,
+      "title_as_listed": "Modulated logarithmic Sobolev inequalities and generation of chaos.",
+      "citation_text_as_listed": "With S. Serfaty. Modulated logarithmic Sobolev inequalities and generation of chaos. Ann. Fac. Sci. Toulouse Math. (6) 34 (2025), no. 1, 107–134. doi:10.5802/afst.1807.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Serfaty.",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.5802/afst.1807",
+          "label": "doi:10.5802/afst.1807",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.5802/afst.1807",
+      "row_dom_sha256": "7862783d28622be68dc0ada1fcb735cbe1b9ae1987dc357adb1acf9157a1ef1d",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:2:7862783d28622be6"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 3,
+      "title_as_listed": "The attractive log gas: stability, uniqueness, and propagation of chaos.",
+      "citation_text_as_listed": "With A. Chodron de Courcel and S. Serfaty. The attractive log gas: stability, uniqueness, and propagation of chaos. Commun. Am. Math. Soc. 5 (2025), 695–773. doi:10.1090/cams/55.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With A. Chodron de Courcel and S. Serfaty.",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1090/cams/55",
+          "label": "doi:10.1090/cams/55",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1090/cams/55",
+      "row_dom_sha256": "4b74b4152e6ca3951602e4daebb0865e2e1580793f683f358bf1ae004a1dda12",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:3:4b74b4152e6ca395"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 4,
+      "title_as_listed": "Sharp uniform-in-time mean-field convergence for singular periodic Riesz flows.",
+      "citation_text_as_listed": "With A. Chodron de Courcel and S. Serfaty. Sharp uniform-in-time mean-field convergence for singular periodic Riesz flows. Ann. Inst. H. Poincaré C Anal. Non Linéaire 42 (2025), no. 2, 391–472. doi:10.4171/AIHPC/105.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With A. Chodron de Courcel and S. Serfaty.",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.4171/AIHPC/105",
+          "label": "doi:10.4171/AIHPC/105",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.4171/AIHPC/105",
+      "row_dom_sha256": "8de923c7d1e688947f05cd9e147d521f690538866f64873665a59b7cd44d1041",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:4:8de923c7d1e68894"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 5,
+      "title_as_listed": "A Rigorous Derivation of the Hamiltonian Structure for the Vlasov Equation.",
+      "citation_text_as_listed": "With J.K. Miller, A.R. Nahmod, N. Pavlović, and G. Staffilani. A Rigorous Derivation of the Hamiltonian Structure for the Vlasov Equation. Forum Math. Sigma 11 (2023), Paper No. e77. doi:10.1017/fms.2023.72.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With J.K. Miller, A.R. Nahmod, N. Pavlović, and G. Staffilani.",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1017/fms.2023.72",
+          "label": "doi:10.1017/fms.2023.72",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1017/fms.2023.72",
+      "row_dom_sha256": "4093d37a36b34ce2908fbebaa71d93efb35aee598b461f26d3cd748647e607fa",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:5:4093d37a36b34ce2"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 6,
+      "title_as_listed": "The Lake equation as a supercritical mean-field limit.",
+      "citation_text_as_listed": "With S. Serfaty. The Lake equation as a supercritical mean-field limit. J. Éc. polytech. Math. 12 (2025), 1019–1068. doi:10.5802/jep.305.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Serfaty.",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.5802/jep.305",
+          "label": "doi:10.5802/jep.305",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.5802/jep.305",
+      "row_dom_sha256": "39aa99064f518ab47169d5a7d0ff2c85950c2efa43097f58baa975399e2f9837",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:6:39aa99064f518ab4"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 7,
+      "title_as_listed": "Sharp commutator estimates of all order for Coulomb and Riesz modulated energies.",
+      "citation_text_as_listed": "With S. Serfaty. Sharp commutator estimates of all order for Coulomb and Riesz modulated energies. Comm. Pure Appl. Math. 79 (2026), no. 2, 207–292. doi:10.1002/cpa.70010.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Serfaty.",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1002/cpa.70010",
+          "label": "doi:10.1002/cpa.70010",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1002/cpa.70010",
+      "row_dom_sha256": "f9041fba19b29bb72996dc3b966eb29eefaa6176992bfc1653779bc3ecf3112f",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:7:f9041fba19b29bb7"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 8,
+      "title_as_listed": "Global Solutions of Aggregation Equations and Other Flows with Random Diffusion.",
+      "citation_text_as_listed": "With G. Staffilani. Global Solutions of Aggregation Equations and Other Flows with Random Diffusion. Probab. Theory Related Fields 185 (2023), no. 3–4, 1219–1262. doi:10.1007/s00440-022-01171-8.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With G. Staffilani.",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1007/s00440-022-01171-8",
+          "label": "doi:10.1007/s00440-022-01171-8",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00440-022-01171-8",
+      "row_dom_sha256": "cfafaf3497b2abb7faa0d741fc6ef6eee52bb7f1483094b5ea671f001d16c14d",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:8:cfafaf3497b2abb7"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 9,
+      "title_as_listed": "Global-in-time mean-field convergence for singular Riesz-type diffusive flows.",
+      "citation_text_as_listed": "With S. Serfaty. Global-in-time mean-field convergence for singular Riesz-type diffusive flows. Ann. Appl. Probab. 33 (2023), no. 2, 954–998. doi:10.1214/22-AAP1833.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Serfaty.",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1214/22-AAP1833",
+          "label": "doi:10.1214/22-AAP1833",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1214/22-AAP1833",
+      "row_dom_sha256": "53e963bafb052f346a0cc50f55702a5905d99b327c13cfad5fc15ae1bcdfffc2",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:9:53e963bafb052f34"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 10,
+      "title_as_listed": "Mean-field limits of Riesz-type singular flows.",
+      "citation_text_as_listed": "With Q.H. Nguyen and S. Serfaty. Mean-field limits of Riesz-type singular flows. Ars Inven. Anal. (2022), Paper No. 4, 45 pp. doi:10.15781/NVV7-JY87.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With Q.H. Nguyen and S. Serfaty.",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.15781/NVV7-JY87",
+          "label": "doi:10.15781/NVV7-JY87",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.15781/NVV7-JY87",
+      "row_dom_sha256": "8b3d22633d2833a82a701412ee7f62488090ec256f41532e052f31ce15996613",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:10:8b3d22633d2833a8"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 11,
+      "title_as_listed": "On the Rigorous Derivation of the Incompressible Euler Equation from Newton’s Second Law.",
+      "citation_text_as_listed": "On the Rigorous Derivation of the Incompressible Euler Equation from Newton’s Second Law. Lett. Math. Phys. 113 (2023), no. 1, Paper No. 13. doi:10.1007/s11005-023-01630-w.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1007/s11005-023-01630-w",
+          "label": "doi:10.1007/s11005-023-01630-w",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1007/s11005-023-01630-w",
+      "row_dom_sha256": "cefdada690167d4f491d9bcb0a47d08f55227d46cec1b12f98a07d5931f7244d",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:11:cefdada690167d4f"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 12,
+      "title_as_listed": "Uniqueness of solutions to the spectral hierarchy in kinetic wave turbulence theory.",
+      "citation_text_as_listed": "With G. Staffilani. Uniqueness of solutions to the spectral hierarchy in kinetic wave turbulence theory. Phys. D 433 (2022), Paper No. 133148, 16 pp. doi:10.1016/j.physd.2021.133148.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With G. Staffilani.",
+      "year_candidates_from_text": [
+        "2021",
+        "2022"
+      ],
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1016/j.physd.2021.133148",
+          "label": "doi:10.1016/j.physd.2021.133148",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1016/j.physd.2021.133148",
+      "row_dom_sha256": "04f589cd9be0c6dc741dc88ba5570bd0f45b446fc6ed6e912b6fe68e93a48020",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:12:04f589cd9be0c6dc"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 13,
+      "title_as_listed": "The Mean-Field Limit of Stochastic Point Vortex Systems with Multiplicative Noise",
+      "citation_text_as_listed": "The Mean-Field Limit of Stochastic Point Vortex Systems with Multiplicative Noise, 34 pp. (2020), accepted by Comm. Pure Appl. Math.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2020"
+      ],
+      "year_as_listed": "2020",
+      "links_as_listed": [
+        {
+          "url": "https://arxiv.org/abs/2011.12180",
+          "label": "The Mean-Field Limit of Stochastic Point Vortex Systems with Multiplicative Noise",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "b66b9a87b83a2065086d28fb797345824926b2d2a872f40888fe8ae0bcbb1758",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:13:b66b9a87b83a2065"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 14,
+      "title_as_listed": "The mean-field approximation for higher-dimensional Coulomb flows in the scaling-critical \\(L^\\infty\\) space.",
+      "citation_text_as_listed": "The mean-field approximation for higher-dimensional Coulomb flows in the scaling-critical \\(L^\\infty\\) space. Nonlinearity 35 (2022), no. 6, 2722–2766. doi:10.1088/1361-6544/ac5fd6.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1088/1361-6544/ac5fd6",
+          "label": "doi:10.1088/1361-6544/ac5fd6",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1088/1361-6544/ac5fd6",
+      "row_dom_sha256": "15077e737662c53bec4336d5e54cac37b79b475eec1e79a4df3a6c27c816e167",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:14:15077e737662c53b"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 15,
+      "title_as_listed": "Mean-field convergence of point vortices to the incompressible Euler equation with vorticity in \\(L^\\infty\\).",
+      "citation_text_as_listed": "Mean-field convergence of point vortices to the incompressible Euler equation with vorticity in \\(L^\\infty\\). Arch. Ration. Mech. Anal. 243 (2022), no. 3, 1361–1431. doi:10.1007/s00205-021-01735-3.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1007/s00205-021-01735-3",
+          "label": "doi:10.1007/s00205-021-01735-3",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00205-021-01735-3",
+      "row_dom_sha256": "169e532aeb8de30249f7109b3f5fa2447988b1542bf6e072237bbba92d1d8f99",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:15:169e532aeb8de302"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 16,
+      "title_as_listed": "Trend to equilibrium for flows with random diffusion.",
+      "citation_text_as_listed": "With S. Aryan and G. Staffilani. Trend to equilibrium for flows with random diffusion. Int. Math. Res. Not. IMRN (2024), no. 10, 8764–8781. doi:10.1093/imrn/rnae013.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With S. Aryan and G. Staffilani.",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1093/imrn/rnae013",
+          "label": "doi:10.1093/imrn/rnae013",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1093/imrn/rnae013",
+      "row_dom_sha256": "85c1abcfaadebf7334ddb9c948cde8664d0bf6d2f1d001a607fc374c5240361e",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:16:85c1abcfaadebf73"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 17,
+      "title_as_listed": "The Mean-Field Limit of the Lieb–Liniger Model.",
+      "citation_text_as_listed": "The Mean-Field Limit of the Lieb–Liniger Model. Discrete Contin. Dyn. Syst. 42 (2022), no. 6, 3005–3037. doi:10.3934/dcds.2022006.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.3934/dcds.2022006",
+          "label": "doi:10.3934/dcds.2022006",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.3934/dcds.2022006",
+      "row_dom_sha256": "8dda959626e15528ffe11f596ec38061ea5c7c73c0164ee2cb672803e5f36575",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:17:8dda959626e15528"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 18,
+      "title_as_listed": "Poisson commuting energies for a system of infinitely many bosons.",
+      "citation_text_as_listed": "With D. Mendelson, A.R. Nahmod, N. Pavlović, and G. Staffilani. Poisson commuting energies for a system of infinitely many bosons. Adv. Math. 406 (2022), Paper No. 108525, 148 pp. doi:10.1016/j.aim.2022.108525.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With D. Mendelson, A.R. Nahmod, N. Pavlović, and G. Staffilani.",
+      "year_candidates_from_text": [
+        "2022"
+      ],
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1016/j.aim.2022.108525",
+          "label": "doi:10.1016/j.aim.2022.108525",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1016/j.aim.2022.108525",
+      "row_dom_sha256": "64fe0511534ec21b602afa5f622d0e0c7e44ae114bd2e89f0c0df27575a13431",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:18:64fe0511534ec21b"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 19,
+      "title_as_listed": "A Rigorous Derivation of the Hamiltonian Structure for the Nonlinear Schrödinger Equation.",
+      "citation_text_as_listed": "With D. Mendelson, A.R. Nahmod, N. Pavlović, and G. Staffilani. A Rigorous Derivation of the Hamiltonian Structure for the Nonlinear Schrödinger Equation. Adv. Math. 365 (2020), 107054, 115 pp. doi:10.1016/j.aim.2020.107054.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "With D. Mendelson, A.R. Nahmod, N. Pavlović, and G. Staffilani.",
+      "year_candidates_from_text": [
+        "2020"
+      ],
+      "year_as_listed": "2020",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1016/j.aim.2020.107054",
+          "label": "doi:10.1016/j.aim.2020.107054",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1016/j.aim.2020.107054",
+      "row_dom_sha256": "e96550530a5aeb24a775149324e4067fc702d63300b63fe2dcaa071157e414c0",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:19:e96550530a5aeb24"
+    },
+    {
+      "section": "published_papers",
+      "section_index": 20,
+      "title_as_listed": "Justification of the Point Vortex Approximation for Modified Surface Quasi-Geostrophic Equations.",
+      "citation_text_as_listed": "Justification of the Point Vortex Approximation for Modified Surface Quasi-Geostrophic Equations. SIAM J. Math. Anal. 52 (2020), no. 2, 1690–1728. doi:10.1137/19M1262620.",
+      "authors_as_listed": [],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2020"
+      ],
+      "year_as_listed": "2020",
+      "links_as_listed": [
+        {
+          "url": "https://doi.org/10.1137/19M1262620",
+          "label": "doi:10.1137/19M1262620",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": "10.1137/19M1262620",
+      "row_dom_sha256": "a8e375984d2c1776ba6a0d14549003eed199799013768e59dd7bd8ae8cdf8757",
+      "observation_id": "researcher-bibliography:person-matthewrosenzweig-94bdde39:published_papers:20:a8e375984d2c1776"
+    }
+  ],
+  "mapping_status": "source_only_unreconciled",
+  "redactions": []
+}
