@@ -14,6 +14,11 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .corrections import (
+    DEFAULT_CORRECTIONS_PATH,
+    apply_corrections,
+    load_corrections,
+)
 from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
 from .dataset import build_dataset_tables
 from .doi_aliases import (
@@ -1072,6 +1077,7 @@ def publish_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
+    corrections_path: Path = DEFAULT_CORRECTIONS_PATH,
     doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
@@ -1089,8 +1095,10 @@ def publish_snapshot(
     doi_aliases = load_doi_aliases(doi_aliases_path)
     validate_doi_aliases(frame, doi_aliases, exclusions)
     _require_physics_review_ready(frame, snapshot_path, exclusions)
+    corrections = load_corrections(corrections_path)
+    corrected_frame, corrected_count = apply_corrections(frame, corrections)
     enriched, new_embedding_count = add_embeddings(
-        frame,
+        corrected_frame,
         hf_token=hf_token,
         encoder=encoder,
     )
@@ -1162,6 +1170,8 @@ def publish_snapshot(
             else 0
         ),
         "reviewed_exclusions_sha256": sha256_file(exclusions_path),
+        "reviewed_metadata_corrections": corrected_count,
+        "reviewed_metadata_corrections_sha256": sha256_file(corrections_path),
         "reviewed_doi_aliases": len(doi_aliases),
         "reviewed_doi_aliases_sha256": sha256_file(doi_aliases_path),
         "profile_count": int(
@@ -1206,6 +1216,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--status-file", type=Path, default=DEFAULT_STATUS_PATH)
     parser.add_argument(
         "--reviewed-exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH
+    )
+    parser.add_argument(
+        "--reviewed-metadata-corrections",
+        type=Path,
+        default=DEFAULT_CORRECTIONS_PATH,
     )
     parser.add_argument(
         "--reviewed-doi-aliases", type=Path, default=DEFAULT_DOI_ALIASES_PATH
@@ -1275,6 +1290,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             memberships_path=args.memberships,
             departments_path=args.departments,
             exclusions_path=args.reviewed_exclusions,
+            corrections_path=args.reviewed_metadata_corrections,
             doi_aliases_path=args.reviewed_doi_aliases,
         )
         status.update({"status": "success", **result, "error_type": None})

@@ -1472,7 +1472,39 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     tmp_path,
     reuse_order,
 ) -> None:
-    frame = pandas.DataFrame({"scholar_id": ["one", "two", "one"]})
+    frame = pandas.DataFrame(
+        {
+            "scholar_id": ["one", "two", "one"],
+            "author_pub_id": ["one:a", "two:a", "one:b"],
+            "source_type": ["scholar"] * 3,
+            "title": ["Damaged Title", "Second Title", "Third Title"],
+            "year": [1712, 2020, 2021],
+            "venue": ["Journal A", "Journal B", "Journal C"],
+        }
+    )
+    corrections_path = tmp_path / "metadata-corrections.json"
+    corrections_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "corrections": [
+                    {
+                        "scholar_id": "one",
+                        "author_pub_id": "one:a",
+                        "expected": {
+                            "title": "Damaged Title",
+                            "year": 1712,
+                            "venue": "Journal A",
+                        },
+                        "corrected": {"year": 2011},
+                        "basis": "Primary journal year corrects the Scholar field.",
+                        "evidence_url": "https://example.test/primary",
+                        "verified_at": "2026-10-25",
+                    }
+                ],
+            }
+        )
+    )
     tables = {
         name: pandas.DataFrame({"value": [1, 2]}) for name in publisher.DATASET_CONFIGS
     }
@@ -1553,6 +1585,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         tmp_path / "snapshot.parquet",
         tmp_path / "manifest.json",
         hf_token="token",
+        corrections_path=corrections_path,
     )
     assert result["dataset_commits"] == {
         name: f"{name}-commit" for name in publisher.DATASET_CONFIGS
@@ -1560,6 +1593,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert observed_layouts == [reused_layouts if reuse_order else original_layouts]
     assert result["profile_count"] == 2
     assert result["new_embedding_count"] == 2
+    assert result["reviewed_metadata_corrections"] == 1
+    assert (
+        result["reviewed_metadata_corrections_sha256"]
+        == hashlib.sha256(corrections_path.read_bytes()).hexdigest()
+    )
     assert result["mapped_works"] == 1
     assert result["excluded_works"] == 1
     assert result["keywords"] == 1
@@ -1570,7 +1608,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:
-    frame = pandas.DataFrame({"scholar_id": ["one"]})
+    frame = pandas.DataFrame(
+        {
+            "scholar_id": ["one"],
+            "author_pub_id": ["one:a"],
+            "source_type": ["scholar"],
+        }
+    )
     tables = {
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
@@ -1686,6 +1730,73 @@ def test_physics_review_gate_requires_valid_released_status(tmp_path) -> None:
 
     status_path.write_text(json.dumps(ready))
     publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+
+def test_publish_snapshot_corrects_metadata_before_embedding(
+    monkeypatch, tmp_path
+) -> None:
+    import json
+
+    from map_of_research.corrections import (
+        DEFAULT_CORRECTIONS_PATH,
+        load_corrections,
+    )
+
+    correction = load_corrections(DEFAULT_CORRECTIONS_PATH)[
+        ("8iLLOQgAAAAJ", "8iLLOQgAAAAJ:TesyEGJKHF4C")
+    ]
+    selected = next(
+        entry
+        for entry in json.loads(DEFAULT_CORRECTIONS_PATH.read_text())["corrections"]
+        if entry["author_pub_id"] == "8iLLOQgAAAAJ:TesyEGJKHF4C"
+    )
+    corrections_path = tmp_path / "selected-correction.json"
+    corrections_path.write_text(
+        json.dumps({"schema_version": 1, "corrections": [selected]})
+    )
+    doi_aliases_path = tmp_path / "empty-doi-aliases.json"
+    doi_aliases_path.write_text(json.dumps({"schema_version": 1, "aliases": []}))
+    raw = json.dumps({"pub_year": "1712", "title": correction.expected["title"]})
+    frame = pandas.DataFrame(
+        [
+            {
+                "scholar_id": "8iLLOQgAAAAJ",
+                "author_pub_id": "8iLLOQgAAAAJ:TesyEGJKHF4C",
+                "source_type": "scholar",
+                "source_record_json": raw,
+                **correction.expected,
+            }
+        ]
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (frame, {"created_at_utc": "2026-10-25T00:00:00Z"}),
+    )
+
+    class BeforeUpload(Exception):
+        pass
+
+    def check_before_embedding(effective, **kwargs):
+        assert kwargs["hf_token"] == "token"
+        assert effective.loc[0, "year"] == 2011
+        assert effective.loc[0, "source_record_json"] == raw
+        assert effective.loc[0, "metadata_correction_evidence_url"] == (
+            correction.evidence_url
+        )
+        assert frame.loc[0, "year"] == 1712
+        raise BeforeUpload
+
+    monkeypatch.setattr(publisher, "add_embeddings", check_before_embedding)
+    with pytest.raises(BeforeUpload):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            corrections_path=corrections_path,
+            doi_aliases_path=doi_aliases_path,
+        )
 
 
 def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:

@@ -57,6 +57,16 @@ normalized source record as JSON, fetched timestamp, memberships, work match
 method, title embedding, `map_eligible`, `map_exclusion_reasons`, and the quality
 assessment version. Reviewed exclusions add a reason code, specific reason,
 evidence URL, and verification date on the same retained row.
+An exact-ID reviewed metadata correction may replace the effective title, year,
+or venue before embedding and work matching. The raw snapshot and
+`source_record_json` keep the Scholar values. The published row records the
+corrected field names, basis, evidence URL, and verification date in
+`metadata_correction_*` fields. The publisher checks the original title, year,
+and venue before applying a correction, so a changed Scholar source fails
+publication until the decision is reviewed again. Once any Scholar row from a
+profile with declared corrections is present, every declared exact ID for that
+profile must occur exactly once. A profile staged for a later snapshot may be
+absent entirely.
 
 ## `works`
 
@@ -189,6 +199,12 @@ before embedding and upload, writes its checksum in the upload receipt, and
 applies the decision only to the named observation. A later valid observation
 of the same work may still appear on the map, with attribution only to the
 eligible source rows.
+
+`data/curated/scholar-metadata-corrections.json` contains similarly exact,
+source-backed effective-field repairs. The upload receipt records the file
+checksum and count of applied repairs. A correction never edits the raw cache
+or raw snapshot; it only changes the normalized fields used for embeddings,
+quality assessment, canonical works, and browser artifacts.
 
 No single missing bibliographic field, citation count, or embedding position is
 an exclusion rule. After the title-level policy, a provisional detail hierarchy
