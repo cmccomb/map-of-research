@@ -6,6 +6,8 @@
       "scholar_id": "0e1jwkkAAAAJ",
       "expected_source_rows": 361,
       "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "expected_reviewed_exclusion_rows": 31,
+      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
       "held_observations": [
         {
           "capture_row_index": 214,

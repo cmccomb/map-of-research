@@ -116,6 +116,10 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
     assert profile.cache_sha256 == (
         "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c"
     )
+    assert profile.expected_reviewed_exclusion_rows == 31
+    assert profile.reviewed_exclusion_ids_sha256 == (
+        "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979"
+    )
     assert [
         (item.capture_row_index, item.author_pub_id)
         for item in profile.held_observations
@@ -142,6 +146,8 @@ def _entry():
         "scholar_id": SCHOLAR,
         "expected_source_rows": 2,
         "cache_sha256": "a" * 64,
+        "expected_reviewed_exclusion_rows": 0,
+        "reviewed_exclusion_ids_sha256": "",
         "held_observations": [
             {
                 "capture_row_index": 1,
@@ -183,6 +189,13 @@ def test_loader_rejects_structure(tmp_path, body, message):
         ("expected_source_rows", True),
         ("expected_source_rows", 0),
         ("cache_sha256", "bad"),
+        ("expected_reviewed_exclusion_rows", None),
+        ("expected_reviewed_exclusion_rows", True),
+        ("expected_reviewed_exclusion_rows", -1),
+        ("expected_reviewed_exclusion_rows", 1),
+        ("expected_reviewed_exclusion_rows", 2),
+        ("reviewed_exclusion_ids_sha256", None),
+        ("reviewed_exclusion_ids_sha256", "bad"),
         ("held_observations", []),
         ("held_observations", None),
     ],
@@ -245,6 +258,51 @@ def test_complete_source_and_exact_hold_validate(tmp_path):
     assert holds == {(SCHOLAR, HELD): _hold()}
     assert audit[0]["held_observation_rows"] == 1
     assert audit[0]["held_ids_sha256"] == hold_ids_sha256({HELD})
+    assert audit[0]["reviewed_exclusion_rows"] == 0
+    assert audit[0]["reviewed_exclusion_ids_sha256"] == ""
+
+
+@pytest.mark.parametrize("change", ["missing", "extra", "different"])
+def test_reviewed_exclusion_pin_fails_on_drift(tmp_path, change):
+    cache_dir, profile, decision, receipt = _source(tmp_path)
+    reviewed_id = RETAINED
+    profile = replace(
+        profile,
+        expected_reviewed_exclusion_rows=1,
+        reviewed_exclusion_ids_sha256=hold_ids_sha256({reviewed_id}),
+    )
+    excluded = {(SCHOLAR, reviewed_id)}
+    holds, audit = _validate(
+        cache_dir, profile, decision, receipt, excluded_ids=excluded
+    )
+    assert set(holds) == {(SCHOLAR, HELD)}
+    assert audit[0]["reviewed_exclusion_rows"] == 1
+    if change == "missing":
+        excluded.clear()
+    elif change == "extra":
+        excluded.add((SCHOLAR, f"{SCHOLAR}:other"))
+    else:
+        excluded = {(SCHOLAR, f"{SCHOLAR}:different")}
+    with pytest.raises(ValueError, match="reviewed exclusions differ"):
+        _validate(cache_dir, profile, decision, receipt, excluded_ids=excluded)
+
+
+def test_reviewed_exclusion_must_belong_to_pinned_source(tmp_path):
+    cache_dir, profile, decision, receipt = _source(tmp_path)
+    absent_id = f"{SCHOLAR}:absent"
+    profile = replace(
+        profile,
+        expected_reviewed_exclusion_rows=1,
+        reviewed_exclusion_ids_sha256=hold_ids_sha256({absent_id}),
+    )
+    with pytest.raises(ValueError, match="exclusions lack source IDs"):
+        _validate(
+            cache_dir,
+            profile,
+            decision,
+            receipt,
+            excluded_ids={(SCHOLAR, absent_id)},
+        )
 
 
 @pytest.mark.parametrize(
@@ -350,6 +408,12 @@ def test_cache_or_index_drift_fails_before_upload(tmp_path, change):
 @pytest.mark.parametrize("conflict", ["excluded", "confirmed"])
 def test_hold_cannot_reuse_exact_exclusion_or_positive_attribution(tmp_path, conflict):
     cache_dir, profile, decision, receipt = _source(tmp_path)
+    if conflict == "excluded":
+        profile = replace(
+            profile,
+            expected_reviewed_exclusion_rows=1,
+            reviewed_exclusion_ids_sha256=hold_ids_sha256({HELD}),
+        )
     with pytest.raises(ValueError, match="review conflicts"):
         _validate(
             cache_dir,

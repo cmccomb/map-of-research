@@ -10,8 +10,9 @@ The paired source capture and receipt are staged in
 This is a complete *visible profile* capture,
 not a claim that Scholar lists every publication in Collins's career.
 
-The 31 exact source-backed exclusions already on producer `main` remain
-exclusions. The following four rows lack enough evidence for a positive
+The 31 exact source-backed exclusions in draft producer PR #247 remain
+exclusions. This hold PR is stacked on #247 so those decisions accompany any
+Collins release. The following four rows lack enough evidence for a positive
 attribution or output-type decision. They are **provisional holds, not false
 attributions**:
 
@@ -29,18 +30,19 @@ explain why these rows remain unresolved. The exact Scholar citation URLs are re
 ID in the pinned cache.
 
 The producer now requires a released profile decision to pin the 361-row cache,
-the four held IDs, their count, and their SHA-256. Before any dataset upload it
-checks that the source snapshot has the complete cache, each held ID still
-matches its original capture row, and no held observation contributes an
+the four held IDs, their count, and their SHA-256. The hold manifest separately
+pins the exact set of 31 reviewed exclusions by count and sorted-ID SHA-256.
+Before any dataset upload it checks that the source snapshot has the complete
+cache, each held ID still matches its original capture row, every reviewed
+exclusion ID belongs to that source, and no held observation contributes an
 authorship or mapped-work source. All 361 rows remain in the public
 `profile_publications` table if released; held rows carry
 `attribution_provisional_hold` and `review_attribution_status=held`. The
 remaining rows pass the existing quality and exact-exclusion gates. This
 decision does not individually certify all 326 other raw candidates.
 
-**Release dependency:** Keep this PR draft and unmerged until the central
-Donahue/Chien upload and live-map verification finish, draft source PR #118 is
-rebased and merged, and Collins's 31 exact exclusions from stacked producer PRs
-#119/#204 are confirmed on the resulting main branch. Rebuild a combined
-snapshot, run the complete-source coverage and no-upload table preview, and
-inspect the four held IDs before the next trusted upload.
+**Release dependency:** Keep this PR draft until producer PR #247 is reviewed
+and merged, this hold gate is reviewed on that producer base, and source PR
+#118 is validated with both producer decisions. Rebuild a combined snapshot,
+run the complete-source coverage and no-upload table preview, and inspect the
+four held IDs before the next trusted upload.

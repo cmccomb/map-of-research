@@ -32,6 +32,8 @@ class ProvisionalHoldProfile:
     expected_source_rows: int
     cache_sha256: str
     held_observations: tuple[ProvisionalHold, ...]
+    expected_reviewed_exclusion_rows: int = 0
+    reviewed_exclusion_ids_sha256: str = ""
 
 
 def _dated_https(url: object, date: object) -> bool:
@@ -69,6 +71,8 @@ def load_provisional_holds(path: Path) -> tuple[ProvisionalHoldProfile, ...]:
         count = entry.get("expected_source_rows")
         digest = entry.get("cache_sha256")
         held = entry.get("held_observations")
+        exclusion_count = entry.get("expected_reviewed_exclusion_rows")
+        exclusion_digest = entry.get("reviewed_exclusion_ids_sha256")
         if (
             not isinstance(person_id, str)
             or not person_id.startswith("person-")
@@ -82,6 +86,15 @@ def load_provisional_holds(path: Path) -> tuple[ProvisionalHoldProfile, ...]:
             or re.fullmatch(r"[0-9a-f]{64}", digest) is None
             or not isinstance(held, list)
             or not held
+            or type(exclusion_count) is not int
+            or exclusion_count < 0
+            or exclusion_count >= count
+            or not isinstance(exclusion_digest, str)
+            or (
+                re.fullmatch(r"[0-9a-f]{64}", exclusion_digest) is None
+                if exclusion_count
+                else bool(exclusion_digest)
+            )
         ):
             raise ValueError("Provisional-hold profile has invalid source fields")
         rows: list[ProvisionalHold] = []
@@ -129,6 +142,8 @@ def load_provisional_holds(path: Path) -> tuple[ProvisionalHoldProfile, ...]:
                 expected_source_rows=count,
                 cache_sha256=digest,
                 held_observations=tuple(rows),
+                expected_reviewed_exclusion_rows=exclusion_count,
+                reviewed_exclusion_ids_sha256=exclusion_digest,
             )
         )
         seen_people.add(person_id)
@@ -161,6 +176,19 @@ def validate_provisional_holds(
         decision = expected[profile.scholar_id]
         receipt = receipts.get(profile.scholar_id)
         ids = {item.author_pub_id for item in profile.held_observations}
+        exclusion_ids = {
+            author_pub_id
+            for scholar_id, author_pub_id in excluded_ids
+            if scholar_id == profile.scholar_id
+        }
+        if (
+            len(exclusion_ids) != profile.expected_reviewed_exclusion_rows
+            or (hold_ids_sha256(exclusion_ids) if exclusion_ids else "")
+            != profile.reviewed_exclusion_ids_sha256
+        ):
+            raise ValueError(
+                f"Provisional-hold reviewed exclusions differ: {profile.scholar_id}"
+            )
         if (
             decision.state != "released"
             or decision.person_id != profile.person_id
@@ -198,6 +226,13 @@ def validate_provisional_holds(
             raise ValueError(
                 f"Provisional-hold cache indices differ: {profile.scholar_id}"
             )
+        if not exclusion_ids <= {
+            item.get("author_pub_id") for item in publications if isinstance(item, dict)
+        }:
+            raise ValueError(
+                "Provisional-hold reviewed exclusions lack source IDs: "
+                f"{profile.scholar_id}"
+            )
         for item in profile.held_observations:
             row = indexed.get(item.capture_row_index)
             key = (profile.scholar_id, item.author_pub_id)
@@ -220,6 +255,8 @@ def validate_provisional_holds(
                 "held_observation_rows": len(ids),
                 "cache_sha256": profile.cache_sha256,
                 "held_ids_sha256": hold_ids_sha256(ids),
+                "reviewed_exclusion_rows": len(exclusion_ids),
+                "reviewed_exclusion_ids_sha256": profile.reviewed_exclusion_ids_sha256,
             }
         )
     return holds, result

@@ -81,9 +81,11 @@ fails validation.
 type remains unresolved within a complete released Scholar capture. It is
 separate from the exact-exclusion manifest. Each profile pins its person, Scholar
 ID, source row count, and cache SHA-256. Each hold pins a capture row index,
-`author_pub_id`, source citation URL, reason, and date. The release decision
-also pins the hold count and sorted-ID SHA-256. Before any upload, the publisher
-checks this contract, preserves the held observations in `profile_publications`,
+`author_pub_id`, source citation URL, reason, and date. The hold profile also
+pins the count and sorted-ID SHA-256 of reviewed exclusions that must be present
+for that source. The release decision pins the hold count and sorted-ID
+SHA-256. Before any upload, the publisher checks this contract, preserves the
+held observations in `profile_publications`,
 and rejects a held ID in any mapped work or authorship. The initial draft
 [Collins review](../../registry/reviews/2026-10-25-chem-collins-provisional-holds.md)
 names four held rows from his 361-row visible capture. Remaining rows still

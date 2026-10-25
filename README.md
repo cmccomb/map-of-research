@@ -212,7 +212,8 @@ observation of the same work exists. See `data/curated/README.md`.
 `data/curated/scholar-provisional-holds.json` is for unresolved individual rows,
 not evidence of a false attribution. Each held ID and original capture index
 must match a released, complete source cache; the profile-release decision pins
-the exact hold count and ID-set hash. Held rows remain auditable in
+the exact hold count and ID-set hash. The hold profile pins the exact reviewed
+exclusion set for that source as well. Held rows remain auditable in
 `profile_publications` with `attribution_provisional_hold`, while a pre-upload
 check rejects any held authorship or mapped-work source.
 
