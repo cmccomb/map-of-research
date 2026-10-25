@@ -16,6 +16,7 @@ This is a **review extraction**, not a Google Scholar capture or a released sour
 - 20 of 47 entries have a DOI link on the author page. The other 27 have **no DOI link there**; this does not establish that they lack a DOI.
 - 40 of 47 entries show a venue. The seven newest entries have no venue shown, though each has an author-hosted manuscript link.
 - The [DOI audit CSV](2026-10-25-math-gautam-iyer-doi-audit.csv) checks all 20 linked DOIs against the publisher-supplied Crossref [Works API](https://api.crossref.org/works/). Each DOI's registry author list includes an Iyer. Its SHA-256 is `188388e7b8bcbdcbeeea40946cd4baa27b91456d5075685a1215f6311e4017ee`.
+- A separate [unlinked DOI audit](2026-10-25-math-gautam-iyer-unlinked-doi-audit.json) reviews rows 32–34 from Crossref, arXiv, and publisher evidence. Its SHA-256 is `ffa1f0913353f1b7770a6cdb324fad5aea995d86744bd415c43c517461c99da9`. These DOI values were **not** linked from the author page; its 47 raw rows and 20 linked-DOI audit rows are unchanged.
 - No exact Google Scholar account is registered for Iyer in `registry/people.csv` at this review. If one is verified later, Scholar should remain the project's primary source for his displayed profile, with this author-site list used to inspect omissions and conflicts.
 
 ## Exact DOI and year reconciliation
@@ -37,8 +38,20 @@ Ten author-listed years differ from the linked DOI's Crossref publication year. 
 
 Row 22's author-page title, “Anomalous diffusion in one and two dimensional combs,” differs substantially from the DOI record. The [author-hosted manuscript](https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf) and [publisher PDF](https://www.intlpress.com/site/pub/files/_fulltext/journals/cms/2020/0018/0007/CMS-2020-0018-0007-a002.pdf) both title the work “Anomalous Diffusion in Comb-Shaped Domains and Graphs” and name Samuel Cohn, Gautam Iyer, James Nolen, and Robert L. Pego. The DOI belongs to that listed work; the author-page title and 2018 year remain in the raw capture as observed.
 
+## Three independently reviewed DOI identities
+
+All three author-listed years already equal the Crossref publication years, so these reviews change the DOI-backed work identity without changing the displayed year. The audit retains the author's original title, byline, and blank DOI field alongside the publisher title/byline, Crossref response hash, and evidence URLs.
+
+| Author-site row | Reviewed DOI | Independent evidence |
+| ---: | --- | --- |
+| 32 | `10.4310/cms.2015.v13.n1.a12` | [Communications in Mathematical Sciences publisher PDF](https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2015/0013/0001/CMS-2015-0013-0001-a012.pdf) and [arXiv:1308.4735](https://arxiv.org/abs/1308.4735) confirm the same five-author work; [Crossref](https://api.crossref.org/works/10.4310%2FCMS.2015.v13.n1.a12) records the 2015 journal DOI. |
+| 33 | `10.1214/14-aap1008` | [arXiv:1212.6451](https://arxiv.org/abs/1212.6451) explicitly links the journal DOI; the [IMS issue PDF](https://imstat.org/publications/aap/aap_25_2/AAP_25_2.pdf) and [Crossref](https://api.crossref.org/works/10.1214%2F14-AAP1008) confirm the Iyer–Leger–Pego article. |
+| 34 | `10.1063/1.4738637` | [arXiv:1202.5671](https://arxiv.org/abs/1202.5671) explicitly links the journal DOI; Iyer's [journal-form manuscript](https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf) and [Crossref](https://api.crossref.org/works/10.1063%2F1.4738637) confirm the Iyer–Pego–Zarnescu article. |
+
+These reviews do not alias Pego's distinct Scholar observations. Row 22's preprint/version family and row 4's arXiv native identifier also remain separate pending exact alias rules. No new Scholar account is claimed for Iyer.
+
 ## Staged ingestion decision
 
-The new [`author_site` capture manifest](../../data/author_sites/gautam-iyer-2026-10-25.json) binds the exact HTML, extraction CSV, and DOI audit. The loader requires all 47 rows, 20 exact DOI reviews, unique manuscript-backed native IDs, the official CMU identity link, and the row-44 thesis classification. It permits blank DOI and venue only for this distinct source type. A DOI is used for work identity only when it appears in the exact reviewed DOI ledger; DOI-like strings inside an unreviewed publisher link or raw JSON do not count. Free-text coauthor names do not create faculty edges.
+The [`author_site` capture manifest](../../data/author_sites/gautam-iyer-2026-10-25.json) binds the exact HTML, extraction CSV, 20 linked DOI reviews, and three independently reviewed unlinked DOI identities. The loader requires all 47 rows, exact review counts and row identities, unique manuscript-backed native IDs, the official CMU identity link, and the row-44 thesis classification. It permits blank DOI and venue only for this distinct source type. A DOI is used for work identity only when it appears in a pinned exact review; DOI-like strings inside an unreviewed publisher link or raw JSON do not count. Free-text coauthor names do not create faculty edges.
 
 **No source snapshot or public graph has been updated.** The capture is marked `staged_for_explicit_promotion`; an explicit CLI argument is needed to include it in a raw snapshot preview, and the publisher rejects any snapshot containing `author_site` until a separate exact release gate and consumer provenance display are ready. A verified Scholar account should later take precedence for populated profile fields while retaining these 47 source observations for reconciliation. The author site proves what its All Publications section displayed on the capture date; it does not certify lifetime completeness or provide citation counts.
