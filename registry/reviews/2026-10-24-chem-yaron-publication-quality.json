@@ -211,7 +211,7 @@
       "title": "Section III. B",
       "reason_code": "nonpublication",
       "reason": "\"Section III. B\" is a section fragment from Arindam Chowdhury's dissertation, not a standalone Yaron coauthored publication. CMU lists Chowdhury as the thesis author and Peteanu as advisor.",
-      "evidence_url": "https://www.cmu.edu/chemistry/pdf/doc_degr-recipient.pdf",
+      "evidence_url": "https://www.chem.cmu.edu/alumni/phd/doc_degr/doc_degr-recipient.pdf",
       "retained_parent_id": null
     },
     {
@@ -323,15 +323,6 @@
       "retained_parent_id": "HMSZExQAAAAJ:W5xh706n7nkC"
     },
     {
-      "index": 237,
-      "author_pub_id": "HMSZExQAAAAJ:WA5NYHcadZ8C",
-      "title": "Nitrogen Enriched Nanocarbons as a Metal-Free Water Reducing Catalysts",
-      "reason_code": "false_profile_attribution",
-      "reason": "The exact conference presentation was given by Eric Gottlieb; the captured author list has no Yaron. The Pitt author CV lists this presentation, separately from Yaron works.",
-      "evidence_url": "https://www.klic.pitt.edu/jak_cv.pdf",
-      "retained_parent_id": null
-    },
-    {
       "index": 239,
       "author_pub_id": "HMSZExQAAAAJ:KxtntwgDAa4C",
       "title": "Article pubs. acs. org/jchemeduc Terms of Use Evidence-Based Approaches to Improving Chemical Equilibrium Instruction",
@@ -405,6 +396,13 @@
       "author_pub_id": "HMSZExQAAAAJ:V3AGJWp-ZtQC",
       "title": "Electroabsorption of cyanine dimers bound to duplex DNA: Effect of exciton coupling on excited-state dipole moments and polarizabilities.",
       "review_note": "Identical title to row 200 but a different year and venue; could be a distinct meeting abstract.",
+      "evidence_url": null
+    },
+    {
+      "index": 237,
+      "author_pub_id": "HMSZExQAAAAJ:WA5NYHcadZ8C",
+      "title": "Nitrogen Enriched Nanocarbons as a Metal-Free Water Reducing Catalysts",
+      "review_note": "The saved Scholar author string is ambiguous (including DY), and the old Pitt CV only identifies Eric Gottlieb as presenter of the 2015 talk. The full conference byline is unavailable; do not infer that Yaron was absent or exclude this row without the original abstract.",
       "evidence_url": null
     },
     {
