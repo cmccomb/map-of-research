@@ -1,10 +1,10 @@
 # Chemistry source quality: Hyung J. Kim and Terrence J. Collins
 
 **Current integration (2026-10-25):** This branch carries only the 31 exact
-Collins decisions into producer `main` at `42a60ad`. All 1,150 exclusions
+Collins decisions into producer `main` at `22480ba`. All 1,157 exclusions
 already on that main are retained. The eight Kim decisions described below
 remain in draft PR #119; they are not part of this integration and Kim has no
-canonical author cache. The four unresolved Collins rows in the
+canonical author cache. The seven unresolved Collins rows in the
 [provisional-hold decision](2026-10-25-chem-collins-provisional-holds.md) are
 disjoint from the 31 exclusions and remain raw observations.
 
