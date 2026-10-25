@@ -1669,6 +1669,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         }
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
@@ -1783,6 +1784,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
                 if missing_prior and config == "works"
                 else [{"work_id": "old"}]
                 if config == "works"
+                else [{"person_id": "bio-person", "included_department_ids": ["bio"]}]
+                if config == "people"
                 else [{"author_pub_id": "one:a"}]
             )
 
@@ -1869,7 +1872,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
     assert published_revisions == (
-        ["b" * 40 if region_override else "a" * 40] * 2 if pinned else []
+        [
+            "b" * 40 if region_override else "a" * 40,
+            "b" * 40 if region_override else "a" * 40,
+            "a" * 40,
+        ]
+        if pinned
+        else []
     )
     if pinned:
         assert published_fields[0][0] == "works"
@@ -1990,6 +1999,7 @@ def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) 
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(
         publisher, "_require_current_dataset_revision", lambda **kwargs: None
     )
@@ -1999,6 +2009,8 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         lambda config, fields, **kwargs: (
             [{"work_id": "old"}]
             if config == "works"
+            else [{"person_id": "prior-bio", "included_department_ids": ["bio"]}]
+            if config == "people"
             else [{"author_pub_id": "curated:independent"}]
         ),
     )
@@ -2563,3 +2575,60 @@ def test_main_always_writes_terminal_status(
             "legacy_profiles": 0,
             "complete_profiles": 1,
         }
+
+
+def test_main_persists_ambiguous_hub_write_reconciliation_receipt(
+    monkeypatch, tmp_path
+) -> None:
+    status_path = tmp_path / "status.json"
+    monkeypatch.setenv(publisher.HF_TOKEN_ENV, "token")
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "validate_snapshot", lambda *args, **kwargs: (pandas.DataFrame(), {})
+    )
+    monkeypatch.setattr(publisher, "validate_math_coverage", lambda *args, **kwargs: {})
+    monkeypatch.setattr(publisher, "validate_coverage", lambda **kwargs: {})
+    receipt = {
+        "verification_status": "reconciliation_required",
+        "verification_stage": "create_commit",
+        "verification_error_type": "ConnectionError",
+        "verification_error_message": "response lost",
+        "write_outcome": "unknown",
+        "parent_revision": "a" * 40,
+        "artifact_revision": None,
+        "observed_head_revision": "b" * 40,
+        "sha256_by_path": {"README.md": "c" * 64},
+    }
+
+    def ambiguous_write(*args, **kwargs):
+        kwargs["atomic_intent_sink"](
+            {
+                "intent_status": "before_write",
+                "parent_revision": "a" * 40,
+                "sha256_by_path": {"README.md": "c" * 64},
+            }
+        )
+        checkpoint = json.loads(status_path.read_text())
+        assert checkpoint["status"] == "failure"
+        assert checkpoint["atomic_release_intent"]["intent_status"] == "before_write"
+        raise publisher.AtomicReleaseReconciliationRequired(receipt)
+
+    monkeypatch.setattr(publisher, "publish_snapshot", ambiguous_write)
+    exit_code = publisher.main(
+        [
+            "--snapshot",
+            str(tmp_path / "snapshot.parquet"),
+            "--manifest",
+            str(tmp_path / "manifest.json"),
+            "--prior-revision",
+            "a" * 40,
+            "--status-file",
+            str(status_path),
+        ]
+    )
+    status = json.loads(status_path.read_text())
+    assert exit_code == 1
+    assert status["status"] == "failure"
+    assert status["atomic_release_reconciliation"] == receipt
+    assert status["atomic_release_intent"]["intent_status"] == "before_write"
+    assert "artifact_commit" not in status

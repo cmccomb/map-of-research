@@ -460,7 +460,9 @@ def test_bio_source_diff_ignores_other_colleges_and_detects_exact_raw_change() -
     registry = SimpleNamespace(
         memberships=[
             SimpleNamespace(person_id="bio-person", included=True, department_id="bio"),
-            SimpleNamespace(person_id="other", included=True, department_id="math"),
+            SimpleNamespace(
+                person_id="chem-sullivan", included=True, department_id="chem"
+            ),
         ]
     )
     prior = [
@@ -472,24 +474,38 @@ def test_bio_source_diff_ignores_other_colleges_and_detects_exact_raw_change() -
             "source_record_json": '{"title":"one"}',
         }
     ]
-    assert not gate.bio_scholar_source_changed(prior, prior, registry)
+    prior_people = [{"person_id": "bio-person", "included_department_ids": ["bio"]}]
+    assert not gate.bio_scholar_source_changed(prior, prior, registry, prior_people)
     unrelated = [
         *prior,
         {
-            "person_id": "other",
-            "scholar_id": "math-scholar",
-            "author_pub_id": "math-scholar:one",
+            "person_id": "chem-sullivan",
+            "scholar_id": "sullivan-scholar",
+            "author_pub_id": "sullivan-scholar:one",
             "source_type": "scholar",
-            "source_record_json": '{"title":"math"}',
+            "source_record_json": '{"title":"Sullivan chemistry"}',
         },
     ]
-    assert not gate.bio_scholar_source_changed(unrelated, prior, registry)
+    assert not gate.bio_scholar_source_changed(unrelated, prior, registry, prior_people)
     changed = [dict(prior[0], source_record_json='{"title":"changed"}')]
-    assert gate.bio_scholar_source_changed(changed, prior, registry)
+    assert gate.bio_scholar_source_changed(changed, prior, registry, prior_people)
     assert gate.bio_scholar_source_changed(
-        prior + [dict(prior[0], author_pub_id="bio-scholar:two")], prior, registry
+        prior + [dict(prior[0], author_pub_id="bio-scholar:two")],
+        prior,
+        registry,
+        prior_people,
     )
     with pytest.raises(ValueError, match="lacks raw source records"):
         gate.bio_scholar_source_changed(
-            prior, [dict(prior[0], source_record_json="")], registry
+            prior, [dict(prior[0], source_record_json="")], registry, prior_people
         )
+
+    removed_bio = SimpleNamespace(
+        memberships=[
+            SimpleNamespace(person_id="bio-person", included=False, department_id="bio")
+        ]
+    )
+    assert gate.bio_scholar_source_changed(changed, prior, removed_bio, prior_people)
+    assert gate.bio_scholar_source_changed(prior, prior, removed_bio, prior_people)
+    with pytest.raises(ValueError, match="lacks Bio membership baseline"):
+        gate.bio_scholar_source_changed(prior, prior, registry, [])

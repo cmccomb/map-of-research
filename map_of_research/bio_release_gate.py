@@ -122,15 +122,26 @@ def _bio_edges(artifact: Mapping[str, Any], bio_ids: set[str]) -> set[tuple[str,
 
 
 def bio_scholar_source_changed(
-    source_rows: Any, prior_profiles: Any, registry: Any
+    source_rows: Any,
+    prior_profiles: Any,
+    registry: Any,
+    prior_people: Any,
 ) -> bool:
-    """Detect a changed Bio Scholar cohort independently of a release flag."""
+    """Compare the union of current and immutable-parent Bio Scholar cohorts."""
 
-    bio_ids = {
+    current_bio_ids = {
         item.person_id
         for item in registry.memberships
         if item.included and item.department_id == "bio"
     }
+    prior_bio_ids = {
+        str(row["person_id"])
+        for row in _rows(prior_people)
+        if "bio" in _as_list(row["included_department_ids"])
+    }
+    if not prior_bio_ids:
+        raise ValueError("Immutable parent lacks Bio membership baseline")
+    bio_ids = current_bio_ids | prior_bio_ids
 
     def records(rows: Any) -> dict[tuple[str, ...], str]:
         selected = [
@@ -143,7 +154,9 @@ def bio_scholar_source_changed(
             raise ValueError("Bio Scholar baseline lacks raw source records")
         return {key: str(row["source_record_json"]) for key, row in indexed.items()}
 
-    return records(source_rows) != records(prior_profiles)
+    return current_bio_ids != prior_bio_ids or records(source_rows) != records(
+        prior_profiles
+    )
 
 
 def load_bio_baselines(*, repo_id: str, prior_revision: str, hf_token: str) -> dict:

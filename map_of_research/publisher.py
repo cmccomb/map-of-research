@@ -9,12 +9,13 @@ import json
 import logging
 import math
 import os
+import subprocess
 import tempfile
-from collections.abc import Iterator, Mapping, Sequence
+from collections.abc import Callable, Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
-from .atomic_release import commit_atomic_release
+from .atomic_release import AtomicReleaseReconciliationRequired, commit_atomic_release
 from .attribution import (
     DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     load_attribution_reviews,
@@ -1244,6 +1245,8 @@ def _publish_atomic_release(
     repair_manifest_path: Path,
     provisional_holds: Mapping[tuple[str, str], Any],
     prior_profiles: Any,
+    prior_people: Any,
+    atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
@@ -1253,7 +1256,7 @@ def _publish_atomic_release(
     prior_revision = require_revision(prior_revision)
     bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
     bio_source_changed = bio_scholar_source_changed(
-        source_frame, prior_profiles, registry
+        source_frame, prior_profiles, registry, prior_people
     )
     if (require_bio_release or bio_source_changed) and not bio_release:
         raise ValueError("Bio release source differs from the frozen snapshot")
@@ -1360,6 +1363,12 @@ def _publish_atomic_release(
                 if bio_release
                 else "Publish central research dataset atomically"
             ),
+            intent_sink=atomic_intent_sink,
+            intent_metadata={
+                "producer_commit": os.environ.get("MAP_PRODUCER_COMMIT"),
+                "snapshot_commit": os.environ.get("MAP_SOURCE_COMMIT"),
+                "workflow_url": _workflow_url(),
+            },
         )
 
 
@@ -1385,6 +1394,7 @@ def publish_snapshot(
     prior_revision: str | None = None,
     region_comparison_revision: str | None = None,
     atomic_release: bool | None = None,
+    atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
     require_bio_release: bool = False,
     repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
 ) -> dict[str, Any]:
@@ -1516,6 +1526,14 @@ def publish_snapshot(
             revision=comparison_revision,
         )
     )
+    prior_people = list(
+        _published_rows(
+            "people",
+            ("person_id", "included_department_ids"),
+            hf_token=hf_token,
+            revision=prior_revision,
+        )
+    )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
     tables["works"], continuity_receipt = reconcile_region_decisions(
@@ -1525,7 +1543,9 @@ def publish_snapshot(
         prior_profiles,
         prior_revision=comparison_revision,
     )
-    bio_source_changed = bio_scholar_source_changed(frame, prior_profiles, registry)
+    bio_source_changed = bio_scholar_source_changed(
+        frame, prior_profiles, registry, prior_people
+    )
     if bio_source_changed and not frozen_bio_source:
         raise ValueError("Changed Bio Scholar source needs the reviewed Bio snapshot")
     if comparison_revision != prior_revision:
@@ -1580,6 +1600,8 @@ def publish_snapshot(
         repair_manifest_path=repair_manifest_path,
         provisional_holds=provisional_holds,
         prior_profiles=prior_profiles,
+        prior_people=prior_people,
+        atomic_intent_sink=atomic_intent_sink,
         require_bio_release=require_bio_release,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
@@ -1680,6 +1702,78 @@ def _workflow_url() -> str | None:
     if server and repository and run_id:
         return f"{server}/{repository}/actions/runs/{run_id}"
     return None
+
+
+def _persist_atomic_intent(
+    intent: Mapping[str, Any], *, status: dict[str, Any], status_path: Path
+) -> None:
+    """Checkpoint staged write intent before the Hub call can start."""
+
+    status.update(
+        {
+            "status": "failure",
+            "error_type": "AtomicWriteOutcomeUnknown",
+            "error_message": "Inspect the atomic release intent before retrying",
+            "atomic_release_intent": dict(intent),
+        }
+    )
+    atomic_write_json(status_path, status)
+    repo_name = os.environ.get("MAP_DURABLE_INTENT_REPO")
+    if not repo_name:
+        return
+    context = intent.get("release_context") or {}
+    if not isinstance(context, Mapping):
+        raise ValueError("Atomic intent lacks release context")
+    for field in ("producer_commit", "snapshot_commit"):
+        require_revision(str(context.get(field) or ""))
+    repo = Path(repo_name).resolve(strict=True)
+    branch = os.environ.get("MAP_DURABLE_INTENT_BRANCH")
+    if branch != "automation/map-snapshot":
+        raise ValueError("Atomic intent checkpoint requires the snapshot branch")
+    try:
+        relative = status_path.resolve().relative_to(repo)
+    except ValueError as error:
+        raise ValueError(
+            "Atomic intent status file is outside snapshot checkout"
+        ) from error
+    if relative.as_posix() != "status/last-upload.json":
+        raise ValueError("Atomic intent must checkpoint status/last-upload.json")
+    current_tip = subprocess.run(
+        ["git", "-C", str(repo), "rev-parse", "HEAD"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    remote_tip = subprocess.run(
+        ["git", "-C", str(repo), "ls-remote", "--heads", "origin", branch],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.split()
+    if not remote_tip or remote_tip[0] != current_tip:
+        raise RuntimeError("Snapshot branch moved before atomic intent checkpoint")
+    subprocess.run(
+        [
+            "git",
+            "-C",
+            str(repo),
+            "-c",
+            "user.name=github-actions[bot]",
+            "-c",
+            "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+            "commit",
+            "--only",
+            "-m",
+            "Record atomic release intent [skip ci]",
+            "--",
+            relative.as_posix(),
+        ],
+        check=True,
+    )
+    subprocess.run(
+        ["git", "-C", str(repo), "push", "origin", f"HEAD:{branch}"],
+        check=True,
+    )
 
 
 def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -1815,6 +1909,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             snapshot_path=args.snapshot,
         )
         status["scholar_coverage"] = scholar_coverage
+
+        def checkpoint(intent: Mapping[str, Any]) -> None:
+            _persist_atomic_intent(intent, status=status, status_path=args.status_file)
+
         result = publish_snapshot(
             args.snapshot,
             args.manifest,
@@ -1835,14 +1933,25 @@ def main(argv: Sequence[str] | None = None) -> int:
             prior_revision=args.prior_revision,
             region_comparison_revision=args.region_comparison_revision,
             repair_manifest_path=args.repair_reviewed_work_manifest,
+            atomic_intent_sink=checkpoint,
             require_bio_release=args.require_bio_release,
         )
-        status.update({"status": "success", **result, "error_type": None})
+        status.pop("atomic_release_intent", None)
+        status.update(
+            {
+                "status": "success",
+                **result,
+                "error_type": None,
+                "error_message": None,
+            }
+        )
         exit_code = 0
     except Exception as error:
         LOGGER.exception("Snapshot publication failed")
         if isinstance(error, RegionReleaseDiffError):
             status["region_continuity"] = error.receipt
+        if isinstance(error, AtomicReleaseReconciliationRequired):
+            status["atomic_release_reconciliation"] = error.receipt
         status.update(
             {
                 "status": "failure",
