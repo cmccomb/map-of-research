@@ -11,10 +11,10 @@ The isolated task browser opened Kim's profile after a shared-gate reservation a
 
 | Source stem under `data/captures/` | JSON SHA-256 | Redacted HTML SHA-256 | Paired source checks |
 | --- | --- | --- | --- |
-| `kim-visible-918-2026-10-24` | `ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867` | `a5f1a45612a885ca42174926f3c43bc437fd7146da4b92f241930e6adfd9bc94` | 918 rows in each source, 918 unique Scholar row IDs, 1 blank author, 13 blank years, 21 blank venues, 138 zero/blank citation displays. Scholar's `100*` and `7*` citation annotations are retained. |
+| `kim-visible-918-2026-10-24` | `ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867` | `a5f1a45612a885ca42174926f3c43bc437fd7146da4b92f241930e6adfd9bc94` | 918 rows in each source, 918 unique Scholar row IDs, 1 blank author, 13 blank years, 21 blank venues, 138 zero/blank citation displays. Scholar's `100*` and `7*` citation annotations are retained in the HTML and the capture receipt; the JSON count field contains only the numeric portion. |
 | `collins-visible-361-2026-10-24` | `d21519b8e5126f785181a84d74d0d75c30341b27db12538a937d144c02200231` | `ce518668aeefa35d81895ed9d47c6b3e35cce46178da38f9d53cf6eccf35d4a9` | 361 rows in each source, 361 unique Scholar row IDs, no blank authors, 14 blank years, 19 blank venues, 134 zero/blank citation displays. |
 
-The offline converter matched the displayed title, authors, venue, year, citation display, and citation URL for every JSON row against the saved HTML. The saved rows contain no inferred metadata. Both HTML files show Show More disabled, and both capture receipts record no visible refusal.
+The offline converter matched the displayed title, authors, venue, year, citation count, and citation URL for every Collins JSON row against the saved HTML after whitespace normalization. All Kim rows matched except the two citation-count annotations described above; the numeric counts still match. The saved rows contain no inferred metadata. Both HTML files show Show More disabled, and both capture receipts record no visible refusal.
 
 ## Attribution review before map ingestion
 
