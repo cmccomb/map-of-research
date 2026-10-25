@@ -8696,6 +8696,22 @@
       "reason": "Corrupted Scholar title shares exact Biochemistry 44:7207-7217 (2005) with retained row 170. Publisher-deposited DOI 10.1021/bi048289a and PubMed give one canonical article with the correct title and Chien Ho; no independent second article occupies these pages. Retain row 170 (8iLLOQgAAAAJ:JoZmwDi-zQgC); preserve this raw Scholar row.",
       "evidence_url": "https://api.crossref.org/works/10.1021%2Fbi048289a",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:KNjnJ3z-R6IC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Exact citation detail expands CH Ho to Chien-Hsien Ho and links the thesis listing. ProQuest exact 1997 University of South Carolina dissertation listing names Ho, Chien-Hsien; dissertation no. 9726757.",
+      "evidence_url": "https://www.proquest.com/openview/d9ff164378e8db9e8d4e0785e6de397d/1?pq-origsite=gscholar&cbl=18750&diss=y",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:0aBXIfxlw9sC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Exact citation detail gives author 何健益 and links the thesis listing. Airiti exact 2008 National Tsing Hua University doctoral thesis listing expands 何健益 as Chien-Yi Ho and gives DOI 10.6843/NTHU.2008.00601.",
+      "evidence_url": "https://www.airitilibrary.com/Article/Detail/U0016-2002201314540241",
+      "verified_at": "2026-10-25"
     }
   ]
 }

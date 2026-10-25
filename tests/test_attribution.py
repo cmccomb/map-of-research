@@ -57,7 +57,7 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     }
     assert attribution.held_profiles == {SCHOLAR_ID}
     assert len(attribution.confirmed) == 424
-    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 88
+    assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 90
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
     } <= {pub_id for sid, pub_id in attribution.confirmed if sid == SCHOLAR_ID}
@@ -76,8 +76,8 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "confirmed_retained": 304,
         "confirmed_retained_candidate": 120,
         "confirmed_excluded": 37,
-        "confirmed_excluded_candidate": 51,
-        "still_held": 48,
+        "confirmed_excluded_candidate": 53,
+        "still_held": 46,
         "confirmed_author_context_hold": 12,
         "confirmed_author_metadata_hold": 9,
         "confirmed_author_duplicate_swap_hold": 1,
@@ -89,6 +89,18 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     assert (
         exclusions[(SCHOLAR_ID, duplicate["author_pub_id"])].reason_code
         == "corrupted_duplicate"
+    )
+    for index in (429, 485):
+        row = final_rows[index - 1]
+        assert row["review_decision"] == "confirmed_excluded_candidate"
+        assert row["decision_origin"] == "chrome_primary_identity_addendum"
+        assert (
+            exclusions[(SCHOLAR_ID, row["author_pub_id"])].reason_code
+            == "false_profile_attribution"
+        )
+    assert all(
+        final_rows[index - 1]["review_decision"] == "still_held"
+        for index in (402, 513, 514)
     )
     assert all(
         ";" not in decision.evidence_url for decision in attribution.confirmed.values()
