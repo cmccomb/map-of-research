@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 875
+    assert len(exclusions) >= 917
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -277,6 +277,79 @@ def test_adviti_naik_review_excludes_only_two_source_verified_duplicate_rows() -
         "u5HHmVD_uO8C",  # Yearless conference abstract, not disproved.
     ):
         assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
+
+
+def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, children, retained in (
+        (
+            "wJ_gQLoAAAAJ",
+            ("6AKj_8xLoccC",),
+            "lgwcVrK6X84C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("qjuL_XCUnM8C", "W91e3rS6dHEC"),
+            "9qwnyNWB-oEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("gTud6kY3p2wC", "S0RksyIsHSIC"),
+            "P1qO8dLd1z8C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("q22ZieUsQXoC", "5uu-MYFt2EcC"),
+            "E7VqQtBCVmcC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("vYYylRVofzEC", "csTP5AdqY_wC"),
+            "VN7nJs4JPk0C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("T-Bu49-jKQgC", "-XtG2q47PdUC"),
+            "2P1L_qKh6hAC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("Yp96WNAcdNsC", "ve7iT2ZEuL4C"),
+            "q3oQSFYPqjQC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("aOEnwurrEPcC", "TiLqlu47W2oC"),
+            "C-Rn0OCouf8C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("IF0FbId8XVwC",),
+            "kvJssbFybhEC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("i91s68tWr-MC",),
+            "2vr6o8x5NLkC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("tz746QTLzJkC",),
+            "hqOjcs7Dif8C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("1_W9tMSvGuwC",),
+            "P7Ujq4OLJYoC",
+        ),
+    ):
+        for child in children:
+            assert exclusions[(scholar_id, f"{scholar_id}:{child}")].reason_code == (
+                "corrupted_duplicate"
+            )
+        assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
+    assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:zxzvZ9-XIW8C") not in exclusions
+    assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:SWgZeABleR0C") not in exclusions
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:
