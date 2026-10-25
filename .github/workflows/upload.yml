@@ -99,6 +99,7 @@ jobs:
             --reviewed-exclusions source/data/curated/scholar-exclusions.json \
             --reviewed-metadata-corrections source/data/curated/scholar-metadata-corrections.json \
             --reviewed-doi-aliases source/data/curated/scholar-doi-aliases.json \
+            --reviewed-contexts source/data/curated/scholar-contexts.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}
