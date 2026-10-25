@@ -313,6 +313,22 @@
       "basis": "The publisher dates this McDonough and Scott article September 1, 2023, in LCGC Supplements: Hot Topics in PFAS, volume 41 issue s9, pages 12-16; the Scholar row has neither year nor venue.",
       "evidence_url": "https://www.chromatographyonline.com/view/tackling-pfas-complexity-with-hrms-and-bioanalytical-techniques",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "Xq5HrPYAAAAJ",
+      "author_pub_id": "Xq5HrPYAAAAJ:rO6llkc54NcC",
+      "expected": {
+        "title": "Assessing Bioavailability and Benthic Bioaccumulation of per-/Polyfluoroalkyl Substances (PFASs) From Marine Sediments Using Ex-Situ Passive Sampling Techniques",
+        "year": null,
+        "venue": "SETAC North America 46th Annual Meeting, 0"
+      },
+      "corrected": {
+        "year": 2025,
+        "venue": "SETAC North America 46th Annual Meeting Abstract Book, 198, 2025"
+      },
+      "basis": "The original SETAC North America 46th Annual Meeting abstract book gives this exact title, Carrie A McDonough in the author list, Carnegie Mellon University affiliation, and page 198 in the 2025 meeting book; the Scholar row omits the year and has a placeholder venue page 0.",
+      "evidence_url": "https://www.setac.org/asset/B97B2E92-74A5-49F5-90D36FAB051BBC2A/",
+      "verified_at": "2026-10-25"
     }
   ]
 }
