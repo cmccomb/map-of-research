@@ -297,6 +297,22 @@
       "basis": "Nature lists Proteostasis as a section label rather than part of the article title.",
       "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "Xq5HrPYAAAAJ",
+      "author_pub_id": "Xq5HrPYAAAAJ:O3NaXMp0MMsC",
+      "expected": {
+        "title": "Tackling PFAS Complexity with HRMS and Bioanalytical Techniques",
+        "year": null,
+        "venue": ""
+      },
+      "corrected": {
+        "year": 2023,
+        "venue": "LCGC Supplements: Hot Topics in PFAS 41 (s9), 12-16, 2023"
+      },
+      "basis": "The publisher dates this McDonough and Scott article September 1, 2023, in LCGC Supplements: Hot Topics in PFAS, volume 41 issue s9, pages 12-16; the Scholar row has neither year nor venue.",
+      "evidence_url": "https://www.chromatographyonline.com/view/tackling-pfas-complexity-with-hrms-and-bioanalytical-techniques",
+      "verified_at": "2026-10-25"
     }
   ]
 }
