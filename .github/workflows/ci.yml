@@ -41,6 +41,8 @@ jobs:
         run: map-collect --dry-run --status-file /tmp/map-collection-plan.json
       - name: Require evidenced primary homes for included Scholar profiles
         run: python scripts/validate_primary_homes.py
+      - name: Validate held Marion Oliver source review
+        run: python scripts/validate_oliver_source_review.py
       - name: Audit installed dependencies
         run: python -m pip_audit --local
       - name: Compile package and migration tools

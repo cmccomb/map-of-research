@@ -1,0 +1,112 @@
+{
+  "review_id": "marion-oliver-2026-10-25",
+  "captured_at_utc": "2026-10-25T13:38:42Z",
+  "producer_base_commit": "a68fbf0c",
+  "status": "held_source_review",
+  "person_id": "person-marionoliver-1975d99a",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/oliver.html",
+  "official_role": "Teaching Professor Emeritus, CMU Qatar",
+  "official_department": "Mathematical Sciences",
+  "identity_basis": "CMU Mathematics archive names Marion Leon Oliver; publisher names Marion L. Oliver with Carnegie Mellon Mathematics affiliation; OpenAlex exact cluster has the three matching article rows.",
+  "verified_scholar_id": null,
+  "lifetime_complete": false,
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "counts": {
+    "exact_research_article_candidates": 3,
+    "with_william_o_williams": 2,
+    "openalex_name_search_results": 6,
+    "excluded_medical_namesake_clusters": 2,
+    "unresolved_name_collision_clusters": 2,
+    "kilthub_exact_author_results": 0,
+    "kilthub_exact_title_results": 0
+  },
+  "files": {
+    "candidate-crosswalk-3.csv": {
+      "sha256": "0d08660494732ee750e87d5664442f62828592071d28a51f60d483ef0bb060bb",
+      "bytes": 1391,
+      "kind": "derived_held_candidates",
+      "source": "OpenAlex and Crossref records listed below"
+    },
+    "cmu-1970-archive-index.json": {
+      "sha256": "396603a1594b5d7ce2aa883a255c6eb51a6e006d61a7d5dd13bc24f84ca89884",
+      "bytes": 478,
+      "kind": "derived_identity_pdf_index",
+      "source": "https://iiif.library.cmu.edu/file/1967-71_Ser5_1970_Sep_9_1970/1967-71_Ser5_1970_Sep_9_1970.pdf"
+    },
+    "cmu-profile.html.gz": {
+      "sha256": "52cc7036bfb1fb6cf0cd7465f5729c328e9ab25fc4166df4ad410fd7498a6acc",
+      "bytes": 6180,
+      "kind": "official_profile",
+      "source": "https://www.cmu.edu/math/people/faculty/oliver.html"
+    },
+    "cmu-retirement.html.gz": {
+      "sha256": "67e246761ee6c015bc23b10e675ad0a742ccc713a3f1bcd4e1cae87b976c063b",
+      "bytes": 7960,
+      "kind": "official_identity_and_role",
+      "source": "https://www.cmu.edu/math/news-events/articles/20231218_cmuq-marion-retirement.html"
+    },
+    "context-review.json": {
+      "sha256": "8ea0f65750abb160f7e159398c7a82f2b7e0ae9bc08cecd61ab6aaa5ec251170",
+      "bytes": 1445,
+      "kind": "derived_context_and_scholar_audit",
+      "source": "Official CMU sources and prior registry Math audit"
+    },
+    "crossref-3.json": {
+      "sha256": "9c507ac469cff3a3358fc070dfc91f2db7110252dbbaa6d73274973f7c7687b1",
+      "bytes": 11461,
+      "kind": "publisher_deposited_metadata",
+      "source": "https://api.crossref.org/works/{doi}"
+    },
+    "kilthub-author-search.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "kind": "negative_institutional_search",
+      "source": "POST https://api.figshare.com/v2/articles/search search_for=\"Marion L. Oliver\" group=9960 page_size=100"
+    },
+    "kilthub-title-search.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "kind": "negative_institutional_search",
+      "source": "POST https://api.figshare.com/v2/articles/search search_for=On balanced interactions in mixtures group=9960 page_size=100"
+    },
+    "name-collision-review.json": {
+      "sha256": "b8950511bc7a786d3092d7c761b315f7170ddf43ffb5fb428927e86ad45a0a55",
+      "bytes": 1654,
+      "kind": "derived_identity_decisions",
+      "source": "openalex-name-search.json"
+    },
+    "openalex-math-author.json": {
+      "sha256": "3ffacba3553b58c65d9ba217554a50a61977b93aa5e6933af21dd9d9d3dbc4a6",
+      "bytes": 7775,
+      "kind": "derived_exact_author_record",
+      "source": "openalex-name-search.json"
+    },
+    "openalex-name-search.json": {
+      "sha256": "cb500e3d0d12fc542f20198094969b983ecb52f441d177158a121cf323f55d29",
+      "bytes": 36017,
+      "kind": "discovery_name_search",
+      "source": "https://api.openalex.org/authors?search=Marion%20Oliver&per-page=50"
+    },
+    "openalex-works-3.json": {
+      "sha256": "a7beaa40c54fce573e08e0c112de4078e8f35a6865bc3101ad87d1891c1852e6",
+      "bytes": 35784,
+      "kind": "discovery_author_works",
+      "source": "https://api.openalex.org/works?filter=author.id:A5014311491&per-page=200"
+    },
+    "springer-1972.html.gz": {
+      "sha256": "dac7a98ce7c50384588f4bef546e4dd52aa0b057f60a5fa2b5904b479cd5474d",
+      "bytes": 57603,
+      "kind": "publisher_author_affiliation",
+      "source": "https://link.springer.com/article/10.1007/BF00255666"
+    }
+  },
+  "limitations": [
+    "No verified Google Scholar account.",
+    "No researcher-owned or official complete bibliography was located.",
+    "CMU confirms a doctorate but a named dissertation record was not located.",
+    "The three 1972–1975 articles are an observed lower bound; later publication history is not established.",
+    "Name-only searches collide with different medical researchers."
+  ]
+}
