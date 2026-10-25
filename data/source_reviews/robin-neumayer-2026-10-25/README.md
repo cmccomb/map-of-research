@@ -38,3 +38,31 @@ but six row-level holds prevent whole-union ingestion. The author page does not
 link a DOI; every DOI in the ledger was separately verified from a registration
 agency. No row is inserted into a source snapshot,
 person registry, Hugging Face dataset, or public map.
+
+## Staged 31-row loader
+
+[`load_staged.py`](load_staged.py) reads the pinned captures, crosswalk, and
+genre/DOI review into **31 source-only records**. It verifies source checksums,
+identities, CV coverage, the 18 registered DOI responses, and the six row-level
+holds before returning records. Each record retains the raw source observation,
+CV transcription when present, and review ledger row. The loader marks every
+record release-held and graph-ineligible; it never builds a snapshot or writes a
+dataset. Report summaries, surveys, thesis, and lecture notes have explicit
+noncollaboration genres. The three Oberwolfach summaries use their actual solo
+publication bylines; their "joint work with" notes remain only in raw source
+evidence.
+
+The CV-only Oberwolfach item is `source_kind=researcher_cv`, with the CV and
+published EMS report as evidence. It does not cite the author webpage. The
+site-only Yamabe lecture notes have `year=null`; January 2018 is a lecture
+date, not a claimed publication date. The 2018 MATRIX event label and 2020
+chapter DOI are both retained while that row's display year stays unresolved.
+
+**Schema hold:** The main snapshot accepts only Scholar and curated records;
+the draft author-site path models an author webpage and requires a year on each
+Iyer row. Neither path currently represents this CV-only record as its own
+source kind. The staged loader therefore has no snapshot integration. Before
+promotion, add a source kind for researcher CV evidence, support nullable
+publication years in the author-owned source adapter, and complete row-level
+release review. A verified Google Scholar account would supersede this fallback
+as publication ground truth.
