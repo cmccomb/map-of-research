@@ -1134,6 +1134,7 @@ def publish_snapshot(
     if set(attribution_reviews.confirmed).intersection(exclusions):
         raise ValueError("Scholar attribution and exclusion reviews conflict")
     release_decisions = load_profile_releases(profile_releases_path)
+    release_manifest_sha256 = sha256_file(profile_releases_path)
     released_frame, release_receipt, held_observation_ids = (
         select_released_observations(
             corrected_frame,
@@ -1211,7 +1212,7 @@ def publish_snapshot(
             frame.loc[frame["source_type"] == "scholar", "scholar_id"].nunique()
         ),
         "raw_snapshot_sha256": manifest["snapshot_sha256"],
-        "profile_release_manifest_sha256": sha256_file(profile_releases_path),
+        "profile_release_manifest_sha256": release_manifest_sha256,
         "profile_release_decisions": release_receipt,
         "held_profile_ids": [
             item["scholar_id"] for item in release_receipt if item["state"] == "held"

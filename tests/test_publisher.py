@@ -1723,6 +1723,7 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
             }
         )
     )
+    original_release_sha = hashlib.sha256(releases_path.read_bytes()).hexdigest()
     corrections_path = tmp_path / "corrections.json"
     corrections_path.write_text(json.dumps({"schema_version": 1, "corrections": []}))
     raw = pandas.DataFrame(
@@ -1813,12 +1814,15 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
     monkeypatch.setattr(
         publisher, "exclude_low_information_regions", lambda works: works
     )
+
+    def upload_dataset(*args, **kwargs):
+        releases_path.write_text("changed after decision load")
+        return SimpleNamespace(oid="commit")
+
     monkeypatch.setattr(
         publisher,
         "_to_hub_dataset",
-        lambda frame: SimpleNamespace(
-            push_to_hub=lambda *args, **kwargs: SimpleNamespace(oid="commit")
-        ),
+        lambda frame: SimpleNamespace(push_to_hub=upload_dataset),
     )
     monkeypatch.setattr(
         publisher, "_upload_map_artifacts", lambda *args, **kwargs: "map"
@@ -1840,10 +1844,7 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
     assert result["profile_publications"] == 1
     assert result["profile_count"] == 0
     assert result["reviewed_metadata_corrections"] == 0
-    assert (
-        result["profile_release_manifest_sha256"]
-        == hashlib.sha256(releases_path.read_bytes()).hexdigest()
-    )
+    assert result["profile_release_manifest_sha256"] == original_release_sha
 
 
 def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
