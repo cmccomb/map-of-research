@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "department_id": "physics",
-  "review_status": "100_merged_exclusions_six_followup_draft_with_map_quality_hold",
-  "source_verified_exact_exclusion_count": 100,
+  "review_status": "106_merged_exclusions_with_map_quality_hold",
+  "source_verified_exact_exclusion_count": 106,
   "source_rows_preserved": 2506,
   "producer_changes_applied": false,
   "producer_changes_applied_scope": "source branch and raw source rows; producer manifest and guard merged on main at 7b6d923e",
-  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. Producer PR #160 merged 100 independently source-verified exact decisions and a fail-closed publisher preflight into main. Draft producer PR #212 reviews six more source-verified exact duplicate observations, including three previously held Cremonesi IDs and three Schumacher same-work pairs. Cremonesi row 1334 is a verified journal retain, and row 547 is a genuine 2021 HAL notice of the 2017 CMS tracker TDR. Thirteen exact IDs remain held; all currently pass automatic map eligibility. Raw source rows remain unchanged.",
+  "review_basis": "Initial offline candidate screen of browser-visible rows, preserved HTML, and cache. Producer PR #160 merged 100 independently source-verified exact decisions and a fail-closed publisher preflight into main. Producer PR #212 merged six more source-verified exact duplicate observations at 2fc7c52, including three previously held Cremonesi IDs and three Schumacher same-work pairs. Cremonesi row 1334 is a verified journal retain, row 547 is a genuine 2021 HAL notice of the 2017 CMS tracker TDR, and row 1958 matches a genuine original-title arXiv v1 with Cremonesi in its author list. Twelve exact IDs remain held; all currently pass automatic map eligibility. Raw source rows remain unchanged.",
   "profiles": [
     {
       "person_id": "person-matteocremonesi-b2aba740",
@@ -29,25 +29,20 @@
         "wJ_gQLoAAAAJ:QNiCEvFIB1MC",
         "wJ_gQLoAAAAJ:wlzmIqt2EaEC",
         "wJ_gQLoAAAAJ:PDAgwb0ELvkC",
-        "wJ_gQLoAAAAJ:UBSsHvkqiq4C",
         "wJ_gQLoAAAAJ:QjNCP7ux8QYC"
       ],
       "alias_review_note": "Initial title/year screening split eighteen previously matching pairs after SVG math restoration. Hold rows without an individual exact decision; the broad groups do not authorize blanket deduplication.",
-      "paired_producer_exact_exclusion_count": 77,
+      "paired_producer_exact_exclusion_count": 80,
       "initial_unresolved_attribution_or_record_ids": [
         "wJ_gQLoAAAAJ:QNiCEvFIB1MC",
         "wJ_gQLoAAAAJ:zmHQPunddckC",
         "wJ_gQLoAAAAJ:wlzmIqt2EaEC"
       ],
       "candidate_nonpublication_disposition": "The two initially flagged generic/container rows remain unresolved and unexcluded; the merged producer manifest does not infer nonpublication from their labels.",
-      "pending_followup_exclusion_ids": [
-        "wJ_gQLoAAAAJ:8NFFclwVBVUC",
-        "wJ_gQLoAAAAJ:Gm6cJkd1Yu0C",
-        "wJ_gQLoAAAAJ:OlGoE9RybnsC"
-      ],
       "verified_retain_ids_from_followup": [
         "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
-        "wJ_gQLoAAAAJ:JOhajB-2wfwC"
+        "wJ_gQLoAAAAJ:JOhajB-2wfwC",
+        "wJ_gQLoAAAAJ:UBSsHvkqiq4C"
       ],
       "tracker_companion_disposition": {
         "author_pub_id": "wJ_gQLoAAAAJ:JOhajB-2wfwC",
@@ -56,7 +51,35 @@
         "hal_metadata_url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-03448298&fl=title_s%2CauthFullName_s%2CinspireId_s%2CpublicationDate_s%2Cabstract_s",
         "cms_tdr_url": "https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/TDR-17-001/index.html",
         "primary_match": "Exact title and first six saved authors match HAL. HAL lists 2,255 authors including Matteo Cremonesi, INSPIRE ID 1614103, and 2021-11-25 notice date."
-      }
+      },
+      "merged_followup_exclusion_ids": [
+        "wJ_gQLoAAAAJ:8NFFclwVBVUC",
+        "wJ_gQLoAAAAJ:Gm6cJkd1Yu0C",
+        "wJ_gQLoAAAAJ:OlGoE9RybnsC"
+      ],
+      "original_title_preprint_dispositions": [
+        {
+          "author_pub_id": "wJ_gQLoAAAAJ:UBSsHvkqiq4C",
+          "capture_row_index": 1958,
+          "disposition": "verified_genuine_original_title_arxiv_v1_retain",
+          "arxiv_v1_url": "https://arxiv.org/pdf/1905.09935v1",
+          "cms_publication_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-18-015/index.html",
+          "related_revised_journal_author_pub_id": "wJ_gQLoAAAAJ:RJNGbXJAtMsC",
+          "primary_match": "The original title and ordered first six saved authors match the arXiv v1 PDF, whose full collaboration list includes M. Cremonesi. Retained row 695 is the revised-title 2021 Physical Review C article.",
+          "cache_metadata_disposition": "Captured year, venue, and locator remain blank; no inferred cache repair is applied."
+        },
+        {
+          "author_pub_id": "wJ_gQLoAAAAJ:QjNCP7ux8QYC",
+          "capture_row_index": 1959,
+          "disposition": "genuine_work_attribution_but_version_level_map_decision_unresolved",
+          "arxiv_v1_url": "https://arxiv.org/pdf/1912.07706v1",
+          "arxiv_revised_url": "https://arxiv.org/abs/1912.07706v3",
+          "related_arxiv_author_pub_id": "wJ_gQLoAAAAJ:jYy9R3AkpWgC",
+          "related_journal_author_pub_id": "wJ_gQLoAAAAJ:2U2whq44yacC",
+          "reason": "The saved original title and first five authors match arXiv v1, whose full byline includes M. Cremonesi. Retained row 584 already names the same arXiv identifier under its later title; current preprint-versus-journal policy does not settle whether two revisions of one arXiv record are distinct map entries. The saved row has no locator, year, or venue.",
+          "cache_metadata_disposition": "No inferred cache repair or producer exclusion is applied."
+        }
+      ]
     },
     {
       "person_id": "person-reinhardschumacher-35cd3c6f",
@@ -79,7 +102,7 @@
         "LibSWRMAAAAJ:M0j1y4EgrScC"
       ],
       "same_work_pair_row_indices_to_review": [],
-      "paired_producer_exact_exclusion_count": 23,
+      "paired_producer_exact_exclusion_count": 26,
       "initial_candidate_nonpublication_ids": [
         "LibSWRMAAAAJ:SWgZeABleR0C",
         "LibSWRMAAAAJ:R22Rs3tN8aoC",
@@ -146,7 +169,7 @@
           ],
           "retained_author_pub_id": "LibSWRMAAAAJ:MAUkC_7iAq8C",
           "excluded_author_pub_id": "LibSWRMAAAAJ:E7VqQtBCVmcC",
-          "disposition": "exact corrupted_duplicate pending in draft producer PR #212"
+          "disposition": "exact corrupted_duplicate merged through producer PR #212"
         },
         {
           "capture_rows": [
@@ -155,7 +178,7 @@
           ],
           "retained_author_pub_id": "LibSWRMAAAAJ:_axFR9aDTf0C",
           "excluded_author_pub_id": "LibSWRMAAAAJ:oH8HCDhqVGsC",
-          "disposition": "exact corrupted_duplicate pending in draft producer PR #212"
+          "disposition": "exact corrupted_duplicate merged through producer PR #212"
         },
         {
           "capture_rows": [
@@ -164,7 +187,7 @@
           ],
           "retained_author_pub_id": "LibSWRMAAAAJ:ruyezt5ZtCIC",
           "excluded_author_pub_id": "LibSWRMAAAAJ:ipzZ9siozwsC",
-          "disposition": "exact corrupted_duplicate pending in draft producer PR #212"
+          "disposition": "exact corrupted_duplicate merged through producer PR #212"
         }
       ],
       "reviewed_nonpublication_ids_from_followup": [
@@ -179,30 +202,30 @@
           "corroborating_url": "https://lss.fnal.gov/archive/other/bnl-34518.pdf"
         }
       ],
-      "pending_followup_exclusion_ids": [
+      "merged_followup_exclusion_ids": [
         "LibSWRMAAAAJ:E7VqQtBCVmcC",
         "LibSWRMAAAAJ:oH8HCDhqVGsC",
         "LibSWRMAAAAJ:ipzZ9siozwsC"
       ]
     }
   ],
-  "next_decision": "Keep source PR #156 and follow-up producer PR #212 draft while 13 unresolved exact IDs await evidence; tracker row 547 is a verified retain. The source map_quality_hold remains true, so do not build or upload a Physics snapshot.",
+  "next_decision": "Keep source PR #156 draft while 12 unresolved exact IDs await evidence; tracker row 547 and original-title preprint row 1958 are verified retains. Row 1959 still needs a version-level map decision because retained row 584 names a later revision of the same arXiv identifier. The source map_quality_hold remains true, so do not build or upload a Physics snapshot.",
   "source_verified_exact_exclusion_count_by_profile": {
-    "wJ_gQLoAAAAJ": 77,
-    "LibSWRMAAAAJ": 23
+    "wJ_gQLoAAAAJ": 80,
+    "LibSWRMAAAAJ": 26
   },
   "paired_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/160",
   "paired_producer_review_ledger_url": "https://github.com/cmccomb/map-of-research/blob/codex/physics-cremonesi-schumacher-reviewed-20261024/registry/reviews/2026-10-24-physics-cremonesi-schumacher-reviewed-exclusions.md",
-  "producer_review_state": "100 merged on main at 7b6d923e; six reviewed in draft PR #212; raw source rows unchanged",
-  "unresolved_exact_id_count": 13,
-  "currently_map_eligible_unresolved_count": 13,
+  "producer_review_state": "106 exact decisions merged on main through PRs #160 and #212; raw source rows unchanged",
+  "unresolved_exact_id_count": 12,
+  "currently_map_eligible_unresolved_count": 12,
   "currently_quality_filtered_unresolved_ids": [],
-  "unresolved_exact_id_scope": "13 IDs still need exact decisions; tracker row 547 is a verified retain. Three Schumacher same-work pairs have decisions pending in draft PR #212.",
-  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions pending draft PR #212 and one as a genuine retained journal observation. Thirteen exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three pending exclusions. Tracker row 547 is now a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions in draft PR #212.",
-  "review_updated_at_utc": "2026-10-25T03:44:20+00:00",
+  "unresolved_exact_id_scope": "12 IDs still need exact decisions; tracker row 547 and original-title preprint row 1958 are verified retains. Three Schumacher same-work pairs have decisions merged through PR #212.",
+  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions merged through PR #212 and two as genuine retained observations (row 1334 journal and row 1958 original-title arXiv v1). Twelve exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three merged exclusions. Tracker row 547 is a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions merged through PR #212. Row 1959 matches an original arXiv v1 title, but another retained observation names the same arXiv identifier under its revised title, so the version-level map decision remains held.",
+  "review_updated_at_utc": "2026-10-25T05:13:17+00:00",
   "followup_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/212",
-  "followup_producer_review_state": "draft_unmerged",
-  "merged_producer_exact_exclusion_count": 100,
+  "followup_producer_review_state": "merged_on_main_2fc7c52",
+  "merged_producer_exact_exclusion_count": 106,
   "followup_producer_exact_exclusion_count": 6,
   "followup_producer_exact_exclusion_count_by_profile": {
     "wJ_gQLoAAAAJ": 3,
