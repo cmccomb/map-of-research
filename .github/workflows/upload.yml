@@ -19,6 +19,11 @@ on:
         required: false
         default: false
         type: boolean
+      require_bio_release:
+        description: Require the reviewed complete Bio source and graph gate
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -130,17 +135,26 @@ jobs:
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
           HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+          MAP_DURABLE_INTENT_REPO: snapshot
+          MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot
+          REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
           MAP_PRODUCER_COMMIT="$(git -C source rev-parse HEAD)"
           MAP_SOURCE_COMMIT="$(git -C snapshot rev-parse HEAD)"
           export MAP_PRODUCER_COMMIT MAP_SOURCE_COMMIT
+          BIO_RELEASE_ARGS=()
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
+            BIO_RELEASE_ARGS+=(--require-bio-release)
+          fi
           map-publish-snapshot \
+            "${BIO_RELEASE_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
+            --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \

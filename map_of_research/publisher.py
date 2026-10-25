@@ -9,14 +9,23 @@ import json
 import logging
 import math
 import os
+import subprocess
 import tempfile
-from collections.abc import Iterator, Mapping, Sequence
+from collections.abc import Callable, Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .atomic_release import AtomicReleaseReconciliationRequired, commit_atomic_release
 from .attribution import (
     DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     load_attribution_reviews,
+)
+from .bio_release_gate import (
+    BIO_SOURCE_SHA256,
+    bio_scholar_source_changed,
+    load_bio_baselines,
+    preserve_pending_review_topics,
+    validate_bio_release_prewrite,
 )
 from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
@@ -38,6 +47,7 @@ from .doi_aliases import (
     validate_doi_aliases,
 )
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .hub_card import build_updated_dataset_card
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
     KEYWORD_MODEL_VERSION,
@@ -1047,71 +1057,58 @@ def build_map_artifact(
     }
 
 
-def _upload_map_artifacts(
+def _write_map_artifacts(
     works: Any,
     registry: Registry,
     *,
-    hf_token: str,
+    maps_dir: Path,
     generated_at_utc: str,
     dataset_commits: Mapping[str, str],
     continuity_receipt: Mapping[str, Any] | None = None,
-) -> str:
-    from huggingface_hub import HfApi
+) -> tuple[Path, Path, dict[str, Any]]:
+    """Render both map files before the Hub is touched."""
 
-    with tempfile.TemporaryDirectory(prefix="map-of-research-") as temporary_dir:
-        maps_dir = Path(temporary_dir)
-        map_manifest: dict[str, Any] = {
-            "schema_version": MAP_SCHEMA_VERSION,
-            "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
-            "keyword_model_version": KEYWORD_MODEL_VERSION,
-            "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
-            "region_audit_version": REGION_AUDIT_VERSION,
-            "layout_version": LAYOUT_VERSION,
-            "default_layout_id": DEFAULT_LAYOUT_ID,
-            "layouts": [dict(layout) for layout in LAYOUTS],
-            "generated_at_utc": generated_at_utc,
-            "dataset_commits": dict(dataset_commits),
-            "artifact": {},
-        }
-        if continuity_receipt is not None:
-            map_manifest["region_continuity"] = dict(continuity_receipt)
-        artifact = build_map_artifact(
-            works,
-            registry,
-            generated_at_utc=generated_at_utc,
-        )
-        artifact_path = maps_dir / MAP_ARTIFACT_NAME
-        artifact_path.write_text(
-            json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
-            encoding="utf-8",
-        )
-        map_manifest["artifact"] = {
-            "title": artifact["title"],
-            "point_count": artifact["point_count"],
-            "excluded_work_count": artifact["excluded_work_count"],
-            "department_count": artifact["department_count"],
-            "school_count": artifact["school_count"],
-            "faculty_count": artifact["faculty_count"],
-            "keyword_count": artifact["keyword_count"],
-            "keyword_levels": artifact["keyword_levels"],
-            "file": artifact_path.name,
-        }
-        (maps_dir / "manifest.json").write_text(
-            json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-        commit = HfApi(token=hf_token).upload_folder(
-            repo_id=REPO_ID,
-            repo_type="dataset",
-            folder_path=maps_dir,
-            path_in_repo="maps",
-            delete_patterns="*.json",
-            commit_message="Publish unified research map artifact",
-        )
-    commit_id = getattr(commit, "oid", None)
-    if not commit_id:
-        raise RuntimeError("Map artifact upload did not return a commit")
-    return str(commit_id)
+    maps_dir.mkdir(parents=True, exist_ok=True)
+    map_manifest: dict[str, Any] = {
+        "schema_version": MAP_SCHEMA_VERSION,
+        "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
+        "keyword_model_version": KEYWORD_MODEL_VERSION,
+        "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
+        "region_audit_version": REGION_AUDIT_VERSION,
+        "layout_version": LAYOUT_VERSION,
+        "default_layout_id": DEFAULT_LAYOUT_ID,
+        "layouts": [dict(layout) for layout in LAYOUTS],
+        "generated_at_utc": generated_at_utc,
+        "dataset_commits": dict(dataset_commits),
+        "artifact": {},
+    }
+    if continuity_receipt is not None:
+        map_manifest["region_continuity"] = dict(continuity_receipt)
+    if not dataset_commits:
+        map_manifest["dataset_revision_policy"] = "same_revision_as_map_manifest"
+    artifact = build_map_artifact(works, registry, generated_at_utc=generated_at_utc)
+    artifact_path = maps_dir / MAP_ARTIFACT_NAME
+    artifact_path.write_text(
+        json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    map_manifest["artifact"] = {
+        "title": artifact["title"],
+        "point_count": artifact["point_count"],
+        "excluded_work_count": artifact["excluded_work_count"],
+        "department_count": artifact["department_count"],
+        "school_count": artifact["school_count"],
+        "faculty_count": artifact["faculty_count"],
+        "keyword_count": artifact["keyword_count"],
+        "keyword_levels": artifact["keyword_levels"],
+        "file": artifact_path.name,
+    }
+    manifest_path = maps_dir / "manifest.json"
+    manifest_path.write_text(
+        json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return artifact_path, manifest_path, artifact
 
 
 def _to_hub_dataset(frame: Any) -> Any:
@@ -1200,6 +1197,148 @@ def _require_breivik_review_ready(
         )
 
 
+def _publish_atomic_release(
+    tables: dict[str, Any],
+    registry: Registry,
+    *,
+    source_frame: Any,
+    source_manifest: Mapping[str, Any],
+    hf_token: str,
+    prior_revision: str,
+    generated_at_utc: str,
+    continuity_receipt: Mapping[str, Any] | None,
+    repair_manifest_path: Path,
+    provisional_holds: Mapping[tuple[str, str], Any],
+    prior_profiles: Any,
+    prior_people: Any,
+    atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
+    require_bio_release: bool = False,
+) -> tuple[str, dict[str, Any]]:
+    """Stage every output, run Bio gates, then commit seven files once."""
+
+    from huggingface_hub import hf_hub_download
+
+    if atomic_intent_sink is None:
+        raise ValueError("Live publish requires a durable prewrite intent sink")
+    prior_revision = require_revision(prior_revision)
+    bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    bio_source_changed = bio_scholar_source_changed(
+        source_frame, prior_profiles, registry, prior_people
+    )
+    if (require_bio_release or bio_source_changed) and not bio_release:
+        raise ValueError("Bio release source differs from the frozen snapshot")
+    baselines = None
+    repair_manifest = None
+    if bio_release:
+        baselines = load_bio_baselines(
+            repo_id=REPO_ID,
+            prior_revision=prior_revision,
+            hf_token=hf_token,
+        )
+        pending_in_parent = sum(
+            row.get("keyword_id") == "keyword-unclassified"
+            and row.get("detail_keyword_id") == "keyword-unclassified-pending-review"
+            and bool(row["map_eligible"])
+            for row in baselines["repair_works"]
+        )
+        if pending_in_parent:
+            if not repair_manifest_path.is_file():
+                raise FileNotFoundError(
+                    "Bio release needs the reviewed repair manifest: "
+                    f"{repair_manifest_path}"
+                )
+            repair_manifest = load_json(repair_manifest_path)
+        else:
+            repair_manifest = {"restore_eligible_work_ids": []}
+        tables["works"] = preserve_pending_review_topics(
+            tables["works"], baselines["repair_works"], repair_manifest
+        )
+
+    with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
+        root = Path(temp)
+        staged: dict[str, tuple[Any, Path]] = {}
+        files: dict[str, Path] = {}
+        for config_name in DATASET_CONFIGS:
+            dataset = _to_hub_dataset(tables[config_name])
+            path = root / config_name / "train-00000-of-00001.parquet"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            dataset.to_parquet(str(path))
+            staged[config_name] = (dataset, path)
+            files[f"{config_name}/{path.name}"] = path
+        artifact_path, map_manifest_path, artifact = _write_map_artifacts(
+            tables["works"],
+            registry,
+            maps_dir=root / "maps",
+            generated_at_utc=generated_at_utc,
+            dataset_commits={},
+            continuity_receipt=continuity_receipt,
+        )
+        files["maps/publications.json"] = artifact_path
+        files["maps/manifest.json"] = map_manifest_path
+        prior_readme = Path(
+            hf_hub_download(
+                REPO_ID,
+                "README.md",
+                repo_type="dataset",
+                revision=prior_revision,
+                token=hf_token,
+            )
+        ).read_text(encoding="utf-8")
+        readme_path = root / "README.md"
+        readme_path.write_text(
+            build_updated_dataset_card(prior_readme, staged), encoding="utf-8"
+        )
+        files["README.md"] = readme_path
+
+        if bio_release:
+            gate = validate_bio_release_prewrite(
+                source_frame=source_frame,
+                source_manifest=source_manifest,
+                registry=registry,
+                tables=tables,
+                candidate_artifact=artifact,
+                continuity_receipt=continuity_receipt,
+                prior_revision=prior_revision,
+                baselines=baselines,
+                repair_manifest=repair_manifest,
+                provisional_holds=provisional_holds,
+            )
+        else:
+            if (
+                continuity_receipt is None
+                or continuity_receipt.get("prior_revision") != prior_revision
+                or continuity_receipt.get("unexplained_losses")
+                or continuity_receipt.get("unexplained_gains")
+            ):
+                raise ValueError("Atomic release lacks a clean region-continuity gate")
+            gate = {
+                "status": "pass",
+                "gate": "full-source-and-region-continuity-v1",
+                "prior_revision": prior_revision,
+                "source_snapshot_sha256": source_manifest["snapshot_sha256"],
+                "raw_rows": len(source_frame),
+                "map_points": artifact["point_count"],
+            }
+        return commit_atomic_release(
+            files,
+            prewrite_gate=gate,
+            repo_id=REPO_ID,
+            hf_token=hf_token,
+            prior_revision=prior_revision,
+            commit_message=(
+                "Publish complete Biological Sciences Scholar corpus atomically"
+                if bio_release
+                else "Publish central research dataset atomically"
+            ),
+            intent_sink=atomic_intent_sink,
+            intent_metadata={
+                "producer_commit": os.environ.get("MAP_PRODUCER_COMMIT"),
+                "snapshot_commit": os.environ.get("MAP_SOURCE_COMMIT"),
+                "workflow_url": _workflow_url(),
+            },
+        )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1221,13 +1360,21 @@ def publish_snapshot(
     primary_home_baseline_path: Path | None = None,
     prior_revision: str | None = None,
     region_comparison_revision: str | None = None,
+    atomic_release: bool | None = None,
+    atomic_intent_sink: Callable[[Mapping[str, Any]], None] | None = None,
+    require_bio_release: bool = False,
+    repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
-    if prior_revision is not None:
-        _require_current_dataset_revision(
-            hf_token=hf_token, prior_revision=prior_revision
-        )
+    if prior_revision is None:
+        raise ValueError("Live publish requires an immutable prior Hub revision")
+    require_revision(prior_revision)
+    if atomic_release is False:
+        raise ValueError("Live publish requires one atomic Hub commit")
+    if atomic_intent_sink is None:
+        raise ValueError("Live publish requires a durable prewrite intent sink")
+    _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
         registry,
@@ -1243,9 +1390,10 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    if require_bio_release and not frozen_bio_source:
+        raise ValueError("Bio release source differs from the frozen snapshot")
     if region_comparison_revision is not None:
-        if prior_revision is None:
-            raise ValueError("Region comparison requires a current Hub revision")
         require_approved_comparison_revision(
             current_revision=prior_revision,
             comparison_revision=region_comparison_revision,
@@ -1290,7 +1438,7 @@ def publish_snapshot(
         released_frame,
         hf_token=hf_token,
         encoder=encoder,
-        **({"prior_revision": prior_revision} if prior_revision is not None else {}),
+        prior_revision=prior_revision,
     )
     tables = build_dataset_tables(
         enriched,
@@ -1303,7 +1451,7 @@ def publish_snapshot(
     )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
-        **({"revision": prior_revision} if prior_revision is not None else {}),
+        revision=prior_revision,
     )
     layout_reused = False
     if existing_layouts:
@@ -1311,7 +1459,7 @@ def publish_snapshot(
             tables["works"],
             _existing_work_state(
                 hf_token=hf_token,
-                **({"revision": prior_revision} if prior_revision is not None else {}),
+                revision=prior_revision,
             ),
             existing_layouts,
             doi_aliases,
@@ -1325,41 +1473,52 @@ def publish_snapshot(
     )
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
-    continuity_receipt = None
     comparison_revision = region_comparison_revision or prior_revision
-    if comparison_revision is not None:
-        prior_work_fields = (
-            (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
-            if comparison_revision != prior_revision
-            else PRIOR_WORK_FIELDS
+    prior_work_fields = (
+        (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
+        if comparison_revision != prior_revision
+        else PRIOR_WORK_FIELDS
+    )
+    prior_works = list(
+        _published_rows(
+            "works",
+            prior_work_fields,
+            hf_token=hf_token,
+            revision=comparison_revision,
         )
-        prior_works = list(
-            _published_rows(
-                "works",
-                prior_work_fields,
-                hf_token=hf_token,
-                revision=comparison_revision,
-            )
+    )
+    prior_profiles = list(
+        _published_rows(
+            "profile_publications",
+            PRIOR_OBSERVATION_FIELDS,
+            hf_token=hf_token,
+            revision=comparison_revision,
         )
-        prior_profiles = list(
-            _published_rows(
-                "profile_publications",
-                PRIOR_OBSERVATION_FIELDS,
-                hf_token=hf_token,
-                revision=comparison_revision,
-            )
+    )
+    prior_people = list(
+        _published_rows(
+            "people",
+            ("person_id", "included_department_ids"),
+            hf_token=hf_token,
+            revision=prior_revision,
         )
-        if not prior_works or not prior_profiles:
-            raise RuntimeError("Pinned prior dataset lacks region continuity tables")
-        tables["works"], continuity_receipt = reconcile_region_decisions(
-            tables["works"],
-            tables["profile_publications"],
-            prior_works,
-            prior_profiles,
-            prior_revision=comparison_revision,
-        )
-        if comparison_revision != prior_revision:
-            continuity_receipt["current_hub_revision"] = prior_revision
+    )
+    if not prior_works or not prior_profiles:
+        raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    tables["works"], continuity_receipt = reconcile_region_decisions(
+        tables["works"],
+        tables["profile_publications"],
+        prior_works,
+        prior_profiles,
+        prior_revision=comparison_revision,
+    )
+    bio_source_changed = bio_scholar_source_changed(
+        frame, prior_profiles, registry, prior_people
+    )
+    if bio_source_changed and not frozen_bio_source:
+        raise ValueError("Changed Bio Scholar source needs the reviewed Bio snapshot")
+    if comparison_revision != prior_revision:
+        continuity_receipt["current_hub_revision"] = prior_revision
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
@@ -1385,39 +1544,36 @@ def publish_snapshot(
             continuity_receipt=continuity_receipt,
         )
 
-    if prior_revision is not None:
-        _require_current_dataset_revision(
-            hf_token=hf_token, prior_revision=prior_revision
-        )
+    _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     if comparison_revision != prior_revision:
         require_frozen_source_tip(snapshot_path.parent.parent)
         require_frozen_producer_tip(
             snapshot_path.parent.parent,
             os.environ.get("MAP_PRODUCER_COMMIT", ""),
         )
-    dataset_commits: dict[str, str] = {}
-    for config_name in DATASET_CONFIGS:
-        commit = _to_hub_dataset(tables[config_name]).push_to_hub(
-            REPO_ID,
-            config_name=config_name,
-            split="train",
-            token=hf_token,
-            commit_message=f"Publish {config_name} dataset config",
-        )
-        commit_id = getattr(commit, "oid", None)
-        if not commit_id:
-            raise RuntimeError(f"{config_name} upload did not return a commit")
-        dataset_commits[config_name] = str(commit_id)
-
     generated_at_utc = str(manifest["created_at_utc"])
-    artifact_commit = _upload_map_artifacts(
-        tables["works"],
+    if comparison_revision != prior_revision:
+        raise ValueError(
+            "Ordinary atomic upload needs the current immutable Hub revision; "
+            "historical region repair requires its dedicated atomic path"
+        )
+    artifact_commit, atomic_receipt = _publish_atomic_release(
+        tables,
         registry,
+        source_frame=frame,
+        source_manifest=manifest,
         hf_token=hf_token,
+        prior_revision=prior_revision,
         generated_at_utc=generated_at_utc,
-        dataset_commits=dataset_commits,
         continuity_receipt=continuity_receipt,
+        repair_manifest_path=repair_manifest_path,
+        provisional_holds=provisional_holds,
+        prior_profiles=prior_profiles,
+        prior_people=prior_people,
+        atomic_intent_sink=atomic_intent_sink,
+        require_bio_release=require_bio_release,
     )
+    dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
         tables["works"]["has_included_source_profile"]
         if "has_included_source_profile" in tables["works"]
@@ -1429,6 +1585,7 @@ def publish_snapshot(
     return {
         "dataset_commits": dataset_commits,
         "artifact_commit": artifact_commit,
+        "atomic_release": atomic_receipt,
         "raw_snapshot_observations": len(frame),
         "raw_snapshot_profiles": int(
             frame.loc[frame["source_type"] == "scholar", "scholar_id"].nunique()
@@ -1516,6 +1673,78 @@ def _workflow_url() -> str | None:
     return None
 
 
+def _persist_atomic_intent(
+    intent: Mapping[str, Any], *, status: dict[str, Any], status_path: Path
+) -> None:
+    """Checkpoint staged write intent before the Hub call can start."""
+
+    status.update(
+        {
+            "status": "failure",
+            "error_type": "AtomicWriteOutcomeUnknown",
+            "error_message": "Inspect the atomic release intent before retrying",
+            "atomic_release_intent": dict(intent),
+        }
+    )
+    atomic_write_json(status_path, status)
+    repo_name = os.environ.get("MAP_DURABLE_INTENT_REPO")
+    if not repo_name:
+        return
+    context = intent.get("release_context") or {}
+    if not isinstance(context, Mapping):
+        raise ValueError("Atomic intent lacks release context")
+    for field in ("producer_commit", "snapshot_commit"):
+        require_revision(str(context.get(field) or ""))
+    repo = Path(repo_name).resolve(strict=True)
+    branch = os.environ.get("MAP_DURABLE_INTENT_BRANCH")
+    if branch != "automation/map-snapshot":
+        raise ValueError("Atomic intent checkpoint requires the snapshot branch")
+    try:
+        relative = status_path.resolve().relative_to(repo)
+    except ValueError as error:
+        raise ValueError(
+            "Atomic intent status file is outside snapshot checkout"
+        ) from error
+    if relative.as_posix() != "status/last-upload.json":
+        raise ValueError("Atomic intent must checkpoint status/last-upload.json")
+    current_tip = subprocess.run(
+        ["git", "-C", str(repo), "rev-parse", "HEAD"],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    remote_tip = subprocess.run(
+        ["git", "-C", str(repo), "ls-remote", "--heads", "origin", branch],
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.split()
+    if not remote_tip or remote_tip[0] != current_tip:
+        raise RuntimeError("Snapshot branch moved before atomic intent checkpoint")
+    subprocess.run(
+        [
+            "git",
+            "-C",
+            str(repo),
+            "-c",
+            "user.name=github-actions[bot]",
+            "-c",
+            "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+            "commit",
+            "--only",
+            "-m",
+            "Record atomic release intent [skip ci]",
+            "--",
+            relative.as_posix(),
+        ],
+        check=True,
+    )
+    subprocess.run(
+        ["git", "-C", str(repo), "push", "origin", f"HEAD:{branch}"],
+        check=True,
+    )
+
+
 def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", type=Path, required=True)
@@ -1530,6 +1759,17 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--region-comparison-revision",
         type=require_revision,
         help="Exact region baseline; defaults to the current Hub revision",
+    )
+    parser.add_argument(
+        "--repair-reviewed-work-manifest",
+        type=Path,
+        default=Path("data/curated/region-remediation-bernhard.json"),
+        help="Reviewed 112-work topic assignments preserved during the Bio release",
+    )
+    parser.add_argument(
+        "--require-bio-release",
+        action="store_true",
+        help="Fail closed unless the frozen complete Bio snapshot passes its gate",
     )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
@@ -1638,6 +1878,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             snapshot_path=args.snapshot,
         )
         status["scholar_coverage"] = scholar_coverage
+
+        def checkpoint(intent: Mapping[str, Any]) -> None:
+            _persist_atomic_intent(intent, status=status, status_path=args.status_file)
+
         result = publish_snapshot(
             args.snapshot,
             args.manifest,
@@ -1657,13 +1901,26 @@ def main(argv: Sequence[str] | None = None) -> int:
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
             region_comparison_revision=args.region_comparison_revision,
+            repair_manifest_path=args.repair_reviewed_work_manifest,
+            atomic_intent_sink=checkpoint,
+            require_bio_release=args.require_bio_release,
         )
-        status.update({"status": "success", **result, "error_type": None})
+        status.pop("atomic_release_intent", None)
+        status.update(
+            {
+                "status": "success",
+                **result,
+                "error_type": None,
+                "error_message": None,
+            }
+        )
         exit_code = 0
     except Exception as error:
         LOGGER.exception("Snapshot publication failed")
         if isinstance(error, RegionReleaseDiffError):
             status["region_continuity"] = error.receipt
+        if isinstance(error, AtomicReleaseReconciliationRequired):
+            status["atomic_release_reconciliation"] = error.receipt
         status.update(
             {
                 "status": "failure",
