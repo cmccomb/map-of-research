@@ -406,6 +406,68 @@
         "https://meetingorganizer.copernicus.org/EGU2009/EGU2009-9565.pdf"
       ],
       "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "psb2007:12:257-268",
+      "title": "A Stacked Graphical Model for Associating Sub-Images with Sub-Captions",
+      "authors": "Zhenzhen Kou, William W. Cohen, and Robert F. Murphy",
+      "year": 2007,
+      "venue": "Pacific Symposium on Biocomputing",
+      "citation": "Pacific Symposium on Biocomputing 12, 257–268 (2007)",
+      "source_url": "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+      "source_verification_urls": [
+        "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/17990497/"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "biolink2009:209-212",
+      "title": "Structured Literature Image Finder",
+      "authors": "Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Abdul-Saboor Sheikh, Eric Xing, William Cohen, and Robert F. Murphy",
+      "year": 2009,
+      "venue": "Proceedings of the Ninth Annual Meeting of the ISMB BioLINK Special Interest Group",
+      "citation": "Proceedings of the Ninth Annual Meeting of the ISMB BioLINK Special Interest Group, 209–212 (2009)",
+      "source_url": "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+      "source_verification_urls": [
+        "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+        "https://murphylab.cbd.cmu.edu/publications/"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "cmu-report:cmu-cb-09-101",
+      "title": "Structured Literature Image Finder: Open Source Software for Extracting and Disseminating Information from Text and Figures in Biomedical Literature",
+      "authors": "Abdul-Saboor Sheikh, Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Eric P. Xing, William Cohen, and Robert F. Murphy",
+      "year": 2009,
+      "venue": "Carnegie Mellon University School of Computer Science technical report CMU-CB-09-101",
+      "citation": "CMU-CB-09-101, October 2009",
+      "source_url": "https://murphylab.cbd.cmu.edu/publications/",
+      "source_verification_urls": [
+        "https://murphylab.cbd.cmu.edu/publications/",
+        "https://www.cs.cmu.edu/~wcohen/postscript/jws-2010.pdf",
+        "https://citeseerx.ist.psu.edu/document?doi=6dc81b47536b868cd459461f3039580ea71449c1&repid=rep1&type=pdf"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-amandawillard-bde48416",
+      "source_native_id": "pmcid:pmc3970999",
+      "title": "Controversies in Neuroscience: A Literature-Based Course for First Year Undergraduates that Improves Scientific Confidence While Teaching Concepts",
+      "authors": "Amanda M. Willard and D. J. Brasier",
+      "year": 2014,
+      "venue": "Journal of Undergraduate Neuroscience Education",
+      "citation": "Journal of Undergraduate Neuroscience Education 12(2), A159–A166 (2014); PMCID PMC3970999",
+      "source_url": "https://www.funjournal.org/wp-content/uploads/2015/09/june-12-159.pdf",
+      "source_verification_urls": [
+        "https://www.funjournal.org/wp-content/uploads/2015/09/june-12-159.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3970999/",
+        "https://pubmed.ncbi.nlm.nih.gov/24693264/"
+      ],
+      "source_verified_at": "2026-10-25"
     }
   ]
 }
