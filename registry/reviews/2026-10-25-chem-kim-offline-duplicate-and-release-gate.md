@@ -32,6 +32,18 @@ both raw observations and the earlier row 156 decision. The rebuild pins row
 | Provisional attribution/output holds | 421 | No person or publication decision implied. |
 | **Raw Scholar observations** | **918** | **No Kim cache, snapshot, or map release.** |
 
+The three exact-ID sets are pairwise disjoint and cover all 918 source IDs.
+Using the provisional-hold gate's sorted-ID/newline checksum convention,
+their SHA-256 digests are: exclusions
+`83ff33c73b4adb3fee0b608d6b1cb472946b7c269f87c0295cdd29fcac4b2a70`,
+positive signals
+`0f3e11c59d9853b4204e6c5a160213c4658331604976c021f385536e3f47c52d`,
+and unresolved holds
+`2b07f05c5eb2e8b5243d9f8462da2dd705148f3f5ae7730ac3efaac080320d29`.
+These are a release-gate proposal against the saved raw capture, not a
+runtime manifest: no canonical Kim cache exists yet, so there is no cache
+SHA-256 for a publisher release decision to verify.
+
 The 421 holds consist of 416 unmatched rows, two KNU ORCID matches lacking a
 DOI, two KNU ORCID year discrepancies, and one initials-only supergravity
 paper imported into the CMU-linked ORCID. In the held set, 29 rows display at
