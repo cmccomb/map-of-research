@@ -170,7 +170,7 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
                 item.held_author_pub_ids,
             ),
         )
-    ) == (65, 233, 372)
+    ) == (65, 236, 369)
     validate_reviewed_subset_decisions(
         releases,
         load_attribution_reviews(Path("data/curated/scholar-attribution-reviews.json")),
@@ -181,6 +181,18 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
 @pytest.mark.parametrize(
     "index,pub_id,year,title,authors,decision,code,evidence_url,basis_marker",
     [
+        (
+            13,
+            "FrF1YXQAAAAJ:ziOE8S1-AIUC",
+            "2010",
+            "Colorectal carcinoma in young adults: a retrospective study on "
+            "Indian patients: 2000–2008",
+            "S Gupta, D Bhattacharya, AN Acharya, S Majumdar, P Ranjan, S Das",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://onlinelibrary.wiley.com/doi/10.1111/j.1463-1318.2010.02223.x",
+            None,
+        ),
         (
             136,
             "FrF1YXQAAAAJ:0aBXIfxlw9sC",
@@ -202,6 +214,29 @@ def test_das_reviewed_subset_is_exhaustive_and_source_bound() -> None:
             "reviewed_excluded",
             "false_profile_attribution",
             "https://pub.vito.be/openaccess/2020-Das%20et%20al.%2C%20J.%20Electrochem.%20Soc._MES.pdf",
+            None,
+        ),
+        (
+            281,
+            "FrF1YXQAAAAJ:c59VksA5Vz4C",
+            "2018",
+            "Compact Tunable Hafnia Bismuth Erbium Co-Doped Fiber Laser",
+            "U Zakaria, S Harun, P Reddy, D Dutta, D Das, S Das, M Yasin",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://chalcogen.ro/77_ZakariaUN.pdf",
+            None,
+        ),
+        (
+            354,
+            "FrF1YXQAAAAJ:tS2w5q8j5-wC",
+            "2010",
+            "Dual-wavelength Erbium-doped fiber laser based on Erbium-doped "
+            "Zirconia fiber",
+            "A Hamzah, MC Paul, SW Harun, NAD Huri, A Lokman, R Sen, M Pal, ...",
+            "reviewed_excluded",
+            "false_profile_attribution",
+            "https://oam-rc.inoe.ro/articles/dual-wavelength-erbium-doped-fiber-laser-based-on-erbium-doped-zirconia-fiber/",
             None,
         ),
         (

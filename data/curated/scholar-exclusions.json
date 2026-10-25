@@ -11744,6 +11744,30 @@
       "reason": "Nature's original Five years in review is an unsigned 2010 special feature, volume 6, pages 387-389, DOI 10.1038/nchembio.379. The Scholar row assigns authors Subha R. Das and Joseph A. Piccirilli and pages 148-155, which the publisher does not support; it is not their authored work.",
       "evidence_url": "https://www.nature.com/articles/nchembio.379",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:ziOE8S1-AIUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2010 Colorectal Disease article assigns its S. Das author to the Department of Surgery at IPGMER in Kolkata. CMU documents Subha R. Das as its Chemistry assistant professor in 2006-2012; the clinical coauthor is not identified as CMU Das. Original document type: journal article.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1463-1318.2010.02223.x",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:c59VksA5Vz4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2018 Journal of Non-Oxide Glasses PDF lists S. Das, not the extra D. Das in Scholar's byline, and assigns S. Das to CSIR-CGCRI's Fiber Optics and Photonics Division in Kolkata. CMU documents Subha R. Das as its Chemistry associate professor in 2012-present. Original document type: journal article.",
+      "evidence_url": "https://chalcogen.ro/77_ZakariaUN.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2010 Optoelectronics and Advanced Materials - Rapid Communications article assigns its S. Das author to CGCRI's Fibre Optics Division in Kolkata. CMU documents Subha R. Das as its Chemistry assistant professor in 2006-2012. Original document type: journal article.",
+      "evidence_url": "https://oam-rc.inoe.ro/articles/dual-wavelength-erbium-doped-fiber-laser-based-on-erbium-doped-zirconia-fiber/",
+      "verified_at": "2026-10-25"
     }
   ]
 }
