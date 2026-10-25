@@ -74,6 +74,30 @@ OTHER_PRIMARY = {
         "pages 644–654 article names first author Hyun Jung Kim of "
         "Yonsei University Food and Nutrition.",
     ),
+    142: (
+        "Reclamation of abandoned coal mine waste in Korea using lime cake by-products",
+        2006,
+        "Hee Joung Kim",
+        "10.1007/s10230-006-0137-z",
+        "https://pure.korea.ac.kr/en/publications/"
+        "reclamation-of-abandoned-coal-mine-waste-in-korea-using-lime-cake/",
+        "Korea University full-author article record",
+        "Korea University's record for the exact Mine Water and the "
+        "Environment article, volume 25 issue 4, pages 227–232, "
+        "names its final author in full as Hee Joung Kim.",
+    ),
+    175: (
+        "(): New Tl-based Elpasolite Scintillation Material",
+        2016,
+        "Hong Joo Kim",
+        "10.1109/TNS.2016.2530822",
+        "https://research.knu.ac.kr/en/publications/"
+        "tlsub2subliyclsub6sub-cesup3sup-new-tl-based-elpasolite-scintilla/",
+        "KNU author-linked IEEE article record",
+        "KNU identifies the malformed Scholar title's matching 2016 IEEE "
+        "article, volume 63 issue 2, pages 439–442; its H. J. Kim "
+        "author link resolves to KNU Physics professor Hong Joo Kim.",
+    ),
     88: (
         "Investigations of optical and luminescence features of Sm3+ "
         "doped Li2O-MO-B2O3 (M= Mg/Ca/Sr/Ba) glasses mixed with different "
@@ -531,6 +555,8 @@ OTHER_PRIMARY = {
 OTHER_PRIMARY_ID_GUARDS = {
     99: "bC4aq-4AAAAJ:cB__R-XWw9UC",
     161: "bC4aq-4AAAAJ:YlPif8NxrbYC",
+    142: "bC4aq-4AAAAJ:VOx2b1Wkg3QC",
+    175: "bC4aq-4AAAAJ:qsWQJNntlusC",
     88: "bC4aq-4AAAAJ:oi2SiIJ9l4AC",
     148: "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
     267: "bC4aq-4AAAAJ:foquWX3nUaYC",
@@ -870,6 +896,23 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         or row["authors"] != "HJ Kim, KH Sohn, SH Chae, TK Kwak, SK Yim"
                     )
                 )
+                or (
+                    index == 142
+                    and (
+                        row["venue"]
+                        != "Mine Water and the Environment 25 (4), 227-232, 2006"
+                        or row["authors"]
+                        != "JE Yang, JG Skousen, YS Ok, KY Yoo, HJ Kim"
+                    )
+                )
+                or (
+                    index == 175
+                    and (
+                        row["venue"]
+                        != "IEEE Transactions on Nuclear Science 63 (2), 439-442, 2016"
+                        or row["authors"] != "HJ Kim, G Rooh, H Park, S Kim"
+                    )
+                )
             ):
                 raise ValueError(f"Primary-source match changed at capture row {index}")
             status = "proposed_other_person_primary_work"
@@ -1119,16 +1162,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 44,
+        "proposed_other_person_primary_work": 46,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 407,
+        "unresolved_attribution_hold": 405,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 384 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 386 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
