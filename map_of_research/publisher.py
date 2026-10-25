@@ -71,6 +71,7 @@ from .region_repair import (
     require_expected_repair_preview,
     require_frozen_producer_tip,
     require_frozen_source_tip,
+    require_historical_region_decisions,
 )
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
@@ -1327,10 +1328,15 @@ def publish_snapshot(
     continuity_receipt = None
     comparison_revision = region_comparison_revision or prior_revision
     if comparison_revision is not None:
+        prior_work_fields = (
+            (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
+            if comparison_revision != prior_revision
+            else PRIOR_WORK_FIELDS
+        )
         prior_works = list(
             _published_rows(
                 "works",
-                PRIOR_WORK_FIELDS,
+                prior_work_fields,
                 hf_token=hf_token,
                 revision=comparison_revision,
             )
@@ -1358,6 +1364,7 @@ def publish_snapshot(
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
     if comparison_revision != prior_revision:
+        require_historical_region_decisions(prior_works, tables["works"])
         repair_related_mask = (
             tables["works"]["has_included_source_profile"]
             if "has_included_source_profile" in tables["works"]

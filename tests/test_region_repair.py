@@ -8,6 +8,8 @@ import runpy
 import sys
 from types import SimpleNamespace
 
+import numpy
+import pandas
 import pytest
 
 import map_of_research.region_repair as repair
@@ -232,8 +234,6 @@ def reviewed_preview():
             "prior_visible_observations": 48953,
             "current_visible_observations": 49136,
             "stable_works": 45437,
-            "prior_eligible_overrides": 112,
-            "prior_excluded_overrides": 168,
             "reviewed_losses": [],
             "verified_gains": [],
             "new_source_gains": 183,
@@ -246,6 +246,13 @@ def reviewed_preview():
 def test_exact_repair_preview_is_required_before_upload():
     expected = reviewed_preview()
     repair.require_expected_repair_preview(**expected)
+    required_keys = tuple(expected["continuity_receipt"])
+    # The raw rebuild can already agree with 21 historical decisions before
+    # continuity runs, so the published-table override counts are not a gate.
+    expected["continuity_receipt"].update(
+        prior_eligible_overrides=107, prior_excluded_overrides=152
+    )
+    repair.require_expected_repair_preview(**expected)
     for field, value in (
         ("work_count", 47694),
         ("map_point_count", 42870),
@@ -255,11 +262,92 @@ def test_exact_repair_preview_is_required_before_upload():
         changed = {**expected, field: value}
         with pytest.raises(RuntimeError, match="map points, embeddings, or layout"):
             repair.require_expected_repair_preview(**changed)
-    for key in expected["continuity_receipt"]:
+    for key in required_keys:
         changed = reviewed_preview()
         changed["continuity_receipt"][key] = "different"
         with pytest.raises(RuntimeError, match="reviewed region replay"):
             repair.require_expected_repair_preview(**changed)
+
+
+def test_repair_requires_all_historical_region_decisions(monkeypatch):
+    monkeypatch.setattr(repair, "HISTORICAL_WORK_COUNT", 2)
+    historical = [
+        {
+            "work_id": "work-visible",
+            "map_eligible": True,
+            "map_region_outlier": False,
+            "map_exclusion_reasons": [],
+        },
+        {
+            "work_id": "work-hidden",
+            "map_eligible": False,
+            "map_region_outlier": True,
+            "map_exclusion_reasons": ["missing_source", "low_information_region"],
+        },
+    ]
+    final = pandas.DataFrame([*historical, {**historical[0], "work_id": "new-work"}])
+    repair.require_historical_region_decisions(historical, final)
+    for field, changed_value in (
+        ("map_eligible", True),
+        ("map_region_outlier", False),
+        ("map_exclusion_reasons", ["low_information_region", "missing_source"]),
+    ):
+        changed = final.copy(deep=True)
+        changed.at[1, field] = changed_value
+        with pytest.raises(RuntimeError, match="changed historical region decisions"):
+            repair.require_historical_region_decisions(historical, changed)
+    with pytest.raises(RuntimeError, match="changed historical region decisions"):
+        repair.require_historical_region_decisions(historical, final.iloc[[0, 2]])
+
+
+def test_repair_rejects_incomplete_or_ambiguous_historical_decisions(monkeypatch):
+    monkeypatch.setattr(repair, "HISTORICAL_WORK_COUNT", 2)
+    row = {
+        "work_id": "work-one",
+        "map_eligible": False,
+        "map_region_outlier": True,
+        "map_exclusion_reasons": ["low_information_region"],
+    }
+    final = pandas.DataFrame([row])
+    with pytest.raises(RuntimeError, match="complete historical work set"):
+        repair.require_historical_region_decisions([row], final)
+    with pytest.raises(RuntimeError, match="duplicate historical work IDs"):
+        repair.require_historical_region_decisions([row, row], final)
+    with pytest.raises(RuntimeError, match="lacks historical region decisions"):
+        repair.require_historical_region_decisions(
+            [row, {"work_id": "work-two", "map_eligible": False}], final
+        )
+    with pytest.raises(RuntimeError, match="lacks final region decision fields"):
+        repair.require_historical_region_decisions(
+            [row, {**row, "work_id": "work-two"}], final.drop(columns="map_eligible")
+        )
+    with pytest.raises(RuntimeError, match="duplicate final work IDs"):
+        repair.require_historical_region_decisions(
+            [row, {**row, "work_id": "work-two"}], pandas.concat([final, final])
+        )
+
+
+def test_repair_rejects_null_flags_but_accepts_numpy_booleans(monkeypatch):
+    monkeypatch.setattr(repair, "HISTORICAL_WORK_COUNT", 1)
+    row = {
+        "work_id": "work-one",
+        "map_eligible": False,
+        "map_region_outlier": True,
+        "map_exclusion_reasons": ["low_information_region"],
+    }
+    final = pandas.DataFrame([row])
+    repair.require_historical_region_decisions(
+        [{**row, "map_eligible": numpy.bool_(False)}], final
+    )
+    for bad in (None, float("nan")):
+        with pytest.raises(RuntimeError, match="lacks historical region decisions"):
+            repair.require_historical_region_decisions(
+                [{**row, "map_eligible": bad}], final
+            )
+        with pytest.raises(RuntimeError, match="lacks historical region decisions"):
+            repair.require_historical_region_decisions(
+                [row], pandas.DataFrame([{**row, "map_region_outlier": bad}])
+            )
 
 
 def test_cli_emits_selected_revision(tmp_path, monkeypatch, capsys):

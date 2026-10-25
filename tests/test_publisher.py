@@ -1702,9 +1702,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     baseline_checks = []
     comparison_checks = []
     preview_checks = []
+    historical_decision_checks = []
     source_tip_checks = []
     producer_tip_checks = []
     published_revisions = []
+    published_fields = []
     if region_override:
         monkeypatch.setattr(
             publisher,
@@ -1727,6 +1729,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             "require_expected_repair_preview",
             lambda **kwargs: preview_checks.append(kwargs),
         )
+        monkeypatch.setattr(
+            publisher,
+            "require_historical_region_decisions",
+            lambda works, final: historical_decision_checks.append((works, final)),
+        )
     if pinned:
         monkeypatch.setattr(
             publisher,
@@ -1736,6 +1743,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
 
         def prior_rows(config, fields, **kwargs):
             published_revisions.append(kwargs["revision"])
+            published_fields.append((config, fields))
             return (
                 []
                 if missing_prior and config == "works"
@@ -1792,6 +1800,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert published_revisions == (
         ["b" * 40 if region_override else "a" * 40] * 2 if pinned else []
     )
+    if pinned:
+        assert published_fields[0][0] == "works"
+        assert ("map_exclusion_reasons" in published_fields[0][1]) == region_override
+    if region_override:
+        assert len(historical_decision_checks) == 1
+        assert historical_decision_checks[0][0] == [{"work_id": "old"}]
+        assert historical_decision_checks[0][1] is tables["works"]
+    else:
+        assert historical_decision_checks == []
     assert comparison_checks == (
         [
             {

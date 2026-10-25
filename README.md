@@ -310,7 +310,11 @@ and layouts. It compares region decisions with the last verified pre-Bernhard
 release only after checking the exact snapshot bytes, immutable source and
 historical receipt commits, both successful receipts, and the producer commit
 selected by the dispatch event. It checks the live producer and source branch
-tips again immediately before the first Hub write. Ordinary push and dispatch
+tips again immediately before the first Hub write. The one-time prewrite gate
+also requires all 47,495 pre-Bernhard works to retain their exact mapping,
+outlier, and ordered exclusion-reason decisions; raw audit override counts can
+vary when a work already matches the historical decision before reconciliation.
+Ordinary push and dispatch
 uploads leave the switch false and compare with their current hosted head. A completed
 correction cannot be replayed because the hosted head and source tip change.
 Keep producer `main` and the snapshot branch frozen through the receipt push;

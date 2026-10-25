@@ -10,9 +10,11 @@ import argparse
 import hashlib
 import json
 import subprocess
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any
+
+import numpy
 
 from .region_continuity import require_revision
 
@@ -30,6 +32,12 @@ CURRENT_UPLOAD_RUN = (
 )
 HISTORICAL_UPLOAD_RUN = (
     "https://github.com/cmccomb/map-of-research/actions/runs/40167632965"
+)
+HISTORICAL_WORK_COUNT = 47495
+REGION_DECISION_FIELDS = (
+    "map_eligible",
+    "map_region_outlier",
+    "map_exclusion_reasons",
 )
 
 
@@ -101,8 +109,6 @@ def require_expected_repair_preview(
         "prior_visible_observations": 48953,
         "current_visible_observations": 49136,
         "stable_works": 45437,
-        "prior_eligible_overrides": 112,
-        "prior_excluded_overrides": 168,
         "reviewed_losses": [],
         "verified_gains": [],
         "new_source_gains": 183,
@@ -111,6 +117,59 @@ def require_expected_repair_preview(
     }
     if any(continuity_receipt.get(key) != value for key, value in expected.items()):
         raise RuntimeError("Bernhard repair differs from reviewed region replay")
+
+
+def require_historical_region_decisions(
+    historical_works: Sequence[Mapping[str, Any]], final_works: Any
+) -> None:
+    """Require every pre-Bernhard work to retain its exact region decision."""
+
+    if len(historical_works) != HISTORICAL_WORK_COUNT:
+        raise RuntimeError("Bernhard repair lacks the complete historical work set")
+    required = {"work_id", *REGION_DECISION_FIELDS}
+    if not required.issubset(final_works.columns):
+        raise RuntimeError("Bernhard repair lacks final region decision fields")
+
+    def decision(row: Mapping[str, Any]) -> tuple[bool, bool, tuple[str, ...]]:
+        if (
+            not required.issubset(row)
+            or not isinstance(row["map_exclusion_reasons"], (list, tuple))
+            or not all(
+                isinstance(row[field], (bool, numpy.bool_))
+                for field in ("map_eligible", "map_region_outlier")
+            )
+        ):
+            raise RuntimeError("Bernhard repair lacks historical region decisions")
+        return (
+            bool(row["map_eligible"]),
+            bool(row["map_region_outlier"]),
+            tuple(row["map_exclusion_reasons"]),
+        )
+
+    prior: dict[str, tuple[bool, bool, tuple[str, ...]]] = {}
+    for row in historical_works:
+        work_id = str(row.get("work_id") or "")
+        if not work_id or work_id in prior:
+            raise RuntimeError("Bernhard repair has duplicate historical work IDs")
+        prior[work_id] = decision(row)
+
+    final: dict[str, tuple[bool, bool, tuple[str, ...]]] = {}
+    for row in final_works.loc[:, list(required)].to_dict("records"):
+        work_id = str(row.get("work_id") or "")
+        if not work_id or work_id in final:
+            raise RuntimeError("Bernhard repair has duplicate final work IDs")
+        final[work_id] = decision(row)
+
+    changed = sorted(
+        work_id
+        for work_id, prior_decision in prior.items()
+        if final.get(work_id) != prior_decision
+    )
+    if changed:
+        raise RuntimeError(
+            "Bernhard repair changed historical region decisions: "
+            f"{len(changed)} work IDs; first {changed[:3]}"
+        )
 
 
 def select_region_comparison_revision(
