@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 990
+    assert len(exclusions) >= 1028
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -138,7 +138,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "qQLlBH4AAAAJ" for key in exclusions) == 37
     assert sum(key[0] == "bKMKO_AAAAAJ" for key in exclusions) == 14
     assert sum(key[0] == "MbRIDjgAAAAJ" for key in exclusions) == 9
-    assert sum(key[0] == "wXSgFr4AAAAJ" for key in exclusions) == 18
+    assert sum(key[0] == "wXSgFr4AAAAJ" for key in exclusions) == 49
     for suffix in ("L8Ckcad2t8MC", "XUvXOeBm_78C"):
         key = ("wXSgFr4AAAAJ", f"wXSgFr4AAAAJ:{suffix}")
         assert exclusions[key].reason_code == "false_profile_attribution"
