@@ -14,6 +14,7 @@ import numbers
 import re
 from collections import Counter
 from collections.abc import Mapping, Sequence
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -147,19 +148,18 @@ def merge_chemistry_review_inputs(
     output_count = 0
     for item in decisions:
         key = (item.scholar_id, item.author_pub_id)
-        if key in merged_exclusions or key in merged_holds or key in merged_contexts:
-            raise ValueError(
-                f"Chemistry decision conflicts with existing review: {key}"
-            )
+        expected_exclusion = None
+        expected_hold = None
+        expected_context = None
         if item.decision == "exclude":
-            merged_exclusions[key] = ReviewedExclusion(
+            expected_exclusion = ReviewedExclusion(
                 reason_code=item.reason_code,
                 reason=item.reason,
                 evidence_url=item.evidence_url,
                 verified_at=item.reviewed_at,
             )
         elif item.decision == "hold":
-            merged_holds[key] = ProvisionalHold(
+            expected_hold = ProvisionalHold(
                 scholar_id=item.scholar_id,
                 author_pub_id=item.author_pub_id,
                 capture_row_index=item.capture_row_index,
@@ -169,13 +169,37 @@ def merge_chemistry_review_inputs(
             )
         if item.output_type:
             output_count += 1
-            merged_contexts[key] = ReviewedContext(
+            expected_context = ReviewedContext(
                 publication_type=item.output_type,
                 document_id="",
                 reason=item.reason,
                 evidence_url=item.evidence_url,
                 verified_at=item.reviewed_at,
             )
+        prior_hold = merged_holds.get(key)
+        saved_scholar_hold = (
+            replace(
+                expected_hold,
+                evidence_url=item.saved_scholar_url,
+                primary_evidence_url=item.evidence_url,
+            )
+            if expected_hold is not None
+            else None
+        )
+        if (
+            merged_exclusions.get(key) not in (None, expected_exclusion)
+            or prior_hold not in (None, expected_hold, saved_scholar_hold)
+            or merged_contexts.get(key) not in (None, expected_context)
+        ):
+            raise ValueError(
+                f"Chemistry decision conflicts with existing review: {key}"
+            )
+        if expected_exclusion is not None:
+            merged_exclusions[key] = expected_exclusion
+        if expected_hold is not None:
+            merged_holds[key] = expected_hold
+        if expected_context is not None:
+            merged_contexts[key] = expected_context
     if output_count != 2:
         raise ValueError("Chemistry ordinary review lacks two presentations")
     return merged_exclusions, merged_holds, merged_contexts

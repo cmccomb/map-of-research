@@ -208,9 +208,52 @@ def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None
             assert holds[key].evidence_url != item.saved_scholar_url
         if item.output_type:
             assert contexts[key].publication_type == "conference_presentation"
+    assert merge_chemistry_review_inputs(decisions, exclusions, holds, contexts) == (
+        exclusions,
+        holds,
+        contexts,
+    )
+    saved_holds = {
+        key: replace(
+            hold,
+            evidence_url=next(
+                item.saved_scholar_url
+                for item in decisions
+                if (item.scholar_id, item.author_pub_id) == key
+            ),
+            primary_evidence_url=hold.evidence_url,
+        )
+        for key, hold in holds.items()
+    }
+    merged = merge_chemistry_review_inputs(
+        decisions, exclusions, saved_holds, contexts
+    )
+    assert merged == (
+        exclusions,
+        holds,
+        contexts,
+    )
     with pytest.raises(ValueError, match="conflicts with existing review"):
         merge_chemistry_review_inputs(
-            decisions, {next(iter(exclusions)): next(iter(exclusions.values()))}, {}, {}
+            decisions,
+            {
+                next(iter(exclusions)): replace(
+                    next(iter(exclusions.values())), reason="different review"
+                )
+            },
+            {},
+            {},
+        )
+    with pytest.raises(ValueError, match="conflicts with existing review"):
+        merge_chemistry_review_inputs(
+            decisions,
+            exclusions,
+            {
+                next(iter(holds)): replace(
+                    next(iter(holds.values())), reason="different review"
+                )
+            },
+            contexts,
         )
     with pytest.raises(ValueError, match="exact 19 decisions"):
         merge_chemistry_review_inputs(decisions[:-1], {}, {}, {})
