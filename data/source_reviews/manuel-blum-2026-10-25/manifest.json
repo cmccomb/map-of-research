@@ -22,7 +22,7 @@
   },
   "post_2011_candidates": {
     "path": "post-2011-candidates.csv",
-    "sha256": "faa22dc6f8438340bec93ce5a2fc07c827dc2552c0b9badc2c549bf38900584a",
+    "sha256": "572f40129e26c98713a8de28bcfd6314243d8eb20e7ff648cef16b30a1fb5601",
     "row_count": 8,
     "interpretation": "Held later arXiv source observations; identity and work-family reconciliation required; not eight distinct works"
   },
@@ -53,6 +53,18 @@
       "evidence_urls": [
         "https://arxiv.org/abs/2107.13704",
         "https://doi.org/10.1073/pnas.2115934119"
+      ]
+    }
+  ],
+  "reviewed_identity_links": [
+    {
+      "source_id": "arxiv:1906.00029",
+      "decision": "cmu_manuel_blum_attributed",
+      "basis": "Coauthor Elan Rosenfeld's CMU-hosted CV lists the exact title and Rosenfeld-Vempala-Blum trio as a 2016 senior thesis; CMU's research abstract identifies Manuel Blum as Rosenfeld's advisor for that title. The 2019 arXiv record lists the same trio. Thesis-to-preprint text identity remains unresolved.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1906.00029",
+        "https://www.cs.cmu.edu/~elan/docs/Elan_CV.pdf",
+        "https://www.cmu.edu/uro/MoM/2016%20MoM%20Abstract%20Book.pdf"
       ]
     }
   ],

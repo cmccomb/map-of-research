@@ -27,8 +27,13 @@ lists DOI `10.1073/pnas.2115934119` as a related PNAS publication, so those
 two manifestations form another reviewed family. Its stated text overlap
 with arXiv:2011.09850 does not establish that the 2020 preprint is the same
 work. Other 2020–2024 consciousness records retain version and genre holds.
-The 2019 password preprint needs an independent exact-person link before
-release. These are source observations, **not** eight distinct new works or a
+The 2019 password preprint now has an exact-person link: coauthor Elan
+Rosenfeld's [CMU-hosted CV](https://www.cs.cmu.edu/~elan/docs/Elan_CV.pdf)
+lists the same title, Rosenfeld–Vempala–Blum byline, and a 2016 senior
+thesis; a [CMU research abstract](https://www.cmu.edu/uro/MoM/2016%20MoM%20Abstract%20Book.pdf)
+names Manuel Blum as advisor. The 2016 thesis and 2019 arXiv text still need
+comparison before a work-family decision. These are source observations,
+**not** eight distinct new works or a
 whole-career census. A broad “Blum, M” search also returns other researchers;
 same-name results are not automatically attributed to CMU Manuel Blum. The
 [broad arXiv search](https://arxiv.org/search/cs?query=Blum%2C+M&searchtype=author)
