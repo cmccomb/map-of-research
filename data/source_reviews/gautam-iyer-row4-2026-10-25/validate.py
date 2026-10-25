@@ -26,7 +26,10 @@ class CitationMeta(HTMLParser):
 
 def check() -> None:
     manifest = json.loads((ROOT / "manifest.json").read_text())
-    if manifest["schema_version"] != 1 or manifest["release_state"] != "source_only_release_held":
+    if (
+        manifest["schema_version"] != 1
+        or manifest["release_state"] != "source_only_release_held"
+    ):
         raise ValueError("Source review release hold changed")
     for name, digest in manifest["files_sha256"].items():
         actual = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
@@ -34,8 +37,10 @@ def check() -> None:
             raise ValueError(f"Pinned source changed: {name}")
     expected_authors = ["Han, Ruiyu", "Iyer, Gautam", "Slepčev, Dejan"]
     titles = [
-        "Polynomial complexity sampling from multimodal distributions using Sequential Monte Carlo",
-        "Time-complexity of sampling from a multimodal distribution using sequential Monte Carlo",
+        "Polynomial complexity sampling from multimodal distributions "
+        "using Sequential Monte Carlo",
+        "Time-complexity of sampling from a multimodal distribution "
+        "using sequential Monte Carlo",
     ]
     for version, title in ((1, titles[0]), (2, titles[1])):
         page = (ROOT / f"arxiv-v{version}.html").read_text()
