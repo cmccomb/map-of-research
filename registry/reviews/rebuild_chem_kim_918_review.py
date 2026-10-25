@@ -401,13 +401,66 @@ OTHER_PRIMARY = {
     ),
 }
 
-# The CMU-affiliated Pittsburgh Quantum Institute lists this exact older work
-# among Hyung Kim's most cited publications, resolving the initials-only row.
-CMU_INSTITUTIONAL = {
+# CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
+# assertion does not independently resolve the initials-only APS author.
+CMU_ORCID_DOI_HOLD = {
     1: (
         "Mass spectrum of chiral ten-dimensional N=2 supergravity on",
         1985,
-        "https://www.pqi.org/hyung-kim",
+        "10.1103/PhysRevD.32.389",
+        "https://pub.orcid.org/v3.0/0000-0003-4334-1879/work/28834334",
+    ),
+}
+
+# CMU-linked bibliographies or a publisher article identify these older works.
+CMU_PRIMARY = {
+    16: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. I. Formulation",
+        1990,
+        "https://api.crossref.org/works/10.1063%2F1.459665",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline",
+    ),
+    21: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. III. Quantum theory",
+        1992,
+        "https://api.crossref.org/works/10.1063%2F1.462752",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline",
+    ),
+    44: (
+        "A molecular dynamics computer simulation study of room-temperature "
+        "ionic liquids. II. Equilibrium and nonequilibrium solvation dynamics",
+        2005,
+        "https://www.chem.cmu.edu/groups/kim/pub.html",
+        "CMU Kim Group publication list",
+    ),
+    78: (
+        "Graphene-based supercapacitors in the parallel-plate electrode "
+        "configuration: Ionic liquids versus organic electrolytes",
+        2011,
+        "https://pubs.rsc.org/en/content/articlelanding/2012/fd/c1fd00086a",
+        "RSC original article with CMU author affiliation",
+    ),
+    479: (
+        "Temperature-and pressure-dependence of the outer-sphere "
+        "reorganization free energy for electron transfer reactions: "
+        "a continuum approach",
+        2006,
+        "https://www.chem.cmu.edu/groups/kim/pub.html",
+        "CMU Kim Group publication list",
+    ),
+}
+
+# The later Scholar row has a broken superscript title and no page number.
+# The publisher's one 1985 article at PRD 32, 389 is row 1; its person
+# attribution remains held separately from this duplicate-work decision.
+CORRUPTED_DUPLICATE_PRIMARY = {
+    907: (
+        "Mass spectrum of chiral ten-dimensional N= 2 supergravity on S/sup 5",
+        1985,
+        "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.32.389",
+        "bC4aq-4AAAAJ:SP6oXDckpogC",
     ),
 }
 
@@ -559,14 +612,54 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     evidence_url,
                 )
             )
-        elif index in CMU_INSTITUTIONAL:
-            expected_title, expected_year, evidence_url = CMU_INSTITUTIONAL[index]
-            if title != expected_title or year != str(expected_year):
-                raise ValueError(
-                    f"CMU institutional match changed at capture row {index}"
+        elif index in CORRUPTED_DUPLICATE_PRIMARY:
+            (
+                expected_title,
+                expected_year,
+                evidence_url,
+                retained_pub_id,
+            ) = CORRUPTED_DUPLICATE_PRIMARY[index]
+            if (
+                title != expected_title
+                or year != str(expected_year)
+                or row["authors"] != rows[0]["authors"]
+                or "32 (2)" not in row["venue"]
+                or scholar_pub_id(rows[0]) != retained_pub_id
+            ):
+                raise ValueError(f"Publisher duplicate match changed at row {index}")
+            status = "proposed_corrupted_duplicate_primary"
+            evidence_source = "APS original article"
+            additions.append(
+                decision(
+                    pub_id,
+                    "corrupted_duplicate",
+                    (
+                        "The initials, coauthors, 1985 year, Physical Review D "
+                        "volume 32 issue 2, and malformed S/sup 5 title point to "
+                        "the one APS article represented by Scholar observation "
+                        f"{retained_pub_id}; this row is a broken duplicate."
+                    ),
+                    evidence_url,
                 )
-            status = "cmu_institutional_bibliography_retained"
-            evidence_source = "Pittsburgh Quantum Institute CMU faculty bibliography"
+            )
+        elif index in CMU_ORCID_DOI_HOLD:
+            expected_title, expected_year, doi, evidence_url = CMU_ORCID_DOI_HOLD[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(f"CMU ORCID DOI match changed at capture row {index}")
+            status = "cmu_orcid_doi_identity_hold"
+            evidence_source = (
+                "CMU-linked ORCID work; ResearcherID import; author unresolved"
+            )
+        elif index in CMU_PRIMARY:
+            (
+                expected_title,
+                expected_year,
+                evidence_url,
+                evidence_source,
+            ) = CMU_PRIMARY[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(f"CMU primary match changed at capture row {index}")
+            status = "cmu_primary_work_retained"
         elif cmu_exact:
             status = "cmu_orcid_exact_title_year_retained"
             doi = cmu_exact["doi"]
@@ -633,21 +726,22 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 100,
-        "cmu_institutional_bibliography_retained": 1,
-        "cmu_orcid_title_only_year_check": 1,
+        "cmu_orcid_doi_identity_hold": 1,
+        "cmu_primary_work_retained": 5,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
         "proposed_other_person_primary_work": 33,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 435,
+        "proposed_corrupted_duplicate_primary": 1,
+        "unresolved_attribution_hold": 430,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 369 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 370 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
