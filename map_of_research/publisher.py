@@ -47,9 +47,8 @@ from .chem_carryforward import (
     validate_chem_carryforward,
 )
 from .chem_continuity import (
-    BIO_REGION_REFIT_PARENT,
-    BIO_REGION_REFIT_SOURCE_SHA256,
     CHEMISTRY_HUB_REVISION,
+    allows_bio_region_refit,
     load_chemistry_parent,
     merge_chemistry_review_inputs,
     needs_chemistry_continuity,
@@ -2039,10 +2038,10 @@ def publish_snapshot(
         validate_chemistry_candidate(
             tables,
             chemistry_parent_state,
-            allow_region_refit=(
-                not layout_reused
-                and prior_revision == BIO_REGION_REFIT_PARENT
-                and manifest["snapshot_sha256"] == BIO_REGION_REFIT_SOURCE_SHA256
+            allow_region_refit=allows_bio_region_refit(
+                prior_revision=prior_revision,
+                source_sha256=str(manifest["snapshot_sha256"]),
+                layout_reused=layout_reused,
             ),
             require_count_parity=bool(
                 held_observation_ids

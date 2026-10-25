@@ -104,18 +104,21 @@ BIO_REGION_REFIT_PARENT = "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
 BIO_REGION_REFIT_SOURCE_SHA256 = (
     "d1ab914ec3fe57e30361fa6b01f30787b985e554e058faa01b32c6496e869ac6"
 )
-BIO_REGION_REFIT_CHANGES = frozenset(
-    {
-        (
-            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
-            "map_region_documented_override",
-        ),
-        (
-            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
-            "map_region_prior_eligible_override",
-        ),
-    }
+BIO_REGION_REFIT_FIELDS = frozenset(
+    {"map_region_documented_override", "map_region_prior_eligible_override"}
 )
+
+
+def allows_bio_region_refit(
+    *, prior_revision: str, source_sha256: str, layout_reused: bool
+) -> bool:
+    """Scope platform-dependent region diagnostics to one reviewed release."""
+
+    return (
+        not layout_reused
+        and prior_revision == BIO_REGION_REFIT_PARENT
+        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
+    )
 
 
 def needs_chemistry_continuity(
@@ -567,9 +570,9 @@ def validate_chemistry_candidate(
 ) -> None:
     """Reject changes to reviewed Chemistry source and visibility decisions.
 
-    The exact Bio-parent combined refit changes two derived flags from false
-    to true. The caller must pin that parent and source, and all other reviewed
-    source, visibility, and authorship fields remain protected.
+    A full layout refit may change two derived region diagnostics for parent-
+    visible reviewed works across platforms. The caller pins the Bio parent
+    and source; source, visibility, attribution, and authorship stay exact.
     """
 
     parent = parent_state["parent_rows"]
@@ -607,9 +610,10 @@ def validate_chemistry_candidate(
                 if (
                     table == "works"
                     and allow_region_refit
-                    and (key, field) in BIO_REGION_REFIT_CHANGES
-                    and _equal_value(prior[field]) is False
-                    and _equal_value(row[field]) is True
+                    and key in parent["points"]
+                    and field in BIO_REGION_REFIT_FIELDS
+                    and type(_equal_value(prior[field])) is bool
+                    and type(_equal_value(row[field])) is bool
                 ):
                     continue
                 raise ValueError(f"Chemistry candidate {table} changed: {key}: {field}")
