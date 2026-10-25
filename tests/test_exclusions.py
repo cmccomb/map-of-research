@@ -158,9 +158,18 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
         and "research.knu.ac.kr" in by_index[267]["evidence_url"]
     )
     assert (
-        by_index[312]["status"] == "cmu_orcid_exact_title_year_retained"
+        by_index[312]["status"] == "cmu_primary_work_retained"
+        and by_index[312]["matched_doi"] == "10.1016/j.molstruc.2017.05.138"
+        and "scholarscommons.fgcu.edu" in by_index[312]["evidence_url"]
         and by_index[797]["status"] == "proposed_corrupted_duplicate_primary"
         and by_index[797]["author_pub_id"] == "bC4aq-4AAAAJ:9Nmd_mFXekcC"
+    )
+    assert (
+        by_index[140]["status"] == "cmu_primary_work_retained"
+        and by_index[140]["matched_doi"]
+        == "10.1002/(sici)1522-2594(199902)41:2<299::aid-mrm13>3.0.co;2-r"
+        and by_index[470]["status"] == "cmu_primary_work_retained"
+        and by_index[470]["matched_doi"] == "10.1002/qua.560382480"
     )
     assert (
         by_index[156]["status"] == "proposed_other_person_primary_work"
