@@ -489,6 +489,8 @@ def test_publisher_cli_requires_complete_source_before_upload(
         str(snapshot),
         "--manifest",
         str(manifest),
+        "--prior-revision",
+        "a" * 40,
         "--people",
         str(paths[0]),
         "--memberships",

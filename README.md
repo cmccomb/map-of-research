@@ -286,7 +286,53 @@ map-validate-snapshot \
 `map-publish-snapshot` reads `data/curated/scholar-exclusions.json` by default;
 pass `--reviewed-exclusions` when the trusted source checkout is in another
 directory, as in the upload workflow. The upload receipt records the manifest
-checksum and number of matched exclusions.
+checksum and number of matched exclusions. The CLI also requires
+`--prior-revision` with the immutable 40-character Hugging Face commit SHA of
+the release it replaces. The hosted workflow pins this from the previous
+successful upload receipt before it begins publishing. A local publication
+must supply the same prior release SHA explicitly.
+
+The publisher reruns the weak-region audit on the full corpus. It carries a
+prior region decision forward only when a work has the same eligible Scholar
+observations, raw source records, effective publication metadata, and quality
+version. Exact reviewed exclusions and source or metadata changes use the
+current result. A release stops before upload if an existing visible
+observation disappears without an exact review, or a previously excluded
+observation appears without independent DOI or native-record verification.
+The upload and map receipts record the baseline SHA and any carried decisions
+or reviewed changes. Prior map visibility controls release changes; it does
+not establish that a publication is valid.
+
+The one-time Bernhard correction uses `workflow_dispatch` on `main` with
+`snapshot_ref=automation/map-snapshot` and `restore_prior_regions=true`. The
+publisher still pins the current hosted head for upload safety, embeddings,
+and layouts. It compares region decisions with the last verified pre-Bernhard
+release only after checking the exact snapshot bytes, immutable source and
+historical receipt commits, both successful receipts, and the producer commit
+selected by the dispatch event. It checks the live producer and source branch
+tips again immediately before the first Hub write. The one-time prewrite gate
+also requires all 47,495 pre-Bernhard works to retain their exact mapping,
+outlier, and ordered exclusion-reason decisions; raw audit override counts can
+vary when a work already matches the historical decision before reconciliation.
+Ordinary push and dispatch
+uploads leave the switch false and compare with their current hosted head. A completed
+correction cannot be replayed because the hosted head and source tip change.
+Keep producer `main` and the snapshot branch frozen through the receipt push;
+the pre-write check cannot lock the Git branch against a later writer.
+The one-time mode leaves a failed run in Actions logs without advancing the
+snapshot branch. A partial Hub upload still changes the Hub head and blocks a
+retry until it is audited and restored.
+
+The publisher writes dataset configs sequentially and checks that the hosted
+repository still equals the pinned prior SHA immediately before the first
+write. If an upload fails after any config was written, the next run stops at
+that check. An operator must inspect the partial Hub commit history and
+restore the hosted dataset to the exact pinned prior revision before retrying
+the same snapshot. Never use the partial upload head as the next baseline;
+`last-successful-upload.json` retains the last completed artifact revision.
+The workflow copies the previously successful receipt into that file before
+its first upload attempt, so an initial failed attempt cannot erase the
+baseline needed for a safe retry.
 
 The hosted upload workflow runs `map-validate-math-coverage` before requesting
 its Hugging Face token. For every included Mathematical Sciences person with a
