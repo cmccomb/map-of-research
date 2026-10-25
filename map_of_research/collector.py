@@ -159,19 +159,26 @@ def load_collection_state(path: Path) -> dict[str, Any]:
     return state
 
 
-def _has_complete_browser_capture(path: Path) -> bool:
-    """Protect a manually verified full-profile capture from bounded refreshes."""
-
+def _load_profile_cache(path: Path) -> Mapping[str, Any] | None:
     if not path.is_file():
-        return False
+        return None
     cache = load_json(path)
     if not isinstance(cache, Mapping):
         raise ValueError(f"Profile cache is not a JSON object: {path}")
+    return cache
+
+
+def _requires_full_capture(cache: Mapping[str, Any], publication_limit: int) -> bool:
+    """A bounded response cannot safely replace these existing caches."""
+
     capture = cache.get("browser_capture")
-    return (
+    if (
         isinstance(capture, Mapping)
         and capture.get("coverage") == COMPLETE_VISIBLE_PROFILE
-    )
+    ):
+        return True
+    publications = cache.get("publications")
+    return isinstance(publications, list) and len(publications) >= publication_limit
 
 
 def select_profiles(
@@ -182,6 +189,7 @@ def select_profiles(
     now: dt.datetime,
     min_age_days: int,
     max_profiles: int,
+    publication_limit: int = DEFAULT_PUBLICATION_LIMIT,
     force: bool = False,
 ) -> list[AuthorProfile]:
     """Select missing or stale profiles, oldest attempted first."""
@@ -198,10 +206,11 @@ def select_profiles(
     candidates: list[tuple[bool, dt.datetime, str, AuthorProfile]] = []
     for profile in profiles:
         cache_path = cache_dir / f"{profile.scholar_id}.json"
-        cached = cache_path.is_file()
-        # A bounded scholarly response cannot establish that it includes the
-        # entire visible history documented by a complete browser capture.
-        if cached and _has_complete_browser_capture(cache_path):
+        cache = _load_profile_cache(cache_path)
+        cached = cache is not None
+        # This includes complete browser captures and legacy caches already
+        # at or above the requested limit (including exactly at the cap).
+        if cache is not None and _requires_full_capture(cache, publication_limit):
             continue
         record = profile_state.get(profile.scholar_id, {})
         if not isinstance(record, Mapping):
@@ -398,6 +407,7 @@ def collect_profiles(
         now=started_at,
         min_age_days=min_age_days,
         max_profiles=max_profiles,
+        publication_limit=publication_limit,
         force=force,
     )
     selected_ids = tuple(profile.scholar_id for profile in selected)
@@ -467,13 +477,28 @@ def collect_profiles(
                 publication_limit=publication_limit,
             )
             cache_path = cache_dir / f"{profile.scholar_id}.json"
-            # Recheck before writing in case a complete capture was installed
-            # after selection. Never replace its rows or coverage claim.
-            if _has_complete_browser_capture(cache_path):
+            # Recheck after fetching in case a protected cache was installed
+            # after selection. Preserve every previously observed citation ID.
+            existing_cache = _load_profile_cache(cache_path)
+            if existing_cache is not None and _requires_full_capture(
+                existing_cache, publication_limit
+            ):
                 raise RuntimeError(
-                    "Automated Scholar refresh cannot replace a complete "
-                    f"visible browser capture: {profile.scholar_id}"
+                    "Bounded Scholar refresh cannot replace a complete or "
+                    f"at-limit cache: {profile.scholar_id}"
                 )
+            if existing_cache is not None:
+                previous = existing_cache.get("publications")
+                if isinstance(previous, list):
+                    previous_ids = {row["author_pub_id"] for row in previous}
+                    refreshed_ids = {row["author_pub_id"] for row in publications}
+                    missing_ids = previous_ids - refreshed_ids
+                    if missing_ids:
+                        raise RuntimeError(
+                            "Scholar refresh would remove "
+                            f"{len(missing_ids)} cached publication(s): "
+                            f"{profile.scholar_id}"
+                        )
             cache_payload = {
                 "schema_version": CACHE_SCHEMA_VERSION,
                 "scholar_id": profile.scholar_id,

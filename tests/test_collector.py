@@ -289,6 +289,66 @@ def test_complete_browser_capture_is_excluded_even_when_forced(tmp_path: Path) -
     assert load_json(complete_path) == complete
 
 
+@pytest.mark.parametrize("cached_count", [200, 201])
+def test_at_limit_legacy_cache_is_excluded_even_when_forced(
+    tmp_path: Path, cached_count: int
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    existing = {
+        "publication_count": cached_count,
+        "publications": [
+            {"author_pub_id": f"old:{index}"} for index in range(cached_count)
+        ],
+    }
+    atomic_write_json(cache_path, existing)
+    atomic_write_json(cache_dir / "betaAAAAJ.json", {})
+    profiles = unique_profiles(load_registry(*paths))
+    selected = select_profiles(
+        profiles,
+        {"profiles": {}},
+        cache_dir,
+        now=NOW,
+        min_age_days=0,
+        max_profiles=1,
+        publication_limit=200,
+        force=True,
+    )
+    assert [profile.scholar_id for profile in selected] == ["betaAAAAJ"]
+    # A larger explicitly requested limit can refresh the cache, provided the
+    # returned profile still includes every previously observed citation ID.
+    selected = select_profiles(
+        profiles,
+        {"profiles": {}},
+        cache_dir,
+        now=NOW,
+        min_age_days=0,
+        max_profiles=1,
+        publication_limit=300,
+        force=True,
+    )
+    assert [profile.scholar_id for profile in selected] == ["alphaAAAAJ"]
+
+    calls = []
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        target_person_ids=["person-alpha"],
+        force=True,
+        now=NOW,
+        fetcher=lambda *args, **kwargs: calls.append((args, kwargs)),
+    )
+    assert result.status == "noop"
+    assert calls == []
+    assert load_json(cache_path) == existing
+
+
 @pytest.mark.parametrize("new_count", [200, 253, 254])
 def test_complete_browser_capture_survives_a_late_bounded_refresh(
     tmp_path: Path,
@@ -335,11 +395,112 @@ def test_complete_browser_capture_survives_a_late_bounded_refresh(
     assert state["profiles"]["alphaAAAAJ"]["last_error_type"] == "RuntimeError"
 
 
+def test_late_at_limit_legacy_cache_survives_bounded_refresh(
+    tmp_path: Path, monkeypatch
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    previous = {"publications": [{"author_pub_id": f"old:{i}"} for i in range(201)]}
+    atomic_write_json(cache_path, previous)
+    old_bytes = cache_path.read_bytes()
+    selected = unique_profiles(load_registry(*paths))[:1]
+    monkeypatch.setattr(collector, "select_profiles", lambda *args, **kwargs: selected)
+
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        now=NOW,
+        fetcher=lambda profile, *, publication_limit: [
+            {"author_pub_id": f"old:{i}"} for i in range(publication_limit)
+        ],
+    )
+    assert result.status == "failure"
+    assert result.failed_profile_ids == ("alphaAAAAJ",)
+    assert cache_path.read_bytes() == old_bytes
+
+
+@pytest.mark.parametrize(
+    "fetched_ids,expected_status",
+    [
+        (["id:a", "id:c"], "failure"),
+        (["id:a", "id:b", "id:c"], "success"),
+    ],
+)
+def test_refresh_retains_every_previous_citation_id(
+    tmp_path: Path, fetched_ids: list[str], expected_status: str
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    previous = {
+        "publications": [
+            {"author_pub_id": "id:a"},
+            {"author_pub_id": "id:b"},
+        ]
+    }
+    atomic_write_json(cache_path, previous)
+    old_bytes = cache_path.read_bytes()
+
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        target_person_ids=["person-alpha"],
+        force=True,
+        now=NOW,
+        fetcher=lambda profile, *, publication_limit: [
+            {"author_pub_id": item} for item in fetched_ids
+        ],
+    )
+    assert result.status == expected_status
+    if expected_status == "failure":
+        assert result.failed_profile_ids == ("alphaAAAAJ",)
+        assert cache_path.read_bytes() == old_bytes
+    else:
+        assert result.refreshed_profile_ids == ("alphaAAAAJ",)
+        assert {
+            item["author_pub_id"] for item in load_json(cache_path)["publications"]
+        } == set(fetched_ids)
+
+
+def test_refresh_of_legacy_cache_without_publication_list(tmp_path: Path) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    cache_path = cache_dir / "alphaAAAAJ.json"
+    atomic_write_json(cache_path, {})
+
+    result = collect_profiles(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        state_path=tmp_path / "state.json",
+        status_path=tmp_path / "status.json",
+        target_person_ids=["person-alpha"],
+        force=True,
+        now=NOW,
+        fetcher=lambda profile, *, publication_limit: [{"author_pub_id": "id:a"}],
+    )
+    assert result.status == "success"
+    assert load_json(cache_path)["publication_count"] == 1
+
+
 def test_complete_browser_capture_check_rejects_invalid_cache(tmp_path: Path) -> None:
     cache_path = tmp_path / "profile.json"
     atomic_write_json(cache_path, [])
     with pytest.raises(ValueError, match="not a JSON object"):
-        collector._has_complete_browser_capture(cache_path)
+        collector._load_profile_cache(cache_path)
 
 
 def test_collection_state_initializes_and_validates_schema(tmp_path: Path) -> None:
