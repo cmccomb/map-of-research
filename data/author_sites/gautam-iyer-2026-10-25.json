@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "source_type": "author_site",
+  "person_id": "person-gautamiyer-3894621b",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/iyer.html",
+  "source_page_url": "https://www.math.cmu.edu/~gautam/sj/index.html",
+  "source_section": "All Publications",
+  "source_selector": "div#pubs-all > ul > li",
+  "captured_at_utc": "2026-10-25T09:48:40+00:00",
+  "html_file": "gautam-iyer-2026-10-25.html",
+  "html_sha256": "264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b",
+  "review_csv_path": "registry/reviews/2026-10-25-math-gautam-iyer-author-site.csv",
+  "review_csv_sha256": "e3f481cb22ede0500ccb5bc1f950a012e0c442058865876644b5bf69a01dde79",
+  "doi_audit_csv_path": "registry/reviews/2026-10-25-math-gautam-iyer-doi-audit.csv",
+  "doi_audit_csv_sha256": "188388e7b8bcbdcbeeea40946cd4baa27b91456d5075685a1215f6311e4017ee",
+  "expected_entry_count": 47,
+  "expected_doi_review_count": 20,
+  "source_basis": "author_listed_bibliography",
+  "scholar_account_status": "no_verified_account",
+  "publication_claim": "47 entries displayed in the author site section, not independently certified complete academic history",
+  "doi_reviews": [
+    {
+      "row_index": 8,
+      "doi": "10.1088/1361-6544/adc652",
+      "author_site_year": 2024,
+      "publisher_year": 2025,
+      "publisher_title": "A Harris theorem for enhanced dissipation, and an example of Pierrehumbert*",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1088%2F1361-6544%2Fadc652",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 9,
+      "doi": "10.1090/noti2929",
+      "author_site_year": 2024,
+      "publisher_year": 2024,
+      "publisher_title": "Mixing in Incompressible Flows: Transport, Dissipation, and Their Interplay",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1090%2Fnoti2929",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 11,
+      "doi": "10.1090/qam/1668",
+      "author_site_year": 2024,
+      "publisher_year": 2023,
+      "publisher_title": "Using Bernoulli maps to accelerate mixing of a random walk on the torus",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1090%2Fqam%2F1668",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 12,
+      "doi": "10.1137/22m1524576",
+      "author_site_year": 2023,
+      "publisher_year": 2023,
+      "publisher_title": "Quantifying the Dissipation Enhancement of Cellular Flows",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1137%2F22M1524576",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 13,
+      "doi": "10.1137/22m1533207",
+      "author_site_year": 2023,
+      "publisher_year": 2023,
+      "publisher_title": "Global Dynamics and Photon Loss in the Kompaneets Equation",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1137%2F22M1533207",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 14,
+      "doi": "10.1098/rsta.2021.0024",
+      "author_site_year": 2021,
+      "publisher_year": 2022,
+      "publisher_title": "Growth of Sobolev norms and loss of regularity in transport equations",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1098%2Frsta.2021.0024",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 15,
+      "doi": "10.1007/s00220-023-04744-3",
+      "author_site_year": 2023,
+      "publisher_year": 2023,
+      "publisher_title": "An Oscillator Driven by Algebraically Decorrelating Noise",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1007%2Fs00220-023-04744-3",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 16,
+      "doi": "10.1137/21m1394497",
+      "author_site_year": 2021,
+      "publisher_year": 2022,
+      "publisher_title": "Bounds on the Heat Transfer Rate via Passive Advection",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1137%2F21M1394497",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 17,
+      "doi": "10.1007/s00285-021-01615-0",
+      "author_site_year": 2020,
+      "publisher_year": 2021,
+      "publisher_title": "Scheduling fixed length quarantines to minimize the total number of fatalities during an epidemic",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1007%2Fs00285-021-01615-0",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 18,
+      "doi": "10.1007/s00332-020-09637-6",
+      "author_site_year": 2019,
+      "publisher_year": 2020,
+      "publisher_title": "Phase Separation in the Advective Cahn–Hilliard Equation",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1007%2Fs00332-020-09637-6",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 20,
+      "doi": "10.1090/tran/8195",
+      "author_site_year": 2019,
+      "publisher_year": 2021,
+      "publisher_title": "Convection-induced singularity suppression in the Keller-Segel and other non-linear PDEs",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1090%2Ftran%2F8195",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 21,
+      "doi": "10.1088/1361-6544/ab0e56",
+      "author_site_year": 2019,
+      "publisher_year": 2019,
+      "publisher_title": "Dissipation enhancement by mixing*",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1088%2F1361-6544%2Fab0e56",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 22,
+      "doi": "10.4310/cms.2020.v18.n7.a2",
+      "author_site_year": 2018,
+      "publisher_year": 2020,
+      "publisher_title": "Anomalous diffusion in comb-shaped domains and graphs",
+      "publisher_registry_url": "https://api.crossref.org/works/10.4310%2FCMS.2020.v18.n7.a2",
+      "title_match": "author_manuscript_matches_publisher",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25",
+      "additional_evidence_urls": [
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+        "https://www.intlpress.com/site/pub/files/_fulltext/journals/cms/2020/0018/0007/CMS-2020-0018-0007-a002.pdf"
+      ],
+      "additional_evidence_note": "The author-hosted manuscript and published PDF have the same title, byline, and subject; the bibliography title is a stale variant."
+    },
+    {
+      "row_index": 23,
+      "doi": "10.30757/alea.v18-48",
+      "author_site_year": 2018,
+      "publisher_year": 2021,
+      "publisher_title": "Long Time Asymptotics of Heat Kernels and Brownian\nWinding Numbers on Manifolds with Boundary",
+      "publisher_registry_url": "https://api.crossref.org/works/10.30757%2FALEA.v18-48",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 24,
+      "doi": "10.1017/apr.2018.23",
+      "author_site_year": 2018,
+      "publisher_year": 2018,
+      "publisher_title": "Coagulation and universal scaling limits for critical Galton–Watson processes",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1017%2Fapr.2018.23",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 25,
+      "doi": "10.1007/s00332-017-9391-4",
+      "author_site_year": 2017,
+      "publisher_year": 2017,
+      "publisher_title": "A Model for Vortex Nucleation in the Ginzburg–Landau Equations",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1007%2Fs00332-017-9391-4",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 26,
+      "doi": "10.1214/17-aop1196",
+      "author_site_year": 2016,
+      "publisher_year": 2018,
+      "publisher_title": "A fractional kinetic process describing the intermediate time behaviour of cellular flows",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1214%2F17-AOP1196",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 27,
+      "doi": "10.1137/15m1054730",
+      "author_site_year": 2016,
+      "publisher_year": 2016,
+      "publisher_title": "Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1137%2F15M1054730",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 28,
+      "doi": "10.4310/cms.2016.v14.n7.a1",
+      "author_site_year": 2016,
+      "publisher_year": 2016,
+      "publisher_title": "Stability of vortex solutions to an extended Navier–Stokes system",
+      "publisher_registry_url": "https://api.crossref.org/works/10.4310%2FCMS.2016.v14.n7.a1",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    },
+    {
+      "row_index": 35,
+      "doi": "10.1137/120861308",
+      "author_site_year": 2012,
+      "publisher_year": 2012,
+      "publisher_title": "Numerical Studies of Homogenization under a Fast Cellular Flow",
+      "publisher_registry_url": "https://api.crossref.org/works/10.1137%2F120861308",
+      "title_match": "exact_normalized",
+      "year_basis": "publisher_registry_published_year",
+      "reviewed_at": "2026-10-25"
+    }
+  ],
+  "publication_type_overrides": [
+    {
+      "row_index": 44,
+      "publication_type": "thesis",
+      "evidence_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200605-thesis.pdf"
+    }
+  ],
+  "release_state": "staged_for_explicit_promotion"
+}

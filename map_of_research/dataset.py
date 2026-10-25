@@ -84,6 +84,16 @@ def _work_identity(
             "patent_document",
             "",
         )
+    if getattr(row, "source_type", "scholar") == "author_site":
+        # This source preserves publisher links inside its raw page record. A
+        # link containing a DOI is not an independently reviewed DOI match.
+        explicit_doi = _doi(getattr(row, "source_doi", ""))
+        if explicit_doi:
+            return _hash_id("work", f"doi:{explicit_doi}"), "doi", explicit_doi
+        native_id = _clean_text(getattr(row, "source_native_id", ""))
+        if not native_id:
+            raise ValueError("Author-site observation lacks its source-native ID")
+        return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
     native_id = _clean_text(getattr(row, "source_native_id", ""))
     if native_id and not _doi(getattr(row, "source_doi", "")):
         return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
@@ -139,12 +149,15 @@ def _best_text(values: list[Any]) -> str:
 def _source_values(records: list[Any], field: str) -> list[Any]:
     """Use Scholar for a populated field, then verified records for gaps."""
 
-    scholar_values = [
-        getattr(record, field)
-        for record in records
-        if record.source_type == "scholar" and _clean_text(getattr(record, field))
-    ]
-    return scholar_values or [getattr(record, field) for record in records]
+    for source_type in ("scholar", "curated_verified", "author_site"):
+        values = [
+            getattr(record, field)
+            for record in records
+            if record.source_type == source_type and _clean_text(getattr(record, field))
+        ]
+        if values:
+            return values
+    return [getattr(record, field) for record in records]
 
 
 def _variants(values: list[Any]) -> list[str]:
@@ -331,7 +344,11 @@ def build_dataset_tables(
         review_reasons.append(review.reason if review else "")
         review_evidence_urls.append(review.evidence_url if review else "")
         review_dates.append(review.verified_at if review else "")
-        publication_types.append(context.publication_type if context else "publication")
+        source_output_type = _clean_text(getattr(row, "source_output_type", ""))
+        publication_type = (
+            context.publication_type if context else source_output_type or "publication"
+        )
+        publication_types.append(publication_type)
         document_ids.append(context.document_id if context else "")
         context_reasons.append(context.reason if context else "")
         context_evidence_urls.append(context.evidence_url if context else "")
@@ -342,7 +359,9 @@ def build_dataset_tables(
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
-        collaboration_eligibility.append(not stable_reasons and context is None)
+        collaboration_eligibility.append(
+            not stable_reasons and context is None and publication_type == "publication"
+        )
     for index, work_id in enumerate(work_ids):
         if work_id in unmapped_work_reasons:
             map_eligibility[index] = False

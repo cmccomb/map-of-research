@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+from .author_site import load_author_site_rows
 from .collector import CACHE_SCHEMA_VERSION
 from .io import atomic_write_json, load_json, sha256_file
 from .registry import (
@@ -28,7 +29,7 @@ from .registry import (
     unique_profiles,
 )
 
-SNAPSHOT_SCHEMA_VERSION = 6
+SNAPSHOT_SCHEMA_VERSION = 7
 MANIFEST_SCHEMA_VERSION = 1
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
@@ -140,6 +141,9 @@ def _publication_row(
         "source_verified_at": "",
         "source_verification_urls": [],
         "external_coauthors": [],
+        "source_output_type": "publication",
+        "source_citation_count_known": publication.get("num_citations") is not None,
+        "source_work_url_as_linked": "",
     }
 
 
@@ -290,6 +294,9 @@ def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
                 "external_coauthors": [
                     external_by_id[str(item)] for item in external_ids
                 ],
+                "source_output_type": "publication",
+                "source_citation_count_known": False,
+                "source_work_url_as_linked": "",
             }
         )
     return rows
@@ -343,7 +350,11 @@ def _validate_frame(frame: Any) -> None:
         raise ValueError("Snapshot has no publication rows")
     if frame[["scholar_id", "author_pub_id"]].isnull().any().any():
         raise ValueError("Snapshot publication identities cannot be null")
-    if not frame["source_type"].isin({"scholar", "curated_verified"}).all():
+    if (
+        not frame["source_type"]
+        .isin({"scholar", "curated_verified", "author_site"})
+        .all()
+    ):
         raise ValueError("Snapshot contains an unknown source type")
     if frame.loc[frame["source_type"] == "scholar", "scholar_id"].eq("").any():
         raise ValueError("Scholar observations need a Scholar identity")
@@ -353,6 +364,18 @@ def _validate_frame(frame: Any) -> None:
     if curated["source_doi"].eq("").eq(curated["source_native_id"].eq("")).any():
         raise ValueError(
             "Curated observations need exactly one DOI or source_native_id"
+        )
+    author_site = frame.loc[frame["source_type"] == "author_site"]
+    if not author_site.empty and "source_citation_count_known" not in frame:
+        raise ValueError("Author-site citation provenance is missing")
+    if not author_site.empty and (
+        author_site["scholar_id"].ne("").any()
+        or author_site["fetched_at_utc"].ne("").any()
+        or author_site["source_native_id"].eq("").any()
+        or author_site["source_citation_count_known"].any()
+    ):
+        raise ValueError(
+            "Author-site observations cannot claim Scholar or citation counts"
         )
     duplicate_mask = frame.duplicated(
         subset=["scholar_id", "author_pub_id"],
@@ -373,6 +396,7 @@ def build_snapshot(
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     curated_path: Path | None = None,
+    author_site_path: Path | None = None,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     now: dt.datetime | None = None,
@@ -406,6 +430,8 @@ def build_snapshot(
         cached_profile_ids.append(profile.scholar_id)
 
     rows.extend(_load_curated_rows(source_path, registry))
+    if author_site_path is not None:
+        rows.extend(load_author_site_rows(author_site_path, registry))
 
     frame = pandas.DataFrame(rows)
     _validate_frame(frame)
@@ -457,6 +483,11 @@ def build_snapshot(
         if source_path.is_file()
         else "",
         "curated_work_rows": int((frame["source_type"] == "curated_verified").sum()),
+        "author_site_capture_file": author_site_path.name if author_site_path else "",
+        "author_site_capture_sha256": sha256_file(author_site_path)
+        if author_site_path
+        else "",
+        "author_site_rows": int((frame["source_type"] == "author_site").sum()),
         "cached_profile_ids_sha256": hashlib.sha256(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
         ).hexdigest(),
@@ -475,6 +506,7 @@ def validate_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     curated_path: Path | None = None,
+    author_site_path: Path | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -497,6 +529,9 @@ def validate_snapshot(
         "curated_works_file",
         "curated_works_sha256",
         "curated_work_rows",
+        "author_site_capture_file",
+        "author_site_capture_sha256",
+        "author_site_rows",
     }
     missing = required_manifest_fields.difference(manifest)
     if missing:
@@ -526,6 +561,12 @@ def validate_snapshot(
         or manifest["curated_works_sha256"] != current_curated_sha
     ):
         raise ValueError("Curated work source does not match the snapshot manifest")
+    if manifest["author_site_capture_file"] != (
+        author_site_path.name if author_site_path else ""
+    ) or manifest["author_site_capture_sha256"] != (
+        sha256_file(author_site_path) if author_site_path else ""
+    ):
+        raise ValueError("Author-site capture does not match the snapshot manifest")
 
     created_at = dt.datetime.fromisoformat(str(manifest["created_at_utc"]))
     if created_at.tzinfo is None:
@@ -549,6 +590,11 @@ def validate_snapshot(
     curated_rows = int((frame["source_type"] == "curated_verified").sum())
     if curated_rows != int(manifest["curated_work_rows"]):
         raise ValueError("Snapshot curated row count does not match the manifest")
+    author_site_rows = int((frame["source_type"] == "author_site").sum())
+    if author_site_rows != int(manifest["author_site_rows"]):
+        raise ValueError("Snapshot author-site row count does not match the manifest")
+    if author_site_rows and author_site_rows != 47:
+        raise ValueError("Incomplete Iyer author-site profile")
     if int(manifest["cached_profiles"]) > int(manifest["registry_profiles"]):
         raise ValueError("Snapshot contains more profiles than the registry")
     return frame, manifest
@@ -569,6 +615,7 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--author-site-capture", type=Path)
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
     return parser
@@ -582,6 +629,7 @@ def build_main(argv: Sequence[str] | None = None) -> int:
         departments_path=args.departments,
         cache_dir=args.cache_dir,
         curated_path=args.curated_works,
+        author_site_path=args.author_site_capture,
         snapshot_path=args.snapshot,
         manifest_path=args.manifest,
     )
@@ -606,6 +654,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--author-site-capture", type=Path)
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,
@@ -615,6 +664,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
         memberships_path=args.memberships,
         departments_path=args.departments,
         curated_path=args.curated_works,
+        author_site_path=args.author_site_capture,
     )
     print(json.dumps(manifest, sort_keys=True))
     return 0
