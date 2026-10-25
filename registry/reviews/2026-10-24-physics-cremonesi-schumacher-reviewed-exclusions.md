@@ -18,7 +18,7 @@ The four paper rows use `false_profile_attribution`; the slide deck uses `nonpub
 
 ## Cremonesi: seventy-two duplicate observations
 
-Each child below is a damaged or fragment-author-list copy of the retained publication. The saved child/parent rows agree on the work's title and year after accounting for title math or punctuation; the retained row has the publication locator and the primary record identifies one paper. The child rows remain in the source capture.
+Each child below is a damaged or incomplete observation of the retained publication. The available saved title, year, author, and venue fields were checked against the cited primary work record and retained row. Some children lack a year or retain only a title prefix; the primary record and retained publication locator resolve those cases. The child rows remain in the source capture.
 
 | Primary work record | Exclude child capture rows and suffixes | Retain suffix |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ Each child below is a damaged or fragment-author-list copy of the retained publi
 | [CMS HIG-19-004, 2020 PLB 805 135425](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-19-004/) | 1360 `:-mA2wk0MEBkC` (fragment authors, blank venue) | `:5Klqo5HVOaoC` |
 | [CMS BPH-19-003, 2020 PLB 803 135345](https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html) | 1336 `:XeQYkT-08pIC` (incomplete locator); 1960 `:CXI6bF9CpJ4C` (undated OCR and formula loss) | `:It3QlvBKHbMC` |
 
-The following twelve further children have blank venues, fragment author lists, and no displayed citations. Each maps to the retained publication named by the official CMS record; the cited arXiv row for HIG-18-002 remains eligible.
+The following fourteen further children have fragment author lists and no displayed citations. Thirteen have blank venues, and one has an institution venue. Each maps to the retained publication named by the official CMS record; the cited arXiv row for HIG-18-002 remains eligible.
 
 | Primary work record | Exclude child capture row and suffix | Retain suffix |
 | --- | --- | --- |
@@ -153,6 +153,6 @@ The Polybios decision concerns **Band I, Lieferung 1 only**. A [different volume
 
 ## Limits and gate
 
-The source ledger reports 125 exact casefold/whitespace Cremonesi title/year groups (260 rows), while a broader punctuation-stripping screen reports 216 groups (446 rows). These are **review queues**, not 216 exclusions. No title/year-wide rule, blanket consortium exclusion, or profile-wide deduction was applied. The 99 decisions above were checked one row at a time; unresolved candidates remain in the source. Three other genuine Cremonesi CDF papers with literal `<?format ?>` markers retain their IDs and receive cache-only title repairs in PR #156. Across both current profile caches, all 12 titles with `Formula` placeholders and all six Cremonesi titles with `\documentclass` commands are exact duplicate exclusions in this draft. The marker scan does not certify every title's spelling or attribution.
+The source ledger reports 125 exact casefold/whitespace Cremonesi title/year groups (260 rows), while a broader punctuation-stripping screen reports 216 groups (446 rows). These are **review queues**, not 216 exclusions. No title/year-wide rule, blanket consortium exclusion, or profile-wide deduction was applied. The 99 decisions above were checked one row at a time; unresolved candidates remain in the source. Three other genuine Cremonesi CDF papers with literal `<?format ?>` markers retain their IDs and receive cache-only title repairs in PR #156. Across both current profile caches, all 13 titles containing `formula` (case-insensitive) placeholders and all six Cremonesi titles with `\documentclass` commands are exact duplicate exclusions in this draft. The marker scan does not certify every title's spelling or attribution.
 
 The producer test fixes the 99 exact count and checks that all stated retained parent IDs remain unexcluded. This draft targets `main` and depends on [source PR #156](https://github.com/cmccomb/map-of-research/pull/156). Keep both drafts staged for independent review; do not merge, rebuild, or upload from this draft.
