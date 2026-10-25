@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "person_id": "person-irinagheorghiciuc-c53bff46",
+  "captured_date": "2026-10-25",
+  "status": "review_only_no_snapshot_no_release",
+  "scholar_account_status": "no_verified_account",
+  "orcid_status": "no_self_asserted_account_found",
+  "lifetime_publication_completeness": "not_established",
+  "arxiv_query": {
+    "search_query": "au:\"Irina Gheorghiciuc\"",
+    "start": [
+      0,
+      100
+    ],
+    "max_results": 100
+  },
+  "kilthub_search_request": {
+    "search_for": "Irina Gheorghiciuc",
+    "page_size": 100,
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "access_checks": [
+    {
+      "request_url": "https://www.sciencedirect.com/science/article/pii/S0196885806000984",
+      "result": "403 response; no publisher HTML saved"
+    },
+    {
+      "request_url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Irina+Gheorghiciuc&hl=en",
+      "result": "redirected to Google sign-in; no author results obtained; no sign-in HTML saved"
+    }
+  ],
+  "counts": {
+    "cmu_selected_citations": 3,
+    "arxiv_exact_author_entries": 4,
+    "penn_thesis_listings": 1,
+    "dmtcs_publisher_records": 1,
+    "jis_publisher_records": 1,
+    "attributed_source_observations_not_works": 10,
+    "provisional_work_groups_not_lifetime_count": 6,
+    "kilthub_search_hits": 1,
+    "kilthub_excluded_other_author_theses": 1
+  },
+  "files": {
+    "arxiv-author-page-1.xml": "bf84cdd5abcab1933a2c79ea445fcc92601c6184f7c3be469c47f4b53c86de19",
+    "arxiv-author-page-2.xml": "c6a7a4f3f3578a5e17b859798070eea1bc05e9dcb2c02b6ca430bde0008f2a09",
+    "arxiv-exact-author-4.csv": "d6b3b897bcb900e5870327c5611570e42475bdd7b6f8129370a95077318286f4",
+    "capture-http-responses.json": "1600680705feef01934022d380083c0f9c1a28a121d0f98626659885ea1a0133",
+    "cmu-personal-home.html": "80e67614b2b01ae14991b874ec99a30945b1593b2782e953944ffcd5b0639a97",
+    "cmu-personal-research-response.html": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+    "cmu-profile.html": "35ebfff7083e274f37e8765c63054778f033daf7b326f0dd56849e2fd7966898",
+    "cmu-selected-3.csv": "ac14c84f7575e7499992a9c1d619f12bedbae886fdfb16cb21c8f5e118489fdc",
+    "dmtcs-3553-tei.xml": "e435f6e959027908ab290506e5a5029f52e91ba51ae2304c132f5058e36b0bb0",
+    "dmtcs-3553.html": "d7ca3d187f906c7d4db0ec59b29056e75289460eeb31e8a13c641420b687b452",
+    "jis-gheo.html": "84c6f2a6a8dab2092fbe544a1a6c77502350a037db48d291be86e4ad1218d0fe",
+    "jis-gheo.pdf": "f599288f99f94609fa10bade685e41a7305119dd6321d71a3b699766df57de26",
+    "jis-vol17.html": "bb81aa33e8c478df9e862621f11f0dd4f808fb4d3f9a204bf08213c28fbb624b",
+    "kilthub-article-6715193.json": "8bc8c701a4e6073cd3d2e47baba147bb7f199df1f36fb4d9f98d3d21f62a969a",
+    "kilthub-search-page-1.json": "1170f2d292850e09cbb450cb98413c88460f217e403f75bd7060c0306824988d",
+    "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "kilthub-search-review-1.csv": "7b55088c7aff2ec267df54c177d2d573a856c6d182c259741939f22755d4c65e",
+    "penn-math-phds.html": "b5307fe4a6936b52112362b69fd1848bb889d0bee765254d7c0eb428c46cd920",
+    "source-observations-10.csv": "7486fa7108e416e7a4ef0d1a8a5757dc2d6ba899101ff80328a73a6c9c8d20cf"
+  }
+}
