@@ -1,0 +1,32 @@
+{
+  "person_id": "person-manuelblum-943b6e0a",
+  "person_name": "Manuel Blum",
+  "review_date": "2026-10-25",
+  "release_status": "held_source_only",
+  "scholar_id_status": "unverified",
+  "coverage_status": "historical_cv_incomplete",
+  "source": {
+    "type": "researcher_cv",
+    "url": "https://www.cs.cmu.edu/~mblum/pdfs/manuel_blum_cv.pdf",
+    "pdf_sha256": "2bc879ab3418635b1ec0bfd706a3d4642456c155fed76992cfd844d0016149c5",
+    "pdf_modified": "2011-09-22",
+    "section": "Publications",
+    "first_ordinal": 1,
+    "last_ordinal": 59
+  },
+  "capture": {
+    "path": "cv-citations.csv",
+    "sha256": "010835307b4f64a28bf9b77d41a55f9aff5ba12fac0b064a40132faab6456bad",
+    "row_count": 59,
+    "interpretation": "Verbatim bibliography observations; neither deduplicated works nor complete career output"
+  },
+  "known_omission": {
+    "doi": "10.1073/pnas.1801839117",
+    "year": 2020,
+    "title": "The complexity of human computation via a concrete model with an application to passwords",
+    "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/32291338/",
+    "identity_basis": "Publisher record names Manuel Blum, Carnegie Mellon School of Computer Science, and mblum@cs.cmu.edu",
+    "status": "held_external_source_observation"
+  },
+  "graph_eligible": false
+}
