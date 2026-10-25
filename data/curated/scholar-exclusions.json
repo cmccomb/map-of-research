@@ -5768,6 +5768,22 @@
       "reason": "The RSC source labels this as electronic supplementary material for the separately indexed Dalton Transactions article, retained as 0e1jwkkAAAAJ:_Qo2XoVZTnwC.",
       "evidence_url": "https://www.rsc.org/suppdata/dt/c1/c1dt11331c/c1dt11331c.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:7Hz3ACDFbsoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "ACS identifies Jerald L. Schnoor and Darcy J. Gentleman as the only authors of Changes to Viewpoints. Terrence J. Collins is not an author of this editorial.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/es1018527",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:owLR8QvbtFgC",
+      "reason_code": "nonpublication",
+      "reason": "The publisher labels this page Editorial Board; it lists Terrence J. Collins as a board member rather than an author of a research publication.",
+      "evidence_url": "https://www.tandfonline.com/doi/pdf/10.1080/17518253.2010.541062",
+      "verified_at": "2026-10-24"
     }
   ]
 }
