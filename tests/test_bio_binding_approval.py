@@ -85,9 +85,14 @@ def _reconcile(approved, previous, current, prior_works, current_works):
 
 
 def test_exact_review_matches_all_11_bio_bindings():
-    assert approval.sha256_file(FROZEN_BIO_CURATED) == json.loads(
-        (CURATED / "bio-exact-binding-approval-dcb.json").read_text(encoding="utf-8")
-    )["curated_works_sha256"]
+    assert (
+        approval.sha256_file(FROZEN_BIO_CURATED)
+        == json.loads(
+            (CURATED / "bio-exact-binding-approval-dcb.json").read_text(
+                encoding="utf-8"
+            )
+        )["curated_works_sha256"]
+    )
     approved, previous, current, prior_works, current_works = _candidate()
     assert len(approved.binding_changes) == 11
     assert approval.binding_digest(approved.binding_changes) == approval.BINDINGS_SHA256
