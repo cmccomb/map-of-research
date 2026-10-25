@@ -16,3 +16,10 @@ pages provide independent identity cross-checks. The visible counts above are
 not capture receipts and do not establish publication coverage. This change
 assigns identities only. Each entire visible profile still needs a saved source
 capture, per-row review, and a rebuilt validated snapshot before publication.
+
+The [official Mathematical Sciences faculty roster](https://www.cmu.edu/math/people/faculty/index.html)
+lists both Eur and Young under tenure-track faculty, and their linked CMU
+profile pages identify them as Mathematical Sciences faculty. The registry
+therefore assigns `math` as each person's reviewed primary department, using
+the respective official profile as provenance. Young's MCS associate-dean
+role is a college leadership appointment, not a second department.
