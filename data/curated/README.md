@@ -26,7 +26,8 @@ Curated records have no current Scholar ID or Scholar fetch time.
 
 `scholar-doi-aliases.json` records exact, reviewed links between Scholar rows
 and a published DOI. It distinguishes a `preprint_of` row from a
-`version_of_record` row when Scholar lists both. The publisher checks each row
+`version_of_record` row when Scholar lists both; `same_work` records an exact
+DOI identity where the Scholar version is unspecified. The publisher checks each row
 ID, observed title and year, source DOI, and exclusion state before applying
 the alias. It preserves both raw Scholar observations and joins them to one
 published work, including a matching curated DOI observation when present.

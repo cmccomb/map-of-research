@@ -109,6 +109,7 @@ def test_six_source_pinned_aliases_join_only_exact_iyer_pego_pairs() -> None:
             assert work["year"] == 2015
             assert work["venue"] == "Commun. Math. Sci. (2015)."
         if key[1].endswith(":EUQCXRtRnyEC"):
+            assert alias.relationship == "same_work"
             assert scholar["venue"] == ""
             assert work["venue"] == "Ann. Appl. Probab. (2015)."
 

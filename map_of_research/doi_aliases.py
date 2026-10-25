@@ -143,7 +143,7 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
                 "Scholar DOI alias needs the exact observed title and year"
             )
         relationship = str(entry.get("relationship") or "").strip()
-        if relationship not in {"preprint_of", "version_of_record"}:
+        if relationship not in {"preprint_of", "version_of_record", "same_work"}:
             raise ValueError("Scholar DOI alias needs a supported version relationship")
         evidence_urls = entry.get("evidence_urls")
         if (
