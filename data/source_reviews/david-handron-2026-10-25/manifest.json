@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "person_id": "person-davidhandron-66faa357",
+  "captured_date": "2026-10-25",
+  "status": "review_only_no_snapshot_no_release",
+  "scholar_account_status": "no_verified_account",
+  "orcid_status": "no_self_asserted_account_found",
+  "lifetime_publication_completeness": "not_established",
+  "arxiv_queries": [
+    "au:\"David G. C. Handron\"",
+    "au:\"David Handron\""
+  ],
+  "kilthub_search_request": {
+    "search_for": "David Handron",
+    "page_size": 100,
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "access_checks": [
+    {
+      "request_url": "https://repository.rice.edu/items/3f2f6423-2661-454a-8d2e-e17e4814b734",
+      "result": "202 empty frontend response; Rice API item captured instead"
+    },
+    {
+      "request_url": "https://jointmathematicsmeetings.org/meetings/national/jmm/1014-57-845.pdf",
+      "result": "403 to capture client; meeting abstract retained as unresolved lead only"
+    },
+    {
+      "request_url": "https://scholar.google.com/citations?view_op=search_authors&mauthors=David+Handron&hl=en",
+      "result": "302 to Google sign-in from a single author search; no author result obtained"
+    }
+  ],
+  "counts": {
+    "cmu_selected_citations": 1,
+    "author_papers_and_preprints": 2,
+    "rice_thesis_records": 1,
+    "arxiv_exact_author_entries": 1,
+    "crossref_publisher_registered_doi": 1,
+    "attributed_source_observations_not_works": 6,
+    "provisional_work_groups_not_lifetime_count": 3,
+    "uncaptured_conference_leads_not_ingested": 3,
+    "kilthub_search_hits": 0
+  },
+  "files": {
+    "arxiv-author-broad.xml": "6bbf5a005658193221ba3eea0f0228d17c866ef4f69027ea8be97d0cceae86be",
+    "arxiv-author-page-1.xml": "5277b57bf078f2bfaedf97be821f5df58c6c87be59bc748089ec1ad90e25f846",
+    "arxiv-author-page-2.xml": "b11fd8bf78316638eee49f8c68c7849d6a01ac8bebc90368d8d9dcefdcd755f1",
+    "arxiv-morse-complex.html": "44cee42bdeec059b996389e86751e8744b7fc2080202ac4c5f06025b8b3a5b98",
+    "author-page-papers-2.csv": "10e06b27949c05df4dfd9b439bbef3aa04f6b299cba58c33857b4184b5f0da63",
+    "capture-http-responses.json": "7f1e022bbac079b7bd1e824bb97b1987ca13030be7b35c3d9bd2693c3cec26a7",
+    "cmu-personal-home.html": "7ff897fb230996fa6756668c393e1e749256cd92ef7d03cfcf2e1d2b582a5547",
+    "cmu-profile.html": "b2fbb0836bde5a4434ed66fe1f9154ba24615dab1a7ca9c17ce70e565c7a3468",
+    "cmu-selected-1.csv": "45b8e0b52aeb4fedf6cfc22222475bfc972f09135605ee15600139f7f3fa5e31",
+    "crossref-billiards-doi.json": "4cfc2b0272387249f271a04ce99f631e1113f2eeb0585b6bcf5516aedc4aa23f",
+    "kilthub-search-page-1.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "rice-thesis-api.json": "13e50ca530c6e9c74a0e60eab3f9f208ec2fc384c6ffbd9a5ddcdde8ca963c5d",
+    "source-observations-6.csv": "84b96647c47dbc23d0e601c0e773bf5d3029304abfc407469cd3a5a2f0b05a02",
+    "uncaptured-conference-leads-3.csv": "d0f08808eca326dc7d50c15559ba2be95b162f2ecdc3800de4c11a6033d222c1"
+  }
+}
