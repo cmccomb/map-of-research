@@ -1,0 +1,172 @@
+{
+  "artifact_commit": "bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd",
+  "attribution_confirmed": 437,
+  "attribution_held": 65,
+  "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
+  "authorships": 49662,
+  "dataset_commits": {
+    "authorships": "44fae64c32e46114516aac7ce2701a748bfe9d48",
+    "people": "eb42da3eccec920144a0b54957b1dfefdf5eff4f",
+    "profile_publications": "c8c1781e6c2fce54bdb5f1b73ca101167d9e97d9",
+    "works": "08176456e603f48f9fa316543970d71913337e4b"
+  },
+  "dataset_configs": [
+    "people",
+    "works",
+    "authorships",
+    "profile_publications"
+  ],
+  "dataset_id": "ccm/cmu-engineering-publications",
+  "detail_keywords": 120,
+  "error_type": null,
+  "excluded_works": 2450,
+  "finished_at_utc": "2026-10-25T06:37:55.504891+00:00",
+  "held_observation_rows": 0,
+  "held_profile_ids": [],
+  "held_source_observation_rows": 0,
+  "keywords": 30,
+  "layout_version": "global-publications-multilayout-v3",
+  "map_artifact_count": 1,
+  "mapped_works": 42925,
+  "math_coverage": {
+    "complete_scholar_profiles": 36,
+    "complete_scholar_rows": 4080,
+    "math_people": 65,
+    "unresolved_scholar_id_people": 29
+  },
+  "new_embedding_count": 198,
+  "people": 2001,
+  "profile_count": 310,
+  "profile_publications": 51823,
+  "profile_release_decisions": [
+    {
+      "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
+      "person_id": "person-chienho-da71f01b",
+      "person_observation_rows": 582,
+      "reason": "Complete 582-row visible Scholar source is verified. Exact review confirms 437 Chien Ho rows, excludes 92, and holds 53 from mapped works; only reviewed map-eligible records may publish.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "8iLLOQgAAAAJ",
+      "source_observation_rows": 582,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "person_observation_rows": 361,
+      "reason": "Complete 361-row Scholar capture is source-bound. Thirty-one exact exclusions and seven provisional attribution or output-type holds stay off mapped works and authorship links; remaining rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "source_observation_rows": 361,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "person_id": "person-nimermurshid-70983eeb",
+      "person_observation_rows": 49,
+      "reason": "Complete 49-row visible Scholar profile verified; 3 exact degraded duplicate citations excluded and 2 unresolved observations held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "source_observation_rows": 49,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "9d64f37c39179c78af9635e1cf5afd53a26ca00bfeee093a8866ff8d7d3a09f8",
+      "person_id": "person-simonfaulkner-1cc1e517",
+      "person_observation_rows": 5,
+      "reason": "Complete five-row visible Scholar profile verified; one degraded duplicate citation is exactly excluded. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "tPp2aaoAAAAJ",
+      "source_observation_rows": 5,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "person_id": "person-gloriasilva-5a457252",
+      "person_observation_rows": 41,
+      "reason": "Complete 41-row visible Scholar profile verified; two unresolved observations are held from mapped works. Remaining rows pass normal quality gates.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "vF51LxIAAAAJ",
+      "source_observation_rows": 41,
+      "state": "released"
+    },
+    {
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "person_observation_rows": 228,
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "source_observation_rows": 228,
+      "state": "released"
+    }
+  ],
+  "profile_release_manifest_sha256": "7f025e20a6952d6971c0b82ce96dbfec3a81c66415ea5ff88edf462397a686dd",
+  "provisional_hold_manifest_sha256": "3c659c994ca16b1f29bb77527cc739b5d3b737a2f923376260724bf5044001f0",
+  "provisional_hold_observation_rows": 12,
+  "provisional_hold_profiles": [
+    {
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "held_ids_sha256": "92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0",
+      "held_observation_rows": 7,
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
+      "reviewed_exclusion_rows": 31,
+      "scholar_id": "0e1jwkkAAAAJ",
+      "source_observation_rows": 361
+    },
+    {
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "held_ids_sha256": "d891cf20d7b343526f38e48422bda10e3a866a5210e587738479271bc20c7cf4",
+      "held_observation_rows": 2,
+      "person_id": "person-nimermurshid-70983eeb",
+      "reviewed_exclusion_ids_sha256": "c07da5e36cb83245b45e07b730bc07f1004b0c2a3510e1c4536c34ce367c6fdb",
+      "reviewed_exclusion_rows": 3,
+      "scholar_id": "MPxFaHYAAAAJ",
+      "source_observation_rows": 49
+    },
+    {
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "held_ids_sha256": "1ddd2cd3aece9f39fa2ac328ba9ae404881e5cda3962a0b6e86de2fca9261b40",
+      "held_observation_rows": 2,
+      "person_id": "person-gloriasilva-5a457252",
+      "reviewed_exclusion_ids_sha256": "",
+      "reviewed_exclusion_rows": 0,
+      "scholar_id": "vF51LxIAAAAJ",
+      "source_observation_rows": 41
+    },
+    {
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "held_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388",
+      "held_observation_rows": 1,
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6",
+      "reviewed_exclusion_rows": 43,
+      "scholar_id": "hfFKwRcAAAAJ",
+      "source_observation_rows": 228
+    }
+  ],
+  "raw_snapshot_observations": 51823,
+  "raw_snapshot_profiles": 310,
+  "raw_snapshot_sha256": "5b940614b2238c124bc194e944da277ee2221df27a11eedca6693af020ee86fb",
+  "region_audit_version": "low-information-semantic-region-v2",
+  "reviewed_contexts": 12,
+  "reviewed_contexts_sha256": "00962fc23909048da216ae2af953361174124fc086b02935162f9ccf54737450",
+  "reviewed_doi_aliases": 52,
+  "reviewed_doi_aliases_sha256": "497ca2b029e1892e5a0f267137519b4e2708af4dc8f6a3bcfa7778dadf988cf7",
+  "reviewed_exclusions": 1110,
+  "reviewed_exclusions_sha256": "9c60b0adc10fd0b8b2ef367fd46791e6d2a00b8f71b8ef6dbdfa96eee98f168e",
+  "reviewed_metadata_corrections": 19,
+  "reviewed_metadata_corrections_sha256": "5e6fd5feeab134618655dfab57cd9899fc6d1f014b3124f7ef73471f98579b4f",
+  "schema_version": 2,
+  "scholar_coverage": {
+    "complete_profiles": 24,
+    "legacy_profiles": 286,
+    "reconciled_prior_ids": 12
+  },
+  "started_at_utc": "2026-10-25T06:29:46.524810+00:00",
+  "status": "success",
+  "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
+  "validated_metadata_corrections": 19,
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40169148827",
+  "works": 47693
+}
