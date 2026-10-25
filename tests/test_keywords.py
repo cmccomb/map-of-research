@@ -852,12 +852,14 @@ def test_reviewed_cell_short_title_requires_complete_pii_doi_pubmed_evidence() -
             pandas.Series(work.to_dict() | changed), aliases
         )
 
-    unflagged = {(scholar_id, author_pub_id): ReviewedDoiAlias(
-        doi=doi,
-        observed_title=alias.observed_title,
-        observed_year=alias.observed_year,
-        relationship=alias.relationship,
-        evidence_urls=evidence,
-        verified_at=alias.verified_at,
-    )}
+    unflagged = {
+        (scholar_id, author_pub_id): ReviewedDoiAlias(
+            doi=doi,
+            observed_title=alias.observed_title,
+            observed_year=alias.observed_year,
+            relationship=alias.relationship,
+            evidence_urls=evidence,
+            verified_at=alias.verified_at,
+        )
+    }
     assert not keywords._reviewed_short_title_alias_matches(work, unflagged)
