@@ -1598,6 +1598,90 @@ NEXT_KNU_VERSION_AUTHORS = {
     840: "J Kim, H Kang, HJ Kim, H Park, SH Doh, S Kim",
 }
 
+# Four alternate Scholar renderings repeat DOI-identical works already
+# excluded by the KNU ORCID comparison. Three institutional article pages link
+# their H. J. Kim author directly to Hong Joo Kim's KNU Physics person record;
+# an original conference abstract supplies his matching KNU email for the fourth.
+FOLLOWUP_KNU_DUPLICATE_PRIMARY = {
+    666: (
+        "Proton, UV, and X-ray Induced Luminescence in [Tb. sup. 3+] Doped "
+        "Lu [Gd. sub. 2][Ga. sub. 2][Al. sub. 3][O. sub. 12] Phosphors",
+        2020,
+        "Hong Joo Kim",
+        "10.3390/cryst10090844",
+        "https://research.knu.ac.kr/en/publications/"
+        "proton-uv-and-x-ray-induced-luminescence-in-tbsup3sup-doped-lugds/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's Crystals 10(9):844 record links H. J. Kim to Hong Joo Kim. "
+        "This literal-markup rendering has the same seven authors and "
+        "source work as already excluded Scholar row 474.",
+    ),
+    804: (
+        "Luminescent investigations of Li {sub 6} Lu (BO {sub 3}){sub 3}: "
+        "Tb {sup 3+}, Dy {sup 3+} phosphors",
+        2014,
+        "Hong Joo Kim",
+        "10.1016/j.jallcom.2014.05.001",
+        "https://research.knu.ac.kr/en/publications/"
+        "luminescent-investigations-of-lisub6sublubosub3sub-sub3subtbsup3s/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's Journal of Alloys and Compounds 610:281-287 record links "
+        "H. J. Kim to Hong Joo Kim. This literal-markup rendering has the "
+        "same five authors and source work as already excluded row 231.",
+    ),
+    810: (
+        "Up-and downconversion luminescence properties of [Nd. sup. 3+] "
+        "ions doped in [Bi. sub. 2][O. sub. 3]-BaO-[B. sub. 2][O. sub. 3] "
+        "glass system.",
+        2014,
+        "Hong Joo Kim",
+        "10.1155/2014/751973",
+        "https://research.knu.ac.kr/en/publications/"
+        "up-and-downconversion-luminescence-properties-of-ndsup3sup-ions-d/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's Advances in Materials Science and Engineering article 751973 "
+        "links H. J. Kim to Hong Joo Kim. This literal-markup rendering has "
+        "the same author sequence and source work as already excluded row 346.",
+    ),
+    826: (
+        "Scintillation properties of Cs {sub 2} LiGdCl {sub 6}: Ce {sup 3+}",
+        2010,
+        "Hong Joo Kim",
+        "10.1016/j.radmeas.2009.10.018",
+        "https://www.ifj.edu.pl/conf/lumdetr/Book_of_Abstracts_Lumdetr2009.pdf",
+        "original exact-title conference abstract; KNU ORCID exact journal DOI",
+        "The original 2009 LumDeTr abstract for this exact title lists "
+        "H. J. Kim at KNU Physics with correspondence hongjoo@knu.ac.kr, "
+        "matching KNU's Hong Joo Kim person record. This 2010 Radiation "
+        "Measurements 45 journal rendering has the same three journal "
+        "authors and source work as already excluded row 499, whose KNU "
+        "ORCID work record supplies this exact DOI. The earlier abstract "
+        "has two additional coauthors and is identity evidence, not the "
+        "journal article being excluded.",
+    ),
+}
+OTHER_PRIMARY.update(FOLLOWUP_KNU_DUPLICATE_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        666: "bC4aq-4AAAAJ:h168fVGZblEC",
+        804: "bC4aq-4AAAAJ:vVJNg6_NJEsC",
+        810: "bC4aq-4AAAAJ:-7ulzOJl1JYC",
+        826: "bC4aq-4AAAAJ:JH5k92_tO-AC",
+    }
+)
+FOLLOWUP_KNU_DUPLICATE_VENUES = {
+    666: "Crystals 10 (9), 2020",
+    804: "Journal of Alloys and Compounds 610, 2014",
+    810: "Advances in Materials Science and Engineering, NA-NA, 2014",
+    826: "Radiation Measurements 45, 2010",
+}
+FOLLOWUP_KNU_DUPLICATE_AUTHORS = {
+    666: "U Fawad, HJ Kim, I Gul, M Khan, S Tahir, T Jamal, W Muhammad",
+    804: "U Fawad, M Oh, H Park, S Kim, HJ Kim",
+    810: "R Ruamnikhom, P Limsuwan, M Horprathum, N Chanthima, HJ Kim, ...",
+    826: "G Rooh, HJ Kim, S Kim",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3200,6 +3284,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["authors"] != NEXT_KNU_VERSION_AUTHORS[index]
                 )
                 or (
+                    index in FOLLOWUP_KNU_DUPLICATE_VENUES
+                    and row["venue"] != FOLLOWUP_KNU_DUPLICATE_VENUES[index]
+                )
+                or (
+                    index in FOLLOWUP_KNU_DUPLICATE_AUTHORS
+                    and row["authors"] != FOLLOWUP_KNU_DUPLICATE_AUTHORS[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3551,17 +3643,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 115,
+        "proposed_other_person_primary_work": 119,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 322,
+        "unresolved_attribution_hold": 318,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 462 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 466 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
