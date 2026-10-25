@@ -16,6 +16,7 @@ from map_of_research.provisional_holds import load_provisional_holds
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data/curated"
 FIXTURE = ROOT / "tests/fixtures/sullivan_exact_loss_rows.json"
+FROZEN_CURATED = ROOT / "tests/fixtures/sullivan_approved_works.json"
 REVIEW = ROOT / "registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json"
 
 
@@ -30,6 +31,10 @@ def verified_rows(monkeypatch, tmp_path):
     expected_cache_sha = json.loads(
         (CURATED / "sullivan-exact-losses-bb88.json").read_text(encoding="utf-8")
     )["sullivan_cache_sha256"]
+    expected_curated_sha = json.loads(
+        (CURATED / "sullivan-exact-losses-bb88.json").read_text(encoding="utf-8")
+    )["curated_works_sha256"]
+    assert approval.sha256_file(FROZEN_CURATED) == expected_curated_sha
 
     def fixture_sha(path):
         if Path(path) == cache:
@@ -53,7 +58,7 @@ def verified_rows(monkeypatch, tmp_path):
         "profile_releases_path": CURATED / "scholar-profile-releases.json",
         "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
         "crosswalk_path": REVIEW,
-        "curated_works_path": CURATED / "works.json",
+        "curated_works_path": FROZEN_CURATED,
         "exclusions_path": CURATED / "scholar-exclusions.json",
         "prior_works": rows["prior_works"],
         "prior_profiles": rows["prior_profiles"],
@@ -69,6 +74,12 @@ def test_exact_hosted_rows_and_candidate_dispositions_pass(verified_rows):
     assert len(result.held_identities) == 18
     assert len(result.rekey_identities) == 4
     assert result.manifest_sha256 == approval.APPROVAL_SHA256
+
+
+def test_historical_approval_rejects_current_extended_curated_file(verified_rows):
+    inputs = {**verified_rows, "curated_works_path": CURATED / "works.json"}
+    with pytest.raises(ValueError, match="source changed: curated_works_sha256"):
+        approval.validate_sullivan_exact_losses(**inputs)
 
 
 @pytest.mark.parametrize(
