@@ -40,21 +40,84 @@ class _ProfileHTML(HTMLParser):
         self.in_row = False
         self.row_count = 0
         self.citation_ids: list[str] = []
+        self.rows: list[dict[str, str]] = []
         self.more_buttons: list[bool] = []
+        self._cell = ""
+        self._gray_count = 0
+        self._field = ""
+        self._field_depth = 0
+        self._field_text: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = dict(attrs)
+        classes = (attributes.get("class") or "").split()
+        if self._field:
+            self._field_depth += 1
+            return
         if tag == "tr" and "gsc_a_tr" in (attributes.get("class") or "").split():
             self.in_row = True
             self.row_count += 1
-        elif tag == "a" and self.in_row:
-            citation_id = _citation_id(attributes.get("href") or "")
-            if citation_id:
-                self.citation_ids.append(citation_id)
+            self._cell = ""
+            self._gray_count = 0
+            self.rows.append({})
+        elif self.in_row and tag == "td":
+            self._cell = next(
+                (name for name in ("gsc_a_t", "gsc_a_c", "gsc_a_y") if name in classes),
+                "",
+            )
+        elif (
+            self.in_row
+            and self._cell == "gsc_a_t"
+            and tag == "a"
+            and "gsc_a_at" in classes
+        ):
+            self.citation_ids.append(_citation_id(attributes.get("href") or ""))
+            self._begin_field("title")
+        elif (
+            self.in_row
+            and self._cell == "gsc_a_t"
+            and tag == "div"
+            and "gs_gray" in classes
+        ):
+            self._gray_count += 1
+            if self._gray_count <= 2:
+                self._begin_field("authors" if self._gray_count == 1 else "venue")
+        elif (
+            self.in_row
+            and self._cell == "gsc_a_c"
+            and tag == "a"
+            and "gsc_a_ac" in classes
+        ):
+            self._begin_field("citation_count")
+        elif (
+            self.in_row
+            and self._cell == "gsc_a_y"
+            and tag == "span"
+            and "gsc_a_h" in classes
+        ):
+            self._begin_field("year")
         elif tag == "button" and attributes.get("id") == "gsc_bpf_more":
             self.more_buttons.append("disabled" in attributes)
 
+    def _begin_field(self, field: str) -> None:
+        self._field = field
+        self._field_depth = 0
+        self._field_text = []
+
+    def handle_data(self, data: str) -> None:
+        if self._field:
+            self._field_text.append(data)
+
     def handle_endtag(self, tag: str) -> None:
+        if self._field:
+            if self._field_depth:
+                self._field_depth -= 1
+            else:
+                self.rows[-1][self._field] = "".join(self._field_text).strip()
+                self._field = ""
+            return
+        if tag == "td":
+            self._cell = ""
         if tag == "tr":
             self.in_row = False
 
@@ -120,6 +183,7 @@ def validate_complete_receipt(
     if (
         html.row_count != count
         or len(html.citation_ids) != count
+        or len(html.rows) != count
         or html.more_buttons != [True]
     ):
         raise ValueError(f"Saved HTML does not show a complete list: {scholar_id}")
@@ -137,6 +201,7 @@ def validate_complete_receipt(
         if not isinstance(source_row, dict):
             raise ValueError(f"Invalid source publication row: {scholar_id}")
         cached_row = by_index[index]
+        html_row = html.rows[index - 1]
         citation_url = str(source_row.get("citation_url") or "")
         citation_id = _citation_id(citation_url)
         citation_count = _normalized(source_row.get("citation_count")).replace(",", "")
@@ -146,6 +211,10 @@ def validate_complete_receipt(
             or citation_id != html.citation_ids[index - 1]
             or citation_id != cached_row.get("author_pub_id")
             or citation_url != cached_row.get("pub_url")
+            or any(
+                _normalized(html_row.get(key)) != _normalized(source_row.get(key))
+                for key in ("title", "authors", "venue", "year", "citation_count")
+            )
             or any(
                 _normalized(cached_row.get(cache_key))
                 != _normalized(source_row.get(source_key))

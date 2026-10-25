@@ -114,9 +114,13 @@ def _cache(paths: tuple, *, complete: bool) -> dict:
             },
         )
         source_html.write_text(
-            '<table><tr class="gsc_a_tr"><td><a href="'
+            '<table><tr class="gsc_a_tr"><td class="gsc_a_t"><a class="gsc_a_at" href="'
             + citation_url
-            + '">One</a></td></tr></table>'
+            + '">One</a><div class="gs_gray">A Alpha</div>'
+            + '<div class="gs_gray">Journal</div></td>'
+            + '<td class="gsc_a_c"><a class="gsc_a_ac">2</a></td>'
+            + '<td class="gsc_a_y"><span class="gsc_a_h">2025</span></td>'
+            + "</tr></table>"
             + '<button id="gsc_bpf_more" disabled="">Show more</button>'
         )
         cache["browser_capture"] = {
@@ -400,6 +404,47 @@ def test_receipt_requires_disabled_final_control_and_exact_html_rows(
     cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
     with pytest.raises(ValueError, match="Saved HTML does not show|Cached row differs"):
         validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+@pytest.mark.parametrize(
+    "old,new",
+    [
+        (">One</a>", ">Another</a>"),
+        (">A Alpha</div>", ">B Beta</div>"),
+        (">Journal</div>", ">Other Journal</div>"),
+        (">2</a>", ">3</a>"),
+        (">2025</span>", ">2024</span>"),
+    ],
+)
+def test_receipt_rejects_html_text_changed_after_source_capture(
+    tmp_path: Path, old: str, new: str
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    html = paths[4] / "alpha.html"
+    html.write_text(html.read_text().replace(old, new))
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
+def test_receipt_reads_nested_text_and_only_first_two_gray_fields(
+    tmp_path: Path,
+) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    html = paths[4] / "alpha.html"
+    content = (
+        html.read_text()
+        .replace(">A Alpha</div>", "><span>A Alpha</span></div>")
+        .replace(
+            ">Journal</div></td>",
+            '>Journal</div><div class="gs_gray">Extra page metadata</div></td>',
+        )
+    )
+    html.write_text(content)
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    validate_complete_receipt("alphaAAAAJ", cache, paths[4])
 
 
 @pytest.mark.parametrize(
