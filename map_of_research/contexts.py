@@ -26,6 +26,7 @@ class ReviewedContext:
     evidence_url: str
     verified_at: str
     display_contributors: str = ""
+    map_eligible: bool = True
 
 
 def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
@@ -64,6 +65,9 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             raise ValueError(
                 "Only edited-book contexts may override displayed contributors"
             )
+        map_eligible = entry.get("map_eligible", True)
+        if not isinstance(map_eligible, bool):
+            raise ValueError("Scholar context map_eligible must be boolean")
         evidence_url = str(entry.get("evidence_url") or "").strip()
         parsed = urlparse(evidence_url)
         if parsed.scheme != "https" or not parsed.netloc:
@@ -85,5 +89,6 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             evidence_url=evidence_url,
             verified_at=verified_at,
             display_contributors=display_contributors,
+            map_eligible=map_eligible,
         )
     return contexts

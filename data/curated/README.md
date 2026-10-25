@@ -33,8 +33,10 @@ for the exact source evidence.
 `scholar-contexts.json` is a separate exact-observation review manifest. It
 records publication type and primary evidence for unusual Scholar records.
 Patent work identity uses the published document number; the raw Scholar cache
-remains intact. Context type controls map and collaboration eligibility, and
-the trusted upload receipt records this manifest's SHA-256.
+remains intact. An exact context entry can set `map_eligible: false` to keep a
+reviewed observation and any matched copies in raw profile data while excluding
+the work from the map. Reviewed non-author contributor types do not create
+coauthor edges. The trusted upload receipt records this manifest's SHA-256.
 
 The publisher computes embeddings and map layouts through the normal path for
 any newly eligible works. The map artifact exposes `source_types`,

@@ -219,6 +219,7 @@ def build_dataset_tables(
     context_dates: list[str] = []
     context_display_contributors: list[str] = []
     collaboration_eligibility: list[bool] = []
+    unmapped_work_reasons: dict[str, set[str]] = {}
     known_person_titles = {
         normalize_title(person.display_name) for person in registry.people
     }
@@ -260,8 +261,15 @@ def build_dataset_tables(
         review = (exclusions or {}).get(key)
         if review is not None:
             reasons.append(f"reviewed_{review.reason_code}")
-        if context is not None and context.publication_type == "withdrawn_article":
-            reasons.append("reviewed_withdrawn_article")
+        if context is not None:
+            context_exclusion = ""
+            if context.publication_type == "withdrawn_article":
+                context_exclusion = "reviewed_withdrawn_article"
+            elif not context.map_eligible:
+                context_exclusion = "reviewed_context_not_mapped"
+            if context_exclusion:
+                reasons.append(context_exclusion)
+                unmapped_work_reasons.setdefault(work_id, set()).add(context_exclusion)
         review_codes.append(review.reason_code if review else "")
         review_reasons.append(review.reason if review else "")
         review_evidence_urls.append(review.evidence_url if review else "")
@@ -278,17 +286,13 @@ def build_dataset_tables(
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
         collaboration_eligibility.append(not stable_reasons and context is None)
-    withdrawn_work_ids = {
-        work_id
-        for work_id, publication_type in zip(work_ids, publication_types, strict=True)
-        if publication_type == "withdrawn_article"
-    }
     for index, work_id in enumerate(work_ids):
-        if work_id in withdrawn_work_ids:
+        if work_id in unmapped_work_reasons:
             map_eligibility[index] = False
             collaboration_eligibility[index] = False
-            if "reviewed_withdrawn_article" not in exclusion_reasons[index]:
-                exclusion_reasons[index].append("reviewed_withdrawn_article")
+            for reason in sorted(unmapped_work_reasons[work_id]):
+                if reason not in exclusion_reasons[index]:
+                    exclusion_reasons[index].append(reason)
     profile_publications.insert(0, "observation_id", observation_ids)
     profile_publications.insert(1, "work_id", work_ids)
     profile_publications.insert(2, "work_match_method", match_methods)

@@ -51,6 +51,10 @@ def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
     }
     assert len(patent_numbers) == 9
     assert {"US6486123B1", "US20020151468A1"} <= patent_numbers
+    assert {key[1] for key, item in contexts.items() if not item.map_eligible} == {
+        "8iLLOQgAAAAJ:CaZNVDsoPx4C",
+        "8iLLOQgAAAAJ:otzGkya1bYkC",
+    }
     editors = contexts[("8iLLOQgAAAAJ", "8iLLOQgAAAAJ:yD5IFk8b50cC")]
     assert editors.display_contributors == (
         "C. Ho; W. A. Eaton; J. P. Collman; Q. H. Gibson; J. S. Leigh, Jr.; "
@@ -89,6 +93,12 @@ def test_context_manifest_validates_identity_type_and_provenance(
             [_entry(display_contributors="C. Ho; W. A. Eaton")],
             1,
             "Only edited-book contexts",
+        ),
+        (
+            "nonboolean map eligibility",
+            [_entry(map_eligible="false")],
+            1,
+            "map_eligible must be boolean",
         ),
         (
             "bad URL",
@@ -183,6 +193,16 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
         },
         {
             **base,
+            "author_pub_id": "oneAAAAJ:panel-copy",
+            "title": "After Dinner Program To Honor Max Perutz",
+        },
+        {
+            **base,
+            "author_pub_id": "oneAAAAJ:panel-allowed",
+            "title": "A Different Panel Transcript",
+        },
+        {
+            **base,
             "author_pub_id": "oneAAAAJ:withdrawn",
             "title": "Withdrawn hemoglobin research article",
         },
@@ -198,13 +218,16 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
         },
     ]
 
-    def context(kind: str, document_id: str = "") -> ReviewedContext:
+    def context(
+        kind: str, document_id: str = "", *, map_eligible: bool = True
+    ) -> ReviewedContext:
         return ReviewedContext(
             kind,
             document_id,
             "Primary source confirms type",
             "https://example.test/source",
             "2026-10-25",
+            map_eligible=map_eligible,
         )
 
     contexts = {
@@ -218,13 +241,14 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
             "2026-10-25",
             "One Person; Second Person",
         ),
-        ("oneAAAAJ", "oneAAAAJ:panel"): context("panel_transcript"),
+        ("oneAAAAJ", "oneAAAAJ:panel"): context("panel_transcript", map_eligible=False),
+        ("oneAAAAJ", "oneAAAAJ:panel-allowed"): context("panel_transcript"),
         ("oneAAAAJ", "oneAAAAJ:withdrawn"): context("withdrawn_article"),
     }
     tables = build_dataset_tables(pandas.DataFrame(rows), registry, contexts=contexts)
     observations = tables["profile_publications"].set_index("author_pub_id")
     works = tables["works"].set_index("work_id")
-    assert len(observations) == 7
+    assert len(observations) == 9
     assert observations["source_record_json"].eq(base["source_record_json"]).all()
     assert observations.loc["oneAAAAJ:book", "authors"] == base["authors"]
     assert observations.loc["oneAAAAJ:book", "context_display_contributors"] == (
@@ -236,13 +260,24 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
     )
     assert observations.loc["oneAAAAJ:p1", "work_match_method"] == "patent_document"
     assert observations.loc["oneAAAAJ:p2", "work_match_method"] == "patent_document"
-    assert len(works) == 6
+    assert len(works) == 7
     assert (
         observations.loc["oneAAAAJ:other-copy", "work_id"]
         == observations.loc["oneAAAAJ:withdrawn", "work_id"]
     )
     assert not bool(observations.loc["oneAAAAJ:withdrawn", "map_eligible"])
     assert not bool(observations.loc["oneAAAAJ:other-copy", "map_eligible"])
+    assert not bool(observations.loc["oneAAAAJ:panel", "map_eligible"])
+    assert not bool(observations.loc["oneAAAAJ:panel-copy", "map_eligible"])
+    assert bool(observations.loc["oneAAAAJ:panel-allowed", "map_eligible"])
+    assert (
+        observations.loc["oneAAAAJ:panel", "work_id"]
+        == observations.loc["oneAAAAJ:panel-copy", "work_id"]
+    )
+    assert (
+        "reviewed_context_not_mapped"
+        in observations.loc["oneAAAAJ:panel-copy", "map_exclusion_reasons"]
+    )
     assert (
         "reviewed_withdrawn_article"
         in observations.loc["oneAAAAJ:other-copy", "map_exclusion_reasons"]
@@ -266,6 +301,9 @@ def test_contexts_preserve_patent_documents_and_withdrawn_raw_observations(
     )
     assert not bool(
         works.loc[observations.loc["oneAAAAJ:withdrawn", "work_id"], "map_eligible"]
+    )
+    assert not bool(
+        works.loc[observations.loc["oneAAAAJ:panel", "work_id"], "map_eligible"]
     )
     assert (
         works.loc[observations.loc["oneAAAAJ:p1", "work_id"], "source_document_id"]

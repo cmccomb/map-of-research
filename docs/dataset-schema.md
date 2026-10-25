@@ -97,9 +97,10 @@ fields and exclusion reasons, but without faculty memberships.
 `has_included_source_profile` records whether such a work came from an included
 roster profile without claiming that person as an author.
 `collaboration_eligible` separately controls whether mapped contributors can
-form coauthor edges. Mapped patents, edited books, and panel transcripts carry
-`false`; a source-confirmed withdrawn article stays in `profile_publications`
-but is excluded from mapped works and edges.
+form coauthor edges. Reviewed patents, edited books, and panel transcripts
+cannot form coauthor edges. In the Chien Ho review, nine patents and one edited
+book are mapped, while the exact withdrawn article and panel transcript remain
+in `profile_publications` but are excluded from mapped works and edges.
 `x` and `y` are the broad-structure PCA coordinates; `tsne_x` and `tsne_y` are
 the local-neighborhood t-SNE coordinates after a memory-bounded 50-dimensional
 PCA reduction and a final deterministic orientation. `keyword_id`, `keyword`,
@@ -204,10 +205,12 @@ taxonomy.
 
 `data/curated/scholar-contexts.json` records exact Scholar observation IDs,
 source-backed publication types, patent document IDs, evidence URLs, and review
-dates. The producer hashes that manifest in the upload receipt. The saved
-Scholar source rows remain immutable. `authorships.contributor_role`
-distinguishes inventor, editor, and panel participant relationships from
-authorship for these reviewed records.
+dates. An exact entry may set `map_eligible: false`; this decision also excludes
+matched copies of that work without changing source rows. The producer hashes
+the manifest in the upload receipt. The saved Scholar source rows remain
+immutable. `authorships.contributor_role` distinguishes mapped inventor and
+editor relationships from authorship. The reviewed Chien panel has no authorship
+row because it remains raw and unmapped.
 
 The policy removes high-confidence non-research records from layout computation
 without deleting source data. Reason codes cover conference front matter,

@@ -10,7 +10,7 @@ records each source URL, reason, and date.
 | 116 | Edited book | Include as a reviewed book | No coauthor edge between editors |
 | 292, 328, 359, 394, 406, 424, 426, 446, 451 | Patent document | Include as a reviewed patent | No coauthor edge between inventors |
 | 425 | Withdrawn article | Retain raw observation; exclude mapped work | No edge |
-| 525 | After-dinner panel transcript | Include as a reviewed transcript | No coauthor edge between speakers |
+| 525 | After-dinner panel transcript | Retain raw observation; exclude mapped work | No edge |
 
 The patent work key uses the exact publication number in the source manifest.
 The [parent patent US6486123B1](https://patents.google.com/patent/US6486123B1/en)
@@ -30,6 +30,9 @@ record](https://pubmed.ncbi.nlm.nih.gov/15194702/) for row 425 says
 not all coauthors approved submission. The Crossref publisher-deposited record
 for row 525 names Chien Ho as a panel participant rather than a research-paper
 coauthor; its exact source URL is in the manifest.
+The two unmapped observations carry `map_eligible: false` in their exact
+manifest entries; the panel decision does not exclude every future panel
+transcript by type.
 
 ## Release checks
 
@@ -37,14 +40,16 @@ coauthor; its exact source URL is in the manifest.
    observations independently. This context policy does not attest to the
    other profile rows.
 2. Confirm the immutable snapshot still contains exactly 582 Chien raw rows,
-   including all 12 context rows, and that row 425 is absent from mapped works.
+   including all 12 context rows, and that rows 425 and 525 are absent from
+   mapped works.
 3. Confirm patent rows 359 and 394 have distinct `work_id` values and their
    exact publication numbers; no patent, editor, or panel edge may appear in
    the collaboration graph.
-4. Show the reviewed type and the proper contributor label on the research
-   map before releasing these 11 mapped non-article records. The present
-   `map-of-eng` details view labels all contributor strings “Authors,” which
-   would misdescribe inventors, editors, and panel participants.
+4. Show the reviewed type and the proper inventor or editor label on the
+   research map before releasing the 10 mapped non-article records (nine
+   patents and one edited book). The present `map-of-eng` details view labels
+   all contributor strings “Authors,” which would misdescribe inventors and
+   editors.
 5. Check the producer manifest hash in the upload receipt, then verify both
    rendered maps against the same immutable dataset revision.
 
