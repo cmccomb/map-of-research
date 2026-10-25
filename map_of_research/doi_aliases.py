@@ -14,6 +14,19 @@ from .io import load_json
 DEFAULT_DOI_ALIASES_PATH = Path("data/curated/scholar-doi-aliases.json")
 DOI_ALIAS_SCHEMA_VERSION = 1
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
+CELL_SHORT_TITLE_REVIEW = (
+    "28yZqbcAAAAJ",
+    "28yZqbcAAAAJ:UeHWp8X0CEIC",
+    "10.1016/j.molcel.2008.06.010",
+)
+CELL_SHORT_TITLE_OBSERVED = ("Getting the message out", 2008)
+CELL_SHORT_TITLE_EVIDENCE = frozenset(
+    {
+        "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+        "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+        "https://doi.org/10.1016/j.molcel.2008.06.010",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -33,6 +46,25 @@ def _publisher_url_for_doi(url: str, doi: str) -> bool:
         parsed.scheme == "https"
         and parsed.hostname == "link.springer.com"
         and parsed.path.casefold().endswith("/" + doi)
+    )
+
+
+def _short_title_evidence_matches(
+    doi: str,
+    evidence_urls: tuple[str, ...] | list[str],
+    verification_urls: tuple[str, ...] | list[str] | None = None,
+) -> bool:
+    """Require a publisher DOI link or the exact reviewed Cell DOI/PII chain."""
+
+    if doi == CELL_SHORT_TITLE_REVIEW[2]:
+        return CELL_SHORT_TITLE_EVIDENCE.issubset(evidence_urls) and (
+            verification_urls is None
+            or CELL_SHORT_TITLE_EVIDENCE.issubset(verification_urls)
+        )
+    return any(
+        _publisher_url_for_doi(url, doi)
+        and (verification_urls is None or url in verification_urls)
+        for url in evidence_urls
     )
 
 
@@ -97,11 +129,18 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
         if short_title_override and (
             year is None
             or len(title) >= 30
-            or not any(_publisher_url_for_doi(url, doi) for url in evidence_urls)
+            or (
+                doi == CELL_SHORT_TITLE_REVIEW[2]
+                and (
+                    (scholar_id, author_pub_id, doi) != CELL_SHORT_TITLE_REVIEW
+                    or (title, year) != CELL_SHORT_TITLE_OBSERVED
+                )
+            )
+            or not _short_title_evidence_matches(doi, evidence_urls)
         ):
             raise ValueError(
                 "Scholar short-title override needs a short exact title, year, "
-                "and Springer chapter evidence for its DOI"
+                "and reviewed publisher/identifier evidence for its DOI"
             )
         key = (scholar_id, author_pub_id)
         if key in aliases:

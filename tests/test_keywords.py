@@ -800,3 +800,64 @@ def test_reviewed_short_title_exception_is_exact_to_gordon_chapter() -> None:
     ):
         malformed = pandas.Series(gordon | {field: value})
         assert not keywords._reviewed_short_title_alias_matches(malformed, aliases)
+
+
+def test_reviewed_cell_short_title_requires_complete_pii_doi_pubmed_evidence() -> None:
+    scholar_id = "28yZqbcAAAAJ"
+    author_pub_id = f"{scholar_id}:UeHWp8X0CEIC"
+    doi = "10.1016/j.molcel.2008.06.010"
+    evidence = (
+        "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+        "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+        "https://doi.org/10.1016/j.molcel.2008.06.010",
+    )
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Getting the message out",
+        observed_year=2008,
+        relationship="version_of_record",
+        evidence_urls=evidence,
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    work = pandas.Series(
+        {
+            "doi": doi,
+            "title": "Getting the message out",
+            "year": 2008,
+            "authors": "CJ McManus, BR Graveley",
+            "venue": "Molecular cell 31 (1), 4-6, 2008",
+            "source_types": ["scholar"],
+            "scholar_ids": [scholar_id],
+            "author_pub_ids": [author_pub_id],
+            "source_verified_at": "2026-10-25",
+            "source_verification_urls": list(evidence),
+        }
+    )
+    aliases = {(scholar_id, author_pub_id): alias}
+    assert keywords._reviewed_short_title_alias_matches(work, aliases)
+
+    for changed in (
+        {"doi": "10.1016/j.molcel.2008.06.011"},
+        {"title": "Another message"},
+        {"year": 2009},
+        {"scholar_ids": ["another"]},
+        {"author_pub_ids": [f"{scholar_id}:another"]},
+        {"source_verified_at": "2026-10-24"},
+        {"source_verification_urls": list(evidence[1:])},
+        {"source_verification_urls": list(evidence[:1] + evidence[2:])},
+        {"source_verification_urls": list(evidence[:2])},
+    ):
+        assert not keywords._reviewed_short_title_alias_matches(
+            pandas.Series(work.to_dict() | changed), aliases
+        )
+
+    unflagged = {(scholar_id, author_pub_id): ReviewedDoiAlias(
+        doi=doi,
+        observed_title=alias.observed_title,
+        observed_year=alias.observed_year,
+        relationship=alias.relationship,
+        evidence_urls=evidence,
+        verified_at=alias.verified_at,
+    )}
+    assert not keywords._reviewed_short_title_alias_matches(work, unflagged)

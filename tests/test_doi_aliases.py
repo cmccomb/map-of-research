@@ -228,3 +228,78 @@ def test_short_title_override_requires_exact_scholar_citation_and_springer_evide
         )
         with pytest.raises(ValueError, match="short-title override"):
             load_doi_aliases(path)
+
+
+def test_cell_short_title_override_requires_exact_doi_pii_and_pubmed_chain(
+    tmp_path,
+) -> None:
+    entry = {
+        "scholar_id": "28yZqbcAAAAJ",
+        "author_pub_id": "28yZqbcAAAAJ:UeHWp8X0CEIC",
+        "observed_title": "Getting the message out",
+        "observed_year": 2008,
+        "published_doi": "10.1016/j.molcel.2008.06.010",
+        "relationship": "version_of_record",
+        "evidence_urls": [
+            "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+            "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+            "https://doi.org/10.1016/j.molcel.2008.06.010",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC2713004/",
+        ],
+        "verified_at": "2026-10-25",
+        "allow_short_title_region_override": True,
+    }
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps({"schema_version": 1, "aliases": [entry]}))
+    aliases = load_doi_aliases(path)
+    key = (entry["scholar_id"], entry["author_pub_id"])
+    assert aliases[key].allow_short_title_region_override
+    source_row = {
+        "source_type": "scholar",
+        "scholar_id": key[0],
+        "author_pub_id": key[1],
+        "title": entry["observed_title"],
+        "year": entry["observed_year"],
+        "authors": "CJ McManus, BR Graveley",
+        "venue": "Molecular cell 31 (1), 4-6, 2008",
+        "source_doi": "",
+        "source_url": (
+            "https://scholar.google.com/citations?view_op=view_citation"
+            "&user=28yZqbcAAAAJ"
+            "&citation_for_view=28yZqbcAAAAJ:UeHWp8X0CEIC"
+        ),
+    }
+    validate_doi_aliases(pandas.DataFrame([source_row]), aliases, {})
+
+    for change in (
+        {"author_pub_id": "28yZqbcAAAAJ:another"},
+        {"observed_title": "Another message"},
+        {"observed_year": 2009},
+        {"published_doi": "10.1016/j.molcel.2008.06.011"},
+        {"evidence_urls": entry["evidence_urls"][1:]},
+        {"evidence_urls": [entry["evidence_urls"][0], *entry["evidence_urls"][2:]]},
+        {"evidence_urls": entry["evidence_urls"][:2] + entry["evidence_urls"][3:]},
+        {
+            "evidence_urls": [
+                "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00429-0",
+                *entry["evidence_urls"][1:],
+            ]
+        },
+    ):
+        path.write_text(
+            json.dumps({"schema_version": 1, "aliases": [{**entry, **change}]})
+        )
+        with pytest.raises(ValueError, match="short-title override"):
+            load_doi_aliases(path)
+
+    for change in (
+        {"title": "Different title"},
+        {"year": 2009},
+        {"source_url": "https://scholar.google.com/citations?user=28yZqbcAAAAJ"},
+        {"authors": ""},
+        {"venue": ""},
+    ):
+        with pytest.raises(ValueError, match="observed title|short-title override"):
+            validate_doi_aliases(
+                pandas.DataFrame([{**source_row, **change}]), aliases, {}
+            )

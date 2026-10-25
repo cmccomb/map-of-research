@@ -9,7 +9,7 @@ from collections import Counter
 from typing import Any
 from urllib.parse import urlparse
 
-from .doi_aliases import ReviewedDoiAlias, _publisher_url_for_doi
+from .doi_aliases import ReviewedDoiAlias, _short_title_evidence_matches
 from .topic_labels import (
     TOPIC_LABEL_REVIEW_VERSION,
     apply_reviewed_labels,
@@ -395,9 +395,8 @@ def _reviewed_short_title_alias_matches(
             and str(row["title"]).strip().casefold() == alias.observed_title.casefold()
             and year == alias.observed_year
             and verified_at >= dt.date.fromisoformat(alias.verified_at)
-            and any(
-                url in verification_urls and _publisher_url_for_doi(url, alias.doi)
-                for url in alias.evidence_urls
+            and _short_title_evidence_matches(
+                alias.doi, alias.evidence_urls, verification_urls
             )
         ):
             return True
