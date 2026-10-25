@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source_html_sha256": "264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b",
+  "source_extraction_sha256": "e3f481cb22ede0500ccb5bc1f950a012e0c442058865876644b5bf69a01dde79",
+  "review_scope": "three exact author-site rows with no DOI linked by the author",
+  "records": [
+    {
+      "row_index": 32,
+      "review_origin": "independently_verified_unlinked",
+      "doi": "10.4310/cms.2015.v13.n1.a12",
+      "author_site_title": "Global existence for two extended Navier-Stokes systems,",
+      "author_site_authors": "M. Ignatova, G. Iyer, J. P. Kelliher, R. L. Pego, A. D. Zarnescu",
+      "author_site_year": 2015,
+      "publisher_title": "Global existence for two extended Navier-Stokes systems",
+      "publisher_authors": [
+        "Mihaela Ignatova",
+        "Gautam Iyer",
+        "James P. Kelliher",
+        "Robert L. Pego",
+        "Arghir D. Zarnescu"
+      ],
+      "publisher_year": 2015,
+      "publisher_registry_url": "https://api.crossref.org/works/10.4310%2FCMS.2015.v13.n1.a12",
+      "publisher_registry_response_sha256": "5af028147af667368a8eada5d5f57765e87040f580a14e42eaf37832ecc7b9f1",
+      "evidence_urls": [
+        "https://archive.intlpress.com/site/pub/files/_fulltext/journals/cms/2015/0013/0001/CMS-2015-0013-0001-a012.pdf",
+        "https://arxiv.org/abs/1308.4735"
+      ],
+      "reviewed_at_utc": "2026-10-25T11:30:54.308072+00:00"
+    },
+    {
+      "row_index": 33,
+      "review_origin": "independently_verified_unlinked",
+      "doi": "10.1214/14-aap1008",
+      "author_site_title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,",
+      "author_site_authors": "G. Iyer, N. Leger, R. L. Pego",
+      "author_site_year": 2015,
+      "publisher_title": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes",
+      "publisher_authors": [
+        "Gautam Iyer",
+        "Nicholas Leger",
+        "Robert L. Pego"
+      ],
+      "publisher_year": 2015,
+      "publisher_registry_url": "https://api.crossref.org/works/10.1214%2F14-AAP1008",
+      "publisher_registry_response_sha256": "e5d6cd260b6f61e317830a8500f1164efd59d6a98708714c68fa9b02aebeffdf",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1212.6451",
+        "https://imstat.org/publications/aap/aap_25_2/AAP_25_2.pdf"
+      ],
+      "reviewed_at_utc": "2026-10-25T11:30:54.429646+00:00"
+    },
+    {
+      "row_index": 34,
+      "review_origin": "independently_verified_unlinked",
+      "doi": "10.1063/1.4738637",
+      "author_site_title": "Coercivity and stability results for an extended Navier-Stokes system,",
+      "author_site_authors": "G. Iyer, R. L. Pego, A. D. Zarnescu",
+      "author_site_year": 2012,
+      "publisher_title": "Coercivity and stability results for an extended Navier-Stokes system",
+      "publisher_authors": [
+        "Gautam Iyer",
+        "Robert L. Pego",
+        "Arghir Zarnescu"
+      ],
+      "publisher_year": 2012,
+      "publisher_registry_url": "https://api.crossref.org/works/10.1063%2F1.4738637",
+      "publisher_registry_response_sha256": "f46e4a03e72e1939e9c855e4177d20276ec107033e383e830396e8a9222e91bd",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1202.5671",
+        "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf"
+      ],
+      "reviewed_at_utc": "2026-10-25T11:30:54.525359+00:00"
+    }
+  ]
+}

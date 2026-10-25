@@ -252,5 +252,8 @@
       "evidence_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200605-thesis.pdf"
     }
   ],
-  "release_state": "staged_for_explicit_promotion"
+  "release_state": "staged_for_explicit_promotion",
+  "unlinked_doi_audit_json_path": "registry/reviews/2026-10-25-math-gautam-iyer-unlinked-doi-audit.json",
+  "unlinked_doi_audit_json_sha256": "ffa1f0913353f1b7770a6cdb324fad5aea995d86744bd415c43c517461c99da9",
+  "expected_unlinked_doi_review_count": 3
 }

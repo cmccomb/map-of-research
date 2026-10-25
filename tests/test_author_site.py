@@ -32,7 +32,7 @@ def _registry():
 def test_whole_iyer_capture_retains_raw_and_reviewed_metadata() -> None:
     rows = load_author_site_rows(CAPTURE, _registry())
     assert len(rows) == len({row["author_pub_id"] for row in rows}) == 47
-    assert sum(bool(row["source_doi"]) for row in rows) == 20
+    assert sum(bool(row["source_doi"]) for row in rows) == 23
     assert sum(not bool(row["venue"]) for row in rows) == 7
     assert all(row["source_type"] == "author_site" for row in rows)
     assert all(row["scholar_id"] == row["fetched_at_utc"] == "" for row in rows)
@@ -47,6 +47,25 @@ def test_whole_iyer_capture_retains_raw_and_reviewed_metadata() -> None:
         "Anomalous diffusion in one and two dimensional combs,"
     )
     assert rows[43]["source_output_type"] == "thesis"
+
+    reviewed_dois = {
+        32: "10.4310/cms.2015.v13.n1.a12",
+        33: "10.1214/14-aap1008",
+        34: "10.1063/1.4738637",
+    }
+    for index, doi in reviewed_dois.items():
+        row = rows[index - 1]
+        raw = json.loads(row["source_record_json"])
+        assert row["source_doi"] == doi
+        assert raw["author_site_row"]["doi_as_linked"] == ""
+        assert raw["doi_review"] is None
+        assert raw["unlinked_doi_review"]["review_origin"] == (
+            "independently_verified_unlinked"
+        )
+        assert raw["unlinked_doi_review"]["doi"] == doi
+        assert len(row["source_verification_urls"]) == 5
+    assert "unlinked_doi_review" not in json.loads(rows[21]["source_record_json"])
+    assert "unlinked_doi_review" not in json.loads(rows[3]["source_record_json"])
 
 
 def test_author_site_doi_mining_and_thesis_edge_are_blocked() -> None:
@@ -67,6 +86,12 @@ def test_author_site_doi_mining_and_thesis_edge_are_blocked() -> None:
     assert publisher_link_with_unreviewed_doi["work_match_method"] == (
         "source_native_id"
     )
+    for index in (32, 33, 34):
+        reviewed = publications.loc[
+            publications["author_pub_id"] == rows[index - 1]["author_pub_id"]
+        ].iloc[0]
+        assert reviewed["work_match_method"] == "doi"
+        assert reviewed["doi"] == rows[index - 1]["source_doi"]
     thesis = publications.loc[
         publications["author_pub_id"] == rows[43]["author_pub_id"]
     ].iloc[0]
@@ -172,6 +197,12 @@ def test_author_site_snapshot_is_explicit_and_source_bound(tmp_path: Path) -> No
         ("html", "capture file changed"),
         ("csv", "capture file changed"),
         ("audit", "capture file changed"),
+        ("unlinked_audit", "capture file changed"),
+        ("unlinked_rows", "unlinked DOI audit scope changed"),
+        ("unlinked_indices", "unlinked DOI review rows changed"),
+        ("unlinked_doi", "unlinked DOI source review changed"),
+        ("unlinked_title", "unlinked DOI source review changed"),
+        ("unlinked_time", "unlinked DOI review time lacks timezone"),
         ("doi", "DOI source review changed"),
         ("comb", "comb-paper title review is missing"),
         ("url", "Invalid author-site URL"),
@@ -198,10 +229,12 @@ def test_author_site_rejects_changed_capture_or_review(
     html_path = data_dir / source_manifest["html_file"]
     csv_path = tmp_path / source_manifest["review_csv_path"]
     audit_path = tmp_path / source_manifest["doi_audit_csv_path"]
+    unlinked_audit_path = tmp_path / source_manifest["unlinked_doi_audit_json_path"]
     for source, destination in (
         (CAPTURE.parent / source_manifest["html_file"], html_path),
         (ROOT / source_manifest["review_csv_path"], csv_path),
         (ROOT / source_manifest["doi_audit_csv_path"], audit_path),
+        (ROOT / source_manifest["unlinked_doi_audit_json_path"], unlinked_audit_path),
     ):
         shutil.copyfile(source, destination)
     if change == "scope":
@@ -212,6 +245,30 @@ def test_author_site_rejects_changed_capture_or_review(
         csv_path.write_bytes(csv_path.read_bytes() + b"changed")
     elif change == "audit":
         audit_path.write_bytes(audit_path.read_bytes() + b"changed")
+    elif change == "unlinked_audit":
+        unlinked_audit_path.write_bytes(unlinked_audit_path.read_bytes() + b"changed")
+    elif change in {
+        "unlinked_rows",
+        "unlinked_indices",
+        "unlinked_doi",
+        "unlinked_title",
+        "unlinked_time",
+    }:
+        unlinked = json.loads(unlinked_audit_path.read_text(encoding="utf-8"))
+        if change == "unlinked_rows":
+            unlinked["records"].pop()
+        elif change == "unlinked_indices":
+            unlinked["records"][0]["row_index"] = 35
+        elif change == "unlinked_doi":
+            unlinked["records"][0]["doi"] = "10.1000/wrong"
+        elif change == "unlinked_title":
+            unlinked["records"][0]["publisher_title"] = "Unrelated work"
+        else:
+            unlinked["records"][0]["reviewed_at_utc"] = "2026-10-25T11:30:54"
+        unlinked_audit_path.write_text(json.dumps(unlinked), encoding="utf-8")
+        source_manifest["unlinked_doi_audit_json_sha256"] = hashlib.sha256(
+            unlinked_audit_path.read_bytes()
+        ).hexdigest()
     elif change == "doi":
         source_manifest["doi_reviews"][0]["publisher_year"] = 1900
     elif change == "comb":
@@ -266,6 +323,12 @@ def test_author_site_rejects_changed_capture_or_review(
             writer.writerows(extracted_rows)
         source_manifest["review_csv_sha256"] = hashlib.sha256(
             csv_path.read_bytes()
+        ).hexdigest()
+        unlinked = json.loads(unlinked_audit_path.read_text(encoding="utf-8"))
+        unlinked["source_extraction_sha256"] = source_manifest["review_csv_sha256"]
+        unlinked_audit_path.write_text(json.dumps(unlinked), encoding="utf-8")
+        source_manifest["unlinked_doi_audit_json_sha256"] = hashlib.sha256(
+            unlinked_audit_path.read_bytes()
         ).hexdigest()
     manifest_path.write_text(json.dumps(source_manifest), encoding="utf-8")
     with pytest.raises(ValueError, match=message):
