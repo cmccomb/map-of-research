@@ -1603,6 +1603,60 @@ def test_physics_review_gate_requires_valid_released_status(tmp_path) -> None:
     publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
 
 
+def test_publish_snapshot_corrects_metadata_before_embedding(
+    monkeypatch, tmp_path
+) -> None:
+    import json
+
+    from map_of_research.corrections import (
+        DEFAULT_CORRECTIONS_PATH,
+        load_corrections,
+    )
+
+    correction = load_corrections(DEFAULT_CORRECTIONS_PATH)[
+        ("8iLLOQgAAAAJ", "8iLLOQgAAAAJ:TesyEGJKHF4C")
+    ]
+    raw = json.dumps({"pub_year": "1712", "title": correction.expected["title"]})
+    frame = pandas.DataFrame(
+        [
+            {
+                "scholar_id": "8iLLOQgAAAAJ",
+                "author_pub_id": "8iLLOQgAAAAJ:TesyEGJKHF4C",
+                "source_type": "scholar",
+                "source_record_json": raw,
+                **correction.expected,
+            }
+        ]
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (frame, {"created_at_utc": "2026-10-25T00:00:00Z"}),
+    )
+
+    class BeforeUpload(Exception):
+        pass
+
+    def check_before_embedding(effective, **kwargs):
+        assert kwargs["hf_token"] == "token"
+        assert effective.loc[0, "year"] == 2011
+        assert effective.loc[0, "source_record_json"] == raw
+        assert effective.loc[0, "metadata_correction_evidence_url"] == (
+            correction.evidence_url
+        )
+        assert frame.loc[0, "year"] == 1712
+        raise BeforeUpload
+
+    monkeypatch.setattr(publisher, "add_embeddings", check_before_embedding)
+    with pytest.raises(BeforeUpload):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+        )
+
+
 def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
     for name in ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_RUN_ID"):
         monkeypatch.delenv(name, raising=False)
