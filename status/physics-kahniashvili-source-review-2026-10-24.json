@@ -3,7 +3,7 @@
   "review_state": "source_review_proposals_not_applied",
   "reviewed_at": "2026-10-24",
   "scholar_id": "au_cLfoAAAAJ",
-  "raw_rows_preserved": true,
+  "raw_rows_preserved": false,
   "cache_repair_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json",
   "proposed_exclusions": [
     {
@@ -148,5 +148,6 @@
     }
   ],
   "unresolved_candidates": [],
-  "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
+  "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings.",
+  "raw_row_change_note": "After this 15-row exclusion review, source rows 67 and 110 received HTML-grounded title-extraction corrections, documented in the linked cache repair ledger. All observation IDs and exclusion decisions are unchanged."
 }
