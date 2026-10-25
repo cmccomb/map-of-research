@@ -185,7 +185,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "AcW2EXwAAAAJ" for key in exclusions) == 9
     assert sum(key[0] == "kcXOB1MAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "jcb81yAAAAAJ" for key in exclusions) == 13
-    assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 5
+    assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 12
     assert sum(key[0] == "6pPZKd0AAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "grTfBeAAAAAJ" for key in exclusions) == 16
     assert sum(key[0] == "lKAvvmoAAAAJ" for key in exclusions) == 2
@@ -195,6 +195,32 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_croft_bristol_namesake_review_is_exact_and_bounded() -> None:
+    scholar_id = "wex9ft0AAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert actual == {
+        "v1_lew4L6wgC": "nonpublication",
+        "MAUkC_7iAq8C": "nonpublication",
+        "-7ulzOJl1JYC": "nonpublication",
+        "kVjdVfd2voEC": "nonpublication",
+        "LjlpjdlvIbIC": "nonpublication",
+        "6bLC7aUMtPcC": "false_profile_attribution",
+        "rHJHxKgnXwkC": "false_profile_attribution",
+        "Ade32sEp0pkC": "false_profile_attribution",
+        "SjuI4pbJlxcC": "false_profile_attribution",
+        "WC9gN4BGCRcC": "false_profile_attribution",
+        "3NQIlFlcGxIC": "false_profile_attribution",
+        "q-HalDI95KYC": "false_profile_attribution",
+    }
+    for unresolved in ("LPtt_HFRSbwC", "DBa1UEJaJKAC"):
+        assert unresolved not in actual
 
 
 def test_natalie_mcguier_only_malformed_second_review_is_excluded() -> None:
