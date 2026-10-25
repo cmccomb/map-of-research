@@ -115,6 +115,7 @@ jobs:
             --reviewed-contexts source/data/curated/scholar-contexts.json \
             --attribution-reviews source/data/curated/scholar-attribution-reviews.json \
             --profile-releases source/data/curated/scholar-profile-releases.json \
+            --provisional-holds source/data/curated/scholar-provisional-holds.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}
