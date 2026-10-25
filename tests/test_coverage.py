@@ -447,6 +447,35 @@ def test_receipt_reads_nested_text_and_only_first_two_gray_fields(
     validate_complete_receipt("alphaAAAAJ", cache, paths[4])
 
 
+def test_receipt_reads_scholar_svg_title_labels(tmp_path: Path) -> None:
+    paths = _paths(tmp_path)
+    cache = _cache(paths, complete=True)
+    title = "α-pinene between -50 and +25 ∘C"
+    cache["publications"][0]["title"] = title
+    source = paths[4] / "alpha.json"
+    capture = json.loads(source.read_text())
+    capture["works"][0]["title"] = title
+    atomic_write_json(source, capture)
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source)
+    html = paths[4] / "alpha.html"
+    html.write_text(
+        html.read_text().replace(
+            ">One</a>",
+            '><svg class="gs_fsvg" aria-label="α"></svg>-pinene between '
+            '<svg class="gs_fsvg" aria-label="-50"></svg> and '
+            '<svg class="gs_fsvg" aria-label="+25"></svg> '
+            '<svg class="gs_fsvg" aria-label="∘"></svg>C</a>',
+        )
+    )
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+    html.write_text(html.read_text().replace('aria-label="+25"', 'aria-label="+26"'))
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(html)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("alphaAAAAJ", cache, paths[4])
+
+
 @pytest.mark.parametrize(
     "field,value",
     [

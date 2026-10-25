@@ -52,6 +52,9 @@ class _ProfileHTML(HTMLParser):
         attributes = dict(attrs)
         classes = (attributes.get("class") or "").split()
         if self._field:
+            if self._field == "title" and tag == "svg" and "gs_fsvg" in classes:
+                # Scholar renders some title glyphs as labeled SVG icons.
+                self._field_text.append(attributes.get("aria-label") or "")
             self._field_depth += 1
             return
         if tag == "tr" and "gsc_a_tr" in (attributes.get("class") or "").split():
