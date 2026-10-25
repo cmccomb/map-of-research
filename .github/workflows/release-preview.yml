@@ -11,6 +11,10 @@ on:
         description: Exact validated raw snapshot commit
         required: true
         type: string
+      status_commit:
+        description: Exact current receipt commit on automation/map-snapshot
+        required: true
+        type: string
       snapshot_sha256:
         description: SHA-256 of the raw Parquet snapshot
         required: true
@@ -40,6 +44,7 @@ jobs:
     env:
       PRODUCER_COMMIT: ${{ inputs.producer_commit }}
       SNAPSHOT_COMMIT: ${{ inputs.snapshot_commit }}
+      STATUS_COMMIT: ${{ inputs.status_commit }}
       SNAPSHOT_SHA256: ${{ inputs.snapshot_sha256 }}
       PRIOR_REVISION: ${{ inputs.prior_revision }}
       REQUIRE_BIO_RELEASE: ${{ inputs.require_bio_release }}
@@ -68,6 +73,18 @@ jobs:
             data/captures
             status
           sparse-checkout-cone-mode: false
+      - name: Check out current upload receipts without write credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.status_commit }}
+          path: receipt
+          persist-credentials: false
+          sparse-checkout: status
+          sparse-checkout-cone-mode: false
+      - name: Require the pinned receipt branch tip
+        run: |
+          CURRENT_STATUS_COMMIT="$(git -C receipt ls-remote origin refs/heads/automation/map-snapshot | cut -f1)"
+          test "$CURRENT_STATUS_COMMIT" = "$STATUS_COMMIT"
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -80,7 +97,7 @@ jobs:
         id: baseline
         run: |
           python -m map_of_research.release_baseline \
-            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
+            --status-dir receipt/status >> "$GITHUB_OUTPUT"
       - name: Require the requested hosted parent
         run: |
           test "${{ steps.baseline.outputs.revision }}" = "$PRIOR_REVISION"
@@ -98,8 +115,8 @@ jobs:
             --historical-commit "" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
-            --current-receipt snapshot/status/last-upload.json \
-            --historical-receipt snapshot/status/last-upload.json \
+            --current-receipt receipt/status/last-upload.json \
+            --historical-receipt receipt/status/last-upload.json \
             --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
         run: |
@@ -142,9 +159,11 @@ jobs:
             "${BIO_RELEASE_ARGS[@]}" \
             --producer-dir source \
             --snapshot-dir snapshot \
+            --receipt-dir receipt \
             --output-dir preview \
             --producer-commit "$PRODUCER_COMMIT" \
             --snapshot-commit "$SNAPSHOT_COMMIT" \
+            --status-commit "$STATUS_COMMIT" \
             --snapshot-sha256 "$SNAPSHOT_SHA256" \
             --prior-revision "$PRIOR_REVISION" \
             --region-comparison-revision "${{ steps.region.outputs.revision }}"

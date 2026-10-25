@@ -72,9 +72,11 @@ def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--producer-dir", type=Path, required=True)
     parser.add_argument("--snapshot-dir", type=Path, required=True)
+    parser.add_argument("--receipt-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--producer-commit", required=True)
     parser.add_argument("--snapshot-commit", required=True)
+    parser.add_argument("--status-commit", required=True)
     parser.add_argument("--snapshot-sha256", required=True)
     parser.add_argument("--prior-revision", required=True)
     parser.add_argument("--region-comparison-revision", required=True)
@@ -86,6 +88,7 @@ def main() -> int:
     args = _parse_args()
     producer = args.producer_dir.resolve()
     snapshot = args.snapshot_dir.resolve()
+    receipt_checkout = args.receipt_dir.resolve()
     output = args.output_dir.resolve()
     receipt_path = output / "receipt.json"
     stage = output / "stage"
@@ -95,6 +98,7 @@ def main() -> int:
         "mode": "read_only_first_write_intercept",
         "producer_commit": args.producer_commit,
         "snapshot_commit": args.snapshot_commit,
+        "status_commit": args.status_commit,
         "snapshot_sha256": args.snapshot_sha256,
         "prior_revision": args.prior_revision,
         "region_comparison_revision": args.region_comparison_revision,
@@ -126,6 +130,7 @@ def main() -> int:
         for label, value, length in (
             ("producer commit", args.producer_commit, 40),
             ("snapshot commit", args.snapshot_commit, 40),
+            ("status commit", args.status_commit, 40),
             ("snapshot SHA-256", args.snapshot_sha256, 64),
             ("prior revision", args.prior_revision, 40),
             ("region comparison revision", args.region_comparison_revision, 40),
@@ -133,16 +138,22 @@ def main() -> int:
             _require_sha(value, label=label, length=length)
         if args.region_comparison_revision != args.prior_revision:
             raise ValueError("Read-only preview requires the current Hub comparison")
-        if output.is_relative_to(producer) or output.is_relative_to(snapshot):
-            raise ValueError("Preview output must be outside both Git checkouts")
+        if any(
+            output.is_relative_to(checkout)
+            for checkout in (producer, snapshot, receipt_checkout)
+        ):
+            raise ValueError("Preview output must be outside all Git checkouts")
         if stage.exists():
             raise FileExistsError(f"Preview stage already exists: {stage}")
         if _git_head(producer) != args.producer_commit:
             raise ValueError("Producer checkout differs from the requested commit")
         if _git_head(snapshot) != args.snapshot_commit:
             raise ValueError("Snapshot checkout differs from the requested commit")
+        if _git_head(receipt_checkout) != args.status_commit:
+            raise ValueError("Receipt checkout differs from the requested commit")
         _require_clean_tracked_files(producer)
         _require_clean_tracked_files(snapshot)
+        _require_clean_tracked_files(receipt_checkout)
         raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
         manifest = (
             snapshot / "snapshots/cmu-engineering-publications.parquet.manifest.json"
@@ -152,9 +163,9 @@ def main() -> int:
         manifest_data = json.loads(manifest.read_text(encoding="utf-8"))
         if manifest_data["snapshot_sha256"] != args.snapshot_sha256:
             raise ValueError("Snapshot manifest differs from the requested SHA-256")
-        baseline_path = snapshot / "status/last-successful-upload.json"
+        baseline_path = receipt_checkout / "status/last-successful-upload.json"
         if not baseline_path.is_file():
-            baseline_path = snapshot / "status/last-upload.json"
+            baseline_path = receipt_checkout / "status/last-upload.json"
         baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
         if (
             baseline.get("status") != "success"

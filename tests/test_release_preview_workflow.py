@@ -15,6 +15,7 @@ SCRIPT = ROOT / "scripts/preview_atomic_release.py"
 PARENT = "b" * 40
 PRODUCER = "c" * 40
 SNAPSHOT = "d" * 40
+STATUS = "e" * 40
 RELEASE_PATHS = frozenset(
     {
         "README.md",
@@ -45,25 +46,28 @@ def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
     preview = _load_script()
     producer = tmp_path / "producer"
     snapshot = tmp_path / "snapshot"
+    receipt_checkout = tmp_path / "receipt"
     output = tmp_path / "output"
     producer.mkdir()
     (snapshot / "snapshots").mkdir(parents=True)
-    (snapshot / "status").mkdir()
+    (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
     raw.write_bytes(b"raw-snapshot")
     raw_sha = preview._sha256(raw)
     (
         snapshot / "snapshots/cmu-engineering-publications.parquet.manifest.json"
     ).write_text(json.dumps({"snapshot_sha256": raw_sha}), encoding="utf-8")
-    (snapshot / "status/last-upload.json").write_text(
+    (receipt_checkout / "status/last-upload.json").write_text(
         json.dumps({"status": "success", "artifact_commit": PARENT}), encoding="utf-8"
     )
     args = SimpleNamespace(
         producer_dir=producer,
         snapshot_dir=snapshot,
+        receipt_dir=receipt_checkout,
         output_dir=output,
         producer_commit=PRODUCER,
         snapshot_commit=SNAPSHOT,
+        status_commit=STATUS,
         snapshot_sha256=raw_sha,
         prior_revision=PARENT,
         region_comparison_revision=PARENT,
@@ -73,7 +77,9 @@ def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
     monkeypatch.setattr(
         preview,
         "_git_head",
-        lambda path: PRODUCER if path == producer else SNAPSHOT,
+        lambda path: (
+            PRODUCER if path == producer else SNAPSHOT if path == snapshot else STATUS
+        ),
     )
     monkeypatch.setattr(preview, "_require_clean_tracked_files", lambda path: None)
 
@@ -158,6 +164,7 @@ def test_no_write_preview_passes_only_at_pinned_seven_file_boundary(
     assert receipt["hub_writes_completed"] == 0
     assert receipt["hub_head_before"] == receipt["hub_head_after"] == PARENT
     assert set(receipt["stage_files"]) == RELEASE_PATHS
+    assert receipt["status_commit"] == STATUS
     assert receipt["local_atomic_intent"]["prewrite_gate"]["status"] == "pass"
 
 
@@ -178,6 +185,10 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "permissions:\n  contents: read" in workflow
     assert "id-token: write" not in workflow
     assert "persist-credentials: false" in workflow
+    assert "--status-dir receipt/status" in workflow
+    assert "--current-receipt receipt/status/last-upload.json" in workflow
+    assert "--receipt-dir receipt" in workflow
+    assert '--status-commit "$STATUS_COMMIT"' in workflow
     assert 'HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"' in workflow
     assert "central-publication-upload-v1" in workflow
     assert "central-publication-upload-v1" in upload
