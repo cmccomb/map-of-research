@@ -11616,6 +11616,54 @@
       "reason": "CGCRI archives the exact 2003 Interceram article by A. K. Chakraborty/S. Das; Sukhen Das’s named ORCID/Scopus work matches its title, journal and year, excluding CMU chemist Subha R. Das.",
       "evidence_url": "https://cgcri.csircentral.net/1255/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:IUKN3-7HHlwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact Springer proceedings chapter has a 2022 FMFP conference program entry at IIT Roorkee naming Sudip Das with the captured coauthors; Springer published the 797-810 chapter in 2024, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-981-99-5752-1_65",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:Aul-kAQHnToC",
+      "reason_code": "false_profile_attribution",
+      "reason": "IEEE’s exact 2021 DOI deposit places M. Kumar and S. Das at IIT ISM Electrical Engineering; Sukanta Das’s named ORCID work matches its title and DOI and his IIT ISM CV lists it, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/ICEPES52894.2021.9699634",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:u-coK7KVo8oC",
+      "reason_code": "false_profile_attribution",
+      "reason": "IEEE’s exact 2021 DOI deposit places M. Kumar and S. Das at IIT ISM Electrical Engineering; Sukanta Das’s named ORCID work matches its title and DOI and his IIT ISM CV lists it, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/ComPE53109.2021.9751877",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:CMvovTBb2okC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2020 bioRxiv DOI deposit has the exact Scholar title and complete byline naming Soumita Das; the later Hypertension publisher PDF confirms her name on the 2021 journal article, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.crossref.org/works/10.1101/2020.05.12.092254",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:KWzIFqRkAKkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2018 MedCrave article spells out veterinary anatomist Sukanta Das with B. S. Dhote and Snehangsu Sinha for the exact title and DOI, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://medcraveonline.com/IJAWB/IJAWB-03-00097.php",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:xyvS_IvSCKsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2020 International Journal of Anatomy and Research PDF spells out Sarbani Das with Mithu Paul and Tridib Kumar Sett for the exact title, DOI and pages, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.ijmhr.org/ijar.8.2/IJAR.2020.139.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
