@@ -74,6 +74,7 @@ def _work_identity(
     row: Any,
     *,
     curated_title_year_dois: Mapping[tuple[str, int], set[str]] | None = None,
+    curated_title_year_native_ids: Mapping[tuple[str, int], set[str]] | None = None,
     context: ReviewedContext | None = None,
 ) -> tuple[str, str, str]:
     if context is not None and context.publication_type == "patent":
@@ -82,6 +83,9 @@ def _work_identity(
             "patent_document",
             "",
         )
+    native_id = _clean_text(getattr(row, "source_native_id", ""))
+    if native_id and not _doi(getattr(row, "source_doi", "")):
+        return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
     doi = _doi(
         getattr(row, "source_doi", ""),
         row.source_url,
@@ -96,12 +100,22 @@ def _work_identity(
         candidate_dois = (curated_title_year_dois or {}).get(
             (normalized_title, year), set()
         )
-        if len(candidate_dois) == 1:
+        candidate_native_ids = (curated_title_year_native_ids or {}).get(
+            (normalized_title, year), set()
+        )
+        if len(candidate_dois) == 1 and not candidate_native_ids:
             curated_doi = next(iter(candidate_dois))
             return (
                 _hash_id("work", f"doi:{curated_doi}"),
                 "curated_title_year",
                 curated_doi,
+            )
+        if not candidate_dois and len(candidate_native_ids) == 1:
+            curated_native_id = next(iter(candidate_native_ids))
+            return (
+                _hash_id("work", f"native:{curated_native_id}"),
+                "curated_native_title_year",
+                "",
             )
         value = f"title-year:{normalized_title}\0{year}"
         return _hash_id("work", value), "normalized_title_year", ""
@@ -187,6 +201,7 @@ def build_dataset_tables(
         profile_publications["source_type"] = "scholar"
     for column, default in (
         ("source_doi", ""),
+        ("source_native_id", ""),
         ("source_verified_at", ""),
         ("source_verification_urls", []),
         ("external_coauthors", []),
@@ -196,6 +211,7 @@ def build_dataset_tables(
                 default for _ in range(len(profile_publications))
             ]
     curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
+    curated_title_year_native_ids: dict[tuple[str, int], set[str]] = {}
     for row in profile_publications.itertuples(index=False):
         if row.source_type != "curated_verified":
             continue
@@ -204,6 +220,11 @@ def build_dataset_tables(
         year = _year(row.year)
         if doi and title and year is not None:
             curated_title_year_dois.setdefault((title, year), set()).add(doi)
+        native_id = _clean_text(row.source_native_id)
+        if native_id and title and year is not None:
+            curated_title_year_native_ids.setdefault((title, year), set()).add(
+                native_id
+            )
     observation_ids: list[str] = []
     work_ids: list[str] = []
     match_methods: list[str] = []
@@ -248,7 +269,10 @@ def build_dataset_tables(
             )
         else:
             work_id, method, doi = _work_identity(
-                row, curated_title_year_dois=curated_title_year_dois, context=context
+                row,
+                curated_title_year_dois=curated_title_year_dois,
+                curated_title_year_native_ids=curated_title_year_native_ids,
+                context=context,
             )
         work_ids.append(work_id)
         match_methods.append(method)
@@ -564,6 +588,13 @@ def build_dataset_tables(
                 ),
                 "source_types": sorted(
                     {str(record.source_type) for record in canonical_records}
+                ),
+                "source_native_ids": sorted(
+                    {
+                        str(record.source_native_id)
+                        for record in canonical_records
+                        if record.source_native_id
+                    }
                 ),
                 "source_verified_at": max(
                     (str(record.source_verified_at) for record in canonical_records),

@@ -36,6 +36,7 @@ def _entry(**changes: object) -> dict[str, object]:
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     assert len(exclusions) >= 990
+    assert sum(key[0] == "ILambBMAAAAJ" for key in exclusions) == 43
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -684,7 +685,7 @@ def test_walkington_corrupted_scholar_row_uses_verified_ams_record(tmp_path) -> 
     doi = "10.1090/qam/1598"
     person_id = "person-noeljwalkington-c55e6e3b"
     source = json.loads(Path("data/curated/works.json").read_text())
-    verified = [work for work in source["works"] if work["doi"] == doi]
+    verified = [work for work in source["works"] if work.get("doi") == doi]
     assert len(verified) == 1
     curated_path = tmp_path / "works.json"
     curated_path.write_text(

@@ -50,7 +50,7 @@ the validated registry; they are not a second identity or collection key.
 ## `profile_publications`
 
 One row per publication observation on one Scholar profile or an explicitly
-marked verified DOI record. This is the lossless analytical source. It retains
+marked verified record with a DOI or source-native ID. This is the lossless analytical source. It retains
 the original profile-publication ID,
 parsed bibliographic fields, citation count at collection time, complete
 normalized source record as JSON, fetched timestamp, memberships, work match
@@ -76,8 +76,9 @@ the context evidence without changing
 ## `works`
 
 One canonical work derived conservatively from the observations. DOI is used
-when present; otherwise an exact normalized title and year are used. Undated
-records without a DOI remain profile-specific to avoid unsafe merges.
+when present; a verified DOI-free curated record uses its source-native ID.
+Otherwise an exact normalized title and year are used. Undated records without
+either identifier remain profile-specific to avoid unsafe merges.
 Reviewed patent observations use the exact published patent document number as
 their work key. This keeps separately published patents and applications
 distinct even when they share a title and year.
@@ -87,9 +88,9 @@ venue, citation text, and citation count. Verified DOI fields fill gaps in the
 Scholar observation. Both observations and their variants remain available.
 
 The table retains field variants, contributing observation IDs, profile IDs,
-faculty relationships, source URLs, first and last observation timestamps,
-match method, observation count, embedding, eligibility decision, exclusion
-reasons, included `school_ids`, both shared full-corpus map layouts, and the
+faculty relationships, source URLs, source-native IDs, first and last
+observation timestamps, match method, observation count, embedding, eligibility
+decision, exclusion reasons, included `school_ids`, both shared full-corpus map layouts, and the
 assigned topic hierarchy.
 For a work with at least one eligible observation, these fields come only from
 eligible observations. An entirely excluded work remains with its source

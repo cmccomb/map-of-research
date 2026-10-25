@@ -24,7 +24,12 @@ from .corrections import (
     apply_corrections,
     load_corrections,
 )
-from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
+from .coverage import (
+    DEFAULT_BASELINE_PATH,
+    DEFAULT_CURATED_WORKS_PATH,
+    DEFAULT_PRIOR_ID_CROSSWALK_PATH,
+    validate_coverage,
+)
 from .dataset import build_dataset_tables
 from .doi_aliases import (
     DEFAULT_DOI_ALIASES_PATH,
@@ -131,6 +136,7 @@ STRING_LIST_COLUMNS = frozenset(
         "scholar_ids",
         "source_urls",
         "source_types",
+        "source_native_ids",
         "source_verification_urls",
         "external_coauthor_ids",
         "title_variants",
@@ -793,6 +799,9 @@ def build_map_artifact(
                 "source_types": list(
                     _as_list(getattr(row, "source_types", ["scholar"]))
                 ),
+                "source_native_ids": list(
+                    _as_list(getattr(row, "source_native_ids", []))
+                ),
                 "source_verified_at": str(getattr(row, "source_verified_at", "")),
                 "source_verification_urls": list(
                     _as_list(getattr(row, "source_verification_urls", []))
@@ -1329,6 +1338,14 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--scholar-cache-dir", type=Path)
     parser.add_argument("--scholar-captures-dir", type=Path)
     parser.add_argument("--scholar-baseline", type=Path, default=DEFAULT_BASELINE_PATH)
+    parser.add_argument(
+        "--scholar-curated-works", type=Path, default=DEFAULT_CURATED_WORKS_PATH
+    )
+    parser.add_argument(
+        "--scholar-prior-id-crosswalk",
+        type=Path,
+        default=DEFAULT_PRIOR_ID_CROSSWALK_PATH,
+    )
     return parser.parse_args(argv)
 
 
@@ -1376,6 +1393,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             cache_dir=args.scholar_cache_dir or snapshot_root / "data/authors",
             captures_dir=args.scholar_captures_dir or snapshot_root / "data/captures",
             baseline_path=args.scholar_baseline,
+            prior_id_crosswalk_path=args.scholar_prior_id_crosswalk,
+            curated_works_path=args.scholar_curated_works,
+            exclusions_path=args.reviewed_exclusions,
             snapshot_path=args.snapshot,
         )
         status["scholar_coverage"] = scholar_coverage

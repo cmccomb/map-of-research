@@ -1,19 +1,12 @@
-# Verified DOI work records
+# Verified work records
 
-`works.json` holds 21 faculty observations for 16 verified DOI works: two
-Prasad Tetali–Paul Erdős papers, six Mathematics observations across three
-Math–MSE papers, and four observations across three David R. Owen papers (one
-shared with Irene Fonseca). Six further observations across five papers link
-Noel Walkington to Engineering, Ian Tice to Giovanni Leoni, and David
-Kinderlehrer and Robert Suter to Engineering collaborators. One additional
-record supplements Clive Newstead's Scholar profile with his 2018 CMU doctoral
-thesis, using the DOI of its 2021 arXiv deposit. Another records Walkington's
-chapter in place of an incorrectly attributed whole-book Scholar row. A third
-supplies correct metadata for a Walkington journal paper whose Scholar row
-has malformed author and venue fields. Each row names its CMU faculty person,
-exact DOI, publisher or CMU verification URLs, verification date, and any
-external coauthor IDs. Paul Erdős is an external coauthor, not a CMU faculty
-registry member.
+`works.json` holds 26 faculty observations for 17 verified DOI works and four
+source-identified conference records. These include the Tetali–Erdős papers,
+Mathematics–Engineering collaborations, and five Donahue items recovered from
+independent sources. Each row names a CMU faculty person, its DOI or stable
+source-native identifier, verification URLs and date, and any external
+coauthor IDs. Paul Erdős is an external coauthor, not a CMU faculty registry
+member.
 
 The snapshot builder validates this file, records its checksum in the manifest,
 and retains `curated_verified` separately from `scholar` observations. Dataset
@@ -21,12 +14,23 @@ normalization merges observations with the same DOI. It also merges a later
 Scholar observation lacking a DOI only when its normalized title and year
 match exactly one curated DOI. A conflicting DOI remains a separate work.
 
+For a verified work with no DOI, use a stable `source_native_id` in place of
+`doi`, such as an abstract or meeting-program identifier. The ID is unique per
+source work, shared across faculty observations of that work, and requires an
+HTTPS source URL included in `source_verification_urls`. The snapshot stores
+this identifier in `source_native_id`; the normalized work and map artifact
+expose `source_native_ids`. A later DOI-free Scholar observation may match a
+single curated native ID by exact normalized title and year. A later verified
+DOI requires updating the curated row to its DOI before DOI reconciliation.
+Curated records have no current Scholar ID or Scholar fetch time.
+
 `scholar-doi-aliases.json` records exact, reviewed links between Scholar rows
 and a published DOI. It distinguishes a `preprint_of` row from a
 `version_of_record` row when Scholar lists both. The publisher checks each row
 ID, observed title and year, source DOI, and exclusion state before applying
 the alias. It preserves both raw Scholar observations and joins them to one
-published work. See the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
+published work, including a matching curated DOI observation when present. See
+the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
 the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
 and [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md)
 for the exact source evidence.

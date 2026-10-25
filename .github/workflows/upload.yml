@@ -75,6 +75,9 @@ jobs:
             --memberships source/registry/memberships.csv \
             --departments source/registry/departments.csv \
             --baseline source/registry/legacy-scholar-cache-baseline.json \
+            --prior-id-crosswalk source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
+            --curated-works source/data/curated/works.json \
+            --exclusions source/data/curated/scholar-exclusions.json \
             --cache-dir snapshot/data/authors \
             --captures-dir snapshot/data/captures \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet
@@ -96,6 +99,8 @@ jobs:
             --scholar-cache-dir snapshot/data/authors \
             --scholar-captures-dir snapshot/data/captures \
             --scholar-baseline source/registry/legacy-scholar-cache-baseline.json \
+            --scholar-prior-id-crosswalk source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
+            --scholar-curated-works source/data/curated/works.json \
             --reviewed-exclusions source/data/curated/scholar-exclusions.json \
             --reviewed-metadata-corrections source/data/curated/scholar-metadata-corrections.json \
             --reviewed-doi-aliases source/data/curated/scholar-doi-aliases.json \
