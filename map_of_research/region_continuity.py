@@ -245,6 +245,36 @@ def _verified_gain(row: Mapping[str, Any], work: Mapping[str, Any]) -> bool:
     )
 
 
+def _verification_evidence(
+    row: Mapping[str, Any], work: Mapping[str, Any]
+) -> set[tuple[str, str]]:
+    """Identify publication evidence without display metadata or list order."""
+
+    evidence: set[tuple[str, str]] = set()
+    for value in (row.get("doi"), row.get("source_doi"), work.get("doi")):
+        doi = str(value or "").strip().casefold()
+        if DOI_PATTERN.fullmatch(doi):
+            evidence.add(("doi", doi))
+    for value in (
+        row.get("source_native_id"),
+        *(_value(work.get("source_native_ids")) or []),
+    ):
+        native_id = str(value or "").strip().casefold()
+        if re.fullmatch(r"[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._:/-]*", native_id):
+            evidence.add(("native_id", native_id))
+    for urls in (
+        row.get("source_verification_urls"),
+        work.get("source_verification_urls"),
+    ):
+        for value in _value(urls) or []:
+            url = str(value).strip()
+            if _independent_evidence([url]):
+                evidence.add(("verification_url", url))
+    if "curated_verified" in (_value(work.get("source_types")) or []):
+        evidence.add(("source_type", "curated_verified"))
+    return evidence
+
+
 def _display(identity: ObservationKey) -> str:
     return "/".join(identity)
 
@@ -343,16 +373,14 @@ def reconcile_region_decisions(
                 "map_region_outlier"
             )
         )
-        and (
-            _fingerprint(current_rows[identity])
-            != _fingerprint(previous_rows[identity])
-            or _fingerprint_fields(
+        and bool(
+            _verification_evidence(
+                current_rows[identity],
                 final_works[str(current_rows[identity]["work_id"])],
-                WORK_FINGERPRINT_FIELDS,
             )
-            != _fingerprint_fields(
+            - _verification_evidence(
+                previous_rows[identity],
                 previous_works[str(previous_rows[identity]["work_id"])],
-                WORK_FINGERPRINT_FIELDS,
             )
         )
         and _verified_gain(
