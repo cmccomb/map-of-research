@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import hashlib
 import html
 import json
@@ -46,6 +47,12 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert manifest["sources"]["excluded_misattributed_orcid"] == (
         "0000-0002-1825-0097"
     )
+    assert manifest["sources"]["cambridge_book_crossref"] == (
+        "https://api.crossref.org/works/10.1017/CBO9781139032636"
+    )
+    assert manifest["sources"]["statman_dowek_arxiv"] == (
+        "https://arxiv.org/abs/2309.03602"
+    )
     assert manifest["counts"] == {
         "cmu_profile_selected": 12,
         "cmu_recent_selected": 4,
@@ -53,9 +60,12 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "kilthub_attributed_reports_or_manuscripts": 17,
         "kilthub_other_author_theses": 2,
         "publisher_confirmed_conference_papers": 1,
-        "attributed_source_observations_not_works": 34,
+        "publisher_confirmed_monographs": 1,
+        "historical_report_observations": 1,
+        "arxiv_preprint_observations": 1,
+        "attributed_source_observations_not_works": 37,
     }
-    assert len(manifest["files"]) == 29
+    assert len(manifest["files"]) == 32
     for filename, expected_hash in manifest["files"].items():
         assert hashlib.sha256((source_dir / filename).read_bytes()).hexdigest() == (
             expected_hash
@@ -147,14 +157,16 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
             assert row["reviewed_genre"] == "other_author_thesis"
             assert row["pdf_sha256"] == ""
 
-    observations = _rows(source_dir / "source-observations-34.csv")
-    assert len(observations) == 34
-    assert len({row["source_row_id"] for row in observations}) == 34
+    observations = _rows(source_dir / "source-observations-37.csv")
+    assert len(observations) == 37
+    assert len({row["source_row_id"] for row in observations}) == 37
     assert Counter(row["source"] for row in observations) == {
         "cmu_profile_select": 12,
         "cmu_recent_selected": 4,
         "cmu_kilthub_repository": 17,
-        "publisher_crossref_verified": 1,
+        "publisher_crossref_verified": 2,
+        "coauthor_owned_bibliography": 1,
+        "arxiv_primary_record": 1,
     }
     assert {row["source_row_id"] for row in observations[:16]} == {
         f"CMU-{i:02d}" for i in range(1, 17)
@@ -196,6 +208,60 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
     assert orcid["path"] == "/0000-0002-1825-0097/person"
     assert orcid["name"]["given-names"]["value"] == "Josiah"
     assert orcid["name"]["family-name"]["value"] == "Carberry"
+    book, report, preprint = observations[34:]
+    assert (book["source_row_id"], book["source_year"], book["reviewed_genre"]) == (
+        "CAMBRIDGE-BOOK-2013",
+        "2013",
+        "monograph",
+    )
+    assert book["source_url"] == manifest["sources"]["cambridge_book_publisher"]
+    assert (
+        book["primary_comparison_url"] == manifest["sources"]["cambridge_book_crossref"]
+    )
+    registered_book = json.loads(
+        (source_dir / "cambridge-book-crossref.json").read_text()
+    )["message"]
+    assert registered_book["DOI"].casefold() == ("10.1017/CBO9781139032636".casefold())
+    assert registered_book["title"] == [book["source_title"]]
+    assert registered_book["type"] == "monograph"
+    assert [(a["given"], a["family"]) for a in registered_book["author"]] == [
+        ("Henk", "Barendregt"),
+        ("Wil", "Dekkers"),
+        ("Richard", "Statman"),
+    ]
+    assert registered_book["published-print"]["date-parts"] == [[2013, 6, 20]]
+    assert registered_book["published-online"]["date-parts"] == [[2013, 8, 5]]
+
+    assert report["source_row_id"] == "CMU-REPORT-1992-152"
+    assert report["source_year"] == "1992"
+    assert report["reviewed_genre"] == "cmu_scs_technical_report"
+    assert report["source_url"] == manifest["sources"]["dowek_coauthor_bibliography"]
+    dowek_page = gzip.decompress(
+        (source_dir / "dowek-papers.html.gz").read_bytes()
+    ).decode("utf-8")
+    assert "On Statman's finite completeness theorem" in " ".join(dowek_page.split())
+    assert "CMU-CS-92-152" in dowek_page
+    assert "R. Statman, G. Dowek" in dowek_page
+    assert preprint["source_row_id"] == "ARXIV-2309.03602"
+    assert preprint["source_url"] == manifest["sources"]["statman_dowek_arxiv"]
+    assert preprint["source_year"] == "2023"
+    assert preprint["reviewed_genre"] == ("arxiv_preprint_possible_1992_report_version")
+    arxiv_page = gzip.decompress(
+        (source_dir / "arxiv-2309.03602.html.gz").read_bytes()
+    ).decode("utf-8")
+    for metadata in (
+        'name="citation_title" content="On Statman&#39;s Finite Completeness Theorem"',
+        'name="citation_author" content="Statman, Richard"',
+        'name="citation_author" content="Dowek, Gilles"',
+        'name="citation_date" content="2023/09/07"',
+        'name="citation_arxiv_id" content="2309.03602"',
+    ):
+        assert metadata in arxiv_page
+    assert "Statman (CMU)" in arxiv_page
+    assert report["source_title"] == preprint["source_title"]
+    assert report["source_author"] == preprint["source_author"]
+    assert "possible" in report["review_note"].lower()
+    assert "possible" in preprint["review_note"].lower()
     assert {row["graph_eligible"] for row in observations} == {"false"}
     assert {row["hold_reason"] for row in observations} == {
         "no_verified_scholar_or_complete_author_bibliography"
@@ -208,6 +274,9 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "kilthub_attributed": 17,
         "excluded_other_author_theses": 2,
         "publisher_confirmed_conference_papers": 1,
+        "publisher_confirmed_monographs": 1,
+        "historical_report_observations": 1,
+        "arxiv_preprint_observations": 1,
         "held_source_observations_not_works": len(observations),
     }
 

@@ -21,7 +21,11 @@
     "springer_lfcs_publisher": "https://link.springer.com/chapter/10.1007/978-3-030-93100-1_20",
     "springer_lfcs_crossref": "https://api.crossref.org/works/10.1007/978-3-030-93100-1_20",
     "excluded_misattributed_orcid": "0000-0002-1825-0097",
-    "excluded_orcid_person_api": "https://pub.orcid.org/v3.0/0000-0002-1825-0097/person"
+    "excluded_orcid_person_api": "https://pub.orcid.org/v3.0/0000-0002-1825-0097/person",
+    "cambridge_book_publisher": "https://www.cambridge.org/core/books/lambda-calculus-with-types/65DC18AC262498B0F93A688CBE748048",
+    "cambridge_book_crossref": "https://api.crossref.org/works/10.1017/CBO9781139032636",
+    "dowek_coauthor_bibliography": "https://lsv.ens-paris-saclay.fr/~dowek/papers.html",
+    "statman_dowek_arxiv": "https://arxiv.org/abs/2309.03602"
   },
   "counts": {
     "cmu_profile_selected": 12,
@@ -29,14 +33,20 @@
     "kilthub_search_hits": 19,
     "kilthub_attributed_reports_or_manuscripts": 17,
     "kilthub_other_author_theses": 2,
-    "attributed_source_observations_not_works": 34,
-    "publisher_confirmed_conference_papers": 1
+    "attributed_source_observations_not_works": 37,
+    "publisher_confirmed_conference_papers": 1,
+    "publisher_confirmed_monographs": 1,
+    "historical_report_observations": 1,
+    "arxiv_preprint_observations": 1
   },
   "files": {
+    "arxiv-2309.03602.html.gz": "762ec4becbf848af472a83d68cf9b8af7193c8f24deab605b11a3b66e36edd99",
+    "cambridge-book-crossref.json": "8af7777af3acc2a7b5081a9af5341d7c36fe1dcdb0e30200d7823bdc1dc8980f",
     "cmu-profile.html": "3d54e732c22d69e6ba780e32be5f421430cc0e293eeded64229b809b9eeefc88",
     "cmu-sample-publications.pdf": "727f50a85a0af3397dc6395566a0e8d719101c27a30865e4667c2df0ec67af8a",
     "cmu-sample-publications.txt": "7b46a143e5b3f7aaf38543bfcfe24687baf9bb1f5f3ba08b3ce066ba38f91ae6",
     "cmu-selected-16.csv": "0e5ae3a4c353dafb6ca03601ee48476d85b4959c46d476eac1644e260183b4f1",
+    "dowek-papers.html.gz": "a118abfaf876dca380ef5413f2df89b0ca41fa34cbc977d68ad7e59af0ddf9b6",
     "kilthub-article-6476546.json": "fa8eedb9f1b4a5309d8c277e34687773b17aa9d8ea7ae018e0d418a6eaa82510",
     "kilthub-article-6476786.json": "9eab861a25b4d684e46dad8741f0e26e44d10767fd61c75f052dbe0b923199b6",
     "kilthub-article-6476789.json": "27d598a4e349ed350497f1e5413c71c60151f1ead78d53349229b6c80eea49db",
@@ -60,7 +70,7 @@
     "kilthub-search-page-1.json": "efce2bca428002a059c82ca404fe6c7301a316b2ea6fc400de427f8ca2257d5d",
     "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "publisher-linked-false-orcid-person.json": "8576661691fe95bf246ec38882912873f2fc0f4b2cac04266b577356ed48c1ae",
-    "source-observations-34.csv": "72d339b5d51ab724eb5554e378f583331ef02cd0566f485eb1c8dfabe21cf7d3",
+    "source-observations-37.csv": "82348edeff37930512a38047d37f35e29ad806ec1a218c9c3a47f6e597590d10",
     "springer-lfcs-2022-crossref.json": "714873fa8b1a5f3702c2c726edccc60e8bf254e43f9286bdff96448500ef1daa"
   }
 }

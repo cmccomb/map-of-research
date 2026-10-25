@@ -13,7 +13,10 @@ def test_statman_source_review_is_complete_for_its_bounded_sources():
         "kilthub_attributed": 17,
         "excluded_other_author_theses": 2,
         "publisher_confirmed_conference_papers": 1,
-        "held_source_observations_not_works": 34,
+        "publisher_confirmed_monographs": 1,
+        "historical_report_observations": 1,
+        "arxiv_preprint_observations": 1,
+        "held_source_observations_not_works": 37,
     }
 
 
