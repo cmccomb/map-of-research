@@ -24,9 +24,11 @@ observation's research/preprint, article, survey, report, thesis, or note
 classification. It reconciles **18 exact registered DOIs** (16 research papers
 and two book chapters) against the original Crossref or DataCite responses in
 [`doi-registry/`](doi-registry/) and the compact
-[DOI evidence index](exact-doi-evidence.json). Six rows retain specific
-publication identity or date holds. The
-[review decisions](doi-genre-review.md) explain them and separate actual
+[DOI evidence index](exact-doi-evidence.json). The original ledger preserves six
+review questions. The [primary resolution](resolution/reviewed-6.json) now gives
+source-backed dispositions for all six and pins their arXiv, Springer, EMS, or
+author PDF evidence. The [initial review](doi-genre-review.md) explains the
+questions and separates actual
 publication bylines from “joint work with” notes in Oberwolfach summaries.
 
 **Release hold:** No exact Google Scholar account is verified. This capture is
@@ -34,7 +36,8 @@ not Scholar data and does not establish complete lifetime output beyond the
 visible website and June CV. The ORCID name candidate has no public work or
 affiliation evidence and is not assigned to Neumayer. Proceedings, surveys,
 the thesis, and the expository note have now been typed in the review ledger,
-but six row-level holds prevent whole-union ingestion. The author page does not
+but the unverified 2024 publisher-placement claim and whole-career scope prevent
+whole-person release. The author page does not
 link a DOI; every DOI in the ledger was separately verified from a registration
 agency. No row is inserted into a source snapshot,
 person registry, Hugging Face dataset, or public map.
@@ -43,8 +46,8 @@ person registry, Hugging Face dataset, or public map.
 
 [`load_staged.py`](load_staged.py) reads the pinned captures, crosswalk, and
 genre/DOI review into **31 source-only records**. It verifies source checksums,
-identities, CV coverage, the 18 registered DOI responses, and the six row-level
-holds before returning records. Each record retains the raw source observation,
+identities, CV coverage, the 18 registered DOI responses, and all six primary
+dispositions before returning records. Each record retains the raw source observation,
 CV transcription when present, and review ledger row. The loader marks every
 record release-held and graph-ineligible; it never builds a snapshot or writes a
 dataset. Report summaries, surveys, thesis, and lecture notes have explicit
@@ -56,7 +59,11 @@ The CV-only Oberwolfach item is `source_kind=researcher_cv`, with the CV and
 published EMS report as evidence. It does not cite the author webpage. The
 site-only Yamabe lecture notes have `year=null`; January 2018 is a lecture
 date, not a claimed publication date. The 2018 MATRIX event label and 2020
-chapter DOI are both retained while that row's display year stays unresolved.
+chapter DOI are both retained, with 2020 as the chapter publication year.
+The three Oberwolfach contributions are solo bylined and use their report years
+and contribution pages without attaching the whole-report DOI. Row 8 uses its
+2022 arXiv submission year as a preprint and retains the claimed 2024 CMSA
+placement as unverified metadata. Only that claim remains a row-level hold.
 
 **Schema hold:** The main snapshot accepts only Scholar and curated records;
 the draft author-site path models an author webpage and requires a year on each

@@ -38,6 +38,7 @@ OBERWOLFACH_REPORT_URLS = {
     26: "https://ems.press/content/serial-article-files/46813",
     31: "https://ems.press/content/serial-article-files/47471",
 }
+RESOLUTION_INDICES = {8, 24, 26, 27, 30, 31}
 
 
 def _read_pinned(path: Path, name: str, digest: str) -> bytes:
@@ -124,6 +125,30 @@ def load_staged_neumayer_rows(path: Path) -> list[dict[str, Any]]:
             manifest["exact_doi_evidence_sha256"],
         )
     )
+    resolution = json.loads((path / "resolution/reviewed-6.json").read_text())
+    if (
+        resolution.get("schema_version") != 1
+        or resolution.get("person_id") != PERSON_ID
+        or resolution.get("scope") != "six_resolved_source_dispositions_not_release"
+        or {row["index"] for row in resolution.get("records", [])} != RESOLUTION_INDICES
+    ):
+        raise ValueError("Neumayer primary-source dispositions changed")
+    resolved_by_index = {row["index"]: row for row in resolution["records"]}
+    for resolved in resolved_by_index.values():
+        _url(resolved["evidence_url"])
+        _read_pinned(
+            path / "resolution", resolved["evidence_file"], resolved["evidence_sha256"]
+        )
+        if any(
+            resolved[field] is not False
+            for field in (
+                "scholar_observation",
+                "release_eligible",
+                "map_eligible",
+                "collaboration_eligible",
+            )
+        ):
+            raise ValueError("Neumayer source disposition became release eligible")
     if (
         audit.get("person_id") != PERSON_ID
         or audit.get("scholar_id") is not None
@@ -212,7 +237,27 @@ def load_staged_neumayer_rows(path: Path) -> list[dict[str, Any]]:
             verification_urls.append(_url(review["doi_registry_url"]))
         if number in OBERWOLFACH_REPORT_URLS:
             verification_urls.append(_url(OBERWOLFACH_REPORT_URLS[number]))
-        year, year_basis = _year(review)
+        resolved = resolved_by_index.get(number)
+        if resolved:
+            if (
+                resolved["observation_id"] != observation_id
+                or resolved["authors"] != review["authors_in_primary_record"]
+                or resolved["reviewed_genre"] not in EXPECTED_GENRES
+            ):
+                raise ValueError(f"Neumayer resolved source identity changed: {number}")
+            verification_urls.append(resolved["evidence_url"])
+            genre = resolved["reviewed_genre"]
+            year, year_basis = resolved["year"], resolved["year_basis"]
+            row_review_state = "source_only_primary_resolved"
+            row_hold = resolved["unverified_claim"]
+        else:
+            year, year_basis = _year(review)
+            row_review_state = review["ingestion_decision"]
+            row_hold = (
+                review["version_identity_review"]
+                if row_review_state.startswith("hold_")
+                else None
+            )
         digest = hashlib.sha256(observation_id.encode("utf-8")).hexdigest()[:20]
         rows.append(
             {
@@ -231,6 +276,10 @@ def load_staged_neumayer_rows(path: Path) -> list[dict[str, Any]]:
                 "authors": review["authors_in_primary_record"],
                 "year": year,
                 "year_basis": year_basis,
+                "event_or_lecture_year": resolved["event_or_lecture_year"]
+                if resolved
+                else None,
+                "pages": resolved["pages"] if resolved else None,
                 "doi": doi or None,
                 "reviewed_genre": genre,
                 "publication_type": genre,
@@ -241,14 +290,13 @@ def load_staged_neumayer_rows(path: Path) -> list[dict[str, Any]]:
                 "citation_count": None,
                 "citation_count_known": False,
                 "release_state": "source_only_release_held",
-                "row_review_state": review["ingestion_decision"],
-                "row_hold": review["version_identity_review"]
-                if review["ingestion_decision"].startswith("hold_")
-                else None,
+                "row_review_state": row_review_state,
+                "row_hold": row_hold,
                 "source_record": {
                     "author_site_observation_or_cv_only_record": observation,
                     "cv_crosswalk": relation,
                     "genre_doi_review": review,
+                    "primary_resolution": resolved,
                 },
             }
         )
@@ -256,7 +304,7 @@ def load_staged_neumayer_rows(path: Path) -> list[dict[str, Any]]:
         sum(row["source_kind"] == "researcher_owned_site" for row in rows) != 30
         or sum(row["source_kind"] == "researcher_cv" for row in rows) != 1
         or sum(row["doi"] is not None for row in rows) != 18
-        or sum(row["row_hold"] is not None for row in rows) != 6
+        or sum(row["row_hold"] is not None for row in rows) != 1
         or sum(
             row["source_record"]["author_site_observation_or_cv_only_record"].get(
                 "arxiv_correspondence"
