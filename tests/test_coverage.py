@@ -62,6 +62,7 @@ def _options(paths: tuple[Path, Path, Path, Path, Path, Path]) -> dict:
         "cache_dir": cache_dir,
         "captures_dir": capture_dir,
         "baseline_path": baseline,
+        "prior_id_crosswalk_path": people.parent.parent / "absent-crosswalk.json",
     }
 
 
@@ -149,6 +150,286 @@ def _baseline(paths: tuple, *, included: bool = True) -> None:
     atomic_write_json(paths[5], baseline)
 
 
+def _prior_id_review(paths: tuple, kind: str = "current_scholar") -> tuple[dict, Path]:
+    """Freeze one old ID and review its exact replacement in a new capture."""
+
+    _cache(paths, complete=True)
+    _baseline(paths)
+    baseline = json.loads(paths[5].read_text())
+    baseline["profiles"]["alphaAAAAJ"]["author_pub_ids"] = ["alphaAAAAJ:old"]
+    atomic_write_json(paths[5], baseline)
+    evidence_url = "https://example.org/verified-work"
+    target_id = "alphaAAAAJ:one"
+    target_title = "One"
+    target_year = "2025"
+    classification = "duplicate_rekeyed"
+    if kind == "curated_doi":
+        target_id = "10.1000/reviewed"
+        classification = "supporting_material"
+    elif kind == "curated_native":
+        target_id = "conference:reviewed"
+        classification = "historical_conference_abstract"
+    elif kind == "nonpublication":
+        kind = "current_scholar"
+        classification = "nonpublication_rekeyed"
+    curated_works = paths[0].parent.parent / "works.json"
+    exclusions = paths[0].parent.parent / "exclusions.json"
+    works = []
+    if kind.startswith("curated_"):
+        key = "doi" if kind == "curated_doi" else "source_native_id"
+        works.append(
+            {
+                "person_id": "person-alpha",
+                key: target_id,
+                "title": target_title,
+                "year": int(target_year),
+                "source_url": evidence_url,
+            }
+        )
+    atomic_write_json(curated_works, {"works": works})
+    exclusions_rows = []
+    if classification == "nonpublication_rekeyed":
+        exclusions_rows.append(
+            {
+                "scholar_id": "alphaAAAAJ",
+                "author_pub_id": target_id,
+                "reason_code": "nonpublication",
+                "evidence_url": evidence_url,
+            }
+        )
+    atomic_write_json(exclusions, {"exclusions": exclusions_rows})
+    crosswalk = paths[0].parent.parent / "crosswalk.json"
+    atomic_write_json(
+        crosswalk,
+        {
+            "schema_version": 1,
+            "scholar_id": "alphaAAAAJ",
+            "person_id": "person-alpha",
+            "frozen_snapshot_commit": baseline["frozen_snapshot_commit"],
+            "frozen_snapshot_sha256": baseline["frozen_snapshot_sha256"],
+            "prior_cache_sha256": baseline["profiles"]["alphaAAAAJ"]["cache_sha256"],
+            "replacement_cache_sha256": sha256_file(paths[3] / "alphaAAAAJ.json"),
+            "reviewed_at": "2026-10-25",
+            "entries": [
+                {
+                    "prior_author_pub_id": "alphaAAAAJ:old",
+                    "legacy_title": "Old title",
+                    "legacy_year": "2024",
+                    "legacy_row_sha256": "a" * 64,
+                    "classification": classification,
+                    "target_kind": kind,
+                    "target_id": target_id,
+                    "target_title": target_title,
+                    "target_year": target_year,
+                    "evidence_url": evidence_url,
+                    "review_note": "Reviewed historical record.",
+                }
+            ],
+        },
+    )
+    options = {
+        **_options(paths),
+        "prior_id_crosswalk_path": crosswalk,
+        "curated_works_path": curated_works,
+        "exclusions_path": exclusions,
+    }
+    return options, crosswalk
+
+
+@pytest.mark.parametrize(
+    "kind", ["current_scholar", "curated_doi", "curated_native", "nonpublication"]
+)
+def test_reviewed_prior_id_can_be_reconciled_to_exact_surviving_target(
+    tmp_path: Path, kind: str
+) -> None:
+    options, _ = _prior_id_review(_paths(tmp_path), kind)
+    assert validate_coverage(**options) == {
+        "legacy_profiles": 0,
+        "complete_profiles": 1,
+        "reconciled_prior_ids": 1,
+    }
+
+
+@pytest.mark.parametrize(
+    "field,value,error",
+    [
+        ("scholar_id", "otherAAAAJ", "does not match"),
+        ("person_id", "person-other", "does not match"),
+        ("frozen_snapshot_commit", "c" * 40, "does not match"),
+        ("frozen_snapshot_sha256", "d" * 64, "does not match"),
+        ("prior_cache_sha256", "e" * 64, "does not match"),
+        ("replacement_cache_sha256", "f" * 64, "does not match"),
+        ("reviewed_at", "yesterday", "does not match"),
+    ],
+)
+def test_prior_id_review_is_bound_to_frozen_and_replacement_sources(
+    tmp_path: Path, field: str, value: str, error: str
+) -> None:
+    options, crosswalk_path = _prior_id_review(_paths(tmp_path))
+    crosswalk = json.loads(crosswalk_path.read_text())
+    crosswalk[field] = value
+    atomic_write_json(crosswalk_path, crosswalk)
+    with pytest.raises(ValueError, match=error):
+        validate_coverage(**options)
+
+
+@pytest.mark.parametrize("mutation", ["omit", "extra", "duplicate"])
+def test_prior_id_review_rejects_missing_extra_or_duplicate_exceptions(
+    tmp_path: Path, mutation: str
+) -> None:
+    options, crosswalk_path = _prior_id_review(_paths(tmp_path))
+    crosswalk = json.loads(crosswalk_path.read_text())
+    if mutation == "omit":
+        crosswalk["entries"] = []
+    elif mutation == "extra":
+        extra = dict(crosswalk["entries"][0])
+        extra["prior_author_pub_id"] = "alphaAAAAJ:never-published"
+        crosswalk["entries"].append(extra)
+    else:
+        crosswalk["entries"].append(dict(crosswalk["entries"][0]))
+    atomic_write_json(crosswalk_path, crosswalk)
+    with pytest.raises(ValueError, match="omits or adds prior IDs"):
+        validate_coverage(**options)
+
+
+@pytest.mark.parametrize(
+    "field,value,error",
+    [
+        ("classification", "arbitrary", "entry is invalid"),
+        ("target_kind", "curated_native", "entry is invalid"),
+        ("target_id", "alphaAAAAJ:absent", "target is absent"),
+        ("target_title", "Other", "target is absent"),
+        ("target_year", "2024", "target is absent"),
+        ("evidence_url", "http://example.org/work", "entry is invalid"),
+        ("legacy_row_sha256", "bad", "entry is invalid"),
+    ],
+)
+def test_prior_id_review_rejects_unverified_resolution(
+    tmp_path: Path, field: str, value: str, error: str
+) -> None:
+    options, crosswalk_path = _prior_id_review(_paths(tmp_path))
+    crosswalk = json.loads(crosswalk_path.read_text())
+    crosswalk["entries"][0][field] = value
+    atomic_write_json(crosswalk_path, crosswalk)
+    with pytest.raises(ValueError, match=error):
+        validate_coverage(**options)
+
+
+def test_prior_id_review_rejects_missing_curated_or_excluded_target(
+    tmp_path: Path,
+) -> None:
+    options, _ = _prior_id_review(_paths(tmp_path), "curated_native")
+    atomic_write_json(options["curated_works_path"], {"works": []})
+    with pytest.raises(ValueError, match="curated work target is absent"):
+        validate_coverage(**options)
+    options, _ = _prior_id_review(_paths(tmp_path / "other"), "nonpublication")
+    atomic_write_json(options["exclusions_path"], {"exclusions": []})
+    with pytest.raises(ValueError, match="nonpublication exclusion is absent"):
+        validate_coverage(**options)
+
+
+def test_prior_id_review_rejects_malformed_crosswalk_and_target_catalogs(
+    tmp_path: Path,
+) -> None:
+    paths = _paths(tmp_path)
+    options, crosswalk_path = _prior_id_review(paths, "curated_native")
+    original = json.loads(crosswalk_path.read_text())
+    atomic_write_json(crosswalk_path, {"entries": original["entries"]})
+    with pytest.raises(ValueError, match="crosswalk is invalid"):
+        validate_coverage(**options)
+    original["entries"][0].pop("review_note")
+    atomic_write_json(crosswalk_path, original)
+    with pytest.raises(ValueError, match="invalid entry"):
+        validate_coverage(**options)
+    _prior_id_review(paths, "curated_native")
+    atomic_write_json(options["curated_works_path"], {"works": "invalid"})
+    with pytest.raises(ValueError, match="targets are invalid"):
+        validate_coverage(**options)
+
+
+@pytest.mark.parametrize("mutation", ["nonobject", "duplicate"])
+def test_prior_id_review_rejects_invalid_current_rows(
+    tmp_path: Path, mutation: str
+) -> None:
+    paths = _paths(tmp_path)
+    options, crosswalk_path = _prior_id_review(paths)
+    cache_path = paths[3] / "alphaAAAAJ.json"
+    cache = json.loads(cache_path.read_text())
+    cache["publications"].append(
+        "invalid" if mutation == "nonobject" else dict(cache["publications"][0])
+    )
+    atomic_write_json(cache_path, cache)
+    crosswalk = json.loads(crosswalk_path.read_text())
+    crosswalk["replacement_cache_sha256"] = sha256_file(cache_path)
+    atomic_write_json(crosswalk_path, crosswalk)
+    error = "needs valid current rows|duplicate current IDs"
+    with pytest.raises(ValueError, match=error):
+        validate_coverage(**options)
+
+
+def test_prior_id_review_rejects_curated_target_without_matching_evidence(
+    tmp_path: Path,
+) -> None:
+    options, _ = _prior_id_review(_paths(tmp_path), "curated_native")
+    curated = json.loads(options["curated_works_path"].read_text())
+    curated["works"][0]["source_url"] = "https://example.org/other"
+    atomic_write_json(options["curated_works_path"], curated)
+    with pytest.raises(ValueError, match="curated work evidence does not match"):
+        validate_coverage(**options)
+
+
+def test_prior_id_review_rejects_excluded_academic_replacement(tmp_path: Path) -> None:
+    options, _ = _prior_id_review(_paths(tmp_path))
+    atomic_write_json(
+        options["exclusions_path"],
+        {
+            "exclusions": [
+                {
+                    "scholar_id": "alphaAAAAJ",
+                    "author_pub_id": "alphaAAAAJ:one",
+                    "reason_code": "false_profile_attribution",
+                }
+            ]
+        },
+    )
+    with pytest.raises(ValueError, match="Scholar replacement is excluded"):
+        validate_coverage(**options)
+
+
+def test_prior_id_review_does_not_replace_complete_receipt_or_snapshot_check(
+    tmp_path: Path,
+) -> None:
+    paths = _paths(tmp_path)
+    options, _ = _prior_id_review(paths)
+    snapshot = tmp_path / "snapshot.parquet"
+    build_snapshot(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=paths[3],
+        snapshot_path=snapshot,
+        manifest_path=tmp_path / "manifest.json",
+    )
+    assert (
+        validate_coverage(**options, snapshot_path=snapshot)["reconciled_prior_ids"]
+        == 1
+    )
+    frame = pandas.read_parquet(snapshot)
+    frame.loc[0, "source_record_json"] = "tampered"
+    frame.to_parquet(snapshot, index=False)
+    with pytest.raises(ValueError, match="Snapshot rows differ"):
+        validate_coverage(**options, snapshot_path=snapshot)
+    cache_path = paths[3] / "alphaAAAAJ.json"
+    cache = json.loads(cache_path.read_text())
+    cache.pop("browser_capture")
+    atomic_write_json(cache_path, cache)
+    crosswalk = json.loads(options["prior_id_crosswalk_path"].read_text())
+    crosswalk["replacement_cache_sha256"] = sha256_file(cache_path)
+    atomic_write_json(options["prior_id_crosswalk_path"], crosswalk)
+    with pytest.raises(ValueError, match="Complete source receipt is missing"):
+        validate_coverage(**options)
+
+
 def test_new_complete_capture_reconciles_at_publication_boundary(
     tmp_path: Path,
 ) -> None:
@@ -158,6 +439,7 @@ def test_new_complete_capture_reconciles_at_publication_boundary(
     assert validate_coverage(**options) == {
         "legacy_profiles": 0,
         "complete_profiles": 1,
+        "reconciled_prior_ids": 0,
     }
     snapshot = tmp_path / "snapshot.parquet"
     build_snapshot(
@@ -246,6 +528,7 @@ def test_publisher_cli_requires_complete_source_before_upload(
     assert json.loads(status.read_text())["scholar_coverage"] == {
         "legacy_profiles": 0,
         "complete_profiles": 1,
+        "reconciled_prior_ids": 0,
     }
 
     cache.pop("browser_capture")
@@ -570,6 +853,7 @@ def test_uncached_profile_has_no_coverage_claim(tmp_path: Path) -> None:
     assert validate_coverage(**_options(paths)) == {
         "legacy_profiles": 0,
         "complete_profiles": 0,
+        "reconciled_prior_ids": 0,
     }
 
 

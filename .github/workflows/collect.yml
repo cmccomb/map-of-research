@@ -84,7 +84,10 @@ jobs:
         working-directory: snapshot
         run: |
           map-validate-scholar-coverage \
-            --baseline ../source/registry/legacy-scholar-cache-baseline.json
+            --baseline ../source/registry/legacy-scholar-cache-baseline.json \
+            --prior-id-crosswalk ../source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
+            --curated-works ../source/data/curated/works.json \
+            --exclusions ../source/data/curated/scholar-exclusions.json
           map-build-snapshot
           map-validate-snapshot \
             --snapshot snapshots/cmu-engineering-publications.parquet \

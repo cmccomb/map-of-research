@@ -21,8 +21,13 @@ from .registry import (
 )
 
 DEFAULT_BASELINE_PATH = Path("registry/legacy-scholar-cache-baseline.json")
+DEFAULT_PRIOR_ID_CROSSWALK_PATH = Path(
+    "registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json"
+)
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CAPTURE_DIR = Path("data/captures")
+DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
+DEFAULT_EXCLUSIONS_PATH = Path("data/curated/scholar-exclusions.json")
 
 
 def _normalized(value: Any) -> str:
@@ -236,7 +241,7 @@ def validate_complete_receipt(
             )
 
 
-def _load_baseline(path: Path) -> dict[str, dict[str, Any]]:
+def _load_baseline(path: Path) -> dict[str, Any]:
     baseline = load_json(path)
     if (
         not isinstance(baseline, dict)
@@ -258,7 +263,187 @@ def _load_baseline(path: Path) -> dict[str, dict[str, Any]]:
             or record["author_pub_ids"] != sorted(set(record["author_pub_ids"]))
         ):
             raise ValueError(f"Legacy Scholar cache entry is invalid: {scholar_id}")
-    return profiles
+    return baseline
+
+
+def _reconcile_prior_ids(
+    *,
+    scholar_id: str,
+    person_id: str,
+    missing_ids: set[str],
+    current_rows: list[dict[str, Any]],
+    cache_path: Path,
+    baseline: dict[str, Any],
+    prior: dict[str, Any],
+    crosswalk_path: Path,
+    curated_works_path: Path,
+    exclusions_path: Path,
+) -> int:
+    """Allow only a reviewed, exact historical-ID replacement for this cache."""
+
+    if not crosswalk_path.is_file():
+        raise ValueError(f"Previously published Scholar IDs disappeared: {cache_path}")
+    crosswalk = load_json(crosswalk_path)
+    if not isinstance(crosswalk, dict) or set(crosswalk) != {
+        "schema_version",
+        "scholar_id",
+        "person_id",
+        "frozen_snapshot_commit",
+        "frozen_snapshot_sha256",
+        "prior_cache_sha256",
+        "replacement_cache_sha256",
+        "reviewed_at",
+        "entries",
+    }:
+        raise ValueError("Historical Scholar ID crosswalk is invalid")
+    if (
+        crosswalk["schema_version"] != 1
+        or crosswalk["scholar_id"] != scholar_id
+        or crosswalk["person_id"] != person_id
+        or crosswalk["frozen_snapshot_commit"] != baseline["frozen_snapshot_commit"]
+        or crosswalk["frozen_snapshot_sha256"] != baseline["frozen_snapshot_sha256"]
+        or crosswalk["prior_cache_sha256"] != prior["cache_sha256"]
+        or crosswalk["replacement_cache_sha256"] != sha256_file(cache_path)
+        or not isinstance(crosswalk["reviewed_at"], str)
+        or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", crosswalk["reviewed_at"])
+        or not isinstance(crosswalk["entries"], list)
+    ):
+        raise ValueError("Historical Scholar ID crosswalk does not match this release")
+
+    entries = crosswalk["entries"]
+    expected_keys = {
+        "prior_author_pub_id",
+        "legacy_title",
+        "legacy_year",
+        "legacy_row_sha256",
+        "classification",
+        "target_kind",
+        "target_id",
+        "target_title",
+        "target_year",
+        "evidence_url",
+        "review_note",
+    }
+    if any(
+        not isinstance(entry, dict) or set(entry) != expected_keys for entry in entries
+    ):
+        raise ValueError("Historical Scholar ID crosswalk has an invalid entry")
+    entry_ids = [entry["prior_author_pub_id"] for entry in entries]
+    if len(entry_ids) != len(set(entry_ids)) or set(entry_ids) != missing_ids:
+        raise ValueError("Historical Scholar ID crosswalk omits or adds prior IDs")
+
+    current_by_id: dict[str, dict[str, Any]] = {}
+    for row in current_rows:
+        if not isinstance(row, dict) or not isinstance(row.get("author_pub_id"), str):
+            raise ValueError("Historical Scholar ID crosswalk needs valid current rows")
+        row_id = row["author_pub_id"]
+        if row_id in current_by_id:
+            raise ValueError(
+                "Historical Scholar ID crosswalk found duplicate current IDs"
+            )
+        current_by_id[row_id] = row
+
+    curated = load_json(curated_works_path)
+    exclusions = load_json(exclusions_path)
+    if (
+        not isinstance(curated, dict)
+        or not isinstance(curated.get("works"), list)
+        or not isinstance(exclusions, dict)
+        or not isinstance(exclusions.get("exclusions"), list)
+    ):
+        raise ValueError("Historical Scholar ID crosswalk targets are invalid")
+
+    allowed = {
+        "duplicate_rekeyed": "current_scholar",
+        "malformed_duplicate": "current_scholar",
+        "supporting_material_duplicate": "current_scholar",
+        "nonpublication_rekeyed": "current_scholar",
+        "supporting_material": "curated_doi",
+        "historical_conference_abstract": "curated_native",
+        "historical_conference_proceeding": "curated_native",
+    }
+    for entry in entries:
+        kind = entry["target_kind"]
+        target_id = entry["target_id"]
+        evidence_url = entry["evidence_url"]
+        if (
+            entry["classification"] not in allowed
+            or allowed[entry["classification"]] != kind
+            or not isinstance(entry["prior_author_pub_id"], str)
+            or not entry["prior_author_pub_id"].startswith(f"{scholar_id}:")
+            or not isinstance(entry["legacy_title"], str)
+            or not entry["legacy_title"].strip()
+            or entry["legacy_year"] is not None
+            and not isinstance(entry["legacy_year"], str)
+            or not isinstance(entry["legacy_row_sha256"], str)
+            or not re.fullmatch(r"[0-9a-f]{64}", entry["legacy_row_sha256"])
+            or not isinstance(target_id, str)
+            or not target_id
+            or not isinstance(entry["target_title"], str)
+            or not entry["target_title"].strip()
+            or not isinstance(entry["target_year"], str)
+            or not isinstance(evidence_url, str)
+            or urlparse(evidence_url).scheme != "https"
+            or not urlparse(evidence_url).netloc
+            or not isinstance(entry["review_note"], str)
+            or not entry["review_note"].strip()
+        ):
+            raise ValueError("Historical Scholar ID crosswalk entry is invalid")
+
+        if kind == "current_scholar":
+            target = current_by_id.get(target_id)
+            if (
+                target is None
+                or not target_id.startswith(f"{scholar_id}:")
+                or _normalized(target.get("title"))
+                != _normalized(entry["target_title"])
+                or str(target.get("pub_year") or "") != entry["target_year"]
+            ):
+                raise ValueError("Historical Scholar ID crosswalk target is absent")
+            if entry["classification"] == "nonpublication_rekeyed":
+                matches = [
+                    item
+                    for item in exclusions["exclusions"]
+                    if isinstance(item, dict)
+                    and item.get("scholar_id") == scholar_id
+                    and item.get("author_pub_id") == target_id
+                    and item.get("reason_code") == "nonpublication"
+                    and item.get("evidence_url") == evidence_url
+                ]
+                if len(matches) != 1:
+                    raise ValueError("Historical nonpublication exclusion is absent")
+            elif any(
+                isinstance(item, dict)
+                and item.get("scholar_id") == scholar_id
+                and item.get("author_pub_id") == target_id
+                for item in exclusions["exclusions"]
+            ):
+                raise ValueError("Historical Scholar replacement is excluded")
+        else:
+            key = "doi" if kind == "curated_doi" else "source_native_id"
+            matches = [
+                item
+                for item in curated["works"]
+                if isinstance(item, dict)
+                and item.get("person_id") == person_id
+                and item.get(key) == target_id
+            ]
+            if len(matches) != 1:
+                raise ValueError(
+                    "Historical curated work target is absent or duplicated"
+                )
+            target = matches[0]
+            if (
+                _normalized(target.get("title")) != _normalized(entry["target_title"])
+                or str(target.get("year") or "") != entry["target_year"]
+                or evidence_url
+                not in [
+                    target.get("source_url"),
+                    *(target.get("source_verification_urls") or []),
+                ]
+            ):
+                raise ValueError("Historical curated work evidence does not match")
+    return len(entries)
 
 
 def validate_coverage(
@@ -269,12 +454,16 @@ def validate_coverage(
     cache_dir: Path = DEFAULT_CACHE_DIR,
     captures_dir: Path = DEFAULT_CAPTURE_DIR,
     baseline_path: Path = DEFAULT_BASELINE_PATH,
+    prior_id_crosswalk_path: Path = DEFAULT_PRIOR_ID_CROSSWALK_PATH,
+    curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
+    exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
     snapshot_path: Path | None = None,
 ) -> dict[str, int]:
     """Permit frozen legacy caches and verify every newer Scholar source."""
 
     registry = load_registry(people_path, memberships_path, departments_path)
-    baseline = _load_baseline(baseline_path)
+    baseline_document = _load_baseline(baseline_path)
+    baseline = baseline_document["profiles"]
     frame = None
     if snapshot_path is not None:
         import pandas
@@ -282,7 +471,7 @@ def validate_coverage(
         frame = pandas.read_parquet(snapshot_path, engine="pyarrow")
         frame = frame.loc[frame["source_type"] == "scholar"]
     expected_profile_ids: set[str] = set()
-    result = {"legacy_profiles": 0, "complete_profiles": 0}
+    result = {"legacy_profiles": 0, "complete_profiles": 0, "reconciled_prior_ids": 0}
 
     for profile in unique_profiles(registry):
         path = cache_dir / f"{profile.scholar_id}.json"
@@ -298,6 +487,7 @@ def validate_coverage(
             raise ValueError(f"Invalid Scholar cache: {path}")
         expected_profile_ids.add(profile.scholar_id)
         prior = baseline.get(profile.scholar_id)
+        missing_ids: set[str] = set()
         if prior is not None:
             previous_ids = set(prior["author_pub_ids"])
             current_ids = {
@@ -305,13 +495,24 @@ def validate_coverage(
                 for row in cache["publications"]
                 if isinstance(row, dict)
             }
-            if not previous_ids.issubset(current_ids):
-                raise ValueError(
-                    f"Previously published Scholar IDs disappeared: {path}"
+            missing_ids = previous_ids - current_ids
+            if missing_ids:
+                result["reconciled_prior_ids"] += _reconcile_prior_ids(
+                    scholar_id=profile.scholar_id,
+                    person_id=profile.person_id,
+                    missing_ids=missing_ids,
+                    current_rows=cache["publications"],
+                    cache_path=path,
+                    baseline=baseline_document,
+                    prior=prior,
+                    crosswalk_path=prior_id_crosswalk_path,
+                    curated_works_path=curated_works_path,
+                    exclusions_path=exclusions_path,
                 )
         included_now = any(membership.included for membership in profile.memberships)
         unchanged_legacy = (
             isinstance(prior, dict)
+            and not missing_ids
             and prior.get("person_id") == profile.person_id
             and prior.get("cache_sha256") == sha256_file(path)
             and (prior.get("included") is True or not included_now)
@@ -357,6 +558,13 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--captures-dir", type=Path, default=DEFAULT_CAPTURE_DIR)
     parser.add_argument("--baseline", type=Path, default=DEFAULT_BASELINE_PATH)
+    parser.add_argument(
+        "--prior-id-crosswalk", type=Path, default=DEFAULT_PRIOR_ID_CROSSWALK_PATH
+    )
+    parser.add_argument(
+        "--curated-works", type=Path, default=DEFAULT_CURATED_WORKS_PATH
+    )
+    parser.add_argument("--exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH)
     parser.add_argument("--snapshot", type=Path)
     args = parser.parse_args(argv)
     result = validate_coverage(
@@ -366,6 +574,9 @@ def main(argv: list[str] | None = None) -> int:
         cache_dir=args.cache_dir,
         captures_dir=args.captures_dir,
         baseline_path=args.baseline,
+        prior_id_crosswalk_path=args.prior_id_crosswalk,
+        curated_works_path=args.curated_works,
+        exclusions_path=args.exclusions,
         snapshot_path=args.snapshot,
     )
     print(json.dumps(result, sort_keys=True))
