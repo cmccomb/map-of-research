@@ -1,0 +1,83 @@
+# Stefan Bernhard: exact Scholar attribution and record-quality decisions
+
+Reviewed 2026-10-25 against the paired 228-row Google Scholar capture staged in draft source [PR #190](https://github.com/cmccomb/map-of-research/pull/190). The profile identifies Stefan Bernhard as a CMU Chemistry professor. [CMU records his Chemistry professorship and 1996 Fribourg doctorate](https://www.cmu.edu/chemistry/people/faculty/bernhard.html). The canonical person now has a sourced `chem` primary department using this faculty page. Forty-two exact `citation_for_view` IDs are excluded from graph generation below. The source draft preserves all 228 raw rows and its complete-profile receipt.
+
+## Four complete bylines without the CMU professor
+
+| Scholar row and exact ID | Decision and primary evidence |
+| --- | --- |
+| 90 `hfFKwRcAAAAJ:WZBGuue-350C` | The [Thieme article PDF](https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0040-1707114.pdf) lists Kentaro Sakai, Kounosuke Oisaki, and Motomu Kanai as the full byline of the 2020 *Synthesis* article. Bernhard is absent. |
+| 113 `hfFKwRcAAAAJ:-FonjvnnhkoC` | The [Dilman lab publication list](https://dilmanlab.ru/en/node/12) identifies Vitalij Levin, Daniil Agababyan, Marina Struchkova, and Alexander Dilman as the complete byline of the 2018 *Synthesis* article. Bernhard is absent. |
+| 128 `hfFKwRcAAAAJ:e_rmSamDkqQC` | [Coauthor Wegner's university publication list](https://www.uni-giessen.de/de/fbz/fb08/Inst/organische-chemie/Wegner/Publications/2019-2010/2017) identifies Sebastian Beeck and Hermann A. Wegner as the two authors of the 2017 *Synlett* account. Bernhard is absent. |
+| 184 `hfFKwRcAAAAJ:W7OEmFMy1HYC` | The [Thieme *Synfacts* page](https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0033-1340527.pdf) names Paul Knochel and Nadja M. Barl as the commentary contributors, and separately cites the CMU research article by C.-H. Tsai, D. N. Chirdon, A. B. Maurer, S. Bernhard, and K. J. T. Noonan. The genuine CMU article remains in the Scholar capture as row 92, `hfFKwRcAAAAJ:pyW8ca7W8N0C`. |
+
+## Five records from other people named Stefan Bernhard
+
+| Scholar row and exact ID | Primary evidence and decision |
+| --- | --- |
+| 156 `hfFKwRcAAAAJ:foquWX3nUaYC` | The [Mainz dissertation](https://openscience.ub.uni-mainz.de/server/api/core/bitstreams/6d1cb035-083d-40fd-a5a6-d5c0f2f715c5/content) names Stefan Bernhard as its 2015 Chemistry doctoral candidate. That is a distinct degree from the CMU professor's 1996 Fribourg doctorate. `false_profile_attribution`. |
+| 157 `hfFKwRcAAAAJ:ipzZ9siozwsC` | [Freie Universität Berlin's repository](https://publications.imp.fu-berlin.de/946/) records Stefan Bernhard's 2006 Göttingen PhD thesis on arterial blood flow. It is distinct from the CMU professor's 1996 Chemistry doctorate. `false_profile_attribution`. |
+| 223 `hfFKwRcAAAAJ:Z5m8FVwuT1cC` | The captured title is *Zeitschrift für Sozialreform*, volume 53, issue 4, with a combined list of issue contributors rather than an article title. [HdBA's faculty profile](https://www.hdba.de/hochschule/organisation/lehrende/profil/stefan-bernhard/) identifies the social-policy Stefan Bernhard and his distinct 2007 article in this issue. The issue heading is `nonpublication` for this coauthor graph. |
+| 224 `hfFKwRcAAAAJ:tzM49s52ZIMC` | The [exact author manuscript](https://www.researchgate.net/publication/327861940_Estimation_of_Continuous_Blood_Pressure_from_Harmonic_Phase-Shifts_in_PPG_Signals) lists Fabian Kern, Thomas Greiner, and Stefan Bernhard at Pforzheim University and Freie Universität Berlin. A [later author preprint](https://www.medrxiv.org/content/10.1101/2019.12.19.19015321v1.full) independently records that biomedical researcher's Mittelhessen/FU Berlin affiliation and email. `false_profile_attribution`. |
+| 225 `hfFKwRcAAAAJ:Fu2w8maKXqMC` | The captured title is merely the journal name *Informatics in Medicine Unlocked*. The [author-uploaded Elsevier article](https://www.researchgate.net/publication/339771880_Estimation_of_ARMA-model_parameters_to_describe_pathological_conditions_in_cardiovascular_system_models) with the exact Hackstein/Krickl/Bernhard author group identifies the latter Bernhard at Mittelhessen Life Science Engineering and FU Berlin Mathematics, with a Mittelhessen email. The [publisher DOI](https://doi.org/10.1016/j.imu.2020.100310) is 18:100310 (2020). `false_profile_attribution`. |
+
+## Contents pages, copyright footer, and awards
+
+| Scholar row and exact ID | Primary evidence and decision |
+| --- | --- |
+| 189 `hfFKwRcAAAAJ:t6usbXjVLHcC` | Scholar titled the row `www. rsc. org/dalton`. RSC's [DOI 10.1039/c0dt90075c](https://doi.org/10.1039/c0dt90075c) registers page 10007 in *Dalton Transactions* 39(42) as **Contents**. It is `nonpublication`; the real Bernhard review on pages 10021–10030 remains row 22. |
+| 205 `hfFKwRcAAAAJ:HE397vMXCloC` | Scholar titled the row `www. rsc. org/materials`. RSC's [DOI 10.1039/b710114g](https://doi.org/10.1039/b710114g) registers page 2955 in *Journal of Materials Chemistry* 17(29) as **Contents**. It is `nonpublication`; the real Bernhard article on pages 2976–2988 remains row 11. |
+| 227 `hfFKwRcAAAAJ:5Ul4iDaHHb8C` | The title `This journal is© The Royal Society of Chemistry 2016` is an extracted footer attached to Mills/Kagalwala/Bernhard. The [publisher article](https://doi.org/10.1039/C6DT01516F) is *Cyano-Decorated Ligands*, 45(25):10411–10419; retain its proper Scholar row 122 and mark row 227 `corrupted_duplicate`. |
+| 191 `hfFKwRcAAAAJ:FPJr55Dyh1AC` | [NSF award 0949238](https://api.nsf.gov/services/v1/awards/0949238.xml) is a 2009 CMU CAREER grant record. `nonpublication`. |
+| 211 `hfFKwRcAAAAJ:ClCfbGk0d_YC` | [NSF award 0449755](https://api.nsf.gov/services/v1/awards/0449755.xml) is a distinct 2005 Princeton CAREER grant record with the same title. `nonpublication`, not a duplicate of award 0949238. |
+
+RSC's publisher-deposited Crossref metadata independently returned `Contents`, page 10007, volume 39, issue 42 for 10.1039/c0dt90075c and `Contents`, page 2955, volume 17, issue 29 for 10.1039/b710114g. These exact start pages match the two captured rows.
+
+## Reviewed duplicates and retained same-title outputs
+
+Row 168 `hfFKwRcAAAAJ:BUYA1_V_uYcC` is the incomplete 2021 online-date record for *Ligand Enhanced Activity of In Situ Formed Nanoparticles for Photocatalytic Hydrogen Evolution*. [Coauthor Kitchin's CMU page](https://kitchingroup.cheme.cmu.edu/papers/simon2022/) gives the single DOI [10.1002/cctc.202101551](https://doi.org/10.1002/cctc.202101551), online December 2021 and issue 14(2) in 2022. Retain the full 2022 row 135 `hfFKwRcAAAAJ:XD-gHx7UXLsC`; row 168 is `corrupted_duplicate`.
+
+Row 173 `hfFKwRcAAAAJ:XoXfffV-tXoC` repeats the exact title of the [2018 *ACS Catalysis* paper](https://pubs.acs.org/doi/10.1021/acscatal.8b00365) retained as row 21 `hfFKwRcAAAAJ:V3AGJWp-ZtQC`. Its captured venue, *Electrocatalytic Applications of Atomically Precise Gold Nanoclusters*, is actually [Shuo Zhao's CMU dissertation title](https://www.cmu.edu/commencement/assets/finalprogram2019web.pdf) (2019 program, PDF page 49), not a journal or book chapter with the captured article title. Row 173 is a malformed citation duplicate; retain the complete article and exclude this exact row as `corrupted_duplicate`.
+
+Other same-title pairs stay raw and eligible when primary sources establish distinct outputs or leave the relation uncertain: 22/178 is a 2010 *Dalton Transactions* review versus a 2015 ACS meeting abstract; 194/204 are ACS meeting abstracts from 2009 and 2007. Row 160 is the [2020 arXiv preprint](https://arxiv.org/abs/2007.15455) of the [2021 *Chemistry of Materials* paper](https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.0c03934) retained as row 97. The preprint is a genuine Bernhard research version, with a different visible byline and title, so both versions remain raw and eligible pending a general version policy. Bylines ending in an ellipsis also remain raw pending a full author list. The 228 source entries are preserved in draft PR #190; this producer PR only changes exact graph exclusions.
+
+## Additional Senge-laboratory and Mainz namesakes
+
+Trinity College Dublin [identifies a different Dr. Stefan Bernhard in the Senge laboratory](https://chemistry.tcd.ie/staff/people/mos/People/stefan.html). Exact author affiliations, native ACS abstracts, or original manuscripts support the seven decisions below. The 2015 Mainz doctoral candidate is likewise distinct from the CMU professor's 1996 Fribourg doctorate.
+
+| Scholar row and exact ID | Attribution evidence |
+| --- | --- |
+| 15 `hfFKwRcAAAAJ:kh2fBNsKQNwC` | [PubMed's indexed review](https://pubmed.ncbi.nlm.nih.gov/30387906/) names Stefan S. R. Bernhard at Trinity College Dublin with Locke and Senge. |
+| 25 `hfFKwRcAAAAJ:0izLItjtcgwC` | The [RSC publisher article](https://pubs.rsc.org/en/content/articlehtml/2018/cc/c7cc08099a) assigns S. S. R. Bernhard to Trinity College Dublin. |
+| 108 `hfFKwRcAAAAJ:9pM33mqn1YgC` | [PubMed's indexed cubane article](https://pubmed.ncbi.nlm.nih.gov/30742711/) names S. S. R. Bernhard at Trinity College Dublin. |
+| 174 `hfFKwRcAAAAJ:wbdj-CoPYUoC` | The [exact ACS Spring 2017 abstract](https://scimeetings.acs.org/exhibit/Forgotten-treasures-Synthesis-properties-N/2650305) names Stefan S. R. Bernhard and links his Trinity College Dublin email `bernhars@tcd.ie`. |
+| 175 `hfFKwRcAAAAJ:J-pR_7NvFogC` | The [exact ACS Spring 2017 abstract](https://scimeetings.acs.org/exhibit/Development-new-tools-functionalization-cubane/2643186) names Stefan S. R. Bernhard and links the same Trinity College Dublin email. |
+| 176 `hfFKwRcAAAAJ:1qzjygNMrQYC` | The [German Chemical Society's conference poster](https://www.gdch.de/fileadmin/downloads/Veranstaltungen/Tagungen/2014_Tagungen/Orchem/ORCHEM_Poster_M.pdf) matches the crinine title and Bernhard/Nubbemeyer Mainz team. The [2015 Mainz dissertation](https://openscience.ub.uni-mainz.de/server/api/core/bitstreams/6d1cb035-083d-40fd-a5a6-d5c0f2f715c5/content) identifies this namesake. The extra Senge token in Scholar's abstract byline does not identify the CMU professor. |
+| 222 `hfFKwRcAAAAJ:_FM0Bhl9EiAC` | The [Trinity author manuscript](https://www.tara.tcd.ie/bitstreams/f3e3d106-1e20-4ea8-816d-6aa6175eb345/download) names Stefan S. R. Bernhard in the Senge group. Its final [RSC publisher record](https://pubs.rsc.org/en/content/articlehtml/2020/ob/d0ob01264e) has the same team. |
+
+## Additional biomedical and Japanese false attributions
+
+The Göttingen/FU Berlin/Pforzheim Stefan Bernhard works in medical mathematics and signal processing. The cited native articles, university deposits, or publisher records identify the distinct author or affiliation. The Japanese article has a complete byline without any Bernhard.
+
+| Scholar row and exact ID | Primary evidence |
+| --- | --- |
+| 48 `hfFKwRcAAAAJ:tKAzc9rXhukC` | [Springer's exact Göttingen myocardial-bridge article](https://link.springer.com/article/10.1186/1475-925X-5-42). |
+| 84 `hfFKwRcAAAAJ:fEOibwPWpKIC` | [Elsevier's Gul/Schütte/Bernhard arterial-anastomosis article](https://www.sciencedirect.com/science/article/pii/S0307904X16301895), also in the [FU Berlin author bibliography](https://publications.imp.fu-berlin.de/view/people/Bernhard%3D3AS%3D2E%3D3A%3D3A.html). |
+| 99 `hfFKwRcAAAAJ:uc_IGeMz5qoC` | [PubMed's exact carotid-bifurcation article](https://pubmed.ncbi.nlm.nih.gov/26367184/) and the [FU Berlin author bibliography](https://publications.imp.fu-berlin.de/view/people/Bernhard%3D3AS%3D2E%3D3A%3D3A.html). |
+| 101 `hfFKwRcAAAAJ:_Ybze24A_UAC` | The [PLOS publisher article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0010491) gives Bernhard's FU Berlin mathematical-sciences affiliation and email. |
+| 119 `hfFKwRcAAAAJ:SpbeaW3--B0C` | [Kobe University coauthor Okano's publication list](https://www2.kobe-u.ac.jp/~kokano/Kentaro_Okano.html) gives the complete eight-author *Synlett* byline; Bernhard is absent. |
+| 139 `hfFKwRcAAAAJ:uLbwQdceFCQC` | The [ESAIM publisher PDF](https://www.esaim-proc.org/articles/proc/pdf/2005/01/bernhard.pdf) lists Göttingen Physics and Stefan.Bernhard@Physik.Uni-Goettingen.de. |
+| 147 `hfFKwRcAAAAJ:7T2F9Uy0os0C` | [FU Berlin's exact cardiovascular sensitivity paper](https://publications.imp.fu-berlin.de/1330/1/sensitivityanalysis.pdf). |
+| 148 `hfFKwRcAAAAJ:kzcrU_BdoSEC` | The [WIT publisher PDF](https://www.witpress.com/Secure/elibrary/papers/EHR11/EHR11040FU1.pdf) identifies FU Berlin Mathematics for Bernhard, Al Zoukra, and Schütte. |
+| 151 `hfFKwRcAAAAJ:W5xh706n7nkC` | [FU Berlin's exact hemodynamics chapter deposit](https://publications.imp.fu-berlin.de/945/). |
+| 154 `hfFKwRcAAAAJ:kz9GbA2Ns4gC` | [De Gruyter's book record](https://www.degruyterbrill.com/de/document/doi/10.1515/9783110736298/html) and [Pforzheim's medical-technology course catalog](https://engineeringpf.hs-pforzheim.de/fileadmin/user_upload/uploads_redakteur_technik/07_Fakultaet/02_Qualitaet/05_Modulhandbuecher/Bachelor_Studiengaenge_PO1/Modulhandbuch_Bachelor_Medizintechnik_PO1.pdf) identify the signal-processing professor. |
+| 185 `hfFKwRcAAAAJ:evX43VCCuoAC` | The [conference's exact manuscript](https://iwbbio.ugr.es/papers/iwbbio_087.pdf) gives Pforzheim Medical Technology as Bernhard's affiliation. |
+| 208 `hfFKwRcAAAAJ:-_dYPAW6P2MC` | The [Göttingen dissertation](https://ediss.uni-goettingen.de/bitstream/handle/11858/00-1735-0000-0006-B443-0/bernhard.pdf?sequence=1) is the same biomedical modeler's 2006 doctorate represented in row 157 under a shortened title. |
+
+## Additional grants and one retained research paper
+
+Rows 166 `hfFKwRcAAAAJ:hCrLmN-GePgC` and 170 `hfFKwRcAAAAJ:PVjk1bu6vJQC` are distinct NSF awards [2350257](https://api.nsf.gov/services/v1/awards/2350257.xml) and [2102460](https://api.nsf.gov/services/v1/awards/2102460.xml). Both are nonpublications. Rows 186 `hfFKwRcAAAAJ:5qfkUJPXOUwC` and 207 `hfFKwRcAAAAJ:4hFrxpcac9AC` are NSF grants CHE-1055547 and DMR-0605621 in [Bernhard's own CMU CV](https://www.chem.cmu.edu/groups/bernlab/PDFs/CVStefan.pdf), also nonpublications. Row 190 `hfFKwRcAAAAJ:edDO8Oi4QzsC` is a [Cambridge volume frontmatter](https://assets.cambridge.org/97811074/08333/frontmatter/9781107408333_frontmatter.pdf) fragment; the [complete OLED degradation paper](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F73230B4DF88B6453463C91AA1CCB089/S1946427400006989a.pdf/degradation-of-irppy2dtb-bpypf6-itmc-oleds.pdf) remains in row 161 `hfFKwRcAAAAJ:dshw04ExmUIC`. Row 218 `hfFKwRcAAAAJ:3fE2CSJIrl8C` is a malformed tentative-title duplicate of the [published 2000 *Inorganic Chemistry* carbonylations paper](https://www.chem.cmu.edu/groups/bernlab/PDFs/Pubs/LosAlamosSteve.pdf), retained in full as row 105 `hfFKwRcAAAAJ:g5m5HwL7SMYC`.
+
+Row 228 `hfFKwRcAAAAJ:LkGwnXOMwfcC` is a yearless title-tail fragment of the [1995 *Recueil* ruthenium/osmium article](https://doi.org/10.1002/recl.19951141119); its complete Bernhard paper remains as row 68 `hfFKwRcAAAAJ:hMod-77fHWUC`.
+
+Row 212 `hfFKwRcAAAAJ:2KloaMYe4IUC` is still unresolved. Its captured Göttingen 2004 venue matches the [other Stefan Bernhard's institutional dissertation](https://publications.imp.fu-berlin.de/946/) and his 2003–2006 Göttingen doctoral period, but the exact 2004 native record has not been located. It stays raw and eligible in this draft; the source/producer pair remains held from public snapshot assembly until that attribution is resolved or safely gated. Genuine CMU Bernhard works with truncated bylines, including rows 82, 91, 107, and 109, remain eligible. The four Qin/Ju/Yao flame-synthesis entries also remain eligible according to [Bernhard's lab publication list](https://www.bernlab.org/publications). Row 178's [ACS 2015 conference presentation](https://www.acs.org/content/dam/acsorg/meetings/national-meetings/program-book/2015-denver.pdf) is a distinct output from the 2010 *Dalton Transactions* perspective.
