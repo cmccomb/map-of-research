@@ -564,7 +564,38 @@ OTHER_PRIMARY_ID_GUARDS = {
     174: "bC4aq-4AAAAJ:bVQMTfhMCi4C",
     235: "bC4aq-4AAAAJ:M0j1y4EgrScC",
     241: "bC4aq-4AAAAJ:cSdaV2aYdYsC",
+    197: "bC4aq-4AAAAJ:WqliGbK-hY8C",
+    448: "bC4aq-4AAAAJ:BrmTIyaxlBUC",
 }
+
+OTHER_PRIMARY.update(
+    {
+        197: (
+            "Double stochastic resonance peaks in systems with dynamic "
+            "phase transitions",
+            2001,
+            "Hyun Jin Kim",
+            "10.1209/epl/i2001-00524-7",
+            "https://arxiv.org/abs/cond-mat/0108288",
+            "Original author-submitted arXiv record linked to EPL article",
+            "The original preprint names the H. J. Kim coauthor in full as "
+            "Hyun Jin Kim and links the exact Europhysics Letters DOI, volume "
+            "56, and first page 333.",
+        ),
+        448: (
+            "Dynamic transition and resonance in current-driven arrays of "
+            "Josephson junctions",
+            2002,
+            "Hyun Jin Kim",
+            "10.1103/PhysRevB.66.024511",
+            "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.024511",
+            "Original American Physical Society article",
+            "The publisher names Hyun Jin Kim in full at Seoul National "
+            "University Physics in the exact 2002 Physical Review B article "
+            "66, 024511.",
+        ),
+    }
+)
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
@@ -1500,6 +1531,65 @@ CMU_REMAINING_TWENTY_PRIMARY = {
 }
 CMU_PRIMARY.update(CMU_REMAINING_TWENTY_PRIMARY)
 
+CMU_CHAPTERS_AND_PROCEEDINGS_PRIMARY = {
+    725: (
+        "Generalized Molecular Mechanics Including Quantum Electronic Structure "
+        "Variation of Polar Solvents: An Overview",
+        1998,
+        "https://pubs.acs.org/doi/10.1021/bk-1998-0712.ch011",
+        "Original ACS book chapter names full Hyung J. Kim at CMU Chemistry, "
+        "the exact title, coauthors, 1998 publication date, and pages 172-187",
+    ),
+    778: (
+        "Environmental dynamics and electron transfer reactions",
+        1990,
+        "https://link.springer.com/chapter/10.1007/978-94-009-0489-7_12",
+        "Original Springer conference chapter names full Hyung J. Kim with "
+        "Colorado Chemistry affiliation, exact title, 1990 year, and pages 133-148",
+    ),
+    817: (
+        "Free Energetics and Kinetics of Charge Transfer and Shift Reactions in "
+        "Room‐Temperature Ionic Liquids",
+        2013,
+        "https://books.rsc.org/books/edited-volume/1070/chapter-abstract/827847/"
+        "Free-Energetics-and-Kinetics-of-Charge-Transfer",
+        "Original RSC chapter names full Hyung J. Kim at CMU Chemistry, "
+        "exact title, 2013 publication date, DOI, and pages 260-282",
+    ),
+    888: (
+        "A truncated adiabatic basis-set approach to solvent electronic "
+        "structure variations",
+        1999,
+        "https://api.crossref.org/works/10.1063%2F1.1301533",
+        "AIP publisher-deposited conference DOI names full Hyung J. Kim, "
+        "exact title, all coauthors, 1999 year, and pages 281-300",
+    ),
+    897: (
+        "Computer simulation study of electronic spectroscopy in water [3273-14]",
+        1998,
+        "https://api.crossref.org/works/10.1117%2F12.306113",
+        "SPIE publisher-deposited proceedings DOI names full Hyung J. Kim, "
+        "exact base title, same three coauthors, and 1998 publication; "
+        "the saved Scholar page range differs from publisher pages 90-99",
+    ),
+    903: (
+        "Electronic Structure and Chemical Reactions in Solution",
+        1994,
+        "https://link.springer.com/chapter/10.1007/978-94-011-0786-0_21",
+        "Original Springer chapter names full Hyung J. Kim and his CMU "
+        "Chemistry present address, exact title, 1994 year, and pages 289-309",
+    ),
+    904: (
+        "Solvent Dynamics and Charge Transfer Reactions",
+        1992,
+        "https://api.crossref.org/works/10.1016%2Fb978-0-444-89191-4.50010-0",
+        "Elsevier book contents and publisher-deposited chapter DOI name full "
+        "Hyung J. Kim, exact chapter title, 1992 year, and pages 39-56; "
+        "Colorado coauthor Hynes CV item 129 corroborates",
+    ),
+}
+CMU_PRIMARY.update(CMU_CHAPTERS_AND_PROCEEDINGS_PRIMARY)
+
 # Guard newly resolved source rows with their immutable Scholar citation IDs.
 CMU_PRIMARY_ID_GUARDS = {
     13: "bC4aq-4AAAAJ:f2IySw72cVMC",
@@ -1613,6 +1703,18 @@ CMU_PRIMARY_ID_GUARDS.update(
     }
 )
 
+CMU_PRIMARY_ID_GUARDS.update(
+    {
+        725: "bC4aq-4AAAAJ:NMxIlDl6LWMC",
+        778: "bC4aq-4AAAAJ:GnPB-g6toBAC",
+        817: "bC4aq-4AAAAJ:tOudhMTPpwUC",
+        888: "bC4aq-4AAAAJ:O3NaXMp0MMsC",
+        897: "bC4aq-4AAAAJ:bnK-pcrLprsC",
+        903: "bC4aq-4AAAAJ:YFjsv_pBGBYC",
+        904: "bC4aq-4AAAAJ:ns9cj8rnVeAC",
+    }
+)
+
 CMU_GROUP_PUBLISHER_DOI_GUARDS = {
     13: "10.1021/acsnano.6b03964",
     18: "10.1021/acs.jpcb.5b09196",
@@ -1723,6 +1825,13 @@ CMU_GROUP_PUBLISHER_DOI_GUARDS.update(
 CMU_PRIMARY_CANONICAL_DOI_OVERRIDE = {
     140: "10.1002/(sici)1522-2594(199902)41:2<299::aid-mrm13>3.0.co;2-r",
     470: "10.1002/qua.560382480",
+    725: "10.1021/bk-1998-0712.ch011",
+    778: "10.1007/978-94-009-0489-7_12",
+    817: "10.1039/9781849737753-00260",
+    888: "10.1063/1.1301533",
+    897: "10.1117/12.306113",
+    903: "10.1007/978-94-011-0786-0_21",
+    904: "10.1016/b978-0-444-89191-4.50010-0",
 }
 
 # The later Scholar row has a broken superscript title and no page number.
@@ -2179,21 +2288,21 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_doi_identity_hold": 1,
-        "cmu_primary_work_retained": 114,
+        "cmu_primary_work_retained": 121,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 46,
+        "proposed_other_person_primary_work": 48,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 405,
+        "unresolved_attribution_hold": 396,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 386 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 388 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

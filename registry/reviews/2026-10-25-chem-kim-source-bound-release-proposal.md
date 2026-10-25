@@ -11,10 +11,10 @@ publication in Kim's academic history appears there.
 
 ## Release blocker measured against the current publisher
 
-At producer head `fa8b087`, I converted the saved 918 rows to the ordinary
+At producer head `fa8b087`, before the latest row decisions, I converted the saved 918 rows to the ordinary
 snapshot shape in memory, added inert embedding vectors, and called
 `build_dataset_tables` with the existing `scholar-exclusions.json`. This made
-**409 of 410 unresolved observations map eligible**. The one exception,
+**409 of 410 held observations map eligible**. The one exception,
 `bC4aq-4AAAAJ:KaMxkj08jr0C` (“I-SEEC 2012”), was rejected by the generic
 `event_or_session_label` quality rule. All 394 exact exclusions were
 suppressed, and all 114 positive person signals were eligible. The publisher
@@ -24,17 +24,17 @@ hold gate would put unresolved attributions into graph works and edges.
 ## Conservative exact-ID proposal
 
 The [prepared release fragment](proposals/scholar-profile-releases.kim-proposal.json)
-and [114 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
+and [121 source confirmations](proposals/scholar-attribution-reviews.kim-proposal.json)
 partition every captured ID as follows:
 
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
-| Confirmed source-backed works for a possible reviewed subset | 114 | `a7fa4ee3c74d12e25cd0e17e011710efbc62e61ac3bfb50f13d6f2f22f599a3a` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 394 | `e074bac97acf1dd2c4aa762e71f1551b148172125d13561330b9bf6b13e14a8e` |
-| Held from any map release | 410 | `544356f5eacd3d84060d4ba213b0b9669ba527e0acc6e827319bf20d88337b66` |
+| Confirmed source-backed works for a possible reviewed subset | 121 | `159375617198d7887a0614b6e3d992fdbc985b5b6e81210b3ea353a21be4eb1e` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 396 | `37160a6e15d511b2dbac3ad8113ed951b54a6bef6dd6eb9e0dd65dd890450ab6` |
+| Held from any map release | 401 | `600c9e7f7e54e241f9b990d04efe50feda5978b3ee68f118658f5b9011d19d45` |
 
-The 410 holds comprise observations that still lack enough output-level review
-for this conservative subset. The 114 confirmed entries have exact Scholar
+The 401 holds comprise observations that still lack enough output-level review
+for this conservative subset. The 121 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 [group bibliography](2026-10-25-chem-kim-lab-bibliography-follow-up.md), and
@@ -45,9 +45,10 @@ followed by [eleven AIP/PLOS/BKCS matches](2026-10-25-chem-kim-group-eleven-prim
 and [ten recent CMU faculty/publisher matches](2026-10-25-chem-kim-faculty-ten-primary-retentions.md),
 followed by [twelve systematic official-bibliography/publisher matches](2026-10-25-chem-kim-official-bibliography-twelve-primary-retentions.md)
 and [28 full-name publisher matches with CMU or matching ORCID identity](2026-10-25-chem-kim-publisher-fullname-twentyeight-primary-retentions.md),
-then [the final 20 exact CMU ORCID signals with original publisher and institutional evidence](2026-10-25-chem-kim-remaining-twenty-primary-retentions.md).
+then [the final 20 exact CMU ORCID signals with original publisher and institutional evidence](2026-10-25-chem-kim-remaining-twenty-primary-retentions.md)
+and [seven chapters/proceedings outputs plus two explicit namesakes](2026-10-25-chem-kim-chapters-namesakes-primary-review.md).
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
-own DOI/page evidence and remain distinct works. The 114 confirmed rows do
+own DOI/page evidence and remain distinct works. The 121 confirmed rows do
 **not** represent Kim's whole publication history.
 The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
 keeps three more initials-only records held despite suggestive related sources.
@@ -71,8 +72,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 114 confirmed IDs, and the 394 exact exclusion IDs to
-these lists; it must prevent all 410 held rows from creating works,
+all 918 exact IDs, the 121 confirmed IDs, and the 396 exact exclusion IDs to
+these lists; it must prevent all 401 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the

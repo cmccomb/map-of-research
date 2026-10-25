@@ -117,7 +117,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
         if row["status"] == "already_excluded" or row["status"].startswith("proposed_")
     )
     held = sorted(publication_ids - set(released) - set(excluded))
-    if (len(released), len(excluded), len(held)) != (114, 394, 410):
+    if (len(released), len(excluded), len(held)) != (121, 396, 401):
         raise ValueError("Kim review partition changed")
     manifest_excluded = {
         author_pub_id
@@ -139,7 +139,7 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
                 "expected_source_rows": SOURCE_ROWS,
                 "cache_sha256": cache_sha256,
                 "reason": (
-                    "Proposal only: release 114 exact publisher/CMU-verified works; "
+                    "Proposal only: release 121 exact publisher/CMU-verified works; "
                     "keep Kim off public maps until the full history is reviewed."
                 ),
                 "reviewed_at": REVIEWED_AT,
@@ -155,10 +155,16 @@ def prepare(capture_path: Path, output_dir: Path) -> dict[str, object]:
         if row["author_pub_id"] not in released_set:
             continue
         evidence_url = row["evidence_url"]
-        evidence_basis = (
-            f"{row['evidence_source']}; exact saved Scholar title, year, "
-            "and journal/page match reviewed"
-        )
+        if int(row["capture_index"]) in {725, 778, 817, 888, 897, 903, 904}:
+            evidence_basis = (
+                f"{row['evidence_source']}; saved Scholar row matched to the "
+                "publisher output by title, year, authors, and identifier or pages"
+            )
+        else:
+            evidence_basis = (
+                f"{row['evidence_source']}; exact saved Scholar title, year, "
+                "and journal/page match reviewed"
+            )
         if row["capture_index"] == "104":
             evidence_url = (
                 "https://api.crossref.org/works/10.1016%2FS1010-6030%2896%2904543-1"
