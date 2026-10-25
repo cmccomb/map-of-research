@@ -1,6 +1,6 @@
 {
   "atomic_release_intent": {
-    "artifact_revision": null,
+    "artifact_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
     "commit_message": "Publish complete Biological Sciences Scholar corpus atomically\n\nRelease-Intent-Nonce: 5786b995229c4f98b4b3cab7d06dbb3a",
     "commit_nonce": "5786b995229c4f98b4b3cab7d06dbb3a",
     "committed_files": [
@@ -12,7 +12,7 @@
       "profile_publications/train-00000-of-00001.parquet",
       "works/train-00000-of-00001.parquet"
     ],
-    "intent_status": "before_write",
+    "intent_status": "commit_returned_unverified",
     "mode": "single_parent_commit",
     "parent_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
     "prewrite_gate": {
