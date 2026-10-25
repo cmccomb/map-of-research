@@ -14,6 +14,7 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
     apply_corrections,
@@ -107,6 +108,7 @@ STRING_LIST_COLUMNS = frozenset(
         "author_pub_ids",
         "author_variants",
         "citation_variants",
+        "context_evidence_urls",
         "included_department_ids",
         "included_school_ids",
         "map_exclusion_reasons",
@@ -763,6 +765,16 @@ def build_map_artifact(
                 "venue": str(row.venue),
                 "citation_count": int(row.citation_count),
                 "doi": str(row.doi),
+                "publication_type": str(
+                    getattr(row, "publication_type", "publication")
+                ),
+                "source_document_id": str(getattr(row, "source_document_id", "")),
+                "collaboration_eligible": bool(
+                    getattr(row, "collaboration_eligible", True)
+                ),
+                "context_evidence_urls": list(
+                    _as_list(getattr(row, "context_evidence_urls", []))
+                ),
                 "source_url": source_urls[0] if source_urls else "",
                 "source_types": list(
                     _as_list(getattr(row, "source_types", ["scholar"]))
@@ -1079,6 +1091,7 @@ def publish_snapshot(
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
     corrections_path: Path = DEFAULT_CORRECTIONS_PATH,
     doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
+    contexts_path: Path = DEFAULT_CONTEXTS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1097,12 +1110,13 @@ def publish_snapshot(
     _require_physics_review_ready(frame, snapshot_path, exclusions)
     corrections = load_corrections(corrections_path)
     corrected_frame, corrected_count = apply_corrections(frame, corrections)
+    contexts = load_contexts(contexts_path)
     enriched, new_embedding_count = add_embeddings(
         corrected_frame,
         hf_token=hf_token,
         encoder=encoder,
     )
-    tables = build_dataset_tables(enriched, registry, exclusions, doi_aliases)
+    tables = build_dataset_tables(enriched, registry, exclusions, doi_aliases, contexts)
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
         reuse = _reusable_work_order(
@@ -1174,6 +1188,10 @@ def publish_snapshot(
         "reviewed_metadata_corrections_sha256": sha256_file(corrections_path),
         "reviewed_doi_aliases": len(doi_aliases),
         "reviewed_doi_aliases_sha256": sha256_file(doi_aliases_path),
+        "reviewed_contexts": int(
+            tables["profile_publications"]["context_verified_at"].ne("").sum()
+        ),
+        "reviewed_contexts_sha256": sha256_file(contexts_path),
         "profile_count": int(
             enriched.loc[
                 enriched.get("source_type", "scholar") == "scholar", "scholar_id"
@@ -1225,6 +1243,7 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--reviewed-doi-aliases", type=Path, default=DEFAULT_DOI_ALIASES_PATH
     )
+    parser.add_argument("--reviewed-contexts", type=Path, default=DEFAULT_CONTEXTS_PATH)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -1292,6 +1311,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             exclusions_path=args.reviewed_exclusions,
             corrections_path=args.reviewed_metadata_corrections,
             doi_aliases_path=args.reviewed_doi_aliases,
+            contexts_path=args.reviewed_contexts,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

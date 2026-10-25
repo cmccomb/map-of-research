@@ -373,6 +373,20 @@ def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> No
     assert artifact["catalogs"]["external_coauthors"] == [external]
     assert artifact["source_data_newest_at_utc"] is None
 
+    works["publication_type"] = "patent"
+    works["source_document_id"] = "US6486123B1"
+    works["collaboration_eligible"] = False
+    works["context_evidence_urls"] = [["https://patents.google.com/patent/US6486123B1/en"]]
+    typed_point = publisher.build_map_artifact(
+        works, registry(), generated_at_utc="2026-10-24T12:00:00+00:00"
+    )["points"][0]
+    assert typed_point["publication_type"] == "patent"
+    assert typed_point["source_document_id"] == "US6486123B1"
+    assert typed_point["collaboration_eligible"] is False
+    assert typed_point["context_evidence_urls"] == [
+        "https://patents.google.com/patent/US6486123B1/en"
+    ]
+
     # Two records may name the same external person, but may not disagree.
     duplicate = works.copy()
     duplicate.at[0, "work_id"] = "work-two"
@@ -1508,6 +1522,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     tables = {
         name: pandas.DataFrame({"value": [1, 2]}) for name in publisher.DATASET_CONFIGS
     }
+    tables["profile_publications"]["context_verified_at"] = ["", "2026-10-25"]
     tables["works"] = pandas.DataFrame(
         {
             "value": [1, 2],
@@ -1600,6 +1615,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert result["mapped_works"] == 1
     assert result["excluded_works"] == 1
+    assert result["reviewed_contexts"] == 1
     assert result["keywords"] == 1
     assert result["detail_keywords"] == 1
     assert result["topic_label_review_version"] == (
