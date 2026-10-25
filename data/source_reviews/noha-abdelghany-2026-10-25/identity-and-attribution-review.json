@@ -1,0 +1,20 @@
+{
+  "confirmed_identity_chain": [
+    "CMU Math profile: Noha Abdelghany, assistant teaching professor, WMU doctorate.",
+    "CMU MCS interview: Cairo University mathematics then WMU doctorate, research in algebraic coding theory.",
+    "WMU institutional repository: Noha Abdelghany, 2020 Mathematics doctorate, first advisor Jay A. Wood.",
+    "2020 publisher deposit: Noha Abdelghany and Jay A. Wood, ORCID 0000-0002-0117-4358 for first author.",
+    "2017 journal publisher PDF: Noha Abdelghany and Nefertiti Megahed, Cairo University Mathematics affiliation."
+  ],
+  "scholar_account_status": "No verifiable Google Scholar profile URL or user ID found; prior Math account audit also held.",
+  "orcid_status": "2020 Crossref deposit supplies ORCID; public ORCID record has zero works, zero employment, zero education, and no researcher URL.",
+  "elgarem_alias_status": "Unresolved. Same Cairo coding topic and shared Megahed/Wood coauthors strongly suggest continuity, but no primary source explicitly connects the surnames; a University of Toronto 2022 MSc story for Noha ElGarem raises a competing identity possibility.",
+  "other_name_collision": "Gulf Coast State College lists a Noha Abdelghany teaching Natural Sciences/Biology in 2026. No identity link to CMU Mathematics; do not import by name.",
+  "metadata_conflicts": [
+    "2017 publisher pagination 115-122 versus Crossref 115-115.",
+    "ElGarem proceedings issue year 2013 versus site posting/citation 2016.",
+    "OpenAlex author page says four works but filtered works query returns three."
+  ],
+  "completeness": "Three confirmed manifestations are a lower bound. 2018-2023 CMU selected list covers one journal article within that interval, not a career. ORCID and OpenAlex cannot establish whole-career completeness.",
+  "incorrect_candidate_rejected": "A 2018 IEEE ISIT entry adjacent to Abdelghany/Wood in a third-party thesis bibliography is by Aragon et al., not Noha."
+}
