@@ -54,7 +54,7 @@ def test_upload_reads_attribution_from_producer_checkout(monkeypatch, tmp_path):
             source_path,
         ]
     )
-    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 427
+    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 437
 
 
 def test_chien_gate_accounts_for_every_frozen_citation_id():
@@ -76,7 +76,7 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "held_duplicate_review": 4,
     }
     assert attribution.held_profiles == {SCHOLAR_ID}
-    assert len(attribution.confirmed) == 427
+    assert len(attribution.confirmed) == 437
     assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 92
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
@@ -94,11 +94,11 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
     } == {pub_id for sid, pub_id in exclusions if sid == SCHOLAR_ID}
     assert Counter(row["review_decision"] for row in final_rows) == {
         "confirmed_retained": 304,
-        "confirmed_retained_candidate": 123,
+        "confirmed_retained_candidate": 133,
         "confirmed_excluded": 37,
         "confirmed_excluded_candidate": 55,
         "still_held": 41,
-        "confirmed_author_context_hold": 12,
+        "confirmed_author_context_hold": 2,
         "confirmed_author_metadata_hold": 9,
         "confirmed_author_duplicate_swap_hold": 1,
     }
@@ -126,6 +126,15 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         row = final_rows[index - 1]
         assert row["review_decision"] == "confirmed_retained_candidate"
         assert (SCHOLAR_ID, row["author_pub_id"]) in attribution.confirmed
+    for index in (116, 292, 328, 359, 394, 406, 424, 426, 446, 451):
+        row = final_rows[index - 1]
+        assert row["review_decision"] == "confirmed_retained_candidate"
+        assert row["decision_origin"] == "typed_context_policy_review"
+        assert (SCHOLAR_ID, row["author_pub_id"]) in attribution.confirmed
+    for index in (425, 525):
+        row = final_rows[index - 1]
+        assert row["review_decision"] == "confirmed_author_context_hold"
+        assert (SCHOLAR_ID, row["author_pub_id"]) not in attribution.confirmed
     for index, retained in ((430, "13"), (540, "202")):
         row = final_rows[index - 1]
         assert row["review_decision"] == "confirmed_excluded_candidate"
