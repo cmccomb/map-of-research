@@ -21,6 +21,7 @@ from .attribution import (
 )
 from .bio_release_gate import (
     BIO_SOURCE_SHA256,
+    bio_scholar_source_changed,
     load_bio_baselines,
     preserve_pending_review_topics,
     validate_bio_release_prewrite,
@@ -1242,6 +1243,7 @@ def _publish_atomic_release(
     continuity_receipt: Mapping[str, Any] | None,
     repair_manifest_path: Path,
     provisional_holds: Mapping[tuple[str, str], Any],
+    prior_profiles: Any,
     require_bio_release: bool = False,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
@@ -1250,7 +1252,10 @@ def _publish_atomic_release(
 
     prior_revision = require_revision(prior_revision)
     bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
-    if require_bio_release and not bio_release:
+    bio_source_changed = bio_scholar_source_changed(
+        source_frame, prior_profiles, registry
+    )
+    if (require_bio_release or bio_source_changed) and not bio_release:
         raise ValueError("Bio release source differs from the frozen snapshot")
     baselines = None
     repair_manifest = None
@@ -1404,8 +1409,9 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
-    if require_bio_release:
-        if manifest["snapshot_sha256"] != BIO_SOURCE_SHA256:
+    frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    if require_bio_release or frozen_bio_source:
+        if not frozen_bio_source:
             raise ValueError("Bio release source differs from the frozen snapshot")
         if prior_revision is None or atomic_release is False:
             raise ValueError("Bio release requires an atomic parent-pinned upload")
@@ -1520,6 +1526,9 @@ def publish_snapshot(
         prior_profiles,
         prior_revision=comparison_revision,
     )
+    bio_source_changed = bio_scholar_source_changed(frame, prior_profiles, registry)
+    if bio_source_changed and not frozen_bio_source:
+        raise ValueError("Changed Bio Scholar source needs the reviewed Bio snapshot")
     if comparison_revision != prior_revision:
         continuity_receipt["current_hub_revision"] = prior_revision
     tables["works"] = add_publication_keywords(tables["works"])
@@ -1575,6 +1584,7 @@ def publish_snapshot(
             continuity_receipt=continuity_receipt,
             repair_manifest_path=repair_manifest_path,
             provisional_holds=provisional_holds,
+            prior_profiles=prior_profiles,
             require_bio_release=require_bio_release,
         )
         dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)

@@ -121,6 +121,31 @@ def _bio_edges(artifact: Mapping[str, Any], bio_ids: set[str]) -> set[tuple[str,
     return edges
 
 
+def bio_scholar_source_changed(
+    source_rows: Any, prior_profiles: Any, registry: Any
+) -> bool:
+    """Detect a changed Bio Scholar cohort independently of a release flag."""
+
+    bio_ids = {
+        item.person_id
+        for item in registry.memberships
+        if item.included and item.department_id == "bio"
+    }
+
+    def records(rows: Any) -> dict[tuple[str, ...], str]:
+        selected = [
+            row
+            for row in _rows(rows)
+            if row.get("person_id") in bio_ids and row.get("source_type") == "scholar"
+        ]
+        indexed = _indexed(selected, IDENTITY)
+        if any(not row.get("source_record_json") for row in indexed.values()):
+            raise ValueError("Bio Scholar baseline lacks raw source records")
+        return {key: str(row["source_record_json"]) for key, row in indexed.items()}
+
+    return records(source_rows) != records(prior_profiles)
+
+
 def load_bio_baselines(*, repo_id: str, prior_revision: str, hf_token: str) -> dict:
     """Read only immutable Bio29 and repaired-release source/map files."""
 

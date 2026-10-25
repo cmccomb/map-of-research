@@ -344,7 +344,10 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (pandas.DataFrame({"scholar_id": []}), {}),
+        lambda *args, **kwargs: (
+            pandas.DataFrame({"scholar_id": []}),
+            {"snapshot_sha256": "test-snapshot"},
+        ),
     )
     monkeypatch.setattr(publisher, "load_exclusions", lambda path: {key: object()})
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)

@@ -1623,6 +1623,9 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     atomic,
 ) -> None:
     bio_intent = pinned and atomic and not region_override and not missing_prior
+    snapshot_digest = {
+        "value": publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
+    }
     frame = pandas.DataFrame(
         {
             "scholar_id": ["one", "two", "one"],
@@ -1679,9 +1682,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             frame,
             {
                 "created_at_utc": "2026-07-17T12:00:00+00:00",
-                "snapshot_sha256": (
-                    publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
-                ),
+                "snapshot_sha256": snapshot_digest["value"],
             },
         ),
     )
@@ -1850,6 +1851,23 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             )
         assert not atomic_calls
         return
+    if bio_intent:
+        snapshot_digest["value"] = "drifted-bio-source"
+        publish_options["require_bio_release"] = False
+        monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: True)
+        with pytest.raises(ValueError, match="Changed Bio Scholar source"):
+            publisher.publish_snapshot(
+                tmp_path / "snapshot.parquet",
+                tmp_path / "manifest.json",
+                **publish_options,
+            )
+        assert not atomic_calls
+        baseline_checks.clear()
+        published_revisions.clear()
+        published_fields.clear()
+        observed_layouts.clear()
+        snapshot_digest["value"] = publisher.BIO_SOURCE_SHA256
+        publish_options["require_bio_release"] = True
     result = publisher.publish_snapshot(
         tmp_path / "snapshot.parquet",
         tmp_path / "manifest.json",
@@ -1990,7 +2008,10 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (frame, {"created_at_utc": "now"}),
+        lambda *args, **kwargs: (
+            frame,
+            {"created_at_utc": "now", "snapshot_sha256": "test-snapshot"},
+        ),
     )
     monkeypatch.setattr(publisher, "add_embeddings", lambda *args, **kwargs: (frame, 0))
     monkeypatch.setattr(publisher, "build_dataset_tables", lambda *args: tables)
@@ -2237,7 +2258,10 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (frame, {"created_at_utc": "now"}),
+        lambda *args, **kwargs: (
+            frame,
+            {"created_at_utc": "now", "snapshot_sha256": "test-snapshot"},
+        ),
     )
     monkeypatch.setattr(
         publisher,
@@ -2344,7 +2368,13 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (frame, {"created_at_utc": "2026-10-25T00:00:00Z"}),
+        lambda *args, **kwargs: (
+            frame,
+            {
+                "created_at_utc": "2026-10-25T00:00:00Z",
+                "snapshot_sha256": "test-snapshot",
+            },
+        ),
     )
 
     class BeforeUpload(Exception):
@@ -2398,7 +2428,10 @@ def test_breivik_gate_blocks_current_hold_before_enrichment(
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
-        lambda *args, **kwargs: (frame, {"created_at_utc": "now"}),
+        lambda *args, **kwargs: (
+            frame,
+            {"created_at_utc": "now", "snapshot_sha256": "test-snapshot"},
+        ),
     )
     monkeypatch.setattr(
         publisher,

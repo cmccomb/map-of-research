@@ -454,3 +454,42 @@ def test_bio_helpers_reject_duplicate_identity_and_ignore_noncollaboration() -> 
         )
         == set()
     )
+
+
+def test_bio_source_diff_ignores_other_colleges_and_detects_exact_raw_change() -> None:
+    registry = SimpleNamespace(
+        memberships=[
+            SimpleNamespace(person_id="bio-person", included=True, department_id="bio"),
+            SimpleNamespace(person_id="other", included=True, department_id="math"),
+        ]
+    )
+    prior = [
+        {
+            "person_id": "bio-person",
+            "scholar_id": "bio-scholar",
+            "author_pub_id": "bio-scholar:one",
+            "source_type": "scholar",
+            "source_record_json": '{"title":"one"}',
+        }
+    ]
+    assert not gate.bio_scholar_source_changed(prior, prior, registry)
+    unrelated = [
+        *prior,
+        {
+            "person_id": "other",
+            "scholar_id": "math-scholar",
+            "author_pub_id": "math-scholar:one",
+            "source_type": "scholar",
+            "source_record_json": '{"title":"math"}',
+        },
+    ]
+    assert not gate.bio_scholar_source_changed(unrelated, prior, registry)
+    changed = [dict(prior[0], source_record_json='{"title":"changed"}')]
+    assert gate.bio_scholar_source_changed(changed, prior, registry)
+    assert gate.bio_scholar_source_changed(
+        prior + [dict(prior[0], author_pub_id="bio-scholar:two")], prior, registry
+    )
+    with pytest.raises(ValueError, match="lacks raw source records"):
+        gate.bio_scholar_source_changed(
+            prior, [dict(prior[0], source_record_json="")], registry
+        )
