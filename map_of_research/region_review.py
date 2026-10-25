@@ -41,6 +41,8 @@ class ReviewedRegionDecision:
     saved_scholar_url: str
     reason: str
     reviewed_at: str
+    reason_code: str = ""
+    output_type: str = ""
 
     @property
     def observation_identity(self) -> tuple[str, str, str, str]:
