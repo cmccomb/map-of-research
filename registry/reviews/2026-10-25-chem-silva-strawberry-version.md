@@ -1,0 +1,18 @@
+# Gloria Silva strawberry preprint and journal version
+
+Reviewed 2026-10-25 against the complete 41-row Scholar capture
+`vF51LxIAAAAJ`, whose raw cache SHA-256 remains
+`01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522`.
+
+| Scholar row | Source observation | Decision |
+| --- | --- | --- |
+| 33 `vF51LxIAAAAJ:dhFuZR0502QC` | 2020 bioRxiv, *From farm to pharmacy: strawberry-enabled oral delivery of protein drugs* | Remove the provisional hold and record `preprint_of` DOI `10.1073/pnas.2207829119`. |
+| 18 `vF51LxIAAAAJ:7PzlFSSx8tAC` | 2022 *PNAS*, *The strawberry-derived permeation enhancer pelargonidin enables oral protein delivery* | Record `version_of_record` for the same DOI. |
+| `zKKBwB4AAAAJ:hkOj_22Ku90C` | Kathryn Whitehead's 2020 Scholar observation of the same bioRxiv preprint | Record the same title/year-guarded `preprint_of` DOI alias. |
+| `zKKBwB4AAAAJ:EkHepimYqZsC` | Kathryn Whitehead's 2022 Scholar observation of the same *PNAS* article | Record the same title/year-guarded `version_of_record` DOI alias. |
+
+The [bioRxiv source API](https://api.biorxiv.org/details/biorxiv/10.1101/2020.03.11.987461) supplies the original DOI, date, full 17-person author list, and abstract; it names both Gloria L. Silva and Kathryn A. Whitehead. The [PNAS version of record](https://www.pnas.org/doi/10.1073/pnas.2207829119) and [publisher-deposited Crossref record](https://api.crossref.org/works/10.1073/pnas.2207829119) name the same 17 people, with changed order. Both abstracts report the same strawberry/pelargonidin oral insulin experiment, including over 100% relative bioactivity, reversal within two hours, and one month of dosing without detected toxicity. [PubMed](https://pubmed.ncbi.nlm.nih.gov/35943988/) independently lists both people on the 2022 article. The bioRxiv API does not supply an explicit published-version DOI; the version relationship is a reviewed inference from the complete authorship and distinctive study results, not a publisher-provided relation field.
+
+The four exact, title/year-guarded aliases retain all four raw Scholar observations and join them to one published work. Silva's complete raw count remains 41; her other provisional hold, row 41 `vF51LxIAAAAJ:M3ejUd6NZC8C`, remains in place. The source-bound hold and release manifests now agree on its sole held ID. Whitehead's older Engineering source cache has 108 rows and is not certified as a complete visible profile; this review makes no such claim about her capture.
+
+A bounded no-upload replay against source snapshot SHA-256 `5b940614b2238c124bc194e944da277ee2221df27a11eedca6693af020ee86fb` found 41 Silva raw profile rows before and after, 41 to 40 normalized Silva works, 39 map-eligible works both ways, and 39 to 40 eligible Silva source authorships. A second four-observation replay included Whitehead's exact two source rows: two prior title/year works became one DOI work, with all four raw observations preserved and eligible source authorships rising from three to four as Silva's preprint hold lifted. The joined work retains Silva and Whitehead, the Chemistry and Chemical Engineering departments, and both MCS and Engineering school IDs. Both old work IDs are visible at Hub revision `bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd`: the 2020 preprint `work-9d74f28893be7b6a5bdf387a03a95a8299454f084b5f74d0f2826112246d8171` and 2022 article `work-86fddafacf0c74d54311d0160e512341bf66860c22a05f174fce83798b40143a`. Both would be replaced by DOI work ID `work-0c60836680349cc8da767f0cfb7de8b9ad4b78551a9cfd3dd2b3da38e34f77e7`. This requires the shared global work-ID/layout continuity and atomic-publisher gate before any upload. This review is a draft and changes no live map.
