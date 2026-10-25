@@ -1855,8 +1855,113 @@ OTHER_PRIMARY_ID_GUARDS[857] = "bC4aq-4AAAAJ:KUbvn5osdkgC"
 ECS_OTHER_PERSON_VENUE = "Electrochemical Society Meeting Abstracts PBFC-2, 33-33, 2006"
 ECS_OTHER_PERSON_AUTHORS = "E Cho, M Prasanna, HJ Kim, TH Lim, IH Oh, SA Hong"
 
-# Original-journal author lists for these exact outputs contain no H. J. Kim.
+# The original Korean Society of Applied Entomology pages for these exact
+# articles spell the H. J. Kim author's name 김현주. The Korean national
+# citation index assigns that author to the Yeongnam crop-research station;
+# a Korean academic repository romanizes the same crop-research author as
+# Hyun-Joo Kim. These are exact article identifications, not exclusions from
+# subject area or from initials alone.
+ENTOMOLOGY_OTHER_PERSON_PRIMARY = {
+    286: (
+        "Effects of food combinations of leguminous seeds on nymphal "
+        "development, adult longevity and oviposition of bean bug, "
+        "Riptortus clavatus Thunberg",
+        2004,
+        "Hyun-Joo Kim (김현주)",
+        "",
+        "https://entomology2.or.kr/journal/article.php?Array=&code=10874",
+        "Korean Society of Applied Entomology original article",
+        "The society's exact volume 43 issue 2, pages 123–127 article "
+        "names its Kim coauthor 김현주; the Korean national citation index "
+        "assigns that author to the Yeongnam crop-research station.",
+    ),
+    341: (
+        "Insecticide susceptibility in the different larva of tabacco "
+        "cutworm, Spodoptera litura Fabricius (Lepidoptera: Noctuidae) "
+        "collected in the soybean fields of Milyang, Korea",
+        2003,
+        "Hyun-Joo Kim (김현주)",
+        "",
+        "https://www.entomology2.or.kr/journal/article.php?Array=&code=10834",
+        "Korean Society of Applied Entomology original article",
+        "The society's exact volume 42 issue 3, pages 225–231 article "
+        "names its Kim coauthor 김현주; the Korean national citation index "
+        "assigns that author to the Yeongnam agricultural experiment station.",
+    ),
+}
+OTHER_PRIMARY.update(ENTOMOLOGY_OTHER_PERSON_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        286: "bC4aq-4AAAAJ:9tXw7Op4-u0C",
+        341: "bC4aq-4AAAAJ:TiIbgCYny7sC",
+    }
+)
+ENTOMOLOGY_OTHER_PERSON_VENUES = {
+    286: "Korean Journal of Applied Entomology 43 (2), 2004",
+    341: "Korean Journal of Applied Entomology 42 (3), 2003",
+}
+ENTOMOLOGY_OTHER_PERSON_AUTHORS = {
+    286: "SD Bae, HJ Kim, HJ Cho, JK Park, JK Jung",
+    341: "SD Bae, HJ Kim, BR Choi, YH Song",
+}
+
+# The corresponding author's own CAU energy-lab bibliography expands the
+# H. J. Kim on this exact Elsevier article to Hyoung-Juhn Kim. Unlike a
+# same-topic team inference, the entry identifies this work by title, journal,
+# year, volume, and pages, with the same eight-author order.
+DECAL_OTHER_PERSON_PRIMARY = {
+    356: (
+        "Fabrication of MEA with hydrocarbon based membranes using low "
+        "temperature decal method for DMFC",
+        2010,
+        "Hyoung-Juhn Kim",
+        "10.1016/j.ijhydene.2010.03.023",
+        "https://cauenpl.wixsite.com/sookilkimlab/general-5",
+        "Original coauthor lab bibliography with expanded exact-work byline",
+        "Soo-Kil Kim's CAU energy-lab bibliography identifies the exact "
+        "International Journal of Hydrogen Energy 35:5647–5655 article "
+        "and expands its fourth author to Hyoung-Juhn Kim, not CMU "
+        "Chemistry professor Hyung J. Kim.",
+    ),
+}
+OTHER_PRIMARY.update(DECAL_OTHER_PERSON_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS[356] = "bC4aq-4AAAAJ:bz8QjSJIRt4C"
+DECAL_OTHER_PERSON_VENUE = (
+    "International journal of hydrogen energy 35 (11), 5647-5655, 2010"
+)
+DECAL_OTHER_PERSON_AUTHORS = (
+    "NN Krishnan, J Prabhuram, YT Hong, HJ Kim, K Yoon, HY Ha, TH Lim, ..."
+)
+
+# Complete original-journal author lists for these exact outputs do not contain
+# CMU professor Hyung J. Kim, even when another author's initials overlap.
 ABSENT_AUTHOR_PRIMARY = {
+    394: (
+        "bC4aq-4AAAAJ:ndLnGcHYRF0C",
+        "Establishing boundary conditions considering influence factors of "
+        "the room equipped with a ceiling radiant cooling panel",
+        2020,
+        "10.3390/en13071684",
+        "https://www.mdpi.com/1996-1073/13/7/1684",
+        "MDPI original complete author list",
+        "The original Energies 13(7):1684 article names all six authors "
+        "in full: Sang-Hoon Park, Dong-Woo Kim, Goo-Sang Joe, "
+        "Seong-Ryong Ryu, Myoung-Souk Yeo, and Kwang-Woo Kim. "
+        "CMU Chemistry professor Hyung J. Kim is absent from its byline.",
+    ),
+    396: (
+        "bC4aq-4AAAAJ:BUYA1_V_uYcC",
+        "Analysis on the post-irradiation examination of the HANARO "
+        "miniplate-1 irradiation test for kijang research reactor",
+        2017,
+        "10.1016/j.net.2017.04.003",
+        "https://www.kns.org/uploads/TOC2.pdf",
+        "Korean Nuclear Society original journal table of contents",
+        "The society's complete full-name byline for the exact Nuclear "
+        "Engineering and Technology 49(5):1044–1062 article identifies "
+        "its fifth author as Heemoon Kim and eleventh as Hyun Jung Kim. "
+        "CMU Chemistry professor Hyung J. Kim is absent.",
+    ),
     90: (
         "bC4aq-4AAAAJ:kuK5TVdYjLIC",
         "Reduced transforming growth factor-beta type II receptor (TGF-beta "
@@ -1918,6 +2023,12 @@ ABSENT_AUTHOR_PRIMARY = {
 ABSENT_AUTHOR_VENUES = {
     203: "Astroparticle physics 116, 102391, 2020",
     403: "Minerva anestesiologica 78 (5), 521-526, 2012",
+    394: "Energies 13 (7), 1684, 2020",
+    396: "Nuclear Engineering and Technology 49 (5), 1044-1062, 2017",
+}
+ABSENT_AUTHOR_AUTHORS = {
+    394: "SH Park, DW Kim, GS Joe, SR Ryu, MS Yeo, KW Kim",
+    396: "JM Park, YW Tahk, YJ Jeong, KH Lee, H Kim, YH Jung, BO Yoo, YG Jin, ...",
 }
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
@@ -3417,6 +3528,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in ABSENT_AUTHOR_VENUES
                     and row["venue"] != ABSENT_AUTHOR_VENUES[index]
                 )
+                or (
+                    index in ABSENT_AUTHOR_AUTHORS
+                    and row["authors"] != ABSENT_AUTHOR_AUTHORS[index]
+                )
             ):
                 raise ValueError(
                     f"Complete-author match changed at capture row {index}"
@@ -3484,6 +3599,21 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or (
                     index in FOLLOWUP_KNU_DUPLICATE_AUTHORS
                     and row["authors"] != FOLLOWUP_KNU_DUPLICATE_AUTHORS[index]
+                )
+                or (
+                    index in ENTOMOLOGY_OTHER_PERSON_VENUES
+                    and row["venue"] != ENTOMOLOGY_OTHER_PERSON_VENUES[index]
+                )
+                or (
+                    index in ENTOMOLOGY_OTHER_PERSON_AUTHORS
+                    and row["authors"] != ENTOMOLOGY_OTHER_PERSON_AUTHORS[index]
+                )
+                or (
+                    index == 356
+                    and (
+                        row["venue"] != DECAL_OTHER_PERSON_VENUE
+                        or row["authors"] != DECAL_OTHER_PERSON_AUTHORS
+                    )
                 )
                 or (
                     index in COSINE_FULLNAME_VENUES
@@ -3875,17 +4005,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 127,
-        "proposed_no_target_author_primary_work": 4,
+        "proposed_other_person_primary_work": 130,
+        "proposed_no_target_author_primary_work": 6,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 309,
+        "unresolved_attribution_hold": 304,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 474 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 479 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
