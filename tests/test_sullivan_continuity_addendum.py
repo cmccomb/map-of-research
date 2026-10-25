@@ -16,6 +16,14 @@ MANIFEST = ROOT / "data/curated/sullivan-continuity-addendum-bb88.json"
 ROWS = ROOT / "tests/fixtures/sullivan_continuity_addendum_rows.json"
 
 
+def test_upload_passes_source_checkout_addendum_path():
+    workflow = (ROOT / ".github/workflows/upload.yml").read_text(encoding="utf-8")
+    assert (
+        "--sullivan-continuity-addendum "
+        "source/data/curated/sullivan-continuity-addendum-bb88.json"
+    ) in workflow
+
+
 @pytest.fixture
 def inputs():
     return {
