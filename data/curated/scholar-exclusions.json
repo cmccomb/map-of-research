@@ -6976,6 +6976,22 @@
       "reason": "Undated generic 'SUPPLEMENTARY METHODS' file with the same Gunderson-Kaneda-Tsujikawa-Nguyen-Affara-Ruffell author sequence as the retained 2016 Cancer Discovery article IXO9K4UAAAAJ:5nxA0vEk-isC. The publisher identifies Supplementary Methods as ancillary material for that article.",
       "evidence_url": "https://aacrjournals.org/cancerdiscovery/article/6/3/270/5746/Bruton-Tyrosine-Kinase-Dependent-Immune-Cell-Cross",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "lKAvvmoAAAAJ",
+      "author_pub_id": "lKAvvmoAAAAJ:ZeXyd9-uunAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Truncated copy of the retained 2019 Frontiers in Oncology article, with its venue field spliced to a distinct 2024 IntechOpen chapter that does not list Naik as an author.",
+      "evidence_url": "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2019.00323/full",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "lKAvvmoAAAAJ",
+      "author_pub_id": "lKAvvmoAAAAJ:YsMSGLbcyi4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Incomplete title-only copy of the retained 2014 PLOS Computational Biology article by Naik, Rozman, and Belic, DOI 10.1371/journal.pcbi.1003993.",
+      "evidence_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003993",
+      "verified_at": "2026-10-25"
     }
   ]
 }
