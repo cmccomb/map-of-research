@@ -592,6 +592,7 @@ def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
             people_path=tmp_path / "people.csv",
             memberships_path=tmp_path / "memberships.csv",
             departments_path=tmp_path / "departments.csv",
@@ -1494,55 +1495,6 @@ def test_map_catalog_ignores_excluded_memberships_and_unrostered_people() -> Non
     assert artifact["faculty_count"] == 2
 
 
-def test_map_artifact_upload_writes_manifest_and_requires_commit(monkeypatch) -> None:
-    uploads = []
-
-    class HfApi:
-        def __init__(self, token):
-            assert token == "token"
-
-        def upload_folder(self, **kwargs):
-            folder = kwargs["folder_path"]
-            uploads.append(
-                (
-                    kwargs,
-                    json.loads((folder / publisher.MAP_ARTIFACT_NAME).read_text()),
-                    json.loads((folder / "manifest.json").read_text()),
-                )
-            )
-            return SimpleNamespace(oid="artifact-commit")
-
-    monkeypatch.setitem(sys.modules, "huggingface_hub", SimpleNamespace(HfApi=HfApi))
-    commit = publisher._upload_map_artifacts(
-        work_frame(),
-        registry(),
-        hf_token="token",
-        generated_at_utc="2026-07-17T12:00:00+00:00",
-        dataset_commits={"works": "works-commit"},
-        continuity_receipt={"prior_revision": "a" * 40},
-    )
-    assert commit == "artifact-commit"
-    assert uploads[0][1]["point_count"] == 1
-    assert uploads[0][2]["dataset_commits"] == {"works": "works-commit"}
-    assert uploads[0][2]["region_continuity"] == {"prior_revision": "a" * 40}
-    assert uploads[0][2]["topic_label_review_version"] == (
-        publisher.TOPIC_LABEL_REVIEW_VERSION
-    )
-    assert uploads[0][2]["artifact"]["keyword_count"] == 2
-    assert uploads[0][2]["artifact"]["school_count"] == 1
-    assert uploads[0][2]["artifact"]["keyword_levels"][1]["keyword_count"] == 1
-
-    HfApi.upload_folder = lambda self, **kwargs: SimpleNamespace()
-    with pytest.raises(RuntimeError, match="did not return a commit"):
-        publisher._upload_map_artifacts(
-            work_frame(),
-            registry(),
-            hf_token="token",
-            generated_at_utc="2026-07-17T12:00:00+00:00",
-            dataset_commits={},
-        )
-
-
 def test_staged_map_files_bind_dataset_to_same_revision(tmp_path) -> None:
     artifact_path, manifest_path, artifact = publisher._write_map_artifacts(
         work_frame(),
@@ -1557,6 +1509,18 @@ def test_staged_map_files_bind_dataset_to_same_revision(tmp_path) -> None:
     assert manifest["dataset_commits"] == {}
     assert manifest["dataset_revision_policy"] == "same_revision_as_map_manifest"
     assert manifest["region_continuity"]["prior_revision"] == "a" * 40
+
+    _, prior_manifest_path, _ = publisher._write_map_artifacts(
+        work_frame(),
+        registry(),
+        maps_dir=tmp_path / "legacy-maps",
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        dataset_commits={"works": "legacy-commit"},
+    )
+    prior_manifest = json.loads(prior_manifest_path.read_text())
+    assert prior_manifest["dataset_commits"] == {"works": "legacy-commit"}
+    assert "region_continuity" not in prior_manifest
+    assert "dataset_revision_policy" not in prior_manifest
 
 
 def test_hub_dataset_casts_list_and_embedding_features(monkeypatch) -> None:
@@ -1720,11 +1684,6 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             detail_keyword_id=["keyword-01-01", ""],
         ),
     )
-    monkeypatch.setattr(
-        publisher,
-        "_upload_map_artifacts",
-        lambda *args, **kwargs: "artifact-commit",
-    )
     atomic_calls = []
     monkeypatch.setattr(
         publisher,
@@ -1817,6 +1776,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "hf_token": "token",
         "corrections_path": corrections_path,
         "prior_revision": "a" * 40 if pinned else None,
+        "atomic_intent_sink": lambda intent: None,
         "require_bio_release": bio_intent,
     }
     publish_options["atomic_release"] = True
@@ -2169,6 +2129,7 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         tmp_path / "manifest.json",
         hf_token="token",
         prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
         corrections_path=corrections_path,
         profile_releases_path=releases_path,
         source_cache_dir=cache_dir,
@@ -2229,6 +2190,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
         )
 
 
@@ -2352,6 +2314,7 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
             corrections_path=corrections_path,
             doi_aliases_path=doi_aliases_path,
         )
@@ -2401,6 +2364,7 @@ def test_breivik_gate_blocks_current_hold_before_enrichment(
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
         )
 
 

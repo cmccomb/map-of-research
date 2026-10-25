@@ -218,6 +218,28 @@ def test_unpinned_publish_cannot_reach_any_hub_write(
         )
 
 
+def test_pinned_publish_without_intent_sink_cannot_reach_hub(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(
+        publisher,
+        "_require_current_dataset_revision",
+        lambda **kwargs: pytest.fail("Hub revision probe reached"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_publish_atomic_release",
+        lambda *args, **kwargs: pytest.fail("Hub write reached"),
+    )
+    with pytest.raises(ValueError, match="durable prewrite intent sink"):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
+        )
+
+
 def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=False):
     readme = tmp_path / "parent-README.md"
     readme.write_text("---\nlicense: mit\n---\n", encoding="utf-8")
@@ -296,6 +318,28 @@ def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=Fals
     return calls, tables, manifest
 
 
+def test_direct_atomic_stage_without_intent_sink_stops_before_hub(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    with pytest.raises(ValueError, match="durable prewrite intent sink"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "other"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+        )
+    assert calls == []
+
+
 @pytest.mark.parametrize("bio", [False, True])
 def test_atomic_publisher_stages_all_files_and_runs_gate_before_commit(
     monkeypatch, tmp_path, bio
@@ -310,6 +354,7 @@ def test_atomic_publisher_stages_all_files_and_runs_gate_before_commit(
         },
         hf_token="token",
         prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
         generated_at_utc="2026-10-25T00:00:00+00:00",
         continuity_receipt={"prior_revision": "a" * 40},
         repair_manifest_path=manifest,
@@ -340,6 +385,7 @@ def test_atomic_bio_staging_requires_manifest_only_for_pending_parent(
             source_manifest={"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
             generated_at_utc="2026-10-25T00:00:00+00:00",
             continuity_receipt={"prior_revision": "a" * 40},
             repair_manifest_path=manifest,
@@ -361,6 +407,7 @@ def test_atomic_bio_staging_reads_pending_manifest_before_gate(
         source_manifest={"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
         hf_token="token",
         prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
         generated_at_utc="2026-10-25T00:00:00+00:00",
         continuity_receipt={"prior_revision": "a" * 40},
         repair_manifest_path=manifest,
@@ -384,6 +431,7 @@ def test_atomic_generic_staging_rejects_unclean_region_gate_before_commit(
             source_manifest={"snapshot_sha256": "other"},
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
             generated_at_utc="2026-10-25T00:00:00+00:00",
             continuity_receipt={
                 "prior_revision": "a" * 40,
@@ -429,6 +477,7 @@ def test_bio_intent_or_changed_cohort_rejects_drift_before_hub_stage(
             source_manifest={"snapshot_sha256": "drifted-source"},
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
             generated_at_utc="2026-10-25T00:00:00+00:00",
             continuity_receipt={"prior_revision": "a" * 40},
             repair_manifest_path=manifest,
@@ -504,6 +553,7 @@ def test_publish_bio_intent_fails_before_enrichment_or_hub_write(
             hf_token="token",
             prior_revision=prior_revision,
             atomic_release=atomic_release,
+            atomic_intent_sink=lambda intent: None,
             require_bio_release=require_bio_release,
         )
     assert calls == []

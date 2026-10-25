@@ -87,6 +87,8 @@ def commit_atomic_release(
             "Atomic release must stage exactly four configs, both map files, "
             "and README.md"
         )
+    if intent_sink is None:
+        raise ValueError("Atomic release requires a durable prewrite intent sink")
     for name, path in files.items():
         if not path.is_file() or not path.stat().st_size:
             raise ValueError(f"Missing or empty staged release file: {name}")
@@ -118,8 +120,7 @@ def commit_atomic_release(
         "prewrite_gate": dict(prewrite_gate),
         "release_context": dict(intent_metadata or {}),
     }
-    if intent_sink is not None:
-        intent_sink(intent)
+    intent_sink(intent)
 
     def reconciliation_error(
         error: Exception,
@@ -185,23 +186,22 @@ def commit_atomic_release(
             outcome="accepted_unverified",
             returned_oid=returned_oid,
         ) from error
-    if intent_sink is not None:
-        try:
-            intent_sink(
-                {
-                    **intent,
-                    "intent_status": "commit_returned_unverified",
-                    "artifact_revision": revision,
-                }
-            )
-        except Exception as error:
-            raise reconciliation_error(
-                error,
-                stage="persist_commit_oid",
-                outcome="accepted_unverified",
-                revision=revision,
-                returned_oid=returned_oid,
-            ) from error
+    try:
+        intent_sink(
+            {
+                **intent,
+                "intent_status": "commit_returned_unverified",
+                "artifact_revision": revision,
+            }
+        )
+    except Exception as error:
+        raise reconciliation_error(
+            error,
+            stage="persist_commit_oid",
+            outcome="accepted_unverified",
+            revision=revision,
+            returned_oid=returned_oid,
+        ) from error
     hosted_hashes: dict[str, str] = {}
     try:
         for name in sorted(files):

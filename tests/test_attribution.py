@@ -368,4 +368,5 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
             tmp_path / "manifest.json",
             hf_token="token",
             prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
         )

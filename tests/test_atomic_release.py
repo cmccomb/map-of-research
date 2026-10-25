@@ -94,6 +94,11 @@ def _hub(
 
 
 def _commit(files, *, intent_sink=None):
+    if intent_sink is None:
+
+        def intent_sink(intent):
+            pass
+
     return commit_atomic_release(
         files,
         prewrite_gate={"status": "pass", "source_snapshot_sha256": "frozen"},
@@ -160,8 +165,26 @@ def test_atomic_release_stops_before_any_write_on_gate_or_parent_failure(
             hf_token="token",
             prior_revision="a" * 40,
             commit_message="Blocked",
+            intent_sink=lambda intent: None,
         )
     assert not any(entry[0] == "commit" for entry in calls)
+
+
+def test_atomic_release_rejects_missing_intent_sink_before_hub_call(
+    monkeypatch, tmp_path
+) -> None:
+    files = _files(tmp_path)
+    calls = _hub(monkeypatch, tmp_path)
+    with pytest.raises(ValueError, match="durable prewrite intent sink"):
+        commit_atomic_release(
+            files,
+            prewrite_gate={"status": "pass"},
+            repo_id="test/dataset",
+            hf_token="token",
+            prior_revision="a" * 40,
+            commit_message="Unsafe direct call",
+        )
+    assert calls == []
 
 
 def test_atomic_release_stops_if_prewrite_intent_cannot_persist(

@@ -1111,41 +1111,6 @@ def _write_map_artifacts(
     return artifact_path, manifest_path, artifact
 
 
-def _upload_map_artifacts(
-    works: Any,
-    registry: Registry,
-    *,
-    hf_token: str,
-    generated_at_utc: str,
-    dataset_commits: Mapping[str, str],
-    continuity_receipt: Mapping[str, Any] | None = None,
-) -> str:
-    from huggingface_hub import HfApi
-
-    with tempfile.TemporaryDirectory(prefix="map-of-research-") as temporary_dir:
-        maps_dir = Path(temporary_dir)
-        _write_map_artifacts(
-            works,
-            registry,
-            maps_dir=maps_dir,
-            generated_at_utc=generated_at_utc,
-            dataset_commits=dataset_commits,
-            continuity_receipt=continuity_receipt,
-        )
-        commit = HfApi(token=hf_token).upload_folder(
-            repo_id=REPO_ID,
-            repo_type="dataset",
-            folder_path=maps_dir,
-            path_in_repo="maps",
-            delete_patterns="*.json",
-            commit_message="Publish unified research map artifact",
-        )
-    commit_id = getattr(commit, "oid", None)
-    if not commit_id:
-        raise RuntimeError("Map artifact upload did not return a commit")
-    return str(commit_id)
-
-
 def _to_hub_dataset(frame: Any) -> Any:
     import datasets
 
@@ -1253,6 +1218,8 @@ def _publish_atomic_release(
 
     from huggingface_hub import hf_hub_download
 
+    if atomic_intent_sink is None:
+        raise ValueError("Live publish requires a durable prewrite intent sink")
     prior_revision = require_revision(prior_revision)
     bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
     bio_source_changed = bio_scholar_source_changed(
@@ -1405,6 +1372,8 @@ def publish_snapshot(
     require_revision(prior_revision)
     if atomic_release is False:
         raise ValueError("Live publish requires one atomic Hub commit")
+    if atomic_intent_sink is None:
+        raise ValueError("Live publish requires a durable prewrite intent sink")
     _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
