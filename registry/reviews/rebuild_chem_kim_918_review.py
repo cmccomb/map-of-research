@@ -1852,9 +1852,7 @@ ECS_OTHER_PERSON_PRIMARY = {
 }
 OTHER_PRIMARY.update(ECS_OTHER_PERSON_PRIMARY)
 OTHER_PRIMARY_ID_GUARDS[857] = "bC4aq-4AAAAJ:KUbvn5osdkgC"
-ECS_OTHER_PERSON_VENUE = (
-    "Electrochemical Society Meeting Abstracts PBFC-2, 33-33, 2006"
-)
+ECS_OTHER_PERSON_VENUE = "Electrochemical Society Meeting Abstracts PBFC-2, 33-33, 2006"
 ECS_OTHER_PERSON_AUTHORS = "E Cho, M Prasanna, HJ Kim, TH Lim, IH Oh, SA Hong"
 
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
@@ -3796,10 +3794,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in CMU_NEXT_PUBLISHER_VENUES
                     and row["venue"] != CMU_NEXT_PUBLISHER_VENUES[index]
                 )
-                or (
-                    index == 798
-                    and row["authors"] != CMU_ECS_MEETING_AUTHORS
-                )
+                or (index == 798 and row["authors"] != CMU_ECS_MEETING_AUTHORS)
             ):
                 raise ValueError(f"CMU primary match changed at capture row {index}")
             if index in CMU_GROUP_PUBLISHER_DOI_GUARDS:
