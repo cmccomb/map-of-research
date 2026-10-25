@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 1159
+    assert len(exclusions) == 1165
     assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
@@ -43,7 +43,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
-    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 430
+    assert sum(key[0] == "bC4aq-4AAAAJ" for key in exclusions) == 436
     assert sum(key[0] == "0e1jwkkAAAAJ" for key in exclusions) == 23
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
@@ -108,7 +108,7 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
     assert len({row["author_pub_id"] for row in rows}) == 918
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     proposed = [row for row in rows if row["status"].startswith("proposed_")]
-    assert len(proposed) == 422
+    assert len(proposed) == 428
     for row in rows:
         key = ("bC4aq-4AAAAJ", row["author_pub_id"])
         if row["status"].startswith("proposed_") or row["status"] == "already_excluded":
@@ -128,9 +128,21 @@ def test_kim_full_capture_screen_only_excludes_exact_reviewed_ids() -> None:
     primary = [
         row for row in proposed if row["status"] == "proposed_other_person_primary_work"
     ]
-    assert len(primary) == 80
+    assert len(primary) == 86
     assert all(row["evidence_url"].startswith("https://") for row in primary)
     by_index = {int(row["capture_index"]): row for row in rows}
+    assert {
+        index: (by_index[index]["author_pub_id"], by_index[index]["matched_doi"])
+        for index in (407, 446, 457, 556, 580, 654)
+        if by_index[index]["status"] == "proposed_other_person_primary_work"
+    } == {
+        407: ("bC4aq-4AAAAJ:1qzjygNMrQYC", "10.1109/PERSER.2006.1652205"),
+        446: ("bC4aq-4AAAAJ:HtEfBTGE9r8C", "10.1007/s10832-006-6290-8"),
+        457: ("bC4aq-4AAAAJ:uc_IGeMz5qoC", "10.1080/743817676"),
+        556: ("bC4aq-4AAAAJ:epqYDVWIO7EC", "10.1080/10584580108012813"),
+        580: ("bC4aq-4AAAAJ:yB1At4FlUx8C", "10.1080/743817664"),
+        654: ("bC4aq-4AAAAJ:EkHepimYqZsC", "10.1109/ICSENS.2003.1279104"),
+    }
     assert {
         index: (
             by_index[index]["author_pub_id"],
