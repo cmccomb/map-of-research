@@ -19,11 +19,22 @@ All 23 website research entries match all 23 results in the captured
 [arXiv author query](https://export.arxiv.org/api/query?search_query=au%3A%22Neumayer%2C_Robin%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending).
 These are source correspondences, not 23 additional works.
 
+The [31-row genre and DOI ledger](doi-genre-hold-ledger.csv) records every
+observation's research/preprint, article, survey, report, thesis, or note
+classification. It reconciles **18 exact registered DOIs** (16 research papers
+and two book chapters) against the original Crossref or DataCite responses in
+[`doi-registry/`](doi-registry/) and the compact
+[DOI evidence index](exact-doi-evidence.json). Six rows retain specific
+publication identity or date holds. The
+[review decisions](doi-genre-review.md) explain them and separate actual
+publication bylines from “joint work with” notes in Oberwolfach summaries.
+
 **Release hold:** No exact Google Scholar account is verified. This capture is
 not Scholar data and does not establish complete lifetime output beyond the
 visible website and June CV. The ORCID name candidate has no public work or
 affiliation evidence and is not assigned to Neumayer. Proceedings, surveys,
-the thesis, and the expository note require genre review; article and preprint
-versions require exact work identity review. The author page does not link a
-DOI, so this review invents none. No row is inserted into a source snapshot,
+the thesis, and the expository note have now been typed in the review ledger,
+but six row-level holds prevent whole-union ingestion. The author page does not
+link a DOI; every DOI in the ledger was separately verified from a registration
+agency. No row is inserted into a source snapshot,
 person registry, Hugging Face dataset, or public map.

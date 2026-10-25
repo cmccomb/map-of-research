@@ -24,6 +24,13 @@ def test_neumayer_review_preserves_every_source_observation() -> None:
     audit = json.loads((SOURCE / "source-audit.json").read_text(encoding="utf-8"))
     with (SOURCE / "cv-crosswalk.csv").open(newline="", encoding="utf-8") as file:
         crosswalk = list(csv.DictReader(file))
+    with (SOURCE / "doi-genre-hold-ledger.csv").open(
+        newline="", encoding="utf-8"
+    ) as file:
+        genre_ledger = list(csv.DictReader(file))
+    doi_evidence = json.loads(
+        (SOURCE / "exact-doi-evidence.json").read_text(encoding="utf-8")
+    )
 
     assert manifest["release_eligible"] is False
     assert manifest["scholar_account_status"] == "no_verified_account"
@@ -38,6 +45,10 @@ def test_neumayer_review_preserves_every_source_observation() -> None:
         _sha256(SOURCE / manifest["cv_crosswalk_file"])
         == manifest["cv_crosswalk_sha256"]
     )
+    for prefix in ("doi_genre_ledger", "exact_doi_evidence"):
+        assert (
+            _sha256(SOURCE / manifest[f"{prefix}_file"]) == manifest[f"{prefix}_sha256"]
+        )
     assert {source["file"] for source in manifest["raw_sources"]} == {
         source["path"] for source in audit["sources"]
     }
@@ -45,10 +56,30 @@ def test_neumayer_review_preserves_every_source_observation() -> None:
         assert _sha256(SOURCE / source["file"]) == source["sha256"]
 
     observations = audit["observations"]
-    assert len(observations) == len(crosswalk) == 31
+    assert len(observations) == len(crosswalk) == len(genre_ledger) == 31
     assert {item["observation_id"] for item in observations} == {
         row["observation_id"] for row in crosswalk
     }
+    assert {item["observation_id"] for item in observations} == {
+        row["observation_id"] for row in genre_ledger
+    }
+    held = sum(row["ingestion_decision"].startswith("hold_") for row in genre_ledger)
+    assert held == 6
+    assert len(doi_evidence) == manifest["exact_registered_doi_count"] == 18
+    assert {int(index) for index in doi_evidence} == {
+        int(row["observation_row"]) for row in genre_ledger if row["registered_doi"]
+    }
+    for index, evidence in doi_evidence.items():
+        raw = SOURCE / "doi-registry" / f"row-{int(index):02}.json"
+        assert _sha256(raw) == evidence["registry_response_sha256"]
+        record = json.loads(raw.read_text(encoding="utf-8"))
+        registered = (
+            record["data"]["attributes"]["doi"]
+            if evidence["registry"] == "datacite"
+            else record["message"]["DOI"]
+        )
+        assert registered == evidence["doi"]
+        assert genre_ledger[int(index) - 1]["registered_doi"] == registered
     assert {int(row["cv_item"]) for row in crosswalk if row["cv_item"]} == set(
         range(1, 31)
     )

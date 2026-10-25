@@ -72,5 +72,11 @@
     "Preserve proceedings, survey, note, thesis genre before graph ingestion",
     "Reconcile article/preprint versions and exact DOI/work identities before graph ingestion",
     "Do not infer complete lifetime output from the two researcher-owned sources"
-  ]
+  ],
+  "doi_genre_ledger_file": "doi-genre-hold-ledger.csv",
+  "doi_genre_ledger_sha256": "71f09d1a54abb04151bec1432351d92752155b62e88d7c6f77dd12f7d2eed8e8",
+  "exact_doi_evidence_file": "exact-doi-evidence.json",
+  "exact_doi_evidence_sha256": "a24442704fb427292ccd0e87154f4aca99c0f1d07fd598d6d6d884931d9841a1",
+  "exact_registered_doi_count": 18,
+  "whole_union_ingestion_decision": "held_pending_report_extent_publisher_placement_year_and_undated_note_review"
 }
