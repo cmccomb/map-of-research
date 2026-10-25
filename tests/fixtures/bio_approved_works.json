@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "external_coauthors": [
+    {
+      "person_id": "external-paul-erdos",
+      "display_name": "Paul Erdős",
+      "source_url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases"
+    }
+  ],
+  "works": [
+    {
+      "person_id": "person-prasadtetali-bf494329",
+      "doi": "10.1002/rsa.3240010302",
+      "title": "Representations of Integers as the Sum of k Terms",
+      "authors": "Paul Erdős and Prasad Tetali",
+      "year": 1990,
+      "venue": "Random Structures & Algorithms",
+      "citation": "Random Structures & Algorithms 1(3), 245–261 (1990)",
+      "source_url": "https://doi.org/10.1002/rsa.3240010302",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/tetali.html",
+        "https://doi.org/10.1002/rsa.3240010302"
+      ],
+      "source_verified_at": "2026-10-24",
+      "external_coauthor_ids": [
+        "external-paul-erdos"
+      ]
+    },
+    {
+      "person_id": "person-prasadtetali-bf494329",
+      "doi": "10.4064/aa-69-3-243-258",
+      "title": "Independence of Solution Sets and Minimal Asymptotic Bases",
+      "authors": "Paul Erdős, Melvyn Nathanson, and Prasad Tetali",
+      "year": 1995,
+      "venue": "Acta Arithmetica",
+      "citation": "Acta Arithmetica 69(3), 243–258 (1995)",
+      "source_url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases",
+      "source_verification_urls": [
+        "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases"
+      ],
+      "source_verified_at": "2026-10-24",
+      "external_coauthor_ids": [
+        "external-paul-erdos"
+      ]
+    },
+    {
+      "person_id": "person-davidkinderlehrer-a58d3c4e",
+      "doi": "10.1016/S1359-6462(97)00530-7",
+      "title": "Extracting the relative grain boundary free energy and mobility functions from the geometry of microstructures",
+      "authors": "B.L. Adams, D. Kinderlehrer, W.W. Mullins, A.D. Rollett, and Shlomo Ta'asan",
+      "year": 1998,
+      "venue": "Scripta Materialia",
+      "citation": "Scripta Materialia 38(4), 531–536 (1998)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S1359646297005307",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/taasan.html",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1359646297005307"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-shlomotaasan-403c9cf9",
+      "doi": "10.1016/S1359-6462(97)00530-7",
+      "title": "Extracting the relative grain boundary free energy and mobility functions from the geometry of microstructures",
+      "authors": "B.L. Adams, D. Kinderlehrer, W.W. Mullins, A.D. Rollett, and Shlomo Ta'asan",
+      "year": 1998,
+      "venue": "Scripta Materialia",
+      "citation": "Scripta Materialia 38(4), 531–536 (1998)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S1359646297005307",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/taasan.html",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1359646297005307"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidkinderlehrer-a58d3c4e",
+      "doi": "10.4028/www.scientific.net/MSF.715-716.473",
+      "title": "Grain growth and the puzzle of its stagnation in thin films a detailed comparison of experiments and simulations",
+      "authors": "Katayun Barmak, Eva Eggeling, Richard Sharp, Scott Roberts, Terry Shyu, Tik Sun, Bo Yao, Shlomo Ta'asan, David Kinderlehrer, Anthony D. Rollett, and Kevin Coffey",
+      "year": 2012,
+      "venue": "Materials Science Forum",
+      "citation": "Materials Science Forum 715–716, 473–479 (2012)",
+      "source_url": "https://www.scientific.net/MSF.715-716.473",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/CNA/Publications/publications2010/012abs/10-CNA-012.pdf",
+        "https://www.scientific.net/MSF.715-716.473"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-shlomotaasan-403c9cf9",
+      "doi": "10.4028/www.scientific.net/MSF.715-716.473",
+      "title": "Grain growth and the puzzle of its stagnation in thin films a detailed comparison of experiments and simulations",
+      "authors": "Katayun Barmak, Eva Eggeling, Richard Sharp, Scott Roberts, Terry Shyu, Tik Sun, Bo Yao, Shlomo Ta'asan, David Kinderlehrer, Anthony D. Rollett, and Kevin Coffey",
+      "year": 2012,
+      "venue": "Materials Science Forum",
+      "citation": "Materials Science Forum 715–716, 473–479 (2012)",
+      "source_url": "https://www.scientific.net/MSF.715-716.473",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/CNA/Publications/publications2010/012abs/10-CNA-012.pdf",
+        "https://www.scientific.net/MSF.715-716.473"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidkinderlehrer-a58d3c4e",
+      "doi": "10.1016/j.pmatsci.2013.03.004",
+      "title": "Grain growth and the puzzle of its stagnation in thin films: The curious tale of a tail and an ear",
+      "authors": "K. Barmak, E. Eggeling, D. Kinderlehrer, R. Sharp, S. Ta'asan, A. D. Rollett, and K. R. Coffey",
+      "year": 2013,
+      "venue": "Progress in Materials Science",
+      "citation": "Progress in Materials Science 58(7), 987–1055 (2013)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0079642513000339",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/kinderlehrer.html",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0079642513000339"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-shlomotaasan-403c9cf9",
+      "doi": "10.1016/j.pmatsci.2013.03.004",
+      "title": "Grain growth and the puzzle of its stagnation in thin films: The curious tale of a tail and an ear",
+      "authors": "K. Barmak, E. Eggeling, D. Kinderlehrer, R. Sharp, S. Ta'asan, A. D. Rollett, and K. R. Coffey",
+      "year": 2013,
+      "venue": "Progress in Materials Science",
+      "citation": "Progress in Materials Science 58(7), 987–1055 (2013)",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0079642513000339",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/kinderlehrer.html",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0079642513000339"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidrowen-a186595d",
+      "doi": "10.1177/108128659900400304",
+      "title": "Structured Deformations as Energy Minimizers in Models of Fracture and Hysteresis",
+      "authors": "Rustum Choksi, Gianpietro Del Piero, Irene Fonseca, and David R. Owen",
+      "year": 1999,
+      "venue": "Mathematics and Mechanics of Solids",
+      "citation": "Mathematics and Mechanics of Solids 4(3), 321–356 (1999)",
+      "source_url": "https://journals.sagepub.com/doi/abs/10.1177/108128659900400304",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/owen.html",
+        "https://journals.sagepub.com/doi/abs/10.1177/108128659900400304"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-irenefonseca-51ba491a",
+      "doi": "10.1177/108128659900400304",
+      "title": "Structured Deformations as Energy Minimizers in Models of Fracture and Hysteresis",
+      "authors": "Rustum Choksi, Gianpietro Del Piero, Irene Fonseca, and David R. Owen",
+      "year": 1999,
+      "venue": "Mathematics and Mechanics of Solids",
+      "citation": "Mathematics and Mechanics of Solids 4(3), 321–356 (1999)",
+      "source_url": "https://journals.sagepub.com/doi/abs/10.1177/108128659900400304",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/owen.html",
+        "https://journals.sagepub.com/doi/abs/10.1177/108128659900400304"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidrowen-a186595d",
+      "doi": "10.1137/S0036139997314940",
+      "title": "Antiplane Shear Flows in Viscoplastic Solids Exhibiting Isotropic and Kinematic Hardening",
+      "authors": "D. R. Owen and J. M. Greenberg",
+      "year": 1998,
+      "venue": "SIAM Journal on Applied Mathematics",
+      "citation": "SIAM Journal on Applied Mathematics 58(6), 1996–2023 (1998)",
+      "source_url": "https://epubs.siam.org/doi/10.1137/S0036139997314940",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/owen.html",
+        "https://epubs.siam.org/doi/10.1137/S0036139997314940"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidrowen-a186595d",
+      "doi": "10.1007/BF00375133",
+      "title": "Structured deformations of continua",
+      "authors": "Gianpietro Del Piero and David R. Owen",
+      "year": 1993,
+      "venue": "Archive for Rational Mechanics and Analysis",
+      "citation": "Archive for Rational Mechanics and Analysis 124, 99–155 (1993)",
+      "source_url": "https://link.springer.com/article/10.1007/BF00375133",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/owen.html",
+        "https://link.springer.com/article/10.1007/BF00375133"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1016/j.jmps.2025.106076",
+      "title": "Accretion and ablation in deformable solids using an Eulerian formulation: A finite deformation numerical method",
+      "authors": "S. Kiana Naghibzadeh, Anthony Rollett, Noel Walkington, and Kaushik Dayal",
+      "year": 2025,
+      "venue": "Journal of the Mechanics and Physics of Solids",
+      "citation": "Journal of the Mechanics and Physics of Solids 200, 106076 (2025)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0022509625000523",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/walkington.html",
+        "https://www.math.cmu.edu/cna/Publications/publication_auto.php?cnacode=25-CNA-006",
+        "https://www.math.cmu.edu/CNA/Publications/publications2025/papers/25-CNA-006.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0022509625000523"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1177/10812865211054573",
+      "title": "Accretion and ablation in deformable solids with an Eulerian description: examples using the method of characteristics",
+      "authors": "S. Kiana Naghibzadeh, Noel Walkington, and Kaushik Dayal",
+      "year": 2022,
+      "venue": "Mathematics and Mechanics of Solids",
+      "citation": "Mathematics and Mechanics of Solids 27(6), 989–1010 (2022)",
+      "source_url": "https://journals.sagepub.com/doi/10.1177/10812865211054573",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/walkington.html",
+        "https://journals.sagepub.com/doi/10.1177/10812865211054573"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-iantice-372961d6",
+      "doi": "10.1002/cpa.22084",
+      "title": "Traveling Wave Solutions to the Free Boundary Incompressible Navier-Stokes Equations",
+      "authors": "Giovanni Leoni and Ian Tice",
+      "year": 2023,
+      "venue": "Communications on Pure and Applied Mathematics",
+      "citation": "Communications on Pure and Applied Mathematics 76(10), 2474–2576 (2023)",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/cpa.22084",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/tice.html",
+        "https://www.math.cmu.edu/~iantice/publications.html",
+        "https://onlinelibrary.wiley.com/doi/10.1002/cpa.22084"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-iantice-372961d6",
+      "doi": "10.1016/j.jfa.2019.01.005",
+      "title": "Traces for homogeneous Sobolev spaces in infinite strip-like domains",
+      "authors": "Giovanni Leoni and Ian Tice",
+      "year": 2019,
+      "venue": "Journal of Functional Analysis",
+      "citation": "Journal of Functional Analysis 277(7), 2288–2380 (2019)",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0022123619300254",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/tice.html",
+        "https://www.math.cmu.edu/~iantice/publications.html",
+        "https://www.sciencedirect.com/science/article/pii/S0022123619300254"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-davidkinderlehrer-a58d3c4e",
+      "doi": "10.1103/PhysRevMaterials.6.033402",
+      "title": "Comparison of simulated and measured grain volume changes during grain growth",
+      "authors": "Xiaoyao Peng, Aditi Bhattacharya, S. Kiana Naghibzadeh, David Kinderlehrer, Robert Suter, Kaushik Dayal, and Gregory S. Rohrer",
+      "year": 2022,
+      "venue": "Physical Review Materials",
+      "citation": "Physical Review Materials 6, 033402 (2022)",
+      "source_url": "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/kinderlehrer.html",
+        "https://www.cmu.edu/physics/people/faculty/suter.html",
+        "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-robertmsuter-92598da8",
+      "doi": "10.1103/PhysRevMaterials.6.033402",
+      "title": "Comparison of simulated and measured grain volume changes during grain growth",
+      "authors": "Xiaoyao Peng, Aditi Bhattacharya, S. Kiana Naghibzadeh, David Kinderlehrer, Robert Suter, Kaushik Dayal, and Gregory S. Rohrer",
+      "year": 2022,
+      "venue": "Physical Review Materials",
+      "citation": "Physical Review Materials 6, 033402 (2022)",
+      "source_url": "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402",
+      "source_verification_urls": [
+        "https://www.cmu.edu/math/people/faculty/kinderlehrer.html",
+        "https://www.cmu.edu/physics/people/faculty/suter.html",
+        "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-clivenewstead-26f51712",
+      "doi": "10.48550/arXiv.2103.06155",
+      "title": "Algebraic models of dependent type theory",
+      "authors": "Clive Newstead",
+      "year": 2018,
+      "venue": "Carnegie Mellon University Ph.D. thesis",
+      "citation": "Ph.D. thesis, Department of Mathematical Sciences, Carnegie Mellon University (2018); arXiv deposit 2021",
+      "source_url": "https://www.math.cmu.edu/~cnewstea/thesis-clive-newstead.pdf",
+      "source_verification_urls": [
+        "https://www.math.cmu.edu/~cnewstea/research/",
+        "https://www.math.cmu.edu/~cnewstea/thesis-clive-newstead.pdf",
+        "https://arxiv.org/abs/2103.06155"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1201/b11644-12",
+      "title": "3D Delaunay Mesh Generation",
+      "authors": "Klaus Gärtner, Hang Si, Alexander Rand, and Noel Walkington",
+      "year": 2012,
+      "venue": "Combinatorial Scientific Computing",
+      "citation": "Combinatorial Scientific Computing, 299–319 (2012)",
+      "source_url": "https://doi.org/10.1201/b11644-12",
+      "source_verification_urls": [
+        "https://api.crossref.org/works/10.1201/b11644-12",
+        "https://api.pageplace.de/preview/DT0400.9781439827369_A23983033/preview-9781439827369_A23983033.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-noeljwalkington-c55e6e3b",
+      "doi": "10.1090/qam/1598",
+      "title": "Models of bacteria swimming in a nematic liquid crystal",
+      "authors": "Mochong Duan and Noel J. Walkington",
+      "year": 2021,
+      "venue": "Quarterly of Applied Mathematics",
+      "citation": "Quarterly of Applied Mathematics 79(4), 695–715 (2021)",
+      "source_url": "https://doi.org/10.1090/qam/1598",
+      "source_verification_urls": [
+        "https://doi.org/10.1090/qam/1598",
+        "https://api.crossref.org/works/10.1090/qam/1598"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "doi": "10.1021/es060781p",
+      "title": "Source Apportionment of Molecular Markers and Organic Aerosol. 3. Food Cooking Emissions",
+      "authors": "Allen L. Robinson, R. Subramanian, Neil M. Donahue, Anna Bernardo-Bricker, and Wolfgang F. Rogge",
+      "year": 2006,
+      "venue": "Environmental Science & Technology",
+      "citation": "Environmental Science & Technology 40(24), 7820–7827 (2006)",
+      "source_url": "https://doi.org/10.1021/es060781p",
+      "source_verification_urls": [
+        "https://api.crossref.org/works/10.1021/es060781p",
+        "https://pubmed.ncbi.nlm.nih.gov/17256533/",
+        "https://www.cmu.edu/chemistry/people/faculty/donahue.html"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "egu2012:egu2012-2516-1",
+      "title": "Gas-Phase Mixing of Organic Aerosol Systems",
+      "authors": "N. M. Donahue, E. S. Robinson, and E. M. Trump",
+      "year": 2012,
+      "venue": "Geophysical Research Abstracts",
+      "citation": "Geophysical Research Abstracts 14, EGU2012-2516-1 (2012)",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU2012/EGU2012-2516-1.pdf",
+      "source_verification_urls": [
+        "https://meetingorganizer.copernicus.org/EGU2012/EGU2012-2516-1.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "awma2007:ace-07-cd:3094",
+      "title": "Source Apportionment of Air Toxics Downwind of a Heavily Industrialized Area Using High Time Resolved Concentration Measurements",
+      "authors": "J. Logue, K. Huff-Hartz, A. Lambe, N. Donahue, A. Robinson, D. Stern, and J. Maranche",
+      "year": 2007,
+      "venue": "100th Annual Conference and Exhibition of the Air & Waste Management Association",
+      "citation": "A&WMA 100th Annual Conference proceedings, ACE-07-CD, p. 3094 (2007); contents listing verified",
+      "source_url": "https://www.proceedings.com/content/002/002176webtoc.pdf",
+      "source_verification_urls": [
+        "https://www.proceedings.com/content/002/002176webtoc.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "agu2009:a21h-08",
+      "title": "How will Primary and Secondary Organic Mixtures Impact CCN?",
+      "authors": "A. A. Asa-Awuku, N. M. Donahue, and A. L. Robinson",
+      "year": 2009,
+      "venue": "AGU Fall Meeting",
+      "citation": "AGU 2009 Fall Meeting scientific program, A21H-08 (2009)",
+      "source_url": "https://www.unols.org/sites/default/files/AGU_FM09_Scientific_Program.pdf",
+      "source_verification_urls": [
+        "https://www.unols.org/sites/default/files/AGU_FM09_Scientific_Program.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "egu2009:egu2009-9565",
+      "title": "Formation of Secondary Organic Aerosol from Non-traditional Intermediate Volatility Organic Compounds",
+      "authors": "N. M. Donahue, A. A. Presto, A. L. Robinson, J. H. Kroll, and D. R. Worsnop",
+      "year": 2009,
+      "venue": "Geophysical Research Abstracts",
+      "citation": "Geophysical Research Abstracts 11, EGU2009-9565 (2009)",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU2009/EGU2009-9565.pdf",
+      "source_verification_urls": [
+        "https://meetingorganizer.copernicus.org/EGU2009/EGU2009-9565.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "source_native_id": "escholarship:qt89c072pv",
+      "title": "Heterogeneous chemistry of atmospheric mineral dust particles and their resulting cloud-nucleation properties",
+      "authors": "Ryan Christopher Sullivan",
+      "year": 2008,
+      "venue": "UC San Diego Electronic Theses and Dissertations",
+      "citation": "UC San Diego Electronic Theses and Dissertations (2008)",
+      "source_url": "https://escholarship.org/uc/item/89c072pv",
+      "source_verification_urls": [
+        "https://escholarship.org/uc/item/89c072pv",
+        "https://atofms.ucsd.edu/lab-members/alumni"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "source_native_id": "agu2017:a13j-05",
+      "title": "Heterogeneous kinetics of N2O5 reactive uptake and chlorine activation in authentic biomass burning aerosol",
+      "authors": "Ryan C. Sullivan, Lydia Jahl, Lexie Goldberger, Adam Ahern, and Joel A. Thornton",
+      "year": 2017,
+      "venue": "2017 AGU Fall Meeting",
+      "citation": "2017 AGU Fall Meeting Abstracts, A13J-05 (2017)",
+      "source_url": "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+      "source_verification_urls": [
+        "https://agu.confex.com/agu/fm17/meetingapp.cgi/Paper/297700",
+        "https://studio.m-anage.com/agu/fm17/meetingapi.cgi/Paper/297700"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "psb2007:12:257-268",
+      "title": "A Stacked Graphical Model for Associating Sub-Images with Sub-Captions",
+      "authors": "Zhenzhen Kou, William W. Cohen, and Robert F. Murphy",
+      "year": 2007,
+      "venue": "Pacific Symposium on Biocomputing",
+      "citation": "Pacific Symposium on Biocomputing 12, 257–268 (2007)",
+      "source_url": "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+      "source_verification_urls": [
+        "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/17990497/"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "biolink2009:209-212",
+      "title": "Structured Literature Image Finder",
+      "authors": "Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Abdul-Saboor Sheikh, Eric Xing, William Cohen, and Robert F. Murphy",
+      "year": 2009,
+      "venue": "Proceedings of the Ninth Annual Meeting of the ISMB BioLINK Special Interest Group",
+      "citation": "Proceedings of the Ninth Annual Meeting of the ISMB BioLINK Special Interest Group, 209–212 (2009)",
+      "source_url": "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+      "source_verification_urls": [
+        "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+        "https://murphylab.cbd.cmu.edu/publications/"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-robertfmurphy-5930bd3c",
+      "source_native_id": "cmu-report:cmu-cb-09-101",
+      "title": "Structured Literature Image Finder: Open Source Software for Extracting and Disseminating Information from Text and Figures in Biomedical Literature",
+      "authors": "Abdul-Saboor Sheikh, Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Eric P. Xing, William Cohen, and Robert F. Murphy",
+      "year": 2009,
+      "venue": "Carnegie Mellon University School of Computer Science technical report CMU-CB-09-101",
+      "citation": "CMU-CB-09-101, October 2009",
+      "source_url": "https://murphylab.cbd.cmu.edu/publications/",
+      "source_verification_urls": [
+        "https://murphylab.cbd.cmu.edu/publications/",
+        "https://www.cs.cmu.edu/~wcohen/postscript/jws-2010.pdf",
+        "https://citeseerx.ist.psu.edu/document?doi=6dc81b47536b868cd459461f3039580ea71449c1&repid=rep1&type=pdf"
+      ],
+      "source_verified_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-amandawillard-bde48416",
+      "source_native_id": "pmcid:pmc3970999",
+      "title": "Controversies in Neuroscience: A Literature-Based Course for First Year Undergraduates that Improves Scientific Confidence While Teaching Concepts",
+      "authors": "Amanda M. Willard and D. J. Brasier",
+      "year": 2014,
+      "venue": "Journal of Undergraduate Neuroscience Education",
+      "citation": "Journal of Undergraduate Neuroscience Education 12(2), A159–A166 (2014); PMCID PMC3970999",
+      "source_url": "https://www.funjournal.org/wp-content/uploads/2015/09/june-12-159.pdf",
+      "source_verification_urls": [
+        "https://www.funjournal.org/wp-content/uploads/2015/09/june-12-159.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3970999/",
+        "https://pubmed.ncbi.nlm.nih.gov/24693264/"
+      ],
+      "source_verified_at": "2026-10-25"
+    }
+  ]
+}
