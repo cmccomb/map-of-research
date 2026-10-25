@@ -1,0 +1,37 @@
+{
+  "status": "review_only_no_scholar_id_no_release",
+  "person": "James Cummings",
+  "cmu_elements_user_id": 2104,
+  "captured_at_utc": "2026-10-25T11:34:09.348951+00:00",
+  "captured_rows": 108,
+  "pages": [
+    {
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications",
+      "html_sha256": "6cbd0db32457d05844c4aafafbfade8a3ce4c279e5b8fe4d2cdec7c292bd2379",
+      "rows": 25
+    },
+    {
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=25&sort=dateDesc&favouritesFirst=true",
+      "html_sha256": "9ebfadc8ec4d3f814aaba7bb9dabc7a4fae1c83e57cd45486d05df0192e5fb67",
+      "rows": 25
+    },
+    {
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=50&sort=dateDesc&favouritesFirst=true",
+      "html_sha256": "165fcc5b60c378a5aff62d9ce8bf3f8f9ec646702ae35e1b42c1643b2ccbf438",
+      "rows": 25
+    },
+    {
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=75&sort=dateDesc&favouritesFirst=true",
+      "html_sha256": "882646b8904471e0572828b49affeec5477d5e5f31df5866a8a35e5e4eed2960",
+      "rows": 25
+    },
+    {
+      "url": "https://scholars.cmu.edu/2104-james-cummings/publications?startFrom=100&sort=dateDesc&favouritesFirst=true",
+      "html_sha256": "e9027d91c5bf8b5ed4777179dad88d70f2723a9360e238690ea20139c74590d1",
+      "rows": 8
+    }
+  ],
+  "csv_sha256": "b1998c46bb83bb71e50c94318b9bee2669a66c09fa9dcb64cff02fcc54d2901a",
+  "object_ids_sha256": "1559df8b6b0758391841978ac7716649b080427f64d02b637411c035104b2b89",
+  "resolved_author_mismatches": []
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "review_id": "publisher-chapter-large-cardinals-1998",
+    "title": "Large Cardinal Properties of Small Cardinals",
+    "genre": "book_chapter",
+    "role": "author",
+    "contributors": [
+      "James Cummings"
+    ],
+    "publication_year": 1998,
+    "doi": "10.1007/978-94-015-8988-8_2",
+    "publisher_url": "https://link.springer.com/chapter/10.1007/978-94-015-8988-8_2",
+    "crossref_file": "crossref-large-cardinal.json",
+    "related_elements_presentation_id": "341749",
+    "researcher_site_item": 13,
+    "orcid_index": 43,
+    "relationship": "published_chapter_absent_from_elements_publication_records"
+  },
+  {
+    "review_id": "publisher-chapter-compactness-2005",
+    "title": "Compactness and incompactness phenomena in set theory",
+    "genre": "book_chapter",
+    "role": "author",
+    "contributors": [
+      "James Cummings"
+    ],
+    "publication_year": 2005,
+    "doi": "10.1017/9781316755860.006",
+    "publisher_url": "https://www.cambridge.org/core/books/logic-colloquium-01/compactness-and-incompactness-phenomena-in-set-theory/509478D98A6929EF1A6408564701480A",
+    "crossref_file": "crossref-compactness.json",
+    "related_elements_presentation_id": "341761",
+    "researcher_site_item": 25,
+    "orcid_index": 31,
+    "relationship": "published_chapter_absent_from_elements_publication_records",
+    "date_note": "Cambridge print year 2005; Crossref online date 2017, not a new work."
+  },
+  {
+    "review_id": "publisher-edited-appalachian-2012",
+    "title": "Appalachian Set Theory 2006–2012",
+    "genre": "edited_volume",
+    "role": "editor",
+    "contributors": [
+      "James Cummings",
+      "Ernest Schimmerling"
+    ],
+    "publication_year": 2012,
+    "doi": "10.1017/CBO9781139208574",
+    "publisher_url": "https://www.cambridge.org/core/books/appalachian-set-theory/6C9D56F8A40832C8A58E47B330521F3F",
+    "crossref_file": "crossref-appalachian.json",
+    "relationship": "edited_volume_absent_from_elements",
+    "date_note": "Cambridge print/online 2012; Crossref published field says 2009 and is inconsistent with publisher."
+  },
+  {
+    "review_id": "publisher-edited-foundations-2017",
+    "title": "Foundations of Mathematics: Logic at Harvard",
+    "genre": "edited_volume",
+    "role": "editor",
+    "contributors": [
+      "Andrés Eduardo Caicedo",
+      "James Cummings",
+      "Peter Koellner",
+      "Paul B. Larson"
+    ],
+    "publication_year": 2017,
+    "doi": "10.1090/conm/690",
+    "publisher_url": "https://www.ams.org/books/conm/690/",
+    "crossref_file": "crossref-foundations.json",
+    "relationship": "edited_volume_absent_from_elements"
+  }
+]
