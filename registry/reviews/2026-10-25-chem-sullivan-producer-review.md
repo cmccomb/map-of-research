@@ -29,7 +29,7 @@ The Donahue crosswalk in [#188](https://github.com/cmccomb/map-of-research/pull/
 
 ## All 58 new-only rows
 
-`2026-10-25-chem-sullivan-new-only-triage.json` enumerates every new-only ID with its captured index, title, year, authors, venue, candidate source URL, and review state. **All 58 remain held.** Its signals overlap and are leads for exact attribution review, not evidence that a row belongs to or should be removed from CMU Sullivan's publication history:
+`2026-10-25-chem-sullivan-new-only-triage.json` enumerates every new-only ID with its captured index, title, year, authors, venue, candidate source URL, and review state. **All 58 remain held for cache promotion:** row 101 has the exact false-attribution exclusion proposed above, while the other 57 still need per-row disposition. Its signals overlap and are leads for exact attribution review, not evidence that a row belongs to or should be removed from CMU Sullivan's publication history:
 
 - 10 rows have a candidate primary Argonne namesake source; five display Argonne in the venue; 27 have flux, ARM, CROCUS, or carbon-program subject signals.
 - Nine display an NSF award venue, two are obvious page fragments, and three display a future year (2027).
@@ -39,4 +39,4 @@ The Donahue crosswalk in [#188](https://github.com/cmccomb/map-of-research/pull/
 
 ## Release hold
 
-Do not promote Sullivan's 250-row cache until the 2017 abstract has a primary-backed disposition, the two ORNL old IDs have a narrow reviewed crosswalk to the exact excluded current row, all 58 new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.
+Do not promote Sullivan's 250-row cache until the 2017 abstract has a primary-backed disposition, the two ORNL old IDs have a narrow reviewed crosswalk to the exact excluded current row, the remaining 57 new-only rows have been assessed for attribution and record quality, and the frozen-to-candidate retention gate passes. Keep this producer draft separate from the source capture and from Donahue's crosswalk. No `collect.yml` dispatch is part of this review.
