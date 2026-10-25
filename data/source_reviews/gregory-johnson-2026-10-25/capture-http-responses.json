@@ -1,0 +1,98 @@
+[
+  {
+    "filename": "cmu-profile.html",
+    "request_url": "https://www.cmu.edu/math/people/faculty/johnson.html",
+    "resolved_url": "https://www.cmu.edu/math/people/faculty/johnson.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 44893
+  },
+  {
+    "filename": "cmu-old-profile.html",
+    "request_url": "https://www.math.cmu.edu/math/visiting_faculty/johnson.html",
+    "resolved_url": "https://www.math.cmu.edu/math/visiting_faculty/johnson.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 4757
+  },
+  {
+    "filename": "umd-dissertation-api.json",
+    "request_url": "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e",
+    "resolved_url": "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e",
+    "status": 200,
+    "content_type": "application/hal+json;charset=UTF-8",
+    "bytes": 6265
+  },
+  {
+    "filename": "crossref-logic-article.json",
+    "request_url": "https://api.crossref.org/works/10.1215%2F00294527-2010-022",
+    "resolved_url": "https://api.crossref.org/works/10.1215%2F00294527-2010-022",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 5072
+  },
+  {
+    "filename": "ams-2011-denied.html",
+    "request_url": "https://jointmathematicsmeetings.org/meetings/national/jmm/1067-z1-1898.pdf",
+    "resolved_url": "https://jointmathematicsmeetings.org/meetings/national/jmm/1067-z1-1898.pdf",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5628
+  },
+  {
+    "filename": "arxiv-ai-2025.html",
+    "request_url": "https://arxiv.org/abs/2509.16778",
+    "resolved_url": "https://arxiv.org/abs/2509.16778",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 44830
+  },
+  {
+    "filename": "arxiv-ai-2026-feb.html",
+    "request_url": "https://arxiv.org/abs/2602.18807",
+    "resolved_url": "https://arxiv.org/abs/2602.18807",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 45714
+  },
+  {
+    "filename": "arxiv-ai-2026-oct.html",
+    "request_url": "https://arxiv.org/abs/2610.31481",
+    "resolved_url": "https://arxiv.org/abs/2610.31481",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 44480
+  },
+  {
+    "filename": "cmu-hcii-2026.html",
+    "request_url": "https://hcii.cmu.edu/news/cmu-festival-learning-2026",
+    "resolved_url": "https://hcii.cmu.edu/news/cmu-festival-learning-2026",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 84245
+  },
+  {
+    "filename": "rose-hulman-sponsor.html",
+    "request_url": "https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5/",
+    "resolved_url": "https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5/",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 40710
+  },
+  {
+    "filename": "springer-ai-2026.html",
+    "request_url": "https://link.springer.com/chapter/10.1007/978-3-032-29763-1_41",
+    "resolved_url": "https://link.springer.com/chapter/10.1007/978-3-032-29763-1_41?error=cookies_not_supported&code=f284a091-2e07-4ba5-bc9c-3f32ddbf4907",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 366430
+  },
+  {
+    "filename": "crossref-ai-chapter.json",
+    "request_url": "https://api.crossref.org/works/10.1007%2F978-3-032-29763-1_41",
+    "resolved_url": "https://api.crossref.org/works/10.1007%2F978-3-032-29763-1_41",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 18121
+  }
+]

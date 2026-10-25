@@ -1,0 +1,176 @@
+{
+  "id" : "95910634-bbe1-4228-8bf7-b2049a005c6e",
+  "uuid" : "95910634-bbe1-4228-8bf7-b2049a005c6e",
+  "name" : "Abstract Elementary Classes with Lowenheim-Skolem Number Cofinal with Omega",
+  "handle" : "1903/8567",
+  "metadata" : {
+    "dc.contributor.advisor" : [ {
+      "value" : "Kueker, David W",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.author" : [ {
+      "value" : "Johnson, Gregory Mitchell",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.department" : [ {
+      "value" : "Mathematics",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.publisher" : [ {
+      "value" : "Digital Repository at the University of Maryland",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    }, {
+      "value" : "University of Maryland (College Park, Md.)",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 1
+    } ],
+    "dc.date.accessioned" : [ {
+      "value" : "2008-10-11T05:44:31Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.available" : [ {
+      "value" : "2008-10-11T05:44:31Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.issued" : [ {
+      "value" : "2008-08-03",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.abstract" : [ {
+      "value" : "An abstract elementary class is a class $\\aec$ of structures for some vocabulary $L$ together with a ``strong substructure'' relation $\\prec_{\\aec}$ on $\\aec$ satisfying certain axioms.  Abstract elementary classes include elementary classes with elementary substructure and classes axiomatizable in $L_{\\infty,\\omega}$ with elementary substructure relative to some fragment of $L_{\\infty,\\omega}$.  For every abstract elementary class there is some number $\\kappa$, called the L\\\"owenheim-Skolem number, so that every structure in the class has a strong substructure of cardinality $\\leq \\kappa$.\n\nWe study abstract elementary classes with L\\\"owenheim-Skolem number $\\kappa$, where $\\kappa$ is cofinal with $\\omega$, which have finite character.  We generalize results obtained by Kueker for $\\kappa=\\omega$.  In particular we show that $\\aec$ is closed under $L_{\\infty,\\kappa}$-elementary equivalence and obtain sufficient conditions for $\\aec$ to be $L_{\\infty,\\kappa}$-axiomatizable.  The results depend on developing an appropriate concept of $\\kappa$-a.e.",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.extent" : [ {
+      "value" : "318908 bytes",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.mimetype" : [ {
+      "value" : "application/pdf",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.uri" : [ {
+      "value" : "http://hdl.handle.net/1903/8567",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.language.iso" : [ {
+      "value" : "en_US",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.subject.pqcontrolled" : [ {
+      "value" : "Mathematics",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.subject.pquncontrolled" : [ {
+      "value" : "Abstract Elementary Classes",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    }, {
+      "value" : "Countable Approximations",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 1
+    }, {
+      "value" : "Finite Character",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 2
+    } ],
+    "dc.title" : [ {
+      "value" : "Abstract Elementary Classes with Lowenheim-Skolem Number Cofinal with Omega",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type" : [ {
+      "value" : "Dissertation",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ]
+  },
+  "inArchive" : true,
+  "discoverable" : true,
+  "withdrawn" : false,
+  "lastModified" : "2016-03-29T06:19:26.831+00:00",
+  "entityType" : null,
+  "type" : "item",
+  "_links" : {
+    "accessStatus" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/accessStatus"
+    },
+    "bundles" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/bundles"
+    },
+    "identifiers" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/identifiers"
+    },
+    "mappedCollections" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/mappedCollections"
+    },
+    "owningCollection" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/owningCollection"
+    },
+    "relationships" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/relationships"
+    },
+    "version" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/version"
+    },
+    "templateItemOf" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/templateItemOf"
+    },
+    "thumbnail" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e/thumbnail"
+    },
+    "self" : {
+      "href" : "https://api.drum.lib.umd.edu/server/api/core/items/95910634-bbe1-4228-8bf7-b2049a005c6e"
+    }
+  }
+}

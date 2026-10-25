@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "person_id": "person-gregoryjohnson-26c9645f",
+  "captured_date": "2026-10-25",
+  "status": "review_only_no_snapshot_no_release",
+  "scholar_account_status": "no_verified_account",
+  "lifetime_publication_completeness": "not_established",
+  "counts": {
+    "attributed_source_observations_not_works": 8,
+    "provisional_manifestations_not_lifetime_count": 6,
+    "research_lineages_not_lifetime_count": 2,
+    "uncaptured_ams_meeting_leads": 1,
+    "excluded_sponsor_only_records": 1
+  },
+  "date_conflict": "Springer HTML citation_publication_date=2027; publisher-registered Crossref published=2026-06-27 and CMU AIED listing=2026. Retain each raw value for review.",
+  "identity_hold": "2010 full-name model-theory sources match CMU identity; later AI-education bylines use common Gregory Johnson and are linked provisionally through CMU's chapter listing and explicit arXiv revision lineage. Do not infer Scholar ID or promote edges.",
+  "files": {
+    "ams-2011-denied.html": "6fffae19a0a4097ed0399c56850607e7141e15a16ae636a8dc322e1fee968ee4",
+    "arxiv-ai-2025.html": "36cdcb924ed9755b853bef8a1a7261119cd65cd03dbd58231a94c737c7982762",
+    "arxiv-ai-2026-feb.html": "6c87a93792bdb6b7dae1db283c72fc066ab99cc04eaf5c76cbe4598e0fc6b20c",
+    "arxiv-ai-2026-oct.html": "d4f95c97bc268231df87910c18c74e0b52be562c92cabda1489baf4a2ea8e232",
+    "capture-http-responses.json": "5ba153d92640b8676a0abed079225ba05dfd83a53a1fa28c8a12dc6f38d9902d",
+    "cmu-hcii-2026.html": "a673f56ab56f5f4b3f3b61a7ddc42c2b7b0e4d31a10fdb0324333fdf20e3ec33",
+    "cmu-old-profile.html": "deb82c264b0022d7ca7d321081a718bea6eb209b87f2565ba5dc4f08124e84db",
+    "cmu-profile.html": "8f5905c4b7c3af714c06c443c357fa34fdb6ff33a6b50154859f34cda66b9477",
+    "crossref-ai-chapter.json": "c3e5122375a0e212de5a654d6c6ee4308d37de563d0dfebe933fabaf6eab0cac",
+    "crossref-logic-article.json": "6565614d8c9dcda111b4e1f436179825229b5b0ff3b83b87dd2e5b9e9a5f8e79",
+    "genre-and-attribution-holds-2.csv": "6f36ac1c584a55a317d68884a4d26680f9ba009ee802efdc429e354ff0949b11",
+    "rose-hulman-sponsor.html": "9fd381443b1b92926ec0e25c9560bcd3a4d2ad228cfacf483f67fa69d7c30bdd",
+    "source-observations-8.csv": "0990d648889497f3368cacba5dd64b7253b9442b6213f30cb41cdae64c8e2888",
+    "springer-ai-2026.html": "183cc4b09c3e555bb1aa7db200dea06706ed8cc04120a0e61e2c86ec4a640478",
+    "umd-dissertation-api.json": "255cdbbf113fe8200dc1437ce96d433a34ea2973ddbde03935c59a3db02955f4"
+  }
+}
