@@ -1,0 +1,9 @@
+# Adviti Naik Scholar profile identity — 2026-10-24
+
+The current [CMU Biological Sciences teaching-track roster](https://www.cmu.edu/bio/people/faculty/) lists Adviti Naik as an Assistant Teaching Professor at CMU-Q and gives `advitin@andrew.cmu.edu`. This official department listing supports Biological Sciences as her display primary independently of the Qatar campus affiliation. Her [CMU Scholars profile](https://scholars.cmu.edu/13090-adviti-naik) identifies Biological Sciences in Qatar with the same email and describes her systems-biology, genetics, and oncology background. She is the existing included Bio teaching member `person-advitinaik-7ff1d1ff`; this review adds no person or membership.
+
+A direct capture on 2026-10-24 local time (2026-10-25 01:38 UTC) displayed [Scholar profile `lKAvvmoAAAAJ`](https://scholar.google.com/citations?user=lKAvvmoAAAAJ&hl=en) as "Adviti Naik," Carnegie Mellon University-Qatar, with a verified `andrew.cmu.edu` email. Its homepage points to her official CMU Scholars profile. Visible publication subjects include cancer immunology, triple-negative breast cancer, genetics, and molecular biology. The name, Qatar affiliation, verified email, official homepage link, and aligned research support assigning this Scholar ID to the existing registry person.
+
+One "Show more" click exposed 44 unique citation IDs and left the button disabled. The saved HTML/JSON agree on the 44 visible rows, and their SHA-256 values are recorded in `work/scholar-bootstrap/adviti-naik-visible-44-2026-10-24-receipt.json` in the task workspace. This identity change adds no publication rows or eligibility decisions; source review will be separate.
+
+The registry already derives Biological Sciences as Naik's primary academic home from her sole included Bio membership. No explicit primary override is needed.
