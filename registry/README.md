@@ -75,6 +75,10 @@ to one evidenced primary academic home. For an actual department, the published
 `primary_department_id` must name an included department membership. Formally
 typed institutes, constituent schools, academic areas, schools, and campus homes
 retain their typed IDs without being relabeled as departments.
+The 318 already registered Scholar profiles that use a derived home are frozen
+in an identity-paired baseline. New Scholar IDs require an explicit sourced
+primary field, so a newly verified single-department identity cannot silently
+inherit a primary without recording the decision.
 
 Tepper's official faculty listings support one academic area for 23 of the 28
 reviewed Scholar-ID holders. Five are listed in two areas; their explicit

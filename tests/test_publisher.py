@@ -1,6 +1,7 @@
 import hashlib
 import json
 import sys
+from dataclasses import replace
 from types import SimpleNamespace
 
 import numpy
@@ -455,6 +456,10 @@ def registry() -> Registry:
                 orcid="",
                 homepage_url="https://example.test/one",
                 notes="",
+                primary_department_id="ece",
+                primary_department_source_url="https://example.test/ece",
+                primary_department_verified_at="2026-07-17",
+                primary_department_basis="reviewed",
             ),
             Person(
                 person_id="person-two",
@@ -1216,7 +1221,18 @@ def test_map_artifact_catalog_retains_full_included_roster() -> None:
 def test_map_artifact_tracks_cross_school_membership_once() -> None:
     source = registry()
     cross_school = Registry(
-        people=source.people,
+        people=tuple(
+            replace(
+                person,
+                primary_department_id="",
+                primary_department_source_url="",
+                primary_department_verified_at="",
+                primary_department_basis="",
+            )
+            if person.person_id == "person-one"
+            else person
+            for person in source.people
+        ),
         memberships=(
             *source.memberships,
             Membership(

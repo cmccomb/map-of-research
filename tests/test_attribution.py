@@ -330,8 +330,9 @@ def test_attribution_gate_preserves_raw_rows_and_blocks_unconfirmed_edges(tmp_pa
 def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
     key = (SCHOLAR_ID, f"{SCHOLAR_ID}:paper")
     monkeypatch.setattr(publisher, "load_registry", lambda *args: object())
+    monkeypatch.setattr(publisher, "load_implicit_primary_baseline", lambda path: {})
     monkeypatch.setattr(
-        publisher, "validate_included_scholar_primary_homes", lambda registry: 0
+        publisher, "validate_included_scholar_primary_homes", lambda *args, **kwargs: 0
     )
     monkeypatch.setattr(
         publisher,

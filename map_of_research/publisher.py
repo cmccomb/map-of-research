@@ -55,9 +55,11 @@ from .profile_releases import (
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
+    DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
     DEFAULT_PEOPLE_PATH,
     Registry,
+    load_implicit_primary_baseline,
     load_registry,
     validate_included_scholar_primary_homes,
 )
@@ -1160,7 +1162,12 @@ def publish_snapshot(
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
     registry = load_registry(people_path, memberships_path, departments_path)
-    validate_included_scholar_primary_homes(registry)
+    validate_included_scholar_primary_homes(
+        registry,
+        legacy_implicit_primary=load_implicit_primary_baseline(
+            people_path.parent / "reviews" / DEFAULT_IMPLICIT_PRIMARY_BASELINE_PATH.name
+        ),
+    )
     frame, manifest = validate_snapshot(
         snapshot_path,
         manifest_path,

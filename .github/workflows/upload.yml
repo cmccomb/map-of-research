@@ -63,7 +63,8 @@ jobs:
           python source/scripts/validate_primary_homes.py \
             --people source/registry/people.csv \
             --memberships source/registry/memberships.csv \
-            --departments source/registry/departments.csv
+            --departments source/registry/departments.csv \
+            --baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json
       - name: Require complete Mathematical Sciences Scholar captures
         run: |
           map-validate-math-coverage \
