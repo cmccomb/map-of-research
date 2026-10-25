@@ -107,6 +107,23 @@
           "reviewed_at": "2026-10-25"
         }
       ]
+    },
+    {
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "expected_source_rows": 228,
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "held_observations": [
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reason": "The captured 2004 Göttingen item gives only S Bernhard. Nearby biomedical works belong to a distinct Göttingen Stefan Bernhard, but the exact native record or complete byline has not been found; attribution remains unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hfFKwRcAAAAJ&cstart=200&pagesize=100&citation_for_view=hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "expected_reviewed_exclusion_rows": 43,
+      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
     }
   ]
 }

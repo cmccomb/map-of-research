@@ -109,11 +109,8 @@ def _validate(cache_dir, profile, decision, receipt, **kwargs):
 
 
 def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
-    profile = next(
-        item
-        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
-        if item.scholar_id == "0e1jwkkAAAAJ"
-    )
+    profiles = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    profile = next(item for item in profiles if item.scholar_id == "0e1jwkkAAAAJ")
     assert profile.person_id == "person-terrencejcollins-61cf6ed9"
     assert profile.scholar_id == "0e1jwkkAAAAJ"
     assert profile.expected_source_rows == 361
@@ -139,6 +136,28 @@ def test_checked_in_collins_hold_is_exact_and_separate_from_exclusions():
     assert hold_ids_sha256(
         {item.author_pub_id for item in profile.held_observations}
     ) == ("92683d4192656f159ccdebf5ed2cc07ff586798df08a1293f5f56767259f66b0")
+
+
+def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
+    profiles = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    profile = next(item for item in profiles if item.scholar_id == "hfFKwRcAAAAJ")
+    assert profile.person_id == "person-stefanbernhard-7f8d72cd"
+    assert profile.expected_source_rows == 228
+    assert profile.cache_sha256 == (
+        "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7"
+    )
+    assert profile.expected_reviewed_exclusion_rows == 43
+    assert profile.reviewed_exclusion_ids_sha256 == (
+        "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    )
+    assert [
+        (item.capture_row_index, item.author_pub_id)
+        for item in profile.held_observations
+    ] == [(212, "hfFKwRcAAAAJ:2KloaMYe4IUC")]
+    assert (
+        hold_ids_sha256({item.author_pub_id for item in profile.held_observations})
+        == "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    )
 
 
 def _manifest(tmp_path, profiles):
