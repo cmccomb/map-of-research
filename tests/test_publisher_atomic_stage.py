@@ -13,6 +13,7 @@ import pytest
 
 import map_of_research.publisher as publisher
 from map_of_research.atomic_release import RELEASE_PATHS
+from map_of_research.release_baseline import pin_prior_release
 
 
 def _bio_registry():
@@ -37,8 +38,126 @@ def test_manual_bio_dispatch_passes_release_intent() -> None:
     ) in workflow
     assert "BIO_RELEASE_ARGS+=(--require-bio-release)" in workflow
     assert '"${BIO_RELEASE_ARGS[@]}"' in workflow
-    assert "MAP_DURABLE_INTENT_REPO: snapshot" in workflow
+    assert "MAP_DURABLE_INTENT_REPO: receipt" in workflow
     assert "MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot" in workflow
+
+
+def test_upload_workflow_separates_frozen_source_from_current_receipts() -> None:
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text(encoding="utf-8")
+    source_checkout = workflow.split("- name: Check out collected snapshot", 1)[
+        1
+    ].split("- name: Check out current upload receipts", 1)[0]
+    receipt_checkout = workflow.split("- name: Check out current upload receipts", 1)[
+        1
+    ].split("- name: Check out reviewed prior upload receipt", 1)[0]
+    assert (
+        "SNAPSHOT_REF: ${{ github.event_name == 'workflow_dispatch' "
+        "&& inputs.snapshot_ref || github.sha }}"
+    ) in workflow
+    assert "ref: ${{ env.SNAPSHOT_REF }}" in source_checkout
+    assert "path: snapshot" in source_checkout
+    assert "persist-credentials: false" in source_checkout
+    # Physics and Breivik review gates read source-pinned status evidence.
+    assert "status\n" in source_checkout
+    assert "ref: automation/map-snapshot" in receipt_checkout
+    assert "path: receipt" in receipt_checkout
+    assert "persist-credentials: true" in receipt_checkout
+    assert "status\n" in receipt_checkout
+    assert "--status-dir receipt/status" in workflow
+    assert "--current-receipt receipt/status/last-upload.json" in workflow
+    assert 'MAP_SOURCE_COMMIT="$(git -C snapshot rev-parse HEAD)"' in workflow
+    assert "--status-file receipt/status/last-upload.json" in workflow
+    assert "working-directory: receipt" in workflow
+    assert "snapshot/status/last-upload.json" not in workflow
+
+
+def test_retry_uses_frozen_source_and_current_failure_receipt(
+    monkeypatch, tmp_path
+) -> None:
+    """A failed run may advance status without invalidating its frozen input."""
+
+    def git(*args):
+        return subprocess.run(
+            ["git", *map(str, args)], check=True, capture_output=True, text=True
+        ).stdout.strip()
+
+    remote = tmp_path / "remote.git"
+    initial = tmp_path / "initial"
+    snapshot = tmp_path / "snapshot"
+    receipt = tmp_path / "receipt"
+    git("init", "--bare", remote)
+    git("clone", remote, initial)
+    git("-C", initial, "checkout", "-b", "automation/map-snapshot")
+    (initial / "snapshots").mkdir()
+    (initial / "snapshots" / "raw.parquet").write_bytes(b"frozen input")
+    (initial / "status").mkdir()
+    success = {"status": "success", "artifact_commit": "a" * 40}
+    (initial / "status" / "last-upload.json").write_text(json.dumps(success))
+    (initial / "status" / "last-successful-upload.json").write_text(json.dumps(success))
+    git("-C", initial, "add", ".")
+    git(
+        "-C",
+        initial,
+        "-c",
+        "user.name=test",
+        "-c",
+        "user.email=test@example.test",
+        "commit",
+        "-m",
+        "Frozen source and successful release",
+    )
+    frozen_commit = git("-C", initial, "rev-parse", "HEAD")
+    git("-C", initial, "push", "origin", "HEAD:automation/map-snapshot")
+    git("clone", remote, snapshot)
+    git("-C", snapshot, "checkout", frozen_commit)
+    failure = {"status": "failure", "workflow_url": "https://github.test/run/1"}
+    (initial / "status" / "last-upload.json").write_text(json.dumps(failure))
+    git("-C", initial, "add", "status/last-upload.json")
+    git(
+        "-C",
+        initial,
+        "-c",
+        "user.name=test",
+        "-c",
+        "user.email=test@example.test",
+        "commit",
+        "-m",
+        "Record failed upload",
+    )
+    failed_receipt_commit = git("-C", initial, "rev-parse", "HEAD")
+    git("-C", initial, "push", "origin", "HEAD:automation/map-snapshot")
+    git("clone", "--branch", "automation/map-snapshot", remote, receipt)
+
+    assert git("-C", snapshot, "rev-parse", "HEAD") == frozen_commit
+    assert git("-C", receipt, "rev-parse", "HEAD") == failed_receipt_commit
+    assert pin_prior_release(receipt / "status") == "a" * 40
+    monkeypatch.setenv("MAP_DURABLE_INTENT_REPO", str(receipt))
+    monkeypatch.setenv("MAP_DURABLE_INTENT_BRANCH", "automation/map-snapshot")
+    intent = {
+        "release_context": {
+            "producer_commit": "c" * 40,
+            "snapshot_commit": frozen_commit,
+        }
+    }
+    publisher._persist_atomic_intent(
+        intent,
+        status={"workflow_url": "https://github.test/run/2"},
+        status_path=receipt / "status" / "last-upload.json",
+    )
+    saved = json.loads(
+        git(
+            "--git-dir",
+            remote,
+            "show",
+            "automation/map-snapshot:status/last-upload.json",
+        )
+    )
+    assert saved["workflow_url"] == "https://github.test/run/2"
+    assert saved["atomic_release_intent"] == intent
+    assert git("-C", snapshot, "rev-parse", "HEAD") == frozen_commit
+    assert (snapshot / "snapshots" / "raw.parquet").read_bytes() == b"frozen input"
 
 
 def test_atomic_intent_is_pushed_before_hub_write_and_keeps_success_baseline(
