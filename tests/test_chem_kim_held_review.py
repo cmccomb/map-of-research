@@ -26,7 +26,7 @@ def test_kim_review_partitions_all_918_observations_without_public_release() -> 
     confirmed = set(proposal["released_author_pub_ids"])
     excluded = set(proposal["excluded_author_pub_ids"])
     held = set(proposal["held_author_pub_ids"])
-    assert (len(confirmed), len(excluded), len(held)) == (123, 499, 296)
+    assert (len(confirmed), len(excluded), len(held)) == (123, 505, 290)
     assert confirmed | excluded | held == set(by_id)
     assert not (confirmed & excluded or confirmed & held or excluded & held)
     assert confirmed == {
@@ -158,4 +158,30 @@ def test_four_more_exact_author_links_leave_adjacent_rows_held() -> None:
     assert all(
         rows[index]["status"] == "unresolved_attribution_hold"
         for index in (413, 427, 429, 445, 454, 456, 458, 459)
+    )
+
+
+def test_six_exact_author_resolutions_leave_initials_only_neighbors_held() -> None:
+    with (REVIEWS / "2026-10-24-chem-kim-918-screen.csv").open(newline="") as handle:
+        rows = {int(row["capture_index"]): row for row in csv.DictReader(handle)}
+    assert {
+        index: (rows[index]["author_pub_id"], rows[index]["status"])
+        for index in (467, 469, 476, 490, 491, 494)
+    } == {
+        467: ("bC4aq-4AAAAJ:Ej9njvOgR2oC", "proposed_other_person_primary_work"),
+        469: (
+            "bC4aq-4AAAAJ:b1wdh0AR-JQC",
+            "proposed_no_target_author_primary_work",
+        ),
+        476: ("bC4aq-4AAAAJ:LPtt_HFRSbwC", "proposed_other_person_primary_work"),
+        490: ("bC4aq-4AAAAJ:lbI08cpqPnQC", "proposed_other_person_primary_work"),
+        491: ("bC4aq-4AAAAJ:U5uP8zs9lfgC", "proposed_other_person_primary_work"),
+        494: (
+            "bC4aq-4AAAAJ:_Ybze24A_UAC",
+            "proposed_no_target_author_primary_work",
+        ),
+    }
+    assert all(
+        rows[index]["status"] == "unresolved_attribution_hold"
+        for index in (461, 477, 487, 493)
     )

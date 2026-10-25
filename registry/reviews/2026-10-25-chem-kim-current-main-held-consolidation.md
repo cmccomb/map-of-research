@@ -11,8 +11,8 @@ The [screening ledger](2026-10-24-chem-kim-918-screen.csv),
 [exact exclusion proposal](proposals/scholar-exclusions.kim-proposal.json),
 [attribution proposal](proposals/scholar-attribution-reviews.kim-proposal.json),
 and [release proposal](proposals/scholar-profile-releases.kim-proposal.json)
-partition the 918 exact citation IDs into **123 confirmed CMU works, 499 exact
-exclusions, and 296 held**. The eight earlier exclusions and 491 later exact
+partition the 918 exact citation IDs into **123 confirmed CMU works, 505 exact
+exclusions, and 290 held**. The eight earlier exclusions and 497 later exact
 decisions are all in the Kim-only proposal. The four newest decisions are
 documented in the [exact follow-up](2026-10-25-chem-kim-four-more-held-exact-attributions.md);
 the subsequent [AMoRE-I ORCID check](2026-10-25-chem-kim-amore-i-orcid-exact.md)
@@ -20,6 +20,8 @@ resolves one additional citation. Three further HongJoo Kim author links are
 documented in the [next-twelve review](2026-10-25-chem-kim-next-twelve-exact-links.md).
 Four more exact author links are documented in the
 [following review](2026-10-25-chem-kim-next-four-exact-author-links.md).
+Six more named-person or complete-byline decisions are documented in the
+[mid-list review](2026-10-25-chem-kim-six-mid-list-exact-attributions.md).
 Row 809 remains held. The draft PR #347 body reports older counts; these
 checked fragments supersede its counts.
 

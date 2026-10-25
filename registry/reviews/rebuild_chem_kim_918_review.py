@@ -2309,6 +2309,148 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in NEXT_FOUR_EXACT_GUARDS.items()}
 )
 
+# Six more saved observations resolve through exact institutional, journal,
+# NLM, or named-person ORCID records. Four neighboring initials-only records
+# remain held: their affiliations and subjects do not identify an individual.
+MID_SIX_EXACT_GUARDS = {
+    467: (
+        "bC4aq-4AAAAJ:Ej9njvOgR2oC",
+        "Progress of kstar 5-ghz lower hybrid current drive system",
+        "S Park, YS Bae, JH Kim, H Do, HT Kim, KM Kim, HK Kim, HJ Kim, WS Han, ...",
+        "2013",
+        "Fusion Science and Technology 63 (1), 49-58, 2013",
+    ),
+    469: (
+        "bC4aq-4AAAAJ:b1wdh0AR-JQC",
+        "Diterpenes of Biota orientalis leaves",
+        "SH Sung, KA Koo, HK Lim, HS Lee, JH Cho, HS Kim, YC Kim",
+        "1998",
+        "Korean Journal of Pharmacognosy 29 (4), 347-352, 1998",
+    ),
+    476: (
+        "bC4aq-4AAAAJ:LPtt_HFRSbwC",
+        "Cerium-Doped  Scintillator for X-Ray and -Ray Detection",
+        "G Rooh, HJ Kim, H Park, S Kim, H Jiang",
+        "2013",
+        "IEEE Transactions on Nuclear Science 61 (1), 397-401, 2013",
+    ),
+    490: (
+        "bC4aq-4AAAAJ:lbI08cpqPnQC",
+        "Phonon–Scintillation Detection Systems with MMC Readout",
+        "HL Kim, HJ Kim, I Kim, SR Kim, YD Kim, YH Kim, DH Kwon, JA Jeon, ...",
+        "2020",
+        "Journal of Low Temperature Physics 199 (3), 1082-1088, 2020",
+    ),
+    491: (
+        "bC4aq-4AAAAJ:U5uP8zs9lfgC",
+        "Clinical characteristics of pediatric cutaneous lupus erythematosus: "
+        "experience from a tertiary referral center in Korea",
+        "SK Lee, J Baek, JY Roh, HJ Kim",
+        "2019",
+        "Lupus 28 (7), 888-892, 2019",
+    ),
+    494: (
+        "bC4aq-4AAAAJ:_Ybze24A_UAC",
+        "Is there any age cutoff to treat elderly patients with head and neck "
+        "cancer? Comparing with septuagenarians and octogenarians",
+        "H Kim, SD Kim, YJ Shim, SY Lee, MW Sung, KH Kim, JH Hah",
+        "2016",
+        "Journal of Korean Medical Science 31 (8), 1300-1306, 2016",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(MID_SIX_EXACT_GUARDS)
+OTHER_PRIMARY.update(
+    {
+        467: (
+            MID_SIX_EXACT_GUARDS[467][1],
+            2013,
+            "Haejin Kim",
+            "10.13182/FST12-493",
+            "https://jobs.iterkorea.org/thesis?amount=10&mid=a20302000000"
+            "&pageNum=4&pblYear=2012",
+            "Korea Institute of Fusion Energy exact journal record and "
+            "publisher-deposited DOI metadata",
+            "The institute spells the eighth author Kim Haejin. Its title, "
+            "Fusion Science and Technology venue, and first eight author "
+            "positions match Crossref DOI 10.13182/FST12-493, published in "
+            "volume 63(1):49-58 in January 2013. The institute displays "
+            "August 2012, but gives the same journal work and author order.",
+        ),
+        476: (
+            MID_SIX_EXACT_GUARDS[476][1],
+            2013,
+            "HongJoo Kim",
+            "10.1109/TNS.2013.2283882",
+            "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825465",
+            "HongJoo Kim public ORCID exact IEEE DOI work record",
+            "The exact IEEE Transactions on Nuclear Science 61(1):397-401 "
+            "article is a self-linked DOI work on HongJoo Kim's ORCID. The "
+            "DOI carries 2013, while the journal issue is dated 2014 and "
+            "the Scholar observation displays 2013; the title formula is "
+            "missing from Scholar's rendering.",
+        ),
+        490: (
+            MID_SIX_EXACT_GUARDS[490][1],
+            2020,
+            "HongJoo Kim",
+            "10.1007/s10909-019-02291-7",
+            "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825252",
+            "HongJoo Kim public ORCID exact Springer DOI work record",
+            "The exact 2020 Journal of Low Temperature Physics 199:1082-1088 "
+            "article is a self-linked DOI work on HongJoo Kim's ORCID. "
+            "Scholar omits Li2MoO4 from the title, but the remaining title, "
+            "journal, pages, year, and leading authors match.",
+        ),
+        491: (
+            MID_SIX_EXACT_GUARDS[491][1],
+            2019,
+            "Hee Joo Kim",
+            "10.1177/0961203319851568",
+            "https://pubmed.ncbi.nlm.nih.gov/31112454/",
+            "NLM exact article author-to-ORCID link and public ORCID person name",
+            "The NLM XML attaches ORCID 0000-0003-1585-8184 to this exact "
+            "Lupus article's H. J. Kim author; the public ORCID person "
+            "record names Hee Joo Kim, distinct from CMU Hyung J. Kim.",
+        ),
+    }
+)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: MID_SIX_EXACT_GUARDS[index][0] for index in (467, 476, 490, 491)}
+)
+ABSENT_AUTHOR_PRIMARY.update(
+    {
+        469: (
+            MID_SIX_EXACT_GUARDS[469][0],
+            MID_SIX_EXACT_GUARDS[469][1],
+            1998,
+            "",
+            "https://koreantk.com/ktkp2014/thesis/"
+            "thesis-view.view?ctrlNo=HKSOBF-1998-v29n4-347",
+            "Korean traditional knowledge article record with complete names",
+            "The exact Korean Journal of Pharmacognosy 29(4):347-352 article "
+            "names Hye-Soo Kim and Young-Choong Kim in its complete seven "
+            "person byline; no Hyung J. Kim or H. J. Kim authored it.",
+        ),
+        494: (
+            MID_SIX_EXACT_GUARDS[494][0],
+            MID_SIX_EXACT_GUARDS[494][1],
+            2016,
+            "10.3346/jkms.2016.31.8.1300",
+            "https://jkms.org/Synapse/Data/PDFData/0063JKMS/jkms-31-1300.pdf",
+            "Journal of Korean Medical Science original full-author PDF",
+            "The exact Journal of Korean Medical Science 31:1300-1306 article "
+            "names first author Heejin Kim and its complete byline has no "
+            "Hyung J. Kim or H. J. Kim.",
+        ),
+    }
+)
+ABSENT_AUTHOR_VENUES.update(
+    {index: MID_SIX_EXACT_GUARDS[index][4] for index in (469, 494)}
+)
+ABSENT_AUTHOR_AUTHORS.update(
+    {index: MID_SIX_EXACT_GUARDS[index][2] for index in (469, 494)}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4295,17 +4437,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 140,
-        "proposed_no_target_author_primary_work": 8,
+        "proposed_other_person_primary_work": 144,
+        "proposed_no_target_author_primary_work": 10,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 292,
+        "unresolved_attribution_hold": 286,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 491 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 497 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
