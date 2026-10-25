@@ -89,8 +89,9 @@ def test_larsson_exact_author_list_and_release_hold() -> None:
     counts = (manifest["author_site_observations"], manifest["reviewed_observations"])
     assert counts == (
         63,
-        66,
+        74,
     )
+    assert manifest["separate_verified_omissions"] == 11
     for filename, digest in manifest["files_sha256"].items():
         assert _sha256(REVIEW / filename) == digest
 
@@ -197,3 +198,43 @@ def test_broken_article_links_and_truncated_title_remain_visible_for_review() ->
     assert possible_variant["DOI"] not in {
         item["doi"] for item in _record("omissions.json")["observations"]
     }
+
+
+def test_eight_additional_primary_source_records_remain_held() -> None:
+    additions = _record("additional-held-eight.json")
+    assert additions["person_id"] == "person-martinlarsson-970afb46"
+    items = additions["observations"]
+    assert len(items) == len({item["observation_id"] for item in items}) == 8
+    assert {item["source_kind"] for item in items} == {
+        "research_preprint", "masters_thesis", "withdrawn_preprint", "magazine_article"
+    }
+    assert sum(item["source_kind"] == "research_preprint" for item in items) == 4
+    assert sum(item["source_kind"] == "magazine_article" for item in items) == 2
+    site = _record("author-site-rows.json")
+    site_titles = {row["citation_text"].casefold() for row in site["rows"]}
+    for item in items:
+        raw = gzip.decompress((REVIEW / item["source_page_file"]).read_bytes())
+        page = raw.decode("utf-8")
+        assert hashlib.sha256(raw).hexdigest() == item["source_page_sha256"]
+        assert item["title_as_listed"].casefold() not in site_titles
+        assert "Martin Larsson" in item["authors_as_listed"]
+        assert item["listed_in_author_site"] is False
+        assert item["scholar_profile_observation"] is False
+        assert item["release_eligible"] is False
+        assert item["map_eligible"] is False
+        assert item["collaboration_eligible"] is False
+        if item.get("arxiv_id"):
+            arxiv_meta = 'name="citation_arxiv_id" content="{}"'.format(
+                item["arxiv_id"]
+            )
+            title_meta = 'name="citation_title" content="{}"'.format(
+                item["title_as_listed"]
+            )
+            assert arxiv_meta in page
+            assert title_meta in page
+            assert item["withdrawn"] is (item["source_kind"] == "withdrawn_preprint")
+            if item["withdrawn"]:
+                assert "This paper has been withdrawn" in page
+        else:
+            assert item["source_kind"] == "magazine_article"
+            assert item["published_date"].startswith("2026-07-")

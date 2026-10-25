@@ -3,7 +3,7 @@
 **Release decision:** held. This is a source graph review, not a Google Scholar
 profile or an authorized publication set. There is no verified Scholar account
 for `person-martinlarsson-970afb46`, and the author-owned page demonstrably omits
-three attributable works. Do not pass these observations to a snapshot or Hub
+eleven attributable artifacts. Do not pass these observations to a snapshot or Hub
 release until a later whole-researcher reconciliation is reviewed.
 
 ## Identity and displayed bibliography
@@ -15,7 +15,7 @@ The captured HTML has one **Papers and preprints** list with **63 `<li>` entries
 and individual row hashes. The test independently extracts all 63 list entries
 from `author-site.html` and compares each citation and link with that JSON.
 
-Three **additional distinct works** are absent from those 63 entries:
+Three **additional distinct works** were first verified outside those 63 entries:
 
 | Work | Evidence | Distinction |
 | --- | --- | --- |
@@ -28,6 +28,17 @@ type, exact identifiers, evidence URLs, and source checksums. The discussion
 published online in October 2023 appears in a 2024 journal issue; both dates
 are retained. Crossref's generic `journal-article` type for the SSRN DOI is
 overridden here by the publisher's explicit research-paper/preprint status.
+
+`additional-held-eight.json` records eight more attributable artifacts outside
+the author list: four arXiv research preprints (`2402.00713`, `2601.05217`,
+`2606.24768`, `2608.09840`), the separately typed arXiv thesis `1008.1754`,
+the explicitly withdrawn arXiv manuscript `1104.5272`, and two July 2026
+[ERCIM News](https://ercim-news.ercim.eu/en145/) magazine articles. Each record
+pins the primary page, byline, date, genre, and graph hold. The thesis's
+potential overlap with author-list row 63 remains unresolved. The withdrawn
+manuscript and magazine articles are not treated as collaboration edges.
+These are **source observations**, not proof of eleven distinct new research
+publications or a complete career bibliography.
 
 ## Source corrections and version candidates
 
@@ -52,10 +63,10 @@ omitted work.
 
 ## Remaining gate
 
-The 63-list is complete as displayed, and the three extra works are source
+The 63-list is complete as displayed, and eleven further artifacts are source
 verified. This does **not** establish a full career publication history:
 Larsson's exact Scholar account is unresolved, the author list omits at least
-three works, and the list does not consistently distinguish manuscript, journal,
+eleven artifacts, and the list does not consistently distinguish manuscript, journal,
 chapter, and discussion manifestations. Similar-name Crossref results include
 unrelated engineering, medical, and anthropology authors; a name match alone
 cannot add a work. Before release, reconcile the whole history against an
