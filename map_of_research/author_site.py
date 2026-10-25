@@ -65,9 +65,13 @@ class _AllPublicationsCounter(HTMLParser):
 
 
 def load_author_site_rows(path: Path, registry: Registry) -> list[dict[str, object]]:
-    """Return all 47 Iyer observations only if every capture and review pin matches."""
+    """Return a complete, pinned author bibliography for the selected person."""
 
     manifest = json.loads(path.read_text(encoding="utf-8"))
+    if manifest.get("person_id") == "person-theresaanderson-5ed760a9":
+        from .anderson_author_site import load_anderson_author_site_rows
+
+        return load_anderson_author_site_rows(path, registry)
     if (
         manifest.get("schema_version") != AUTHOR_SITE_SCHEMA_VERSION
         or manifest.get("source_type") != "author_site"

@@ -21,3 +21,28 @@ This draft must remain unmerged until the in-progress Sullivan/Math composite
 release finishes, because schema v7 cannot validate its schema v6 source
 snapshot. A later source rebuild may pair this capture with the 49 reviewed
 Math primary homes in PR #317; that registry change is not part of this draft.
+
+`theresa-anderson-2026-10-25.json` separately pins all 42 entries in Theresa
+Anderson's CMU hosted "Publications and preprints" section, the exact source
+HTML and extraction CSV, her linked August 2026 CV PDF, a one-to-one 42-entry
+CV crosswalk, and a reviewed title/byline/genre index. The six source/CV title
+differences remain visible in the original wording; no canonical publisher
+title or DOI is inferred from an unlinked citation. Five newest entries have
+no source-supported year. Entry 30 uses the linked CV's explicit 2020 year.
+Entry 5 is an appendix by Anderson and Lemke Oliver to a Kim article; Kim is
+not asserted as their coauthor. Entry 11 is a personal essay and entry 37 a
+thesis. These three are labeled with non-publication output types and cannot
+form collaboration links. No external coauthors are inferred from the
+bibliography's free-text bylines.
+
+The loader exposes all 42 only when the manifest is explicitly passed to
+`--author-site-capture`. It preserves the exact source citation, CV wording,
+raw links, and review record in `source_record_json`. Its citation counts are
+unknown, Scholar IDs and fetch times are empty, and the publisher still rejects
+all `author_site` snapshots. The capture establishes completeness of the
+displayed author page and current CV, not independently exhaustive career
+coverage or a Google Scholar profile.
+
+The current snapshot CLI selects one author-site manifest at a time. Combining
+the Iyer and Anderson captures in the same source snapshot requires a separate
+multi-manifest pipeline change before publication.
