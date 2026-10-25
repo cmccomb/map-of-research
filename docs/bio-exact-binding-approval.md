@@ -17,13 +17,19 @@ McManus poster approval covers one map-point loss; this manifest does not
 approve that loss or any new collaboration eligibility.
 
 The validator pins the manifest bytes, immutable Hub parent, exact W3 source
-commit and Parquet digest, DOI aliases, curated works, profile releases,
-provisional holds, and poster approval. The continuity gate requires all 11
-old/new work and collaboration tuples and rejects an extra, missing, or
+commit and Parquet digest, DOI aliases, reviewed exclusions, curated works,
+profile releases, provisional holds, and poster approval. The continuity gate
+requires all 11 old/new work and collaboration tuples and rejects an extra, missing, or
 changed tuple. The source review documents are
 [four publication identities](bio-four-reviewed-region-gains.md),
 [Murphy's caption and figure publications](murphy-caption-figure-source-review.md),
 and [Willard's education article](amanda-willard-2014-native-source-review.md).
+
+The release gate also requires three exact Murphy Scholar observations to
+leave the map as reviewed corrupted duplicates. Their retained PSB, BioLINK,
+and KDD publications must remain mapped, and the three losses must appear in
+the continuity receipt. The exclusion file hash and per-record evidence are
+pinned; any additional mapped Bio29 loss fails the gate.
 
 This approval is for a diagnostic parent. Chemistry must publish first. After
 its verified Hub receipt, rebind and review the exact tuples against the new

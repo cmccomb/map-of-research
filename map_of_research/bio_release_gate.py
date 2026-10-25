@@ -68,6 +68,27 @@ POSTER_WORK_ID = "work-d701cf6129386f93f78754f5b2f78e2653904fecbc6428dfb27ca8495
 POSTER_SOURCE_SHA256 = (
     "a2d3b3ebb010eea4f246edf2d67e7c4463440499ea15de380aff25486dddd164"
 )
+MURPHY_ID = "person-robertfmurphy-5930bd3c"
+MURPHY_SCHOLAR_ID = "qQLlBH4AAAAJ"
+# Each excluded Scholar row duplicates a retained, independently verified work.
+# The tuple is (retained citation, retained work ID, exclusion evidence URL).
+REVIEWED_DUPLICATE_LOSSES = {
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:P7Ujq4OLJYoC", "scholar"): (
+        "qQLlBH4AAAAJ:g5m5HwL7SMYC",
+        "work-3f9429e5d668edf6eb960934479268ba9b5f5fbae31ec542a1b8bc9bfe4874e2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4256960/",
+    ),
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:idthP5jqfYAC", "scholar"): (
+        "qQLlBH4AAAAJ:AXPGKjj_ei8C",
+        "work-e34bf1b2730e8840322680db92eb671f9c1b97ee1212febf6456e9eab3b294db",
+        "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+    ),
+    (MURPHY_ID, MURPHY_SCHOLAR_ID, "qQLlBH4AAAAJ:unp9ATQDT5gC", "scholar"): (
+        "qQLlBH4AAAAJ:pqnbT2bcN3wC",
+        "work-4cfbe6eef8651fa63f73d1c31c8790b9e98fdd56876e14c1d591d29cd2e77f8a",
+        "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+    ),
+}
 
 
 def _as_list(value: Any) -> list[Any]:
@@ -320,11 +341,56 @@ def validate_bio_release_prewrite(
         tables["profile_publications"], tables["works"], original_bio29
     )
     mapped_losses = prior_mapped - new_mapped
-    if mapped_losses - {POSTER_ID}:
-        raise ValueError("Bio release loses a mapped repaired-baseline observation")
+    unexpected_losses = sorted(
+        mapped_losses - {POSTER_ID} - REVIEWED_DUPLICATE_LOSSES.keys()
+    )
+    if unexpected_losses:
+        raise ValueError(
+            "Bio release loses "
+            f"{len(unexpected_losses)} mapped repaired-baseline observation(s): "
+            f"{unexpected_losses[:3]}"
+        )
+    current_works = _by_work_id(tables["works"])
+    old_profiles = _indexed(baselines["repair_profile"], IDENTITY)
+    reviewed_duplicate_losses = mapped_losses & REVIEWED_DUPLICATE_LOSSES.keys()
+    if reviewed_duplicate_losses != REVIEWED_DUPLICATE_LOSSES.keys():
+        missing = sorted(REVIEWED_DUPLICATE_LOSSES.keys() - reviewed_duplicate_losses)
+        raise ValueError(
+            "Bio release lacks exact reviewed Murphy duplicate losses: "
+            f"{len(missing)} missing; {missing[:3]}"
+        )
+    for identity in reviewed_duplicate_losses:
+        canonical_id, canonical_work_id, evidence_url = REVIEWED_DUPLICATE_LOSSES[
+            identity
+        ]
+        duplicate = candidate_profiles.get(identity)
+        canonical = candidate_profiles.get(
+            (MURPHY_ID, MURPHY_SCHOLAR_ID, canonical_id, "scholar")
+        )
+        canonical_work = current_works.get(canonical_work_id)
+        prior = old_profiles.get(identity)
+        if (
+            duplicate is None
+            or prior is None
+            or duplicate.get("source_record_json") != prior.get("source_record_json")
+            or bool(duplicate.get("map_eligible"))
+            or bool(duplicate.get("collaboration_eligible"))
+            or duplicate.get("review_exclusion_code") != "corrupted_duplicate"
+            or duplicate.get("review_evidence_url") != evidence_url
+            or duplicate.get("review_verified_at") != "2026-10-25"
+            or "reviewed_corrupted_duplicate"
+            not in _as_list(duplicate.get("map_exclusion_reasons"))
+            or canonical is None
+            or canonical.get("work_id") != canonical_work_id
+            or not bool(canonical.get("map_eligible"))
+            or not bool(canonical.get("collaboration_eligible"))
+            or canonical_work is None
+            or not bool(canonical_work.get("map_eligible"))
+            or not bool(canonical_work.get("collaboration_eligible"))
+        ):
+            raise ValueError(f"Bio reviewed duplicate differs: {identity}")
     if len({key[0] for key in new_mapped}) < BIO29_COUNT:
         raise ValueError("Bio release loses a mapped Bio29 researcher")
-    current_works = _by_work_id(tables["works"])
     for author_pub_id, (work_id, doi, native_id) in REVIEWED_GAINS.items():
         found = [
             row
@@ -388,6 +454,9 @@ def validate_bio_release_prewrite(
         or continuity_receipt.get("prior_revision") != prior_revision
         or continuity_receipt.get("unexplained_losses")
         or continuity_receipt.get("unexplained_gains")
+        or not {"/".join(identity) for identity in reviewed_duplicate_losses}.issubset(
+            set(continuity_receipt.get("reviewed_losses") or [])
+        )
     ):
         raise ValueError("Bio release lacks a clean exact-observation region diff")
     approved_losses = continuity_receipt.get("approved_one_time_losses") or []
@@ -459,6 +528,7 @@ def validate_bio_release_prewrite(
         "bio29_observations_preserved": len(old_bio29_rows),
         "bio29_mapped_observations_preserved": len(prior_mapped - mapped_losses),
         "held_poster_mapped_loss": POSTER_ID in mapped_losses,
+        "reviewed_duplicate_mapped_losses": len(reviewed_duplicate_losses),
         "bio_edges_preserved": len(old_edges),
         "pending_topic_works_preserved": len(restored),
     }

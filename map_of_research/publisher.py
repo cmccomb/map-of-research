@@ -1795,6 +1795,7 @@ def publish_snapshot(
             source_snapshot_commit=source_commit or "",
             source_snapshot_sha256=str(manifest["snapshot_sha256"]),
             doi_aliases_path=doi_aliases_path,
+            exclusions_path=exclusions_path,
             curated_works_path=curated_works_path,
             profile_releases_path=profile_releases_path,
             provisional_holds_path=provisional_holds_path,

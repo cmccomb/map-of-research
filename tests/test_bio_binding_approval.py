@@ -27,6 +27,7 @@ def _inputs() -> dict:
         "source_snapshot_commit": approval.SOURCE_COMMIT,
         "source_snapshot_sha256": approval.SOURCE_SHA256,
         "doi_aliases_path": CURATED / "scholar-doi-aliases.json",
+        "exclusions_path": CURATED / "scholar-exclusions.json",
         "curated_works_path": CURATED / "works.json",
         "profile_releases_path": CURATED / "scholar-profile-releases.json",
         "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
