@@ -50,6 +50,28 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    62: (
+        "AMoRE experiment: a search for neutrinoless double beta decay "
+        "of 100Mo isotope with 40Ca100MoO4 cryogenic scintillation detector",
+        2012,
+        "Hong Joo Kim",
+        "10.1088/1742-6596/375/1/042023",
+        "https://research.knu.ac.kr/en/publications/amore-experiment-a-search-for-neutrinoless-double-beta-decay-of-s/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    93: (
+        "CaMoO/sub 4/scintillation crystal for the search of/sup 100/Mo "
+        "double beta decay",
+        2005,
+        "Hong Joo Kim",
+        "10.1109/TNS.2005.852678",
+        "https://research.knu.ac.kr/en/publications/camoosub4sub-scintillation-crystal-for-the-search-ofsup100supmo-d/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
     6: (
         "Decentralized nonlinear model predictive control of multiple flying robots",
         2003,
@@ -774,16 +796,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 33,
+        "proposed_other_person_primary_work": 35,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 1,
-        "unresolved_attribution_hold": 425,
+        "unresolved_attribution_hold": 423,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 370 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 372 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
