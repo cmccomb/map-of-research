@@ -168,9 +168,7 @@ def test_math_presentation_keeps_unaffected_topic_exact(monkeypatch):
     def drifted(*args, **kwargs):
         result = original(*args, **kwargs)
         next(
-            item
-            for item in result["keywords"]
-            if item["keyword_id"] == "keyword-other"
+            item for item in result["keywords"] if item["keyword_id"] == "keyword-other"
         )["publication_count"] += 1
         return result
 
@@ -183,9 +181,7 @@ def test_math_presentation_keeps_external_coauthors_of_common_points(monkeypatch
     current, previous, artifact, decisions = _fixture(monkeypatch)
     person_id = "external-shared"
     for work_id in ("common-0", "loss-0"):
-        point = next(
-            item for item in artifact["points"] if item["work_id"] == work_id
-        )
+        point = next(item for item in artifact["points"] if item["work_id"] == work_id)
         point["external_coauthor_ids"] = [*point["external_coauthor_ids"], person_id]
     artifact["catalogs"]["external_coauthors"].append(
         {"person_id": person_id, "display_name": "Shared coauthor"}

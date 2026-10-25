@@ -1332,8 +1332,7 @@ def preserve_reviewed_math_presentation(
         str(layout["layout_id"]): {
             axis: round(
                 sum(
-                    float(point[str(layout[f"{axis}_field"])])
-                    for point in gain_members
+                    float(point[str(layout[f"{axis}_field"])]) for point in gain_members
                 )
                 / len(gain_members),
                 7,
@@ -1379,8 +1378,7 @@ def preserve_reviewed_math_presentation(
             members = [
                 point
                 for point in points
-                if point["work_id"] not in losses
-                and keyword_id in point["keyword_ids"]
+                if point["work_id"] not in losses and keyword_id in point["keyword_ids"]
             ]
             if not members or len(members) != (
                 previous["publication_count"] - removed_keyword_counts[keyword_id]
@@ -1452,23 +1450,30 @@ def preserve_reviewed_math_presentation(
         for item in candidate["catalogs"]["external_coauthors"]
     }
     removed_external = old_external.keys() - new_external.keys()
-    if removed_external - {
-        person_id
-        for work_id in losses
-        for person_id in old_points[work_id]["external_coauthor_ids"]
-    } or removed_external & {
-        person_id
-        for work_id in common
-        for person_id in old_points[work_id]["external_coauthor_ids"]
-    } or any(
-        new_external[person_id] != old_external[person_id]
-        for person_id in old_external.keys() & new_external.keys()
-    ) or not (new_external.keys() - old_external.keys()).issubset(
-        {
+    if (
+        removed_external
+        - {
             person_id
-            for work_id in gains
-            for person_id in candidate_points[work_id]["external_coauthor_ids"]
+            for work_id in losses
+            for person_id in old_points[work_id]["external_coauthor_ids"]
         }
+        or removed_external
+        & {
+            person_id
+            for work_id in common
+            for person_id in old_points[work_id]["external_coauthor_ids"]
+        }
+        or any(
+            new_external[person_id] != old_external[person_id]
+            for person_id in old_external.keys() & new_external.keys()
+        )
+        or not (new_external.keys() - old_external.keys()).issubset(
+            {
+                person_id
+                for work_id in gains
+                for person_id in candidate_points[work_id]["external_coauthor_ids"]
+            }
+        )
     ):
         raise ValueError("Math presentation changed external coauthor catalog")
     return output, {
@@ -1870,8 +1875,7 @@ def _publish_atomic_release(
                 or source_manifest["snapshot_sha256"] != MATH_REGION_SNAPSHOT_SHA256
                 or artifact["point_count"] != MATH_BASELINE_MAP_POINTS + 2
                 or continuity_receipt is None
-                or continuity_receipt.get("math_presentation_parity")
-                != expected_parity
+                or continuity_receipt.get("math_presentation_parity") != expected_parity
             ):
                 raise ValueError("Atomic Math release lacks exact presentation parity")
             gate["gate"] = "frozen-math-presentation-parity-v1"

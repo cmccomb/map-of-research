@@ -568,9 +568,7 @@ def test_atomic_math_rejects_staged_payload_drift_before_commit(
             tables,
             _bio_registry(),
             source_frame=pandas.DataFrame({"source": [1]}),
-            source_manifest={
-                "snapshot_sha256": publisher.MATH_REGION_SNAPSHOT_SHA256
-            },
+            source_manifest={"snapshot_sha256": publisher.MATH_REGION_SNAPSHOT_SHA256},
             hf_token="token",
             prior_revision=publisher.MATH_REGION_BASELINE,
             atomic_intent_sink=lambda intent: None,
