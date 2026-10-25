@@ -1,0 +1,37 @@
+{
+  "official_researcher_bibliography_located": false,
+  "verified_google_scholar_account": null,
+  "scholar_attempts": [
+    {
+      "query": "Marion Oliver",
+      "source": "registry/reviews/2026-10-25-math-scholar-account-coverage.json",
+      "result": "no_matching_account_returned"
+    },
+    {
+      "query": "Marion L. Oliver",
+      "source": "https://scholar.google.com/citations?view_op=search_authors&mauthors=Marion+L.+Oliver&hl=en",
+      "result": "redirected_to_google_sign_in; no profile evidence"
+    },
+    {
+      "query": "site:scholar.google.com/citations \"Marion L. Oliver\"",
+      "source": "web_search_2026-10-25",
+      "result": "no_matching_account_returned"
+    }
+  ],
+  "non_research_contexts": [
+    {
+      "url": "https://www.cmu.edu/cmuexp-taskforce/task-force-final-report-november-2019.pdf",
+      "role": "co-chair",
+      "genre": "institutional_task_force_report",
+      "research_publication": false
+    },
+    {
+      "url": "https://www.cmu.edu/math/news-events/articles/20231218_cmuq-marion-retirement.html",
+      "role": "teaching_professor_emeritus",
+      "genre": "university_news_profile",
+      "research_publication": false
+    }
+  ],
+  "thesis_status": "CMU confirms a Mathematics PhD but no title or dissertation record was located; do not invent a thesis row.",
+  "completeness_status": "Three publisher-backed articles are a lower-bound observed set, not a whole-career bibliography."
+}
