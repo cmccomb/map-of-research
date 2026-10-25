@@ -115,7 +115,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
-    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 5
+    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 6
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -155,7 +155,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "uHqbF7sAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "eVxdemsAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "q1g_W5sAAAAJ" for key in exclusions) == 5
-    assert sum(key[0] == "0Nj-v7sAAAAJ" for key in exclusions) == 20
+    assert sum(key[0] == "0Nj-v7sAAAAJ" for key in exclusions) == 21
     assert sum(key[0] == "uOCVq1cAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "ZEHOKUkAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "jrRg4PAAAAAJ" for key in exclusions) == 5
@@ -211,6 +211,105 @@ def test_walkington_nsf_awards_are_excluded_on_each_captured_profile() -> None:
             assert decision.reason_code == "nonpublication"
             assert award_number in decision.reason
     assert ("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC") not in exclusions
+
+
+def test_math_center_name_and_author_header_artifacts_are_exactly_excluded(
+    tmp_path,
+) -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, citation, reason_code in (
+        ("0Nj-v7sAAAAJ", "JV2RwH3_ST0C", "nonpublication"),
+        ("neJ3NIUAAAAJ", "f2IySw72cVMC", "nonpublication"),
+        ("CGSMDGwAAAAJ", "08ZZubdj9fEC", "corrupted_duplicate"),
+        ("gJbEoq8AAAAJ", "aqlVkmm33-oC", "corrupted_duplicate"),
+    ):
+        assert (
+            exclusions[(scholar_id, f"{scholar_id}:{citation}")].reason_code
+            == reason_code
+        )
+
+    real_article_citations = (
+        ("CGSMDGwAAAAJ", "SeFeTyx0c_EC", "person-walkington", "Noel Walkington"),
+        ("gJbEoq8AAAAJ", "4JMBOYKVnBMC", "person-kinderlehrer", "David Kinderlehrer"),
+    )
+    for scholar_id, citation, _, _ in real_article_citations:
+        assert (scholar_id, f"{scholar_id}:{citation}") not in exclusions
+
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": person_id,
+                "display_name": display_name,
+                "scholar_id": scholar_id,
+            }
+            for scholar_id, _, person_id, display_name in real_article_citations
+        ],
+        memberships=[
+            {
+                "person_id": person_id,
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+                "verified_at": "2026-10-25",
+            }
+            for _, _, person_id, _ in real_article_citations
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty/index.html",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    rows = []
+    for scholar_id, citation, person_id, display_name in real_article_citations:
+        rows.append(
+            {
+                "source_type": "scholar",
+                "scholar_id": scholar_id,
+                "author_pub_id": f"{scholar_id}:{citation}",
+                "person_id": person_id,
+                "display_name": display_name,
+                "faculty": display_name,
+                "department_ids": ["math"],
+                "memberships": [{"department_id": "math", "included": True}],
+                "title": (
+                    "Approximation of Parabolic EquationsUsing the Wasserstein Metric"
+                ),
+                "authors": "D Kinderlehrer, NJ Walkington",
+                "year": 1999,
+                "venue": (
+                    "ESAIM: Mathematical Modelling and Numerical Analysis "
+                    "33 (4), 837-852, 1999"
+                ),
+                "citation": "ESAIM: M2AN 33(4), 837-852 (1999)",
+                "citation_count": 0,
+                "source_url": "https://archive.numdam.org/item/M2AN_1999__33_4_837_0/",
+                "source_record_json": "{}",
+                "fetched_at_utc": "2026-10-25T00:00:00+00:00",
+                "embedding": [0.0, 1.0],
+            }
+        )
+    tables = build_dataset_tables(pandas.DataFrame(rows), registry, exclusions)
+    assert tables["profile_publications"]["map_eligible"].tolist() == [True, True]
+    assert len(tables["works"]) == 1
+    assert bool(tables["works"].iloc[0]["map_eligible"])
+    assert set(tables["authorships"]["person_id"]) == {
+        "person-walkington",
+        "person-kinderlehrer",
+    }
 
 
 def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:

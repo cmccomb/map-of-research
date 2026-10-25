@@ -2187,6 +2187,14 @@
     },
     {
       "scholar_id": "0Nj-v7sAAAAJ",
+      "author_pub_id": "0Nj-v7sAAAAJ:JV2RwH3_ST0C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 95 names CMU's Center for Nonlinear Analysis rather than a scholarly work. Leoni's CV lists him as associate director in 2012; the same center-name row is already excluded on Pego's profile.",
+      "evidence_url": "https://www.cmu.edu/math/cna/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "0Nj-v7sAAAAJ",
       "author_pub_id": "0Nj-v7sAAAAJ:LPZeul_q3PIC",
       "reason_code": "corrupted_duplicate",
       "reason": "The 2014 volume and pages identify Leoni–Spector's substantive corrigendum, already retained with its correct title at QIV2ME_5wuYC; this row repeats the original paper title.",
@@ -5943,6 +5951,14 @@
       "reason_code": "nonpublication",
       "reason": "Capture row 129 is NSF continuing grant 2342349, RTG: Frontiers in Applied Analysis, not a publication. The Scholar venue itself says NSF Award, and the official award lists Walkington as co-PI.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/2342349.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "CGSMDGwAAAAJ",
+      "author_pub_id": "CGSMDGwAAAAJ:08ZZubdj9fEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 123 misreads author DAVID KINDERLEHRER as the title of the 1999 Kinderlehrer-Walkington Wasserstein article. The publisher's article is retained correctly on Walkington's profile at row 13 and Kinderlehrer's at row 28.",
+      "evidence_url": "https://archive.numdam.org/item/M2AN_1999__33_4_837_0/",
       "verified_at": "2026-10-25"
     },
     {
