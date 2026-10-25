@@ -9,6 +9,14 @@ on:
       - snapshots/cmu-engineering-publications.parquet.manifest.json
   workflow_dispatch:
     inputs:
+      release_mode:
+        description: Publish the normal snapshot or the exact reviewed Chemistry delta
+        required: true
+        default: snapshot
+        type: choice
+        options:
+          - snapshot
+          - chemistry
       snapshot_ref:
         description: Git ref containing the validated raw snapshot
         required: true
@@ -24,6 +32,14 @@ on:
         required: false
         default: true
         type: boolean
+      expected_parent_revision:
+        description: Exact live Hub parent for a Chemistry delta dispatch
+        required: false
+        type: string
+      reviewed_producer_commit:
+        description: Exact reviewed main commit for a Chemistry delta dispatch
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -39,8 +55,29 @@ jobs:
     timeout-minutes: 120
     environment: huggingface
     env:
+      RELEASE_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.release_mode || 'snapshot' }}
       SNAPSHOT_REF: ${{ github.event_name == 'workflow_dispatch' && inputs.snapshot_ref || github.sha }}
     steps:
+      - name: Require an exact release dispatch
+        shell: bash
+        env:
+          EXPECTED_PARENT_REVISION: ${{ inputs.expected_parent_revision }}
+          REVIEWED_PRODUCER_COMMIT: ${{ inputs.reviewed_producer_commit }}
+          RESTORE_PRIOR_REGIONS: ${{ inputs.restore_prior_regions }}
+        run: |
+          set -euo pipefail
+          case "$RELEASE_MODE" in
+            snapshot) ;;
+            chemistry)
+              test "$GITHUB_EVENT_NAME" = workflow_dispatch || exit 1
+              test "$GITHUB_REF" = refs/heads/main || exit 1
+              [[ "$REVIEWED_PRODUCER_COMMIT" =~ ^[0-9a-f]{40}$ ]] || exit 1
+              test "$GITHUB_SHA" = "$REVIEWED_PRODUCER_COMMIT" || exit 1
+              [[ "$EXPECTED_PARENT_REVISION" =~ ^[0-9a-f]{40}$ ]] || exit 1
+              test "$RESTORE_PRIOR_REGIONS" != true || exit 1
+              ;;
+            *) exit 1 ;;
+          esac
       - name: Check out trusted publisher
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -48,6 +85,7 @@ jobs:
           path: source
           persist-credentials: false
       - name: Check out collected snapshot
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ env.SNAPSHOT_REF }}
@@ -61,6 +99,7 @@ jobs:
             status
           sparse-checkout-cone-mode: false
       - name: Check out current upload receipts
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: automation/map-snapshot
@@ -70,13 +109,40 @@ jobs:
             status
           sparse-checkout-cone-mode: false
       - name: Check out reviewed prior upload receipt
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions }}
+        if: ${{ env.RELEASE_MODE == 'snapshot' && github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions }}
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: 3b3ba167947dc399edc08f17b9985a53b5260e4f
           path: reviewed-prior
           persist-credentials: false
           sparse-checkout: status/last-upload.json
+          sparse-checkout-cone-mode: false
+      - name: Check out Chemistry status for remote intent
+        if: ${{ env.RELEASE_MODE == 'chemistry' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: automation/map-snapshot
+          path: snapshot
+          persist-credentials: true
+          sparse-checkout: |
+            status
+          sparse-checkout-cone-mode: false
+      - name: Check out frozen Chemistry source data
+        if: ${{ env.RELEASE_MODE == 'chemistry' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 8be6a2400cf72dd959c874bfcada8624540820ef
+          path: source-data
+          persist-credentials: false
+          sparse-checkout: |
+            snapshots/cmu-engineering-publications.parquet
+            snapshots/cmu-engineering-publications.parquet.manifest.json
+            data/authors
+            data/curated/works.json
+            registry/people.csv
+            registry/memberships.csv
+            registry/departments.csv
+            registry/schools.csv
           sparse-checkout-cone-mode: false
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -85,13 +151,19 @@ jobs:
           cache: pip
           cache-dependency-path: source/pyproject.toml
       - name: Install trusted publisher
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         run: python -m pip install './source[publisher]'
+      - name: Install exact Chemistry producer
+        if: ${{ env.RELEASE_MODE == 'chemistry' }}
+        run: python -m pip install -e './source[publisher]'
       - name: Pin previous hosted release
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         id: baseline
         run: |
           python -m map_of_research.release_baseline \
             --status-dir receipt/status >> "$GITHUB_OUTPUT"
       - name: Select region comparison
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         id: region
         env:
           RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
@@ -111,6 +183,7 @@ jobs:
             --historical-receipt reviewed-prior/status/last-upload.json \
             --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         run: |
           python source/scripts/validate_primary_homes.py \
             --people source/registry/people.csv \
@@ -118,6 +191,7 @@ jobs:
             --departments source/registry/departments.csv \
             --baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json
       - name: Require complete Mathematical Sciences Scholar captures
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         run: |
           map-validate-math-coverage \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
@@ -128,6 +202,7 @@ jobs:
             --cache-dir snapshot/data/authors \
             --capture-dir snapshot/data/captures
       - name: Verify complete Scholar sources before publication
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         run: |
           map-validate-scholar-coverage \
             --people source/registry/people.csv \
@@ -142,6 +217,7 @@ jobs:
             --captures-dir snapshot/data/captures \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet
       - name: Validate, enrich, and publish snapshot
+        if: ${{ env.RELEASE_MODE == 'snapshot' }}
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
           HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
@@ -166,10 +242,10 @@ jobs:
               source/data/curated/bio-mcmanus-poster-loss-approval.json
             )
           fi
-          if [ -f source/data/curated/bio-exact-binding-approval-38f.json ]; then
+          if [ -f source/data/curated/bio-exact-binding-approval-dcb.json ]; then
             BIO_RELEASE_ARGS+=(
               --bio-binding-approval
-              source/data/curated/bio-exact-binding-approval-38f.json
+              source/data/curated/bio-exact-binding-approval-dcb.json
             )
           fi
           map-publish-snapshot \
@@ -200,10 +276,11 @@ jobs:
             --reviewed-contexts source/data/curated/scholar-contexts.json \
             --attribution-reviews source/data/curated/scholar-attribution-reviews.json \
             --profile-releases source/data/curated/scholar-profile-releases.json \
+            --person-publication-holds source/data/curated/person-publication-holds.json \
             --provisional-holds source/data/curated/scholar-provisional-holds.json \
             --status-file receipt/status/last-upload.json
       - name: Record upload receipt
-        if: ${{ always() }}
+        if: ${{ always() && env.RELEASE_MODE == 'snapshot' }}
         working-directory: receipt
         env:
           RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
@@ -231,3 +308,24 @@ jobs:
           fi
           git commit -m "Record central dataset upload [skip ci]"
           git push origin HEAD:automation/map-snapshot
+      - name: Validate, checkpoint remotely, and publish Chemistry delta
+        if: ${{ env.RELEASE_MODE == 'chemistry' }}
+        env:
+          HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
+          HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+          EXPECTED_PARENT_REVISION: ${{ inputs.expected_parent_revision }}
+          REVIEWED_PRODUCER_COMMIT: ${{ inputs.reviewed_producer_commit }}
+        run: |
+          set -euo pipefail
+          HF_TOKEN="$(hf auth token)"
+          test -n "$HF_TOKEN"
+          export HF_TOKEN
+          attempt_dir="$(mktemp -d)"
+          python -m map_of_research.chem_delta_release \
+            --expected-parent-revision "$EXPECTED_PARENT_REVISION" \
+            --expected-producer-commit "$REVIEWED_PRODUCER_COMMIT" \
+            --producer-checkout source \
+            --source-data-checkout source-data \
+            --snapshot-checkout snapshot \
+            --stage-dir "$attempt_dir/stage" \
+            --intent-path "$attempt_dir/chem-intent.json"
