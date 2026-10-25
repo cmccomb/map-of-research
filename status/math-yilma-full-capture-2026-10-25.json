@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "staged_unpublished",
+  "coverage": "complete_visible_profile",
+  "profiles": 1,
+  "visible_rows": 20,
+  "records": [
+    {
+      "person_id": "person-zelealemyilma-fb547edb",
+      "display_name": "Zelealem Yilma",
+      "scholar_id": "AlNKTGsAAAAJ",
+      "official_person_url": "https://www.cmu.edu/math/people/faculty/yilma.html",
+      "scholar_profile_url": "https://scholar.google.com/citations?user=AlNKTGsAAAAJ&hl=en&pagesize=100",
+      "captured_at_utc": "2026-10-25T04:32:04.217000+00:00",
+      "collection_method": "isolated_playwright_direct_profile",
+      "page_load_count": 1,
+      "show_more_click_count": 0,
+      "displayed_count": 20,
+      "more_remain": false,
+      "show_more_disabled": true,
+      "coverage": "complete_visible_profile",
+      "challenge": false,
+      "page_error": "",
+      "unique_citation_ids": 20,
+      "missing_year": 0,
+      "missing_authors": 0,
+      "missing_venue": 4,
+      "svg_title_rows": [],
+      "raw_json_path": "data/captures/yilma-visible-20-2026-10-25.json",
+      "raw_json_sha256": "edb7039a47b296f1fce73e63a4690329ddbd5bdd2984f27bb52af4631169aef5",
+      "raw_html_path": "data/captures/yilma-visible-20-2026-10-25.html",
+      "raw_html_sha256": "dcd5c095fdcb71b778eba7ad898a8e888a4c88b01f4b3b5dd629236c0bd6835c",
+      "author_cache_path": "data/authors/AlNKTGsAAAAJ.json",
+      "author_cache_sha256": "cf58cb32cf24cd4d159795b2974d6664546190a82bf9d83a1db423cc767e171d",
+      "html_xsrf_redacted_count": 2,
+      "html_json_publication_parity": true,
+      "producer_registry_scholar_id_status": "pending_separate_assignment",
+      "eligibility_review_status": "pending_exact_row_review_no_source_rows_removed",
+      "lifetime_publication_completeness": "not_independently_established"
+    }
+  ],
+  "note": "Complete visible Google Scholar source observations for one verified Math faculty member; no producer registry change, snapshot, manifest, upload, or site deployment."
+}
