@@ -89,9 +89,12 @@ only then does the path advance both status files. The first-write-intercepted
 preview simulates this Git checkpoint in a local output directory and makes no
 canonical Git remote mutation, so its receipt must label that simulation.
 
-The separate manual `chem-region-release.yml` workflow is a future production
-entrypoint. It requires a reviewed main producer SHA, a requested immutable Hub
-parent, an explicit Hub token, and three distinct checkouts: clean reviewed
+The Chemistry dispatch mode of the existing trusted `upload.yml` workflow is
+the production entrypoint. The separate `chem-region-release.yml` entrypoint
+was removed after its Hugging Face OIDC token request failed before any Hub
+write. The prior successful trusted-publisher run used `upload.yml`. Chemistry
+mode requires a reviewed main producer SHA, a requested immutable Hub parent,
+an OIDC-derived Hub token, and three distinct checkouts: clean reviewed
 producer code, frozen raw snapshot, complete Scholar caches, original registry,
 and curated works at `8be6a240`, and current `automation/map-snapshot` status.
 The production CLI validates the frozen snapshot against the original registry
@@ -101,10 +104,12 @@ schools, and effective published primary homes. Only the 49 Math records whose
 four raw `primary_department_*` fields were explicitly backfilled from their
 sole included membership may differ. A direct attempt to validate the frozen
 snapshot against that new producer registry fails before staging, as intended.
-The existing #337 upload workflow is unchanged. The Git checkpoint is retained
-on the status branch before `HfApi.create_commit`; missing credentials, prior
+The ordinary snapshot mode of the #337 upload workflow remains intact, and its
+steps are mutually exclusive with the Chemistry release path. The Git checkpoint
+is retained on the status branch before `HfApi.create_commit`; missing credentials, prior
 status, remote push, or fetched-byte readback abort before that write. This
-draft workflow is not an upload authorization and has not been dispatched.
+workflow change is not an upload authorization; the Chemistry mode must pass
+review and CI before a centrally controlled dispatch.
 
 The standing 100% generic coverage metric excludes both new Chemistry release
 modules. A separate CI gate measures their branch coverage: the synthetic
