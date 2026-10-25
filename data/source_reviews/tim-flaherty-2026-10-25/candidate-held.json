@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "source_only_held_no_snapshot_no_release",
+  "person_id": "person-timflaherty-1632f44e",
+  "scholar_account_status": "no_verified_account_after_bounded_search",
+  "completeness_status": "unknown_cmu_page_explicitly_selected",
+  "works": [
+    {
+      "title": "Haar-type multiwavelet bases and self-affine multi-tiles",
+      "authors": ["Timothy J. Flaherty", "Yang Wang"],
+      "year": 1999,
+      "venue": "Asian Journal of Mathematics",
+      "volume": "3",
+      "issue": "2",
+      "pages": "387-400",
+      "doi": "10.4310/ajm.1999.v3.n2.a7",
+      "source_url": "https://www.cmu.edu/math/people/faculty/flaherty.html",
+      "source_verification_urls": [
+        "https://intlpress.com/site/pub/files/_fulltext/journals/ajm/1999/0003/0002/AJM-1999-0003-0002-a007.pdf",
+        "https://api.crossref.org/works/10.4310%2FAJM.1999.v3.n2.a7"
+      ],
+      "disposition": "hold_until_complete_researcher_bibliography_or_verified_full_scholar_profile"
+    }
+  ]
+}
