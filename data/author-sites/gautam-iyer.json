@@ -1,0 +1,1761 @@
+{
+  "schema_version": 1,
+  "source_system": "author_maintained_website",
+  "source_type": "researcher_bibliography",
+  "scholar_capture": false,
+  "publication_cache_ready": false,
+  "person_id": "person-gautamiyer-3894621b",
+  "person_name": "Gautam Iyer",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/iyer.html",
+  "requested_url": "https://www.math.cmu.edu/~gautam/sj/index.html",
+  "final_url": "https://www.math.cmu.edu/~gautam/sj/index.html",
+  "retrieved_at_utc": "2026-10-24T23:12:32.516512+00:00",
+  "http_status": 200,
+  "content_type": "text/html",
+  "last_modified": "Mon, 24 Aug 2026 00:47:34 GMT",
+  "etag": "\"27f46-659c054f5ad9c\"",
+  "html_sha256": "eacc58030ec7ab967198d16343305df7e37f1a89057deb68654a27fd1b413bfc",
+  "coverage_claim": "all_publications_section_on_author_page_at_capture",
+  "observations": [
+    {
+      "section": "all_publications",
+      "section_index": 1,
+      "title_as_listed": "Convergence of Langevin AIS for multimodal distributions.",
+      "citation_text_as_listed": "📲 🖨 A. Agarwal, G. Iyer, A. Jameson, S. Son, W. Wimmer, Convergence of Langevin AIS for multimodal distributions. (2026).",
+      "authors_as_listed": [
+        "A. Agarwal",
+        "G. Iyer",
+        "A. Jameson",
+        "S. Son",
+        "W. Wimmer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2026"
+      ],
+      "year_as_listed": "2026",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202604-son-iyer-langevin-ais-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202604-son-iyer-langevin-ais-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "04760b0170c74b4979fed9490d02146e7dd2392753d560e3d9eaec6e6a28a95f",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:1:04760b0170c74b49"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 2,
+      "title_as_listed": "Convergence of Empirical Measures for I.I.D. Samples in $W^{-\\alpha, p}$.",
+      "citation_text_as_listed": "📲 🖨 G. Iyer, R. Venkataraman, Convergence of Empirical Measures for I.I.D. Samples in $W^{-\\alpha, p}$. (2025).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "R. Venkataraman"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202512-iyer-venkataraman-convergence-empirical-measure-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202512-iyer-venkataraman-convergence-empirical-measure-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "250f0c1e2395ff401e232c68d629355ee99c1c5783884c9e85b96847c4944292",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:2:250f0c1e2395ff40"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 3,
+      "title_as_listed": "Incompressible 2D Euler equations with non-decaying random initial vorticity.",
+      "citation_text_as_listed": "📲 🖨 G. Iyer, M. Lopes Filho, H. Nussenzveig Lopes, Incompressible 2D Euler equations with non-decaying random initial vorticity. (2025).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "M. Lopes Filho",
+        "H. Nussenzveig Lopes"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202512-lopes-filho-nussenzveig-lopes-iyer-euler-random-vorticity-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202512-lopes-filho-nussenzveig-lopes-iyer-euler-random-vorticity-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "458c0a35fae1697ecb2030ff81fe08211b1723479a984c5c369fa11d94d608a0",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:3:458c0a35fae1697e"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 4,
+      "title_as_listed": "Polynomial complexity sampling from multimodal distributions using Sequential Monte Carlo.",
+      "citation_text_as_listed": "📲 🖨 🖥 R. Han, G. Iyer, D. Slepčev, Polynomial complexity sampling from multimodal distributions using Sequential Monte Carlo. (2025).",
+      "authors_as_listed": [
+        "R. Han",
+        "G. Iyer",
+        "D. Slepčev"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202508-dejan-ruiyu-smc-convergence-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202508-dejan-ruiyu-smc-convergence-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://codeberg.org/HanRuiyu/Annealed-Sequential-Monte-Carlo",
+          "label": "🖥",
+          "description": "Code and Figures"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "ef8da1a7c40ad327d950eee3e8b1954c603b79b435328469f18099e630a4ad60",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:4:ef8da1a7c40ad327"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 5,
+      "title_as_listed": "Exponentially mixing flows with slow enhanced dissipation.",
+      "citation_text_as_listed": "📲 🖨 W. Cooperman, G. Iyer, K. Rowan, S. Son, Exponentially mixing flows with slow enhanced dissipation. (2025).",
+      "authors_as_listed": [
+        "W. Cooperman",
+        "G. Iyer",
+        "K. Rowan",
+        "S. Son"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202507-bill-sj-keefer-exp-mix-slow-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202507-bill-sj-keefer-exp-mix-slow-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "af05bf9d20c271f8d5273f27049fe2091d7aaf16db2bb5775459d1f4d964ad93",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:5:af05bf9d20c271f8"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 6,
+      "title_as_listed": "Residual Diffusivity for Expanding Bernoulli Maps.",
+      "citation_text_as_listed": "📲 🖨 W. Cooperman, G. Iyer, J. Nolen, Residual Diffusivity for Expanding Bernoulli Maps. (2025).",
+      "authors_as_listed": [
+        "W. Cooperman",
+        "G. Iyer",
+        "J. Nolen"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2025"
+      ],
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202505-bill-jim-residual-diffusivity-bernoulli-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202505-bill-jim-residual-diffusivity-bernoulli-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "1187d76609d2ecaf6a5b0d8c693c78b936ab658fd1eb532925629831382d9005",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:6:1187d76609d2ecaf"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 7,
+      "title_as_listed": "Residual diffusivity for noisy Bernoulli maps.",
+      "citation_text_as_listed": "📲 🖨 G. Iyer, J. Nolen, Residual diffusivity for noisy Bernoulli maps. (2024).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "J. Nolen"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202409-jim-residual-diffusivity-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202409-jim-residual-diffusivity-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "85908bacea40425148351363a17c88e41b127fb520b444315e45b6af4e465677",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:7:85908bacea404251"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 8,
+      "title_as_listed": "A Harris Theorem for Enhanced Dissipation, and an Example of Pierrehumbert,",
+      "citation_text_as_listed": "📲 🖨 W. Cooperman, G. Iyer, S. Son, A Harris Theorem for Enhanced Dissipation, and an Example of Pierrehumbert, Nonlinearity (2024).",
+      "authors_as_listed": [
+        "W. Cooperman",
+        "G. Iyer",
+        "S. Son"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202403-bill-sj-harris-enhanced-dissipation-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202403-bill-sj-harris-enhanced-dissipation-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1088/1361-6544/adc652",
+          "label": "Nonlinearity (2024).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1088/1361-6544/adc652",
+      "row_dom_sha256": "365beed8496361d1c38ae4c362309ed6c8c0a58d23aaf28135d1cae4d5f14338",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:8:365beed8496361d1"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 9,
+      "title_as_listed": "Mixing in Incompressible Flows: Transport, dissipation and their interplay,",
+      "citation_text_as_listed": "📲 🖨 M. Coti Zelati, G. Crippa, G. Iyer, A. Mazzucato, Mixing in Incompressible Flows: Transport, dissipation and their interplay, AMS Notices (2024).",
+      "authors_as_listed": [
+        "M. Coti Zelati",
+        "G. Crippa",
+        "G. Iyer",
+        "A. Mazzucato"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202308-anna-gianluca-michele-mixing-review-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202308-anna-gianluca-michele-mixing-review.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1090/noti2929",
+          "label": "AMS Notices (2024).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1090/noti2929",
+      "row_dom_sha256": "6c030ad713b583dd2b9ad1d9355763421a69b550d73a3e3e10b1d8d9f2213d15",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:9:6c030ad713b583dd"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 10,
+      "title_as_listed": "Speeding up Langevin Dynamics by Mixing,",
+      "citation_text_as_listed": "📲 🖨 A. Christie, Y. Feng, G. Iyer, A. Novikov, Speeding up Langevin Dynamics by Mixing, Multiscale Modeling & Simulation. A SIAM Interdisciplinary Journal (2023).",
+      "authors_as_listed": [
+        "A. Christie",
+        "Y. Feng",
+        "G. Iyer",
+        "A. Novikov"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202304-alex-alexei-yuanyuan-langevin-speedup-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202304-alex-alexei-yuanyuan-langevin-speedup-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://epubs.siam.org/doi/10.1137/24M168115X",
+          "label": "Multiscale Modeling & Simulation. A SIAM Interdisciplinary Journal (2023).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "66911bef48948606ada9fe1de72f03e879b68ae685bb79a122e04f377ef26e58",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:10:66911bef48948606"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 11,
+      "title_as_listed": "Using Bernoulli maps to accelerate mixing of a random walk on the torus,",
+      "citation_text_as_listed": "📲 🖨 G. Iyer, E. Lu, J. Nolen, Using Bernoulli maps to accelerate mixing of a random walk on the torus, Quarterly of Applied Mathematics (2024).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "E. Lu",
+        "J. Nolen"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2024"
+      ],
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202303-ethan-jim-bernoulli-mixtime-speedup-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202303-ethan-jim-bernoulli-mixtime-speedup-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1090/qam/1668",
+          "label": "Quarterly of Applied Mathematics (2024).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1090/qam/1668",
+      "row_dom_sha256": "4b8f3f7db40e9fb128328c25a64247795609b1192eaef18c95bc3bdf2f78eaa0",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:11:4b8f3f7db40e9fb1"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 12,
+      "title_as_listed": "Quantifying the dissipation enhancement of cellular flows,",
+      "citation_text_as_listed": "📲 🖨 G. Iyer, H. Zhou, Quantifying the dissipation enhancement of cellular flows, SIAM J. Math. Anal. (2023).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "H. Zhou"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202209-zhou-cflow-mixtime-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202209-zhou-cflow-mixtime-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1137/22M1524576",
+          "label": "SIAM J. Math. Anal. (2023).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1137/22M1524576",
+      "row_dom_sha256": "5c4e404f54f608e49c659f1a58acebe264a601d0d2b2feff2f14ac8a921a128a",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:12:5c4e404f54f608e4"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 13,
+      "title_as_listed": "Global Dynamics and Photon Loss in the Kompaneets Equation,",
+      "citation_text_as_listed": "📥 📲 🖨 J. Ballew, G. Iyer, C. D. Levermore, H. Liu, R. Pego, Global Dynamics and Photon Loss in the Kompaneets Equation, SIAM J. Math Anal (2023).",
+      "authors_as_listed": [
+        "J. Ballew",
+        "G. Iyer",
+        "C. D. Levermore",
+        "H. Liu",
+        "R. Pego"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202208-kompaneets-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1137/22M1533207",
+          "label": "SIAM J. Math Anal (2023).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1137/22M1533207",
+      "row_dom_sha256": "eb64f8e31a16c9a428182f9621209d3fecdba363b6d251ae176c1714b0d7a129",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:13:eb64f8e31a16c9a4"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 14,
+      "title_as_listed": "Growth of Sobolev norms and loss of regularity in transport equations,",
+      "citation_text_as_listed": "📥 📲 🖨 G. Crippa, T. Elgindi, G. Iyer, A. Mazzucato, Growth of Sobolev norms and loss of regularity in transport equations, Philosophical Transactions of the Royal Society A (2021).",
+      "authors_as_listed": [
+        "G. Crippa",
+        "T. Elgindi",
+        "G. Iyer",
+        "A. Mazzucato"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2021"
+      ],
+      "year_as_listed": "2021",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202109-regloss.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202109-regloss-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202109-regloss-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1098/rsta.2021.0024",
+          "label": "Philosophical Transactions of the Royal Society A (2021).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1098/rsta.2021.0024",
+      "row_dom_sha256": "89bedcee448654e1da13b004f3c28871e31e3679297c37b4f6459cf1756d83c6",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:14:89bedcee448654e1"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 15,
+      "title_as_listed": "An oscillator driven by algebraically decorrelating noise,",
+      "citation_text_as_listed": "📥 📲 🖨 C. Gomez, G. Iyer, H. Le, A. Novikov, An oscillator driven by algebraically decorrelating noise, Commun. Math. Phys. (2023).",
+      "authors_as_listed": [
+        "C. Gomez",
+        "G. Iyer",
+        "H. Le",
+        "A. Novikov"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2023"
+      ],
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202107-fbm-homog.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202107-fbm-homog-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202107-fbm-homog-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1007/s00220-023-04744-3",
+          "label": "Commun. Math. Phys. (2023).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00220-023-04744-3",
+      "row_dom_sha256": "5b837d41b3d43331f781e05e75019558c771de64d04668fe6360f61ce989aba8",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:15:5b837d41b3d43331"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 16,
+      "title_as_listed": "Bounds on the heat transfer rate via passive advection,",
+      "citation_text_as_listed": "📥 📲 🖨 G. Iyer, S. Van, Bounds on the heat transfer rate via passive advection, SIAM J. Math. Anal. (2021).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "S. Van"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2021"
+      ],
+      "year_as_listed": "2021",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202101-htransfer.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202101-htransfer-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202101-htransfer-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1137/21M1394497",
+          "label": "SIAM J. Math. Anal. (2021).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1137/21M1394497",
+      "row_dom_sha256": "3c191e7454c9c6eb52e31ab0afb72c5b6d90820677d23411da26a1d63dcf611d",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:16:3c191e7454c9c6eb"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 17,
+      "title_as_listed": "Scheduling fixed length quarantines to minimize the total number of fatalities during an epidemic,",
+      "citation_text_as_listed": "📥 📲 🖨 Y. Feng, G. Iyer, L. Li, Scheduling fixed length quarantines to minimize the total number of fatalities during an epidemic, Journal of Mathematical Biology (2020).",
+      "authors_as_listed": [
+        "Y. Feng",
+        "G. Iyer",
+        "L. Li"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2020"
+      ],
+      "year_as_listed": "2020",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202007-sirq.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202007-sirq-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/202007-sirq-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1007/s00285-021-01615-0",
+          "label": "Journal of Mathematical Biology (2020).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00285-021-01615-0",
+      "row_dom_sha256": "fd98b9bf9a0f217791131ca4a56910b4633a7f607fafee47d32a940a646630dd",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:17:fd98b9bf9a0f2177"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 18,
+      "title_as_listed": "Phase separation in the advective Cahn--Hilliard equation,",
+      "citation_text_as_listed": "📥 📲 🖨 Y. Feng, Y. Feng, G. Iyer, J.-L. Thiffeault, Phase separation in the advective Cahn--Hilliard equation, Journal of Nonlinear Science (2019).",
+      "authors_as_listed": [
+        "Y. Feng",
+        "Y. Feng",
+        "G. Iyer",
+        "J.-L. Thiffeault"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2019"
+      ],
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201912-chmix.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201912-chmix-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201912-chmix-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1007/s00332-020-09637-6",
+          "label": "Journal of Nonlinear Science (2019).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00332-020-09637-6",
+      "row_dom_sha256": "3eb37c0a431e07eb582eb8382792c2b6e9d4640c514ecb433af0286adcafac30",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:18:3eb37c0a431e07eb"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 19,
+      "title_as_listed": "Anomalous Dissipation in Passive Scalar Transport,",
+      "citation_text_as_listed": "📥 📲 T. Drivas, T. M. Elgindi, G. Iyer, I.-J. Jeong, Anomalous Dissipation in Passive Scalar Transport, Archive for Rational Mechanics and Analysis (2019).",
+      "authors_as_listed": [
+        "T. Drivas",
+        "T. M. Elgindi",
+        "G. Iyer",
+        "I.-J. Jeong"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2019"
+      ],
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201909-adissip.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201909-adissip-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s00205-021-01736-2",
+          "label": "Archive for Rational Mechanics and Analysis (2019).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "2efa41894694416dc9b4dc2bd7b2754b3bc3a985da03c7f24576b4fbc77380f0",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:19:2efa41894694416d"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 20,
+      "title_as_listed": "Convection-Induced Singularity Suppression in the Keller-Segel and Other Non-linear PDEs,",
+      "citation_text_as_listed": "📥 📲 🖨 G. Iyer, X. Xu, A. Zlatoš, Convection-Induced Singularity Suppression in the Keller-Segel and Other Non-linear PDEs, Transactions of the American Mathematical Society (2019).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "X. Xu",
+        "A. Zlatoš"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2019"
+      ],
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201908-mixblowup.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201908-mixblowup-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201908-mixblowup-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1090/tran/8195",
+          "label": "Transactions of the American Mathematical Society (2019).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1090/tran/8195",
+      "row_dom_sha256": "22351a0097bb070ac8e615d69d56c64aa4bbc85ff877a1157c6f7ff0cf8c27ae",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:20:22351a0097bb070a"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 21,
+      "title_as_listed": "Dissipation Enhancement by Mixing,",
+      "citation_text_as_listed": "📥 📲 🖨 Y. Feng, G. Iyer, Dissipation Enhancement by Mixing, Nonlinearity (2019).",
+      "authors_as_listed": [
+        "Y. Feng",
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2019"
+      ],
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201811-denh.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201811-denh-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201811-denh-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1088/1361-6544/ab0e56",
+          "label": "Nonlinearity (2019).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1088/1361-6544/ab0e56",
+      "row_dom_sha256": "2015b309107a558016b5d4cdeb3d6bf06c1cf85374a560945b1aabe8c58eb933",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:21:2015b309107a5580"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 22,
+      "title_as_listed": "Anomalous diffusion in one and two dimensional combs,",
+      "citation_text_as_listed": "📥 📲 🖨 S. Cohn, G. Iyer, J. Nolen, R. L. Pego, Anomalous diffusion in one and two dimensional combs, Commun. Math. Sci. (2018).",
+      "authors_as_listed": [
+        "S. Cohn",
+        "G. Iyer",
+        "J. Nolen",
+        "R. L. Pego"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2018"
+      ],
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201809-fcomb-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://dx.doi.org/10.4310/CMS.2020.v18.n7.a2",
+          "label": "Commun. Math. Sci. (2018).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.4310/CMS.2020.v18.n7.a2",
+      "row_dom_sha256": "8ae33c6fc78d82fcd0d3ed395b99335006299839d70ecfba0eef7cda4b4bc602",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:22:8ae33c6fc78d82fc"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 23,
+      "title_as_listed": "Long Time Asymptotics of Heat Kernels and Brownian Winding Numbers on Manifolds with Boundary,",
+      "citation_text_as_listed": "📥 📲 🖨 X. Geng, G. Iyer, Long Time Asymptotics of Heat Kernels and Brownian Winding Numbers on Manifolds with Boundary, ALEA (2018).",
+      "authors_as_listed": [
+        "X. Geng",
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2018"
+      ],
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201804-winding.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201804-winding-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201804-winding-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.30757/ALEA.v18-48",
+          "label": "ALEA (2018).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.30757/ALEA.v18-48",
+      "row_dom_sha256": "a4d35b1c478497c4c4ee808baf67cf3582f41fc000f3ebfbafe6122b6e57147b",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:23:a4d35b1c478497c4"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 24,
+      "title_as_listed": "Coagulation and universal scaling limits for critical Galton-Watson processes,",
+      "citation_text_as_listed": "📥 📲 🖨 G. Iyer, N. Leger, R. L. Pego, Coagulation and universal scaling limits for critical Galton-Watson processes, Advances in Applied Probability (2018).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "N. Leger",
+        "R. L. Pego"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2018"
+      ],
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-dtc-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1017/apr.2018.23",
+          "label": "Advances in Applied Probability (2018).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1017/apr.2018.23",
+      "row_dom_sha256": "a1afdbafdbda06f56a027a540586aa43c22a4e0b2196f4461c200f3d2ba13ec2",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:24:a1afdbafdbda06f5"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 25,
+      "title_as_listed": "A model for vortex nucleation in the Ginzburg-Landau equations,",
+      "citation_text_as_listed": "📥 📲 🖨 G. Iyer, D. Spirn, A model for vortex nucleation in the Ginzburg-Landau equations, Journal of Nonlinear Science (2017).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "D. Spirn"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2017"
+      ],
+      "year_as_listed": "2017",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-snuc.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-snuc-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201610-snuc-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1007/s00332-017-9391-4",
+          "label": "Journal of Nonlinear Science (2017).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1007/s00332-017-9391-4",
+      "row_dom_sha256": "c3ab63e76cced6dfd9610ed2f01c7842d99a50984218119c0dc3b7a4bb3cb8b2",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:25:c3ab63e76cced6df"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 26,
+      "title_as_listed": "A fractional kinetic process describing the intermediate time behaviour of cellular flows,",
+      "citation_text_as_listed": "📥 📲 🖨 M. Hairer, G. Iyer, L. Koralov, A. Novikov, Z. Pajor-Gyulai, A fractional kinetic process describing the intermediate time behaviour of cellular flows, Ann. Probab. (2016).",
+      "authors_as_listed": [
+        "M. Hairer",
+        "G. Iyer",
+        "L. Koralov",
+        "A. Novikov",
+        "Z. Pajor-Gyulai"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2016"
+      ],
+      "year_as_listed": "2016",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201607-fkinetic.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201607-fkinetic-tablet.pdf",
+          "label": "📲",
+          "description": "Download mobile friendly preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201607-fkinetic-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "https://doi.org/10.1214/17-AOP1196",
+          "label": "Ann. Probab. (2016).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1214/17-AOP1196",
+      "row_dom_sha256": "3c23768aeca2e784276aed966d86af6f7afd27d8c4b4a4a0bfca5a501675de53",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:26:3c23768aeca2e784"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 27,
+      "title_as_listed": "Bose-Einstein condensation in a Hyperbolic model for the Kompaneets Equation,",
+      "citation_text_as_listed": "📥 🖨 J. Ballew, G. Iyer, R. L. Pego, Bose-Einstein condensation in a Hyperbolic model for the Kompaneets Equation, SIAM J. Math. Anal. (2016).",
+      "authors_as_listed": [
+        "J. Ballew",
+        "G. Iyer",
+        "R. L. Pego"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2016"
+      ],
+      "year_as_listed": "2016",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://dx.doi.org/10.1137/15M1054730",
+          "label": "SIAM J. Math. Anal. (2016).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1137/15M1054730",
+      "row_dom_sha256": "ad5db630f3b16b4ff89ac90ea43aa2f3a56ca4f0958f56320257987b30fed3c0",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:27:ad5db630f3b16b4f"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 28,
+      "title_as_listed": "Stability of vortex solutions to an extended Navier-Stokes system,",
+      "citation_text_as_listed": "📥 🖨 G. Gie, C. Henderson, G. Iyer, L. Kavalie, J. P. Whitehead, Stability of vortex solutions to an extended Navier-Stokes system, Commun. Math. Sci. (2016).",
+      "authors_as_listed": [
+        "G. Gie",
+        "C. Henderson",
+        "G. Iyer",
+        "L. Kavalie",
+        "J. P. Whitehead"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2016"
+      ],
+      "year_as_listed": "2016",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201411-oseen.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201411-oseen-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://dx.doi.org/10.4310/CMS.2016.v14.n7.a1",
+          "label": "Commun. Math. Sci. (2016).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.4310/CMS.2016.v14.n7.a1",
+      "row_dom_sha256": "0a0ef10170644711ffd526fa3539523cfe29c1d35eae0d9ae5864d64d742687c",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:28:0a0ef10170644711"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 29,
+      "title_as_listed": "Anomalous diffusion in fast cellular flows at intermediate time scales,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A. Novikov, Anomalous diffusion in fast cellular flows at intermediate time scales, Probab. Theory Related Fields (2015).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "A. Novikov"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2015"
+      ],
+      "year_as_listed": "2015",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201406-adiffuse.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201406-adiffuse-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://link.springer.com/article/10.1007/s00440-015-0617-9",
+          "label": "Probab. Theory Related Fields (2015).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "115f246a040f4683df13e60fd3445ca2e7fc627138500fd1cf4a65c2236b776a",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:29:115f246a040f4683"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 30,
+      "title_as_listed": "Dynamic Cubic Instability in a 2D Q-tensor Model for Liquid Crystals,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, X. Xu, A. D. Zarnescu, Dynamic Cubic Instability in a 2D Q-tensor Model for Liquid Crystals, Math. Models Methods Appl. Sci (2015).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "X. Xu",
+        "A. D. Zarnescu"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2015"
+      ],
+      "year_as_listed": "2015",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201405-qtensor-instab.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201405-qtensor-instab-2up.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.worldscientific.com/doi/abs/10.1142/S0218202515500396",
+          "label": "Math. Models Methods Appl. Sci (2015).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "7e15f2f952565fa11aca439e4243367cbbfa969741e556164d084ac5c782df73",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:30:7e15f2f952565fa1"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 31,
+      "title_as_listed": "Lower bounds on the mix norm of passive scalars advected by incompressible enstrophy-constrained flows,",
+      "citation_text_as_listed": "📥 🖨 🖥 G. Iyer, A. Kiselev, X. Xu, Lower bounds on the mix norm of passive scalars advected by incompressible enstrophy-constrained flows, Nonlinearity (2014).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "A. Kiselev",
+        "X. Xu"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2014"
+      ],
+      "year_as_listed": "2014",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201208-mix-bounds.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201208-mix-bounds-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.math.cmu.edu/~gautam/research/201208-mix-bounds",
+          "label": "🖥",
+          "description": "Code and Figures"
+        },
+        {
+          "url": "http://stacks.iop.org/0951-7715/27/973",
+          "label": "Nonlinearity (2014).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8ab351d6c05b3080b2235f3434ae778be2bf4b9f37126af2ced4570238abdb9c",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:31:8ab351d6c05b3080"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 32,
+      "title_as_listed": "Global existence for two extended Navier-Stokes systems,",
+      "citation_text_as_listed": "📥 🖨 M. Ignatova, G. Iyer, J. P. Kelliher, R. L. Pego, A. D. Zarnescu, Global existence for two extended Navier-Stokes systems, Commun. Math. Sci. (2015).",
+      "authors_as_listed": [
+        "M. Ignatova",
+        "G. Iyer",
+        "J. P. Kelliher",
+        "R. L. Pego",
+        "A. D. Zarnescu"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2015"
+      ],
+      "year_as_listed": "2015",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201308-llp-gexist.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201308-llp-gexist-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://intlpress.com/site/pub/pages/journals/items/cms/content/vols/0013/0001/a012/index.html",
+          "label": "Commun. Math. Sci. (2015).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "84b2baa2337c4fb2d28ad6d228173f212fd3965acd96f96c5402291d316be86e",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:32:84b2baa2337c4fb2"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 33,
+      "title_as_listed": "Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, N. Leger, R. L. Pego, Limit theorems for Smoluchowski dynamics associated with critical continuous-state branching processes, Ann. Appl. Probab. (2015).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "N. Leger",
+        "R. L. Pego"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2015"
+      ],
+      "year_as_listed": "2015",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201212-coagulation.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201212-coagulation-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://projecteuclid.org/euclid.aoap/1424355128",
+          "label": "Ann. Appl. Probab. (2015).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "70df7a06c7f852923c23d28e4d5bcbaa1ff1cf1d50a3e9a3e3ccd38d8e3449b4",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:33:70df7a06c7f85292"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 34,
+      "title_as_listed": "Coercivity and stability results for an extended Navier-Stokes system,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, R. L. Pego, A. D. Zarnescu, Coercivity and stability results for an extended Navier-Stokes system, J. Math Physics (2012).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "R. L. Pego",
+        "A. D. Zarnescu"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2012"
+      ],
+      "year_as_listed": "2012",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201202-extdyn-2up.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://link.aip.org/link/?JMP/53/115605",
+          "label": "J. Math Physics (2012).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8323b70577c60ed767b3e034cdea9cc1f8d66af08b81cff2442cde68b5590eb4",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:34:8323b70577c60ed7"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 35,
+      "title_as_listed": "Numerical studies of homogenization under a fast cellular flow,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, K. C. Zygalakis, Numerical studies of homogenization under a fast cellular flow, SIAM Multiscale Model. Simul. (2012).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "K. C. Zygalakis"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2012"
+      ],
+      "year_as_listed": "2012",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201201-hnumerics.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201201-hnumerics-2up.pdf",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://dx.doi.org/10.1137/120861308",
+          "label": "SIAM Multiscale Model. Simul. (2012).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": "10.1137/120861308",
+      "row_dom_sha256": "e1ee4e9f129f9471f250c33aed2ea905d0071a7401c773bbe2e16bed3394a60c",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:35:e1ee4e9f129f9471"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 36,
+      "title_as_listed": "From homogenization to averaging in cellular flows,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, T. Komorowski, A. Novikov, L. Ryzhik, From homogenization to averaging in cellular flows, Ann. Inst. H. Poincaré Anal. Non Linéaire (2014).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "T. Komorowski",
+        "A. Novikov",
+        "L. Ryzhik"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2014"
+      ],
+      "year_as_listed": "2014",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201108-evalue.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201108-evalue.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.sciencedirect.com/science/article/pii/S0294144913000942",
+          "label": "Ann. Inst. H. Poincaré Anal. Non Linéaire (2014).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "0c7c65a6a9a4659c9d697798ce644fd6811817249d2fc051c7eb9272d94b741a",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:36:0c7c65a6a9a4659c"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 37,
+      "title_as_listed": "A stochastic-Lagrangian approach to the Navier-Stokes equations in domains with boundary,",
+      "citation_text_as_listed": "📥 🖨 P. Constantin, G. Iyer, A stochastic-Lagrangian approach to the Navier-Stokes equations in domains with boundary, Ann. Appl. Probab. (2011).",
+      "authors_as_listed": [
+        "P. Constantin",
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2011"
+      ],
+      "year_as_listed": "2011",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201003-bdddomains.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201003-bdddomains.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aoap/1312818842",
+          "label": "Ann. Appl. Probab. (2011).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "5005dcc9a04bb46bcafce64ae4a28501ea1d6633ae2a84b8797d4d8822a5b3b8",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:37:5005dcc9a04bb46b"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 38,
+      "title_as_listed": "Exit times for diffusions with incompressible drift,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A. Novikov, L. Ryzhik, A. Zlatoš, Exit times for diffusions with incompressible drift, SIAM J. Math. Anal. (2010).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "A. Novikov",
+        "L. Ryzhik",
+        "A. Zlatoš"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2010"
+      ],
+      "year_as_listed": "2010",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200911-bad-mixing-2d.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200911-bad-mixing-2d.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://epubs.siam.org/doi/abs/10.1137/090776895",
+          "label": "SIAM J. Math. Anal. (2010).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8227e064f3821f475ccb2eeae88adf267ca7a5daecae5ec2c94a37ec0ca12523",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:38:8227e064f3821f47"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 39,
+      "title_as_listed": "The regularizing effects of resetting in a particle system for the Burgers' equation,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A. Novikov, The regularizing effects of resetting in a particle system for the Burgers' equation, Ann. Probab. (2011).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "A. Novikov"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2011"
+      ],
+      "year_as_listed": "2011",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200811-resetting.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200811-resetting.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aop/1312555805",
+          "label": "Ann. Probab. (2011).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "4012d8a4002bdbff36855e5abe427f6af046f1494c4f5432902a62ab3d8bef0b",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:39:4012d8a4002bdbff"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 40,
+      "title_as_listed": "Global regularity for a modified critical dissipative quasi-geostrophic equation,",
+      "citation_text_as_listed": "📥 🖨 P. Constantin, G. Iyer, J. Wu, Global regularity for a modified critical dissipative quasi-geostrophic equation, Indiana Univ. Math. J. (2008).",
+      "authors_as_listed": [
+        "P. Constantin",
+        "G. Iyer",
+        "J. Wu"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2008"
+      ],
+      "year_as_listed": "2008",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200803-mqg.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200803-mqg.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.iumj.indiana.edu/oai/2008/57/3629/3629.xml",
+          "label": "Indiana Univ. Math. J. (2008).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "725d246e51c76f7fd5cf9c8a7651af3e9ffa9c107307db542f21d9065c9f8e93",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:40:725d246e51c76f7f"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 41,
+      "title_as_listed": "A stochastic-Lagrangian particle system for the Navier-Stokes equations,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, J. C. Mattingly, A stochastic-Lagrangian particle system for the Navier-Stokes equations, Nonlinearity (2008).",
+      "authors_as_listed": [
+        "G. Iyer",
+        "J. C. Mattingly"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2008"
+      ],
+      "year_as_listed": "2008",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200803-particle_method.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200803-particle_method.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://iopscience.iop.org/0951-7715/21/11/004/",
+          "label": "Nonlinearity (2008).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "1b9a188c3e4baa63415d5847abf47efff4821898b8ca26d80278392dd63bc3c3",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:41:1b9a188c3e4baa63"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 42,
+      "title_as_listed": "A stochastic Lagrangian proof of global existence of the Navier-Stokes equations for flows with small Reynolds number,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A stochastic Lagrangian proof of global existence of the Navier-Stokes equations for flows with small Reynolds number, Ann. Inst. H. Poincaré Anal. Non Linéaire (2009).",
+      "authors_as_listed": [
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2009"
+      ],
+      "year_as_listed": "2009",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200702-gexist.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200702-gexist.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.sciencedirect.com/science/article/pii/S029414490700090X",
+          "label": "Ann. Inst. H. Poincaré Anal. Non Linéaire (2009).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "2d6f98a2cdef90d3b325854ccf4c7073a024d92614f1e09791bbb06353e6a14a",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:42:2d6f98a2cdef90d3"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 43,
+      "title_as_listed": "Stochastic Lagrangian transport and generalized relative entropies,",
+      "citation_text_as_listed": "📥 🖨 P. Constantin, G. Iyer, Stochastic Lagrangian transport and generalized relative entropies, Commun. Math. Sci. (2006).",
+      "authors_as_listed": [
+        "P. Constantin",
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2006"
+      ],
+      "year_as_listed": "2006",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200608-sentropy.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200608-sentropy.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.cms/1175797610",
+          "label": "Commun. Math. Sci. (2006).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "5ef88e0b33ff59fba6918f3153ef60f1988b8b65afef9d0733ff7fdb12af8a1c",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:43:5ef88e0b33ff59fb"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 44,
+      "title_as_listed": "A stochastic Lagrangian formulation of the incompressible Navier-Stokes and related transport equation,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A stochastic Lagrangian formulation of the incompressible Navier-Stokes and related transport equation, Ph.D. Thesis, University of Chicago (2006).",
+      "authors_as_listed": [
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2006"
+      ],
+      "year_as_listed": "2006",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200605-thesis.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200605-thesis.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://search.proquest.com/docview/304953924",
+          "label": "Ph.D. Thesis, University of Chicago (2006).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "106f9c984afe189c80983a5dcfbefb6234135ecc928ba3aa39be20b996af65f4",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:44:106f9c984afe189c"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 45,
+      "title_as_listed": "A stochastic Lagrangian representation of the $3$-dimensional incompressible Navier-Stokes equations,",
+      "citation_text_as_listed": "📥 🖨 P. Constantin, G. Iyer, A stochastic Lagrangian representation of the $3$-dimensional incompressible Navier-Stokes equations, Comm. Pure Appl. Math. (2008).",
+      "authors_as_listed": [
+        "P. Constantin",
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2008"
+      ],
+      "year_as_listed": "2008",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200511-detsns.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200511-detsns.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://onlinelibrary.wiley.com/doi/10.1002/cpa.20192/abstract.d02t01",
+          "label": "Comm. Pure Appl. Math. (2008).",
+          "description": "Published paper from journal website",
+          "session_component_removed": true
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "65628d3cce7bcec7aeb59cf4f8d546815c8223b1ff1e556e330d227cd85442c2",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:45:65628d3cce7bcec7"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 46,
+      "title_as_listed": "A Stochastic perturbation of inviscid flows,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, A Stochastic perturbation of inviscid flows, Commun. Math. Phys. (2006).",
+      "authors_as_listed": [
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2006"
+      ],
+      "year_as_listed": "2006",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200505-sperturb.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/200505-sperturb.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://www.springerlink.com/content/b7757155707l1571/?MUD=MP",
+          "label": "Commun. Math. Phys. (2006).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "27d35740ca6645d4a6caa5ed492ecf70ecb86ae3d7a31cce7397c591e98d8f87",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:46:27d35740ca6645d4"
+    },
+    {
+      "section": "all_publications",
+      "section_index": 47,
+      "title_as_listed": "Transport in viscous rotating fluids,",
+      "citation_text_as_listed": "📥 🖨 G. Iyer, Transport in viscous rotating fluids, Commun. Math. Sci. (2004).",
+      "authors_as_listed": [
+        "G. Iyer"
+      ],
+      "coauthors_note_as_listed": "",
+      "year_candidates_from_text": [
+        "2004"
+      ],
+      "year_as_listed": "2004",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/2004-vtrans.pdf",
+          "label": "📥",
+          "description": "Download preprint"
+        },
+        {
+          "url": "https://www.math.cmu.edu/~gautam/sj/research/papers/2004-vtrans.ps",
+          "label": "🖨",
+          "description": "Download 2up preprint for eco-friendly printing"
+        },
+        {
+          "url": "http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.cms/1109885502",
+          "label": "Commun. Math. Sci. (2004).",
+          "description": "Published paper from journal website"
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "bcc071756c5fbe31aef2d5a1bee0cc0a291721f4f3a7e583a46a0ede1ad71a7a",
+      "observation_id": "researcher-bibliography:person-gautamiyer-3894621b:all_publications:47:bcc071756c5fbe31"
+    }
+  ],
+  "mapping_status": "source_only_unreconciled",
+  "redactions": [
+    {
+      "kind": "outgoing_url_session_component",
+      "html_occurrences": 4,
+      "structured_links_affected": 1,
+      "description": "Removed ;jsessionid from public page HTML and one outgoing link. The original HTML remains local only."
+    }
+  ]
+}

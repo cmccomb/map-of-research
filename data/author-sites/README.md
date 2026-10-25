@@ -1,0 +1,18 @@
+# Mathematical Sciences researcher bibliographies
+
+These are source-only observations from public, researcher-maintained pages captured on 2026-10-24. They are `researcher_bibliography` records, not Google Scholar caches or map-ready publication and coauthor records. Google Scholar remains the primary source when a verified profile is available. No snapshot or live map uses these files yet.
+
+| Person | Official CMU identity | Author page | Captured sections |
+| --- | --- | --- | --- |
+| Gautam Iyer | [CMU Math](https://www.cmu.edu/math/people/faculty/iyer.html) | [All Publications](https://www.math.cmu.edu/~gautam/sj/index.html) | 47 rows in the page's **All Publications** list, including one thesis. The separate Recent Publications display repeats entries and is not counted. |
+| Robin Neumayer | [CMU Math](https://www.cmu.edu/math/people/faculty/neumayer.html) | [Researcher page](https://www.math.cmu.edu/~rneumaye/) | 23 Publications and Preprints, five Proceedings and Surveys, one Ph.D. Thesis, and one Expository Notes item. |
+
+Each JSON file records the page URL, retrieval time, page hash, section, position, displayed title and citation text, displayed author text when separable, all links, and a deterministic row observation ID. A DOI appears only when that row directly links to `doi.org` or `dx.doi.org`; absent years and DOIs remain null. Section coverage means all rows visible in the named sections at capture time, not a verified lifetime bibliography.
+
+Coverage review found works beyond these pages. [bioRxiv's CMU channel](https://connect.biorxiv.org/group/content/19?page=11) lists Iyer's 2026 preprint "A unified smoothing framework for protein domain bigram model" (DOI `10.64898/2026.06.14.732219`), which is absent from his 47 page rows. Its DOI metadata identifies the same Gautam Iyer ORCID linked from his [arXiv author page](https://arxiv.org/a/iyer_g_1.html). Neumayer's linked [June 2026 CV](https://www.math.cmu.edu/~rneumaye/CVNeumayer2026.pdf) lists "Epsilon regularity for spaces with scalar curvature lower bounds," absent from her 30 page rows. Neither omission is added as a page observation or treated as a mapped work here. Both require full-history reconciliation before a whole-researcher coverage claim.
+
+[Neumayer's CV crosswalk](robin-neumayer-cv-crosswalk.json) matches 29 of her 30 numbered CV entries to captured page observations. CV item 24 is the missing Oberwolfach contribution, which the [published 2023 report](https://ems.press/content/serial-article-files/47471) verifies; the page-only item is an expository note. The union has 31 distinct source observations. The crosswalk records the CV PDF hash and exact page observation IDs but does not turn any of them into Scholar rows or map authorships.
+
+The Iyer page contained a session identifier in one outgoing journal URL, repeated four times in its HTML. The committed HTML and corresponding JSON link omit that session component. The original page remains local only; [manifest.json](manifest.json) records its hash and the committed hashes. Neumayer's HTML is unchanged from the captured response. Neither page contained hidden form inputs or cookie headers.
+
+Before any map use, reconcile versions, attribution, and categories with the Scholar corpus and verify any proposed coauthor links. This source batch does not populate `data/authors/`, `data/curated/works.json`, or a combined snapshot.
