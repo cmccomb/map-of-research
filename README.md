@@ -87,7 +87,10 @@ Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
 the collector rejects a replacement missing any previously observed Scholar
 citation ID and keeps the last good cache for review. This prevents a partial
-response from silently removing older publication rows.
+response from silently removing older publication rows. It also rejects an
+incoming response that reaches the requested limit, since more Scholar rows
+may remain, and refuses to refresh a malformed existing cache until its
+publication list, declared row count, and citation IDs are reviewed.
 
 ## Update cadence
 
