@@ -64,6 +64,11 @@ def validate() -> None:
         row["candidate_family_id"] in {entry["record_id"] for entry in observed} | {""}
         for row in related
     )
+    icm_version = next(
+        row for row in related if row["observation_id"] == "pisztora-arxiv-icm-2003"
+    )
+    assert icm_version["candidate_family_id"] == "pisztora-icm-2002"
+    assert icm_version["relationship"] == "proceedings_preprint_version"
 
     by_doi = {row["doi"].lower(): row for row in observed if row["doi"]}
     for path in (ROOT / "raw").glob("crossref-*.json"):
@@ -115,6 +120,9 @@ def validate() -> None:
         (ROOT / "raw" / "numdam-phase-coexistence.html").read_text(encoding="utf-8")
     )
     assert "math 0304371" in normalized(
+        (ROOT / "raw" / "arxiv-icm-version.html").read_text(encoding="utf-8")
+    )
+    assert "proceedings of the icm beijing 2002 vol 3" in normalized(
         (ROOT / "raw" / "arxiv-icm-version.html").read_text(encoding="utf-8")
     )
     assert "pisztora andrew cmu edu" in normalized(
