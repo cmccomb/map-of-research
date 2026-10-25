@@ -22,7 +22,8 @@ work count. The additive `primary_academic_home_type`,
 `primary_academic_home_school_id`, `primary_academic_home_source_url`,
 `primary_academic_home_verified_at`, and `primary_academic_home_basis` fields
 describe one display home and its evidence. The type is `department`,
-`constituent_school`, `institute`, `academic_area`, `school`, or `unresolved`.
+`constituent_school`, `institute`, `academic_area`, `school`, `campus`, or
+`unresolved`.
 An unresolved home has no ID; it does not acquire a choice from an alphabetical
 tie-break. The legacy `primary_department_id`, source URL, and date are
 compatibility fields populated only when the home is an actual department. For
@@ -37,7 +38,9 @@ choice for a joint appointment: it picks the first department in a cited CMU
 dual-department title. It does not rank the appointments, remove memberships,
 or determine publication collection or school inclusion.
 CMU-Africa is an Engineering academic department in this dataset; CMU Silicon
-Valley is a campus facet and cannot be a primary academic home. The
+Valley is a campus facet. A reviewed `campus` display home requires an included
+campus membership and no included academic-unit membership. It is never
+published as a primary department. The
 [2026-10-24 review](../registry/reviews/2026-10-24-primary-departments.md)
 records the outstanding cases. These fields do not remove memberships or
 affect publication collection.

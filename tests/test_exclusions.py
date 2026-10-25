@@ -12,6 +12,7 @@ from map_of_research.exclusions import (
 )
 from map_of_research.publisher import build_map_artifact
 from map_of_research.registry import load_registry
+from map_of_research.snapshot import _load_curated_rows
 from tests.registry_helpers import write_registry
 
 
@@ -34,9 +35,15 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) == 730
+    assert len(exclusions) == 743
     assert sum(key[0] == "JbSQsXAAAAAJ" for key in exclusions) == 4
     assert sum(key[0] == "8AqWr_4AAAAJ" for key in exclusions) == 20
+    assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
+    assert (
+        exclusions[("VzAGH3wAAAAJ", "VzAGH3wAAAAJ:ns9cj8rnVeAC")].reason_code
+        == "nonpublication"
+    )
+    assert ("VzAGH3wAAAAJ", "VzAGH3wAAAAJ:iH-uZ7U-co4C") not in exclusions
     assert sum(key[0] == "TSkli5EAAAAJ" for key in exclusions) == 139
     assert sum(key[0] == "BWNUifwAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "ySlRYXoAAAAJ" for key in exclusions) == 2
@@ -44,6 +51,10 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "RPkJ39IAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "n6flaAsAAAAJ" for key in exclusions) == 18
     assert sum(key[0] == "VQfvIfQAAAAJ" for key in exclusions) == 16
+    assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
+    assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
+    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -97,6 +108,123 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "false_profile_attribution",
         "corrupted_duplicate",
     }
+
+
+def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, excluded_id, retained_id in (
+        ("yssfFIsAAAAJ", "W7OEmFMy1HYC", "LkGwnXOMwfcC"),
+        ("8Vj5Ps4AAAAJ", "W7OEmFMy1HYC", "zYLM7Y9cAGgC"),
+    ):
+        assert exclusions[(scholar_id, f"{scholar_id}:{excluded_id}")].reason_code == (
+            "corrupted_duplicate"
+        )
+        assert (scholar_id, f"{scholar_id}:{retained_id}") not in exclusions
+    # CMU Qatar independently credits Demirkoparan despite Scholar's short author field.
+    assert ("yssfFIsAAAAJ", "yssfFIsAAAAJ:mB3voiENLucC") not in exclusions
+
+
+def test_walkington_corrupted_scholar_row_uses_verified_ams_record(tmp_path) -> None:
+    scholar_id = "CGSMDGwAAAAJ"
+    author_pub_id = f"{scholar_id}:8AbLer7MMksC"
+    doi = "10.1090/qam/1598"
+    person_id = "person-noeljwalkington-c55e6e3b"
+    source = json.loads(Path("data/curated/works.json").read_text())
+    verified = [work for work in source["works"] if work["doi"] == doi]
+    assert len(verified) == 1
+    curated_path = tmp_path / "works.json"
+    curated_path.write_text(
+        json.dumps({"schema_version": 1, "external_coauthors": [], "works": verified})
+    )
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": person_id,
+                "display_name": "Noel J. Walkington",
+                "scholar_id": scholar_id,
+            }
+        ],
+        memberships=[
+            {
+                "person_id": person_id,
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty/index.html",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    curated = _load_curated_rows(curated_path, registry)[0]
+    curated["embedding"] = [0.0, 1.0]
+    scholar = {
+        **curated,
+        "scholar_id": scholar_id,
+        "author_pub_id": author_pub_id,
+        "source_type": "scholar",
+        "source_doi": "",
+        "authors": "M Duan",
+        "venue": "Carnegie Mellon University, 2021",
+        "citation": "",
+        "citation_count": 1,
+        "source_url": (
+            "https://scholar.google.com/citations?view_op=view_citation"
+            f"&user={scholar_id}&citation_for_view={author_pub_id}"
+        ),
+        "source_record_json": json.dumps(
+            {
+                "title": verified[0]["title"],
+                "author": "M Duan",
+                "pub_year": "2021",
+                "venue": "Carnegie Mellon University, 2021",
+                "author_pub_id": author_pub_id,
+            }
+        ),
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "fetched_at_utc": "2026-10-24T12:00:00+00:00",
+    }
+    tables = build_dataset_tables(
+        pandas.DataFrame([scholar, curated]),
+        registry,
+        load_exclusions(DEFAULT_EXCLUSIONS_PATH),
+    )
+    raw = (
+        tables["profile_publications"]
+        .loc[tables["profile_publications"]["author_pub_id"].eq(author_pub_id)]
+        .iloc[0]
+    )
+    assert raw["authors"] == "M Duan"
+    assert raw["venue"] == "Carnegie Mellon University, 2021"
+    assert raw["review_exclusion_code"] == "corrupted_duplicate"
+    assert not raw["map_eligible"]
+    work = tables["works"].iloc[0]
+    assert work["work_id"] == raw["work_id"]
+    assert work["doi"] == doi
+    assert work["authors"] == "Mochong Duan and Noel J. Walkington"
+    assert work["venue"] == "Quarterly of Applied Mathematics"
+    assert work["citation"] == "Quarterly of Applied Mathematics 79(4), 695–715 (2021)"
+    assert work["source_types"] == ["curated_verified"]
+    assert len(tables["profile_publications"]) == 2
+    assert len(tables["authorships"]) == 1
+    assert tables["authorships"].iloc[0]["source_type"] == "curated_verified"
 
 
 @pytest.mark.parametrize(

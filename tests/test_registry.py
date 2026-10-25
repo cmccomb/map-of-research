@@ -128,6 +128,55 @@ def test_registry_retains_one_profile_across_schools(tmp_path: Path) -> None:
     assert registry.primary_affiliation("person-cross-school").basis == "unresolved"
 
 
+def test_single_department_with_other_school_roster_needs_review(
+    tmp_path: Path,
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[{"person_id": "person-joint", "display_name": "Joint Faculty"}],
+        memberships=[
+            {
+                "person_id": "person-joint",
+                "department_id": unit_id,
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/roster",
+                "verified_at": "2026-10-24",
+            }
+            for unit_id in ("ece", "tepper-faculty")
+        ],
+        departments=[
+            {
+                "department_id": "ece",
+                "school_id": "engineering",
+                "title": "Electrical & Computer Engineering",
+                "directory_url": "https://example.test/ece",
+            },
+            {
+                "department_id": "tepper-faculty",
+                "school_id": "tepper",
+                "title": "Tepper faculty roster",
+                "unit_type": "roster_container",
+                "directory_url": "https://example.test/tepper",
+            },
+        ],
+        schools=[
+            {
+                "school_id": "engineering",
+                "title": "College of Engineering",
+                "directory_url": "https://example.test/engineering",
+            },
+            {
+                "school_id": "tepper",
+                "title": "Tepper School of Business",
+                "directory_url": "https://example.test/tepper",
+            },
+        ],
+    )
+    registry = load_registry(people_path, memberships_path, departments_path)
+    assert registry.primary_affiliation("person-joint").basis == "unresolved"
+
+
 @pytest.mark.parametrize(
     "basis",
     [
@@ -250,6 +299,127 @@ def test_joint_math_display_tie_break_preserves_both_memberships(
         for membership in registry.memberships
         if membership.person_id == person_id and membership.included
     } == unit_ids
+
+
+@pytest.mark.parametrize(
+    ("person_id", "home_id", "included_ids"),
+    [
+        ("person-edwardrubin-5cdd285c", "epp", {"epp", "mech"}),
+        (
+            "person-elibenmichael-e8530c7b",
+            "stats",
+            {"stats", "heinz-faculty"},
+        ),
+        ("person-larryawasserman-299c0ed3", "stats", {"stats", "mld"}),
+        ("person-rayidghani-0861bb94", "mld", {"mld", "heinz-faculty"}),
+        ("person-robertekass-a29bd712", "stats", {"stats", "mld", "ni"}),
+        ("person-teddyseidenfeld-57226b15", "philosophy", {"philosophy", "stats"}),
+        ("person-towe-a7ced21f", "ece", {"ece", "mse"}),
+    ],
+)
+def test_coequal_display_tiebreaks_keep_memberships_and_publish_basis(
+    person_id: str, home_id: str, included_ids: set[str]
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    department = registry.departments_by_id[home_id]
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "department",
+        home_id,
+        department.title,
+        department.school_id,
+    )
+    assert (home.verified_at, home.basis) == (
+        "2026-10-24",
+        "display_tie_break_first_listed",
+    )
+    assert home.source_url.startswith("https://")
+    assert person.primary_department_id == ""
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_ids
+
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["review_status"] == "display_tie_break_first_listed"
+    assert review["primary_department_id"] == home_id
+    assert home.source_url in review["review_source_urls"].split("|")
+    assert "Visual display tie-break only" in review["review_note"]
+    assert "does not rank his institutional appointments" in review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == home_id
+    assert published["primary_department_basis"] == "display_tie_break_first_listed"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == department.title
+    assert published["primary_academic_home_school_id"] == department.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == (
+        "display_tie_break_first_listed"
+    )
+
+
+@pytest.mark.parametrize(
+    ("person_id", "home_id", "source_url", "basis", "included_units"),
+    [
+        (
+            "person-fischbeck-f33a9da9",
+            "epp",
+            "https://engineering.cmu.edu/directory/bios/fischbeck-paul.html",
+            "reviewed",
+            {"epp", "sds"},
+        ),
+        (
+            "person-jenellefeather-10f57adf",
+            "psychology",
+            "https://www.cmu.edu/dietrich/psychology/directory/core-training-faculty/feather-jenelle.html",
+            "display_tie_break_first_listed",
+            {"ni", "psychology"},
+        ),
+        (
+            "person-markkamlet-eb7946b0",
+            "sds",
+            "https://www.cmu.edu/dietrich/sds/people/faculty/mark-kamlet.html",
+            "display_tie_break_first_listed",
+            {"cmist", "heinz-faculty", "sds"},
+        ),
+    ],
+)
+def test_three_residual_joint_display_homes_preserve_memberships(
+    person_id: str,
+    home_id: str,
+    source_url: str,
+    basis: str,
+    included_units: set[str],
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    assert person.primary_department_id == ""
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.school_id) == (
+        "department",
+        home_id,
+        registry.departments_by_id[home_id].school_id,
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        basis,
+    )
+    assert home.published_fields()["primary_department_id"] == home_id
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_units
 
 
 def test_campus_membership_is_not_an_academic_department(tmp_path: Path) -> None:
@@ -383,6 +553,108 @@ def test_primary_department_rejects_campus(tmp_path: Path) -> None:
         load_registry(people_path, memberships_path, departments_path)
 
 
+@pytest.mark.parametrize(
+    ("person_id", "source_url"),
+    [
+        (
+            "person-shaikh-2e0f9c29",
+            "https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html",
+        ),
+        (
+            "person-thomas-f531a8ff",
+            "https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html",
+        ),
+    ],
+)
+def test_reviewed_silicon_valley_home_is_a_campus_not_a_department(
+    person_id: str, source_url: str
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    home = registry.primary_affiliation(person_id)
+    assert person.primary_department_id == ""
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "campus",
+        "cmu-silicon-valley",
+        "CMU Silicon Valley",
+        "engineering",
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        "reviewed",
+    )
+    published = home.published_fields()
+    assert published["primary_department_id"] == ""
+    assert published["primary_academic_home_type"] == "campus"
+    assert published["primary_academic_home_id"] == "cmu-silicon-valley"
+    memberships = {
+        item.department_id: item.included
+        for item in registry.memberships
+        if item.person_id == person_id
+    }
+    assert memberships == {"cmu-silicon-valley": True, "iii": False}
+
+
+@pytest.mark.parametrize(
+    ("campus_included", "academic_included", "message"),
+    [
+        (False, False, "not an eligible typed unit"),
+        (True, True, "Campus display home requires no included academic unit"),
+    ],
+)
+def test_campus_home_requires_only_an_included_campus_membership(
+    tmp_path: Path, campus_included: bool, academic_included: bool, message: str
+) -> None:
+    people_path, memberships_path, departments_path = write_registry(
+        tmp_path,
+        people=[
+            {
+                "person_id": "person-campus-review",
+                "display_name": "Campus Review",
+                "primary_academic_home_type": "campus",
+                "primary_academic_home_id": "cmu-silicon-valley",
+                "primary_academic_home_title": "CMU Silicon Valley",
+                "primary_academic_home_source_url": "https://example.test/campus-profile",
+                "primary_academic_home_verified_at": "2026-10-24",
+                "primary_academic_home_basis": "reviewed",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-campus-review",
+                "department_id": department_id,
+                "role": "teaching" if included else "adjunct",
+                "included": "true" if included else "false",
+                "source_url": f"https://example.test/{department_id}",
+                "verified_at": "2026-10-24",
+            }
+            for department_id, included in (
+                ("cmu-silicon-valley", campus_included),
+                ("iii", academic_included),
+            )
+        ],
+        departments=[
+            {
+                "department_id": "cmu-silicon-valley",
+                "school_id": "engineering",
+                "title": "CMU Silicon Valley",
+                "directory_url": "https://example.test/campus",
+                "unit_type": "campus",
+            },
+            {
+                "department_id": "iii",
+                "school_id": "engineering",
+                "title": "Integrated Innovation Institute",
+                "directory_url": "https://example.test/iii",
+                "unit_type": "institute",
+            },
+        ],
+    )
+    with pytest.raises(ValueError, match=message):
+        load_registry(people_path, memberships_path, departments_path)
+
+
 def test_primary_department_rejects_unsupported_membership(tmp_path: Path) -> None:
     people_path, memberships_path, departments_path = write_registry(
         tmp_path,
@@ -503,7 +775,9 @@ def test_primary_review_ledger_covers_every_ambiguous_registry_identity() -> Non
         included = {item.department_id for item in memberships if item.included}
         candidates = included or {item.department_id for item in memberships}
         primary = registry.primary_affiliation(person.person_id)
-        if len(candidates) > 1 or (included and primary.home_type == "unresolved"):
+        if len(candidates) > 1 or (
+            included and primary.home_type in {"unresolved", "campus"}
+        ):
             needs_review.add(person.person_id)
             review = reviews[person.person_id]
             assert review["review_source_urls"].startswith("https://")
@@ -990,6 +1264,347 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
 
 
 @pytest.mark.parametrize(
+    ("name", "home_type", "home_id", "basis", "included_ids"),
+    [
+        (
+            "Barbara Johnstone",
+            "department",
+            "english",
+            "inferred_profile_title",
+            {"english", "lcal"},
+        ),
+        (
+            "Beibei Li",
+            "school",
+            "heinz",
+            "reviewed",
+            {"heinz-faculty", "tepper-faculty"},
+        ),
+        (
+            "Brad Mahon",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"ni", "psychology"},
+        ),
+        ("Dana Scott", "department", "csd", "reviewed", {"csd", "philosophy"}),
+        (
+            "Daniel Nagin",
+            "school",
+            "heinz",
+            "inferred_profile_title",
+            {"heinz-faculty", "stats"},
+        ),
+        (
+            "David Hounshell",
+            "department",
+            "sds",
+            "inferred_profile_title",
+            {"epp", "sds"},
+        ),
+        ("David Touretzky", "department", "csd", "reviewed", {"csd", "ni"}),
+        (
+            "Jamie Callan",
+            "institute",
+            "lti",
+            "inferred_profile_title",
+            {"heinz-faculty", "heinz-ism", "lti"},
+        ),
+        ("Jessica Cantlon", "institute", "ni", "reviewed", {"ni", "psychology"}),
+        (
+            "Kim J. Hyatt",
+            "school",
+            "heinz",
+            "school_fallback",
+            {"heinz-faculty", "heinz-ism", "heinz-ppm"},
+        ),
+        (
+            "David Lamont",
+            "academic_area",
+            "tepper:strategy",
+            "reviewed",
+            {"iii", "tepper-faculty"},
+        ),
+        (
+            "Marcel Just",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"bme", "psychology"},
+        ),
+        (
+            "Marlene Behrmann",
+            "department",
+            "psychology",
+            "inferred_profile_title",
+            {"ni", "psychology"},
+        ),
+        ("Paul Hopper", "department", "english", "reviewed", {"english", "lcal"}),
+        (
+            "Stacy Rosenberg",
+            "school",
+            "heinz",
+            "school_fallback",
+            {"heinz-faculty", "heinz-ism", "heinz-ppm"},
+        ),
+        ("Tai-Sing Lee", "department", "csd", "reviewed", {"csd", "ni"}),
+    ],
+)
+def test_source_backed_display_homes_preserve_memberships_and_published_types(
+    name: str,
+    home_type: str,
+    home_id: str,
+    basis: str,
+    included_ids: set[str],
+) -> None:
+    registry = load_registry()
+    person = next(person for person in registry.people if person.display_name == name)
+    home = registry.primary_affiliation(person.person_id)
+    assert (home.home_type, home.home_id, home.basis) == (home_type, home_id, basis)
+    assert home.source_url.startswith("https://")
+    assert home.verified_at == "2026-10-24"
+    assert {
+        item.department_id
+        for item in registry.memberships
+        if item.person_id == person.person_id and item.included
+    } == included_ids
+
+    published = home.published_fields()
+    assert published["primary_academic_home_type"] == home_type
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == home.title
+    assert published["primary_academic_home_school_id"] == home.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == basis
+    assert published["primary_department_id"] == (
+        home_id if home_type == "department" else ""
+    )
+    assert published["primary_department_basis"] == (
+        basis if home_type == "department" else "unresolved"
+    )
+
+
+@pytest.mark.parametrize(
+    ("name", "home_type", "home_id", "excluded_id", "role_source"),
+    [
+        (
+            "Amelia M. Haviland",
+            "school",
+            "heinz",
+            "stats",
+            "https://www.cmu.edu/dietrich/statistics-datascience/resources/docs/history21.pdf",
+        ),
+        (
+            "Barbara Shinn-Cunningham",
+            "institute",
+            "ni",
+            "psychology",
+            "https://www.cmu.edu/ni/people/faculty/barbara-shinn-cunningham",
+        ),
+        (
+            "David Choi",
+            "school",
+            "heinz",
+            "stats",
+            "https://www.andrew.cmu.edu/user/davidch/choi_CV.pdf",
+        ),
+    ],
+)
+def test_courtesy_corrections_keep_recorded_memberships_and_typed_homes(
+    name: str,
+    home_type: str,
+    home_id: str,
+    excluded_id: str,
+    role_source: str,
+) -> None:
+    registry = load_registry()
+    person = next(person for person in registry.people if person.display_name == name)
+    memberships = [
+        item for item in registry.memberships if item.person_id == person.person_id
+    ]
+    corrected = next(item for item in memberships if item.department_id == excluded_id)
+    assert (corrected.role, corrected.included) == ("courtesy", False)
+    assert corrected.source_url == role_source
+    assert corrected.verified_at == "2026-10-24"
+    assert any(item.included for item in memberships)
+
+    home = registry.primary_affiliation(person.person_id)
+    assert (home.home_type, home.home_id, home.basis) == (
+        home_type,
+        home_id,
+        "reviewed",
+    )
+    published = home.published_fields()
+    assert published["primary_academic_home_type"] == home_type
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_title"] == home.title
+    assert published["primary_academic_home_school_id"] == home.school_id
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "reviewed"
+    assert published["primary_department_id"] == ""
+    assert published["primary_department_basis"] == "unresolved"
+
+    with Path("registry/reviews/2026-10-24-courtesy-home-corrections.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        reviews = list(csv.DictReader(handle))
+    assert len(reviews) == 3
+    review = next(row for row in reviews if row["person_id"] == person.person_id)
+    assert review["corrected_membership_id"] == excluded_id
+    assert review["role_source_url"] == role_source
+    assert review["verified_at"] == "2026-10-24"
+
+
+@pytest.mark.parametrize(
+    ("person_id", "home_id", "included_ids", "counts"),
+    [
+        (
+            "person-annlee-3bb27a6a",
+            "stats",
+            {"stats", "mld"},
+            "stats=11;mld=2",
+        ),
+        (
+            "person-davidplaut-2f20021e",
+            "psychology",
+            {"psychology", "ni"},
+            "psychology=7;computer_science=1;neural_computation=2",
+        ),
+        (
+            "person-sivaramanbalakrishnan-911f98b0",
+            "stats",
+            {"stats", "mld"},
+            "stats=4;mld=2",
+        ),
+    ],
+)
+def test_advisee_count_homes_keep_memberships_and_publish_evidence(
+    person_id: str, home_id: str, included_ids: set[str], counts: str
+) -> None:
+    registry = load_registry()
+    person = registry.people_by_id[person_id]
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.basis) == (
+        "department",
+        home_id,
+        "inferred_advisee_count",
+    )
+    assert home.source_url.startswith("https://")
+    assert home.verified_at == "2026-10-24"
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == included_ids
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["phd_advisee_counts"] == counts
+    assert review["review_status"] == "inferred_advisee_count"
+    assert review["primary_department_id"] == home_id
+    assert review["review_source_urls"] == home.source_url
+    assert review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == home_id
+    assert published["primary_department_basis"] == "inferred_advisee_count"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == home_id
+    assert published["primary_academic_home_school_id"] == "dietrich"
+    assert published["primary_academic_home_source_url"] == home.source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "inferred_advisee_count"
+    assert person.primary_department_id == home_id
+
+
+@pytest.mark.parametrize(
+    ("person_id", "source_url", "included_ids", "recorded_ids"),
+    [
+        (
+            "person-farnamjahanian-ec16c348",
+            "https://www.csd.cmu.edu/people/faculty/farnam-jahanian",
+            {"csd", "heinz-faculty", "heinz-ism"},
+            {"csd", "ece", "heinz-faculty", "heinz-ism"},
+        ),
+        (
+            "person-rogerdannenberg-73c4f6bd",
+            "https://www.csd.cmu.edu/people/faculty/roger-dannenberg",
+            {"csd", "music"},
+            {"csd", "music"},
+        ),
+    ],
+)
+def test_csd_department_field_homes_preserve_verified_memberships(
+    person_id: str,
+    source_url: str,
+    included_ids: set[str],
+    recorded_ids: set[str],
+) -> None:
+    registry = load_registry()
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.title, home.school_id) == (
+        "department",
+        "csd",
+        "Computer Science Department",
+        "scs",
+    )
+    assert (home.source_url, home.verified_at, home.basis) == (
+        source_url,
+        "2026-10-24",
+        "reviewed",
+    )
+    memberships = [
+        membership
+        for membership in registry.memberships
+        if membership.person_id == person_id
+    ]
+    assert {membership.department_id for membership in memberships} == recorded_ids
+    assert {
+        membership.department_id for membership in memberships if membership.included
+    } == included_ids
+    assert "art" not in recorded_ids
+    if person_id == "person-farnamjahanian-ec16c348":
+        ece = next(
+            membership
+            for membership in memberships
+            if membership.department_id == "ece"
+        )
+        assert (ece.role, ece.included, ece.source_url, ece.verified_at) == (
+            "courtesy",
+            False,
+            "https://www.ece.cmu.edu/directory/courtesy-faculty.html",
+            "2026-10-24",
+        )
+
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["review_status"] == "reviewed"
+    assert review["primary_department_id"] == "csd"
+    assert review["primary_academic_home_type"] == "department"
+    assert review["primary_academic_home_id"] == "csd"
+    assert source_url in review["review_source_urls"].split("|")
+    assert review["review_note"]
+    published = home.published_fields()
+    assert published["primary_department_id"] == "csd"
+    assert published["primary_department_basis"] == "reviewed"
+    assert published["primary_academic_home_type"] == "department"
+    assert published["primary_academic_home_id"] == "csd"
+    assert published["primary_academic_home_title"] == "Computer Science Department"
+    assert published["primary_academic_home_school_id"] == "scs"
+    assert published["primary_academic_home_source_url"] == source_url
+    assert published["primary_academic_home_verified_at"] == "2026-10-24"
+    assert published["primary_academic_home_basis"] == "reviewed"
+
+
+@pytest.mark.parametrize(
     ("home", "unit_ids", "invalid_unit_type", "message"),
     [
         (
@@ -999,7 +1614,7 @@ def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
             "Two explicit primary homes",
         ),
         (
-            {"primary_academic_home_type": "campus"},
+            {"primary_academic_home_type": "laboratory"},
             ("tepper-faculty",),
             False,
             "Invalid primary academic home type",

@@ -50,14 +50,18 @@ The primary academic home is a single **display affiliation**, not a
 replacement for memberships or a claim about university HR records. Published
 `primary_academic_home_type`, `_id`, `_title`, `_school_id`, `_source_url`,
 `_verified_at`, and `_basis` fields distinguish departments, constituent
-schools, institutes, academic areas, broader schools, and unresolved cases.
+schools, institutes, academic areas, broader schools, campus display homes,
+and unresolved cases.
 The legacy `primary_department_id` is a compatibility field only for an actual
 department home; its basis reads `unresolved` for other resolved home types,
 which consumers distinguish through the typed fields. A person with one
 included academic unit can inherit that
 verified unit; a school-level roster container is not thereby a verified
 department. CMU-Africa is an academic department under Engineering for this
-dataset; CMU Silicon Valley is a campus facet and cannot be a primary.
+dataset. CMU Silicon Valley is a campus facet, never an academic department.
+For a person with an included campus membership and no included academic
+unit, it can be an explicitly reviewed typed `campus` display home; the
+legacy `primary_department_id` remains empty.
 Excluded courtesy, adjunct, affiliate, and former roles cannot supply a
 primary on their own. Multiple eligible units require a source-backed choice,
 a clearly labeled advising-count or title inference, or an explicitly reviewed
@@ -77,16 +81,15 @@ identifies ISM and EPP, while named PhD advisees favor Heinz over EPP 10 to 9.
 All of these people's included memberships remain available to filters.
 
 The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
-records all 190 people needing explicit review. Across 2,001 registry
-people, 1,442 included people have a display primary and 559 remain unresolved,
-including all 521 excluded-only people. Of 1,480 included people, 38 remain
-unresolved. Of 456 included people with a Scholar ID, 454 have a primary;
-Andrew Ilyas and Chris Hendrickson remain unresolved. The
+records 187 people needing explicit review. Across 2,001 registry people,
+all 1,480 included people have a display primary; the 521 excluded-only
+people remain unresolved. All 465 included people with a Scholar ID have a
+display primary. The
 [four-school review](reviews/2026-10-24-other-schools-primary.md) and
 [Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence.
-Avigad and Sekerka have explicit first-listed visual tie-breaks; their joint
-appointments remain included. Publication and school filters continue to use
-all included memberships.
+Avigad, Sekerka, Feather, and Kamlet have explicit first-listed visual
+tie-breaks; their joint appointments remain included. Publication and school
+filters continue to use all included memberships.
 
 Faculty registration does not imply publication coverage. The source pages
 directly linked 93 SCS and 44 MCS Scholar IDs. In the first CMU-wide snapshot,

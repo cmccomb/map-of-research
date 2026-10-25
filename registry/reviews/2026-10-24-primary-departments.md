@@ -1,7 +1,7 @@
 # Primary academic home review, 2026-10-24
 
 The [row-level review ledger](2026-10-24-primary-departments.csv) records all
-190 people needing an explicit review: 168 included people with multiple
+187 people needing an explicit review: 165 included people with multiple
 candidate units, two included people with only a campus facet, and 20
 excluded-only people with multiple recorded units. It reconciles the
 [four-school primary review](2026-10-24-other-schools-primary.md) and the
@@ -12,9 +12,9 @@ primary appointment.
 
 | Population | People | One included academic unit | School fallback | Reviewed source | Inferred profile title | Inferred PhD advisees | First-listed display tie-break | Unresolved |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Included roster | 1,480 | 1,098 | 152 | 172 | 3 | 17 | 2 | 36 |
+| Included roster | 1,480 | 1,096 | 154 | 189 | 10 | 20 | 11 | 0 |
 | Excluded-only roster | 521 | 0 | 0 | 0 | 0 | 0 | 0 | 521 |
-| Entire registry | 2,001 | 1,098 | 152 | 172 | 3 | 17 | 2 | 557 |
+| Entire registry | 2,001 | 1,096 | 154 | 189 | 10 | 20 | 11 | 521 |
 
 The included count incorporates the later correction of Itamar Vigdorovich's
 future Fall 2027 Math appointment, which remains excluded pending its start.
@@ -28,11 +28,12 @@ unit is named in a CMU faculty-page title despite a joint appointment; and
 publicly stated degree departments in the available lab roster. The latter
 two are editorial inferences with limits recorded in the ledger. The typed
 home fields distinguish actual departments from institutes, constituent
-schools, Tepper academic areas, and broad school fallbacks. The legacy
+schools, Tepper academic areas, broad school fallbacks, and reviewed campus
+display homes. The legacy
 `primary_department_id` is populated only for actual departments.
 
 `display_tie_break_first_listed` is an explicitly reviewed visual choice for
-two joint appointments whose official CMU titles list both departments. The
+joint appointments whose official CMU titles list multiple academic units. The
 [Philosophy profile for Jeremy Avigad](https://www.cmu.edu/dietrich/philosophy/people/faculty/jeremy-avigad.html)
 titles him “Professor of Philosophy and Mathematical Sciences,” so the map
 displays Philosophy. The
@@ -51,16 +52,31 @@ the chosen display rule remains first-listed department. Sekerka's
 [CMU-hosted CV](https://sekerkaweb.phys.cmu.edu/SekerkaCV2015.html)
 documents the Physics and Mathematics appointments but has no degree-coded
 advisee list, so the same title-order display rule supplies his visual home.
+[Jenelle Feather's Psychology profile](https://www.cmu.edu/dietrich/psychology/directory/core-training-faculty/feather-jenelle.html)
+titles her Assistant Professor of Psychology and the Neuroscience Institute;
+Psychology is the labeled display tie-break, with both memberships retained.
+[Mark Kamlet's SDS profile](https://www.cmu.edu/dietrich/sds/people/faculty/mark-kamlet.html)
+and [Heinz profile](https://www.heinz.cmu.edu/faculty-research/profiles/kamlet-mark)
+both list Social and Decision Sciences before Heinz in their joint-appointment
+description. The map uses SDS as a labeled visual choice while retaining his
+CMIST, Heinz, and SDS memberships; his current CMIST graduate committee role
+does not establish an institutional primary academic appointment.
+[Paul Fischbeck's Engineering profile](https://engineering.cmu.edu/directory/bios/fischbeck-paul.html)
+lists Engineering and Public Policy before Social and Decision Sciences, so
+the map uses EPP as a reviewed display choice. The SDS course catalog lists
+SDS first, making a consistent first-listed tie-break unavailable. His two
+emeritus appointments remain included.
 
-The ledger records all 36 included people without a supported single choice.
-Examples with specific evidence gaps are:
+Every included person now has a display home. Edward Rubin and Elias Towe
+have labeled first-listed choices; their joint memberships remain included,
+and the reviews do not claim a complete advisee comparison.
 
-| Person | Included units | Remaining evidence gap |
-| --- | --- | --- |
-| [Edward Rubin](https://epp.engineering.cmu.edu/directory/bios/rubin-edward.html) | EPP, MechE | The official profile calls the appointments joint. An [EPP PhD thesis](https://www.cmu.edu/ceic/assets/docs/publications/phd-dissertations/2010/hari-mantripragada-phd-thesis-2010.pdf) and [CMU news](https://www.cmu.edu/news/stories/archives/2019/july/rubin-leads-carbon-capture-research.html) identify two distinct EPP advisees, but the historical MechE denominator is unknown. |
-| [Elias Towe](https://ece.cmu.edu/directory/bios/towe-elias.html) | ECE, MSE | His current profile titles both departments. No public degree-coded advisor/student roster was found. |
-| [Karimulla Shaikh](https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
-| [Ravi Thomas](https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html) | CMU Silicon Valley | The SV bio calls him an III instructor, but the [current III roster](https://www.cmu.edu/iii/people/faculty-staff/index.html) does not list him and the recorded III role is adjunct. |
+[Karimulla Shaikh](https://sv.cmu.edu/directory/faculty-and-researchers/bios/shaikh-karimulla.html)
+and [Ravi Thomas](https://sv.cmu.edu/directory/faculty-and-researchers/bios/thomas-ravi.html)
+have reviewed `campus` display homes from their CMU Silicon Valley teaching
+memberships. Their III adjunct memberships remain excluded. The campus
+choice does not assert an academic department or change publication
+collection.
 
 [Newell R. Washburn's faculty-authored 2020 CV](https://purebase.com/wp-content/uploads/2020/10/NRW_cv_2020.pdf)
 lists 14 current and former PhD advisees: eight Chemistry, three BME, and
