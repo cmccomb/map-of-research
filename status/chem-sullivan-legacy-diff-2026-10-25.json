@@ -1937,7 +1937,12 @@
   ],
   "additional_shared_id_conflict": {
     "author_pub_id": "wXSgFr4AAAAJ:L8Ckcad2t8MC",
-    "status": "same_id_different_title",
-    "note": "Legacy 2008 atmospheric mineral dust title versus captured 2008 Garden Between; requires source review before cache replacement."
+    "status": "scholar_id_reused_for_different_namesake_output",
+    "legacy_output_source_url": "https://escholarship.org/uc/item/89c072pv",
+    "captured_row_index": 112,
+    "captured_authors": "AT Sullivan",
+    "captured_venue": "Pacific Lutheran University, 2008",
+    "proposed_disposition": "Exclude the captured Garden Between row by exact author_pub_id and recover Ryan Christopher Sullivan’s dissertation from its source-native UC San Diego record before replacing the canonical cache.",
+    "note": "The source-native UC San Diego record corroborates the legacy 2008 atmospheric mineral-dust dissertation title; the captured same-ID row is a different namesake output."
   }
 }
