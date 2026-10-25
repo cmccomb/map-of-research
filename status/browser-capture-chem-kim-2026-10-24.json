@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "browser_route": "isolated_task_browser",
+  "person_id": "person-hyungjkim-2fcad292",
+  "display_name": "Hyung J. Kim",
+  "profile_display_name": "Hyung J. Kim",
+  "scholar_id": "bC4aq-4AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/kim.html",
+  "scholar_id_source_url": "https://experts.cmu.edu/expert/hyung.kim/hyung-kim",
+  "captured_at_utc": "2026-10-24T23:23:45.545000+00:00",
+  "profile_url": "https://scholar.google.com/citations?user=bC4aq-4AAAAJ&hl=en&oi=ao",
+  "publication_count": 918,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 11,
+  "show_more_click_count": 10,
+  "source_json_path": "data/captures/kim-visible-918-2026-10-24.json",
+  "source_json_sha256": "ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867",
+  "source_html_path": "data/captures/kim-visible-918-2026-10-24.html",
+  "source_html_sha256": "a5f1a45612a885ca42174926f3c43bc437fd7146da4b92f241930e6adfd9bc94",
+  "cache_staged": false,
+  "attribution_review_required": true,
+  "browser_closed": true,
+  "release_state": "raw_capture_only_pending_attribution_review",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "missing_year": 13,
+  "missing_venue": 21,
+  "zero_or_blank_citations": 138,
+  "citation_annotations": [
+    {
+      "row": 81,
+      "author_pub_id": "bC4aq-4AAAAJ:ipzZ9siozwsC",
+      "display": "100*"
+    },
+    {
+      "row": 600,
+      "author_pub_id": "bC4aq-4AAAAJ:rmuvC79q63oC",
+      "display": "7*"
+    }
+  ],
+  "year_anomalies": []
+}
