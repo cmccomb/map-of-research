@@ -50,6 +50,20 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    88: (
+        "Investigations of optical and luminescence features of Sm3+ "
+        "doped Li2O-MO-B2O3 (M= Mg/Ca/Sr/Ba) glasses mixed with different "
+        "modifier oxides as an orange light emitting\xa0…",
+        2018,
+        "Hong Joo Kim",
+        "10.1016/j.jallcom.2018.03.266",
+        "https://api.crossref.org/works/10.1016%2Fj.jallcom.2018.03.266",
+        "Elsevier publisher-deposited DOI record with author ORCID",
+        "The publisher's exact article has the same leading authors, 2018 "
+        "volume 749 and pages 197–204, and assigns its H. J. Kim author "
+        "ORCID 0000-0001-9787-4684, which Wiley identifies as KNU Physics "
+        "professor Hong Joo Kim.",
+    ),
     148: (
         "Luminescence and scintillation properties of the new Ce-doped "
         "Tl2LiGdCl6 single crystals",
@@ -491,6 +505,7 @@ OTHER_PRIMARY = {
 # In addition to title and year, freeze each newly reviewed Scholar observation
 # ID so a reordered or replaced capture cannot inherit a person decision.
 OTHER_PRIMARY_ID_GUARDS = {
+    88: "bC4aq-4AAAAJ:oi2SiIJ9l4AC",
     148: "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
     267: "bC4aq-4AAAAJ:foquWX3nUaYC",
     109: "bC4aq-4AAAAJ:sbeIDTyQOFgC",
@@ -645,6 +660,13 @@ CMU_PRIMARY_ID_GUARDS = {
 # The publisher's one 1985 article at PRD 32, 389 is row 1; its person
 # attribution remains held separately from this duplicate-work decision.
 CORRUPTED_DUPLICATE_PRIMARY = {
+    793: (
+        "COSINE-100 and DAMA/LIBRA-phase2 in WIMP effective models",
+        2019,
+        "https://researchportal.helsinki.fi/en/publications/"
+        "cosine-100-and-damalibra-phase2-in-wimp-effective-models/",
+        "bC4aq-4AAAAJ:gmHTDCtJMcoC",
+    ),
     795: (
         "Muon detector for the COSINE-100 experiment",
         2018,
@@ -794,6 +816,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in OTHER_PRIMARY_ID_GUARDS
                     and pub_id != OTHER_PRIMARY_ID_GUARDS[index]
                 )
+                or (
+                    index == 88
+                    and (
+                        row["venue"]
+                        != "Journal of Alloys and Compounds 749, 197-204, 2018"
+                        or not all(
+                            author in row["authors"]
+                            for author in ("K Kirdsiri", "RR Ramakrishna", "B Damdee")
+                        )
+                    )
+                )
             ):
                 raise ValueError(f"Primary-source match changed at capture row {index}")
             status = "proposed_other_person_primary_work"
@@ -846,6 +879,25 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and "32 (2)" in row["venue"]
                     and scholar_pub_id(rows[0]) == retained_pub_id
                 )
+            elif index == 793:
+                retained = rows[335]
+                valid_duplicate = (
+                    pub_id == f"{SCHOLAR_ID}:VnuxuLaQPLMC"
+                    and title == retained["title"]
+                    and year == retained["year"]
+                    and row["venue"]
+                    == "Journal of Cosmology and Astroparticle Physics 2019 (06), 2019"
+                    and retained["venue"]
+                    == (
+                        "Journal of Cosmology and Astroparticle Physics "
+                        "2019 (06), 048-048, 2019"
+                    )
+                    and all(
+                        author in row["authors"] and author in retained["authors"]
+                        for author in ("G Adhikari", "P Adhikari", "N Carlin", "S Choi")
+                    )
+                    and scholar_pub_id(retained) == retained_pub_id
+                )
             elif index == 795:
                 retained = rows[155]
                 valid_duplicate = (
@@ -880,6 +932,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 raise ValueError(f"Source duplicate match changed at row {index}")
             status = "proposed_corrupted_duplicate_primary"
             evidence_source = {
+                793: "Helsinki institutional article record",
                 795: "KNU institutional article",
                 797: "Elsevier original article",
                 907: "APS original article",
@@ -903,15 +956,27 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                             "author links to Hong Joo Kim. This row is a "
                             "redundant citation observation."
                             if index == 795
-                            else "The blank-venue Scholar row repeats the exact title "
-                            "and year of the complete 2017 journal observation "
-                            f"{retained_pub_id}; Elsevier publishes one article at "
-                            "DOI 10.1016/j.molstruc.2017.05.138 with the full "
-                            "Hyung J. Kim byline. This row is a broken duplicate."
+                            else (
+                                "This Scholar row repeats the 2019 JCAP title, issue, "
+                                "and leading coauthors of observation "
+                                f"{retained_pub_id} but omits article number 048. "
+                                "The institutional record identifies one journal "
+                                "article, DOI 10.1088/1475-7516/2019/06/048. "
+                                "This row is a redundant citation observation."
+                                if index == 793
+                                else "The blank-venue Scholar row repeats the "
+                                "exact title "
+                                "and year of the complete 2017 journal observation "
+                                f"{retained_pub_id}; Elsevier publishes one article at "
+                                "DOI 10.1016/j.molstruc.2017.05.138 with the full "
+                                "Hyung J. Kim byline. This row is a broken duplicate."
+                            )
                         )
                     ),
                     evidence_url,
-                    verified_at="2026-10-25" if index in {795, 797} else "2026-10-24",
+                    verified_at="2026-10-25"
+                    if index in {793, 795, 797}
+                    else "2026-10-24",
                 )
             )
         elif index in CMU_ORCID_DOI_HOLD:
@@ -1011,16 +1076,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 41,
+        "proposed_other_person_primary_work": 42,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "proposed_corrupted_duplicate_primary": 3,
-        "unresolved_attribution_hold": 411,
+        "proposed_corrupted_duplicate_primary": 4,
+        "unresolved_attribution_hold": 409,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 380 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 382 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
