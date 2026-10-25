@@ -1629,6 +1629,7 @@ def publish_snapshot(
             registry,
             person_holds,
             source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            prior_revision=prior_revision,
         )
     )
     provisional_holds, provisional_receipt = validate_provisional_holds(

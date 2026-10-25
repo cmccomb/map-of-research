@@ -51,6 +51,7 @@ def _run_preview(
     approval: bool = False,
     binding_approval: bool = False,
     region_diff: bool = False,
+    require_bio_release: bool | None = None,
 ):
     preview = _load_script()
     producer = tmp_path / "producer"
@@ -75,6 +76,9 @@ def _run_preview(
     (receipt_checkout / "status/last-upload.json").write_text(
         json.dumps({"status": "success", "artifact_commit": PARENT}), encoding="utf-8"
     )
+    require_bio_release = (
+        approval if require_bio_release is None else require_bio_release
+    )
     args = SimpleNamespace(
         producer_dir=producer,
         snapshot_dir=snapshot,
@@ -86,7 +90,7 @@ def _run_preview(
         snapshot_sha256=raw_sha,
         prior_revision=PARENT,
         region_comparison_revision=PARENT,
-        require_bio_release=False,
+        require_bio_release=require_bio_release,
     )
     monkeypatch.setattr(preview, "_parse_args", lambda: args)
     monkeypatch.setattr(
@@ -120,11 +124,11 @@ def _run_preview(
     def fake_publish(*_args, atomic_intent_sink, **kwargs):
         approval_path = producer / "data/curated/bio-mcmanus-poster-loss-approval.json"
         assert kwargs["historical_loss_approval_path"] == (
-            approval_path if approval else None
+            approval_path if approval and require_bio_release else None
         )
         assert kwargs["bio_binding_approval_path"] == (
             producer / "data/curated/bio-exact-binding-approval-dcb.json"
-            if binding_approval
+            if binding_approval and require_bio_release
             else None
         )
         assert kwargs["person_publication_holds_path"] == (
@@ -233,6 +237,19 @@ def test_no_write_preview_passes_one_time_bio_loss_approval(monkeypatch, tmp_pat
         fail_before_write=False,
         approval=True,
         binding_approval=True,
+    )
+    assert code == 0
+    assert receipt["status"] == "passed_no_upload"
+
+
+def test_later_preview_ignores_historical_bio_approvals(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch,
+        tmp_path,
+        fail_before_write=False,
+        approval=True,
+        binding_approval=True,
+        require_bio_release=False,
     )
     assert code == 0
     assert receipt["status"] == "passed_no_upload"
