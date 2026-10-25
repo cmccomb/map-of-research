@@ -171,6 +171,37 @@ OTHER_PRIMARY = {
         "The conference paper names H. Jin Kim of Seoul National "
         "University as its coauthor.",
     ),
+    349: (
+        "Design and fabrication of the double-sided silicon microstrip sensor",
+        2006,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/design-and-fabrication-of-the-double-sided-silicon-microstrip-sen/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links its H. J. Kim author directly to physics "
+        "professor Hong Joo Kim's institutional profile.",
+    ),
+    590: (
+        "Scintillation crystal growth at the CUP",
+        2019,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/scintillation-crystal-growth-at-the-cup/",
+        "KNU institutional conference article; author-linked record",
+        "The KNU conference article links its H. J. Kim author directly to "
+        "physics professor Hong Joo Kim's institutional profile.",
+    ),
+    638: (
+        "Study on structure and luminescence properties of LaBMoO6:Dy3+ "
+        "phosphor for photonic material applications",
+        2018,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/study-on-structure-and-luminescence-properties-of-labmoosub6sub-d/",
+        "KNU institutional article; full-name author record",
+        "The KNU article names Hong Joo Kim in its full author record "
+        "and links him to his physics faculty profile.",
+    ),
 }
 
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
@@ -388,11 +419,11 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 100,
         "cmu_orcid_title_only_year_check": 1,
-        "knu_orcid_exact_title_year_missing_doi_hold": 5,
+        "knu_orcid_exact_title_year_missing_doi_hold": 2,
         "knu_orcid_title_only_year_check": 5,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 12,
+        "proposed_other_person_primary_work": 15,
         "proposed_acs_supporting_information_nonpublication": 1,
         "unresolved_attribution_hold": 451,
     }
@@ -400,7 +431,7 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 348 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 351 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
