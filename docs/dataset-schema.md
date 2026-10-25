@@ -115,6 +115,13 @@ labels; the corresponding `*_label_reviewed` fields and
 multi-signal catch-all audit.
 Excluded works remain in the dataset; `map_eligible` controls browser-map
 participation.
+The work-level `topic_placement_pending` reason temporarily withholds two
+reviewed Physics arXiv DOI works from topic clustering and the browser map.
+Their exact Scholar observations, DOI metadata, and authorship records remain
+in the dataset. The hold is applied after layout reuse, so the work rows may
+retain coordinates even while `map_eligible` is false; those coordinates are
+not an approved public placement. Removing the hold requires a separate
+review of both topic and spatial placement.
 Citation count is the maximum retained source observation, not a sum across
 faculty profiles.
 
@@ -235,6 +242,15 @@ source-backed effective-field repairs. The upload receipt records the file
 checksum and count of applied repairs. A correction never edits the raw cache
 or raw snapshot; it only changes the normalized fields used for embeddings,
 quality assessment, canonical works, and browser artifacts.
+
+`data/curated/scholar-doi-aliases.json` links exact Scholar observations to
+verified DOI identities without rewriting the saved source. A
+`preprint_of` or `version_of_record` entry uses `published_doi` for the related
+published work. An `arxiv_preprint_doi` entry instead uses `preprint_doi` for
+the observed arXiv work itself; its arXiv identifier must match the saved venue
+and a primary arXiv record. The effective work receives the DOI and verification
+provenance, while `source_doi` and `source_record_json` retain their observed
+values. A preprint DOI does not identify a later proceedings or journal version.
 
 `data/curated/scholar-profile-releases.json` separates a complete, source
 validated capture from a public profile release. The publisher validates the

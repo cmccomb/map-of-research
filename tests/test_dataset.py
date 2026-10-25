@@ -126,6 +126,103 @@ def test_reviewed_preprint_alias_keeps_scholar_source_and_one_work(
 
 
 @pytest.mark.parametrize(
+    ("scholar_id", "author_pub_id", "year", "venue"),
+    [
+        (
+            "8AqWr_4AAAAJ",
+            "8AqWr_4AAAAJ:XvxMoLDsR5gC",
+            2021,
+            "arXiv preprint arXiv:2112.04569, 2021",
+        ),
+        (
+            "JbSQsXAAAAAJ",
+            "JbSQsXAAAAAJ:2osOgNQ5qMEC",
+            2018,
+            "arXiv preprint arXiv:1804.08406, 2018",
+        ),
+    ],
+)
+def test_reviewed_arxiv_doi_preserves_exact_scholar_observation(
+    tmp_path, scholar_id, author_pub_id, year, venue
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-physics",
+                "display_name": "Physics Person",
+                "scholar_id": scholar_id,
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-physics",
+                "department_id": "physics",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/physics/people/faculty/",
+                "verified_at": "2026-10-25",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "physics",
+                "school_id": "mcs",
+                "title": "Physics",
+                "directory_url": "https://www.cmu.edu/physics/people/faculty/",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs/",
+            }
+        ],
+    )
+    alias = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)[(scholar_id, author_pub_id)]
+    original = {
+        "person_id": "person-physics",
+        "display_name": "Physics Person",
+        "faculty": "Physics Person",
+        "department_ids": ["physics"],
+        "memberships": [{"department_id": "physics", "included": True}],
+        "title": alias.observed_title,
+        "authors": "A Named, B Named, Physics Person",
+        "year": year,
+        "venue": venue,
+        "citation": venue,
+        "citation_count": 11,
+        "embedding": [0.0, 1.0],
+        "external_coauthors": [],
+        "source_type": "scholar",
+        "scholar_id": scholar_id,
+        "author_pub_id": author_pub_id,
+        "source_url": "https://scholar.google.com/citations?user=" + scholar_id,
+        "source_record_json": '{"source_doi":""}',
+        "source_doi": "",
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "fetched_at_utc": "2026-10-24T23:00:00+00:00",
+    }
+    tables = build_dataset_tables(
+        pandas.DataFrame([original]),
+        load_registry(*paths),
+        {},
+        {(scholar_id, author_pub_id): alias},
+    )
+    work = tables["works"].iloc[0]
+    effective = tables["profile_publications"].iloc[0]
+    assert work["doi"] == alias.doi
+    assert work["year"] == year
+    assert effective["work_id"] == work["work_id"]
+    assert effective["source_doi"] == ""
+    assert effective["source_record_json"] == original["source_record_json"]
+    assert effective["source_verified_at"] == alias.verified_at
+    assert set(effective["source_verification_urls"]) == set(alias.evidence_urls)
+
+
+@pytest.mark.parametrize(
     ("scholar_id", "preprint_id", "published_id", "published_year"),
     [
         ("FmZaK1wAAAAJ", "roLk4NBRz8UC", "f2IySw72cVMC", 2015),

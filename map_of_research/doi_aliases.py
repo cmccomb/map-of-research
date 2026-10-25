@@ -1,4 +1,4 @@
-"""Reviewed links from exact Scholar observations to published-work DOIs."""
+"""Reviewed DOI links for exact Scholar observations."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from .io import load_json
 DEFAULT_DOI_ALIASES_PATH = Path("data/curated/scholar-doi-aliases.json")
 DOI_ALIAS_SCHEMA_VERSION = 1
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
+ARXIV_PREPRINT_DOI_PATTERN = re.compile(r"10\.48550/arxiv\.(\d{4}\.\d{4,5})")
 
 
 @dataclass(frozen=True)
@@ -21,6 +22,7 @@ class ReviewedDoiAlias:
     doi: str
     observed_title: str
     observed_year: int | None
+    observed_venue: str | None
     relationship: str
     evidence_urls: tuple[str, ...]
     verified_at: str
@@ -45,9 +47,32 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
         author_pub_id = str(entry.get("author_pub_id") or "").strip()
         if not scholar_id or not author_pub_id.startswith(f"{scholar_id}:"):
             raise ValueError("Scholar DOI alias has an invalid observation identity")
-        doi = str(entry.get("published_doi") or "").strip().casefold()
-        if not DOI_PATTERN.fullmatch(doi):
-            raise ValueError("Scholar DOI alias needs a valid published DOI")
+        relationship = str(entry.get("relationship") or "").strip()
+        if relationship not in {
+            "preprint_of",
+            "version_of_record",
+            "arxiv_preprint_doi",
+        }:
+            raise ValueError("Scholar DOI alias needs a supported DOI relationship")
+        if relationship == "arxiv_preprint_doi":
+            if "published_doi" in entry:
+                raise ValueError("arXiv preprint DOI must not be a published-work DOI")
+            doi = str(entry.get("preprint_doi") or "").strip().casefold()
+            arxiv_match = ARXIV_PREPRINT_DOI_PATTERN.fullmatch(doi)
+            if not arxiv_match:
+                raise ValueError("Scholar DOI alias needs a valid arXiv preprint DOI")
+            observed_venue = str(entry.get("observed_venue") or "").strip()
+            if not observed_venue or f"arxiv:{arxiv_match.group(1)}" not in (
+                observed_venue.casefold()
+            ):
+                raise ValueError("arXiv preprint DOI needs its exact observed venue")
+        else:
+            if "preprint_doi" in entry or "observed_venue" in entry:
+                raise ValueError("Published-work DOI alias has preprint-only fields")
+            doi = str(entry.get("published_doi") or "").strip().casefold()
+            if not DOI_PATTERN.fullmatch(doi):
+                raise ValueError("Scholar DOI alias needs a valid published DOI")
+            observed_venue = None
         title = str(entry.get("observed_title") or "").strip()
         year = entry.get("observed_year")
         if (
@@ -58,9 +83,6 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             raise ValueError(
                 "Scholar DOI alias needs the exact observed title and year"
             )
-        relationship = str(entry.get("relationship") or "").strip()
-        if relationship not in {"preprint_of", "version_of_record"}:
-            raise ValueError("Scholar DOI alias needs a supported version relationship")
         evidence_urls = entry.get("evidence_urls")
         if (
             not isinstance(evidence_urls, list)
@@ -74,6 +96,12 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             )
         ):
             raise ValueError("Scholar DOI alias needs distinct HTTPS source URLs")
+        if relationship == "arxiv_preprint_doi" and not any(
+            (parsed := urlparse(url)).hostname == "arxiv.org"
+            and parsed.path.rstrip("/") == f"/abs/{arxiv_match.group(1)}"
+            for url in evidence_urls
+        ):
+            raise ValueError("arXiv preprint DOI needs the matching arXiv record")
         verified_at = str(entry.get("verified_at") or "").strip()
         try:
             dt.date.fromisoformat(verified_at)
@@ -88,6 +116,7 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             doi=doi,
             observed_title=title,
             observed_year=year,
+            observed_venue=observed_venue,
             relationship=relationship,
             evidence_urls=tuple(evidence_urls),
             verified_at=verified_at,
@@ -123,6 +152,10 @@ def validate_doi_aliases(
         )
         if row["title"] != alias.observed_title or not observed_year_matches:
             raise ValueError(f"Scholar DOI alias observed title or year changed: {key}")
+        if alias.observed_venue is not None and row.get("venue") != (
+            alias.observed_venue
+        ):
+            raise ValueError(f"Scholar DOI alias observed venue changed: {key}")
         if key in exclusions:
             raise ValueError(f"Scholar DOI alias also has a reviewed exclusion: {key}")
         source_doi = str(row.get("source_doi") or "").strip().casefold()
