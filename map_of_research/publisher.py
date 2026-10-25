@@ -59,6 +59,7 @@ from .registry import (
     DEFAULT_PEOPLE_PATH,
     Registry,
     load_registry,
+    validate_included_scholar_primary_homes,
 )
 from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
 from .topic_labels import TOPIC_LABEL_REVIEW_VERSION
@@ -1159,6 +1160,7 @@ def publish_snapshot(
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
     registry = load_registry(people_path, memberships_path, departments_path)
+    validate_included_scholar_primary_homes(registry)
     frame, manifest = validate_snapshot(
         snapshot_path,
         manifest_path,

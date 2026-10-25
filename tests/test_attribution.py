@@ -331,6 +331,9 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
     key = (SCHOLAR_ID, f"{SCHOLAR_ID}:paper")
     monkeypatch.setattr(publisher, "load_registry", lambda *args: object())
     monkeypatch.setattr(
+        publisher, "validate_included_scholar_primary_homes", lambda registry: 0
+    )
+    monkeypatch.setattr(
         publisher,
         "validate_snapshot",
         lambda *args, **kwargs: (pandas.DataFrame({"scholar_id": []}), {}),

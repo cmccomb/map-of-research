@@ -733,6 +733,52 @@ def unique_profiles(
     return registry.unique_profiles(included_only=included_only)
 
 
+def validate_included_scholar_primary_homes(registry: Registry) -> int:
+    """Require one evidenced display home for every included Scholar profile.
+
+    The department compatibility field is required only when the selected home
+    is an actual department. Other formal CMU home types retain their typed ID.
+    """
+
+    profiles = registry.unique_profiles(included_only=True)
+    invalid: list[str] = []
+    for profile in profiles:
+        home = registry.primary_affiliation(profile.person_id)
+        published = home.published_fields()
+        included_departments = {
+            membership.department_id
+            for membership in profile.memberships
+            if membership.included
+            and registry.departments_by_id[membership.department_id].unit_type
+            == "department"
+        }
+        if (
+            home.home_type not in PRIMARY_HOME_TYPES
+            or not all(
+                (
+                    home.home_id,
+                    home.title,
+                    home.source_url,
+                    home.verified_at,
+                    home.basis,
+                )
+            )
+            or home.basis == "unresolved"
+            or (
+                home.home_type == "department"
+                and published["primary_department_id"] not in included_departments
+            )
+            or (home.home_type != "department" and published["primary_department_id"])
+        ):
+            invalid.append(f"{profile.person_id} ({profile.display_name})")
+    if invalid:
+        raise ValueError(
+            "Included Scholar profiles need one evidenced primary academic home: "
+            + ", ".join(invalid)
+        )
+    return len(profiles)
+
+
 def department_catalog(registry: Registry) -> dict[str, str]:
     """Return stable department IDs and display titles."""
 
