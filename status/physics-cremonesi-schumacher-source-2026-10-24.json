@@ -11,7 +11,7 @@
   "review_status": "106_merged_exclusions_with_map_quality_hold",
   "proposed_exclusion_count": 106,
   "producer_review_ready": false,
-  "ingestion_dependency": "Producer PR #160 merged 100 exact source-backed exclusions and a fail-closed publisher preflight into main. Producer PR #212 merged six further exact duplicate exclusions (three per profile) at 2fc7c52, bringing Physics counts to 80 Cremonesi and 26 Schumacher. Twelve exact IDs still need decisions and currently pass automatic map eligibility; tracker row 547 and original-title preprint row 1958 are source-verified genuine observations, while tracker row 68 and revised-arXiv companion row 1959 remain unresolved. Keep source PR #156 draft and do not build or upload a Physics snapshot while map_quality_hold is true.",
+  "ingestion_dependency": "Producer PR #160 merged 100 exact source-backed exclusions and a fail-closed publisher preflight into main. Producer PR #212 merged six further exact duplicate exclusions (three per profile) at 2fc7c52, bringing Physics counts to 80 Cremonesi and 26 Schumacher. Draft producer PR #260 stages exact DOI aliases for two Cremonesi preprint-to-journal work identities, including verified original-title row 1959, but remains unmerged. Eleven exact IDs still need decisions and currently pass automatic map eligibility; tracker row 547 and original-title preprint rows 1958 and 1959 are source-verified genuine observations, while tracker row 68 remains unresolved. Keep source PR #156 draft and do not build or upload a Physics snapshot while map_quality_hold is true.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
   "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
@@ -73,7 +73,7 @@
     "wJ_gQLoAAAAJ": 80,
     "LibSWRMAAAAJ": 26
   },
-  "producer_review_hold_reason": "Twelve exact IDs still need decisions and currently pass automatic map eligibility. Tracker row 547 and original-title preprint row 1958 are source-verified retains; tracker row 68 and original-title row 1959 remain unresolved. All 106 source-backed exact exclusions are now merged on main, but the live publisher preflight stays fail-closed for both held profiles.",
+  "producer_review_hold_reason": "Eleven exact IDs still need decisions and currently pass automatic map eligibility. Tracker row 547 and original-title preprint rows 1958 and 1959 are source-verified retains; tracker row 68 remains unresolved. Exact DOI aliases for the preprints are staged in unmerged producer PR #260. All 106 source-backed exact exclusions are merged on main, but the live publisher preflight stays fail-closed for both held profiles.",
   "publisher_guard_state": "merged_on_main_7b6d923e_live_for_trusted_publisher",
   "publisher_guard_effect": "If either Physics Scholar ID is in a raw snapshot and this status is held, the trusted publisher rejects the whole upload before embeddings or dataset writes; raw captures and snapshot rows remain intact.",
   "map_quality_hold": true,
@@ -82,7 +82,6 @@
     "wJ_gQLoAAAAJ:QNiCEvFIB1MC",
     "wJ_gQLoAAAAJ:wlzmIqt2EaEC",
     "wJ_gQLoAAAAJ:PDAgwb0ELvkC",
-    "wJ_gQLoAAAAJ:QjNCP7ux8QYC",
     "LibSWRMAAAAJ:_mQi-xiA4oYC",
     "LibSWRMAAAAJ:pRWBApOjXDcC",
     "LibSWRMAAAAJ:adHtZc2wMuEC",
@@ -91,11 +90,11 @@
     "LibSWRMAAAAJ:M0j1y4EgrScC",
     "LibSWRMAAAAJ:6bLC7aUMtPcC"
   ],
-  "unresolved_exact_id_count": 12,
-  "currently_map_eligible_unresolved_count": 12,
+  "unresolved_exact_id_count": 11,
+  "currently_map_eligible_unresolved_count": 11,
   "currently_quality_filtered_unresolved_ids": [],
-  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions merged through PR #212 and two as genuine retained observations (row 1334 journal and row 1958 original-title arXiv v1). Twelve exact IDs remain unresolved, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three merged exclusions. Tracker row 547 is a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions merged through PR #212. Row 1959 matches an original arXiv v1 title, but another retained observation names the same arXiv identifier under its revised title, so the version-level map decision remains held.",
-  "review_updated_at_utc": "2026-10-25T05:13:17+00:00",
+  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions merged through PR #212 and two as genuine retained observations (row 1334 journal and row 1958 original-title arXiv v1), leaving 12. Row 1959 is now a source-verified genuine original-title arXiv v1 observation with an exact DOI alias staged in unmerged producer PR #260, leaving 11 unresolved exact IDs, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three merged exclusions. Tracker row 547 is a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions merged through PR #212. The map-quality hold remains until all 11 receive decisions and the coordinated producer/source release is ready.",
+  "review_updated_at_utc": "2026-10-25T05:40:31+00:00",
   "map_quality_hold_scholar_ids": [
     "wJ_gQLoAAAAJ",
     "LibSWRMAAAAJ"
@@ -113,7 +112,8 @@
   "verified_retain_ids_from_followup": [
     "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
     "wJ_gQLoAAAAJ:JOhajB-2wfwC",
-    "wJ_gQLoAAAAJ:UBSsHvkqiq4C"
+    "wJ_gQLoAAAAJ:UBSsHvkqiq4C",
+    "wJ_gQLoAAAAJ:QjNCP7ux8QYC"
   ],
   "followup_producer_exact_exclusion_count": 6,
   "followup_producer_exact_exclusion_count_by_profile": {
