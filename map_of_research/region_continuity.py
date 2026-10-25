@@ -18,6 +18,22 @@ from typing import Any
 from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
+from .sullivan_continuity_addendum import (
+    ADDENDUM_SHA256 as SULLIVAN_ADDENDUM_SHA256,
+)
+from .sullivan_continuity_addendum import (
+    BINDINGS_SHA256 as SULLIVAN_BINDINGS_SHA256,
+)
+from .sullivan_continuity_addendum import (
+    LOSS_IDS_SHA256 as SULLIVAN_ADDENDUM_LOSS_IDS_SHA256,
+)
+from .sullivan_continuity_addendum import (
+    TARGETS_SHA256 as SULLIVAN_TARGETS_SHA256,
+)
+from .sullivan_continuity_addendum import (
+    ExactSullivanContinuityAddendum,
+    decision_set_digests,
+)
 from .sullivan_loss_approval import (
     APPROVAL_SHA256 as SULLIVAN_APPROVAL_SHA256,
 )
@@ -103,6 +119,8 @@ class RegionReleaseDiffError(ValueError):
             f"{len(receipt['unexplained_gains'])} unexplained gains, "
             f"{len(receipt.get('unapproved_mapped_binding_changes', []))} "
             "mapped binding changes, "
+            f"{len(receipt.get('unused_sullivan_binding_approvals', []))} "
+            "unused binding approvals, "
             f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
             "unused Sullivan approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
@@ -369,6 +387,7 @@ def reconcile_region_decisions(
     *,
     prior_revision: str,
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
+    sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Apply the prior region decision only to the exact same eligible rows.
 
@@ -445,7 +464,7 @@ def reconcile_region_decisions(
     # Visibility alone is insufficient: a still-visible observation can move
     # to another eligible work or stop contributing a collaboration edge.
     # Neither change is covered by a Sullivan visible-row loss approval.
-    unapproved_mapped_binding_changes = [
+    mapped_binding_changes = [
         {
             "observation": _display(identity),
             "prior_work_id": str(previous_rows[identity].get("work_id") or ""),
@@ -463,6 +482,67 @@ def reconcile_region_decisions(
         or bool(previous_rows[identity].get("collaboration_eligible"))
         != bool(current_rows[identity].get("collaboration_eligible"))
     ]
+    approved_binding_changes = set()
+    approved_additional_losses: set[ObservationKey] = set()
+    required_curated_work_ids: set[str] = set()
+    if sullivan_continuity_addendum is not None:
+        if (
+            not isinstance(
+                sullivan_continuity_addendum, ExactSullivanContinuityAddendum
+            )
+            or sullivan_loss_approval is None
+            or prior_revision != SULLIVAN_PRIOR_REVISION
+            or sullivan_continuity_addendum.manifest_sha256 != SULLIVAN_ADDENDUM_SHA256
+            or len(sullivan_continuity_addendum.loss_identities) != 5
+            or len(sullivan_continuity_addendum.binding_changes) != 3
+            or len(sullivan_continuity_addendum.required_curated_work_ids) != 2
+            or decision_set_digests(sullivan_continuity_addendum)
+            != (
+                SULLIVAN_ADDENDUM_LOSS_IDS_SHA256,
+                SULLIVAN_BINDINGS_SHA256,
+                SULLIVAN_TARGETS_SHA256,
+            )
+        ):
+            raise ValueError("Sullivan continuity addendum is not the reviewed set")
+        approved_additional_losses = set(sullivan_continuity_addendum.loss_identities)
+        approved_binding_changes = set(sullivan_continuity_addendum.binding_changes)
+        required_curated_work_ids = set(
+            sullivan_continuity_addendum.required_curated_work_ids
+        )
+    actual_binding_changes = {
+        (
+            tuple(change["observation"].split("/")),
+            change["prior_work_id"],
+            change["current_work_id"],
+            change["prior_collaboration_eligible"],
+            change["current_collaboration_eligible"],
+        )
+        for change in mapped_binding_changes
+    }
+    unapproved_mapped_binding_changes = [
+        change
+        for change in mapped_binding_changes
+        if (
+            tuple(change["observation"].split("/")),
+            change["prior_work_id"],
+            change["current_work_id"],
+            change["prior_collaboration_eligible"],
+            change["current_collaboration_eligible"],
+        )
+        not in approved_binding_changes
+    ]
+    unused_sullivan_binding_approvals = (
+        approved_binding_changes - actual_binding_changes
+    )
+    missing_curated_targets = sorted(
+        work_id
+        for work_id in required_curated_work_ids
+        if not (
+            (work := final_works.get(work_id)) is not None
+            and bool(work.get("map_eligible"))
+            and bool(work.get("collaboration_eligible"))
+        )
+    )
     reviewed_losses = sorted(
         identity for identity in losses if _reviewed_loss(current_rows.get(identity))
     )
@@ -495,6 +575,7 @@ def reconcile_region_decisions(
             )
         ):
             raise ValueError("Sullivan exact-loss approval is not the reviewed set")
+        approved_sullivan_losses |= approved_additional_losses
         unused_sullivan_approvals = approved_sullivan_losses - losses
     # In this one-time source transition the manifest is the entire permitted
     # prior-visible loss set. Generic reviewed-loss exemptions still apply to
@@ -555,6 +636,26 @@ def reconcile_region_decisions(
             if sullivan_loss_approval is not None
             else []
         ),
+        "approved_sullivan_additional_losses": [
+            _display(item) for item in sorted(approved_additional_losses)
+        ],
+        "approved_sullivan_binding_changes": [
+            change
+            for change in mapped_binding_changes
+            if (
+                tuple(change["observation"].split("/")),
+                change["prior_work_id"],
+                change["current_work_id"],
+                change["prior_collaboration_eligible"],
+                change["current_collaboration_eligible"],
+            )
+            in approved_binding_changes
+        ],
+        "sullivan_continuity_addendum_sha256": (
+            sullivan_continuity_addendum.manifest_sha256
+            if sullivan_continuity_addendum is not None
+            else None
+        ),
         "sullivan_loss_approval_sha256": (
             sullivan_loss_approval.manifest_sha256
             if sullivan_loss_approval is not None
@@ -566,6 +667,23 @@ def reconcile_region_decisions(
         "verified_gains": [_display(item) for item in verified_gains],
         "new_source_gains": len(new_gains),
         "unapproved_mapped_binding_changes": unapproved_mapped_binding_changes,
+        "unused_sullivan_binding_approvals": [
+            {
+                "observation": _display(identity),
+                "prior_work_id": prior_work_id,
+                "current_work_id": current_work_id,
+                "prior_collaboration_eligible": prior_collaboration_eligible,
+                "current_collaboration_eligible": current_collaboration_eligible,
+            }
+            for (
+                identity,
+                prior_work_id,
+                current_work_id,
+                prior_collaboration_eligible,
+                current_collaboration_eligible,
+            ) in sorted(unused_sullivan_binding_approvals)
+        ],
+        "missing_sullivan_curated_targets": missing_curated_targets,
         "unexplained_losses": [_display(item) for item in unexplained_losses],
         "unexplained_gains": [_display(item) for item in unexplained_gains],
     }
@@ -573,6 +691,8 @@ def reconcile_region_decisions(
         unexplained_losses
         or unexplained_gains
         or unapproved_mapped_binding_changes
+        or unused_sullivan_binding_approvals
+        or missing_curated_targets
         or unused_sullivan_approvals
     ):
         raise RegionReleaseDiffError(receipt)
