@@ -102,6 +102,15 @@
       "reason_code": "nonpublication",
       "reason": "Publisher-deposited DOI metadata identifies Astrophysics and Space Science volume 238, page 311 as an unauthored List of forthcoming papers. The captured author string belongs to the genuine article retained at row 58 in volume 239, pages 57–64; this mixed index record is not a separate publication.",
       "evidence_url": "https://api.crossref.org/works/10.1007%2Fbf00641696"
+    },
+    {
+      "capture_row": 128,
+      "author_pub_id": "au_cLfoAAAAJ:N5tVd3kTz84C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The ESA SP-251 contents identify Cosmions and Galaxy Formation on page 41 by Kahniashvili and Lukash, followed by Space Research Institute, Moscow, USSR as their affiliation. The captured title is that affiliation rather than a separate work; row 126 retains the contribution with its actual title, authors, volume, and page. This does not establish that differently titled row 127 is a duplicate.",
+      "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf",
+      "catalog_url": "https://unapi.k10plus.de/?format=marcxml&id=opac-de-627:ppn:1109639244",
+      "retained_author_pub_id": "au_cLfoAAAAJ:TFP_iSt0sucC"
     }
   ],
   "reviewed_retained": [
@@ -122,20 +131,20 @@
       "author_pub_id": "au_cLfoAAAAJ:hFOr9nPyWt4C",
       "reason": "The 2001 preprint is a genuine version of the 2002 journal paper at row 64. Existing producer precedent retains genuine preprint and journal versions separately, despite the incomplete Scholar author metadata.",
       "evidence_url": "https://arxiv.org/abs/astro-ph/0110426"
+    },
+    {
+      "capture_row": 126,
+      "author_pub_id": "au_cLfoAAAAJ:TFP_iSt0sucC",
+      "reason": "The ESA SP-251 contents identify Cosmions and Galaxy Formation on page 41 by Kahniashvili and Lukash. This is the correctly titled contribution to retain; row 128 is its affiliation-titled duplicate.",
+      "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf"
     }
   ],
   "unresolved_candidates": [
     {
       "capture_row": 116,
       "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
-      "reason": "The captured title is an internal text fragment. Novosyadlyj's institutional bibliography identifies a genuine 1998 Potsdam proceedings contribution by these authors on pages 269–272; verify this record's exact item mapping and repair its title before ingestion. Do not exclude it on title corruption alone.",
+      "reason": "The captured title is an internal text fragment. Novosyadlyj's institutional bibliography identifies a genuine 1998 Potsdam proceedings contribution by these authors on pages 269–272, so this row remains eligible and is not an exclusion. The chapter text was unavailable to tie this exact fragment to that contribution. Leave the normalized cache unchanged and hold source ingestion until the mapping and exact title are confirmed or a specifically documented snapshot limit prevents this damaged title from publication.",
       "evidence_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf"
-    },
-    {
-      "capture_row": 128,
-      "author_pub_id": "au_cLfoAAAAJ:N5tVd3kTz84C",
-      "reason": "The captured title is an institutional affiliation. A catalog confirms the 1986 ESA SP-251 proceedings volume, but the underlying contribution and possible overlap with rows 126–127 remain unidentified. Hold for source-level metadata review; do not automatically exclude it.",
-      "evidence_url": "https://libris.kb.se/bib/574714"
     }
   ],
   "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
