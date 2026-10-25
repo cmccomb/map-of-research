@@ -369,8 +369,7 @@ OTHER_PRIMARY = {
         "Scholar H. Kim byline is his.",
     ),
     106: (
-        "Augmentation of NAD+ by NQO1 attenuates cisplatin-mediated "
-        "hearing impairment",
+        "Augmentation of NAD+ by NQO1 attenuates cisplatin-mediated hearing impairment",
         2014,
         "Hyung-Jin Kim",
         "10.1038/cddis.2014.255",
