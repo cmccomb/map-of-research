@@ -53,9 +53,64 @@
       "reason_code": "nonpublication",
       "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
       "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf"
+    },
+    {
+      "capture_row": 86,
+      "author_pub_id": "au_cLfoAAAAJ:olpn-zPbct0C",
+      "reason_code": "nonpublication",
+      "reason": "NASA's Astrophysics Division yearbook identifies this title under Kahniashvili's research proposal, not as a published research work (PDF pages 176–177).",
+      "evidence_url": "https://science.nasa.gov/wp-content/uploads/2023/11/3-apd-yearbook-11.06.23.pdf"
+    },
+    {
+      "capture_row": 92,
+      "author_pub_id": "au_cLfoAAAAJ:WqliGbK-hY8C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 2408411, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2408411.json"
+    },
+    {
+      "capture_row": 93,
+      "author_pub_id": "au_cLfoAAAAJ:5awf1xo2G04C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 2307698, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2307698.json"
+    },
+    {
+      "capture_row": 104,
+      "author_pub_id": "au_cLfoAAAAJ:SdhP9T11ey4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 1615940, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1615940.json"
+    },
+    {
+      "capture_row": 106,
+      "author_pub_id": "au_cLfoAAAAJ:eq2jaN3J8jMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF identifies this exact title as award 1109180, a funded research project record rather than a published research work.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1109180.json"
+    },
+    {
+      "capture_row": 107,
+      "author_pub_id": "au_cLfoAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The parenthetical page count and article number were appended to the title of the same Physical Review D article retained at row 12.",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.81.023004"
+    },
+    {
+      "capture_row": 122,
+      "author_pub_id": "au_cLfoAAAAJ:blknAaTinKkC",
+      "reason_code": "nonpublication",
+      "reason": "Publisher-deposited DOI metadata identifies Astrophysics and Space Science volume 238, page 311 as an unauthored List of forthcoming papers. The captured author string belongs to the genuine article retained at row 58 in volume 239, pages 57–64; this mixed index record is not a separate publication.",
+      "evidence_url": "https://api.crossref.org/works/10.1007%2Fbf00641696"
     }
   ],
   "reviewed_retained": [
+    {
+      "capture_row": 58,
+      "author_pub_id": "au_cLfoAAAAJ:5nxA0vEk-isC",
+      "reason": "The captured Chedia, Kahniashvili, Machabeli, and Nanobashvili article is a genuine 1996 Astrophysics and Space Science publication, volume 239, pages 57–64; row 122 mixed its author string with a forthcoming-papers index entry.",
+      "evidence_url": "https://link.springer.com/article/10.1007/BF00653766"
+    },
     {
       "capture_row": 88,
       "author_pub_id": "au_cLfoAAAAJ:bFI3QPDXJZMC",
@@ -69,6 +124,19 @@
       "evidence_url": "https://arxiv.org/abs/astro-ph/0110426"
     }
   ],
-  "unresolved_candidates": [],
+  "unresolved_candidates": [
+    {
+      "capture_row": 116,
+      "author_pub_id": "au_cLfoAAAAJ:VL0QpB8kHFEC",
+      "reason": "The captured title is an internal text fragment. Novosyadlyj's institutional bibliography identifies a genuine 1998 Potsdam proceedings contribution by these authors on pages 269–272; verify this record's exact item mapping and repair its title before ingestion. Do not exclude it on title corruption alone.",
+      "evidence_url": "https://www.mao.kiev.ua/biblio/docs/special/2007-04-19_Novosyadlyj_aref.pdf"
+    },
+    {
+      "capture_row": 128,
+      "author_pub_id": "au_cLfoAAAAJ:N5tVd3kTz84C",
+      "reason": "The captured title is an institutional affiliation. A catalog confirms the 1986 ESA SP-251 proceedings volume, but the underlying contribution and possible overlap with rows 126–127 remain unidentified. Hold for source-level metadata review; do not automatically exclude it.",
+      "evidence_url": "https://libris.kb.se/bib/574714"
+    }
+  ],
   "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
 }
