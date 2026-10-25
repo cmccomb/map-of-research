@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_no_exclusions",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "O0NnwB0AAAAJ",
+  "producer_main_checked_commit": "e33cf0065d724139f6ecf06ae3103cc237f148bb",
+  "existing_manifest_path": "data/curated/scholar-exclusions.json",
+  "existing_manifest_entry_count": 706,
+  "existing_penco_exclusion_count": 0,
+  "proposed_exclusion_count": 0,
+  "exclusions": [],
+  "note": "Both Penco concerns from draft source PR #80 resolve to genuine authored works. No Penco producer exclusion PR is warranted from this review."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "batch": "physics-penco-source-slice",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "target_base_commit": "70029898bd087728a1479bad0d48d8e185b45075",
+  "producer_main_checked_commit": "e33cf0065d724139f6ecf06ae3103cc237f148bb",
+  "carved_from_draft_pr": 80,
+  "department_id": "physics",
+  "profile_count": 1,
+  "raw_observation_count": 46,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "reviewed_retain_count": 2,
+  "proposed_exclusion_count": 0,
+  "ingestion_ready": true,
+  "ingestion_dependency": "The release coordinator must merge this source-only PR and review the resulting snapshot upload before publication. Both reviewed Penco concerns are genuine works, have no unresolved source question, and require no producer exclusion.",
+  "capture_batch_receipt_path": "status/browser-capture-physics-palmese-penco-batch-2026-10-24.json",
+  "capture_batch_provenance_note": "The original two-profile batch receipt is preserved byte-for-byte. Its Palmese entry records the shared capture timing but Palmese source files are not part of this Penco-only PR.",
+  "observation_review_path": "status/physics-penco-observation-review-2026-10-24.json",
+  "exclusion_review_path": "status/physics-penco-reviewed-observation-exclusions-2026-10-24.json",
+  "profiles": [
+    {
+      "person_id": "person-riccardopenco-7d8e9b5d",
+      "display_name": "Riccardo Penco",
+      "scholar_profile_name": "Riccardo Penco",
+      "scholar_id": "O0NnwB0AAAAJ",
+      "publication_count": 46,
+      "coverage": "complete_visible_profile",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/penco.html",
+      "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/penco.html",
+      "cache_path": "data/authors/O0NnwB0AAAAJ.json",
+      "source_json_path": "data/captures/physics-riccardo-penco-2026-10-24.json",
+      "source_html_path": "data/captures/physics-riccardo-penco-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-riccardo-penco-2026-10-24.json"
+    }
+  ]
+}

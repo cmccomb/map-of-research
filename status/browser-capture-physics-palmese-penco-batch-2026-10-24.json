@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "6pPZKd0AAAAJ",
+    "O0NnwB0AAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "6pPZKd0AAAAJ",
+    "O0NnwB0AAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-antonellapalmese-5378b53d",
+      "display_name": "Antonella Palmese",
+      "scholar_id": "6pPZKd0AAAAJ",
+      "publication_count": 624,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "e48d20395c2ffbab1abca32f1e65c28489dce9081c38883ac5d4eb8fb54ea4d3",
+      "source_html_sha256": "2bb7f28c912ad9d6774b97cbeaf697cffcad83a6eb96cc05bfd3235e0cac4efa"
+    },
+    {
+      "person_id": "person-riccardopenco-7d8e9b5d",
+      "display_name": "Riccardo Penco",
+      "scholar_id": "O0NnwB0AAAAJ",
+      "publication_count": 46,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "aae2e95e8897a1b48d2363e9edaddacc064bec325b030d57a8b0f996b01d94d5",
+      "source_html_sha256": "687d81993c673c1f0d72025507f303eedd4f7c17f920fad7b7e861a113b86984"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:25:06+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:26:41+00:00",
+  "last_profile_request_at_utc": "2026-10-24T22:26:41+00:00",
+  "inter_profile_reservation_gap_seconds": 95,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T22:27:47.580547+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Both IDs linked directly from official CMU Physics faculty pages and profile identities matched."
+}

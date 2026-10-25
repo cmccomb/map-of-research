@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-riccardopenco-7d8e9b5d",
+  "display_name": "Riccardo Penco",
+  "scholar_profile_name": "Riccardo Penco",
+  "scholar_id": "O0NnwB0AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/penco.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/penco.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:26:56.989Z",
+  "publication_count": 46,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/physics-riccardo-penco-2026-10-24.json",
+  "source_json_sha256": "aae2e95e8897a1b48d2363e9edaddacc064bec325b030d57a8b0f996b01d94d5",
+  "source_html_path": "data/captures/physics-riccardo-penco-2026-10-24.html",
+  "source_html_sha256": "687d81993c673c1f0d72025507f303eedd4f7c17f920fad7b7e861a113b86984",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
