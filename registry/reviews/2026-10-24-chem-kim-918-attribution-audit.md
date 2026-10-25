@@ -28,6 +28,8 @@ Capture row **917** is an undated “Supporting Information” record. [ACS atta
 | No specific identity match | 451 | Hold for publisher/author identity review. |
 | **Total** | **918** | **No canonical cache or live release.** |
 
+These mutually exclusive screen dispositions account for all **918** observations: **356 excluded** (eight prior and 348 proposed), **100 CMU ORCID title/year retention signals**, and **462 held** (451 fully unresolved, five KNU title/year records without DOI, five KNU title-only year checks, and one CMU title-only year check). The retention signals still need output-level review before any canonical release.
+
 The **462 held rows** are not assumed correct or false. They include highly cited works in chemistry, physics, neuroscience, medicine, engineering, and other fields; the subject alone is not evidence. Row 1, the 1985 supergravity paper, remains held despite its appearance on PQI; its author identity still needs an independent check. Some medical records identify only initials, and robotics capture rows 447 and 604 lack an exact full-name primary work record in this pass. Other KNU-looking rows have not been confirmed to Hong Joo Kim work by work. The 100 CMU ORCID title/year matches are evidence for retention, not proof that a complete publication history has been cleaned.
 
 ## Nonpublication and duplicate screen
