@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "review_state": "review_only_incomplete_bibliography",
+  "person_id": "person-poshenloh-b545d989",
+  "scholar_account_status": "no_verified_account",
+  "source_priority": "google_scholar_if_exact_account_verified",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/loh.html",
+  "author_site": {
+    "source_url": "https://www.math.cmu.edu/~ploh/docs.shtml",
+    "source_stated_last_updated": "2021-02-28",
+    "captured_at_utc": "2026-10-25T11:26:09+00:00",
+    "html_file": "2026-10-25-math-poshen-loh-author-page.html",
+    "html_sha256": "cd382f05be8691cbd33cfcf2744202b0bb8a617c858fce2534d96687cf6c5698",
+    "review_csv_file": "2026-10-25-math-poshen-loh-author-site-observations.csv",
+    "review_csv_sha256": "fd55b9e56a48eb924411c3c6e8c9fc9e864c3330fb5eff68bd6c2ea221d837b3",
+    "observed_entries": 46,
+    "observed_sections": {
+      "Papers": 41,
+      "Olympiad related": 5
+    }
+  },
+  "cmu_elements": {
+    "profile_url": "https://scholars.cmu.edu/3056-poshen-loh/publications",
+    "review_csv_file": "2026-10-25-math-poshen-loh-elements-observations.csv",
+    "review_csv_sha256": "2330feddebb3ae38f9515441ff1f64007d731f78c11ba7b58968873354ac14ca",
+    "displayed_records": 84,
+    "raw_html_pages": [
+      {
+        "start_from": 0,
+        "source_url": "https://scholars.cmu.edu/3056-poshen-loh/publications?startFrom=0&sort=dateDesc&favouritesFirst=true",
+        "captured_at_utc": "2026-10-25T11:28:30+00:00",
+        "html_sha256": "c6b5e732071bb58145e9d3b392b6975384390e38f005ae070a7fb13469f5d1a4",
+        "observed_rows": 25,
+        "html_copied_into_review": false
+      },
+      {
+        "start_from": 25,
+        "source_url": "https://scholars.cmu.edu/3056-poshen-loh/publications?startFrom=25&sort=dateDesc&favouritesFirst=true",
+        "captured_at_utc": "2026-10-25T11:28:31+00:00",
+        "html_sha256": "0004fc2a6d814863305b09b14f8e874a77c69921b2006cb34149555557b120b5",
+        "observed_rows": 25,
+        "html_copied_into_review": false
+      },
+      {
+        "start_from": 50,
+        "source_url": "https://scholars.cmu.edu/3056-poshen-loh/publications?startFrom=50&sort=dateDesc&favouritesFirst=true",
+        "captured_at_utc": "2026-10-25T11:28:31+00:00",
+        "html_sha256": "9f52d6ee3f36a7275088d51422b59c5e7e01fc03bcb43b5751f9731605dae1f4",
+        "observed_rows": 25,
+        "html_copied_into_review": false
+      },
+      {
+        "start_from": 75,
+        "source_url": "https://scholars.cmu.edu/3056-poshen-loh/publications?startFrom=75&sort=dateDesc&favouritesFirst=true",
+        "captured_at_utc": "2026-10-25T11:28:31+00:00",
+        "html_sha256": "57fad0233ca2a4810d84428fce8a7ff678ad461356b197c5234319a0f50317ab",
+        "observed_rows": 9,
+        "html_copied_into_review": false
+      }
+    ],
+    "coauthors_truncated_rows": 45,
+    "strict_normalized_title_duplicates": 29,
+    "strict_normalized_unique_titles": 55
+  },
+  "cv_evidence": [
+    {
+      "url": "https://www.math.cmu.edu/~lohp/cv.pdf",
+      "sha256": "4be833fedcec55a00900f018c77c227677be496ba7d3eceeccd8c72b37ec69d7",
+      "evidence": "Spring 2026 selected publications described as out of 40; not a full itemized list"
+    },
+    {
+      "url": "https://www.math.cmu.edu/~lohp/cv-general.pdf",
+      "sha256": "204b7b63c5d0c9d2478782f3327df28dc7af679056a3d0cdda897cd9b9d3682f",
+      "evidence": "Names the 2013 Frieze and Loh book chapter missing from author bibliography"
+    }
+  ],
+  "publication_claim": "No whole-career or Scholar completeness claim; captured 46 displayed author-page entries and 84 displayed CMU Scholars records for review only",
+  "release_eligible": false
+}
