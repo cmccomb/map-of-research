@@ -704,6 +704,43 @@ def test_candidate_retains_all_reviewed_rows_and_hidden_authorships(
         for name in ("works", "profile_publications", "authorships", "people")
     }
     validate_chemistry_candidate(tables, state)
+    donahue_id = next(
+        work_id
+        for work_id, field in continuity.BIO_REGION_REFIT_CHANGES
+        if field == "map_region_documented_override"
+    )
+    collins_id = next(
+        work_id
+        for work_id, field in continuity.BIO_REGION_REFIT_CHANGES
+        if field == "map_region_prior_eligible_override"
+    )
+    state["parent_rows"]["works"][collins_id]["map_region_prior_eligible_override"] = (
+        False
+    )
+    tables["works"]["map_region_prior_eligible_override"] = False
+    changed = copy.deepcopy(tables)
+    changed["works"].loc[
+        changed["works"]["work_id"].eq(donahue_id), "map_region_documented_override"
+    ] = True
+    changed["works"].loc[
+        changed["works"]["work_id"].eq(collins_id),
+        "map_region_prior_eligible_override",
+    ] = True
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(changed, state)
+    validate_chemistry_candidate(changed, state, allow_region_refit=True)
+    third = copy.deepcopy(changed)
+    third["works"].loc[
+        ~third["works"]["work_id"].isin({donahue_id, collins_id}),
+        "map_region_documented_override",
+    ] = True
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(third, state, allow_region_refit=True)
+    changed["works"].loc[changed["works"]["work_id"].eq(donahue_id), "map_eligible"] = (
+        False
+    )
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(changed, state, allow_region_refit=True)
     changed = copy.deepcopy(tables)
     changed["profile_publications"].loc[0, "review_evidence_url"] = "changed"
     with pytest.raises(ValueError, match="candidate profile_publications changed"):

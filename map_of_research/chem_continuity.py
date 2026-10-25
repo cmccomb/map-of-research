@@ -100,6 +100,22 @@ POST_BIO_PRIOR_ELIGIBLE_WORK_IDS = frozenset(
 POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID = (
     "work-f07078afd572186934d04127dcd8526c089e5089ad69b1c4504702ac49c4329b"
 )
+BIO_REGION_REFIT_PARENT = "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
+BIO_REGION_REFIT_SOURCE_SHA256 = (
+    "62d45e283fc4bc308c6f5a139145a99751c22bbceedbc5045293b2ae6ca3a33e"
+)
+BIO_REGION_REFIT_CHANGES = frozenset(
+    {
+        (
+            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+            "map_region_documented_override",
+        ),
+        (
+            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+            "map_region_prior_eligible_override",
+        ),
+    }
+)
 
 
 def needs_chemistry_continuity(
@@ -547,8 +563,14 @@ def validate_chemistry_candidate(
     parent_state: Mapping[str, Any],
     *,
     require_count_parity: bool = False,
+    allow_region_refit: bool = False,
 ) -> None:
-    """Reject a rebuilt table that drops or changes reviewed Chemistry rows."""
+    """Reject changes to reviewed Chemistry source and visibility decisions.
+
+    The exact Bio-parent combined refit changes two derived flags from false
+    to true. The caller must pin that parent and source, and all other reviewed
+    source, visibility, and authorship fields remain protected.
+    """
 
     parent = parent_state["parent_rows"]
     for table, key_field, excluded in (
@@ -578,12 +600,19 @@ def validate_chemistry_candidate(
             if set(prior) - set(row) or (table != "works" and set(prior) != set(row)):
                 raise ValueError(f"Chemistry candidate {table} schema changed: {key}")
             for field in prior:
-                if field not in excluded and _equal_value(prior[field]) != _equal_value(
+                if field in excluded or _equal_value(prior[field]) == _equal_value(
                     row[field]
                 ):
-                    raise ValueError(
-                        f"Chemistry candidate {table} changed: {key}: {field}"
-                    )
+                    continue
+                if (
+                    table == "works"
+                    and allow_region_refit
+                    and (key, field) in BIO_REGION_REFIT_CHANGES
+                    and _equal_value(prior[field]) is False
+                    and _equal_value(row[field]) is True
+                ):
+                    continue
+                raise ValueError(f"Chemistry candidate {table} changed: {key}: {field}")
     reviewed_observation_ids = {
         row["observation_id"] for row in parent["profiles"].values()
     }
