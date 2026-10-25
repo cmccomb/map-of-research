@@ -10,11 +10,12 @@ import hashlib
 import json
 import math
 import re
+import string
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from datetime import date
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import unquote_plus, urlparse, urlsplit, urlunsplit
 
 from .doi_aliases import DOI_PATTERN
 
@@ -208,6 +209,70 @@ def _independent_evidence(urls: Any) -> bool:
     return False
 
 
+_TRACKING_QUERY_KEYS = frozenset(
+    {"fbclid", "gclid", "gbraid", "wbraid", "msclkid", "mc_cid", "mc_eid", "igshid"}
+)
+_UNRESERVED = frozenset(string.ascii_letters + string.digits + "-._~")
+_PERCENT_ESCAPE = re.compile(r"%([0-9A-Fa-f]{2})")
+
+
+def _verification_url_path(path: str) -> str:
+    """Resolve equivalent escaped characters and dot segments in a URL path."""
+
+    def unescape(match: re.Match[str]) -> str:
+        char = chr(int(match.group(1), 16))
+        return char if char in _UNRESERVED else f"%{match.group(1).upper()}"
+
+    segments = _PERCENT_ESCAPE.sub(unescape, path or "/").split("/")
+    normalized: list[str] = []
+    for index, segment in enumerate(segments):
+        if segment == ".":
+            if index == len(segments) - 1:
+                normalized.append("")
+        elif segment == "..":
+            if len(normalized) > 1:
+                normalized.pop()
+            if index == len(segments) - 1:
+                normalized.append("")
+        else:
+            normalized.append(segment)
+    return "/".join(normalized) or "/"
+
+
+def _verification_url_identity(value: str) -> str:
+    """Compare the cited document, ignoring URL presentation and tracking."""
+
+    parsed = urlsplit(value.strip())
+    hostname = (parsed.hostname or "").casefold()
+    if not hostname:
+        return value.strip()
+    try:
+        port = parsed.port
+    except ValueError:
+        return value.strip()
+    netloc = f"[{hostname}]" if ":" in hostname else hostname
+    if port is not None and port != 443:
+        netloc += f":{port}"
+    query = "&".join(
+        part
+        for part in parsed.query.split("&")
+        if part
+        and not (
+            (key := unquote_plus(part.partition("=")[0]).casefold()).startswith("utm_")
+            or key in _TRACKING_QUERY_KEYS
+        )
+    )
+    return urlunsplit(
+        (
+            parsed.scheme.casefold(),
+            netloc,
+            _verification_url_path(parsed.path),
+            query,
+            "",
+        )
+    )
+
+
 def _valid_review_date(value: Any) -> bool:
     try:
         text = str(value or "")
@@ -243,6 +308,36 @@ def _verified_gain(row: Mapping[str, Any], work: Mapping[str, Any]) -> bool:
         "curated_verified" in (_value(work.get("source_types")) or [])
         and (has_doi or has_native_id)
     )
+
+
+def _verification_evidence(
+    row: Mapping[str, Any], work: Mapping[str, Any]
+) -> set[tuple[str, str]]:
+    """Identify publication evidence without display metadata or list order."""
+
+    evidence: set[tuple[str, str]] = set()
+    for value in (row.get("doi"), row.get("source_doi"), work.get("doi")):
+        doi = str(value or "").strip().casefold()
+        if DOI_PATTERN.fullmatch(doi):
+            evidence.add(("doi", doi))
+    for value in (
+        row.get("source_native_id"),
+        *(_value(work.get("source_native_ids")) or []),
+    ):
+        native_id = str(value or "").strip().casefold()
+        if re.fullmatch(r"[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._:/-]*", native_id):
+            evidence.add(("native_id", native_id))
+    for urls in (
+        row.get("source_verification_urls"),
+        work.get("source_verification_urls"),
+    ):
+        for value in _value(urls) or []:
+            url = str(value).strip()
+            if _independent_evidence([url]):
+                evidence.add(("verification_url", _verification_url_identity(url)))
+    if "curated_verified" in (_value(work.get("source_types")) or []):
+        evidence.add(("source_type", "curated_verified"))
+    return evidence
 
 
 def _display(identity: ObservationKey) -> str:
@@ -316,13 +411,6 @@ def reconcile_region_decisions(
             ]
             output.at[index, "map_region_prior_eligible_override"] = True
         elif previous_outlier and current_mapped:
-            # A revised region rule may deliberately admit a documented work.
-            # Let the per-observation release gate verify every new member.
-            if bool(row.get("map_region_documented_override", False)) and any(
-                _verified_gain(current_rows[identity], row)
-                for identity in current_work_members
-            ):
-                continue
             output.at[index, "map_eligible"] = False
             output.at[index, "map_region_outlier"] = True
             output.at[index, "map_exclusion_reasons"] = [
@@ -348,6 +436,16 @@ def reconcile_region_decisions(
         and bool(
             previous_works[str(previous_rows[identity]["work_id"])].get(
                 "map_region_outlier"
+            )
+        )
+        and bool(
+            _verification_evidence(
+                current_rows[identity],
+                final_works[str(current_rows[identity]["work_id"])],
+            )
+            - _verification_evidence(
+                previous_rows[identity],
+                previous_works[str(previous_rows[identity]["work_id"])],
             )
         )
         and _verified_gain(

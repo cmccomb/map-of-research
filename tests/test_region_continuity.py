@@ -14,11 +14,47 @@ from map_of_research.region_continuity import (
     _indexed_observations,
     _indexed_works,
     _value,
+    _verification_url_identity,
     reconcile_region_decisions,
     require_revision,
 )
 
 REVISION = "a" * 40
+
+
+@pytest.mark.parametrize(
+    ("url", "identity"),
+    [
+        (
+            "https://PRIMARY.TEST:443/one?utm_source=mail&item=5#section",
+            "https://primary.test/one?item=5",
+        ),
+        ("https://primary.test:8443/one", "https://primary.test:8443/one"),
+        ("https://[2001:db8::1]/one", "https://[2001:db8::1]/one"),
+        ("https://primary.test/%6fne", "https://primary.test/one"),
+        ("https://primary.test/./one", "https://primary.test/one"),
+        ("https://primary.test/one/.", "https://primary.test/one/"),
+        ("https://primary.test/a/../one", "https://primary.test/one"),
+        ("https://primary.test/one/..", "https://primary.test/"),
+        ("https://primary.test/../one", "https://primary.test/one"),
+        ("https://primary.test/%2e/one", "https://primary.test/one"),
+        ("https://primary.test/one%2fpart", "https://primary.test/one%2Fpart"),
+        ("https://primary.test/one?item=6", "https://primary.test/one?item=6"),
+        ("  ", ""),
+        ("https://primary.test:invalid/one", "https://primary.test:invalid/one"),
+    ],
+)
+def test_verification_url_identity_preserves_document_location(url, identity):
+    assert _verification_url_identity(url) == identity
+
+
+def test_verification_url_identity_keeps_substantive_path_and_query_distinctions():
+    assert _verification_url_identity(
+        "https://primary.test/one?item=5"
+    ) != _verification_url_identity("https://primary.test/one?item=6")
+    assert _verification_url_identity(
+        "https://primary.test/one%2Fpart"
+    ) != _verification_url_identity("https://primary.test/one/part")
 
 
 def observation(
@@ -160,6 +196,24 @@ def test_current_context_review_can_explain_loss():
     assert len(receipt["reviewed_losses"]) == 1
 
 
+def test_provisional_hold_alone_cannot_remove_prior_visible_observation():
+    old = observation("person", "one")
+    current = {
+        **old,
+        "map_eligible": False,
+        "map_exclusion_reasons": ["attribution_provisional_hold"],
+        "review_attribution_status": "held",
+        "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile(
+            [work("one", eligible=False, outlier=False)],
+            [current],
+            [work("one", eligible=True, outlier=False)],
+            [old],
+        )
+
+
 @pytest.mark.parametrize(
     "review_field",
     [
@@ -269,7 +323,7 @@ def test_native_curated_evidence_can_promote_prior_outlier():
     assert len(receipt["verified_gains"]) == 1
 
 
-def test_new_documented_region_rule_can_promote_exact_prior_outlier():
+def test_documented_rule_cannot_promote_exact_prior_outlier_without_new_evidence():
     row = {
         **observation("person", "one"),
         "work_match_method": "reviewed_version_alias",
@@ -285,8 +339,172 @@ def test_new_documented_region_rule_can_promote_exact_prior_outlier():
         "source_verification_urls": ["https://primary.test/doi"],
     }
     prior_work = {**documented_work, "map_eligible": False, "map_region_outlier": True}
-    _, receipt = reconcile([documented_work], [row], [prior_work], [row])
-    assert receipt["prior_excluded_overrides"] == 0
+    result, receipt = reconcile([documented_work], [row], [prior_work], [row])
+    assert not bool(result.iloc[0].map_eligible)
+    assert receipt["prior_excluded_overrides"] == 1
+    assert receipt["verified_gains"] == []
+
+
+def test_unchanged_evidence_cannot_explain_gain_when_quality_version_changes():
+    row = {
+        **observation("person", "one"),
+        "work_match_method": "reviewed_version_alias",
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/doi"],
+    }
+    mapped = {
+        **work("one", eligible=True, outlier=False),
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/doi"],
+        "quality_assessment_version": "quality-v2",
+    }
+    prior = {**mapped, "quality_assessment_version": "quality-v1"}
+    prior["map_eligible"] = False
+    prior["map_region_outlier"] = True
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained gains"):
+        reconcile([mapped], [row], [prior], [row])
+
+
+@pytest.mark.parametrize(
+    ("row_updates", "work_updates"),
+    [
+        ({"citation_count": 3, "source_record_json": '{"cited_by":3}'}, {}),
+        ({}, {"citation_count": 3}),
+        ({}, {"title": "A corrected paper title", "authors": "Another Author"}),
+        ({"source_url": "https://scholar.google.com/citations?x=2"}, {}),
+        (
+            {
+                "source_verification_urls": [
+                    "https://primary.test/two",
+                    "https://primary.test/one",
+                ]
+            },
+            {},
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/two",
+                    "https://primary.test/one",
+                ]
+            },
+        ),
+        ({}, {"source_types": ["curated_verified", "scholar"]}),
+        (
+            {},
+            {
+                "source_urls": [
+                    "https://source.test/two",
+                    "https://source.test/one",
+                ]
+            },
+        ),
+        (
+            {"source_verification_urls": ["https://primary.test/one"]},
+            {"source_verification_urls": ["https://primary.test/one"]},
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/one",
+                    "https://primary.test/two",
+                    "https://scholar.google.com/citations?x=2",
+                ]
+            },
+        ),
+        (
+            {"source_verification_urls": ["https://primary.test/one#section"]},
+            {},
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://PRIMARY.TEST:443/one?utm_source=newsletter#section",
+                    "https://primary.test/two",
+                ]
+            },
+        ),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/one?fbclid=tracking",
+                    "https://primary.test/two",
+                ]
+            },
+        ),
+        ({"source_verification_urls": ["https://primary.test/%6fne"]}, {}),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/./one",
+                    "https://primary.test/two",
+                ]
+            },
+        ),
+        ({"source_verified_at": "2026-10-26"}, {}),
+        ({}, {"source_verified_at": "2026-10-26"}),
+    ],
+)
+def test_non_evidence_changes_cannot_promote_prior_outlier(row_updates, work_updates):
+    urls = ["https://primary.test/one", "https://primary.test/two"]
+    row = {
+        **observation("person", "one"),
+        "work_match_method": "reviewed_version_alias",
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": urls,
+    }
+    prior_work = {
+        **work("one", eligible=False, outlier=True),
+        "doi": "10.1000/verified",
+        "source_types": ["scholar", "curated_verified"],
+        "source_urls": ["https://source.test/one", "https://source.test/two"],
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": urls,
+    }
+    current_work = {
+        **prior_work,
+        "map_eligible": True,
+        "map_region_outlier": False,
+        "map_exclusion_reasons": [],
+        **work_updates,
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained gains"):
+        reconcile([current_work], [{**row, **row_updates}], [prior_work], [row])
+
+
+def test_new_independent_verification_url_can_promote_prior_outlier():
+    row = {
+        **observation("person", "one"),
+        "work_match_method": "reviewed_version_alias",
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/one"],
+    }
+    prior_work = {
+        **work("one", eligible=False, outlier=True),
+        "doi": "10.1000/verified",
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://primary.test/one"],
+    }
+    current_work = {
+        **prior_work,
+        "map_eligible": True,
+        "map_region_outlier": False,
+        "map_exclusion_reasons": [],
+        "source_verification_urls": [
+            "https://primary.test/one",
+            "https://primary.test/two",
+        ],
+    }
+    _, receipt = reconcile([current_work], [row], [prior_work], [row])
     assert receipt["verified_gains"] == ["person/profile/profile:shared-row/scholar"]
 
 
