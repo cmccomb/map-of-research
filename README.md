@@ -224,7 +224,9 @@ title rules cannot identify safely. The publisher flags a region only when it
 is simultaneously incoherent in embedding space, dominated by short titles,
 missing many years, and mostly uncited. Inside a flagged region, a work with a
 DOI, known year, substantive title, named authors, venue, and source URL stays
-visible; weaker works retain the `low_information_region` exclusion. The
+visible. A DOI-less work also stays visible when a separately verified curated
+record supplies a stable native identifier and dated HTTPS evidence for those
+bibliographic details. Weaker works retain the `low_information_region` exclusion. The
 versioned audit records `map_region_documented_override` for each retained
 exception, keeps all source rows in the dataset, and regenerates the final
 topic hierarchy from visible works.

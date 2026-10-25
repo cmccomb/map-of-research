@@ -596,9 +596,67 @@ def test_region_audit_preserves_documented_paper_inside_weak_region() -> None:
     assert audited.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
     assert (
         audited["map_region_audit_version"]
-        .eq("low-information-semantic-region-v2")
+        .eq("low-information-semantic-region-v3")
         .all()
     )
+
+
+def test_region_audit_preserves_only_verified_native_source_work() -> None:
+    rows = []
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    for index in range(size):
+        embedding = numpy.zeros(size, dtype=numpy.float32)
+        embedding[index] = 1.0
+        rows.append(
+            {
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": embedding.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "authors": "",
+                "venue": "",
+                "doi": "",
+                "source_urls": [],
+                "source_types": ["scholar"],
+                "source_native_ids": [],
+                "source_verified_at": "",
+                "source_verification_urls": [],
+            }
+        )
+    documented = {
+        "year": 2009,
+        "title": "Structured Literature Image Finder",
+        "authors": "Amr Ahmed, Andrew Arnold, and Robert F. Murphy",
+        "venue": "ISMB BioLINK Special Interest Group",
+        "source_urls": ["https://murphylab.cbd.cmu.edu/publications/"],
+        "source_types": ["scholar", "curated_verified"],
+        "source_native_ids": ["biolink2009:209-212"],
+        "source_verified_at": "2026-10-25",
+        "source_verification_urls": ["https://murphylab.cbd.cmu.edu/publications/"],
+    }
+    rows[0].update(documented)
+    rows[1].update(documented | {"source_types": ["scholar"]})
+    rows[2].update(
+        documented | {"source_verification_urls": ["http://example.test/unverified"]}
+    )
+    rows[3].update(documented | {"venue": ""})
+    rows[4].update(documented | {"source_verified_at": "not-a-date"})
+    rows[5].update(documented | {"source_types": "curated_verified"})
+    rows[6].update(documented | {"source_native_ids": ["invalid-native-id"]})
+    rows[7].update(
+        documented | {"source_verification_urls": "https://example.test/not-a-list"}
+    )
+
+    audited = keywords.exclude_low_information_regions(pandas.DataFrame(rows))
+
+    assert bool(audited.loc[0, "map_eligible"])
+    assert bool(audited.loc[0, "map_region_documented_override"])
+    for index in range(1, 8):
+        assert not bool(audited.loc[index, "map_eligible"])
+        assert bool(audited.loc[index, "map_region_outlier"])
 
 
 @pytest.mark.parametrize(

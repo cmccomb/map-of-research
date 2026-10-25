@@ -113,6 +113,9 @@ labels; the corresponding `*_label_reviewed` fields and
 `topic_label_review_version` make the editorial pass auditable.
 `map_region_audit_version` and `map_region_outlier` retain the result of the
 multi-signal catch-all audit.
+`map_region_documented_override` marks a work retained inside a flagged region
+because it has complete bibliographic metadata and either a DOI or a dated,
+independently verified native source identifier.
 Excluded works remain in the dataset; `map_eligible` controls browser-map
 participation.
 Citation count is the maximum retained source observation, not a sum across
