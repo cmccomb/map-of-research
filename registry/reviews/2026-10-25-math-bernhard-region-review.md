@@ -40,23 +40,19 @@ coauthor identity.
 
 ## Composite release boundary
 
-The 31 Math decisions override the overlapping entries in the older
-280-work Bernhard repair. The same release includes 249 non-Math Bernhard
-decisions and the complete John L. Sullivan Scholar capture in source commit
+The older 280-work Bernhard manifest identifies the exact rows for immutable
+source and parent checks. Only the 31 Math rows have reviewed decisions. The
+other 249 retain their published `bb88ddf0` region decisions, topics, map
+placement, and work payloads. The same release includes the complete Ryan
+Sullivan Scholar capture in source commit
 `8be6a2400cf72dd959c874bfcada8624540820ef`. The exact source snapshot,
 curated decision files, baseline Hub revision `bb88ddf0`, and staged dataset
 payloads are checked before an atomic Hub write. Across the combined release,
-the reviewed Bernhard/Math effect is 99 restored and 156 removed map points;
-Sullivan adds 11 and removes 29. The resulting point set is 42,850 works.
+the reviewed Math effect is four restored and two removed map points; Sullivan
+adds 11 and removes 29. The resulting point set is 42,909 works.
 
-After the composite producer code merges to `main`, run its **main** upload
-workflow manually with immutable `snapshot_ref=8be6a2400cf72dd959c874bfcada8624540820ef`,
-`require_bio_release=false`, and `restore_prior_regions=false`. The latter
-keeps the comparison at `bb88ddf0`; the composite publisher reads the older
-Bernhard decision revision separately. The source branch's older workflow
-definition does not pass the Math review manifest and must not be selected.
-Dispatch only while the Hub head is still `bb88ddf0` and after a clean,
-first-write-intercepted preview passes all seven staged-file checks against
-that exact parent. A changed Hub parent or source/producer commit requires a
-new preview and review. This note records the proposed release gate, not a
-claim that the dataset has been published.
+The release remains held. Its publisher preview must intercept the first Hub
+write and compare all seven staged files against the immutable parent before
+any dispatch. A changed Hub parent or source/producer commit requires a new
+preview and review. This note records the proposed release gate, not a claim
+that the dataset has been published or an authorization to retry the upload.

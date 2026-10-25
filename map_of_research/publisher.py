@@ -1439,7 +1439,7 @@ def _publish_atomic_release(
                 or prior_revision != SULLIVAN_PRIOR_REVISION
             ):
                 raise ValueError("Composite release lacks exact source and map parity")
-            gate["gate"] = "source-bound-sullivan-bernhard-math-composite-v1"
+            gate["gate"] = "source-bound-sullivan-reviewed-math-composite-v2"
             gate["composite_map_parity"] = composite_map_receipt
             gate["composite_works_parity"] = composite_works_receipt
             gate["composite_nonwork_parity"] = composite_nonwork_receipt
@@ -1646,7 +1646,10 @@ def publish_snapshot(
                 *PRIOR_WORK_FIELDS,
                 *(
                     ("map_exclusion_reasons",)
-                    if comparison_revision != prior_revision
+                    if (
+                        comparison_revision != prior_revision
+                        or composite_plan is not None
+                    )
                     else ()
                 ),
                 *(COMPOSITE_PRESENTATION_FIELDS if composite_plan is not None else ()),

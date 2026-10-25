@@ -1,8 +1,8 @@
-"""One source-bound Bernhard repair with the later exact Math review.
+"""One source-bound Sullivan release with the exact Math Bernhard review.
 
-The historical manifest supplies decisions only for the 249 rows outside the
-Math review.  The 31 Math decisions take precedence.  Every affected work and
-Scholar observation must still be the one present in the immutable bb88 parent.
+The historical manifest identifies 280 rows for provenance checks. Only the
+31 Math rows have individual review decisions; the other 249 retain their
+published bb88 region decisions and payloads.
 """
 
 from __future__ import annotations
@@ -43,7 +43,7 @@ MATH_EXCLUSIONS_SHA256 = (
 MATH_HOLDS_SHA256 = "d52bbf51d65b8922b2dbde1d51afe4e287ce3a5818f460a96f69181e8c8197b0"
 BASELINE_MAP_SHA256 = "358e23af6774ea4fd53bab5ed8b55fdd1891a4e7730c0924d74e428e94cd4a88"
 BASELINE_MAP_POINTS = 42925
-FINAL_MAP_POINTS = 42850
+FINAL_MAP_POINTS = 42909
 COORDINATE_FIELDS = ("x", "y", "tsne_x", "tsne_y")
 TOPIC_FIELDS = (
     "keyword_id",
@@ -161,26 +161,18 @@ class CompositeRegionPlan:
 
     @property
     def gains(self) -> frozenset[str]:
-        math_ids = {item.work_id for item in self.math}
         return frozenset(
-            (self.restore - math_ids)
-            | {
-                item.work_id
-                for item in self.math
-                if item.visible and item.transition == "restore"
-            }
+            item.work_id
+            for item in self.math
+            if item.visible and item.transition == "restore"
         )
 
     @property
     def losses(self) -> frozenset[str]:
-        math_ids = {item.work_id for item in self.math}
         return frozenset(
-            (self.reexclude - math_ids)
-            | {
-                item.work_id
-                for item in self.math
-                if not item.visible and item.transition == "reexclude"
-            }
+            item.work_id
+            for item in self.math
+            if not item.visible and item.transition == "reexclude"
         )
 
 
@@ -231,8 +223,8 @@ def load_composite_region_plan(
     ):
         raise ValueError("Math review does not exactly override the historical repair")
     plan = CompositeRegionPlan(frozenset(restore), frozenset(reexclude), math, digest)
-    if len(plan.gains) != 99 or len(plan.losses) != 156:
-        raise ValueError("Composite repair does not have exact +99/-156 scope")
+    if len(plan.gains) != 4 or len(plan.losses) != 2:
+        raise ValueError("Composite Math review does not have exact +4/-2 scope")
     return plan
 
 
@@ -348,28 +340,23 @@ def apply_composite_region_decisions(
                 )
             visible = math_decision.visible
         else:
-            visible = work_id in plan.restore
-        if visible:
-            output.at[index, "map_eligible"] = True
-            output.at[index, "map_region_outlier"] = False
-            output.at[index, "map_exclusion_reasons"] = [
-                reason
-                for reason in current["map_exclusion_reasons"]
-                if reason != "low_information_region"
-            ]
-        elif math_decision is None:
-            output.at[index, "map_eligible"] = False
-            output.at[index, "map_region_outlier"] = True
-            output.at[index, "map_exclusion_reasons"] = [
-                *[
+            # The historical decision is evidence of which row changed in the
+            # earlier rollout, not permission to change it again. Preserve the
+            # immutable bb88 decision, including the ordered reason list.
+            for field in WORK_REGION_FIELDS:
+                output.at[index, field] = old[field]
+            visible = bool(old["map_eligible"])
+        if math_decision is not None:
+            if visible:
+                output.at[index, "map_eligible"] = True
+                output.at[index, "map_region_outlier"] = False
+                output.at[index, "map_exclusion_reasons"] = [
                     reason
                     for reason in current["map_exclusion_reasons"]
                     if reason != "low_information_region"
-                ],
-                "low_information_region",
-            ]
-        else:
-            output.at[index, "map_eligible"] = False
+                ]
+            else:
+                output.at[index, "map_eligible"] = False
         if bool(output.at[index, "map_eligible"]) != visible:
             raise ValueError(f"Composite repair visibility drift: {work_id}")
     old_visible = {item for item in affected if bool(prior_works[item]["map_eligible"])}
@@ -380,7 +367,7 @@ def apply_composite_region_decisions(
         final_visible - old_visible != plan.gains
         or old_visible - final_visible != plan.losses
     ):
-        raise ValueError("Composite repair work ID delta exceeds +99/-156")
+        raise ValueError("Composite Math work ID delta exceeds +4/-2")
     return output
 
 
@@ -410,6 +397,9 @@ def freeze_composite_presentation(
 
     old = {str(row["work_id"]): row for row in prior_works}
     old_points = {str(point["work_id"]): point for point in prior_artifact["points"]}
+    unreviewed_bernhard = (plan.restore | plan.reexclude) - {
+        item.work_id for item in plan.math
+    }
     if len(old) != len(prior_works) or not set(old_points).issubset(old):
         raise ValueError("Composite presentation baseline work IDs repeat or disappear")
     transient = (
@@ -451,7 +441,9 @@ def freeze_composite_presentation(
                     raise ValueError(f"Missing frozen map coordinate: {work_id}")
                 elif not visible:
                     output.at[index, field] = math.nan
-        if map_selected and work_id in old_points:
+        if prior is not None and work_id in unreviewed_bernhard:
+            topics = {field: prior[field] for field in TOPIC_FIELDS}
+        elif map_selected and work_id in old_points:
             if prior is None or any(
                 prior[field] != old_points[work_id]["keyword_ids"][position]
                 for position, field in enumerate(("keyword_id", "detail_keyword_id"))
@@ -492,7 +484,7 @@ def validate_composite_map_points(
         raise ValueError("Composite map has no points")
     new_points = {str(point["work_id"]): point for point in new_list}
     if len(new_points) != len(new_list) or len(new_points) != FINAL_MAP_POINTS:
-        raise ValueError("Composite map lacks exact 42,850 unique points")
+        raise ValueError("Composite map lacks exact 42,909 unique points")
     gains = new_points.keys() - old_points.keys()
     losses = old_points.keys() - new_points.keys()
     old_sullivan = {
@@ -508,8 +500,8 @@ def validate_composite_map_points(
     if old_sullivan | new_sullivan != set(fixture["sullivan_work_id_union"]):
         raise ValueError("Sullivan source work IDs differ from reviewed f8 stage")
     if (
-        len(gains) != 110
-        or len(losses) != 185
+        len(gains) != 15
+        or len(losses) != 31
         or not plan.gains.issubset(gains)
         or not plan.losses.issubset(losses)
         or len(gains - plan.gains) != 11
@@ -520,9 +512,7 @@ def validate_composite_map_points(
         or losses - plan.losses != set(fixture["removed_sullivan_map_work_ids"])
         or candidate.get("point_count") != FINAL_MAP_POINTS
     ):
-        raise ValueError(
-            "Composite map point IDs exceed 99/156 repair and 11/29 Sullivan"
-        )
+        raise ValueError("Composite map point IDs exceed 4/2 Math and 11/29 Sullivan")
     old_works = {str(row["work_id"]): row for row in prior_works}
     digest_exclusions = frozenset(fixture["map_digest_excluded_fields"])
     expected_shared_sullivan = fixture[
@@ -697,10 +687,12 @@ def validate_composite_staged_works(
     staged = parquet.ParquetFile(staged_path)
     if not baseline.schema_arrow.equals(staged.schema_arrow):
         raise ValueError("Composite staged works schema differs from bb88")
+    math = {item.work_id: item for item in plan.math}
     expected: dict[str, str] = {}
     prior_topics: dict[str, dict[str, Any]] = {}
-    affected = plan.restore | plan.reexclude
-    math = {item.work_id: item for item in plan.math}
+    prior_regions: dict[str, dict[str, Any]] = {}
+    affected = frozenset(math)
+    all_affected = plan.restore | plan.reexclude
     hidden_math = {work_id for work_id, item in math.items() if not item.visible}
     exclusion_path = curated_dir / "scholar-exclusions.json"
     if (
@@ -728,8 +720,11 @@ def validate_composite_staged_works(
                     ),
                 )
             )
-            if work_id in affected:
+            if work_id in all_affected:
                 prior_topics[work_id] = {field: row[field] for field in TOPIC_FIELDS}
+                prior_regions[work_id] = {
+                    field: row[field] for field in WORK_REGION_FIELDS
+                }
     seen: set[str] = set()
     new_ids: set[str] = set()
     for batch in staged.iter_batches(batch_size=128):
@@ -787,11 +782,11 @@ def validate_composite_staged_works(
                 for field, value in FULLERENES_REVIEW_FIELDS.items()
             ):
                 raise ValueError("Fullerenes exact attribution review drifted")
-            if work_id in affected:
+            if work_id in all_affected:
                 target = (
                     math[work_id].visible
                     if work_id in math
-                    else work_id in plan.restore
+                    else bool(prior_regions[work_id]["map_eligible"])
                 )
                 if bool(row.get("map_eligible")) != target:
                     raise ValueError(
@@ -816,19 +811,21 @@ def validate_composite_staged_works(
                         or row["map_exclusion_reasons"] != reasons
                     ):
                         raise ValueError(f"Staged Math region reason drift: {work_id}")
-                elif bool(row["map_region_outlier"]) != (
-                    work_id in plan.reexclude
-                ) or row["map_exclusion_reasons"] != (
-                    ["low_information_region"] if work_id in plan.reexclude else []
+                elif any(
+                    row[field] != prior_regions[work_id][field]
+                    for field in WORK_REGION_FIELDS
                 ):
-                    raise ValueError(f"Staged Bernhard region reason drift: {work_id}")
-                expected_topics = (
-                    UNCLASSIFIED_TOPICS
-                    if work_id in plan.gains
-                    else prior_topics[work_id]
-                    if target
-                    else BLANK_TOPICS
-                )
+                    raise ValueError(
+                        f"Unreviewed Bernhard region decision drift: {work_id}"
+                    )
+                if work_id not in math:
+                    expected_topics = prior_topics[work_id]
+                elif work_id in plan.gains:
+                    expected_topics = UNCLASSIFIED_TOPICS
+                elif target:
+                    expected_topics = prior_topics[work_id]
+                else:
+                    expected_topics = BLANK_TOPICS
                 if any(row[field] != expected_topics[field] for field in TOPIC_FIELDS):
                     raise ValueError(f"Staged Bernhard/Math topic drift: {work_id}")
             if work_id in hidden_math:

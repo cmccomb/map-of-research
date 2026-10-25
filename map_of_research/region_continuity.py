@@ -609,7 +609,7 @@ def reconcile_region_decisions(
         approved_sullivan_losses |= approved_additional_losses
         unused_sullivan_approvals = approved_sullivan_losses - losses
     # The Sullivan manifests cover every Sullivan loss. The separately pinned
-    # composite plan covers only its exact 156 work losses.
+    # composite plan covers only the two Math work losses with row-level review.
     losses_requiring_approval = (
         losses - reviewed_composite_losses
         if sullivan_loss_approval is not None
