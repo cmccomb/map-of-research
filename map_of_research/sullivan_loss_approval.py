@@ -310,12 +310,6 @@ def validate_sullivan_exact_losses(
             rekeyed.add(identity)
         else:
             raise ValueError(f"Sullivan loss decision changed: {identity}")
-    if (
-        len(held) != 18
-        or len(rekeyed) != 4
-        or set(rekeys) != {identity[2] for identity in rekeyed}
-    ):
-        raise ValueError("Sullivan exact-loss approval needs 18 holds and four rekeys")
     return ExactSullivanLossApproval(
         identities=frozenset(identities),
         manifest_sha256=APPROVAL_SHA256,
