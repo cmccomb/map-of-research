@@ -18,7 +18,8 @@ from .io import load_json
 
 DEFAULT_CORRECTIONS_PATH = Path("data/curated/scholar-metadata-corrections.json")
 CORRECTIONS_SCHEMA_VERSION = 1
-FIELDS = frozenset({"title", "year", "venue"})
+REQUIRED_FIELDS = frozenset({"title", "year", "venue"})
+FIELDS = REQUIRED_FIELDS | {"authors"}
 
 
 @dataclass(frozen=True)
@@ -34,7 +35,7 @@ def _valid_fields(value: Any, *, complete: bool) -> bool:
     if not isinstance(value, dict) or not value:
         return False
     fields = set(value)
-    if complete and fields != FIELDS:
+    if complete and fields not in (REQUIRED_FIELDS, FIELDS):
         return False
     if not complete and not fields <= FIELDS:
         return False
@@ -71,6 +72,8 @@ def load_corrections(path: Path) -> dict[tuple[str, str], ReviewedCorrection]:
             corrected, complete=False
         ):
             raise ValueError("Scholar correction has invalid bibliographic fields")
+        if "authors" in corrected and "authors" not in expected:
+            raise ValueError("Scholar author correction needs exact observed authors")
         if any(expected[field] == value for field, value in corrected.items()):
             raise ValueError("Scholar correction must change every listed field")
         basis = str(entry.get("basis") or "").strip()
