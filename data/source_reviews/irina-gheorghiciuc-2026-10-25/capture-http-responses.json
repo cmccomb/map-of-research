@@ -1,0 +1,114 @@
+[
+  {
+    "filename": "cmu-profile.html",
+    "request_url": "https://www.cmu.edu/math/people/faculty/gheorghiciuc.html",
+    "resolved_url": "https://www.cmu.edu/math/people/faculty/gheorghiciuc.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 46309
+  },
+  {
+    "filename": "cmu-personal-home.html",
+    "request_url": "https://www.math.cmu.edu/~gheorghi/",
+    "resolved_url": "https://www.math.cmu.edu/~gheorghi/",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 1315
+  },
+  {
+    "filename": "penn-math-phds.html",
+    "request_url": "https://www.math.upenn.edu/about/department-history/our-phds",
+    "resolved_url": "https://www.math.upenn.edu/about/department-history/our-phds",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 136905
+  },
+  {
+    "filename": "dmtcs-3553.html",
+    "request_url": "https://dmtcs.episciences.org/articles/3553",
+    "resolved_url": "https://dmtcs.episciences.org/articles/3553",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 155880
+  },
+  {
+    "filename": "dmtcs-3553-tei.xml",
+    "request_url": "https://dmtcs.episciences.org/en/articles/3553/tei",
+    "resolved_url": "https://dmtcs.episciences.org/en/articles/3553/tei",
+    "status": 200,
+    "content_type": "application/xml",
+    "bytes": 5006
+  },
+  {
+    "filename": "jis-vol17.html",
+    "request_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/vol17.html",
+    "resolved_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/vol17.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 56920
+  },
+  {
+    "filename": "jis-gheo.html",
+    "request_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/VOL17/Allen/gheo.html",
+    "resolved_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/VOL17/Allen/gheo.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 2041
+  },
+  {
+    "filename": "jis-gheo.pdf",
+    "request_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/VOL17/Allen/gheo.pdf",
+    "resolved_url": "https://www.maths.tcd.ie/EMIS/journals/JIS/VOL17/Allen/gheo.pdf",
+    "status": 200,
+    "content_type": "application/pdf",
+    "bytes": 133550
+  },
+  {
+    "filename": "arxiv-author-page-1.xml",
+    "request_url": "https://export.arxiv.org/api/query?search_query=au%3A%22Irina+Gheorghiciuc%22&start=0&max_results=100",
+    "resolved_url": "https://export.arxiv.org/api/query?search_query=au%3A%22Irina+Gheorghiciuc%22&start=0&max_results=100",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 5357
+  },
+  {
+    "filename": "arxiv-author-page-2.xml",
+    "request_url": "https://export.arxiv.org/api/query?search_query=au%3A%22Irina+Gheorghiciuc%22&start=100&max_results=100",
+    "resolved_url": "https://export.arxiv.org/api/query?search_query=au%3A%22Irina+Gheorghiciuc%22&start=100&max_results=100",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 733
+  },
+  {
+    "filename": "kilthub-article-6715193.json",
+    "request_url": "https://api.figshare.com/v2/articles/6715193",
+    "resolved_url": "https://api.figshare.com/v2/articles/6715193",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 7242
+  },
+  {
+    "filename": "kilthub-search-page-1.json",
+    "request_url": "https://api.figshare.com/v2/articles/search",
+    "resolved_url": "https://api.figshare.com/v2/articles/search",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 1009
+  },
+  {
+    "filename": "kilthub-search-page-2.json",
+    "request_url": "https://api.figshare.com/v2/articles/search",
+    "resolved_url": "https://api.figshare.com/v2/articles/search",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 2
+  },
+  {
+    "filename": "cmu-personal-research-response.html",
+    "request_url": "https://www.math.cmu.edu/~gheorghi/research.html",
+    "resolved_url": "https://www.math.cmu.edu/~gheorghi/research.html",
+    "status": 404,
+    "content_type": "text/html; charset=iso-8859-1",
+    "bytes": 196
+  }
+]
