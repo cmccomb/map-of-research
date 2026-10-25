@@ -1416,6 +1416,11 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    if "source_type" in frame and (frame["source_type"] == "author_site").any():
+        raise ValueError(
+            "Author-site observations require an exact reviewed release gate "
+            "before publication"
+        )
     sullivan_transition = (
         prior_revision == SULLIVAN_PRIOR_REVISION
         and manifest["snapshot_sha256"] == SULLIVAN_SOURCE_SHA256
