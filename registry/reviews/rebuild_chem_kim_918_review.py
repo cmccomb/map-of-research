@@ -755,6 +755,17 @@ HYUNG_JOON_NEURO_PRIMARY = {
 }
 OTHER_PRIMARY.update(HYUNG_JOON_NEURO_PRIMARY)
 
+# NLM's complete author list for the exact article contains no H. J. Kim.
+ABSENT_AUTHOR_PRIMARY = {
+    90: (
+        "bC4aq-4AAAAJ:kuK5TVdYjLIC",
+        "Reduced transforming growth factor-beta type II receptor (TGF-beta "
+        "RII) expression in adenocarcinoma of the lung.",
+        1999,
+        "https://pubmed.ncbi.nlm.nih.gov/10226558/",
+    ),
+}
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -2135,6 +2146,37 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     evidence_url,
                 )
             )
+        elif index in ABSENT_AUTHOR_PRIMARY:
+            expected_id, expected_title, expected_year, evidence_url = (
+                ABSENT_AUTHOR_PRIMARY[index]
+            )
+            if (
+                pub_id != expected_id
+                or title != expected_title
+                or year != str(expected_year)
+            ):
+                raise ValueError(
+                    f"Complete-author match changed at capture row {index}"
+                )
+            status = "proposed_no_target_author_primary_work"
+            evidence_source = "NLM complete original-journal author list"
+            additions.append(
+                decision(
+                    pub_id,
+                    "false_profile_attribution",
+                    (
+                        "The complete ten-author NLM record for this exact "
+                        "1999 Anticancer Research 19(1A):301-306 article "
+                        "lists W. S. Kim, C. Park, Y. S. Jung, H. S. Kim, "
+                        "J. Han, C. H. Park, K. Kim, J. Kim, Y. M. Shim, "
+                        "and K. Park. No H. J. Kim is an author, so the "
+                        "Scholar citation cannot belong to CMU Chemistry "
+                        "professor Hyung J. Kim."
+                    ),
+                    evidence_url,
+                    verified_at="2026-10-25",
+                )
+            )
         elif index in OTHER_PRIMARY:
             (
                 expected_title,
@@ -2452,15 +2494,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
         "proposed_other_person_primary_work": 60,
+        "proposed_no_target_author_primary_work": 1,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 384,
+        "unresolved_attribution_hold": 383,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 400 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 401 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

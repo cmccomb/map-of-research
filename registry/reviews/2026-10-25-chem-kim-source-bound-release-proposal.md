@@ -30,10 +30,10 @@ partition every captured ID as follows:
 | Disposition | IDs | Sorted-ID SHA-256, joined by newline without a final newline |
 | --- | ---: | --- |
 | Confirmed source-backed works for a possible reviewed subset | 121 | `159375617198d7887a0614b6e3d992fdbc985b5b6e81210b3ea353a21be4eb1e` |
-| Exact false-attribution, duplicate, or nonpublication exclusions | 408 | `dd0668dad5293d70ee4d563964bb542d6c9e53366d9adb88ebc022e58f8f3640` |
-| Held from any map release | 389 | `ff0ede2bb547a1cf74100873151fc03e5cbf491d9589c908c73b0bfe03b611c5` |
+| Exact false-attribution, duplicate, or nonpublication exclusions | 409 | `2d639cf6d68c1acdd35aa421f2f61f1b973cb703fc6cedd3612580518c482971` |
+| Held from any map release | 388 | `bdefbe495a8cc14afebcbda15e00c5d00220097c53cedafe4b484b9576525d23` |
 
-The 389 holds comprise observations that still lack enough output-level review
+The 388 holds comprise observations that still lack enough output-level review
 for this conservative subset. The 121 confirmed entries have exact Scholar
 IDs and work-specific publisher or CMU evidence in the linked fragment and in
 the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
@@ -53,6 +53,9 @@ from CMU Kim by exact Scholar ID.
 Seven further [Hyung Joon Kim neuroscience outputs](2026-10-25-chem-kim-hyung-joon-neuro-seven-primary-review.md)
 have original full-name bylines or exact coauthor-lab bibliography records;
 these are also excluded only by their exact Scholar IDs.
+For the [1999 lung adenocarcinoma row](2026-10-25-chem-kim-lung-absent-author-primary-review.md),
+NLM's complete original-journal byline contains no H. J. Kim at all, so that
+exact citation ID is excluded as an absent-author attribution.
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
 own DOI/page evidence and remain distinct works. The 121 confirmed rows do
 **not** represent Kim's whole publication history.
@@ -78,8 +81,8 @@ python3 -m registry.reviews.prepare_chem_kim_reviewed_subset \
 ```
 
 Before any public use, a trusted producer gate must compare the cache SHA-256,
-all 918 exact IDs, the 121 confirmed IDs, and the 408 exact exclusion IDs to
-these lists; it must prevent all 389 held rows from creating works,
+all 918 exact IDs, the 121 confirmed IDs, and the 409 exact exclusion IDs to
+these lists; it must prevent all 388 held rows from creating works,
 authorships, or coauthor edges. Even after that guard exists, Kim should stay
 off public maps until the subset is clearly represented as incomplete or the
 remaining outputs receive work-level review. This proposal does not edit the
