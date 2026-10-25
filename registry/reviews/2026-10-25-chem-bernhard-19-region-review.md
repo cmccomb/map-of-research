@@ -76,6 +76,14 @@ Parquet configs, both map files, and README. Every non-Chemistry row and shared
 map point must match that Hub parent. The old `bb88ddf0` preview for draft
 PR #338 is source-review evidence only and cannot authorize this restack.
 
+The release path requires a new filesystem intent record and reads it back
+before the Hub write. A file on an ephemeral GitHub runner is not sufficient
+recovery evidence across runs. Before any future real upload, release
+orchestration must persist that intent off-runner as a retained receipt or
+status artifact and make it available for reconciliation if the write outcome
+is uncertain. The first-write-intercepted preview records a local intent but
+does not authorize a real upload.
+
 Two clean #337 producer previews serialized one otherwise identical work with
 the same `venue_variants` in opposite order. The cause is `_variants()` in
 `dataset.py`: it sorts a `set` by `str.casefold`, so strings differing only in

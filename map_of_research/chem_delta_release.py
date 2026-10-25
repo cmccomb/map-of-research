@@ -139,7 +139,12 @@ def require_live_337_parent(
 
 
 def durable_intent_sink(path: Path) -> Callable[[Mapping[str, Any]], None]:
-    """Persist every atomic-release checkpoint before any Hub write."""
+    """Write and read back each checkpoint on the current filesystem.
+
+    Release orchestration must retain the intent outside an ephemeral runner
+    before allowing a real Hub write; local readback alone is not cross-run
+    durability.
+    """
 
     if path.exists():
         raise ValueError("Chemistry intent path must be new for this release attempt")
