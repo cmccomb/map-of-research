@@ -1,8 +1,13 @@
 # Neil Donahue: complete visible cache promotion
 
-The canonical `data/authors/ILambBMAAAAJ.json` is a byte-for-byte copy of
-`data/captures/donahue-visible-623-2026-10-24.candidate-cache.json` (SHA-256
-`424269fcfed5f480ffda279f6013a3a6841f49f5849e5e559a949871106fdba3`).
+The reviewed `data/captures/donahue-visible-623-2026-10-24.candidate-cache.json`
+has SHA-256 `424269fcfed5f480ffda279f6013a3a6841f49f5849e5e559a949871106fdba3`.
+The canonical `data/authors/ILambBMAAAAJ.json` has the same 623 publication
+rows, but its `browser_capture.source_html_sha256` was corrected from the
+unstaged original HTML digest to the staged HTML digest
+`4c2cb0ee0144c9850133931feb1f7e327da30b788d2b46cc13e8846f7eb45494`.
+That single field change gives the canonical cache SHA-256
+`706baa33811d7970d623176601f0a293807c74ca489e7c93d63db2ffbb4ef4ec`.
 The saved HTML, corrected row extraction, receipt, and identity review are in
 [the capture review](2026-10-24-chem-donahue-capture.md). The final Scholar
 **Show more** control was disabled after 623 rows. This is the full profile
@@ -53,12 +58,10 @@ observations after 84 additions and 12 removals.
 ## Release dependency
 
 This draft changes no committed snapshot or public dataset. Before rebuilding
-and publishing, merge the CMU-linked Scholar provenance in producer
-[PR #97](https://github.com/cmccomb/map-of-research/pull/97), the 43 exact
-graph exclusions in producer [PR #78](https://github.com/cmccomb/map-of-research/pull/78),
-and the separately verified historical works in producer
-[PR #121](https://github.com/cmccomb/map-of-research/pull/121) and
-[PR #123](https://github.com/cmccomb/map-of-research/pull/123). Sync that
+and publishing, coordinate with producer
+[PR #218](https://github.com/cmccomb/map-of-research/pull/218), which combines
+the CMU-linked Scholar provenance, 43 exact graph exclusions, separately
+verified historical works, and the exact prior-ID crosswalk. Sync that
 producer registry and curated catalog into the source checkout, then build
 and validate the new snapshot with the trusted producer package. Publishing
 the old 551-row cache with the new curated catalog would duplicate the
