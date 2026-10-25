@@ -236,13 +236,13 @@ jobs:
           fi
           # This reviewed file is added only after the immutable release parent
           # is known. An unused or stale approval fails the publisher gate.
-          if [ -f source/data/curated/bio-mcmanus-poster-loss-approval.json ]; then
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ] && [ -f source/data/curated/bio-mcmanus-poster-loss-approval.json ]; then
             BIO_RELEASE_ARGS+=(
               --approved-poster-loss
               source/data/curated/bio-mcmanus-poster-loss-approval.json
             )
           fi
-          if [ -f source/data/curated/bio-exact-binding-approval-dcb.json ]; then
+          if [ "$REQUIRE_BIO_RELEASE" = "true" ] && [ -f source/data/curated/bio-exact-binding-approval-dcb.json ]; then
             BIO_RELEASE_ARGS+=(
               --bio-binding-approval
               source/data/curated/bio-exact-binding-approval-dcb.json
