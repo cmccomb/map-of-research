@@ -10,6 +10,7 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+from urllib.parse import quote, unquote
 
 SOURCE_DIR = (
     Path(__file__).resolve().parents[1]
@@ -78,8 +79,12 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "third_party_bibliography_candidates": 67,
         "third_party_exact_title_matches_to_attributed_37": 18,
         "third_party_unmatched_titles_needing_primary_review": 49,
+        "third_party_doi_leads_with_crossref_registration": 38,
+        "third_party_doi_exact_normalized_titles": 27,
+        "third_party_doi_title_variants_for_review": 11,
+        "third_party_doi_registrations_without_published_date": 6,
     }
-    assert len(manifest["files"]) == 34
+    assert len(manifest["files"]) == 35
     for filename, expected_hash in manifest["files"].items():
         assert hashlib.sha256((source_dir / filename).read_bytes()).hexdigest() == (
             expected_hash
@@ -360,6 +365,84 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         )
         == 18
     )
+    crossref_bundle = json.loads(
+        (source_dir / "csauthors-crossref-38.json").read_text()
+    )
+    assert crossref_bundle["schema_version"] == 1
+    assert crossref_bundle["person_id"] == PERSON_ID
+    assert crossref_bundle["source"] == (
+        "publisher_deposited_crossref_metadata_for_third_party_bibliography_leads"
+    )
+    publisher_candidates = crossref_bundle["records"]
+    assert len(publisher_candidates) == 38
+    assert len({row["doi"].casefold() for row in publisher_candidates}) == 38
+    candidate_by_key = {row["source_record_key"]: row for row in candidates}
+    for row in publisher_candidates:
+        candidate = candidate_by_key[row["candidate_source_record_key"]]
+        assert candidate["exact_normalized_title_matches_in_prior_37"] == []
+        assert row["candidate_index"] == candidate["index"]
+        assert row["candidate_title_as_displayed"] == candidate["title_as_displayed"]
+        assert row["candidate_link_as_displayed"] == candidate["link_as_displayed"]
+        doi_match = re.search(
+            r"10\.\d{4,9}/[^?#\s]+",
+            unquote(row["candidate_link_as_displayed"]),
+            re.I,
+        )
+        assert doi_match
+        doi_from_link = doi_match.group().rstrip(".").replace("\\_", "_")
+        assert row["doi"].casefold() == doi_from_link.casefold()
+        assert row["crossref_url"] == (
+            "https://api.crossref.org/works/" + quote(doi_from_link, safe="")
+        )
+        registered = row["registered_message"]
+        assert registered["DOI"].casefold() == row["doi"].casefold()
+        assert registered["title"][0] == row["registered_title"]
+        assert row["registered_authors"] == [
+            (author.get("given", "") + " " + author.get("family", "")).strip()
+            for author in registered["author"]
+        ]
+        assert (
+            sum("statman" in name.casefold() for name in row["registered_authors"]) == 1
+        )
+        assert row["registered_type"] == registered["type"]
+        assert row["registered_published"] == registered.get("published")
+        title_status = (
+            "exact_normalized"
+            if _normalized_title(row["candidate_title_as_displayed"])
+            == _normalized_title(row["registered_title"])
+            else "variant_requires_review"
+        )
+        assert row["title_comparison"] == title_status
+        assert row["source_scope"] == (
+            "publisher_registration_candidate_pending_person_version_review"
+        )
+        for field in (
+            "scholar_profile_observation",
+            "release_eligible",
+            "map_eligible",
+            "collaboration_eligible",
+        ):
+            assert row[field] is False
+        hashed_row = {key: value for key, value in row.items() if key != "row_sha256"}
+        assert (
+            row["row_sha256"]
+            == hashlib.sha256(
+                json.dumps(
+                    hashed_row,
+                    sort_keys=True,
+                    ensure_ascii=False,
+                    separators=(",", ":"),
+                ).encode("utf-8")
+            ).hexdigest()
+        )
+    assert (
+        sum(
+            row["title_comparison"] == "exact_normalized"
+            for row in publisher_candidates
+        )
+        == 27
+    )
+    assert sum(row["registered_published"] is None for row in publisher_candidates) == 6
     assert {row["graph_eligible"] for row in observations} == {"false"}
     assert {row["hold_reason"] for row in observations} == {
         "no_verified_scholar_or_complete_author_bibliography"
@@ -377,6 +460,8 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "arxiv_preprint_observations": 1,
         "third_party_bibliography_candidates": 67,
         "third_party_unmatched_titles_needing_primary_review": 49,
+        "third_party_doi_leads_with_crossref_registration": 38,
+        "third_party_doi_title_variants_for_review": 11,
         "held_source_observations_not_works": len(observations),
     }
 
