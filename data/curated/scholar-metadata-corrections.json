@@ -110,6 +110,53 @@
       "basis": "ISMRM 2011 abstract 1712 names Chien Ho of CMU; Scholar misplaces abstract number 1712 in the year field.",
       "evidence_url": "https://archive.ismrm.org/2011/1712.html",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8Ufu7vkAAAAJ",
+      "author_pub_id": "8Ufu7vkAAAAJ:hqOjcs7Dif8C",
+      "expected": {
+        "title": "Cohomologies of tautological bundles of matroids: C. Eur",
+        "year": 2024,
+        "venue": "Selecta Mathematica 30 (5), 85, 2024"
+      },
+      "corrected": {
+        "title": "Cohomologies of tautological bundles of matroids"
+      },
+      "basis": "Springer version of record lists the exact title without the appended author fragment.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s00029-024-00979-7",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "l0rzNYsAAAAJ",
+      "author_pub_id": "l0rzNYsAAAAJ:ufrVoPGSRksC",
+      "expected": {
+        "title": "Lower bounds for the exponential domination number of Cm× Cn",
+        "year": 1803,
+        "venue": "arXiv preprint arXiv:1803.01933, 1803"
+      },
+      "corrected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m × C_n",
+        "year": 2018,
+        "venue": "arXiv preprint arXiv:1803.01933, 2018"
+      },
+      "basis": "arXiv:1803.01933 gives the complete mathematical title and 2018 submission date; Scholar placed the arXiv identifier prefix in the year field.",
+      "evidence_url": "https://arxiv.org/abs/1803.01933",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "l0rzNYsAAAAJ",
+      "author_pub_id": "l0rzNYsAAAAJ:mVmsd5A6BfQC",
+      "expected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m \\times C_n",
+        "year": 2018,
+        "venue": "arXiv preprint arXiv:1803.01933, 2018"
+      },
+      "corrected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m × C_n"
+      },
+      "basis": "The saved Scholar SVG aria-label writes the multiplication sign as \\times; arXiv:1803.01933 renders the expression, so the effective title uses a readable multiplication sign.",
+      "evidence_url": "https://arxiv.org/abs/1803.01933",
+      "verified_at": "2026-10-25"
     }
   ]
 }
