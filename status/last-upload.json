@@ -1,11 +1,11 @@
 {
-  "artifact_commit": "7a681f1241009c0677a2d856daf982e00b1ca619",
-  "authorships": 48102,
+  "artifact_commit": "96fdc335fa0061be30a14698d2a89b9d21454b35",
+  "authorships": 48369,
   "dataset_commits": {
-    "authorships": "d84d29905fcae1f1ffb3247d57006a49ff831444",
-    "people": "85e56d275923ff074bf97e5f78c712cb6a5db448",
-    "profile_publications": "c2f3ebbca2e284f3b549b7f5b34eb42d10927232",
-    "works": "7ae80495213d4d46bd2570bbf3be830cc05c072f"
+    "authorships": "00eb285d80c064c02fa3d654f43790e410f7df23",
+    "people": "77c7d4ec67fc0da5d6746e7198209b18e684d82e",
+    "profile_publications": "b86ec56e714f3111ab4506c23ce588d98e872034",
+    "works": "8761c2e7c462aa46988be5be4f9ac707eeaec759"
   },
   "dataset_configs": [
     "people",
@@ -16,29 +16,33 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "detail_keywords": 120,
   "error_type": null,
-  "excluded_works": 2161,
-  "finished_at_utc": "2026-10-25T02:34:49.355019+00:00",
+  "excluded_works": 2090,
+  "finished_at_utc": "2026-10-25T03:26:35.553820+00:00",
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 41479,
+  "mapped_works": 41835,
   "math_coverage": {
     "complete_scholar_profiles": 29,
     "complete_scholar_rows": 3834,
     "math_people": 65,
     "unresolved_scholar_id_people": 36
   },
-  "new_embedding_count": 204,
+  "new_embedding_count": 288,
   "people": 2001,
-  "profile_count": 290,
-  "profile_publications": 49939,
+  "profile_count": 297,
+  "profile_publications": 50234,
   "region_audit_version": "low-information-semantic-region-v2",
-  "reviewed_exclusions": 850,
-  "reviewed_exclusions_sha256": "7836baae10a25ca2c93d3b70876d7cf8e4cc1c4231f3dad122b5d2ddda431a75",
+  "reviewed_exclusions": 878,
+  "reviewed_exclusions_sha256": "3faa2cc8a6cd1e4303fb8a1f31e88281f7254ebd8bcd802ee5b4cab6eefd9d0f",
   "schema_version": 2,
-  "started_at_utc": "2026-10-25T02:24:40.366799+00:00",
+  "scholar_coverage": {
+    "complete_profiles": 10,
+    "legacy_profiles": 287
+  },
+  "started_at_utc": "2026-10-25T03:18:06.275548+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40154211094",
-  "works": 45958
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40157581304",
+  "works": 46243
 }
