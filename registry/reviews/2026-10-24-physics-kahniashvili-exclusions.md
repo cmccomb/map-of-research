@@ -1,6 +1,6 @@
 # Tina Kahniashvili Scholar observation review, 2026-10-24
 
-The complete 134-row source capture is staged separately in draft [PR #142](https://github.com/cmccomb/map-of-research/pull/142). Chris McComb explicitly confirmed Scholar ID `au_cLfoAAAAJ`; the CMU Physics page confirms her faculty role, while the Scholar profile lists Ilia State University. This producer draft proposes 15 exact exclusions beyond the 842 decisions on `main` at `c8f1841`. Raw capture and author-cache rows remain intact. Merge this producer review before the paired source PR enters a new snapshot.
+The complete 134-row source capture is staged separately in draft [PR #142](https://github.com/cmccomb/map-of-research/pull/142). Chris McComb explicitly confirmed Scholar ID `au_cLfoAAAAJ`; the CMU Physics page confirms her faculty role, while the Scholar profile lists Ilia State University. This producer draft proposes 15 exact exclusions beyond the 862 decisions on `main` at `29d0a41`. All 862 upstream manifest entries were preserved object-for-object and in order, followed by the 15 Tina decisions. Raw capture and author-cache rows remain intact. Merge this producer review before the paired source PR enters a new snapshot.
 
 | Saved row | Scholar ID suffix | Decision and primary evidence |
 | ---: | --- | --- |
