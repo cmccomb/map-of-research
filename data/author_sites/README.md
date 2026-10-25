@@ -43,6 +43,9 @@ all `author_site` snapshots. The capture establishes completeness of the
 displayed author page and current CV, not independently exhaustive career
 coverage or a Google Scholar profile.
 
-The current snapshot CLI selects one author-site manifest at a time. Combining
-the Iyer and Anderson captures in the same source snapshot requires a separate
-multi-manifest pipeline change before publication.
+The snapshot CLI accepts repeated `--author-site-capture` arguments. Each
+capture is loaded once, ordered by person ID, and bound in the snapshot
+manifest by person, filename, SHA-256, and exact expected row count. The
+combined Iyer and Anderson source preview has 89 `author_site` rows, while
+the publisher still rejects this source type. A single Path API argument and
+legacy zero- or one-capture manifests remain valid.
