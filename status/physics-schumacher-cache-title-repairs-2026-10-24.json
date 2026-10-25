@@ -64,6 +64,56 @@
       "repaired_value": "Strong Interaction Physics at the Luminosity Frontier with 22 GeV Electrons at Jefferson Lab",
       "evidence_url": "https://link.springer.com/article/10.1140/epja/s10050-024-01282-x",
       "repair_basis": "publisher title removes a site prefix; saved year remains unresolved"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 1,
+      "author_pub_id": "LibSWRMAAAAJ:9yKSN-GCB0IC",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 503 (2003), 513–553",
+      "evidence_url": "https://www.jlab.org/div_dept/physics_division/dsg/publications2/CLAS%20NIM%20paper%20A%20503%20%282003%29.pdf",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 16,
+      "author_pub_id": "LibSWRMAAAAJ:3fE2CSJIrl8C",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 449 (2000), 81–111",
+      "evidence_url": "https://www.jlab.org/div_dept/physics_division/dsg/publications2/CLAS%20DC%20NIM%20A%20449%20%282000%29.pdf",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 35,
+      "author_pub_id": "LibSWRMAAAAJ:EBV337fEn3EC",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 987 (2021), 164807",
+      "evidence_url": "https://misportal.jlab.org/sti/publications/16305",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 2,
+      "author_pub_id": "LibSWRMAAAAJ:u5HHmVD_uO8C",
+      "cache_field": "title",
+      "captured_value": "The Gottfried sum from the ratio F^{n}_{2}/F^{p}_{2}",
+      "repaired_value": "Gottfried sum from the ratio F^{n}_{2}/F^{p}_{2}",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.66.2712",
+      "repair_basis": "APS title omits a captured leading article; math notation retained"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 4,
+      "author_pub_id": "LibSWRMAAAAJ:d1gkVwhDpl0C",
+      "cache_field": "venue",
+      "captured_value": "Phys. Rev. D 50 (1)",
+      "repaired_value": "Phys. Rev. D 50, R1(R)",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.50.R1",
+      "repair_basis": "APS article locator completes a captured issue-only venue"
     }
   ]
 }
