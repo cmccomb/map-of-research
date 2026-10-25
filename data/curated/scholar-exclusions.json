@@ -8754,6 +8754,22 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:oi2SiIJ9l4AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher's exact article has the same leading authors, 2018 volume 749 and pages 197–204, and assigns its H. J. Kim author ORCID 0000-0001-9787-4684, which Wiley identifies as KNU Physics professor Hong Joo Kim. This exact 2018 Scholar observation 'Investigations of optical and luminescence features of Sm3+ doped Li2O-MO-B2O3 (M= Mg/Ca/Sr/Ba) glasses mixed with different modifier oxides as an orange light emitting …' belongs to Hong Joo Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1016/j.jallcom.2018.03.266.",
+      "evidence_url": "https://api.crossref.org/works/10.1016%2Fj.jallcom.2018.03.266",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:VnuxuLaQPLMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "This Scholar row repeats the 2019 JCAP title, issue, and leading coauthors of observation bC4aq-4AAAAJ:gmHTDCtJMcoC but omits article number 048. The institutional record identifies one journal article, DOI 10.1088/1475-7516/2019/06/048. This row is a redundant citation observation.",
+      "evidence_url": "https://researchportal.helsinki.fi/en/publications/cosine-100-and-damalibra-phase2-in-wimp-effective-models/",
+      "verified_at": "2026-10-25"
+    },
+    {
       "scholar_id": "0e1jwkkAAAAJ",
       "author_pub_id": "0e1jwkkAAAAJ:yxmsSjX2EkcC",
       "reason_code": "false_profile_attribution",
