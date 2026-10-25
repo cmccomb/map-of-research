@@ -61,7 +61,8 @@ jobs:
       - name: Pin previous hosted release
         id: baseline
         run: |
-          python -c 'import json, pathlib, re; root=pathlib.Path("snapshot/status"); path=root/"last-successful-upload.json" if (root/"last-successful-upload.json").exists() else root/"last-upload.json"; receipt=json.loads(path.read_text()); revision=receipt["artifact_commit"]; assert receipt["status"] == "success" and re.fullmatch(r"[0-9a-f]{40}", revision); print(f"revision={revision}")' >> "$GITHUB_OUTPUT"
+          python -m map_of_research.release_baseline \
+            --status-dir snapshot/status >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
         run: |
           python source/scripts/validate_primary_homes.py \

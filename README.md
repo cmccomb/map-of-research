@@ -310,6 +310,9 @@ that check. An operator must inspect the partial Hub commit history and
 restore the hosted dataset to the exact pinned prior revision before retrying
 the same snapshot. Never use the partial upload head as the next baseline;
 `last-successful-upload.json` retains the last completed artifact revision.
+The workflow copies the previously successful receipt into that file before
+its first upload attempt, so an initial failed attempt cannot erase the
+baseline needed for a safe retry.
 
 The hosted upload workflow runs `map-validate-math-coverage` before requesting
 its Hugging Face token. For every included Mathematical Sciences person with a
