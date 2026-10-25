@@ -1,4 +1,60 @@
 {
+  "atomic_release_intent": {
+    "artifact_revision": null,
+    "commit_message": "Publish complete Biological Sciences Scholar corpus atomically\n\nRelease-Intent-Nonce: 5786b995229c4f98b4b3cab7d06dbb3a",
+    "commit_nonce": "5786b995229c4f98b4b3cab7d06dbb3a",
+    "committed_files": [
+      "README.md",
+      "authorships/train-00000-of-00001.parquet",
+      "maps/manifest.json",
+      "maps/publications.json",
+      "people/train-00000-of-00001.parquet",
+      "profile_publications/train-00000-of-00001.parquet",
+      "works/train-00000-of-00001.parquet"
+    ],
+    "intent_status": "before_write",
+    "mode": "single_parent_commit",
+    "parent_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
+    "prewrite_gate": {
+      "bio29_mapped_observations_preserved": 1926,
+      "bio29_observations_preserved": 2106,
+      "bio_edges_preserved": 20,
+      "bio_people": 47,
+      "bio_scholar_rows": 2688,
+      "bio_verified_profiles": 30,
+      "gate": "bio-full-source-graph-and-pending-topics-v1",
+      "held_poster_mapped_loss": true,
+      "pending_topic_works_preserved": 18,
+      "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
+      "raw_rows": 51883,
+      "reviewed_duplicate_mapped_losses": 3,
+      "source_snapshot_sha256": "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550",
+      "status": "pass"
+    },
+    "release_context": {
+      "producer_commit": "2993580c1379727661003f5505604c75678f4289",
+      "snapshot_commit": "45112c6860d380e40c3f60efc4faddf3003f7a89",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40211722485"
+    },
+    "sha256_by_path": {
+      "README.md": "373848475a0283830bd124c74b821dccd9d4a19aa792e58658e5f99c56ea0d2e",
+      "authorships/train-00000-of-00001.parquet": "de067b61128c09639619cacbcc813b88a8da97c500dc917750efcfdc13b0f2c0",
+      "maps/manifest.json": "fbaedfb5309067188038f0277fcfcd20f2197ab1350c5944c19ab6617d543038",
+      "maps/publications.json": "ccf64ffc18e2b2f8a2f925763819bd89f11e276580b633ea2df056741827e6cb",
+      "people/train-00000-of-00001.parquet": "689e61502bc70b0a09a3728f632293437f5eb546044545d37a086d3658674a78",
+      "profile_publications/train-00000-of-00001.parquet": "26f78111a8d07efa4118f5952ff4eeda8a60cbf926ed3ac8b635f578d5321b52",
+      "works/train-00000-of-00001.parquet": "3b516b647316b4c2ebe398ca3990665b2cfa73db28adf1c9c450a9730683338d"
+    },
+    "size_by_path": {
+      "README.md": 10439,
+      "authorships/train-00000-of-00001.parquet": 15545186,
+      "maps/manifest.json": 8714,
+      "maps/publications.json": 38685949,
+      "people/train-00000-of-00001.parquet": 661750,
+      "profile_publications/train-00000-of-00001.parquet": 186390189,
+      "works/train-00000-of-00001.parquet": 191445760
+    }
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,9 +62,9 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "[Errno 2] No such file or directory: 'data/curated/scholar-chem-region-review.json'",
-  "error_type": "FileNotFoundError",
-  "finished_at_utc": "2026-10-25T16:10:07.707713+00:00",
+  "error_message": "Inspect the atomic release intent before retrying",
+  "error_type": "AtomicWriteOutcomeUnknown",
+  "finished_at_utc": null,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -16,7 +72,7 @@
     "unresolved_scholar_id_people": 29
   },
   "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-  "producer_commit": "9f4a23b20598ffe7e0e6f5f387d12904f24e3f26",
+  "producer_commit": "2993580c1379727661003f5505604c75678f4289",
   "region_comparison_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
   "schema_version": 2,
   "scholar_coverage": {
@@ -25,7 +81,7 @@
     "reconciled_prior_ids": 16
   },
   "snapshot_commit": "45112c6860d380e40c3f60efc4faddf3003f7a89",
-  "started_at_utc": "2026-10-25T16:00:50.046405+00:00",
+  "started_at_utc": "2026-10-25T16:29:05.502366+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40209458190"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40211722485"
 }
