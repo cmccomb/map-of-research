@@ -578,6 +578,8 @@ OTHER_PRIMARY_ID_GUARDS = {
     318: "bC4aq-4AAAAJ:uJ-U7cs_P_0C",
     319: "bC4aq-4AAAAJ:4MWp96NkSFoC",
     438: "bC4aq-4AAAAJ:i2xiXl-TujoC",
+    28: "bC4aq-4AAAAJ:kvJssbFybhEC",
+    117: "bC4aq-4AAAAJ:AFmTUeZ1pmEC",
 }
 
 OTHER_PRIMARY.update(
@@ -755,14 +757,68 @@ HYUNG_JOON_NEURO_PRIMARY = {
 }
 OTHER_PRIMARY.update(HYUNG_JOON_NEURO_PRIMARY)
 
-# NLM's complete author list for the exact article contains no H. J. Kim.
+OTHER_PRIMARY.update(
+    {
+        28: (
+            "Identification of two epidermal growth factor-sensitive tyrosine "
+            "phosphorylation sites of phospholipase C-gamma in intact HSC-1 "
+            "cells.",
+            1990,
+            "Hyun Kim",
+            "10.1016/S0021-9258(19)39685-1",
+            "https://www.researchgate.net/publication/348269868_Identification_of_"
+            "two_epidermal_growth_factor-sensitive_tyrosine_phosphorylation_"
+            "sites_of_phospholipase_C-gamma_in_intact_HSC-1_cells",
+            "Original Journal of Biological Chemistry article scan",
+            "The original article prints Hyun Kim as the fourth author, with "
+            "Vanderbilt/NIH laboratory affiliations, in Journal of Biological "
+            "Chemistry 265:3944-3948.",
+        ),
+        117: (
+            "An overview of KSTAR results",
+            2013,
+            "Haejin Kim",
+            "10.1088/0029-5515/53/10/104005",
+            "https://jobs.iterkorea.org/thesis?amount=10&mid=a20302000000&"
+            "pageNum=4&pblYear=2013",
+            "Korea Institute of Fusion Energy's exact article record",
+            "The fusion institute lists Haejin Kim on the exact 2013 KSTAR "
+            "article. The publisher's H. J. Kim byline is assigned to its "
+            "National Fusion Research Institute affiliation; a contemporary "
+            "original KSTAR paper identifies H. J. Kim there with the "
+            "haejin@nfri.re.kr address and overlapping coauthors.",
+        ),
+    }
+)
+
+# Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
         "bC4aq-4AAAAJ:kuK5TVdYjLIC",
         "Reduced transforming growth factor-beta type II receptor (TGF-beta "
         "RII) expression in adenocarcinoma of the lung.",
         1999,
+        "",
         "https://pubmed.ncbi.nlm.nih.gov/10226558/",
+        "NLM complete original-journal author list",
+        "The complete ten-author NLM record for this exact 1999 Anticancer "
+        "Research 19(1A):301-306 article lists W. S. Kim, C. Park, "
+        "Y. S. Jung, H. S. Kim, J. Han, C. H. Park, K. Kim, J. Kim, "
+        "Y. M. Shim, and K. Park. No H. J. Kim is an author, so the "
+        "Scholar citation cannot belong to CMU Chemistry professor "
+        "Hyung J. Kim.",
+    ),
+    70: (
+        "bC4aq-4AAAAJ:WzTVkKNmPSkC",
+        "Overview of KSTAR initial operation",
+        2011,
+        "10.1088/0029-5515/51/9/094006",
+        "https://api.crossref.org/works/10.1088/0029-5515/51/9/094006",
+        "IOP publisher-deposited complete author list",
+        "The IOP publisher-deposited complete 147-author list for the exact "
+        "2011 Nuclear Fusion 51:094006 article has no H. J. Kim. Its Kim "
+        "authors have other initials, so this Scholar citation cannot "
+        "belong to CMU Chemistry professor Hyung J. Kim.",
     ),
 }
 
@@ -2147,9 +2203,15 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 )
             )
         elif index in ABSENT_AUTHOR_PRIMARY:
-            expected_id, expected_title, expected_year, evidence_url = (
-                ABSENT_AUTHOR_PRIMARY[index]
-            )
+            (
+                expected_id,
+                expected_title,
+                expected_year,
+                doi,
+                evidence_url,
+                evidence_source,
+                reason,
+            ) = ABSENT_AUTHOR_PRIMARY[index]
             if (
                 pub_id != expected_id
                 or title != expected_title
@@ -2159,20 +2221,11 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     f"Complete-author match changed at capture row {index}"
                 )
             status = "proposed_no_target_author_primary_work"
-            evidence_source = "NLM complete original-journal author list"
             additions.append(
                 decision(
                     pub_id,
                     "false_profile_attribution",
-                    (
-                        "The complete ten-author NLM record for this exact "
-                        "1999 Anticancer Research 19(1A):301-306 article "
-                        "lists W. S. Kim, C. Park, Y. S. Jung, H. S. Kim, "
-                        "J. Han, C. H. Park, K. Kim, J. Kim, Y. M. Shim, "
-                        "and K. Park. No H. J. Kim is an author, so the "
-                        "Scholar citation cannot belong to CMU Chemistry "
-                        "professor Hyung J. Kim."
-                    ),
+                    reason,
                     evidence_url,
                     verified_at="2026-10-25",
                 )
@@ -2493,17 +2546,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 60,
-        "proposed_no_target_author_primary_work": 1,
+        "proposed_other_person_primary_work": 62,
+        "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 383,
+        "unresolved_attribution_hold": 380,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 401 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 404 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
