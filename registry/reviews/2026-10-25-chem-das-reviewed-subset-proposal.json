@@ -16,7 +16,7 @@
       "state": "reviewed_subset",
       "expected_source_rows": 670,
       "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
-      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 56 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links; 223 reviewed exclusions and 391 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 57 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links; 226 reviewed exclusions and 387 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
       "reviewed_at": "2026-10-25",
       "released_author_pub_ids": [
         "FrF1YXQAAAAJ:kRWSkSYxWN8C",
@@ -74,7 +74,8 @@
         "FrF1YXQAAAAJ:4MWp96NkSFoC",
         "FrF1YXQAAAAJ:qxL8FJ1GzNcC",
         "FrF1YXQAAAAJ:Zph67rFs4hoC",
-        "FrF1YXQAAAAJ:ML0RJ9NH7IQC"
+        "FrF1YXQAAAAJ:ML0RJ9NH7IQC",
+        "FrF1YXQAAAAJ:ufrVoPGSRksC"
       ],
       "excluded_author_pub_ids": [
         "FrF1YXQAAAAJ:AXkvAH5U_nMC",
@@ -299,7 +300,10 @@
         "FrF1YXQAAAAJ:u-coK7KVo8oC",
         "FrF1YXQAAAAJ:CMvovTBb2okC",
         "FrF1YXQAAAAJ:KWzIFqRkAKkC",
-        "FrF1YXQAAAAJ:xyvS_IvSCKsC"
+        "FrF1YXQAAAAJ:xyvS_IvSCKsC",
+        "FrF1YXQAAAAJ:gsN89kCJA0AC",
+        "FrF1YXQAAAAJ:FiytvqdAVhgC",
+        "FrF1YXQAAAAJ:OBSaB-F7qqsC"
       ],
       "held_author_pub_ids": [
         "FrF1YXQAAAAJ:ziOE8S1-AIUC",
@@ -394,7 +398,6 @@
         "FrF1YXQAAAAJ:2KloaMYe4IUC",
         "FrF1YXQAAAAJ:SpPTWFSNUtQC",
         "FrF1YXQAAAAJ:ukw-9cB-YDkC",
-        "FrF1YXQAAAAJ:ufrVoPGSRksC",
         "FrF1YXQAAAAJ:zdjWy_NXXwUC",
         "FrF1YXQAAAAJ:KbBQZpvPDL4C",
         "FrF1YXQAAAAJ:lbI08cpqPnQC",
@@ -418,7 +421,6 @@
         "FrF1YXQAAAAJ:0CzhzZyukY4C",
         "FrF1YXQAAAAJ:HGTzPopzzJcC",
         "FrF1YXQAAAAJ:_tF6a-HnqWAC",
-        "FrF1YXQAAAAJ:gsN89kCJA0AC",
         "FrF1YXQAAAAJ:qe6vwMD2xtsC",
         "FrF1YXQAAAAJ:_FxGoFyzp5QC",
         "FrF1YXQAAAAJ:jE2MZjpN3IcC",
@@ -461,9 +463,7 @@
         "FrF1YXQAAAAJ:wLxue7F8ec0C",
         "FrF1YXQAAAAJ:ijdKiLOsEJMC",
         "FrF1YXQAAAAJ:PlWzFYVEG4EC",
-        "FrF1YXQAAAAJ:FiytvqdAVhgC",
         "FrF1YXQAAAAJ:8dzOF9BpDQoC",
-        "FrF1YXQAAAAJ:OBSaB-F7qqsC",
         "FrF1YXQAAAAJ:IT1MJ6E3JesC",
         "FrF1YXQAAAAJ:QUX0mv85b1cC",
         "FrF1YXQAAAAJ:oTdOBqtIf_kC",

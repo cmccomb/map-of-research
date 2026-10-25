@@ -11664,6 +11664,30 @@
       "reason": "The original 2020 International Journal of Anatomy and Research PDF spells out Sarbani Das with Mithu Paul and Tridib Kumar Sett for the exact title, DOI and pages, excluding CMU chemist Subha R. Das.",
       "evidence_url": "https://www.ijmhr.org/ijar.8.2/IJAR.2020.139.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:gsN89kCJA0AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2020 article names Subha Ranjan Das in Vidyasagar University Human Physiology; Ariel University identifies that cancer-biology researcher as a PhD student, distinct from CMU Chemistry professor Subha R. Das.",
+      "evidence_url": "https://ir.vidyasagar.ac.in/bitstream/123456789/6974/1/05____Subha%20Ranjan%20Das.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:FiytvqdAVhgC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Bentham gives the exact 2025 chapter, DOI and full byline; Vidyasagar University lists it under corresponding author Sujata Maiti Choudhury in the same cancer-biology group as the other Subha Ranjan Das, an Ariel University PhD student, not the CMU Chemistry professor.",
+      "evidence_url": "https://www.vidyasagar.ac.in/ArticlePage/Dept_FacultyProfile?T=D&deptId=27&empId=140",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:OBSaB-F7qqsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2025 Elsevier article and Vidyasagar University faculty record match this exact title and byline; journal metadata affiliates Subha Ranjan Das with Vidyasagar Human Physiology, identifying the other cancer-biology researcher rather than the CMU Chemistry professor.",
+      "evidence_url": "https://www.vidyasagar.ac.in/ArticlePage/Dept_FacultyProfile?T=D&deptId=4&empId=84",
+      "verified_at": "2026-10-25"
     }
   ]
 }
