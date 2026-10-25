@@ -177,5 +177,61 @@ def validate(review: Path = REVIEW, registry: Path = ROOT / "registry") -> dict:
     return expected_counts
 
 
+def load_held_observations(review: Path = REVIEW) -> list[dict]:
+    """Preserve the complete visible CMU and ORCID sources without map edges."""
+
+    validate(review)
+    manifest = json.loads((review / "manifest.json").read_text())
+    rows: list[dict] = []
+    for source in _rows(review / "cmu-scholars-29.csv"):
+        rows.append(
+            {
+                "person_id": PERSON_ID,
+                "source_observation_id": (
+                    f"cmu-scholars:11914:capture:{source['source_ordinal']}"
+                ),
+                "source_type": "cmu_scholars",
+                "source_url": next(
+                    item["url"]
+                    for item in manifest["sources"]
+                    if item["file"] == f"scholars-page-{source['source_page']}.html"
+                ),
+                "title_as_source": source["source_title"],
+                "doi_as_source": source["doi"],
+                "genre_as_source": source["source_type"],
+                "source_record": source,
+                "attribution_review_pending": True,
+                "career_scope_verified": False,
+                "release_eligible": False,
+                "map_eligible": False,
+                "collaboration_eligible": False,
+            }
+        )
+    groups = json.loads((review / "orcid-works.json").read_text())["group"]
+    for source, group in zip(_rows(review / "orcid-24.csv"), groups, strict=True):
+        rows.append(
+            {
+                "person_id": PERSON_ID,
+                "source_observation_id": (f"orcid:{ORCID}:work:{source['put_code']}"),
+                "source_type": "researcher_orcid",
+                "source_url": (
+                    f"https://pub.orcid.org/v3.0/{ORCID}/work/{source['put_code']}"
+                ),
+                "title_as_source": source["source_title"],
+                "doi_as_source": source["doi"],
+                "genre_as_source": group["work-summary"][0]["type"],
+                "source_record": {"table_row": source, "orcid_group": group},
+                "attribution_review_pending": True,
+                "career_scope_verified": False,
+                "release_eligible": False,
+                "map_eligible": False,
+                "collaboration_eligible": False,
+            }
+        )
+    if len(rows) != 53 or len({row["source_observation_id"] for row in rows}) != 53:
+        raise ValueError("Weston whole-source observation hold changed")
+    return rows
+
+
 if __name__ == "__main__":
     print(json.dumps(validate(), sort_keys=True))

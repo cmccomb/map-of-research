@@ -1,6 +1,6 @@
 # Anthony Weston: verified ORCID and held publication sources
 
-Reviewed 2026-10-25 for `person-anthonyweston-79b583d1`. This source review registers one verified ORCID and **adds zero publication observations**. It does not assign a Google Scholar account or certify a complete academic history.
+Reviewed 2026-10-25 for `person-anthonyweston-79b583d1`. This source review registers one verified ORCID and adds zero publication observations to the public snapshot. It does not assign a Google Scholar account or certify a complete academic history.
 
 ## Identity
 
@@ -15,3 +15,10 @@ The overlap shows that neither the 24-row ORCID export nor a first-page-only CMU
 ## Release boundary
 
 Keep all Weston publication rows held until an independently complete history is assembled and every candidate work's authorship, genre, and duplicate manifestations are reconciled. Preserve source type and raw rows. Do not label CMU Scholars or ORCID records as Google Scholar data. This review does not alter the frozen source snapshot or current public maps.
+
+`load_held_observations()` in the validator stages all **53 raw source
+observations** (29 CMU Scholars cards and 24 ORCID groups) together. The 23
+matching DOI pairs remain separate source observations; 53 is not a distinct
+work count. The raw records and source genres are retained, while authorship,
+career scope, release, map, and collaboration eligibility remain unresolved or
+false. No production builder imports this loader.
