@@ -19,6 +19,7 @@ from map_of_research.region_continuity import (
 ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data/curated"
 FROZEN_BIO_CURATED = ROOT / "tests/fixtures/bio_approved_works.json"
+FROZEN_BIO_PROFILES = ROOT / "tests/fixtures/bio_approved_profiles.json"
 
 
 def _inputs() -> dict:
@@ -31,7 +32,7 @@ def _inputs() -> dict:
         "exclusions_path": CURATED / "scholar-exclusions.json",
         "person_publication_holds_path": CURATED / "person-publication-holds.json",
         "curated_works_path": FROZEN_BIO_CURATED,
-        "profile_releases_path": CURATED / "scholar-profile-releases.json",
+        "profile_releases_path": FROZEN_BIO_PROFILES,
         "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
         "poster_loss_approval_path": CURATED / "bio-mcmanus-poster-loss-approval.json",
     }
@@ -85,9 +86,17 @@ def _reconcile(approved, previous, current, prior_works, current_works):
 
 
 def test_exact_review_matches_all_11_bio_bindings():
-    assert approval.sha256_file(FROZEN_BIO_CURATED) == json.loads(
+    approved_manifest = json.loads(
         (CURATED / "bio-exact-binding-approval-dcb.json").read_text(encoding="utf-8")
-    )["curated_works_sha256"]
+    )
+    assert (
+        approval.sha256_file(FROZEN_BIO_CURATED)
+        == approved_manifest["curated_works_sha256"]
+    )
+    assert (
+        approval.sha256_file(FROZEN_BIO_PROFILES)
+        == approved_manifest["profile_releases_sha256"]
+    )
     approved, previous, current, prior_works, current_works = _candidate()
     assert len(approved.binding_changes) == 11
     assert approval.binding_digest(approved.binding_changes) == approval.BINDINGS_SHA256

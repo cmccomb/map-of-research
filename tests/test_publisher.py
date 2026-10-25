@@ -1728,6 +1728,42 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
+    chemistry_calls = []
+    chemistry_active = bio_intent and reuse_order
+    monkeypatch.setattr(
+        publisher,
+        "needs_chemistry_continuity",
+        lambda *args, **kwargs: chemistry_active,
+    )
+    monkeypatch.setattr(
+        publisher,
+        "load_chem_region_review",
+        lambda *args, **kwargs: chemistry_calls.append("source") or ("review",),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "load_chemistry_parent",
+        lambda *args: chemistry_calls.append("parent") or {"pinned": True},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "merge_chemistry_review_inputs",
+        lambda decisions, exclusions, holds, contexts: (
+            exclusions,
+            holds,
+            contexts,
+        ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_chemistry_candidate",
+        lambda tables, state, **kwargs: chemistry_calls.append("candidate"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "reconcile_chemistry_person_counts",
+        lambda people, decisions: chemistry_calls.append("historical_counts") or people,
+    )
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
@@ -1942,6 +1978,20 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         tmp_path / "manifest.json",
         **publish_options,
     )
+    if chemistry_active:
+        expected_chemistry_calls = [
+            "source",
+            "parent",
+            "source",
+            "parent",
+        ]
+        assert [call for call in chemistry_calls if call != "historical_counts"] == [
+            *expected_chemistry_calls,
+            "candidate",
+        ]
+        assert chemistry_calls.count("historical_counts") == (
+            2 if publisher.CHEMISTRY_HUB_REVISION == "a" * 40 else 0
+        )
     assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
     assert published_revisions == (
         [
@@ -1998,6 +2048,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             "prior_revision": "b" * 40 if region_override else "a" * 40,
             "stable_works": 1,
             **({"current_hub_revision": "a" * 40} if region_override else {}),
+            **(
+                {
+                    "chem_region_review_sha256": publisher.CHEM_REVIEW_SHA256,
+                    "chemistry_review_root_revision": publisher.CHEMISTRY_HUB_REVISION,
+                }
+                if chemistry_active
+                else {}
+            ),
         }
         if pinned
         else None
@@ -2034,6 +2092,21 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["detail_keywords"] == 1
     assert result["topic_label_review_version"] == (
         publisher.TOPIC_LABEL_REVIEW_VERSION
+    )
+
+
+def test_historical_chemistry_count_offset_applies_only_at_its_parent(
+    monkeypatch, tmp_path
+) -> None:
+    monkeypatch.setattr(publisher, "CHEMISTRY_HUB_REVISION", "a" * 40)
+    test_publish_snapshot_orchestrates_all_dataset_configs(
+        monkeypatch,
+        tmp_path,
+        reuse_order=True,
+        pinned=True,
+        missing_prior=False,
+        region_override=False,
+        atomic=True,
     )
 
 
@@ -2104,8 +2177,9 @@ def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) 
         )
 
 
+@pytest.mark.parametrize("released_gain", [False, True])
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
-    monkeypatch, tmp_path
+    monkeypatch, tmp_path, released_gain
 ) -> None:
     monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(
@@ -2122,11 +2196,59 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
             else [{"author_pub_id": "curated:independent"}]
         ),
     )
+    receipt = {
+        "prior_revision": "a" * 40,
+        "prior_visible_observations": 0,
+        "current_visible_observations": int(released_gain),
+        "new_source_gains": int(released_gain),
+        **dict.fromkeys(
+            (
+                "reviewed_losses",
+                "verified_gains",
+                "reviewed_composite_observation_gains",
+                "reviewed_composite_observation_losses",
+                "approved_sullivan_held_losses",
+                "approved_sullivan_rekey_losses",
+                "approved_sullivan_additional_losses",
+                "approved_sullivan_binding_changes",
+                "unapproved_mapped_binding_changes",
+                "unexplained_losses",
+                "unexplained_gains",
+            ),
+            [],
+        ),
+    }
     monkeypatch.setattr(
         publisher,
         "reconcile_region_decisions",
-        lambda works, *args, **kwargs: (works, {"prior_revision": "a" * 40}),
+        lambda works, *args, **kwargs: (works, receipt),
     )
+    parent_map = tmp_path / "parent-publications.json"
+    parent_map.write_text('{"point_count":1,"points":[],"keywords":[]}')
+    freeze_calls = []
+
+    def pinned_parent(*args, **kwargs):
+        if released_gain:
+            pytest.fail("Mixed release must not load a held-only parent map")
+        assert kwargs["revision"] == "a" * 40
+        return str(parent_map)
+
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=pinned_parent),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"point_count": 1, "points": []},
+    )
+
+    def freeze(works, **kwargs):
+        freeze_calls.append(kwargs)
+        return works
+
+    monkeypatch.setattr(publisher, "preserve_held_only_topics", freeze)
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     snapshot = tmp_path / "snapshots" / "source.parquet"
     cache_dir = tmp_path / "data" / "authors"
@@ -2263,7 +2385,10 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         publisher, "exclude_low_information_regions", lambda works, **kwargs: works
     )
 
+    atomic_calls = []
+
     def upload_dataset(*args, **kwargs):
+        atomic_calls.append(kwargs)
         releases_path.write_text("changed after decision load")
         return "commit", {"mode": "single_parent_commit"}
 
@@ -2292,6 +2417,112 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
     assert result["profile_count"] == 0
     assert result["reviewed_metadata_corrections"] == 0
     assert result["profile_release_manifest_sha256"] == original_release_sha
+    assert bool(freeze_calls) is not released_gain
+    assert bool(atomic_calls[0]["held_topic_parent_artifact"]) is not released_gain
+    if not released_gain:
+        assert atomic_calls[0]["held_topic_parent_map_sha256"] == (
+            hashlib.sha256(parent_map.read_bytes()).hexdigest()
+        )
+
+
+@pytest.mark.parametrize("parent_digest", [None, "a" * 64])
+def test_atomic_stage_records_held_only_parent_map_parity(
+    monkeypatch, tmp_path, parent_digest
+) -> None:
+    class FakeDataset:
+        def to_parquet(self, path):
+            Path(path).write_bytes(b"staged parquet")
+
+    parent_map = {
+        "generated_at_utc": "2026-10-24T00:00:00+00:00",
+        "point_count": 0,
+        "keyword_count": 0,
+        "points": [],
+        "keywords": [],
+    }
+    candidate_map = {
+        **parent_map,
+        "generated_at_utc": "2026-10-25T00:00:00+00:00",
+    }
+
+    def write_map(*args, maps_dir, **kwargs):
+        maps_dir.mkdir(parents=True)
+        artifact_path = maps_dir / "publications.json"
+        manifest_path = maps_dir / "manifest.json"
+        artifact_path.write_text(json.dumps(candidate_map))
+        manifest_path.write_text("{}")
+        return artifact_path, manifest_path, candidate_map
+
+    readme = tmp_path / "README.md"
+    readme.write_text("Parent card")
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=lambda *args, **kwargs: str(readme)),
+    )
+    monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
+    monkeypatch.setattr(publisher, "_to_hub_dataset", lambda frame: FakeDataset())
+    monkeypatch.setattr(publisher, "_write_map_artifacts", write_map)
+    monkeypatch.setattr(
+        publisher,
+        "retain_held_only_parent_works",
+        lambda staged, **kwargs: (
+            tables["works"],
+            {name: 1 for name in publisher.DATASET_CONFIGS},
+        ),
+    )
+    monkeypatch.setitem(
+        sys.modules,
+        "datasets",
+        SimpleNamespace(
+            Dataset=SimpleNamespace(from_parquet=lambda path: FakeDataset())
+        ),
+    )
+    monkeypatch.setattr(
+        publisher, "build_updated_dataset_card", lambda *args: "Staged card"
+    )
+    gates = []
+
+    def commit(*args, prewrite_gate, **kwargs):
+        gates.append(prewrite_gate)
+        return "commit", {"mode": "single_parent_commit"}
+
+    monkeypatch.setattr(publisher, "commit_atomic_release", commit)
+    kwargs = dict(
+        source_frame=pandas.DataFrame([{"source_type": "scholar"}]),
+        source_manifest={"snapshot_sha256": "not-the-Bio-snapshot"},
+        hf_token="token",
+        prior_revision="a" * 40,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={
+            "prior_revision": "a" * 40,
+            "unexplained_losses": [],
+            "unexplained_gains": [],
+        },
+        repair_manifest_path=tmp_path / "repair.json",
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=[],
+        atomic_intent_sink=lambda intent: None,
+        held_topic_parent_artifact=parent_map,
+        held_topic_parent_map_sha256=parent_digest,
+    )
+    tables = {
+        name: pandas.DataFrame([{"value": 1}]) for name in publisher.DATASET_CONFIGS
+    }
+    if parent_digest is None:
+        with pytest.raises(ValueError, match="lacks pinned parent map digest"):
+            publisher._publish_atomic_release(tables, registry(), **kwargs)
+        assert not gates
+    else:
+        publisher._publish_atomic_release(tables, registry(), **kwargs)
+        assert gates[0]["held_only_topic_parity"] == {
+            "status": "pass",
+            "point_count": 0,
+            "keyword_count": 0,
+            "parent_map_sha256": parent_digest,
+            "exact_table_rows": {name: 1 for name in publisher.DATASET_CONFIGS},
+        }
 
 
 def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
@@ -2613,6 +2844,56 @@ def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
         ]
     )
     assert args.max_age_days == publisher.DEFAULT_MAX_AGE_DAYS
+
+
+@pytest.mark.parametrize("explicit_manifest", [True, False])
+def test_main_uses_trusted_chemistry_manifest_from_workspace_root(
+    monkeypatch, tmp_path, explicit_manifest: bool
+) -> None:
+    monkeypatch.chdir(tmp_path)
+    manifest = Path("source/data/curated/scholar-chem-region-review.json")
+    manifest.parent.mkdir(parents=True)
+    manifest.write_text("reviewed")
+    monkeypatch.setenv(publisher.HF_TOKEN_ENV, "token")
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (pandas.DataFrame(), {}),
+    )
+    monkeypatch.setattr(publisher, "validate_math_coverage", lambda *args, **kwargs: {})
+    monkeypatch.setattr(publisher, "validate_coverage", lambda **kwargs: {})
+    seen = []
+
+    def publish(*args, **kwargs):
+        chem_review = kwargs["chem_region_review_path"]
+        seen.append(chem_review)
+        if not chem_review.is_file():
+            raise FileNotFoundError(f"Chemistry review is missing: {chem_review}")
+        return {"works": 4}
+
+    monkeypatch.setattr(publisher, "publish_snapshot", publish)
+    cli = [
+        "--snapshot",
+        "snapshot/snapshots/cmu-engineering-publications.parquet",
+        "--manifest",
+        "snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json",
+        "--prior-revision",
+        "a" * 40,
+        "--status-file",
+        str(tmp_path / "status.json"),
+    ]
+    if explicit_manifest:
+        cli.extend(["--chem-region-review-manifest", str(manifest)])
+    result = publisher.main(cli)
+    assert result == (0 if explicit_manifest else 1)
+    assert seen == [
+        manifest if explicit_manifest else publisher.DEFAULT_CHEM_REGION_REVIEW_PATH
+    ]
+    status = json.loads((tmp_path / "status.json").read_text())
+    assert status["status"] == ("success" if explicit_manifest else "failure")
+    if not explicit_manifest:
+        assert status["error_type"] == "FileNotFoundError"
 
 
 @pytest.mark.parametrize(

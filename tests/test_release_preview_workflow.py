@@ -4,9 +4,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import subprocess
 import sys
 from pathlib import Path
 from types import ModuleType, SimpleNamespace
+
+import pytest
 
 import map_of_research
 from map_of_research.region_continuity import RegionReleaseDiffError
@@ -43,6 +46,132 @@ def _load_script():
     return module
 
 
+def _git(checkout: Path, *args: str) -> str:
+    return subprocess.check_output(
+        ["git", "-C", str(checkout), *args], text=True
+    ).strip()
+
+
+def _lineage_checkouts(tmp_path: Path) -> tuple[Path, Path, Path, str, str, bytes]:
+    seed = tmp_path / "seed"
+    seed.mkdir()
+    _git(seed, "init", "-q")
+    _git(seed, "config", "user.name", "Preview Test")
+    _git(seed, "config", "user.email", "preview@example.test")
+    status = seed / "status/last-successful-upload.json"
+    status.parent.mkdir()
+    receipt_bytes = b'{"status":"success","artifact_commit":"parent"}\n'
+    status.write_bytes(receipt_bytes)
+    _git(seed, "add", "status/last-successful-upload.json")
+    _git(seed, "commit", "-qm", "successful receipt")
+    status_commit = _git(seed, "rev-parse", "HEAD")
+
+    receipt_checkout = tmp_path / "receipt"
+    subprocess.run(["git", "clone", "-q", str(seed), str(receipt_checkout)], check=True)
+    (seed / "snapshot-marker").write_text("candidate", encoding="utf-8")
+    _git(seed, "add", "snapshot-marker")
+    _git(seed, "commit", "-qm", "candidate snapshot")
+    snapshot_commit = _git(seed, "rev-parse", "HEAD")
+    snapshot = tmp_path / "snapshot"
+    subprocess.run(["git", "clone", "-q", str(seed), str(snapshot)], check=True)
+    return (
+        seed,
+        snapshot,
+        receipt_checkout,
+        snapshot_commit,
+        status_commit,
+        receipt_bytes,
+    )
+
+
+def test_receipt_lineage_accepts_descendant_with_identical_committed_bytes(tmp_path):
+    preview = _load_script()
+    _, snapshot, receipt, snapshot_commit, status_commit, expected = _lineage_checkouts(
+        tmp_path
+    )
+    assert (
+        preview._require_receipt_lineage(
+            snapshot,
+            receipt,
+            snapshot_commit=snapshot_commit,
+            status_commit=status_commit,
+        )
+        == expected
+    )
+
+
+def test_receipt_lineage_rejects_diverged_snapshot_with_same_receipt_bytes(tmp_path):
+    preview = _load_script()
+    seed, _, receipt, _, status_commit, _ = _lineage_checkouts(tmp_path)
+    # The successful receipt is the first commit, so make an independent root
+    # with the same file bytes while retaining the original branch in the clone.
+    _git(seed, "checkout", "--orphan", "diverged")
+    _git(seed, "add", "status/last-successful-upload.json")
+    _git(seed, "commit", "-qm", "independent snapshot")
+    diverged_commit = _git(seed, "rev-parse", "HEAD")
+    diverged = tmp_path / "diverged"
+    subprocess.run(["git", "clone", "-q", str(seed), str(diverged)], check=True)
+    with pytest.raises(ValueError, match="not an ancestor"):
+        preview._require_receipt_lineage(
+            diverged,
+            receipt,
+            snapshot_commit=diverged_commit,
+            status_commit=status_commit,
+        )
+
+
+def test_receipt_lineage_rejects_candidate_receipt_byte_change(tmp_path):
+    preview = _load_script()
+    seed, _, receipt, _, status_commit, _ = _lineage_checkouts(tmp_path)
+    (seed / "status/last-successful-upload.json").write_bytes(
+        b'{"status":"success","artifact_commit":"other"}\n'
+    )
+    _git(seed, "add", "status/last-successful-upload.json")
+    _git(seed, "commit", "-qm", "changed candidate receipt")
+    altered_commit = _git(seed, "rev-parse", "HEAD")
+    altered = tmp_path / "altered"
+    subprocess.run(["git", "clone", "-q", str(seed), str(altered)], check=True)
+    with pytest.raises(ValueError, match="Snapshot successful receipt differs"):
+        preview._require_receipt_lineage(
+            altered,
+            receipt,
+            snapshot_commit=altered_commit,
+            status_commit=status_commit,
+        )
+
+
+def test_receipt_lineage_rejects_uncommitted_candidate_receipt(tmp_path):
+    preview = _load_script()
+    _, snapshot, receipt, snapshot_commit, status_commit, _ = _lineage_checkouts(
+        tmp_path
+    )
+    (snapshot / "status/last-successful-upload.json").write_bytes(b"altered\n")
+    with pytest.raises(ValueError, match="Snapshot checkout differs"):
+        preview._require_receipt_lineage(
+            snapshot,
+            receipt,
+            snapshot_commit=snapshot_commit,
+            status_commit=status_commit,
+        )
+
+
+def test_receipt_lineage_requires_committed_success_file(tmp_path):
+    preview = _load_script()
+    seed, _, receipt, _, status_commit, _ = _lineage_checkouts(tmp_path)
+    _git(seed, "rm", "status/last-successful-upload.json")
+    _git(seed, "commit", "-qm", "removed successful receipt")
+    missing_commit = _git(seed, "rev-parse", "HEAD")
+    missing = tmp_path / "missing"
+    subprocess.run(["git", "clone", "-q", str(seed), str(missing)], check=True)
+    with pytest.raises(ValueError, match="missing from commit"):
+        preview._require_receipt_lineage(
+            missing,
+            receipt,
+            snapshot_commit=missing_commit,
+            status_commit=status_commit,
+        )
+
+
 def _run_preview(
     monkeypatch,
     tmp_path,
@@ -52,6 +181,7 @@ def _run_preview(
     binding_approval: bool = False,
     region_diff: bool = False,
     require_bio_release: bool | None = None,
+    chem_manifest_present: bool = True,
 ):
     preview = _load_script()
     producer = tmp_path / "producer"
@@ -59,12 +189,14 @@ def _run_preview(
     receipt_checkout = tmp_path / "receipt"
     output = tmp_path / "output"
     producer.mkdir()
+    curated = producer / "data/curated"
+    curated.mkdir(parents=True)
     if approval:
-        curated = producer / "data/curated"
-        curated.mkdir(parents=True)
         (curated / "bio-mcmanus-poster-loss-approval.json").write_text("{}")
         if binding_approval:
             (curated / "bio-exact-binding-approval-dcb.json").write_text("{}")
+    if chem_manifest_present:
+        (curated / "scholar-chem-region-review.json").write_text("reviewed")
     (snapshot / "snapshots").mkdir(parents=True)
     (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
@@ -73,9 +205,11 @@ def _run_preview(
     (
         snapshot / "snapshots/cmu-engineering-publications.parquet.manifest.json"
     ).write_text(json.dumps({"snapshot_sha256": raw_sha}), encoding="utf-8")
-    (receipt_checkout / "status/last-upload.json").write_text(
-        json.dumps({"status": "success", "artifact_commit": PARENT}), encoding="utf-8"
-    )
+    success_bytes = json.dumps(
+        {"status": "success", "artifact_commit": PARENT}
+    ).encode()
+    (receipt_checkout / "status/last-successful-upload.json").write_bytes(success_bytes)
+    (receipt_checkout / "status/last-upload.json").write_bytes(success_bytes)
     require_bio_release = (
         approval if require_bio_release is None else require_bio_release
     )
@@ -101,6 +235,9 @@ def _run_preview(
         ),
     )
     monkeypatch.setattr(preview, "_require_clean_tracked_files", lambda path: None)
+    monkeypatch.setattr(
+        preview, "_require_receipt_lineage", lambda *args, **kwargs: success_bytes
+    )
 
     class FakeHfApi:
         def __init__(self, token=None):
@@ -144,6 +281,10 @@ def _run_preview(
                     ],
                 }
             )
+        chem_manifest = kwargs["chem_region_review_path"]
+        assert chem_manifest == curated / "scholar-chem-region-review.json"
+        if not chem_manifest.is_file():
+            raise FileNotFoundError(f"Missing Chemistry review: {chem_manifest}")
         if fail_before_write:
             raise ValueError("review gate failed")
         staging = tmp_path / "publisher-stage"
@@ -255,6 +396,17 @@ def test_later_preview_ignores_historical_bio_approvals(monkeypatch, tmp_path):
     assert receipt["status"] == "passed_no_upload"
 
 
+def test_no_write_preview_requires_producer_chemistry_review(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, chem_manifest_present=False
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert "Missing Chemistry review:" in receipt["error"]
+    assert receipt["blocked_hub_write_calls"] == 0
+    assert receipt["hub_writes_completed"] == 0
+
+
 def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     workflow = (ROOT / ".github/workflows/release-preview.yml").read_text(
         encoding="utf-8"
@@ -264,6 +416,7 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "id-token: write" not in workflow
     assert "persist-credentials: false" in workflow
     assert "--bio-binding-approval" in upload
+    assert "fetch-depth: 0" in workflow
     assert "--status-dir receipt/status" in workflow
     assert "--current-receipt receipt/status/last-upload.json" in workflow
     assert "--receipt-dir receipt" in workflow

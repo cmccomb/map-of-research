@@ -256,6 +256,7 @@ jobs:
             --region-comparison-revision "${{ steps.region.outputs.revision }}" \
             --repair-reviewed-work-manifest source/data/curated/region-remediation-bernhard.json \
             --math-region-review-manifest source/data/curated/scholar-region-review.json \
+            --chem-region-review-manifest source/data/curated/scholar-chem-region-review.json \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \

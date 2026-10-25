@@ -96,6 +96,7 @@ def test_historical_approval_rejects_current_extended_curated_file(
     with pytest.raises(ValueError, match="source changed: curated_works_sha256"):
         approval.validate_sullivan_exact_losses(**inputs)
 
+
 @pytest.mark.parametrize(
     ("change", "expected"),
     [

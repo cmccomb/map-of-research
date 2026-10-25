@@ -46,12 +46,26 @@ from .chem_carryforward import (
 from .chem_carryforward import (
     validate_chem_carryforward,
 )
+from .chem_continuity import (
+    CHEMISTRY_HUB_REVISION,
+    load_chemistry_parent,
+    merge_chemistry_review_inputs,
+    needs_chemistry_continuity,
+    reconcile_chemistry_person_counts,
+    validate_chemistry_candidate,
+)
+from .chem_region_review import (
+    CHEM_REVIEW_SHA256,
+    DEFAULT_CHEM_REGION_REVIEW_PATH,
+    load_chem_region_review,
+)
 from .composite_region import (
     HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
 from .composite_region import (
     MATH_REVIEW_MANIFEST_SHA256,
     SULLIVAN_PERSON_ID,
+    TOPIC_FIELDS,
     freeze_composite_presentation,
     load_composite_region_plan,
     load_reviewed_sullivan_embeddings,
@@ -86,6 +100,12 @@ from .doi_aliases import (
     validate_doi_aliases,
 )
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
+from .held_topic_freeze import (
+    held_only_continuity_candidate,
+    preserve_held_only_topics,
+    retain_held_only_parent_works,
+    validate_held_only_stage,
+)
 from .hub_card import build_updated_dataset_card
 from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
@@ -1307,6 +1327,8 @@ def _publish_atomic_release(
     prior_works: Sequence[Mapping[str, Any]] | None = None,
     prior_artifact: Mapping[str, Any] | None = None,
     approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
+    held_topic_parent_artifact: Mapping[str, Any] | None = None,
+    held_topic_parent_map_sha256: str | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1357,6 +1379,21 @@ def _publish_atomic_release(
             dataset.to_parquet(str(path))
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
+        held_table_counts = None
+        if held_topic_parent_artifact is not None:
+            import datasets
+
+            if not held_topic_parent_map_sha256:
+                raise ValueError("Held-only release lacks pinned parent map digest")
+            tables["works"], held_table_counts = retain_held_only_parent_works(
+                {name: staged[name][1] for name in DATASET_CONFIGS},
+                prior_revision=prior_revision,
+                hf_token=hf_token,
+            )
+            staged["works"] = (
+                datasets.Dataset.from_parquet(str(staged["works"][1])),
+                staged["works"][1],
+            )
         artifact_path, map_manifest_path, artifact = _write_map_artifacts(
             tables["works"],
             registry,
@@ -1379,6 +1416,11 @@ def _publish_atomic_release(
         )
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
+        held_topic_receipt = None
+        if held_topic_parent_artifact is not None:
+            held_topic_receipt = validate_held_only_stage(
+                artifact, held_topic_parent_artifact
+            )
         composite_map_receipt = None
         composite_works_receipt = None
         composite_nonwork_receipt = None
@@ -1502,6 +1544,12 @@ def _publish_atomic_release(
             gate["composite_works_parity"] = composite_works_receipt
             gate["composite_nonwork_parity"] = composite_nonwork_receipt
             gate["bernhard_repair_manifest_sha256"] = composite_plan.manifest_sha256
+        if held_topic_receipt is not None:
+            gate["held_only_topic_parity"] = {
+                **held_topic_receipt,
+                "parent_map_sha256": held_topic_parent_map_sha256,
+                "exact_table_rows": held_table_counts,
+            }
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1556,6 +1604,7 @@ def publish_snapshot(
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
+    chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1681,6 +1730,28 @@ def publish_snapshot(
             release_decisions=release_decisions,
             validated_holds=provisional_holds,
         )
+    chemistry_parent_state = None
+    chemistry_decisions = ()
+    if needs_chemistry_continuity(
+        set(frame["scholar_id"].dropna().astype(str)),
+        prior_revision,
+        composite=composite_plan is not None,
+        snapshot_sha256=str(manifest["snapshot_sha256"]),
+    ):
+        chemistry_decisions = load_chem_region_review(
+            chem_region_review_path,
+            snapshot_frame=frame,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_dir=cache_dir,
+            registry=registry,
+            require_frozen_snapshot=False,
+        )
+        chemistry_parent_state = load_chemistry_parent(
+            chemistry_decisions, prior_revision, hf_token
+        )
+        exclusions, provisional_holds, contexts = merge_chemistry_review_inputs(
+            chemistry_decisions, exclusions, provisional_holds, contexts
+        )
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
     )
@@ -1716,6 +1787,10 @@ def publish_snapshot(
         if person_hold_reasons
         else ""
     )
+    if chemistry_parent_state is not None and prior_revision == CHEMISTRY_HUB_REVISION:
+        tables["people"] = reconcile_chemistry_person_counts(
+            tables["people"], chemistry_decisions
+        )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
         revision=prior_revision,
@@ -1761,6 +1836,7 @@ def publish_snapshot(
                     else ()
                 ),
                 *(COMPOSITE_PRESENTATION_FIELDS if composite_plan is not None else ()),
+                *(TOPIC_FIELDS if held_observation_ids else ()),
                 *(COMPOSITE_VARIANT_FIELDS if composite_plan is not None else ()),
                 *(
                     ("map_region_documented_override",)
@@ -1950,7 +2026,19 @@ def publish_snapshot(
         continuity_receipt["math_region_review_sha256"] = sha256_file(
             math_region_review_path
         )
+    if chemistry_parent_state is not None:
+        continuity_receipt["chem_region_review_sha256"] = CHEM_REVIEW_SHA256
+        continuity_receipt["chemistry_review_root_revision"] = CHEMISTRY_HUB_REVISION
     tables["works"] = add_publication_keywords(tables["works"])
+    if chemistry_parent_state is not None:
+        validate_chemistry_candidate(
+            tables,
+            chemistry_parent_state,
+            require_count_parity=bool(
+                held_observation_ids
+                and held_only_continuity_candidate(continuity_receipt, prior_revision)
+            ),
+        )
     if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         if prior_artifact is None:
             raise ValueError("Composite release lacks frozen bb88 map")
@@ -1972,6 +2060,42 @@ def publish_snapshot(
         held_person_observation_ids,
     )
     require_no_provisional_hold_contributions(tables, provisional_holds)
+    held_topic_parent_artifact = None
+    held_topic_parent_map_sha256 = None
+    if (
+        held_observation_ids
+        and composite_plan is None
+        and not bio_source_changed
+        and manifest["snapshot_sha256"] != BIO_SOURCE_SHA256
+        and comparison_revision == prior_revision
+        and held_only_continuity_candidate(continuity_receipt, prior_revision)
+    ):
+        from huggingface_hub import hf_hub_download
+
+        parent_map_path = Path(
+            hf_hub_download(
+                REPO_ID,
+                f"maps/{MAP_ARTIFACT_NAME}",
+                repo_type="dataset",
+                revision=prior_revision,
+                token=hf_token or None,
+            )
+        )
+        held_topic_parent_artifact = load_json(parent_map_path)
+        held_topic_parent_map_sha256 = sha256_file(parent_map_path)
+        tables["works"] = preserve_held_only_topics(
+            tables["works"],
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=tables["profile_publications"],
+            prior_artifact=held_topic_parent_artifact,
+            candidate_artifact=build_map_artifact(
+                tables["works"],
+                registry,
+                generated_at_utc=str(manifest["created_at_utc"]),
+            ),
+            held_observation_ids=held_observation_ids,
+        )
     if comparison_revision != prior_revision:
         require_historical_region_decisions(prior_works, tables["works"])
         repair_related_mask = (
@@ -2029,6 +2153,8 @@ def publish_snapshot(
         prior_works=prior_works if composite_plan is not None else None,
         prior_artifact=prior_artifact,
         approved_person_hold_losses=approved_person_hold_losses,
+        held_topic_parent_artifact=held_topic_parent_artifact,
+        held_topic_parent_map_sha256=held_topic_parent_map_sha256,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -2235,6 +2361,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help="Exact 31-row Math review applied within the f8 composite release",
     )
     parser.add_argument(
+        "--chem-region-review-manifest",
+        type=Path,
+        default=DEFAULT_CHEM_REGION_REVIEW_PATH,
+        help="Exact 19-row Chemistry review retained in ordinary snapshots",
+    )
+    parser.add_argument(
         "--require-bio-release",
         action="store_true",
         help="Fail closed unless the frozen complete Bio snapshot passes its gate",
@@ -2422,6 +2554,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             ),
             curated_works_path=args.scholar_curated_works,
             math_region_review_path=args.math_region_review_manifest,
+            chem_region_review_path=args.chem_region_review_manifest,
         )
         status.pop("atomic_release_intent", None)
         status.update(
