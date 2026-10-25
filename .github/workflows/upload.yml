@@ -97,6 +97,7 @@ jobs:
             --scholar-captures-dir snapshot/data/captures \
             --scholar-baseline source/registry/legacy-scholar-cache-baseline.json \
             --reviewed-exclusions source/data/curated/scholar-exclusions.json \
+            --reviewed-metadata-corrections source/data/curated/scholar-metadata-corrections.json \
             --status-file snapshot/status/last-upload.json
       - name: Record upload receipt
         if: ${{ always() }}

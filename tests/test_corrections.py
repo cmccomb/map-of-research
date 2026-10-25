@@ -280,3 +280,13 @@ def test_checked_in_profile_requires_and_applies_all_seven_exact_ids() -> None:
     assert applied == len(corrections) == 7
     assert effective["metadata_correction_fields"].ne("").all()
     assert effective["source_record_json"].equals(frame["source_record_json"])
+
+
+def test_upload_workflow_resolves_corrections_from_trusted_source_checkout() -> None:
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text()
+    assert (
+        "--reviewed-metadata-corrections "
+        "source/data/curated/scholar-metadata-corrections.json \\"
+    ) in workflow
