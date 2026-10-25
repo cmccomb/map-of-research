@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "capture_receipt": "status/browser-capture-physics-katelyn-breivik-2026-10-24.json",
+  "raw_capture_and_receipt_unchanged": true,
+  "repairs": [
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 115,
+      "author_pub_id": "AcW2EXwAAAAJ:roLk4NBRz8UC",
+      "cache_field": "author",
+      "captured_value": "K Breivik, S Chatterjee, J Andrews",
+      "repaired_value": "J Andrews, S Chatterjee, K Breivik",
+      "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+      "evidence_note": "The AAS 233 official abstract book lists abstract 112.01 under this title and credits Jeff Andrews, Sourav Chatterjee, and Katelyn Breivik in that order. The retained row 115 has the complete abstract number; excluded duplicate row 117 has the corrected abbreviated author order but lacks the number. Repair only the canonical row 115 cache author field while preserving both saved source rows and receipt hashes."
+    }
+  ]
+}
