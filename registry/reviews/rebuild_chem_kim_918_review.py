@@ -566,6 +566,11 @@ OTHER_PRIMARY_ID_GUARDS = {
     241: "bC4aq-4AAAAJ:cSdaV2aYdYsC",
     197: "bC4aq-4AAAAJ:WqliGbK-hY8C",
     448: "bC4aq-4AAAAJ:BrmTIyaxlBUC",
+    513: "bC4aq-4AAAAJ:1yQoGdGgb4wC",
+    620: "bC4aq-4AAAAJ:dQ2og3OwTAUC",
+    688: "bC4aq-4AAAAJ:hkOj_22Ku90C",
+    722: "bC4aq-4AAAAJ:ZuybSZzF8UAC",
+    854: "bC4aq-4AAAAJ:SdhP9T11ey4C",
 }
 
 OTHER_PRIMARY.update(
@@ -596,6 +601,63 @@ OTHER_PRIMARY.update(
         ),
     }
 )
+
+HYOJOON_KAPRAL_PRIMARY = {
+    513: (
+        "Proton and deuteron transfer reactions in molecular nanoclusters",
+        2008,
+        "Hyojoon Kim",
+        "10.1002/cphc.200700709",
+        "https://api.crossref.org/works/10.1002%2Fcphc.200700709",
+        "Wiley publisher-deposited full-author DOI record",
+        "The publisher identifies Hyojoon Kim, not CMU Hyung J. Kim, with "
+        "Raymond Kapral in the exact ChemPhysChem 9:470-474 article.",
+    ),
+    620: (
+        "Quantum equilibrium structure for strong nonadiabatic coupling: "
+        "Reaction rate enhancement",
+        2007,
+        "Hyojoon Kim",
+        "10.1016/j.cplett.2007.04.039",
+        "https://api.crossref.org/works/10.1016%2Fj.cplett.2007.04.039",
+        "Elsevier publisher-deposited full-author DOI record",
+        "The publisher identifies Hyojoon Kim with Raymond Kapral in the "
+        "exact Chemical Physics Letters 440:215-220 article.",
+    ),
+    688: (
+        "Quantum reaction rates and sampling of quantum equilibrium structure",
+        2007,
+        "Hyojoon Kim",
+        "10.1063/1.2805071",
+        "https://api.crossref.org/works/10.1063%2F1.2805071",
+        "AIP publisher-deposited full-author DOI record",
+        "The publisher identifies Hyojoon Kim with Raymond Kapral in the "
+        "exact Journal of Chemical Physics 127:226101 article.",
+    ),
+    722: (
+        "Quantum–Classical Reaction Rate Theory",
+        2007,
+        "Hyojoon Kim",
+        "10.1007/978-3-540-34460-5_13",
+        "https://web.donga.ac.kr/hkim/publications.htm",
+        "Hyojoon Kim's Dong-A University bibliography; original Springer chapter",
+        "His university bibliography gives full Hyojoon Kim with Hanna and "
+        "Kapral on the exact chapter, book, and pages 295-319; Springer "
+        "confirms the exact DOI/year and H. Kim byline at Toronto Chemistry.",
+    ),
+    854: (
+        "Simulation of Quantum-Classical Dynamics by Surface-Hopping Trajectories",
+        2007,
+        "Hyojoon Kim",
+        "10.1090/crmp/041/08",
+        "https://api.crossref.org/works/10.1090%2Fcrmp%2F041%2F08",
+        "American Mathematical Society publisher-deposited full-author DOI record",
+        "The publisher names Hyojoon Kim with Raymond Kapral in the exact "
+        "2007 CRM Proceedings chapter, pages 131-143; his Dong-A University "
+        "bibliography corroborates.",
+    ),
+}
+OTHER_PRIMARY.update(HYOJOON_KAPRAL_PRIMARY)
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
@@ -2293,16 +2355,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 48,
+        "proposed_other_person_primary_work": 53,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 396,
+        "unresolved_attribution_hold": 391,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 388 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 393 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
