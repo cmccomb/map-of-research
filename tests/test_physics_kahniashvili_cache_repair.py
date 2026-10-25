@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
-
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "status/physics-kahniashvili-cache-repair-2026-10-24.json"
 
@@ -21,16 +20,17 @@ def test_tina_row_116_cache_title_repair_preserves_capture() -> None:
     receipt = json.loads((ROOT / ledger["capture_receipt"]).read_text())
     for kind in ("json", "html"):
         source_path = ROOT / receipt[f"source_{kind}_path"]
-        assert hashlib.sha256(source_path.read_bytes()).hexdigest() == receipt[
-            f"source_{kind}_sha256"
-        ]
+        assert (
+            hashlib.sha256(source_path.read_bytes()).hexdigest()
+            == receipt[f"source_{kind}_sha256"]
+        )
 
     capture = json.loads((ROOT / receipt["source_json_path"]).read_text())
     raw_row = next(row for row in capture["works"] if row["index"] == 116)
     assert raw_row["title"] == repair["captured_value"]
-    assert parse_qs(urlsplit(raw_row["citation_url"]).query)[
-        "citation_for_view"
-    ] == [repair["author_pub_id"]]
+    assert parse_qs(urlsplit(raw_row["citation_url"]).query)["citation_for_view"] == [
+        repair["author_pub_id"]
+    ]
 
     cache = json.loads(
         (ROOT / "data/authors/au_cLfoAAAAJ.json").read_text(encoding="utf-8")
