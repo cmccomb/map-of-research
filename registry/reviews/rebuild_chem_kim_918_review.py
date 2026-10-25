@@ -1410,6 +1410,194 @@ NEXT_EXACT_AUTHOR_VENUES = {
     447: "IEEE Conference on Decision and Control, 5, 2003",
 }
 
+# These malformed scintillator titles resolve through KNU's exact DOI work
+# pages; the arXiv and conference renderings resolve to identified KNU works
+# through publisher or collaboration version links. Each H. J. Kim byline
+# belongs to the KNU Physics professor Hong Joo Kim, not CMU Chemistry.
+NEXT_KNU_VERSION_PRIMARY = {
+    388: (
+        "Scintillation Characteristics of the SrCl Single Crystal for the "
+        "Neutrinoless /EC Decay Search",
+        2008,
+        "Hong Joo Kim",
+        "10.1109/TNS.2008.920252",
+        "https://research.knu.ac.kr/en/publications/"
+        "scintillation-characteristics-of-the-srclsub2sub-single-crystal-f/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's IEEE 55(3):1445-1448 article links the third H. J. Kim "
+        "author to Hong Joo Kim's Physics page; Scholar loses SrCl2 and "
+        "beta-plus formula symbols.",
+    ),
+    431: (
+        "Large Volume CaMoO Scintillation Crystals",
+        2008,
+        "Hongjoo Kim",
+        "10.1109/TNS.2008.920428",
+        "https://research.knu.ac.kr/en/publications/"
+        "large-volume-camoosub4sub-scintillation-crystals/",
+        "KNU exact DOI article with full-name author and linked person record",
+        "KNU's exact IEEE 55(3):1473-1475 record names author Hongjoo Kim "
+        "in full and links him to its Physics person page; Scholar drops "
+        "the CaMoO4 formula's subscript.",
+    ),
+    498: (
+        "Scintillation Characterization of RbLiCeClSingle Crystal",
+        2012,
+        "Hong Joo Kim",
+        "10.1109/TNS.2012.2200907",
+        "https://research.knu.ac.kr/en/publications/"
+        "scintillation-characterization-of-rb-sub2sublicecl-sub6sub-single/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's 59(5):2248-2251 article links its H. J. Kim author to the "
+        "Hong Joo Kim Physics person record; the Scholar title has lost "
+        "the Rb2LiCeCl6 subscripts.",
+    ),
+    548: (
+        "Study on scintillation characteristics of BGSO single crystals",
+        2013,
+        "Hong Joo Kim",
+        "10.1109/TNS.2013.2283878",
+        "https://research.knu.ac.kr/en/publications/"
+        "study-on-scintillation-characteristics-of-bgso-single-crystals/",
+        "KNU exact DOI article and author-linked person record",
+        "KNU's IEEE 61(1):323-327 article links its H. J. Kim author to "
+        "the Hong Joo Kim Physics person record; Scholar labels this "
+        "2013 while KNU dates the matching volume and pages to February 2014.",
+    ),
+    699: (
+        "A Study on  Phonon-Scintillation Detection with MMC Readouts for "
+        "a Neutrinoless Double Beta Decay Search",
+        2022,
+        "Hong Joo Kim",
+        "10.1007/s10909-022-02824-7",
+        "https://research.knu.ac.kr/en/publications/"
+        "a-study-on-pbmoo-sub4sub-phonon-scintillation-detection-with-mmc-/",
+        "KNU original DOI article and author-linked person record",
+        "The original KNU PbMoO4 article links its fourth H. J. Kim "
+        "author to Hong Joo Kim. Scholar drops the chemical formula; "
+        "the exact 2022 title, author order, and publisher DOI agree.",
+    ),
+    734: (
+        "AMoRE experiment: a search for neutrinoless double beta decay of "
+        "{sup 100} Mo isotope with {sup 40} Ca {sup 100} MoO {sub 4} "
+        "cryogenic scintillation detector",
+        2012,
+        "Hong Joo Kim",
+        "10.1088/1742-6596/375/1/042023",
+        "https://research.knu.ac.kr/en/publications/"
+        "amore-experiment-a-search-for-neutrinoless-double-beta-decay-of-s/",
+        "KNU exact DOI conference article and author-linked person record",
+        "The markup-heavy Scholar rendering repeats excluded observation "
+        "bC4aq-4AAAAJ:MDX3w3dAD3YC: J. Phys. Conf. Ser. 375, article "
+        "042023. KNU links its H. J. Kim author to Hong Joo Kim.",
+    ),
+    751: (
+        "Design and Initial Performance of the COSINE-100 Experiment",
+        2017,
+        "Hong Joo Kim",
+        "10.1140/epjc/s10052-018-5590-x",
+        "https://research.knu.ac.kr/en/publications/"
+        "initial-performance-of-the-cosine-100-experiment/",
+        "KNU exact DOI article and Yale collaboration version link",
+        "Yale's COSINE-100 publication list uses this saved title and links "
+        "arXiv:1710.05299 to the 2018 EPJC article; arXiv lists that DOI, "
+        "and the exact KNU journal record links H. J. Kim to Hong Joo Kim.",
+    ),
+    787: (
+        "Searching for low-mass dark matter via Migdal effect in COSINE-100 [preprint]",
+        2021,
+        "Hong Joo Kim",
+        "10.1103/PhysRevD.105.042006",
+        "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.042006",
+        "original APS article and arXiv-to-journal version link",
+        "The arXiv:2110.05806 preprint gives this exact title and 2021 "
+        "submission and explicitly identifies the 2022 APS journal version. "
+        "APS assigns its H. J. Kim author to KNU Physics, not CMU Chemistry.",
+    ),
+    789: (
+        "Measurement of the cosmic muon annual and diurnal flux variation "
+        "with the COSINE-100 detector",
+        2020,
+        "Hong Joo Kim",
+        "10.1088/1475-7516/2021/02/013",
+        "https://research.knu.ac.kr/en/publications/"
+        "measurement-of-the-cosmic-muon-annual-and-diurnal-flux-variation-/",
+        "KNU exact DOI article and arXiv-to-journal version link",
+        "The exact arXiv:2005.13672 preprint gives this 2020 title and "
+        "links the 2021 JCAP DOI; KNU's article links its H. J. Kim author "
+        "to Hong Joo Kim's Physics record.",
+    ),
+    803: (
+        "Crystal growth and scintillation properties of Li {sub 6} Lu "
+        "{sub x} Gd {sub 1− x}(BO {sub 3}){sub 3}: Ce {sup 3+} single crystals",
+        2014,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2014.07.040",
+        "https://research.knu.ac.kr/en/publications/"
+        "crystal-growth-and-scintillation-properties-of-lisub6sublu-subxsu/",
+        "KNU exact DOI article and author-linked person record",
+        "The markup-heavy Scholar rendering repeats already excluded "
+        "observation bC4aq-4AAAAJ:Hck25ST_3aIC: NIM A 764:268-272. "
+        "KNU links its H. J. Kim author to Hong Joo Kim.",
+    ),
+    840: (
+        "Scintillation properties of Ba {sub 0.20} Sr {sub 0.80} Cl {sub 2} "
+        "single crystal",
+        2008,
+        "Hong Joo Kim",
+        "10.1080/00223131.2008.10875918",
+        "https://research.knu.ac.kr/en/publications/"
+        "scintillation-properties-of-basub020subsrsub080subclsub2sub-singl/",
+        "KNU exact DOI article and author-linked person record",
+        "The formula-markup Scholar row repeats already excluded observation "
+        "bC4aq-4AAAAJ:2l5NCbZemmgC: J. Nucl. Sci. Technol. 45:568-571. "
+        "KNU links its H. J. Kim author to Hong Joo Kim.",
+    ),
+}
+OTHER_PRIMARY.update(NEXT_KNU_VERSION_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {
+        388: "bC4aq-4AAAAJ:sszUF3NjhM4C",
+        431: "bC4aq-4AAAAJ:kVjdVfd2voEC",
+        498: "bC4aq-4AAAAJ:AXkvAH5U_nMC",
+        548: "bC4aq-4AAAAJ:yxmsSjX2EkcC",
+        699: "bC4aq-4AAAAJ:RVqaWcrwK10C",
+        734: "bC4aq-4AAAAJ:as0KMg8qHbkC",
+        751: "bC4aq-4AAAAJ:ShjGdcaqzI0C",
+        787: "bC4aq-4AAAAJ:s1ouQE5r0WUC",
+        789: "bC4aq-4AAAAJ:C-Rn0OCouf8C",
+        803: "bC4aq-4AAAAJ:q0uBw5dMOAkC",
+        840: "bC4aq-4AAAAJ:eO3_k5sD8BwC",
+    }
+)
+NEXT_KNU_VERSION_VENUES = {
+    388: "IEEE Transactions on Nuclear Science 55 (3), 1445-1448, 2008",
+    431: "IEEE Transactions on nuclear Science 55 (3), 1473-1475, 2008",
+    498: "IEEE Transactions on Nuclear Science 59 (5), 2248-2251, 2012",
+    548: "IEEE Transactions on Nuclear Science 61 (1), 323-327, 2013",
+    699: "Journal of Low Temperature Physics 209 (3), 409-416, 2022",
+    734: "Journal of Physics. Conference Series (Online) 375, 2012",
+    751: "",
+    787: "arXiv, 2021",
+    789: "arXiv, 2020",
+    803: "Nuclear Instruments and Methods in Physics Research. Section A, "
+    "Accelerators\xa0…, 2014",
+    840: "",
+}
+NEXT_KNU_VERSION_AUTHORS = {
+    388: "G Rooh, H Kang, HJ Kim, H Park, SH Doh",
+    431: "MV Korzhik, VN Kornoukhov, OV Missevitch, AA Fedorov, AN Annenkov, ...",
+    498: "G Rooh, HJ Kim, H Park, S Kim",
+    548: "H Jiang, G Rooh, HJ Kim, JM Lee, YJ Lee, S Kim",
+    699: "HL Kim, JH So, YH Kim, HJ Kim, SS Nagorny, SR Kim, YD Kim, MH Lee, ...",
+    734: "H Bhang, JH Choi, S Choi, KB Kim, SK Kim, RS Boiko, DM Chernyak, ...",
+    751: "G Adhikari, P Adhikari, EB de Souza, N Carlin, S Choi, WQ Choi, ...",
+    787: "G Adhikari, N Carlin, JJ Choi, S Choi, AC Ezeribe, LE Franca, C Ha, ...",
+    789: "C Collaboration, H Prihtiadi, G Adhikari, EBD Souza, N Carlin, JJ Choi, ...",
+    803: "U Fawad, G Rooh, HJ Kim, H Park, S Kim, H Jiang",
+    840: "J Kim, H Kang, HJ Kim, H Park, SH Doh, S Kim",
+}
+
 # Original-journal author lists for these exact outputs contain no H. J. Kim.
 ABSENT_AUTHOR_PRIMARY = {
     90: (
@@ -3004,6 +3192,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     and row["venue"] != NEXT_EXACT_AUTHOR_VENUES[index]
                 )
                 or (
+                    index in NEXT_KNU_VERSION_VENUES
+                    and row["venue"] != NEXT_KNU_VERSION_VENUES[index]
+                )
+                or (
+                    index in NEXT_KNU_VERSION_AUTHORS
+                    and row["authors"] != NEXT_KNU_VERSION_AUTHORS[index]
+                )
+                or (
                     index == 88
                     and (
                         row["venue"]
@@ -3352,20 +3548,20 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "cmu_orcid_doi_identity_hold": 1,
         "cmu_primary_work_retained": 122,
         "knu_orcid_exact_title_year_missing_doi_hold": 2,
-        "knu_orcid_title_only_year_check": 2,
+        "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 104,
+        "proposed_other_person_primary_work": 115,
         "proposed_no_target_author_primary_work": 4,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 332,
+        "unresolved_attribution_hold": 322,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 451 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 462 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
