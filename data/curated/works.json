@@ -22,7 +22,9 @@
         "https://doi.org/10.1002/rsa.3240010302"
       ],
       "source_verified_at": "2026-10-24",
-      "external_coauthor_ids": ["external-paul-erdos"]
+      "external_coauthor_ids": [
+        "external-paul-erdos"
+      ]
     },
     {
       "person_id": "person-prasadtetali-bf494329",
@@ -37,7 +39,9 @@
         "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/69/3/108504/independence-of-solution-sets-and-minimal-asymptotic-bases"
       ],
       "source_verified_at": "2026-10-24",
-      "external_coauthor_ids": ["external-paul-erdos"]
+      "external_coauthor_ids": [
+        "external-paul-erdos"
+      ]
     },
     {
       "person_id": "person-davidkinderlehrer-a58d3c4e",
@@ -328,6 +332,78 @@
       "source_verification_urls": [
         "https://doi.org/10.1090/qam/1598",
         "https://api.crossref.org/works/10.1090/qam/1598"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "doi": "10.1021/es060781p",
+      "title": "Source Apportionment of Molecular Markers and Organic Aerosol. 3. Food Cooking Emissions",
+      "authors": "Allen L. Robinson, R. Subramanian, Neil M. Donahue, Anna Bernardo-Bricker, and Wolfgang F. Rogge",
+      "year": 2006,
+      "venue": "Environmental Science & Technology",
+      "citation": "Environmental Science & Technology 40(24), 7820–7827 (2006)",
+      "source_url": "https://doi.org/10.1021/es060781p",
+      "source_verification_urls": [
+        "https://api.crossref.org/works/10.1021/es060781p",
+        "https://pubmed.ncbi.nlm.nih.gov/17256533/",
+        "https://www.cmu.edu/chemistry/people/faculty/donahue.html"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "egu2012:egu2012-2516-1",
+      "title": "Gas-Phase Mixing of Organic Aerosol Systems",
+      "authors": "N. M. Donahue, E. S. Robinson, and E. M. Trump",
+      "year": 2012,
+      "venue": "Geophysical Research Abstracts",
+      "citation": "Geophysical Research Abstracts 14, EGU2012-2516-1 (2012)",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU2012/EGU2012-2516-1.pdf",
+      "source_verification_urls": [
+        "https://meetingorganizer.copernicus.org/EGU2012/EGU2012-2516-1.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "awma2007:ace-07-cd:3094",
+      "title": "Source Apportionment of Air Toxics Downwind of a Heavily Industrialized Area Using High Time Resolved Concentration Measurements",
+      "authors": "J. Logue, K. Huff-Hartz, A. Lambe, N. Donahue, A. Robinson, D. Stern, and J. Maranche",
+      "year": 2007,
+      "venue": "100th Annual Conference and Exhibition of the Air & Waste Management Association",
+      "citation": "A&WMA 100th Annual Conference proceedings, ACE-07-CD, p. 3094 (2007); contents listing verified",
+      "source_url": "https://www.proceedings.com/content/002/002176webtoc.pdf",
+      "source_verification_urls": [
+        "https://www.proceedings.com/content/002/002176webtoc.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "agu2009:a21h-08",
+      "title": "How will Primary and Secondary Organic Mixtures Impact CCN?",
+      "authors": "A. A. Asa-Awuku, N. M. Donahue, and A. L. Robinson",
+      "year": 2009,
+      "venue": "AGU Fall Meeting",
+      "citation": "AGU 2009 Fall Meeting scientific program, A21H-08 (2009)",
+      "source_url": "https://www.unols.org/sites/default/files/AGU_FM09_Scientific_Program.pdf",
+      "source_verification_urls": [
+        "https://www.unols.org/sites/default/files/AGU_FM09_Scientific_Program.pdf"
+      ],
+      "source_verified_at": "2026-10-24"
+    },
+    {
+      "person_id": "person-donahue-f4c5ce86",
+      "source_native_id": "egu2009:egu2009-9565",
+      "title": "Formation of Secondary Organic Aerosol from Non-traditional Intermediate Volatility Organic Compounds",
+      "authors": "N. M. Donahue, A. A. Presto, A. L. Robinson, J. H. Kroll, and D. R. Worsnop",
+      "year": 2009,
+      "venue": "Geophysical Research Abstracts",
+      "citation": "Geophysical Research Abstracts 11, EGU2009-9565 (2009)",
+      "source_url": "https://meetingorganizer.copernicus.org/EGU2009/EGU2009-9565.pdf",
+      "source_verification_urls": [
+        "https://meetingorganizer.copernicus.org/EGU2009/EGU2009-9565.pdf"
       ],
       "source_verified_at": "2026-10-24"
     }
