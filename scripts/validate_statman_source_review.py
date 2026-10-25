@@ -40,15 +40,22 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "page_size": 100,
         "pages": [1, 2],
     }
+    assert manifest["sources"]["springer_lfcs_publisher"] == (
+        "https://link.springer.com/chapter/10.1007/978-3-030-93100-1_20"
+    )
+    assert manifest["sources"]["excluded_misattributed_orcid"] == (
+        "0000-0002-1825-0097"
+    )
     assert manifest["counts"] == {
         "cmu_profile_selected": 12,
         "cmu_recent_selected": 4,
         "kilthub_search_hits": 19,
         "kilthub_attributed_reports_or_manuscripts": 17,
         "kilthub_other_author_theses": 2,
-        "attributed_source_observations_not_works": 33,
+        "publisher_confirmed_conference_papers": 1,
+        "attributed_source_observations_not_works": 34,
     }
-    assert len(manifest["files"]) == 27
+    assert len(manifest["files"]) == 29
     for filename, expected_hash in manifest["files"].items():
         assert hashlib.sha256((source_dir / filename).read_bytes()).hexdigest() == (
             expected_hash
@@ -140,22 +147,55 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
             assert row["reviewed_genre"] == "other_author_thesis"
             assert row["pdf_sha256"] == ""
 
-    observations = _rows(source_dir / "source-observations-33.csv")
-    assert len(observations) == 33
-    assert len({row["source_row_id"] for row in observations}) == 33
+    observations = _rows(source_dir / "source-observations-34.csv")
+    assert len(observations) == 34
+    assert len({row["source_row_id"] for row in observations}) == 34
     assert Counter(row["source"] for row in observations) == {
         "cmu_profile_select": 12,
         "cmu_recent_selected": 4,
         "cmu_kilthub_repository": 17,
+        "publisher_crossref_verified": 1,
     }
     assert {row["source_row_id"] for row in observations[:16]} == {
         f"CMU-{i:02d}" for i in range(1, 17)
     }
-    assert {row["source_row_id"] for row in observations[16:]} == {
+    assert {row["source_row_id"] for row in observations[16:33]} == {
         f"KILTHUB-{row['article_id']}"
         for row in hits
         if row["attributed_to_statman"] == "true"
     }
+    publisher = observations[33]
+    assert publisher["source_row_id"] == "SPRINGER-LFCS-2022-20"
+    assert publisher["source"] == "publisher_crossref_verified"
+    assert publisher["source_url"] == manifest["sources"]["springer_lfcs_publisher"]
+    assert publisher["source_genre"] == "conference paper"
+    assert publisher["reviewed_genre"] == "lfcs_proceedings_conference_paper"
+    assert publisher["source_year"] == "2022"
+    assert "2021-12-16" in publisher["review_note"]
+    assert "0000-0002-1825-0097" in publisher["review_note"]
+    assert (
+        publisher["primary_comparison_url"]
+        == manifest["sources"]["springer_lfcs_crossref"]
+    )
+    crossref = json.loads(
+        (source_dir / "springer-lfcs-2022-crossref.json").read_text()
+    )["message"]
+    assert crossref["DOI"] == "10.1007/978-3-030-93100-1_20"
+    assert " ".join(crossref["title"][0].split()) == publisher["source_title"]
+    assert [(a["given"], a["family"]) for a in crossref["author"]] == [
+        ("Rick", "Statman")
+    ]
+    assert crossref["author"][0]["ORCID"] == ("https://orcid.org/0000-0002-1825-0097")
+    assert crossref["published-online"]["date-parts"] == [[2021, 12, 16]]
+    assert crossref["published-print"]["date-parts"] == [[2022]]
+    assert crossref["page"] == "316-326"
+    assert crossref["type"] == "book-chapter"
+    orcid = json.loads(
+        (source_dir / "publisher-linked-false-orcid-person.json").read_text()
+    )
+    assert orcid["path"] == "/0000-0002-1825-0097/person"
+    assert orcid["name"]["given-names"]["value"] == "Josiah"
+    assert orcid["name"]["family-name"]["value"] == "Carberry"
     assert {row["graph_eligible"] for row in observations} == {"false"}
     assert {row["hold_reason"] for row in observations} == {
         "no_verified_scholar_or_complete_author_bibliography"
@@ -167,6 +207,7 @@ def validate(source_dir: Path = SOURCE_DIR) -> dict[str, int]:
         "kilthub_hits": len(hits),
         "kilthub_attributed": 17,
         "excluded_other_author_theses": 2,
+        "publisher_confirmed_conference_papers": 1,
         "held_source_observations_not_works": len(observations),
     }
 

@@ -12,7 +12,8 @@ def test_statman_source_review_is_complete_for_its_bounded_sources():
         "kilthub_hits": 19,
         "kilthub_attributed": 17,
         "excluded_other_author_theses": 2,
-        "held_source_observations_not_works": 33,
+        "publisher_confirmed_conference_papers": 1,
+        "held_source_observations_not_works": 34,
     }
 
 
@@ -24,3 +25,4 @@ def test_statman_registry_identity_remains_unassigned_to_scholar():
         row for row in rows if row["person_id"] == "person-richardstatman-2e46bf59"
     )
     assert person["scholar_id"] == ""
+    assert "0000-0002-1825-0097" not in ",".join(person.values())

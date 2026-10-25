@@ -1,6 +1,6 @@
 # Richard Statman: held CMU publication-source review (2026-10-25)
 
-**Status:** source review only. This directory adds no Scholar ID, snapshot observation, work, authorship, Hub row, or graph node. The 33 attributed source observations below are not 33 verified independent works or a lifetime publication count.
+**Status:** source review only. This directory adds no Scholar ID, snapshot observation, work, authorship, Hub row, or graph node. The 34 attributed source observations below are not 34 verified independent works or a lifetime publication count.
 
 ## Identity and bounded sources
 
@@ -10,7 +10,11 @@ A public [CMU KiltHub/Figshare article search](https://api.figshare.com/v2/artic
 
 The repository calls all 17 attributed items “journal contribution,” but 15 covers supply CMU Mathematics research-report numbers from 1988–1998. The other two are a 1992 CMU manuscript (*Simply typed λ calculus with surjective pairing*) and an April 1996 manuscript (*On Cartesian monoids*); KiltHub describes both as “Mathematics Technical Report.” `kilthub-search-19.csv` preserves the repository type, description, byline, cover report number when present, deposit DOI, and SHA-256 of each downloaded PDF. The 13.8 MB of downloaded PDFs remain in local scratch rather than this PR; the raw API detail JSON and public download links are committed. A KiltHub DOI identifies a **repository deposit**, not automatically a separately published journal paper.
 
-`source-observations-33.csv` crosswalks all 12 profile, four selected-recent, and 17 attributed repository observations. It keeps every observation held. `manifest.json` pins the 27 committed source/data files by SHA-256. These three bounded CMU surfaces make no complete-career claim. No exact attributable Google Scholar profile URL was found in the official links or bounded account search, so `person-richardstatman-2e46bf59` retains a blank Scholar ID.
+`source-observations-34.csv` crosswalks all 12 profile, four selected-recent, 17 attributed repository, and one publisher-confirmed conference-paper observation. It keeps every observation held. `manifest.json` pins the 29 committed source/data files by SHA-256. These bounded sources make no complete-career claim. No exact attributable Google Scholar profile URL was found in the official links or bounded account search, so `person-richardstatman-2e46bf59` retains a blank Scholar ID.
+
+The added [Springer LFCS 2022 conference paper](https://link.springer.com/chapter/10.1007/978-3-030-93100-1_20), **Finite Generation and Presentation Problems for Lambda Calculus and Combinatory Logic**, has DOI `10.1007/978-3-030-93100-1_20` and pp. 316–326. Springer identifies Rick Statman, with `statman@cs.cmu.edu`, as sole author. It was first online on **16 December 2021** in the **2022** proceedings. The publisher-deposited `springer-lfcs-2022-crossref.json` preserves both dates and the byline. Crossref's generic `book-chapter` type is retained as deposited metadata; the publisher calls the item a conference paper. Neither title nor DOI occurs in the 16 selected CMU citations or earlier 33 held observations.
+
+The publisher/Crossref author record links ORCID `0000-0002-1825-0097`, but the pinned public ORCID `/person` response identifies **Josiah Carberry**. This is an erroneous publisher identifier for Statman. `publisher-linked-false-orcid-person.json` and the manifest preserve the conflict; the ID and its unrelated works are excluded from the Statman registry and source graph.
 
 ## Version and genre reconciliation
 
@@ -31,4 +35,4 @@ The earlier 2018 [CMU-selected “Sets of terms with a given intersection type�
 
 ## Release gate
 
-The 16 selective CMU citations omit the 17 archived earlier reports. The PDF itself acknowledges five undisplayed papers within its own recent interval. A [2013 Cambridge book](https://www.cambridge.org/core/books/lambda-calculus-with-types/) and [2023 arXiv paper](https://arxiv.org/abs/2309.03602) further illustrate that the three captured CMU surfaces cannot establish a complete career inventory. No exact Google Scholar account or author-maintained whole-career bibliography was verified. Keep the 33 observations source-only until an attributable whole-researcher inventory can be captured and all versions, genres, and coauthors reconciled. The existing primary Math home and memberships remain unchanged.
+The 16 selective CMU citations omit the 17 archived earlier reports and the LFCS paper. The PDF itself acknowledges five undisplayed papers within its own recent interval. A [2013 Cambridge book](https://www.cambridge.org/core/books/lambda-calculus-with-types/) and [2023 arXiv paper](https://arxiv.org/abs/2309.03602) further illustrate that these bounded sources cannot establish a complete career inventory. No exact Google Scholar account or author-maintained whole-career bibliography was verified. Keep the 34 observations source-only until an attributable whole-researcher inventory can be captured and all versions, genres, and coauthors reconciled. The existing primary Math home and memberships remain unchanged.

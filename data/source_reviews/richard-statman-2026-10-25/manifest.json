@@ -17,7 +17,11 @@
         2
       ]
     },
-    "kilthub_statman_author_id": 5364608
+    "kilthub_statman_author_id": 5364608,
+    "springer_lfcs_publisher": "https://link.springer.com/chapter/10.1007/978-3-030-93100-1_20",
+    "springer_lfcs_crossref": "https://api.crossref.org/works/10.1007/978-3-030-93100-1_20",
+    "excluded_misattributed_orcid": "0000-0002-1825-0097",
+    "excluded_orcid_person_api": "https://pub.orcid.org/v3.0/0000-0002-1825-0097/person"
   },
   "counts": {
     "cmu_profile_selected": 12,
@@ -25,7 +29,8 @@
     "kilthub_search_hits": 19,
     "kilthub_attributed_reports_or_manuscripts": 17,
     "kilthub_other_author_theses": 2,
-    "attributed_source_observations_not_works": 33
+    "attributed_source_observations_not_works": 34,
+    "publisher_confirmed_conference_papers": 1
   },
   "files": {
     "cmu-profile.html": "3d54e732c22d69e6ba780e32be5f421430cc0e293eeded64229b809b9eeefc88",
@@ -54,6 +59,8 @@
     "kilthub-search-19.csv": "4271a7d986057640f332766dfb2782ad2a87b1fa8c755f03ce34cdbb61aa62cf",
     "kilthub-search-page-1.json": "efce2bca428002a059c82ca404fe6c7301a316b2ea6fc400de427f8ca2257d5d",
     "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "source-observations-33.csv": "8033d0609e6871d4c8a041abc35961949cda024c97702465d9d9cd99d2d875a3"
+    "publisher-linked-false-orcid-person.json": "8576661691fe95bf246ec38882912873f2fc0f4b2cac04266b577356ed48c1ae",
+    "source-observations-34.csv": "d2dd10ba06e48d4ad3481f4e65242a733aef4d8d3fdcc3072e2b930ac31bb858",
+    "springer-lfcs-2022-crossref.json": "714873fa8b1a5f3702c2c726edccc60e8bf254e43f9286bdff96448500ef1daa"
   }
 }
