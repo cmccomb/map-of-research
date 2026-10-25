@@ -259,6 +259,9 @@ def main() -> int:
                 attribution_reviews_path=curated / "scholar-attribution-reviews.json",
                 contexts_path=curated / "scholar-contexts.json",
                 profile_releases_path=curated / "scholar-profile-releases.json",
+                person_publication_holds_path=(
+                    curated / "person-publication-holds.json"
+                ),
                 provisional_holds_path=curated / "scholar-provisional-holds.json",
                 historical_loss_approval_path=(
                     curated / "bio-mcmanus-poster-loss-approval.json"

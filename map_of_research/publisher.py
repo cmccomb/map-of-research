@@ -78,6 +78,13 @@ from .keywords import (
 )
 from .math_release_gate import validate_math_coverage
 from .poster_loss_approval import load_poster_loss_approval
+from .person_publication_holds import (
+    DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
+    load_person_publication_holds,
+    require_no_held_person_contributions,
+    select_released_person_observations,
+    validate_person_hold_losses,
+)
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
     load_profile_releases,
@@ -782,6 +789,7 @@ def build_map_artifact(
     registry: Registry,
     *,
     generated_at_utc: str,
+    publication_hold_reasons: Mapping[str, str] | None = None,
 ) -> dict[str, Any]:
     """Build the full work-centric artifact without changing global coordinates."""
 
@@ -1067,6 +1075,9 @@ def build_map_artifact(
                     }
                 ),
                 "publication_count": faculty_counts.get(person.person_id, 0),
+                "publication_hold_reason": (publication_hold_reasons or {}).get(
+                    person.person_id, ""
+                ),
             }
         )
     fetched = [
@@ -1117,6 +1128,7 @@ def _write_map_artifacts(
     generated_at_utc: str,
     dataset_commits: Mapping[str, str],
     continuity_receipt: Mapping[str, Any] | None = None,
+    publication_hold_reasons: Mapping[str, str] | None = None,
 ) -> tuple[Path, Path, dict[str, Any]]:
     """Render both map files before the Hub is touched."""
 
@@ -1138,7 +1150,12 @@ def _write_map_artifacts(
         map_manifest["region_continuity"] = dict(continuity_receipt)
     if not dataset_commits:
         map_manifest["dataset_revision_policy"] = "same_revision_as_map_manifest"
-    artifact = build_map_artifact(works, registry, generated_at_utc=generated_at_utc)
+    artifact = build_map_artifact(
+        works,
+        registry,
+        generated_at_utc=generated_at_utc,
+        publication_hold_reasons=publication_hold_reasons,
+    )
     artifact_path = maps_dir / MAP_ARTIFACT_NAME
     artifact_path.write_text(
         json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
@@ -1271,6 +1288,7 @@ def _publish_atomic_release(
     composite_plan: Any | None = None,
     prior_works: Sequence[Mapping[str, Any]] | None = None,
     prior_artifact: Mapping[str, Any] | None = None,
+    approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1328,6 +1346,18 @@ def _publish_atomic_release(
             generated_at_utc=generated_at_utc,
             dataset_commits={},
             continuity_receipt=continuity_receipt,
+            publication_hold_reasons=(
+                dict(
+                    zip(
+                        tables["people"]["person_id"],
+                        tables["people"]["publication_hold_reason"],
+                        strict=True,
+                    )
+                )
+                if {"person_id", "publication_hold_reason"}
+                <= set(tables["people"].columns)
+                else {}
+            ),
         )
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
@@ -1422,6 +1452,7 @@ def _publish_atomic_release(
                 baselines=baselines,
                 repair_manifest=repair_manifest,
                 provisional_holds=provisional_holds,
+                approved_person_hold_losses=approved_person_hold_losses,
             )
         else:
             if (
@@ -1489,6 +1520,7 @@ def publish_snapshot(
     attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
+    person_publication_holds_path: Path = DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     historical_loss_approval_path: Path | None = None,
     bio_binding_approval_path: Path | None = None,
@@ -1560,6 +1592,8 @@ def publish_snapshot(
         raise ValueError("Scholar attribution and exclusion reviews conflict")
     release_decisions = load_profile_releases(profile_releases_path)
     release_manifest_sha256 = sha256_file(profile_releases_path)
+    person_holds = load_person_publication_holds(person_publication_holds_path)
+    person_hold_manifest_sha256 = sha256_file(person_publication_holds_path)
     provisional_profiles = load_provisional_holds(provisional_holds_path)
     provisional_manifest_sha256 = sha256_file(provisional_holds_path)
     cache_dir = source_cache_dir or snapshot_path.parent.parent / "data" / "authors"
@@ -1569,6 +1603,14 @@ def publish_snapshot(
             registry,
             release_decisions,
             cache_dir=cache_dir,
+        )
+    )
+    released_frame, person_hold_receipt, held_person_observation_ids = (
+        select_released_person_observations(
+            released_frame,
+            registry,
+            person_holds,
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
         )
     )
     provisional_holds, provisional_receipt = validate_provisional_holds(
@@ -1648,6 +1690,14 @@ def publish_snapshot(
         contexts,
         provisional_holds,
     )
+    person_hold_reasons = {
+        item["person_id"]: item["display_reason"] for item in person_hold_receipt
+    }
+    tables["people"]["publication_hold_reason"] = (
+        tables["people"]["person_id"].map(person_hold_reasons).fillna("")
+        if person_hold_reasons
+        else ""
+    )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
         revision=prior_revision,
@@ -1723,6 +1773,13 @@ def publish_snapshot(
     )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    approved_person_hold_losses = validate_person_hold_losses(
+        person_holds,
+        prior_revision=prior_revision,
+        prior_works=prior_works,
+        prior_profiles=prior_profiles,
+        current_profiles=tables["profile_publications"].to_dict("records"),
+    )
     prior_artifact = None
     if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         from huggingface_hub import hf_hub_download
@@ -1813,6 +1870,7 @@ def publish_snapshot(
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
         bio_binding_approval=bio_binding_approval,
+        approved_person_hold_losses=approved_person_hold_losses,
         composite_plan=composite_plan,
         historical_works=historical_works,
         approved_poster_loss=poster_loss_approval,
@@ -1847,6 +1905,11 @@ def publish_snapshot(
             },
         )
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
+    require_no_held_person_contributions(
+        tables,
+        {item["person_id"] for item in person_hold_receipt},
+        held_person_observation_ids,
+    )
     require_no_provisional_hold_contributions(tables, provisional_holds)
     if comparison_revision != prior_revision:
         require_historical_region_decisions(prior_works, tables["works"])
@@ -1904,6 +1967,7 @@ def publish_snapshot(
         composite_plan=composite_plan,
         prior_works=prior_works if composite_plan is not None else None,
         prior_artifact=prior_artifact,
+        approved_person_hold_losses=approved_person_hold_losses,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -1925,6 +1989,11 @@ def publish_snapshot(
         "raw_snapshot_sha256": manifest["snapshot_sha256"],
         "profile_release_manifest_sha256": release_manifest_sha256,
         "profile_release_decisions": release_receipt,
+        "person_publication_hold_manifest_sha256": person_hold_manifest_sha256,
+        "person_publication_holds": person_hold_receipt,
+        "held_person_observation_rows": sum(
+            item["held_source_rows"] for item in person_hold_receipt
+        ),
         "provisional_hold_manifest_sha256": provisional_manifest_sha256,
         "provisional_hold_profiles": provisional_receipt,
         "provisional_hold_observation_rows": len(provisional_holds),
@@ -2141,6 +2210,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--profile-releases", type=Path, default=DEFAULT_PROFILE_RELEASES_PATH
     )
     parser.add_argument(
+        "--person-publication-holds",
+        type=Path,
+        default=DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
+    )
+    parser.add_argument(
         "--provisional-holds", type=Path, default=DEFAULT_PROVISIONAL_HOLDS_PATH
     )
     parser.add_argument(
@@ -2263,6 +2337,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             attribution_reviews_path=args.attribution_reviews,
             contexts_path=args.reviewed_contexts,
             profile_releases_path=args.profile_releases,
+            person_publication_holds_path=args.person_publication_holds,
             provisional_holds_path=args.provisional_holds,
             historical_loss_approval_path=args.approved_poster_loss,
             bio_binding_approval_path=args.bio_binding_approval,

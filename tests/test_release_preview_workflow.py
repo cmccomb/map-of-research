@@ -127,6 +127,9 @@ def _run_preview(
             if binding_approval
             else None
         )
+        assert kwargs["person_publication_holds_path"] == (
+            producer / "data/curated/person-publication-holds.json"
+        )
         if region_diff:
             raise RegionReleaseDiffError(
                 {
@@ -254,6 +257,9 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "preview_atomic_release.py" in workflow
     assert "map-validate-math-coverage" in workflow
     assert "map-validate-scholar-coverage" in workflow
+    assert (
+        "--person-publication-holds source/data/curated/person-publication-holds.json"
+    ) in upload
     assert "validate_primary_homes.py" in workflow
     assert "upload-artifact@" in workflow
     assert "git push" not in workflow

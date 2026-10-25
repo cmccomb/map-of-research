@@ -286,6 +286,7 @@ def validate_bio_release_prewrite(
     baselines: Mapping[str, Any],
     repair_manifest: Mapping[str, Any],
     provisional_holds: Mapping[tuple[str, str], Any],
+    approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
 ) -> dict[str, Any]:
     """Fail before a Hub write if the whole Bio cohort or old links drift."""
 
@@ -322,7 +323,7 @@ def validate_bio_release_prewrite(
     source_identities = _indexed(source_rows, IDENTITY)
     candidate_profiles = _indexed(tables["profile_publications"], IDENTITY)
     missing = set(source_identities) - set(candidate_profiles)
-    if missing:
+    if missing != approved_person_hold_losses:
         raise ValueError(f"Candidate loses {len(missing)} released source rows")
     original_bio29 = set(baselines["bio29_ids"])
     old_bio29_rows = {
@@ -457,6 +458,8 @@ def validate_bio_release_prewrite(
         or not {"/".join(identity) for identity in reviewed_duplicate_losses}.issubset(
             set(continuity_receipt.get("reviewed_losses") or [])
         )
+        or set(continuity_receipt.get("approved_person_hold_losses") or [])
+        != {"/".join(key) for key in approved_person_hold_losses}
     ):
         raise ValueError("Bio release lacks a clean exact-observation region diff")
     approved_losses = continuity_receipt.get("approved_one_time_losses") or []
