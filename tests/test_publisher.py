@@ -1777,7 +1777,9 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
     def public_tables(frame, *args):
         assert frame["author_pub_id"].tolist() == ["curated:independent"]
         return {
-            "profile_publications": frame.assign(review_exclusion_code=""),
+            "profile_publications": frame.assign(
+                review_exclusion_code="", context_verified_at=""
+            ),
             "authorships": frame[["person_id", "scholar_id"]].copy(),
             "works": pandas.DataFrame(
                 [
