@@ -1905,8 +1905,63 @@ ENTOMOLOGY_OTHER_PERSON_AUTHORS = {
     341: "SD Bae, HJ Kim, BR Choi, YH Song",
 }
 
-# Original-journal author lists for these exact outputs contain no H. J. Kim.
+# The corresponding author's own CAU energy-lab bibliography expands the
+# H. J. Kim on this exact Elsevier article to Hyoung-Juhn Kim. Unlike a
+# same-topic team inference, the entry identifies this work by title, journal,
+# year, volume, and pages, with the same eight-author order.
+DECAL_OTHER_PERSON_PRIMARY = {
+    356: (
+        "Fabrication of MEA with hydrocarbon based membranes using low "
+        "temperature decal method for DMFC",
+        2010,
+        "Hyoung-Juhn Kim",
+        "10.1016/j.ijhydene.2010.03.023",
+        "https://cauenpl.wixsite.com/sookilkimlab/general-5",
+        "Original coauthor lab bibliography with expanded exact-work byline",
+        "Soo-Kil Kim's CAU energy-lab bibliography identifies the exact "
+        "International Journal of Hydrogen Energy 35:5647–5655 article "
+        "and expands its fourth author to Hyoung-Juhn Kim, not CMU "
+        "Chemistry professor Hyung J. Kim.",
+    ),
+}
+OTHER_PRIMARY.update(DECAL_OTHER_PERSON_PRIMARY)
+OTHER_PRIMARY_ID_GUARDS[356] = "bC4aq-4AAAAJ:bz8QjSJIRt4C"
+DECAL_OTHER_PERSON_VENUE = (
+    "International journal of hydrogen energy 35 (11), 5647-5655, 2010"
+)
+DECAL_OTHER_PERSON_AUTHORS = (
+    "NN Krishnan, J Prabhuram, YT Hong, HJ Kim, K Yoon, HY Ha, TH Lim, ..."
+)
+
+# Complete original-journal author lists for these exact outputs do not contain
+# CMU professor Hyung J. Kim, even when another author's initials overlap.
 ABSENT_AUTHOR_PRIMARY = {
+    394: (
+        "bC4aq-4AAAAJ:ndLnGcHYRF0C",
+        "Establishing boundary conditions considering influence factors of "
+        "the room equipped with a ceiling radiant cooling panel",
+        2020,
+        "10.3390/en13071684",
+        "https://www.mdpi.com/1996-1073/13/7/1684",
+        "MDPI original complete author list",
+        "The original Energies 13(7):1684 article names all six authors "
+        "in full: Sang-Hoon Park, Dong-Woo Kim, Goo-Sang Joe, "
+        "Seong-Ryong Ryu, Myoung-Souk Yeo, and Kwang-Woo Kim. "
+        "CMU Chemistry professor Hyung J. Kim is absent from its byline.",
+    ),
+    396: (
+        "bC4aq-4AAAAJ:BUYA1_V_uYcC",
+        "Analysis on the post-irradiation examination of the HANARO "
+        "miniplate-1 irradiation test for kijang research reactor",
+        2017,
+        "10.1016/j.net.2017.04.003",
+        "https://www.kns.org/uploads/TOC2.pdf",
+        "Korean Nuclear Society original journal table of contents",
+        "The society's complete full-name byline for the exact Nuclear "
+        "Engineering and Technology 49(5):1044–1062 article identifies "
+        "its fifth author as Heemoon Kim and eleventh as Hyun Jung Kim. "
+        "CMU Chemistry professor Hyung J. Kim is absent.",
+    ),
     90: (
         "bC4aq-4AAAAJ:kuK5TVdYjLIC",
         "Reduced transforming growth factor-beta type II receptor (TGF-beta "
@@ -1968,6 +2023,12 @@ ABSENT_AUTHOR_PRIMARY = {
 ABSENT_AUTHOR_VENUES = {
     203: "Astroparticle physics 116, 102391, 2020",
     403: "Minerva anestesiologica 78 (5), 521-526, 2012",
+    394: "Energies 13 (7), 1684, 2020",
+    396: "Nuclear Engineering and Technology 49 (5), 1044-1062, 2017",
+}
+ABSENT_AUTHOR_AUTHORS = {
+    394: "SH Park, DW Kim, GS Joe, SR Ryu, MS Yeo, KW Kim",
+    396: "JM Park, YW Tahk, YJ Jeong, KH Lee, H Kim, YH Jung, BO Yoo, YG Jin, ...",
 }
 
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
@@ -3467,6 +3528,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     index in ABSENT_AUTHOR_VENUES
                     and row["venue"] != ABSENT_AUTHOR_VENUES[index]
                 )
+                or (
+                    index in ABSENT_AUTHOR_AUTHORS
+                    and row["authors"] != ABSENT_AUTHOR_AUTHORS[index]
+                )
             ):
                 raise ValueError(
                     f"Complete-author match changed at capture row {index}"
@@ -3542,6 +3607,13 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 or (
                     index in ENTOMOLOGY_OTHER_PERSON_AUTHORS
                     and row["authors"] != ENTOMOLOGY_OTHER_PERSON_AUTHORS[index]
+                )
+                or (
+                    index == 356
+                    and (
+                        row["venue"] != DECAL_OTHER_PERSON_VENUE
+                        or row["authors"] != DECAL_OTHER_PERSON_AUTHORS
+                    )
                 )
                 or (
                     index in COSINE_FULLNAME_VENUES
@@ -3933,17 +4005,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 129,
-        "proposed_no_target_author_primary_work": 4,
+        "proposed_other_person_primary_work": 130,
+        "proposed_no_target_author_primary_work": 6,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 307,
+        "unresolved_attribution_hold": 304,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 476 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 479 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
