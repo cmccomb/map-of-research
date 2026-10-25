@@ -1142,6 +1142,167 @@ def test_breivik_author_repair_does_not_waive_other_checks(
         validate_complete_receipt("AcW2EXwAAAAJ", cache, captures)
 
 
+def _breivik_row116_repaired_author_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
+    cache, captures, _ = _breivik_repaired_author_fixture(tmp_path)
+    scholar_id = "AcW2EXwAAAAJ"
+    citation_id = f"{scholar_id}:qjMakFHDy7sC"
+    citation_url = (
+        f"https://scholar.google.com/citations?user={scholar_id}"
+        f"&citation_for_view={citation_id}"
+    )
+    title = (
+        "Exploring the Eclipsing Binary Yield of the Large Synoptic Survey Telescope"
+    )
+    captured = "A Polzin, A Geller, A Miller, K Breivik"
+    repaired = "A Geller, A Polzin, K Breivik, A Miller"
+    source_json = captures / "breivik.json"
+    source_html = captures / "breivik.html"
+    source = json.loads(source_json.read_text())
+    source["displayed_count"] = 116
+    source["works"].append(
+        {
+            "index": 116,
+            "citation_url": citation_url,
+            "title": title,
+            "authors": captured,
+            "venue": "AAS 233",
+            "year": "2019",
+            "citation_count": "0",
+        }
+    )
+    atomic_write_json(source_json, source)
+    html_row = (
+        '<tr class="gsc_a_tr"><td class="gsc_a_t">'
+        f'<a class="gsc_a_at" href="{escape(citation_url)}">{escape(title)}</a>'
+        f'<div class="gs_gray">{captured}</div>'
+        '<div class="gs_gray">AAS 233</div></td>'
+        '<td class="gsc_a_c"><a class="gsc_a_ac">0</a></td>'
+        '<td class="gsc_a_y"><span class="gsc_a_h">2019</span></td></tr>'
+    )
+    source_html.write_text(
+        source_html.read_text().replace("</table>", html_row + "</table>")
+    )
+    cache["publications"].append(
+        {
+            "capture_row_index": 116,
+            "author_pub_id": citation_id,
+            "pub_url": citation_url,
+            "title": title,
+            "author": repaired,
+            "venue": "AAS 233",
+            "pub_year": "2019",
+            "num_citations": 0,
+        }
+    )
+    cache["publication_count"] = 116
+    cache["browser_capture"]["displayed_count"] = 116
+    cache["browser_capture"]["source_json_sha256"] = sha256_file(source_json)
+    cache["browser_capture"]["source_html_sha256"] = sha256_file(source_html)
+    ledger = tmp_path / "status" / "physics-breivik-row116-cache-repair-2026-10-25.json"
+    atomic_write_json(
+        ledger,
+        {
+            "schema_version": 1,
+            "review_state": "source_reviewed_cache_repaired",
+            "capture_receipt": (
+                "status/browser-capture-physics-katelyn-breivik-2026-10-24.json"
+            ),
+            "repairs": [
+                {
+                    "scholar_id": scholar_id,
+                    "capture_row": 116,
+                    "author_pub_id": citation_id,
+                    "cache_field": "author",
+                    "captured_value": captured,
+                    "repaired_value": repaired,
+                    "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+                }
+            ],
+        },
+    )
+    return cache, captures, ledger
+
+
+def test_breivik_row_115_and_116_author_repairs_require_their_exact_ledgers(
+    tmp_path: Path,
+) -> None:
+    cache, captures, _ = _breivik_row116_repaired_author_fixture(tmp_path)
+    validate_complete_receipt("AcW2EXwAAAAJ", cache, captures)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "missing_row115_ledger",
+        "missing_row116_ledger",
+        "invalid_row116_ledger_json",
+        "wrong_row116_ledger_id",
+        "wrong_row116_ledger_row",
+        "wrong_row116_receipt",
+        "extra_row116_repair",
+        "wrong_row116_evidence",
+        "wrong_row116_cache_author",
+        "wrong_row116_citation_id",
+        "wrong_row116_raw_author",
+        "wrong_other_row_author",
+    ],
+)
+def test_breivik_row116_author_repair_does_not_waive_other_checks(
+    tmp_path: Path, mutation: str
+) -> None:
+    cache, captures, ledger = _breivik_row116_repaired_author_fixture(tmp_path)
+    if mutation == "missing_row115_ledger":
+        row115_ledger = (
+            tmp_path / "status" / "physics-breivik-row115-cache-repair-2026-10-24.json"
+        )
+        row115_ledger.unlink()
+    elif mutation == "missing_row116_ledger":
+        ledger.unlink()
+    elif mutation == "invalid_row116_ledger_json":
+        ledger.write_text("{invalid")
+    elif mutation in {
+        "wrong_row116_ledger_id",
+        "wrong_row116_ledger_row",
+        "wrong_row116_receipt",
+        "extra_row116_repair",
+        "wrong_row116_evidence",
+    }:
+        review = json.loads(ledger.read_text())
+        repair = review["repairs"][0]
+        if mutation == "wrong_row116_ledger_id":
+            repair["author_pub_id"] = "AcW2EXwAAAAJ:wrong"
+        elif mutation == "wrong_row116_ledger_row":
+            repair["capture_row"] = 115
+        elif mutation == "wrong_row116_receipt":
+            review["capture_receipt"] = "status/unreviewed.json"
+        elif mutation == "extra_row116_repair":
+            review["repairs"].append(dict(repair))
+        else:
+            repair["evidence_url"] = "https://example.test/unverified"
+        atomic_write_json(ledger, review)
+    elif mutation == "wrong_row116_cache_author":
+        cache["publications"][-1]["author"] = "Unverified byline"
+    elif mutation == "wrong_row116_citation_id":
+        cache["publications"][-1]["author_pub_id"] = "AcW2EXwAAAAJ:wrong"
+    elif mutation == "wrong_row116_raw_author":
+        source_json = captures / "breivik.json"
+        source_html = captures / "breivik.html"
+        source = json.loads(source_json.read_text())
+        source["works"][-1]["authors"] = "Unverified byline"
+        atomic_write_json(source_json, source)
+        source_html.write_text(
+            source_html.read_text().replace(
+                "A Polzin, A Geller, A Miller, K Breivik", "Unverified byline"
+            )
+        )
+        cache["browser_capture"]["source_json_sha256"] = sha256_file(source_json)
+        cache["browser_capture"]["source_html_sha256"] = sha256_file(source_html)
+    elif mutation == "wrong_other_row_author":
+        cache["publications"][0]["author"] = "Unverified byline"
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("AcW2EXwAAAAJ", cache, captures)
+
+
 @pytest.mark.parametrize(
     "field,value",
     [
