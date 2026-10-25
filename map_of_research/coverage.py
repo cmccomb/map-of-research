@@ -33,6 +33,9 @@ _BREIVIK_ROW115_REPAIR_LEDGER = Path(
 _BREIVIK_ROW116_REPAIR_LEDGER = Path(
     "status/physics-breivik-row116-cache-repair-2026-10-25.json"
 )
+_PHYSICS_SVG_TITLE_REPAIR_LEDGER = Path(
+    "status/physics-eight-svg-title-repairs-2026-10-25.json"
+)
 _TINA_RAW_TITLE = (
     "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
 )
@@ -60,6 +63,7 @@ class _ProfileHTML(HTMLParser):
         self.row_count = 0
         self.citation_ids: list[str] = []
         self.rows: list[dict[str, str]] = []
+        self.svg_title_rows: set[int] = set()
         self.more_buttons: list[bool] = []
         self._cell = ""
         self._gray_count = 0
@@ -77,6 +81,7 @@ class _ProfileHTML(HTMLParser):
                 # padding is not part of the citation title, including when a
                 # hyphen follows the SVG with no intervening space.
                 self._field_text.append((attributes.get("aria-label") or "").strip())
+                self.svg_title_rows.add(self.row_count)
             self._field_depth += 1
             return
         if tag == "tr" and "gsc_a_tr" in (attributes.get("class") or "").split():
@@ -274,6 +279,73 @@ def _is_reviewed_breivik_author_repair(
     )
 
 
+def _is_reviewed_svg_title_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    source_title: Any,
+    html_title: Any,
+    cache_title: Any,
+    receipt: dict[str, Any],
+    captures_dir: Path,
+    has_svg_title: bool,
+) -> bool:
+    """Accept only a hash-bound, ledger-listed saved-HTML SVG title repair."""
+
+    if (
+        not has_svg_title
+        or not isinstance(source_title, str)
+        or not isinstance(html_title, str)
+        or cache_title != html_title
+    ):
+        return False
+    ledger_path = captures_dir.parent.parent / _PHYSICS_SVG_TITLE_REPAIR_LEDGER
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "saved_html_svg_title_repair"
+        or not isinstance(ledger.get("entries"), list)
+        or not ledger["entries"]
+    ):
+        return False
+    required = {
+        "scholar_id",
+        "capture_row",
+        "author_pub_id",
+        "captured_value",
+        "repaired_value",
+        "source_json_sha256",
+        "source_html_sha256",
+    }
+    entries = ledger["entries"]
+    if any(
+        not isinstance(item, dict) or not required <= item.keys() for item in entries
+    ):
+        return False
+    matches = [
+        item
+        for item in entries
+        if item["scholar_id"] == scholar_id
+        and item["capture_row"] == index
+        and item["author_pub_id"] == citation_id
+    ]
+    if len(matches) != 1:
+        return False
+    repair = matches[0]
+    return (
+        repair["captured_value"] == source_title
+        and repair["repaired_value"] == html_title
+        and repair["source_json_sha256"] == receipt.get("source_json_sha256")
+        and repair["source_html_sha256"] == receipt.get("source_html_sha256")
+    )
+
+
 def validate_complete_receipt(
     scholar_id: str, cache: dict[str, Any], captures_dir: Path
 ) -> None:
@@ -346,25 +418,45 @@ def validate_complete_receipt(
         citation_url = str(source_row.get("citation_url") or "")
         citation_id = _citation_id(citation_url)
         citation_count = _normalized(source_row.get("citation_count")).replace(",", "")
+        source_title = source_row.get("title")
+        html_title = html_row.get("title")
+        cached_title = cached_row.get("title")
+        svg_title_repaired = _normalized(html_title) != _normalized(
+            source_title
+        ) and _is_reviewed_svg_title_repair(
+            scholar_id,
+            index,
+            citation_id,
+            source_title,
+            html_title,
+            cached_title,
+            receipt,
+            captures_dir,
+            index in html.svg_title_rows,
+        )
         if (
             source_row.get("index") != index
             or not citation_id.startswith(f"{scholar_id}:")
             or citation_id != html.citation_ids[index - 1]
             or citation_id != cached_row.get("author_pub_id")
             or citation_url != cached_row.get("pub_url")
+            or (
+                _normalized(html_title) != _normalized(source_title)
+                and not svg_title_repaired
+            )
             or any(
                 _normalized(html_row.get(key)) != _normalized(source_row.get(key))
-                for key in ("title", "authors", "venue", "year", "citation_count")
+                for key in ("authors", "venue", "year", "citation_count")
             )
             or (
-                _normalized(cached_row.get("title"))
-                != _normalized(source_row.get("title"))
+                _normalized(cached_title) != _normalized(source_title)
+                and not svg_title_repaired
                 and not _is_reviewed_tina_title_repair(
                     scholar_id,
                     index,
                     citation_id,
-                    source_row.get("title"),
-                    cached_row.get("title"),
+                    source_title,
+                    cached_title,
                     captures_dir,
                 )
             )
