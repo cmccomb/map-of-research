@@ -28,8 +28,9 @@ from .composite_region import (
     _digest_row,
 )
 from .hub_card import build_updated_dataset_card
-from .io import sha256_file
+from .io import atomic_write_json, load_json, sha256_file
 from .publisher import (
+    LAYOUTS,
     REPO_ID,
     _to_hub_dataset,
     _write_map_artifacts,
@@ -135,6 +136,21 @@ def require_live_337_parent(
     if api.repo_info(REPO_ID, repo_type="dataset").sha != revision:
         raise ValueError("Live Hub head moved while reading the #337 parent")
     return ExactParent(revision, paths)
+
+
+def durable_intent_sink(path: Path) -> Callable[[Mapping[str, Any]], None]:
+    """Persist every atomic-release checkpoint before any Hub write."""
+
+    if path.exists():
+        raise ValueError("Chemistry intent path must be new for this release attempt")
+
+    def persist(intent: Mapping[str, Any]) -> None:
+        payload = dict(intent)
+        atomic_write_json(path, payload)
+        if load_json(path) != payload:
+            raise RuntimeError("Chemistry atomic intent did not survive readback")
+
+    return persist
 
 
 def _review_sets(
@@ -259,15 +275,20 @@ def _target_work(
     return target
 
 
-def _target_person(prior: Mapping[str, Any], hidden_count: int) -> dict[str, Any]:
+def _target_person(
+    prior: Mapping[str, Any], hidden_count: int, map_delta: int
+) -> dict[str, Any]:
     target = dict(prior)
-    for field in ("unique_work_count", "mapped_work_count"):
+    for field, delta in (
+        ("unique_work_count", -hidden_count),
+        ("mapped_work_count", map_delta),
+    ):
         value = prior[field]
-        if type(value) is not int or value < hidden_count:
+        if type(value) is not int or value + delta < 0:
             raise ValueError(
                 f"Chemistry parent person count drift: {prior['person_id']}"
             )
-        target[field] = value - hidden_count
+        target[field] = value + delta
     return target
 
 
@@ -340,13 +361,24 @@ def _parent_targets(
     ):
         raise ValueError("Chemistry parent lacks the exact 19 authored observations")
     hidden_by_person = Counter(item.person_id for item in decisions if not item.visible)
+    map_delta_by_person: Counter[str] = Counter()
+    for item in decisions:
+        if item.visible and item.transition == "restore":
+            map_delta_by_person[item.person_id] += 1
+        elif not item.visible and item.transition == "reexclude":
+            map_delta_by_person[item.person_id] -= 1
+    affected_people = set(hidden_by_person) | {
+        person_id for person_id, delta in map_delta_by_person.items() if delta
+    }
     for row in _rows(parent.files["people/train-00000-of-00001.parquet"]):
-        if row["person_id"] in hidden_by_person:
+        if row["person_id"] in affected_people:
             targets["people"][row["person_id"]] = _target_person(
-                row, hidden_by_person[row["person_id"]]
+                row,
+                hidden_by_person[row["person_id"]],
+                map_delta_by_person[row["person_id"]],
             )
-    if len(targets["people"]) != 5 or len(hidden_by_person) != 5:
-        raise ValueError("Chemistry parent lacks five affected people")
+    if len(targets["people"]) != 6 or len(affected_people) != 6:
+        raise ValueError("Chemistry parent lacks six affected people")
     return targets, hidden
 
 
@@ -469,6 +501,57 @@ def validate_exact_map(
         p["work_id"] for p in current if p["work_id"] in shared
     ]:
         raise ValueError("Chemistry map reordered shared points")
+    if type(prior.get("excluded_work_count")) is not int or candidate.get(
+        "excluded_work_count"
+    ) != prior["excluded_work_count"] + len(previous) - len(current):
+        raise ValueError("Chemistry map excluded-work count is not derived")
+    old_keywords = prior.get("keywords")
+    new_keywords = candidate.get("keywords")
+    if (
+        not isinstance(old_keywords, list)
+        or not isinstance(new_keywords, list)
+        or type(prior.get("keyword_count")) is not int
+        or prior["keyword_count"] != len(old_keywords)
+        or candidate.get("keyword_count") != len(new_keywords)
+        or len(old_keywords) != len(new_keywords)
+        or [entry.get("keyword_id") for entry in old_keywords]
+        != [entry.get("keyword_id") for entry in new_keywords]
+    ):
+        raise ValueError("Chemistry map keyword inventory changed")
+    members_by_keyword: dict[str, list[dict[str, Any]]] = {}
+    for point in current:
+        for keyword_id in point.get("keyword_ids", []):
+            members_by_keyword.setdefault(str(keyword_id), []).append(point)
+    if set(members_by_keyword) != {entry["keyword_id"] for entry in new_keywords}:
+        raise ValueError("Chemistry map keyword members changed")
+
+    def static_fields(item: Mapping[str, Any]) -> dict[str, Any]:
+        return {
+            key: value
+            for key, value in item.items()
+            if key not in {"publication_count", "coordinates"}
+        }
+
+    for old_keyword, new_keyword in zip(old_keywords, new_keywords, strict=True):
+        keyword_id = new_keyword["keyword_id"]
+        members = members_by_keyword[keyword_id]
+        expected_coordinates = {
+            str(layout["layout_id"]): {
+                axis: round(
+                    sum(float(point[str(layout[field])]) for point in members)
+                    / len(members),
+                    7,
+                )
+                for axis, field in (("x", "x_field"), ("y", "y_field"))
+            }
+            for layout in LAYOUTS
+        }
+        if (
+            static_fields(old_keyword) != static_fields(new_keyword)
+            or new_keyword.get("publication_count") != len(members)
+            or new_keyword.get("coordinates") != expected_coordinates
+        ):
+            raise ValueError("Chemistry map keyword metadata is not derived")
     for decision in decisions:
         if decision.output_type != "conference_presentation":
             continue
@@ -621,42 +704,67 @@ def stage_chem_delta(
     staged_works = parquet.read_table(
         files["works/train-00000-of-00001.parquet"]
     ).to_pandas()
+    continuity_receipt = {
+        "version": "exact-chemistry-post-337-delta-v1",
+        "prior_revision": parent.revision,
+        "source_commit": SOURCE_COMMIT,
+        "source_snapshot_sha256": SOURCE_SHA256,
+        "chem_region_review_sha256": CHEM_REVIEW_SHA256,
+        "reviewed_337_producer": REVIEWED_337_PRODUCER,
+        "restored_work_ids": sorted(
+            item.work_id
+            for item in decisions
+            if item.visible and item.transition == "restore"
+        ),
+        "removed_work_ids": sorted(
+            item.work_id
+            for item in decisions
+            if not item.visible and item.transition == "reexclude"
+        ),
+    }
     map_path, manifest_path, artifact = _write_map_artifacts(
         staged_works,
         registry,
         maps_dir=stage_dir / "maps",
         generated_at_utc=str(prior_map["generated_at_utc"]),
         dataset_commits={},
-        continuity_receipt={
-            "version": "exact-chemistry-post-337-delta-v1",
-            "prior_revision": parent.revision,
-            "source_commit": SOURCE_COMMIT,
-            "source_snapshot_sha256": SOURCE_SHA256,
-            "chem_region_review_sha256": CHEM_REVIEW_SHA256,
-            "reviewed_337_producer": REVIEWED_337_PRODUCER,
-            "restored_work_ids": sorted(
-                item.work_id
-                for item in decisions
-                if item.visible and item.transition == "restore"
-            ),
-            "removed_work_ids": sorted(
-                item.work_id
-                for item in decisions
-                if not item.visible and item.transition == "reexclude"
-            ),
-        },
+        continuity_receipt=continuity_receipt,
     )
-    map_receipt = validate_exact_map(prior_map, artifact, decisions)
+    serialized_artifact = json.loads(map_path.read_text(encoding="utf-8"))
+    if serialized_artifact != artifact:
+        raise ValueError("Chemistry serialized map differs from validated artifact")
+    map_receipt = validate_exact_map(prior_map, serialized_artifact, decisions)
+    prior_manifest = json.loads(parent.files["maps/manifest.json"].read_text())
+    staged_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    expected_manifest = {
+        **prior_manifest,
+        "region_continuity": continuity_receipt,
+        "artifact": {
+            "title": artifact["title"],
+            "point_count": artifact["point_count"],
+            "excluded_work_count": artifact["excluded_work_count"],
+            "department_count": artifact["department_count"],
+            "school_count": artifact["school_count"],
+            "faculty_count": artifact["faculty_count"],
+            "keyword_count": artifact["keyword_count"],
+            "keyword_levels": artifact["keyword_levels"],
+            "file": "publications.json",
+        },
+    }
+    if staged_manifest != expected_manifest:
+        raise ValueError("Chemistry serialized map manifest changed")
     files["maps/publications.json"] = map_path
     files["maps/manifest.json"] = manifest_path
     prior_readme = parent.files["README.md"].read_text(encoding="utf-8")
     readme = stage_dir / "README.md"
-    readme.write_text(
-        build_updated_dataset_card(prior_readme, staged_datasets), encoding="utf-8"
-    )
+    updated_card = build_updated_dataset_card(prior_readme, staged_datasets)
+    readme.write_text(updated_card, encoding="utf-8")
+    if readme.read_text(encoding="utf-8") != updated_card:
+        raise ValueError("Chemistry serialized README changed")
     files["README.md"] = readme
     if set(files) != RELEASE_PATHS:
         raise ValueError("Chemistry stage does not contain exactly seven files")
+    stage_hashes = {name: sha256_file(path) for name, path in sorted(files.items())}
     gate = {
         "status": "pass",
         "gate": "exact-chemistry-post-337-delta-v1",
@@ -666,6 +774,7 @@ def stage_chem_delta(
         "chem_region_review_sha256": CHEM_REVIEW_SHA256,
         "reviewed_337_producer": REVIEWED_337_PRODUCER,
         "parent_sha256_by_path": dict(PARENT_SHA256_BY_PATH),
+        "stage_sha256_by_path": stage_hashes,
         "tables": table_counts,
         "authorship_delta": {
             "added": 0,
@@ -700,13 +809,14 @@ def publish_chem_delta(
     departments_path: Path,
     chem_review_path: Path,
     stage_dir: Path,
-    atomic_intent_sink: Callable[[Mapping[str, Any]], None],
+    intent_path: Path,
 ) -> tuple[str, dict[str, Any]]:
     """Release only after a future live #337 parent passes every pinned gate."""
 
     from .registry import load_registry
     from .snapshot import validate_snapshot
 
+    intent_sink = durable_intent_sink(intent_path)
     parent = require_live_337_parent(expected_parent_revision, hf_token=hf_token)
     registry = load_registry(people_path, memberships_path, departments_path)
     frame, manifest = validate_snapshot(
@@ -733,7 +843,7 @@ def publish_chem_delta(
         hf_token=hf_token,
         prior_revision=parent.revision,
         commit_message="Publish exact Chemistry region review atomically",
-        intent_sink=atomic_intent_sink,
+        intent_sink=intent_sink,
         intent_metadata={
             "source_commit": SOURCE_COMMIT,
             "producer_review_commit": REVIEWED_337_PRODUCER,

@@ -61,6 +61,17 @@ def test_live_parent_rejects_wrong_revision_before_download() -> None:
         delta.require_live_337_parent(delta.OLD_PARENT, hf_token=None, api=Api())
 
 
+def test_chemistry_release_requires_new_readback_intent_path(tmp_path: Path) -> None:
+    path = tmp_path / "intent.json"
+    sink = delta.durable_intent_sink(path)
+    sink({"intent_status": "before_write", "parent_revision": "1" * 40})
+    assert json.loads(path.read_text())["intent_status"] == "before_write"
+    sink({"intent_status": "commit_returned_unverified", "artifact_revision": "2" * 40})
+    assert json.loads(path.read_text())["artifact_revision"] == "2" * 40
+    with pytest.raises(ValueError, match="must be new"):
+        delta.durable_intent_sink(path)
+
+
 def test_live_parent_rejects_wrong_seven_file_hash(tmp_path: Path) -> None:
     class Api:
         def repo_info(self, *_args, **_kwargs):
@@ -114,7 +125,11 @@ def test_missing_or_extra_chemistry_observation_fails(
     ]
     people = [
         {"person_id": person_id, "unique_work_count": 20, "mapped_work_count": 20}
-        for person_id in {item.person_id for item in decisions if not item.visible}
+        for person_id in {
+            item.person_id
+            for item in decisions
+            if not item.visible or item.visible and item.transition == "restore"
+        }
     ]
     monkeypatch.setattr(delta, "_target_work", lambda row, _decision: row)
     monkeypatch.setattr(delta, "_target_profile", lambda row, _decision: row)
@@ -167,7 +182,24 @@ def test_missing_or_extra_chemistry_observation_fails(
             ),
             decisions,
         )
-    with pytest.raises(ValueError, match="lacks five affected people"):
+    targets, _ = delta._parent_targets(parent(profiles), decisions)
+    by_person = targets["people"]
+    assert len(by_person) == 6
+    assert {
+        person_id: (
+            row["unique_work_count"] - 20,
+            row["mapped_work_count"] - 20,
+        )
+        for person_id, row in by_person.items()
+    } == {
+        "person-donahue-f4c5ce86": (0, 2),
+        "person-krzysztofmatyjaszewski-29a2013e": (-3, -2),
+        "person-mariakurnikova-215a60c6": (-1, 0),
+        "person-robertorgil-90b0cbe9": (-1, -1),
+        "person-terrencejcollins-61cf6ed9": (-3, -1),
+        "person-washburn-3a49d96a": (-1, 0),
+    }
+    with pytest.raises(ValueError, match="lacks six affected people"):
         delta._parent_targets(parent(profiles, people_rows=people[:-1]), decisions)
 
 
@@ -238,8 +270,22 @@ def test_non19_map_point_or_shared_payload_drift_fails(
             )
     monkeypatch.setattr(delta, "PARENT_POINT_COUNT", len(before))
     monkeypatch.setattr(delta, "TARGET_POINT_COUNT", len(after))
-    prior = {"point_count": len(before), "points": before, "catalogs": {}}
-    candidate = {"point_count": len(after), "points": after, "catalogs": {}}
+    prior = {
+        "point_count": len(before),
+        "excluded_work_count": 0,
+        "keyword_count": 0,
+        "keywords": [],
+        "points": before,
+        "catalogs": {},
+    }
+    candidate = {
+        "point_count": len(after),
+        "excluded_work_count": len(before) - len(after),
+        "keyword_count": 0,
+        "keywords": [],
+        "points": after,
+        "catalogs": {},
+    }
     assert delta.validate_exact_map(prior, candidate, decisions)["status"] == "pass"
     changed = json.loads(json.dumps(candidate))
     next(row for row in changed["points"] if row["work_id"] == "work-other-1")["x"] = 2
@@ -254,6 +300,40 @@ def test_non19_map_point_or_shared_payload_drift_fails(
     added_null_metadata = {**candidate, "unexpected_metadata": None}
     with pytest.raises(ValueError, match="metadata keys"):
         delta.validate_exact_map(prior, added_null_metadata, decisions)
+    wrong_excluded_count = {**candidate, "excluded_work_count": 999}
+    with pytest.raises(ValueError, match="excluded-work count"):
+        delta.validate_exact_map(prior, wrong_excluded_count, decisions)
+
+    prior_with_keyword = json.loads(json.dumps(prior))
+    candidate_with_keyword = json.loads(json.dumps(candidate))
+    for artifact in (prior_with_keyword, candidate_with_keyword):
+        for point in artifact["points"]:
+            point.update(y=1, tsne_x=1, tsne_y=1, keyword_ids=["keyword-test"])
+        artifact["keyword_count"] = 1
+        artifact["keywords"] = [
+            {
+                "keyword_id": "keyword-test",
+                "label": "Original topic",
+                "extracted_label": "Original topic",
+                "label_reviewed": False,
+                "level": 0,
+                "parent_keyword_id": None,
+                "publication_count": len(artifact["points"]),
+                "coordinates": {
+                    "pca": {"x": 1.0, "y": 1.0},
+                    "tsne": {"x": 1.0, "y": 1.0},
+                },
+            }
+        ]
+    assert (
+        delta.validate_exact_map(prior_with_keyword, candidate_with_keyword, decisions)[
+            "status"
+        ]
+        == "pass"
+    )
+    candidate_with_keyword["keywords"][0]["label"] = "UNRELATED TAMPER"
+    with pytest.raises(ValueError, match="keyword metadata"):
+        delta.validate_exact_map(prior_with_keyword, candidate_with_keyword, decisions)
 
 
 def test_map_catalogs_allow_only_point_derived_count_changes(
@@ -324,12 +404,18 @@ def test_map_catalogs_allow_only_point_derived_count_changes(
 
     prior = {
         "point_count": len(before),
+        "excluded_work_count": 0,
+        "keyword_count": 0,
+        "keywords": [],
         "points": before,
         "catalogs": catalogs(len(before), 0),
         "source_data_newest_at_utc": "source-date",
     }
     candidate = {
         "point_count": len(after),
+        "excluded_work_count": len(before) - len(after),
+        "keyword_count": 0,
+        "keywords": [],
         "points": after,
         "catalogs": catalogs(len(after), 2),
         "source_data_newest_at_utc": "source-date",

@@ -72,5 +72,3 @@ def test_modified_chem_review_fails_before_accessing_source(tmp_path: Path) -> N
             cache_dir=tmp_path,
             registry=None,
         )
-
-

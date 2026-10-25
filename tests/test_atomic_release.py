@@ -170,6 +170,37 @@ def test_atomic_release_stops_before_any_write_on_gate_or_parent_failure(
     assert not any(entry[0] == "commit" for entry in calls)
 
 
+def test_atomic_release_requires_gated_stage_hashes_before_hub_call(
+    monkeypatch, tmp_path
+) -> None:
+    files = _files(tmp_path)
+    calls = _hub(monkeypatch, tmp_path)
+    expected = {name: sha256_file(path) for name, path in files.items()}
+    expected["README.md"] = "0" * 64
+    with pytest.raises(ValueError, match="Staged release bytes changed"):
+        commit_atomic_release(
+            files,
+            prewrite_gate={"status": "pass", "stage_sha256_by_path": expected},
+            repo_id="test/dataset",
+            hf_token="token",
+            prior_revision="a" * 40,
+            commit_message="Blocked staged-byte mutation",
+            intent_sink=lambda intent: None,
+        )
+    assert calls == []
+    expected["README.md"] = sha256_file(files["README.md"])
+    revision, _ = commit_atomic_release(
+        files,
+        prewrite_gate={"status": "pass", "stage_sha256_by_path": expected},
+        repo_id="test/dataset",
+        hf_token="token",
+        prior_revision="a" * 40,
+        commit_message="Matched staged bytes",
+        intent_sink=lambda intent: None,
+    )
+    assert revision == "b" * 40
+
+
 def test_atomic_release_rejects_missing_intent_sink_before_hub_call(
     monkeypatch, tmp_path
 ) -> None:

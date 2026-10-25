@@ -29,6 +29,25 @@ points have only Donahue as verified faculty and no external coauthor IDs, so
 neither adds a verified collaboration edge. The offline stage preserved all
 49,620 shared authorship payloads and all 42,904 shared map point payloads.
 
+The merged-main #337 parent `people.unique_work_count` equals the number of
+distinct authored work IDs for all eight reviewed Chemistry people. Donahue's
+two hidden AGU works already have authorship rows and are included in his 577
+unique works, so revealing their map points does not change that count. The
+nine removed observations each represent a distinct authored work for their
+person. `mapped_work_count` is already offset from actual map-point membership
+for several people in #337 because the frozen region decisions were applied
+after the initial people count. This release preserves that inherited offset
+and applies only the exact map-visibility delta:
+
+| Person | Unique-work delta | Mapped-work delta |
+| --- | ---: | ---: |
+| Donahue | 0 | +2 |
+| Matyjaszewski | −3 | −2 |
+| Collins | −3 | −1 |
+| Gil | −1 | −1 |
+| Kurnikova | −1 | 0 |
+| Washburn | −1 | 0 |
+
 The two already-visible Kietrys poster rows retain their generic Scholar
 `publication` type in this visibility review. Organizer entries confirm the
 poster format, but their full abstract/byline has not been recovered; a
