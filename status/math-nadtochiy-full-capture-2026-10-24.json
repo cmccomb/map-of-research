@@ -1,0 +1,65 @@
+{
+  "status": "staged_unpublished",
+  "coverage": "complete_visible_profile",
+  "profiles": 1,
+  "visible_rows": 50,
+  "records": [
+    {
+      "person_id": "person-sergeynadtochiy-03531018",
+      "display_name": "Sergey Nadtochiy",
+      "scholar_id": "cAiedtsAAAAJ",
+      "publication_count": 50,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "missing_year": 3,
+      "missing_authors": [],
+      "missing_venue": 6,
+      "zero_or_blank_citations": 18,
+      "citation_annotations": [],
+      "year_anomalies": [],
+      "source_json_sha256": "edcc097a6d8ed1d0ee119f50e0b80d00a317a1be4021599e476c8aab0bc21bed",
+      "source_html_sha256": "0747802771d09938d94286b59df1154e2b11d8fea398f572db6ede76bd9c92a4",
+      "identity_status": "verified_identity_stale_scholar_affiliation",
+      "identity_note": "CMU's 2025 hire notice identifies Sergey Nadtochiy as a current Mathematical Sciences professor and documents his 2018–2025 Illinois Tech appointment. The captured Scholar profile names Sergey Nadtochiy but still displays Illinois Institute of Technology and a verified iit.edu email. The already saved Mykhaylo Shkolnikov Scholar coauthor card links this exact ID by name; his CMU researcher page lists their joint papers. Preserve this stale-affiliation caveat.",
+      "official_person_url": "https://www.cmu.edu/math/people/faculty/nadtochiy.html",
+      "official_transition_url": "https://www.cmu.edu/math/news-events/articles/2025/1119_faculty-new-hire-nadtochiy.html",
+      "collaborator_publications_url": "https://www.math.cmu.edu/~mshkolni/",
+      "coauthor_card_source_path": "data/captures/shkolnikov-visible-54-2026-10-24.html",
+      "requested_profile_url": "https://scholar.google.com/citations?user=cAiedtsAAAAJ&hl=en&pagesize=100",
+      "collection_method": "isolated_playwright_direct_profile",
+      "page_load_count": 1,
+      "show_more_clicks": 0,
+      "show_more_disabled": true,
+      "challenge": false,
+      "page_error": false,
+      "raw_json_path": "data/captures/nadtochiy-visible-50-2026-10-24.json",
+      "raw_html_path": "data/captures/nadtochiy-visible-50-2026-10-24.html",
+      "author_cache_path": "data/authors/cAiedtsAAAAJ.json",
+      "author_cache_sha256": "d46eb0facd583242d8f2ba576e152b0379e30c12fbc6d3f057ef1fa12ccd84ad",
+      "lifetime_publication_completeness": "not_independently_established",
+      "review_candidates": [
+        {
+          "row": 36,
+          "author_pub_id": "cAiedtsAAAAJ:e5wmG9Sq2KIC",
+          "issue": "Scholar displays an NSF award, not a publication; review exact exclusion on producer branch"
+        },
+        {
+          "row": 39,
+          "author_pub_id": "cAiedtsAAAAJ:TQgYirikUcIC",
+          "issue": "Scholar displays an NSF award, not a publication; review exact exclusion on producer branch"
+        },
+        {
+          "row": 40,
+          "author_pub_id": "cAiedtsAAAAJ:HDshCWvjkbEC",
+          "issue": "Scholar displays an NSF award, not a publication; review exact exclusion on producer branch"
+        },
+        {
+          "row": 42,
+          "author_pub_id": "cAiedtsAAAAJ:R3hNpaxXUhUC",
+          "issue": "Scholar displays an NSF award, not a publication; review exact exclusion on producer branch"
+        }
+      ]
+    }
+  ],
+  "note": "Source observations only. The raw capture preserves all fifty visible Scholar rows, including four NSF award review candidates. No producer Scholar ID assignment, exclusion decision, Parquet snapshot, manifest, upload, or site deployment is made here."
+}
