@@ -93,6 +93,12 @@ def commit_atomic_release(
         if not path.is_file() or not path.stat().st_size:
             raise ValueError(f"Missing or empty staged release file: {name}")
     local_hashes = {name: sha256_file(path) for name, path in sorted(files.items())}
+    expected_hashes = prewrite_gate.get("stage_sha256_by_path")
+    if expected_hashes is not None and (
+        not isinstance(expected_hashes, Mapping)
+        or dict(expected_hashes) != local_hashes
+    ):
+        raise ValueError("Staged release bytes changed after the prewrite gate")
     local_sizes = {name: path.stat().st_size for name, path in sorted(files.items())}
     nonce = uuid4().hex
     tagged_commit_message = f"{commit_message}\n\nRelease-Intent-Nonce: {nonce}"
