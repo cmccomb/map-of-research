@@ -16,7 +16,7 @@
       "state": "reviewed_subset",
       "expected_source_rows": 670,
       "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
-      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 57 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links; 226 reviewed exclusions and 387 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 58 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links and one published 2013 meeting abstract; 226 reviewed exclusions and 386 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
       "reviewed_at": "2026-10-25",
       "released_author_pub_ids": [
         "FrF1YXQAAAAJ:kRWSkSYxWN8C",
@@ -75,7 +75,8 @@
         "FrF1YXQAAAAJ:qxL8FJ1GzNcC",
         "FrF1YXQAAAAJ:Zph67rFs4hoC",
         "FrF1YXQAAAAJ:ML0RJ9NH7IQC",
-        "FrF1YXQAAAAJ:ufrVoPGSRksC"
+        "FrF1YXQAAAAJ:ufrVoPGSRksC",
+        "FrF1YXQAAAAJ:MXK_kJrjxJIC"
       ],
       "excluded_author_pub_ids": [
         "FrF1YXQAAAAJ:AXkvAH5U_nMC",
@@ -691,8 +692,7 @@
         "FrF1YXQAAAAJ:OTTXONDVkokC",
         "FrF1YXQAAAAJ:rmuvC79q63oC",
         "FrF1YXQAAAAJ:Dip1O2bNi0gC",
-        "FrF1YXQAAAAJ:e_rmSamDkqQC",
-        "FrF1YXQAAAAJ:MXK_kJrjxJIC"
+        "FrF1YXQAAAAJ:e_rmSamDkqQC"
       ]
     }
   ]

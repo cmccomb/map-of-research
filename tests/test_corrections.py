@@ -348,6 +348,43 @@ def test_checked_in_profiles_require_and_apply_all_exact_ids() -> None:
     assert effective["source_record_json"].equals(frame["source_record_json"])
 
 
+def test_das_abstract_repair_keeps_raw_scholar_observation() -> None:
+    key = ("FrF1YXQAAAAJ", "FrF1YXQAAAAJ:MXK_kJrjxJIC")
+    correction = load_corrections(DEFAULT_CORRECTIONS_PATH)[key]
+    raw = {
+        "title": (
+            "The Development of Safe and Effective Polymeric Carriers "
+            "for SiRNA Delivery"
+        ),
+        "pub_year": "",
+        "venue": "",
+        "author_pub_id": key[1],
+    }
+    source_record_json = json.dumps(raw, sort_keys=True)
+    frame = pandas.DataFrame(
+        [
+            {
+                "scholar_id": key[0],
+                "author_pub_id": key[1],
+                "source_type": "scholar",
+                "source_record_json": source_record_json,
+                "title": raw["title"],
+                "year": pandas.NA,
+                "venue": raw["venue"],
+            }
+        ]
+    )
+    effective, applied = apply_corrections(frame, {key: correction})
+    assert applied == 1
+    assert effective.loc[0, "year"] == 2013
+    assert (
+        effective.loc[0, "venue"]
+        == "Society for Biomaterials 2013 Annual Meeting, Abstract #294"
+    )
+    assert effective.loc[0, "source_record_json"] == source_record_json
+    assert pandas.isna(frame.loc[0, "year"])
+
+
 def test_upload_workflow_resolves_corrections_from_trusted_source_checkout() -> None:
     workflow = (
         Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"

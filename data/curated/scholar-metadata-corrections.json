@@ -297,6 +297,22 @@
       "basis": "Nature lists Proteostasis as a section label rather than part of the article title.",
       "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:MXK_kJrjxJIC",
+      "expected": {
+        "title": "The Development of Safe and Effective Polymeric Carriers for SiRNA Delivery",
+        "year": null,
+        "venue": ""
+      },
+      "corrected": {
+        "year": 2013,
+        "venue": "Society for Biomaterials 2013 Annual Meeting, Abstract #294"
+      },
+      "basis": "The original abstract carries ©2013 Society for Biomaterials and Abstract #294; the Society's 2013 annual-conference archive lists the same title and presenter. Scholar's captured year and venue are blank.",
+      "evidence_url": "https://abstracts.biomaterials.org/data/papers/2013/0243-000313.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
