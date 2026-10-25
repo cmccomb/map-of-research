@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-jyotikatoch-58a2782a",
+  "display_name": "Jyoti Katoch",
+  "scholar_profile_name": "jyoti katoch",
+  "scholar_id": "xKrmD5IAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/katoch.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/katoch.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:20:10.022Z",
+  "publication_count": 44,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/physics-jyoti-katoch-2026-10-24.json",
+  "source_json_sha256": "3e28b68e0d98fbf0a6e14654745d9140765369aa69ba7fc5b5c96b5712bdf485",
+  "source_html_path": "data/captures/physics-jyoti-katoch-2026-10-24.html",
+  "source_html_sha256": "0155fe015c516f3c271e6d7021025758dee1319b05856d42f04b0cda4777157a",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  },
+  "guarded_batch_context": {
+    "this_profile_reserved_at_utc": "2026-10-24T22:19:55+00:00",
+    "previous_profile_reserved_at_utc": "2026-10-24T22:18:20+00:00",
+    "inter_profile_reservation_gap_seconds": 95,
+    "minimum_inter_profile_gap_seconds": 90,
+    "original_batch_commit": "0f469d4bc3f85a84de050846c8ded79a84984aab",
+    "original_batch_receipt_path": "status/browser-capture-physics-breivik-katoch-batch-2026-10-24.json",
+    "original_batch_receipt_sha256": "88a1db96e95183879bcf489ce561c34daa506d3594f37500716a716506ad4dac",
+    "source_scope_note": "The paired Breivik capture remains in draft source PR #80; this Katoch-only receipt preserves the original two-profile batch timing and points to its committed receipt."
+  }
+}

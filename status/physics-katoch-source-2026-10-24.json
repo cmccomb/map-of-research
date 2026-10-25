@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "batch": "physics-katoch-source-slice",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "target_base_commit": "70029898bd087728a1479bad0d48d8e185b45075",
+  "producer_main_checked_commit": "e33cf0065d724139f6ecf06ae3103cc237f148bb",
+  "carved_from_draft_pr": 80,
+  "carved_from_commit": "1da9ddf3b925f2a5ac3ba01054acc7ee0b6aec4d",
+  "department_id": "physics",
+  "profile_count": 1,
+  "raw_observation_count": 44,
+  "reviewed_exclusion_count": 0,
+  "reviewed_retained_observation_count": 4,
+  "metadata_repair_flag_count": 3,
+  "capture_coverage": "complete_visible_profile",
+  "source_files_preserve_raw_rows": true,
+  "ingestion_ready": false,
+  "ingestion_dependency": "Coordinate source merge and snapshot build. Preserve the genuine 2020 arXiv and 2022 journal forms as distinct observations under the current producer policy; three captured metadata glitches need bibliographic repair or explicit acceptance before ingestion.",
+  "review_ledger_path": "status/physics-katoch-source-review-2026-10-24.json",
+  "profiles": [
+    {
+      "person_id": "person-jyotikatoch-58a2782a",
+      "display_name": "Jyoti Katoch",
+      "scholar_profile_name": "jyoti katoch",
+      "scholar_id": "xKrmD5IAAAAJ",
+      "publication_count": 44,
+      "coverage": "complete_visible_profile",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/katoch.html",
+      "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/katoch.html",
+      "cache_path": "data/authors/xKrmD5IAAAAJ.json",
+      "source_json_path": "data/captures/physics-jyoti-katoch-2026-10-24.json",
+      "source_html_path": "data/captures/physics-jyoti-katoch-2026-10-24.html",
+      "receipt_path": "status/browser-capture-physics-jyoti-katoch-2026-10-24.json"
+    }
+  ]
+}
