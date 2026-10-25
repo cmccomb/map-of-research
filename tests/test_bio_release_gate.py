@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import sys
 from copy import deepcopy
 from types import SimpleNamespace
@@ -10,6 +11,7 @@ import pandas
 import pytest
 
 import map_of_research.bio_release_gate as gate
+from map_of_research.provisional_holds import ProvisionalHold
 
 
 def _candidate(monkeypatch):
@@ -19,6 +21,11 @@ def _candidate(monkeypatch):
     monkeypatch.setattr(gate, "BIO_SCHOLAR_ROWS", 5)
     monkeypatch.setattr(gate, "BIO29_COUNT", 4)
     monkeypatch.setattr(gate, "BIO29_SCHOLAR_ROWS", 5)
+    monkeypatch.setattr(
+        gate,
+        "POSTER_SOURCE_SHA256",
+        hashlib.sha256(b"poster-raw").hexdigest(),
+    )
     people = ["person-0", "person-1", gate.POSTER_ID[0], "person-3"]
     raw = []
     works = []
@@ -52,10 +59,15 @@ def _candidate(monkeypatch):
         )
     )
     poster.update(
-        source_record_json="poster-raw", work_id="poster-work", map_eligible=True
+        source_record_json="poster-raw",
+        work_id=gate.POSTER_WORK_ID,
+        map_eligible=False,
+        review_attribution_status="held",
+        review_attribution_evidence_url="https://scholar.google.com/poster",
+        map_exclusion_reasons=["attribution_provisional_hold"],
     )
     raw.append(poster)
-    works.append({"work_id": "poster-work", "map_eligible": False})
+    works.append({"work_id": gate.POSTER_WORK_ID, "map_eligible": False})
     restored = [f"pending-{index:03d}" for index in range(112)]
     for work_id in restored:
         works.append(
@@ -134,6 +146,16 @@ def _candidate(monkeypatch):
             "repair_artifact": {"points": [deepcopy(candidate_points[-1])]},
         },
         "repair_manifest": {"restore_eligible_work_ids": restored},
+        "provisional_holds": {
+            (gate.POSTER_ID[1], gate.POSTER_ID[2]): ProvisionalHold(
+                scholar_id=gate.POSTER_ID[1],
+                author_pub_id=gate.POSTER_ID[2],
+                capture_row_index=1,
+                reason="Poster attribution requires primary-source review.",
+                evidence_url="https://scholar.google.com/poster",
+                reviewed_at="2026-10-25",
+            )
+        },
     }
 
 
@@ -174,27 +196,38 @@ def test_pending_topic_assignment_survives_refit_and_gate_rejects_drift(
     assert gate.validate_bio_release_prewrite(**candidate)["status"] == "pass"
 
 
-def test_bb88_visible_poster_requires_exact_reviewed_loss(monkeypatch) -> None:
+def test_bb88_visible_poster_requires_exact_source_bound_hold(monkeypatch) -> None:
     candidate = _candidate(monkeypatch)
     poster_work = next(
         row
         for row in candidate["baselines"]["repair_works"]
-        if row["work_id"] == "poster-work"
+        if row["work_id"] == gate.POSTER_WORK_ID
     )
     poster_work["map_eligible"] = True
-    candidate["tables"]["profile_publications"].loc[4, "review_exclusion_code"] = (
-        "exact_review_hold"
-    )
-    candidate["tables"]["profile_publications"].at[4, "map_exclusion_reasons"] = [
-        "reviewed_exact_review_hold"
-    ]
+    candidate["baselines"]["repair_profile"][-1]["map_eligible"] = True
     receipt = gate.validate_bio_release_prewrite(**candidate)
-    assert receipt["reviewed_poster_mapped_loss"] is True
+    assert receipt["held_poster_mapped_loss"] is True
 
     candidate["tables"]["profile_publications"].at[4, "map_exclusion_reasons"] = (
         "other_reason"
     )
-    with pytest.raises(ValueError, match="exact reviewed exclusion"):
+    with pytest.raises(ValueError, match="exact provisional hold"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+    candidate["tables"]["profile_publications"].at[4, "map_exclusion_reasons"] = [
+        "attribution_provisional_hold"
+    ]
+    candidate["tables"]["profile_publications"].at[
+        4, "review_attribution_evidence_url"
+    ] = "https://scholar.google.com/other"
+    with pytest.raises(ValueError, match="exact provisional hold"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+    candidate["tables"]["profile_publications"].at[
+        4, "review_attribution_evidence_url"
+    ] = "https://scholar.google.com/poster"
+    candidate["provisional_holds"] = {}
+    with pytest.raises(ValueError, match="exact provisional hold"):
         gate.validate_bio_release_prewrite(**candidate)
 
 
@@ -393,6 +426,12 @@ def test_bio_baseline_loader_pins_two_revisions(monkeypatch, tmp_path) -> None:
     assert len(loaded["repair_works"]) == len(candidate["baselines"]["repair_works"])
     assert {item[2]["revision"] for item in calls} == {gate.BIO29_REVISION, "a" * 40}
     assert all(item[2]["token"] == "token" for item in calls)
+
+    calls.clear()
+    gate.load_bio_baselines(
+        repo_id="test/dataset", prior_revision="a" * 40, hf_token=""
+    )
+    assert all(item[2]["token"] is None for item in calls)
 
     monkeypatch.setattr(gate, "BIO29_COUNT", 5)
     with pytest.raises(ValueError, match="baseline now has"):

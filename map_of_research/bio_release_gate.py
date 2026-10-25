@@ -62,6 +62,10 @@ POSTER_ID = (
     "28yZqbcAAAAJ:HKviVsUxM5wC",
     "scholar",
 )
+POSTER_WORK_ID = "work-d701cf6129386f93f78754f5b2f78e2653904fecbc6428dfb27ca849547cf4e8"
+POSTER_SOURCE_SHA256 = (
+    "a2d3b3ebb010eea4f246edf2d67e7c4463440499ea15de380aff25486dddd164"
+)
 
 
 def _as_list(value: Any) -> list[Any]:
@@ -132,7 +136,7 @@ def load_bio_baselines(*, repo_id: str, prior_revision: str, hf_token: str) -> d
                 name,
                 repo_type="dataset",
                 revision=revision,
-                token=hf_token,
+                token=hf_token or None,
             )
         )
 
@@ -220,6 +224,7 @@ def validate_bio_release_prewrite(
     prior_revision: str,
     baselines: Mapping[str, Any],
     repair_manifest: Mapping[str, Any],
+    provisional_holds: Mapping[tuple[str, str], Any],
 ) -> dict[str, Any]:
     """Fail before a Hub write if the whole Bio cohort or old links drift."""
 
@@ -309,24 +314,35 @@ def validate_bio_release_prewrite(
         if old_poster is not None
         else None
     )
+    poster_hold = provisional_holds.get((POSTER_ID[1], POSTER_ID[2]))
+    poster_source_hash = hashlib.sha256(
+        str(poster.get("source_record_json", "") if poster else "").encode()
+    ).hexdigest()
     if (
         old_poster is None
         or poster is None
         or prior_poster_work is None
-        or bool(
-            poster["map_eligible"]
-            and current_works.get(str(poster["work_id"]), {}).get("map_eligible")
-        )
-        or poster["work_id"] != old_poster["work_id"]
-        or hashlib.sha256(str(old_poster["source_record_json"]).encode()).digest()
-        != hashlib.sha256(str(poster["source_record_json"]).encode()).digest()
+        or poster["work_id"] != POSTER_WORK_ID
+        or old_poster["work_id"] != POSTER_WORK_ID
+        or poster_source_hash != POSTER_SOURCE_SHA256
+        or hashlib.sha256(str(old_poster["source_record_json"]).encode()).hexdigest()
+        != POSTER_SOURCE_SHA256
     ):
-        raise ValueError("McManus poster must stay raw and match the repair hold")
-    if POSTER_ID in mapped_losses:
-        exclusion_code = str(poster.get("review_exclusion_code") or "")
-        reasons = _as_list(poster.get("map_exclusion_reasons"))
-        if not exclusion_code or f"reviewed_{exclusion_code}" not in reasons:
-            raise ValueError("McManus poster loss requires an exact reviewed exclusion")
+        raise ValueError("McManus poster must match the exact source-bound record")
+    if (
+        poster_hold is None
+        or poster_hold.scholar_id != POSTER_ID[1]
+        or poster_hold.author_pub_id != POSTER_ID[2]
+        or not poster_hold.evidence_url
+        or bool(poster["map_eligible"])
+        or poster.get("review_attribution_status") != "held"
+        or poster.get("review_attribution_evidence_url") != poster_hold.evidence_url
+        or "attribution_provisional_hold"
+        not in _as_list(poster.get("map_exclusion_reasons"))
+        or POSTER_WORK_ID
+        in {point["work_id"] for point in candidate_artifact["points"]}
+    ):
+        raise ValueError("McManus poster requires an exact provisional hold")
     if (
         continuity_receipt is None
         or continuity_receipt.get("prior_revision") != prior_revision
@@ -393,7 +409,7 @@ def validate_bio_release_prewrite(
         "bio_scholar_rows": len(bio_scholar_rows),
         "bio29_observations_preserved": len(old_bio29_rows),
         "bio29_mapped_observations_preserved": len(prior_mapped - mapped_losses),
-        "reviewed_poster_mapped_loss": POSTER_ID in mapped_losses,
+        "held_poster_mapped_loss": POSTER_ID in mapped_losses,
         "bio_edges_preserved": len(old_edges),
         "pending_topic_works_preserved": len(restored),
     }

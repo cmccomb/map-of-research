@@ -1241,6 +1241,8 @@ def _publish_atomic_release(
     generated_at_utc: str,
     continuity_receipt: Mapping[str, Any] | None,
     repair_manifest_path: Path,
+    provisional_holds: Mapping[tuple[str, str], Any],
+    require_bio_release: bool = False,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1248,6 +1250,8 @@ def _publish_atomic_release(
 
     prior_revision = require_revision(prior_revision)
     bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    if require_bio_release and not bio_release:
+        raise ValueError("Bio release source differs from the frozen snapshot")
     baselines = None
     repair_manifest = None
     if bio_release:
@@ -1322,6 +1326,7 @@ def _publish_atomic_release(
                 prior_revision=prior_revision,
                 baselines=baselines,
                 repair_manifest=repair_manifest,
+                provisional_holds=provisional_holds,
             )
         else:
             if (
@@ -1375,6 +1380,7 @@ def publish_snapshot(
     prior_revision: str | None = None,
     region_comparison_revision: str | None = None,
     atomic_release: bool | None = None,
+    require_bio_release: bool = False,
     repair_manifest_path: Path = Path("data/curated/region-remediation-bernhard.json"),
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
@@ -1398,6 +1404,11 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    if require_bio_release:
+        if manifest["snapshot_sha256"] != BIO_SOURCE_SHA256:
+            raise ValueError("Bio release source differs from the frozen snapshot")
+        if prior_revision is None or atomic_release is False:
+            raise ValueError("Bio release requires an atomic parent-pinned upload")
     if region_comparison_revision is not None:
         if prior_revision is None:
             raise ValueError("Region comparison requires a current Hub revision")
@@ -1570,6 +1581,8 @@ def publish_snapshot(
             generated_at_utc=generated_at_utc,
             continuity_receipt=continuity_receipt,
             repair_manifest_path=repair_manifest_path,
+            provisional_holds=provisional_holds,
+            require_bio_release=require_bio_release,
         )
         dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     else:
@@ -1714,6 +1727,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=Path("data/curated/region-remediation-bernhard.json"),
         help="Reviewed 112-work topic assignments preserved during the Bio release",
     )
+    parser.add_argument(
+        "--require-bio-release",
+        action="store_true",
+        help="Fail closed unless the frozen complete Bio snapshot passes its gate",
+    )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
     parser.add_argument(
@@ -1841,6 +1859,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             prior_revision=args.prior_revision,
             region_comparison_revision=args.region_comparison_revision,
             repair_manifest_path=args.repair_reviewed_work_manifest,
+            require_bio_release=args.require_bio_release,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

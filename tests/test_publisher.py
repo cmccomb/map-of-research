@@ -1618,6 +1618,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     region_override,
     atomic,
 ) -> None:
+    bio_intent = pinned and atomic and not region_override and not missing_prior
     frame = pandas.DataFrame(
         {
             "scholar_id": ["one", "two", "one"],
@@ -1674,7 +1675,9 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             frame,
             {
                 "created_at_utc": "2026-07-17T12:00:00+00:00",
-                "snapshot_sha256": "test-snapshot",
+                "snapshot_sha256": (
+                    publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
+                ),
             },
         ),
     )
@@ -1809,6 +1812,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "hf_token": "token",
         "corrections_path": corrections_path,
         "prior_revision": "a" * 40 if pinned else None,
+        "require_bio_release": bio_intent,
     }
     if atomic and not pinned:
         publish_options["atomic_release"] = True

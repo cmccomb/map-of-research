@@ -108,6 +108,7 @@ def test_atomic_publisher_stages_all_files_and_runs_gate_before_commit(
         generated_at_utc="2026-10-25T00:00:00+00:00",
         continuity_receipt={"prior_revision": "a" * 40},
         repair_manifest_path=manifest,
+        provisional_holds={},
     )
     assert revision == "b" * 40
     assert receipt["mode"] == "single_parent_commit"
@@ -135,6 +136,7 @@ def test_atomic_bio_staging_requires_manifest_only_for_pending_parent(
             generated_at_utc="2026-10-25T00:00:00+00:00",
             continuity_receipt={"prior_revision": "a" * 40},
             repair_manifest_path=manifest,
+            provisional_holds={},
         )
     assert calls == []
 
@@ -153,6 +155,7 @@ def test_atomic_bio_staging_reads_pending_manifest_before_gate(
         generated_at_utc="2026-10-25T00:00:00+00:00",
         continuity_receipt={"prior_revision": "a" * 40},
         repair_manifest_path=manifest,
+        provisional_holds={},
     )
     assert revision == "b" * 40
     assert calls[0] == ("preserve", {"restore_eligible_work_ids": ["work"]})
@@ -176,5 +179,77 @@ def test_atomic_generic_staging_rejects_unclean_region_gate_before_commit(
                 "unexplained_gains": ["bad"],
             },
             repair_manifest_path=manifest,
+            provisional_holds={},
         )
     assert all(call[0] != "commit" for call in calls)
+
+
+def test_explicit_bio_intent_rejects_drift_before_hub_stage(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path, bio=False)
+    with pytest.raises(ValueError, match="Bio release source differs"):
+        publisher._publish_atomic_release(
+            tables,
+            SimpleNamespace(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "drifted-source"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            require_bio_release=True,
+        )
+    assert calls == []
+
+
+@pytest.mark.parametrize(
+    ("source_hash", "prior_revision", "atomic_release", "message"),
+    [
+        ("changed", "a" * 40, None, "Bio release source differs"),
+        (publisher.BIO_SOURCE_SHA256, None, None, "atomic parent-pinned"),
+        (publisher.BIO_SOURCE_SHA256, "a" * 40, False, "atomic parent-pinned"),
+    ],
+)
+def test_publish_bio_intent_fails_before_enrichment_or_hub_write(
+    monkeypatch, tmp_path, source_hash, prior_revision, atomic_release, message
+) -> None:
+    calls = []
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: SimpleNamespace())
+    monkeypatch.setattr(
+        publisher, "implicit_primary_baseline_for_people", lambda *args: {}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_included_scholar_primary_homes",
+        lambda *args, **kwargs: None,
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame({"source": [1]}),
+            {"snapshot_sha256": source_hash},
+        ),
+    )
+    monkeypatch.setattr(
+        publisher, "add_embeddings", lambda *args, **kwargs: calls.append("enrich")
+    )
+    monkeypatch.setattr(
+        publisher, "commit_atomic_release", lambda *args, **kwargs: calls.append("hub")
+    )
+    with pytest.raises(ValueError, match=message):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision=prior_revision,
+            atomic_release=atomic_release,
+            require_bio_release=True,
+        )
+    assert calls == []
