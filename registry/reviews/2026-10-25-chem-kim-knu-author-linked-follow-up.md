@@ -1,0 +1,13 @@
+# Hyung J. Kim: three KNU author-linked exclusions
+
+This review's counts record the first three follow-up decisions. [A second dated follow-up](2026-10-25-chem-kim-named-author-follow-up.md) adds nine more exact IDs; the current totals are in the parent audit.
+
+This is a narrow follow-up to the [918-row Scholar capture review](2026-10-24-chem-kim-918-attribution-audit.md). The original review held five exact title/year matches to a Kyungpook National University (KNU) ORCID record because those entries lacked a DOI. I checked the publication records themselves. KNU links the `H. J. Kim` author of two exact works directly to its [Hong Joo Kim faculty profile](https://research.knu.ac.kr/en/persons/hong-joo-kim/), which identifies him as a Physics professor. A third KNU record names Hong Joo Kim in full and links to that same profile. These are exact work-level identity checks, not subject or initials filters.
+
+| Capture row | Scholar observation ID | KNU publication record | Identity evidence |
+| ---: | --- | --- | --- |
+| 349 | `bC4aq-4AAAAJ:pxXbYLTb8EgC` | [Design and fabrication of the double-sided silicon microstrip sensor](https://research.knu.ac.kr/en/publications/design-and-fabrication-of-the-double-sided-silicon-microstrip-sen/) | The H. J. Kim author link resolves to Hong Joo Kim's KNU Physics profile; title and 2006 year match the capture. |
+| 590 | `bC4aq-4AAAAJ:D_tqNUsBuKoC` | [Scintillation crystal growth at the CUP](https://research.knu.ac.kr/en/publications/scintillation-crystal-growth-at-the-cup/) | The H. J. Kim author link resolves to that profile; title and 2019 year match. |
+| 638 | `bC4aq-4AAAAJ:2vr6o8x5NLkC` | [Study on structure and luminescence properties of LaBMoO6:Dy3+ phosphor](https://research.knu.ac.kr/en/publications/study-on-structure-and-luminescence-properties-of-labmoosub6sub-d/) | The full author record names Hong Joo Kim and links to that profile; title and 2018 year match. |
+
+The three exact IDs are proposed as `false_profile_attribution`. They do not remove the works from the source capture. The rebuild script checks the raw capture title and year for each index, appends the exact-ID decisions to the producer manifest, and regenerates the 918-row ledger. The resulting screen has 359 excluded observations (eight prior, 351 proposed), 100 CMU ORCID title/year retention signals, and 459 held observations. The two other KNU ORCID title/year matches without DOI, rows 357 and 655, remain held because an institutional record naming their exact H. J. Kim author has not been confirmed. The full Kim canonical cache and live maps remain unchanged pending attribution review of the retained set.

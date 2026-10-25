@@ -50,6 +50,69 @@ NEUROSCIENCE = {
 # changes. KNU's author-linked records resolve H. J. Kim to Hong Joo Kim;
 # publisher/author copies also identify the H. J. author with KNU Physics.
 OTHER_PRIMARY = {
+    109: (
+        "Search for low-mass dark matter with CsI (Tl) crystal detectors",
+        2014,
+        "Hong Joo Kim",
+        "10.1103/PhysRevD.90.052006",
+        "https://research.knu.ac.kr/en/publications/search-for-low-mass-dark-matter-with-csitl-crystal-detectors/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    174: (
+        "The COSINE-100 data acquisition system",
+        2018,
+        "Hong Joo Kim",
+        "10.1088/1748-0221/13/09/P09006",
+        "https://research.knu.ac.kr/en/publications/the-cosine-100-data-acquisition-system/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    235: (
+        "Measurement of the cosmic muon annual and diurnal flux variation "
+        "with the COSINE-100 detector",
+        2021,
+        "Hong Joo Kim",
+        "10.1088/1475-7516/2021/02/013",
+        "https://research.knu.ac.kr/en/publications/measurement-of-the-cosmic-muon-annual-and-diurnal-flux-variation-/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    241: (
+        "The COSINE-100 liquid scintillator veto system",
+        2021,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2021.165431",
+        "https://research.knu.ac.kr/en/publications/the-cosine-100-liquid-scintillator-veto-system/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    62: (
+        "AMoRE experiment: a search for neutrinoless double beta decay "
+        "of 100Mo isotope with 40Ca100MoO4 cryogenic scintillation detector",
+        2012,
+        "Hong Joo Kim",
+        "10.1088/1742-6596/375/1/042023",
+        "https://research.knu.ac.kr/en/publications/amore-experiment-a-search-for-neutrinoless-double-beta-decay-of-s/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
+    93: (
+        "CaMoO/sub 4/scintillation crystal for the search of/sup 100/Mo "
+        "double beta decay",
+        2005,
+        "Hong Joo Kim",
+        "10.1109/TNS.2005.852678",
+        "https://research.knu.ac.kr/en/publications/camoosub4sub-scintillation-crystal-for-the-search-ofsup100supmo-d/",
+        "KNU institutional article; H. J. Kim linked to Hong Joo Kim",
+        "The KNU publication record links the exact article's H. J. Kim "
+        "author to its separate Hong Joo Kim Physics profile.",
+    ),
     6: (
         "Decentralized nonlinear model predictive control of multiple flying robots",
         2003,
@@ -171,6 +234,348 @@ OTHER_PRIMARY = {
         "The conference paper names H. Jin Kim of Seoul National "
         "University as its coauthor.",
     ),
+    68: (
+        "Electrospraying electrospun nanofiber segments into injectable "
+        "microspheres for potential cell delivery",
+        2018,
+        "Hyung Joon Kim",
+        "10.1021/acsami.8b06386",
+        "https://pubs.acs.org/doi/10.1021/acsami.8b06386",
+        "ACS publisher full-author article",
+        "The ACS author list names Hyung Joon Kim at the University of Nebraska.",
+    ),
+    92: (
+        "Three-dimensional objects consisting of hierarchically assembled "
+        "nanofibers with controlled alignments for regenerative medicine",
+        2019,
+        "Hyung Joon Kim",
+        "10.1021/acs.nanolett.9b00217",
+        "https://pubs.acs.org/doi/10.1021/acs.nanolett.9b00217",
+        "ACS publisher full-author article",
+        "The ACS article names Hyung Joon Kim of the University of Nebraska "
+        "as its coauthor.",
+    ),
+    123: (
+        "Establishment of a human iPSC-and nanofiber-based microphysiological "
+        "blood–brain barrier system",
+        2018,
+        "Hyung Joon Kim",
+        "10.1021/acsami.8b03962",
+        "https://pubs.acs.org/doi/10.1021/acsami.8b03962",
+        "ACS publisher full-author article",
+        "The ACS article names Hyung Joon Kim of the University of Nebraska "
+        "as its coauthor.",
+    ),
+    153: (
+        "REST regulates non–cell-autonomous neuronal differentiation and "
+        "maturation of neural progenitor cells via secretogranin II",
+        2015,
+        "Hyung Joon Kim",
+        "10.1523/JNEUROSCI.4286-14.2015",
+        "https://www.jneurosci.org/content/jneuro/35/44/14872.full.pdf",
+        "Journal of Neuroscience full-author article",
+        "The journal's article names Hyung Joon Kim of the Salk Institute "
+        "as first author.",
+    ),
+    173: (
+        "Characterisation of tungstate and molybdate crystals ABO4 "
+        "(A= Ca, Sr, Zn, Cd; B= W, Mo) for luminescence lifetime cryothermometry",
+        2018,
+        "Hong Joo Kim",
+        "10.1016/j.mtla.2018.09.039",
+        "https://research.knu.ac.kr/en/publications/characterisation-of-tungstate-and-molybdate-crystals-abosub4sub-a/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor Hong Joo Kim.",
+    ),
+    180: (
+        "Monitoring the differentiation and migration patterns of neural "
+        "cells derived from human embryonic stem cells using a microfluidic "
+        "culture system",
+        2014,
+        "Hyung Joon Kim",
+        "10.14348/molcells.2014.0137",
+        "https://pubmed.ncbi.nlm.nih.gov/24938227/",
+        "PubMed full-author article record",
+        "The complete indexed author list names Hyung Joon Kim, not the "
+        "CMU Chemistry professor.",
+    ),
+    339: (
+        "Compartmental culture of embryonic stem cell-derived neurons "
+        "in microfluidic devices for use in axonal biology",
+        2010,
+        "Hyung Joon Kim",
+        "10.1007/s10529-010-0280-2",
+        "https://pubmed.ncbi.nlm.nih.gov/20424889/",
+        "PubMed full-author article record",
+        "The complete indexed author list names Hyung Joon Kim, not the "
+        "CMU Chemistry professor.",
+    ),
+    389: (
+        "Quantitative analysis of CNS axon regeneration using a "
+        "microfluidic neuron culture device",
+        2008,
+        "Hyung Joon Kim",
+        "",
+        "https://mbel.snu.ac.kr/publication/quantitative-analysis-of-cns-axon-regeneration-using-a-microfluidic-neuron-culture-device/",
+        "Seoul National University lab publication record",
+        "The producing laboratory's exact publication record names Hyung Joon Kim.",
+    ),
+    831: (
+        "In vitro assay for quantitative analysis of axonal regeneration "
+        "in the spinal cord injury using microfluidic platform",
+        2009,
+        "Hyung Joon Kim",
+        "",
+        "https://www.rsc.org/binaries/LOC/2009/Pdf/631-W71F.pdf",
+        "Royal Society of Chemistry conference paper",
+        "The conference paper names Hyung Joon Kim of UC Irvine as first author.",
+    ),
+    349: (
+        "Design and fabrication of the double-sided silicon microstrip sensor",
+        2006,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/design-and-fabrication-of-the-double-sided-silicon-microstrip-sen/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links its H. J. Kim author directly to physics "
+        "professor Hong Joo Kim's institutional profile.",
+    ),
+    590: (
+        "Scintillation crystal growth at the CUP",
+        2019,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/scintillation-crystal-growth-at-the-cup/",
+        "KNU institutional conference article; author-linked record",
+        "The KNU conference article links its H. J. Kim author directly to "
+        "physics professor Hong Joo Kim's institutional profile.",
+    ),
+    638: (
+        "Study on structure and luminescence properties of LaBMoO6:Dy3+ "
+        "phosphor for photonic material applications",
+        2018,
+        "Hong Joo Kim",
+        "",
+        "https://research.knu.ac.kr/en/publications/study-on-structure-and-luminescence-properties-of-labmoosub6sub-d/",
+        "KNU institutional article; full-name author record",
+        "The KNU article names Hong Joo Kim in its full author record "
+        "and links him to his physics faculty profile.",
+    ),
+    546: (
+        "Czochralski growth and scintillation properties of Li6LuxY1− x "
+        "(BO3) 3: Ce3+ single crystals",
+        2016,
+        "Hong Joo Kim",
+        "10.1016/j.nima.2015.10.008",
+        "https://research.knu.ac.kr/en/publications/czochralski-growth-and-scintillation-properties-of-lisub6sublusub/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim to physics professor Hong Joo Kim; "
+        "KNU's October 2015 online date and the Scholar 2016 year refer "
+        "to the same article, printed in January 2016.",
+    ),
+    605: (
+        "Scintillation characteristics of an undoped CsI crystal at "
+        "low-temperature for dark matter search",
+        2025,
+        "Hong Joo Kim",
+        "10.1016/j.astropartphys.2025.103150",
+        "https://research.knu.ac.kr/en/publications/scintillation-characteristics-of-an-undoped-csi-crystal-at-low-te-2/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor "
+        "Hong Joo Kim and matches the 2025 journal publication.",
+    ),
+    746: (
+        "Development of a Dual Cryogenic Detection System for the "
+        "Forbidden Non-unique -Decay Spectrum Study",
+        2024,
+        "Hong Joo Kim",
+        "10.1007/s10909-024-03139-5",
+        "https://research.knu.ac.kr/en/publications/development-of-a-dual-cryogenic-detection-system-for-the-forbidde/",
+        "KNU institutional article; author-linked record",
+        "The KNU article links H. J. Kim directly to physics professor "
+        "Hong Joo Kim; the Scholar title omits the beta glyph but its "
+        "authors, journal, volume, pages, and year match this article.",
+    ),
+    12: (
+        "Cerebral microbleeds are regionally associated with intracerebral hemorrhage",
+        2004,
+        "Ho Kim",
+        "10.1212/01.wnl.0000101463.50798.0d",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Neurology article, "
+        "volume 62, pages 72–76, among his own publications; the "
+        "Scholar H. Kim byline is his.",
+    ),
+    38: (
+        "Comparative analysis of the spatial distribution and severity "
+        "of cerebral microbleeds and old lacunes",
+        2004,
+        "Ho Kim",
+        "",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Journal of Neurology, "
+        "Neurosurgery & Psychiatry article, volume 75, pages 423–427, "
+        "under his full name.",
+    ),
+    40: (
+        "Left ventricular hypertrophy is associated with cerebral "
+        "microbleeds in hypertensive patients",
+        2004,
+        "Ho Kim",
+        "10.1212/01.wnl.0000132525.36804.a1",
+        "https://healthstat.snu.ac.kr/hokim/papers.html",
+        "Seoul National University author's publication list",
+        "SNU researcher Ho Kim lists this exact Neurology article, "
+        "volume 63, pages 16–21, among his own publications; the "
+        "Scholar H. Kim byline is his.",
+    ),
+    106: (
+        "Augmentation of NAD+ by NQO1 attenuates cisplatin-mediated hearing impairment",
+        2014,
+        "Hyung-Jin Kim",
+        "10.1038/cddis.2014.255",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4611728/",
+        "journal full-text author note",
+        "The journal article identifies its first author in full as "
+        "Hyung-Jin Kim of Wonkwang University School of Medicine.",
+    ),
+    81: (
+        "High sensitive micro-cantilever sensor and fabricating method thereof",
+        2003,
+        "Hyung-Joon Kim",
+        "",
+        "https://patents.google.com/patent/US20030032293A1/en",
+        "published US patent application and inventor assignment",
+        "The exact US application 10/209,866 names Hyung-Joon Kim of "
+        "Korea Institute of Science and Technology as an inventor; "
+        "the published assignment also spells out his full name.",
+    ),
+    85: (
+        "Homocysteine, folate and pregnancy outcomes",
+        2012,
+        "Hai Joong Kim",
+        "10.3109/01443615.2012.693984",
+        "https://pure.korea.ac.kr/en/publications/homocysteine-folate-and-pregnancy-outcomes/",
+        "Korea University institutional full-author article record",
+        "The Korea University record names this exact article's H. J. Kim "
+        "author in full as Hai Joong Kim.",
+    ),
+}
+
+# In addition to title and year, freeze each newly reviewed Scholar observation
+# ID so a reordered or replaced capture cannot inherit a person decision.
+OTHER_PRIMARY_ID_GUARDS = {
+    109: "bC4aq-4AAAAJ:sbeIDTyQOFgC",
+    174: "bC4aq-4AAAAJ:bVQMTfhMCi4C",
+    235: "bC4aq-4AAAAJ:M0j1y4EgrScC",
+    241: "bC4aq-4AAAAJ:cSdaV2aYdYsC",
+}
+
+# CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
+# assertion does not independently resolve the initials-only APS author.
+CMU_ORCID_DOI_HOLD = {
+    1: (
+        "Mass spectrum of chiral ten-dimensional N=2 supergravity on",
+        1985,
+        "10.1103/PhysRevD.32.389",
+        "https://pub.orcid.org/v3.0/0000-0003-4334-1879/work/28834334",
+    ),
+}
+
+# CMU-linked bibliographies or a publisher article identify these older works.
+CMU_PRIMARY = {
+    15: (
+        "Molecular interactions of a Cu-based metal–organic framework with "
+        "a confined imidazolium-based ionic liquid: a combined density "
+        "functional theory and experimental vibrational\xa0…",
+        2016,
+        "https://www.cmu.edu/chemistry/people/faculty/kim.html",
+        "CMU faculty publication list; matching authors, venue, and pages",
+    ),
+    16: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. I. Formulation",
+        1990,
+        "https://api.crossref.org/works/10.1063%2F1.459665",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline",
+    ),
+    21: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. III. Quantum theory",
+        1992,
+        "https://api.crossref.org/works/10.1063%2F1.462752",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline",
+    ),
+    44: (
+        "A molecular dynamics computer simulation study of room-temperature "
+        "ionic liquids. II. Equilibrium and nonequilibrium solvation dynamics",
+        2005,
+        "https://www.chem.cmu.edu/groups/kim/pub.html",
+        "CMU Kim Group publication list",
+    ),
+    78: (
+        "Graphene-based supercapacitors in the parallel-plate electrode "
+        "configuration: Ionic liquids versus organic electrolytes",
+        2011,
+        "https://pubs.rsc.org/en/content/articlelanding/2012/fd/c1fd00086a",
+        "RSC original article with CMU author affiliation",
+    ),
+    79: (
+        "Equilibrium and nonequilibrium solvation and solute electronic "
+        "structure. II. Strong coupling limit",
+        1990,
+        "https://api.crossref.org/works/10.1063%2F1.459666",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim byline "
+        "and Colorado affiliation",
+    ),
+    104: (
+        "Excited state intramolecular charge transfer rates of "
+        "p-dirnethylaminobenzonitrile (DMABN) in solution: a "
+        "two-dimensional dynamics perspective",
+        1997,
+        "https://experts.colorado.edu/vitas/106076.pdf",
+        "Coauthor James T. Hynes's Colorado CV; same journal and pages, "
+        "with the chemical name corrected",
+    ),
+    155: (
+        "Electronically adiabatic reaction field approach to solvation. "
+        "I. Theoretical formulation via multipole expansion in a "
+        "fluctuating cavity",
+        1996,
+        "https://api.crossref.org/works/10.1063%2F1.472531",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim "
+        "byline and CMU Chemistry affiliation",
+    ),
+    220: (
+        "Electronically adiabatic reaction field approach to solvation. "
+        "II. Solvent effects on electronic spectra",
+        1996,
+        "https://api.crossref.org/works/10.1063%2F1.471831",
+        "AIP publisher-deposited Crossref record; full Hyung J. Kim "
+        "byline and CMU Chemistry affiliation",
+    ),
+    479: (
+        "Temperature-and pressure-dependence of the outer-sphere "
+        "reorganization free energy for electron transfer reactions: "
+        "a continuum approach",
+        2006,
+        "https://www.chem.cmu.edu/groups/kim/pub.html",
+        "CMU Kim Group publication list",
+    ),
+}
+
+# The later Scholar row has a broken superscript title and no page number.
+# The publisher's one 1985 article at PRD 32, 389 is row 1; its person
+# attribution remains held separately from this duplicate-work decision.
+CORRUPTED_DUPLICATE_PRIMARY = {
+    907: (
+        "Mass spectrum of chiral ten-dimensional N= 2 supergravity on S/sup 5",
+        1985,
+        "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.32.389",
+        "bC4aq-4AAAAJ:SP6oXDckpogC",
+    ),
 }
 
 ACS_PARENT_URL = "https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00202"
@@ -202,14 +607,21 @@ def orcid_index(profile: dict) -> dict[str, list[dict]]:
     return result
 
 
-def decision(pub_id: str, reason_code: str, reason: str, url: str) -> dict:
+def decision(
+    pub_id: str,
+    reason_code: str,
+    reason: str,
+    url: str,
+    *,
+    verified_at: str = "2026-10-24",
+) -> dict:
     return {
         "scholar_id": SCHOLAR_ID,
         "author_pub_id": pub_id,
         "reason_code": reason_code,
         "reason": reason,
         "evidence_url": url,
-        "verified_at": "2026-10-24",
+        "verified_at": verified_at,
     }
 
 
@@ -287,7 +699,14 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                 evidence_source,
                 basis,
             ) = OTHER_PRIMARY[index]
-            if title != expected_title or year != str(expected_year):
+            if (
+                title != expected_title
+                or year != str(expected_year)
+                or (
+                    index in OTHER_PRIMARY_ID_GUARDS
+                    and pub_id != OTHER_PRIMARY_ID_GUARDS[index]
+                )
+            ):
                 raise ValueError(f"Primary-source match changed at capture row {index}")
             status = "proposed_other_person_primary_work"
             additions.append(
@@ -301,6 +720,11 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                         + (f" Article DOI {doi}." if doi else "")
                     ),
                     evidence_url,
+                    verified_at=(
+                        "2026-10-25"
+                        if index in OTHER_PRIMARY_ID_GUARDS
+                        else "2026-10-24"
+                    ),
                 )
             )
         elif index == 917:
@@ -321,6 +745,54 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     evidence_url,
                 )
             )
+        elif index in CORRUPTED_DUPLICATE_PRIMARY:
+            (
+                expected_title,
+                expected_year,
+                evidence_url,
+                retained_pub_id,
+            ) = CORRUPTED_DUPLICATE_PRIMARY[index]
+            if (
+                title != expected_title
+                or year != str(expected_year)
+                or row["authors"] != rows[0]["authors"]
+                or "32 (2)" not in row["venue"]
+                or scholar_pub_id(rows[0]) != retained_pub_id
+            ):
+                raise ValueError(f"Publisher duplicate match changed at row {index}")
+            status = "proposed_corrupted_duplicate_primary"
+            evidence_source = "APS original article"
+            additions.append(
+                decision(
+                    pub_id,
+                    "corrupted_duplicate",
+                    (
+                        "The initials, coauthors, 1985 year, Physical Review D "
+                        "volume 32 issue 2, and malformed S/sup 5 title point to "
+                        "the one APS article represented by Scholar observation "
+                        f"{retained_pub_id}; this row is a broken duplicate."
+                    ),
+                    evidence_url,
+                )
+            )
+        elif index in CMU_ORCID_DOI_HOLD:
+            expected_title, expected_year, doi, evidence_url = CMU_ORCID_DOI_HOLD[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(f"CMU ORCID DOI match changed at capture row {index}")
+            status = "cmu_orcid_doi_identity_hold"
+            evidence_source = (
+                "CMU-linked ORCID work; ResearcherID import; author unresolved"
+            )
+        elif index in CMU_PRIMARY:
+            (
+                expected_title,
+                expected_year,
+                evidence_url,
+                evidence_source,
+            ) = CMU_PRIMARY[index]
+            if title != expected_title or year != str(expected_year):
+                raise ValueError(f"CMU primary match changed at capture row {index}")
+            status = "cmu_primary_work_retained"
         elif cmu_exact:
             status = "cmu_orcid_exact_title_year_retained"
             doi = cmu_exact["doi"]
@@ -387,20 +859,22 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
     expected = {
         "already_excluded": 8,
         "cmu_orcid_exact_title_year_retained": 100,
-        "cmu_orcid_title_only_year_check": 1,
-        "knu_orcid_exact_title_year_missing_doi_hold": 5,
-        "knu_orcid_title_only_year_check": 5,
+        "cmu_orcid_doi_identity_hold": 1,
+        "cmu_primary_work_retained": 10,
+        "knu_orcid_exact_title_year_missing_doi_hold": 2,
+        "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 12,
+        "proposed_other_person_primary_work": 39,
         "proposed_acs_supporting_information_nonpublication": 1,
-        "unresolved_attribution_hold": 451,
+        "proposed_corrupted_duplicate_primary": 1,
+        "unresolved_attribution_hold": 419,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 348 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 376 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
