@@ -123,6 +123,8 @@ class RegionReleaseDiffError(ValueError):
             "unused binding approvals, "
             f"{len(receipt.get('unused_sullivan_loss_approvals', []))} "
             "unused Sullivan approvals; "
+            f"{len(receipt.get('unused_person_hold_approvals', []))} "
+            "unused person-hold approvals; "
             f"first IDs: {receipt['unexplained_losses'][:2]} "
             f"{receipt['unexplained_gains'][:2]}"
         )
@@ -388,6 +390,7 @@ def reconcile_region_decisions(
     prior_revision: str,
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
+    approved_person_hold_losses: frozenset[ObservationKey] = frozenset(),
     composite_plan: Any | None = None,
     historical_works: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
@@ -615,7 +618,16 @@ def reconcile_region_decisions(
         if sullivan_loss_approval is not None
         else otherwise_unexplained_losses
     )
-    unexplained_losses = sorted(losses_requiring_approval - approved_sullivan_losses)
+    if approved_person_hold_losses & approved_sullivan_losses:
+        raise ValueError("Person-publication hold overlaps another loss approval")
+    unused_person_hold_approvals = (
+        approved_person_hold_losses - losses_requiring_approval
+    )
+    unexplained_losses = sorted(
+        losses_requiring_approval
+        - approved_sullivan_losses
+        - approved_person_hold_losses
+    )
     verified_gains = sorted(
         identity
         for identity in gains
@@ -703,6 +715,12 @@ def reconcile_region_decisions(
         "unused_sullivan_loss_approvals": [
             _display(item) for item in sorted(unused_sullivan_approvals)
         ],
+        "approved_person_hold_losses": [
+            _display(item) for item in sorted(approved_person_hold_losses)
+        ],
+        "unused_person_hold_approvals": [
+            _display(item) for item in sorted(unused_person_hold_approvals)
+        ],
         "verified_gains": [_display(item) for item in verified_gains],
         "reviewed_composite_work_gains": (
             sorted(composite_plan.gains) if composite_plan is not None else []
@@ -745,6 +763,7 @@ def reconcile_region_decisions(
         or unused_sullivan_binding_approvals
         or missing_curated_targets
         or unused_sullivan_approvals
+        or unused_person_hold_approvals
     ):
         raise RegionReleaseDiffError(receipt)
     return output, receipt

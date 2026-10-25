@@ -159,6 +159,42 @@ def _candidate(monkeypatch):
     }
 
 
+def test_bio_gate_allows_only_exact_source_bound_person_hold_losses(
+    monkeypatch,
+) -> None:
+    candidate = _candidate(monkeypatch)
+    held = {
+        "person_id": "person-shlomotaasan-403c9cf9",
+        "scholar_id": "",
+        "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1000/held",
+        "source_type": "curated_verified",
+    }
+    identity = tuple(held[field] for field in gate.IDENTITY)
+    candidate["source_frame"] = pandas.concat(
+        [candidate["source_frame"], pandas.DataFrame([held])],
+        ignore_index=True,
+    )
+    monkeypatch.setattr(gate, "BIO_SOURCE_ROWS", len(candidate["source_frame"]))
+    with pytest.raises(ValueError, match="Candidate loses 1 released source rows"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["approved_person_hold_losses"] = frozenset({identity})
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = [
+        "/".join(identity)
+    ]
+    assert gate.validate_bio_release_prewrite(**candidate)["status"] == "pass"
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = []
+    with pytest.raises(ValueError, match="clean exact-observation"):
+        gate.validate_bio_release_prewrite(**candidate)
+    candidate["continuity_receipt"]["approved_person_hold_losses"] = [
+        "/".join(identity)
+    ]
+    candidate["approved_person_hold_losses"] = frozenset(
+        {("person-unrelated", "", "curated-doi:unrelated", "curated_verified")}
+    )
+    with pytest.raises(ValueError, match="Candidate loses 1 released source rows"):
+        gate.validate_bio_release_prewrite(**candidate)
+
+
 def test_bio_prewrite_gate_preserves_complete_source_graph_and_topics(
     monkeypatch,
 ) -> None:

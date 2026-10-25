@@ -1,6 +1,7 @@
 """A partial Math source can be audited without publishing a partial profile."""
 
 import json
+from dataclasses import replace
 from types import SimpleNamespace
 
 import pandas
@@ -12,6 +13,7 @@ from map_of_research.person_publication_holds import (
     load_person_publication_holds,
     require_no_held_person_contributions,
     select_released_person_observations,
+    validate_person_hold_losses,
 )
 from map_of_research.publisher import build_map_artifact
 from map_of_research.registry import load_registry
@@ -83,8 +85,9 @@ def test_checked_in_hold_binds_three_exact_dois_and_raw_observations() -> None:
     assert selected.person_id == TAASAN
     assert selected.expected_source_rows == 3
     assert selected.source_snapshot_sha256 == (
-        "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2"
+        "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550"
     )
+    assert selected.prior_revision == "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061"
     assert {row[0] for row in selected.source_observations} == {
         "10.1016/s1359-6462(97)00530-7",
         "10.4028/www.scientific.net/msf.715-716.473",
@@ -114,6 +117,7 @@ def test_manifest_structure_fails_closed(tmp_path, body, message) -> None:
     [
         ("person_id", "wrong", "observation identity differs"),
         ("source_snapshot_sha256", "bad", "invalid fields"),
+        ("prior_revision", "bad", "invalid fields"),
         ("expected_source_rows", 2, "invalid fields"),
         ("expected_source_rows", True, "invalid fields"),
         ("source_observations", "bad", "exact observations"),
@@ -145,6 +149,145 @@ def test_manifest_rejects_observation_drift_and_duplicate_people(tmp_path) -> No
     path.write_text(json.dumps(body), encoding="utf-8")
     with pytest.raises(ValueError, match="invalid fields"):
         load_person_publication_holds(path)
+
+
+def test_manifest_rejects_prior_work_or_eligibility_drift(tmp_path) -> None:
+    for field, value in (
+        ("prior_work_id", "work-wrong"),
+        ("prior_collaboration_eligible", "true"),
+    ):
+        body = json.loads(DEFAULT_PERSON_PUBLICATION_HOLDS_PATH.read_text())
+        body["holds"][0]["source_observations"][0][field] = value
+        path = tmp_path / "holds.json"
+        path.write_text(json.dumps(body), encoding="utf-8")
+        with pytest.raises(ValueError, match="observation identity differs"):
+            load_person_publication_holds(path)
+
+
+def prior_hold_tables():
+    selected = hold()
+    prior_profiles = [
+        {
+            "person_id": TAASAN,
+            "scholar_id": "",
+            "author_pub_id": author_pub_id,
+            "source_type": "curated_verified",
+            "source_doi": doi,
+            "work_id": work_id,
+            "map_eligible": True,
+            "collaboration_eligible": eligible,
+        }
+        for doi, author_pub_id, _, work_id, eligible in selected.prior_observations
+    ]
+    prior_works = [
+        {"work_id": work_id, "doi": doi, "map_eligible": True}
+        for doi, _, _, work_id, _ in selected.prior_observations
+    ]
+    return prior_works, prior_profiles
+
+
+def test_exact_held_losses_require_current_parent_and_prior_bindings() -> None:
+    prior_works, prior_profiles = prior_hold_tables()
+    selected = hold()
+    approved = validate_person_hold_losses(
+        (selected,),
+        prior_revision=selected.prior_revision,
+        prior_works=prior_works,
+        prior_profiles=prior_profiles,
+        current_profiles=[],
+    )
+    assert len(approved) == 3
+    assert approved == frozenset(
+        (TAASAN, "", author_pub_id, "curated_verified")
+        for _, author_pub_id, _ in selected.source_observations
+    )
+    assert (
+        validate_person_hold_losses(
+            (),
+            prior_revision=selected.prior_revision,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=[],
+        )
+        == frozenset()
+    )
+    with pytest.raises(ValueError, match="parent revision"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision="0" * 40,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=[],
+        )
+    with pytest.raises(ValueError, match="prior or current rows"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=selected.prior_revision,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=prior_profiles,
+        )
+    with pytest.raises(ValueError, match="prior or current rows"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=selected.prior_revision,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles[:2],
+            current_profiles=[],
+        )
+    with pytest.raises(ValueError, match="not unique"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=selected.prior_revision,
+            prior_works=prior_works,
+            prior_profiles=[prior_profiles[0], prior_profiles[0], prior_profiles[2]],
+            current_profiles=[],
+        )
+    for change in (
+        {"source_doi": "10.1000/wrong"},
+        {"work_id": "work-" + "0" * 64},
+        {"collaboration_eligible": False},
+        {"map_eligible": False},
+    ):
+        changed = [{**prior_profiles[0], **change}, *prior_profiles[1:]]
+        with pytest.raises(ValueError, match="prior binding"):
+            validate_person_hold_losses(
+                (selected,),
+                prior_revision=selected.prior_revision,
+                prior_works=prior_works,
+                prior_profiles=changed,
+                current_profiles=[],
+            )
+    with pytest.raises(ValueError, match="prior binding"):
+        validate_person_hold_losses(
+            (selected,),
+            prior_revision=selected.prior_revision,
+            prior_works=[{**prior_works[0], "map_eligible": False}, *prior_works[1:]],
+            prior_profiles=prior_profiles,
+            current_profiles=[],
+        )
+    with pytest.raises(ValueError, match="prior binding"):
+        validate_person_hold_losses(
+            (
+                replace(
+                    selected,
+                    prior_observations=(
+                        (
+                            selected.prior_observations[0][0],
+                            selected.prior_observations[0][1],
+                            "observation-wrong",
+                            selected.prior_observations[0][3],
+                            True,
+                        ),
+                        *selected.prior_observations[1:],
+                    ),
+                ),
+            ),
+            prior_revision=selected.prior_revision,
+            prior_works=prior_works,
+            prior_profiles=prior_profiles,
+            current_profiles=[],
+        )
 
 
 def test_only_partial_person_rows_are_held_and_coauthors_remain() -> None:

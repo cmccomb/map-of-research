@@ -81,6 +81,7 @@ from .person_publication_holds import (
     load_person_publication_holds,
     require_no_held_person_contributions,
     select_released_person_observations,
+    validate_person_hold_losses,
 )
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
@@ -1285,6 +1286,7 @@ def _publish_atomic_release(
     composite_plan: Any | None = None,
     prior_works: Sequence[Mapping[str, Any]] | None = None,
     prior_artifact: Mapping[str, Any] | None = None,
+    approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1450,6 +1452,7 @@ def _publish_atomic_release(
                 baselines=baselines,
                 repair_manifest=repair_manifest,
                 provisional_holds=provisional_holds,
+                approved_person_hold_losses=approved_person_hold_losses,
             )
         else:
             if (
@@ -1753,6 +1756,13 @@ def publish_snapshot(
     )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    approved_person_hold_losses = validate_person_hold_losses(
+        person_holds,
+        prior_revision=prior_revision,
+        prior_works=prior_works,
+        prior_profiles=prior_profiles,
+        current_profiles=tables["profile_publications"].to_dict("records"),
+    )
     prior_artifact = None
     if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         from huggingface_hub import hf_hub_download
@@ -1826,6 +1836,7 @@ def publish_snapshot(
         prior_revision=comparison_revision,
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
+        approved_person_hold_losses=approved_person_hold_losses,
         composite_plan=composite_plan,
         historical_works=historical_works,
     )
@@ -1921,6 +1932,7 @@ def publish_snapshot(
         composite_plan=composite_plan,
         prior_works=prior_works if composite_plan is not None else None,
         prior_artifact=prior_artifact,
+        approved_person_hold_losses=approved_person_hold_losses,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (

@@ -5,7 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import re
-from collections.abc import Mapping
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -24,8 +24,10 @@ _DOI = re.compile(r"10\.\d{4,9}/\S+")
 class PersonPublicationHold:
     person_id: str
     source_snapshot_sha256: str
+    prior_revision: str
     expected_source_rows: int
     source_observations: tuple[tuple[str, str, str], ...]
+    prior_observations: tuple[tuple[str, str, str, str, bool], ...]
     display_reason: str
     reason: str
     evidence_url: str
@@ -48,6 +50,7 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
             raise ValueError("Person-publication hold must be an object")
         person_id = entry.get("person_id")
         snapshot_sha = entry.get("source_snapshot_sha256")
+        prior_revision = entry.get("prior_revision")
         count = entry.get("expected_source_rows")
         observations = entry.get("source_observations")
         display_reason = entry.get("display_reason")
@@ -60,6 +63,7 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
         except ValueError as error:
             raise ValueError("Person-publication hold needs a review date") from error
         rows: list[tuple[str, str, str]] = []
+        prior_rows: list[tuple[str, str, str, str, bool]] = []
         if not isinstance(observations, list):
             raise ValueError("Person-publication hold needs exact observations")
         for observation in observations:
@@ -70,6 +74,10 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
             doi = observation.get("doi")
             author_pub_id = observation.get("author_pub_id")
             observation_id = observation.get("observation_id")
+            prior_work_id = observation.get("prior_work_id")
+            prior_collaboration_eligible = observation.get(
+                "prior_collaboration_eligible"
+            )
             if (
                 not isinstance(doi, str)
                 or _DOI.fullmatch(doi) is None
@@ -78,15 +86,29 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
                 or observation_id
                 != "observation-"
                 + hashlib.sha256(f"\0{author_pub_id}".encode()).hexdigest()
+                or not isinstance(prior_work_id, str)
+                or re.fullmatch(r"work-[0-9a-f]{64}", prior_work_id) is None
+                or type(prior_collaboration_eligible) is not bool
             ):
                 raise ValueError("Person-publication hold observation identity differs")
             rows.append((doi, author_pub_id, observation_id))
+            prior_rows.append(
+                (
+                    doi,
+                    author_pub_id,
+                    observation_id,
+                    prior_work_id,
+                    prior_collaboration_eligible,
+                )
+            )
         if (
             not isinstance(person_id, str)
             or not person_id.startswith("person-")
             or person_id in seen
             or not isinstance(snapshot_sha, str)
             or re.fullmatch(r"[0-9a-f]{64}", snapshot_sha) is None
+            or not isinstance(prior_revision, str)
+            or re.fullmatch(r"[0-9a-f]{40}", prior_revision) is None
             or type(count) is not int
             or count <= 0
             or len(rows) != count
@@ -103,8 +125,10 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
             PersonPublicationHold(
                 person_id=person_id,
                 source_snapshot_sha256=snapshot_sha,
+                prior_revision=prior_revision,
                 expected_source_rows=count,
                 source_observations=tuple(rows),
+                prior_observations=tuple(prior_rows),
                 display_reason=display_reason,
                 reason=reason.strip(),
                 evidence_url=str(evidence_url),
@@ -113,6 +137,66 @@ def load_person_publication_holds(path: Path) -> tuple[PersonPublicationHold, ..
         )
         seen.add(person_id)
     return tuple(holds)
+
+
+def validate_person_hold_losses(
+    holds: tuple[PersonPublicationHold, ...],
+    *,
+    prior_revision: str,
+    prior_works: Iterable[Mapping[str, Any]],
+    prior_profiles: Iterable[Mapping[str, Any]],
+    current_profiles: Iterable[Mapping[str, Any]],
+) -> frozenset[tuple[str, str, str, str]]:
+    """Approve only the held person's three mapped observations on this parent."""
+
+    if not holds:
+        return frozenset()
+    works = {str(row["work_id"]): row for row in prior_works}
+    previous = list(prior_profiles)
+    current = list(current_profiles)
+    approved: set[tuple[str, str, str, str]] = set()
+    for hold in holds:
+        if hold.prior_revision != prior_revision:
+            raise ValueError("Person-publication hold parent revision differs")
+        person_rows = [
+            row for row in previous if row.get("person_id") == hold.person_id
+        ]
+        if len(person_rows) != hold.expected_source_rows or any(
+            row.get("person_id") == hold.person_id for row in current
+        ):
+            raise ValueError("Person-publication hold prior or current rows differ")
+        prior_by_id = {str(row.get("author_pub_id")): row for row in person_rows}
+        if len(prior_by_id) != hold.expected_source_rows:
+            raise ValueError("Person-publication hold prior rows are not unique")
+        for (
+            doi,
+            author_pub_id,
+            observation_id,
+            work_id,
+            eligible,
+        ) in hold.prior_observations:
+            row = prior_by_id.get(author_pub_id)
+            work = works.get(work_id)
+            expected_observation_id = (
+                "observation-"
+                + hashlib.sha256(f"\0{author_pub_id}".encode()).hexdigest()
+            )
+            if (
+                row is None
+                or observation_id != expected_observation_id
+                or row.get("scholar_id") != ""
+                or row.get("source_type") != "curated_verified"
+                or row.get("source_doi") != doi
+                or row.get("work_id") != work_id
+                or bool(row.get("collaboration_eligible")) != eligible
+                or not row.get("map_eligible")
+                or work is None
+                or not work.get("map_eligible")
+                or work.get("doi") != doi
+            ):
+                raise ValueError("Person-publication hold prior binding differs")
+            approved.add((hold.person_id, "", author_pub_id, "curated_verified"))
+    return frozenset(approved)
 
 
 def select_released_person_observations(

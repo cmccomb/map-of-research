@@ -3,23 +3,30 @@
   "holds": [
     {
       "person_id": "person-shlomotaasan-403c9cf9",
-      "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",
+      "source_snapshot_sha256": "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550",
+      "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
       "expected_source_rows": 3,
       "source_observations": [
         {
           "doi": "10.1016/s1359-6462(97)00530-7",
           "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1016/s1359-6462(97)00530-7",
-          "observation_id": "observation-31391ec62e41d3ec310875d3f75902e6da974975f2c99ed44fb2ba892ca8568c"
+          "observation_id": "observation-31391ec62e41d3ec310875d3f75902e6da974975f2c99ed44fb2ba892ca8568c",
+          "prior_work_id": "work-18a8fad9cff6de6643a1957a193820aa377769a43308a1c99973cd0697abc141",
+          "prior_collaboration_eligible": true
         },
         {
           "doi": "10.4028/www.scientific.net/msf.715-716.473",
           "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.4028/www.scientific.net/msf.715-716.473",
-          "observation_id": "observation-4499c61018e35d148fbe3ca93b13d58c4b20709f23b8294a5a40301f753ab78b"
+          "observation_id": "observation-4499c61018e35d148fbe3ca93b13d58c4b20709f23b8294a5a40301f753ab78b",
+          "prior_work_id": "work-e4829cfdd6630ca4d6d3d0d68b1e3e3684de39ca0c62bd2c96a42f7d2b82dde4",
+          "prior_collaboration_eligible": true
         },
         {
           "doi": "10.1016/j.pmatsci.2013.03.004",
           "author_pub_id": "curated-doi:person-shlomotaasan-403c9cf9:10.1016/j.pmatsci.2013.03.004",
-          "observation_id": "observation-cfdfd75f6dfae304c5998e871126797f8f0d6e00fb3089fbd85748ee870efb6f"
+          "observation_id": "observation-cfdfd75f6dfae304c5998e871126797f8f0d6e00fb3089fbd85748ee870efb6f",
+          "prior_work_id": "work-d40d06c99d19a01466d3ec0f99972636c6b6385fa73c060560999eb6e24ddd75",
+          "prior_collaboration_eligible": true
         }
       ],
       "display_reason": "Publication history pending full capture",

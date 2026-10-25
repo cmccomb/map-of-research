@@ -103,6 +103,9 @@ def _run_preview(monkeypatch, tmp_path, *, fail_before_write: bool):
         pass
 
     def fake_publish(*_args, atomic_intent_sink, **_kwargs):
+        assert _kwargs["person_publication_holds_path"] == (
+            producer / "data/curated/person-publication-holds.json"
+        )
         if fail_before_write:
             raise ValueError("review gate failed")
         staging = tmp_path / "publisher-stage"
@@ -195,6 +198,9 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "preview_atomic_release.py" in workflow
     assert "map-validate-math-coverage" in workflow
     assert "map-validate-scholar-coverage" in workflow
+    assert (
+        "--person-publication-holds source/data/curated/person-publication-holds.json"
+    ) in upload
     assert "validate_primary_homes.py" in workflow
     assert "upload-artifact@" in workflow
     assert "git push" not in workflow

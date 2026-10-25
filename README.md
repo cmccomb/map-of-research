@@ -118,12 +118,14 @@ published counts, source hashes, and decision-manifest checksums.
 `data/curated/person-publication-holds.json` covers a different case: a
 registered person has individually verified papers but no reviewed whole-career
 publication capture. Each dated decision pins the person, frozen source SHA-256,
-and every held DOI and observation ID. The publisher retains the raw observations
-for audit, omits only that person's public publication and authorship rows,
-and leaves independent coauthor observations and canonical works in place. The
-public `people` table and map faculty catalog carry a person-level
-`publication_hold_reason`. A changed source fails against the pinned decision;
-clear the hold only after reviewing a complete publication capture.
+immutable prior Hub revision, and every held DOI, observation ID, and prior work
+binding. The publisher retains the raw observations for audit, omits only that
+person's public publication and authorship rows, and leaves independent coauthor
+observations and canonical works in place. The exact three Ta'asan losses need
+this parent-bound decision; unrelated or unused loss approvals fail before
+upload. The public `people` table and map faculty catalog carry a person-level
+`publication_hold_reason`. A changed source or parent fails against the pinned
+decision; clear the hold only after reviewing a complete publication capture.
 
 Legacy caches already at or above a requested publication limit are also
 excluded from that bounded refresh, including `--force`. For smaller caches,
