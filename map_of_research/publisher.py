@@ -66,6 +66,11 @@ from .region_continuity import (
     reconcile_region_decisions,
     require_revision,
 )
+from .region_repair import (
+    require_approved_comparison_revision,
+    require_expected_repair_preview,
+    require_frozen_source_tip,
+)
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -1213,6 +1218,7 @@ def publish_snapshot(
     source_cache_dir: Path | None = None,
     primary_home_baseline_path: Path | None = None,
     prior_revision: str | None = None,
+    region_comparison_revision: str | None = None,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1235,6 +1241,14 @@ def publish_snapshot(
         memberships_path=memberships_path,
         departments_path=departments_path,
     )
+    if region_comparison_revision is not None:
+        if prior_revision is None:
+            raise ValueError("Region comparison requires a current Hub revision")
+        require_approved_comparison_revision(
+            current_revision=prior_revision,
+            comparison_revision=region_comparison_revision,
+            snapshot_sha256=str(manifest["snapshot_sha256"]),
+        )
     exclusions = load_exclusions(exclusions_path)
     doi_aliases = load_doi_aliases(doi_aliases_path)
     validate_doi_aliases(frame, doi_aliases, exclusions)
@@ -1289,6 +1303,7 @@ def publish_snapshot(
         hf_token=hf_token,
         **({"revision": prior_revision} if prior_revision is not None else {}),
     )
+    layout_reused = False
     if existing_layouts:
         reuse = _reusable_work_order(
             tables["works"],
@@ -1301,6 +1316,7 @@ def publish_snapshot(
         )
         if reuse is not None:
             tables["works"], existing_layouts = reuse
+            layout_reused = True
     tables["works"] = add_global_layout(
         tables["works"],
         existing_layouts=existing_layouts,
@@ -1308,10 +1324,14 @@ def publish_snapshot(
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
     continuity_receipt = None
-    if prior_revision is not None:
+    comparison_revision = region_comparison_revision or prior_revision
+    if comparison_revision is not None:
         prior_works = list(
             _published_rows(
-                "works", PRIOR_WORK_FIELDS, hf_token=hf_token, revision=prior_revision
+                "works",
+                PRIOR_WORK_FIELDS,
+                hf_token=hf_token,
+                revision=comparison_revision,
             )
         )
         prior_profiles = list(
@@ -1319,7 +1339,7 @@ def publish_snapshot(
                 "profile_publications",
                 PRIOR_OBSERVATION_FIELDS,
                 hf_token=hf_token,
-                revision=prior_revision,
+                revision=comparison_revision,
             )
         )
         if not prior_works or not prior_profiles:
@@ -1329,8 +1349,16 @@ def publish_snapshot(
             tables["profile_publications"],
             prior_works,
             prior_profiles,
-            prior_revision=prior_revision,
+            prior_revision=comparison_revision,
         )
+        if comparison_revision != prior_revision:
+            continuity_receipt["current_hub_revision"] = prior_revision
+            require_expected_repair_preview(
+                work_count=len(tables["works"]),
+                new_embedding_count=new_embedding_count,
+                layout_reused=layout_reused,
+                continuity_receipt=continuity_receipt,
+            )
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
@@ -1339,6 +1367,8 @@ def publish_snapshot(
         _require_current_dataset_revision(
             hf_token=hf_token, prior_revision=prior_revision
         )
+    if comparison_revision != prior_revision:
+        require_frozen_source_tip(snapshot_path.parent.parent)
     dataset_commits: dict[str, str] = {}
     for config_name in DATASET_CONFIGS:
         commit = _to_hub_dataset(tables[config_name]).push_to_hub(
@@ -1447,6 +1477,7 @@ def publish_snapshot(
         "region_audit_version": REGION_AUDIT_VERSION,
         "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
         "region_continuity": continuity_receipt,
+        "region_comparison_revision": comparison_revision,
     }
 
 
@@ -1468,6 +1499,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         required=True,
         type=require_revision,
         help="Immutable SHA of the dataset release this upload replaces",
+    )
+    parser.add_argument(
+        "--region-comparison-revision",
+        type=require_revision,
+        help="Exact region baseline; defaults to the current Hub revision",
     )
     parser.add_argument("--people", type=Path, default=DEFAULT_PEOPLE_PATH)
     parser.add_argument("--primary-home-baseline", type=Path)
@@ -1535,7 +1571,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         "dataset_id": REPO_ID,
         "dataset_configs": list(DATASET_CONFIGS),
         "workflow_url": _workflow_url(),
+        "producer_commit": os.environ.get("MAP_PRODUCER_COMMIT"),
+        "snapshot_commit": os.environ.get("MAP_SOURCE_COMMIT"),
         "prior_revision": args.prior_revision,
+        "region_comparison_revision": (
+            args.region_comparison_revision or args.prior_revision
+        ),
     }
     try:
         hf_token = os.environ.get(HF_TOKEN_ENV)
@@ -1589,6 +1630,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
+            region_comparison_revision=args.region_comparison_revision,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

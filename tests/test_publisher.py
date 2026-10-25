@@ -1582,7 +1582,13 @@ def test_hub_dataset_avoids_unnecessary_casts() -> None:
 
 @pytest.mark.parametrize("reuse_order", [False, True])
 @pytest.mark.parametrize(
-    ("pinned", "missing_prior"), [(False, False), (True, False), (True, True)]
+    ("pinned", "missing_prior", "region_override"),
+    [
+        (False, False, False),
+        (True, False, False),
+        (True, True, False),
+        (True, False, True),
+    ],
 )
 def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch,
@@ -1590,6 +1596,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     reuse_order,
     pinned,
     missing_prior,
+    region_override,
 ) -> None:
     frame = pandas.DataFrame(
         {
@@ -1692,29 +1699,50 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         lambda *args, **kwargs: "artifact-commit",
     )
     baseline_checks = []
+    comparison_checks = []
+    preview_checks = []
+    source_tip_checks = []
+    published_revisions = []
+    if region_override:
+        monkeypatch.setattr(
+            publisher,
+            "require_approved_comparison_revision",
+            lambda **kwargs: comparison_checks.append(kwargs),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "require_frozen_source_tip",
+            lambda path: source_tip_checks.append(path),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "require_expected_repair_preview",
+            lambda **kwargs: preview_checks.append(kwargs),
+        )
     if pinned:
         monkeypatch.setattr(
             publisher,
             "_require_current_dataset_revision",
             lambda **kwargs: baseline_checks.append(kwargs["prior_revision"]),
         )
-        monkeypatch.setattr(
-            publisher,
-            "_published_rows",
-            lambda config, fields, **kwargs: (
+
+        def prior_rows(config, fields, **kwargs):
+            published_revisions.append(kwargs["revision"])
+            return (
                 []
                 if missing_prior and config == "works"
                 else [{"work_id": "old"}]
                 if config == "works"
                 else [{"author_pub_id": "one:a"}]
-            ),
-        )
+            )
+
+        monkeypatch.setattr(publisher, "_published_rows", prior_rows)
         monkeypatch.setattr(
             publisher,
             "reconcile_region_decisions",
             lambda works, *args, **kwargs: (
                 works,
-                {"prior_revision": "a" * 40, "stable_works": 1},
+                {"prior_revision": kwargs["prior_revision"], "stable_works": 1},
             ),
         )
 
@@ -1737,6 +1765,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         "corrections_path": corrections_path,
         "prior_revision": "a" * 40 if pinned else None,
     }
+    if region_override:
+        publish_options["region_comparison_revision"] = "b" * 40
     if missing_prior:
         with pytest.raises(RuntimeError, match="lacks region continuity tables"):
             publisher.publish_snapshot(
@@ -1751,8 +1781,48 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         **publish_options,
     )
     assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
+    assert published_revisions == (
+        ["b" * 40 if region_override else "a" * 40] * 2 if pinned else []
+    )
+    assert comparison_checks == (
+        [
+            {
+                "current_revision": "a" * 40,
+                "comparison_revision": "b" * 40,
+                "snapshot_sha256": "test-snapshot",
+            }
+        ]
+        if region_override
+        else []
+    )
+    assert source_tip_checks == ([tmp_path.parent] if region_override else [])
+    assert preview_checks == (
+        [
+            {
+                "work_count": 2,
+                "new_embedding_count": 2,
+                "layout_reused": reuse_order,
+                "continuity_receipt": {
+                    "prior_revision": "b" * 40,
+                    "stable_works": 1,
+                    "current_hub_revision": "a" * 40,
+                },
+            }
+        ]
+        if region_override
+        else []
+    )
     assert result["region_continuity"] == (
-        {"prior_revision": "a" * 40, "stable_works": 1} if pinned else None
+        {
+            "prior_revision": "b" * 40 if region_override else "a" * 40,
+            "stable_works": 1,
+            **({"current_hub_revision": "a" * 40} if region_override else {}),
+        }
+        if pinned
+        else None
+    )
+    assert result["region_comparison_revision"] == (
+        "b" * 40 if region_override else "a" * 40 if pinned else None
     )
     assert result["dataset_commits"] == {
         name: f"{name}-commit" for name in publisher.DATASET_CONFIGS
@@ -1773,6 +1843,25 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["topic_label_review_version"] == (
         publisher.TOPIC_LABEL_REVIEW_VERSION
     )
+
+
+def test_region_override_requires_current_hub_revision(monkeypatch, tmp_path) -> None:
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame(),
+            {"snapshot_sha256": "test-snapshot"},
+        ),
+    )
+    with pytest.raises(ValueError, match="requires a current Hub revision"):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            region_comparison_revision="a" * 40,
+        )
 
 
 def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -> None:

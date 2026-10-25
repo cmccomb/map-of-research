@@ -303,6 +303,19 @@ The upload and map receipts record the baseline SHA and any carried decisions
 or reviewed changes. Prior map visibility controls release changes; it does
 not establish that a publication is valid.
 
+The one-time Bernhard correction uses `workflow_dispatch` on `main` with
+`snapshot_ref=automation/map-snapshot` and `restore_prior_regions=true`. The
+publisher still pins the current hosted head for upload safety, embeddings,
+and layouts. It compares region decisions with the last verified pre-Bernhard
+release only after checking the exact snapshot bytes, immutable source and
+historical receipt commits, both successful receipts, and the producer commit
+selected by the dispatch event. It checks the live source branch tip again
+immediately before the first Hub write. Ordinary push and dispatch uploads
+leave the switch false and compare with their current hosted head. A completed
+correction cannot be replayed because the hosted head and source tip change.
+Keep producer `main` and the snapshot branch frozen through the receipt push;
+the pre-write check cannot lock the Git branch against a later writer.
+
 The publisher writes dataset configs sequentially and checks that the hosted
 repository still equals the pinned prior SHA immediately before the first
 write. If an upload fails after any config was written, the next run stops at

@@ -14,6 +14,11 @@ on:
         required: true
         default: automation/map-snapshot
         type: string
+      restore_prior_regions:
+        description: One-time Bernhard weak-region correction on frozen source
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -34,7 +39,7 @@ jobs:
       - name: Check out trusted publisher
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.sha || 'main' }}
           path: source
           persist-credentials: false
       - name: Check out collected snapshot
@@ -50,6 +55,15 @@ jobs:
             data/captures
             status
           sparse-checkout-cone-mode: false
+      - name: Check out reviewed prior upload receipt
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: 3b3ba167947dc399edc08f17b9985a53b5260e4f
+          path: reviewed-prior
+          persist-credentials: false
+          sparse-checkout: status/last-upload.json
+          sparse-checkout-cone-mode: false
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -63,6 +77,25 @@ jobs:
         run: |
           python -m map_of_research.release_baseline \
             --status-dir snapshot/status >> "$GITHUB_OUTPUT"
+      - name: Select region comparison
+        id: region
+        env:
+          RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
+        run: |
+          python -m map_of_research.region_repair \
+            --restore-prior-regions "$RESTORE_PRIOR_REGIONS" \
+            --event-name "$GITHUB_EVENT_NAME" \
+            --run-ref "$GITHUB_REF" \
+            --run-commit "$GITHUB_SHA" \
+            --producer-commit "$(git -C source rev-parse HEAD)" \
+            --snapshot-ref "$SNAPSHOT_REF" \
+            --snapshot-commit "$(git -C snapshot rev-parse HEAD)" \
+            --historical-commit "$(git -C reviewed-prior rev-parse HEAD 2>/dev/null || true)" \
+            --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
+            --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
+            --current-receipt snapshot/status/last-upload.json \
+            --historical-receipt reviewed-prior/status/last-upload.json \
+            --current-revision "${{ steps.baseline.outputs.revision }}" >> "$GITHUB_OUTPUT"
       - name: Require evidenced primary homes for included Scholar profiles
         run: |
           python source/scripts/validate_primary_homes.py \
@@ -100,10 +133,14 @@ jobs:
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
+          MAP_PRODUCER_COMMIT="$(git -C source rev-parse HEAD)"
+          MAP_SOURCE_COMMIT="$(git -C snapshot rev-parse HEAD)"
+          export MAP_PRODUCER_COMMIT MAP_SOURCE_COMMIT
           map-publish-snapshot \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
+            --region-comparison-revision "${{ steps.region.outputs.revision }}" \
             --people source/registry/people.csv \
             --primary-home-baseline source/registry/reviews/2026-10-25-implicit-scholar-primary-baseline.json \
             --memberships source/registry/memberships.csv \
