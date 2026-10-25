@@ -33,6 +33,45 @@ _BREIVIK_ROW115_REPAIR_LEDGER = Path(
 _BREIVIK_ROW116_REPAIR_LEDGER = Path(
     "status/physics-breivik-row116-cache-repair-2026-10-25.json"
 )
+_PHYSICS_SVG_TITLE_REPAIR_LEDGER = Path(
+    "status/physics-eight-svg-title-repairs-2026-10-25.json"
+)
+_PHYSICS_NINE_SVG_TITLE_REPAIR_LEDGER = Path(
+    "status/physics-nine-svg-title-repairs-2026-10-25.json"
+)
+_PHYSICS_NINE_SVG_SCHOLARS = frozenset(
+    {
+        "6pPZKd0AAAAJ",
+        "NhBa8hAAAAAJ",
+        "jkKrk0sAAAAJ",
+        "wex9ft0AAAAJ",
+        "wJ_gQLoAAAAJ",
+    }
+)
+_PHYSICS_REVIEW_REPAIR_LEDGERS = {
+    "wJ_gQLoAAAAJ": Path(
+        "status/physics-cremonesi-cache-title-repairs-2026-10-24.json"
+    ),
+    "LibSWRMAAAAJ": Path(
+        "status/physics-schumacher-cache-title-repairs-2026-10-24.json"
+    ),
+}
+_PHYSICS_REVIEW_RECEIPTS = {
+    "wJ_gQLoAAAAJ": "status/browser-capture-physics-matteo-cremonesi-2026-10-24.json",
+    "LibSWRMAAAAJ": (
+        "status/browser-capture-physics-reinhard-schumacher-2026-10-24.json"
+    ),
+}
+_PHYSICS_REVIEW_SOURCE_HASHES = {
+    "wJ_gQLoAAAAJ": (
+        "a9090001adfae87a95ea4925beb9c0335db0622e0250ce6a7d199b5e92ed49ba",
+        "59c1fbb55bfe30f22796d518cf5c81ded79f7f11667ea1ee95e9ee4dcb7d0017",
+    ),
+    "LibSWRMAAAAJ": (
+        "050aa1cffa53fec64523f27b8d7093a6973c4cb7b267697c80f31c17ec20eb20",
+        "5ce76d360feff9abf784e45ed2afa5c2c2e3df0f5fbe18b6b005d1017d2ee93d",
+    ),
+}
 _TINA_RAW_TITLE = (
     "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
 )
@@ -60,6 +99,7 @@ class _ProfileHTML(HTMLParser):
         self.row_count = 0
         self.citation_ids: list[str] = []
         self.rows: list[dict[str, str]] = []
+        self.svg_title_rows: set[int] = set()
         self.more_buttons: list[bool] = []
         self._cell = ""
         self._gray_count = 0
@@ -77,6 +117,7 @@ class _ProfileHTML(HTMLParser):
                 # padding is not part of the citation title, including when a
                 # hyphen follows the SVG with no intervening space.
                 self._field_text.append((attributes.get("aria-label") or "").strip())
+                self.svg_title_rows.add(self.row_count)
             self._field_depth += 1
             return
         if tag == "tr" and "gsc_a_tr" in (attributes.get("class") or "").split():
@@ -274,6 +315,160 @@ def _is_reviewed_breivik_author_repair(
     )
 
 
+def _is_reviewed_svg_title_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    source_title: Any,
+    html_title: Any,
+    cache_title: Any,
+    receipt: dict[str, Any],
+    captures_dir: Path,
+    has_svg_title: bool,
+) -> bool:
+    """Accept only a hash-bound, ledger-listed saved-HTML SVG title repair."""
+
+    if (
+        not has_svg_title
+        or not isinstance(source_title, str)
+        or not isinstance(html_title, str)
+        or cache_title != html_title
+    ):
+        return False
+    ledger_name = (
+        _PHYSICS_NINE_SVG_TITLE_REPAIR_LEDGER
+        if scholar_id in _PHYSICS_NINE_SVG_SCHOLARS
+        else _PHYSICS_SVG_TITLE_REPAIR_LEDGER
+    )
+    ledger_path = captures_dir.parent.parent / ledger_name
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "saved_html_svg_title_repair"
+        or not isinstance(ledger.get("entries"), list)
+        or not ledger["entries"]
+    ):
+        return False
+    required = {
+        "scholar_id",
+        "capture_row",
+        "author_pub_id",
+        "captured_value",
+        "repaired_value",
+        "source_json_sha256",
+        "source_html_sha256",
+    }
+    entries = ledger["entries"]
+    if any(
+        not isinstance(item, dict) or not required <= item.keys() for item in entries
+    ):
+        return False
+    matches = [
+        item
+        for item in entries
+        if item["scholar_id"] == scholar_id
+        and item["capture_row"] == index
+        and item["author_pub_id"] == citation_id
+    ]
+    if len(matches) != 1:
+        return False
+    repair = matches[0]
+    return (
+        repair["captured_value"] == source_title
+        and repair["repaired_value"] == html_title
+        and repair["source_json_sha256"] == receipt.get("source_json_sha256")
+        and repair["source_html_sha256"] == receipt.get("source_html_sha256")
+    )
+
+
+def _reviewed_physics_capture(scholar_id: str, receipt: dict[str, Any]) -> bool:
+    """Bind the two older held Physics captures to their saved source bytes."""
+
+    hashes = _PHYSICS_REVIEW_SOURCE_HASHES.get(scholar_id)
+    return hashes is not None and hashes == (
+        receipt.get("source_json_sha256"),
+        receipt.get("source_html_sha256"),
+    )
+
+
+def _is_reviewed_physics_cache_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    field: str,
+    source_value: Any,
+    cache_value: Any,
+    receipt: dict[str, Any],
+    captures_dir: Path,
+) -> bool:
+    """Accept an exact, previously reviewed title or venue cache correction."""
+
+    ledger_name = _PHYSICS_REVIEW_REPAIR_LEDGERS.get(scholar_id)
+    if (
+        ledger_name is None
+        or field not in {"title", "venue"}
+        or not _reviewed_physics_capture(scholar_id, receipt)
+    ):
+        return False
+    ledger_path = captures_dir.parent.parent / ledger_name
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "source_reviewed_cache_repaired"
+        or ledger.get("raw_capture_and_receipt_unchanged") is not True
+        or not isinstance(ledger.get("capture_receipts"), dict)
+        or ledger["capture_receipts"].get(scholar_id)
+        != _PHYSICS_REVIEW_RECEIPTS[scholar_id]
+        or not isinstance(ledger.get("repairs"), list)
+    ):
+        return False
+    matches = [
+        item
+        for item in ledger["repairs"]
+        if isinstance(item, dict)
+        and item.get("scholar_id") == scholar_id
+        and item.get("capture_row") == index
+        and item.get("author_pub_id") == citation_id
+        and item.get("cache_field") == field
+    ]
+    if len(matches) != 1:
+        return False
+    item = matches[0]
+    return (
+        item.get("captured_value") == source_value
+        and item.get("repaired_value") == cache_value
+        and urlparse(str(item.get("evidence_url") or "")).scheme == "https"
+    )
+
+
+def _is_reviewed_physics_split_venue(
+    scholar_id: str,
+    source_venue: Any,
+    source_year: Any,
+    html_venue: Any,
+    receipt: dict[str, Any],
+) -> bool:
+    """The two saved extractors split Scholar's trailing year from venue."""
+
+    return (
+        _reviewed_physics_capture(scholar_id, receipt)
+        and _normalized(html_venue)
+        == f"{_normalized(source_venue)}, {_normalized(source_year) or '0'}"
+    )
+
+
 def validate_complete_receipt(
     scholar_id: str, cache: dict[str, Any], captures_dir: Path
 ) -> None:
@@ -346,25 +541,66 @@ def validate_complete_receipt(
         citation_url = str(source_row.get("citation_url") or "")
         citation_id = _citation_id(citation_url)
         citation_count = _normalized(source_row.get("citation_count")).replace(",", "")
+        source_title = source_row.get("title")
+        html_title = html_row.get("title")
+        cached_title = cached_row.get("title")
+        svg_title_repaired = _normalized(html_title) != _normalized(
+            source_title
+        ) and _is_reviewed_svg_title_repair(
+            scholar_id,
+            index,
+            citation_id,
+            source_title,
+            html_title,
+            cached_title,
+            receipt,
+            captures_dir,
+            index in html.svg_title_rows,
+        )
         if (
             source_row.get("index") != index
             or not citation_id.startswith(f"{scholar_id}:")
             or citation_id != html.citation_ids[index - 1]
             or citation_id != cached_row.get("author_pub_id")
             or citation_url != cached_row.get("pub_url")
+            or (
+                _normalized(html_title) != _normalized(source_title)
+                and not svg_title_repaired
+            )
             or any(
                 _normalized(html_row.get(key)) != _normalized(source_row.get(key))
-                for key in ("title", "authors", "venue", "year", "citation_count")
+                for key in ("authors", "year", "citation_count")
             )
             or (
-                _normalized(cached_row.get("title"))
-                != _normalized(source_row.get("title"))
+                _normalized(html_row.get("venue"))
+                != _normalized(source_row.get("venue"))
+                and not _is_reviewed_physics_split_venue(
+                    scholar_id,
+                    source_row.get("venue"),
+                    source_row.get("year"),
+                    html_row.get("venue"),
+                    receipt,
+                )
+            )
+            or (
+                _normalized(cached_title) != _normalized(source_title)
+                and not svg_title_repaired
                 and not _is_reviewed_tina_title_repair(
                     scholar_id,
                     index,
                     citation_id,
-                    source_row.get("title"),
-                    cached_row.get("title"),
+                    source_title,
+                    cached_title,
+                    captures_dir,
+                )
+                and not _is_reviewed_physics_cache_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    "title",
+                    source_title,
+                    cached_title,
+                    receipt,
                     captures_dir,
                 )
             )
@@ -380,11 +616,22 @@ def validate_complete_receipt(
                     captures_dir,
                 )
             )
-            or any(
-                _normalized(cached_row.get(cache_key))
-                != _normalized(source_row.get(source_key))
-                for cache_key, source_key in (("venue", "venue"), ("pub_year", "year"))
+            or (
+                _normalized(cached_row.get("venue"))
+                != _normalized(source_row.get("venue"))
+                and not _is_reviewed_physics_cache_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    "venue",
+                    source_row.get("venue"),
+                    cached_row.get("venue"),
+                    receipt,
+                    captures_dir,
+                )
             )
+            or _normalized(cached_row.get("pub_year"))
+            != _normalized(source_row.get("year"))
             or (citation_count != "" and not citation_count.isdecimal())
             or cached_row.get("num_citations") != int(citation_count or "0")
         ):

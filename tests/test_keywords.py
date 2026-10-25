@@ -1,6 +1,8 @@
 import numpy
 import pandas
 import pytest
+from sklearn.cluster import KMeans
+from threadpoolctl import threadpool_info, threadpool_limits
 
 import map_of_research.keywords as keywords
 from map_of_research.doi_aliases import ReviewedDoiAlias
@@ -91,6 +93,78 @@ def test_keywords_are_deterministic_visible_regions_and_retain_every_work() -> N
     )
     assert not first["keyword_label_reviewed"].any()
     assert first["detail_keyword_label_reviewed"].dtype == bool
+
+
+def test_topic_fits_repeat_with_multithreaded_native_runtime(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    subjects = (
+        "robot motion",
+        "battery health",
+        "protein folding",
+        "material synthesis",
+    )
+    details = ("planning methods", "sensor measurements", "experimental validation")
+    rows = []
+    for group, subject in enumerate(subjects):
+        center_x = -1.0 if group % 2 == 0 else 1.0
+        center_y = -1.0 if group < 2 else 1.0
+        for detail, phrase in enumerate(details):
+            for index in range(25):
+                angle = index * 0.73
+                rows.append(
+                    {
+                        "work_id": f"work-{group}-{detail}-{index}",
+                        "title": f"{subject} {phrase} study {index}",
+                        "map_eligible": True,
+                        "department_ids": ["ece"],
+                        "tsne_x": center_x
+                        + (detail - 1) * 0.2
+                        + 0.08 * numpy.cos(angle),
+                        "tsne_y": center_y
+                        + (detail - 1) * 0.2
+                        + 0.08 * numpy.sin(angle),
+                        "source_document_id": f"source-{group}-{detail}-{index}",
+                    }
+                )
+    rows.append(
+        {
+            "work_id": "excluded",
+            "title": "Excluded record",
+            "map_eligible": False,
+            "department_ids": ["ece"],
+            "tsne_x": numpy.nan,
+            "tsne_y": numpy.nan,
+            "source_document_id": "source-excluded",
+        }
+    )
+    frame = pandas.DataFrame(rows)
+    native_thread_counts = []
+    original_fit_predict = KMeans.fit_predict
+
+    def observe_fit(self: KMeans, coordinates: numpy.ndarray) -> numpy.ndarray:
+        counts = [item["num_threads"] for item in threadpool_info()]
+        native_thread_counts.append(counts)
+        assert all(count == 1 for count in counts)
+        return original_fit_predict(self, coordinates)
+
+    monkeypatch.setattr(KMeans, "fit_predict", observe_fit)
+    outputs = []
+    with threadpool_limits(limits=8):
+        for _ in range(4):
+            result = keywords.add_publication_keywords(
+                frame,
+                keyword_count=4,
+                detail_keyword_count=12,
+                minimum_detail_cluster_size=5,
+            )
+            pandas.testing.assert_frame_equal(result[frame.columns], frame)
+            topic_columns = sorted(set(result.columns) - set(frame.columns))
+            outputs.append(result[topic_columns].to_json(orient="records").encode())
+
+    assert len(native_thread_counts) >= 8  # Overview and detail fits in each run.
+    assert len(set(outputs)) == 1
+    assert result.loc[result["work_id"] == "excluded", "keyword_id"].item() == ""
 
 
 def test_one_visible_region_uses_one_keyword() -> None:
