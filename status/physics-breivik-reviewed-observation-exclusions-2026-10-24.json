@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_present_in_producer_main",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "AcW2EXwAAAAJ",
+  "producer_main_checked_commit": "f8d47fe406bbf8003a2c97d89edb7982ec7aec0d",
+  "existing_manifest_path": "data/curated/scholar-exclusions.json",
+  "existing_breivik_exclusion_count": 2,
+  "proposed_exclusion_count": 0,
+  "note": "These two exact decisions are filtered unchanged from broad draft source PR #80 and already appear in producer main. This source slice retains their original raw and cache rows and proposes no new producer decision.",
+  "exclusions": [
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "APS credits Slow-roll inflation at N3LO only to Pierre Auclair and Christophe Ringeval, not Katelyn Breivik.",
+      "evidence_url": "https://doi.org/10.1103/PhysRevD.106.063512",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "author_pub_id": "AcW2EXwAAAAJ:uWQEDVKXjbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The battery article credits Telmasre, Mishra, Jao, Aggarwal, Zheng, and Subramanian; Breivik appears only in an unrelated publisher recommendation.",
+      "evidence_url": "https://sites.utexas.edu/maple/files/2025/10/Telmasre_2025_ECS_Adv._4_030503.pdf",
+      "verified_at": "2026-10-24"
+    }
+  ]
+}

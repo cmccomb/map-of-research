@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "AcW2EXwAAAAJ",
+    "xKrmD5IAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "AcW2EXwAAAAJ",
+    "xKrmD5IAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-katelynbreivik-8bef079f",
+      "display_name": "Katelyn Breivik",
+      "scholar_id": "AcW2EXwAAAAJ",
+      "publication_count": 131,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "89cc02ae3a6319b05ea905baf715a207d41254c3935fea15500c98a2b0c38253",
+      "source_html_sha256": "67563a99261141eb6ab016622605ddf4f6c8c16fda577888afa64a13a0be758d"
+    },
+    {
+      "person_id": "person-jyotikatoch-58a2782a",
+      "display_name": "Jyoti Katoch",
+      "scholar_id": "xKrmD5IAAAAJ",
+      "publication_count": 44,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "3e28b68e0d98fbf0a6e14654745d9140765369aa69ba7fc5b5c96b5712bdf485",
+      "source_html_sha256": "0155fe015c516f3c271e6d7021025758dee1319b05856d42f04b0cda4777157a"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:18:20+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:19:55+00:00",
+  "last_profile_request_at_utc": "2026-10-24T22:19:55+00:00",
+  "inter_profile_reservation_gap_seconds": 95,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T22:21:05.926444+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Both IDs linked directly from official CMU Physics faculty pages and profile identities matched."
+}

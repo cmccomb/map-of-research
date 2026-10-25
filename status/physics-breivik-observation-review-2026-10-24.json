@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "review_state": "preliminary_candidates_not_applied",
+  "reviewed_at": "2026-10-24",
+  "scholar_id": "AcW2EXwAAAAJ",
+  "candidate_count": 8,
+  "note": "These eight exact saved-capture concerns are filtered unchanged from broad draft source PR #80. They still need source, duplicate, or publication-type review. All 131 raw and cached observations are retained; this ledger applies no producer exclusion.",
+  "candidates": [
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 130,
+      "author_pub_id": "AcW2EXwAAAAJ:qUcmZB5y_30C",
+      "concern": "Title appears malformed as “Michele Armano ESAC, ESA”; identify the underlying source."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 112,
+      "author_pub_id": "AcW2EXwAAAAJ:0EnyYjriUFMC",
+      "concern": "Missing-link record appears to overlap capture rows 6 and 128; compare source records before classifying."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 95,
+      "author_pub_id": "AcW2EXwAAAAJ:p2g8aNsByqUC",
+      "concern": "Appears to share the same arXiv identifier as capture row 94; compare versions and citation IDs."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 117,
+      "author_pub_id": "AcW2EXwAAAAJ:u-x6o8ySG0sC",
+      "concern": "AAS abstract appears to share title with capture row 115; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 121,
+      "author_pub_id": "AcW2EXwAAAAJ:ufrVoPGSRksC",
+      "concern": "AAS abstract appears to share title with capture row 116; compare source records."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 84,
+      "author_pub_id": "AcW2EXwAAAAJ:q3oQSFYPqjQC",
+      "concern": "VizieR data catalog; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 99,
+      "author_pub_id": "AcW2EXwAAAAJ:CHSYGLWDkRkC",
+      "concern": "HST proposal; verify publication-type classification."
+    },
+    {
+      "scholar_id": "AcW2EXwAAAAJ",
+      "capture_row": 131,
+      "author_pub_id": "AcW2EXwAAAAJ:d1gkVwhDpl0C",
+      "concern": "Zenodo software release; verify publication-type classification."
+    }
+  ]
+}
