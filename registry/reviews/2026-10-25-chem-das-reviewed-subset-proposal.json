@@ -16,7 +16,7 @@
       "state": "reviewed_subset",
       "expected_source_rows": 670,
       "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
-      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. Only 49 exact primary-source-attributed CMU Das publications may publish; 199 reviewed exclusions and 422 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges.",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. Only 49 exact primary-source-attributed CMU Das publications may publish; 203 reviewed exclusions and 418 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges.",
       "reviewed_at": "2026-10-25",
       "released_author_pub_ids": [
         "FrF1YXQAAAAJ:kRWSkSYxWN8C",
@@ -268,7 +268,11 @@
         "FrF1YXQAAAAJ:hefNtdE4IMkC",
         "FrF1YXQAAAAJ:rqnDXT1GswoC",
         "FrF1YXQAAAAJ:oqD4_j7ulsYC",
-        "FrF1YXQAAAAJ:DQNrXyjhriIC"
+        "FrF1YXQAAAAJ:DQNrXyjhriIC",
+        "FrF1YXQAAAAJ:PuOEWVtPfzwC",
+        "FrF1YXQAAAAJ:ji7lAbPyDbYC",
+        "FrF1YXQAAAAJ:vnF2_uLGgtgC",
+        "FrF1YXQAAAAJ:QD3KBmkZPeQC"
       ],
       "held_author_pub_ids": [
         "FrF1YXQAAAAJ:ziOE8S1-AIUC",
@@ -290,7 +294,6 @@
         "FrF1YXQAAAAJ:natZJ_-F0IUC",
         "FrF1YXQAAAAJ:Ak0FvsSvgGUC",
         "FrF1YXQAAAAJ:kz9GbA2Ns4gC",
-        "FrF1YXQAAAAJ:PuOEWVtPfzwC",
         "FrF1YXQAAAAJ:zwpXiJ37cpgC",
         "FrF1YXQAAAAJ:Y0-TYkg6YM4C",
         "FrF1YXQAAAAJ:kuK5TVdYjLIC",
@@ -300,10 +303,8 @@
         "FrF1YXQAAAAJ:pRWBApOjXDcC",
         "FrF1YXQAAAAJ:0aBXIfxlw9sC",
         "FrF1YXQAAAAJ:Dem6FJhTUoYC",
-        "FrF1YXQAAAAJ:ji7lAbPyDbYC",
         "FrF1YXQAAAAJ:bVQMTfhMCi4C",
         "FrF1YXQAAAAJ:RuPIJ_LgqDgC",
-        "FrF1YXQAAAAJ:vnF2_uLGgtgC",
         "FrF1YXQAAAAJ:GFxP56DSvIMC",
         "FrF1YXQAAAAJ:C-Rn0OCouf8C",
         "FrF1YXQAAAAJ:ILKRHgRFtOwC",
@@ -334,7 +335,6 @@
         "FrF1YXQAAAAJ:E7VqQtBCVmcC",
         "FrF1YXQAAAAJ:Kqc1aDSOPooC",
         "FrF1YXQAAAAJ:BJrgspguQaEC",
-        "FrF1YXQAAAAJ:QD3KBmkZPeQC",
         "FrF1YXQAAAAJ:NZNkWSpQBv0C",
         "FrF1YXQAAAAJ:3lUAU8Oskd0C",
         "FrF1YXQAAAAJ:GYcXSSpN504C",
