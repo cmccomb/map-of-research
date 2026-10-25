@@ -37,7 +37,10 @@ capture. A changed or absent target fails validation. The aliases apply only
 to the six enumerated Scholar publication IDs, never to a title or year rule.
 The [Iyer–Pego review](../../registry/reviews/2026-10-25-math-gautam-iyer-pego-aliases.md)
 records the exact evidence and the two held version families.
-The version-of-record title, year, and venue supply that work's display. See
+The version-of-record title, year, and venue supply that work's display.
+For a pinned Iyer DOI target paired with a Scholar preprint, the reviewed
+author-site journal year and venue supply the canonical DOI work display;
+the raw Scholar preprint metadata stays in its observation. See
 the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
 the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
 the [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md),

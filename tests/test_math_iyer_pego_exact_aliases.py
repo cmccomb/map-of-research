@@ -104,6 +104,13 @@ def test_six_source_pinned_aliases_join_only_exact_iyer_pego_pairs() -> None:
             "person-robertpego-707a4eaf",
         }
         assert work["citation_count"] == scholar["citation_count"]
+        if key[1].endswith(":2osOgNQ5qMEC"):
+            assert scholar["year"] == 2013
+            assert work["year"] == 2015
+            assert work["venue"] == "Commun. Math. Sci. (2015)."
+        if key[1].endswith(":EUQCXRtRnyEC"):
+            assert scholar["venue"] == ""
+            assert work["venue"] == "Ann. Appl. Probab. (2015)."
 
 
 @pytest.mark.parametrize(

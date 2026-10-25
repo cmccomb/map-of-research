@@ -458,6 +458,11 @@ def build_dataset_tables(
 
     department_titles = registry.department_catalog()
     work_rows: list[dict[str, Any]] = []
+    reviewed_published_targets = {
+        alias.target_observation.author_pub_id
+        for alias in reviewed_aliases.values()
+        if alias.target_observation is not None
+    }
     for work_id, group in profile_publications.groupby("work_id", sort=True):
         records = list(group.itertuples(index=False))
         eligible_records = [record for record in records if record.map_eligible]
@@ -518,6 +523,12 @@ def build_dataset_tables(
         years = [record.year for record in canonical_records]
         published_records = []
         for record in canonical_records:
+            if (
+                record.source_type == "author_site"
+                and record.author_pub_id in reviewed_published_targets
+            ):
+                published_records.append(record)
+                continue
             alias = reviewed_aliases.get(
                 (str(record.scholar_id), str(record.author_pub_id))
             )
