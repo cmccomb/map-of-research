@@ -115,6 +115,13 @@ labels; the corresponding `*_label_reviewed` fields and
 multi-signal catch-all audit.
 Excluded works remain in the dataset; `map_eligible` controls browser-map
 participation.
+The work-level `topic_placement_pending` reason temporarily withholds two
+reviewed Physics arXiv DOI works from topic clustering and the browser map.
+Their exact Scholar observations, DOI metadata, and authorship records remain
+in the dataset. The hold is applied after layout reuse, so the work rows may
+retain coordinates even while `map_eligible` is false; those coordinates are
+not an approved public placement. Removing the hold requires a separate
+review of both topic and spatial placement.
 Citation count is the maximum retained source observation, not a sum across
 faculty profiles.
 

@@ -1013,6 +1013,166 @@ def reusable_work_state():
     return current, previous, layouts, new_id
 
 
+def reusable_noonan_state():
+    current, previous, layouts, _ = reusable_work_state()
+    prior = {
+        **previous[0],
+        "work_id": publisher.NOONAN_FULLERENES_WORK_ID,
+        "title": "Fullerenes",
+        "year": 2010,
+        "map_eligible": False,
+        "map_region_outlier": True,
+        "map_exclusion_reasons": ["low_information_region"],
+        "department_ids": ["chem"],
+    }
+    candidate = {
+        **current.iloc[0].to_dict(),
+        "work_id": publisher.NOONAN_FULLERENES_WORK_ID,
+        "title": "Fullerenes",
+        "year": 2010,
+        "map_eligible": False,
+        "map_exclusion_reasons": ["reviewed_false_profile_attribution"],
+        "department_ids": [],
+    }
+    previous.append(prior)
+    current = pandas.concat([current, pandas.DataFrame([candidate])], ignore_index=True)
+    layouts[publisher.NOONAN_FULLERENES_WORK_ID] = {
+        "x": 0.8,
+        "y": 0.1,
+        "tsne_x": 0.7,
+        "tsne_y": 0.2,
+    }
+    return current, previous, layouts
+
+
+def test_reusable_work_order_skips_exact_reviewed_noonan_exclusion(
+    monkeypatch,
+) -> None:
+    current, previous, layouts = reusable_noonan_state()
+    reused = publisher._reusable_work_order(current, previous, layouts)
+    assert reused is not None
+    ordered, remapped = reused
+    assert publisher.NOONAN_FULLERENES_WORK_ID not in remapped
+    monkeypatch.setattr(
+        publisher,
+        "_fit_pca_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_fit_tsne_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    laid_out = publisher.add_global_layout(ordered, existing_layouts=remapped)
+    row = laid_out.loc[
+        laid_out["work_id"].eq(publisher.NOONAN_FULLERENES_WORK_ID)
+    ].iloc[0]
+    assert numpy.isnan(row["x"])
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "wrong_id",
+        "wrong_title",
+        "wrong_year",
+        "prior_doi",
+        "current_doi",
+        "prior_method",
+        "current_method",
+        "prior_eligible",
+        "prior_not_outlier",
+        "prior_reason",
+        "prior_department",
+        "missing_coordinate",
+        "current_eligible",
+        "current_reason",
+        "current_department",
+    ],
+)
+def test_reusable_work_order_rejects_changed_noonan_transition(change) -> None:
+    current, previous, layouts = reusable_noonan_state()
+    prior = previous[-1]
+    index = current.index[-1]
+    if change == "wrong_id":
+        prior["work_id"] = "work-other"
+        layouts["work-other"] = layouts.pop(publisher.NOONAN_FULLERENES_WORK_ID)
+        current.loc[index, "work_id"] = "work-other"
+    elif change == "wrong_title":
+        prior["title"] = "Other"
+        current.loc[index, "title"] = "Other"
+    elif change == "wrong_year":
+        prior["year"] = 2011
+        current.loc[index, "year"] = 2011
+    elif change == "prior_doi":
+        prior["doi"] = "10.1000/other"
+    elif change == "current_doi":
+        current.loc[index, "doi"] = "10.1000/other"
+    elif change == "prior_method":
+        prior["work_match_method"] = "doi"
+    elif change == "current_method":
+        current.loc[index, "work_match_method"] = "doi"
+    elif change == "prior_eligible":
+        prior["map_eligible"] = True
+    elif change == "prior_not_outlier":
+        prior["map_region_outlier"] = False
+    elif change == "prior_reason":
+        prior["map_exclusion_reasons"] = ["other"]
+    elif change == "prior_department":
+        prior["department_ids"] = ["physics"]
+    elif change == "missing_coordinate":
+        layouts.pop(publisher.NOONAN_FULLERENES_WORK_ID)
+    elif change == "current_eligible":
+        current.loc[index, "map_eligible"] = True
+    elif change == "current_reason":
+        current.at[index, "map_exclusion_reasons"] = ["other"]
+    elif change == "current_department":
+        current.at[index, "department_ids"] = ["chem"]
+    assert publisher._reusable_work_order(current, previous, layouts) is None
+
+
+def test_reusable_work_order_reapplies_exact_pending_physics_hold() -> None:
+    item = publisher.PHYSICS_PENDING_TOPIC_PLACEMENTS[0]
+    prior = {
+        "work_id": item.work_id,
+        "title": item.title,
+        "year": item.year,
+        "doi": item.doi,
+        "work_match_method": "reviewed_version_alias",
+        "map_eligible": False,
+        "map_region_outlier": False,
+        "map_exclusion_reasons": [publisher.PENDING_TOPIC_PLACEMENT_REASON],
+        "department_ids": ["physics"],
+        "quality_assessment_version": publisher.QUALITY_ASSESSMENT_VERSION,
+        "keyword_model_version": publisher.KEYWORD_MODEL_VERSION,
+        "topic_label_review_version": publisher.TOPIC_LABEL_REVIEW_VERSION,
+        "map_region_audit_version": publisher.REGION_AUDIT_VERSION,
+        "layout_version": publisher.LAYOUT_VERSION,
+    }
+    current = pandas.DataFrame(
+        [
+            {
+                **prior,
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "embedding": [0.0, 1.0],
+            }
+        ]
+    )
+    coordinate = {"x": 0.1, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4}
+    reused = publisher._reusable_work_order(
+        current, [prior], {item.work_id: coordinate}
+    )
+    assert reused is not None
+    assert reused[1] == {item.work_id: coordinate}
+    assert publisher._reusable_work_order(current, [prior], {}) is None
+    prior["map_exclusion_reasons"] = ["other"]
+    assert (
+        publisher._reusable_work_order(current, [prior], {item.work_id: coordinate})
+        is None
+    )
+
+
 def test_reusable_work_order_preserves_doi_rekey_layout_and_topic_order(
     monkeypatch,
 ) -> None:
@@ -1654,6 +1814,11 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         lambda *args, **kwargs: (frame, 2),
     )
     monkeypatch.setattr(publisher, "build_dataset_tables", lambda *args: tables)
+    monkeypatch.setattr(
+        publisher,
+        "hold_pending_physics_placements",
+        lambda works, *args: works,
+    )
     original_layouts = {"old": {"x": 0.1}}
     reused_layouts = {"new": {"x": 0.1}}
     monkeypatch.setattr(
@@ -2131,6 +2296,11 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         }
 
     monkeypatch.setattr(publisher, "build_dataset_tables", public_tables)
+    monkeypatch.setattr(
+        publisher,
+        "hold_pending_physics_placements",
+        lambda works, *args: works,
+    )
     monkeypatch.setattr(publisher, "_existing_layouts", lambda **kwargs: {})
     monkeypatch.setattr(publisher, "add_global_layout", lambda works, **kwargs: works)
     monkeypatch.setattr(

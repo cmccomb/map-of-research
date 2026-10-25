@@ -17,3 +17,33 @@ and independent attribution evidence. The preprint DOI may change the derived
 `work_id`, so release comparison must follow the exact observation IDs and
 check every historical visibility and topic decision against the pinned live
 Hub revision `bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd`.
+
+## Pending map placement
+
+The exact DOI aliases are retained in the derived work and observation rows,
+but the two new DOI works remain off the map with work-level reason
+`topic_placement_pending`. The held work IDs are
+`work-b33b19863dc6eaeb1919045ad850ae25ba419ab998ecb8738ec7c79174afffa8`
+and `work-e40eef6b5a2616eae3f6a2868d2dbea1b8b842f514d3e2c76a5c9b0fb4cb4309`.
+Each hold requires its exact Scholar citation, observation ID, title, year,
+preprint DOI, and reviewed alias. It changes the work's map eligibility after
+layout and before topic assignment; the source observation and authorship row
+remain intact. Publication of either point needs reviewed topic and spatial
+placement.
+
+The pinned bb88 layout also contains Noonan's `Fullerenes` work as a
+`low_information_region` outlier. Its later reviewed false-attribution
+exclusion is the sole prior-work mismatch in the frozen Physics corpus. The
+producer permits reuse only for that exact unchanged work ID and source
+identity, and omits its old coordinate. A later run can reuse the two Physics
+works' coordinates when their exact pending holds are reapplied.
+
+On current producer main `68ab26ed`, the source branch `9bb7474` still pins a
+26-row curated snapshot while producer main has 28 curated rows; its upload
+preflight must not bypass this mismatch. A disposable local rebuild from the
+`9bb7474` cache and current curated records produced 51,879 rows, but the
+ordinary current-main region gate stopped its no-upload replay on 22 Sullivan
+observation losses before any Hub write. The separate Sullivan release gate is
+under review in draft PR #316. A combined Sullivan/Physics release therefore
+needs its own exact-head source and map review; the frozen Physics-only
+no-upload proof does not authorize that release.

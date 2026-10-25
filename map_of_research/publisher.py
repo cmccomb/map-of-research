@@ -56,6 +56,11 @@ from .keywords import (
     exclude_low_information_regions,
 )
 from .math_release_gate import validate_math_coverage
+from .physics_map_holds import (
+    PENDING_TOPIC_PLACEMENT_REASON,
+    PHYSICS_PENDING_TOPIC_PLACEMENTS,
+    hold_pending_physics_placements,
+)
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
     load_profile_releases,
@@ -462,6 +467,76 @@ def _year_key(value: Any) -> int | None:
         return None
 
 
+NOONAN_FULLERENES_WORK_ID = (
+    "work-fda500c2821091a0f441404779cf526c144bb34b1feb6c4ee0a40b15b0efea7e"
+)
+PENDING_PHYSICS_WORKS = {
+    item.work_id: item for item in PHYSICS_PENDING_TOPIC_PLACEMENTS
+}
+
+
+def _reviewed_noonan_layout_exclusion(
+    old_id: str,
+    new_id: str,
+    prior: Mapping[str, Any],
+    current: Any,
+    layouts: Mapping[str, Mapping[str, float]],
+) -> bool:
+    """Permit only the reviewed outlier-to-attribution-exclusion transition."""
+
+    return (
+        old_id == new_id == NOONAN_FULLERENES_WORK_ID
+        and old_id in layouts
+        and str(prior.get("title") or "") == str(current.title or "") == "Fullerenes"
+        and _year_key(prior.get("year")) == _year_key(current.year) == 2010
+        and str(prior.get("doi") or "") == str(current.doi or "") == ""
+        and prior.get("work_match_method")
+        == current.work_match_method
+        == "normalized_title_year"
+        and not bool(prior.get("map_eligible"))
+        and bool(prior.get("map_region_outlier"))
+        and _as_list(prior.get("map_exclusion_reasons")) == ["low_information_region"]
+        and _as_list(prior.get("department_ids")) == ["chem"]
+        and not bool(current.map_eligible)
+        and _as_list(current.map_exclusion_reasons)
+        == ["reviewed_false_profile_attribution"]
+        and not _as_list(current.department_ids)
+    )
+
+
+def _rebuild_pending_physics_hold(
+    old_id: str,
+    new_id: str,
+    prior: Mapping[str, Any],
+    current: Any,
+    layouts: Mapping[str, Mapping[str, float]],
+) -> bool:
+    """Reuse a held work's layout before the exact hold is reapplied."""
+
+    item = PENDING_PHYSICS_WORKS.get(old_id)
+    return bool(
+        item
+        and old_id == new_id
+        and old_id in layouts
+        and str(prior.get("title") or "") == str(current.title or "") == item.title
+        and _year_key(prior.get("year")) == _year_key(current.year) == item.year
+        and str(prior.get("doi") or "").casefold()
+        == str(current.doi or "").casefold()
+        == item.doi
+        and prior.get("work_match_method")
+        == current.work_match_method
+        == "reviewed_version_alias"
+        and not bool(prior.get("map_eligible"))
+        and not bool(prior.get("map_region_outlier"))
+        and _as_list(prior.get("map_exclusion_reasons"))
+        == [PENDING_TOPIC_PLACEMENT_REASON]
+        and bool(current.map_eligible)
+        and not _as_list(current.map_exclusion_reasons)
+        and bool(_as_list(prior.get("department_ids")))
+        and _as_list(prior.get("department_ids")) == _as_list(current.department_ids)
+    )
+
+
 def _reusable_work_order(
     works: Any,
     previous: Sequence[Mapping[str, Any]],
@@ -569,6 +644,11 @@ def _reusable_work_order(
             prior.get("year")
         ) != _year_key(current.year):
             return None
+        if _reviewed_noonan_layout_exclusion(old_id, new_id, prior, current, layouts):
+            continue
+        if _rebuild_pending_physics_hold(old_id, new_id, prior, current, layouts):
+            remapped_layouts[new_id] = layouts[old_id]
+            continue
         prior_reasons = set(map(str, _as_list(prior.get("map_exclusion_reasons"))))
         was_region_outlier = bool(prior.get("map_region_outlier"))
         previous_eligible = bool(prior.get("map_eligible")) or was_region_outlier
@@ -1502,6 +1582,9 @@ def publish_snapshot(
     tables["works"] = add_global_layout(
         tables["works"],
         existing_layouts=existing_layouts,
+    )
+    tables["works"] = hold_pending_physics_placements(
+        tables["works"], tables["profile_publications"], doi_aliases
     )
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
