@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 917
+    assert len(exclusions) >= 933
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -52,6 +52,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "Zph67rFs4hoC",
     ):
         assert (nesrine, f"{nesrine}:{retained}") not in exclusions
+
     assert sum(key[0] == "L0nXO5EAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "FRtd8_QAAAAJ" for key in exclusions) == 19
     ihab = "xHKK05MAAAAJ"
@@ -86,6 +87,8 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
+    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 28
+    assert sum(key[0] == "LibSWRMAAAAJ" for key in exclusions) == 15
     assert all(
         exclusions[("cAiedtsAAAAJ", f"cAiedtsAAAAJ:{suffix}")].reason_code
         == "nonpublication"
@@ -328,6 +331,41 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
             "kvJssbFybhEC",
         ),
         (
+            "wJ_gQLoAAAAJ",
+            ("6Dd5luMImnEC",),
+            "GwaQhVSQhKEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("1DdUqAzPfXgC",),
+            "USX2HHcnDqcC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("X0ywoi6J0UgC",),
+            "OcBU2YAGkTUC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("1L_zwHEQtZoC",),
+            "VOx2b1Wkg3QC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("afsF9h1fxg0C",),
+            "GUYAmugLYisC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("besYCffB3V8C",),
+            "8p-ueveQw4wC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("lDOOmgye57wC",),
+            "DvbUhBKpgQUC",
+        ),
+        (
             "LibSWRMAAAAJ",
             ("i91s68tWr-MC",),
             "2vr6o8x5NLkC",
@@ -342,6 +380,31 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
             ("1_W9tMSvGuwC",),
             "P7Ujq4OLJYoC",
         ),
+        (
+            "LibSWRMAAAAJ",
+            ("L24QuVWYgZ0C",),
+            "IjCSPb-OGe4C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("hHIA4WEVY-EC", "gFrPXmx1TSsC"),
+            "hkOj_22Ku90C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("ymY9cBF3mdcC",),
+            "a0OBvERweLwC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("M0leSnx2MbUC", "IWHjjKOFINEC"),
+            "ZqE1mSdD_DYC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("hNSvKAmkeYkC",),
+            "kNdYIx-mwKoC",
+        ),
     ):
         for child in children:
             assert exclusions[(scholar_id, f"{scholar_id}:{child}")].reason_code == (
@@ -350,6 +413,8 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
         assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
     assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:zxzvZ9-XIW8C") not in exclusions
     assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:SWgZeABleR0C") not in exclusions
+    assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:y4Au4brZMfoC") not in exclusions
+    assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:iyewoVqAXLQC") not in exclusions
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:

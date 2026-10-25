@@ -7336,6 +7336,134 @@
       "reason": "Capture row 481 is a Crystal Ball experiment participant/institution roster excerpt from page 20 of the 1996 Current Experiments in Particle Physics report, not an authored research work.",
       "evidence_url": "https://www.osti.gov/servlets/purl/469140",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:4QKQTXcH0q8C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 531 is the Jahrbuch für Wirtschaftsgeschichte section heading Abhandlungen, Studien, Miszellen, not an authored research work; publisher issue tables of contents use this heading.",
+      "evidence_url": "https://www.degruyterbrill.com/document/doi/10.1515/jbwg-1991-320301/html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:6Dd5luMImnEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 969 is a formula-omitted copy of CMS B2G-18-002, EPJC 80 (2020) 237; retain the same published work as wJ_gQLoAAAAJ:GwaQhVSQhKEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-18-002/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:1DdUqAzPfXgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1597 is a formula-placeholder copy of CMS HIG-15-007, EPJC 78 (2018) 708; retain the same published work as wJ_gQLoAAAAJ:USX2HHcnDqcC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-15-007/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:X0ywoi6J0UgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1760 is a formula-placeholder copy of CMS TOP-16-005, EPJC 77 (2017) 172; the retained row is its linked arXiv preprint; retain the same published work as wJ_gQLoAAAAJ:OcBU2YAGkTUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-16-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:1L_zwHEQtZoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1744 is a formula-placeholder copy of CMS TOP-15-015, EPJC 77 (2017) 467; retain the same published work as wJ_gQLoAAAAJ:VOx2b1Wkg3QC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-15-015/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:afsF9h1fxg0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 932 is a formula-omitted copy of the original CMS SMP-16-017 article, EPJC 78 (2018) 165; the erratum is distinct; retain the same published work as wJ_gQLoAAAAJ:GUYAmugLYisC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-017/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:besYCffB3V8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1266 is a formula-placeholder copy of CMS HIN-19-011, Phys. Lett. B 829 (2022) 137062; retain the same published work as wJ_gQLoAAAAJ:8p-ueveQw4wC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-19-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:lDOOmgye57wC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1461 is a blank-venue copy of CMS SMP-17-012, EPJC 79 (2019) 94; retain the same published work as wJ_gQLoAAAAJ:DvbUhBKpgQUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-17-012/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:L24QuVWYgZ0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 449 is a formula-placeholder copy of PRL 88 122001 (2002); retain the same published work as LibSWRMAAAAJ:IjCSPb-OGe4C.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.88.122001",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:hHIA4WEVY-EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 448 is a formula-placeholder copy of PRC 65 034607 (2002); retain the same published work as LibSWRMAAAAJ:hkOj_22Ku90C.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.65.034607",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:ymY9cBF3mdcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 442 is a formula-placeholder copy of PRC 68 035202 (2003); retain the same published work as LibSWRMAAAAJ:a0OBvERweLwC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.035202",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:M0leSnx2MbUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 443 is a formula-placeholder copy of PRC 68 032201 (2003); retain the same published work as LibSWRMAAAAJ:ZqE1mSdD_DYC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.032201",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:hNSvKAmkeYkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 440 is a formula-placeholder copy of PRL 91 022002 (2003); retain the same published work as LibSWRMAAAAJ:kNdYIx-mwKoC.",
+      "evidence_url": "https://doi.org/10.1103/PhysRevLett.91.022002",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:gFrPXmx1TSsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 447 is a transliterated-title copy carrying the same PRC 65 034607 article number (2002); retain the same published work as LibSWRMAAAAJ:hkOj_22Ku90C.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.65.034607",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:IWHjjKOFINEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 62 is a title-typography copy carrying the same PRC 68 032201 article number (2003); retain the same published work as LibSWRMAAAAJ:ZqE1mSdD_DYC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.032201",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:Z7R3Ocg27JUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 1949 uniquely maps to the 2013 CMS FWD-11-001 paper; its full collaboration author appendix omits Matteo Cremonesi, whose CMU CV dates CMS membership from January 2015.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FWD-11-001/index.html",
+      "verified_at": "2026-10-24"
     }
   ]
 }
