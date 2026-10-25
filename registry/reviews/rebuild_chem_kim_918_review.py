@@ -2584,6 +2584,169 @@ OTHER_PRIMARY_ID_GUARDS.update(
     {index: guard[0] for index, guard in KNU_NINE_EXACT_GUARDS.items()}
 )
 
+# Exact source titles, bylines, years, and venues keep these nine namesake
+# decisions tied to their saved Scholar observations. Do not extend any
+# decision to nearby papers with similar initials or collaborators.
+LATE_NINE_EXACT_GUARDS = {
+    661: (
+        "bC4aq-4AAAAJ:gFrPXmx1TSsC",
+        "Subacute toxicity of G009, a polysaccharide isolated from "
+        "Ganoderma lucidum IY009",
+        "KW Seo, IS Cho, MH Oh, KM Lee, HJ Kim",
+        "1996",
+        "J Fd Hyg Safety 11 (4), 261-271, 1996",
+    ),
+    662: (
+        "bC4aq-4AAAAJ:naSTrk-c4S8C",
+        "Design factors of boom sprayer (I)",
+        "CJ Chung, HJ Kim, SI Cho, YS Choi, JS Choe",
+        "1995",
+        "Journal of Biosystems Engineering 20, 217-225, 1995",
+    ),
+    669: (
+        "bC4aq-4AAAAJ:SAZ1SQo2q1kC",
+        "Comprehending the role of trap centers and host energy transfers in "
+        "excitation "
+        "density dependent kinetics of Ce doped Gd3Ga3Al2O12scintillator; "
+        "an unresolved scintillation\xa0…",
+        "M Tyagi, A Khan, PQ Vuong, HJ Kim",
+        "2020",
+        "Journal of Luminescence 219, 116815, 2020",
+    ),
+    672: (
+        "bC4aq-4AAAAJ:dFKc6_kCK1wC",
+        "Mobile application in dermatology: a useful tool for better communication "
+        "and patient education",
+        "H Kim, J Kim, E Jung, D Park, J Roh",
+        "2018",
+        "Hong Kong Journal of Dermatology & Venereology 2 (26), 67-70, 2018",
+    ),
+    680: (
+        "bC4aq-4AAAAJ:OcBU2YAGkTUC",
+        "Study on the contamination characteristics of pollutants at various type "
+        "of abandoned metal mines",
+        "JD Lee, TD Kim, SG Kim, HJ Kim",
+        "2013",
+        "Journal of Soil and Groundwater Environment 18 (3), 93-108, 2013",
+    ),
+    685: (
+        "bC4aq-4AAAAJ:ce2CqMG-AY4C",
+        "Scintillation Properties of BaSrCl Single Crystals",
+        "J Kim, H Kang, HJ Kim, H Park, S Kim, SH Doh",
+        "2008",
+        "IEEE Transactions on Nuclear Science 55 (3), 1464-1468, 2008",
+    ),
+    692: (
+        "bC4aq-4AAAAJ:_9Xh93LWpsYC",
+        "Leaching characteristics of heavy metals from abandoned mines wastes "
+        "in the Namhan River Shore",
+        "HJ Kim, J Yang, JY Lee, HJ Sang",
+        "2006",
+        "Korean Soc. Soil Ground water Environ., Annu. Meet, 201-207, 2006",
+    ),
+    694: (
+        "bC4aq-4AAAAJ:ovGv7akYl-cC",
+        "The effects of different stretching duration on strength and flexibility "
+        "in ballerina",
+        "MY Kim, TW Jun, YS Kim, HK Seo, KR Kim, EK Kim, KJ Kim, HJ Kim, ...",
+        "2005",
+        "Korean J Phys Educ 44, 399-406, 2005",
+    ),
+    697: (
+        "bC4aq-4AAAAJ:PVjk1bu6vJQC",
+        "Development of a toroidal CVT controller for agricultural tractor "
+        "(II)-PID controller",
+        "HJ Kim, KH Ryu",
+        "2004",
+        "Journal of Biosystems Engineering 29 (5), 407-418, 2004",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(LATE_NINE_EXACT_GUARDS)
+LATE_NINE_PRIMARY = {
+    661: (
+        "Hyo Jung Kim",
+        "",
+        "https://db.koreascholar.com/Article/Detail/341778",
+        "Journal-platform full author record",
+        "The exact 1996 Journal of Food Hygiene and Safety 11(4):261-271 "
+        "article names its final author Hyo Jung Kim (김효정).",
+    ),
+    662: (
+        "Hak Jin Kim",
+        "",
+        "https://kiss.kstudy.com/Detail/Ar?key=151156",
+        "Journal-platform Korean full author record",
+        "The exact 1995 Journal of Biosystems Engineering 20(3):217-225 "
+        "article names its second author 김학진 (Hak Jin Kim).",
+    ),
+    669: (
+        "Hong Joo Kim",
+        "10.1016/j.jlumin.2019.116815",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825155",
+        "HongJoo Kim ORCID work with self DOI",
+        "HongJoo Kim's ORCID work asserts the exact 2020 Journal of "
+        "Luminescence article with self DOI 10.1016/j.jlumin.2019.116815; "
+        "the saved Scholar title merely truncates its ending.",
+    ),
+    672: (
+        "金希珠 (HJ Kim)",
+        "",
+        "https://medcomhk.com/hkdvb/details.asp?id=827&show=1234",
+        "Original journal page with full Chinese-character byline",
+        "The exact 2018 Hong Kong Journal of Dermatology and Venereology "
+        "26:67-70 prints the first H. J. Kim author's name as 金希珠 and "
+        "identifies Gachon University Dermatology.",
+    ),
+    680: (
+        "Hee Joung Kim",
+        "10.7857/JSGE.2013.18.3.093",
+        "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/"
+        "ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001787947",
+        "Korean Citation Index exact full author record",
+        "The exact 2013 Journal of Soil and Groundwater Environment "
+        "18(3):93-108 article names its fourth author 김휘중 / Hee Joung Kim.",
+    ),
+    685: (
+        "Hong Joo Kim",
+        "10.1109/TNS.2008.920429",
+        "https://pub.orcid.org/v3.0/0000-0001-9787-4684/work/153825359",
+        "HongJoo Kim ORCID work with self DOI",
+        "HongJoo Kim's ORCID work asserts the exact 2008 IEEE Transactions "
+        "on Nuclear Science 55:1464-1468 article with self DOI "
+        "10.1109/TNS.2008.920429; Scholar drops the x and 1-x subscripts.",
+    ),
+    692: (
+        "Hee Joung Kim",
+        "",
+        "https://data.kigam.re.kr/ieg/cmmn/downloadFile.do?fileName=Z3063044.PDF",
+        "Original Korean geological institute conference paper",
+        "The exact 2006 Korean Soil and Groundwater meeting paper names "
+        "its first author Hee Joung KIM of Kangwon National University.",
+    ),
+    694: (
+        "Hyo Joong Kim",
+        "",
+        "https://kiss.kstudy.com/Detail/Ar?key=3718974",
+        "Journal-platform full Korean and Romanized author record",
+        "The exact 2005 Korean Journal of Physical Education 44(6):399-406 "
+        "page lists 김효중 (HyoJoongKim) among its eleven authors.",
+    ),
+    697: (
+        "Hyo Joong Kim",
+        "10.5307/JBE.2004.29.5.407",
+        "https://kiss.kstudy.com/Detail/Ar?key=2406928",
+        "Journal-platform exact Korean full author record",
+        "The exact 2004 Journal of Biosystems Engineering 29(5):407-418 "
+        "tractor controller article names its first author 김효중, H.J. Kim.",
+    ),
+}
+for index, (person, doi, url, source, basis) in LATE_NINE_PRIMARY.items():
+    guard = LATE_NINE_EXACT_GUARDS[index]
+    OTHER_PRIMARY[index] = (guard[1], int(guard[3]), person, doi, url, source, basis)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: guard[0] for index, guard in LATE_NINE_EXACT_GUARDS.items()}
+)
+
 # CMU links this ORCID to Hyung J. Kim, but the ResearcherID-imported work
 # assertion does not independently resolve the initials-only APS author.
 CMU_ORCID_DOI_HOLD = {
@@ -4570,17 +4733,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 153,
+        "proposed_other_person_primary_work": 162,
         "proposed_no_target_author_primary_work": 10,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 277,
+        "unresolved_attribution_hold": 268,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 506 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 515 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
