@@ -193,6 +193,18 @@ def test_changed_raw_source_does_not_inherit_prior_inclusion():
         )
 
 
+def test_changed_canonical_work_metadata_does_not_inherit_prior_region_decision():
+    row = observation("person", "one")
+    changed = {**work("one", eligible=False, outlier=True), "authors": "Another Author"}
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile(
+            [changed],
+            [row],
+            [work("one", eligible=True, outlier=False)],
+            [row],
+        )
+
+
 def test_new_eligible_member_does_not_inherit_prior_work_decision():
     old = observation("person-one", "one")
     new = observation("person-two", "one")

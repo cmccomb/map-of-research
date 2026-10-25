@@ -43,12 +43,29 @@ FINGERPRINT_FIELDS = (
     "source_document_id",
     "quality_assessment_version",
 )
+WORK_FINGERPRINT_FIELDS = (
+    "title",
+    "authors",
+    "year",
+    "venue",
+    "citation",
+    "citation_count",
+    "doi",
+    "publication_type",
+    "source_document_id",
+    "source_urls",
+    "source_types",
+    "source_native_ids",
+    "source_verified_at",
+    "source_verification_urls",
+)
 PRIOR_WORK_FIELDS = (
     "work_id",
     "map_eligible",
     "map_region_outlier",
     "department_ids",
     "quality_assessment_version",
+    *WORK_FINGERPRINT_FIELDS,
 )
 PRIOR_OBSERVATION_FIELDS = (
     *IDENTITY_FIELDS,
@@ -105,9 +122,13 @@ def _identity(row: Mapping[str, Any]) -> ObservationKey:
 
 
 def _fingerprint(row: Mapping[str, Any]) -> str:
-    payload = {field: _value(row.get(field)) for field in FINGERPRINT_FIELDS}
+    return _fingerprint_fields(row, FINGERPRINT_FIELDS)
+
+
+def _fingerprint_fields(row: Mapping[str, Any], fields: tuple[str, ...]) -> str:
+    payload = {field: _value(row.get(field)) for field in fields}
     for field in ("year", "citation_count"):
-        if payload[field] is not None:
+        if field in payload and payload[field] is not None:
             payload[field] = int(payload[field])
     encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, default=str)
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
@@ -263,6 +284,10 @@ def reconcile_region_decisions(
         ):
             continue
         if prior.get("quality_assessment_version") != row.quality_assessment_version:
+            continue
+        if _fingerprint_fields(prior, WORK_FINGERPRINT_FIELDS) != _fingerprint_fields(
+            row, WORK_FINGERPRINT_FIELDS
+        ):
             continue
         previous_outlier = bool(prior.get("map_region_outlier"))
         previous_mapped = bool(prior.get("map_eligible"))
