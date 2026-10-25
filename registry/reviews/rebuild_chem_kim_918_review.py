@@ -3147,6 +3147,78 @@ OTHER_PRIMARY[906] = (
     "to H. J. Kim.",
 )
 OTHER_PRIMARY_ID_GUARDS[906] = LATE_901_918_EXACT_GUARDS[906][0]
+# Three agriculture/machinery records spell out a different H. J. Kim in
+# their original journal records. These decisions apply only to the saved
+# citation IDs and complete source fingerprints below.
+AGRICULTURE_EXACT_GUARDS = {
+    530: (
+        "bC4aq-4AAAAJ:YGhAHpnIhDoC",
+        "Efficacy of acaricides and insecticides to Tetranychus kanzawai "
+        "and Aphis egomae",
+        "SO Chung, HJ Kim, SD Bae, SA Jang, CG Park",
+        "2014",
+        "J. Agri. Life Sci 48 (5), p1-8, 2014",
+    ),
+    599: (
+        "bC4aq-4AAAAJ:xtoqd-5pKcoC",
+        "Development of a Tractor Attached Roughage Cut-feeder for Round Bale "
+        "(Ⅰ)-Development of a Cutting Mechanism and a Performance Test",
+        "DH Hong, KK Park, YS Ha, HJ Kim, JK Kwon, TW Kim",
+        "2007",
+        "Journal of Biosystems Engineering 32 (5), 2007",
+    ),
+    600: (
+        "bC4aq-4AAAAJ:rmuvC79q63oC",
+        "Development of mechanized system model for the production of winter "
+        "cereal wrap silage in the fallow paddy field",
+        "HJ Kim, KK Park, TH Kim, YM Koo",
+        "2003",
+        "J. of KSAM 28 (3), 199-208, 2003",
+    ),
+}
+EXACT_FOLLOWUP_CAPTURE_GUARDS.update(AGRICULTURE_EXACT_GUARDS)
+OTHER_PRIMARY.update(
+    {
+        530: (
+            AGRICULTURE_EXACT_GUARDS[530][1],
+            2014,
+            "Hyun Ju Kim (김현주)",
+            "",
+            "https://db.koreascholar.com/Article/Detail/280640",
+            "Original Journal of Agriculture & Life Science record",
+            "The journal record for the exact 2014 volume 48 issue 5 pages 1-8 "
+            "article identifies its second author as Hyun Ju Kim (김현주) "
+            "of the Rural Development Administration, not CMU chemist "
+            "Hyung J. Kim.",
+        ),
+        599: (
+            AGRICULTURE_EXACT_GUARDS[599][1],
+            2007,
+            "Kim Hyuck Joo (김혁주)",
+            "",
+            "https://kiss.kstudy.com/Detail/Ar?key=2657577",
+            "Original Journal of Biosystems Engineering record on KISS",
+            "The journal record for the exact 2007 volume 32 issue 5 pages "
+            "292-300 article names its fourth author 김혁주 (H. J. Kim), "
+            "a different full name from CMU chemist Hyung J. Kim.",
+        ),
+        600: (
+            AGRICULTURE_EXACT_GUARDS[600][1],
+            2003,
+            "Kim Hyuck Joo (김혁주)",
+            "",
+            "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000898055",
+            "KCI original Journal of Biosystems Engineering article record",
+            "The KCI record for the exact 2003 volume 28 issue 3 pages "
+            "199-208 article spells out first author kim hyuck joo "
+            "(김혁주); its longer title has the part-two cost-analysis "
+            "subtitle omitted from the saved Scholar title.",
+        ),
+    }
+)
+OTHER_PRIMARY_ID_GUARDS.update(
+    {index: fingerprint[0] for index, fingerprint in AGRICULTURE_EXACT_GUARDS.items()}
+)
 ABSENT_AUTHOR_PRIMARY[902] = (
     LATE_901_918_EXACT_GUARDS[902][0],
     LATE_901_918_EXACT_GUARDS[902][1],
@@ -5199,17 +5271,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 1,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 182,
+        "proposed_other_person_primary_work": 185,
         "proposed_no_target_author_primary_work": 12,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 7,
-        "unresolved_attribution_hold": 246,
+        "unresolved_attribution_hold": 243,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 537 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 540 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")

@@ -4360,6 +4360,30 @@
       "reason": "The exact Journal of Biosystems Engineering 29(1):1-8 article was published in 2004 and names first author 김혁주. Scholar omits the year, truncates the title and author list, and reports a zero page, but the numbered series, volume, and coauthors match. This exact undated Scholar observation 'Development of Mechanized System Model for the Production of Winter Cereal Wrap Silage in the Fallow Paddy Field (3)-Application Test of Mechanized Wrap Silage Production in …' belongs to 김혁주, not CMU Chemistry professor Hyung J. Kim.",
       "evidence_url": "https://kiss.kstudy.com/Detail/Ar?key=2119395",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:YGhAHpnIhDoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The journal record for the exact 2014 volume 48 issue 5 pages 1-8 article identifies its second author as Hyun Ju Kim (김현주) of the Rural Development Administration, not CMU chemist Hyung J. Kim. This exact 2014 Scholar observation 'Efficacy of acaricides and insecticides to Tetranychus kanzawai and Aphis egomae' belongs to Hyun Ju Kim (김현주), not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://db.koreascholar.com/Article/Detail/280640",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:xtoqd-5pKcoC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The journal record for the exact 2007 volume 32 issue 5 pages 292-300 article names its fourth author 김혁주 (H. J. Kim), a different full name from CMU chemist Hyung J. Kim. This exact 2007 Scholar observation 'Development of a Tractor Attached Roughage Cut-feeder for Round Bale (Ⅰ)-Development of a Cutting Mechanism and a Performance Test' belongs to Kim Hyuck Joo (김혁주), not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://kiss.kstudy.com/Detail/Ar?key=2657577",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:rmuvC79q63oC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The KCI record for the exact 2003 volume 28 issue 3 pages 199-208 article spells out first author kim hyuck joo (김혁주); its longer title has the part-two cost-analysis subtitle omitted from the saved Scholar title. This exact 2003 Scholar observation 'Development of mechanized system model for the production of winter cereal wrap silage in the fallow paddy field' belongs to Kim Hyuck Joo (김혁주), not CMU Chemistry professor Hyung J. Kim.",
+      "evidence_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000898055",
+      "verified_at": "2026-10-25"
     }
   ]
 }
