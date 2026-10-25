@@ -234,6 +234,69 @@
       "basis": "Springer/Crossref lists the article title without the author name Scholar appended after a colon; the author remains in the separate author field.",
       "evidence_url": "https://api.crossref.org/works/10.1007/s13324-019-00318-6",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "6ArMETUAAAAJ",
+      "author_pub_id": "6ArMETUAAAAJ:gmHTDCtJMcoC",
+      "expected": {
+        "title": "Computational Biology & Medical Applications-Opportunities abound for OR in the interplay between medicine, bioengineering and medical physics.",
+        "year": 2009,
+        "venue": "OR MS Today 36 (3), 34, 2009"
+      },
+      "corrected": {
+        "title": "Computational Biology and Medical Applications",
+        "venue": "OR/MS Today 36 (3), 2009"
+      },
+      "basis": "INFORMS identifies the published headline and OR/MS Today issue. Scholar appended a descriptive subtitle; the coauthors' CVs disagree on page range, so the effective venue omits pages.",
+      "evidence_url": "https://www.cs.cmu.edu/~russells/Russell_Schwartz_CV.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "6ArMETUAAAAJ",
+      "author_pub_id": "6ArMETUAAAAJ:UebtZRa9Y70C",
+      "expected": {
+        "title": "Medical Applications",
+        "year": 2009,
+        "venue": ""
+      },
+      "corrected": {
+        "title": "Computational Biology and Medical Applications",
+        "venue": "OR/MS Today 36 (3), 2009"
+      },
+      "basis": "INFORMS and Schwartz's CMU CV identify this abbreviated Scholar observation as the same authored 2009 OR/MS Today article. Coauthor CVs disagree on page range, so the venue omits pages.",
+      "evidence_url": "https://www.cs.cmu.edu/~russells/Russell_Schwartz_CV.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "RnA6G0UAAAAJ",
+      "author_pub_id": "RnA6G0UAAAAJ:TFP_iSt0sucC",
+      "expected": {
+        "title": "Come get dissolved in PML bodies",
+        "year": null,
+        "venue": "Nature chemical biology, 0"
+      },
+      "corrected": {
+        "year": 2025,
+        "venue": "Nature Chemical Biology 21 (9), 1306-1307, 2025"
+      },
+      "basis": "Nature's version of record gives the 2025 publication year, journal, volume, issue, and pages missing from this Scholar observation.",
+      "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "RnA6G0UAAAAJ",
+      "author_pub_id": "RnA6G0UAAAAJ:JV2RwH3_ST0C",
+      "expected": {
+        "title": "Come get dissolved in PML bodies: Proteostasis",
+        "year": 2025,
+        "venue": "Nature Chemical Biology 21 (9), 1306-1307, 2025"
+      },
+      "corrected": {
+        "title": "Come get dissolved in PML bodies"
+      },
+      "basis": "Nature lists Proteostasis as a section label rather than part of the article title.",
+      "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
+      "verified_at": "2026-10-25"
     }
   ]
 }

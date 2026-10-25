@@ -20,7 +20,7 @@ DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
 class ReviewedDoiAlias:
     doi: str
     observed_title: str
-    observed_year: int
+    observed_year: int | None
     relationship: str
     evidence_urls: tuple[str, ...]
     verified_at: str
@@ -50,7 +50,11 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
             raise ValueError("Scholar DOI alias needs a valid published DOI")
         title = str(entry.get("observed_title") or "").strip()
         year = entry.get("observed_year")
-        if not title or not isinstance(year, int) or isinstance(year, bool):
+        if (
+            not title
+            or "observed_year" not in entry
+            or (year is not None and type(year) is not int)
+        ):
             raise ValueError(
                 "Scholar DOI alias needs the exact observed title and year"
             )
@@ -98,6 +102,8 @@ def validate_doi_aliases(
 ) -> None:
     """Fail before publication if an alias is stale or points to an excluded row."""
 
+    import pandas
+
     for key, alias in aliases.items():
         scholar_id, author_pub_id = key
         rows = frame.loc[
@@ -108,7 +114,14 @@ def validate_doi_aliases(
         if len(rows) != 1:
             raise ValueError(f"Scholar DOI alias must match one raw row: {key}")
         row = rows.iloc[0]
-        if row["title"] != alias.observed_title or row["year"] != alias.observed_year:
+        observed_year_matches = (
+            bool(pandas.isna(row["year"]))
+            if alias.observed_year is None
+            else bool(
+                not pandas.isna(row["year"]) and row["year"] == alias.observed_year
+            )
+        )
+        if row["title"] != alias.observed_title or not observed_year_matches:
             raise ValueError(f"Scholar DOI alias observed title or year changed: {key}")
         if key in exclusions:
             raise ValueError(f"Scholar DOI alias also has a reviewed exclusion: {key}")

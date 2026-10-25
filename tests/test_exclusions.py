@@ -130,7 +130,11 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "SHxT0AEAAAAJ" for key in exclusions) == 10
     assert sum(key[0] == "FkS0PMEAAAAJ" for key in exclusions) == 8
     assert sum(key[0] == "W9-dYLcAAAAJ" for key in exclusions) == 4
-    assert sum(key[0] == "6ArMETUAAAAJ" for key in exclusions) == 18
+    assert sum(key[0] == "6ArMETUAAAAJ" for key in exclusions) == 19
+    assert (
+        exclusions[("6ArMETUAAAAJ", "6ArMETUAAAAJ:Wp0gIr-vW9MC")].reason_code
+        == "nonpublication"
+    )
     assert sum(key[0] == "_IfiZD4AAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "FXqaMl4AAAAJ" for key in exclusions) == 6
     assert sum(key[0] == "T3nx5tgAAAAJ" for key in exclusions) == 1

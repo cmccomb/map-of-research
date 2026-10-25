@@ -604,6 +604,84 @@
         "https://link.springer.com/article/10.1007/s00205-021-01735-3"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:_Qo2XoVZTnwC",
+      "observed_title": "Understanding captions in biomedical publications",
+      "observed_year": 2003,
+      "published_doi": "10.1145/956750.956809",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://murphylab.cbd.cmu.edu/publications/91-cohen2003.pdf",
+        "https://dblp.org/rec/conf/kdd/CohenWM03"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "grTfBeAAAAAJ",
+      "author_pub_id": "grTfBeAAAAAJ:ufrVoPGSRksC",
+      "observed_title": "Drug repurposing from an academic perspective",
+      "observed_year": 2011,
+      "published_doi": "10.1016/j.ddstr.2011.10.002",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/22368688/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3285382/"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "6ArMETUAAAAJ",
+      "author_pub_id": "6ArMETUAAAAJ:gmHTDCtJMcoC",
+      "observed_title": "Computational Biology & Medical Applications-Opportunities abound for OR in the interplay between medicine, bioengineering and medical physics.",
+      "observed_year": 2009,
+      "published_doi": "10.1287/orms.2009.03.14",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://pubsonline.informs.org/do/10.1287/orms.2009.03.14/full/",
+        "https://www.cs.cmu.edu/~russells/Russell_Schwartz_CV.pdf"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "6ArMETUAAAAJ",
+      "author_pub_id": "6ArMETUAAAAJ:UebtZRa9Y70C",
+      "observed_title": "Medical Applications",
+      "observed_year": 2009,
+      "published_doi": "10.1287/orms.2009.03.14",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://pubsonline.informs.org/do/10.1287/orms.2009.03.14/full/",
+        "https://www.cs.cmu.edu/~russells/Russell_Schwartz_CV.pdf"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "RnA6G0UAAAAJ",
+      "author_pub_id": "RnA6G0UAAAAJ:TFP_iSt0sucC",
+      "observed_title": "Come get dissolved in PML bodies",
+      "observed_year": null,
+      "published_doi": "10.1038/s41589-025-01960-x",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://www.nature.com/articles/s41589-025-01960-x",
+        "https://api.crossref.org/works/10.1038/s41589-025-01960-x"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "RnA6G0UAAAAJ",
+      "author_pub_id": "RnA6G0UAAAAJ:JV2RwH3_ST0C",
+      "observed_title": "Come get dissolved in PML bodies: Proteostasis",
+      "observed_year": 2025,
+      "published_doi": "10.1038/s41589-025-01960-x",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://www.nature.com/articles/s41589-025-01960-x",
+        "https://api.crossref.org/works/10.1038/s41589-025-01960-x"
+      ],
+      "verified_at": "2026-10-25"
     }
   ]
 }

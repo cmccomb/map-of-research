@@ -224,6 +224,54 @@ def test_correction_fails_closed_on_changed_source_or_non_scholar_row(tmp_path) 
         )
 
 
+def test_missing_observed_year_requires_missing_source_year(tmp_path) -> None:
+    entry = _entry(
+        expected={"title": "Verified article", "year": None, "venue": "Journal, 0"},
+        corrected={"year": 2025, "venue": "Journal"},
+    )
+    corrections = load_corrections(_manifest(tmp_path / "corrections.json", [entry]))
+    raw_json = '{"pub_year":"","title":"Verified article"}'
+    row = {
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "oneAAAAJ:paper",
+        "title": "Verified article",
+        "year": pandas.NA,
+        "venue": "Journal, 0",
+        "source_type": "scholar",
+        "source_record_json": raw_json,
+    }
+    effective, applied = apply_corrections(pandas.DataFrame([row]), corrections)
+    assert applied == 1
+    assert effective.loc[0, "year"] == 2025
+    assert effective.loc[0, "venue"] == "Journal"
+    assert effective.loc[0, "source_record_json"] == raw_json
+    with pytest.raises(ValueError, match="source year changed"):
+        apply_corrections(pandas.DataFrame([{**row, "year": 2024}]), corrections)
+
+
+def test_blank_observed_venue_can_be_repaired_only_when_still_blank(tmp_path) -> None:
+    entry = _entry(
+        expected={"title": "Verified article", "year": 2025, "venue": ""},
+        corrected={"venue": "Journal"},
+    )
+    corrections = load_corrections(_manifest(tmp_path / "corrections.json", [entry]))
+    row = {
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "oneAAAAJ:paper",
+        "title": "Verified article",
+        "year": 2025,
+        "venue": "",
+        "source_type": "scholar",
+        "source_record_json": '{"venue":""}',
+    }
+    effective, applied = apply_corrections(pandas.DataFrame([row]), corrections)
+    assert applied == 1
+    assert effective.loc[0, "venue"] == "Journal"
+    assert effective.loc[0, "source_record_json"] == row["source_record_json"]
+    with pytest.raises(ValueError, match="source venue changed"):
+        apply_corrections(pandas.DataFrame([{**row, "venue": "Other"}]), corrections)
+
+
 def test_present_profile_requires_every_declared_correction_id_once(tmp_path) -> None:
     entries = [
         _entry(),
@@ -268,6 +316,16 @@ def test_absent_profile_may_have_staged_corrections(tmp_path) -> None:
     assert applied == 0
     assert effective.loc[0, "title"] == "Unrelated Paper"
     assert effective.loc[0, "metadata_correction_fields"] == ""
+
+
+def test_missing_year_is_invalid_as_a_corrected_value(tmp_path) -> None:
+    with pytest.raises(ValueError, match="invalid bibliographic fields"):
+        load_corrections(
+            _manifest(
+                tmp_path / "corrections.json",
+                [_entry(corrected={"year": None})],
+            )
+        )
 
 
 def test_checked_in_profiles_require_and_apply_all_exact_ids() -> None:

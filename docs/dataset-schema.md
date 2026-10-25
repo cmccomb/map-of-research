@@ -63,10 +63,11 @@ or venue before embedding and work matching. The raw snapshot and
 corrected field names, basis, evidence URL, and verification date in
 `metadata_correction_*` fields. The publisher checks the original title, year,
 and venue before applying a correction, so a changed Scholar source fails
-publication until the decision is reviewed again. Once any Scholar row from a
-profile with declared corrections is present, every declared exact ID for that
-profile must occur exactly once. A profile staged for a later snapshot may be
-absent entirely.
+publication until the decision is reviewed again. The same exact-value check
+applies when the source year is missing or its venue is blank. Once any Scholar
+row from a profile with declared corrections is present, every declared exact
+ID for that profile must occur exactly once. A profile staged for a later
+snapshot may be absent entirely.
 
 Exact context reviews add `publication_type`, `source_document_id`,
 `collaboration_eligible`, optional source-verified display contributors, and

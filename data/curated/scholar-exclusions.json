@@ -9248,6 +9248,14 @@
       "reason": "Capture row 1384 combines the 2019 original arXiv title of CMS HIN-18-015 with the final 2021 Phys. Rev. C 103 014902 journal locator. This mixed-version observation duplicates retained final journal row wJ_gQLoAAAAJ:RJNGbXJAtMsC (row 695); keep the unresolved original-title row 1958 for separate provenance review.",
       "evidence_url": "https://cds.cern.ch/record/2676134/files/scoap3-fulltext.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "6ArMETUAAAAJ",
+      "author_pub_id": "6ArMETUAAAAJ:Wp0gIr-vW9MC",
+      "reason_code": "nonpublication",
+      "reason": "The CMU Libraries Open Access Week program lists Schwartz as a panel participant; this is an event program, not an authored publication.",
+      "evidence_url": "https://www.library.cmu.edu/sites/default/files/2021-07/15-449_Boundless.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }

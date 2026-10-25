@@ -90,6 +90,26 @@ def test_alias_cannot_restore_reviewed_exclusion() -> None:
         validate_doi_aliases(frame, aliases, {key: object()})
 
 
+def test_alias_with_missing_observed_year_requires_missing_raw_year(tmp_path) -> None:
+    source = _source()
+    source["aliases"] = [{**source["aliases"][0], "observed_year": None}]
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps(source), encoding="utf-8")
+    aliases = load_doi_aliases(path)
+    (scholar_id, author_pub_id), alias = next(iter(aliases.items()))
+    row = {
+        "source_type": "scholar",
+        "scholar_id": scholar_id,
+        "author_pub_id": author_pub_id,
+        "title": alias.observed_title,
+        "year": pandas.NA,
+        "source_doi": "",
+    }
+    validate_doi_aliases(pandas.DataFrame([row]), aliases, {})
+    with pytest.raises(ValueError, match="observed title or year changed"):
+        validate_doi_aliases(pandas.DataFrame([{**row, "year": 2025}]), aliases, {})
+
+
 @pytest.mark.parametrize(
     ("change", "message"),
     [
@@ -97,6 +117,7 @@ def test_alias_cannot_restore_reviewed_exclusion() -> None:
         ({"published_doi": "not-a-doi"}, "valid published DOI"),
         ({"observed_title": ""}, "exact observed title and year"),
         ({"observed_year": True}, "exact observed title and year"),
+        ({"observed_year": ""}, "exact observed title and year"),
         ({"relationship": "same_title"}, "supported version relationship"),
         ({"evidence_urls": ["https://arxiv.org/abs/1812.02841"]}, "distinct HTTPS"),
         (
