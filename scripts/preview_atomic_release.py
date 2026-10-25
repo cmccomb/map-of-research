@@ -265,6 +265,11 @@ def main() -> int:
                     if (curated / "bio-mcmanus-poster-loss-approval.json").is_file()
                     else None
                 ),
+                bio_binding_approval_path=(
+                    curated / "bio-exact-binding-approval-38f.json"
+                    if (curated / "bio-exact-binding-approval-38f.json").is_file()
+                    else None
+                ),
                 source_cache_dir=snapshot / "data/authors",
                 primary_home_baseline_path=(
                     reviews / "2026-10-25-implicit-scholar-primary-baseline.json"

@@ -17,13 +17,13 @@ snapshot. None of these reviews changes raw Scholar records.
 The McManus article has a 23-character title, and the Barth article has a
 four-word title. Their short-title exceptions are restricted to the exact
 Scholar observations, titles, years, DOIs, dated reviews, and publisher
-PII/PubMed/DOI evidence chains. The strict guard is implemented separately in
-the staged region-policy PR. On the frozen Chemistry weak-region layout,
-each article is withheld without its own flag and retained with it. The
-other 507 works in their shared region do not change eligibility. These exact
-reviews permit the four works to remain visible on the current
-`bb88ddf0d427122cbb8d72cfed5c84c4e6d660bd` hosted baseline; they do
-not approve a blanket change to the Bernhard region.
+PII/PubMed/DOI evidence chains. The strict guard is included in this producer
+branch. The read-only comparison against Hub parent
+`38f119d71692cdb9112210217b532a7dd7c1633a` kept these four Scholar
+observations visible and found no unexplained visible gain or loss. Its 11
+exact work-binding changes need separate review before the seven-file stage
+can complete. These reviews do not approve a blanket change to the Bernhard
+region.
 
 The raw McManus observation `28yZqbcAAAAJ:HKviVsUxM5wC` has a poster-number
 placeholder, no captured year, and no verified full byline. The meeting's

@@ -49,6 +49,7 @@ def _run_preview(
     *,
     fail_before_write: bool,
     approval: bool = False,
+    binding_approval: bool = False,
     region_diff: bool = False,
 ):
     preview = _load_script()
@@ -61,6 +62,8 @@ def _run_preview(
         curated = producer / "data/curated"
         curated.mkdir(parents=True)
         (curated / "bio-mcmanus-poster-loss-approval.json").write_text("{}")
+        if binding_approval:
+            (curated / "bio-exact-binding-approval-38f.json").write_text("{}")
     (snapshot / "snapshots").mkdir(parents=True)
     (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
@@ -118,6 +121,11 @@ def _run_preview(
         approval_path = producer / "data/curated/bio-mcmanus-poster-loss-approval.json"
         assert kwargs["historical_loss_approval_path"] == (
             approval_path if approval else None
+        )
+        assert kwargs["bio_binding_approval_path"] == (
+            producer / "data/curated/bio-exact-binding-approval-38f.json"
+            if binding_approval
+            else None
         )
         if region_diff:
             raise RegionReleaseDiffError(
@@ -217,7 +225,11 @@ def test_no_write_preview_records_exact_region_diff_before_write(monkeypatch, tm
 
 def test_no_write_preview_passes_one_time_bio_loss_approval(monkeypatch, tmp_path):
     code, receipt = _run_preview(
-        monkeypatch, tmp_path, fail_before_write=False, approval=True
+        monkeypatch,
+        tmp_path,
+        fail_before_write=False,
+        approval=True,
+        binding_approval=True,
     )
     assert code == 0
     assert receipt["status"] == "passed_no_upload"
@@ -231,6 +243,7 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "permissions:\n  contents: read" in workflow
     assert "id-token: write" not in workflow
     assert "persist-credentials: false" in workflow
+    assert "--bio-binding-approval" in upload
     assert "--status-dir receipt/status" in workflow
     assert "--current-receipt receipt/status/last-upload.json" in workflow
     assert "--receipt-dir receipt" in workflow

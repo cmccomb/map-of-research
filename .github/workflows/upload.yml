@@ -242,6 +242,12 @@ jobs:
               source/data/curated/bio-mcmanus-poster-loss-approval.json
             )
           fi
+          if [ -f source/data/curated/bio-exact-binding-approval-38f.json ]; then
+            BIO_RELEASE_ARGS+=(
+              --bio-binding-approval
+              source/data/curated/bio-exact-binding-approval-38f.json
+            )
+          fi
           map-publish-snapshot \
             "${BIO_RELEASE_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \

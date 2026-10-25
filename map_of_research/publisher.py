@@ -20,6 +20,7 @@ from .attribution import (
     DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     load_attribution_reviews,
 )
+from .bio_binding_approval import load_bio_binding_approval
 from .bio_release_gate import (
     BIO_SOURCE_SHA256,
     bio_scholar_source_changed,
@@ -1490,6 +1491,7 @@ def publish_snapshot(
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
     provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     historical_loss_approval_path: Path | None = None,
+    bio_binding_approval_path: Path | None = None,
     source_cache_dir: Path | None = None,
     primary_home_baseline_path: Path | None = None,
     prior_revision: str | None = None,
@@ -1786,6 +1788,21 @@ def publish_snapshot(
         if sullivan_transition
         else None
     )
+    bio_binding_approval = (
+        load_bio_binding_approval(
+            approval_path=bio_binding_approval_path,
+            prior_revision=prior_revision,
+            source_snapshot_commit=source_commit or "",
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            doi_aliases_path=doi_aliases_path,
+            curated_works_path=curated_works_path,
+            profile_releases_path=profile_releases_path,
+            provisional_holds_path=provisional_holds_path,
+            poster_loss_approval_path=historical_loss_approval_path,
+        )
+        if bio_binding_approval_path is not None
+        else None
+    )
     tables["works"], continuity_receipt = reconcile_region_decisions(
         tables["works"],
         tables["profile_publications"],
@@ -1794,6 +1811,7 @@ def publish_snapshot(
         prior_revision=comparison_revision,
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
+        bio_binding_approval=bio_binding_approval,
         composite_plan=composite_plan,
         historical_works=historical_works,
         approved_poster_loss=poster_loss_approval,
@@ -2129,6 +2147,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         help="Reviewed parent-pinned approval for one McManus poster map-point loss",
     )
+    parser.add_argument(
+        "--bio-binding-approval",
+        type=Path,
+        help="Reviewed parent-pinned Bio work-binding changes",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2241,6 +2264,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             profile_releases_path=args.profile_releases,
             provisional_holds_path=args.provisional_holds,
             historical_loss_approval_path=args.approved_poster_loss,
+            bio_binding_approval_path=args.bio_binding_approval,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,

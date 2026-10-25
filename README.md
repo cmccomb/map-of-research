@@ -238,9 +238,11 @@ DOI, known year, substantive title, named authors, venue, and source URL stays
 visible. A DOI-less work also stays visible when a separately verified curated
 record supplies a stable native identifier and dated HTTPS evidence for those
 bibliographic details. An exact reviewed DOI alias may also retain a shorter
-title when its Scholar citation, DOI, year, and publisher chapter URL are pinned
-in the alias manifest with `allow_short_title_region_override: true`. The
-current entry covers Gordon Rule's *Exchange processes* chapter. Weaker works
+title when its Scholar citation, DOI, year, and independent publication URLs
+are pinned in the alias manifest with `allow_short_title_region_override: true`.
+The current entries cover Gordon Rule's *Exchange processes* chapter, Alison
+Barth's “Constructing the External World,” and C. Joel McManus's “Getting the
+message out.” Weaker works
 retain the `low_information_region` exclusion. The
 versioned audit records `map_region_documented_override` for each retained
 exception, keeps all source rows in the dataset, and regenerates the final
