@@ -73,6 +73,17 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "state": "released",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "reason": "Complete 195-row visible Scholar source is verified. Nineteen exact exclusions remain reviewed separately; the undated Spanish archive observation is provisionally held pending original metadata for publication type, date, and full byline. Other rows enter the normal quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "228bc9dc3971f00d531a405f96ac2f7050c0f7f33edd8dcd43f5777c81d2ee97"
     }
   ]
 }
