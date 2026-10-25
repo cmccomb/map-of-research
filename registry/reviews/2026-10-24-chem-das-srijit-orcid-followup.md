@@ -1,0 +1,48 @@
+# Das attribution follow-up: Srijit Das ORCID exact works
+
+This draft extends the 76 exact decisions in PR #73 by 36 new exact `author_pub_id` exclusions. The 670-row raw browser capture remains unchanged. The other 558 rows are not certified by this decision set.
+
+CMU [identifies Subha R. Das as a Chemistry faculty member](https://www.cmu.edu/chemistry/people/faculty/das.html) and links the Scholar account `FrF1YXQAAAAJ`. [Sultan Qaboos University identifies Srijit Das as a Human and Clinical Anatomy researcher](https://squ.elsevierpure.com/en/persons/srijit-das/) and links [ORCID `0000-0001-8302-7257`](https://orcid.org/0000-0001-8302-7257). That ORCID record names him Srijit Das. Each exact work below is in his ORCID work record with `assertion-origin-orcid` set to that same identity and Scopus as the importing source. Titles were matched after case, accent, punctuation, and spacing normalization; no fuzzy matches were used.
+
+Capture receipt: `4a1629f702a3f4330ba59f76f30a4e60989e1f12e96a0535119614da4ad8f91a` SHA-256, 670 unique IDs, `more_remain=false`. ORCID works response SHA-256: `6343e6b41c8859ffddb0f3a25a3304829fa1d090331ecd11c304eccb26ace144`; retrieved 2026-10-24 from `https://pub.orcid.org/v3.0/0000-0001-8302-7257/works`.
+
+| Scholar row | Exact author publication ID | Title | Srijit ORCID work |
+| ---: | --- | --- | --- |
+| 91 | `FrF1YXQAAAAJ:Nufq_to8ts0C` | Comparison of Chlorella vulgaris dressing and sodium alginate dressing: an experimental study in rats | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754587) |
+| 92 | `FrF1YXQAAAAJ:17ZO-CJnx_8C` | Successful free omental flap and skin graft reconstruction of scalp avulsion injury. | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754592) |
+| 93 | `FrF1YXQAAAAJ:9LpHyFPp1DQC` | A rare bimuscular conglomeration gluteopiriformis case report | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754773) |
+| 111 | `FrF1YXQAAAAJ:cB__R-XWw9UC` | Anomalous constitution of the brachioradialis muscle: a potential site of radial nerve entrapment | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754613) |
+| 119 | `FrF1YXQAAAAJ:S2WlVNSe3u4C` | Immunohistochemical expression of vascular endothelial growth factor (VEGF) and p53 in breast lesions | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754611) |
+| 121 | `FrF1YXQAAAAJ:K4-iKlO5MD4C` | Entrapment of plantaris tendon between the tibial nerve and its branch: a case report | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754658) |
+| 173 | `FrF1YXQAAAAJ:Tfl4UtY-dJUC` | Clinical relevance of a cysto-colic peritoneal band found incidentally during cadaveric dissection | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754608) |
+| 176 | `FrF1YXQAAAAJ:c1AJUTjuCtUC` | Anatomico-radiological study of asymmetrical articular facets on occipital condyles and its clinical implications. | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754648) |
+| 177 | `FrF1YXQAAAAJ:DquSII9TDu4C` | Higher origin of the dorsal branch of ulnar nerve and connection between it and the deep branch throughout the hypothenar muscles: a case report | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754669) |
+| 196 | `FrF1YXQAAAAJ:EBV337fEn3EC` | Internal hernia through the mesosalpinx: a lesson to learn | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754586) |
+| 197 | `FrF1YXQAAAAJ:a3BOlSfXSfwC` | Bitendinous insertion of abductor pollicis longus coexistent with a rare accessory antebrachial muscle: clinico-anatomical considerations | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754614) |
+| 198 | `FrF1YXQAAAAJ:MDX3w3dAD3YC` | Plasma vitamin C and tocotrienols changes in response to dietary supplementation among young male adults | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754609) |
+| 199 | `FrF1YXQAAAAJ:qsWQJNntlusC` | Preconception counseling in the prevention of fetal alcohol syndrome: a unique window of opportunity | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754624) |
+| 229 | `FrF1YXQAAAAJ:RfUwGJFMQ-0C` | Noise in operation theatres: genuine reason to worry | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754847) |
+| 230 | `FrF1YXQAAAAJ:u3T1itk59dMC` | Peculiar tendinous origin of the brachialis muscle: anatomic and clinical insight | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754649) |
+| 232 | `FrF1YXQAAAAJ:0ngZmJvimKcC` | Topographical anatomy of anomalous oblique fissure and lingula of the lung | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754653) |
+| 233 | `FrF1YXQAAAAJ:SrKkpNFED5gC` | Anomalous attachment of the flexor digiti minimi muscle of the foot: an anatomical study with clinical implications | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754666) |
+| 260 | `FrF1YXQAAAAJ:M_lZXyI38BkC` | A preliminary study of reactive oxygen species activity within motile Boer buck sperm using confocal laser scanning micro-scope (CLSM) | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754612) |
+| 261 | `FrF1YXQAAAAJ:V_vSwabWVtYC` | Effect of pubertal developmental stages and lower limb kinetics during vertical jump task in Sepak Takraw Sport | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754620) |
+| 275 | `FrF1YXQAAAAJ:H7nrzBkawXsC` | Toe Macrodactyly, Macrodystrophia Lipomatosa, Fibrolipomatous Hamartoma and Lipomatosis of Nerve. Are they similar?: A Case Report | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754838) |
+| 297 | `FrF1YXQAAAAJ:X4-KO54GjGYC` | Asymmetrical bilateral double mandibular canals: anatomico-radiological study and clinical implications | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754605) |
+| 298 | `FrF1YXQAAAAJ:BJtnxTr0fRcC` | The predictive values of urinalysis in intravenous urogram. Is intravenous urography really necessary in mild hydronephrotic patient? | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754619) |
+| 353 | `FrF1YXQAAAAJ:RMgMIBzvq-4C` | Ureteritis cystica: an interesting case with diagnostic dilemma | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754594) |
+| 355 | `FrF1YXQAAAAJ:L24QuVWYgZ0C` | An interesting case of multiple endocrine neoplasia type 2A | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754596) |
+| 356 | `FrF1YXQAAAAJ:7H_jS4BsgvYC` | Non-secretory multiple myeloma with diagnostic challenges | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754591) |
+| 386 | `FrF1YXQAAAAJ:lg2tdxc6qMwC` | Los beneficios del aula invertida en Radiología | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754720) |
+| 437 | `FrF1YXQAAAAJ:LXmCCkuhhTsC` | Cardioprotective effects of Gynura procumbens extract on oxidative status and myocardial injury in rats with isoproterenol-induced myocardial infarction. | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754581) |
+| 527 | `FrF1YXQAAAAJ:OP4eGU-M3BUC` | Asymmetrical bilateral double mandibular canals: Anatomico-radiological study and clinical implications | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754605) |
+| 528 | `FrF1YXQAAAAJ:F9fV5C73w3QC` | Clinical relevance of a cysto-colic peritoneal band found incidentally during cadaveric dissection | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754608) |
+| 530 | `FrF1YXQAAAAJ:lmc2jWPfTJgC` | Immunohistochemical expression of vascular endothelial growth factor (VEGF) and p53 in breast lesions | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754611) |
+| 531 | `FrF1YXQAAAAJ:MLfJN-KU85MC` | An unexpected case of primary peritoneal carcinoma | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754601) |
+| 532 | `FrF1YXQAAAAJ:NJ774b8OgUMC` | The effect of Piper betel extract on the wound healing process in experimentally induced diabetic rats | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754610) |
+| 534 | `FrF1YXQAAAAJ:RoXSNcbkSzsC` | An unexpected case of primary peritoneal carcinoma | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754601) |
+| 552 | `FrF1YXQAAAAJ:gVv57TyPmFsC` | Chemopreventive efficacy of ginger (Zingiber officinale) in ethionine induced rat hepatocarcinogenesis. | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754631) |
+| 553 | `FrF1YXQAAAAJ:N4u4nq0IxgcC` | Morphology of the temporo-mandibular joint at different ages | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754861) |
+| 556 | `FrF1YXQAAAAJ:n3vGvpFsckwC` | Is there any link between cardiovascular disease and depression? | [ORCID work](https://pub.orcid.org/v3.0/0000-0001-8302-7257/work/222754699) |
+
+Rows 137, 421, and 605 also resemble ORCID works but differ in title and were deliberately left untouched. Other suspicious clinical, anatomy, optics, agronomy, and computing records remain under review. This follow-up does not authorize promotion of the Das cache to the canonical source snapshot.
