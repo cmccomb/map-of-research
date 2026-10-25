@@ -2,6 +2,7 @@ import hashlib
 import json
 import sys
 from dataclasses import replace
+from pathlib import Path
 from types import SimpleNamespace
 
 import numpy
@@ -9,6 +10,16 @@ import pandas
 import pytest
 
 import map_of_research.publisher as publisher
+from map_of_research.composite_region import (
+    BASELINE_REVISION as SULLIVAN_BASELINE_REVISION,
+)
+from map_of_research.composite_region import (
+    SOURCE_COMMIT as SULLIVAN_SOURCE_COMMIT,
+)
+from map_of_research.composite_region import (
+    SOURCE_SHA256 as SULLIVAN_SOURCE_SHA256,
+)
+from map_of_research.composite_region import load_reviewed_sullivan_embeddings
 from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
@@ -177,6 +188,80 @@ def test_embedding_refresh_reuses_existing_vectors(monkeypatch) -> None:
     assert new_count == 1
     assert enriched.loc[0, "embedding"] == [0.0] * 768
     assert enriched.loc[1, "embedding"] == [1.0] * 768
+
+
+def test_reviewed_sullivan_vectors_are_exact_despite_encoder_and_row_order(
+    monkeypatch,
+) -> None:
+    curated = Path(__file__).resolve().parents[1] / "data/curated"
+    vectors = load_reviewed_sullivan_embeddings(
+        curated,
+        source_commit=SULLIVAN_SOURCE_COMMIT,
+        source_sha256=SULLIVAN_SOURCE_SHA256,
+        hub_parent=SULLIVAN_BASELINE_REVISION,
+    )
+    assert len(vectors) == 70
+    monkeypatch.setattr(publisher, "_existing_embeddings", lambda **_: {})
+
+    class PerturbedEncoder:
+        def encode(self, titles, **kwargs):
+            raise AssertionError("Reviewed Sullivan vectors must never be re-encoded")
+
+    keys = list(vectors)
+    results = []
+    for ordered in (keys, list(reversed(keys))):
+        frame = pandas.DataFrame(
+            [
+                {"author_pub_id": author_pub_id, "title": title}
+                for author_pub_id, title in ordered
+            ]
+        )
+        output, new_count = publisher.add_embeddings(
+            frame,
+            hf_token="test",
+            encoder=PerturbedEncoder(),
+            reviewed_new_vectors=vectors,
+        )
+        assert new_count == 70
+        results.append(
+            {
+                (row.author_pub_id, row.title): row.embedding
+                for row in output.itertuples(index=False)
+            }
+        )
+    assert results[0] == results[1] == vectors
+
+
+def test_reviewed_sullivan_vectors_reject_unknown_new_title(monkeypatch) -> None:
+    monkeypatch.setattr(publisher, "_existing_embeddings", lambda **_: {})
+    frame = pandas.DataFrame([{"author_pub_id": "new:one", "title": "Unreviewed"}])
+    with pytest.raises(ValueError, match="differ from reviewed Sullivan"):
+        publisher.add_embeddings(
+            frame,
+            hf_token="test",
+            encoder=SimpleNamespace(encode=lambda *args, **kwargs: None),
+            reviewed_new_vectors={},
+        )
+
+
+def test_reviewed_sullivan_vectors_reject_wrong_source_and_fixture_bytes(
+    tmp_path,
+) -> None:
+    curated = Path(__file__).resolve().parents[1] / "data/curated"
+    kwargs = {
+        "source_commit": SULLIVAN_SOURCE_COMMIT,
+        "source_sha256": SULLIVAN_SOURCE_SHA256,
+        "hub_parent": SULLIVAN_BASELINE_REVISION,
+    }
+    with pytest.raises(ValueError, match="provenance changed"):
+        load_reviewed_sullivan_embeddings(
+            curated, **{**kwargs, "source_commit": "wrong source"}
+        )
+    fixture = curated / "sullivan-reviewed-new-embeddings.json"
+    altered = tmp_path / fixture.name
+    altered.write_bytes(fixture.read_bytes() + b" ")
+    with pytest.raises(ValueError, match="fixture bytes changed"):
+        load_reviewed_sullivan_embeddings(tmp_path, **kwargs)
 
 
 def test_list_normalization_handles_scalar_tuple_and_array() -> None:

@@ -7,9 +7,12 @@ published bb88 region decisions and payloads.
 
 from __future__ import annotations
 
+import base64
+import binascii
 import hashlib
 import json
 import math
+import struct
 from collections import Counter, defaultdict
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
@@ -36,6 +39,9 @@ SULLIVAN_DELTA_FIXTURE_SHA256 = (
 )
 SULLIVAN_NONWORK_FIXTURE_SHA256 = (
     "05413a0c47034d0fb6d292c6a55f64ec1bc49942771b93f6926f0a326302c26d"
+)
+SULLIVAN_EMBEDDING_FIXTURE_SHA256 = (
+    "2075403d441769b6d1603423594b7962fa5056fb057721af2c1aff7183c13c46"
 )
 MATH_EXCLUSIONS_SHA256 = (
     "adb6532806737f794d02ea1fed30ad9e03a419abb27b819a7d6a01cbf3122f66"
@@ -76,6 +82,7 @@ BLANK_TOPICS = {
     field: False if field.endswith("_label_reviewed") else "" for field in TOPIC_FIELDS
 }
 SULLIVAN_PERSON_ID = "person-sullivan-589c9545"
+SULLIVAN_SCHOLAR_ID = "wXSgFr4AAAAJ"
 SULLIVAN_POINT_FIELDS = frozenset(
     {
         "title",
@@ -150,6 +157,81 @@ def _load_stage_fixture(
     ):
         raise ValueError(f"Reviewed Sullivan fixture provenance changed: {name}")
     return fixture
+
+
+def load_reviewed_sullivan_embeddings(
+    curated_dir: Path, *, source_commit: str, source_sha256: str, hub_parent: str
+) -> dict[tuple[str, str], list[float]]:
+    """Reuse the 70 exact vectors in the reviewed first-write-intercepted stage.
+
+    SentenceTransformer returns slightly different float32 values across CPU
+    platforms and batch shapes. These source-bound values keep the existing
+    exact works and profile-publications digests meaningful on hosted Linux.
+    """
+
+    name = "sullivan-reviewed-new-embeddings.json"
+    raw = (curated_dir / name).read_bytes()
+    if hashlib.sha256(raw).hexdigest() != SULLIVAN_EMBEDDING_FIXTURE_SHA256:
+        raise ValueError("Reviewed Sullivan embedding fixture bytes changed")
+    fixture = json.loads(raw)
+    if (
+        fixture.get("schema_version") != 1
+        or fixture.get("status") != "first-write-intercepted-no-upload-stage"
+        or source_commit != SOURCE_COMMIT
+        or fixture.get("source_commit") != SOURCE_COMMIT
+        or source_sha256 != SOURCE_SHA256
+        or fixture.get("source_snapshot_sha256") != SOURCE_SHA256
+        or hub_parent != BASELINE_REVISION
+        or fixture.get("hub_parent") != BASELINE_REVISION
+        or fixture.get("producer_commit_at_stage")
+        != "514254a8118c28ea3f145c9a30f6f89b589ec550"
+        or fixture.get("staged_profile_publications_sha256")
+        != "d9f7202470c927fde0b7e776bbea0b32d9192eae38516c7f187926f4fde3b5ba"
+        or fixture.get("embedding_dimension") != 768
+        or fixture.get("embedding_encoding") != "float32-little-endian-base64"
+        or fixture.get("new_embedding_count") != 70
+        or not isinstance(fixture.get("rows"), list)
+        or len(fixture["rows"]) != 70
+    ):
+        raise ValueError("Reviewed Sullivan embedding provenance changed")
+    vectors: dict[tuple[str, str], list[float]] = {}
+    observation_ids: set[str] = set()
+    for row in fixture["rows"]:
+        key = (row.get("author_pub_id"), row.get("title"))
+        encoded = row.get("embedding_float32_le_base64")
+        observation_id = row.get("observation_id")
+        try:
+            raw_vector = base64.b64decode(encoded, validate=True)
+        except (binascii.Error, TypeError, ValueError) as error:
+            raise ValueError(
+                "Reviewed Sullivan embedding encoding is invalid"
+            ) from error
+        if len(raw_vector) != 768 * 4 or hashlib.sha256(
+            raw_vector
+        ).hexdigest() != row.get("embedding_sha256"):
+            raise ValueError("Reviewed Sullivan embedding bytes changed")
+        values = list(struct.unpack("<768f", raw_vector))
+        if (
+            not isinstance(key[0], str)
+            or not key[0].startswith(f"{SULLIVAN_SCHOLAR_ID}:")
+            or not isinstance(key[1], str)
+            or not key[1]
+            or key in vectors
+            or not isinstance(observation_id, str)
+            or not observation_id.startswith("observation-")
+            or observation_id in observation_ids
+            or not isinstance(row.get("work_id"), str)
+            or not row["work_id"].startswith("work-")
+            or any(
+                type(value) not in (int, float) or not math.isfinite(value)
+                for value in values
+            )
+            or not 0.99 < math.sqrt(sum(value * value for value in values)) < 1.01
+        ):
+            raise ValueError("Reviewed Sullivan embedding row is invalid")
+        vectors[key] = values
+        observation_ids.add(observation_id)
+    return vectors
 
 
 @dataclass(frozen=True)

@@ -35,6 +35,7 @@ from .composite_region import (
     SULLIVAN_PERSON_ID,
     freeze_composite_presentation,
     load_composite_region_plan,
+    load_reviewed_sullivan_embeddings,
     require_baseline_map,
     validate_composite_map_points,
     validate_composite_staged_nonwork_tables,
@@ -328,8 +329,9 @@ def add_embeddings(
     hf_token: str,
     encoder: Any | None = None,
     prior_revision: str | None = None,
+    reviewed_new_vectors: Mapping[tuple[str, str], list[float]] | None = None,
 ) -> tuple[Any, int]:
-    """Reuse unchanged source-observation vectors and encode only new titles."""
+    """Reuse published vectors and exact reviewed vectors before encoding titles."""
 
     existing = _existing_embeddings(
         hf_token=hf_token,
@@ -357,6 +359,13 @@ def add_embeddings(
             existing[key] = by_title[key[1]]
 
     missing_keys = list(dict.fromkeys(key for key in keys if key not in existing))
+    if reviewed_new_vectors is not None:
+        if set(missing_keys) != set(reviewed_new_vectors):
+            raise ValueError("New vectors differ from reviewed Sullivan release")
+        existing.update(reviewed_new_vectors)
+        output = frame.copy()
+        output["embedding"] = [existing[key] for key in keys]
+        return output, len(missing_keys)
     if missing_keys:
         if encoder is None:
             from sentence_transformers import SentenceTransformer
@@ -1600,11 +1609,20 @@ def publish_snapshot(
     published_correction_count = int(
         released_frame["metadata_correction_fields"].ne("").sum()
     )
+    reviewed_new_vectors = None
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 release
+        reviewed_new_vectors = load_reviewed_sullivan_embeddings(
+            math_region_review_path.parent,
+            source_commit=source_commit or "",
+            source_sha256=str(manifest["snapshot_sha256"]),
+            hub_parent=prior_revision,
+        )
     enriched, new_embedding_count = add_embeddings(
         released_frame,
         hf_token=hf_token,
         encoder=encoder,
         prior_revision=prior_revision,
+        reviewed_new_vectors=reviewed_new_vectors,
     )
     tables = build_dataset_tables(
         enriched,
