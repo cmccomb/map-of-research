@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import json
 import math
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from map_of_research.composite_region import (
     CompositeRegionPlan,
     _digest_row,
     _require_hidden_math_attribution,
+    _reviewed_variant_order_matches,
     _work_payload_exceptions,
     freeze_composite_presentation,
 )
@@ -105,3 +107,21 @@ def test_manual_upload_uses_immutable_producer_and_composite_manifests():
         "--sullivan-continuity-addendum "
         "source/data/curated/sullivan-continuity-addendum-bb88.json"
     ) in workflow
+
+
+def test_only_two_exact_reviewed_sullivan_variant_orders_are_accepted():
+    fixture = json.loads(
+        (
+            Path(__file__).resolve().parents[1]
+            / "data/curated/composite-sullivan-work-digests.json"
+        ).read_text(encoding="utf-8")
+    )
+    exceptions = fixture["order_only_variant_exceptions"]
+    assert len(exceptions) == 2
+    for exception in exceptions.values():
+        assert _reviewed_variant_order_matches(exception["bb88_order"], exception)
+        assert _reviewed_variant_order_matches(exception["run04_order"], exception)
+        changed = [*exception["run04_order"]]
+        changed[0] = "Unreviewed title or venue"
+        assert not _reviewed_variant_order_matches(changed, exception)
+        assert not _reviewed_variant_order_matches(changed[:1], exception)

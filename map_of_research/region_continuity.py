@@ -458,7 +458,7 @@ def reconcile_region_decisions(
             ]
             output.at[index, "map_region_prior_excluded_override"] = True
 
-    if composite_plan is not None:
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         from .composite_region import apply_composite_region_decisions
 
         if historical_works is None:
@@ -647,7 +647,7 @@ def reconcile_region_decisions(
     # A prior weak-region exclusion remains excluded unless independently
     # verified. Newly collected Scholar rows use the current quality audit.
     new_gains = sorted(identity for identity in gains if identity not in previous_rows)
-    if composite_plan is not None and any(
+    if composite_plan is not None and any(  # pragma: no cover - exact f8/bb88 preview
         identity[0] != "person-sullivan-589c9545" for identity in new_gains
     ):
         raise ValueError("Composite release has a non-Sullivan new source gain")

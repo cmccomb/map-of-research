@@ -45,7 +45,7 @@
       "sha256_without_field": "eb2f3052084c5ded1b300e9aed29f425853ea4f78968fc663c436e8ee48845b7"
     }
   },
-  "producer_commit_at_stage": "3630084aafd351726651708d270a87cbb597ad27",
+  "producer_base_commit_at_stage": "3630084aafd351726651708d270a87cbb597ad27",
   "schema_version": 1,
   "source_commit_at_stage": "8ba438215b50ff877f1a4dd0ce21ca2ed5f9b2d0",
   "source_snapshot_sha256": "f8d7ffec683eb1830dadc77e612cbad7f3fa18ff199696041a71a9b8edbcefa2",

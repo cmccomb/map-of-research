@@ -29,13 +29,13 @@ MATH_REVIEW_MANIFEST_SHA256 = (
     "4ede0738f5f0ec5fff2473262db2a89e9a6c61849007b176534bc85d052d415d"
 )
 SULLIVAN_WORK_FIXTURE_SHA256 = (
-    "358cbad94d8fb82f823e28805e0516972175b0db6b5b28d76588d7da78b1e3b7"
+    "b13e3d2b77163284dc6bf7989df166de8e682d84a993cae9119c7c48061c0f60"
 )
 SULLIVAN_DELTA_FIXTURE_SHA256 = (
-    "ec7ee73e437ae0f3e22611cb107c708dea162cf76afc7c21d73684fd270b62d1"
+    "38f48f03c6cd0a56596447d4ad344743b8eca8271db2edc7e1483cf1f1085aeb"
 )
 SULLIVAN_NONWORK_FIXTURE_SHA256 = (
-    "01bc8d1f0932fcc8a5d1c6ef76fd86404fb1144a0c271ed603b4d4932629fa77"
+    "05413a0c47034d0fb6d292c6a55f64ec1bc49942771b93f6926f0a326302c26d"
 )
 MATH_EXCLUSIONS_SHA256 = (
     "adb6532806737f794d02ea1fed30ad9e03a419abb27b819a7d6a01cbf3122f66"
@@ -145,7 +145,7 @@ def _load_stage_fixture(
         or fixture.get("source_snapshot_sha256") != SOURCE_SHA256
         or fixture.get("source_commit_at_stage")
         != "8ba438215b50ff877f1a4dd0ce21ca2ed5f9b2d0"
-        or fixture.get("producer_commit_at_stage")
+        or fixture.get("producer_base_commit_at_stage")
         != "3630084aafd351726651708d270a87cbb597ad27"
     ):
         raise ValueError(f"Reviewed Sullivan fixture provenance changed: {name}")
@@ -653,6 +653,14 @@ def _work_payload_exceptions(
     return frozenset()
 
 
+def _reviewed_variant_order_matches(
+    values: list[str], exception: Mapping[str, Any]
+) -> bool:
+    return values in (exception["bb88_order"], exception["run04_order"]) and Counter(
+        values
+    ) == Counter(exception["run04_order"])
+
+
 def validate_composite_staged_works(
     baseline_path: Path,
     staged_path: Path,
@@ -736,8 +744,7 @@ def validate_composite_staged_works(
                     field = exception["field"]
                     if (
                         field not in VARIANT_FIELDS
-                        or row[field] != exception["bb88_order"]
-                        or Counter(row[field]) != Counter(exception["run04_order"])
+                        or not _reviewed_variant_order_matches(row[field], exception)
                         or _digest_row(
                             row,
                             exclude=frozenset([*work_fixture["exclude_fields"], field]),

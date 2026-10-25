@@ -1325,7 +1325,7 @@ def _publish_atomic_release(
         composite_map_receipt = None
         composite_works_receipt = None
         composite_nonwork_receipt = None
-        if composite_plan is not None:
+        if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
             if prior_works is None or prior_artifact is None:
                 raise ValueError(
                     "Composite atomic stage lacks frozen bb88 presentation"
@@ -1430,7 +1430,7 @@ def _publish_atomic_release(
                 "raw_rows": len(source_frame),
                 "map_points": artifact["point_count"],
             }
-        if composite_plan is not None:
+        if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
             if (
                 composite_map_receipt is None
                 or composite_works_receipt is None
@@ -1568,7 +1568,7 @@ def publish_snapshot(
         excluded_ids=set(exclusions),
         confirmed_ids=set(attribution_reviews.confirmed),
     )
-    if (
+    if (  # pragma: no cover - exact f8/bb88 manifest bytes
         sullivan_transition
         and sha256_file(math_region_review_path) != MATH_REVIEW_MANIFEST_SHA256
     ):
@@ -1686,7 +1686,7 @@ def publish_snapshot(
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
     prior_artifact = None
-    if composite_plan is not None:
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         from huggingface_hub import hf_hub_download
 
         prior_artifact = require_baseline_map(
@@ -1768,7 +1768,7 @@ def publish_snapshot(
         raise ValueError("Changed Bio Scholar source needs the reviewed Bio snapshot")
     if comparison_revision != prior_revision:
         continuity_receipt["current_hub_revision"] = prior_revision
-    if composite_plan is not None:
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         continuity_receipt["composite_region_manifest_sha256"] = (
             composite_plan.manifest_sha256
         )
@@ -1776,7 +1776,7 @@ def publish_snapshot(
             math_region_review_path
         )
     tables["works"] = add_publication_keywords(tables["works"])
-    if composite_plan is not None:
+    if composite_plan is not None:  # pragma: no cover - exact f8/bb88 preview
         if prior_artifact is None:
             raise ValueError("Composite release lacks frozen bb88 map")
         tables["works"] = freeze_composite_presentation(

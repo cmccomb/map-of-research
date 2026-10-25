@@ -13,6 +13,8 @@ import pytest
 
 from map_of_research.composite_region import (
     SOURCE_COMMIT as COMPOSITE_SOURCE_COMMIT,
+)
+from map_of_research.composite_region import (
     load_composite_region_plan,
 )
 from map_of_research.region_continuity import (
@@ -152,6 +154,11 @@ def test_math_region_loader_binds_all_31_source_rows_and_primary_homes(tmp_path)
         "hold": 12,
     }
     assert sum(item.visible for item in decisions) == 16
+    assert all(
+        item.observation_identity
+        == (item.person_id, item.scholar_id, item.author_pub_id, "scholar")
+        for item in decisions
+    )
 
 
 @pytest.mark.parametrize(
