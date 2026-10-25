@@ -63,3 +63,15 @@ CMU identity page are verified in the producer registry. Publication
 eligibility is reviewed separately from raw-source preservation. These six
 follow-on profiles add 322 raw Scholar rows in total; the prior 15-profile
 snapshot and its manifest stay unchanged until a coordinated rebuild.
+
+Neil Donahue's canonical cache contains the reviewed 623-row visible profile
+from the candidate under `data/captures/`, with its receipt bound to the staged
+HTML checksum. It replaces the 551-row migrated
+cache. The twelve old IDs missing from the current visible profile are
+classified individually in `status/chem-donahue-disappeared-2026-10-24.csv`;
+four independently verified historical conference records are proposed
+separately in producer PR #123. Seven SVG-rendered title symbols were recovered
+from saved HTML `aria-label` values; the original browser text extraction is
+retained for comparison. Hidden Scholar form tokens are redacted from the
+staged HTML, with the original capture hash in its receipt. Rebuild the
+snapshot after the producer registry and exact-exclusion changes are merged.

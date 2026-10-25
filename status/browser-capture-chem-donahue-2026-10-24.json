@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "collection_method": "chrome_direct_profile",
+  "person_id": "person-donahue-f4c5ce86",
+  "display_name": "Neil M. Donahue",
+  "scholar_id": "ILambBMAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/donahue.html",
+  "scholar_id_source_url": "https://www.cmu.edu/chemistry/people/faculty/donahue.html",
+  "profile_url": "https://scholar.google.com/citations?user=ILambBMAAAAJ&hl=en&pagesize=100",
+  "captured_at_utc": "2026-10-24T21:16:59.068Z",
+  "displayed_count": 623,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 7,
+  "show_more_click_count": 6,
+  "svg_aria_title_rows": [
+    83,
+    115,
+    148,
+    210,
+    249,
+    259,
+    262
+  ],
+  "legacy_cache_count": 551,
+  "shared_legacy_ids": 539,
+  "added_visible_ids": 84,
+  "disappeared_legacy_ids": 12,
+  "disappeared_categories": {
+    "duplicate_rekeyed": 4,
+    "historical_conference_abstract": 3,
+    "historical_conference_proceeding": 1,
+    "malformed_duplicate": 1,
+    "nonpublication_rekeyed": 1,
+    "supporting_material": 1,
+    "supporting_material_duplicate": 1
+  },
+  "current_suspect_candidates": 43,
+  "current_suspect_classes": {
+    "clear_funding_or_proposal_record": 25,
+    "clear_nonpublication_text": 3,
+    "needs_individual_source_review": 6,
+    "program_verified_session_container": 2,
+    "publisher_verified_malformed_duplicate": 7
+  },
+  "unresolved_primary_url": [
+    "ILambBMAAAAJ:t6usbXjVLHcC"
+  ],
+  "id_diff_path": "status/chem-donahue-id-diff-2026-10-24.json",
+  "id_diff_sha256": "d5711e5779f032380260c423296f2e0ec9ae4652e6f221b45d92345fe15b7007",
+  "html_path": "data/captures/donahue-visible-623-2026-10-24.html",
+  "html_sha256": "4c2cb0ee0144c9850133931feb1f7e327da30b788d2b46cc13e8846f7eb45494",
+  "html_redactions": {
+    "xsrf_input_values": 2
+  },
+  "unstaged_original_html_sha256": "80a3f8345bc2d6e2536b1059aff8a9ef127b2277c6a4a5aed6482791489a20f6",
+  "browser_textcontent_json_path": "data/captures/donahue-visible-623-2026-10-24.textcontent.json",
+  "browser_textcontent_json_sha256": "5f0c5819503e2bbf1fde2b779a70a01ed4b8d74404aba206896450fface8c87c",
+  "svg_aware_json_path": "data/captures/donahue-visible-623-2026-10-24.json",
+  "svg_aware_json_sha256": "53f9ff4a4a2ea9021257d56667a5d01992d0297e51e09c7e7b8571aa05bf2f0d",
+  "candidate_cache_path": "data/captures/donahue-visible-623-2026-10-24.candidate-cache.json",
+  "candidate_cache_sha256": "424269fcfed5f480ffda279f6013a3a6841f49f5849e5e559a949871106fdba3",
+  "legacy_cache_sha256": "783d1ad3c2be87fd30f55cd46b3f8fac3927cece9be00134a92b1fb85afa6678",
+  "canonical_snapshot_sha256_unchanged": "e66a7de76dd2597e097ed60548e513a6ea3082da9c14fb2ebdab7b3e8724f22c",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "browser_closed": true,
+  "release_state": "staged_for_source_review"
+}
