@@ -593,8 +593,16 @@ def validate_snapshot(
     author_site_rows = int((frame["source_type"] == "author_site").sum())
     if author_site_rows != int(manifest["author_site_rows"]):
         raise ValueError("Snapshot author-site row count does not match the manifest")
-    if author_site_rows and author_site_rows != 47:
-        raise ValueError("Incomplete Iyer author-site profile")
+    if author_site_rows:
+        capture = json.loads(Path(author_site_path).read_text(encoding="utf-8"))
+        expected_rows = int(capture["expected_entry_count"])
+        if author_site_rows != expected_rows:
+            person = (
+                "Iyer"
+                if capture.get("person_id") == "person-gautamiyer-3894621b"
+                else "Anderson"
+            )
+            raise ValueError(f"Incomplete {person} author-site profile")
     if int(manifest["cached_profiles"]) > int(manifest["registry_profiles"]):
         raise ValueError("Snapshot contains more profiles than the registry")
     return frame, manifest

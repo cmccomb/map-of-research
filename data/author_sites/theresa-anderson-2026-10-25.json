@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "source_type": "author_site",
+  "person_id": "person-theresaanderson-5ed760a9",
+  "official_profile_url": "https://www.cmu.edu/math/people/faculty/anderson.html",
+  "source_page_url": "https://faculty.math.cmu.edu/anderson/research/",
+  "cv_url": "https://faculty.math.cmu.edu/anderson/wp-content/uploads/sites/2/2026/08/CV2026.pdf",
+  "source_section": "Publications and preprints",
+  "source_selector": "h3 Publications and preprints + 42 sibling p elements",
+  "captured_at_utc": "2026-10-25T11:42:24.945731+00:00",
+  "expected_entry_count": 42,
+  "expected_cv_pair_count": 42,
+  "metadata_review_ordinals": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    33
+  ],
+  "genre_overrides": {
+    "5": "appendix",
+    "11": "personal_essay",
+    "37": "thesis"
+  },
+  "source_basis": "author_listed_bibliography_crosschecked_to_author_cv",
+  "scholar_account_status": "no_verified_account",
+  "publication_claim": "All 42 entries displayed on author page and paired one-to-one to current CV; not certified complete career history or Scholar capture",
+  "release_state": "staged_for_explicit_promotion",
+  "release_eligible": false,
+  "html_file": "theresa-anderson-2026-10-25.html",
+  "html_sha256": "7aa17fd09fbfc9eea7af95766a02f144f014976a8d23343077f817e51417d3b3",
+  "source_csv_file": "theresa-anderson-2026-10-25.source.csv",
+  "source_csv_sha256": "3b3f5b96d23f19304838c520f86832e421db7f32fb676ff6838427c24f52c3c1",
+  "cv_pdf_file": "theresa-anderson-2026-10-25.cv.pdf",
+  "cv_pdf_sha256": "c70013a8b9a0617ec0ed6b60bf52e66d62bd9e8685babe3e2a7bc6cf60e659bd",
+  "cv_crosswalk_csv_file": "theresa-anderson-2026-10-25.cv-crosswalk.csv",
+  "cv_crosswalk_csv_sha256": "cb151379a15f9a6df6082df7376341dffb2184fc849f46727ae6cda7e1897642",
+  "review_csv_file": "theresa-anderson-2026-10-25.review.csv",
+  "review_csv_sha256": "5c7deb57c7eb767de29da3a849bfbf1d9f883ad1cb5a05ad43627ddceed654e0"
+}
