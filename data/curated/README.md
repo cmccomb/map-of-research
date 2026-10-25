@@ -34,7 +34,8 @@ The version-of-record title, year, and venue supply that work's display. See
 the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
 the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
 the [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md),
-and [Eur/Young exact-work review](../../registry/reviews/2026-10-25-math-eur-young-exact-works.md)
+the [Eur/Young exact-work review](../../registry/reviews/2026-10-25-math-eur-young-exact-works.md),
+and [Brandon/Kramkov exact-work review](../../registry/reviews/2026-10-25-math-brandon-kramkov-exact-works.md)
 for the exact source evidence.
 
 `scholar-contexts.json` is a separate exact-observation review manifest. It

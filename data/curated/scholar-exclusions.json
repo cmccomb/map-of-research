@@ -9080,6 +9080,54 @@
       "reason": "The captured Scholar title explicitly labels this undated item a proposal for research groups at IMA, with no publication venue; it is not a research publication.",
       "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=l0rzNYsAAAAJ&pagesize=100&citation_for_view=l0rzNYsAAAAJ:UeHWp8X0CEIC",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "9eegHpAAAAAJ",
+      "author_pub_id": "9eegHpAAAAAJ:MXK_kJrjxJIC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9103199 funds nonlocal continuum-mechanics research; the award record is not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9103199.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "InIipCMAAAAJ",
+      "author_pub_id": "InIipCMAAAAJ:4TOpqqG69KYC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0505414 funds Topics in Mathematical Finance; the award record is not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0505414.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "InIipCMAAAAJ",
+      "author_pub_id": "InIipCMAAAAJ:qxL8FJ1GzNcC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0353556 funds the CMU–Morgan Stanley postdoctoral fellowship; the award record is not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0353556.json",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "InIipCMAAAAJ",
+      "author_pub_id": "InIipCMAAAAJ:qjMakFHDy7sC",
+      "reason_code": "nonpublication",
+      "reason": "The exact 2014 title is a Kramkov presentation slide deck that explicitly says it is based on two separately published papers.",
+      "evidence_url": "https://www.hse.ru/data/2014/07/15/1312438456/BMR_Radner.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "InIipCMAAAAJ",
+      "author_pub_id": "InIipCMAAAAJ:Zph67rFs4hoC",
+      "reason_code": "nonpublication",
+      "reason": "MathNet identifies the exact title as a 2011 Moscow State University seminar presentation, not a publication.",
+      "evidence_url": "https://www.mathnet.ru/eng/present3343",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "InIipCMAAAAJ",
+      "author_pub_id": "InIipCMAAAAJ:KlAtU1dfN6UC",
+      "reason_code": "nonpublication",
+      "reason": "MathNet lists the exact title as Kramkov’s recorded Lecture 4 at its 2015 school, not a publication.",
+      "evidence_url": "https://www.mathnet.ru/eng/person23594",
+      "verified_at": "2026-10-25"
     }
   ]
 }
