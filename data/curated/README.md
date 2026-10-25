@@ -21,6 +21,14 @@ normalization merges observations with the same DOI. It also merges a later
 Scholar observation lacking a DOI only when its normalized title and year
 match exactly one curated DOI. A conflicting DOI remains a separate work.
 
+`scholar-doi-aliases.json` records exact, reviewed version links when a Scholar
+row describes a preprint and the publisher gives the same article a later DOI
+and year. The publisher checks the row ID, observed title and year, source DOI,
+and exclusion state before applying the alias. It preserves the raw Scholar
+observation and joins any later curated DOI observation to one work. The
+[Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md)
+documents the first link and its arXiv and publisher evidence.
+
 The publisher computes embeddings and map layouts through the normal path for
 any newly eligible works. The map artifact exposes `source_types`,
 `source_verified_at`, `source_verification_urls`, and `external_coauthor_ids` on
