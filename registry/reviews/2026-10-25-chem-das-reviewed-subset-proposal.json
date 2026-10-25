@@ -16,7 +16,7 @@
       "state": "reviewed_subset",
       "expected_source_rows": 670,
       "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
-      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 61 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links and four published meeting abstracts; 227 reviewed exclusions and 382 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
+      "reason": "Complete 670-row visible Scholar source is captured and cache-bound. A possible later reviewed subset contains 63 exact primary-source-attributed CMU Das records, including seven typed patent documents that cannot create coauthor links and five published meeting abstracts; 227 reviewed exclusions and 380 individually held citation IDs stay out of public works, publication views, authorships, embeddings, and graph edges. This proposal is not the active release manifest.",
       "reviewed_at": "2026-10-25",
       "released_author_pub_ids": [
         "FrF1YXQAAAAJ:kRWSkSYxWN8C",
@@ -79,7 +79,9 @@
         "FrF1YXQAAAAJ:MXK_kJrjxJIC",
         "FrF1YXQAAAAJ:SeFeTyx0c_EC",
         "FrF1YXQAAAAJ:ULOm3_A8WrAC",
-        "FrF1YXQAAAAJ:LkGwnXOMwfcC"
+        "FrF1YXQAAAAJ:LkGwnXOMwfcC",
+        "FrF1YXQAAAAJ:_FxGoFyzp5QC",
+        "FrF1YXQAAAAJ:W7OEmFMy1HYC"
       ],
       "excluded_author_pub_ids": [
         "FrF1YXQAAAAJ:AXkvAH5U_nMC",
@@ -426,7 +428,6 @@
         "FrF1YXQAAAAJ:HGTzPopzzJcC",
         "FrF1YXQAAAAJ:_tF6a-HnqWAC",
         "FrF1YXQAAAAJ:qe6vwMD2xtsC",
-        "FrF1YXQAAAAJ:_FxGoFyzp5QC",
         "FrF1YXQAAAAJ:jE2MZjpN3IcC",
         "FrF1YXQAAAAJ:oPLKW5k6eA4C",
         "FrF1YXQAAAAJ:pAkWuXOU-OoC",
@@ -546,7 +547,6 @@
         "FrF1YXQAAAAJ:jU7OWUQzBzMC",
         "FrF1YXQAAAAJ:ZzlSgRqYykMC",
         "FrF1YXQAAAAJ:_OXeSy2IsFwC",
-        "FrF1YXQAAAAJ:W7OEmFMy1HYC",
         "FrF1YXQAAAAJ:C33y2ycGS3YC",
         "FrF1YXQAAAAJ:SGW5VrABaM0C",
         "FrF1YXQAAAAJ:PVgj2kMGcgYC",
