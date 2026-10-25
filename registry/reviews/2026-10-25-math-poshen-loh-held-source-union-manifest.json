@@ -1,0 +1,55 @@
+{
+  "arxiv_rows_with_author_candidate": 35,
+  "arxiv_rows_with_elements_candidate": 38,
+  "author_rows_with_elements_candidate": 45,
+  "cases_file": "2026-10-25-math-poshen-loh-held-reconciliation-cases.json",
+  "cases_sha256": "09d5c189196a17851d6380cbe2a3ee767e21a8bff4aa12720255997a83005863",
+  "coauthor_display_truncated_elements_rows": 45,
+  "counts": {
+    "arxiv_exact_author": 38,
+    "author_site": 46,
+    "cmu_elements": 84,
+    "publisher_registered_doi": 1
+  },
+  "elements_cards_with_author_candidate": 77,
+  "elements_only_display_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    12,
+    20
+  ],
+  "limits": [
+    "No exact Google Scholar account is verified.",
+    "The 2021-stated author page omits later CMU records; the 84-card CMU list is not verified as a complete career.",
+    "CMU Elements displays truncated coauthors on 45 cards and can use revision dates.",
+    "The prior arXiv capture pins a 38-row CSV and Atom hash but not the raw Atom body in Git.",
+    "Candidate cross-references do not merge manifestations or authorize graph edges."
+  ],
+  "person_id": "person-poshenloh-b545d989",
+  "release_eligible": false,
+  "review_state": "held_incomplete_whole_researcher",
+  "schema_version": 1,
+  "scholar_account_status": "no_verified_account",
+  "source_input_sha256": {
+    "2026-10-25-math-poshen-loh-arxiv-author-crosswalk-manifest.json": "7aaf6e8f3f6a4e33ca065b390d1f070444dfdfd917bd8921a74ceafc7dcfe1bc",
+    "2026-10-25-math-poshen-loh-arxiv-author-crosswalk.csv": "a1f94a0717b981e9b355eb5e04855d6f292a27dde0413c295a11ce0405fe87d1",
+    "2026-10-25-math-poshen-loh-author-elements-crosswalk.csv": "67266c1a1bef2301447f8d9c8a0a3ff4334d6d4381ae4914867211740d9ec2d1",
+    "2026-10-25-math-poshen-loh-author-page.html": "cd382f05be8691cbd33cfcf2744202b0bb8a617c858fce2534d96687cf6c5698",
+    "2026-10-25-math-poshen-loh-author-site-observations.csv": "fd55b9e56a48eb924411c3c6e8c9fc9e864c3330fb5eff68bd6c2ea221d837b3",
+    "2026-10-25-math-poshen-loh-bibliography-manifest.json": "2982bcd8d9f8bde85600bab337a7218a8914d511a8fe7aa09110dd64ce33bc0b",
+    "2026-10-25-math-poshen-loh-elements-observations.csv": "2330feddebb3ae38f9515441ff1f64007d731f78c11ba7b58968873354ac14ca",
+    "2026-10-25-math-poshen-loh-elements-only-crosswalk.csv": "8630792d0e1bbde5fb9f3eb69f8cfd5ffa6d36ecbc3b747c62bd5c12c42590ae"
+  },
+  "supplemental_doi_sha256": {
+    "crossref-2003-shortest-paths-journal.json": "00dabc97cd37eb47e8057430abdecf59d26510d65dbf1e7d7a7f3b57cae13208",
+    "crossref-2006-shortest-paths-chapter.json": "80a2cb80b482134fff709e450e07db9b3b2a78a640442b9043169101a75ee38e",
+    "crossref-2013-probabilistic-method.json": "2c1e2c7ba1dbef5cdc5306f2acee079de7f26820646cd6d7447c59629645959a",
+    "crossref-2016-lavrov-loh.json": "62b6d14c156af7cea342a7f68fbc94f14991b3ce128388dc886e047cf7f56cbc"
+  },
+  "total_observations_not_works": 169,
+  "union_file": "2026-10-25-math-poshen-loh-held-source-union.jsonl",
+  "union_sha256": "762e86f43e5ce523079d148b8f5a7808312af1626308a4d0057f3f6287654b3c"
+}
