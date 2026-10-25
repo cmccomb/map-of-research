@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import datetime as dt
 import math
 import re
 from collections import Counter
 from typing import Any
+from urllib.parse import urlparse
 
+from .doi_aliases import ReviewedDoiAlias, _short_title_evidence_matches
 from .topic_labels import (
     TOPIC_LABEL_REVIEW_VERSION,
     apply_reviewed_labels,
@@ -14,7 +17,7 @@ from .topic_labels import (
 )
 
 KEYWORD_MODEL_VERSION = "hierarchical-visible-tsne-kmeans-ctfidf-reviewed-v6"
-REGION_AUDIT_VERSION = "low-information-semantic-region-v2"
+REGION_AUDIT_VERSION = "low-information-semantic-region-v3"
 DEFAULT_KEYWORD_COUNT = 30
 DEFAULT_DETAIL_KEYWORD_COUNT = 120
 MINIMUM_DETAIL_CLUSTER_SIZE = 50
@@ -326,7 +329,85 @@ def _has_source_url(value: Any) -> bool:
     return any(isinstance(url, str) and bool(url.strip()) for url in value)
 
 
-def _documented_work_mask(region: Any) -> Any:
+def _has_verified_native_source(row: Any) -> bool:
+    """Accept a dated primary-source record with a stable native identifier."""
+
+    source_types = row["source_types"]
+    native_ids = row["source_native_ids"]
+    verification_urls = row["source_verification_urls"]
+    if (
+        not isinstance(source_types, (list, tuple))
+        or not isinstance(native_ids, (list, tuple))
+        or not isinstance(verification_urls, (list, tuple))
+    ):
+        return False
+    if "curated_verified" not in source_types or not any(
+        isinstance(identifier, str)
+        and re.fullmatch(r"[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._:/-]*", identifier)
+        for identifier in native_ids
+    ):
+        return False
+    try:
+        dt.date.fromisoformat(str(row["source_verified_at"]))
+    except ValueError:
+        return False
+    return any(
+        isinstance(url, str)
+        and (parsed := urlparse(url)).scheme == "https"
+        and bool(parsed.netloc)
+        for url in verification_urls
+    )
+
+
+def _reviewed_short_title_alias_matches(
+    row: Any,
+    aliases: dict[tuple[str, str], ReviewedDoiAlias],
+) -> bool:
+    """Apply a dated DOI review to its exact canonical Scholar work only."""
+
+    try:
+        year = int(row["year"])
+    except (TypeError, ValueError, OverflowError):
+        return False
+    if row["year"] != year:
+        return False
+    author_pub_ids = row.get("author_pub_ids")
+    scholar_ids = row.get("scholar_ids")
+    source_types = row.get("source_types")
+    verification_urls = row.get("source_verification_urls")
+    if any(
+        not isinstance(value, (list, tuple))
+        for value in (author_pub_ids, scholar_ids, source_types, verification_urls)
+    ):
+        return False
+    if "scholar" not in source_types:
+        return False
+    try:
+        verified_at = dt.date.fromisoformat(str(row.get("source_verified_at")))
+    except ValueError:
+        return False
+    for (scholar_id, author_pub_id), alias in aliases.items():
+        if (
+            alias.allow_short_title_region_override
+            and scholar_id in scholar_ids
+            and author_pub_id in author_pub_ids
+            and str(row["doi"]).casefold() == alias.doi
+            and str(row["title"]).strip().casefold() == alias.observed_title.casefold()
+            and year == alias.observed_year
+            and verified_at >= dt.date.fromisoformat(alias.verified_at)
+            and _short_title_evidence_matches(
+                alias.doi, alias.evidence_urls, verification_urls
+            )
+        ):
+            return True
+    return False
+
+
+def _documented_work_mask(
+    region: Any,
+    *,
+    doi_aliases: dict[tuple[str, str], ReviewedDoiAlias] | None = None,
+) -> Any:
     """Find independently identifiable papers inside an otherwise weak region."""
 
     import pandas
@@ -335,25 +416,58 @@ def _documented_work_mask(region: Any) -> Any:
     if not fields.issubset(region.columns):
         return pandas.Series(False, index=region.index)
     titles = region["title"].fillna("").astype(str).str.strip()
+    has_doi = region["doi"].fillna("").astype(str).str.match(r"^10\.\d{4,9}/\S+$")
+    has_verified_native_source = pandas.Series(False, index=region.index)
+    native_fields = {
+        "source_types",
+        "source_native_ids",
+        "source_verified_at",
+        "source_verification_urls",
+    }
+    if native_fields.issubset(region.columns):
+        has_verified_native_source = region.apply(_has_verified_native_source, axis=1)
+    has_reviewed_short_title = pandas.Series(False, index=region.index)
+    short_title_aliases = {
+        key: alias
+        for key, alias in (doi_aliases or {}).items()
+        if alias.allow_short_title_region_override
+    }
+    if short_title_aliases:
+        has_reviewed_short_title = region.apply(
+            _reviewed_short_title_alias_matches,
+            axis=1,
+            aliases=short_title_aliases,
+        )
+    word_count = titles.str.split().str.len()
     return (
-        region["doi"].fillna("").astype(str).str.match(r"^10\.\d{4,9}/\S+$")
+        (
+            (
+                (has_doi & word_count.ge(MINIMUM_DOCUMENTED_TITLE_WORDS))
+                | (has_verified_native_source & word_count.ge(4))
+            )
+            & titles.str.len().ge(SHORT_TITLE_LENGTH)
+            | has_reviewed_short_title
+        )
         & region["year"].notna()
-        & titles.str.len().ge(SHORT_TITLE_LENGTH)
-        & titles.str.split().str.len().ge(MINIMUM_DOCUMENTED_TITLE_WORDS)
         & region["authors"].fillna("").astype(str).str.strip().ne("")
         & region["venue"].fillna("").astype(str).str.strip().ne("")
         & region["source_urls"].apply(_has_source_url)
     )
 
 
-def exclude_low_information_regions(works: Any) -> Any:
+def exclude_low_information_regions(
+    works: Any,
+    *,
+    doi_aliases: dict[tuple[str, str], ReviewedDoiAlias] | None = None,
+) -> Any:
     """Withhold only large regions that fail several independent quality checks.
 
     The preliminary detailed topics expose diffuse catch-all regions that title-level
     rules cannot identify safely. A region is excluded only when it is simultaneously
     incoherent in embedding space, citation-poor, metadata-poor, and dominated by
     short titles. Individually documented papers remain visible even in such a
-    region; weaker rows retain the region exclusion reason in the dataset.
+    region when they have a DOI or a verified native source identifier; weaker
+    rows retain the region exclusion reason in the dataset.
     """
 
     import numpy
@@ -394,7 +508,7 @@ def exclude_low_information_regions(works: Any) -> Any:
         )
         if not should_exclude:
             continue
-        documented = _documented_work_mask(region)
+        documented = _documented_work_mask(region, doi_aliases=doi_aliases)
         output.loc[region.index[documented], "map_region_documented_override"] = True
         indices = region.index[~documented]
         output.loc[indices, "map_eligible"] = False
