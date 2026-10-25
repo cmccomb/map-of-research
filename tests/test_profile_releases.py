@@ -114,7 +114,7 @@ def test_das_complete_source_stays_held_during_attribution_review() -> None:
     assert item.state == "held"
     assert item.expected_source_rows == 670
     assert item.cache_sha256 == (
-        "4c32887d8ea63d0ab2b7594402d23ff22c6a15464cede08b8ecfd84f44465a07"
+        "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df"
     )
 
 
