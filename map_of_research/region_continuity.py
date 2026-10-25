@@ -10,6 +10,7 @@ import hashlib
 import json
 import math
 import re
+import string
 from collections import defaultdict
 from collections.abc import Iterable, Mapping
 from datetime import date
@@ -191,6 +192,11 @@ def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
                 for reason in reasons
             )
         )
+        or (
+            row.get("review_attribution_status") == "held"
+            and "attribution_provisional_hold" in reasons
+            and bool(str(row.get("review_attribution_evidence_url") or "").strip())
+        )
     )
 
 
@@ -211,6 +217,31 @@ def _independent_evidence(urls: Any) -> bool:
 _TRACKING_QUERY_KEYS = frozenset(
     {"fbclid", "gclid", "gbraid", "wbraid", "msclkid", "mc_cid", "mc_eid", "igshid"}
 )
+_UNRESERVED = frozenset(string.ascii_letters + string.digits + "-._~")
+_PERCENT_ESCAPE = re.compile(r"%([0-9A-Fa-f]{2})")
+
+
+def _verification_url_path(path: str) -> str:
+    """Resolve equivalent escaped characters and dot segments in a URL path."""
+
+    def unescape(match: re.Match[str]) -> str:
+        char = chr(int(match.group(1), 16))
+        return char if char in _UNRESERVED else f"%{match.group(1).upper()}"
+
+    segments = _PERCENT_ESCAPE.sub(unescape, path or "/").split("/")
+    normalized: list[str] = []
+    for index, segment in enumerate(segments):
+        if segment == ".":
+            if index == len(segments) - 1:
+                normalized.append("")
+        elif segment == "..":
+            if len(normalized) > 1:
+                normalized.pop()
+            if index == len(segments) - 1:
+                normalized.append("")
+        else:
+            normalized.append(segment)
+    return "/".join(normalized) or "/"
 
 
 def _verification_url_identity(value: str) -> str:
@@ -236,7 +267,15 @@ def _verification_url_identity(value: str) -> str:
             or key in _TRACKING_QUERY_KEYS
         )
     )
-    return urlunsplit((parsed.scheme.casefold(), netloc, parsed.path or "/", query, ""))
+    return urlunsplit(
+        (
+            parsed.scheme.casefold(),
+            netloc,
+            _verification_url_path(parsed.path),
+            query,
+            "",
+        )
+    )
 
 
 def _valid_review_date(value: Any) -> bool:

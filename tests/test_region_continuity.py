@@ -31,12 +31,30 @@ REVISION = "a" * 40
         ),
         ("https://primary.test:8443/one", "https://primary.test:8443/one"),
         ("https://[2001:db8::1]/one", "https://[2001:db8::1]/one"),
+        ("https://primary.test/%6fne", "https://primary.test/one"),
+        ("https://primary.test/./one", "https://primary.test/one"),
+        ("https://primary.test/one/.", "https://primary.test/one/"),
+        ("https://primary.test/a/../one", "https://primary.test/one"),
+        ("https://primary.test/one/..", "https://primary.test/"),
+        ("https://primary.test/../one", "https://primary.test/one"),
+        ("https://primary.test/%2e/one", "https://primary.test/one"),
+        ("https://primary.test/one%2fpart", "https://primary.test/one%2Fpart"),
+        ("https://primary.test/one?item=6", "https://primary.test/one?item=6"),
         ("  ", ""),
         ("https://primary.test:invalid/one", "https://primary.test:invalid/one"),
     ],
 )
 def test_verification_url_identity_preserves_document_location(url, identity):
     assert _verification_url_identity(url) == identity
+
+
+def test_verification_url_identity_keeps_substantive_path_and_query_distinctions():
+    assert _verification_url_identity(
+        "https://primary.test/one?item=5"
+    ) != _verification_url_identity("https://primary.test/one?item=6")
+    assert _verification_url_identity(
+        "https://primary.test/one%2Fpart"
+    ) != _verification_url_identity("https://primary.test/one/part")
 
 
 def observation(
@@ -176,6 +194,51 @@ def test_current_context_review_can_explain_loss():
         [old],
     )
     assert len(receipt["reviewed_losses"]) == 1
+
+
+def test_validated_provisional_hold_can_explain_exact_observation_loss():
+    old = observation("person", "one")
+    current = {
+        **old,
+        "map_eligible": False,
+        "map_exclusion_reasons": ["attribution_provisional_hold"],
+        "review_attribution_status": "held",
+        "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
+    }
+    _, receipt = reconcile(
+        [work("one", eligible=False, outlier=False)],
+        [current],
+        [work("one", eligible=True, outlier=False)],
+        [old],
+    )
+    assert receipt["reviewed_losses"] == ["person/profile/profile:shared-row/scholar"]
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"map_exclusion_reasons": []},
+        {"review_attribution_status": ""},
+        {"review_attribution_evidence_url": ""},
+    ],
+)
+def test_incomplete_provisional_hold_cannot_explain_loss(change):
+    old = observation("person", "one")
+    current = {
+        **old,
+        "map_eligible": False,
+        "map_exclusion_reasons": ["attribution_provisional_hold"],
+        "review_attribution_status": "held",
+        "review_attribution_evidence_url": "https://scholar.google.com/citations?user=profile",
+        **change,
+    }
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+        reconcile(
+            [work("one", eligible=False, outlier=False)],
+            [current],
+            [work("one", eligible=True, outlier=False)],
+            [old],
+        )
 
 
 @pytest.mark.parametrize(
@@ -398,6 +461,16 @@ def test_unchanged_evidence_cannot_explain_gain_when_quality_version_changes():
             {
                 "source_verification_urls": [
                     "https://primary.test/one?fbclid=tracking",
+                    "https://primary.test/two",
+                ]
+            },
+        ),
+        ({"source_verification_urls": ["https://primary.test/%6fne"]}, {}),
+        (
+            {},
+            {
+                "source_verification_urls": [
+                    "https://primary.test/./one",
                     "https://primary.test/two",
                 ]
             },
