@@ -13,9 +13,9 @@
   "new_proposed_exclusion_count": 15,
   "expected_observation_count_after_exact_exclusions": 119,
   "capture_coverage": "complete_visible_profile",
-  "source_files_preserve_raw_rows": true,
+  "source_files_preserve_raw_rows": false,
   "ingestion_ready": true,
-  "ingestion_dependency": "Source review and row 116's normalized cache title repair are complete; raw capture, HTML, and receipt remain unchanged. Merge producer PR #143 first and verify its fifteen exact au_cLfoAAAAJ exclusions in producer main before merging this source PR or building any Tina snapshot. The snapshot builder does not consult these status fields; the release coordinator enforces that order. Retain row 126, leave row 127 untouched, and preserve genuine preprint and proceedings records.",
+  "ingestion_dependency": "Producer #143 merged its fifteen exact au_cLfoAAAAJ exclusions at b786ff76, and source #142 merged at cd147263. Post-merge source review found two JSON title-extraction omissions at rows 67 and 110; the saved HTML supports the corrected JSON/cache titles and row 116 retains its separately documented cache-only title repair. Before any Tina snapshot upload, run the producer whole-profile coverage gate against the corrected source and the exact row 116 exception. The snapshot builder does not consult these status fields. Retain row 126, leave row 127 untouched, and preserve genuine preprint and proceedings records.",
   "snapshot_release_hold": false,
   "cache_repair_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json",
   "source_review_path": "status/physics-kahniashvili-source-review-2026-10-24.json",
@@ -36,5 +36,6 @@
       "receipt_path": "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json"
     }
   ],
-  "batch_provenance_note": "The per-profile receipt retains the 92-second spacing from the Di Matteo capture and identifies original batch commit cca3ea8. Di Matteo's own source was merged through PR #109. This carve does not relabel the original two-profile capture as a solo run."
+  "batch_provenance_note": "The per-profile receipt retains the 92-second spacing from the Di Matteo capture and identifies original batch commit cca3ea8. Di Matteo's own source was merged through PR #109. This carve does not relabel the original two-profile capture as a solo run.",
+  "post_merge_extraction_correction_path": "status/physics-kahniashvili-cache-repair-2026-10-24.json"
 }

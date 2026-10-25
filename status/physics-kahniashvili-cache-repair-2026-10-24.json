@@ -3,7 +3,7 @@
   "review_state": "source_reviewed_cache_repaired",
   "reviewed_at": "2026-10-24",
   "target_branch": "automation/map-snapshot",
-  "raw_capture_and_receipt_unchanged": true,
+  "raw_capture_and_receipt_unchanged": false,
   "producer_exclusions_added": 0,
   "capture_receipt": "status/browser-capture-physics-tina-kahniashvili-2026-10-24.json",
   "repairs": [
@@ -19,5 +19,37 @@
       "evidence_note": "The World Scientific volume's Google Books contents assign this exact chapter title to page 269; the next chapter begins on page 273. Coauthor Novosyadlyj's institutional bibliography item 34 identifies the same three authors, title, proceedings volume, and pages 269-272. The captured row has those authors and venue but an internal text fragment as its title. Repair only the normalized cache title; preserve the source capture and exact observation ID.",
       "evidence_limit": "A Google Books within-volume search once returned the captured fragment on page 269, but repeat requests returned zero results and the positive response bytes were not saved. The reproducible book contents and coauthor bibliography, rather than that transient snippet alone, support this cache title repair."
     }
-  ]
+  ],
+  "extraction_corrections": [
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "capture_row": 67,
+      "author_pub_id": "au_cLfoAAAAJ:EUQCXRtRnyEC",
+      "field": "title",
+      "original_json_value": "The observational constraints on the flat CDM models",
+      "corrected_json_and_cache_value": "The observational constraints on the flat ϕCDM models",
+      "saved_html_svg_aria_label": "ϕ",
+      "evidence_path": "data/captures/physics-tina-kahniashvili-2026-10-24.html",
+      "evidence_note": "The saved HTML title contains this SVG aria-label, which the original JSON text extraction omitted. Restore the exact parsed HTML title in the JSON and cache; no profile was reopened.",
+      "corroborating_url": "https://link.springer.com/content/pdf/10.1140/epjc/s10052-018-6233-y.pdf",
+      "corroborating_note": "The publisher PDF titles the paper with φCDM; NFKC normalizes Scholar’s ϕ aria-label to the same Greek letter."
+    },
+    {
+      "scholar_id": "au_cLfoAAAAJ",
+      "capture_row": 110,
+      "author_pub_id": "au_cLfoAAAAJ:j3f4tGmQtD8C",
+      "field": "title",
+      "original_json_value": "Evolution of galaxy clusters in MDM cosmologies",
+      "corrected_json_and_cache_value": "Evolution of galaxy clusters in \\LambdaMDM cosmologies",
+      "saved_html_svg_aria_label": "\\Lambda",
+      "evidence_path": "data/captures/physics-tina-kahniashvili-2026-10-24.html",
+      "evidence_note": "The saved HTML title contains this SVG aria-label, which the original JSON text extraction omitted. Restore the exact parsed HTML title in the JSON and cache; no profile was reopened.",
+      "corroborating_url": "https://arxiv.org/abs/astro-ph/0106559",
+      "corroborating_note": "The authors’ arXiv record titles the paper with ΛMDM; Scholar’s SVG aria-label stores that rendered Λ as the literal string \\Lambda."
+    }
+  ],
+  "original_source_commit": "cd147263c153682e7004a62c0d97d9e79a646730",
+  "original_source_json_sha256": "6a6936548887252c66e7c9c70befdad3f7753e00f7d75ed85a0ab4a4b1b54d2b",
+  "corrected_source_json_sha256": "2e8945bbd55b3ffa0b36940d83da87e21be5910729334dc952143955ee7b6f49",
+  "source_html_unchanged": true
 }
