@@ -269,8 +269,8 @@ def main() -> int:
                     else None
                 ),
                 bio_binding_approval_path=(
-                    curated / "bio-exact-binding-approval-38f.json"
-                    if (curated / "bio-exact-binding-approval-38f.json").is_file()
+                    curated / "bio-exact-binding-approval-dcb.json"
+                    if (curated / "bio-exact-binding-approval-dcb.json").is_file()
                     else None
                 ),
                 source_cache_dir=snapshot / "data/authors",

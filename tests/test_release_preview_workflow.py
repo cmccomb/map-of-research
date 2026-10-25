@@ -63,7 +63,7 @@ def _run_preview(
         curated.mkdir(parents=True)
         (curated / "bio-mcmanus-poster-loss-approval.json").write_text("{}")
         if binding_approval:
-            (curated / "bio-exact-binding-approval-38f.json").write_text("{}")
+            (curated / "bio-exact-binding-approval-dcb.json").write_text("{}")
     (snapshot / "snapshots").mkdir(parents=True)
     (receipt_checkout / "status").mkdir(parents=True)
     raw = snapshot / "snapshots/cmu-engineering-publications.parquet"
@@ -123,7 +123,7 @@ def _run_preview(
             approval_path if approval else None
         )
         assert kwargs["bio_binding_approval_path"] == (
-            producer / "data/curated/bio-exact-binding-approval-38f.json"
+            producer / "data/curated/bio-exact-binding-approval-dcb.json"
             if binding_approval
             else None
         )

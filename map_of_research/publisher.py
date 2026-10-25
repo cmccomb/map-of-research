@@ -77,7 +77,6 @@ from .keywords import (
     exclude_low_information_regions,
 )
 from .math_release_gate import validate_math_coverage
-from .poster_loss_approval import load_poster_loss_approval
 from .person_publication_holds import (
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     load_person_publication_holds,
@@ -85,6 +84,7 @@ from .person_publication_holds import (
     select_released_person_observations,
     validate_person_hold_losses,
 )
+from .poster_loss_approval import load_poster_loss_approval
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
     load_profile_releases,
@@ -1853,6 +1853,7 @@ def publish_snapshot(
             source_snapshot_sha256=str(manifest["snapshot_sha256"]),
             doi_aliases_path=doi_aliases_path,
             exclusions_path=exclusions_path,
+            person_publication_holds_path=person_publication_holds_path,
             curated_works_path=curated_works_path,
             profile_releases_path=profile_releases_path,
             provisional_holds_path=provisional_holds_path,

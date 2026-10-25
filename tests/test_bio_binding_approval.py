@@ -22,12 +22,13 @@ CURATED = ROOT / "data/curated"
 
 def _inputs() -> dict:
     return {
-        "approval_path": CURATED / "bio-exact-binding-approval-38f.json",
+        "approval_path": CURATED / "bio-exact-binding-approval-dcb.json",
         "prior_revision": approval.PRIOR_REVISION,
         "source_snapshot_commit": approval.SOURCE_COMMIT,
         "source_snapshot_sha256": approval.SOURCE_SHA256,
         "doi_aliases_path": CURATED / "scholar-doi-aliases.json",
         "exclusions_path": CURATED / "scholar-exclusions.json",
+        "person_publication_holds_path": CURATED / "person-publication-holds.json",
         "curated_works_path": CURATED / "works.json",
         "profile_releases_path": CURATED / "scholar-profile-releases.json",
         "provisional_holds_path": CURATED / "scholar-provisional-holds.json",

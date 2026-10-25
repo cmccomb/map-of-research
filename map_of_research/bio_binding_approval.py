@@ -13,11 +13,11 @@ from pathlib import Path
 
 from .io import load_json, sha256_file
 
-DEFAULT_APPROVAL_PATH = Path("data/curated/bio-exact-binding-approval-38f.json")
-PRIOR_REVISION = "38f119d71692cdb9112210217b532a7dd7c1633a"
-SOURCE_COMMIT = "1fabb9b4213171d214c8c1f42cff2f8f2919a83f"
+DEFAULT_APPROVAL_PATH = Path("data/curated/bio-exact-binding-approval-dcb.json")
+PRIOR_REVISION = "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061"
+SOURCE_COMMIT = "45112c6860d380e40c3f60efc4faddf3003f7a89"
 SOURCE_SHA256 = "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550"
-APPROVAL_SHA256 = "c13a34605195fb885b79101297ddf82173a72fab789ae28f2ef8688eedd70e8e"
+APPROVAL_SHA256 = "a12dc1f222c6072fb5d3be435cd90cb1600251e331cf8a5ac271b93d0c7e3b7a"
 BINDINGS_SHA256 = "7e4058f40cc5da9f4ac29f4c1cfbb1bc544fa20542632b56310a32e40d5b2471"
 DOCUMENT_FIELDS = {
     "schema_version",
@@ -27,6 +27,7 @@ DOCUMENT_FIELDS = {
     "source_snapshot_sha256",
     "doi_aliases_sha256",
     "exclusions_sha256",
+    "person_publication_holds_sha256",
     "curated_works_sha256",
     "profile_releases_sha256",
     "provisional_holds_sha256",
@@ -82,6 +83,7 @@ def load_bio_binding_approval(
     source_snapshot_sha256: str,
     doi_aliases_path: Path,
     exclusions_path: Path,
+    person_publication_holds_path: Path,
     curated_works_path: Path,
     profile_releases_path: Path,
     provisional_holds_path: Path,
@@ -113,6 +115,7 @@ def load_bio_binding_approval(
             for field, path in (
                 ("doi_aliases_sha256", doi_aliases_path),
                 ("exclusions_sha256", exclusions_path),
+                ("person_publication_holds_sha256", person_publication_holds_path),
                 ("curated_works_sha256", curated_works_path),
                 ("profile_releases_sha256", profile_releases_path),
                 ("provisional_holds_sha256", provisional_holds_path),
