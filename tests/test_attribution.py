@@ -37,6 +37,26 @@ def _write(tmp_path, value):
     return path
 
 
+def test_upload_reads_attribution_from_producer_checkout(monkeypatch, tmp_path):
+    repo_root = Path(__file__).resolve().parents[1]
+    workflow = (repo_root / ".github/workflows/upload.yml").read_text()
+    source_path = "source/data/curated/scholar-attribution-reviews.json"
+    assert f"--attribution-reviews {source_path}" in workflow
+    (tmp_path / "source").symlink_to(repo_root, target_is_directory=True)
+    monkeypatch.chdir(tmp_path)
+    args = publisher._parse_args(
+        [
+            "--snapshot",
+            "snapshot/snapshots/cmu-engineering-publications.parquet",
+            "--manifest",
+            "snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json",
+            "--attribution-reviews",
+            source_path,
+        ]
+    )
+    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 427
+
+
 def test_chien_gate_accounts_for_every_frozen_citation_id():
     attribution = load_attribution_reviews(DEFAULT_ATTRIBUTION_REVIEWS_PATH)
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
@@ -281,7 +301,7 @@ def test_attribution_gate_preserves_raw_rows_and_blocks_unconfirmed_edges(tmp_pa
         pandas.DataFrame(rows),
         registry,
         load_exclusions(DEFAULT_EXCLUSIONS_PATH),
-        load_attribution_reviews(DEFAULT_ATTRIBUTION_REVIEWS_PATH),
+        attribution_reviews=load_attribution_reviews(DEFAULT_ATTRIBUTION_REVIEWS_PATH),
     )
     raw = tables["profile_publications"].set_index("author_pub_id")
     assert len(raw) == 3
@@ -307,6 +327,7 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
         lambda *args, **kwargs: (pandas.DataFrame({"scholar_id": []}), {}),
     )
     monkeypatch.setattr(publisher, "load_exclusions", lambda path: {key: object()})
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "load_attribution_reviews",
