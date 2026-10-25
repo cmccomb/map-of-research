@@ -682,6 +682,32 @@
         "https://api.crossref.org/works/10.1038/s41589-025-01960-x"
       ],
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:_FxGoFyzp5QC",
+      "observed_title": "RNA conjugations and ligations for RNA nanotechnology",
+      "observed_year": 2019,
+      "published_doi": "10.1201/b15152-18",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://www.taylorfrancis.com/chapters/edit/10.1201/b15152-18/rna-conjugations-ligations-rna-nanotechnology-eduardo-paredes-subha-das",
+        "https://api.crossref.org/works/10.1201%2Fb15152-18"
+      ],
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:W7OEmFMy1HYC",
+      "observed_title": "Comprehensive Mechanistic Analysis of the RNA‐Lariat Debranching Enzyme",
+      "observed_year": 2013,
+      "published_doi": "10.1096/fasebj.27.1_supplement.988.3",
+      "relationship": "version_of_record",
+      "evidence_urls": [
+        "https://faseb.onlinelibrary.wiley.com/doi/10.1096/fasebj.27.1_supplement.988.3",
+        "https://api.crossref.org/works/10.1096%2Ffasebj.27.1_supplement.988.3"
+      ],
+      "verified_at": "2026-10-25"
     }
   ]
 }

@@ -313,6 +313,22 @@
       "basis": "The original abstract carries ©2013 Society for Biomaterials and Abstract #294; the Society's 2013 annual-conference archive lists the same title and presenter. Scholar's captured year and venue are blank.",
       "evidence_url": "https://abstracts.biomaterials.org/data/papers/2013/0243-000313.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:_FxGoFyzp5QC",
+      "expected": {
+        "title": "RNA conjugations and ligations for RNA nanotechnology",
+        "year": 2019,
+        "venue": "RNA Nanotechnology and Therapeutics, 215-230, 2019"
+      },
+      "corrected": {
+        "year": 2013,
+        "venue": "RNA Nanotechnology and Therapeutics, 215-230, 2013"
+      },
+      "basis": "Taylor & Francis's DOI 10.1201/b15152-18 chapter page gives the exact title, authors, pages 215-230, and first-edition publication date 9 July 2013. Scholar incorrectly dates the otherwise matching chapter to 2019.",
+      "evidence_url": "https://www.taylorfrancis.com/chapters/edit/10.1201/b15152-18/rna-conjugations-ligations-rna-nanotechnology-eduardo-paredes-subha-das",
+      "verified_at": "2026-10-25"
     }
   ]
 }
