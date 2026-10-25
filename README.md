@@ -236,6 +236,17 @@ pass `--reviewed-exclusions` when the trusted source checkout is in another
 directory, as in the upload workflow. The upload receipt records the manifest
 checksum and number of matched exclusions.
 
+The hosted upload workflow runs `map-validate-math-coverage` before requesting
+its Hugging Face token. For every included Mathematical Sciences person with a
+verified Scholar ID, it checks saved full-profile JSON and HTML evidence,
+cache rows, and raw snapshot citation IDs. People without an exact verified ID
+remain visible as identity gaps. The `map-publish-snapshot` CLI repeats this
+check before any upload, including when invoked outside the workflow. Its
+default evidence directories are `data/authors` and `data/captures` beneath
+the snapshot checkout; pass `--math-cache-dir` and `--math-capture-dir` for a
+different layout. Direct Python calls to the `publish_snapshot` library
+function are intended for controlled previews and do not enforce this gate.
+
 Publishing requires `HF_TOKEN` locally. The protected `huggingface` GitHub
 environment exposes the same credential to the upload workflow from a secret
 named `HUGGINGFACE_TOKEN`.
