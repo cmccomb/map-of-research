@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "collection_method": "browser_direct_profile",
+  "browser_route": "isolated_task_browser",
+  "person_id": "person-davidyaron-ef57a3ff",
+  "display_name": "David Yaron",
+  "scholar_id": "HMSZExQAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/chemistry/people/faculty/yaron.html",
+  "scholar_id_source_url": "https://www.cmu.edu/news/experts/david.yaron",
+  "captured_at_utc": "2026-10-24T22:36:36.482000+00:00",
+  "profile_url": "https://scholar.google.com/citations?user=HMSZExQAAAAJ&hl=en",
+  "publication_count": 242,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/yaron-visible-242-2026-10-24.json",
+  "source_json_sha256": "a9f7edd64ccfa55c70f691edf02585a9b51a55da6dccc3a3a6bfbb252d5c0916",
+  "source_html_path": "data/captures/yaron-visible-242-2026-10-24.html",
+  "source_html_sha256": "3249d71553e7549bbcd62463a55748424f34de6e66729349837ee0189e131d0b",
+  "cache_path": "data/authors/HMSZExQAAAAJ.json",
+  "cache_sha256": "34b4682f86e301204f477f0b6269b59aa36d7bd8dc069973cf46ed2b28d497c4",
+  "browser_closed": true,
+  "release_state": "staged_for_source_review",
+  "canonical_cache_replaced": false,
+  "snapshot_rebuilt": false,
+  "year_anomalies": [
+    {
+      "row": 116,
+      "author_pub_id": "HMSZExQAAAAJ:VL0QpB8kHFEC",
+      "title": "Framing Chapter: Three Lenses through Which to Reflect on Simulations for Science Education",
+      "displayed_year": "6",
+      "cache_pub_year": "",
+      "reason": "malformed_scholar_display_year"
+    }
+  ]
+}
