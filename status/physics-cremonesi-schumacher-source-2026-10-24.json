@@ -14,6 +14,7 @@
   "ingestion_dependency": "Source caches and captures may be reviewed independently; exact observation exclusions and homonym checks require source verification before producer inclusion or a snapshot rebuild.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
+  "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
   "profiles": [
     {
       "person_id": "person-matteocremonesi-b2aba740",
