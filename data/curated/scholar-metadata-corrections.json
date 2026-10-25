@@ -297,6 +297,108 @@
       "basis": "Nature lists Proteostasis as a section label rather than part of the article title.",
       "evidence_url": "https://www.nature.com/articles/s41589-025-01960-x",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:pqnbT2bcN3wC",
+      "expected": {
+        "title": "A stacked graphical model for associating sub-images with sub-captions",
+        "year": 2007,
+        "venue": "Biocomputing 2007, 257-268, 2007",
+        "authors": "Z Kou, WW Cohen, RF Murphy"
+      },
+      "corrected": {
+        "venue": "Pacific Symposium on Biocomputing 12, 257–268 (2007)",
+        "authors": "Zhenzhen Kou, William W. Cohen, and Robert F. Murphy"
+      },
+      "basis": "The original PSB paper supplies its full three-author byline and volume 12, pages 257–268; Scholar shortens the venue to Biocomputing 2007 and the names to initials.",
+      "evidence_url": "https://psb.stanford.edu/psb-online/proceedings/psb07/kou.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:AXPGKjj_ei8C",
+      "expected": {
+        "title": "Structured literature image finder",
+        "year": 2009,
+        "venue": "Proceedinfgs of the ISMB BioLINK special interest group, 209-12, 2009",
+        "authors": "A Ahmed, A Arnold, LP Coelho, J Kangas, AS Sheikh, E Xing, W Cohen, ..."
+      },
+      "corrected": {
+        "venue": "Proceedings of the Ninth Annual Meeting of the ISMB BioLINK Special Interest Group, 209–212 (2009)",
+        "authors": "Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Abdul-Saboor Sheikh, Eric Xing, William Cohen, and Robert F. Murphy"
+      },
+      "basis": "The original four-page BioLINK paper gives the complete byline; Murphy Lab confirms the proceedings and pages. Scholar truncates authors and misspells Proceedings.",
+      "evidence_url": "https://murphylab.cbd.cmu.edu/publications/156-ahmed2009.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:eflP2zaiRacC",
+      "expected": {
+        "title": "Structured literature image finder: Open source software for extracting and disseminating information from text and figures in biomedical literature",
+        "year": 2009,
+        "venue": "Tech. rep., Carnegie Mellon University School of Computer Science …, 2009",
+        "authors": "AS Sheikh, A Ahmed, A Arnold, LP Coelho, J Kangas, EP Xing, ..."
+      },
+      "corrected": {
+        "venue": "Carnegie Mellon University School of Computer Science Technical Report CMU-CB-09-101 (October 2009)",
+        "authors": "Abdul-Saboor Sheikh, Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Eric P. Xing, William Cohen, and Robert F. Murphy"
+      },
+      "basis": "The CMU report is identified as CMU-CB-09-101 with a complete eight-author byline and 2009 issue date in the coauthors’ journal reference; Scholar truncates both venue and authors.",
+      "evidence_url": "https://www.cs.cmu.edu/~wcohen/postscript/jws-2010.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:g5m5HwL7SMYC",
+      "expected": {
+        "title": "Structured correspondence topic models for mining captioned figures in biological literature",
+        "year": 2009,
+        "venue": "Proceedings of the 15th ACM SIGKDD international conference on Knowledge …, 2009",
+        "authors": "A Ahmed, EP Xing, WW Cohen, RF Murphy"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 39–48 (2009)",
+        "authors": "Amr Ahmed, Eric P. Xing, William W. Cohen, and Robert F. Murphy"
+      },
+      "basis": "The original 2009 KDD article and PubMed record give the complete author names and proceedings pages 39–48; Scholar truncates the conference name.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/25485170/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:4fKUyHm3Qg0C",
+      "expected": {
+        "title": "Structured literature image finder: extracting information from text and images in biomedical literature",
+        "year": 2010,
+        "venue": "Linking Literature, Information, and Knowledge for Biology: Workshop of the …, 2010",
+        "authors": "LP Coelho, A Ahmed, A Arnold, J Kangas, AS Sheikh, EP Xing, ..."
+      },
+      "corrected": {
+        "venue": "Linking Literature, Information, and Knowledge for Biology, Lecture Notes in Computer Science 6004, 23–32 (2010)",
+        "authors": "Luís Pedro Coelho, Amr Ahmed, Andrew Arnold, Joshua Kangas, Abdul-Saboor Sheikh, Eric P. Xing, William W. Cohen, and Robert F. Murphy"
+      },
+      "basis": "Springer lists the full eight-author chapter byline, book title, LNCS volume 6004, and pages 23–32; Scholar truncates author and venue fields.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-3-642-13131-8_4",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "qQLlBH4AAAAJ",
+      "author_pub_id": "qQLlBH4AAAAJ:08ZZubdj9fEC",
+      "expected": {
+        "title": "Structured literature image finder: Parsing text and figures in biomedical literature",
+        "year": 2010,
+        "venue": "Web Semantics: Science, Services and Agents on the World Wide Web 8 (2-3 …, 2010",
+        "authors": "A Ahmed, A Arnold, LP Coelho, J Kangas, AS Sheikh, E Xing, W Cohen, ..."
+      },
+      "corrected": {
+        "venue": "Web Semantics: Science, Services and Agents on the World Wide Web 8 (2–3), 151–154 (2010)",
+        "authors": "Amr Ahmed, Andrew Arnold, Luís Pedro Coelho, Joshua Kangas, Abdul-Saboor Sheikh, Eric P. Xing, William W. Cohen, and Robert F. Murphy"
+      },
+      "basis": "The published Web Semantics article supplies its full eight-author byline, volume 8, issue 2–3, and pages 151–154; Scholar truncates author and venue fields.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/abs/pii/S1570826810000247",
+      "verified_at": "2026-10-25"
     }
   ]
 }
