@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+from pathlib import Path
 from types import SimpleNamespace
 
 import pandas
@@ -11,6 +12,41 @@ import pytest
 
 import map_of_research.publisher as publisher
 from map_of_research.atomic_release import RELEASE_PATHS
+
+
+def test_snapshot_push_requires_bio_release_gate() -> None:
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text(encoding="utf-8")
+    assert (
+        "REQUIRE_BIO_RELEASE: ${{ github.event_name == 'push' || "
+        "inputs.require_bio_release }}"
+    ) in workflow
+    assert "BIO_RELEASE_ARGS+=(--require-bio-release)" in workflow
+    assert '"${BIO_RELEASE_ARGS[@]}"' in workflow
+
+
+@pytest.mark.parametrize("prior_revision", [None, "main", "a" * 39])
+def test_unpinned_publish_cannot_reach_any_hub_write(
+    monkeypatch, tmp_path, prior_revision
+) -> None:
+    monkeypatch.setattr(
+        publisher,
+        "_to_hub_dataset",
+        lambda *args: pytest.fail("unversioned dataset write"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_publish_atomic_release",
+        lambda *args, **kwargs: pytest.fail("unversioned atomic write"),
+    )
+    with pytest.raises(ValueError, match="revision"):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision=prior_revision,
+        )
 
 
 def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=False):
@@ -209,7 +245,7 @@ def test_explicit_bio_intent_rejects_drift_before_hub_stage(
     ("source_hash", "prior_revision", "atomic_release", "message"),
     [
         ("changed", "a" * 40, None, "Bio release source differs"),
-        (publisher.BIO_SOURCE_SHA256, None, None, "atomic parent-pinned"),
+        (publisher.BIO_SOURCE_SHA256, None, None, "immutable prior Hub revision"),
         (publisher.BIO_SOURCE_SHA256, "a" * 40, False, "atomic parent-pinned"),
     ],
 )

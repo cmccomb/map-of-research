@@ -330,6 +330,9 @@ def test_attribution_gate_preserves_raw_rows_and_blocks_unconfirmed_edges(tmp_pa
 
 
 def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
     key = (SCHOLAR_ID, f"{SCHOLAR_ID}:paper")
     monkeypatch.setattr(publisher, "load_registry", lambda *args: object())
     monkeypatch.setattr(
@@ -361,4 +364,5 @@ def test_publish_rejects_conflicting_reviews(monkeypatch, tmp_path):
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
             hf_token="token",
+            prior_revision="a" * 40,
         )

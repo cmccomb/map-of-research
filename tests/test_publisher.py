@@ -578,6 +578,9 @@ def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation
         pass
 
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
 
     def check_snapshot(*args, **kwargs):
         raise SnapshotChecked
@@ -588,6 +591,7 @@ def test_custom_people_path_without_primary_baseline_reaches_snapshot_validation
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
             hf_token="token",
+            prior_revision="a" * 40,
             people_path=tmp_path / "people.csv",
             memberships_path=tmp_path / "memberships.csv",
             departments_path=tmp_path / "departments.csv",
@@ -1820,6 +1824,15 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         publish_options["atomic_release"] = False
     if region_override:
         publish_options["region_comparison_revision"] = "b" * 40
+    if not pinned:
+        with pytest.raises(ValueError, match="immutable prior Hub revision"):
+            publisher.publish_snapshot(
+                tmp_path / "snapshot.parquet",
+                tmp_path / "manifest.json",
+                **publish_options,
+            )
+        assert not atomic_calls
+        return
     if missing_prior:
         with pytest.raises(RuntimeError, match="lacks region continuity tables"):
             publisher.publish_snapshot(
@@ -1828,7 +1841,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
                 **publish_options,
             )
         return
-    if atomic and (not pinned or region_override):
+    if atomic and region_override:
         with pytest.raises(ValueError, match="Ordinary atomic upload"):
             publisher.publish_snapshot(
                 tmp_path / "snapshot.parquet",
@@ -1935,7 +1948,7 @@ def test_region_override_requires_current_hub_revision(monkeypatch, tmp_path) ->
             {"snapshot_sha256": "test-snapshot"},
         ),
     )
-    with pytest.raises(ValueError, match="requires a current Hub revision"):
+    with pytest.raises(ValueError, match="immutable prior Hub revision"):
         publisher.publish_snapshot(
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
@@ -1956,6 +1969,21 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_published_rows",
+        lambda config, fields, **kwargs: (
+            [{"work_id": "old"}] if config == "works" else [{"author_pub_id": "one:a"}]
+        ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "reconcile_region_decisions",
+        lambda works, *args, **kwargs: (works, {"prior_revision": "a" * 40}),
+    )
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
@@ -1986,12 +2014,31 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
             hf_token="token",
+            prior_revision="a" * 40,
+            atomic_release=False,
         )
 
 
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_published_rows",
+        lambda config, fields, **kwargs: (
+            [{"work_id": "old"}]
+            if config == "works"
+            else [{"author_pub_id": "curated:independent"}]
+        ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "reconcile_region_decisions",
+        lambda works, *args, **kwargs: (works, {"prior_revision": "a" * 40}),
+    )
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     snapshot = tmp_path / "snapshots" / "source.parquet"
     cache_dir = tmp_path / "data" / "authors"
@@ -2144,6 +2191,8 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
         snapshot,
         tmp_path / "manifest.json",
         hf_token="token",
+        prior_revision="a" * 40,
+        atomic_release=False,
         corrections_path=corrections_path,
         profile_releases_path=releases_path,
         source_cache_dir=cache_dir,
@@ -2163,6 +2212,9 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
 def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
     snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
     status_path = tmp_path / "status" / publisher.PHYSICS_REVIEW_STATUS_NAME
     status_path.parent.mkdir()
@@ -2194,7 +2246,10 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     )
     with pytest.raises(ValueError, match="source review is held"):
         publisher.publish_snapshot(
-            snapshot_path, tmp_path / "manifest.json", hf_token="token"
+            snapshot_path,
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
         )
 
 
@@ -2247,6 +2302,9 @@ def test_physics_review_gate_requires_valid_released_status(tmp_path) -> None:
 def test_publish_snapshot_corrects_metadata_before_embedding(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
     import json
 
     from map_of_research.corrections import (
@@ -2308,6 +2366,7 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
             hf_token="token",
+            prior_revision="a" * 40,
             corrections_path=corrections_path,
             doi_aliases_path=doi_aliases_path,
         )
@@ -2316,6 +2375,9 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
 def test_breivik_gate_blocks_current_hold_before_enrichment(
     monkeypatch, tmp_path
 ) -> None:
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
     snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
     status_path = tmp_path / "status" / publisher.BREIVIK_REVIEW_STATUS_NAME
     status_path.parent.mkdir()
@@ -2347,7 +2409,10 @@ def test_breivik_gate_blocks_current_hold_before_enrichment(
         ValueError, match="Breivik map-quality gate: source review is held"
     ):
         publisher.publish_snapshot(
-            snapshot_path, tmp_path / "manifest.json", hf_token="token"
+            snapshot_path,
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision="a" * 40,
         )
 
 

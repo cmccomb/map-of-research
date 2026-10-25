@@ -1385,10 +1385,10 @@ def publish_snapshot(
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
-    if prior_revision is not None:
-        _require_current_dataset_revision(
-            hf_token=hf_token, prior_revision=prior_revision
-        )
+    if prior_revision is None:
+        raise ValueError("Live publish requires an immutable prior Hub revision")
+    require_revision(prior_revision)
+    _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     registry = load_registry(people_path, memberships_path, departments_path)
     validate_included_scholar_primary_homes(
         registry,
@@ -1410,8 +1410,6 @@ def publish_snapshot(
         if prior_revision is None or atomic_release is False:
             raise ValueError("Bio release requires an atomic parent-pinned upload")
     if region_comparison_revision is not None:
-        if prior_revision is None:
-            raise ValueError("Region comparison requires a current Hub revision")
         require_approved_comparison_revision(
             current_revision=prior_revision,
             comparison_revision=region_comparison_revision,
@@ -1456,7 +1454,7 @@ def publish_snapshot(
         released_frame,
         hf_token=hf_token,
         encoder=encoder,
-        **({"prior_revision": prior_revision} if prior_revision is not None else {}),
+        prior_revision=prior_revision,
     )
     tables = build_dataset_tables(
         enriched,
@@ -1469,7 +1467,7 @@ def publish_snapshot(
     )
     existing_layouts = _existing_layouts(
         hf_token=hf_token,
-        **({"revision": prior_revision} if prior_revision is not None else {}),
+        revision=prior_revision,
     )
     layout_reused = False
     if existing_layouts:
@@ -1477,7 +1475,7 @@ def publish_snapshot(
             tables["works"],
             _existing_work_state(
                 hf_token=hf_token,
-                **({"revision": prior_revision} if prior_revision is not None else {}),
+                revision=prior_revision,
             ),
             existing_layouts,
             doi_aliases,
@@ -1491,41 +1489,39 @@ def publish_snapshot(
     )
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(tables["works"])
-    continuity_receipt = None
     comparison_revision = region_comparison_revision or prior_revision
-    if comparison_revision is not None:
-        prior_work_fields = (
-            (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
-            if comparison_revision != prior_revision
-            else PRIOR_WORK_FIELDS
+    prior_work_fields = (
+        (*PRIOR_WORK_FIELDS, "map_exclusion_reasons")
+        if comparison_revision != prior_revision
+        else PRIOR_WORK_FIELDS
+    )
+    prior_works = list(
+        _published_rows(
+            "works",
+            prior_work_fields,
+            hf_token=hf_token,
+            revision=comparison_revision,
         )
-        prior_works = list(
-            _published_rows(
-                "works",
-                prior_work_fields,
-                hf_token=hf_token,
-                revision=comparison_revision,
-            )
+    )
+    prior_profiles = list(
+        _published_rows(
+            "profile_publications",
+            PRIOR_OBSERVATION_FIELDS,
+            hf_token=hf_token,
+            revision=comparison_revision,
         )
-        prior_profiles = list(
-            _published_rows(
-                "profile_publications",
-                PRIOR_OBSERVATION_FIELDS,
-                hf_token=hf_token,
-                revision=comparison_revision,
-            )
-        )
-        if not prior_works or not prior_profiles:
-            raise RuntimeError("Pinned prior dataset lacks region continuity tables")
-        tables["works"], continuity_receipt = reconcile_region_decisions(
-            tables["works"],
-            tables["profile_publications"],
-            prior_works,
-            prior_profiles,
-            prior_revision=comparison_revision,
-        )
-        if comparison_revision != prior_revision:
-            continuity_receipt["current_hub_revision"] = prior_revision
+    )
+    if not prior_works or not prior_profiles:
+        raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    tables["works"], continuity_receipt = reconcile_region_decisions(
+        tables["works"],
+        tables["profile_publications"],
+        prior_works,
+        prior_profiles,
+        prior_revision=comparison_revision,
+    )
+    if comparison_revision != prior_revision:
+        continuity_receipt["current_hub_revision"] = prior_revision
     tables["works"] = add_publication_keywords(tables["works"])
     require_no_held_contributions(tables, release_decisions, held_observation_ids)
     require_no_provisional_hold_contributions(tables, provisional_holds)
@@ -1551,10 +1547,7 @@ def publish_snapshot(
             continuity_receipt=continuity_receipt,
         )
 
-    if prior_revision is not None:
-        _require_current_dataset_revision(
-            hf_token=hf_token, prior_revision=prior_revision
-        )
+    _require_current_dataset_revision(hf_token=hf_token, prior_revision=prior_revision)
     if comparison_revision != prior_revision:
         require_frozen_source_tip(snapshot_path.parent.parent)
         require_frozen_producer_tip(
@@ -1563,10 +1556,10 @@ def publish_snapshot(
         )
     generated_at_utc = str(manifest["created_at_utc"])
     if atomic_release is None:
-        atomic_release = prior_revision is not None
+        atomic_release = True
     atomic_receipt = None
     if atomic_release:
-        if prior_revision is None or comparison_revision != prior_revision:
+        if comparison_revision != prior_revision:
             raise ValueError(
                 "Ordinary atomic upload needs the current immutable Hub revision; "
                 "historical region repair requires its dedicated atomic path"

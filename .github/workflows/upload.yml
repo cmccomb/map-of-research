@@ -135,7 +135,7 @@ jobs:
         env:
           HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
           HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
-          REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
+          REQUIRE_BIO_RELEASE: ${{ github.event_name == 'push' || inputs.require_bio_release }}
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
