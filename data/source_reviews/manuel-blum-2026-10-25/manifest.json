@@ -22,9 +22,9 @@
   },
   "post_2011_candidates": {
     "path": "post-2011-candidates.csv",
-    "sha256": "572f40129e26c98713a8de28bcfd6314243d8eb20e7ff648cef16b30a1fb5601",
-    "row_count": 8,
-    "interpretation": "Held later arXiv source observations; identity and work-family reconciliation required; not eight distinct works"
+    "sha256": "0c169f6e4c263c75d716a1fe9ee0a307158126d1a65b3cf392e5d93de77a1c5b",
+    "row_count": 11,
+    "interpretation": "Held post-2011 arXiv source observations; some preprint/journal families are reviewed, other version questions remain; not eleven distinct works"
   },
   "known_omission": {
     "doi": "10.1073/pnas.1801839117",
@@ -54,6 +54,17 @@
         "https://arxiv.org/abs/2107.13704",
         "https://doi.org/10.1073/pnas.2115934119"
       ]
+    },
+    {
+      "preprint_id": "arxiv:1310.1137",
+      "published_doi": "10.1145/2517312.2517319",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv record explicitly links the ACM DOI and names AISEC 2013; coauthor Jeremiah Blocki's CMU research page lists the exact title, byline, and venue.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1310.1137",
+        "https://www.cs.cmu.edu/~jblocki/",
+        "https://doi.org/10.1145/2517312.2517319"
+      ]
     }
   ],
   "reviewed_identity_links": [
@@ -65,6 +76,17 @@
         "https://arxiv.org/abs/1906.00029",
         "https://www.cs.cmu.edu/~elan/docs/Elan_CV.pdf",
         "https://www.cmu.edu/uro/MoM/2016%20MoM%20Abstract%20Book.pdf"
+      ]
+    },
+    {
+      "source_ids": ["arxiv:1302.5122", "arxiv:1310.1137", "arxiv:1404.0024"],
+      "decision": "cmu_manuel_blum_attributed",
+      "basis": "Coauthor Jeremiah Blocki's CMU researcher page identifies Manuel Blum as his doctoral co-advisor and names Blum on the exact titles, with ASIACRYPT, AISEC, or working-paper context; each arXiv record has a matching full byline.",
+      "evidence_urls": [
+        "https://www.cs.cmu.edu/~jblocki/",
+        "https://arxiv.org/abs/1302.5122",
+        "https://arxiv.org/abs/1310.1137",
+        "https://arxiv.org/abs/1404.0024"
       ]
     }
   ],

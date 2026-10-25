@@ -13,7 +13,7 @@ absent from the 59-item CV list. This establishes a concrete completeness gap.
 The numbered citations also contain reports, talks, preliminary versions, and
 journal articles that have not been resolved into distinct academic works.
 
-`post-2011-candidates.csv` adds eight later arXiv source observations from a
+`post-2011-candidates.csv` adds eleven later arXiv source observations from a
 bounded primary-source check. Several are coauthored with Lenore Blum; the
 2017 password preprint and the already held 2020 PNAS paper are the same
 publication family in separate preprint and journal manifestations: both name
@@ -32,8 +32,13 @@ Rosenfeld's [CMU-hosted CV](https://www.cs.cmu.edu/~elan/docs/Elan_CV.pdf)
 lists the same title, Rosenfeld–Vempala–Blum byline, and a 2016 senior
 thesis; a [CMU research abstract](https://www.cmu.edu/uro/MoM/2016%20MoM%20Abstract%20Book.pdf)
 names Manuel Blum as advisor. The 2016 thesis and 2019 arXiv text still need
-comparison before a work-family decision. These are source observations,
-**not** eight distinct new works or a
+comparison before a work-family decision. Three older 2013–2014 password
+preprints name Blum with Jeremiah Blocki; Blocki's
+[CMU-hosted research page](https://www.cs.cmu.edu/~jblocki/) confirms the
+exact bylines and identifies the 2013 ASIACRYPT and AISEC venues. The
+[GOTCHA arXiv record](https://arxiv.org/abs/1310.1137) explicitly relates ACM
+DOI `10.1145/2517312.2517319`. These are source observations,
+**not** eleven distinct new works or a
 whole-career census. A broad “Blum, M” search also returns other researchers;
 same-name results are not automatically attributed to CMU Manuel Blum. The
 [broad arXiv search](https://arxiv.org/search/cs?query=Blum%2C+M&searchtype=author)
