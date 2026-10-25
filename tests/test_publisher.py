@@ -939,6 +939,88 @@ def test_reusable_work_order_preserves_doi_rekey_layout_and_topic_order(
     assert numpy.isnan(laid_out.loc[3, "x"])
 
 
+def reusable_alias_work_state():
+    current, previous, layouts, _ = reusable_work_state()
+    aliases = publisher.load_doi_aliases(publisher.DEFAULT_DOI_ALIASES_PATH)
+    (scholar_id, author_pub_id), alias = next(iter(aliases.items()))
+    new_id = "work-" + hashlib.sha256(f"doi:{alias.doi}".encode()).hexdigest()
+    previous[0]["title"] = alias.observed_title
+    previous[0]["year"] = alias.observed_year
+    current.loc[1, "work_id"] = new_id
+    current.loc[1, "title"] = alias.observed_title
+    current.loc[1, "year"] = alias.observed_year
+    current.loc[1, "doi"] = alias.doi
+    current.loc[1, "work_match_method"] = "reviewed_version_alias"
+    current.at[1, "source_types"] = ["scholar"]
+    current.at[1, "source_verification_urls"] = list(alias.evidence_urls)
+    current["scholar_ids"] = [[] for _ in range(len(current))]
+    current["author_pub_ids"] = [[] for _ in range(len(current))]
+    current.at[1, "scholar_ids"] = [scholar_id]
+    current.at[1, "author_pub_ids"] = [author_pub_id]
+    return current, previous, layouts, new_id, aliases
+
+
+def test_reusable_work_order_preserves_reviewed_alias_layout(monkeypatch) -> None:
+    current, previous, layouts, new_id, aliases = reusable_alias_work_state()
+    reused = publisher._reusable_work_order(current, previous, layouts, aliases)
+    assert reused is not None
+    ordered, remapped = reused
+    assert ordered["work_id"].tolist()[0] == new_id
+    assert remapped[new_id] == layouts["old-title-id"]
+
+    monkeypatch.setattr(
+        publisher,
+        "_fit_pca_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_fit_tsne_layout",
+        lambda _: (_ for _ in ()).throw(AssertionError("layout refitted")),
+    )
+    laid_out = publisher.add_global_layout(ordered, existing_layouts=remapped)
+    assert laid_out.loc[0, "x"] == 0.1
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "missing_manifest",
+        "wrong_doi",
+        "wrong_scholar_id",
+        "wrong_observation_id",
+        "missing_evidence",
+        "missing_scholar_source",
+        "unverified",
+        "wrong_method",
+    ],
+)
+def test_reusable_work_order_rejects_unproven_alias(change) -> None:
+    current, previous, layouts, _, aliases = reusable_alias_work_state()
+    if change == "missing_manifest":
+        aliases = {}
+    elif change == "wrong_doi":
+        current.loc[1, "doi"] = "10.1000/wrong"
+        current.loc[1, "work_id"] = (
+            "work-" + hashlib.sha256(b"doi:10.1000/wrong").hexdigest()
+        )
+    elif change == "wrong_scholar_id":
+        current.at[1, "scholar_ids"] = ["other"]
+    elif change == "wrong_observation_id":
+        current.at[1, "author_pub_ids"] = ["other:row"]
+    elif change == "missing_evidence":
+        current.at[1, "source_verification_urls"] = [
+            current.at[1, "source_verification_urls"][0]
+        ]
+    elif change == "missing_scholar_source":
+        current.at[1, "source_types"] = ["curated_verified"]
+    elif change == "unverified":
+        current.loc[1, "source_verified_at"] = ""
+    elif change == "wrong_method":
+        current.loc[1, "work_match_method"] = "normalized_title_year"
+    assert publisher._reusable_work_order(current, previous, layouts, aliases) is None
+
+
 def test_reusable_work_order_preserves_prior_order_without_new_rekeys() -> None:
     current, previous, layouts, new_id = reusable_work_state()
     previous[0]["work_id"] = new_id
@@ -1434,6 +1516,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         }
     )
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
@@ -1459,7 +1542,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(
         publisher,
         "_reusable_work_order",
-        lambda works, previous, layouts: (
+        lambda works, previous, layouts, doi_aliases: (
             (works, reused_layouts) if reuse_order else None
         ),
     )
@@ -1536,6 +1619,7 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         name: pandas.DataFrame({"value": [1]}) for name in publisher.DATASET_CONFIGS
     }
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
@@ -1585,6 +1669,7 @@ def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
     )
     frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
     monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(publisher, "validate_doi_aliases", lambda *args: None)
     monkeypatch.setattr(
         publisher,
         "validate_snapshot",
@@ -1669,6 +1754,8 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
     corrections_path.write_text(
         json.dumps({"schema_version": 1, "corrections": [selected]})
     )
+    doi_aliases_path = tmp_path / "empty-doi-aliases.json"
+    doi_aliases_path.write_text(json.dumps({"schema_version": 1, "aliases": []}))
     raw = json.dumps({"pub_year": "1712", "title": correction.expected["title"]})
     frame = pandas.DataFrame(
         [
@@ -1708,6 +1795,7 @@ def test_publish_snapshot_corrects_metadata_before_embedding(
             tmp_path / "manifest.json",
             hf_token="token",
             corrections_path=corrections_path,
+            doi_aliases_path=doi_aliases_path,
         )
 
 

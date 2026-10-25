@@ -6,8 +6,156 @@ import pytest
 
 import map_of_research.dataset as dataset
 from map_of_research.dataset import build_dataset_tables
+from map_of_research.doi_aliases import DEFAULT_DOI_ALIASES_PATH, load_doi_aliases
 from map_of_research.registry import load_registry
 from tests.registry_helpers import write_registry
+
+
+@pytest.mark.parametrize("include_published_version", [False, True])
+def test_reviewed_preprint_alias_keeps_scholar_source_and_one_work(
+    tmp_path, include_published_version
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-walkington",
+                "display_name": "Noel J. Walkington",
+                "scholar_id": "CGSMDGwAAAAJ",
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-walkington",
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty/walkington.html",
+                "verified_at": "2026-10-24",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty/index.html",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs/",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    alias = next(iter(load_doi_aliases(DEFAULT_DOI_ALIASES_PATH).values()))
+    base = {
+        "person_id": "person-walkington",
+        "display_name": "Noel J. Walkington",
+        "faculty": "Noel J. Walkington",
+        "department_ids": ["math"],
+        "memberships": [{"department_id": "math", "included": True}],
+        "title": alias.observed_title,
+        "authors": "GL Miller, NJ Walkington, AL Wang",
+        "citation_count": 6,
+        "embedding": [0.0, 1.0],
+        "external_coauthors": [],
+        "source_verified_at": "",
+        "source_verification_urls": [],
+    }
+    scholar = {
+        **base,
+        "source_type": "scholar",
+        "scholar_id": "CGSMDGwAAAAJ",
+        "author_pub_id": "CGSMDGwAAAAJ:SP6oXDckpogC",
+        "year": 2018,
+        "venue": "arXiv preprint arXiv:1812.02841, 2018",
+        "citation": "arXiv preprint arXiv:1812.02841, 2018",
+        "source_url": "https://scholar.google.com/citations?user=CGSMDGwAAAAJ",
+        "source_record_json": '{"pub_year":"2018"}',
+        "source_doi": "",
+        "fetched_at_utc": "2026-10-24T23:00:00+00:00",
+    }
+    rows = [scholar]
+    if include_published_version:
+        rows.append(
+            {
+                **base,
+                "source_type": "curated_verified",
+                "scholar_id": "",
+                "author_pub_id": "curated-doi:person-walkington:" + alias.doi,
+                "year": 2019,
+                "venue": "LIPIcs APPROX/RANDOM 2019",
+                "citation": "LIPIcs 145, article 8 (2019)",
+                "source_url": alias.evidence_urls[1],
+                "source_record_json": "{}",
+                "source_doi": alias.doi,
+                "source_verified_at": alias.verified_at,
+                "source_verification_urls": [alias.evidence_urls[1]],
+                "fetched_at_utc": "",
+            }
+        )
+    observations = pandas.DataFrame(rows)
+    tables = build_dataset_tables(
+        observations,
+        registry,
+        {},
+        {("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC"): alias},
+    )
+    assert len(tables["profile_publications"]) == len(rows)
+    assert len(tables["works"]) == 1
+    assert len(tables["authorships"]) == len(rows)
+    assert tables["works"].iloc[0]["doi"] == alias.doi
+    assert tables["works"].iloc[0]["year"] == 2018
+    assert set(tables["works"].iloc[0]["source_verification_urls"]) == set(
+        alias.evidence_urls
+    )
+    normalized = tables["profile_publications"].iloc[0]
+    assert normalized["work_match_method"] == "reviewed_version_alias"
+    assert normalized["source_record_json"] == scholar["source_record_json"]
+    assert normalized["year"] == scholar["year"]
+    assert normalized["source_doi"] == ""
+    assert observations.iloc[0]["source_verified_at"] == ""
+
+
+def test_reviewed_preprint_alias_rejects_conflicting_source_doi(tmp_path) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[{"person_id": "person-one", "display_name": "One"}],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "ece",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/one",
+                "verified_at": "2026-10-24",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    alias = next(iter(load_doi_aliases(DEFAULT_DOI_ALIASES_PATH).values()))
+    rows = pandas.DataFrame(
+        [
+            {
+                "source_type": "scholar",
+                "scholar_id": "CGSMDGwAAAAJ",
+                "person_id": "person-one",
+                "author_pub_id": "CGSMDGwAAAAJ:SP6oXDckpogC",
+                "source_doi": "10.1000/conflicting",
+            }
+        ]
+    )
+    with pytest.raises(ValueError, match="conflicts with a source DOI"):
+        build_dataset_tables(
+            rows,
+            registry,
+            {},
+            {("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC"): alias},
+        )
 
 
 def test_dataset_retains_observations_while_deduplicating_exact_work(tmp_path) -> None:
