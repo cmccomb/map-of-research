@@ -5784,6 +5784,118 @@
       "reason": "The publisher labels this page Editorial Board; it lists Terrence J. Collins as a board member rather than an author of a research publication.",
       "evidence_url": "https://www.tandfonline.com/doi/pdf/10.1080/17518253.2010.541062",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:ce2CqMG-AY4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2000 Pure and Applied Chemistry article, volume 72 pages 1207–1228, as retained row 2; this Scholar copy has an incomplete/reordered author list.",
+      "evidence_url": "https://publications.iupac.org/pac/2000/7207/7207tundo.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:4vMrXwiscB8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2013 Green Chemistry article as retained row 22; RSC gives the complete authors and pages 181–198, while this Scholar copy has no venue.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2013/gc/c2gc35055f",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:BzfGm06jWhQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Same 2020 Chemistry–A European Journal article as retained row 146; Wiley gives volume 26 pages 7631–7637, while this undated Scholar copy has an incomplete venue.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.202000384",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:_OXeSy2IsFwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The symposium-heading prefix is attached to the same 2001 Pure and Applied Chemistry article, volume 73 pages 113–118, retained as row 137.",
+      "evidence_url": "https://publications.iupac.org/pac/73/1/0113/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:b1wdh0AR-JQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Malformed copy of the 2000 JACS nickel L-edge paper retained as row 20; ACS gives volume 122 pages 10544–10552, not the volume 121 report-like venue here.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/ja000945g",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:ZzlSgRqYykMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "FULL PAPERS-prefixed source fragment shares the 1998 Chemistry–A European Journal volume 4 pages 2173–2181 and author group with retained row 117.",
+      "evidence_url": "https://chemistry-europe.onlinelibrary.wiley.com/toc/15213765/1998/4/11",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:43bX7VzcjpAC",
+      "reason_code": "nonpublication",
+      "reason": "Electronic supplementary information attached to the RSC article retained as row 16, not a standalone publication.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2007/gc/b604990g",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:3NQIlFlcGxIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Bibliography fragment beginning with ampersand Tumas cites the 2000 IUPAC article at pages 1207–1228 already retained as row 2.",
+      "evidence_url": "https://publications.iupac.org/pac/2000/7207/7207tundo.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:U_HPUtbDl20C",
+      "reason_code": "nonpublication",
+      "reason": "The row title is Collins’s former Thomas Lord Professor position and CMU affiliation, not a work title; CMU lists that academic position for 2001–2010.",
+      "evidence_url": "https://scholars.cmu.edu/4828-terrence-collins/about",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:6_hjMsCP8ZoC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 0211065 is a funding grant record, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0211065.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:1Ye0OR6EYb4C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9612990 is a funding grant record, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9612990.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:AXkvAH5U_nMC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 9319505 is a funding grant record, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9319505.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:jFemdcug13IC",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8406198 is a funding grant record, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8406198.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "0e1jwkkAAAAJ",
+      "author_pub_id": "0e1jwkkAAAAJ:KaMxkj08jr0C",
+      "reason_code": "nonpublication",
+      "reason": "NSF award 8107535 is a funding grant record, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8107535.json",
+      "verified_at": "2026-10-24"
     }
   ]
 }
