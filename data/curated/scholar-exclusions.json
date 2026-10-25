@@ -5232,6 +5232,54 @@
       "reason": "BIT Mesra's faculty bibliography assigns the matching aerospace work and coauthors to professor Sudip Das, distinct from CMU chemist Subha R. Das.",
       "evidence_url": "https://bitmesra.ac.in/Show_profile/79325A4639596B676543575576366379524C6C4650673D3D",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:DXE8ND7PrJAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Springer credits this exact Fractional Order Signal Processing book to Saptarshi Das and Indranil Pan at Jadavpur University, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-642-23117-9",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:m4fbC6XIj1kC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact ISA Transactions article names Saptarshi Das at Jadavpur University with Pan, Shantanu Das and Gupta, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/22036301/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:m92CDrhVnKEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact author manuscript names Saptarshi Das, Indranil Pan, Shantanu Das and Amitava Gupta; its S. Das is not CMU chemist Subha R. Das.",
+      "evidence_url": "https://arxiv.org/abs/1202.5680",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:4X0JR2_MtJMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Wiley credits this exact Smart Environments chapter to Nixon, Wagealla, English and Terzis; Scholar appended volume editors Cook and Sajal K. Das, neither of whom is CMU chemist Subha R. Das.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/book/10.1002/047168659X",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:-mN3Mh-tlDkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Wiley credits the exact Middleware chapter only to G. Michael Youngblood; Sajal K. Das is an editor of its volume, not CMU chemist Subha R. Das.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/047168659X.ch5",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:9shLKfS_uJEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Wiley identifies Smart Environments volume editor S. Das as Sajal K. Das of computer science, distinct from CMU chemist Subha R. Das.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/book/10.1002/047168659X",
+      "verified_at": "2026-10-25"
     }
   ]
 }
