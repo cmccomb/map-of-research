@@ -24,13 +24,24 @@ single curated native ID by exact normalized title and year. A later verified
 DOI requires updating the curated row to its DOI before DOI reconciliation.
 Curated records have no current Scholar ID or Scholar fetch time.
 
-`scholar-doi-aliases.json` records exact, reviewed version links when a Scholar
-row describes a preprint and the publisher gives the same article a later DOI
-and year. The publisher checks the row ID, observed title and year, source DOI,
-and exclusion state before applying the alias. It preserves the raw Scholar
-observation and joins any later curated DOI observation to one work. The
-[Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md)
-documents the first link and its arXiv and publisher evidence.
+`scholar-doi-aliases.json` records exact, reviewed links between Scholar rows
+and a published DOI. It distinguishes a `preprint_of` row from a
+`version_of_record` row when Scholar lists both. The publisher checks each row
+ID, observed title and year, source DOI, and exclusion state before applying
+the alias. It preserves both raw Scholar observations and joins them to one
+published work, including a matching curated DOI observation when present. See
+the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
+the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
+and [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md)
+for the exact source evidence.
+
+`scholar-contexts.json` is a separate exact-observation review manifest. It
+records publication type and primary evidence for unusual Scholar records.
+Patent work identity uses the published document number; the raw Scholar cache
+remains intact. An exact context entry can set `map_eligible: false` to keep a
+reviewed observation and any matched copies in raw profile data while excluding
+the work from the map. Reviewed non-author contributor types do not create
+coauthor edges. The trusted upload receipt records this manifest's SHA-256.
 
 The publisher computes embeddings and map layouts through the normal path for
 any newly eligible works. The map artifact exposes `source_types`,

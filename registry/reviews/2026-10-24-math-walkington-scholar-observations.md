@@ -4,6 +4,8 @@
 
 Eight rows were flagged because the displayed author string omitted Walkington or the record appeared to represent a container. Two exact rows are excluded from downstream works and coauthor links; raw HTML, JSON, and cache are unchanged.
 
+Two additional, exact NSF award rows were subsequently reviewed as nonpublications in [the 25 October grant review](2026-10-25-math-walkington-nsf-awards.md). They are outside this eight-row author and container check.
+
 | Row | Scholar citation ID suffix | Decision and evidence |
 | ---: | --- | --- |
 | 6 | `Wp0gIr-vW9MC` | **Retain.** The [ISTA institutional record](https://research-explorer.ista.ac.at/record/3555) lists Walkington among full authors; Scholar truncates the display. |

@@ -169,6 +169,14 @@ the Scholar cache; they do not redefine whether the visible profile was fully
 captured. The saved raw rows remain available when a specific attribution or
 nonpublication needs review.
 
+Exact source-backed context decisions in `data/curated/scholar-contexts.json`
+identify patents, edited books, panel transcripts, and withdrawn articles
+without changing captured Scholar rows. Patent publication numbers keep
+same-title documents distinct. Nine reviewed patents and one edited book are
+typed research-map items without coauthor edges. The exact withdrawn article
+and panel transcript stay in the lossless `profile_publications` table but are
+excluded from the map and collaboration graph.
+
 The research map excludes records that match high-confidence,
 content-based rules for conference front matter, journal front matter,
 organization or container records, affiliations and contact blocks,

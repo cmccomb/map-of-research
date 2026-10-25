@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "corrections": [
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:xyvS_IvSCKsC",
+      "expected": {
+        "title": "Encyclopedia of life sciences",
+        "year": 2000,
+        "venue": "London: Nature Publishing Group, 2000"
+      },
+      "corrected": {
+        "title": "Hemoglobin: Cooperativity in Protein-Ligand Interactions"
+      },
+      "basis": "CMU Chien Ho bibliography entry 223 gives the 2000 chapter title; Scholar puts the encyclopedia container in the title field. The observed venue is retained pending edition-level reconciliation.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:WJVC3Jt7v1AC",
+      "expected": {
+        "title": "Haemoglobin: cooperativity in protein–ligand interactions",
+        "year": 2000,
+        "venue": "Embryonic Encyclopedia of Life Sciences, Macmillan Reference Ltd., London …, 2000"
+      },
+      "corrected": {
+        "year": 2010,
+        "venue": "Encyclopedia of Life Sciences, John Wiley & Sons, Ltd., 2010"
+      },
+      "basis": "Wiley version 2.0 and CMU bibliography entry 305 date the Chien Ho and Yue Yuan revision to April 2010; Scholar assigns the earlier 2000 edition year.",
+      "evidence_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470015902.a0001345.pub2",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:OTTXONDVkokC",
+      "expected": {
+        "title": "Backbone Resonance Assignment of Human Adult Hemoglobin in the Eeoxy Form",
+        "year": 2006,
+        "venue": "Journal of Biomolecular NMR 36 (Suppl 1), 1-1, 2006"
+      },
+      "corrected": {
+        "title": "Backbone Resonance Assignment of Human Adult Hemoglobin in the Deoxy Form",
+        "venue": "Journal of Biomolecular NMR 36 (Suppl 1), 1, 2006"
+      },
+      "basis": "PubMed PMID 16703421 gives the exact title, supplement and page, with Chien Ho and CMU affiliation; Scholar title has an OCR error.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/16703421/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:lvd772isFD0C",
+      "expected": {
+        "title": "Ischemic mechanisms in traumatic brain injury",
+        "year": 2001,
+        "venue": "Cerebral Blood Flow: Mechanisms of Ischemia, Diagnosis, and Therapy, 60-71, 2001"
+      },
+      "corrected": {
+        "year": 2003,
+        "venue": "Cerebral Blood Flow, Update in Intensive Care Medicine 37, 60–71, 2003"
+      },
+      "basis": "Springer chapter citation lists 2003 and pages 60–71, with C. Ho in the author list; Scholar gives 2001.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-3-642-56036-1_6",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:gKiMpY-AVTkC",
+      "expected": {
+        "title": "Non-invasive early detection of acute cardiac allograft rejection by MRI in rodent model",
+        "year": 2004,
+        "venue": "Proc. Intl. Soc. Mag. Reson. Med 11, 2565, 2004"
+      },
+      "corrected": {
+        "venue": "Proc. Intl. Soc. Mag. Reson. Med. 12, 2565, 2004"
+      },
+      "basis": "CMU coauthor José Moura’s CV lists the exact Chien Ho abstract at the 12th ISMRM meeting in 2004; Scholar says 11th.",
+      "evidence_url": "https://users.ece.cmu.edu/~moura/vitae/moura-resume.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:nRpfm8aw39MC",
+      "expected": {
+        "title": "Other Non-Stem Cell Therapies for Cellular Tracking—In—ammatory Cell Tracking",
+        "year": 2019,
+        "venue": "Stem Cell Labeling for Delivery and Tracking Using Noninvasive Imaging, 358-375, 2019"
+      },
+      "corrected": {
+        "title": "Other Non-Stem Cell Therapies for Cellular Tracking—Inflammatory Cell Tracking",
+        "year": 2012,
+        "venue": "Stem Cell Labeling for Delivery and Tracking Using Noninvasive Imaging, 335–351, 2012"
+      },
+      "basis": "CMU bibliography entry 318 and the publisher book preview identify Chien Ho, the chapter title, the 2012 book and pages 335–351; Scholar has a damaged title and 2019/pages 358–375.",
+      "evidence_url": "https://www.cmu.edu/bio/people/faculty/images/ho_publications.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8iLLOQgAAAAJ",
+      "author_pub_id": "8iLLOQgAAAAJ:TesyEGJKHF4C",
+      "expected": {
+        "title": "Non-Invasive Evaluation of Chronic Cardiac Rejection After Heart Transplantation with Multi-Parameter Cellular & Functional MRI",
+        "year": 1712,
+        "venue": "Proc. Intl. Soc. Mag. Reson. Med 19, 2011, 1712"
+      },
+      "corrected": {
+        "year": 2011
+      },
+      "basis": "ISMRM 2011 abstract 1712 names Chien Ho of CMU; Scholar misplaces abstract number 1712 in the year field.",
+      "evidence_url": "https://archive.ismrm.org/2011/1712.html",
+      "verified_at": "2026-10-25"
+    }
+  ]
+}

@@ -14,6 +14,16 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .attribution import (
+    DEFAULT_ATTRIBUTION_REVIEWS_PATH,
+    load_attribution_reviews,
+)
+from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
+from .corrections import (
+    DEFAULT_CORRECTIONS_PATH,
+    apply_corrections,
+    load_corrections,
+)
 from .coverage import (
     DEFAULT_BASELINE_PATH,
     DEFAULT_CURATED_WORKS_PATH,
@@ -107,6 +117,7 @@ STRING_LIST_COLUMNS = frozenset(
         "author_pub_ids",
         "author_variants",
         "citation_variants",
+        "context_evidence_urls",
         "included_department_ids",
         "included_school_ids",
         "map_exclusion_reasons",
@@ -664,7 +675,12 @@ def build_map_artifact(
     external_coauthors: dict[str, dict[str, str]] = {}
     keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
-        for coauthor in _as_list(getattr(row, "external_coauthors", [])):
+        collaboration_eligible = bool(getattr(row, "collaboration_eligible", True))
+        for coauthor in (
+            _as_list(getattr(row, "external_coauthors", []))
+            if collaboration_eligible
+            else []
+        ):
             if not isinstance(coauthor, Mapping):
                 raise ValueError("External coauthor catalog entry must be an object")
             entry = {
@@ -764,6 +780,15 @@ def build_map_artifact(
                 "venue": str(row.venue),
                 "citation_count": int(row.citation_count),
                 "doi": str(row.doi),
+                "publication_type": str(
+                    getattr(row, "publication_type", "publication")
+                ),
+                "source_document_id": str(getattr(row, "source_document_id", "")),
+                "collaboration_eligible": collaboration_eligible,
+                "context_evidence_urls": list(
+                    _as_list(getattr(row, "context_evidence_urls", []))
+                ),
+                "display_contributors": str(getattr(row, "display_contributors", "")),
                 "source_url": source_urls[0] if source_urls else "",
                 "source_types": list(
                     _as_list(getattr(row, "source_types", ["scholar"]))
@@ -777,7 +802,9 @@ def build_map_artifact(
                 ),
                 "external_coauthor_ids": list(
                     _as_list(getattr(row, "external_coauthor_ids", []))
-                ),
+                )
+                if collaboration_eligible
+                else [],
                 "observation_count": int(row.observation_count),
                 "keyword_ids": [keyword_id, detail_keyword_id],
             }
@@ -1081,7 +1108,10 @@ def publish_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
+    corrections_path: Path = DEFAULT_CORRECTIONS_PATH,
     doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
+    attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
+    contexts_path: Path = DEFAULT_CONTEXTS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
 
@@ -1098,12 +1128,20 @@ def publish_snapshot(
     doi_aliases = load_doi_aliases(doi_aliases_path)
     validate_doi_aliases(frame, doi_aliases, exclusions)
     _require_physics_review_ready(frame, snapshot_path, exclusions)
+    corrections = load_corrections(corrections_path)
+    corrected_frame, corrected_count = apply_corrections(frame, corrections)
+    contexts = load_contexts(contexts_path)
+    attribution_reviews = load_attribution_reviews(attribution_reviews_path)
+    if set(attribution_reviews.confirmed).intersection(exclusions):
+        raise ValueError("Scholar attribution and exclusion reviews conflict")
     enriched, new_embedding_count = add_embeddings(
-        frame,
+        corrected_frame,
         hf_token=hf_token,
         encoder=encoder,
     )
-    tables = build_dataset_tables(enriched, registry, exclusions, doi_aliases)
+    tables = build_dataset_tables(
+        enriched, registry, exclusions, doi_aliases, attribution_reviews, contexts
+    )
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
         reuse = _reusable_work_order(
@@ -1171,8 +1209,27 @@ def publish_snapshot(
             else 0
         ),
         "reviewed_exclusions_sha256": sha256_file(exclusions_path),
+        "reviewed_metadata_corrections": corrected_count,
+        "reviewed_metadata_corrections_sha256": sha256_file(corrections_path),
         "reviewed_doi_aliases": len(doi_aliases),
         "reviewed_doi_aliases_sha256": sha256_file(doi_aliases_path),
+        "reviewed_contexts": int(
+            tables["profile_publications"]["context_verified_at"].ne("").sum()
+        ),
+        "reviewed_contexts_sha256": sha256_file(contexts_path),
+        "attribution_reviews_sha256": sha256_file(attribution_reviews_path),
+        "attribution_confirmed": int(
+            tables["profile_publications"]["review_attribution_status"]
+            .eq("confirmed")
+            .sum()
+            if "review_attribution_status" in tables["profile_publications"]
+            else 0
+        ),
+        "attribution_held": int(
+            tables["profile_publications"]["review_attribution_status"].eq("held").sum()
+            if "review_attribution_status" in tables["profile_publications"]
+            else 0
+        ),
         "profile_count": int(
             enriched.loc[
                 enriched.get("source_type", "scholar") == "scholar", "scholar_id"
@@ -1217,8 +1274,17 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--reviewed-exclusions", type=Path, default=DEFAULT_EXCLUSIONS_PATH
     )
     parser.add_argument(
+        "--reviewed-metadata-corrections",
+        type=Path,
+        default=DEFAULT_CORRECTIONS_PATH,
+    )
+    parser.add_argument(
         "--reviewed-doi-aliases", type=Path, default=DEFAULT_DOI_ALIASES_PATH
     )
+    parser.add_argument(
+        "--attribution-reviews", type=Path, default=DEFAULT_ATTRIBUTION_REVIEWS_PATH
+    )
+    parser.add_argument("--reviewed-contexts", type=Path, default=DEFAULT_CONTEXTS_PATH)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -1295,7 +1361,10 @@ def main(argv: Sequence[str] | None = None) -> int:
             memberships_path=args.memberships,
             departments_path=args.departments,
             exclusions_path=args.reviewed_exclusions,
+            corrections_path=args.reviewed_metadata_corrections,
             doi_aliases_path=args.reviewed_doi_aliases,
+            attribution_reviews_path=args.attribution_reviews,
+            contexts_path=args.reviewed_contexts,
         )
         status.update({"status": "success", **result, "error_type": None})
         exit_code = 0

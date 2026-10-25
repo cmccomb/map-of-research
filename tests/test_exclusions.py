@@ -116,7 +116,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "yssfFIsAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "8Vj5Ps4AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "gJbEoq8AAAAJ" for key in exclusions) == 6
-    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 3
+    assert sum(key[0] == "CGSMDGwAAAAJ" for key in exclusions) == 6
     assert sum(key[0] == "ctYLFRIAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "5TCNs50AAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "CaQRJ8IAAAAJ" for key in exclusions) == 2
@@ -156,7 +156,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "uHqbF7sAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "eVxdemsAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "q1g_W5sAAAAJ" for key in exclusions) == 5
-    assert sum(key[0] == "0Nj-v7sAAAAJ" for key in exclusions) == 20
+    assert sum(key[0] == "0Nj-v7sAAAAJ" for key in exclusions) == 21
     assert sum(key[0] == "uOCVq1cAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "ZEHOKUkAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "jrRg4PAAAAAJ" for key in exclusions) == 5
@@ -185,6 +185,132 @@ def test_natalie_mcguier_only_malformed_second_review_is_excluded() -> None:
     }
     assert actual == {f"{scholar_id}:IjCSPb-OGe4C": "corrupted_duplicate"}
     assert (scholar_id, f"{scholar_id}:u-x6o8ySG0sC") not in exclusions
+
+
+def test_walkington_nsf_awards_are_excluded_on_each_captured_profile() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    awards = (
+        (
+            "CGSMDGwAAAAJ:1yQoGdGgb4wC",
+            (
+                "JV3ryMgAAAAJ:vDZJ-YLwNdEC",
+                "0Nj-v7sAAAAJ:_Re3VWB3Y0AC",
+                "neJ3NIUAAAAJ:rmuvC79q63oC",
+            ),
+            "0635983",
+        ),
+        (
+            "CGSMDGwAAAAJ:JQOojiI6XY0C",
+            ("JV3ryMgAAAAJ:AHdEip9mkN0C", "tWQsy4UAAAAJ:p2g8aNsByqUC"),
+            "2342349",
+        ),
+    )
+    for walkington_citation, peer_citations, award_number in awards:
+        for citation in (walkington_citation, *peer_citations):
+            scholar_id = citation.split(":", 1)[0]
+            decision = exclusions[(scholar_id, citation)]
+            assert decision.reason_code == "nonpublication"
+            assert award_number in decision.reason
+    assert ("CGSMDGwAAAAJ", "CGSMDGwAAAAJ:SP6oXDckpogC") not in exclusions
+
+
+def test_math_center_name_and_author_header_artifacts_are_exactly_excluded(
+    tmp_path,
+) -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, citation, reason_code in (
+        ("0Nj-v7sAAAAJ", "JV2RwH3_ST0C", "nonpublication"),
+        ("neJ3NIUAAAAJ", "f2IySw72cVMC", "nonpublication"),
+        ("CGSMDGwAAAAJ", "08ZZubdj9fEC", "corrupted_duplicate"),
+        ("gJbEoq8AAAAJ", "aqlVkmm33-oC", "corrupted_duplicate"),
+    ):
+        assert (
+            exclusions[(scholar_id, f"{scholar_id}:{citation}")].reason_code
+            == reason_code
+        )
+
+    real_article_citations = (
+        ("CGSMDGwAAAAJ", "SeFeTyx0c_EC", "person-walkington", "Noel Walkington"),
+        ("gJbEoq8AAAAJ", "4JMBOYKVnBMC", "person-kinderlehrer", "David Kinderlehrer"),
+    )
+    for scholar_id, citation, _, _ in real_article_citations:
+        assert (scholar_id, f"{scholar_id}:{citation}") not in exclusions
+
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": person_id,
+                "display_name": display_name,
+                "scholar_id": scholar_id,
+            }
+            for scholar_id, _, person_id, display_name in real_article_citations
+        ],
+        memberships=[
+            {
+                "person_id": person_id,
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+                "verified_at": "2026-10-25",
+            }
+            for _, _, person_id, _ in real_article_citations
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty/index.html",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    rows = []
+    for scholar_id, citation, person_id, display_name in real_article_citations:
+        rows.append(
+            {
+                "source_type": "scholar",
+                "scholar_id": scholar_id,
+                "author_pub_id": f"{scholar_id}:{citation}",
+                "person_id": person_id,
+                "display_name": display_name,
+                "faculty": display_name,
+                "department_ids": ["math"],
+                "memberships": [{"department_id": "math", "included": True}],
+                "title": (
+                    "Approximation of Parabolic Equations Using the Wasserstein Metric"
+                ),
+                "authors": "D Kinderlehrer, NJ Walkington",
+                "year": 1999,
+                "venue": (
+                    "ESAIM: Mathematical Modelling and Numerical Analysis "
+                    "33 (4), 837-852, 1999"
+                ),
+                "citation": "ESAIM: M2AN 33(4), 837-852 (1999)",
+                "citation_count": 0,
+                "source_url": "https://www.numdam.org/item/M2AN_1999__33_4_837_0/",
+                "source_record_json": "{}",
+                "fetched_at_utc": "2026-10-25T00:00:00+00:00",
+                "embedding": [0.0, 1.0],
+            }
+        )
+    tables = build_dataset_tables(pandas.DataFrame(rows), registry, exclusions)
+    assert tables["profile_publications"]["map_eligible"].tolist() == [True, True]
+    assert len(tables["works"]) == 1
+    assert bool(tables["works"].iloc[0]["map_eligible"])
+    assert set(tables["authorships"]["person_id"]) == {
+        "person-walkington",
+        "person-kinderlehrer",
+    }
 
 
 def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:
@@ -897,3 +1023,59 @@ def test_reviewed_false_attribution_cannot_attach_faculty_to_shared_work(
     assert artifact["points"][0]["faculty_ids"] == ["person-two"]
     assert artifact["points"][0]["department_ids"] == ["math"]
     assert artifact["points"][0]["source_url"] == ("https://example.test/good-source")
+
+
+def test_chien_ho_exact_review_preserves_retained_source_versions() -> None:
+    scholar_id = "8iLLOQgAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    expected = {
+        "kWvqk_afx_IC": "false_profile_attribution",
+        "gVv57TyPmFsC": "false_profile_attribution",
+        "dhFuZR0502QC": "false_profile_attribution",
+        "CNPyR2KL9-0C": "false_profile_attribution",
+        "-uzm3Y7AvW0C": "false_profile_attribution",
+        "qUcmZB5y_30C": "false_profile_attribution",
+        "naSTrk-c4S8C": "false_profile_attribution",
+        "XvxMoLDsR5gC": "false_profile_attribution",
+        "1DsIQWDZLl8C": "false_profile_attribution",
+        "tKAzc9rXhukC": "false_profile_attribution",
+        "z6xuaG2dYH0C": "false_profile_attribution",
+        "sNmaIFBj_lkC": "false_profile_attribution",
+        "bz8QjSJIRt4C": "false_profile_attribution",
+        "L_l9e5I586QC": "false_profile_attribution",
+        "7T2F9Uy0os0C": "false_profile_attribution",
+        "oi2SiIJ9l4AC": "false_profile_attribution",
+        "2VqYfGB8ITEC": "false_profile_attribution",
+        "_AeoHAGD03cC": "false_profile_attribution",
+        "ijdKiLOsEJMC": "false_profile_attribution",
+        "U4n9YNQMCAIC": "false_profile_attribution",
+        "uVUOdF_882EC": "false_profile_attribution",
+        "yY3RG6sOEgwC": "false_profile_attribution",
+        "-95Q15plzcUC": "false_profile_attribution",
+        "TaaCk18tZOkC": "false_profile_attribution",
+        "silx2ntsSuwC": "false_profile_attribution",
+        "lgwcVrK6X84C": "false_profile_attribution",
+        "vDijr-p_gm4C": "corrupted_duplicate",
+        "pAkWuXOU-OoC": "false_profile_attribution",
+        "FiDNX6EVdGUC": "false_profile_attribution",
+        "rbGdIwl2e6cC": "nonpublication",
+        "65Yg0jNCQDAC": "false_profile_attribution",
+        "KWzIFqRkAKkC": "corrupted_duplicate",
+        "PQEM9vzQD9gC": "nonpublication",
+        "9DLIHnF0jcYC": "nonpublication",
+        "Br1UauaknNIC": "nonpublication",
+    }
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert set(expected.items()) <= set(actual.items())
+    assert {
+        "b0M2c_1WBrUC",  # Source paper for the two affiliation fragments.
+        "WbkHhVStYXYC",  # Source article for the journal-header fragment.
+        "uWQEDVKXjbEC",  # Complete 1973 hemoglobin paper.
+        "eI34FqJmdUoC",  # Complete 1991 D-lactate dehydrogenase paper.
+        "XDrR66g3YHsC",  # CMU bibliography confirms Ho despite Scholar author omission.
+        "TesyEGJKHF4C",  # 1712 is a malformed year, not an exclusion.
+    }.isdisjoint(actual)

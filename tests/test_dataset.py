@@ -6,7 +6,11 @@ import pytest
 
 import map_of_research.dataset as dataset
 from map_of_research.dataset import build_dataset_tables
-from map_of_research.doi_aliases import DEFAULT_DOI_ALIASES_PATH, load_doi_aliases
+from map_of_research.doi_aliases import (
+    DEFAULT_DOI_ALIASES_PATH,
+    load_doi_aliases,
+    validate_doi_aliases,
+)
 from map_of_research.registry import load_registry
 from tests.registry_helpers import write_registry
 
@@ -119,6 +123,124 @@ def test_reviewed_preprint_alias_keeps_scholar_source_and_one_work(
     assert normalized["year"] == scholar["year"]
     assert normalized["source_doi"] == ""
     assert observations.iloc[0]["source_verified_at"] == ""
+
+
+@pytest.mark.parametrize(
+    ("scholar_id", "preprint_id", "published_id", "published_year"),
+    [
+        ("FmZaK1wAAAAJ", "roLk4NBRz8UC", "f2IySw72cVMC", 2015),
+        ("tWQsy4UAAAAJ", "nb7KW1ujOQ8C", "GnPB-g6toBAC", 2020),
+        ("FmZaK1wAAAAJ", "zA6iFVUQeVQC", "bFI3QPDXJZMC", 2015),
+        ("cAiedtsAAAAJ", "7PzlFSSx8tAC", "dhFuZR0502QC", 2023),
+        ("SHxT0AEAAAAJ", "pyW8ca7W8N0C", "g5m5HwL7SMYC", 2024),
+    ],
+)
+def test_reviewed_scholar_versions_retain_two_rows_and_one_published_work(
+    tmp_path, scholar_id, preprint_id, published_id, published_year
+) -> None:
+    paths = write_registry(
+        tmp_path / "registry",
+        people=[
+            {
+                "person_id": "person-math",
+                "display_name": "Math Person",
+                "scholar_id": scholar_id,
+            }
+        ],
+        memberships=[
+            {
+                "person_id": "person-math",
+                "department_id": "math",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://www.cmu.edu/math/people/faculty/index.html",
+                "verified_at": "2026-10-25",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "math",
+                "school_id": "mcs",
+                "title": "Mathematical Sciences",
+                "directory_url": "https://www.cmu.edu/math/people/faculty/index.html",
+            }
+        ],
+        schools=[
+            {
+                "school_id": "mcs",
+                "title": "Mellon College of Science",
+                "directory_url": "https://www.cmu.edu/mcs/",
+            }
+        ],
+    )
+    registry = load_registry(*paths)
+    all_aliases = load_doi_aliases(DEFAULT_DOI_ALIASES_PATH)
+    keys = [
+        (scholar_id, f"{scholar_id}:{pub_id}") for pub_id in (preprint_id, published_id)
+    ]
+    aliases = {key: all_aliases[key] for key in keys}
+    base = {
+        "person_id": "person-math",
+        "display_name": "Math Person",
+        "faculty": "Math Person",
+        "department_ids": ["math"],
+        "memberships": [{"department_id": "math", "included": True}],
+        "authors": "Math Person and collaborators",
+        "citation_count": 5,
+        "embedding": [0.0, 1.0],
+        "external_coauthors": [],
+        "source_type": "scholar",
+        "scholar_id": scholar_id,
+        "source_url": f"https://scholar.google.com/citations?user={scholar_id}",
+        "source_record_json": "{}",
+        "source_doi": "",
+        "source_verified_at": "",
+        "source_verification_urls": [],
+        "fetched_at_utc": "2026-10-24T23:00:00+00:00",
+    }
+    preprint = aliases[keys[0]]
+    published = aliases[keys[1]]
+    observations = pandas.DataFrame(
+        [
+            {
+                **base,
+                "author_pub_id": keys[0][1],
+                "title": preprint.observed_title,
+                "year": preprint.observed_year,
+                "venue": "arXiv preprint",
+                "citation": "arXiv preprint",
+            },
+            {
+                **base,
+                "author_pub_id": keys[1][1],
+                "title": published.observed_title,
+                "year": published.observed_year,
+                "venue": "Published journal",
+                "citation": "Published journal",
+            },
+        ]
+    )
+    validation_frame = observations[
+        ["source_type", "scholar_id", "author_pub_id", "title", "year", "source_doi"]
+    ]
+    validate_doi_aliases(validation_frame, aliases, {})
+    tables = build_dataset_tables(observations, registry, {}, aliases)
+    normalized = tables["profile_publications"]
+    assert len(normalized) == 2
+    assert normalized["work_id"].nunique() == 1
+    assert normalized["year"].tolist() == [
+        preprint.observed_year,
+        published_year,
+    ]
+    assert normalized["source_doi"].tolist() == ["", ""]
+    assert len(tables["authorships"]) == 2
+    work = tables["works"].iloc[0]
+    assert work["doi"] == published.doi
+    assert work["year"] == published_year
+    assert work["venue"] == "Published journal"
+    assert set(work["author_pub_ids"]) == {key[1] for key in keys}
+    assert set(work["source_verification_urls"]) == set(published.evidence_urls)
+    assert observations["source_verified_at"].tolist() == ["", ""]
 
 
 def test_reviewed_preprint_alias_rejects_conflicting_source_doi(tmp_path) -> None:
