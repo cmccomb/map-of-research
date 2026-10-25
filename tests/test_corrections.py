@@ -36,10 +36,10 @@ def _manifest(path: Path, entries: object, *, version: int = 1) -> Path:
     return path
 
 
-def test_checked_in_corrections_are_exact_and_leave_two_ambiguous_rows_held() -> None:
+def test_chien_corrections_leave_two_ambiguous_rows_held() -> None:
     corrections = load_corrections(DEFAULT_CORRECTIONS_PATH)
     scholar_id = "8iLLOQgAAAAJ"
-    assert {key[1].split(":")[-1] for key in corrections} == {
+    assert {key[1].split(":")[-1] for key in corrections if key[0] == scholar_id} == {
         "xyvS_IvSCKsC",
         "WJVC3Jt7v1AC",
         "OTTXONDVkokC",
@@ -48,7 +48,6 @@ def test_checked_in_corrections_are_exact_and_leave_two_ambiguous_rows_held() ->
         "nRpfm8aw39MC",
         "TesyEGJKHF4C",
     }
-    assert all(key[0] == scholar_id for key in corrections)
     for held in ("CdxZDUztZiMC", "sA9dB-pw3HoC"):
         assert (scholar_id, f"{scholar_id}:{held}") not in corrections
 
@@ -262,7 +261,7 @@ def test_absent_profile_may_have_staged_corrections(tmp_path) -> None:
     assert effective.loc[0, "metadata_correction_fields"] == ""
 
 
-def test_checked_in_profile_requires_and_applies_all_seven_exact_ids() -> None:
+def test_checked_in_profiles_apply_all_exact_corrections() -> None:
     corrections = load_corrections(DEFAULT_CORRECTIONS_PATH)
     frame = pandas.DataFrame(
         [
@@ -277,7 +276,7 @@ def test_checked_in_profile_requires_and_applies_all_seven_exact_ids() -> None:
         ]
     )
     effective, applied = apply_corrections(frame, corrections)
-    assert applied == len(corrections) == 7
+    assert applied == len(corrections)
     assert effective["metadata_correction_fields"].ne("").all()
     assert effective["source_record_json"].equals(frame["source_record_json"])
 
