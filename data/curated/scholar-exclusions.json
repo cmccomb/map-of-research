@@ -11696,6 +11696,30 @@
       "reason": "The original 2025 Springer article gives S. R. Das at GITA Autonomous College and an email matched by GITA's own 2025-26 faculty roster to Subha Ranjan Dash, a different person from CMU Chemistry professor Subha Ranjan Das.",
       "evidence_url": "https://link.springer.com/article/10.1007/s43926-025-00121-9",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:rOcdG6UcVlcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2014 IEEE CONECCT proceedings table of contents names Soumen Das at IIT Kharagpur with Satarupa Biswas and Manjunatha Mahadevappa, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.proceedings.com/content/021/021218webtoc.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:yJjnfzR0HrkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original Pharmaceutics article names Soumita Das at the University of Massachusetts Lowell for this exact title, year, and coauthor sequence, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://www.mdpi.com/1999-4923/15/5/1550",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:8uzoZH4hB9AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "MDPI's original Crossref DOI registration names Shantanabha Das at Diamond Harbour Women's University for this exact title, DOI, year, and coauthor sequence, excluding CMU chemist Subha R. Das.",
+      "evidence_url": "https://api.crossref.org/works/10.3390%2Fpathogens10070814",
+      "verified_at": "2026-10-25"
     }
   ]
 }

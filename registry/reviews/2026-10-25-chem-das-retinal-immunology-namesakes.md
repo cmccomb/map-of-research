@@ -1,0 +1,13 @@
+# Subha R. Das: retinal and immunology namesakes — 2026-10-25
+
+This bounded exact-source review is stacked on draft #315. The 670-row Google Scholar capture is unchanged. The active whole-profile public release remains `held`; these exclusions only refine the inactive reviewed-subset proposal.
+
+| Capture row | Scholar citation ID | Decision | Original evidence |
+| ---: | --- | --- | --- |
+| 344 | `FrF1YXQAAAAJ:rOcdG6UcVlcC` | Exclude: **Soumen Das**, IIT Kharagpur. | The [2014 IEEE CONECCT proceedings table of contents](https://www.proceedings.com/content/021/021218webtoc.pdf) lists the exact retinal-ganglion-cell simulation title, Satarupa Biswas, **Soumen Das**, and Manjunatha Mahadevappa, all at IIT Kharagpur. The [IEEE DOI](https://doi.org/10.1109/CONECCT.2014.6740341) identifies the same conference paper. |
+| 413 | `FrF1YXQAAAAJ:yJjnfzR0HrkC` | Exclude: **Soumita Das**, University of Massachusetts Lowell. | The [original *Pharmaceutics* article](https://www.mdpi.com/1999-4923/15/5/1550) names **Soumita Das** and her Lowell affiliation for the exact *Catestatin* title, coauthors, year, volume, and article 1550. |
+| 431 | `FrF1YXQAAAAJ:8uzoZH4hB9AC` | Exclude: **Shantanabha Das**, Diamond Harbour Women's University. | [MDPI's publisher-registered DOI metadata](https://api.crossref.org/works/10.3390%2Fpathogens10070814) gives the exact splenic B-cell title, DOI `10.3390/pathogens10070814`, year, coauthor sequence, and full name **Shantanabha Das** with his Zoology affiliation. The [original *Pathogens* article](https://www.mdpi.com/2076-0817/10/7/814) is the published record. |
+
+Two related retinal records remain **held**. Row 458 (`FrF1YXQAAAAJ:ndLnGcHYRF0C`) is a 2018 erratum for the [2017 Wiley paper](https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-smt.2016.0315), whose original full byline includes Soumen Das. The [erratum DOI registration](https://api.crossref.org/works/10.1049%2Fiet-smt.2017.0572) does not provide an author list, so we do not transfer the original article's byline to the separate erratum observation. Row 645 (`FrF1YXQAAAAJ:In6cVmBjs0IC`) has an [exact 2013 COMSOL paper](https://www.comsol.com/paper/simulation-of-the-electrode-tissue-interface-with-biphasic-pulse-train-for-epi-retinal-prosthesis-15550) that gives `S. Das` at IIT Kharagpur, but the paper does not spell out which Das; the later coauthor match is not used to assign this separate output.
+
+The inactive proposal now partitions **63 positive, 230 excluded, and 377 held = 670**. No Das observation enters the public map while the whole-profile hold remains active.
