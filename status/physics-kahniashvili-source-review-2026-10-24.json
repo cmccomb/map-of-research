@@ -39,6 +39,20 @@
       "reason_code": "false_profile_attribution",
       "reason": "Publisher-deposited DOI metadata credits D. B. Cline alone for Overview of Dark Matter 2004; Kahniashvili is absent.",
       "evidence_url": "https://api.crossref.org/works/10.1016/j.newar.2005.01.001"
+    },
+    {
+      "capture_row": 131,
+      "author_pub_id": "au_cLfoAAAAJ:M3NEmzRMIkIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf"
+    },
+    {
+      "capture_row": 132,
+      "author_pub_id": "au_cLfoAAAAJ:e5wmG9Sq2KIC",
+      "reason_code": "nonpublication",
+      "reason": "This is supplemental material to the 2015 Physical Review Letters article retained at row 8, not a separate published research work. The arXiv article records nine pages of supplement and the authors host the supplement as an attachment.",
+      "evidence_url": "https://lcd-www.colorado.edu/~axbr9098/projects/Own_Papers/2015/Bran%2BKahn%2BTevz15_supp.pdf"
     }
   ],
   "reviewed_retained": [
@@ -55,17 +69,6 @@
       "evidence_url": "https://arxiv.org/abs/astro-ph/0110426"
     }
   ],
-  "unresolved_candidates": [
-    {
-      "capture_row": 131,
-      "author_pub_id": "au_cLfoAAAAJ:M3NEmzRMIkIC",
-      "concern": "More Material to the row 8 paper; identify the exact hosted object and publication type before a producer decision."
-    },
-    {
-      "capture_row": 132,
-      "author_pub_id": "au_cLfoAAAAJ:e5wmG9Sq2KIC",
-      "concern": "Supplementary material to the row 8 paper; identify the exact hosted object and publication type before a producer decision."
-    }
-  ],
+  "unresolved_candidates": [],
   "meeting_abstract_note": "Similar titles in rows 97 and 100 and the proceedings at row 113 do not establish duplicate records; their venues indicate separate presentations or proceedings."
 }
