@@ -6960,6 +6960,22 @@
       "reason": "The displayed title is a Journal of Biological Chemistry page-viii running header, while the author string is an alphabetical index of unrelated contributors. JBC issue contents label pages vii-viii as Author Index, distinct from research articles.",
       "evidence_url": "https://www.sciencedirect.com/journal/journal-of-biological-chemistry/vol/295/issue/50",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IXO9K4UAAAAJ",
+      "author_pub_id": "IXO9K4UAAAAJ:_kc_bZDykSQC",
+      "reason_code": "nonpublication",
+      "reason": "Undated 'Data from' ancillary file repeats the exact title of the retained 2015 Cancer Research article IXO9K4UAAAAJ:MXK_kJrjxJIC. The publisher lists supplementary data under that article, not a second research paper.",
+      "evidence_url": "https://aacrjournals.org/cancerres/article/75/8/1675/607312/Ibrutinib-Exerts-Potent-Antifibrotic-and-Antitumor",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IXO9K4UAAAAJ",
+      "author_pub_id": "IXO9K4UAAAAJ:ULOm3_A8WrAC",
+      "reason_code": "nonpublication",
+      "reason": "Undated generic 'SUPPLEMENTARY METHODS' file with the same Gunderson-Kaneda-Tsujikawa-Nguyen-Affara-Ruffell author sequence as the retained 2016 Cancer Discovery article IXO9K4UAAAAJ:5nxA0vEk-isC. The publisher identifies Supplementary Methods as ancillary material for that article.",
+      "evidence_url": "https://aacrjournals.org/cancerdiscovery/article/6/3/270/5746/Bruton-Tyrosine-Kinase-Dependent-Immune-Cell-Cross",
+      "verified_at": "2026-10-25"
     }
   ]
 }

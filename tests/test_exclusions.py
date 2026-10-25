@@ -35,7 +35,23 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 870
+    assert len(exclusions) >= 872
+    nesrine = "IXO9K4UAAAAJ"
+    assert {
+        key[1].split(":")[-1]: entry.reason_code
+        for key, entry in exclusions.items()
+        if key[0] == nesrine
+    } == {
+        "_kc_bZDykSQC": "nonpublication",
+        "ULOm3_A8WrAC": "nonpublication",
+    }
+    for retained in (
+        "MXK_kJrjxJIC",
+        "5nxA0vEk-isC",
+        "YsMSGLbcyi4C",
+        "Zph67rFs4hoC",
+    ):
+        assert (nesrine, f"{nesrine}:{retained}") not in exclusions
     assert sum(key[0] == "L0nXO5EAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "FRtd8_QAAAAJ" for key in exclusions) == 19
     ihab = "xHKK05MAAAAJ"
