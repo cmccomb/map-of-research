@@ -83,7 +83,7 @@ All of these people's included memberships remain available to filters.
 The [primary academic-home review ledger](reviews/2026-10-24-primary-departments.md)
 records 187 people needing explicit review. Across 2,001 registry people,
 all 1,480 included people have a display primary; the 521 excluded-only
-people remain unresolved. All 465 included people with a Scholar ID have a
+people remain unresolved. All 466 included people with a Scholar ID have a
 display primary. The
 [four-school review](reviews/2026-10-24-other-schools-primary.md) and
 [Physics review](reviews/2026-10-24-physics-audit.md) supply later evidence.

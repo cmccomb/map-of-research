@@ -1218,6 +1218,22 @@ def test_registry_indexes_and_profile_properties(tmp_path: Path) -> None:
     assert unique_profiles(registry) == [profile]
 
 
+def test_nadtochiy_reviewed_scholar_id_and_math_home() -> None:
+    registry = load_registry()
+    person = registry.people_by_id["person-sergeynadtochiy-03531018"]
+    assert person.scholar_id == "cAiedtsAAAAJ"
+    assert person.scholar_id_source_url == (
+        "https://scholar.google.com/citations?user=cAiedtsAAAAJ"
+    )
+    assert person.scholar_id_verified_at == "2026-10-24"
+    home = registry.primary_affiliation(person.person_id)
+    assert (home.school_id, home.department_id, home.basis) == (
+        "mcs",
+        "math",
+        "single_included_membership",
+    )
+
+
 def test_reviewed_heinz_tepper_scholar_homes_are_typed() -> None:
     registry = load_registry()
     with Path("registry/reviews/2026-10-24-heinz-tepper-primary-units.csv").open(

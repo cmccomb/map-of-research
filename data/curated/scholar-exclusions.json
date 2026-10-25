@@ -6184,6 +6184,38 @@
       "reason": "The saved Scholar row is titled only III, with no publication year or identifiable venue; it is not an identifiable research work.",
       "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=IggMbacAAAAJ&citation_for_view=IggMbacAAAAJ:ZuybSZzF8UAC",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "cAiedtsAAAAJ",
+      "author_pub_id": "cAiedtsAAAAJ:e5wmG9Sq2KIC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 36 is NSF award 2205751 for Partially Observed Systems in Finance, with Sergey Nadtochiy as PI; it is a research grant rather than an authored publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2205751.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "cAiedtsAAAAJ",
+      "author_pub_id": "cAiedtsAAAAJ:TQgYirikUcIC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 39 is NSF award 1855309 for the CAREER stochastic dynamic games project, with Sergey Nadtochiy as PI; it is a research grant rather than an authored publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1855309.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "cAiedtsAAAAJ",
+      "author_pub_id": "cAiedtsAAAAJ:HDshCWvjkbEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 40 is NSF award 1651294 for the CAREER stochastic dynamic games project, with Sergey Nadtochiy as PI; it is a research grant rather than an authored publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1651294.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "cAiedtsAAAAJ",
+      "author_pub_id": "cAiedtsAAAAJ:R3hNpaxXUhUC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 42 is NSF award 1411824 for Mean-field Games for Market Microstructure and Liquidity Risk, with Sergey Nadtochiy as PI; it is a research grant rather than an authored publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1411824.json",
+      "verified_at": "2026-10-24"
     }
   ]
 }
