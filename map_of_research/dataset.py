@@ -463,10 +463,34 @@ def build_dataset_tables(
         for alias in reviewed_aliases.values()
         if alias.target_observation is not None
     }
+    reviewed_published_displays = {}
+    for alias in reviewed_aliases.values():
+        target = alias.target_observation
+        if target is None or target.published_display is None:
+            continue
+        identity = _hash_id("work", f"doi:{alias.doi}")
+        pinned_display = (target.author_pub_id, target.published_display)
+        if (
+            identity in reviewed_published_displays
+            and reviewed_published_displays[identity] != pinned_display
+        ):
+            raise ValueError(f"Conflicting reviewed published displays for {identity}")
+        reviewed_published_displays[identity] = pinned_display
     for work_id, group in profile_publications.groupby("work_id", sort=True):
         records = list(group.itertuples(index=False))
         eligible_records = [record for record in records if record.map_eligible]
         canonical_records = eligible_records or records
+        published_display = None
+        if work_id in reviewed_published_displays:
+            target_pub_id, published_display = reviewed_published_displays[work_id]
+            if not any(
+                record.source_type == "author_site"
+                and record.author_pub_id == target_pub_id
+                for record in canonical_records
+            ):
+                raise ValueError(
+                    f"Reviewed published display target missing from {work_id}"
+                )
         contextual_records = (
             [
                 record
@@ -595,8 +619,12 @@ def build_dataset_tables(
                     [record.work_match_method for record in canonical_records]
                 ),
                 "doi": _best_text([record.doi for record in canonical_records]),
-                "title": _best_text(
-                    _source_values(published_records or canonical_records, "title")
+                "title": (
+                    published_display.title
+                    if published_display is not None
+                    else _best_text(
+                        _source_values(published_records or canonical_records, "title")
+                    )
                 ),
                 "title_variants": _variants(
                     [record.title for record in canonical_records]
@@ -605,10 +633,14 @@ def build_dataset_tables(
                 "author_variants": _variants(
                     [record.authors for record in canonical_records]
                 ),
-                "year": _mode_year(
-                    [record.year for record in published_records]
-                    if published_records
-                    else _source_values(canonical_records, "year")
+                "year": (
+                    published_display.year
+                    if published_display is not None
+                    else _mode_year(
+                        [record.year for record in published_records]
+                        if published_records
+                        else _source_values(canonical_records, "year")
+                    )
                 ),
                 "year_variants": sorted(
                     {
@@ -617,10 +649,14 @@ def build_dataset_tables(
                         if year is not None
                     }
                 ),
-                "venue": _best_text(
-                    [record.venue for record in published_records]
-                    if published_records
-                    else _source_values(canonical_records, "venue")
+                "venue": (
+                    published_display.venue
+                    if published_display is not None
+                    else _best_text(
+                        [record.venue for record in published_records]
+                        if published_records
+                        else _source_values(canonical_records, "venue")
+                    )
                 ),
                 "venue_variants": _variants(
                     [record.venue for record in canonical_records]

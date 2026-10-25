@@ -19,6 +19,14 @@ SHA256_PATTERN = re.compile(r"[0-9a-f]{64}\Z")
 
 
 @dataclass(frozen=True)
+class ReviewedPublishedDisplay:
+    title: str
+    year: int
+    venue: str
+    registry_url: str
+
+
+@dataclass(frozen=True)
 class ReviewedAliasTarget:
     person_id: str
     author_pub_id: str
@@ -28,6 +36,7 @@ class ReviewedAliasTarget:
     source_record_sha256: str
     capture_path: Path
     capture_sha256: str
+    published_display: ReviewedPublishedDisplay | None = None
 
 
 @dataclass(frozen=True)
@@ -98,6 +107,35 @@ def _reviewed_target(
         or not SHA256_PATTERN.fullmatch(capture_hash)
     ):
         raise ValueError("Reviewed alias target identity or source pin is invalid")
+    display = None
+    raw_display = raw_target.get("published_display")
+    if raw_display is not None:
+        if not isinstance(raw_display, dict):
+            raise ValueError("Reviewed published display must be an object")
+        display_title = raw_display.get("title")
+        display_year = raw_display.get("year")
+        display_venue = raw_display.get("venue")
+        registry_url = raw_display.get("registry_url")
+        if (
+            not isinstance(display_title, str)
+            or not display_title.strip()
+            or type(display_year) is not int
+            or not isinstance(display_venue, str)
+            or not display_venue.strip()
+            or not isinstance(registry_url, str)
+            or urlparse(registry_url).scheme != "https"
+            or not urlparse(registry_url).netloc
+            or registry_url not in entry["evidence_urls"]
+        ):
+            raise ValueError(
+                "Reviewed published display needs pinned registry evidence"
+            )
+        display = ReviewedPublishedDisplay(
+            title=display_title,
+            year=display_year,
+            venue=display_venue,
+            registry_url=registry_url,
+        )
     return ReviewedAliasTarget(
         person_id=person_id,
         author_pub_id=author_pub_id,
@@ -107,6 +145,7 @@ def _reviewed_target(
         source_record_sha256=source_hash,
         capture_path=source_root / capture_path,
         capture_sha256=capture_hash,
+        published_display=display,
     )
 
 
@@ -240,6 +279,18 @@ def validate_doi_aliases(
             != target.source_record_sha256
         ):
             raise ValueError(f"Scholar DOI alias target source record changed: {key}")
+        display = target.published_display
+        if display is not None:
+            import json
+
+            review = json.loads(target_record).get("doi_review", {})
+            if (
+                review.get("doi") != alias.doi
+                or review.get("publisher_title") != display.title
+                or review.get("publisher_year") != display.year
+                or review.get("publisher_registry_url") != display.registry_url
+            ):
+                raise ValueError(f"Scholar DOI alias published display changed: {key}")
         capture = target.capture_path
         if (
             not capture.is_file()
