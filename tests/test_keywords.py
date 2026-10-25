@@ -863,3 +863,45 @@ def test_reviewed_cell_short_title_requires_complete_pii_doi_pubmed_evidence() -
         )
     }
     assert not keywords._reviewed_short_title_alias_matches(work, unflagged)
+
+
+def test_reviewed_neuron_four_word_title_requires_exact_pii_chain() -> None:
+    scholar_id = "FXqaMl4AAAAJ"
+    author_pub_id = f"{scholar_id}:UebtZRa9Y70C"
+    doi = "10.1016/j.neuron.2017.06.006"
+    evidence = (
+        "https://www.sciencedirect.com/science/article/pii/S0896627317305044",
+        "https://pubmed.ncbi.nlm.nih.gov/28641104/",
+        "https://doi.org/10.1016/j.neuron.2017.06.006",
+    )
+    alias = ReviewedDoiAlias(
+        doi=doi,
+        observed_title="Constructing the External World",
+        observed_year=2017,
+        relationship="version_of_record",
+        evidence_urls=evidence,
+        verified_at="2026-10-25",
+        allow_short_title_region_override=True,
+    )
+    work = pandas.Series(
+        {
+            "doi": doi,
+            "title": alias.observed_title,
+            "year": 2017,
+            "authors": "J Lee, AL Barth",
+            "venue": "Neuron 94 (6), 1048-1050, 2017",
+            "source_types": ["scholar"],
+            "scholar_ids": [scholar_id],
+            "author_pub_ids": [author_pub_id],
+            "source_verified_at": "2026-10-25",
+            "source_verification_urls": list(evidence),
+        }
+    )
+    aliases = {(scholar_id, author_pub_id): alias}
+    assert keywords._reviewed_short_title_alias_matches(work, aliases)
+    assert not keywords._reviewed_short_title_alias_matches(
+        pandas.Series(
+            work.to_dict() | {"source_verification_urls": list(evidence[:2])}
+        ),
+        aliases,
+    )

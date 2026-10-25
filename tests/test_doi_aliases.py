@@ -303,3 +303,67 @@ def test_cell_short_title_override_requires_exact_doi_pii_and_pubmed_chain(
             validate_doi_aliases(
                 pandas.DataFrame([{**source_row, **change}]), aliases, {}
             )
+
+
+def test_neuron_four_word_title_has_only_its_exact_reviewed_exception(
+    tmp_path,
+) -> None:
+    entry = {
+        "scholar_id": "FXqaMl4AAAAJ",
+        "author_pub_id": "FXqaMl4AAAAJ:UebtZRa9Y70C",
+        "observed_title": "Constructing the External World",
+        "observed_year": 2017,
+        "published_doi": "10.1016/j.neuron.2017.06.006",
+        "relationship": "version_of_record",
+        "evidence_urls": [
+            "https://www.sciencedirect.com/science/article/pii/S0896627317305044",
+            "https://pubmed.ncbi.nlm.nih.gov/28641104/",
+            "https://doi.org/10.1016/j.neuron.2017.06.006",
+        ],
+        "verified_at": "2026-10-25",
+        "allow_short_title_region_override": True,
+    }
+    path = tmp_path / "aliases.json"
+    path.write_text(json.dumps({"schema_version": 1, "aliases": [entry]}))
+    aliases = load_doi_aliases(path)
+    assert (
+        aliases[(entry["scholar_id"], entry["author_pub_id"])].doi
+        == entry["published_doi"]
+    )
+    validate_doi_aliases(
+        pandas.DataFrame(
+            [
+                {
+                    "source_type": "scholar",
+                    "scholar_id": entry["scholar_id"],
+                    "author_pub_id": entry["author_pub_id"],
+                    "title": entry["observed_title"],
+                    "year": entry["observed_year"],
+                    "authors": "J Lee, AL Barth",
+                    "venue": "Neuron 94 (6), 1048-1050, 2017",
+                    "source_doi": "",
+                    "source_url": (
+                        "https://scholar.google.com/citations?view_op=view_citation"
+                        "&user=FXqaMl4AAAAJ"
+                        "&citation_for_view=FXqaMl4AAAAJ:UebtZRa9Y70C"
+                    ),
+                }
+            ]
+        ),
+        aliases,
+        {},
+    )
+    for change in (
+        {"author_pub_id": "FXqaMl4AAAAJ:other"},
+        {"observed_title": "Constructing another World"},
+        {"observed_year": 2018},
+        {"published_doi": "10.1016/j.neuron.2017.06.007"},
+        {"evidence_urls": entry["evidence_urls"][1:]},
+        {"evidence_urls": entry["evidence_urls"][:2]},
+        {"evidence_urls": [entry["evidence_urls"][0], entry["evidence_urls"][2]]},
+    ):
+        path.write_text(
+            json.dumps({"schema_version": 1, "aliases": [{**entry, **change}]})
+        )
+        with pytest.raises(ValueError, match="short-title override"):
+            load_doi_aliases(path)

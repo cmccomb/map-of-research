@@ -14,19 +14,32 @@ from .io import load_json
 DEFAULT_DOI_ALIASES_PATH = Path("data/curated/scholar-doi-aliases.json")
 DOI_ALIAS_SCHEMA_VERSION = 1
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
-CELL_SHORT_TITLE_REVIEW = (
-    "28yZqbcAAAAJ",
-    "28yZqbcAAAAJ:UeHWp8X0CEIC",
-    "10.1016/j.molcel.2008.06.010",
-)
-CELL_SHORT_TITLE_OBSERVED = ("Getting the message out", 2008)
-CELL_SHORT_TITLE_EVIDENCE = frozenset(
-    {
-        "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
-        "https://pubmed.ncbi.nlm.nih.gov/18614041/",
-        "https://doi.org/10.1016/j.molcel.2008.06.010",
-    }
-)
+CELL_REVIEWED_SPARSE_TITLES = {
+    "10.1016/j.molcel.2008.06.010": {
+        "identity": ("28yZqbcAAAAJ", "28yZqbcAAAAJ:UeHWp8X0CEIC"),
+        "title": "Getting the message out",
+        "year": 2008,
+        "evidence_urls": frozenset(
+            {
+                "https://www.cell.com/molecular-cell/fulltext/S1097-2765(08)00428-0",
+                "https://pubmed.ncbi.nlm.nih.gov/18614041/",
+                "https://doi.org/10.1016/j.molcel.2008.06.010",
+            }
+        ),
+    },
+    "10.1016/j.neuron.2017.06.006": {
+        "identity": ("FXqaMl4AAAAJ", "FXqaMl4AAAAJ:UebtZRa9Y70C"),
+        "title": "Constructing the External World",
+        "year": 2017,
+        "evidence_urls": frozenset(
+            {
+                "https://www.sciencedirect.com/science/article/pii/S0896627317305044",
+                "https://pubmed.ncbi.nlm.nih.gov/28641104/",
+                "https://doi.org/10.1016/j.neuron.2017.06.006",
+            }
+        ),
+    },
+}
 
 
 @dataclass(frozen=True)
@@ -56,10 +69,11 @@ def _short_title_evidence_matches(
 ) -> bool:
     """Require a publisher DOI link or the exact reviewed Cell DOI/PII chain."""
 
-    if doi == CELL_SHORT_TITLE_REVIEW[2]:
-        return CELL_SHORT_TITLE_EVIDENCE.issubset(evidence_urls) and (
-            verification_urls is None
-            or CELL_SHORT_TITLE_EVIDENCE.issubset(verification_urls)
+    cell_review = CELL_REVIEWED_SPARSE_TITLES.get(doi)
+    if cell_review is not None:
+        required_urls = cell_review["evidence_urls"]
+        return required_urls.issubset(evidence_urls) and (
+            verification_urls is None or required_urls.issubset(verification_urls)
         )
     return any(
         _publisher_url_for_doi(url, doi)
@@ -126,14 +140,15 @@ def load_doi_aliases(path: Path) -> dict[tuple[str, str], ReviewedDoiAlias]:
         short_title_override = entry.get("allow_short_title_region_override", False)
         if type(short_title_override) is not bool:
             raise ValueError("Scholar short-title override must be a boolean")
+        cell_review = CELL_REVIEWED_SPARSE_TITLES.get(doi)
         if short_title_override and (
             year is None
-            or len(title) >= 30
+            or (len(title) >= 30 and cell_review is None)
             or (
-                doi == CELL_SHORT_TITLE_REVIEW[2]
+                cell_review is not None
                 and (
-                    (scholar_id, author_pub_id, doi) != CELL_SHORT_TITLE_REVIEW
-                    or (title, year) != CELL_SHORT_TITLE_OBSERVED
+                    (scholar_id, author_pub_id) != cell_review["identity"]
+                    or (title, year) != (cell_review["title"], cell_review["year"])
                 )
             )
             or not _short_title_evidence_matches(doi, evidence_urls)
