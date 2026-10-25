@@ -7120,6 +7120,806 @@
       "reason": "Captured row 128 uses the Space Research Institute author affiliation as its title. The ESA SP-251 contents list Cosmions and Galaxy Formation by Kahniashvili and Lukash at page 41, matching the title, authors, page, and 1986 volume of retained row 126.",
       "evidence_url": "https://www.gbv.de/dms/tib-ub-hannover/017944635.pdf",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:FRqDyidJaO0C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 27 is the 2010 CDF PRL 105 012001 paper; its primary author list omits Matteo Cremonesi.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.012001",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:WVyJMqqT78IC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 55 is the 2011 CMS PRD 83 112004 paper; the full CMS author-list appendix omits Matteo Cremonesi.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-10-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:FPJr55Dyh1AC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 356 is the 2011 CDF PRL 106 152001 paper; its primary author list omits Matteo Cremonesi.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.152001",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:6ftYtcnYaCAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 1376 is Nick Smith’s CHEP 2019 COFFEA presentation slide deck, not the distinct 2020 EPJ article retained as wJ_gQLoAAAAJ:zxzvZ9-XIW8C.",
+      "evidence_url": "https://indico.cern.ch/event/773049/contributions/3476048/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:6AKj_8xLoccC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1956 is an undated uppercase duplicate of the 2018 JPCS 1085 042030 paper retained as wJ_gQLoAAAAJ:lgwcVrK6X84C.",
+      "evidence_url": "https://cds.cern.ch/record/2291606/files/Gutsche_2018_J._Phys.__Conf._Ser._1085_042030.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:qjuL_XCUnM8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1599 is a fragment-author-list copy of the 2018 JINST 13 P05011 CMS paper retained as wJ_gQLoAAAAJ:9qwnyNWB-oEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BTV-16-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:W91e3rS6dHEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1631 is a fragment-author-list copy of the 2018 JINST 13 P05011 CMS paper retained as wJ_gQLoAAAAJ:9qwnyNWB-oEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BTV-16-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:gTud6kY3p2wC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1771 is a fragment-author-list copy of the published CMS PRF-14-001 paper retained as wJ_gQLoAAAAJ:P1qO8dLd1z8C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/PRF-14-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:S0RksyIsHSIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1855 is a fragment-author-list copy of the published CMS PRF-14-001 paper retained as wJ_gQLoAAAAJ:P1qO8dLd1z8C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/PRF-14-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:q22ZieUsQXoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1574 is a fragment-author-list copy of the published CMS SUS-16-048 paper retained as wJ_gQLoAAAAJ:E7VqQtBCVmcC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-16-048/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:5uu-MYFt2EcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1654 is a fragment-author-list copy of the published CMS SUS-16-048 paper retained as wJ_gQLoAAAAJ:E7VqQtBCVmcC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-16-048/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:vYYylRVofzEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1805 is a fragment-author-list copy of the published CMS BPH-15-004 paper retained as wJ_gQLoAAAAJ:VN7nJs4JPk0C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-15-004/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:csTP5AdqY_wC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1809 is a fragment-author-list copy of the published CMS BPH-15-004 paper retained as wJ_gQLoAAAAJ:VN7nJs4JPk0C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-15-004/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:T-Bu49-jKQgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1445 is a fragment-author-list copy of the published CMS HIG-18-011 paper retained as wJ_gQLoAAAAJ:2P1L_qKh6hAC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-18-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:-XtG2q47PdUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1483 is a fragment-author-list copy of the published CMS HIG-18-011 paper retained as wJ_gQLoAAAAJ:2P1L_qKh6hAC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-18-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:Yp96WNAcdNsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1422 is a fragment-author-list copy of the published CMS EXO-17-015 paper retained as wJ_gQLoAAAAJ:q3oQSFYPqjQC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-17-015/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ve7iT2ZEuL4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1523 is a fragment-author-list copy of the published CMS EXO-17-015 paper retained as wJ_gQLoAAAAJ:q3oQSFYPqjQC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-17-015/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:aOEnwurrEPcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1440 is a fragment-author-list copy of the published CMS B2G-18-001 paper retained as wJ_gQLoAAAAJ:C-Rn0OCouf8C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-18-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:TiLqlu47W2oC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1516 is a fragment-author-list copy of the published CMS B2G-18-001 paper retained as wJ_gQLoAAAAJ:C-Rn0OCouf8C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-18-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:IF0FbId8XVwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1669 is a fragment-author-list copy of the published CMS HIG-17-035 paper retained as wJ_gQLoAAAAJ:kvJssbFybhEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-035/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:7H_jS4BsgvYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 75 is the 2011 IUPAC technical report by Barber, Karol, Nakahara, Vardaci, and Vogt; Reinhard Schumacher is absent from its primary author list.",
+      "evidence_url": "https://publications.iupac.org/pac/83/7/1485/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:i91s68tWr-MC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 380 is a formula-stripped title and blank venue of the same work retained as LibSWRMAAAAJ:2vr6o8x5NLkC.",
+      "evidence_url": "https://arxiv.org/abs/1810.04688",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:tz746QTLzJkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 353 is a [formula presented] title corruption of the same work retained as LibSWRMAAAAJ:hqOjcs7Dif8C.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.222002",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:1_W9tMSvGuwC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 409 is a uppercase single-author copy without article locator of the same work retained as LibSWRMAAAAJ:P7Ujq4OLJYoC.",
+      "evidence_url": "https://arxiv.org/abs/1309.4472",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:N6_Y7JlWxwsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 289 maps to the 2014 ebook of Polybios-Lexikon Band I, Lieferung 1 (Alpha-Gamma), credited to Collatz, Helms, and Schäfer; Schumacher is not credited on this exact volume. This decision does not classify other volumes of the series.",
+      "evidence_url": "https://www.degruyterbrill.com/document/doi/10.1524/9783050078076/html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:R22Rs3tN8aoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 379 is a HYP2018 conference group photo, not a research article; the separately indexed proceedings volume remains eligible.",
+      "evidence_url": "https://doi.org/10.1063/1.5118368",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:mNrWkgRL2YcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 481 is a Crystal Ball experiment participant/institution roster excerpt from page 20 of the 1996 Current Experiments in Particle Physics report, not an authored research work.",
+      "evidence_url": "https://www.osti.gov/servlets/purl/469140",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:4QKQTXcH0q8C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 531 is the Jahrbuch für Wirtschaftsgeschichte section heading Abhandlungen, Studien, Miszellen, not an authored research work; publisher issue tables of contents use this heading.",
+      "evidence_url": "https://www.degruyterbrill.com/document/doi/10.1515/jbwg-1991-320301/html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:F9fV5C73w3QC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 480 is BNL AGS Proposal 924 (1996) for the proposed Crystal Ball xi(2220) study. The original Ruđer Bošković Institute annual report lists the matching title and R. A. Schumacher author team as an internal publication or preprint, not a research-result paper.",
+      "evidence_url": "https://fulir.irb.hr/131/1/Godisnji_izvjestaj_1996_pdf.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:6Dd5luMImnEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 969 is a formula-omitted copy of CMS B2G-18-002, EPJC 80 (2020) 237; retain the same published work as wJ_gQLoAAAAJ:GwaQhVSQhKEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-18-002/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:1DdUqAzPfXgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1597 is a formula-placeholder copy of CMS HIG-15-007, EPJC 78 (2018) 708; retain the same published work as wJ_gQLoAAAAJ:USX2HHcnDqcC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-15-007/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:X0ywoi6J0UgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1760 is a formula-placeholder copy of CMS TOP-16-005, EPJC 77 (2017) 172; the retained row is its linked arXiv preprint; retain the same published work as wJ_gQLoAAAAJ:OcBU2YAGkTUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-16-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:1L_zwHEQtZoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1744 is a formula-placeholder copy of CMS TOP-15-015, EPJC 77 (2017) 467; retain the same published work as wJ_gQLoAAAAJ:VOx2b1Wkg3QC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-15-015/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:afsF9h1fxg0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 932 is a formula-omitted copy of the original CMS SMP-16-017 article, EPJC 78 (2018) 165; the erratum is distinct; retain the same published work as wJ_gQLoAAAAJ:GUYAmugLYisC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-017/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:besYCffB3V8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1266 is a formula-placeholder copy of CMS HIN-19-011, Phys. Lett. B 829 (2022) 137062; retain the same published work as wJ_gQLoAAAAJ:8p-ueveQw4wC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-19-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:lDOOmgye57wC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1461 is a blank-venue copy of CMS SMP-17-012, EPJC 79 (2019) 94; retain the same published work as wJ_gQLoAAAAJ:DvbUhBKpgQUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-17-012/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:L24QuVWYgZ0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 449 is a formula-placeholder copy of PRL 88 122001 (2002); retain the same published work as LibSWRMAAAAJ:IjCSPb-OGe4C.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.88.122001",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:hHIA4WEVY-EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 448 is a formula-placeholder copy of PRC 65 034607 (2002); retain the same published work as LibSWRMAAAAJ:hkOj_22Ku90C.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.65.034607",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:ymY9cBF3mdcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 442 is a formula-placeholder copy of PRC 68 035202 (2003); retain the same published work as LibSWRMAAAAJ:a0OBvERweLwC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.035202",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:M0leSnx2MbUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 443 is a formula-placeholder copy of PRC 68 032201 (2003); retain the same published work as LibSWRMAAAAJ:ZqE1mSdD_DYC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.032201",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:hNSvKAmkeYkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 440 is a formula-placeholder copy of PRL 91 022002 (2003); retain the same published work as LibSWRMAAAAJ:kNdYIx-mwKoC.",
+      "evidence_url": "https://doi.org/10.1103/PhysRevLett.91.022002",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:gFrPXmx1TSsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 447 is a transliterated-title copy carrying the same PRC 65 034607 article number (2002); retain the same published work as LibSWRMAAAAJ:hkOj_22Ku90C.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.65.034607",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:IWHjjKOFINEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 62 is a title-typography copy carrying the same PRC 68 032201 article number (2003); retain the same published work as LibSWRMAAAAJ:ZqE1mSdD_DYC.",
+      "evidence_url": "https://journals.aps.org/prc/abstract/10.1103/PhysRevC.68.032201",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:Z7R3Ocg27JUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 1949 uniquely maps to the 2013 CMS FWD-11-001 paper; its full collaboration author appendix omits Matteo Cremonesi, whose CMU CV dates CMS membership from January 2015.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FWD-11-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:cIAfX1pVE14C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1550 is a fragment-author, institution-venue copy of the 2018 JHEP 07 161 paper; retain the complete published row wJ_gQLoAAAAJ:1sJd4Hv_s6UC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-15-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:XEKcsfOMjpkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1323 has the same 2021 paper title but a fragment author list and blank venue; retain the JINST 16 P05014 row wJ_gQLoAAAAJ:u76CbRzuV8AC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EGM-17-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:uQdrZ3qaPmcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1525 is a truncated-title, fragment-author copy of the 2019 EPJC 79 421 paper; retain wJ_gQLoAAAAJ:IyxfXMz2bNAC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-031/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ey9_mCyZ-VYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1841 has the same 2017 title but a fragment author list and blank venue; retain the Phys. Lett. B 765 paper as wJ_gQLoAAAAJ:9shLKfS_uJEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-010/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:-mA2wk0MEBkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1360 has the same 2020 title but a fragment author list and blank venue; retain the Phys. Lett. B 805 135425 paper as wJ_gQLoAAAAJ:5Klqo5HVOaoC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-19-004/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:CXI6bF9CpJ4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1960 is an undated OCR and formula-loss copy of the 2020 Phys. Lett. B 803 135345 paper; retain wJ_gQLoAAAAJ:It3QlvBKHbMC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:XeQYkT-08pIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1336 is a fragment-author copy with an incomplete journal locator for the same 2020 Phys. Lett. B 803 135345 paper; retain wJ_gQLoAAAAJ:It3QlvBKHbMC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:U0iAMwwPxtsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 347 is the named 2016 Letter of Intent to Jefferson Lab PAC 44, which proposes future measurements rather than reporting a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/16/LOI12-16-001.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:ODE9OILHJdcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 435 is the exact 2005 CLAS Data Analysis Proposal, an experiment-analysis proposal rather than a research publication.",
+      "evidence_url": "https://www.jlab.org/Hall-B/general/caa/caa_cmu_nov05.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:LK8CI43ZvvMC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 334 is Jefferson Lab proposal PR12-17-007; JLab labels the record a deferred original proposal and lists its related publications separately.",
+      "evidence_url": "https://misportal.jlab.org/mis/physics/experiments/viewProposal.cfm?paperId=923",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:86PQX7AUzd4C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 290 is an arXiv-posted PAC 39 experiment proposal, identified by Jefferson Lab as an approved proposal rather than a paper reporting research results.",
+      "evidence_url": "https://misportal.jlab.org/mis/physics/experiments/viewProposal.cfm?paperId=721",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:LO7wyVUgiFcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 539 is the PAC33 Jefferson Lab proposal for a future neutron magnetic form-factor measurement to Q² = 8.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/08/PR-08-013.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:i2xiXl-TujoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 542 is the PAC34 Jefferson Lab proposal for a future neutron magnetic form-factor measurement to Q² = 18.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://www.jlab.org/exp_prog/proposals/09/PR12-09-019.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 541 is the PAC35 Jefferson Lab proposal for future neutron magnetic form-factor measurements at Q² = 16.0 and 18.0 (GeV/c)², not a research publication.",
+      "evidence_url": "https://hallaweb.jlab.org/collab/PAC/PAC35/PR-10-005-GMN.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:jvrRlaHg2sAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1819 is a fragment-author, blank-venue copy of the same CMS HIN-14-005 publication; retain the complete indexed work as wJ_gQLoAAAAJ:9pM33mqn1YgC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-14-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:zBs93F57jOAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1435 is a fragment-author, blank-venue copy of the same CMS HIG-17-026 publication; retain the complete indexed work as wJ_gQLoAAAAJ:cK4Rrx0J3m0C.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-026/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:YEBtnu9hOHUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1494 is a fragment-author, blank-venue copy of the same CMS FSQ-16-012 publication; retain the complete indexed work as wJ_gQLoAAAAJ:09LM3QYkMKUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-012/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:zTJoPluU4X4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1499 is a fragment-author, blank-venue copy of the same CMS HIG-17-023 publication; retain the complete indexed work as wJ_gQLoAAAAJ:urP0JZOBBUsC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-023/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:IX653JsL2_EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1676 is a fragment-author, blank-venue copy of the same CMS HIG-16-044 publication; retain the complete indexed work as wJ_gQLoAAAAJ:kF1pexMAQbMC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-16-044/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:kxd3qP2_5uAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1511 is a fragment-author, blank-venue copy of CMS HIG-18-002; retain the cited arXiv observation wJ_gQLoAAAAJ:ziOE8S1-AIUC, which the official CMS record links to the published paper.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-18-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:_IwLajd9sWMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1608 is a fragment-author, blank-venue copy of the same CMS HIN-16-001 publication; retain the complete indexed work as wJ_gQLoAAAAJ:Tyk-4Ss8FVUC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:o4Qvs5Y5TLQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1488 is a fragment-author, blank-venue copy of the same CMS HIG-17-030 publication; retain the complete indexed work as wJ_gQLoAAAAJ:MLfJN-KU85MC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-030/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:lu5AzqVF4qYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1629 is a fragment-author, blank-venue copy of the same CMS SMP-16-017 publication; retain the complete indexed work as wJ_gQLoAAAAJ:GUYAmugLYisC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-017/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:PPrs6GlykQcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1703 is a fragment-author, blank-venue copy of the same CMS EXO-16-048 publication; retain the complete indexed work as wJ_gQLoAAAAJ:uWQEDVKXjbEC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-048/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:t7izwRedFcYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1641 is a fragment-author, blank-venue copy of the same CMS BPH-15-008 publication; retain the complete indexed work as wJ_gQLoAAAAJ:cWzG1nlazyYC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-15-008/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ZyBjE3zI-i8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1668 is a fragment-author, blank-venue copy of the same CMS EXO-17-012 publication; retain the complete indexed work as wJ_gQLoAAAAJ:cFHS6HbyZ2cC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-17-012/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:6hPiuOuOds4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1410 is a fragment-author or venue-poor copy of the same CMS SUS-18-002 paper; retain the publisher-repaired EPJC 79 444 row wJ_gQLoAAAAJ:Ggqy4mf-avwC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:Gs1AF5H0x94C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1527 is a fragment-author or venue-poor copy of the same CMS SUS-18-002 paper; retain the publisher-repaired EPJC 79 444 row wJ_gQLoAAAAJ:Ggqy4mf-avwC.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:FtLLHOsGVzkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1412 is a fragment-author or venue-poor copy of the same EXO-16-050 EPJC 79 280 work; retain the cited complete row wJ_gQLoAAAAJ:4X0JR2_MtJMC (capture row 51).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-050/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:AdGrMoNItN4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1824 is a fragment-author, blank-venue copy of the same SMP-16-002 PLB 766 268 work; retain the cited complete row wJ_gQLoAAAAJ:PffFD9Wx8kQC (capture row 57).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:X41XOdD1uaEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1479 is a fragment-author, blank-venue copy of the same HIN-16-023 PLB 790 270 work; retain the cited complete row wJ_gQLoAAAAJ:nPT8s1NX_-sC (capture row 60).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-023/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:eJjLl3UG7CkC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1901 is a fragment-author, blank-venue copy of the same EXO-15-010 PRD 94 112004 work; retain the cited complete row wJ_gQLoAAAAJ:F2UWTTQJPOcC (capture row 61).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-15-010/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:rCuJAniQoLoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1800 is a fragment-author, blank-venue copy of the same SUS-16-033 PRD 96 032003 work; retain the cited complete row wJ_gQLoAAAAJ:1DsIQWDZLl8C (capture row 62).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-16-033/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:QZWLLlSfqgYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1692 is a fragment-author, blank-venue copy of the same B2G-16-028 EPJC 78 707 work; retain the cited complete row wJ_gQLoAAAAJ:yB1At4FlUx8C (capture row 65).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-16-028/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:AbQWx2m_oG8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1503 is a fragment-author, blank-venue copy of the same SUS-19-006 JHEP 10 244 work; retain the cited complete row wJ_gQLoAAAAJ:bkKuixW_xMkC (capture row 67).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-19-006/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:PQ6BjWB6CiEC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1674 is a fragment-author, blank-venue copy of the same HIN-16-025 EPJC 78 509 work; retain the cited complete row wJ_gQLoAAAAJ:zJ9_mGRecVUC (capture row 70).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-025/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:cvOuzwNwsG0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1198 is a fragment-author copy of the same EXO-22-024 JHEP 08 215 work, with no displayed citations; retain the cited row wJ_gQLoAAAAJ:p39txVt3toMC (capture row 71), whose missing article locator is repaired in the source draft.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-22-024/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:1l3MdapXzAoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1872 is a fragment-author or venue-poor copy of the same TOP-16-003 PLB 772 752 work; retain the cited complete row wJ_gQLoAAAAJ:KNjnJ3z-R6IC (capture row 73).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-16-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:OA9cGvo6324C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1894 is a fragment-author, blank-venue copy of the same EXO-14-005 PRL 117 031802 work; retain the cited complete row wJ_gQLoAAAAJ:WqliGbK-hY8C (capture row 76).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-14-005/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:HmWvvuJwtxYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1860 is a fragment-author, blank-venue copy of the same B2G-16-016 arXiv:1706.04260 work; retain the cited complete row wJ_gQLoAAAAJ:bVQMTfhMCi4C (capture row 86).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-16-016/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ddB7do2jUx8C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1686 is a fragment-author, blank-venue copy of the same HIN-16-006 PRL 120 142302 work; retain the cited complete row wJ_gQLoAAAAJ:HtS1dXgVpQUC (capture row 87).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-006/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:kmu2AJ0NrTYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1880 is a corrupted arXiv locator copy of the same HIG-13-032 arXiv:1603.06896 work; retain the cited complete row wJ_gQLoAAAAJ:KxtntwgDAa4C (capture row 89).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-032/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:8EvVLpklxGMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1899 is a fragment-author, blank-venue copy of the same SMP-16-001 PLB 763 280 work; retain the cited complete row wJ_gQLoAAAAJ:N2osnxbUuuUC (capture row 93).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:rwEhk56xNqMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1846 is a fragment-author, blank-venue copy of the same HIN-16-011 PRL 119 152301 work; retain the cited complete row wJ_gQLoAAAAJ:-_dYPAW6P2MC (capture row 94).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:3I1Fh14WnZcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1940 has the same 2013 Higgs boson studies at the Tevatron title but only the PRD 88 issue; retain the cited article-locator row wJ_gQLoAAAAJ:EYYDruWGBe4C (capture row 96), PRD 88 052014.",
+      "evidence_url": "https://lss.fnal.gov/archive/2013/pub/fermilab-pub-13-081-e.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:PcT55Ow6fAIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1856 is a fragment-author, blank-venue copy of the same HIN-16-009 PRL 118 122301 work; retain the cited complete row wJ_gQLoAAAAJ:3NQIlFlcGxIC (capture row 98).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-009/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:qt-6tCTBDsQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1903 is a fragment-author, blank-venue copy of the same EXO-16-018 PRL 117 051802 work; retain the cited complete row wJ_gQLoAAAAJ:ZzlSgRqYykMC (capture row 99).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-018/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ZpfHopiqs50C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1480 is a fragment-author, blank-venue copy of the same HIG-17-013 PLB 793 320 work; retain the cited complete row wJ_gQLoAAAAJ:pqnbT2bcN3wC (capture row 102).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-013/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:sdbE4nmAF2cC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 972 is a title-corrupted copy with a TeX command replacing the title text of the same FSQ-16-007 EPJC 79 702 work; retain the cited complete row wJ_gQLoAAAAJ:0Kh4an1R61UC (capture row 286).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-007/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:4ENpXO9GHvQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 979 is a title-corrupted copy with a TeX command replacing the title text of the same SMP-16-007 EPJC 78 701 work; retain the cited complete row wJ_gQLoAAAAJ:OP4eGU-M3BUC (capture row 153).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-007/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:KJj4oxv5wnIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1388 is a title-corrupted copy with a TeX command replacing the title text of the same TOP-17-015 EPJC 79 123 work; retain the cited complete row wJ_gQLoAAAAJ:6VlyvFCUEfcC (capture row 792).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-17-015/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:ugwUUJJV9MUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1529 is a title-corrupted copy with a TeX command replacing the title text of the same SMP-16-015 EPJC 78 965 work; retain the cited complete row wJ_gQLoAAAAJ:HP8h_xu6YbIC (capture row 191).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-015/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:UrmhOAI2Q4QC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1530 is a title-corrupted copy with a TeX command replacing the title text of the same BPH-16-003 EPJC 78 939 work; retain the cited complete row wJ_gQLoAAAAJ:t4WtaE3RIIAC (capture row 931).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-16-003/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:0-VSGmPhd2EC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1778 is a title-corrupted copy with a TeX command replacing the title text of the same SMP-16-011 EPJC 77 746 work; retain the cited complete row wJ_gQLoAAAAJ:TjyTfcaXIY8C (capture row 251).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-011/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:tATOuK1XnKgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1159 replaces the title formulas with placeholders and omits the article number; CMS HIN-24-002 identifies the same PRL 135 (2025) 132301 work. Retain the cited row wJ_gQLoAAAAJ:_-FgD5s_Z1cC (capture row 687).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-24-002/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:XFIFPR1yFx4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1145 has the same 2025 title and author list but only an APS publisher venue; CMS HIN-24-002 identifies the PRL 135 article 132301. Retain the cited complete row wJ_gQLoAAAAJ:_-FgD5s_Z1cC (capture row 687).",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-24-002/index.html",
+      "verified_at": "2026-10-24"
     }
   ]
 }

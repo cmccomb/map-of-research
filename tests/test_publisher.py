@@ -1522,6 +1522,87 @@ def test_publish_snapshot_rejects_upload_without_commit(monkeypatch, tmp_path) -
         )
 
 
+def test_physics_review_gate_blocks_held_raw_snapshot_before_enrichment(
+    monkeypatch, tmp_path
+) -> None:
+    snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
+    status_path = tmp_path / "status" / publisher.PHYSICS_REVIEW_STATUS_NAME
+    status_path.parent.mkdir()
+    status_path.write_text(
+        json.dumps(
+            {
+                "batch": publisher.PHYSICS_REVIEW_BATCH,
+                "map_quality_hold": True,
+                "producer_review_ready": False,
+                "unresolved_exact_ids": ["wJ_gQLoAAAAJ:held"],
+                "paired_producer_review_count_by_profile": {"wJ_gQLoAAAAJ": 0},
+            }
+        )
+    )
+    frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (frame, {"created_at_utc": "now"}),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "add_embeddings",
+        lambda *args, **kwargs: pytest.fail("held rows reached enrichment"),
+    )
+    with pytest.raises(ValueError, match="source review is held"):
+        publisher.publish_snapshot(
+            snapshot_path, tmp_path / "manifest.json", hf_token="token"
+        )
+
+
+def test_physics_review_gate_requires_valid_released_status(tmp_path) -> None:
+    snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
+    status_path = tmp_path / "status" / publisher.PHYSICS_REVIEW_STATUS_NAME
+    status_path.parent.mkdir()
+    frame = pandas.DataFrame({"scholar_id": ["wJ_gQLoAAAAJ"]})
+    exclusions = {("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:reviewed"): object()}
+
+    publisher._require_physics_review_ready(
+        pandas.DataFrame({"scholar_id": ["other"]}), snapshot_path, exclusions
+    )
+    with pytest.raises(FileNotFoundError):
+        publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+    for invalid in ([], {"batch": "wrong"}):
+        status_path.write_text(json.dumps(invalid))
+        with pytest.raises(ValueError, match="invalid source status"):
+            publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+    ready = {
+        "batch": publisher.PHYSICS_REVIEW_BATCH,
+        "map_quality_hold": False,
+        "producer_review_ready": True,
+        "unresolved_exact_ids": [],
+        "paired_producer_review_count_by_profile": {"wJ_gQLoAAAAJ": 1},
+    }
+    for change in (
+        {"map_quality_hold": True},
+        {"producer_review_ready": False},
+        {"unresolved_exact_ids": ["wJ_gQLoAAAAJ:held"]},
+    ):
+        status_path.write_text(json.dumps({**ready, **change}))
+        with pytest.raises(ValueError, match="source review is held"):
+            publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+    for change in (
+        {"paired_producer_review_count_by_profile": None},
+        {"paired_producer_review_count_by_profile": {"wJ_gQLoAAAAJ": 2}},
+    ):
+        status_path.write_text(json.dumps({**ready, **change}))
+        with pytest.raises(ValueError, match="reviewed-exclusion counts differ"):
+            publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+    status_path.write_text(json.dumps(ready))
+    publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
+
+
 def test_workflow_url_and_argument_parser(monkeypatch, tmp_path) -> None:
     for name in ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_RUN_ID"):
         monkeypatch.delenv(name, raising=False)

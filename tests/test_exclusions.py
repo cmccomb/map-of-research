@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 875
+    assert len(exclusions) >= 990
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -52,6 +52,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
         "Zph67rFs4hoC",
     ):
         assert (nesrine, f"{nesrine}:{retained}") not in exclusions
+
     assert sum(key[0] == "L0nXO5EAAAAJ" for key in exclusions) == 1
     assert sum(key[0] == "FRtd8_QAAAAJ" for key in exclusions) == 19
     ihab = "xHKK05MAAAAJ"
@@ -86,6 +87,8 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
+    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 77
+    assert sum(key[0] == "LibSWRMAAAAJ" for key in exclusions) == 23
     assert all(
         exclusions[("cAiedtsAAAAJ", f"cAiedtsAAAAJ:{suffix}")].reason_code
         == "nonpublication"
@@ -277,6 +280,232 @@ def test_adviti_naik_review_excludes_only_two_source_verified_duplicate_rows() -
         "u5HHmVD_uO8C",  # Yearless conference abstract, not disproved.
     ):
         assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
+
+
+def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() -> None:
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, children, retained in (
+        (
+            "wJ_gQLoAAAAJ",
+            ("6AKj_8xLoccC",),
+            "lgwcVrK6X84C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("qjuL_XCUnM8C", "W91e3rS6dHEC"),
+            "9qwnyNWB-oEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("gTud6kY3p2wC", "S0RksyIsHSIC"),
+            "P1qO8dLd1z8C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("q22ZieUsQXoC", "5uu-MYFt2EcC"),
+            "E7VqQtBCVmcC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("vYYylRVofzEC", "csTP5AdqY_wC"),
+            "VN7nJs4JPk0C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("T-Bu49-jKQgC", "-XtG2q47PdUC"),
+            "2P1L_qKh6hAC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("Yp96WNAcdNsC", "ve7iT2ZEuL4C"),
+            "q3oQSFYPqjQC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("aOEnwurrEPcC", "TiLqlu47W2oC"),
+            "C-Rn0OCouf8C",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("IF0FbId8XVwC",),
+            "kvJssbFybhEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("6Dd5luMImnEC",),
+            "GwaQhVSQhKEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("1DdUqAzPfXgC",),
+            "USX2HHcnDqcC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("X0ywoi6J0UgC",),
+            "OcBU2YAGkTUC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("1L_zwHEQtZoC",),
+            "VOx2b1Wkg3QC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("afsF9h1fxg0C",),
+            "GUYAmugLYisC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("besYCffB3V8C",),
+            "8p-ueveQw4wC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("lDOOmgye57wC",),
+            "DvbUhBKpgQUC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("cIAfX1pVE14C",),
+            "1sJd4Hv_s6UC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("XEKcsfOMjpkC",),
+            "u76CbRzuV8AC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("uQdrZ3qaPmcC",),
+            "IyxfXMz2bNAC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("ey9_mCyZ-VYC",),
+            "9shLKfS_uJEC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("-mA2wk0MEBkC",),
+            "5Klqo5HVOaoC",
+        ),
+        (
+            "wJ_gQLoAAAAJ",
+            ("CXI6bF9CpJ4C", "XeQYkT-08pIC"),
+            "It3QlvBKHbMC",
+        ),
+        ("wJ_gQLoAAAAJ", ("jvrRlaHg2sAC",), "9pM33mqn1YgC"),
+        ("wJ_gQLoAAAAJ", ("zBs93F57jOAC",), "cK4Rrx0J3m0C"),
+        ("wJ_gQLoAAAAJ", ("YEBtnu9hOHUC",), "09LM3QYkMKUC"),
+        ("wJ_gQLoAAAAJ", ("zTJoPluU4X4C",), "urP0JZOBBUsC"),
+        ("wJ_gQLoAAAAJ", ("IX653JsL2_EC",), "kF1pexMAQbMC"),
+        ("wJ_gQLoAAAAJ", ("kxd3qP2_5uAC",), "ziOE8S1-AIUC"),
+        ("wJ_gQLoAAAAJ", ("_IwLajd9sWMC",), "Tyk-4Ss8FVUC"),
+        ("wJ_gQLoAAAAJ", ("o4Qvs5Y5TLQC",), "MLfJN-KU85MC"),
+        ("wJ_gQLoAAAAJ", ("lu5AzqVF4qYC",), "GUYAmugLYisC"),
+        ("wJ_gQLoAAAAJ", ("PPrs6GlykQcC",), "uWQEDVKXjbEC"),
+        ("wJ_gQLoAAAAJ", ("t7izwRedFcYC",), "cWzG1nlazyYC"),
+        ("wJ_gQLoAAAAJ", ("ZyBjE3zI-i8C",), "cFHS6HbyZ2cC"),
+        (
+            "wJ_gQLoAAAAJ",
+            ("6hPiuOuOds4C", "Gs1AF5H0x94C"),
+            "Ggqy4mf-avwC",
+        ),
+        ("wJ_gQLoAAAAJ", ("FtLLHOsGVzkC",), "4X0JR2_MtJMC"),
+        ("wJ_gQLoAAAAJ", ("AdGrMoNItN4C",), "PffFD9Wx8kQC"),
+        ("wJ_gQLoAAAAJ", ("X41XOdD1uaEC",), "nPT8s1NX_-sC"),
+        ("wJ_gQLoAAAAJ", ("eJjLl3UG7CkC",), "F2UWTTQJPOcC"),
+        ("wJ_gQLoAAAAJ", ("rCuJAniQoLoC",), "1DsIQWDZLl8C"),
+        ("wJ_gQLoAAAAJ", ("QZWLLlSfqgYC",), "yB1At4FlUx8C"),
+        ("wJ_gQLoAAAAJ", ("AbQWx2m_oG8C",), "bkKuixW_xMkC"),
+        ("wJ_gQLoAAAAJ", ("PQ6BjWB6CiEC",), "zJ9_mGRecVUC"),
+        ("wJ_gQLoAAAAJ", ("cvOuzwNwsG0C",), "p39txVt3toMC"),
+        ("wJ_gQLoAAAAJ", ("1l3MdapXzAoC",), "KNjnJ3z-R6IC"),
+        ("wJ_gQLoAAAAJ", ("OA9cGvo6324C",), "WqliGbK-hY8C"),
+        ("wJ_gQLoAAAAJ", ("HmWvvuJwtxYC",), "bVQMTfhMCi4C"),
+        ("wJ_gQLoAAAAJ", ("ddB7do2jUx8C",), "HtS1dXgVpQUC"),
+        ("wJ_gQLoAAAAJ", ("kmu2AJ0NrTYC",), "KxtntwgDAa4C"),
+        ("wJ_gQLoAAAAJ", ("8EvVLpklxGMC",), "N2osnxbUuuUC"),
+        ("wJ_gQLoAAAAJ", ("rwEhk56xNqMC",), "-_dYPAW6P2MC"),
+        ("wJ_gQLoAAAAJ", ("3I1Fh14WnZcC",), "EYYDruWGBe4C"),
+        ("wJ_gQLoAAAAJ", ("PcT55Ow6fAIC",), "3NQIlFlcGxIC"),
+        ("wJ_gQLoAAAAJ", ("qt-6tCTBDsQC",), "ZzlSgRqYykMC"),
+        ("wJ_gQLoAAAAJ", ("ZpfHopiqs50C",), "pqnbT2bcN3wC"),
+        ("wJ_gQLoAAAAJ", ("sdbE4nmAF2cC",), "0Kh4an1R61UC"),
+        ("wJ_gQLoAAAAJ", ("4ENpXO9GHvQC",), "OP4eGU-M3BUC"),
+        ("wJ_gQLoAAAAJ", ("KJj4oxv5wnIC",), "6VlyvFCUEfcC"),
+        ("wJ_gQLoAAAAJ", ("ugwUUJJV9MUC",), "HP8h_xu6YbIC"),
+        ("wJ_gQLoAAAAJ", ("UrmhOAI2Q4QC",), "t4WtaE3RIIAC"),
+        ("wJ_gQLoAAAAJ", ("0-VSGmPhd2EC",), "TjyTfcaXIY8C"),
+        (
+            "wJ_gQLoAAAAJ",
+            ("tATOuK1XnKgC", "XFIFPR1yFx4C"),
+            "_-FgD5s_Z1cC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("i91s68tWr-MC",),
+            "2vr6o8x5NLkC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("tz746QTLzJkC",),
+            "hqOjcs7Dif8C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("1_W9tMSvGuwC",),
+            "P7Ujq4OLJYoC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("L24QuVWYgZ0C",),
+            "IjCSPb-OGe4C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("hHIA4WEVY-EC", "gFrPXmx1TSsC"),
+            "hkOj_22Ku90C",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("ymY9cBF3mdcC",),
+            "a0OBvERweLwC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("M0leSnx2MbUC", "IWHjjKOFINEC"),
+            "ZqE1mSdD_DYC",
+        ),
+        (
+            "LibSWRMAAAAJ",
+            ("hNSvKAmkeYkC",),
+            "kNdYIx-mwKoC",
+        ),
+    ):
+        for child in children:
+            assert exclusions[(scholar_id, f"{scholar_id}:{child}")].reason_code == (
+                "corrupted_duplicate"
+            )
+        assert (scholar_id, f"{scholar_id}:{retained}") not in exclusions
+    assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:zxzvZ9-XIW8C") not in exclusions
+    for suffix in (
+        "U0iAMwwPxtsC",
+        "ODE9OILHJdcC",
+        "LK8CI43ZvvMC",
+        "86PQX7AUzd4C",
+        "LO7wyVUgiFcC",
+        "i2xiXl-TujoC",
+        "edDO8Oi4QzsC",
+        "F9fV5C73w3QC",
+    ):
+        assert exclusions[("LibSWRMAAAAJ", f"LibSWRMAAAAJ:{suffix}")].reason_code == (
+            "nonpublication"
+        )
+    assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:SWgZeABleR0C") not in exclusions
+    assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:y4Au4brZMfoC") not in exclusions
+    assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:iyewoVqAXLQC") not in exclusions
 
 
 def test_math_qatar_duplicate_review_preserves_canonical_and_joint_work() -> None:

@@ -17,7 +17,7 @@ from typing import Any
 from .coverage import DEFAULT_BASELINE_PATH, validate_coverage
 from .dataset import build_dataset_tables
 from .exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
-from .io import atomic_write_json, sha256_file
+from .io import atomic_write_json, load_json, sha256_file
 from .keywords import (
     KEYWORD_MODEL_VERSION,
     REGION_AUDIT_VERSION,
@@ -88,6 +88,9 @@ MAP_TITLE = "CMU Faculty Research"
 MAX_REUSABLE_DOI_REKEYS = 25
 STATUS_SCHEMA_VERSION = 2
 DEFAULT_STATUS_PATH = Path("status/last-upload.json")
+PHYSICS_REVIEW_STATUS_NAME = "physics-cremonesi-schumacher-source-2026-10-24.json"
+PHYSICS_REVIEW_BATCH = "physics-cremonesi-schumacher-source"
+PHYSICS_REVIEW_SCHOLAR_IDS = frozenset({"wJ_gQLoAAAAJ", "LibSWRMAAAAJ"})
 STRING_LIST_COLUMNS = frozenset(
     {
         "author_pub_ids",
@@ -996,6 +999,43 @@ def _to_hub_dataset(frame: Any) -> Any:
     return dataset
 
 
+def _require_physics_review_ready(
+    frame: Any,
+    snapshot_path: Path,
+    exclusions: Mapping[tuple[str, str], Any],
+) -> None:
+    """Keep held Physics captures raw until their source review is released."""
+
+    present_ids = PHYSICS_REVIEW_SCHOLAR_IDS.intersection(frame["scholar_id"])
+    if not present_ids:
+        return
+    status_path = snapshot_path.parent.parent / "status" / PHYSICS_REVIEW_STATUS_NAME
+    status = load_json(status_path)
+    if not isinstance(status, dict) or status.get("batch") != PHYSICS_REVIEW_BATCH:
+        raise ValueError(
+            f"Physics map-quality gate: invalid source status: {status_path}"
+        )
+    if (
+        status.get("map_quality_hold") is not False
+        or status.get("producer_review_ready") is not True
+        or status.get("unresolved_exact_ids") != []
+    ):
+        raise ValueError(
+            "Physics map-quality gate: source review is held; "
+            f"snapshot contains {', '.join(sorted(present_ids))}"
+        )
+    expected_counts = status.get("paired_producer_review_count_by_profile")
+    if not isinstance(expected_counts, dict) or any(
+        expected_counts.get(scholar_id)
+        != sum(key[0] == scholar_id for key in exclusions)
+        for scholar_id in present_ids
+    ):
+        raise ValueError(
+            "Physics map-quality gate: reviewed-exclusion counts differ "
+            "from the source status"
+        )
+
+
 def publish_snapshot(
     snapshot_path: Path,
     manifest_path: Path,
@@ -1020,6 +1060,7 @@ def publish_snapshot(
         departments_path=departments_path,
     )
     exclusions = load_exclusions(exclusions_path)
+    _require_physics_review_ready(frame, snapshot_path, exclusions)
     enriched, new_embedding_count = add_embeddings(
         frame,
         hf_token=hf_token,
