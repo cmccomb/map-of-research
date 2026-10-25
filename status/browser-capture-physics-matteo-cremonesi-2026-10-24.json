@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-matteocremonesi-b2aba740",
+  "display_name": "Matteo Cremonesi",
+  "scholar_profile_name": "Matteo Cremonesi",
+  "scholar_id": "wJ_gQLoAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/cremonesi.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/documents/cremonesi-cv.pdf",
+  "scholar_identity_basis": "CMU-hosted CV directly links this Scholar ID; current CMU Physics faculty page confirms his role, and live Scholar profile name, CMU affiliation, verified email, and CMU Physics homepage match.",
+  "reserved_at_utc": "2026-10-25T00:59:00+00:00",
+  "captured_at_utc": "2026-10-25T01:00:04.225Z",
+  "publication_count": 1963,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 20,
+  "source_json_path": "data/captures/physics-matteo-cremonesi-2026-10-24.json",
+  "source_json_sha256": "a9090001adfae87a95ea4925beb9c0335db0622e0250ce6a7d199b5e92ed49ba",
+  "source_html_path": "data/captures/physics-matteo-cremonesi-2026-10-24.html",
+  "source_html_sha256": "59c1fbb55bfe30f22796d518cf5c81ded79f7f11667ea1ee95e9ee4dcb7d0017",
+  "cache_path": "data/authors/wJ_gQLoAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  },
+  "title_extraction": {
+    "method": "saved_html_svg_aria_label_enrichment",
+    "affected_rows": 913,
+    "svg_math_labels": 1445,
+    "original_browser_inner_text_field": "browser_inner_text_title"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "target_branch": "automation/map-snapshot",
+  "raw_capture_and_receipt_unchanged": true,
+  "producer_exclusions_added": 0,
+  "capture_receipts": {
+    "LibSWRMAAAAJ": "status/browser-capture-physics-reinhard-schumacher-2026-10-24.json"
+  },
+  "repairs": [
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 38,
+      "author_pub_id": "LibSWRMAAAAJ:hqOjcs7Dif8C",
+      "cache_field": "title",
+      "captured_value": "Measurement of the Proton Spin Structure Function g1(x,Q2) for Q2 from 0.15 to 1.6  GeV2 <?format ?>with CLAS",
+      "repaired_value": "Measurement of the Proton Spin Structure Function g1(x,Q2) for Q2 from 0.15 to 1.6  GeV2 with CLAS",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.222002"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 43,
+      "author_pub_id": "LibSWRMAAAAJ:M3ejUd6NZC8C",
+      "cache_field": "title",
+      "captured_value": "Measurement of the N→Δ+(1232) Transition at High-Momentum Transfer <?format ?>by π0 Electroproduction",
+      "repaired_value": "Measurement of the N→Δ+(1232) Transition at High-Momentum Transfer by π0 Electroproduction",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.112003"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 77,
+      "author_pub_id": "LibSWRMAAAAJ:_B80troHkn4C",
+      "cache_field": "title",
+      "captured_value": "Measurement of Exclusive π0 Electroproduction Structure Functions and their Relationship <?format ?>to Transverse Generalized Parton Distributions",
+      "repaired_value": "Measurement of Exclusive π0 Electroproduction Structure Functions and their Relationship to Transverse Generalized Parton Distributions",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.109.112001"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 101,
+      "author_pub_id": "LibSWRMAAAAJ:R3hNpaxXUhUC",
+      "cache_field": "title",
+      "captured_value": "Search for the Θ+ Pentaquark in the γd→ΛnK+ Reaction Measured <?format ?>with the CLAS Spectrometer",
+      "repaired_value": "Search for the Θ+ Pentaquark in the γd→ΛnK+ Reaction Measured with the CLAS Spectrometer",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.97.032001"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 444,
+      "author_pub_id": "LibSWRMAAAAJ:iyewoVqAXLQC",
+      "cache_field": "title",
+      "captured_value": "Kinematically complete measurement of the proton structure function [Formula Presented] in the resonance region and evaluation of its moments",
+      "repaired_value": "Kinematically complete measurement of the proton structure function F₂ in the resonance region and evaluation of its moments",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.092001",
+      "repair_basis": "publisher-title reconstruction of formula placeholder"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 33,
+      "author_pub_id": "LibSWRMAAAAJ:mVC4hKzE2FoC",
+      "cache_field": "title",
+      "captured_value": "Springer: Strong Interaction Physics at the Luminosity Frontier with 22 GeV Electrons at Jefferson Lab",
+      "repaired_value": "Strong Interaction Physics at the Luminosity Frontier with 22 GeV Electrons at Jefferson Lab",
+      "evidence_url": "https://link.springer.com/article/10.1140/epja/s10050-024-01282-x",
+      "repair_basis": "publisher title removes a site prefix; saved year remains unresolved"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 1,
+      "author_pub_id": "LibSWRMAAAAJ:9yKSN-GCB0IC",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 503 (2003), 513–553",
+      "evidence_url": "https://www.jlab.org/div_dept/physics_division/dsg/publications2/CLAS%20NIM%20paper%20A%20503%20%282003%29.pdf",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 16,
+      "author_pub_id": "LibSWRMAAAAJ:3fE2CSJIrl8C",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 449 (2000), 81–111",
+      "evidence_url": "https://www.jlab.org/div_dept/physics_division/dsg/publications2/CLAS%20DC%20NIM%20A%20449%20%282000%29.pdf",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 35,
+      "author_pub_id": "LibSWRMAAAAJ:EBV337fEn3EC",
+      "cache_field": "venue",
+      "captured_value": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators …",
+      "repaired_value": "Nuclear Instruments and Methods in Physics Research A 987 (2021), 164807",
+      "evidence_url": "https://misportal.jlab.org/sti/publications/16305",
+      "repair_basis": "primary journal record completes a captured truncated venue and locator"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 2,
+      "author_pub_id": "LibSWRMAAAAJ:u5HHmVD_uO8C",
+      "cache_field": "title",
+      "captured_value": "The Gottfried sum from the ratio F^{n}_{2}/F^{p}_{2}",
+      "repaired_value": "Gottfried sum from the ratio F^{n}_{2}/F^{p}_{2}",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.66.2712",
+      "repair_basis": "APS title omits a captured leading article; math notation retained"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "capture_row": 4,
+      "author_pub_id": "LibSWRMAAAAJ:d1gkVwhDpl0C",
+      "cache_field": "venue",
+      "captured_value": "Phys. Rev. D 50 (1)",
+      "repaired_value": "Phys. Rev. D 50, R1(R)",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.50.R1",
+      "repair_basis": "APS article locator completes a captured issue-only venue"
+    }
+  ]
+}

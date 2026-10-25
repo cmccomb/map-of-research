@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "wJ_gQLoAAAAJ",
+    "LibSWRMAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "wJ_gQLoAAAAJ",
+    "LibSWRMAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-matteocremonesi-b2aba740",
+      "display_name": "Matteo Cremonesi",
+      "scholar_profile_name": "Matteo Cremonesi",
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "publication_count": 1963,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/cremonesi.html",
+      "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/documents/cremonesi-cv.pdf",
+      "source_json_path": "data/captures/physics-matteo-cremonesi-2026-10-24.json",
+      "source_json_sha256": "a9090001adfae87a95ea4925beb9c0335db0622e0250ce6a7d199b5e92ed49ba",
+      "source_html_path": "data/captures/physics-matteo-cremonesi-2026-10-24.html",
+      "source_html_sha256": "59c1fbb55bfe30f22796d518cf5c81ded79f7f11667ea1ee95e9ee4dcb7d0017",
+      "cache_path": "data/authors/wJ_gQLoAAAAJ.json",
+      "receipt_path": "status/browser-capture-physics-matteo-cremonesi-2026-10-24.json",
+      "title_extraction": {
+        "method": "saved_html_svg_aria_label_enrichment",
+        "affected_rows": 913,
+        "svg_math_labels": 1445,
+        "original_browser_inner_text_field": "browser_inner_text_title"
+      }
+    },
+    {
+      "person_id": "person-reinhardschumacher-35cd3c6f",
+      "display_name": "Reinhard Schumacher",
+      "scholar_profile_name": "Reinhard A. Schumacher",
+      "scholar_id": "LibSWRMAAAAJ",
+      "publication_count": 543,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/schumacher.html",
+      "scholar_id_source_url": "https://scholars.cmu.edu/4266-reinhard-schumacher",
+      "source_json_path": "data/captures/physics-reinhard-schumacher-2026-10-24.json",
+      "source_json_sha256": "050aa1cffa53fec64523f27b8d7093a6973c4cb7b267697c80f31c17ec20eb20",
+      "source_html_path": "data/captures/physics-reinhard-schumacher-2026-10-24.html",
+      "source_html_sha256": "5ce76d360feff9abf784e45ed2afa5c2c2e3df0f5fbe18b6b005d1017d2ee93d",
+      "cache_path": "data/authors/LibSWRMAAAAJ.json",
+      "receipt_path": "status/browser-capture-physics-reinhard-schumacher-2026-10-24.json",
+      "title_extraction": {
+        "method": "saved_html_svg_aria_label_enrichment",
+        "affected_rows": 190,
+        "svg_math_labels": 331,
+        "original_browser_inner_text_field": "browser_inner_text_title"
+      }
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-25T00:59:00+00:00",
+  "second_profile_reserved_at_utc": "2026-10-25T01:01:01+00:00",
+  "last_profile_request_at_utc": "2026-10-25T01:01:01+00:00",
+  "inter_profile_reservation_gap_seconds": 121,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-25T01:03:46.716171+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Cremonesi ID linked directly from a CMU-hosted CV; Schumacher ID linked directly from a CMU Scholars page. Both have current primary Physics memberships and their live profile identities matched."
+}
