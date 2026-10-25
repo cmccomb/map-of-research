@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 947
+    assert len(exclusions) >= 989
     nesrine = "IXO9K4UAAAAJ"
     assert {
         key[1].split(":")[-1]: entry.reason_code
@@ -87,7 +87,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
-    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 35
+    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 77
     assert sum(key[0] == "LibSWRMAAAAJ" for key in exclusions) == 22
     assert all(
         exclusions[("cAiedtsAAAAJ", f"cAiedtsAAAAJ:{suffix}")].reason_code
@@ -394,6 +394,54 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
             "wJ_gQLoAAAAJ",
             ("CXI6bF9CpJ4C", "XeQYkT-08pIC"),
             "It3QlvBKHbMC",
+        ),
+        ("wJ_gQLoAAAAJ", ("jvrRlaHg2sAC",), "9pM33mqn1YgC"),
+        ("wJ_gQLoAAAAJ", ("zBs93F57jOAC",), "cK4Rrx0J3m0C"),
+        ("wJ_gQLoAAAAJ", ("YEBtnu9hOHUC",), "09LM3QYkMKUC"),
+        ("wJ_gQLoAAAAJ", ("zTJoPluU4X4C",), "urP0JZOBBUsC"),
+        ("wJ_gQLoAAAAJ", ("IX653JsL2_EC",), "kF1pexMAQbMC"),
+        ("wJ_gQLoAAAAJ", ("kxd3qP2_5uAC",), "ziOE8S1-AIUC"),
+        ("wJ_gQLoAAAAJ", ("_IwLajd9sWMC",), "Tyk-4Ss8FVUC"),
+        ("wJ_gQLoAAAAJ", ("o4Qvs5Y5TLQC",), "MLfJN-KU85MC"),
+        ("wJ_gQLoAAAAJ", ("lu5AzqVF4qYC",), "GUYAmugLYisC"),
+        ("wJ_gQLoAAAAJ", ("PPrs6GlykQcC",), "uWQEDVKXjbEC"),
+        ("wJ_gQLoAAAAJ", ("t7izwRedFcYC",), "cWzG1nlazyYC"),
+        ("wJ_gQLoAAAAJ", ("ZyBjE3zI-i8C",), "cFHS6HbyZ2cC"),
+        (
+            "wJ_gQLoAAAAJ",
+            ("6hPiuOuOds4C", "Gs1AF5H0x94C"),
+            "Ggqy4mf-avwC",
+        ),
+        ("wJ_gQLoAAAAJ", ("FtLLHOsGVzkC",), "4X0JR2_MtJMC"),
+        ("wJ_gQLoAAAAJ", ("AdGrMoNItN4C",), "PffFD9Wx8kQC"),
+        ("wJ_gQLoAAAAJ", ("X41XOdD1uaEC",), "nPT8s1NX_-sC"),
+        ("wJ_gQLoAAAAJ", ("eJjLl3UG7CkC",), "F2UWTTQJPOcC"),
+        ("wJ_gQLoAAAAJ", ("rCuJAniQoLoC",), "1DsIQWDZLl8C"),
+        ("wJ_gQLoAAAAJ", ("QZWLLlSfqgYC",), "yB1At4FlUx8C"),
+        ("wJ_gQLoAAAAJ", ("AbQWx2m_oG8C",), "bkKuixW_xMkC"),
+        ("wJ_gQLoAAAAJ", ("PQ6BjWB6CiEC",), "zJ9_mGRecVUC"),
+        ("wJ_gQLoAAAAJ", ("cvOuzwNwsG0C",), "p39txVt3toMC"),
+        ("wJ_gQLoAAAAJ", ("1l3MdapXzAoC",), "KNjnJ3z-R6IC"),
+        ("wJ_gQLoAAAAJ", ("OA9cGvo6324C",), "WqliGbK-hY8C"),
+        ("wJ_gQLoAAAAJ", ("HmWvvuJwtxYC",), "bVQMTfhMCi4C"),
+        ("wJ_gQLoAAAAJ", ("ddB7do2jUx8C",), "HtS1dXgVpQUC"),
+        ("wJ_gQLoAAAAJ", ("kmu2AJ0NrTYC",), "KxtntwgDAa4C"),
+        ("wJ_gQLoAAAAJ", ("8EvVLpklxGMC",), "N2osnxbUuuUC"),
+        ("wJ_gQLoAAAAJ", ("rwEhk56xNqMC",), "-_dYPAW6P2MC"),
+        ("wJ_gQLoAAAAJ", ("3I1Fh14WnZcC",), "EYYDruWGBe4C"),
+        ("wJ_gQLoAAAAJ", ("PcT55Ow6fAIC",), "3NQIlFlcGxIC"),
+        ("wJ_gQLoAAAAJ", ("qt-6tCTBDsQC",), "ZzlSgRqYykMC"),
+        ("wJ_gQLoAAAAJ", ("ZpfHopiqs50C",), "pqnbT2bcN3wC"),
+        ("wJ_gQLoAAAAJ", ("sdbE4nmAF2cC",), "0Kh4an1R61UC"),
+        ("wJ_gQLoAAAAJ", ("4ENpXO9GHvQC",), "OP4eGU-M3BUC"),
+        ("wJ_gQLoAAAAJ", ("KJj4oxv5wnIC",), "6VlyvFCUEfcC"),
+        ("wJ_gQLoAAAAJ", ("ugwUUJJV9MUC",), "HP8h_xu6YbIC"),
+        ("wJ_gQLoAAAAJ", ("UrmhOAI2Q4QC",), "t4WtaE3RIIAC"),
+        ("wJ_gQLoAAAAJ", ("0-VSGmPhd2EC",), "TjyTfcaXIY8C"),
+        (
+            "wJ_gQLoAAAAJ",
+            ("tATOuK1XnKgC", "XFIFPR1yFx4C"),
+            "_-FgD5s_Z1cC",
         ),
         (
             "LibSWRMAAAAJ",

@@ -1,6 +1,6 @@
 # Physics Scholar observation review: Cremonesi and Schumacher
 
-The [source capture draft](https://github.com/cmccomb/map-of-research/pull/156) preserves all 1,963 browser-visible Matteo Cremonesi rows and 543 Reinhard Schumacher rows, with HTML, ordered JSON, caches, and receipts. This separate producer draft records **57 exact observation exclusions**: 35 Cremonesi and 22 Schumacher. It changes no source row, registry membership, snapshot, release manifest, or upload. Both public maps remain pinned to the published 0586c913 release; this review requires independent approval before any merge or producer rebuild.
+The [source capture draft](https://github.com/cmccomb/map-of-research/pull/156) preserves all 1,963 browser-visible Matteo Cremonesi rows and 543 Reinhard Schumacher rows, with HTML, ordered JSON, caches, and receipts. This separate producer draft records **99 exact observation exclusions**: 77 Cremonesi and 22 Schumacher. It changes no source row, registry membership, snapshot, release manifest, or upload. This review requires independent approval before any merge or producer rebuild; the draft has no effect on a published map.
 
 The review matched each candidate to its saved row identity, title, year, authors, venue, and citation count. Primary publisher, collaboration, conference, institutional, or author-preprint records then established a false attribution, a nonpublication, or the one published work represented by duplicate rows. Truncated collaboration author strings alone were never used to reject a genuine paper. The manifest keys each decision by full `scholar_id:author_pub_id`; title/year similarity is only a way to find candidates.
 
@@ -16,7 +16,7 @@ The review matched each candidate to its saved row identity, title, year, author
 
 The four paper rows use `false_profile_attribution`; the slide deck uses `nonpublication`. These are exact paper and file decisions, not a judgment about Cremonesi's other CMS work or COFFEA contributions.
 
-## Cremonesi: thirty duplicate observations
+## Cremonesi: seventy-two duplicate observations
 
 Each child below is a damaged or fragment-author-list copy of the retained publication. The saved child/parent rows agree on the work's title and year after accounting for title math or punctuation; the retained row has the publication locator and the primary record identifies one paper. The child rows remain in the source capture.
 
@@ -44,6 +44,62 @@ Each child below is a damaged or fragment-author-list copy of the retained publi
 | [CMS HIN-16-010, 2017 PLB 765 193](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-010/index.html) | 1841 `:ey9_mCyZ-VYC` (fragment authors, blank venue) | `:9shLKfS_uJEC` |
 | [CMS HIG-19-004, 2020 PLB 805 135425](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-19-004/) | 1360 `:-mA2wk0MEBkC` (fragment authors, blank venue) | `:5Klqo5HVOaoC` |
 | [CMS BPH-19-003, 2020 PLB 803 135345](https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-19-003/index.html) | 1336 `:XeQYkT-08pIC` (incomplete locator); 1960 `:CXI6bF9CpJ4C` (undated OCR and formula loss) | `:It3QlvBKHbMC` |
+
+The following twelve further children have blank venues, fragment author lists, and no displayed citations. Each maps to the retained publication named by the official CMS record; the cited arXiv row for HIG-18-002 remains eligible.
+
+| Primary work record | Exclude child capture row and suffix | Retain suffix |
+| --- | --- | --- |
+| [CMS HIN-14-005, 2017 EPJC 77 252](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-14-005/index.html) | 1819 `:jvrRlaHg2sAC` | `:9pM33mqn1YgC` |
+| [CMS HIG-17-026, 2019 JHEP 03 026](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-026/index.html) | 1435 `:zBs93F57jOAC` | `:cK4Rrx0J3m0C` |
+| [CMS FSQ-16-012, 2019 PLB 797 134826](https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-012/index.html) | 1494 `:YEBtnu9hOHUC` | `:09LM3QYkMKUC` |
+| [CMS HIG-17-023, 2019 PLB 793 520](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-023/index.html) | 1499 `:zTJoPluU4X4C` | `:urP0JZOBBUsC` |
+| [CMS HIG-16-044, 2018 PLB 780 501](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-16-044/index.html) | 1676 `:IX653JsL2_EC` | `:kF1pexMAQbMC` |
+| [CMS HIG-18-002, 2019 PRD 99 112003](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-18-002/index.html) | 1511 `:kxd3qP2_5uAC` | `:ziOE8S1-AIUC` (cited arXiv row) |
+| [CMS HIN-16-001, 2018 PLB 782 474](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-001/index.html) | 1608 `:_IwLajd9sWMC` | `:Tyk-4Ss8FVUC` |
+| [CMS HIG-17-030, 2019 PRL 122 121803](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-030/index.html) | 1488 `:o4Qvs5Y5TLQC` | `:MLfJN-KU85MC` |
+| [CMS SMP-16-017, 2018 EPJC 78 165](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-017/index.html) | 1629 `:lu5AzqVF4qYC` | `:GUYAmugLYisC` |
+| [CMS EXO-16-048, 2018 PRD 97 092005](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-048/index.html) | 1703 `:PPrs6GlykQcC` | `:uWQEDVKXjbEC` |
+| [CMS BPH-15-008, 2018 PLB 781 517](https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-15-008/index.html) | 1641 `:t7izwRedFcYC` | `:cWzG1nlazyYC` |
+| [CMS EXO-17-012, 2018 PRL 120 221801](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-17-012/index.html) | 1668 `:ZyBjE3zI-i8C` | `:cFHS6HbyZ2cC` |
+| [CMS SUS-18-002, 2019 EPJC 79 444](https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html) | 1410 `:6hPiuOuOds4C` (institution venue); 1527 `:Gs1AF5H0x94C` (blank venue) | `:Ggqy4mf-avwC` (cache title and locator repaired in source draft) |
+
+The next twenty zero-citation children duplicate cited records among the higher-ranked saved rows. The child at row 1198 has a JHEP venue; its cited parent receives the missing article locator in source PR #156. Rows 1860 and 1880 retain the cited arXiv observation because the child has no independent published-version record. The tranche stops at parent row 102; row 101 has the same displayed citation count and remains in the review queue.
+
+| Primary work record | Exclude child capture row and suffix | Retain suffix |
+| --- | --- | --- |
+| [EXO-16-050, EPJC 79 280](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-050/index.html) | 1412 `:FtLLHOsGVzkC` | 51 `:4X0JR2_MtJMC` |
+| [SMP-16-002, PLB 766 268](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-002/index.html) | 1824 `:AdGrMoNItN4C` | 57 `:PffFD9Wx8kQC` |
+| [HIN-16-023, PLB 790 270](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-023/index.html) | 1479 `:X41XOdD1uaEC` | 60 `:nPT8s1NX_-sC` |
+| [EXO-15-010, PRD 94 112004](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-15-010/index.html) | 1901 `:eJjLl3UG7CkC` | 61 `:F2UWTTQJPOcC` |
+| [SUS-16-033, PRD 96 032003](https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-16-033/index.html) | 1800 `:rCuJAniQoLoC` | 62 `:1DsIQWDZLl8C` |
+| [B2G-16-028, EPJC 78 707](https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-16-028/index.html) | 1692 `:QZWLLlSfqgYC` | 65 `:yB1At4FlUx8C` |
+| [SUS-19-006, JHEP 10 244](https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-19-006/index.html) | 1503 `:AbQWx2m_oG8C` | 67 `:bkKuixW_xMkC` |
+| [HIN-16-025, EPJC 78 509](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-025/index.html) | 1674 `:PQ6BjWB6CiEC` | 70 `:zJ9_mGRecVUC` |
+| [EXO-22-024, JHEP 08 215](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-22-024/index.html) | 1198 `:cvOuzwNwsG0C` | 71 `:p39txVt3toMC` |
+| [TOP-16-003, PLB 772 752](https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-16-003/index.html) | 1872 `:1l3MdapXzAoC` | 73 `:KNjnJ3z-R6IC` |
+| [EXO-14-005, PRL 117 031802](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-14-005/index.html) | 1894 `:OA9cGvo6324C` | 76 `:WqliGbK-hY8C` |
+| [B2G-16-016, arXiv:1706.04260](https://cms-results.web.cern.ch/cms-results/public-results/publications/B2G-16-016/index.html) | 1860 `:HmWvvuJwtxYC` | 86 `:bVQMTfhMCi4C` |
+| [HIN-16-006, PRL 120 142302](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-006/index.html) | 1686 `:ddB7do2jUx8C` | 87 `:HtS1dXgVpQUC` |
+| [HIG-13-032, arXiv:1603.06896](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-032/index.html) | 1880 `:kmu2AJ0NrTYC` | 89 `:KxtntwgDAa4C` |
+| [SMP-16-001, PLB 763 280](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-001/index.html) | 1899 `:8EvVLpklxGMC` | 93 `:N2osnxbUuuUC` |
+| [HIN-16-011, PRL 119 152301](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-011/index.html) | 1846 `:rwEhk56xNqMC` | 94 `:-_dYPAW6P2MC` |
+| [CDF-D0-HIGGS-2013, PRD 88 052014](https://lss.fnal.gov/archive/2013/pub/fermilab-pub-13-081-e.pdf) | 1940 `:3I1Fh14WnZcC` | 96 `:EYYDruWGBe4C` |
+| [HIN-16-009, PRL 118 122301](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-16-009/index.html) | 1856 `:PcT55Ow6fAIC` | 98 `:3NQIlFlcGxIC` |
+| [EXO-16-018, PRL 117 051802](https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-018/index.html) | 1903 `:qt-6tCTBDsQC` | 99 `:ZzlSgRqYykMC` |
+| [HIG-17-013, PLB 793 320](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-013/index.html) | 1480 `:ZpfHopiqs50C` | 102 `:pqnbT2bcN3wC` |
+
+Six remaining literal `\documentclass` titles are damaged copies of published EPJC papers. The journal issue and article locator, together with the CMS publication record, resolve the shorter title prefixes.
+
+| Primary work record | Exclude child capture row and suffix | Retain suffix |
+| --- | --- | --- |
+| [FSQ-16-007, EPJC 79 702](https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ-16-007/index.html) | 972 `:sdbE4nmAF2cC` | 286 `:0Kh4an1R61UC` |
+| [SMP-16-007, EPJC 78 701](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-007/index.html) | 979 `:4ENpXO9GHvQC` | 153 `:OP4eGU-M3BUC` |
+| [TOP-17-015, EPJC 79 123](https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-17-015/index.html) | 1388 `:KJj4oxv5wnIC` | 792 `:6VlyvFCUEfcC` |
+| [SMP-16-015, EPJC 78 965](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-015/index.html) | 1529 `:ugwUUJJV9MUC` | 191 `:HP8h_xu6YbIC` |
+| [BPH-16-003, EPJC 78 939](https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-16-003/index.html) | 1530 `:UrmhOAI2Q4QC` | 931 `:t4WtaE3RIIAC` |
+| [SMP-16-011, EPJC 77 746](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-011/index.html) | 1778 `:0-VSGmPhd2EC` | 251 `:TjyTfcaXIY8C` |
+
+The [CMS HIN-24-002 publication](https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-24-002/index.html) identifies the 2025 PRL 135 article 132301. Exclude its formula-placeholder row 1159 `:tATOuK1XnKgC` and publisher-only venue row 1145 `:XFIFPR1yFx4C`; retain cited row 687 `:_-FgD5s_Z1cC`. The retained title's missing square-root symbol is repaired in source PR #156.
 
 The B2G child at row 1440 loses the W-prime symbol; the HIG child at row 1669 loses the t-bar symbol. Those display losses do not create separate works. The CMS official pages identify one publication per collaboration code. [NLM independently maps](https://pubmed.ncbi.nlm.nih.gov/28408859/) the formula-placeholder row 1760 to EPJC 77, 172 and its DOI; the CMS page links that work to the retained arXiv row. The [full BTV-16-002 preprint](https://arxiv.org/pdf/1712.07158) includes M. Cremonesi in its collaboration author list. The [SMP-16-017 erratum](https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-16-017/index.html), captured separately as `:y4Au4brZMfoC`, remains eligible.
 
@@ -97,6 +153,6 @@ The Polybios decision concerns **Band I, Lieferung 1 only**. A [different volume
 
 ## Limits and gate
 
-The source ledger reports 125 exact casefold/whitespace Cremonesi title/year groups (260 rows), while a broader punctuation-stripping screen reports 216 groups (446 rows). These are **review queues**, not 216 exclusions. No title/year-wide rule, blanket consortium exclusion, or profile-wide deduction was applied. The 57 decisions above were checked one row at a time; unresolved candidates remain in the source. Three other genuine Cremonesi CDF papers with literal `<?format ?>` markers retain their IDs and receive cache-only title repairs in PR #156. After its nine cache repairs, the remaining 12 `[Formula]` cache-title rows are all exact duplicate exclusions in this draft; no unexcluded cache title retains those literal markers. This marker scan does not certify every title's spelling or attribution.
+The source ledger reports 125 exact casefold/whitespace Cremonesi title/year groups (260 rows), while a broader punctuation-stripping screen reports 216 groups (446 rows). These are **review queues**, not 216 exclusions. No title/year-wide rule, blanket consortium exclusion, or profile-wide deduction was applied. The 99 decisions above were checked one row at a time; unresolved candidates remain in the source. Three other genuine Cremonesi CDF papers with literal `<?format ?>` markers retain their IDs and receive cache-only title repairs in PR #156. Across both current profile caches, all 12 titles with `Formula` placeholders and all six Cremonesi titles with `\documentclass` commands are exact duplicate exclusions in this draft. The marker scan does not certify every title's spelling or attribution.
 
-The producer test fixes the 57 exact count and checks that all stated retained parent IDs remain unexcluded. This draft targets `main` and depends on [source PR #156](https://github.com/cmccomb/map-of-research/pull/156). Keep both drafts staged for independent review; do not merge, rebuild, or upload from this draft.
+The producer test fixes the 99 exact count and checks that all stated retained parent IDs remain unexcluded. This draft targets `main` and depends on [source PR #156](https://github.com/cmccomb/map-of-research/pull/156). Keep both drafts staged for independent review; do not merge, rebuild, or upload from this draft.
