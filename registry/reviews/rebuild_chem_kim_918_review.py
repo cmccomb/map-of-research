@@ -580,6 +580,9 @@ OTHER_PRIMARY_ID_GUARDS = {
     438: "bC4aq-4AAAAJ:i2xiXl-TujoC",
     28: "bC4aq-4AAAAJ:kvJssbFybhEC",
     117: "bC4aq-4AAAAJ:AFmTUeZ1pmEC",
+    150: "bC4aq-4AAAAJ:2KloaMYe4IUC",
+    195: "bC4aq-4AAAAJ:tKAzc9rXhukC",
+    208: "bC4aq-4AAAAJ:aDl3D7KC1E4C",
 }
 
 OTHER_PRIMARY.update(
@@ -756,6 +759,59 @@ HYUNG_JOON_NEURO_PRIMARY = {
     ),
 }
 OTHER_PRIMARY.update(HYUNG_JOON_NEURO_PRIMARY)
+
+HYOUNG_JUHN_KIST_FUEL_CELL_PRIMARY = {
+    150: (
+        "Performance of proton-exchange membrane fuel cells using the "
+        "catalyst-gradient electrode technique",
+        2007,
+        "Hyoung-Juhn Kim",
+        "10.1016/j.jpowsour.2006.12.076",
+        "https://www.h2cu.org/drupaluni/sites/default/files/evento_allegati/"
+        "Evento20051214_EFC05_FinalProgram.pdf",
+        "Original 2005 fuel-cell conference program; exact KAIST article record",
+        "The exact journal record lists H. J. Kim at KIST with Prasanna, Cho, "
+        "Oh, Lim, and Hong. The 2005 EFC05 program names Hyoung-Juhn Kim "
+        "at KIST with those same five coauthors; KENTECH independently "
+        "records his 2004-2022 KIST appointment. This is a full-name "
+        "same-team identity inference, not a full-name byline on the "
+        "exact 2007 article.",
+    ),
+    195: (
+        "Effects of platinum loading on performance of proton-exchange "
+        "membrane fuel cells using surface-modified Nafion® membranes",
+        2006,
+        "Hyoung-Juhn Kim",
+        "10.1016/j.jpowsour.2006.01.071",
+        "https://www.h2cu.org/drupaluni/sites/default/files/evento_allegati/"
+        "Evento20051214_EFC05_FinalProgram.pdf",
+        "Original 2005 fuel-cell conference program; exact KAIST article record",
+        "The exact journal record lists H. J. Kim at KIST with Prasanna, Cho, "
+        "Lim, Oh, and Hong. The 2005 EFC05 program names Hyoung-Juhn Kim "
+        "at KIST with those same five coauthors; KENTECH independently "
+        "records his 2004-2022 KIST appointment. This is a full-name "
+        "same-team identity inference, not a full-name byline on the "
+        "exact 2006 article.",
+    ),
+    208: (
+        "Operation of a proton-exchange membrane fuel cell under "
+        "non-humidified conditions using thin cast Nafion membranes with "
+        "different gas-diffusion media",
+        2006,
+        "Hyoung Juhn Kim",
+        "10.1016/j.jpowsour.2005.06.023",
+        "https://pure.kaist.ac.kr/en/publications/operation-of-a-proton-"
+        "exchange-membrane-fuel-cell-under-non-humid-2/",
+        "KAIST full-name 2007 follow-up; exact 2006 KAIST article record",
+        "The exact 2006 article lists H. J. Kim at KIST with Vengatesan, "
+        "Cho, Ha, Oh, Hong, and Lim. KAIST expands the H. J. Kim byline "
+        "to Hyoung Juhn Kim in this team's directly related 2007 follow-up; "
+        "KENTECH records his 2004-2022 KIST appointment. This is a "
+        "full-name same-team identity inference, not a full-name byline "
+        "on the exact 2006 article.",
+    ),
+}
+OTHER_PRIMARY.update(HYOUNG_JUHN_KIST_FUEL_CELL_PRIMARY)
 
 OTHER_PRIMARY.update(
     {
@@ -2546,17 +2602,17 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 62,
+        "proposed_other_person_primary_work": 65,
         "proposed_no_target_author_primary_work": 2,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 380,
+        "unresolved_attribution_hold": 377,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 404 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 407 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
