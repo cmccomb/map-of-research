@@ -35,7 +35,7 @@ def _entry(**changes: object) -> dict[str, object]:
 
 def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
-    assert len(exclusions) >= 990
+    assert len(exclusions) >= 1156
     assert sum(key[0] == "ILambBMAAAAJ" for key in exclusions) == 43
     nesrine = "IXO9K4UAAAAJ"
     assert {
@@ -88,8 +88,8 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "_VnEj3gAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "VzAGH3wAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "cAiedtsAAAAJ" for key in exclusions) == 4
-    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 77
-    assert sum(key[0] == "LibSWRMAAAAJ" for key in exclusions) == 23
+    assert sum(key[0] == "wJ_gQLoAAAAJ" for key in exclusions) == 80
+    assert sum(key[0] == "LibSWRMAAAAJ" for key in exclusions) == 26
     assert all(
         exclusions[("cAiedtsAAAAJ", f"cAiedtsAAAAJ:{suffix}")].reason_code
         == "nonpublication"
@@ -602,6 +602,9 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
             ("tATOuK1XnKgC", "XFIFPR1yFx4C"),
             "_-FgD5s_Z1cC",
         ),
+        ("wJ_gQLoAAAAJ", ("8NFFclwVBVUC",), "f14mYpCygl4C"),
+        ("wJ_gQLoAAAAJ", ("Gm6cJkd1Yu0C",), "f2QdLyYkFyUC"),
+        ("wJ_gQLoAAAAJ", ("OlGoE9RybnsC",), "RJNGbXJAtMsC"),
         (
             "LibSWRMAAAAJ",
             ("i91s68tWr-MC",),
@@ -642,6 +645,9 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
             ("hNSvKAmkeYkC",),
             "kNdYIx-mwKoC",
         ),
+        ("LibSWRMAAAAJ", ("E7VqQtBCVmcC",), "MAUkC_7iAq8C"),
+        ("LibSWRMAAAAJ", ("oH8HCDhqVGsC",), "_axFR9aDTf0C"),
+        ("LibSWRMAAAAJ", ("ipzZ9siozwsC",), "ruyezt5ZtCIC"),
     ):
         for child in children:
             assert exclusions[(scholar_id, f"{scholar_id}:{child}")].reason_code == (
@@ -664,6 +670,8 @@ def test_physics_review_excludes_only_exact_children_and_keeps_retained_works() 
         )
     assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:SWgZeABleR0C") not in exclusions
     assert ("wJ_gQLoAAAAJ", "wJ_gQLoAAAAJ:y4Au4brZMfoC") not in exclusions
+    for suffix in ("UBSsHvkqiq4C", "QjNCP7ux8QYC", "JOhajB-2wfwC"):
+        assert ("wJ_gQLoAAAAJ", f"wJ_gQLoAAAAJ:{suffix}") not in exclusions
     assert ("LibSWRMAAAAJ", "LibSWRMAAAAJ:iyewoVqAXLQC") not in exclusions
 
 

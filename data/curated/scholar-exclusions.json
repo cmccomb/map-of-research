@@ -9200,6 +9200,54 @@
       "reason": "Capture row 128 repeats the 2020 Classical and Quantum Gravity 37:215011 article retained at row 6 AcW2EXwAAAAJ:Tyk-4Ss8FVUC, but treats CQ Grav as an author and omits venue and year; the University of Glasgow record gives the article DOI and Sedda-first byline with Breivik.",
       "evidence_url": "https://eprints.gla.ac.uk/226485/",
       "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:E7VqQtBCVmcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 532 is an undated copy of the exact title retained as LibSWRMAAAAJ:MAUkC_7iAq8C (row 51). Its three named authors are members of the complete 2015 PRL 114 062003 author list, while its Carnegie Mellon University venue is their affiliation rather than a publication locator.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.114.062003",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:oH8HCDhqVGsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 461 repeats the 2000 BNL-AGS E906 chapter title but starts with a later coauthor subset and omits pages. The original University of Tokyo annual report lists the full Fukuda et al. author order, including R. A. Schumacher, and pp. 167-174; retain the complete row LibSWRMAAAAJ:_axFR9aDTf0C (row 466).",
+      "evidence_url": "https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/ar_phys00.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "LibSWRMAAAAJ",
+      "author_pub_id": "LibSWRMAAAAJ:ipzZ9siozwsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 504 corrupts the reaction formula into an arrow-and-word string and omits the AIP volume and pages. The AIP Conference Proceedings 221, 339-351 (1991) record identifies the same work retained as LibSWRMAAAAJ:ruyezt5ZtCIC (row 503); distinct same-title proceedings chapters are not covered.",
+      "evidence_url": "https://pubs.aip.org/aip/acp/article/221/1/339-351/641229",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:8NFFclwVBVUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 971 is an incomplete JINST 15 copy of the CMS TRG-17-001 Level-1 trigger article, with a contributor fragment and no P10017 article locator. The CMS publication record and full contributor list identify the same 2020 work; retain complete journal row wJ_gQLoAAAAJ:f14mYpCygl4C (row 115), while its separate arXiv observation remains eligible.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TRG-17-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:Gm6cJkd1Yu0C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1341 is a second, incomplete journal observation of CMS JME-18-001, with an institutional contributor subset and generic 1-58 pages. The CMS publication record identifies the one JINST 15 P09018 article; retain complete journal row wJ_gQLoAAAAJ:f2QdLyYkFyUC (row 1334), alongside its distinct arXiv observation.",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/JME-18-001/index.html",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "author_pub_id": "wJ_gQLoAAAAJ:OlGoE9RybnsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 1384 combines the 2019 original arXiv title of CMS HIN-18-015 with the final 2021 Phys. Rev. C 103 014902 journal locator. This mixed-version observation duplicates retained final journal row wJ_gQLoAAAAJ:RJNGbXJAtMsC (row 695); keep the unresolved original-title row 1958 for separate provenance review.",
+      "evidence_url": "https://cds.cern.ch/record/2676134/files/scoap3-fulltext.pdf",
+      "verified_at": "2026-10-24"
     }
   ]
 }
