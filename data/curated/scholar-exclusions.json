@@ -11688,6 +11688,14 @@
       "reason": "The original 2025 Elsevier article and Vidyasagar University faculty record match this exact title and byline; journal metadata affiliates Subha Ranjan Das with Vidyasagar Human Physiology, identifying the other cancer-biology researcher rather than the CMU Chemistry professor.",
       "evidence_url": "https://www.vidyasagar.ac.in/ArticlePage/Dept_FacultyProfile?T=D&deptId=4&empId=84",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FrF1YXQAAAAJ",
+      "author_pub_id": "FrF1YXQAAAAJ:MAUkC_7iAq8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2025 Springer article gives S. R. Das at GITA Autonomous College and an email matched by GITA's own 2025-26 faculty roster to Subha Ranjan Dash, a different person from CMU Chemistry professor Subha Ranjan Das.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s43926-025-00121-9",
+      "verified_at": "2026-10-25"
     }
   ]
 }
