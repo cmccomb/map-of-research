@@ -946,6 +946,202 @@ def test_tina_title_repair_rejects_changed_raw_fragment(tmp_path: Path) -> None:
         validate_complete_receipt("au_cLfoAAAAJ", cache, captures)
 
 
+def _breivik_repaired_author_fixture(tmp_path: Path) -> tuple[dict, Path, Path]:
+    captures = tmp_path / "data" / "captures"
+    captures.mkdir(parents=True)
+    status = tmp_path / "status"
+    status.mkdir()
+    scholar_id = "AcW2EXwAAAAJ"
+    captured = "K Breivik, S Chatterjee, J Andrews"
+    repaired = "J Andrews, S Chatterjee, K Breivik"
+    raw_rows = []
+    cached_rows = []
+    html_rows = []
+    for index in range(1, 116):
+        citation_id = (
+            f"{scholar_id}:roLk4NBRz8UC" if index == 115 else f"{scholar_id}:row{index}"
+        )
+        citation_url = (
+            f"https://scholar.google.com/citations?user={scholar_id}"
+            f"&citation_for_view={citation_id}"
+        )
+        authors = captured if index == 115 else "A Author"
+        title = f"Work {index}"
+        raw_rows.append(
+            {
+                "index": index,
+                "citation_url": citation_url,
+                "title": title,
+                "authors": authors,
+                "venue": "AAS 233",
+                "year": "2019",
+                "citation_count": "0",
+            }
+        )
+        cached_rows.append(
+            {
+                "capture_row_index": index,
+                "author_pub_id": citation_id,
+                "pub_url": citation_url,
+                "title": title,
+                "author": repaired if index == 115 else authors,
+                "venue": "AAS 233",
+                "pub_year": "2019",
+                "num_citations": 0,
+            }
+        )
+        html_rows.append(
+            '<tr class="gsc_a_tr"><td class="gsc_a_t">'
+            f'<a class="gsc_a_at" href="{escape(citation_url)}">{title}</a>'
+            f'<div class="gs_gray">{authors}</div>'
+            '<div class="gs_gray">AAS 233</div></td>'
+            '<td class="gsc_a_c"><a class="gsc_a_ac">0</a></td>'
+            '<td class="gsc_a_y"><span class="gsc_a_h">2019</span></td></tr>'
+        )
+    source_json = captures / "breivik.json"
+    source_html = captures / "breivik.html"
+    atomic_write_json(
+        source_json,
+        {
+            "scholar_user_id": scholar_id,
+            "displayed_count": 115,
+            "more_remain": False,
+            "challenge": False,
+            "page_error": "",
+            "works": raw_rows,
+        },
+    )
+    source_html.write_text(
+        "<table>"
+        + "".join(html_rows)
+        + '</table><button id="gsc_bpf_more" disabled="">Show more</button>'
+    )
+    cache = {
+        "scholar_id": scholar_id,
+        "publication_count": 115,
+        "publications": cached_rows,
+        "browser_capture": {
+            "coverage": "complete_visible_profile",
+            "profile_url": f"https://scholar.google.com/citations?user={scholar_id}",
+            "displayed_count": 115,
+            "more_remain": False,
+            "limit": 5000,
+            "source_json_filename": source_json.name,
+            "source_json_sha256": sha256_file(source_json),
+            "source_html_filename": source_html.name,
+            "source_html_sha256": sha256_file(source_html),
+        },
+    }
+    ledger = status / "physics-breivik-row115-cache-repair-2026-10-24.json"
+    atomic_write_json(
+        ledger,
+        {
+            "schema_version": 1,
+            "review_state": "source_reviewed_cache_repaired",
+            "capture_receipt": (
+                "status/browser-capture-physics-katelyn-breivik-2026-10-24.json"
+            ),
+            "repairs": [
+                {
+                    "scholar_id": scholar_id,
+                    "capture_row": 115,
+                    "author_pub_id": f"{scholar_id}:roLk4NBRz8UC",
+                    "cache_field": "author",
+                    "captured_value": captured,
+                    "repaired_value": repaired,
+                    "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+                }
+            ],
+        },
+    )
+    return cache, captures, ledger
+
+
+def test_only_reviewed_breivik_row_115_author_repair_is_accepted(
+    tmp_path: Path,
+) -> None:
+    cache, captures, _ = _breivik_repaired_author_fixture(tmp_path)
+    validate_complete_receipt("AcW2EXwAAAAJ", cache, captures)
+
+
+@pytest.mark.parametrize(
+    "mutation",
+    [
+        "missing_ledger",
+        "invalid_ledger_json",
+        "invalid_ledger_type",
+        "invalid_ledger_schema",
+        "invalid_review_state",
+        "invalid_receipt",
+        "invalid_repairs_type",
+        "two_repairs",
+        "invalid_repair_entry",
+        "changed_evidence",
+        "changed_repaired_author",
+        "changed_other_row_author",
+        "changed_row_115_id",
+        "changed_raw_author",
+    ],
+)
+def test_breivik_author_repair_does_not_waive_other_checks(
+    tmp_path: Path, mutation: str
+) -> None:
+    cache, captures, ledger = _breivik_repaired_author_fixture(tmp_path)
+    if mutation == "missing_ledger":
+        ledger.unlink()
+    elif mutation == "invalid_ledger_json":
+        ledger.write_text("{invalid")
+    elif mutation == "invalid_ledger_type":
+        atomic_write_json(ledger, [])
+    elif mutation in {
+        "invalid_ledger_schema",
+        "invalid_review_state",
+        "invalid_receipt",
+        "invalid_repairs_type",
+        "two_repairs",
+        "invalid_repair_entry",
+    }:
+        review = json.loads(ledger.read_text())
+        if mutation == "invalid_ledger_schema":
+            review["schema_version"] = 2
+        elif mutation == "invalid_review_state":
+            review["review_state"] = "unreviewed"
+        elif mutation == "invalid_receipt":
+            review["capture_receipt"] = "status/wrong.json"
+        elif mutation == "invalid_repairs_type":
+            review["repairs"] = "unreviewed"
+        elif mutation == "two_repairs":
+            review["repairs"].append(review["repairs"][0])
+        elif mutation == "invalid_repair_entry":
+            review["repairs"] = ["unreviewed"]
+        atomic_write_json(ledger, review)
+    elif mutation == "changed_evidence":
+        review = json.loads(ledger.read_text())
+        review["repairs"][0]["evidence_url"] = "https://example.test/unverified"
+        atomic_write_json(ledger, review)
+    elif mutation == "changed_repaired_author":
+        cache["publications"][-1]["author"] = "Wrong author"
+    elif mutation == "changed_other_row_author":
+        cache["publications"][0]["author"] = "Wrong author"
+    elif mutation == "changed_row_115_id":
+        cache["publications"][-1]["author_pub_id"] = "AcW2EXwAAAAJ:wrong"
+    elif mutation == "changed_raw_author":
+        raw_path = captures / "breivik.json"
+        html_path = captures / "breivik.html"
+        raw = json.loads(raw_path.read_text())
+        raw["works"][-1]["authors"] = "Unverified byline"
+        atomic_write_json(raw_path, raw)
+        html_path.write_text(
+            html_path.read_text().replace(
+                "K Breivik, S Chatterjee, J Andrews", "Unverified byline"
+            )
+        )
+        cache["browser_capture"]["source_json_sha256"] = sha256_file(raw_path)
+        cache["browser_capture"]["source_html_sha256"] = sha256_file(html_path)
+    with pytest.raises(ValueError, match="Cached row differs from saved source"):
+        validate_complete_receipt("AcW2EXwAAAAJ", cache, captures)
+
+
 @pytest.mark.parametrize(
     "field,value",
     [

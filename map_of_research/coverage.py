@@ -27,6 +27,9 @@ DEFAULT_PRIOR_ID_CROSSWALK_PATH = Path(
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CAPTURE_DIR = Path("data/captures")
 _TINA_REPAIR_LEDGER = Path("status/physics-kahniashvili-cache-repair-2026-10-24.json")
+_BREIVIK_REPAIR_LEDGER = Path(
+    "status/physics-breivik-row115-cache-repair-2026-10-24.json"
+)
 _TINA_RAW_TITLE = (
     "ity (see Kofman & Starobinsky, Lahav et al. 5). All spectra were normalized"
 )
@@ -206,6 +209,59 @@ def _is_reviewed_tina_title_repair(
     return all(repair.get(key) == value for key, value in expected.items())
 
 
+def _is_reviewed_breivik_author_repair(
+    scholar_id: str,
+    index: int,
+    citation_id: str,
+    source_author: Any,
+    cache_author: Any,
+    captures_dir: Path,
+) -> bool:
+    """Accept only the AAS-backed row 115 byline correction in the cache."""
+
+    captured = "K Breivik, S Chatterjee, J Andrews"
+    repaired = "J Andrews, S Chatterjee, K Breivik"
+    if (
+        scholar_id != "AcW2EXwAAAAJ"
+        or index != 115
+        or citation_id != "AcW2EXwAAAAJ:roLk4NBRz8UC"
+        or source_author != captured
+        or cache_author != repaired
+    ):
+        return False
+
+    ledger_path = captures_dir.parent.parent / _BREIVIK_REPAIR_LEDGER
+    if not ledger_path.is_file():
+        return False
+    try:
+        ledger = load_json(ledger_path)
+    except (OSError, ValueError):
+        return False
+    if (
+        not isinstance(ledger, dict)
+        or ledger.get("schema_version") != 1
+        or ledger.get("review_state") != "source_reviewed_cache_repaired"
+        or ledger.get("capture_receipt")
+        != "status/browser-capture-physics-katelyn-breivik-2026-10-24.json"
+        or not isinstance(ledger.get("repairs"), list)
+        or len(ledger["repairs"]) != 1
+        or not isinstance(ledger["repairs"][0], dict)
+    ):
+        return False
+    expected = {
+        "scholar_id": scholar_id,
+        "capture_row": index,
+        "author_pub_id": citation_id,
+        "cache_field": "author",
+        "captured_value": captured,
+        "repaired_value": repaired,
+        "evidence_url": "https://aas.org/files/aas233_abstracts.pdf",
+    }
+    return all(
+        ledger["repairs"][0].get(key) == value for key, value in expected.items()
+    )
+
+
 def validate_complete_receipt(
     scholar_id: str, cache: dict[str, Any], captures_dir: Path
 ) -> None:
@@ -300,14 +356,22 @@ def validate_complete_receipt(
                     captures_dir,
                 )
             )
+            or (
+                _normalized(cached_row.get("author"))
+                != _normalized(source_row.get("authors"))
+                and not _is_reviewed_breivik_author_repair(
+                    scholar_id,
+                    index,
+                    citation_id,
+                    source_row.get("authors"),
+                    cached_row.get("author"),
+                    captures_dir,
+                )
+            )
             or any(
                 _normalized(cached_row.get(cache_key))
                 != _normalized(source_row.get(source_key))
-                for cache_key, source_key in (
-                    ("author", "authors"),
-                    ("venue", "venue"),
-                    ("pub_year", "year"),
-                )
+                for cache_key, source_key in (("venue", "venue"), ("pub_year", "year"))
             )
             or (citation_count != "" and not citation_count.isdecimal())
             or cached_row.get("num_citations") != int(citation_count or "0")

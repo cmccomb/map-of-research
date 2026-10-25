@@ -161,7 +161,7 @@ def test_checked_in_review_manifest_is_complete_and_keyed() -> None:
     assert sum(key[0] == "ZEHOKUkAAAAJ" for key in exclusions) == 3
     assert sum(key[0] == "jrRg4PAAAAAJ" for key in exclusions) == 5
     assert sum(key[0] == "79uTAy8AAAAJ" for key in exclusions) == 3
-    assert sum(key[0] == "AcW2EXwAAAAJ" for key in exclusions) == 7
+    assert sum(key[0] == "AcW2EXwAAAAJ" for key in exclusions) == 9
     assert sum(key[0] == "kcXOB1MAAAAJ" for key in exclusions) == 2
     assert sum(key[0] == "jcb81yAAAAAJ" for key in exclusions) == 13
     assert sum(key[0] == "wex9ft0AAAAJ" for key in exclusions) == 5
@@ -343,7 +343,7 @@ def test_tina_kahniashvili_exact_reviewed_exclusions() -> None:
     assert (scholar_id, f"{scholar_id}:TFP_iSt0sucC") not in exclusions
 
 
-def test_breivik_five_reviewed_exclusions_preserve_existing_decisions() -> None:
+def test_breivik_reviewed_exclusions_preserve_retained_outputs() -> None:
     scholar_id = "AcW2EXwAAAAJ"
     expected = {
         "K3LRdlH-MEoC": "false_profile_attribution",
@@ -353,6 +353,8 @@ def test_breivik_five_reviewed_exclusions_preserve_existing_decisions() -> None:
         "0EnyYjriUFMC": "corrupted_duplicate",
         "u-x6o8ySG0sC": "corrupted_duplicate",
         "qUcmZB5y_30C": "nonpublication",
+        "OU6Ihb5iCvQC": "corrupted_duplicate",
+        "l7t_Zn2s7bgC": "corrupted_duplicate",
     }
     exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
     actual = {
