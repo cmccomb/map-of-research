@@ -14,6 +14,10 @@ from collections.abc import Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
+from .attribution import (
+    DEFAULT_ATTRIBUTION_REVIEWS_PATH,
+    load_attribution_reviews,
+)
 from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
@@ -1097,6 +1101,7 @@ def publish_snapshot(
     exclusions_path: Path = DEFAULT_EXCLUSIONS_PATH,
     corrections_path: Path = DEFAULT_CORRECTIONS_PATH,
     doi_aliases_path: Path = DEFAULT_DOI_ALIASES_PATH,
+    attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
 ) -> dict[str, Any]:
     """Publish all normalized dataset configs and work-centric map artifacts."""
@@ -1117,12 +1122,17 @@ def publish_snapshot(
     corrections = load_corrections(corrections_path)
     corrected_frame, corrected_count = apply_corrections(frame, corrections)
     contexts = load_contexts(contexts_path)
+    attribution_reviews = load_attribution_reviews(attribution_reviews_path)
+    if set(attribution_reviews.confirmed).intersection(exclusions):
+        raise ValueError("Scholar attribution and exclusion reviews conflict")
     enriched, new_embedding_count = add_embeddings(
         corrected_frame,
         hf_token=hf_token,
         encoder=encoder,
     )
-    tables = build_dataset_tables(enriched, registry, exclusions, doi_aliases, contexts)
+    tables = build_dataset_tables(
+        enriched, registry, exclusions, doi_aliases, attribution_reviews, contexts
+    )
     existing_layouts = _existing_layouts(hf_token=hf_token)
     if existing_layouts:
         reuse = _reusable_work_order(
@@ -1198,6 +1208,19 @@ def publish_snapshot(
             tables["profile_publications"]["context_verified_at"].ne("").sum()
         ),
         "reviewed_contexts_sha256": sha256_file(contexts_path),
+        "attribution_reviews_sha256": sha256_file(attribution_reviews_path),
+        "attribution_confirmed": int(
+            tables["profile_publications"]["review_attribution_status"]
+            .eq("confirmed")
+            .sum()
+            if "review_attribution_status" in tables["profile_publications"]
+            else 0
+        ),
+        "attribution_held": int(
+            tables["profile_publications"]["review_attribution_status"].eq("held").sum()
+            if "review_attribution_status" in tables["profile_publications"]
+            else 0
+        ),
         "profile_count": int(
             enriched.loc[
                 enriched.get("source_type", "scholar") == "scholar", "scholar_id"
@@ -1248,6 +1271,9 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--reviewed-doi-aliases", type=Path, default=DEFAULT_DOI_ALIASES_PATH
+    )
+    parser.add_argument(
+        "--attribution-reviews", type=Path, default=DEFAULT_ATTRIBUTION_REVIEWS_PATH
     )
     parser.add_argument("--reviewed-contexts", type=Path, default=DEFAULT_CONTEXTS_PATH)
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
@@ -1317,6 +1343,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             exclusions_path=args.reviewed_exclusions,
             corrections_path=args.reviewed_metadata_corrections,
             doi_aliases_path=args.reviewed_doi_aliases,
+            attribution_reviews_path=args.attribution_reviews,
             contexts_path=args.reviewed_contexts,
         )
         status.update({"status": "success", **result, "error_type": None})

@@ -10,6 +10,7 @@ from collections import Counter
 from collections.abc import Mapping
 from typing import Any
 
+from .attribution import AttributionReviews
 from .contexts import ReviewedContext
 from .doi_aliases import ReviewedDoiAlias
 from .exclusions import ReviewedExclusion
@@ -173,6 +174,7 @@ def build_dataset_tables(
     registry: Registry,
     exclusions: Mapping[tuple[str, str], ReviewedExclusion] | None = None,
     doi_aliases: Mapping[tuple[str, str], ReviewedDoiAlias] | None = None,
+    attribution_reviews: AttributionReviews | None = None,
     contexts: Mapping[tuple[str, str], ReviewedContext] | None = None,
 ) -> dict[str, Any]:
     """Build retained observations plus canonical people/work relationship tables."""
@@ -212,6 +214,8 @@ def build_dataset_tables(
     review_reasons: list[str] = []
     review_evidence_urls: list[str] = []
     review_dates: list[str] = []
+    attribution_statuses: list[str] = []
+    attribution_evidence_urls: list[str] = []
     publication_types: list[str] = []
     document_ids: list[str] = []
     context_reasons: list[str] = []
@@ -261,6 +265,26 @@ def build_dataset_tables(
         review = (exclusions or {}).get(key)
         if review is not None:
             reasons.append(f"reviewed_{review.reason_code}")
+        attribution = (
+            attribution_reviews.confirmed.get(key) if attribution_reviews else None
+        )
+        held_profile = (
+            attribution_reviews is not None
+            and row.source_type == "scholar"
+            and str(row.scholar_id) in attribution_reviews.held_profiles
+        )
+        if held_profile and attribution is None and review is None:
+            reasons.append("attribution_unconfirmed")
+        attribution_statuses.append(
+            "confirmed"
+            if attribution
+            else "held"
+            if held_profile and not review
+            else ""
+        )
+        attribution_evidence_urls.append(
+            attribution.evidence_url if attribution else ""
+        )
         if context is not None:
             context_exclusion = ""
             if context.publication_type == "withdrawn_article":
@@ -314,6 +338,10 @@ def build_dataset_tables(
     profile_publications.insert(16, "collaboration_eligible", collaboration_eligibility)
     profile_publications.insert(
         17, "quality_assessment_version", QUALITY_ASSESSMENT_VERSION
+    )
+    profile_publications.insert(11, "review_attribution_status", attribution_statuses)
+    profile_publications.insert(
+        12, "review_attribution_evidence_url", attribution_evidence_urls
     )
 
     school_titles = registry.school_catalog()

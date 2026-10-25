@@ -1022,3 +1022,59 @@ def test_reviewed_false_attribution_cannot_attach_faculty_to_shared_work(
     assert artifact["points"][0]["faculty_ids"] == ["person-two"]
     assert artifact["points"][0]["department_ids"] == ["math"]
     assert artifact["points"][0]["source_url"] == ("https://example.test/good-source")
+
+
+def test_chien_ho_exact_review_preserves_retained_source_versions() -> None:
+    scholar_id = "8iLLOQgAAAAJ"
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    expected = {
+        "kWvqk_afx_IC": "false_profile_attribution",
+        "gVv57TyPmFsC": "false_profile_attribution",
+        "dhFuZR0502QC": "false_profile_attribution",
+        "CNPyR2KL9-0C": "false_profile_attribution",
+        "-uzm3Y7AvW0C": "false_profile_attribution",
+        "qUcmZB5y_30C": "false_profile_attribution",
+        "naSTrk-c4S8C": "false_profile_attribution",
+        "XvxMoLDsR5gC": "false_profile_attribution",
+        "1DsIQWDZLl8C": "false_profile_attribution",
+        "tKAzc9rXhukC": "false_profile_attribution",
+        "z6xuaG2dYH0C": "false_profile_attribution",
+        "sNmaIFBj_lkC": "false_profile_attribution",
+        "bz8QjSJIRt4C": "false_profile_attribution",
+        "L_l9e5I586QC": "false_profile_attribution",
+        "7T2F9Uy0os0C": "false_profile_attribution",
+        "oi2SiIJ9l4AC": "false_profile_attribution",
+        "2VqYfGB8ITEC": "false_profile_attribution",
+        "_AeoHAGD03cC": "false_profile_attribution",
+        "ijdKiLOsEJMC": "false_profile_attribution",
+        "U4n9YNQMCAIC": "false_profile_attribution",
+        "uVUOdF_882EC": "false_profile_attribution",
+        "yY3RG6sOEgwC": "false_profile_attribution",
+        "-95Q15plzcUC": "false_profile_attribution",
+        "TaaCk18tZOkC": "false_profile_attribution",
+        "silx2ntsSuwC": "false_profile_attribution",
+        "lgwcVrK6X84C": "false_profile_attribution",
+        "vDijr-p_gm4C": "corrupted_duplicate",
+        "pAkWuXOU-OoC": "false_profile_attribution",
+        "FiDNX6EVdGUC": "false_profile_attribution",
+        "rbGdIwl2e6cC": "nonpublication",
+        "65Yg0jNCQDAC": "false_profile_attribution",
+        "KWzIFqRkAKkC": "corrupted_duplicate",
+        "PQEM9vzQD9gC": "nonpublication",
+        "9DLIHnF0jcYC": "nonpublication",
+        "Br1UauaknNIC": "nonpublication",
+    }
+    actual = {
+        author_pub_id.removeprefix(f"{scholar_id}:"): decision.reason_code
+        for (sid, author_pub_id), decision in exclusions.items()
+        if sid == scholar_id
+    }
+    assert set(expected.items()) <= set(actual.items())
+    assert {
+        "b0M2c_1WBrUC",  # Source paper for the two affiliation fragments.
+        "WbkHhVStYXYC",  # Source article for the journal-header fragment.
+        "uWQEDVKXjbEC",  # Complete 1973 hemoglobin paper.
+        "eI34FqJmdUoC",  # Complete 1991 D-lactate dehydrogenase paper.
+        "XDrR66g3YHsC",  # CMU bibliography confirms Ho despite Scholar author omission.
+        "TesyEGJKHF4C",  # 1712 is a malformed year, not an exclusion.
+    }.isdisjoint(actual)
