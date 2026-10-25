@@ -544,7 +544,9 @@ def build_dataset_tables(
                     [record.work_match_method for record in canonical_records]
                 ),
                 "doi": _best_text([record.doi for record in canonical_records]),
-                "title": _best_text(_source_values(canonical_records, "title")),
+                "title": _best_text(
+                    _source_values(published_records or canonical_records, "title")
+                ),
                 "title_variants": _variants(
                     [record.title for record in canonical_records]
                 ),

@@ -110,6 +110,130 @@
       "basis": "ISMRM 2011 abstract 1712 names Chien Ho of CMU; Scholar misplaces abstract number 1712 in the year field.",
       "evidence_url": "https://archive.ismrm.org/2011/1712.html",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "8Ufu7vkAAAAJ",
+      "author_pub_id": "8Ufu7vkAAAAJ:hqOjcs7Dif8C",
+      "expected": {
+        "title": "Cohomologies of tautological bundles of matroids: C. Eur",
+        "year": 2024,
+        "venue": "Selecta Mathematica 30 (5), 85, 2024"
+      },
+      "corrected": {
+        "title": "Cohomologies of tautological bundles of matroids"
+      },
+      "basis": "Springer version of record lists the exact title without the appended author fragment.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s00029-024-00979-7",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "l0rzNYsAAAAJ",
+      "author_pub_id": "l0rzNYsAAAAJ:ufrVoPGSRksC",
+      "expected": {
+        "title": "Lower bounds for the exponential domination number of Cm× Cn",
+        "year": 1803,
+        "venue": "arXiv preprint arXiv:1803.01933, 1803"
+      },
+      "corrected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m × C_n",
+        "year": 2018,
+        "venue": "arXiv preprint arXiv:1803.01933, 2018"
+      },
+      "basis": "arXiv:1803.01933 gives the complete mathematical title and 2018 submission date; Scholar placed the arXiv identifier prefix in the year field.",
+      "evidence_url": "https://arxiv.org/abs/1803.01933",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "l0rzNYsAAAAJ",
+      "author_pub_id": "l0rzNYsAAAAJ:mVmsd5A6BfQC",
+      "expected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m \\times C_n",
+        "year": 2018,
+        "venue": "arXiv preprint arXiv:1803.01933, 2018"
+      },
+      "corrected": {
+        "title": "Lower Bounds for the Exponential Domination Number of C_m × C_n"
+      },
+      "basis": "The saved Scholar SVG aria-label writes the multiplication sign as \\times; arXiv:1803.01933 renders the expression, so the effective title uses a readable multiplication sign.",
+      "evidence_url": "https://arxiv.org/abs/1803.01933",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:u-x6o8ySG0sC",
+      "expected": {
+        "title": "A new bound for the 2/3 conjecture",
+        "year": 2013,
+        "venue": "Combinatorics, Probability and Computing 22 (3), 384-393, 2013",
+        "authors": "CH LIU, JS Sereni, P Whalen, ZB Yilma"
+      },
+      "corrected": {
+        "authors": "Daniel Král', Chun-Hung Liu, Jean-Sébastien Sereni, Peter Whalen, Zelealem B. Yilma"
+      },
+      "basis": "Cambridge's published article names Daniel Král' first, followed by Liu, Sereni, Whalen, and Yilma; the Scholar journal row omits Král'.",
+      "evidence_url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/new-bound-for-the-23-conjecture/46A4FEA3BE07A0D1498138BD15B0DBEF",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "AlNKTGsAAAAJ",
+      "author_pub_id": "AlNKTGsAAAAJ:eQOLeE2rZwMC",
+      "expected": {
+        "title": "A new bound for the 2/3 conjecture",
+        "year": 2012,
+        "venue": "arXiv preprint arXiv:1204.2519, 2012",
+        "authors": "P Whalen, ZB Yilma"
+      },
+      "corrected": {
+        "authors": "Daniel Král', Chun-Hung Liu, Jean-Sébastien Sereni, Peter Whalen, Zelealem B. Yilma"
+      },
+      "basis": "The author-submitted arXiv record lists all five authors; the Scholar preprint row lists only Whalen and Yilma.",
+      "evidence_url": "https://arxiv.org/abs/1204.2519",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "2kKrsXEAAAAJ",
+      "author_pub_id": "2kKrsXEAAAAJ:WF5omc3nYNoC",
+      "expected": {
+        "title": "On the Bohr’s Inequality for Stable Mappings: Z. AbdulHadi, L. El Hajj",
+        "year": 2023,
+        "venue": "Bulletin of the Malaysian Mathematical Sciences Society 46 (1), 43, 2023"
+      },
+      "corrected": {
+        "title": "On the Bohr’s Inequality for Stable Mappings"
+      },
+      "basis": "Springer lists the article title without the author names Scholar appended after a colon; the two authors remain in the separate author field.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s40840-022-01401-1",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "2kKrsXEAAAAJ",
+      "author_pub_id": "2kKrsXEAAAAJ:eQOLeE2rZwMC",
+      "expected": {
+        "title": "Quadrature identities with a background PDE: L. El Hajj and H. Shahgholian",
+        "year": 2022,
+        "venue": "Analysis and Mathematical Physics 12 (2), 55, 2022"
+      },
+      "corrected": {
+        "title": "Quadrature identities with a background PDE"
+      },
+      "basis": "Springer lists the article title without the author names Scholar appended after a colon; the two authors remain in the separate author field.",
+      "evidence_url": "https://link.springer.com/article/10.1007/s13324-022-00674-w",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "2kKrsXEAAAAJ",
+      "author_pub_id": "2kKrsXEAAAAJ:UeHWp8X0CEIC",
+      "expected": {
+        "title": "Logharmonic mappings on linearly connected domains: L. El Hajj",
+        "year": 2019,
+        "venue": "Analysis and Mathematical Physics 9 (2), 829-837, 2019"
+      },
+      "corrected": {
+        "title": "Logharmonic mappings on linearly connected domains"
+      },
+      "basis": "Springer/Crossref lists the article title without the author name Scholar appended after a colon; the author remains in the separate author field.",
+      "evidence_url": "https://api.crossref.org/works/10.1007/s13324-019-00318-6",
+      "verified_at": "2026-10-25"
     }
   ]
 }

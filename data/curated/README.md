@@ -29,11 +29,20 @@ and a published DOI. It distinguishes a `preprint_of` row from a
 `version_of_record` row when Scholar lists both. The publisher checks each row
 ID, observed title and year, source DOI, and exclusion state before applying
 the alias. It preserves both raw Scholar observations and joins them to one
-published work, including a matching curated DOI observation when present. See
+published work, including a matching curated DOI observation when present.
+The version-of-record title, year, and venue supply that work's display. See
 the [Walkington review](../../registry/reviews/2026-10-25-math-walkington-version-alias.md),
 the [Math version-pair review](../../registry/reviews/2026-10-25-math-scholar-version-pairs.md),
-and [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md)
+the [three further Math version pairs](../../registry/reviews/2026-10-25-math-three-more-version-pairs.md),
+the [Eur/Young exact-work review](../../registry/reviews/2026-10-25-math-eur-young-exact-works.md),
+and [Brandon/Kramkov exact-work review](../../registry/reviews/2026-10-25-math-brandon-kramkov-exact-works.md)
 for the exact source evidence.
+
+`scholar-metadata-corrections.json` repairs only effective display metadata for
+an exact Scholar observation; the saved cache and `source_record_json` retain
+the observed values. A byline repair must guard the observed authors as well as
+title, year, and venue. The [Yilma review](../../registry/reviews/2026-10-25-math-yilma-whole-scholar-profile.md)
+documents two publisher-verified five-author repairs.
 
 `scholar-contexts.json` is a separate exact-observation review manifest. It
 records publication type and primary evidence for unusual Scholar records.
