@@ -62,6 +62,7 @@ REQUIRED_COLUMNS = {
     "external_coauthors",
 }
 CURATED_SCHEMA_VERSION = 1
+CURATED_PUBLICATION_TYPES = frozenset({"publication", "doctoral_dissertation"})
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+\Z", re.IGNORECASE)
 NATIVE_ID_PATTERN = re.compile(r"[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._:/-]*\Z")
 
@@ -233,6 +234,9 @@ def _load_curated_rows(path: Path, registry: Registry) -> list[dict[str, Any]]:
         venue = str(work.get("venue") or "").strip()
         if not title or not authors or not venue:
             raise ValueError("Curated work needs a title, authors, and venue")
+        publication_type = str(work.get("publication_type") or "publication").strip()
+        if publication_type not in CURATED_PUBLICATION_TYPES:
+            raise ValueError("Curated work has an unknown publication type")
         year = _parse_year(work.get("year"))
         if year is None:
             raise ValueError("Curated work year is invalid")

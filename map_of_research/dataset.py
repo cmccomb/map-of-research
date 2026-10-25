@@ -20,6 +20,7 @@ from .registry import Registry
 
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
 NON_ALPHANUMERIC = re.compile(r"[^a-z0-9]+")
+CURATED_PUBLICATION_TYPES = frozenset({"publication", "doctoral_dissertation"})
 
 
 def _as_list(value: Any) -> list[Any]:
@@ -44,6 +45,21 @@ def normalize_title(value: str) -> str:
 def _clean_text(value: Any) -> str:
     text = str(value if value is not None else "").strip()
     return "" if text.casefold() in {"nan", "<na>"} else text
+
+
+def _curated_publication_type(row: Any) -> str:
+    if row.source_type != "curated_verified":
+        return "publication"
+    try:
+        source = json.loads(str(row.source_record_json))
+    except (TypeError, ValueError) as error:
+        raise ValueError("Curated observation lacks its source record") from error
+    if not isinstance(source, Mapping):
+        raise ValueError("Curated source record must be an object")
+    publication_type = str(source.get("publication_type") or "publication").strip()
+    if publication_type not in CURATED_PUBLICATION_TYPES:
+        raise ValueError("Curated source has an unknown publication type")
+    return publication_type
 
 
 def _year(value: Any) -> int | None:
@@ -253,6 +269,7 @@ def build_dataset_tables(
     for position, row in enumerate(profile_publications.itertuples(index=False)):
         key = (str(row.scholar_id), str(row.author_pub_id))
         context = (contexts or {}).get(key)
+        source_publication_type = _curated_publication_type(row)
         observation_ids.append(_observation_identity(row))
         alias = reviewed_aliases.get(key)
         if alias is not None and row.source_type == "scholar":
@@ -331,7 +348,9 @@ def build_dataset_tables(
         review_reasons.append(review.reason if review else "")
         review_evidence_urls.append(review.evidence_url if review else "")
         review_dates.append(review.verified_at if review else "")
-        publication_types.append(context.publication_type if context else "publication")
+        publication_types.append(
+            context.publication_type if context else source_publication_type
+        )
         document_ids.append(context.document_id if context else "")
         context_reasons.append(context.reason if context else "")
         context_evidence_urls.append(context.evidence_url if context else "")
@@ -342,7 +361,11 @@ def build_dataset_tables(
         stable_reasons = list(dict.fromkeys(reasons))
         map_eligibility.append(not stable_reasons)
         exclusion_reasons.append(stable_reasons)
-        collaboration_eligibility.append(not stable_reasons and context is None)
+        collaboration_eligibility.append(
+            not stable_reasons
+            and context is None
+            and source_publication_type == "publication"
+        )
     for index, work_id in enumerate(work_ids):
         if work_id in unmapped_work_reasons:
             map_eligibility[index] = False
