@@ -23,9 +23,9 @@ SPEC.loader.exec_module(LOADER)
 load_staged_larsson_rows = LOADER.load_staged_larsson_rows
 
 
-def test_staged_larsson_preserves_all_66_with_global_graph_hold() -> None:
+def test_staged_larsson_preserves_all_74_with_global_graph_hold() -> None:
     rows = load_staged_larsson_rows(SOURCE)
-    assert len(rows) == len({row["observation_id"] for row in rows}) == 66
+    assert len(rows) == len({row["observation_id"] for row in rows}) == 74
     assert sum(row["source_kind"] == "researcher_owned_site" for row in rows) == 63
     assert (
         sum(
@@ -35,6 +35,10 @@ def test_staged_larsson_preserves_all_66_with_global_graph_hold() -> None:
         == 2
     )
     assert sum(row["source_kind"] == "arxiv_with_ssrn_preprint" for row in rows) == 1
+    assert sum(row["source_kind"] == "research_preprint" for row in rows) == 4
+    assert sum(row["source_kind"] == "masters_thesis" for row in rows) == 1
+    assert sum(row["source_kind"] == "withdrawn_preprint" for row in rows) == 1
+    assert sum(row["source_kind"] == "magazine_article" for row in rows) == 2
     assert all(row["primary_department_id"] == "math" for row in rows)
     assert all(row["scholar_id"] is None for row in rows)
     assert all(row["canonical_title"] is None for row in rows)
@@ -90,6 +94,28 @@ def test_staged_larsson_discussions_and_preprint_keep_distinct_dates() -> None:
         "Damir Filipovic",
         "Martin Larsson",
         "Tony Ware",
+    ]
+
+
+def test_staged_larsson_additional_artifacts_keep_genres_and_source_dates() -> None:
+    rows = {row["observation_id"]: row for row in load_staged_larsson_rows(SOURCE)}
+    assert rows["arxiv:1008.1754"]["reviewed_genre"] == "masters_thesis"
+    assert rows["arxiv:1008.1754"]["source_years"] == {
+        "arxiv_first_posted": "2010-08-10"
+    }
+    withdrawn = rows["arxiv:1104.5272"]
+    assert withdrawn["reviewed_genre"] == "withdrawn_preprint"
+    assert withdrawn["row_hold"] == "withdrawn_work_no_collaboration_edge"
+    assert withdrawn["collaboration_eligible"] is False
+    magazine = rows[
+        "ercim-news:145:optimal-gambling-strategies-when-testing-by-betting"
+    ]
+    assert magazine["reviewed_genre"] == "magazine_article"
+    assert magazine["source_years"] == {"published_date": "2026-07-01"}
+    assert magazine["canonical_title"] is None
+    assert magazine["canonical_authors"] is None
+    assert rows["arxiv:2608.09840"]["authors_as_registered"] == [
+        "Martin Larsson"
     ]
 
 

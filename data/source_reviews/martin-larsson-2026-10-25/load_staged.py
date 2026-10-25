@@ -1,4 +1,4 @@
-"""Read Larsson's 66 pinned observations without admitting them to the graph.
+"""Read Larsson's 74 pinned observations without admitting them to the graph.
 
 This module has no snapshot or publisher integration. Its output preserves
 source data for whole-researcher reconciliation while the global hold remains.
@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import gzip
 import hashlib
+import html
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -31,6 +32,16 @@ EXPECTED_PUBLISHER_URLS = {
     "10.2139/ssrn.3170978": (
         "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3170978"
     ),
+}
+EXPECTED_ADDITIONAL_IDS = {
+    "arxiv:2402.00713",
+    "arxiv:2601.05217",
+    "arxiv:2606.24768",
+    "arxiv:2608.09840",
+    "arxiv:1008.1754",
+    "arxiv:1104.5272",
+    "ercim-news:145:optimal-gambling-strategies-when-testing-by-betting",
+    "ercim-news:145:a-map-of-sub-gaussian-e-variables",
 }
 SITE_ROW_HOLDS = {
     1: "article_link_points_to_row_11",
@@ -130,7 +141,7 @@ def _common_row() -> dict[str, Any]:
 
 
 def load_staged_larsson_rows(path: Path) -> list[dict[str, Any]]:
-    """Return 66 provenance-rich, graph-ineligible source observations."""
+    """Return 74 provenance-rich, graph-ineligible source observations."""
 
     manifest = json.loads((path / "manifest.json").read_text(encoding="utf-8"))
     if (
@@ -139,8 +150,8 @@ def load_staged_larsson_rows(path: Path) -> list[dict[str, Any]]:
         or manifest.get("official_profile_url") != OFFICIAL_URL
         or manifest.get("author_site_url") != SITE_URL
         or manifest.get("author_site_observations") != 63
-        or manifest.get("separate_verified_omissions") != 3
-        or manifest.get("reviewed_observations") != 66
+        or manifest.get("separate_verified_omissions") != 11
+        or manifest.get("reviewed_observations") != 74
         or manifest.get("scholar_account_status") != "no_verified_account"
         or manifest.get("release_state") != "held_for_whole_researcher_review"
         or manifest.get("release_eligible") is not False
@@ -317,9 +328,108 @@ def load_staged_larsson_rows(path: Path) -> list[dict[str, Any]]:
             raise ValueError(f"Unknown Larsson omitted-work kind: {doi}")
         rows.append(row)
 
+    additions = _read_json(raw, "additional-held-eight.json")
+    additional_items = additions.get("observations", [])
     if (
-        len(rows) != 66
-        or len({row["observation_id"] for row in rows}) != 66
+        additions.get("schema_version") != 1
+        or additions.get("person_id") != PERSON_ID
+        or len(additional_items) != 8
+        or {item["observation_id"] for item in additional_items}
+        != EXPECTED_ADDITIONAL_IDS
+    ):
+        raise ValueError("Larsson additional source inventory changed")
+    for item in additional_items:
+        source_file = item["source_page_file"]
+        page_raw = gzip.decompress(raw[source_file])
+        page = page_raw.decode("utf-8")
+        source_kind = item["source_kind"]
+        if (
+            item["source_page_sha256"] != _sha256(page_raw)
+            or "Martin Larsson" not in item["authors_as_listed"]
+            or item["listed_in_author_site"] is not False
+            or item["scholar_profile_observation"] is not False
+            or item["release_eligible"] is not False
+            or item["map_eligible"] is not False
+            or item["collaboration_eligible"] is not False
+            or item["row_hold"] not in {
+                "whole_researcher_reconciliation_and_genre_policy",
+                "withdrawn_work_no_collaboration_edge",
+                "magazine_genre_and_whole_researcher_reconciliation",
+            }
+        ):
+            raise ValueError("Larsson additional source evidence or hold changed")
+        if source_kind in {"research_preprint", "masters_thesis", "withdrawn_preprint"}:
+            arxiv_id = item["arxiv_id"]
+            citation_date = item["arxiv_first_posted"].replace("-", "/")
+            expected_meta = [
+                f'name="citation_arxiv_id" content="{arxiv_id}"',
+                f'name="citation_title" content="{item["title_as_listed"]}"',
+                f'name="citation_date" content="{citation_date}"',
+            ]
+            expected_authors = []
+            for name in item["authors_as_listed"]:
+                given, family = name.rsplit(" ", 1)
+                expected_authors.append(
+                    f'name="citation_author" content="{family}, {given}"'
+                )
+            if (
+                item["observation_id"] != f"arxiv:{arxiv_id}"
+                or item["source_url"] != f"https://arxiv.org/abs/{arxiv_id}"
+                or source_file != f"arxiv-{arxiv_id}.html.gz"
+                or not all(meta in page for meta in expected_meta)
+                or not all(author in page for author in expected_authors)
+                or item["withdrawn"] is not (source_kind == "withdrawn_preprint")
+                or (
+                    source_kind == "withdrawn_preprint"
+                    and "This paper has been withdrawn" not in page
+                )
+            ):
+                raise ValueError("Larsson additional arXiv evidence changed")
+            source_years = {"arxiv_first_posted": item["arxiv_first_posted"]}
+        elif source_kind == "magazine_article":
+            slug = item["source_url"].rsplit("/", 1)[-1]
+            readable_page = html.unescape(page)
+            if (
+                item["observation_id"] != f"ercim-news:145:{slug}"
+                or source_file != f"ercim-{slug}.html.gz"
+                or not item["source_url"].startswith(
+                    "https://ercim-news.ercim.eu/en145/special/"
+                )
+                or f"<title>{item['title_as_listed']}</title>" not in page
+                or not all(
+                    author in readable_page for author in item["authors_as_listed"]
+                )
+                or not item["published_date"].startswith("2026-07-")
+            ):
+                raise ValueError("Larsson ERCIM evidence changed")
+            source_years = {"published_date": item["published_date"]}
+        else:
+            raise ValueError("Unknown Larsson additional source kind")
+        row = _common_row()
+        row.update(
+            {
+                "observation_id": item["observation_id"],
+                "source_kind": source_kind,
+                "source_url": item["source_url"],
+                "source_title_as_listed": item["title_as_listed"],
+                "source_citation_as_listed": None,
+                "source_links_as_listed": None,
+                "source_year_tokens_as_listed": None,
+                "source_years": source_years,
+                "year_basis": "source_date_not_normalized_for_publication",
+                "authors_as_registered": item["authors_as_listed"],
+                "authors_basis": "primary_source_byline",
+                "doi": None,
+                "reviewed_genre": source_kind,
+                "row_hold": item["row_hold"],
+                "source_record": item,
+            }
+        )
+        rows.append(row)
+
+    if (
+        len(rows) != 74
+        or len({row["observation_id"] for row in rows}) != 74
         or sum(row["source_kind"] == "researcher_owned_site" for row in rows) != 63
         or sum(
             row["source_kind"] == "publisher_registered_journal_discussion"
@@ -327,6 +437,10 @@ def load_staged_larsson_rows(path: Path) -> list[dict[str, Any]]:
         )
         != 2
         or sum(row["source_kind"] == "arxiv_with_ssrn_preprint" for row in rows) != 1
+        or sum(row["source_kind"] == "research_preprint" for row in rows) != 4
+        or sum(row["source_kind"] == "magazine_article" for row in rows) != 2
+        or sum(row["source_kind"] == "masters_thesis" for row in rows) != 1
+        or sum(row["source_kind"] == "withdrawn_preprint" for row in rows) != 1
         or any(row["map_eligible"] or row["collaboration_eligible"] for row in rows)
     ):
         raise ValueError("Larsson staged source coverage or graph hold changed")
