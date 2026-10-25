@@ -43,6 +43,8 @@ the [historical](2026-10-25-chem-kim-historical-primary-retentions.md),
 Published ACS/RSC correction notices at rows 643, 709, and 796 have their
 own DOI/page evidence and remain distinct works. The 15 confirmed rows do
 **not** represent Kim's whole publication history.
+The [additional high-citation check](2026-10-25-chem-kim-three-high-impact-holds.md)
+keeps three more initials-only records held despite suggestive related sources.
 
 The offline [preparer](prepare_chem_kim_reviewed_subset.py) recreates a
 candidate `data/authors/bC4aq-4AAAAJ.json`-shaped cache and both proposal
