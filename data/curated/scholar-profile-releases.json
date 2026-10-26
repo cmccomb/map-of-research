@@ -287,11 +287,13 @@
     {
       "person_id": "person-rupertcroft-16669f45",
       "scholar_id": "wex9ft0AAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 267,
       "cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
-      "reason": "Complete 267-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 267-row Physics source is bound to saved capture and cache hashes. Twelve exact reviewed exclusions and 83 exact provisional holds protect unresolved observations; 172 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 83,
+      "provisional_hold_ids_sha256": "4505c14599620818933feac1224566b6c10c79f6b7dbcc864d676c10955561cf"
     },
     {
       "person_id": "person-shubhayuchatterjee-34929dff",

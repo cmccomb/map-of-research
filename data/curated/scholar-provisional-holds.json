@@ -3048,6 +3048,597 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-rupertcroft-16669f45",
+      "scholar_id": "wex9ft0AAAAJ",
+      "expected_source_rows": 267,
+      "cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
+      "expected_reviewed_exclusion_rows": 12,
+      "reviewed_exclusion_ids_sha256": "a70ae469d11871d77c6b783d63677d538f566737980ad282050f5d761e1ee753",
+      "held_observations": [
+        {
+          "capture_row_index": 15,
+          "author_pub_id": "wex9ft0AAAAJ:YsMSGLbcyi4C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: SDSS DR9 journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&citation_for_view=wex9ft0AAAAJ:YsMSGLbcyi4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 20,
+          "author_pub_id": "wex9ft0AAAAJ:O3NaXMp0MMsC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: SDSS DR10 journal and proxy records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&citation_for_view=wex9ft0AAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "wex9ft0AAAAJ:blknAaTinKkC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: BOSS Ly-alpha power journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:blknAaTinKkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 51,
+          "author_pub_id": "wex9ft0AAAAJ:YOwf2qJgpHMC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: galaxy morphology journal and arXiv version.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "wex9ft0AAAAJ:0KyAp5RtaNEC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: inflation and dark-energy arXiv and BAAS white paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:0KyAp5RtaNEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 65,
+          "author_pub_id": "wex9ft0AAAAJ:5nxA0vEk-isC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Omega-M journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:5nxA0vEk-isC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 76,
+          "author_pub_id": "wex9ft0AAAAJ:Tiz5es2fbqcC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: IGM 3D map journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:Tiz5es2fbqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 81,
+          "author_pub_id": "wex9ft0AAAAJ:oNZyr7d5Mn4C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: dark-energy white-paper arXiv and blank-venue record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:oNZyr7d5Mn4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 82,
+          "author_pub_id": "wex9ft0AAAAJ:u-coK7KVo8oC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: PRIYA journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:u-coK7KVo8oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 89,
+          "author_pub_id": "wex9ft0AAAAJ:ULOm3_A8WrAC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Lyman-alpha one-point journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:ULOm3_A8WrAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 96,
+          "author_pub_id": "wex9ft0AAAAJ:Wp0gIr-vW9MC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: APM cluster-variance journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=20&pagesize=80&citation_for_view=wex9ft0AAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "wex9ft0AAAAJ:yB1At4FlUx8C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: dark-matter LSST white-paper records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:yB1At4FlUx8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 120,
+          "author_pub_id": "wex9ft0AAAAJ:tzM49s52ZIMC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: BlueTides host-galaxy journal and blank-venue record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:tzM49s52ZIMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "wex9ft0AAAAJ:-f6ydRqryjwC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:-f6ydRqryjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 139,
+          "author_pub_id": "wex9ft0AAAAJ:EkHepimYqZsC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:EkHepimYqZsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 159,
+          "author_pub_id": "wex9ft0AAAAJ:u_35RYKgDlwC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Ly-alpha cosmology proceedings and arXiv versions.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:u_35RYKgDlwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 164,
+          "author_pub_id": "wex9ft0AAAAJ:BqipwSGYUEgC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Hubble-flow broadening preprint and proceedings.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:BqipwSGYUEgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 166,
+          "author_pub_id": "wex9ft0AAAAJ:j7_hQOaDUrUC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: SimAgents preprint and conference paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:j7_hQOaDUrUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 167,
+          "author_pub_id": "wex9ft0AAAAJ:kuK5TVdYjLIC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: New Probes of Large Scale Structure arXiv:2007.00226 title variants.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 168,
+          "author_pub_id": "wex9ft0AAAAJ:XUvXOeBm_78C",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:XUvXOeBm_78C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 170,
+          "author_pub_id": "wex9ft0AAAAJ:rmuvC79q63oC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: New Probes of Large Scale Structure arXiv:2007.00226 title variants.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:rmuvC79q63oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 171,
+          "author_pub_id": "wex9ft0AAAAJ:9Nmd_mFXekcC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: IGM 3D map journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:9Nmd_mFXekcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 172,
+          "author_pub_id": "wex9ft0AAAAJ:NhqRSupF_l8C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:NhqRSupF_l8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 174,
+          "author_pub_id": "wex9ft0AAAAJ:uWQEDVKXjbEC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Ly-alpha cosmology proceedings and arXiv versions.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:uWQEDVKXjbEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 180,
+          "author_pub_id": "wex9ft0AAAAJ:vbGhcppDl1QC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Roman WFIRST journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:vbGhcppDl1QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 181,
+          "author_pub_id": "wex9ft0AAAAJ:hkOj_22Ku90C",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 184,
+          "author_pub_id": "wex9ft0AAAAJ:iH-uZ7U-co4C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: BEST SPIE presentation and proceedings records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:iH-uZ7U-co4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 185,
+          "author_pub_id": "wex9ft0AAAAJ:BwyfMAYsbu0C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Hubble-flow broadening preprint and proceedings.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:BwyfMAYsbu0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 187,
+          "author_pub_id": "wex9ft0AAAAJ:wKETBy42zhYC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: SimAgents preprint and conference paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:wKETBy42zhYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "wex9ft0AAAAJ:jL-93Qbq4QoC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Ly-alpha weak-lensing arXiv:2410.20014 title variants.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:jL-93Qbq4QoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 190,
+          "author_pub_id": "wex9ft0AAAAJ:Bg7qf7VwUHIC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:Bg7qf7VwUHIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 193,
+          "author_pub_id": "wex9ft0AAAAJ:uWiczbcajpAC",
+          "reason": "Saved title or venue may describe an overview or metadata fragment; verify the underlying output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:uWiczbcajpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 196,
+          "author_pub_id": "wex9ft0AAAAJ:5ugPr518TE4C",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:5ugPr518TE4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 197,
+          "author_pub_id": "wex9ft0AAAAJ:3s1wT3WcHBgC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:3s1wT3WcHBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 198,
+          "author_pub_id": "wex9ft0AAAAJ:ldfaerwXgEUC",
+          "reason": "Astrophysics Source Code Library entry awaits software citation and output-type policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:ldfaerwXgEUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "wex9ft0AAAAJ:4X0JR2_MtJMC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Omega-M journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=100&pagesize=100&citation_for_view=wex9ft0AAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 209,
+          "author_pub_id": "wex9ft0AAAAJ:4xDN1ZYqzskC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Ly-alpha weak-lensing arXiv:2410.20014 title variants.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:4xDN1ZYqzskC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 210,
+          "author_pub_id": "wex9ft0AAAAJ:NyGDZy8z5eUC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:NyGDZy8z5eUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 211,
+          "author_pub_id": "wex9ft0AAAAJ:LgRImbQfgY4C",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:LgRImbQfgY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "wex9ft0AAAAJ:otzGkya1bYkC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: PRIYA journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:otzGkya1bYkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 214,
+          "author_pub_id": "wex9ft0AAAAJ:xtoqd-5pKcoC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:xtoqd-5pKcoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 215,
+          "author_pub_id": "wex9ft0AAAAJ:q3CdL3IzO_QC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule. Distinct Scholar citation IDs need an exact publication/version crosswalk: inflation and dark-energy arXiv and BAAS white paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:q3CdL3IzO_QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 216,
+          "author_pub_id": "wex9ft0AAAAJ:0N-VGjzr574C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Roman WFIRST journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 217,
+          "author_pub_id": "wex9ft0AAAAJ:CaZNVDsoPx4C",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: dark-energy white-paper arXiv and blank-venue record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:CaZNVDsoPx4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "wex9ft0AAAAJ:LdasjJ6CEcoC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:LdasjJ6CEcoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 219,
+          "author_pub_id": "wex9ft0AAAAJ:-FonjvnnhkoC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: dark-matter LSST white-paper records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:-FonjvnnhkoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 220,
+          "author_pub_id": "wex9ft0AAAAJ:uc_IGeMz5qoC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: dark-matter LSST white-paper records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:uc_IGeMz5qoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "wex9ft0AAAAJ:b1wdh0AR-JQC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: BlueTides host-galaxy journal and blank-venue record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:b1wdh0AR-JQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 222,
+          "author_pub_id": "wex9ft0AAAAJ:jE2MZjpN3IcC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:jE2MZjpN3IcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 223,
+          "author_pub_id": "wex9ft0AAAAJ:MhiOAD_qIWkC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:MhiOAD_qIWkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 224,
+          "author_pub_id": "wex9ft0AAAAJ:dQ2og3OwTAUC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:dQ2og3OwTAUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 225,
+          "author_pub_id": "wex9ft0AAAAJ:1qzjygNMrQYC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:1qzjygNMrQYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 226,
+          "author_pub_id": "wex9ft0AAAAJ:cK4Rrx0J3m0C",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:cK4Rrx0J3m0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 227,
+          "author_pub_id": "wex9ft0AAAAJ:dTyEYWd-f8wC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:dTyEYWd-f8wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "wex9ft0AAAAJ:V3AGJWp-ZtQC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: SDSS DR10 journal and proxy records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:V3AGJWp-ZtQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 229,
+          "author_pub_id": "wex9ft0AAAAJ:FPJr55Dyh1AC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: SDSS DR10 journal and proxy records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:FPJr55Dyh1AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 230,
+          "author_pub_id": "wex9ft0AAAAJ:XiSMed-E-HIC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:XiSMed-E-HIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 231,
+          "author_pub_id": "wex9ft0AAAAJ:u9iWguZQMMsC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:u9iWguZQMMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 232,
+          "author_pub_id": "wex9ft0AAAAJ:p2g8aNsByqUC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:p2g8aNsByqUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 233,
+          "author_pub_id": "wex9ft0AAAAJ:UxriW0iASnsC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:UxriW0iASnsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "wex9ft0AAAAJ:Dem6FJhTUoYC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:Dem6FJhTUoYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 235,
+          "author_pub_id": "wex9ft0AAAAJ:4fKUyHm3Qg0C",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:4fKUyHm3Qg0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 236,
+          "author_pub_id": "wex9ft0AAAAJ:CB2v5VPnA5kC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: BOSS Ly-alpha power journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "wex9ft0AAAAJ:GnPB-g6toBAC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:GnPB-g6toBAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 238,
+          "author_pub_id": "wex9ft0AAAAJ:yD5IFk8b50cC",
+          "reason": "Grant, proposal, or catalog record awaits exact output-type review; it is not yet approved as a research work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:yD5IFk8b50cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 239,
+          "author_pub_id": "wex9ft0AAAAJ:nb7KW1ujOQ8C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:nb7KW1ujOQ8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 240,
+          "author_pub_id": "wex9ft0AAAAJ:gKiMpY-AVTkC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: SDSS DR9 journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:gKiMpY-AVTkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 244,
+          "author_pub_id": "wex9ft0AAAAJ:hMod-77fHWUC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:hMod-77fHWUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 246,
+          "author_pub_id": "wex9ft0AAAAJ:TIZ-Mc8IlK0C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: galaxy morphology journal and arXiv version.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:TIZ-Mc8IlK0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "wex9ft0AAAAJ:EYYDruWGBe4C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Lyman-alpha one-point journal and preprint.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:EYYDruWGBe4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "wex9ft0AAAAJ:pqnbT2bcN3wC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:pqnbT2bcN3wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "wex9ft0AAAAJ:LPtt_HFRSbwC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Title matches an excluded CMS heavy-ion report, but this rendering lacks enough author and source detail to make an exact false-attribution decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:LPtt_HFRSbwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 251,
+          "author_pub_id": "wex9ft0AAAAJ:M05iB0D1s5AC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:M05iB0D1s5AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 255,
+          "author_pub_id": "wex9ft0AAAAJ:7BrZ7Jt4UNcC",
+          "reason": "Saved title or venue may describe an overview or metadata fragment; verify the underlying output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:7BrZ7Jt4UNcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 256,
+          "author_pub_id": "wex9ft0AAAAJ:rO6llkc54NcC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: BEST SPIE presentation and proceedings records.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:rO6llkc54NcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 258,
+          "author_pub_id": "wex9ft0AAAAJ:SeFeTyx0c_EC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:SeFeTyx0c_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 259,
+          "author_pub_id": "wex9ft0AAAAJ:a0OBvERweLwC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:a0OBvERweLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 260,
+          "author_pub_id": "wex9ft0AAAAJ:_xSYboBqXhAC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: mass-power recovery preprint and proceedings.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:_xSYboBqXhAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 261,
+          "author_pub_id": "wex9ft0AAAAJ:2tRrZ1ZAMYUC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: mass-power recovery preprint and proceedings.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:2tRrZ1ZAMYUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 264,
+          "author_pub_id": "wex9ft0AAAAJ:DBa1UEJaJKAC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Forward-detector CMS title may refer to the Bristol namesake; exact source and affiliation remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:DBa1UEJaJKAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 265,
+          "author_pub_id": "wex9ft0AAAAJ:jU7OWUQzBzMC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Generic organization-title record lacks a verifiable research output and exact Croft identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:jU7OWUQzBzMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 266,
+          "author_pub_id": "wex9ft0AAAAJ:ILKRHgRFtOwC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Presentation-like title lacks a venue and source-native record; verify output type and authorship context.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:ILKRHgRFtOwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 267,
+          "author_pub_id": "wex9ft0AAAAJ:xtRiw3GOFMkC",
+          "reason": "Scholar venue is blank; verify primary source and output type before mapping. Distinct Scholar citation IDs need an exact publication/version crosswalk: APM cluster-variance journal and incomplete proxy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wex9ft0AAAAJ&cstart=200&pagesize=100&citation_for_view=wex9ft0AAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }
