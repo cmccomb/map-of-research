@@ -108,6 +108,10 @@ BIO_REGION_REFIT_FIELDS = frozenset(
     {"map_region_documented_override", "map_region_prior_eligible_override"}
 )
 MCS_PUBLISHED_PARENT = "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
+PHYSICS_FIVE_PUBLISHED_PARENT = "4e43639c091a4b826a4651eddc5aa0fe16129f0f"
+MCS_DIAGNOSTIC_PARENT_REVISIONS = frozenset(
+    {MCS_PUBLISHED_PARENT, PHYSICS_FIVE_PUBLISHED_PARENT}
+)
 # The immutable MCS parent retains the 19 reviewed Chemistry decisions. Its
 # full refit changed only these three derived diagnostics from the Bio parent.
 MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS = POST_BIO_PRIOR_ELIGIBLE_WORK_IDS | {
@@ -499,12 +503,12 @@ def validate_chemistry_parent(
     if post_bio_schema:
         prior_eligible_ids = (
             MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-            if prior_revision == MCS_PUBLISHED_PARENT
+            if prior_revision in MCS_DIAGNOSTIC_PARENT_REVISIONS
             else POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
         )
         documented_override_ids = (
             MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
-            if prior_revision == MCS_PUBLISHED_PARENT
+            if prior_revision in MCS_DIAGNOSTIC_PARENT_REVISIONS
             else {POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID}
         )
         for work_id, work in parent["works"].items():
