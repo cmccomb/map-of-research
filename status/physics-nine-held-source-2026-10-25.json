@@ -102,7 +102,11 @@
       "source_html_path": "data/captures/physics-rupert-croft-2026-10-24.html",
       "source_html_sha256": "349f4086037a3d2a5c8269407a53109bcffb24fad319dbc04196c05175634cbb",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "reviewed_for_paired_release",
+      "paired_release_review_path": "status/physics-croft-release-review-2026-10-26.json",
+      "reviewed_exclusion_count": 12,
+      "provisional_hold_count": 83,
+      "ordinary_gate_rows": 172
     },
     {
       "scholar_id": "wovjAPsAAAAJ",
