@@ -7,9 +7,9 @@ Saved complete visible profile captures and redacted HTML are in the paired sour
 | Faculty | Source rows | Exact holds | Ordinary gate rows |
 | --- | ---: | ---: | ---: |
 | Chris Donahue | 81 | 24 | 57 |
-| David Andersen | 243 | 76 | 167 |
+| David Andersen | 243 | 92 | 151 |
 | Feras Saad | 35 | 2 | 33 |
-| Mor Harchol-Balter | 363 | 131 | 232 |
-| Nathan Beckmann | 106 | 47 | 59 |
+| Mor Harchol-Balter | 363 | 151 | 212 |
+| Nathan Beckmann | 106 | 52 | 54 |
 
 This draft must remain paired with the source branch. Preview all seven hosted files against the current immutable Hub parent before any merge or upload decision.

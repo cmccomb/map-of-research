@@ -366,10 +366,10 @@
       "state": "released",
       "expected_source_rows": 243,
       "cache_sha256": "1cd694f928a4d281f4440aa6e59d92ba7b23b3cadf47d6939a73393c96be144d",
-      "reason": "Complete visible 243-row official-ID CSD Scholar capture; 76 exact uncertain observations held, 167 ordinary observations enter existing quality gates.",
+      "reason": "Complete visible 243-row official-ID CSD Scholar capture; 92 exact uncertain observations held, 151 ordinary observations enter existing quality gates.",
       "reviewed_at": "2026-10-26",
-      "expected_provisional_hold_rows": 76,
-      "provisional_hold_ids_sha256": "a00c082f5209812a60c6d86ff38df5fefd3239ff3c18205abaf1decb0172d1ce"
+      "expected_provisional_hold_rows": 92,
+      "provisional_hold_ids_sha256": "e3a76cb35f07f02032db231c932ecccd27bee70138f8e4e5b86d930aa62b0026"
     },
     {
       "person_id": "person-ferassaad-434298ab",
@@ -388,10 +388,10 @@
       "state": "released",
       "expected_source_rows": 363,
       "cache_sha256": "8fa23139a0e757ef5fd0ec55825585f352af57f06f3db85366d33fa9a29e16e8",
-      "reason": "Complete visible 363-row official-ID CSD Scholar capture; 131 exact uncertain observations held, 232 ordinary observations enter existing quality gates.",
+      "reason": "Complete visible 363-row official-ID CSD Scholar capture; 151 exact uncertain observations held, 212 ordinary observations enter existing quality gates.",
       "reviewed_at": "2026-10-26",
-      "expected_provisional_hold_rows": 131,
-      "provisional_hold_ids_sha256": "6feda401ad5601eca006e5c20022b9bf6dbc0b5ee9c342615e13784a49c39302"
+      "expected_provisional_hold_rows": 151,
+      "provisional_hold_ids_sha256": "bc0b6bb03a5b3a9a81aaf047d8e32869bdd041d576563f7cb99fcd86b6d71dcc"
     },
     {
       "person_id": "person-nathanbeckmann-e1f2dc77",
@@ -399,10 +399,10 @@
       "state": "released",
       "expected_source_rows": 106,
       "cache_sha256": "7941b3cf81a1451003ca59468b28d6318172954ad5626eee8d4df19c480fb404",
-      "reason": "Complete visible 106-row official-ID CSD Scholar capture; 47 exact uncertain observations held, 59 ordinary observations enter existing quality gates.",
+      "reason": "Complete visible 106-row official-ID CSD Scholar capture; 52 exact uncertain observations held, 54 ordinary observations enter existing quality gates.",
       "reviewed_at": "2026-10-26",
-      "expected_provisional_hold_rows": 47,
-      "provisional_hold_ids_sha256": "b9fb1f312150d094bb6f3cb212b5356e4d85d78368173e3d717dfcb147a7af75"
+      "expected_provisional_hold_rows": 52,
+      "provisional_hold_ids_sha256": "f4509a45ec9a156ad95d40e2e560ae75320aa13b0f3a475f5ef6bb86bbd7929c"
     }
   ]
 }
