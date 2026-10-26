@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-carolynrose-0ff383b5",
+  "display_name": "Carolyn Rosé",
+  "scholar_profile_name": "Carolyn Penstein Rose",
+  "scholar_id": "BMydCgcAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/index%2ephp/people/carolyn-rose",
+  "scholar_id_source_url": "https://hcii.cmu.edu/index%2ephp/people/carolyn-rose",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:02:56.643953+00:00",
+  "publication_count": 677,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 7,
+  "show_more_click_count": 6,
+  "source_json_path": "data/captures/scs-carolyn-rose-2026-10-26.json",
+  "source_json_sha256": "1a6d927aa2fa333ae11ba6e3df8fcb845380d1fb4d7b118f3d9e65b06a80275f",
+  "source_html_path": "data/captures/scs-carolyn-rose-2026-10-26.html",
+  "source_html_sha256": "9bd42af1a841bd6944f0947e6d886c508b9063721d0d3d03a4c3dc91f303802e",
+  "cache_path": "data/authors/BMydCgcAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

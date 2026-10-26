@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-bradmyers-b811e12e",
+  "display_name": "Brad Myers",
+  "scholar_profile_name": "Brad A. Myers",
+  "scholar_id": "E1cp_aYAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/index%2ephp/people/brad-myers",
+  "scholar_id_source_url": "https://hcii.cmu.edu/index%2ephp/people/brad-myers",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:17:50.688983+00:00",
+  "publication_count": 707,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 7,
+  "source_json_path": "data/captures/scs-brad-myers-2026-10-26.json",
+  "source_json_sha256": "aca5d7be72cfc8eec5240a70ad88cafa4999d0098f592872599fc7239a05dba0",
+  "source_html_path": "data/captures/scs-brad-myers-2026-10-26.html",
+  "source_html_sha256": "f0da5bb768e1bad21925fb61e80fa39c9a16eec4df7ad57f6720d3f1ea5efc16",
+  "cache_path": "data/authors/E1cp_aYAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

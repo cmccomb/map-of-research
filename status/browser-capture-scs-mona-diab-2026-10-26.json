@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-monadiab-7b90c255",
+  "display_name": "Mona Diab",
+  "scholar_profile_name": "Mona Diab",
+  "scholar_id": "-y6SIhQAAAAJ",
+  "official_identity_url": "https://www.lti.cs.cmu.edu/people/faculty/diab-mona.html",
+  "scholar_id_source_url": "https://www.lti.cs.cmu.edu/people/faculty/diab-mona.html",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:03:59.827621+00:00",
+  "publication_count": 413,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 5,
+  "show_more_click_count": 4,
+  "source_json_path": "data/captures/scs-mona-diab-2026-10-26.json",
+  "source_json_sha256": "4222f2f63e04b74312c1dbcb4e1e28d4ed6e3003b047a1a2630dedc874432420",
+  "source_html_path": "data/captures/scs-mona-diab-2026-10-26.html",
+  "source_html_sha256": "191c90beccd203558a6f166323d8207dd171ca1b3c11bcca1843ea2a10936a69",
+  "cache_path": "data/authors/-y6SIhQAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
