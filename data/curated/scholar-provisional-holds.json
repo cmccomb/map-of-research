@@ -19958,6 +19958,814 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-saramajetich-69037290",
+      "scholar_id": "FRlLpMYAAAAJ",
+      "expected_source_rows": 271,
+      "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
+      "expected_reviewed_exclusion_rows": 27,
+      "reviewed_exclusion_ids_sha256": "a484ea1edf6eeda28805b922bc5c153c565e2a08dd2cfb2a29b1ce2329989008",
+      "held_observations": [
+        {
+          "capture_row_index": 2,
+          "author_pub_id": "FRlLpMYAAAAJ:UebtZRa9Y70C",
+          "reason": "Saved rendering resembles row(s) 136, 153; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&citation_for_view=FRlLpMYAAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 16,
+          "author_pub_id": "FRlLpMYAAAAJ:LI9QrySNdTsC",
+          "reason": "Same normalized saved title appears at row(s) 186; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&citation_for_view=FRlLpMYAAAAJ:LI9QrySNdTsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 25,
+          "author_pub_id": "FRlLpMYAAAAJ:_FxGoFyzp5QC",
+          "reason": "Saved rendering resembles row(s) 247; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:_FxGoFyzp5QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 32,
+          "author_pub_id": "FRlLpMYAAAAJ:Se3iqnhoufwC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 35,
+          "author_pub_id": "FRlLpMYAAAAJ:5nxA0vEk-isC",
+          "reason": "Same normalized saved title appears at row(s) 251; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:5nxA0vEk-isC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 54,
+          "author_pub_id": "FRlLpMYAAAAJ:Wp0gIr-vW9MC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 68,
+          "author_pub_id": "FRlLpMYAAAAJ:-f6ydRqryjwC",
+          "reason": "Saved rendering resembles row(s) 228; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:-f6ydRqryjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 78,
+          "author_pub_id": "FRlLpMYAAAAJ:7PzlFSSx8tAC",
+          "reason": "Saved rendering resembles row(s) 83; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:7PzlFSSx8tAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 79,
+          "author_pub_id": "FRlLpMYAAAAJ:HDshCWvjkbEC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:HDshCWvjkbEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 83,
+          "author_pub_id": "FRlLpMYAAAAJ:r0BpntZqJG4C",
+          "reason": "Saved rendering resembles row(s) 78; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:r0BpntZqJG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 97,
+          "author_pub_id": "FRlLpMYAAAAJ:maZDTaKrznsC",
+          "reason": "Same normalized saved title appears at row(s) 250; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:maZDTaKrznsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 103,
+          "author_pub_id": "FRlLpMYAAAAJ:J_g5lzvAfSwC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:J_g5lzvAfSwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 107,
+          "author_pub_id": "FRlLpMYAAAAJ:g5m5HwL7SMYC",
+          "reason": "Saved rendering resembles row(s) 248; establish the source-native output or version before assigning separate points.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:g5m5HwL7SMYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 113,
+          "author_pub_id": "FRlLpMYAAAAJ:HoB7MX3m0LUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HoB7MX3m0LUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 114,
+          "author_pub_id": "FRlLpMYAAAAJ:SP6oXDckpogC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:SP6oXDckpogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 120,
+          "author_pub_id": "FRlLpMYAAAAJ:b0M2c_1WBrUC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:b0M2c_1WBrUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "FRlLpMYAAAAJ:P5F9QuxV20EC",
+          "reason": "Same normalized saved title appears at row(s) 189; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:P5F9QuxV20EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 126,
+          "author_pub_id": "FRlLpMYAAAAJ:zA6iFVUQeVQC",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:zA6iFVUQeVQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 127,
+          "author_pub_id": "FRlLpMYAAAAJ:3s1wT3WcHBgC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:3s1wT3WcHBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 130,
+          "author_pub_id": "FRlLpMYAAAAJ:tYavs44e6CUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:tYavs44e6CUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 133,
+          "author_pub_id": "FRlLpMYAAAAJ:xtRiw3GOFMkC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 136,
+          "author_pub_id": "FRlLpMYAAAAJ:ML0RJ9NH7IQC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ML0RJ9NH7IQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "FRlLpMYAAAAJ:CHSYGLWDkRkC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:CHSYGLWDkRkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "FRlLpMYAAAAJ:4OULZ7Gr8RgC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4OULZ7Gr8RgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "FRlLpMYAAAAJ:fPk4N6BV_jEC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:fPk4N6BV_jEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 144,
+          "author_pub_id": "FRlLpMYAAAAJ:EUQCXRtRnyEC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 145,
+          "author_pub_id": "FRlLpMYAAAAJ:a0OBvERweLwC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:a0OBvERweLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 146,
+          "author_pub_id": "FRlLpMYAAAAJ:f2IySw72cVMC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:f2IySw72cVMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 148,
+          "author_pub_id": "FRlLpMYAAAAJ:NJ774b8OgUMC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:NJ774b8OgUMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 150,
+          "author_pub_id": "FRlLpMYAAAAJ:OR75R8vi5nAC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OR75R8vi5nAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 153,
+          "author_pub_id": "FRlLpMYAAAAJ:dshw04ExmUIC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dshw04ExmUIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "FRlLpMYAAAAJ:u9iWguZQMMsC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:u9iWguZQMMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "FRlLpMYAAAAJ:OU6Ihb5iCvQC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OU6Ihb5iCvQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 156,
+          "author_pub_id": "FRlLpMYAAAAJ:W5xh706n7nkC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:W5xh706n7nkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 158,
+          "author_pub_id": "FRlLpMYAAAAJ:XiSMed-E-HIC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:XiSMed-E-HIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 159,
+          "author_pub_id": "FRlLpMYAAAAJ:9vf0nzSNQJEC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:9vf0nzSNQJEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 160,
+          "author_pub_id": "FRlLpMYAAAAJ:cFHS6HbyZ2cC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:cFHS6HbyZ2cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 161,
+          "author_pub_id": "FRlLpMYAAAAJ:KUbvn5osdkgC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:KUbvn5osdkgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 162,
+          "author_pub_id": "FRlLpMYAAAAJ:Z5m8FVwuT1cC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Z5m8FVwuT1cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 163,
+          "author_pub_id": "FRlLpMYAAAAJ:HIFyuExEbWQC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HIFyuExEbWQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 164,
+          "author_pub_id": "FRlLpMYAAAAJ:BrmTIyaxlBUC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:BrmTIyaxlBUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 165,
+          "author_pub_id": "FRlLpMYAAAAJ:J-pR_7NvFogC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:J-pR_7NvFogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 166,
+          "author_pub_id": "FRlLpMYAAAAJ:sSrBHYA8nusC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:sSrBHYA8nusC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 168,
+          "author_pub_id": "FRlLpMYAAAAJ:eq2jaN3J8jMC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eq2jaN3J8jMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 169,
+          "author_pub_id": "FRlLpMYAAAAJ:KxtntwgDAa4C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:KxtntwgDAa4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 171,
+          "author_pub_id": "FRlLpMYAAAAJ:TIZ-Mc8IlK0C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:TIZ-Mc8IlK0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 175,
+          "author_pub_id": "FRlLpMYAAAAJ:4X0JR2_MtJMC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 178,
+          "author_pub_id": "FRlLpMYAAAAJ:Ehil0879vHcC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Ehil0879vHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 180,
+          "author_pub_id": "FRlLpMYAAAAJ:HtS1dXgVpQUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HtS1dXgVpQUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 181,
+          "author_pub_id": "FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 183,
+          "author_pub_id": "FRlLpMYAAAAJ:XvxMoLDsR5gC",
+          "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:XvxMoLDsR5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 184,
+          "author_pub_id": "FRlLpMYAAAAJ:Dip1O2bNi0gC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Dip1O2bNi0gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 187,
+          "author_pub_id": "FRlLpMYAAAAJ:k8Z6L05lTy4C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:k8Z6L05lTy4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "FRlLpMYAAAAJ:t6usbXjVLHcC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:t6usbXjVLHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 190,
+          "author_pub_id": "FRlLpMYAAAAJ:5ugPr518TE4C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5ugPr518TE4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 191,
+          "author_pub_id": "FRlLpMYAAAAJ:OcBU2YAGkTUC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 192,
+          "author_pub_id": "FRlLpMYAAAAJ:eJXPG6dFmWUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eJXPG6dFmWUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 195,
+          "author_pub_id": "FRlLpMYAAAAJ:PELIpwtuRlgC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:PELIpwtuRlgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 196,
+          "author_pub_id": "FRlLpMYAAAAJ:N5tVd3kTz84C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:N5tVd3kTz84C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 197,
+          "author_pub_id": "FRlLpMYAAAAJ:geHnlv5EZngC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:geHnlv5EZngC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "FRlLpMYAAAAJ:vRqMK49ujn8C",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 200,
+          "author_pub_id": "FRlLpMYAAAAJ:4vMrXwiscB8C",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4vMrXwiscB8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 201,
+          "author_pub_id": "FRlLpMYAAAAJ:WbkHhVStYXYC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:WbkHhVStYXYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 204,
+          "author_pub_id": "FRlLpMYAAAAJ:_Re3VWB3Y0AC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_Re3VWB3Y0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 205,
+          "author_pub_id": "FRlLpMYAAAAJ:7T2F9Uy0os0C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:7T2F9Uy0os0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 206,
+          "author_pub_id": "FRlLpMYAAAAJ:ZuybSZzF8UAC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZuybSZzF8UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 207,
+          "author_pub_id": "FRlLpMYAAAAJ:LjlpjdlvIbIC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LjlpjdlvIbIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 208,
+          "author_pub_id": "FRlLpMYAAAAJ:VOx2b1Wkg3QC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:VOx2b1Wkg3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 209,
+          "author_pub_id": "FRlLpMYAAAAJ:LPZeul_q3PIC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LPZeul_q3PIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 210,
+          "author_pub_id": "FRlLpMYAAAAJ:5Ul4iDaHHb8C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5Ul4iDaHHb8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 211,
+          "author_pub_id": "FRlLpMYAAAAJ:8AbLer7MMksC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "FRlLpMYAAAAJ:evX43VCCuoAC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:evX43VCCuoAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 213,
+          "author_pub_id": "FRlLpMYAAAAJ:oNZyr7d5Mn4C",
+          "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:oNZyr7d5Mn4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 217,
+          "author_pub_id": "FRlLpMYAAAAJ:Y5dfb0dijaUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Y5dfb0dijaUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "FRlLpMYAAAAJ:Fu2w8maKXqMC",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Fu2w8maKXqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 219,
+          "author_pub_id": "FRlLpMYAAAAJ:hkOj_22Ku90C",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 220,
+          "author_pub_id": "FRlLpMYAAAAJ:eflP2zaiRacC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eflP2zaiRacC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "FRlLpMYAAAAJ:bnK-pcrLprsC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:bnK-pcrLprsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 223,
+          "author_pub_id": "FRlLpMYAAAAJ:tOudhMTPpwUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:tOudhMTPpwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 225,
+          "author_pub_id": "FRlLpMYAAAAJ:ye4kPcJQO24C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ye4kPcJQO24C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 226,
+          "author_pub_id": "FRlLpMYAAAAJ:5awf1xo2G04C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5awf1xo2G04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 227,
+          "author_pub_id": "FRlLpMYAAAAJ:PR6Y55bgFSsC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:PR6Y55bgFSsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "FRlLpMYAAAAJ:F1b5ZUV5XREC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:F1b5ZUV5XREC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 230,
+          "author_pub_id": "FRlLpMYAAAAJ:ZfRJV9d4-WMC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZfRJV9d4-WMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 231,
+          "author_pub_id": "FRlLpMYAAAAJ:dQ2og3OwTAUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dQ2og3OwTAUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 232,
+          "author_pub_id": "FRlLpMYAAAAJ:mvPsJ3kp5DgC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:mvPsJ3kp5DgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 233,
+          "author_pub_id": "FRlLpMYAAAAJ:kuK5TVdYjLIC",
+          "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "FRlLpMYAAAAJ:VL0QpB8kHFEC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:VL0QpB8kHFEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 236,
+          "author_pub_id": "FRlLpMYAAAAJ:WqliGbK-hY8C",
+          "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:WqliGbK-hY8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 238,
+          "author_pub_id": "FRlLpMYAAAAJ:a9-T7VOCCH8C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:a9-T7VOCCH8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 239,
+          "author_pub_id": "FRlLpMYAAAAJ:kRWSkSYxWN8C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:kRWSkSYxWN8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 240,
+          "author_pub_id": "FRlLpMYAAAAJ:738O_yMBCRsC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:738O_yMBCRsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 241,
+          "author_pub_id": "FRlLpMYAAAAJ:JQOojiI6XY0C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:JQOojiI6XY0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 242,
+          "author_pub_id": "FRlLpMYAAAAJ:fQNAKQ3IYiAC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:fQNAKQ3IYiAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 243,
+          "author_pub_id": "FRlLpMYAAAAJ:1yQoGdGgb4wC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:1yQoGdGgb4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 244,
+          "author_pub_id": "FRlLpMYAAAAJ:08ZZubdj9fEC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 245,
+          "author_pub_id": "FRlLpMYAAAAJ:dBIO0h50nwkC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dBIO0h50nwkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "FRlLpMYAAAAJ:2KloaMYe4IUC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "FRlLpMYAAAAJ:HE397vMXCloC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HE397vMXCloC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 249,
+          "author_pub_id": "FRlLpMYAAAAJ:_OXeSy2IsFwC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_OXeSy2IsFwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "FRlLpMYAAAAJ:Mojj43d5GZwC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 252,
+          "author_pub_id": "FRlLpMYAAAAJ:SdhP9T11ey4C",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:SdhP9T11ey4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 254,
+          "author_pub_id": "FRlLpMYAAAAJ:hCrLmN-GePgC",
+          "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:hCrLmN-GePgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 255,
+          "author_pub_id": "FRlLpMYAAAAJ:F9fV5C73w3QC",
+          "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 256,
+          "author_pub_id": "FRlLpMYAAAAJ:_Ybze24A_UAC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_Ybze24A_UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 257,
+          "author_pub_id": "FRlLpMYAAAAJ:eMMeJKvmdy0C",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eMMeJKvmdy0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 259,
+          "author_pub_id": "FRlLpMYAAAAJ:LgRImbQfgY4C",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LgRImbQfgY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 260,
+          "author_pub_id": "FRlLpMYAAAAJ:ZzlSgRqYykMC",
+          "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZzlSgRqYykMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 261,
+          "author_pub_id": "FRlLpMYAAAAJ:OP4eGU-M3BUC",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OP4eGU-M3BUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 262,
+          "author_pub_id": "FRlLpMYAAAAJ:r_AWSJRzSzQC",
+          "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:r_AWSJRzSzQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 268,
+          "author_pub_id": "FRlLpMYAAAAJ:wbdj-CoPYUoC",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:wbdj-CoPYUoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 269,
+          "author_pub_id": "FRlLpMYAAAAJ:1qzjygNMrQYC",
+          "reason": "Saved record has no year; identify the source publication and version before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:1qzjygNMrQYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 270,
+          "author_pub_id": "FRlLpMYAAAAJ:q3oQSFYPqjQC",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:q3oQSFYPqjQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 271,
+          "author_pub_id": "FRlLpMYAAAAJ:Tiz5es2fbqcC",
+          "reason": "Saved record has no venue; identify the source publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Tiz5es2fbqcC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }
