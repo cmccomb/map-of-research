@@ -88,6 +88,8 @@ def _files(root: Path, decisions: tuple[ReviewedRegionDecision, ...]) -> dict:
                 "map_eligible": item.visible,
                 "collaboration_eligible": item.visible,
                 "map_region_outlier": False,
+                "memberships": [{"person_id": item.person_id, "department_id": "chem"}],
+                "department_ids": ["chem"],
                 "keyword_id": "broad" if item.visible else "",
                 "detail_keyword_id": "detail" if item.visible else "",
                 "map_region_audit_version": "low-information-semantic-region-v2",
@@ -121,6 +123,8 @@ def _files(root: Path, decisions: tuple[ReviewedRegionDecision, ...]) -> dict:
                 "work_id": item.work_id,
                 "keyword_ids": ["broad", "detail"],
                 "faculty_ids": [item.person_id],
+                "department_ids": ["chem"],
+                "school_ids": ["mcs"],
                 "x": 0.25,
             }
             for item in decisions
@@ -166,18 +170,21 @@ def _post_bio_parent(
 ) -> None:
     """Model only the reviewed Bio stage derivations, including parent counts."""
 
+    visible = _visible_ids(decisions)
+    documented_id = next(
+        work_id
+        for work_id in visible
+        if work_id
+        != "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
+    )
     _rewrite_rows(
         files["works/train-00000-of-00001.parquet"],
         lambda rows: [
             row.update(
-                map_region_prior_eligible_override=(
-                    row["work_id"] in continuity.POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
-                ),
+                map_region_prior_eligible_override=(row["work_id"] in visible[:5]),
                 map_region_prior_excluded_override=False,
                 map_region_audit_version=continuity.POST_BIO_REGION_AUDIT_VERSION,
-                map_region_documented_override=(
-                    row["work_id"] == continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
-                ),
+                map_region_documented_override=(row["work_id"] == documented_id),
             )
             for row in rows
         ],
@@ -197,46 +204,32 @@ def _post_bio_parent(
     )
 
 
-def _mcs_published_parent(files: dict, *, prior_revision: str = "") -> None:
-    """Apply the exact derived Chemistry diagnostics for a later Hub parent."""
-
-    eligible_ids = (
-        continuity.PHYSICS_HDF_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-        if prior_revision == continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT
-        else continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-    )
-
-    _rewrite_rows(
-        files["works/train-00000-of-00001.parquet"],
-        lambda rows: [
-            row.update(
-                map_region_prior_eligible_override=(row["work_id"] in eligible_ids),
-                map_region_documented_override=(
-                    row["work_id"] in continuity.MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
-                ),
-            )
-            for row in rows
-        ],
-    )
+def _visible_ids(decisions: tuple[ReviewedRegionDecision, ...]) -> list[str]:
+    return [item.work_id for item in decisions if item.visible]
 
 
 @pytest.mark.parametrize(
-    "prior_revision",
-    (
-        continuity.MCS_PUBLISHED_PARENT,
-        continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
-        continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
-    ),
+    "prior_revision", ("37c709267b78720be48e63ef360ea71d15553e3c", "a" * 40)
 )
-def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
-    tmp_path: Path,
-    prior_revision: str,
+def test_later_parent_accepts_derived_diagnostics_without_revision_pins(
+    tmp_path: Path, prior_revision: str
 ) -> None:
     decisions = _decisions()
     baseline = _files(tmp_path / "baseline", decisions)
     parent = _files(tmp_path / "parent", decisions)
     _post_bio_parent(parent, decisions)
-    _mcs_published_parent(parent, prior_revision=prior_revision)
+    works_path = parent["works/train-00000-of-00001.parquet"]
+    visible = _visible_ids(decisions)
+    _rewrite_rows(
+        works_path,
+        lambda rows: [
+            row.update(
+                map_region_prior_eligible_override=(row["work_id"] in visible[3:8]),
+                map_region_documented_override=(row["work_id"] in visible[7:9]),
+            )
+            for row in rows
+        ],
+    )
     state = validate_chemistry_parent(
         decisions,
         baseline_files=baseline,
@@ -244,375 +237,227 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
         prior_revision=prior_revision,
     )
     assert state["reviewed_works"] == 19
-    tables = {
-        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
-        for name in ("works", "profile_publications", "authorships", "people")
-    }
-    validate_chemistry_candidate(tables, state, require_count_parity=True)
-    with pytest.raises(ValueError, match="work derivation changed"):
-        validate_chemistry_parent(
-            decisions,
-            baseline_files=baseline,
-            parent_files=parent,
-            prior_revision=continuity.BIO_REGION_REFIT_PARENT,
-        )
+    assert state["visible_works"] == 10
+    assert state["parent_rows"]["points"][visible[0]]["faculty_ids"] == [
+        next(item.person_id for item in decisions if item.work_id == visible[0])
+    ]
+
+
+@pytest.mark.parametrize(
+    ("mutation", "message"),
+    (
+        ("hidden_prior", "work derivation changed"),
+        ("hidden_documented", "work derivation changed"),
+        ("nonbool", "work derivation changed"),
+        ("prior_excluded", "work derivation changed"),
+        ("audit_version", "work derivation changed"),
+        ("visibility", "parent decision changed"),
+        ("membership", "work payload changed"),
+        ("profile_source", "profile payload changed"),
+        ("authorship", "authored visibility changed"),
+        ("map_point_pair", "map point payload changed"),
+    ),
+)
+def test_later_parent_keeps_reviewed_substance_frozen(
+    tmp_path: Path, mutation: str, message: str
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
     works = parent["works/train-00000-of-00001.parquet"]
-    for work_id, field, changed_value in (
-        (
-            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
-            "map_region_prior_eligible_override",
-            False,
-        ),
-        (
-            "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
-            "map_region_prior_eligible_override",
-            prior_revision == continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
-        ),
-        (
-            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
-            "map_region_documented_override",
-            False,
-        ),
-    ):
+    visible = set(_visible_ids(decisions))
+    hidden = next(item.work_id for item in decisions if not item.visible)
+    if mutation in {
+        "hidden_prior",
+        "hidden_documented",
+        "nonbool",
+        "prior_excluded",
+        "audit_version",
+        "visibility",
+        "membership",
+    }:
+
+        def change(rows: list[dict]) -> None:
+            target = next(row for row in rows if row["work_id"] == hidden)
+            if mutation == "hidden_prior":
+                target["map_region_prior_eligible_override"] = True
+            elif mutation == "hidden_documented":
+                target["map_region_documented_override"] = True
+            else:
+                target = next(row for row in rows if row["work_id"] in visible)
+                if mutation == "nonbool":
+                    for row in rows:
+                        row["map_region_documented_override"] = int(
+                            row["map_region_documented_override"]
+                        )
+                elif mutation == "prior_excluded":
+                    target["map_region_prior_excluded_override"] = True
+                elif mutation == "audit_version":
+                    target["map_region_audit_version"] = "changed"
+                elif mutation == "visibility":
+                    target["map_eligible"] = False
+                else:
+                    target["memberships"] = [
+                        {"person_id": "different", "department_id": "chem"}
+                    ]
+
+        _rewrite_rows(works, change)
+    elif mutation == "profile_source":
         _rewrite_rows(
-            works,
-            lambda rows, work_id=work_id, field=field, changed_value=changed_value: (
-                next(row for row in rows if row["work_id"] == work_id).update(
-                    {field: changed_value}
-                )
-            ),
+            parent["profile_publications/train-00000-of-00001.parquet"],
+            lambda rows: rows[0].update(review_evidence_url="changed"),
         )
-        with pytest.raises(ValueError, match="work derivation changed"):
-            validate_chemistry_parent(
-                decisions,
-                baseline_files=baseline,
-                parent_files=parent,
-                prior_revision=prior_revision,
-            )
-        _mcs_published_parent(parent, prior_revision=prior_revision)
-    _rewrite_rows(
-        works,
-        lambda rows: next(
-            row
-            for row in rows
-            if row["work_id"] not in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-        ).update(map_region_prior_eligible_override=True),
-    )
-    with pytest.raises(ValueError, match="work derivation changed"):
+    elif mutation == "authorship":
+        _rewrite_rows(
+            parent["authorships/train-00000-of-00001.parquet"],
+            lambda rows: rows.pop(),
+        )
+    else:
+        path = parent["maps/publications.json"]
+        artifact = json.loads(path.read_text())
+        artifact["points"][0]["faculty_ids"] = ["different"]
+        path.write_text(json.dumps(artifact))
+    with pytest.raises(ValueError, match=message):
         validate_chemistry_parent(
             decisions,
             baseline_files=baseline,
             parent_files=parent,
-            prior_revision=prior_revision,
-        )
-    _mcs_published_parent(parent, prior_revision=prior_revision)
-    _rewrite_rows(
-        works,
-        lambda rows: next(
-            row for row in rows if row["work_id"] in state["parent_rows"]["points"]
-        ).update(map_eligible=False),
-    )
-    with pytest.raises(ValueError, match="Chemistry parent decision changed"):
-        validate_chemistry_parent(
-            decisions,
-            baseline_files=baseline,
-            parent_files=parent,
-            prior_revision=prior_revision,
+            prior_revision="a" * 40,
         )
 
 
-def test_physics_hdf_parent_accepts_only_its_published_chemistry_diagnostics(
+def test_fresh_layout_allows_both_diagnostic_directions_on_visible_works(
     tmp_path: Path,
 ) -> None:
     decisions = _decisions()
     baseline = _files(tmp_path / "baseline", decisions)
     parent = _files(tmp_path / "parent", decisions)
     _post_bio_parent(parent, decisions)
-    _mcs_published_parent(parent)
-    rule_of_four = (
-        "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
-    )
-    works = parent["works/train-00000-of-00001.parquet"]
-    _rewrite_rows(
-        works,
-        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
-            map_region_prior_eligible_override=False
-        ),
-    )
     state = validate_chemistry_parent(
         decisions,
         baseline_files=baseline,
         parent_files=parent,
-        prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
-    )
-    assert state["reviewed_works"] == 19
-    tables = {
-        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
-        for name in ("works", "profile_publications", "authorships", "people")
-    }
-    for work_id, field in (
-        (
-            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
-            "map_region_prior_eligible_override",
-        ),
-        (
-            continuity.MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID,
-            "map_region_documented_override",
-        ),
-    ):
-        tables["works"].loc[tables["works"]["work_id"].eq(work_id), field] = False
-    with pytest.raises(ValueError, match="candidate works changed"):
-        validate_chemistry_candidate(tables, state)
-    validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
-    documented = continuity.PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID
-    tables["works"].loc[
-        tables["works"]["work_id"].eq(documented),
-        "map_region_documented_override",
-    ] = False
-    with pytest.raises(ValueError, match=rf"candidate works changed: {documented}"):
-        validate_chemistry_candidate(
-            tables, state, allow_mcs_parent_diagnostic_refit=True
-        )
-    validate_chemistry_candidate(
-        tables,
-        state,
-        allow_mcs_parent_diagnostic_refit=True,
-        allow_physics_hdf_das_diagnostic_refit=True,
-    )
-    tables["works"].loc[
-        tables["works"]["work_id"].eq(rule_of_four),
-        "map_region_prior_eligible_override",
-    ] = True
-    with pytest.raises(ValueError, match=rf"candidate works changed: {rule_of_four}"):
-        validate_chemistry_candidate(
-            tables,
-            state,
-            allow_mcs_parent_diagnostic_refit=True,
-            allow_physics_hdf_das_diagnostic_refit=True,
-        )
-    with pytest.raises(ValueError, match="work derivation changed"):
-        validate_chemistry_parent(
-            decisions,
-            baseline_files=baseline,
-            parent_files=parent,
-            prior_revision=continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
-        )
-    _rewrite_rows(
-        works,
-        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
-            map_region_prior_eligible_override=True
-        ),
-    )
-    with pytest.raises(ValueError, match="work derivation changed"):
-        validate_chemistry_parent(
-            decisions,
-            baseline_files=baseline,
-            parent_files=parent,
-            prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
-        )
-
-
-def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
-    kwargs = {
-        "prior_revision": continuity.MCS_PUBLISHED_PARENT,
-        "source_sha256": continuity.BIO_REGION_REFIT_SOURCE_SHA256,
-        "layout_reused": False,
-    }
-    assert continuity.allows_mcs_parent_diagnostic_refit(**kwargs)
-    for changed in (
-        {"prior_revision": continuity.BIO_REGION_REFIT_PARENT},
-        {"source_sha256": "0" * 64},
-        {"layout_reused": True},
-    ):
-        assert not continuity.allows_mcs_parent_diagnostic_refit(**(kwargs | changed))
-
-
-def test_physics_hdf_das_refit_requires_exact_parent_source_and_layout() -> None:
-    kwargs = {
-        "prior_revision": continuity.PHYSICS_HDF_PUBLISHED_PARENT,
-        "source_sha256": continuity.PHYSICS_HDF_DAS_SNAPSHOT_SHA256,
-        "layout_reused": False,
-    }
-    assert continuity.allows_physics_hdf_das_diagnostic_refit(**kwargs)
-    for changed in (
-        {"prior_revision": continuity.PHYSICS_FIVE_PUBLISHED_PARENT},
-        {"source_sha256": "0" * 64},
-        {"layout_reused": True},
-    ):
-        assert not continuity.allows_physics_hdf_das_diagnostic_refit(
-            **(kwargs | changed)
-        )
-
-
-def test_physics_five_region_refit_requires_exact_parent_source_and_layout() -> None:
-    kwargs = {
-        "prior_revision": continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
-        "source_sha256": continuity.BIO_REGION_REFIT_SOURCE_SHA256,
-        "layout_reused": False,
-    }
-    assert continuity.allows_physics_five_region_refit(**kwargs)
-    for changed in (
-        {"prior_revision": continuity.BIO_REGION_REFIT_PARENT},
-        {"prior_revision": continuity.MCS_PUBLISHED_PARENT},
-        {"prior_revision": "0" * 40},
-        {"source_sha256": "0" * 64},
-        {"layout_reused": True},
-    ):
-        assert not continuity.allows_physics_five_region_refit(**(kwargs | changed))
-    assert continuity.allows_bio_region_refit(
-        **(kwargs | {"prior_revision": continuity.BIO_REGION_REFIT_PARENT})
-    )
-    assert continuity.allows_mcs_parent_diagnostic_refit(
-        **(kwargs | {"prior_revision": continuity.MCS_PUBLISHED_PARENT})
-    )
-
-
-def test_physics_five_region_refit_keeps_other_reviewed_fields_exact(
-    tmp_path: Path,
-) -> None:
-    decisions = _decisions()
-    baseline = _files(tmp_path / "baseline", decisions)
-    parent = _files(tmp_path / "parent", decisions)
-    _post_bio_parent(parent, decisions)
-    _mcs_published_parent(parent)
-    state = validate_chemistry_parent(
-        decisions,
-        baseline_files=baseline,
-        parent_files=parent,
-        prior_revision=continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        prior_revision="a" * 40,
     )
     tables = {
         name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
         for name in ("works", "profile_publications", "authorships", "people")
     }
-    documented_id = (
-        "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
-    )
-    prior_id = "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
-    assert {documented_id, prior_id} <= set(state["parent_rows"]["points"])
-    for work_id, field in (
-        (documented_id, "map_region_documented_override"),
-        (prior_id, "map_region_prior_eligible_override"),
-    ):
-        candidate = copy.deepcopy(tables)
-        mask = candidate["works"]["work_id"].eq(work_id)
-        assert candidate["works"].loc[mask, field].item() is True
-        candidate["works"].loc[mask, field] = False
-        with pytest.raises(
-            ValueError, match=rf"candidate works changed: {work_id}: {field}"
-        ):
-            validate_chemistry_candidate(candidate, state)
-        validate_chemistry_candidate(candidate, state, allow_region_refit=True)
-
-    candidate = copy.deepcopy(tables)
-    for work_id, field in (
-        (documented_id, "map_region_documented_override"),
-        (prior_id, "map_region_prior_eligible_override"),
-    ):
-        candidate["works"].loc[candidate["works"]["work_id"].eq(work_id), field] = False
-    validate_chemistry_candidate(candidate, state, allow_region_refit=True)
-    hidden_id = next(
-        work_id
-        for work_id in state["parent_rows"]["works"]
-        if work_id not in state["parent_rows"]["points"]
-    )
-    for work_id, field, value in (
-        (hidden_id, "map_region_documented_override", True),
-        (prior_id, "map_region_prior_excluded_override", True),
-        (prior_id, "map_eligible", False),
-        (prior_id, "collaboration_eligible", False),
-        (prior_id, "title", "changed"),
-        (prior_id, "map_region_prior_eligible_override", "false"),
-    ):
-        invalid = copy.deepcopy(candidate)
-        if field == "map_region_prior_eligible_override" and value == "false":
-            invalid["works"][field] = invalid["works"][field].astype(object)
-        invalid["works"].loc[invalid["works"]["work_id"].eq(work_id), field] = value
-        with pytest.raises(ValueError, match="candidate works changed"):
-            validate_chemistry_candidate(invalid, state, allow_region_refit=True)
-    for table, field in (
-        ("profile_publications", "review_evidence_url"),
-        ("authorships", "person_id"),
-        ("people", "display_name"),
-    ):
-        invalid = copy.deepcopy(candidate)
-        invalid[table].loc[0, field] = "changed"
-        with pytest.raises(ValueError, match=rf"candidate {table} changed"):
-            validate_chemistry_candidate(invalid, state, allow_region_refit=True)
-
-
-def test_mcs_candidate_refit_allows_only_three_exact_visible_diagnostic_losses(
-    tmp_path: Path,
-) -> None:
-    decisions = _decisions()
-    baseline = _files(tmp_path / "baseline", decisions)
-    parent = _files(tmp_path / "parent", decisions)
-    _post_bio_parent(parent, decisions)
-    _mcs_published_parent(parent)
-    state = validate_chemistry_parent(
-        decisions,
-        baseline_files=baseline,
-        parent_files=parent,
-        prior_revision=continuity.MCS_PUBLISHED_PARENT,
-    )
-    tables = {
-        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
-        for name in ("works", "profile_publications", "authorships", "people")
-    }
+    visible = _visible_ids(decisions)
     works = tables["works"]
-    documented_id = continuity.MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID
-    documented_only = copy.deepcopy(tables)
-    documented_only["works"].loc[
-        documented_only["works"]["work_id"].eq(documented_id),
-        "map_region_documented_override",
-    ] = False
-    with pytest.raises(ValueError, match=rf"candidate works changed: {documented_id}"):
-        validate_chemistry_candidate(documented_only, state)
-    validate_chemistry_candidate(
-        documented_only, state, allow_mcs_parent_diagnostic_refit=True
-    )
-    works.loc[
-        works["work_id"].isin(continuity.MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES),
-        "map_region_prior_eligible_override",
-    ] = False
-    works.loc[works["work_id"].eq(documented_id), "map_region_documented_override"] = (
-        False
-    )
+    for field in continuity.REGION_DIAGNOSTIC_FIELDS:
+        true_id = next(
+            work_id
+            for work_id in visible
+            if works.loc[works["work_id"].eq(work_id), field].item() is True
+        )
+        false_id = next(
+            work_id
+            for work_id in visible
+            if works.loc[works["work_id"].eq(work_id), field].item() is False
+        )
+        works.loc[works["work_id"].eq(true_id), field] = False
+        works.loc[works["work_id"].eq(false_id), field] = True
     with pytest.raises(ValueError, match="candidate works changed"):
         validate_chemistry_candidate(tables, state)
-    validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
-    other_visible = next(
-        work_id
-        for work_id in state["parent_rows"]["points"]
-        if work_id not in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+    validate_chemistry_candidate(tables, state, allow_region_refit=True)
+
+
+def test_croft_refit_restores_documented_diagnostic_without_changing_review(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision="37c709267b78720be48e63ef360ea71d15553e3c",
     )
-    hidden = next(
-        work_id
-        for work_id in state["parent_rows"]["works"]
-        if work_id not in state["parent_rows"]["points"]
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    work_id = "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
+    assert work_id in state["parent_rows"]["points"]
+    mask = tables["works"]["work_id"].eq(work_id)
+    assert tables["works"].loc[mask, "map_region_documented_override"].item() is False
+    tables["works"].loc[mask, "map_region_documented_override"] = True
+    validate_chemistry_candidate(tables, state, allow_region_refit=True)
+
+
+@pytest.mark.parametrize(
+    ("table", "field", "value"),
+    (
+        ("works", "map_eligible", False),
+        ("works", "collaboration_eligible", False),
+        ("works", "title", "changed"),
+        ("works", "memberships", [{"person_id": "different", "department_id": "chem"}]),
+        ("works", "department_ids", ["different"]),
+        ("works", "map_region_prior_excluded_override", True),
+        ("works", "map_region_audit_version", "changed"),
+        ("profile_publications", "person_id", "different"),
+        ("profile_publications", "work_id", "different"),
+        ("profile_publications", "review_evidence_url", "changed"),
+        ("authorships", "person_id", "changed"),
+        ("people", "display_name", "changed"),
+    ),
+)
+def test_fresh_layout_still_rejects_substantive_review_changes(
+    tmp_path: Path, table: str, field: str, value: object
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    state = validate_chemistry_parent(
+        decisions, baseline_files=baseline, parent_files=parent, prior_revision="a" * 40
     )
-    for work_id, field, value in (
-        (other_visible, "map_region_prior_eligible_override", True),
-        (hidden, "map_region_prior_eligible_override", True),
-        (
-            next(iter(continuity.MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES)),
-            "map_region_documented_override",
-            True,
-        ),
-        (
-            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
-            "map_region_documented_override",
-            False,
-        ),
-        (documented_id, "map_eligible", False),
-        (other_visible, "title", "changed"),
-    ):
-        invalid = copy.deepcopy(tables)
-        invalid["works"].loc[invalid["works"]["work_id"].eq(work_id), field] = value
-        with pytest.raises(ValueError, match="candidate works changed"):
-            validate_chemistry_candidate(
-                invalid, state, allow_mcs_parent_diagnostic_refit=True
-            )
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    if table == "works":
+        visible = _visible_ids(decisions)[0]
+        mask = tables[table]["work_id"].eq(visible)
+        tables[table].loc[mask, field] = [value]
+    else:
+        tables[table].loc[0, field] = [value]
+    with pytest.raises(ValueError, match=f"candidate {table} changed"):
+        validate_chemistry_candidate(tables, state, allow_region_refit=True)
+
+
+@pytest.mark.parametrize("value", (True, "false", 1))
+def test_refit_rejects_hidden_or_nonboolean_diagnostics(
+    tmp_path: Path, value: object
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    state = validate_chemistry_parent(
+        decisions, baseline_files=baseline, parent_files=parent, prior_revision="a" * 40
+    )
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    work_id = (
+        next(item.work_id for item in decisions if not item.visible)
+        if value is True
+        else _visible_ids(decisions)[0]
+    )
+    tables["works"]["map_region_documented_override"] = tables["works"][
+        "map_region_documented_override"
+    ].astype(object)
+    tables["works"].loc[
+        tables["works"]["work_id"].eq(work_id), "map_region_documented_override"
+    ] = value
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(tables, state, allow_region_refit=True)
 
 
 def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None:
@@ -854,11 +699,8 @@ def test_post_bio_parent_retains_reviewed_rows_and_uses_immediate_parent_counts(
         ("missing_added_person", "unreviewed schema fields"),
         ("missing_dcb_work", "work schema changed"),
         ("missing_dcb_person", "person schema changed"),
-        ("wrong_eligible", "work derivation changed"),
         ("wrong_excluded", "work derivation changed"),
         ("wrong_audit", "work derivation changed"),
-        ("wrong_override", "work derivation changed"),
-        ("other_override", "work derivation changed"),
         ("person_hold", "person hold reason changed"),
     ],
 )
@@ -892,15 +734,6 @@ def test_post_bio_parent_rejects_schema_and_derivation_drift(
         )
     elif mutation == "missing_dcb_person":
         _rewrite_rows(people, lambda rows: [row.pop("display_name") for row in rows])
-    elif mutation == "wrong_eligible":
-        _rewrite_rows(
-            works,
-            lambda rows: rows[0].update(
-                map_region_prior_eligible_override=(
-                    not rows[0]["map_region_prior_eligible_override"]
-                )
-            ),
-        )
     elif mutation == "wrong_excluded":
         _rewrite_rows(
             works, lambda rows: rows[0].update(map_region_prior_excluded_override=True)
@@ -909,24 +742,6 @@ def test_post_bio_parent_rejects_schema_and_derivation_drift(
         _rewrite_rows(
             works,
             lambda rows: rows[0].update(map_region_audit_version="wrong"),
-        )
-    elif mutation == "wrong_override":
-        _rewrite_rows(
-            works,
-            lambda rows: next(
-                row
-                for row in rows
-                if row["work_id"] == continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
-            ).update(map_region_documented_override=False),
-        )
-    elif mutation == "other_override":
-        _rewrite_rows(
-            works,
-            lambda rows: next(
-                row
-                for row in rows
-                if row["work_id"] != continuity.POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
-            ).update(map_region_documented_override=True),
         )
     elif mutation == "person_hold":
         _rewrite_rows(
@@ -1104,21 +919,6 @@ def test_parent_rejects_reviewed_state_drift(
                 CHEMISTRY_HUB_REVISION if mutation == "dcb_parent_marker" else "a" * 40
             ),
         )
-
-
-def test_bio_region_refit_tolerance_requires_exact_parent_source_and_refit() -> None:
-    kwargs = {
-        "prior_revision": continuity.BIO_REGION_REFIT_PARENT,
-        "source_sha256": continuity.BIO_REGION_REFIT_SOURCE_SHA256,
-        "layout_reused": False,
-    }
-    assert continuity.allows_bio_region_refit(**kwargs)
-    for changed in (
-        {"prior_revision": CHEMISTRY_HUB_REVISION},
-        {"source_sha256": "0" * 64},
-        {"layout_reused": True},
-    ):
-        assert not continuity.allows_bio_region_refit(**(kwargs | changed))
 
 
 def test_candidate_retains_all_reviewed_rows_and_hidden_authorships(
