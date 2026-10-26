@@ -1,0 +1,7 @@
+# Kim capture row 203: Davis cavern author attribution
+
+The saved complete 918-row Google Scholar capture for CMU Chemistry professor Hyung J. Kim contains row 203, `bC4aq-4AAAAJ:JdL-Xu2nR38C`, titled *Measurement of the gamma ray background in the Davis cavern at the Sanford Underground Research Facility* (2020), displayed as *Astroparticle Physics* 116, 102391. The frozen capture JSON remains unchanged (SHA-256 `ea04610e120039df7aaf83c402d193021f328b319cd41cfabf541f3942069867`).
+
+[Elsevier's deposited record for DOI 10.1016/j.astropartphys.2019.102391](https://api.crossref.org/works/10.1016/j.astropartphys.2019.102391) identifies 167 authors. The only `Kim` byline is **W. T. Kim**; there is no H. J. Kim byline. The title, year, journal, and article number match the saved Scholar row. The [UCL institutional article record](https://discovery.ucl.ac.uk/id/eprint/10087387/) independently lists W. T. Kim in the same publication. This supports an exact `false_profile_attribution` decision for this Scholar citation ID, without inferring W. T. Kim's full given names.
+
+The review script guards the capture index, exact citation ID, title, year, and venue before applying that decision. It rebuilt and checked all 918 ledger rows. This candidate-only branch now partitions the capture into **121 source-supported retentions, 397 exact exclusions, and 400 holds**. The Kim canonical cache and public maps remain unchanged; the unresolved 400 rows still prevent a whole-profile release.

@@ -8802,6 +8802,38 @@
       "verified_at": "2026-10-25"
     },
     {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:WqliGbK-hY8C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original preprint names the H. J. Kim coauthor in full as Hyun Jin Kim and links the exact Europhysics Letters DOI, volume 56, and first page 333. This exact 2001 Scholar observation 'Double stochastic resonance peaks in systems with dynamic phase transitions' belongs to Hyun Jin Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1209/epl/i2001-00524-7.",
+      "evidence_url": "https://arxiv.org/abs/cond-mat/0108288",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:BrmTIyaxlBUC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher names Hyun Jin Kim in full at Seoul National University Physics in the exact 2002 Physical Review B article 66, 024511. This exact 2002 Scholar observation 'Dynamic transition and resonance in current-driven arrays of Josephson junctions' belongs to Hyun Jin Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1103/PhysRevB.66.024511.",
+      "evidence_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.66.024511",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:JdL-Xu2nR38C",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher's DOI deposit lists W. T. Kim as the only Kim among 167 authors and lists no H. J. Kim. The exact title, year, and Astroparticle Physics article number match the saved Scholar row. This exact 2020 Scholar observation 'Measurement of the gamma ray background in the Davis cavern at the Sanford Underground Research Facility' belongs to W. T. Kim, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1016/j.astropartphys.2019.102391.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.astropartphys.2019.102391",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "scholar_id": "bC4aq-4AAAAJ",
+      "author_pub_id": "bC4aq-4AAAAJ:WzTVkKNmPSkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The publisher's DOI deposit lists all 147 authors, including 24 Kim bylines, but no H. J. Kim. Hanyang University's institutional record independently lists the same exact article and author team. This exact 2011 Scholar observation 'Overview of KSTAR initial operation' belongs to the published KSTAR collaboration, not CMU Chemistry professor Hyung J. Kim. Article DOI 10.1088/0029-5515/51/9/094006.",
+      "evidence_url": "https://api.crossref.org/works/10.1088/0029-5515/51/9/094006",
+      "verified_at": "2026-10-26"
+    },
+    {
       "scholar_id": "0e1jwkkAAAAJ",
       "author_pub_id": "0e1jwkkAAAAJ:yxmsSjX2EkcC",
       "reason_code": "false_profile_attribution",
