@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-deepakpathak-d5a312e2",
+  "display_name": "Deepak Pathak",
+  "scholar_profile_name": "Deepak Pathak",
+  "scholar_id": "AEsPCAUAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/deepak-pathak/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/deepak-pathak/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:24:23.022536+00:00",
+  "publication_count": 143,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-deepak-pathak-2026-10-26.json",
+  "source_json_sha256": "1f266df4451ba6d69172eb7aeedc1fcf9939ed8791eb8e2f0cc62076a15c3206",
+  "source_html_path": "data/captures/scs-deepak-pathak-2026-10-26.html",
+  "source_html_sha256": "2bbdad2c58bf5de5bad794f8915b8eaca1923982def5c24db15ae3b0339a7d96",
+  "cache_path": "data/authors/AEsPCAUAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

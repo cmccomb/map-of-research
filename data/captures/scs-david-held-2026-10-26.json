@@ -1,0 +1,1319 @@
+{
+  "captured_at": "2026-10-26T19:24:02.052836+00:00",
+  "url": "https://scholar.google.com/citations?user=0QtU-NsAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪David Held‬ - ‪Google Scholar‬",
+  "scholar_user_id": "0QtU-NsAAAAJ",
+  "person_name": "David Held",
+  "displayed_count": 145,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 2,
+  "works": [
+    {
+      "index": 1,
+      "title": "Constrained policy optimization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:M3ejUd6NZC8C",
+      "authors": "J Achiam, D Held, A Tamar, P Abbeel",
+      "venue": "International conference on machine learning, 22-31, 2017",
+      "citation_count": "3365",
+      "year": "2017"
+    },
+    {
+      "index": 2,
+      "title": "Towards fully autonomous driving: Systems and algorithms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:u5HHmVD_uO8C",
+      "authors": "J Levinson, J Askeland, J Becker, J Dolson, D Held, S Kammel, JZ Kolter, ...",
+      "venue": "2011 IEEE intelligent vehicles symposium (IV), 163-168, 2011",
+      "citation_count": "2178",
+      "year": "2011"
+    },
+    {
+      "index": 3,
+      "title": "Learning to track at 100 fps with deep regression networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:5nxA0vEk-isC",
+      "authors": "D Held, S Thrun, S Savarese",
+      "venue": "European conference on computer vision, 749-765, 2016",
+      "citation_count": "1704",
+      "year": "2016"
+    },
+    {
+      "index": 4,
+      "title": "Pcn: Point completion network",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:9ZlFYXVOiuMC",
+      "authors": "W Yuan, T Khot, D Held, C Mertz, M Hebert",
+      "venue": "2018 international conference on 3D vision (3DV), 728-737, 2018",
+      "citation_count": "1626",
+      "year": "2018"
+    },
+    {
+      "index": 5,
+      "title": "Automatic goal generation for reinforcement learning agents",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:Wp0gIr-vW9MC",
+      "authors": "C Florensa, D Held, X Geng, P Abbeel",
+      "venue": "International conference on machine learning, 1515-1528, 2018",
+      "citation_count": "784",
+      "year": "2018"
+    },
+    {
+      "index": 6,
+      "title": "Reverse curriculum generation for reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:qxL8FJ1GzNcC",
+      "authors": "C Florensa, D Held, M Wulfmeier, M Zhang, P Abbeel",
+      "venue": "Conference on robot learning, 482-495, 2017",
+      "citation_count": "766",
+      "year": "2017"
+    },
+    {
+      "index": 7,
+      "title": "3D multi-object tracking: A baseline and new evaluation metrics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:YFjsv_pBGBYC",
+      "authors": "X Weng, J Wang, D Held, K Kitani",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "732",
+      "year": "2020"
+    },
+    {
+      "index": 8,
+      "title": "Softgym: Benchmarking deep reinforcement learning for deformable object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:35N4QoGY0k4C",
+      "authors": "X Lin, Y Wang, J Olkin, D Held",
+      "venue": "Conference on Robot Learning, 432-448, 2021",
+      "citation_count": "387",
+      "year": "2021"
+    },
+    {
+      "index": 9,
+      "title": "Robogen: Towards unleashing infinite data for automated robot learning via generative simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:XiVPGOgt02cC",
+      "authors": "Y Wang, Z Xian, F Chen, TH Wang, Y Wang, K Fragkiadaki, Z Erickson, ...",
+      "venue": "arXiv preprint arXiv:2311.01455, 2023",
+      "citation_count": "337",
+      "year": "2023"
+    },
+    {
+      "index": 10,
+      "title": "Plas: Latent action space for offline reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:pqnbT2bcN3wC",
+      "authors": "W Zhou, S Bajracharya, D Held",
+      "venue": "Conference on Robot Learning, 1719-1735, 2021",
+      "citation_count": "273",
+      "year": "2021"
+    },
+    {
+      "index": 11,
+      "title": "Rl-vlm-f: Reinforcement learning from vision language foundation model feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:Mojj43d5GZwC",
+      "authors": "Y Wang, Z Sun, J Zhang, Z Xian, E Biyik, D Held, Z Erickson",
+      "venue": "arXiv preprint arXiv:2402.03681, 2024",
+      "citation_count": "247",
+      "year": "2024"
+    },
+    {
+      "index": 12,
+      "title": "Ab3dmot: A baseline for 3d multi-object tracking and new evaluation metrics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ns9cj8rnVeAC",
+      "authors": "X Weng, J Wang, D Held, K Kitani",
+      "venue": "arXiv preprint arXiv:2008.08063, 2020",
+      "citation_count": "233",
+      "year": "2020"
+    },
+    {
+      "index": 13,
+      "title": "Just go with the flow: Self-supervised scene flow estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:-f6ydRqryjwC",
+      "authors": "H Mittal, B Okorn, D Held",
+      "venue": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2020",
+      "citation_count": "221",
+      "year": "2020"
+    },
+    {
+      "index": 14,
+      "title": "Enabling robots to communicate their objectives",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ULOm3_A8WrAC",
+      "authors": "SH Huang, D Held, P Abbeel, AD Dragan",
+      "venue": "Autonomous Robots 43 (2), 309-326, 2019",
+      "citation_count": "220",
+      "year": "2019"
+    },
+    {
+      "index": 15,
+      "title": "Learning visible connectivity dynamics for cloth smoothing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:3s1wT3WcHBgC",
+      "authors": "X Lin, Y Wang, Z Huang, D Held",
+      "venue": "Conference on Robot Learning, 256-266, 2022",
+      "citation_count": "181",
+      "year": "2022"
+    },
+    {
+      "index": 16,
+      "title": "What you see is what you get: Exploiting visibility for 3d object detection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:mB3voiENLucC",
+      "authors": "P Hu, J Ziglar, D Held, D Ramanan",
+      "venue": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2020",
+      "citation_count": "179",
+      "year": "2020"
+    },
+    {
+      "index": 17,
+      "title": "Flowbot3d: Learning 3d articulation flow to manipulate articulated objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:uWQEDVKXjbEC",
+      "authors": "B Eisner, H Zhang, D Held",
+      "venue": "arXiv preprint arXiv:2205.04382, 2022",
+      "citation_count": "178",
+      "year": "2022"
+    },
+    {
+      "index": 18,
+      "title": "Adaptive auxiliary task weighting for reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:qUcmZB5y_30C",
+      "authors": "X Lin, H Baweja, G Kantor, D Held",
+      "venue": "Advances in neural information processing systems 32, 2019",
+      "citation_count": "170",
+      "year": "2019"
+    },
+    {
+      "index": 19,
+      "title": "Fabricflownet: Bimanual cloth manipulation with a flow-based policy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_xSYboBqXhAC",
+      "authors": "T Weng, SM Bajracharya, Y Wang, K Agrawal, D Held",
+      "venue": "Conference on Robot Learning, 192-202, 2022",
+      "citation_count": "163",
+      "year": "2022"
+    },
+    {
+      "index": 20,
+      "title": "Safe local motion planning with self-supervised freespace forecasting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:zA6iFVUQeVQC",
+      "authors": "P Hu, A Huang, J Dolan, D Held, D Ramanan",
+      "venue": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2021",
+      "citation_count": "158",
+      "year": "2021"
+    },
+    {
+      "index": 21,
+      "title": "Differentiable raycasting for self-supervised occupancy forecasting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:sSrBHYA8nusC",
+      "authors": "T Khurana, P Hu, A Dave, J Ziglar, D Held, D Ramanan",
+      "venue": "European Conference on Computer Vision, 353-369, 2022",
+      "citation_count": "138",
+      "year": "2022"
+    },
+    {
+      "index": 22,
+      "title": "Point cloud forecasting as a proxy for 4d occupancy forecasting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:D_sINldO8mEC",
+      "authors": "T Khurana, P Hu, D Held, D Ramanan",
+      "venue": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2023",
+      "citation_count": "122",
+      "year": "2023"
+    },
+    {
+      "index": 23,
+      "title": "Combining 3D Shape, Color, and Motion for Robust Anytime Tracking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:eQOLeE2rZwMC",
+      "authors": "D Held, J Levinson, S Thrun, S Savarese",
+      "venue": "Robotics: Science and Systems, 2014",
+      "citation_count": "121",
+      "year": "2014"
+    },
+    {
+      "index": 24,
+      "title": "Toolflownet: Robotic manipulation with tools via predicting tool flow from point clouds",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:vRqMK49ujn8C",
+      "authors": "D Seita, Y Wang, SJ Shetty, EY Li, Z Erickson, D Held",
+      "venue": "Conference on Robot Learning, 1038-1049, 2023",
+      "citation_count": "108",
+      "year": "2023"
+    },
+    {
+      "index": 25,
+      "title": "Learning to grasp the ungraspable with emergent extrinsic dexterity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:OU6Ihb5iCvQC",
+      "authors": "W Zhou, D Held",
+      "venue": "Conference on Robot Learning, 150-160, 2023",
+      "citation_count": "103",
+      "year": "2023"
+    },
+    {
+      "index": 26,
+      "title": "Splatsim: Zero-shot sim2real transfer of rgb manipulation policies using gaussian splatting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:WqliGbK-hY8C",
+      "authors": "MN Qureshi, S Garg, F Yandun, D Held, G Kantor, A Silwal",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 6502-6509, 2025",
+      "citation_count": "96",
+      "year": "2025"
+    },
+    {
+      "index": 27,
+      "title": "Tax-pose: Task-specific cross-pose estimation for robot manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:tOudhMTPpwUC",
+      "authors": "C Pan, B Okorn, H Zhang, B Eisner, D Held",
+      "venue": "Conference on Robot Learning, 1783-1792, 2023",
+      "citation_count": "95",
+      "year": "2023"
+    },
+    {
+      "index": 28,
+      "title": "Mesh-based dynamics with occlusion reasoning for cloth manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:p2g8aNsByqUC",
+      "authors": "Z Huang, X Lin, D Held",
+      "venue": "arXiv preprint arXiv:2206.02881, 2022",
+      "citation_count": "94",
+      "year": "2022"
+    },
+    {
+      "index": 29,
+      "title": "Unfolding the literature: A review of robotic cloth manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:JoZmwDi-zQgC",
+      "authors": "A Longhini, Y Wang, I Garcia-Camacho, D Blanco-Mulero, M Moletta, ...",
+      "venue": "Annual Review of Control, Robotics, and Autonomous Systems 8 (1), 295-322, 2025",
+      "citation_count": "87",
+      "year": "2025"
+    },
+    {
+      "index": 30,
+      "title": "Robust single-view instance recognition",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:8k81kl-MbHgC",
+      "authors": "D Held, S Thrun, S Savarese",
+      "venue": "2016 IEEE International Conference on Robotics and Automation (ICRA), 2152-2159, 2016",
+      "citation_count": "85",
+      "year": "2016"
+    },
+    {
+      "index": 31,
+      "title": "Precision Tracking with Sparse 3D and Dense Color 2D Data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:IjCSPb-OGe4C",
+      "authors": "D Held, J Levinson, S Thrun",
+      "venue": "",
+      "citation_count": "85",
+      "year": "2013"
+    },
+    {
+      "index": 32,
+      "title": "Neural grasp distance fields for robot manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:LPZeul_q3PIC",
+      "authors": "T Weng, D Held, F Meier, M Mukadam",
+      "venue": "arXiv preprint arXiv:2211.02647, 2022",
+      "citation_count": "82",
+      "year": "2022"
+    },
+    {
+      "index": 33,
+      "title": "Diffskill: Skill abstraction from differentiable physics for deformable object manipulations with tools",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:KxtntwgDAa4C",
+      "authors": "X Lin, Z Huang, Y Li, JB Tenenbaum, D Held, C Gan",
+      "venue": "arXiv preprint arXiv:2203.17275, 2022",
+      "citation_count": "82",
+      "year": "2022"
+    },
+    {
+      "index": 34,
+      "title": "Learning off-policy with online planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:NaGl4SEjCO4C",
+      "authors": "H Sikchi, W Zhou, D Held",
+      "venue": "Conference on Robot Learning, 1622-1633, 2022",
+      "citation_count": "79",
+      "year": "2022"
+    },
+    {
+      "index": 35,
+      "title": "Cloth region segmentation for robust grasp selection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:NMxIlDl6LWMC",
+      "authors": "J Qian, T Weng, L Zhang, B Okorn, D Held",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "78",
+      "year": "2020"
+    },
+    {
+      "index": 36,
+      "title": "MVWT-II: The second generation caltech multi-vehicle wireless testbed",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:d1gkVwhDpl0C",
+      "authors": "Z Jin, S Waydo, EB Wildanger, M Lammers, H Scholze, P Foley, D Held, ...",
+      "venue": "Proceedings of the 2004 American control conference 6, 5321-5326, 2004",
+      "citation_count": "77",
+      "year": "2004"
+    },
+    {
+      "index": 37,
+      "title": "AutoBag: Learning to Open Plastic Bags and Insert Objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:5Ul4iDaHHb8C",
+      "authors": "L Yunliang Chen, B Shi, D Seita, R Cheng, T Kollar, D Held, K Goldberg",
+      "venue": "arXiv e-prints, arXiv: 2210.17217, 2022",
+      "citation_count": "69",
+      "year": "2022"
+    },
+    {
+      "index": 38,
+      "title": "Policy transfer via modularity and reward guiding",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:aqlVkmm33-oC",
+      "authors": "I Clavera, D Held, P Abbeel",
+      "venue": "2017 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2017",
+      "citation_count": "65",
+      "year": "2017"
+    },
+    {
+      "index": 39,
+      "title": "Flowbot++: Learning generalized articulated objects manipulation via articulation projection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:1qzjygNMrQYC",
+      "authors": "H Zhang, B Eisner, D Held",
+      "venue": "arXiv preprint arXiv:2306.12893, 2023",
+      "citation_count": "63",
+      "year": "2023"
+    },
+    {
+      "index": 40,
+      "title": "Iterative transformer network for 3d point cloud",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:QIV2ME_5wuYC",
+      "authors": "W Yuan, D Held, C Mertz, M Hebert",
+      "venue": "arXiv preprint arXiv:1811.11209, 2018",
+      "citation_count": "62",
+      "year": "2018"
+    },
+    {
+      "index": 41,
+      "title": "Hacman: Learning hybrid actor-critic maps for 6d non-prehensile manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:5ugPr518TE4C",
+      "authors": "W Zhou, B Jiang, F Yang, C Paxton, D Held",
+      "venue": "arXiv preprint arXiv:2305.03942, 2023",
+      "citation_count": "60",
+      "year": "2023"
+    },
+    {
+      "index": 42,
+      "title": "A Probabilistic Framework for Real-time 3D Segmentation using Spatial, Temporal, and Semantic Cues.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:3fE2CSJIrl8C",
+      "authors": "D Held, D Guillory, B Rebsamen, S Thrun, S Savarese",
+      "venue": "Robotics: Science and systems 12, 2016",
+      "citation_count": "60",
+      "year": "2016"
+    },
+    {
+      "index": 43,
+      "title": "Robust real-time tracking combining 3D shape, color, and motion",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_FxGoFyzp5QC",
+      "authors": "D Held, J Levinson, S Thrun, S Savarese",
+      "venue": "The International Journal of Robotics Research 35 (1-3), 30-49, 2016",
+      "citation_count": "59",
+      "year": "2016"
+    },
+    {
+      "index": 44,
+      "title": "3d multi-object tracking: A baseline and new evaluation metrics. In 2020 IEEE",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:W5xh706n7nkC",
+      "authors": "X Weng, J Wang, D Held, K Kitani",
+      "venue": "RSJ International Conference on Intelligent Robots and Systems (IROS), 10359 …, 0",
+      "citation_count": "56",
+      "year": ""
+    },
+    {
+      "index": 45,
+      "title": "Planning with spatial-temporal abstraction from point clouds for deformable object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:08ZZubdj9fEC",
+      "authors": "X Lin, C Qi, Y Zhang, Z Huang, K Fragkiadaki, Y Li, C Gan, D Held",
+      "venue": "arXiv preprint arXiv:2210.15751, 2022",
+      "citation_count": "55",
+      "year": "2022"
+    },
+    {
+      "index": 46,
+      "title": "One policy to dress them all: Learning to dress people with diverse poses and garments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:V3AGJWp-ZtQC",
+      "authors": "Y Wang, Z Sun, Z Erickson, D Held",
+      "venue": "arXiv preprint arXiv:2306.12372, 2023",
+      "citation_count": "53",
+      "year": "2023"
+    },
+    {
+      "index": 47,
+      "title": "Zephyr: Zero-shot pose hypothesis rating",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ZHo1McVdvXMC",
+      "authors": "B Okorn, Q Gu, M Hebert, D Held",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 14141 …, 2021",
+      "citation_count": "49",
+      "year": "2021"
+    },
+    {
+      "index": 48,
+      "title": "Multi-modal transfer learning for grasping transparent and specular objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:RHpTSmoSYBkC",
+      "authors": "T Weng, A Pallankize, Y Tang, O Kroemer, D Held",
+      "venue": "IEEE Robotics and Automation Letters 5 (3), 3791-3798, 2020",
+      "citation_count": "48",
+      "year": "2020"
+    },
+    {
+      "index": 49,
+      "title": "Learning to singulate layers of cloth using tactile feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:WbkHhVStYXYC",
+      "authors": "S Tirumala, T Weng, D Seita, O Kroemer, Z Temel, D Held",
+      "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "citation_count": "44",
+      "year": "2022"
+    },
+    {
+      "index": 50,
+      "title": "Edo-net: Learning elastic properties of deformable objects from graph dynamics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:l7t_Zn2s7bgC",
+      "authors": "A Longhini, M Moletta, A Reichlin, MC Welle, D Held, Z Erickson, D Kragic",
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA), 3875-3881, 2023",
+      "citation_count": "43",
+      "year": "2023"
+    },
+    {
+      "index": 51,
+      "title": "Self-supervised Transparent Liquid Segmentation for Robotic Pouring",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:B3FOqHPlNUQC",
+      "authors": "G Narasimhan, K Zhang, B Eisner, X Lin, D Held",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 4555-4561, 2022",
+      "citation_count": "39",
+      "year": "2022"
+    },
+    {
+      "index": 52,
+      "title": "Rb2: Robotic manipulation benchmarking with a twist",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:pyW8ca7W8N0C",
+      "authors": "S Dasari, J Wang, J Hong, S Bahl, Y Lin, A Wang, A Thankaraj, K Chahal, ...",
+      "venue": "arXiv preprint arXiv:2203.08098, 2022",
+      "citation_count": "39",
+      "year": "2022"
+    },
+    {
+      "index": 53,
+      "title": "Self-supervised point cloud completion via inpainting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:abG-DnoFyZgC",
+      "authors": "H Mittal, B Okorn, A Jangid, D Held",
+      "venue": "arXiv preprint arXiv:2111.10701, 2021",
+      "citation_count": "39",
+      "year": "2021"
+    },
+    {
+      "index": 54,
+      "title": "A probabilistic framework for car detection in images using context and scale",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:u-x6o8ySG0sC",
+      "authors": "D Held, J Levinson, S Thrun",
+      "venue": "2012 IEEE International Conference on Robotics and Automation, 1628-1634, 2012",
+      "citation_count": "38",
+      "year": "2012"
+    },
+    {
+      "index": 55,
+      "title": "Characterization of tactors used in vibrotactile displays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:2osOgNQ5qMEC",
+      "authors": "LA Jones, DA Held",
+      "venue": "",
+      "citation_count": "36",
+      "year": "2008"
+    },
+    {
+      "index": 56,
+      "title": "Force-constrained visual policy: Safe robot-assisted dressing via multi-modal sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:olpn-zPbct0C",
+      "authors": "Z Sun, Y Wang, D Held, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 9 (5), 4178-4185, 2024",
+      "citation_count": "35",
+      "year": "2024"
+    },
+    {
+      "index": 57,
+      "title": "Reinforcement learning without ground-truth state",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ZeXyd9-uunAC",
+      "authors": "X Lin, HS Baweja, D Held",
+      "venue": "arXiv preprint arXiv:1905.07866, 2019",
+      "citation_count": "35",
+      "year": "2019"
+    },
+    {
+      "index": 58,
+      "title": "Learning orientation distributions for object pose estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:blknAaTinKkC",
+      "authors": "B Okorn, M Xu, M Hebert, D Held",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "33",
+      "year": "2020"
+    },
+    {
+      "index": 59,
+      "title": "Deep se (3)-equivariant geometric reasoning for precise placement tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:eMMeJKvmdy0C",
+      "authors": "B Eisner, Y Yang, T Davchev, M Vecerik, J Scholz, D Held",
+      "venue": "International Conference on Learning Representations 2024, 26866-26886, 2024",
+      "citation_count": "31",
+      "year": "2024"
+    },
+    {
+      "index": 60,
+      "title": "Visual haptic reasoning: Estimating contact forces by observing deformable object interactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:738O_yMBCRsC",
+      "authors": "Y Wang, D Held, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 7 (4), 11426-11433, 2022",
+      "citation_count": "31",
+      "year": "2022"
+    },
+    {
+      "index": 61,
+      "title": "Probabilistically safe policy transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_kc_bZDykSQC",
+      "authors": "D Held, Z McCarthy, M Zhang, F Shentu, P Abbeel",
+      "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA), 5798-5805, 2017",
+      "citation_count": "31",
+      "year": "2017"
+    },
+    {
+      "index": 62,
+      "title": "Difftori: Differentiable trajectory optimization for deep reinforcement and imitation learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:AXPGKjj_ei8C",
+      "authors": "W Wan, Z Wang, Y Wang, Z Erickson, D Held",
+      "venue": "Advances in Neural Information Processing Systems 37, 109430-109459, 2024",
+      "citation_count": "29",
+      "year": "2024"
+    },
+    {
+      "index": 63,
+      "title": "Self-supervised cloth reconstruction via action-conditioned cloth tracking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:eJXPG6dFmWUC",
+      "authors": "Z Huang, X Lin, D Held",
+      "venue": "arXiv preprint arXiv:2302.09502, 2023",
+      "citation_count": "29",
+      "year": "2023"
+    },
+    {
+      "index": 64,
+      "title": "Learning closed-loop dough manipulation using a differentiable reset module",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:XiSMed-E-HIC",
+      "authors": "C Qi, X Lin, D Held",
+      "venue": "IEEE Robotics and Automation Letters 7 (4), 9857-9864, 2022",
+      "citation_count": "29",
+      "year": "2022"
+    },
+    {
+      "index": 65,
+      "title": "Lyapunov barrier policy optimization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:SeFeTyx0c_EC",
+      "authors": "H Sikchi, W Zhou, D Held",
+      "venue": "arXiv preprint arXiv:2103.09230, 2021",
+      "citation_count": "29",
+      "year": "2021"
+    },
+    {
+      "index": 66,
+      "title": "Real-world offline reinforcement learning from vision language model feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ye4kPcJQO24C",
+      "authors": "S Venkataraman, Y Wang, Z Wang, NS Ravie, Z Erickson, D Held",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "25",
+      "year": "2025"
+    },
+    {
+      "index": 67,
+      "title": "Semi-supervised 3D object detection via temporal graph neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:1sJd4Hv_s6UC",
+      "authors": "J Wang, H Gang, S Ancha, YT Chen, D Held",
+      "venue": "2021 International conference on 3D Vision (3DV), 413-422, 2021",
+      "citation_count": "25",
+      "year": "2021"
+    },
+    {
+      "index": 68,
+      "title": "Robust anytime tracking combining 3D shape, color, and motion with annealed dynamic histograms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:hqOjcs7Dif8C",
+      "authors": "D Held, J Levinson, S Thrun, S Savarese",
+      "venue": "US Patent 9,710,925, 2017",
+      "citation_count": "24",
+      "year": "2017"
+    },
+    {
+      "index": 69,
+      "title": "Articubot: Learning universal articulated object manipulation policy via large scale simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:N5tVd3kTz84C",
+      "authors": "Y Wang, Z Wang, M Nakura, P Bhowal, CL Kuo, YT Chen, Z Erickson, ...",
+      "venue": "arXiv preprint arXiv:2503.03045, 2025",
+      "citation_count": "23",
+      "year": "2025"
+    },
+    {
+      "index": 70,
+      "title": "Roll: Visual self-supervised reinforcement learning with object reasoning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:g5m5HwL7SMYC",
+      "authors": "Y Wang, N Gautham, X Lin, B Okorn, D Held",
+      "venue": "Conference on robot learning, 1030-1048, 2021",
+      "citation_count": "23",
+      "year": "2021"
+    },
+    {
+      "index": 71,
+      "title": "Learning to optimally segment point clouds",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:R3hNpaxXUhUC",
+      "authors": "P Hu, D Held, D Ramanan",
+      "venue": "IEEE Robotics and Automation Letters 5 (2), 875-882, 2020",
+      "citation_count": "21",
+      "year": "2020"
+    },
+    {
+      "index": 72,
+      "title": "Hacman++: Spatially-grounded motion primitives for manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:dTyEYWd-f8wC",
+      "authors": "B Jiang, Y Wu, W Zhou, C Paxton, D Held",
+      "venue": "arXiv preprint arXiv:2407.08585, 2024",
+      "citation_count": "20",
+      "year": "2024"
+    },
+    {
+      "index": 73,
+      "title": "Bagging by learning to singulate layers using interactive perception",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:q3oQSFYPqjQC",
+      "authors": "LY Chen, B Shi, R Lin, D Seita, A Ahmad, R Cheng, T Kollar, D Held, ...",
+      "venue": "2023 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2023",
+      "citation_count": "18",
+      "year": "2023"
+    },
+    {
+      "index": 74,
+      "title": "Flowbothd: History-aware diffuser handling ambiguities in articulated objects manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:5awf1xo2G04C",
+      "authors": "Y Li, WH Leng, Y Fang, B Eisner, D Held",
+      "venue": "arXiv preprint arXiv:2410.07078, 2024",
+      "citation_count": "17",
+      "year": "2024"
+    },
+    {
+      "index": 75,
+      "title": "Surface waves and spatial localization in vibrotactile displays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:qjMakFHDy7sC",
+      "authors": "LA Jones, D Held, I Hunter",
+      "venue": "2010 IEEE Haptics Symposium, 91-94, 2010",
+      "citation_count": "17",
+      "year": "2010"
+    },
+    {
+      "index": 76,
+      "title": "Panonet3d: Combining semantic and geometric understanding for lidar point cloud detection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:2P1L_qKh6hAC",
+      "authors": "X Chen, J Wang, D Held, M Hebert",
+      "venue": "2020 International Conference on 3D Vision (3DV), 753-761, 2020",
+      "citation_count": "16",
+      "year": "2020"
+    },
+    {
+      "index": 77,
+      "title": "Active perception using light curtains for autonomous driving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:O3NaXMp0MMsC",
+      "authors": "S Ancha, Y Raaj, P Hu, SG Narasimhan, D Held",
+      "venue": "European Conference on Computer Vision, 751-766, 2020",
+      "citation_count": "16",
+      "year": "2020"
+    },
+    {
+      "index": 78,
+      "title": "Latent particle world models: Self-supervised object-centric stochastic dynamics modeling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:kzcrU_BdoSEC",
+      "authors": "T Daniel, C Qi, D Haramati, A Zadeh, C Li, A Tamar, D Pathak, D Held",
+      "venue": "arXiv preprint arXiv:2603.04553, 2026",
+      "citation_count": "15",
+      "year": "2026"
+    },
+    {
+      "index": 79,
+      "title": "Object importance estimation using counterfactual reasoning for intelligent driving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:t6usbXjVLHcC",
+      "authors": "P Gupta, A Biswas, H Admoni, D Held",
+      "venue": "IEEE Robotics and Automation Letters 9 (4), 3648-3655, 2024",
+      "citation_count": "15",
+      "year": "2024"
+    },
+    {
+      "index": 80,
+      "title": "Modeling drivers’ situational awareness from eye gaze for driving assistance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:9vf0nzSNQJEC",
+      "authors": "A Biswas, P Gupta, S Khurana, D Held, H Admoni",
+      "venue": "8th Annual Conference on Robot Learning, 2024",
+      "citation_count": "14",
+      "year": "2024"
+    },
+    {
+      "index": 81,
+      "title": "Elastic context: Encoding elasticity for data-driven models of textiles",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:K3LRdlH-MEoC",
+      "authors": "A Longhini, M Moletta, A Reichlin, MC Welle, A Kravberg, Y Wang, D Held, ...",
+      "venue": "arXiv preprint arXiv:2209.05428, 2022",
+      "citation_count": "14",
+      "year": "2022"
+    },
+    {
+      "index": 82,
+      "title": "Active safety envelopes using light curtains with probabilistic guarantees",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:4OULZ7Gr8RgC",
+      "authors": "S Ancha, G Pathak, SG Narasimhan, D Held",
+      "venue": "arXiv preprint arXiv:2107.04000, 2021",
+      "citation_count": "13",
+      "year": "2021"
+    },
+    {
+      "index": 83,
+      "title": "OSSID: online self-supervised instance detection by (and for) pose estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:P5F9QuxV20EC",
+      "authors": "Q Gu, B Okorn, D Held",
+      "venue": "IEEE Robotics and Automation Letters 7 (2), 3022-3029, 2022",
+      "citation_count": "12",
+      "year": "2022"
+    },
+    {
+      "index": 84,
+      "title": "Visual manipulation with legs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:eq2jaN3J8jMC",
+      "authors": "X He, C Yuan, W Zhou, R Yang, D Held, X Wang",
+      "venue": "Conference on Robot Learning, 4218-4234, 2025",
+      "citation_count": "11",
+      "year": "2025"
+    },
+    {
+      "index": 85,
+      "title": "Exploiting & refining depth distributions with triangulation light curtains",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:rO6llkc54NcC",
+      "authors": "Y Raaj, S Ancha, R Tamburo, D Held, SG Narasimhan",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …, 2021",
+      "citation_count": "11",
+      "year": "2021"
+    },
+    {
+      "index": 86,
+      "title": "Uncertainty-aware self-supervised 3d data association",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:RGFaLdJalmkC",
+      "authors": "J Wang, S Ancha, YT Chen, D Held",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "8",
+      "year": "2020"
+    },
+    {
+      "index": 87,
+      "title": "Few-shot point cloud region annotation with human in the loop",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:IWHjjKOFINEC",
+      "authors": "S Jain, S Munukutla, D Held",
+      "venue": "arXiv preprint arXiv:1906.04409, 2019",
+      "citation_count": "7",
+      "year": "2019"
+    },
+    {
+      "index": 88,
+      "title": "Adaptive variance for changing sparse-reward environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:L8Ckcad2t8MC",
+      "authors": "X Lin, P Guo, C Florensa, D Held",
+      "venue": "2019 International Conference on Robotics and Automation (ICRA), 3210-3216, 2019",
+      "citation_count": "7",
+      "year": "2019"
+    },
+    {
+      "index": 89,
+      "title": "Learn from what we have: History-aware verifier that reasons about past interactions online",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:hkOj_22Ku90C",
+      "authors": "Y Li, X Mao, Y Yuan, K Sim, B Eisner, D Held",
+      "venue": "arXiv preprint arXiv:2509.00271, 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 90,
+      "title": "Learning generalizable tool-use skills through trajectory generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:wbdj-CoPYUoC",
+      "authors": "C Qi, Y Wu, L Yu, H Liu, B Jiang, X Lin, D Held",
+      "venue": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2024",
+      "citation_count": "6",
+      "year": "2024"
+    },
+    {
+      "index": 91,
+      "title": "Geometric red-teaming for robotic manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:UHK10RUVsp4C",
+      "authors": "D Goel, Y Wang, T Wu, G Qiao, P Piliptchak, D Held, Z Erickson",
+      "venue": "Conference on Robot Learning, 41-67, 2025",
+      "citation_count": "5",
+      "year": "2025"
+    },
+    {
+      "index": 92,
+      "title": "Learning distributional demonstration spaces for task-specific cross-pose estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:PELIpwtuRlgC",
+      "authors": "J Wang, O Donca, D Held",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 15054 …, 2024",
+      "citation_count": "5",
+      "year": "2024"
+    },
+    {
+      "index": 93,
+      "title": "Reinforcement learning in a safety-embedded MDP with trajectory optimization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:bnK-pcrLprsC",
+      "authors": "F Yang, W Zhou, Z Liu, D Zhao, D Held",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 2845-2851, 2024",
+      "citation_count": "5",
+      "year": "2024"
+    },
+    {
+      "index": 94,
+      "title": "Combining deep learning and verification for precise object instance detection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:TQgYirikUcIC",
+      "authors": "S Ancha, J Nan, D Held",
+      "venue": "arXiv preprint arXiv:1912.12270, 2019",
+      "citation_count": "5",
+      "year": "2019"
+    },
+    {
+      "index": 95,
+      "title": "CuBi: Room Decluttering Robot",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:PR6Y55bgFSsC",
+      "authors": "L Bahl, P Camasmie, JA Garcia, C Shen, NS Meganathan, D Held",
+      "venue": "May, 2019",
+      "citation_count": "5",
+      "year": "2019"
+    },
+    {
+      "index": 96,
+      "title": "Planning from Point Clouds over Continuous Actions for Multi-object Rearrangement",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:dQ2og3OwTAUC",
+      "authors": "K Saha, A Li, A Rodriguez-Izquierdo, L Yu, B Eisner, M Likhachev, D Held",
+      "venue": "arXiv preprint arXiv:2509.04645, 2025",
+      "citation_count": "4",
+      "year": "2025"
+    },
+    {
+      "index": 97,
+      "title": "Non-rigid relative placement through 3d dense diffusion",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:SdhP9T11ey4C",
+      "authors": "E Cai, O Donca, B Eisner, D Held",
+      "venue": "arXiv preprint arXiv:2410.19247, 2024",
+      "citation_count": "4",
+      "year": "2024"
+    },
+    {
+      "index": 98,
+      "title": "Deep projective rotation estimation through relative supervision",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:tS2w5q8j5-wC",
+      "authors": "B Okorn, C Pan, M Hebert, D Held",
+      "venue": "Conference on Robot Learning, 1575-1585, 2023",
+      "citation_count": "4",
+      "year": "2023"
+    },
+    {
+      "index": 99,
+      "title": "Fusionmapping: Learning depth prediction with monocular images and 2d laser scans",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:hFOr9nPyWt4C",
+      "authors": "P Yin, J Qian, Y Cao, D Held, H Choset",
+      "venue": "arXiv preprint arXiv:1912.00096, 2019",
+      "citation_count": "4",
+      "year": "2019"
+    },
+    {
+      "index": 100,
+      "title": "Characterizing the stiffness of a multi-segment flexible arm during motion",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&pagesize=100&citation_for_view=0QtU-NsAAAAJ:9yKSN-GCB0IC",
+      "authors": "D Held, Y Yekutieli, T Flash",
+      "venue": "2012 IEEE International Conference on Robotics and Automation, 3825-3832, 2012",
+      "citation_count": "4",
+      "year": "2012"
+    },
+    {
+      "index": 101,
+      "title": "GHOST: Hierarchical Sub-Goal Policies for Generalizing Robot Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:tKAzc9rXhukC",
+      "authors": "S Krishna, B Eisner, H Zhan, Y Yuan, H Zhen, C Gan, S Tulsiani, D Held",
+      "venue": "arXiv preprint arXiv:2606.10025, 2026",
+      "citation_count": "3",
+      "year": "2026"
+    },
+    {
+      "index": 102,
+      "title": "Active velocity estimation using light curtains via self-supervised multi-armed bandits",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:eflP2zaiRacC",
+      "authors": "S Ancha, G Pathak, J Zhang, S Narasimhan, D Held",
+      "venue": "Autonomous Robots 48 (6), 15, 2024",
+      "citation_count": "3",
+      "year": "2024"
+    },
+    {
+      "index": 103,
+      "title": "Deep sequenced linear dynamical systems for manipulation policy learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:SP6oXDckpogC",
+      "authors": "MN Qureshi, B Eisner, D Held",
+      "venue": "ICLR 2022 Workshop on Generalizable Policy Learning in Physical World, 2022",
+      "citation_count": "3",
+      "year": "2022"
+    },
+    {
+      "index": 104,
+      "title": "Robust instance tracking via uncertainty flow",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:lSLTfruPkqcC",
+      "authors": "J Qian, J Nan, S Ancha, B Okorn, D Held",
+      "venue": "arXiv preprint arXiv:2010.04367, 2020",
+      "citation_count": "3",
+      "year": "2020"
+    },
+    {
+      "index": 105,
+      "title": "Force-Modulated Visual Policy for Robot-Assisted Dressing with Arm Motions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:JQOojiI6XY0C",
+      "authors": "AY Hao, Y Wang, NS Ravie, B Hegde, D Held, Z Erickson",
+      "venue": "arXiv preprint arXiv:2509.12741, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 106,
+      "title": "Differentiable trajectory optimization as a policy class for reinforcement and imitation learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:Y5dfb0dijaUC",
+      "authors": "W Wan, Y Wang, Z Erickson, D Held",
+      "venue": "",
+      "citation_count": "2",
+      "year": "2023"
+    },
+    {
+      "index": 107,
+      "title": "Self-paced policy optimization with safety constraints",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:Tiz5es2fbqcC",
+      "authors": "F Yang, W Zhou, H Sikchi, D Held",
+      "venue": "ICML 2022 Workshop on Safe Learning for Autonomous Driving (SL4AD), 2022",
+      "citation_count": "2",
+      "year": "2022"
+    },
+    {
+      "index": 108,
+      "title": "From Grasps to Dexterity: Large-Scale Grasp Pretraining for Dexterous Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:tzM49s52ZIMC",
+      "authors": "Y Yuan, X Liu, S Krishna, D Held",
+      "venue": "arXiv preprint arXiv:2606.30749, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 109,
+      "title": "3D-DLP: Self-supervised 3D Object-centric Scene Representation Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_Re3VWB3Y0AC",
+      "authors": "E Zhang, M Iyengar, A Zadeh, C Li, D Pathak, D Held, T Daniel",
+      "venue": "arXiv preprint arXiv:2606.19451, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 110,
+      "title": "RoboWits: Unexpected Challenges for Robotic Creative Problem Solving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:7T2F9Uy0os0C",
+      "authors": "C Lin, H Zhang, F Yu, Z Chen, TL Griffiths, Y Choi, D Held, C Gan",
+      "venue": "arXiv preprint arXiv:2605.30326, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 111,
+      "title": "SplatSim: Zero-Shot Sim2Real Transfer of RGB Manipulation Policies Using Gaussian Splatting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:LjlpjdlvIbIC",
+      "authors": "M Nomaan Qureshi, S Garg, F Yandun, D Held, G Kantor, A Silwal",
+      "venue": "arXiv e-prints, arXiv: 2409.10161, 2024",
+      "citation_count": "1",
+      "year": "2024"
+    },
+    {
+      "index": 112,
+      "title": "Point-based correspondence estimation for cloth alignment and manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:J-pR_7NvFogC",
+      "authors": "M Agarwal, T Weng, D Held",
+      "venue": "RSS 2023 Workshop on Symmetries in Robot Learning, 2023",
+      "citation_count": "1",
+      "year": "2023"
+    },
+    {
+      "index": 113,
+      "title": "Long-Horizon Multi-Object Rearrangement via Distilled Tree Search over Continuous Actions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:XD-gHx7UXLsC",
+      "authors": "K Saha, Y Hong, A Li, Y Choi, M Likhachev, D Held",
+      "venue": "arXiv preprint arXiv:2610.25785, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 114,
+      "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:t7zJ5fGR-2UC",
+      "authors": "C Zhou, Y Hong, H Huang, Y Jiang, W Huang, D Held, VC Guizilini, ...",
+      "venue": "arXiv preprint arXiv:2610.22364, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 115,
+      "title": "Force-Modulated Dexterity: Unified Compliance for Contact-Rich Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:z_wVstp3MssC",
+      "authors": "Y Yuan, D Held, J Malik, H Qi",
+      "venue": "arXiv preprint arXiv:2610.17161, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 116,
+      "title": "Scouting the Dynamics Gap: Test-Time Policy Adaptation via Action-Outcome Feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:j8SEvjWlNXcC",
+      "authors": "Y Li, L Geng, X Mao, A Li, D Held",
+      "venue": "arXiv preprint arXiv:2609.36107, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 117,
+      "title": "An Empirical Study on What Matters for Viewpoint-Generalizable Policies in Visual Imitation Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:uJ-U7cs_P_0C",
+      "authors": "M Nakura, S Krishna, Y Wang, S Tulsiani, Z Erickson, D Held",
+      "venue": "arXiv preprint arXiv:2609.32762, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 118,
+      "title": "H2RBench: A Real-to-Sim Benchmark for Evaluating Human-to-Robot Transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:fEOibwPWpKIC",
+      "authors": "C Xiao, H Zhan, S Krishna, P Meng, MZ Irshad, S Zakharov, D Held",
+      "venue": "arXiv preprint arXiv:2609.24778, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 119,
+      "title": "JAMB: Joint Action-Motion Diffusion for Bimanual Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:-_dYPAW6P2MC",
+      "authors": "C Xiao, P Meng, D Held",
+      "venue": "arXiv preprint arXiv:2609.25322, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 120,
+      "title": "ParticleSplat: Self-supervised Object-centric Latent Particle Splatting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:35r97b3x0nAC",
+      "authors": "L He, D Guo, E Terveen, D Pathak, D Held, T Daniel",
+      "venue": "arXiv preprint arXiv:2609.19463, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 121,
+      "title": "Disentangled Point Diffusion for Precise Object Placement",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:NJ774b8OgUMC",
+      "authors": "L He, E Cai, S Aggarwal, J Wang, D Held",
+      "venue": "arXiv preprint arXiv:2604.11793, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 122,
+      "title": "Force-Modulated Visual Policy for Robot-Assisted Dressing with Arm Motions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_Ybze24A_UAC",
+      "authors": "A Yihong Hao, Y Wang, NS Ravie, B Hegde, D Held, Z Erickson",
+      "venue": "arXiv e-prints, arXiv: 2509.12741, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 123,
+      "title": "An Interactive Protocol to Measure a Driver’s Situational Awareness",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:_B80troHkn4C",
+      "authors": "A Biswas, P Gupta, D Held, H Admoni",
+      "venue": "7th International Workshop on Virtual, Augmented, and Mixed-Reality for …, 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 124,
+      "title": "On Time-Indexing as Inductive Bias in Deep RL for Sequential Manipulation Tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:HE397vMXCloC",
+      "authors": "M Nomaan Qureshi, B Eisner, D Held",
+      "venue": "arXiv e-prints, arXiv: 2401.01993, 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 125,
+      "title": "Bagging by Learning to Singulate Layers Using Interactive Perception",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:mvPsJ3kp5DgC",
+      "authors": "L Yunliang Chen, B Shi, R Lin, D Seita, A Ahmad, R Cheng, T Kollar, ...",
+      "venue": "arXiv e-prints, arXiv: 2303.16898, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 126,
+      "title": "Exploiting & Refining Depth Distributions with Triangulation Light Curtains",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:f2IySw72cVMC",
+      "authors": "R Yaadhav, S Ancha, R Tamburo, D Held, SG Narasimhan",
+      "venue": "IEEE Conference on Computer Vision and Pattern Recognition, 2021",
+      "citation_count": "",
+      "year": "2021"
+    },
+    {
+      "index": 127,
+      "title": "CAREER: Self-supervised Representation Learning for Deformable Object Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:ZuybSZzF8UAC",
+      "authors": "D Held",
+      "venue": "NSF Award Number 2046491. Directorate for Computer and Information Science …, 2021",
+      "citation_count": "",
+      "year": "2021"
+    },
+    {
+      "index": 128,
+      "title": "Vision-based category agnostic object tracking for mobile robots and intelligent vehicles",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:geHnlv5EZngC",
+      "authors": "A Osep, D Held, B Leibe",
+      "venue": "Fachgruppe Informatik, 2020",
+      "citation_count": "",
+      "year": "2020"
+    },
+    {
+      "index": 129,
+      "title": "RI: Medium: To Sense or Not to Sense: Energy Efficient Adaptive Sensing for Autonomous Systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:VLnqNzywnoUC",
+      "authors": "SG Narasimhan, H Admoni, D Held, M O'Toole",
+      "venue": "NSF Award 19 (1900821), 821, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 130,
+      "title": "S&AS: FND: Uncertainty-Aware Safe Deep Reinforcement Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:1yQoGdGgb4wC",
+      "authors": "D Held",
+      "venue": "NSF Award Number 1849154. Directorate for Computer and Information Science …, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 131,
+      "title": "Robust anytime tracking combining 3D shape, color, and motion with annealed dynamic histograms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:4DMP91E08xMC",
+      "authors": "D Held, J Levinson, S Thrun, S Savarese",
+      "venue": "US Patent 9,990,736, 2018",
+      "citation_count": "",
+      "year": "2018"
+    },
+    {
+      "index": 132,
+      "title": "Deep Learning and Probabilistic Methods for Robotic Perception from Streaming Data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:kNdYIx-mwKoC",
+      "authors": "D Held",
+      "venue": "Stanford University, 2016",
+      "citation_count": "",
+      "year": "2016"
+    },
+    {
+      "index": 133,
+      "title": "Publication Submission Form",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:u_35RYKgDlwC",
+      "authors": "DTR as a Higher",
+      "venue": "Journal Article 96 (1), 28-45, 2012",
+      "citation_count": "",
+      "year": "2012"
+    },
+    {
+      "index": 134,
+      "title": "Characterization of the mechanical properties of tactors used in tactile displays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:UeHWp8X0CEIC",
+      "authors": "D Held",
+      "venue": "Massachusetts Institute of Technology, 2007",
+      "citation_count": "",
+      "year": "2007"
+    },
+    {
+      "index": 135,
+      "title": "Publication Submission Form",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:nb7KW1ujOQ8C",
+      "authors": "AF Harvesting",
+      "venue": "Journal Article 23 (8), 467-508, 2006",
+      "citation_count": "",
+      "year": "2006"
+    },
+    {
+      "index": 136,
+      "title": "Modeling and control of a silicon substrate heater for carbon nanotube growth experiments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:zYLM7Y9cAGgC",
+      "authors": "D Held",
+      "venue": "Massachusetts Institute of Technology, 2005",
+      "citation_count": "",
+      "year": "2005"
+    },
+    {
+      "index": 137,
+      "title": "Publication Submission Form",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:fQNAKQ3IYiAC",
+      "authors": "IS Revision, M Velcro",
+      "venue": "Journal Article 7 (2), 57-66, 1992",
+      "citation_count": "",
+      "year": "1992"
+    },
+    {
+      "index": 138,
+      "title": "Beyond Positive Bias: Customizing and Correcting Pretrained Diffusion Policies via Negative Guidance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:evX43VCCuoAC",
+      "authors": "H Qi, Y Li, L Shao, H Yang, D Held",
+      "venue": "RSS 2026 Workshop on Diffusion for Robot Learning, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 139,
+      "title": "ACCEPTED MANUSCRIPT Active velocity estimation using light curtains via self-supervised multi-armed bandits This Accepted Manuscript (AM) is a PDF file of the manuscript …",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:2KloaMYe4IUC",
+      "authors": "S Ancha, G Pathak, J t Zhang, S Narasimhan, D Held",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 140,
+      "title": "SPUR: Scaling Reward Learning from Human Demonstrations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:uLbwQdceFCQC",
+      "authors": "A Liang, Y Korkmaz, J Zhang, J Zhang, A Anwar, S Kaushik, Y Wang, ...",
+      "venue": "3rd CoRL Workshop on Learning Effective Abstractions for Planning (Rolling), 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 141,
+      "title": "Sequential Object-Centric Relative Placement Prediction for Long-horizon Imitation Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:VL0QpB8kHFEC",
+      "authors": "B Eisner, E Cai, O Donca, T Vitchutripop, D Held",
+      "venue": "2nd CoRL Workshop on Learning Effective Abstractions for Planning, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 142,
+      "title": "GenBot: Generative Simulation Empowers Automated Robotic Skill Learning at Scale",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:tkaPQYYpVKoC",
+      "authors": "Y Wang, Z Xian, F Chen, TH Wang, Z Erickson, D Held, C Gan",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 143,
+      "title": "Self-supervised Instance Detection by (and for) Pose Estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:xtRiw3GOFMkC",
+      "authors": "Q Gu, B Okorn, D Held",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 144,
+      "title": "Supplementary Material A Probabilistic Framework for Real-time 3D Segmentation using Spatial, Temporal, and Semantic Cues",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:bFI3QPDXJZMC",
+      "authors": "D Held, D Guillory, B Rebsamen, S Thrun, S Savarese",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 145,
+      "title": "Unobtrusively Capturing Human Behavior In The Wild NSF MRI: Instrument Development Track",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0QtU-NsAAAAJ&cstart=100&pagesize=100&citation_for_view=0QtU-NsAAAAJ:HoB7MX3m0LUC",
+      "authors": "J Hodgins, D Held, O Kroemer, D Ramanan, K Kitani, S Narasimhan, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}

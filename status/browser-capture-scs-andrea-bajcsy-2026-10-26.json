@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-andreabajcsy-e887e206",
+  "display_name": "Andrea Bajcsy",
+  "scholar_profile_name": "Andrea Bajcsy",
+  "scholar_id": "LUe32ToAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/andrea-bajcsy/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/andrea-bajcsy/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:23:06.472018+00:00",
+  "publication_count": 80,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-andrea-bajcsy-2026-10-26.json",
+  "source_json_sha256": "e79af56691fab9030122794e31c399635d56caa7c980713242ecaf9af1e199e9",
+  "source_html_path": "data/captures/scs-andrea-bajcsy-2026-10-26.html",
+  "source_html_sha256": "91b003450db187076537644ace63cde893a8f951ae4714515f7c54e001e67b14",
+  "cache_path": "data/authors/LUe32ToAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
