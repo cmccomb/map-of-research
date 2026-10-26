@@ -1,0 +1,20 @@
+# Rupert Croft Physics source-bound release review
+
+This draft releases the complete 267-row saved Scholar capture for Rupert A. C. Croft (`wex9ft0AAAAJ`). The [CMU Physics profile](https://www.cmu.edu/physics/people/faculty/croft.html) identifies the cosmology professor; the registry records the Scholar ID from CMU Scholars. The seven Bristol namesake false attributions were previously reviewed and merged in PR #263. The producer manifest already has 12 exact exclusions, including four NSF awards and a CV. This draft does not change those exclusions, the raw capture, the author cache, or the source snapshot.
+
+The pair adds 83 exact provisional holds, leaving 172 saved rows for ordinary work and map quality gates. Each hold binds the saved capture index, full citation ID, original Scholar citation URL, and a reason. The exclusion and hold ID SHA-256 digests are `a70ae469d11871d77c6b783d63677d538f566737980ad282050f5d761e1ee753` and `4505c14599620818933feac1224566b6c10c79f6b7dbcc864d676c10955561cf`. A hold makes no adverse authorship or duplicate-identity claim.
+
+| Hold group | Capture rows | Review boundary |
+| --- | --- | --- |
+| Meeting abstracts and presentations | 139, 172, 190, 210, 215, 225, 227, 230, 231, 232, 233, 237, 239, 244, 248, 251, 258 | Consistent map-point and collaboration-link rule. |
+| Blank venue | 124, 168, 196, 217, 220, 221, 229, 236, 240, 250, 259, 264, 265, 266, 267 | Verify primary source and output type. |
+| Grants, proposals, and catalogs | 181, 197, 211, 214, 218, 222, 223, 224, 226, 234, 235, 238 | Verify whether any row is a scholarly work rather than an index or funding record. |
+| Software | 198 | Software citation and output-type policy. |
+| Metadata or output-type question | 193, 255 | Verify the underlying publication or overview. |
+| Related versions | 15, 20, 21, 51, 60, 65, 76, 81, 82, 89, 96, 105, 120, 159, 164, 166, 167, 170, 171, 174, 180, 184, 185, 187, 189, 199, 209, 212, 215, 216, 217, 219, 220, 221, 228, 229, 236, 240, 246, 247, 256, 260, 261, 267 | Exact journal, preprint, proceedings, or title crosswalk. |
+
+Rows 250 and 264 remain held pending exact CMS source/affiliation evidence; prior review explicitly left them unresolved. A [primary CMS note](https://s3.cern.ch/inspire-prod-files-9/940439019050d9d4f57d747ca9d653d4) identifies an R. Croft in a closely matching forward-trigger byline with a University of Bristol affiliation, but its title differs from saved row 264, so this is supporting evidence rather than an exact exclusion. Row 265 is an organization-title fragment and row 266 lacks a venue. [arXiv:2007.00226](https://arxiv.org/abs/2007.00226) identifies the Croft paper cited by the differently titled rows 167 and 170; both stay held pending a source-to-citation crosswalk. The source review ledger `status/physics-croft-release-review-2026-10-26.json` records category overlaps and every row disposition. The older nine-profile source status remains globally held for the other profiles while marking Croft reviewed for this paired release.
+
+This restacked pair starts from successful source/status tip `8555fbe94f13daf4a90fd75e2c310ccf6252ddb0`, producer main `5ac75ddd404c8f14686bbb0b9a9f6aad608498b1`, source snapshot SHA-256 `003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1`, and immutable Hub parent `37c709267b78720be48e63ef360ea71d15553e3c`. Earlier Croft previews stopped before staging because a fresh layout changed one reviewed Chemistry work's derived `map_region_documented_override` diagnostic. The published 37c parent records it as false; the candidate changes it to true. Merged PR #423 permits fresh-layout changes to only the two derived region diagnostics, while freezing reviewed Chemistry source, visibility, attribution, authorship, membership, and mapped identities. This draft still requires an exact-new-parent no-upload preview and hosted CI before any merge or upload.
+
+The Croft producer branch adds no per-parent Chemistry diagnostic pins. The shared gate validates the exact published 37c parent against the frozen 19 Chemistry decisions and limits candidate diagnostic variation to a fresh layout.
