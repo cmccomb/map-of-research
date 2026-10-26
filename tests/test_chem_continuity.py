@@ -308,6 +308,53 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
         )
 
 
+def test_physics_hdf_parent_accepts_only_its_published_chemistry_diagnostics(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    _mcs_published_parent(parent)
+    rule_of_four = (
+        "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
+    )
+    works = parent["works/train-00000-of-00001.parquet"]
+    _rewrite_rows(
+        works,
+        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
+            map_region_prior_eligible_override=False
+        ),
+    )
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
+    )
+    assert state["reviewed_works"] == 19
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        )
+    _rewrite_rows(
+        works,
+        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
+            map_region_prior_eligible_override=True
+        ),
+    )
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
+        )
+
+
 def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
     kwargs = {
         "prior_revision": continuity.MCS_PUBLISHED_PARENT,

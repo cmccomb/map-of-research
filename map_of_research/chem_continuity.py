@@ -109,6 +109,7 @@ BIO_REGION_REFIT_FIELDS = frozenset(
 )
 MCS_PUBLISHED_PARENT = "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
 PHYSICS_FIVE_PUBLISHED_PARENT = "4e43639c091a4b826a4651eddc5aa0fe16129f0f"
+PHYSICS_HDF_PUBLISHED_PARENT = "42b30e512fb941a8cbe78d67399bd3771372cb68"
 MCS_DIAGNOSTIC_PARENT_REVISIONS = frozenset(
     {MCS_PUBLISHED_PARENT, PHYSICS_FIVE_PUBLISHED_PARENT}
 )
@@ -121,6 +122,12 @@ MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS = POST_BIO_PRIOR_ELIGIBLE_WORK_IDS | {
 MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS = {
     POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID,
     "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+}
+# The subsequent Hunt/Deserno/Feenstra release retained the reviewed Chemistry
+# rows, except that its fresh layout set this one prior-eligible diagnostic
+# back to false. The other parent diagnostics remain as published at 4e43639c.
+PHYSICS_HDF_PRIOR_ELIGIBLE_WORK_IDS = MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS - {
+    "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
 }
 MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
     {
@@ -514,13 +521,16 @@ def validate_chemistry_parent(
     )
     if post_bio_schema:
         prior_eligible_ids = (
-            MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+            PHYSICS_HDF_PRIOR_ELIGIBLE_WORK_IDS
+            if prior_revision == PHYSICS_HDF_PUBLISHED_PARENT
+            else MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
             if prior_revision in MCS_DIAGNOSTIC_PARENT_REVISIONS
             else POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
         )
         documented_override_ids = (
             MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
-            if prior_revision in MCS_DIAGNOSTIC_PARENT_REVISIONS
+            if prior_revision
+            in MCS_DIAGNOSTIC_PARENT_REVISIONS | {PHYSICS_HDF_PUBLISHED_PARENT}
             else {POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID}
         )
         for work_id, work in parent["works"].items():
