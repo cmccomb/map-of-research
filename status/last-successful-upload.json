@@ -1,9 +1,9 @@
 {
-  "artifact_commit": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+  "artifact_commit": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6",
   "atomic_release": {
-    "artifact_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
-    "commit_message": "Publish complete Biological Sciences Scholar corpus atomically\n\nRelease-Intent-Nonce: 5786b995229c4f98b4b3cab7d06dbb3a",
-    "commit_nonce": "5786b995229c4f98b4b3cab7d06dbb3a",
+    "artifact_revision": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6",
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 60271200744a45b0b35f74ca9aa389e0",
+    "commit_nonce": "60271200744a45b0b35f74ca9aa389e0",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -15,56 +15,48 @@
     ],
     "hosted_file_bytes_match_prewrite": true,
     "mode": "single_parent_commit",
-    "parent_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
+    "parent_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
     "prewrite_gate": {
-      "bio29_mapped_observations_preserved": 1926,
-      "bio29_observations_preserved": 2106,
-      "bio_edges_preserved": 20,
-      "bio_people": 47,
-      "bio_scholar_rows": 2688,
-      "bio_verified_profiles": 30,
-      "gate": "bio-full-source-graph-and-pending-topics-v1",
-      "held_poster_mapped_loss": true,
-      "pending_topic_works_preserved": 18,
-      "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-      "raw_rows": 51883,
-      "reviewed_duplicate_mapped_losses": 3,
-      "source_snapshot_sha256": "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550",
+      "gate": "full-source-and-region-continuity-v1",
+      "map_points": 42916,
+      "prior_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+      "raw_rows": 58764,
+      "source_snapshot_sha256": "d1ab914ec3fe57e30361fa6b01f30787b985e554e058faa01b32c6496e869ac6",
       "status": "pass"
     },
     "release_context": {
-      "producer_commit": "2993580c1379727661003f5505604c75678f4289",
-      "snapshot_commit": "45112c6860d380e40c3f60efc4faddf3003f7a89",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40211722485"
+      "producer_commit": "6aefdf47b39f07f78ab920bc84761f0eabb8255e",
+      "snapshot_commit": "8477a325c7017a7910e603a4031d34b4e1c526a5",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40249335108"
     },
     "sha256_by_path": {
-      "README.md": "373848475a0283830bd124c74b821dccd9d4a19aa792e58658e5f99c56ea0d2e",
-      "authorships/train-00000-of-00001.parquet": "de067b61128c09639619cacbcc813b88a8da97c500dc917750efcfdc13b0f2c0",
-      "maps/manifest.json": "fbaedfb5309067188038f0277fcfcd20f2197ab1350c5944c19ab6617d543038",
-      "maps/publications.json": "ccf64ffc18e2b2f8a2f925763819bd89f11e276580b633ea2df056741827e6cb",
-      "people/train-00000-of-00001.parquet": "689e61502bc70b0a09a3728f632293437f5eb546044545d37a086d3658674a78",
-      "profile_publications/train-00000-of-00001.parquet": "26f78111a8d07efa4118f5952ff4eeda8a60cbf926ed3ac8b635f578d5321b52",
-      "works/train-00000-of-00001.parquet": "3b516b647316b4c2ebe398ca3990665b2cfa73db28adf1c9c450a9730683338d"
+      "README.md": "34b8b9de05dadb698f755f8fa0c45987a17c15c09754f2f897105c62e6ad596d",
+      "authorships/train-00000-of-00001.parquet": "9d7d081ac0d2c86e8735ce6762a7b1d89ca0f51873fb093dddd63079fdf90e5b",
+      "maps/manifest.json": "257641d365b6e789f4e9af1658f104296950daa6fd2bd99f3911ba51dfe4dbca",
+      "maps/publications.json": "2766a8c0c0a61ecaa29155813b5584b5ca154d067433c9d569d2c375f6830586",
+      "people/train-00000-of-00001.parquet": "834e5cfbe0158ef1b63e3f6d5ca9b7a14f4971033726fcc6584b228289ac18e0",
+      "profile_publications/train-00000-of-00001.parquet": "76d71538783d041f03920ff99b1e05e14221b0547fc23a715c628a12a198f65e",
+      "works/train-00000-of-00001.parquet": "5566c76c659297dd295f6d3eaa15689e493c82ea1c28c51fcb7c4cc174f539c8"
     },
     "size_by_path": {
       "README.md": 10439,
-      "authorships/train-00000-of-00001.parquet": 15545186,
-      "maps/manifest.json": 8714,
-      "maps/publications.json": 38685949,
-      "people/train-00000-of-00001.parquet": 661750,
-      "profile_publications/train-00000-of-00001.parquet": 186390189,
-      "works/train-00000-of-00001.parquet": 191445760
+      "authorships/train-00000-of-00001.parquet": 15548517,
+      "maps/manifest.json": 3193,
+      "maps/publications.json": 38696483,
+      "people/train-00000-of-00001.parquet": 661776,
+      "profile_publications/train-00000-of-00001.parquet": 186431978,
+      "works/train-00000-of-00001.parquet": 191492454
     }
   },
   "attribution_confirmed": 437,
   "attribution_held": 118,
   "attribution_reviews_sha256": "8e19b28912af098d5bc100a564aa685e5c556a10a821f2a48988ef4d99684218",
-  "authorships": 49617,
+  "authorships": 49628,
   "dataset_commits": {
-    "authorships": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
-    "people": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
-    "profile_publications": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
-    "works": "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
+    "authorships": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6",
+    "people": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6",
+    "profile_publications": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6",
+    "works": "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
   },
   "dataset_configs": [
     "people",
@@ -73,26 +65,44 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "detail_keywords": 121,
+  "detail_keywords": 120,
   "error_message": null,
   "error_type": null,
   "excluded_works": 2521,
-  "finished_at_utc": "2026-10-25T16:40:26.241580+00:00",
-  "held_observation_rows": 0,
+  "finished_at_utc": "2026-10-26T00:39:54.115294+00:00",
+  "held_observation_rows": 6870,
   "held_person_observation_rows": 3,
-  "held_profile_ids": [],
-  "held_source_observation_rows": 0,
-  "keywords": 31,
+  "held_profile_ids": [
+    "hgtyZOUAAAAJ",
+    "11EoZncAAAAJ",
+    "1J28ExgAAAAJ",
+    "IcEsJfAAAAAJ",
+    "p1aFEDYAAAAJ",
+    "KoHdmZEAAAAJ",
+    "czs45aEAAAAJ",
+    "FRlLpMYAAAAJ",
+    "6pPZKd0AAAAJ",
+    "AcW2EXwAAAAJ",
+    "NhBa8hAAAAAJ",
+    "jkKrk0sAAAAJ",
+    "kcXOB1MAAAAJ",
+    "wex9ft0AAAAJ",
+    "wovjAPsAAAAJ",
+    "wJ_gQLoAAAAJ",
+    "LibSWRMAAAAJ"
+  ],
+  "held_source_observation_rows": 6870,
+  "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 42905,
+  "mapped_works": 42916,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 5,
+  "new_embedding_count": 11,
   "people": 2001,
   "person_publication_hold_manifest_sha256": "575d553b9762eefdb92631265f8c374e5be843edf004e44d6cb80297f6bc3395",
   "person_publication_holds": [
@@ -122,10 +132,10 @@
       ]
     }
   ],
-  "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-  "producer_commit": "2993580c1379727661003f5505604c75678f4289",
+  "prior_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+  "producer_commit": "6aefdf47b39f07f78ab920bc84761f0eabb8255e",
   "profile_count": 310,
-  "profile_publications": 51880,
+  "profile_publications": 51891,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -266,9 +276,179 @@
       "scholar_id": "IggMbacAAAAJ",
       "source_observation_rows": 170,
       "state": "released"
+    },
+    {
+      "cache_sha256": "6757f8895026bfb7439a624c9177adcc7abb34c8b2042f1b1cc2108005689f47",
+      "person_id": "person-simranjeetsingh-8f74243d",
+      "person_observation_rows": 53,
+      "reason": "Complete 53-row Physics capture is source-bound. One exact exclusion is proposed; patent contexts and six meeting-abstract leads need review before any public work release.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "hgtyZOUAAAAJ",
+      "source_observation_rows": 53,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "b790f95be56570436fd9e06dc5b54dd58458ba1bb07c086b304e922f28443c3f",
+      "person_id": "person-benjaminhunt-e286d360",
+      "person_observation_rows": 95,
+      "reason": "Complete 95-row Physics capture is source-bound. One blank-venue row, a same-title pair, and meeting-abstract leads remain unresolved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "11EoZncAAAAJ",
+      "source_observation_rows": 95,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "1595aeb166721ece6b7baf88bb823a9b30e11e99934744f33e429ac5b4c09e44",
+      "person_id": "person-markusdeserno-3b04d008",
+      "person_observation_rows": 233,
+      "reason": "Complete 233-row Physics capture is source-bound. One individual row and grouped source-classification leads remain unresolved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "1J28ExgAAAAJ",
+      "source_observation_rows": 233,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
+      "person_id": "person-matthewwalker-f9f5f4da",
+      "person_observation_rows": 413,
+      "reason": "Complete 413-row Physics capture is source-bound. Same-name contamination and eleven individual candidates remain unresolved; hold the entire profile.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "IcEsJfAAAAAJ",
+      "source_observation_rows": 413,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "36c211772f28fc57b81f5a9d415bcc063e4c06129a3063c1925fe0df066e3b04",
+      "person_id": "person-randallfeenstra-0f288978",
+      "person_observation_rows": 422,
+      "reason": "Complete 422-row Physics capture is source-bound. Same-title, blank-venue, and meeting-abstract groups need review before release.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "p1aFEDYAAAAJ",
+      "source_observation_rows": 422,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "a77b39350baf2f93cd5daa35ae4d0ccdec737571681cad7ab91a3f496b186367",
+      "person_id": "person-roberthswendsen-cfa7c981",
+      "person_observation_rows": 202,
+      "reason": "Complete 202-row Physics capture is source-bound. Same-title, blank-venue, and meeting-abstract groups need review before release.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "KoHdmZEAAAAJ",
+      "source_observation_rows": 202,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "b1d6203d633deb8b68af281177d2ddc45b5afa2f598ab457229103180a1fdbc3",
+      "person_id": "person-michaelwidom-8ddeb878",
+      "person_observation_rows": 215,
+      "reason": "Complete 215-row Physics capture is source-bound. Grouped source-classification leads need review before release.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "czs45aEAAAAJ",
+      "source_observation_rows": 215,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
+      "person_id": "person-saramajetich-69037290",
+      "person_observation_rows": 271,
+      "reason": "Complete 271-row Physics capture is source-bound. The DOE report needs a context-type decision; another individual row and grouped leads remain unresolved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "FRlLpMYAAAAJ",
+      "source_observation_rows": 271,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "cc14ad480e977d2ac3af10ac1ac1dee85a76b9b446b12875d3efc179b0e9a0ed",
+      "person_id": "person-antonellapalmese-5378b53d",
+      "person_observation_rows": 624,
+      "reason": "Complete 624-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "6pPZKd0AAAAJ",
+      "source_observation_rows": 624,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "f22c819fb75a356f42dcf10031222303d054c1f6f65dc8e6d50b18583b3a5aff",
+      "person_id": "person-katelynbreivik-8bef079f",
+      "person_observation_rows": 131,
+      "reason": "Complete 131-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "AcW2EXwAAAAJ",
+      "source_observation_rows": 131,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "d653214fe3c14b2b26cb97575c046c9279c30862cb9a11eb21bc737d24418df0",
+      "person_id": "person-sufeishi-74105d16",
+      "person_observation_rows": 141,
+      "reason": "Complete 141-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "NhBa8hAAAAAJ",
+      "source_observation_rows": 141,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "4c518b41ecc4fe5122a4f80d195a456ea6338a4b7e9a81bd09babb34658606fa",
+      "person_id": "person-curtismeyer-a1171ccf",
+      "person_observation_rows": 764,
+      "reason": "Complete 764-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "jkKrk0sAAAAJ",
+      "source_observation_rows": 764,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
+      "person_id": "person-scottdodelson-73513ee9",
+      "person_observation_rows": 443,
+      "reason": "Complete 443-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "kcXOB1MAAAAJ",
+      "source_observation_rows": 443,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
+      "person_id": "person-rupertcroft-16669f45",
+      "person_observation_rows": 267,
+      "reason": "Complete 267-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "wex9ft0AAAAJ",
+      "source_observation_rows": 267,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "4e86a91a02ae16c31e290692355366e98714e067617dc470256a4f700f686619",
+      "person_id": "person-shubhayuchatterjee-34929dff",
+      "person_observation_rows": 90,
+      "reason": "Complete 90-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "wovjAPsAAAAJ",
+      "source_observation_rows": 90,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "f0f0bbeecc820f50b913793925deea56869ffbf72a9ca91f92258a7c5d8230bb",
+      "person_id": "person-matteocremonesi-b2aba740",
+      "person_observation_rows": 1963,
+      "reason": "Complete 1963-row Physics capture is bound to saved source and cache hashes. The exact CMS/CLAS map-quality review remains held; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "source_observation_rows": 1963,
+      "state": "held"
+    },
+    {
+      "cache_sha256": "92582205fb5c2ef056318bba801c4eb5a957265ef4c92f32a0e8f539a0e67d23",
+      "person_id": "person-reinhardschumacher-35cd3c6f",
+      "person_observation_rows": 543,
+      "reason": "Complete 543-row Physics capture is bound to saved source and cache hashes. The exact CMS/CLAS map-quality review remains held; no public work or map contribution is approved.",
+      "reviewed_at": "2026-10-25",
+      "scholar_id": "LibSWRMAAAAJ",
+      "source_observation_rows": 543,
+      "state": "held"
     }
   ],
-  "profile_release_manifest_sha256": "64160ce6ca3ad0c28253e050486258ebf0ed7235ffc461af5019feae3a5bc15d",
+  "profile_release_manifest_sha256": "e66d6a62a574c154823044c651efcecbec4f74df1d357db9ea763770610a5308",
   "provisional_hold_manifest_sha256": "53fd5226b5d44f92ed3cdc5a6e64fad3396566fa4d4b19c0a1bfacbcbd09958c",
   "provisional_hold_observation_rows": 65,
   "provisional_hold_profiles": [
@@ -393,129 +573,36 @@
       "source_observation_rows": 170
     }
   ],
-  "raw_snapshot_observations": 51883,
-  "raw_snapshot_profiles": 310,
-  "raw_snapshot_sha256": "d08fb3a422df8dee3b0d0f75a29d68fef9b7121229a9cf6d418917e1d4a19550",
+  "raw_snapshot_observations": 58764,
+  "raw_snapshot_profiles": 327,
+  "raw_snapshot_sha256": "d1ab914ec3fe57e30361fa6b01f30787b985e554e058faa01b32c6496e869ac6",
   "region_audit_version": "low-information-semantic-region-v3",
-  "region_comparison_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
+  "region_comparison_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
   "region_continuity": {
-    "approved_bio_binding_changes": [
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-4cbb2b69a5fa9112cf7b3a3cbbca683d69d578ae290630ebd7597b7bf3618cb4",
-        "observation": "person-alisonbarth-1f2afa5b/FXqaMl4AAAAJ/FXqaMl4AAAAJ:UebtZRa9Y70C/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-dd2eac5c381270799cfe89641140e61f5fb56f33b235225dd5bb76081c4d3bf1"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-8e4f8cbdef621e150de90229ae4180faa256885827107e7ae2eadb67880eff41",
-        "observation": "person-amandawillard-bde48416/UZf8gAUAAAAJ/UZf8gAUAAAAJ:u5HHmVD_uO8C/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-434c941f21ed40a4d713d4a5fbcc3ca17dc348d1bb71f739556a288f2b017532"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-4a4c2ad38e9b2eebc2682edf65bb94b55739f97964b069fe95e817bb85c5eaa4",
-        "observation": "person-cjoelmcmanus-f28918ce/28yZqbcAAAAJ/28yZqbcAAAAJ:UeHWp8X0CEIC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-367e317cecccc0a661b563714d3308bc6e0f95687cf0a5ef69c03f52e3076b60"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-349d7f3c42263703ef4ac3bd258fa7b165c73edc01022748844ec6dec2a946fe",
-        "observation": "person-gordonrule-a9b02a5d/n6flaAsAAAAJ/n6flaAsAAAAJ:M3NEmzRMIkIC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-1e2e138faee09cedc8cef01bacf5e4448f76dfb0639bfe2164e22e772c0c2175"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-2140313095fda357d0be7873dcdc73e4e98f4142b990c4976e6bc1e0adbffaa0",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:08ZZubdj9fEC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-f28c7003eb0d790311bc3e088da0a6438a961a21e4d9111807bec4de7fcbf3d6"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-fcc7ecc2dfda198bc271c1a69c247c7fc9a060cf6ff710b99c337303abf3d216",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:4fKUyHm3Qg0C/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-d67046e6b5dbe0dea5366806983bef50aa9f56130f7aff69a95ada6843e47025"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-e34bf1b2730e8840322680db92eb671f9c1b97ee1212febf6456e9eab3b294db",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:AXPGKjj_ei8C/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-473294954bbbe8c3c55d106718bdf15866616ca6477630a2b14e40683e48a422"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-9d1425240092343744caa59b839403cb83eb6a2b6aef2b69c000af86222dd581",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:eflP2zaiRacC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-e27e5cea5810fbb81895f6af34ab43d5f367f038bb63441762c04a5fe9f3b71a"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-3f9429e5d668edf6eb960934479268ba9b5f5fbae31ec542a1b8bc9bfe4874e2",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:g5m5HwL7SMYC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-bd1ef641b7ab07a139bafcb3c205d5971a46305ebd90e36ce1400ef3ca70ae47"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-4cfbe6eef8651fa63f73d1c31c8790b9e98fdd56876e14c1d591d29cd2e77f8a",
-        "observation": "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:pqnbT2bcN3wC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-7e06541b32806e20d8dae348fa4a8055f47cee474b8453781dc8905f6e664332"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-5daf79858885bd71b90e858b7ee9bce367bae980a3ba69d64dd5b7e861d6a967",
-        "observation": "person-russellschwartz-08053fc7/6ArMETUAAAAJ/6ArMETUAAAAJ:nroGzMJTTpEC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-b19b263b8cc750cfb10e09537a920d6e937e5f7c5361908bcc9cb3137bd1c68a"
-      }
-    ],
-    "approved_one_time_losses": [
-      "person-cjoelmcmanus-f28918ce/28yZqbcAAAAJ/28yZqbcAAAAJ:HKviVsUxM5wC/scholar"
-    ],
-    "approved_person_hold_losses": [
-      "person-shlomotaasan-403c9cf9//curated-doi:person-shlomotaasan-403c9cf9:10.1016/j.pmatsci.2013.03.004/curated_verified",
-      "person-shlomotaasan-403c9cf9//curated-doi:person-shlomotaasan-403c9cf9:10.1016/s1359-6462(97)00530-7/curated_verified",
-      "person-shlomotaasan-403c9cf9//curated-doi:person-shlomotaasan-403c9cf9:10.4028/www.scientific.net/msf.715-716.473/curated_verified"
-    ],
+    "approved_bio_binding_changes": [],
+    "approved_one_time_losses": [],
+    "approved_person_hold_losses": [],
     "approved_sullivan_additional_losses": [],
     "approved_sullivan_binding_changes": [],
     "approved_sullivan_held_losses": [],
     "approved_sullivan_rekey_losses": [],
-    "bio_binding_approval_sha256": "2bee423ae5660cfdd6706c0a9d1ae733e22c21dae1ab9c990f45e2e366b7bfcc",
-    "chemistry_review_carryforward": {
-      "authorships": 10,
-      "excluded": 4,
-      "held": 5,
-      "included": 10,
-      "review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b"
-    },
-    "current_visible_observations": 49174,
+    "bio_binding_approval_sha256": null,
+    "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
+    "chemistry_review_root_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
+    "current_visible_observations": 49185,
     "missing_sullivan_curated_targets": [],
-    "new_source_gains": 4,
-    "poster_loss_approval_sha256": "392ff414f07e8143b09eda7f07452dd3c72bcf733130e8b41a42f4277b8059a7",
-    "prior_eligible_overrides": 103,
-    "prior_excluded_overrides": 35,
-    "prior_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-    "prior_visible_observations": 49176,
+    "new_source_gains": 11,
+    "poster_loss_approval_sha256": null,
+    "prior_eligible_overrides": 242,
+    "prior_excluded_overrides": 18,
+    "prior_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+    "prior_visible_observations": 49174,
     "reviewed_composite_observation_gains": [],
     "reviewed_composite_observation_losses": [],
     "reviewed_composite_work_gains": [],
     "reviewed_composite_work_losses": [],
-    "reviewed_losses": [
-      "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:P7Ujq4OLJYoC/scholar",
-      "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:idthP5jqfYAC/scholar",
-      "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:unp9ATQDT5gC/scholar"
-    ],
-    "stable_works": 45559,
+    "reviewed_losses": [],
+    "stable_works": 45574,
     "sullivan_continuity_addendum_sha256": null,
     "sullivan_loss_approval_sha256": null,
     "unapproved_mapped_binding_changes": [],
@@ -525,9 +612,7 @@
     "unused_person_hold_approvals": [],
     "unused_sullivan_binding_approvals": [],
     "unused_sullivan_loss_approvals": [],
-    "verified_gains": [
-      "person-robertfmurphy-5930bd3c/qQLlBH4AAAAJ/qQLlBH4AAAAJ:RMgMIBzvq-4C/scholar"
-    ],
+    "verified_gains": [],
     "version": "exact-observation-region-continuity-v1"
   },
   "reviewed_contexts": 14,
@@ -540,15 +625,15 @@
   "reviewed_metadata_corrections_sha256": "9726732bb75e7311978a7f52a4dab22253b71555acd2a95cc9a82bb8ffb9b19d",
   "schema_version": 2,
   "scholar_coverage": {
-    "complete_profiles": 25,
+    "complete_profiles": 42,
     "legacy_profiles": 285,
     "reconciled_prior_ids": 16
   },
-  "snapshot_commit": "45112c6860d380e40c3f60efc4faddf3003f7a89",
-  "started_at_utc": "2026-10-25T16:29:05.502366+00:00",
+  "snapshot_commit": "8477a325c7017a7910e603a4031d34b4e1c526a5",
+  "started_at_utc": "2026-10-26T00:28:11.196548+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 29,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40211722485",
-  "works": 47744
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40249335108",
+  "works": 47755
 }
