@@ -1,0 +1,5 @@
+# Alexandra Ion: official Scholar link and primary home
+
+Verified 2026-10-26. The [official CMU HCII faculty profile](https://hcii.cmu.edu/people/alexandra-ion) directly links the [Scholar profile](https://scholar.google.de/citations?user=pP920LoAAAAJ&hl=en&oi=ao) with exact ID `pP920LoAAAAJ`. The official page returned HTTP 200; its fetched HTML was 64,584 bytes with SHA-256 `4a3d653665f9c0016b0c3f6f56584f34de3336c23acca7b6140b5d9f11bf04cf`. The Scholar profile itself was not opened.
+
+Stable registry person ID: `person-alexandraion-d1aee7c1`. The official [HCII faculty roster](https://hcii.cmu.edu/people/faculty), reviewed 2026-10-24, is her sole included academic membership. HCII is a formal institute in the registry, so her evidenced primary home is typed `institute`, ID `hcii`, Human-Computer Interaction Institute. The exact person-row change came from the separately reviewed local commit `3de85722a683cf296d384e535c69fda2216b251a` against producer base `7dcb234c7eef2b69d0d956a85ffc6bd854180e97`.
