@@ -271,11 +271,13 @@
     {
       "person_id": "person-curtismeyer-a1171ccf",
       "scholar_id": "jkKrk0sAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 764,
       "cache_sha256": "4c518b41ecc4fe5122a4f80d195a456ea6338a4b7e9a81bd09babb34658606fa",
-      "reason": "Complete 764-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 764-row Physics source is bound to saved capture and cache hashes. No reviewed exclusion is asserted; 472 exact provisional holds protect unresolved attribution, version, and output-type questions; 292 rows enter ordinary map gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 472,
+      "provisional_hold_ids_sha256": "1d2b82cabc0877112b8519d1ff5b54130d5a7660c8535ff9dbb98814f24ee239"
     },
     {
       "person_id": "person-scottdodelson-73513ee9",
