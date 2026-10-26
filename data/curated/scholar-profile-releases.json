@@ -348,6 +348,61 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 116,
       "provisional_hold_ids_sha256": "d8ea58cc27fd7d972de622cad846a76780e77d96e510b2ee3d57062bd1c3f370"
+    },
+    {
+      "person_id": "person-chrisdonahue-2ab732fe",
+      "scholar_id": "MgzHAPQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 81,
+      "cache_sha256": "42f1036e1e32b325d2d4b58b2663ab51c045b917da172e415c5afff0dc8f706b",
+      "reason": "Complete visible 81-row official-ID CSD Scholar capture; 24 exact uncertain observations held, 57 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 24,
+      "provisional_hold_ids_sha256": "a76e9f43167ebfa7350f144ad8e479eddee270968194aab0315a8d6b623c844b"
+    },
+    {
+      "person_id": "person-davidandersen-2a61b6c4",
+      "scholar_id": "wUArfPgAAAAJ",
+      "state": "released",
+      "expected_source_rows": 243,
+      "cache_sha256": "1cd694f928a4d281f4440aa6e59d92ba7b23b3cadf47d6939a73393c96be144d",
+      "reason": "Complete visible 243-row official-ID CSD Scholar capture; 76 exact uncertain observations held, 167 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 76,
+      "provisional_hold_ids_sha256": "a00c082f5209812a60c6d86ff38df5fefd3239ff3c18205abaf1decb0172d1ce"
+    },
+    {
+      "person_id": "person-ferassaad-434298ab",
+      "scholar_id": "1aou7GkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 35,
+      "cache_sha256": "b65fa376c4a04bfd697bb720615ac56c8d06b82e5a1062a4b22513174c4df37d",
+      "reason": "Complete visible 35-row official-ID CSD Scholar capture; 2 exact uncertain observations held, 33 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 2,
+      "provisional_hold_ids_sha256": "a5d351d0bd7878b4e80f27e04b570f9a729f7d9fa3c85c1aea39bdbdf3e44264"
+    },
+    {
+      "person_id": "person-morharcholbalter-3d6fc19c",
+      "scholar_id": "Ooc7UNUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 363,
+      "cache_sha256": "8fa23139a0e757ef5fd0ec55825585f352af57f06f3db85366d33fa9a29e16e8",
+      "reason": "Complete visible 363-row official-ID CSD Scholar capture; 131 exact uncertain observations held, 232 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 131,
+      "provisional_hold_ids_sha256": "6feda401ad5601eca006e5c20022b9bf6dbc0b5ee9c342615e13784a49c39302"
+    },
+    {
+      "person_id": "person-nathanbeckmann-e1f2dc77",
+      "scholar_id": "zkdjit0AAAAJ",
+      "state": "released",
+      "expected_source_rows": 106,
+      "cache_sha256": "7941b3cf81a1451003ca59468b28d6318172954ad5626eee8d4df19c480fb404",
+      "reason": "Complete visible 106-row official-ID CSD Scholar capture; 47 exact uncertain observations held, 59 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 47,
+      "provisional_hold_ids_sha256": "b9fb1f312150d094bb6f3cb212b5356e4d85d78368173e3d717dfcb147a7af75"
     }
   ]
 }
