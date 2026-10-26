@@ -76,7 +76,11 @@
       "source_html_path": "data/captures/physics-curtis-meyer-2026-10-24.html",
       "source_html_sha256": "e1a9137b29abad7f557bb4d9202429876c56246e15f0973ab5586b53d4491bfb",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "reviewed_for_paired_release",
+      "paired_release_review_path": "status/physics-meyer-release-review-2026-10-26.json",
+      "reviewed_exclusion_count": 0,
+      "provisional_hold_count": 472,
+      "ordinary_gate_rows": 292
     },
     {
       "scholar_id": "kcXOB1MAAAAJ",
