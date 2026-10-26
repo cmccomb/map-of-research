@@ -1,6 +1,6 @@
 {
   "atomic_release_intent": {
-    "artifact_revision": null,
+    "artifact_revision": "ab8d5cb19b003c167cca35433e8f6afdb587acfd",
     "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: eabf806e7f0e4aa48aa3b2b9a9fa422f",
     "commit_nonce": "eabf806e7f0e4aa48aa3b2b9a9fa422f",
     "committed_files": [
@@ -12,7 +12,7 @@
       "profile_publications/train-00000-of-00001.parquet",
       "works/train-00000-of-00001.parquet"
     ],
-    "intent_status": "before_write",
+    "intent_status": "commit_returned_unverified",
     "mode": "single_parent_commit",
     "parent_revision": "46e9dc7dc2db29abe2d4ed16b693ae162a164aa3",
     "prewrite_gate": {
