@@ -1,0 +1,15 @@
+# Subha R. Das complete visible Scholar source, held
+
+This draft carries the complete visible Google Scholar profile for CMU Chemistry faculty member Subha R. Das (`FrF1YXQAAAAJ`). [CMU's faculty page](https://www.cmu.edu/chemistry/people/faculty/das.html) links the Scholar account and [ORCID `0000-0002-5353-0422`](https://orcid.org/0000-0002-5353-0422), and identifies Chemistry as his primary department. The source registry row mirrors those exact producer fields.
+
+The saved browser session on 2026-10-24 reached 670 rows with no remaining Show More control or page error. The original browser extraction is preserved at `data/captures/das-visible-670-2026-10-24-original.json` (SHA-256 `4a1629f702a3f4330ba59f76f30a4e60989e1f12e96a0535119614da4ad8f91a`). Its text extraction omitted rendered math glyphs in exactly four titles. The [exact repair ledger](chem-das-rendered-title-repairs-2026-10-25.json) records rows 126, 314, 378, and 636 with their citation IDs, original values, and saved-HTML values. The reviewed capture JSON and canonical cache restore those four saved-HTML titles without changing citation IDs, authors, years, venues, or counts.
+
+Two `xsrf` form values in the captured HTML were redacted before staging. The receipt binds reviewed capture JSON SHA-256 `f14571052ab088778779b919b2874b328745cdacc706be0680732b6458e9b997` and redacted HTML SHA-256 `6bb62354f79ab00d5b0536827bcd4dc57b9b98566d06b7529e2605039c924a6e`. Cache SHA-256 is `85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df`.
+
+This is a source capture, not an attribution approval. Its Scholar profile contains many namesake and source artifacts. The separately reviewed producer draft partitions the 670 source IDs into 68 positive, 486 excluded, and 116 held. A separate producer gate must bind those exact IDs before this source branch can enter the shared snapshot. No upload receipt, public map pin, or live graph changes in this draft.
+
+## Current shared-snapshot restage
+
+This source-only draft is restacked on `automation/map-snapshot` commit `53cc1dd49eb04d6614d3836c992b2e3c3cf1e1f1`, after the Physics Hunt/Deserno/Feenstra upload at immutable Hub revision `42b30e512fb941a8cbe78d67399bd3771372cb68`. Its existing raw Parquet has 58,764 observations from 327 cached profiles. Rebuilding with the current producer snapshot builder and one frozen Das cache produces 59,434 observations from 328 profiles. All 58,764 prior non-Das rows remain field-for-field equal after sorting by source identity; the 670 new rows have 670 distinct Das citation IDs. The rebuilt snapshot SHA-256 is `003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1`, recorded in the manifest. The snapshot validator passed. The source branch's registry hash is `356f80899e0299f120ee7da0ae884fbc88870b02619b2854aec0f7afa9a53d51`.
+
+Merging this draft into `automation/map-snapshot` would trigger the upload workflow because it changes the Parquet and manifest. Keep it draft until the exact producer gate is merged and the release coordinator has approved a fresh no-write preview against the then-current Hub parent.
