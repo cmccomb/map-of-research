@@ -124,6 +124,7 @@ MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
         "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
     }
 )
+MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID = POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
 
 
 def allows_bio_region_refit(
@@ -613,8 +614,8 @@ def validate_chemistry_candidate(
     A full layout refit may change two derived region diagnostics for parent-
     visible reviewed works across platforms. The caller pins the Bio parent
     and source. From the published MCS parent, only two exact prior-eligible
-    diagnostics may change from true to false. Source, visibility, attribution,
-    and authorship stay exact.
+    diagnostics and one exact documented-region diagnostic may change from true
+    to false. Source, visibility, attribution, and authorship stay exact.
     """
 
     parent = parent_state["parent_rows"]
@@ -664,6 +665,16 @@ def validate_chemistry_candidate(
                     and key in MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES
                     and key in parent["points"]
                     and field == "map_region_prior_eligible_override"
+                    and _equal_value(prior[field]) is True
+                    and _equal_value(row[field]) is False
+                ):
+                    continue
+                if (
+                    table == "works"
+                    and allow_mcs_parent_diagnostic_refit
+                    and key == MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID
+                    and key in parent["points"]
+                    and field == "map_region_documented_override"
                     and _equal_value(prior[field]) is True
                     and _equal_value(row[field]) is False
                 ):
