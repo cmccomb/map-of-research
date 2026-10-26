@@ -197,16 +197,20 @@ def _post_bio_parent(
     )
 
 
-def _mcs_published_parent(files: dict) -> None:
-    """Apply only the three derived Chemistry diagnostics in Hub f194bdab."""
+def _mcs_published_parent(files: dict, *, prior_revision: str = "") -> None:
+    """Apply the exact derived Chemistry diagnostics for a later Hub parent."""
+
+    eligible_ids = (
+        continuity.PHYSICS_HDF_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+        if prior_revision == continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT
+        else continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+    )
 
     _rewrite_rows(
         files["works/train-00000-of-00001.parquet"],
         lambda rows: [
             row.update(
-                map_region_prior_eligible_override=(
-                    row["work_id"] in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-                ),
+                map_region_prior_eligible_override=(row["work_id"] in eligible_ids),
                 map_region_documented_override=(
                     row["work_id"] in continuity.MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
                 ),
@@ -218,7 +222,11 @@ def _mcs_published_parent(files: dict) -> None:
 
 @pytest.mark.parametrize(
     "prior_revision",
-    (continuity.MCS_PUBLISHED_PARENT, continuity.PHYSICS_FIVE_PUBLISHED_PARENT),
+    (
+        continuity.MCS_PUBLISHED_PARENT,
+        continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
+    ),
 )
 def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
     tmp_path: Path,
@@ -228,7 +236,7 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
     baseline = _files(tmp_path / "baseline", decisions)
     parent = _files(tmp_path / "parent", decisions)
     _post_bio_parent(parent, decisions)
-    _mcs_published_parent(parent)
+    _mcs_published_parent(parent, prior_revision=prior_revision)
     state = validate_chemistry_parent(
         decisions,
         baseline_files=baseline,
@@ -249,25 +257,30 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
             prior_revision=continuity.BIO_REGION_REFIT_PARENT,
         )
     works = parent["works/train-00000-of-00001.parquet"]
-    for work_id, field in (
+    for work_id, field, changed_value in (
         (
             "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
             "map_region_prior_eligible_override",
+            False,
         ),
         (
             "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
             "map_region_prior_eligible_override",
+            prior_revision == continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
         ),
         (
             "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
             "map_region_documented_override",
+            False,
         ),
     ):
         _rewrite_rows(
             works,
-            lambda rows, work_id=work_id, field=field: next(
-                row for row in rows if row["work_id"] == work_id
-            ).update({field: False}),
+            lambda rows, work_id=work_id, field=field, changed_value=changed_value: (
+                next(row for row in rows if row["work_id"] == work_id).update(
+                    {field: changed_value}
+                )
+            ),
         )
         with pytest.raises(ValueError, match="work derivation changed"):
             validate_chemistry_parent(
@@ -276,7 +289,7 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
                 parent_files=parent,
                 prior_revision=prior_revision,
             )
-        _mcs_published_parent(parent)
+        _mcs_published_parent(parent, prior_revision=prior_revision)
     _rewrite_rows(
         works,
         lambda rows: next(
@@ -292,7 +305,7 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
             parent_files=parent,
             prior_revision=prior_revision,
         )
-    _mcs_published_parent(parent)
+    _mcs_published_parent(parent, prior_revision=prior_revision)
     _rewrite_rows(
         works,
         lambda rows: next(
