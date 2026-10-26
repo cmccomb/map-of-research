@@ -783,6 +783,7 @@ def test_preupload_guard_checks_all_held_rows_in_one_work():
         ("raw_missing_column", "lack hold audit"),
         ("relationship_missing_column", "lack hold provenance"),
         ("raw_missing_row", "escaped raw map gate"),
+        ("raw_duplicate", "escaped raw map gate"),
         ("raw_mapped", "escaped raw map gate"),
         ("raw_missing_reason", "escaped raw map gate"),
         ("raw_wrong_status", "escaped raw map gate"),
@@ -802,6 +803,11 @@ def test_preupload_guard_rejects_held_contributions(change, message):
         tables["authorships"] = tables["authorships"].drop(columns="observation_id")
     elif change == "raw_missing_row":
         tables["profile_publications"] = tables["profile_publications"].iloc[0:0]
+    elif change == "raw_duplicate":
+        tables["profile_publications"] = pandas.concat(
+            [tables["profile_publications"], tables["profile_publications"]],
+            ignore_index=True,
+        )
     elif change == "raw_mapped":
         tables["profile_publications"].at[0, "map_eligible"] = True
     elif change == "raw_missing_reason":
