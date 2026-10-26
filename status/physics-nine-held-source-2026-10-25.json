@@ -27,7 +27,11 @@
       "source_html_path": "data/captures/physics-antonella-palmese-2026-10-24.html",
       "source_html_sha256": "2bb7f28c912ad9d6774b97cbeaf697cffcad83a6eb96cc05bfd3235e0cac4efa",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "reviewed_for_paired_release",
+      "paired_release_review_path": "status/physics-palmese-release-review-2026-10-26.json",
+      "reviewed_exclusion_count": 3,
+      "provisional_hold_count": 346,
+      "ordinary_gate_rows": 275
     },
     {
       "scholar_id": "AcW2EXwAAAAJ",
