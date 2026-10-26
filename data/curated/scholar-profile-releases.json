@@ -168,10 +168,10 @@
       "state": "released",
       "expected_source_rows": 95,
       "cache_sha256": "b790f95be56570436fd9e06dc5b54dd58458ba1bb07c086b304e922f28443c3f",
-      "reason": "Complete Physics profile is source-bound. 7 exact reviewed exclusions and 43 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reason": "Complete 95-row Physics profile is source-bound. 7 exact reviewed exclusions and 44 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 43,
-      "provisional_hold_ids_sha256": "bd923ead0f94854acd9cb8cdfaa52fd51bced551bcf2a42b06f906a7870fc486"
+      "expected_provisional_hold_rows": 44,
+      "provisional_hold_ids_sha256": "d3440ed10e18765d6cb76ae10a2c9b2037ecf68c9e87e38142afbd96e460c897"
     },
     {
       "person_id": "person-markusdeserno-3b04d008",
@@ -179,10 +179,10 @@
       "state": "released",
       "expected_source_rows": 233,
       "cache_sha256": "1595aeb166721ece6b7baf88bb823a9b30e11e99934744f33e429ac5b4c09e44",
-      "reason": "Complete Physics profile is source-bound. 12 exact reviewed exclusions and 34 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reason": "Complete 233-row Physics profile is source-bound. 12 exact reviewed exclusions and 38 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 34,
-      "provisional_hold_ids_sha256": "79b6e7a819706bb0c3ab448ebcc803efb82683df040913e76e7a4c318ab7facc"
+      "expected_provisional_hold_rows": 38,
+      "provisional_hold_ids_sha256": "cfb78d77db4dfd1a8601bcb95de4fef6492845718415c8c852c00c394ebe21ac"
     },
     {
       "person_id": "person-matthewwalker-f9f5f4da",
@@ -199,10 +199,10 @@
       "state": "released",
       "expected_source_rows": 422,
       "cache_sha256": "36c211772f28fc57b81f5a9d415bcc063e4c06129a3063c1925fe0df066e3b04",
-      "reason": "Complete 422-row Physics profile is source-bound. 11 exact reviewed exclusions and 51 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reason": "Complete 422-row Physics profile is source-bound. 11 exact reviewed exclusions and 56 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
       "reviewed_at": "2026-10-25",
-      "expected_provisional_hold_rows": 51,
-      "provisional_hold_ids_sha256": "6482b7950bdb3c8d8263c5a85eec6162788a331405a48ad5a60f0ec3ebfc5181"
+      "expected_provisional_hold_rows": 56,
+      "provisional_hold_ids_sha256": "9274fe764e4568122758678f8945df3bbf367dd54bdd8029e661cda0fd8b7820"
     },
     {
       "person_id": "person-roberthswendsen-cfa7c981",

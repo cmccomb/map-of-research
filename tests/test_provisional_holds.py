@@ -10,7 +10,11 @@ from map_of_research.contexts import ReviewedContext
 from map_of_research.dataset import build_dataset_tables
 from map_of_research.exclusions import DEFAULT_EXCLUSIONS_PATH, load_exclusions
 from map_of_research.io import sha256_file
-from map_of_research.profile_releases import ProfileRelease
+from map_of_research.profile_releases import (
+    DEFAULT_PROFILE_RELEASES_PATH,
+    ProfileRelease,
+    load_profile_releases,
+)
 from map_of_research.provisional_holds import (
     DEFAULT_PROVISIONAL_HOLDS_PATH,
     ProvisionalHold,
@@ -171,6 +175,49 @@ def test_checked_in_sullivan_hold_is_source_bound_and_separate_from_exclusions()
     assert len(exclusion_ids) == profile.expected_reviewed_exclusion_rows
     assert hold_ids_sha256(exclusion_ids) == profile.reviewed_exclusion_ids_sha256
     assert held_ids.isdisjoint(exclusion_ids)
+
+
+def test_physics_preview_citations_are_bound_to_exact_source_holds():
+    profiles = {
+        item.scholar_id: item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+    }
+    decisions = {
+        item.scholar_id: item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+    }
+    expected = {
+        "11EoZncAAAAJ": {
+            (89, "11EoZncAAAAJ:hFOr9nPyWt4C"),
+        },
+        "1J28ExgAAAAJ": {
+            (10, "1J28ExgAAAAJ:r0BpntZqJG4C"),
+            (152, "1J28ExgAAAAJ:rmuvC79q63oC"),
+            (175, "1J28ExgAAAAJ:vDijr-p_gm4C"),
+            (188, "1J28ExgAAAAJ:HtEfBTGE9r8C"),
+        },
+        "p1aFEDYAAAAJ": {
+            (246, "p1aFEDYAAAAJ:uJ-U7cs_P_0C"),
+            (261, "p1aFEDYAAAAJ:-_dYPAW6P2MC"),
+            (392, "p1aFEDYAAAAJ:nPTYJWkExTIC"),
+            (403, "p1aFEDYAAAAJ:Vr2j17o0sqMC"),
+            (410, "p1aFEDYAAAAJ:rCNdntzdTkkC"),
+        },
+    }
+    expected_counts = {"11EoZncAAAAJ": 44, "1J28ExgAAAAJ": 38, "p1aFEDYAAAAJ": 56}
+    exclusions = load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+    for scholar_id, rows in expected.items():
+        profile = profiles[scholar_id]
+        decision = decisions[scholar_id]
+        held = {item.author_pub_id: item for item in profile.held_observations}
+        assert decision.expected_provisional_hold_rows == len(held)
+        assert decision.provisional_hold_ids_sha256 == hold_ids_sha256(set(held))
+        assert len(held) == expected_counts[scholar_id]
+        for index, author_pub_id in rows:
+            item = held[author_pub_id]
+            assert item.capture_row_index == index
+            assert item.evidence_url.endswith("citation_for_view=" + author_pub_id)
+            assert (scholar_id, author_pub_id) not in exclusions
 
 
 def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
