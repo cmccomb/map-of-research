@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-davidandersen-2a61b6c4",
+  "display_name": "David Andersen",
+  "scholar_profile_name": "David G. Andersen",
+  "scholar_id": "wUArfPgAAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/david-andersen",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/david-andersen",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:10:06.134795+00:00",
+  "publication_count": 243,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 3,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/scs-david-andersen-2026-10-26.json",
+  "source_json_sha256": "05247748ef317fa9a4fd58943dfeac2139dfc3bd14e9e821d1291bdfbd42188d",
+  "source_html_path": "data/captures/scs-david-andersen-2026-10-26.html",
+  "source_html_sha256": "1e14813e7538aafe3f8aa3654d32fbca3ad6f6488e03f78009e627c86f37783d",
+  "cache_path": "data/authors/wUArfPgAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": false,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

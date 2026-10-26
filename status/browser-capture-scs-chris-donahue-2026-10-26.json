@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-chrisdonahue-2ab732fe",
+  "display_name": "Chris Donahue",
+  "scholar_profile_name": "Chris Donahue",
+  "scholar_id": "MgzHAPQAAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/chris-donahue",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/chris-donahue",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:09:10.871767+00:00",
+  "publication_count": 81,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-chris-donahue-2026-10-26.json",
+  "source_json_sha256": "0b5055b03b590afedf3ab527f68b751c9befb61ca602cc246c61fe3f453fcc91",
+  "source_html_path": "data/captures/scs-chris-donahue-2026-10-26.html",
+  "source_html_sha256": "cbbdf3bdba8890bd0f71f836cf1a13822c858070c300d5698a6b675f002d163d",
+  "cache_path": "data/authors/MgzHAPQAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": false,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

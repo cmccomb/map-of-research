@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-ferassaad-434298ab",
+  "display_name": "Feras Saad",
+  "scholar_profile_name": "Feras Saad",
+  "scholar_id": "1aou7GkAAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/feras-saad",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/feras-saad",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:11:29.605207+00:00",
+  "publication_count": 35,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-feras-saad-2026-10-26.json",
+  "source_json_sha256": "1072b8d1a244559665baf72d737f1fccbfda6facb7590797ffd21356d250ba74",
+  "source_html_path": "data/captures/scs-feras-saad-2026-10-26.html",
+  "source_html_sha256": "01637174ebb7268f4b6be7cf5f669fc64ba30bcb4f07c039c94cf86c66af30f1",
+  "cache_path": "data/authors/1aou7GkAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": false,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

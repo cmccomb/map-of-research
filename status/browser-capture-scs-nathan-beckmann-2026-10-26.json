@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-nathanbeckmann-e1f2dc77",
+  "display_name": "Nathan Beckmann",
+  "scholar_profile_name": "Nathan Beckmann",
+  "scholar_id": "zkdjit0AAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/nathan-beckmann",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/nathan-beckmann",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:12:10.394543+00:00",
+  "publication_count": 106,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-nathan-beckmann-2026-10-26.json",
+  "source_json_sha256": "7d956e12994b5bf91be871f56542ed36c91144fb27e26be8a6e521cd3a72448c",
+  "source_html_path": "data/captures/scs-nathan-beckmann-2026-10-26.html",
+  "source_html_sha256": "aa08971fa8c501e037f813468de17554bd5f7513891e13907fa5d6e75ff3a2c1",
+  "cache_path": "data/authors/zkdjit0AAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": false,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

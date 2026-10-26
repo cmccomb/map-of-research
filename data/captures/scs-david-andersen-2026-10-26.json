@@ -1,0 +1,2201 @@
+{
+  "captured_at": "2026-10-26T14:10:06.134795+00:00",
+  "url": "https://scholar.google.com/citations?user=wUArfPgAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪David G. Andersen‬ - ‪Google Scholar‬",
+  "scholar_user_id": "wUArfPgAAAAJ",
+  "person_name": "David G. Andersen",
+  "displayed_count": 243,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 3,
+  "works": [
+    {
+      "index": 1,
+      "title": "Communication efficient distributed machine learning with the parameter server",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:mvPsJ3kp5DgC",
+      "authors": "M Li, DG Andersen, A Smola, K Yu",
+      "venue": "Advances in neural information processing systems 27, 2014",
+      "citation_count": "3319",
+      "year": "2014"
+    },
+    {
+      "index": 2,
+      "title": "Resilient overlay networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:u5HHmVD_uO8C",
+      "authors": "D Andersen, H Balakrishnan, F Kaashoek, R Morris",
+      "venue": "Proceedings of the eighteenth ACM symposium on Operating systems principles …, 2001",
+      "citation_count": "3062",
+      "year": "2001"
+    },
+    {
+      "index": 3,
+      "title": "Cuckoo filter: Practically better than bloom",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:kRWSkSYxWN8C",
+      "authors": "B Fan, DG Andersen, M Kaminsky, MD Mitzenmacher",
+      "venue": "Proceedings of the 10th ACM International on Conference on emerging …, 2014",
+      "citation_count": "1217",
+      "year": "2014"
+    },
+    {
+      "index": 4,
+      "title": "c-Through: Part-time optics in data centers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:kNdYIx-mwKoC",
+      "authors": "G Wang, DG Andersen, M Kaminsky, K Papagiannaki, TSE Ng, M Kozuch, ...",
+      "venue": "Proceedings of the ACM SIGCOMM 2010 Conference, 327-338, 2010",
+      "citation_count": "1005",
+      "year": "2010"
+    },
+    {
+      "index": 5,
+      "title": "Don't settle for eventual: scalable causal consistency for wide-area storage with COPS",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:D03iK_w7-QYC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the twenty-third ACM symposium on operating systems …, 2011",
+      "citation_count": "979",
+      "year": "2011"
+    },
+    {
+      "index": 6,
+      "title": "FAWN: A fast array of wimpy nodes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:zYLM7Y9cAGgC",
+      "authors": "DG Andersen, J Franklin, M Kaminsky, A Phanishayee, L Tan, ...",
+      "venue": "Proceedings of the ACM SIGOPS 22nd symposium on Operating systems principles …, 2009",
+      "citation_count": "811",
+      "year": "2009"
+    },
+    {
+      "index": 7,
+      "title": "Using RDMA efficiently for key-value services",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:q3oQSFYPqjQC",
+      "authors": "A Kalia, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the 2014 ACM Conference on SIGCOMM, 295-306, 2014",
+      "citation_count": "773",
+      "year": "2014"
+    },
+    {
+      "index": 8,
+      "title": "{MICA}: A holistic approach to fast {In-Memory}{Key-Value} storage",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:5Ul4iDaHHb8C",
+      "authors": "H Lim, D Han, DG Andersen, M Kaminsky",
+      "venue": "11th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2014",
+      "citation_count": "721",
+      "year": "2014"
+    },
+    {
+      "index": 9,
+      "title": "{MemC3}: Compact and concurrent {MemCache} with dumber caching and smarter hashing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:u9iWguZQMMsC",
+      "authors": "B Fan, DG Andersen, M Kaminsky",
+      "venue": "10th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2013",
+      "citation_count": "711",
+      "year": "2013"
+    },
+    {
+      "index": 10,
+      "title": "Design guidelines for high performance {RDMA} systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:LjlpjdlvIbIC",
+      "authors": "A Kalia, M Kaminsky, DG Andersen",
+      "venue": "2016 USENIX annual technical conference (USENIX ATC 16), 437-450, 2016",
+      "citation_count": "676",
+      "year": "2016"
+    },
+    {
+      "index": 11,
+      "title": "There is more consensus in egalitarian parliaments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:vRqMK49ujn8C",
+      "authors": "I Moraru, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems …, 2013",
+      "citation_count": "643",
+      "year": "2013"
+    },
+    {
+      "index": 12,
+      "title": "Safe and effective fine-grained TCP retransmissions for datacenter communication",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:ufrVoPGSRksC",
+      "authors": "V Vasudevan, A Phanishayee, H Shah, E Krevat, DG Andersen, ...",
+      "venue": "ACM SIGCOMM computer communication review 39 (4), 303-314, 2009",
+      "citation_count": "602",
+      "year": "2009"
+    },
+    {
+      "index": 13,
+      "title": "SILT: A memory-efficient, high-performance key-value store",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:TFP_iSt0sucC",
+      "authors": "H Lim, B Fan, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the Twenty-Third ACM Symposium on Operating Systems …, 2011",
+      "citation_count": "584",
+      "year": "2011"
+    },
+    {
+      "index": 14,
+      "title": "{FaSST}: Fast, scalable and simple distributed transactions with {Two-Sided}({{{{{RDMA}}}}}) datagram {RPCs}",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:hkOj_22Ku90C",
+      "authors": "A Kalia, M Kaminsky, DG Andersen",
+      "venue": "12th USENIX Symposium on Operating Systems Design and Implementation (OSDI …, 2016",
+      "citation_count": "565",
+      "year": "2016"
+    },
+    {
+      "index": 15,
+      "title": "Datacenter {RPCs} can be general and fast",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:0KyAp5RtaNEC",
+      "authors": "A Kalia, M Kaminsky, D Andersen",
+      "venue": "16th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2019",
+      "citation_count": "542",
+      "year": "2019"
+    },
+    {
+      "index": 16,
+      "title": "The Flask Security Architecture:  System Support for Diverse Security Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:u-x6o8ySG0sC",
+      "authors": "R Spencer, S Smalley, P Loscocco, M Hibler, D Andersen, J Lepreau",
+      "venue": "Usenix Security Symposium, 1999",
+      "citation_count": "542",
+      "year": "1999"
+    },
+    {
+      "index": 17,
+      "title": "Accountable internet protocol (AIP)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:IjCSPb-OGe4C",
+      "authors": "DG Andersen, H Balakrishnan, N Feamster, T Koponen, D Moon, ...",
+      "venue": "Proceedings of the ACM SIGCOMM 2008 conference on Data communication, 339-350, 2008",
+      "citation_count": "521",
+      "year": "2008"
+    },
+    {
+      "index": 18,
+      "title": "Tensorfuzz: Debugging neural networks with coverage-guided fuzzing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:WZBGuue-350C",
+      "authors": "A Odena, C Olsson, D Andersen, I Goodfellow",
+      "venue": "International conference on machine learning, 4901-4911, 2019",
+      "citation_count": "492",
+      "year": "2019"
+    },
+    {
+      "index": 19,
+      "title": "An empirical evaluation of entropy-based traffic anomaly detection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:eQOLeE2rZwMC",
+      "authors": "G Nychis, V Sekar, DG Andersen, H Kim, H Zhang",
+      "venue": "Proceedings of the 8th ACM SIGCOMM conference on Internet measurement, 151-156, 2008",
+      "citation_count": "479",
+      "year": "2008"
+    },
+    {
+      "index": 20,
+      "title": "Stronger Semantics for {Low-Latency}{Geo-Replicated} Storage",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:OU6Ihb5iCvQC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "10th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2013",
+      "citation_count": "414",
+      "year": "2013"
+    },
+    {
+      "index": 21,
+      "title": "Theoretical approaches to node assignment",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:0EnyYjriUFMC",
+      "authors": "DG Andersen",
+      "venue": "Carnegie Mellon University, 2002",
+      "citation_count": "386",
+      "year": "2002"
+    },
+    {
+      "index": 22,
+      "title": "Perspectives: Improving {SSH-style} host authentication with {Multi-Path} probing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:UebtZRa9Y70C",
+      "authors": "D Wendlandt, A Perrig",
+      "venue": "2008 USENIX Annual Technical Conference (USENIX ATC 08), 2008",
+      "citation_count": "381",
+      "year": "2008"
+    },
+    {
+      "index": 23,
+      "title": "Learning to protect communications with adversarial neural cryptography",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:tKAzc9rXhukC",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "arXiv preprint arXiv:1610.06918, 2016",
+      "citation_count": "379",
+      "year": "2016"
+    },
+    {
+      "index": 24,
+      "title": "Measurement and analysis of TCP throughput collapse in cluster-based storage systems.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:LkGwnXOMwfcC",
+      "authors": "A Phanishayee, E Krevat, V Vasudevan, DG Andersen, GR Ganger, ...",
+      "venue": "FAST 8, 1-14, 2008",
+      "citation_count": "370",
+      "year": "2008"
+    },
+    {
+      "index": 25,
+      "title": "Mayday: Distributed filtering for internet services",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:d1gkVwhDpl0C",
+      "authors": "DG Andersen",
+      "venue": "4th USENIX Symposium on Internet Technologies and Systems (USITS 03), 2003",
+      "citation_count": "353",
+      "year": "2003"
+    },
+    {
+      "index": 26,
+      "title": "Parameter server for distributed machine learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:8AbLer7MMksC",
+      "authors": "M Li, L Zhou, Z Yang, A Li, F Xia, DG Andersen, A Smola",
+      "venue": "Big learning NIPS workshop 6 (2), 2013",
+      "citation_count": "339",
+      "year": "2013"
+    },
+    {
+      "index": 27,
+      "title": "Quantifying interactive user experience on thin clients",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:Se3iqnhoufwC",
+      "authors": "N Tolia, DG Andersen, M Satyanarayanan",
+      "venue": "Computer 39 (3), 46-52, 2006",
+      "citation_count": "303",
+      "year": "2006"
+    },
+    {
+      "index": 28,
+      "title": "Motivating the rules of the game for adversarial example research",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:vDijr-p_gm4C",
+      "authors": "J Gilmer, RP Adams, I Goodfellow, D Andersen, GE Dahl",
+      "venue": "arXiv preprint arXiv:1807.06732, 2018",
+      "citation_count": "292",
+      "year": "2018"
+    },
+    {
+      "index": 29,
+      "title": "Algorithmic improvements for fast concurrent cuckoo hashing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:fQNAKQ3IYiAC",
+      "authors": "X Li, DG Andersen, M Kaminsky, MJ Freedman",
+      "venue": "Proceedings of the Ninth European Conference on Computer Systems, 1-14, 2014",
+      "citation_count": "275",
+      "year": "2014"
+    },
+    {
+      "index": 30,
+      "title": "Cicada: Dependably fast multi-core in-memory transactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:kzcrU_BdoSEC",
+      "authors": "H Lim, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the 2017 ACM International Conference on Management of Data …, 2017",
+      "citation_count": "253",
+      "year": "2017"
+    },
+    {
+      "index": 31,
+      "title": "Scaling video analytics on constrained edge nodes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:ILKRHgRFtOwC",
+      "authors": "C Canel, T Kim, G Zhou, C Li, H Lim, DG Andersen, M Kaminsky, ...",
+      "venue": "Proceedings of Machine Learning and Systems 1, 406-417, 2019",
+      "citation_count": "252",
+      "year": "2019"
+    },
+    {
+      "index": 32,
+      "title": "{XIA}: Efficient support for evolvable internetworking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:b0M2c_1WBrUC",
+      "authors": "D Han, A Anand, F Dogar, B Li, H Lim, M Machado, A Mukundan, W Wu, ...",
+      "venue": "9th USENIX Symposium on Networked Systems Design and Implementation (NSDI 12 …, 2012",
+      "citation_count": "251",
+      "year": "2012"
+    },
+    {
+      "index": 33,
+      "title": "Surf: Practical range query filtering with fast succinct tries",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:XD-gHx7UXLsC",
+      "authors": "H Zhang, H Lim, V Leis, DG Andersen, M Kaminsky, K Keeton, A Pavlo",
+      "venue": "Proceedings of the 2018 International Conference on Management of Data, 323-336, 2018",
+      "citation_count": "247",
+      "year": "2018"
+    },
+    {
+      "index": 34,
+      "title": "cSamp: A system for network-wide flow monitoring",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:hqOjcs7Dif8C",
+      "authors": "V Sekar, MK Reiter, W Willinger, H Zhang, RR Kompella, DG Andersen",
+      "venue": "Carnegie Mellon University, 2008",
+      "citation_count": "247",
+      "year": "2008"
+    },
+    {
+      "index": 35,
+      "title": "Measuring the effects of Internet path faults on reactive routing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:qjMakFHDy7sC",
+      "authors": "N Feamster, DG Andersen, H Balakrishnan, MF Kaashoek",
+      "venue": "ACM SIGMETRICS Performance Evaluation Review 31 (1), 126-137, 2003",
+      "citation_count": "242",
+      "year": "2003"
+    },
+    {
+      "index": 36,
+      "title": "Best-path vs. multi-path overlay routing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:9yKSN-GCB0IC",
+      "authors": "DG Andersen, AC Snoeren, H Balakrishnan",
+      "venue": "Proceedings of the 3rd ACM SIGCOMM Conference on Internet Measurement, 91-100, 2003",
+      "citation_count": "233",
+      "year": "2003"
+    },
+    {
+      "index": 37,
+      "title": "Fine-Grained Failover Using Connection Migration.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:2osOgNQ5qMEC",
+      "authors": "AC Snoeren, DG Andersen, H Balakrishnan",
+      "venue": "USITS 1, 19-19, 2001",
+      "citation_count": "223",
+      "year": "2001"
+    },
+    {
+      "index": 38,
+      "title": "Scalable, high performance ethernet forwarding with cuckooswitch",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:B3FOqHPlNUQC",
+      "authors": "D Zhou, B Fan, H Lim, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the ninth ACM conference on Emerging networking experiments …, 2013",
+      "citation_count": "212",
+      "year": "2013"
+    },
+    {
+      "index": 39,
+      "title": "Reducing the storage overhead of main-memory OLTP databases with hybrid indexes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:WqliGbK-hY8C",
+      "authors": "H Zhang, DG Andersen, A Pavlo, M Kaminsky, L Ma, R Shen",
+      "venue": "Proceedings of the 2016 international conference on management of data, 1567 …, 2016",
+      "citation_count": "210",
+      "year": "2016"
+    },
+    {
+      "index": 40,
+      "title": "Accelerating deep learning by focusing on the biggest losers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:gsN89kCJA0AC",
+      "authors": "AH Jiang, DLK Wong, G Zhou, DG Andersen, J Dean, GR Ganger, ...",
+      "venue": "arXiv preprint arXiv:1910.00762, 2019",
+      "citation_count": "202",
+      "year": "2019"
+    },
+    {
+      "index": 41,
+      "title": "Building a bw-tree takes more than just buzz words",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:t7zJ5fGR-2UC",
+      "authors": "Z Wang, A Pavlo, H Lim, V Leis, H Zhang, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the 2018 International Conference on Management of Data, 473-488, 2018",
+      "citation_count": "200",
+      "year": "2018"
+    },
+    {
+      "index": 42,
+      "title": "Scheduling techniques for hybrid circuit/packet networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:eMMeJKvmdy0C",
+      "authors": "H Liu, MK Mukerjee, C Li, N Feltman, G Papen, S Savage, S Seshan, ...",
+      "venue": "Proceedings of the 11th ACM Conference on Emerging Networking Experiments …, 2015",
+      "citation_count": "199",
+      "year": "2015"
+    },
+    {
+      "index": 43,
+      "title": "XIA: An architecture for an evolvable and trustworthy Internet",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:e5wmG9Sq2KIC",
+      "authors": "A Anand, F Dogar, D Han, B Li, H Lim, M Machado, W Wu, A Akella, ...",
+      "venue": "Proceedings of the 10th ACM Workshop on Hot Topics in Networks, 1-6, 2011",
+      "citation_count": "199",
+      "year": "2011"
+    },
+    {
+      "index": 44,
+      "title": "The case for resilient overlay networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:UeHWp8X0CEIC",
+      "authors": "DG Andersen, H Balakrishnan, MF Kaashoek, R Morris",
+      "venue": "Proceedings Eighth Workshop on Hot Topics in Operating Systems, 152-157, 2001",
+      "citation_count": "197",
+      "year": "2001"
+    },
+    {
+      "index": 45,
+      "title": "Improving approximate nearest neighbor search through learned adaptive early termination",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:k8Z6L05lTy4C",
+      "authors": "C Li, M Zhang, DG Andersen, Y He",
+      "venue": "Proceedings of the 2020 ACM SIGMOD International Conference on Management of …, 2020",
+      "citation_count": "189",
+      "year": "2020"
+    },
+    {
+      "index": 46,
+      "title": "Be fast, cheap and in control with {SwitchKV}",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:SdhP9T11ey4C",
+      "authors": "X Li, R Sethi, M Kaminsky, DG Andersen, MJ Freedman",
+      "venue": "13th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2016",
+      "citation_count": "188",
+      "year": "2016"
+    },
+    {
+      "index": 47,
+      "title": "{BTrDB}: optimizing storage system design for timeseries processing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:DJbcl8HfkQkC",
+      "authors": "MP Andersen, DE Culler",
+      "venue": "14th USENIX Conference on File and Storage Technologies (FAST 16), 39-52, 2016",
+      "citation_count": "172",
+      "year": "2016"
+    },
+    {
+      "index": 48,
+      "title": "Architecting to achieve a billion requests per second throughput on a single key-value store server platform",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:olpn-zPbct0C",
+      "authors": "S Li, H Lim, VW Lee, JH Ahn, A Kalia, M Kaminsky, DG Andersen, ...",
+      "venue": "Proceedings of the 42nd Annual International Symposium on Computer …, 2015",
+      "citation_count": "169",
+      "year": "2015"
+    },
+    {
+      "index": 49,
+      "title": "Consistent, durable, and safe memory management for byte-addressable non volatile main memory",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:4fKUyHm3Qg0C",
+      "authors": "I Moraru, DG Andersen, M Kaminsky, N Tolia, P Ranganathan, N Binkert",
+      "venue": "Proceedings of the First ACM SIGOPS Conference on Timely Results in …, 2013",
+      "citation_count": "165",
+      "year": "2013"
+    },
+    {
+      "index": 50,
+      "title": "Exploiting Similarity for Multi-Source Downloads Using File Handprints.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:YsMSGLbcyi4C",
+      "authors": "H Pucha, DG Andersen, M Kaminsky",
+      "venue": "NSDI, 2007, 2007",
+      "citation_count": "165",
+      "year": "2007"
+    },
+    {
+      "index": 51,
+      "title": "Small cache, big effect: Provable load balancing for randomly partitioned cluster services",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:ldfaerwXgEUC",
+      "authors": "B Fan, H Lim, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the 2nd ACM Symposium on Cloud Computing, 1-12, 2011",
+      "citation_count": "161",
+      "year": "2011"
+    },
+    {
+      "index": 52,
+      "title": "An architecture for Internet data transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:W7OEmFMy1HYC",
+      "authors": "N Tolia, M Kaminsky, DG Andersen, S Patil",
+      "venue": "Carnegie Mellon University, 2006",
+      "citation_count": "150",
+      "year": "2006"
+    },
+    {
+      "index": 53,
+      "title": "Mainstream: Dynamic {Stem-Sharing} for {Multi-Tenant} video processing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:ipzZ9siozwsC",
+      "authors": "AH Jiang, DLK Wong, C Canel, L Tang, I Misra, M Kaminsky, MA Kozuch, ...",
+      "venue": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 29-42, 2018",
+      "citation_count": "148",
+      "year": "2018"
+    },
+    {
+      "index": 54,
+      "title": "Putting the\" micro\" back in microservice",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:uc_IGeMz5qoC",
+      "authors": "S Boucher, A Kalia, DG Andersen, M Kaminsky",
+      "venue": "2018 USENIX Annual Technical Conference (USENIX ATC 18), 645-650, 2018",
+      "citation_count": "148",
+      "year": "2018"
+    },
+    {
+      "index": 55,
+      "title": "The Seattle report on database research",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:lmc2jWPfTJgC",
+      "authors": "D Abadi, A Ailamaki, D Andersen, P Bailis, M Balazinska, P Bernstein, ...",
+      "venue": "ACM Sigmod Record 48 (4), 44-53, 2020",
+      "citation_count": "145",
+      "year": "2020"
+    },
+    {
+      "index": 56,
+      "title": "Access point localization using local signal strength gradient",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:aqlVkmm33-oC",
+      "authors": "D Han, DG Andersen, M Kaminsky, K Papagiannaki, S Seshan",
+      "venue": "International Conference on Passive and active network measurement, 99-108, 2009",
+      "citation_count": "144",
+      "year": "2009"
+    },
+    {
+      "index": 57,
+      "title": "System support for bandwidth management and content adaptation in Internet applications",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "D Andersen, D Bansal, D Curtis, S Seshan, H Balakrishnan",
+      "venue": "Fourth Symposium on Operating Systems Design and Implementation (OSDI 2000), 2000",
+      "citation_count": "143",
+      "year": "2000"
+    },
+    {
+      "index": 58,
+      "title": "CLAMP: Practical prevention of large-scale data leaks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:ULOm3_A8WrAC",
+      "authors": "B Parno, JM McCune, D Wendlandt, DG Andersen, A Perrig",
+      "venue": "2009 30th IEEE Symposium on Security and Privacy, 154-169, 2009",
+      "citation_count": "134",
+      "year": "2009"
+    },
+    {
+      "index": 59,
+      "title": "Learning-based memory allocation for c++ server workloads",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:MLfJN-KU85MC",
+      "authors": "M Maas, DG Andersen, M Isard, MM Javanmard, KS McKinley, C Raffel",
+      "venue": "Proceedings of the Twenty-Fifth International Conference on Architectural …, 2020",
+      "citation_count": "132",
+      "year": "2020"
+    },
+    {
+      "index": 60,
+      "title": "Don't Secure Routing Protocols, Secure Data Delivery.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:WF5omc3nYNoC",
+      "authors": "D Wendlandt, IC Avramopoulos, DG Andersen, J Rexford",
+      "venue": "HotNets, 2006",
+      "citation_count": "129",
+      "year": "2006"
+    },
+    {
+      "index": 61,
+      "title": "Raising the Bar for Using {GPUs} in Software Packet Processing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:bnK-pcrLprsC",
+      "authors": "A Kalia, D Zhou, M Kaminsky, DG Andersen",
+      "venue": "12th USENIX Symposium on Networked Systems Design and Implementation (NSDI …, 2015",
+      "citation_count": "116",
+      "year": "2015"
+    },
+    {
+      "index": 62,
+      "title": "Topology inference from BGP routing dynamics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:Y0pCki6q_DkC",
+      "authors": "DG Andersen, N Feamster, S Bauer, H Balakrishnan",
+      "venue": "Proceedings of the 2nd ACM SIGCOMM Workshop on Internet measurment, 243-248, 2002",
+      "citation_count": "115",
+      "year": "2002"
+    },
+    {
+      "index": 63,
+      "title": "Switching the optical divide: Fundamental challenges for hybrid electrical/optical datacenter networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:zA6iFVUQeVQC",
+      "authors": "HH Bazzaz, M Tewari, G Wang, G Porter, TSE Ng, DG Andersen, ...",
+      "venue": "Proceedings of the 2nd ACM Symposium on Cloud Computing, 1-8, 2011",
+      "citation_count": "108",
+      "year": "2011"
+    },
+    {
+      "index": 64,
+      "title": "3lc: Lightweight and effective traffic compression for distributed machine learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:uJ-U7cs_P_0C",
+      "authors": "H Lim, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of Machine Learning and Systems 1, 53-64, 2019",
+      "citation_count": "106",
+      "year": "2019"
+    },
+    {
+      "index": 65,
+      "title": "Your data center is a router: The case for reconfigurable optical circuit switched paths",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:7PzlFSSx8tAC",
+      "authors": "G Wang, DG Andersen, M Kaminsky, M Kozuch, TS Ng, K Papagiannaki, ...",
+      "venue": "Carnegie Mellon University, 2009",
+      "citation_count": "98",
+      "year": "2009"
+    },
+    {
+      "index": 66,
+      "title": "On application-level approaches to avoiding TCP throughput collapse in cluster-based storage systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:9ZlFYXVOiuMC",
+      "authors": "E Krevat, V Vasudevan, A Phanishayee, DG Andersen, GR Ganger, ...",
+      "venue": "Proceedings of the 2nd international workshop on Petascale data storage …, 2007",
+      "citation_count": "98",
+      "year": "2007"
+    },
+    {
+      "index": 67,
+      "title": "Improving web availability for clients with MONET",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:roLk4NBRz8UC",
+      "authors": "DG Andersen, H Balakrishnan, MF Kaashoek, RN Rao",
+      "venue": "Proceedings of the 2nd conference on Symposium on Networked Systems Design …, 2005",
+      "citation_count": "98",
+      "year": "2005"
+    },
+    {
+      "index": 68,
+      "title": "{Block-Level} Security for {Network-Attached} Disks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:_FxGoFyzp5QC",
+      "authors": "MK Aguilera, M Ji, M Lillibridge, J MacCormick, E Oertli, D Andersen, ...",
+      "venue": "2nd USENIX Conference on File and Storage Technologies (FAST 03), 2003",
+      "citation_count": "91",
+      "year": "2003"
+    },
+    {
+      "index": 69,
+      "title": "Rethinking flash in the data center",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:HDshCWvjkbEC",
+      "authors": "DG Andersen, S Swanson",
+      "venue": "IEEE micro 30 (04), 52-54, 2010",
+      "citation_count": "90",
+      "year": "2010"
+    },
+    {
+      "index": 70,
+      "title": "Towards Accurate and Fast Evaluation of {Multi-Stage} Log-structured Designs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:PELIpwtuRlgC",
+      "authors": "H Lim, DG Andersen, M Kaminsky",
+      "venue": "14th USENIX Conference on File and Storage Technologies (FAST 16), 149-166, 2016",
+      "citation_count": "89",
+      "year": "2016"
+    },
+    {
+      "index": 71,
+      "title": "XIA: architecting a more trustworthy and evolvable internet",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:eflP2zaiRacC",
+      "authors": "D Naylor, MK Mukerjee, P Agyapong, R Grandl, R Kang, M Machado, ...",
+      "venue": "ACM SIGCOMM Computer Communication Review 44 (3), 50-57, 2014",
+      "citation_count": "85",
+      "year": "2014"
+    },
+    {
+      "index": 72,
+      "title": "Paxos quorum leases: Fast reads without sacrificing writes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:eJXPG6dFmWUC",
+      "authors": "I Moraru, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the ACM Symposium on Cloud Computing, 1-13, 2014",
+      "citation_count": "83",
+      "year": "2014"
+    },
+    {
+      "index": 73,
+      "title": "SplitScreen: Enabling efficient, distributed malware detection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:4DMP91E08xMC",
+      "authors": "SK Cha, I Moraru, J Jang, J Truelove, D Brumley, DG Andersen",
+      "venue": "Journal of Communications and Networks 13 (2), 187-200, 2011",
+      "citation_count": "82",
+      "year": "2011"
+    },
+    {
+      "index": 74,
+      "title": "Energy-efficient cluster computing with FAWN: Workloads and implications",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:YOwf2qJgpHMC",
+      "authors": "V Vasudevan, D Andersen, M Kaminsky, L Tan, J Franklin, I Moraru",
+      "venue": "Proceedings of the 1st International Conference on Energy-Efficient …, 2010",
+      "citation_count": "76",
+      "year": "2010"
+    },
+    {
+      "index": 75,
+      "title": "The Seattle report on database research",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:dBIO0h50nwkC",
+      "authors": "D Abadi, A Ailamaki, D Andersen, P Bailis, M Balazinska, PA Bernstein, ...",
+      "venue": "Communications of the ACM 65 (8), 72-79, 2022",
+      "citation_count": "74",
+      "year": "2022"
+    },
+    {
+      "index": 76,
+      "title": "Ditto: a system for opportunistic caching in multi-hop wireless networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:3fE2CSJIrl8C",
+      "authors": "FR Dogar, A Phanishayee, H Pucha, O Ruwase, DG Andersen",
+      "venue": "Proceedings of the 14th ACM international conference on Mobile computing and …, 2008",
+      "citation_count": "74",
+      "year": "2008"
+    },
+    {
+      "index": 77,
+      "title": "Challenges and solutions for fast remote persistent memory access",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:Dip1O2bNi0gC",
+      "authors": "A Kalia, D Andersen, M Kaminsky",
+      "venue": "Proceedings of the 11th ACM Symposium on Cloud Computing, 105-119, 2020",
+      "citation_count": "72",
+      "year": "2020"
+    },
+    {
+      "index": 78,
+      "title": "Space-efficient, high-performance rank and select structures on uncompressed bit sequences",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:738O_yMBCRsC",
+      "authors": "D Zhou, DG Andersen, M Kaminsky",
+      "venue": "International Symposium on Experimental Algorithms, 151-163, 2013",
+      "citation_count": "67",
+      "year": "2013"
+    },
+    {
+      "index": 79,
+      "title": "Mark-and-sweep: getting the\" inside\" scoop on neighborhood networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:KlAtU1dfN6UC",
+      "authors": "D Han, A Agarwala, DG Andersen, M Kaminsky, K Papagiannaki, ...",
+      "venue": "Proceedings of the 8th ACM SIGCOMM conference on Internet measurement, 99-104, 2008",
+      "citation_count": "64",
+      "year": "2008"
+    },
+    {
+      "index": 80,
+      "title": "BGP-lens: Patterns and anomalies in internet routing updates",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:mVmsd5A6BfQC",
+      "authors": "BA Prakash, N Valler, D Andersen, M Faloutsos, C Faloutsos",
+      "venue": "Proceedings of the 15th ACM SIGKDD international conference on Knowledge …, 2009",
+      "citation_count": "63",
+      "year": "2009"
+    },
+    {
+      "index": 81,
+      "title": "Distributed delayed proximal gradient methods",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:geHnlv5EZngC",
+      "authors": "M Li, DG Andersen, A Smola",
+      "venue": "NIPS Workshop on Optimization for Machine Learning 3 (3), 2013",
+      "citation_count": "60",
+      "year": "2013"
+    },
+    {
+      "index": 82,
+      "title": "Using vector interfaces to deliver millions of iops from a networked key-value storage server",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:dshw04ExmUIC",
+      "authors": "V Vasudevan, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the Third ACM Symposium on Cloud Computing, 1-13, 2012",
+      "citation_count": "59",
+      "year": "2012"
+    },
+    {
+      "index": 83,
+      "title": "SplitScreen: Enabling Efficient, Distributed Malware Detection.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:gKiMpY-AVTkC",
+      "authors": "SK Cha, I Moraru, J Jang, J Truelove, D Brumley, DG Andersen",
+      "venue": "NSDI, 377-390, 2010",
+      "citation_count": "58",
+      "year": "2010"
+    },
+    {
+      "index": 84,
+      "title": "Encoding and reconstructing inputs using neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:hMsQuOkrut0C",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "US Patent 11,308,385, 2022",
+      "citation_count": "57",
+      "year": "2022"
+    },
+    {
+      "index": 85,
+      "title": "Improving end-to-end availability using overlay networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:MXK_kJrjxJIC",
+      "authors": "DG Andersen",
+      "venue": "Massachusetts Institute of Technology, 2004",
+      "citation_count": "56",
+      "year": "2004"
+    },
+    {
+      "index": 86,
+      "title": "OverDoSe: A generic DDoS protection service using an overlay network",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:4TOpqqG69KYC",
+      "authors": "E Shi, I Stoica, D Andersen, A Perrig",
+      "venue": "Technical Report CMU-CS-06-114, Carnegie Mellon University, 2006",
+      "citation_count": "53",
+      "year": "2006"
+    },
+    {
+      "index": 87,
+      "title": "Balancing throughput, robustness, and in-order delivery in P2P VoD",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:hFOr9nPyWt4C",
+      "authors": "B Fan, DG Andersen, M Kaminsky, K Papagiannaki",
+      "venue": "Proceedings of the 6th International COnference, 1-12, 2010",
+      "citation_count": "52",
+      "year": "2010"
+    },
+    {
+      "index": 88,
+      "title": "Order-preserving key compression for in-memory search trees",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:LI9QrySNdTsC",
+      "authors": "H Zhang, X Liu, DG Andersen, M Kaminsky, K Keeton, A Pavlo",
+      "venue": "Proceedings of the 2020 ACM SIGMOD International Conference on Management of …, 2020",
+      "citation_count": "51",
+      "year": "2020"
+    },
+    {
+      "index": 89,
+      "title": "Exact pattern matching with feed-forward bloom filters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:_Qo2XoVZTnwC",
+      "authors": "I Moraru, DG Andersen",
+      "venue": "Journal of Experimental Algorithmics (JEA) 17, 3.1-3.18, 2012",
+      "citation_count": "49",
+      "year": "2012"
+    },
+    {
+      "index": 90,
+      "title": "RAIZN: Redundant array of independent zoned namespaces",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:bKqednn6t2AC",
+      "authors": "T Kim, J Jeon, N Arora, H Li, M Kaminsky, DG Andersen, GR Ganger, ...",
+      "venue": "Proceedings of the 28th ACM International Conference on Architectural …, 2023",
+      "citation_count": "47",
+      "year": "2023"
+    },
+    {
+      "index": 91,
+      "title": "Efficient similarity estimation for systems exploiting data redundancy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:L8Ckcad2t8MC",
+      "authors": "K Tangwongsan, H Pucha, DG Andersen, M Kaminsky",
+      "venue": "2010 Proceedings IEEE INFOCOM, 1-9, 2010",
+      "citation_count": "45",
+      "year": "2010"
+    },
+    {
+      "index": 92,
+      "title": "Scaling up clustered network appliances with ScaleBricks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:Mojj43d5GZwC",
+      "authors": "D Zhou, B Fan, H Lim, DG Andersen, M Kaminsky, M Mitzenmacher, ...",
+      "venue": "Proceedings of the 2015 ACM Conference on Special Interest Group on Data …, 2015",
+      "citation_count": "43",
+      "year": "2015"
+    },
+    {
+      "index": 93,
+      "title": "Don't settle for eventual consistency",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:LPZeul_q3PIC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "Communications of the ACM 57 (5), 61-68, 2014",
+      "citation_count": "43",
+      "year": "2014"
+    },
+    {
+      "index": 94,
+      "title": "FAWNdamentally power-efficient clusters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:_kc_bZDykSQC",
+      "authors": "V Vasudevan, J Franklin, D Andersen, A Phanishayee, L Tan, ...",
+      "venue": "Carnegie Mellon University, 2009",
+      "citation_count": "41",
+      "year": "2009"
+    },
+    {
+      "index": 95,
+      "title": "Dynamically reconfigurable optical links for high-bandwidth data center networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:hC7cP41nSMkC",
+      "authors": "M Glick, DG Andersen, M Kaminsky, L Mummert",
+      "venue": "2009 Conference on Optical Fiber Communication, 1-3, 2009",
+      "citation_count": "39",
+      "year": "2009"
+    },
+    {
+      "index": 96,
+      "title": "Egalitarian paxos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:P5F9QuxV20EC",
+      "authors": "I Moraru, DG Andersen, M Kaminsky",
+      "venue": "ACM Symposium on Operating Systems Principles, 2012",
+      "citation_count": "38",
+      "year": "2012"
+    },
+    {
+      "index": 97,
+      "title": "Holding the Internet Accountable.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:8k81kl-MbHgC",
+      "authors": "DG Andersen, H Balakrishnan, N Feamster, T Koponen, D Moon, ...",
+      "venue": "HotNets, 2007",
+      "citation_count": "38",
+      "year": "2007"
+    },
+    {
+      "index": 98,
+      "title": "Persistent, protected and cached: Building blocks for main memory data stores",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:abG-DnoFyZgC",
+      "authors": "I Moraru, DG Andersen, M Kaminsky, N Binkert, N Tolia, R Munz, ...",
+      "venue": "CMU Parallel Data Lab Trechnical Report, CMU-PDL-11-114 (Dec. 2011), 2012",
+      "citation_count": "37",
+      "year": "2012"
+    },
+    {
+      "index": 99,
+      "title": "Flex-KV: Enabling high-performance and flexible KV systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:CHSYGLWDkRkC",
+      "authors": "A Phanishayee, DG Andersen, H Pucha, A Povzner, W Belluomini",
+      "venue": "Proceedings of the 2012 workshop on Management of big data systems, 19-24, 2012",
+      "citation_count": "35",
+      "year": "2012"
+    },
+    {
+      "index": 100,
+      "title": "Scaling all-pairs overlay routing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:IWHjjKOFINEC",
+      "authors": "D Sontag, Y Zhang, A Phanishayee, DG Andersen, D Karger",
+      "venue": "Proceedings of the 5th international conference on Emerging networking …, 2009",
+      "citation_count": "33",
+      "year": "2009"
+    },
+    {
+      "index": 101,
+      "title": "Design of a write-optimized data store",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tS2w5q8j5-wC",
+      "authors": "H Amur, DG Andersen, M Kaminsky, K Schwan",
+      "venue": "Georgia Institute of Technology, 2013",
+      "citation_count": "32",
+      "year": "2013"
+    },
+    {
+      "index": 102,
+      "title": "The Case for {VOS}: The Vector Operating System",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:bEWYMUwI8FkC",
+      "authors": "V Vasudevan, DG Andersen, M Kaminsky",
+      "venue": "13th Workshop on Hot Topics in Operating Systems (HotOS XIII), 2011",
+      "citation_count": "32",
+      "year": "2011"
+    },
+    {
+      "index": 103,
+      "title": "Link-alike: using wireless to share network resources in a neighborhood",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:QIV2ME_5wuYC",
+      "authors": "S Jakubczak, DG Andersen, M Kaminsky, K Papagiannaki, S Seshan",
+      "venue": "ACM SIGMOBILE Mobile Computing and Communications Review 12 (4), 1-14, 2009",
+      "citation_count": "32",
+      "year": "2009"
+    },
+    {
+      "index": 104,
+      "title": "SysML: The New Frontier of Machine Learning Systems.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:gVv57TyPmFsC",
+      "authors": "A Ratner, D Alistarh, G Alonso, DG Andersen, P Bailis, S Bird, N Carlini, ...",
+      "venue": "CoRR, 2019",
+      "citation_count": "30",
+      "year": "2019"
+    },
+    {
+      "index": 105,
+      "title": "SNAPP: Stateless network-authenticated path pinning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:1qzjygNMrQYC",
+      "authors": "B Parno, A Perrig, D Andersen",
+      "venue": "Proceedings of the 2008 ACM symposium on Information, computer and …, 2008",
+      "citation_count": "30",
+      "year": "2008"
+    },
+    {
+      "index": 106,
+      "title": "Lightweight preemptible functions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:-FonjvnnhkoC",
+      "authors": "S Boucher, A Kalia, DG Andersen, M Kaminsky",
+      "venue": "2020 USENIX Annual Technical Conference (USENIX ATC 20), 465-477, 2020",
+      "citation_count": "28",
+      "year": "2020"
+    },
+    {
+      "index": 107,
+      "title": "Memory-efficient groupby-aggregate using compressed buffer trees",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:uWQEDVKXjbEC",
+      "authors": "H Amur, W Richter, DG Andersen, M Kaminsky, K Schwan, ...",
+      "venue": "Proceedings of the 4th annual Symposium on Cloud Computing, 1-16, 2013",
+      "citation_count": "28",
+      "year": "2013"
+    },
+    {
+      "index": 108,
+      "title": "Challenges and opportunities in Internet data mining",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:M3ejUd6NZC8C",
+      "authors": "DG Andersen, N Feamster",
+      "venue": "Parallel Data Laboratory, Carnegie Mellon University, Research Report CMU …, 2006",
+      "citation_count": "28",
+      "year": "2006"
+    },
+    {
+      "index": 109,
+      "title": "Cuckoo index",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:SpbeaW3--B0C",
+      "authors": "A Kipf, D Chromejko, A Hall, P Boncz, DG Andersen",
+      "venue": "VLDB Endowment, 2020",
+      "citation_count": "27",
+      "year": "2020"
+    },
+    {
+      "index": 110,
+      "title": "Hulu in the neighborhood",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:RHpTSmoSYBkC",
+      "authors": "D Han, D Andersen, M Kaminsky, D Papagiannaki, S Seshan",
+      "venue": "2011 Third International Conference on Communication Systems and Networks …, 2011",
+      "citation_count": "26",
+      "year": "2011"
+    },
+    {
+      "index": 111,
+      "title": "Succinct range filters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:TIZ-Mc8IlK0C",
+      "authors": "H Zhang, H Lim, V Leis, DG Andersen, M Kaminsky, K Keeton, A Pavlo",
+      "venue": "ACM Transactions on Database Systems (TODS) 45 (2), 1-31, 2020",
+      "citation_count": "25",
+      "year": "2020"
+    },
+    {
+      "index": 112,
+      "title": "Mlsys: The new frontier of machine learning systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:VaXvl8Fpj5cC",
+      "authors": "A Ratner, D Alistarh, G Alonso, DG Andersen, P Bailis, S Bird, N Carlini, ...",
+      "venue": "arXiv preprint arXiv:1904.03257, 2019",
+      "citation_count": "25",
+      "year": "2019"
+    },
+    {
+      "index": 113,
+      "title": "Adaptive file transfers for diverse environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:qUcmZB5y_30C",
+      "authors": "H Pucha, M Kaminsky, DG Andersen, MA Kozuch",
+      "venue": "2008 USENIX Annual Technical Conference (USENIX ATC 08), 2008",
+      "citation_count": "25",
+      "year": "2008"
+    },
+    {
+      "index": 114,
+      "title": "Experience with an evolving overlay network testbed",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Zph67rFs4hoC",
+      "authors": "DG Andersen, H Balakrishnan, MF Kaashoek, R Morris",
+      "venue": "ACM SIGCOMM Computer Communication Review 33 (3), 13-19, 2003",
+      "citation_count": "24",
+      "year": "2003"
+    },
+    {
+      "index": 115,
+      "title": "Graph partitioning via parallel submodular approximation to accelerate distributed machine learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:XiVPGOgt02cC",
+      "authors": "M Li, DG Andersen, AJ Smola",
+      "venue": "arXiv preprint arXiv:1505.04636, 2015",
+      "citation_count": "23",
+      "year": "2015"
+    },
+    {
+      "index": 116,
+      "title": "Learning to protect communications with adversarial neural cryptography. arXiv 2016",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:HbR8gkJAVGIC",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "arXiv preprint arXiv:1610.06918, 2016",
+      "citation_count": "22",
+      "year": "2016"
+    },
+    {
+      "index": 117,
+      "title": "When cycles are cheap, some tables can be huge",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:l7t_Zn2s7bgC",
+      "authors": "B Fan, D Zhou, H Lim, M Kaminsky, DG Andersen",
+      "venue": "14th Workshop on Hot Topics in Operating Systems (HotOS XIV), 2013",
+      "citation_count": "22",
+      "year": "2013"
+    },
+    {
+      "index": 118,
+      "title": "Efficiency Through Eavesdropping: Link-layer Packet Caching.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Wp0gIr-vW9MC",
+      "authors": "M Afanasyev, DG Andersen, AC Snoeren",
+      "venue": "NSDI, 105-118, 2008",
+      "citation_count": "22",
+      "year": "2008"
+    },
+    {
+      "index": 119,
+      "title": "Cuckoo filter",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:KbBQZpvPDL4C",
+      "authors": "B Fan, DG Andersen, M Kaminsky, MD Mitzenmacher",
+      "venue": "Proceedings of the 10th ACM International on Conference on emerging …, 2014",
+      "citation_count": "20",
+      "year": "2014"
+    },
+    {
+      "index": 120,
+      "title": "Using indirect routing to recover from network traffic scheduling estimation error",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:NJ774b8OgUMC",
+      "authors": "C Li, MK Mukerjee, DG Andersen, S Seshan, M Kaminsky, G Porter, ...",
+      "venue": "2017 ACM/IEEE Symposium on Architectures for Networking and Communications …, 2017",
+      "citation_count": "19",
+      "year": "2017"
+    },
+    {
+      "index": 121,
+      "title": "A proof of correctness for Egalitarian Paxos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:KxtntwgDAa4C",
+      "authors": "I Moraru, DG Andersen, M Kaminsky",
+      "venue": "Parallel Data Lab Intel Labs, Carnegie Mellon Univ., Pittsburgh, PA, USA …, 2013",
+      "citation_count": "18",
+      "year": "2013"
+    },
+    {
+      "index": 122,
+      "title": "Cuckoo filter: Better than bloom",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Tiz5es2fbqcC",
+      "authors": "B Fan, DG Andersen, M Kaminsky",
+      "venue": "USENIX Programming 38 (4), 36-40, 2013",
+      "citation_count": "17",
+      "year": "2013"
+    },
+    {
+      "index": 123,
+      "title": "Better caching in search advertising systems with rapid refresh predictions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:VLnqNzywnoUC",
+      "authors": "C Li, DG Andersen, Q Fu, S Elnikety, Y He",
+      "venue": "Proceedings of the 2018 World Wide Web Conference, 1875-1884, 2018",
+      "citation_count": "16",
+      "year": "2018"
+    },
+    {
+      "index": 124,
+      "title": "The network testbed mapping problem",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:4JMBOYKVnBMC",
+      "authors": "R McGeer, DG Andersen, S Schwab",
+      "venue": "International Conference on Testbeds and Research Infrastructures, 383-398, 2010",
+      "citation_count": "16",
+      "year": "2010"
+    },
+    {
+      "index": 125,
+      "title": "Method and system for securing block-based storage with capability data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:dhFuZR0502QC",
+      "authors": "M Aguilera, M Ji, M Lillibridge, J MacCormick, E Oertli, D Andersen, ...",
+      "venue": "US Patent App. 10/449,576, 2004",
+      "citation_count": "16",
+      "year": "2004"
+    },
+    {
+      "index": 126,
+      "title": "Combining machine learning and lifetime-based resource management for memory allocation and beyond",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:HIFyuExEbWQC",
+      "authors": "M Maas, DG Andersen, M Isard, MM Javanmard, KS McKinley, C Raffel",
+      "venue": "Communications of the ACM 67 (4), 87-96, 2024",
+      "citation_count": "15",
+      "year": "2024"
+    },
+    {
+      "index": 127,
+      "title": "Practical batch-updatable external hashing with sorting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:SP6oXDckpogC",
+      "authors": "H Lim, DG Andersen, M Kaminsky",
+      "venue": "2013 Proceedings of the Fifteenth Workshop on Algorithm Engineering and …, 2013",
+      "citation_count": "15",
+      "year": "2013"
+    },
+    {
+      "index": 128,
+      "title": "A (In) Cast of thousands: scaling datacenter TCP to kiloservers and gigabits",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:pqnbT2bcN3wC",
+      "authors": "V Vasudevan, A Phanishayee, H Shah, E Krevat, DG Andersen, ...",
+      "venue": "Pittsburgh, PA: CMUPDL-09-101: Carnegie Mellon University Parallel Data Lab …, 2009",
+      "citation_count": "15",
+      "year": "2009"
+    },
+    {
+      "index": 129,
+      "title": "Fastpass: Providing first-packet delivery",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:qxL8FJ1GzNcC",
+      "authors": "D Wendlandt, DG Andersen, A Perrig",
+      "venue": "Carnegie Mellon University, CyLab, 2006",
+      "citation_count": "14",
+      "year": "2006"
+    },
+    {
+      "index": 130,
+      "title": "Learning to protect communications with adversarial neural cryptography (2016)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:GFxP56DSvIMC",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "arXiv preprint arXiv:1610.06918, 2016",
+      "citation_count": "13",
+      "year": "2016"
+    },
+    {
+      "index": 131,
+      "title": "Method and system for managing access control",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:35N4QoGY0k4C",
+      "authors": "M Aguilera, M Ji, M Lillibridge, J MacCormick, E Oertli, D Andersen, ...",
+      "venue": "US Patent App. 10/449,575, 2004",
+      "citation_count": "13",
+      "year": "2004"
+    },
+    {
+      "index": 132,
+      "title": "Full-stack architecting to achieve a billion-requests-per-second throughput on a single key-value store server platform",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:5awf1xo2G04C",
+      "authors": "S Li, H Lim, VW Lee, JH Ahn, A Kalia, M Kaminsky, DG Andersen, S O, ...",
+      "venue": "ACM Transactions on Computer Systems (TOCS) 34 (2), 1-30, 2016",
+      "citation_count": "12",
+      "year": "2016"
+    },
+    {
+      "index": 133,
+      "title": "Understanding the AS-level path disjointness provided by multi-homing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:ZeXyd9-uunAC",
+      "authors": "V Vasudevan, DG Andersen, H Zhang",
+      "venue": "Technical Report RCMU-CS-07–141, 2007",
+      "citation_count": "12",
+      "year": "2007"
+    },
+    {
+      "index": 134,
+      "title": "Workload analysis and caching strategies for search advertising systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:_Re3VWB3Y0AC",
+      "authors": "C Li, DG Andersen, Q Fu, S Elnikety, Y He",
+      "venue": "Proceedings of the 2017 Symposium on Cloud Computing, 170-180, 2017",
+      "citation_count": "11",
+      "year": "2017"
+    },
+    {
+      "index": 135,
+      "title": "Picking interesting frames in streaming video",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:-_dYPAW6P2MC",
+      "authors": "C Canel, T Kim, G Zhou, C Li, H Lim, DG Andersen, SR Dulloor",
+      "venue": "2018 SysML Conference 1 (1), 1-3, 2018",
+      "citation_count": "10",
+      "year": "2018"
+    },
+    {
+      "index": 136,
+      "title": "Achieving one billion key-value requests per second on a single server",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:1yQoGdGgb4wC",
+      "authors": "S Li, H Lim, VW Lee, JH Ahn, A Kalia, M Kaminsky, DG Andersen, S Lee, ...",
+      "venue": "IEEE Micro 36 (3), 94-104, 2016",
+      "citation_count": "10",
+      "year": "2016"
+    },
+    {
+      "index": 137,
+      "title": "Fast cache for your text: Accelerating exact pattern matching with feed-forward bloom filters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:j3f4tGmQtD8C",
+      "authors": "I Moraru, DG Andersen",
+      "venue": "Technical Report CMU-CS-09-159, Carnegie Mellon University, 2009",
+      "citation_count": "10",
+      "year": "2009"
+    },
+    {
+      "index": 138,
+      "title": "Solving TCP incast in cluster storage systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:r0BpntZqJG4C",
+      "authors": "V Vasudevan, H Shah, A Phanishayee, E Krevat, D Andersen, G Ganger, ...",
+      "venue": "The 7th USENIX Conference on File and Storage Technologies (FAST’09) 3, 2009",
+      "citation_count": "10",
+      "year": "2009"
+    },
+    {
+      "index": 139,
+      "title": "The hare and the tortoise: taming wireless losses by exploiting wired reliability",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:SeFeTyx0c_EC",
+      "authors": "A Badam, M Kaminsky, D Han, K Papagiannaki, DG Andersen, S Seshan",
+      "venue": "Proceedings of the Twelfth ACM International Symposium on Mobile Ad Hoc …, 2011",
+      "citation_count": "9",
+      "year": "2011"
+    },
+    {
+      "index": 140,
+      "title": "The seductive appeal of thin clients",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:-f6ydRqryjwC",
+      "authors": "N Tolia, DG Andersen, M Satyanarayanan",
+      "venue": "School of Computer Science, Carnegie Mellon University, 2005",
+      "citation_count": "9",
+      "year": "2005"
+    },
+    {
+      "index": 141,
+      "title": "Anarchy in the Database: A Survey and Evaluation of Database Management System Extensibility",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:fbc8zXXH2BUC",
+      "authors": "A Kim, M Slot, DG Andersen, A Pavlo",
+      "venue": "Proceedings of the VLDB Endowment 18 (6), 1962-1976, 2025",
+      "citation_count": "8",
+      "year": "2025"
+    },
+    {
+      "index": 142,
+      "title": "Edf: Ensemble, distill, and fuse for easy video labeling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:URolC5Kub84C",
+      "authors": "G Zhou, S Dulloor, DG Andersen, M Kaminsky",
+      "venue": "arXiv preprint arXiv:1812.03626, 2018",
+      "citation_count": "8",
+      "year": "2018"
+    },
+    {
+      "index": 143,
+      "title": "Challenges and opportunities for efficient computing with fawn",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:NMxIlDl6LWMC",
+      "authors": "V Vasudevan, DG Andersen, M Kaminsky, J Franklin, MA Kozuch, ...",
+      "venue": "ACM SIGOPS Operating Systems Review 45 (1), 34-44, 2011",
+      "citation_count": "8",
+      "year": "2011"
+    },
+    {
+      "index": 144,
+      "title": "Report of the NSF workshop on research challenges in distributed computer systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:S16KYo8Pm5AC",
+      "authors": "F Kaashoek, B Liskov, D Andersen, M Dahlin, C Ellis, S Gribble, A Joseph, ...",
+      "venue": "GENI Design Document 05 6, 2005",
+      "citation_count": "8",
+      "year": "2005"
+    },
+    {
+      "index": 145,
+      "title": "Fast software cache design for network appliances",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:e_rmSamDkqQC",
+      "authors": "D Zhou, H Yu, M Kaminsky, D Andersen",
+      "venue": "2020 USENIX Annual Technical Conference (USENIX ATC 20), 657-671, 2020",
+      "citation_count": "7",
+      "year": "2020"
+    },
+    {
+      "index": 146,
+      "title": "Dynamically reconfigurable hybrid optical/electrical networks for high-bandwidth data centers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:blknAaTinKkC",
+      "authors": "M Glick, DG Andersen, M Kaminsky, L Mummert",
+      "venue": "2009 IEEE Avionics, Fiber-Optics and Phototonics Technology Conference, 64-65, 2009",
+      "citation_count": "7",
+      "year": "2009"
+    },
+    {
+      "index": 147,
+      "title": "Malevolent machine learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:P7Ujq4OLJYoC",
+      "authors": "C Edwards",
+      "venue": "Communications of the ACM 62 (12), 13-15, 2019",
+      "citation_count": "6",
+      "year": "2019"
+    },
+    {
+      "index": 148,
+      "title": "Netmemex: Providing full-fidelity traffic archival",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:eq2jaN3J8jMC",
+      "authors": "H Lim, V Sekar, Y Abe, DG Andersen",
+      "venue": "arXiv preprint arXiv:1603.04387, 2016",
+      "citation_count": "6",
+      "year": "2016"
+    },
+    {
+      "index": 149,
+      "title": "Fawnsort: Energy-efficient sorting of 10gb",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:TQgYirikUcIC",
+      "authors": "V Vasudevan, L Tan, M Kaminsky, MA Kozuch, D Andersen, P Pillai",
+      "venue": "Sort Benchmark final, 2010",
+      "citation_count": "6",
+      "year": "2010"
+    },
+    {
+      "index": 150,
+      "title": "Motivating the rules of the game for adversarial example research (2018)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:8xutWZnSdmoC",
+      "authors": "J Gilmer, RP Adams, IJ Goodfellow, D Andersen, GE Dahl",
+      "venue": "arXiv preprint arXiv:1807.06732, 1807",
+      "citation_count": "6",
+      "year": "1807"
+    },
+    {
+      "index": 151,
+      "title": "Motivating the rules of the game for adversarial example research. arXiv 2018",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Ri6SYOTghG4C",
+      "authors": "J Gilmer, RP Adams, I Goodfellow, D Andersen, GE Dahl",
+      "venue": "arXiv preprint arXiv:1807.06732, 1807",
+      "citation_count": "6",
+      "year": "1807"
+    },
+    {
+      "index": 152,
+      "title": "Succinct range filters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:_axFR9aDTf0C",
+      "authors": "H Zhang, H Lim, V Leis, DG Andersen, K Keeton, A Pavlo",
+      "venue": "ACM SIGMOD Record 48 (1), 78-85, 2019",
+      "citation_count": "5",
+      "year": "2019"
+    },
+    {
+      "index": 153,
+      "title": "A short primer on causal consistency",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:08ZZubdj9fEC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "USENIX; login magazine 38 (4), 41-43, 2013",
+      "citation_count": "5",
+      "year": "2013"
+    },
+    {
+      "index": 154,
+      "title": "XIA: An architecture for an evolvable and trustworthy Internet",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:VL0QpB8kHFEC",
+      "authors": "D Han, A Anand, F Dogar, B Li, H Lim, M Machado, A Mukundan, W Wu, ...",
+      "venue": "Proc. USENIX NSDI, 2012",
+      "citation_count": "5",
+      "year": "2012"
+    },
+    {
+      "index": 155,
+      "title": "FAWNSort: Energy-efficient Sorting of 10GB, 100GB, and 1TB",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:xtRiw3GOFMkC",
+      "authors": "P Pillai, M Kaminsky, MA Kozuch, DG Andersen",
+      "venue": "Intel Labs, Carnegie Mellon University, 2012",
+      "citation_count": "5",
+      "year": "2012"
+    },
+    {
+      "index": 156,
+      "title": "Proceedings of the 8th USENIX Conference on Networked Systems Design and Implementation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:_OXeSy2IsFwC",
+      "authors": "DG Andersen",
+      "venue": "USENIX Association, 2011",
+      "citation_count": "4",
+      "year": "2011"
+    },
+    {
+      "index": 157,
+      "title": "Bypassing network flooding attacks using fastpass",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:R3hNpaxXUhUC",
+      "authors": "D Wendlant, DG Andersen, A Perrig",
+      "venue": "Technical report, Carnegie Mellon University, 2006",
+      "citation_count": "4",
+      "year": "2006"
+    },
+    {
+      "index": 158,
+      "title": "A pragmatic approach to DHT adoption",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:HE397vMXCloC",
+      "authors": "J Considine, M Walfish, DG Anderson",
+      "venue": "Boston University Computer Science Department, 2003",
+      "citation_count": "4",
+      "year": "2003"
+    },
+    {
+      "index": 159,
+      "title": "Simple cache partitioning for networked workloads",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tzM49s52ZIMC",
+      "authors": "T Kim, S Boucher, H Lim, DG Andersen, M Kaminsky",
+      "venue": "Rep. CMU-CS-17–125, Sch. Comput. Sci., Carnegie Mellon Univ., Pittsburgh, PA …, 2017",
+      "citation_count": "3",
+      "year": "2017"
+    },
+    {
+      "index": 160,
+      "title": "Cuckoo linear algebra",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:AXPGKjj_ei8C",
+      "authors": "L Zhou, DG Andersen, M Li, AJ Smola",
+      "venue": "Proceedings of the 21th ACM SIGKDD International Conference on Knowledge …, 2015",
+      "citation_count": "3",
+      "year": "2015"
+    },
+    {
+      "index": 161,
+      "title": "An access network architecture for neighborhood-scale multimedia delivery",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:k_IJM867U9cC",
+      "authors": "D Han, D Andersen, M Kaminsky, D Papagiannaki, S Seshan",
+      "venue": "Tech Report CMU-CS-10-128, 2010",
+      "citation_count": "3",
+      "year": "2010"
+    },
+    {
+      "index": 162,
+      "title": "Topology inference from BGP routing dynamics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Z5m8FVwuT1cC",
+      "authors": "GA David, N Feamster, S Bauer, H Balakrishnan",
+      "venue": "Proc. IMW, 2002",
+      "citation_count": "3",
+      "year": "2002"
+    },
+    {
+      "index": 163,
+      "title": "The Garden: Evolving Warriors in Core Wars",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:YFjsv_pBGBYC",
+      "authors": "DG Andersen",
+      "venue": "Embo, 2001",
+      "citation_count": "3",
+      "year": "2001"
+    },
+    {
+      "index": 164,
+      "title": "Bei welchen Grundkrankheiten ist eine Venenthromboseprophylaxe erforderlich?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:r_AWSJRzSzQC",
+      "authors": "R Schmutzler",
+      "venue": "Hämostaseologie 1 (04), 123-136, 1981",
+      "citation_count": "3",
+      "year": "1981"
+    },
+    {
+      "index": 165,
+      "title": "Dynamic stem-sharing for multi-tenant video processing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:j8SEvjWlNXcC",
+      "authors": "A Jiang, C Canel, D Wong, M Kaminsky, MA Kozuch, P Pillai, ...",
+      "venue": "Proc. MLSys, 1-3, 2024",
+      "citation_count": "2",
+      "year": "2024"
+    },
+    {
+      "index": 166,
+      "title": "Succinct range filters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:foquWX3nUaYC",
+      "authors": "H Zhang, H Lim, V Leis, DG Andersen, M Kaminsky, K Keeton, A Pavlo",
+      "venue": "Communications of the ACM 64 (4), 166-173, 2021",
+      "citation_count": "2",
+      "year": "2021"
+    },
+    {
+      "index": 167,
+      "title": "High availability in cheap distributed key value storage",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:i2xiXl-TujoC",
+      "authors": "T Kim, DLK Wong, GR Ganger, M Kaminsky, DG Andersen",
+      "venue": "Proceedings of the 11th ACM Symposium on Cloud Computing, 165-178, 2020",
+      "citation_count": "2",
+      "year": "2020"
+    },
+    {
+      "index": 168,
+      "title": "Exploiting Time-Memory Tradeoffs in Cuckoo Cycle",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:BrmTIyaxlBUC",
+      "authors": "DG Andersen",
+      "venue": "",
+      "citation_count": "2",
+      "year": "2014"
+    },
+    {
+      "index": 169,
+      "title": "The hare and the tortoise: taming wireless losses by exploiting wired reliability",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Ehil0879vHcC",
+      "authors": "D Han, K Papagiannaki, DG Andersen, S Seshan, A Badam, M Kaminsky",
+      "venue": "ACM MobiHoc, 2011",
+      "citation_count": "2",
+      "year": "2011"
+    },
+    {
+      "index": 170,
+      "title": "A Narrow Waist for Multipath Routing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:dfsIfKJdRG4C",
+      "authors": "M Motiwala, M bin Tariq, B Anwer, D Andersen, N Feamster",
+      "venue": "Techrepublic, Oct 1, 4, 2009",
+      "citation_count": "2",
+      "year": "2009"
+    },
+    {
+      "index": 171,
+      "title": "On Internet Availability: Where Does Path Choice Matter?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:isC4tDSrTZIC",
+      "authors": "V Vasudevan, DG Andersen, H Zhang",
+      "venue": "Technical Report CMU-CS-TR-114, Carnegie Mellon University, 2009",
+      "citation_count": "2",
+      "year": "2009"
+    },
+    {
+      "index": 172,
+      "title": "Challenges and Opportunities in Internet Data Mining",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tkaPQYYpVKoC",
+      "authors": "F Neck, DG Andersen",
+      "venue": "Carnegie Mellon University, Pittsburgh, 2006",
+      "citation_count": "2",
+      "year": "2006"
+    },
+    {
+      "index": 173,
+      "title": "RON: Choosing Resiliency",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:dTyEYWd-f8wC",
+      "authors": "DG Andersen, H Balakrishnan, MF Kaashoek, R Morris, A Snoeren",
+      "venue": "MIT Laboratory for Computer Science, 2002",
+      "citation_count": "2",
+      "year": "2002"
+    },
+    {
+      "index": 174,
+      "title": "A First Look at Starlink's Impact on Internet Equity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:5MTHONV0fEkC",
+      "authors": "IC Suizo, DG Andersen, TA Benson, JM Sherry",
+      "venue": "Available at SSRN 5376300, 2025",
+      "citation_count": "1",
+      "year": "2025"
+    },
+    {
+      "index": 175,
+      "title": "Scalable, high performance ethernet forwarding lookup",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:WbkHhVStYXYC",
+      "authors": "D Zhou, B Fan, H Lim, DG Andersen, M Kaminsky",
+      "venue": "Proc. 9th International Conference on emerging Networking EXperiments and …, 2013",
+      "citation_count": "1",
+      "year": "2013"
+    },
+    {
+      "index": 176,
+      "title": "Scaling metadata service for weak scaling workloads",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tOudhMTPpwUC",
+      "authors": "L Xiao",
+      "venue": "",
+      "citation_count": "1",
+      "year": "2013"
+    },
+    {
+      "index": 177,
+      "title": "OS Support for High-Performance NVMs using Vector Interfaces",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:RYcK_YlVTxYC",
+      "authors": "V Vasudevan, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the USENIX Conference on File and Storage Technologies (FAST …, 2011",
+      "citation_count": "1",
+      "year": "2011"
+    },
+    {
+      "index": 178,
+      "title": "SWAP: Shared wireless access protocol (using reciprocity)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:pyW8ca7W8N0C",
+      "authors": "MW Dunlop, G Pemg, DG Andersen",
+      "venue": "2007 IEEE SMC Information Assurance and Security Workshop, 191-198, 2007",
+      "citation_count": "1",
+      "year": "2007"
+    },
+    {
+      "index": 179,
+      "title": "The Agile Security Architecture: System Support for Diverse Security Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:iH-uZ7U-co4C",
+      "authors": "R Spencer, S Smalley, P Loscocco, M Hibler, D Andersen, J Lepreau",
+      "venue": "Technical report, University of Utah Computer Science Department, 1998",
+      "citation_count": "1",
+      "year": "1998"
+    },
+    {
+      "index": 180,
+      "title": "Encoding and reconstructing inputs using neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:a3BOlSfXSfwC",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "US Patent 12,626,102, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 181,
+      "title": "Encoding and reconstructing inputs using neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:HtS1dXgVpQUC",
+      "authors": "M Abadi, DG Andersen",
+      "venue": "US Patent 11,853,860, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 182,
+      "title": "Technical Perspective A Whitebox Solution for Blackbox-Like Behaviors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:PVjk1bu6vJQC",
+      "authors": "DG Andersen",
+      "venue": "COMMUNICATIONS OF THE ACM 64 (11), 136-136, 2021",
+      "citation_count": "",
+      "year": "2021"
+    },
+    {
+      "index": 183,
+      "title": "Technical perspective: A whitebox solution for blackbox-like behaviors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:b1wdh0AR-JQC",
+      "authors": "DG Andersen",
+      "venue": "Communications of the ACM 62 (11), 136-136, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 184,
+      "title": "Bugs/Exploits",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:M7yex6snE4oC",
+      "authors": "K Serebryany, R Farrow, A Kalia, M Kaminsky, DG Andersen, B Beyer",
+      "venue": "",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 185,
+      "title": "SDI-CSCS: EP3: A Clean-Slate Software-Defined Approach for Enabling Elastic Security",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:4X0JR2_MtJMC",
+      "authors": "S Seshan, DG Andersen, V Sekar, J Sherry, B Parno",
+      "venue": "NSF Award 17 (1700521), 521, 2017",
+      "citation_count": "",
+      "year": "2017"
+    },
+    {
+      "index": 186,
+      "title": "AitF: FULL: Collaborative Research: Better Hashing for Applications: From Nuts & Bolts to Asymptotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:vDZJ-YLwNdEC",
+      "authors": "DG Andersen",
+      "venue": "NSF Award Number 1535821. Directorate for Computer and Information Science …, 2015",
+      "citation_count": "",
+      "year": "2015"
+    },
+    {
+      "index": 187,
+      "title": "CSR: Medium: Distributed Inference Algorithms for Machine Learning and Optimization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:AHdEip9mkN0C",
+      "authors": "DG Andersen, S Sra",
+      "venue": "NSF Award 14 (1409802), 9802, 2014",
+      "citation_count": "",
+      "year": "2014"
+    },
+    {
+      "index": 188,
+      "title": "FIA-NP: Collaborative Research: Deployment-Driven Evaluation and Evolution of the eXpressive Internet Architecture",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:BJbdYPG6LGMC",
+      "authors": "P Steenkiste, MA Sirbu, S Seshan, DG Andersen, L Dabbish",
+      "venue": "NSF Award 13 (1345305), 45305, 2014",
+      "citation_count": "",
+      "year": "2014"
+    },
+    {
+      "index": 189,
+      "title": "XIA",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tH6gc1N1XXoC",
+      "authors": "M Machado, C Ovon, D Zhou, C Stuart, D Barrett, SB Lee, D Han, ...",
+      "venue": "ACM SIGCOMM Computer Communication Review 44 (3), 50-57, 2014",
+      "citation_count": "",
+      "year": "2014"
+    },
+    {
+      "index": 190,
+      "title": "NeTS: Large: Collaborative Research: HCPN: Hybrid Circuit/Packet Networking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:F1b5ZUV5XREC",
+      "authors": "DG Andersen",
+      "venue": "NSF Award Number 1314721. Directorate for Computer and Information Science …, 2013",
+      "citation_count": "",
+      "year": "2013"
+    },
+    {
+      "index": 191,
+      "title": "Giulio Zhou",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:LhH-TYMQEocC",
+      "authors": "G Zhou, L Leqi, FK Karzan, Z Lipton, A Montgomery, C Canel, T Kim, C Li, ...",
+      "venue": "University of California, Berkeley (Berkeley, CA) 12, 2016, 2012",
+      "citation_count": "",
+      "year": "2012"
+    },
+    {
+      "index": 192,
+      "title": "The magazine archive includes every article published in Communications of the ACM for over the past 50 years.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Aul-kAQHnToC",
+      "authors": "N Evangelopoulos, L Visinescu",
+      "venue": "Communications of the ACM 55 (2), 62-69, 2012",
+      "citation_count": "",
+      "year": "2012"
+    },
+    {
+      "index": 193,
+      "title": "SILT",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:3htObqc8RwsC",
+      "authors": "B Fan, H Lim, DG Andersen, M Kaminsky",
+      "venue": "Proceedings of the Twenty-Third ACM Symposium on Operating Systems …, 2011",
+      "citation_count": "",
+      "year": "2011"
+    },
+    {
+      "index": 194,
+      "title": "Student Travel Support for the Eighth Symposium on Networked Systems Design and Implementation (NSDI)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Ak0FvsSvgGUC",
+      "authors": "DG Andersen",
+      "venue": "NSF Award Number 1110708. Directorate for Computer and Information Science …, 2011",
+      "citation_count": "",
+      "year": "2011"
+    },
+    {
+      "index": 195,
+      "title": "Opening Remarks and Awards Presentation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:yMeIxYmEMEAC",
+      "authors": "DG Andersen, S Ratnasamy",
+      "venue": "8th USENIX Symposium on Networked Systems Design and Implementation (NSDI 11), 2011",
+      "citation_count": "",
+      "year": "2011"
+    },
+    {
+      "index": 196,
+      "title": "A {Memory-Efficient},{High-Performance}{Key-Value} Store",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:ODE9OILHJdcC",
+      "authors": "H Lim, B Fan, DG Andersen, M Kaminsky",
+      "venue": "",
+      "citation_count": "",
+      "year": "2011"
+    },
+    {
+      "index": 197,
+      "title": "The Hare and the Tortoise: Tackling Wireless Losses by Exploiting Wired Reliability",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tYavs44e6CUC",
+      "authors": "D Han, B Anirudh, M Kaminsky, K Papagiannaki, DG Andersen, S Seshan",
+      "venue": "ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc), 2011",
+      "citation_count": "",
+      "year": "2011"
+    },
+    {
+      "index": 198,
+      "title": "SCI-FI: Domain-based Isolation, Scalability and Control for the Future Internet",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:a0OBvERweLwC",
+      "authors": "HC Hsiao, X Zhang, G Hasker, H Chan, A Perrig, D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": "2010"
+    },
+    {
+      "index": 199,
+      "title": "FIA: Collaborative Research: A Content and Service Friendly Architecture with Intrinsic Security and Explicit Trust",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:LgRImbQfgY4C",
+      "authors": "P Steenkiste, JM Peha, H Zhang, A Perrig, DG Andersen",
+      "venue": "NSF Award 10 (1040801), 40801, 2010",
+      "citation_count": "",
+      "year": "2010"
+    },
+    {
+      "index": 200,
+      "title": "DC: Medium: Designing and Programming a Low-Power Cluster Architecture for Data-Intensive Workloads",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:u-coK7KVo8oC",
+      "authors": "DG Andersen, A Gupta",
+      "venue": "NSF Award 9 (964474), 64474, 2010",
+      "citation_count": "",
+      "year": "2010"
+    },
+    {
+      "index": 201,
+      "title": "HYEONTAEK LIM",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:_B80troHkn4C",
+      "authors": "D Zhou, B Fan, H Lim, DG Andersen, M Kaminsky, M Mitzenmacher, ...",
+      "venue": "Education 9, 2015, 2009",
+      "citation_count": "",
+      "year": "2009"
+    },
+    {
+      "index": 202,
+      "title": "In Memoriam: Jay Lepreau, 1952-2008",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:M3NEmzRMIkIC",
+      "authors": "D Andersen",
+      "venue": "ACM SIGCOMM Computer Communication Review 39 (1), 45-46, 2008",
+      "citation_count": "",
+      "year": "2008"
+    },
+    {
+      "index": 203,
+      "title": "FAWN: A Fast Array of Wimpy Nodes (CMU-PDL-08-108)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:JV2RwH3_ST0C",
+      "authors": "DG Andersen, J Franklin, A Phanishayee, L Tan, V Vasudevan",
+      "venue": "Carnegie Mellon University, 2008",
+      "citation_count": "",
+      "year": "2008"
+    },
+    {
+      "index": 204,
+      "title": "cSamp: A System for Network-Wide Flow Monitoring",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:35r97b3x0nAC",
+      "authors": "D ANDERSEN",
+      "venue": "USENIX NSDI 2008, 2008",
+      "citation_count": "",
+      "year": "2008"
+    },
+    {
+      "index": 205,
+      "title": "Collaborative Research: CT-T: Toward a More Accountable Internet",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:2tRrZ1ZAMYUC",
+      "authors": "DG Andersen",
+      "venue": "NSF Award Number 0716287. Directorate for Computer and Information Science …, 2007",
+      "citation_count": "",
+      "year": "2007"
+    },
+    {
+      "index": 206,
+      "title": "Broadcasting Algorithms in Peer-to-Peer Data Distribution Systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:uLbwQdceFCQC",
+      "authors": "SK Teh, BMD Maggs, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": "2007"
+    },
+    {
+      "index": 207,
+      "title": "Scaling {Full-Mesh} Overlay Routing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:OcBU2YAGkTUC",
+      "authors": "D Sontag, D Andersen, D Karger",
+      "venue": "",
+      "citation_count": "",
+      "year": "2007"
+    },
+    {
+      "index": 208,
+      "title": "MRI: Development of a Shared Network Measurement Storage and Analysis Infrastructure",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:Bg7qf7VwUHIC",
+      "authors": "DG Andersen, H Zhang, C Wang, D Song",
+      "venue": "NSF Award 6 (619525), 19525, 2006",
+      "citation_count": "",
+      "year": "2006"
+    },
+    {
+      "index": 209,
+      "title": "CAREER: An Evolvable Architecture for Internet Data Transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:sJsF-0ZLhtgC",
+      "authors": "DG Andersen",
+      "venue": "NSF Award Number 0546551. Directorate for Computer and Information Science …, 2006",
+      "citation_count": "",
+      "year": "2006"
+    },
+    {
+      "index": 210,
+      "title": "Quantifying Interactive User Experiences on Thin Clients",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:ZzlSgRqYykMC",
+      "authors": "N Tolia, DG Andersen, M Satyanarayanan",
+      "venue": "COMPUTER-IEEE COMPUTER SOCIETY- 39 (3), 36, 2006",
+      "citation_count": "",
+      "year": "2006"
+    },
+    {
+      "index": 211,
+      "title": "What the protocol stack missed: the transfer service",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:J_g5lzvAfSwC",
+      "authors": "N Tolia, DG Andersen, M Kaminsky, SV Patil",
+      "venue": "Proceedings of the twentieth ACM symposium on Operating systems principles, 1-9, 2005",
+      "citation_count": "",
+      "year": "2005"
+    },
+    {
+      "index": 212,
+      "title": "The Seductive Appeal of Thin Clients (CMU-CS-05-151)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:maZDTaKrznsC",
+      "authors": "N Tolia, DG Andersen, M Satyanarayanan",
+      "venue": "Carnegie Mellon University, 2005",
+      "citation_count": "",
+      "year": "2005"
+    },
+    {
+      "index": 213,
+      "title": "Mayday: Distributed DoS Filtering",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:JoZmwDi-zQgC",
+      "authors": "D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": "2003"
+    },
+    {
+      "index": 214,
+      "title": "A highly configurable emulation facility for distributed systems and networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:yD5IFk8b50cC",
+      "authors": "J Lepreau, C Alfeld, D Andersen, K Wright",
+      "venue": "ACM SIGOPS Operating Systems Review 34 (2), 30, 2000",
+      "citation_count": "",
+      "year": "2000"
+    },
+    {
+      "index": 215,
+      "title": "A Hierarchically Extensible Security Policy Architecture: Why and How",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:BqipwSGYUEgC",
+      "authors": "D Andersen, R Spencer, M Hibler, J Lepreau",
+      "venue": "",
+      "citation_count": "",
+      "year": "1998"
+    },
+    {
+      "index": 216,
+      "title": "Condition-Informed Failure Prioritisation for Rotating Equipment: Connecting Sensor Evidence with FMEA",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:artPoR2Yc-kC",
+      "authors": "DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 217,
+      "title": "PARALLEL DATA LAB",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:lvd772isFD0C",
+      "authors": "G Amvrosiadis, D Andersen, P by Date",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 218,
+      "title": "ExDBMS: A Comprehensive Survey on Extensibility in Database Management Systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:nZcligLrVowC",
+      "authors": "A Kim, R Vavekanand, K Sam, A Pavlo, D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 219,
+      "title": "The Seattle Report on Database Research Every five years, a group of the leading database researchers meet to reflect on their community's impact on the computing industry as …",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:yqoGN6RLRZoC",
+      "authors": "D Abadi, A Ailamaki, D Andersen, P Bailis, M Balazinska, PA Bernstein, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 220,
+      "title": "Version 3.1 Last Saved:* SAVEDATE\\* MERGEFORMAT* 21/9/98 0: 0 AM* Status: UNDER DEVELOPMENT",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:hCrLmN-GePgC",
+      "authors": "Y Bernet, J Stewart, R Yavatkar, D Andersen, C Tai, B Quinn, K Lee",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 221,
+      "title": "Windows Networking Group Winsock Generic QOS Mapping (draft)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:ClCfbGk0d_YC",
+      "authors": "Y Bernet, J Stewart, R Yavatkar, D Andersen, C Tai, B Quinn, K Lee",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 222,
+      "title": "Datacenter RPCs Can Be General and Fast",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:kz9GbA2Ns4gC",
+      "authors": "D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 223,
+      "title": "Eiger: Stronger Semantics for Low-Latency Geo-Replicated Storage",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:tuHXwOkdijsC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 224,
+      "title": "Don’t Settle for Eventual: Scalable Causal",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:kuK5TVdYjLIC",
+      "authors": "W Lloyd, MJ Freedman, M Kaminsky, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 225,
+      "title": "Datacenter RPCs can be General and Fast",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:KUbvn5osdkgC",
+      "authors": "AKM Kaminsky, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 226,
+      "title": "FaSST: Fast, Scalable and Simple Distributed Transactions with Two-sided (RDMA) Datagram RPCs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:ML0RJ9NH7IQC",
+      "authors": "AKM Kaminsky, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 227,
+      "title": "Efficient Multi-Tenant Inference on Video using Microclassifiers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:fEOibwPWpKIC",
+      "authors": "G Zhou, T Kim, C Canel, C Li, H Lim, DG Andersen, M Kaminskyt, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 228,
+      "title": "A Simple Introduction to Compressed Suffix Arrays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:ZfRJV9d4-WMC",
+      "authors": "DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 229,
+      "title": "Lecture 3 Design Philosophy & Applications",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:W5xh706n7nkC",
+      "authors": "D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 230,
+      "title": "MCMAHAN, HUGH BRENDAN CMU-CS-06-166 MEADOWS, Catherine CMU-CS-06-172 MILLER, Gary CMU-CS-06-132",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:JQOojiI6XY0C",
+      "authors": "UA ACAR, A AILAMAKI, J ALDRICH, DG ANDERSEN, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 231,
+      "title": "“Narrow Waist” of the Internet Key to its Success",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:dQ2og3OwTAUC",
+      "authors": "P Steenkiste, D Andersen, D Eckhardt, S Kiesler, J Peha, A Perrig, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 232,
+      "title": "Das, Subhasis, 349 Devadas, Srinivas, 616 Dijk, Marten van, 616 Dreslinksi, Ronald G., 27, 629",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:N5tVd3kTz84C",
+      "authors": "Z Du, J Ahn, JH Ahn, H Ahn, B Akin, O Allam, J Alsop, L Alvarez, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 233,
+      "title": "NSF Future Internet Architecture",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:9vf0nzSNQJEC",
+      "authors": "P Steenkiste, D Andersen, D Eckhardt, S Kiesler, J Peha, A Perrig, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 234,
+      "title": "Loss-Optimized Routing in Overlay Networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:p2g8aNsByqUC",
+      "authors": "D Andersen, H Balakrishnan, AC Snoeren",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 235,
+      "title": "AGRAWAL, Mukesh CMU-CS-11-101 AKELLA, Aditya CMU-CS-11-100, CMU-CS-11-117",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:1sJd4Hv_s6UC",
+      "authors": "J ALDRICH, A ANAND, D ANDERSEN, V BALA, A BARNAT, M BENISCH, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 236,
+      "title": "Efficient Mixed-Platform Clouds",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:NhqRSupF_l8C",
+      "authors": "PB Gibbons, M Kaminsky, MA Kozuch, P Pillai, G Ganger, D Andersen, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 237,
+      "title": "Grand Challenge: Critical Networking Infrastructure in a Suitcase",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:cFHS6HbyZ2cC",
+      "authors": "DG Andersen",
+      "venue": "Carnegie Mellon University, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 238,
+      "title": "Principles for End-to-End Failure Masking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:4OULZ7Gr8RgC",
+      "authors": "DG Andersen, RN Rao",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 239,
+      "title": "http://nms. csail. mit. edu/ron/ronweb",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:g5m5HwL7SMYC",
+      "authors": "DG Andersen, H Balakrishnan, MF Kaashoek, RN Rao",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 240,
+      "title": "Measurement and Analysis of TCP Throughput Collapse in Cluster-based Storage Systems (CMU-PDL-07-105)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:vV6vV6tmYwMC",
+      "authors": "A Phanishayee, E Krevat, V Vasudevan, DG Andersen, GR Ganger, ...",
+      "venue": "Carnegie Mellon University, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 241,
+      "title": "SCION: Scalability, Control, and Isolation On Next-Generation Networks (CMU-CyLab-10-020)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:NaGl4SEjCO4C",
+      "authors": "HC Hsiao, X Zhang, G Hasker, H Chan, A Perrig, DG Andersen",
+      "venue": "Carnegie Mellon University, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 242,
+      "title": "Data-Oriented Transfer: Architecture and Techniques for Internet Data Transfers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:O3NaXMp0MMsC",
+      "authors": "H Pucha, M Kaminsky, DG Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 243,
+      "title": "FAWNSort: Energy-efficient Sorting of 10GB",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:GnPB-g6toBAC",
+      "authors": "P Pillai, M Kaminsky, V Vasudevan, L Tan, MA Kozuch, D Andersen",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}
