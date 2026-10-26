@@ -1,9 +1,9 @@
 {
-  "artifact_commit": "d9ce2451a6513883441386f98caa891f77329976",
+  "artifact_commit": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93",
   "atomic_release": {
-    "artifact_revision": "d9ce2451a6513883441386f98caa891f77329976",
-    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: f764b4e66b394d1d9c5679ed7ff1f4b3",
-    "commit_nonce": "f764b4e66b394d1d9c5679ed7ff1f4b3",
+    "artifact_revision": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93",
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: dda692e7da9346c98efa596b2177ae3b",
+    "commit_nonce": "dda692e7da9346c98efa596b2177ae3b",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -15,48 +15,48 @@
     ],
     "hosted_file_bytes_match_prewrite": true,
     "mode": "single_parent_commit",
-    "parent_revision": "a032306a073095278dfb6d166b842de3138dbeee",
+    "parent_revision": "d9ce2451a6513883441386f98caa891f77329976",
     "prewrite_gate": {
       "gate": "full-source-and-region-continuity-v1",
-      "map_points": 45810,
-      "prior_revision": "a032306a073095278dfb6d166b842de3138dbeee",
+      "map_points": 46152,
+      "prior_revision": "d9ce2451a6513883441386f98caa891f77329976",
       "raw_rows": 59434,
       "source_snapshot_sha256": "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1",
       "status": "pass"
     },
     "release_context": {
-      "producer_commit": "c8379ea347115fbe5b1f3269aba9b138b0542c99",
-      "snapshot_commit": "3c2f0338eeba1d15f6b983578250d7b4c663b8dc",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40317624953"
+      "producer_commit": "03eb745bc4475fb883f66fb2486914ef96d8ecfb",
+      "snapshot_commit": "9747eb71c74794682a86b3bfea81d8293e6f6974",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40335483260"
     },
     "sha256_by_path": {
-      "README.md": "d1c831c4783a917eabaa6627961d1ac12cc63641a8da7ff184a62027470b643a",
-      "authorships/train-00000-of-00001.parquet": "2ad055cbc201626b86477a58a53f9c856324d5940f15e44fe590540691cf3331",
-      "maps/manifest.json": "eb94bb6563fa2071d6a3f31eebb514025e5499b1b88962472b089422d6481f7f",
-      "maps/publications.json": "fb368a8677ba947fc5753ee201c7b7cce3505f3db98883b7150a33b7e678d32c",
-      "people/train-00000-of-00001.parquet": "e2e76910f1de82685e618ea58c4299191082e2a9c4ecfa810b0e01d496e6d0a2",
-      "profile_publications/train-00000-of-00001.parquet": "4496002e9fc17b72d8e43a15badecb127f71bb3472a5dec6899772b5a0adef93",
-      "works/train-00000-of-00001.parquet": "eb03c54a08caa04c4bed8f9fd155a8bd5086972d56b0cba3a4249725c00b7583"
+      "README.md": "a364ebf93f205890a3b20321a454f99cc76c0a09cc24bfce66b0aa7e77d464f3",
+      "authorships/train-00000-of-00001.parquet": "cd394ab7c503022c82c74fee020c8ed88b58d60862bb5ed9488d80e467579017",
+      "maps/manifest.json": "c5b188dfe17d5ec0a754fe9c3bdc4b0d1cfacafb6a6fa369d48ad5d8bc87e209",
+      "maps/publications.json": "f0a1b26cc365cff579686487cf453e44e813db002c8e341cf1e23631dbb572cb",
+      "people/train-00000-of-00001.parquet": "b01ee9ba7da416a7322e99500e5caa80714c7d90c0f3b060805ea8d7cba6db9a",
+      "profile_publications/train-00000-of-00001.parquet": "ce18dbb9fa5740b2f5c83bae500b854b7c709498ad728f0662144a18fe844e5f",
+      "works/train-00000-of-00001.parquet": "d25f11b2aefcf705e15eb8bcae0aa140d21e08acd0181860488875fc7991974a"
     },
     "size_by_path": {
       "README.md": 10439,
-      "authorships/train-00000-of-00001.parquet": 16424841,
-      "maps/manifest.json": 3195,
-      "maps/publications.json": 41662441,
-      "people/train-00000-of-00001.parquet": 662480,
-      "profile_publications/train-00000-of-00001.parquet": 208540487,
-      "works/train-00000-of-00001.parquet": 213474953
+      "authorships/train-00000-of-00001.parquet": 16569666,
+      "maps/manifest.json": 3194,
+      "maps/publications.json": 42016780,
+      "people/train-00000-of-00001.parquet": 662527,
+      "profile_publications/train-00000-of-00001.parquet": 213807486,
+      "works/train-00000-of-00001.parquet": 217958527
     }
   },
   "attribution_confirmed": 505,
-  "attribution_held": 2391,
+  "attribution_held": 3294,
   "attribution_reviews_sha256": "b9334546cf44d40b36d9faf6c4eff213b93677ebef2fb748fcb4cb258091aa51",
-  "authorships": 52764,
+  "authorships": 53259,
   "dataset_commits": {
-    "authorships": "d9ce2451a6513883441386f98caa891f77329976",
-    "people": "d9ce2451a6513883441386f98caa891f77329976",
-    "profile_publications": "d9ce2451a6513883441386f98caa891f77329976",
-    "works": "d9ce2451a6513883441386f98caa891f77329976"
+    "authorships": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93",
+    "people": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93",
+    "profile_publications": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93",
+    "works": "ceee8b0d534a1ded300f27d7408804fc1a3bbf93"
   },
   "dataset_configs": [
     "people",
@@ -68,27 +68,23 @@
   "detail_keywords": 120,
   "error_message": null,
   "error_type": null,
-  "excluded_works": 5139,
-  "finished_at_utc": "2026-10-26T12:02:39.299323+00:00",
-  "held_observation_rows": 1448,
+  "excluded_works": 5921,
+  "finished_at_utc": "2026-10-26T14:11:09.461434+00:00",
+  "held_observation_rows": 0,
   "held_person_observation_rows": 3,
-  "held_profile_ids": [
-    "IcEsJfAAAAAJ",
-    "FRlLpMYAAAAJ",
-    "jkKrk0sAAAAJ"
-  ],
-  "held_source_observation_rows": 1448,
+  "held_profile_ids": [],
+  "held_source_observation_rows": 0,
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 45810,
+  "mapped_works": 46152,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 3047,
+  "new_embedding_count": 1136,
   "people": 2001,
   "person_publication_hold_manifest_sha256": "575d553b9762eefdb92631265f8c374e5be843edf004e44d6cb80297f6bc3395",
   "person_publication_holds": [
@@ -118,10 +114,10 @@
       ]
     }
   ],
-  "prior_revision": "a032306a073095278dfb6d166b842de3138dbeee",
-  "producer_commit": "c8379ea347115fbe5b1f3269aba9b138b0542c99",
-  "profile_count": 325,
-  "profile_publications": 57983,
+  "prior_revision": "d9ce2451a6513883441386f98caa891f77329976",
+  "producer_commit": "03eb745bc4475fb883f66fb2486914ef96d8ecfb",
+  "profile_count": 328,
+  "profile_publications": 59431,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -297,11 +293,11 @@
       "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
       "person_id": "person-matthewwalker-f9f5f4da",
       "person_observation_rows": 413,
-      "reason": "Complete 413-row Physics capture is source-bound. Same-name contamination and eleven individual candidates remain unresolved; hold the entire profile.",
-      "reviewed_at": "2026-10-25",
+      "reason": "Complete 413-row Physics source is bound to its saved capture and cache. Nineteen source-reviewed exact exclusions and 317 exact holds protect unresolved same-name and output-grain records; 77 distinct dated astronomy journal rows with an MG Walker byline enter ordinary gates.",
+      "reviewed_at": "2026-10-26",
       "scholar_id": "IcEsJfAAAAAJ",
       "source_observation_rows": 413,
-      "state": "held"
+      "state": "released"
     },
     {
       "cache_sha256": "36c211772f28fc57b81f5a9d415bcc063e4c06129a3063c1925fe0df066e3b04",
@@ -337,11 +333,11 @@
       "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
       "person_id": "person-saramajetich-69037290",
       "person_observation_rows": 271,
-      "reason": "Complete 271-row Physics capture is source-bound. The DOE report needs a context-type decision; another individual row and grouped leads remain unresolved.",
-      "reviewed_at": "2026-10-25",
+      "reason": "Complete 271-row Physics source is bound to saved capture and cache hashes. The 27 previously source-reviewed exact exclusions and 114 provisional holds protect unresolved observations; 130 rows enter ordinary map gates.",
+      "reviewed_at": "2026-10-26",
       "scholar_id": "FRlLpMYAAAAJ",
       "source_observation_rows": 271,
-      "state": "held"
+      "state": "released"
     },
     {
       "cache_sha256": "cc14ad480e977d2ac3af10ac1ac1dee85a76b9b446b12875d3efc179b0e9a0ed",
@@ -377,11 +373,11 @@
       "cache_sha256": "4c518b41ecc4fe5122a4f80d195a456ea6338a4b7e9a81bd09babb34658606fa",
       "person_id": "person-curtismeyer-a1171ccf",
       "person_observation_rows": 764,
-      "reason": "Complete 764-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25",
+      "reason": "Complete 764-row Physics source is bound to saved capture and cache hashes. No reviewed exclusion is asserted; 472 exact provisional holds protect unresolved attribution, version, and output-type questions; 292 rows enter ordinary map gates.",
+      "reviewed_at": "2026-10-26",
       "scholar_id": "jkKrk0sAAAAJ",
       "source_observation_rows": 764,
-      "state": "held"
+      "state": "released"
     },
     {
       "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
@@ -444,9 +440,9 @@
       "state": "released"
     }
   ],
-  "profile_release_manifest_sha256": "e3d21774d50257adf8d5ddc104e2890d5ced778a44c53b3664044823cd994818",
-  "provisional_hold_manifest_sha256": "b88f3ca6d297618eeb0a7b0fc764e452da0b93d8102cf53904d04fe1a51cb153",
-  "provisional_hold_observation_rows": 2338,
+  "profile_release_manifest_sha256": "1a1a32559bd4a824be37be10534aac3040b9712927fb281b38e54f9423091b31",
+  "provisional_hold_manifest_sha256": "5db89edef446cb445698aa710dffa3f22678500dbbe76fa2b79d469ab2c24b22",
+  "provisional_hold_observation_rows": 3241,
   "provisional_hold_profiles": [
     {
       "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
@@ -717,13 +713,43 @@
       "reviewed_exclusion_rows": 3,
       "scholar_id": "6pPZKd0AAAAJ",
       "source_observation_rows": 624
+    },
+    {
+      "cache_sha256": "4c518b41ecc4fe5122a4f80d195a456ea6338a4b7e9a81bd09babb34658606fa",
+      "held_ids_sha256": "1d2b82cabc0877112b8519d1ff5b54130d5a7660c8535ff9dbb98814f24ee239",
+      "held_observation_rows": 472,
+      "person_id": "person-curtismeyer-a1171ccf",
+      "reviewed_exclusion_ids_sha256": "",
+      "reviewed_exclusion_rows": 0,
+      "scholar_id": "jkKrk0sAAAAJ",
+      "source_observation_rows": 764
+    },
+    {
+      "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
+      "held_ids_sha256": "ec5f38624a059b44a1e4e8fc1b16c7a3fc96b45ceffadfa185719302529c4185",
+      "held_observation_rows": 114,
+      "person_id": "person-saramajetich-69037290",
+      "reviewed_exclusion_ids_sha256": "a484ea1edf6eeda28805b922bc5c153c565e2a08dd2cfb2a29b1ce2329989008",
+      "reviewed_exclusion_rows": 27,
+      "scholar_id": "FRlLpMYAAAAJ",
+      "source_observation_rows": 271
+    },
+    {
+      "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
+      "held_ids_sha256": "876e9fea03342dd9e68617d81a84eb2c0c04bae8c9239f0bde3715061fffc256",
+      "held_observation_rows": 317,
+      "person_id": "person-matthewwalker-f9f5f4da",
+      "reviewed_exclusion_ids_sha256": "e72efd0950b0b7046d40349d155cd11a8f8c83034546b57bcec90495ffb610b4",
+      "reviewed_exclusion_rows": 19,
+      "scholar_id": "IcEsJfAAAAAJ",
+      "source_observation_rows": 413
     }
   ],
   "raw_snapshot_observations": 59434,
   "raw_snapshot_profiles": 328,
   "raw_snapshot_sha256": "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1",
   "region_audit_version": "low-information-semantic-region-v3",
-  "region_comparison_revision": "a032306a073095278dfb6d166b842de3138dbeee",
+  "region_comparison_revision": "d9ce2451a6513883441386f98caa891f77329976",
   "region_continuity": {
     "approved_bio_binding_changes": [],
     "approved_one_time_losses": [],
@@ -735,20 +761,20 @@
     "bio_binding_approval_sha256": null,
     "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
     "chemistry_review_root_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-    "current_visible_observations": 52309,
+    "current_visible_observations": 52802,
     "missing_sullivan_curated_targets": [],
-    "new_source_gains": 1315,
+    "new_source_gains": 493,
     "poster_loss_approval_sha256": null,
-    "prior_eligible_overrides": 179,
-    "prior_excluded_overrides": 38,
-    "prior_revision": "a032306a073095278dfb6d166b842de3138dbeee",
-    "prior_visible_observations": 50994,
+    "prior_eligible_overrides": 170,
+    "prior_excluded_overrides": 44,
+    "prior_revision": "d9ce2451a6513883441386f98caa891f77329976",
+    "prior_visible_observations": 52309,
     "reviewed_composite_observation_gains": [],
     "reviewed_composite_observation_losses": [],
     "reviewed_composite_work_gains": [],
     "reviewed_composite_work_losses": [],
     "reviewed_losses": [],
-    "stable_works": 47175,
+    "stable_works": 48340,
     "sullivan_continuity_addendum_sha256": null,
     "sullivan_loss_approval_sha256": null,
     "unapproved_mapped_binding_changes": [],
@@ -765,8 +791,8 @@
   "reviewed_contexts_sha256": "ec2f3f67c0448834717e3977c9a282556cccc010191b1b920bdaaa2ccc6db661",
   "reviewed_doi_aliases": 60,
   "reviewed_doi_aliases_sha256": "ac18a559d31a405e449b51bc8765eae561e5b8deae48e73adde4c5e875c4ba73",
-  "reviewed_exclusions": 1826,
-  "reviewed_exclusions_sha256": "f2d8685ee7b1551423be524877aaa2f88b6a8274a3ed059a3937c812ef98486e",
+  "reviewed_exclusions": 1872,
+  "reviewed_exclusions_sha256": "516dbb3d6b92a0c4f3292af38e92f72993df938259d33b2cded2492d24347206",
   "reviewed_metadata_corrections": 29,
   "reviewed_metadata_corrections_sha256": "9726732bb75e7311978a7f52a4dab22253b71555acd2a95cc9a82bb8ffb9b19d",
   "schema_version": 2,
@@ -775,11 +801,11 @@
     "legacy_profiles": 285,
     "reconciled_prior_ids": 16
   },
-  "snapshot_commit": "3c2f0338eeba1d15f6b983578250d7b4c663b8dc",
-  "started_at_utc": "2026-10-26T11:49:20.120615+00:00",
+  "snapshot_commit": "9747eb71c74794682a86b3bfea81d8293e6f6974",
+  "started_at_utc": "2026-10-26T14:02:13.311391+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 29,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40317624953",
-  "works": 53267
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40335483260",
+  "works": 54391
 }
