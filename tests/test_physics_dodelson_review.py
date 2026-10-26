@@ -52,12 +52,13 @@ def test_dodelson_review_partitions_exact_complete_source():
         for row in by_row
     }
     assert len(set(ids.values())) == 443
-    assert _ids_digest({ids[row] for row in excluded}) == ledger[
-        "reviewed_exclusion_ids_sha256"
-    ]
-    assert _ids_digest({ids[row] for row in held}) == ledger[
-        "provisional_hold_ids_sha256"
-    ]
+    assert (
+        _ids_digest({ids[row] for row in excluded})
+        == ledger["reviewed_exclusion_ids_sha256"]
+    )
+    assert (
+        _ids_digest({ids[row] for row in held}) == ledger["provisional_hold_ids_sha256"]
+    )
     assert profile["state"] == "reviewed_for_paired_release"
     assert profile["paired_release_review_path"] == (
         "status/physics-dodelson-release-review-2026-10-26.json"
