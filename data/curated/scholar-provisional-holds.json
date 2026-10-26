@@ -22995,6 +22995,2387 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-richardpeng-2dccae48",
+      "scholar_id": "loh7ivYAAAAJ",
+      "expected_source_rows": 109,
+      "cache_sha256": "5a9c73ef6938a3492b6796abe88e16e6131e95e22e0011545cefa050ffc7e6b8",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 39,
+          "author_pub_id": "loh7ivYAAAAJ:W7OEmFMy1HYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 54,
+          "author_pub_id": "loh7ivYAAAAJ:QIV2ME_5wuYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:QIV2ME_5wuYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "loh7ivYAAAAJ:j7XjBeKFbTsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:j7XjBeKFbTsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 91,
+          "author_pub_id": "loh7ivYAAAAJ:_9Xh93LWpsYC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:_9Xh93LWpsYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 97,
+          "author_pub_id": "loh7ivYAAAAJ:o9ULDYDKYbIC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:o9ULDYDKYbIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 98,
+          "author_pub_id": "loh7ivYAAAAJ:U5uP8zs9lfgC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:U5uP8zs9lfgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 100,
+          "author_pub_id": "loh7ivYAAAAJ:x2hKVfJWtf0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&pagesize=100&citation_for_view=loh7ivYAAAAJ:x2hKVfJWtf0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 101,
+          "author_pub_id": "loh7ivYAAAAJ:w7CBUyPWg-0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:w7CBUyPWg-0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 102,
+          "author_pub_id": "loh7ivYAAAAJ:1paMEeroeoQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:1paMEeroeoQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 103,
+          "author_pub_id": "loh7ivYAAAAJ:RJNGbXJAtMsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:RJNGbXJAtMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "loh7ivYAAAAJ:s1ouQE5r0WUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:s1ouQE5r0WUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 106,
+          "author_pub_id": "loh7ivYAAAAJ:TiIbgCYny7sC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:TiIbgCYny7sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 107,
+          "author_pub_id": "loh7ivYAAAAJ:BCdnXsLIVDwC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:BCdnXsLIVDwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 108,
+          "author_pub_id": "loh7ivYAAAAJ:KqnX2w3egDsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved title is fragmentary or resembles source front matter; verify output identity before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:KqnX2w3egDsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 109,
+          "author_pub_id": "loh7ivYAAAAJ:vjZqxyZ7hS4C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=loh7ivYAAAAJ&cstart=100&pagesize=100&citation_for_view=loh7ivYAAAAJ:vjZqxyZ7hS4C",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "person_id": "person-shreyashankar-35d2d805",
+      "scholar_id": "0WD1nZcAAAAJ",
+      "expected_source_rows": 34,
+      "cache_sha256": "ce5e81047b1260ba32e16a525c1e2a13cb409b4f1e4c5ce5534418709ed6ee97",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 6,
+          "author_pub_id": "0WD1nZcAAAAJ:W7OEmFMy1HYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0WD1nZcAAAAJ&pagesize=100&citation_for_view=0WD1nZcAAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "person_id": "person-mayankgoel-a1fb1bf6",
+      "scholar_id": "nxqrff8AAAAJ",
+      "expected_source_rows": 140,
+      "cache_sha256": "3e40600c8a8176fd575b0e8261cca0e04875b7f61a0728b3f50a32bdea172ebd",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 4,
+          "author_pub_id": "nxqrff8AAAAJ:2ywjKiB__4kC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:2ywjKiB__4kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 5,
+          "author_pub_id": "nxqrff8AAAAJ:4aZ_i-5WJEQC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:4aZ_i-5WJEQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 30,
+          "author_pub_id": "nxqrff8AAAAJ:tz746QTLzJkC",
+          "reason": "Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:tz746QTLzJkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 37,
+          "author_pub_id": "nxqrff8AAAAJ:ufrVoPGSRksC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 39,
+          "author_pub_id": "nxqrff8AAAAJ:tHtfpZlB6tUC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:tHtfpZlB6tUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "nxqrff8AAAAJ:isU91gLudPYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:isU91gLudPYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 45,
+          "author_pub_id": "nxqrff8AAAAJ:nqdriD65xNoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:nqdriD65xNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "nxqrff8AAAAJ:OzeSX8-yOCQC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:OzeSX8-yOCQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 52,
+          "author_pub_id": "nxqrff8AAAAJ:_AeoHAGD03cC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:_AeoHAGD03cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 58,
+          "author_pub_id": "nxqrff8AAAAJ:M3ejUd6NZC8C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:M3ejUd6NZC8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 62,
+          "author_pub_id": "nxqrff8AAAAJ:R-LXmdHK_14C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:R-LXmdHK_14C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 64,
+          "author_pub_id": "nxqrff8AAAAJ:4TOpqqG69KYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:4TOpqqG69KYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "nxqrff8AAAAJ:NMlhSUseqAsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:NMlhSUseqAsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 75,
+          "author_pub_id": "nxqrff8AAAAJ:-yGd096yOn8C",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:-yGd096yOn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 76,
+          "author_pub_id": "nxqrff8AAAAJ:UebtZRa9Y70C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "nxqrff8AAAAJ:KWzIFqRkAKkC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:KWzIFqRkAKkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 88,
+          "author_pub_id": "nxqrff8AAAAJ:QsKbpXNoaWkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:QsKbpXNoaWkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 91,
+          "author_pub_id": "nxqrff8AAAAJ:QoJ_w57xiyAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:QoJ_w57xiyAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 93,
+          "author_pub_id": "nxqrff8AAAAJ:pYKElYtJMmwC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:pYKElYtJMmwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 94,
+          "author_pub_id": "nxqrff8AAAAJ:x21FZCSn4ZoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:x21FZCSn4ZoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 96,
+          "author_pub_id": "nxqrff8AAAAJ:KS-xo-ZNxMsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&pagesize=100&citation_for_view=nxqrff8AAAAJ:KS-xo-ZNxMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 101,
+          "author_pub_id": "nxqrff8AAAAJ:ghEM2AJqZyQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:ghEM2AJqZyQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "nxqrff8AAAAJ:oPLKW5k6eA4C",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:oPLKW5k6eA4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 107,
+          "author_pub_id": "nxqrff8AAAAJ:3fE2CSJIrl8C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:3fE2CSJIrl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 109,
+          "author_pub_id": "nxqrff8AAAAJ:RMgMIBzvq-4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:RMgMIBzvq-4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 112,
+          "author_pub_id": "nxqrff8AAAAJ:orDZ08hpP44C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:orDZ08hpP44C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 113,
+          "author_pub_id": "nxqrff8AAAAJ:N4u4nq0IxgcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:N4u4nq0IxgcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 116,
+          "author_pub_id": "nxqrff8AAAAJ:9DLIHnF0jcYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:9DLIHnF0jcYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 118,
+          "author_pub_id": "nxqrff8AAAAJ:nPTYJWkExTIC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:nPTYJWkExTIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 119,
+          "author_pub_id": "nxqrff8AAAAJ:jmjb1lOE9QIC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:jmjb1lOE9QIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 120,
+          "author_pub_id": "nxqrff8AAAAJ:c59VksA5Vz4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:c59VksA5Vz4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 121,
+          "author_pub_id": "nxqrff8AAAAJ:Ic1VZgkJnDsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:Ic1VZgkJnDsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "nxqrff8AAAAJ:AzKEL7Gb_04C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:AzKEL7Gb_04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 125,
+          "author_pub_id": "nxqrff8AAAAJ:oTdOBqtIf_kC",
+          "reason": "Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:oTdOBqtIf_kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 127,
+          "author_pub_id": "nxqrff8AAAAJ:37UQlXuwjP4C",
+          "reason": "Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:37UQlXuwjP4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 128,
+          "author_pub_id": "nxqrff8AAAAJ:Y0-TYkg6YM4C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:Y0-TYkg6YM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 129,
+          "author_pub_id": "nxqrff8AAAAJ:9NZAP19TdFAC",
+          "reason": "Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:9NZAP19TdFAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 130,
+          "author_pub_id": "nxqrff8AAAAJ:Y0pCki6q_DkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:Y0pCki6q_DkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 132,
+          "author_pub_id": "nxqrff8AAAAJ:_kc_bZDykSQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:_kc_bZDykSQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 133,
+          "author_pub_id": "nxqrff8AAAAJ:YOwf2qJgpHMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 134,
+          "author_pub_id": "nxqrff8AAAAJ:W7OEmFMy1HYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 135,
+          "author_pub_id": "nxqrff8AAAAJ:rCNdntzdTkkC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:rCNdntzdTkkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 136,
+          "author_pub_id": "nxqrff8AAAAJ:Azgs6IHzeyYC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:Azgs6IHzeyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 137,
+          "author_pub_id": "nxqrff8AAAAJ:Vr2j17o0sqMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:Vr2j17o0sqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 138,
+          "author_pub_id": "nxqrff8AAAAJ:YTuZlYwrTOUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:YTuZlYwrTOUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 139,
+          "author_pub_id": "nxqrff8AAAAJ:EsEWqaRxkBgC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:EsEWqaRxkBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "nxqrff8AAAAJ:c1e4I3QdEKYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nxqrff8AAAAJ&cstart=100&pagesize=100&citation_for_view=nxqrff8AAAAJ:c1e4I3QdEKYC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "person_id": "person-normansadeh-21107c40",
+      "scholar_id": "X57uzqcAAAAJ",
+      "expected_source_rows": 514,
+      "cache_sha256": "4df5ccc56c62a734533d834530acc319623f9bcd463aa4c94052f53e83e4066a",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 3,
+          "author_pub_id": "X57uzqcAAAAJ:KUbvn5osdkgC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:KUbvn5osdkgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 4,
+          "author_pub_id": "X57uzqcAAAAJ:uJ-U7cs_P_0C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:uJ-U7cs_P_0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 8,
+          "author_pub_id": "X57uzqcAAAAJ:j3f4tGmQtD8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:j3f4tGmQtD8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 11,
+          "author_pub_id": "X57uzqcAAAAJ:XUvXOeBm_78C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:XUvXOeBm_78C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 16,
+          "author_pub_id": "X57uzqcAAAAJ:5nxA0vEk-isC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:5nxA0vEk-isC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 20,
+          "author_pub_id": "X57uzqcAAAAJ:blknAaTinKkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:blknAaTinKkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "X57uzqcAAAAJ:YlPif8NxrbYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:YlPif8NxrbYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 22,
+          "author_pub_id": "X57uzqcAAAAJ:AXPGKjj_ei8C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:AXPGKjj_ei8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 23,
+          "author_pub_id": "X57uzqcAAAAJ:F9fV5C73w3QC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 24,
+          "author_pub_id": "X57uzqcAAAAJ:bXQfdp6S9ecC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:bXQfdp6S9ecC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 27,
+          "author_pub_id": "X57uzqcAAAAJ:UmS_249rOGwC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:UmS_249rOGwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 32,
+          "author_pub_id": "X57uzqcAAAAJ:YFjsv_pBGBYC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:YFjsv_pBGBYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 34,
+          "author_pub_id": "X57uzqcAAAAJ:_Qo2XoVZTnwC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:_Qo2XoVZTnwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 38,
+          "author_pub_id": "X57uzqcAAAAJ:_FxGoFyzp5QC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:_FxGoFyzp5QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "X57uzqcAAAAJ:fQNAKQ3IYiAC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:fQNAKQ3IYiAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 46,
+          "author_pub_id": "X57uzqcAAAAJ:sszUF3NjhM4C",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:sszUF3NjhM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "X57uzqcAAAAJ:OR75R8vi5nAC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:OR75R8vi5nAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "X57uzqcAAAAJ:TQgYirikUcIC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:TQgYirikUcIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 50,
+          "author_pub_id": "X57uzqcAAAAJ:lYAcb2jw7qUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:lYAcb2jw7qUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 51,
+          "author_pub_id": "X57uzqcAAAAJ:ipzZ9siozwsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:ipzZ9siozwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 53,
+          "author_pub_id": "X57uzqcAAAAJ:BOlwja0KXvYC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:BOlwja0KXvYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 54,
+          "author_pub_id": "X57uzqcAAAAJ:fPk4N6BV_jEC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:fPk4N6BV_jEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 57,
+          "author_pub_id": "X57uzqcAAAAJ:tH6gc1N1XXoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:tH6gc1N1XXoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 58,
+          "author_pub_id": "X57uzqcAAAAJ:zdjWy_NXXwUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:zdjWy_NXXwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 59,
+          "author_pub_id": "X57uzqcAAAAJ:fEOibwPWpKIC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:fEOibwPWpKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "X57uzqcAAAAJ:nqdriD65xNoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:nqdriD65xNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 61,
+          "author_pub_id": "X57uzqcAAAAJ:tYavs44e6CUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:tYavs44e6CUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 64,
+          "author_pub_id": "X57uzqcAAAAJ:DyXnQzXoVgIC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:DyXnQzXoVgIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "X57uzqcAAAAJ:gsN89kCJA0AC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:gsN89kCJA0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 68,
+          "author_pub_id": "X57uzqcAAAAJ:abG-DnoFyZgC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:abG-DnoFyZgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 70,
+          "author_pub_id": "X57uzqcAAAAJ:CYCckWUYoCcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:CYCckWUYoCcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 74,
+          "author_pub_id": "X57uzqcAAAAJ:hqOjcs7Dif8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:hqOjcs7Dif8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "X57uzqcAAAAJ:tOudhMTPpwUC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:tOudhMTPpwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 86,
+          "author_pub_id": "X57uzqcAAAAJ:tkaPQYYpVKoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:tkaPQYYpVKoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 89,
+          "author_pub_id": "X57uzqcAAAAJ:qjMakFHDy7sC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:qjMakFHDy7sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 94,
+          "author_pub_id": "X57uzqcAAAAJ:4vMrXwiscB8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:4vMrXwiscB8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 98,
+          "author_pub_id": "X57uzqcAAAAJ:UeHWp8X0CEIC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&pagesize=100&citation_for_view=X57uzqcAAAAJ:UeHWp8X0CEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 101,
+          "author_pub_id": "X57uzqcAAAAJ:_OXeSy2IsFwC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:_OXeSy2IsFwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 104,
+          "author_pub_id": "X57uzqcAAAAJ:uWiczbcajpAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:uWiczbcajpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "X57uzqcAAAAJ:NMxIlDl6LWMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:NMxIlDl6LWMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 106,
+          "author_pub_id": "X57uzqcAAAAJ:u9iWguZQMMsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:u9iWguZQMMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 107,
+          "author_pub_id": "X57uzqcAAAAJ:VaXvl8Fpj5cC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:VaXvl8Fpj5cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 110,
+          "author_pub_id": "X57uzqcAAAAJ:6yz0xqPARnAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:6yz0xqPARnAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 111,
+          "author_pub_id": "X57uzqcAAAAJ:OcBU2YAGkTUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 112,
+          "author_pub_id": "X57uzqcAAAAJ:zGdJYJv2LkUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:zGdJYJv2LkUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 115,
+          "author_pub_id": "X57uzqcAAAAJ:ZuybSZzF8UAC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:ZuybSZzF8UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 119,
+          "author_pub_id": "X57uzqcAAAAJ:V3AGJWp-ZtQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:V3AGJWp-ZtQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 121,
+          "author_pub_id": "X57uzqcAAAAJ:VN7nJs4JPk0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:VN7nJs4JPk0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 130,
+          "author_pub_id": "X57uzqcAAAAJ:ruyezt5ZtCIC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:ruyezt5ZtCIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 138,
+          "author_pub_id": "X57uzqcAAAAJ:uAPFzskPt0AC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:uAPFzskPt0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 139,
+          "author_pub_id": "X57uzqcAAAAJ:natZJ_-F0IUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:natZJ_-F0IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "X57uzqcAAAAJ:70eg2SAEIzsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "X57uzqcAAAAJ:5awf1xo2G04C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:5awf1xo2G04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 147,
+          "author_pub_id": "X57uzqcAAAAJ:GtLg2Ama23sC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:GtLg2Ama23sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "X57uzqcAAAAJ:dhFuZR0502QC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 170,
+          "author_pub_id": "X57uzqcAAAAJ:txeM2kYbVNMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:txeM2kYbVNMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 171,
+          "author_pub_id": "X57uzqcAAAAJ:KaMxkj08jr0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:KaMxkj08jr0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 173,
+          "author_pub_id": "X57uzqcAAAAJ:SP6oXDckpogC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:SP6oXDckpogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 175,
+          "author_pub_id": "X57uzqcAAAAJ:MpfHP-DdYjUC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:MpfHP-DdYjUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 177,
+          "author_pub_id": "X57uzqcAAAAJ:8AbLer7MMksC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 178,
+          "author_pub_id": "X57uzqcAAAAJ:rOcdG6UcVlcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:rOcdG6UcVlcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 184,
+          "author_pub_id": "X57uzqcAAAAJ:ZzlSgRqYykMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:ZzlSgRqYykMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 187,
+          "author_pub_id": "X57uzqcAAAAJ:HIFyuExEbWQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:HIFyuExEbWQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 190,
+          "author_pub_id": "X57uzqcAAAAJ:PaBasH6fAo0C",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:PaBasH6fAo0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 194,
+          "author_pub_id": "X57uzqcAAAAJ:5ugPr518TE4C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:5ugPr518TE4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 198,
+          "author_pub_id": "X57uzqcAAAAJ:w2UhwfzvF0QC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:w2UhwfzvF0QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "X57uzqcAAAAJ:kWvqk_afx_IC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=100&pagesize=100&citation_for_view=X57uzqcAAAAJ:kWvqk_afx_IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 201,
+          "author_pub_id": "X57uzqcAAAAJ:ZfRJV9d4-WMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:ZfRJV9d4-WMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 204,
+          "author_pub_id": "X57uzqcAAAAJ:wKETBy42zhYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:wKETBy42zhYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 206,
+          "author_pub_id": "X57uzqcAAAAJ:KNjnJ3z-R6IC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:KNjnJ3z-R6IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 208,
+          "author_pub_id": "X57uzqcAAAAJ:PYBJJbyH-FwC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:PYBJJbyH-FwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 209,
+          "author_pub_id": "X57uzqcAAAAJ:kRWSkSYxWN8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:kRWSkSYxWN8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 211,
+          "author_pub_id": "X57uzqcAAAAJ:nVrZBo8bIpAC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:nVrZBo8bIpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 215,
+          "author_pub_id": "X57uzqcAAAAJ:lgwcVrK6X84C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:lgwcVrK6X84C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 219,
+          "author_pub_id": "X57uzqcAAAAJ:mVmsd5A6BfQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:mVmsd5A6BfQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 220,
+          "author_pub_id": "X57uzqcAAAAJ:0sTkTiv_uMkC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:0sTkTiv_uMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "X57uzqcAAAAJ:2tRrZ1ZAMYUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:2tRrZ1ZAMYUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 223,
+          "author_pub_id": "X57uzqcAAAAJ:xGWFX6Gbr9MC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:xGWFX6Gbr9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 224,
+          "author_pub_id": "X57uzqcAAAAJ:VL0QpB8kHFEC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:VL0QpB8kHFEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "X57uzqcAAAAJ:zCSUwVk65WsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:zCSUwVk65WsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 235,
+          "author_pub_id": "X57uzqcAAAAJ:Wp0gIr-vW9MC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 236,
+          "author_pub_id": "X57uzqcAAAAJ:-_dYPAW6P2MC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:-_dYPAW6P2MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "X57uzqcAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 238,
+          "author_pub_id": "X57uzqcAAAAJ:SrKkpNFED5gC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:SrKkpNFED5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 242,
+          "author_pub_id": "X57uzqcAAAAJ:oursBaop5wYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:oursBaop5wYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "X57uzqcAAAAJ:owLR8QvbtFgC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:owLR8QvbtFgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "X57uzqcAAAAJ:48xauSegjOkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:48xauSegjOkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 253,
+          "author_pub_id": "X57uzqcAAAAJ:rbGdIwl2e6cC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:rbGdIwl2e6cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 259,
+          "author_pub_id": "X57uzqcAAAAJ:EBV337fEn3EC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:EBV337fEn3EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 266,
+          "author_pub_id": "X57uzqcAAAAJ:ukw-9cB-YDkC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:ukw-9cB-YDkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 267,
+          "author_pub_id": "X57uzqcAAAAJ:Kqc1aDSOPooC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:Kqc1aDSOPooC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 268,
+          "author_pub_id": "X57uzqcAAAAJ:1tZ8xJnm2c8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:1tZ8xJnm2c8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 273,
+          "author_pub_id": "X57uzqcAAAAJ:hHIA4WEVY-EC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:hHIA4WEVY-EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "X57uzqcAAAAJ:dBIO0h50nwkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:dBIO0h50nwkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 275,
+          "author_pub_id": "X57uzqcAAAAJ:CaZNVDsoPx4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:CaZNVDsoPx4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 277,
+          "author_pub_id": "X57uzqcAAAAJ:sNmaIFBj_lkC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:sNmaIFBj_lkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 280,
+          "author_pub_id": "X57uzqcAAAAJ:43bX7VzcjpAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:43bX7VzcjpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 282,
+          "author_pub_id": "X57uzqcAAAAJ:wvYxNZNCP7wC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:wvYxNZNCP7wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 284,
+          "author_pub_id": "X57uzqcAAAAJ:AHdEip9mkN0C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:AHdEip9mkN0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 287,
+          "author_pub_id": "X57uzqcAAAAJ:x21FZCSn4ZoC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:x21FZCSn4ZoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 288,
+          "author_pub_id": "X57uzqcAAAAJ:sgsej9ZJWHMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:sgsej9ZJWHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 290,
+          "author_pub_id": "X57uzqcAAAAJ:O3NaXMp0MMsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 291,
+          "author_pub_id": "X57uzqcAAAAJ:3lUAU8Oskd0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:3lUAU8Oskd0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 294,
+          "author_pub_id": "X57uzqcAAAAJ:1DsIQWDZLl8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:1DsIQWDZLl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 298,
+          "author_pub_id": "X57uzqcAAAAJ:DrR-2ekChdkC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:DrR-2ekChdkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 300,
+          "author_pub_id": "X57uzqcAAAAJ:0CzhzZyukY4C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=200&pagesize=100&citation_for_view=X57uzqcAAAAJ:0CzhzZyukY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 302,
+          "author_pub_id": "X57uzqcAAAAJ:1lhNe0rCu4AC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:1lhNe0rCu4AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 303,
+          "author_pub_id": "X57uzqcAAAAJ:XAp-VaTZjjwC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:XAp-VaTZjjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 304,
+          "author_pub_id": "X57uzqcAAAAJ:WHdLCjDvYFkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:WHdLCjDvYFkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "X57uzqcAAAAJ:0EnyYjriUFMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:0EnyYjriUFMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 306,
+          "author_pub_id": "X57uzqcAAAAJ:BPS1z4jHU5cC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:BPS1z4jHU5cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 307,
+          "author_pub_id": "X57uzqcAAAAJ:Nw_I7GeUguwC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:Nw_I7GeUguwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 311,
+          "author_pub_id": "X57uzqcAAAAJ:G36d5HCDkJYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:G36d5HCDkJYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 312,
+          "author_pub_id": "X57uzqcAAAAJ:xyvS_IvSCKsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:xyvS_IvSCKsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 313,
+          "author_pub_id": "X57uzqcAAAAJ:AFXcoJnoRH0C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:AFXcoJnoRH0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 319,
+          "author_pub_id": "X57uzqcAAAAJ:yIeBiWEAh44C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:yIeBiWEAh44C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 320,
+          "author_pub_id": "X57uzqcAAAAJ:9LpHyFPp1DQC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:9LpHyFPp1DQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 321,
+          "author_pub_id": "X57uzqcAAAAJ:6VlyvFCUEfcC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:6VlyvFCUEfcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 322,
+          "author_pub_id": "X57uzqcAAAAJ:eI34FqJmdUoC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:eI34FqJmdUoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 327,
+          "author_pub_id": "X57uzqcAAAAJ:Nnq8S6OXqDYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:Nnq8S6OXqDYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 328,
+          "author_pub_id": "X57uzqcAAAAJ:WMtz-WDmgKQC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:WMtz-WDmgKQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 329,
+          "author_pub_id": "X57uzqcAAAAJ:_mQi-xiA4oYC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:_mQi-xiA4oYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 330,
+          "author_pub_id": "X57uzqcAAAAJ:N6_Y7JlWxwsC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:N6_Y7JlWxwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 331,
+          "author_pub_id": "X57uzqcAAAAJ:1EqfMoDn7-AC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:1EqfMoDn7-AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 332,
+          "author_pub_id": "X57uzqcAAAAJ:cSdaV2aYdYsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:cSdaV2aYdYsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "X57uzqcAAAAJ:cNe27ouKFcQC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:cNe27ouKFcQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 338,
+          "author_pub_id": "X57uzqcAAAAJ:Azgs6IHzeyYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:Azgs6IHzeyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 339,
+          "author_pub_id": "X57uzqcAAAAJ:WIXB4To3Tx4C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:WIXB4To3Tx4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 340,
+          "author_pub_id": "X57uzqcAAAAJ:VnuxuLaQPLMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:VnuxuLaQPLMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 341,
+          "author_pub_id": "X57uzqcAAAAJ:7Frjd3zlGBUC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:7Frjd3zlGBUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 342,
+          "author_pub_id": "X57uzqcAAAAJ:C-Rn0OCouf8C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:C-Rn0OCouf8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 343,
+          "author_pub_id": "X57uzqcAAAAJ:P7Ujq4OLJYoC",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:P7Ujq4OLJYoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 344,
+          "author_pub_id": "X57uzqcAAAAJ:ujxm2eEBZHIC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:ujxm2eEBZHIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 345,
+          "author_pub_id": "X57uzqcAAAAJ:SxCCDk4iOpsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:SxCCDk4iOpsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "X57uzqcAAAAJ:8RAEygVn5_EC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:8RAEygVn5_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "X57uzqcAAAAJ:zdX0sdgBH_kC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:zdX0sdgBH_kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "X57uzqcAAAAJ:LgRImbQfgY4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:LgRImbQfgY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 350,
+          "author_pub_id": "X57uzqcAAAAJ:60iIaj97TE0C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:60iIaj97TE0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 352,
+          "author_pub_id": "X57uzqcAAAAJ:wkm4DBaukwsC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:wkm4DBaukwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 353,
+          "author_pub_id": "X57uzqcAAAAJ:B2rIPIGFPLEC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:B2rIPIGFPLEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 354,
+          "author_pub_id": "X57uzqcAAAAJ:oldoQiaHq2UC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:oldoQiaHq2UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "X57uzqcAAAAJ:M0j1y4EgrScC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:M0j1y4EgrScC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 357,
+          "author_pub_id": "X57uzqcAAAAJ:iKswqCX-FLkC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:iKswqCX-FLkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 359,
+          "author_pub_id": "X57uzqcAAAAJ:olpn-zPbct0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:olpn-zPbct0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 360,
+          "author_pub_id": "X57uzqcAAAAJ:u0Mu_IsstPMC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:u0Mu_IsstPMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 365,
+          "author_pub_id": "X57uzqcAAAAJ:c59VksA5Vz4C",
+          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:c59VksA5Vz4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "X57uzqcAAAAJ:MhiOAD_qIWkC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:MhiOAD_qIWkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 368,
+          "author_pub_id": "X57uzqcAAAAJ:4TOpqqG69KYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:4TOpqqG69KYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "X57uzqcAAAAJ:kNdYIx-mwKoC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:kNdYIx-mwKoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 370,
+          "author_pub_id": "X57uzqcAAAAJ:uDGL6kOW6j0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:uDGL6kOW6j0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 372,
+          "author_pub_id": "X57uzqcAAAAJ:hMod-77fHWUC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:hMod-77fHWUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 374,
+          "author_pub_id": "X57uzqcAAAAJ:p__nRnzSRKYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:p__nRnzSRKYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 378,
+          "author_pub_id": "X57uzqcAAAAJ:7Hz3ACDFbsoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:7Hz3ACDFbsoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 382,
+          "author_pub_id": "X57uzqcAAAAJ:e5wmG9Sq2KIC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:e5wmG9Sq2KIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 383,
+          "author_pub_id": "X57uzqcAAAAJ:_kc_bZDykSQC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:_kc_bZDykSQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 384,
+          "author_pub_id": "X57uzqcAAAAJ:kO05sadLmrgC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:kO05sadLmrgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 387,
+          "author_pub_id": "X57uzqcAAAAJ:sSrBHYA8nusC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:sSrBHYA8nusC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 388,
+          "author_pub_id": "X57uzqcAAAAJ:v1_lew4L6wgC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:v1_lew4L6wgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 392,
+          "author_pub_id": "X57uzqcAAAAJ:as0KMg8qHbkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:as0KMg8qHbkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 393,
+          "author_pub_id": "X57uzqcAAAAJ:yZoBfgUKqwcC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:yZoBfgUKqwcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 395,
+          "author_pub_id": "X57uzqcAAAAJ:XiVPGOgt02cC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:XiVPGOgt02cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 396,
+          "author_pub_id": "X57uzqcAAAAJ:2ywjKiB__4kC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:2ywjKiB__4kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "X57uzqcAAAAJ:HE397vMXCloC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:HE397vMXCloC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "X57uzqcAAAAJ:1yQoGdGgb4wC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=300&pagesize=100&citation_for_view=X57uzqcAAAAJ:1yQoGdGgb4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 404,
+          "author_pub_id": "X57uzqcAAAAJ:CB2v5VPnA5kC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 405,
+          "author_pub_id": "X57uzqcAAAAJ:It0W0vAlS5QC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:It0W0vAlS5QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 407,
+          "author_pub_id": "X57uzqcAAAAJ:8Xgff_V0N9gC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:8Xgff_V0N9gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 409,
+          "author_pub_id": "X57uzqcAAAAJ:c1e4I3QdEKYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:c1e4I3QdEKYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 411,
+          "author_pub_id": "X57uzqcAAAAJ:V_vSwabWVtYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:V_vSwabWVtYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 412,
+          "author_pub_id": "X57uzqcAAAAJ:lmc2jWPfTJgC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:lmc2jWPfTJgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 413,
+          "author_pub_id": "X57uzqcAAAAJ:3fE2CSJIrl8C",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:3fE2CSJIrl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 414,
+          "author_pub_id": "X57uzqcAAAAJ:rTD5ala9j4wC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:rTD5ala9j4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 415,
+          "author_pub_id": "X57uzqcAAAAJ:WF5omc3nYNoC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 416,
+          "author_pub_id": "X57uzqcAAAAJ:_5tno0g5mFcC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:_5tno0g5mFcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 417,
+          "author_pub_id": "X57uzqcAAAAJ:ZHo1McVdvXMC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ZHo1McVdvXMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 420,
+          "author_pub_id": "X57uzqcAAAAJ:buQ7SEKw-1sC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:buQ7SEKw-1sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 426,
+          "author_pub_id": "X57uzqcAAAAJ:wMgC3FpKEyYC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:wMgC3FpKEyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 427,
+          "author_pub_id": "X57uzqcAAAAJ:j8pvxH-kN2QC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:j8pvxH-kN2QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 428,
+          "author_pub_id": "X57uzqcAAAAJ:IT1MJ6E3JesC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:IT1MJ6E3JesC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 429,
+          "author_pub_id": "X57uzqcAAAAJ:NZNkWSpQBv0C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:NZNkWSpQBv0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 430,
+          "author_pub_id": "X57uzqcAAAAJ:mVC4hKzE2FoC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:mVC4hKzE2FoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 431,
+          "author_pub_id": "X57uzqcAAAAJ:3BvdIg-l-ZAC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:3BvdIg-l-ZAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 432,
+          "author_pub_id": "X57uzqcAAAAJ:5LPo_wSKItgC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:5LPo_wSKItgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 433,
+          "author_pub_id": "X57uzqcAAAAJ:a2necdfpwlEC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:a2necdfpwlEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 434,
+          "author_pub_id": "X57uzqcAAAAJ:S2WlVNSe3u4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:S2WlVNSe3u4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 435,
+          "author_pub_id": "X57uzqcAAAAJ:BW2nPTmhBn4C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:BW2nPTmhBn4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 436,
+          "author_pub_id": "X57uzqcAAAAJ:8uzoZH4hB9AC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:8uzoZH4hB9AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 437,
+          "author_pub_id": "X57uzqcAAAAJ:q1zXlPLtbUIC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:q1zXlPLtbUIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 438,
+          "author_pub_id": "X57uzqcAAAAJ:v_tt_AnqfNMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:v_tt_AnqfNMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 439,
+          "author_pub_id": "X57uzqcAAAAJ:TGkaJS32XoUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:TGkaJS32XoUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 440,
+          "author_pub_id": "X57uzqcAAAAJ:WwIwg2wKZ0QC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:WwIwg2wKZ0QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 441,
+          "author_pub_id": "X57uzqcAAAAJ:jlhcAiayVhoC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:jlhcAiayVhoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 442,
+          "author_pub_id": "X57uzqcAAAAJ:ji7lAbPyDbYC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ji7lAbPyDbYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 443,
+          "author_pub_id": "X57uzqcAAAAJ:X0DADzN9RKwC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:X0DADzN9RKwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 444,
+          "author_pub_id": "X57uzqcAAAAJ:_AeoHAGD03cC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:_AeoHAGD03cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 445,
+          "author_pub_id": "X57uzqcAAAAJ:LGlY6t8CeOMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:LGlY6t8CeOMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 446,
+          "author_pub_id": "X57uzqcAAAAJ:A8cqit5AE6sC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:A8cqit5AE6sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 447,
+          "author_pub_id": "X57uzqcAAAAJ:RJOyoaXV5v8C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:RJOyoaXV5v8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 448,
+          "author_pub_id": "X57uzqcAAAAJ:ghEM2AJqZyQC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ghEM2AJqZyQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 449,
+          "author_pub_id": "X57uzqcAAAAJ:ziOE8S1-AIUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ziOE8S1-AIUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 450,
+          "author_pub_id": "X57uzqcAAAAJ:O0nohqN1r9EC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:O0nohqN1r9EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 451,
+          "author_pub_id": "X57uzqcAAAAJ:NDuN12AVoxsC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:NDuN12AVoxsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 452,
+          "author_pub_id": "X57uzqcAAAAJ:-jrNzM816MMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:-jrNzM816MMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 453,
+          "author_pub_id": "X57uzqcAAAAJ:jU7OWUQzBzMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:jU7OWUQzBzMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 454,
+          "author_pub_id": "X57uzqcAAAAJ:7wO8s98CvbsC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 455,
+          "author_pub_id": "X57uzqcAAAAJ:1taIhTC69MYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved title is fragmentary or resembles source front matter; verify output identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:1taIhTC69MYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 456,
+          "author_pub_id": "X57uzqcAAAAJ:j7_hQOaDUrUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:j7_hQOaDUrUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 457,
+          "author_pub_id": "X57uzqcAAAAJ:jgBuDB5drN8C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:jgBuDB5drN8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 458,
+          "author_pub_id": "X57uzqcAAAAJ:ubry08Y2EpUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ubry08Y2EpUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 459,
+          "author_pub_id": "X57uzqcAAAAJ:PVgj2kMGcgYC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:PVgj2kMGcgYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 460,
+          "author_pub_id": "X57uzqcAAAAJ:gKiMpY-AVTkC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:gKiMpY-AVTkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 461,
+          "author_pub_id": "X57uzqcAAAAJ:Ehil0879vHcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:Ehil0879vHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 462,
+          "author_pub_id": "X57uzqcAAAAJ:HeT0ZceujKMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:HeT0ZceujKMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 463,
+          "author_pub_id": "X57uzqcAAAAJ:DJbcl8HfkQkC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:DJbcl8HfkQkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 464,
+          "author_pub_id": "X57uzqcAAAAJ:IUKN3-7HHlwC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:IUKN3-7HHlwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 465,
+          "author_pub_id": "X57uzqcAAAAJ:6ZxmRoH8BuwC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:6ZxmRoH8BuwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 466,
+          "author_pub_id": "X57uzqcAAAAJ:DUooU5lO8OsC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:DUooU5lO8OsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 467,
+          "author_pub_id": "X57uzqcAAAAJ:a9-T7VOCCH8C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:a9-T7VOCCH8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 468,
+          "author_pub_id": "X57uzqcAAAAJ:NXb4pA-qfm4C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved title is fragmentary or resembles source front matter; verify output identity before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:NXb4pA-qfm4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 469,
+          "author_pub_id": "X57uzqcAAAAJ:0izLItjtcgwC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:0izLItjtcgwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 470,
+          "author_pub_id": "X57uzqcAAAAJ:8d8msizDQcsC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:8d8msizDQcsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 471,
+          "author_pub_id": "X57uzqcAAAAJ:9pM33mqn1YgC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:9pM33mqn1YgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 472,
+          "author_pub_id": "X57uzqcAAAAJ:0N-VGjzr574C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 473,
+          "author_pub_id": "X57uzqcAAAAJ:q3CdL3IzO_QC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:q3CdL3IzO_QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 474,
+          "author_pub_id": "X57uzqcAAAAJ:HbR8gkJAVGIC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:HbR8gkJAVGIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 475,
+          "author_pub_id": "X57uzqcAAAAJ:e_rmSamDkqQC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:e_rmSamDkqQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 476,
+          "author_pub_id": "X57uzqcAAAAJ:-FonjvnnhkoC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:-FonjvnnhkoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 477,
+          "author_pub_id": "X57uzqcAAAAJ:k8Z6L05lTy4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:k8Z6L05lTy4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 478,
+          "author_pub_id": "X57uzqcAAAAJ:ML0RJ9NH7IQC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:ML0RJ9NH7IQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 479,
+          "author_pub_id": "X57uzqcAAAAJ:AvfA0Oy_GE0C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:AvfA0Oy_GE0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 480,
+          "author_pub_id": "X57uzqcAAAAJ:EkHepimYqZsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:EkHepimYqZsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 481,
+          "author_pub_id": "X57uzqcAAAAJ:VLnqNzywnoUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:VLnqNzywnoUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 482,
+          "author_pub_id": "X57uzqcAAAAJ:j8SEvjWlNXcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:j8SEvjWlNXcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 483,
+          "author_pub_id": "X57uzqcAAAAJ:35r97b3x0nAC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:35r97b3x0nAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 484,
+          "author_pub_id": "X57uzqcAAAAJ:2KloaMYe4IUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 485,
+          "author_pub_id": "X57uzqcAAAAJ:tzM49s52ZIMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:tzM49s52ZIMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 486,
+          "author_pub_id": "X57uzqcAAAAJ:Fu2w8maKXqMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:Fu2w8maKXqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 487,
+          "author_pub_id": "X57uzqcAAAAJ:_Ybze24A_UAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:_Ybze24A_UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 488,
+          "author_pub_id": "X57uzqcAAAAJ:uLbwQdceFCQC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:uLbwQdceFCQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 489,
+          "author_pub_id": "X57uzqcAAAAJ:LjlpjdlvIbIC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:LjlpjdlvIbIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 490,
+          "author_pub_id": "X57uzqcAAAAJ:SdhP9T11ey4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:SdhP9T11ey4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 491,
+          "author_pub_id": "X57uzqcAAAAJ:JoZmwDi-zQgC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:JoZmwDi-zQgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 492,
+          "author_pub_id": "X57uzqcAAAAJ:_B80troHkn4C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:_B80troHkn4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 493,
+          "author_pub_id": "X57uzqcAAAAJ:eMMeJKvmdy0C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:eMMeJKvmdy0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 494,
+          "author_pub_id": "X57uzqcAAAAJ:t6usbXjVLHcC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:t6usbXjVLHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 495,
+          "author_pub_id": "X57uzqcAAAAJ:bnK-pcrLprsC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:bnK-pcrLprsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 496,
+          "author_pub_id": "X57uzqcAAAAJ:BrmTIyaxlBUC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:BrmTIyaxlBUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 497,
+          "author_pub_id": "X57uzqcAAAAJ:uWQEDVKXjbEC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:uWQEDVKXjbEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 498,
+          "author_pub_id": "X57uzqcAAAAJ:UxriW0iASnsC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:UxriW0iASnsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 499,
+          "author_pub_id": "X57uzqcAAAAJ:pyW8ca7W8N0C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:pyW8ca7W8N0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 500,
+          "author_pub_id": "X57uzqcAAAAJ:D03iK_w7-QYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=400&pagesize=100&citation_for_view=X57uzqcAAAAJ:D03iK_w7-QYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 501,
+          "author_pub_id": "X57uzqcAAAAJ:a0OBvERweLwC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:a0OBvERweLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 502,
+          "author_pub_id": "X57uzqcAAAAJ:2P1L_qKh6hAC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 503,
+          "author_pub_id": "X57uzqcAAAAJ:35N4QoGY0k4C",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:35N4QoGY0k4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 504,
+          "author_pub_id": "X57uzqcAAAAJ:RYcK_YlVTxYC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:RYcK_YlVTxYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 505,
+          "author_pub_id": "X57uzqcAAAAJ:RHpTSmoSYBkC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 506,
+          "author_pub_id": "X57uzqcAAAAJ:ZeXyd9-uunAC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:ZeXyd9-uunAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 507,
+          "author_pub_id": "X57uzqcAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 508,
+          "author_pub_id": "X57uzqcAAAAJ:8k81kl-MbHgC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:8k81kl-MbHgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 509,
+          "author_pub_id": "X57uzqcAAAAJ:UebtZRa9Y70C",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 510,
+          "author_pub_id": "X57uzqcAAAAJ:eQOLeE2rZwMC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:eQOLeE2rZwMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 511,
+          "author_pub_id": "X57uzqcAAAAJ:W7OEmFMy1HYC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 512,
+          "author_pub_id": "X57uzqcAAAAJ:Tyk-4Ss8FVUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:Tyk-4Ss8FVUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 513,
+          "author_pub_id": "X57uzqcAAAAJ:2osOgNQ5qMEC",
+          "reason": "Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:2osOgNQ5qMEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 514,
+          "author_pub_id": "X57uzqcAAAAJ:u-x6o8ySG0sC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved observation lacks a usable publication year; verify the source record before mapping. Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=X57uzqcAAAAJ&cstart=500&pagesize=100&citation_for_view=X57uzqcAAAAJ:u-x6o8ySG0sC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "person_id": "person-abhiseshsilwal-75ec9eb5",
+      "scholar_id": "4ftPKy0AAAAJ",
+      "expected_source_rows": 30,
+      "cache_sha256": "8632fe6be8c78bfc5eff82ded0fb09f377471e3126cb32f0c0083b9ce8fddb74",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 5,
+          "author_pub_id": "4ftPKy0AAAAJ:8AbLer7MMksC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4ftPKy0AAAAJ&pagesize=100&citation_for_view=4ftPKy0AAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 12,
+          "author_pub_id": "4ftPKy0AAAAJ:ufrVoPGSRksC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping. Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4ftPKy0AAAAJ&pagesize=100&citation_for_view=4ftPKy0AAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 17,
+          "author_pub_id": "4ftPKy0AAAAJ:tOudhMTPpwUC",
+          "reason": "Saved visible byline does not explicitly identify this profile owner; resolve attribution before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4ftPKy0AAAAJ&pagesize=100&citation_for_view=4ftPKy0AAAAJ:tOudhMTPpwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 18,
+          "author_pub_id": "4ftPKy0AAAAJ:Tyk-4Ss8FVUC",
+          "reason": "Saved venue or output type needs source-level review before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4ftPKy0AAAAJ&pagesize=100&citation_for_view=4ftPKy0AAAAJ:Tyk-4Ss8FVUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "4ftPKy0AAAAJ:WF5omc3nYNoC",
+          "reason": "Saved venue or output type needs source-level review before mapping. Another saved row has the same normalized title; resolve version and duplicate identity before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4ftPKy0AAAAJ&pagesize=100&citation_for_view=4ftPKy0AAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }
