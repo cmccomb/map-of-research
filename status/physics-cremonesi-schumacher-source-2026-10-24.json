@@ -8,10 +8,10 @@
   "raw_observation_count": 2506,
   "capture_coverage": "complete_visible_profiles",
   "source_files_preserve_raw_rows": true,
-  "review_status": "106_merged_exclusions_with_cremonesi_map_quality_hold_and_schumacher_paired_review",
+  "review_status": "both_profile_source_reviews_complete_pending_cremonesi_producer_manifest",
   "proposed_exclusion_count": 106,
   "producer_review_ready": false,
-  "ingestion_dependency": "The producer has 80 exact Cremonesi and 26 exact Schumacher exclusions. Schumacher now has a complete row-level review with 258 exact provisional holds and 259 ordinary-gate candidates; its profile-specific gate decision is recorded below. Cremonesi remains held pending its separate whole-source review. No source row is removed from the raw snapshot.",
+  "ingestion_dependency": "The producer already has 80 exact Cremonesi and 26 exact Schumacher exclusions. Both complete captures now have source-bound row reviews. Cremonesi has 1,087 exact provisional holds and 796 ordinary-gate candidates, but remains globally held until a separately reviewed producer manifest implements those holds and the source/producer release gate is validated. No raw source row is removed.",
   "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
   "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
   "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
@@ -73,9 +73,9 @@
     "wJ_gQLoAAAAJ": 80,
     "LibSWRMAAAAJ": 26
   },
-  "producer_review_hold_reason": "Cremonesi remains held while its unresolved records are reviewed. Schumacher has 258 exact provisional holds and a source-bound per-profile release decision; this does not release Cremonesi.",
+  "producer_review_hold_reason": "Cremonesi source review is complete, but its 1,087 exact provisional holds have not been installed and validated in the producer manifest. The legacy global pair remains held; this source branch alone does not publish Cremonesi.",
   "publisher_guard_state": "merged_on_main_7b6d923e_live_for_trusted_publisher",
-  "publisher_guard_effect": "The publisher checks the per-profile source decision for Schumacher and keeps Cremonesi held. A raw snapshot retains both complete captures; release filtering excludes Cremonesi and the exact Schumacher provisional holds.",
+  "publisher_guard_effect": "The existing global Cremonesi hold remains in force. The proposed profile decision below is a source-review handoff for a future producer change, conditional on exact hold installation and a combined preview. Schumacher remains independently reviewed.",
   "map_quality_hold": true,
   "unresolved_exact_ids": [
     "wJ_gQLoAAAAJ:zmHQPunddckC",
@@ -86,8 +86,8 @@
   "unresolved_exact_id_count": 4,
   "currently_map_eligible_unresolved_count": 4,
   "currently_quality_filtered_unresolved_ids": [],
-  "unresolved_counts_state": "Four Cremonesi exact IDs remain unresolved in this legacy pair status. Seven earlier Schumacher IDs are now covered by the complete 543-row Schumacher review and its exact provisional holds. The global pair remains held because Cremonesi remains held; only Schumacher has a per-profile release decision.",
-  "review_updated_at_utc": "2026-10-26T09:43:50+00:00",
+  "unresolved_counts_state": "The four legacy Cremonesi exact IDs are now assigned exact provisional holds in the Cremonesi source review ledger. They remain listed in this legacy pair status as currently map-eligible if the producer were to remove the global hold without installing those exact holds. The pair stays held until producer integration; Schumacher retains its prior per-profile decision.",
+  "review_updated_at_utc": "2026-10-26T10:30:00+00:00",
   "map_quality_hold_scholar_ids": [
     "wJ_gQLoAAAAJ"
   ],
@@ -121,7 +121,17 @@
       "provisional_hold_count": 258,
       "review_ledger_path": "status/physics-schumacher-release-review-2026-10-26.json",
       "review_ledger_sha256": "31b53336b5043111cbc8eaf14687a5ce64eb0d24aebafb62030adc29d53913e4"
+    },
+    "wJ_gQLoAAAAJ": {
+      "map_quality_hold": false,
+      "producer_review_ready": true,
+      "unresolved_exact_ids": [],
+      "reviewed_exclusion_count": 80,
+      "provisional_hold_count": 1087,
+      "review_ledger_path": "status/physics-cremonesi-release-review-2026-10-26.json",
+      "review_ledger_sha256": "abcc85fbe2a093e9851154adbbda3163733f0377349d8f9853cfc999f5737bce",
+      "release_condition": "producer must install all exact provisional holds and pass combined no-upload preview before global hold removal"
     }
   },
-  "profile_release_note": "Schumacher has a complete 543-row review: 26 existing exact exclusions, 258 exact provisional holds, and 259 ordinary-gate candidates. Cremonesi remains held. The profile-specific decision permits only Schumacher through the source review gate."
+  "profile_release_note": "Schumacher: 26 existing exclusions, 258 provisional holds, 259 ordinary candidates. Cremonesi: 80 existing exclusions, 1,087 provisional holds, 796 ordinary candidates. Both source reviews cover their complete saved captures. Cremonesi is a conditional source handoff; it remains globally held until a separate producer manifest installs its exact holds and passes release validation."
 }

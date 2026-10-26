@@ -75,7 +75,8 @@ def test_schumacher_review_accounts_for_every_saved_row():
     )
     decision = paired_status["paired_profile_release_ready"][ledger["scholar_id"]]
     assert paired_status["map_quality_hold"] is True
-    assert "wJ_gQLoAAAAJ" not in paired_status["paired_profile_release_ready"]
+    assert "wJ_gQLoAAAAJ" in paired_status["paired_profile_release_ready"]
+    assert "wJ_gQLoAAAAJ" in paired_status["map_quality_hold_scholar_ids"]
     assert decision["map_quality_hold"] is False
     assert decision["producer_review_ready"] is True
     assert decision["unresolved_exact_ids"] == []
