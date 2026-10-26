@@ -308,6 +308,97 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
         )
 
 
+def test_physics_hdf_parent_accepts_only_its_published_chemistry_diagnostics(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    _mcs_published_parent(parent)
+    rule_of_four = (
+        "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
+    )
+    works = parent["works/train-00000-of-00001.parquet"]
+    _rewrite_rows(
+        works,
+        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
+            map_region_prior_eligible_override=False
+        ),
+    )
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
+    )
+    assert state["reviewed_works"] == 19
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    for work_id, field in (
+        (
+            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+            "map_region_prior_eligible_override",
+        ),
+        (
+            continuity.MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID,
+            "map_region_documented_override",
+        ),
+    ):
+        tables["works"].loc[tables["works"]["work_id"].eq(work_id), field] = False
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(tables, state)
+    validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
+    documented = continuity.PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID
+    tables["works"].loc[
+        tables["works"]["work_id"].eq(documented),
+        "map_region_documented_override",
+    ] = False
+    with pytest.raises(ValueError, match=rf"candidate works changed: {documented}"):
+        validate_chemistry_candidate(
+            tables, state, allow_mcs_parent_diagnostic_refit=True
+        )
+    validate_chemistry_candidate(
+        tables,
+        state,
+        allow_mcs_parent_diagnostic_refit=True,
+        allow_physics_hdf_das_diagnostic_refit=True,
+    )
+    tables["works"].loc[
+        tables["works"]["work_id"].eq(rule_of_four),
+        "map_region_prior_eligible_override",
+    ] = True
+    with pytest.raises(ValueError, match=rf"candidate works changed: {rule_of_four}"):
+        validate_chemistry_candidate(
+            tables,
+            state,
+            allow_mcs_parent_diagnostic_refit=True,
+            allow_physics_hdf_das_diagnostic_refit=True,
+        )
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        )
+    _rewrite_rows(
+        works,
+        lambda rows: next(row for row in rows if row["work_id"] == rule_of_four).update(
+            map_region_prior_eligible_override=True
+        ),
+    )
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.PHYSICS_HDF_PUBLISHED_PARENT,
+        )
+
+
 def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
     kwargs = {
         "prior_revision": continuity.MCS_PUBLISHED_PARENT,
@@ -321,6 +412,23 @@ def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
         {"layout_reused": True},
     ):
         assert not continuity.allows_mcs_parent_diagnostic_refit(**(kwargs | changed))
+
+
+def test_physics_hdf_das_refit_requires_exact_parent_source_and_layout() -> None:
+    kwargs = {
+        "prior_revision": continuity.PHYSICS_HDF_PUBLISHED_PARENT,
+        "source_sha256": continuity.PHYSICS_HDF_DAS_SNAPSHOT_SHA256,
+        "layout_reused": False,
+    }
+    assert continuity.allows_physics_hdf_das_diagnostic_refit(**kwargs)
+    for changed in (
+        {"prior_revision": continuity.PHYSICS_FIVE_PUBLISHED_PARENT},
+        {"source_sha256": "0" * 64},
+        {"layout_reused": True},
+    ):
+        assert not continuity.allows_physics_hdf_das_diagnostic_refit(
+            **(kwargs | changed)
+        )
 
 
 def test_physics_five_region_refit_requires_exact_parent_source_and_layout() -> None:

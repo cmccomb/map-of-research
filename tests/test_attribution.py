@@ -56,7 +56,8 @@ def test_upload_reads_attribution_from_producer_checkout(monkeypatch, tmp_path):
             "a" * 40,
         ]
     )
-    assert len(load_attribution_reviews(args.attribution_reviews).confirmed) == 437
+    confirmed = load_attribution_reviews(args.attribution_reviews).confirmed
+    assert sum(scholar_id == SCHOLAR_ID for scholar_id, _ in confirmed) == 437
 
 
 def test_chien_gate_accounts_for_every_frozen_citation_id():
@@ -77,8 +78,8 @@ def test_chien_gate_accounts_for_every_frozen_citation_id():
         "held_attribution_review": 274,
         "held_duplicate_review": 4,
     }
-    assert attribution.held_profiles == {SCHOLAR_ID}
-    assert len(attribution.confirmed) == 437
+    assert SCHOLAR_ID in attribution.held_profiles
+    assert sum(sid == SCHOLAR_ID for sid, _ in attribution.confirmed) == 437
     assert sum(sid == SCHOLAR_ID for sid, _ in exclusions) == 92
     assert {
         row["author_pub_id"] for row in rows if row["decision"] == "confirmed_retained"
