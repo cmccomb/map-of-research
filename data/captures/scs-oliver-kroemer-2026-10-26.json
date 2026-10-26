@@ -1,0 +1,1598 @@
+{
+  "captured_at": "2026-10-26T20:31:02.225030+00:00",
+  "url": "https://scholar.google.com/citations?user=_tbXjP4AAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪Oliver Kroemer‬ - ‪Google Scholar‬",
+  "scholar_user_id": "_tbXjP4AAAAJ",
+  "person_name": "Oliver Kroemer",
+  "displayed_count": 176,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 1,
+  "works": [
+    {
+      "index": 1,
+      "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models : Open X-Embodiment Collaboration0",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:BwyfMAYsbu0C",
+      "authors": "A O’Neill, A Rehman, A Maddukuri, A Gupta, A Padalkar, A Lee, A Pooley, ...",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 6892-6903, 2024",
+      "citation_count": "2524",
+      "year": "2024"
+    },
+    {
+      "index": 2,
+      "title": "A review of robot learning for manipulation: Challenges, representations, and algorithms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:yD5IFk8b50cC",
+      "authors": "O Kroemer, S Niekum, G Konidaris",
+      "venue": "Journal of machine learning research 22 (30), 1-82, 2021",
+      "citation_count": "803",
+      "year": "2021"
+    },
+    {
+      "index": 3,
+      "title": "Learning to select and generalize striking movements in robot table tennis",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_kc_bZDykSQC",
+      "authors": "K Mülling, J Kober, O Kroemer, J Peters",
+      "venue": "The International Journal of Robotics Research 32 (3), 263-279, 2013",
+      "citation_count": "634",
+      "year": "2013"
+    },
+    {
+      "index": 4,
+      "title": "A review of tactile information: Perception and action through touch",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:738O_yMBCRsC",
+      "authors": "Q Li, O Kroemer, Z Su, FF Veiga, M Kaboli, HJ Ritter",
+      "venue": "IEEE Transactions on Robotics 36 (6), 1619-1634, 2020",
+      "citation_count": "466",
+      "year": "2020"
+    },
+    {
+      "index": 5,
+      "title": "Hierarchical relative entropy policy search",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:pqnbT2bcN3wC",
+      "authors": "C Daniel, G Neumann, J Peters",
+      "venue": "Artificial Intelligence and Statistics, 273-281, 2012",
+      "citation_count": "318",
+      "year": "2012"
+    },
+    {
+      "index": 6,
+      "title": "Interaction primitives for human-robot cooperation tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:TQgYirikUcIC",
+      "authors": "HB Amor, G Neumann, S Kamthe, O Kroemer, J Peters",
+      "venue": "2014 IEEE international conference on robotics and automation (ICRA), 2831-2837, 2014",
+      "citation_count": "301",
+      "year": "2014"
+    },
+    {
+      "index": 7,
+      "title": "Probabilistic movement primitives for coordination of multiple human–robot collaborative tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ns9cj8rnVeAC",
+      "authors": "GJ Maeda, G Neumann, M Ewerton, R Lioutikov, O Kroemer, J Peters",
+      "venue": "Autonomous Robots 41 (3), 593-612, 2017",
+      "citation_count": "289",
+      "year": "2017"
+    },
+    {
+      "index": 8,
+      "title": "Learning grasp affordance densities",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Tyk-4Ss8FVUC",
+      "authors": "R Detry, D Kraft, O Kroemer, L Bodenhagen, J Peters, N Krüger, J Piater",
+      "venue": "Paladyn. Journal of Behavioral Robotics 2 (1), 1-17, 2011",
+      "citation_count": "233",
+      "year": "2011"
+    },
+    {
+      "index": 9,
+      "title": "Movement templates for learning of hitting and batting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:UebtZRa9Y70C",
+      "authors": "J Kober, K Muelling, O Kroemer, CH Lampert, B Schoelkopf, J Peters",
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA), 69-82, 2010",
+      "citation_count": "227",
+      "year": "2010"
+    },
+    {
+      "index": 10,
+      "title": "Combining active learning and reactive control for robot grasping",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:d1gkVwhDpl0C",
+      "authors": "OB Kroemer, R Detry, J Piater, J Peters",
+      "venue": "Robotics and Autonomous Systems (RAS) 58 (9), 1105-1116, 2010",
+      "citation_count": "221",
+      "year": "2010"
+    },
+    {
+      "index": 11,
+      "title": "Camera-to-robot pose estimation from a single image",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:CHSYGLWDkRkC",
+      "authors": "TE Lee, J Tremblay, T To, J Cheng, T Mosier, O Kroemer, D Fox, ...",
+      "venue": "2020 IEEE international conference on robotics and automation (ICRA), 9426-9432, 2020",
+      "citation_count": "192",
+      "year": "2020"
+    },
+    {
+      "index": 12,
+      "title": "Towards Learning Hierarchical Skills for Multi-Phase Manipulation Tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:NMxIlDl6LWMC",
+      "authors": "O Kroemer, C Daniel, G Neumann, H van Hoof, J Peters",
+      "venue": "International Conference on Robotics and Automation (ICRA), 2015",
+      "citation_count": "181",
+      "year": "2015"
+    },
+    {
+      "index": 13,
+      "title": "Open x-embodiment: Robotic learning datasets and rt-x models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:vbGhcppDl1QC",
+      "authors": "Q Vuong, S Levine, HR Walke, K Pertsch, A Singh, R Doshi, C Xu, J Luo, ...",
+      "venue": "Towards Generalist Robots: Learning Paradigms for Scalable Skill Acquisition …, 2023",
+      "citation_count": "179",
+      "year": "2023"
+    },
+    {
+      "index": 14,
+      "title": "Active Reward Learning.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Ug5p-4gJ2f0C",
+      "authors": "C Daniel, M Viering, J Metz, O Kroemer, J Peters",
+      "venue": "Robotics: Science and systems 98, 2014",
+      "citation_count": "176",
+      "year": "2014"
+    },
+    {
+      "index": 15,
+      "title": "Soft magnetic skin for continuous deformation sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:EUQCXRtRnyEC",
+      "authors": "T Hellebrekers, O Kroemer, C Majidi",
+      "venue": "Advanced Intelligent Systems 1 (4), 1900025, 2019",
+      "citation_count": "175",
+      "year": "2019"
+    },
+    {
+      "index": 16,
+      "title": "Learning dynamic tactile sensing with robust vision-based training",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:LkGwnXOMwfcC",
+      "authors": "O Kroemer, CH Lampert, J Peters",
+      "venue": "IEEE transactions on robotics 27 (3), 545-557, 2011",
+      "citation_count": "143",
+      "year": "2011"
+    },
+    {
+      "index": 17,
+      "title": "Generalization of human grasping for multi-fingered robot hands",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:3fE2CSJIrl8C",
+      "authors": "HB Amor, O Kroemer, U Hillenbrand, G Neumann, J Peters",
+      "venue": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2012",
+      "citation_count": "134",
+      "year": "2012"
+    },
+    {
+      "index": 18,
+      "title": "Soft magnetic tactile skin for continuous force and location estimation using neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:uWQEDVKXjbEC",
+      "authors": "T Hellebrekers, N Chang, K Chin, MJ Ford, O Kroemer, C Majidi",
+      "venue": "IEEE Robotics and Automation Letters 5 (3), 3892-3898, 2020",
+      "citation_count": "118",
+      "year": "2020"
+    },
+    {
+      "index": 19,
+      "title": "Graph-structured visual imitation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:D03iK_w7-QYC",
+      "authors": "M Sieb, Z Xian, A Huang, O Kroemer, K Fragkiadaki",
+      "venue": "Conference on Robot learning, 979-989, 2020",
+      "citation_count": "107",
+      "year": "2020"
+    },
+    {
+      "index": 20,
+      "title": "A kernel-based approach to direct action perception",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:5nxA0vEk-isC",
+      "authors": "O Kroemer, E Ugur, E Oztop, J Peters",
+      "venue": "2012 IEEE international Conference on Robotics and Automation, 2605-2610, 2012",
+      "citation_count": "102",
+      "year": "2012"
+    },
+    {
+      "index": 21,
+      "title": "Learning robot tactile sensing for object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:r0BpntZqJG4C",
+      "authors": "Y Chebotar, O Kroemer, J Peters",
+      "venue": "2014 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2014",
+      "citation_count": "101",
+      "year": "2014"
+    },
+    {
+      "index": 22,
+      "title": "Probabilistic segmentation and targeted exploration of objects in cluttered environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:4JMBOYKVnBMC",
+      "authors": "H Van Hoof, O Kroemer, J Peters",
+      "venue": "IEEE Transactions on Robotics 30 (5), 1198-1209, 2014",
+      "citation_count": "89",
+      "year": "2014"
+    },
+    {
+      "index": 23,
+      "title": "Weakly-paired maximum covariance analysis for multimodal dimensionality reduction and transfer learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:UeHWp8X0CEIC",
+      "authors": "CH Lampert, O Krömer",
+      "venue": "European Conference on Computer Vision, 566-579, 2010",
+      "citation_count": "88",
+      "year": "2010"
+    },
+    {
+      "index": 24,
+      "title": "Active reward learning with a novel acquisition function",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:BqipwSGYUEgC",
+      "authors": "C Daniel, O Kroemer, M Viering, J Metz, J Peters",
+      "venue": "Autonomous Robots 39 (3), 389-405, 2015",
+      "citation_count": "87",
+      "year": "2015"
+    },
+    {
+      "index": 25,
+      "title": "Learning audio feedback for estimating amount and flow of granular material",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:dfsIfKJdRG4C",
+      "authors": "S Clarke, T Rhodes, CG Atkeson, O Kroemer",
+      "venue": "Proceedings of Machine Learning Research 87, 2018",
+      "citation_count": "85",
+      "year": "2018"
+    },
+    {
+      "index": 26,
+      "title": "Causal reasoning in simulation for structure and transfer learning of robot manipulation policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:t6usbXjVLHcC",
+      "authors": "TE Lee, JA Zhao, AS Sawhney, S Girdhar, O Kroemer",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 4776-4782, 2021",
+      "citation_count": "72",
+      "year": "2021"
+    },
+    {
+      "index": 27,
+      "title": "A modular robotic arm control stack for research: Franka-interface and frankapy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:fQNAKQ3IYiAC",
+      "authors": "K Zhang, M Sharma, J Liang, O Kroemer",
+      "venue": "arXiv preprint arXiv:2011.02398, 2020",
+      "citation_count": "71",
+      "year": "2020"
+    },
+    {
+      "index": 28,
+      "title": "Grapheqa: Using 3d semantic scene graphs for real-time embodied question answering",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:e_rmSamDkqQC",
+      "authors": "S Saxena, B Buchanan, C Paxton, P Liu, B Chen, N Vaskevicius, ...",
+      "venue": "arXiv preprint arXiv:2412.14480, 2024",
+      "citation_count": "64",
+      "year": "2024"
+    },
+    {
+      "index": 29,
+      "title": "Learning to Predict Phases of Manipulation Tasks as Hidden States",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:HDshCWvjkbEC",
+      "authors": "O Kroemer, H van Hoof, G Neumann, J Peters",
+      "venue": "",
+      "citation_count": "64",
+      "year": "2014"
+    },
+    {
+      "index": 30,
+      "title": "Enhancing dexterity in robotic manipulation via hierarchical contact exploration",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:AvfA0Oy_GE0C",
+      "authors": "X Cheng, S Patil, Z Temel, O Kroemer, MT Mason",
+      "venue": "IEEE Robotics and Automation Letters 9 (1), 390-397, 2023",
+      "citation_count": "61",
+      "year": "2023"
+    },
+    {
+      "index": 31,
+      "title": "Search-based task planning with learned skill effect models for lifelong robotic manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:N5tVd3kTz84C",
+      "authors": "J Liang, M Sharma, A LaGrassa, S Vats, S Saxena, O Kroemer",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 6351-6357, 2022",
+      "citation_count": "61",
+      "year": "2022"
+    },
+    {
+      "index": 32,
+      "title": "Leveraging multimodal haptic sensory data for robust cutting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:pyW8ca7W8N0C",
+      "authors": "K Zhang, M Sharma, M Veloso, O Kroemer",
+      "venue": "2019 IEEE-RAS 19th International Conference on Humanoid Robots (Humanoids …, 2019",
+      "citation_count": "60",
+      "year": "2019"
+    },
+    {
+      "index": 33,
+      "title": "Generalizing pouring actions between objects using warped parameters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:k_IJM867U9cC",
+      "authors": "S Brandi, O Kroemer, J Peters",
+      "venue": "2014 IEEE-RAS International Conference on Humanoid Robots, 616-621, 2014",
+      "citation_count": "59",
+      "year": "2014"
+    },
+    {
+      "index": 34,
+      "title": "Towards motor skill learning for robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:9yKSN-GCB0IC",
+      "authors": "J Peters, K Mülling, J Kober, D Nguyen-Tuong, O Krömer",
+      "venue": "Robotics Research: The 14th International Symposium ISRR, 469-482, 2011",
+      "citation_count": "59",
+      "year": "2011"
+    },
+    {
+      "index": 35,
+      "title": "Learning sequential motor tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Wp0gIr-vW9MC",
+      "authors": "C Daniel, G Neumann, O Kroemer, J Peters",
+      "venue": "2013 IEEE international conference on robotics and automation, 2626-2632, 2013",
+      "citation_count": "56",
+      "year": "2013"
+    },
+    {
+      "index": 36,
+      "title": "Predicting grasp success with a soft sensing skin and shape-memory actuated gripper",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_xSYboBqXhAC",
+      "authors": "J Zimmer, T Hellebrekers, T Asfour, C Majidi, O Kroemer",
+      "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2019",
+      "citation_count": "54",
+      "year": "2019"
+    },
+    {
+      "index": 37,
+      "title": "Learning robot grasping from 3-d images with markov random fields",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_FxGoFyzp5QC",
+      "authors": "A Boularias, O Kroemer, J Peters",
+      "venue": "2011 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2011",
+      "citation_count": "54",
+      "year": "2011"
+    },
+    {
+      "index": 38,
+      "title": "Towards robot skill learning: From simple skills to table tennis",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:dhFuZR0502QC",
+      "authors": "J Peters, J Kober, K Mülling, O Krämer, G Neumann",
+      "venue": "Joint European Conference on Machine Learning and Knowledge Discovery in …, 2013",
+      "citation_count": "53",
+      "year": "2013"
+    },
+    {
+      "index": 39,
+      "title": "Learning visual representations for perception-action systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:IjCSPb-OGe4C",
+      "authors": "J Piater, S Jodogne, R Detry, D Kraft, N Krüger, O Kroemer, J Peters",
+      "venue": "The International Journal of Robotics Research 30 (3), 294, 2011",
+      "citation_count": "52",
+      "year": "2011"
+    },
+    {
+      "index": 40,
+      "title": "Visual identification of articulated object parts",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:eflP2zaiRacC",
+      "authors": "V Zeng, TE Lee, J Liang, O Kroemer",
+      "venue": "2021 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2021",
+      "citation_count": "51",
+      "year": "2021"
+    },
+    {
+      "index": 41,
+      "title": "Learning manipulation by sequencing motor primitives with a two-armed robot",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:maZDTaKrznsC",
+      "authors": "R Lioutikov, O Kroemer, G Maeda, J Peters",
+      "venue": "Intelligent Autonomous Systems 13: Proceedings of the 13th International …, 2015",
+      "citation_count": "50",
+      "year": "2015"
+    },
+    {
+      "index": 42,
+      "title": "Maximally informative interaction learning for scene exploration",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:MXK_kJrjxJIC",
+      "authors": "H Van Hoof, O Kroemer, HB Amor, J Peters",
+      "venue": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2012",
+      "citation_count": "50",
+      "year": "2012"
+    },
+    {
+      "index": 43,
+      "title": "Multi-modal transfer learning for grasping transparent and specular objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:SP6oXDckpogC",
+      "authors": "T Weng, A Pallankize, Y Tang, O Kroemer, D Held",
+      "venue": "IEEE Robotics and Automation Letters 5 (3), 3791-3798, 2020",
+      "citation_count": "48",
+      "year": "2020"
+    },
+    {
+      "index": 44,
+      "title": "Inquire: Interactive querying for user-aware informative reasoning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ipzZ9siozwsC",
+      "authors": "T Fitzgerald, P Koppol, P Callaghan, RQJH Wong, R Simmons, ...",
+      "venue": "6th Annual Conference on Robot Learning, 2022",
+      "citation_count": "47",
+      "year": "2022"
+    },
+    {
+      "index": 45,
+      "title": "Learning manipulation graphs from demonstrations using multimodal sensory signals",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:zA6iFVUQeVQC",
+      "authors": "Z Su, O Kroemer, GE Loeb, GS Sukhatme, S Schaal",
+      "venue": "2018 IEEE international conference on robotics and automation (ICRA), 2758-2765, 2018",
+      "citation_count": "47",
+      "year": "2018"
+    },
+    {
+      "index": 46,
+      "title": "Multi-resolution sensing for real-time control with vision-language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ML0RJ9NH7IQC",
+      "authors": "S Saxena, M Sharma, O Kroemer",
+      "venue": "2nd Workshop on Language and Robot Learning: Language as Grounding, 2023",
+      "citation_count": "44",
+      "year": "2023"
+    },
+    {
+      "index": 47,
+      "title": "Learning to singulate layers of cloth using tactile feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:nrtMV_XWKgEC",
+      "authors": "S Tirumala, T Weng, D Seita, O Kroemer, Z Temel, D Held",
+      "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "citation_count": "44",
+      "year": "2022"
+    },
+    {
+      "index": 48,
+      "title": "Contact localization on grasped objects using tactile sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:35N4QoGY0k4C",
+      "authors": "A Molchanov, O Kroemer, Z Su, GS Sukhatme",
+      "venue": "2016 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2016",
+      "citation_count": "44",
+      "year": "2016"
+    },
+    {
+      "index": 49,
+      "title": "Active learning using mean shift optimization for robot grasping",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:u-x6o8ySG0sC",
+      "authors": "O Kroemer, R Detry, J Piater, J Peters",
+      "venue": "2009 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2009",
+      "citation_count": "44",
+      "year": "2009"
+    },
+    {
+      "index": 50,
+      "title": "Learning to compose hierarchical object-centric controllers for robotic manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:VOx2b1Wkg3QC",
+      "authors": "M Sharma, J Liang, J Zhao, A LaGrassa, O Kroemer",
+      "venue": "arXiv preprint arXiv:2011.04627, 2020",
+      "citation_count": "43",
+      "year": "2020"
+    },
+    {
+      "index": 51,
+      "title": "In-hand object pose tracking via contact feedback and gpu-accelerated robotic simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:UxriW0iASnsC",
+      "authors": "J Liang, A Handa, K Van Wyk, V Makoviychuk, O Kroemer, D Fox",
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 6203-6209, 2020",
+      "citation_count": "42",
+      "year": "2020"
+    },
+    {
+      "index": 52,
+      "title": "Bigs: Biotac grasp stability dataset",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:RGFaLdJalmkC",
+      "authors": "Y Chebotar, K Hausman, Z Su, A Molchanov, O Kroemer, G Sukhatme, ...",
+      "venue": "ICRA 2016 Workshop on Grasping and Manipulation Datasets 21, 23, 2016",
+      "citation_count": "42",
+      "year": "2016"
+    },
+    {
+      "index": 53,
+      "title": "Learning robust manipulation strategies with multimodal state transition models and recovery heuristics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:fPk4N6BV_jEC",
+      "authors": "AS Wang, O Kroemer",
+      "venue": "2019 International Conference on Robotics and Automation (ICRA), 1309-1315, 2019",
+      "citation_count": "40",
+      "year": "2019"
+    },
+    {
+      "index": 54,
+      "title": "Tilde: Teleoperation for dexterous in-hand manipulation learning with a deltahand",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:VaXvl8Fpj5cC",
+      "authors": "Z Si, KL Zhang, Z Temel, O Kroemer",
+      "venue": "arXiv preprint arXiv:2405.18804, 2024",
+      "citation_count": "38",
+      "year": "2024"
+    },
+    {
+      "index": 55,
+      "title": "Point cloud completion using extrusions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:4TOpqqG69KYC",
+      "authors": "O Kroemer, HB Amor, M Ewerton, J Peters",
+      "venue": "2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids …, 2012",
+      "citation_count": "38",
+      "year": "2012"
+    },
+    {
+      "index": 56,
+      "title": "Learning to switch between sensorimotor primitives using multimodal haptic signals",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:lSLTfruPkqcC",
+      "authors": "Z Su, O Kroemer, GE Loeb, GS Sukhatme, S Schaal",
+      "venue": "International Conference on Simulation of Adaptive Behavior, 170-182, 2016",
+      "citation_count": "37",
+      "year": "2016"
+    },
+    {
+      "index": 57,
+      "title": "Structured apprenticeship learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:8k81kl-MbHgC",
+      "authors": "A Boularias, O Krömer, J Peters",
+      "venue": "Joint European conference on machine learning and knowledge discovery in …, 2012",
+      "citation_count": "36",
+      "year": "2012"
+    },
+    {
+      "index": 58,
+      "title": "Playing with food: Learning food item representations through interactive exploration",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:q3oQSFYPqjQC",
+      "authors": "A Sawhney, S Lee, K Zhang, M Veloso, O Kroemer",
+      "venue": "International Symposium on Experimental Robotics, 309-322, 2020",
+      "citation_count": "34",
+      "year": "2020"
+    },
+    {
+      "index": 59,
+      "title": "Learning active task-oriented exploration policies for bridging the sim-to-real gap",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:p2g8aNsByqUC",
+      "authors": "J Liang, S Saxena, O Kroemer",
+      "venue": "arXiv preprint arXiv:2006.01952, 2020",
+      "citation_count": "33",
+      "year": "2020"
+    },
+    {
+      "index": 60,
+      "title": "A low-cost compliant gripper using cooperative mini-delta robots for dexterous manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Y5dfb0dijaUC",
+      "authors": "P Mannam, A Rudich, KL Zhang, M Veloso, O Kroemer, Z Temel",
+      "venue": "Robotics science and systems, 2021",
+      "citation_count": "32",
+      "year": "2021"
+    },
+    {
+      "index": 61,
+      "title": "Relational learning for skill preconditions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:BrmTIyaxlBUC",
+      "authors": "M Sharma, O Kroemer",
+      "venue": "arXiv preprint arXiv:2012.01693, 2020",
+      "citation_count": "29",
+      "year": "2020"
+    },
+    {
+      "index": 62,
+      "title": "Focused adaptation of dynamics models for deformable object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:EkHepimYqZsC",
+      "authors": "P Mitrano, A LaGrassa, O Kroemer, D Berenson",
+      "venue": "arXiv preprint arXiv:2209.14261, 2022",
+      "citation_count": "28",
+      "year": "2022"
+    },
+    {
+      "index": 63,
+      "title": "Learning continuous grasp affordances by sensorimotor exploration",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:2osOgNQ5qMEC",
+      "authors": "R Detry, E Başeski, M Popović, Y Touati, N Krüger, O Kroemer, J Peters, ...",
+      "venue": "From motor learning to interaction learning in robots, 451-465, 2010",
+      "citation_count": "28",
+      "year": "2010"
+    },
+    {
+      "index": 64,
+      "title": "Hefty: A modular reconfigurable robot for advancing robot manipulation in agriculture",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:b1wdh0AR-JQC",
+      "authors": "D Guri, M Lee, O Kroemer, G Kantor",
+      "venue": "arXiv preprint arXiv:2402.18710, 2024",
+      "citation_count": "26",
+      "year": "2024"
+    },
+    {
+      "index": 65,
+      "title": "A Non-Parametric Approach to Dynamic Programming",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:roLk4NBRz8UC",
+      "authors": "OB Kroemer, J Peters",
+      "venue": "Advances in Neural Information Processing Systems, 1719-1727, 2011",
+      "citation_count": "25",
+      "year": "2011"
+    },
+    {
+      "index": 66,
+      "title": "Deltahands: A synergistic dexterous hand framework based on delta robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:4MWp96NkSFoC",
+      "authors": "Z Si, K Zhang, O Kroemer, FZ Temel",
+      "venue": "IEEE Robotics and Automation Letters 9 (2), 1795-1802, 2024",
+      "citation_count": "24",
+      "year": "2024"
+    },
+    {
+      "index": 67,
+      "title": "Learning probabilistic discriminative models of grasp affordances under limited supervision",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:qjMakFHDy7sC",
+      "authors": "AN Erkan, O Kroemer, R Detry, Y Altun, J Piater, J Peters",
+      "venue": "2010 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2010",
+      "citation_count": "24",
+      "year": "2010"
+    },
+    {
+      "index": 68,
+      "title": "Towards robotic assembly by predicting robust, precise and task-oriented grasps",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:LPZeul_q3PIC",
+      "authors": "J Zhao, D Troniak, O Kroemer",
+      "venue": "Conference on Robot Learning, 1184-1194, 2021",
+      "citation_count": "23",
+      "year": "2021"
+    },
+    {
+      "index": 69,
+      "title": "Generalizing regrasping with supervised policy learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:vV6vV6tmYwMC",
+      "authors": "Y Chebotar, K Hausman, O Kroemer, GS Sukhatme, S Schaal",
+      "venue": "International Symposium on Experimental Robotics, 622-632, 2016",
+      "citation_count": "23",
+      "year": "2016"
+    },
+    {
+      "index": 70,
+      "title": "Recoverychaining: Learning local recovery policies for robust manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:M7yex6snE4oC",
+      "authors": "S Vats, DK Jha, M Likhachev, O Kroemer, D Romeres",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "22",
+      "year": "2025"
+    },
+    {
+      "index": 71,
+      "title": "Scale: Causal learning and discovery of robot manipulation skills using simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Z5m8FVwuT1cC",
+      "authors": "TE Lee, S Vats, S Girdhar, O Kroemer",
+      "venue": "CoRL 2023 Workshop on Learning Effective Abstractions for Planning (LEAP), 2023",
+      "citation_count": "22",
+      "year": "2023"
+    },
+    {
+      "index": 72,
+      "title": "Learning by doing: Controlling a dynamical system using causality, control, and reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:NJ774b8OgUMC",
+      "authors": "S Weichwald, SW Mogensen, TE Lee, D Baumann, O Kroemer, I Guyon, ...",
+      "venue": "NeurIPS 2021 Competitions and Demonstrations Track, 246-258, 2022",
+      "citation_count": "21",
+      "year": "2022"
+    },
+    {
+      "index": 73,
+      "title": "Learning preconditions of hybrid force-velocity controllers for contact-rich manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:fEOibwPWpKIC",
+      "authors": "J Liang, X Cheng, O Kroemer",
+      "venue": "arXiv preprint arXiv:2206.12728, 2022",
+      "citation_count": "21",
+      "year": "2022"
+    },
+    {
+      "index": 74,
+      "title": "Policy blending and recombination for multimodal contact-rich tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:5ugPr518TE4C",
+      "authors": "T Narita, O Kroemer",
+      "venue": "IEEE Robotics and Automation Letters 6 (2), 2721-2728, 2021",
+      "citation_count": "20",
+      "year": "2021"
+    },
+    {
+      "index": 75,
+      "title": "Regrasping Using Tactile Perception and Supervised Policy Learning.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:4OULZ7Gr8RgC",
+      "authors": "Y Chebotar, K Hausman, O Kroemer, GS Sukhatme, S Schaal",
+      "venue": "AAAI Spring Symposia, 2017",
+      "citation_count": "20",
+      "year": "2017"
+    },
+    {
+      "index": 76,
+      "title": "Efficient recovery learning using model predictive meta-reasoning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:uWiczbcajpAC",
+      "authors": "S Vats, M Likhachev, O Kroemer",
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA), 7258-7264, 2023",
+      "citation_count": "18",
+      "year": "2023"
+    },
+    {
+      "index": 77,
+      "title": "Contact localization for robot arms in motion without torque sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:D_sINldO8mEC",
+      "authors": "J Liang, O Kroemer",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 6322-6328, 2021",
+      "citation_count": "18",
+      "year": "2021"
+    },
+    {
+      "index": 78,
+      "title": "Toward precise robotic grasping by probabilistic post-grasp displacement estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:a0OBvERweLwC",
+      "authors": "J Zhao, J Liang, O Kroemer",
+      "venue": "Field and Service Robotics: Results of the 12th International Conference …, 2021",
+      "citation_count": "17",
+      "year": "2021"
+    },
+    {
+      "index": 79,
+      "title": "Learning skills to patch plans based on inaccurate models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:geHnlv5EZngC",
+      "authors": "A Lagrassa, S Lee, O Kroemer",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "17",
+      "year": "2020"
+    },
+    {
+      "index": 80,
+      "title": "Predicting Object Interactions from Contact Distributions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:j3f4tGmQtD8C",
+      "authors": "O Kroemer, J Peters",
+      "venue": "International Conference on Intelligent Robots and Systems (IROS), 2014",
+      "citation_count": "17",
+      "year": "2014"
+    },
+    {
+      "index": 81,
+      "title": "Towards robotic tree manipulation: Leveraging graph representations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ILKRHgRFtOwC",
+      "authors": "CH Kim, M Lee, O Kroemer, G Kantor",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 11884 …, 2024",
+      "citation_count": "16",
+      "year": "2024"
+    },
+    {
+      "index": 82,
+      "title": "Linear delta arrays for compliant dexterous distributed manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:evX43VCCuoAC",
+      "authors": "S Patil, T Tao, T Hellebrekers, O Kroemer, FZ Temel",
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA), 10324 …, 2023",
+      "citation_count": "16",
+      "year": "2023"
+    },
+    {
+      "index": 83,
+      "title": "A kernel-based approach to learning contact distributions for robot manipulation tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ZHo1McVdvXMC",
+      "authors": "O Kroemer, S Leischnig, S Luettgen, J Peters",
+      "venue": "Autonomous Robots 42 (3), 581-600, 2018",
+      "citation_count": "16",
+      "year": "2018"
+    },
+    {
+      "index": 84,
+      "title": "Towards autonomous crop monitoring: Inserting sensors in cluttered environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:L7CI7m0gUJcC",
+      "authors": "M Lee, A Berger, D Guri, K Zhang, L Coffey, G Kantor, O Kroemer",
+      "venue": "IEEE Robotics and Automation Letters 9 (6), 5150-5157, 2024",
+      "citation_count": "15",
+      "year": "2024"
+    },
+    {
+      "index": 85,
+      "title": "Pilot surveys for adaptive informative sampling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:rO6llkc54NcC",
+      "authors": "S Kemna, O Kroemer, GS Sukhatme",
+      "venue": "2018 IEEE International Conference on Robotics and Automation (ICRA), 6417-6424, 2018",
+      "citation_count": "15",
+      "year": "2018"
+    },
+    {
+      "index": 86,
+      "title": "Learning spatial preconditions of manipulation skills using random forests",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:2P1L_qKh6hAC",
+      "authors": "O Kroemer, GS Sukhatme",
+      "venue": "2016 IEEE-RAS 16th International Conference on Humanoid Robots (Humanoids …, 2016",
+      "citation_count": "15",
+      "year": "2016"
+    },
+    {
+      "index": 87,
+      "title": "Deltaz: An accessible compliant delta robot manipulator for research and education",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:j8SEvjWlNXcC",
+      "authors": "S Patil, SC Alvares, P Mannam, O Kroemer, FZ Temel",
+      "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "citation_count": "14",
+      "year": "2022"
+    },
+    {
+      "index": 88,
+      "title": "Characterization of compliant parallelogram links for 3D-printed delta manipulators",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:wbdj-CoPYUoC",
+      "authors": "P Mannam, O Kroemer, FZ Temel",
+      "venue": "International Symposium on Experimental Robotics, 75-84, 2020",
+      "citation_count": "14",
+      "year": "2020"
+    },
+    {
+      "index": 89,
+      "title": "Learning relevant features for manipulation skills using meta-level priors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:NaGl4SEjCO4C",
+      "authors": "O Kroemer, GS Sukhatme",
+      "venue": "arXiv preprint arXiv:1605.04439, 2016",
+      "citation_count": "14",
+      "year": "2016"
+    },
+    {
+      "index": 90,
+      "title": "Learning model preconditions for planning with multiple models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:1yQoGdGgb4wC",
+      "authors": "AL LaGrassa, O Kroemer",
+      "venue": "Conference on Robot Learning, 491-500, 2022",
+      "citation_count": "13",
+      "year": "2022"
+    },
+    {
+      "index": 91,
+      "title": "Learning semantic embedding spaces for slicing vegetables",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:cFHS6HbyZ2cC",
+      "authors": "M Sharma, K Zhang, O Kroemer",
+      "venue": "arXiv preprint arXiv:1904.00303, 2019",
+      "citation_count": "13",
+      "year": "2019"
+    },
+    {
+      "index": 92,
+      "title": "Meta-level priors for learning manipulation skills with sparse features",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:g5m5HwL7SMYC",
+      "authors": "O Kroemer, G Sukhatme",
+      "venue": "International Symposium on Experimental Robotics, 211-222, 2016",
+      "citation_count": "13",
+      "year": "2016"
+    },
+    {
+      "index": 93,
+      "title": "A flexible hybrid framework for modeling complex manipulation tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Se3iqnhoufwC",
+      "authors": "O Kroemer, J Peters",
+      "venue": "2011 IEEE International Conference on Robotics and Automation, 1856-1861, 2011",
+      "citation_count": "13",
+      "year": "2011"
+    },
+    {
+      "index": 94,
+      "title": "Sonicboom: contact localization using array of microphones",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:-FonjvnnhkoC",
+      "authors": "M Lee, U Yoo, J Oh, J Ichnowski, G Kantor, O Kroemer",
+      "venue": "IEEE Robotics and Automation Letters 10 (7), 7603-7610, 2025",
+      "citation_count": "12",
+      "year": "2025"
+    },
+    {
+      "index": 95,
+      "title": "Synergistic scheduling of learning and allocation of tasks in human-robot teams",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:tKAzc9rXhukC",
+      "authors": "S Vats, O Kroemer, M Likhachev",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 2789-2795, 2022",
+      "citation_count": "12",
+      "year": "2022"
+    },
+    {
+      "index": 96,
+      "title": "Probabilistic interactive segmentation for anthropomorphic robots in cluttered environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:IWHjjKOFINEC",
+      "authors": "H van Hoof, O Kroemer, J Peters",
+      "venue": "2013 13th IEEE-RAS International Conference on Humanoid Robots (Humanoids …, 2013",
+      "citation_count": "12",
+      "year": "2013"
+    },
+    {
+      "index": 97,
+      "title": "Towards robust planar translations using delta-manipulator arrays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:VL0QpB8kHFEC",
+      "authors": "S Thompson, P Mannam, Z Temel, O Kroemer",
+      "venue": "2021 IEEE international conference on robotics and automation (ICRA), 6563-6569, 2021",
+      "citation_count": "11",
+      "year": "2021"
+    },
+    {
+      "index": 98,
+      "title": "Generalizing object-centric task-axes controllers using keypoints",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:bnK-pcrLprsC",
+      "authors": "M Sharma, O Kroemer",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 7548-7554, 2021",
+      "citation_count": "11",
+      "year": "2021"
+    },
+    {
+      "index": 99,
+      "title": "Feature selection for learning versatile manipulation skills based on observed and desired trajectories",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:3s1wT3WcHBgC",
+      "authors": "O Kroemer, GS Sukhatme",
+      "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA), 4713-4720, 2017",
+      "citation_count": "11",
+      "year": "2017"
+    },
+    {
+      "index": 100,
+      "title": "Learning reactive and predictive differentiable controllers for switching linear dynamical models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&pagesize=100&citation_for_view=_tbXjP4AAAAJ:olpn-zPbct0C",
+      "authors": "S Saxena, A LaGrassa, O Kroemer",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 7563-7569, 2021",
+      "citation_count": "9",
+      "year": "2021"
+    },
+    {
+      "index": 101,
+      "title": "Grasping with vision descriptors and motor primitives",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:zYLM7Y9cAGgC",
+      "authors": "O Kroemer, R Detry, J Piater, J Peters",
+      "venue": "Informatics in Control, Automation and Robotics: Revised and Selected Papers …, 2011",
+      "citation_count": "9",
+      "year": "2011"
+    },
+    {
+      "index": 102,
+      "title": "Active exploration for robot parameter selection in episodic reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:YsMSGLbcyi4C",
+      "authors": "O Kroemer, J Peters",
+      "venue": "2011 IEEE Symposium on Adaptive Dynamic Programming and Reinforcement …, 2011",
+      "citation_count": "9",
+      "year": "2011"
+    },
+    {
+      "index": 103,
+      "title": "Task-oriented active learning of model preconditions for inaccurate dynamics models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:TIZ-Mc8IlK0C",
+      "authors": "A LaGrassa, M Lee, O Kroemer",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 16445 …, 2024",
+      "citation_count": "8",
+      "year": "2024"
+    },
+    {
+      "index": 104,
+      "title": "Mrest: Multi-resolution sensing for real-time control with vision-language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:gsN89kCJA0AC",
+      "authors": "S Saxena, M Sharma, O Kroemer",
+      "venue": "arXiv preprint arXiv:2401.14502, 2024",
+      "citation_count": "8",
+      "year": "2024"
+    },
+    {
+      "index": 105,
+      "title": "Localization and force-feedback with soft magnetic stickers for precise robot manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:5Ul4iDaHHb8C",
+      "authors": "T Hellebrekers, K Zhang, M Veloso, O Kroemer, C Majidi",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "8",
+      "year": "2020"
+    },
+    {
+      "index": 106,
+      "title": "A multi-modal tactile fingertip design for robotic hands to enhance dexterous manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:FPJr55Dyh1AC",
+      "authors": "Z Xu, Z Si, K Zhang, O Kroemer, Z Temel",
+      "venue": "arXiv preprint arXiv:2510.05382, 2025",
+      "citation_count": "7",
+      "year": "2025"
+    },
+    {
+      "index": 107,
+      "title": "Cascaded diffusion models for neural motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:q3CdL3IzO_QC",
+      "authors": "M Sharma, A Fishman, V Kumar, C Paxton, O Kroemer",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 14361 …, 2025",
+      "citation_count": "7",
+      "year": "2025"
+    },
+    {
+      "index": 108,
+      "title": "Adaptive sampling: Algorithmic vs. human waypoint selection",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Mojj43d5GZwC",
+      "authors": "S Kemna, S Kangaslahti, O Kroemer, GS Sukhatme",
+      "venue": "arXiv preprint arXiv:2104.11962, 2021",
+      "citation_count": "7",
+      "year": "2021"
+    },
+    {
+      "index": 109,
+      "title": "TacO: Benchmarking Tactile Sensors for Object Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:rmuvC79q63oC",
+      "authors": "A Zorin, Z Si, M Park, J Park, A Buynitsky, S Bhadang, T Park, SJ Yoon, ...",
+      "venue": "arXiv preprint arXiv:2605.21976, 2026",
+      "citation_count": "6",
+      "year": "2026"
+    },
+    {
+      "index": 110,
+      "title": "Optimal interactive learning on the job via facility location planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:PoWvk5oyLR8C",
+      "authors": "S Vats, M Zhao, P Callaghan, M Jia, M Likhachev, O Kroemer, ...",
+      "venue": "arXiv preprint arXiv:2505.00490, 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 111,
+      "title": "Graphseg: Segmented 3d representations via graph edge addition and contraction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:SpbeaW3--B0C",
+      "authors": "H Tang, T Zhang, O Kroemer, M Johnson-Roberson, W Zhi",
+      "venue": "arXiv preprint arXiv:2504.03129, 2025",
+      "citation_count": "4",
+      "year": "2025"
+    },
+    {
+      "index": 112,
+      "title": "Estimating material properties of interacting objects using sum-gp-ucb",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:p__nRnzSRKYC",
+      "authors": "MY Seker, O Kroemer",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 16684 …, 2024",
+      "citation_count": "4",
+      "year": "2024"
+    },
+    {
+      "index": 113,
+      "title": "A comparison of autoregressive hidden markov models for multimodal manipulations with variable masses",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:M05iB0D1s5AC",
+      "authors": "O Kroemer, J Peters",
+      "venue": "IEEE Robotics and Automation Letters 2 (2), 1101-1108, 2017",
+      "citation_count": "4",
+      "year": "2017"
+    },
+    {
+      "index": 114,
+      "title": "A comparison of contact distribution representations for learning to predict object interactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:GnPB-g6toBAC",
+      "authors": "S Leischnig, S Luettgen, O Kroemer, J Peters",
+      "venue": "2015 IEEE-RAS 15th International Conference on Humanoid Robots (Humanoids …, 2015",
+      "citation_count": "4",
+      "year": "2015"
+    },
+    {
+      "index": 115,
+      "title": "Movement templates for learning of hitting and batting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:b0M2c_1WBrUC",
+      "authors": "K Muelling, O Kroemer, C Lampert, B Schölkopf",
+      "venue": "Learning Motor Skills 97, 2014",
+      "citation_count": "4",
+      "year": "2014"
+    },
+    {
+      "index": 116,
+      "title": "Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:xtoqd-5pKcoC",
+      "authors": "MY Seker, S Aggarwal, O Kroemer",
+      "venue": "2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids …, 2025",
+      "citation_count": "3",
+      "year": "2025"
+    },
+    {
+      "index": 117,
+      "title": "Homography-based deep visual servoing methods for planar grasps",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:1sJd4Hv_s6UC",
+      "authors": "AS Wang, W Zhang, D Troniak, J Liang, O Kroemer",
+      "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2019",
+      "citation_count": "3",
+      "year": "2019"
+    },
+    {
+      "index": 118,
+      "title": "Adapting preshaped grasping movements using vision descriptors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:W7OEmFMy1HYC",
+      "authors": "O Krömer, R Detry, J Piater, J Peters",
+      "venue": "International Conference on Simulation of Adaptive Behavior, 156-166, 2010",
+      "citation_count": "3",
+      "year": "2010"
+    },
+    {
+      "index": 119,
+      "title": "Inference-time Policy Steering via Vision and Touch",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:kh2fBNsKQNwC",
+      "authors": "Y Wu, Z Si, Z Temel, O Kroemer, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2606.14981, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 120,
+      "title": "From Child's Play to AI: Insights into Automated Causal Curriculum Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:tYavs44e6CUC",
+      "authors": "A Dahmani, E Yiu, TE Lee, NR Ke, O Kroemer, A Gopnik",
+      "venue": "",
+      "citation_count": "2",
+      "year": "2023"
+    },
+    {
+      "index": 121,
+      "title": "Mission-level Robustness with Rapidly-deployed, Autonomous Aerial Vehicles by Carnegie Mellon Team Tartan at MBZIRC 2020",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:yB1At4FlUx8C",
+      "authors": "A Bhattacharya, A Gandhi, L Merkle, R Tiwari, K Warrior, S Winata, ...",
+      "venue": "Field Robotics 2, 172-200, 2022",
+      "citation_count": "2",
+      "year": "2022"
+    },
+    {
+      "index": 122,
+      "title": "Contact classification for agriculture manipulation in cluttered canopies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:7T2F9Uy0os0C",
+      "authors": "M Lee, K Zhang, G Kantor, O Kroemer",
+      "venue": "AI for Agriculture and Food Systems, 2021",
+      "citation_count": "2",
+      "year": "2021"
+    },
+    {
+      "index": 123,
+      "title": "Carnegie mellon team tartan: mission-level robustness with rapidly deployed autonomous aerial vehicles in the MBZIRC 2020",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:eMMeJKvmdy0C",
+      "authors": "A Bhattacharya, A Gandhi, L Merkle, R Tiwari, K Warrior, S Winata, ...",
+      "venue": "arXiv preprint arXiv:2107.01507, 2021",
+      "citation_count": "2",
+      "year": "2021"
+    },
+    {
+      "index": 124,
+      "title": "Pilot surveys for adaptive sampling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:KxtntwgDAa4C",
+      "authors": "S Kemna, O Kroemer, GS Sukhatme",
+      "venue": "International Conference on Robotics and Automation, 2018",
+      "citation_count": "2",
+      "year": "2018"
+    },
+    {
+      "index": 125,
+      "title": "Machine Learning for Robot Grasping and Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:YFjsv_pBGBYC",
+      "authors": "OB Kroemer",
+      "venue": "TU Darmstadt, 2015",
+      "citation_count": "2",
+      "year": "2015"
+    },
+    {
+      "index": 126,
+      "title": "Towards a third hand",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:M3NEmzRMIkIC",
+      "authors": "R Lioutikov, O Kroemer, J Peters, G Maeda",
+      "venue": "1st international workshop on intelligent robot assistants, 2014",
+      "citation_count": "2",
+      "year": "2014"
+    },
+    {
+      "index": 127,
+      "title": "GTA-2: A Multi-VLM Framework for Synthesizing Robot Manipulation Skills via Grounded Task Axes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:bz8QjSJIRt4C",
+      "authors": "MY Seker, S Aggarwal, R Wickramarachchi, J Francis, O Kroemer",
+      "venue": "arXiv preprint arXiv:2609.09808, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 128,
+      "title": "OGPO: Sample Efficient Full-Finetuning of Generative Control Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_axFR9aDTf0C",
+      "authors": "S Patil, M Nakamoto, M Agarwal, S Saxena, J Zhang, G Anantharaman, ...",
+      "venue": "arXiv preprint arXiv:2605.03065, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 129,
+      "title": "Vibrotactile Sensing for Detecting Misalignments in Precision Manufacturing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:hCrLmN-GePgC",
+      "authors": "K Zhang, C Chang, S Aggarwal, M Veloso, FZ Temel, O Kroemer",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "1",
+      "year": "2025"
+    },
+    {
+      "index": 130,
+      "title": "Exploration by Exploitation: Curriculum Learning for Reinforcement Learning Agents through Competence-Based Curriculum Policy Search",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:XoXfffV-tXoC",
+      "authors": "TE Lee, NR Ke, S Patil, A Dahmani, E Yiu, E Saleh, A Gopnik, O Kroemer, ...",
+      "venue": "The Exploration in AI Today Workshop at ICML 2025, 2025",
+      "citation_count": "1",
+      "year": "2025"
+    },
+    {
+      "index": 131,
+      "title": "Leveraging Simulation-Based Model Preconditions for Fast Action Parameter Optimization with Multiple Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:tuHXwOkdijsC",
+      "authors": "MY Seker, O Kroemer",
+      "venue": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2024",
+      "citation_count": "1",
+      "year": "2024"
+    },
+    {
+      "index": 132,
+      "title": "Efficiently Learning Manipulations by Selecting Structured Skill Representations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:epqYDVWIO7EC",
+      "authors": "M Sharma, O Kroemer",
+      "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "citation_count": "1",
+      "year": "2022"
+    },
+    {
+      "index": 133,
+      "title": "Dynamic inference on graphs using structured transition models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:uc_IGeMz5qoC",
+      "authors": "S Saxena, O Kroemer",
+      "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2022",
+      "citation_count": "1",
+      "year": "2022"
+    },
+    {
+      "index": 134,
+      "title": "Planning with learned model preconditions for water manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:tzM49s52ZIMC",
+      "authors": "A LaGrassa, O Kroemer",
+      "venue": "",
+      "citation_count": "1",
+      "year": "2022"
+    },
+    {
+      "index": 135,
+      "title": "BEACON: Belief-Enabled Adaptive CONtrol for Imitation Learning Under Uncertainty",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:4fGpz3EwCPoC",
+      "authors": "M Lee, S Bhattacharya, G Kantor, O Kroemer",
+      "venue": "International Conference on Simulation of Adaptive Behavior, 282-294, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 136,
+      "title": "Making Waves: A Membrane-Coupled Delta Array for Manipulating Objects Below the Actuator Spacing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:GtLg2Ama23sC",
+      "authors": "B Dacre, A Faíña, O Kroemer, Z Temel",
+      "venue": "arXiv preprint arXiv:2609.39652, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 137,
+      "title": "Learning with Object-centric Representations of Tactile Interactive Perception for Robot Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:9pM33mqn1YgC",
+      "authors": "X Yang, Z Si, Z Xu, Z Temel, O Kroemer",
+      "venue": "arXiv preprint arXiv:2609.33235, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 138,
+      "title": "GTA-2: A Multi-VLM Framework for Synthesizing Robot Manipulation Skills via Grounded Task Axes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_FM0Bhl9EiAC",
+      "authors": "M Yunus Seker, S Aggarwal, R Wickramarachchi, J Francis, O Kroemer",
+      "venue": "arXiv e-prints, arXiv: 2609.09808, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 139,
+      "title": "Autonomously Unweaving Multiple Cables Using Visual Feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ClCfbGk0d_YC",
+      "authors": "T Tian, X Wang, AL Orekhov, F Ruan, L Li, O Kroemer, H Choset",
+      "venue": "arXiv preprint arXiv:2512.12468, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 140,
+      "title": "Audio-Visual Contact Classification for Tree Structures in Agriculture",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:HbR8gkJAVGIC",
+      "authors": "R Spears, M Lee, G Kantor, O Kroemer",
+      "venue": "2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids …, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 141,
+      "title": "Planning-Query-Guided Model Generation for Model-Based Deformable Object Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:0N-VGjzr574C",
+      "authors": "A LaGrassa, Z Huang, D Berenson, O Kroemer",
+      "venue": "arXiv preprint arXiv:2508.19199, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 142,
+      "title": "Autonomous Sensor Exchange and Calibration for Cornstalk Nitrate Monitoring Robot",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:oNZyr7d5Mn4C",
+      "authors": "JS Lee, T Detlefsen, S Lawande, S Ghatge, SR Shanthi, S Mukkamala, ...",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 16803 …, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 143,
+      "title": "Grounded Task Axes: Zero-Shot Semantic Skill Generalization via Task-Axis Controllers and Visual Foundation Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:foquWX3nUaYC",
+      "authors": "M Yunus Seker, S Aggarwal, O Kroemer",
+      "venue": "arXiv e-prints, arXiv: 2505.11680, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 144,
+      "title": "Autonomous Sensor Exchange and Calibration for Cornstalk Nitrate Monitoring Robot",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:WZBGuue-350C",
+      "authors": "J Seungyeon Lee, T Detlefsen, S Lawande, S Ghatge, SR Shanthi, ...",
+      "venue": "arXiv e-prints, arXiv: 2411.10585, 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 145,
+      "title": "Leveraging Simulation-Based Model Preconditions for Fast Action Parameter Optimization with Multiple Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:MLfJN-KU85MC",
+      "authors": "M Yunus Seker, O Kroemer",
+      "venue": "arXiv e-prints, arXiv: 2403.11313, 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 146,
+      "title": "Multi-Resolution Sensing for Real-Time Control with Vision-Language Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:g3aElNc5_aQC",
+      "authors": "M Sharma, S Saxena, O Kroemer",
+      "venue": "Proceedings of Machine Learning Research, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 147,
+      "title": "Estimating Material Properties of Interacting Objects Using Sum-GP-UCB",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:hMsQuOkrut0C",
+      "authors": "M Yunus Seker, O Kroemer",
+      "venue": "arXiv e-prints, arXiv: 2310.11749, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 148,
+      "title": "Blind Robotic Grasp Stability Estimation Based on Tactile Measurements and Natural Language Prompts",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:KUbvn5osdkgC",
+      "authors": "JM Giannikos, D Leins, A Moringen, O Kroemer",
+      "venue": "Workshop on Touch Processing: a new Sensing Modality for AI, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 149,
+      "title": "Efficiently Learning Recoveries from Failures Under Partial Observability.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:zLWjf1WUPmwC",
+      "authors": "S Vats, M Likhachev, O Kroemer",
+      "venue": "CoRR, 2022",
+      "citation_count": "",
+      "year": "2022"
+    },
+    {
+      "index": 150,
+      "title": "RI: Medium: Robust Models and Physical Interactions for Managing Specialty Crops",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:8d8msizDQcsC",
+      "authors": "O Kroemer, G Kantor",
+      "venue": "NSF Award 19 (1956163), 56163, 2020",
+      "citation_count": "",
+      "year": "2020"
+    },
+    {
+      "index": 151,
+      "title": "NRI: INT: Dexterous Compliant Manipulation Using Delta Robot Arrays",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:FAceZFleit8C",
+      "authors": "FZ Temel, MT Mason, H Admoni, O Kroemer",
+      "venue": "NSF Award 20 (2024794), 24794, 2020",
+      "citation_count": "",
+      "year": "2020"
+    },
+    {
+      "index": 152,
+      "title": "Special issue on artificial intelligence and machine learning for robotic manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:xtRiw3GOFMkC",
+      "authors": "A Yamaguchi, T Matsubara, N Vahrenkamp, O Kroemer, K Harada",
+      "venue": "Advanced Robotics 33 (22), 1155-1155, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 153,
+      "title": "NRI: INT: Agile and Dynamic Interactions for Mobile Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ruyezt5ZtCIC",
+      "authors": "O Kroemer, RL Hollis, NS Pollard",
+      "venue": "NSF Award 19 (1925130), 25130, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 154,
+      "title": "Spatio-temporal matching for human pose estimation in video",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:_Re3VWB3Y0AC",
+      "authors": "F Zhou, F De la Torre",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence 38 (8), 1492-1504, 2016",
+      "citation_count": "",
+      "year": "2016"
+    },
+    {
+      "index": 155,
+      "title": "Machine Learning for Robot Grasping and Manipulation: Maschinelles Lernen Für Robotisches Greifen und Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:mvPsJ3kp5DgC",
+      "authors": "OB Kroemer",
+      "venue": "",
+      "citation_count": "",
+      "year": "2015"
+    },
+    {
+      "index": 156,
+      "title": "Csaba Szepesvári University of Alberta",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:EYYDruWGBe4C",
+      "authors": "A Geramifard, A Lazaric, A Farahmand, AD Salles, AMH Barreto, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": "2012"
+    },
+    {
+      "index": 157,
+      "title": "Algorithms for learning Markov field policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:aqlVkmm33-oC",
+      "authors": "A Boularias, J Peters, O Kroemer",
+      "venue": "Advances in Neural Information Processing Systems 25, 2012",
+      "citation_count": "",
+      "year": "2012"
+    },
+    {
+      "index": 158,
+      "title": "Learning as a key ability for Human-Friendly Robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:JV2RwH3_ST0C",
+      "authors": "J Peters, J Kober, K Mülling, O Krömer, D Nguyen-Tuong, Z Wang, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": "2010"
+    },
+    {
+      "index": 159,
+      "title": "Generalizing Demonstrated Actions in Manipulation Tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ufrVoPGSRksC",
+      "authors": "O Kroemer, R Detry, J Piater, J Peters",
+      "venue": "",
+      "citation_count": "",
+      "year": "2010"
+    },
+    {
+      "index": 160,
+      "title": "Publication Submission Form",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:2KloaMYe4IUC",
+      "authors": "SCMBRS Player",
+      "venue": "Journal Article 32 (2), 149-156, 2005",
+      "citation_count": "",
+      "year": "2005"
+    },
+    {
+      "index": 161,
+      "title": "CURATE: Automatic Curriculum Learning for Reinforcement Learning Agents through Competence-Based Curriculum Policy Search",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:5qfkUJPXOUwC",
+      "authors": "TE Lee, NR Ke, S Patil, A Dahmani, E Yiu, E Saleh, A Gopnik, O Kroemer, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 162,
+      "title": "GraphSeg: Constructing Segmented 3D Representations via Graph Edge Addition and Contraction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:edDO8Oi4QzsC",
+      "authors": "H Tang, T Zhang, O Kroemer, M Johnson-Roberson, W Zhi",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 163,
+      "title": "A Low-Cost Tactile Fingertip Design for Dexterous Robotic Hands",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:Dip1O2bNi0gC",
+      "authors": "Z Xu, Z Si, KL Zhang, M Lee, S Singh, O Kroemer, Z Temel",
+      "venue": "ICRA 2025 Workshop''Handy Moves: Dexterity in Multi-Fingered Hands''Paper …, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 164,
+      "title": "Towards learning hierarchical skills for multi-phase manipulation tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:LI9QrySNdTsC",
+      "authors": "C Daniel, H Van Hoof, J Peters, O Kroemer, G Neumann",
+      "venue": "University of Lincoln, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 165,
+      "title": "Learning to predict phases of manipulation tasks as hidden states",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:lmc2jWPfTJgC",
+      "authors": "H Van Hoof, J Peters, O Kroemer, G Neumann",
+      "venue": "University of Lincoln, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 166,
+      "title": "Active Learning of Model Preconditions for Model-Deviation Aware Planning in Deformable Object Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:URolC5Kub84C",
+      "authors": "A LaGrassa, M Lee, O Kroemer",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 167,
+      "title": "Unobtrusively Capturing Human Behavior In The Wild NSF MRI: Instrument Development Track",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:J-pR_7NvFogC",
+      "authors": "J Hodgins, D Held, O Kroemer, D Ramanan, K Kitani, S Narasimhan, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 168,
+      "title": "Publication Submission Form",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:u9iWguZQMMsC",
+      "authors": "O Kroemer, G Sukhatme, G Hollinger, S Yerramalli, S Singh, U Mitra",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 169,
+      "title": "Conference Editorial Committee",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:u_35RYKgDlwC",
+      "authors": "F Arai, F Arrichiello, W Burgard, B Caputo, J Castellanos, K Hauser, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 170,
+      "title": "Model-free Contact Localization for Manipulated Objects using Biomimetic Tactile Sensors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:ldfaerwXgEUC",
+      "authors": "A Molchanov, O Kroemer, Z Su, GS Sukhatme",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 171,
+      "title": "Supervised Policy Fusion with Application to Regrasping",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:70eg2SAEIzsC",
+      "authors": "Y Chebotar, K Hausman, O Kroemer, GS Sukhatme, S Schaal",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 172,
+      "title": "Multimodal Clues for Probabilistic Interactive Segmentation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:TFP_iSt0sucC",
+      "authors": "H van Hoof, O Kroemer, J Peters",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 173,
+      "title": "Learning Grasp Phases from Human Demonstrations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:iH-uZ7U-co4C",
+      "authors": "O Kroemer, G Neumann, H van Hoof, J Peters",
+      "venue": "Hand 1, 2, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 174,
+      "title": "Sequencing Motor Primitives",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:L8Ckcad2t8MC",
+      "authors": "C Daniel, G Neumann, O Kroemer, J Peters",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 175,
+      "title": "Generalizing Manipulations using Vision Kernels",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:qxL8FJ1GzNcC",
+      "authors": "O Kroemer, E Ugur, E Oztop, J Peters",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 176,
+      "title": "Multi-Modal Learning for Dynamic Tactile Sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_tbXjP4AAAAJ&cstart=100&pagesize=100&citation_for_view=_tbXjP4AAAAJ:M3ejUd6NZC8C",
+      "authors": "O Kroemer, CH Lampert, J Peters",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}

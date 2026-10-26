@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-laszloajeni-33daaf96",
+  "display_name": "Laszlo A. Jeni",
+  "scholar_profile_name": "Laszlo A. Jeni",
+  "scholar_id": "Wdnc-mEAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/laszlo-attila-jeni/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/laszlo-attila-jeni/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:23:49.368720+00:00",
+  "publication_count": 154,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-laszlo-jeni-2026-10-26.json",
+  "source_json_sha256": "e15d93b2ae1b99dab2209a8621b66b45d5cb6a9f7d140afa2bf614d0d33fe962",
+  "source_html_path": "data/captures/scs-laszlo-jeni-2026-10-26.html",
+  "source_html_sha256": "9107974bf3e78c691ea33a86c73ed3df6458a3a40fbb464240c1b2ad3ff61bbd",
+  "cache_path": "data/authors/Wdnc-mEAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

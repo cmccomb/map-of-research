@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-jizhang-271d5930",
+  "display_name": "Ji Zhang",
+  "scholar_profile_name": "Ji Zhang",
+  "scholar_id": "h-k8LTIAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/ji-zhang/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/ji-zhang/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:22:18.361052+00:00",
+  "publication_count": 65,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-ji-zhang-2026-10-26.json",
+  "source_json_sha256": "584d2cb46c5a7a5693e0e0722c5b939e5ace2381fd62e20674481a24408b9620",
+  "source_html_path": "data/captures/scs-ji-zhang-2026-10-26.html",
+  "source_html_sha256": "3ca77e7510f5802aaf89d839892e74ba64d96dc565071c409fbf1a795245ce28",
+  "cache_path": "data/authors/h-k8LTIAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

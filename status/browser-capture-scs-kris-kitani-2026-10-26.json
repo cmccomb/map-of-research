@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-krismkitani-50c7e1d4",
+  "display_name": "Kris M. Kitani",
+  "scholar_profile_name": "Kris Kitani",
+  "scholar_id": "yv3sH74AAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/kris-m-kitani/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/kris-m-kitani/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:23:27.943024+00:00",
+  "publication_count": 411,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 4,
+  "source_json_path": "data/captures/scs-kris-kitani-2026-10-26.json",
+  "source_json_sha256": "f9facdfe86551aa90498b794bd77c3c66614365a1756c5a538abbd9896f097b0",
+  "source_html_path": "data/captures/scs-kris-kitani-2026-10-26.html",
+  "source_html_sha256": "2a4288b1c187102ef26b82d143ae0214be6e61a9095e72a46fdc296588a301c0",
+  "cache_path": "data/authors/yv3sH74AAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
