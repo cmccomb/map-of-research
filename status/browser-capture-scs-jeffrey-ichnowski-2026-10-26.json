@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-jeffreyichnowski-fd66d2e6",
+  "display_name": "Jeffrey Ichnowski",
+  "scholar_profile_name": "Jeffrey Ichnowski",
+  "scholar_id": "7CKFg9EAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/jeffrey-ichnowski/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/jeffrey-ichnowski/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:37:30.654328+00:00",
+  "publication_count": 135,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-jeffrey-ichnowski-2026-10-26.json",
+  "source_json_sha256": "7c3ab90a1172fd1dd92d107b038cf48dc81e6c5ad75b2b39859047f4f2b7a52d",
+  "source_html_path": "data/captures/scs-jeffrey-ichnowski-2026-10-26.html",
+  "source_html_sha256": "12dcaa9f0d1f68f6f477089a128418c97d12b31b6a1db6e5e056e8e113a014bd",
+  "cache_path": "data/authors/7CKFg9EAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
