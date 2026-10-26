@@ -238,11 +238,13 @@
     {
       "person_id": "person-antonellapalmese-5378b53d",
       "scholar_id": "6pPZKd0AAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 624,
       "cache_sha256": "cc14ad480e977d2ac3af10ac1ac1dee85a76b9b446b12875d3efc179b0e9a0ed",
-      "reason": "Complete 624-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 624-row Physics source is bound to saved capture and cache hashes. Three exact reviewed exclusions and 346 provisional holds protect unresolved observations; 275 rows enter ordinary map gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 346,
+      "provisional_hold_ids_sha256": "8a3dad8b43d10484e1b8ec40c45f221f885a1ed50af8f7ae0470b8d91824644c"
     },
     {
       "person_id": "person-katelynbreivik-8bef079f",

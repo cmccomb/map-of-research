@@ -14212,6 +14212,2438 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-antonellapalmese-5378b53d",
+      "scholar_id": "6pPZKd0AAAAJ",
+      "expected_source_rows": 624,
+      "cache_sha256": "cc14ad480e977d2ac3af10ac1ac1dee85a76b9b446b12875d3efc179b0e9a0ed",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "e261a1ddd578131efef61ad6de57c5529aa63aef8b830e4326eb4c0e1557770f",
+      "held_observations": [
+        {
+          "capture_row_index": 3,
+          "author_pub_id": "6pPZKd0AAAAJ:LjlpjdlvIbIC",
+          "reason": "Same saved title and year appear at row(s) 605; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:LjlpjdlvIbIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 5,
+          "author_pub_id": "6pPZKd0AAAAJ:F9fV5C73w3QC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 6,
+          "author_pub_id": "6pPZKd0AAAAJ:PYBJJbyH-FwC",
+          "reason": "Same saved title and year appear at row(s) 603, 604; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:PYBJJbyH-FwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 7,
+          "author_pub_id": "6pPZKd0AAAAJ:qjMakFHDy7sC",
+          "reason": "Same saved title and year appear at row(s) 611; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:qjMakFHDy7sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 9,
+          "author_pub_id": "6pPZKd0AAAAJ:Mojj43d5GZwC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 11,
+          "author_pub_id": "6pPZKd0AAAAJ:w1MjKQ0l0TYC",
+          "reason": "Same saved title and year appear at row(s) 287; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:w1MjKQ0l0TYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 17,
+          "author_pub_id": "6pPZKd0AAAAJ:pQTOvowfQioC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&citation_for_view=6pPZKd0AAAAJ:pQTOvowfQioC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 22,
+          "author_pub_id": "6pPZKd0AAAAJ:7wO8s98CvbsC",
+          "reason": "Same saved title and year appear at row(s) 520; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 27,
+          "author_pub_id": "6pPZKd0AAAAJ:IWHjjKOFINEC",
+          "reason": "Hi-GAL Milky Way catalog is outside the documented DES/DESI/GW program; establish Palmese's exact authorship before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:IWHjjKOFINEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "6pPZKd0AAAAJ:dhFuZR0502QC",
+          "reason": "Same saved title and year appear at row(s) 613; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 43,
+          "author_pub_id": "6pPZKd0AAAAJ:Azgs6IHzeyYC",
+          "reason": "JUNO neutrino-oscillation article has a truncated collaboration byline; establish Palmese's exact membership before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:Azgs6IHzeyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 45,
+          "author_pub_id": "6pPZKd0AAAAJ:GtLg2Ama23sC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:GtLg2Ama23sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "6pPZKd0AAAAJ:PVgj2kMGcgYC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:PVgj2kMGcgYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 54,
+          "author_pub_id": "6pPZKd0AAAAJ:WA5NYHcadZ8C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:WA5NYHcadZ8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "6pPZKd0AAAAJ:kw52XkFRtyQC",
+          "reason": "Same saved title and year appear at row(s) 540, 545; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:kw52XkFRtyQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "6pPZKd0AAAAJ:AXPGKjj_ei8C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:AXPGKjj_ei8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 75,
+          "author_pub_id": "6pPZKd0AAAAJ:k8Z6L05lTy4C",
+          "reason": "Same saved title and year appear at row(s) 554; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:k8Z6L05lTy4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 88,
+          "author_pub_id": "6pPZKd0AAAAJ:cB__R-XWw9UC",
+          "reason": "Saved title is only collaboration names; identify the actual ApJL work and Palmese contribution.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:cB__R-XWw9UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 96,
+          "author_pub_id": "6pPZKd0AAAAJ:LO7wyVUgiFcC",
+          "reason": "Same saved title and year appear at row(s) 555; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:LO7wyVUgiFcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 98,
+          "author_pub_id": "6pPZKd0AAAAJ:gKiMpY-AVTkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=20&pagesize=80&citation_for_view=6pPZKd0AAAAJ:gKiMpY-AVTkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 104,
+          "author_pub_id": "6pPZKd0AAAAJ:QIV2ME_5wuYC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:QIV2ME_5wuYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 111,
+          "author_pub_id": "6pPZKd0AAAAJ:0N-VGjzr574C",
+          "reason": "Related saved titles or draft renderings may describe one output; verify exact publication/version identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 115,
+          "author_pub_id": "6pPZKd0AAAAJ:9c2xU6iGI7YC",
+          "reason": "Same saved title and year appear at row(s) 556; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:9c2xU6iGI7YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "6pPZKd0AAAAJ:gsN89kCJA0AC",
+          "reason": "Same saved title and year appear at row(s) 577; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:gsN89kCJA0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 126,
+          "author_pub_id": "6pPZKd0AAAAJ:vRqMK49ujn8C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 134,
+          "author_pub_id": "6pPZKd0AAAAJ:j8SEvjWlNXcC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:j8SEvjWlNXcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "6pPZKd0AAAAJ:LkGwnXOMwfcC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LkGwnXOMwfcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "6pPZKd0AAAAJ:ODE9OILHJdcC",
+          "reason": "Same saved title and year appear at row(s) 557; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ODE9OILHJdcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 168,
+          "author_pub_id": "6pPZKd0AAAAJ:sszUF3NjhM4C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:sszUF3NjhM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 169,
+          "author_pub_id": "6pPZKd0AAAAJ:8d8msizDQcsC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8d8msizDQcsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 173,
+          "author_pub_id": "6pPZKd0AAAAJ:Dip1O2bNi0gC",
+          "reason": "Same saved title and year appear at row(s) 559; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Dip1O2bNi0gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 177,
+          "author_pub_id": "6pPZKd0AAAAJ:SxCCDk4iOpsC",
+          "reason": "ATLAS quark/gluon-jet article has a truncated collaboration byline; establish Palmese's exact authorship before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SxCCDk4iOpsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 193,
+          "author_pub_id": "6pPZKd0AAAAJ:9pM33mqn1YgC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=100&pagesize=100&citation_for_view=6pPZKd0AAAAJ:9pM33mqn1YgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 222,
+          "author_pub_id": "6pPZKd0AAAAJ:F1b5ZUV5XREC",
+          "reason": "Same saved title and year appear at row(s) 546; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:F1b5ZUV5XREC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 225,
+          "author_pub_id": "6pPZKd0AAAAJ:UebtZRa9Y70C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 226,
+          "author_pub_id": "6pPZKd0AAAAJ:raTqNPD5sRQC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:raTqNPD5sRQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 238,
+          "author_pub_id": "6pPZKd0AAAAJ:RHpTSmoSYBkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 260,
+          "author_pub_id": "6pPZKd0AAAAJ:EUQCXRtRnyEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 265,
+          "author_pub_id": "6pPZKd0AAAAJ:Y0pCki6q_DkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Y0pCki6q_DkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 269,
+          "author_pub_id": "6pPZKd0AAAAJ:X4-KO54GjGYC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:X4-KO54GjGYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 277,
+          "author_pub_id": "6pPZKd0AAAAJ:SdhP9T11ey4C",
+          "reason": "Related saved titles or draft renderings may describe one output; verify exact publication/version identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SdhP9T11ey4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 278,
+          "author_pub_id": "6pPZKd0AAAAJ:z_wVstp3MssC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:z_wVstp3MssC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 284,
+          "author_pub_id": "6pPZKd0AAAAJ:f2IySw72cVMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:f2IySw72cVMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 285,
+          "author_pub_id": "6pPZKd0AAAAJ:MXK_kJrjxJIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:MXK_kJrjxJIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 286,
+          "author_pub_id": "6pPZKd0AAAAJ:NxmKEeNBbOMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:NxmKEeNBbOMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 287,
+          "author_pub_id": "6pPZKd0AAAAJ:eFf2swCANGcC",
+          "reason": "Same saved title and year appear at row(s) 11; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:eFf2swCANGcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 289,
+          "author_pub_id": "6pPZKd0AAAAJ:MpfHP-DdYjUC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:MpfHP-DdYjUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 290,
+          "author_pub_id": "6pPZKd0AAAAJ:r_AWSJRzSzQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:r_AWSJRzSzQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 291,
+          "author_pub_id": "6pPZKd0AAAAJ:CHSYGLWDkRkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:CHSYGLWDkRkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 295,
+          "author_pub_id": "6pPZKd0AAAAJ:EaFouW7jFu4C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:EaFouW7jFu4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 297,
+          "author_pub_id": "6pPZKd0AAAAJ:YohjEiUPhakC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:YohjEiUPhakC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 298,
+          "author_pub_id": "6pPZKd0AAAAJ:XD-gHx7UXLsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:XD-gHx7UXLsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 300,
+          "author_pub_id": "6pPZKd0AAAAJ:q0uBw5dMOAkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=200&pagesize=100&citation_for_view=6pPZKd0AAAAJ:q0uBw5dMOAkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 301,
+          "author_pub_id": "6pPZKd0AAAAJ:0aBXIfxlw9sC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:0aBXIfxlw9sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 304,
+          "author_pub_id": "6pPZKd0AAAAJ:1sJd4Hv_s6UC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:1sJd4Hv_s6UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "6pPZKd0AAAAJ:NhqRSupF_l8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:NhqRSupF_l8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 306,
+          "author_pub_id": "6pPZKd0AAAAJ:4DMP91E08xMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4DMP91E08xMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 307,
+          "author_pub_id": "6pPZKd0AAAAJ:_FxGoFyzp5QC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:_FxGoFyzp5QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "6pPZKd0AAAAJ:Y9VhQm-5nPIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Y9VhQm-5nPIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 310,
+          "author_pub_id": "6pPZKd0AAAAJ:L24QuVWYgZ0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:L24QuVWYgZ0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 311,
+          "author_pub_id": "6pPZKd0AAAAJ:RtRctb2lSbAC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:RtRctb2lSbAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 314,
+          "author_pub_id": "6pPZKd0AAAAJ:D03iK_w7-QYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:D03iK_w7-QYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 318,
+          "author_pub_id": "6pPZKd0AAAAJ:W2uZP3ddy8sC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:W2uZP3ddy8sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 319,
+          "author_pub_id": "6pPZKd0AAAAJ:9NZAP19TdFAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:9NZAP19TdFAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 320,
+          "author_pub_id": "6pPZKd0AAAAJ:7H_jS4BsgvYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:7H_jS4BsgvYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 325,
+          "author_pub_id": "6pPZKd0AAAAJ:mUJArPsKIAAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:mUJArPsKIAAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 326,
+          "author_pub_id": "6pPZKd0AAAAJ:jU7OWUQzBzMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:jU7OWUQzBzMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 327,
+          "author_pub_id": "6pPZKd0AAAAJ:1taIhTC69MYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:1taIhTC69MYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 328,
+          "author_pub_id": "6pPZKd0AAAAJ:K3LRdlH-MEoC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:K3LRdlH-MEoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 330,
+          "author_pub_id": "6pPZKd0AAAAJ:7VEv-pLvLSsC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:7VEv-pLvLSsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 331,
+          "author_pub_id": "6pPZKd0AAAAJ:gV6rEsy15s0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:gV6rEsy15s0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "6pPZKd0AAAAJ:Ej9njvOgR2oC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Ej9njvOgR2oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 334,
+          "author_pub_id": "6pPZKd0AAAAJ:In6cVmBjs0IC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:In6cVmBjs0IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 335,
+          "author_pub_id": "6pPZKd0AAAAJ:tz746QTLzJkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:tz746QTLzJkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 336,
+          "author_pub_id": "6pPZKd0AAAAJ:AZju0d2GQJ0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:AZju0d2GQJ0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 337,
+          "author_pub_id": "6pPZKd0AAAAJ:-95Q15plzcUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:-95Q15plzcUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 339,
+          "author_pub_id": "6pPZKd0AAAAJ:dQ2og3OwTAUC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:dQ2og3OwTAUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 340,
+          "author_pub_id": "6pPZKd0AAAAJ:UxriW0iASnsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:UxriW0iASnsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 341,
+          "author_pub_id": "6pPZKd0AAAAJ:KxtntwgDAa4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KxtntwgDAa4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 342,
+          "author_pub_id": "6pPZKd0AAAAJ:xtRiw3GOFMkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 343,
+          "author_pub_id": "6pPZKd0AAAAJ:4TOpqqG69KYC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4TOpqqG69KYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 344,
+          "author_pub_id": "6pPZKd0AAAAJ:Se3iqnhoufwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "6pPZKd0AAAAJ:Kqc1aDSOPooC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Kqc1aDSOPooC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 347,
+          "author_pub_id": "6pPZKd0AAAAJ:KI9T_ytC6pkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KI9T_ytC6pkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "6pPZKd0AAAAJ:aDl3D7KC1E4C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:aDl3D7KC1E4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "6pPZKd0AAAAJ:PlWzFYVEG4EC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:PlWzFYVEG4EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 350,
+          "author_pub_id": "6pPZKd0AAAAJ:FsLZdJ3BAzkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:FsLZdJ3BAzkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 351,
+          "author_pub_id": "6pPZKd0AAAAJ:DXE8ND7PrJAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DXE8ND7PrJAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 352,
+          "author_pub_id": "6pPZKd0AAAAJ:__bU50VfleQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:__bU50VfleQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 353,
+          "author_pub_id": "6pPZKd0AAAAJ:PaBasH6fAo0C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:PaBasH6fAo0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "6pPZKd0AAAAJ:CB2v5VPnA5kC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "6pPZKd0AAAAJ:nb7KW1ujOQ8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:nb7KW1ujOQ8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 357,
+          "author_pub_id": "6pPZKd0AAAAJ:abG-DnoFyZgC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:abG-DnoFyZgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 358,
+          "author_pub_id": "6pPZKd0AAAAJ:t7zJ5fGR-2UC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:t7zJ5fGR-2UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 359,
+          "author_pub_id": "6pPZKd0AAAAJ:An6A6Jpfc1oC",
+          "reason": "Missing year and venue on a DES/SPT paper rendering; reconcile with the complete journal record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:An6A6Jpfc1oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 362,
+          "author_pub_id": "6pPZKd0AAAAJ:PuOEWVtPfzwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:PuOEWVtPfzwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 363,
+          "author_pub_id": "6pPZKd0AAAAJ:QoJ_w57xiyAC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:QoJ_w57xiyAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 364,
+          "author_pub_id": "6pPZKd0AAAAJ:LGlY6t8CeOMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LGlY6t8CeOMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 365,
+          "author_pub_id": "6pPZKd0AAAAJ:KTwcwpFFj4wC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KTwcwpFFj4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "6pPZKd0AAAAJ:pS0ncopqnHgC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:pS0ncopqnHgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 367,
+          "author_pub_id": "6pPZKd0AAAAJ:FAceZFleit8C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:FAceZFleit8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 368,
+          "author_pub_id": "6pPZKd0AAAAJ:B3FOqHPlNUQC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:B3FOqHPlNUQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "6pPZKd0AAAAJ:PR6Y55bgFSsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:PR6Y55bgFSsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 373,
+          "author_pub_id": "6pPZKd0AAAAJ:AFmTUeZ1pmEC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:AFmTUeZ1pmEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 374,
+          "author_pub_id": "6pPZKd0AAAAJ:qCpRzq7zkD8C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:qCpRzq7zkD8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 376,
+          "author_pub_id": "6pPZKd0AAAAJ:4n0clTBhZ78C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4n0clTBhZ78C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 377,
+          "author_pub_id": "6pPZKd0AAAAJ:EBV337fEn3EC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:EBV337fEn3EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 378,
+          "author_pub_id": "6pPZKd0AAAAJ:uUvzmPk0f8oC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:uUvzmPk0f8oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 379,
+          "author_pub_id": "6pPZKd0AAAAJ:6ZzL7HXColQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:6ZzL7HXColQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 380,
+          "author_pub_id": "6pPZKd0AAAAJ:z8nqeaKD1nsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:z8nqeaKD1nsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 381,
+          "author_pub_id": "6pPZKd0AAAAJ:SpPTWFSNUtQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SpPTWFSNUtQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 382,
+          "author_pub_id": "6pPZKd0AAAAJ:xGWFX6Gbr9MC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:xGWFX6Gbr9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 384,
+          "author_pub_id": "6pPZKd0AAAAJ:yTLRzDEmwhEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:yTLRzDEmwhEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 385,
+          "author_pub_id": "6pPZKd0AAAAJ:RMgMIBzvq-4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:RMgMIBzvq-4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 386,
+          "author_pub_id": "6pPZKd0AAAAJ:cBPnxVikjH8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:cBPnxVikjH8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 387,
+          "author_pub_id": "6pPZKd0AAAAJ:x21FZCSn4ZoC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:x21FZCSn4ZoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 388,
+          "author_pub_id": "6pPZKd0AAAAJ:QsKbpXNoaWkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:QsKbpXNoaWkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 389,
+          "author_pub_id": "6pPZKd0AAAAJ:_tF6a-HnqWAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:_tF6a-HnqWAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 390,
+          "author_pub_id": "6pPZKd0AAAAJ:ndLnGcHYRF0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ndLnGcHYRF0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 391,
+          "author_pub_id": "6pPZKd0AAAAJ:YTuZlYwrTOUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:YTuZlYwrTOUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 392,
+          "author_pub_id": "6pPZKd0AAAAJ:wyM6WWKXmoIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wyM6WWKXmoIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 393,
+          "author_pub_id": "6pPZKd0AAAAJ:unp9ATQDT5gC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:unp9ATQDT5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 394,
+          "author_pub_id": "6pPZKd0AAAAJ:SIv7DqKytYAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SIv7DqKytYAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 395,
+          "author_pub_id": "6pPZKd0AAAAJ:HJSXoJQnj-YC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:HJSXoJQnj-YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 396,
+          "author_pub_id": "6pPZKd0AAAAJ:eO3_k5sD8BwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:eO3_k5sD8BwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "6pPZKd0AAAAJ:kF1pexMAQbMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:kF1pexMAQbMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "6pPZKd0AAAAJ:kWvqk_afx_IC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:kWvqk_afx_IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 399,
+          "author_pub_id": "6pPZKd0AAAAJ:BJbdYPG6LGMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 400,
+          "author_pub_id": "6pPZKd0AAAAJ:yFnVuubrUp4C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=300&pagesize=100&citation_for_view=6pPZKd0AAAAJ:yFnVuubrUp4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 401,
+          "author_pub_id": "6pPZKd0AAAAJ:kuK5TVdYjLIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 402,
+          "author_pub_id": "6pPZKd0AAAAJ:ML0RJ9NH7IQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ML0RJ9NH7IQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 403,
+          "author_pub_id": "6pPZKd0AAAAJ:bFI3QPDXJZMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:bFI3QPDXJZMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 404,
+          "author_pub_id": "6pPZKd0AAAAJ:zA6iFVUQeVQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:zA6iFVUQeVQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 405,
+          "author_pub_id": "6pPZKd0AAAAJ:3s1wT3WcHBgC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:3s1wT3WcHBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 406,
+          "author_pub_id": "6pPZKd0AAAAJ:SP6oXDckpogC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SP6oXDckpogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 407,
+          "author_pub_id": "6pPZKd0AAAAJ:P5F9QuxV20EC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:P5F9QuxV20EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 408,
+          "author_pub_id": "6pPZKd0AAAAJ:4JMBOYKVnBMC",
+          "reason": "Saved title includes a citation fragment; reconcile this rendering with the complete DES supernova paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4JMBOYKVnBMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 409,
+          "author_pub_id": "6pPZKd0AAAAJ:ULOm3_A8WrAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ULOm3_A8WrAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 410,
+          "author_pub_id": "6pPZKd0AAAAJ:L8Ckcad2t8MC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:L8Ckcad2t8MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 411,
+          "author_pub_id": "6pPZKd0AAAAJ:mVmsd5A6BfQC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:mVmsd5A6BfQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 412,
+          "author_pub_id": "6pPZKd0AAAAJ:M0j1y4EgrScC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:M0j1y4EgrScC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 413,
+          "author_pub_id": "6pPZKd0AAAAJ:VnuxuLaQPLMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:VnuxuLaQPLMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 414,
+          "author_pub_id": "6pPZKd0AAAAJ:gmHTDCtJMcoC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:gmHTDCtJMcoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 415,
+          "author_pub_id": "6pPZKd0AAAAJ:8RAEygVn5_EC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8RAEygVn5_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 417,
+          "author_pub_id": "6pPZKd0AAAAJ:DIubQTN3OvUC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DIubQTN3OvUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 418,
+          "author_pub_id": "6pPZKd0AAAAJ:pUxgyZctzPYC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:pUxgyZctzPYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 419,
+          "author_pub_id": "6pPZKd0AAAAJ:1EqfMoDn7-AC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:1EqfMoDn7-AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 420,
+          "author_pub_id": "6pPZKd0AAAAJ:K4-iKlO5MD4C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:K4-iKlO5MD4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 421,
+          "author_pub_id": "6pPZKd0AAAAJ:wuD5JclIwkYC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wuD5JclIwkYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 422,
+          "author_pub_id": "6pPZKd0AAAAJ:S2WlVNSe3u4C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:S2WlVNSe3u4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 423,
+          "author_pub_id": "6pPZKd0AAAAJ:ShjGdcaqzI0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ShjGdcaqzI0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 424,
+          "author_pub_id": "6pPZKd0AAAAJ:cSdaV2aYdYsC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:cSdaV2aYdYsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 426,
+          "author_pub_id": "6pPZKd0AAAAJ:hfzGNhXhx5MC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:hfzGNhXhx5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 428,
+          "author_pub_id": "6pPZKd0AAAAJ:cRMvf6lLvU8C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:cRMvf6lLvU8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 429,
+          "author_pub_id": "6pPZKd0AAAAJ:a2necdfpwlEC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:a2necdfpwlEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 430,
+          "author_pub_id": "6pPZKd0AAAAJ:oYLFIHfuHKwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:oYLFIHfuHKwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 431,
+          "author_pub_id": "6pPZKd0AAAAJ:Nw_I7GeUguwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Nw_I7GeUguwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 432,
+          "author_pub_id": "6pPZKd0AAAAJ:inmFHauC9wsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:inmFHauC9wsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 433,
+          "author_pub_id": "6pPZKd0AAAAJ:Tfl4UtY-dJUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Tfl4UtY-dJUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 434,
+          "author_pub_id": "6pPZKd0AAAAJ:d4tt_xEv1X8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:d4tt_xEv1X8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 435,
+          "author_pub_id": "6pPZKd0AAAAJ:8uzoZH4hB9AC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8uzoZH4hB9AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 436,
+          "author_pub_id": "6pPZKd0AAAAJ:u3T1itk59dMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:u3T1itk59dMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 437,
+          "author_pub_id": "6pPZKd0AAAAJ:SrKkpNFED5gC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SrKkpNFED5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 438,
+          "author_pub_id": "6pPZKd0AAAAJ:sgsej9ZJWHMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:sgsej9ZJWHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 439,
+          "author_pub_id": "6pPZKd0AAAAJ:MDX3w3dAD3YC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:MDX3w3dAD3YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 440,
+          "author_pub_id": "6pPZKd0AAAAJ:i_7YvbSbtFEC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:i_7YvbSbtFEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 441,
+          "author_pub_id": "6pPZKd0AAAAJ:CMvovTBb2okC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:CMvovTBb2okC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 442,
+          "author_pub_id": "6pPZKd0AAAAJ:PVqtIyvKoSUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:PVqtIyvKoSUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 443,
+          "author_pub_id": "6pPZKd0AAAAJ:oursBaop5wYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:oursBaop5wYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 444,
+          "author_pub_id": "6pPZKd0AAAAJ:uAPFzskPt0AC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:uAPFzskPt0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 445,
+          "author_pub_id": "6pPZKd0AAAAJ:bXQfdp6S9ecC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:bXQfdp6S9ecC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 446,
+          "author_pub_id": "6pPZKd0AAAAJ:cNe27ouKFcQC",
+          "reason": "Correction or editorial record needs a distinct output-grain decision against the research article.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:cNe27ouKFcQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 447,
+          "author_pub_id": "6pPZKd0AAAAJ:V_vSwabWVtYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:V_vSwabWVtYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 448,
+          "author_pub_id": "6pPZKd0AAAAJ:BJtnxTr0fRcC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BJtnxTr0fRcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 449,
+          "author_pub_id": "6pPZKd0AAAAJ:GYcXSSpN504C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:GYcXSSpN504C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 450,
+          "author_pub_id": "6pPZKd0AAAAJ:XAp-VaTZjjwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:XAp-VaTZjjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 451,
+          "author_pub_id": "6pPZKd0AAAAJ:8VtEwCQfWZkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8VtEwCQfWZkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 452,
+          "author_pub_id": "6pPZKd0AAAAJ:h168fVGZblEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:h168fVGZblEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 453,
+          "author_pub_id": "6pPZKd0AAAAJ:60iIaj97TE0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:60iIaj97TE0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 454,
+          "author_pub_id": "6pPZKd0AAAAJ:3lUAU8Oskd0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:3lUAU8Oskd0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 455,
+          "author_pub_id": "6pPZKd0AAAAJ:vnF2_uLGgtgC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:vnF2_uLGgtgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 456,
+          "author_pub_id": "6pPZKd0AAAAJ:BAanoTsO0WEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BAanoTsO0WEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 457,
+          "author_pub_id": "6pPZKd0AAAAJ:3A3nxV7CjKIC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:3A3nxV7CjKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 458,
+          "author_pub_id": "6pPZKd0AAAAJ:eH23hyXCXa4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:eH23hyXCXa4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 459,
+          "author_pub_id": "6pPZKd0AAAAJ:XDrR66g3YHsC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:XDrR66g3YHsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 460,
+          "author_pub_id": "6pPZKd0AAAAJ:g8uWPOAv7ggC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:g8uWPOAv7ggC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 461,
+          "author_pub_id": "6pPZKd0AAAAJ:lbI08cpqPnQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:lbI08cpqPnQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 462,
+          "author_pub_id": "6pPZKd0AAAAJ:I858iXPj1OkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:I858iXPj1OkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 463,
+          "author_pub_id": "6pPZKd0AAAAJ:rLGzs9wiiwIC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:rLGzs9wiiwIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 464,
+          "author_pub_id": "6pPZKd0AAAAJ:natZJ_-F0IUC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:natZJ_-F0IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 465,
+          "author_pub_id": "6pPZKd0AAAAJ:J3LtWjKFLicC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:J3LtWjKFLicC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 466,
+          "author_pub_id": "6pPZKd0AAAAJ:Vno172sVVMwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Vno172sVVMwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 467,
+          "author_pub_id": "6pPZKd0AAAAJ:e84hm74t-eoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:e84hm74t-eoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 468,
+          "author_pub_id": "6pPZKd0AAAAJ:YPNY0knpFBYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:YPNY0knpFBYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 469,
+          "author_pub_id": "6pPZKd0AAAAJ:H7nrzBkawXsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:H7nrzBkawXsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 470,
+          "author_pub_id": "6pPZKd0AAAAJ:TesyEGJKHF4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:TesyEGJKHF4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 471,
+          "author_pub_id": "6pPZKd0AAAAJ:I8rxH6phXEkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:I8rxH6phXEkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 472,
+          "author_pub_id": "6pPZKd0AAAAJ:yeL6HyUMUGUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:yeL6HyUMUGUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 473,
+          "author_pub_id": "6pPZKd0AAAAJ:t-hv7AR41mYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:t-hv7AR41mYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 474,
+          "author_pub_id": "6pPZKd0AAAAJ:ifOnle78iJkC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ifOnle78iJkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 475,
+          "author_pub_id": "6pPZKd0AAAAJ:6VlyvFCUEfcC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:6VlyvFCUEfcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 476,
+          "author_pub_id": "6pPZKd0AAAAJ:7Frjd3zlGBUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:7Frjd3zlGBUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 477,
+          "author_pub_id": "6pPZKd0AAAAJ:xm0LlTxljI0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:xm0LlTxljI0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 478,
+          "author_pub_id": "6pPZKd0AAAAJ:oTdOBqtIf_kC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:oTdOBqtIf_kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 479,
+          "author_pub_id": "6pPZKd0AAAAJ:txeM2kYbVNMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:txeM2kYbVNMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 480,
+          "author_pub_id": "6pPZKd0AAAAJ:n3vGvpFsckwC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:n3vGvpFsckwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 481,
+          "author_pub_id": "6pPZKd0AAAAJ:9DLIHnF0jcYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:9DLIHnF0jcYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 482,
+          "author_pub_id": "6pPZKd0AAAAJ:4Yq6kJLCcecC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4Yq6kJLCcecC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 483,
+          "author_pub_id": "6pPZKd0AAAAJ:wUn16MOA3RoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wUn16MOA3RoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 484,
+          "author_pub_id": "6pPZKd0AAAAJ:m4fbC6XIj1kC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:m4fbC6XIj1kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 485,
+          "author_pub_id": "6pPZKd0AAAAJ:m92CDrhVnKEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:m92CDrhVnKEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 486,
+          "author_pub_id": "6pPZKd0AAAAJ:2vr6o8x5NLkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:2vr6o8x5NLkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 487,
+          "author_pub_id": "6pPZKd0AAAAJ:wSy_KLzO7YEC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wSy_KLzO7YEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 488,
+          "author_pub_id": "6pPZKd0AAAAJ:U0iAMwwPxtsC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:U0iAMwwPxtsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 489,
+          "author_pub_id": "6pPZKd0AAAAJ:eI34FqJmdUoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:eI34FqJmdUoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 490,
+          "author_pub_id": "6pPZKd0AAAAJ:Og1tA8FjbJAC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Og1tA8FjbJAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 491,
+          "author_pub_id": "6pPZKd0AAAAJ:jmjb1lOE9QIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:jmjb1lOE9QIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 492,
+          "author_pub_id": "6pPZKd0AAAAJ:LK8CI43ZvvMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LK8CI43ZvvMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 493,
+          "author_pub_id": "6pPZKd0AAAAJ:zUl2_INMlC4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:zUl2_INMlC4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 494,
+          "author_pub_id": "6pPZKd0AAAAJ:nPT8s1NX_-sC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:nPT8s1NX_-sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 495,
+          "author_pub_id": "6pPZKd0AAAAJ:oPLKW5k6eA4C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:oPLKW5k6eA4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 496,
+          "author_pub_id": "6pPZKd0AAAAJ:JWITY9-sCbMC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:JWITY9-sCbMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 497,
+          "author_pub_id": "6pPZKd0AAAAJ:hQUaER0FWQ4C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:hQUaER0FWQ4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 498,
+          "author_pub_id": "6pPZKd0AAAAJ:R-LXmdHK_14C",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:R-LXmdHK_14C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 499,
+          "author_pub_id": "6pPZKd0AAAAJ:c1e4I3QdEKYC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:c1e4I3QdEKYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 500,
+          "author_pub_id": "6pPZKd0AAAAJ:qmtmRrLr0tkC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=400&pagesize=100&citation_for_view=6pPZKd0AAAAJ:qmtmRrLr0tkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 501,
+          "author_pub_id": "6pPZKd0AAAAJ:kJDgFkosVoMC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:kJDgFkosVoMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 502,
+          "author_pub_id": "6pPZKd0AAAAJ:X9ykpCP0fEIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:X9ykpCP0fEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 503,
+          "author_pub_id": "6pPZKd0AAAAJ:DrR-2ekChdkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DrR-2ekChdkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 504,
+          "author_pub_id": "6pPZKd0AAAAJ:8Xgff_V0N9gC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8Xgff_V0N9gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 505,
+          "author_pub_id": "6pPZKd0AAAAJ:Xl6nMSl579sC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Xl6nMSl579sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 506,
+          "author_pub_id": "6pPZKd0AAAAJ:CNPyR2KL9-0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:CNPyR2KL9-0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 507,
+          "author_pub_id": "6pPZKd0AAAAJ:DyXnQzXoVgIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DyXnQzXoVgIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 508,
+          "author_pub_id": "6pPZKd0AAAAJ:aIdbFUkbNIkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:aIdbFUkbNIkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 509,
+          "author_pub_id": "6pPZKd0AAAAJ:Hck25ST_3aIC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Hck25ST_3aIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 510,
+          "author_pub_id": "6pPZKd0AAAAJ:zGdJYJv2LkUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:zGdJYJv2LkUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 511,
+          "author_pub_id": "6pPZKd0AAAAJ:jSAVyFp_754C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:jSAVyFp_754C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 512,
+          "author_pub_id": "6pPZKd0AAAAJ:rbm3iO8VlycC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:rbm3iO8VlycC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 513,
+          "author_pub_id": "6pPZKd0AAAAJ:JTqpx9DYBaYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:JTqpx9DYBaYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 514,
+          "author_pub_id": "6pPZKd0AAAAJ:wvYxNZNCP7wC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wvYxNZNCP7wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 515,
+          "author_pub_id": "6pPZKd0AAAAJ:ziOE8S1-AIUC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ziOE8S1-AIUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 516,
+          "author_pub_id": "6pPZKd0AAAAJ:SGW5VrABaM0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SGW5VrABaM0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 517,
+          "author_pub_id": "6pPZKd0AAAAJ:rTD5ala9j4wC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:rTD5ala9j4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 518,
+          "author_pub_id": "6pPZKd0AAAAJ:DkZNVXde3BIC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DkZNVXde3BIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 519,
+          "author_pub_id": "6pPZKd0AAAAJ:EPG8bYD4jVwC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:EPG8bYD4jVwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 520,
+          "author_pub_id": "6pPZKd0AAAAJ:Vr2j17o0sqMC",
+          "reason": "Same saved title and year appear at row(s) 22; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Vr2j17o0sqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 521,
+          "author_pub_id": "6pPZKd0AAAAJ:Gpwnp1kGG20C",
+          "reason": "Repository label is not an identified primary article; reconcile with the MNRAS locator.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Gpwnp1kGG20C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 522,
+          "author_pub_id": "6pPZKd0AAAAJ:-6RzNnnwWf8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:-6RzNnnwWf8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 523,
+          "author_pub_id": "6pPZKd0AAAAJ:wE-fMHVdjMkC",
+          "reason": "Saved title merges the article title with a broken author list; verify the MNRAS source record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wE-fMHVdjMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 524,
+          "author_pub_id": "6pPZKd0AAAAJ:-jrNzM816MMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:-jrNzM816MMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 525,
+          "author_pub_id": "6pPZKd0AAAAJ:pAkWuXOU-OoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:pAkWuXOU-OoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 526,
+          "author_pub_id": "6pPZKd0AAAAJ:1DsIQWDZLl8C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:1DsIQWDZLl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 527,
+          "author_pub_id": "6pPZKd0AAAAJ:Dem6FJhTUoYC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Dem6FJhTUoYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 528,
+          "author_pub_id": "6pPZKd0AAAAJ:KaMxkj08jr0C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KaMxkj08jr0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 529,
+          "author_pub_id": "6pPZKd0AAAAJ:FiDNX6EVdGUC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:FiDNX6EVdGUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 530,
+          "author_pub_id": "6pPZKd0AAAAJ:O0nohqN1r9EC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:O0nohqN1r9EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 532,
+          "author_pub_id": "6pPZKd0AAAAJ:KNjnJ3z-R6IC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KNjnJ3z-R6IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 533,
+          "author_pub_id": "6pPZKd0AAAAJ:uVUOdF_882EC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:uVUOdF_882EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 534,
+          "author_pub_id": "6pPZKd0AAAAJ:AXkvAH5U_nMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:AXkvAH5U_nMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 535,
+          "author_pub_id": "6pPZKd0AAAAJ:QyXJ3EUuO1IC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:QyXJ3EUuO1IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 536,
+          "author_pub_id": "6pPZKd0AAAAJ:DBa1UEJaJKAC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:DBa1UEJaJKAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 537,
+          "author_pub_id": "6pPZKd0AAAAJ:SjuI4pbJlxcC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:SjuI4pbJlxcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 538,
+          "author_pub_id": "6pPZKd0AAAAJ:-mN3Mh-tlDkC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:-mN3Mh-tlDkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 539,
+          "author_pub_id": "6pPZKd0AAAAJ:AYInfyleIOsC",
+          "reason": "Lattice-QCD D-meson article is outside the documented astrophysics program; establish exact Palmese authorship.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:AYInfyleIOsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 540,
+          "author_pub_id": "6pPZKd0AAAAJ:FiytvqdAVhgC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:FiytvqdAVhgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 541,
+          "author_pub_id": "6pPZKd0AAAAJ:Ade32sEp0pkC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Ade32sEp0pkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 542,
+          "author_pub_id": "6pPZKd0AAAAJ:ILKRHgRFtOwC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ILKRHgRFtOwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 543,
+          "author_pub_id": "6pPZKd0AAAAJ:v1_lew4L6wgC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:v1_lew4L6wgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 545,
+          "author_pub_id": "6pPZKd0AAAAJ:rOcdG6UcVlcC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:rOcdG6UcVlcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 546,
+          "author_pub_id": "6pPZKd0AAAAJ:N4u4nq0IxgcC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:N4u4nq0IxgcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 547,
+          "author_pub_id": "6pPZKd0AAAAJ:Ic1VZgkJnDsC",
+          "reason": "Saved venue is '(No Title)'; identify the native lens-data record and output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Ic1VZgkJnDsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 548,
+          "author_pub_id": "6pPZKd0AAAAJ:jL-93Qbq4QoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:jL-93Qbq4QoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 549,
+          "author_pub_id": "6pPZKd0AAAAJ:4xDN1ZYqzskC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4xDN1ZYqzskC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 550,
+          "author_pub_id": "6pPZKd0AAAAJ:Aul-kAQHnToC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Aul-kAQHnToC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 551,
+          "author_pub_id": "6pPZKd0AAAAJ:LhH-TYMQEocC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LhH-TYMQEocC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 552,
+          "author_pub_id": "6pPZKd0AAAAJ:mNrWkgRL2YcC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:mNrWkgRL2YcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 553,
+          "author_pub_id": "6pPZKd0AAAAJ:KS-xo-ZNxMsC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KS-xo-ZNxMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 554,
+          "author_pub_id": "6pPZKd0AAAAJ:lg2tdxc6qMwC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:lg2tdxc6qMwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 555,
+          "author_pub_id": "6pPZKd0AAAAJ:BOlwja0KXvYC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BOlwja0KXvYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 556,
+          "author_pub_id": "6pPZKd0AAAAJ:naSTrk-c4S8C",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:naSTrk-c4S8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 557,
+          "author_pub_id": "6pPZKd0AAAAJ:ijdKiLOsEJMC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ijdKiLOsEJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 558,
+          "author_pub_id": "6pPZKd0AAAAJ:zwpXiJ37cpgC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:zwpXiJ37cpgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 559,
+          "author_pub_id": "6pPZKd0AAAAJ:1yWc8FF-_SYC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:1yWc8FF-_SYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 560,
+          "author_pub_id": "6pPZKd0AAAAJ:a0OBvERweLwC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:a0OBvERweLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 561,
+          "author_pub_id": "6pPZKd0AAAAJ:sNmaIFBj_lkC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:sNmaIFBj_lkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 562,
+          "author_pub_id": "6pPZKd0AAAAJ:_FM0Bhl9EiAC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:_FM0Bhl9EiAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 563,
+          "author_pub_id": "6pPZKd0AAAAJ:bz8QjSJIRt4C",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:bz8QjSJIRt4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 564,
+          "author_pub_id": "6pPZKd0AAAAJ:_axFR9aDTf0C",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:_axFR9aDTf0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 565,
+          "author_pub_id": "6pPZKd0AAAAJ:VaXvl8Fpj5cC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:VaXvl8Fpj5cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 566,
+          "author_pub_id": "6pPZKd0AAAAJ:MLfJN-KU85MC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:MLfJN-KU85MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 567,
+          "author_pub_id": "6pPZKd0AAAAJ:tuHXwOkdijsC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:tuHXwOkdijsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 568,
+          "author_pub_id": "6pPZKd0AAAAJ:b1wdh0AR-JQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:b1wdh0AR-JQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 569,
+          "author_pub_id": "6pPZKd0AAAAJ:g3aElNc5_aQC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:g3aElNc5_aQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 570,
+          "author_pub_id": "6pPZKd0AAAAJ:vbGhcppDl1QC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:vbGhcppDl1QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 571,
+          "author_pub_id": "6pPZKd0AAAAJ:BwyfMAYsbu0C",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BwyfMAYsbu0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 572,
+          "author_pub_id": "6pPZKd0AAAAJ:4MWp96NkSFoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4MWp96NkSFoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 574,
+          "author_pub_id": "6pPZKd0AAAAJ:hMsQuOkrut0C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:hMsQuOkrut0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 575,
+          "author_pub_id": "6pPZKd0AAAAJ:L7CI7m0gUJcC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:L7CI7m0gUJcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 576,
+          "author_pub_id": "6pPZKd0AAAAJ:URolC5Kub84C",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:URolC5Kub84C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 577,
+          "author_pub_id": "6pPZKd0AAAAJ:Br1UauaknNIC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Br1UauaknNIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 578,
+          "author_pub_id": "6pPZKd0AAAAJ:WqliGbK-hY8C",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:WqliGbK-hY8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 579,
+          "author_pub_id": "6pPZKd0AAAAJ:mvPsJ3kp5DgC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:mvPsJ3kp5DgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 580,
+          "author_pub_id": "6pPZKd0AAAAJ:4OULZ7Gr8RgC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:4OULZ7Gr8RgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 581,
+          "author_pub_id": "6pPZKd0AAAAJ:fPk4N6BV_jEC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:fPk4N6BV_jEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 583,
+          "author_pub_id": "6pPZKd0AAAAJ:-_dYPAW6P2MC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:-_dYPAW6P2MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 584,
+          "author_pub_id": "6pPZKd0AAAAJ:35N4QoGY0k4C",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:35N4QoGY0k4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 585,
+          "author_pub_id": "6pPZKd0AAAAJ:qPeb-qHga9sC",
+          "reason": "Saved title is a broken author-list fragment rather than a publication title.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:qPeb-qHga9sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 586,
+          "author_pub_id": "6pPZKd0AAAAJ:G36d5HCDkJYC",
+          "reason": "Saved title is a broken author-list fragment rather than a publication title.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:G36d5HCDkJYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 587,
+          "author_pub_id": "6pPZKd0AAAAJ:lSLTfruPkqcC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:lSLTfruPkqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 588,
+          "author_pub_id": "6pPZKd0AAAAJ:BJrgspguQaEC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:BJrgspguQaEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 589,
+          "author_pub_id": "6pPZKd0AAAAJ:pYKElYtJMmwC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:pYKElYtJMmwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 590,
+          "author_pub_id": "6pPZKd0AAAAJ:YOwf2qJgpHMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 591,
+          "author_pub_id": "6pPZKd0AAAAJ:WF5omc3nYNoC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 592,
+          "author_pub_id": "6pPZKd0AAAAJ:UeHWp8X0CEIC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:UeHWp8X0CEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 593,
+          "author_pub_id": "6pPZKd0AAAAJ:0KyAp5RtaNEC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:0KyAp5RtaNEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 594,
+          "author_pub_id": "6pPZKd0AAAAJ:yB1At4FlUx8C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:yB1At4FlUx8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 595,
+          "author_pub_id": "6pPZKd0AAAAJ:nrtMV_XWKgEC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:nrtMV_XWKgEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 596,
+          "author_pub_id": "6pPZKd0AAAAJ:ZeXyd9-uunAC",
+          "reason": "Archive or preprint record needs an exact journal/version crosswalk and output-grain decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ZeXyd9-uunAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 597,
+          "author_pub_id": "6pPZKd0AAAAJ:KWzIFqRkAKkC",
+          "reason": "Saved venue is '(No Title)'; identify the native DES-SN data record and output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:KWzIFqRkAKkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 598,
+          "author_pub_id": "6pPZKd0AAAAJ:LPZeul_q3PIC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LPZeul_q3PIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 599,
+          "author_pub_id": "6pPZKd0AAAAJ:8AbLer7MMksC",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 600,
+          "author_pub_id": "6pPZKd0AAAAJ:IjCSPb-OGe4C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=500&pagesize=100&citation_for_view=6pPZKd0AAAAJ:IjCSPb-OGe4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 601,
+          "author_pub_id": "6pPZKd0AAAAJ:u5HHmVD_uO8C",
+          "reason": "Meeting, proceedings, or short-note rendering needs a consistent map-point and collaboration-link decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:u5HHmVD_uO8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 602,
+          "author_pub_id": "6pPZKd0AAAAJ:qxL8FJ1GzNcC",
+          "reason": "VizieR catalog proxy may represent data accompanying a separately indexed paper; verify source-native dataset grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:qxL8FJ1GzNcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 603,
+          "author_pub_id": "6pPZKd0AAAAJ:wGzT3bKASkAC",
+          "reason": "Same saved title and year appear at row(s) 6, 604; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:wGzT3bKASkAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 604,
+          "author_pub_id": "6pPZKd0AAAAJ:ymY9cBF3mdcC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ymY9cBF3mdcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 605,
+          "author_pub_id": "6pPZKd0AAAAJ:XiVPGOgt02cC",
+          "reason": "Same saved title and year appear at row(s) 3; resolve separate outputs or versions before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:XiVPGOgt02cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 606,
+          "author_pub_id": "6pPZKd0AAAAJ:5nxA0vEk-isC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:5nxA0vEk-isC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 607,
+          "author_pub_id": "6pPZKd0AAAAJ:artPoR2Yc-kC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:artPoR2Yc-kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 608,
+          "author_pub_id": "6pPZKd0AAAAJ:R3hNpaxXUhUC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:R3hNpaxXUhUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 609,
+          "author_pub_id": "6pPZKd0AAAAJ:0EnyYjriUFMC",
+          "reason": "Saved venue is a rapid transient notice, AstroNote, or object circular; its map point and coauthor-link policy needs review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:0EnyYjriUFMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 610,
+          "author_pub_id": "6pPZKd0AAAAJ:NMlhSUseqAsC",
+          "reason": "Hi-GAL Milky Way proxy has no titled venue or demonstrated Palmese authorship.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:NMlhSUseqAsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 611,
+          "author_pub_id": "6pPZKd0AAAAJ:umqufdRvDiIC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:umqufdRvDiIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 612,
+          "author_pub_id": "6pPZKd0AAAAJ:5qfkUJPXOUwC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:5qfkUJPXOUwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 613,
+          "author_pub_id": "6pPZKd0AAAAJ:ruyezt5ZtCIC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:ruyezt5ZtCIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 614,
+          "author_pub_id": "6pPZKd0AAAAJ:Nufq_to8ts0C",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Nufq_to8ts0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 615,
+          "author_pub_id": "6pPZKd0AAAAJ:T8_be82Iz5gC",
+          "reason": "Saved title is a journal-header fragment, not an identified authored work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:T8_be82Iz5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 616,
+          "author_pub_id": "6pPZKd0AAAAJ:3vbIHxFL9FgC",
+          "reason": "Saved title is a draft-header fragment; identify its source paper and relation to the published GW170817 article.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:3vbIHxFL9FgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 617,
+          "author_pub_id": "6pPZKd0AAAAJ:LXmCCkuhhTsC",
+          "reason": "Saved record has no venue; identify the primary publication and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:LXmCCkuhhTsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 618,
+          "author_pub_id": "6pPZKd0AAAAJ:lvd772isFD0C",
+          "reason": "Saved title is a conveners-list fragment, not an identified authored work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:lvd772isFD0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 619,
+          "author_pub_id": "6pPZKd0AAAAJ:OP4eGU-M3BUC",
+          "reason": "ATLAS Fast TracKer title lacks a source-native locator and exact Palmese authorship.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:OP4eGU-M3BUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 620,
+          "author_pub_id": "6pPZKd0AAAAJ:M7yex6snE4oC",
+          "reason": "Saved title appends a repository URL to an existing stellar-mass paper; reconcile the source rendering.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:M7yex6snE4oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 621,
+          "author_pub_id": "6pPZKd0AAAAJ:9Nmd_mFXekcC",
+          "reason": "Saved title appends a repository URL to an existing intracluster-light paper; reconcile the source rendering.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:9Nmd_mFXekcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 622,
+          "author_pub_id": "6pPZKd0AAAAJ:5awf1xo2G04C",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:5awf1xo2G04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 623,
+          "author_pub_id": "6pPZKd0AAAAJ:dTyEYWd-f8wC",
+          "reason": "Proposal, white paper, letter of interest, or thesis needs an explicit output-type and source-native authorship decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:dTyEYWd-f8wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 624,
+          "author_pub_id": "6pPZKd0AAAAJ:Wp0gIr-vW9MC",
+          "reason": "Undated all-caps GW170817 draft rendering may match the published 2017 ApJL article; verify exact version.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6pPZKd0AAAAJ&cstart=600&pagesize=100&citation_for_view=6pPZKd0AAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }
