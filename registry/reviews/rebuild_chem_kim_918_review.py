@@ -556,6 +556,7 @@ OTHER_PRIMARY_ID_GUARDS = {
     99: "bC4aq-4AAAAJ:cB__R-XWw9UC",
     161: "bC4aq-4AAAAJ:YlPif8NxrbYC",
     142: "bC4aq-4AAAAJ:VOx2b1Wkg3QC",
+    203: "bC4aq-4AAAAJ:JdL-Xu2nR38C",
     175: "bC4aq-4AAAAJ:qsWQJNntlusC",
     88: "bC4aq-4AAAAJ:oi2SiIJ9l4AC",
     148: "bC4aq-4AAAAJ:RfUwGJFMQ-0C",
@@ -570,6 +571,18 @@ OTHER_PRIMARY_ID_GUARDS = {
 
 OTHER_PRIMARY.update(
     {
+        203: (
+            "Measurement of the gamma ray background in the Davis cavern at the "
+            "Sanford Underground Research Facility",
+            2020,
+            "W. T. Kim",
+            "10.1016/j.astropartphys.2019.102391",
+            "https://api.crossref.org/works/10.1016/j.astropartphys.2019.102391",
+            "Elsevier-deposited complete 167-author article byline",
+            "The publisher's DOI deposit lists W. T. Kim as the only Kim among "
+            "167 authors and lists no H. J. Kim. The exact title, year, and "
+            "Astroparticle Physics article number match the saved Scholar row.",
+        ),
         197: (
             "Double stochastic resonance peaks in systems with dynamic "
             "phase transitions",
@@ -2015,6 +2028,10 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     )
                 )
                 or (
+                    index == 203
+                    and row["venue"] != "Astroparticle physics 116, 102391, 2020"
+                )
+                or (
                     index == 161
                     and (
                         row["venue"]
@@ -2054,7 +2071,9 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
                     ),
                     evidence_url,
                     verified_at=(
-                        "2026-10-25"
+                        "2026-10-26"
+                        if index == 203
+                        else "2026-10-25"
                         if index in OTHER_PRIMARY_ID_GUARDS
                         else "2026-10-24"
                     ),
@@ -2293,16 +2312,16 @@ def build(capture: dict, evidence: dict) -> tuple[list[dict], list[dict]]:
         "knu_orcid_title_only_year_check": 2,
         "proposed_other_person_hyung_joon_primary": 15,
         "proposed_other_person_knu_orcid_title_year_record_doi": 320,
-        "proposed_other_person_primary_work": 48,
+        "proposed_other_person_primary_work": 49,
         "proposed_acs_supporting_information_nonpublication": 1,
         "proposed_corrupted_duplicate_primary": 4,
-        "unresolved_attribution_hold": 396,
+        "unresolved_attribution_hold": 395,
     }
     if counts != expected:
         raise ValueError(f"Screening counts changed: {dict(counts)}")
     addition_ids = [item["author_pub_id"] for item in additions]
     capture_ids = [item["author_pub_id"] for item in screening]
-    if len(set(addition_ids)) != 388 or len(set(capture_ids)) != 918:
+    if len(set(addition_ids)) != 389 or len(set(capture_ids)) != 918:
         raise ValueError("Duplicate Scholar IDs in additions or capture")
     if not set(addition_ids) <= set(capture_ids):
         raise ValueError("Proposed ID absent from capture")
