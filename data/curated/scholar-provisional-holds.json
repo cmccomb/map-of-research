@@ -4776,6 +4776,1822 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-reinhardschumacher-35cd3c6f",
+      "scholar_id": "LibSWRMAAAAJ",
+      "expected_source_rows": 543,
+      "cache_sha256": "92582205fb5c2ef056318bba801c4eb5a957265ef4c92f32a0e8f539a0e67d23",
+      "expected_reviewed_exclusion_rows": 26,
+      "reviewed_exclusion_ids_sha256": "fe73bd126d13b6a1a08d421a1624c58cfb7bbaeeba4c69bc262654b0b89745e7",
+      "held_observations": [
+        {
+          "capture_row_index": 2,
+          "author_pub_id": "LibSWRMAAAAJ:u5HHmVD_uO8C",
+          "reason": "Possible related source renderings (Gottfried sum journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&citation_for_view=LibSWRMAAAAJ:u5HHmVD_uO8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 9,
+          "author_pub_id": "LibSWRMAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Saved title and year also occur in capture row(s) 430; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&citation_for_view=LibSWRMAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 15,
+          "author_pub_id": "LibSWRMAAAAJ:Tyk-4Ss8FVUC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&citation_for_view=LibSWRMAAAAJ:Tyk-4Ss8FVUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 19,
+          "author_pub_id": "LibSWRMAAAAJ:4TOpqqG69KYC",
+          "reason": "Possible related source renderings (nuclear scaling journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&citation_for_view=LibSWRMAAAAJ:4TOpqqG69KYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "LibSWRMAAAAJ:I858iXPj1OkC",
+          "reason": "Saved Nature citation has an empty author field; confirm the primary byline and the exact Schumacher observation before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:I858iXPj1OkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 23,
+          "author_pub_id": "LibSWRMAAAAJ:Se3iqnhoufwC",
+          "reason": "Possible related source renderings (nucleon asymmetry journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 24,
+          "author_pub_id": "LibSWRMAAAAJ:W7OEmFMy1HYC",
+          "reason": "Possible related source renderings (NMC structure-function ratio renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 26,
+          "author_pub_id": "LibSWRMAAAAJ:WF5omc3nYNoC",
+          "reason": "Possible related source renderings (eta photoproduction journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 29,
+          "author_pub_id": "LibSWRMAAAAJ:-f6ydRqryjwC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:-f6ydRqryjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 30,
+          "author_pub_id": "LibSWRMAAAAJ:ufrVoPGSRksC",
+          "reason": "Saved title and year also occur in capture row(s) 455; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 31,
+          "author_pub_id": "LibSWRMAAAAJ:YsMSGLbcyi4C",
+          "reason": "Possible related source renderings (NMC helium-carbon-calcium ratio renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:YsMSGLbcyi4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 33,
+          "author_pub_id": "LibSWRMAAAAJ:mVC4hKzE2FoC",
+          "reason": "Saved title begins with a publisher marker; verify the primary EPJ article title and exact contribution.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:mVC4hKzE2FoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 37,
+          "author_pub_id": "LibSWRMAAAAJ:Mojj43d5GZwC",
+          "reason": "Possible related source renderings (P11 and D13 resonance article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 39,
+          "author_pub_id": "LibSWRMAAAAJ:evX43VCCuoAC",
+          "reason": "Possible related source renderings (Sigma and Lambda article plus Jefferson Lab rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:evX43VCCuoAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 42,
+          "author_pub_id": "LibSWRMAAAAJ:qUcmZB5y_30C",
+          "reason": "Possible related source renderings (neutron magnetic form-factor renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:qUcmZB5y_30C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 59,
+          "author_pub_id": "LibSWRMAAAAJ:dhFuZR0502QC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 61,
+          "author_pub_id": "LibSWRMAAAAJ:ZqE1mSdD_DYC",
+          "reason": "Saved title and year also occur in capture row(s) 62; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:ZqE1mSdD_DYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 69,
+          "author_pub_id": "LibSWRMAAAAJ:QIV2ME_5wuYC",
+          "reason": "Possible related source renderings (pentaquark journal and archival rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:QIV2ME_5wuYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 80,
+          "author_pub_id": "LibSWRMAAAAJ:aqlVkmm33-oC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=20&pagesize=80&citation_for_view=LibSWRMAAAAJ:aqlVkmm33-oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 108,
+          "author_pub_id": "LibSWRMAAAAJ:dfsIfKJdRG4C",
+          "reason": "Possible related source renderings (proton pion-pair electroproduction renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:dfsIfKJdRG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 116,
+          "author_pub_id": "LibSWRMAAAAJ:xtRiw3GOFMkC",
+          "reason": "Possible related source renderings (beam-recoil polarization renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "LibSWRMAAAAJ:wE-fMHVdjMkC",
+          "reason": "Saved title and year also occur in capture row(s) 392; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:wE-fMHVdjMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "LibSWRMAAAAJ:QyXJ3EUuO1IC",
+          "reason": "Saved title and year also occur in capture row(s) 405; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:QyXJ3EUuO1IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 145,
+          "author_pub_id": "LibSWRMAAAAJ:f2IySw72cVMC",
+          "reason": "Possible related source renderings (weak-decay article and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:f2IySw72cVMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 147,
+          "author_pub_id": "LibSWRMAAAAJ:UxriW0iASnsC",
+          "reason": "Possible related source renderings (antihyperon production PRC renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:UxriW0iASnsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "LibSWRMAAAAJ:F2UWTTQJPOcC",
+          "reason": "Saved title and year also occur in capture row(s) 400; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:F2UWTTQJPOcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 158,
+          "author_pub_id": "LibSWRMAAAAJ:O3NaXMp0MMsC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 166,
+          "author_pub_id": "LibSWRMAAAAJ:ce2CqMG-AY4C",
+          "reason": "Possible related source renderings (deuteron structure-function article and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:ce2CqMG-AY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 167,
+          "author_pub_id": "LibSWRMAAAAJ:kzcrU_BdoSEC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:kzcrU_BdoSEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 170,
+          "author_pub_id": "LibSWRMAAAAJ:maZDTaKrznsC",
+          "reason": "Saved title is very close to another same-year observation; verify the article, chapter, preprint, or proxy relationship before mapping either.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:maZDTaKrznsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 173,
+          "author_pub_id": "LibSWRMAAAAJ:1sJd4Hv_s6UC",
+          "reason": "Saved title and year also occur in capture row(s) 438; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:1sJd4Hv_s6UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 174,
+          "author_pub_id": "LibSWRMAAAAJ:sSrBHYA8nusC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:sSrBHYA8nusC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 175,
+          "author_pub_id": "LibSWRMAAAAJ:wuD5JclIwkYC",
+          "reason": "Possible related source renderings (Lambda(1520) article and anomalous venue); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:wuD5JclIwkYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 181,
+          "author_pub_id": "LibSWRMAAAAJ:naSTrk-c4S8C",
+          "reason": "Saved title and year also occur in capture row(s) 387; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:naSTrk-c4S8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 183,
+          "author_pub_id": "LibSWRMAAAAJ:eq2jaN3J8jMC",
+          "reason": "Possible related source renderings (backward-peak article and Jefferson Lab rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:eq2jaN3J8jMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 185,
+          "author_pub_id": "LibSWRMAAAAJ:lbI08cpqPnQC",
+          "reason": "Possible related source renderings (eta beam-asymmetry article and unvenued rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:lbI08cpqPnQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 192,
+          "author_pub_id": "LibSWRMAAAAJ:_tF6a-HnqWAC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:_tF6a-HnqWAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 193,
+          "author_pub_id": "LibSWRMAAAAJ:4OULZ7Gr8RgC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:4OULZ7Gr8RgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 198,
+          "author_pub_id": "LibSWRMAAAAJ:P5F9QuxV20EC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:P5F9QuxV20EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "LibSWRMAAAAJ:D03iK_w7-QYC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=100&pagesize=100&citation_for_view=LibSWRMAAAAJ:D03iK_w7-QYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 202,
+          "author_pub_id": "LibSWRMAAAAJ:OU6Ihb5iCvQC",
+          "reason": "Saved title and year also occur in capture row(s) 416; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:OU6Ihb5iCvQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 203,
+          "author_pub_id": "LibSWRMAAAAJ:G36d5HCDkJYC",
+          "reason": "Possible related source renderings (GlueX axionlike article and anomalous venue); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:G36d5HCDkJYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 205,
+          "author_pub_id": "LibSWRMAAAAJ:WHdLCjDvYFkC",
+          "reason": "Saved title and year also occur in capture row(s) 406; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:WHdLCjDvYFkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 213,
+          "author_pub_id": "LibSWRMAAAAJ:Vno172sVVMwC",
+          "reason": "Possible related source renderings (exclusive pion electroproduction PRC renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:Vno172sVVMwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "LibSWRMAAAAJ:dshw04ExmUIC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:dshw04ExmUIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 225,
+          "author_pub_id": "LibSWRMAAAAJ:fQNAKQ3IYiAC",
+          "reason": "Saved title and year also occur in capture row(s) 512; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:fQNAKQ3IYiAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "LibSWRMAAAAJ:qCpRzq7zkD8C",
+          "reason": "Possible related source renderings (pion photoproduction article and German rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:qCpRzq7zkD8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 235,
+          "author_pub_id": "LibSWRMAAAAJ:3lUAU8Oskd0C",
+          "reason": "Saved title and year also occur in capture row(s) 376; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:3lUAU8Oskd0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "LibSWRMAAAAJ:z8nqeaKD1nsC",
+          "reason": "Saved title and year also occur in capture row(s) 385; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:z8nqeaKD1nsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 240,
+          "author_pub_id": "LibSWRMAAAAJ:7BrZ7Jt4UNcC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:7BrZ7Jt4UNcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 245,
+          "author_pub_id": "LibSWRMAAAAJ:vRqMK49ujn8C",
+          "reason": "Possible related source renderings (hypernuclear formation article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "LibSWRMAAAAJ:4fGpz3EwCPoC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:4fGpz3EwCPoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 253,
+          "author_pub_id": "LibSWRMAAAAJ:YB4bud6kWLwC",
+          "reason": "Saved title and year also occur in capture row(s) 394; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:YB4bud6kWLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 254,
+          "author_pub_id": "LibSWRMAAAAJ:eO3_k5sD8BwC",
+          "reason": "Possible related source renderings (target and double-spin article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:eO3_k5sD8BwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 266,
+          "author_pub_id": "LibSWRMAAAAJ:KI9T_ytC6pkC",
+          "reason": "Possible related source renderings (strange-hadron GlueX preprint and unvenued rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:KI9T_ytC6pkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 267,
+          "author_pub_id": "LibSWRMAAAAJ:wSy_KLzO7YEC",
+          "reason": "Saved title and year also occur in capture row(s) 383; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:wSy_KLzO7YEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 269,
+          "author_pub_id": "LibSWRMAAAAJ:ye4kPcJQO24C",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:ye4kPcJQO24C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 276,
+          "author_pub_id": "LibSWRMAAAAJ:c1e4I3QdEKYC",
+          "reason": "Possible related source renderings (strange-hadron GlueX preprint and unvenued rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:c1e4I3QdEKYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 284,
+          "author_pub_id": "LibSWRMAAAAJ:PVgj2kMGcgYC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:PVgj2kMGcgYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 285,
+          "author_pub_id": "LibSWRMAAAAJ:H7nrzBkawXsC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:H7nrzBkawXsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 291,
+          "author_pub_id": "LibSWRMAAAAJ:Tiz5es2fbqcC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:Tiz5es2fbqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 292,
+          "author_pub_id": "LibSWRMAAAAJ:VL0QpB8kHFEC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:VL0QpB8kHFEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 294,
+          "author_pub_id": "LibSWRMAAAAJ:SWgZeABleR0C",
+          "reason": "The saved record names a complete HYP2018 proceedings volume; decide whether it is an authored map work rather than its component papers.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=200&pagesize=100&citation_for_view=LibSWRMAAAAJ:SWgZeABleR0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 301,
+          "author_pub_id": "LibSWRMAAAAJ:XoXfffV-tXoC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:XoXfffV-tXoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 304,
+          "author_pub_id": "LibSWRMAAAAJ:jtI9f0ekYq0C",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:jtI9f0ekYq0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "LibSWRMAAAAJ:tkaPQYYpVKoC",
+          "reason": "Possible related source renderings (PS185 hyperon-producer article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:tkaPQYYpVKoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "LibSWRMAAAAJ:vnF2_uLGgtgC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:vnF2_uLGgtgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 310,
+          "author_pub_id": "LibSWRMAAAAJ:ML0RJ9NH7IQC",
+          "reason": "Possible related source renderings (helium coherent-photoproduction renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:ML0RJ9NH7IQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 312,
+          "author_pub_id": "LibSWRMAAAAJ:oursBaop5wYC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:oursBaop5wYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 313,
+          "author_pub_id": "LibSWRMAAAAJ:wkm4DBaukwsC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:wkm4DBaukwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 316,
+          "author_pub_id": "LibSWRMAAAAJ:Q3-QASNKTMEC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Q3-QASNKTMEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 320,
+          "author_pub_id": "LibSWRMAAAAJ:2vr6o8x5NLkC",
+          "reason": "Saved title is very close to another same-year observation; verify the article, chapter, preprint, or proxy relationship before mapping either.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:2vr6o8x5NLkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 321,
+          "author_pub_id": "LibSWRMAAAAJ:rOcdG6UcVlcC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:rOcdG6UcVlcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 325,
+          "author_pub_id": "LibSWRMAAAAJ:jRIwE-1ttnoC",
+          "reason": "Saved title and year also occur in capture row(s) 365; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:jRIwE-1ttnoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 326,
+          "author_pub_id": "LibSWRMAAAAJ:MLfJN-KU85MC",
+          "reason": "Saved title and venue split a neutron form-factor formula; locate the complete underlying paper before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:MLfJN-KU85MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 327,
+          "author_pub_id": "LibSWRMAAAAJ:OP4eGU-M3BUC",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:OP4eGU-M3BUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 328,
+          "author_pub_id": "LibSWRMAAAAJ:W5xh706n7nkC",
+          "reason": "Possible related source renderings (hypernuclear carbon article and proceedings renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:W5xh706n7nkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 329,
+          "author_pub_id": "LibSWRMAAAAJ:UHK10RUVsp4C",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:UHK10RUVsp4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 330,
+          "author_pub_id": "LibSWRMAAAAJ:fEOibwPWpKIC",
+          "reason": "Saved Nuclear Physics A 663 record has no page locator; verify the exact hypernuclear spectroscopy contribution.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:fEOibwPWpKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 331,
+          "author_pub_id": "LibSWRMAAAAJ:DXE8ND7PrJAC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:DXE8ND7PrJAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "LibSWRMAAAAJ:2Q0AJrNhS-QC",
+          "reason": "Saved title and year also occur in capture row(s) 366; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:2Q0AJrNhS-QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 336,
+          "author_pub_id": "LibSWRMAAAAJ:nrtMV_XWKgEC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:nrtMV_XWKgEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 337,
+          "author_pub_id": "LibSWRMAAAAJ:tKAzc9rXhukC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:tKAzc9rXhukC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 338,
+          "author_pub_id": "LibSWRMAAAAJ:v_xunPV0uK0C",
+          "reason": "Possible related source renderings (antihyperon production PRC renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:v_xunPV0uK0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 339,
+          "author_pub_id": "LibSWRMAAAAJ:EaFouW7jFu4C",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:EaFouW7jFu4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 340,
+          "author_pub_id": "LibSWRMAAAAJ:ZuybSZzF8UAC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:ZuybSZzF8UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 345,
+          "author_pub_id": "LibSWRMAAAAJ:TiIbgCYny7sC",
+          "reason": "Possible related source renderings (phi spin-density article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:TiIbgCYny7sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "LibSWRMAAAAJ:x2hKVfJWtf0C",
+          "reason": "Possible related source renderings (phi spin-density article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:x2hKVfJWtf0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "LibSWRMAAAAJ:Y0-TYkg6YM4C",
+          "reason": "Possible related source renderings (P11 and D13 resonance article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Y0-TYkg6YM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "LibSWRMAAAAJ:KbBQZpvPDL4C",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:KbBQZpvPDL4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 352,
+          "author_pub_id": "LibSWRMAAAAJ:h1pkognVyKwC",
+          "reason": "Possible related source renderings (hypernuclear carbon article and proceedings renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:h1pkognVyKwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 354,
+          "author_pub_id": "LibSWRMAAAAJ:hkOj_22Ku90C",
+          "reason": "Possible related source renderings (hypernuclear carbon article and proceedings renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "LibSWRMAAAAJ:dBIO0h50nwkC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:dBIO0h50nwkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "LibSWRMAAAAJ:35r97b3x0nAC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:35r97b3x0nAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 358,
+          "author_pub_id": "LibSWRMAAAAJ:ZfRJV9d4-WMC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:ZfRJV9d4-WMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 359,
+          "author_pub_id": "LibSWRMAAAAJ:Fu2w8maKXqMC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Fu2w8maKXqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 360,
+          "author_pub_id": "LibSWRMAAAAJ:-_dYPAW6P2MC",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:-_dYPAW6P2MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 362,
+          "author_pub_id": "LibSWRMAAAAJ:37Fl7vPTsUIC",
+          "reason": "Possible related source renderings (CLAS polarization article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:37Fl7vPTsUIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 363,
+          "author_pub_id": "LibSWRMAAAAJ:YGhAHpnIhDoC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:YGhAHpnIhDoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 364,
+          "author_pub_id": "LibSWRMAAAAJ:cww_0JKUTDwC",
+          "reason": "Possible related source renderings (CLAS polarization article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:cww_0JKUTDwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 365,
+          "author_pub_id": "LibSWRMAAAAJ:PZE8UkGerEcC",
+          "reason": "Saved title and year also occur in capture row(s) 325; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:PZE8UkGerEcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "LibSWRMAAAAJ:pxXbYLTb8EgC",
+          "reason": "Saved title and year also occur in capture row(s) 333; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:pxXbYLTb8EgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 367,
+          "author_pub_id": "LibSWRMAAAAJ:_IsBomjs8bsC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:_IsBomjs8bsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 368,
+          "author_pub_id": "LibSWRMAAAAJ:NnTm98qLMbgC",
+          "reason": "Possible related source renderings (phi spin-density article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:NnTm98qLMbgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "LibSWRMAAAAJ:8RAEygVn5_EC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:8RAEygVn5_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 370,
+          "author_pub_id": "LibSWRMAAAAJ:DIubQTN3OvUC",
+          "reason": "Saved PANDA Detektoren venue does not identify the GlueX axionlike-particle output; reconcile it with the separately indexed journal article.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:DIubQTN3OvUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 371,
+          "author_pub_id": "LibSWRMAAAAJ:S2WlVNSe3u4C",
+          "reason": "Saved PANDA Detektoren venue does not identify the Lambda(1520) output; reconcile it with the separately indexed journal article.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:S2WlVNSe3u4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 372,
+          "author_pub_id": "LibSWRMAAAAJ:Oo1CbQkBAzEC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Oo1CbQkBAzEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 373,
+          "author_pub_id": "LibSWRMAAAAJ:hfzGNhXhx5MC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:hfzGNhXhx5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 374,
+          "author_pub_id": "LibSWRMAAAAJ:Kqc1aDSOPooC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Kqc1aDSOPooC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 375,
+          "author_pub_id": "LibSWRMAAAAJ:Vztgr1qGG8IC",
+          "reason": "Possible related source renderings (exclusive pion electroproduction PRC renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:Vztgr1qGG8IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 376,
+          "author_pub_id": "LibSWRMAAAAJ:9LpHyFPp1DQC",
+          "reason": "Saved title and year also occur in capture row(s) 235; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:9LpHyFPp1DQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 377,
+          "author_pub_id": "LibSWRMAAAAJ:d4tt_xEv1X8C",
+          "reason": "Possible related source renderings (pion photoproduction article and German rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:d4tt_xEv1X8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 378,
+          "author_pub_id": "LibSWRMAAAAJ:_9Xh93LWpsYC",
+          "reason": "Saved title is very close to another same-year observation; verify the article, chapter, preprint, or proxy relationship before mapping either.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:_9Xh93LWpsYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 381,
+          "author_pub_id": "LibSWRMAAAAJ:sJK75vZXtG0C",
+          "reason": "Possible related source renderings (eta beam-asymmetry article and unvenued rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:sJK75vZXtG0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 382,
+          "author_pub_id": "LibSWRMAAAAJ:yY3RG6sOEgwC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:yY3RG6sOEgwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 383,
+          "author_pub_id": "LibSWRMAAAAJ:1r-w4gtu6w8C",
+          "reason": "Saved title and year also occur in capture row(s) 267; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:1r-w4gtu6w8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 384,
+          "author_pub_id": "LibSWRMAAAAJ:nqdriD65xNoC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:nqdriD65xNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 385,
+          "author_pub_id": "LibSWRMAAAAJ:jKT558fuBk8C",
+          "reason": "Saved title and year also occur in capture row(s) 237; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:jKT558fuBk8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 386,
+          "author_pub_id": "LibSWRMAAAAJ:_AeoHAGD03cC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:_AeoHAGD03cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 387,
+          "author_pub_id": "LibSWRMAAAAJ:wGzT3bKASkAC",
+          "reason": "Saved title and year also occur in capture row(s) 181; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:wGzT3bKASkAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 388,
+          "author_pub_id": "LibSWRMAAAAJ:37UQlXuwjP4C",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:37UQlXuwjP4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 389,
+          "author_pub_id": "LibSWRMAAAAJ:NMlhSUseqAsC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:NMlhSUseqAsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 390,
+          "author_pub_id": "LibSWRMAAAAJ:H_jBuBxbQIAC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:H_jBuBxbQIAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 391,
+          "author_pub_id": "LibSWRMAAAAJ:AzKEL7Gb_04C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:AzKEL7Gb_04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 392,
+          "author_pub_id": "LibSWRMAAAAJ:l6Q3WhenKVUC",
+          "reason": "Saved title and year also occur in capture row(s) 140; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:l6Q3WhenKVUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 393,
+          "author_pub_id": "LibSWRMAAAAJ:qmtmRrLr0tkC",
+          "reason": "The saved dp elastic-scattering citation has an unclear R. Schumacher byline; establish exact author identity from the primary paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:qmtmRrLr0tkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 394,
+          "author_pub_id": "LibSWRMAAAAJ:3A3nxV7CjKIC",
+          "reason": "Saved title and year also occur in capture row(s) 253; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:3A3nxV7CjKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 395,
+          "author_pub_id": "LibSWRMAAAAJ:za7pDTvVV8kC",
+          "reason": "Possible related source renderings (target and double-spin article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:za7pDTvVV8kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 396,
+          "author_pub_id": "LibSWRMAAAAJ:raTqNPD5sRQC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:raTqNPD5sRQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "LibSWRMAAAAJ:SnGPuo6Feq8C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:SnGPuo6Feq8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "LibSWRMAAAAJ:w0F2JDEymm0C",
+          "reason": "The saved KL2016 item is a whole workshop mini-proceedings volume; establish output grain and exact authored contribution.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:w0F2JDEymm0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 399,
+          "author_pub_id": "LibSWRMAAAAJ:kUhpeDhEZMUC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:kUhpeDhEZMUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 400,
+          "author_pub_id": "LibSWRMAAAAJ:uVUOdF_882EC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=300&pagesize=100&citation_for_view=LibSWRMAAAAJ:uVUOdF_882EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 401,
+          "author_pub_id": "LibSWRMAAAAJ:3bvyWxjaHKcC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:3bvyWxjaHKcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 402,
+          "author_pub_id": "LibSWRMAAAAJ:s1ouQE5r0WUC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:s1ouQE5r0WUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 403,
+          "author_pub_id": "LibSWRMAAAAJ:WC9gN4BGCRcC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:WC9gN4BGCRcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 404,
+          "author_pub_id": "LibSWRMAAAAJ:U3qCfcK-7lkC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:U3qCfcK-7lkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 405,
+          "author_pub_id": "LibSWRMAAAAJ:QtA78RmWg5MC",
+          "reason": "Saved title and year also occur in capture row(s) 141; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:QtA78RmWg5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 406,
+          "author_pub_id": "LibSWRMAAAAJ:oPLKW5k6eA4C",
+          "reason": "Saved title and year also occur in capture row(s) 205; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:oPLKW5k6eA4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 407,
+          "author_pub_id": "LibSWRMAAAAJ:IaI1MmNe2tcC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:IaI1MmNe2tcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 408,
+          "author_pub_id": "LibSWRMAAAAJ:P7Ujq4OLJYoC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:P7Ujq4OLJYoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 410,
+          "author_pub_id": "LibSWRMAAAAJ:XAp-VaTZjjwC",
+          "reason": "Saved title repeats its own citation phrase and may be a corrupted copy of a separately indexed CLAS article; verify the primary locator.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:XAp-VaTZjjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 411,
+          "author_pub_id": "LibSWRMAAAAJ:htyGaKyDgHMC",
+          "reason": "Jefferson Lab bibliographic rendering may be the same PRC 88 article as row 39; verify the source-native locator and byline.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:htyGaKyDgHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 412,
+          "author_pub_id": "LibSWRMAAAAJ:6bLC7aUMtPcC",
+          "reason": "Saved citation appears to be a proposal, letter of intent, or internal note; verify the primary output type and publication policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:6bLC7aUMtPcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 413,
+          "author_pub_id": "LibSWRMAAAAJ:PVjk1bu6vJQC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:PVjk1bu6vJQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 414,
+          "author_pub_id": "LibSWRMAAAAJ:rFyVMFCKTwsC",
+          "reason": "Saved preprint or white paper may have a journal, proposal, or proceedings version; verify source-native identity and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:rFyVMFCKTwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 415,
+          "author_pub_id": "LibSWRMAAAAJ:QKtdBID3u5MC",
+          "reason": "Possible related source renderings (helium coherent-photoproduction renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:QKtdBID3u5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 416,
+          "author_pub_id": "LibSWRMAAAAJ:NZNkWSpQBv0C",
+          "reason": "Saved title and year also occur in capture row(s) 202; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:NZNkWSpQBv0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 417,
+          "author_pub_id": "LibSWRMAAAAJ:W2uZP3ddy8sC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:W2uZP3ddy8sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 418,
+          "author_pub_id": "LibSWRMAAAAJ:kh2fBNsKQNwC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:kh2fBNsKQNwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 419,
+          "author_pub_id": "LibSWRMAAAAJ:Dip1O2bNi0gC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Dip1O2bNi0gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 420,
+          "author_pub_id": "LibSWRMAAAAJ:xm0LlTxljI0C",
+          "reason": "Possible related source renderings (beam-recoil polarization renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:xm0LlTxljI0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 421,
+          "author_pub_id": "LibSWRMAAAAJ:YTuZlYwrTOUC",
+          "reason": "Possible related source renderings (neutron magnetic form-factor renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:YTuZlYwrTOUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 422,
+          "author_pub_id": "LibSWRMAAAAJ:3htObqc8RwsC",
+          "reason": "Possible related source renderings (proton pion-pair electroproduction renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:3htObqc8RwsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 423,
+          "author_pub_id": "LibSWRMAAAAJ:8d8msizDQcsC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:8d8msizDQcsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 424,
+          "author_pub_id": "LibSWRMAAAAJ:jlhcAiayVhoC",
+          "reason": "Possible related source renderings (weak-decay article and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:jlhcAiayVhoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 425,
+          "author_pub_id": "LibSWRMAAAAJ:lmc2jWPfTJgC",
+          "reason": "Jefferson Lab rendering may be a report or preprint of the separately indexed backward-peak article; verify the output identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:lmc2jWPfTJgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 426,
+          "author_pub_id": "LibSWRMAAAAJ:pYKElYtJMmwC",
+          "reason": "Saved title joins a subject heading to a weak-decay article title; identify the exact source work and locator.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:pYKElYtJMmwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 427,
+          "author_pub_id": "LibSWRMAAAAJ:0KyAp5RtaNEC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:0KyAp5RtaNEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 428,
+          "author_pub_id": "LibSWRMAAAAJ:oqD4_j7ulsYC",
+          "reason": "Possible related source renderings (pentaquark journal and archival rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:oqD4_j7ulsYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 429,
+          "author_pub_id": "LibSWRMAAAAJ:ufKn5pxu7C0C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:ufKn5pxu7C0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 430,
+          "author_pub_id": "LibSWRMAAAAJ:hB2aVRuWZNwC",
+          "reason": "Saved title and year also occur in capture row(s) 9; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:hB2aVRuWZNwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 431,
+          "author_pub_id": "LibSWRMAAAAJ:U5uP8zs9lfgC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:U5uP8zs9lfgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 432,
+          "author_pub_id": "LibSWRMAAAAJ:4hFrxpcac9AC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:4hFrxpcac9AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 433,
+          "author_pub_id": "LibSWRMAAAAJ:EUQCXRtRnyEC",
+          "reason": "Possible related source renderings (nucleon asymmetry journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 434,
+          "author_pub_id": "LibSWRMAAAAJ:fFSKOagxvKUC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:fFSKOagxvKUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 436,
+          "author_pub_id": "LibSWRMAAAAJ:zLWjf1WUPmwC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:zLWjf1WUPmwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 437,
+          "author_pub_id": "LibSWRMAAAAJ:IRz6iEL74y4C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:IRz6iEL74y4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 438,
+          "author_pub_id": "LibSWRMAAAAJ:9VeumLvkZSQC",
+          "reason": "Saved title and year also occur in capture row(s) 173; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:9VeumLvkZSQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 439,
+          "author_pub_id": "LibSWRMAAAAJ:DUooU5lO8OsC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:DUooU5lO8OsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 441,
+          "author_pub_id": "LibSWRMAAAAJ:4e5Qn2KL_jwC",
+          "reason": "Possible related source renderings (nuclear scaling journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:4e5Qn2KL_jwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 444,
+          "author_pub_id": "LibSWRMAAAAJ:iyewoVqAXLQC",
+          "reason": "Possible related source renderings (deuteron structure-function article and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:iyewoVqAXLQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 445,
+          "author_pub_id": "LibSWRMAAAAJ:J3LtWjKFLicC",
+          "reason": "Possible related source renderings (eta photoproduction journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:J3LtWjKFLicC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 446,
+          "author_pub_id": "LibSWRMAAAAJ:Z5m8FVwuT1cC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Z5m8FVwuT1cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 450,
+          "author_pub_id": "LibSWRMAAAAJ:AvfA0Oy_GE0C",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:AvfA0Oy_GE0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 451,
+          "author_pub_id": "LibSWRMAAAAJ:Ug5p-4gJ2f0C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Ug5p-4gJ2f0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 453,
+          "author_pub_id": "LibSWRMAAAAJ:9pM33mqn1YgC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:9pM33mqn1YgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 455,
+          "author_pub_id": "LibSWRMAAAAJ:o-PowTg_VKEC",
+          "reason": "Saved title and year also occur in capture row(s) 30; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:o-PowTg_VKEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 456,
+          "author_pub_id": "LibSWRMAAAAJ:ijdKiLOsEJMC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:ijdKiLOsEJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 457,
+          "author_pub_id": "LibSWRMAAAAJ:dFKc6_kCK1wC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:dFKc6_kCK1wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 458,
+          "author_pub_id": "LibSWRMAAAAJ:BwyfMAYsbu0C",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:BwyfMAYsbu0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 459,
+          "author_pub_id": "LibSWRMAAAAJ:URolC5Kub84C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:URolC5Kub84C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 460,
+          "author_pub_id": "LibSWRMAAAAJ:Cvh0bltMcLgC",
+          "reason": "Possible related source renderings (hypernuclear formation article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Cvh0bltMcLgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 462,
+          "author_pub_id": "LibSWRMAAAAJ:5VjbC5aozO0C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:5VjbC5aozO0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 463,
+          "author_pub_id": "LibSWRMAAAAJ:BCdnXsLIVDwC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:BCdnXsLIVDwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 464,
+          "author_pub_id": "LibSWRMAAAAJ:gKiMpY-AVTkC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:gKiMpY-AVTkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 465,
+          "author_pub_id": "LibSWRMAAAAJ:sNmaIFBj_lkC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:sNmaIFBj_lkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 466,
+          "author_pub_id": "LibSWRMAAAAJ:_axFR9aDTf0C",
+          "reason": "Saved title and year also occur in capture row(s) 461; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:_axFR9aDTf0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 467,
+          "author_pub_id": "LibSWRMAAAAJ:gsN89kCJA0AC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:gsN89kCJA0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 468,
+          "author_pub_id": "LibSWRMAAAAJ:uWiczbcajpAC",
+          "reason": "Possible related source renderings (hypernuclear formation article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:uWiczbcajpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 469,
+          "author_pub_id": "LibSWRMAAAAJ:j8SEvjWlNXcC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:j8SEvjWlNXcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 470,
+          "author_pub_id": "LibSWRMAAAAJ:Ul_CLA4dPeMC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Ul_CLA4dPeMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 471,
+          "author_pub_id": "LibSWRMAAAAJ:OTTXONDVkokC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:OTTXONDVkokC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 472,
+          "author_pub_id": "LibSWRMAAAAJ:tYavs44e6CUC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:tYavs44e6CUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 473,
+          "author_pub_id": "LibSWRMAAAAJ:yqoGN6RLRZoC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 474,
+          "author_pub_id": "LibSWRMAAAAJ:BUYA1_V_uYcC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:BUYA1_V_uYcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 475,
+          "author_pub_id": "LibSWRMAAAAJ:FPJr55Dyh1AC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:FPJr55Dyh1AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 476,
+          "author_pub_id": "LibSWRMAAAAJ:VaXvl8Fpj5cC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:VaXvl8Fpj5cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 477,
+          "author_pub_id": "LibSWRMAAAAJ:otzGkya1bYkC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:otzGkya1bYkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 478,
+          "author_pub_id": "LibSWRMAAAAJ:MNNNGtAgD4EC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:MNNNGtAgD4EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 479,
+          "author_pub_id": "LibSWRMAAAAJ:L7vk9XBBNxgC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:L7vk9XBBNxgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 482,
+          "author_pub_id": "LibSWRMAAAAJ:e3CVSTJ63dQC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:e3CVSTJ63dQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 483,
+          "author_pub_id": "LibSWRMAAAAJ:9c2xU6iGI7YC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:9c2xU6iGI7YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 484,
+          "author_pub_id": "LibSWRMAAAAJ:M7yex6snE4oC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:M7yex6snE4oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 485,
+          "author_pub_id": "LibSWRMAAAAJ:t7zJ5fGR-2UC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:t7zJ5fGR-2UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 486,
+          "author_pub_id": "LibSWRMAAAAJ:HeT0ZceujKMC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:HeT0ZceujKMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 487,
+          "author_pub_id": "LibSWRMAAAAJ:g30IDTdgJMgC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:g30IDTdgJMgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 488,
+          "author_pub_id": "LibSWRMAAAAJ:HtEfBTGE9r8C",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:HtEfBTGE9r8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 489,
+          "author_pub_id": "LibSWRMAAAAJ:cWzG1nlazyYC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:cWzG1nlazyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 490,
+          "author_pub_id": "LibSWRMAAAAJ:YohjEiUPhakC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await a consistent map-point and coauthor-link rule for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:YohjEiUPhakC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 491,
+          "author_pub_id": "LibSWRMAAAAJ:kvJssbFybhEC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:kvJssbFybhEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 492,
+          "author_pub_id": "LibSWRMAAAAJ:BJtnxTr0fRcC",
+          "reason": "Possible related source renderings (PS185 hyperon-producer article renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:BJtnxTr0fRcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 493,
+          "author_pub_id": "LibSWRMAAAAJ:Ri6SYOTghG4C",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:Ri6SYOTghG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 494,
+          "author_pub_id": "LibSWRMAAAAJ:sfnaS5RM6jYC",
+          "reason": "Possible related source renderings (NMC structure-function ratio renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:sfnaS5RM6jYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 495,
+          "author_pub_id": "LibSWRMAAAAJ:SrKkpNFED5gC",
+          "reason": "Saved title is very close to another same-year observation; verify the article, chapter, preprint, or proxy relationship before mapping either.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:SrKkpNFED5gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 496,
+          "author_pub_id": "LibSWRMAAAAJ:LhH-TYMQEocC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:LhH-TYMQEocC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 497,
+          "author_pub_id": "LibSWRMAAAAJ:_FM0Bhl9EiAC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:_FM0Bhl9EiAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 498,
+          "author_pub_id": "LibSWRMAAAAJ:z_wVstp3MssC",
+          "reason": "Saved Carnegie Mellon record appears to be an institutional report; identify the exact report and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:z_wVstp3MssC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 499,
+          "author_pub_id": "LibSWRMAAAAJ:txeM2kYbVNMC",
+          "reason": "Possible related source renderings (NMC helium-carbon-calcium ratio renderings); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:txeM2kYbVNMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 500,
+          "author_pub_id": "LibSWRMAAAAJ:L7CI7m0gUJcC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=400&pagesize=100&citation_for_view=LibSWRMAAAAJ:L7CI7m0gUJcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 501,
+          "author_pub_id": "LibSWRMAAAAJ:QoJ_w57xiyAC",
+          "reason": "Possible related source renderings (Gottfried sum journal and archive rendering); verify exact primary work identity, byline, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:QoJ_w57xiyAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 502,
+          "author_pub_id": "LibSWRMAAAAJ:4E1Y8I9HL1wC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:4E1Y8I9HL1wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 503,
+          "author_pub_id": "LibSWRMAAAAJ:ruyezt5ZtCIC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:ruyezt5ZtCIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 505,
+          "author_pub_id": "LibSWRMAAAAJ:_5tno0g5mFcC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:_5tno0g5mFcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 506,
+          "author_pub_id": "LibSWRMAAAAJ:kuK5TVdYjLIC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 507,
+          "author_pub_id": "LibSWRMAAAAJ:ILKRHgRFtOwC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:ILKRHgRFtOwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 508,
+          "author_pub_id": "LibSWRMAAAAJ:OcBU2YAGkTUC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 509,
+          "author_pub_id": "LibSWRMAAAAJ:lK9BDNCuzFgC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:lK9BDNCuzFgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 510,
+          "author_pub_id": "LibSWRMAAAAJ:0N-VGjzr574C",
+          "reason": "Saved Carnegie Mellon record appears to be an institutional report; identify the exact report and output type before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 511,
+          "author_pub_id": "LibSWRMAAAAJ:BFa5h04uPMwC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:BFa5h04uPMwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 512,
+          "author_pub_id": "LibSWRMAAAAJ:KUbvn5osdkgC",
+          "reason": "Saved title and year also occur in capture row(s) 225; resolve the exact source-native identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:KUbvn5osdkgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 513,
+          "author_pub_id": "LibSWRMAAAAJ:_mQi-xiA4oYC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:_mQi-xiA4oYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 514,
+          "author_pub_id": "LibSWRMAAAAJ:pRWBApOjXDcC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:pRWBApOjXDcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 515,
+          "author_pub_id": "LibSWRMAAAAJ:1EqfMoDn7-AC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:1EqfMoDn7-AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 516,
+          "author_pub_id": "LibSWRMAAAAJ:OzeSX8-yOCQC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:OzeSX8-yOCQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 517,
+          "author_pub_id": "LibSWRMAAAAJ:ALROH1vI_8AC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:ALROH1vI_8AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 518,
+          "author_pub_id": "LibSWRMAAAAJ:lgwcVrK6X84C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:lgwcVrK6X84C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 519,
+          "author_pub_id": "LibSWRMAAAAJ:E8ajGqO0XoUC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:E8ajGqO0XoUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 520,
+          "author_pub_id": "LibSWRMAAAAJ:yIeBiWEAh44C",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:yIeBiWEAh44C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 521,
+          "author_pub_id": "LibSWRMAAAAJ:adHtZc2wMuEC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:adHtZc2wMuEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 522,
+          "author_pub_id": "LibSWRMAAAAJ:BzfGm06jWhQC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:BzfGm06jWhQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 523,
+          "author_pub_id": "LibSWRMAAAAJ:zCSUwVk65WsC",
+          "reason": "Saved citation is a conference contribution, book chapter, or session summary with unresolved source-native byline or output grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:zCSUwVk65WsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 524,
+          "author_pub_id": "LibSWRMAAAAJ:zdjWy_NXXwUC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:zdjWy_NXXwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 525,
+          "author_pub_id": "LibSWRMAAAAJ:HIFyuExEbWQC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:HIFyuExEbWQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 526,
+          "author_pub_id": "LibSWRMAAAAJ:foquWX3nUaYC",
+          "reason": "Saved record is an archive rendering, proceedings contribution, or technical variant; verify its exact source-native locator, byline, and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:foquWX3nUaYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 527,
+          "author_pub_id": "LibSWRMAAAAJ:oldoQiaHq2UC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:oldoQiaHq2UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 528,
+          "author_pub_id": "LibSWRMAAAAJ:VnuxuLaQPLMC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:VnuxuLaQPLMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 529,
+          "author_pub_id": "LibSWRMAAAAJ:M0j1y4EgrScC",
+          "reason": "German economic-history record is credited to R. or Reinhard Schumacher; a primary author identity link to CMU physicist Reinhard A. Schumacher is not established. Hold without a false-attribution claim.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:M0j1y4EgrScC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 530,
+          "author_pub_id": "LibSWRMAAAAJ:uPCvBZYD9qUC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:uPCvBZYD9qUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 533,
+          "author_pub_id": "LibSWRMAAAAJ:WWeOtg8bX_EC",
+          "reason": "Saved item is an erratum, publisher note, comment, preface, photo, or session summary; establish its distinct output type and map grain.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:WWeOtg8bX_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 534,
+          "author_pub_id": "LibSWRMAAAAJ:hvmnpdAuIbkC",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:hvmnpdAuIbkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 535,
+          "author_pub_id": "LibSWRMAAAAJ:ZzlSgRqYykMC",
+          "reason": "Saved citation has no year; verify the primary record and output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:ZzlSgRqYykMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 536,
+          "author_pub_id": "LibSWRMAAAAJ:mlAyqtXpCwEC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:mlAyqtXpCwEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 537,
+          "author_pub_id": "LibSWRMAAAAJ:6ZxmRoH8BuwC",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:6ZxmRoH8BuwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 538,
+          "author_pub_id": "LibSWRMAAAAJ:NXb4pA-qfm4C",
+          "reason": "Saved citation may be a technical report, thesis, or institutional document; verify its source-native record and map-point policy.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:NXb4pA-qfm4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 540,
+          "author_pub_id": "LibSWRMAAAAJ:5qfkUJPXOUwC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:5qfkUJPXOUwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 543,
+          "author_pub_id": "LibSWRMAAAAJ:e_rmSamDkqQC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LibSWRMAAAAJ&cstart=500&pagesize=100&citation_for_view=LibSWRMAAAAJ:e_rmSamDkqQC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }

@@ -320,11 +320,13 @@
     {
       "person_id": "person-reinhardschumacher-35cd3c6f",
       "scholar_id": "LibSWRMAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 543,
       "cache_sha256": "92582205fb5c2ef056318bba801c4eb5a957265ef4c92f32a0e8f539a0e67d23",
-      "reason": "Complete 543-row Physics capture is bound to saved source and cache hashes. The exact CMS/CLAS map-quality review remains held; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 543-row Physics source is bound to saved capture and cache hashes. Twenty-six exact reviewed exclusions and 258 exact provisional holds protect unresolved observations; 259 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 258,
+      "provisional_hold_ids_sha256": "fdf6da3d4ac0ae5ecc32eb23f513811945bfd54cf3338e03ed9231aa78e35759"
     },
     {
       "person_id": "person-subhardas-42cf6c1e",
