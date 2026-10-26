@@ -1,0 +1,734 @@
+{
+  "captured_at": "2026-10-26T19:23:06.472018+00:00",
+  "url": "https://scholar.google.com/citations?user=LUe32ToAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪Andrea Bajcsy‬ - ‪Google Scholar‬",
+  "scholar_user_id": "LUe32ToAAAAJ",
+  "person_name": "Andrea Bajcsy",
+  "displayed_count": 80,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 1,
+  "works": [
+    {
+      "index": 1,
+      "title": "Learning robot objectives from physical human interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:IjCSPb-OGe4C",
+      "authors": "A Bajcsy, DP Losey, MK O’malley, AD Dragan",
+      "venue": "Conference on robot learning, 217-226, 2017",
+      "citation_count": "230",
+      "year": "2017"
+    },
+    {
+      "index": 2,
+      "title": "Confidence-aware motion prediction for real-time collision avoidance1",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:_FxGoFyzp5QC",
+      "authors": "D Fridovich-Keil, A Bajcsy, JF Fisac, SL Herbert, S Wang, AD Dragan, ...",
+      "venue": "The International Journal of Robotics Research 39 (2-3), 250-265, 2020",
+      "citation_count": "218",
+      "year": "2020"
+    },
+    {
+      "index": 3,
+      "title": "Probabilistically safe robot planning with confidence-based human predictions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "JF Fisac, A Bajcsy, SL Herbert, D Fridovich-Keil, S Wang, CJ Tomlin, ...",
+      "venue": "Robotics: Science and Systems, 2018",
+      "citation_count": "198",
+      "year": "2018"
+    },
+    {
+      "index": 4,
+      "title": "An efficient reachability-based framework for provably safe autonomous navigation in unknown environments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:ufrVoPGSRksC",
+      "authors": "A Bajcsy, S Bansal, E Bronstein, V Tolani, CJ Tomlin",
+      "venue": "2019 IEEE 58th Conference on Decision and Control (CDC), 1758-1765, 2019",
+      "citation_count": "162",
+      "year": "2019"
+    },
+    {
+      "index": 5,
+      "title": "Learning from physical human corrections, one feature at a time",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:zYLM7Y9cAGgC",
+      "authors": "A Bajcsy, DP Losey, MK O'Malley, AD Dragan",
+      "venue": "Proceedings of the 2018 ACM/IEEE International Conference on Human-Robot …, 2018",
+      "citation_count": "156",
+      "year": "2018"
+    },
+    {
+      "index": 6,
+      "title": "A scalable framework for real-time multi-robot, multi-human collision avoidance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:eQOLeE2rZwMC",
+      "authors": "A Bajcsy, SL Herbert, D Fridovich-Keil, JF Fisac, S Deglurkar, AD Dragan, ...",
+      "venue": "2019 international conference on robotics and automation (ICRA), 936-943, 2019",
+      "citation_count": "108",
+      "year": "2019"
+    },
+    {
+      "index": 7,
+      "title": "Physical interaction as communication: Learning robot objectives online from human corrections",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:8k81kl-MbHgC",
+      "authors": "DP Losey, A Bajcsy, MK O’Malley, AD Dragan",
+      "venue": "The International Journal of Robotics Research 41 (1), 20-44, 2022",
+      "citation_count": "102",
+      "year": "2022"
+    },
+    {
+      "index": 8,
+      "title": "Conformal decision theory: Safe autonomous decisions from imperfect predictions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:aqlVkmm33-oC",
+      "authors": "J Lekeufack, AN Angelopoulos, A Bajcsy, MI Jordan, J Malik",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 11668 …, 2024",
+      "citation_count": "98",
+      "year": "2024"
+    },
+    {
+      "index": 9,
+      "title": "Safety assurances for human-robot interaction via confidence-aware game-theoretic human models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:kNdYIx-mwKoC",
+      "authors": "R Tian, L Sun, A Bajcsy, M Tomizuka, AD Dragan",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 11229-11235, 2022",
+      "citation_count": "93",
+      "year": "2022"
+    },
+    {
+      "index": 10,
+      "title": "From foresight to forethought: Vlm-in-the-loop policy steering via latent alignment",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:RHpTSmoSYBkC",
+      "authors": "Y Wu, R Tian, G Swamy, A Bajcsy",
+      "venue": "Robotics: Science and Systems, 2025",
+      "citation_count": "90",
+      "year": "2025"
+    },
+    {
+      "index": 11,
+      "title": "Generalizing safety beyond collision-avoidance via latent-space reachability analysis",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:_Qo2XoVZTnwC",
+      "authors": "K Nakamura, L Peters, A Bajcsy",
+      "venue": "Robotics: Science and Systems, 2025",
+      "citation_count": "87",
+      "year": "2025"
+    },
+    {
+      "index": 12,
+      "title": "Contingency games for multi-agent interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:_kc_bZDykSQC",
+      "authors": "L Peters, A Bajcsy, CY Chiu, D Fridovich-Keil, F Laine, L Ferranti, ...",
+      "venue": "IEEE Robotics and Automation Letters 9 (3), 2208-2215, 2024",
+      "citation_count": "79",
+      "year": "2024"
+    },
+    {
+      "index": 13,
+      "title": "Quantifying hypothesis space misspecification in learning from human-robot demonstrations and physical corrections",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:UebtZRa9Y70C",
+      "authors": "A Bobu, A Bajcsy, JF Fisac, S Deglurkar, AD Dragan",
+      "venue": "arXiv preprint arXiv:2002.00941, 2020",
+      "citation_count": "68",
+      "year": "2020"
+    },
+    {
+      "index": 14,
+      "title": "A review of principles in design and usability testing of tactile technology for individuals with visual impairments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:9yKSN-GCB0IC",
+      "authors": "EL Horton, R Renganathan, BN Toth, AJ Cohen, AV Bajcsy, A Bateman, ...",
+      "venue": "Assistive technology 29 (1), 28-36, 2017",
+      "citation_count": "67",
+      "year": "2017"
+    },
+    {
+      "index": 15,
+      "title": "A user-centered design and analysis of an electrostatic haptic touchscreen system for students with visual impairments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:qjMakFHDy7sC",
+      "authors": "A Bateman, OK Zhao, AV Bajcsy, MC Jennings, BN Toth, AJ Cohen, ...",
+      "venue": "International Journal of Human-Computer Studies 109, 102-111, 2018",
+      "citation_count": "66",
+      "year": "2018"
+    },
+    {
+      "index": 16,
+      "title": "A hamilton-jacobi reachability-based framework for predicting and analyzing human motion for safe planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:roLk4NBRz8UC",
+      "authors": "S Bansal, A Bajcsy, E Ratner, AD Dragan, CJ Tomlin",
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 7149-7155, 2020",
+      "citation_count": "65",
+      "year": "2020"
+    },
+    {
+      "index": 17,
+      "title": "Learning under misspecified objective spaces",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:W7OEmFMy1HYC",
+      "authors": "A Bobu, A Bajcsy, JF Fisac, AD Dragan",
+      "venue": "Conference on Robot Learning, 796-805, 2018",
+      "citation_count": "59",
+      "year": "2018"
+    },
+    {
+      "index": 18,
+      "title": "A robust control framework for human motion prediction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:hqOjcs7Dif8C",
+      "authors": "A Bajcsy, S Bansal, E Ratner, CJ Tomlin, AD Dragan",
+      "venue": "IEEE Robotics and Automation Letters 6 (1), 24-31, 2020",
+      "citation_count": "47",
+      "year": "2020"
+    },
+    {
+      "index": 19,
+      "title": "Towards modeling and influencing the dynamics of human learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:YOwf2qJgpHMC",
+      "authors": "R Tian, M Tomizuka, AD Dragan, A Bajcsy",
+      "venue": "Proceedings of the 2023 ACM/IEEE international conference on human-robot …, 2023",
+      "citation_count": "44",
+      "year": "2023"
+    },
+    {
+      "index": 20,
+      "title": "Uncertainty-aware latent safety filters for avoiding out-of-distribution failures",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:j3f4tGmQtD8C",
+      "authors": "J Seo, K Nakamura, A Bajcsy",
+      "venue": "Conference on Robot Learning (CoRL), 2025",
+      "citation_count": "40",
+      "year": "2025"
+    },
+    {
+      "index": 21,
+      "title": "Learning vision-based pursuit-evasion robot policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:M3ejUd6NZC8C",
+      "authors": "A Bajcsy, A Loquercio, A Kumar, J Malik",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 9197-9204, 2024",
+      "citation_count": "39",
+      "year": "2024"
+    },
+    {
+      "index": 22,
+      "title": "Analyzing human models that adapt online",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:5nxA0vEk-isC",
+      "authors": "A Bajcsy, A Siththaranjan, CJ Tomlin, AD Dragan",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 2754-2760, 2021",
+      "citation_count": "36",
+      "year": "2021"
+    },
+    {
+      "index": 23,
+      "title": "Deception game: Closing the safety-learning loop in interactive robot autonomy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:qxL8FJ1GzNcC",
+      "authors": "H Hu, Z Zhang, K Nakamura, A Bajcsy, JF Fisac",
+      "venue": "7th Annual Conference on Robot Learning, 2023",
+      "citation_count": "35",
+      "year": "2023"
+    },
+    {
+      "index": 24,
+      "title": "Do what you say: Steering vision-language-action models via runtime reasoning-action alignment verification",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:blknAaTinKkC",
+      "authors": "Y Wu, A Li, T Hermans, F Ramos, A Bajcsy, C PÃŠrez-D'Arpino",
+      "venue": "IEEE International Conference on Robotics & Automation, 2026",
+      "citation_count": "29",
+      "year": "2026"
+    },
+    {
+      "index": 25,
+      "title": "Updating robot safety representations online from natural language feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:hC7cP41nSMkC",
+      "authors": "L Santos, Z Li, L Peters, S Bansal, A Bajcsy",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 7778-7785, 2025",
+      "citation_count": "21",
+      "year": "2025"
+    },
+    {
+      "index": 26,
+      "title": "Towards robots that influence humans over long-term interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:Zph67rFs4hoC",
+      "authors": "S Sagheb, YJ Mun, N Ahmadian, BA Christie, A Bajcsy, ...",
+      "venue": "IEEE International Conference on Robotics & Automation, 2023",
+      "citation_count": "20",
+      "year": "2023"
+    },
+    {
+      "index": 27,
+      "title": "Conformalized interactive imitation learning: Handling expert shift and intermittent feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:mB3voiENLucC",
+      "authors": "M Zhao, H Admoni, R Simmons, A Ramdas, A Bajcsy",
+      "venue": "International Conference on Learning Representations 2025, 9238-9251, 2025",
+      "citation_count": "19",
+      "year": "2025"
+    },
+    {
+      "index": 28,
+      "title": "What matters to you? towards visual representation alignment for robot learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:4DMP91E08xMC",
+      "authors": "T Tian, C Xu, M Tomizuka, J Malik, A Bajcsy",
+      "venue": "International Conference on Learning Representations 2024, 29609-29628, 2024",
+      "citation_count": "19",
+      "year": "2024"
+    },
+    {
+      "index": 29,
+      "title": "Human-ai safety: A descendant of generative ai and control systems safety",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:7PzlFSSx8tAC",
+      "authors": "A Bajcsy, JF Fisac",
+      "venue": "arXiv preprint arXiv:2405.09794, 2024",
+      "citation_count": "17",
+      "year": "2024"
+    },
+    {
+      "index": 30,
+      "title": "AnySafe: Adapting Latent Safety Filters at Runtime via Safety Constraint Parameterization in the Latent Space",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:maZDTaKrznsC",
+      "authors": "S Agrawal, J Seo, K Nakamura, R Tian, A Bajcsy",
+      "venue": "IEEE International Conference on Robotics & Automation, 2026",
+      "citation_count": "15",
+      "year": "2026"
+    },
+    {
+      "index": 31,
+      "title": "Robots that learn to safely influence via prediction-informed reach-avoid dynamic games",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:qUcmZB5y_30C",
+      "authors": "R Pandya, C Liu, A Bajcsy",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 14330 …, 2025",
+      "citation_count": "15",
+      "year": "2025"
+    },
+    {
+      "index": 32,
+      "title": "How to Train Your Latent Control Barrier Function: Smooth Safety Filtering Under Hard-to-Model Constraints",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:YFjsv_pBGBYC",
+      "authors": "K Nakamura, AL Bishop, S Man, AM Johnson, Z Manchester, A Bajcsy",
+      "venue": "8th Annual Learning for Dynamics & Control Conference, 2026",
+      "citation_count": "14",
+      "year": "2026"
+    },
+    {
+      "index": 33,
+      "title": "Conformalized teleoperation: Confidently mapping human inputs to high-dimensional robot actions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:L8Ckcad2t8MC",
+      "authors": "M Zhao, R Simmons, H Admoni, A Bajcsy",
+      "venue": "Robotics: Science and Systems, 2025",
+      "citation_count": "14",
+      "year": "2025"
+    },
+    {
+      "index": 34,
+      "title": "Maximizing alignment with minimal feedback: Efficiently learning rewards for visuomotor robot policy alignment",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:R3hNpaxXUhUC",
+      "authors": "R Tian, Y Wu, C Xu, M Tomizuka, J Malik, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2412.04835, 2024",
+      "citation_count": "12",
+      "year": "2024"
+    },
+    {
+      "index": 35,
+      "title": "StROL: Stabilized and robust online learning from humans",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:4TOpqqG69KYC",
+      "authors": "SA Mehta, F Meng, A Bajcsy, DP Losey",
+      "venue": "IEEE Robotics and Automation Letters 9 (3), 2303-2310, 2024",
+      "citation_count": "11",
+      "year": "2024"
+    },
+    {
+      "index": 36,
+      "title": "Adaptive Human Trajectory Prediction via Latent Corridors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:mVmsd5A6BfQC",
+      "authors": "N Thakkar, K Mangalam, A Bajcsy, J Malik",
+      "venue": "European Conference on Computer Vision, 297-314, 2024",
+      "citation_count": "10",
+      "year": "2024"
+    },
+    {
+      "index": 37,
+      "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:GnPB-g6toBAC",
+      "authors": "J Yuan, Y Wu, A Bajcsy",
+      "venue": "Robotics: Science and Systems, 2026",
+      "citation_count": "9",
+      "year": "2026"
+    },
+    {
+      "index": 38,
+      "title": "A unified framework for robots that influence humans over long-term interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:4JMBOYKVnBMC",
+      "authors": "S Sagheb, S Parekh, R Pandya, YJ Mun, K Driggs-Campbell, A Bajcsy, ...",
+      "venue": "arXiv preprint arXiv:2503.14633, 2025",
+      "citation_count": "9",
+      "year": "2025"
+    },
+    {
+      "index": 39,
+      "title": "Systematic measurement of marginal mark types on voting ballots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:2osOgNQ5qMEC",
+      "authors": "A Bajcsy, YS Li-Baboud, M Brady",
+      "venue": "Technicalreport, National Institute for Standards and Technology, Tech. Rep, 2015",
+      "citation_count": "9",
+      "year": "2015"
+    },
+    {
+      "index": 40,
+      "title": "Position: Good embodied reward models need bad behavior data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:BqipwSGYUEgC",
+      "authors": "R Tian, Y Wu, A Bajcsy",
+      "venue": "International Conference on Machine Learning, 2026",
+      "citation_count": "8",
+      "year": "2026"
+    },
+    {
+      "index": 41,
+      "title": "Reimagination with test-time observation interventions: Distractor-robust world model predictions for visual model predictive control",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:TFP_iSt0sucC",
+      "authors": "Y Chen, J Wei, C Xu, B Li, M Tomizuka, A Bajcsy, R Tian",
+      "venue": "IEEE International Conference on Robotics & Automation, 2026",
+      "citation_count": "8",
+      "year": "2026"
+    },
+    {
+      "index": 42,
+      "title": "Towards data-driven synthesis of autonomous vehicle safety concepts",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:MXK_kJrjxJIC",
+      "authors": "K Leung, A Bajcsy, E Schmerling, M Pavone",
+      "venue": "arXiv preprint arXiv:2107.14412, 2021",
+      "citation_count": "8",
+      "year": "2021"
+    },
+    {
+      "index": 43,
+      "title": "From Refusal to Recovery: A Control-Theoretic Approach to Generative AI Guardrails",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:JV2RwH3_ST0C",
+      "authors": "R Pandya, M Bland, DP Nguyen, C Liu, JF Fisac, A Bajcsy",
+      "venue": "International Association for Safe and Ethical AI (IASEAI), 2025",
+      "citation_count": "7",
+      "year": "2025"
+    },
+    {
+      "index": 44,
+      "title": "Adapting by analogy: OOD Generalization of visuomotor policies via functional correspondence",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:bEWYMUwI8FkC",
+      "authors": "P Gupta, H Admoni, A Bajcsy",
+      "venue": "Conference on Robot Learning (CoRL), 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 45,
+      "title": "UNISafe: Uncertainty-aware latent safety filters for avoiding out-of-distribution failures",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:isC4tDSrTZIC",
+      "authors": "J Seo, K Nakamura, A Bajcsy",
+      "venue": "Second Workshop on Out-of-Distribution Generalization in Robotics at RSS 2025, 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 46,
+      "title": "Your learned constraint is secretly a backward reachable tube",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:e5wmG9Sq2KIC",
+      "authors": "M Qadri, G Swamy, J Francis, M Kaess, A Bajcsy",
+      "venue": "Reinforcement Learning Conference, 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 47,
+      "title": "Not All Errors Are Made Equal: A Regret Metric for Detecting System-level Trajectory Prediction Failures",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:QIV2ME_5wuYC",
+      "authors": "K Nakamura, R Tian, A Bajcsy",
+      "venue": "8th Annual Conference on Robot Learning, 2024",
+      "citation_count": "6",
+      "year": "2024"
+    },
+    {
+      "index": 48,
+      "title": "WEAVER, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:lSLTfruPkqcC",
+      "authors": "AK Jain, Y Wu, J Farebrother, G Swamy, A Bajcsy",
+      "venue": "arXiv e-prints, arXiv: 2606.13672, 2026",
+      "citation_count": "5",
+      "year": "2026"
+    },
+    {
+      "index": 49,
+      "title": "Robots that suggest safe alternatives",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:IWHjjKOFINEC",
+      "authors": "HJ Jeong, R Chen, A Bajcsy",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "5",
+      "year": "2025"
+    },
+    {
+      "index": 50,
+      "title": "ELASTIC: Efficiently Learning to Adaptively Scale Test-Time Compute for Generative Control Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:RYcK_YlVTxYC",
+      "authors": "AZ Li, G Swamy, Y Bisk, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2606.31132, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 51,
+      "title": "StressDream: Steering Video World Models for Robust Policy Evaluation and Improvement",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:ns9cj8rnVeAC",
+      "authors": "J Seo, S Veer, R Tian, W Ding, A Sharma, K Leung, E Schmerling, ...",
+      "venue": "arXiv preprint arXiv:2606.00267, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 52,
+      "title": "On the Fine-Grained Planning Abilities of VLM Web Agents.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:NMxIlDl6LWMC",
+      "authors": "S Jandial, YO Wang, A Bajcsy, F De la Torre",
+      "venue": "EMNLP (Findings), 25347-25380, 2025",
+      "citation_count": "4",
+      "year": "2025"
+    },
+    {
+      "index": 53,
+      "title": "Intent demonstration in general-sum dynamic games via iterative linear-quadratic approximations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:9ZlFYXVOiuMC",
+      "authors": "J Li, A Siththaranjan, S Sojoudi, C Tomlin, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2402.10182, 2024",
+      "citation_count": "4",
+      "year": "2024"
+    },
+    {
+      "index": 54,
+      "title": "Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:RGFaLdJalmkC",
+      "authors": "HJ Jeong, G Swamy, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2606.12299, 2026",
+      "citation_count": "3",
+      "year": "2026"
+    },
+    {
+      "index": 55,
+      "title": "How Well Do Latent World Models Understand Partially Observable Safety Constraints?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:M3NEmzRMIkIC",
+      "authors": "M Kim, K Nakamura, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2510.06492, 2025",
+      "citation_count": "3",
+      "year": "2025"
+    },
+    {
+      "index": 56,
+      "title": "Efficient Dynamics Estimation With Adaptive Model Sets",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:0EnyYjriUFMC",
+      "authors": "E Ratner, A Bajcsy, T Fong, CJ Tomlin, AD Dragan",
+      "venue": "IEEE robotics and automation letters 6 (2), 2373-2380, 2021",
+      "citation_count": "3",
+      "year": "2021"
+    },
+    {
+      "index": 57,
+      "title": "Inference-time Policy Steering via Vision and Touch",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:J_g5lzvAfSwC",
+      "authors": "Y Wu, Z Si, Z Temel, O Kroemer, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2606.14981, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 58,
+      "title": "Agent-to-sim: Learning interactive behavior models from casual longitudinal videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:HDshCWvjkbEC",
+      "authors": "G Yang, A Bajcsy, S Saito, A Kanazawa",
+      "venue": "International Conference on Learning Representations 2025, 69395-69417, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 59,
+      "title": "Rethinking safety for generalist robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:35N4QoGY0k4C",
+      "authors": "R Sinha, A Dixit, R Tian, A Majumdar, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2609.06326, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 60,
+      "title": "Coordinated Diffusion: Generating Multi-Agent Behavior Without Multi-Agent Demonstrations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:O3NaXMp0MMsC",
+      "authors": "L Peters, L Ferranti, A Bajcsy, J Alonso-Mora",
+      "venue": "arXiv preprint arXiv:2605.11485, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 61,
+      "title": "Bridging Safety and Learning in Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:ULOm3_A8WrAC",
+      "authors": "AV Bajcsy",
+      "venue": "University of California, Berkeley, 2022",
+      "citation_count": "1",
+      "year": "2022"
+    },
+    {
+      "index": 62,
+      "title": "Robotics for People: Perspectives on Interaction, Learning and Safety",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:3fE2CSJIrl8C",
+      "authors": "A Aly, A Bajcsy, A Schoellig, D Fridovich-Keil, F Correia, K Baraka, ...",
+      "venue": "",
+      "citation_count": "1",
+      "year": "2021"
+    },
+    {
+      "index": 63,
+      "title": "Depicting web images for the blind and visually impaired",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:u5HHmVD_uO8C",
+      "authors": "A Bajcsy, YS Li-Baboud, M Brady",
+      "venue": "SPIE website, 2013",
+      "citation_count": "1",
+      "year": "2013"
+    },
+    {
+      "index": 64,
+      "title": "Memory Without Curation: Learning Multi-Stream Latent Memory for Robot Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:ldfaerwXgEUC",
+      "authors": "Y Wu, R Shah, S Huang, SA Sontakke, H Bharadhwaj, A Bajcsy, ...",
+      "venue": "arXiv preprint arXiv:2610.14406, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 65,
+      "title": "Modeling Latent Disturbances for Robust Decision-Making in World Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:2P1L_qKh6hAC",
+      "authors": "J Seo, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2610.07599, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 66,
+      "title": "What Does Safety Mean for Generalist Robots?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:70eg2SAEIzsC",
+      "authors": "A Bajcsy",
+      "venue": "Georgia Institute of Technology, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 67,
+      "title": "\\texttt{WEAVER}, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:NaGl4SEjCO4C",
+      "authors": "AK Jain, Y Wu, J Farebrother, G Swamy, A Bajcsy",
+      "venue": "arXiv preprint arXiv:2606.13672, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 68,
+      "title": "CAREER: Formalizing Open World Safety for Interactive Robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:r0BpntZqJG4C",
+      "authors": "A Bajcsy",
+      "venue": "NSF Award Number 2441014. Directorate for Engineering 24 (2441014), 41014, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 69,
+      "title": "Agent-to-Sim: Learning Interactive Behavior from Casual Videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:hMod-77fHWUC",
+      "authors": "G Yang, A Bajcsy, A Kanazawa, S Saito",
+      "venue": "International Conference on Learning Representations (ICLR), 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 70,
+      "title": "Collaborative Research: Robots that Influence Human Behavior across Long-Term Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:iH-uZ7U-co4C",
+      "authors": "A Bajcsy",
+      "venue": "NSF Award Number 2246447. Directorate for Engineering 22 (2246447), 46447, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 71,
+      "title": "A Haptic System for Depicting Mathematical Graphics for Students with Visual Impairments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:d1gkVwhDpl0C",
+      "authors": "A Bajcsy, A Bateman, A Cohen, E Horton, M Jennings, A Khattar, R Kuo, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": "2016"
+    },
+    {
+      "index": 72,
+      "title": "Embodied AI Needs Interpretability",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:vV6vV6tmYwMC",
+      "authors": "S Joseph, A Bajcsy, J Ferrando, C Last, T MacMillan, C Venhoff, ...",
+      "venue": "1st IJCAI Workshop on Safe Physical AI, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 73,
+      "title": "Supplementary Material: Adaptive Human Trajectory Prediction via Latent Corridors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:hFOr9nPyWt4C",
+      "authors": "N Thakkar, K Mangalam, A Bajcsy, J Malik",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 74,
+      "title": "Learning Interactive Behavior from Casual Videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:-f6ydRqryjwC",
+      "authors": "G Yang, A Bajcsy, A Kanazawa, S Saito",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 75,
+      "title": "An Optimal Control Approach to Graphic Design",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:dhFuZR0502QC",
+      "authors": "A Bajcsy",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 76,
+      "title": "From Web Graphics to 3D Haptics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:Se3iqnhoufwC",
+      "authors": "A Bajcsy, YS Li-Baboud, M Brady",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 77,
+      "title": "Relating Quantitative Measurements to Human Assessments of Voting Ballot Mark Types",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:LkGwnXOMwfcC",
+      "authors": "A Bajcsy, YS Li-Baboud, M Brady",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 78,
+      "title": "Scalable Confidence-Aware Safety Analysis for Robot Planning around Multiple Humans",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:YsMSGLbcyi4C",
+      "authors": "JF Fisac, D Fridovich-Keil, A Bajcsy, S Herbert, S Deglurkar, C Tomlin, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 79,
+      "title": "Confidence-Aware Safety for Human-Robot Systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:Y0pCki6q_DkC",
+      "authors": "J Fisac, A Bajcsy, SHDFK Steven, WCTA Dragan",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 80,
+      "title": "Electronic Imaging & Signal Processing Depicting Web images for the blind and visually impaired",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LUe32ToAAAAJ&pagesize=100&citation_for_view=LUe32ToAAAAJ:u-x6o8ySG0sC",
+      "authors": "A Bajcsy, YS Li-Baboud, M Brady",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}
