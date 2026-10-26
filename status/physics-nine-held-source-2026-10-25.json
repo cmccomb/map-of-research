@@ -87,7 +87,11 @@
       "source_html_path": "data/captures/physics-scott-dodelson-2026-10-24.html",
       "source_html_sha256": "1446204e70aa523385b4a760dc603cab0039a56e7f583199f40f3fbc8ee6effe",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "reviewed_for_paired_release",
+      "paired_release_review_path": "status/physics-dodelson-release-review-2026-10-26.json",
+      "reviewed_exclusion_count": 6,
+      "provisional_hold_count": 161,
+      "ordinary_gate_rows": 276
     },
     {
       "scholar_id": "wex9ft0AAAAJ",
