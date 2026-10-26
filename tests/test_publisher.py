@@ -1749,7 +1749,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(publisher, "load_profile_releases", lambda path: ())
     monkeypatch.setattr(publisher, "load_provisional_holds", lambda path: ())
     chemistry_calls = []
-    chemistry_active = bio_intent and reuse_order
+    chemistry_candidate_options = []
+    chemistry_active = bio_intent
     monkeypatch.setattr(
         publisher,
         "needs_chemistry_continuity",
@@ -1777,7 +1778,10 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     monkeypatch.setattr(
         publisher,
         "validate_chemistry_candidate",
-        lambda tables, state, **kwargs: chemistry_calls.append("candidate"),
+        lambda tables, state, **kwargs: (
+            chemistry_calls.append("candidate")
+            or chemistry_candidate_options.append(kwargs)
+        ),
     )
     monkeypatch.setattr(
         publisher,
@@ -2012,6 +2016,12 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         assert chemistry_calls.count("historical_counts") == (
             2 if publisher.CHEMISTRY_HUB_REVISION == "a" * 40 else 0
         )
+        assert chemistry_candidate_options == [
+            {
+                "allow_region_refit": not reuse_order,
+                "require_count_parity": False,
+            }
+        ]
     assert baseline_checks == (["a" * 40, "a" * 40] if pinned else [])
     assert published_revisions == (
         [

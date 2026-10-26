@@ -86,118 +86,9 @@ POST_BIO_WORK_FIELDS = frozenset(
 )
 POST_BIO_PERSON_FIELDS = frozenset({"publication_hold_reason"})
 POST_BIO_REGION_AUDIT_VERSION = "low-information-semantic-region-v3"
-# Values are pinned to published Hub revision 211cdbc, not the earlier Bio preview.
-# The published 8dcc024f row has this override set to false.
-POST_BIO_PRIOR_ELIGIBLE_WORK_IDS = frozenset(
-    {
-        "work-2b4a1b0c1ba3c97a3a59cdeff547ee405ba08c3eb3801f5a2451931e1f7487f2",
-        "work-7cf42c9fd2912068c1a0198c94b9ca19f67cd16f4112f52c44b98a59a2c0662a",
-        "work-b29eec36af051204a05cc4120514d040740998193eb641d2bb90fde9fde1b7e8",
-        "work-dab872d55c3138e1e51fc1f7d6f959218b6772b130d46e4c3ff2540f9f0bdd60",
-        "work-df35fb5e533c0e0d2f295a5e0e4745259fdad2e9a190e78f189fd21ecd1fede9",
-    }
-)
-POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID = (
-    "work-f07078afd572186934d04127dcd8526c089e5089ad69b1c4504702ac49c4329b"
-)
-BIO_REGION_REFIT_PARENT = "211cdbcde850867ef9b5a81f7001f3b5b27425cc"
-BIO_REGION_REFIT_SOURCE_SHA256 = (
-    "d1ab914ec3fe57e30361fa6b01f30787b985e554e058faa01b32c6496e869ac6"
-)
-BIO_REGION_REFIT_FIELDS = frozenset(
+REGION_DIAGNOSTIC_FIELDS = frozenset(
     {"map_region_documented_override", "map_region_prior_eligible_override"}
 )
-MCS_PUBLISHED_PARENT = "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
-PHYSICS_FIVE_PUBLISHED_PARENT = "4e43639c091a4b826a4651eddc5aa0fe16129f0f"
-PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT = (
-    "42b30e512fb941a8cbe78d67399bd3771372cb68"
-)
-PHYSICS_HDF_PUBLISHED_PARENT = PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT
-MCS_DIAGNOSTIC_PARENT_REVISIONS = frozenset(
-    {
-        MCS_PUBLISHED_PARENT,
-        PHYSICS_FIVE_PUBLISHED_PARENT,
-        PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
-    }
-)
-# The immutable MCS parent retains the 19 reviewed Chemistry decisions. Its
-# full refit changed only these three derived diagnostics from the Bio parent.
-MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS = POST_BIO_PRIOR_ELIGIBLE_WORK_IDS | {
-    "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
-    "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
-}
-PHYSICS_HDF_PARENT_PRIOR_ELIGIBLE_WORK_IDS = MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS - {
-    "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
-}
-MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS = {
-    POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID,
-    "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
-}
-# The subsequent Hunt/Deserno/Feenstra release retained the reviewed Chemistry
-# rows, except that its fresh layout set this one prior-eligible diagnostic
-# back to false. The other parent diagnostics remain as published at 4e43639c.
-PHYSICS_HDF_PRIOR_ELIGIBLE_WORK_IDS = PHYSICS_HDF_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-PHYSICS_HDF_DAS_SNAPSHOT_SHA256 = (
-    "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1"
-)
-PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID = (
-    "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
-)
-MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
-    {
-        "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
-        "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
-    }
-)
-MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID = POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
-
-
-def allows_bio_region_refit(
-    *, prior_revision: str, source_sha256: str, layout_reused: bool
-) -> bool:
-    """Scope platform-dependent region diagnostics to one reviewed release."""
-
-    return (
-        not layout_reused
-        and prior_revision == BIO_REGION_REFIT_PARENT
-        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
-    )
-
-
-def allows_physics_five_region_refit(
-    *, prior_revision: str, source_sha256: str, layout_reused: bool
-) -> bool:
-    """Allow derived region diagnostics after the exact published Physics five."""
-
-    return (
-        not layout_reused
-        and prior_revision == PHYSICS_FIVE_PUBLISHED_PARENT
-        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
-    )
-
-
-def allows_mcs_parent_diagnostic_refit(
-    *, prior_revision: str, source_sha256: str, layout_reused: bool
-) -> bool:
-    """Recognize the exact published MCS parent and unchanged raw source."""
-
-    return (
-        not layout_reused
-        and prior_revision == MCS_PUBLISHED_PARENT
-        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
-    )
-
-
-def allows_physics_hdf_das_diagnostic_refit(
-    *, prior_revision: str, source_sha256: str, layout_reused: bool
-) -> bool:
-    """Limit the Das candidate to the existing exact Chemistry diagnostic losses."""
-
-    return (
-        not layout_reused
-        and prior_revision == PHYSICS_HDF_PUBLISHED_PARENT
-        and source_sha256 == PHYSICS_HDF_DAS_SNAPSHOT_SHA256
-    )
 
 
 def needs_chemistry_continuity(
@@ -546,31 +437,21 @@ def validate_chemistry_parent(
         label="person",
     )
     if post_bio_schema:
-        prior_eligible_ids = (
-            PHYSICS_HDF_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-            if prior_revision == PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT
-            else MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
-            if prior_revision in MCS_DIAGNOSTIC_PARENT_REVISIONS
-            else POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
-        )
-        documented_override_ids = (
-            MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
-            if prior_revision
-            in MCS_DIAGNOSTIC_PARENT_REVISIONS | {PHYSICS_HDF_PUBLISHED_PARENT}
-            else {POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID}
-        )
         for work_id, work in parent["works"].items():
             before = baseline["works"][work_id]
             if (
-                work["map_region_prior_eligible_override"]
-                is not (work_id in prior_eligible_ids)
-                or work["map_region_prior_excluded_override"] is not False
+                work["map_region_prior_excluded_override"] is not False
                 or work["map_region_audit_version"] != POST_BIO_REGION_AUDIT_VERSION
-                or work["map_region_documented_override"]
-                is not (
-                    True
-                    if work_id in documented_override_ids
-                    else before["map_region_documented_override"]
+                or any(
+                    type(work[field]) is not bool for field in REGION_DIAGNOSTIC_FIELDS
+                )
+                or (
+                    work_id in hidden
+                    and (
+                        work["map_region_prior_eligible_override"] is not False
+                        or work["map_region_documented_override"]
+                        != before["map_region_documented_override"]
+                    )
                 )
             ):
                 raise ValueError(
@@ -659,19 +540,11 @@ def validate_chemistry_candidate(
     *,
     require_count_parity: bool = False,
     allow_region_refit: bool = False,
-    allow_mcs_parent_diagnostic_refit: bool = False,
-    allow_physics_hdf_das_diagnostic_refit: bool = False,
 ) -> None:
     """Reject changes to reviewed Chemistry source and visibility decisions.
 
-    A full layout refit may change two derived region diagnostics for parent-
-    visible reviewed works across platforms. The caller pins the Bio or
-    Physics-five parent, unchanged source, and fresh layout. From the
-    published MCS parent, only two exact prior-eligible
-    diagnostics and one exact documented-region diagnostic may change from true
-    to false. The exact Physics HDF/Das pair may also turn off its one
-    documented-region diagnostic. Source, visibility, attribution, and
-    authorship stay exact.
+    A fresh layout may change two derived region diagnostics on parent-visible
+    reviewed works. Source, visibility, attribution, and authorship stay exact.
     """
 
     parent = parent_state["parent_rows"]
@@ -702,6 +575,14 @@ def validate_chemistry_candidate(
             if set(prior) - set(row) or (table != "works" and set(prior) != set(row)):
                 raise ValueError(f"Chemistry candidate {table} schema changed: {key}")
             for field in prior:
+                if (
+                    table == "works"
+                    and field in REGION_DIAGNOSTIC_FIELDS
+                    and type(_equal_value(row[field])) is not bool
+                ):
+                    raise ValueError(
+                        f"Chemistry candidate {table} changed: {key}: {field}"
+                    )
                 if field in excluded or _equal_value(prior[field]) == _equal_value(
                     row[field]
                 ):
@@ -710,39 +591,9 @@ def validate_chemistry_candidate(
                     table == "works"
                     and allow_region_refit
                     and key in parent["points"]
-                    and field in BIO_REGION_REFIT_FIELDS
+                    and field in REGION_DIAGNOSTIC_FIELDS
                     and type(_equal_value(prior[field])) is bool
                     and type(_equal_value(row[field])) is bool
-                ):
-                    continue
-                if (
-                    table == "works"
-                    and allow_mcs_parent_diagnostic_refit
-                    and key in MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES
-                    and key in parent["points"]
-                    and field == "map_region_prior_eligible_override"
-                    and _equal_value(prior[field]) is True
-                    and _equal_value(row[field]) is False
-                ):
-                    continue
-                if (
-                    table == "works"
-                    and allow_mcs_parent_diagnostic_refit
-                    and key == MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID
-                    and key in parent["points"]
-                    and field == "map_region_documented_override"
-                    and _equal_value(prior[field]) is True
-                    and _equal_value(row[field]) is False
-                ):
-                    continue
-                if (
-                    table == "works"
-                    and allow_physics_hdf_das_diagnostic_refit
-                    and key == PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID
-                    and key in parent["points"]
-                    and field == "map_region_documented_override"
-                    and _equal_value(prior[field]) is True
-                    and _equal_value(row[field]) is False
                 ):
                     continue
                 raise ValueError(f"Chemistry candidate {table} changed: {key}: {field}")
