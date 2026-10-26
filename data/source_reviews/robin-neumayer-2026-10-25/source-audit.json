@@ -1,0 +1,834 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-25T11:43:18.217055+00:00",
+  "person_id": "person-robinneumayer-a5f54a8c",
+  "person_name": "Robin Neumayer",
+  "primary_department": "math",
+  "scholar_id": null,
+  "scholar_identity_status": "unresolved",
+  "scholar_capture": false,
+  "map_ready": false,
+  "coverage_claim": "all_visible_researcher_site_sections_and_all_30_numbered_June_2026_CV_items_at_capture; not independently proven complete lifetime or current through Oct 2026",
+  "sources": [
+    {
+      "url": "https://www.cmu.edu/math/people/faculty/neumayer.html",
+      "kind": "official_identity",
+      "path": "official.html",
+      "sha256": "f226162b77ccf6d59fcca01ffd5aadeebbc61f61430a693f101179ec4965f1c8"
+    },
+    {
+      "url": "https://www.math.cmu.edu/~rneumaye/",
+      "kind": "author_site",
+      "path": "author-site.html",
+      "sha256": "2f1a748418141ebe13a1fabb7f35d72167cf19096cadc01785194b809c4cde1c",
+      "pagination": "single page, all four labeled sections"
+    },
+    {
+      "url": "https://www.math.cmu.edu/~rneumaye/CVNeumayer2026.pdf",
+      "kind": "researcher_cv",
+      "path": "CVNeumayer2026.pdf",
+      "sha256": "bdddd623ecb1d13fd8996f281e2170a1d76a48314d75b53bcfcebc94424230db",
+      "numbered_items": 30
+    },
+    {
+      "url": "https://export.arxiv.org/api/query?search_query=au%3A%22Neumayer%2C_Robin%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+      "kind": "arxiv_author_crosscheck",
+      "path": "arxiv-author.xml",
+      "sha256": "08bb99458466864ce32b0cbb0eb2e1e366ad3d6786c022472363545a6f02effb",
+      "feed_total": 23
+    },
+    {
+      "url": "https://scholars.cmu.edu/search?type=user&v=Neumayer",
+      "kind": "public_elements_directory_search_no_match",
+      "path": "scholars-neumayer.html",
+      "sha256": "5ee29cc0df81f8bba6ba8b88d5e650aa48480b0fed73f631ad4eae7786acffcd"
+    },
+    {
+      "url": "https://pub.orcid.org/v3.0/0000-0002-7108-3267/record",
+      "kind": "orcid_name_candidate_unverified",
+      "path": "orcid-0000-0002-7108-3267-record.json",
+      "sha256": "1de34e7c82614b7d46500fe4793801489b6453326fb8fefe63cd90eebec7df0c"
+    }
+  ],
+  "counts": {
+    "site_items": 30,
+    "site_sections": {
+      "publications_preprints": 23,
+      "proceedings_surveys": 5,
+      "phd_thesis": 1,
+      "expository_notes": 1
+    },
+    "cv_numbered_items": 30,
+    "site_cv_overlaps": 29,
+    "cv_only": 1,
+    "site_only": 1,
+    "union_distinct": 31,
+    "arxiv_research_items": 23,
+    "arxiv_site_research_matches": 23
+  },
+  "unresolved": {
+    "orcid_name_candidate": "0000-0002-7108-3267 has no public employment, email, works, or linked pages; do not assign",
+    "google_scholar": "No exact attributable profile link found on official or researcher pages; prior bounded Scholar search also unresolved",
+    "currentness": "Author site and CV last updated June 2026; independent lifetime completeness beyond these sources is unproven"
+  },
+  "observations": [
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:1:af77d0a2b770206b",
+      "section": "publications_preprints",
+      "section_index": 1,
+      "title_as_listed": "Minimizing clusters with prescribed asymptotic geometry.",
+      "citation_text_as_listed": "Minimizing clusters with prescribed asymptotic geometry. (.pdf) with M. Novack and A. Skorobogatova. Preprint.",
+      "coauthors_note_as_listed": "with M. Novack and A. Skorobogatova.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/Clusters.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "af77d0a2b770206b3f3223f37f64085b2dc21115945e7d917b47d5c247b5b7ad",
+      "provenance": "researcher_owned_website",
+      "cv_item": 1,
+      "arxiv_correspondence": {
+        "arxiv_id": "2606.07468",
+        "arxiv_title": "Minimizing clusters with prescribed asymptotic geometry",
+        "title_similarity": 1.0,
+        "submitted": "2026-06-05"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:2:e96b9675bfdb8da7",
+      "section": "publications_preprints",
+      "section_index": 2,
+      "title_as_listed": "Qualitative stability for a family of trace Sobolev inequalities.",
+      "citation_text_as_listed": "Qualitative stability for a family of trace Sobolev inequalities. (.pdf) Preprint.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/TraceSobolev.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "e96b9675bfdb8da7db262dbc06781f047d409c098ec0e4f9da97a679c5ab3ff9",
+      "provenance": "researcher_owned_website",
+      "cv_item": 2,
+      "arxiv_correspondence": {
+        "arxiv_id": "2605.28982",
+        "arxiv_title": "Qualitative stability for a family of trace Sobolev inequalities",
+        "title_similarity": 1.0,
+        "submitted": "2026-05-27"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:3:776a61383f6496b0",
+      "section": "publications_preprints",
+      "section_index": 3,
+      "title_as_listed": "Rigidity of critical points of hydrophobic capillary functionals.",
+      "citation_text_as_listed": "Rigidity of critical points of hydrophobic capillary functionals. (.pdf) with A. De Rosa and R. Resende. Preprint.",
+      "coauthors_note_as_listed": "with A. De Rosa and R. Resende.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/CapillaryRigidity.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "776a61383f6496b0fbcf20949cfcec8bf90ed294d6ceacb00e927b21a1abc6ea",
+      "provenance": "researcher_owned_website",
+      "cv_item": 3,
+      "arxiv_correspondence": {
+        "arxiv_id": "2509.22532",
+        "arxiv_title": "Rigidity of critical points of hydrophobic capillary functionals",
+        "title_similarity": 1.0,
+        "submitted": "2025-09-26"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:4:d90f7f38023781eb",
+      "section": "publications_preprints",
+      "section_index": 4,
+      "title_as_listed": "Quantitative estimates for the relative isoperimetric problem and its gradient flow outside convex bodies in the plane.",
+      "citation_text_as_listed": "Quantitative estimates for the relative isoperimetric problem and its gradient flow outside convex bodies in the plane. (.pdf) with E. Mäder-Baumdicker, J. Park, and M. Rupflin. Preprint.",
+      "coauthors_note_as_listed": "with E. Mäder-Baumdicker, J. Park, and M. Rupflin.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/PlanarIsop.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "d90f7f38023781eb4145f9be0226fc78e3870901a612469aa8bda5059f070351",
+      "provenance": "researcher_owned_website",
+      "cv_item": 4,
+      "arxiv_correspondence": {
+        "arxiv_id": "2508.21198",
+        "arxiv_title": "Quantitative estimates for the relative isoperimetric problem and its gradient flow outside convex bodies in the plane",
+        "title_similarity": 1.0,
+        "submitted": "2025-08-28"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:5:6ed327c5045b12a7",
+      "section": "publications_preprints",
+      "section_index": 5,
+      "title_as_listed": "On the non-uniqueness of locally minimizing clusters via singular cones.",
+      "citation_text_as_listed": "On the non-uniqueness of locally minimizing clusters via singular cones. (.pdf) with L. Bronsard, M. Novack, and A. Skorobogatova. Preprint.",
+      "coauthors_note_as_listed": "with L. Bronsard, M. Novack, and A. Skorobogatova.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/VesicaPiscusNonuniqueness.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "6ed327c5045b12a7e9f43454bafdd2949df4d6e61d9e87c456b6bd05b6fab1bf",
+      "provenance": "researcher_owned_website",
+      "cv_item": 5,
+      "arxiv_correspondence": {
+        "arxiv_id": "2507.13995",
+        "arxiv_title": "On the non-uniqueness of locally minimizing clusters via singular cones",
+        "title_similarity": 1.0,
+        "submitted": "2025-07-18"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:6:9f5239e11800f41f",
+      "section": "publications_preprints",
+      "section_index": 6,
+      "title_as_listed": "Quantitative Resolvent and Eigenfunction Stability for the Faber-Krahn Inequality.",
+      "citation_text_as_listed": "Quantitative Resolvent and Eigenfunction Stability for the Faber-Krahn Inequality. (.pdf) with M. Allen and D. Kriventsov. Preprint.",
+      "coauthors_note_as_listed": "with M. Allen and D. Kriventsov.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/Saint_Venant_Resolvent_Estimates.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "9f5239e11800f41fc70b09f7c98607e6d61fab01f2a4fc163a0c2d997b34bf23",
+      "provenance": "researcher_owned_website",
+      "cv_item": 6,
+      "arxiv_correspondence": {
+        "arxiv_id": "2504.13053",
+        "arxiv_title": "Quantitative Resolvent and Eigenfunction Stability for the Faber-Krahn Inequality",
+        "title_similarity": 1.0,
+        "submitted": "2025-04-17"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:7:5219aa94cb2d0eff",
+      "section": "publications_preprints",
+      "section_index": 7,
+      "title_as_listed": "Local minimizers of the anisotropic isoperimetric problem on closed manifolds.",
+      "citation_text_as_listed": "Local minimizers of the anisotropic isoperimetric problem on closed manifolds. (.pdf) with A. De Rosa. Indiana U. Math. J (2024).",
+      "coauthors_note_as_listed": "with A. De Rosa.",
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/LocalMinAniso.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "5219aa94cb2d0effbe581f2fa86f8a218caff1a9a03b63c204f2664a49387043",
+      "provenance": "researcher_owned_website",
+      "cv_item": 7,
+      "arxiv_correspondence": {
+        "arxiv_id": "2308.04565",
+        "arxiv_title": "Local Minimizers of the Anisotropic Isoperimetric Problem on Closed Manifolds",
+        "title_similarity": 1.0,
+        "submitted": "2023-08-08"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:8:a1424b84809c496f",
+      "section": "publications_preprints",
+      "section_index": 8,
+      "title_as_listed": "Epsilon regularity under scalar curvature and entropy lower bounds and volume upper bounds.",
+      "citation_text_as_listed": "Epsilon regularity under scalar curvature and entropy lower bounds and volume upper bounds. (.pdf) CMSA Special Year Program on General Relativity and Scalar Curvature, Harvard CMSA book series, vol. 4. 2024.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2024",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/VolumeBound.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "a1424b84809c496f135a275da03db9dc0657915c8cf1afe749bcaab9681d0c4f",
+      "provenance": "researcher_owned_website",
+      "cv_item": 8,
+      "arxiv_correspondence": {
+        "arxiv_id": "2210.16852",
+        "arxiv_title": "Epsilon regularity under scalar curvature and entropy lower bounds and volume upper bounds",
+        "title_similarity": 1.0,
+        "submitted": "2022-10-30"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:9:2ffe0591b577d299",
+      "section": "publications_preprints",
+      "section_index": 9,
+      "title_as_listed": "Rectifiability and uniqueness of blow-ups for points with positive Alt-Caffarelli-Friedman limit.",
+      "citation_text_as_listed": "Rectifiability and uniqueness of blow-ups for points with positive Alt-Caffarelli-Friedman limit. (.pdf) with M. Allen and D. Kriventsov. Math. Ann. 391 (2025), no. 4, 6251-6289.",
+      "coauthors_note_as_listed": "with M. Allen and D. Kriventsov.",
+      "year_as_listed": "2025",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/ACFrectifiable.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "2ffe0591b577d29945ebead74adee76e5b1a035de915d45ef8c2d2e105723d4f",
+      "provenance": "researcher_owned_website",
+      "cv_item": 9,
+      "arxiv_correspondence": {
+        "arxiv_id": "2210.03552",
+        "arxiv_title": "Rectifiability and uniqueness of blow-ups for points with positive Alt-Caffarelli-Friedman limit",
+        "title_similarity": 1.0,
+        "submitted": "2022-10-07"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:10:23cb759f27418ede",
+      "section": "publications_preprints",
+      "section_index": 10,
+      "title_as_listed": "Rigidity theorems for best Sobolev inequalities.",
+      "citation_text_as_listed": "Rigidity theorems for best Sobolev inequalities. (.pdf) with F. Maggi and I. Tomasetti. Adv. Math. 434 (2023) 109330.",
+      "coauthors_note_as_listed": "with F. Maggi and I. Tomasetti.",
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/BestSobolevRigidity.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "23cb759f27418ede894c8b7407d0b1e1caca5bc13d7e1377cff8fa8622467fbe",
+      "provenance": "researcher_owned_website",
+      "cv_item": 10,
+      "arxiv_correspondence": {
+        "arxiv_id": "2206.12386",
+        "arxiv_title": "Rigidity theorems for best Sobolev inequalities",
+        "title_similarity": 1.0,
+        "submitted": "2022-06-24"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:11:75ef0c2c148ebc07",
+      "section": "publications_preprints",
+      "section_index": 11,
+      "title_as_listed": "Sharp quantitative Faber-Krahn inequalities and the Alt-Caffarelli-Friedman monotonicity formula",
+      "citation_text_as_listed": "Sharp quantitative Faber-Krahn inequalities and the Alt-Caffarelli-Friedman monotonicity formula (.pdf) with M. Allen and D. Kriventsov. Ars Inven. Anal. 2023, Paper No. 1, 49 pp.",
+      "coauthors_note_as_listed": "with M. Allen and D. Kriventsov.",
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/QuantitativeACFArxiv.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "75ef0c2c148ebc078db2f404049916f1c8c28bf67bccc70aa6af3007ea0e340a",
+      "provenance": "researcher_owned_website",
+      "cv_item": 11,
+      "arxiv_correspondence": {
+        "arxiv_id": "2107.03505",
+        "arxiv_title": "Sharp quantitative Faber-Krahn inequalities and the Alt-Caffarelli-Friedman monotonicity formula",
+        "title_similarity": 1.0,
+        "submitted": "2021-07-07"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:12:014080b16be798ba",
+      "section": "publications_preprints",
+      "section_index": 12,
+      "title_as_listed": "Linear Stability Implies Nonlinear Stability for Faber-Krahn Type Inequalities",
+      "citation_text_as_listed": "Linear Stability Implies Nonlinear Stability for Faber-Krahn Type Inequalities (.pdf) with M. Allen and D. Kriventsov. Interfaces Free Bound. 25(2):217–324, 2023.",
+      "coauthors_note_as_listed": "with M. Allen and D. Kriventsov.",
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/LinToNonlinArxiv.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "014080b16be798baa6d72cfdce5c0bd884c839f829d94ab65084cfdef7d60193",
+      "provenance": "researcher_owned_website",
+      "cv_item": 12,
+      "arxiv_correspondence": {
+        "arxiv_id": "2107.03495",
+        "arxiv_title": "Linear Stability Implies Nonlinear Stability for Faber-Krahn Type Inequalities",
+        "title_similarity": 1.0,
+        "submitted": "2021-07-07"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:13:abd55b1826f44e9c",
+      "section": "publications_preprints",
+      "section_index": 13,
+      "title_as_listed": "\\(d_p\\) Convergence and \\(\\epsilon\\)-regularity theorems for scalar curvature and entropy lower bounds",
+      "citation_text_as_listed": "\\(d_p\\) Convergence and \\(\\epsilon\\)-regularity theorems for scalar curvature and entropy lower bounds (.pdf) with M.-C. Lee and A. Naber. Geom. Topol. 27-1 (2023), 227–350.",
+      "coauthors_note_as_listed": "with M.-C. Lee and A. Naber.",
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/dpFinal.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "abd55b1826f44e9cdd212df20a53622c2a53932a9c1240369cd28954f62d5a09",
+      "provenance": "researcher_owned_website",
+      "cv_item": 13,
+      "arxiv_correspondence": {
+        "arxiv_id": "2010.15663",
+        "arxiv_title": "$d_p$ convergence and $ε$-regularity theorems for entropy and scalar curvature lower bounds",
+        "title_similarity": 0.875,
+        "submitted": "2020-10-29"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:14:bf996b485109805a",
+      "section": "publications_preprints",
+      "section_index": 14,
+      "title_as_listed": "Quantitative stability for minimizing Yamabe metrics",
+      "citation_text_as_listed": "Quantitative stability for minimizing Yamabe metrics (.pdf) with M. Engelstein and L. Spolaor. Trans. Amer. Math. Soc. Ser. B., 9 (2022), 395–414.",
+      "coauthors_note_as_listed": "with M. Engelstein and L. Spolaor.",
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/QYamabe.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "bf996b485109805a775e585f0dc5917594904dafdbab64e5ed1668bac927522c",
+      "provenance": "researcher_owned_website",
+      "cv_item": 14,
+      "arxiv_correspondence": {
+        "arxiv_id": "2009.14362",
+        "arxiv_title": "Quantitative Stability for Minimizing Yamabe Metrics",
+        "title_similarity": 1.0,
+        "submitted": "2020-09-30"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:15:08bfbf0ab07ec73f",
+      "section": "publications_preprints",
+      "section_index": 15,
+      "title_as_listed": "A note on strong-form stability for the Sobolev inequality",
+      "citation_text_as_listed": "A note on strong-form stability for the Sobolev inequality (.pdf) Calc. Var. Partial Differential Equations, 59 (2020), no. 1, Paper No. 25, 8pp.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2020",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/StrongFormSobolev.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "08bfbf0ab07ec73f82545d8cfcf74fa848f8cae30cf3e183a51ed659da4a395e",
+      "provenance": "researcher_owned_website",
+      "cv_item": 15,
+      "arxiv_correspondence": {
+        "arxiv_id": "1901.08879",
+        "arxiv_title": "A note on strong-form stability for the Sobolev inequality",
+        "title_similarity": 1.0,
+        "submitted": "2019-01-25"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:16:528a88a2c9a06303",
+      "section": "publications_preprints",
+      "section_index": 16,
+      "title_as_listed": "Anisotropic liquid drop models",
+      "citation_text_as_listed": "Anisotropic liquid drop models (.pdf ) with R. Choksi and I. Topaloglu. Adv. Calc. Var., 15 (2022) no. 1, 109-131",
+      "coauthors_note_as_listed": "with R. Choksi and I. Topaloglu.",
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/AnisotropicLiquidDrops.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "528a88a2c9a06303b6c9f9277d001cce4797b56df15530aed7a31f166cadd788",
+      "provenance": "researcher_owned_website",
+      "cv_item": 16,
+      "arxiv_correspondence": {
+        "arxiv_id": "1810.08304",
+        "arxiv_title": "Anisotropic liquid drop models",
+        "title_similarity": 1.0,
+        "submitted": "2018-10-18"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:17:28acd72980c36ee1",
+      "section": "publications_preprints",
+      "section_index": 17,
+      "title_as_listed": "Bubbling with \\(L^2\\)-almost constant mean curvature and an Alexandrov-type theorem for crystals",
+      "citation_text_as_listed": "Bubbling with \\(L^2\\)-almost constant mean curvature and an Alexandrov-type theorem for crystals (.pdf) with M.G. Delgadino, F. Maggi, and C. Mihaila. Arch. Ration. Mech. Anal. 230 (2018) no. 3, 1131–1177.",
+      "coauthors_note_as_listed": "with M.G. Delgadino, F. Maggi, and C. Mihaila.",
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/AnisCMCfinal.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "28acd72980c36ee1fc33fd205c1053b50a9d692de929d8e0f95e7204f55948ab",
+      "provenance": "researcher_owned_website",
+      "cv_item": 17,
+      "arxiv_correspondence": {
+        "arxiv_id": "1705.10117",
+        "arxiv_title": "Bubbling with $L^2$-almost constant mean curvature and an Alexandrov-type theorem for crystals",
+        "title_similarity": 1.0,
+        "submitted": "2017-05-29"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:18:78ab6e71bef1eb00",
+      "section": "publications_preprints",
+      "section_index": 18,
+      "title_as_listed": "The Cheeger constant of a Jordan domain without necks",
+      "citation_text_as_listed": "The Cheeger constant of a Jordan domain without necks (.pdf) with G.P. Leonardi and G. Saracco. Calc. Var. Partial Differential Equations. 56 (2017), no. 6, 56:164.",
+      "coauthors_note_as_listed": "with G.P. Leonardi and G. Saracco.",
+      "year_as_listed": "2017",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/CheegerFinal.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "78ab6e71bef1eb006c03de2aea86fc9dd06b0d917fd5b6ff40ffb64d2304bf6c",
+      "provenance": "researcher_owned_website",
+      "cv_item": 18,
+      "arxiv_correspondence": {
+        "arxiv_id": "1704.07253",
+        "arxiv_title": "The Cheeger constant of a Jordan domain without necks",
+        "title_similarity": 1.0,
+        "submitted": "2017-04-24"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:19:a64cdb02c67159e8",
+      "section": "publications_preprints",
+      "section_index": 19,
+      "title_as_listed": "A bridge between Sobolev and Escobar inequalities and beyond",
+      "citation_text_as_listed": "A bridge between Sobolev and Escobar inequalities and beyond (.pdf) with F. Maggi. J. Funct. Anal. 273 (2017), no. 6, 2070–2106.",
+      "coauthors_note_as_listed": "with F. Maggi.",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/SobolevEscobar.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "a64cdb02c67159e847a87ed3147391a9f55ab8ae9ba6eaeb784aac17513ad838",
+      "provenance": "researcher_owned_website",
+      "cv_item": 19,
+      "arxiv_correspondence": {
+        "arxiv_id": "1609.02346",
+        "arxiv_title": "A bridge between Sobolev and Escobar inequalities and beyond",
+        "title_similarity": 1.0,
+        "submitted": "2016-09-08"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:20:2028a203565e8858",
+      "section": "publications_preprints",
+      "section_index": 20,
+      "title_as_listed": "Higher regularity of the free boundary in the obstacle problem for the fractional Laplacian",
+      "citation_text_as_listed": "Higher regularity of the free boundary in the obstacle problem for the fractional Laplacian (.pdf) with Y. Jhaveri. Adv. Math. 311 (2017), 748–795.",
+      "coauthors_note_as_listed": "with Y. Jhaveri.",
+      "year_as_listed": "2017",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/sHOBH.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "2028a203565e8858f342b8db7d825f4a01ff463ff200454ed06aefa038e3d986",
+      "provenance": "researcher_owned_website",
+      "cv_item": 20,
+      "arxiv_correspondence": {
+        "arxiv_id": "1606.01222",
+        "arxiv_title": "Higher Regularity of the Free Boundary in the Obstacle Problem for the Fractional Laplacian",
+        "title_similarity": 1.0,
+        "submitted": "2016-06-03"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:21:1b11cdec2efb36b3",
+      "section": "publications_preprints",
+      "section_index": 21,
+      "title_as_listed": "Gradient stability for the Sobolev inequality: the case \\(p\\geq 2\\)",
+      "citation_text_as_listed": "Gradient stability for the Sobolev inequality: the case \\(p\\geq 2\\) (.pdf) with A. Figalli. J. Eur. Math. Soc. (JEMS). 21 (2019), no. 2, 319–354.",
+      "coauthors_note_as_listed": "with A. Figalli.",
+      "year_as_listed": "2019",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/SobolevStabilityFinal.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "1b11cdec2efb36b3f1a521a642c99891ee33c740a4cac9a75e161fab3302158a",
+      "provenance": "researcher_owned_website",
+      "cv_item": 21,
+      "arxiv_correspondence": {
+        "arxiv_id": "1510.02119",
+        "arxiv_title": "Gradient stability for the Sobolev inequality: the case $p\\geq 2$",
+        "title_similarity": 1.0,
+        "submitted": "2015-10-07"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:22:977fc6730dac27cf",
+      "section": "publications_preprints",
+      "section_index": 22,
+      "title_as_listed": "A strong form of the quantitative Wulff inequality",
+      "citation_text_as_listed": "A strong form of the quantitative Wulff inequality (.pdf) SIAM J. Math. Anal. 48 (2016), no. 3, 1727–1772.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2016",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/StrongFormWulff final.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "977fc6730dac27cf73b39813dfc9c89eb067d270eb02f1f080b6b119387edda9",
+      "provenance": "researcher_owned_website",
+      "cv_item": 22,
+      "arxiv_correspondence": {
+        "arxiv_id": "1503.06705",
+        "arxiv_title": "A strong form of the quantitative Wulff inequality",
+        "title_similarity": 1.0,
+        "submitted": "2015-03-23"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:publications_preprints:23:0df555f73d3a5ad3",
+      "section": "publications_preprints",
+      "section_index": 23,
+      "title_as_listed": "A note on the stability of the Cheeger constant of N-gons",
+      "citation_text_as_listed": "A note on the stability of the Cheeger constant of N-gons (.pdf ) with M. Caroccia. J. Convex Anal. 22 (2015), no. 4, 1207–1213.",
+      "coauthors_note_as_listed": "with M. Caroccia.",
+      "year_as_listed": "2015",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/Cheeger4.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "0df555f73d3a5ad37778e9841917b606f6dce9f90fef0d1ec7eec63e16bf38c9",
+      "provenance": "researcher_owned_website",
+      "cv_item": 23,
+      "arxiv_correspondence": {
+        "arxiv_id": "1412.0720",
+        "arxiv_title": "A note on the stability of the Cheeger constant of $N$-gons",
+        "title_similarity": 1.0,
+        "submitted": "2014-12-01"
+      }
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:1:b5d7e1c42305721e",
+      "section": "proceedings_surveys",
+      "section_index": 1,
+      "title_as_listed": "Existence of Extremals and Rigidity for Optimal Sobolev Inequalities.",
+      "citation_text_as_listed": "Existence of Extremals and Rigidity for Optimal Sobolev Inequalities. (.pdf) Geometrie. Oberwolfach Rep.. 19 (2022), no. 2, pp. 1551–1601.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2022",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/owr-2022geometry.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "b5d7e1c42305721e8af41339e1005caa3e3adfd2af37afc121c6709a6dcef345",
+      "provenance": "researcher_owned_website",
+      "cv_item": 25,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:2:e8519d658f00c5b9",
+      "section": "proceedings_surveys",
+      "section_index": 2,
+      "title_as_listed": "Convergence and regularity of manifolds with scalar curvature and entropy lower bounds.",
+      "citation_text_as_listed": "Convergence and regularity of manifolds with scalar curvature and entropy lower bounds. (.pdf) Perspectives in Scalar Curvature. Vol. 1, pages 543–576. World. Sci. Publ., Hackensack, NJ, 2023.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2023",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/LeeNaberNeumayer_dpSurvey.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "e8519d658f00c5b929a7684e8bbe16de774317ea51a96632f63edca9040d214a",
+      "provenance": "researcher_owned_website",
+      "cv_item": 26,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:3:5657c7fd6b601a8d",
+      "section": "proceedings_surveys",
+      "section_index": 3,
+      "title_as_listed": "Characterizing minimizers of a constrained planar isoperimetric problem.",
+      "citation_text_as_listed": "Characterizing minimizers of a constrained planar isoperimetric problem. (.pdf) PDE Oberwolfach Rep. 16 (2019), no. 3, 2046–2048.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/OWR19.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "5657c7fd6b601a8d05ccd0196f0a6be8bc4f85ab52bda244730f48c2de6fca27",
+      "provenance": "researcher_owned_website",
+      "cv_item": 27,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:4:8181feaa8e62e0c1",
+      "section": "proceedings_surveys",
+      "section_index": 4,
+      "title_as_listed": "On minimizers and critical points for anisotropic isoperimetric problems",
+      "citation_text_as_listed": "On minimizers and critical points for anisotropic isoperimetric problems (.pdf) 2018 Matrix Annals, 293–302.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2018",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/MatrixProceedings.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8181feaa8e62e0c1da0afdbb2eb6ddf7e47dc7eb1689218380a4a1aae5399320",
+      "provenance": "researcher_owned_website",
+      "cv_item": 28,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:proceedings_surveys:5:1d612c177ed6de1f",
+      "section": "proceedings_surveys",
+      "section_index": 5,
+      "title_as_listed": "Mass transportation methods in functional inequalities and a new family of sharp constrained Sobolev inequalities",
+      "citation_text_as_listed": "Mass transportation methods in functional inequalities and a new family of sharp constrained Sobolev inequalities (.pdf) RIMS Kôkyûroku (2017), no. 2046, 39–49.",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/RIMSProceedings.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "1d612c177ed6de1fb878425d150f200bffb79f138a3ab6fa513109bc7c88d9c3",
+      "provenance": "researcher_owned_website",
+      "cv_item": 29,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:phd_thesis:1:6b39b0250782b348",
+      "section": "phd_thesis",
+      "section_index": 1,
+      "title_as_listed": "Stability and minimality properties in Sobolev and isoperimetric inequalities",
+      "citation_text_as_listed": "Stability and minimality properties in Sobolev and isoperimetric inequalities (.pdf) (2017).",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": "2017",
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/NeumayerThesis.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "6b39b0250782b348faa04e9d43842786de2237408be372fac09f4c12913e9340",
+      "provenance": "researcher_owned_website",
+      "cv_item": 30,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-bibliography:person-robinneumayer-a5f54a8c:expository_notes:1:8b939c862d3067a7",
+      "section": "expository_notes",
+      "section_index": 1,
+      "title_as_listed": "The Yamabe problem",
+      "citation_text_as_listed": "The Yamabe problem (.pdf)",
+      "coauthors_note_as_listed": "",
+      "year_as_listed": null,
+      "links_as_listed": [
+        {
+          "url": "https://www.math.cmu.edu/~rneumaye/YamabeProblem.pdf",
+          "label": ".pdf",
+          "description": ""
+        }
+      ],
+      "direct_linked_doi": null,
+      "row_dom_sha256": "8b939c862d3067a7b8c664dcc2aaeb20d139ea09830a487ab041f7aa7e4cc7a0",
+      "provenance": "researcher_owned_website",
+      "cv_item": null,
+      "arxiv_correspondence": null
+    },
+    {
+      "observation_id": "researcher-cv:person-robinneumayer-a5f54a8c:24:epsilon-regularity-scalar-curvature",
+      "section": "cv_only_proceedings",
+      "section_index": 1,
+      "cv_item": 24,
+      "title_as_listed": "Epsilon regularity for spaces with scalar curvature lower bounds",
+      "authors_as_listed": "R. Neumayer",
+      "citation_text_as_listed": "To appear in Differentialgeometrie im Grossen. Oberwolfach Report.",
+      "published_source_url": "https://ems.press/content/serial-article-files/47471",
+      "published_source_year": 2023,
+      "provenance": "researcher_cv_plus_publisher_report",
+      "arxiv_correspondence": null
+    }
+  ]
+}
