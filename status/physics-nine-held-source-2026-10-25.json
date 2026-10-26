@@ -125,7 +125,12 @@
       "source_html_path": "data/captures/physics-shubhayu-chatterjee-2026-10-24.html",
       "source_html_sha256": "8195957aae721fbdec338c5eb6e875de421bc6cde7776690ae19660566bd7263",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "published_on_hub_parent",
+      "paired_release_review_path": "status/physics-chatterjee-publication-reconciliation-2026-10-26.json",
+      "reviewed_exclusion_count": 1,
+      "provisional_hold_count": 4,
+      "ordinary_gate_rows": 85,
+      "published_hub_revision": "a032306a073095278dfb6d166b842de3138dbeee"
     },
     {
       "scholar_id": "wJ_gQLoAAAAJ",
