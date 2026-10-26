@@ -1,0 +1,1660 @@
+{
+  "schema_version": 1,
+  "batch": "physics-majetich-source-slice",
+  "reviewed_at": "2026-10-26",
+  "person_id": "person-saramajetich-69037290",
+  "scholar_id": "FRlLpMYAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/majetich.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/4600-sara-majetich",
+  "source_capture_path": "data/captures/physics-sara-majetich-2026-10-24.json",
+  "source_capture_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+  "source_cache_path": "data/authors/FRlLpMYAAAAJ.json",
+  "source_cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
+  "reviewed_exclusion_source_path": "status/physics-followon-reviewed-observation-exclusions-2026-10-24.json",
+  "reviewed_exclusion_source_sha256": "02dd7937dd4a9e27011b20edde72602c2bb583cef0c68d4950b977d51d66cba8",
+  "source_rows": 271,
+  "reviewed_exclusion_count": 27,
+  "reviewed_exclusion_rows": [
+    167,
+    177,
+    179,
+    182,
+    185,
+    186,
+    188,
+    193,
+    194,
+    198,
+    202,
+    203,
+    215,
+    216,
+    222,
+    229,
+    235,
+    237,
+    246,
+    251,
+    253,
+    258,
+    263,
+    264,
+    265,
+    266,
+    267
+  ],
+  "reviewed_exclusion_ids_sha256": "a484ea1edf6eeda28805b922bc5c153c565e2a08dd2cfb2a29b1ce2329989008",
+  "provisional_hold_count": 114,
+  "provisional_hold_rows": [
+    2,
+    16,
+    25,
+    32,
+    35,
+    54,
+    68,
+    78,
+    79,
+    83,
+    97,
+    103,
+    107,
+    113,
+    114,
+    120,
+    124,
+    126,
+    127,
+    130,
+    133,
+    136,
+    140,
+    141,
+    142,
+    144,
+    145,
+    146,
+    148,
+    150,
+    153,
+    154,
+    155,
+    156,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    168,
+    169,
+    171,
+    175,
+    178,
+    180,
+    181,
+    183,
+    184,
+    187,
+    189,
+    190,
+    191,
+    192,
+    195,
+    196,
+    197,
+    199,
+    200,
+    201,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    217,
+    218,
+    219,
+    220,
+    221,
+    223,
+    225,
+    226,
+    227,
+    228,
+    230,
+    231,
+    232,
+    233,
+    234,
+    236,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    247,
+    248,
+    249,
+    250,
+    252,
+    254,
+    255,
+    256,
+    257,
+    259,
+    260,
+    261,
+    262,
+    268,
+    269,
+    270,
+    271
+  ],
+  "provisional_hold_ids_sha256": "ec5f38624a059b44a1e4e8fc1b16c7a3fc96b45ceffadfa185719302529c4185",
+  "ordinary_gate_rows": 130,
+  "ordinary_gate_capture_indices": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    80,
+    81,
+    82,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    98,
+    99,
+    100,
+    101,
+    102,
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    111,
+    112,
+    115,
+    116,
+    117,
+    118,
+    119,
+    121,
+    122,
+    123,
+    125,
+    128,
+    129,
+    131,
+    132,
+    134,
+    135,
+    137,
+    138,
+    139,
+    143,
+    147,
+    149,
+    151,
+    152,
+    157,
+    170,
+    172,
+    173,
+    174,
+    176,
+    214,
+    224
+  ],
+  "hold_categories": {
+    "archive_preprint": [
+      242
+    ],
+    "blank_venue": [
+      126,
+      200,
+      261,
+      268,
+      270,
+      271
+    ],
+    "blank_year": [
+      259,
+      260,
+      261,
+      262,
+      268,
+      269,
+      270,
+      271
+    ],
+    "editorial_or_roster": [
+      148,
+      163,
+      191,
+      199,
+      200,
+      201,
+      212,
+      218,
+      236,
+      249,
+      260,
+      261,
+      271
+    ],
+    "malformed_title_or_citation_fragment": [
+      183,
+      213,
+      236,
+      249,
+      254,
+      255,
+      259,
+      260,
+      262,
+      268,
+      269,
+      270,
+      271
+    ],
+    "meeting_or_proceedings": [
+      103,
+      113,
+      114,
+      127,
+      130,
+      133,
+      141,
+      142,
+      145,
+      146,
+      150,
+      154,
+      155,
+      156,
+      158,
+      159,
+      160,
+      161,
+      165,
+      166,
+      168,
+      169,
+      171,
+      175,
+      178,
+      180,
+      184,
+      187,
+      189,
+      190,
+      192,
+      195,
+      196,
+      197,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      217,
+      220,
+      221,
+      223,
+      225,
+      226,
+      227,
+      230,
+      231,
+      232,
+      234,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      247,
+      248,
+      249,
+      250,
+      252,
+      256,
+      260
+    ],
+    "related_renderings_needing_native_identity": [
+      2,
+      25,
+      68,
+      78,
+      83,
+      107,
+      126,
+      136,
+      153,
+      163,
+      212,
+      218,
+      228,
+      247,
+      248
+    ],
+    "report_or_book_chapter": [
+      120,
+      140,
+      144,
+      162,
+      164,
+      181,
+      211,
+      245,
+      249,
+      257,
+      259,
+      262
+    ],
+    "same_title_related_renderings": [
+      16,
+      35,
+      97,
+      124,
+      145,
+      189,
+      220,
+      221,
+      232,
+      238,
+      242,
+      250
+    ],
+    "specific_output_or_source_identity": [
+      32,
+      54,
+      79,
+      136,
+      153,
+      219,
+      228,
+      233,
+      245,
+      257
+    ]
+  },
+  "hold_decisions": [
+    {
+      "capture_row_index": 2,
+      "author_pub_id": "FRlLpMYAAAAJ:UebtZRa9Y70C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&citation_for_view=FRlLpMYAAAAJ:UebtZRa9Y70C",
+      "title": "The 2014 magnetism roadmap",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 136, 153; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 16,
+      "author_pub_id": "FRlLpMYAAAAJ:LI9QrySNdTsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&citation_for_view=FRlLpMYAAAAJ:LI9QrySNdTsC",
+      "title": "Origin of reduced magnetization and domain formation in small magnetite nanoparticles",
+      "categories": [
+        "same_title_related_renderings"
+      ],
+      "reason": "Same normalized saved title appears at row(s) 186; resolve separate outputs or versions before mapping."
+    },
+    {
+      "capture_row_index": 25,
+      "author_pub_id": "FRlLpMYAAAAJ:_FxGoFyzp5QC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:_FxGoFyzp5QC",
+      "title": "Magnetic properties and ordering in C-coated  alloy nanocrystals",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 247; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 32,
+      "author_pub_id": "FRlLpMYAAAAJ:Se3iqnhoufwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:Se3iqnhoufwC",
+      "title": "Magnetic metal or metal carbide nanoparticles and a process for forming same",
+      "categories": [
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 35,
+      "author_pub_id": "FRlLpMYAAAAJ:5nxA0vEk-isC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:5nxA0vEk-isC",
+      "title": "Surface structure of cadmium selenide nanocrystallites",
+      "categories": [
+        "same_title_related_renderings"
+      ],
+      "reason": "Same normalized saved title appears at row(s) 251; resolve separate outputs or versions before mapping."
+    },
+    {
+      "capture_row_index": 54,
+      "author_pub_id": "FRlLpMYAAAAJ:Wp0gIr-vW9MC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:Wp0gIr-vW9MC",
+      "title": "Metal, alloy, or metal carbide nanoparticles and a process for forming same",
+      "categories": [
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 68,
+      "author_pub_id": "FRlLpMYAAAAJ:-f6ydRqryjwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:-f6ydRqryjwC",
+      "title": "Interaction effects within Langmuir layers and three-dimensional arrays of ε-Co nanoparticles",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 228; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 78,
+      "author_pub_id": "FRlLpMYAAAAJ:7PzlFSSx8tAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:7PzlFSSx8tAC",
+      "title": "AC magnetic properties of compacted FeCo nanocomposites",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 83; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 79,
+      "author_pub_id": "FRlLpMYAAAAJ:HDshCWvjkbEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:HDshCWvjkbEC",
+      "title": "Process for forming nanoparticles",
+      "categories": [
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 83,
+      "author_pub_id": "FRlLpMYAAAAJ:r0BpntZqJG4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:r0BpntZqJG4C",
+      "title": "AC magnetic properties of FeCo nanocomposites",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 78; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 97,
+      "author_pub_id": "FRlLpMYAAAAJ:maZDTaKrznsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=20&pagesize=80&citation_for_view=FRlLpMYAAAAJ:maZDTaKrznsC",
+      "title": "Magnetization reversal in SmCo/sub 5/nanoparticles",
+      "categories": [
+        "same_title_related_renderings"
+      ],
+      "reason": "Same normalized saved title appears at row(s) 250; resolve separate outputs or versions before mapping."
+    },
+    {
+      "capture_row_index": 103,
+      "author_pub_id": "FRlLpMYAAAAJ:J_g5lzvAfSwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:J_g5lzvAfSwC",
+      "title": "Iron nanoparticle assemblies: structures and magnetic behavior",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 107,
+      "author_pub_id": "FRlLpMYAAAAJ:g5m5HwL7SMYC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:g5m5HwL7SMYC",
+      "title": "Size and interaction effects in the magnetization reversal in SmCo/sub 5/nanoparticles",
+      "categories": [
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved rendering resembles row(s) 248; establish the source-native output or version before assigning separate points."
+    },
+    {
+      "capture_row_index": 113,
+      "author_pub_id": "FRlLpMYAAAAJ:HoB7MX3m0LUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HoB7MX3m0LUC",
+      "title": "Thermal plasma synthesis of Fe-Co alloy nanoparticles",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 114,
+      "author_pub_id": "FRlLpMYAAAAJ:SP6oXDckpogC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:SP6oXDckpogC",
+      "title": "Carbon coated nanoparticle composites synthesized in an RF plasma torch",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 120,
+      "author_pub_id": "FRlLpMYAAAAJ:b0M2c_1WBrUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:b0M2c_1WBrUC",
+      "title": "Magnetic nanoparticles and their applications",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 124,
+      "author_pub_id": "FRlLpMYAAAAJ:P5F9QuxV20EC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:P5F9QuxV20EC",
+      "title": "Conductive atomic force microscopy of small magnetic tunnel junctions with interface anisotropy",
+      "categories": [
+        "same_title_related_renderings"
+      ],
+      "reason": "Same normalized saved title appears at row(s) 189; resolve separate outputs or versions before mapping."
+    },
+    {
+      "capture_row_index": 126,
+      "author_pub_id": "FRlLpMYAAAAJ:zA6iFVUQeVQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:zA6iFVUQeVQC",
+      "title": "Error analysis for small angle neutron scattering datasets using Bayesian inference",
+      "categories": [
+        "blank_venue",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    },
+    {
+      "capture_row_index": 127,
+      "author_pub_id": "FRlLpMYAAAAJ:3s1wT3WcHBgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:3s1wT3WcHBgC",
+      "title": "Structure of Self-Assembled Fe and FePt Nanoparticle Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 130,
+      "author_pub_id": "FRlLpMYAAAAJ:tYavs44e6CUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:tYavs44e6CUC",
+      "title": "EXCITED STATE ELECTRON SPIN RESONANCE USING NON-RESONANT FLUORESCENCE LINE NARROWING",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 133,
+      "author_pub_id": "FRlLpMYAAAAJ:xtRiw3GOFMkC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:xtRiw3GOFMkC",
+      "title": "Formation of nanoparticles in a carbon arc",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 136,
+      "author_pub_id": "FRlLpMYAAAAJ:ML0RJ9NH7IQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ML0RJ9NH7IQC",
+      "title": "The 2014 magnetism roadmap, section nanomagnetic logic",
+      "categories": [
+        "related_renderings_needing_native_identity",
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 140,
+      "author_pub_id": "FRlLpMYAAAAJ:CHSYGLWDkRkC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:CHSYGLWDkRkC",
+      "title": "Transport, Targeting, and Applications of Metallic Functional Nanoparticles for Degradation of DNAPL Chlorinated Organic solvents",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 141,
+      "author_pub_id": "FRlLpMYAAAAJ:4OULZ7Gr8RgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4OULZ7Gr8RgC",
+      "title": "Determination of the Number of Molecules Bonded to a CdSe Nanocrystallite Surface",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 142,
+      "author_pub_id": "FRlLpMYAAAAJ:fPk4N6BV_jEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:fPk4N6BV_jEC",
+      "title": "Connected Cadmium Selenide Nanocrystallite Networks",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 144,
+      "author_pub_id": "FRlLpMYAAAAJ:EUQCXRtRnyEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:EUQCXRtRnyEC",
+      "title": "Developing Functional Fe (0)-Based Nanoparticles for In Situ Degradation of DNAPL Chlorinated Organic Solvents",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 145,
+      "author_pub_id": "FRlLpMYAAAAJ:a0OBvERweLwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:a0OBvERweLwC",
+      "title": "Langmuir Layers of Magnetic Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 146,
+      "author_pub_id": "FRlLpMYAAAAJ:f2IySw72cVMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:f2IySw72cVMC",
+      "title": "Hard magnetic nanoparticles and nanocomposites",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 148,
+      "author_pub_id": "FRlLpMYAAAAJ:NJ774b8OgUMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:NJ774b8OgUMC",
+      "title": "Krycka et al. Reply:",
+      "categories": [
+        "editorial_or_roster"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 150,
+      "author_pub_id": "FRlLpMYAAAAJ:OR75R8vi5nAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OR75R8vi5nAC",
+      "title": "STEM Analysis of Vacancies in Magnetite Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 153,
+      "author_pub_id": "FRlLpMYAAAAJ:dshw04ExmUIC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dshw04ExmUIC",
+      "title": "Magnetic nanoparticles for biomedicine",
+      "categories": [
+        "related_renderings_needing_native_identity",
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 154,
+      "author_pub_id": "FRlLpMYAAAAJ:u9iWguZQMMsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:u9iWguZQMMsC",
+      "title": "Plasmonic magnetic nanoparticles with low polydispersity",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 155,
+      "author_pub_id": "FRlLpMYAAAAJ:OU6Ihb5iCvQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OU6Ihb5iCvQC",
+      "title": "Electron Holography Observation of Dipolar Ferromagnetic Patterns in Co Nanoparticle Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 156,
+      "author_pub_id": "FRlLpMYAAAAJ:W5xh706n7nkC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:W5xh706n7nkC",
+      "title": "Magnetic Properties of Self-Assembled Fe Nanoparticle Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 158,
+      "author_pub_id": "FRlLpMYAAAAJ:XiSMed-E-HIC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:XiSMed-E-HIC",
+      "title": "Energy-Filtered Tem of Ag-Co Thin Films",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 159,
+      "author_pub_id": "FRlLpMYAAAAJ:9vf0nzSNQJEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:9vf0nzSNQJEC",
+      "title": "Morphology of nanoparticles and fullerene blacks produced in a carbon arc",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 160,
+      "author_pub_id": "FRlLpMYAAAAJ:cFHS6HbyZ2cC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:cFHS6HbyZ2cC",
+      "title": "Characterization of ferromagnetic nanoparticles produced by a carbon arc",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 161,
+      "author_pub_id": "FRlLpMYAAAAJ:KUbvn5osdkgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:KUbvn5osdkgC",
+      "title": "Phonon-induced optical dephasing in alexandrite by thermal and nonequilibrium phonons",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 162,
+      "author_pub_id": "FRlLpMYAAAAJ:Z5m8FVwuT1cC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Z5m8FVwuT1cC",
+      "title": "Frequency-Dependent Properties of Magnetic Nanoparticle Crystals",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 163,
+      "author_pub_id": "FRlLpMYAAAAJ:HIFyuExEbWQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HIFyuExEbWQC",
+      "title": "Error analysis for small angle neutron scattering datasets using Bayesian inference Rejoinder",
+      "categories": [
+        "editorial_or_roster",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 164,
+      "author_pub_id": "FRlLpMYAAAAJ:BrmTIyaxlBUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:BrmTIyaxlBUC",
+      "title": "Tailoring the magnetic interactions of monodisperse nanoparticles",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 165,
+      "author_pub_id": "FRlLpMYAAAAJ:J-pR_7NvFogC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:J-pR_7NvFogC",
+      "title": "Factors Affecting the Reactivity, Efficiency, and Lifetime of Iron Nanoparticles for In Situ Degradation of TCE",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 166,
+      "author_pub_id": "FRlLpMYAAAAJ:sSrBHYA8nusC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:sSrBHYA8nusC",
+      "title": "Magnetic interactions in Fe nanoparticle arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 168,
+      "author_pub_id": "FRlLpMYAAAAJ:eq2jaN3J8jMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eq2jaN3J8jMC",
+      "title": "Dispersion and Lorentz Microscopy of Samarium Cobalt Nanoparticles in a Polymer Matrix",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 169,
+      "author_pub_id": "FRlLpMYAAAAJ:KxtntwgDAa4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:KxtntwgDAa4C",
+      "title": "Surface Effects on the Properties of Cadmium Selenide Quantum Dots",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 171,
+      "author_pub_id": "FRlLpMYAAAAJ:TIZ-Mc8IlK0C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:TIZ-Mc8IlK0C",
+      "title": "Dynamics of 38 cm-1 Phonons in Alexandrite",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 175,
+      "author_pub_id": "FRlLpMYAAAAJ:4X0JR2_MtJMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4X0JR2_MtJMC",
+      "title": "Measuring and modeling extended magnetic structures in chemically homogeneous manganese ferrite nanoparticle assemblies",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 178,
+      "author_pub_id": "FRlLpMYAAAAJ:Ehil0879vHcC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Ehil0879vHcC",
+      "title": "Investigation of Materials, Stacks, and Energy-Efficient Switching of Voltage-Controlled Exchange Coupling Perpendicular Magnetic Tunnel Junctions",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 180,
+      "author_pub_id": "FRlLpMYAAAAJ:HtS1dXgVpQUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HtS1dXgVpQUC",
+      "title": "Angle Dependent Switching of Low Energy Barrier Magnetic Tunnel Junctions",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 181,
+      "author_pub_id": "FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:P7Ujq4OLJYoC",
+      "title": "Tunnel magnetoresistance detection of skyrmions (Final Scientific/Technical Report for Magnon Current Transmission Through Insulators)",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 183,
+      "author_pub_id": "FRlLpMYAAAAJ:XvxMoLDsR5gC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:XvxMoLDsR5gC",
+      "title": "Spin canting across core/shell Fe3O4/MnxFe3;#8722;xO4 nanoparticles",
+      "categories": [
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping."
+    },
+    {
+      "capture_row_index": 184,
+      "author_pub_id": "FRlLpMYAAAAJ:Dip1O2bNi0gC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Dip1O2bNi0gC",
+      "title": "Understanding magnetic spin structures in core-shell Fe3O4/MnxFe3-xO4 nanoparticle polycrystalline assemblies",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 187,
+      "author_pub_id": "FRlLpMYAAAAJ:k8Z6L05lTy4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:k8Z6L05lTy4C",
+      "title": "Unusual Magnetic Spin Arrangements in Manganese Ferrite Nanoparticle Assemblies",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 189,
+      "author_pub_id": "FRlLpMYAAAAJ:t6usbXjVLHcC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:t6usbXjVLHcC",
+      "title": "Conductive atomic force microscopy of small magnetic tunnel junctions with interface anisotropy",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 190,
+      "author_pub_id": "FRlLpMYAAAAJ:5ugPr518TE4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5ugPr518TE4C",
+      "title": "Formation of FePt nanoparticle arrays using nanohole templates",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 191,
+      "author_pub_id": "FRlLpMYAAAAJ:OcBU2YAGkTUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OcBU2YAGkTUC",
+      "title": "Comment on\" Origin of Surface Canting within Fe3O4 Nanoparticles\" Reply",
+      "categories": [
+        "editorial_or_roster"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 192,
+      "author_pub_id": "FRlLpMYAAAAJ:eJXPG6dFmWUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eJXPG6dFmWUC",
+      "title": "Switching Properties of sub-100 nm Perpendicular Magnetic Tunnel Junctions",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 195,
+      "author_pub_id": "FRlLpMYAAAAJ:PELIpwtuRlgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:PELIpwtuRlgC",
+      "title": "The consequences of similarity of hysteresis loops for interpreting magnetic particle systems",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 196,
+      "author_pub_id": "FRlLpMYAAAAJ:N5tVd3kTz84C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:N5tVd3kTz84C",
+      "title": "In-situ Observation of Dipolar Ferromagnetic Phase Transition in Fe3O4 Nanoparticle Arrays by Electron Holography and Lorentz Microscopy",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 197,
+      "author_pub_id": "FRlLpMYAAAAJ:geHnlv5EZngC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:geHnlv5EZngC",
+      "title": "Polarized small angle neutron scattering of MnO/Mn3O4 nanocrystals",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 199,
+      "author_pub_id": "FRlLpMYAAAAJ:vRqMK49ujn8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:vRqMK49ujn8C",
+      "title": "Eleventh Joint MMM—Intermag Conference 2010 Steering Committee",
+      "categories": [
+        "editorial_or_roster"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 200,
+      "author_pub_id": "FRlLpMYAAAAJ:4vMrXwiscB8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=100&pagesize=100&citation_for_view=FRlLpMYAAAAJ:4vMrXwiscB8C",
+      "title": "Rejoinder",
+      "categories": [
+        "blank_venue",
+        "editorial_or_roster"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    },
+    {
+      "capture_row_index": 201,
+      "author_pub_id": "FRlLpMYAAAAJ:WbkHhVStYXYC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:WbkHhVStYXYC",
+      "title": "Bayesian Analysis",
+      "categories": [
+        "editorial_or_roster"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 204,
+      "author_pub_id": "FRlLpMYAAAAJ:_Re3VWB3Y0AC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_Re3VWB3Y0AC",
+      "title": "Conductive atomic force microscopy measurements of nanopillar magnetic tunnel junctions",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 205,
+      "author_pub_id": "FRlLpMYAAAAJ:7T2F9Uy0os0C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:7T2F9Uy0os0C",
+      "title": "Small-Angle Neutron Scattering Studies of Magnetic Correlation Lengths in Nanoparticle Assemblies",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 206,
+      "author_pub_id": "FRlLpMYAAAAJ:ZuybSZzF8UAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZuybSZzF8UAC",
+      "title": "Magnetophoresis of Fe3O4 Nanorods",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 207,
+      "author_pub_id": "FRlLpMYAAAAJ:LjlpjdlvIbIC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LjlpjdlvIbIC",
+      "title": "RIE-based Pattern Transfer Using Nanoparticle Arrays as Etch Masks",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 208,
+      "author_pub_id": "FRlLpMYAAAAJ:VOx2b1Wkg3QC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:VOx2b1Wkg3QC",
+      "title": "Fresnel Lorentz Microscopy Imaging of Domains in Fe3O4 Nanoparticle Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 209,
+      "author_pub_id": "FRlLpMYAAAAJ:LPZeul_q3PIC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LPZeul_q3PIC",
+      "title": "The Magnetocaloric Effect in Single Crystal and Processed Polycrystalline MnP",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 210,
+      "author_pub_id": "FRlLpMYAAAAJ:5Ul4iDaHHb8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5Ul4iDaHHb8C",
+      "title": "Magnetic domain formation in monolayer nanoparticle films",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 211,
+      "author_pub_id": "FRlLpMYAAAAJ:8AbLer7MMksC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:8AbLer7MMksC",
+      "title": "Visualizing Nanoscale Magnetism in 3D with Polarized SANS",
+      "categories": [
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 212,
+      "author_pub_id": "FRlLpMYAAAAJ:evX43VCCuoAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:evX43VCCuoAC",
+      "title": "Intermag Europe 2008 Publication Committee",
+      "categories": [
+        "editorial_or_roster",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 213,
+      "author_pub_id": "FRlLpMYAAAAJ:oNZyr7d5Mn4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:oNZyr7d5Mn4C",
+      "title": "Thermal Plasma Synthesis of Magnetic Nanoparticles",
+      "categories": [
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping."
+    },
+    {
+      "capture_row_index": 217,
+      "author_pub_id": "FRlLpMYAAAAJ:Y5dfb0dijaUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Y5dfb0dijaUC",
+      "title": "Magnetic Correlations In A Magnetite Nanoparticle Assembly Investigated Using Polarized SANS",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 218,
+      "author_pub_id": "FRlLpMYAAAAJ:Fu2w8maKXqMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Fu2w8maKXqMC",
+      "title": "Intermag Europe 2008 Publication Chairs' Preface",
+      "categories": [
+        "editorial_or_roster",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 219,
+      "author_pub_id": "FRlLpMYAAAAJ:hkOj_22Ku90C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:hkOj_22Ku90C",
+      "title": "Iron oxide/Gold Plasmonic Magnetic Nanoparticles",
+      "categories": [
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 220,
+      "author_pub_id": "FRlLpMYAAAAJ:eflP2zaiRacC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eflP2zaiRacC",
+      "title": "NMR Study of -Co Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 221,
+      "author_pub_id": "FRlLpMYAAAAJ:bnK-pcrLprsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:bnK-pcrLprsC",
+      "title": "NMR Study of ɛ-Co Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 223,
+      "author_pub_id": "FRlLpMYAAAAJ:tOudhMTPpwUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:tOudhMTPpwUC",
+      "title": "Dynamic Hysteresis of Fe10Co90 Nanoparticle Compacts",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 225,
+      "author_pub_id": "FRlLpMYAAAAJ:ye4kPcJQO24C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ye4kPcJQO24C",
+      "title": "Development of Composite Nanoparticles for Biomedical Applications",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 226,
+      "author_pub_id": "FRlLpMYAAAAJ:5awf1xo2G04C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:5awf1xo2G04C",
+      "title": "Length Scales of Magnetic Correlations in√ e¬ μ-Co Nanoparticle Assemblies using Small Angle Neutron Scattering",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 227,
+      "author_pub_id": "FRlLpMYAAAAJ:PR6Y55bgFSsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:PR6Y55bgFSsC",
+      "title": "Characterization of Epsilon-Co Nanoparticles with Thin Oxide Shells",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 228,
+      "author_pub_id": "FRlLpMYAAAAJ:F1b5ZUV5XREC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:F1b5ZUV5XREC",
+      "title": "Interaction Effects Witin Langmuir Layers and Three-Dimensional Arrays of E-Co Nanoparticles",
+      "categories": [
+        "related_renderings_needing_native_identity",
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 230,
+      "author_pub_id": "FRlLpMYAAAAJ:ZfRJV9d4-WMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZfRJV9d4-WMC",
+      "title": "Compaction of nano-structured SmCo/Fe magnets",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 231,
+      "author_pub_id": "FRlLpMYAAAAJ:dQ2og3OwTAUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dQ2og3OwTAUC",
+      "title": "Size Effect Study of the L10 Phase Transformation in FePt Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 232,
+      "author_pub_id": "FRlLpMYAAAAJ:mvPsJ3kp5DgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:mvPsJ3kp5DgC",
+      "title": "Langmuir Layers of Magnetic Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 233,
+      "author_pub_id": "FRlLpMYAAAAJ:kuK5TVdYjLIC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:kuK5TVdYjLIC",
+      "title": "146. Golden cells: gold conjugate labeling as a potential enhancer of electro-gene transfer",
+      "categories": [
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Patent, roadmap section, meeting abstract, article variant, or book rendering needs a source-native output identity and mapping-grain decision."
+    },
+    {
+      "capture_row_index": 234,
+      "author_pub_id": "FRlLpMYAAAAJ:VL0QpB8kHFEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:VL0QpB8kHFEC",
+      "title": "Probing magnetic anisotropy and interactions in close-packed arrays of monodisperse magnetic nanoparticles",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 236,
+      "author_pub_id": "FRlLpMYAAAAJ:WqliGbK-hY8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:WqliGbK-hY8C",
+      "title": "Acet, M. 142",
+      "categories": [
+        "editorial_or_roster",
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Correction, rejoinder, committee roster, or bibliographic fragment needs a distinct authored-output decision."
+    },
+    {
+      "capture_row_index": 238,
+      "author_pub_id": "FRlLpMYAAAAJ:a9-T7VOCCH8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:a9-T7VOCCH8C",
+      "title": "Superparamagnetic Colloidal Particles for Magnetically Controllable Photonic Crystals",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 239,
+      "author_pub_id": "FRlLpMYAAAAJ:kRWSkSYxWN8C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:kRWSkSYxWN8C",
+      "title": "Magnetic size effects in iron nanoparticles and nanoparticle arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 240,
+      "author_pub_id": "FRlLpMYAAAAJ:738O_yMBCRsC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:738O_yMBCRsC",
+      "title": "Superferromagnetism in iron nanoparticle arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 241,
+      "author_pub_id": "FRlLpMYAAAAJ:JQOojiI6XY0C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:JQOojiI6XY0C",
+      "title": "Self-Assembly of Iron Nanoparticle Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 242,
+      "author_pub_id": "FRlLpMYAAAAJ:fQNAKQ3IYiAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:fQNAKQ3IYiAC",
+      "title": "Superparamagnetic colloidal particles for magnetically controllable photonic crystals",
+      "categories": [
+        "archive_preprint",
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 243,
+      "author_pub_id": "FRlLpMYAAAAJ:1yQoGdGgb4wC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:1yQoGdGgb4wC",
+      "title": "Optical Microscopy of Self Assembling beta-FeOOH Nanorod Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 244,
+      "author_pub_id": "FRlLpMYAAAAJ:08ZZubdj9fEC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:08ZZubdj9fEC",
+      "title": "Preparation of Magnetic Nanorod Arrays",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 245,
+      "author_pub_id": "FRlLpMYAAAAJ:dBIO0h50nwkC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:dBIO0h50nwkC",
+      "title": "MAGNETIZATION REVERSAL IN NANOPARTICLES",
+      "categories": [
+        "report_or_book_chapter",
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 247,
+      "author_pub_id": "FRlLpMYAAAAJ:2KloaMYe4IUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:2KloaMYe4IUC",
+      "title": "Magnetic Properties and Ordering in C-Coated Fe/sub x/Co/sub 1-x/Alloy Nanocrystals",
+      "categories": [
+        "meeting_or_proceedings",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 248,
+      "author_pub_id": "FRlLpMYAAAAJ:HE397vMXCloC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:HE397vMXCloC",
+      "title": "Size and Interaction Effects in Smco/sub 5/Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "related_renderings_needing_native_identity"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 249,
+      "author_pub_id": "FRlLpMYAAAAJ:_OXeSy2IsFwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_OXeSy2IsFwC",
+      "title": "Department of Physics Carnegie Mellon University",
+      "categories": [
+        "editorial_or_roster",
+        "malformed_title_or_citation_fragment",
+        "meeting_or_proceedings",
+        "report_or_book_chapter"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 250,
+      "author_pub_id": "FRlLpMYAAAAJ:Mojj43d5GZwC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Mojj43d5GZwC",
+      "title": "Magnetization Reversal In SmCo/sub 5/Nanoparticles",
+      "categories": [
+        "meeting_or_proceedings",
+        "same_title_related_renderings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 252,
+      "author_pub_id": "FRlLpMYAAAAJ:SdhP9T11ey4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:SdhP9T11ey4C",
+      "title": "Fine Particle Magnetism in SmCo5 Produced by Ball Milling",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 254,
+      "author_pub_id": "FRlLpMYAAAAJ:hCrLmN-GePgC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:hCrLmN-GePgC",
+      "title": "FORMATION OF NANOPARTICLES IN A CARBON ARC SA MAJETICH**, JH SCOTT*, EM BRUNSMAN*, AND ME MCHENRY",
+      "categories": [
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping."
+    },
+    {
+      "capture_row_index": 255,
+      "author_pub_id": "FRlLpMYAAAAJ:F9fV5C73w3QC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:F9fV5C73w3QC",
+      "title": "Kratschmer-Huffman¹ carbon-arc process. 2-4 This variation involves doping the graphite electrode with a metal compound, similar to the method used in the production of …",
+      "categories": [
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved title or venue is a truncated citation fragment; recover its source-native publication before mapping."
+    },
+    {
+      "capture_row_index": 256,
+      "author_pub_id": "FRlLpMYAAAAJ:_Ybze24A_UAC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:_Ybze24A_UAC",
+      "title": "SURFACE CHARACTERIZATION OF ALKYL THIOL PASSIVATED CDSE NANOCRYSTALLITES-IMPLICATIONS REGARDING COVERAGE AND THE PHOTOPHYSICAL PROPERTIES",
+      "categories": [
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 257,
+      "author_pub_id": "FRlLpMYAAAAJ:eMMeJKvmdy0C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:eMMeJKvmdy0C",
+      "title": "Connecting the dots: Design, synthesis, and properties of quantum dot networks",
+      "categories": [
+        "report_or_book_chapter",
+        "specific_output_or_source_identity"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 259,
+      "author_pub_id": "FRlLpMYAAAAJ:LgRImbQfgY4C",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:LgRImbQfgY4C",
+      "title": "141 Advances in Nanomagnetism via X-Ray Techniques",
+      "categories": [
+        "blank_year",
+        "malformed_title_or_citation_fragment",
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 260,
+      "author_pub_id": "FRlLpMYAAAAJ:ZzlSgRqYykMC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:ZzlSgRqYykMC",
+      "title": "Emerging Orders: Antiferromagnets & Altermagnetic Textures",
+      "categories": [
+        "blank_year",
+        "editorial_or_roster",
+        "malformed_title_or_citation_fragment",
+        "meeting_or_proceedings"
+      ],
+      "reason": "Meeting abstract or proceedings rendering needs a source-native output and version decision before mapping."
+    },
+    {
+      "capture_row_index": 261,
+      "author_pub_id": "FRlLpMYAAAAJ:OP4eGU-M3BUC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:OP4eGU-M3BUC",
+      "title": "Selected Papers from the 2008 International Magnetics (INTERMAG) Conference, Madrid, Spain, May 4-8, 2008",
+      "categories": [
+        "blank_venue",
+        "blank_year",
+        "editorial_or_roster"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    },
+    {
+      "capture_row_index": 262,
+      "author_pub_id": "FRlLpMYAAAAJ:r_AWSJRzSzQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:r_AWSJRzSzQC",
+      "title": "Superparamagnetic Tunnel Junctions",
+      "categories": [
+        "blank_year",
+        "malformed_title_or_citation_fragment",
+        "report_or_book_chapter"
+      ],
+      "reason": "Report, chapter, or institutional rendering needs an explicit output-type and article-identity decision."
+    },
+    {
+      "capture_row_index": 268,
+      "author_pub_id": "FRlLpMYAAAAJ:wbdj-CoPYUoC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:wbdj-CoPYUoC",
+      "title": "Rigorous Error Analysis for Small Angle Neutron Scattering Datasets using Bayesian Inference",
+      "categories": [
+        "blank_venue",
+        "blank_year",
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    },
+    {
+      "capture_row_index": 269,
+      "author_pub_id": "FRlLpMYAAAAJ:1qzjygNMrQYC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:1qzjygNMrQYC",
+      "title": "Core-shell magnetic morphology of magnetite nanoparticles",
+      "categories": [
+        "blank_year",
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved record has no year; identify the source publication and version before mapping."
+    },
+    {
+      "capture_row_index": 270,
+      "author_pub_id": "FRlLpMYAAAAJ:q3oQSFYPqjQC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:q3oQSFYPqjQC",
+      "title": "Presentation Abstract",
+      "categories": [
+        "blank_venue",
+        "blank_year",
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    },
+    {
+      "capture_row_index": 271,
+      "author_pub_id": "FRlLpMYAAAAJ:Tiz5es2fbqcC",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRlLpMYAAAAJ&cstart=200&pagesize=100&citation_for_view=FRlLpMYAAAAJ:Tiz5es2fbqcC",
+      "title": "Foreword xi PR Bissell, M. Cerchez, L. Stoleriu, RW Chantrell and A. Stancu The use of generalized AM plots in the magnetic characterization of particulate media",
+      "categories": [
+        "blank_venue",
+        "blank_year",
+        "editorial_or_roster",
+        "malformed_title_or_citation_fragment"
+      ],
+      "reason": "Saved record has no venue; identify the source publication and output type before mapping."
+    }
+  ]
+}
