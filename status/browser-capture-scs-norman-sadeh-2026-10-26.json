@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-normansadeh-21107c40",
+  "display_name": "Norman Sadeh",
+  "scholar_profile_name": "Norman Sadeh",
+  "scholar_id": "X57uzqcAAAAJ",
+  "official_identity_url": "https://s3d.cmu.edu/people/core-faculty/sadeh-norman.html",
+  "scholar_id_source_url": "https://s3d.cmu.edu/people/core-faculty/sadeh-norman.html",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:19:38.299304+00:00",
+  "publication_count": 514,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 5,
+  "source_json_path": "data/captures/scs-norman-sadeh-2026-10-26.json",
+  "source_json_sha256": "c3f38d77c004b4ef7b918e856c4611fde5ae388b2e59ea8c76cbc891cbe9dd01",
+  "source_html_path": "data/captures/scs-norman-sadeh-2026-10-26.html",
+  "source_html_sha256": "0d749997050b5f5b89c73bb2085b5877f20def195d644d60108a7867e9b7b5f5",
+  "cache_path": "data/authors/X57uzqcAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

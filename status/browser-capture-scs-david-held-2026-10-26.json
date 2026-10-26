@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-davidheld-fb7ecccf",
+  "display_name": "David Held",
+  "scholar_profile_name": "David Held",
+  "scholar_id": "0QtU-NsAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/david-held/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/david-held/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:24:02.052836+00:00",
+  "publication_count": 145,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 2,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-david-held-2026-10-26.json",
+  "source_json_sha256": "22084e55fc452223531ea1b3e2db9e24a934307ff8691049574c090c89e6bd20",
+  "source_html_path": "data/captures/scs-david-held-2026-10-26.html",
+  "source_html_sha256": "8e2963e7d1af4961ac41f95e64b67ac09d0e0930eadbad4a4d28e28776eae618",
+  "cache_path": "data/authors/0QtU-NsAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

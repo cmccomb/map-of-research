@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-richardpeng-2dccae48",
+  "display_name": "Richard Peng",
+  "scholar_profile_name": "Richard Peng",
+  "scholar_id": "loh7ivYAAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/richard-peng",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/richard-peng",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:18:28.978557+00:00",
+  "publication_count": 109,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-richard-peng-2026-10-26.json",
+  "source_json_sha256": "23e5cc12d1a760f420db37bd9cb315119116a94cfe6e59b0ee7e4d80c7624855",
+  "source_html_path": "data/captures/scs-richard-peng-2026-10-26.html",
+  "source_html_sha256": "1a0fa67d82ceaa1561285abf92a63029ea12197b5d3b934fcb4112f9d40ecdfc",
+  "cache_path": "data/authors/loh7ivYAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

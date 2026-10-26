@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "batch": "scs-next-ten-combined",
+  "source_base": "aeb9caf22403b0b895135a1e550438be38952e3d",
+  "producer_base": "620e85adc5614159f96a5f5a45c9ecf8307116c7",
+  "profiles": 10,
+  "raw_rows_added": 1820,
+  "held_rows": 550,
+  "batches": [
+    {
+      "batch": "next-five",
+      "source_head": "8a737e5a3e275d5ce91c1abda6cbdd7ffa5f46dd",
+      "producer_head": "e026fc8a7ab2bd9111b40e4c40b24dcbcaba07f1",
+      "scholar_ids": [
+        "0WD1nZcAAAAJ",
+        "4ftPKy0AAAAJ",
+        "X57uzqcAAAAJ",
+        "loh7ivYAAAAJ",
+        "nxqrff8AAAAJ"
+      ],
+      "person_ids": [
+        "person-abhiseshsilwal-75ec9eb5",
+        "person-mayankgoel-a1fb1bf6",
+        "person-normansadeh-21107c40",
+        "person-richardpeng-2dccae48",
+        "person-shreyashankar-35d2d805"
+      ],
+      "source_rows": 827,
+      "held_rows": 333
+    },
+    {
+      "batch": "ri-five",
+      "source_head": "87824e5d122601ae5e28f856fcd84dc0fb3d7a7a",
+      "producer_head": "f39907f8d7be75ca1024bf311a8cf4146e19e5eb",
+      "scholar_ids": [
+        "0QtU-NsAAAAJ",
+        "9B8PoXUAAAAJ",
+        "AEsPCAUAAAAJ",
+        "LUe32ToAAAAJ",
+        "vvzAfOwAAAAJ"
+      ],
+      "person_ids": [
+        "person-andreabajcsy-e887e206",
+        "person-changliuliu-0a6c0163",
+        "person-davidheld-fb7ecccf",
+        "person-deepakpathak-d5a312e2",
+        "person-devakannanramanan-f1bca5a0"
+      ],
+      "source_rows": 993,
+      "held_rows": 217
+    }
+  ],
+  "prior_hub_revision": "9e604bfd7864221930531279afd0aa2a119814b7",
+  "source_snapshot_sha256": "294284cfa254963ef6969c0c9e51c7bad8e6b319e2c6341929d6d94c75a4b260",
+  "source_snapshot_rows": 64981,
+  "prior_source_snapshot_rows": 63161,
+  "prior_raw_rows_lost": 0,
+  "curated_rows_preserved": 43,
+  "independent_raw_audit": "/Users/work/Documents/Codex/2026-10-26/cmu-scs-next-ten-combined/work/next-ten-raw-independent-audit.json"
+}
