@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-amyogan-6f69f12c",
+  "display_name": "Amy Ogan",
+  "scholar_profile_name": "Amy Ogan",
+  "scholar_id": "I0ZGaCQAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/index%2ephp/people/amy-ogan",
+  "scholar_id_source_url": "https://hcii.cmu.edu/index%2ephp/people/amy-ogan",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:16:21.923163+00:00",
+  "publication_count": 192,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-amy-ogan-2026-10-26.json",
+  "source_json_sha256": "f84b331a926e5a5bb7b45a5a25e91b846295a0886ecd8e02937683dbde6c12b7",
+  "source_html_path": "data/captures/scs-amy-ogan-2026-10-26.html",
+  "source_html_sha256": "d5b7ecd5e67713c43184da512f2a429c5a9552f1a58140de276e73f81920b62c",
+  "cache_path": "data/authors/I0ZGaCQAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
