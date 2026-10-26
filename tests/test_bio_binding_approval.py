@@ -20,6 +20,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CURATED = ROOT / "data/curated"
 FROZEN_BIO_CURATED = ROOT / "tests/fixtures/bio_approved_works.json"
 FROZEN_BIO_PROFILES = ROOT / "tests/fixtures/bio_approved_profiles.json"
+FROZEN_BIO_EXCLUSIONS = ROOT / "tests/fixtures/bio_approved_exclusions.json"
+FROZEN_BIO_HOLDS = ROOT / "tests/fixtures/bio_approved_provisional_holds.json"
 
 
 def _inputs() -> dict:
@@ -29,11 +31,11 @@ def _inputs() -> dict:
         "source_snapshot_commit": approval.SOURCE_COMMIT,
         "source_snapshot_sha256": approval.SOURCE_SHA256,
         "doi_aliases_path": CURATED / "scholar-doi-aliases.json",
-        "exclusions_path": CURATED / "scholar-exclusions.json",
+        "exclusions_path": FROZEN_BIO_EXCLUSIONS,
         "person_publication_holds_path": CURATED / "person-publication-holds.json",
         "curated_works_path": FROZEN_BIO_CURATED,
         "profile_releases_path": FROZEN_BIO_PROFILES,
-        "provisional_holds_path": CURATED / "scholar-provisional-holds.json",
+        "provisional_holds_path": FROZEN_BIO_HOLDS,
         "poster_loss_approval_path": CURATED / "bio-mcmanus-poster-loss-approval.json",
     }
 

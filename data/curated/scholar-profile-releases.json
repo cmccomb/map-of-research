@@ -69,7 +69,7 @@
       "state": "released",
       "expected_source_rows": 228,
       "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
-      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 G\u00f6ttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
+      "reason": "Complete 228-row Scholar capture is source-bound. Forty-three exact exclusions are reviewed separately; the unresolved 2004 Göttingen row stays raw under a provisional hold and contributes no mapped work or coauthor link. Other rows enter the normal quality gate.",
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 1,
       "provisional_hold_ids_sha256": "36a9ab8afe9e53304f3689464d2fce5234362b08df9c393e90de7e3d31e3a388"
@@ -154,11 +154,13 @@
     {
       "person_id": "person-simranjeetsingh-8f74243d",
       "scholar_id": "hgtyZOUAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 53,
       "cache_sha256": "6757f8895026bfb7439a624c9177adcc7abb34c8b2042f1b1cc2108005689f47",
-      "reason": "Complete 53-row Physics capture is source-bound. One exact exclusion is proposed; patent contexts and six meeting-abstract leads need review before any public work release.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete Physics profile is source-bound. 1 exact reviewed exclusions and 8 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 8,
+      "provisional_hold_ids_sha256": "be7e572989c9fd3ed3a3eed74aa0436e6bebb4d35a7de9648c2ca218854a377b"
     },
     {
       "person_id": "person-benjaminhunt-e286d360",
@@ -199,20 +201,24 @@
     {
       "person_id": "person-roberthswendsen-cfa7c981",
       "scholar_id": "KoHdmZEAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 202,
       "cache_sha256": "a77b39350baf2f93cd5daa35ae4d0ccdec737571681cad7ab91a3f496b186367",
-      "reason": "Complete 202-row Physics capture is source-bound. Same-title, blank-venue, and meeting-abstract groups need review before release.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete Physics profile is source-bound. 6 exact reviewed exclusions and 16 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 16,
+      "provisional_hold_ids_sha256": "07756386f5c263251a6d21b50623fb25c9534b127075a5d622875d756009b1c9"
     },
     {
       "person_id": "person-michaelwidom-8ddeb878",
       "scholar_id": "czs45aEAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 215,
       "cache_sha256": "b1d6203d633deb8b68af281177d2ddc45b5afa2f598ab457229103180a1fdbc3",
-      "reason": "Complete 215-row Physics capture is source-bound. Grouped source-classification leads need review before release.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete Physics profile is source-bound. 3 exact reviewed exclusions and 1 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "a3bd720fc04e6f32d2b622ee2085b5f6d949fef0aca212ffba7198cb68d3156c"
     },
     {
       "person_id": "person-saramajetich-69037290",
@@ -244,11 +250,13 @@
     {
       "person_id": "person-sufeishi-74105d16",
       "scholar_id": "NhBa8hAAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 141,
       "cache_sha256": "d653214fe3c14b2b26cb97575c046c9279c30862cb9a11eb21bc737d24418df0",
-      "reason": "Complete 141-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete Physics profile is source-bound. 2 exact reviewed exclusions and 3 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 3,
+      "provisional_hold_ids_sha256": "a4215dbe7cf7056f5be22820bb13a067428676b2560400af8e3615369c203902"
     },
     {
       "person_id": "person-curtismeyer-a1171ccf",
@@ -280,11 +288,13 @@
     {
       "person_id": "person-shubhayuchatterjee-34929dff",
       "scholar_id": "wovjAPsAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 90,
       "cache_sha256": "4e86a91a02ae16c31e290692355366e98714e067617dc470256a4f700f686619",
-      "reason": "Complete 90-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete Physics profile is source-bound. 1 exact reviewed exclusions and 4 exact provisional holds protect unresolved observations; other rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 4,
+      "provisional_hold_ids_sha256": "38f079c6fe434ea677c0f6d804474333ba99acd5d871b75c6ec2db781c898888"
     },
     {
       "person_id": "person-matteocremonesi-b2aba740",

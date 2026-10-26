@@ -17,6 +17,8 @@ from map_of_research.chem_carryforward import (
 
 FIXTURE = Path("tests/fixtures/chem_dcb_carryforward_rows.json")
 FROZEN_BIO_PROFILES = Path("tests/fixtures/bio_approved_profiles.json")
+FROZEN_BIO_EXCLUSIONS = Path("tests/fixtures/bio_approved_exclusions.json")
+FROZEN_BIO_HOLDS = Path("tests/fixtures/bio_approved_provisional_holds.json")
 
 
 def _candidate():
@@ -34,6 +36,8 @@ def _candidate():
         "current_works": current["works"],
         "current_authorships": current["authorships"],
         "releases_path": FROZEN_BIO_PROFILES,
+        "exclusions_path": FROZEN_BIO_EXCLUSIONS,
+        "holds_path": FROZEN_BIO_HOLDS,
     }
     return current, kwargs
 

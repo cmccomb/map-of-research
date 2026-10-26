@@ -580,6 +580,280 @@
           "primary_evidence_url": "https://crete.chem.cmu.edu/index.php/software/2-uncategorized/18-harlem"
         }
       ]
+    },
+    {
+      "person_id": "person-simranjeetsingh-8f74243d",
+      "scholar_id": "hgtyZOUAAAAJ",
+      "expected_source_rows": 53,
+      "cache_sha256": "6757f8895026bfb7439a624c9177adcc7abb34c8b2042f1b1cc2108005689f47",
+      "expected_reviewed_exclusion_rows": 1,
+      "reviewed_exclusion_ids_sha256": "5ee9ab82e8d6c61211a21c67d7b1ccfb10dda5a9c122b19e073f9a26fb7aa010",
+      "held_observations": [
+        {
+          "capture_row_index": 37,
+          "author_pub_id": "hgtyZOUAAAAJ:YohjEiUPhakC",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:YohjEiUPhakC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "hgtyZOUAAAAJ:M3NEmzRMIkIC",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:M3NEmzRMIkIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 42,
+          "author_pub_id": "hgtyZOUAAAAJ:bEWYMUwI8FkC",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:bEWYMUwI8FkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 43,
+          "author_pub_id": "hgtyZOUAAAAJ:iH-uZ7U-co4C",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:iH-uZ7U-co4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 44,
+          "author_pub_id": "hgtyZOUAAAAJ:j3f4tGmQtD8C",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:j3f4tGmQtD8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 45,
+          "author_pub_id": "hgtyZOUAAAAJ:4JMBOYKVnBMC",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:4JMBOYKVnBMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "hgtyZOUAAAAJ:hFOr9nPyWt4C",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:hFOr9nPyWt4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 52,
+          "author_pub_id": "hgtyZOUAAAAJ:HDshCWvjkbEC",
+          "reason": "Two genuine patents need output context; six meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hgtyZOUAAAAJ&cstart=20&pagesize=80&citation_for_view=hgtyZOUAAAAJ:HDshCWvjkbEC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-roberthswendsen-cfa7c981",
+      "scholar_id": "KoHdmZEAAAAJ",
+      "expected_source_rows": 202,
+      "cache_sha256": "a77b39350baf2f93cd5daa35ae4d0ccdec737571681cad7ab91a3f496b186367",
+      "expected_reviewed_exclusion_rows": 6,
+      "reviewed_exclusion_ids_sha256": "86f5ebd86af3a2648ec88cb61e3d8b4cb8cd6d15a151fe36d58068fefbbf0619",
+      "held_observations": [
+        {
+          "capture_row_index": 9,
+          "author_pub_id": "KoHdmZEAAAAJ:_WP0DvM6eX8C",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&citation_for_view=KoHdmZEAAAAJ:_WP0DvM6eX8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 10,
+          "author_pub_id": "KoHdmZEAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&citation_for_view=KoHdmZEAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 31,
+          "author_pub_id": "KoHdmZEAAAAJ:kyHTWmgVackC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=20&pagesize=80&citation_for_view=KoHdmZEAAAAJ:kyHTWmgVackC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 134,
+          "author_pub_id": "KoHdmZEAAAAJ:Mojj43d5GZwC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "KoHdmZEAAAAJ:2P1L_qKh6hAC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 148,
+          "author_pub_id": "KoHdmZEAAAAJ:EUQCXRtRnyEC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 164,
+          "author_pub_id": "KoHdmZEAAAAJ:BwyfMAYsbu0C",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:BwyfMAYsbu0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 165,
+          "author_pub_id": "KoHdmZEAAAAJ:hkOj_22Ku90C",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 168,
+          "author_pub_id": "KoHdmZEAAAAJ:K3LRdlH-MEoC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:K3LRdlH-MEoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 169,
+          "author_pub_id": "KoHdmZEAAAAJ:D_sINldO8mEC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:D_sINldO8mEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 177,
+          "author_pub_id": "KoHdmZEAAAAJ:08ZZubdj9fEC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 178,
+          "author_pub_id": "KoHdmZEAAAAJ:rlwtDmSc194C",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:rlwtDmSc194C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "KoHdmZEAAAAJ:tKAzc9rXhukC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:tKAzc9rXhukC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 195,
+          "author_pub_id": "KoHdmZEAAAAJ:l7t_Zn2s7bgC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:l7t_Zn2s7bgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 197,
+          "author_pub_id": "KoHdmZEAAAAJ:AbS6eEh_b9AC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:AbS6eEh_b9AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "KoHdmZEAAAAJ:BDTQWqO089sC",
+          "reason": "Same-title groups, blank-venue rows, and meeting abstracts await exact source or output-type review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=KoHdmZEAAAAJ&cstart=100&pagesize=100&citation_for_view=KoHdmZEAAAAJ:BDTQWqO089sC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-michaelwidom-8ddeb878",
+      "scholar_id": "czs45aEAAAAJ",
+      "expected_source_rows": 215,
+      "cache_sha256": "b1d6203d633deb8b68af281177d2ddc45b5afa2f598ab457229103180a1fdbc3",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "a6fc5cf34920191447d1c8d725b177dcec5f6e90da092a3cc10a1c9ff7f81864",
+      "held_observations": [
+        {
+          "capture_row_index": 211,
+          "author_pub_id": "czs45aEAAAAJ:w1MjKQ0l0TYC",
+          "reason": "Meeting abstract shares a title with a separate work; its map and coauthor-link eligibility awaits review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=czs45aEAAAAJ&cstart=200&pagesize=100&citation_for_view=czs45aEAAAAJ:w1MjKQ0l0TYC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-sufeishi-74105d16",
+      "scholar_id": "NhBa8hAAAAAJ",
+      "expected_source_rows": 141,
+      "cache_sha256": "d653214fe3c14b2b26cb97575c046c9279c30862cb9a11eb21bc737d24418df0",
+      "expected_reviewed_exclusion_rows": 2,
+      "reviewed_exclusion_ids_sha256": "1402f9c4e5920b8d4765c03b014273c869e0f72de5053d7ccb4b8ccf83a55868",
+      "held_observations": [
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "NhBa8hAAAAAJ:u9iWguZQMMsC",
+          "reason": "Correction notice and two meeting abstracts await a consistent output-type and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NhBa8hAAAAAJ&cstart=100&pagesize=100&citation_for_view=NhBa8hAAAAAJ:u9iWguZQMMsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 114,
+          "author_pub_id": "NhBa8hAAAAAJ:tOudhMTPpwUC",
+          "reason": "Correction notice and two meeting abstracts await a consistent output-type and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NhBa8hAAAAAJ&cstart=100&pagesize=100&citation_for_view=NhBa8hAAAAAJ:tOudhMTPpwUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 127,
+          "author_pub_id": "NhBa8hAAAAAJ:dhFuZR0502QC",
+          "reason": "Correction notice and two meeting abstracts await a consistent output-type and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NhBa8hAAAAAJ&cstart=100&pagesize=100&citation_for_view=NhBa8hAAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-shubhayuchatterjee-34929dff",
+      "scholar_id": "wovjAPsAAAAJ",
+      "expected_source_rows": 90,
+      "cache_sha256": "4e86a91a02ae16c31e290692355366e98714e067617dc470256a4f700f686619",
+      "expected_reviewed_exclusion_rows": 1,
+      "reviewed_exclusion_ids_sha256": "33967ffab632c11832d8493551c4b06cfac5765029c9fe9f8fb1324cf014958f",
+      "held_observations": [
+        {
+          "capture_row_index": 65,
+          "author_pub_id": "wovjAPsAAAAJ:g5m5HwL7SMYC",
+          "reason": "Four verified APS meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wovjAPsAAAAJ&cstart=20&pagesize=80&citation_for_view=wovjAPsAAAAJ:g5m5HwL7SMYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "wovjAPsAAAAJ:2P1L_qKh6hAC",
+          "reason": "Four verified APS meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wovjAPsAAAAJ&cstart=20&pagesize=80&citation_for_view=wovjAPsAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 73,
+          "author_pub_id": "wovjAPsAAAAJ:BqipwSGYUEgC",
+          "reason": "Four verified APS meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wovjAPsAAAAJ&cstart=20&pagesize=80&citation_for_view=wovjAPsAAAAJ:BqipwSGYUEgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 86,
+          "author_pub_id": "wovjAPsAAAAJ:MXK_kJrjxJIC",
+          "reason": "Four verified APS meeting abstracts await a consistent point and coauthor-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wovjAPsAAAAJ&cstart=20&pagesize=80&citation_for_view=wovjAPsAAAAJ:MXK_kJrjxJIC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }
