@@ -118,6 +118,12 @@ MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS = {
     POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID,
     "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
 }
+MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
+    {
+        "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+        "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
+    }
+)
 
 
 def allows_bio_region_refit(
@@ -128,6 +134,18 @@ def allows_bio_region_refit(
     return (
         not layout_reused
         and prior_revision == BIO_REGION_REFIT_PARENT
+        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
+    )
+
+
+def allows_mcs_parent_diagnostic_refit(
+    *, prior_revision: str, source_sha256: str, layout_reused: bool
+) -> bool:
+    """Recognize the exact published MCS parent and unchanged raw source."""
+
+    return (
+        not layout_reused
+        and prior_revision == MCS_PUBLISHED_PARENT
         and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
     )
 
@@ -588,12 +606,15 @@ def validate_chemistry_candidate(
     *,
     require_count_parity: bool = False,
     allow_region_refit: bool = False,
+    allow_mcs_parent_diagnostic_refit: bool = False,
 ) -> None:
     """Reject changes to reviewed Chemistry source and visibility decisions.
 
     A full layout refit may change two derived region diagnostics for parent-
     visible reviewed works across platforms. The caller pins the Bio parent
-    and source; source, visibility, attribution, and authorship stay exact.
+    and source. From the published MCS parent, only two exact prior-eligible
+    diagnostics may change from true to false. Source, visibility, attribution,
+    and authorship stay exact.
     """
 
     parent = parent_state["parent_rows"]
@@ -635,6 +656,16 @@ def validate_chemistry_candidate(
                     and field in BIO_REGION_REFIT_FIELDS
                     and type(_equal_value(prior[field])) is bool
                     and type(_equal_value(row[field])) is bool
+                ):
+                    continue
+                if (
+                    table == "works"
+                    and allow_mcs_parent_diagnostic_refit
+                    and key in MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES
+                    and key in parent["points"]
+                    and field == "map_region_prior_eligible_override"
+                    and _equal_value(prior[field]) is True
+                    and _equal_value(row[field]) is False
                 ):
                     continue
                 raise ValueError(f"Chemistry candidate {table} changed: {key}: {field}")

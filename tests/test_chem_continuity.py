@@ -289,6 +289,75 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
         )
 
 
+def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
+    kwargs = {
+        "prior_revision": continuity.MCS_PUBLISHED_PARENT,
+        "source_sha256": continuity.BIO_REGION_REFIT_SOURCE_SHA256,
+        "layout_reused": False,
+    }
+    assert continuity.allows_mcs_parent_diagnostic_refit(**kwargs)
+    for changed in (
+        {"prior_revision": continuity.BIO_REGION_REFIT_PARENT},
+        {"source_sha256": "0" * 64},
+        {"layout_reused": True},
+    ):
+        assert not continuity.allows_mcs_parent_diagnostic_refit(**(kwargs | changed))
+
+
+def test_mcs_candidate_refit_allows_only_two_exact_visible_diagnostic_losses(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    _mcs_published_parent(parent)
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision=continuity.MCS_PUBLISHED_PARENT,
+    )
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    works = tables["works"]
+    works.loc[
+        works["work_id"].isin(continuity.MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES),
+        "map_region_prior_eligible_override",
+    ] = False
+    with pytest.raises(ValueError, match="candidate works changed"):
+        validate_chemistry_candidate(tables, state)
+    validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
+    other_visible = next(
+        work_id
+        for work_id in state["parent_rows"]["points"]
+        if work_id not in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+    )
+    hidden = next(
+        work_id
+        for work_id in state["parent_rows"]["works"]
+        if work_id not in state["parent_rows"]["points"]
+    )
+    for work_id, field, value in (
+        (other_visible, "map_region_prior_eligible_override", True),
+        (hidden, "map_region_prior_eligible_override", True),
+        (
+            next(iter(continuity.MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES)),
+            "map_region_documented_override",
+            True,
+        ),
+        (other_visible, "title", "changed"),
+    ):
+        invalid = copy.deepcopy(tables)
+        invalid["works"].loc[invalid["works"]["work_id"].eq(work_id), field] = value
+        with pytest.raises(ValueError, match="candidate works changed"):
+            validate_chemistry_candidate(
+                invalid, state, allow_mcs_parent_diagnostic_refit=True
+            )
+
+
 def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None:
     decisions = _decisions()
     exclusions, holds, contexts = merge_chemistry_review_inputs(decisions, {}, {}, {})
