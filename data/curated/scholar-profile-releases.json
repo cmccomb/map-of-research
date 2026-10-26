@@ -247,11 +247,13 @@
     {
       "person_id": "person-katelynbreivik-8bef079f",
       "scholar_id": "AcW2EXwAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 131,
       "cache_sha256": "f22c819fb75a356f42dcf10031222303d054c1f6f65dc8e6d50b18583b3a5aff",
-      "reason": "Complete 131-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 131-row Physics profile is source-bound. Nine exact reviewed exclusions and 52 exact provisional holds protect unresolved observations; the other 70 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 52,
+      "provisional_hold_ids_sha256": "43d1cff74a53a8bd7cd8fa06211f4d31ba7ba88e01a4341402e0aa7d28825544"
     },
     {
       "person_id": "person-sufeishi-74105d16",
@@ -319,6 +321,17 @@
       "cache_sha256": "92582205fb5c2ef056318bba801c4eb5a957265ef4c92f32a0e8f539a0e67d23",
       "reason": "Complete 543-row Physics capture is bound to saved source and cache hashes. The exact CMS/CLAS map-quality review remains held; no public work or map contribution is approved.",
       "reviewed_at": "2026-10-25"
+    },
+    {
+      "person_id": "person-subhardas-42cf6c1e",
+      "scholar_id": "FrF1YXQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 670,
+      "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
+      "reason": "Complete visible 670-row Scholar source; 68 exact positive attributions, 486 exact exclusions, and 116 exact unresolved citations held from mapped works and coauthor links.",
+      "reviewed_at": "2026-10-25",
+      "expected_provisional_hold_rows": 116,
+      "provisional_hold_ids_sha256": "d8ea58cc27fd7d972de622cad846a76780e77d96e510b2ee3d57062bd1c3f370"
     }
   ]
 }
