@@ -742,6 +742,41 @@ def test_preupload_guard_allows_raw_only_and_noop():
     require_no_provisional_hold_contributions({}, {})
 
 
+def test_preupload_guard_checks_all_held_rows_in_one_work():
+    tables = _audit_tables()
+    second_id = f"{SCHOLAR}:held-two"
+    second = _hold(
+        author_pub_id=second_id,
+        capture_row_index=2,
+        evidence_url=f"https://scholar.google.com/citations?citation_for_view={second_id}",
+    )
+    tables["profile_publications"] = pandas.concat(
+        [
+            tables["profile_publications"],
+            pandas.DataFrame(
+                [
+                    {
+                        "scholar_id": SCHOLAR,
+                        "author_pub_id": second_id,
+                        "observation_id": "observation-held-two",
+                        "map_eligible": False,
+                        "map_exclusion_reasons": ["attribution_provisional_hold"],
+                        "review_attribution_status": "held",
+                    }
+                ]
+            ),
+        ],
+        ignore_index=True,
+    )
+    tables["works"].at[0, "map_eligible"] = True
+    tables["works"].at[0, "observation_ids"] = ["observation-held-two"]
+    tables["works"].at[0, "author_pub_ids"] = [second_id]
+    with pytest.raises(ValueError, match="contributed to a map link"):
+        require_no_provisional_hold_contributions(
+            tables, {(SCHOLAR, HELD): _hold(), (SCHOLAR, second_id): second}
+        )
+
+
 @pytest.mark.parametrize(
     "change,message",
     [
