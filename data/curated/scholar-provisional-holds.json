@@ -1850,6 +1850,830 @@
           "reviewed_at": "2026-10-25"
         }
       ]
+    },
+    {
+      "person_id": "person-subhardas-42cf6c1e",
+      "scholar_id": "FrF1YXQAAAAJ",
+      "expected_source_rows": 670,
+      "cache_sha256": "85700e7ee25079ed30633df91137e84cc0ef6c0e6628166f80acf4c133f4c1df",
+      "expected_reviewed_exclusion_rows": 486,
+      "reviewed_exclusion_ids_sha256": "b6689015db8f613c9296ea8843fba62ae5a547561033edc7bdfc382e49a1b005",
+      "held_observations": [
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "FrF1YXQAAAAJ:yFnVuubrUp4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&pagesize=100&citation_for_view=FrF1YXQAAAAJ:yFnVuubrUp4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 68,
+          "author_pub_id": "FrF1YXQAAAAJ:kw52XkFRtyQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&pagesize=100&citation_for_view=FrF1YXQAAAAJ:kw52XkFRtyQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 71,
+          "author_pub_id": "FrF1YXQAAAAJ:ClCfbGk0d_YC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ClCfbGk0d_YC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 128,
+          "author_pub_id": "FrF1YXQAAAAJ:hSRAE-fF4OAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=100&pagesize=100&citation_for_view=FrF1YXQAAAAJ:hSRAE-fF4OAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 139,
+          "author_pub_id": "FrF1YXQAAAAJ:Dem6FJhTUoYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=100&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Dem6FJhTUoYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "FrF1YXQAAAAJ:C-Rn0OCouf8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=100&pagesize=100&citation_for_view=FrF1YXQAAAAJ:C-Rn0OCouf8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "FrF1YXQAAAAJ:ILKRHgRFtOwC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=100&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ILKRHgRFtOwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 162,
+          "author_pub_id": "FrF1YXQAAAAJ:60iIaj97TE0C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=100&pagesize=100&citation_for_view=FrF1YXQAAAAJ:60iIaj97TE0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "FrF1YXQAAAAJ:7H_MAutzIkAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=200&pagesize=100&citation_for_view=FrF1YXQAAAAJ:7H_MAutzIkAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 266,
+          "author_pub_id": "FrF1YXQAAAAJ:iyewoVqAXLQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=200&pagesize=100&citation_for_view=FrF1YXQAAAAJ:iyewoVqAXLQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "FrF1YXQAAAAJ:nRpfm8aw39MC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=200&pagesize=100&citation_for_view=FrF1YXQAAAAJ:nRpfm8aw39MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "FrF1YXQAAAAJ:fbc8zXXH2BUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:fbc8zXXH2BUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "FrF1YXQAAAAJ:WzTVkKNmPSkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:WzTVkKNmPSkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 311,
+          "author_pub_id": "FrF1YXQAAAAJ:kVjdVfd2voEC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:kVjdVfd2voEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 312,
+          "author_pub_id": "FrF1YXQAAAAJ:_5tno0g5mFcC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:_5tno0g5mFcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 315,
+          "author_pub_id": "FrF1YXQAAAAJ:I858iXPj1OkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:I858iXPj1OkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 318,
+          "author_pub_id": "FrF1YXQAAAAJ:QoJ_w57xiyAC",
+          "reason": "Identity unresolved: the Crossref deposit for this 2023 geothermal case study lists only S. Das at SLB/Schlumberger. That abbreviated byline and affiliation do not establish whether the author is CMU chemist Subha R. Das; hold pending full-author identity evidence.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:QoJ_w57xiyAC",
+          "primary_evidence_url": "https://api.crossref.org/works/10.3997/2214-4609.202321038",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "FrF1YXQAAAAJ:pAkWuXOU-OoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:pAkWuXOU-OoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 336,
+          "author_pub_id": "FrF1YXQAAAAJ:u0Mu_IsstPMC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:u0Mu_IsstPMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 342,
+          "author_pub_id": "FrF1YXQAAAAJ:PoWvk5oyLR8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:PoWvk5oyLR8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 360,
+          "author_pub_id": "FrF1YXQAAAAJ:RXiHnyRawswC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:RXiHnyRawswC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "FrF1YXQAAAAJ:6ZzL7HXColQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:6ZzL7HXColQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "FrF1YXQAAAAJ:QaSi33NTfwYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:QaSi33NTfwYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "FrF1YXQAAAAJ:QUX0mv85b1cC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=300&pagesize=100&citation_for_view=FrF1YXQAAAAJ:QUX0mv85b1cC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 415,
+          "author_pub_id": "FrF1YXQAAAAJ:QVtou7C4vgoC",
+          "reason": "Identity unresolved: the Crossref deposit for this 2022 Wolfcamp geomechanics study lists only S. Das at SLB/Schlumberger. That abbreviated byline and affiliation do not establish whether the author is CMU chemist Subha R. Das; hold pending full-author identity evidence.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:QVtou7C4vgoC",
+          "primary_evidence_url": "https://api.crossref.org/works/10.3997/2214-4609.2022616012",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 424,
+          "author_pub_id": "FrF1YXQAAAAJ:PaBasH6fAo0C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:PaBasH6fAo0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 430,
+          "author_pub_id": "FrF1YXQAAAAJ:Oo1CbQkBAzEC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Oo1CbQkBAzEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 432,
+          "author_pub_id": "FrF1YXQAAAAJ:idthP5jqfYAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:idthP5jqfYAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 436,
+          "author_pub_id": "FrF1YXQAAAAJ:c1e4I3QdEKYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:c1e4I3QdEKYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 443,
+          "author_pub_id": "FrF1YXQAAAAJ:sJsF-0ZLhtgC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:sJsF-0ZLhtgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 447,
+          "author_pub_id": "FrF1YXQAAAAJ:7wO8s98CvbsC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 449,
+          "author_pub_id": "FrF1YXQAAAAJ:nZcligLrVowC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:nZcligLrVowC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 454,
+          "author_pub_id": "FrF1YXQAAAAJ:q-HalDI95KYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:q-HalDI95KYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 455,
+          "author_pub_id": "FrF1YXQAAAAJ:v_tt_AnqfNMC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:v_tt_AnqfNMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 460,
+          "author_pub_id": "FrF1YXQAAAAJ:aIdbFUkbNIkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:aIdbFUkbNIkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 461,
+          "author_pub_id": "FrF1YXQAAAAJ:Xl6nMSl579sC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Xl6nMSl579sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 466,
+          "author_pub_id": "FrF1YXQAAAAJ:Vztgr1qGG8IC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Vztgr1qGG8IC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 478,
+          "author_pub_id": "FrF1YXQAAAAJ:SIv7DqKytYAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:SIv7DqKytYAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 481,
+          "author_pub_id": "FrF1YXQAAAAJ:MhiOAD_qIWkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:MhiOAD_qIWkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 490,
+          "author_pub_id": "FrF1YXQAAAAJ:KS-xo-ZNxMsC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:KS-xo-ZNxMsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 493,
+          "author_pub_id": "FrF1YXQAAAAJ:1DsIQWDZLl8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:1DsIQWDZLl8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 495,
+          "author_pub_id": "FrF1YXQAAAAJ:ZzlSgRqYykMC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ZzlSgRqYykMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 496,
+          "author_pub_id": "FrF1YXQAAAAJ:_OXeSy2IsFwC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:_OXeSy2IsFwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 499,
+          "author_pub_id": "FrF1YXQAAAAJ:SGW5VrABaM0C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:SGW5VrABaM0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 500,
+          "author_pub_id": "FrF1YXQAAAAJ:PVgj2kMGcgYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=400&pagesize=100&citation_for_view=FrF1YXQAAAAJ:PVgj2kMGcgYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 507,
+          "author_pub_id": "FrF1YXQAAAAJ:sszUF3NjhM4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:sszUF3NjhM4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 510,
+          "author_pub_id": "FrF1YXQAAAAJ:hMod-77fHWUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:hMod-77fHWUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 513,
+          "author_pub_id": "FrF1YXQAAAAJ:IRz6iEL74y4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:IRz6iEL74y4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 514,
+          "author_pub_id": "FrF1YXQAAAAJ:PQEM9vzQD9gC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:PQEM9vzQD9gC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 515,
+          "author_pub_id": "FrF1YXQAAAAJ:9DLIHnF0jcYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:9DLIHnF0jcYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 518,
+          "author_pub_id": "FrF1YXQAAAAJ:gKiMpY-AVTkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:gKiMpY-AVTkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 523,
+          "author_pub_id": "FrF1YXQAAAAJ:uVUOdF_882EC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:uVUOdF_882EC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 526,
+          "author_pub_id": "FrF1YXQAAAAJ:tH6gc1N1XXoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:tH6gc1N1XXoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 539,
+          "author_pub_id": "FrF1YXQAAAAJ:YlPif8NxrbYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:YlPif8NxrbYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 543,
+          "author_pub_id": "FrF1YXQAAAAJ:LO7wyVUgiFcC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:LO7wyVUgiFcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 545,
+          "author_pub_id": "FrF1YXQAAAAJ:kUhpeDhEZMUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:kUhpeDhEZMUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 547,
+          "author_pub_id": "FrF1YXQAAAAJ:ifOnle78iJkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ifOnle78iJkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 548,
+          "author_pub_id": "FrF1YXQAAAAJ:HtS1dXgVpQUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:HtS1dXgVpQUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 551,
+          "author_pub_id": "FrF1YXQAAAAJ:G1UMdFYMoxkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:G1UMdFYMoxkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 559,
+          "author_pub_id": "FrF1YXQAAAAJ:-FonjvnnhkoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:-FonjvnnhkoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 562,
+          "author_pub_id": "FrF1YXQAAAAJ:q0uBw5dMOAkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:q0uBw5dMOAkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 563,
+          "author_pub_id": "FrF1YXQAAAAJ:4vMrXwiscB8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:4vMrXwiscB8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 568,
+          "author_pub_id": "FrF1YXQAAAAJ:i_7YvbSbtFEC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:i_7YvbSbtFEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 572,
+          "author_pub_id": "FrF1YXQAAAAJ:4fGpz3EwCPoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:4fGpz3EwCPoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 573,
+          "author_pub_id": "FrF1YXQAAAAJ:WF5omc3nYNoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 574,
+          "author_pub_id": "FrF1YXQAAAAJ:YsMSGLbcyi4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:YsMSGLbcyi4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 575,
+          "author_pub_id": "FrF1YXQAAAAJ:Hck25ST_3aIC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Hck25ST_3aIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 578,
+          "author_pub_id": "FrF1YXQAAAAJ:8Xgff_V0N9gC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:8Xgff_V0N9gC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 579,
+          "author_pub_id": "FrF1YXQAAAAJ:zGdJYJv2LkUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:zGdJYJv2LkUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 580,
+          "author_pub_id": "FrF1YXQAAAAJ:HIFyuExEbWQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:HIFyuExEbWQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 584,
+          "author_pub_id": "FrF1YXQAAAAJ:s85pQhAUCrAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:s85pQhAUCrAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 589,
+          "author_pub_id": "FrF1YXQAAAAJ:gmHTDCtJMcoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:gmHTDCtJMcoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 590,
+          "author_pub_id": "FrF1YXQAAAAJ:hCrLmN-GePgC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:hCrLmN-GePgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 591,
+          "author_pub_id": "FrF1YXQAAAAJ:tz746QTLzJkC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:tz746QTLzJkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 592,
+          "author_pub_id": "FrF1YXQAAAAJ:yIeBiWEAh44C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:yIeBiWEAh44C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 597,
+          "author_pub_id": "FrF1YXQAAAAJ:IWHjjKOFINEC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:IWHjjKOFINEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 598,
+          "author_pub_id": "FrF1YXQAAAAJ:Ej9njvOgR2oC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:Ej9njvOgR2oC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 599,
+          "author_pub_id": "FrF1YXQAAAAJ:mNrWkgRL2YcC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:mNrWkgRL2YcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 600,
+          "author_pub_id": "FrF1YXQAAAAJ:HbR8gkJAVGIC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=500&pagesize=100&citation_for_view=FrF1YXQAAAAJ:HbR8gkJAVGIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 602,
+          "author_pub_id": "FrF1YXQAAAAJ:XAp-VaTZjjwC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:XAp-VaTZjjwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 603,
+          "author_pub_id": "FrF1YXQAAAAJ:WIXB4To3Tx4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:WIXB4To3Tx4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 604,
+          "author_pub_id": "FrF1YXQAAAAJ:ZeXyd9-uunAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ZeXyd9-uunAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 606,
+          "author_pub_id": "FrF1YXQAAAAJ:5qfkUJPXOUwC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:5qfkUJPXOUwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 607,
+          "author_pub_id": "FrF1YXQAAAAJ:NU-BerS4NX4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:NU-BerS4NX4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 608,
+          "author_pub_id": "FrF1YXQAAAAJ:h168fVGZblEC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:h168fVGZblEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 613,
+          "author_pub_id": "FrF1YXQAAAAJ:EaFouW7jFu4C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:EaFouW7jFu4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 614,
+          "author_pub_id": "FrF1YXQAAAAJ:NxmKEeNBbOMC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:NxmKEeNBbOMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 615,
+          "author_pub_id": "FrF1YXQAAAAJ:-yGd096yOn8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:-yGd096yOn8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 618,
+          "author_pub_id": "FrF1YXQAAAAJ:NtGNdKbuCngC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:NtGNdKbuCngC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 619,
+          "author_pub_id": "FrF1YXQAAAAJ:43bX7VzcjpAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:43bX7VzcjpAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 620,
+          "author_pub_id": "FrF1YXQAAAAJ:A8cqit5AE6sC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:A8cqit5AE6sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 621,
+          "author_pub_id": "FrF1YXQAAAAJ:SxCCDk4iOpsC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:SxCCDk4iOpsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 622,
+          "author_pub_id": "FrF1YXQAAAAJ:ubry08Y2EpUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:ubry08Y2EpUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 623,
+          "author_pub_id": "FrF1YXQAAAAJ:qE4H1tSSYIIC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:qE4H1tSSYIIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 624,
+          "author_pub_id": "FrF1YXQAAAAJ:jgBuDB5drN8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:jgBuDB5drN8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 627,
+          "author_pub_id": "FrF1YXQAAAAJ:yMeIxYmEMEAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:yMeIxYmEMEAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 628,
+          "author_pub_id": "FrF1YXQAAAAJ:BzfGm06jWhQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:BzfGm06jWhQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 630,
+          "author_pub_id": "FrF1YXQAAAAJ:FAceZFleit8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:FAceZFleit8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 632,
+          "author_pub_id": "FrF1YXQAAAAJ:cNe27ouKFcQC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:cNe27ouKFcQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 633,
+          "author_pub_id": "FrF1YXQAAAAJ:e84hm74t-eoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:e84hm74t-eoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 635,
+          "author_pub_id": "FrF1YXQAAAAJ:TGkaJS32XoUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:TGkaJS32XoUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 636,
+          "author_pub_id": "FrF1YXQAAAAJ:_axFR9aDTf0C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:_axFR9aDTf0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 637,
+          "author_pub_id": "FrF1YXQAAAAJ:FPJr55Dyh1AC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:FPJr55Dyh1AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 639,
+          "author_pub_id": "FrF1YXQAAAAJ:I9gX6wnfuA8C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:I9gX6wnfuA8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 642,
+          "author_pub_id": "FrF1YXQAAAAJ:AFXcoJnoRH0C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:AFXcoJnoRH0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 643,
+          "author_pub_id": "FrF1YXQAAAAJ:3_LpOwP6eMYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:3_LpOwP6eMYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 647,
+          "author_pub_id": "FrF1YXQAAAAJ:BOlwja0KXvYC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:BOlwja0KXvYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 650,
+          "author_pub_id": "FrF1YXQAAAAJ:H_jBuBxbQIAC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:H_jBuBxbQIAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 651,
+          "author_pub_id": "FrF1YXQAAAAJ:U_HPUtbDl20C",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:U_HPUtbDl20C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 653,
+          "author_pub_id": "FrF1YXQAAAAJ:LPtt_HFRSbwC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:LPtt_HFRSbwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 654,
+          "author_pub_id": "FrF1YXQAAAAJ:3NQIlFlcGxIC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:3NQIlFlcGxIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 658,
+          "author_pub_id": "FrF1YXQAAAAJ:jL-93Qbq4QoC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:jL-93Qbq4QoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 663,
+          "author_pub_id": "FrF1YXQAAAAJ:OcBU2YAGkTUC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 664,
+          "author_pub_id": "FrF1YXQAAAAJ:QYdC8u9Cj1oC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:QYdC8u9Cj1oC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 665,
+          "author_pub_id": "FrF1YXQAAAAJ:OTTXONDVkokC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:OTTXONDVkokC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 666,
+          "author_pub_id": "FrF1YXQAAAAJ:rmuvC79q63oC",
+          "reason": "Exact attribution or output type is unresolved for this saved Scholar citation; keep it out of mapped works and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FrF1YXQAAAAJ&cstart=600&pagesize=100&citation_for_view=FrF1YXQAAAAJ:rmuvC79q63oC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }
