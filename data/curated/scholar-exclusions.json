@@ -10600,6 +10600,94 @@
       "reason": "The saved record is supplementary material for the 2013 Journal of Chemical Physics article retained as row 25, not a separate research work.",
       "evidence_url": "https://doi.org/10.1063/1.4808077",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:Azgs6IHzeyYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 267 is the Microelectronics encyclopedia entry by T. Sugano and A. Morino; Wiley-deposited DOI metadata lists those authors and does not include Randall Feenstra.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F3527600434.eap243",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:M0leSnx2MbUC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 300 is NSF award 1809145, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1809145.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:PQEM9vzQD9gC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 303 is NSF award 1626099, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1626099.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:hNSvKAmkeYkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 353 is NSF award 1205275, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1205275.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:N4u4nq0IxgcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 358 is NSF award 0856240, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0856240.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:n3vGvpFsckwC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 368 is NSF award 0503748, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0503748.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:9NZAP19TdFAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 371 is NSF award 0423829, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0423829.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:tz746QTLzJkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 381 is NSF award 0079485, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0079485.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:ymY9cBF3mdcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 384 is NSF award 9985898, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9985898.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:pYKElYtJMmwC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 395 is NSF award 9615647, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9615647.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:9DLIHnF0jcYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title, 1987 PRL volume and page repeat retained row 19; the publisher lists Stroscio, Feenstra and Fein, while this duplicate adds an unsupported Tersoff byline.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.58.1668",
+      "verified_at": "2026-10-25"
     }
   ]
 }
