@@ -210,9 +210,7 @@ def _mcs_published_parent(files: dict, *, prior_revision: str = "") -> None:
         files["works/train-00000-of-00001.parquet"],
         lambda rows: [
             row.update(
-                map_region_prior_eligible_override=(
-                    row["work_id"] in eligible_ids
-                ),
+                map_region_prior_eligible_override=(row["work_id"] in eligible_ids),
                 map_region_documented_override=(
                     row["work_id"] in continuity.MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
                 ),
@@ -278,9 +276,11 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
     ):
         _rewrite_rows(
             works,
-            lambda rows, work_id=work_id, field=field, changed_value=changed_value: next(
-                row for row in rows if row["work_id"] == work_id
-            ).update({field: changed_value}),
+            lambda rows, work_id=work_id, field=field, changed_value=changed_value: (
+                next(row for row in rows if row["work_id"] == work_id).update(
+                    {field: changed_value}
+                )
+            ),
         )
         with pytest.raises(ValueError, match="work derivation changed"):
             validate_chemistry_parent(
