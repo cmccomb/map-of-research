@@ -1251,15 +1251,52 @@ def _require_physics_review_ready(
         raise ValueError(
             f"Physics map-quality gate: invalid source status: {status_path}"
         )
-    if (
-        status.get("map_quality_hold") is not False
-        or status.get("producer_review_ready") is not True
-        or status.get("unresolved_exact_ids") != []
-    ):
-        raise ValueError(
-            "Physics map-quality gate: source review is held; "
-            f"snapshot contains {', '.join(sorted(present_ids))}"
+    batch_ready = (
+        status.get("map_quality_hold") is False
+        and status.get("producer_review_ready") is True
+        and status.get("unresolved_exact_ids") == []
+    )
+    profile_decisions = status.get("paired_profile_release_ready")
+    for scholar_id in present_ids:
+        if batch_ready:
+            continue
+        decision = (
+            profile_decisions.get(scholar_id)
+            if isinstance(profile_decisions, dict)
+            else None
         )
+        if (
+            not isinstance(decision, dict)
+            or decision.get("map_quality_hold") is not False
+            or decision.get("producer_review_ready") is not True
+            or decision.get("unresolved_exact_ids") != []
+        ):
+            raise ValueError(
+                "Physics map-quality gate: source review is held; "
+                f"snapshot contains {scholar_id}"
+            )
+        ledger_path = decision.get("review_ledger_path")
+        ledger_sha256 = decision.get("review_ledger_sha256")
+        if (
+            not isinstance(ledger_path, str)
+            or Path(ledger_path).parts != ("status", Path(ledger_path).name)
+            or not isinstance(ledger_sha256, str)
+            or len(ledger_sha256) != 64
+        ):
+            raise ValueError("Physics map-quality gate: invalid profile review ledger")
+        ledger_file = snapshot_path.parent.parent / ledger_path
+        ledger_bytes = ledger_file.read_bytes()
+        if hashlib.sha256(ledger_bytes).hexdigest() != ledger_sha256:
+            raise ValueError("Physics map-quality gate: profile review ledger changed")
+        ledger = json.loads(ledger_bytes)
+        if (
+            ledger.get("scholar_id") != scholar_id
+            or ledger.get("reviewed_exclusion_count")
+            != decision.get("reviewed_exclusion_count")
+            or ledger.get("provisional_hold_count")
+            != decision.get("provisional_hold_count")
+        ):
+            raise ValueError("Physics map-quality gate: profile review ledger differs")
     expected_counts = status.get("paired_producer_review_count_by_profile")
     if not isinstance(expected_counts, dict) or any(
         expected_counts.get(scholar_id)
