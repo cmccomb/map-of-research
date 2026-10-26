@@ -2693,6 +2693,99 @@ def test_physics_review_gate_requires_valid_released_status(tmp_path) -> None:
     publisher._require_physics_review_ready(frame, snapshot_path, exclusions)
 
 
+def test_physics_review_gate_releases_only_source_bound_schumacher(tmp_path) -> None:
+    snapshot_path = tmp_path / "snapshots" / "snapshot.parquet"
+    status_path = tmp_path / "status" / publisher.PHYSICS_REVIEW_STATUS_NAME
+    status_path.parent.mkdir()
+    ledger_path = tmp_path / "status" / "schumacher-review.json"
+    ledger_bytes = json.dumps(
+        {
+            "scholar_id": "LibSWRMAAAAJ",
+            "reviewed_exclusion_count": 1,
+            "provisional_hold_count": 2,
+        }
+    ).encode()
+    ledger_path.write_bytes(ledger_bytes)
+    decision = {
+        "map_quality_hold": False,
+        "producer_review_ready": True,
+        "unresolved_exact_ids": [],
+        "reviewed_exclusion_count": 1,
+        "provisional_hold_count": 2,
+        "review_ledger_path": "status/schumacher-review.json",
+        "review_ledger_sha256": hashlib.sha256(ledger_bytes).hexdigest(),
+    }
+    status = {
+        "batch": publisher.PHYSICS_REVIEW_BATCH,
+        "map_quality_hold": True,
+        "producer_review_ready": False,
+        "unresolved_exact_ids": ["wJ_gQLoAAAAJ:held"],
+        "paired_producer_review_count_by_profile": {
+            "LibSWRMAAAAJ": 1,
+            "wJ_gQLoAAAAJ": 0,
+        },
+        "paired_profile_release_ready": {"LibSWRMAAAAJ": decision},
+    }
+    status_path.write_text(json.dumps(status))
+    exclusions = {("LibSWRMAAAAJ", "LibSWRMAAAAJ:reviewed"): object()}
+    schumacher = pandas.DataFrame({"scholar_id": ["LibSWRMAAAAJ"]})
+    publisher._require_physics_review_ready(schumacher, snapshot_path, exclusions)
+
+    both = pandas.DataFrame({"scholar_id": ["LibSWRMAAAAJ", "wJ_gQLoAAAAJ"]})
+    with pytest.raises(ValueError, match="wJ_gQLoAAAAJ"):
+        publisher._require_physics_review_ready(both, snapshot_path, exclusions)
+
+    ledger_path.write_bytes(ledger_bytes + b" ")
+    with pytest.raises(ValueError, match="profile review ledger changed"):
+        publisher._require_physics_review_ready(schumacher, snapshot_path, exclusions)
+    ledger_path.write_bytes(ledger_bytes)
+
+    for change in (
+        {"map_quality_hold": True},
+        {"producer_review_ready": False},
+        {"unresolved_exact_ids": ["LibSWRMAAAAJ:held"]},
+    ):
+        status["paired_profile_release_ready"]["LibSWRMAAAAJ"] = {
+            **decision,
+            **change,
+        }
+        status_path.write_text(json.dumps(status))
+        with pytest.raises(ValueError, match="source review is held"):
+            publisher._require_physics_review_ready(
+                schumacher, snapshot_path, exclusions
+            )
+
+    for change in (
+        {"review_ledger_path": None},
+        {"review_ledger_path": "status/../schumacher-review.json"},
+        {"review_ledger_sha256": None},
+        {"review_ledger_sha256": "short"},
+    ):
+        status["paired_profile_release_ready"]["LibSWRMAAAAJ"] = {
+            **decision,
+            **change,
+        }
+        status_path.write_text(json.dumps(status))
+        with pytest.raises(ValueError, match="invalid profile review ledger"):
+            publisher._require_physics_review_ready(
+                schumacher, snapshot_path, exclusions
+            )
+
+    for change in (
+        {"reviewed_exclusion_count": 2},
+        {"provisional_hold_count": 3},
+    ):
+        status["paired_profile_release_ready"]["LibSWRMAAAAJ"] = {
+            **decision,
+            **change,
+        }
+        status_path.write_text(json.dumps(status))
+        with pytest.raises(ValueError, match="profile review ledger differs"):
+            publisher._require_physics_review_ready(
+                schumacher, snapshot_path, exclusions
+            )
+
+
 def test_publish_snapshot_corrects_metadata_before_embedding(
     monkeypatch, tmp_path
 ) -> None:

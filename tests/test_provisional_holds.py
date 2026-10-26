@@ -875,3 +875,38 @@ def test_dodelson_release_accounts_for_exact_awards_and_unresolved_rows():
         f"{scholar_id}:cBPnxVikjH8C",
         f"{scholar_id}:rCNdntzdTkkC",
     } <= excluded_ids
+
+
+def test_schumacher_release_preserves_uncertain_name_matches():
+    scholar_id = "LibSWRMAAAAJ"
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    held_rows = {item.capture_row_index for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id
+        for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert (
+        profile.person_id
+        == decision.person_id
+        == ("person-reinhardschumacher-35cd3c6f")
+    )
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 543
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 26
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 258
+    assert {21, 513, 514, 521, 527, 528, 529} <= held_rows
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 259
