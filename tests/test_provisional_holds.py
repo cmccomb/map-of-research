@@ -838,3 +838,40 @@ def test_croft_release_accounts_for_source_rows_and_unresolved_bristol_records()
     assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
     assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
     assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 172
+
+
+def test_dodelson_release_accounts_for_exact_awards_and_unresolved_rows():
+    scholar_id = "kcXOB1MAAAAJ"
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    held_rows = {item.capture_row_index for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id
+        for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert profile.person_id == decision.person_id == "person-scottdodelson-73513ee9"
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 443
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 6
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 161
+    assert {247, 295, 321, 341, 437} <= held_rows
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 276
+    assert {
+        f"{scholar_id}:hHIA4WEVY-EC",
+        f"{scholar_id}:FsLZdJ3BAzkC",
+        f"{scholar_id}:cBPnxVikjH8C",
+        f"{scholar_id}:rCNdntzdTkkC",
+    } <= excluded_ids

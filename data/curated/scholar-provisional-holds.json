@@ -3639,6 +3639,1143 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-scottdodelson-73513ee9",
+      "scholar_id": "kcXOB1MAAAAJ",
+      "expected_source_rows": 443,
+      "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
+      "expected_reviewed_exclusion_rows": 6,
+      "reviewed_exclusion_ids_sha256": "e3f587eca03bee07978c44df061faaaea557f31c7c3ccac64a98d7385a437bb0",
+      "held_observations": [
+        {
+          "capture_row_index": 2,
+          "author_pub_id": "kcXOB1MAAAAJ:YPNY0knpFBYC",
+          "reason": "Possible related records (cosmology book editions and title fragments); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:YPNY0knpFBYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 3,
+          "author_pub_id": "kcXOB1MAAAAJ:u-x6o8ySG0sC",
+          "reason": "Saved title and year also occur in capture row(s) 335; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:u-x6o8ySG0sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 6,
+          "author_pub_id": "kcXOB1MAAAAJ:zUl2_INMlC4C",
+          "reason": "Saved title and year also occur in capture row(s) 363, 364; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:zUl2_INMlC4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 8,
+          "author_pub_id": "kcXOB1MAAAAJ:F9fV5C73w3QC",
+          "reason": "Saved title and year also occur in capture row(s) 367; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 11,
+          "author_pub_id": "kcXOB1MAAAAJ:pQTOvowfQioC",
+          "reason": "Saved title and year also occur in capture row(s) 265; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:pQTOvowfQioC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 15,
+          "author_pub_id": "kcXOB1MAAAAJ:eQOLeE2rZwMC",
+          "reason": "Possible related records (gravity-test article and garbled journal proxy); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:eQOLeE2rZwMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 17,
+          "author_pub_id": "kcXOB1MAAAAJ:anf4URPfarAC",
+          "reason": "Possible related records (CosmoSIS software, journal, and conference renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:anf4URPfarAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 18,
+          "author_pub_id": "kcXOB1MAAAAJ:ufrVoPGSRksC",
+          "reason": "Saved title and year also occur in capture row(s) 388; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 19,
+          "author_pub_id": "kcXOB1MAAAAJ:7H_MAutzIkAC",
+          "reason": "Possible related records (DES Data Release 1 article and bibliographic proxy); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&citation_for_view=kcXOB1MAAAAJ:7H_MAutzIkAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "kcXOB1MAAAAJ:IjCSPb-OGe4C",
+          "reason": "Possible related records (Dynamical Lambda original and changed title); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:IjCSPb-OGe4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 24,
+          "author_pub_id": "kcXOB1MAAAAJ:Se3iqnhoufwC",
+          "reason": "Saved title and year also occur in capture row(s) 426; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 35,
+          "author_pub_id": "kcXOB1MAAAAJ:Y0pCki6q_DkC",
+          "reason": "Possible related records (inflationary CMB journal and preprint variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:Y0pCki6q_DkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "kcXOB1MAAAAJ:NaGl4SEjCO4C",
+          "reason": "Saved title and year also occur in capture row(s) 49, 333; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:NaGl4SEjCO4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "kcXOB1MAAAAJ:sA9dB-pw3HoC",
+          "reason": "Saved title and year also occur in capture row(s) 40, 333; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:sA9dB-pw3HoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 57,
+          "author_pub_id": "kcXOB1MAAAAJ:UebtZRa9Y70C",
+          "reason": "Possible related records (cosmic-string CMB preprint, journal, and title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 74,
+          "author_pub_id": "kcXOB1MAAAAJ:hQUaER0FWQ4C",
+          "reason": "Saved title and year also occur in capture row(s) 342, 344; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:hQUaER0FWQ4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 81,
+          "author_pub_id": "kcXOB1MAAAAJ:9yKSN-GCB0IC",
+          "reason": "Possible related records (cosmology book editions and title fragments); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:9yKSN-GCB0IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "kcXOB1MAAAAJ:OcBU2YAGkTUC",
+          "reason": "Possible related records (DES science verification shear journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 89,
+          "author_pub_id": "kcXOB1MAAAAJ:_kc_bZDykSQC",
+          "reason": "Saved title and year also occur in capture row(s) 403; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:_kc_bZDykSQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 96,
+          "author_pub_id": "kcXOB1MAAAAJ:27LrP4qxOz0C",
+          "reason": "Saved title and year also occur in capture row(s) 345; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=20&pagesize=80&citation_for_view=kcXOB1MAAAAJ:27LrP4qxOz0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 103,
+          "author_pub_id": "kcXOB1MAAAAJ:YOwf2qJgpHMC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "kcXOB1MAAAAJ:OTTXONDVkokC",
+          "reason": "Saved title is a bibliographic fragment or layout artifact; identify the complete underlying work and its exact byline before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:OTTXONDVkokC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "kcXOB1MAAAAJ:2v_ZtQDX9iAC",
+          "reason": "Saved title and year also occur in capture row(s) 346; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:2v_ZtQDX9iAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 137,
+          "author_pub_id": "kcXOB1MAAAAJ:Bg7qf7VwUHIC",
+          "reason": "Saved title and year also occur in capture row(s) 365; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Bg7qf7VwUHIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 143,
+          "author_pub_id": "kcXOB1MAAAAJ:edDO8Oi4QzsC",
+          "reason": "Possible related records (nonlocal-gravity article and erratum renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:edDO8Oi4QzsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "kcXOB1MAAAAJ:Xz60mAmATU4C",
+          "reason": "Saved title and year also occur in capture row(s) 349; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Xz60mAmATU4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 160,
+          "author_pub_id": "kcXOB1MAAAAJ:FPJr55Dyh1AC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:FPJr55Dyh1AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 161,
+          "author_pub_id": "kcXOB1MAAAAJ:Dip1O2bNi0gC",
+          "reason": "Saved title and year also occur in capture row(s) 377; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Dip1O2bNi0gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 171,
+          "author_pub_id": "kcXOB1MAAAAJ:Aul-kAQHnToC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Aul-kAQHnToC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 174,
+          "author_pub_id": "kcXOB1MAAAAJ:JV2RwH3_ST0C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:JV2RwH3_ST0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 188,
+          "author_pub_id": "kcXOB1MAAAAJ:yFnVuubrUp4C",
+          "reason": "Saved title and year also occur in capture row(s) 366; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:yFnVuubrUp4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 195,
+          "author_pub_id": "kcXOB1MAAAAJ:0N-VGjzr574C",
+          "reason": "Saved title and year also occur in capture row(s) 376; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 200,
+          "author_pub_id": "kcXOB1MAAAAJ:rO6llkc54NcC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=100&pagesize=100&citation_for_view=kcXOB1MAAAAJ:rO6llkc54NcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 208,
+          "author_pub_id": "kcXOB1MAAAAJ:FiDNX6EVdGUC",
+          "reason": "Possible related records (LSST dark-matter white-paper variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:FiDNX6EVdGUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 217,
+          "author_pub_id": "kcXOB1MAAAAJ:YFjsv_pBGBYC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:YFjsv_pBGBYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "kcXOB1MAAAAJ:70eg2SAEIzsC",
+          "reason": "Saved title and year also occur in capture row(s) 387; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "kcXOB1MAAAAJ:ruyezt5ZtCIC",
+          "reason": "Saved title and year also occur in capture row(s) 378; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:ruyezt5ZtCIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 240,
+          "author_pub_id": "kcXOB1MAAAAJ:u_35RYKgDlwC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:u_35RYKgDlwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "kcXOB1MAAAAJ:dfsIfKJdRG4C",
+          "reason": "Single-initial 1986 molecular-physics paper is outside the verified cosmology CV; exact author identity remains unproved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:dfsIfKJdRG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 256,
+          "author_pub_id": "kcXOB1MAAAAJ:PyEswDtIyv0C",
+          "reason": "Possible related records (DES science verification shear journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:PyEswDtIyv0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 257,
+          "author_pub_id": "kcXOB1MAAAAJ:bnK-pcrLprsC",
+          "reason": "Possible related records (SDSS cluster lensing journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:bnK-pcrLprsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 258,
+          "author_pub_id": "kcXOB1MAAAAJ:xtRiw3GOFMkC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 262,
+          "author_pub_id": "kcXOB1MAAAAJ:g5m5HwL7SMYC",
+          "reason": "Possible related records (CMB measurement journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:g5m5HwL7SMYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 265,
+          "author_pub_id": "kcXOB1MAAAAJ:g_UdREhPGEoC",
+          "reason": "Saved title and year also occur in capture row(s) 11; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:g_UdREhPGEoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 268,
+          "author_pub_id": "kcXOB1MAAAAJ:Azgs6IHzeyYC",
+          "reason": "Possible related records (ETHOS SPT cluster journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Azgs6IHzeyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 285,
+          "author_pub_id": "kcXOB1MAAAAJ:q3oQSFYPqjQC",
+          "reason": "Possible related records (CMBPol mission study report renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:q3oQSFYPqjQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 287,
+          "author_pub_id": "kcXOB1MAAAAJ:fbc8zXXH2BUC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:fbc8zXXH2BUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 288,
+          "author_pub_id": "kcXOB1MAAAAJ:kuK5TVdYjLIC",
+          "reason": "Saved citation is a catalog, code index, or rapid notice; determine its source-native output type and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 292,
+          "author_pub_id": "kcXOB1MAAAAJ:YsMSGLbcyi4C",
+          "reason": "Possible related records (cosmic-string CMB preprint, journal, and title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:YsMSGLbcyi4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 293,
+          "author_pub_id": "kcXOB1MAAAAJ:tz746QTLzJkC",
+          "reason": "Possible related records (DES Data Release 1 article and bibliographic proxy); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:tz746QTLzJkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 295,
+          "author_pub_id": "kcXOB1MAAAAJ:ZqE1mSdD_DYC",
+          "reason": "Saved long byline is truncated before Dodelson; verify his exact contribution to the Barnard Atlas paper.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:ZqE1mSdD_DYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 297,
+          "author_pub_id": "kcXOB1MAAAAJ:JTqpx9DYBaYC",
+          "reason": "Possible related records (arXiv:2007.00226 title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:JTqpx9DYBaYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 298,
+          "author_pub_id": "kcXOB1MAAAAJ:HhcuHIWmDEUC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:HhcuHIWmDEUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "kcXOB1MAAAAJ:SGW5VrABaM0C",
+          "reason": "Possible related records (nonlocal-gravity article and erratum renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:SGW5VrABaM0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 300,
+          "author_pub_id": "kcXOB1MAAAAJ:a9-T7VOCCH8C",
+          "reason": "Possible related records (CosmoSIS software, journal, and conference renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=200&pagesize=100&citation_for_view=kcXOB1MAAAAJ:a9-T7VOCCH8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 301,
+          "author_pub_id": "kcXOB1MAAAAJ:as0KMg8qHbkC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:as0KMg8qHbkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 302,
+          "author_pub_id": "kcXOB1MAAAAJ:QD3KBmkZPeQC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QD3KBmkZPeQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 304,
+          "author_pub_id": "kcXOB1MAAAAJ:_xSYboBqXhAC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:_xSYboBqXhAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "kcXOB1MAAAAJ:5ugPr518TE4C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:5ugPr518TE4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "kcXOB1MAAAAJ:Wq2b2clWBLsC",
+          "reason": "Possible related records (arXiv:2007.00226 title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Wq2b2clWBLsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 312,
+          "author_pub_id": "kcXOB1MAAAAJ:kWvqk_afx_IC",
+          "reason": "Saved title is a bibliographic fragment or layout artifact; identify the complete underlying work and its exact byline before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kWvqk_afx_IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 315,
+          "author_pub_id": "kcXOB1MAAAAJ:a3BOlSfXSfwC",
+          "reason": "Saved title and year also occur in capture row(s) 373; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:a3BOlSfXSfwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 316,
+          "author_pub_id": "kcXOB1MAAAAJ:VN7nJs4JPk0C",
+          "reason": "Possible related records (galaxy lensing methods journal, preprint, and proxy); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:VN7nJs4JPk0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 318,
+          "author_pub_id": "kcXOB1MAAAAJ:SpbeaW3--B0C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:SpbeaW3--B0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 321,
+          "author_pub_id": "kcXOB1MAAAAJ:XiVPGOgt02cC",
+          "reason": "Science 1996 entry appears to be a book review or commentary; verify the native article type before mapping it as research.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:XiVPGOgt02cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 327,
+          "author_pub_id": "kcXOB1MAAAAJ:M_lZXyI38BkC",
+          "reason": "Possible related records (ETHOS SPT cluster journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:M_lZXyI38BkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 328,
+          "author_pub_id": "kcXOB1MAAAAJ:UmS_249rOGwC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:UmS_249rOGwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 330,
+          "author_pub_id": "kcXOB1MAAAAJ:4X0JR2_MtJMC",
+          "reason": "Possible related records (CosmoSIS software, journal, and conference renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 331,
+          "author_pub_id": "kcXOB1MAAAAJ:i2xiXl-TujoC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:i2xiXl-TujoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "kcXOB1MAAAAJ:K3LRdlH-MEoC",
+          "reason": "Saved title and year also occur in capture row(s) 40, 49; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:K3LRdlH-MEoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 334,
+          "author_pub_id": "kcXOB1MAAAAJ:uLbwQdceFCQC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:uLbwQdceFCQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 335,
+          "author_pub_id": "kcXOB1MAAAAJ:idthP5jqfYAC",
+          "reason": "Saved title and year also occur in capture row(s) 3; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:idthP5jqfYAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 337,
+          "author_pub_id": "kcXOB1MAAAAJ:7T2F9Uy0os0C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:7T2F9Uy0os0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 338,
+          "author_pub_id": "kcXOB1MAAAAJ:mKu_rENv82IC",
+          "reason": "Possible related records (Dynamical Lambda original and changed title); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:mKu_rENv82IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 341,
+          "author_pub_id": "kcXOB1MAAAAJ:wUn16MOA3RoC",
+          "reason": "Saved D-meson title is paired with a DES-style contributor fragment; verify the primary APS record and Dodelson authorship.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:wUn16MOA3RoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 342,
+          "author_pub_id": "kcXOB1MAAAAJ:oPLKW5k6eA4C",
+          "reason": "Saved title and year also occur in capture row(s) 74, 344; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:oPLKW5k6eA4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 344,
+          "author_pub_id": "kcXOB1MAAAAJ:rLGzs9wiiwIC",
+          "reason": "Saved title and year also occur in capture row(s) 74, 342; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:rLGzs9wiiwIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 345,
+          "author_pub_id": "kcXOB1MAAAAJ:3_LpOwP6eMYC",
+          "reason": "Saved title and year also occur in capture row(s) 96; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:3_LpOwP6eMYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "kcXOB1MAAAAJ:QoJ_w57xiyAC",
+          "reason": "Saved title and year also occur in capture row(s) 124; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QoJ_w57xiyAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 347,
+          "author_pub_id": "kcXOB1MAAAAJ:QUX0mv85b1cC",
+          "reason": "Saved citation is a catalog, code index, or rapid notice; determine its source-native output type and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QUX0mv85b1cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "kcXOB1MAAAAJ:Xl6nMSl579sC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Xl6nMSl579sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "kcXOB1MAAAAJ:LK8CI43ZvvMC",
+          "reason": "Saved title and year also occur in capture row(s) 155; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:LK8CI43ZvvMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 350,
+          "author_pub_id": "kcXOB1MAAAAJ:PkcyUWeTMh0C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:PkcyUWeTMh0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 351,
+          "author_pub_id": "kcXOB1MAAAAJ:QsKbpXNoaWkC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QsKbpXNoaWkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 352,
+          "author_pub_id": "kcXOB1MAAAAJ:WAzi4Gm8nLoC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:WAzi4Gm8nLoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 354,
+          "author_pub_id": "kcXOB1MAAAAJ:In6cVmBjs0IC",
+          "reason": "Saved citation is a catalog, code index, or rapid notice; determine its source-native output type and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:In6cVmBjs0IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "kcXOB1MAAAAJ:w0F2JDEymm0C",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:w0F2JDEymm0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "kcXOB1MAAAAJ:SIv7DqKytYAC",
+          "reason": "Possible related records (LSST dark-matter white-paper variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:SIv7DqKytYAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 357,
+          "author_pub_id": "kcXOB1MAAAAJ:-nhnvRiOwuoC",
+          "reason": "Possible related records (LSST dark-matter white-paper variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:-nhnvRiOwuoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 358,
+          "author_pub_id": "kcXOB1MAAAAJ:z6xuaG2dYH0C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:z6xuaG2dYH0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 359,
+          "author_pub_id": "kcXOB1MAAAAJ:MAUkC_7iAq8C",
+          "reason": "Saved citation is a catalog, code index, or rapid notice; determine its source-native output type and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:MAUkC_7iAq8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 361,
+          "author_pub_id": "kcXOB1MAAAAJ:Ade32sEp0pkC",
+          "reason": "Possible related records (nonlocal-gravity article and erratum renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Ade32sEp0pkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 362,
+          "author_pub_id": "kcXOB1MAAAAJ:orDZ08hpP44C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:orDZ08hpP44C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 363,
+          "author_pub_id": "kcXOB1MAAAAJ:q0uBw5dMOAkC",
+          "reason": "Saved title and year also occur in capture row(s) 6, 364; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:q0uBw5dMOAkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 364,
+          "author_pub_id": "kcXOB1MAAAAJ:yeL6HyUMUGUC",
+          "reason": "Saved title and year also occur in capture row(s) 6, 363; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:yeL6HyUMUGUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 365,
+          "author_pub_id": "kcXOB1MAAAAJ:kVjdVfd2voEC",
+          "reason": "Saved title and year also occur in capture row(s) 137; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kVjdVfd2voEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "kcXOB1MAAAAJ:sJPMR1oEGYQC",
+          "reason": "Saved title and year also occur in capture row(s) 188; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:sJPMR1oEGYQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 367,
+          "author_pub_id": "kcXOB1MAAAAJ:2ywjKiB__4kC",
+          "reason": "Saved title and year also occur in capture row(s) 8; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:2ywjKiB__4kC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "kcXOB1MAAAAJ:mlAyqtXpCwEC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:mlAyqtXpCwEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 370,
+          "author_pub_id": "kcXOB1MAAAAJ:IRz6iEL74y4C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:IRz6iEL74y4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 371,
+          "author_pub_id": "kcXOB1MAAAAJ:8d8msizDQcsC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:8d8msizDQcsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 372,
+          "author_pub_id": "kcXOB1MAAAAJ:nPT8s1NX_-sC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:nPT8s1NX_-sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 373,
+          "author_pub_id": "kcXOB1MAAAAJ:5MTHONV0fEkC",
+          "reason": "Saved title and year also occur in capture row(s) 315; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:5MTHONV0fEkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 374,
+          "author_pub_id": "kcXOB1MAAAAJ:fFSKOagxvKUC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:fFSKOagxvKUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 375,
+          "author_pub_id": "kcXOB1MAAAAJ:umqufdRvDiIC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:umqufdRvDiIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 376,
+          "author_pub_id": "kcXOB1MAAAAJ:_OXeSy2IsFwC",
+          "reason": "Saved title and year also occur in capture row(s) 195; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:_OXeSy2IsFwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 377,
+          "author_pub_id": "kcXOB1MAAAAJ:DkZNVXde3BIC",
+          "reason": "Saved title and year also occur in capture row(s) 161; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:DkZNVXde3BIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 378,
+          "author_pub_id": "kcXOB1MAAAAJ:0izLItjtcgwC",
+          "reason": "Saved title and year also occur in capture row(s) 228; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:0izLItjtcgwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 379,
+          "author_pub_id": "kcXOB1MAAAAJ:VL0QpB8kHFEC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:VL0QpB8kHFEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 380,
+          "author_pub_id": "kcXOB1MAAAAJ:DrR-2ekChdkC",
+          "reason": "Possible related records (SDSS cluster lensing journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:DrR-2ekChdkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 381,
+          "author_pub_id": "kcXOB1MAAAAJ:B3FOqHPlNUQC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:B3FOqHPlNUQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 382,
+          "author_pub_id": "kcXOB1MAAAAJ:9c2xU6iGI7YC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:9c2xU6iGI7YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 384,
+          "author_pub_id": "kcXOB1MAAAAJ:jgBuDB5drN8C",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:jgBuDB5drN8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 387,
+          "author_pub_id": "kcXOB1MAAAAJ:uUvzmPk0f8oC",
+          "reason": "Saved title and year also occur in capture row(s) 221; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:uUvzmPk0f8oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 388,
+          "author_pub_id": "kcXOB1MAAAAJ:QaSi33NTfwYC",
+          "reason": "Saved title and year also occur in capture row(s) 18; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QaSi33NTfwYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 389,
+          "author_pub_id": "kcXOB1MAAAAJ:V3AGJWp-ZtQC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:V3AGJWp-ZtQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 390,
+          "author_pub_id": "kcXOB1MAAAAJ:uDGL6kOW6j0C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:uDGL6kOW6j0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 391,
+          "author_pub_id": "kcXOB1MAAAAJ:8AbLer7MMksC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 392,
+          "author_pub_id": "kcXOB1MAAAAJ:zLWjf1WUPmwC",
+          "reason": "Possible related records (gravity-test article and garbled journal proxy); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:zLWjf1WUPmwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 393,
+          "author_pub_id": "kcXOB1MAAAAJ:GtLg2Ama23sC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:GtLg2Ama23sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 394,
+          "author_pub_id": "kcXOB1MAAAAJ:bz8QjSJIRt4C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:bz8QjSJIRt4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 396,
+          "author_pub_id": "kcXOB1MAAAAJ:kh2fBNsKQNwC",
+          "reason": "Saved title and year also occur in capture row(s) 397, 399; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kh2fBNsKQNwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "kcXOB1MAAAAJ:E7VqQtBCVmcC",
+          "reason": "Saved title and year also occur in capture row(s) 396, 399; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:E7VqQtBCVmcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "kcXOB1MAAAAJ:kw52XkFRtyQC",
+          "reason": "Saved title is a bibliographic fragment or layout artifact; identify the complete underlying work and its exact byline before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kw52XkFRtyQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 399,
+          "author_pub_id": "kcXOB1MAAAAJ:_Re3VWB3Y0AC",
+          "reason": "Saved title and year also occur in capture row(s) 396, 397; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:_Re3VWB3Y0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 400,
+          "author_pub_id": "kcXOB1MAAAAJ:9vf0nzSNQJEC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=300&pagesize=100&citation_for_view=kcXOB1MAAAAJ:9vf0nzSNQJEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 401,
+          "author_pub_id": "kcXOB1MAAAAJ:SdhP9T11ey4C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:SdhP9T11ey4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 402,
+          "author_pub_id": "kcXOB1MAAAAJ:eflP2zaiRacC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:eflP2zaiRacC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 403,
+          "author_pub_id": "kcXOB1MAAAAJ:RXiHnyRawswC",
+          "reason": "Saved title and year also occur in capture row(s) 89; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:RXiHnyRawswC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 404,
+          "author_pub_id": "kcXOB1MAAAAJ:1qzjygNMrQYC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:1qzjygNMrQYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 406,
+          "author_pub_id": "kcXOB1MAAAAJ:An6A6Jpfc1oC",
+          "reason": "Saved title is a bibliographic fragment or layout artifact; identify the complete underlying work and its exact byline before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:An6A6Jpfc1oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 407,
+          "author_pub_id": "kcXOB1MAAAAJ:Ehil0879vHcC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Ehil0879vHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 408,
+          "author_pub_id": "kcXOB1MAAAAJ:J-pR_7NvFogC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:J-pR_7NvFogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 410,
+          "author_pub_id": "kcXOB1MAAAAJ:tS2w5q8j5-wC",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:tS2w5q8j5-wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 411,
+          "author_pub_id": "kcXOB1MAAAAJ:08ZZubdj9fEC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 412,
+          "author_pub_id": "kcXOB1MAAAAJ:WA5NYHcadZ8C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:WA5NYHcadZ8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 413,
+          "author_pub_id": "kcXOB1MAAAAJ:fEOibwPWpKIC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:fEOibwPWpKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 414,
+          "author_pub_id": "kcXOB1MAAAAJ:Mojj43d5GZwC",
+          "reason": "Possible related records (Python V journal, proceedings, and unlocated versions); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 415,
+          "author_pub_id": "kcXOB1MAAAAJ:QVtou7C4vgoC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:QVtou7C4vgoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 416,
+          "author_pub_id": "kcXOB1MAAAAJ:5Ul4iDaHHb8C",
+          "reason": "Possible related records (inflationary CMB journal and preprint variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:5Ul4iDaHHb8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 417,
+          "author_pub_id": "kcXOB1MAAAAJ:_B80troHkn4C",
+          "reason": "Possible related records (inflationary CMB journal and preprint variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:_B80troHkn4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 419,
+          "author_pub_id": "kcXOB1MAAAAJ:yTLRzDEmwhEC",
+          "reason": "Possible related records (cosmic-string CMB preprint, journal, and title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:yTLRzDEmwhEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 420,
+          "author_pub_id": "kcXOB1MAAAAJ:M7yex6snE4oC",
+          "reason": "Possible related records (cosmic-string CMB preprint, journal, and title variants); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:M7yex6snE4oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 421,
+          "author_pub_id": "kcXOB1MAAAAJ:eq2jaN3J8jMC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:eq2jaN3J8jMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 423,
+          "author_pub_id": "kcXOB1MAAAAJ:WqliGbK-hY8C",
+          "reason": "Saved venue identifies a meeting abstract or presentation; await the shared map-point and coauthor-link policy for this output type.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:WqliGbK-hY8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 425,
+          "author_pub_id": "kcXOB1MAAAAJ:RMgMIBzvq-4C",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:RMgMIBzvq-4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 426,
+          "author_pub_id": "kcXOB1MAAAAJ:hkOj_22Ku90C",
+          "reason": "Saved title and year also occur in capture row(s) 24; establish the exact journal, preprint, chapter, or proxy identity before choosing a mapped observation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 427,
+          "author_pub_id": "kcXOB1MAAAAJ:H7nrzBkawXsC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:H7nrzBkawXsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 428,
+          "author_pub_id": "kcXOB1MAAAAJ:uVUOdF_882EC",
+          "reason": "Possible related records (CMB measurement journal and preprint); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:uVUOdF_882EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 431,
+          "author_pub_id": "kcXOB1MAAAAJ:YohjEiUPhakC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:YohjEiUPhakC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 432,
+          "author_pub_id": "kcXOB1MAAAAJ:hCrLmN-GePgC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:hCrLmN-GePgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 433,
+          "author_pub_id": "kcXOB1MAAAAJ:1yQoGdGgb4wC",
+          "reason": "Saved citation appears to be a report, proposal, lecture, foreword, book chapter, or thesis; verify publication type and source-native record before adding a map point or collaboration link.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:1yQoGdGgb4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 434,
+          "author_pub_id": "kcXOB1MAAAAJ:X4-KO54GjGYC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:X4-KO54GjGYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 435,
+          "author_pub_id": "kcXOB1MAAAAJ:3lUAU8Oskd0C",
+          "reason": "Possible related records (cosmology book editions and title fragments); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:3lUAU8Oskd0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 436,
+          "author_pub_id": "kcXOB1MAAAAJ:0sTkTiv_uMkC",
+          "reason": "Possible related records (cosmology book editions and title fragments); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:0sTkTiv_uMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 437,
+          "author_pub_id": "kcXOB1MAAAAJ:vnF2_uLGgtgC",
+          "reason": "The saved eROSITA citation lacks a year and complete journal locator; verify the primary paper and full author list.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:vnF2_uLGgtgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 438,
+          "author_pub_id": "kcXOB1MAAAAJ:R22Rs3tN8aoC",
+          "reason": "Possible related records (CMBPol mission study report renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:R22Rs3tN8aoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 439,
+          "author_pub_id": "kcXOB1MAAAAJ:qmtmRrLr0tkC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:qmtmRrLr0tkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 440,
+          "author_pub_id": "kcXOB1MAAAAJ:BmWJbWwHJAwC",
+          "reason": "Possible related records (CMBPol mission study report renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:BmWJbWwHJAwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 441,
+          "author_pub_id": "kcXOB1MAAAAJ:kJDgFkosVoMC",
+          "reason": "Possible related records (CosmoSIS software, journal, and conference renderings); verify source-native identity, edition or version, and map grain before release.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:kJDgFkosVoMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 443,
+          "author_pub_id": "kcXOB1MAAAAJ:_Ybze24A_UAC",
+          "reason": "Saved citation has no venue; verify the primary output type, byline, and record identity before mapping it.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=kcXOB1MAAAAJ&cstart=400&pagesize=100&citation_for_view=kcXOB1MAAAAJ:_Ybze24A_UAC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }

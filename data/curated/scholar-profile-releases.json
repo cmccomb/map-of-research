@@ -278,11 +278,13 @@
     {
       "person_id": "person-scottdodelson-73513ee9",
       "scholar_id": "kcXOB1MAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 443,
       "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
-      "reason": "Complete 443-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 443-row verified Scholar capture is source-bound. Six exact exclusions and 161 exact provisional holds stay off mapped works and coauthor links; 276 remaining rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 161,
+      "provisional_hold_ids_sha256": "1f291761730585956c9925b9e594a4402eb89a8dadef5fdf4430e1d1d8f53dce"
     },
     {
       "person_id": "person-rupertcroft-16669f45",
