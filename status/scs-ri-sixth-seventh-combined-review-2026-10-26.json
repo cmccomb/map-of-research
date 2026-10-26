@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "assembled_before_snapshot",
+  "producer_base": "f0434e46600055aaf0f148ea93a96765b68dcec9",
+  "source_base": "fea9186efa9ff2cdfd91c8fc0cf50164e3ddf3e6",
+  "profiles": 10,
+  "prior_raw_rows": 65779,
+  "raw_rows_added": 1325,
+  "expected_raw_rows": 67104,
+  "exact_holds": 320,
+  "batches": [
+    {
+      "batch": "sixth",
+      "source_head": "ec14d52d0cd95dc01e462dd2680e2ef4d5708a06",
+      "producer_head": "ebbe21f891055b1563b5a868f5b1379bb8ab5603",
+      "scholar_ids": [
+        "UdpacsMAAAAJ",
+        "Wdnc-mEAAAAJ",
+        "h-k8LTIAAAAJ",
+        "kUVJywwAAAAJ",
+        "yv3sH74AAAAJ"
+      ],
+      "person_ids": [
+        "person-jiaoyangli-18d7d0f3",
+        "person-jizhang-271d5930",
+        "person-junyanzhu-742bc585",
+        "person-krismkitani-50c7e1d4",
+        "person-laszloajeni-33daaf96"
+      ],
+      "source_rows": 872,
+      "held_rows": 215
+    },
+    {
+      "batch": "seventh",
+      "source_head": "c6bdaeabd338de4a0daf736366fc36ca4c6d5583",
+      "producer_head": "be94e9e501942d8d2e25f2668f1c15ca0f6729ad",
+      "scholar_ids": [
+        "06rffEkAAAAJ",
+        "FV83wjQAAAAJ",
+        "GX8f2G0AAAAJ",
+        "_WFQB_8AAAAJ",
+        "_tbXjP4AAAAJ"
+      ],
+      "person_ids": [
+        "person-matthewjtravers-9790981a",
+        "person-melisaortamartinez-e7b6d6e9",
+        "person-oliverkroemer-337056a3",
+        "person-shubhamtulsiani-f01770cc",
+        "person-wennietabib-4ad15616"
+      ],
+      "source_rows": 453,
+      "held_rows": 105
+    }
+  ]
+}

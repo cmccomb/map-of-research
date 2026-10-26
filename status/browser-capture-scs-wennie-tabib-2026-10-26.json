@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-wennietabib-4ad15616",
+  "display_name": "Wennie Tabib",
+  "scholar_profile_name": "Wennie Tabib",
+  "scholar_id": "_WFQB_8AAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/wennie-tabib/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/wennie-tabib/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:31:26.544634+00:00",
+  "publication_count": 25,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-wennie-tabib-2026-10-26.json",
+  "source_json_sha256": "2d3e3c45ed0b8e23dc73548161db5e77e5e36e03fd72971f7d5853fbe87aba37",
+  "source_html_path": "data/captures/scs-wennie-tabib-2026-10-26.html",
+  "source_html_sha256": "b9021bd717a608a4076360057b7e833d25cae3cc224a0ddcb8be685a107db51a",
+  "cache_path": "data/authors/_WFQB_8AAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

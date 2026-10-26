@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-oliverkroemer-337056a3",
+  "display_name": "Oliver Kroemer",
+  "scholar_profile_name": "Oliver Kroemer",
+  "scholar_id": "_tbXjP4AAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:31:02.225030+00:00",
+  "publication_count": 176,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-oliver-kroemer-2026-10-26.json",
+  "source_json_sha256": "c1b5ec55c54e1da4f35c86b7f2484995ebbd02e7f86ad8dc4a8b54a7d4b75a4e",
+  "source_html_path": "data/captures/scs-oliver-kroemer-2026-10-26.html",
+  "source_html_sha256": "90f163b8ea5ec70d0a60ee707b5a044353e0aff20bf6f07da7bbc8c85e289260",
+  "cache_path": "data/authors/_tbXjP4AAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
