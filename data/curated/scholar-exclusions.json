@@ -14824,6 +14824,158 @@
       "reason": "IEEE Magnetics Society is the officers and administrative committee roster in the official Intermag 2006 program, not an authored research work.",
       "evidence_url": "https://intermagconference.com/intermag2006/apb.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:NJ774b8OgUMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 399 is an 1899 electrical-engineering discussion, predating the CMU astrophysicist and unrelated to his publications.",
+      "evidence_url": "https://doi.org/10.1049/jiee-1.1899.0009",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:qYOp8iumCsAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 400 is an affiliation block extracted from the genuine Breaking beta article retained as complete profile row 57, not a separate publication.",
+      "evidence_url": "https://academic.oup.com/mnras/article/501/1/978/6006274",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:k8to_Y4Q4_EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 401 is a human-epilepsy study by a clinical-neuroscience Matthew Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://www.nature.com/articles/s41467-023-42971-3",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:C33y2ycGS3YC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 406 is a health-services evaluation whose exact publisher PDF places M. Walker at University of Nottingham Rehabilitation and Ageing, not at CMU Physics.",
+      "evidence_url": "https://ijic.org/articles/786/files/submission/proof/786-1-2518-1-10-20110721.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:AYInfyleIOsC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 407 is a health-psychology review whose University of Nottingham record names Marion Walker, not the CMU astrophysicist.",
+      "evidence_url": "https://nottingham-repository.worktribe.com/output/778883/can-illness-beliefs-from-the-common-sense-model-prospectively-predict-adherence-to-self-management-behaviours-a-systematic-review-and-meta-analysis",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:Hck25ST_3aIC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 408 uses the entire rehabilitation congress volume as its title; the listed Kontou/Walker/Thomas/Sprigg authors belong to a specific TIA abstract on page 471, not the volume as a research publication.",
+      "evidence_url": "https://www.deutsche-rentenversicherung.de/SharedDocs/Downloads/DE/Experten/reha_forschung/reha_kolloquium/TB-28Reha-Koll15EFRR.pdf?__blob=publicationFile&v=1",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:abG-DnoFyZgC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 413 is THE ANNALS journal header and front matter in the source PDF, not a Walker-authored research publication.",
+      "evidence_url": "https://arxiv.org/pdf/0802.1214",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:8JTMrWI6FdcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 185 is NSF award 2206046, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2206046.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:4tNoA7Af41QC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 202 is NSF award 1909584, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1909584.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:ZqLB7dQ1iF4C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 213 is NSF award 1813881, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1813881.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:SgM-ki2adj0C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 292 is NSF award 1412999, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1412999.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:bbjcffOLshcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 305 is NSF award 1313045, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1313045.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:eGYfIraVYiQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 214 is an occupational-therapy trial whose University of Nottingham record names Marion F. Walker among the authors, not the CMU astrophysicist.",
+      "evidence_url": "https://nottingham-repository.worktribe.com/output/1230686/bathing-adaptations-in-the-homes-of-older-adults-bath-out-results-of-a-feasibility-randomised-controlled-trial-rct",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:pRWBApOjXDcC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2018 pathology rostering report and full byline were entered in the ORCID record of Matthew Walker of RMIT School of Management, distinct from CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://pub.orcid.org/v3.0/0000-0003-1086-6222/work/121411569",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:hSRAE-fF4OAC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original IJIC poster abstract gives this M. Walker a University of Nottingham Division of Rehabilitation and Ageing affiliation, not the CMU astrophysicist identity.",
+      "evidence_url": "https://ijic.org/articles/785/files/submission/proof/785-1-2513-1-10-20110721.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:1sJd4Hv_s6UC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2009 Slavic-journal exchange with Edyta Bojanowska belongs to the Matthew Walker documented in Wisconsin and Middlebury Russian-literature records, not CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://www.jstor.org/stable/40651107",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:P5F9QuxV20EC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The exact 2008 review of Bojanowska’s Gogol book is by the Matthew Walker documented in Wisconsin and Middlebury Russian-literature records, not CMU astrophysicist Matthew G. Walker.",
+      "evidence_url": "https://www.jstor.org/stable/20459632",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:QaSi33NTfwYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The saved shortened byline and exact title match the 2018 pathology rostering report entered in RMIT management scholar Matthew Walker’s ORCID record; row 222 is its fuller saved copy.",
+      "evidence_url": "https://pub.orcid.org/v3.0/0000-0003-1086-6222/work/121411569",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "author_pub_id": "IcEsJfAAAAAJ:V3AGJWp-ZtQC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The original 2010 AA449 Milestone Report 2 names the five-person University of Washington blimp-project team, including its Matthew Walker; the CMU astrophysicist was then on a Cambridge/Harvard postdoctoral track.",
+      "evidence_url": "https://depts.washington.edu/soslab/mw/images/7/7d/Group2MS2Report.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }

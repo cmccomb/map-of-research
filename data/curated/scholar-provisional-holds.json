@@ -20766,6 +20766,2235 @@
           "reviewed_at": "2026-10-26"
         }
       ]
+    },
+    {
+      "person_id": "person-matthewwalker-f9f5f4da",
+      "scholar_id": "IcEsJfAAAAAJ",
+      "expected_source_rows": 413,
+      "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
+      "expected_reviewed_exclusion_rows": 19,
+      "reviewed_exclusion_ids_sha256": "e72efd0950b0b7046d40349d155cd11a8f8c83034546b57bcec90495ffb610b4",
+      "held_observations": [
+        {
+          "capture_row_index": 1,
+          "author_pub_id": "IcEsJfAAAAAJ:UxriW0iASnsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&citation_for_view=IcEsJfAAAAAJ:UxriW0iASnsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 4,
+          "author_pub_id": "IcEsJfAAAAAJ:u5HHmVD_uO8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&citation_for_view=IcEsJfAAAAAJ:u5HHmVD_uO8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 10,
+          "author_pub_id": "IcEsJfAAAAAJ:4DMP91E08xMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&citation_for_view=IcEsJfAAAAAJ:4DMP91E08xMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 16,
+          "author_pub_id": "IcEsJfAAAAAJ:UeHWp8X0CEIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&citation_for_view=IcEsJfAAAAAJ:UeHWp8X0CEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 17,
+          "author_pub_id": "IcEsJfAAAAAJ:L8Ckcad2t8MC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&citation_for_view=IcEsJfAAAAAJ:L8Ckcad2t8MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 21,
+          "author_pub_id": "IcEsJfAAAAAJ:UebtZRa9Y70C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 22,
+          "author_pub_id": "IcEsJfAAAAAJ:xtRiw3GOFMkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:xtRiw3GOFMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 24,
+          "author_pub_id": "IcEsJfAAAAAJ:x2hKVfJWtf0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:x2hKVfJWtf0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 26,
+          "author_pub_id": "IcEsJfAAAAAJ:Oo_WeVVXg5wC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Oo_WeVVXg5wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 31,
+          "author_pub_id": "IcEsJfAAAAAJ:3fE2CSJIrl8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:3fE2CSJIrl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 32,
+          "author_pub_id": "IcEsJfAAAAAJ:Se3iqnhoufwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 34,
+          "author_pub_id": "IcEsJfAAAAAJ:ufrVoPGSRksC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 35,
+          "author_pub_id": "IcEsJfAAAAAJ:eQOLeE2rZwMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:eQOLeE2rZwMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 42,
+          "author_pub_id": "IcEsJfAAAAAJ:_FxGoFyzp5QC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:_FxGoFyzp5QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 46,
+          "author_pub_id": "IcEsJfAAAAAJ:Wp0gIr-vW9MC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 47,
+          "author_pub_id": "IcEsJfAAAAAJ:-f6ydRqryjwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:-f6ydRqryjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "IcEsJfAAAAAJ:vofGIMt6cyEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:vofGIMt6cyEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 51,
+          "author_pub_id": "IcEsJfAAAAAJ:Pqt4MY__2vwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Pqt4MY__2vwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 52,
+          "author_pub_id": "IcEsJfAAAAAJ:IWHjjKOFINEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:IWHjjKOFINEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 55,
+          "author_pub_id": "IcEsJfAAAAAJ:onKP9CxGSkIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:onKP9CxGSkIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 58,
+          "author_pub_id": "IcEsJfAAAAAJ:Vr2j17o0sqMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Vr2j17o0sqMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "IcEsJfAAAAAJ:Oj-SLI0tZTcC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Oj-SLI0tZTcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 61,
+          "author_pub_id": "IcEsJfAAAAAJ:mVmsd5A6BfQC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:mVmsd5A6BfQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 63,
+          "author_pub_id": "IcEsJfAAAAAJ:JIEWM9yDoCIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:JIEWM9yDoCIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 64,
+          "author_pub_id": "IcEsJfAAAAAJ:XD-gHx7UXLsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:XD-gHx7UXLsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "IcEsJfAAAAAJ:uPCvBZYD9qUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:uPCvBZYD9qUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 68,
+          "author_pub_id": "IcEsJfAAAAAJ:Zbx7W2Xs4QsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Zbx7W2Xs4QsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 69,
+          "author_pub_id": "IcEsJfAAAAAJ:9LpHyFPp1DQC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:9LpHyFPp1DQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 70,
+          "author_pub_id": "IcEsJfAAAAAJ:BFa5h04uPMwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:BFa5h04uPMwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 71,
+          "author_pub_id": "IcEsJfAAAAAJ:09LM3QYkMKUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:09LM3QYkMKUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 73,
+          "author_pub_id": "IcEsJfAAAAAJ:DUFsPKDdMi0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:DUFsPKDdMi0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 75,
+          "author_pub_id": "IcEsJfAAAAAJ:xGWFX6Gbr9MC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:xGWFX6Gbr9MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 77,
+          "author_pub_id": "IcEsJfAAAAAJ:D_sINldO8mEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:D_sINldO8mEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 78,
+          "author_pub_id": "IcEsJfAAAAAJ:Aul-kAQHnToC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:Aul-kAQHnToC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 79,
+          "author_pub_id": "IcEsJfAAAAAJ:BqipwSGYUEgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:BqipwSGYUEgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 80,
+          "author_pub_id": "IcEsJfAAAAAJ:6IBXqrN-DEwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:6IBXqrN-DEwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 81,
+          "author_pub_id": "IcEsJfAAAAAJ:7PzlFSSx8tAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:7PzlFSSx8tAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 90,
+          "author_pub_id": "IcEsJfAAAAAJ:o-PowTg_VKEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:o-PowTg_VKEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 92,
+          "author_pub_id": "IcEsJfAAAAAJ:wBLCggQE-ToC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:wBLCggQE-ToC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 93,
+          "author_pub_id": "IcEsJfAAAAAJ:QtA78RmWg5MC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:QtA78RmWg5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 94,
+          "author_pub_id": "IcEsJfAAAAAJ:yqoGN6RLRZoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 95,
+          "author_pub_id": "IcEsJfAAAAAJ:yB1At4FlUx8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:yB1At4FlUx8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 96,
+          "author_pub_id": "IcEsJfAAAAAJ:CMPXdcK5v8EC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:CMPXdcK5v8EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 98,
+          "author_pub_id": "IcEsJfAAAAAJ:r0BpntZqJG4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:r0BpntZqJG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 99,
+          "author_pub_id": "IcEsJfAAAAAJ:MNNNGtAgD4EC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=20&pagesize=80&citation_for_view=IcEsJfAAAAAJ:MNNNGtAgD4EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 101,
+          "author_pub_id": "IcEsJfAAAAAJ:JH5k92_tO-AC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JH5k92_tO-AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 108,
+          "author_pub_id": "IcEsJfAAAAAJ:IExZWSxeYXUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:IExZWSxeYXUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 109,
+          "author_pub_id": "IcEsJfAAAAAJ:JqN3CTdJtl0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JqN3CTdJtl0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 110,
+          "author_pub_id": "IcEsJfAAAAAJ:l7t_Zn2s7bgC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:l7t_Zn2s7bgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 114,
+          "author_pub_id": "IcEsJfAAAAAJ:mVC4hKzE2FoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:mVC4hKzE2FoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 115,
+          "author_pub_id": "IcEsJfAAAAAJ:j7XjBeKFbTsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:j7XjBeKFbTsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 116,
+          "author_pub_id": "IcEsJfAAAAAJ:uQVPmWFBlwUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uQVPmWFBlwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 117,
+          "author_pub_id": "IcEsJfAAAAAJ:TQgYirikUcIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TQgYirikUcIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 121,
+          "author_pub_id": "IcEsJfAAAAAJ:I2jIoRS3jIgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:I2jIoRS3jIgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 122,
+          "author_pub_id": "IcEsJfAAAAAJ:bEWYMUwI8FkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:bEWYMUwI8FkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 128,
+          "author_pub_id": "IcEsJfAAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 129,
+          "author_pub_id": "IcEsJfAAAAAJ:uWy0R8PweswC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uWy0R8PweswC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 131,
+          "author_pub_id": "IcEsJfAAAAAJ:K3LRdlH-MEoC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:K3LRdlH-MEoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 132,
+          "author_pub_id": "IcEsJfAAAAAJ:hFOr9nPyWt4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:hFOr9nPyWt4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 133,
+          "author_pub_id": "IcEsJfAAAAAJ:wgKq3sYidysC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:wgKq3sYidysC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 134,
+          "author_pub_id": "IcEsJfAAAAAJ:wvYxNZNCP7wC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:wvYxNZNCP7wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 136,
+          "author_pub_id": "IcEsJfAAAAAJ:10A3hb2jUxYC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:10A3hb2jUxYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 138,
+          "author_pub_id": "IcEsJfAAAAAJ:hHIA4WEVY-EC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:hHIA4WEVY-EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 139,
+          "author_pub_id": "IcEsJfAAAAAJ:2l5NCbZemmgC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:2l5NCbZemmgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "IcEsJfAAAAAJ:ubry08Y2EpUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ubry08Y2EpUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "IcEsJfAAAAAJ:jKT558fuBk8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:jKT558fuBk8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 143,
+          "author_pub_id": "IcEsJfAAAAAJ:TFP_iSt0sucC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TFP_iSt0sucC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 145,
+          "author_pub_id": "IcEsJfAAAAAJ:sszUF3NjhM4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:sszUF3NjhM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 146,
+          "author_pub_id": "IcEsJfAAAAAJ:08ZZubdj9fEC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 147,
+          "author_pub_id": "IcEsJfAAAAAJ:j3f4tGmQtD8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:j3f4tGmQtD8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 148,
+          "author_pub_id": "IcEsJfAAAAAJ:RHpTSmoSYBkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 149,
+          "author_pub_id": "IcEsJfAAAAAJ:lPDSu1ZU3VAC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:lPDSu1ZU3VAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 150,
+          "author_pub_id": "IcEsJfAAAAAJ:T_0gP6tLVL0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:T_0gP6tLVL0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 151,
+          "author_pub_id": "IcEsJfAAAAAJ:4JMBOYKVnBMC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:4JMBOYKVnBMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 152,
+          "author_pub_id": "IcEsJfAAAAAJ:JV2RwH3_ST0C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JV2RwH3_ST0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 153,
+          "author_pub_id": "IcEsJfAAAAAJ:v6PuF9mNY3oC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:v6PuF9mNY3oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "IcEsJfAAAAAJ:JdL-Xu2nR38C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JdL-Xu2nR38C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 155,
+          "author_pub_id": "IcEsJfAAAAAJ:h9G0ZmjYpDoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:h9G0ZmjYpDoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 156,
+          "author_pub_id": "IcEsJfAAAAAJ:tBlTYpvFGQIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:tBlTYpvFGQIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 157,
+          "author_pub_id": "IcEsJfAAAAAJ:DquSII9TDu4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:DquSII9TDu4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 158,
+          "author_pub_id": "IcEsJfAAAAAJ:c_xDhezhKKUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:c_xDhezhKKUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 159,
+          "author_pub_id": "IcEsJfAAAAAJ:RJNGbXJAtMsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:RJNGbXJAtMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 160,
+          "author_pub_id": "IcEsJfAAAAAJ:VOx2b1Wkg3QC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:VOx2b1Wkg3QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 161,
+          "author_pub_id": "IcEsJfAAAAAJ:u9iWguZQMMsC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:u9iWguZQMMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 162,
+          "author_pub_id": "IcEsJfAAAAAJ:YFjsv_pBGBYC",
+          "reason": "Saved output is outside the bounded distinct-journal set; resolve its author and publication grain before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:YFjsv_pBGBYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 163,
+          "author_pub_id": "IcEsJfAAAAAJ:k_IJM867U9cC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:k_IJM867U9cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 164,
+          "author_pub_id": "IcEsJfAAAAAJ:ZHo1McVdvXMC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ZHo1McVdvXMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 165,
+          "author_pub_id": "IcEsJfAAAAAJ:blknAaTinKkC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:blknAaTinKkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 166,
+          "author_pub_id": "IcEsJfAAAAAJ:MLfJN-KU85MC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:MLfJN-KU85MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 167,
+          "author_pub_id": "IcEsJfAAAAAJ:M05iB0D1s5AC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:M05iB0D1s5AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 168,
+          "author_pub_id": "IcEsJfAAAAAJ:9o6PfxSMcEIC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:9o6PfxSMcEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 169,
+          "author_pub_id": "IcEsJfAAAAAJ:E2bRg1zSkIsC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:E2bRg1zSkIsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 170,
+          "author_pub_id": "IcEsJfAAAAAJ:qhW0HyKmSusC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qhW0HyKmSusC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 171,
+          "author_pub_id": "IcEsJfAAAAAJ:rJyh6hJnyfgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rJyh6hJnyfgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 172,
+          "author_pub_id": "IcEsJfAAAAAJ:wlzmIqt2EaEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:wlzmIqt2EaEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 173,
+          "author_pub_id": "IcEsJfAAAAAJ:LlXTz_FrCmAC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:LlXTz_FrCmAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 174,
+          "author_pub_id": "IcEsJfAAAAAJ:w0odbtu79TwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:w0odbtu79TwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 175,
+          "author_pub_id": "IcEsJfAAAAAJ:R6EwkKsDylYC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:R6EwkKsDylYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 176,
+          "author_pub_id": "IcEsJfAAAAAJ:qSd0DAb9jMoC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qSd0DAb9jMoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 177,
+          "author_pub_id": "IcEsJfAAAAAJ:YGhAHpnIhDoC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:YGhAHpnIhDoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 178,
+          "author_pub_id": "IcEsJfAAAAAJ:1paMEeroeoQC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:1paMEeroeoQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 179,
+          "author_pub_id": "IcEsJfAAAAAJ:e3CVSTJ63dQC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:e3CVSTJ63dQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 180,
+          "author_pub_id": "IcEsJfAAAAAJ:E8ajGqO0XoUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:E8ajGqO0XoUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 181,
+          "author_pub_id": "IcEsJfAAAAAJ:GtqhT-R7ZnwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:GtqhT-R7ZnwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 182,
+          "author_pub_id": "IcEsJfAAAAAJ:DGzKIA18-3YC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:DGzKIA18-3YC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 183,
+          "author_pub_id": "IcEsJfAAAAAJ:NZNkWSpQBv0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:NZNkWSpQBv0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 184,
+          "author_pub_id": "IcEsJfAAAAAJ:eFf2swCANGcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:eFf2swCANGcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 186,
+          "author_pub_id": "IcEsJfAAAAAJ:sbeIDTyQOFgC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:sbeIDTyQOFgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 187,
+          "author_pub_id": "IcEsJfAAAAAJ:h1pkognVyKwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:h1pkognVyKwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 188,
+          "author_pub_id": "IcEsJfAAAAAJ:CdxZDUztZiMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:CdxZDUztZiMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "IcEsJfAAAAAJ:GYcXSSpN504C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:GYcXSSpN504C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 190,
+          "author_pub_id": "IcEsJfAAAAAJ:uUvzmPk0f8oC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uUvzmPk0f8oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 191,
+          "author_pub_id": "IcEsJfAAAAAJ:XAp-VaTZjjwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:XAp-VaTZjjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 192,
+          "author_pub_id": "IcEsJfAAAAAJ:4E1Y8I9HL1wC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:4E1Y8I9HL1wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 193,
+          "author_pub_id": "IcEsJfAAAAAJ:3A3nxV7CjKIC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:3A3nxV7CjKIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 194,
+          "author_pub_id": "IcEsJfAAAAAJ:lbI08cpqPnQC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:lbI08cpqPnQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 195,
+          "author_pub_id": "IcEsJfAAAAAJ:natZJ_-F0IUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:natZJ_-F0IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 196,
+          "author_pub_id": "IcEsJfAAAAAJ:In6cVmBjs0IC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:In6cVmBjs0IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 197,
+          "author_pub_id": "IcEsJfAAAAAJ:rCNdntzdTkkC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rCNdntzdTkkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 198,
+          "author_pub_id": "IcEsJfAAAAAJ:EaFouW7jFu4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:EaFouW7jFu4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "IcEsJfAAAAAJ:DwWRdx-KAo4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:DwWRdx-KAo4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 200,
+          "author_pub_id": "IcEsJfAAAAAJ:KqnX2w3egDsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=100&pagesize=100&citation_for_view=IcEsJfAAAAAJ:KqnX2w3egDsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 201,
+          "author_pub_id": "IcEsJfAAAAAJ:ji7lAbPyDbYC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ji7lAbPyDbYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 203,
+          "author_pub_id": "IcEsJfAAAAAJ:8dzOF9BpDQoC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:8dzOF9BpDQoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 204,
+          "author_pub_id": "IcEsJfAAAAAJ:JTqpx9DYBaYC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JTqpx9DYBaYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 205,
+          "author_pub_id": "IcEsJfAAAAAJ:eIKNFFVQvJAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:eIKNFFVQvJAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 206,
+          "author_pub_id": "IcEsJfAAAAAJ:mgoTDWlsYNUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:mgoTDWlsYNUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 207,
+          "author_pub_id": "IcEsJfAAAAAJ:cB__R-XWw9UC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:cB__R-XWw9UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 208,
+          "author_pub_id": "IcEsJfAAAAAJ:Gpwnp1kGG20C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Gpwnp1kGG20C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 209,
+          "author_pub_id": "IcEsJfAAAAAJ:CMvovTBb2okC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:CMvovTBb2okC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 210,
+          "author_pub_id": "IcEsJfAAAAAJ:qCpRzq7zkD8C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qCpRzq7zkD8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 211,
+          "author_pub_id": "IcEsJfAAAAAJ:cK4Rrx0J3m0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:cK4Rrx0J3m0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "IcEsJfAAAAAJ:WWeOtg8bX_EC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:WWeOtg8bX_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 215,
+          "author_pub_id": "IcEsJfAAAAAJ:kVjdVfd2voEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:kVjdVfd2voEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 216,
+          "author_pub_id": "IcEsJfAAAAAJ:jgBuDB5drN8C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:jgBuDB5drN8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 217,
+          "author_pub_id": "IcEsJfAAAAAJ:nqdriD65xNoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:nqdriD65xNoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "IcEsJfAAAAAJ:6yz0xqPARnAC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:6yz0xqPARnAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 219,
+          "author_pub_id": "IcEsJfAAAAAJ:5MTHONV0fEkC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:5MTHONV0fEkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 220,
+          "author_pub_id": "IcEsJfAAAAAJ:GFxP56DSvIMC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:GFxP56DSvIMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "IcEsJfAAAAAJ:vkuYBMKU6wEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vkuYBMKU6wEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 223,
+          "author_pub_id": "IcEsJfAAAAAJ:hfzGNhXhx5MC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:hfzGNhXhx5MC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 224,
+          "author_pub_id": "IcEsJfAAAAAJ:d4tt_xEv1X8C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:d4tt_xEv1X8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 225,
+          "author_pub_id": "IcEsJfAAAAAJ:8uzoZH4hB9AC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:8uzoZH4hB9AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 226,
+          "author_pub_id": "IcEsJfAAAAAJ:w2UhwfzvF0QC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:w2UhwfzvF0QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 227,
+          "author_pub_id": "IcEsJfAAAAAJ:0ngZmJvimKcC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:0ngZmJvimKcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "IcEsJfAAAAAJ:eH23hyXCXa4C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:eH23hyXCXa4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 229,
+          "author_pub_id": "IcEsJfAAAAAJ:_5tno0g5mFcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:_5tno0g5mFcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 230,
+          "author_pub_id": "IcEsJfAAAAAJ:Xl6nMSl579sC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Xl6nMSl579sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 231,
+          "author_pub_id": "IcEsJfAAAAAJ:M7yex6snE4oC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:M7yex6snE4oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 232,
+          "author_pub_id": "IcEsJfAAAAAJ:k8Z6L05lTy4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:k8Z6L05lTy4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 233,
+          "author_pub_id": "IcEsJfAAAAAJ:8O4vDxvErlEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:8O4vDxvErlEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "IcEsJfAAAAAJ:m92CDrhVnKEC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:m92CDrhVnKEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 235,
+          "author_pub_id": "IcEsJfAAAAAJ:xlVdBZVQT58C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:xlVdBZVQT58C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 236,
+          "author_pub_id": "IcEsJfAAAAAJ:ON9TkA72AHEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ON9TkA72AHEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "IcEsJfAAAAAJ:feST4K8J0scC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:feST4K8J0scC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 238,
+          "author_pub_id": "IcEsJfAAAAAJ:vD2iS2Kej30C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vD2iS2Kej30C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 239,
+          "author_pub_id": "IcEsJfAAAAAJ:cRMvf6lLvU8C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:cRMvf6lLvU8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 240,
+          "author_pub_id": "IcEsJfAAAAAJ:X5YyAB84Iw4C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:X5YyAB84Iw4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 241,
+          "author_pub_id": "IcEsJfAAAAAJ:rqnDXT1GswoC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rqnDXT1GswoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 242,
+          "author_pub_id": "IcEsJfAAAAAJ:gV6rEsy15s0C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:gV6rEsy15s0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 243,
+          "author_pub_id": "IcEsJfAAAAAJ:VRfTbSk87rEC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:VRfTbSk87rEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 244,
+          "author_pub_id": "IcEsJfAAAAAJ:TesyEGJKHF4C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TesyEGJKHF4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 245,
+          "author_pub_id": "IcEsJfAAAAAJ:nrtMV_XWKgEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:nrtMV_XWKgEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 246,
+          "author_pub_id": "IcEsJfAAAAAJ:Mojj43d5GZwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Mojj43d5GZwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "IcEsJfAAAAAJ:TGkaJS32XoUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TGkaJS32XoUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "IcEsJfAAAAAJ:eO3_k5sD8BwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:eO3_k5sD8BwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 249,
+          "author_pub_id": "IcEsJfAAAAAJ:silx2ntsSuwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:silx2ntsSuwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "IcEsJfAAAAAJ:LXmCCkuhhTsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:LXmCCkuhhTsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 251,
+          "author_pub_id": "IcEsJfAAAAAJ:mUJArPsKIAAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:mUJArPsKIAAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 252,
+          "author_pub_id": "IcEsJfAAAAAJ:eflP2zaiRacC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:eflP2zaiRacC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 253,
+          "author_pub_id": "IcEsJfAAAAAJ:qmtmRrLr0tkC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qmtmRrLr0tkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 254,
+          "author_pub_id": "IcEsJfAAAAAJ:kzcSZmkxUKAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:kzcSZmkxUKAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 255,
+          "author_pub_id": "IcEsJfAAAAAJ:HhcuHIWmDEUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:HhcuHIWmDEUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 256,
+          "author_pub_id": "IcEsJfAAAAAJ:hkOj_22Ku90C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:hkOj_22Ku90C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 257,
+          "author_pub_id": "IcEsJfAAAAAJ:WC9gN4BGCRcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:WC9gN4BGCRcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 258,
+          "author_pub_id": "IcEsJfAAAAAJ:uEM9VtRl8xsC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uEM9VtRl8xsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 259,
+          "author_pub_id": "IcEsJfAAAAAJ:tOudhMTPpwUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:tOudhMTPpwUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 260,
+          "author_pub_id": "IcEsJfAAAAAJ:3x-KLxxGyuUC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:3x-KLxxGyuUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 261,
+          "author_pub_id": "IcEsJfAAAAAJ:kz9GbA2Ns4gC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:kz9GbA2Ns4gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 262,
+          "author_pub_id": "IcEsJfAAAAAJ:Lo8V22OuN40C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Lo8V22OuN40C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 263,
+          "author_pub_id": "IcEsJfAAAAAJ:7VEv-pLvLSsC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:7VEv-pLvLSsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 264,
+          "author_pub_id": "IcEsJfAAAAAJ:DQNrXyjhriIC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:DQNrXyjhriIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 265,
+          "author_pub_id": "IcEsJfAAAAAJ:lK9BDNCuzFgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:lK9BDNCuzFgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 266,
+          "author_pub_id": "IcEsJfAAAAAJ:g_UdREhPGEoC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:g_UdREhPGEoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 267,
+          "author_pub_id": "IcEsJfAAAAAJ:vnF2_uLGgtgC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vnF2_uLGgtgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 268,
+          "author_pub_id": "IcEsJfAAAAAJ:I8rxH6phXEkC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:I8rxH6phXEkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 269,
+          "author_pub_id": "IcEsJfAAAAAJ:bKqednn6t2AC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:bKqednn6t2AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 270,
+          "author_pub_id": "IcEsJfAAAAAJ:rbm3iO8VlycC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rbm3iO8VlycC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 271,
+          "author_pub_id": "IcEsJfAAAAAJ:Tiz5es2fbqcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Tiz5es2fbqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 272,
+          "author_pub_id": "IcEsJfAAAAAJ:2KloaMYe4IUC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 273,
+          "author_pub_id": "IcEsJfAAAAAJ:tSVUDDkujAIC",
+          "reason": "Saved output is outside the bounded distinct-journal set; resolve its author and publication grain before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:tSVUDDkujAIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "IcEsJfAAAAAJ:uVUOdF_882EC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uVUOdF_882EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 275,
+          "author_pub_id": "IcEsJfAAAAAJ:zA6iFVUQeVQC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:zA6iFVUQeVQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 276,
+          "author_pub_id": "IcEsJfAAAAAJ:nb7KW1ujOQ8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:nb7KW1ujOQ8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 277,
+          "author_pub_id": "IcEsJfAAAAAJ:aCwMkEyfDy8C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:aCwMkEyfDy8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 278,
+          "author_pub_id": "IcEsJfAAAAAJ:SnGPuo6Feq8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:SnGPuo6Feq8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 279,
+          "author_pub_id": "IcEsJfAAAAAJ:qPeb-qHga9sC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qPeb-qHga9sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 280,
+          "author_pub_id": "IcEsJfAAAAAJ:nWoA1JPTheMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:nWoA1JPTheMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 281,
+          "author_pub_id": "IcEsJfAAAAAJ:EBV337fEn3EC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:EBV337fEn3EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 282,
+          "author_pub_id": "IcEsJfAAAAAJ:J3LtWjKFLicC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:J3LtWjKFLicC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 283,
+          "author_pub_id": "IcEsJfAAAAAJ:f2IySw72cVMC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:f2IySw72cVMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 284,
+          "author_pub_id": "IcEsJfAAAAAJ:ns9cj8rnVeAC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ns9cj8rnVeAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 285,
+          "author_pub_id": "IcEsJfAAAAAJ:vRqMK49ujn8C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 286,
+          "author_pub_id": "IcEsJfAAAAAJ:vV6vV6tmYwMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vV6vV6tmYwMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 287,
+          "author_pub_id": "IcEsJfAAAAAJ:_Ybze24A_UAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:_Ybze24A_UAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 288,
+          "author_pub_id": "IcEsJfAAAAAJ:1tZ8xJnm2c8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:1tZ8xJnm2c8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 289,
+          "author_pub_id": "IcEsJfAAAAAJ:w1MjKQ0l0TYC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:w1MjKQ0l0TYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 290,
+          "author_pub_id": "IcEsJfAAAAAJ:u_35RYKgDlwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:u_35RYKgDlwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 291,
+          "author_pub_id": "IcEsJfAAAAAJ:rO6llkc54NcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rO6llkc54NcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 293,
+          "author_pub_id": "IcEsJfAAAAAJ:4Yq6kJLCcecC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:4Yq6kJLCcecC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 294,
+          "author_pub_id": "IcEsJfAAAAAJ:mWEH9CqjF64C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:mWEH9CqjF64C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 295,
+          "author_pub_id": "IcEsJfAAAAAJ:jE2MZjpN3IcC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:jE2MZjpN3IcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 296,
+          "author_pub_id": "IcEsJfAAAAAJ:a0OBvERweLwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:a0OBvERweLwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 297,
+          "author_pub_id": "IcEsJfAAAAAJ:SpbeaW3--B0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:SpbeaW3--B0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 298,
+          "author_pub_id": "IcEsJfAAAAAJ:anDooRL1HQEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:anDooRL1HQEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "IcEsJfAAAAAJ:8VtEwCQfWZkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:8VtEwCQfWZkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 300,
+          "author_pub_id": "IcEsJfAAAAAJ:bz8QjSJIRt4C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=200&pagesize=100&citation_for_view=IcEsJfAAAAAJ:bz8QjSJIRt4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 301,
+          "author_pub_id": "IcEsJfAAAAAJ:RGFaLdJalmkC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:RGFaLdJalmkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 302,
+          "author_pub_id": "IcEsJfAAAAAJ:-7ulzOJl1JYC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:-7ulzOJl1JYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 303,
+          "author_pub_id": "IcEsJfAAAAAJ:tS2w5q8j5-wC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:tS2w5q8j5-wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 304,
+          "author_pub_id": "IcEsJfAAAAAJ:6pF0wJmtdfAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:6pF0wJmtdfAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 306,
+          "author_pub_id": "IcEsJfAAAAAJ:w0F2JDEymm0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:w0F2JDEymm0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 307,
+          "author_pub_id": "IcEsJfAAAAAJ:VN7nJs4JPk0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:VN7nJs4JPk0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "IcEsJfAAAAAJ:rTD5ala9j4wC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:rTD5ala9j4wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 309,
+          "author_pub_id": "IcEsJfAAAAAJ:ODE9OILHJdcC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ODE9OILHJdcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 310,
+          "author_pub_id": "IcEsJfAAAAAJ:aDl3D7KC1E4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:aDl3D7KC1E4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 311,
+          "author_pub_id": "IcEsJfAAAAAJ:U4n9YNQMCAIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:U4n9YNQMCAIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 312,
+          "author_pub_id": "IcEsJfAAAAAJ:EYYDruWGBe4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:EYYDruWGBe4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 313,
+          "author_pub_id": "IcEsJfAAAAAJ:uWiczbcajpAC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:uWiczbcajpAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 314,
+          "author_pub_id": "IcEsJfAAAAAJ:qxL8FJ1GzNcC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:qxL8FJ1GzNcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 315,
+          "author_pub_id": "IcEsJfAAAAAJ:YsrPvlHIBpEC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:YsrPvlHIBpEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 316,
+          "author_pub_id": "IcEsJfAAAAAJ:NDuN12AVoxsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:NDuN12AVoxsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 317,
+          "author_pub_id": "IcEsJfAAAAAJ:yxmsSjX2EkcC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:yxmsSjX2EkcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 318,
+          "author_pub_id": "IcEsJfAAAAAJ:wMgC3FpKEyYC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:wMgC3FpKEyYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 319,
+          "author_pub_id": "IcEsJfAAAAAJ:LgRImbQfgY4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:LgRImbQfgY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 320,
+          "author_pub_id": "IcEsJfAAAAAJ:dshw04ExmUIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:dshw04ExmUIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 321,
+          "author_pub_id": "IcEsJfAAAAAJ:35N4QoGY0k4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:35N4QoGY0k4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 322,
+          "author_pub_id": "IcEsJfAAAAAJ:70eg2SAEIzsC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 323,
+          "author_pub_id": "IcEsJfAAAAAJ:ndLnGcHYRF0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ndLnGcHYRF0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 324,
+          "author_pub_id": "IcEsJfAAAAAJ:VaXvl8Fpj5cC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:VaXvl8Fpj5cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 325,
+          "author_pub_id": "IcEsJfAAAAAJ:BJtnxTr0fRcC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:BJtnxTr0fRcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 326,
+          "author_pub_id": "IcEsJfAAAAAJ:6ZzL7HXColQC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:6ZzL7HXColQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 327,
+          "author_pub_id": "IcEsJfAAAAAJ:PQEM9vzQD9gC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:PQEM9vzQD9gC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 328,
+          "author_pub_id": "IcEsJfAAAAAJ:n3vGvpFsckwC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:n3vGvpFsckwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 329,
+          "author_pub_id": "IcEsJfAAAAAJ:O3NaXMp0MMsC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 331,
+          "author_pub_id": "IcEsJfAAAAAJ:WAzi4Gm8nLoC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:WAzi4Gm8nLoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 332,
+          "author_pub_id": "IcEsJfAAAAAJ:QyXJ3EUuO1IC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:QyXJ3EUuO1IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 333,
+          "author_pub_id": "IcEsJfAAAAAJ:OBSaB-F7qqsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:OBSaB-F7qqsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 334,
+          "author_pub_id": "IcEsJfAAAAAJ:z6xuaG2dYH0C",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:z6xuaG2dYH0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 335,
+          "author_pub_id": "IcEsJfAAAAAJ:Bg7qf7VwUHIC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Bg7qf7VwUHIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 336,
+          "author_pub_id": "IcEsJfAAAAAJ:5awf1xo2G04C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:5awf1xo2G04C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 337,
+          "author_pub_id": "IcEsJfAAAAAJ:oi2SiIJ9l4AC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:oi2SiIJ9l4AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 338,
+          "author_pub_id": "IcEsJfAAAAAJ:J-pR_7NvFogC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:J-pR_7NvFogC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 339,
+          "author_pub_id": "IcEsJfAAAAAJ:0sTkTiv_uMkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:0sTkTiv_uMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 340,
+          "author_pub_id": "IcEsJfAAAAAJ:5Ul4iDaHHb8C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:5Ul4iDaHHb8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 341,
+          "author_pub_id": "IcEsJfAAAAAJ:S2WlVNSe3u4C",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:S2WlVNSe3u4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 342,
+          "author_pub_id": "IcEsJfAAAAAJ:NxmKEeNBbOMC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:NxmKEeNBbOMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 343,
+          "author_pub_id": "IcEsJfAAAAAJ:yY3RG6sOEgwC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:yY3RG6sOEgwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 344,
+          "author_pub_id": "IcEsJfAAAAAJ:lSLTfruPkqcC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:lSLTfruPkqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 345,
+          "author_pub_id": "IcEsJfAAAAAJ:ldfaerwXgEUC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ldfaerwXgEUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "IcEsJfAAAAAJ:LjlpjdlvIbIC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:LjlpjdlvIbIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 347,
+          "author_pub_id": "IcEsJfAAAAAJ:9vf0nzSNQJEC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:9vf0nzSNQJEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "IcEsJfAAAAAJ:xtoqd-5pKcoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:xtoqd-5pKcoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "IcEsJfAAAAAJ:QD3KBmkZPeQC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:QD3KBmkZPeQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 351,
+          "author_pub_id": "IcEsJfAAAAAJ:X9ykpCP0fEIC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:X9ykpCP0fEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 352,
+          "author_pub_id": "IcEsJfAAAAAJ:TlpoogIpr_IC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TlpoogIpr_IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 353,
+          "author_pub_id": "IcEsJfAAAAAJ:1DsIQWDZLl8C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:1DsIQWDZLl8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 354,
+          "author_pub_id": "IcEsJfAAAAAJ:ce2CqMG-AY4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ce2CqMG-AY4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "IcEsJfAAAAAJ:JoZmwDi-zQgC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:JoZmwDi-zQgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "IcEsJfAAAAAJ:3s1wT3WcHBgC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:3s1wT3WcHBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 358,
+          "author_pub_id": "IcEsJfAAAAAJ:kh2fBNsKQNwC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:kh2fBNsKQNwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 359,
+          "author_pub_id": "IcEsJfAAAAAJ:WGv8Og3F3KgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:WGv8Og3F3KgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 360,
+          "author_pub_id": "IcEsJfAAAAAJ:PuOEWVtPfzwC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:PuOEWVtPfzwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 361,
+          "author_pub_id": "IcEsJfAAAAAJ:An6A6Jpfc1oC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:An6A6Jpfc1oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 362,
+          "author_pub_id": "IcEsJfAAAAAJ:ILKRHgRFtOwC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:ILKRHgRFtOwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 363,
+          "author_pub_id": "IcEsJfAAAAAJ:SeFeTyx0c_EC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:SeFeTyx0c_EC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 364,
+          "author_pub_id": "IcEsJfAAAAAJ:pqnbT2bcN3wC",
+          "reason": "Saved record has an erratum, duplicate, preprint, or recent version question; determine its distinct source-native output before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:pqnbT2bcN3wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 365,
+          "author_pub_id": "IcEsJfAAAAAJ:t-hv7AR41mYC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:t-hv7AR41mYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "IcEsJfAAAAAJ:cFHS6HbyZ2cC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:cFHS6HbyZ2cC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 367,
+          "author_pub_id": "IcEsJfAAAAAJ:RYcK_YlVTxYC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:RYcK_YlVTxYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 368,
+          "author_pub_id": "IcEsJfAAAAAJ:A8cqit5AE6sC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:A8cqit5AE6sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "IcEsJfAAAAAJ:J_g5lzvAfSwC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:J_g5lzvAfSwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 370,
+          "author_pub_id": "IcEsJfAAAAAJ:_n8fIOMweQoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:_n8fIOMweQoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 371,
+          "author_pub_id": "IcEsJfAAAAAJ:dfsIfKJdRG4C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:dfsIfKJdRG4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 372,
+          "author_pub_id": "IcEsJfAAAAAJ:jSAVyFp_754C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:jSAVyFp_754C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 373,
+          "author_pub_id": "IcEsJfAAAAAJ:FsLZdJ3BAzkC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:FsLZdJ3BAzkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 374,
+          "author_pub_id": "IcEsJfAAAAAJ:L24QuVWYgZ0C",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:L24QuVWYgZ0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 375,
+          "author_pub_id": "IcEsJfAAAAAJ:4MWp96NkSFoC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:4MWp96NkSFoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 376,
+          "author_pub_id": "IcEsJfAAAAAJ:D_tqNUsBuKoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:D_tqNUsBuKoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 377,
+          "author_pub_id": "IcEsJfAAAAAJ:t6usbXjVLHcC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:t6usbXjVLHcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 378,
+          "author_pub_id": "IcEsJfAAAAAJ:Nnq8S6OXqDYC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Nnq8S6OXqDYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 379,
+          "author_pub_id": "IcEsJfAAAAAJ:CRzUtm-VnGAC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:CRzUtm-VnGAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 380,
+          "author_pub_id": "IcEsJfAAAAAJ:_tF6a-HnqWAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:_tF6a-HnqWAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 381,
+          "author_pub_id": "IcEsJfAAAAAJ:b1wdh0AR-JQC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:b1wdh0AR-JQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 382,
+          "author_pub_id": "IcEsJfAAAAAJ:gsN89kCJA0AC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:gsN89kCJA0AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 383,
+          "author_pub_id": "IcEsJfAAAAAJ:TIZ-Mc8IlK0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TIZ-Mc8IlK0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 384,
+          "author_pub_id": "IcEsJfAAAAAJ:KUbvn5osdkgC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:KUbvn5osdkgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 385,
+          "author_pub_id": "IcEsJfAAAAAJ:olpn-zPbct0C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:olpn-zPbct0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 386,
+          "author_pub_id": "IcEsJfAAAAAJ:35r97b3x0nAC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:35r97b3x0nAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 387,
+          "author_pub_id": "IcEsJfAAAAAJ:B2rIPIGFPLEC",
+          "reason": "Archive, catalog, proposal, meeting, thesis, or institutional rendering needs its own output-type and article-identity decision.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:B2rIPIGFPLEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 388,
+          "author_pub_id": "IcEsJfAAAAAJ:1qzjygNMrQYC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:1qzjygNMrQYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 389,
+          "author_pub_id": "IcEsJfAAAAAJ:9shLKfS_uJEC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:9shLKfS_uJEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 390,
+          "author_pub_id": "IcEsJfAAAAAJ:QVtou7C4vgoC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:QVtou7C4vgoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 391,
+          "author_pub_id": "IcEsJfAAAAAJ:BzfGm06jWhQC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:BzfGm06jWhQC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 392,
+          "author_pub_id": "IcEsJfAAAAAJ:z8nqeaKD1nsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:z8nqeaKD1nsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 393,
+          "author_pub_id": "IcEsJfAAAAAJ:TaaCk18tZOkC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:TaaCk18tZOkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 394,
+          "author_pub_id": "IcEsJfAAAAAJ:LWqeokA2EBkC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:LWqeokA2EBkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 395,
+          "author_pub_id": "IcEsJfAAAAAJ:XDrR66g3YHsC",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:XDrR66g3YHsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 396,
+          "author_pub_id": "IcEsJfAAAAAJ:Y0-TYkg6YM4C",
+          "reason": "Saved byline lacks an explicit MG Walker identity; resolve the author against the source record before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:Y0-TYkg6YM4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "IcEsJfAAAAAJ:9DLIHnF0jcYC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:9DLIHnF0jcYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "IcEsJfAAAAAJ:jtI9f0ekYq0C",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=300&pagesize=100&citation_for_view=IcEsJfAAAAAJ:jtI9f0ekYq0C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 403,
+          "author_pub_id": "IcEsJfAAAAAJ:RMgMIBzvq-4C",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:RMgMIBzvq-4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 404,
+          "author_pub_id": "IcEsJfAAAAAJ:sfnaS5RM6jYC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:sfnaS5RM6jYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 405,
+          "author_pub_id": "IcEsJfAAAAAJ:lYAcb2jw7qUC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:lYAcb2jw7qUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 409,
+          "author_pub_id": "IcEsJfAAAAAJ:4X0JR2_MtJMC",
+          "reason": "Saved record lacks a venue or year; identify the original output and author before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 410,
+          "author_pub_id": "IcEsJfAAAAAJ:yMeIxYmEMEAC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:yMeIxYmEMEAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 411,
+          "author_pub_id": "IcEsJfAAAAAJ:vbGhcppDl1QC",
+          "reason": "Earlier source review could not identify this exact same-name output; retain the observation while checking its original author record.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IcEsJfAAAAAJ&cstart=400&pagesize=100&citation_for_view=IcEsJfAAAAAJ:vbGhcppDl1QC",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }

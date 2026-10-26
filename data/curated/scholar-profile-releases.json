@@ -187,11 +187,13 @@
     {
       "person_id": "person-matthewwalker-f9f5f4da",
       "scholar_id": "IcEsJfAAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 413,
       "cache_sha256": "22a6f8ce2597b5938e20847a3e8da54a8338ad9aca37b90c5f9eaade6f825874",
-      "reason": "Complete 413-row Physics capture is source-bound. Same-name contamination and eleven individual candidates remain unresolved; hold the entire profile.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 413-row Physics source is bound to its saved capture and cache. Nineteen source-reviewed exact exclusions and 317 exact holds protect unresolved same-name and output-grain records; 77 distinct dated astronomy journal rows with an MG Walker byline enter ordinary gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 317,
+      "provisional_hold_ids_sha256": "876e9fea03342dd9e68617d81a84eb2c0c04bae8c9239f0bde3715061fffc256"
     },
     {
       "person_id": "person-randallfeenstra-0f288978",
