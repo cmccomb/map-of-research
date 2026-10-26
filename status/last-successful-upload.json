@@ -1,9 +1,9 @@
 {
-  "artifact_commit": "37c709267b78720be48e63ef360ea71d15553e3c",
+  "artifact_commit": "a032306a073095278dfb6d166b842de3138dbeee",
   "atomic_release": {
-    "artifact_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
-    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 40c2bbab92514e95bd16310d2dc3ce8b",
-    "commit_nonce": "40c2bbab92514e95bd16310d2dc3ce8b",
+    "artifact_revision": "a032306a073095278dfb6d166b842de3138dbeee",
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: b6916acaf03d48d0b7ae86b56ccac0e1",
+    "commit_nonce": "b6916acaf03d48d0b7ae86b56ccac0e1",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -15,48 +15,48 @@
     ],
     "hosted_file_bytes_match_prewrite": true,
     "mode": "single_parent_commit",
-    "parent_revision": "42b30e512fb941a8cbe78d67399bd3771372cb68",
+    "parent_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
     "prewrite_gate": {
       "gate": "full-source-and-region-continuity-v1",
-      "map_points": 44178,
-      "prior_revision": "42b30e512fb941a8cbe78d67399bd3771372cb68",
+      "map_points": 44545,
+      "prior_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
       "raw_rows": 59434,
       "source_snapshot_sha256": "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1",
       "status": "pass"
     },
     "release_context": {
-      "producer_commit": "ec8996e7c4d11c3b657240a145b18d926a711271",
-      "snapshot_commit": "26794539eb486dd3efa29c26387b85d379688896",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40272111662"
+      "producer_commit": "0063ff31772fa780445b3c900e2eaa1e0356c33e",
+      "snapshot_commit": "2c30b79aedbe81ed949f8c018995e1f48eb9292b",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40294778320"
     },
     "sha256_by_path": {
-      "README.md": "f85e5b097b887444b11fe87d3780c41b2b6d0e9615ae5b75dfd6ed6c294b319e",
-      "authorships/train-00000-of-00001.parquet": "e230ce8c2809a0a820e29f897e8191d4072d90cb59eaaf7cdbc28f8d9a79ac30",
-      "maps/manifest.json": "6aa7948d082c62f3d415ce6f316f9a77b303df31c16eb5e1301a3b881d085b92",
-      "maps/publications.json": "880cf2150fee9b2583ba7fe70a2cbbf64cffd4cfc3d55ecad0f1701f717ec6e2",
-      "people/train-00000-of-00001.parquet": "09a7a8659902ed2c276b00eccd172be3219e94159ad0a45426a49d73f299f583",
-      "profile_publications/train-00000-of-00001.parquet": "6e2a0361cbf6dddf6273b6ee4907328df848496081ce6d2a0bf6857a1ef8922e",
-      "works/train-00000-of-00001.parquet": "dbe9678fc6a7f7574a25ece0a7a92caeadc247e94dc44d2ba4aca6ee402a0090"
+      "README.md": "bfd3d3e40b7146d4a27cd10ac6cde7496c21441c536a0e27cb233733728f1e96",
+      "authorships/train-00000-of-00001.parquet": "a2d62602f11173a7ca4e391505733e0a5a9576970ae39829c4f0e46e5662ad3f",
+      "maps/manifest.json": "f10cc8cfb41144617a3d7e79b99e57b6d9b9205b676ed3904732121a3dfdc147",
+      "maps/publications.json": "b83f3830aec1c573ab1b87fb8171834adf85f0fac9085a5358e647850ac5fa93",
+      "people/train-00000-of-00001.parquet": "3eec37dcee81e53f0ef37f1790b618a895d126208607f48a647ab3fae1c4cf52",
+      "profile_publications/train-00000-of-00001.parquet": "d6f5c2ed91121976b75479aaec9887659cfc1897ed115f82b98344b8fa18c7dd",
+      "works/train-00000-of-00001.parquet": "224324d0f561a390a5955c9044172ca054cc78b7d310ce29f888c0e8278898ec"
     },
     "size_by_path": {
       "README.md": 10439,
-      "authorships/train-00000-of-00001.parquet": 15945426,
+      "authorships/train-00000-of-00001.parquet": 16062359,
       "maps/manifest.json": 3193,
-      "maps/publications.json": 39956007,
-      "people/train-00000-of-00001.parquet": 662331,
-      "profile_publications/train-00000-of-00001.parquet": 194690976,
-      "works/train-00000-of-00001.parquet": 199917402
+      "maps/publications.json": 40328879,
+      "people/train-00000-of-00001.parquet": 662375,
+      "profile_publications/train-00000-of-00001.parquet": 197261894,
+      "works/train-00000-of-00001.parquet": 202239288
     }
   },
   "attribution_confirmed": 505,
-  "attribution_held": 456,
+  "attribution_held": 700,
   "attribution_reviews_sha256": "b9334546cf44d40b36d9faf6c4eff213b93677ebef2fb748fcb4cb258091aa51",
-  "authorships": 51000,
+  "authorships": 51448,
   "dataset_commits": {
-    "authorships": "37c709267b78720be48e63ef360ea71d15553e3c",
-    "people": "37c709267b78720be48e63ef360ea71d15553e3c",
-    "profile_publications": "37c709267b78720be48e63ef360ea71d15553e3c",
-    "works": "37c709267b78720be48e63ef360ea71d15553e3c"
+    "authorships": "a032306a073095278dfb6d166b842de3138dbeee",
+    "people": "a032306a073095278dfb6d166b842de3138dbeee",
+    "profile_publications": "a032306a073095278dfb6d166b842de3138dbeee",
+    "works": "a032306a073095278dfb6d166b842de3138dbeee"
   },
   "dataset_configs": [
     "people",
@@ -68,32 +68,30 @@
   "detail_keywords": 120,
   "error_message": null,
   "error_type": null,
-  "excluded_works": 3383,
-  "finished_at_utc": "2026-10-26T05:20:29.719825+00:00",
-  "held_observation_rows": 5288,
+  "excluded_works": 3591,
+  "finished_at_utc": "2026-10-26T09:07:21.177727+00:00",
+  "held_observation_rows": 4578,
   "held_person_observation_rows": 3,
   "held_profile_ids": [
     "IcEsJfAAAAAJ",
     "FRlLpMYAAAAJ",
     "6pPZKd0AAAAJ",
     "jkKrk0sAAAAJ",
-    "kcXOB1MAAAAJ",
-    "wex9ft0AAAAJ",
     "wJ_gQLoAAAAJ",
     "LibSWRMAAAAJ"
   ],
-  "held_source_observation_rows": 5288,
+  "held_source_observation_rows": 4578,
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 44178,
+  "mapped_works": 44545,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 761,
+  "new_embedding_count": 609,
   "people": 2001,
   "person_publication_hold_manifest_sha256": "575d553b9762eefdb92631265f8c374e5be843edf004e44d6cb80297f6bc3395",
   "person_publication_holds": [
@@ -123,10 +121,10 @@
       ]
     }
   ],
-  "prior_revision": "42b30e512fb941a8cbe78d67399bd3771372cb68",
-  "producer_commit": "ec8996e7c4d11c3b657240a145b18d926a711271",
-  "profile_count": 320,
-  "profile_publications": 54143,
+  "prior_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
+  "producer_commit": "0063ff31772fa780445b3c900e2eaa1e0356c33e",
+  "profile_count": 322,
+  "profile_publications": 54853,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -392,21 +390,21 @@
       "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
       "person_id": "person-scottdodelson-73513ee9",
       "person_observation_rows": 443,
-      "reason": "Complete 443-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25",
+      "reason": "Complete 443-row verified Scholar capture is source-bound. Six exact exclusions and 161 exact provisional holds stay off mapped works and coauthor links; 276 remaining rows enter the ordinary quality gate.",
+      "reviewed_at": "2026-10-26",
       "scholar_id": "kcXOB1MAAAAJ",
       "source_observation_rows": 443,
-      "state": "held"
+      "state": "released"
     },
     {
       "cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
       "person_id": "person-rupertcroft-16669f45",
       "person_observation_rows": 267,
-      "reason": "Complete 267-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25",
+      "reason": "Complete 267-row Physics source is bound to saved capture and cache hashes. Twelve exact reviewed exclusions and 83 exact provisional holds protect unresolved observations; 172 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
       "scholar_id": "wex9ft0AAAAJ",
       "source_observation_rows": 267,
-      "state": "held"
+      "state": "released"
     },
     {
       "cache_sha256": "4e86a91a02ae16c31e290692355366e98714e067617dc470256a4f700f686619",
@@ -449,9 +447,9 @@
       "state": "released"
     }
   ],
-  "profile_release_manifest_sha256": "c48cc7e42e893f3bcc3c5de78bd28a615c408cb1a395a4e24db9b3f6f756761e",
-  "provisional_hold_manifest_sha256": "0d21db432cf33295cdc1946a8cfcb2c9418ccf7ef607b3ab12dcd6e825686000",
-  "provisional_hold_observation_rows": 403,
+  "profile_release_manifest_sha256": "3eb49c8ec29d892753fdfd6ab92acedd525ca96dfd357f7b4f003d4351ab5789",
+  "provisional_hold_manifest_sha256": "595f166c70b9386404ec8bb20eb3568b12b0d983b0ee99b8396cef871e5c2e76",
+  "provisional_hold_observation_rows": 647,
   "provisional_hold_profiles": [
     {
       "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
@@ -672,13 +670,33 @@
       "reviewed_exclusion_rows": 9,
       "scholar_id": "AcW2EXwAAAAJ",
       "source_observation_rows": 131
+    },
+    {
+      "cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
+      "held_ids_sha256": "4505c14599620818933feac1224566b6c10c79f6b7dbcc864d676c10955561cf",
+      "held_observation_rows": 83,
+      "person_id": "person-rupertcroft-16669f45",
+      "reviewed_exclusion_ids_sha256": "a70ae469d11871d77c6b783d63677d538f566737980ad282050f5d761e1ee753",
+      "reviewed_exclusion_rows": 12,
+      "scholar_id": "wex9ft0AAAAJ",
+      "source_observation_rows": 267
+    },
+    {
+      "cache_sha256": "e51c61d70f1cfd2f7dfef8364312cad489d53156a1a2812841b0859f0376235f",
+      "held_ids_sha256": "1f291761730585956c9925b9e594a4402eb89a8dadef5fdf4430e1d1d8f53dce",
+      "held_observation_rows": 161,
+      "person_id": "person-scottdodelson-73513ee9",
+      "reviewed_exclusion_ids_sha256": "e3f587eca03bee07978c44df061faaaea557f31c7c3ccac64a98d7385a437bb0",
+      "reviewed_exclusion_rows": 6,
+      "scholar_id": "kcXOB1MAAAAJ",
+      "source_observation_rows": 443
     }
   ],
   "raw_snapshot_observations": 59434,
   "raw_snapshot_profiles": 328,
   "raw_snapshot_sha256": "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1",
   "region_audit_version": "low-information-semantic-region-v3",
-  "region_comparison_revision": "42b30e512fb941a8cbe78d67399bd3771372cb68",
+  "region_comparison_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
   "region_continuity": {
     "approved_bio_binding_changes": [],
     "approved_one_time_losses": [],
@@ -690,20 +708,20 @@
     "bio_binding_approval_sha256": null,
     "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
     "chemistry_review_root_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-    "current_visible_observations": 50546,
+    "current_visible_observations": 50994,
     "missing_sullivan_curated_targets": [],
-    "new_source_gains": 137,
+    "new_source_gains": 448,
     "poster_loss_approval_sha256": null,
-    "prior_eligible_overrides": 94,
-    "prior_excluded_overrides": 52,
-    "prior_revision": "42b30e512fb941a8cbe78d67399bd3771372cb68",
-    "prior_visible_observations": 50409,
+    "prior_eligible_overrides": 0,
+    "prior_excluded_overrides": 436,
+    "prior_revision": "37c709267b78720be48e63ef360ea71d15553e3c",
+    "prior_visible_observations": 50546,
     "reviewed_composite_observation_gains": [],
     "reviewed_composite_observation_losses": [],
     "reviewed_composite_work_gains": [],
     "reviewed_composite_work_losses": [],
     "reviewed_losses": [],
-    "stable_works": 46720,
+    "stable_works": 46779,
     "sullivan_continuity_addendum_sha256": null,
     "sullivan_loss_approval_sha256": null,
     "unapproved_mapped_binding_changes": [],
@@ -720,8 +738,8 @@
   "reviewed_contexts_sha256": "ec2f3f67c0448834717e3977c9a282556cccc010191b1b920bdaaa2ccc6db661",
   "reviewed_doi_aliases": 60,
   "reviewed_doi_aliases_sha256": "ac18a559d31a405e449b51bc8765eae561e5b8deae48e73adde4c5e875c4ba73",
-  "reviewed_exclusions": 1699,
-  "reviewed_exclusions_sha256": "0ca3e005d0014e6f355fbf5170fc406c64b47253dcea29fbe4416b39b7fc54f4",
+  "reviewed_exclusions": 1717,
+  "reviewed_exclusions_sha256": "f2d8685ee7b1551423be524877aaa2f88b6a8274a3ed059a3937c812ef98486e",
   "reviewed_metadata_corrections": 29,
   "reviewed_metadata_corrections_sha256": "9726732bb75e7311978a7f52a4dab22253b71555acd2a95cc9a82bb8ffb9b19d",
   "schema_version": 2,
@@ -730,11 +748,11 @@
     "legacy_profiles": 285,
     "reconciled_prior_ids": 16
   },
-  "snapshot_commit": "26794539eb486dd3efa29c26387b85d379688896",
-  "started_at_utc": "2026-10-26T05:04:23.275335+00:00",
+  "snapshot_commit": "2c30b79aedbe81ed949f8c018995e1f48eb9292b",
+  "started_at_utc": "2026-10-26T08:50:04.331022+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 29,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40272111662",
-  "works": 49879
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40294778320",
+  "works": 50454
 }
