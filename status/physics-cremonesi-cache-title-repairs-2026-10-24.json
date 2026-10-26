@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "review_state": "source_reviewed_cache_repaired",
+  "reviewed_at": "2026-10-24",
+  "target_branch": "automation/map-snapshot",
+  "raw_capture_and_receipt_unchanged": true,
+  "producer_exclusions_added": 0,
+  "capture_receipts": {
+    "wJ_gQLoAAAAJ": "status/browser-capture-physics-matteo-cremonesi-2026-10-24.json"
+  },
+  "repairs": [
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 400,
+      "author_pub_id": "wJ_gQLoAAAAJ:_Ybze24A_UAC",
+      "cache_field": "title",
+      "captured_value": "Exclusion of exotic top-like quarks with -4/3 electric charge using jet-charge tagging <?format ?>in single-lepton tt¯ events at CDF",
+      "repaired_value": "Exclusion of exotic top-like quarks with -4/3 electric charge using jet-charge tagging in single-lepton tt¯ events at CDF",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.88.032003"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 903,
+      "author_pub_id": "wJ_gQLoAAAAJ:FiDNX6EVdGUC",
+      "cache_field": "title",
+      "captured_value": "Search for a dijet resonance in events with jets and missing transverse energy <?format ?>in pp¯ collisions at s=1.96  TeV",
+      "repaired_value": "Search for a dijet resonance in events with jets and missing transverse energy in pp¯ collisions at s=1.96  TeV",
+      "evidence_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.88.092004"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 388,
+      "author_pub_id": "wJ_gQLoAAAAJ:ruyezt5ZtCIC",
+      "cache_field": "title",
+      "captured_value": "Search for Pair Production of Strongly Interacting Particles Decaying <?format ?>to Pairs of Jets in pp¯ Collisions at s=1.96  TeV",
+      "repaired_value": "Search for Pair Production of Strongly Interacting Particles Decaying to Pairs of Jets in pp¯ Collisions at s=1.96  TeV",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.031802"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 974,
+      "author_pub_id": "wJ_gQLoAAAAJ:DvbUhBKpgQUC",
+      "cache_field": "title",
+      "captured_value": "Search for rare decays of [Formula omitted] and Higgs bosons to [Formula omitted] and a photon in proton-proton collisions at [Formula omitted]= 13 [Formula omitted].",
+      "repaired_value": "Search for rare decays of Z and Higgs bosons to J/ψ and a photon in proton-proton collisions at √s = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-17-012/index.html",
+      "repair_basis": "publisher-title reconstruction of formula placeholders"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 10,
+      "author_pub_id": "wJ_gQLoAAAAJ:UxriW0iASnsC",
+      "cache_field": "title",
+      "captured_value": "Measurements of the Higgs boson production and decay rates and constraints on its couplings from a combined ATLAS and CMS analysis of the LHC pp collision data …",
+      "repaired_value": "Measurements of the Higgs boson production and decay rates and constraints on its couplings from a combined ATLAS and CMS analysis of the LHC pp collision data at \\sqrt{s} = 7 and 8 TeV",
+      "evidence_url": "https://arxiv.org/abs/1606.02266",
+      "repair_basis": "exact arXiv title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 78,
+      "author_pub_id": "wJ_gQLoAAAAJ:_9Xh93LWpsYC",
+      "cache_field": "title",
+      "captured_value": "Measurement of t (t) over-bar normalised multi-differential cross sections in pp collisions at root s= 13 TeV, and simultaneous determination of the strong coupling strength …",
+      "repaired_value": "Measurement of \\mathrm{t\\bar{t}} normalised multi-differential cross sections in pp collisions at \\sqrt{s} = 13 TeV, and simultaneous determination of the strong coupling strength, top quark pole mass, and parton distribution functions",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-18-004/index.html",
+      "repair_basis": "official CMS title repairs typography and a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 78,
+      "author_pub_id": "wJ_gQLoAAAAJ:_9Xh93LWpsYC",
+      "cache_field": "venue",
+      "captured_value": "Springer Nature",
+      "repaired_value": "Eur. Phys. J. C 80 (2020) 658",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-18-004/index.html",
+      "repair_basis": "official CMS publication locator replaces a generic publisher name"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 110,
+      "author_pub_id": "wJ_gQLoAAAAJ:EQrQbpuULvoC",
+      "cache_field": "title",
+      "captured_value": "Searches for physics beyond the standard model with the MT2 variable in hadronic final states with and without disappearing tracks in proton–proton collisions at …",
+      "repaired_value": "Searches for physics beyond the standard model with the MT2 variable in hadronic final states with and without disappearing tracks in proton–proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-19-005/index.html",
+      "repair_basis": "official CMS title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 114,
+      "author_pub_id": "wJ_gQLoAAAAJ:6syOTa9L3GQC",
+      "cache_field": "title",
+      "captured_value": "Search for supersymmetry in final states with two oppositely charged same-flavor leptons and missing transverse momentum in proton-proton collisions at \\sqrt{s} = 13 …",
+      "repaired_value": "Search for supersymmetry in final states with two oppositely charged same-flavor leptons and missing transverse momentum in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-20-001/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 140,
+      "author_pub_id": "wJ_gQLoAAAAJ:vU07HMfDF0IC",
+      "cache_field": "title",
+      "captured_value": "Search for third-generation scalar leptoquarks and heavy right-handed neutrinos in final states with two tau leptons and two jets in proton-proton collisions at $$\\sqrt {s}= 13 …",
+      "repaired_value": "Search for third-generation scalar leptoquarks and heavy right-handed neutrinos in final states with two tau leptons and two jets in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-023/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 145,
+      "author_pub_id": "wJ_gQLoAAAAJ:3x-KLxxGyuUC",
+      "cache_field": "title",
+      "captured_value": "Search for an exotic decay of the Higgs boson to a pair of light pseudoscalars in the final state with two b quarks and two $\\tau $ leptons in proton-proton collisions at …",
+      "repaired_value": "Search for an exotic decay of the Higgs boson to a pair of light pseudoscalars in the final state with two b quarks and two \\tau leptons in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://arxiv.org/abs/1805.10191",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 168,
+      "author_pub_id": "wJ_gQLoAAAAJ:ipzZ9siozwsC",
+      "cache_field": "title",
+      "captured_value": "Search for an exotic decay of the Higgs boson to a pair of light pseudoscalars in the final state of two muons and two τ leptons in proton-proton collisions at $$\\sqrt {s}= 13 …",
+      "repaired_value": "Search for an exotic decay of the Higgs boson to a pair of light pseudoscalars in the final state of two muons and two \\tau leptons in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-029/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 180,
+      "author_pub_id": "wJ_gQLoAAAAJ:XD-gHx7UXLsC",
+      "cache_field": "title",
+      "captured_value": "Measurement of the cross section for electroweak production of Zγ in association with two jets and constraints on anomalous quartic gauge couplings in proton–proton collisions …",
+      "repaired_value": "Measurement of the cross section for electroweak production of Zγ in association with two jets and constraints on anomalous quartic gauge couplings in proton-proton collisions at \\sqrt{s} = 8 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SMP-14-018/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 219,
+      "author_pub_id": "wJ_gQLoAAAAJ:M_lZXyI38BkC",
+      "cache_field": "title",
+      "captured_value": "Search for heavy neutrinos or third-generation leptoquarks in final states with two hadronically decaying τ leptons and two jets in proton-proton collisions at $$\\sqrt {s}= 13 …",
+      "repaired_value": "Search for heavy neutrinos or third-generation leptoquarks in final states with two hadronically decaying \\tau leptons and two jets in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-016/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 260,
+      "author_pub_id": "wJ_gQLoAAAAJ:I_Q6JS_c2lwC",
+      "cache_field": "title",
+      "captured_value": "Measurements of polarization and spin correlation and observation of entanglement in top quark pairs using lepton+jets events from proton-proton collisions at …",
+      "repaired_value": "Measurements of polarization and spin correlation and observation of entanglement in top quark pairs using lepton+jets events from proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/TOP-23-007/index.html",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 306,
+      "author_pub_id": "wJ_gQLoAAAAJ:VoB_afVdn6EC",
+      "cache_field": "title",
+      "captured_value": "Measurement of the inclusive and differential \\mathrm{t\\bar{t}}\\gamma cross sections in the dilepton channel and effective field theory interpretation in proton-proton collisions at \\sqrt{s} = 13 …",
+      "repaired_value": "Measurement of the inclusive and differential \\mathrm{t\\bar{t}}\\gamma cross sections in the dilepton channel and effective field theory interpretation in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "evidence_url": "https://arxiv.org/abs/2201.07301",
+      "repair_basis": "primary-record title completes a captured ellipsis"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 872,
+      "author_pub_id": "wJ_gQLoAAAAJ:J8jFgkKsDJEC",
+      "cache_field": "title",
+      "captured_value": "Measurement of prompt and nonprompt\\documentclass [12pt]{minimal}\\usepackage {amsmath}\\usepackage {wasysym}\\usepackage {amsfonts}\\usepackage {amssymb}\\usepackage {amsbsy …",
+      "repaired_value": "Measurement of prompt and nonprompt J/ψ production in pp and pPb collisions at \\sqrt{s_{NN}} = 5.02 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-14-009/index.html",
+      "repair_basis": "official CMS title and journal locator replace a damaged publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 872,
+      "author_pub_id": "wJ_gQLoAAAAJ:J8jFgkKsDJEC",
+      "cache_field": "venue",
+      "captured_value": "The European physical journal. C, Particles and fields 77 (4)",
+      "repaired_value": "Eur. Phys. J. C 77 (2017) 269",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-14-009/index.html",
+      "repair_basis": "official CMS title and journal locator replace a damaged publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 1385,
+      "author_pub_id": "wJ_gQLoAAAAJ:Ggqy4mf-avwC",
+      "cache_field": "title",
+      "captured_value": "Search for supersymmetry in events with a photon, jets,\\documentclass [12pt]{minimal}\\usepackage {amsmath}\\usepackage {wasysym}\\usepackage {amsfonts}\\usepackage {amssymb …",
+      "repaired_value": "Search for supersymmetry in events with a photon, jets, b-jets, and missing transverse momentum in proton-proton collisions at 13 TeV",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html",
+      "repair_basis": "official CMS title and journal locator replace a damaged publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 1385,
+      "author_pub_id": "wJ_gQLoAAAAJ:Ggqy4mf-avwC",
+      "cache_field": "venue",
+      "captured_value": "The European physical journal. C, Particles and fields 79 (5)",
+      "repaired_value": "Eur. Phys. J. C 79 (2019) 444",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/SUS-18-002/index.html",
+      "repair_basis": "official CMS title and journal locator replace a damaged publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 51,
+      "author_pub_id": "wJ_gQLoAAAAJ:4X0JR2_MtJMC",
+      "cache_field": "venue",
+      "captured_value": "The European Physical Journal C 79 (3), 1-29",
+      "repaired_value": "Eur. Phys. J. C 79 (2019) 280",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-16-050/index.html",
+      "repair_basis": "official CMS journal article locator replaces page-span-only publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 71,
+      "author_pub_id": "wJ_gQLoAAAAJ:p39txVt3toMC",
+      "cache_field": "venue",
+      "captured_value": "Journal of High Energy Physics 2024 (8)",
+      "repaired_value": "JHEP 08 (2024) 215",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/EXO-22-024/index.html",
+      "repair_basis": "official CMS journal article locator completes the captured issue-only venue"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 931,
+      "author_pub_id": "wJ_gQLoAAAAJ:t4WtaE3RIIAC",
+      "cache_field": "venue",
+      "captured_value": "The European Physical Journal C 78, 1-26",
+      "repaired_value": "Eur. Phys. J. C 78 (2018) 939",
+      "evidence_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/BPH-16-003/index.html",
+      "repair_basis": "official CMS journal article locator replaces page-span-only publisher extraction"
+    },
+    {
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "capture_row": 687,
+      "author_pub_id": "wJ_gQLoAAAAJ:_-FgD5s_Z1cC",
+      "cache_field": "title",
+      "captured_value": "Observation of Λ Hyperon Local Polarization in p-Pb Collisions at sNN=8.16  TeV",
+      "repaired_value": "Observation of Λ Hyperon Local Polarization in p-Pb Collisions at \\sqrt{s_{NN}} = 8.16 TeV",
+      "evidence_url": "https://link.aps.org/doi/10.1103/6ywq-gm61",
+      "repair_basis": "publisher title restores the missing square root in the collision energy"
+    }
+  ]
+}

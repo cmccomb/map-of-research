@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "review_state": "saved_html_svg_title_repair",
+  "description": "Exact title glyphs present in saved Scholar HTML SVG aria labels but omitted by saved JSON textContent extraction. Raw captures are retained unchanged.",
+  "entries": [
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 4,
+      "author_pub_id": "hgtyZOUAAAAJ:8k81kl-MbHgC",
+      "captured_value": "Spectroscopic evaluation of charge-transfer doping and strain in graphene/ heterostructures",
+      "repaired_value": "Spectroscopic evaluation of charge-transfer doping and strain in graphene/MoS2 heterostructures",
+      "source_json_sha256": "08026528fc70b1c9c553ca465debaadecfb80499dadb5a05eb334c9a9ece41de",
+      "source_html_sha256": "68daa670cc3772e41e14a4c7368c6772aaf2c31262a2282b27e4f442789d5039"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 40,
+      "author_pub_id": "hgtyZOUAAAAJ:MpfHP-DdYjUC",
+      "captured_value": "Visualization of Tunable Electronic Structure of Monolayer TaIrTe",
+      "repaired_value": "Visualization of Tunable Electronic Structure of Monolayer TaIrTe_4",
+      "source_json_sha256": "08026528fc70b1c9c553ca465debaadecfb80499dadb5a05eb334c9a9ece41de",
+      "source_html_sha256": "68daa670cc3772e41e14a4c7368c6772aaf2c31262a2282b27e4f442789d5039"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "capture_row": 50,
+      "author_pub_id": "hgtyZOUAAAAJ:4TOpqqG69KYC",
+      "captured_value": "Imaging Spin Dynamics in Monolayer WS by Time-Resolved Kerr Rotation Microscopy",
+      "repaired_value": "Imaging Spin Dynamics in Monolayer WS_{\\mathrm{2}} by Time-Resolved Kerr Rotation Microscopy",
+      "source_json_sha256": "08026528fc70b1c9c553ca465debaadecfb80499dadb5a05eb334c9a9ece41de",
+      "source_html_sha256": "68daa670cc3772e41e14a4c7368c6772aaf2c31262a2282b27e4f442789d5039"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 26,
+      "author_pub_id": "IcEsJfAAAAAJ:Oo_WeVVXg5wC",
+      "captured_value": "Search for supersymmetry in pp collisions at  TeV in the single-lepton final state using the sum of masses of large-radius jets",
+      "repaired_value": "Search for supersymmetry in pp collisions at \\sqrt{s}=13 TeV in the single-lepton final state using the sum of masses of large-radius jets",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 48,
+      "author_pub_id": "IcEsJfAAAAAJ:vofGIMt6cyEC",
+      "captured_value": "Search for third-generation scalar leptoquarks in the tτ channel in proton-proton collisions at  TeV",
+      "repaired_value": "Search for third-generation scalar leptoquarks in the tτ channel in proton-proton collisions at \\sqrt{s}=8 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 51,
+      "author_pub_id": "IcEsJfAAAAAJ:Pqt4MY__2vwC",
+      "captured_value": "Search for associated production of a Higgs boson and a single top quark in proton-proton collisions at",
+      "repaired_value": "Search for associated production of a Higgs boson and a single top quark in proton-proton collisions at s=13  TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 60,
+      "author_pub_id": "IcEsJfAAAAAJ:Oj-SLI0tZTcC",
+      "captured_value": "Search for electroweak production of charginos in final states with two τ leptons in pp collisions at  TeV",
+      "repaired_value": "Search for electroweak production of charginos in final states with two τ leptons in pp collisions at \\sqrt{s}=8 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 68,
+      "author_pub_id": "IcEsJfAAAAAJ:Zbx7W2Xs4QsC",
+      "captured_value": "Measurement of charged particle spectra in minimum-bias events from proton–proton collisions at",
+      "repaired_value": "Measurement of charged particle spectra in minimum-bias events from proton–proton collisions at s=13TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 70,
+      "author_pub_id": "IcEsJfAAAAAJ:BFa5h04uPMwC",
+      "captured_value": "Search for dark photons in Higgs boson production via vector boson fusion in proton-proton collisions at  = 13 TeV",
+      "repaired_value": "Search for dark photons in Higgs boson production via vector boson fusion in proton-proton collisions at \\sqrt{s} = 13 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 71,
+      "author_pub_id": "IcEsJfAAAAAJ:09LM3QYkMKUC",
+      "captured_value": "Azimuthal correlations for inclusive 2-jet, 3-jet, and 4-jet events in pp collisions at",
+      "repaired_value": "Azimuthal correlations for inclusive 2-jet, 3-jet, and 4-jet events in pp collisions at \\sqrt{s}= 13~\\hbox {TeV}",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 75,
+      "author_pub_id": "IcEsJfAAAAAJ:xGWFX6Gbr9MC",
+      "captured_value": "Search for standard model production of four top quarks with same-sign and multilepton final states in proton–proton collisions at",
+      "repaired_value": "Search for standard model production of four top quarks with same-sign and multilepton final states in proton–proton collisions at \\sqrt{s} = 13\\,\\text {TeV}",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 96,
+      "author_pub_id": "IcEsJfAAAAAJ:CMPXdcK5v8EC",
+      "captured_value": "Search for associated production of dark matter with a Higgs boson decaying to  or γγ at  TeV",
+      "repaired_value": "Search for associated production of dark matter with a Higgs boson decaying to \\mathrm{b}\\overline{\\mathrm{b}} or γγ at \\sqrt{s}=13 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 99,
+      "author_pub_id": "IcEsJfAAAAAJ:MNNNGtAgD4EC",
+      "captured_value": "Measurement of differential cross sections for Z bosons produced in association with charm jets in pp collisions at  = 13 TeV",
+      "repaired_value": "Measurement of differential cross sections for Z bosons produced in association with charm jets in pp collisions at \\sqrt{s} = 13 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 108,
+      "author_pub_id": "IcEsJfAAAAAJ:IExZWSxeYXUC",
+      "captured_value": "Search for lepton-flavor violating decays of heavy resonances and quantum black holes to eμ final states in proton-proton collisions at  TeV",
+      "repaired_value": "Search for lepton-flavor violating decays of heavy resonances and quantum black holes to eμ final states in proton-proton collisions at \\sqrt{s}=13 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 109,
+      "author_pub_id": "IcEsJfAAAAAJ:JqN3CTdJtl0C",
+      "captured_value": "Search for Narrow  Resonances in Proton-Proton Collisions at",
+      "repaired_value": "Search for Narrow Hγ Resonances in Proton-Proton Collisions at s=13  TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 116,
+      "author_pub_id": "IcEsJfAAAAAJ:uQVPmWFBlwUC",
+      "captured_value": "Observation of the  Decay in  Collisions at",
+      "repaired_value": "Observation of the Z→ψℓ+ℓ- Decay in pp Collisions at s=13  TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 142,
+      "author_pub_id": "IcEsJfAAAAAJ:jKT558fuBk8C",
+      "captured_value": "Search for neutral color-octet weak-triplet scalar particles in proton-proton collisions at  TeV",
+      "repaired_value": "Search for neutral color-octet weak-triplet scalar particles in proton-proton collisions at \\sqrt{s}=8 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 156,
+      "author_pub_id": "IcEsJfAAAAAJ:tBlTYpvFGQIC",
+      "captured_value": "Erratum to: Search for dark matter and unparticles in events with a Z boson and missing transverse momentum in proton-proton collisions at  TeV",
+      "repaired_value": "Erratum to: Search for dark matter and unparticles in events with a Z boson and missing transverse momentum in proton-proton collisions at \\sqrt{s}=13 TeV",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 159,
+      "author_pub_id": "IcEsJfAAAAAJ:RJNGbXJAtMsC",
+      "captured_value": "Erratum to: Comparison of the Z/γ* + jets to γ + jets cross sections in pp collisions at s = 8",
+      "repaired_value": "Erratum to: Comparison of the Z/γ* + jets to γ + jets cross sections in pp collisions at s = 8 \\sqrt{s}=8",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "IcEsJfAAAAAJ",
+      "capture_row": 187,
+      "author_pub_id": "IcEsJfAAAAAJ:h1pkognVyKwC",
+      "captured_value": "Erratum to: Search for new physics in dijet angular distributions using proton-proton collisions at  and constraints on dark matter and other models",
+      "repaired_value": "Erratum to: Search for new physics in dijet angular distributions using proton-proton collisions at s=13TeV and constraints on dark matter and other models",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 42,
+      "author_pub_id": "p1aFEDYAAAAJ:7PzlFSSx8tAC",
+      "captured_value": "Effects of GaAs substrate misorientation on strain relaxation in  films and multilayers",
+      "repaired_value": "Effects of GaAs substrate misorientation on strain relaxation in InxGa1−xAs films and multilayers",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 57,
+      "author_pub_id": "p1aFEDYAAAAJ:aqlVkmm33-oC",
+      "captured_value": "Surface structural and electronic properties of cleaved single crystals of  compounds: A scanning tunneling microscopy study",
+      "repaired_value": "Surface structural and electronic properties of cleaved single crystals of Bi2.15Sr1.7CaCu2O8+δ compounds: A scanning tunneling microscopy study",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 64,
+      "author_pub_id": "p1aFEDYAAAAJ:iH-uZ7U-co4C",
+      "captured_value": "Low-temperature tunneling spectroscopy of  surfaces",
+      "repaired_value": "Low-temperature tunneling spectroscopy of Ge(111)c(2×8) surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 72,
+      "author_pub_id": "p1aFEDYAAAAJ:3s1wT3WcHBgC",
+      "captured_value": "Band gap of the  surface by scanning tunneling spectroscopy",
+      "repaired_value": "Band gap of the Ge(111)c(2×8) surface by scanning tunneling spectroscopy",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 116,
+      "author_pub_id": "p1aFEDYAAAAJ:K3LRdlH-MEoC",
+      "captured_value": "Influence of surface states on tunneling spectra of -type GaAs(110) surfaces",
+      "repaired_value": "Influence of surface states on tunneling spectra of n-type GaAs(110) surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 122,
+      "author_pub_id": "p1aFEDYAAAAJ:4OULZ7Gr8RgC",
+      "captured_value": "Morphology and surface reconstructions of  surfaces",
+      "repaired_value": "Morphology and surface reconstructions of GaN(11̄00) surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 137,
+      "author_pub_id": "p1aFEDYAAAAJ:UxriW0iASnsC",
+      "captured_value": "Coexistence of Negatively and Positively Buckled Isomers on -Doped",
+      "repaired_value": "Coexistence of Negatively and Positively Buckled Isomers on n+-Doped Si(111)-2×1",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 138,
+      "author_pub_id": "p1aFEDYAAAAJ:EUQCXRtRnyEC",
+      "captured_value": "Transport limitations in tunneling spectroscopy of  surfaces",
+      "repaired_value": "Transport limitations in tunneling spectroscopy of Ge(111)c(2×8) surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 149,
+      "author_pub_id": "p1aFEDYAAAAJ:NXb4pA-qfm4C",
+      "captured_value": "Oxygen vacancies on SrO-terminated  surfaces studied by scanning tunneling spectroscopy",
+      "repaired_value": "Oxygen vacancies on SrO-terminated SrTiO3(001) surfaces studied by scanning tunneling spectroscopy",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 174,
+      "author_pub_id": "p1aFEDYAAAAJ:fQNAKQ3IYiAC",
+      "captured_value": "Buckling of Si and  surfaces",
+      "repaired_value": "Buckling of Si and Ge(111)2×1 surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 193,
+      "author_pub_id": "p1aFEDYAAAAJ:l7t_Zn2s7bgC",
+      "captured_value": "Comment on “Structures of , , and  Surface Reconstructions”",
+      "repaired_value": "Comment on “Structures of GaN(0001)\\bf{−}(2×2), \\bf{−}(4×4), and \\bf{−}(5×5) Surface Reconstructions”",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 206,
+      "author_pub_id": "p1aFEDYAAAAJ:ML0RJ9NH7IQC",
+      "captured_value": "Interface structure of graphene on SiC(000)",
+      "repaired_value": "Interface structure of graphene on SiC(0001¯)",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 208,
+      "author_pub_id": "p1aFEDYAAAAJ:Mojj43d5GZwC",
+      "captured_value": "Silicon on GaN(0001) and  surfaces",
+      "repaired_value": "Silicon on GaN(0001) and (0001̄) surfaces",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 359,
+      "author_pub_id": "p1aFEDYAAAAJ:S16KYo8Pm5AC",
+      "captured_value": "Epitaxial Graphene Formation on SiC(000",
+      "repaired_value": "Epitaxial Graphene Formation on SiC(000\\bar {1})",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "capture_row": 361,
+      "author_pub_id": "p1aFEDYAAAAJ:QYdC8u9Cj1oC",
+      "captured_value": "Nucleation and stochiometry dependence of rutile-TiO thin films grown by plasma-assisted molecular beam epitaxy",
+      "repaired_value": "Nucleation and stochiometry dependence of rutile-TiO_{2} thin films grown by plasma-assisted molecular beam epitaxy",
+      "source_json_sha256": "ff2f2d5e99fbe8683840318ac963761c360d989612c49e52dbc1df4a09152778",
+      "source_html_sha256": "df838614db70194f49bdcb7ed15cdb1a09c8e90270ab4cfcc75953abaca0321f"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 64,
+      "author_pub_id": "KoHdmZEAAAAJ:hFOr9nPyWt4C",
+      "captured_value": "Monte Carlo calculation of renormalized coupling parameters. II.  Ising model",
+      "repaired_value": "Monte Carlo calculation of renormalized coupling parameters. II. d=3 Ising model",
+      "source_json_sha256": "075c874bac31dd13da2321d26072d81e15bf5b2abc35a8a39bb2ee9af899b5bc",
+      "source_html_sha256": "a443ca0d836a91375bca005cea00b9842067fdd743d78eaa0974b4a281be363c"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "capture_row": 121,
+      "author_pub_id": "KoHdmZEAAAAJ:z0_F5_TITjQC",
+      "captured_value": "Monte Carlo renormalization-group calculation for the  Ising model using a modified transformation",
+      "repaired_value": "Monte Carlo renormalization-group calculation for the d=3 Ising model using a modified transformation",
+      "source_json_sha256": "075c874bac31dd13da2321d26072d81e15bf5b2abc35a8a39bb2ee9af899b5bc",
+      "source_html_sha256": "a443ca0d836a91375bca005cea00b9842067fdd743d78eaa0974b4a281be363c"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 24,
+      "author_pub_id": "czs45aEAAAAJ:YsMSGLbcyi4C",
+      "captured_value": "Ab initio calculations of cohesive energies of -based glass-forming alloys",
+      "repaired_value": "Ab initio calculations of cohesive energies of Fe-based glass-forming alloys",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 25,
+      "author_pub_id": "czs45aEAAAAJ:Ak0FvsSvgGUC",
+      "captured_value": "First-principles interatomic potentials for transition-metal aluminides: Theory and trends across the  series",
+      "repaired_value": "First-principles interatomic potentials for transition-metal aluminides: Theory and trends across the 3d series",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 34,
+      "author_pub_id": "czs45aEAAAAJ:7PzlFSSx8tAC",
+      "captured_value": "Ab initio theoretical study of magnetization and phase stability of the  and  structures of  and  prototypes",
+      "repaired_value": "Ab initio theoretical study of magnetization and phase stability of the (Fe,Co,Ni)23B6 and (Fe,Co,Ni)23Zr6 structures of Cr23C6 and Mn23Th6 prototypes",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 47,
+      "author_pub_id": "czs45aEAAAAJ:O3NaXMp0MMsC",
+      "captured_value": "Structure and stability of AlFe and AlFe: First-principles total energy and phonon calculations",
+      "repaired_value": "Structure and stability of Al2Fe and Al5Fe2: First-principles total energy and phonon calculations",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 48,
+      "author_pub_id": "czs45aEAAAAJ:8k81kl-MbHgC",
+      "captured_value": "First-principles calculations of cohesive energies in the  binary alloy system",
+      "repaired_value": "First-principles calculations of cohesive energies in the Al-Co binary alloy system",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 157,
+      "author_pub_id": "czs45aEAAAAJ:GtLg2Ama23sC",
+      "captured_value": "First-principles study of the electronic structure and the Fermi surface in rare-earth filled skutterudites",
+      "repaired_value": "First-principles study of the electronic structure and the Fermi surface in rare-earth filled skutterudites RPt4Ge12",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "capture_row": 197,
+      "author_pub_id": "czs45aEAAAAJ:RoXSNcbkSzsC",
+      "captured_value": "First-principles thermodynamics of : An analytical treatment of localized anharmonic modes",
+      "repaired_value": "First-principles thermodynamics of Al10V: An analytical treatment of localized anharmonic modes",
+      "source_json_sha256": "4e7edc876089a641af9ac22f7b1cc644fd56c71ddd75d16391463fd389a42ed2",
+      "source_html_sha256": "29f94083b02177dd86f5ee9147cc6354f26e68ab02fdac97c69e763960d5cb04"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 25,
+      "author_pub_id": "FRlLpMYAAAAJ:_FxGoFyzp5QC",
+      "captured_value": "Magnetic properties and ordering in C-coated  alloy nanocrystals",
+      "repaired_value": "Magnetic properties and ordering in C-coated FexCo1−x alloy nanocrystals",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 30,
+      "author_pub_id": "FRlLpMYAAAAJ:lSLTfruPkqcC",
+      "captured_value": "Origin of Surface Canting within  Nanoparticles",
+      "repaired_value": "Origin of Surface Canting within Fe3O4 Nanoparticles",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 60,
+      "author_pub_id": "FRlLpMYAAAAJ:uWQEDVKXjbEC",
+      "captured_value": "Particle moment canting in  nanoparticles",
+      "repaired_value": "Particle moment canting in CoFe2O4 nanoparticles",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 71,
+      "author_pub_id": "FRlLpMYAAAAJ:rmuvC79q63oC",
+      "captured_value": "Correlated spin canting in ordered core-shell  nanoparticle assemblies",
+      "repaired_value": "Correlated spin canting in ordered core-shell Fe3O4/MnxFe3−xO4 nanoparticle assemblies",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 76,
+      "author_pub_id": "FRlLpMYAAAAJ:JV2RwH3_ST0C",
+      "captured_value": "Synthesis and magnetic behavior of  nanocomposite magnets",
+      "repaired_value": "Synthesis and magnetic behavior of SmCo5(1−x)Fex nanocomposite magnets",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 89,
+      "author_pub_id": "FRlLpMYAAAAJ:NXb4pA-qfm4C",
+      "captured_value": "Magnetoresistance Dynamics in Superparamagnetic  Nanodots",
+      "repaired_value": "Magnetoresistance Dynamics in Superparamagnetic Co-Fe-B Nanodots",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 91,
+      "author_pub_id": "FRlLpMYAAAAJ:hMod-77fHWUC",
+      "captured_value": "Annealing effects on the coercivity of  nanoparticles",
+      "repaired_value": "Annealing effects on the coercivity of SmCo5 nanoparticles",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "capture_row": 220,
+      "author_pub_id": "FRlLpMYAAAAJ:eflP2zaiRacC",
+      "captured_value": "NMR Study of -Co Nanoparticles",
+      "repaired_value": "NMR Study of \\varepsilon-Co Nanoparticles",
+      "source_json_sha256": "96fb6e8363a72c93c7ffae6a674bf2c8b687b399b48aa4cea7ab1624df8dc69c",
+      "source_html_sha256": "bde3de17f56e6fcfa09e468a1458b0f7edd7a77862ba81d0fcbd0a081cfdcf92"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "target_department_ids": [
+    "physics"
+  ],
+  "max_profiles": 2,
+  "selected_profile_ids": [
+    "1J28ExgAAAAJ",
+    "IcEsJfAAAAAJ"
+  ],
+  "refreshed_profile_ids": [
+    "1J28ExgAAAAJ",
+    "IcEsJfAAAAAJ"
+  ],
+  "failed_profile_ids": [],
+  "profile_capture": [
+    {
+      "person_id": "person-markusdeserno-3b04d008",
+      "display_name": "Markus Deserno",
+      "scholar_id": "1J28ExgAAAAJ",
+      "publication_count": 233,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "c34e14cf0746c418ef6748271ea72bcc2574904d10c7610dbe08d8f81a30889b",
+      "source_html_sha256": "8a8141cc9602e0d4ba05096af4bd377bfcecf5d4d50919ee9ff1c4eebd4c55e7"
+    },
+    {
+      "person_id": "person-matthewwalker-f9f5f4da",
+      "display_name": "Matthew Walker",
+      "scholar_id": "IcEsJfAAAAAJ",
+      "publication_count": 413,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "source_json_sha256": "b82c924438f7548ebf84d272d5618faef28b5665e7d54d1d3b35e04daf564f62",
+      "source_html_sha256": "1616cb01a4fae48d5434ef9636003d77fcde2ecc6e451f3a5d3e3c49e627d8da"
+    }
+  ],
+  "first_profile_reserved_at_utc": "2026-10-24T22:57:45+00:00",
+  "second_profile_reserved_at_utc": "2026-10-24T22:59:18+00:00",
+  "inter_profile_reservation_gap_seconds": 93,
+  "minimum_inter_profile_gap_seconds": 90,
+  "browser_closed": true,
+  "lane_released": true,
+  "blocked": false,
+  "status": "success",
+  "release_state": "staged_for_review",
+  "recorded_at_utc": "2026-10-24T23:01:13.041417+00:00",
+  "html_redaction_replacement": "[REDACTED]",
+  "scholar_identity_basis": "Both Scholar IDs link directly from official CMU Scholars profiles; Physics faculty pages confirm roles and live profile identities matched."
+}

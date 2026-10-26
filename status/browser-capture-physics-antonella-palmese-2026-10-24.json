@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-antonellapalmese-5378b53d",
+  "display_name": "Antonella Palmese",
+  "scholar_profile_name": "Antonella Palmese",
+  "scholar_id": "6pPZKd0AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/palmese.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/palmese.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:26:29.701Z",
+  "publication_count": 624,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 8,
+  "show_more_click_count": 7,
+  "source_json_path": "data/captures/physics-antonella-palmese-2026-10-24.json",
+  "source_json_sha256": "e48d20395c2ffbab1abca32f1e65c28489dce9081c38883ac5d4eb8fb54ea4d3",
+  "source_html_path": "data/captures/physics-antonella-palmese-2026-10-24.html",
+  "source_html_sha256": "2bb7f28c912ad9d6774b97cbeaf697cffcad83a6eb96cc05bfd3235e0cac4efa",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 5,
+      "display": "1635*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

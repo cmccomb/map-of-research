@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "batch": "physics-cremonesi-schumacher-source",
+  "source_pr_state": "draft_source_only",
+  "target_branch": "automation/map-snapshot",
+  "department_id": "physics",
+  "profile_count": 2,
+  "raw_observation_count": 2506,
+  "capture_coverage": "complete_visible_profiles",
+  "source_files_preserve_raw_rows": true,
+  "review_status": "106_merged_exclusions_with_map_quality_hold",
+  "proposed_exclusion_count": 106,
+  "producer_review_ready": false,
+  "ingestion_dependency": "Producer PR #160 merged 100 exact source-backed exclusions and a fail-closed publisher preflight into main. Producer PR #212 merged six further exact duplicate exclusions (three per profile) at 2fc7c52, bringing Physics counts to 80 Cremonesi and 26 Schumacher. Draft producer PR #260 stages exact DOI aliases for two Cremonesi preprint-to-journal work identities, including verified original-title row 1959, but remains unmerged. Eleven exact IDs still need decisions and currently pass automatic map eligibility; tracker row 547 and original-title preprint rows 1958 and 1959 are source-verified genuine observations, while tracker row 68 remains unresolved. Keep source PR #156 draft and do not build or upload a Physics snapshot while map_quality_hold is true.",
+  "capture_batch_receipt_path": "status/browser-capture-physics-cremonesi-schumacher-batch-2026-10-24.json",
+  "observation_review_path": "status/physics-cremonesi-schumacher-observation-review-2026-10-24.json",
+  "cache_title_repair_path": "status/physics-schumacher-cache-title-repairs-2026-10-24.json",
+  "cremonesi_cache_title_repair_path": "status/physics-cremonesi-cache-title-repairs-2026-10-24.json",
+  "profiles": [
+    {
+      "person_id": "person-matteocremonesi-b2aba740",
+      "display_name": "Matteo Cremonesi",
+      "scholar_profile_name": "Matteo Cremonesi",
+      "scholar_id": "wJ_gQLoAAAAJ",
+      "publication_count": 1963,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/cremonesi.html",
+      "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/documents/cremonesi-cv.pdf",
+      "source_json_path": "data/captures/physics-matteo-cremonesi-2026-10-24.json",
+      "source_json_sha256": "a9090001adfae87a95ea4925beb9c0335db0622e0250ce6a7d199b5e92ed49ba",
+      "source_html_path": "data/captures/physics-matteo-cremonesi-2026-10-24.html",
+      "source_html_sha256": "59c1fbb55bfe30f22796d518cf5c81ded79f7f11667ea1ee95e9ee4dcb7d0017",
+      "cache_path": "data/authors/wJ_gQLoAAAAJ.json",
+      "receipt_path": "status/browser-capture-physics-matteo-cremonesi-2026-10-24.json",
+      "title_extraction": {
+        "method": "saved_html_svg_aria_label_enrichment",
+        "affected_rows": 913,
+        "svg_math_labels": 1445,
+        "original_browser_inner_text_field": "browser_inner_text_title"
+      }
+    },
+    {
+      "person_id": "person-reinhardschumacher-35cd3c6f",
+      "display_name": "Reinhard Schumacher",
+      "scholar_profile_name": "Reinhard A. Schumacher",
+      "scholar_id": "LibSWRMAAAAJ",
+      "publication_count": 543,
+      "coverage": "complete_visible_profile",
+      "more_remain": false,
+      "visible_page_error": "",
+      "official_identity_url": "https://www.cmu.edu/physics/people/faculty/schumacher.html",
+      "scholar_id_source_url": "https://scholars.cmu.edu/4266-reinhard-schumacher",
+      "source_json_path": "data/captures/physics-reinhard-schumacher-2026-10-24.json",
+      "source_json_sha256": "050aa1cffa53fec64523f27b8d7093a6973c4cb7b267697c80f31c17ec20eb20",
+      "source_html_path": "data/captures/physics-reinhard-schumacher-2026-10-24.html",
+      "source_html_sha256": "5ce76d360feff9abf784e45ed2afa5c2c2e3df0f5fbe18b6b005d1017d2ee93d",
+      "cache_path": "data/authors/LibSWRMAAAAJ.json",
+      "receipt_path": "status/browser-capture-physics-reinhard-schumacher-2026-10-24.json",
+      "title_extraction": {
+        "method": "saved_html_svg_aria_label_enrichment",
+        "affected_rows": 190,
+        "svg_math_labels": 331,
+        "original_browser_inner_text_field": "browser_inner_text_title"
+      }
+    }
+  ],
+  "recorded_at_utc": "2026-10-25T01:03:46.716171+00:00",
+  "proposed_exclusion_scope": "106_exact_merged_main_2fc7c52; no raw source-row exclusion applied",
+  "paired_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/160",
+  "paired_producer_review_count_by_profile": {
+    "wJ_gQLoAAAAJ": 80,
+    "LibSWRMAAAAJ": 26
+  },
+  "producer_review_hold_reason": "Eleven exact IDs still need decisions and currently pass automatic map eligibility. Tracker row 547 and original-title preprint rows 1958 and 1959 are source-verified retains; tracker row 68 remains unresolved. Exact DOI aliases for the preprints are staged in unmerged producer PR #260. All 106 source-backed exact exclusions are merged on main, but the live publisher preflight stays fail-closed for both held profiles.",
+  "publisher_guard_state": "merged_on_main_7b6d923e_live_for_trusted_publisher",
+  "publisher_guard_effect": "If either Physics Scholar ID is in a raw snapshot and this status is held, the trusted publisher rejects the whole upload before embeddings or dataset writes; raw captures and snapshot rows remain intact.",
+  "map_quality_hold": true,
+  "unresolved_exact_ids": [
+    "wJ_gQLoAAAAJ:zmHQPunddckC",
+    "wJ_gQLoAAAAJ:QNiCEvFIB1MC",
+    "wJ_gQLoAAAAJ:wlzmIqt2EaEC",
+    "wJ_gQLoAAAAJ:PDAgwb0ELvkC",
+    "LibSWRMAAAAJ:_mQi-xiA4oYC",
+    "LibSWRMAAAAJ:pRWBApOjXDcC",
+    "LibSWRMAAAAJ:adHtZc2wMuEC",
+    "LibSWRMAAAAJ:oldoQiaHq2UC",
+    "LibSWRMAAAAJ:VnuxuLaQPLMC",
+    "LibSWRMAAAAJ:M0j1y4EgrScC",
+    "LibSWRMAAAAJ:6bLC7aUMtPcC"
+  ],
+  "unresolved_exact_id_count": 11,
+  "currently_map_eligible_unresolved_count": 11,
+  "currently_quality_filtered_unresolved_ids": [],
+  "unresolved_counts_state": "The independent hold audit began with 18 unresolved IDs. Producer PR #160 resolved one, leaving 17; follow-up review resolved three Cremonesi rows as exact duplicate exclusions merged through PR #212 and two as genuine retained observations (row 1334 journal and row 1958 original-title arXiv v1), leaving 12. Row 1959 is now a source-verified genuine original-title arXiv v1 observation with an exact DOI alias staged in unmerged producer PR #260, leaving 11 unresolved exact IDs, all currently map eligible. The previously quality-filtered mixed-version row 1384 is among the three merged exclusions. Tracker row 547 is a source-verified genuine report observation; row 68 remains unresolved; all three Schumacher same-work pairs have exact decisions merged through PR #212. The map-quality hold remains until all 11 receive decisions and the coordinated producer/source release is ready.",
+  "review_updated_at_utc": "2026-10-25T05:40:31+00:00",
+  "map_quality_hold_scholar_ids": [
+    "wJ_gQLoAAAAJ",
+    "LibSWRMAAAAJ"
+  ],
+  "followup_producer_review_url": "https://github.com/cmccomb/map-of-research/pull/212",
+  "followup_producer_review_state": "merged_on_main_2fc7c52",
+  "followup_producer_exact_exclusion_ids": [
+    "wJ_gQLoAAAAJ:8NFFclwVBVUC",
+    "wJ_gQLoAAAAJ:Gm6cJkd1Yu0C",
+    "wJ_gQLoAAAAJ:OlGoE9RybnsC",
+    "LibSWRMAAAAJ:E7VqQtBCVmcC",
+    "LibSWRMAAAAJ:oH8HCDhqVGsC",
+    "LibSWRMAAAAJ:ipzZ9siozwsC"
+  ],
+  "verified_retain_ids_from_followup": [
+    "wJ_gQLoAAAAJ:f2QdLyYkFyUC",
+    "wJ_gQLoAAAAJ:JOhajB-2wfwC",
+    "wJ_gQLoAAAAJ:UBSsHvkqiq4C",
+    "wJ_gQLoAAAAJ:QjNCP7ux8QYC"
+  ],
+  "followup_producer_exact_exclusion_count": 6,
+  "followup_producer_exact_exclusion_count_by_profile": {
+    "wJ_gQLoAAAAJ": 3,
+    "LibSWRMAAAAJ": 3
+  }
+}

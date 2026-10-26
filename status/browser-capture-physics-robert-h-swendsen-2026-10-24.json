@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-roberthswendsen-cfa7c981",
+  "display_name": "Robert H. Swendsen",
+  "scholar_profile_name": "Robert H. Swendsen",
+  "scholar_id": "KoHdmZEAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/swendsen.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/swendsen.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; live profile name and Carnegie Mellon affiliation matched.",
+  "reserved_at_utc": "2026-10-24T23:09:12+00:00",
+  "captured_at_utc": "2026-10-24T23:09:48.163Z",
+  "publication_count": 202,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 4,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/physics-robert-h-swendsen-2026-10-24.json",
+  "source_json_sha256": "075c874bac31dd13da2321d26072d81e15bf5b2abc35a8a39bb2ee9af899b5bc",
+  "source_html_path": "data/captures/physics-robert-h-swendsen-2026-10-24.html",
+  "source_html_sha256": "a443ca0d836a91375bca005cea00b9842067fdd743d78eaa0974b4a281be363c",
+  "cache_path": "data/authors/KoHdmZEAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

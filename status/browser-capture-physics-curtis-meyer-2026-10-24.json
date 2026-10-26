@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-curtismeyer-a1171ccf",
+  "display_name": "Curtis Meyer",
+  "scholar_profile_name": "Curtis Meyer",
+  "scholar_id": "jkKrk0sAAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/meyer.html",
+  "scholar_id_source_url": "https://www.cmu.edu/physics/people/faculty/meyer.html",
+  "scholar_identity_basis": "Official CMU Physics faculty page directly links this Scholar ID; profile name and Carnegie Mellon affiliation matched.",
+  "captured_at_utc": "2026-10-24T22:38:53.145Z",
+  "publication_count": 764,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 9,
+  "show_more_click_count": 8,
+  "source_json_path": "data/captures/physics-curtis-meyer-2026-10-24.json",
+  "source_json_sha256": "6eb68ec2a1c05607817b84c4ed1921431c2601e47ac61a0a87c7b838a8a5b05a",
+  "source_html_path": "data/captures/physics-curtis-meyer-2026-10-24.html",
+  "source_html_sha256": "e1a9137b29abad7f557bb4d9202429876c56246e15f0973ab5586b53d4491bfb",
+  "release_state": "staged_for_review",
+  "citation_annotations": [
+    {
+      "row": 1,
+      "author_pub_id": "jkKrk0sAAAAJ:6gyMwVukAH0C",
+      "display": "4018*"
+    },
+    {
+      "row": 4,
+      "author_pub_id": "jkKrk0sAAAAJ:u-x6o8ySG0sC",
+      "display": "1031*"
+    },
+    {
+      "row": 30,
+      "author_pub_id": "jkKrk0sAAAAJ:lEqsFd_EmTwC",
+      "display": "287*"
+    },
+    {
+      "row": 36,
+      "author_pub_id": "jkKrk0sAAAAJ:J_QLn5ZebxAC",
+      "display": "272*"
+    },
+    {
+      "row": 61,
+      "author_pub_id": "jkKrk0sAAAAJ:YOa3pQVmflMC",
+      "display": "188*"
+    },
+    {
+      "row": 69,
+      "author_pub_id": "jkKrk0sAAAAJ:HDshCWvjkbEC",
+      "display": "179*"
+    },
+    {
+      "row": 114,
+      "author_pub_id": "jkKrk0sAAAAJ:jU8F8PsuBvwC",
+      "display": "117*"
+    },
+    {
+      "row": 118,
+      "author_pub_id": "jkKrk0sAAAAJ:YFjsv_pBGBYC",
+      "display": "117*"
+    },
+    {
+      "row": 126,
+      "author_pub_id": "jkKrk0sAAAAJ:O6UvkRZ6K0QC",
+      "display": "113*"
+    },
+    {
+      "row": 144,
+      "author_pub_id": "jkKrk0sAAAAJ:pSDPu2lMr6QC",
+      "display": "93*"
+    },
+    {
+      "row": 417,
+      "author_pub_id": "jkKrk0sAAAAJ:7RqSRfxZ5UgC",
+      "display": "11*"
+    },
+    {
+      "row": 447,
+      "author_pub_id": "jkKrk0sAAAAJ:TO92qYKFP5UC",
+      "display": "6*"
+    },
+    {
+      "row": 484,
+      "author_pub_id": "jkKrk0sAAAAJ:MLfJN-KU85MC",
+      "display": "3*"
+    }
+  ],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
