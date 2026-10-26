@@ -10344,6 +10344,110 @@
       "reason": "Truncated Living row duplicates fully titled 1995 article in the same complete Scholar capture",
       "evidence_url": "https://pubs.acs.org/doi/10.1021/ma00126a041",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "hgtyZOUAAAAJ",
+      "author_pub_id": "hgtyZOUAAAAJ:ClCfbGk0d_YC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 49 is an ICLO 2018 optics paper by S. Singh of Sant Longowal Institute; SLIET’s collaborator bibliography identifies Surinder Singh in the Anashkina-Koptev-Kim group, distinct from CMU physicist Simranjeet Singh.",
+      "evidence_url": "https://ece.sliet.ac.in/list-of-publications/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "author_pub_id": "czs45aEAAAAJ:mUJArPsKIAAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 204 repeats arXiv:2607.06741 with an abbreviated first author; the fuller record is retained as Widom profile row 205.",
+      "evidence_url": "https://arxiv.org/abs/2607.06741",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "author_pub_id": "czs45aEAAAAJ:3bvyWxjaHKcC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 212 is a truncated and misdated fragment of Widom's 1988 book chapter retained as complete profile row 134.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/B978012040601250007X",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:P_fFXc30I2UC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 185 is NSF award 9221333, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9221333.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:23Hg5vt_rPQC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 188 is NSF award 9009475, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9009475.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:OP2qWFMeUpEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 192 is NSF award 8403972, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/8403972.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:pZYLKkizsIQC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title is the IBM Zurich Research Laboratory affiliation in Swendsen’s 1982 Monte Carlo Renormalization Group chapter, already retained as row 134.",
+      "evidence_url": "https://link.springer.com/chapter/10.1007/978-1-4613-3347-0_17",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:FmXltp8y-ZkC",
+      "reason_code": "nonpublication",
+      "reason": "Publication Submission Form is the footer of a CMU Robotics Institute publications page that lists Swendsen’s actual haptics paper, retained as row 73.",
+      "evidence_url": "https://www.ri.cmu.edu/pubs/page/126/",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "KoHdmZEAAAAJ",
+      "author_pub_id": "KoHdmZEAAAAJ:_B80troHkn4C",
+      "reason_code": "nonpublication",
+      "reason": "The original CPC 121–122 contents list Diggs–Genovese–Kadane–Swendsen’s Bayesian analysis of series expansions on pp. 1–4 followed by Domany–Blatt–Gdalyahu–Weinshall’s clustering article on pp. 5–12. The saved guest-editor title and combined byline are contents fragments, not a separate Swendsen work.",
+      "evidence_url": "https://www.sciencedirect.com/science/article/pii/S0010465599004816",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "czs45aEAAAAJ",
+      "author_pub_id": "czs45aEAAAAJ:YsrPvlHIBpEC",
+      "reason_code": "nonpublication",
+      "reason": "Okabe, Y. 206 is a bibliography/index fragment for Okabe and Niizeki’s pp. 206–214 chapter in the 1990 proceedings; Widom’s distinct chapter in that volume spans pp. 112–119.",
+      "evidence_url": "https://tohoku.repo.nii.ac.jp/record/12373/files/KJ00004424577.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "author_pub_id": "NhBa8hAAAAAJ:70eg2SAEIzsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Second field-identical observation of Nature Communications 10:2469; retain profile row 10.",
+      "evidence_url": "https://www.nature.com/articles/s41467-019-10477-6",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "NhBa8hAAAAAJ",
+      "author_pub_id": "NhBa8hAAAAAJ:bnK-pcrLprsC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Damaged author-spelling duplicate of ACS Applied Nano Materials article; retain profile row 55.",
+      "evidence_url": "https://pubs.acs.org/doi/10.1021/acsanm.9b00608",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "wovjAPsAAAAJ",
+      "author_pub_id": "wovjAPsAAAAJ:XiSMed-E-HIC",
+      "reason_code": "nonpublication",
+      "reason": "Dryad data deposit linked to the separately retained Science article; exclude under the existing dataset map-grain convention.",
+      "evidence_url": "https://datadryad.org/dataset/doi:10.5061/dryad.q83bk3jts",
+      "verified_at": "2026-10-25"
     }
   ]
 }

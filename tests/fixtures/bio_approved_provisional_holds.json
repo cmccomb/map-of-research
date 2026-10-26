@@ -1,0 +1,585 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "person_id": "person-terrencejcollins-61cf6ed9",
+      "scholar_id": "0e1jwkkAAAAJ",
+      "expected_source_rows": 361,
+      "cache_sha256": "71ad4333c8f43adb4b2438be05ee3d8365c46a6da3f67b71b61ed740300bc83c",
+      "expected_reviewed_exclusion_rows": 31,
+      "reviewed_exclusion_ids_sha256": "2834d16fcfa1a5da902b925b6f2d3b2cdc3d7e1c3e974b873370b74805baf979",
+      "held_observations": [
+        {
+          "capture_row_index": 141,
+          "author_pub_id": "0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reason": "ChemInform abstract indexes a separate 1998 Oxford book chapter; reconcile the indexed proxy and original chapter before mapping one work.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=100&pagesize=100&citation_for_view=0e1jwkkAAAAJ:70eg2SAEIzsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 214,
+          "author_pub_id": "0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reason": "Truncated T Collins byline in a lead-poisoning pilot study; exact author identity and document type remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 274,
+          "author_pub_id": "0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reason": "UK histopathology meeting abstract has a truncated byline without Collins; its complete primary byline has not been found.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:cK4Rrx0J3m0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reason": "Sunday Times item is credited to B Collins; no primary source establishes Terrence J. Collins as the author.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 350,
+          "author_pub_id": "0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reason": "Undated mid-year report has no venue or located primary copy; confirm the exact report and distinguish it from the verified 2003 DOE final report.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:hsZV8lGYWTMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reason": "ACS abstract is credited to TJ Collins, but its publication type and relationship to separately indexed work remain unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yqoGN6RLRZoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 356,
+          "author_pub_id": "0e1jwkkAAAAJ:yFnVuubrUp4C",
+          "reason": "Undated and unvenued estradiol-degradation record lacks an identified primary output; distinguish it from the 2015 Scientific Reports paper before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=300&pagesize=100&citation_for_view=0e1jwkkAAAAJ:yFnVuubrUp4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 282,
+          "author_pub_id": "0e1jwkkAAAAJ:Y5dfb0dijaUC",
+          "reason": "Probable Polish translation of existing Collins-Walter feature; exact original issue unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:Y5dfb0dijaUC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.scientificamerican.com/article/little-green-molecules/"
+        },
+        {
+          "capture_row_index": 278,
+          "author_pub_id": "0e1jwkkAAAAJ:u-coK7KVo8oC",
+          "reason": "Spanish translation of existing Collins-Walter feature; version link needs exact publisher receipt",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:u-coK7KVo8oC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.uhu.es/pablo.hidalgo/docencia/effects/AADD/cuando%20el%20metano%20regulaba%20el%20clima.pdf"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "0e1jwkkAAAAJ:MhiOAD_qIWkC",
+          "reason": "ACS meeting abstract exact primary byline unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0e1jwkkAAAAJ&cstart=200&pagesize=100&citation_for_view=0e1jwkkAAAAJ:MhiOAD_qIWkC",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=0e1jwkkAAAAJ&citation_for_view=0e1jwkkAAAAJ:MhiOAD_qIWkC"
+        }
+      ]
+    },
+    {
+      "person_id": "person-nimermurshid-70983eeb",
+      "scholar_id": "MPxFaHYAAAAJ",
+      "expected_source_rows": 49,
+      "cache_sha256": "37f993f07e75d5dc9aaeb60cc50429bcd7cfdbad255e7939ec4c9ba80f05d0de",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "c07da5e36cb83245b45e07b730bc07f1004b0c2a3510e1c4536c34ce367c6fdb",
+      "held_observations": [
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reason": "Title is a fragment of a journal name, with no year or venue; exact underlying item is unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Title has trailing footnote character and no year or venue; exact underlying item and type are unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=MPxFaHYAAAAJ&cstart=20&pagesize=80&citation_for_view=MPxFaHYAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-gloriasilva-5a457252",
+      "scholar_id": "vF51LxIAAAAJ",
+      "expected_source_rows": 41,
+      "cache_sha256": "01908b11b53c9d9659b96720dec6f69816cabdd68ac1c9e9b590d8d42968b522",
+      "expected_reviewed_exclusion_rows": 0,
+      "reviewed_exclusion_ids_sha256": "",
+      "held_observations": [
+        {
+          "capture_row_index": 33,
+          "author_pub_id": "vF51LxIAAAAJ:dhFuZR0502QC",
+          "reason": "A 2020 strawberry-delivery preprint appears related to the 2022 PNAS article at row 18; exact version relationship needs primary-source reconciliation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reason": "Undated Spanish archive record with malformed institutional venue; exact type, date, and authorship context need source review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vF51LxIAAAAJ&cstart=20&pagesize=80&citation_for_view=vF51LxIAAAAJ:M3ejUd6NZC8C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-sullivan-589c9545",
+      "scholar_id": "wXSgFr4AAAAJ",
+      "expected_source_rows": 250,
+      "cache_sha256": "960b296af5cf0c9e3aab6be32844ec2fe2ad7f2a2b3e331cfc4c857f4df57fd7",
+      "held_observations": [
+        {
+          "capture_row_index": 47,
+          "author_pub_id": "wXSgFr4AAAAJ:DJbcl8HfkQkC",
+          "reason": "SAIL campaign paper has ambiguous R Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:DJbcl8HfkQkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 90,
+          "author_pub_id": "wXSgFr4AAAAJ:4X0JR2_MtJMC",
+          "reason": "STAMP data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:4X0JR2_MtJMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 94,
+          "author_pub_id": "wXSgFr4AAAAJ:2KloaMYe4IUC",
+          "reason": "ECOR data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 97,
+          "author_pub_id": "wXSgFr4AAAAJ:CB2v5VPnA5kC",
+          "reason": "2026 ECOR handbook version needs exact authorship review",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=20&pagesize=80&citation_for_view=wXSgFr4AAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 104,
+          "author_pub_id": "wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+          "reason": "Permafrost watershed dataset needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:vDZJ-YLwNdEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 117,
+          "author_pub_id": "wXSgFr4AAAAJ:rHJHxKgnXwkC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:rHJHxKgnXwkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 118,
+          "author_pub_id": "wXSgFr4AAAAJ:SjuI4pbJlxcC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:SjuI4pbJlxcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 119,
+          "author_pub_id": "wXSgFr4AAAAJ:q-HalDI95KYC",
+          "reason": "Future 2027 AMS abstract needs final program and attribution",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:q-HalDI95KYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 128,
+          "author_pub_id": "wXSgFr4AAAAJ:jU7OWUQzBzMC",
+          "reason": "2026 SEBS handbook version needs exact authorship review",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:jU7OWUQzBzMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 129,
+          "author_pub_id": "wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+          "reason": "2026 AMS presentation needs presenter identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7BrZ7Jt4UNcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 130,
+          "author_pub_id": "wXSgFr4AAAAJ:PYBJJbyH-FwC",
+          "reason": "ABoVE project label may be a collection container",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:PYBJJbyH-FwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 137,
+          "author_pub_id": "wXSgFr4AAAAJ:BJbdYPG6LGMC",
+          "reason": "Chicago urban flux abstract needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BJbdYPG6LGMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 138,
+          "author_pub_id": "wXSgFr4AAAAJ:48xauSegjOkC",
+          "reason": "AGU 2024 abstract needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:48xauSegjOkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 140,
+          "author_pub_id": "wXSgFr4AAAAJ:GFxP56DSvIMC",
+          "reason": "SAIL report lists R Sullivan without unit",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:GFxP56DSvIMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "wXSgFr4AAAAJ:tH6gc1N1XXoC",
+          "reason": "Flux supplementary dataset needs item-level Sullivan identity",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tH6gc1N1XXoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 144,
+          "author_pub_id": "wXSgFr4AAAAJ:ODE9OILHJdcC",
+          "reason": "SAIL meeting summary needs exact affiliation",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:ODE9OILHJdcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 149,
+          "author_pub_id": "wXSgFr4AAAAJ:WC23djZS0W4C",
+          "reason": "SETAC 2022 PFAS presentation needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WC23djZS0W4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 150,
+          "author_pub_id": "wXSgFr4AAAAJ:7wO8s98CvbsC",
+          "reason": "SETAC 2022 PFAS presentation needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 151,
+          "author_pub_id": "wXSgFr4AAAAJ:OTTXONDVkokC",
+          "reason": "SETAC title may be a session container",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:OTTXONDVkokC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 152,
+          "author_pub_id": "wXSgFr4AAAAJ:nVrZBo8bIpAC",
+          "reason": "SAIL first-light abstract needs exact affiliation",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nVrZBo8bIpAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 154,
+          "author_pub_id": "wXSgFr4AAAAJ:nRpfm8aw39MC",
+          "reason": "AGU 2021 ice abstract needs exact meeting record",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:nRpfm8aw39MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "wXSgFr4AAAAJ:uDGL6kOW6j0C",
+          "reason": "STAMP precipitation data record uses Argonne ARM collaborators",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=100&pagesize=100&citation_for_view=wXSgFr4AAAAJ:uDGL6kOW6j0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 203,
+          "author_pub_id": "wXSgFr4AAAAJ:otzGkya1bYkC",
+          "reason": "AMS 2014 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:otzGkya1bYkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 204,
+          "author_pub_id": "wXSgFr4AAAAJ:buQ7SEKw-1sC",
+          "reason": "AMS 2014 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:buQ7SEKw-1sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "wXSgFr4AAAAJ:MpfHP-DdYjUC",
+          "reason": "Goldschmidt 2011 abstract has abbreviated Sullivan coauthor",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:MpfHP-DdYjUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 230,
+          "author_pub_id": "wXSgFr4AAAAJ:p2g8aNsByqUC",
+          "reason": "Mars abstract appears tied to Cornell planetary scientist",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:p2g8aNsByqUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 234,
+          "author_pub_id": "wXSgFr4AAAAJ:B3FOqHPlNUQC",
+          "reason": "Mars abstract appears tied to Cornell planetary scientist",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:B3FOqHPlNUQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 237,
+          "author_pub_id": "wXSgFr4AAAAJ:tzM49s52ZIMC",
+          "reason": "5ebbr is an ARM dataset code with ambiguous R Sullivan",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:tzM49s52ZIMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 241,
+          "author_pub_id": "wXSgFr4AAAAJ:WHdLCjDvYFkC",
+          "reason": "CMU lists 2020 SETAC 41st meeting; Scholar shows 43rd and no year",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:WHdLCjDvYFkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 242,
+          "author_pub_id": "wXSgFr4AAAAJ:gVv57TyPmFsC",
+          "reason": "Beverton-Holt math abstract needs namesake identity check",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:gVv57TyPmFsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 243,
+          "author_pub_id": "wXSgFr4AAAAJ:F9fV5C73w3QC",
+          "reason": "PCCP themed-issue header is not standalone title",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:F9fV5C73w3QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 245,
+          "author_pub_id": "wXSgFr4AAAAJ:BUYA1_V_uYcC",
+          "reason": "Supplemental material may duplicate separately listed paper",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:BUYA1_V_uYcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 246,
+          "author_pub_id": "wXSgFr4AAAAJ:bFI3QPDXJZMC",
+          "reason": "Title is fragment of separately listed mineral-dust work",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:bFI3QPDXJZMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 247,
+          "author_pub_id": "wXSgFr4AAAAJ:pyW8ca7W8N0C",
+          "reason": "PCCP themed-issue header is not standalone title",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:pyW8ca7W8N0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 250,
+          "author_pub_id": "wXSgFr4AAAAJ:YOwf2qJgpHMC",
+          "reason": "Author-list fragment lacks original item metadata",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wXSgFr4AAAAJ&cstart=200&pagesize=100&citation_for_view=wXSgFr4AAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "expected_reviewed_exclusion_rows": 56,
+      "reviewed_exclusion_ids_sha256": "bc82650651779bda8ea25c141d14af00633ec8795ffd3e2f5c2aef956a0a0e21"
+    },
+    {
+      "person_id": "person-stefanbernhard-7f8d72cd",
+      "scholar_id": "hfFKwRcAAAAJ",
+      "expected_source_rows": 228,
+      "cache_sha256": "45ee0c659f02e036f9a742ffe87ec22ee7827922451eb4fd7af472f5bac5ced7",
+      "held_observations": [
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reason": "The captured 2004 Göttingen item gives only S Bernhard. Nearby biomedical works belong to a distinct Göttingen Stefan Bernhard, but the exact native record or complete byline has not been found; attribution remains unresolved.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hfFKwRcAAAAJ&cstart=200&pagesize=100&citation_for_view=hfFKwRcAAAAJ:2KloaMYe4IUC",
+          "reviewed_at": "2026-10-25"
+        }
+      ],
+      "expected_reviewed_exclusion_rows": 43,
+      "reviewed_exclusion_ids_sha256": "f7aaee154375508ffa1bed85d0acce78fe6f3c59d20e4dcf541ede3a3a8447f6"
+    },
+    {
+      "person_id": "person-giovannileoni-02ab6865",
+      "scholar_id": "0Nj-v7sAAAAJ",
+      "expected_source_rows": 134,
+      "cache_sha256": "ad22a8e1f97d1a4ebbb6c2caebf0a602bbd05e54acdb78c288f8fc833b6af1f0",
+      "expected_reviewed_exclusion_rows": 21,
+      "reviewed_exclusion_ids_sha256": "5b6d91daa613edc76c2e19eb4947d41b08a33632fb59b2e3b6171d89d8f69dea",
+      "held_observations": [
+        {
+          "capture_row_index": 131,
+          "author_pub_id": "0Nj-v7sAAAAJ:2P1L_qKh6hAC",
+          "reason": "Saved Leoni row 131 has the same corrupted title and exact Fonseca–Müller–Leoni byline, without year/venue. The publisher archive confirms their 2004 A-quasiconvexity paper, already clean in Leoni Scholar row 17, but exact report/journal identity is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=0Nj-v7sAAAAJ&cstart=100&pagesize=100&citation_for_view=0Nj-v7sAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-steveneshreve-df3eafb3",
+      "scholar_id": "A0ISJPUAAAAJ",
+      "expected_source_rows": 185,
+      "cache_sha256": "94603153d1a94fcfc3d000b1619222b96e0ca0adaa90098fc02a968cbaf5750b",
+      "expected_reviewed_exclusion_rows": 28,
+      "reviewed_exclusion_ids_sha256": "bf892bc8ce40dd71aac7fdb2267c1c4849354aa973e200ecdba0732cf31ce73c",
+      "held_observations": [
+        {
+          "capture_row_index": 185,
+          "author_pub_id": "A0ISJPUAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Saved Scholar row 185 contains only corrupted Cyrillic title and author text and no year or venue. Existing exact-person review found no attributable independent source; no title or Shreve byline can be recovered. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=A0ISJPUAAAAJ&cstart=100&pagesize=100&citation_for_view=A0ISJPUAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-alanfrieze-ef264103",
+      "scholar_id": "EqKRQ4YAAAAJ",
+      "expected_source_rows": 659,
+      "cache_sha256": "f16b4143f102fa5a6f36712bade0cad51fb4bfcb39c2b7c22aee8a9337e11d14",
+      "expected_reviewed_exclusion_rows": 80,
+      "reviewed_exclusion_ids_sha256": "cfce840065c228a3bcd7d7ad64b8ecd84b4ec85124d8151f80f456dc6096b3ac",
+      "held_observations": [
+        {
+          "capture_row_index": 545,
+          "author_pub_id": "EqKRQ4YAAAAJ:jFemdcug13IC",
+          "reason": "Official author list identifies a 2004 Flaxman–Frieze APPROX/RANDOM paper, The Diameter of Randomly Perturbed Digraphs and Some Applications; clean Scholar row 544 exists. Garbled row 545 lacks a title and venue, so exact duplicate/version status is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:jFemdcug13IC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 552,
+          "author_pub_id": "EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+          "reason": "Saved row 552 has a corrupt 2002 Cooper–Frieze title. The official author list has both Multi-coloured Hamilton Cycles and Crawling on Web Graphs with that pair in 2002; clean Scholar data do not distinguish this damaged row. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:P7Ujq4OLJYoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 553,
+          "author_pub_id": "EqKRQ4YAAAAJ:LWqeokA2EBkC",
+          "reason": "Saved row 553 has a corrupt 2002 Frieze–Wormald title. The official author list links a 2002 random k-SAT conference paper to its 2005 journal version (clean Scholar row 75), but the exact source/version of this damaged row is not established. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:LWqeokA2EBkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 557,
+          "author_pub_id": "EqKRQ4YAAAAJ:H7nrzBkawXsC",
+          "reason": "Saved row 557 gives Cooper–Frieze–Reed and 2001 but no readable title/venue. The official author list and a dated 2001 author PDF identify the later 2002 connectivity/Hamiltonicity paper; a distinct preprint version cannot be ruled out. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:H7nrzBkawXsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 558,
+          "author_pub_id": "EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+          "reason": "Saved row 558 has a corrupt 2001 Cooper–Frieze title without venue. The official author list identifies their 2001 ESA web-graphs paper (clean Scholar row 128) and a later journal version; exact source/version of the corrupted observation remains unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=500&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:U4n9YNQMCAIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 640,
+          "author_pub_id": "EqKRQ4YAAAAJ:VRfTbSk87rEC",
+          "reason": "Saved row 640 has corrupt title and no year/venue. The four-author team matches the verified 2002 independence/chromatic-number article in clean Scholar row 157, but the damaged observation could be a separate preprint version. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:VRfTbSk87rEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 641,
+          "author_pub_id": "EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+          "reason": "Official author list identifies a Drinea–Frieze–Mitzenmacher SODA 2002 paper, Balls and Bins Models with Feedback; that clean paper is in Scholar row 75. Garbled row 641 has no year or venue, so an exact source/version match is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:xGWFX6Gbr9MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 655,
+          "author_pub_id": "EqKRQ4YAAAAJ:7wO8s98CvbsC",
+          "reason": "The captured title is a corrupted Les Cahiers Leibniz series/header, not a usable work title. The official five-author team has both a 2005 identifying-codes proceedings paper and a 2007 journal paper in clean Scholar rows; a distinct report version cannot be ruled out. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:7wO8s98CvbsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 657,
+          "author_pub_id": "EqKRQ4YAAAAJ:FiytvqdAVhgC",
+          "reason": "Saved row 657 has a corrupt Cooper–Frieze–Sorkin title and no year/venue. The author list confirms their 2002 SODA paper with a later journal version, both clean in Scholar; exact source/version for this damaged row is unproved. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EqKRQ4YAAAAJ&cstart=600&pagesize=100&citation_for_view=EqKRQ4YAAAAJ:FiytvqdAVhgC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-irenefonseca-51ba491a",
+      "scholar_id": "JV3ryMgAAAAJ",
+      "expected_source_rows": 253,
+      "cache_sha256": "6aeda014b4adcd695419ea85fbd2a47e491e5654ce3ecc68e8342e1804fe8217",
+      "expected_reviewed_exclusion_rows": 21,
+      "reviewed_exclusion_ids_sha256": "fa9aa648100ab5b8b87f7d31d94477150d8b38b366c2c1f78638ed01e41c8515",
+      "held_observations": [
+        {
+          "capture_row_index": 248,
+          "author_pub_id": "JV3ryMgAAAAJ:AXPGKjj_ei8C",
+          "reason": "Saved Fonseca row 248 has a corrupted title, exact Fonseca–Müller–Leoni byline, and no year/venue. The publisher archive confirms their 2004 A-quasiconvexity paper, already clean in Fonseca Scholar row 45, but the damaged row could be a separate report version. Saved Scholar row retained; the independent URL, where present, is a lead rather than proof of this exact damaged citation.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JV3ryMgAAAAJ&cstart=200&pagesize=100&citation_for_view=JV3ryMgAAAAJ:AXPGKjj_ei8C",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-cjoelmcmanus-f28918ce",
+      "scholar_id": "28yZqbcAAAAJ",
+      "expected_source_rows": 62,
+      "cache_sha256": "012435c098eddc0ad41b27ce214ad0f00ea89b8311ac9edbe5b7148900f29096",
+      "expected_reviewed_exclusion_rows": 3,
+      "reviewed_exclusion_ids_sha256": "3316309a95705c86671fc2144795b95a22296fc4df3c358334290e9fe002bc84",
+      "held_observations": [
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reason": "Rustbelt RNA 2021 lists Tosiano's poster 101 and its topic, but the public organizer record does not verify the complete four-name Scholar byline or contributor roles; hold the placeholder from map and coauthor edges pending the original abstract.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=28yZqbcAAAAJ&cstart=20&pagesize=80&citation_for_view=28yZqbcAAAAJ:HKviVsUxM5wC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-robertorgil-90b0cbe9",
+      "scholar_id": "FRtd8_QAAAAJ",
+      "expected_source_rows": 195,
+      "cache_sha256": "6aef47e58f366c94308e0260e45e9e29b80525a41047e4d9b4284a0de101ea00",
+      "expected_reviewed_exclusion_rows": 19,
+      "reviewed_exclusion_ids_sha256": "732b3debd5049dbe6a2dc1df9fc40e2ffb31d7846e1bec179f88a0f3d9cce82a",
+      "held_observations": [
+        {
+          "capture_row_index": 132,
+          "author_pub_id": "FRtd8_QAAAAJ:olpn-zPbct0C",
+          "reason": "Gil signed a multi-group support feature; coauthor graph policy for mass signatories unresolved",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FRtd8_QAAAAJ&cstart=100&pagesize=100&citation_for_view=FRtd8_QAAAAJ:olpn-zPbct0C",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://www.nature.com/articles/nsmb.2371"
+        }
+      ]
+    },
+    {
+      "person_id": "person-mariakurnikova-215a60c6",
+      "scholar_id": "IggMbacAAAAJ",
+      "expected_source_rows": 170,
+      "cache_sha256": "8c9d5b93a5ad0ad0d7f11164a6df7e8a38e3c386e26feb0046ba16eb0d0501dd",
+      "expected_reviewed_exclusion_rows": 10,
+      "reviewed_exclusion_ids_sha256": "eb9d0986cd10f99b64ceee237c3af5e0023e298b66b7b23240de9a98991fdbd4",
+      "held_observations": [
+        {
+          "capture_row_index": 84,
+          "author_pub_id": "IggMbacAAAAJ:j3f4tGmQtD8C",
+          "reason": "HARLEM software attribution supported; captured 1999 journal venue and artifact identity unverified",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IggMbacAAAAJ&cstart=20&pagesize=80&citation_for_view=IggMbacAAAAJ:j3f4tGmQtD8C",
+          "reviewed_at": "2026-10-25",
+          "primary_evidence_url": "https://crete.chem.cmu.edu/index.php/software/2-uncategorized/18-harlem"
+        }
+      ]
+    }
+  ]
+}
