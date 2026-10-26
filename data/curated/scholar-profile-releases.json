@@ -311,11 +311,13 @@
     {
       "person_id": "person-matteocremonesi-b2aba740",
       "scholar_id": "wJ_gQLoAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 1963,
       "cache_sha256": "f0f0bbeecc820f50b913793925deea56869ffbf72a9ca91f92258a7c5d8230bb",
-      "reason": "Complete 1963-row Physics capture is bound to saved source and cache hashes. The exact CMS/CLAS map-quality review remains held; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 1,963-row Physics source is bound to saved capture and cache hashes. Eighty exact prior exclusions and 1,087 exact provisional holds protect unresolved observations; 796 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 1087,
+      "provisional_hold_ids_sha256": "2ef585a2854d142f72fa9ee01ed2e7624300305335b6d706a5395ebb58012c60"
     },
     {
       "person_id": "person-reinhardschumacher-35cd3c6f",

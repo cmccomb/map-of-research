@@ -742,12 +742,48 @@ def test_preupload_guard_allows_raw_only_and_noop():
     require_no_provisional_hold_contributions({}, {})
 
 
+def test_preupload_guard_checks_all_held_rows_in_one_work():
+    tables = _audit_tables()
+    second_id = f"{SCHOLAR}:held-two"
+    second = _hold(
+        author_pub_id=second_id,
+        capture_row_index=2,
+        evidence_url=f"https://scholar.google.com/citations?citation_for_view={second_id}",
+    )
+    tables["profile_publications"] = pandas.concat(
+        [
+            tables["profile_publications"],
+            pandas.DataFrame(
+                [
+                    {
+                        "scholar_id": SCHOLAR,
+                        "author_pub_id": second_id,
+                        "observation_id": "observation-held-two",
+                        "map_eligible": False,
+                        "map_exclusion_reasons": ["attribution_provisional_hold"],
+                        "review_attribution_status": "held",
+                    }
+                ]
+            ),
+        ],
+        ignore_index=True,
+    )
+    tables["works"].at[0, "map_eligible"] = True
+    tables["works"].at[0, "observation_ids"] = ["observation-held-two"]
+    tables["works"].at[0, "author_pub_ids"] = [second_id]
+    with pytest.raises(ValueError, match="contributed to a map link"):
+        require_no_provisional_hold_contributions(
+            tables, {(SCHOLAR, HELD): _hold(), (SCHOLAR, second_id): second}
+        )
+
+
 @pytest.mark.parametrize(
     "change,message",
     [
         ("raw_missing_column", "lack hold audit"),
         ("relationship_missing_column", "lack hold provenance"),
         ("raw_missing_row", "escaped raw map gate"),
+        ("raw_duplicate", "escaped raw map gate"),
         ("raw_mapped", "escaped raw map gate"),
         ("raw_missing_reason", "escaped raw map gate"),
         ("raw_wrong_status", "escaped raw map gate"),
@@ -767,6 +803,11 @@ def test_preupload_guard_rejects_held_contributions(change, message):
         tables["authorships"] = tables["authorships"].drop(columns="observation_id")
     elif change == "raw_missing_row":
         tables["profile_publications"] = tables["profile_publications"].iloc[0:0]
+    elif change == "raw_duplicate":
+        tables["profile_publications"] = pandas.concat(
+            [tables["profile_publications"], tables["profile_publications"]],
+            ignore_index=True,
+        )
     elif change == "raw_mapped":
         tables["profile_publications"].at[0, "map_eligible"] = True
     elif change == "raw_missing_reason":
@@ -910,3 +951,39 @@ def test_schumacher_release_preserves_uncertain_name_matches():
     assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
     assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
     assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 259
+
+
+def test_cremonesi_release_is_bound_to_complete_source_review():
+    scholar_id = "wJ_gQLoAAAAJ"
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    held_rows = {item.capture_row_index for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id
+        for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert (
+        profile.person_id == decision.person_id == ("person-matteocremonesi-b2aba740")
+    )
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 1963
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 80
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 1087
+    assert {68, 1430, 1926, 1962, 183, 801} <= held_rows
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert decision.provisional_hold_ids_sha256 == (
+        "2ef585a2854d142f72fa9ee01ed2e7624300305335b6d706a5395ebb58012c60"
+    )
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 796

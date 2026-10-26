@@ -296,32 +296,35 @@ def require_no_provisional_hold_contributions(
         works.columns
     ):
         raise ValueError("Published relationships lack hold provenance columns")
+    held_rows: dict[tuple[str, str], object] = {}
+    duplicate_held_keys: set[tuple[str, str]] = set()
+    for row in raw.itertuples(index=False):
+        key = (row.scholar_id, row.author_pub_id)
+        if key in holds:
+            if key in held_rows:
+                duplicate_held_keys.add(key)
+            else:
+                held_rows[key] = row
+    held_observation_ids: set[str] = set()
     for key in holds:
-        matching = raw.loc[
-            (raw["scholar_id"] == key[0]) & (raw["author_pub_id"] == key[1])
-        ]
+        row = held_rows.get(key)
         if (
-            len(matching) != 1
-            or bool(matching.iloc[0]["map_eligible"])
-            or "attribution_provisional_hold"
-            not in matching.iloc[0]["map_exclusion_reasons"]
-            or matching.iloc[0]["review_attribution_status"] != "held"
+            row is None
+            or key in duplicate_held_keys
+            or bool(row.map_eligible)
+            or "attribution_provisional_hold" not in row.map_exclusion_reasons
+            or row.review_attribution_status != "held"
         ):
             raise ValueError(f"Provisional hold escaped raw map gate: {key}")
-        observation_id = matching.iloc[0]["observation_id"]
-        if (
-            (
-                (authorships["scholar_id"] == key[0])
-                & (authorships["author_pub_id"] == key[1])
-            ).any()
-            or authorships["observation_id"].eq(observation_id).any()
-            or any(
-                bool(work.map_eligible)
-                and (
-                    observation_id in work.observation_ids
-                    or key[1] in work.author_pub_ids
-                )
-                for work in works.itertuples(index=False)
-            )
-        ):
+        held_observation_ids.add(row.observation_id)
+    held_publication_ids = {key[1] for key in holds}
+    for authorship in authorships.itertuples(index=False):
+        key = (authorship.scholar_id, authorship.author_pub_id)
+        if key in holds or authorship.observation_id in held_observation_ids:
             raise ValueError(f"Provisional hold contributed to a map link: {key}")
+    for work in works.itertuples(index=False):
+        if bool(work.map_eligible) and (
+            any(item in held_observation_ids for item in work.observation_ids)
+            or any(item in held_publication_ids for item in work.author_pub_ids)
+        ):
+            raise ValueError("Provisional hold contributed to a map link")
