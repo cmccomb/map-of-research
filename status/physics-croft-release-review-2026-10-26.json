@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "batch": "physics-croft-source-slice",
+  "reviewed_at": "2026-10-26",
+  "person_id": "person-rupertcroft-16669f45",
+  "scholar_id": "wex9ft0AAAAJ",
+  "official_identity_url": "https://www.cmu.edu/physics/people/faculty/croft.html",
+  "scholar_id_source_url": "https://scholars.cmu.edu/4061-rupert-croft",
+  "source_capture_path": "data/captures/physics-rupert-croft-2026-10-24.json",
+  "source_capture_sha256": "15c3ad256181f566d5564a3d68ae8534346d73ed4438c5ae8ec22d6140baa951",
+  "source_cache_path": "data/authors/wex9ft0AAAAJ.json",
+  "source_cache_sha256": "7e23b749691fe7a6b503675d944da22a31fe5aefc233ba36977fab82a5ea0c49",
+  "source_rows": 267,
+  "reviewed_exclusion_count": 12,
+  "reviewed_exclusion_rows": [
+    13,
+    26,
+    49,
+    77,
+    141,
+    154,
+    157,
+    241,
+    243,
+    249,
+    254,
+    263
+  ],
+  "reviewed_exclusion_ids_sha256": "a70ae469d11871d77c6b783d63677d538f566737980ad282050f5d761e1ee753",
+  "provisional_hold_count": 83,
+  "provisional_hold_rows": [
+    15,
+    20,
+    21,
+    51,
+    60,
+    65,
+    76,
+    81,
+    82,
+    89,
+    96,
+    105,
+    120,
+    124,
+    139,
+    159,
+    164,
+    166,
+    167,
+    168,
+    170,
+    171,
+    172,
+    174,
+    180,
+    181,
+    184,
+    185,
+    187,
+    189,
+    190,
+    193,
+    196,
+    197,
+    198,
+    199,
+    209,
+    210,
+    211,
+    212,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    244,
+    246,
+    247,
+    248,
+    250,
+    251,
+    255,
+    256,
+    258,
+    259,
+    260,
+    261,
+    264,
+    265,
+    266,
+    267
+  ],
+  "provisional_hold_ids_sha256": "4505c14599620818933feac1224566b6c10c79f6b7dbcc864d676c10955561cf",
+  "ordinary_gate_rows": 172,
+  "hold_categories": {
+    "meeting_or_presentation": [
+      139,
+      172,
+      190,
+      210,
+      215,
+      225,
+      227,
+      230,
+      231,
+      232,
+      233,
+      237,
+      239,
+      244,
+      248,
+      251,
+      258
+    ],
+    "blank_venue": [
+      124,
+      168,
+      196,
+      217,
+      220,
+      221,
+      229,
+      236,
+      240,
+      250,
+      259,
+      264,
+      265,
+      266,
+      267
+    ],
+    "grant_proposal_or_catalog": [
+      181,
+      197,
+      211,
+      214,
+      218,
+      222,
+      223,
+      224,
+      226,
+      234,
+      235,
+      238
+    ],
+    "software_record": [
+      198
+    ],
+    "metadata_or_output_type": [
+      193,
+      255
+    ],
+    "related_versions": [
+      15,
+      20,
+      21,
+      51,
+      60,
+      65,
+      76,
+      81,
+      82,
+      89,
+      96,
+      105,
+      120,
+      159,
+      164,
+      166,
+      167,
+      170,
+      171,
+      174,
+      180,
+      184,
+      185,
+      187,
+      189,
+      199,
+      209,
+      212,
+      215,
+      216,
+      217,
+      219,
+      220,
+      221,
+      228,
+      229,
+      236,
+      240,
+      246,
+      247,
+      256,
+      260,
+      261,
+      267
+    ]
+  },
+  "version_crosswalk_groups": {
+    "SDSS DR9 journal and incomplete proxy": [
+      15,
+      240
+    ],
+    "SDSS DR10 journal and proxy records": [
+      20,
+      228,
+      229
+    ],
+    "BOSS Ly-alpha power journal and incomplete proxy": [
+      21,
+      236
+    ],
+    "galaxy morphology journal and arXiv version": [
+      51,
+      246
+    ],
+    "inflation and dark-energy arXiv and BAAS white paper": [
+      60,
+      215
+    ],
+    "Omega-M journal and preprint": [
+      65,
+      199
+    ],
+    "IGM 3D map journal and preprint": [
+      76,
+      171
+    ],
+    "PRIYA journal and preprint": [
+      82,
+      212
+    ],
+    "Lyman-alpha one-point journal and preprint": [
+      89,
+      247
+    ],
+    "APM cluster-variance journal and incomplete proxy": [
+      96,
+      267
+    ],
+    "dark-matter LSST white-paper records": [
+      105,
+      219,
+      220
+    ],
+    "dark-energy white-paper arXiv and blank-venue record": [
+      81,
+      217
+    ],
+    "BlueTides host-galaxy journal and blank-venue record": [
+      120,
+      221
+    ],
+    "Ly-alpha cosmology proceedings and arXiv versions": [
+      159,
+      174
+    ],
+    "Hubble-flow broadening preprint and proceedings": [
+      164,
+      185
+    ],
+    "SimAgents preprint and conference paper": [
+      166,
+      187
+    ],
+    "New Probes of Large Scale Structure arXiv:2007.00226 title variants": [
+      167,
+      170
+    ],
+    "Roman WFIRST journal and preprint": [
+      180,
+      216
+    ],
+    "BEST SPIE presentation and proceedings records": [
+      184,
+      256
+    ],
+    "Ly-alpha weak-lensing arXiv:2410.20014 title variants": [
+      189,
+      209
+    ],
+    "mass-power recovery preprint and proceedings": [
+      260,
+      261
+    ]
+  },
+  "specific_unresolved_rows": {
+    "250": "CMS heavy-ion report rendering lacks exact attribution evidence",
+    "264": "CMS forward-detector affiliation unresolved",
+    "265": "generic organization title",
+    "266": "no venue or source-native output"
+  },
+  "primary_arxiv_evidence_url_for_rows_167_170": "https://arxiv.org/abs/2007.00226",
+  "disposition": "All 267 saved rows are accounted for: 12 existing exact reviewed exclusions, 83 source-bound provisional holds, and 172 ordinary-gate candidates. Holds do not assert false attribution or duplicate identity. Raw capture, author cache, and source snapshot remain unchanged."
+}
