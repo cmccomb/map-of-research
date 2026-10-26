@@ -49,6 +49,7 @@ from .chem_carryforward import (
 from .chem_continuity import (
     CHEMISTRY_HUB_REVISION,
     allows_bio_region_refit,
+    allows_mcs_parent_diagnostic_refit,
     load_chemistry_parent,
     merge_chemistry_review_inputs,
     needs_chemistry_continuity,
@@ -2039,6 +2040,11 @@ def publish_snapshot(
             tables,
             chemistry_parent_state,
             allow_region_refit=allows_bio_region_refit(
+                prior_revision=prior_revision,
+                source_sha256=str(manifest["snapshot_sha256"]),
+                layout_reused=layout_reused,
+            ),
+            allow_mcs_parent_diagnostic_refit=allows_mcs_parent_diagnostic_refit(
                 prior_revision=prior_revision,
                 source_sha256=str(manifest["snapshot_sha256"]),
                 layout_reused=layout_reused,
