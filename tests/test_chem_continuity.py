@@ -323,6 +323,103 @@ def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
         assert not continuity.allows_mcs_parent_diagnostic_refit(**(kwargs | changed))
 
 
+def test_physics_five_region_refit_requires_exact_parent_source_and_layout() -> None:
+    kwargs = {
+        "prior_revision": continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        "source_sha256": continuity.BIO_REGION_REFIT_SOURCE_SHA256,
+        "layout_reused": False,
+    }
+    assert continuity.allows_physics_five_region_refit(**kwargs)
+    for changed in (
+        {"prior_revision": continuity.BIO_REGION_REFIT_PARENT},
+        {"prior_revision": continuity.MCS_PUBLISHED_PARENT},
+        {"prior_revision": "0" * 40},
+        {"source_sha256": "0" * 64},
+        {"layout_reused": True},
+    ):
+        assert not continuity.allows_physics_five_region_refit(**(kwargs | changed))
+    assert continuity.allows_bio_region_refit(
+        **(kwargs | {"prior_revision": continuity.BIO_REGION_REFIT_PARENT})
+    )
+    assert continuity.allows_mcs_parent_diagnostic_refit(
+        **(kwargs | {"prior_revision": continuity.MCS_PUBLISHED_PARENT})
+    )
+
+
+def test_physics_five_region_refit_keeps_other_reviewed_fields_exact(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    _mcs_published_parent(parent)
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision=continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+    )
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    documented_id = (
+        "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
+    )
+    prior_id = "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
+    assert {documented_id, prior_id} <= set(state["parent_rows"]["points"])
+    for work_id, field in (
+        (documented_id, "map_region_documented_override"),
+        (prior_id, "map_region_prior_eligible_override"),
+    ):
+        candidate = copy.deepcopy(tables)
+        mask = candidate["works"]["work_id"].eq(work_id)
+        assert candidate["works"].loc[mask, field].item() is True
+        candidate["works"].loc[mask, field] = False
+        with pytest.raises(
+            ValueError, match=rf"candidate works changed: {work_id}: {field}"
+        ):
+            validate_chemistry_candidate(candidate, state)
+        validate_chemistry_candidate(candidate, state, allow_region_refit=True)
+
+    candidate = copy.deepcopy(tables)
+    for work_id, field in (
+        (documented_id, "map_region_documented_override"),
+        (prior_id, "map_region_prior_eligible_override"),
+    ):
+        candidate["works"].loc[candidate["works"]["work_id"].eq(work_id), field] = False
+    validate_chemistry_candidate(candidate, state, allow_region_refit=True)
+    hidden_id = next(
+        work_id
+        for work_id in state["parent_rows"]["works"]
+        if work_id not in state["parent_rows"]["points"]
+    )
+    for work_id, field, value in (
+        (hidden_id, "map_region_documented_override", True),
+        (prior_id, "map_region_prior_excluded_override", True),
+        (prior_id, "map_eligible", False),
+        (prior_id, "collaboration_eligible", False),
+        (prior_id, "title", "changed"),
+        (prior_id, "map_region_prior_eligible_override", "false"),
+    ):
+        invalid = copy.deepcopy(candidate)
+        if field == "map_region_prior_eligible_override" and value == "false":
+            invalid["works"][field] = invalid["works"][field].astype(object)
+        invalid["works"].loc[invalid["works"]["work_id"].eq(work_id), field] = value
+        with pytest.raises(ValueError, match="candidate works changed"):
+            validate_chemistry_candidate(invalid, state, allow_region_refit=True)
+    for table, field in (
+        ("profile_publications", "review_evidence_url"),
+        ("authorships", "person_id"),
+        ("people", "display_name"),
+    ):
+        invalid = copy.deepcopy(candidate)
+        invalid[table].loc[0, field] = "changed"
+        with pytest.raises(ValueError, match=rf"candidate {table} changed"):
+            validate_chemistry_candidate(invalid, state, allow_region_refit=True)
+
+
 def test_mcs_candidate_refit_allows_only_three_exact_visible_diagnostic_losses(
     tmp_path: Path,
 ) -> None:

@@ -143,6 +143,18 @@ def allows_bio_region_refit(
     )
 
 
+def allows_physics_five_region_refit(
+    *, prior_revision: str, source_sha256: str, layout_reused: bool
+) -> bool:
+    """Allow derived region diagnostics after the exact published Physics five."""
+
+    return (
+        not layout_reused
+        and prior_revision == PHYSICS_FIVE_PUBLISHED_PARENT
+        and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
+    )
+
+
 def allows_mcs_parent_diagnostic_refit(
     *, prior_revision: str, source_sha256: str, layout_reused: bool
 ) -> bool:
@@ -616,8 +628,9 @@ def validate_chemistry_candidate(
     """Reject changes to reviewed Chemistry source and visibility decisions.
 
     A full layout refit may change two derived region diagnostics for parent-
-    visible reviewed works across platforms. The caller pins the Bio parent
-    and source. From the published MCS parent, only two exact prior-eligible
+    visible reviewed works across platforms. The caller pins the Bio or
+    Physics-five parent, unchanged source, and fresh layout. From the
+    published MCS parent, only two exact prior-eligible
     diagnostics and one exact documented-region diagnostic may change from true
     to false. Source, visibility, attribution, and authorship stay exact.
     """
