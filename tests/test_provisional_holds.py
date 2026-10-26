@@ -910,3 +910,39 @@ def test_schumacher_release_preserves_uncertain_name_matches():
     assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
     assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
     assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 259
+
+
+def test_cremonesi_release_is_bound_to_complete_source_review():
+    scholar_id = "wJ_gQLoAAAAJ"
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    held_rows = {item.capture_row_index for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id
+        for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert (
+        profile.person_id == decision.person_id == ("person-matteocremonesi-b2aba740")
+    )
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 1963
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 80
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 1087
+    assert {68, 1430, 1926, 1962, 183, 801} <= held_rows
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert decision.provisional_hold_ids_sha256 == (
+        "2ef585a2854d142f72fa9ee01ed2e7624300305335b6d706a5395ebb58012c60"
+    )
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 796
