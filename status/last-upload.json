@@ -1,4 +1,52 @@
 {
+  "atomic_release_intent": {
+    "artifact_revision": null,
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 60271200744a45b0b35f74ca9aa389e0",
+    "commit_nonce": "60271200744a45b0b35f74ca9aa389e0",
+    "committed_files": [
+      "README.md",
+      "authorships/train-00000-of-00001.parquet",
+      "maps/manifest.json",
+      "maps/publications.json",
+      "people/train-00000-of-00001.parquet",
+      "profile_publications/train-00000-of-00001.parquet",
+      "works/train-00000-of-00001.parquet"
+    ],
+    "intent_status": "before_write",
+    "mode": "single_parent_commit",
+    "parent_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+    "prewrite_gate": {
+      "gate": "full-source-and-region-continuity-v1",
+      "map_points": 42916,
+      "prior_revision": "211cdbcde850867ef9b5a81f7001f3b5b27425cc",
+      "raw_rows": 58764,
+      "source_snapshot_sha256": "d1ab914ec3fe57e30361fa6b01f30787b985e554e058faa01b32c6496e869ac6",
+      "status": "pass"
+    },
+    "release_context": {
+      "producer_commit": "6aefdf47b39f07f78ab920bc84761f0eabb8255e",
+      "snapshot_commit": "8477a325c7017a7910e603a4031d34b4e1c526a5",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40249335108"
+    },
+    "sha256_by_path": {
+      "README.md": "34b8b9de05dadb698f755f8fa0c45987a17c15c09754f2f897105c62e6ad596d",
+      "authorships/train-00000-of-00001.parquet": "9d7d081ac0d2c86e8735ce6762a7b1d89ca0f51873fb093dddd63079fdf90e5b",
+      "maps/manifest.json": "257641d365b6e789f4e9af1658f104296950daa6fd2bd99f3911ba51dfe4dbca",
+      "maps/publications.json": "2766a8c0c0a61ecaa29155813b5584b5ca154d067433c9d569d2c375f6830586",
+      "people/train-00000-of-00001.parquet": "834e5cfbe0158ef1b63e3f6d5ca9b7a14f4971033726fcc6584b228289ac18e0",
+      "profile_publications/train-00000-of-00001.parquet": "76d71538783d041f03920ff99b1e05e14221b0547fc23a715c628a12a198f65e",
+      "works/train-00000-of-00001.parquet": "5566c76c659297dd295f6d3eaa15689e493c82ea1c28c51fcb7c4cc174f539c8"
+    },
+    "size_by_path": {
+      "README.md": 10439,
+      "authorships/train-00000-of-00001.parquet": 15548517,
+      "maps/manifest.json": 3193,
+      "maps/publications.json": 38696483,
+      "people/train-00000-of-00001.parquet": 661776,
+      "profile_publications/train-00000-of-00001.parquet": 186431978,
+      "works/train-00000-of-00001.parquet": 191492454
+    }
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,9 +54,9 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "McManus poster approval requires the frozen Bio source",
-  "error_type": "ValueError",
-  "finished_at_utc": "2026-10-26T00:25:02.244973+00:00",
+  "error_message": "Inspect the atomic release intent before retrying",
+  "error_type": "AtomicWriteOutcomeUnknown",
+  "finished_at_utc": null,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -25,7 +73,7 @@
     "reconciled_prior_ids": 16
   },
   "snapshot_commit": "8477a325c7017a7910e603a4031d34b4e1c526a5",
-  "started_at_utc": "2026-10-26T00:24:53.441121+00:00",
+  "started_at_utc": "2026-10-26T00:28:11.196548+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40249048008"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/40249335108"
 }
