@@ -68,3 +68,21 @@ def test_schumacher_review_accounts_for_every_saved_row():
         "status/physics-schumacher-release-review-2026-10-26.json"
     )
     assert status["release_state"] == "held"
+    paired_status = json.loads(
+        (
+            root / "status/physics-cremonesi-schumacher-source-2026-10-24.json"
+        ).read_text()
+    )
+    decision = paired_status["paired_profile_release_ready"][ledger["scholar_id"]]
+    assert paired_status["map_quality_hold"] is True
+    assert "wJ_gQLoAAAAJ" not in paired_status["paired_profile_release_ready"]
+    assert decision["map_quality_hold"] is False
+    assert decision["producer_review_ready"] is True
+    assert decision["unresolved_exact_ids"] == []
+    assert decision["reviewed_exclusion_count"] == len(excluded)
+    assert decision["provisional_hold_count"] == len(held)
+    assert decision["review_ledger_path"] == profile["paired_release_review_path"]
+    assert (
+        _sha256(root / decision["review_ledger_path"])
+        == decision["review_ledger_sha256"]
+    )
