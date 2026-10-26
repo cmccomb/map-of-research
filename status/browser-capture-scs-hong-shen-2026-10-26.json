@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-hongshen-53070c90",
+  "display_name": "Hong Shen",
+  "scholar_profile_name": "Hong Shen",
+  "scholar_id": "iwytZ2wAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/hong-shen",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/hong-shen",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:46:43.732613+00:00",
+  "publication_count": 76,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-hong-shen-2026-10-26.json",
+  "source_json_sha256": "74df5c51360124993c5b6eb149f15f02cb7686b941ffe781979f31cb9d6910e7",
+  "source_html_path": "data/captures/scs-hong-shen-2026-10-26.html",
+  "source_html_sha256": "0f6ded0e2a0e09bb5aece450a2df33bb71ceb0346f1f900778e0ebfb079c4f5d",
+  "cache_path": "data/authors/iwytZ2wAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

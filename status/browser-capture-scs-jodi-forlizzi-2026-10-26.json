@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-jodiforlizzi-72f1ea3c",
+  "display_name": "Jodi Forlizzi",
+  "scholar_profile_name": "Jodi Forlizzi",
+  "scholar_id": "Hyhp_zUAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/jodi-forlizzi",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/jodi-forlizzi",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:48:22.197596+00:00",
+  "publication_count": 390,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 3,
+  "source_json_path": "data/captures/scs-jodi-forlizzi-2026-10-26.json",
+  "source_json_sha256": "952440dd2697c46963a5134af8663d6ebe6a5cb77408bbe5cbf0e8ef2cea5e8a",
+  "source_html_path": "data/captures/scs-jodi-forlizzi-2026-10-26.html",
+  "source_html_sha256": "b18ba95c6c690fd522fdb39673dd9dc1e87c9bb4e6bb2a2c3cecbca3978c9799",
+  "cache_path": "data/authors/Hyhp_zUAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

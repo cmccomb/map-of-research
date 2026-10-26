@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-chrisharrison-c841e8a4",
+  "display_name": "Chris Harrison",
+  "scholar_profile_name": "Chris Harrison",
+  "scholar_id": "36HRdqMAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/chris-harrison",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/chris-harrison",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:43:19.653187+00:00",
+  "publication_count": 270,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/scs-chris-harrison-2026-10-26.json",
+  "source_json_sha256": "e44938128a5a37944076b914178bca1f2b48a96fed4e1aaccf17300516d0305d",
+  "source_html_path": "data/captures/scs-chris-harrison-2026-10-26.html",
+  "source_html_sha256": "ec4889822379218336f2d64dfc73e5f3698fa50affb33bd2f4a511828abbd439",
+  "cache_path": "data/authors/36HRdqMAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

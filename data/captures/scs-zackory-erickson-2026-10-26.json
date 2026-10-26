@@ -1,0 +1,923 @@
+{
+  "captured_at": "2026-10-26T20:36:27.159818+00:00",
+  "url": "https://scholar.google.com/citations?user=wElkTtIAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪Zackory Erickson‬ - ‪Google Scholar‬",
+  "scholar_user_id": "wElkTtIAAAAJ",
+  "person_name": "Zackory Erickson",
+  "displayed_count": 101,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 1,
+  "works": [
+    {
+      "index": 1,
+      "title": "Robogen: Towards unleashing infinite data for automated robot learning via generative simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:hFOr9nPyWt4C",
+      "authors": "Y Wang, Z Xian, F Chen, TH Wang, Y Wang, K Fragkiadaki, Z Erickson, ...",
+      "venue": "arXiv preprint arXiv:2311.01455, 2023",
+      "citation_count": "337",
+      "year": "2023"
+    },
+    {
+      "index": 2,
+      "title": "Rl-vlm-f: Reinforcement learning from vision language foundation model feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:e5wmG9Sq2KIC",
+      "authors": "Y Wang, Z Sun, J Zhang, Z Xian, E Biyik, D Held, Z Erickson",
+      "venue": "arXiv preprint arXiv:2402.03681, 2024",
+      "citation_count": "247",
+      "year": "2024"
+    },
+    {
+      "index": 3,
+      "title": "Active Robot-Assisted Feeding with a General-Purpose Mobile Manipulator: Design, Evaluation, and Lessons Learned",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:5nxA0vEk-isC",
+      "authors": "D Park, Y Hoshi, HP Mahajan, HK Kima, Z Erickson, WA Rogers, ...",
+      "venue": "Robotics and Autonomous Systems, 2019",
+      "citation_count": "200",
+      "year": "2019"
+    },
+    {
+      "index": 4,
+      "title": "Assistive gym: A physics simulation framework for assistive robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:LkGwnXOMwfcC",
+      "authors": "Z Erickson, V Gangaram, A Kapusta, CK Liu, CC Kemp",
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA), 2020",
+      "citation_count": "183",
+      "year": "2020"
+    },
+    {
+      "index": 5,
+      "title": "Multimodal execution monitoring for anomaly detection during robot manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:d1gkVwhDpl0C",
+      "authors": "D Park, Z Erickson, T Bhattacharjee, CC Kemp",
+      "venue": "2016 IEEE International Conference on Robotics and Automation (ICRA), 407-414, 2016",
+      "citation_count": "148",
+      "year": "2016"
+    },
+    {
+      "index": 6,
+      "title": "Deep haptic model predictive control for robot-assisted dressing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:zYLM7Y9cAGgC",
+      "authors": "Z Erickson, HM Clever, G Turk, CK Liu, CC Kemp",
+      "venue": "2018 IEEE international conference on robotics and automation (ICRA), 4437-4444, 2018",
+      "citation_count": "142",
+      "year": "2018"
+    },
+    {
+      "index": 7,
+      "title": "Bodies at rest: 3d human pose and shape estimation from a pressure image using synthetic data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:0EnyYjriUFMC",
+      "authors": "HM Clever, Z Erickson, A Kapusta, G Turk, K Liu, CC Kemp",
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern …, 2020",
+      "citation_count": "113",
+      "year": "2020"
+    },
+    {
+      "index": 8,
+      "title": "Toolflownet: Robotic manipulation with tools via predicting tool flow from point clouds",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:QIV2ME_5wuYC",
+      "authors": "D Seita, Y Wang, SJ Shetty, EY Li, Z Erickson, D Held",
+      "venue": "Conference on Robot Learning, 1038-1049, 2023",
+      "citation_count": "108",
+      "year": "2023"
+    },
+    {
+      "index": 9,
+      "title": "A multimodal execution monitor with anomaly classification for robot-assisted feeding",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "D Park, H Kim, Y Hoshi, Z Erickson, A Kapusta, CC Kemp",
+      "venue": "2017 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2017",
+      "citation_count": "101",
+      "year": "2017"
+    },
+    {
+      "index": 10,
+      "title": "Causal confusion and reward misidentification in preference-based reward learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:IWHjjKOFINEC",
+      "authors": "J Tien, JZY He, Z Erickson, AD Dragan, DS Brown",
+      "venue": "arXiv preprint arXiv:2204.06601, 2022",
+      "citation_count": "98",
+      "year": "2022"
+    },
+    {
+      "index": 11,
+      "title": "Learning to collaborate from simulation for robot-assisted dressing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:UebtZRa9Y70C",
+      "authors": "A Clegg, Z Erickson, P Grady, G Turk, CC Kemp, CK Liu",
+      "venue": "IEEE Robotics and Automation Letters 5 (2), 2746-2753, 2020",
+      "citation_count": "88",
+      "year": "2020"
+    },
+    {
+      "index": 12,
+      "title": "Unfolding the literature: A review of robotic cloth manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:isC4tDSrTZIC",
+      "authors": "A Longhini, Y Wang, I Garcia-Camacho, D Blanco-Mulero, M Moletta, ...",
+      "venue": "Annual Review of Control, Robotics, and Autonomous Systems 8 (1), 295-322, 2025",
+      "citation_count": "87",
+      "year": "2025"
+    },
+    {
+      "index": 13,
+      "title": "Voicepilot: Harnessing llms as speech interfaces for physically assistive robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:iH-uZ7U-co4C",
+      "authors": "A Padmanabha, J Yuan, J Gupta, Z Karachiwalla, C Majidi, H Admoni, ...",
+      "venue": "Proceedings of the 37th Annual ACM Symposium on User Interface Software and …, 2024",
+      "citation_count": "87",
+      "year": "2024"
+    },
+    {
+      "index": 14,
+      "title": "Personalized collaborative plans for robot-assisted dressing via optimization and simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:_FxGoFyzp5QC",
+      "authors": "A Kapusta, Z Erickson, HM Clever, W Yu, CK Liu, G Turk, CC Kemp",
+      "venue": "Autonomous Robots 43 (8), 2183-2207, 2019",
+      "citation_count": "84",
+      "year": "2019"
+    },
+    {
+      "index": 15,
+      "title": "3d human pose estimation on a configurable bed from a pressure image",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:YsMSGLbcyi4C",
+      "authors": "HM Clever, A Kapusta, D Park, Z Erickson, Y Chitalia, CC Kemp",
+      "venue": "2018 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2018",
+      "citation_count": "73",
+      "year": "2018"
+    },
+    {
+      "index": 16,
+      "title": "Multimodal material classification for robots using spectroscopy and high resolution texture imaging",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:hqOjcs7Dif8C",
+      "authors": "Z Erickson, E Xing, B Srirangam, S Chernova, CC Kemp",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "67",
+      "year": "2020"
+    },
+    {
+      "index": 17,
+      "title": "Tracking human pose during robot-assisted dressing using single-axis capacitive proximity sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:IjCSPb-OGe4C",
+      "authors": "Z Erickson, M Collier, A Kapusta, CC Kemp",
+      "venue": "IEEE Robotics and Automation Letters 3 (3), 2245-2252, 2018",
+      "citation_count": "65",
+      "year": "2018"
+    },
+    {
+      "index": 18,
+      "title": "Classification of household materials via spectroscopy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:W7OEmFMy1HYC",
+      "authors": "Z Erickson, N Luskey, S Chernova, CC Kemp",
+      "venue": "IEEE Robotics and Automation Letters 4 (2), 700-707, 2019",
+      "citation_count": "61",
+      "year": "2019"
+    },
+    {
+      "index": 19,
+      "title": "Multidimensional capacitive sensing for robot-assisted dressing and bathing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:WF5omc3nYNoC",
+      "authors": "Z Erickson, HM Clever, V Gangaram, G Turk, CK Liu, CC Kemp",
+      "venue": "2019 IEEE 16th International Conference on Rehabilitation Robotics (ICORR …, 2019",
+      "citation_count": "60",
+      "year": "2019"
+    },
+    {
+      "index": 20,
+      "title": "One policy to dress them all: Learning to dress people with diverse poses and garments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:hC7cP41nSMkC",
+      "authors": "Y Wang, Z Sun, Z Erickson, D Held",
+      "venue": "arXiv preprint arXiv:2306.12372, 2023",
+      "citation_count": "53",
+      "year": "2023"
+    },
+    {
+      "index": 21,
+      "title": "Semi-supervised haptic material recognition for robots using generative adversarial networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:eQOLeE2rZwMC",
+      "authors": "Z Erickson, S Chernova, CC Kemp",
+      "venue": "1st Annual Conference on Robot Learning (CoRL), 2017",
+      "citation_count": "49",
+      "year": "2017"
+    },
+    {
+      "index": 22,
+      "title": "What does the person feel? learning to infer applied forces during robot-assisted dressing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:qjMakFHDy7sC",
+      "authors": "Z Erickson, A Clegg, W Yu, G Turk, CK Liu, CC Kemp",
+      "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA), 6058-6065, 2017",
+      "citation_count": "48",
+      "year": "2017"
+    },
+    {
+      "index": 23,
+      "title": "RaC: Robot Learning for Long-Horizon Tasks by Scaling Recovery and Correction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:vV6vV6tmYwMC",
+      "authors": "Z Hu, R Wu, N Enock, J Li, R Kadakia, Z Erickson, A Kumar",
+      "venue": "IEEE Transactions on Robotics, 2026",
+      "citation_count": "47",
+      "year": "2026"
+    },
+    {
+      "index": 24,
+      "title": "Learning representations that enable generalization in assistive tasks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:9ZlFYXVOiuMC",
+      "authors": "JZY He, Z Erickson, DS Brown, A Raghunathan, A Dragan",
+      "venue": "Conference on Robot Learning, 2105-2114, 2023",
+      "citation_count": "47",
+      "year": "2023"
+    },
+    {
+      "index": 25,
+      "title": "Towards assistive feeding with a general-purpose mobile manipulator",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:9yKSN-GCB0IC",
+      "authors": "D Park, YK Kim, ZM Erickson, CC Kemp",
+      "venue": "arXiv preprint arXiv:1605.07996, 2016",
+      "citation_count": "47",
+      "year": "2016"
+    },
+    {
+      "index": 26,
+      "title": "Edo-net: Learning elastic properties of deformable objects from graph dynamics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:mVmsd5A6BfQC",
+      "authors": "A Longhini, M Moletta, A Reichlin, MC Welle, D Held, Z Erickson, D Kragic",
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA), 3875-3881, 2023",
+      "citation_count": "43",
+      "year": "2023"
+    },
+    {
+      "index": 27,
+      "title": "Emgbench: Benchmarking out-of-distribution generalization and adaptation for electromyography",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:JV2RwH3_ST0C",
+      "authors": "J Yang, M Soh, V Lieu, DJ Weber, Z Erickson",
+      "venue": "Advances in Neural Information Processing Systems 37, 50313-50342, 2024",
+      "citation_count": "42",
+      "year": "2024"
+    },
+    {
+      "index": 28,
+      "title": "Independence in the home: A wearable interface for a person with quadriplegia to teleoperate a mobile manipulator",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:R3hNpaxXUhUC",
+      "authors": "A Padmanabha, J Gupta, C Chen, J Yang, V Nguyen, DJ Weber, C Majidi, ...",
+      "venue": "Proceedings of the 2024 ACM/IEEE International Conference on Human-Robot …, 2024",
+      "citation_count": "41",
+      "year": "2024"
+    },
+    {
+      "index": 29,
+      "title": "Learning to navigate cloth using haptics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:2osOgNQ5qMEC",
+      "authors": "A Clegg, W Yu, Z Erickson, J Tan, CK Liu, G Turk",
+      "venue": "2017 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2017",
+      "citation_count": "37",
+      "year": "2017"
+    },
+    {
+      "index": 30,
+      "title": "Force-constrained visual policy: Safe robot-assisted dressing via multi-modal sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:mB3voiENLucC",
+      "authors": "Z Sun, Y Wang, D Held, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 9 (5), 4178-4185, 2024",
+      "citation_count": "35",
+      "year": "2024"
+    },
+    {
+      "index": 31,
+      "title": "High-density electromyography for effective gesture-based control of physically assistive mobile manipulators",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:TQgYirikUcIC",
+      "authors": "J Yang, K Shibata, D Weber, Z Erickson",
+      "venue": "npj Robotics 3 (1), 2, 2025",
+      "citation_count": "33",
+      "year": "2025"
+    },
+    {
+      "index": 32,
+      "title": "Autonomous Tool Construction Using Part Shape and Attachment Prediction.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ufrVoPGSRksC",
+      "authors": "L Nair, NS Srikanth, Z Erickson, S Chernova",
+      "venue": "Robotics: Science and Systems 2, 2019",
+      "citation_count": "32",
+      "year": "2019"
+    },
+    {
+      "index": 33,
+      "title": "Visual haptic reasoning: Estimating contact forces by observing deformable object interactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:4DMP91E08xMC",
+      "authors": "Y Wang, D Held, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 7 (4), 11426-11433, 2022",
+      "citation_count": "31",
+      "year": "2022"
+    },
+    {
+      "index": 34,
+      "title": "Difftori: Differentiable trajectory optimization for deep reinforcement and imitation learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:_Qo2XoVZTnwC",
+      "authors": "W Wan, Z Wang, Y Wang, Z Erickson, D Held",
+      "venue": "Advances in Neural Information Processing Systems 37, 109430-109459, 2024",
+      "citation_count": "29",
+      "year": "2024"
+    },
+    {
+      "index": 35,
+      "title": "Bodies uncovered: Learning to manipulate real blankets around people via physics simulations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ULOm3_A8WrAC",
+      "authors": "K Puthuveetil, CC Kemp, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 7 (2), 1984-1991, 2022",
+      "citation_count": "28",
+      "year": "2022"
+    },
+    {
+      "index": 36,
+      "title": "Real-world offline reinforcement learning from vision language model feedback",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:blknAaTinKkC",
+      "authors": "S Venkataraman, Y Wang, Z Wang, NS Ravie, Z Erickson, D Held",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "25",
+      "year": "2025"
+    },
+    {
+      "index": 37,
+      "title": "Hat: Head-worn assistive teleoperation of mobile manipulators",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:dhFuZR0502QC",
+      "authors": "A Padmanabha, Q Wang, D Han, J Diyora, K Kacker, H Khalid, LJ Chen, ...",
+      "venue": "arXiv preprint arXiv:2209.13097, 2022",
+      "citation_count": "24",
+      "year": "2022"
+    },
+    {
+      "index": 38,
+      "title": "Articubot: Learning universal articulated object manipulation policy via large scale simulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:GnPB-g6toBAC",
+      "authors": "Y Wang, Z Wang, M Nakura, P Bhowal, CL Kuo, YT Chen, Z Erickson, ...",
+      "venue": "arXiv preprint arXiv:2503.03045, 2025",
+      "citation_count": "23",
+      "year": "2025"
+    },
+    {
+      "index": 39,
+      "title": "Adafold: Adapting folding trajectories of cloths via feedback-loop manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:j3f4tGmQtD8C",
+      "authors": "A Longhini, MC Welle, Z Erickson, D Kragic",
+      "venue": "IEEE Robotics and Automation Letters 9 (11), 9183-9190, 2024",
+      "citation_count": "22",
+      "year": "2024"
+    },
+    {
+      "index": 40,
+      "title": "A study of causal confusion in preference-based reward learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:qxL8FJ1GzNcC",
+      "authors": "J Tien, JZY He, Z Erickson, A Dragan, DS Brown",
+      "venue": "ICML 2022: Workshop on Spurious Correlations, Invariance and Stability, 2022",
+      "citation_count": "20",
+      "year": "2022"
+    },
+    {
+      "index": 41,
+      "title": "Dexterous manipulation policies from rgb human videos via 3d hand-object trajectory reconstruction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:rO6llkc54NcC",
+      "authors": "H Chen, T Dong, T Wu, L Wang, Y Jangir, Y Niu, Y Ye, H Bharadhwaj, ...",
+      "venue": "arXiv preprint arXiv:2602.09013, 2026",
+      "citation_count": "18",
+      "year": "2026"
+    },
+    {
+      "index": 42,
+      "title": "Bodymap-jointly predicting body mesh and 3d applied pressure map for people in bed",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:r0BpntZqJG4C",
+      "authors": "A Tandon, A Goyal, HM Clever, Z Erickson",
+      "venue": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2024",
+      "citation_count": "16",
+      "year": "2024"
+    },
+    {
+      "index": 43,
+      "title": "Characterizing multidimensional capacitive servoing for physical human–robot interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:kNdYIx-mwKoC",
+      "authors": "Z Erickson, HM Clever, V Gangaram, E Xing, G Turk, CK Liu, CC Kemp",
+      "venue": "IEEE Transactions on Robotics 39 (1), 357-372, 2022",
+      "citation_count": "16",
+      "year": "2022"
+    },
+    {
+      "index": 44,
+      "title": "Assistive vr gym: Interactions with real people to improve virtual assistive robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:3fE2CSJIrl8C",
+      "authors": "Z Erickson, Y Gu, CC Kemp",
+      "venue": "2020 29th IEEE International Conference on Robot and Human Interactive …, 2020",
+      "citation_count": "16",
+      "year": "2020"
+    },
+    {
+      "index": 45,
+      "title": "Slurp! spectroscopy of liquids using robot pre-touch sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:7PzlFSSx8tAC",
+      "authors": "N Hanson, W Lewis, K Puthuveetil, D Furline, A Padmanabha, T Padir, ...",
+      "venue": "2023 IEEE International Conference on Robotics and Automation (ICRA), 3786-3792, 2023",
+      "citation_count": "15",
+      "year": "2023"
+    },
+    {
+      "index": 46,
+      "title": "Lams: Llm-driven automatic mode switching for assistive teleoperation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:NMxIlDl6LWMC",
+      "authors": "Y Tao, J Yang, D Ding, Z Erickson",
+      "venue": "2025 20th ACM/IEEE International Conference on Human-Robot Interaction (HRI …, 2025",
+      "citation_count": "14",
+      "year": "2025"
+    },
+    {
+      "index": 47,
+      "title": "A Multimodal Sensing Ring for Quantification of Scratch Intensity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ZeXyd9-uunAC",
+      "authors": "A Padmanabha, S Choudhary, C Majidi, Z Erickson",
+      "venue": "Nature Communications Medicine, 2023",
+      "citation_count": "14",
+      "year": "2023"
+    },
+    {
+      "index": 48,
+      "title": "Elastic context: Encoding elasticity for data-driven models of textiles",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:Wp0gIr-vW9MC",
+      "authors": "A Longhini, M Moletta, A Reichlin, MC Welle, A Kravberg, Y Wang, D Held, ...",
+      "venue": "arXiv preprint arXiv:2209.05428, 2022",
+      "citation_count": "14",
+      "year": "2022"
+    },
+    {
+      "index": 49,
+      "title": "Do mistakes matter? Comparing trust responses of different age groups to errors made by physically assistive robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:k_IJM867U9cC",
+      "authors": "S Wald, K Puthuveetil, Z Erickson",
+      "venue": "2024 33rd IEEE International Conference on Robot and Human Interactive …, 2024",
+      "citation_count": "13",
+      "year": "2024"
+    },
+    {
+      "index": 50,
+      "title": "Web2grasp: Learning functional grasps from web images of hand-object interactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:RGFaLdJalmkC",
+      "authors": "H Chen, Y Yao, Y Ye, Z Xu, H Bharadhwaj, J Wang, A Jakobsson, R Zhao, ...",
+      "venue": "arXiv preprint arXiv:2505.05517, 2025",
+      "citation_count": "12",
+      "year": "2025"
+    },
+    {
+      "index": 51,
+      "title": "Towards an llm-based speech interface for robot-assisted feeding",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:M3NEmzRMIkIC",
+      "authors": "J Yuan, J Gupta, A Padmanabha, Z Karachiwalla, C Majidi, H Admoni, ...",
+      "venue": "Adjunct Proceedings of the 37th Annual ACM Symposium on User Interface …, 2024",
+      "citation_count": "11",
+      "year": "2024"
+    },
+    {
+      "index": 52,
+      "title": "Characterization of a meso-scale wearable robot for bathing assistance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:M3ejUd6NZC8C",
+      "authors": "F Liu, V Patil, Z Erickson, Z Temel",
+      "venue": "2022 IEEE International Conference on Robotics and Biomimetics (ROBIO), 2146 …, 2022",
+      "citation_count": "10",
+      "year": "2022"
+    },
+    {
+      "index": 53,
+      "title": "Incremental learning for robot shared autonomy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:maZDTaKrznsC",
+      "authors": "Y Tao, G Qiao, D Ding, Z Erickson",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "9",
+      "year": "2025"
+    },
+    {
+      "index": 54,
+      "title": "DiSRT-In-Bed: Diffusion-based sim-to-real transfer framework for in-bed human mesh recovery",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:O3NaXMp0MMsC",
+      "authors": "J Gao, C Zheng, LA Jeni, Z Erickson",
+      "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2025",
+      "citation_count": "9",
+      "year": "2025"
+    },
+    {
+      "index": 55,
+      "title": "CoRI: Communication of Robot Intent for Physical Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ldfaerwXgEUC",
+      "authors": "J Wang, EB Küçüktabak, RS Zarrin, Z Erickson",
+      "venue": "arXiv preprint arXiv:2505.20537, 2025",
+      "citation_count": "7",
+      "year": "2025"
+    },
+    {
+      "index": 56,
+      "title": "CapSense: A real-time capacitive sensor simulation framework for physical human-robot interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:aqlVkmm33-oC",
+      "authors": "C Schöffmann, Z Erickson, H Zangl",
+      "venue": "IEEE Robotics and Automation Letters 7 (4), 9929-9936, 2022",
+      "citation_count": "7",
+      "year": "2022"
+    },
+    {
+      "index": 57,
+      "title": "Robocap: Robotic classification and precision pouring of diverse liquids and granular media with capacitive sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:TFP_iSt0sucC",
+      "authors": "Y Hu, A Gillespie, A Padmanabha, K Puthuveetil, W Lewis, K Khokar, ...",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "6",
+      "year": "2025"
+    },
+    {
+      "index": 58,
+      "title": "Quantifying assistive robustness via the natural-adversarial frontier",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:-f6ydRqryjwC",
+      "authors": "JZY He, DS Brown, Z Erickson, A Dragan",
+      "venue": "Conference on Robot Learning, 1865-1886, 2023",
+      "citation_count": "6",
+      "year": "2023"
+    },
+    {
+      "index": 59,
+      "title": "Robust body exposure (robe): A graph-based dynamics modeling approach to manipulating blankets over people",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:qUcmZB5y_30C",
+      "authors": "K Puthuveetil, S Wald, A Pusalkar, P Karnati, Z Erickson",
+      "venue": "IEEE Robotics and Automation Letters 8 (10), 6299-6306, 2023",
+      "citation_count": "6",
+      "year": "2023"
+    },
+    {
+      "index": 60,
+      "title": "AI in geriatric psychiatry: precision meets human experience",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:zA6iFVUQeVQC",
+      "authors": "A Mizuno, Z Erickson, DE Jimenez, HJ Aizenstein",
+      "venue": "Neuropsychopharmacology, 1-10, 2026",
+      "citation_count": "5",
+      "year": "2026"
+    },
+    {
+      "index": 61,
+      "title": "SkinGrip: An adaptive soft robotic manipulator with capacitive sensing for whole-limb bed bathing assistance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:bEWYMUwI8FkC",
+      "authors": "F Liu, K Puthuveetil, A Padmanabha, K Khokar, Z Temel, Z Erickson",
+      "venue": "2025 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2025",
+      "citation_count": "5",
+      "year": "2025"
+    },
+    {
+      "index": 62,
+      "title": "Geometric red-teaming for robotic manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:35N4QoGY0k4C",
+      "authors": "D Goel, Y Wang, T Wu, G Qiao, P Piliptchak, D Held, Z Erickson",
+      "venue": "Conference on Robot Learning, 41-67, 2025",
+      "citation_count": "5",
+      "year": "2025"
+    },
+    {
+      "index": 63,
+      "title": "SAPS: Shared Autonomy for Policy Steering by Blending Teleoperation with a Pretrained VLA",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:cFHS6HbyZ2cC",
+      "authors": "C Zhou, J Yang, DJ Weber, Z Erickson",
+      "venue": "arXiv preprint arXiv:2606.15568, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 64,
+      "title": "In Vivo Skin 3‐D Surface Reconstruction and Wrinkle Depth Estimation Using Handheld High Resolution Tactile Sensing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:70eg2SAEIzsC",
+      "authors": "A Padmanabha, A Agarwal, C Li, A Williams, DK Patel, S Chopkar, ...",
+      "venue": "Advanced Healthcare Materials 15 (11), e04402, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 65,
+      "title": "Waffle: a wearable approach to bite timing estimation in robot-assisted feeding",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:pqnbT2bcN3wC",
+      "authors": "A Padmanabha, J Yuan, TS Mehta, RK Jenamani, E Hu, V de León, ...",
+      "venue": "Proceedings of the 21st ACM/IEEE International Conference on Human-Robot …, 2026",
+      "citation_count": "3",
+      "year": "2026"
+    },
+    {
+      "index": 66,
+      "title": "CoRI: Synthesizing Communication of Robot Intent for Physical Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:J_g5lzvAfSwC",
+      "authors": "J Wang, EB Küçüktabak, RS Zarrin, Z Erickson",
+      "venue": "arXiv preprint arXiv:2505.20537, 2025",
+      "citation_count": "3",
+      "year": "2025"
+    },
+    {
+      "index": 67,
+      "title": "Bidirectional Human-Robot Communication for Physical Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ZHo1McVdvXMC",
+      "authors": "J Wang, C Wang, R Soltani Zarrin, Z Erickson",
+      "venue": "Proceedings of the 21st ACM/IEEE International Conference on Human-Robot …, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 68,
+      "title": "Bimanual High-Density EMG Control for In-Home Mobile Manipulation by Users with Quadriplegia",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:3s1wT3WcHBgC",
+      "authors": "J Yang, E Hodgson, C Sun, Z Erickson, D Weber",
+      "venue": "arXiv preprint arXiv:2602.02773, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 69,
+      "title": "Force-Modulated Visual Policy for Robot-Assisted Dressing with Arm Motions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:2P1L_qKh6hAC",
+      "authors": "AY Hao, Y Wang, NS Ravie, B Hegde, D Held, Z Erickson",
+      "venue": "arXiv preprint arXiv:2509.12741, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 70,
+      "title": "Enhancing Independence with Physical Caregiving Robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:BqipwSGYUEgC",
+      "authors": "RK Jenamani, A Padmanabha, A Nanavati, M Cakmak, Z Erickson, ...",
+      "venue": "Proceedings of the 2025 ACM/IEEE International Conference on Human-Robot …, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 71,
+      "title": "Towards wearable interfaces for robotic caregiving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:YFjsv_pBGBYC",
+      "authors": "A Padmanabha, C Majidi, Z Erickson",
+      "venue": "arXiv preprint arXiv:2502.05343, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 72,
+      "title": "Leveraging Large Language Models for Preference-Based Sequence Prediction.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:NaGl4SEjCO4C",
+      "authors": "M Tecson, D Chen, M Zhao, Z Erickson, RG Simmons",
+      "venue": "ICAART (2), 519-532, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 73,
+      "title": "Differentiable trajectory optimization as a policy class for reinforcement and imitation learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:RHpTSmoSYBkC",
+      "authors": "W Wan, Y Wang, Z Erickson, D Held",
+      "venue": "",
+      "citation_count": "2",
+      "year": "2023"
+    },
+    {
+      "index": 74,
+      "title": "BlenDAgger: Blended Shared Control for Interactive Imitation Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:abG-DnoFyZgC",
+      "authors": "C Smith, G Sun, H Admoni, Z Erickson",
+      "venue": "arXiv preprint arXiv:2609.37599, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 75,
+      "title": "Programmable online stiffness modulation for optimized aquatic locomotion",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:yD5IFk8b50cC",
+      "authors": "J Hu, JH Lee, T Wu, GN Sue, J Liao, Z Erickson, Z Manchester, C Majidi",
+      "venue": "npj Robotics, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 76,
+      "title": "Learning Robot Policies for Whole-Body Mobility Assistance via Dynamic Human Motion Generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:P5F9QuxV20EC",
+      "authors": "S Ban, S Nagai, Q Song, H Wan, E Zhao, T Wang, Z Erickson",
+      "venue": "arXiv preprint arXiv:2610.17750, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 77,
+      "title": "What Should Embodied Agents Remember? Benchmarking and Evaluating Memory Modality for Embodied Agents",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:1sJd4Hv_s6UC",
+      "authors": "J Wang, Y Liu, Y Wu, G Chen, N Pechuk, T Chen, Z Erickson, Y Qin, T Li",
+      "venue": "arXiv preprint arXiv:2610.12561, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 78,
+      "title": "An Empirical Study on What Matters for Viewpoint-Generalizable Policies in Visual Imitation Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:NhqRSupF_l8C",
+      "authors": "M Nakura, S Krishna, Y Wang, S Tulsiani, Z Erickson, D Held",
+      "venue": "arXiv preprint arXiv:2609.32762, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 79,
+      "title": "SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:b0M2c_1WBrUC",
+      "authors": "S Singh, Z Hu, MS Mark, J Yu, Z Erickson, A Kumar",
+      "venue": "arXiv preprint arXiv:2609.22085, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 80,
+      "title": "Tendon-Driven Continuum Robot with Modular Stiffness and In-Situ Self Pose Estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:EUQCXRtRnyEC",
+      "authors": "G Ning, Z Cao, J Hu, X Bu, D Quinn, T Wu, Z Erickson, C Majidi",
+      "venue": "arXiv preprint arXiv:2609.16256, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 81,
+      "title": "Continual Field-Adaptive Models (CFAMs) for Post-Deployment Physical AI",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:_xSYboBqXhAC",
+      "authors": "A Singh, TR Pancholi, J Kothari, S Mahajan, K Bansal, Z Erickson, ...",
+      "venue": "arXiv preprint arXiv:2609.04552, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 82,
+      "title": "R^3: Training Robots to Reason in Natural Language via Reinforcement Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:bFI3QPDXJZMC",
+      "authors": "L Wu, Y Qu, Z Hu, I Zhang, L Wei, Z Erickson, A Kumar",
+      "venue": "arXiv preprint arXiv:2608.26053, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 83,
+      "title": "Descriptive Analysis of Manipulation Techniques in Wound Care",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:CHSYGLWDkRkC",
+      "authors": "Z Karachiwalla, A Srinivasan, E Lee, A Dierkes, Z Erickson, H Admoni",
+      "venue": "2026 IEEE 35th International Conference on Robot and Human Interactive …, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 84,
+      "title": "High Fidelity Capture, Reconstruction, and Transfer of Human Demonstrations for Robot-Assisted Bathing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:f2IySw72cVMC",
+      "authors": "AS Lakshmipathy, JP King, E Zuo, R Satishkumar, H Chen, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2608.09127, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 85,
+      "title": "GenPHRI: Agentic Generative Simulation for Physical Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:4OULZ7Gr8RgC",
+      "authors": "J Wang, N Pechuk, X Xu, T Wu, N Kim, J Millan, Z Erickson",
+      "venue": "arXiv preprint arXiv:2604.08664, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 86,
+      "title": "Control Without Control: Defining Implicit Interaction Paradigms for Autonomous Assistive Robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:fPk4N6BV_jEC",
+      "authors": "J Gupta, K Puthuveetil, D Tsakona, A Padmanabha, Y Demiris, Z Erickson",
+      "venue": "arXiv preprint arXiv:2603.28079, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 87,
+      "title": "Knowing When to Help: A Framework for Error Detection in Meal Preparation Tasks for Older Adults",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:u_35RYKgDlwC",
+      "authors": "M Tecson, Z Erickson, R Simmons",
+      "venue": "Companion Proceedings of the 21st ACM/IEEE International Conference on Human …, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 88,
+      "title": "ORB: Operating Room Bot, Automating Operating Room Logistics through Mobile Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:g5m5HwL7SMYC",
+      "authors": "J Qiu, Y Kim, G Sethia, T Agarwal, S Ghodasara, Z Erickson, J Ichnowski",
+      "venue": "2025 IEEE 21st International Conference on Automation Science and …, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 89,
+      "title": "Enhancing Independence with Physical Caregiving Robots: https://caregivingrobots. github. io",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:ns9cj8rnVeAC",
+      "authors": "RK Jcnamanit, A Padmanabha, A Nanavati, M Cakmak, Z Erickson, ...",
+      "venue": "2025 20th ACM/IEEE International Conference on Human-Robot Interaction (HRI …, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 90,
+      "title": "Enabling Independent Living for Individuals with Cervical Spinal Cord Injury via High-Density Electromyography Controlled Robotic Systems",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:lSLTfruPkqcC",
+      "authors": "Z Erickson, RA Cooper, DJ Weber",
+      "venue": "NSF Award 23 (2341352), 41352, 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 91,
+      "title": "Towards the Development of Wound Care Robots: An Observational Study Outlining Robotic Design Needs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:xtRiw3GOFMkC",
+      "authors": "Z Karachiwalla, E Lee, A Dierkes, H Admoni, Z Erickson",
+      "venue": "",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 92,
+      "title": "EMGBench: Benchmarking Out-of-Distribution Generalization and Adaptation for Electromyography",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:SeFeTyx0c_EC",
+      "authors": "Z Erickson, V Lieu, M Soh, D Weber, J Yang",
+      "venue": "Neural Information Processing Systems Foundation, Inc.(NeurIPS), 2024",
+      "citation_count": "",
+      "year": "2024"
+    },
+    {
+      "index": 93,
+      "title": "Robotic Caregivers--Simulation and Capacitive Servoing for Physical Human-Robot Interaction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:HoB7MX3m0LUC",
+      "authors": "Z Erickson",
+      "venue": "Georgia Institute of Technology, 2021",
+      "citation_count": "",
+      "year": "2021"
+    },
+    {
+      "index": 94,
+      "title": "Multidimensional Capacitive Sensing for Robot-Assisted Dressing and Bathing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:D03iK_w7-QYC",
+      "authors": "CC Kemp, Z Erickson, HM Clever, V Gangaram, G Turk, CK Liu",
+      "venue": "Georgia Institute of Technology, 2019",
+      "citation_count": "",
+      "year": "2019"
+    },
+    {
+      "index": 95,
+      "title": "AbsVLA: Learning Robust Primitive Manipulation Skills for VLA Models in Object-Centric Abstracted States",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:pyW8ca7W8N0C",
+      "authors": "M Shao, Z Erickson",
+      "venue": "ICRA 2026 Workshop: From Data to Decisions: VLA Pipelines for Real Robots, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 96,
+      "title": "Bridging Embodied AI and Accessibility",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:a0OBvERweLwC",
+      "authors": "H El Alaoui, HR Nambiappan, A Taheri, C Liang, M Pascher, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 97,
+      "title": "Web2Grasp: Learning Functional Grasp with Reconstructed HOI from Web Images",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:RYcK_YlVTxYC",
+      "authors": "H Chen, Y Yao, Y Ye, Z Xu, H Bharadhwaj, J Wang, S Tulsiani, Z Erickson, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 98,
+      "title": "Ref-EMGBench: Benchmarking Reference Normalization for Electromyography Data",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:hMod-77fHWUC",
+      "authors": "L Jin, J Yang, DJ Weber, Z Erickson",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 99,
+      "title": "GenBot: Generative Simulation Empowers Automated Robotic Skill Learning at Scale",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:4JMBOYKVnBMC",
+      "authors": "Y Wang, Z Xian, F Chen, TH Wang, Z Erickson, D Held, C Gan",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 100,
+      "title": "Neural Networks for Improving Wearable Device Security",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&pagesize=100&citation_for_view=wElkTtIAAAAJ:u-x6o8ySG0sC",
+      "authors": "Z Erickson, J Compiano, R Shin",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 101,
+      "title": "On Ramp to Parallel Computing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wElkTtIAAAAJ&cstart=100&pagesize=100&citation_for_view=wElkTtIAAAAJ:u5HHmVD_uO8C",
+      "authors": "Z Erickson, SS Foley",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-zackoryerickson-7430abb2",
+  "display_name": "Zackory Erickson",
+  "scholar_profile_name": "Zackory Erickson",
+  "scholar_id": "wElkTtIAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/zackory-erickson/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/zackory-erickson/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:36:27.159818+00:00",
+  "publication_count": 101,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-zackory-erickson-2026-10-26.json",
+  "source_json_sha256": "c0848dda832ee7bef7c31c6ae6d10ca1510d54fab719dde04678dbaee97f2824",
+  "source_html_path": "data/captures/scs-zackory-erickson-2026-10-26.html",
+  "source_html_sha256": "30e8e03b8cfdae34da375bc987d7453c99f8a78468f5416079f064e5637eaaaa",
+  "cache_path": "data/authors/wElkTtIAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

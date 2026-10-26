@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "assembled_before_snapshot",
+  "source_base": "57f286c94c5b4e118fffa9767f35297da014b035",
+  "producer_base": "6ddd8e686f2ea1bdffe27e7cb820e3971404c82b",
+  "hub_parent": "269d50c729bfd375e066ac421541ca03a1ca4734",
+  "profiles": 13,
+  "prior_raw_rows": 67104,
+  "raw_rows_added": 1908,
+  "expected_raw_rows": 69012,
+  "exact_holds": 566,
+  "batches": [
+    {
+      "batch": "eighth",
+      "unit": "ri",
+      "source_head": "89c1ab971ad908ce305d214d8ab340743f5f1757",
+      "producer_head": "dc38e328142e60c4845ed59230796dead81692c2",
+      "scholar_ids": [
+        "3mSNkMkAAAAJ",
+        "PryclcMAAAAJ",
+        "wElkTtIAAAAJ"
+      ],
+      "person_ids": [
+        "person-wenshanwang-bc4e1f5e",
+        "person-zackoryerickson-7430abb2",
+        "person-zeyneptemel-b869d8a9"
+      ],
+      "raw_rows": 244,
+      "held_rows": 71
+    },
+    {
+      "batch": "ninth",
+      "unit": "hcii",
+      "source_head": "a022a3629c6c50617d45bbc8e8393eb146fd2e56",
+      "producer_head": "ea2c3c65dd89465c96352313eb125d7e87974866",
+      "scholar_ids": [
+        "36HRdqMAAAAJ",
+        "DBkNLiwAAAAJ",
+        "HtR2z4AAAAAJ",
+        "PMEBVS8AAAAJ",
+        "acfjWDAAAAAJ"
+      ],
+      "person_ids": [
+        "person-chrisharrison-c841e8a4",
+        "person-daniellethomas-b71de87e",
+        "person-davidlindlbauer-48c1891d",
+        "person-dominikmoritz-6edace78",
+        "person-geoffkaufman-8f53cab5"
+      ],
+      "raw_rows": 600,
+      "held_rows": 185
+    },
+    {
+      "batch": "tenth",
+      "unit": "hcii",
+      "source_head": "bb8fcf2fe1143def0110883c37f3ee34044f82ae",
+      "producer_head": "53ad389ddb4da5539626bcbff5821ef201df6dfc",
+      "scholar_ids": [
+        "8M7Ox_EAAAAJ",
+        "9NkngDMAAAAJ",
+        "DFqp8NkAAAAJ",
+        "Hyhp_zUAAAAJ",
+        "iwytZ2wAAAAJ"
+      ],
+      "person_ids": [
+        "person-haiyizhu-af958ae5",
+        "person-hirokazushirado-d2eaa419",
+        "person-hongshen-53070c90",
+        "person-jeffreybigham-2a06d489",
+        "person-jodiforlizzi-72f1ea3c"
+      ],
+      "raw_rows": 1064,
+      "held_rows": 310
+    }
+  ],
+  "audit_sha256": "61636dac992012e5ad81ba9b545e17754093b52e123f46c0b7ef1ced4198bb1e"
+}
