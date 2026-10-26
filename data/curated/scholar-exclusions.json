@@ -14576,6 +14576,38 @@
       "reason": "The original Stanford 2011 structural-health-monitoring workshop program prints the exact title and assigns S. Das (author affiliation 2) to Acellent Technologies Inc., USA. This exact affiliation rules out CMU chemist Subha R. Das; the preliminary program does not expand the given name or establish final proceedings publication.",
       "evidence_url": "https://web.stanford.edu/group/sacl/workshop/documents/Program%20brochure/2011/IWSHM2011_PreliminaryProgram_2011-08-03_old4.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:hHIA4WEVY-EC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 353 is NSF award 1909193, New Vistas in Weak Lensing; the official award record is funding metadata rather than a separate scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1909193.json",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:FsLZdJ3BAzkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 383 is NSF award 0908072, Precision Measures of the Dark Sector; the official award record is funding metadata rather than a separate scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0908072.json",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:cBPnxVikjH8C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 405 is NSF award 0118263, Workshop on Cosmology; the official award record is funding metadata rather than a separate scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0118263.json",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "scholar_id": "kcXOB1MAAAAJ",
+      "author_pub_id": "kcXOB1MAAAAJ:rCNdntzdTkkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 409 is NSF award 0079251, Probing Fundamental Physics with Cosmological Observations; the official award record is funding metadata rather than a separate scholarly publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0079251.json",
+      "verified_at": "2026-10-26"
     }
   ]
 }
