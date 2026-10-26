@@ -109,8 +109,15 @@ BIO_REGION_REFIT_FIELDS = frozenset(
 )
 MCS_PUBLISHED_PARENT = "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
 PHYSICS_FIVE_PUBLISHED_PARENT = "4e43639c091a4b826a4651eddc5aa0fe16129f0f"
+PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT = (
+    "42b30e512fb941a8cbe78d67399bd3771372cb68"
+)
 MCS_DIAGNOSTIC_PARENT_REVISIONS = frozenset(
-    {MCS_PUBLISHED_PARENT, PHYSICS_FIVE_PUBLISHED_PARENT}
+    {
+        MCS_PUBLISHED_PARENT,
+        PHYSICS_FIVE_PUBLISHED_PARENT,
+        PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
+    }
 )
 # The immutable MCS parent retains the 19 reviewed Chemistry decisions. Its
 # full refit changed only these three derived diagnostics from the Bio parent.

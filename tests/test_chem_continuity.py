@@ -218,7 +218,11 @@ def _mcs_published_parent(files: dict) -> None:
 
 @pytest.mark.parametrize(
     "prior_revision",
-    (continuity.MCS_PUBLISHED_PARENT, continuity.PHYSICS_FIVE_PUBLISHED_PARENT),
+    (
+        continuity.MCS_PUBLISHED_PARENT,
+        continuity.PHYSICS_FIVE_PUBLISHED_PARENT,
+        continuity.PHYSICS_HUNT_DESERNO_FEENSTRA_PUBLISHED_PARENT,
+    ),
 )
 def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
     tmp_path: Path,

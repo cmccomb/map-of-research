@@ -14,4 +14,6 @@ The nine already-reviewed exact exclusions remain in the producer manifest, incl
 
 The source review ledger at `status/physics-breivik-release-review-2026-10-26.json` records category overlaps, exact row sets, and counts. The source status changes only after every saved row has a disposition. Row 115 and row 116 author-order cache repairs and their source ledgers are present in the source tip. The historical draft PRs #207 and #257 remain open; their source and repair artifacts are already present at the current source tip, so this pair uses the current source/status and producer parents.
 
+The Chemistry continuity guard now recognizes the exact immutable Hunt/Deserno/Feenstra Hub parent `42b30e512fb941a8cbe78d67399bd3771372cb68` as carrying the previously reviewed MCS diagnostic overrides. Its accepted work IDs and field values are unchanged; a parameterized guard test covers this parent.
+
 Release remains draft. Exact-parent preview, focused tests, and hosted CI are gates before any merge or upload.
