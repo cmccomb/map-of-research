@@ -1075,3 +1075,34 @@ def test_meyer_release_holds_name_matches_and_unresolved_source_renderings():
     assert profile.reviewed_exclusion_ids_sha256 == ""
     assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
     assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 292
+
+
+def test_majetich_release_keeps_source_reviewed_exclusions_separate_from_holds():
+    scholar_id = "FRlLpMYAAAAJ"
+    profile = next(
+        item
+        for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item
+        for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    held_rows = {item.capture_row_index for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id
+        for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert profile.person_id == decision.person_id == "person-saramajetich-69037290"
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 271
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 27
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 114
+    assert {181, 199, 200, 212, 218, 236, 249, 254, 255, 271} <= held_rows
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 130

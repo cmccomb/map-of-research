@@ -1,0 +1,7 @@
+# Sara Majetich Physics profile review
+
+The official [CMU Physics faculty page](https://www.cmu.edu/physics/people/faculty/majetich.html) identifies Sara A. Majetich and her condensed-matter research. Her [CMU Scholars profile](https://scholars.cmu.edu/4600-sara-majetich) links Scholar ID `FRlLpMYAAAAJ`. The saved 2026-10-24 Scholar capture and cache contain all 271 visible rows. The paired source ledger `status/physics-majetich-release-review-2026-10-26.json` binds their hashes and every exact row disposition.
+
+The source-reviewed follow-on ledger already proposes 27 exact exclusions, chiefly NSF award records, source-confirmed duplicate fragments, supplementary information, and administrative rosters. This producer change installs those same 27 IDs; it does not infer exclusions from title similarity. It provisionally holds 114 additional exact observations with unresolved meeting/proceedings grain, source metadata, versions, reports, editorial records, or unverified patent identity. The three source-verified Majetich patents at capture rows 93, 104, and 135 remain outside the hold and exclusion sets, including two distinct patents with the same title. The 27-exclusion, 114-hold, 130-ordinary partition accounts for all 271 saved rows.
+
+The 130 ordinary observations enter the existing map gates. The exact hold manifest prevents unresolved rows from creating authorships or map points. Keep the paired source and producer changes together and require an exact-parent, no-upload preview against the then-current Hub revision before merge or publication.

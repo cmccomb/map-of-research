@@ -229,11 +229,13 @@
     {
       "person_id": "person-saramajetich-69037290",
       "scholar_id": "FRlLpMYAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 271,
       "cache_sha256": "3d9e65ce626a7604aaacddbed6cb4a1447818894f8eb3e0fbd36a8e88a5b7e13",
-      "reason": "Complete 271-row Physics capture is source-bound. The DOE report needs a context-type decision; another individual row and grouped leads remain unresolved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 271-row Physics source is bound to saved capture and cache hashes. The 27 previously source-reviewed exact exclusions and 114 provisional holds protect unresolved observations; 130 rows enter ordinary map gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 114,
+      "provisional_hold_ids_sha256": "ec5f38624a059b44a1e4e8fc1b16c7a3fc96b45ceffadfa185719302529c4185"
     },
     {
       "person_id": "person-antonellapalmese-5378b53d",

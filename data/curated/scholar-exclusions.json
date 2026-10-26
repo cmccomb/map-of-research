@@ -14608,6 +14608,222 @@
       "reason": "Capture row 409 is NSF award 0079251, Probing Fundamental Physics with Cosmological Observations; the official award record is funding metadata rather than a separate scholarly publication.",
       "evidence_url": "https://api.nsf.gov/services/v1/awards/0079251.json",
       "verified_at": "2026-10-26"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:0CzhzZyukY4C",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 186 is a publisher-only repeat of the 2017 Scientific Reports article retained as complete Majetich profile row 16.",
+      "evidence_url": "https://www.nature.com/articles/srep45997",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:6yz0xqPARnAC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 251 is a publisher-only repeat of the 1997 Physical Review B article retained as complete Majetich profile row 35.",
+      "evidence_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.55.13822",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:lvd772isFD0C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 258 is NSF award 9258308 for a funded project, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9258308.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:DJbcl8HfkQkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 263 is the INTERMAG 2021 program committee listing, with Majetich named as a co-chair; it is not a separate research publication.",
+      "evidence_url": "https://events-siteplex.confcats.io/magnetism/wp-content/uploads/sites/82/2022/02/intermag21_ProgramFull.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:kz9GbA2Ns4gC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 264 is supplementary information for the Scientific Reports article retained as complete Majetich profile row 16, not a separate publication.",
+      "evidence_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5385549/fullTextXML",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:u-coK7KVo8oC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 167 is NSF award 9900550, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9900550.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:jL-93Qbq4QoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 177 is NSF award 2425567, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2425567.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:fbc8zXXH2BUC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 179 is NSF award 2317267, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2317267.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:5icHVeHT4IsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 182 is NSF award 2004559, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2004559.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:BJbdYPG6LGMC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 185 is NSF award 1709845, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1709845.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:4xDN1ZYqzskC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 188 is NSF award 1626099, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1626099.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:gKiMpY-AVTkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 193 is NSF award 1410680, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1410680.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:Bg7qf7VwUHIC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 194 is NSF award 1407435, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1407435.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:tH6gc1N1XXoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 198 is NSF award 1019155, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1019155.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:uDGL6kOW6j0C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 202 is NSF award 0925926, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0925926.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:5MTHONV0fEkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 203 is NSF award 0853963, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0853963.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:Ak0FvsSvgGUC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 215 is NSF award 0804779, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0804779.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:artPoR2Yc-kC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 216 is NSF award 0833896, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0833896.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:vDZJ-YLwNdEC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 229 is NSF award 0507050, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0507050.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:PVgj2kMGcgYC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 235 is NSF award 0304453, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0304453.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:nVrZBo8bIpAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 237 is NSF award 0227645, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0227645.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:Aul-kAQHnToC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 246 is NSF award 9800127, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9800127.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:gVv57TyPmFsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 253 is NSF award 9500313, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9500313.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is the Tenth Joint MMM–Intermag 2007 Program Committee roster, not an authored research paper.",
+      "evidence_url": "https://www.intermagconference.com/files/intermag_2007_baltimore_program.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:-_dYPAW6P2MC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The issue-heading fragment carries the exact author sequence of the first JMMM 282 article on pp. 1–5, already retained as row 87.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.jmmm.2004.04.025",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:JoZmwDi-zQgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The truncated title and byline repeat the full 1995 Scripta Metallurgica et Materialia paper retained as row 115.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/dl0p/laughlin/pdf/181.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "FRlLpMYAAAAJ",
+      "author_pub_id": "FRlLpMYAAAAJ:WA5NYHcadZ8C",
+      "reason_code": "nonpublication",
+      "reason": "IEEE Magnetics Society is the officers and administrative committee roster in the official Intermag 2006 program, not an authored research work.",
+      "evidence_url": "https://intermagconference.com/intermag2006/apb.pdf",
+      "verified_at": "2026-10-25"
     }
   ]
 }
