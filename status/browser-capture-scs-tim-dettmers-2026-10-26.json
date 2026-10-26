@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-timdettmers-6d9c0030",
+  "display_name": "Tim Dettmers",
+  "scholar_profile_name": "Tim Dettmers",
+  "scholar_id": "lHI3w5kAAAAJ",
+  "official_identity_url": "https://www.csd.cs.cmu.edu/people/faculty/tim-dettmers",
+  "scholar_id_source_url": "https://www.csd.cs.cmu.edu/people/faculty/tim-dettmers",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T14:04:57.974861+00:00",
+  "publication_count": 31,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-tim-dettmers-2026-10-26.json",
+  "source_json_sha256": "5b62c5beabc9a7ee37e0460a94e4519ba97018593e3874ad8b6694c74ba06c10",
+  "source_html_path": "data/captures/scs-tim-dettmers-2026-10-26.html",
+  "source_html_sha256": "32def67c8cd29700b1ba08da145f22b71e22fad9e234d2eb6a9741c9a6683d7a",
+  "cache_path": "data/authors/lHI3w5kAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

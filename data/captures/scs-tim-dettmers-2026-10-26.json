@@ -1,0 +1,293 @@
+{
+  "captured_at": "2026-10-26T14:04:57.974861+00:00",
+  "url": "https://scholar.google.com/citations?user=lHI3w5kAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪Tim Dettmers‬ - ‪Google Scholar‬",
+  "scholar_user_id": "lHI3w5kAAAAJ",
+  "person_name": "Tim Dettmers",
+  "displayed_count": 31,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 1,
+  "works": [
+    {
+      "index": 1,
+      "title": "Qlora: Efficient finetuning of quantized llms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:kNdYIx-mwKoC",
+      "authors": "T Dettmers, A Pagnoni, A Holtzman, L Zettlemoyer",
+      "venue": "NeurIPS 2023 (Oral), 2023",
+      "citation_count": "9371",
+      "year": "2023"
+    },
+    {
+      "index": 2,
+      "title": "Convolutional 2d knowledge graph embeddings",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:u-x6o8ySG0sC",
+      "authors": "T Dettmers, P Minervini, P Stenetorp, S Riedel",
+      "venue": "AAAI 2018, 2018",
+      "citation_count": "4407",
+      "year": "2018"
+    },
+    {
+      "index": 3,
+      "title": "Llm. int8 (): 8-bit matrix multiplication for transformers at scale",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:roLk4NBRz8UC",
+      "authors": "T Dettmers, M Lewis, Y Belkada, L Zettlemoyer",
+      "venue": "NeurIPS 2022, 2022",
+      "citation_count": "3012",
+      "year": "2022"
+    },
+    {
+      "index": 4,
+      "title": "Bloom: A 176b-parameter open-access multilingual language model",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:mVmsd5A6BfQC",
+      "authors": "BS Workshop, TL Scao, A Fan, C Akiki, E Pavlick, S Ilić, D Hesslow, ...",
+      "venue": "arXiv preprint arXiv:2211.05100, 2022",
+      "citation_count": "2602",
+      "year": "2022"
+    },
+    {
+      "index": 5,
+      "title": "8-bit Optimizers via Block-wise Quantization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:eQOLeE2rZwMC",
+      "authors": "T Dettmers, M Lewis, S Shleifer, L Zettlemoyer",
+      "venue": "ICLR 2022 (Spotlight), 2022",
+      "citation_count": "706",
+      "year": "2022"
+    },
+    {
+      "index": 6,
+      "title": "Spqr: A sparse-quantized representation for near-lossless llm weight compression",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:YOwf2qJgpHMC",
+      "authors": "T Dettmers, R Svirschevski, V Egiazarian, D Kuznedelev, E Frantar, ...",
+      "venue": "arXiv preprint arXiv:2306.03078, 2023",
+      "citation_count": "605",
+      "year": "2023"
+    },
+    {
+      "index": 7,
+      "title": "Base layers: Simplifying training of large, sparse models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:YsMSGLbcyi4C",
+      "authors": "M Lewis, S Bhosale, T Dettmers, N Goyal, L Zettlemoyer",
+      "venue": "ICML 2021, 2021",
+      "citation_count": "509",
+      "year": "2021"
+    },
+    {
+      "index": 8,
+      "title": "Sparse networks from scratch: Faster training without losing performance",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:qjMakFHDy7sC",
+      "authors": "T Dettmers, L Zettlemoyer",
+      "venue": "arXiv preprint arXiv:1907.04840, 2019",
+      "citation_count": "493",
+      "year": "2019"
+    },
+    {
+      "index": 9,
+      "title": "The case for 4-bit precision: k-bit inference scaling laws",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:0EnyYjriUFMC",
+      "authors": "T Dettmers, L Zettlemoyer",
+      "venue": "ICML 2023, 2023",
+      "citation_count": "439",
+      "year": "2023"
+    },
+    {
+      "index": 10,
+      "title": "Petals: Collaborative inference and fine-tuning of large models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:Se3iqnhoufwC",
+      "authors": "A Borzunov, D Baranchuk, T Dettmers, M Ryabinin, Y Belkada, ...",
+      "venue": "ACL 2022, Demonstration, 2022",
+      "citation_count": "335",
+      "year": "2022"
+    },
+    {
+      "index": 11,
+      "title": "Olmoe: Open mixture-of-experts language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:7PzlFSSx8tAC",
+      "authors": "N Muennighoff, L Soldaini, D Groeneveld, K Lo, J Morrison, S Min, W Shi, ...",
+      "venue": "International Conference on Learning Representations 2025, 62061-62121, 2025",
+      "citation_count": "290",
+      "year": "2025"
+    },
+    {
+      "index": 12,
+      "title": "8-bit Approximations for Parallelism in Deep Learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:u5HHmVD_uO8C",
+      "authors": "T Dettmers",
+      "venue": "ICLR 2016, 2016",
+      "citation_count": "284",
+      "year": "2016"
+    },
+    {
+      "index": 13,
+      "title": "Branch-train-merge: Embarrassingly parallel training of expert language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:LkGwnXOMwfcC",
+      "authors": "M Li, S Gururangan, T Dettmers, M Lewis, T Althoff, NA Smith, ...",
+      "venue": "arXiv preprint arXiv:2208.03306, 2022",
+      "citation_count": "268",
+      "year": "2022"
+    },
+    {
+      "index": 14,
+      "title": "Stable and low-precision training for large-scale vision-language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:3fE2CSJIrl8C",
+      "authors": "M Wortsman, T Dettmers, L Zettlemoyer, A Morcos, A Farhadi, L Schmidt",
+      "venue": "NeurIPS 2023, 2023",
+      "citation_count": "146",
+      "year": "2023"
+    },
+    {
+      "index": 15,
+      "title": "Matformer: Nested transformer for elastic inference",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:4TOpqqG69KYC",
+      "authors": "F Devvrit, S Kudugunta, A Kusupati, T Dettmers, K Chen, IS Dhillon, ...",
+      "venue": "The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024",
+      "citation_count": "106",
+      "year": "2024"
+    },
+    {
+      "index": 16,
+      "title": "Swarm parallelism: Training large models can be surprisingly communication-efficient",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:WF5omc3nYNoC",
+      "authors": "M Ryabinin, T Dettmers, M Diskin, A Borzunov",
+      "venue": "NeurIPS 2023, 2023",
+      "citation_count": "106",
+      "year": "2023"
+    },
+    {
+      "index": 17,
+      "title": "QLoRA: efficient finetuning of quantized LLMs. arXiv",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:e5wmG9Sq2KIC",
+      "authors": "T Dettmers, A Pagnoni, A Holtzman, L Zettlemoyer",
+      "venue": "arXiv preprint arXiv:2305.14314 10, 2023",
+      "citation_count": "90",
+      "year": "2023"
+    },
+    {
+      "index": 18,
+      "title": "Scaling retrieval-based language models with a trillion-token datastore",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:9ZlFYXVOiuMC",
+      "authors": "R Shao, J He, A Asai, W Shi, T Dettmers, S Min, L Zettlemoyer, PW Koh",
+      "venue": "Advances in Neural Information Processing Systems 37, 91260-91299, 2024",
+      "citation_count": "73",
+      "year": "2024"
+    },
+    {
+      "index": 19,
+      "title": "Holistically evaluating the environmental impact of creating language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:hC7cP41nSMkC",
+      "authors": "J Morrison, C Na, J Fernandez, T Dettmers, E Strubell, J Dodge",
+      "venue": "International Conference on Learning Representations 2025, 73928-73943, 2025",
+      "citation_count": "64",
+      "year": "2025"
+    },
+    {
+      "index": 20,
+      "title": "Training transformers together",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:_FxGoFyzp5QC",
+      "authors": "A Borzunov, M Ryabinin, T Dettmers, Q Lhoest, L Saulnier, M Diskin, ...",
+      "venue": "NeurIPS 2021 Demonstration, 2022",
+      "citation_count": "18",
+      "year": "2022"
+    },
+    {
+      "index": 21,
+      "title": "Towards A Unified View of Sparse Feed-Forward Network in Pretraining Large Language Model",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:Zph67rFs4hoC",
+      "authors": "LZ Liu, T Dettmers, XV Lin, V Stoyanov, X Li",
+      "venue": "EMNLP 2023, 2023",
+      "citation_count": "14",
+      "year": "2023"
+    },
+    {
+      "index": 22,
+      "title": "Jack the reader–a machine reading framework",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:2osOgNQ5qMEC",
+      "authors": "D Weissenborn, P Minervini, I Augenstein, J Welbl, T Rocktäschel, ...",
+      "venue": "Proceedings of ACL 2018, System Demonstrations, 25-30, 2018",
+      "citation_count": "14",
+      "year": "2018"
+    },
+    {
+      "index": 23,
+      "title": "Sera: Soft-verified efficient repository agents",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:hFOr9nPyWt4C",
+      "authors": "E Shen, D Tormoen, S Shah, A Farhadi, T Dettmers",
+      "venue": "arXiv preprint arXiv:2601.20789, 2026",
+      "citation_count": "13",
+      "year": "2026"
+    },
+    {
+      "index": 24,
+      "title": "High performance natural language processing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:Y0pCki6q_DkC",
+      "authors": "G Ilharco, C Ilharco, I Turc, T Dettmers, F Ferreira, K Lee",
+      "venue": "EMNLP 2020, Tutorial, 2020",
+      "citation_count": "13",
+      "year": "2020"
+    },
+    {
+      "index": 25,
+      "title": "AdaExplore: Failure-Driven Adaptation and Diversity-Preserving Search for Efficient Kernel Generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:TQgYirikUcIC",
+      "authors": "W Du, J Zhuo, Y Dong, AW He, W Sun, Z Zheng, M Karunaratne, I Fox, ...",
+      "venue": "arXiv preprint arXiv:2604.16625, 2026",
+      "citation_count": "5",
+      "year": "2026"
+    },
+    {
+      "index": 26,
+      "title": "Seeded lora: Collaborative fine-tuning through seed initialization of adapters",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:dhFuZR0502QC",
+      "authors": "AR Salamanca, A Üstün, NS Detlefsen, T Dettmers",
+      "venue": "",
+      "citation_count": "3",
+      "year": "2024"
+    },
+    {
+      "index": 27,
+      "title": "Accessible foundation models: Systems, algorithms, and science",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:QIV2ME_5wuYC",
+      "authors": "T Dettmers",
+      "venue": "University of Washington, 2024",
+      "citation_count": "1",
+      "year": "2024"
+    },
+    {
+      "index": 28,
+      "title": "Synthetic Hospital: An Open, Verifiable, Physician-Validated Longitudinal EHR Benchmark",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:j3f4tGmQtD8C",
+      "authors": "C Park, V Chen, T Dettmers",
+      "venue": "arXiv preprint arXiv:2609.30027, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 29,
+      "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:RHpTSmoSYBkC",
+      "authors": "T Nguyen, E Cho, B Chen, T Dettmers",
+      "venue": "arXiv preprint arXiv:2609.26779, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 30,
+      "title": "ReproRepo: Scaling Reproducibility Audits with GitHub Repository Issues",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:R3hNpaxXUhUC",
+      "authors": "S Li, QA Wei, J Tang, V Chen, NB Shah, T Dettmers, Y Yang, A Talwalkar",
+      "venue": "arXiv preprint arXiv:2606.18237, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 31,
+      "title": "RUNTIME DYNAMIC COMPRESSION OF MIXTURE OF EXPERTS",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lHI3w5kAAAAJ&pagesize=100&citation_for_view=lHI3w5kAAAAJ:4JMBOYKVnBMC",
+      "authors": "T Dettmers",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}
