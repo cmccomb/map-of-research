@@ -216,8 +216,13 @@ def _mcs_published_parent(files: dict) -> None:
     )
 
 
+@pytest.mark.parametrize(
+    "prior_revision",
+    (continuity.MCS_PUBLISHED_PARENT, continuity.PHYSICS_FIVE_PUBLISHED_PARENT),
+)
 def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
     tmp_path: Path,
+    prior_revision: str,
 ) -> None:
     decisions = _decisions()
     baseline = _files(tmp_path / "baseline", decisions)
@@ -228,7 +233,7 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
         decisions,
         baseline_files=baseline,
         parent_files=parent,
-        prior_revision=continuity.MCS_PUBLISHED_PARENT,
+        prior_revision=prior_revision,
     )
     assert state["reviewed_works"] == 19
     tables = {
@@ -269,7 +274,7 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
                 decisions,
                 baseline_files=baseline,
                 parent_files=parent,
-                prior_revision=continuity.MCS_PUBLISHED_PARENT,
+                prior_revision=prior_revision,
             )
         _mcs_published_parent(parent)
     _rewrite_rows(
@@ -285,7 +290,21 @@ def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
             decisions,
             baseline_files=baseline,
             parent_files=parent,
-            prior_revision=continuity.MCS_PUBLISHED_PARENT,
+            prior_revision=prior_revision,
+        )
+    _mcs_published_parent(parent)
+    _rewrite_rows(
+        works,
+        lambda rows: next(
+            row for row in rows if row["work_id"] in state["parent_rows"]["points"]
+        ).update(map_eligible=False),
+    )
+    with pytest.raises(ValueError, match="Chemistry parent decision changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=prior_revision,
         )
 
 
