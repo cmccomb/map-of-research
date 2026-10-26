@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-daniellethomas-b71de87e",
+  "display_name": "Danielle Thomas",
+  "scholar_profile_name": "Danielle R. Thomas",
+  "scholar_id": "PMEBVS8AAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/danielle-thomas",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/danielle-thomas",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:41:56.817761+00:00",
+  "publication_count": 66,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-danielle-thomas-2026-10-26.json",
+  "source_json_sha256": "41e9f03316478c7bb65d048a0a34268bd164fea9929dd7d54ea80e1e09463dc6",
+  "source_html_path": "data/captures/scs-danielle-thomas-2026-10-26.html",
+  "source_html_sha256": "23913ea52376da3b4a4341b308d025100e0a81edb4cbc73abbe341fa573c556a",
+  "cache_path": "data/authors/PMEBVS8AAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

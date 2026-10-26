@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-zeyneptemel-b869d8a9",
+  "display_name": "Zeynep Temel",
+  "scholar_profile_name": "Zeynep Temel",
+  "scholar_id": "3mSNkMkAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/zeynep-temel/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/zeynep-temel/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:36:38.220370+00:00",
+  "publication_count": 70,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-zeynep-temel-2026-10-26.json",
+  "source_json_sha256": "6eba94ca05670a01d007107d9bce4cf1d2a1d99474d9a7b5f096d108ed6e1244",
+  "source_html_path": "data/captures/scs-zeynep-temel-2026-10-26.html",
+  "source_html_sha256": "7eeb1148c2dcae001339e21776a7af3d717e27c83390263a51eac57dece1d4ca",
+  "cache_path": "data/authors/3mSNkMkAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

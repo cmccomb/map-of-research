@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-geoffkaufman-8f53cab5",
+  "display_name": "Geoff Kaufman",
+  "scholar_profile_name": "Geoff Kaufman",
+  "scholar_id": "acfjWDAAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/geoff-kaufman",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/geoff-kaufman",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:42:48.111353+00:00",
+  "publication_count": 84,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 0,
+  "source_json_path": "data/captures/scs-geoff-kaufman-2026-10-26.json",
+  "source_json_sha256": "da5d987c96a297b10e5bc143f81d8e3e3e7c140d9956932d3050b32206f3b620",
+  "source_html_path": "data/captures/scs-geoff-kaufman-2026-10-26.html",
+  "source_html_sha256": "44eae87de39c76c2ee973b0a97b83434dc138401ddb7b66b452c672deca132df",
+  "cache_path": "data/authors/acfjWDAAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

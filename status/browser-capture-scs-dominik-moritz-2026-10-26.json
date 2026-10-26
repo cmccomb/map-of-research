@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-dominikmoritz-6edace78",
+  "display_name": "Dominik Moritz",
+  "scholar_profile_name": "Dominik Moritz",
+  "scholar_id": "HtR2z4AAAAAJ",
+  "official_identity_url": "https://hcii.cmu.edu/people/dominik-moritz",
+  "scholar_id_source_url": "https://hcii.cmu.edu/people/dominik-moritz",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T20:42:36.857195+00:00",
+  "publication_count": 102,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-dominik-moritz-2026-10-26.json",
+  "source_json_sha256": "5d0f2df8d424acede561d0167cd213e747f0759eb521fad9d26feaf68958868e",
+  "source_html_path": "data/captures/scs-dominik-moritz-2026-10-26.html",
+  "source_html_sha256": "a9e3de23b60113b7ed4f0964dada5430def4af16dd9da6e41cf5484ed90219ec",
+  "cache_path": "data/authors/HtR2z4AAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
