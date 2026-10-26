@@ -304,7 +304,7 @@ def test_mcs_candidate_refit_requires_exact_parent_source_and_layout() -> None:
         assert not continuity.allows_mcs_parent_diagnostic_refit(**(kwargs | changed))
 
 
-def test_mcs_candidate_refit_allows_only_two_exact_visible_diagnostic_losses(
+def test_mcs_candidate_refit_allows_only_three_exact_visible_diagnostic_losses(
     tmp_path: Path,
 ) -> None:
     decisions = _decisions()
@@ -323,10 +323,24 @@ def test_mcs_candidate_refit_allows_only_two_exact_visible_diagnostic_losses(
         for name in ("works", "profile_publications", "authorships", "people")
     }
     works = tables["works"]
+    documented_id = continuity.MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID
+    documented_only = copy.deepcopy(tables)
+    documented_only["works"].loc[
+        documented_only["works"]["work_id"].eq(documented_id),
+        "map_region_documented_override",
+    ] = False
+    with pytest.raises(ValueError, match=rf"candidate works changed: {documented_id}"):
+        validate_chemistry_candidate(documented_only, state)
+    validate_chemistry_candidate(
+        documented_only, state, allow_mcs_parent_diagnostic_refit=True
+    )
     works.loc[
         works["work_id"].isin(continuity.MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES),
         "map_region_prior_eligible_override",
     ] = False
+    works.loc[works["work_id"].eq(documented_id), "map_region_documented_override"] = (
+        False
+    )
     with pytest.raises(ValueError, match="candidate works changed"):
         validate_chemistry_candidate(tables, state)
     validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
@@ -348,6 +362,12 @@ def test_mcs_candidate_refit_allows_only_two_exact_visible_diagnostic_losses(
             "map_region_documented_override",
             True,
         ),
+        (
+            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+            "map_region_documented_override",
+            False,
+        ),
+        (documented_id, "map_eligible", False),
         (other_visible, "title", "changed"),
     ):
         invalid = copy.deepcopy(tables)
