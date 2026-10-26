@@ -926,9 +926,9 @@
       "source_cache_sha256": "1cd694f928a4d281f4440aa6e59d92ba7b23b3cadf47d6939a73393c96be144d",
       "source_rows": 243,
       "reviewed_exclusion_count": 0,
-      "provisional_hold_count": 76,
-      "provisional_hold_ids_sha256": "a00c082f5209812a60c6d86ff38df5fefd3239ff3c18205abaf1decb0172d1ce",
-      "ordinary_gate_rows": 167,
+      "provisional_hold_count": 92,
+      "provisional_hold_ids_sha256": "e3a76cb35f07f02032db231c932ecccd27bee70138f8e4e5b86d930aa62b0026",
+      "ordinary_gate_rows": 151,
       "decisions": [
         {
           "capture_row_index": 1,
@@ -2005,8 +2005,8 @@
           "pub_year": "2012",
           "venue": "CMU Parallel Data Lab Trechnical Report, CMU-PDL-11-114 (Dec. 2011), 2012",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&pagesize=100&citation_for_view=wUArfPgAAAAJ:abG-DnoFyZgC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 99,
@@ -2115,8 +2115,8 @@
           "pub_year": "2006",
           "venue": "Parallel Data Laboratory, Carnegie Mellon University, Research Report CMU …, 2006",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:M3ejUd6NZC8C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 109,
@@ -2511,8 +2511,8 @@
           "pub_year": "2005",
           "venue": "GENI Design Document 05 6, 2005",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:S16KYo8Pm5AC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 145,
@@ -2819,8 +2819,8 @@
           "pub_year": "2006",
           "venue": "Carnegie Mellon University, Pittsburgh, 2006",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:tkaPQYYpVKoC",
-          "decision": "hold",
-          "reason": "Another saved row has the same normalized title; resolve version and duplicate identity before mapping."
+          "decision": "ordinary_quality_gates",
+          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
         },
         {
           "capture_row_index": 173,
@@ -2830,8 +2830,8 @@
           "pub_year": "2002",
           "venue": "MIT Laboratory for Computer Science, 2002",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:dTyEYWd-f8wC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 174,
@@ -2962,8 +2962,8 @@
           "pub_year": "2017",
           "venue": "NSF Award 17 (1700521), 521, 2017",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:4X0JR2_MtJMC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 186,
@@ -2973,8 +2973,8 @@
           "pub_year": "2015",
           "venue": "NSF Award Number 1535821. Directorate for Computer and Information Science …, 2015",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:vDZJ-YLwNdEC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 187,
@@ -2984,8 +2984,8 @@
           "pub_year": "2014",
           "venue": "NSF Award 14 (1409802), 9802, 2014",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:AHdEip9mkN0C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 188,
@@ -2995,8 +2995,8 @@
           "pub_year": "2014",
           "venue": "NSF Award 13 (1345305), 45305, 2014",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:BJbdYPG6LGMC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 189,
@@ -3017,8 +3017,8 @@
           "pub_year": "2013",
           "venue": "NSF Award Number 1314721. Directorate for Computer and Information Science …, 2013",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:F1b5ZUV5XREC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 191,
@@ -3061,8 +3061,8 @@
           "pub_year": "2011",
           "venue": "NSF Award Number 1110708. Directorate for Computer and Information Science …, 2011",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:Ak0FvsSvgGUC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 195,
@@ -3072,8 +3072,8 @@
           "pub_year": "2011",
           "venue": "8th USENIX Symposium on Networked Systems Design and Implementation (NSDI 11), 2011",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:yMeIxYmEMEAC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 196,
@@ -3116,8 +3116,8 @@
           "pub_year": "2010",
           "venue": "NSF Award 10 (1040801), 40801, 2010",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:LgRImbQfgY4C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 200,
@@ -3127,8 +3127,8 @@
           "pub_year": "2010",
           "venue": "NSF Award 9 (964474), 64474, 2010",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=100&pagesize=100&citation_for_view=wUArfPgAAAAJ:u-coK7KVo8oC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 201,
@@ -3149,8 +3149,8 @@
           "pub_year": "2008",
           "venue": "ACM SIGCOMM Computer Communication Review 39 (1), 45-46, 2008",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:M3NEmzRMIkIC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 203,
@@ -3182,8 +3182,8 @@
           "pub_year": "2007",
           "venue": "NSF Award Number 0716287. Directorate for Computer and Information Science …, 2007",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:2tRrZ1ZAMYUC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 206,
@@ -3215,8 +3215,8 @@
           "pub_year": "2006",
           "venue": "NSF Award 6 (619525), 19525, 2006",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:Bg7qf7VwUHIC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 209,
@@ -3226,8 +3226,8 @@
           "pub_year": "2006",
           "venue": "NSF Award Number 0546551. Directorate for Computer and Information Science …, 2006",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wUArfPgAAAAJ&cstart=200&pagesize=100&citation_for_view=wUArfPgAAAAJ:sJsF-0ZLhtgC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 210,
@@ -4022,9 +4022,9 @@
       "source_cache_sha256": "8fa23139a0e757ef5fd0ec55825585f352af57f06f3db85366d33fa9a29e16e8",
       "source_rows": 363,
       "reviewed_exclusion_count": 0,
-      "provisional_hold_count": 131,
-      "provisional_hold_ids_sha256": "6feda401ad5601eca006e5c20022b9bf6dbc0b5ee9c342615e13784a49c39302",
-      "ordinary_gate_rows": 232,
+      "provisional_hold_count": 151,
+      "provisional_hold_ids_sha256": "bc0b6bb03a5b3a9a81aaf047d8e32869bdd041d576563f7cb99fcd86b6d71dcc",
+      "ordinary_gate_rows": 212,
       "decisions": [
         {
           "capture_row_index": 1,
@@ -6410,8 +6410,8 @@
           "pub_year": "1997",
           "venue": "Laboratory for Computer Science, Massachusetts Institute of Technology …, 1997",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:gVv57TyPmFsC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 218,
@@ -6586,8 +6586,8 @@
           "pub_year": "2009",
           "venue": "Carnegie Mellon University, 2009",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:__bU50VfleQC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 234,
@@ -6708,7 +6708,7 @@
           "venue": "",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:5icHVeHT4IsC",
           "decision": "hold",
-          "reason": "Saved venue or output type needs source-level review before mapping."
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 245,
@@ -7081,8 +7081,8 @@
           "pub_year": "2024",
           "venue": "NSF Award 24 (2403194), 3194, 2024",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:C33y2ycGS3YC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 279,
@@ -7092,8 +7092,8 @@
           "pub_year": "2024",
           "venue": "NSF Award Number 2322973. Directorate for Computer and Information Science …, 2024",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:0aBXIfxlw9sC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 280,
@@ -7114,8 +7114,8 @@
           "pub_year": "2023",
           "venue": "NSF Award Number 2307008. Directorate for Engineering 23 (2307008), 7008, 2023",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:qE4H1tSSYIIC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 282,
@@ -7158,8 +7158,8 @@
           "pub_year": "2020",
           "venue": "NSF Award 19 (1938909), 38909, 2020",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:T_ojBgVMvoEC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 286,
@@ -7169,8 +7169,8 @@
           "pub_year": "2018",
           "venue": "NSF Award Number 1763701. Directorate for Computer and Information Science …, 2018",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:isU91gLudPYC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 287,
@@ -7268,8 +7268,8 @@
           "pub_year": "2015",
           "venue": "NSF Award Number 1538204. Directorate for Engineering 15 (1538204), 38204, 2015",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:Wq2b2clWBLsC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 296,
@@ -7301,8 +7301,8 @@
           "pub_year": "2013",
           "venue": "NSF Award 13 (1334194), 34194, 2013",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:tHtfpZlB6tUC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 299,
@@ -7312,8 +7312,8 @@
           "pub_year": "2013",
           "venue": "NSF Award Number 1300202. Directorate for Computer and Information Science …, 2013",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=200&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:2ywjKiB__4kC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 300,
@@ -7367,8 +7367,8 @@
           "pub_year": "2011",
           "venue": "NSF Award Number 1116282. Directorate for Computer and Information Science …, 2011",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:D_tqNUsBuKoC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 305,
@@ -7411,8 +7411,8 @@
           "pub_year": "2007",
           "venue": "NSF Award Number 0719106. Directorate for Computer and Information Science …, 2007",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:eAlLMO4JVmQC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 309,
@@ -7422,8 +7422,8 @@
           "pub_year": "2007",
           "venue": "March, 2007",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:7BrZ7Jt4UNcC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 310,
@@ -7433,8 +7433,8 @@
           "pub_year": "2007",
           "venue": "March, 2007",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:0izLItjtcgwC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 311,
@@ -7455,8 +7455,8 @@
           "pub_year": "2006",
           "venue": "NSF Award Number 0615262. Directorate for Computer and Information Science …, 2006",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:L_l9e5I586QC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 313,
@@ -7488,8 +7488,8 @@
           "pub_year": "2003",
           "venue": "NSF Award Number 0313148. Directorate for Computer and Information Science …, 2003",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:-6RzNnnwWf8C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 316,
@@ -7499,8 +7499,8 @@
           "pub_year": "2003",
           "venue": "NSF Award Number 0311383. Directorate for Computer and Information Science …, 2003",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:RJOyoaXV5v8C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 317,
@@ -7554,8 +7554,8 @@
           "pub_year": "2002",
           "venue": "NSF Award Number 0133077. Directorate for Computer and Information Science …, 2002",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:AYInfyleIOsC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 322,
@@ -7576,8 +7576,8 @@
           "pub_year": "2000",
           "venue": "NSF Award, 81396, 2000",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:YB4bud6kWLwC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 324,
@@ -7588,7 +7588,7 @@
           "venue": "",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:_xSYboBqXhAC",
           "decision": "hold",
-          "reason": "Saved venue or output type needs source-level review before mapping."
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 325,
@@ -7620,8 +7620,8 @@
           "pub_year": "1996",
           "venue": "NSF Award Number 9627445. Directorate for Mathematical and Physical Sciences …, 1996",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Ooc7UNUAAAAJ&cstart=300&pagesize=100&citation_for_view=Ooc7UNUAAAAJ:SAZ1SQo2q1kC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 328,
@@ -8034,9 +8034,9 @@
       "source_cache_sha256": "7941b3cf81a1451003ca59468b28d6318172954ad5626eee8d4df19c480fb404",
       "source_rows": 106,
       "reviewed_exclusion_count": 0,
-      "provisional_hold_count": 47,
-      "provisional_hold_ids_sha256": "b9fb1f312150d094bb6f3cb212b5356e4d85d78368173e3d717dfcb147a7af75",
-      "ordinary_gate_rows": 59,
+      "provisional_hold_count": 52,
+      "provisional_hold_ids_sha256": "f4509a45ec9a156ad95d40e2e560ae75320aa13b0f3a475f5ef6bb86bbd7929c",
+      "ordinary_gate_rows": 54,
       "decisions": [
         {
           "capture_row_index": 1,
@@ -8420,8 +8420,8 @@
           "pub_year": "2009",
           "venue": "Computer Science and Artificial Intelligence Lab, MIT, Tech. Rep. MIT-CSAIL …, 2009",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zkdjit0AAAAJ&pagesize=100&citation_for_view=zkdjit0AAAAJ:9yKSN-GCB0IC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 36,
@@ -8739,8 +8739,8 @@
           "pub_year": "2017",
           "venue": "2017 26th International Conference on Parallel Architectures and Compilation …, 2017",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zkdjit0AAAAJ&pagesize=100&citation_for_view=zkdjit0AAAAJ:_Qo2XoVZTnwC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved title is fragmentary or looks like source metadata; verify output identity before mapping."
         },
         {
           "capture_row_index": 65,
@@ -8937,8 +8937,8 @@
           "pub_year": "2024",
           "venue": "NSF Award 24 (2403144), 3144, 2024",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zkdjit0AAAAJ&pagesize=100&citation_for_view=zkdjit0AAAAJ:Mojj43d5GZwC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 83,
@@ -8992,8 +8992,8 @@
           "pub_year": "2019",
           "venue": "NSF Award Number 1845986. Directorate for Computer and Information Science …, 2019",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zkdjit0AAAAJ&pagesize=100&citation_for_view=zkdjit0AAAAJ:BrmTIyaxlBUC",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 88,
@@ -9014,8 +9014,8 @@
           "pub_year": "2018",
           "venue": "NSF Award 18 (1815882), 15882, 2018",
           "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zkdjit0AAAAJ&pagesize=100&citation_for_view=zkdjit0AAAAJ:eMMeJKvmdy0C",
-          "decision": "ordinary_quality_gates",
-          "reason": "Explicit owner byline and dated, non-fragmentary publication record; ordinary gates still apply."
+          "decision": "hold",
+          "reason": "Saved venue or output type needs source-level review before mapping."
         },
         {
           "capture_row_index": 90,
