@@ -1850,6 +1850,380 @@
           "reviewed_at": "2026-10-25"
         }
       ]
+    },
+    {
+      "person_id": "person-katelynbreivik-8bef079f",
+      "scholar_id": "AcW2EXwAAAAJ",
+      "expected_source_rows": 131,
+      "cache_sha256": "f22c819fb75a356f42dcf10031222303d054c1f6f65dc8e6d50b18583b3a5aff",
+      "expected_reviewed_exclusion_rows": 9,
+      "reviewed_exclusion_ids_sha256": "8e952ea7aa66a16b6aeac16fc12462ae0cec20bf0883f9cefb7fc4f7a60779e1",
+      "held_observations": [
+        {
+          "capture_row_index": 6,
+          "author_pub_id": "AcW2EXwAAAAJ:Tyk-4Ss8FVUC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: decihertz two-journal title and version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&citation_for_view=AcW2EXwAAAAJ:Tyk-4Ss8FVUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 24,
+          "author_pub_id": "AcW2EXwAAAAJ:Zph67rFs4hoC",
+          "reason": "Scholar venue is blank; source and output type require verification before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:Zph67rFs4hoC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "AcW2EXwAAAAJ:Tiz5es2fbqcC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule. Distinct Scholar citation IDs need an exact publication/version crosswalk: Astro2020 gravitational-wave white-paper venue/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:Tiz5es2fbqcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 43,
+          "author_pub_id": "AcW2EXwAAAAJ:b0M2c_1WBrUC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: LISA double-white-dwarf preprint and journal crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:b0M2c_1WBrUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 46,
+          "author_pub_id": "AcW2EXwAAAAJ:7PzlFSSx8tAC",
+          "reason": "Title is a journal metadata fragment matching the volume, page, year, and byline of row 8; exact source identity awaits review.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:7PzlFSSx8tAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 51,
+          "author_pub_id": "AcW2EXwAAAAJ:RHpTSmoSYBkC",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 52,
+          "author_pub_id": "AcW2EXwAAAAJ:u5HHmVD_uO8C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule. Distinct Scholar citation IDs need an exact publication/version crosswalk: stellar-multiplicity BAAS/arXiv version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:u5HHmVD_uO8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "AcW2EXwAAAAJ:M3ejUd6NZC8C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Astro2020 gravitational-wave white-paper venue/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:M3ejUd6NZC8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 61,
+          "author_pub_id": "AcW2EXwAAAAJ:UeHWp8X0CEIC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule. Distinct Scholar citation IDs need an exact publication/version crosswalk: Astro2020 black-hole white-paper venue/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:UeHWp8X0CEIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 62,
+          "author_pub_id": "AcW2EXwAAAAJ:LkGwnXOMwfcC",
+          "reason": "Scholar venue is blank; source and output type require verification before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:LkGwnXOMwfcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 65,
+          "author_pub_id": "AcW2EXwAAAAJ:4OULZ7Gr8RgC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:4OULZ7Gr8RgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 73,
+          "author_pub_id": "AcW2EXwAAAAJ:KxtntwgDAa4C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: LISA double-white-dwarf preprint and journal crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:KxtntwgDAa4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 74,
+          "author_pub_id": "AcW2EXwAAAAJ:_Qo2XoVZTnwC",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:_Qo2XoVZTnwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 75,
+          "author_pub_id": "AcW2EXwAAAAJ:eJXPG6dFmWUC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: decihertz two-journal title and version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:eJXPG6dFmWUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 76,
+          "author_pub_id": "AcW2EXwAAAAJ:aqlVkmm33-oC",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: stellar-multiplicity BAAS/arXiv version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:aqlVkmm33-oC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 77,
+          "author_pub_id": "AcW2EXwAAAAJ:9yKSN-GCB0IC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:9yKSN-GCB0IC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 78,
+          "author_pub_id": "AcW2EXwAAAAJ:ldfaerwXgEUC",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:ldfaerwXgEUC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "AcW2EXwAAAAJ:geHnlv5EZngC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:geHnlv5EZngC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 86,
+          "author_pub_id": "AcW2EXwAAAAJ:sSrBHYA8nusC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:sSrBHYA8nusC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 87,
+          "author_pub_id": "AcW2EXwAAAAJ:8AbLer7MMksC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:8AbLer7MMksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 89,
+          "author_pub_id": "AcW2EXwAAAAJ:tS2w5q8j5-wC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:tS2w5q8j5-wC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 90,
+          "author_pub_id": "AcW2EXwAAAAJ:vRqMK49ujn8C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:vRqMK49ujn8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 91,
+          "author_pub_id": "AcW2EXwAAAAJ:08ZZubdj9fEC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 97,
+          "author_pub_id": "AcW2EXwAAAAJ:EUQCXRtRnyEC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 98,
+          "author_pub_id": "AcW2EXwAAAAJ:D03iK_w7-QYC",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:D03iK_w7-QYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 100,
+          "author_pub_id": "AcW2EXwAAAAJ:rO6llkc54NcC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=20&pagesize=80&citation_for_view=AcW2EXwAAAAJ:rO6llkc54NcC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 101,
+          "author_pub_id": "AcW2EXwAAAAJ:1qzjygNMrQYC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:1qzjygNMrQYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 102,
+          "author_pub_id": "AcW2EXwAAAAJ:g5m5HwL7SMYC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:g5m5HwL7SMYC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 103,
+          "author_pub_id": "AcW2EXwAAAAJ:ZHo1McVdvXMC",
+          "reason": "Scholar venue is blank; source and output type require verification before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:ZHo1McVdvXMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 104,
+          "author_pub_id": "AcW2EXwAAAAJ:M05iB0D1s5AC",
+          "reason": "ArXiv career guide awaits a consistent rule for map-eligible scholarly output types.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:M05iB0D1s5AC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 105,
+          "author_pub_id": "AcW2EXwAAAAJ:NaGl4SEjCO4C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:NaGl4SEjCO4C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 106,
+          "author_pub_id": "AcW2EXwAAAAJ:RGFaLdJalmkC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:RGFaLdJalmkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 107,
+          "author_pub_id": "AcW2EXwAAAAJ:maZDTaKrznsC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:maZDTaKrznsC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 108,
+          "author_pub_id": "AcW2EXwAAAAJ:isC4tDSrTZIC",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:isC4tDSrTZIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 109,
+          "author_pub_id": "AcW2EXwAAAAJ:hC7cP41nSMkC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:hC7cP41nSMkC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 110,
+          "author_pub_id": "AcW2EXwAAAAJ:-f6ydRqryjwC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:-f6ydRqryjwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 111,
+          "author_pub_id": "AcW2EXwAAAAJ:IWHjjKOFINEC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:IWHjjKOFINEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 113,
+          "author_pub_id": "AcW2EXwAAAAJ:hqOjcs7Dif8C",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:hqOjcs7Dif8C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 114,
+          "author_pub_id": "AcW2EXwAAAAJ:UebtZRa9Y70C",
+          "reason": "Distinct Scholar citation IDs need an exact publication/version crosswalk: Astro2020 black-hole white-paper venue/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:UebtZRa9Y70C",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 115,
+          "author_pub_id": "AcW2EXwAAAAJ:roLk4NBRz8UC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:roLk4NBRz8UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 116,
+          "author_pub_id": "AcW2EXwAAAAJ:qjMakFHDy7sC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:qjMakFHDy7sC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 118,
+          "author_pub_id": "AcW2EXwAAAAJ:dhFuZR0502QC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 120,
+          "author_pub_id": "AcW2EXwAAAAJ:Se3iqnhoufwC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:Se3iqnhoufwC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 121,
+          "author_pub_id": "AcW2EXwAAAAJ:ufrVoPGSRksC",
+          "reason": "Scholar venue is blank; source and output type require verification before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:ufrVoPGSRksC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 122,
+          "author_pub_id": "AcW2EXwAAAAJ:ULOm3_A8WrAC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:ULOm3_A8WrAC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 123,
+          "author_pub_id": "AcW2EXwAAAAJ:MXK_kJrjxJIC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:MXK_kJrjxJIC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 124,
+          "author_pub_id": "AcW2EXwAAAAJ:KlAtU1dfN6UC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:KlAtU1dfN6UC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 125,
+          "author_pub_id": "AcW2EXwAAAAJ:YOwf2qJgpHMC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:YOwf2qJgpHMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 126,
+          "author_pub_id": "AcW2EXwAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 127,
+          "author_pub_id": "AcW2EXwAAAAJ:2osOgNQ5qMEC",
+          "reason": "Meeting abstract or presentation awaits a consistent map-point and collaboration-link rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:2osOgNQ5qMEC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 129,
+          "author_pub_id": "AcW2EXwAAAAJ:3s1wT3WcHBgC",
+          "reason": "Scholar venue is blank; source and output type require verification before mapping.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:3s1wT3WcHBgC",
+          "reviewed_at": "2026-10-26"
+        },
+        {
+          "capture_row_index": 131,
+          "author_pub_id": "AcW2EXwAAAAJ:d1gkVwhDpl0C",
+          "reason": "Software or repository record awaits a consistent research-output and citation-version rule.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=AcW2EXwAAAAJ&cstart=100&pagesize=100&citation_for_view=AcW2EXwAAAAJ:d1gkVwhDpl0C",
+          "reviewed_at": "2026-10-26"
+        }
+      ]
     }
   ]
 }

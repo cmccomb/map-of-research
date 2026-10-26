@@ -247,11 +247,13 @@
     {
       "person_id": "person-katelynbreivik-8bef079f",
       "scholar_id": "AcW2EXwAAAAJ",
-      "state": "held",
+      "state": "released",
       "expected_source_rows": 131,
       "cache_sha256": "f22c819fb75a356f42dcf10031222303d054c1f6f65dc8e6d50b18583b3a5aff",
-      "reason": "Complete 131-row Physics capture is bound to saved source and cache hashes. Exact observation and metadata review remains open; no public work or map contribution is approved.",
-      "reviewed_at": "2026-10-25"
+      "reason": "Complete 131-row Physics profile is source-bound. Nine exact reviewed exclusions and 52 exact provisional holds protect unresolved observations; the other 70 rows enter ordinary work and map quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 52,
+      "provisional_hold_ids_sha256": "43d1cff74a53a8bd7cd8fa06211f4d31ba7ba88e01a4341402e0aa7d28825544"
     },
     {
       "person_id": "person-sufeishi-74105d16",

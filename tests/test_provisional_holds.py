@@ -220,6 +220,31 @@ def test_physics_preview_citations_are_bound_to_exact_source_holds():
             assert (scholar_id, author_pub_id) not in exclusions
 
 
+def test_breivik_release_accounts_for_every_source_row_without_hold_exclusion_overlap():
+    scholar_id = "AcW2EXwAAAAJ"
+    profile = next(
+        item for item in load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
+        if item.scholar_id == scholar_id
+    )
+    decision = next(
+        item for item in load_profile_releases(DEFAULT_PROFILE_RELEASES_PATH)
+        if item.scholar_id == scholar_id
+    )
+    held_ids = {item.author_pub_id for item in profile.held_observations}
+    excluded_ids = {
+        author_pub_id for sid, author_pub_id in load_exclusions(DEFAULT_EXCLUSIONS_PATH)
+        if sid == scholar_id
+    }
+    assert decision.state == "released"
+    assert profile.expected_source_rows == decision.expected_source_rows == 131
+    assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 9
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 52
+    assert held_ids.isdisjoint(excluded_ids)
+    assert hold_ids_sha256(excluded_ids) == profile.reviewed_exclusion_ids_sha256
+    assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 70
+
+
 def test_checked_in_bernhard_hold_targets_only_unresolved_gottingen_row():
     profiles = load_provisional_holds(DEFAULT_PROVISIONAL_HOLDS_PATH)
     profile = next(item for item in profiles if item.scholar_id == "hfFKwRcAAAAJ")
