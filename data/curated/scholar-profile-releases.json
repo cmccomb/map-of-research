@@ -348,6 +348,61 @@
       "reviewed_at": "2026-10-25",
       "expected_provisional_hold_rows": 116,
       "provisional_hold_ids_sha256": "d8ea58cc27fd7d972de622cad846a76780e77d96e510b2ee3d57062bd1c3f370"
+    },
+    {
+      "person_id": "person-aayushjain-aac61f01",
+      "scholar_id": "VZ6S70MAAAAJ",
+      "state": "released",
+      "expected_source_rows": 78,
+      "cache_sha256": "86f04a84b350cb97291b643a7446d425b7f0f4738315511fa285b5528d59ae0e",
+      "reason": "Complete visible 78-row SCS Scholar source; 7 exact provisional holds protect unresolved bylines, years, same-title versions, and output types. 71 rows enter ordinary producer quality and attribution gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 7,
+      "provisional_hold_ids_sha256": "9c72043a280e4572bb5ca6806043ebf3806a62835420f9aad1c15574b973f4da"
+    },
+    {
+      "person_id": "person-aviralkumar-aa7154c0",
+      "scholar_id": "zBUwaGkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 110,
+      "cache_sha256": "dfdf90b0e5905f1caf4b7d0adbc17ddcd96782405d9b6d56ae444c888ae8757e",
+      "reason": "Complete visible 110-row SCS Scholar source; 19 exact provisional holds protect unresolved bylines, years, same-title versions, and output types. 91 rows enter ordinary producer quality and attribution gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 19,
+      "provisional_hold_ids_sha256": "dd1423e53316d8681bf0d7d8676949feee70ba01891686ae2d2becc66007909c"
+    },
+    {
+      "person_id": "person-carolynrose-0ff383b5",
+      "scholar_id": "BMydCgcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 677,
+      "cache_sha256": "f288b0561dd4a9ae2715dd0b6b0e0d9411f0d24dcd47a2c1d6edad65cb5a9ed3",
+      "reason": "Complete visible 677-row SCS Scholar source; 139 exact provisional holds protect unresolved bylines, years, same-title versions, and output types. 538 rows enter ordinary producer quality and attribution gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 139,
+      "provisional_hold_ids_sha256": "15b3abc00b5981494522ba05168739e5926504ddd50cb6f33d8096e9b51977b6"
+    },
+    {
+      "person_id": "person-monadiab-7b90c255",
+      "scholar_id": "-y6SIhQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 413,
+      "cache_sha256": "4afbd979ae26c20ac38bc09ac290928552a32f513bbb709f0d3528379a54cd17",
+      "reason": "Complete visible 413-row SCS Scholar source; 107 exact provisional holds protect unresolved bylines, years, same-title versions, and output types. 306 rows enter ordinary producer quality and attribution gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 107,
+      "provisional_hold_ids_sha256": "01cc37ef8b60a2ee5e5eb33e23035054cfccaec78b6868dee94e04c938632e9c"
+    },
+    {
+      "person_id": "person-timdettmers-6d9c0030",
+      "scholar_id": "lHI3w5kAAAAJ",
+      "state": "released",
+      "expected_source_rows": 31,
+      "cache_sha256": "ed17c19bdf4625fe43148654ef930262c9b22174bcaa6f28e7e8af3bebcecf7d",
+      "reason": "Complete visible 31-row SCS Scholar source; 5 exact provisional holds protect unresolved bylines, years, same-title versions, and output types. 26 rows enter ordinary producer quality and attribution gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 5,
+      "provisional_hold_ids_sha256": "35a48401a1ffce60b7b0d28481c6f020ff56f452e1d1f73719ea885eac28bdd9"
     }
   ]
 }
