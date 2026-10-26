@@ -1,0 +1,1229 @@
+{
+  "captured_at": "2026-10-26T19:37:30.654328+00:00",
+  "url": "https://scholar.google.com/citations?user=7CKFg9EAAAAJ&hl=en&cstart=0&pagesize=100",
+  "title": "‪Jeffrey Ichnowski‬ - ‪Google Scholar‬",
+  "scholar_user_id": "7CKFg9EAAAAJ",
+  "person_name": "Jeffrey Ichnowski",
+  "displayed_count": 135,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "page_load_count": 1,
+  "works": [
+    {
+      "index": 1,
+      "title": "Dex-NeRF: Using a neural radiance field to grasp transparent objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:TQgYirikUcIC",
+      "authors": "J Ichnowski, Y Avigal, J Kerr, K Goldberg",
+      "venue": "arXiv preprint arXiv:2110.14217, 2021",
+      "citation_count": "264",
+      "year": "2021"
+    },
+    {
+      "index": 2,
+      "title": "Deep imitation learning of sequential fabric smoothing from an algorithmic supervisor",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:_FxGoFyzp5QC",
+      "authors": "D Seita, A Ganapathi, R Hoque, M Hwang, E Cen, AK Tanwani, ...",
+      "venue": "2020 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2020",
+      "citation_count": "204",
+      "year": "2020"
+    },
+    {
+      "index": 3,
+      "title": "Evo-nerf: Evolving nerf for sequential robot grasping of transparent objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:RGFaLdJalmkC",
+      "authors": "J Kerr, L Fu, H Huang, Y Avigal, M Tancik, J Ichnowski, A Kanazawa, ...",
+      "venue": "6th annual conference on robot learning, 2022",
+      "citation_count": "143",
+      "year": "2022"
+    },
+    {
+      "index": 4,
+      "title": "Deep learning can accelerate grasp-optimized motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:9ZlFYXVOiuMC",
+      "authors": "J Ichnowski, Y Avigal, V Satish, K Goldberg",
+      "venue": "Science Robotics 5 (48), eabd7710, 2020",
+      "citation_count": "126",
+      "year": "2020"
+    },
+    {
+      "index": 5,
+      "title": "Fogros2: An adaptive platform for cloud and fog robotics using ros 2",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:M3NEmzRMIkIC",
+      "authors": "J Ichnowski, K Chen, K Dharmarajan, S Adebola, M Danielczuk, ...",
+      "venue": "2023 IEEE international conference on robotics and automation (ICRA), 5493-5500, 2023",
+      "citation_count": "115",
+      "year": "2023"
+    },
+    {
+      "index": 6,
+      "title": "Real2sim2real: Self-supervised learning of physical single-step dynamic actions for planar robot casting",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:GnPB-g6toBAC",
+      "authors": "V Lim, H Huang, LY Chen, J Wang, J Ichnowski, D Seita, M Laskey, ...",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 8282-8289, 2022",
+      "citation_count": "109",
+      "year": "2022"
+    },
+    {
+      "index": 7,
+      "title": "Robots of the lost arc: Self-supervised learning to dynamically manipulate fixed-endpoint cables",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:4DMP91E08xMC",
+      "authors": "H Zhang, J Ichnowski, D Seita, J Wang, H Huang, K Goldberg",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 4560-4567, 2021",
+      "citation_count": "93",
+      "year": "2021"
+    },
+    {
+      "index": 8,
+      "title": "Efficiently calibrating cable-driven surgical robots with RGBD fiducial sensing and recurrent neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:8k81kl-MbHgC",
+      "authors": "M Hwang, B Thananjeyan, S Paradis, D Seita, J Ichnowski, D Fer, T Low, ...",
+      "venue": "IEEE Robotics and Automation Letters 5 (4), 5937-5944, 2020",
+      "citation_count": "90",
+      "year": "2020"
+    },
+    {
+      "index": 9,
+      "title": "Untangling dense knots by learning task-relevant keypoints",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:Wp0gIr-vW9MC",
+      "authors": "J Grannen, P Sundaresan, B Thananjeyan, J Ichnowski, A Balakrishna, ...",
+      "venue": "arXiv preprint arXiv:2011.04999, 2020",
+      "citation_count": "83",
+      "year": "2020"
+    },
+    {
+      "index": 10,
+      "title": "Gomp: Grasp-optimized motion planning for bin picking",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:0EnyYjriUFMC",
+      "authors": "J Ichnowski, M Danielczuk, J Xu, V Satish, K Goldberg",
+      "venue": "2020 IEEE international conference on robotics and automation (ICRA), 5270-5277, 2020",
+      "citation_count": "79",
+      "year": "2020"
+    },
+    {
+      "index": 11,
+      "title": "Fogros: An adaptive framework for automating fog robotics deployment",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:e5wmG9Sq2KIC",
+      "authors": "KE Chen, Y Liang, N Jha, J Ichnowski, M Danielczuk, J Gonzalez, ...",
+      "venue": "2021 IEEE 17th International Conference on Automation Science and …, 2021",
+      "citation_count": "74",
+      "year": "2021"
+    },
+    {
+      "index": 12,
+      "title": "Accelerating quadratic optimization with reinforcement learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:hFOr9nPyWt4C",
+      "authors": "J Ichnowski, P Jain, B Stellato, G Banjac, M Luo, F Borrelli, JE Gonzalez, ...",
+      "venue": "Advances in Neural Information Processing Systems 34, 21043-21055, 2021",
+      "citation_count": "72",
+      "year": "2021"
+    },
+    {
+      "index": 13,
+      "title": "Self-supervised visuo-tactile pretraining to locate and follow garment features",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:zA6iFVUQeVQC",
+      "authors": "J Kerr, H Huang, A Wilcox, R Hoque, J Ichnowski, R Calandra, ...",
+      "venue": "arXiv preprint arXiv:2209.13042, 2022",
+      "citation_count": "69",
+      "year": "2022"
+    },
+    {
+      "index": 14,
+      "title": "Md-splatting: Learning metric deformation from 4d gaussians in highly deformable scenes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:3s1wT3WcHBgC",
+      "authors": "BP Duisterhof, Z Mandi, Y Yao, JW Liu, MZ Shou, S Song, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2312.00583 2 (3), 2023",
+      "citation_count": "67",
+      "year": "2023"
+    },
+    {
+      "index": 15,
+      "title": "Applying depth-sensing to automated surgical manipulation with a da vinci robot",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:ufrVoPGSRksC",
+      "authors": "M Hwang, D Seita, B Thananjeyan, J Ichnowski, S Paradis, D Fer, T Low, ...",
+      "venue": "2020 international symposium on medical robotics (ISMR), 22-29, 2020",
+      "citation_count": "61",
+      "year": "2020"
+    },
+    {
+      "index": 16,
+      "title": "Intercepting the future: Latent-space predictive world model for dynamic VLA manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:geHnlv5EZngC",
+      "authors": "SN Syed, A Jakobsson, H Hao, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2606.02486, 2026",
+      "citation_count": "60",
+      "year": "2026"
+    },
+    {
+      "index": 17,
+      "title": "Deformgs: Scene flow in highly deformable scenes for deformable object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:dshw04ExmUIC",
+      "authors": "BP Duisterhof, M Zhao, Y Yao, JW Liu, J Seidenschwarz, MZ Shou, ...",
+      "venue": "International Workshop on the Algorithmic Foundations of Robotics, 263-282, 2024",
+      "citation_count": "58",
+      "year": "2024"
+    },
+    {
+      "index": 18,
+      "title": "Database forms with attached audit history",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:u-x6o8ySG0sC",
+      "authors": "JWC Kao, M Hill, JG Ichnowski, DTS Wu",
+      "venue": "US Patent 6,070,177, 2000",
+      "citation_count": "57",
+      "year": "2000"
+    },
+    {
+      "index": 19,
+      "title": "Learning to localize, grasp, and hand over unmodified surgical needles",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:iH-uZ7U-co4C",
+      "authors": "A Wilcox, J Kerr, B Thananjeyan, J Ichnowski, M Hwang, S Paradis, D Fer, ...",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 9637-9643, 2022",
+      "citation_count": "54",
+      "year": "2022"
+    },
+    {
+      "index": 20,
+      "title": "Parallel sampling-based motion planning with superlinear speedup",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:2osOgNQ5qMEC",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2012",
+      "citation_count": "54",
+      "year": "2012"
+    },
+    {
+      "index": 21,
+      "title": "Automating surgical peg transfer: Calibration with deep learning can exceed speed, accuracy, and consistency of humans",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:maZDTaKrznsC",
+      "authors": "M Hwang, J Ichnowski, B Thananjeyan, D Seita, S Paradis, D Fer, T Low, ...",
+      "venue": "IEEE Transactions on Automation Science and Engineering 20 (2), 909-922, 2022",
+      "citation_count": "52",
+      "year": "2022"
+    },
+    {
+      "index": 22,
+      "title": "Intermittent visual servoing: Efficiently learning policies robust to instrument changes for high-precision surgical manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:mVmsd5A6BfQC",
+      "authors": "S Paradis, M Hwang, B Thananjeyan, J Ichnowski, D Seita, D Fer, T Low, ...",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 7166-7173, 2021",
+      "citation_count": "52",
+      "year": "2021"
+    },
+    {
+      "index": 23,
+      "title": "Planar robot casting with real2sim2real self-supervised learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:4JMBOYKVnBMC",
+      "authors": "V Lim, H Huang, LY Chen, J Wang, J Ichnowski, D Seita, M Laskey, ...",
+      "venue": "arXiv preprint arXiv:2111.04814, 2021",
+      "citation_count": "51",
+      "year": "2021"
+    },
+    {
+      "index": 24,
+      "title": "Adversarial grasp objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:UebtZRa9Y70C",
+      "authors": "D Wang, D Tseng, P Li, Y Jiang, M Guo, M Danielczuk, J Mahler, ...",
+      "venue": "2019 IEEE 15th International Conference on Automation Science and …, 2019",
+      "citation_count": "45",
+      "year": "2019"
+    },
+    {
+      "index": 25,
+      "title": "Scalable multicore motion planning using lock-free concurrency",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:UeHWp8X0CEIC",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "IEEE Transactions on Robotics 30 (5), 1123-1136, 2014",
+      "citation_count": "45",
+      "year": "2014"
+    },
+    {
+      "index": 26,
+      "title": "Untangling dense non-planar knots by learning manipulation features and recovery policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:-f6ydRqryjwC",
+      "authors": "P Sundaresan, J Grannen, B Thananjeyan, A Balakrishna, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2107.08942, 2021",
+      "citation_count": "44",
+      "year": "2021"
+    },
+    {
+      "index": 27,
+      "title": "Semantic and geometric modeling with neural message passing in 3d scene graphs for hierarchical mechanical search",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:dhFuZR0502QC",
+      "authors": "A Kurenkov, R Martín-Martín, J Ichnowski, K Goldberg, S Savarese",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 11227 …, 2021",
+      "citation_count": "44",
+      "year": "2021"
+    },
+    {
+      "index": 28,
+      "title": "Mechanical search on shelves using lateral access x-ray",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:QIV2ME_5wuYC",
+      "authors": "H Huang, M Dominguez-Kuhne, V Satish, M Danielczuk, K Sanders, ...",
+      "venue": "2021 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2021",
+      "citation_count": "40",
+      "year": "2021"
+    },
+    {
+      "index": 29,
+      "title": "Motion planning templates: A motion planning framework for robots with low-power CPUs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:roLk4NBRz8UC",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "2019 International Conference on Robotics and Automation (ICRA), 612-618, 2019",
+      "citation_count": "39",
+      "year": "2019"
+    },
+    {
+      "index": 30,
+      "title": "Gomp-fit: Grasp-optimized motion planning for fast inertial transport",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:RHpTSmoSYBkC",
+      "authors": "J Ichnowski, Y Avigal, Y Liu, K Goldberg",
+      "venue": "2022 international conference on robotics and automation (ICRA), 5255-5261, 2022",
+      "citation_count": "38",
+      "year": "2022"
+    },
+    {
+      "index": 31,
+      "title": "Disentangling dense multi-cable knots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:IWHjjKOFINEC",
+      "authors": "V Viswanath, J Grannen, P Sundaresan, B Thananjeyan, A Balakrishna, ...",
+      "venue": "2021 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2021",
+      "citation_count": "38",
+      "year": "2021"
+    },
+    {
+      "index": 32,
+      "title": "Fast nearest neighbor search in SE (3) for sampling-based motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:IjCSPb-OGe4C",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "Algorithmic Foundations of Robotics XI: Selected Contributions of the …, 2015",
+      "citation_count": "38",
+      "year": "2015"
+    },
+    {
+      "index": 33,
+      "title": "Multi-object grasping in the plane",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:JV2RwH3_ST0C",
+      "authors": "WC Agboh, J Ichnowski, K Goldberg, MR Dogar",
+      "venue": "The International Symposium of Robotics Research, 222-238, 2022",
+      "citation_count": "37",
+      "year": "2022"
+    },
+    {
+      "index": 34,
+      "title": "Autonomously untangling long cables",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:ns9cj8rnVeAC",
+      "authors": "V Viswanath, K Shivakumar, J Kerr, B Thananjeyan, E Novoseller, ...",
+      "venue": "arXiv preprint arXiv:2207.07813, 2022",
+      "citation_count": "37",
+      "year": "2022"
+    },
+    {
+      "index": 35,
+      "title": "Efficiently learning single-arm fling motions to smooth garments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:blknAaTinKkC",
+      "authors": "LY Chen, H Huang, E Novoseller, D Seita, J Ichnowski, M Laskey, ...",
+      "venue": "The International Symposium of Robotics Research, 36-51, 2022",
+      "citation_count": "36",
+      "year": "2022"
+    },
+    {
+      "index": 36,
+      "title": "Fog robotics algorithms for distributed motion planning using lambda serverless computing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:3fE2CSJIrl8C",
+      "authors": "J Ichnowski, W Lee, V Murta, S Paradis, R Alterovitz, JE Gonzalez, I Stoica, ...",
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 4232-4238, 2020",
+      "citation_count": "36",
+      "year": "2020"
+    },
+    {
+      "index": 37,
+      "title": "Concurrent nearest-neighbor searching for parallel sampling-based motion planning in SO (3), SE (3), and euclidean spaces",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:LkGwnXOMwfcC",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "International Workshop on the Algorithmic Foundations of Robotics, 69-85, 2018",
+      "citation_count": "35",
+      "year": "2018"
+    },
+    {
+      "index": 38,
+      "title": "Sgtm 2.0: Autonomously untangling long cables using interactive perception",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:J_g5lzvAfSwC",
+      "authors": "K Shivakumar, V Viswanath, A Gu, Y Avigal, J Kerr, J Ichnowski, R Cheng, ...",
+      "venue": "arXiv preprint arXiv:2209.13706, 2022",
+      "citation_count": "34",
+      "year": "2022"
+    },
+    {
+      "index": 39,
+      "title": "Fogros2-sgc: A ros2 cloud robotics platform for secure global connectivity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:g5m5HwL7SMYC",
+      "authors": "K Chen, R Hoque, K Dharmarajan, E LLontopl, S Adebola, J Ichnowski, ...",
+      "venue": "2023 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2023",
+      "citation_count": "33",
+      "year": "2023"
+    },
+    {
+      "index": 40,
+      "title": "Orienting novel 3d objects using self-supervised learning of rotation transforms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:qxL8FJ1GzNcC",
+      "authors": "S Devgon, J Ichnowski, A Balakrishna, H Zhang, K Goldberg",
+      "venue": "2020 IEEE 16th International Conference on Automation Science and …, 2020",
+      "citation_count": "32",
+      "year": "2020"
+    },
+    {
+      "index": 41,
+      "title": "Minimal work: A grasp quality metric for deformable hollow objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:_kc_bZDykSQC",
+      "authors": "J Xu, M Danielczuk, J Ichnowski, J Mahler, E Steinbach, K Goldberg",
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 1546-1552, 2020",
+      "citation_count": "32",
+      "year": "2020"
+    },
+    {
+      "index": 42,
+      "title": "Cloud-based motion plan computation for power-constrained robots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:u5HHmVD_uO8C",
+      "authors": "J Ichnowski, J Prins, R Alterovitz",
+      "venue": "Algorithmic Foundations of Robotics XII: Proceedings of the Twelfth Workshop …, 2020",
+      "citation_count": "32",
+      "year": "2020"
+    },
+    {
+      "index": 43,
+      "title": "Scripting language for distributed database programming",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:Y0pCki6q_DkC",
+      "authors": "DTS Wu, JG Ichnowski",
+      "venue": "US Patent 6,243,711, 2001",
+      "citation_count": "31",
+      "year": "2001"
+    },
+    {
+      "index": 44,
+      "title": "Mechanical search on shelves with efficient stacking and destacking of objects",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:BqipwSGYUEgC",
+      "authors": "H Huang, L Fu, M Danielczuk, CM Kim, Z Tam, J Ichnowski, A Angelova, ...",
+      "venue": "The International Symposium of Robotics Research, 205-221, 2022",
+      "citation_count": "29",
+      "year": "2022"
+    },
+    {
+      "index": 45,
+      "title": "FogROS2-LS: A location-independent fog robotics framework for latency sensitive ROS2 applications",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:f2IySw72cVMC",
+      "authors": "K Chen, M Wang, M Gualtieri, N Tian, C Juette, L Ren, J Ichnowski, ...",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 10581 …, 2024",
+      "citation_count": "28",
+      "year": "2024"
+    },
+    {
+      "index": 46,
+      "title": "Automating robot failure recovery using vision-language models with optimized prompts",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:b0M2c_1WBrUC",
+      "authors": "H Chen, Y Yao, R Liu, C Liu, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2409.03966, 2024",
+      "citation_count": "27",
+      "year": "2024"
+    },
+    {
+      "index": 47,
+      "title": "Mechanical search on shelves using a novel “bluction” tool",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:bEWYMUwI8FkC",
+      "authors": "H Huang, M Danielczuk, CM Kim, L Fu, Z Tam, J Ichnowski, A Angelova, ...",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 6158-6164, 2022",
+      "citation_count": "27",
+      "year": "2022"
+    },
+    {
+      "index": 48,
+      "title": "Dynamics modeling and culling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:zYLM7Y9cAGgC",
+      "authors": "S Chenney, J Ichnowski, D Forsyth",
+      "venue": "IEEE Computer Graphics and Applications 19 (2), 79-87, 1999",
+      "citation_count": "27",
+      "year": "1999"
+    },
+    {
+      "index": 49,
+      "title": "Policy-based bayesian experimental design for non-differentiable implicit models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:isC4tDSrTZIC",
+      "authors": "V Lim, E Novoseller, J Ichnowski, H Huang, K Goldberg",
+      "venue": "arXiv preprint arXiv:2203.04272, 2022",
+      "citation_count": "26",
+      "year": "2022"
+    },
+    {
+      "index": 50,
+      "title": "Residual-nerf: Learning residual nerfs for transparent object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:dfsIfKJdRG4C",
+      "authors": "BP Duisterhof, Y Mao, SH Teng, J Ichnowski",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 13918 …, 2024",
+      "citation_count": "24",
+      "year": "2024"
+    },
+    {
+      "index": 51,
+      "title": "Handloom: Learned tracing of one-dimensional objects for inspection and manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:HoB7MX3m0LUC",
+      "authors": "V Viswanath, K Shivakumar, M Parulekar, J Ajmera, J Kerr, J Ichnowski, ...",
+      "venue": "Conference on Robot Learning, 341-357, 2023",
+      "citation_count": "24",
+      "year": "2023"
+    },
+    {
+      "index": 52,
+      "title": "Streaming insertion of tokens into content to protect against CSRF",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:qjMakFHDy7sC",
+      "authors": "J Ichnowski",
+      "venue": "US Patent 8,438,649, 2013",
+      "citation_count": "24",
+      "year": "2013"
+    },
+    {
+      "index": 53,
+      "title": "Input parameter filtering for web application security",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:9yKSN-GCB0IC",
+      "authors": "J Ichnowski",
+      "venue": "US Patent App. 12/718,092, 2011",
+      "citation_count": "24",
+      "year": "2011"
+    },
+    {
+      "index": 54,
+      "title": "Learning to efficiently plan robust frictional multi-object grasps",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:RYcK_YlVTxYC",
+      "authors": "WC Agboh, S Sharma, K Srinivas, M Parulekar, G Datta, T Qiu, ...",
+      "venue": "2023 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2023",
+      "citation_count": "23",
+      "year": "2023"
+    },
+    {
+      "index": 55,
+      "title": "Avplug: Approach vector planning for unicontact grasping amid clutter",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:R3hNpaxXUhUC",
+      "authors": "Y Avigal, V Satish, Z Tam, H Huang, H Zhang, M Danielczuk, J Ichnowski, ...",
+      "venue": "2021 IEEE 17th international conference on automation science and …, 2021",
+      "citation_count": "22",
+      "year": "2021"
+    },
+    {
+      "index": 56,
+      "title": "Superhuman surgical peg transfer using depth-sensing and deep recurrent neural networks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:L8Ckcad2t8MC",
+      "authors": "M Hwang, B Thananjeyan, D Seita, J Ichnowski, S Paradis, D Fer, T Low, ...",
+      "venue": "arXiv preprint arXiv:2012.12844, 2020",
+      "citation_count": "22",
+      "year": "2020"
+    },
+    {
+      "index": 57,
+      "title": "The economic case for cloud-based computation for robot motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:WF5omc3nYNoC",
+      "authors": "J Ichnowski, J Prins, R Alterovitz",
+      "venue": "Robotics Research: The 18th International Symposium ISRR, 59-65, 2019",
+      "citation_count": "22",
+      "year": "2019"
+    },
+    {
+      "index": 58,
+      "title": "Cloth-splatting: 3d cloth state estimation from rgb supervision",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:EUQCXRtRnyEC",
+      "authors": "A Longhini, M Büsching, BP Duisterhof, J Lundell, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2501.01715, 2025",
+      "citation_count": "21",
+      "year": "2025"
+    },
+    {
+      "index": 59,
+      "title": "Dex-net ar: Distributed deep grasp planning using a commodity cellphone and augmented reality app",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:4TOpqqG69KYC",
+      "authors": "H Zhang, J Ichnowski, Y Avigal, J Gonzales, I Stoica, K Goldberg",
+      "venue": "2020 IEEE International Conference on Robotics and Automation (ICRA), 552-558, 2020",
+      "citation_count": "21",
+      "year": "2020"
+    },
+    {
+      "index": 60,
+      "title": "A digital twin framework for telesurgery in the presence of varying network quality of service",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:35N4QoGY0k4C",
+      "authors": "S Bonne, W Panitch, K Dharmarajan, K Srinivas, JL Kincade, T Low, ...",
+      "venue": "2022 IEEE 18th international conference on automation science and …, 2022",
+      "citation_count": "20",
+      "year": "2022"
+    },
+    {
+      "index": 61,
+      "title": "Visuo-acoustic hand pose and contact estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:WbkHhVStYXYC",
+      "authors": "Y Mao, U Yoo, Y Yao, SN Syed, L Bondi, J Francis, J Oh, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2508.00852, 2025",
+      "citation_count": "19",
+      "year": "2025"
+    },
+    {
+      "index": 62,
+      "title": "Poe: Acoustic soft robotic proprioception for omnidirectional end-effectors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:rO6llkc54NcC",
+      "authors": "U Yoo, Z Lopez, J Ichnowski, J Oh",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 14980 …, 2024",
+      "citation_count": "19",
+      "year": "2024"
+    },
+    {
+      "index": 63,
+      "title": "Gomp-st: Grasp optimized motion planning for suction transport",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:k_IJM867U9cC",
+      "authors": "Y Avigal, J Ichnowski, MY Cao, K Goldberg",
+      "venue": "International Workshop on the Algorithmic Foundations of Robotics, 488-505, 2022",
+      "citation_count": "19",
+      "year": "2022"
+    },
+    {
+      "index": 64,
+      "title": "Dexterous manipulation policies from rgb human videos via 3d hand-object trajectory reconstruction",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:08ZZubdj9fEC",
+      "authors": "H Chen, T Dong, T Wu, L Wang, Y Jangir, Y Niu, Y Ye, H Bharadhwaj, ...",
+      "venue": "arXiv preprint arXiv:2602.09013, 2026",
+      "citation_count": "18",
+      "year": "2026"
+    },
+    {
+      "index": 65,
+      "title": "Korol: Learning visualizable object feature with Koopman operator rollout for manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:D03iK_w7-QYC",
+      "authors": "H Chen, A Abuduweili, A Agrawal, Y Han, H Ravichandar, C Liu, ...",
+      "venue": "arXiv preprint arXiv:2407.00548, 2024",
+      "citation_count": "18",
+      "year": "2024"
+    },
+    {
+      "index": 66,
+      "title": "Deep imitation learning of sequential fabric smoothing from an algorithmic supervisor. In 2020 IEEE",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:lSLTfruPkqcC",
+      "authors": "D Seita, A Ganapathi, R Hoque, M Hwang, E Cen, AK Tanwani, ...",
+      "venue": "RSJ International Conference on Intelligent Robots and Systems (IROS), 9651-9658, 0",
+      "citation_count": "18",
+      "year": ""
+    },
+    {
+      "index": 67,
+      "title": "Soft and compliant contact-rich hair manipulation and care",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:KxtntwgDAa4C",
+      "authors": "U Yoo, N Dennler, E Xing, M Matarić, S Nikolaidis, J Ichnowski, J Oh",
+      "venue": "2025 20th ACM/IEEE International Conference on Human-Robot Interaction (HRI …, 2025",
+      "citation_count": "17",
+      "year": "2025"
+    },
+    {
+      "index": 68,
+      "title": "Legs: Learning efficient grasp sets for exploratory grasping",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:j3f4tGmQtD8C",
+      "authors": "L Fu, M Danielczuk, A Balakrishna, DS Brown, J Ichnowski, E Solowjow, ...",
+      "venue": "2022 International Conference on Robotics and Automation (ICRA), 8259-8265, 2022",
+      "citation_count": "16",
+      "year": "2022"
+    },
+    {
+      "index": 69,
+      "title": "Serverless multi-query motion planning for fog robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:7PzlFSSx8tAC",
+      "authors": "R Anand, J Ichnowski, C Wu, JM Hellerstein, JE Gonzalez, K Goldberg",
+      "venue": "2021 IEEE International Conference on Robotics and Automation (ICRA), 7457-7463, 2021",
+      "citation_count": "16",
+      "year": "2021"
+    },
+    {
+      "index": 70,
+      "title": "Fogros2-ft: Fault tolerant cloud robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:abG-DnoFyZgC",
+      "authors": "K Chen, K Hari, T Chung, M Wang, N Tian, C Juette, J Ichnowski, L Ren, ...",
+      "venue": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2024",
+      "citation_count": "14",
+      "year": "2024"
+    },
+    {
+      "index": 71,
+      "title": "Sonicboom: contact localization using array of microphones",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:nb7KW1ujOQ8C",
+      "authors": "M Lee, U Yoo, J Oh, J Ichnowski, G Kantor, O Kroemer",
+      "venue": "IEEE Robotics and Automation Letters 10 (7), 7603-7610, 2025",
+      "citation_count": "12",
+      "year": "2025"
+    },
+    {
+      "index": 72,
+      "title": "Web2grasp: Learning functional grasps from web images of hand-object interactions",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:p2g8aNsByqUC",
+      "authors": "H Chen, Y Yao, Y Ye, Z Xu, H Bharadhwaj, J Wang, A Jakobsson, R Zhao, ...",
+      "venue": "arXiv preprint arXiv:2505.05517, 2025",
+      "citation_count": "12",
+      "year": "2025"
+    },
+    {
+      "index": 73,
+      "title": "Moe-hair: Toward soft and compliant contact-rich hair manipulation and care",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:u_35RYKgDlwC",
+      "authors": "U Yoo, N Dennler, M Mataric, S Nikolaidis, J Oh, J Ichnowski",
+      "venue": "Companion of the 2024 ACM/IEEE International Conference on Human-Robot …, 2024",
+      "citation_count": "12",
+      "year": "2024"
+    },
+    {
+      "index": 74,
+      "title": "Learning robot policies for untangling dense knots in linear deformable structures",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:aqlVkmm33-oC",
+      "authors": "J Grannen, P Sundaresan, B Thananjeyan, J Ichnowski, A Balakrishna, ...",
+      "venue": "4th Conference on Robot Learning (CoRL), 2020",
+      "citation_count": "11",
+      "year": "2020"
+    },
+    {
+      "index": 75,
+      "title": "Efficient dynamics modeling for VRML and java",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:W7OEmFMy1HYC",
+      "authors": "S Chenney, J Ichnowski, D Forsyth",
+      "venue": "Proceedings of the third symposium on Virtual reality modeling language, 15-24, 1998",
+      "citation_count": "11",
+      "year": "1998"
+    },
+    {
+      "index": 76,
+      "title": "Rayst3r: Predicting novel depth maps for zero-shot object completion",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:XiSMed-E-HIC",
+      "authors": "B Duisterhof, J Oberst, B Wen, S Birchfield, D Ramanan, J Ichnowski",
+      "venue": "Advances in Neural Information Processing Systems 38, 90213-90232, 2026",
+      "citation_count": "10",
+      "year": "2026"
+    },
+    {
+      "index": 77,
+      "title": "Kinesoft: Learning proprioceptive manipulation policies with soft robot hands",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:OU6Ihb5iCvQC",
+      "authors": "U Yoo, J Francis, J Oh, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2503.01078, 2025",
+      "citation_count": "10",
+      "year": "2025"
+    },
+    {
+      "index": 78,
+      "title": "FogROS G: Enabling secure, connected and mobile fog robotics with global addressability",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:vV6vV6tmYwMC",
+      "authors": "K Chen, J Yuan, N Jha, J Ichnowski, J Kubiatowicz, K Goldberg",
+      "venue": "arXiv preprint arXiv:2210.11691, 2022",
+      "citation_count": "10",
+      "year": "2022"
+    },
+    {
+      "index": 79,
+      "title": "Optimal shelf arrangement to minimize robot retrieval time",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:hMod-77fHWUC",
+      "authors": "LY Chen, H Huang, M Danielczuk, J Ichnowski, K Goldberg",
+      "venue": "2022 IEEE 18th International Conference on Automation Science and …, 2022",
+      "citation_count": "10",
+      "year": "2022"
+    },
+    {
+      "index": 80,
+      "title": "Method to optimize robot motion planning using deep learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:r0BpntZqJG4C",
+      "authors": "J Ichnowski, KY Goldberg, Y Avigal, V Satish",
+      "venue": "US Patent 11,334,085, 2022",
+      "citation_count": "10",
+      "year": "2022"
+    },
+    {
+      "index": 81,
+      "title": "Learning self-supervised representations from vision and touch for active sliding perception of deformable surfaces",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:NaGl4SEjCO4C",
+      "authors": "J Kerr, H Huang, A Wilcox, R Hoque, J Ichnowski, R Calandra, ...",
+      "venue": "arXiv preprint arXiv:2209.13042 2, 2022",
+      "citation_count": "10",
+      "year": "2022"
+    },
+    {
+      "index": 82,
+      "title": "Clear-splatting: Learning residual gaussian splats for transparent object manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:4OULZ7Gr8RgC",
+      "authors": "A Agrawal, R Roy, BP Duisterhof, KB Hekkadka, H Chen, J Ichnowski",
+      "venue": "RoboNerF: 1st Workshop On Neural Fields In Robotics at ICRA 2024, 2024",
+      "citation_count": "9",
+      "year": "2024"
+    },
+    {
+      "index": 83,
+      "title": "Kit-Net: Self-supervised learning to kit novel 3D objects into novel 3D cavities",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:hC7cP41nSMkC",
+      "authors": "S Devgon, J Ichnowski, M Danielczuk, DS Brown, A Balakrishna, S Joshi, ...",
+      "venue": "2021 IEEE 17th International Conference on Automation Science and …, 2021",
+      "citation_count": "9",
+      "year": "2021"
+    },
+    {
+      "index": 84,
+      "title": "Multilevel incremental roadmap spanners for reactive motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:hqOjcs7Dif8C",
+      "authors": "J Ichnowski, R Alterovitz",
+      "venue": "2019 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2019",
+      "citation_count": "9",
+      "year": "2019"
+    },
+    {
+      "index": 85,
+      "title": "Robot failure recovery using vision-language models with optimized prompts",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:738O_yMBCRsC",
+      "authors": "H Chen, Y Yao, R Liu, C Liu, J Ichnowski",
+      "venue": "2025 American Control Conference (ACC), 1983-1988, 2025",
+      "citation_count": "8",
+      "year": "2025"
+    },
+    {
+      "index": 86,
+      "title": "Soft robotic dynamic in-hand pen spinning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:P5F9QuxV20EC",
+      "authors": "Y Yao, U Yoo, J Oh, CG Atkeson, J Ichnowski",
+      "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA), 1-7, 2025",
+      "citation_count": "8",
+      "year": "2025"
+    },
+    {
+      "index": 87,
+      "title": "Ropotter: Toward robotic pottery and deformable object manipulation with structural priors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:pyW8ca7W8N0C",
+      "authors": "U Yoo, A Hung, J Francis, J Oh, J Ichnowski",
+      "venue": "2024 IEEE-RAS 23rd international conference on humanoid robots (humanoids …, 2024",
+      "citation_count": "8",
+      "year": "2024"
+    },
+    {
+      "index": 88,
+      "title": "Robust task-based grasping as a service",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:ULOm3_A8WrAC",
+      "authors": "J Song, A Tanwani, J Ichnowski, M Danielczuk, K Sanders, J Chui, ...",
+      "venue": "2020 IEEE 16th International Conference on Automation Science and …, 2020",
+      "citation_count": "8",
+      "year": "2020"
+    },
+    {
+      "index": 89,
+      "title": "Self-supervised learning of dynamic planar manipulation of free-end cables",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:cFHS6HbyZ2cC",
+      "authors": "J Wang, H Huang, V Lim, H Zhang, J Ichnowski, D Seita, Y Chen, ...",
+      "venue": "arXiv preprint arXiv:2405.09581, 2024",
+      "citation_count": "7",
+      "year": "2024"
+    },
+    {
+      "index": 90,
+      "title": "FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:VOx2b1Wkg3QC",
+      "authors": "H Hao, SN Syed, J Ichnowski, J Schneider",
+      "venue": "arXiv preprint arXiv:2607.01111, 2026",
+      "citation_count": "6",
+      "year": "2026"
+    },
+    {
+      "index": 91,
+      "title": "Mechanical search on shelves using lax-ray: Lateral access x-ray",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:mB3voiENLucC",
+      "authors": "H Huang, M Dominguez-Kuhne, V Satish, M Danielczuk, K Sanders, ...",
+      "venue": "",
+      "citation_count": "6",
+      "year": "2021"
+    },
+    {
+      "index": 92,
+      "title": "Cache-aware asymptotically-optimal sampling-based motion planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "J Ichnowski, JF Prins, R Alterovitz",
+      "venue": "2014 IEEE International Conference on Robotics and Automation (ICRA), 5804-5810, 2014",
+      "citation_count": "6",
+      "year": "2014"
+    },
+    {
+      "index": 93,
+      "title": "A-slip: Acoustic sensing for continuous in-hand slip estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:B3FOqHPlNUQC",
+      "authors": "U Yoo, Y Mao, J Oh, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2604.08528, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 94,
+      "title": "3pointr: 3d point tracks for robot manipulation pretraining from casual videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:vRqMK49ujn8C",
+      "authors": "A Hung, BP Duisterhof, J Ichnowski",
+      "venue": "arXiv e-prints, arXiv: 2603.08485, 2026",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 95,
+      "title": "Fogros2-config: A toolkit for choosing server configurations for cloud robotics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:bFI3QPDXJZMC",
+      "authors": "K Chen, K Hari, R Khare, C Le, T Chung, J Drake, J Ichnowski, ...",
+      "venue": "2024 IEEE International Conference on Robotics and Automation (ICRA), 12083 …, 2024",
+      "citation_count": "4",
+      "year": "2024"
+    },
+    {
+      "index": 96,
+      "title": "Fogros: An adaptive framework for automating fog robotics deployment",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:HDshCWvjkbEC",
+      "authors": "Y Liang, N Jha, J Ichnowski, M Danielczuk, J Gonzalez, J Kubiatowicz, ...",
+      "venue": "arXiv preprint arXiv:2108.11355, 2021",
+      "citation_count": "4",
+      "year": "2021"
+    },
+    {
+      "index": 97,
+      "title": "Wiggle and Go! System Identification for Zero-Shot Dynamic Rope Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:sSrBHYA8nusC",
+      "authors": "A Jakobsson, A Mahajan, K Pullalarevu, K Suresh, Y Yao, Y Mao, ...",
+      "venue": "arXiv preprint arXiv:2604.22102, 2026",
+      "citation_count": "3",
+      "year": "2026"
+    },
+    {
+      "index": 98,
+      "title": "Inclusion in assistive haircare robotics: Practical and ethical considerations in hair manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:1sJd4Hv_s6UC",
+      "authors": "U Yoo, N Dennler, S Patil, J Oh, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2411.05137, 2024",
+      "citation_count": "3",
+      "year": "2024"
+    },
+    {
+      "index": 99,
+      "title": "BOMP: Bin-Optimized Motion Planning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:CHSYGLWDkRkC",
+      "authors": "Z Tam, K Dharmarajan, T Qiu, Y Avigal, J Ichnowski, K Goldberg",
+      "venue": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems …, 2024",
+      "citation_count": "3",
+      "year": "2024"
+    },
+    {
+      "index": 100,
+      "title": "Learning to trace and untangle semiplanar knots (tusk)",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&pagesize=100&citation_for_view=7CKFg9EAAAAJ:ldfaerwXgEUC",
+      "authors": "V Viswanath, K Shivakumar, J Ajmera, M Parulekar, J Kerr, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2303.08975, 2023",
+      "citation_count": "3",
+      "year": "2023"
+    },
+    {
+      "index": 101,
+      "title": "Dex-Net AR: distributed deep grasp planning using an augmented reality application and a smartphone camera",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:yD5IFk8b50cC",
+      "authors": "H Zhang, J Ichnowski, Y Avigal, J Gonzales, I Stoica, K Goldberg",
+      "venue": "International Conference on Robotics and Automation (ICRA), 2020",
+      "citation_count": "3",
+      "year": "2020"
+    },
+    {
+      "index": 102,
+      "title": "PointZero: 3D Point Track Completion for Learning Transferable 3D Dynamics",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:kRWSkSYxWN8C",
+      "authors": "BP Duisterhof, K Zhang, A Hung, B Wen, S Birchfield, Y Li, D Ramanan, ...",
+      "venue": "arXiv preprint arXiv:2609.19142, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 103,
+      "title": "Modality Forcing for Scalable Spatial Generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:5Ul4iDaHHb8C",
+      "authors": "BP Duisterhof, D Ramanan, J Ichnowski, J Johnson, K Park",
+      "venue": "arXiv preprint arXiv:2606.13676, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 104,
+      "title": "Dymo-hair: Generalizable volumetric dynamics modeling for robot hair manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:l7t_Zn2s7bgC",
+      "authors": "C Zhao, U Yoo, AN Chaudhury, G Nam, J Francis, J Ichnowski, J Oh",
+      "venue": "2026 IEEE International Conference on Robotics and Automation (ICRA), 3872-3879, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 105,
+      "title": "3PoinTr: 3D Point Tracks for Learning Manipulation from Unconstrained Human Videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:8AbLer7MMksC",
+      "authors": "A Hung, BP Duisterhof, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2603.08485, 2026",
+      "citation_count": "2",
+      "year": "2026"
+    },
+    {
+      "index": 106,
+      "title": "Hearing the slide: Acoustic-guided constraint learning for fast non-prehensile transport",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:Tiz5es2fbqcC",
+      "authors": "Y Mao, BP Duisterhof, M Lee, J Ichnowski",
+      "venue": "2025 IEEE 21st International Conference on Automation Science and …, 2025",
+      "citation_count": "2",
+      "year": "2025"
+    },
+    {
+      "index": 107,
+      "title": "The Teenager’s Problem: Efficient Garment Decluttering as Probabilistic Set Cover",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:NhqRSupF_l8C",
+      "authors": "A Adler, A Ahmad, Y Qiu, S Wang, WC Agboh, E Llontop, T Qiu, ...",
+      "venue": "International Workshop on the Algorithmic Foundations of Robotics, 243-261, 2024",
+      "citation_count": "2",
+      "year": "2024"
+    },
+    {
+      "index": 108,
+      "title": "The teenager's problem: Efficient garment decluttering with grasp optimization",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:SeFeTyx0c_EC",
+      "authors": "A Adler, A Ahmad, S Wang, WC Agboh, E Llontop, T Qiu, J Ichnowski, ...",
+      "venue": "arXiv preprint, 2023",
+      "citation_count": "2",
+      "year": "2023"
+    },
+    {
+      "index": 109,
+      "title": "Modality-Autoregressive World-Action Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:q3oQSFYPqjQC",
+      "authors": "A Hung, BP Duisterhof, D Ramanan, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2609.17524, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 110,
+      "title": "Adversarial game-theoretic algorithm for dexterous grasp synthesis",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:tOudhMTPpwUC",
+      "authors": "Y Chen, B He, Y Mao, A Jakobsson, J Ke, Y Aloimonos, G Shi, H Choset, ...",
+      "venue": "2026 IEEE International Conference on Robotics and Automation (ICRA), 21959 …, 2026",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 111,
+      "title": "Orienting novel objects using self-supervised rotation estimation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:KlAtU1dfN6UC",
+      "authors": "S Devgon, J Ichnowski, A Balakrishna, H Zhang, K Goldberg",
+      "venue": "2020 IEEE Conference on Automation Science and Engineering (CASE), 2020",
+      "citation_count": "1",
+      "year": "2020"
+    },
+    {
+      "index": 112,
+      "title": "Dex-Net AR: distributed deep grasp planning using an augmented reality application and a smartphone camera",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:MXK_kJrjxJIC",
+      "authors": "JI Harry Zhang, J Ichnowski, Y Avigal, J Gonzales, I Stoica, K Goldberg",
+      "venue": "IEEE International Conference on Robotics and Automation (ICRA), 2020",
+      "citation_count": "1",
+      "year": "2020"
+    },
+    {
+      "index": 113,
+      "title": "Scaling Robot Motion Planning to Multi-Core Processors and the Cloud",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:Se3iqnhoufwC",
+      "authors": "J Ichnowski",
+      "venue": "The University of North Carolina at Chapel Hill, 2019",
+      "citation_count": "1",
+      "year": "2019"
+    },
+    {
+      "index": 114,
+      "title": "Robotics and autonomous driving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:d1gkVwhDpl0C",
+      "authors": "H Kerner, A Kuntz, J Ichnowski, M North",
+      "venue": "Technical Report Issue, 2015",
+      "citation_count": "1",
+      "year": "2015"
+    },
+    {
+      "index": 115,
+      "title": "SkillWeave: Weaving Heterogeneous Demonstrations into Long-Horizon Manipulation Skills",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:1qzjygNMrQYC",
+      "authors": "R Tamura, X Dong, U Yoo, Y Mao, R Mir, J Francis, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2610.12046, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 116,
+      "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:mvPsJ3kp5DgC",
+      "authors": "SN Syed, A Jakobsson, P Sachdev, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2609.18084, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 117,
+      "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:V3AGJWp-ZtQC",
+      "authors": "S Najam Syed, A Jakobsson, P Sachdev, J Ichnowski",
+      "venue": "arXiv e-prints, arXiv: 2609.18084, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 118,
+      "title": "Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:eflP2zaiRacC",
+      "authors": "H Hao, SN Syed, J Schneider, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2608.24042, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 119,
+      "title": "High Fidelity Capture, Reconstruction, and Transfer of Human Demonstrations for Robot-Assisted Bathing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:D_sINldO8mEC",
+      "authors": "AS Lakshmipathy, JP King, E Zuo, R Satishkumar, H Chen, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2608.09127, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 120,
+      "title": "SemAnCorr: Semantic Anchored Correspondence for Zero-Shot Manipulation Skill Transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:eJXPG6dFmWUC",
+      "authors": "X Dong, W Baron, H Chen, U Yoo, J Ichnowski, W Zhi",
+      "venue": "arXiv preprint arXiv:2607.28382, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 121,
+      "title": "VibeAct: Vibration to Actions for Contact-Rich Reactive Robot Dexterity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:fQNAKQ3IYiAC",
+      "authors": "Y Mao, U Yoo, J Oh, J Francis, J Ichnowski",
+      "venue": "arXiv preprint arXiv:2606.27344, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 122,
+      "title": "Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:LPZeul_q3PIC",
+      "authors": "S Najam Syed, A Jakobsson, H Hao, J Ichnowski",
+      "venue": "arXiv e-prints, arXiv: 2606.02486, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 123,
+      "title": "Functional Force-Aware Retargeting from Virtual Human Demos to Soft Robot Policies",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:4fKUyHm3Qg0C",
+      "authors": "U Yoo, M Zhu, E Pezent, J Preechayasomboon, J Oh, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2604.01224, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 124,
+      "title": "SOFTMAP: Sim2Real Soft Robot Forward Modeling via Topological Mesh Alignment and Physics Prior",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:tS2w5q8j5-wC",
+      "authors": "Z Ma, U Yoo, J Francis, W Zhi, J Ichnowski, J Oh",
+      "venue": "arXiv preprint arXiv:2603.19384, 2026",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 125,
+      "title": "ORB: Operating Room Bot, Automating Operating Room Logistics through Mobile Manipulation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:K3LRdlH-MEoC",
+      "authors": "J Qiu, Y Kim, G Sethia, T Agarwal, S Ghodasara, Z Erickson, J Ichnowski",
+      "venue": "2025 IEEE 21st International Conference on Automation Science and …, 2025",
+      "citation_count": "",
+      "year": "2025"
+    },
+    {
+      "index": 126,
+      "title": "FogROS2-Config: Optimizing Latency and Cost for Multi-Cloud Robot Applications",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:SP6oXDckpogC",
+      "authors": "K Chen, K Hari, R Khare, C Le, T Chung, J Drake, J Ichnowski, ...",
+      "venue": "arXiv preprint arXiv:2311.05600, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 127,
+      "title": "FogROS2-Sky: Optimizing Latency and Cost for Multi-Cloud Robot Applications.",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:ZHo1McVdvXMC",
+      "authors": "K Chen, K Hari, R Khare, C Le, T Chung, J Drake, K Dharmarajan, ...",
+      "venue": "CoRR, 2023",
+      "citation_count": "",
+      "year": "2023"
+    },
+    {
+      "index": 128,
+      "title": "Efficiently Learning Single-Arm Fling Motions to Smooth Garments",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:YFjsv_pBGBYC",
+      "authors": "L Yunliang Chen, H Huang, E Novoseller, D Seita, J Ichnowski, M Laskey, ...",
+      "venue": "arXiv e-prints, arXiv: 2206.08921, 2022",
+      "citation_count": "",
+      "year": "2022"
+    },
+    {
+      "index": 129,
+      "title": "Optimal Shelf Arrangement to Minimize Robot Retrieval Time",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:NMxIlDl6LWMC",
+      "authors": "L Yunliang Chen, H Huang, M Danielczuk, J Ichnowski, K Goldberg",
+      "venue": "arXiv e-prints, arXiv: 2206.08607, 2022",
+      "citation_count": "",
+      "year": "2022"
+    },
+    {
+      "index": 130,
+      "title": "RareOcc: Controllable 4D Occupancy and LiDAR Generation for Long-Tail Driving Scenes",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:BrmTIyaxlBUC",
+      "authors": "A Jakobsson, YR Tuan, L Julian, S Hunt, K Suzuki, S Tanaka, M Bandegi, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 131,
+      "title": "Web2Grasp: Learning Functional Grasp with Reconstructed HOI from Web Images",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:u9iWguZQMMsC",
+      "authors": "H Chen, Y Yao, Y Ye, Z Xu, H Bharadhwaj, J Wang, S Tulsiani, Z Erickson, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 132,
+      "title": "SoftBiT: Soft Bimanual Teleoperation with Proprioceptive Visual Augmentation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:uWQEDVKXjbEC",
+      "authors": "T Inui, U Yoo, J Ichnowski, J Oh",
+      "venue": "HRI 2025 Workshop VAM-HRI, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 133,
+      "title": "FogROS: A User-Friendly+ Adaptive Framework for Fog Robotics+ Automation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:_xSYboBqXhAC",
+      "authors": "KE Chen, Y Liang, N Jha, J Ichnowski, M Danielczuk, J Gonzalez, ...",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 134,
+      "title": "Distilling Semantic Features for 3D Cloth Representations from Vision Foundation Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:fPk4N6BV_jEC",
+      "authors": "A Longhini, M Büsching, BP Duisterhof, J Ichnowski, M Björkman, ...",
+      "venue": "ICRA 2024 Workshop on 3D Visual Representations for Robot Manipulation, 0",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 135,
+      "title": "Real-Time Motion Planning and Autonomous Driving",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7CKFg9EAAAAJ&cstart=100&pagesize=100&citation_for_view=7CKFg9EAAAAJ:YsMSGLbcyi4C",
+      "authors": "J Ichnowski",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ]
+}

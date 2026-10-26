@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-georgeakantor-dd0b9469",
+  "display_name": "George A. Kantor",
+  "scholar_profile_name": "George Kantor",
+  "scholar_id": "rQoKPUsAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/george-a-kantor/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/george-a-kantor/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:36:03.188524+00:00",
+  "publication_count": 248,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 2,
+  "source_json_path": "data/captures/scs-george-kantor-2026-10-26.json",
+  "source_json_sha256": "39ed61a5ce61053177cad6b8b40e02496873d577dbb1f698268459de2d27f9ad",
+  "source_html_path": "data/captures/scs-george-kantor-2026-10-26.html",
+  "source_html_sha256": "73f6c919c2b78ad642367384758b6e641a9722903f0257b43527f130ec1601dc",
+  "cache_path": "data/authors/rQoKPUsAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

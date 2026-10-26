@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-guanyashi-c6721bb4",
+  "display_name": "Guanya Shi",
+  "scholar_profile_name": "Guanya Shi",
+  "scholar_id": "joR1Z4UAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/guanya-shi/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/guanya-shi/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:36:25.252596+00:00",
+  "publication_count": 154,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-guanya-shi-2026-10-26.json",
+  "source_json_sha256": "80bb8d8dd007e2c42c60108d20a5aa276ba1b4fd20fe6a372b19b3ad79f84f53",
+  "source_html_path": "data/captures/scs-guanya-shi-2026-10-26.html",
+  "source_html_sha256": "0e9a6e98b92a5895c78901504ac747b755f318f6ac7a683fabeb66c6f41cdef9",
+  "cache_path": "data/authors/joR1Z4UAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}

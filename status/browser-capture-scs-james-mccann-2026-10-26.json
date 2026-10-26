@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "collection_method": "playwright_cli_isolated_chrome",
+  "person_id": "person-jamesmccann-0d0c2b6f",
+  "display_name": "James McCann",
+  "scholar_profile_name": "James McCann",
+  "scholar_id": "OA9rqJoAAAAJ",
+  "official_identity_url": "https://www.ri.cmu.edu/ri-faculty/james-mccann/",
+  "scholar_id_source_url": "https://www.ri.cmu.edu/ri-faculty/james-mccann/",
+  "scholar_identity_basis": "exact Scholar user ID linked on named CMU SCS faculty page",
+  "captured_at_utc": "2026-10-26T19:37:11.202208+00:00",
+  "publication_count": 109,
+  "coverage": "complete_visible_profile",
+  "more_remain": false,
+  "visible_page_error": "",
+  "page_load_count": 1,
+  "show_more_click_count": 1,
+  "source_json_path": "data/captures/scs-james-mccann-2026-10-26.json",
+  "source_json_sha256": "d646797823d30c96608bbe629f65c8e74b06407a3d029b2927fee0e07e634fd3",
+  "source_html_path": "data/captures/scs-james-mccann-2026-10-26.html",
+  "source_html_sha256": "946f6566f96e234a5e3dbddd4b3805474f717ac5592029516f71b90a3f423954",
+  "cache_path": "data/authors/OA9rqJoAAAAJ.json",
+  "release_state": "staged_for_review",
+  "citation_annotations": [],
+  "browser_closed": true,
+  "html_redactions": {
+    "scholar_xsrf_form_values": 2,
+    "replacement": "[REDACTED]"
+  }
+}
