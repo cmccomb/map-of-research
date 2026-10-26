@@ -107,6 +107,17 @@ BIO_REGION_REFIT_SOURCE_SHA256 = (
 BIO_REGION_REFIT_FIELDS = frozenset(
     {"map_region_documented_override", "map_region_prior_eligible_override"}
 )
+MCS_PUBLISHED_PARENT = "f194bdab4d9d19b012709f1dde06bcef2bf59fb6"
+# The immutable MCS parent retains the 19 reviewed Chemistry decisions. Its
+# full refit changed only these three derived diagnostics from the Bio parent.
+MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS = POST_BIO_PRIOR_ELIGIBLE_WORK_IDS | {
+    "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+    "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
+}
+MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS = {
+    POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID,
+    "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+}
 
 
 def allows_bio_region_refit(
@@ -467,17 +478,27 @@ def validate_chemistry_parent(
         label="person",
     )
     if post_bio_schema:
+        prior_eligible_ids = (
+            MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+            if prior_revision == MCS_PUBLISHED_PARENT
+            else POST_BIO_PRIOR_ELIGIBLE_WORK_IDS
+        )
+        documented_override_ids = (
+            MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
+            if prior_revision == MCS_PUBLISHED_PARENT
+            else {POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID}
+        )
         for work_id, work in parent["works"].items():
             before = baseline["works"][work_id]
             if (
                 work["map_region_prior_eligible_override"]
-                is not (work_id in POST_BIO_PRIOR_ELIGIBLE_WORK_IDS)
+                is not (work_id in prior_eligible_ids)
                 or work["map_region_prior_excluded_override"] is not False
                 or work["map_region_audit_version"] != POST_BIO_REGION_AUDIT_VERSION
                 or work["map_region_documented_override"]
                 is not (
                     True
-                    if work_id == POST_BIO_DOCUMENTED_OVERRIDE_WORK_ID
+                    if work_id in documented_override_ids
                     else before["map_region_documented_override"]
                 )
             ):

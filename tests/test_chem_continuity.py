@@ -197,6 +197,98 @@ def _post_bio_parent(
     )
 
 
+def _mcs_published_parent(files: dict) -> None:
+    """Apply only the three derived Chemistry diagnostics in Hub f194bdab."""
+
+    _rewrite_rows(
+        files["works/train-00000-of-00001.parquet"],
+        lambda rows: [
+            row.update(
+                map_region_prior_eligible_override=(
+                    row["work_id"] in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+                ),
+                map_region_documented_override=(
+                    row["work_id"] in continuity.MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS
+                ),
+            )
+            for row in rows
+        ],
+    )
+
+
+def test_mcs_published_parent_accepts_only_its_three_derived_diagnostics(
+    tmp_path: Path,
+) -> None:
+    decisions = _decisions()
+    baseline = _files(tmp_path / "baseline", decisions)
+    parent = _files(tmp_path / "parent", decisions)
+    _post_bio_parent(parent, decisions)
+    _mcs_published_parent(parent)
+    state = validate_chemistry_parent(
+        decisions,
+        baseline_files=baseline,
+        parent_files=parent,
+        prior_revision=continuity.MCS_PUBLISHED_PARENT,
+    )
+    assert state["reviewed_works"] == 19
+    tables = {
+        name: pandas.read_parquet(parent[f"{name}/train-00000-of-00001.parquet"])
+        for name in ("works", "profile_publications", "authorships", "people")
+    }
+    validate_chemistry_candidate(tables, state, require_count_parity=True)
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.BIO_REGION_REFIT_PARENT,
+        )
+    works = parent["works/train-00000-of-00001.parquet"]
+    for work_id, field in (
+        (
+            "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
+            "map_region_prior_eligible_override",
+        ),
+        (
+            "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4",
+            "map_region_prior_eligible_override",
+        ),
+        (
+            "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802",
+            "map_region_documented_override",
+        ),
+    ):
+        _rewrite_rows(
+            works,
+            lambda rows, work_id=work_id, field=field: next(
+                row for row in rows if row["work_id"] == work_id
+            ).update({field: False}),
+        )
+        with pytest.raises(ValueError, match="work derivation changed"):
+            validate_chemistry_parent(
+                decisions,
+                baseline_files=baseline,
+                parent_files=parent,
+                prior_revision=continuity.MCS_PUBLISHED_PARENT,
+            )
+        _mcs_published_parent(parent)
+    _rewrite_rows(
+        works,
+        lambda rows: next(
+            row
+            for row in rows
+            if row["work_id"] not in continuity.MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS
+        ).update(map_region_prior_eligible_override=True),
+    )
+    with pytest.raises(ValueError, match="work derivation changed"):
+        validate_chemistry_parent(
+            decisions,
+            baseline_files=baseline,
+            parent_files=parent,
+            prior_revision=continuity.MCS_PUBLISHED_PARENT,
+        )
+
+
 def test_chemistry_review_inputs_keep_primary_evidence_and_exact_scope() -> None:
     decisions = _decisions()
     exclusions, holds, contexts = merge_chemistry_review_inputs(decisions, {}, {}, {})
