@@ -129,6 +129,9 @@ MCS_PARENT_DOCUMENTED_OVERRIDE_WORK_IDS = {
 PHYSICS_HDF_PRIOR_ELIGIBLE_WORK_IDS = MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS - {
     "work-a0cfe68d0794a4afe20e8a55b401afed795f14a8445cb9dc54275a84acb6b3d4"
 }
+PHYSICS_HDF_DAS_SNAPSHOT_SHA256 = (
+    "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1"
+)
 MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
     {
         "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
@@ -171,6 +174,18 @@ def allows_mcs_parent_diagnostic_refit(
         not layout_reused
         and prior_revision == MCS_PUBLISHED_PARENT
         and source_sha256 == BIO_REGION_REFIT_SOURCE_SHA256
+    )
+
+
+def allows_physics_hdf_das_diagnostic_refit(
+    *, prior_revision: str, source_sha256: str, layout_reused: bool
+) -> bool:
+    """Limit the Das candidate to the existing exact Chemistry diagnostic losses."""
+
+    return (
+        not layout_reused
+        and prior_revision == PHYSICS_HDF_PUBLISHED_PARENT
+        and source_sha256 == PHYSICS_HDF_DAS_SNAPSHOT_SHA256
     )
 
 
