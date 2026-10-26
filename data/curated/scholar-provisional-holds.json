@@ -854,6 +854,932 @@
           "reviewed_at": "2026-10-25"
         }
       ]
+    },
+    {
+      "person_id": "person-benjaminhunt-e286d360",
+      "scholar_id": "11EoZncAAAAJ",
+      "expected_source_rows": 95,
+      "cache_sha256": "b790f95be56570436fd9e06dc5b54dd58458ba1bb07c086b304e922f28443c3f",
+      "expected_reviewed_exclusion_rows": 7,
+      "reviewed_exclusion_ids_sha256": "b96fb4318acd457016a53aefd57c4a81869a2bc7923e67d7dde00b2816a8cddf",
+      "held_observations": [
+        {
+          "capture_row_index": 5,
+          "author_pub_id": "11EoZncAAAAJ:RHpTSmoSYBkC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&citation_for_view=11EoZncAAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 32,
+          "author_pub_id": "11EoZncAAAAJ:pqnbT2bcN3wC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:pqnbT2bcN3wC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 37,
+          "author_pub_id": "11EoZncAAAAJ:NhqRSupF_l8C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:NhqRSupF_l8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 38,
+          "author_pub_id": "11EoZncAAAAJ:abG-DnoFyZgC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:abG-DnoFyZgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 39,
+          "author_pub_id": "11EoZncAAAAJ:b0M2c_1WBrUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:b0M2c_1WBrUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 40,
+          "author_pub_id": "11EoZncAAAAJ:EUQCXRtRnyEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:EUQCXRtRnyEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 41,
+          "author_pub_id": "11EoZncAAAAJ:_xSYboBqXhAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:_xSYboBqXhAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 42,
+          "author_pub_id": "11EoZncAAAAJ:CHSYGLWDkRkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:CHSYGLWDkRkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 43,
+          "author_pub_id": "11EoZncAAAAJ:4OULZ7Gr8RgC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:4OULZ7Gr8RgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 44,
+          "author_pub_id": "11EoZncAAAAJ:fPk4N6BV_jEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:fPk4N6BV_jEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 45,
+          "author_pub_id": "11EoZncAAAAJ:u_35RYKgDlwC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:u_35RYKgDlwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 46,
+          "author_pub_id": "11EoZncAAAAJ:zA6iFVUQeVQC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:zA6iFVUQeVQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "11EoZncAAAAJ:HoB7MX3m0LUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:HoB7MX3m0LUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 49,
+          "author_pub_id": "11EoZncAAAAJ:g5m5HwL7SMYC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:g5m5HwL7SMYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 50,
+          "author_pub_id": "11EoZncAAAAJ:ldfaerwXgEUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:ldfaerwXgEUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 51,
+          "author_pub_id": "11EoZncAAAAJ:2P1L_qKh6hAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 52,
+          "author_pub_id": "11EoZncAAAAJ:O3NaXMp0MMsC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 54,
+          "author_pub_id": "11EoZncAAAAJ:RGFaLdJalmkC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:RGFaLdJalmkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 59,
+          "author_pub_id": "11EoZncAAAAJ:TQgYirikUcIC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:TQgYirikUcIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 60,
+          "author_pub_id": "11EoZncAAAAJ:HDshCWvjkbEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:HDshCWvjkbEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 61,
+          "author_pub_id": "11EoZncAAAAJ:mB3voiENLucC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:mB3voiENLucC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 64,
+          "author_pub_id": "11EoZncAAAAJ:hC7cP41nSMkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:hC7cP41nSMkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 65,
+          "author_pub_id": "11EoZncAAAAJ:qUcmZB5y_30C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:qUcmZB5y_30C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 66,
+          "author_pub_id": "11EoZncAAAAJ:IWHjjKOFINEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:IWHjjKOFINEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 67,
+          "author_pub_id": "11EoZncAAAAJ:ZeXyd9-uunAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:ZeXyd9-uunAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 68,
+          "author_pub_id": "11EoZncAAAAJ:k_IJM867U9cC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:k_IJM867U9cC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 69,
+          "author_pub_id": "11EoZncAAAAJ:mVmsd5A6BfQC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:mVmsd5A6BfQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 72,
+          "author_pub_id": "11EoZncAAAAJ:_kc_bZDykSQC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:_kc_bZDykSQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 73,
+          "author_pub_id": "11EoZncAAAAJ:ULOm3_A8WrAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:ULOm3_A8WrAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 74,
+          "author_pub_id": "11EoZncAAAAJ:Zph67rFs4hoC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:Zph67rFs4hoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 75,
+          "author_pub_id": "11EoZncAAAAJ:8k81kl-MbHgC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:8k81kl-MbHgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 77,
+          "author_pub_id": "11EoZncAAAAJ:3fE2CSJIrl8C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:3fE2CSJIrl8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 78,
+          "author_pub_id": "11EoZncAAAAJ:W7OEmFMy1HYC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:W7OEmFMy1HYC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 79,
+          "author_pub_id": "11EoZncAAAAJ:Y0pCki6q_DkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:Y0pCki6q_DkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 80,
+          "author_pub_id": "11EoZncAAAAJ:zYLM7Y9cAGgC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:zYLM7Y9cAGgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 82,
+          "author_pub_id": "11EoZncAAAAJ:IjCSPb-OGe4C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:IjCSPb-OGe4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 83,
+          "author_pub_id": "11EoZncAAAAJ:eQOLeE2rZwMC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:eQOLeE2rZwMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 84,
+          "author_pub_id": "11EoZncAAAAJ:2osOgNQ5qMEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:2osOgNQ5qMEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "11EoZncAAAAJ:Tyk-4Ss8FVUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:Tyk-4Ss8FVUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 86,
+          "author_pub_id": "11EoZncAAAAJ:9yKSN-GCB0IC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:9yKSN-GCB0IC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 87,
+          "author_pub_id": "11EoZncAAAAJ:UeHWp8X0CEIC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:UeHWp8X0CEIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 90,
+          "author_pub_id": "11EoZncAAAAJ:WF5omc3nYNoC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:WF5omc3nYNoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 95,
+          "author_pub_id": "11EoZncAAAAJ:qjMakFHDy7sC",
+          "reason": "Exact source or output classification remains unresolved; keep this saved observation off map points and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=11EoZncAAAAJ&cstart=20&pagesize=80&citation_for_view=11EoZncAAAAJ:qjMakFHDy7sC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-markusdeserno-3b04d008",
+      "scholar_id": "1J28ExgAAAAJ",
+      "expected_source_rows": 233,
+      "cache_sha256": "1595aeb166721ece6b7baf88bb823a9b30e11e99934744f33e429ac5b4c09e44",
+      "expected_reviewed_exclusion_rows": 12,
+      "reviewed_exclusion_ids_sha256": "6c704880b12d57bed83de14358c9792b7d3dcdf49b924aff1544affcd6ed7e19",
+      "held_observations": [
+        {
+          "capture_row_index": 20,
+          "author_pub_id": "1J28ExgAAAAJ:LkGwnXOMwfcC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&citation_for_view=1J28ExgAAAAJ:LkGwnXOMwfcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 37,
+          "author_pub_id": "1J28ExgAAAAJ:uc_IGeMz5qoC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:uc_IGeMz5qoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 42,
+          "author_pub_id": "1J28ExgAAAAJ:9ZlFYXVOiuMC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:9ZlFYXVOiuMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 48,
+          "author_pub_id": "1J28ExgAAAAJ:RHpTSmoSYBkC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:RHpTSmoSYBkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 50,
+          "author_pub_id": "1J28ExgAAAAJ:dhFuZR0502QC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:dhFuZR0502QC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 63,
+          "author_pub_id": "1J28ExgAAAAJ:K3LRdlH-MEoC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:K3LRdlH-MEoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 83,
+          "author_pub_id": "1J28ExgAAAAJ:Wp0gIr-vW9MC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=20&pagesize=80&citation_for_view=1J28ExgAAAAJ:Wp0gIr-vW9MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 112,
+          "author_pub_id": "1J28ExgAAAAJ:dshw04ExmUIC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:dshw04ExmUIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 114,
+          "author_pub_id": "1J28ExgAAAAJ:O3NaXMp0MMsC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:O3NaXMp0MMsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 131,
+          "author_pub_id": "1J28ExgAAAAJ:kuK5TVdYjLIC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:kuK5TVdYjLIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 142,
+          "author_pub_id": "1J28ExgAAAAJ:eflP2zaiRacC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:eflP2zaiRacC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 157,
+          "author_pub_id": "1J28ExgAAAAJ:URolC5Kub84C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:URolC5Kub84C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 162,
+          "author_pub_id": "1J28ExgAAAAJ:MLfJN-KU85MC",
+          "reason": "Incomplete bibliographic proxy appears related to a retained 2020 review article; hold until exact version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:MLfJN-KU85MC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 173,
+          "author_pub_id": "1J28ExgAAAAJ:08ZZubdj9fEC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:08ZZubdj9fEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 182,
+          "author_pub_id": "1J28ExgAAAAJ:_Re3VWB3Y0AC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:_Re3VWB3Y0AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 186,
+          "author_pub_id": "1J28ExgAAAAJ:JV2RwH3_ST0C",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:JV2RwH3_ST0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 189,
+          "author_pub_id": "1J28ExgAAAAJ:uWiczbcajpAC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:uWiczbcajpAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 194,
+          "author_pub_id": "1J28ExgAAAAJ:k_IJM867U9cC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:k_IJM867U9cC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 199,
+          "author_pub_id": "1J28ExgAAAAJ:LPZeul_q3PIC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=100&pagesize=100&citation_for_view=1J28ExgAAAAJ:LPZeul_q3PIC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 202,
+          "author_pub_id": "1J28ExgAAAAJ:2P1L_qKh6hAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:2P1L_qKh6hAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 205,
+          "author_pub_id": "1J28ExgAAAAJ:D_sINldO8mEC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:D_sINldO8mEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 208,
+          "author_pub_id": "1J28ExgAAAAJ:J_g5lzvAfSwC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:J_g5lzvAfSwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 209,
+          "author_pub_id": "1J28ExgAAAAJ:NMxIlDl6LWMC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:NMxIlDl6LWMC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 210,
+          "author_pub_id": "1J28ExgAAAAJ:ns9cj8rnVeAC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:ns9cj8rnVeAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 212,
+          "author_pub_id": "1J28ExgAAAAJ:lSLTfruPkqcC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:lSLTfruPkqcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 213,
+          "author_pub_id": "1J28ExgAAAAJ:bEWYMUwI8FkC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:bEWYMUwI8FkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 216,
+          "author_pub_id": "1J28ExgAAAAJ:yD5IFk8b50cC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:yD5IFk8b50cC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 217,
+          "author_pub_id": "1J28ExgAAAAJ:4hFrxpcac9AC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:4hFrxpcac9AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 218,
+          "author_pub_id": "1J28ExgAAAAJ:a9-T7VOCCH8C",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:a9-T7VOCCH8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 219,
+          "author_pub_id": "1J28ExgAAAAJ:anf4URPfarAC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:anf4URPfarAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 221,
+          "author_pub_id": "1J28ExgAAAAJ:S16KYo8Pm5AC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:S16KYo8Pm5AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 222,
+          "author_pub_id": "1J28ExgAAAAJ:e_rmSamDkqQC",
+          "reason": "Exact source or output classification remains unresolved; keep this saved observation off map points and coauthor links.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:e_rmSamDkqQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 228,
+          "author_pub_id": "1J28ExgAAAAJ:wbdj-CoPYUoC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:wbdj-CoPYUoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 231,
+          "author_pub_id": "1J28ExgAAAAJ:pqnbT2bcN3wC",
+          "reason": "Saved citation lacks complete venue or year metadata; hold pending original-source classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=1J28ExgAAAAJ&cstart=200&pagesize=100&citation_for_view=1J28ExgAAAAJ:pqnbT2bcN3wC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "person_id": "person-randallfeenstra-0f288978",
+      "scholar_id": "p1aFEDYAAAAJ",
+      "expected_source_rows": 422,
+      "cache_sha256": "36c211772f28fc57b81f5a9d415bcc063e4c06129a3063c1925fe0df066e3b04",
+      "expected_reviewed_exclusion_rows": 11,
+      "reviewed_exclusion_ids_sha256": "bbf369a79ea3b267abc017e83962e874b4e2e8f19bd668c47e861d07c124c409",
+      "held_observations": [
+        {
+          "capture_row_index": 36,
+          "author_pub_id": "p1aFEDYAAAAJ:-uzm3Y7AvW0C",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=20&pagesize=80&citation_for_view=p1aFEDYAAAAJ:-uzm3Y7AvW0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 85,
+          "author_pub_id": "p1aFEDYAAAAJ:AXPGKjj_ei8C",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=20&pagesize=80&citation_for_view=p1aFEDYAAAAJ:AXPGKjj_ei8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 95,
+          "author_pub_id": "p1aFEDYAAAAJ:t6usbXjVLHcC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=20&pagesize=80&citation_for_view=p1aFEDYAAAAJ:t6usbXjVLHcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 134,
+          "author_pub_id": "p1aFEDYAAAAJ:1sJd4Hv_s6UC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=100&pagesize=100&citation_for_view=p1aFEDYAAAAJ:1sJd4Hv_s6UC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 232,
+          "author_pub_id": "p1aFEDYAAAAJ:CB2v5VPnA5kC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:CB2v5VPnA5kC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 239,
+          "author_pub_id": "p1aFEDYAAAAJ:9Nmd_mFXekcC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:9Nmd_mFXekcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 243,
+          "author_pub_id": "p1aFEDYAAAAJ:kzcrU_BdoSEC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:kzcrU_BdoSEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 260,
+          "author_pub_id": "p1aFEDYAAAAJ:KUbvn5osdkgC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:KUbvn5osdkgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 276,
+          "author_pub_id": "p1aFEDYAAAAJ:WZBGuue-350C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:WZBGuue-350C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 278,
+          "author_pub_id": "p1aFEDYAAAAJ:0N-VGjzr574C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:0N-VGjzr574C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 294,
+          "author_pub_id": "p1aFEDYAAAAJ:37UQlXuwjP4C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:37UQlXuwjP4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 295,
+          "author_pub_id": "p1aFEDYAAAAJ:hQUaER0FWQ4C",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:hQUaER0FWQ4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 297,
+          "author_pub_id": "p1aFEDYAAAAJ:4Yq6kJLCcecC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:4Yq6kJLCcecC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 298,
+          "author_pub_id": "p1aFEDYAAAAJ:aIdbFUkbNIkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:aIdbFUkbNIkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 299,
+          "author_pub_id": "p1aFEDYAAAAJ:Xl6nMSl579sC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=200&pagesize=100&citation_for_view=p1aFEDYAAAAJ:Xl6nMSl579sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 301,
+          "author_pub_id": "p1aFEDYAAAAJ:DrR-2ekChdkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:DrR-2ekChdkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 305,
+          "author_pub_id": "p1aFEDYAAAAJ:pAkWuXOU-OoC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk. Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:pAkWuXOU-OoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 306,
+          "author_pub_id": "p1aFEDYAAAAJ:sszUF3NjhM4C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:sszUF3NjhM4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 308,
+          "author_pub_id": "p1aFEDYAAAAJ:XvxMoLDsR5gC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:XvxMoLDsR5gC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 309,
+          "author_pub_id": "p1aFEDYAAAAJ:ClCfbGk0d_YC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:ClCfbGk0d_YC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 340,
+          "author_pub_id": "p1aFEDYAAAAJ:Ug5p-4gJ2f0C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:Ug5p-4gJ2f0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 341,
+          "author_pub_id": "p1aFEDYAAAAJ:b1wdh0AR-JQC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:b1wdh0AR-JQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 345,
+          "author_pub_id": "p1aFEDYAAAAJ:HtS1dXgVpQUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:HtS1dXgVpQUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 346,
+          "author_pub_id": "p1aFEDYAAAAJ:DUooU5lO8OsC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:DUooU5lO8OsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 347,
+          "author_pub_id": "p1aFEDYAAAAJ:anf4URPfarAC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:anf4URPfarAC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 348,
+          "author_pub_id": "p1aFEDYAAAAJ:VaXvl8Fpj5cC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:VaXvl8Fpj5cC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 349,
+          "author_pub_id": "p1aFEDYAAAAJ:4hFrxpcac9AC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:4hFrxpcac9AC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 351,
+          "author_pub_id": "p1aFEDYAAAAJ:EaFouW7jFu4C",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:EaFouW7jFu4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 354,
+          "author_pub_id": "p1aFEDYAAAAJ:4vMrXwiscB8C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:4vMrXwiscB8C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 355,
+          "author_pub_id": "p1aFEDYAAAAJ:oNZyr7d5Mn4C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:oNZyr7d5Mn4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 360,
+          "author_pub_id": "p1aFEDYAAAAJ:sNmaIFBj_lkC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:sNmaIFBj_lkC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 363,
+          "author_pub_id": "p1aFEDYAAAAJ:mlAyqtXpCwEC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:mlAyqtXpCwEC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 364,
+          "author_pub_id": "p1aFEDYAAAAJ:GtLg2Ama23sC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:GtLg2Ama23sC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 366,
+          "author_pub_id": "p1aFEDYAAAAJ:c_xDhezhKKUC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:c_xDhezhKKUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 369,
+          "author_pub_id": "p1aFEDYAAAAJ:-FonjvnnhkoC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:-FonjvnnhkoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 373,
+          "author_pub_id": "p1aFEDYAAAAJ:LXmCCkuhhTsC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:LXmCCkuhhTsC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 375,
+          "author_pub_id": "p1aFEDYAAAAJ:i2xiXl-TujoC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:i2xiXl-TujoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 377,
+          "author_pub_id": "p1aFEDYAAAAJ:bz8QjSJIRt4C",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:bz8QjSJIRt4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 385,
+          "author_pub_id": "p1aFEDYAAAAJ:86PQX7AUzd4C",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:86PQX7AUzd4C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 391,
+          "author_pub_id": "p1aFEDYAAAAJ:CNPyR2KL9-0C",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:CNPyR2KL9-0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 394,
+          "author_pub_id": "p1aFEDYAAAAJ:OcBU2YAGkTUC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:OcBU2YAGkTUC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 397,
+          "author_pub_id": "p1aFEDYAAAAJ:hCrLmN-GePgC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:hCrLmN-GePgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 398,
+          "author_pub_id": "p1aFEDYAAAAJ:LO7wyVUgiFcC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:LO7wyVUgiFcC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 399,
+          "author_pub_id": "p1aFEDYAAAAJ:5qfkUJPXOUwC",
+          "reason": "Meeting abstract output type and collaboration-link treatment remain provisional.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=300&pagesize=100&citation_for_view=p1aFEDYAAAAJ:5qfkUJPXOUwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 401,
+          "author_pub_id": "p1aFEDYAAAAJ:PVjk1bu6vJQC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:PVjk1bu6vJQC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 402,
+          "author_pub_id": "p1aFEDYAAAAJ:XoXfffV-tXoC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:XoXfffV-tXoC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 418,
+          "author_pub_id": "p1aFEDYAAAAJ:wLxue7F8ec0C",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:wLxue7F8ec0C",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 419,
+          "author_pub_id": "p1aFEDYAAAAJ:X0DADzN9RKwC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:X0DADzN9RKwC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 420,
+          "author_pub_id": "p1aFEDYAAAAJ:HJSXoJQnj-YC",
+          "reason": "Distinct Scholar citation IDs share a normalized title; hold pending exact publication/version crosswalk. Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:HJSXoJQnj-YC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 421,
+          "author_pub_id": "p1aFEDYAAAAJ:owLR8QvbtFgC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:owLR8QvbtFgC",
+          "reviewed_at": "2026-10-25"
+        },
+        {
+          "capture_row_index": 422,
+          "author_pub_id": "p1aFEDYAAAAJ:3htObqc8RwsC",
+          "reason": "Saved Scholar venue is blank; hold pending source and output classification.",
+          "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p1aFEDYAAAAJ&cstart=400&pagesize=100&citation_for_view=p1aFEDYAAAAJ:3htObqc8RwsC",
+          "reviewed_at": "2026-10-25"
+        }
+      ]
     }
   ]
 }

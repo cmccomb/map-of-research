@@ -10448,6 +10448,246 @@
       "reason": "Dryad data deposit linked to the separately retained Science article; exclude under the existing dataset map-grain convention.",
       "evidence_url": "https://datadryad.org/dataset/doi:10.5061/dryad.q83bk3jts",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF award 1809145 for a funded research project, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1809145.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:dshw04ExmUIC",
+      "reason_code": "nonpublication",
+      "reason": "The source is an Ohio University newsletter announcement for Benjamin Hunt’s CMSS colloquium, not a separate research publication.",
+      "evidence_url": "https://ohioopen.library.ohio.edu/cas_forum_all/4913/",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The publisher-only entry repeats the complete 2017 Nature Communications article retained on this profile as row 7.",
+      "evidence_url": "https://www.nature.com/articles/s41467-017-00824-w",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:vRqMK49ujn8C",
+      "reason_code": "nonpublication",
+      "reason": "The captured title is NSF equipment award 1626099, not a research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1626099.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:K3LRdlH-MEoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The publisher-only entry repeats the complete 2013 Science article retained on this profile as row 1.",
+      "evidence_url": "https://api.crossref.org/works/10.1126%2Fscience.1237240",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:-f6ydRqryjwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The 2000 Adelaide chemical engineering thesis is by a namesake, Benjamin Matthew Hunt; CMU physicist Benjamin M. Hunt earned his bachelor’s degree in 2002 and physics PhD in 2009.",
+      "evidence_url": "https://digital.library.adelaide.edu.au/server/api/core/bitstreams/6953eea0-c673-45bc-9ade-b86527ca533c/content",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "11EoZncAAAAJ",
+      "author_pub_id": "11EoZncAAAAJ:xtRiw3GOFMkC",
+      "reason_code": "false_profile_attribution",
+      "reason": "The optical-clock conference work is by NIST/Colorado researcher Benjamin Hunt, not the CMU condensed-matter physicist.",
+      "evidence_url": "https://indico.global/event/12925/book-of-abstracts.pdf",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:edDO8Oi4QzsC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 160 is NSF award 2102316 for a funded research project, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/2102316.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:XoXfffV-tXoC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 167 is NSF award 1764257 for a funded research project, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1764257.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:ruyezt5ZtCIC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 176 is NSF award 1464926 for a funded research project, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1464926.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:Ug5p-4gJ2f0C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 183 is NSF award 1330226 for a funded research project, not a publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1330226.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:VOx2b1Wkg3QC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 229 is File S1 supporting information for the PLOS One article retained as complete Deserno profile row 48, not a separate publication.",
+      "evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0060582",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:YohjEiUPhakC",
+      "reason_code": "nonpublication",
+      "reason": "The saved string is a sequence of author names and page numbers from the author index of Computer Simulation Studies in Condensed-Matter Physics XIX, not a titled Deserno publication.",
+      "evidence_url": "https://link.springer.com/book/10.1007/978-3-540-85625-2",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:lmc2jWPfTJgC",
+      "reason_code": "nonpublication",
+      "reason": "The captured opening sentence is PCCP themed-issue front matter and contents, not a Deserno-authored paper.",
+      "evidence_url": "https://pubs.rsc.org/en/content/articlepdf/2009/cp/b904926f",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:tzM49s52ZIMC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 104:170a abstract retained as row 187, with the same Diggins–Deserno byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2012.11.956",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:tkaPQYYpVKoC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 98:634a abstract retained as row 201, with the same Bereau–Bachmann–Deserno byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2009.12.3470",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:Y5dfb0dijaUC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The date and page-header fragment repeats the Biophysical Journal 104:413a abstract retained as row 186, with the same four-author byline.",
+      "evidence_url": "https://doi.org/10.1016/j.bpj.2012.11.2301",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:eMMeJKvmdy0C",
+      "reason_code": "nonpublication",
+      "reason": "The exact CMU-hosted PDF is a Physics for Future Presidents course study aid summarizing textbook chapters, not a research publication.",
+      "evidence_url": "https://www.cs.cmu.edu/afs/andrew.cmu.edu/course/33/115/wwwbackup/study_aids/chapter_summaries.pdf",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "1J28ExgAAAAJ",
+      "author_pub_id": "1J28ExgAAAAJ:f2IySw72cVMC",
+      "reason_code": "nonpublication",
+      "reason": "The saved record is supplementary material for the 2013 Journal of Chemical Physics article retained as row 25, not a separate research work.",
+      "evidence_url": "https://doi.org/10.1063/1.4808077",
+      "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:Azgs6IHzeyYC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 267 is the Microelectronics encyclopedia entry by T. Sugano and A. Morino; Wiley-deposited DOI metadata lists those authors and does not include Randall Feenstra.",
+      "evidence_url": "https://api.crossref.org/works/10.1002%2F3527600434.eap243",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:M0leSnx2MbUC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 300 is NSF award 1809145, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1809145.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:PQEM9vzQD9gC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 303 is NSF award 1626099, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1626099.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:hNSvKAmkeYkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 353 is NSF award 1205275, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/1205275.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:N4u4nq0IxgcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 358 is NSF award 0856240, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0856240.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:n3vGvpFsckwC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 368 is NSF award 0503748, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0503748.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:9NZAP19TdFAC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 371 is NSF award 0423829, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0423829.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:tz746QTLzJkC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 381 is NSF award 0079485, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/0079485.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:ymY9cBF3mdcC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 384 is NSF award 9985898, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9985898.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:pYKElYtJMmwC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 395 is NSF award 9615647, a funded project or event record rather than a separate research publication.",
+      "evidence_url": "https://api.nsf.gov/services/v1/awards/9615647.json",
+      "verified_at": "2026-10-24"
+    },
+    {
+      "scholar_id": "p1aFEDYAAAAJ",
+      "author_pub_id": "p1aFEDYAAAAJ:9DLIHnF0jcYC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "The saved title, 1987 PRL volume and page repeat retained row 19; the publisher lists Stroscio, Feenstra and Fein, while this duplicate adds an unsupported Tersoff byline.",
+      "evidence_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.58.1668",
+      "verified_at": "2026-10-25"
     }
   ]
 }
