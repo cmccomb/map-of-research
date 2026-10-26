@@ -132,6 +132,9 @@ PHYSICS_HDF_PRIOR_ELIGIBLE_WORK_IDS = MCS_PARENT_PRIOR_ELIGIBLE_WORK_IDS - {
 PHYSICS_HDF_DAS_SNAPSHOT_SHA256 = (
     "003ab89dce40c04e057e837ce282d153d675514d1e88a52550b087ba323746a1"
 )
+PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID = (
+    "work-4e63e66d343de69522c77ffde7a55853382c39d01a9379ca47f4fa4eb939e802"
+)
 MCS_PARENT_CANDIDATE_PRIOR_ELIGIBLE_LOSSES = frozenset(
     {
         "work-8dcc024f119371868cec839a22cab25ec785f6679b17ee9f1a732ec7b1f03342",
@@ -649,6 +652,7 @@ def validate_chemistry_candidate(
     require_count_parity: bool = False,
     allow_region_refit: bool = False,
     allow_mcs_parent_diagnostic_refit: bool = False,
+    allow_physics_hdf_das_diagnostic_refit: bool = False,
 ) -> None:
     """Reject changes to reviewed Chemistry source and visibility decisions.
 
@@ -657,7 +661,9 @@ def validate_chemistry_candidate(
     Physics-five parent, unchanged source, and fresh layout. From the
     published MCS parent, only two exact prior-eligible
     diagnostics and one exact documented-region diagnostic may change from true
-    to false. Source, visibility, attribution, and authorship stay exact.
+    to false. The exact Physics HDF/Das pair may also turn off its one
+    documented-region diagnostic. Source, visibility, attribution, and
+    authorship stay exact.
     """
 
     parent = parent_state["parent_rows"]
@@ -715,6 +721,16 @@ def validate_chemistry_candidate(
                     table == "works"
                     and allow_mcs_parent_diagnostic_refit
                     and key == MCS_PARENT_CANDIDATE_DOCUMENTED_LOSS_ID
+                    and key in parent["points"]
+                    and field == "map_region_documented_override"
+                    and _equal_value(prior[field]) is True
+                    and _equal_value(row[field]) is False
+                ):
+                    continue
+                if (
+                    table == "works"
+                    and allow_physics_hdf_das_diagnostic_refit
+                    and key == PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID
                     and key in parent["points"]
                     and field == "map_region_documented_override"
                     and _equal_value(prior[field]) is True

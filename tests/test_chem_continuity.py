@@ -351,6 +351,32 @@ def test_physics_hdf_parent_accepts_only_its_published_chemistry_diagnostics(
     with pytest.raises(ValueError, match="candidate works changed"):
         validate_chemistry_candidate(tables, state)
     validate_chemistry_candidate(tables, state, allow_mcs_parent_diagnostic_refit=True)
+    documented = continuity.PHYSICS_HDF_DAS_DOCUMENTED_LOSS_ID
+    tables["works"].loc[
+        tables["works"]["work_id"].eq(documented),
+        "map_region_documented_override",
+    ] = False
+    with pytest.raises(ValueError, match=rf"candidate works changed: {documented}"):
+        validate_chemistry_candidate(
+            tables, state, allow_mcs_parent_diagnostic_refit=True
+        )
+    validate_chemistry_candidate(
+        tables,
+        state,
+        allow_mcs_parent_diagnostic_refit=True,
+        allow_physics_hdf_das_diagnostic_refit=True,
+    )
+    tables["works"].loc[
+        tables["works"]["work_id"].eq(rule_of_four),
+        "map_region_prior_eligible_override",
+    ] = True
+    with pytest.raises(ValueError, match=rf"candidate works changed: {rule_of_four}"):
+        validate_chemistry_candidate(
+            tables,
+            state,
+            allow_mcs_parent_diagnostic_refit=True,
+            allow_physics_hdf_das_diagnostic_refit=True,
+        )
     with pytest.raises(ValueError, match="work derivation changed"):
         validate_chemistry_parent(
             decisions,

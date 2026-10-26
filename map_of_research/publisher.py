@@ -2065,6 +2065,13 @@ def publish_snapshot(
                     layout_reused=layout_reused,
                 )
             ),
+            allow_physics_hdf_das_diagnostic_refit=(
+                allows_physics_hdf_das_diagnostic_refit(
+                    prior_revision=prior_revision,
+                    source_sha256=str(manifest["snapshot_sha256"]),
+                    layout_reused=layout_reused,
+                )
+            ),
             require_count_parity=bool(
                 held_observation_ids
                 and held_only_continuity_candidate(continuity_receipt, prior_revision)
