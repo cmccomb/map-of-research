@@ -155,7 +155,11 @@
       "source_html_path": "data/captures/physics-reinhard-schumacher-2026-10-24.html",
       "source_html_sha256": "5ce76d360feff9abf784e45ed2afa5c2c2e3df0f5fbe18b6b005d1017d2ee93d",
       "coverage": "complete_visible_profile",
-      "state": "held"
+      "state": "reviewed_for_paired_release",
+      "paired_release_review_path": "status/physics-schumacher-release-review-2026-10-26.json",
+      "reviewed_exclusion_count": 26,
+      "provisional_hold_count": 258,
+      "ordinary_gate_rows": 259
     }
   ]
 }
