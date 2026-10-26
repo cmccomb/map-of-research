@@ -1043,7 +1043,7 @@ def test_meyer_release_holds_name_matches_and_unresolved_source_renderings():
     assert decision.state == "released"
     assert profile.expected_source_rows == decision.expected_source_rows == 764
     assert len(excluded_ids) == profile.expected_reviewed_exclusion_rows == 0
-    assert len(held_ids) == decision.expected_provisional_hold_rows == 374
+    assert len(held_ids) == decision.expected_provisional_hold_rows == 472
     assert {
         1,
         2,
@@ -1063,8 +1063,15 @@ def test_meyer_release_holds_name_matches_and_unresolved_source_renderings():
         745,
         755,
         764,
+        160,
+        692,
+        695,
+        503,
+        532,
+        59,
+        671,
     } <= held_rows
     assert held_ids.isdisjoint(excluded_ids)
     assert profile.reviewed_exclusion_ids_sha256 == ""
     assert hold_ids_sha256(held_ids) == decision.provisional_hold_ids_sha256
-    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 390
+    assert profile.expected_source_rows - len(held_ids) - len(excluded_ids) == 292
