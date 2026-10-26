@@ -9,6 +9,22 @@ from map_of_research.registry import department_catalog, load_registry, unique_p
 from tests.registry_helpers import write_registry
 
 
+def test_cmu_chemistry_kim_orcid_is_a_registry_identity_only() -> None:
+    registry = load_registry()
+    person = registry.people_by_id["person-hyungjkim-2fcad292"]
+    assert person.display_name == "Hyung J. Kim"
+    assert person.scholar_id == "bC4aq-4AAAAJ"
+    assert person.orcid == "0000-0003-4334-1879"
+    assert (
+        person.homepage_url == "https://www.cmu.edu/chemistry/people/faculty/kim.html"
+    )
+    assert {
+        (membership.department_id, membership.role, membership.included)
+        for membership in registry.memberships
+        if membership.person_id == person.person_id
+    } == {("chem", "faculty", True)}
+
+
 def test_registry_collapses_cross_appointments_with_stable_identity(
     tmp_path: Path,
 ) -> None:
