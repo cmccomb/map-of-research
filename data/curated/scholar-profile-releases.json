@@ -513,6 +513,116 @@
       "reviewed_at": "2026-10-26",
       "expected_provisional_hold_rows": 102,
       "provisional_hold_ids_sha256": "5ea4cf6e8af0499d83eb064fc3d0477e6a48395d104cee0894288657b053792b"
+    },
+    {
+      "person_id": "person-richardpeng-2dccae48",
+      "scholar_id": "loh7ivYAAAAJ",
+      "state": "released",
+      "expected_source_rows": 109,
+      "cache_sha256": "5a9c73ef6938a3492b6796abe88e16e6131e95e22e0011545cefa050ffc7e6b8",
+      "reason": "Complete visible 109-row official-ID SCS Scholar capture; 15 exact uncertain observations held, 94 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 15,
+      "provisional_hold_ids_sha256": "cd2d218ccf4dda7443bf95109688158a141797e5473635c9d2bd80fa6a48a98a"
+    },
+    {
+      "person_id": "person-shreyashankar-35d2d805",
+      "scholar_id": "0WD1nZcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 34,
+      "cache_sha256": "ce5e81047b1260ba32e16a525c1e2a13cb409b4f1e4c5ce5534418709ed6ee97",
+      "reason": "Complete visible 34-row official-ID SCS Scholar capture; 1 exact uncertain observations held, 33 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 1,
+      "provisional_hold_ids_sha256": "c2df24f55ee3c5cc04679eb745e7d54586bf655077b64542ffa7a2b6ab491821"
+    },
+    {
+      "person_id": "person-mayankgoel-a1fb1bf6",
+      "scholar_id": "nxqrff8AAAAJ",
+      "state": "released",
+      "expected_source_rows": 140,
+      "cache_sha256": "3e40600c8a8176fd575b0e8261cca0e04875b7f61a0728b3f50a32bdea172ebd",
+      "reason": "Complete visible 140-row official-ID SCS Scholar capture; 47 exact uncertain observations held, 93 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 47,
+      "provisional_hold_ids_sha256": "ec44385a9c8946fce9461d739864241165473a4c6fdfc7865d8354e4faaa8cf9"
+    },
+    {
+      "person_id": "person-normansadeh-21107c40",
+      "scholar_id": "X57uzqcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 514,
+      "cache_sha256": "4df5ccc56c62a734533d834530acc319623f9bcd463aa4c94052f53e83e4066a",
+      "reason": "Complete visible 514-row official-ID SCS Scholar capture; 265 exact uncertain observations held, 249 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 265,
+      "provisional_hold_ids_sha256": "75f2e469ff8bb362baa0f76af6511a5eb03addcc1ea91ebbe4c9091f2aa0b1de"
+    },
+    {
+      "person_id": "person-abhiseshsilwal-75ec9eb5",
+      "scholar_id": "4ftPKy0AAAAJ",
+      "state": "released",
+      "expected_source_rows": 30,
+      "cache_sha256": "8632fe6be8c78bfc5eff82ded0fb09f377471e3126cb32f0c0083b9ce8fddb74",
+      "reason": "Complete visible 30-row official-ID SCS Scholar capture; 5 exact uncertain observations held, 25 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 5,
+      "provisional_hold_ids_sha256": "3be17e29aa36d0950bfa07797dc91519f620b979d3f14c128189b2d0f24b0f57"
+    },
+    {
+      "person_id": "person-andreabajcsy-e887e206",
+      "scholar_id": "LUe32ToAAAAJ",
+      "state": "released",
+      "expected_source_rows": 80,
+      "cache_sha256": "823c0cdf5bf13949ff265dc37bba8cff2d5bc2e7a3fe98d50f4b9bfd4ed98aa1",
+      "reason": "Complete visible 80-row official-ID RI Scholar capture; 17 exact uncertain observations held, 63 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 17,
+      "provisional_hold_ids_sha256": "dbc9e0cca767cde8153c5ea7dd600c35d1d7df507451134300636a8772bfa51f"
+    },
+    {
+      "person_id": "person-changliuliu-0a6c0163",
+      "scholar_id": "vvzAfOwAAAAJ",
+      "state": "released",
+      "expected_source_rows": 226,
+      "cache_sha256": "93383e0d1e24723a0c51778bb9a7399a5c7f23f244d6ec82d9018cd8e90192a2",
+      "reason": "Complete visible 226-row official-ID RI Scholar capture; 24 exact uncertain observations held, 202 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 24,
+      "provisional_hold_ids_sha256": "559fdfb63ba6948fb121fedc0c2275e18158a200936e4c703ce566fc97ce1863"
+    },
+    {
+      "person_id": "person-davidheld-fb7ecccf",
+      "scholar_id": "0QtU-NsAAAAJ",
+      "state": "released",
+      "expected_source_rows": 145,
+      "cache_sha256": "376c55df10bbcba4e5794a2b1eddb2848a4aa7afde76af5972c132616420b29a",
+      "reason": "Complete visible 145-row official-ID RI Scholar capture; 28 exact uncertain observations held, 117 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 28,
+      "provisional_hold_ids_sha256": "3e2c0369630decb30662d8437cd64c3d918d49ed09e504c6d6f66cb929a03380"
+    },
+    {
+      "person_id": "person-deepakpathak-d5a312e2",
+      "scholar_id": "AEsPCAUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 143,
+      "cache_sha256": "107e290fc3aefc2d20341a8db30d22107fc515c75847388d81217a98268bc238",
+      "reason": "Complete visible 143-row official-ID RI Scholar capture; 19 exact uncertain observations held, 124 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 19,
+      "provisional_hold_ids_sha256": "7751f0ebff60e62f3f68ef2d0ec16fe7fef232281714ba20f1a78c99048e3e75"
+    },
+    {
+      "person_id": "person-devakannanramanan-f1bca5a0",
+      "scholar_id": "9B8PoXUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 399,
+      "cache_sha256": "b66f6ee95df253ba806798e9f60d8cbb82eb006e91f8436d443e9b57e23ef259",
+      "reason": "Complete visible 399-row official-ID RI Scholar capture; 129 exact uncertain observations held, 270 ordinary observations enter existing quality gates.",
+      "reviewed_at": "2026-10-26",
+      "expected_provisional_hold_rows": 129,
+      "provisional_hold_ids_sha256": "998defe4d0fa2d145071b1c8939d4ac7bb39920c85fdf7109b66bcd74e53d275"
     }
   ]
 }
