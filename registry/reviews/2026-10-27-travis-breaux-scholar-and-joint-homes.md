@@ -1,0 +1,7 @@
+# Travis Breaux: exact Scholar ID and joint homes
+
+The named [CMU CyLab biography](https://www.cylab.cmu.edu/directory/bios/breaux-travis.html) directly labels Travis Breaux's Google Scholar link with `user=SjiG_ZsAAAAJ`. It also identifies associate-professor appointments in CSD, Engineering and Public Policy, and S3D. The [EPP biography](https://epp.engineering.cmu.edu/directory/bios/breaux-travis.html) independently confirms the CSD and EPP positions and S3D appointment. Those two previously missing included memberships are recorded as faculty; the existing S3D and excluded Heinz affiliate rows are preserved.
+
+S3D is the display primary. His [current S3D faculty biography](https://s3d.cmu.edu/people/core-faculty/breaux-travis.html) presents him as Associate Professor of Software and Societal Systems and says he is appointed there. His [CMU personal page](https://www.cs.cmu.edu/~breaux/) leads with S3D and names Software Engineering PhD students in his research news. [Anmol Singhal's S3D PhD biography](https://se-phd.s3d.cmu.edu/People/students/student-bios/singhal-anmol.html) explicitly lists Breaux as adviser. This evidence supports S3D as the display home while all three academic memberships remain available to filters. The available advisee evidence is not an exhaustive census.
+
+No Scholar profile was opened. The registry change records only the exact ID, one evidenced primary, and the official joint memberships; it does not publish works.
