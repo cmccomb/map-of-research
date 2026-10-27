@@ -1,0 +1,12 @@
+# Four SCS Scholar IDs directly linked by CMU pages
+
+Verified 2026-10-27. Only CMU pages were opened. No Scholar profile was opened or publication downloaded. Each ID was blank and unique at producer parent `5aad54b1ba3b52243fcd75dfa21724ee897780a5`.
+
+| Person | Primary academic home | Official CMU source and exact link |
+|---|---|
+| Tianqi Chen (`person-tianqichen-bae407cf`) | Machine Learning Department; existing reviewed primary. CSD membership retained. | [CMU Scholars profile](https://scholars.cmu.edu/9743-tianqi-chen) → [Scholar URL](https://scholar.google.com/citations?user=7nlvOMQAAAAJ&hl=en) (`7nlvOMQAAAAJ`). The CMU page identifies his Machine Learning appointment. |
+| Jeff Schneider (`person-jeffschneider-97cd2dce`) | Robotics Institute; existing reviewed primary. MLD membership retained. | [CMU Scholars profile](https://scholars.cmu.edu/2140-jeff-schneider) → [Scholar URL](https://scholar.google.com/citations?user=3bSbb20AAAAJ&hl=en) (`3bSbb20AAAAJ`). The CMU page identifies his current RI research professorship. |
+| Ameet Talwalkar (`person-ameettalwalkar-58c2b40c`) | Machine Learning Department; explicitly identified by his CMU faculty site and his sole included academic membership, recorded with this ID. | [CMU MLD profile](https://ml.cmu.edu/people/core-faculty-people/atalwalk) and [CMU faculty site](https://www.cs.cmu.edu/~atalwalk/) identify him as an MLD associate professor; the faculty site directly links his [Scholar URL](https://scholar.google.com/citations?user=TW7U1W0AAAAJ&hl=en&oi=ao) (`TW7U1W0AAAAJ`). |
+| Tom Mitchell (`person-tommitchell-3579dcaa`) | Machine Learning Department; existing reviewed primary. CSD and RI memberships retained. | [CMU faculty publication page](https://www.cs.cmu.edu/~tom/publications.html) → [Scholar URL](https://scholar.google.com/citations?user=MnfzuPYAAAAJ&hl=en) (`MnfzuPYAAAAJ`). The [CMU expert profile](https://experts.cmu.edu/expert/tom.mitchell/Tom-Mitchell) independently labels the same Scholar profile. |
+
+Previously recorded primary homes and joint memberships remain unchanged. Ameet Talwalkar's previously blank primary department is assigned from his explicit MLD affiliation and sole included membership. The same bounded CMU Scholars page review found no exact direct Scholar links for Alan Montgomery, Hoda Heidari, Keenan Crane, or Yiming Yang; their IDs remain blank. No access refusal was bypassed.
