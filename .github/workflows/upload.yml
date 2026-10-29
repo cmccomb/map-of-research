@@ -270,6 +270,7 @@ jobs:
             --scholar-prior-id-crosswalk source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
             --scholar-additional-prior-id-crosswalk source/registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json \
             --scholar-additional-prior-id-crosswalk source/registry/reviews/2026-10-29-mccomb-prior-id-crosswalk.json \
+            --mccomb-continuity-approval source/data/curated/mccomb-exact-continuity-20261029.json \
             --sullivan-loss-approval source/data/curated/sullivan-exact-losses-bb88.json \
             --sullivan-continuity-addendum source/data/curated/sullivan-continuity-addendum-bb88.json \
             --scholar-curated-works source/data/curated/works.json \

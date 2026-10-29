@@ -28,6 +28,7 @@ from .bio_binding_approval import (
 )
 from .bio_binding_approval import ExactBioBindingApproval, binding_digest
 from .doi_aliases import DOI_PATTERN
+from .mccomb_continuity import ExactMcCombContinuity
 from .sullivan_continuity_addendum import (
     ADDENDUM_SHA256 as SULLIVAN_ADDENDUM_SHA256,
 )
@@ -406,6 +407,7 @@ def reconcile_region_decisions(
     sullivan_loss_approval: ExactSullivanLossApproval | None = None,
     sullivan_continuity_addendum: ExactSullivanContinuityAddendum | None = None,
     bio_binding_approval: ExactBioBindingApproval | None = None,
+    mccomb_continuity: ExactMcCombContinuity | None = None,
     approved_person_hold_losses: frozenset[ObservationKey] = frozenset(),
     composite_plan: Any | None = None,
     historical_works: Mapping[str, Mapping[str, Any]] | None = None,
@@ -556,6 +558,11 @@ def reconcile_region_decisions(
         ):
             raise ValueError("Bio binding approval is not the reviewed set")
         approved_bio_bindings = set(bio_binding_approval.binding_changes)
+    approved_mccomb_bindings: set[tuple[ObservationKey, str, str, bool, bool]] = set()
+    approved_mccomb_losses: set[ObservationKey] = set()
+    if mccomb_continuity is not None:
+        approved_mccomb_bindings = set(mccomb_continuity.binding_changes)
+        approved_mccomb_losses = set(mccomb_continuity.loss_identities)
     actual_binding_changes = {
         (
             tuple(change["observation"].split("/")),
@@ -576,12 +583,15 @@ def reconcile_region_decisions(
             change["prior_collaboration_eligible"],
             change["current_collaboration_eligible"],
         )
-        not in approved_binding_changes | approved_bio_bindings
+        not in approved_binding_changes
+        | approved_bio_bindings
+        | approved_mccomb_bindings
     ]
     unused_sullivan_binding_approvals = (
         approved_binding_changes - actual_binding_changes
     )
     unused_bio_binding_approvals = approved_bio_bindings - actual_binding_changes
+    unused_mccomb_binding_approvals = approved_mccomb_bindings - actual_binding_changes
     missing_curated_targets = sorted(
         work_id
         for work_id in required_curated_work_ids
@@ -665,11 +675,13 @@ def reconcile_region_decisions(
     unused_person_hold_approvals = (
         approved_person_hold_losses - losses_requiring_approval
     )
+    unused_mccomb_loss_approvals = approved_mccomb_losses - losses_requiring_approval
     unexplained_losses = sorted(
         losses_requiring_approval
         - approved_sullivan_losses
         - approved_losses
         - approved_person_hold_losses
+        - approved_mccomb_losses
     )
     verified_gains = sorted(
         identity
@@ -786,6 +798,43 @@ def reconcile_region_decisions(
         "approved_person_hold_losses": [
             _display(item) for item in sorted(approved_person_hold_losses)
         ],
+        "approved_mccomb_losses": [
+            _display(item) for item in sorted(approved_mccomb_losses)
+        ],
+        "approved_mccomb_binding_changes": [
+            change
+            for change in mapped_binding_changes
+            if (
+                tuple(change["observation"].split("/")),
+                change["prior_work_id"],
+                change["current_work_id"],
+                change["prior_collaboration_eligible"],
+                change["current_collaboration_eligible"],
+            )
+            in approved_mccomb_bindings
+        ],
+        "mccomb_continuity_sha256": (
+            mccomb_continuity.manifest_sha256 if mccomb_continuity is not None else None
+        ),
+        "unused_mccomb_loss_approvals": [
+            _display(item) for item in sorted(unused_mccomb_loss_approvals)
+        ],
+        "unused_mccomb_binding_approvals": [
+            {
+                "observation": _display(identity),
+                "prior_work_id": prior_work_id,
+                "current_work_id": current_work_id,
+                "prior_collaboration_eligible": prior_collaboration_eligible,
+                "current_collaboration_eligible": current_collaboration_eligible,
+            }
+            for (
+                identity,
+                prior_work_id,
+                current_work_id,
+                prior_collaboration_eligible,
+                current_collaboration_eligible,
+            ) in sorted(unused_mccomb_binding_approvals)
+        ],
         "unused_person_hold_approvals": [
             _display(item) for item in sorted(unused_person_hold_approvals)
         ],
@@ -849,6 +898,8 @@ def reconcile_region_decisions(
         or missing_curated_targets
         or unused_sullivan_approvals
         or unused_person_hold_approvals
+        or unused_mccomb_loss_approvals
+        or unused_mccomb_binding_approvals
     ):
         raise RegionReleaseDiffError(receipt)
     return output, receipt

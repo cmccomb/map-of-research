@@ -115,6 +115,19 @@ from .keywords import (
     exclude_low_information_regions,
 )
 from .math_release_gate import validate_math_coverage
+from .mccomb_continuity import (
+    DEFAULT_APPROVAL_PATH as DEFAULT_MCCOMB_CONTINUITY_PATH,
+)
+from .mccomb_continuity import (
+    DEFAULT_CROSSWALK_PATH as DEFAULT_MCCOMB_CROSSWALK_PATH,
+)
+from .mccomb_continuity import (
+    PRIOR_REVISION as MCCOMB_CONTINUITY_PRIOR_REVISION,
+)
+from .mccomb_continuity import (
+    SNAPSHOT_SHA256 as MCCOMB_CONTINUITY_SNAPSHOT_SHA256,
+)
+from .mccomb_continuity import validate_exact_mccomb_continuity
 from .person_publication_holds import (
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     load_person_publication_holds,
@@ -1639,6 +1652,8 @@ def publish_snapshot(
     sullivan_loss_approval_path: Path = DEFAULT_SULLIVAN_LOSS_APPROVAL_PATH,
     sullivan_continuity_addendum_path: Path = DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
+    mccomb_continuity_path: Path = DEFAULT_MCCOMB_CONTINUITY_PATH,
+    mccomb_crosswalk_path: Path = DEFAULT_MCCOMB_CROSSWALK_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
     chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
@@ -2012,6 +2027,21 @@ def publish_snapshot(
         if bio_binding_approval_path is not None
         else None
     )
+    mccomb_continuity = (
+        validate_exact_mccomb_continuity(
+            mccomb_continuity_path,
+            prior_revision=prior_revision,
+            source_snapshot_commit=source_commit or "",
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            cache_path=cache_dir / "0P9w_S0AAAAJ.json",
+            crosswalk_path=mccomb_crosswalk_path,
+            prior_profiles=prior_profiles,
+            current_profiles=tables["profile_publications"].to_dict("records"),
+        )
+        if prior_revision == MCCOMB_CONTINUITY_PRIOR_REVISION
+        and manifest["snapshot_sha256"] == MCCOMB_CONTINUITY_SNAPSHOT_SHA256
+        else None
+    )
     tables["works"], continuity_receipt = reconcile_region_decisions(
         tables["works"],
         tables["profile_publications"],
@@ -2021,6 +2051,7 @@ def publish_snapshot(
         sullivan_loss_approval=sullivan_loss_approval,
         sullivan_continuity_addendum=sullivan_continuity_addendum,
         bio_binding_approval=bio_binding_approval,
+        mccomb_continuity=mccomb_continuity,
         approved_person_hold_losses=approved_person_hold_losses,
         composite_plan=composite_plan,
         historical_works=historical_works,
@@ -2461,6 +2492,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         help="Reviewed parent-pinned Bio work-binding changes",
     )
+    parser.add_argument(
+        "--mccomb-continuity-approval",
+        type=Path,
+        default=DEFAULT_MCCOMB_CONTINUITY_PATH,
+        help="Exact source-pinned McComb rekeys and corrected-year binding",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2575,6 +2612,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             provisional_holds_path=args.provisional_holds,
             historical_loss_approval_path=args.approved_poster_loss,
             bio_binding_approval_path=args.bio_binding_approval,
+            mccomb_continuity_path=args.mccomb_continuity_approval,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
@@ -2592,6 +2630,14 @@ def main(argv: Sequence[str] | None = None) -> int:
                     if path.name == DEFAULT_SULLIVAN_CROSSWALK_PATH.name
                 ),
                 DEFAULT_SULLIVAN_CROSSWALK_PATH,
+            ),
+            mccomb_crosswalk_path=next(
+                (
+                    path
+                    for path in args.scholar_additional_prior_id_crosswalk
+                    if path.name == DEFAULT_MCCOMB_CROSSWALK_PATH.name
+                ),
+                DEFAULT_MCCOMB_CROSSWALK_PATH,
             ),
             curated_works_path=args.scholar_curated_works,
             math_region_review_path=args.math_region_review_manifest,
