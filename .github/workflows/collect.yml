@@ -88,6 +88,7 @@ jobs:
             --baseline ../source/registry/legacy-scholar-cache-baseline.json \
             --prior-id-crosswalk ../source/registry/reviews/2026-10-25-chem-donahue-prior-id-crosswalk.json \
             --additional-prior-id-crosswalk ../source/registry/reviews/2026-10-25-chem-sullivan-prior-id-crosswalk.json \
+            --additional-prior-id-crosswalk ../source/registry/reviews/2026-10-29-mccomb-prior-id-crosswalk.json \
             --curated-works ../source/data/curated/works.json \
             --exclusions ../source/data/curated/scholar-exclusions.json
           map-build-snapshot

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scholar_id": "0P9w_S0AAAAJ",
+  "person_id": "person-mccomb-03260969",
+  "frozen_snapshot_commit": "4dbafc2a627930a0ef80aa2c645089546c0d874a",
+  "frozen_snapshot_sha256": "69b495c07e4d1ac7b630af80656d8cf7c0882f99bf37395d6971451b159c0768",
+  "prior_cache_sha256": "bce5f0d731daad02c38ab5d5711b27a6a74aafe57297a897173b42229e9ac087",
+  "replacement_cache_sha256": "8caef8d4f83afbf582281b2572202a23a820e8ab093e6d423dd9fd853287e56f",
+  "reviewed_at": "2026-10-29",
+  "entries": [
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:5qfkUJPXOUwC",
+      "legacy_title": "Data Scoping: Effectively Learning the Evolution of Generic Transport PDEs",
+      "legacy_year": "2024",
+      "legacy_row_sha256": "73834cbb9a9039b5143a7f29fd6b4d01ea3fd619e40a5e00a72eab08283c50ee",
+      "classification": "duplicate_rekeyed",
+      "target_kind": "current_scholar",
+      "target_id": "0P9w_S0AAAAJ:yqoGN6RLRZoC",
+      "target_title": "Enforcing the Principle of Locality for Physical Simulations with Neural Operators",
+      "target_year": "2025",
+      "evidence_url": "https://arxiv.org/abs/2405.01319v1",
+      "review_note": "The 2024 Scholar row names version 1 of arXiv:2405.01319. arXiv explicitly lists the original Data Scoping title and Christopher McComb; version 2 retitled the same identifier Enforcing the Principle of Locality. The current Scholar profile has the 2025 journal article under the latter title. Preserve this historical version in the crosswalk, not as a separate current work."
+    },
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:IRz6iEL74y4C",
+      "legacy_title": "Developing An AI-assisted Survey of CAAD Research: An Overview of Three Decades of Research at CAADRIA",
+      "legacy_year": "2025",
+      "legacy_row_sha256": "d945c352a48f9cb2e53c1452c670b0f827eb7776ffe452c1aeaac147bcb9e527",
+      "classification": "duplicate_rekeyed",
+      "target_kind": "current_scholar",
+      "target_id": "0P9w_S0AAAAJ:vDZJ-YLwNdEC",
+      "target_title": "Developing an AI-assisted Approach for Surveying CAAD Research: An overview of three decades of research at CAADRIA",
+      "target_year": "2025",
+      "evidence_url": "https://caadria.org/new/wp-content/Downloads/CAADRIA2025_Volume-1.pdf",
+      "review_note": "The official CAADRIA 2025 proceedings list the fuller Approach for Surveying title, Yuval Kahlon, Christopher McComb, Haruyuki Fujii, and pages 501-510. The prior Scholar row has the shorter Survey title for the same 2025 CAADRIA paper; the current profile uses the proceedings title under a new Scholar ID."
+    },
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:QYdC8u9Cj1oC",
+      "legacy_title": "Enforcing the Principle of Locality for Physical Simulations with Neural Operators",
+      "legacy_year": "2024",
+      "legacy_row_sha256": "af24b4db2a442bc164afdc8bc32b67980ac69c4d7f4ef1432b6e61380b48da06",
+      "classification": "duplicate_rekeyed",
+      "target_kind": "current_scholar",
+      "target_id": "0P9w_S0AAAAJ:yqoGN6RLRZoC",
+      "target_title": "Enforcing the Principle of Locality for Physical Simulations with Neural Operators",
+      "target_year": "2025",
+      "evidence_url": "https://arxiv.org/abs/2405.01319v2",
+      "review_note": "The prior 2024 Scholar row uses the version 2 title of arXiv:2405.01319. The same title and authors, including Christopher McComb, appear on the current 2025 Journal of Computational Physics article. The preprint observation remains traceable here while the current Scholar ID represents the work."
+    }
+  ]
+}
