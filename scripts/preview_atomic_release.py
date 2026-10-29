@@ -339,6 +339,12 @@ def main() -> int:
                     else None
                 ),
                 source_cache_dir=snapshot / "data/authors",
+                mccomb_continuity_path=(
+                    curated / "mccomb-exact-continuity-20261029.json"
+                ),
+                mccomb_crosswalk_path=(
+                    reviews / "2026-10-29-mccomb-prior-id-crosswalk.json"
+                ),
                 primary_home_baseline_path=(
                     reviews / "2026-10-25-implicit-scholar-primary-baseline.json"
                 ),

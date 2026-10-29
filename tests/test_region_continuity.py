@@ -11,6 +11,7 @@ import numpy
 import pandas
 import pytest
 
+from map_of_research.mccomb_continuity import ExactMcCombContinuity
 from map_of_research.region_continuity import (
     RegionReleaseDiffError,
     _fingerprint,
@@ -1057,3 +1058,86 @@ def test_identifiers_and_source_fingerprint_are_strict():
         _indexed_works([work("one", eligible=True, outlier=False)] * 2)
     with pytest.raises(ValueError, match="Missing or duplicate work identity"):
         _indexed_works([work("", eligible=True, outlier=False)])
+
+
+def test_exact_mccomb_continuity_keeps_unrelated_loss_gate():
+    def row(author_pub_id: str, work_id: str) -> dict:
+        return {
+            **observation("person-one", work_id),
+            "author_pub_id": author_pub_id,
+            "collaboration_eligible": True,
+        }
+
+    old_loss = row("profile:old", "old-work")
+    new_target = row("profile:new", "new-work")
+    old_binding = row("profile:retained", "old-binding")
+    new_binding = row("profile:retained", "new-binding")
+    prior_rows = [old_loss, old_binding]
+    current_rows = [new_target, new_binding]
+    prior_works = [
+        work("old-work", eligible=True, outlier=False),
+        work("old-binding", eligible=True, outlier=False),
+    ]
+    current_works = [
+        work("new-work", eligible=True, outlier=False),
+        work("new-binding", eligible=True, outlier=False),
+    ]
+    approval = ExactMcCombContinuity(
+        manifest_sha256="reviewed-sha",
+        loss_identities=frozenset(
+            {("person-one", "profile", "profile:old", "scholar")}
+        ),
+        binding_changes=frozenset(
+            {
+                (
+                    ("person-one", "profile", "profile:retained", "scholar"),
+                    "old-binding",
+                    "new-binding",
+                    True,
+                    True,
+                )
+            }
+        ),
+    )
+    _, receipt = reconcile_region_decisions(
+        pandas.DataFrame(current_works),
+        pandas.DataFrame(current_rows),
+        prior_works,
+        prior_rows,
+        prior_revision=REVISION,
+        mccomb_continuity=approval,
+    )
+    assert len(receipt["approved_mccomb_losses"]) == 1
+    assert len(receipt["approved_mccomb_binding_changes"]) == 1
+    assert receipt["mccomb_continuity_sha256"] == "reviewed-sha"
+    assert receipt["unexplained_losses"] == []
+    assert receipt["unapproved_mapped_binding_changes"] == []
+
+    unrelated = row("profile:unrelated", "unrelated-work")
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame(current_works),
+            pandas.DataFrame(current_rows),
+            [*prior_works, work("unrelated-work", eligible=True, outlier=False)],
+            [*prior_rows, unrelated],
+            prior_revision=REVISION,
+            mccomb_continuity=approval,
+        )
+    assert error.value.receipt["unexplained_losses"] == [
+        "person-one/profile/profile:unrelated/scholar"
+    ]
+
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame(
+                [*current_works, work("old-work", eligible=True, outlier=False)]
+            ),
+            pandas.DataFrame([old_loss, new_binding]),
+            prior_works,
+            prior_rows,
+            prior_revision=REVISION,
+            mccomb_continuity=approval,
+        )
+    assert error.value.receipt["unused_mccomb_loss_approvals"] == [
+        "person-one/profile/profile:old/scholar"
+    ]

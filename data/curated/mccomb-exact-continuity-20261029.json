@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "person_id": "person-mccomb-03260969",
+  "scholar_id": "0P9w_S0AAAAJ",
+  "prior_revision": "d065c5153de7dea5b2fb7df80461ea70e5b95aad",
+  "source_snapshot_commit": "d926f2b593dcd445879f89772c45ba9676c3ae40",
+  "source_snapshot_sha256": "1987a58644139ef191788d33aa7ddcd37cc7e0d83df967fa8ba2c6e6c27546e3",
+  "source_cache_sha256": "8caef8d4f83afbf582281b2572202a23a820e8ab093e6d423dd9fd853287e56f",
+  "crosswalk_sha256": "8718731034cd88011480387498ca97db7a8b8190ad6ea76b032c77db48084675",
+  "reviewed_at": "2026-10-29",
+  "review_note": "One-time continuity review for the 265-row complete public Scholar capture. Three historical version/title observations leave Chris’s visible profile and map to two current profile observations; one retained paper has its publisher-verified year corrected from 2023 to 2024. Other faculty observations on the prior arXiv work nodes remain untouched.",
+  "losses": [
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:5qfkUJPXOUwC",
+      "prior_work_id": "work-7c95d6f3773571eae810f31d3f83d193b622a689ba36f771fab3c9a31bcdea42",
+      "prior_work_observation_count": 2,
+      "target_author_pub_id": "0P9w_S0AAAAJ:yqoGN6RLRZoC",
+      "target_work_id": "work-32c3f9baef7a9b489d4012d4e11cf656bc17ac7f48a949d1efc107375b984402",
+      "evidence_url": "https://arxiv.org/abs/2405.01319v1"
+    },
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:IRz6iEL74y4C",
+      "prior_work_id": "work-b6bdf90cb20f4ebd8b9b6233aaa75d3e97601a92f0cb78b712226ba0bb5eda08",
+      "prior_work_observation_count": 1,
+      "target_author_pub_id": "0P9w_S0AAAAJ:vDZJ-YLwNdEC",
+      "target_work_id": "work-4b92eac5918846474e974b229fddd01ebb1d03359a0f664bd98ea024ff7fd187",
+      "evidence_url": "https://caadria.org/new/wp-content/Downloads/CAADRIA2025_Volume-1.pdf"
+    },
+    {
+      "prior_author_pub_id": "0P9w_S0AAAAJ:QYdC8u9Cj1oC",
+      "prior_work_id": "work-5ff8997069b12f3b64abdfb8e09355c4f9987de480c588448f0d70cab1c86c2a",
+      "prior_work_observation_count": 3,
+      "target_author_pub_id": "0P9w_S0AAAAJ:yqoGN6RLRZoC",
+      "target_work_id": "work-32c3f9baef7a9b489d4012d4e11cf656bc17ac7f48a949d1efc107375b984402",
+      "evidence_url": "https://arxiv.org/abs/2405.01319v2"
+    }
+  ],
+  "binding_changes": [
+    {
+      "author_pub_id": "0P9w_S0AAAAJ:kuK5TVdYjLIC",
+      "prior_work_id": "work-eccb198082cab9374d30b2b992a7ef84df85ac9261cf8f84e82f10aeaf50463f",
+      "current_work_id": "work-e23f06614be445d254826b0488e7899c0b2eb3f3542959b9993ed1b4de8db629",
+      "prior_year": 2023,
+      "current_year": 2024,
+      "prior_collaboration_eligible": true,
+      "current_collaboration_eligible": true,
+      "evidence_url": "https://journals.sagepub.com/doi/10.1089/3dp.2023.0008"
+    }
+  ]
+}
