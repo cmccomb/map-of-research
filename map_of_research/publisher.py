@@ -173,6 +173,7 @@ from .registry import (
     load_registry,
     validate_included_scholar_primary_homes,
 )
+from .scs_four_topic_hold import apply_scs_four_topic_holds
 from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
 from .sullivan_continuity_addendum import (
     DEFAULT_ADDENDUM_PATH as DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
@@ -2100,6 +2101,15 @@ def publish_snapshot(
     if chemistry_parent_state is not None:
         continuity_receipt["chem_region_review_sha256"] = CHEM_REVIEW_SHA256
         continuity_receipt["chemistry_review_root_revision"] = CHEMISTRY_HUB_REVISION
+    tables["works"], scs_four_topic_holds = apply_scs_four_topic_holds(
+        tables["works"],
+        tables["profile_publications"],
+        prior_works,
+        prior_revision=prior_revision,
+        snapshot_sha256=str(manifest["snapshot_sha256"]),
+    )
+    if scs_four_topic_holds is not None:  # pragma: no cover - exact release preview
+        continuity_receipt["scs_four_topic_holds"] = scs_four_topic_holds
     tables["works"] = add_publication_keywords(tables["works"])
     if chemistry_parent_state is not None:
         validate_chemistry_candidate(
