@@ -11,6 +11,7 @@ import math
 import os
 import subprocess
 import tempfile
+from collections import Counter
 from collections.abc import Callable, Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
@@ -142,6 +143,10 @@ from .mccomb_continuity import (
     SNAPSHOT_SHA256 as MCCOMB_CONTINUITY_SNAPSHOT_SHA256,
 )
 from .mccomb_continuity import validate_exact_mccomb_continuity
+from .pending_publications import (
+    PENDING_MAP_SCHEMA_VERSION,
+    build_pending_publications,
+)
 from .person_publication_holds import (
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     load_person_publication_holds,
@@ -155,8 +160,11 @@ from .presentation_drift import (
     compare_presentation,
     preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
+    preserve_reviewed_additive_presentation,
     reported_coauthor_evidence_changed,
+    require_held_additive_staged_works,
     require_presentation_review,
+    require_preserved_additive_artifact,
 )
 from .private_subset_preflight import require_private_preflight_receipt
 from .profile_releases import (
@@ -171,7 +179,7 @@ from .provisional_holds import (
     require_no_provisional_hold_contributions,
     validate_provisional_holds,
 )
-from .public_subsets import require_public_subset_boundary
+from .public_subsets import ids_sha256, require_public_subset_boundary
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .region_continuity import (
     PRIOR_OBSERVATION_FIELDS,
@@ -1237,12 +1245,18 @@ def _write_map_artifacts(
     publication_hold_reasons: Mapping[str, str] | None = None,
     reported_faculty_coauthors_by_work: Mapping[str, list[dict[str, str]]]
     | None = None,
+    pending_publications: list[dict[str, Any]] | None = None,
 ) -> tuple[Path, Path, dict[str, Any]]:
     """Render both map files before the Hub is touched."""
 
     maps_dir.mkdir(parents=True, exist_ok=True)
+    artifact_schema_version = (
+        PENDING_MAP_SCHEMA_VERSION
+        if pending_publications is not None
+        else MAP_SCHEMA_VERSION
+    )
     map_manifest: dict[str, Any] = {
-        "schema_version": MAP_SCHEMA_VERSION,
+        "schema_version": artifact_schema_version,
         "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
         "keyword_model_version": KEYWORD_MODEL_VERSION,
         "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
@@ -1265,6 +1279,10 @@ def _write_map_artifacts(
         publication_hold_reasons=publication_hold_reasons,
         reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
     )
+    if pending_publications is not None:
+        artifact["schema_version"] = artifact_schema_version
+        artifact["pending_publications"] = pending_publications
+        artifact["pending_publication_count"] = len(pending_publications)
     artifact_path = maps_dir / MAP_ARTIFACT_NAME
     artifact_path.write_text(
         json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
@@ -1281,6 +1299,10 @@ def _write_map_artifacts(
         "keyword_levels": artifact["keyword_levels"],
         "file": artifact_path.name,
     }
+    if pending_publications is not None:
+        map_manifest["artifact"]["pending_publication_count"] = len(
+            pending_publications
+        )
     manifest_path = maps_dir / "manifest.json"
     manifest_path.write_text(
         json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
@@ -1499,6 +1521,7 @@ def _publish_atomic_release(
     enforce_presentation_drift: bool = False,
     presentation_drift_approval_path: Path | None = None,
     preserve_deletion_presentation: bool = False,
+    additive_placement_review_path: Path | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1506,8 +1529,16 @@ def _publish_atomic_release(
 
     if atomic_intent_sink is None:
         raise ValueError("Live publish requires a durable prewrite intent sink")
+    if additive_placement_review_path is not None and not enforce_presentation_drift:
+        raise ValueError("Additive placement requires pinned presentation review")
     prior_revision = require_revision(prior_revision)
     bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    if additive_placement_review_path is not None and (
+        bio_release
+        or composite_plan is not None
+        or held_topic_parent_artifact is not None
+    ):
+        raise ValueError("Additive placement is restricted to ordinary releases")
     bio_source_changed = bio_scholar_source_changed(
         source_frame, prior_profiles, registry, prior_people
     )
@@ -1546,7 +1577,58 @@ def _publish_atomic_release(
             prior_revision=prior_revision,
             hf_token=hf_token,
         )
-        if preserve_deletion_presentation and presentation_drift_approval_path is None:
+        if additive_placement_review_path is not None:
+            if presentation_drift_approval_path is not None:
+                raise ValueError(
+                    "Additive placement and refit approvals cannot be combined"
+                )
+            if prior_works is None:
+                raise ValueError("Additive placement needs pinned parent works")
+            public_profiles = tables["profile_publications"]
+            if "author_pub_id" not in public_profiles.columns:
+                raise ValueError("Additive placement lacks selected source IDs")
+            selected_ids = public_profiles["author_pub_id"].astype(str).tolist()
+            current_id_counts = Counter(selected_ids)
+            prior_id_counts = Counter(
+                str(row["author_pub_id"]) for row in prior_profiles
+            )
+            if (
+                not selected_ids
+                or public_profiles["author_pub_id"].isna().any()
+                or any(not value.strip() for value in selected_ids)
+                or any(
+                    count > max(1, prior_id_counts[author_pub_id])
+                    for author_pub_id, count in current_id_counts.items()
+                )
+            ):
+                raise ValueError(
+                    "Additive placement has missing or duplicate source IDs "
+                    "beyond parent"
+                )
+            selected_ids_digest = ids_sha256(set(selected_ids))
+            candidate_before_preservation = build_map_artifact(
+                tables["works"],
+                registry,
+                generated_at_utc=generated_at_utc,
+            )
+            tables["works"], preservation_receipt = (
+                preserve_reviewed_additive_presentation(
+                    tables["works"],
+                    prior_works,
+                    parent_map,
+                    candidate_before_preservation,
+                    prior_revision=prior_revision,
+                    source_snapshot_sha256=str(source_manifest["snapshot_sha256"]),
+                    selected_ids_sha256=selected_ids_digest,
+                    parent_map_sha256=parent_map_sha256,
+                    review_path=additive_placement_review_path,
+                )
+            )
+        if (
+            preserve_deletion_presentation
+            and additive_placement_review_path is None
+            and presentation_drift_approval_path is None
+        ):
             if prior_works is None:
                 raise ValueError("Deletion-only preservation needs pinned parent works")
             candidate_before_preservation = build_map_artifact(
@@ -1581,6 +1663,21 @@ def _publish_atomic_release(
                     )
                 )
 
+    pending_publications = None
+    if additive_placement_review_path is not None:
+        if not isinstance(preservation_receipt, Mapping):
+            raise ValueError("Additive pending publication receipt is missing")
+        held_ids = preservation_receipt.get("held_new_work_ids")
+        if not isinstance(held_ids, list):
+            raise ValueError("Additive pending work IDs are missing")
+        pending_publications = build_pending_publications(
+            tables["works"],
+            tables["profile_publications"],
+            release_receipt or [],
+            registry,
+            held_ids,
+        )
+
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
         root = Path(temp)
         staged: dict[str, tuple[Any, Path]] = {}
@@ -1592,6 +1689,10 @@ def _publish_atomic_release(
             dataset.to_parquet(str(path))
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
+        if additive_placement_review_path is not None:
+            require_held_additive_staged_works(
+                staged["works"][1], preservation_receipt
+            )
         held_table_counts = None
         if held_topic_parent_artifact is not None:
             import datasets
@@ -1627,9 +1728,14 @@ def _publish_atomic_release(
                 else {}
             ),
             reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
+            pending_publications=pending_publications,
         )
         presentation_receipt = None
         if enforce_presentation_drift:
+            if additive_placement_review_path is not None:
+                require_preserved_additive_artifact(
+                    parent_map, artifact, preservation_receipt
+                )
             presentation_report = compare_presentation(
                 parent_map,
                 artifact,
@@ -1848,6 +1954,7 @@ def publish_snapshot(
     mccomb_crosswalk_path: Path = DEFAULT_MCCOMB_CROSSWALK_PATH,
     coauthor_binding_approval_path: Path = DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
     presentation_drift_approval_path: Path | None = None,
+    additive_placement_review_path: Path | None = None,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
     chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
@@ -1857,6 +1964,11 @@ def publish_snapshot(
     if prior_revision is None:
         raise ValueError("Live publish requires an immutable prior Hub revision")
     require_revision(prior_revision)
+    if (
+        additive_placement_review_path is not None
+        and region_comparison_revision not in (None, prior_revision)
+    ):
+        raise ValueError("Additive placement requires the exact parent comparison")
     if atomic_release is False:
         raise ValueError("Live publish requires one atomic Hub commit")
     if atomic_intent_sink is None:
@@ -2491,6 +2603,7 @@ def publish_snapshot(
         enforce_presentation_drift=True,
         presentation_drift_approval_path=presentation_drift_approval_path,
         preserve_deletion_presentation=True,
+        additive_placement_review_path=additive_placement_review_path,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -2786,6 +2899,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         help="Exact-parent reviewed approval for material map refit",
     )
+    parser.add_argument(
+        "--additive-placement-review",
+        type=Path,
+        help="Review placement or map hold for each new work point",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2905,6 +3023,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             mccomb_continuity_path=args.mccomb_continuity_approval,
             coauthor_binding_approval_path=args.coauthor_binding_approval,
             presentation_drift_approval_path=args.presentation_drift_approval,
+            additive_placement_review_path=args.additive_placement_review,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,

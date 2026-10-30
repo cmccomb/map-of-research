@@ -16,7 +16,12 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from .composite_region import COORDINATE_FIELDS, TOPIC_FIELDS
+from .composite_region import (
+    BLANK_TOPICS,
+    COORDINATE_FIELDS,
+    TOPIC_FIELDS,
+    UNCLASSIFIED_TOPICS,
+)
 from .io import load_json
 
 SCHEMA_VERSION = 1
@@ -400,6 +405,390 @@ def preserve_additive_report_presentation(
         "source_snapshot_sha256": source_snapshot_sha256,
         "new_point_policy": "no_public_point_changes_allowed",
     }
+
+
+def preserve_reviewed_additive_presentation(
+    works: Any,
+    prior_works: list[Mapping[str, Any]],
+    parent: Mapping[str, Any],
+    candidate: Mapping[str, Any],
+    *,
+    prior_revision: str,
+    source_snapshot_sha256: str,
+    selected_ids_sha256: str,
+    parent_map_sha256: str,
+    review_path: Path | None,
+) -> tuple[Any, dict[str, Any]]:
+    """Freeze retained points and require an exact review for every new point.
+
+    The candidate refit supplies only a proposal. New points receive reviewed,
+    finite placement or remain in the source dataset with a map hold. They never
+    inherit refitted topic labels: mapped additions are explicitly unclassified.
+    """
+
+    parent_points = _indexed_points(parent, "Parent")
+    candidate_points = _indexed_points(candidate, "Candidate")
+    if not parent_points.keys() <= candidate_points.keys():
+        raise ValueError("Additive presentation cannot remove parent map points")
+    added = sorted(candidate_points.keys() - parent_points.keys())
+    if not added:
+        raise ValueError("Additive presentation review has no new map points")
+    parent_labels = _keyword_labels(parent, "Parent")
+    for field in (
+        "quality_assessment_version",
+        "keyword_model_version",
+        "topic_label_review_version",
+        "region_audit_version",
+        "layout_version",
+    ):
+        if parent.get(field) != candidate.get(field):
+            raise ValueError(f"Additive parent/candidate {field} differs")
+    parent_catalog = {str(item["keyword_id"]): item for item in parent["keywords"]}
+    for topic_id, expected in (
+        (
+            UNCLASSIFIED_TOPICS["keyword_id"],
+            {
+                "label": UNCLASSIFIED_TOPICS["keyword"],
+                "extracted_label": UNCLASSIFIED_TOPICS["keyword_extracted"],
+                "label_reviewed": UNCLASSIFIED_TOPICS["keyword_label_reviewed"],
+                "level": 0,
+                "parent_keyword_id": None,
+            },
+        ),
+        (
+            UNCLASSIFIED_TOPICS["detail_keyword_id"],
+            {
+                "label": UNCLASSIFIED_TOPICS["detail_keyword"],
+                "extracted_label": UNCLASSIFIED_TOPICS["detail_keyword_extracted"],
+                "label_reviewed": UNCLASSIFIED_TOPICS["detail_keyword_label_reviewed"],
+                "level": 1,
+                "parent_keyword_id": UNCLASSIFIED_TOPICS["keyword_id"],
+            },
+        ),
+    ):
+        if topic_id in parent_catalog and any(
+            parent_catalog[topic_id].get(field) != value
+            for field, value in expected.items()
+        ):
+            raise ValueError(f"Unclassified topic ID collides with parent: {topic_id}")
+
+    prior_by_id = {str(row["work_id"]): row for row in prior_works}
+    if len(prior_by_id) != len(prior_works):
+        raise ValueError("Additive parent works contain duplicate IDs")
+    if not parent_points.keys() <= prior_by_id.keys():
+        raise ValueError("Additive parent map lacks matching works rows")
+    if set(added) & prior_by_id.keys():
+        raise ValueError(
+            "Previously excluded parent work needs separate promotion review"
+        )
+    required_columns = {
+        "work_id",
+        "map_eligible",
+        "map_exclusion_reasons",
+        *COORDINATE_FIELDS,
+        *TOPIC_FIELDS,
+    }
+    if not required_columns <= set(works.columns):
+        raise ValueError("Additive candidate works lack placement or topic fields")
+    current_ids = works["work_id"].astype(str)
+    if current_ids.duplicated().any() or not candidate_points.keys() <= set(
+        current_ids
+    ):
+        raise ValueError("Additive candidate works lack unique mapped IDs")
+
+    receipt: dict[str, Any] = {
+        "schema_version": SCHEMA_VERSION,
+        "status": "new_point_placement_review_required",
+        "prior_revision": prior_revision,
+        "source_snapshot_sha256": source_snapshot_sha256,
+        "selected_ids_sha256": selected_ids_sha256,
+        "parent_map_sha256": parent_map_sha256,
+        "candidate_map_content_sha256": _digest(
+            {
+                key: value
+                for key, value in candidate.items()
+                if key != "generated_at_utc"
+            }
+        ),
+        "new_work_ids_sha256": _digest(added),
+        "new_point_count": len(added),
+        "retained_point_count": len(parent_points.keys() & candidate_points.keys()),
+    }
+    if review_path is None:
+        raise PresentationDriftError(receipt, "new points lack reviewed placement")
+    try:
+        review_bytes = review_path.read_bytes()
+        review = json.loads(review_bytes.decode("utf-8"))
+    except (OSError, ValueError) as error:
+        raise PresentationDriftError(
+            receipt, "placement review cannot be read"
+        ) from error
+    binding = {
+        "schema_version": SCHEMA_VERSION,
+        "decision": "freeze_retained_review_new",
+        "prior_revision": prior_revision,
+        "source_snapshot_sha256": source_snapshot_sha256,
+        "selected_ids_sha256": selected_ids_sha256,
+        "parent_map_sha256": parent_map_sha256,
+        "candidate_map_content_sha256": receipt["candidate_map_content_sha256"],
+        "new_work_ids_sha256": receipt["new_work_ids_sha256"],
+    }
+    if not isinstance(review, Mapping) or set(review) != {
+        *binding,
+        "reviewed_at",
+        "new_points",
+    }:
+        raise PresentationDriftError(receipt, "placement review schema is invalid")
+    if any(review.get(key) != value for key, value in binding.items()):
+        raise PresentationDriftError(receipt, "placement review is stale or mismatched")
+    try:
+        date.fromisoformat(str(review.get("reviewed_at") or ""))
+    except ValueError as error:
+        raise PresentationDriftError(
+            receipt, "placement review date is invalid"
+        ) from error
+    decisions = review.get("new_points")
+    if not isinstance(decisions, list) or len(decisions) != len(added):
+        raise PresentationDriftError(
+            receipt, "placement decisions must cover every new point"
+        )
+    by_id: dict[str, Mapping[str, Any]] = {}
+    for item in decisions:
+        if not isinstance(item, Mapping) or set(item) != {
+            "work_id",
+            "decision",
+            "coordinates",
+            "rationale",
+        }:
+            raise PresentationDriftError(receipt, "placement row schema is invalid")
+        work_id = str(item["work_id"])
+        if work_id in by_id or work_id not in added:
+            raise PresentationDriftError(
+                receipt, "placement work ID repeats or is unexpected"
+            )
+        decision = item["decision"]
+        if decision not in ("place_unclassified", "hold_pending_placement"):
+            raise PresentationDriftError(receipt, "placement decision is invalid")
+        if len(str(item["rationale"] or "").strip()) < 20:
+            raise PresentationDriftError(receipt, "placement rationale is too short")
+        if decision == "hold_pending_placement":
+            if item["coordinates"] is not None:
+                raise PresentationDriftError(receipt, "held placement has coordinates")
+        elif not isinstance(item["coordinates"], Mapping) or set(
+            item["coordinates"]
+        ) != set(COORDINATE_FIELDS):
+            raise PresentationDriftError(receipt, "placed point lacks four coordinates")
+        else:
+            for field in COORDINATE_FIELDS:
+                try:
+                    value = float(item["coordinates"][field])
+                except (TypeError, ValueError) as error:
+                    raise PresentationDriftError(
+                        receipt, "placement coordinate is invalid"
+                    ) from error
+                if not math.isfinite(value) or not -1.0 <= value <= 1.0:
+                    raise PresentationDriftError(
+                        receipt, "placement coordinate is not finite normalized"
+                    )
+                if round(value, 7) != value:
+                    raise PresentationDriftError(
+                        receipt, "placement coordinate exceeds map precision"
+                    )
+        by_id[work_id] = item
+    output = works.copy()
+    retained = parent_points.keys() & candidate_points.keys()
+    for index, work_id in current_ids.items():
+        if work_id in retained:
+            prior = prior_by_id[work_id]
+            point = parent_points[work_id]
+            topics = _point_topics(point, parent_labels, "Parent")
+            if any(field not in prior for field in TOPIC_FIELDS):
+                raise ValueError(f"Additive parent work lacks topic fields: {work_id}")
+            for position, prefix in enumerate(("keyword", "detail_keyword")):
+                topic_id = topics[position][0]
+                metadata = parent_catalog[topic_id]
+                if (
+                    str(prior[f"{prefix}_id"]) != topic_id
+                    or str(prior[prefix]) != metadata["label"]
+                    or str(prior[f"{prefix}_extracted"]) != metadata["extracted_label"]
+                    or bool(prior[f"{prefix}_label_reviewed"])
+                    != bool(metadata["label_reviewed"])
+                ):
+                    raise ValueError(
+                        f"Additive parent topic differs from map: {work_id}"
+                    )
+            for field, value in zip(
+                COORDINATE_FIELDS, _coordinates(point, "Parent"), strict=True
+            ):
+                output.at[index, field] = value
+            for field in TOPIC_FIELDS:
+                output.at[index, field] = prior[field]
+            # The map displays the first work source URL. A new faculty
+            # observation can sort ahead of the original source without
+            # invalidating it, so keep the retained point's display link.
+            parent_url = str(point.get("source_url") or "")
+            if "source_urls" not in output.columns:
+                if parent_url:
+                    raise ValueError(
+                        f"Additive retained map source URL lacks provenance: {work_id}"
+                    )
+                continue
+            raw_urls = output.at[index, "source_urls"]
+            if not isinstance(raw_urls, list):
+                raise ValueError(
+                    f"Additive retained work lacks source URL list: {work_id}"
+                )
+            source_urls = [str(url) for url in raw_urls if str(url)]
+            if parent_url and parent_url not in source_urls:
+                raise ValueError(
+                    f"Additive retained map source URL lacks provenance: {work_id}"
+                )
+            if not parent_url and source_urls:
+                raise ValueError(
+                    f"Additive retained blank map source URL needs review: {work_id}"
+                )
+            if parent_url:
+                output.at[index, "source_urls"] = [
+                    parent_url,
+                    *(url for url in source_urls if url != parent_url),
+                ]
+        elif work_id in by_id:
+            decision = by_id[work_id]
+            if decision["decision"] == "hold_pending_placement":
+                output.at[index, "map_eligible"] = False
+                reasons = list(output.at[index, "map_exclusion_reasons"] or [])
+                output.at[index, "map_exclusion_reasons"] = list(
+                    dict.fromkeys([*reasons, "pending_placement_review"])
+                )
+                # Candidate refits are unreviewed spatial placements. Holding a
+                # work must remove those coordinates from the public works
+                # table as well as excluding the work from the map artifact.
+                for field in COORDINATE_FIELDS:
+                    output.at[index, field] = None
+                for field, value in BLANK_TOPICS.items():
+                    output.at[index, field] = value
+            else:
+                for field in COORDINATE_FIELDS:
+                    output.at[index, field] = float(decision["coordinates"][field])
+                for field, value in UNCLASSIFIED_TOPICS.items():
+                    output.at[index, field] = value
+    receipt["status"] = "parent_frozen_new_points_reviewed"
+    receipt["placed_new_points"] = sum(
+        decision["decision"] == "place_unclassified" for decision in by_id.values()
+    )
+    receipt["held_new_points"] = len(by_id) - receipt["placed_new_points"]
+    receipt["placed_new_work_ids"] = sorted(
+        work_id
+        for work_id, item in by_id.items()
+        if item["decision"] == "place_unclassified"
+    )
+    receipt["held_new_work_ids"] = sorted(
+        work_id
+        for work_id, item in by_id.items()
+        if item["decision"] == "hold_pending_placement"
+    )
+    receipt["placed_new_coordinates_sha256"] = _digest(
+        [
+            (
+                work_id,
+                [
+                    float(by_id[work_id]["coordinates"][field])
+                    for field in COORDINATE_FIELDS
+                ],
+            )
+            for work_id in receipt["placed_new_work_ids"]
+        ]
+    )
+    receipt["review_sha256"] = hashlib.sha256(review_bytes).hexdigest()
+    return output, receipt
+
+
+def require_held_additive_staged_works(
+    staged_path: Path, receipt: Mapping[str, Any]
+) -> None:
+    """Reject held work placements leaking through the staged public Parquet."""
+
+    held = set(receipt["held_new_work_ids"])
+    if not held:
+        return
+    import pyarrow.parquet as parquet
+
+    fields = [
+        "work_id",
+        "map_eligible",
+        "map_exclusion_reasons",
+        *COORDINATE_FIELDS,
+        *TOPIC_FIELDS,
+    ]
+    staged = parquet.read_table(staged_path, columns=fields).to_pylist()
+    rows = [row for row in staged if str(row["work_id"]) in held]
+    if len(rows) != len(held) or {str(row["work_id"]) for row in rows} != held:
+        raise ValueError("Additive staged works lack unique held work IDs")
+    for row in rows:
+        if row["map_eligible"] is not False or (
+            "pending_placement_review" not in row["map_exclusion_reasons"]
+        ):
+            raise ValueError("Additive staged held work lacks placement hold")
+        if any(row[field] is not None for field in COORDINATE_FIELDS):
+            raise ValueError("Additive staged held work leaks coordinates")
+        if any(row[field] != value for field, value in BLANK_TOPICS.items()):
+            raise ValueError("Additive staged held work leaks topic labels")
+
+
+def require_preserved_additive_artifact(
+    parent: Mapping[str, Any],
+    staged: Mapping[str, Any],
+    receipt: Mapping[str, Any],
+) -> None:
+    """Reject any staged map that loses a parent point or changes its presentation."""
+
+    old = _indexed_points(parent, "Parent")
+    new = _indexed_points(staged, "Staged")
+    if not old.keys() <= new.keys():
+        raise ValueError("Additive staged map loses parent points")
+    placed = set(receipt["placed_new_work_ids"])
+    held = set(receipt["held_new_work_ids"])
+    if placed & held or new.keys() - old.keys() != placed or held & new.keys():
+        raise ValueError("Additive staged map differs from reviewed new work IDs")
+    old_catalog = {str(item["keyword_id"]): item for item in parent["keywords"]}
+    new_catalog = {str(item["keyword_id"]): item for item in staged["keywords"]}
+    if not old_catalog.keys() <= new_catalog.keys():
+        raise ValueError("Additive staged map loses parent keyword IDs")
+    for topic_id, old_metadata in old_catalog.items():
+        new_metadata = new_catalog[topic_id]
+        for field in (
+            "label",
+            "extracted_label",
+            "label_reviewed",
+            "level",
+            "parent_keyword_id",
+        ):
+            if old_metadata.get(field) != new_metadata.get(field):
+                raise ValueError("Additive staged map changes parent topic metadata")
+    for work_id, point in old.items():
+        staged_point = new[work_id]
+        if _coordinates(point, "Parent") != _coordinates(staged_point, "Staged"):
+            raise ValueError("Additive staged map moves a retained point")
+        if point["keyword_ids"] != staged_point["keyword_ids"]:
+            raise ValueError("Additive staged map changes retained topic IDs")
+        if point.get("source_url") != staged_point.get("source_url"):
+            raise ValueError("Additive staged map changes retained source URL")
+    for work_id in placed:
+        point = new[work_id]
+        if point["keyword_ids"] != [
+            UNCLASSIFIED_TOPICS["keyword_id"],
+            UNCLASSIFIED_TOPICS["detail_keyword_id"],
+        ]:
+            raise ValueError("Additive staged map labels new work as reviewed")
+        coordinates = _coordinates(point, "Staged")
+        if any(not -1.0 <= value <= 1.0 for value in coordinates):
+            raise ValueError("Additive staged map has unnormalized placement")
+    staged_placements = [
+        (work_id, list(_coordinates(new[work_id], "Staged")))
+        for work_id in sorted(placed)
+    ]
+    if _digest(staged_placements) != receipt.get("placed_new_coordinates_sha256"):
+        raise ValueError("Additive staged map differs from reviewed work coordinates")
 
 
 def require_presentation_review(

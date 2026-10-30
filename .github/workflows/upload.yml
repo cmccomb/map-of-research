@@ -32,6 +32,11 @@ on:
         required: false
         default: true
         type: boolean
+      use_additive_presentation_review:
+        description: Freeze retained map presentation using exact reviewed new-work placements
+        required: false
+        default: false
+        type: boolean
       expected_parent_revision:
         description: Exact live Hub parent for a Chemistry delta dispatch
         required: false
@@ -224,6 +229,7 @@ jobs:
           MAP_DURABLE_INTENT_REPO: receipt
           MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot
           REQUIRE_BIO_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.require_bio_release || false }}
+          USE_ADDITIVE_PRESENTATION_REVIEW: ${{ github.event_name == 'workflow_dispatch' && inputs.use_additive_presentation_review || false }}
         run: |
           HF_TOKEN="$(hf auth token)"
           export HF_TOKEN
@@ -248,6 +254,12 @@ jobs:
               source/data/curated/bio-exact-binding-approval-dcb.json
             )
           fi
+          ADDITIVE_REVIEW_ARGS=()
+          if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ]; then
+            ADDITIVE_REVIEW=source/data/curated/scholar-additive-placement-review.json
+            test -s "$ADDITIVE_REVIEW"
+            ADDITIVE_REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")
+          fi
           SUBSET_ARGS=()
           SUBSET_SELECTION=snapshot/status/browser-public-subset-current.json
           SUBSET_PREFLIGHT=snapshot/status/private-public-subset-preflight.json
@@ -261,6 +273,7 @@ jobs:
           fi
           map-publish-snapshot \
             "${BIO_RELEASE_ARGS[@]}" \
+            "${ADDITIVE_REVIEW_ARGS[@]}" \
             "${SUBSET_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \

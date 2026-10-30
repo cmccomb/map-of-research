@@ -145,7 +145,29 @@ does not create a target-person authorship row.
 
 ## Browser artifacts
 
-`maps/publications.json` uses schema version 7 with additive school metadata.
+`maps/publications.json` uses schema version 7 with additive school metadata
+for ordinary releases. An additive release with exact reviewed placement holds
+uses schema version 8 and adds `pending_publications` plus the matching
+`pending_publication_count`. A pending entry contains only `work_id`, title,
+year, stable `faculty_ids`, a selected public HTTPS `source_url`,
+`release_decision: "selected"`, `map_hold_reason: "pending_topic_review"`, and
+the reviewed Boolean `collaboration_eligible`. It contains no coordinates or
+topic assignment. Its work is absent from `points` until a later reviewed
+placement decision. The pending list can include a selected work that is not
+eligible for collaboration; that Boolean prevents a coauthor edge from being
+inferred merely from multiple faculty IDs.
+
+For a pending work, the selected rows in `profile_publications` remain eligible
+source observations and retain their `authorships` evidence. Their
+`map_eligible` describes the observation's source quality. The canonical
+`works.map_eligible` is false with `pending_placement_review`, and all four
+work coordinates are null because spatial placement is unreviewed. The
+publisher requires the selected profile IDs and digest, an included faculty
+membership with evidenced typed primary academic home, exact source-row
+eligibility, matching collaboration eligibility, and a placement review
+before emitting a pending entry. An exact-parent gate preserves all prior
+spatial points and keyword semantics.
+
 It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus
 coordinate pairs, work ID, title, author text, stable faculty and department ID

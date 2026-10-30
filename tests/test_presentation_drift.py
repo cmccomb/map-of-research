@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from pathlib import Path
 
 import pandas
@@ -13,7 +14,9 @@ from map_of_research.presentation_drift import (
     compare_presentation,
     preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
+    preserve_reviewed_additive_presentation,
     reported_coauthor_evidence_changed,
+    require_held_additive_staged_works,
     require_presentation_review,
 )
 
@@ -21,8 +24,22 @@ from map_of_research.presentation_drift import (
 def artifact(count: int = 120, *, broad: str = "systems") -> dict:
     return {
         "keywords": [
-            {"keyword_id": "broad", "label": broad},
-            {"keyword_id": "detail", "label": "methods"},
+            {
+                "keyword_id": "broad",
+                "label": broad,
+                "extracted_label": broad,
+                "label_reviewed": False,
+                "level": 0,
+                "parent_keyword_id": None,
+            },
+            {
+                "keyword_id": "detail",
+                "label": "methods",
+                "extracted_label": "methods",
+                "label_reviewed": False,
+                "level": 1,
+                "parent_keyword_id": "broad",
+            },
         ],
         "points": [
             {
@@ -556,3 +573,390 @@ def test_unneeded_or_malformed_approval_fails_closed(tmp_path: Path) -> None:
     path.write_text(json.dumps(document))
     with pytest.raises(PresentationDriftError, match="approval date is invalid"):
         require_presentation_review(changed, path)
+
+
+def additive_case() -> tuple[dict, dict, pandas.DataFrame]:
+    parent = artifact(3)
+    candidate = deepcopy(parent)
+    for point in candidate["points"]:
+        point["x"] = point["tsne_x"] = 0.9
+    for work_id in ("work-new", "work-hold"):
+        candidate["points"].append(
+            {
+                "work_id": work_id,
+                "x": 0.7,
+                "y": 0.1,
+                "tsne_x": 0.6,
+                "tsne_y": -0.2,
+                "keyword_ids": ["broad", "detail"],
+            }
+        )
+    rows = parent_work_rows(parent)
+    for row in rows:
+        row["x"] = row["tsne_x"] = 0.9
+        row["keyword"] = "refitted label"
+        row["map_eligible"] = True
+        row["map_exclusion_reasons"] = []
+    for work_id in ("work-new", "work-hold"):
+        rows.append(
+            {
+                **rows[0],
+                "work_id": work_id,
+                "map_exclusion_reasons": [],
+            }
+        )
+    return parent, candidate, pandas.DataFrame(rows)
+
+
+def additive_review(path: Path, receipt: dict, *, hold: bool = True) -> dict:
+    new_points = [
+        {
+            "work_id": "work-new",
+            "decision": "place_unclassified",
+            "coordinates": {
+                "x": 0.21,
+                "y": 0.3,
+                "tsne_x": 0.24,
+                "tsne_y": -0.1,
+            },
+            "rationale": "Reviewed nearby work titles and approved this placement.",
+        },
+        {
+            "work_id": "work-hold",
+            "decision": "hold_pending_placement" if hold else "place_unclassified",
+            "coordinates": None
+            if hold
+            else {"x": 0.31, "y": 0.1, "tsne_x": 0.2, "tsne_y": 0.4},
+            "rationale": "Placement is uncertain and remains off the public map.",
+        },
+    ]
+    review = {
+        "schema_version": 1,
+        "decision": "freeze_retained_review_new",
+        "prior_revision": receipt["prior_revision"],
+        "source_snapshot_sha256": receipt["source_snapshot_sha256"],
+        "selected_ids_sha256": receipt["selected_ids_sha256"],
+        "parent_map_sha256": receipt["parent_map_sha256"],
+        "candidate_map_content_sha256": receipt["candidate_map_content_sha256"],
+        "new_work_ids_sha256": receipt["new_work_ids_sha256"],
+        "reviewed_at": "2026-10-30",
+        "new_points": new_points,
+    }
+    path.write_text(json.dumps(review))
+    return review
+
+
+def freeze_additive(
+    parent: dict,
+    candidate: dict,
+    works: pandas.DataFrame,
+    path: Path | None,
+) -> tuple[pandas.DataFrame, dict]:
+    return preserve_reviewed_additive_presentation(
+        works,
+        parent_work_rows(parent),
+        parent,
+        candidate,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="s" * 64,
+        selected_ids_sha256="i" * 64,
+        parent_map_sha256="p" * 64,
+        review_path=path,
+    )
+
+
+def test_additive_freezes_parent_and_reviews_each_new_point(tmp_path: Path) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(
+        PresentationDriftError, match="lack reviewed placement"
+    ) as error:
+        freeze_additive(parent, candidate, works, None)
+    receipt = error.value.receipt
+    path = tmp_path / "placement-review.json"
+    additive_review(path, receipt)
+    output, item = freeze_additive(parent, candidate, works, path)
+    assert item["status"] == "parent_frozen_new_points_reviewed"
+    assert item["placed_new_points"] == 1
+    assert item["held_new_points"] == 1
+    assert output["x"].tolist()[:3] == [0.0, round(1 / 3, 7), round(2 / 3, 7)]
+    assert output["keyword"].tolist()[:3] == ["systems"] * 3
+    placed = output.loc[output.work_id.eq("work-new")].iloc[0]
+    assert placed.keyword_id == "keyword-unclassified"
+    assert placed.detail_keyword == "Pending topic review"
+    assert (placed.x, placed.y, placed.tsne_x, placed.tsne_y) == (
+        0.21,
+        0.3,
+        0.24,
+        -0.1,
+    )
+    held = output.loc[output.work_id.eq("work-hold")].iloc[0]
+    assert not held.map_eligible
+    assert held.map_exclusion_reasons == ["pending_placement_review"]
+    assert held.keyword_id == ""
+    assert all(pandas.isna(held[field]) for field in ("x", "y", "tsne_x", "tsne_y"))
+    assert works["x"].tolist() == [0.9] * 5
+
+
+def test_additive_staged_works_rejects_unreviewed_held_placement(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+    output, receipt = freeze_additive(parent, candidate, works, review_path)
+    staged_path = tmp_path / "works.parquet"
+    output.to_parquet(staged_path, index=False)
+    require_held_additive_staged_works(staged_path, receipt)
+    require_held_additive_staged_works(
+        staged_path, {**receipt, "held_new_work_ids": []}
+    )
+
+    held_index = output.index[output.work_id.eq("work-hold")][0]
+    for field in ("x", "y", "tsne_x", "tsne_y"):
+        broken = output.copy(deep=True)
+        broken.at[held_index, field] = 0.2
+        broken.to_parquet(staged_path, index=False)
+        with pytest.raises(ValueError, match="leaks coordinates"):
+            require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.copy(deep=True)
+    broken.at[held_index, "map_eligible"] = True
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="lacks placement hold"):
+        require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.copy(deep=True)
+    broken.at[held_index, "keyword"] = "Unreviewed topic"
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="leaks topic labels"):
+        require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.loc[output.work_id.ne("work-hold")].copy()
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="lack unique held work IDs"):
+        require_held_additive_staged_works(staged_path, receipt)
+
+
+@pytest.mark.parametrize(
+    "defect,match",
+    [
+        ("source", "stale or mismatched"),
+        ("selected", "stale or mismatched"),
+        ("parent", "stale or mismatched"),
+        ("candidate", "stale or mismatched"),
+        ("unreadable", "cannot be read"),
+        ("schema", "schema is invalid"),
+        ("date", "date is invalid"),
+        ("missing", "cover every new point"),
+        ("duplicate", "repeats or is unexpected"),
+        ("row_schema", "row schema is invalid"),
+        ("decision", "decision is invalid"),
+        ("held_coordinates", "held placement has coordinates"),
+        ("coordinate_shape", "lacks four coordinates"),
+        ("coordinate_type", "coordinate is invalid"),
+        ("nan", "not finite normalized"),
+        ("precision", "exceeds map precision"),
+        ("unreviewed", "rationale is too short"),
+    ],
+)
+def test_additive_review_fails_closed(tmp_path: Path, defect: str, match: str) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    path = tmp_path / "placement-review.json"
+    item = additive_review(path, error.value.receipt)
+    if defect == "source":
+        item["source_snapshot_sha256"] = "x" * 64
+    elif defect == "selected":
+        item["selected_ids_sha256"] = "x" * 64
+    elif defect == "parent":
+        item["prior_revision"] = "b" * 40
+    elif defect == "candidate":
+        item["candidate_map_content_sha256"] = "x" * 64
+    elif defect == "unreadable":
+        path.unlink()
+    elif defect == "schema":
+        item.pop("reviewed_at")
+    elif defect == "date":
+        item["reviewed_at"] = "yesterday"
+    elif defect == "missing":
+        item["new_points"].pop()
+    elif defect == "duplicate":
+        item["new_points"][1]["work_id"] = "work-new"
+    elif defect == "row_schema":
+        item["new_points"][0].pop("rationale")
+    elif defect == "decision":
+        item["new_points"][0]["decision"] = "auto_assign_topic"
+    elif defect == "held_coordinates":
+        item["new_points"][1]["coordinates"] = {
+            "x": 0.1,
+            "y": 0.2,
+            "tsne_x": 0.3,
+            "tsne_y": 0.4,
+        }
+    elif defect == "coordinate_shape":
+        item["new_points"][0]["coordinates"].pop("x")
+    elif defect == "coordinate_type":
+        item["new_points"][0]["coordinates"]["x"] = "bad"
+    elif defect == "nan":
+        item["new_points"][0]["coordinates"]["x"] = float("nan")
+    elif defect == "precision":
+        item["new_points"][0]["coordinates"]["x"] = 0.123456789
+    else:
+        item["new_points"][0]["rationale"] = "not reviewed"
+    if defect != "unreadable":
+        path.write_text(json.dumps(item))
+    with pytest.raises(PresentationDriftError, match=match):
+        freeze_additive(parent, candidate, works, path)
+
+
+def test_additive_rejects_prior_excluded_promotion_and_topic_id_collision(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    prior = parent_work_rows(parent)
+    prior.append({**prior[0], "work_id": "work-new"})
+    with pytest.raises(ValueError, match="separate promotion review"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            review_path=tmp_path / "missing.json",
+        )
+    parent["keywords"].append(
+        {
+            "keyword_id": "keyword-unclassified",
+            "label": "A conflicting old label",
+        }
+    )
+    with pytest.raises(ValueError, match="collides with parent"):
+        freeze_additive(parent, candidate, works, None)
+
+
+def test_additive_requires_new_points_and_stable_parent_versions() -> None:
+    parent, candidate, works = additive_case()
+    candidate["points"] = candidate["points"][:3]
+    with pytest.raises(ValueError, match="no new map points"):
+        freeze_additive(parent, candidate, works, None)
+    candidate["points"] = candidate["points"][1:]
+    with pytest.raises(ValueError, match="cannot remove parent map points"):
+        freeze_additive(parent, candidate, works, None)
+    candidate = deepcopy(parent)
+    candidate["points"].append(
+        {
+            "work_id": "work-new",
+            "x": 0.1,
+            "y": 0.1,
+            "tsne_x": 0.1,
+            "tsne_y": 0.1,
+            "keyword_ids": ["broad", "detail"],
+        }
+    )
+    parent["layout_version"] = "older"
+    candidate["layout_version"] = "newer"
+    with pytest.raises(ValueError, match="layout_version differs"):
+        freeze_additive(parent, candidate, works, None)
+
+
+def test_additive_requires_complete_parent_topic_metadata(tmp_path: Path) -> None:
+    parent, candidate, works = additive_case()
+    prior = parent_work_rows(parent)
+    prior[0]["detail_keyword_extracted"] = "different extracted label"
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    # A valid review cannot override a parent work/catalog mismatch.
+    path = tmp_path / "review.json"
+    additive_review(path, error.value.receipt)
+    with pytest.raises(ValueError, match="parent topic differs from map"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            review_path=path,
+        )
+
+
+@pytest.mark.parametrize(
+    ("defect", "message"),
+    [
+        ("duplicate_parent", "duplicate IDs"),
+        ("missing_parent", "matching works rows"),
+        ("missing_field", "lack placement or topic fields"),
+        ("duplicate_current", "unique mapped IDs"),
+        ("missing_current", "unique mapped IDs"),
+    ],
+)
+def test_additive_rejects_malformed_work_inputs(defect: str, message: str) -> None:
+    parent, candidate, works = additive_case()
+    prior = parent_work_rows(parent)
+    if defect == "duplicate_parent":
+        prior.append(prior[0])
+    elif defect == "missing_parent":
+        prior.pop()
+    elif defect == "missing_field":
+        works = works.drop(columns=["detail_keyword"])
+    elif defect == "duplicate_current":
+        works = pandas.concat([works, works.iloc[[0]]], ignore_index=True)
+    else:
+        works = works.loc[works.work_id.ne("work-new")]
+    with pytest.raises(ValueError, match=message):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            review_path=None,
+        )
+
+
+def test_additive_rejects_parent_with_missing_topic_field(tmp_path: Path) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    path = tmp_path / "review.json"
+    additive_review(path, error.value.receipt)
+    prior = parent_work_rows(parent)
+    prior[0].pop("detail_keyword_extracted")
+    with pytest.raises(ValueError, match="parent work lacks topic fields"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            review_path=path,
+        )
+
+
+def test_additive_review_is_stale_if_candidate_changes_after_review(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    path = tmp_path / "placement-review.json"
+    additive_review(path, error.value.receipt)
+    next(point for point in candidate["points"] if point["work_id"] == "work-new")[
+        "tsne_x"
+    ] = 0.9
+    with pytest.raises(PresentationDriftError, match="stale or mismatched"):
+        freeze_additive(parent, candidate, works, path)
