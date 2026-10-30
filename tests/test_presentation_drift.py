@@ -315,7 +315,81 @@ def test_changed_topic_ids_with_same_labels_and_changed_detail_label() -> None:
     assert item["retained"]["topic_id_changes"] == 120
     assert item["retained"]["broad_semantic_label_changes"] == 0
     assert item["retained"]["detail_semantic_label_changes"] == 120
+    assert "retained_keyword_id_change" in item["material_reasons"]
     assert "detail_semantic_topic_churn" in item["material_reasons"]
+
+
+def test_keyword_id_renumbering_alone_requires_exact_review() -> None:
+    parent, candidate = artifact(), artifact()
+    candidate["keywords"] = [
+        {"keyword_id": "broad-new", "label": "systems"},
+        {"keyword_id": "detail-new", "label": "methods"},
+    ]
+    for point in candidate["points"]:
+        point["keyword_ids"] = ["broad-new", "detail-new"]
+    item = report(parent, candidate)
+    assert item["retained"]["topic_id_changes"] == 120
+    assert item["retained"]["broad_semantic_label_changes"] == 0
+    assert item["retained"]["detail_semantic_label_changes"] == 0
+    assert item["material_reasons"] == ["retained_keyword_id_change"]
+    with pytest.raises(PresentationDriftError, match="reviewed approval"):
+        require_presentation_review(item)
+
+
+def test_single_retained_broad_reassignment_requires_exact_review() -> None:
+    parent, candidate = artifact(), artifact()
+    for item in (parent, candidate):
+        item["keywords"].append({"keyword_id": "robotics", "label": "robotics"})
+        item["points"][-1]["keyword_ids"][0] = "robotics"
+    candidate["points"][0]["keyword_ids"][0] = "robotics"
+    item = report(parent, candidate)
+    assert item["retained"]["broad_semantic_label_changes"] == 1
+    assert item["retained"]["topic_id_changes"] == 1
+    assert item["retained"]["new_broad_region_labels"] == []
+    assert "broad_semantic_topic_churn" in item["material_reasons"]
+    with pytest.raises(PresentationDriftError, match="reviewed approval"):
+        require_presentation_review(item)
+
+
+def test_single_retained_detail_reassignment_requires_exact_review() -> None:
+    parent, candidate = artifact(), artifact()
+    for item in (parent, candidate):
+        item["keywords"].append({"keyword_id": "other-detail", "label": "other"})
+        item["points"][-1]["keyword_ids"][1] = "other-detail"
+    candidate["points"][0]["keyword_ids"][1] = "other-detail"
+    item = report(parent, candidate)
+    assert item["retained"]["detail_semantic_label_changes"] == 1
+    assert "detail_semantic_topic_churn" in item["material_reasons"]
+    with pytest.raises(PresentationDriftError, match="reviewed approval"):
+        require_presentation_review(item)
+
+
+@pytest.mark.parametrize(
+    ("level", "reason"),
+    [
+        (0, "broad_semantic_topic_churn"),
+        (1, "detail_semantic_topic_churn"),
+    ],
+)
+def test_single_catalog_label_change_with_same_keyword_id_requires_review(
+    level: int, reason: str
+) -> None:
+    parent, candidate = artifact(), artifact()
+    for item in (parent, candidate):
+        item["keywords"].append({"keyword_id": "unique", "label": "old label"})
+        item["points"][-1]["keyword_ids"][level] = "unique"
+    candidate["keywords"][-1]["label"] = "changed label"
+    item = report(parent, candidate)
+    assert item["retained"]["topic_id_changes"] == 0
+    field = (
+        "broad_semantic_label_changes"
+        if level == 0
+        else "detail_semantic_label_changes"
+    )
+    assert item["retained"][field] == 1
+    assert reason in item["material_reasons"]
+    with pytest.raises(PresentationDriftError, match="reviewed approval"):
+        require_presentation_review(item)
 
 
 def test_unneeded_or_malformed_approval_fails_closed(tmp_path: Path) -> None:

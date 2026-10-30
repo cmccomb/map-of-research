@@ -160,9 +160,14 @@ def compare_presentation(
     moved_over_0_1 = sum(distance > 0.1 for distance in tsne_distances)
     pca_moved_over_0_1 = sum(distance > 0.1 for distance in pca_distances)
     material_reasons = []
-    if len(broad_changed) >= 100 or len(broad_changed) / len(retained) >= 0.01:
+    # Topic IDs are URL facet identities, and even one incorrect retained label
+    # is a visible attribution error. Counts remain in the report for review;
+    # they are not safe pass thresholds for these semantic changes.
+    if topic_ids_changed:
+        material_reasons.append("retained_keyword_id_change")
+    if broad_changed:
         material_reasons.append("broad_semantic_topic_churn")
-    if len(detail_changed) >= 500 or len(detail_changed) / len(retained) >= 0.05:
+    if detail_changed:
         material_reasons.append("detail_semantic_topic_churn")
     if moved_over_0_1 >= 100 or moved_over_0_1 / len(retained) >= 0.01:
         material_reasons.append("retained_point_movement")
