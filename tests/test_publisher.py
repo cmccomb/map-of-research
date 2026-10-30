@@ -3145,6 +3145,53 @@ def test_main_always_writes_terminal_status(
         }
 
 
+def test_main_persists_presentation_drift_failure_receipt(
+    monkeypatch, tmp_path
+) -> None:
+    status_path = tmp_path / "status.json"
+    monkeypatch.setenv(publisher.HF_TOKEN_ENV, "token")
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: registry())
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (pandas.DataFrame(), {}),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_math_coverage",
+        lambda *args, **kwargs: {"complete_scholar_profiles": 1},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_coverage",
+        lambda **kwargs: {"legacy_profiles": 0, "complete_profiles": 1},
+    )
+    receipt = {"status": "review_required", "report_sha256": "exact-report"}
+
+    def reject_release(*args, **kwargs):
+        raise publisher.PresentationDriftError(receipt, "material drift")
+
+    monkeypatch.setattr(publisher, "publish_snapshot", reject_release)
+    assert (
+        publisher.main(
+            [
+                "--snapshot",
+                str(tmp_path / "snapshot.parquet"),
+                "--manifest",
+                str(tmp_path / "manifest.json"),
+                "--prior-revision",
+                "a" * 40,
+                "--status-file",
+                str(status_path),
+            ]
+        )
+        == 1
+    )
+    status = json.loads(status_path.read_text())
+    assert status["status"] == "failure"
+    assert status["presentation_drift"] == receipt
+
+
 def test_main_persists_ambiguous_hub_write_reconciliation_receipt(
     monkeypatch, tmp_path
 ) -> None:
