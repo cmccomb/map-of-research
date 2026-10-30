@@ -357,6 +357,9 @@ def main() -> int:
                 mccomb_continuity_path=(
                     curated / "mccomb-exact-continuity-20261029.json"
                 ),
+                coauthor_binding_approval_path=(
+                    curated / "mccomb-coauthor-bindings-5073.json"
+                ),
                 mccomb_crosswalk_path=(
                     reviews / "2026-10-29-mccomb-prior-id-crosswalk.json"
                 ),
