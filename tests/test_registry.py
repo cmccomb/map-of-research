@@ -1477,12 +1477,6 @@ def test_courtesy_corrections_keep_recorded_memberships_and_typed_homes(
     ("person_id", "home_id", "included_ids", "counts"),
     [
         (
-            "person-annlee-3bb27a6a",
-            "stats",
-            {"stats", "mld"},
-            "stats=11;mld=2",
-        ),
-        (
             "person-davidplaut-2f20021e",
             "psychology",
             {"psychology", "ni"},
@@ -1535,6 +1529,35 @@ def test_advisee_count_homes_keep_memberships_and_publish_evidence(
     assert published["primary_academic_home_verified_at"] == "2026-10-24"
     assert published["primary_academic_home_basis"] == "inferred_advisee_count"
     assert person.primary_department_id == home_id
+
+
+def test_ann_lee_named_owner_home_replaces_advisee_inference() -> None:
+    registry = load_registry()
+    person_id = "person-annlee-3bb27a6a"
+    person = registry.people_by_id[person_id]
+    home = registry.primary_affiliation(person_id)
+    assert (home.home_type, home.home_id, home.basis) == (
+        "department",
+        "stats",
+        "reviewed",
+    )
+    assert home.source_url == "https://www.stat.cmu.edu/~annlee/"
+    assert home.verified_at == "2026-10-29"
+    assert person.primary_department_id == ""
+    assert {
+        membership.department_id
+        for membership in registry.memberships
+        if membership.person_id == person_id and membership.included
+    } == {"stats", "mld"}
+    with Path("registry/reviews/2026-10-24-primary-departments.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        review = next(
+            row for row in csv.DictReader(handle) if row["person_id"] == person_id
+        )
+    assert review["review_status"] == "reviewed"
+    assert review["phd_advisee_counts"] == "stats=11;mld=2"
+    assert review["review_source_urls"] == home.source_url
 
 
 @pytest.mark.parametrize(
