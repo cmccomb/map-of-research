@@ -34,6 +34,16 @@ branch](https://github.com/cmccomb/map-of-research/tree/codex/chem-kim-chapters-
 is nonoperational and does not authorize publication. Re-fetching that account
 would not resolve its identity holds.
 
+A saved-source identity sanity check found matching Scholar IDs, direct
+profile URLs, captured user IDs, and row counts for all 115 canonical MCS
+caches; no capture JSON or HTML was missing. No new identity mismatch appeared.
+The non-CMU or absent affiliation text on the saved Scholar headers for Clive
+Newstead, Noel Walkington, Sergey Nadtochiy, and Tina Kahniashvili is already
+documented with separate identity evidence in the registry and earlier
+reviews. The `Hiller NL` profile name is likewise a previously reviewed
+variant of Luisa Hiller. This check used the saved source and made no new
+Scholar requests.
+
 ## Two confirmed one-sided coauthorships
 
 The published artifact contains these eligible works, but assigns each to
