@@ -14976,6 +14976,94 @@
       "reason": "The original 2010 AA449 Milestone Report 2 names the five-person University of Washington blimp-project team, including its Matthew Walker; the CMU astrophysicist was then on a Cambridge/Harvard postdoctoral track.",
       "evidence_url": "https://depts.washington.edu/soslab/mw/images/7/7d/Group2MS2Report.pdf",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:-f6ydRqryjwC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 44: The original publisher identifies Daniel L. Millimet, Jeffrey A. Smith, and Edward Vytlacil as editors of this volume; Alan Montgomery is absent from the credited editors/byline.",
+      "evidence_url": "https://bookstore.emerald.com/media/preview/9781838675769-23-2.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:uWQEDVKXjbEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 58: PubMed identifies the author as Alan A. Montgomery at University of Bristol Primary Health Care with a bristol.ac.uk email; CMU faculty owner is Alan L. Montgomery.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/11914164/",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:IWHjjKOFINEC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 65: Original publisher identifies Jane M. Binner, David L. Edgerton, and Thomas Elger as editors; Alan Montgomery is not credited.",
+      "evidence_url": "https://www.emerald.com/books/edited-volume/15896/Measurement-Error-Consequences-Applications-and",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:ZHo1McVdvXMC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 77: CMU dissertation title page names Francisco Orlando Cisternas Vera as author and Alan Montgomery only as committee chair; the captured title is the student name, not an Alan-authored work.",
+      "evidence_url": "https://www.cmu.edu/sites/default/files/cmu-tepper-site-files/2025-06/2017-marketing-vera-dissertation.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:tS2w5q8j5-wC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 78: The title is Giulio Zhou’s own CV, which lists Alan as a coauthor of a different publication. The CV itself is not authored by Alan.",
+      "evidence_url": "https://giuliozhou.com/resume.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:g5m5HwL7SMYC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 84: Problem Overview is a section heading inside Alan Montgomery’s CMU-hosted 2003 slide deck, not a separate authored work.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/alm3/presentations/Path%20Analysis%20-%20JSM%202003.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:NaGl4SEjCO4C",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 92: The conference program and the presenting author’s CV credit Mehmet Sahinoglu and Yanling Yuan for this exact title; Montgomery, AL in nearby material is a city and state, not an author.",
+      "evidence_url": "https://scs.org/wp-content/uploads/2023/07/SummerSim10-PP-20100628.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "uvsSrnoAAAAJ",
+      "author_pub_id": "uvsSrnoAAAAJ:qUcmZB5y_30C",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 96: The exact CMU-hosted PDF is a list of suggested readings. Alan Montgomery appears as an author of one cited work, not as author of the reading list.",
+      "evidence_url": "https://www.andrew.cmu.edu/user/alm3/presentations/choicesymposium2001/ReadingList.pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "Q6VLB4gAAAAJ",
+      "author_pub_id": "Q6VLB4gAAAAJ:dshw04ExmUIC",
+      "reason_code": "corrupted_duplicate",
+      "reason": "Capture row 45: Malformed reference fragment with line numbers and another surname; legitimate 2015 Nature work is row 1.",
+      "evidence_url": "https://www.pfenninglab.org/publications/",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "Q6VLB4gAAAAJ",
+      "author_pub_id": "Q6VLB4gAAAAJ:l7t_Zn2s7bgC",
+      "reason_code": "nonpublication",
+      "reason": "Capture row 107: NSF CAREER award record, not a publication; CMU profile lists the award.",
+      "evidence_url": "https://www.cmu.edu/bme/People/Faculty/profile/apfenning.html",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "sJDqACEAAAAJ",
+      "author_pub_id": "sJDqACEAAAAJ:sSrBHYA8nusC",
+      "reason_code": "false_profile_attribution",
+      "reason": "Capture row 51: The linked arXiv source was withdrawn by arXiv administrators for incorrect authorship; Daniel Fried is absent from the visible Scholar byline and owner CV. Preserve raw only.",
+      "evidence_url": "https://arxiv.org/abs/2601.11659",
+      "verified_at": "2026-10-29"
     }
   ]
 }

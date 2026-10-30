@@ -931,6 +931,50 @@
       "reviewed_at": "2026-10-26",
       "expected_provisional_hold_rows": 119,
       "provisional_hold_ids_sha256": "524dfd0fdddec8142f6a79b1788485e45fb32f692e3ba4f114ecaffe18e1180c"
+    },
+    {
+      "person_id": "person-alanmontgomery-6a20c040",
+      "scholar_id": "uvsSrnoAAAAJ",
+      "state": "released",
+      "expected_source_rows": 97,
+      "cache_sha256": "eae2557f6f87a5853eb0f2612eb39d92e8fa8da00f6963e8a77c99658499b5f3",
+      "reason": "Complete visible 97-row owner-linked Chrome capture; 40 exact uncertain rows held, 8 exact reviewed rows excluded from the map, remainder enters ordinary quality gates.",
+      "reviewed_at": "2026-10-29",
+      "expected_provisional_hold_rows": 40,
+      "provisional_hold_ids_sha256": "72b7d3213ed9f4d063b485fb140facede76b34de6b47e0dbbb8e93a84b5abbc9"
+    },
+    {
+      "person_id": "person-andreaspfenning-fa0e2f90",
+      "scholar_id": "Q6VLB4gAAAAJ",
+      "state": "released",
+      "expected_source_rows": 118,
+      "cache_sha256": "e50955dcb4a58799d455562f0205a333886c0d87c69dfa062db96a4c1f007aa9",
+      "reason": "Complete visible 118-row owner-linked Chrome capture; 60 exact uncertain rows held, 2 exact reviewed rows excluded from the map, remainder enters ordinary quality gates.",
+      "reviewed_at": "2026-10-29",
+      "expected_provisional_hold_rows": 60,
+      "provisional_hold_ids_sha256": "bcc604550f5e87e9f17169d2b493b7e0ad76dcaa3290194dfab6b8cf4f22b6c3"
+    },
+    {
+      "person_id": "person-daphneippolito-f11dd056",
+      "scholar_id": "COEsqLYAAAAJ",
+      "state": "released",
+      "expected_source_rows": 76,
+      "cache_sha256": "6e9b6ac88ad2263ff966c71a88c178f0960e4b6320971273c0a6c67000fb011b",
+      "reason": "Complete visible 76-row owner-linked Chrome capture; 28 exact uncertain rows held, 0 exact reviewed rows excluded from the map, remainder enters ordinary quality gates.",
+      "reviewed_at": "2026-10-29",
+      "expected_provisional_hold_rows": 28,
+      "provisional_hold_ids_sha256": "7577eec1d657571a6dac74bec4a1486bde404c7e1bce054223376aacac1c2207"
+    },
+    {
+      "person_id": "person-danielfried-9300b30d",
+      "scholar_id": "sJDqACEAAAAJ",
+      "state": "released",
+      "expected_source_rows": 116,
+      "cache_sha256": "161a00332212f6d4c0b20893ab85d990b500373db157234459531cd0e65eda5d",
+      "reason": "Complete visible 116-row owner-linked Chrome capture; 26 exact uncertain rows held, 1 exact reviewed rows excluded from the map, remainder enters ordinary quality gates.",
+      "reviewed_at": "2026-10-29",
+      "expected_provisional_hold_rows": 26,
+      "provisional_hold_ids_sha256": "3734204a46dd5e54391fa68ff7a827614def645ac875c41e5812769aed62fc18"
     }
   ]
 }

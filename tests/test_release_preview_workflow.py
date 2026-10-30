@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -36,6 +37,26 @@ RELEASE_PATHS = frozenset(
         ),
     }
 )
+
+
+def test_hosted_preview_coverage_uses_upload_prior_id_crosswalks():
+    """A preview must accept the same reviewed prior-ID continuity as upload."""
+
+    upload = (ROOT / ".github/workflows/upload.yml").read_text()
+    preview = (ROOT / ".github/workflows/release-preview.yml").read_text()
+
+    def crosswalks(workflow: str) -> set[str]:
+        coverage_command = workflow.split("map-validate-scholar-coverage \\", 1)[1]
+        coverage_command = coverage_command.split("--curated-works", 1)[0]
+        return set(
+            re.findall(
+                r"--(?:additional-)?prior-id-crosswalk\s+([^\s\\]+)",
+                coverage_command,
+            )
+        )
+
+    assert crosswalks(upload)
+    assert crosswalks(preview) == crosswalks(upload)
 
 
 def _load_script():
