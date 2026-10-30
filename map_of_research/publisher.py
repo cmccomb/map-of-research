@@ -143,6 +143,10 @@ from .mccomb_continuity import (
     SNAPSHOT_SHA256 as MCCOMB_CONTINUITY_SNAPSHOT_SHA256,
 )
 from .mccomb_continuity import validate_exact_mccomb_continuity
+from .pending_publications import (
+    PENDING_MAP_SCHEMA_VERSION,
+    build_pending_publications,
+)
 from .person_publication_holds import (
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     load_person_publication_holds,
@@ -1209,12 +1213,18 @@ def _write_map_artifacts(
     dataset_commits: Mapping[str, str],
     continuity_receipt: Mapping[str, Any] | None = None,
     publication_hold_reasons: Mapping[str, str] | None = None,
+    pending_publications: list[dict[str, Any]] | None = None,
 ) -> tuple[Path, Path, dict[str, Any]]:
     """Render both map files before the Hub is touched."""
 
     maps_dir.mkdir(parents=True, exist_ok=True)
+    artifact_schema_version = (
+        PENDING_MAP_SCHEMA_VERSION
+        if pending_publications is not None
+        else MAP_SCHEMA_VERSION
+    )
     map_manifest: dict[str, Any] = {
-        "schema_version": MAP_SCHEMA_VERSION,
+        "schema_version": artifact_schema_version,
         "quality_assessment_version": QUALITY_ASSESSMENT_VERSION,
         "keyword_model_version": KEYWORD_MODEL_VERSION,
         "topic_label_review_version": TOPIC_LABEL_REVIEW_VERSION,
@@ -1236,6 +1246,10 @@ def _write_map_artifacts(
         generated_at_utc=generated_at_utc,
         publication_hold_reasons=publication_hold_reasons,
     )
+    if pending_publications is not None:
+        artifact["schema_version"] = artifact_schema_version
+        artifact["pending_publications"] = pending_publications
+        artifact["pending_publication_count"] = len(pending_publications)
     artifact_path = maps_dir / MAP_ARTIFACT_NAME
     artifact_path.write_text(
         json.dumps(artifact, ensure_ascii=False, separators=(",", ":")),
@@ -1252,6 +1266,10 @@ def _write_map_artifacts(
         "keyword_levels": artifact["keyword_levels"],
         "file": artifact_path.name,
     }
+    if pending_publications is not None:
+        map_manifest["artifact"]["pending_publication_count"] = len(
+            pending_publications
+        )
     manifest_path = maps_dir / "manifest.json"
     manifest_path.write_text(
         json.dumps(map_manifest, ensure_ascii=False, indent=2) + "\n",
@@ -1556,6 +1574,21 @@ def _publish_atomic_release(
                 candidate_before_preservation,
             )
 
+    pending_publications = None
+    if additive_placement_review_path is not None:
+        if not isinstance(preservation_receipt, Mapping):
+            raise ValueError("Additive pending publication receipt is missing")
+        held_ids = preservation_receipt.get("held_new_work_ids")
+        if not isinstance(held_ids, list):
+            raise ValueError("Additive pending work IDs are missing")
+        pending_publications = build_pending_publications(
+            tables["works"],
+            tables["profile_publications"],
+            release_receipt or [],
+            registry,
+            held_ids,
+        )
+
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
         root = Path(temp)
         staged: dict[str, tuple[Any, Path]] = {}
@@ -1601,6 +1634,7 @@ def _publish_atomic_release(
                 <= set(tables["people"].columns)
                 else {}
             ),
+            pending_publications=pending_publications,
         )
         presentation_receipt = None
         if enforce_presentation_drift:

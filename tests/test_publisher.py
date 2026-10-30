@@ -500,6 +500,48 @@ def work_frame() -> pandas.DataFrame:
     )
 
 
+def test_pending_map_schema_has_nonspatial_rows_without_changing_points(
+    tmp_path: Path,
+) -> None:
+    mapped = work_frame()
+    pending = mapped.copy(deep=True)
+    pending.at[0, "work_id"] = "work-pending"
+    pending.at[0, "map_eligible"] = False
+    pending.at[0, "map_exclusion_reasons"] = ["pending_placement_review"]
+    for field in ("x", "y", "tsne_x", "tsne_y"):
+        pending.at[0, field] = None
+    works = pandas.concat([mapped, pending], ignore_index=True)
+    ordinary = publisher.build_map_artifact(
+        works, registry(), generated_at_utc="2026-10-30T01:00:00+00:00"
+    )
+    selected_pending = [
+        {
+            "work_id": "work-pending",
+            "title": "A reviewed paper",
+            "year": 2026,
+            "faculty_ids": ["person-one"],
+            "source_url": "https://example.test/pending",
+            "release_decision": "selected",
+            "map_hold_reason": "pending_topic_review",
+        }
+    ]
+    _, manifest_path, artifact = publisher._write_map_artifacts(
+        works,
+        registry(),
+        maps_dir=tmp_path / "maps",
+        generated_at_utc="2026-10-30T01:00:00+00:00",
+        dataset_commits={},
+        pending_publications=selected_pending,
+    )
+    manifest = json.loads(manifest_path.read_text())
+    assert artifact["schema_version"] == manifest["schema_version"] == 8
+    assert artifact["pending_publications"] == selected_pending
+    assert artifact["pending_publication_count"] == 1
+    assert manifest["artifact"]["pending_publication_count"] == 1
+    assert artifact["points"] == ordinary["points"]
+    assert artifact["keywords"] == ordinary["keywords"]
+
+
 def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
     tmp_path: Path,
 ) -> None:
