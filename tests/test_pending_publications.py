@@ -340,14 +340,12 @@ def test_pending_collaboration_eligibility_must_match_selected_source(table) -> 
 def test_pending_collaboration_eligibility_must_be_exact_boolean(table) -> None:
     works, profiles, receipt, registry, held = inputs()
     if table == "works":
-        works["collaboration_eligible"] = works["collaboration_eligible"].astype(
-            object
-        )
+        works["collaboration_eligible"] = works["collaboration_eligible"].astype(object)
         works.at[0, "collaboration_eligible"] = "true"
     else:
-        profiles["collaboration_eligible"] = profiles[
-            "collaboration_eligible"
-        ].astype(object)
+        profiles["collaboration_eligible"] = profiles["collaboration_eligible"].astype(
+            object
+        )
         profiles.at[0, "collaboration_eligible"] = "true"
     with pytest.raises(ValueError, match="collaboration eligibility disagrees"):
         build_pending_publications(works, profiles, receipt, registry, held)
