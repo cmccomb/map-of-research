@@ -13,11 +13,11 @@ observations below still map to one point in the newer Hub artifact. No
 Scholar profile was re-collected for this review.
 
 The verified rows below are appended to `data/curated/scholar-exclusions.json`
-by exact `(scholar_id, author_pub_id)`. All 16 migrated raw observations remain
-in the cache and lossless snapshot. They currently produce 15 distinct public
+by exact `(scholar_id, author_pub_id)`. All 17 migrated raw observations remain
+in the cache and lossless snapshot. They currently produce 16 distinct public
 map points. Each row was matched to its saved cache observation and to exactly
 one current point by the observed title. The current v3 title-quality rule
-marks all 16 eligible, so these are source-backed corrections to known false
+marks all 17 eligible, so these are source-backed corrections to known false
 positives, not a general missing-metadata exclusion.
 
 ## Exact decisions
@@ -42,10 +42,6 @@ not faculty research works.
 | `WfaqxlgAAAAJ:HFi42EZPDb4C` | Kumar | [10.1109/IPSN54338.2022.00073](https://api.crossref.org/works/10.1109/IPSN54338.2022.00073) |
 | `fiZryxEAAAAJ:Nw_I7GeUguwC` | Grossman | [10.1006/mben.2001.0202](https://api.crossref.org/works/10.1006/mben.2001.0202) |
 
-The IEEE footer in Koopman's `DFtapYEAAAAJ:U_HPUtbDl20C` is an additional
-candidate, but its saved title truncates the DOI. It is outside this exact
-batch pending independent document identification.
-
 ### Other source artifacts
 
 | Saved Scholar observation | Public title or defect | Primary check |
@@ -55,10 +51,11 @@ batch pending independent document identification.
 | `pARKzQsAAAAJ:LO7wyVUgiFcC` and `pARKzQsAAAAJ:8d8msizDQcsC` | “IISWC-2006 People” and “IISWC-2007 People” are site navigation labels. | [2006](https://iiswc.org/iiswc2006/home.html) and [2007](https://iiswc.org/iiswc2007/home.html) conference sites. |
 | `Rn_BmTYAAAAJ:kVjdVfd2voEC` | “SIGMETRICS People” is a society contact section. | [SIGMETRICS newsletter](https://www.math.vu.nl/~mei/articles/2026/PER.pdf) prints this heading above officer and board contacts, including Fanti. |
 | `DK7TEvkAAAAJ:pS0ncopqnHgC` | `" School of Computer Science` is an affiliation fragment with no work metadata. | [Exact saved Scholar observation](https://scholar.google.com/citations?view_op=view_citation&user=DK7TEvkAAAAJ&citation_for_view=DK7TEvkAAAAJ:pS0ncopqnHgC) and frozen cache row. |
+| `DFtapYEAAAAJ:U_HPUtbDl20C` | DSN-S 2024 proceedings title plus IEEE copyright/ISBN footer and a truncated DOI; no paper title or author. | [University library catalog](https://dspace.apps.iitd.ac.in/node/156280) identifies the exact ISBN as the proceedings volume. |
 
 ## Current-map impact and limits
 
-Excluding these exact observations is expected to remove 15 current points.
+Excluding these exact observations is expected to remove 16 current points.
 Only the Ganger/Gibbons reference fragment has two listed faculty; it adds one
 spurious shared work to their existing edge. The edge has 18 other works in the
 current graph, so its presence should remain. No coauthor relation should be

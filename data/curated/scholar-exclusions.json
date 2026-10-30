@@ -15192,6 +15192,14 @@
       "reason": "Migrated title is a garbled DOI and URL footer; the DOI for its captured Metabolic Engineering volume is registered as Author Index for Volume 3 with no listed authors.",
       "evidence_url": "https://api.crossref.org/works/10.1006/mben.2001.0202",
       "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "DFtapYEAAAAJ",
+      "author_pub_id": "DFtapYEAAAAJ:U_HPUtbDl20C",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title concatenates the DSN-S 2024 proceedings container and IEEE copyright/ISBN footer; a university library catalogs that exact ISBN as the proceedings volume, not a Koopman paper.",
+      "evidence_url": "https://dspace.apps.iitd.ac.in/node/156280",
+      "verified_at": "2026-10-30"
     }
   ]
 }
