@@ -18,6 +18,7 @@ import traceback
 from pathlib import Path
 from typing import Any
 
+from map_of_research.presentation_drift import PresentationDriftError
 from map_of_research.region_continuity import RegionReleaseDiffError
 
 
@@ -402,6 +403,8 @@ def main() -> int:
         receipt["error"] = str(error)[:1000]
         if isinstance(error, RegionReleaseDiffError):
             receipt["region_release_diff"] = error.receipt
+        if isinstance(error, PresentationDriftError):
+            receipt["presentation_drift"] = error.receipt
         receipt["traceback"] = traceback.format_exc(limit=12)
         return 1
     finally:

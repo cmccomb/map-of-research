@@ -13,6 +13,7 @@ from types import ModuleType, SimpleNamespace
 import pytest
 
 import map_of_research
+from map_of_research.presentation_drift import PresentationDriftError
 from map_of_research.region_continuity import RegionReleaseDiffError
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -204,6 +205,7 @@ def _run_preview(
     require_bio_release: bool | None = None,
     chem_manifest_present: bool = True,
     additive_placement_review: Path | None = None,
+    presentation_gate_failure: bool = False,
 ):
     preview = _load_script()
     producer = tmp_path / "producer"
@@ -295,6 +297,11 @@ def _run_preview(
             producer / "data/curated/person-publication-holds.json"
         )
         assert kwargs["additive_placement_review_path"] == additive_placement_review
+        if presentation_gate_failure:
+            raise PresentationDriftError(
+                {"candidate_map_content_sha256": "f" * 64},
+                "new points lack reviewed placement",
+            )
         if region_diff:
             raise RegionReleaseDiffError(
                 {
@@ -384,6 +391,20 @@ def test_no_write_preview_forwards_additive_placement_review(monkeypatch, tmp_pa
     )
     assert code == 0
     assert receipt["status"] == "passed_no_upload"
+
+
+def test_no_write_preview_records_unapproved_additive_candidate(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch,
+        tmp_path,
+        fail_before_write=False,
+        additive_placement_review=tmp_path / "absent-review.json",
+        presentation_gate_failure=True,
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert receipt["presentation_drift"]["candidate_map_content_sha256"] == "f" * 64
+    assert receipt["blocked_hub_write_calls"] == receipt["hub_writes_completed"] == 0
 
 
 def test_no_write_preview_fails_job_when_release_gate_fails(monkeypatch, tmp_path):
