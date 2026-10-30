@@ -523,6 +523,7 @@ def test_pending_map_schema_has_nonspatial_rows_without_changing_points(
             "source_url": "https://example.test/pending",
             "release_decision": "selected",
             "map_hold_reason": "pending_topic_review",
+            "collaboration_eligible": True,
         }
     ]
     _, manifest_path, artifact = publisher._write_map_artifacts(

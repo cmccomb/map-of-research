@@ -45,6 +45,7 @@ def inputs():
                 "year": 2026.0,
                 "map_eligible": False,
                 "map_exclusion_reasons": ["pending_placement_review"],
+                "collaboration_eligible": True,
                 "memberships": [{"person_id": "person-one", "department_id": "ece"}],
                 "author_pub_ids": [ROW_ID],
                 "source_urls": [SOURCE_URL],
@@ -63,6 +64,7 @@ def inputs():
                 "scholar_id": "ScholarOne",
                 "author_pub_id": ROW_ID,
                 "source_url": SOURCE_URL,
+                "collaboration_eligible": True,
             }
         ]
     )
@@ -89,6 +91,7 @@ def test_pending_publication_is_selected_and_nonspatial() -> None:
             "source_url": SOURCE_URL,
             "release_decision": "selected",
             "map_hold_reason": "pending_topic_review",
+            "collaboration_eligible": True,
         }
     ]
 
@@ -290,3 +293,39 @@ def test_pending_publication_accepts_unknown_year() -> None:
         build_pending_publications(works, profiles, receipt, registry, held)[0]["year"]
         is None
     )
+
+
+def test_pending_ineligible_work_is_visible_but_cannot_invent_an_edge() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    works.at[0, "collaboration_eligible"] = False
+    profiles.at[0, "collaboration_eligible"] = False
+    result = build_pending_publications(works, profiles, receipt, registry, held)
+    assert result[0]["collaboration_eligible"] is False
+
+
+@pytest.mark.parametrize("table", ["works", "profiles"])
+def test_pending_collaboration_eligibility_must_match_selected_source(table) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    if table == "works":
+        works.at[0, "collaboration_eligible"] = False
+    else:
+        profiles.at[0, "collaboration_eligible"] = False
+    with pytest.raises(ValueError, match="collaboration eligibility disagrees"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+@pytest.mark.parametrize("table", ["works", "profiles"])
+def test_pending_collaboration_eligibility_must_be_exact_boolean(table) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    if table == "works":
+        works["collaboration_eligible"] = works["collaboration_eligible"].astype(
+            object
+        )
+        works.at[0, "collaboration_eligible"] = "true"
+    else:
+        profiles["collaboration_eligible"] = profiles[
+            "collaboration_eligible"
+        ].astype(object)
+        profiles.at[0, "collaboration_eligible"] = "true"
+    with pytest.raises(ValueError, match="collaboration eligibility disagrees"):
+        build_pending_publications(works, profiles, receipt, registry, held)

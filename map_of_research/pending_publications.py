@@ -44,6 +44,7 @@ def build_pending_publications(
         "work_id",
         "map_eligible",
         "map_exclusion_reasons",
+        "collaboration_eligible",
         "memberships",
         "author_pub_ids",
         "source_urls",
@@ -60,6 +61,7 @@ def build_pending_publications(
         "scholar_id",
         "author_pub_id",
         "source_url",
+        "collaboration_eligible",
     }
     if not required_works <= set(works.columns) or not required_profiles <= set(
         profiles.columns
@@ -152,6 +154,16 @@ def build_pending_publications(
                 )
             faculty_ids.add(person_id)
         public_rows = profile_by_work.get(work_id, [])
+        collaboration_eligible = work.collaboration_eligible
+        if type(collaboration_eligible) is not bool or any(
+            type(row.collaboration_eligible) is not bool
+            or row.collaboration_eligible is not collaboration_eligible
+            for row in public_rows
+        ):
+            raise ValueError(
+                "Pending work collaboration eligibility disagrees with public "
+                f"rows: {work_id}"
+            )
         public_ids = [str(row.author_pub_id) for row in public_rows]
         source_ids = work.author_pub_ids
         if (
@@ -213,6 +225,7 @@ def build_pending_publications(
                 "source_url": source_url,
                 "release_decision": "selected",
                 "map_hold_reason": "pending_topic_review",
+                "collaboration_eligible": collaboration_eligible,
             }
         )
     return rows
