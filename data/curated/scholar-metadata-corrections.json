@@ -468,6 +468,22 @@
       "basis": "The original Journal of Undergraduate Neuroscience Education article and NIH full-text record give the complete title, two-author byline, and full A159–A166 page range; Scholar abbreviates the authors and page range.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3970999/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "MPxFaHYAAAAJ",
+      "author_pub_id": "MPxFaHYAAAAJ:e5wmG9Sq2KIC",
+      "expected": {
+        "title": "Geometry-Dependent Cytotoxicity of Silver Nanoparticles Modulates Apoptotic Signaling in HCT-116 Colorectal Cancer Cells",
+        "year": null,
+        "venue": "Frontiers in Nanotechnology 8, 1959898, 0"
+      },
+      "corrected": {
+        "year": 2026,
+        "venue": "Frontiers in Nanotechnology 8, article 1959898 (2026)"
+      },
+      "basis": "The Frontiers version of record assigns 2026, volume 8, article 1959898, and DOI 10.3389/fnano.2026.1959898 to the exact three-author paper; Scholar omits the year and ends its venue with 0.",
+      "evidence_url": "https://www.frontiersin.org/journals/nanotechnology/articles/10.3389/fnano.2026.1959898/abstract",
+      "verified_at": "2026-10-30"
     }
   ]
 }
