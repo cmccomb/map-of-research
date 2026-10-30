@@ -88,7 +88,7 @@ def ids_sha256(ids: set[str]) -> str:
 
 
 def parse_public_subset(value: Any) -> ReviewedPublicSubset:
-    """Require complete, count-balanced and non-disclosing subset metadata."""
+    """Require count-balanced metadata for privately attested selected rows."""
 
     if not isinstance(value, dict) or not set(value) >= _METADATA_FIELDS:
         raise ValueError("Reviewed public subset metadata is incomplete")
@@ -100,9 +100,9 @@ def parse_public_subset(value: Any) -> ReviewedPublicSubset:
     excluded = value["withheld_excluded_rows"]
     if (
         type(observed) is not int
-        or observed <= 1
+        or observed < 1
         or type(withheld) is not int
-        or not 0 < withheld < observed
+        or not 0 <= withheld < observed
         or type(held) is not int
         or held < 0
         or type(excluded) is not int
@@ -118,6 +118,8 @@ def parse_public_subset(value: Any) -> ReviewedPublicSubset:
     ):
         if not isinstance(value[field], str) or not _DIGEST.fullmatch(value[field]):
             raise ValueError(f"Reviewed public subset {field} is invalid")
+    if withheld == 0 and value["withheld_ids_sha256"] != ids_sha256(set()):
+        raise ValueError("Reviewed public subset empty withheld digest is invalid")
     html_digest = value.get("private_rendered_html_sha256", "")
     if html_digest and (
         not isinstance(html_digest, str) or not _DIGEST.fullmatch(html_digest)
