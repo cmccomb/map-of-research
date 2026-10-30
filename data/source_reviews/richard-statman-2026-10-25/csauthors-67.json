@@ -1,0 +1,1286 @@
+{
+  "schema_version": 1,
+  "person_id": "person-richardstatman-2e46bf59",
+  "source_url": "https://www.csauthors.net/richard-statman/",
+  "source_kind": "third_party_bibliography_discovery",
+  "source_html_sha256": "97144a3f7cfeda867418b34e79f023474922a082200846c0b9ee8146dd0b2141",
+  "records": [
+    {
+      "index": 1,
+      "source_record_key": "journals/corr/abs-2309-03602",
+      "source_kind": "article",
+      "title_as_displayed": "On Statman's Finite Completeness Theorem.",
+      "authors_as_displayed": [
+        "Richard Statman",
+        "Gilles Dowek"
+      ],
+      "details_as_displayed": "CoRR, 2023",
+      "link_as_displayed": "https://doi.org/10.48550/arXiv.2309.03602",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-REPORT-1992-152",
+        "ARXIV-2309.03602"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "abc70dd88ba9e37656757fe9981e959c4ee4311643623598b36162d95138aab2"
+    },
+    {
+      "index": 2,
+      "source_record_key": "journals/lmcs/PolonskyS22",
+      "source_kind": "article",
+      "title_as_displayed": "On sets of terms having a given intersection type.",
+      "authors_as_displayed": [
+        "Andrew Polonsky",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Log. Methods Comput. Sci., 2022",
+      "link_as_displayed": "https://doi.org/10.46298/lmcs-18(3:35)2022",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-16"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "fa5eda14154b3d9636c0f30a62b0d6605b082ca9d103bbcd481fa6efad54562b"
+    },
+    {
+      "index": 3,
+      "source_record_key": "conf/lfcs/Statman22",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Finite Generation and Presentation Problems for Lambda Calculus and Combinatory Logic.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Logical Foundations of Computer Science - International Symposium, 2022",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-030-93100-1_20",
+      "exact_normalized_title_matches_in_prior_37": [
+        "SPRINGER-LFCS-2022-20"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "0d1441239701e87a200a250ef254aaada331adeec7e9b188a8e09e60439ad62f"
+    },
+    {
+      "index": 4,
+      "source_record_key": "conf/fscd/Statman21",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Church's Semigroup Is Sq-Universal.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 6th International Conference on Formal Structures for Computation and Deduction, 2021",
+      "link_as_displayed": "https://doi.org/10.4230/LIPIcs.FSCD.2021.6",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-13"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "9806e153791a98c9fa6f5ce549b5676c18c4a95ab93435be68963bbe575bc521"
+    },
+    {
+      "index": 5,
+      "source_record_key": "journals/corr/abs-2101-10494",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Products in a Category with Only One Object.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 3rd Annual International Applied Category Theory Conference 2020, 2020",
+      "link_as_displayed": "https://arxiv.org/abs/2101.10494",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-14"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "542fea73fa93af4fd388eb7c51ff0efc485cfc901a76f0092d731c35dac8e953"
+    },
+    {
+      "index": 6,
+      "source_record_key": "journals/fuin/Statman19",
+      "source_kind": "article",
+      "title_as_displayed": "Simple SubTypes of Intersection Types.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Fundam. Informaticae, 2019",
+      "link_as_displayed": "https://doi.org/10.3233/FI-2019-1864",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-15"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "c8dee7e78efce23535ca364001fd547c2cff0a3c706bf1205cdd82c09b43aa48"
+    },
+    {
+      "index": 7,
+      "source_record_key": "journals/corr/abs-1809-08169",
+      "source_kind": "article",
+      "title_as_displayed": "On sets of terms with a given intersection type.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "CoRR, 2018",
+      "link_as_displayed": "http://arxiv.org/abs/1809.08169",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "38bea8c6b475722bd8025d65ddcd1825f0e6f3f552aaee9dce53230e11db901c"
+    },
+    {
+      "index": 8,
+      "source_record_key": "conf/lfcs/Statman18",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "The Completeness of BCD for an Operational Semantics.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Logical Foundations of Computer Science - International Symposium, 2018",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-319-72056-2_20",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-08"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "00124daca5ffe5925d118694837ed1c797c3c96ad8bce24b36c87d86d5bd5bba"
+    },
+    {
+      "index": 9,
+      "source_record_key": "journals/mscs/Statman17",
+      "source_kind": "article",
+      "title_as_displayed": "Taming the wild ant-lion; a counterexample to a conjecture of Böhm.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Math. Struct. Comput. Sci., 2017",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q123185423",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "fa1440247c501ac329f6ec195436124b9777a2d10f8d9ab4fd1daa74f9ea222e"
+    },
+    {
+      "index": 10,
+      "source_record_key": "journals/mscs/IntrigilaS17",
+      "source_kind": "article",
+      "title_as_displayed": "Lambda theories allowing terms with a finite number of fixed points.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Math. Struct. Comput. Sci., 2017",
+      "link_as_displayed": "https://doi.org/10.1017/S0960129515000419",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "3993347788940ddbef3a15093ac5977aa171b761fce4dc0e3472ecc0631179dc"
+    },
+    {
+      "index": 11,
+      "source_record_key": "journals/entcs/Statman16a",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "How to Think of Intersection Types as Cartesian Products.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Thirty-second Conference on the Mathematical Foundations of Programming Semantics, 2016",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q113317627",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "7b10f57b02ab6d805da7e9e658175193aef0be127175524a2354d3585436dd93"
+    },
+    {
+      "index": 12,
+      "source_record_key": "journals/entcs/Statman16",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On the Representation of Semigroups and Other Congruences in the Lambda Calculus.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Thirty-second Conference on the Mathematical Foundations of Programming Semantics, 2016",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q113317628",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-07"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "93f1c2c2b5a1f7ba6db4a58bb2f4d75ae88188989bc1e90a668916fc25e6110f"
+    },
+    {
+      "index": 13,
+      "source_record_key": "conf/lfcs/Statman16",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Levy Labels and Recursive Types.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Logical Foundations of Computer Science - International Symposium, 2016",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-319-27683-0_27",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-05"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "6ed577f175eb5e8308f893c0f609dfb4a8cbd82ad9a8a1a8119b51bf1e0b6fde"
+    },
+    {
+      "index": 14,
+      "source_record_key": "journals/corr/Statman15",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "A Finite Model Property for Intersection Types.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Proceedings Seventh Workshop on Intersection Types and Related Systems, 2014",
+      "link_as_displayed": "http://arxiv.org/abs/1503.04906",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-03"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "db996abc092d96117215cfc830a66088ee9a127647b749513e14bfd739d78955"
+    },
+    {
+      "index": 15,
+      "source_record_key": "conf/rta/Statman14",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Near Semi-rings and Lambda Calculus.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Rewriting and Typed Lambda Calculi - Joint International Conference, 2014",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-319-08918-8_28",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-02"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "270de16c81dba152e25b6f09414efe8bd2f14308f153f81495626c065094f74a"
+    },
+    {
+      "index": 16,
+      "source_record_key": "conf/csl/Statman13",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "A New Type Assignment for Strongly Normalizable Terms.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Computer Science Logic 2013, 2013",
+      "link_as_displayed": "https://doi.org/10.4230/LIPIcs.CSL.2013.634",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CMU-01"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "36462c45b71419f272a41b5d58a0882df3ab21476cbf31c5d27ce22989fce02b"
+    },
+    {
+      "index": 17,
+      "source_record_key": "books/daglib/0032840",
+      "source_kind": "book",
+      "title_as_displayed": "Lambda Calculus with Types.",
+      "authors_as_displayed": [
+        "Hendrik Pieter Barendregt",
+        "Wil Dekkers",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Perspectives in logic, Cambridge University Press, ISBN: 978-0-521-76614-2, 2013",
+      "link_as_displayed": "http://www.cambridge.org/de/academic/subjects/mathematics/logic-categories-and-sets/lambda-calculus-types",
+      "exact_normalized_title_matches_in_prior_37": [
+        "CAMBRIDGE-BOOK-2013"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "554d34ff966d12485c767a72f23331f01d23584b854d8f73bc3c2f1056330310"
+    },
+    {
+      "index": 18,
+      "source_record_key": "journals/fuin/IntrigilaS11",
+      "source_kind": "article",
+      "title_as_displayed": "Solution to the Range Problem for Combinatory Logic.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Fundam. Informaticae, 2011",
+      "link_as_displayed": "https://doi.org/10.3233/FI-2011-560",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "c96f4436dd0357d7df94fac186d2b506127c47f7656761b59390d3863c0282f3"
+    },
+    {
+      "index": 19,
+      "source_record_key": "conf/wollic/Statman11",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On Polymorphic Types of Untyped Terms.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Logic, Language, Information and Computation, 2011",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-642-20920-8_24",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "d3963c5188e37ceb0d4c92580edd5ce2d4cadc62fc8fd3f7ec94e739e41e4fc9"
+    },
+    {
+      "index": 20,
+      "source_record_key": "journals/corr/abs-0903-1374",
+      "source_kind": "article",
+      "title_as_displayed": "The Omega Rule is Π<sub>1</sub><sup>1</sup>-Complete in the λβ-Calculus",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Log. Methods Comput. Sci., 2009",
+      "link_as_displayed": "http://arxiv.org/abs/0903.1374",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "2d5ebeb796db5f5e4bc5d8cce76cad18b79c9909e7831fb35a33ba625e6aa90a"
+    },
+    {
+      "index": 21,
+      "source_record_key": "journals/jsyml/Statman07",
+      "source_kind": "article",
+      "title_as_displayed": "On the complexity of alpha conversion.",
+      "authors_as_displayed": [
+        "Rick Statman"
+      ],
+      "details_as_displayed": "J. Symb. Log., 2007",
+      "link_as_displayed": "http://projecteuclid.org/euclid.jsl/1203350781",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "ef614cb7270c01c9a8222b35b36d29b065f3fdaec88fd5769ada2cf332bc788a"
+    },
+    {
+      "index": 22,
+      "source_record_key": "conf/tlca/IntrigilaS07",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "The Omega Rule is P<sub>1</sub><sup>1</sup>-Complete in the <i>lambdabeta</i> -Calculus.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Typed Lambda Calculi and Applications, 8th International Conference, 2007",
+      "link_as_displayed": "https://doi.org/10.1007/978-3-540-73228-0_14",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "6e6d7ed401e39329366c83aaa995ac19822367c4f4ecf598e631f4f249b972ef"
+    },
+    {
+      "index": 23,
+      "source_record_key": "journals/lmcs/IntrigilaS06",
+      "source_kind": "article",
+      "title_as_displayed": "Solution of a Problem of Barendregt on Sensible lambda-Theories.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Log. Methods Comput. Sci., 2006",
+      "link_as_displayed": "https://doi.org/10.2168/LMCS-2(4:5)2006",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "8d4aee8600946883aa126feab6e81449b4c8becb7f840617d38532daeac96843"
+    },
+    {
+      "index": 24,
+      "source_record_key": "journals/apal/IntrigilaS05",
+      "source_kind": "article",
+      "title_as_displayed": "Some results on extensionality in lambda calculus.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Ann. Pure Appl. Log., 2005",
+      "link_as_displayed": "https://doi.org/10.1016/j.apal.2003.05.001",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "37977634c3a017d54e04e7ff525c25cf2a5c63a5317c96b8491dc076eb8bcc27"
+    },
+    {
+      "index": 25,
+      "source_record_key": "conf/ictcs/Statman05",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Two Variables Are Not Enough.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Theoretical Computer Science, 9th Italian Conference, 2005",
+      "link_as_displayed": "https://doi.org/10.1007/11560586_32",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "317d8ce7ccd9abf481484fab2fcc2956f1e3979b722fb26ce7091a45121c096f"
+    },
+    {
+      "index": 26,
+      "source_record_key": "conf/birthday/StatmanB05",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Böhm's Theorem, Church's Delta, Numeral Systems, and Ershov Morphisms.",
+      "authors_as_displayed": [
+        "Richard Statman",
+        "Henk Barendregt"
+      ],
+      "details_as_displayed": "Proceedings of the Processes, 2005",
+      "link_as_displayed": "https://doi.org/10.1007/11601548_5",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "a786782ff164a39480b04c87f97920847c9fea56d78b797870b8bc8aaaeb8ded"
+    },
+    {
+      "index": 27,
+      "source_record_key": "journals/apal/Statman04",
+      "source_kind": "article",
+      "title_as_displayed": "On the lambda<i>Y</i> calculus.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Ann. Pure Appl. Log., 2004",
+      "link_as_displayed": "https://doi.org/10.1016/j.apal.2004.04.004",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "a266f3dc732167cef736fdd4bfb98f89aceeb09112eca13f78832e0bf4d6e402"
+    },
+    {
+      "index": 28,
+      "source_record_key": "conf/lics/IntrigilaS04",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "The Omega Rule is II_2^0-Hard in the lambda beta -Calculus.",
+      "authors_as_displayed": [
+        "Benedetto Intrigila",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 19th IEEE Symposium on Logic in Computer Science (LICS 2004), 2004",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/LICS.2004.1319614",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "2d6c5548597a7bdb7ba5e9aa9cc1cff37a24ad7d15e36f6486171132a5a672b3"
+    },
+    {
+      "index": 29,
+      "source_record_key": "conf/lics/Statman02",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On The Lambda Y Calculus.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 17th IEEE Symposium on Logic in Computer Science (LICS 2002), 2002",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/LICS.2002.1029825",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "6a6db432ae64e06bca783a138b7474f1aa3fd9c2f0b384e0e8b02057245c173d"
+    },
+    {
+      "index": 30,
+      "source_record_key": "journals/fuin/Statman01",
+      "source_kind": "article",
+      "title_as_displayed": "Marginalia to a Theorem of Jacopini.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Fundam. Informaticae, 2001",
+      "link_as_displayed": "http://content.iospress.com/articles/fundamenta-informaticae/fi45-1-2-06",
+      "exact_normalized_title_matches_in_prior_37": [
+        "KILTHUB-6478274"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "a606ef78c49d4d9970f725db335ef90f33a23f052f598ff8bd4799c48be985f0"
+    },
+    {
+      "index": 31,
+      "source_record_key": "conf/rta/Statman00",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On the Word Problem for Combinators.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Rewriting Techniques and Applications, 11th International Conference, 2000",
+      "link_as_displayed": "https://doi.org/10.1007/10721975_14",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "eee8fc9d042fe12fc32654e926d282f8c14e2349849675dc8c448749b2da08f9"
+    },
+    {
+      "index": 32,
+      "source_record_key": "conf/lpar/Statman00",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Church's Lambda Delta Calculus.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Logic for Programming and Automated Reasoning, 2000",
+      "link_as_displayed": "https://doi.org/10.1007/3-540-44404-1_19",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "595fe8e539a263f8e0cc010a02f61c93334dfbe22dd117a94a9b0f9287691f13"
+    },
+    {
+      "index": 33,
+      "source_record_key": "journals/mscs/Statman99",
+      "source_kind": "article",
+      "title_as_displayed": "On the existence of n but not n + 1 easy combinators.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Math. Struct. Comput. Sci., 1999",
+      "link_as_displayed": "http://journals.cambridge.org/action/displayAbstract?aid=44807",
+      "exact_normalized_title_matches_in_prior_37": [
+        "KILTHUB-6478850"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "0f4d766896f6e3a9edc9bfdf6d7c633626d5917d670581c37a1f2dc2f63ff973"
+    },
+    {
+      "index": 34,
+      "source_record_key": "journals/jfp/StatmanB99",
+      "source_kind": "article",
+      "title_as_displayed": "Applications of Plotkin-Terms: Partitions and Morphisms for Closed Terms.",
+      "authors_as_displayed": [
+        "Richard Statman",
+        "Henk Barendregt"
+      ],
+      "details_as_displayed": "J. Funct. Program., 1999",
+      "link_as_displayed": "https://doi.org/10.1017/s0956796899003548",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "6ba0276f9e93d265fb184efc2d068f3ab901cb6c0c09a1c1fc86b5d27bf308aa"
+    },
+    {
+      "index": 35,
+      "source_record_key": "conf/tlca/Statman99",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Consequences of Jacopini's Theorem: Consistent Equalities and Equations.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Typed Lambda Calculi and Applications, 4th International Conference, 1999",
+      "link_as_displayed": "https://doi.org/10.1007/3-540-48959-2_25",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "9b60556772f72397099eed19d25147280fbc3738223881aca40e0ce1b10d462f"
+    },
+    {
+      "index": 36,
+      "source_record_key": "conf/csl/Statman98",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Morphisms and Partitions of V-sets.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Computer Science Logic, 12th International Workshop, 1998",
+      "link_as_displayed": "https://doi.org/10.1007/10703163_21",
+      "exact_normalized_title_matches_in_prior_37": [
+        "KILTHUB-6478454"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "fb926cadab22738df77c35ae185ac339c6031edf31c51fbbc63cc9a01c7410be"
+    },
+    {
+      "index": 37,
+      "source_record_key": "conf/rta/Statman97",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Effective Reduction and Conversion Strategies for Combinators.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Rewriting Techniques and Applications, 8th International Conference, 1997",
+      "link_as_displayed": "https://doi.org/10.1007/3-540-62950-5_79",
+      "exact_normalized_title_matches_in_prior_37": [
+        "KILTHUB-6477296"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "e7f22d24f448ed1683d415f1e96ffda62384d4e95e7fbd68bc3dbd8f1eec607f"
+    },
+    {
+      "index": 38,
+      "source_record_key": "conf/csl/Statman96",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On Cartesian Monoids.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Computer Science Logic, 10th International Workshop, 1996",
+      "link_as_displayed": "https://doi.org/10.1007/3-540-63172-0_55",
+      "exact_normalized_title_matches_in_prior_37": [
+        "KILTHUB-6478676"
+      ],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "553b9af2d4ff4d39896b40b7befade95ca471fd49fec95d52b3c1978d738a229"
+    },
+    {
+      "index": 39,
+      "source_record_key": "journals/tcs/Statman93",
+      "source_kind": "article",
+      "title_as_displayed": "Some Examples of Non-Existent Combinators.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1993",
+      "link_as_displayed": "https://doi.org/10.1016/0304-3975(93)90096-C",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "94db58a71d020695669fd3d3f364c1d96ad5663dd7b9264e84d3aff47c395eb4"
+    },
+    {
+      "index": 40,
+      "source_record_key": "conf/lics/NarendranPS93",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On the Unification Problem for Cartesian Closed Categories",
+      "authors_as_displayed": [
+        "Paliath Narendran",
+        "Frank Pfenning",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Eighth Annual Symposium on Logic in Computer Science (LICS '93), 1993",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/LICS.1993.287600",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "80a33151228a26a59b25d4d8feb3affcdb324b7058854aa6b1a4b397ad46c9d9"
+    },
+    {
+      "index": 41,
+      "source_record_key": "journals/ipl/ZhangSS92",
+      "source_kind": "article",
+      "title_as_displayed": "On the Editing Distance Between Unordered Labeled Trees.",
+      "authors_as_displayed": [
+        "Kaizhong Zhang",
+        "Richard Statman",
+        "Dennis E. Shasha"
+      ],
+      "details_as_displayed": "Inf. Process. Lett., 1992",
+      "link_as_displayed": "https://doi.org/10.1016/0020-0190(92)90136-J",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "3fbd82fe58651e3a3e87036e9ba3a354edbe821b4b8ec95d7e19fad5b8480243"
+    },
+    {
+      "index": 42,
+      "source_record_key": "conf/lics/LiguoroPS92",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Retracts in simply typed lambda-beta-eta-calculus",
+      "authors_as_displayed": [
+        "Ugo de'Liguoro",
+        "Adolfo Piperno",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Seventh Annual Symposium on Logic in Computer Science (LICS '92), 1992",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/LICS.1992.185557",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "f57ba51ce6ff8a31102faed2955404ad97758654f9fc38672b2771cd239e16a0"
+    },
+    {
+      "index": 43,
+      "source_record_key": "conf/lics/Statman91",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Freyd's Hierarchy of Combinator Monoids",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Sixth Annual Symposium on Logic in Computer Science (LICS '91), 1991",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/LICS.1991.151643",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "81d0eb934173608f283fab0338168bd478ea1a9fc08377e6c804ae548c5bdac0"
+    },
+    {
+      "index": 44,
+      "source_record_key": "journals/tcs/Statman89",
+      "source_kind": "article",
+      "title_as_displayed": "On Sets of Solutions to Combinator Equations.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1989",
+      "link_as_displayed": "https://doi.org/10.1016/0304-3975(89)90148-5",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "abf284c0c2e411db0c1627a578a0f39f61a3a00a0ea7e84b7c0e81c944ff539e"
+    },
+    {
+      "index": 45,
+      "source_record_key": "journals/jsc/Statman89",
+      "source_kind": "article",
+      "title_as_displayed": "The Word Problem for Smullyan's Lark Combinator is Decidable.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "J. Symb. Comput., 1989",
+      "link_as_displayed": "https://doi.org/10.1016/S0747-7171(89)80044-6",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "08cfbf3508bec66bb94d56697c6b8b365a25c21477bf960488ec3ee8e358d39e"
+    },
+    {
+      "index": 46,
+      "source_record_key": "journals/jct/FurstGS89",
+      "source_kind": "article",
+      "title_as_displayed": "Genus distributions for two classes of graphs.",
+      "authors_as_displayed": [
+        "Merrick L. Furst",
+        "Jonathan L. Gross",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "J. Comb. Theory B, 1989",
+      "link_as_displayed": "https://doi.org/10.1016/0095-8956(89)90004-X",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "15ab1b403c9b7372d54b1bb78b9d714b54655e7ebf0b756a05fbf08ca8921a36"
+    },
+    {
+      "index": 47,
+      "source_record_key": "journals/dam/SaksS88",
+      "source_kind": "article",
+      "title_as_displayed": "An intersection problem for finite automata.",
+      "authors_as_displayed": [
+        "Michael E. Saks",
+        "Rick Statman"
+      ],
+      "details_as_displayed": "Discret. Appl. Math., 1988",
+      "link_as_displayed": "https://doi.org/10.1016/0166-218X(88)90070-4",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "6f43d89f13af90db70d5db1652f9c84c196a92cbe20abd0417182cadc4386db0"
+    },
+    {
+      "index": 48,
+      "source_record_key": "conf/colt/CherniavskyVS88",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Inductive Inference: An Abstract Approach.",
+      "authors_as_displayed": [
+        "John C. Cherniavsky",
+        "Mahendran Velauthapillai",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the First Annual Workshop on Computational Learning Theory, 1988",
+      "link_as_displayed": "http://dl.acm.org/citation.cfm?id=93097",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "96886c37e25783a021c41fa3023ad963146e7a634e246476b8cd7a4fe17cb7ee"
+    },
+    {
+      "index": 49,
+      "source_record_key": "conf/popl/MeyerMMS87",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Empty Types in Polymorphic Lambda Calculus.",
+      "authors_as_displayed": [
+        "Albert R. Meyer",
+        "John C. Mitchell",
+        "Eugenio Moggi",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Conference Record of the Fourteenth Annual ACM Symposium on Principles of Programming Languages, 1987",
+      "link_as_displayed": "https://doi.org/10.1145/41625.41648",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "cec23e18665245e48d3e61df776170840c1f4d5698a1c742249e6063729cc2b5"
+    },
+    {
+      "index": 50,
+      "source_record_key": "journals/tcs/Statman86",
+      "source_kind": "article",
+      "title_as_displayed": "Every Countable Poset is Embeddable in the Poset of Unsolvable Terms.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1986",
+      "link_as_displayed": "https://doi.org/10.1016/0304-3975(86)90085-X",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "a63ec8d48748c998bdea9401bc87b2fa63d5ebd742f5008371432779d975d55e"
+    },
+    {
+      "index": 51,
+      "source_record_key": "journals/tcs/PasztorS86",
+      "source_kind": "article",
+      "title_as_displayed": "Scott Induction and Closure under omega-Sups.",
+      "authors_as_displayed": [
+        "Ana Pasztor",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1986",
+      "link_as_displayed": "https://doi.org/10.1016/0304-3975(86)90179-9",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "903ea50aae487fec74e6768278c05c9e0adeeeafba6bdc5c24422e1caccbd9f0"
+    },
+    {
+      "index": 52,
+      "source_record_key": "journals/ndjfl/Statman86",
+      "source_kind": "article",
+      "title_as_displayed": "Solving functional equations at higher types: some examples and some theorems.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Notre Dame J. Formal Log., 1986",
+      "link_as_displayed": "https://doi.org/10.1305/ndjfl/1093636524",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "c9cda9f7cd3dea464fbc02c358b72d1d97f539b51ad3ffc054d5dd84c2f834d2"
+    },
+    {
+      "index": 53,
+      "source_record_key": "conf/lics/Statman86",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On Translating Lambda Terms into Combinators; The Basis Problem",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Symposium on Logic in Computer Science (LICS '86), 1986",
+      "link_as_displayed": null,
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "320409dd19b0832e2ac3d85209d945ff210dcb763935583fb150d9d1dc1f91fd"
+    },
+    {
+      "index": 54,
+      "source_record_key": "journals/iandc/Statman85",
+      "source_kind": "article",
+      "title_as_displayed": "Logical Relations and the Typed lambda-Calculus",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Inf. Control., 1985",
+      "link_as_displayed": "https://doi.org/10.1016/S0019-9958(85)80001-2",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "7ac6fda620fabfbca183e52f260c6434459885afdfef95cdb4059bc4f68ca50a"
+    },
+    {
+      "index": 55,
+      "source_record_key": "journals/jacm/BeeriDFS84",
+      "source_kind": "article",
+      "title_as_displayed": "On the Structure of Armstrong Relations for Functional Dependencies.",
+      "authors_as_displayed": [
+        "Catriel Beeri",
+        "Martin Dowd",
+        "Ronald Fagin",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "J. ACM, 1984",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q56571461",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "0d0a9b8afd9047e6bdaf420dbbd5a1c61faea69497b08604cd45175029b62d8e"
+    },
+    {
+      "index": 56,
+      "source_record_key": "journals/aml/Statman83",
+      "source_kind": "article",
+      "title_as_displayed": "<i>λ</i>-definable functionals and<i>βη</i> conversion.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Arch. Math. Log., 1983",
+      "link_as_displayed": "https://doi.org/10.1007/BF02023009",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "cf6c2cbaa8426034c605cfff4d701fea4a45bf31b2c44b52d55d182d44cc16f5"
+    },
+    {
+      "index": 57,
+      "source_record_key": "journals/jsyml/Statman82",
+      "source_kind": "article",
+      "title_as_displayed": "Completeness, Invariance and lambda-Definability.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "J. Symb. Log., 1982",
+      "link_as_displayed": "http://projecteuclid.org/euclid.jsl/1183740936",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "67dc73bf4bcdf128a56931d44fe3afe8dcc526d592c8feb6210b9c844739648c"
+    },
+    {
+      "index": 58,
+      "source_record_key": "journals/jgt/Statman82",
+      "source_kind": "article",
+      "title_as_displayed": "Topological subgraphs of cubic graphs and a theorem of dirac.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "J. Graph Theory, 1982",
+      "link_as_displayed": "https://doi.org/10.1002/jgt.3190060406",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "4e633bb0e7face19aa2f7f5d698158d8df3df16dbabc5c13f0aceed3b6222707"
+    },
+    {
+      "index": 59,
+      "source_record_key": "journals/ipl/LewisS82",
+      "source_kind": "article",
+      "title_as_displayed": "Unifiability is Complete for co-NLogSpace.",
+      "authors_as_displayed": [
+        "Harry R. Lewis",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Inf. Process. Lett., 1982",
+      "link_as_displayed": "https://doi.org/10.1016/0020-0190(82)90121-1",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "5ad2c4c5a7782540052b810c717ab20924aa3958485ac4f4570ef157351e706a"
+    },
+    {
+      "index": 60,
+      "source_record_key": "journals/tcs/Statman81",
+      "source_kind": "article",
+      "title_as_displayed": "On the Existence of Closed Terms in the Typed lambda Calculus II: Transformations of Unification Problems.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1981",
+      "link_as_displayed": "https://doi.org/10.1016/0304-3975(81)90086-4",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "2aa7f4756c7fb2f83c673cfc659181a98d0234331ac97cf07fb53713573e9bcd"
+    },
+    {
+      "index": 61,
+      "source_record_key": "journals/dm/Statman81",
+      "source_kind": "article",
+      "title_as_displayed": "Reductions of the graph reconstruction conjecture.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Discret. Math., 1981",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q123001095",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "f067590cd941303418a9c0ccfaed126d28184abfbda5f022ec9f90f70a3745e1"
+    },
+    {
+      "index": 62,
+      "source_record_key": "conf/focs/Statman81",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "Number Theoretic Functions Computable by Polymorphic Programs (Extended Abstract)",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 22nd Annual Symposium on Foundations of Computer Science, 1981",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/SFCS.1981.24",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "f42da81d8c97d88750703ad4b85caad4c6d6ca808175a8cac901921c52e9e212"
+    },
+    {
+      "index": 63,
+      "source_record_key": "journals/siamcomp/Statman80",
+      "source_kind": "article",
+      "title_as_displayed": "Worst Case Exponential Lower Bounds for Input Resolution with Paramodulation.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "SIAM J. Comput., 1980",
+      "link_as_displayed": "https://doi.org/10.1137/0209008",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "f5037b67442df2f95feb19e21478f6f8a0a4e0a6e8a13c4670c09487a7aef1e5"
+    },
+    {
+      "index": 64,
+      "source_record_key": "journals/ndjfl/Statman80",
+      "source_kind": "article",
+      "title_as_displayed": "Solution to a problem of Chang and Lee.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Notre Dame J. Formal Log., 1980",
+      "link_as_displayed": "https://doi.org/10.1305/ndjfl/1093883175",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "aedf93921644cff3bb71e75b42ec626bc0859bb2032a5aafe0b6b4230152ef0f"
+    },
+    {
+      "index": 65,
+      "source_record_key": "journals/tcs/Statman79",
+      "source_kind": "article",
+      "title_as_displayed": "Intuitionistic Propositional Logic is Polynomial-Space Complete.",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Theor. Comput. Sci., 1979",
+      "link_as_displayed": "https://www.wikidata.org/entity/Q56224787",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "3d373de3109c414096daea20156dbe1eae195786d30c667fd992935bff73f2a0"
+    },
+    {
+      "index": 66,
+      "source_record_key": "conf/scc/GourlayRS79",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "On Properties Preserved by Contraction of Concurrent Systems.",
+      "authors_as_displayed": [
+        "John S. Gourlay",
+        "William C. Rounds",
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the Semantics of Concurrent Computation, 1979",
+      "link_as_displayed": "https://doi.org/10.1007/BFb0022463",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "71c6424395caa4541f0544798e8f7edefde241b173633ca7d4f5d70151308a03"
+    },
+    {
+      "index": 67,
+      "source_record_key": "conf/focs/Statman77",
+      "source_kind": "inproceedings",
+      "title_as_displayed": "The Typed lambda-Calculus Is not Elementary Recursive",
+      "authors_as_displayed": [
+        "Richard Statman"
+      ],
+      "details_as_displayed": "Proceedings of the 18th Annual Symposium on Foundations of Computer Science, Providence, Rhode Island, USA, 31 October, 1977",
+      "link_as_displayed": "https://doi.ieeecomputersociety.org/10.1109/SFCS.1977.34",
+      "exact_normalized_title_matches_in_prior_37": [],
+      "source_scope": "third_party_bibliography_discovery",
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_sha256": "b1cbed9094cba66fc1a63854d624ab8374169db0004b7f1e8f2872f89bd77b34"
+    }
+  ]
+}

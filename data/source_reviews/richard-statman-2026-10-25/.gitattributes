@@ -1,0 +1,4 @@
+*.html -text -diff
+cmu-sample-publications.pdf -text -diff
+kilthub-*.json -text -diff
+*.csv text eol=lf
