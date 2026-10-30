@@ -1,6 +1,6 @@
 # Verified work records
 
-`works.json` holds 26 faculty observations for 17 verified DOI works and four
+`works.json` holds reviewed faculty observations for verified DOI works and
 source-identified conference records. These include the Tetali–Erdős papers,
 Mathematics–Engineering collaborations, and five Donahue items recovered from
 independent sources. Each row names a CMU faculty person, its DOI or stable
@@ -26,7 +26,7 @@ report is superseded and the publisher requires its removal or fresh review.
 An ineligible target observation on the work also blocks the report, so a
 one-sided edge cannot override an explicit exclusion decision.
 
-The snapshot builder validates this file, records its checksum in the manifest,
+The snapshot builder validates `works.json`, records its checksum in the manifest,
 and retains `curated_verified` separately from `scholar` observations. Dataset
 normalization merges observations with the same DOI. It also merges a later
 Scholar observation lacking a DOI only when its normalized title and year
