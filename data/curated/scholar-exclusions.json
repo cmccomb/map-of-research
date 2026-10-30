@@ -15064,6 +15064,142 @@
       "reason": "Capture row 51: The linked arXiv source was withdrawn by arXiv administrators for incorrect authorship; Daniel Fried is absent from the visible Scholar byline and owner CV. Preserve raw only.",
       "evidence_url": "https://arxiv.org/abs/2601.11659",
       "verified_at": "2026-10-29"
+    },
+    {
+      "scholar_id": "ygiY7C8AAAAJ",
+      "author_pub_id": "ygiY7C8AAAAJ:BqipwSGYUEgC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not an Amvrosiadis paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/IPDPSW63119.2024.00212",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "4PU5ZFYV-iEC",
+      "author_pub_id": "4PU5ZFYV-iEC:BwyfMAYsbu0C",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not an Erdogmus paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/CAIN58948.2023.00037",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "yjJPtE4AAAAJ",
+      "author_pub_id": "yjJPtE4AAAAJ:SeFeTyx0c_EC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Jia paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/EUROSP53844.2022.00051",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "yqIoH34AAAAJ",
+      "author_pub_id": "yqIoH34AAAAJ:sNmaIFBj_lkC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Joshi paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/CIC56439.2022.00029",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "SHcIvuoAAAAJ",
+      "author_pub_id": "SHcIvuoAAAAJ:HbR8gkJAVGIC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Franchetti paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/ISPASS57527.2023.00052",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "F9kqUXkAAAAJ",
+      "author_pub_id": "F9kqUXkAAAAJ:WC9gN4BGCRcC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Gibbons paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/ISPASS55109.2022.00057",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "yjJPtE4AAAAJ",
+      "author_pub_id": "yjJPtE4AAAAJ:eMMeJKvmdy0C",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Jia paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/EUROSP60621.2024.00054",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "WfaqxlgAAAAJ",
+      "author_pub_id": "WfaqxlgAAAAJ:HFi42EZPDb4C",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Scholar title is an IEEE copyright and ISBN footer; its embedded DOI is registered as an Author Index with no listed authors, not a Kumar paper.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/IPSN54338.2022.00073",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "l6oz33MAAAAJ",
+      "author_pub_id": "l6oz33MAAAAJ:VLnqNzywnoUC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Ganger title is a reference-list fragment; the captured Computer 42(8):30-37 venue belongs to a different article by Koren, Bell, and Volinsky.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/MC.2009.263",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "F9kqUXkAAAAJ",
+      "author_pub_id": "F9kqUXkAAAAJ:anf4URPfarAC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated Gibbons title is the same reference-list fragment; the captured Computer 42(8):30-37 venue belongs to a different article by Koren, Bell, and Volinsky.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/MC.2009.263",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "-syEyyAAAAAJ",
+      "author_pub_id": "-syEyyAAAAAJ:O3NaXMp0MMsC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated row names the ISPASS 2015 conference itself and has no paper metadata; the organizer's site identifies it as an event rather than a Ken Mai paper.",
+      "evidence_url": "https://ispass.org/ispass2015/home_home.php",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "pARKzQsAAAAJ",
+      "author_pub_id": "pARKzQsAAAAJ:LO7wyVUgiFcC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title IISWC-2006 People names site navigation for the 2006 symposium, not a Shen research work.",
+      "evidence_url": "https://iiswc.org/iiswc2006/home.html",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "pARKzQsAAAAJ",
+      "author_pub_id": "pARKzQsAAAAJ:8d8msizDQcsC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title IISWC-2007 People names site navigation for the 2007 symposium, not a Shen research work.",
+      "evidence_url": "https://iiswc.org/iiswc2007/home.html",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "Rn_BmTYAAAAJ",
+      "author_pub_id": "Rn_BmTYAAAAJ:kVjdVfd2voEC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title SIGMETRICS People is a society people/contact section, not a Fanti research work; a SIGMETRICS newsletter reproduces that section heading.",
+      "evidence_url": "https://www.math.vu.nl/~mei/articles/2026/PER.pdf",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "DK7TEvkAAAAJ",
+      "author_pub_id": "DK7TEvkAAAAJ:pS0ncopqnHgC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title is only an opening quotation mark and School of Computer Science, with no article metadata; it is an affiliation fragment.",
+      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&user=DK7TEvkAAAAJ&citation_for_view=DK7TEvkAAAAJ:pS0ncopqnHgC",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "fiZryxEAAAAJ",
+      "author_pub_id": "fiZryxEAAAAJ:Nw_I7GeUguwC",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title is a garbled DOI and URL footer; the DOI for its captured Metabolic Engineering volume is registered as Author Index for Volume 3 with no listed authors.",
+      "evidence_url": "https://api.crossref.org/works/10.1006/mben.2001.0202",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "DFtapYEAAAAJ",
+      "author_pub_id": "DFtapYEAAAAJ:U_HPUtbDl20C",
+      "reason_code": "nonpublication",
+      "reason": "Migrated title concatenates the DSN-S 2024 proceedings container and IEEE copyright/ISBN footer; a university library catalogs that exact ISBN as the proceedings volume, not a Koopman paper.",
+      "evidence_url": "https://dspace.apps.iitd.ac.in/node/156280",
+      "verified_at": "2026-10-30"
     }
   ]
 }
