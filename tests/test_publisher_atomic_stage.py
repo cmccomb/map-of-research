@@ -637,7 +637,10 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         publisher, "build_map_artifact", lambda *args, **kwargs: candidate
     )
     received = {}
-    receipt = {"status": "parent_frozen_new_points_reviewed"}
+    receipt = {
+        "status": "parent_frozen_new_points_reviewed",
+        "held_new_work_ids": [],
+    }
 
     def freeze(works, prior, pinned, proposal, **kwargs):
         received.update(kwargs)
@@ -699,6 +702,58 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     assert [event for event, _ in calls] == ["map", "commit"]
     assert len(checked_staged_works) == 1
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+@pytest.mark.parametrize(
+    ("receipt", "message"),
+    [
+        (None, "pending publication receipt is missing"),
+        ({"status": "reviewed"}, "pending work IDs are missing"),
+    ],
+)
+def test_reviewed_additive_path_fails_closed_on_missing_pending_receipt(
+    monkeypatch, tmp_path, receipt, message
+) -> None:
+    _, tables, manifest = _stage(monkeypatch, tmp_path)
+    tables["profile_publications"] = pandas.DataFrame(
+        {"author_pub_id": ["owner:row-1"]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"points": [{"work_id": "new"}]},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "preserve_reviewed_additive_presentation",
+        lambda works, *args, **kwargs: (works, receipt),
+    )
+    review_path = tmp_path / "placement.json"
+    review_path.write_text("{}", encoding="utf-8")
+    with pytest.raises(ValueError, match=message):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "source-sha"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=[],
+            enforce_presentation_drift=True,
+            additive_placement_review_path=review_path,
+        )
 
 
 @pytest.mark.parametrize("bad_ids", [None, ["same", "same"], [None], [""]])

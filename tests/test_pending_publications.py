@@ -143,3 +143,150 @@ def test_pending_publication_rejects_duplicate_or_missing_review_ids() -> None:
         )
     with pytest.raises(ValueError, match="missing or duplicate works"):
         build_pending_publications(works, profiles, receipt, registry, ["work-missing"])
+
+
+def test_no_pending_rows_need_no_subset_receipt() -> None:
+    works, profiles, _, registry, _ = inputs()
+    assert build_pending_publications(works, profiles, [], registry, []) == []
+
+
+@pytest.mark.parametrize("table", ["works", "profiles"])
+def test_pending_publication_requires_public_columns(table) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    if table == "works":
+        works = works.drop(columns=["title"])
+    else:
+        profiles = profiles.drop(columns=["person_id"])
+    with pytest.raises(ValueError, match="required public table columns"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def test_pending_publication_rejects_duplicate_work_table_id() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    works = pandas.concat([works, works], ignore_index=True)
+    with pytest.raises(ValueError, match="missing or duplicate works"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+@pytest.mark.parametrize(
+    ("change", "message"),
+    [
+        (lambda r: r[0].update(cache_scope="other"), "reviewed selected subsets"),
+        (lambda r: r[0].update(selected_author_pub_ids="bad"), "invalid selected IDs"),
+        (
+            lambda r: r[0].update(selected_author_pub_ids=[ROW_ID, ROW_ID]),
+            "invalid selected IDs",
+        ),
+        (
+            lambda r: r[0].update(selected_ids_sha256="0" * 64),
+            "selected digest changed",
+        ),
+        (lambda r: r[0].update(person_id=""), "lacks owner identity"),
+        (lambda r: r.append(deepcopy(r[0])), "repeats across receipts"),
+    ],
+)
+def test_pending_publication_rejects_invalid_subset_receipt(change, message) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    change(receipt)
+    with pytest.raises(ValueError, match=message):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def test_unrelated_public_profile_is_ignored() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    unrelated = profiles.copy()
+    unrelated.at[0, "work_id"] = "another-work"
+    profiles = pandas.concat([profiles, unrelated], ignore_index=True)
+    assert (
+        len(build_pending_publications(works, profiles, receipt, registry, held)) == 1
+    )
+
+
+@pytest.mark.parametrize(
+    ("field", "value", "message"),
+    [
+        ("has_included_source_profile", False, "included source profile"),
+        ("memberships", [], "included faculty"),
+        ("memberships", "bad", "included faculty"),
+        ("memberships", ["bad"], "invalid faculty membership"),
+        ("author_pub_ids", [ROW_ID, ROW_ID], "exact public source rows"),
+        ("author_pub_ids", "bad", "exact public source rows"),
+        ("source_urls", [], "public source URL"),
+        ("source_urls", "bad", "public source URL"),
+        ("year", "invalid", "invalid year"),
+        ("year", 1700, "invalid year"),
+        ("year", float("inf"), "invalid year"),
+    ],
+)
+def test_pending_publication_rejects_other_work_leaks(field, value, message) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    if field == "has_included_source_profile":
+        works[field] = value
+    else:
+        if field == "year" and isinstance(value, str):
+            works["year"] = works["year"].astype(object)
+        works.at[0, field] = value
+    with pytest.raises(ValueError, match=message):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def test_pending_publication_rejects_missing_or_duplicate_profile_rows() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    empty = profiles.iloc[:0]
+    with pytest.raises(ValueError, match="exact public source rows"):
+        build_pending_publications(works, empty, receipt, registry, held)
+    duplicate = pandas.concat([profiles, profiles], ignore_index=True)
+    with pytest.raises(ValueError, match="exact public source rows"):
+        build_pending_publications(works, duplicate, receipt, registry, held)
+
+
+def test_pending_publication_rejects_source_owner_outside_included_memberships() -> (
+    None
+):
+    works, profiles, receipt, registry, held = inputs()
+    profiles.at[0, "person_id"] = "other-person"
+    receipt[0]["person_id"] = "other-person"
+    with pytest.raises(ValueError, match="source owner lacks included membership"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+@pytest.mark.parametrize(
+    "field", ["home_type", "home_id", "source_url", "verified_at", "basis"]
+)
+def test_pending_publication_requires_each_typed_home_evidence_field(field) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    setattr(registry.home, field, "")
+    with pytest.raises(ValueError, match="evidenced typed home"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "http://example.test/paper",
+        "https:///missing-host",
+        "https://user:pass@example.test/paper",
+    ],
+)
+def test_pending_publication_requires_selected_safe_https_source(url) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    works.at[0, "source_urls"] = [url]
+    profiles.at[0, "source_url"] = url
+    with pytest.raises(ValueError, match="not selected HTTPS"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def test_pending_publication_requires_selected_source_link() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    works.at[0, "source_urls"] = ["https://example.test/unselected"]
+    with pytest.raises(ValueError, match="not selected HTTPS"):
+        build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def test_pending_publication_accepts_unknown_year() -> None:
+    works, profiles, receipt, registry, held = inputs()
+    works.at[0, "year"] = None
+    assert (
+        build_pending_publications(works, profiles, receipt, registry, held)[0]["year"]
+        is None
+    )
