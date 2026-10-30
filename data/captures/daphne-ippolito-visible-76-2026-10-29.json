@@ -1,0 +1,707 @@
+{
+  "captured_at": "2026-10-30T02:43:36.780000+00:00",
+  "url": "https://scholar.google.com/citations?user=COEsqLYAAAAJ&hl=en",
+  "title": "Daphne Ippolito - Google Scholar",
+  "scholar_user_id": "COEsqLYAAAAJ",
+  "person_name": "Daphne Ippolito",
+  "profile_header": {
+    "footer": "Articles 1–76",
+    "header": "FOLLOW\nDaphne Ippolito\nCarnegie Mellon University\nVerified email at andrew.cmu.edu - Homepage\nnatural language processing",
+    "moreDisabled": true,
+    "title": "‪Daphne Ippolito‬ - ‪Google Scholar‬"
+  },
+  "verified_email_domain": "andrew.cmu.edu",
+  "displayed_count": 76,
+  "more_remain": false,
+  "page_error": "",
+  "challenge": false,
+  "works": [
+    {
+      "index": 1,
+      "title": "Palm: Scaling language modeling with pathways",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:mVmsd5A6BfQC",
+      "authors": "A Chowdhery, S Narang, J Devlin, M Bosma, G Mishra, A Roberts, ...",
+      "venue": "Journal of machine learning research 24 (240), 1-113",
+      "citation_count": "10489",
+      "year": "2023"
+    },
+    {
+      "index": 2,
+      "title": "Gemma: Open models based on gemini research and technology",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:NMxIlDl6LWMC",
+      "authors": "G Team, T Mesnard, C Hardin, R Dadashi, S Bhupatiraju, S Pathak, ...",
+      "venue": "arXiv preprint arXiv:2403.08295",
+      "citation_count": "3465",
+      "year": "2024"
+    },
+    {
+      "index": 3,
+      "title": "Beyond the imitation game: Quantifying and extrapolating the capabilities of language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:QIV2ME_5wuYC",
+      "authors": "A Srivastava, A Rastogi, A Rao, AAM Shoeb, A Abid, A Fisch, AR Brown, ...",
+      "venue": "arXiv preprint arXiv:2206.04615",
+      "citation_count": "3164",
+      "year": "2022"
+    },
+    {
+      "index": 4,
+      "title": "Quantifying memorization across neural language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:qxL8FJ1GzNcC",
+      "authors": "N Carlini, D Ippolito, M Jagielski, K Lee, F Tramer, C Zhang",
+      "venue": "arXiv preprint arXiv:2202.07646",
+      "citation_count": "1726",
+      "year": "2022"
+    },
+    {
+      "index": 5,
+      "title": "Extracting training data from diffusion models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:hFOr9nPyWt4C",
+      "authors": "N Carlini, J Hayes, M Nasr, M Jagielski, V Sehwag, F Tramer, B Balle, ...",
+      "venue": "32nd USENIX security symposium (USENIX Security 23), 5253-5270",
+      "citation_count": "1489",
+      "year": "2023"
+    },
+    {
+      "index": 6,
+      "title": "Deduplicating training data makes language models better",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:8k81kl-MbHgC",
+      "authors": "K Lee, D Ippolito, A Nystrom, C Zhang, D Eck, C Callison-Burch, N Carlini",
+      "venue": "Proceedings of the 60th Annual Meeting of the Association for Computational …",
+      "citation_count": "1321",
+      "year": "2022"
+    },
+    {
+      "index": 7,
+      "title": "Scalable extraction of training data from (production) language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:k_IJM867U9cC",
+      "authors": "M Nasr, N Carlini, J Hayase, M Jagielski, AF Cooper, D Ippolito, ...",
+      "venue": "arXiv preprint arXiv:2311.17035",
+      "citation_count": "842",
+      "year": "2023"
+    },
+    {
+      "index": 8,
+      "title": "Wordcraft: story writing with large language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:4DMP91E08xMC",
+      "authors": "A Yuan, A Coenen, E Reif, D Ippolito",
+      "venue": "Proceedings of the 27th International Conference on Intelligent User …",
+      "citation_count": "817",
+      "year": "2022"
+    },
+    {
+      "index": 9,
+      "title": "Automatic detection of generated text is easiest when humans are fooled",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:WF5omc3nYNoC",
+      "authors": "D Ippolito, D Duckworth, C Callison-Burch, D Eck",
+      "venue": "Proceedings of the Association for Computational Linguistics",
+      "citation_count": "721",
+      "year": "2020"
+    },
+    {
+      "index": 10,
+      "title": "Contact tracing mobile apps for COVID-19: Privacy considerations and related trade-offs",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:YsMSGLbcyi4C",
+      "authors": "H Cho, D Ippolito, YW Yu",
+      "venue": "arXiv preprint arXiv:2003.11511",
+      "citation_count": "656",
+      "year": "2020"
+    },
+    {
+      "index": 11,
+      "title": "Are aligned neural networks adversarially aligned?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:e5wmG9Sq2KIC",
+      "authors": "N Carlini, M Nasr, CA Choquette-Choo, M Jagielski, I Gao, PWW Koh, ...",
+      "venue": "Advances in Neural Information Processing Systems 36, 61478-61500",
+      "citation_count": "613",
+      "year": "2023"
+    },
+    {
+      "index": 12,
+      "title": "Global mmlu: Understanding and addressing cultural and linguistic biases in multilingual evaluation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:g5m5HwL7SMYC",
+      "authors": "S Singh, A Romanou, C Fourrier, DI Adelani, JG Ngui, D Vila-Suero, ...",
+      "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational …",
+      "citation_count": "354",
+      "year": "2025"
+    },
+    {
+      "index": 13,
+      "title": "A pretrainer’s guide to training data: Measuring the effects of data age, domain coverage, quality, & toxicity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:R3hNpaxXUhUC",
+      "authors": "S Longpre, G Yauney, E Reif, K Lee, A Roberts, B Zoph, D Zhou, J Wei, ...",
+      "venue": "Proceedings of the 2024 Conference of the North American Chapter of the …",
+      "citation_count": "325",
+      "year": "2024"
+    },
+    {
+      "index": 14,
+      "title": "Counterfactual memorization in neural language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:YOwf2qJgpHMC",
+      "authors": "C Zhang, D Ippolito, K Lee, M Jagielski, F Tramèr, N Carlini",
+      "venue": "Advances in Neural Information Processing Systems 36, 39321-39362",
+      "citation_count": "321",
+      "year": "2023"
+    },
+    {
+      "index": 15,
+      "title": "Raid: A shared benchmark for robust evaluation of machine-generated text detectors",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:BqipwSGYUEgC",
+      "authors": "L Dugan, A Hwang, F Trhlík, A Zhu, JM Ludan, H Xu, D Ippolito, ...",
+      "venue": "Proceedings of the 62nd Annual Meeting of the Association for Computational …",
+      "citation_count": "297",
+      "year": "2024"
+    },
+    {
+      "index": 16,
+      "title": "A recipe for arbitrary text style transfer with large language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:3fE2CSJIrl8C",
+      "authors": "E Reif, D Ippolito, A Yuan, A Coenen, C Callison-Burch, J Wei",
+      "venue": "Proceedings of the 60th Annual Meeting of the Association for Computational …",
+      "citation_count": "290",
+      "year": "2022"
+    },
+    {
+      "index": 17,
+      "title": "Creative writing with an ai-powered writing assistant: Perspectives from professional writers",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:qUcmZB5y_30C",
+      "authors": "D Ippolito, A Yuan, A Coenen, S Burnam",
+      "venue": "arXiv preprint arXiv:2211.05030",
+      "citation_count": "240",
+      "year": "2022"
+    },
+    {
+      "index": 18,
+      "title": "Measuring forgetting of memorized training examples",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:dhFuZR0502QC",
+      "authors": "M Jagielski, O Thakkar, F Tramer, D Ippolito, K Lee, N Carlini, E Wallace, ...",
+      "venue": "arXiv preprint arXiv:2207.00099",
+      "citation_count": "203",
+      "year": "2022"
+    },
+    {
+      "index": 19,
+      "title": "Comparison of Diverse Decoding Methods from Conditional Language Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "D Ippolito, R Kriz, M Kustikova, J Sedoc, C Callison-Burch",
+      "venue": "Proceedings of the 57th Annual Meeting of the Association for Computational …",
+      "citation_count": "199",
+      "year": "2019"
+    },
+    {
+      "index": 20,
+      "title": "Effective prompt extraction from language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&citation_for_view=COEsqLYAAAAJ:J_g5lzvAfSwC",
+      "authors": "Y Zhang, N Carlini, D Ippolito",
+      "venue": "arXiv preprint arXiv:2307.06865",
+      "citation_count": "195",
+      "year": "2023"
+    },
+    {
+      "index": 21,
+      "title": "The need for privacy with public digital contact tracing during the COVID-19 pandemic",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:LkGwnXOMwfcC",
+      "authors": "Y Bengio, R Janda, YW Yu, D Ippolito, M Jarvie, D Pilat, B Struck, ...",
+      "venue": "The Lancet Digital Health 2 (7), e342-e344",
+      "citation_count": "192",
+      "year": "2020"
+    },
+    {
+      "index": 22,
+      "title": "Real or fake text?: Investigating human ability to detect boundaries between human-written and machine-generated text",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:-f6ydRqryjwC",
+      "authors": "L Dugan, D Ippolito, A Kirubarajan, S Shi, C Callison-Burch",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (11), 12763 …",
+      "citation_count": "189",
+      "year": "2023"
+    },
+    {
+      "index": 23,
+      "title": "Consent in crisis: The rapid decline of the ai data commons",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:NaGl4SEjCO4C",
+      "authors": "S Longpre, R Mahari, A Lee, C Lund, H Oderinwale, W Brannon, ...",
+      "venue": "Advances in Neural Information Processing Systems 37, 108042-108087",
+      "citation_count": "186",
+      "year": "2024"
+    },
+    {
+      "index": 24,
+      "title": "Scalable extraction of training data from aligned, production language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:HoB7MX3m0LUC",
+      "authors": "M Nasr, J Rando, N Carlini, J Hayase, M Jagielski, AF Cooper, D Ippolito, ...",
+      "venue": "International Conference on Learning Representations 2025, 82363-82435",
+      "citation_count": "184",
+      "year": "2025"
+    },
+    {
+      "index": 25,
+      "title": "Trading off diversity and quality in natural language generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:eQOLeE2rZwMC",
+      "authors": "H Zhang, D Duckworth, D Ippolito, A Neelakantan",
+      "venue": "Proceedings of the workshop on Human Evaluation of NLP Systems (HumEval), 25-33",
+      "citation_count": "178",
+      "year": "2021"
+    },
+    {
+      "index": 26,
+      "title": "Preventing verbatim memorization in language models gives a false sense of privacy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:bEWYMUwI8FkC",
+      "authors": "D Ippolito, F Tramèr, M Nasr, C Zhang, M Jagielski, K Lee, ...",
+      "venue": "arXiv preprint arXiv:2210.17546",
+      "citation_count": "170",
+      "year": "2022"
+    },
+    {
+      "index": 27,
+      "title": "Preventing generation of verbatim memorization in language models gives a false sense of privacy",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:pyW8ca7W8N0C",
+      "authors": "D Ippolito, F Tramer, M Nasr, C Zhang, M Jagielski, K Lee, CC Choo, ...",
+      "venue": "Proceedings of the 16th International Natural Language Generation Conference …",
+      "citation_count": "151",
+      "year": "2023"
+    },
+    {
+      "index": 28,
+      "title": "Wordcraft: a human-ai collaborative editor for story writing",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:5nxA0vEk-isC",
+      "authors": "A Coenen, L Davis, D Ippolito, E Reif, A Yuan",
+      "venue": "arXiv preprint arXiv:2107.07430",
+      "citation_count": "128",
+      "year": "2021"
+    },
+    {
+      "index": 29,
+      "title": "Chateval: A tool for chatbot evaluation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:zYLM7Y9cAGgC",
+      "authors": "J Sedoc, D Ippolito, A Kirubarajan, J Thirani, L Ungar, C Callison-Burch",
+      "venue": "Proceedings of the 2019 conference of the North American chapter of the …",
+      "citation_count": "114",
+      "year": "2019"
+    },
+    {
+      "index": 30,
+      "title": "Noveltybench: Evaluating language models for humanlike diversity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:ZHo1McVdvXMC",
+      "authors": "Y Zhang, H Diddee, S Holm, H Liu, X Liu, V Samuel, B Wang, D Ippolito",
+      "venue": "arXiv preprint arXiv:2504.05228",
+      "citation_count": "104",
+      "year": "2025"
+    },
+    {
+      "index": 31,
+      "title": "RoFT: A tool for evaluating human detection of machine-generated text",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:UebtZRa9Y70C",
+      "authors": "L Dugan, D Ippolito, A Kirubarajan, C Callison-Burch",
+      "venue": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language …",
+      "citation_count": "96",
+      "year": "2020"
+    },
+    {
+      "index": 32,
+      "title": "Dungeons and Dragons as a Challenge Problem for Artificial Intelligence",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:mB3voiENLucC",
+      "authors": "C Callison-Burch, D Ippolito, D Reitter, GS Tomar, L Martin",
+      "venue": "",
+      "citation_count": "88",
+      "year": "2022"
+    },
+    {
+      "index": 33,
+      "title": "Unsupervised hierarchical story infilling",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:IjCSPb-OGe4C",
+      "authors": "D Ippolito, D Grangier, C Callison-Burch, D Eck",
+      "venue": "Proceedings of the First Workshop on Narrative Understanding, 37-43",
+      "citation_count": "77",
+      "year": "2019"
+    },
+    {
+      "index": 34,
+      "title": "Persistent pre-training poisoning of llms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:70eg2SAEIzsC",
+      "authors": "Y Zhang, J Rando, I Evtimov, J Chi, EM Smith, N Carlini, F Tramèr, ...",
+      "venue": "International Conference on Learning Representations 2025, 31323-31340",
+      "citation_count": "70",
+      "year": "2025"
+    },
+    {
+      "index": 35,
+      "title": "Inherent privacy limitations of decentralized contact tracing apps",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:roLk4NBRz8UC",
+      "authors": "Y Bengio, D Ippolito, R Janda, M Jarvie, B Prud'homme, JF Rousseau, ...",
+      "venue": "Journal of the American Medical Informatics Association 28 (1), 193-195",
+      "citation_count": "69",
+      "year": "2021"
+    },
+    {
+      "index": 36,
+      "title": "Quantifying memorization across neural language models, 2023",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:P5F9QuxV20EC",
+      "authors": "N Carlini, D Ippolito, M Jagielski, K Lee, F Tramer, C Zhang",
+      "venue": "URL https://arxiv. org/abs/2202.07646 2202",
+      "citation_count": "58",
+      "year": "2023"
+    },
+    {
+      "index": 37,
+      "title": "Covi white paper",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:_FxGoFyzp5QC",
+      "authors": "H Alsdurf, E Belliveau, Y Bengio, T Deleu, P Gupta, D Ippolito, R Janda, ...",
+      "venue": "arXiv preprint arXiv:2005.08502",
+      "citation_count": "58",
+      "year": "2020"
+    },
+    {
+      "index": 38,
+      "title": "Generative AI and science communication in the physical sciences",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:hMod-77fHWUC",
+      "authors": "S Biyela, K Dihal, KI Gero, D Ippolito, F Menczer, MS Schäfer, ...",
+      "venue": "Nature Reviews Physics 6 (3), 162-165",
+      "citation_count": "48",
+      "year": "2024"
+    },
+    {
+      "index": 39,
+      "title": "Learning translations via images with a massively multilingual image dataset",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:u-x6o8ySG0sC",
+      "authors": "J Hewitt, D Ippolito, B Callahan, R Kriz, DT Wijaya, C Callison-Burch",
+      "venue": "Proceedings of the 56th Annual Meeting of the Association for Computational …",
+      "citation_count": "48",
+      "year": "2018"
+    },
+    {
+      "index": 40,
+      "title": "Synthbio: A case study in human-ai collaborative curation of text datasets",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:KlAtU1dfN6UC",
+      "authors": "A Yuan, D Ippolito, V Nikolaev, C Callison-Burch, A Coenen, S Gehrmann",
+      "venue": "arXiv preprint arXiv:2111.06467",
+      "citation_count": "47",
+      "year": "2021"
+    },
+    {
+      "index": 41,
+      "title": "Report of the 1st Workshop on Generative AI and Law",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:maZDTaKrznsC",
+      "authors": "A Feder Cooper, K Lee, J Grimmelmann, D Ippolito, C Callison-Burch, ...",
+      "venue": "arXiv e-prints, arXiv: 2311.06477",
+      "citation_count": "40",
+      "year": "2023"
+    },
+    {
+      "index": 42,
+      "title": "Toward Better Storylines with Sentence-Level Language Models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:ufrVoPGSRksC",
+      "authors": "D Ippolito, D Grangier, D Eck, C Callison-Burch",
+      "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational …",
+      "citation_count": "35",
+      "year": "2020"
+    },
+    {
+      "index": 43,
+      "title": "Exploring and mitigating adversarial manipulation of voting-based leaderboards",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:pqnbT2bcN3wC",
+      "authors": "Y Huang, M Nasr, A Angelopoulos, N Carlini, WL Chiang, ...",
+      "venue": "arXiv preprint arXiv:2501.07493",
+      "citation_count": "30",
+      "year": "2025"
+    },
+    {
+      "index": 44,
+      "title": "Measuring non-adversarial reproduction of training data in large language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:M05iB0D1s5AC",
+      "authors": "M Aerni, J Rando, E Debenedetti, N Carlini, D Ippolito, F Tramèr",
+      "venue": "International Conference on Learning Representations 2025, 54143-54185",
+      "citation_count": "29",
+      "year": "2025"
+    },
+    {
+      "index": 45,
+      "title": "Transformer-nade for piano performances",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:2osOgNQ5qMEC",
+      "authors": "C Hawthorne, A Huang, D Ippolito, D Eck",
+      "venue": "NIPS 2nd workshop on machine learning for creativity and design",
+      "citation_count": "23",
+      "year": "2018"
+    },
+    {
+      "index": 46,
+      "title": "Forcing diffuse distributions out of language models",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:YFjsv_pBGBYC",
+      "authors": "Y Zhang, A Schwarzschild, N Carlini, Z Kolter, D Ippolito",
+      "venue": "arXiv preprint arXiv:2404.10859",
+      "citation_count": "17",
+      "year": "2024"
+    },
+    {
+      "index": 47,
+      "title": "Customizing large language model generation style using parameter-efficient finetuning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:RYcK_YlVTxYC",
+      "authors": "X Liu, H Diddee, D Ippolito",
+      "venue": "Proceedings of the 17th International Natural Language Generation Conference …",
+      "citation_count": "16",
+      "year": "2024"
+    },
+    {
+      "index": 48,
+      "title": "Chateval: A tool for the systematic evaluation of chatbots",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:9yKSN-GCB0IC",
+      "authors": "J Sedoc, D Ippolito, A Kirubarajan, J Thirani, L Ungar, C Callison-Burch",
+      "venue": "Proceedings of the Workshop on Intelligent Interactive Systems and Language …",
+      "citation_count": "16",
+      "year": "2018"
+    },
+    {
+      "index": 49,
+      "title": "Infilling piano performances",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:qjMakFHDy7sC",
+      "authors": "D Ippolito, A Huang, C Hawthorne, D Eck",
+      "venue": "NIPS Workshop on Machine Learning for Creativity and Design 2 (5)",
+      "citation_count": "16",
+      "year": "2018"
+    },
+    {
+      "index": 50,
+      "title": "Chasing random: Instruction selection strategies fail to generalize",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:2P1L_qKh6hAC",
+      "authors": "H Diddee, D Ippolito",
+      "venue": "Findings of the Association for Computational Linguistics: NAACL 2025, 1943-1957",
+      "citation_count": "15",
+      "year": "2025"
+    },
+    {
+      "index": 51,
+      "title": "Lmd3: Language model data density dependence",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:GnPB-g6toBAC",
+      "authors": "J Kirchenbauer, G Honke, G Somepalli, J Geiping, D Ippolito, K Lee, ...",
+      "venue": "arXiv preprint arXiv:2405.06331",
+      "citation_count": "13",
+      "year": "2024"
+    },
+    {
+      "index": 52,
+      "title": "Human-aligned chess with a bit of search",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:35N4QoGY0k4C",
+      "authors": "Y Zhang, AP Jacob, V Lai, D Fried, D Ippolito",
+      "venue": "The Thirteenth International Conference on Learning Representations",
+      "citation_count": "13",
+      "year": "2024"
+    },
+    {
+      "index": 53,
+      "title": "LLMs unlock new paths to monetizing exploits",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:zA6iFVUQeVQC",
+      "authors": "N Carlini, M Nasr, E Debenedetti, B Wang, CA Choquette-Choo, ...",
+      "venue": "arXiv preprint arXiv:2505.11449",
+      "citation_count": "10",
+      "year": "2025"
+    },
+    {
+      "index": 54,
+      "title": "AI and law: The next generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:4JMBOYKVnBMC",
+      "authors": "K Lee, AF Cooper, J Grimmelmann, D Ippolito",
+      "venue": "Available at SSRN 4580739",
+      "citation_count": "10",
+      "year": "2023"
+    },
+    {
+      "index": 55,
+      "title": "Reverse-engineering decoding strategies given blackbox access to a language generation system",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:r0BpntZqJG4C",
+      "authors": "D Ippolito, N Carlini, K Lee, M Nasr, YW Yu",
+      "venue": "Proceedings of the 16th International Natural Language Generation Conference …",
+      "citation_count": "9",
+      "year": "2023"
+    },
+    {
+      "index": 56,
+      "title": "DONOTTRAIN: A metadata standard for indicating consent for machine learning",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:j3f4tGmQtD8C",
+      "authors": "D Ippolito, YW Yu",
+      "venue": "Proceedings of the 40th International Conference on Machine Learning",
+      "citation_count": "9",
+      "year": "2023"
+    },
+    {
+      "index": 57,
+      "title": "Winter is here: Summarizing twitter streams related to pre-scheduled events",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:RGFaLdJalmkC",
+      "authors": "A Andy, DT Wijaya, C Callison-Burch",
+      "venue": "Proceedings of the Second Workshop on Storytelling, 112-116",
+      "citation_count": "8",
+      "year": "2019"
+    },
+    {
+      "index": 58,
+      "title": "FictionalQA: A Dataset for Studying Memorization and Knowledge Acquisition",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:fPk4N6BV_jEC",
+      "authors": "J Kirchenbauer, N Mongkolsupawan, Y Wen, T Goldstein, D Ippolito",
+      "venue": "International Conference on Learning Representations 2026, 18815-18845",
+      "citation_count": "6",
+      "year": "2026"
+    },
+    {
+      "index": 59,
+      "title": "CAVA: A tool for cultural alignment visualization & analysis",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:ldfaerwXgEUC",
+      "authors": "N Giuliani, CC Ma, P Pradeep, D Ippolito",
+      "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language …",
+      "citation_count": "6",
+      "year": "2024"
+    },
+    {
+      "index": 60,
+      "title": "Understanding image motion with group representations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:d1gkVwhDpl0C",
+      "authors": "A Jaegle, S Phillips, D Ippolito, K Daniilidis",
+      "venue": "arXiv preprint arXiv:1612.00472",
+      "citation_count": "6",
+      "year": "2016"
+    },
+    {
+      "index": 61,
+      "title": "BenchBrowser: Retrieving Evidence for Evaluating Benchmark Validity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:CHSYGLWDkRkC",
+      "authors": "H Diddee, G Yauney, S Swayamdipta, D Ippolito",
+      "venue": "arXiv preprint arXiv:2603.18019",
+      "citation_count": "5",
+      "year": "2026"
+    },
+    {
+      "index": 62,
+      "title": "On code-induced reasoning in llms",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:a0OBvERweLwC",
+      "authors": "A Waheed, Z Wu, C Rosé, D Ippolito",
+      "venue": "International Conference on Learning Representations 2026, 150435-150476",
+      "citation_count": "4",
+      "year": "2026"
+    },
+    {
+      "index": 63,
+      "title": "AI can learn to show its workings through trial and error",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:yD5IFk8b50cC",
+      "authors": "D Ippolito, Y Zhang",
+      "venue": "Nature 645 (8081), 594-595",
+      "citation_count": "4",
+      "year": "2025"
+    },
+    {
+      "index": 64,
+      "title": "Understanding the limitations of using large language models for text generation",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:ZeXyd9-uunAC",
+      "authors": "D Ippolito",
+      "venue": "University of Pennsylvania",
+      "citation_count": "4",
+      "year": "2023"
+    },
+    {
+      "index": 65,
+      "title": "No single best model for diversity: Learning a router for sample diversity",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:EUQCXRtRnyEC",
+      "authors": "Y Liu, F Xu, V Padmakumar, D Ippolito, E Choi",
+      "venue": "arXiv preprint arXiv:2604.02319",
+      "citation_count": "3",
+      "year": "2026"
+    },
+    {
+      "index": 66,
+      "title": "CIE: Controlling language model text generations using continuous signals",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:u_35RYKgDlwC",
+      "authors": "V Samuel, H Diddee, Y Zhang, D Ippolito",
+      "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language …",
+      "citation_count": "3",
+      "year": "2025"
+    },
+    {
+      "index": 67,
+      "title": "The Case for a Single Model that can Both Generate Continuations and Fill-in-the-Blank",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:9ZlFYXVOiuMC",
+      "authors": "D Ippolito, L Dugan, E Reif, A Yuan, A Coenen, C Callison-Burch",
+      "venue": "Findings of the Association for Computational Linguistics: NAACL 2022, 2421-2432",
+      "citation_count": "3",
+      "year": "2022"
+    },
+    {
+      "index": 68,
+      "title": "Think Before You Lie: How Reasoning Leads to Honesty",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:bFI3QPDXJZMC",
+      "authors": "A Yuan, A Ghandeharioun, C Blum, A Machado, J Hoffmann, D Ippolito, ...",
+      "venue": "arXiv preprint arXiv:2603.09957",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 69,
+      "title": "Measuring Reasoning Trace Legibility: Can Those Who Understand Teach?",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:b0M2c_1WBrUC",
+      "authors": "D Roytburg, S Sridhar, D Ippolito",
+      "venue": "arXiv e-prints, arXiv: 2603.20508",
+      "citation_count": "1",
+      "year": "2026"
+    },
+    {
+      "index": 70,
+      "title": "Creating multimedia summaries using tweets and videos",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:aqlVkmm33-oC",
+      "authors": "A Andy, S Liu, D Ippolito, R Kriz, C Callison-Burch, D Wijaya",
+      "venue": "arXiv preprint arXiv:2203.08931",
+      "citation_count": "1",
+      "year": "2022"
+    },
+    {
+      "index": 71,
+      "title": "Unsupervised learning of image motion by recomposing sequences",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:u5HHmVD_uO8C",
+      "authors": "A Jaegle, S Phillips, D Ippolito, K Daniilidis",
+      "venue": "CoRR",
+      "citation_count": "1",
+      "year": "2016"
+    },
+    {
+      "index": 72,
+      "title": "Disentangling Models from Personas in Heterogeneous LLM Simulations",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:nb7KW1ujOQ8C",
+      "authors": "D Roytburg, D Ippolito",
+      "venue": "arXiv preprint arXiv:2610.07535",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 73,
+      "title": "Beyond Predictable Paths: Redefining AI Security Incident Reporting for Agents",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:KxtntwgDAa4C",
+      "authors": "A Pustozerova, E Bagdasarian, L Beurer-Kellner, B Biggio, N Ebert, ...",
+      "venue": "arXiv preprint arXiv:2609.24515",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 74,
+      "title": "Command-V: Training-Free Representation Finetuning Transfer",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:f2IySw72cVMC",
+      "authors": "B Wang, A Schwarzschild, A Robey, A Payani, C Fleming, M Sun, ...",
+      "venue": "International Conference on Learning Representations 2026, 111943-111965",
+      "citation_count": "",
+      "year": "2026"
+    },
+    {
+      "index": 75,
+      "title": "4.6 LLM Safety & Security Benchmarks",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:dshw04ExmUIC",
+      "authors": "M Andriushchenko, M Fischer, K Grosse, D Ippolito, A Paverd, A Rizvani, ...",
+      "venue": "Security and Privacy of Large Language Models, 108",
+      "citation_count": "",
+      "year": ""
+    },
+    {
+      "index": 76,
+      "title": "The Detection of Machine Generated Text",
+      "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=COEsqLYAAAAJ&cstart=20&pagesize=80&citation_for_view=COEsqLYAAAAJ:ULOm3_A8WrAC",
+      "authors": "D Ippolito",
+      "venue": "",
+      "citation_count": "",
+      "year": ""
+    }
+  ],
+  "page_load_count": 1,
+  "show_more_clicks": 1,
+  "show_more_disabled": true
+}
