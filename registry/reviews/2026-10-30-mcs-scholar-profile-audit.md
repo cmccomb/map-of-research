@@ -62,6 +62,10 @@ have no verified Scholar ID in the registry.
 | [2020 MassiveBlackII paper](https://academic.oup.com/mnras/article/491/3/4116/5634270), DOI `10.1093/mnras/stz3240` | Tiziana Di Matteo | Rachel Mandelbaum |
 
 These are source-attribution gaps, not layout or graph-builder omissions.
+All eight faculty pairs are absent from the published collaboration edge list,
+so each is a concrete contributor to the apparent fragmentation. Their eventual
+release could add up to eight distinct edges, subject to source and publication
+review; the table is not an approval to publish those person observations.
 The owning surface is `map-of-research`'s curated source and publisher. A
 single verified paper does not establish either missing person's whole-career
 publication history: the existing
@@ -140,3 +144,47 @@ and [selected publications](https://www.andrew.cmu.edu/user/suter/Archive_RMS.ht
 neither claims whole-career coverage. Review the pre-existing Suter visibility
 decision before a future source publication. This audit does not alter that
 already published work or its edge.
+
+## Whole-bibliography leads and additional missing Physics ties
+
+The [CMU Physics page for John Nagle](https://www.cmu.edu/physics/people/faculty/nagle.html)
+links a [“List of All Publications”](https://www.cmu.edu/physics/people/faculty/publist2025nagle.docx).
+Read-only inspection found 218 listed entries spanning 1966–2026. It is a
+credible whole-career source candidate, but its internal 2023 header is stale,
+only 30 entries state a DOI, and two 2026 entries are submitted manuscripts.
+Identity, work matching, duplicates, and publication eligibility need review
+before source ingestion. Nagle currently has zero mapped works and zero edges.
+
+Two papers on that list are already mapped, but only for Markus Deserno:
+
+| Work and primary evidence | Published work ID | Missing faculty observations |
+| --- | --- | --- |
+| [2019 Poisson-ratio paper](https://www.cmu.edu/physics/people/faculty/nagle.html), DOI [`10.1039/C9SM01290G`](https://doi.org/10.1039/C9SM01290G) | `work-92ea0dceaa429d283e461ac3794b2f615acb3d4ec6fe850e0d6003a1204b1a0f` | John Nagle |
+| [2026 bending-moduli paper](https://www.cmu.edu/physics/people/faculty/nagle.html), DOI [`10.1016/j.bpj.2025.12.037`](https://doi.org/10.1016/j.bpj.2025.12.037) | `work-944bdbee2fe13439787a309e6c6f0d3dbaa7c42ba4e06dca215b31af1b02943a` | John Nagle and Stephanie Tristram-Nagle |
+
+The three faculty pairs among Nagle, Tristram-Nagle, and Deserno all lack a
+published edge. Other exact papers in Nagle's CMU list connect him to
+[Frank Heinrich (2025)](https://doi.org/10.1039/D4SM01312C),
+[Heinrich and Tristram-Nagle (2023)](https://pubmed.ncbi.nlm.nih.gov/36566351/),
+[Heinrich, Tristram-Nagle, and Lösche (2016)](https://doi.org/10.1016/j.bbamem.2016.09.010),
+and [Suter (1996)](https://pubmed.ncbi.nlm.nih.gov/8785298/).
+Those example works are absent from the current publication artifact. Name
+matches across the 218 entries suggest more joint work, but the exact records
+and person-level publication coverage must be reconciled before any edge is
+released. Author names alone do not create faculty observations in the
+publisher.
+
+[Rachel Mandelbaum's CMU-hosted publication page](https://www.andrew.cmu.edu/user/rmandelb/publist.html)
+labels its ADS link “All publications” and says its links are full lists. This
+is a promising whole-career source for her two missing edges above, but the
+legacy ADS search has a 200-result parameter and did not resolve in this
+review. Check identity, coverage, and any result cap before using it.
+[Linda Peteanu's group list](https://groups.chem.cmu.edu/peteanu/publications/)
+contains the red-light ATRP paper but omits older papers listed by her
+[archived CMU group page](https://www.chem.cmu.edu/groups/peteanu/peteanu_group/rep_pubs.html).
+[Danith Ly's group list](https://groups.chem.cmu.edu/ly/publications/)
+contains the strand-invasion paper but omits at least a
+[2021 paper](https://pubmed.ncbi.nlm.nih.gov/34214178/). Neither group list
+establishes whole-career completeness. Existing unmerged author-site reviews
+for Gautam Iyer and Po-Shen Loh should be reconciled before restarting those
+source paths.
