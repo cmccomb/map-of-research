@@ -20,6 +20,7 @@ from map_of_research.presentation_drift import (
     require_held_additive_staged_works,
     require_presentation_review,
     require_preserved_additive_artifact,
+    require_preserved_additive_staged_works,
 )
 
 
@@ -104,6 +105,11 @@ def parent_work_rows(parent: dict) -> list[dict]:
             "detail_keyword": "methods",
             "detail_keyword_extracted": "methods",
             "detail_keyword_label_reviewed": False,
+            "map_region_audit_version": "reviewed-region-v1",
+            "map_region_outlier": False,
+            "map_region_documented_override": False,
+            "map_region_prior_eligible_override": False,
+            "map_region_prior_excluded_override": False,
         }
         for point in parent["points"]
     ]
@@ -753,6 +759,26 @@ def test_additive_preserves_prior_off_map_work_presentation(
     assert restored.keyword == off_map["keyword"]
     assert works.iloc[-1]["x"] == 0.9
 
+    changed_region = works.copy()
+    changed_region.at[changed_region.index[0], "map_region_prior_eligible_override"] = (
+        True
+    )
+    changed_region.at[changed_region.index[-1], "map_region_documented_override"] = True
+    restored_region, _ = preserve_reviewed_additive_presentation(
+        changed_region,
+        prior,
+        parent,
+        candidate,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="s" * 64,
+        selected_ids_sha256="i" * 64,
+        parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
+        review_path=review_path,
+    )
+    assert not restored_region["map_region_prior_eligible_override"].any()
+    assert not restored_region["map_region_documented_override"].any()
+
     changed_eligibility = works.copy()
     changed_eligibility.at[changed_eligibility.index[-1], "map_eligible"] = True
     with pytest.raises(ValueError, match="off-map work changes map eligibility"):
@@ -799,6 +825,55 @@ def test_additive_preserves_prior_off_map_work_presentation(
             reported_coauthor_source_sha256="a" * 64,
             review_path=review_path,
         )
+
+    prior_missing_region = deepcopy(prior)
+    prior_missing_region[-1].pop("map_region_prior_eligible_override")
+    with pytest.raises(ValueError, match="lacks region presentation fields"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior_missing_region,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="a" * 64,
+            review_path=review_path,
+        )
+
+
+def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> None:
+    parent = [{**row, "map_eligible": True} for row in parent_work_rows(artifact(2))]
+    staged = pandas.DataFrame(parent)
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    require_preserved_additive_staged_works(path, parent)
+
+    for field in (
+        "map_region_outlier",
+        "map_region_documented_override",
+        "map_region_prior_eligible_override",
+        "map_region_prior_excluded_override",
+    ):
+        broken = staged.copy()
+        broken.at[0, field] = True
+        broken.to_parquet(path, index=False)
+        with pytest.raises(ValueError, match="change prior presentation"):
+            require_preserved_additive_staged_works(path, parent)
+
+    broken = staged.copy()
+    broken.at[0, "map_region_audit_version"] = "unreviewed-refit"
+    broken.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="change prior presentation"):
+        require_preserved_additive_staged_works(path, parent)
+
+    staged.iloc[1:].to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="lose or duplicate prior work IDs"):
+        require_preserved_additive_staged_works(path, parent)
+
+    with pytest.raises(ValueError, match="parent works lack presentation fields"):
+        require_preserved_additive_staged_works(path, [{"work_id": "work-0000"}])
 
 
 def test_additive_staged_works_rejects_unreviewed_held_placement(

@@ -12,7 +12,7 @@ import json
 import math
 import re
 from collections import Counter
-from collections.abc import Mapping
+from collections.abc import Mapping, Sequence
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -26,6 +26,19 @@ from .composite_region import (
 from .io import load_json
 
 SCHEMA_VERSION = 1
+REGION_PRESENTATION_FIELDS = (
+    "map_region_audit_version",
+    "map_region_outlier",
+    "map_region_documented_override",
+    "map_region_prior_eligible_override",
+    "map_region_prior_excluded_override",
+)
+RETAINED_WORK_PRESENTATION_FIELDS = (
+    "map_eligible",
+    *COORDINATE_FIELDS,
+    *TOPIC_FIELDS,
+    *REGION_PRESENTATION_FIELDS,
+)
 
 _VOLATILE_CANDIDATE_FIELDS = {*COORDINATE_FIELDS, "keyword_ids"}
 _REVIEWABLE_POINT_FIELDS = {
@@ -550,6 +563,7 @@ def preserve_reviewed_additive_presentation(
         "map_exclusion_reasons",
         *COORDINATE_FIELDS,
         *TOPIC_FIELDS,
+        *REGION_PRESENTATION_FIELDS,
     }
     if not required_columns <= set(works.columns):
         raise ValueError("Additive candidate works lack placement or topic fields")
@@ -661,6 +675,14 @@ def preserve_reviewed_additive_presentation(
     output = works.copy()
     retained = parent_points.keys() & candidate_points.keys()
     for index, work_id in current_ids.items():
+        if work_id in prior_by_id:
+            prior = prior_by_id[work_id]
+            if any(field not in prior for field in REGION_PRESENTATION_FIELDS):
+                raise ValueError(
+                    f"Additive parent work lacks region presentation fields: {work_id}"
+                )
+            for field in REGION_PRESENTATION_FIELDS:
+                output.at[index, field] = prior[field]
         if work_id in retained:
             prior = prior_by_id[work_id]
             point = parent_points[work_id]
@@ -815,6 +837,32 @@ def require_held_additive_staged_works(
             raise ValueError("Additive staged held work leaks coordinates")
         if any(row[field] != value for field, value in BLANK_TOPICS.items()):
             raise ValueError("Additive staged held work leaks topic labels")
+
+
+def require_preserved_additive_staged_works(
+    staged_path: Path, prior_works: Sequence[Mapping[str, Any]]
+) -> None:
+    """Reject any staged Parquet change to a prior work's public presentation."""
+
+    if not prior_works:
+        return
+    import pandas
+
+    fields = ("work_id", *RETAINED_WORK_PRESENTATION_FIELDS)
+    before = pandas.DataFrame(prior_works)
+    if not set(fields) <= set(before.columns):
+        raise ValueError("Additive parent works lack presentation fields")
+    after = pandas.read_parquet(staged_path, columns=list(fields))
+    before = before[list(fields)].set_index("work_id")
+    after = after.set_index("work_id")
+    if (
+        not before.index.is_unique
+        or not after.index.is_unique
+        or not before.index.isin(after.index).all()
+    ):
+        raise ValueError("Additive staged works lose or duplicate prior work IDs")
+    if not before.sort_index().equals(after.loc[before.index].sort_index()):
+        raise ValueError("Additive staged works change prior presentation")
 
 
 def require_preserved_additive_artifact(

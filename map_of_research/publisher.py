@@ -156,6 +156,7 @@ from .person_publication_holds import (
 )
 from .poster_loss_approval import load_poster_loss_approval
 from .presentation_drift import (
+    REGION_PRESENTATION_FIELDS,
     PresentationDriftError,
     compare_presentation,
     preserve_additive_report_presentation,
@@ -165,6 +166,7 @@ from .presentation_drift import (
     require_held_additive_staged_works,
     require_presentation_review,
     require_preserved_additive_artifact,
+    require_preserved_additive_staged_works,
 )
 from .private_subset_preflight import require_private_preflight_receipt
 from .profile_releases import (
@@ -1694,9 +1696,8 @@ def _publish_atomic_release(
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
         if additive_placement_review_path is not None:
-            require_held_additive_staged_works(
-                staged["works"][1], preservation_receipt
-            )
+            require_held_additive_staged_works(staged["works"][1], preservation_receipt)
+            require_preserved_additive_staged_works(staged["works"][1], prior_works)
         held_table_counts = None
         if held_topic_parent_artifact is not None:
             import datasets
@@ -2232,6 +2233,11 @@ def publish_snapshot(
                     else ()
                 ),
                 *COMPOSITE_PRESENTATION_FIELDS,
+                *(
+                    REGION_PRESENTATION_FIELDS
+                    if additive_placement_review_path is not None
+                    else ()
+                ),
                 *(TOPIC_FIELDS if held_observation_ids else ()),
                 *(COMPOSITE_VARIANT_FIELDS if composite_plan is not None else ()),
                 *(
