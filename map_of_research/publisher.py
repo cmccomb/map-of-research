@@ -150,6 +150,12 @@ from .person_publication_holds import (
     validate_person_hold_losses,
 )
 from .poster_loss_approval import load_poster_loss_approval
+from .presentation_drift import (
+    PresentationDriftError,
+    compare_presentation,
+    preserve_deletion_only_presentation,
+    require_presentation_review,
+)
 from .private_subset_preflight import require_private_preflight_receipt
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
@@ -1251,6 +1257,28 @@ def _write_map_artifacts(
     return artifact_path, manifest_path, artifact
 
 
+def _pinned_parent_map(
+    *, prior_revision: str, hf_token: str
+) -> tuple[dict[str, Any], str]:
+    """Read the immutable parent map used by the presentation-drift gate."""
+
+    from huggingface_hub import hf_hub_download
+
+    parent_path = Path(
+        hf_hub_download(
+            REPO_ID,
+            f"maps/{MAP_ARTIFACT_NAME}",
+            repo_type="dataset",
+            revision=prior_revision,
+            token=hf_token or None,
+        )
+    )
+    parent = load_json(parent_path)
+    if not isinstance(parent, dict):
+        raise ValueError("Pinned parent map is not an object")
+    return parent, sha256_file(parent_path)
+
+
 def _to_hub_dataset(frame: Any) -> Any:
     import datasets
 
@@ -1400,6 +1428,9 @@ def _publish_atomic_release(
     approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
     held_topic_parent_artifact: Mapping[str, Any] | None = None,
     held_topic_parent_map_sha256: str | None = None,
+    enforce_presentation_drift: bool = False,
+    presentation_drift_approval_path: Path | None = None,
+    preserve_deletion_presentation: bool = False,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1438,6 +1469,29 @@ def _publish_atomic_release(
         tables["works"] = preserve_pending_review_topics(
             tables["works"], baselines["repair_works"], repair_manifest
         )
+
+    parent_map = None
+    parent_map_sha256 = None
+    preservation_receipt = None
+    if enforce_presentation_drift:
+        parent_map, parent_map_sha256 = _pinned_parent_map(
+            prior_revision=prior_revision,
+            hf_token=hf_token,
+        )
+        if preserve_deletion_presentation and presentation_drift_approval_path is None:
+            if prior_works is None:
+                raise ValueError("Deletion-only preservation needs pinned parent works")
+            candidate_before_preservation = build_map_artifact(
+                tables["works"],
+                registry,
+                generated_at_utc=generated_at_utc,
+            )
+            tables["works"], preservation_receipt = preserve_deletion_only_presentation(
+                tables["works"],
+                prior_works,
+                parent_map,
+                candidate_before_preservation,
+            )
 
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
         root = Path(temp)
@@ -1485,6 +1539,27 @@ def _publish_atomic_release(
                 else {}
             ),
         )
+        presentation_receipt = None
+        if enforce_presentation_drift:
+            presentation_report = compare_presentation(
+                parent_map,
+                artifact,
+                prior_revision=prior_revision,
+                source_snapshot_sha256=str(source_manifest["snapshot_sha256"]),
+                parent_map_sha256=parent_map_sha256,
+                candidate_map_sha256=sha256_file(artifact_path),
+            )
+            presentation_receipt = require_presentation_review(
+                presentation_report,
+                presentation_drift_approval_path,
+            )
+            map_manifest = load_json(map_manifest_path)
+            if not isinstance(map_manifest, dict):
+                raise ValueError("Staged map manifest is not an object")
+            map_manifest["presentation_drift"] = presentation_receipt
+            if preservation_receipt is not None:
+                map_manifest["presentation_preservation"] = preservation_receipt
+            atomic_write_json(map_manifest_path, map_manifest)
         require_public_subset_boundary(tables, release_receipt or [], artifact=artifact)
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
@@ -1622,6 +1697,10 @@ def _publish_atomic_release(
                 "parent_map_sha256": held_topic_parent_map_sha256,
                 "exact_table_rows": held_table_counts,
             }
+        if presentation_receipt is not None:
+            gate["presentation_drift"] = presentation_receipt
+            if preservation_receipt is not None:
+                gate["presentation_preservation"] = preservation_receipt
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1679,6 +1758,7 @@ def publish_snapshot(
     mccomb_continuity_path: Path = DEFAULT_MCCOMB_CONTINUITY_PATH,
     mccomb_crosswalk_path: Path = DEFAULT_MCCOMB_CROSSWALK_PATH,
     coauthor_binding_approval_path: Path = DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
+    presentation_drift_approval_path: Path | None = None,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
     chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
@@ -1923,7 +2003,7 @@ def publish_snapshot(
                     )
                     else ()
                 ),
-                *(COMPOSITE_PRESENTATION_FIELDS if composite_plan is not None else ()),
+                *COMPOSITE_PRESENTATION_FIELDS,
                 *(TOPIC_FIELDS if held_observation_ids else ()),
                 *(COMPOSITE_VARIANT_FIELDS if composite_plan is not None else ()),
                 *(
@@ -2289,11 +2369,14 @@ def publish_snapshot(
         atomic_intent_sink=atomic_intent_sink,
         require_bio_release=require_bio_release,
         composite_plan=composite_plan,
-        prior_works=prior_works if composite_plan is not None else None,
+        prior_works=prior_works,
         prior_artifact=prior_artifact,
         approved_person_hold_losses=approved_person_hold_losses,
         held_topic_parent_artifact=held_topic_parent_artifact,
         held_topic_parent_map_sha256=held_topic_parent_map_sha256,
+        enforce_presentation_drift=True,
+        presentation_drift_approval_path=presentation_drift_approval_path,
+        preserve_deletion_presentation=True,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -2582,6 +2665,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
         help="Exact Hub5073 McComb work bindings backed by curated coauthors",
     )
+    parser.add_argument(
+        "--presentation-drift-approval",
+        type=Path,
+        help="Exact-parent reviewed approval for material map refit",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2700,6 +2788,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             bio_binding_approval_path=args.bio_binding_approval,
             mccomb_continuity_path=args.mccomb_continuity_approval,
             coauthor_binding_approval_path=args.coauthor_binding_approval,
+            presentation_drift_approval_path=args.presentation_drift_approval,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
@@ -2744,6 +2833,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         LOGGER.exception("Snapshot publication failed")
         if isinstance(error, RegionReleaseDiffError):
             status["region_continuity"] = error.receipt
+        if isinstance(error, PresentationDriftError):
+            status["presentation_drift"] = error.receipt
         if isinstance(error, AtomicReleaseReconciliationRequired):
             status["atomic_release_reconciliation"] = error.receipt
         status.update(

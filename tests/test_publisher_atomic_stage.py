@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
@@ -13,6 +14,7 @@ import pytest
 
 import map_of_research.publisher as publisher
 from map_of_research.atomic_release import RELEASE_PATHS
+from map_of_research.presentation_drift import PresentationDriftError
 from map_of_research.release_baseline import pin_prior_release
 
 
@@ -457,6 +459,214 @@ def test_direct_atomic_stage_without_intent_sink_stops_before_hub(
             prior_people=_prior_bio_people(),
         )
     assert calls == []
+
+
+def test_material_presentation_drift_stops_before_atomic_commit(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {
+            "material_reasons": ["broad_semantic_topic_churn"],
+            "report_sha256": "report-sha",
+        },
+    )
+    with pytest.raises(PresentationDriftError, match="lacks a reviewed approval"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "other"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            enforce_presentation_drift=True,
+        )
+    assert [event for event, _ in calls] == ["map"]
+
+
+def test_pinned_parent_map_rejects_invalid_payload(monkeypatch, tmp_path) -> None:
+    path = tmp_path / "parent-map.json"
+    path.write_text("[]", encoding="utf-8")
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=lambda *args, **kwargs: str(path)),
+    )
+    with pytest.raises(ValueError, match="not an object"):
+        publisher._pinned_parent_map(prior_revision="a" * 40, hf_token="token")
+    path.write_text('{"points": []}', encoding="utf-8")
+    parent, digest = publisher._pinned_parent_map(
+        prior_revision="a" * 40, hf_token="token"
+    )
+    assert parent == {"points": []}
+    assert digest == hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def test_reviewed_presentation_gate_is_in_manifest_and_atomic_intent(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {"material_reasons": [], "report_sha256": "digest"},
+    )
+    publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={"snapshot_sha256": "other"},
+        hf_token="token",
+        prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={"prior_revision": "a" * 40},
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=_prior_bio_people(),
+        enforce_presentation_drift=True,
+    )
+    assert [event for event, _ in calls] == ["map", "commit"]
+    assert calls[-1][1]["prewrite_gate"]["presentation_drift"]["status"] == (
+        "pass_no_material_drift"
+    )
+
+
+def test_deletion_only_preservation_is_reported_before_atomic_commit(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"points": []},
+    )
+    receipt = {"status": "parent_presentation_preserved_for_deletions"}
+    monkeypatch.setattr(
+        publisher,
+        "preserve_deletion_only_presentation",
+        lambda works, prior, parent, candidate: (works, receipt),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {"material_reasons": [], "report_sha256": "digest"},
+    )
+    publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={"snapshot_sha256": "other"},
+        hf_token="token",
+        prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={"prior_revision": "a" * 40},
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=_prior_bio_people(),
+        prior_works=[],
+        enforce_presentation_drift=True,
+        preserve_deletion_presentation=True,
+    )
+    assert [event for event, _ in calls] == ["map", "commit"]
+    assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+def test_deletion_preservation_missing_parent_works_stops_before_stage(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    with pytest.raises(ValueError, match="needs pinned parent works"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "other"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            enforce_presentation_drift=True,
+            preserve_deletion_presentation=True,
+        )
+    assert calls == []
+
+
+def test_presentation_gate_rejects_invalid_staged_manifest_before_hub(
+    monkeypatch, tmp_path
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {"material_reasons": []},
+    )
+    original_load = publisher.load_json
+    monkeypatch.setattr(
+        publisher,
+        "load_json",
+        lambda path: [] if path.name == "manifest.json" else original_load(path),
+    )
+    with pytest.raises(ValueError, match="Staged map manifest is not an object"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "other"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-25T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            enforce_presentation_drift=True,
+        )
+    assert [event for event, _ in calls] == ["map"]
 
 
 @pytest.mark.parametrize("bio", [False, True])
