@@ -10,6 +10,11 @@ from pathlib import Path
 from typing import Any
 
 from .io import load_json, sha256_file
+from .public_subsets import (
+    ReviewedPublicSubset,
+    parse_public_subset,
+    validate_public_subset_cache,
+)
 from .registry import Registry
 
 DEFAULT_PROFILE_RELEASES_PATH = Path("data/curated/scholar-profile-releases.json")
@@ -28,6 +33,7 @@ class ProfileRelease:
     reviewed_at: str
     expected_provisional_hold_rows: int = 0
     provisional_hold_ids_sha256: str = ""
+    public_subset: ReviewedPublicSubset | None = None
 
 
 def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
@@ -56,6 +62,26 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
         reviewed_at = entry.get("reviewed_at")
         hold_count = entry.get("expected_provisional_hold_rows", 0)
         hold_ids_digest = entry.get("provisional_hold_ids_sha256", "")
+        public_subset = (
+            parse_public_subset(entry["public_subset"])
+            if entry.get("public_subset") is not None
+            else None
+        )
+        if public_subset is not None and set(entry) - {
+            "person_id",
+            "scholar_id",
+            "state",
+            "expected_source_rows",
+            "cache_sha256",
+            "reason",
+            "reviewed_at",
+            "expected_provisional_hold_rows",
+            "provisional_hold_ids_sha256",
+            "public_subset",
+        }:
+            raise ValueError(
+                "Private row fields entered public profile-release manifest"
+            )
         if (
             not isinstance(person_id, str)
             or not person_id.startswith("person-")
@@ -79,6 +105,15 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
                 if hold_count
                 else bool(hold_ids_digest)
             )
+            or (
+                public_subset is not None
+                and (
+                    state != "released"
+                    or hold_count != 0
+                    or count
+                    != public_subset.observed_visible_rows - public_subset.withheld_rows
+                )
+            )
         ):
             raise ValueError("Profile-release decision has invalid fields")
         try:
@@ -96,6 +131,7 @@ def load_profile_releases(path: Path) -> tuple[ProfileRelease, ...]:
                 reviewed_at=str(reviewed_at),
                 expected_provisional_hold_rows=hold_count,
                 provisional_hold_ids_sha256=hold_ids_digest,
+                public_subset=public_subset,
             )
         )
         seen_people.add(person_id)
@@ -143,6 +179,17 @@ def select_released_observations(
             raise ValueError(
                 f"Profile-release source cache is incomplete: {decision.scholar_id}"
             )
+        if decision.public_subset is not None:
+            actual_subset = validate_public_subset_cache(decision.scholar_id, cache)
+            if actual_subset != decision.public_subset:
+                raise ValueError(
+                    "Profile-release public subset differs from manifest: "
+                    f"{decision.scholar_id}"
+                )
+        elif capture.get("cache_scope") == "reviewed_public_subset":
+            raise ValueError(
+                f"Profile-release public subset lacks manifest: {decision.scholar_id}"
+            )
         cached_ids = [
             row.get("author_pub_id") if isinstance(row, dict) else None
             for row in publications
@@ -177,6 +224,7 @@ def select_released_observations(
             raise ValueError(
                 f"Profile-release snapshot differs from source: {decision.scholar_id}"
             )
+        subset = decision.public_subset
         receipt.append(
             {
                 "person_id": decision.person_id,
@@ -187,6 +235,22 @@ def select_released_observations(
                 "cache_sha256": decision.cache_sha256,
                 "reason": decision.reason,
                 "reviewed_at": decision.reviewed_at,
+                **(
+                    {
+                        "cache_scope": "reviewed_public_subset",
+                        "selected_author_pub_ids": sorted(cached_ids),
+                        "selected_ids_sha256": subset.selected_ids_sha256,
+                        "observed_visible_rows": subset.observed_visible_rows,
+                        "withheld_rows": subset.withheld_rows,
+                        "withheld_hold_rows": subset.withheld_hold_rows,
+                        "withheld_excluded_rows": subset.withheld_excluded_rows,
+                        "withheld_ids_sha256": subset.withheld_ids_sha256,
+                        "private_capture_sha256": subset.private_capture_sha256,
+                        "private_review_sha256": subset.private_review_sha256,
+                    }
+                    if subset is not None
+                    else {}
+                ),
             }
         )
         if decision.state == "held":

@@ -975,6 +975,246 @@
       "reviewed_at": "2026-10-29",
       "expected_provisional_hold_rows": 26,
       "provisional_hold_ids_sha256": "3734204a46dd5e54391fa68ff7a827614def645ac875c41e5812769aed62fc18"
+    },
+    {
+      "person_id": "person-dandeblasio-08015229",
+      "scholar_id": "3xE2SbUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 36,
+      "cache_sha256": "b4260cae2f0c71f116cf2357e6f3fa3a6015902b42d32ee358f8c02912450b96",
+      "reason": "Reviewed public subset of 36 unique candidate observations from 39 complete visible Chrome rows; 3 uncertain and 0 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 39,
+        "private_capture_sha256": "b89f29df95b02adb056d981c5c345d0d71771044ba9c6ddd56953c2678ba4619",
+        "private_review_sha256": "64d8e15cd671e430b28b3bfaaa7b184e1abda4bbf105c1cc837f3ec4536a4598",
+        "private_rendered_html_sha256": "14cccf5292b14b270e8150729a1bf0ad9409d734bb197e57d5a58618c5f3e6e5",
+        "selected_ids_sha256": "ac94b3ad9ba871c0a6784231dc753c497d8dfeb68fbcc6c6ce56b12b921e9b28",
+        "withheld_rows": 3,
+        "withheld_hold_rows": 3,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "9180ca149503c13bb16bf7538661e799cbcc84db07bd0f20413ea8fb06345b50"
+      }
+    },
+    {
+      "person_id": "person-guillaumemarcais-4af88467",
+      "scholar_id": "oD8K--AAAAAJ",
+      "state": "released",
+      "expected_source_rows": 30,
+      "cache_sha256": "4f621529ced2f758411e5f51a1db310556b3c1bfcc1ef8b0a7e8551837828509",
+      "reason": "Reviewed public subset of 30 unique candidate observations from 40 complete visible Chrome rows; 10 uncertain and 0 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 40,
+        "private_capture_sha256": "115a8fc17684db249170648bc59cd70d895ddbe213dd38c9ac6a1e3b864f6ca4",
+        "private_review_sha256": "01d7ce9ac0c489f6c12e5f4838667a6e07eb7e9ce601ec1ce2a7d32d37c5030d",
+        "private_rendered_html_sha256": "7574385e62e7bb42ea80ce4d27a7228dc01b5ed3e56e51e7a0aca3d7cf80d28d",
+        "selected_ids_sha256": "e024b8b45573ed635b19051e8653ed9c0c6c6e7d8716f93f33e532e2c171d63d",
+        "withheld_rows": 10,
+        "withheld_hold_rows": 10,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "84ec1eb6886852d3434cb48a2795a0d82a14d8202a926405a00de2935380732c"
+      }
+    },
+    {
+      "person_id": "person-jianma-66b52cf1",
+      "scholar_id": "nDw9v78AAAAJ",
+      "state": "released",
+      "expected_source_rows": 159,
+      "cache_sha256": "0a36180adb8e123036f3b0b303f90db810f79a788688cdac206fd8609eccc3ea",
+      "reason": "Reviewed public subset of 159 unique candidate observations from 233 complete visible Chrome rows; 65 uncertain and 9 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 233,
+        "private_capture_sha256": "e3d1af206c9775248ba905618e9ce87faa538967a33c9072b3a07421e1179eeb",
+        "private_review_sha256": "8225dcb658812f38f8069b920d7e7fa8e9dc3dbaf0063720e783aa82f204be0c",
+        "private_rendered_html_sha256": "4c8f62fb02c1d5dc4e5d5de74a48344cf8e29be7e79090b1b4633b0d79a4d483",
+        "selected_ids_sha256": "86e65e78d45d2022d0dc83d5b336732c47a85837e1b394384f672f786d5bf2f4",
+        "withheld_rows": 74,
+        "withheld_hold_rows": 65,
+        "withheld_excluded_rows": 9,
+        "withheld_ids_sha256": "c5eee376b2d86c46a09ab1eb10c65a921eae7718cea0590410e2682b223808c5"
+      }
+    },
+    {
+      "person_id": "person-joselugomartinez-5ee324ae",
+      "scholar_id": "7Zf_LXIAAAAJ",
+      "state": "released",
+      "expected_source_rows": 33,
+      "cache_sha256": "3d1f8d67c5895a6ef8ec82caaa799fa1a019b4e74cf38b6beaced59cb6e6d948",
+      "reason": "Reviewed public subset of 33 unique candidate observations from 48 complete visible Chrome rows; 15 uncertain and 0 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 48,
+        "private_capture_sha256": "af05aec4873685cdbe1e571c1f92e015236601ac647944f08096b8f9be2fdcc2",
+        "private_review_sha256": "29b14d37971203b3716d547b9dfc910a8a52724e7d0fe8a419ed6062147ffebe",
+        "private_rendered_html_sha256": "a136796cd2b00b3c23a2e5d2d451c20d5de44f1408a05ff6467797b486ba4839",
+        "selected_ids_sha256": "1ef533b47289c0aa7d5911a364146dbc8cd40b959d7291b0b519b270a3d0d5db",
+        "withheld_rows": 15,
+        "withheld_hold_rows": 15,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "ee4bcc734b85ed629e2c6b1b656588433186b7b9e03e861c437c6cc3b01fdebf"
+      }
+    },
+    {
+      "person_id": "person-mattruffalo-c05b8ad7",
+      "scholar_id": "3OzQ7hsAAAAJ",
+      "state": "released",
+      "expected_source_rows": 16,
+      "cache_sha256": "73b11c5259a21c5dd2de30f62fda16612221f8c7bff49ffe4571184f3372c110",
+      "reason": "Reviewed public subset of 16 unique candidate observations from 31 complete visible Chrome rows; 14 uncertain and 1 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 31,
+        "private_capture_sha256": "80b77005e9dc735d6c5b69e8c4a4463cf9c53da236217148d7429eb09ee1d907",
+        "private_review_sha256": "5be197edf05b38f08a33aef7c40d4b57ff23c0d5aad97a2989093caaf206df6a",
+        "private_rendered_html_sha256": "ddeec82c2ca66bdddefcd56e97536afba053f418baaccd5f4ed3d1f77fc69c01",
+        "selected_ids_sha256": "1a7404443039e66a1406e5cba1cdf5b952d1862fedf2b43756b8274a38aaae28",
+        "withheld_rows": 15,
+        "withheld_hold_rows": 14,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "afe528c8c5ba53a8bf5d89cb13ccc0340118ba241ddd5cbac2f2ce99f690c522"
+      }
+    },
+    {
+      "person_id": "person-minxu-92809da4",
+      "scholar_id": "Y3Cqt0cAAAAJ",
+      "state": "released",
+      "expected_source_rows": 145,
+      "cache_sha256": "45d8adf973a8b8dea268fac568d71f2e375679d3726ff7441e0744dd1a0442da",
+      "reason": "Reviewed public subset of 145 unique candidate observations from 250 complete visible Chrome rows; 98 uncertain and 7 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 250,
+        "private_capture_sha256": "1b54bbd5c175bdda7baed87c198adf5b228c8fe3a8f04547a6e14ea63352a81c",
+        "private_review_sha256": "a38987f8711e51fac0094a5d1257caa557a028538ee5780f9aa4e5c817471d33",
+        "private_rendered_html_sha256": "8c4fa73cd4b72c89526e7097c7f148359914a40369fdda3622f482c6850980c2",
+        "selected_ids_sha256": "72e866de6c012346891b47badb8f47c42f400304275c370f03599edc3121bc53",
+        "withheld_rows": 105,
+        "withheld_hold_rows": 98,
+        "withheld_excluded_rows": 7,
+        "withheld_ids_sha256": "1b1cf3e058dd7db9b8b7573be7dbf05bb116735d4c151ec12b29826e6e0439c6"
+      }
+    },
+    {
+      "person_id": "person-oanacarja-6d21e323",
+      "scholar_id": "BtnXFFYAAAAJ",
+      "state": "released",
+      "expected_source_rows": 31,
+      "cache_sha256": "761b9bdf96ae3eb3bb6b20c43f7ff99970a30ecf2aac81a6ebfe3d100bd6eb60",
+      "reason": "Reviewed public subset of 31 unique candidate observations from 51 complete visible Chrome rows; 18 uncertain and 2 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 51,
+        "private_capture_sha256": "87ea816e7f27005546c651a70ee33019be24ba93ad2116dd3e97e446fd7fa2c1",
+        "private_review_sha256": "b908e1c6ca5f1d57d518400059ec20484d90ac35261c636aea895db339b33d67",
+        "private_rendered_html_sha256": "16acf40b38ba6c13bdcb6e646cd929b2fc07908af3fa342880c259430c31ad27",
+        "selected_ids_sha256": "667cc4ee81ed8e1c232e38353d0e3c5d600c333af1b24c82748e7c9142759f81",
+        "withheld_rows": 20,
+        "withheld_hold_rows": 18,
+        "withheld_excluded_rows": 2,
+        "withheld_ids_sha256": "0d11bef7dd644cb356e95a2e3ffd5439533f7425bff674fa313bd6a83a7490df"
+      }
+    },
+    {
+      "person_id": "person-weiwu-2953d698",
+      "scholar_id": "IKoa5qAAAAAJ",
+      "state": "released",
+      "expected_source_rows": 42,
+      "cache_sha256": "7bdcd86e61a5324932b464dc75f0f015bf2d4385aea44da91cb99463ac496c32",
+      "reason": "Reviewed public subset of 42 unique candidate observations from 65 complete visible Chrome rows; 22 uncertain and 1 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 65,
+        "private_capture_sha256": "b29edd53ce05da6c3e2619782764872dd1e37a71aabbbcc93be0472b6c62630f",
+        "private_review_sha256": "09535e96beb5c1a28ea70011b5e550e7ed1191fa6e60f0bb21138c53af3e513b",
+        "private_rendered_html_sha256": "b44fafe3728118cb0e01deb5ebc92b2df6db507a456f984a1d376f4c7143d53c",
+        "selected_ids_sha256": "63feb0ddb525a9801883f322d12713bd1cb1c23554f6b8e55661f00699fb4278",
+        "withheld_rows": 23,
+        "withheld_hold_rows": 22,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "0e6df0c4728348f1cd010da85ade2ceae7999ea7895f20e69c8041f4bc73517e"
+      }
+    },
+    {
+      "person_id": "person-yunwilliamyu-fb0b3bb9",
+      "scholar_id": "h9r7yWkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 45,
+      "cache_sha256": "f71c6f49245ff1c784ca85f8890a4d498fa98450d6758e31560017eb8a640cc4",
+      "reason": "Reviewed public subset of 45 unique candidate observations from 54 complete visible Chrome rows; 7 uncertain and 2 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 54,
+        "private_capture_sha256": "8c357fc392c381240fd23f2b9d722a619b7c0962327a7a91a766b28234aed179",
+        "private_review_sha256": "449ce6c7eb4410e730d3e44231a60284cac13a9839348ebbbfc7171174519602",
+        "private_rendered_html_sha256": "e0de362480cf43deb371995c8e52f8951992852b3fb173bfcc7f829e2649e8b7",
+        "selected_ids_sha256": "9ef79e08a3c1a29b2c99a93f0ed3d09b5d482b3f516393a37d58b0c697c00bc2",
+        "withheld_rows": 9,
+        "withheld_hold_rows": 7,
+        "withheld_excluded_rows": 2,
+        "withheld_ids_sha256": "0643ef8267d52f8bd1585c4b1d94f95f73bbdd7573bbc8a3ac3ff5b23ee294d4"
+      }
+    },
+    {
+      "person_id": "person-andrewpavlo-323d60c7",
+      "scholar_id": "u1UDm4wAAAAJ",
+      "state": "released",
+      "expected_source_rows": 88,
+      "cache_sha256": "4fbba437e6452c4d32f830388f9f9170897fdcba101457f9be877ae3c752dca9",
+      "reason": "Reviewed public subset of 88 unique candidate observations from 137 complete visible Chrome rows; 35 uncertain and 14 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 137,
+        "private_capture_sha256": "d741034921e9aa16a4c9006089d6e4fae289b7fd27061813f649a0ae00320bc2",
+        "private_review_sha256": "bca4c313f85f0bb42ed8b4d8a22a4923da442f5a552c8abd2676097d500d535a",
+        "private_rendered_html_sha256": "f5cf217db3fcc527d8d7f451c4ac2fa98263d965869c362fb7cf74f1811ad230",
+        "selected_ids_sha256": "1250c8e2350e23716e9fed1e10eb73cd2d0404abfc3181e6869dc836586ec358",
+        "withheld_rows": 49,
+        "withheld_hold_rows": 35,
+        "withheld_excluded_rows": 14,
+        "withheld_ids_sha256": "821c7cd782af623ca0386704724e58ec5219cefe69bb5817898dd9ef2bdc3af2"
+      }
+    },
+    {
+      "person_id": "person-justinesherry-f3df110a",
+      "scholar_id": "InPotdgAAAAJ",
+      "state": "released",
+      "expected_source_rows": 58,
+      "cache_sha256": "ca6ca6f18134a3aff72e30cb4f728bdcbdcef28c5722d56701f7dceb82125e0d",
+      "reason": "Reviewed public subset of 58 unique candidate observations from 81 complete visible Chrome rows; 14 uncertain and 9 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 81,
+        "private_capture_sha256": "df329ce61f9f8fbae643c29c30ec580e4a3a580631a95f128c9f490427cd4818",
+        "private_review_sha256": "e3ae92a5b1f860e48fb8f0f1216fcf0c7e8b0e28d40e478c80ee525f22307f2d",
+        "private_rendered_html_sha256": "73da3506c6050889c0825f6e6baef7b23e390d9dde967edcacf8ef1d39b68043",
+        "selected_ids_sha256": "ea686e9bb470904f83b9cef6dcda29f5625b1008e06b9db49b8b8e92a15af189",
+        "withheld_rows": 23,
+        "withheld_hold_rows": 14,
+        "withheld_excluded_rows": 9,
+        "withheld_ids_sha256": "3051d99fcb4157c505dc02d739ec57769de88889833dbdf3d1da67252ef9c784"
+      }
+    },
+    {
+      "person_id": "person-kellyrivers-db33c482",
+      "scholar_id": "UiaK6iEAAAAJ",
+      "state": "released",
+      "expected_source_rows": 15,
+      "cache_sha256": "d4fe71ea93362a35de588b50e6e03907cd67876fdfdb5e7dc3e0b60009604913",
+      "reason": "Reviewed public subset of 15 unique candidate observations from 17 complete visible Chrome rows; 1 uncertain and 1 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 17,
+        "private_capture_sha256": "630ad6e4190123a639b39ac4516ed69a50aa333af00b13741bfcf315700dc6d0",
+        "private_review_sha256": "15ccfb5131d2bd1c237e9e2c2212bd1735d61448f4afbae316d49b709ee79784",
+        "private_rendered_html_sha256": "4cfab4689b1169e665b192c4b17f3c67111a1929f43424b96f3f5a43e5031c0f",
+        "selected_ids_sha256": "d9c8cb7f93a7553159bed8aa05438da7354a9062a0774020ac1a13d2d05aa67c",
+        "withheld_rows": 2,
+        "withheld_hold_rows": 1,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "86867ad2c0ebbf9210438446d87d0f420eb0bfb2b7b2c03217566d7161acdd27"
+      }
     }
   ]
 }

@@ -130,6 +130,18 @@ def _require_sha(value: str, *, label: str, length: int) -> str:
     return value
 
 
+def _public_subset_status_paths(snapshot: Path) -> tuple[Path | None, Path | None]:
+    """Use only the two committed, non-private subset release anchors."""
+
+    selection = snapshot / "status/browser-public-subset-current.json"
+    preflight = snapshot / "status/private-public-subset-preflight.json"
+    if selection.is_file() != preflight.is_file():
+        raise ValueError(
+            "Public subset selection and preflight receipt must travel together"
+        )
+    return (preflight, selection) if selection.is_file() else (None, None)
+
+
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--producer-dir", type=Path, required=True)
@@ -231,6 +243,7 @@ def main() -> int:
         manifest_data = json.loads(manifest.read_text(encoding="utf-8"))
         if manifest_data["snapshot_sha256"] != args.snapshot_sha256:
             raise ValueError("Snapshot manifest differs from the requested SHA-256")
+        subset_preflight, subset_selection = _public_subset_status_paths(snapshot)
         baseline = json.loads(baseline_bytes)
         if (
             baseline.get("status") != "success"
@@ -322,6 +335,8 @@ def main() -> int:
                 attribution_reviews_path=curated / "scholar-attribution-reviews.json",
                 contexts_path=curated / "scholar-contexts.json",
                 profile_releases_path=curated / "scholar-profile-releases.json",
+                private_subset_preflight_receipt_path=subset_preflight,
+                public_subset_selection_manifest_path=subset_selection,
                 person_publication_holds_path=(
                     curated / "person-publication-holds.json"
                 ),

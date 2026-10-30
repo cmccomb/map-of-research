@@ -171,6 +171,13 @@ def validate_provisional_holds(
 ) -> tuple[dict[tuple[str, str], ProvisionalHold], list[dict[str, object]]]:
     """Require a complete released source and exact reviewed hold IDs."""
 
+    subset_scholars = {
+        item.scholar_id for item in decisions if item.public_subset is not None
+    }
+    if subset_scholars.intersection(item.scholar_id for item in profiles):
+        raise ValueError("Private subset holds cannot enter the public hold manifest")
+    if subset_scholars.intersection(scholar_id for scholar_id, _ in excluded_ids):
+        raise ValueError("Private subset exclusions cannot enter public exclusions")
     expected = {
         item.scholar_id: item
         for item in decisions
