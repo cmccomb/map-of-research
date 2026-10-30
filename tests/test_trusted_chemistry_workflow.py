@@ -89,10 +89,7 @@ def test_trusted_job_keeps_normal_and_chemistry_paths_mutually_exclusive() -> No
     assert workflow["concurrency"]["group"] == "central-publication-upload-v1"
     assert job["environment"] == "huggingface"
     assert "inputs.release_mode || 'snapshot'" in job["env"]["RELEASE_MODE"]
-    assert (
-        "source/pyproject.toml"
-        in steps["Set up Python"]["with"]["cache-dependency-path"]
-    )
+    assert steps["Set up Python"]["with"] == {"python-version": "3.12"}
 
     snapshot_only = (
         "Check out collected snapshot",
