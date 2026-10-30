@@ -739,6 +739,38 @@
       "arxiv_id": "",
       "genre": "doctoral_dissertation",
       "publication_type": "doctoral_dissertation"
+    },
+    {
+      "person_id": "person-nikolasmartelaro-f2c38c73",
+      "doi": "10.1017/dsj.2025.10008",
+      "title": "Mind Over Modality? The Impact of Design Representation on Shared Understanding in Collaborative Student Engineering Design",
+      "authors": "Zeda Xu, Nikolas Martelaro, and Christopher McComb",
+      "year": 2025,
+      "venue": "Design Science",
+      "citation": "Design Science 11, e19 (2025)",
+      "source_url": "https://doi.org/10.1017/dsj.2025.10008",
+      "source_verification_urls": [
+        "https://www.cambridge.org/core/journals/design-science/article/mind-over-modality-the-impact-of-design-representation-on-shared-understanding-in-collaborative-student-engineering-design/575A166A5FBBF216D583B0DCCBCBF09B",
+        "https://nikmartelaro.com/papers/Martelaro_CV.pdf"
+      ],
+      "source_verified_at": "2026-10-30",
+      "genre": "journal_article"
+    },
+    {
+      "person_id": "person-nikolasmartelaro-f2c38c73",
+      "doi": "10.1115/DETC2025-168883",
+      "title": "The Impact of Design Representation on Equal Contribution in Engineering Design Teams",
+      "authors": "Rachel Shockley, Kai Herchenroether, Zeda Xu, Nikolas Martelaro, and Christopher McComb",
+      "year": 2025,
+      "venue": "ASME IDETC/CIE 2025",
+      "citation": "ASME IDETC/CIE 2025, V004T06A024",
+      "source_url": "https://doi.org/10.1115/DETC2025-168883",
+      "source_verification_urls": [
+        "https://nikmartelaro.com/papers/Martelaro_CV.pdf",
+        "https://api.crossref.org/works/10.1115/DETC2025-168883"
+      ],
+      "source_verified_at": "2026-10-30",
+      "genre": "conference_paper"
     }
   ]
 }
