@@ -496,6 +496,80 @@ def test_curated_rows_are_provenance_bound_and_not_scholar_fetches(
         )
 
 
+def test_reported_coauthor_source_is_frozen_without_changing_raw_rows(
+    tmp_path: Path,
+) -> None:
+    paths = make_registry(tmp_path / "registry")
+    cache_dir = tmp_path / "authors"
+    cache_dir.mkdir()
+    write_cache(cache_dir)
+    report_path = tmp_path / "data/curated/reported-faculty-coauthors.json"
+    report_path.parent.mkdir(parents=True)
+    snapshot_path = tmp_path / "snapshot.parquet"
+    manifest_path = tmp_path / "manifest.json"
+    kwargs = dict(
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        cache_dir=cache_dir,
+        snapshot_path=snapshot_path,
+        manifest_path=manifest_path,
+        reported_coauthors_path=report_path,
+        now=NOW,
+    )
+    legacy = build_snapshot(**kwargs)
+    assert legacy["reported_faculty_coauthors_sha256"] == ""
+    old_manifest = dict(legacy)
+    old_manifest.pop("reported_faculty_coauthors_file")
+    old_manifest.pop("reported_faculty_coauthors_sha256")
+    atomic_write_json(manifest_path, old_manifest)
+    validate_snapshot(
+        snapshot_path,
+        manifest_path,
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        reported_coauthors_path=report_path,
+        now=NOW,
+    )
+    atomic_write_json(report_path, {"schema_version": 1, "assertions": []})
+    with pytest.raises(ValueError, match="Reported faculty coauthor source"):
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            people_path=paths[0],
+            memberships_path=paths[1],
+            departments_path=paths[2],
+            reported_coauthors_path=report_path,
+            now=NOW,
+        )
+    fresh = build_snapshot(**kwargs)
+    assert fresh["snapshot_sha256"] == legacy["snapshot_sha256"]
+    assert fresh["reported_faculty_coauthors_sha256"] == snapshot.sha256_file(
+        report_path
+    )
+    validate_snapshot(
+        snapshot_path,
+        manifest_path,
+        people_path=paths[0],
+        memberships_path=paths[1],
+        departments_path=paths[2],
+        reported_coauthors_path=report_path,
+        now=NOW,
+    )
+    atomic_write_json(report_path, {"schema_version": 1, "assertions": [{}]})
+    with pytest.raises(ValueError, match="Reported faculty coauthor source"):
+        validate_snapshot(
+            snapshot_path,
+            manifest_path,
+            people_path=paths[0],
+            memberships_path=paths[1],
+            departments_path=paths[2],
+            reported_coauthors_path=report_path,
+            now=NOW,
+        )
+
+
 def test_curated_native_id_survives_snapshot_without_scholar_identity(
     tmp_path: Path,
 ) -> None:

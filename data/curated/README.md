@@ -8,6 +8,24 @@ source-native identifier, verification URLs and date, and any external
 coauthor IDs. Paul Erdős is an external coauthor, not a CMU faculty registry
 member.
 
+`reported-faculty-coauthors.json` records exact one-sided coauthor reports from
+released Scholar rows. The collection workflow copies it into the frozen
+source checkout; the snapshot manifest pins its own filename and checksum,
+independently of the curated-works checksum and DOI-binding approvals.
+Each entry pins the reporting person, Scholar ID, publication ID, raw
+observation ID, current work ID, exact raw title and byline, a target included
+faculty ID, and a primary byline source URL and review date. The publisher rejects a
+changed, excluded, duplicate, or unused report. A reviewed report adds
+provenance to the map point for collaboration edges; it does not create an
+authorship or increase the target person's mapped-publication count. This
+keeps partial publication histories labeled as such. Automated name matches
+are review leads only; see the [MCS pilot review](../../registry/reviews/2026-10-30-mcs-reported-coauthors-pilot.md).
+An explicit person-publication hold bars a reported edge for that target.
+If the target later gains a direct eligible observation on the same work, the
+report is superseded and the publisher requires its removal or fresh review.
+An ineligible target observation on the work also blocks the report, so a
+one-sided edge cannot override an explicit exclusion decision.
+
 The snapshot builder validates this file, records its checksum in the manifest,
 and retains `curated_verified` separately from `scholar` observations. Dataset
 normalization merges observations with the same DOI. It also merges a later

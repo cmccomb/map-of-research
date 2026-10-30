@@ -70,6 +70,7 @@ jobs:
           sparse-checkout: |
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
+            data/curated/reported-faculty-coauthors.json
             data/authors
             data/captures
             status

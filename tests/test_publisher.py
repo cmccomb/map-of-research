@@ -804,6 +804,58 @@ def test_map_artifact_uses_shared_coordinates_and_id_relationships() -> None:
     ]
 
 
+def test_map_artifact_keeps_reported_faculty_separate_from_authorship() -> None:
+    works = work_frame()
+    report = {
+        "person_id": "person-two",
+        "source_person_id": "person-one",
+        "source_observation_id": "observation-" + "a" * 64,
+        "source_url": "https://example.test/byline",
+        "verified_at": "2026-10-30",
+    }
+    artifact = publisher.build_map_artifact(
+        works,
+        registry(),
+        generated_at_utc="2026-10-30T12:00:00+00:00",
+        reported_faculty_coauthors_by_work={"work-one": [report]},
+    )
+    point = artifact["points"][0]
+    assert point["faculty_ids"] == ["person-one"]
+    assert point["reported_faculty_coauthors"] == [report]
+    assert (
+        next(
+            item
+            for item in artifact["catalogs"]["faculty"]
+            if item["person_id"] == "person-one"
+        )["publication_count"]
+        == 1
+    )
+    assert (
+        next(
+            item
+            for item in artifact["catalogs"]["faculty"]
+            if item["person_id"] == "person-two"
+        )["publication_count"]
+        == 0
+    )
+
+    with pytest.raises(ValueError, match="no mapped point"):
+        publisher.build_map_artifact(
+            works,
+            registry(),
+            generated_at_utc="2026-10-30T12:00:00+00:00",
+            reported_faculty_coauthors_by_work={"work-missing": [report]},
+        )
+    works["collaboration_eligible"] = False
+    with pytest.raises(ValueError, match="lost collaboration eligibility"):
+        publisher.build_map_artifact(
+            works,
+            registry(),
+            generated_at_utc="2026-10-30T12:00:00+00:00",
+            reported_faculty_coauthors_by_work={"work-one": [report]},
+        )
+
+
 def test_map_artifact_requires_consistent_keywords() -> None:
     missing = work_frame()
     missing.loc[0, "keyword_id"] = ""
@@ -1695,6 +1747,12 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     region_override,
     atomic,
 ) -> None:
+    monkeypatch.setattr(
+        publisher,
+        "apply_reported_faculty_coauthors",
+        lambda *args, **kwargs: ({}, []),
+    )
+    monkeypatch.setattr(publisher, "require_reported_source_sync", lambda *args: False)
     bio_intent = pinned and atomic and not region_override and not missing_prior
     snapshot_digest = {
         "value": publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
@@ -2218,6 +2276,12 @@ def test_publish_snapshot_rejects_explicit_serial_upload(monkeypatch, tmp_path) 
 def test_publish_snapshot_holds_complete_profile_before_public_tables(
     monkeypatch, tmp_path, released_gain
 ) -> None:
+    monkeypatch.setattr(
+        publisher,
+        "apply_reported_faculty_coauthors",
+        lambda *args, **kwargs: ({}, []),
+    )
+    monkeypatch.setattr(publisher, "require_reported_source_sync", lambda *args: False)
     monkeypatch.setattr(publisher, "bio_scholar_source_changed", lambda *args: False)
     monkeypatch.setattr(
         publisher, "_require_current_dataset_revision", lambda **kwargs: None

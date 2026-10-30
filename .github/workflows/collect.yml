@@ -51,6 +51,7 @@ jobs:
           cp source/registry/people.csv snapshot/registry/people.csv
           mkdir -p snapshot/data/curated
           cp source/data/curated/works.json snapshot/data/curated/works.json
+          cp source/data/curated/reported-faculty-coauthors.json snapshot/data/curated/reported-faculty-coauthors.json
           rm -f snapshot/registry/faculty.csv snapshot/registry/maps.csv
           if [ -z "$(git -C snapshot status --porcelain -- registry data/curated)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
