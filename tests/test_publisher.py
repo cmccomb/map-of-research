@@ -20,6 +20,12 @@ from map_of_research.composite_region import (
     SOURCE_SHA256 as SULLIVAN_SOURCE_SHA256,
 )
 from map_of_research.composite_region import load_reviewed_sullivan_embeddings
+from map_of_research.presentation_drift import (
+    PresentationDriftError,
+    compare_presentation,
+    preserve_reviewed_additive_presentation,
+    require_preserved_additive_artifact,
+)
 from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
@@ -492,6 +498,182 @@ def work_frame() -> pandas.DataFrame:
             }
         ]
     )
+
+
+def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
+    tmp_path: Path,
+) -> None:
+    old = work_frame()
+    baseline = publisher.build_map_artifact(
+        old, registry(), generated_at_utc="2026-10-30T01:00:00+00:00"
+    )
+    current = old.copy(deep=True)
+    current.at[0, "memberships"] = [
+        *current.at[0, "memberships"],
+        {
+            "person_id": "person-two",
+            "display_name": "Two Person",
+            "department_id": "bme",
+            "department_title": "Biomedical Engineering",
+            "role": "emeritus",
+        },
+    ]
+    added = old.copy(deep=True)
+    added.at[0, "work_id"] = "work-added"
+    added.at[0, "title"] = "A New Work"
+    added.at[0, "x"] = added.at[0, "tsne_x"] = 0.9
+    low_info = added.copy(deep=True)
+    low_info.at[0, "work_id"] = "work-low-info"
+    low_info.at[0, "map_eligible"] = False
+    low_info.at[0, "map_exclusion_reasons"] = ["low_information_region"]
+    current = pandas.concat([current, added, low_info], ignore_index=True)
+    current["keyword"] = "refit label"
+    current["keyword_extracted"] = "refit label"
+    current["x"] = 0.9
+    current["tsne_x"] = 0.9
+    candidate = publisher.build_map_artifact(
+        current, registry(), generated_at_utc="2026-10-30T02:00:00+00:00"
+    )
+    assert {point["work_id"] for point in candidate["points"]} == {
+        "work-one",
+        "work-added",
+    }
+    kwargs = {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "s" * 64,
+        "selected_ids_sha256": "i" * 64,
+        "parent_map_sha256": "p" * 64,
+    }
+    with pytest.raises(PresentationDriftError) as error:
+        preserve_reviewed_additive_presentation(
+            current,
+            old.to_dict("records"),
+            baseline,
+            candidate,
+            review_path=None,
+            **kwargs,
+        )
+    pending = error.value.receipt
+    review = {
+        "schema_version": 1,
+        "decision": "freeze_retained_review_new",
+        **{
+            key: pending[key]
+            for key in (
+                "prior_revision",
+                "source_snapshot_sha256",
+                "selected_ids_sha256",
+                "parent_map_sha256",
+                "candidate_map_content_sha256",
+                "new_work_ids_sha256",
+            )
+        },
+        "reviewed_at": "2026-10-30",
+        "new_points": [
+            {
+                "work_id": "work-added",
+                "decision": "place_unclassified",
+                "coordinates": {"x": 0.1, "y": 0.2, "tsne_x": 0.3, "tsne_y": 0.4},
+                "rationale": "Reviewed exact new work against parent placement.",
+            }
+        ],
+    }
+    review_path = tmp_path / "additive-review.json"
+    review_path.write_text(json.dumps(review), encoding="utf-8")
+    candidate["generated_at_utc"] = "2026-10-30T03:00:00+00:00"
+    frozen, receipt = preserve_reviewed_additive_presentation(
+        current,
+        old.to_dict("records"),
+        baseline,
+        candidate,
+        review_path=review_path,
+        **kwargs,
+    )
+    rebuilt = publisher.build_map_artifact(
+        frozen, registry(), generated_at_utc="2026-10-30T04:00:00+00:00"
+    )
+    by_id = {point["work_id"]: point for point in rebuilt["points"]}
+    assert set(by_id) == {"work-one", "work-added"}
+    assert by_id["work-one"]["faculty_ids"] == ["person-one", "person-two"]
+    for field in ("x", "y", "tsne_x", "tsne_y", "keyword_ids"):
+        assert by_id["work-one"][field] == baseline["points"][0][field]
+    assert by_id["work-added"]["keyword_ids"] == [
+        "keyword-unclassified",
+        "keyword-unclassified-pending-review",
+    ]
+    assert by_id["work-added"]["x"] == 0.1
+    assert receipt["placed_new_points"] == 1
+    require_preserved_additive_artifact(baseline, rebuilt, receipt)
+    assert (
+        frozen.loc[frozen.work_id.eq("work-low-info"), "map_eligible"].eq(False).all()
+    )
+    assert (
+        compare_presentation(
+            baseline,
+            rebuilt,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            parent_map_sha256="p" * 64,
+            candidate_map_sha256="c" * 64,
+        )["material_reasons"]
+        == []
+    )
+    keywords = {item["keyword_id"]: item for item in rebuilt["keywords"]}
+    assert keywords["keyword-01"]["publication_count"] == 1
+    assert keywords["keyword-01"]["label"] == "reliable systems"
+    assert keywords["keyword-unclassified"]["publication_count"] == 1
+    assert keywords["keyword-unclassified"]["label"] == "Unclassified publications"
+    assert keywords["keyword-unclassified-pending-review"]["parent_keyword_id"] == (
+        "keyword-unclassified"
+    )
+    missing = {
+        **rebuilt,
+        "points": [
+            point for point in rebuilt["points"] if point["work_id"] != "work-one"
+        ],
+    }
+    with pytest.raises(ValueError, match="loses parent points"):
+        require_preserved_additive_artifact(baseline, missing, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-one")[
+        "x"
+    ] = 0.2
+    with pytest.raises(ValueError, match="moves a retained point"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    changed["points"].append({**changed["points"][0], "work_id": "unreviewed"})
+    with pytest.raises(ValueError, match="differs from reviewed new work IDs"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    changed["keywords"] = [
+        item for item in changed["keywords"] if item["keyword_id"] != "keyword-01"
+    ]
+    with pytest.raises(ValueError, match="loses parent keyword IDs"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(item for item in changed["keywords"] if item["keyword_id"] == "keyword-01")[
+        "label"
+    ] = "new label"
+    with pytest.raises(ValueError, match="changes parent topic metadata"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-one")[
+        "keyword_ids"
+    ] = ["keyword-unclassified", "keyword-unclassified-pending-review"]
+    with pytest.raises(ValueError, match="changes retained topic IDs"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-added")[
+        "keyword_ids"
+    ] = ["keyword-01", "keyword-01-01"]
+    with pytest.raises(ValueError, match="labels new work as reviewed"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-added")[
+        "x"
+    ] = 1.2
+    with pytest.raises(ValueError, match="unnormalized placement"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
 
 
 def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> None:
