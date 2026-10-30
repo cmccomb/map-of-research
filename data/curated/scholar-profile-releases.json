@@ -1215,6 +1215,86 @@
         "withheld_excluded_rows": 1,
         "withheld_ids_sha256": "86867ad2c0ebbf9210438446d87d0f420eb0bfb2b7b2c03217566d7161acdd27"
       }
+    },
+    {
+      "person_id": "person-rubenmartins-53d5891f",
+      "scholar_id": "43ePfKMAAAAJ",
+      "state": "released",
+      "expected_source_rows": 95,
+      "cache_sha256": "cd5cf4da866540c530143d193623cf5a1dd85b7bfb88845a552cfc57c6d3bf88",
+      "reason": "Reviewed public subset of 95 candidate observations from 127 complete visible Chrome rows; 27 uncertain and 5 excluded rows remain private. Five title-attribution risks are held pending linked-document review; selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 127,
+        "private_capture_sha256": "94e658543f5c631fffc4067244ab0a3231b8e9a8b792263e3c019d8df26c10f4",
+        "private_review_sha256": "b0b05fcc1d6b0e91c89742d88298d61208f9c03f5ac319a9b33ca8a284a687d0",
+        "private_rendered_html_sha256": "c7eff3a88f2908fa5b354fbb7407c46d66b32aaa546a4db0a1d078015fb1e511",
+        "selected_ids_sha256": "9283aa61288136fba19e5454065762c165da91142369ea8cfc488956ba2e141d",
+        "withheld_rows": 32,
+        "withheld_hold_rows": 27,
+        "withheld_excluded_rows": 5,
+        "withheld_ids_sha256": "9eb59198eae949e5b839f1d2e76f10ff5a3da75fff1e36dae6895baa0cfda7d8"
+      }
+    },
+    {
+      "person_id": "person-thomascortina-03bcec13",
+      "scholar_id": "zblDMCUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 13,
+      "cache_sha256": "061761a6a4b37375405a0ba2fb24b29b69191c3abae043b3d109337c782c355a",
+      "reason": "Reviewed public subset of 13 candidate observations from 23 complete visible Chrome rows; 7 uncertain and 3 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 23,
+        "private_capture_sha256": "09785926a584d03b80eb6ac8501d9214e389051bcfc9fe5eb789e16043f9ca0a",
+        "private_review_sha256": "985afa9330c31623e2de70a5d00cc64c0d6c3fd42d0715f7940514bae5e1798a",
+        "private_rendered_html_sha256": "3409f00ab5917f9367a93b0d8defd0ec2c3d92f4ed8205b070beed1d5ba2a574",
+        "selected_ids_sha256": "63687455377ccd38626966f9ca068753f56291a3c5320188cf609fd5e5e62cc8",
+        "withheld_rows": 10,
+        "withheld_hold_rows": 7,
+        "withheld_excluded_rows": 3,
+        "withheld_ids_sha256": "e1d70b476308f391c7dcad44c976a6461aac2e2b57e7c908536f98bd51d418bb"
+      }
+    },
+    {
+      "person_id": "person-ryanriley-00861de7",
+      "scholar_id": "75JB_d0AAAAJ",
+      "state": "released",
+      "expected_source_rows": 31,
+      "cache_sha256": "db711e87796c71134db3050d320937b40562920c68a5c1628d7ebd8a7b051dc7",
+      "reason": "Complete 31-row owner-linked Chrome capture independently reviewed; all 31 observations selected and zero withheld. The conference and journal versions are separately listed in the CMU-hosted owner bibliography; selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 31,
+        "private_capture_sha256": "d384623541b445fd72a5b88c775e9396ee7c9cd05544a449c720d2ca1b1c492b",
+        "private_review_sha256": "67769f23fc1c78a95948739deb7241f15b1b65ed6393102a2e60defe2250c510",
+        "private_rendered_html_sha256": "7dff85449b2cf4b6b890c4a5a59618e713cd5ea48427d9d4a81076dcc5bda846",
+        "selected_ids_sha256": "03c000cb8b22303036a8afc651d0fecdb515e2f13228b1d9f9f6aaddfa554fb7",
+        "withheld_rows": 0,
+        "withheld_hold_rows": 0,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "person_id": "person-danielanderson-85254924",
+      "scholar_id": "xLkb7NAAAAAJ",
+      "state": "released",
+      "expected_source_rows": 20,
+      "cache_sha256": "ec31bbc137faed377ac6e9f0eab202d2e75001ce63c0b3e1c0295473329aa5c8",
+      "reason": "Reviewed public subset of 20 candidate observations from 27 complete visible Chrome rows; 3 uncertain and 4 excluded rows remain private. Selected rows enter ordinary quality gates.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 27,
+        "private_capture_sha256": "fda1620b2d2d72e9d79e572981022e4ea8b1db2c18594715476a424ed01dd47e",
+        "private_review_sha256": "2d0e0106a544964848c6d5edf6995e4cce9196fc6b14de3232a372cafff2f6be",
+        "private_rendered_html_sha256": "34e1387e4b3a15c8541d9da3bdfb7d845a62a0072157d4d808cb9f39e88b4a39",
+        "selected_ids_sha256": "e26e74e7346552a9a206754f11c64e8e9f5fd9fe8fb5dc1ba4a7161a140e05ec",
+        "withheld_rows": 7,
+        "withheld_hold_rows": 3,
+        "withheld_excluded_rows": 4,
+        "withheld_ids_sha256": "a22697baf6e29f265f4b77f11090e40d0a93ec251e110e5847abee01ef18d1e6"
+      }
     }
   ]
 }
