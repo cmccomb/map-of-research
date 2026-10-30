@@ -1,4 +1,52 @@
 {
+  "atomic_release_intent": {
+    "artifact_revision": null,
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: a6da89e8683b482bacc6e50e3a53a86d",
+    "commit_nonce": "a6da89e8683b482bacc6e50e3a53a86d",
+    "committed_files": [
+      "README.md",
+      "authorships/train-00000-of-00001.parquet",
+      "maps/manifest.json",
+      "maps/publications.json",
+      "people/train-00000-of-00001.parquet",
+      "profile_publications/train-00000-of-00001.parquet",
+      "works/train-00000-of-00001.parquet"
+    ],
+    "intent_status": "before_write",
+    "mode": "single_parent_commit",
+    "parent_revision": "af0e147a935f5f2a557ea6b3f837890c46ede0c2",
+    "prewrite_gate": {
+      "gate": "full-source-and-region-continuity-v1",
+      "map_points": 53401,
+      "prior_revision": "af0e147a935f5f2a557ea6b3f837890c46ede0c2",
+      "raw_rows": 70160,
+      "source_snapshot_sha256": "3059c70d73c6a820e8e1f89158424f291ff56991be5b73eaa7538e861f37eb52",
+      "status": "pass"
+    },
+    "release_context": {
+      "producer_commit": "90ef58c6d2e829653ee1b6a67fedb74b71b9f90e",
+      "snapshot_commit": "f978fae22e7461debf1a9da3c0dc2725b9cc25eb",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41026418279"
+    },
+    "sha256_by_path": {
+      "README.md": "d4983986003f9f2873bc5a8b89e9915099b9af80ffa07a438ccb71c61c139ef7",
+      "authorships/train-00000-of-00001.parquet": "5fe87d2bd5ef3ac04097545facaa6e5175f50a80e03c23a5a13da7e5893f82d7",
+      "maps/manifest.json": "b989a8ec9466b6eebe8048578c7b2f9d92e6c88a3107770412427502cecd2af5",
+      "maps/publications.json": "c7cf18c2b175dd9fd0cda37c7d5b5a7a3cdd6ac212b2d05e741a5a5df0be0fad",
+      "people/train-00000-of-00001.parquet": "1445f603110a25f790d00893fa8b5d798e1f1b7e7994d3a7b55ddf374c827721",
+      "profile_publications/train-00000-of-00001.parquet": "73f6186d1f6ff6aa4c2f82fa59e4bfb4aaf3868f33bb0125590f82e392183d4d",
+      "works/train-00000-of-00001.parquet": "0d2b3445f21b995ebb41265a0ca627367f65eceae9751754b1b031b9c1998060"
+    },
+    "size_by_path": {
+      "README.md": 10439,
+      "authorships/train-00000-of-00001.parquet": 18725481,
+      "maps/manifest.json": 4073,
+      "maps/publications.json": 49317900,
+      "people/train-00000-of-00001.parquet": 670620,
+      "profile_publications/train-00000-of-00001.parquet": 252778445,
+      "works/train-00000-of-00001.parquet": 257935388
+    }
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,9 +54,9 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "Reviewed public subset requires a private local preflight receipt",
-  "error_type": "ValueError",
-  "finished_at_utc": "2026-10-30T08:22:54.655198+00:00",
+  "error_message": "Inspect the atomic release intent before retrying",
+  "error_type": "AtomicWriteOutcomeUnknown",
+  "finished_at_utc": null,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -25,7 +73,7 @@
     "reconciled_prior_ids": 19
   },
   "snapshot_commit": "f978fae22e7461debf1a9da3c0dc2725b9cc25eb",
-  "started_at_utc": "2026-10-30T08:22:40.252181+00:00",
+  "started_at_utc": "2026-10-30T08:28:18.538677+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41025754598"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41026418279"
 }
