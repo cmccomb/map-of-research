@@ -155,19 +155,33 @@
       "withheld_hold_rows": 14,
       "withheld_ids_sha256": "3051d99fcb4157c505dc02d739ec57769de88889833dbdf3d1da67252ef9c784",
       "withheld_rows": 23
+    },
+    {
+      "cache_sha256": "d4fe71ea93362a35de588b50e6e03907cd67876fdfdb5e7dc3e0b60009604913",
+      "observed_visible_rows": 17,
+      "person_id": "person-kellyrivers-db33c482",
+      "private_capture_sha256": "630ad6e4190123a639b39ac4516ed69a50aa333af00b13741bfcf315700dc6d0",
+      "private_review_sha256": "15ccfb5131d2bd1c237e9e2c2212bd1735d61448f4afbae316d49b709ee79784",
+      "scholar_id": "UiaK6iEAAAAJ",
+      "selected_ids_sha256": "d9c8cb7f93a7553159bed8aa05438da7354a9062a0774020ac1a13d2d05aa67c",
+      "selected_rows": 15,
+      "withheld_excluded_rows": 1,
+      "withheld_hold_rows": 1,
+      "withheld_ids_sha256": "86867ad2c0ebbf9210438446d87d0f420eb0bfb2b7b2c03217566d7161acdd27",
+      "withheld_rows": 2
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "6440991651521b2e9e98d8a309bda7c097fac13f52ba171f213859b249cfbdc5",
-  "source_selection_manifest_sha256": "83c91ccba40e48ef48a54ac60a5c3e519ea0ba035ccdb869501450c8b2ed3151",
-  "source_snapshot_sha256": "25a05c785ce2f131b15cef2d9c828287341213d5227d87e32702f8f58f1da96e",
+  "selected_ids_sha256": "c0fc73dcf1cb57ba89b21f26e0cb00df1fa16d7bbf97df58e2a3f8f09081f922",
+  "source_selection_manifest_sha256": "75e0ea029b3179228ca679bcee7d9958b8455d8ff57d04be777e6f1ea18177fd",
+  "source_snapshot_sha256": "3059c70d73c6a820e8e1f89158424f291ff56991be5b73eaa7538e861f37eb52",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 1029,
-    "selected_rows": 683,
-    "withheld_excluded_rows": 45,
-    "withheld_hold_rows": 301,
-    "withheld_rows": 346
+    "observed_visible_rows": 1046,
+    "selected_rows": 698,
+    "withheld_excluded_rows": 46,
+    "withheld_hold_rows": 302,
+    "withheld_rows": 348
   },
-  "withheld_ids_sha256": "22fa060e9d7d1828724a2e3c1157452d79df42f6e264a7bd17f410bb054f03a7"
+  "withheld_ids_sha256": "c334ca83307647760b9b9deeea646aa82b5dd8865f714bd72488b3fa4356db06"
 }

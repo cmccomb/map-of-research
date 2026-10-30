@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "bd7384b7747ca7e375fdf7a6760b55f562c07bc3",
+  "base_source_status_commit": "faf9a2d4a0342056b457799652e3f703a0af6efa",
   "registry_producer_commit": "715813ac78351e5646652099962a8d9cb426c579",
   "profiles": [
     {
@@ -906,16 +906,51 @@
         "withheld_ids_sha256": "3051d99fcb4157c505dc02d739ec57769de88889833dbdf3d1da67252ef9c784"
       },
       "cache_sha256": "ca6ca6f18134a3aff72e30cb4f728bdcbdcef28c5722d56701f7dceb82125e0d"
+    },
+    {
+      "slug": "kelly-rivers",
+      "person_id": "person-kellyrivers-db33c482",
+      "scholar_id": "UiaK6iEAAAAJ",
+      "expected_source_rows": 15,
+      "selected_author_pub_ids": [
+        "UiaK6iEAAAAJ:2osOgNQ5qMEC",
+        "UiaK6iEAAAAJ:4DMP91E08xMC",
+        "UiaK6iEAAAAJ:4TOpqqG69KYC",
+        "UiaK6iEAAAAJ:7PzlFSSx8tAC",
+        "UiaK6iEAAAAJ:9ZlFYXVOiuMC",
+        "UiaK6iEAAAAJ:9yKSN-GCB0IC",
+        "UiaK6iEAAAAJ:L8Ckcad2t8MC",
+        "UiaK6iEAAAAJ:M3ejUd6NZC8C",
+        "UiaK6iEAAAAJ:Wp0gIr-vW9MC",
+        "UiaK6iEAAAAJ:ZeXyd9-uunAC",
+        "UiaK6iEAAAAJ:aqlVkmm33-oC",
+        "UiaK6iEAAAAJ:d1gkVwhDpl0C",
+        "UiaK6iEAAAAJ:dhFuZR0502QC",
+        "UiaK6iEAAAAJ:u-x6o8ySG0sC",
+        "UiaK6iEAAAAJ:u5HHmVD_uO8C"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 17,
+        "private_capture_sha256": "630ad6e4190123a639b39ac4516ed69a50aa333af00b13741bfcf315700dc6d0",
+        "private_review_sha256": "15ccfb5131d2bd1c237e9e2c2212bd1735d61448f4afbae316d49b709ee79784",
+        "private_rendered_html_sha256": "4cfab4689b1169e665b192c4b17f3c67111a1929f43424b96f3f5a43e5031c0f",
+        "selected_ids_sha256": "d9c8cb7f93a7553159bed8aa05438da7354a9062a0774020ac1a13d2d05aa67c",
+        "withheld_rows": 2,
+        "withheld_hold_rows": 1,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "86867ad2c0ebbf9210438446d87d0f420eb0bfb2b7b2c03217566d7161acdd27"
+      },
+      "cache_sha256": "d4fe71ea93362a35de588b50e6e03907cd67876fdfdb5e7dc3e0b60009604913"
     }
   ],
   "totals": {
-    "observed_visible_rows": 1029,
-    "selected_rows": 683,
-    "withheld_hold_rows": 301,
-    "withheld_excluded_rows": 45,
-    "withheld_rows": 346
+    "observed_visible_rows": 1046,
+    "selected_rows": 698,
+    "withheld_hold_rows": 302,
+    "withheld_excluded_rows": 46,
+    "withheld_rows": 348
   },
-  "selected_ids_sha256": "6440991651521b2e9e98d8a309bda7c097fac13f52ba171f213859b249cfbdc5",
-  "withheld_ids_sha256": "22fa060e9d7d1828724a2e3c1157452d79df42f6e264a7bd17f410bb054f03a7",
+  "selected_ids_sha256": "c0fc73dcf1cb57ba89b21f26e0cb00df1fa16d7bbf97df58e2a3f8f09081f922",
+  "withheld_ids_sha256": "c334ca83307647760b9b9deeea646aa82b5dd8865f714bd72488b3fa4356db06",
   "private_capture_files_or_html_copied": false
 }
