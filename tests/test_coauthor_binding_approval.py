@@ -74,6 +74,7 @@ def _work(work_id: str) -> dict:
         "map_region_documented_override": False,
         "map_exclusion_reasons": [],
         "department_ids": ["meche"],
+        "quality_assessment_version": "quality-v1",
     }
 
 
@@ -102,6 +103,10 @@ def test_changed_snapshot_or_observation_is_rejected(monkeypatch):
     altered[0]["work_id"] = "work-unreviewed"
     with pytest.raises(ValueError, match="exact reviewed transition"):
         _validate(monkeypatch, prior, altered)
+    wrong_identity = copy.deepcopy(current)
+    wrong_identity[0]["author_pub_id"] = "0P9w_S0AAAAJ:wrong-owner-row"
+    with pytest.raises(ValueError, match="exact reviewed transition"):
+        _validate(monkeypatch, prior, wrong_identity)
 
 
 def test_fourth_binding_is_rejected_even_with_exact_three_approval(monkeypatch):
@@ -139,3 +144,20 @@ def test_region_rejects_unreviewed_approval_hash(monkeypatch):
             prior_revision=review.PRIOR_REVISION,
             coauthor_binding_approval=replace(approved, manifest_sha256="unreviewed"),
         )
+
+
+def test_region_rejects_unused_one_of_three_approvals(monkeypatch):
+    prior, current = _rows()
+    approved = _validate(monkeypatch, prior, current)
+    unchanged = copy.deepcopy(current)
+    unchanged[0]["work_id"] = prior[0]["work_id"]
+    with pytest.raises(RegionReleaseDiffError) as error:
+        reconcile_region_decisions(
+            pandas.DataFrame([_work(row["work_id"]) for row in unchanged]),
+            pandas.DataFrame(unchanged),
+            [_work(row["work_id"]) for row in prior],
+            prior,
+            prior_revision=review.PRIOR_REVISION,
+            coauthor_binding_approval=approved,
+        )
+    assert len(error.value.receipt["unused_coauthor_binding_approvals"]) == 1
