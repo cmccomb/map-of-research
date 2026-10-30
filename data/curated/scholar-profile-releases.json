@@ -1395,6 +1395,26 @@
         "withheld_excluded_rows": 3,
         "withheld_ids_sha256": "f1774e2b98371343d9765270c807a2c9f8df7a2c0205c9633a00ac987e7140d7"
       }
+    },
+    {
+      "person_id": "person-annlee-3bb27a6a",
+      "scholar_id": "pDQsaXgAAAAJ",
+      "state": "released",
+      "expected_source_rows": 36,
+      "cache_sha256": "7f23312165a6e5938e03ca1772381ecb12e2a40c274acfc91b703bda03399c3a",
+      "reason": "Local private-preview candidate: 36 original-document-supported Ann B. Lee observations from 103 complete visible Chrome rows. Sixty uncertain rows and seven excluded rows remain private, including one document-supported row with non-decimal captured citation display. Two selected rows share existing Dejan Slepcev works; exact no-loss and binding gates must pass before any public release.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 103,
+        "private_capture_sha256": "6befd233114df06a013c5b90319cfcf92292731078afbf0bf725a793c4a4ee2b",
+        "private_review_sha256": "e5687e65c6161c0d080564b0cfe415973f1f73c2b10f4b1930e75f0c769f4fc8",
+        "private_rendered_html_sha256": "8a44b1828c6039f1bf7c24082b1fbf942349ceedb9e158d3d94135e9d0010ac0",
+        "selected_ids_sha256": "59ae3be3c075fd2d5b021ad96198bd3728acea39e3e623b609588410a328e001",
+        "withheld_rows": 67,
+        "withheld_hold_rows": 60,
+        "withheld_excluded_rows": 7,
+        "withheld_ids_sha256": "e6573b39301c1d9188893dd94db358b68780f9fe6c2c04dc37e5f1e53dffb5d0"
+      }
     }
   ]
 }
