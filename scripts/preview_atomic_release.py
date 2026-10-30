@@ -136,7 +136,9 @@ def _public_subset_status_paths(snapshot: Path) -> tuple[Path | None, Path | Non
     selection = snapshot / "status/browser-public-subset-current.json"
     preflight = snapshot / "status/private-public-subset-preflight.json"
     if selection.is_file() != preflight.is_file():
-        raise ValueError("Public subset selection and preflight receipt must travel together")
+        raise ValueError(
+            "Public subset selection and preflight receipt must travel together"
+        )
     return (preflight, selection) if selection.is_file() else (None, None)
 
 
