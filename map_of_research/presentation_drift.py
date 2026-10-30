@@ -728,9 +728,7 @@ def preserve_reviewed_additive_presentation(
                 raise ValueError(
                     f"Additive parent off-map work lacks presentation fields: {work_id}"
                 )
-            if bool(output.at[index, "map_eligible"]) != bool(
-                prior["map_eligible"]
-            ):
+            if bool(output.at[index, "map_eligible"]) != bool(prior["map_eligible"]):
                 raise ValueError(
                     f"Additive off-map work changes map eligibility: {work_id}"
                 )
@@ -857,6 +855,10 @@ def require_preserved_additive_artifact(
             raise ValueError("Additive staged map changes retained topic IDs")
         if point.get("source_url") != staged_point.get("source_url"):
             raise ValueError("Additive staged map changes retained source URL")
+        if point.get("reported_faculty_coauthors", []) != staged_point.get(
+            "reported_faculty_coauthors", []
+        ):
+            raise ValueError("Additive staged map changes retained reported coauthors")
     for work_id in placed:
         point = new[work_id]
         if point["keyword_ids"] != [

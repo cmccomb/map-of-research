@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from copy import deepcopy
 from pathlib import Path
@@ -18,6 +19,7 @@ from map_of_research.presentation_drift import (
     reported_coauthor_evidence_changed,
     require_held_additive_staged_works,
     require_presentation_review,
+    require_preserved_additive_artifact,
 )
 
 
@@ -728,9 +730,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
         "tsne_y": 0.9,
         "keyword": "unreviewed refit",
     }
-    works = pandas.concat(
-        [works, pandas.DataFrame([refitted])], ignore_index=True
-    )
+    works = pandas.concat([works, pandas.DataFrame([refitted])], ignore_index=True)
     output, _ = preserve_reviewed_additive_presentation(
         works,
         prior,
@@ -765,7 +765,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
-        reported_coauthor_source_sha256="a" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=review_path,
         )
 
@@ -774,6 +774,22 @@ def test_additive_preserves_prior_off_map_work_presentation(
         preserve_reviewed_additive_presentation(
             without_prior_off_map,
             prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="a" * 64,
+            review_path=review_path,
+        )
+
+    prior_missing_field = deepcopy(prior)
+    prior_missing_field[-1].pop("tsne_y")
+    with pytest.raises(ValueError, match="off-map work lacks presentation fields"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior_missing_field,
             parent,
             candidate,
             prior_revision="a" * 40,
@@ -916,7 +932,7 @@ def test_additive_rejects_prior_excluded_promotion_and_topic_id_collision(
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
-        reported_coauthor_source_sha256="a" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=tmp_path / "missing.json",
         )
     parent["keywords"].append(
@@ -973,7 +989,7 @@ def test_additive_requires_complete_parent_topic_metadata(tmp_path: Path) -> Non
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
-        reported_coauthor_source_sha256="a" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=path,
         )
 
@@ -1011,7 +1027,7 @@ def test_additive_rejects_malformed_work_inputs(defect: str, message: str) -> No
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
-        reported_coauthor_source_sha256="a" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=None,
         )
 
@@ -1034,7 +1050,7 @@ def test_additive_rejects_parent_with_missing_topic_field(tmp_path: Path) -> Non
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
-        reported_coauthor_source_sha256="a" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=path,
         )
 
@@ -1072,3 +1088,37 @@ def test_additive_rejects_changed_reports_or_unexpected_new_metadata() -> None:
     candidate["points"][-1]["unexpected_public_field"] = "new"
     with pytest.raises(ValueError, match="unexpected point metadata"):
         freeze_additive(parent, candidate, works, None)
+
+
+def test_additive_requires_exact_report_source_sha() -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(ValueError, match="lacks exact reported coauthor source SHA"):
+        preserve_reviewed_additive_presentation(
+            works,
+            parent_work_rows(parent),
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="invalid",
+            review_path=None,
+        )
+
+
+def test_additive_staged_map_preserves_retained_reported_coauthors() -> None:
+    parent = artifact(1)
+    parent["points"][0]["reported_faculty_coauthors"] = [
+        {"person_id": "person-other", "source_person_id": "person-author"}
+    ]
+    staged = deepcopy(parent)
+    receipt = {
+        "placed_new_work_ids": [],
+        "held_new_work_ids": [],
+        "placed_new_coordinates_sha256": hashlib.sha256(b"[]").hexdigest(),
+    }
+    require_preserved_additive_artifact(parent, staged, receipt)
+    staged["points"][0]["reported_faculty_coauthors"] = []
+    with pytest.raises(ValueError, match="changes retained reported coauthors"):
+        require_preserved_additive_artifact(parent, staged, receipt)

@@ -8,11 +8,14 @@ This ledger supports an isolated no-write preview only. It is not a public relea
 - Selected-only source stage: 36 rows. One additional document-verified row remains private because its captured citation count includes a footnote marker rejected by the current decimal-only parser.
 - Withheld: 60 holds and 7 exclusions. No withheld IDs, raw captures, or HTML enter the source stage.
 - Two selected Ann rows correspond to existing public Dejan Slepcev works; the preview must preserve both prior work IDs and Dejan bindings while adding Ann.
-- Source commit for exact preview: `843f753599313a57db4e70574c2e307e3a9fefaf`; current Hub parent: `42031e014886e67c4b606261c2e0dee217ee762c`.
-- Source selection manifest SHA-256: `708c614b3ef3ac47c53d68f83331381b9930a88578663f0948d7e5e182986400`.
-- Source private-subset preflight receipt SHA-256: `47abbd10e492efbba54017faf48979bd06ea30942a26f8b28a724be2e4a6ac74`.
+- Historical Hub4203 local preview source commit: `843f753599313a57db4e70574c2e307e3a9fefaf`. Current local selected-only source candidate: `cb6e5b298f6805b1eb8af2ccffe953025da2846c`; current exact public parent: Hub `df71f79e48d3af7a1cc3eb0996e474564a4a7784`. The df71 all-hold placement review is a separate source-relative manifest; it is not release approval.
+- Historical Ann-only source selection manifest SHA-256: `708c614b3ef3ac47c53d68f83331381b9930a88578663f0948d7e5e182986400`.
+- Historical Ann-only source private-subset preflight receipt SHA-256: `47abbd10e492efbba54017faf48979bd06ea30942a26f8b28a724be2e4a6ac74`.
 - Ann selected cache SHA-256: `7f23312165a6e5938e03ca1772381ecb12e2a40c274acfc91b703bda03399c3a`.
-- Staged private review SHA-256: `e5687e65c6161c0d080564b0cfe415973f1f73c2b10f4b1930e75f0c769f4fc8`.
+- Historical Ann-only staged private review SHA-256: `e5687e65c6161c0d080564b0cfe415973f1f73c2b10f4b1930e75f0c769f4fc8`.
+
+- Current df71 all-hold placement manifest SHA-256: `e29aecb4ccb62d0330a212dff4a1af80d187ee87951e9639dc981449928d31de`; 69 works, all coordinates null and topics pending.
+- Current df71 diagnostic receipt: `work/ann-aarti-df71-stable-digest-probe-20261030/receipt.json` failed closed on the prior manifest schema before any Hub write; final updated-manifest no-write preview remains required.
 
 ## Private review evidence
 
