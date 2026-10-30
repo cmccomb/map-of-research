@@ -32,6 +32,9 @@ SNAPSHOT_SCHEMA_VERSION = 6
 MANIFEST_SCHEMA_VERSION = 1
 DEFAULT_CACHE_DIR = Path("data/authors")
 DEFAULT_CURATED_WORKS_PATH = Path("data/curated/works.json")
+DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH = Path(
+    "data/curated/reported-faculty-coauthors.json"
+)
 DEFAULT_SNAPSHOT_PATH = Path("snapshots/cmu-engineering-publications.parquet")
 DEFAULT_MANIFEST_PATH = Path(
     "snapshots/cmu-engineering-publications.parquet.manifest.json"
@@ -148,6 +151,12 @@ def _curated_path(people_path: Path, curated_path: Path | None) -> Path:
     if curated_path is not None:
         return curated_path
     return people_path.parent.parent / DEFAULT_CURATED_WORKS_PATH
+
+
+def _reported_coauthors_path(snapshot_path: Path, source_path: Path | None) -> Path:
+    if source_path is not None:
+        return source_path
+    return snapshot_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH
 
 
 def _https_url(value: Any, *, field: str) -> str:
@@ -377,6 +386,7 @@ def build_snapshot(
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     cache_dir: Path = DEFAULT_CACHE_DIR,
     curated_path: Path | None = None,
+    reported_coauthors_path: Path | None = None,
     snapshot_path: Path = DEFAULT_SNAPSHOT_PATH,
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     now: dt.datetime | None = None,
@@ -389,6 +399,7 @@ def build_snapshot(
     registry = load_registry(people_path, memberships_path, departments_path)
     profiles = unique_profiles(registry)
     source_path = _curated_path(people_path, curated_path)
+    reports_path = _reported_coauthors_path(snapshot_path, reported_coauthors_path)
     rows: list[dict[str, Any]] = []
     cached_profile_ids: list[str] = []
     for profile in profiles:
@@ -461,6 +472,12 @@ def build_snapshot(
         if source_path.is_file()
         else "",
         "curated_work_rows": int((frame["source_type"] == "curated_verified").sum()),
+        "reported_faculty_coauthors_file": (
+            reports_path.name if reports_path.is_file() else ""
+        ),
+        "reported_faculty_coauthors_sha256": (
+            sha256_file(reports_path) if reports_path.is_file() else ""
+        ),
         "cached_profile_ids_sha256": hashlib.sha256(
             "\n".join(sorted(cached_profile_ids)).encode("utf-8")
         ).hexdigest(),
@@ -479,6 +496,7 @@ def validate_snapshot(
     memberships_path: Path = DEFAULT_MEMBERSHIPS_PATH,
     departments_path: Path = DEFAULT_DEPARTMENTS_PATH,
     curated_path: Path | None = None,
+    reported_coauthors_path: Path | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Validate snapshot provenance and contents before any upload."""
 
@@ -530,6 +548,16 @@ def validate_snapshot(
         or manifest["curated_works_sha256"] != current_curated_sha
     ):
         raise ValueError("Curated work source does not match the snapshot manifest")
+    reports_path = _reported_coauthors_path(snapshot_path, reported_coauthors_path)
+    report_name = reports_path.name if reports_path.is_file() else ""
+    report_sha = sha256_file(reports_path) if reports_path.is_file() else ""
+    if (
+        manifest.get("reported_faculty_coauthors_file", "") != report_name
+        or manifest.get("reported_faculty_coauthors_sha256", "") != report_sha
+    ):
+        raise ValueError(
+            "Reported faculty coauthor source differs from snapshot manifest"
+        )
 
     created_at = dt.datetime.fromisoformat(str(manifest["created_at_utc"]))
     if created_at.tzinfo is None:
@@ -573,6 +601,7 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--reported-faculty-coauthors", type=Path)
     parser.add_argument("--snapshot", type=Path, default=DEFAULT_SNAPSHOT_PATH)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST_PATH)
     return parser
@@ -586,6 +615,7 @@ def build_main(argv: Sequence[str] | None = None) -> int:
         departments_path=args.departments,
         cache_dir=args.cache_dir,
         curated_path=args.curated_works,
+        reported_coauthors_path=args.reported_faculty_coauthors,
         snapshot_path=args.snapshot,
         manifest_path=args.manifest,
     )
@@ -610,6 +640,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
     )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--curated-works", type=Path)
+    parser.add_argument("--reported-faculty-coauthors", type=Path)
     args = parser.parse_args(argv)
     _, manifest = validate_snapshot(
         args.snapshot,
@@ -619,6 +650,7 @@ def validate_main(argv: Sequence[str] | None = None) -> int:
         memberships_path=args.memberships,
         departments_path=args.departments,
         curated_path=args.curated_works,
+        reported_coauthors_path=args.reported_faculty_coauthors,
     )
     print(json.dumps(manifest, sort_keys=True))
     return 0

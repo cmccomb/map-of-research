@@ -195,11 +195,19 @@ from .registry import (
     load_registry,
     validate_included_scholar_primary_homes,
 )
+from .reported_faculty_coauthors import (
+    apply_reported_faculty_coauthors,
+    require_reported_source_sync,
+)
 from .scs_four_topic_hold import (
     PRIOR_WORK_FIELDS as SCS_TOPIC_HOLD_PRIOR_WORK_FIELDS,
 )
 from .scs_four_topic_hold import apply_scs_four_topic_holds
-from .snapshot import DEFAULT_MAX_AGE_DAYS, validate_snapshot
+from .snapshot import (
+    DEFAULT_MAX_AGE_DAYS,
+    DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH,
+    validate_snapshot,
+)
 from .sullivan_continuity_addendum import (
     DEFAULT_ADDENDUM_PATH as DEFAULT_SULLIVAN_CONTINUITY_ADDENDUM_PATH,
 )
@@ -867,6 +875,8 @@ def build_map_artifact(
     *,
     generated_at_utc: str,
     publication_hold_reasons: Mapping[str, str] | None = None,
+    reported_faculty_coauthors_by_work: Mapping[str, list[dict[str, str]]]
+    | None = None,
 ) -> dict[str, Any]:
     """Build the full work-centric artifact without changing global coordinates."""
 
@@ -891,6 +901,13 @@ def build_map_artifact(
     keyword_metadata: dict[str, dict[str, Any]] = {}
     for row, memberships in selected_rows:
         collaboration_eligible = bool(getattr(row, "collaboration_eligible", True))
+        reported_coauthors = list(
+            (reported_faculty_coauthors_by_work or {}).get(str(row.work_id), [])
+        )
+        if reported_coauthors and not collaboration_eligible:
+            raise ValueError(
+                "Reported faculty coauthor work lost collaboration eligibility"
+            )
         for coauthor in (
             _as_list(getattr(row, "external_coauthors", []))
             if collaboration_eligible
@@ -1015,6 +1032,11 @@ def build_map_artifact(
                 "source_verification_urls": list(
                     _as_list(getattr(row, "source_verification_urls", []))
                 ),
+                **(
+                    {"reported_faculty_coauthors": reported_coauthors}
+                    if reported_coauthors
+                    else {}
+                ),
                 "external_coauthor_ids": list(
                     _as_list(getattr(row, "external_coauthor_ids", []))
                 )
@@ -1025,6 +1047,11 @@ def build_map_artifact(
             }
         )
     points.sort(key=lambda point: point["work_id"])
+    unused_reports = set(reported_faculty_coauthors_by_work or {}).difference(
+        {point["work_id"] for point in points}
+    )
+    if unused_reports:
+        raise ValueError("Reported faculty coauthor assertion has no mapped point")
 
     keyword_members: dict[str, list[dict[str, Any]]] = {}
     for point in points:
@@ -1206,6 +1233,8 @@ def _write_map_artifacts(
     dataset_commits: Mapping[str, str],
     continuity_receipt: Mapping[str, Any] | None = None,
     publication_hold_reasons: Mapping[str, str] | None = None,
+    reported_faculty_coauthors_by_work: Mapping[str, list[dict[str, str]]]
+    | None = None,
 ) -> tuple[Path, Path, dict[str, Any]]:
     """Render both map files before the Hub is touched."""
 
@@ -1232,6 +1261,7 @@ def _write_map_artifacts(
         registry,
         generated_at_utc=generated_at_utc,
         publication_hold_reasons=publication_hold_reasons,
+        reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
     )
     artifact_path = maps_dir / MAP_ARTIFACT_NAME
     artifact_path.write_text(
@@ -1428,6 +1458,8 @@ def _publish_atomic_release(
     approved_person_hold_losses: frozenset[tuple[str, str, str, str]] = frozenset(),
     held_topic_parent_artifact: Mapping[str, Any] | None = None,
     held_topic_parent_map_sha256: str | None = None,
+    reported_faculty_coauthors_by_work: Mapping[str, list[dict[str, str]]]
+    | None = None,
     enforce_presentation_drift: bool = False,
     presentation_drift_approval_path: Path | None = None,
     preserve_deletion_presentation: bool = False,
@@ -1538,6 +1570,7 @@ def _publish_atomic_release(
                 <= set(tables["people"].columns)
                 else {}
             ),
+            reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
         )
         presentation_receipt = None
         if enforce_presentation_drift:
@@ -1787,6 +1820,7 @@ def publish_snapshot(
         people_path=people_path,
         memberships_path=memberships_path,
         departments_path=departments_path,
+        curated_path=curated_works_path,
     )
     sullivan_transition = (
         prior_revision == SULLIVAN_PRIOR_REVISION
@@ -1983,6 +2017,28 @@ def publish_snapshot(
     tables["works"] = add_publication_keywords(tables["works"])
     tables["works"] = exclude_low_information_regions(
         tables["works"], doi_aliases=doi_aliases
+    )
+    producer_reports_path = (
+        people_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH
+    )
+    frozen_reports_path = (
+        snapshot_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH
+    )
+    has_frozen_reports = require_reported_source_sync(
+        producer_reports_path, frozen_reports_path
+    )
+    reported_coauthors_by_work, reported_coauthor_receipt = (
+        apply_reported_faculty_coauthors(
+            tables["works"],
+            tables["profile_publications"],
+            tables["authorships"],
+            registry,
+            source_path=frozen_reports_path,
+            source_sha256=str(manifest.get("reported_faculty_coauthors_sha256", "")),
+            held_person_ids=frozenset(item.person_id for item in person_holds),
+        )
+        if has_frozen_reports
+        else ({}, [])
     )
     comparison_revision = region_comparison_revision or prior_revision
     chem_carryforward = (
@@ -2311,6 +2367,7 @@ def publish_snapshot(
                 tables["works"],
                 registry,
                 generated_at_utc=str(manifest["created_at_utc"]),
+                reported_faculty_coauthors_by_work=reported_coauthors_by_work,
             ),
             held_observation_ids=held_observation_ids,
         )
@@ -2374,6 +2431,7 @@ def publish_snapshot(
         approved_person_hold_losses=approved_person_hold_losses,
         held_topic_parent_artifact=held_topic_parent_artifact,
         held_topic_parent_map_sha256=held_topic_parent_map_sha256,
+        reported_faculty_coauthors_by_work=reported_coauthors_by_work,
         enforce_presentation_drift=True,
         presentation_drift_approval_path=presentation_drift_approval_path,
         preserve_deletion_presentation=True,
@@ -2401,6 +2459,8 @@ def publish_snapshot(
         "private_subset_preflight": private_subset_preflight,
         "person_publication_hold_manifest_sha256": person_hold_manifest_sha256,
         "person_publication_holds": person_hold_receipt,
+        "reported_faculty_coauthors": reported_coauthor_receipt,
+        "reported_faculty_coauthor_count": len(reported_coauthor_receipt),
         "held_person_observation_rows": sum(
             item["held_source_rows"] for item in person_hold_receipt
         ),

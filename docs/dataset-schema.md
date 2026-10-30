@@ -139,6 +139,9 @@ retained department membership and fetch timestamp. The additive
 `contributor_role` field distinguishes an inventor, editor, or participant
 from an author for reviewed context rows. Excluded observations
 remain in `profile_publications` but do not create authorship rows.
+An exact reviewed `reported_faculty_coauthors` point annotation supplies
+collaboration evidence from another person's released Scholar observation. It
+does not create a target-person authorship row.
 
 ## Browser artifacts
 
@@ -153,6 +156,11 @@ additive `publication_type`, `source_document_id`, `collaboration_eligible`, and
 `context_evidence_urls` fields retain the reviewed context on a mapped point.
 An optional `display_contributors` overrides only the presentation of an edited
 book's incomplete Scholar byline; the original `authors` remains in the dataset.
+An optional `reported_faculty_coauthors` point list names target faculty IDs,
+the reporting faculty ID and exact observation ID, and the primary byline URL
+and review date. `faculty_ids` retains only direct eligible authorship rows;
+consumers may use the reviewed report for a separately labeled collaboration
+edge while keeping target publication counts unchanged.
 The top-level `layouts` catalog gives
 each view's label, method, interpretation, coordinate fields, and version;
 `default_layout_id` selects the initial view. The `keywords` catalog provides a

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "assertions": [
+    {
+      "person_id": "person-poshenloh-b545d989",
+      "source_person_id": "person-alanfrieze-ef264103",
+      "source_scholar_id": "EqKRQ4YAAAAJ",
+      "source_author_pub_id": "EqKRQ4YAAAAJ:j7_hQOaDUrUC",
+      "source_observation_id": "observation-cd0663e9601bd3e6cf675948b86b4651a224f508b200933a59633af3c307f6aa",
+      "source_work_id": "work-717988b16f50d77dbe3abf960a7a3c99640cd774db5e146703a066319697b9ef",
+      "source_title": "Rainbow Hamilton cycles in random graphs",
+      "source_authors": "A Frieze, PS Loh",
+      "source_url": "https://www.math.cmu.edu/~ploh/docs/research/20120722-rainbow-ham.pdf",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "person_id": "person-gautamiyer-3894621b",
+      "source_person_id": "person-robertpego-707a4eaf",
+      "source_scholar_id": "neJ3NIUAAAAJ",
+      "source_author_pub_id": "neJ3NIUAAAAJ:LPZeul_q3PIC",
+      "source_observation_id": "observation-fb3aef196f87481d424ea8e4c17b62dfd31fac9226565c1cb48c8d253a47b49b",
+      "source_work_id": "work-06013990e484f5b1bb01f03e11b01c5a4afd9cd4cc5b608fb4c512ebd87dd79c",
+      "source_title": "Bose--Einstein Condensation in a Hyperbolic Model for the Kompaneets Equation",
+      "source_authors": "J Ballew, G Iyer, RL Pego",
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/research/papers/201512-kompaneets.pdf",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "person_id": "person-johnnagle-56fdb243",
+      "source_person_id": "person-markusdeserno-3b04d008",
+      "source_scholar_id": "1J28ExgAAAAJ",
+      "source_author_pub_id": "1J28ExgAAAAJ:tKAzc9rXhukC",
+      "source_observation_id": "observation-5880ee59442887177d05713060bc0ab473c0363fcb922142c254847d1aef6ada",
+      "source_work_id": "work-92ea0dceaa429d283e461ac3794b2f615acb3d4ec6fe850e0d6003a1204b1a0f",
+      "source_title": "Mechanical properties of lipid bilayers: a note on the Poisson ratio",
+      "source_authors": "MM Terzi, M Deserno, JF Nagle",
+      "source_url": "https://www.cmu.edu/physics/people/faculty/nagle.html",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "person_id": "person-charlesettensohn-771e995c",
+      "source_person_id": "person-cjoelmcmanus-f28918ce",
+      "source_scholar_id": "28yZqbcAAAAJ",
+      "source_author_pub_id": "28yZqbcAAAAJ:eQOLeE2rZwMC",
+      "source_observation_id": "observation-a371d0f0c7d62ed15fb34edd73e995c40c6ee9e0c7e52f834422894541935d6e",
+      "source_work_id": "work-6f1fefa8271fff9120520604cc522a7c44223b035a0ca3d6954826b6d26a9881",
+      "source_title": "Genome-wide analysis of the skeletogenic gene regulatory network of sea urchins",
+      "source_authors": "K Rafiq, T Shashikant, CJ McManus, CA Ettensohn",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/24496631/",
+      "verified_at": "2026-10-30"
+    }
+  ]
+}
