@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "status": "private_full_capture_review_reconciled_to_public_subset",
-  "source_selection_manifest_sha256": "708c614b3ef3ac47c53d68f83331381b9930a88578663f0948d7e5e182986400",
-  "source_snapshot_sha256": "c3164e9468605bf98a24942df037bb0efae05c81382b4a88b9bd384f94dd196a",
-  "selected_ids_sha256": "69bce5963f2d8ccab84699a919ab7ea2bcc0f84d377aec2cdff3f6614045904f",
-  "withheld_ids_sha256": "43a40c06d79b36510c7c4f8d72d391492e873ed8e1eba10e3dd850ed8b3d6795",
+  "source_selection_manifest_sha256": "f07b241e6724d9e8d625994c48d11aac5b8715b9e2387653fd212c74cf026e49",
+  "source_snapshot_sha256": "bbfd125f61fa741708fa5e0697a7a865e1a8192f92713c275601fa061f3fb7ef",
+  "selected_ids_sha256": "0d84bebb5dfab63df7ed354d74cca9200a153f6580fff2bf9b050b1fca9f3227",
+  "withheld_ids_sha256": "569d27bfdc2a1961dbdc7004fb7408fb02b9f6649426709f6911ab9d4f6cd5d1",
   "totals": {
-    "observed_visible_rows": 1586,
-    "selected_rows": 1014,
-    "withheld_hold_rows": 493,
-    "withheld_excluded_rows": 79,
-    "withheld_rows": 572
+    "observed_visible_rows": 1799,
+    "selected_rows": 1049,
+    "withheld_hold_rows": 665,
+    "withheld_excluded_rows": 85,
+    "withheld_rows": 750
   },
   "profiles": [
     {
@@ -320,6 +320,20 @@
       "withheld_rows": 67,
       "withheld_hold_rows": 60,
       "withheld_excluded_rows": 7
+    },
+    {
+      "person_id": "person-aartisingh-b9514fa1",
+      "scholar_id": "vGBcNVAAAAAJ",
+      "cache_sha256": "e5013952a25275c47e5ab7f711d779eb7c91775c9d5e1cb41040892290877855",
+      "private_capture_sha256": "b21c5d9edd156d4063606d8a5162276073791c587e6224ebe42a26d771e581f8",
+      "private_review_sha256": "a3ab99c4df71ee9cdbb42afe50717a1a2c7f1e461f9bacb72cc5b78e1639d712",
+      "selected_ids_sha256": "855fcb0e7bb3d91092073af5ffc56a1d0745984ba8afc68b88f39571a38e2846",
+      "withheld_ids_sha256": "b8c8a441f990db5a96aaee879c2caec52bd727f446991ed713f0ed8b216114c9",
+      "observed_visible_rows": 213,
+      "selected_rows": 35,
+      "withheld_rows": 178,
+      "withheld_hold_rows": 172,
+      "withheld_excluded_rows": 6
     }
   ],
   "private_evidence_verified_locally": true,

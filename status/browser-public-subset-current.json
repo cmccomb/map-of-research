@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "0ede6a1851bd71538ba36a2f66c9b1b30b6b9abb",
-  "registry_producer_commit": "cdbdf9c29db98f0a9beca61f986495c3765c9b35",
+  "base_source_status_commit": "843f753599313a57db4e70574c2e307e3a9fefaf",
+  "registry_producer_commit": "5dae26ddb5173f75f44b0fc192cca2735dfb8c58",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1457,16 +1457,71 @@
         "withheld_ids_sha256": "e6573b39301c1d9188893dd94db358b68780f9fe6c2c04dc37e5f1e53dffb5d0"
       },
       "cache_sha256": "7f23312165a6e5938e03ca1772381ecb12e2a40c274acfc91b703bda03399c3a"
+    },
+    {
+      "slug": "aarti-singh",
+      "person_id": "person-aartisingh-b9514fa1",
+      "scholar_id": "vGBcNVAAAAAJ",
+      "expected_source_rows": 35,
+      "selected_author_pub_ids": [
+        "vGBcNVAAAAAJ:2P1L_qKh6hAC",
+        "vGBcNVAAAAAJ:4fKUyHm3Qg0C",
+        "vGBcNVAAAAAJ:5nxA0vEk-isC",
+        "vGBcNVAAAAAJ:8AbLer7MMksC",
+        "vGBcNVAAAAAJ:9yKSN-GCB0IC",
+        "vGBcNVAAAAAJ:AXPGKjj_ei8C",
+        "vGBcNVAAAAAJ:BUYA1_V_uYcC",
+        "vGBcNVAAAAAJ:HoB7MX3m0LUC",
+        "vGBcNVAAAAAJ:JQOojiI6XY0C",
+        "vGBcNVAAAAAJ:M3NEmzRMIkIC",
+        "vGBcNVAAAAAJ:ML0RJ9NH7IQC",
+        "vGBcNVAAAAAJ:MXK_kJrjxJIC",
+        "vGBcNVAAAAAJ:OU6Ihb5iCvQC",
+        "vGBcNVAAAAAJ:QIV2ME_5wuYC",
+        "vGBcNVAAAAAJ:R3hNpaxXUhUC",
+        "vGBcNVAAAAAJ:UHK10RUVsp4C",
+        "vGBcNVAAAAAJ:UeHWp8X0CEIC",
+        "vGBcNVAAAAAJ:W5xh706n7nkC",
+        "vGBcNVAAAAAJ:Wp0gIr-vW9MC",
+        "vGBcNVAAAAAJ:Y5dfb0dijaUC",
+        "vGBcNVAAAAAJ:ZuybSZzF8UAC",
+        "vGBcNVAAAAAJ:_B80troHkn4C",
+        "vGBcNVAAAAAJ:abG-DnoFyZgC",
+        "vGBcNVAAAAAJ:bEWYMUwI8FkC",
+        "vGBcNVAAAAAJ:eQOLeE2rZwMC",
+        "vGBcNVAAAAAJ:fPk4N6BV_jEC",
+        "vGBcNVAAAAAJ:g5m5HwL7SMYC",
+        "vGBcNVAAAAAJ:geHnlv5EZngC",
+        "vGBcNVAAAAAJ:hqOjcs7Dif8C",
+        "vGBcNVAAAAAJ:iH-uZ7U-co4C",
+        "vGBcNVAAAAAJ:maZDTaKrznsC",
+        "vGBcNVAAAAAJ:qjMakFHDy7sC",
+        "vGBcNVAAAAAJ:r0BpntZqJG4C",
+        "vGBcNVAAAAAJ:vRqMK49ujn8C",
+        "vGBcNVAAAAAJ:wbdj-CoPYUoC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 213,
+        "private_capture_sha256": "b21c5d9edd156d4063606d8a5162276073791c587e6224ebe42a26d771e581f8",
+        "private_review_sha256": "a3ab99c4df71ee9cdbb42afe50717a1a2c7f1e461f9bacb72cc5b78e1639d712",
+        "private_rendered_html_sha256": "5fe5594cafe95d4867ee492db3140566bc57ed6caa8f5c4a4b8f53a71edc673b",
+        "selected_ids_sha256": "855fcb0e7bb3d91092073af5ffc56a1d0745984ba8afc68b88f39571a38e2846",
+        "withheld_rows": 178,
+        "withheld_hold_rows": 172,
+        "withheld_excluded_rows": 6,
+        "withheld_ids_sha256": "b8c8a441f990db5a96aaee879c2caec52bd727f446991ed713f0ed8b216114c9"
+      },
+      "cache_sha256": "e5013952a25275c47e5ab7f711d779eb7c91775c9d5e1cb41040892290877855"
     }
   ],
   "totals": {
-    "observed_visible_rows": 1586,
-    "selected_rows": 1014,
-    "withheld_hold_rows": 493,
-    "withheld_excluded_rows": 79,
-    "withheld_rows": 572
+    "observed_visible_rows": 1799,
+    "selected_rows": 1049,
+    "withheld_hold_rows": 665,
+    "withheld_excluded_rows": 85,
+    "withheld_rows": 750
   },
-  "selected_ids_sha256": "69bce5963f2d8ccab84699a919ab7ea2bcc0f84d377aec2cdff3f6614045904f",
-  "withheld_ids_sha256": "43a40c06d79b36510c7c4f8d72d391492e873ed8e1eba10e3dd850ed8b3d6795",
+  "selected_ids_sha256": "0d84bebb5dfab63df7ed354d74cca9200a153f6580fff2bf9b050b1fca9f3227",
+  "withheld_ids_sha256": "569d27bfdc2a1961dbdc7004fb7408fb02b9f6649426709f6911ab9d4f6cd5d1",
   "private_capture_files_or_html_copied": false
 }
