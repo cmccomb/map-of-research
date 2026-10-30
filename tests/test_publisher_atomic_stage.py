@@ -516,6 +516,106 @@ def test_pinned_parent_map_rejects_invalid_payload(monkeypatch, tmp_path) -> Non
     assert digest == hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+@pytest.mark.parametrize("source", ["a" * 64, "bad", None])
+def test_pinned_parent_presentation_source_is_checked(monkeypatch, tmp_path, source):
+    path = tmp_path / "manifest.json"
+    path.write_text(
+        json.dumps({"presentation_drift": {"source_snapshot_sha256": source}}),
+        encoding="utf-8",
+    )
+    monkeypatch.setitem(
+        sys.modules,
+        "huggingface_hub",
+        SimpleNamespace(hf_hub_download=lambda *args, **kwargs: str(path)),
+    )
+    if source == "a" * 64:
+        assert (
+            publisher._pinned_parent_presentation_source_sha256(
+                prior_revision="a" * 40, hf_token="token"
+            )
+            == source
+        )
+    else:
+        with pytest.raises(ValueError, match="raw source SHA-256"):
+            publisher._pinned_parent_presentation_source_sha256(
+                prior_revision="a" * 40, hf_token=""
+            )
+
+
+def test_additive_reports_use_pinned_source_and_keep_drift_gate(monkeypatch, tmp_path):
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": [{"work_id": "work"}]}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_presentation_source_sha256",
+        lambda **kwargs: "same-source",
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: (
+            calls.append(("candidate", kwargs))
+            or {
+                "points": [
+                    {
+                        "work_id": "work",
+                        "reported_faculty_coauthors": [{"person_id": "coauthor"}],
+                    }
+                ]
+            }
+        ),
+    )
+    preservation = {
+        "status": "parent_presentation_preserved_for_additive_coauthor_evidence"
+    }
+
+    def preserve(works, prior, parent, candidate, **kwargs):
+        assert kwargs == {
+            "source_snapshot_sha256": "same-source",
+            "parent_source_snapshot_sha256": "same-source",
+        }
+        calls.append(("preserve", kwargs))
+        return works, preservation
+
+    monkeypatch.setattr(publisher, "preserve_additive_report_presentation", preserve)
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {"material_reasons": [], "report_sha256": "digest"},
+    )
+    publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={"snapshot_sha256": "same-source"},
+        hf_token="token",
+        prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        continuity_receipt={"prior_revision": "a" * 40},
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[],
+        prior_people=_prior_bio_people(),
+        prior_works=[],
+        reported_faculty_coauthors_by_work={"work": [{"person_id": "coauthor"}]},
+        enforce_presentation_drift=True,
+        preserve_deletion_presentation=True,
+    )
+    assert [event for event, _ in calls] == ["candidate", "preserve", "map", "commit"]
+    assert calls[0][1]["reported_faculty_coauthors_by_work"] == {
+        "work": [{"person_id": "coauthor"}]
+    }
+    assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == preservation
+    assert calls[-1][1]["prewrite_gate"]["presentation_drift"]["status"] == (
+        "pass_no_material_drift"
+    )
+
+
 def test_reviewed_presentation_gate_is_in_manifest_and_atomic_intent(
     monkeypatch, tmp_path
 ) -> None:
