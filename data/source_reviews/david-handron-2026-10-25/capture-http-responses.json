@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "cmu-profile.html",
+    "request_url": "https://www.cmu.edu/math/people/faculty/handron.html",
+    "resolved_url": "https://www.cmu.edu/math/people/faculty/handron.html",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 46762
+  },
+  {
+    "filename": "cmu-personal-home.html",
+    "request_url": "https://www.math.cmu.edu/~handron/",
+    "resolved_url": "https://www.math.cmu.edu/~handron/",
+    "status": 200,
+    "content_type": "text/html",
+    "bytes": 4752
+  },
+  {
+    "filename": "rice-thesis-api.json",
+    "request_url": "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734",
+    "resolved_url": "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734",
+    "status": 200,
+    "content_type": "application/hal+json;charset=UTF-8",
+    "bytes": 7892
+  },
+  {
+    "filename": "arxiv-author-page-1.xml",
+    "request_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+G.+C.+Handron%22&start=0&max_results=100",
+    "resolved_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+G.+C.+Handron%22&start=0&max_results=100",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 2558
+  },
+  {
+    "filename": "arxiv-author-page-2.xml",
+    "request_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+G.+C.+Handron%22&start=100&max_results=100",
+    "resolved_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+G.+C.+Handron%22&start=100&max_results=100",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 735
+  },
+  {
+    "filename": "arxiv-author-broad.xml",
+    "request_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+Handron%22&start=0&max_results=100",
+    "resolved_url": "https://export.arxiv.org/api/query?search_query=au%3A%22David+Handron%22&start=0&max_results=100",
+    "status": 200,
+    "content_type": "application/atom+xml; charset=utf-8",
+    "bytes": 2546
+  },
+  {
+    "filename": "arxiv-morse-complex.html",
+    "request_url": "https://arxiv.org/abs/math/0406486",
+    "resolved_url": "https://arxiv.org/abs/math/0406486",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 39827
+  },
+  {
+    "filename": "crossref-billiards-doi.json",
+    "request_url": "https://api.crossref.org/works/10.1016%2FS0166-8641%2802%2900036-6",
+    "resolved_url": "https://api.crossref.org/works/10.1016%2FS0166-8641%2802%2900036-6",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 4756
+  },
+  {
+    "filename": "kilthub-search-page-1.json",
+    "request_url": "https://api.figshare.com/v2/articles/search",
+    "resolved_url": "https://api.figshare.com/v2/articles/search",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 2
+  },
+  {
+    "filename": "kilthub-search-page-2.json",
+    "request_url": "https://api.figshare.com/v2/articles/search",
+    "resolved_url": "https://api.figshare.com/v2/articles/search",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 2
+  }
+]
