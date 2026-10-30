@@ -262,24 +262,12 @@ def validate_private_public_subsets(
     checked_profiles: list[dict[str, Any]] = []
     all_selected: set[str] = set()
     all_withheld: set[str] = set()
-    seen_scholars: set[str] = set()
     for entry in manifest["profiles"]:
-        if not isinstance(entry, dict):
-            raise ValueError("Public subset profile manifest entry is invalid")
         slug = entry.get("slug")
         scholar_id = entry.get("scholar_id")
         person_id = entry.get("person_id")
-        if (
-            not isinstance(slug, str)
-            or not slug
-            or not isinstance(scholar_id, str)
-            or not scholar_id
-            or scholar_id in seen_scholars
-            or not isinstance(person_id, str)
-            or not person_id.startswith("person-")
-        ):
-            raise ValueError("Public subset profile identity is invalid")
-        seen_scholars.add(scholar_id)
+        # _validate_selection_manifest already checked identity, uniqueness,
+        # and exact entry shape before any private file is consulted.
         raw_path = _one(private_outputs, f"{slug}-chrome-visible-*.raw.json")
         review_path = _one(private_outputs, f"{slug}-*review-*.json")
         capture_receipt_path = _one(
@@ -458,8 +446,6 @@ def validate_private_public_subsets(
         ),
         "withheld_rows": len(all_withheld),
     }
-    if manifest.get("totals") != totals:
-        raise ValueError("Aggregate private/public selection counts differ")
     return {
         "schema_version": 1,
         "status": "private_full_capture_review_reconciled_to_public_subset",

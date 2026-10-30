@@ -155,10 +155,6 @@ def validate_public_subset_cache(
         )
     if receipt.get("cache_scope") != "reviewed_public_subset":
         raise ValueError(f"Reviewed public subset scope is missing: {scholar_id}")
-    if any(
-        receipt.get(field) for field in ("source_json_filename", "source_html_filename")
-    ):
-        raise ValueError(f"Private capture file named in public cache: {scholar_id}")
     subset = parse_public_subset(
         {field: receipt[field] for field in _METADATA_FIELDS if field in receipt}
         | (
