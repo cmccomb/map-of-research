@@ -65,24 +65,29 @@ Defer those two edges until a complete Scholar capture or reviewed whole-career
 bibliography is available and the exact works pass the source and publication
 gates. Do not insert edges directly into the visualization.
 
-## Three verified profile identities
+## Three candidate profile identities held
 
-The following direct Scholar profiles were checked for identity only. The
+The following candidate Scholar profiles were checked for identity only. The
 named profile headers were compared with the official CMU faculty pages.
 None of their publication rows was captured or added to the map in this
-review. The registry now records each Scholar ID and an explicit Physics
-display home sourced to the named CMU page.
+review. A matching profile header, CMU email, or link from a Scholar profile
+to a CMU page does not meet the registry's direct CMU-owner link requirement
+for an exact Scholar ID. Read-only checks of the three official faculty pages,
+their linked CMU-hosted CVs, and the Alison and Heinrich CMU-hosted lab sites
+found no direct links to these exact IDs. The registry therefore leaves the
+three IDs and their ID-source fields blank. Their explicit Physics homes remain
+supported by the named CMU faculty pages.
 
-| Person | Scholar profile | Identity evidence and official corroboration |
+| Person | Candidate ID (held) | Identity evidence and official corroboration |
 | --- | --- | --- |
 | John Alison | [`U0xIDHkAAAAJ`](https://scholar.google.com/citations?user=U0xIDHkAAAAJ) | The profile identifies a CMU Physics associate professor, shows a verified `cmu.edu` email, and lists experimental particle physics; [CMU Physics](https://www.cmu.edu/physics/people/faculty/alison.html) matches the role and field. |
 | Frank Heinrich | [`JpCZd9kAAAAJ`](https://scholar.google.com/citations?user=JpCZd9kAAAAJ) | The profile identifies Frank Heinrich at CMU and NIST with a verified `cmu.edu` email and biophysics research; [CMU Physics](https://www.cmu.edu/physics/people/faculty/heinrich.html) matches. |
 | Valentina Dutta | [`wI8rr3AAAAAJ`](https://scholar.google.com/citations?user=wI8rr3AAAAAJ) | The profile identifies a CMU Physics assistant professor and links her [CMU Physics page](https://www.cmu.edu/physics/people/faculty/dutta.html); its name, role, and field match. |
 
-These additions raise verified MCS Scholar-ID coverage to 119 of 210 people;
-the 91 blank IDs remain unresolved. Among active research faculty, the count
-without a verified ID falls from 27 to 24: five in Biological Sciences, three
-in Chemistry, ten in Mathematical Sciences, and six in Physics. Current
+Recorded MCS Scholar-ID coverage remains 116 of 210 people; the 94 blank IDs
+remain unresolved. Among active research faculty, 27 lack a verified ID: five
+in Biological Sciences, three in Chemistry, ten in Mathematical Sciences, and
+nine in Physics. Current
 individual CMU faculty pages, 18 linked lab or personal sites, and seven
 CMU-hosted CVs supplied no additional owner-linked Scholar IDs in this pass.
 Focused Scholar profile searches did not establish any other exact identity
@@ -96,4 +101,4 @@ says her name appears on every CMS and LDMX paper. Alison's official page
 also lists many CMS and earlier ATLAS collaboration papers. Before a full
 profile capture or public release, these large-consortium records need an
 explicit review of attribution and what a coauthorship edge should convey.
-Registering the IDs alone changes no mapped works or graph edges.
+Holding these candidate IDs changes no mapped works or graph edges.
