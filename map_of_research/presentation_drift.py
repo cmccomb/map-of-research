@@ -280,6 +280,128 @@ def preserve_deletion_only_presentation(
     }
 
 
+def reported_coauthor_evidence_changed(
+    parent: Mapping[str, Any], candidate: Mapping[str, Any]
+) -> bool:
+    """Detect a report annotation delta without treating persistent reports as new."""
+
+    old_points = _indexed_points(parent, "Parent")
+    new_points = _indexed_points(candidate, "Candidate")
+    return any(
+        old_points.get(work_id, {}).get("reported_faculty_coauthors", [])
+        != new_points.get(work_id, {}).get("reported_faculty_coauthors", [])
+        for work_id in old_points.keys() | new_points.keys()
+    )
+
+
+def preserve_additive_report_presentation(
+    works: Any,
+    prior_works: list[Mapping[str, Any]],
+    parent: Mapping[str, Any],
+    candidate: Mapping[str, Any],
+    *,
+    source_snapshot_sha256: str,
+    parent_source_snapshot_sha256: str,
+) -> tuple[Any, dict[str, Any]]:
+    """Carry parent placement only for added coauthor evidence on identical works.
+
+    The pinned raw source and every nonpresentation public point field must be
+    unchanged. This avoids an unrelated full-corpus refit while leaving the
+    ordinary presentation-drift check in place for the final artifact.
+    """
+
+    if source_snapshot_sha256 != parent_source_snapshot_sha256:
+        raise ValueError("Reported-only preservation requires the pinned parent source")
+    old_points = _indexed_points(parent, "Parent")
+    new_points = _indexed_points(candidate, "Candidate")
+    if not old_points or old_points.keys() != new_points.keys():
+        raise ValueError(
+            "Reported-only preservation requires identical public work IDs"
+        )
+    presentation_keys = {
+        *COORDINATE_FIELDS,
+        "keyword_ids",
+        "reported_faculty_coauthors",
+    }
+    added_reports = 0
+    for work_id in sorted(old_points):
+        before, after = old_points[work_id], new_points[work_id]
+        old_reports = before.get("reported_faculty_coauthors", [])
+        new_reports = after.get("reported_faculty_coauthors", [])
+        if (
+            not isinstance(old_reports, list)
+            or not isinstance(new_reports, list)
+            or any(
+                not isinstance(item, Mapping) for item in (*old_reports, *new_reports)
+            )
+        ):
+            raise ValueError("Reported-only preservation has invalid report evidence")
+        old_ids = [_digest(item) for item in old_reports]
+        new_ids = [_digest(item) for item in new_reports]
+        if (
+            len(set(old_ids)) != len(old_ids)
+            or len(set(new_ids)) != len(new_ids)
+            or not set(old_ids) <= set(new_ids)
+        ):
+            raise ValueError(
+                f"Reported-only preservation changed existing evidence: {work_id}"
+            )
+        added_reports += len(new_ids) - len(old_ids)
+        if {
+            key: value for key, value in before.items() if key not in presentation_keys
+        } != {
+            key: value for key, value in after.items() if key not in presentation_keys
+        }:
+            raise ValueError(
+                f"Reported-only preservation changed public work content: {work_id}"
+            )
+    if added_reports == 0:
+        raise ValueError("Reported-only preservation has no new coauthor evidence")
+
+    labels = _keyword_labels(parent, "Parent")
+    prior_by_id = {str(row["work_id"]): row for row in prior_works}
+    if (
+        len(prior_by_id) != len(prior_works)
+        or not old_points.keys() <= prior_by_id.keys()
+    ):
+        raise ValueError("Reported-only parent works lack unique public IDs")
+    if not set((*COORDINATE_FIELDS, *TOPIC_FIELDS)) <= set(works.columns):
+        raise ValueError("Reported-only candidate works lack presentation fields")
+    current_ids = works["work_id"].astype(str)
+    if current_ids.duplicated().any() or not old_points.keys() <= set(current_ids):
+        raise ValueError("Reported-only candidate works lack unique public IDs")
+    output = works.copy()
+    for index, work_id in current_ids.items():
+        if work_id not in old_points:
+            continue
+        prior = prior_by_id[work_id]
+        point = old_points[work_id]
+        topics = _point_topics(point, labels, "Parent")
+        if any(field not in prior for field in TOPIC_FIELDS):
+            raise ValueError(f"Reported-only parent work lacks topics: {work_id}")
+        if (
+            str(prior["keyword_id"]) != topics[0][0]
+            or str(prior["detail_keyword_id"]) != topics[1][0]
+            or str(prior["keyword"]) != topics[0][1]
+            or str(prior["detail_keyword"]) != topics[1][1]
+        ):
+            raise ValueError(f"Reported-only parent topic differs from map: {work_id}")
+        for field, value in zip(
+            COORDINATE_FIELDS, _coordinates(point, "Parent"), strict=True
+        ):
+            output.at[index, field] = value
+        for field in TOPIC_FIELDS:
+            output.at[index, field] = prior[field]
+    return output, {
+        "status": "parent_presentation_preserved_for_additive_coauthor_evidence",
+        "parent_points": len(old_points),
+        "retained_points": len(new_points),
+        "added_reported_coauthors": added_reports,
+        "source_snapshot_sha256": source_snapshot_sha256,
+        "new_point_policy": "no_public_point_changes_allowed",
+    }
+
+
 def require_presentation_review(
     report: Mapping[str, Any], approval_path: Path | None = None
 ) -> dict[str, Any]:

@@ -13,6 +13,7 @@ from types import ModuleType, SimpleNamespace
 import pytest
 
 import map_of_research
+from map_of_research.presentation_drift import PresentationDriftError
 from map_of_research.region_continuity import RegionReleaseDiffError
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -201,6 +202,7 @@ def _run_preview(
     approval: bool = False,
     binding_approval: bool = False,
     region_diff: bool = False,
+    presentation_diff: bool = False,
     require_bio_release: bool | None = None,
     chem_manifest_present: bool = True,
 ):
@@ -302,6 +304,14 @@ def _run_preview(
                     ],
                 }
             )
+        if presentation_diff:
+            raise PresentationDriftError(
+                {
+                    "material_reasons": ["retained_point_movement"],
+                    "status": "review_required",
+                },
+                "material drift lacks a reviewed approval",
+            )
         chem_manifest = kwargs["chem_region_review_path"]
         assert chem_manifest == curated / "scholar-chem-region-review.json"
         if not chem_manifest.is_file():
@@ -390,6 +400,21 @@ def test_no_write_preview_records_exact_region_diff_before_write(monkeypatch, tm
     assert receipt["region_release_diff"]["unapproved_mapped_binding_changes"] == [
         {"observation": "person-a/scholar-a/citation-a/scholar"}
     ]
+
+
+def test_no_write_preview_records_exact_presentation_diff_before_write(
+    monkeypatch, tmp_path
+):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, presentation_diff=True
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert receipt["blocked_hub_write_calls"] == 0
+    assert receipt["presentation_drift"] == {
+        "material_reasons": ["retained_point_movement"],
+        "status": "review_required",
+    }
 
 
 def test_no_write_preview_passes_one_time_bio_loss_approval(monkeypatch, tmp_path):

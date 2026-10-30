@@ -153,7 +153,9 @@ from .poster_loss_approval import load_poster_loss_approval
 from .presentation_drift import (
     PresentationDriftError,
     compare_presentation,
+    preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
+    reported_coauthor_evidence_changed,
     require_presentation_review,
 )
 from .private_subset_preflight import require_private_preflight_receipt
@@ -1309,6 +1311,40 @@ def _pinned_parent_map(
     return parent, sha256_file(parent_path)
 
 
+def _pinned_parent_presentation_source_sha256(
+    *, prior_revision: str, hf_token: str
+) -> str:
+    """Read the raw source recorded by the immutable parent map manifest."""
+
+    from huggingface_hub import hf_hub_download
+
+    manifest_path = Path(
+        hf_hub_download(
+            REPO_ID,
+            "maps/manifest.json",
+            repo_type="dataset",
+            revision=prior_revision,
+            token=hf_token or None,
+        )
+    )
+    manifest = load_json(manifest_path)
+    presentation = (
+        manifest.get("presentation_drift") if isinstance(manifest, dict) else None
+    )
+    source_sha256 = (
+        presentation.get("source_snapshot_sha256")
+        if isinstance(presentation, dict)
+        else None
+    )
+    if not (
+        isinstance(source_sha256, str)
+        and len(source_sha256) == 64
+        and all(character in "0123456789abcdef" for character in source_sha256)
+    ):
+        raise ValueError("Pinned parent map manifest lacks its raw source SHA-256")
+    return source_sha256
+
+
 def _to_hub_dataset(frame: Any) -> Any:
     import datasets
 
@@ -1517,13 +1553,33 @@ def _publish_atomic_release(
                 tables["works"],
                 registry,
                 generated_at_utc=generated_at_utc,
+                reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
             )
-            tables["works"], preservation_receipt = preserve_deletion_only_presentation(
-                tables["works"],
-                prior_works,
-                parent_map,
-                candidate_before_preservation,
-            )
+            if reported_coauthor_evidence_changed(
+                parent_map, candidate_before_preservation
+            ):
+                parent_source_sha256 = _pinned_parent_presentation_source_sha256(
+                    prior_revision=prior_revision, hf_token=hf_token
+                )
+                tables["works"], preservation_receipt = (
+                    preserve_additive_report_presentation(
+                        tables["works"],
+                        prior_works,
+                        parent_map,
+                        candidate_before_preservation,
+                        source_snapshot_sha256=str(source_manifest["snapshot_sha256"]),
+                        parent_source_snapshot_sha256=parent_source_sha256,
+                    )
+                )
+            else:
+                tables["works"], preservation_receipt = (
+                    preserve_deletion_only_presentation(
+                        tables["works"],
+                        prior_works,
+                        parent_map,
+                        candidate_before_preservation,
+                    )
+                )
 
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
         root = Path(temp)

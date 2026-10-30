@@ -11,7 +11,9 @@ import pytest
 from map_of_research.presentation_drift import (
     PresentationDriftError,
     compare_presentation,
+    preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
+    reported_coauthor_evidence_changed,
     require_presentation_review,
 )
 
@@ -177,6 +179,139 @@ def test_deletion_preservation_rejects_duplicate_candidate_work() -> None:
         preserve_deletion_only_presentation(
             works, parent_work_rows(parent), parent, current
         )
+
+
+def _additive_case():
+    parent = artifact(2)
+    candidate = artifact(2, broad="newly fitted topic")
+    for old_point, new_point in zip(parent["points"], candidate["points"], strict=True):
+        old_point["title"] = new_point["title"] = old_point["work_id"]
+        new_point["x"] = new_point["tsne_x"] = 0.9
+    candidate["points"][0]["reported_faculty_coauthors"] = [
+        {"person_id": "coauthor", "source_person_id": "reporter"}
+    ]
+    prior = parent_work_rows(parent)
+    works = pandas.DataFrame(prior)
+    works["x"] = works["tsne_x"] = 0.9
+    works["keyword"] = "newly fitted topic"
+    return parent, candidate, prior, works
+
+
+def _preserve_additive(parent, candidate, prior, works, *, parent_source="s" * 64):
+    return preserve_additive_report_presentation(
+        works,
+        prior,
+        parent,
+        candidate,
+        source_snapshot_sha256="s" * 64,
+        parent_source_snapshot_sha256=parent_source,
+    )
+
+
+def test_additive_coauthor_evidence_preserves_same_source_presentation() -> None:
+    parent, candidate, prior, works = _additive_case()
+    assert reported_coauthor_evidence_changed(parent, candidate)
+    unmapped = works.iloc[[0]].copy()
+    unmapped["work_id"] = "unmapped-work"
+    works = pandas.concat([works, unmapped], ignore_index=True)
+    restored, receipt = _preserve_additive(parent, candidate, prior, works)
+    assert receipt == {
+        "status": "parent_presentation_preserved_for_additive_coauthor_evidence",
+        "parent_points": 2,
+        "retained_points": 2,
+        "added_reported_coauthors": 1,
+        "source_snapshot_sha256": "s" * 64,
+        "new_point_policy": "no_public_point_changes_allowed",
+    }
+    assert restored["x"].tolist() == [0.0, 0.5, 0.9]
+    assert restored["keyword"].tolist() == [
+        "systems",
+        "systems",
+        "newly fitted topic",
+    ]
+    assert works["keyword"].tolist() == ["newly fitted topic"] * 3
+
+
+def test_persistent_reports_do_not_trigger_additive_preservation() -> None:
+    parent, candidate, _, _ = _additive_case()
+    parent["points"][0]["reported_faculty_coauthors"] = candidate["points"][0][
+        "reported_faculty_coauthors"
+    ]
+    assert not reported_coauthor_evidence_changed(parent, candidate)
+    candidate["points"].append({**candidate["points"][1], "work_id": "new-work"})
+    assert not reported_coauthor_evidence_changed(parent, candidate)
+
+
+@pytest.mark.parametrize("defect", ["new_point", "removed_point", "changed_title"])
+def test_additive_preservation_rejects_other_public_changes(defect: str) -> None:
+    parent, candidate, prior, works = _additive_case()
+    if defect == "new_point":
+        candidate["points"].append({**candidate["points"][0], "work_id": "new"})
+    elif defect == "removed_point":
+        candidate["points"].pop()
+    else:
+        candidate["points"][1]["title"] = "different"
+    with pytest.raises(
+        ValueError, match="identical public work IDs|public work content"
+    ):
+        _preserve_additive(parent, candidate, prior, works)
+
+
+def test_additive_preservation_requires_pinned_same_raw_source() -> None:
+    parent, candidate, prior, works = _additive_case()
+    with pytest.raises(ValueError, match="pinned parent source"):
+        _preserve_additive(parent, candidate, prior, works, parent_source="t" * 64)
+
+
+@pytest.mark.parametrize("defect", ["no_new", "removed_old", "bad_shape", "duplicate"])
+def test_additive_preservation_rejects_bad_report_delta(defect: str) -> None:
+    parent, candidate, prior, works = _additive_case()
+    report = candidate["points"][0]["reported_faculty_coauthors"][0]
+    if defect == "no_new":
+        candidate["points"][0].pop("reported_faculty_coauthors")
+    elif defect == "removed_old":
+        parent["points"][0]["reported_faculty_coauthors"] = [
+            {"person_id": "old", "source_person_id": "reporter"}
+        ]
+    elif defect == "bad_shape":
+        candidate["points"][0]["reported_faculty_coauthors"] = ["bad"]
+    else:
+        candidate["points"][0]["reported_faculty_coauthors"] = [report, report]
+    with pytest.raises(
+        ValueError, match="coauthor evidence|existing evidence|invalid report"
+    ):
+        _preserve_additive(parent, candidate, prior, works)
+
+
+@pytest.mark.parametrize(
+    "defect",
+    [
+        "duplicate_prior",
+        "missing_prior",
+        "missing_field",
+        "wrong_topic",
+        "duplicate_work",
+        "missing_work_field",
+    ],
+)
+def test_additive_preservation_rejects_bad_work_rows(defect: str) -> None:
+    parent, candidate, prior, works = _additive_case()
+    if defect == "duplicate_prior":
+        prior.append(prior[0])
+    elif defect == "missing_prior":
+        prior.pop()
+    elif defect == "missing_field":
+        prior[0].pop("keyword_extracted")
+    elif defect == "wrong_topic":
+        prior[0]["keyword"] = "different"
+    elif defect == "duplicate_work":
+        works = pandas.concat([works, works.iloc[[0]]], ignore_index=True)
+    else:
+        works = works.drop(columns=["keyword"])
+    with pytest.raises(
+        ValueError, match="parent works|parent work|candidate works|parent topic"
+    ):
+        _preserve_additive(parent, candidate, prior, works)
 
 
 def test_identical_retained_presentation_passes_without_approval() -> None:
