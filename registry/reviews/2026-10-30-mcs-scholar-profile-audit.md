@@ -174,6 +174,13 @@ and person-level publication coverage must be reconciled before any edge is
 released. Author names alone do not create faculty observations in the
 publisher.
 
+As a bounded counterfactual on the *current* graph, adding the eight absent
+pairs above and the three absent pairs among Nagle, Tristram-Nagle, and Deserno
+would reduce the MCS component count from 140 to 131. Two candidate pairs join
+people already connected through another candidate in this set, so eleven
+candidate pair links reduce components by nine. This is neither a release
+forecast nor an estimate of all missing MCS collaboration.
+
 [Rachel Mandelbaum's CMU-hosted publication page](https://www.andrew.cmu.edu/user/rmandelb/publist.html)
 labels its ADS link “All publications” and says its links are full lists. This
 is a promising whole-career source for her two missing edges above, but the
