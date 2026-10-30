@@ -44,13 +44,22 @@ def test_manual_bio_dispatch_passes_release_intent() -> None:
     assert "MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot" in workflow
 
 
-def test_manual_additive_dispatch_requires_fixed_review_file() -> None:
+def test_additive_snapshot_push_requires_source_review_file() -> None:
     workflow = (
         Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
     ).read_text(encoding="utf-8")
     assert "use_additive_presentation_review:" in workflow
-    review_path = "source/data/curated/scholar-additive-placement-review.json"
+    review_path = "snapshot/data/curated/scholar-additive-placement-review.json"
     assert f"ADDITIVE_REVIEW={review_path}" in workflow
+    assert "data/curated/scholar-additive-placement-review.json" in workflow
+    assert (
+        'if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ] || '
+        '[ -f "$ADDITIVE_REVIEW" ]; then'
+    ) in workflow
+    assert (
+        'if [ "$SNAPSHOT_SHA" ='
+        ' "bbfd125f61fa741708fa5e0697a7a865e1a8192f92713c275601fa061f3fb7ef" ]; then'
+    ) in workflow
     assert 'test -s "$ADDITIVE_REVIEW"' in workflow
     assert (
         'ADDITIVE_REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")'
@@ -777,7 +786,10 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         tables,
         _bio_registry(),
         source_frame=pandas.DataFrame({"source": [1]}),
-        source_manifest={"snapshot_sha256": "source-sha"},
+        source_manifest={
+            "snapshot_sha256": "source-sha",
+            "reported_faculty_coauthors_sha256": "a" * 64,
+        },
         hf_token="token",
         prior_revision="a" * 40,
         atomic_intent_sink=lambda intent: None,
@@ -797,6 +809,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         "source_snapshot_sha256": "source-sha",
         "selected_ids_sha256": publisher.ids_sha256(set(current_ids)),
         "parent_map_sha256": "parent-sha",
+        "reported_coauthor_source_sha256": "a" * 64,
         "review_path": review_path,
     }
     assert [event for event, _ in calls] == ["map", "commit"]

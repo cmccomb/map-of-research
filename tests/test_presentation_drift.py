@@ -639,6 +639,7 @@ def additive_review(path: Path, receipt: dict, *, hold: bool = True) -> dict:
         "parent_map_sha256": receipt["parent_map_sha256"],
         "candidate_map_content_sha256": receipt["candidate_map_content_sha256"],
         "new_work_ids_sha256": receipt["new_work_ids_sha256"],
+        "reported_coauthor_source_sha256": receipt["reported_coauthor_source_sha256"],
         "reviewed_at": "2026-10-30",
         "new_points": new_points,
     }
@@ -661,6 +662,7 @@ def freeze_additive(
         source_snapshot_sha256="s" * 64,
         selected_ids_sha256="i" * 64,
         parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
         review_path=path,
     )
 
@@ -738,6 +740,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
         source_snapshot_sha256="s" * 64,
         selected_ids_sha256="i" * 64,
         parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
         review_path=review_path,
     )
     restored = output.loc[output.work_id.eq(off_map["work_id"])].iloc[0]
@@ -762,6 +765,22 @@ def test_additive_preserves_prior_off_map_work_presentation(
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
+            review_path=review_path,
+        )
+
+    without_prior_off_map = works.loc[works.work_id.ne(off_map["work_id"])]
+    with pytest.raises(ValueError, match="drops prior work IDs"):
+        preserve_reviewed_additive_presentation(
+            without_prior_off_map,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="a" * 64,
             review_path=review_path,
         )
 
@@ -897,6 +916,7 @@ def test_additive_rejects_prior_excluded_promotion_and_topic_id_collision(
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
             review_path=tmp_path / "missing.json",
         )
     parent["keywords"].append(
@@ -953,6 +973,7 @@ def test_additive_requires_complete_parent_topic_metadata(tmp_path: Path) -> Non
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
             review_path=path,
         )
 
@@ -990,6 +1011,7 @@ def test_additive_rejects_malformed_work_inputs(defect: str, message: str) -> No
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
             review_path=None,
         )
 
@@ -1012,11 +1034,12 @@ def test_additive_rejects_parent_with_missing_topic_field(tmp_path: Path) -> Non
             source_snapshot_sha256="s" * 64,
             selected_ids_sha256="i" * 64,
             parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
             review_path=path,
         )
 
 
-def test_additive_review_is_stale_if_candidate_changes_after_review(
+def test_additive_review_binds_new_nonspatial_metadata_not_refit_coordinates(
     tmp_path: Path,
 ) -> None:
     parent, candidate, works = additive_case()
@@ -1027,5 +1050,25 @@ def test_additive_review_is_stale_if_candidate_changes_after_review(
     next(point for point in candidate["points"] if point["work_id"] == "work-new")[
         "tsne_x"
     ] = 0.9
+    next(point for point in candidate["points"] if point["work_id"] == "work-new")[
+        "keyword_ids"
+    ] = ["different", "refit"]
+    freeze_additive(parent, candidate, works, path)
+    next(point for point in candidate["points"] if point["work_id"] == "work-new")[
+        "title"
+    ] = "Changed source title"
     with pytest.raises(PresentationDriftError, match="stale or mismatched"):
         freeze_additive(parent, candidate, works, path)
+
+
+def test_additive_rejects_changed_reports_or_unexpected_new_metadata() -> None:
+    parent, candidate, works = additive_case()
+    candidate["points"][0]["reported_faculty_coauthors"] = [
+        {"person_id": "person-other", "source_person_id": "person-author"}
+    ]
+    with pytest.raises(ValueError, match="changes retained reported coauthors"):
+        freeze_additive(parent, candidate, works, None)
+    candidate["points"][0].pop("reported_faculty_coauthors")
+    candidate["points"][-1]["unexpected_public_field"] = "new"
+    with pytest.raises(ValueError, match="unexpected point metadata"):
+        freeze_additive(parent, candidate, works, None)

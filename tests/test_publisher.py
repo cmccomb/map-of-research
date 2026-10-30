@@ -590,6 +590,7 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
         "source_snapshot_sha256": "s" * 64,
         "selected_ids_sha256": "i" * 64,
         "parent_map_sha256": "p" * 64,
+        "reported_coauthor_source_sha256": "a" * 64,
     }
     with pytest.raises(PresentationDriftError) as error:
         preserve_reviewed_additive_presentation(
@@ -613,6 +614,7 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
                 "parent_map_sha256",
                 "candidate_map_content_sha256",
                 "new_work_ids_sha256",
+                "reported_coauthor_source_sha256",
             )
         },
         "reviewed_at": "2026-10-30",

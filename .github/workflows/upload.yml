@@ -100,6 +100,7 @@ jobs:
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
             data/curated/reported-faculty-coauthors.json
+            data/curated/scholar-additive-placement-review.json
             data/authors
             data/captures
             status
@@ -255,8 +256,12 @@ jobs:
             )
           fi
           ADDITIVE_REVIEW_ARGS=()
-          if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ]; then
-            ADDITIVE_REVIEW=source/data/curated/scholar-additive-placement-review.json
+          ADDITIVE_REVIEW=snapshot/data/curated/scholar-additive-placement-review.json
+          SNAPSHOT_SHA="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["snapshot_sha256"])' snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json)"
+          if [ "$SNAPSHOT_SHA" = "bbfd125f61fa741708fa5e0697a7a865e1a8192f92713c275601fa061f3fb7ef" ]; then
+            test -s "$ADDITIVE_REVIEW"
+          fi
+          if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ] || [ -f "$ADDITIVE_REVIEW" ]; then
             test -s "$ADDITIVE_REVIEW"
             ADDITIVE_REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")
           fi

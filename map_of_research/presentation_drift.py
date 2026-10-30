@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import re
 from collections import Counter
 from collections.abc import Mapping
 from datetime import date
@@ -26,6 +27,34 @@ from .io import load_json
 
 SCHEMA_VERSION = 1
 
+_VOLATILE_CANDIDATE_FIELDS = {*COORDINATE_FIELDS, "keyword_ids"}
+_REVIEWABLE_POINT_FIELDS = {
+    *_VOLATILE_CANDIDATE_FIELDS,
+    "work_id",
+    "authors",
+    "citation_count",
+    "collaboration_eligible",
+    "context_evidence_urls",
+    "department_ids",
+    "display_contributors",
+    "doi",
+    "external_coauthor_ids",
+    "faculty_ids",
+    "observation_count",
+    "publication_type",
+    "reported_faculty_coauthors",
+    "school_ids",
+    "source_document_id",
+    "source_native_ids",
+    "source_types",
+    "source_url",
+    "source_verification_urls",
+    "source_verified_at",
+    "title",
+    "venue",
+    "year",
+}
+
 
 class PresentationDriftError(ValueError):
     """Material retained-work presentation drift lacks exact review."""
@@ -40,6 +69,30 @@ def _digest(value: Any) -> str:
         value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
     )
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _nonspatial_new_point_digest(
+    points: Mapping[str, Mapping[str, Any]], added: list[str]
+) -> str:
+    """Bind reviewed new-work identity without binding an unused model refit."""
+
+    rows: list[dict[str, Any]] = []
+    for work_id in added:
+        point = points[work_id]
+        if (
+            set(point) - _REVIEWABLE_POINT_FIELDS
+            or {"work_id", "keyword_ids", *COORDINATE_FIELDS} - set(point)
+            or point["work_id"] != work_id
+        ):
+            raise ValueError("Additive candidate has unexpected point metadata")
+        rows.append(
+            {
+                key: point[key]
+                for key in sorted(point)
+                if key not in _VOLATILE_CANDIDATE_FIELDS
+            }
+        )
+    return _digest({"projection": "new-nonspatial-v1", "points": rows})
 
 
 def _indexed_points(
@@ -417,6 +470,7 @@ def preserve_reviewed_additive_presentation(
     source_snapshot_sha256: str,
     selected_ids_sha256: str,
     parent_map_sha256: str,
+    reported_coauthor_source_sha256: str,
     review_path: Path | None,
 ) -> tuple[Any, dict[str, Any]]:
     """Freeze retained points and require an exact review for every new point.
@@ -433,6 +487,15 @@ def preserve_reviewed_additive_presentation(
     added = sorted(candidate_points.keys() - parent_points.keys())
     if not added:
         raise ValueError("Additive presentation review has no new map points")
+    if not re.fullmatch(r"[0-9a-f]{64}", reported_coauthor_source_sha256):
+        raise ValueError("Additive review lacks exact reported coauthor source SHA")
+    for work_id in parent_points:
+        if parent_points[work_id].get("reported_faculty_coauthors", []) != (
+            candidate_points[work_id].get("reported_faculty_coauthors", [])
+        ):
+            raise ValueError(
+                f"Additive candidate changes retained reported coauthors: {work_id}"
+            )
     parent_labels = _keyword_labels(parent, "Parent")
     for field in (
         "quality_assessment_version",
@@ -495,6 +558,8 @@ def preserve_reviewed_additive_presentation(
         current_ids
     ):
         raise ValueError("Additive candidate works lack unique mapped IDs")
+    if not prior_by_id.keys() <= set(current_ids):
+        raise ValueError("Additive candidate drops prior work IDs")
 
     receipt: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
@@ -503,14 +568,11 @@ def preserve_reviewed_additive_presentation(
         "source_snapshot_sha256": source_snapshot_sha256,
         "selected_ids_sha256": selected_ids_sha256,
         "parent_map_sha256": parent_map_sha256,
-        "candidate_map_content_sha256": _digest(
-            {
-                key: value
-                for key, value in candidate.items()
-                if key != "generated_at_utc"
-            }
+        "candidate_map_content_sha256": _nonspatial_new_point_digest(
+            candidate_points, added
         ),
         "new_work_ids_sha256": _digest(added),
+        "reported_coauthor_source_sha256": reported_coauthor_source_sha256,
         "new_point_count": len(added),
         "retained_point_count": len(parent_points.keys() & candidate_points.keys()),
     }
@@ -532,6 +594,7 @@ def preserve_reviewed_additive_presentation(
         "parent_map_sha256": parent_map_sha256,
         "candidate_map_content_sha256": receipt["candidate_map_content_sha256"],
         "new_work_ids_sha256": receipt["new_work_ids_sha256"],
+        "reported_coauthor_source_sha256": reported_coauthor_source_sha256,
     }
     if not isinstance(review, Mapping) or set(review) != {
         *binding,

@@ -166,7 +166,15 @@ publisher requires the selected profile IDs and digest, an included faculty
 membership with evidenced typed primary academic home, exact source-row
 eligibility, matching collaboration eligibility, and a placement review
 before emitting a pending entry. An exact-parent gate preserves all prior
-spatial points and keyword semantics.
+spatial points, keyword semantics, and the public works table's prior
+coordinates and topic fields, including works outside the spatial map.
+The review manifest binds the exact Hub parent, source snapshot, selected
+observation IDs, new work IDs, and reported-coauthor source file SHA. Its
+candidate digest covers the new points' nonspatial source and identity
+metadata. Proposed coordinates and model topic IDs are excluded from that
+digest because a held work has no approved placement or topic; they are
+removed from public output. Retained reported-coauthor assertions must match
+the parent exactly unless a separate reviewed release changes them.
 
 It is the only browser artifact.
 Every point represents one work and contains both precomputed full-corpus

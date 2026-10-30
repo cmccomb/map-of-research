@@ -1610,6 +1610,7 @@ def _publish_atomic_release(
                 tables["works"],
                 registry,
                 generated_at_utc=generated_at_utc,
+                reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
             )
             tables["works"], preservation_receipt = (
                 preserve_reviewed_additive_presentation(
@@ -1621,6 +1622,9 @@ def _publish_atomic_release(
                     source_snapshot_sha256=str(source_manifest["snapshot_sha256"]),
                     selected_ids_sha256=selected_ids_digest,
                     parent_map_sha256=parent_map_sha256,
+                    reported_coauthor_source_sha256=str(
+                        source_manifest.get("reported_faculty_coauthors_sha256", "")
+                    ),
                     review_path=additive_placement_review_path,
                 )
             )
