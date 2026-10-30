@@ -771,6 +771,24 @@
       ],
       "source_verified_at": "2026-10-30",
       "genre": "conference_paper"
+    },
+    {
+      "person_id": "person-akinci-3e3b7cc1",
+      "doi": "10.48550/arXiv.2609.18029",
+      "title": "Toward a Time-Aware Assessment Framework for the Carbon Cost of AI-Enabled Decarbonization",
+      "authors": "Chenrui Xu, Burcu Akinci, and Christopher McComb",
+      "year": 2026,
+      "venue": "arXiv preprint (accepted for i3CE 2026 proceedings)",
+      "citation": "arXiv:2609.18029 (2026); accepted for the 2026 ASCE International Conference on Computing in Civil Engineering proceedings",
+      "source_url": "https://arxiv.org/abs/2609.18029",
+      "source_verification_urls": [
+        "https://arxiv.org/abs/2609.18029",
+        "https://api.datacite.org/dois/10.48550/arxiv.2609.18029",
+        "https://cee.engineering.cmu.edu/directory/bios/akinci-burcu.html",
+        "https://cmudrc.github.io/publications/"
+      ],
+      "source_verified_at": "2026-10-30",
+      "genre": "preprint"
     }
   ]
 }
