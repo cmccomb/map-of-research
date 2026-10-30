@@ -249,8 +249,20 @@ jobs:
               source/data/curated/bio-exact-binding-approval-dcb.json
             )
           fi
+          SUBSET_ARGS=()
+          SUBSET_SELECTION=snapshot/status/browser-public-subset-current.json
+          SUBSET_PREFLIGHT=snapshot/status/private-public-subset-preflight.json
+          if [ -f "$SUBSET_SELECTION" ] || [ -f "$SUBSET_PREFLIGHT" ]; then
+            test -s "$SUBSET_SELECTION"
+            test -s "$SUBSET_PREFLIGHT"
+            SUBSET_ARGS+=(
+              --private-subset-preflight-receipt "$SUBSET_PREFLIGHT"
+              --public-subset-selection-manifest "$SUBSET_SELECTION"
+            )
+          fi
           map-publish-snapshot \
             "${BIO_RELEASE_ARGS[@]}" \
+            "${SUBSET_ARGS[@]}" \
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet \
             --manifest snapshot/snapshots/cmu-engineering-publications.parquet.manifest.json \
             --prior-revision "${{ steps.baseline.outputs.revision }}" \
