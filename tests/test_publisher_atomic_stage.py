@@ -645,6 +645,15 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         return works, receipt
 
     monkeypatch.setattr(publisher, "preserve_reviewed_additive_presentation", freeze)
+    checked_staged_works = []
+
+    def held_works_gate(path, item):
+        assert path.name == "train-00000-of-00001.parquet" and item is receipt
+        checked_staged_works.append(path)
+
+    monkeypatch.setattr(
+        publisher, "require_held_additive_staged_works", held_works_gate
+    )
     monkeypatch.setattr(
         publisher,
         "require_preserved_additive_artifact",
@@ -688,6 +697,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         "review_path": review_path,
     }
     assert [event for event, _ in calls] == ["map", "commit"]
+    assert len(checked_staged_works) == 1
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
 
 

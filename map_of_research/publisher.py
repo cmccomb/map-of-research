@@ -160,6 +160,7 @@ from .presentation_drift import (
     compare_presentation,
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
+    require_held_additive_staged_works,
     require_presentation_review,
     require_preserved_additive_artifact,
 )
@@ -1600,6 +1601,10 @@ def _publish_atomic_release(
             dataset.to_parquet(str(path))
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
+        if additive_placement_review_path is not None:
+            require_held_additive_staged_works(
+                staged["works"][1], preservation_receipt
+            )
         held_table_counts = None
         if held_topic_parent_artifact is not None:
             import datasets

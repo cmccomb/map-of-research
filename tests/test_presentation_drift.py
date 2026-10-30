@@ -14,6 +14,7 @@ from map_of_research.presentation_drift import (
     compare_presentation,
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
+    require_held_additive_staged_works,
     require_presentation_review,
 )
 
@@ -557,7 +558,50 @@ def test_additive_freezes_parent_and_reviews_each_new_point(tmp_path: Path) -> N
     assert not held.map_eligible
     assert held.map_exclusion_reasons == ["pending_placement_review"]
     assert held.keyword_id == ""
+    assert all(pandas.isna(held[field]) for field in ("x", "y", "tsne_x", "tsne_y"))
     assert works["x"].tolist() == [0.9] * 5
+
+
+def test_additive_staged_works_rejects_unreviewed_held_placement(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+    output, receipt = freeze_additive(parent, candidate, works, review_path)
+    staged_path = tmp_path / "works.parquet"
+    output.to_parquet(staged_path, index=False)
+    require_held_additive_staged_works(staged_path, receipt)
+    require_held_additive_staged_works(
+        staged_path, {**receipt, "held_new_work_ids": []}
+    )
+
+    held_index = output.index[output.work_id.eq("work-hold")][0]
+    for field in ("x", "y", "tsne_x", "tsne_y"):
+        broken = output.copy(deep=True)
+        broken.at[held_index, field] = 0.2
+        broken.to_parquet(staged_path, index=False)
+        with pytest.raises(ValueError, match="leaks coordinates"):
+            require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.copy(deep=True)
+    broken.at[held_index, "map_eligible"] = True
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="lacks placement hold"):
+        require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.copy(deep=True)
+    broken.at[held_index, "keyword"] = "Unreviewed topic"
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="leaks topic labels"):
+        require_held_additive_staged_works(staged_path, receipt)
+
+    broken = output.loc[output.work_id.ne("work-hold")].copy()
+    broken.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="lack unique held work IDs"):
+        require_held_additive_staged_works(staged_path, receipt)
 
 
 @pytest.mark.parametrize(

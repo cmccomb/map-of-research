@@ -538,6 +538,11 @@ def preserve_reviewed_additive_presentation(
                 output.at[index, "map_exclusion_reasons"] = list(
                     dict.fromkeys([*reasons, "pending_placement_review"])
                 )
+                # Candidate refits are unreviewed spatial placements. Holding a
+                # work must remove those coordinates from the public works
+                # table as well as excluding the work from the map artifact.
+                for field in COORDINATE_FIELDS:
+                    output.at[index, field] = None
                 for field, value in BLANK_TOPICS.items():
                     output.at[index, field] = value
             else:
@@ -574,6 +579,38 @@ def preserve_reviewed_additive_presentation(
     )
     receipt["review_sha256"] = hashlib.sha256(review_bytes).hexdigest()
     return output, receipt
+
+
+def require_held_additive_staged_works(
+    staged_path: Path, receipt: Mapping[str, Any]
+) -> None:
+    """Reject held work placements leaking through the staged public Parquet."""
+
+    held = set(receipt["held_new_work_ids"])
+    if not held:
+        return
+    import pyarrow.parquet as parquet
+
+    fields = [
+        "work_id",
+        "map_eligible",
+        "map_exclusion_reasons",
+        *COORDINATE_FIELDS,
+        *TOPIC_FIELDS,
+    ]
+    staged = parquet.read_table(staged_path, columns=fields).to_pylist()
+    rows = [row for row in staged if str(row["work_id"]) in held]
+    if len(rows) != len(held) or {str(row["work_id"]) for row in rows} != held:
+        raise ValueError("Additive staged works lack unique held work IDs")
+    for row in rows:
+        if row["map_eligible"] is not False or (
+            "pending_placement_review" not in row["map_exclusion_reasons"]
+        ):
+            raise ValueError("Additive staged held work lacks placement hold")
+        if any(row[field] is not None for field in COORDINATE_FIELDS):
+            raise ValueError("Additive staged held work leaks coordinates")
+        if any(row[field] != value for field, value in BLANK_TOPICS.items()):
+            raise ValueError("Additive staged held work leaks topic labels")
 
 
 def require_preserved_additive_artifact(
