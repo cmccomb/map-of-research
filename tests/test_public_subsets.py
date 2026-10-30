@@ -618,6 +618,257 @@ def test_controlled_private_preflight_binds_full_review_to_public_subset(tmp_pat
         require_private_preflight_receipt(**kwargs)
 
 
+def test_one_row_zero_withheld_profile_needs_private_review_but_no_public_capture(
+    tmp_path,
+):
+    """A fully selected browser profile follows the same private evidence gate."""
+
+    source = tmp_path / "source"
+    private = tmp_path / "private"
+    cache_dir = source / "data" / "authors"
+    cache_dir.mkdir(parents=True)
+    private.mkdir()
+    slug = "subset-owner"
+    row = _cache()["publications"][0]
+    row_id = row["author_pub_id"]
+    raw_row = {
+        "index": 1,
+        "author_pub_id": row_id,
+        "citation_url": row["pub_url"],
+        "title": row["title"],
+        "authors": row["author"],
+        "venue": row["venue"],
+        "year": row["pub_year"],
+        "citations": row["citation_count_display"],
+    }
+    raw_path = private / f"{slug}-chrome-visible-1-2026-10-30.raw.json"
+    raw_path.write_text(
+        json.dumps(
+            {
+                "displayed_count": 1,
+                "more_remain": False,
+                "show_more_disabled": True,
+                "challenge": False,
+                "page_error": None,
+                "rows": [raw_row],
+            }
+        )
+    )
+    review_path = private / f"{slug}-row-review-2026-10-30.json"
+    review_path.write_text(
+        json.dumps(
+            {
+                "person_id": PERSON,
+                "scholar_id": SCHOLAR,
+                "rows": [
+                    {
+                        "index": 1,
+                        "author_pub_id": row_id,
+                        "title": row["title"],
+                        "disposition": "retain_candidate",
+                    }
+                ],
+            }
+        )
+    )
+    html_path = private / f"{slug}-chrome-rendered-2026-10-30.private.html"
+    html_path.write_text("<html><body>Private complete profile</body></html>")
+    (private / f"{slug}-chrome-capture-receipt-2026-10-30.json").write_text(
+        json.dumps(
+            {
+                "person_id": PERSON,
+                "scholar_id": SCHOLAR,
+                "observed_rows": 1,
+                "unique_citation_ids": 1,
+                "raw_json": {
+                    "sha256": sha256_file(raw_path),
+                    "bytes": raw_path.stat().st_size,
+                },
+            }
+        )
+    )
+    metadata = {
+        "observed_visible_rows": 1,
+        "private_capture_sha256": sha256_file(raw_path),
+        "private_review_sha256": sha256_file(review_path),
+        "private_rendered_html_sha256": sha256_file(html_path),
+        "selected_ids_sha256": ids_sha256({row_id}),
+        "withheld_rows": 0,
+        "withheld_hold_rows": 0,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": ids_sha256(set()),
+    }
+    cache = _cache()
+    cache["publications"] = [row]
+    cache["publication_count"] = 1
+    cache["browser_capture"].update(metadata)
+    cache["browser_capture"].update(
+        displayed_count=1, limit=1, selected_author_pub_ids=[row_id]
+    )
+    cache_path = cache_dir / f"{SCHOLAR}.json"
+    cache_path.write_text(json.dumps(cache))
+    assert validate_public_subset_cache(SCHOLAR, cache) == parse_public_subset(metadata)
+    validate_complete_receipt(SCHOLAR, cache, source / "data" / "captures")
+    selection_path = source / "status" / "selection.json"
+    selection_path.parent.mkdir()
+    selection_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "status": "local_source_candidate_only",
+                "base_source_status_commit": "a" * 40,
+                "registry_producer_commit": "b" * 40,
+                "private_capture_files_or_html_copied": False,
+                "profiles": [
+                    {
+                        "slug": slug,
+                        "person_id": PERSON,
+                        "scholar_id": SCHOLAR,
+                        "expected_source_rows": 1,
+                        "cache_sha256": sha256_file(cache_path),
+                        "selected_author_pub_ids": [row_id],
+                        "public_subset": metadata,
+                    }
+                ],
+                "selected_ids_sha256": ids_sha256({row_id}),
+                "withheld_ids_sha256": ids_sha256(set()),
+                "totals": {
+                    "observed_visible_rows": 1,
+                    "selected_rows": 1,
+                    "withheld_rows": 0,
+                    "withheld_hold_rows": 0,
+                    "withheld_excluded_rows": 0,
+                },
+            }
+        )
+    )
+    snapshot_path = source / "snapshots" / "subset.parquet"
+    snapshot_path.parent.mkdir()
+    pandas.DataFrame(
+        [
+            {
+                "scholar_id": SCHOLAR,
+                "author_pub_id": row_id,
+                "source_record_json": json.dumps(row),
+            }
+        ]
+    ).to_parquet(snapshot_path)
+    private_receipt = validate_private_public_subsets(
+        source_root=source,
+        private_outputs=private,
+        selection_manifest_path=selection_path,
+        snapshot_path=snapshot_path,
+    )
+    assert private_receipt["totals"]["withheld_rows"] == 0
+    assert private_receipt["totals"]["selected_rows"] == 1
+    receipt_path = private / "controlled-preflight.json"
+    receipt_path.write_text(json.dumps(private_receipt))
+    decision = ProfileRelease(
+        person_id=PERSON,
+        scholar_id=SCHOLAR,
+        state="released",
+        expected_source_rows=1,
+        cache_sha256=sha256_file(cache_path),
+        reason="All one visible citation row passed independent review.",
+        reviewed_at="2026-10-30",
+        public_subset=parse_public_subset(metadata),
+    )
+    preflight_kwargs = {
+        "receipt_path": receipt_path,
+        "selection_manifest_path": selection_path,
+        "snapshot_path": snapshot_path,
+        "cache_dir": cache_dir,
+        "release_decisions": (decision,),
+    }
+    with pytest.raises(ValueError, match="requires a private local preflight"):
+        require_private_preflight_receipt(**{**preflight_kwargs, "receipt_path": None})
+    assert require_private_preflight_receipt(**preflight_kwargs)["withheld_rows"] == 0
+    frame = pandas.DataFrame(
+        [
+            {
+                "person_id": PERSON,
+                "scholar_id": SCHOLAR,
+                "source_type": "scholar",
+                "author_pub_id": row_id,
+            }
+        ]
+    )
+    registry = SimpleNamespace(
+        people_by_id={PERSON: SimpleNamespace(scholar_id=SCHOLAR)}
+    )
+    _, release_receipt, _ = select_released_observations(
+        frame, registry, (decision,), cache_dir=cache_dir
+    )
+    tables = {
+        "profile_publications": pandas.DataFrame(
+            [
+                {
+                    "person_id": PERSON,
+                    "scholar_id": SCHOLAR,
+                    "author_pub_id": row_id,
+                    "work_id": "work-one",
+                    "map_eligible": True,
+                }
+            ]
+        ),
+        "authorships": pandas.DataFrame(
+            [
+                {
+                    "scholar_id": SCHOLAR,
+                    "author_pub_id": row_id,
+                    "work_id": "work-one",
+                }
+            ]
+        ),
+        "works": pandas.DataFrame(
+            [
+                {
+                    "work_id": "work-one",
+                    "scholar_ids": [SCHOLAR],
+                    "author_pub_ids": [row_id],
+                    "map_eligible": True,
+                }
+            ]
+        ),
+    }
+    artifact = {
+        "points": [
+            {
+                "work_id": "work-one",
+                "faculty_ids": [PERSON],
+                "source_url": row["pub_url"],
+            }
+        ]
+    }
+    require_public_subset_boundary(tables, release_receipt, artifact=artifact)
+
+
+def test_zero_withheld_metadata_rejects_any_claimed_hold():
+    metadata = _metadata()
+    metadata.update(
+        observed_visible_rows=3,
+        withheld_rows=0,
+        withheld_hold_rows=1,
+        withheld_excluded_rows=0,
+        selected_ids_sha256=ids_sha256(set(SELECTED)),
+        withheld_ids_sha256=ids_sha256(set()),
+    )
+    with pytest.raises(ValueError, match="counts"):
+        parse_public_subset(metadata)
+
+
+def test_zero_withheld_metadata_requires_empty_set_digest():
+    metadata = _metadata()
+    metadata.update(
+        withheld_rows=0,
+        withheld_hold_rows=0,
+        withheld_excluded_rows=0,
+        withheld_ids_sha256="0" * 64,
+    )
+    with pytest.raises(ValueError, match="empty withheld digest"):
+        parse_public_subset(metadata)
+
+
 @pytest.mark.parametrize(
     ("mutation", "error"),
     [
