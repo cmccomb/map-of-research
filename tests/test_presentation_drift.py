@@ -697,6 +697,75 @@ def test_additive_freezes_parent_and_reviews_each_new_point(tmp_path: Path) -> N
     assert works["x"].tolist() == [0.9] * 5
 
 
+def test_additive_preserves_prior_off_map_work_presentation(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+
+    off_map = {
+        **parent_work_rows(parent)[0],
+        "work_id": "work-prior-off-map",
+        "map_eligible": False,
+        "x": 0.12,
+        "y": -0.23,
+        "tsne_x": 0.34,
+        "tsne_y": -0.45,
+    }
+    prior = [*parent_work_rows(parent), off_map]
+    refitted = {
+        **works.iloc[0].to_dict(),
+        "work_id": off_map["work_id"],
+        "map_eligible": False,
+        "x": 0.9,
+        "y": 0.9,
+        "tsne_x": 0.9,
+        "tsne_y": 0.9,
+        "keyword": "unreviewed refit",
+    }
+    works = pandas.concat(
+        [works, pandas.DataFrame([refitted])], ignore_index=True
+    )
+    output, _ = preserve_reviewed_additive_presentation(
+        works,
+        prior,
+        parent,
+        candidate,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="s" * 64,
+        selected_ids_sha256="i" * 64,
+        parent_map_sha256="p" * 64,
+        review_path=review_path,
+    )
+    restored = output.loc[output.work_id.eq(off_map["work_id"])].iloc[0]
+    assert [restored[field] for field in ("x", "y", "tsne_x", "tsne_y")] == [
+        0.12,
+        -0.23,
+        0.34,
+        -0.45,
+    ]
+    assert restored.keyword == off_map["keyword"]
+    assert works.iloc[-1]["x"] == 0.9
+
+    changed_eligibility = works.copy()
+    changed_eligibility.at[changed_eligibility.index[-1], "map_eligible"] = True
+    with pytest.raises(ValueError, match="off-map work changes map eligibility"):
+        preserve_reviewed_additive_presentation(
+            changed_eligibility,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            review_path=review_path,
+        )
+
+
 def test_additive_staged_works_rejects_unreviewed_held_placement(
     tmp_path: Path,
 ) -> None:

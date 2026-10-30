@@ -652,6 +652,27 @@ def preserve_reviewed_additive_presentation(
                     parent_url,
                     *(url for url in source_urls if url != parent_url),
                 ]
+        elif work_id in prior_by_id:
+            # A parent work can be absent from the spatial map while still
+            # exposing coordinates and topic fields in the public works table.
+            # Preserve that public metadata too; a corpus refit has no review
+            # authority to move or relabel an existing off-map work.
+            prior = prior_by_id[work_id]
+            if any(
+                field not in prior
+                for field in ("map_eligible", *COORDINATE_FIELDS, *TOPIC_FIELDS)
+            ):
+                raise ValueError(
+                    f"Additive parent off-map work lacks presentation fields: {work_id}"
+                )
+            if bool(output.at[index, "map_eligible"]) != bool(
+                prior["map_eligible"]
+            ):
+                raise ValueError(
+                    f"Additive off-map work changes map eligibility: {work_id}"
+                )
+            for field in (*COORDINATE_FIELDS, *TOPIC_FIELDS):
+                output.at[index, field] = prior[field]
         elif work_id in by_id:
             decision = by_id[work_id]
             if decision["decision"] == "hold_pending_placement":
