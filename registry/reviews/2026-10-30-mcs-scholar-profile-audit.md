@@ -44,7 +44,7 @@ reviews. The `Hiller NL` profile name is likewise a previously reviewed
 variant of Luisa Hiller. This check used the saved source and made no new
 Scholar requests.
 
-## Two confirmed one-sided coauthorships
+## Eight confirmed one-sided coauthorships
 
 The published artifact contains these eligible works, but assigns each to
 only one of two named, currently rostered MCS faculty. The missing people
@@ -54,6 +54,12 @@ have no verified Scholar ID in the registry.
 | --- | --- | --- |
 | [1999 Golgi transport paper](https://pubmed.ncbi.nlm.nih.gov/10233155/), DOI `10.1091/mbc.10.5.1445`; the [CMU Lee Lab bibliography](https://labs.bio.cmu.edu/lee/publications/) names Tina Lee and Adam Linstedt | Tina Lee | Adam Linstedt |
 | [2024 galaxy-clustering methods paper](https://academic.oup.com/mnras/article/531/4/4954/7691261), DOI `10.1093/mnras/stae1444`; the publisher names Rachel Mandelbaum and Scott Dodelson with CMU Physics affiliations | Scott Dodelson | Rachel Mandelbaum |
+| [2014 sea-urchin gene-network paper](https://pubmed.ncbi.nlm.nih.gov/24496631/), DOI `10.1242/dev.105585` | C. Joel McManus | Charles Ettensohn |
+| [2014 rainbow Hamilton-cycles paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/rsa.20475), DOI `10.1002/rsa.20475`; also on [Loh's CMU site](https://www.math.cmu.edu/~ploh/docs/research/20120722-rainbow-ham.pdf) | Alan Frieze | Po-Shen Loh |
+| [2016 Kompaneets-equation paper](https://epubs.siam.org/doi/10.1137/15M1054730), DOI `10.1137/15M1054730` | Robert Pego | Gautam Iyer |
+| [2022 red-light ATRP paper](https://par.nsf.gov/servlets/purl/10340015), DOI `10.1021/acsmacrolett.2c00080` | Krzysztof Matyjaszewski | Linda A. Peteanu |
+| [2007 strand-invasion paper](https://pubs.acs.org/doi/abs/10.1021/ja074886j), DOI `10.1021/ja074886j`; corroborated by the [CMU Armitage bibliography](https://www.chem.cmu.edu/groups/army/pub/) | Bruce Armitage | Danith Ly |
+| [2020 MassiveBlackII paper](https://academic.oup.com/mnras/article/491/3/4116/5634270), DOI `10.1093/mnras/stz3240` | Tiziana Di Matteo | Rachel Mandelbaum |
 
 These are source-attribution gaps, not layout or graph-builder omissions.
 The owning surface is `map-of-research`'s curated source and publisher. A
@@ -61,7 +67,7 @@ single verified paper does not establish either missing person's whole-career
 publication history: the existing
 [`person-publication-holds.json`](../../data/curated/person-publication-holds.json)
 policy would keep a newly added one-paper observation out of the public graph.
-Defer those two edges until a complete Scholar capture or reviewed whole-career
+Defer these eight attributions until a complete Scholar capture or reviewed whole-career
 bibliography is available and the exact works pass the source and publication
 gates. Do not insert edges directly into the visualization.
 
@@ -84,8 +90,8 @@ supported by the named CMU faculty pages.
 | Frank Heinrich | [`JpCZd9kAAAAJ`](https://scholar.google.com/citations?user=JpCZd9kAAAAJ) | The profile identifies Frank Heinrich at CMU and NIST with a verified `cmu.edu` email and biophysics research; [CMU Physics](https://www.cmu.edu/physics/people/faculty/heinrich.html) matches. |
 | Valentina Dutta | [`wI8rr3AAAAAJ`](https://scholar.google.com/citations?user=wI8rr3AAAAAJ) | The profile identifies a CMU Physics assistant professor and links her [CMU Physics page](https://www.cmu.edu/physics/people/faculty/dutta.html); its name, role, and field match. |
 
-Recorded MCS Scholar-ID coverage remains 116 of 210 people; the 94 blank IDs
-remain unresolved. Among active research faculty, 27 lack a verified ID: five
+At this checkpoint, recorded MCS Scholar-ID coverage remained 116 of 210 people;
+94 IDs were blank. Among active research faculty, 27 lacked a verified ID: five
 in Biological Sciences, three in Chemistry, ten in Mathematical Sciences, and
 nine in Physics. Current
 individual CMU faculty pages, 18 linked lab or personal sites, and seven
@@ -102,3 +108,35 @@ also lists many CMS and earlier ATLAS collaboration papers. Before a full
 profile capture or public release, these large-consortium records need an
 explicit review of attribution and what a coauthorship edge should convey.
 Holding these candidate IDs changes no mapped works or graph edges.
+
+## Follow-on Physics profile checks
+
+The [CMU Engineering biography for Stephanie Tristram-Nagle](https://engineering.cmu.edu/mcf/directory/bios/tristram-nagle-stephanie.html)
+directly links the exact Scholar ID [`PFPNTa4AAAAJ`](https://scholar.google.co.il/citations?hl=en&user=PFPNTa4AAAAJ).
+Her [CMU Physics page](https://www.cmu.edu/physics/people/faculty/stn.html)
+supports the typed Physics home. This review records that ID and home in the
+registry. It captures no publication rows and changes no graph edge. Recorded
+MCS Scholar-ID coverage is now 117 of 210, with 93 blank IDs; the active-faculty
+count above is unchanged because this is an emerita appointment.
+
+Three other Scholar profiles have matching names, CMU-verified email, fields,
+and official Physics biographies, but the reviewed CMU and self-managed pages
+do not link their exact IDs. Their candidate IDs remain unrecorded under the
+same owner-link rule applied above. Their Physics homes are recorded from the
+official pages, independently of Scholar verification.
+
+| Person and official home | Candidate Scholar ID (held) |
+| --- | --- |
+| [Mathias Lösche](https://www.cmu.edu/physics/people/faculty/loesche.html) | [`Wpq8ChcAAAAJ`](https://scholar.google.com/citations?user=Wpq8ChcAAAAJ) |
+| [John Nagle](https://www.cmu.edu/physics/people/faculty/nagle.html) | [`a9Boo7wAAAAJ`](https://scholar.google.com/citations?user=a9Boo7wAAAAJ) |
+| [Robert M. Suter](https://www.cmu.edu/physics/people/faculty/suter.html) | [`jF3_kJEAAAAJ`](https://scholar.google.com/citations?user=jF3_kJEAAAAJ) |
+
+Suter already has one public curated DOI observation with David Kinderlehrer,
+[`10.1103/PhysRevMaterials.6.033402`](https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.6.033402),
+despite lacking a complete publication-history source and a person-level hold.
+His self-managed site labels its lists
+[`Recent Publications (2014–2020)`](https://www.andrew.cmu.edu/user/suter/RecentPubs.html)
+and [selected publications](https://www.andrew.cmu.edu/user/suter/Archive_RMS.html);
+neither claims whole-career coverage. Review the pre-existing Suter visibility
+decision before a future source publication. This audit does not alter that
+already published work or its edge.
