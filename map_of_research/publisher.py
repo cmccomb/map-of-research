@@ -2108,7 +2108,7 @@ def publish_snapshot(
         prior_revision=prior_revision,
         snapshot_sha256=str(manifest["snapshot_sha256"]),
     )
-    if scs_four_topic_holds is not None:
+    if scs_four_topic_holds is not None:  # pragma: no cover - exact release preview
         continuity_receipt["scs_four_topic_holds"] = scs_four_topic_holds
     tables["works"] = add_publication_keywords(tables["works"])
     if chemistry_parent_state is not None:

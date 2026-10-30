@@ -122,3 +122,37 @@ def test_topic_hold_rejects_wrong_owner_or_prior_work() -> None:
             prior_revision=PRIOR_REVISION,
             snapshot_sha256=SNAPSHOT_SHA256,
         )
+
+
+@pytest.mark.parametrize("failure", ["missing", "duplicate"])
+def test_topic_hold_requires_one_exact_work(failure: str) -> None:
+    works, profiles = _tables()
+    if failure == "missing":
+        works = works.loc[works["work_id"] != HOLDS[0][0]].copy()
+    else:
+        works = pandas.concat([works, works.iloc[[0]]], ignore_index=True)
+    with pytest.raises(ValueError, match="work is not unique"):
+        apply_scs_four_topic_holds(
+            works,
+            profiles,
+            [],
+            prior_revision=PRIOR_REVISION,
+            snapshot_sha256=SNAPSHOT_SHA256,
+        )
+
+
+@pytest.mark.parametrize("failure", ["missing", "duplicate"])
+def test_topic_hold_requires_one_exact_source_observation(failure: str) -> None:
+    works, profiles = _tables()
+    if failure == "missing":
+        profiles = profiles.loc[profiles["author_pub_id"] != HOLDS[0][1]].copy()
+    else:
+        profiles = pandas.concat([profiles, profiles.iloc[[0]]], ignore_index=True)
+    with pytest.raises(ValueError, match="source observation is not unique"):
+        apply_scs_four_topic_holds(
+            works,
+            profiles,
+            [],
+            prior_revision=PRIOR_REVISION,
+            snapshot_sha256=SNAPSHOT_SHA256,
+        )
