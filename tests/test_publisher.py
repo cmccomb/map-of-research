@@ -2034,7 +2034,14 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     if pinned:
         assert published_fields[0][0] == "works"
-        assert ("map_exclusion_reasons" in published_fields[0][1]) == region_override
+        assert {
+            "map_exclusion_reasons",
+            "person_ids",
+            "scholar_ids",
+            "author_pub_ids",
+            "observation_ids",
+            "observation_count",
+        } <= set(published_fields[0][1])
     if region_override:
         assert len(historical_decision_checks) == 1
         assert historical_decision_checks[0][0] == [{"work_id": "old"}]
