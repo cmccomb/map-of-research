@@ -12,6 +12,7 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 from .io import load_json, sha256_file
+from .public_subsets import validate_public_subset_cache
 from .registry import (
     DEFAULT_DEPARTMENTS_PATH,
     DEFAULT_MEMBERSHIPS_PATH,
@@ -478,6 +479,11 @@ def validate_complete_receipt(
     receipt = cache.get("browser_capture")
     if not isinstance(rows, list) or not isinstance(receipt, dict):
         raise ValueError(f"Complete source receipt is missing: {scholar_id}")
+    if receipt.get("cache_scope") == "reviewed_public_subset":
+        # Full browser bytes remain in private evidence. The public cache is
+        # constrained to an exact, count-balanced list of selected citations.
+        validate_public_subset_cache(scholar_id, cache)
+        return
     count = len(rows)
     if (
         receipt.get("coverage") != "complete_visible_profile"

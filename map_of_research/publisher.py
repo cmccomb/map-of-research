@@ -136,6 +136,7 @@ from .person_publication_holds import (
     validate_person_hold_losses,
 )
 from .poster_loss_approval import load_poster_loss_approval
+from .private_subset_preflight import require_private_preflight_receipt
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
     load_profile_releases,
@@ -148,6 +149,7 @@ from .provisional_holds import (
     require_no_provisional_hold_contributions,
     validate_provisional_holds,
 )
+from .public_subsets import require_public_subset_boundary
 from .quality import QUALITY_ASSESSMENT_VERSION
 from .region_continuity import (
     PRIOR_OBSERVATION_FIELDS,
@@ -1361,6 +1363,7 @@ def _publish_atomic_release(
     *,
     source_frame: Any,
     source_manifest: Mapping[str, Any],
+    release_receipt: list[dict[str, Any]] | None = None,
     hf_token: str,
     prior_revision: str,
     generated_at_utc: str,
@@ -1465,6 +1468,7 @@ def _publish_atomic_release(
                 else {}
             ),
         )
+        require_public_subset_boundary(tables, release_receipt or [], artifact=artifact)
         files["maps/publications.json"] = artifact_path
         files["maps/manifest.json"] = map_manifest_path
         held_topic_receipt = None
@@ -1637,6 +1641,8 @@ def publish_snapshot(
     attribution_reviews_path: Path = DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     contexts_path: Path = DEFAULT_CONTEXTS_PATH,
     profile_releases_path: Path = DEFAULT_PROFILE_RELEASES_PATH,
+    private_subset_preflight_receipt_path: Path | None = None,
+    public_subset_selection_manifest_path: Path | None = None,
     person_publication_holds_path: Path = DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
     provisional_holds_path: Path = DEFAULT_PROVISIONAL_HOLDS_PATH,
     historical_loss_approval_path: Path | None = None,
@@ -1715,6 +1721,13 @@ def publish_snapshot(
     provisional_profiles = load_provisional_holds(provisional_holds_path)
     provisional_manifest_sha256 = sha256_file(provisional_holds_path)
     cache_dir = source_cache_dir or snapshot_path.parent.parent / "data" / "authors"
+    private_subset_preflight = require_private_preflight_receipt(
+        receipt_path=private_subset_preflight_receipt_path,
+        selection_manifest_path=public_subset_selection_manifest_path,
+        snapshot_path=snapshot_path,
+        cache_dir=cache_dir,
+        release_decisions=release_decisions,
+    )
     released_frame, release_receipt, held_observation_ids = (
         select_released_observations(
             corrected_frame,
@@ -2142,6 +2155,7 @@ def publish_snapshot(
         held_person_observation_ids,
     )
     require_no_provisional_hold_contributions(tables, provisional_holds)
+    require_public_subset_boundary(tables, release_receipt)
     held_topic_parent_artifact = None
     held_topic_parent_map_sha256 = None
     if (
@@ -2218,6 +2232,7 @@ def publish_snapshot(
         registry,
         source_frame=frame,
         source_manifest=manifest,
+        release_receipt=release_receipt,
         hf_token=hf_token,
         prior_revision=prior_revision,
         generated_at_utc=generated_at_utc,
@@ -2258,6 +2273,7 @@ def publish_snapshot(
         "raw_snapshot_sha256": manifest["snapshot_sha256"],
         "profile_release_manifest_sha256": release_manifest_sha256,
         "profile_release_decisions": release_receipt,
+        "private_subset_preflight": private_subset_preflight,
         "person_publication_hold_manifest_sha256": person_hold_manifest_sha256,
         "person_publication_holds": person_hold_receipt,
         "held_person_observation_rows": sum(
@@ -2485,6 +2501,16 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--profile-releases", type=Path, default=DEFAULT_PROFILE_RELEASES_PATH
     )
     parser.add_argument(
+        "--private-subset-preflight-receipt",
+        type=Path,
+        help="Controlled local audit receipt for reviewed public subsets",
+    )
+    parser.add_argument(
+        "--public-subset-selection-manifest",
+        type=Path,
+        help="Public selected-ID manifest pinned by the local audit receipt",
+    )
+    parser.add_argument(
         "--person-publication-holds",
         type=Path,
         default=DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
@@ -2618,6 +2644,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             attribution_reviews_path=args.attribution_reviews,
             contexts_path=args.reviewed_contexts,
             profile_releases_path=args.profile_releases,
+            private_subset_preflight_receipt_path=args.private_subset_preflight_receipt,
+            public_subset_selection_manifest_path=args.public_subset_selection_manifest,
             person_publication_holds_path=args.person_publication_holds,
             provisional_holds_path=args.provisional_holds,
             historical_loss_approval_path=args.approved_poster_loss,
