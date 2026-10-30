@@ -501,6 +501,35 @@ def preserve_reviewed_additive_presentation(
                 output.at[index, field] = value
             for field in TOPIC_FIELDS:
                 output.at[index, field] = prior[field]
+            # The map displays the first work source URL. A new faculty
+            # observation can sort ahead of the original source without
+            # invalidating it, so keep the retained point's display link.
+            parent_url = str(point.get("source_url") or "")
+            if "source_urls" not in output.columns:
+                if parent_url:
+                    raise ValueError(
+                        f"Additive retained map source URL lacks provenance: {work_id}"
+                    )
+                continue
+            raw_urls = output.at[index, "source_urls"]
+            if not isinstance(raw_urls, list):
+                raise ValueError(
+                    f"Additive retained work lacks source URL list: {work_id}"
+                )
+            source_urls = [str(url) for url in raw_urls if str(url)]
+            if parent_url and parent_url not in source_urls:
+                raise ValueError(
+                    f"Additive retained map source URL lacks provenance: {work_id}"
+                )
+            if not parent_url and source_urls:
+                raise ValueError(
+                    f"Additive retained blank map source URL needs review: {work_id}"
+                )
+            if parent_url:
+                output.at[index, "source_urls"] = [
+                    parent_url,
+                    *(url for url in source_urls if url != parent_url),
+                ]
         elif work_id in by_id:
             decision = by_id[work_id]
             if decision["decision"] == "hold_pending_placement":
@@ -583,6 +612,8 @@ def require_preserved_additive_artifact(
             raise ValueError("Additive staged map moves a retained point")
         if point["keyword_ids"] != staged_point["keyword_ids"]:
             raise ValueError("Additive staged map changes retained topic IDs")
+        if point.get("source_url") != staged_point.get("source_url"):
+            raise ValueError("Additive staged map changes retained source URL")
     for work_id in placed:
         point = new[work_id]
         if point["keyword_ids"] != [

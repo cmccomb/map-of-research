@@ -508,6 +508,10 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
         old, registry(), generated_at_utc="2026-10-30T01:00:00+00:00"
     )
     current = old.copy(deep=True)
+    current.at[0, "source_urls"] = [
+        "https://example.test/new-faculty-paper",
+        "https://example.test/paper",
+    ]
     current.at[0, "memberships"] = [
         *current.at[0, "memberships"],
         {
@@ -581,6 +585,64 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
     review_path = tmp_path / "additive-review.json"
     review_path.write_text(json.dumps(review), encoding="utf-8")
     candidate["generated_at_utc"] = "2026-10-30T03:00:00+00:00"
+    missing_parent_link = current.copy(deep=True)
+    missing_parent_link.at[0, "source_urls"] = [
+        "https://example.test/new-faculty-paper"
+    ]
+    with pytest.raises(ValueError, match="source URL lacks provenance"):
+        preserve_reviewed_additive_presentation(
+            missing_parent_link,
+            old.to_dict("records"),
+            baseline,
+            candidate,
+            review_path=review_path,
+            **kwargs,
+        )
+    with pytest.raises(ValueError, match="source URL lacks provenance"):
+        preserve_reviewed_additive_presentation(
+            current.drop(columns="source_urls"),
+            old.to_dict("records"),
+            baseline,
+            candidate,
+            review_path=review_path,
+            **kwargs,
+        )
+    malformed_sources = current.copy(deep=True)
+    malformed_sources.at[0, "source_urls"] = "https://example.test/paper"
+    with pytest.raises(ValueError, match="lacks source URL list"):
+        preserve_reviewed_additive_presentation(
+            malformed_sources,
+            old.to_dict("records"),
+            baseline,
+            candidate,
+            review_path=review_path,
+            **kwargs,
+        )
+    blank_parent_url = json.loads(json.dumps(baseline))
+    blank_parent_url["points"][0]["source_url"] = ""
+    with pytest.raises(ValueError, match="blank map source URL needs review"):
+        preserve_reviewed_additive_presentation(
+            current,
+            old.to_dict("records"),
+            blank_parent_url,
+            candidate,
+            review_path=review_path,
+            **kwargs,
+        )
+    blank_source_list = current.copy(deep=True)
+    blank_source_list.at[0, "source_urls"] = []
+    blank_frozen, _ = preserve_reviewed_additive_presentation(
+        blank_source_list,
+        old.to_dict("records"),
+        blank_parent_url,
+        candidate,
+        review_path=review_path,
+        **kwargs,
+    )
+    assert (
+        blank_frozen.loc[blank_frozen.work_id.eq("work-one"), "source_urls"].iloc[0]
+        == []
+    )
     frozen, receipt = preserve_reviewed_additive_presentation(
         current,
         old.to_dict("records"),
@@ -595,6 +657,11 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
     by_id = {point["work_id"]: point for point in rebuilt["points"]}
     assert set(by_id) == {"work-one", "work-added"}
     assert by_id["work-one"]["faculty_ids"] == ["person-one", "person-two"]
+    assert by_id["work-one"]["source_url"] == baseline["points"][0]["source_url"]
+    assert frozen.loc[frozen.work_id.eq("work-one"), "source_urls"].iloc[0] == [
+        "https://example.test/paper",
+        "https://example.test/new-faculty-paper",
+    ]
     for field in ("x", "y", "tsne_x", "tsne_y", "keyword_ids"):
         assert by_id["work-one"][field] == baseline["points"][0][field]
     assert by_id["work-added"]["keyword_ids"] == [
@@ -661,6 +728,12 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
         "keyword_ids"
     ] = ["keyword-unclassified", "keyword-unclassified-pending-review"]
     with pytest.raises(ValueError, match="changes retained topic IDs"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-one")[
+        "source_url"
+    ] = "https://example.test/new-faculty-paper"
+    with pytest.raises(ValueError, match="changes retained source URL"):
         require_preserved_additive_artifact(baseline, changed, receipt)
     changed = json.loads(json.dumps(rebuilt))
     next(point for point in changed["points"] if point["work_id"] == "work-added")[
