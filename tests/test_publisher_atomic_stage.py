@@ -44,6 +44,30 @@ def test_manual_bio_dispatch_passes_release_intent() -> None:
     assert "MAP_DURABLE_INTENT_BRANCH: automation/map-snapshot" in workflow
 
 
+def test_additive_snapshot_push_requires_source_review_file() -> None:
+    workflow = (
+        Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
+    ).read_text(encoding="utf-8")
+    assert "use_additive_presentation_review:" in workflow
+    review_path = "snapshot/data/curated/scholar-additive-placement-review.json"
+    assert f"ADDITIVE_REVIEW={review_path}" in workflow
+    assert "data/curated/scholar-additive-placement-review.json" in workflow
+    assert (
+        'if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ] || '
+        '[ -f "$ADDITIVE_REVIEW" ]; then'
+    ) in workflow
+    assert (
+        'if [ "$SNAPSHOT_SHA" ='
+        ' "bbfd125f61fa741708fa5e0697a7a865e1a8192f92713c275601fa061f3fb7ef" ]; then'
+    ) in workflow
+    assert 'test -s "$ADDITIVE_REVIEW"' in workflow
+    assert (
+        'ADDITIVE_REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")'
+        in workflow
+    )
+    assert '"${ADDITIVE_REVIEW_ARGS[@]}" \\' in workflow
+
+
 def test_upload_workflow_separates_frozen_source_from_current_receipts() -> None:
     workflow = (
         Path(__file__).resolve().parents[1] / ".github/workflows/upload.yml"
@@ -697,6 +721,246 @@ def test_deletion_only_preservation_is_reported_before_atomic_commit(
     )
     assert [event for event, _ in calls] == ["map", "commit"]
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+@pytest.mark.parametrize(
+    ("current_ids", "prior_ids"),
+    [
+        (["owner:row-1"], []),
+        (["legacy", "legacy", "owner:row-1"], ["legacy", "legacy"]),
+    ],
+)
+def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
+    monkeypatch, tmp_path, current_ids, prior_ids
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    tables["profile_publications"] = pandas.DataFrame(
+        {"author_pub_id": current_ids, "value": ["profile"] * len(current_ids)}
+    )
+    parent = {"points": []}
+    monkeypatch.setattr(
+        publisher, "_pinned_parent_map", lambda **kwargs: (parent, "parent-sha")
+    )
+    candidate = {"points": [{"work_id": "new"}]}
+    monkeypatch.setattr(
+        publisher, "build_map_artifact", lambda *args, **kwargs: candidate
+    )
+    received = {}
+    receipt = {
+        "status": "parent_frozen_new_points_reviewed",
+        "held_new_work_ids": [],
+    }
+
+    def freeze(works, prior, pinned, proposal, **kwargs):
+        received.update(kwargs)
+        assert pinned is parent and proposal is candidate and prior == []
+        return works, receipt
+
+    monkeypatch.setattr(publisher, "preserve_reviewed_additive_presentation", freeze)
+    checked_staged_works = []
+
+    def held_works_gate(path, item):
+        assert path.name == "train-00000-of-00001.parquet" and item is receipt
+        checked_staged_works.append(path)
+
+    monkeypatch.setattr(
+        publisher, "require_held_additive_staged_works", held_works_gate
+    )
+    monkeypatch.setattr(
+        publisher,
+        "require_preserved_additive_artifact",
+        lambda pinned, staged, item: (
+            None
+            if pinned is parent and item is receipt
+            else pytest.fail("Additive staged-map gate received the wrong inputs")
+        ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "compare_presentation",
+        lambda *args, **kwargs: {"material_reasons": [], "report_sha256": "digest"},
+    )
+    review_path = tmp_path / "placement.json"
+    review_path.write_text("{}", encoding="utf-8")
+    publisher._publish_atomic_release(
+        tables,
+        _bio_registry(),
+        source_frame=pandas.DataFrame({"source": [1]}),
+        source_manifest={
+            "snapshot_sha256": "source-sha",
+            "reported_faculty_coauthors_sha256": "a" * 64,
+        },
+        hf_token="token",
+        prior_revision="a" * 40,
+        atomic_intent_sink=lambda intent: None,
+        generated_at_utc="2026-10-30T00:00:00+00:00",
+        continuity_receipt={"prior_revision": "a" * 40},
+        repair_manifest_path=manifest,
+        provisional_holds={},
+        prior_profiles=[{"author_pub_id": item} for item in prior_ids],
+        prior_people=_prior_bio_people(),
+        prior_works=[],
+        enforce_presentation_drift=True,
+        preserve_deletion_presentation=True,
+        additive_placement_review_path=review_path,
+    )
+    assert received == {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "source-sha",
+        "selected_ids_sha256": publisher.ids_sha256(set(current_ids)),
+        "parent_map_sha256": "parent-sha",
+        "reported_coauthor_source_sha256": "a" * 64,
+        "review_path": review_path,
+    }
+    assert [event for event, _ in calls] == ["map", "commit"]
+    assert len(checked_staged_works) == 1
+    assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+@pytest.mark.parametrize(
+    ("receipt", "message"),
+    [
+        (None, "pending publication receipt is missing"),
+        ({"status": "reviewed"}, "pending work IDs are missing"),
+    ],
+)
+def test_reviewed_additive_path_fails_closed_on_missing_pending_receipt(
+    monkeypatch, tmp_path, receipt, message
+) -> None:
+    _, tables, manifest = _stage(monkeypatch, tmp_path)
+    tables["profile_publications"] = pandas.DataFrame(
+        {"author_pub_id": ["owner:row-1"]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"points": [{"work_id": "new"}]},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "preserve_reviewed_additive_presentation",
+        lambda works, *args, **kwargs: (works, receipt),
+    )
+    review_path = tmp_path / "placement.json"
+    review_path.write_text("{}", encoding="utf-8")
+    with pytest.raises(ValueError, match=message):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "source-sha"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=[],
+            enforce_presentation_drift=True,
+            additive_placement_review_path=review_path,
+        )
+
+
+@pytest.mark.parametrize("bad_ids", [None, ["same", "same"], [None], [""]])
+def test_additive_selected_id_boundary_stops_before_stage(
+    monkeypatch, tmp_path, bad_ids
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    if bad_ids is not None:
+        tables["profile_publications"] = pandas.DataFrame({"author_pub_id": bad_ids})
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    with pytest.raises(ValueError, match="selected source IDs|duplicate source IDs"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": "source-sha"},
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=[],
+            enforce_presentation_drift=True,
+            additive_placement_review_path=tmp_path / "placement.json",
+        )
+    assert calls == []
+
+
+@pytest.mark.parametrize(
+    ("mode", "message"),
+    [
+        ("disabled", "requires pinned presentation review"),
+        ("bio", "restricted to ordinary releases"),
+        ("refit", "refit approvals cannot be combined"),
+        ("no_parent", "needs pinned parent works"),
+    ],
+)
+def test_additive_incompatible_release_modes_stop_before_stage(
+    monkeypatch, tmp_path, mode: str, message: str
+) -> None:
+    calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    with pytest.raises(ValueError, match=message):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={
+                "snapshot_sha256": publisher.BIO_SOURCE_SHA256
+                if mode == "bio"
+                else "source-sha"
+            },
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=None if mode == "no_parent" else [],
+            enforce_presentation_drift=mode != "disabled",
+            presentation_drift_approval_path=tmp_path / "refit.json"
+            if mode == "refit"
+            else None,
+            additive_placement_review_path=tmp_path / "placement.json",
+        )
+    assert calls == []
+
+
+def test_additive_rejects_historical_comparison_before_source_reads(tmp_path) -> None:
+    with pytest.raises(ValueError, match="exact parent comparison"):
+        publisher.publish_snapshot(
+            tmp_path / "missing.parquet",
+            tmp_path / "missing.json",
+            hf_token="token",
+            prior_revision="a" * 40,
+            region_comparison_revision="b" * 40,
+            atomic_intent_sink=lambda intent: None,
+            additive_placement_review_path=tmp_path / "placement.json",
+        )
 
 
 def test_deletion_preservation_missing_parent_works_stops_before_stage(
