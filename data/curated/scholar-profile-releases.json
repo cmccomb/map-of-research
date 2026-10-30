@@ -1415,6 +1415,26 @@
         "withheld_excluded_rows": 7,
         "withheld_ids_sha256": "e6573b39301c1d9188893dd94db358b68780f9fe6c2c04dc37e5f1e53dffb5d0"
       }
+    },
+    {
+      "person_id": "person-aartisingh-b9514fa1",
+      "scholar_id": "vGBcNVAAAAAJ",
+      "state": "released",
+      "expected_source_rows": 35,
+      "cache_sha256": "e5013952a25275c47e5ab7f711d779eb7c91775c9d5e1cb41040892290877855",
+      "reason": "Local private-preview candidate: 35 original-document-supported no-correction Aarti Singh observations from 213 complete visible Chrome rows. All 178 nonselected rows stay private, including metadata/truncation holds and the existing Kara matching row. One selected title/year matches a private Barnabas candidate; later combined release must collapse any shared work. No public release is authorized by this local decision.",
+      "reviewed_at": "2026-10-30",
+      "public_subset": {
+        "observed_visible_rows": 213,
+        "private_capture_sha256": "b21c5d9edd156d4063606d8a5162276073791c587e6224ebe42a26d771e581f8",
+        "private_review_sha256": "a3ab99c4df71ee9cdbb42afe50717a1a2c7f1e461f9bacb72cc5b78e1639d712",
+        "private_rendered_html_sha256": "5fe5594cafe95d4867ee492db3140566bc57ed6caa8f5c4a4b8f53a71edc673b",
+        "selected_ids_sha256": "855fcb0e7bb3d91092073af5ffc56a1d0745984ba8afc68b88f39571a38e2846",
+        "withheld_rows": 178,
+        "withheld_hold_rows": 172,
+        "withheld_excluded_rows": 6,
+        "withheld_ids_sha256": "b8c8a441f990db5a96aaee879c2caec52bd727f446991ed713f0ed8b216114c9"
+      }
     }
   ]
 }
