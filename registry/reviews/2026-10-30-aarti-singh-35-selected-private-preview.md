@@ -16,7 +16,7 @@ This ledger supports an isolated no-write preview only. It is not a public relea
 - Historical Aarti staged private review SHA-256: `a3ab99c4df71ee9cdbb42afe50717a1a2c7f1e461f9bacb72cc5b78e1639d712`.
 
 - Current df71 all-hold placement manifest SHA-256: `e29aecb4ccb62d0330a212dff4a1af80d187ee87951e9639dc981449928d31de`; 69 works, all coordinates null and topics pending.
-- Current df71 diagnostic receipt: `work/ann-aarti-df71-stable-digest-probe-20261030/receipt.json` failed closed on the prior manifest schema before any Hub write; final updated-manifest no-write preview remains required.
+- Current df71 exact-parent selected-only no-write preview passed with zero Hub writes on producer `41c353b8480e54324e37d2253d7ae64d74500796` and source `cb6e5b298f6805b1eb8af2ccffe953025da2846c`; durable private receipt `outputs/ann-aarti-df71-final-schema8-no-write-receipt-2026-10-30.json` SHA-256 `0c8adf8caae786ded60481656e446c3fc2e744e45eba9fa51360f44a69b9557f`. Independent seven-file/preservation/selected-only audit `outputs/ann-aarti-df71-final-schema8-independent-stage-audit-2026-10-30.json` SHA-256 `ae51ff30369fdaaf2bd242acb77dc23538454aa724ef84c12c52c9a42ed9e768`. Review the final PR head and controlled upload path separately.
 
 ## Private review evidence
 
