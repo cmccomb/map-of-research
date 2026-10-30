@@ -59,6 +59,20 @@ from .chem_region_review import (
     DEFAULT_CHEM_REGION_REVIEW_PATH,
     load_chem_region_review,
 )
+from .coauthor_binding_approval import (
+    DEFAULT_AKINCI_REVIEW_PATH,
+    DEFAULT_MARTELARO_REVIEW_PATH,
+    validate_exact_coauthor_bindings,
+)
+from .coauthor_binding_approval import (
+    DEFAULT_APPROVAL_PATH as DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
+)
+from .coauthor_binding_approval import (
+    PRIOR_REVISION as COAUTHOR_BINDING_PRIOR_REVISION,
+)
+from .coauthor_binding_approval import (
+    SNAPSHOT_SHA256 as COAUTHOR_BINDING_SNAPSHOT_SHA256,
+)
 from .composite_region import (
     HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
@@ -1664,6 +1678,7 @@ def publish_snapshot(
     sullivan_crosswalk_path: Path = DEFAULT_SULLIVAN_CROSSWALK_PATH,
     mccomb_continuity_path: Path = DEFAULT_MCCOMB_CONTINUITY_PATH,
     mccomb_crosswalk_path: Path = DEFAULT_MCCOMB_CROSSWALK_PATH,
+    coauthor_binding_approval_path: Path = DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
     chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
@@ -2060,6 +2075,26 @@ def publish_snapshot(
         and manifest["snapshot_sha256"] == MCCOMB_CONTINUITY_SNAPSHOT_SHA256
         else None
     )
+    coauthor_binding_approval = (
+        validate_exact_coauthor_bindings(
+            coauthor_binding_approval_path,
+            prior_revision=prior_revision,
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            curated_works_path=curated_works_path,
+            mccomb_cache_path=cache_dir / "0P9w_S0AAAAJ.json",
+            martelaro_review_path=(
+                people_path.parent / "reviews" / DEFAULT_MARTELARO_REVIEW_PATH.name
+            ),
+            akinci_review_path=(
+                people_path.parent / "reviews" / DEFAULT_AKINCI_REVIEW_PATH.name
+            ),
+            prior_profiles=prior_profiles,
+            current_profiles=tables["profile_publications"].to_dict("records"),
+        )
+        if prior_revision == COAUTHOR_BINDING_PRIOR_REVISION
+        and manifest["snapshot_sha256"] == COAUTHOR_BINDING_SNAPSHOT_SHA256
+        else None
+    )
     tables["works"], scs_four_topic_holds = apply_scs_four_topic_holds(
         tables["works"],
         tables["profile_publications"],
@@ -2079,6 +2114,7 @@ def publish_snapshot(
         sullivan_continuity_addendum=sullivan_continuity_addendum,
         bio_binding_approval=bio_binding_approval,
         mccomb_continuity=mccomb_continuity,
+        coauthor_binding_approval=coauthor_binding_approval,
         approved_person_hold_losses=approved_person_hold_losses,
         composite_plan=composite_plan,
         historical_works=historical_works,
@@ -2540,6 +2576,12 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_MCCOMB_CONTINUITY_PATH,
         help="Exact source-pinned McComb rekeys and corrected-year binding",
     )
+    parser.add_argument(
+        "--coauthor-binding-approval",
+        type=Path,
+        default=DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
+        help="Exact Hub5073 McComb work bindings backed by curated coauthors",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -2657,6 +2699,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             historical_loss_approval_path=args.approved_poster_loss,
             bio_binding_approval_path=args.bio_binding_approval,
             mccomb_continuity_path=args.mccomb_continuity_approval,
+            coauthor_binding_approval_path=args.coauthor_binding_approval,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,
