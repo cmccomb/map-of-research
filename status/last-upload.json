@@ -1,9 +1,9 @@
 {
-  "artifact_commit": "42031e014886e67c4b606261c2e0dee217ee762c",
+  "artifact_commit": "dd19b977499cf77953da38db4c47d0d387a00bc9",
   "atomic_release": {
-    "artifact_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
-    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 466e8581c1774793afc43deec57cd3ea",
-    "commit_nonce": "466e8581c1774793afc43deec57cd3ea",
+    "artifact_revision": "dd19b977499cf77953da38db4c47d0d387a00bc9",
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 42282018a8d74b4ead814e19851daa28",
+    "commit_nonce": "42282018a8d74b4ead814e19851daa28",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -15,48 +15,94 @@
     ],
     "hosted_file_bytes_match_prewrite": true,
     "mode": "single_parent_commit",
-    "parent_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
+    "parent_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
     "prewrite_gate": {
       "gate": "full-source-and-region-continuity-v1",
-      "map_points": 53642,
-      "prior_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
+      "map_points": 53626,
+      "presentation_drift": {
+        "candidate_map_sha256": "acdfc621dd254b611d495506be14956a0bf75f6046223eb504d42d9d202b9e05",
+        "material_reasons": [],
+        "parent_map_sha256": "0721bc8752df957198a0df5a63cf0edafc55f0549ac8da1ae879ee1fabdbe019",
+        "point_counts": {
+          "added": 0,
+          "candidate": 53626,
+          "parent": 53642,
+          "removed": 16,
+          "retained": 53626
+        },
+        "prior_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
+        "report_sha256": "81dc85f5bf03dd93a2bff79a11d1faad6de6ee0b7ecc220c73959d38c7e7744e",
+        "retained": {
+          "broad_semantic_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "broad_semantic_label_changes": 0,
+          "coordinate_changes": 0,
+          "coordinate_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "detail_semantic_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "detail_semantic_label_changes": 0,
+          "new_broad_region_labels": [],
+          "pca_distance_median": 0.0,
+          "pca_distance_over_0_1": 0,
+          "pca_distance_p95": 0.0,
+          "retired_broad_region_labels": [],
+          "topic_id_changes": 0,
+          "topic_id_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "tsne_distance_max": 0.0,
+          "tsne_distance_median": 0.0,
+          "tsne_distance_over_0_1": 0,
+          "tsne_distance_p95": 0.0,
+          "tsne_distance_p99": 0.0
+        },
+        "schema_version": 1,
+        "source_snapshot_sha256": "51ebf5c5b5185ba1ac4d19beb29fccebca9d89c8e4628d8f8c9df2db839028a3",
+        "status": "pass_no_material_drift",
+        "top_broad_label_transitions": [],
+        "top_detail_label_transitions": []
+      },
+      "presentation_preservation": {
+        "new_point_policy": "no_new_public_points_allowed",
+        "parent_points": 53642,
+        "removed_points": 16,
+        "retained_points": 53626,
+        "status": "parent_presentation_preserved_for_deletions"
+      },
+      "prior_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
       "raw_rows": 70443,
       "source_snapshot_sha256": "51ebf5c5b5185ba1ac4d19beb29fccebca9d89c8e4628d8f8c9df2db839028a3",
       "status": "pass"
     },
     "release_context": {
-      "producer_commit": "cdbdf9c29db98f0a9beca61f986495c3765c9b35",
-      "snapshot_commit": "07f20a6ee59da80c21c4a5fc14d6cbf106827679",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41067515927"
+      "producer_commit": "81bc08ea953bde0ea94a85c086d116363e5b1ae6",
+      "snapshot_commit": "0ede6a1851bd71538ba36a2f66c9b1b30b6b9abb",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41105292914"
     },
     "sha256_by_path": {
-      "README.md": "ff6d54f3a3d3b1b71ae0b0cb504dcb1d3457766b54122db7601934f1e906e221",
-      "authorships/train-00000-of-00001.parquet": "0d52f434c50fc8a4786bf688b905c550f0e672367a8457ea9423f5ca99567797",
-      "maps/manifest.json": "9a1b7247d67c852c513e277b6563d240755ecec7e07bd91c654a9ba55753cbdd",
-      "maps/publications.json": "0721bc8752df957198a0df5a63cf0edafc55f0549ac8da1ae879ee1fabdbe019",
-      "people/train-00000-of-00001.parquet": "1f4d7bace7ceaa11ed0e901e5985529229a391bd741d9c386d34a7911b85e891",
-      "profile_publications/train-00000-of-00001.parquet": "72bc5cab01bc82444d7913d65840dfc6e9473c517353791b976fe3e040eb176f",
-      "works/train-00000-of-00001.parquet": "ab5429dfe83a215c9a0842b7077535e24c310f01ebb2ef4560d9b0819674b02c"
+      "README.md": "7ec694d4f261025f0552fce5af1fa331913e7a80e808448183e92c8dd591e63c",
+      "authorships/train-00000-of-00001.parquet": "037df2c961d1861a551421576310ff7d71c3bc58421fb200a80d2b8fb132bf55",
+      "maps/manifest.json": "8a93d6d5a2a3c6e90732b86717470f75148e40b7e3b5aaee489e54d158f962f8",
+      "maps/publications.json": "acdfc621dd254b611d495506be14956a0bf75f6046223eb504d42d9d202b9e05",
+      "people/train-00000-of-00001.parquet": "2440f1f8e9199903627c463b35de4b886d2b820a962dda324201fd64615f202a",
+      "profile_publications/train-00000-of-00001.parquet": "54b5678fe3d7c7e2d2075ac5eb2a997fc2af42707279d76ec94b8a94c29d3526",
+      "works/train-00000-of-00001.parquet": "5dd61bdd6887b392fcccb803b85d7b4154757f3fd0007a1f1d108df9020bb5ff"
     },
     "size_by_path": {
       "README.md": 10439,
-      "authorships/train-00000-of-00001.parquet": 18800299,
-      "maps/manifest.json": 5485,
-      "maps/publications.json": 49557750,
-      "people/train-00000-of-00001.parquet": 671589,
-      "profile_publications/train-00000-of-00001.parquet": 253797878,
-      "works/train-00000-of-00001.parquet": 258938989
+      "authorships/train-00000-of-00001.parquet": 18795075,
+      "maps/manifest.json": 7509,
+      "maps/publications.json": 49544657,
+      "people/train-00000-of-00001.parquet": 671604,
+      "profile_publications/train-00000-of-00001.parquet": 253800983,
+      "works/train-00000-of-00001.parquet": 258933281
     }
   },
   "attribution_confirmed": 505,
   "attribution_held": 6228,
   "attribution_reviews_sha256": "b9334546cf44d40b36d9faf6c4eff213b93677ebef2fb748fcb4cb258091aa51",
-  "authorships": 61306,
+  "authorships": 61289,
   "dataset_commits": {
-    "authorships": "42031e014886e67c4b606261c2e0dee217ee762c",
-    "people": "42031e014886e67c4b606261c2e0dee217ee762c",
-    "profile_publications": "42031e014886e67c4b606261c2e0dee217ee762c",
-    "works": "42031e014886e67c4b606261c2e0dee217ee762c"
+    "authorships": "dd19b977499cf77953da38db4c47d0d387a00bc9",
+    "people": "dd19b977499cf77953da38db4c47d0d387a00bc9",
+    "profile_publications": "dd19b977499cf77953da38db4c47d0d387a00bc9",
+    "works": "dd19b977499cf77953da38db4c47d0d387a00bc9"
   },
   "dataset_configs": [
     "people",
@@ -68,8 +114,8 @@
   "detail_keywords": 120,
   "error_message": null,
   "error_type": null,
-  "excluded_works": 8567,
-  "finished_at_utc": "2026-10-30T14:12:50.801354+00:00",
+  "excluded_works": 8583,
+  "finished_at_utc": "2026-10-30T18:28:47.815384+00:00",
   "held_observation_rows": 0,
   "held_person_observation_rows": 3,
   "held_profile_ids": [],
@@ -77,7 +123,7 @@
   "keywords": 30,
   "layout_version": "global-publications-multilayout-v3",
   "map_artifact_count": 1,
-  "mapped_works": 53642,
+  "mapped_works": 53626,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -114,7 +160,7 @@
       ]
     }
   ],
-  "prior_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
+  "prior_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
   "private_subset_preflight": {
     "private_evidence_limit": "Public verification checks the locally generated receipt and byte hashes; private full capture/review content is verified only by controlled local preflight.",
     "profile_count": 21,
@@ -124,7 +170,7 @@
     "status": "pass",
     "withheld_rows": 505
   },
-  "producer_commit": "cdbdf9c29db98f0a9beca61f986495c3765c9b35",
+  "producer_commit": "81bc08ea953bde0ea94a85c086d116363e5b1ae6",
   "profile_count": 406,
   "profile_publications": 70440,
   "profile_release_decisions": [
@@ -3317,32 +3363,10 @@
   "raw_snapshot_profiles": 406,
   "raw_snapshot_sha256": "51ebf5c5b5185ba1ac4d19beb29fccebca9d89c8e4628d8f8c9df2db839028a3",
   "region_audit_version": "low-information-semantic-region-v3",
-  "region_comparison_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
+  "region_comparison_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
   "region_continuity": {
     "approved_bio_binding_changes": [],
-    "approved_coauthor_binding_changes": [
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-6fa3b8e235d1e393aafcd58cb14d931cb72b403518d6b27b501c31f3d670492d",
-        "observation": "person-mccomb-03260969/0P9w_S0AAAAJ/0P9w_S0AAAAJ:2tRrZ1ZAMYUC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-8de433ddb3e949b5b880ebc5f35e5ffb57c6858637a16880763b9689411ded16"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-e422b73064730da7137e3aa7877cbd8585e1e069b169043323dc3003706fbc7b",
-        "observation": "person-mccomb-03260969/0P9w_S0AAAAJ/0P9w_S0AAAAJ:ODE9OILHJdcC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-2257e9ec8ef231c41955ffb5a044ee3d6a1688193d83e1fc85576af4e124ffb8"
-      },
-      {
-        "current_collaboration_eligible": true,
-        "current_work_id": "work-c26a95fc00552447ef52e0917741b667e12efeb96d9154dc831ed34423d34d8b",
-        "observation": "person-mccomb-03260969/0P9w_S0AAAAJ/0P9w_S0AAAAJ:yMeIxYmEMEAC/scholar",
-        "prior_collaboration_eligible": true,
-        "prior_work_id": "work-f6c2ca1e38fc7affb2f0f78dd6f161b78d7080e348b8c08c0cbdf804b45bf8be"
-      }
-    ],
+    "approved_coauthor_binding_changes": [],
     "approved_mccomb_binding_changes": [],
     "approved_mccomb_losses": [],
     "approved_one_time_losses": [],
@@ -3354,21 +3378,39 @@
     "bio_binding_approval_sha256": null,
     "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
     "chemistry_review_root_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
-    "coauthor_binding_approval_sha256": "865f36b105198a8e425edfa9ff426f44e4eef4b3484149e7e9d8ed88a8adf269",
-    "current_visible_observations": 60768,
+    "coauthor_binding_approval_sha256": null,
+    "current_visible_observations": 60751,
     "mccomb_continuity_sha256": null,
     "missing_sullivan_curated_targets": [],
-    "new_source_gains": 3,
+    "new_source_gains": 0,
     "poster_loss_approval_sha256": null,
-    "prior_eligible_overrides": 143,
-    "prior_excluded_overrides": 118,
-    "prior_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
-    "prior_visible_observations": 60765,
+    "prior_eligible_overrides": 153,
+    "prior_excluded_overrides": 89,
+    "prior_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
+    "prior_visible_observations": 60768,
     "reviewed_composite_observation_gains": [],
     "reviewed_composite_observation_losses": [],
     "reviewed_composite_work_gains": [],
     "reviewed_composite_work_losses": [],
-    "reviewed_losses": [],
+    "reviewed_losses": [
+      "person-amvrosiadis-29ddc594/ygiY7C8AAAAJ/ygiY7C8AAAAJ:BqipwSGYUEgC/scholar",
+      "person-erdogmus-94eea046/4PU5ZFYV-iEC/4PU5ZFYV-iEC:BwyfMAYsbu0C/scholar",
+      "person-fanti-b183a14d/Rn_BmTYAAAAJ/Rn_BmTYAAAAJ:kVjdVfd2voEC/scholar",
+      "person-franchetti-3c3c9126/SHcIvuoAAAAJ/SHcIvuoAAAAJ:HbR8gkJAVGIC/scholar",
+      "person-ganger-9385a346/l6oz33MAAAAJ/l6oz33MAAAAJ:VLnqNzywnoUC/scholar",
+      "person-gibbons-99e0376f/F9kqUXkAAAAJ/F9kqUXkAAAAJ:WC9gN4BGCRcC/scholar",
+      "person-gibbons-99e0376f/F9kqUXkAAAAJ/F9kqUXkAAAAJ:anf4URPfarAC/scholar",
+      "person-grossman-4b111234/fiZryxEAAAAJ/fiZryxEAAAAJ:Nw_I7GeUguwC/scholar",
+      "person-jia-ffa798af/yjJPtE4AAAAJ/yjJPtE4AAAAJ:SeFeTyx0c_EC/scholar",
+      "person-jia-ffa798af/yjJPtE4AAAAJ/yjJPtE4AAAAJ:eMMeJKvmdy0C/scholar",
+      "person-joshi-1d844162/yqIoH34AAAAJ/yqIoH34AAAAJ:sNmaIFBj_lkC/scholar",
+      "person-koopman-ed56c669/DFtapYEAAAAJ/DFtapYEAAAAJ:U_HPUtbDl20C/scholar",
+      "person-kumar-6287fc1e/WfaqxlgAAAAJ/WfaqxlgAAAAJ:HFi42EZPDb4C/scholar",
+      "person-mai-e114ceea/-syEyyAAAAAJ/-syEyyAAAAAJ:O3NaXMp0MMsC/scholar",
+      "person-shen-a3919bd2/pARKzQsAAAAJ/pARKzQsAAAAJ:8d8msizDQcsC/scholar",
+      "person-shen-a3919bd2/pARKzQsAAAAJ/pARKzQsAAAAJ:LO7wyVUgiFcC/scholar",
+      "person-steenkiste-1644722f/DK7TEvkAAAAJ/DK7TEvkAAAAJ:pS0ncopqnHgC/scholar"
+    ],
     "scs_four_topic_holds": {
       "carried_forward": true,
       "held_works": [
@@ -3381,12 +3423,12 @@
           "work_id": "work-e9b6da02fcf0310dc757a98c23ca7e5ac66b5046a889fb80ba82d5cfbe816415"
         }
       ],
-      "prior_revision": "5073c24450e2f239ca49f674cbc81287b915045b",
+      "prior_revision": "42031e014886e67c4b606261c2e0dee217ee762c",
       "raw_and_authorship_retained": true,
       "reason": "reviewed_topic_hold",
       "snapshot_sha256": "51ebf5c5b5185ba1ac4d19beb29fccebca9d89c8e4628d8f8c9df2db839028a3"
     },
-    "stable_works": 56395,
+    "stable_works": 56382,
     "sullivan_continuity_addendum_sha256": null,
     "sullivan_loss_approval_sha256": null,
     "unapproved_mapped_binding_changes": [],
@@ -3406,8 +3448,8 @@
   "reviewed_contexts_sha256": "ec2f3f67c0448834717e3977c9a282556cccc010191b1b920bdaaa2ccc6db661",
   "reviewed_doi_aliases": 60,
   "reviewed_doi_aliases_sha256": "ac18a559d31a405e449b51bc8765eae561e5b8deae48e73adde4c5e875c4ba73",
-  "reviewed_exclusions": 1883,
-  "reviewed_exclusions_sha256": "f94e1639dd660ef3a0b9742d1a0f1605fbe99c4003af3946e06684a5369f8d69",
+  "reviewed_exclusions": 1900,
+  "reviewed_exclusions_sha256": "f567a0ac7b339d81ce1ffd98390f83f4d8e08b46e36b9a9692520e778717d4ad",
   "reviewed_metadata_corrections": 29,
   "reviewed_metadata_corrections_sha256": "9726732bb75e7311978a7f52a4dab22253b71555acd2a95cc9a82bb8ffb9b19d",
   "schema_version": 2,
@@ -3416,11 +3458,11 @@
     "legacy_profiles": 284,
     "reconciled_prior_ids": 19
   },
-  "snapshot_commit": "07f20a6ee59da80c21c4a5fc14d6cbf106827679",
-  "started_at_utc": "2026-10-30T13:59:28.490122+00:00",
+  "snapshot_commit": "0ede6a1851bd71538ba36a2f66c9b1b30b6b9abb",
+  "started_at_utc": "2026-10-30T18:17:54.918960+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 29,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41067515927",
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41105292914",
   "works": 64521
 }
