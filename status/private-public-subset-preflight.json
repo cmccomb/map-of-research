@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "status": "private_full_capture_review_reconciled_to_public_subset",
-  "source_selection_manifest_sha256": "ac75e2ddbb6bba8962ac80d33a4353de1a875eff70e8b489b1f1af1ae6842aa1",
-  "source_snapshot_sha256": "a8dc40c925c152f1327a2b0cee5c6e1c70c68017397b8da486c9aed852bc1c97",
-  "selected_ids_sha256": "2dc1246aa89840475e8480dcdf4c2cebaa2b19a71aec9bbb97a23544334f93e9",
-  "withheld_ids_sha256": "42178ce621bf0c4edafc901ba9870aefc8b31b175ca08a75d3bcf087e691bd05",
+  "source_selection_manifest_sha256": "269d766fb0ce98a9f7f48ad8d706c6e72c6e2571b2067c168c97da66f1a74da0",
+  "source_snapshot_sha256": "1af722989c5fe54a70168817898a3fc66d289d8af3b56cbf65e4e6e16baab7d6",
+  "selected_ids_sha256": "aef91671037bb9d37269a4a08c559a6310b9274fbfdcfc9bbd3e10dd1e3e748b",
+  "withheld_ids_sha256": "9c68d3ce25b7b542cfc4fcf28bb9918ec704e770400ed9cc98aaf6f20b125553",
   "totals": {
-    "observed_visible_rows": 1254,
-    "selected_rows": 857,
-    "withheld_hold_rows": 339,
-    "withheld_excluded_rows": 58,
-    "withheld_rows": 397
+    "observed_visible_rows": 1483,
+    "selected_rows": 978,
+    "withheld_hold_rows": 433,
+    "withheld_excluded_rows": 72,
+    "withheld_rows": 505
   },
   "profiles": [
     {
@@ -236,6 +236,76 @@
       "withheld_rows": 7,
       "withheld_hold_rows": 3,
       "withheld_excluded_rows": 4
+    },
+    {
+      "person_id": "person-joshuakangas-79a37d6d",
+      "scholar_id": "nLXQg7oAAAAJ",
+      "cache_sha256": "816257fa2ab397ad99a32caf06a0655d911a24acb396f97ab732d4a7a1840f40",
+      "private_capture_sha256": "3aabc9e9329caf1a385ebda223163587d3af2e8ac409a19d514429db220a95c4",
+      "private_review_sha256": "33f9b54c4bd29e4f224dcbc4c5675aa2ae07b5dfa31d9fdc4a4681829bce3b3f",
+      "selected_ids_sha256": "b85ca765f7be8e2d238e7ad99ba07e249da56829ddb184f4ff7e2caf80f0abc7",
+      "withheld_ids_sha256": "7f9f531ec57ae8c3af9bfa6583d42bba3161b7f14b479cbc188a0e799c006984",
+      "observed_visible_rows": 26,
+      "selected_rows": 15,
+      "withheld_rows": 11,
+      "withheld_hold_rows": 6,
+      "withheld_excluded_rows": 5
+    },
+    {
+      "person_id": "person-hammadahmad-dcffc18f",
+      "scholar_id": "7Oy1s9YAAAAJ",
+      "cache_sha256": "0954502834cc809d516228c9fd84e0404891d73d94ce885c696303dc8692df9e",
+      "private_capture_sha256": "4d5bde9997734d571c78309619d875a6134b6d85b17d34d8ec263ff58eb43d66",
+      "private_review_sha256": "4dae43ff73d374536d195bb744c1fe41a73dfb9041e8ad73aa6769fd1c190586",
+      "selected_ids_sha256": "15ce37988b7cd30f92b7e1fd7aa1f91bf952e09dfb6325d876fd004adce9f3b8",
+      "withheld_ids_sha256": "8e29c89de6c0728855a7ed4c5794ad8b61383a227773e8e7d9b3acc553a61c76",
+      "observed_visible_rows": 13,
+      "selected_rows": 9,
+      "withheld_rows": 4,
+      "withheld_hold_rows": 4,
+      "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-zelihadilsunkaynar-76673f2c",
+      "scholar_id": "JYTiG5kAAAAJ",
+      "cache_sha256": "d1c8b6dcf96499ba91dd4fc28f0fbcd6393ba9fed1eb3423b8a805c4ca274254",
+      "private_capture_sha256": "eb8ce5b27c8ad564e6a172068ef61d58c5a36a1d3b7608818b631dc067fe4425",
+      "private_review_sha256": "db5ef88a8b770615d800c931b6a6d80bd8b26c4167a8202ec5d6b5266443d3b7",
+      "selected_ids_sha256": "510aead0a93d51089ce4eaccc37b3ea16753ca8a20c62d52e963e875a275b09c",
+      "withheld_ids_sha256": "1d5be6a0af6395e19b964826e9f6d287b667fd2baebfb227c871fb13f60b4bad",
+      "observed_visible_rows": 85,
+      "selected_rows": 26,
+      "withheld_rows": 59,
+      "withheld_hold_rows": 53,
+      "withheld_excluded_rows": 6
+    },
+    {
+      "person_id": "person-dimitriosskarlatos-39a9215e",
+      "scholar_id": "T_ZmDEAAAAAJ",
+      "cache_sha256": "be746e1e9e62763a96d1b8ef181644e2719b73bb24e471a45e1be04f1162412a",
+      "private_capture_sha256": "719f3a2ffa21a24844bc132c45283d26b194384fa4b2bcf92e03be82949df399",
+      "private_review_sha256": "77a400f6afeb505dea02d7916752d53d9c1b0543a157edd50a5ec98a502d3dd9",
+      "selected_ids_sha256": "c7b1395476050dee73744281bed15c263ec75eef6be9ab6b12cb32cd0f2b75ff",
+      "withheld_ids_sha256": "0818354ce7b4cc85fe94db09c3db89330e39a67cf74b5f7757a81fcf87ed96c2",
+      "observed_visible_rows": 35,
+      "selected_rows": 28,
+      "withheld_rows": 7,
+      "withheld_hold_rows": 7,
+      "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-weinawang-a585b04e",
+      "scholar_id": "mQnBkmoAAAAJ",
+      "cache_sha256": "0f5d30479cbaad357851d83e3bbf28298847cf8fa1470a270c89c64ea67709c8",
+      "private_capture_sha256": "d2269b2f57db005db3a5ed3d54455a31256ce28efb0ef51db3cc3eb0ef6133da",
+      "private_review_sha256": "26c91cd83e4a2cbd3504c3c13127b8e022ed874c6a334b9ce17cec423d149441",
+      "selected_ids_sha256": "2f5d30b6921a86ae7cad3faccc72d7ae4775abafd8e52193f55615503aa2dd11",
+      "withheld_ids_sha256": "f1774e2b98371343d9765270c807a2c9f8df7a2c0205c9633a00ac987e7140d7",
+      "observed_visible_rows": 70,
+      "selected_rows": 43,
+      "withheld_rows": 27,
+      "withheld_hold_rows": 24,
+      "withheld_excluded_rows": 3
     }
   ],
   "private_evidence_verified_locally": true,
