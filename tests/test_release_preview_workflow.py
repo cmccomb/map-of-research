@@ -445,6 +445,8 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert 'HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"' in workflow
     assert "central-publication-upload-v1" in workflow
     assert "central-publication-upload-v1" in upload
+    assert "cache: pip" not in workflow
+    assert "cache: pip" not in upload
     assert "preview_atomic_release.py" in workflow
     assert "map-validate-math-coverage" in workflow
     assert "map-validate-scholar-coverage" in workflow
