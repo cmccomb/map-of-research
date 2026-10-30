@@ -674,6 +674,15 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
     ] = 1.2
     with pytest.raises(ValueError, match="unnormalized placement"):
         require_preserved_additive_artifact(baseline, changed, receipt)
+    changed = json.loads(json.dumps(rebuilt))
+    next(point for point in changed["points"] if point["work_id"] == "work-added")[
+        "tsne_x"
+    ] = 0.9
+    with pytest.raises(ValueError, match="differs from reviewed work coordinates"):
+        require_preserved_additive_artifact(baseline, changed, receipt)
+    missing_digest = {**receipt, "placed_new_coordinates_sha256": ""}
+    with pytest.raises(ValueError, match="differs from reviewed work coordinates"):
+        require_preserved_additive_artifact(baseline, rebuilt, missing_digest)
 
 
 def test_map_artifact_retains_verified_external_coauthor_and_source_type() -> None:

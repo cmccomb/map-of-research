@@ -766,3 +766,18 @@ def test_additive_rejects_parent_with_missing_topic_field(tmp_path: Path) -> Non
             parent_map_sha256="p" * 64,
             review_path=path,
         )
+
+
+def test_additive_review_is_stale_if_candidate_changes_after_review(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    path = tmp_path / "placement-review.json"
+    additive_review(path, error.value.receipt)
+    next(point for point in candidate["points"] if point["work_id"] == "work-new")[
+        "tsne_x"
+    ] = 0.9
+    with pytest.raises(PresentationDriftError, match="stale or mismatched"):
+        freeze_additive(parent, candidate, works, path)

@@ -531,6 +531,18 @@ def preserve_reviewed_additive_presentation(
         for work_id, item in by_id.items()
         if item["decision"] == "hold_pending_placement"
     )
+    receipt["placed_new_coordinates_sha256"] = _digest(
+        [
+            (
+                work_id,
+                [
+                    float(by_id[work_id]["coordinates"][field])
+                    for field in COORDINATE_FIELDS
+                ],
+            )
+            for work_id in receipt["placed_new_work_ids"]
+        ]
+    )
     receipt["review_sha256"] = hashlib.sha256(review_bytes).hexdigest()
     return output, receipt
 
@@ -581,6 +593,12 @@ def require_preserved_additive_artifact(
         coordinates = _coordinates(point, "Staged")
         if any(not -1.0 <= value <= 1.0 for value in coordinates):
             raise ValueError("Additive staged map has unnormalized placement")
+    staged_placements = [
+        (work_id, list(_coordinates(new[work_id], "Staged")))
+        for work_id in sorted(placed)
+    ]
+    if _digest(staged_placements) != receipt.get("placed_new_coordinates_sha256"):
+        raise ValueError("Additive staged map differs from reviewed work coordinates")
 
 
 def require_presentation_review(
