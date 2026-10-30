@@ -65,6 +65,8 @@ def inputs():
                 "author_pub_id": ROW_ID,
                 "source_url": SOURCE_URL,
                 "collaboration_eligible": True,
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
             }
         ]
     )
@@ -101,6 +103,7 @@ def test_pending_publication_is_selected_and_nonspatial() -> None:
     [
         ("x", 0.1, "unreviewed coordinates"),
         ("map_eligible", True, "exclusive placement hold"),
+        ("map_eligible", "", "exclusive placement hold"),
         ("map_exclusion_reasons", ["some_other_hold"], "exclusive placement hold"),
         ("author_pub_ids", ["unselected:row"], "exact public source rows"),
         ("source_urls", ["http://example.com"], "not selected HTTPS"),
@@ -110,6 +113,8 @@ def test_pending_publication_is_selected_and_nonspatial() -> None:
 )
 def test_pending_publication_rejects_invalid_work(field, value, message) -> None:
     works, profiles, receipt, registry, held = inputs()
+    if field == "map_eligible" and isinstance(value, str):
+        works["map_eligible"] = works["map_eligible"].astype(object)
     works.at[0, field] = value
     with pytest.raises(ValueError, match=message):
         build_pending_publications(works, profiles, receipt, registry, held)
@@ -241,6 +246,23 @@ def test_pending_publication_rejects_missing_or_duplicate_profile_rows() -> None
     duplicate = pandas.concat([profiles, profiles], ignore_index=True)
     with pytest.raises(ValueError, match="exact public source rows"):
         build_pending_publications(works, duplicate, receipt, registry, held)
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("map_eligible", False),
+        ("map_eligible", "true"),
+        ("map_exclusion_reasons", ["excluded_source"]),
+    ],
+)
+def test_pending_requires_eligible_selected_source_observation(field, value) -> None:
+    works, profiles, receipt, registry, held = inputs()
+    if field == "map_eligible" and isinstance(value, str):
+        profiles["map_eligible"] = profiles["map_eligible"].astype(object)
+    profiles.at[0, field] = value
+    with pytest.raises(ValueError, match="source-ineligible public row"):
+        build_pending_publications(works, profiles, receipt, registry, held)
 
 
 def test_pending_publication_rejects_source_owner_outside_included_memberships() -> (

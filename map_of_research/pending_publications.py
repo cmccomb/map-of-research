@@ -62,6 +62,8 @@ def build_pending_publications(
         "author_pub_id",
         "source_url",
         "collaboration_eligible",
+        "map_eligible",
+        "map_exclusion_reasons",
     }
     if not required_works <= set(works.columns) or not required_profiles <= set(
         profiles.columns
@@ -108,7 +110,8 @@ def build_pending_publications(
         work = work_by_id[work_id]
         reasons = work.map_exclusion_reasons
         if (
-            bool(work.map_eligible)
+            type(work.map_eligible) is not bool
+            or work.map_eligible
             or not isinstance(reasons, list)
             or reasons != [PENDING_REASON]
         ):
@@ -175,6 +178,15 @@ def build_pending_publications(
         ):
             raise ValueError(f"Pending work lacks exact public source rows: {work_id}")
         for row in public_rows:
+            if (
+                type(row.map_eligible) is not bool
+                or row.map_eligible is not True
+                or not isinstance(row.map_exclusion_reasons, list)
+                or row.map_exclusion_reasons
+            ):
+                raise ValueError(
+                    f"Pending work has source-ineligible public row: {work_id}"
+                )
             expected = selected_owner.get(str(row.author_pub_id))
             if expected != (str(row.person_id), str(row.scholar_id)):
                 raise ValueError(
