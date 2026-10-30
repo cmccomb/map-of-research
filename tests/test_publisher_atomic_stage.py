@@ -614,12 +614,19 @@ def test_deletion_only_preservation_is_reported_before_atomic_commit(
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
 
 
+@pytest.mark.parametrize(
+    ("current_ids", "prior_ids"),
+    [
+        (["owner:row-1"], []),
+        (["legacy", "legacy", "owner:row-1"], ["legacy", "legacy"]),
+    ],
+)
 def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
-    monkeypatch, tmp_path
+    monkeypatch, tmp_path, current_ids, prior_ids
 ) -> None:
     calls, tables, manifest = _stage(monkeypatch, tmp_path)
     tables["profile_publications"] = pandas.DataFrame(
-        {"author_pub_id": ["owner:row-1"], "value": ["profile"]}
+        {"author_pub_id": current_ids, "value": ["profile"] * len(current_ids)}
     )
     parent = {"points": []}
     monkeypatch.setattr(
@@ -666,7 +673,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         continuity_receipt={"prior_revision": "a" * 40},
         repair_manifest_path=manifest,
         provisional_holds={},
-        prior_profiles=[],
+        prior_profiles=[{"author_pub_id": item} for item in prior_ids],
         prior_people=_prior_bio_people(),
         prior_works=[],
         enforce_presentation_drift=True,
@@ -676,7 +683,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     assert received == {
         "prior_revision": "a" * 40,
         "source_snapshot_sha256": "source-sha",
-        "selected_ids_sha256": publisher.ids_sha256({"owner:row-1"}),
+        "selected_ids_sha256": publisher.ids_sha256(set(current_ids)),
         "parent_map_sha256": "parent-sha",
         "review_path": review_path,
     }

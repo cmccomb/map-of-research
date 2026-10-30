@@ -11,6 +11,7 @@ import math
 import os
 import subprocess
 import tempfile
+from collections import Counter
 from collections.abc import Callable, Iterator, Mapping, Sequence
 from pathlib import Path
 from typing import Any
@@ -1500,14 +1501,22 @@ def _publish_atomic_release(
             if "author_pub_id" not in public_profiles.columns:
                 raise ValueError("Additive placement lacks selected source IDs")
             selected_ids = public_profiles["author_pub_id"].astype(str).tolist()
+            current_id_counts = Counter(selected_ids)
+            prior_id_counts = Counter(
+                str(row["author_pub_id"]) for row in prior_profiles
+            )
             if (
                 not selected_ids
                 or public_profiles["author_pub_id"].isna().any()
                 or any(not value.strip() for value in selected_ids)
-                or len(set(selected_ids)) != len(selected_ids)
+                or any(
+                    count > max(1, prior_id_counts[author_pub_id])
+                    for author_pub_id, count in current_id_counts.items()
+                )
             ):
                 raise ValueError(
-                    "Additive placement has missing or duplicate source IDs"
+                    "Additive placement has missing or duplicate source IDs "
+                    "beyond parent"
                 )
             selected_ids_digest = ids_sha256(set(selected_ids))
             candidate_before_preservation = build_map_artifact(
