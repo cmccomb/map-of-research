@@ -1655,6 +1655,26 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "6bbb5d4e0ad06c4a3c61049455b9ff7427bb4884dbfdfe89c7d3d9178fba2a88"
       }
+    },
+    {
+      "cache_sha256": "b74c73f66687c153b57cc2d64d732c9994644a6d5008aeca8f5545af013159da",
+      "expected_source_rows": 60,
+      "person_id": "person-vincentconitzer-acf31328",
+      "public_subset": {
+        "observed_visible_rows": 467,
+        "private_capture_sha256": "e4cef76821cf1f155d7786e331173e1906d053fab04830b513f5f89119419a1c",
+        "private_rendered_html_sha256": "b2f408ac844d190e1c63c4a8b2e7f8e0b6aedb9807ffed4e710d82ccebe0f086",
+        "private_review_sha256": "0a8da101e0c22997c30e2daa35488a2db42b7cb41e5dbc15b4b28b3dcaae5598",
+        "selected_ids_sha256": "cb0f040bb063b760cf016bd59ad3cefb22b7429e6163c7e014b85d64dea4f8ac",
+        "withheld_excluded_rows": 12,
+        "withheld_hold_rows": 395,
+        "withheld_ids_sha256": "f2aebfe6dce6ba8adbebd9b63146c4292bf491adc87fa07336ce72a6bf93e09d",
+        "withheld_rows": 407
+      },
+      "reason": "Local private-stage candidate: 60 original-document-supported Vincent observations from 467 complete visible Chrome rows; 407 remain private. New works require exact placement/topic review and remain pending. This candidate decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "scholar_id": "juRk4lQAAAAJ",
+      "state": "released"
     }
   ]
 }
