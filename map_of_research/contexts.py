@@ -13,7 +13,7 @@ from .io import load_json
 DEFAULT_CONTEXTS_PATH = Path("data/curated/scholar-contexts.json")
 CONTEXT_SCHEMA_VERSION = 1
 AUTHORED_PUBLICATION_TYPES = frozenset(
-    {"conference_paper", "journal_article", "book_chapter"}
+    {"conference_paper", "journal_article", "book_chapter", "preprint"}
 )
 CONTEXT_TYPES = (
     frozenset(

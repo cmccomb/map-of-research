@@ -102,7 +102,7 @@ Exact context reviews add `publication_type`, `source_document_id`,
 `collaboration_eligible`, optional source-verified display contributors, and
 the context evidence without changing
 `source_record_json`.
-An authored conference paper, journal article, or book chapter needs a reviewed
+An authored conference paper, journal article, book chapter, or preprint needs a reviewed
 context bound to the exact effective title and year. That context records an
 explicit verified DOI (or an explicit blank), primary-source evidence, and an
 explicit collaboration decision. A verified DOI determines the canonical work
@@ -114,7 +114,9 @@ apply. Every DOI present in the captured source fields must agree with the
 reviewed DOI; an explicit blank rejects every captured DOI. Conflicting source
 DOIs require a separate exact version review. This comparison decodes URL
 escapes and HTML entities for inspection while preserving captured field text.
-A book chapter is an authored chapter, distinct from an edited book.
+A book chapter is an authored chapter, distinct from an edited book. A reviewed
+preprint retains its original preprint type and verified identifier; it does not
+claim a later journal or conference version.
 
 An exact `publication` context may instead use the owner-linked Scholar
 citation itself as evidence when the row is a substantive work but its precise
