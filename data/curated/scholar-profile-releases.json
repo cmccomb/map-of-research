@@ -1635,6 +1635,26 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d"
       }
+    },
+    {
+      "person_id": "person-srinivasanseshan-ad84bf6d",
+      "scholar_id": "0irVeiQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 25,
+      "cache_sha256": "6410d53486b7f826179f894f1756f1b07437dc5ffebeb9c409ae7719ca96530d",
+      "reason": "Local private-stage candidate: 25 original-document-supported Seshan observations from 309 complete visible Chrome rows; 284 remain private. New works require exact placement/topic review and remain pending. This candidate decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 309,
+        "private_capture_sha256": "879ac85008224d9292b604191cb9880d2a14438f5f088c1ed31e3cd71fade5ab",
+        "private_review_sha256": "c70998d8a013467ac4c72a2d3dc9311fd400af4ced20abd6ffdee33269d82143",
+        "private_rendered_html_sha256": "ccb4f52c99f8297b82030cb879c40d10b90d58fc79229eccd401a30665788b65",
+        "selected_ids_sha256": "7f3950b59e0f8c32929953e3d9b3e935624adb2ff6def7ead0d4b4c086587d5f",
+        "withheld_rows": 284,
+        "withheld_hold_rows": 284,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "6bbb5d4e0ad06c4a3c61049455b9ff7427bb4884dbfdfe89c7d3d9178fba2a88"
+      }
     }
   ]
 }
