@@ -26,6 +26,7 @@ from map_of_research.presentation_drift import (
     preserve_reviewed_additive_presentation,
     require_preserved_additive_artifact,
 )
+from map_of_research.public_subsets import ids_sha256
 from map_of_research.region_continuity import RegionReleaseDiffError
 from map_of_research.registry import Department, Membership, Person, Registry, School
 
@@ -39,6 +40,241 @@ def isolate_generic_publisher_tests_from_reviewed_person_holds(monkeypatch) -> N
 
 class Rows(list):
     pass
+
+
+def test_pending_generic_region_protection_is_manifest_source_bound(tmp_path) -> None:
+    profiles = pandas.DataFrame(
+        [
+            {
+                "author_pub_id": "owner:new",
+                "scholar_id": "owner",
+                "work_id": "work-new",
+                "source_type": "scholar",
+                "publication_type": "publication",
+                "work_match_method": "profile_publication",
+                "doi": "",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+            },
+            {
+                "author_pub_id": "owner:prior",
+                "scholar_id": "owner",
+                "work_id": "work-prior",
+                "source_type": "scholar",
+                "publication_type": "publication",
+                "work_match_method": "profile_publication",
+                "doi": "",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+            },
+            {
+                "author_pub_id": "owner:authored",
+                "scholar_id": "owner",
+                "work_id": "work-authored",
+                "source_type": "scholar",
+                "publication_type": "conference_paper",
+                "work_match_method": "reviewed_context_doi",
+                "doi": "10.1000/authored",
+                "collaboration_eligible": True,
+                "map_eligible": True,
+            },
+            {
+                "author_pub_id": "owner:unreviewed",
+                "scholar_id": "owner",
+                "work_id": "work-unreviewed",
+                "source_type": "scholar",
+                "publication_type": "publication",
+                "work_match_method": "profile_publication",
+                "doi": "",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+            },
+        ]
+    )
+    works = pandas.DataFrame(
+        [
+            {
+                "work_id": work_id,
+                "publication_type": publication_type,
+                "doi": doi,
+                "collaboration_eligible": collaboration,
+                "map_eligible": True,
+            }
+            for work_id, publication_type, doi, collaboration in (
+                ("work-new", "publication", "", False),
+                ("work-prior", "publication", "", False),
+                ("work-authored", "conference_paper", "10.1000/authored", True),
+                ("work-unreviewed", "publication", "", False),
+            )
+        ]
+    )
+    contexts = {
+        ("owner", "owner:new"): SimpleNamespace(publication_type="publication"),
+        ("owner", "owner:prior"): SimpleNamespace(publication_type="publication"),
+        ("owner", "owner:authored"): SimpleNamespace(
+            publication_type="conference_paper"
+        ),
+    }
+    review = {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "b" * 64,
+        "selected_ids_sha256": ids_sha256(set(profiles["author_pub_id"])),
+        "new_points": [
+            {
+                "work_id": "work-new",
+                "decision": "hold_pending_placement",
+                "coordinates": None,
+            },
+            {
+                "work_id": "work-authored",
+                "decision": "hold_pending_placement",
+                "coordinates": None,
+            },
+            {
+                "work_id": "work-unreviewed",
+                "decision": "hold_pending_placement",
+                "coordinates": None,
+            },
+        ],
+    }
+    path = tmp_path / "review.json"
+    path.write_text(json.dumps(review))
+
+    protected = publisher._reviewed_new_generic_placement_work_ids(
+        profiles,
+        works,
+        contexts,
+        [{"work_id": "work-prior"}],
+        path,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="b" * 64,
+    )
+    assert protected == frozenset({"work-new"})
+
+    missing_generic_review = dict(review)
+    missing_generic_review["new_points"] = [
+        item for item in review["new_points"] if item["work_id"] != "work-new"
+    ]
+    path.write_text(json.dumps(missing_generic_review))
+    with pytest.raises(ValueError, match="lacks all-held placement review"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    work_type_drift = works.copy()
+    work_type_drift.loc[
+        work_type_drift["work_id"] == "work-new", "publication_type"
+    ] = "conference_paper"
+    path.write_text(json.dumps(review))
+    with pytest.raises(ValueError, match="ineligible canonical work"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            work_type_drift,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    review["prior_revision"] = "c" * 40
+    path.write_text(json.dumps(review))
+    with pytest.raises(ValueError, match="source or parent changed"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    review["prior_revision"] = "a" * 40
+    path.write_text(json.dumps(review))
+    ineligible = profiles.copy()
+    ineligible.loc[ineligible["work_id"] == "work-new", "map_eligible"] = False
+    with pytest.raises(ValueError, match="ineligible source work"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            ineligible,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    wrong_source_type = profiles.copy()
+    wrong_source_type.loc[wrong_source_type["work_id"] == "work-new", "doi"] = (
+        "10.1000/unreviewed"
+    )
+    with pytest.raises(ValueError, match="ineligible source work"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            wrong_source_type,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    path.write_text(json.dumps(missing_generic_review))
+    assert (
+        publisher._reviewed_new_generic_placement_work_ids(
+            ineligible,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+        == frozenset()
+    )
+    path.write_text(json.dumps(review))
+
+    with pytest.raises(ValueError, match="lacks work eligibility fields"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            works.drop(columns=["doi"]),
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+    duplicate_review = dict(review)
+    duplicate_review["new_points"] = [*review["new_points"], review["new_points"][0]]
+    path.write_text(json.dumps(duplicate_review))
+    with pytest.raises(ValueError, match="stale or duplicate work IDs"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+    path.write_text("{}")
+    with pytest.raises(ValueError, match="lacks exact new work decisions"):
+        publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            works,
+            contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
 
 
 def install_published_rows(monkeypatch, loader) -> None:
@@ -2548,6 +2784,13 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             "additive_placement_review_path": tmp_path / "placement.json",
         }
         additive_options.pop("historical_loss_approval_path", None)
+        # This synthetic orchestration fixture has no actual placement
+        # manifest; exact generic-work binding is tested separately.
+        monkeypatch.setattr(
+            publisher,
+            "_reviewed_new_generic_placement_work_ids",
+            lambda *args, **kwargs: frozenset(),
+        )
         publisher.publish_snapshot(
             tmp_path / "snapshot.parquet",
             tmp_path / "manifest.json",
