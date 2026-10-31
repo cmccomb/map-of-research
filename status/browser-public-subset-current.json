@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "7ddade021ae4cc7ece2c9daf960e99749e72d254",
-  "registry_producer_commit": "04cd636c2603a649b52d3d063db4998c7aa2b811",
+  "base_source_status_commit": "8adb64107ceb75843676e979b7487453c6cd384e",
+  "registry_producer_commit": "53594cab03619d05577694df7dcb3a46a5a280c2",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -2087,16 +2087,63 @@
         "withheld_ids_sha256": "c588682addfa00ab0380763a0e2a9bbe6136d92641c002dfe51e835af4cf0a93"
       },
       "cache_sha256": "4577d7ebb3b7696640fa6edd7aba5539f37b358f4e10afa074c275b8a3499be8"
+    },
+    {
+      "cache_sha256": "7c5807ea6569730f0f0c522052263134baa9b6219df3dc16268417e38afaac6b",
+      "expected_source_rows": 27,
+      "person_id": "person-stevenwu-2f9ac697",
+      "public_subset": {
+        "observed_visible_rows": 222,
+        "private_capture_sha256": "4cfde73a6f9d07e029b48e6c2bdd74b520fadfa82693660c095e928a41d1c38a",
+        "private_rendered_html_sha256": "f9516e0b4d2e773fadbd803772354aea2e3a27b2571e67c988d89d644358d2cc",
+        "private_review_sha256": "35175f4dd910cff6e44d05c31ba3ac8d070dde52360a76a2a21e4e838db036f8",
+        "selected_ids_sha256": "a4b62f4bb4eb2e79cad4b0e9011128de1f0bd251034e8d96821ebbbf863e6d45",
+        "withheld_excluded_rows": 2,
+        "withheld_hold_rows": 193,
+        "withheld_ids_sha256": "15a0058b289e2895fb56bd94ab44dffb293ec5d88d4b4f120cdf1fa7160ec0c8",
+        "withheld_rows": 195
+      },
+      "scholar_id": "MbF6rTEAAAAJ",
+      "selected_author_pub_ids": [
+        "MbF6rTEAAAAJ:0CzhzZyukY4C",
+        "MbF6rTEAAAAJ:2KloaMYe4IUC",
+        "MbF6rTEAAAAJ:35r97b3x0nAC",
+        "MbF6rTEAAAAJ:5awf1xo2G04C",
+        "MbF6rTEAAAAJ:6yz0xqPARnAC",
+        "MbF6rTEAAAAJ:Aul-kAQHnToC",
+        "MbF6rTEAAAAJ:BUYA1_V_uYcC",
+        "MbF6rTEAAAAJ:DUooU5lO8OsC",
+        "MbF6rTEAAAAJ:F9fV5C73w3QC",
+        "MbF6rTEAAAAJ:NyGDZy8z5eUC",
+        "MbF6rTEAAAAJ:PR6Y55bgFSsC",
+        "MbF6rTEAAAAJ:SdhP9T11ey4C",
+        "MbF6rTEAAAAJ:W5xh706n7nkC",
+        "MbF6rTEAAAAJ:WA5NYHcadZ8C",
+        "MbF6rTEAAAAJ:ZfRJV9d4-WMC",
+        "MbF6rTEAAAAJ:ZzlSgRqYykMC",
+        "MbF6rTEAAAAJ:_Ybze24A_UAC",
+        "MbF6rTEAAAAJ:epqYDVWIO7EC",
+        "MbF6rTEAAAAJ:hkOj_22Ku90C",
+        "MbF6rTEAAAAJ:hsZV8lGYWTMC",
+        "MbF6rTEAAAAJ:nVrZBo8bIpAC",
+        "MbF6rTEAAAAJ:sszUF3NjhM4C",
+        "MbF6rTEAAAAJ:t7zJ5fGR-2UC",
+        "MbF6rTEAAAAJ:tzM49s52ZIMC",
+        "MbF6rTEAAAAJ:u-x6o8ySG0sC",
+        "MbF6rTEAAAAJ:uJ-U7cs_P_0C",
+        "MbF6rTEAAAAJ:wMgC3FpKEyYC"
+      ],
+      "slug": "steven-wu"
     }
   ],
   "totals": {
-    "observed_visible_rows": 4537,
-    "selected_rows": 1364,
-    "withheld_hold_rows": 2945,
-    "withheld_excluded_rows": 228,
-    "withheld_rows": 3173
+    "observed_visible_rows": 4759,
+    "selected_rows": 1391,
+    "withheld_hold_rows": 3138,
+    "withheld_excluded_rows": 230,
+    "withheld_rows": 3368
   },
-  "selected_ids_sha256": "b4c228760b507b406143f16f77357ada338e4efb1d0e0710b4d46adf3048349e",
-  "withheld_ids_sha256": "e14ddaf4d94bb14b97a4537ffc61d918ea061d6f3d887637b83bd671019fe6de",
+  "selected_ids_sha256": "9b1e50cdc9bc1df417ba696646f093202c246c8cd9d7d4b9484eaf419852e770",
+  "withheld_ids_sha256": "c4673d1bebf2cf0f9a2db032b370e331abe3b07927e9e8b906435ed4b6392450",
   "private_capture_files_or_html_copied": false
 }
