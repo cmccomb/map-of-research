@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import operator
 import re
 from collections import Counter
 from collections.abc import Mapping, Sequence
@@ -34,11 +35,82 @@ REGION_PRESENTATION_FIELDS = (
     "map_region_prior_excluded_override",
 )
 RETAINED_WORK_PRESENTATION_FIELDS = (
+    "title",
+    "authors",
+    "year",
+    "venue",
+    "citation",
+    "citation_count",
+    "doi",
     "publication_type",
+    "source_document_id",
+    "source_verified_at",
+    "collaboration_eligible",
+    "display_contributors",
     "map_eligible",
+    "map_exclusion_reasons",
+    "layout_version",
+    "keyword_model_version",
+    "topic_label_review_version",
     *COORDINATE_FIELDS,
     *TOPIC_FIELDS,
     *REGION_PRESENTATION_FIELDS,
+)
+RETAINED_POINT_PRESENTATION_FIELDS = (
+    "title",
+    "authors",
+    "year",
+    "venue",
+    "citation_count",
+    "doi",
+    "publication_type",
+    "source_document_id",
+    "source_verified_at",
+    "collaboration_eligible",
+    "display_contributors",
+    "source_url",
+)
+RETAINED_KEYWORD_PRESENTATION_FIELDS = (
+    "label",
+    "extracted_label",
+    "label_reviewed",
+    "level",
+    "parent_keyword_id",
+    "coordinates",
+)
+RETAINED_WORK_GROWTH_FIELDS = (
+    "title_variants",
+    "author_variants",
+    "year_variants",
+    "venue_variants",
+    "citation_variants",
+    "external_coauthors",
+    "faculty",
+    "department_titles",
+    "school_titles",
+    "person_ids",
+    "memberships",
+    "department_ids",
+    "school_ids",
+    "observation_ids",
+    "author_pub_ids",
+    "scholar_ids",
+    "external_coauthor_ids",
+    "source_urls",
+    "source_types",
+    "source_native_ids",
+    "source_verification_urls",
+    "context_evidence_urls",
+)
+RETAINED_POINT_GROWTH_FIELDS = (
+    "faculty_ids",
+    "department_ids",
+    "school_ids",
+    "external_coauthor_ids",
+    "source_types",
+    "source_native_ids",
+    "source_verification_urls",
+    "context_evidence_urls",
 )
 
 _VOLATILE_CANDIDATE_FIELDS = {*COORDINATE_FIELDS, "keyword_ids"}
@@ -83,6 +155,41 @@ def _digest(value: Any) -> str:
         value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
     )
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _require_retained_list_growth(
+    prior: Any, current: Any, *, work_id: str, field: str
+) -> None:
+    """Allow reviewed list additions while rejecting lost prior entries."""
+
+    if not isinstance(current, list) and hasattr(current, "tolist"):
+        current = current.tolist()
+    if not isinstance(prior, list) or not isinstance(current, list):
+        raise ValueError(f"Additive staged work lacks {field} list: {work_id}")
+    if Counter(_digest(item) for item in prior) - Counter(
+        _digest(item) for item in current
+    ):
+        raise ValueError(f"Additive staged work loses prior {field}: {work_id}")
+
+
+def _require_retained_observation_count(
+    prior: Any, current: Any, *, work_id: str
+) -> None:
+    if isinstance(prior, bool) or isinstance(current, bool):
+        raise ValueError(
+            f"Additive staged work has invalid observation count: {work_id}"
+        )
+    try:
+        before = operator.index(prior)
+        after = operator.index(current)
+    except TypeError as error:
+        raise ValueError(
+            f"Additive staged work has invalid observation count: {work_id}"
+        ) from error
+    if after < before:
+        raise ValueError(
+            f"Additive staged work loses prior observation count: {work_id}"
+        )
 
 
 def _nonspatial_new_point_digest(
@@ -558,15 +665,7 @@ def preserve_reviewed_additive_presentation(
         raise ValueError(
             "Previously excluded parent work needs separate promotion review"
         )
-    required_columns = {
-        "work_id",
-        "publication_type",
-        "map_eligible",
-        "map_exclusion_reasons",
-        *COORDINATE_FIELDS,
-        *TOPIC_FIELDS,
-        *REGION_PRESENTATION_FIELDS,
-    }
+    required_columns = {"work_id", *RETAINED_WORK_PRESENTATION_FIELDS}
     if not required_columns <= set(works.columns):
         raise ValueError("Additive candidate works lack placement or topic fields")
     current_ids = works["work_id"].astype(str)
@@ -680,25 +779,27 @@ def preserve_reviewed_additive_presentation(
     for index, work_id in current_ids.items():
         if work_id in prior_by_id:
             prior = prior_by_id[work_id]
-            if "publication_type" not in prior:
+            if work_id not in retained and bool(
+                output.at[index, "map_eligible"]
+            ) != bool(prior.get("map_eligible")):
                 raise ValueError(
-                    f"Additive parent work lacks publication type: {work_id}"
+                    f"Additive off-map work changes map eligibility: {work_id}"
                 )
-            # A newly bound observation can supply a more specific reviewed
-            # type without changing the already published canonical work.
-            output.at[index, "publication_type"] = prior["publication_type"]
-            if any(field not in prior for field in REGION_PRESENTATION_FIELDS):
+            missing = set(RETAINED_WORK_PRESENTATION_FIELDS) - set(prior)
+            if missing:
                 raise ValueError(
-                    f"Additive parent work lacks region presentation fields: {work_id}"
+                    f"Additive parent work lacks presentation fields: {work_id}: "
+                    f"{sorted(missing)}"
                 )
-            for field in REGION_PRESENTATION_FIELDS:
+            # A newly bound observation can carry reviewed metadata without
+            # rewriting the already published canonical work. Binding and
+            # provenance lists remain eligible for separately reviewed growth.
+            for field in RETAINED_WORK_PRESENTATION_FIELDS:
                 output.at[index, field] = prior[field]
         if work_id in retained:
             prior = prior_by_id[work_id]
             point = parent_points[work_id]
             topics = _point_topics(point, parent_labels, "Parent")
-            if any(field not in prior for field in TOPIC_FIELDS):
-                raise ValueError(f"Additive parent work lacks topic fields: {work_id}")
             for position, prefix in enumerate(("keyword", "detail_keyword")):
                 topic_id = topics[position][0]
                 metadata = parent_catalog[topic_id]
@@ -723,11 +824,9 @@ def preserve_reviewed_additive_presentation(
             # invalidating it, so keep the retained point's display link.
             parent_url = str(point.get("source_url") or "")
             if "source_urls" not in output.columns:
-                if parent_url:
-                    raise ValueError(
-                        f"Additive retained map source URL lacks provenance: {work_id}"
-                    )
-                continue
+                raise ValueError(
+                    f"Additive retained map source URL lacks provenance: {work_id}"
+                )
             raw_urls = output.at[index, "source_urls"]
             if not isinstance(raw_urls, list):
                 raise ValueError(
@@ -753,17 +852,6 @@ def preserve_reviewed_additive_presentation(
             # Preserve that public metadata too; a corpus refit has no review
             # authority to move or relabel an existing off-map work.
             prior = prior_by_id[work_id]
-            if any(
-                field not in prior
-                for field in ("map_eligible", *COORDINATE_FIELDS, *TOPIC_FIELDS)
-            ):
-                raise ValueError(
-                    f"Additive parent off-map work lacks presentation fields: {work_id}"
-                )
-            if bool(output.at[index, "map_eligible"]) != bool(prior["map_eligible"]):
-                raise ValueError(
-                    f"Additive off-map work changes map eligibility: {work_id}"
-                )
             for field in (*COORDINATE_FIELDS, *TOPIC_FIELDS):
                 output.at[index, field] = prior[field]
         elif work_id in by_id:
@@ -916,12 +1004,35 @@ def require_preserved_additive_staged_works(
     if not prior_works:
         return
     import pandas
+    import pyarrow.parquet as parquet
 
-    fields = ("work_id", *RETAINED_WORK_PRESENTATION_FIELDS)
-    before = pandas.DataFrame(prior_works)
-    if not set(fields) <= set(before.columns):
+    fields = (
+        "work_id",
+        *RETAINED_WORK_PRESENTATION_FIELDS,
+        *RETAINED_WORK_GROWTH_FIELDS,
+        "observation_count",
+    )
+    if any(not set(fields) <= set(row) for row in prior_works):
         raise ValueError("Additive parent works lack presentation fields")
+    before = pandas.DataFrame(prior_works)
+    if not set(fields) <= set(parquet.ParquetFile(staged_path).schema_arrow.names):
+        raise ValueError("Additive staged works lack presentation fields")
     after = pandas.read_parquet(staged_path, columns=list(fields))
+
+    # pandas represents Parquet list columns as arrays, while the pinned
+    # parent's Arrow rows arrive as Python lists. Normalize only that physical
+    # representation; malformed or missing exclusion lists still fail closed.
+    def exclusion_list(value: Any) -> list[str]:
+        if not isinstance(value, list) and hasattr(value, "tolist"):
+            value = value.tolist()
+        if not isinstance(value, list):
+            raise ValueError("Additive staged works lack exclusion reasons")
+        return value
+
+    before["map_exclusion_reasons"] = before["map_exclusion_reasons"].map(
+        exclusion_list
+    )
+    after["map_exclusion_reasons"] = after["map_exclusion_reasons"].map(exclusion_list)
     before = before[list(fields)].set_index("work_id")
     after = after.set_index("work_id")
     if (
@@ -930,8 +1041,27 @@ def require_preserved_additive_staged_works(
         or not before.index.isin(after.index).all()
     ):
         raise ValueError("Additive staged works lose or duplicate prior work IDs")
-    if not before.sort_index().equals(after.loc[before.index].sort_index()):
+    prior_ids = before.index
+    protected = list(RETAINED_WORK_PRESENTATION_FIELDS)
+    if (
+        not before[protected]
+        .sort_index()
+        .equals(after.loc[prior_ids, protected].sort_index())
+    ):
         raise ValueError("Additive staged works change prior presentation")
+    for work_id in prior_ids:
+        for field in RETAINED_WORK_GROWTH_FIELDS:
+            _require_retained_list_growth(
+                before.at[work_id, field],
+                after.at[work_id, field],
+                work_id=str(work_id),
+                field=field,
+            )
+        _require_retained_observation_count(
+            before.at[work_id, "observation_count"],
+            after.at[work_id, "observation_count"],
+            work_id=str(work_id),
+        )
 
 
 def require_preserved_additive_artifact(
@@ -955,27 +1085,38 @@ def require_preserved_additive_artifact(
         raise ValueError("Additive staged map loses parent keyword IDs")
     for topic_id, old_metadata in old_catalog.items():
         new_metadata = new_catalog[topic_id]
-        for field in (
-            "label",
-            "extracted_label",
-            "label_reviewed",
-            "level",
-            "parent_keyword_id",
-        ):
-            if old_metadata.get(field) != new_metadata.get(field):
+        for field in RETAINED_KEYWORD_PRESENTATION_FIELDS:
+            if field not in old_metadata or field not in new_metadata:
+                raise ValueError("Additive staged map lacks parent topic metadata")
+            if old_metadata[field] != new_metadata[field]:
                 raise ValueError("Additive staged map changes parent topic metadata")
     for work_id, point in old.items():
         staged_point = new[work_id]
         if _coordinates(point, "Parent") != _coordinates(staged_point, "Staged"):
             raise ValueError("Additive staged map moves a retained point")
+        if "keyword_ids" not in point or "keyword_ids" not in staged_point:
+            raise ValueError("Additive staged map lacks retained topic IDs")
         if point["keyword_ids"] != staged_point["keyword_ids"]:
             raise ValueError("Additive staged map changes retained topic IDs")
-        if point.get("source_url") != staged_point.get("source_url"):
-            raise ValueError("Additive staged map changes retained source URL")
-        if "publication_type" not in point or "publication_type" not in staged_point:
-            raise ValueError("Additive staged map lacks retained publication type")
-        if point["publication_type"] != staged_point["publication_type"]:
-            raise ValueError("Additive staged map changes retained publication type")
+        for field in RETAINED_POINT_PRESENTATION_FIELDS:
+            label = field.replace("_", " ").replace("source url", "source URL")
+            if field not in point or field not in staged_point:
+                raise ValueError(f"Additive staged map lacks retained {label}")
+            if point[field] != staged_point[field]:
+                raise ValueError(f"Additive staged map changes retained {label}")
+        for field in RETAINED_POINT_GROWTH_FIELDS:
+            if field not in point or field not in staged_point:
+                raise ValueError(f"Additive staged map lacks retained {field}")
+            _require_retained_list_growth(
+                point[field], staged_point[field], work_id=work_id, field=field
+            )
+        if "observation_count" not in point or "observation_count" not in staged_point:
+            raise ValueError("Additive staged map lacks retained observation count")
+        _require_retained_observation_count(
+            point["observation_count"],
+            staged_point["observation_count"],
+            work_id=work_id,
+        )
         if point.get("reported_faculty_coauthors", []) != staged_point.get(
             "reported_faculty_coauthors", []
         ):

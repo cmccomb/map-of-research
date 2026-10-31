@@ -159,6 +159,8 @@ from .person_publication_holds import (
 from .poster_loss_approval import load_poster_loss_approval
 from .presentation_drift import (
     REGION_PRESENTATION_FIELDS,
+    RETAINED_WORK_GROWTH_FIELDS,
+    RETAINED_WORK_PRESENTATION_FIELDS,
     PresentationDriftError,
     compare_presentation,
     preserve_additive_report_presentation,
@@ -2236,6 +2238,13 @@ def publish_snapshot(
                 *PRIOR_WORK_FIELDS,
                 *SCS_TOPIC_HOLD_PRIOR_WORK_FIELDS,
                 *(CHEM_CARRYFORWARD_WORK_FIELDS if chem_carryforward else ()),
+                *(
+                    RETAINED_WORK_PRESENTATION_FIELDS
+                    + RETAINED_WORK_GROWTH_FIELDS
+                    + ("observation_count",)
+                    if additive_placement_review_path is not None
+                    else ()
+                ),
                 *(
                     ("map_exclusion_reasons",)
                     if (
