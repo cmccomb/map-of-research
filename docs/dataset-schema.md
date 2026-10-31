@@ -73,6 +73,15 @@ Exact context reviews add `publication_type`, `source_document_id`,
 `collaboration_eligible`, optional source-verified display contributors, and
 the context evidence without changing
 `source_record_json`.
+An authored conference paper, journal article, or book chapter needs a reviewed
+context bound to the exact effective title and year. That context records an
+explicit verified DOI (or an explicit blank), primary-source evidence, and an
+explicit collaboration decision. A verified DOI determines the canonical work
+ID and is retained in the observation and work DOI fields; the Scholar cache's
+captured citation and source record remain unchanged. A reviewed authored type
+does not become collaboration eligible by type alone. The context must explicitly
+permit collaboration, and the ordinary quality and authorship gates still
+apply. A book chapter is an authored chapter, distinct from an edited book.
 
 ## `works`
 
