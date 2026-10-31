@@ -1695,6 +1695,26 @@
         "withheld_excluded_rows": 17,
         "withheld_ids_sha256": "c588682addfa00ab0380763a0e2a9bbe6136d92641c002dfe51e835af4cf0a93"
       }
+    },
+    {
+      "cache_sha256": "7c5807ea6569730f0f0c522052263134baa9b6219df3dc16268417e38afaac6b",
+      "expected_source_rows": 27,
+      "person_id": "person-stevenwu-2f9ac697",
+      "public_subset": {
+        "observed_visible_rows": 222,
+        "private_capture_sha256": "4cfde73a6f9d07e029b48e6c2bdd74b520fadfa82693660c095e928a41d1c38a",
+        "private_rendered_html_sha256": "f9516e0b4d2e773fadbd803772354aea2e3a27b2571e67c988d89d644358d2cc",
+        "private_review_sha256": "35175f4dd910cff6e44d05c31ba3ac8d070dde52360a76a2a21e4e838db036f8",
+        "selected_ids_sha256": "a4b62f4bb4eb2e79cad4b0e9011128de1f0bd251034e8d96821ebbbf863e6d45",
+        "withheld_excluded_rows": 2,
+        "withheld_hold_rows": 193,
+        "withheld_ids_sha256": "15a0058b289e2895fb56bd94ab44dffb293ec5d88d4b4f120cdf1fa7160ec0c8",
+        "withheld_rows": 195
+      },
+      "reason": "Local private-stage candidate: 27 original-document-supported Steven Wu observations from 222 complete visible Chrome rows; 195 remain private. Two star-citation rows and existing Fanti version continuity remain held. New works require exact placement/topic review and remain pending. This decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "scholar_id": "MbF6rTEAAAAJ",
+      "state": "released"
     }
   ]
 }
