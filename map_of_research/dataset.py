@@ -3,15 +3,17 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import math
 import re
 from collections import Counter
 from collections.abc import Mapping
 from typing import Any
+from urllib.parse import unquote
 
 from .attribution import AttributionReviews
-from .contexts import ReviewedContext
+from .contexts import AUTHORED_PUBLICATION_TYPES, ReviewedContext
 from .doi_aliases import ReviewedDoiAlias
 from .exclusions import ReviewedExclusion
 from .provisional_holds import ProvisionalHold
@@ -79,6 +81,18 @@ def _doi(*values: Any) -> str:
     return ""
 
 
+def _decoded_doi_text(value: Any) -> str:
+    """Expose encoded DOI mentions for review without rewriting the source field."""
+
+    text = _clean_text(value)
+    for _ in range(8):
+        decoded = html.unescape(unquote(text))
+        if decoded == text:
+            return text
+        text = decoded
+    raise ValueError("Authored Scholar context DOI encoding exceeds review limit")
+
+
 def _hash_id(prefix: str, value: str) -> str:
     return f"{prefix}-{hashlib.sha256(value.encode('utf-8')).hexdigest()}"
 
@@ -100,6 +114,9 @@ def _work_identity(
             "patent_document",
             "",
         )
+    if context is not None and context.verified_doi:
+        doi = context.verified_doi
+        return _hash_id("work", f"doi:{doi}"), "reviewed_context_doi", doi
     native_id = _clean_text(getattr(row, "source_native_id", ""))
     if native_id and not _doi(getattr(row, "source_doi", "")):
         return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
@@ -138,6 +155,47 @@ def _work_identity(
         return _hash_id("work", value), "normalized_title_year", ""
     value = f"profile-publication:{row.scholar_id}\0{row.author_pub_id}"
     return _hash_id("work", value), "profile_publication", ""
+
+
+def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
+    """Bind a reviewed type and DOI to the exact effective Scholar citation."""
+
+    if context.publication_type not in AUTHORED_PUBLICATION_TYPES:
+        return
+    if (
+        row.source_type != "scholar"
+        or not context.expected_title
+        or context.expected_title != str(row.title)
+        or type(context.expected_year) is not int
+        or context.expected_year != _year(row.year)
+    ):
+        raise ValueError("Authored Scholar context citation title or year changed")
+    if type(context.collaboration_eligible) is not bool or (
+        context.collaboration_eligible and not context.map_eligible
+    ):
+        raise ValueError("Authored Scholar context needs reviewed collaboration status")
+    if type(context.verified_doi) is not str or (
+        context.verified_doi
+        and (
+            not DOI_PATTERN.fullmatch(context.verified_doi)
+            or context.verified_doi != context.verified_doi.casefold()
+        )
+    ):
+        raise ValueError("Authored Scholar context has an invalid verified DOI")
+    if not context.reason or not context.evidence_url.startswith("https://"):
+        raise ValueError("Authored Scholar context needs primary-source evidence")
+    observed_dois = {
+        match.group(0).rstrip(".,;)").casefold()
+        for value in (
+            row.source_doi,
+            row.source_url,
+            row.citation,
+            row.source_record_json,
+        )
+        for match in DOI_PATTERN.finditer(_decoded_doi_text(value))
+    }
+    if len(observed_dois) > 1 or observed_dois - {context.verified_doi}:
+        raise ValueError("Authored Scholar context DOI conflicts with source")
 
 
 def _best_text(values: list[Any]) -> str:
@@ -228,6 +286,24 @@ def build_dataset_tables(
             profile_publications[column] = [
                 default for _ in range(len(profile_publications))
             ]
+    if contexts:
+        observed_context_ids = Counter(
+            (str(row.scholar_id), str(row.author_pub_id))
+            for row in profile_publications.itertuples(index=False)
+        )
+        present_scholar_ids = {
+            str(value) for value in profile_publications["scholar_id"]
+        }
+        for key, context in contexts.items():
+            if (
+                context.publication_type in AUTHORED_PUBLICATION_TYPES
+                and key[0] in present_scholar_ids
+                and observed_context_ids[key] != 1
+            ):
+                raise ValueError(
+                    "Authored Scholar context ID must occur exactly once for "
+                    f"a present profile: {key}"
+                )
     curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
     curated_title_year_native_ids: dict[tuple[str, int], set[str]] = {}
     for row in profile_publications.itertuples(index=False):
@@ -269,9 +345,20 @@ def build_dataset_tables(
     for position, row in enumerate(profile_publications.itertuples(index=False)):
         key = (str(row.scholar_id), str(row.author_pub_id))
         context = (contexts or {}).get(key)
+        if context is not None:
+            _validate_authored_context(row, context)
         source_publication_type = _curated_publication_type(row)
         observation_ids.append(_observation_identity(row))
         alias = reviewed_aliases.get(key)
+        if (
+            alias is not None
+            and context is not None
+            and context.verified_doi
+            and alias.doi != context.verified_doi
+        ):
+            raise ValueError(
+                "Authored Scholar context DOI conflicts with reviewed alias"
+            )
         if alias is not None and row.source_type == "scholar":
             source_doi = _doi(row.source_doi)
             if source_doi and source_doi != alias.doi:
@@ -293,6 +380,14 @@ def build_dataset_tables(
                 curated_title_year_native_ids=curated_title_year_native_ids,
                 context=context,
             )
+            if context is not None and context.verified_doi:
+                index = profile_publications.index[position]
+                profile_publications.at[index, "source_verified_at"] = max(
+                    _clean_text(row.source_verified_at), context.verified_at
+                )
+                profile_publications.at[index, "source_verification_urls"] = sorted(
+                    {*_as_list(row.source_verification_urls), context.evidence_url}
+                )
         work_ids.append(work_id)
         match_methods.append(method)
         dois.append(doi)
@@ -366,7 +461,12 @@ def build_dataset_tables(
         collaboration_eligibility.append(
             not stable_reasons
             and (
-                context is None or context.publication_type == "conference_presentation"
+                context is None
+                or context.publication_type == "conference_presentation"
+                or (
+                    context.publication_type in AUTHORED_PUBLICATION_TYPES
+                    and context.collaboration_eligible is True
+                )
             )
             and source_publication_type == "publication"
         )
@@ -490,7 +590,8 @@ def build_dataset_tables(
         publication_type = next(iter(reviewed_types), "publication")
         collaboration_eligible = (
             map_eligible
-            and publication_type in {"publication", "conference_presentation"}
+            and publication_type
+            in {"publication", "conference_presentation"} | AUTHORED_PUBLICATION_TYPES
             and all(record.collaboration_eligible for record in eligible_records)
         )
         people: dict[str, str] = {}

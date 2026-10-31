@@ -12,16 +12,23 @@ from .io import load_json
 
 DEFAULT_CONTEXTS_PATH = Path("data/curated/scholar-contexts.json")
 CONTEXT_SCHEMA_VERSION = 1
-CONTEXT_TYPES = frozenset(
-    {
-        "patent",
-        "edited_book",
-        "panel_transcript",
-        "withdrawn_article",
-        "conference_presentation",
-    }
+AUTHORED_PUBLICATION_TYPES = frozenset(
+    {"conference_paper", "journal_article", "book_chapter"}
+)
+CONTEXT_TYPES = (
+    frozenset(
+        {
+            "patent",
+            "edited_book",
+            "panel_transcript",
+            "withdrawn_article",
+            "conference_presentation",
+        }
+    )
+    | AUTHORED_PUBLICATION_TYPES
 )
 PATENT_PUBLICATION_NUMBER = re.compile(r"^[A-Z]{2}\d{5,}[A-Z]\d?$")
+DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -33,6 +40,10 @@ class ReviewedContext:
     verified_at: str
     display_contributors: str = ""
     map_eligible: bool = True
+    expected_title: str = ""
+    expected_year: int | None = None
+    verified_doi: str = ""
+    collaboration_eligible: bool | None = None
 
 
 def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
@@ -74,6 +85,53 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
         map_eligible = entry.get("map_eligible", True)
         if not isinstance(map_eligible, bool):
             raise ValueError("Scholar context map_eligible must be boolean")
+        raw_expected_title = entry.get("expected_title")
+        expected_title = (
+            raw_expected_title.strip() if isinstance(raw_expected_title, str) else ""
+        )
+        expected_year = entry.get("expected_year")
+        raw_verified_doi = entry.get("verified_doi")
+        verified_doi = (
+            raw_verified_doi.strip().casefold()
+            if isinstance(raw_verified_doi, str)
+            else ""
+        )
+        collaboration_eligible = entry.get("collaboration_eligible")
+        if publication_type in AUTHORED_PUBLICATION_TYPES:
+            if (
+                not expected_title
+                or type(expected_year) is not int
+                or not 1500 <= expected_year <= 2100
+            ):
+                raise ValueError(
+                    "Authored Scholar context needs exact expected title and year"
+                )
+            if not isinstance(raw_verified_doi, str) or (
+                verified_doi and not DOI_PATTERN.fullmatch(verified_doi)
+            ):
+                raise ValueError(
+                    "Authored Scholar context needs a valid verified DOI "
+                    "or explicit blank"
+                )
+            if type(collaboration_eligible) is not bool:
+                raise ValueError(
+                    "Authored Scholar context needs explicit collaboration eligibility"
+                )
+            if collaboration_eligible and not map_eligible:
+                raise ValueError("Unmapped Scholar context cannot permit collaboration")
+        elif any(
+            key in entry
+            for key in (
+                "expected_title",
+                "expected_year",
+                "verified_doi",
+                "collaboration_eligible",
+            )
+        ):
+            raise ValueError(
+                "Only authored Scholar contexts may set title, year, DOI, or "
+                "collaboration eligibility"
+            )
         evidence_url = str(entry.get("evidence_url") or "").strip()
         parsed = urlparse(evidence_url)
         if parsed.scheme != "https" or not parsed.netloc:
@@ -96,5 +154,9 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             verified_at=verified_at,
             display_contributors=display_contributors,
             map_eligible=map_eligible,
+            expected_title=expected_title,
+            expected_year=expected_year,
+            verified_doi=verified_doi,
+            collaboration_eligible=collaboration_eligible,
         )
     return contexts
