@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "843f753599313a57db4e70574c2e307e3a9fefaf",
-  "registry_producer_commit": "5dae26ddb5173f75f44b0fc192cca2735dfb8c58",
+  "base_source_status_commit": "02f32a94cc5b474843a5e40ae8ef414bdfdee319",
+  "registry_producer_commit": "1ed4e5018850fa74a25f6ddc9830fb1df25fc6ef",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1512,16 +1512,137 @@
         "withheld_ids_sha256": "b8c8a441f990db5a96aaee879c2caec52bd727f446991ed713f0ed8b216114c9"
       },
       "cache_sha256": "e5013952a25275c47e5ab7f711d779eb7c91775c9d5e1cb41040892290877855"
+    },
+    {
+      "slug": "aaron-steinfeld",
+      "person_id": "person-aaronsteinfeld-5443ab0b",
+      "scholar_id": "CQ39OowAAAAJ",
+      "expected_source_rows": 8,
+      "selected_author_pub_ids": [
+        "CQ39OowAAAAJ:JoZmwDi-zQgC",
+        "CQ39OowAAAAJ:XD-gHx7UXLsC",
+        "CQ39OowAAAAJ:YsMSGLbcyi4C",
+        "CQ39OowAAAAJ:aqlVkmm33-oC",
+        "CQ39OowAAAAJ:eQOLeE2rZwMC",
+        "CQ39OowAAAAJ:f2IySw72cVMC",
+        "CQ39OowAAAAJ:k8Z6L05lTy4C",
+        "CQ39OowAAAAJ:xtRiw3GOFMkC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 254,
+        "private_capture_sha256": "ea26af4ee1a0b278dc39699fd4eb49232d2dcd7ecd05e0f9ad66d02a633e203a",
+        "private_review_sha256": "0ee93f295322ac002cdc11c11042b84da6c82019b5227d72fce1755b7ef8ad7e",
+        "private_rendered_html_sha256": "1ee1c886717fd9a41b236e9d3e3f67693f572962f175471bc69215a9bbb86b7c",
+        "selected_ids_sha256": "a23ed73d2e1256257ee9ea6a5471fcffabb5d0d4a7a5aeab0a1f1ddb7de0891f",
+        "withheld_rows": 246,
+        "withheld_hold_rows": 234,
+        "withheld_excluded_rows": 12,
+        "withheld_ids_sha256": "7648312129c510c9223aec6665d21e7bf1641c9e069c4d999fcaa4c0a602c4d5"
+      },
+      "cache_sha256": "178dfa7e41137100cbbf3709c4e2495f514053cb0715a8b8db2ba644c4dd6869"
+    },
+    {
+      "slug": "christian-kaestner",
+      "person_id": "person-christiankastner-bdab7c96",
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "expected_source_rows": 36,
+      "selected_author_pub_ids": [
+        "PR-ZnJUAAAAJ:0EnyYjriUFMC",
+        "PR-ZnJUAAAAJ:0KZCP5UExFUC",
+        "PR-ZnJUAAAAJ:2BeMVx_SZpEC",
+        "PR-ZnJUAAAAJ:2osOgNQ5qMEC",
+        "PR-ZnJUAAAAJ:35N4QoGY0k4C",
+        "PR-ZnJUAAAAJ:3fE2CSJIrl8C",
+        "PR-ZnJUAAAAJ:4DMP91E08xMC",
+        "PR-ZnJUAAAAJ:7PzlFSSx8tAC",
+        "PR-ZnJUAAAAJ:9ZlFYXVOiuMC",
+        "PR-ZnJUAAAAJ:CLPBug3NTQYC",
+        "PR-ZnJUAAAAJ:HiznBx5RP3QC",
+        "PR-ZnJUAAAAJ:IjCSPb-OGe4C",
+        "PR-ZnJUAAAAJ:KVD38NuK74kC",
+        "PR-ZnJUAAAAJ:N5tVd3kTz84C",
+        "PR-ZnJUAAAAJ:QbuKDewGlxwC",
+        "PR-ZnJUAAAAJ:SGnGYi2HwEIC",
+        "PR-ZnJUAAAAJ:Se3iqnhoufwC",
+        "PR-ZnJUAAAAJ:TFP_iSt0sucC",
+        "PR-ZnJUAAAAJ:TQgYirikUcIC",
+        "PR-ZnJUAAAAJ:UeHWp8X0CEIC",
+        "PR-ZnJUAAAAJ:Xc-mKOjpdrwC",
+        "PR-ZnJUAAAAJ:ZHo1McVdvXMC",
+        "PR-ZnJUAAAAJ:b0M2c_1WBrUC",
+        "PR-ZnJUAAAAJ:bnK-pcrLprsC",
+        "PR-ZnJUAAAAJ:d1gkVwhDpl0C",
+        "PR-ZnJUAAAAJ:eQOLeE2rZwMC",
+        "PR-ZnJUAAAAJ:lSLTfruPkqcC",
+        "PR-ZnJUAAAAJ:ldfaerwXgEUC",
+        "PR-ZnJUAAAAJ:mvPsJ3kp5DgC",
+        "PR-ZnJUAAAAJ:q3oQSFYPqjQC",
+        "PR-ZnJUAAAAJ:qVBRRHSSJ04C",
+        "PR-ZnJUAAAAJ:qjMakFHDy7sC",
+        "PR-ZnJUAAAAJ:r4zddjZt6C4C",
+        "PR-ZnJUAAAAJ:sSrBHYA8nusC",
+        "PR-ZnJUAAAAJ:u-x6o8ySG0sC",
+        "PR-ZnJUAAAAJ:zYLM7Y9cAGgC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 359,
+        "private_capture_sha256": "3521d4ca49885112945e19bd17ef76a419b7270377a7253aa3574eafe188a287",
+        "private_review_sha256": "3ce6966e8e84fd0632c1fda5a850e3986601135f12b5987ebc9609a54c1505ce",
+        "private_rendered_html_sha256": "2e0da1bdf7348616a4419862fa2c40f1c8ba0300417251f20e9ef868f27eaed8",
+        "selected_ids_sha256": "93b61c20c880f3814fcc4adaa9c8cbf56aa784febf776168a2559b761f91a651",
+        "withheld_rows": 323,
+        "withheld_hold_rows": 288,
+        "withheld_excluded_rows": 35,
+        "withheld_ids_sha256": "733cfaa26e70977104f6c0115815322818fa11c309532254f4b6553a6abfb0b0"
+      },
+      "cache_sha256": "268d1b84b176f3ebef2ed18ec6ec94ea720075a9bbaa069d4d0d67f861c93d99"
+    },
+    {
+      "slug": "claire-le-goues",
+      "person_id": "person-clairelegoues-fb1b95ee",
+      "scholar_id": "Cmr9ljkAAAAJ",
+      "expected_source_rows": 17,
+      "selected_author_pub_ids": [
+        "Cmr9ljkAAAAJ:86PQX7AUzd4C",
+        "Cmr9ljkAAAAJ:9pM33mqn1YgC",
+        "Cmr9ljkAAAAJ:9yKSN-GCB0IC",
+        "Cmr9ljkAAAAJ:GnPB-g6toBAC",
+        "Cmr9ljkAAAAJ:HoB7MX3m0LUC",
+        "Cmr9ljkAAAAJ:IjCSPb-OGe4C",
+        "Cmr9ljkAAAAJ:O3NaXMp0MMsC",
+        "Cmr9ljkAAAAJ:R3hNpaxXUhUC",
+        "Cmr9ljkAAAAJ:TQgYirikUcIC",
+        "Cmr9ljkAAAAJ:Tyk-4Ss8FVUC",
+        "Cmr9ljkAAAAJ:ZHo1McVdvXMC",
+        "Cmr9ljkAAAAJ:b0M2c_1WBrUC",
+        "Cmr9ljkAAAAJ:dhFuZR0502QC",
+        "Cmr9ljkAAAAJ:hMod-77fHWUC",
+        "Cmr9ljkAAAAJ:hqOjcs7Dif8C",
+        "Cmr9ljkAAAAJ:maZDTaKrznsC",
+        "Cmr9ljkAAAAJ:u5HHmVD_uO8C"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 234,
+        "private_capture_sha256": "86d87942738e49930a73aaf7b98cdede647b2c1e331822e1d5d54047c52ed820",
+        "private_review_sha256": "c995af697658233ca479907c71c00635b93427787dd26883d7b70754714ba071",
+        "private_rendered_html_sha256": "6f0f30f6f1a7a444acd08a45f9277003422c08317dd983c692e6eb6386334f50",
+        "selected_ids_sha256": "d6bc8160090f20961cbb26b0510c71ff00c2edc7a536d96b40a5a983c27a9aee",
+        "withheld_rows": 217,
+        "withheld_hold_rows": 167,
+        "withheld_excluded_rows": 50,
+        "withheld_ids_sha256": "9c5c7c68449f93dc6822001ef1016d792b63e5ce51d9ecb3cbee15b51cfc7b55"
+      },
+      "cache_sha256": "f238200ea3b0b498f505769dd8a6d0576fe7c853da5a82378d29f827c70cf4f0"
     }
   ],
   "totals": {
-    "observed_visible_rows": 1799,
-    "selected_rows": 1049,
-    "withheld_hold_rows": 665,
-    "withheld_excluded_rows": 85,
-    "withheld_rows": 750
+    "observed_visible_rows": 2646,
+    "withheld_hold_rows": 1354,
+    "withheld_excluded_rows": 182,
+    "withheld_rows": 1536,
+    "selected_rows": 1110
   },
-  "selected_ids_sha256": "0d84bebb5dfab63df7ed354d74cca9200a153f6580fff2bf9b050b1fca9f3227",
-  "withheld_ids_sha256": "569d27bfdc2a1961dbdc7004fb7408fb02b9f6649426709f6911ab9d4f6cd5d1",
+  "selected_ids_sha256": "c69922a8ae890ee2130796f0b6899526b73ef75dd0a5567b034f9eb0979e37e9",
+  "withheld_ids_sha256": "b346591c6c211ad494725947db8ef22a58d30ceb84f163196e541e955b5ea001",
   "private_capture_files_or_html_copied": false
 }
