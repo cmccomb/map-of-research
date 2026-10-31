@@ -163,7 +163,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
     if context.publication_type == "publication":
         source = str(row.source_url)
         parsed = urlparse(source)
-        query = parse_qs(parsed.query)
+        query = parse_qs(parsed.query, keep_blank_values=True)
         if (
             row.source_type != "scholar"
             or not context.expected_title
@@ -186,16 +186,37 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
             raise ValueError(
                 "Scholar-profile publication context differs from exact source citation"
             )
-        decoded_dois = {
-            match.group(0).rstrip(".,;)").casefold()
-            for value in (
-                row.source_doi,
-                row.source_url,
-                row.citation,
-                row.source_record_json,
+        try:
+            captured = json.loads(str(row.source_record_json))
+        except (TypeError, ValueError) as error:
+            raise ValueError(
+                "Scholar-profile publication context needs exact captured fields"
+            ) from error
+        if (
+            not isinstance(captured, dict)
+            or captured.get("author_pub_id") != str(row.author_pub_id)
+            or captured.get("title") != context.expected_title
+            or captured.get("pub_year") != str(context.expected_year)
+            or captured.get("pub_url") != source
+            or captured.get("venue") != str(row.venue)
+        ):
+            raise ValueError(
+                "Scholar-profile publication context differs from exact captured fields"
             )
-            for match in DOI_PATTERN.finditer(_decoded_doi_text(value))
-        }
+        decoded_dois: set[str] = set()
+        for value in (
+            row.source_doi,
+            row.source_url,
+            row.citation,
+            row.source_record_json,
+        ):
+            for match in DOI_PATTERN.finditer(_decoded_doi_text(value)):
+                token = match.group(0)
+                if DOI_PATTERN.search(token, 1):
+                    raise ValueError(
+                        "Scholar-profile publication context has ambiguous source DOI"
+                    )
+                decoded_dois.add(token.rstrip(".,;)").casefold())
         parsed_doi = _doi(
             row.source_doi, row.source_url, row.citation, row.source_record_json
         )
@@ -340,12 +361,12 @@ def build_dataset_tables(
         }
         for key, context in contexts.items():
             if (
-                context.publication_type in AUTHORED_PUBLICATION_TYPES
+                context.publication_type in AUTHORED_PUBLICATION_TYPES | {"publication"}
                 and key[0] in present_scholar_ids
                 and observed_context_ids[key] != 1
             ):
                 raise ValueError(
-                    "Authored Scholar context ID must occur exactly once for "
+                    "Reviewed Scholar context ID must occur exactly once for "
                     f"a present profile: {key}"
                 )
     curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
