@@ -994,10 +994,18 @@ def test_new_independent_verification_url_can_promote_prior_outlier():
             {"source_verification_urls": ["https://scholar.google.com/citations?x=1"]},
             {},
         ),
+        (
+            {"source_verification_urls": ["https://scholar.google.ca/citations?x=1"]},
+            {},
+        ),
         ({"authors": ""}, {}),
         (
             {},
             {"source_verification_urls": ["https://scholar.google.com/citations?x=1"]},
+        ),
+        (
+            {},
+            {"source_verification_urls": ["https://scholar.google.ca/citations?x=1"]},
         ),
     ],
 )

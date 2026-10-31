@@ -359,7 +359,8 @@ def validate_private_public_subsets(
             citation = urlparse(str(raw_row.get("citation_url") or ""))
             if (
                 citation.scheme != "https"
-                or citation.netloc != "scholar.google.com"
+                or citation.netloc not in {"scholar.google.com", "scholar.google.ca"}
+                or citation.path != "/citations"
                 or parse_qs(citation.query).get("user") != [scholar_id]
                 or parse_qs(citation.query).get("citation_for_view") != [row_id]
             ):

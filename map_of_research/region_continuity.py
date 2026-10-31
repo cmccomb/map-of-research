@@ -264,8 +264,8 @@ def _independent_evidence(urls: Any) -> bool:
         if (
             parsed.scheme == "https"
             and hostname
-            and hostname != "scholar.google.com"
-            and not hostname.endswith(".scholar.google.com")
+            and hostname not in {"scholar.google.com", "scholar.google.ca"}
+            and not hostname.endswith((".scholar.google.com", ".scholar.google.ca"))
         ):
             return True
     return False
