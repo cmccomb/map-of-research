@@ -618,6 +618,89 @@ def test_region_audit_skips_small_regions() -> None:
     assert audited["map_region_outlier"].tolist() == [False]
 
 
+def test_region_audit_keeps_only_exact_pending_generic_work_for_review() -> None:
+    size = keywords.MINIMUM_AUDIT_REGION_SIZE
+    rows = []
+    for index in range(size):
+        vector = numpy.zeros(size, dtype=numpy.float32)
+        vector[index] = 1.0
+        rows.append(
+            {
+                "work_id": (
+                    "new-generic"
+                    if index == 0
+                    else "unreviewed-generic"
+                    if index == 1
+                    else f"prior-{index}"
+                ),
+                "map_eligible": True,
+                "map_exclusion_reasons": [],
+                "detail_keyword_id": "keyword-01-01",
+                "embedding": vector.tolist(),
+                "year": None,
+                "citation_count": 0,
+                "title": f"Fragment {index}",
+                "x": float(index),
+                "y": float(index),
+                "tsne_x": float(index),
+                "tsne_y": float(index),
+            }
+        )
+    rows.append(
+        {
+            **rows[1],
+            "work_id": "prior-held",
+            "map_eligible": False,
+            "map_exclusion_reasons": ["reviewed_false_work"],
+        }
+    )
+    rows.append(
+        {
+            **rows[1],
+            "work_id": "new-ineligible",
+            "map_eligible": False,
+            "map_exclusion_reasons": ["low_quality_title"],
+        }
+    )
+    frame = pandas.DataFrame(rows)
+
+    ordinary = keywords.exclude_low_information_regions(frame)
+    reviewed = keywords.exclude_low_information_regions(
+        frame,
+        pending_placement_review_work_ids=frozenset({"new-generic"}),
+    )
+
+    assert not ordinary.loc[0, "map_eligible"]
+    assert reviewed.loc[0, "map_eligible"]
+    assert not reviewed.loc[0, "map_region_outlier"]
+    assert reviewed.loc[0, "map_exclusion_reasons"] == []
+    assert not reviewed.loc[1 : size - 1, "map_eligible"].any()
+    assert reviewed.loc[1 : size - 1, "map_region_outlier"].all()
+    assert reviewed.loc[1, "work_id"] == "unreviewed-generic"
+    assert reviewed.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
+    assert reviewed.loc[size, "map_exclusion_reasons"] == ["reviewed_false_work"]
+    assert not reviewed.loc[size, "map_eligible"]
+    assert reviewed.loc[size + 1, "map_exclusion_reasons"] == ["low_quality_title"]
+    assert not reviewed.loc[size + 1, "map_eligible"]
+    with pytest.raises(ValueError, match="ineligible work IDs"):
+        keywords.exclude_low_information_regions(
+            frame,
+            pending_placement_review_work_ids=frozenset({"missing"}),
+        )
+    with pytest.raises(ValueError, match="lacks work IDs"):
+        keywords.exclude_low_information_regions(
+            frame.drop(columns=["work_id"]),
+            pending_placement_review_work_ids=frozenset({"new-generic"}),
+        )
+    duplicate = frame.copy()
+    duplicate.loc[1, "work_id"] = "new-generic"
+    with pytest.raises(ValueError, match="duplicate work IDs"):
+        keywords.exclude_low_information_regions(
+            duplicate,
+            pending_placement_review_work_ids=frozenset({"new-generic"}),
+        )
+
+
 def test_region_audit_preserves_documented_paper_inside_weak_region() -> None:
     rows = []
     size = keywords.MINIMUM_AUDIT_REGION_SIZE

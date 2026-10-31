@@ -596,6 +596,115 @@ def _existing_work_state(
         raise RuntimeError("Could not read published works for order reuse") from error
 
 
+def _reviewed_new_generic_placement_work_ids(
+    profiles: Any,
+    works: Any,
+    contexts: Mapping[tuple[str, str], Any],
+    prior_work_state: Sequence[Mapping[str, Any]],
+    review_path: Path,
+    *,
+    prior_revision: str,
+    source_snapshot_sha256: str,
+) -> frozenset[str]:
+    """Keep exact reviewed new generic works in the candidate pending set.
+
+    The full additive gate subsequently checks the whole manifest and holds
+    these works off the spatial map. This only prevents a refitted topic region
+    from making a selected source observation disappear before that review.
+    """
+
+    review = load_json(review_path)
+    if not isinstance(review, Mapping) or not isinstance(
+        review.get("new_points"), list
+    ):
+        raise ValueError("Generic placement review lacks exact new work decisions")
+    selected_ids = set(profiles["author_pub_id"].astype(str))
+    if (
+        review.get("prior_revision") != prior_revision
+        or review.get("source_snapshot_sha256") != source_snapshot_sha256
+        or review.get("selected_ids_sha256") != ids_sha256(selected_ids)
+    ):
+        raise ValueError("Generic placement review source or parent changed")
+    prior_ids = [str(row.get("work_id") or "") for row in prior_work_state]
+    current_ids = works["work_id"].astype(str).tolist()
+    decisions = review["new_points"]
+    review_ids = [
+        str(item.get("work_id") or "") if isinstance(item, Mapping) else ""
+        for item in decisions
+    ]
+    if (
+        not prior_ids
+        or "" in prior_ids
+        or len(set(prior_ids)) != len(prior_ids)
+        or "" in current_ids
+        or len(set(current_ids)) != len(current_ids)
+        or not review_ids
+        or "" in review_ids
+        or len(set(review_ids)) != len(review_ids)
+        or set(review_ids) & set(prior_ids)
+        or not set(review_ids) <= set(current_ids)
+    ):
+        raise ValueError("Generic placement review has stale or duplicate work IDs")
+    prior_id_set = set(prior_ids)
+    all_held_ids = {
+        str(item["work_id"])
+        for item in decisions
+        if item.get("decision") == "hold_pending_placement"
+        and item.get("coordinates") is None
+    }
+    required_work_fields = {
+        "work_id",
+        "publication_type",
+        "doi",
+        "collaboration_eligible",
+        "map_eligible",
+    }
+    if not required_work_fields <= set(works.columns):
+        raise ValueError("Generic placement review lacks work eligibility fields")
+    works_by_id = works.set_index("work_id")[
+        [
+            "publication_type",
+            "doi",
+            "collaboration_eligible",
+            "map_eligible",
+        ]
+    ].to_dict("index")
+    protected: set[str] = set()
+    for row in profiles.itertuples(index=False):
+        work_id = str(row.work_id)
+        context = contexts.get((str(row.scholar_id), str(row.author_pub_id)))
+        if (
+            context is None
+            or context.publication_type != "publication"
+            or work_id in prior_id_set
+        ):
+            continue
+        if (
+            row.source_type != "scholar"
+            or row.publication_type != "publication"
+            or row.work_match_method != "profile_publication"
+            or row.doi != ""
+            or bool(row.collaboration_eligible)
+        ):
+            raise ValueError("Generic placement review has ineligible source work")
+        if not bool(row.map_eligible):
+            if work_id in all_held_ids:
+                raise ValueError("Generic placement review has ineligible source work")
+            continue
+        work = works_by_id[work_id]
+        if (
+            work["publication_type"] != "publication"
+            or work["doi"] != ""
+            or bool(work["collaboration_eligible"])
+            or not bool(work["map_eligible"])
+        ):
+            raise ValueError("Generic placement review has ineligible canonical work")
+        if work_id not in all_held_ids:
+            raise ValueError("Selected generic work lacks all-held placement review")
+        protected.add(work_id)
+    return frozenset(protected)
+
+
 def _year_key(value: Any) -> int | None:
     if value is None:
         return None
@@ -2223,14 +2332,16 @@ def publish_snapshot(
         hf_token=hf_token,
         revision=prior_revision,
     )
+    prior_work_state = (
+        _existing_work_state(hf_token=hf_token, revision=prior_revision)
+        if existing_layouts or additive_placement_review_path is not None
+        else []
+    )
     layout_reused = False
     if existing_layouts:
         reuse = _reusable_work_order(
             tables["works"],
-            _existing_work_state(
-                hf_token=hf_token,
-                revision=prior_revision,
-            ),
+            prior_work_state,
             existing_layouts,
             doi_aliases,
         )
@@ -2242,8 +2353,23 @@ def publish_snapshot(
         existing_layouts=existing_layouts,
     )
     tables["works"] = add_publication_keywords(tables["works"])
+    pending_generic_work_ids = (
+        _reviewed_new_generic_placement_work_ids(
+            tables["profile_publications"],
+            tables["works"],
+            contexts,
+            prior_work_state,
+            additive_placement_review_path,
+            prior_revision=prior_revision,
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+        )
+        if additive_placement_review_path is not None
+        else frozenset()
+    )
     tables["works"] = exclude_low_information_regions(
-        tables["works"], doi_aliases=doi_aliases
+        tables["works"],
+        doi_aliases=doi_aliases,
+        pending_placement_review_work_ids=pending_generic_work_ids,
     )
     producer_reports_path = (
         people_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH

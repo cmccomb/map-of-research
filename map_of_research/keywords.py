@@ -508,6 +508,7 @@ def exclude_low_information_regions(
     works: Any,
     *,
     doi_aliases: dict[tuple[str, str], ReviewedDoiAlias] | None = None,
+    pending_placement_review_work_ids: frozenset[str] = frozenset(),
 ) -> Any:
     """Withhold only large regions that fail several independent quality checks.
 
@@ -516,7 +517,9 @@ def exclude_low_information_regions(
     incoherent in embedding space, citation-poor, metadata-poor, and dominated by
     short titles. Individually documented papers remain visible even in such a
     region when they have a DOI or a verified native source identifier; weaker
-    rows retain the region exclusion reason in the dataset.
+    rows retain the region exclusion reason in the dataset. Exact new generic
+    source observations in an additive all-held placement review remain
+    candidates for that review; the later placement gate holds them off-map.
     """
 
     import numpy
@@ -526,6 +529,20 @@ def exclude_low_information_regions(
     output["map_region_audit_version"] = REGION_AUDIT_VERSION
     output["map_region_outlier"] = False
     output["map_region_documented_override"] = False
+    if pending_placement_review_work_ids:
+        if "work_id" not in output:
+            raise ValueError("Pending placement region review lacks work IDs")
+        if len(set(output["work_id"].astype(str))) != len(output):
+            raise ValueError("Pending placement region review has duplicate work IDs")
+        protected_rows = (
+            output["work_id"].astype(str).isin(pending_placement_review_work_ids)
+        )
+        if (
+            set(pending_placement_review_work_ids)
+            - set(output.loc[protected_rows, "work_id"].astype(str))
+            or not output.loc[protected_rows, "map_eligible"].all()
+        ):
+            raise ValueError("Pending placement region review has ineligible work IDs")
     included_mask = output["map_eligible"] & output["detail_keyword_id"].ne("")
     for _, region in output.loc[included_mask].groupby(
         "detail_keyword_id",
@@ -559,7 +576,12 @@ def exclude_low_information_regions(
             continue
         documented = _documented_work_mask(region, doi_aliases=doi_aliases)
         output.loc[region.index[documented], "map_region_documented_override"] = True
-        indices = region.index[~documented]
+        protected = (
+            region["work_id"].astype(str).isin(pending_placement_review_work_ids)
+            if pending_placement_review_work_ids
+            else pandas.Series(False, index=region.index)
+        )
+        indices = region.index[~documented & ~protected]
         output.loc[indices, "map_eligible"] = False
         output.loc[indices, "map_region_outlier"] = True
         output.loc[indices, "map_exclusion_reasons"] = output.loc[
