@@ -183,8 +183,14 @@ def _new_selected_profiles(
             raise ValueError("Selected profile receipt is incomplete")
         selected[(person_id, scholar_id)] = set(ids)
 
-    def identity(row: Mapping[str, Any]) -> tuple[str, ...]:
-        return tuple(str(row[field]) for field in _PROFILE_FIELDS)
+    def identity(row: Mapping[str, Any]) -> tuple[str | None, ...]:
+        values = tuple(_normal(row[field]) for field in _PROFILE_FIELDS)
+        if any(
+            not isinstance(value, str) or not value
+            for value in (values[0], *values[2:])
+        ) or (values[1] is not None and not isinstance(values[1], str)):
+            raise ValueError("Profile source identity has invalid field types")
+        return values
 
     previous = Counter(identity(row) for row in prior_profiles)
     current = Counter(identity(row) for row in current_profiles)
@@ -196,11 +202,11 @@ def _new_selected_profiles(
     additions: dict[str, list[Mapping[str, Any]]] = defaultdict(list)
     for key, count in (current - previous).items():
         row = by_identity[key]
-        if row["source_type"] != "scholar" or str(
-            row["author_pub_id"]
-        ) not in selected.get((str(row["person_id"]), str(row["scholar_id"])), set()):
+        if row["source_type"] != "scholar" or row["author_pub_id"] not in selected.get(
+            (row["person_id"], row["scholar_id"]), set()
+        ):
             raise ValueError("New person count lacks selected-profile receipt")
-        additions[str(row["person_id"])].extend([row] * count)
+        additions[row["person_id"]].extend([row] * count)
     return additions
 
 

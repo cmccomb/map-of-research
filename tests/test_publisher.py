@@ -2076,6 +2076,9 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     monkeypatch.setattr(publisher, "require_reported_source_sync", lambda *args: False)
     bio_intent = pinned and atomic and not region_override and not missing_prior
+    if bio_intent:
+        # This fixture uses an abstract immutable parent for the historical Bio path.
+        monkeypatch.setattr(publisher, "BIO_BINDING_PRIOR_REVISION", "a" * 40)
     snapshot_digest = {
         "value": publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
     }

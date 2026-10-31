@@ -21,6 +21,9 @@ from .attribution import (
     DEFAULT_ATTRIBUTION_REVIEWS_PATH,
     load_attribution_reviews,
 )
+from .bio_binding_approval import (
+    PRIOR_REVISION as BIO_BINDING_PRIOR_REVISION,
+)
 from .bio_binding_approval import load_bio_binding_approval
 from .bio_release_gate import (
     BIO_SOURCE_SHA256,
@@ -1546,13 +1549,16 @@ def _publish_atomic_release(
     if additive_placement_review_path is not None and not enforce_presentation_drift:
         raise ValueError("Additive placement requires pinned presentation review")
     prior_revision = require_revision(prior_revision)
-    bio_release = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    frozen_bio_source = source_manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
     if additive_placement_review_path is not None and (
-        bio_release
+        frozen_bio_source
         or composite_plan is not None
         or held_topic_parent_artifact is not None
     ):
         raise ValueError("Additive placement is restricted to ordinary releases")
+    if frozen_bio_source and prior_revision != BIO_BINDING_PRIOR_REVISION:
+        raise ValueError("Frozen Bio source requires its exact historical Hub parent")
+    bio_release = frozen_bio_source
     bio_source_changed = bio_scholar_source_changed(
         source_frame, prior_profiles, registry, prior_people
     )
@@ -2048,6 +2054,8 @@ def publish_snapshot(
     if sullivan_transition and not source_commit:
         raise ValueError("Sullivan release needs its exact source commit")
     frozen_bio_source = manifest["snapshot_sha256"] == BIO_SOURCE_SHA256
+    if frozen_bio_source and prior_revision != BIO_BINDING_PRIOR_REVISION:
+        raise ValueError("Frozen Bio source requires its exact historical Hub parent")
     if require_bio_release and not frozen_bio_source:
         raise ValueError("Bio release source differs from the frozen snapshot")
     if region_comparison_revision is not None:

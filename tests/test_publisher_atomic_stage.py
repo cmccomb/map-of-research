@@ -430,6 +430,7 @@ def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=Fals
     if pending:
         manifest.write_text(json.dumps({"restore_eligible_work_ids": ["work"]}))
     if bio:
+        monkeypatch.setattr(publisher, "BIO_BINDING_PRIOR_REVISION", "a" * 40)
         monkeypatch.setattr(
             publisher,
             "load_bio_baselines",
@@ -1282,6 +1283,67 @@ def test_bio_intent_or_changed_cohort_rejects_drift_before_hub_stage(
             require_bio_release=require_bio_release,
         )
     assert calls == []
+
+
+@pytest.mark.parametrize("require_bio_release", [False, True])
+def test_frozen_bio_source_cannot_bypass_people_gate_on_modern_parent(
+    monkeypatch, tmp_path, require_bio_release
+) -> None:
+    modern_parent = "95d2c5b4757ae38db99ea1fd5828747e9ac62067"
+    calls = []
+    monkeypatch.setattr(
+        publisher, "_require_current_dataset_revision", lambda **kwargs: None
+    )
+    monkeypatch.setattr(publisher, "load_registry", lambda *args: SimpleNamespace())
+    monkeypatch.setattr(
+        publisher, "implicit_primary_baseline_for_people", lambda *args: {}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_included_scholar_primary_homes",
+        lambda *args, **kwargs: None,
+    )
+    monkeypatch.setattr(
+        publisher,
+        "validate_snapshot",
+        lambda *args, **kwargs: (
+            pandas.DataFrame({"source": [1]}),
+            {"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
+        ),
+    )
+    monkeypatch.setattr(
+        publisher, "add_embeddings", lambda *args, **kwargs: calls.append("enrich")
+    )
+    with pytest.raises(ValueError, match="exact historical Hub parent"):
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            hf_token="token",
+            prior_revision=modern_parent,
+            atomic_intent_sink=lambda intent: None,
+            require_bio_release=require_bio_release,
+        )
+    assert calls == []
+
+    stage_calls, tables, manifest = _stage(monkeypatch, tmp_path)
+    with pytest.raises(ValueError, match="exact historical Hub parent"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={"snapshot_sha256": publisher.BIO_SOURCE_SHA256},
+            hf_token="token",
+            prior_revision=modern_parent,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-31T00:00:00+00:00",
+            continuity_receipt={"prior_revision": modern_parent},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            require_bio_release=require_bio_release,
+        )
+    assert stage_calls == []
 
 
 @pytest.mark.parametrize(

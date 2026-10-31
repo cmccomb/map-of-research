@@ -184,6 +184,37 @@ def test_prior_selected_identity_multiplicity_is_preserved():
         )
 
 
+def test_profile_identity_preserves_null_and_rejects_numeric_aliases():
+    person = _person("person-other")
+    profile = {
+        "person_id": "person-other",
+        "scholar_id": None,
+        "author_pub_id": "curated:one",
+        "source_type": "curated_verified",
+        "work_id": "work-one",
+    }
+    assert (
+        _check(
+            [person], [person], prior_profiles=[profile], current_profiles=[profile]
+        )["status"]
+        == "pass"
+    )
+    with pytest.raises(ValueError, match="loses published profiles"):
+        _check(
+            [person],
+            [person],
+            prior_profiles=[profile],
+            current_profiles=[dict(profile, scholar_id="None")],
+        )
+    with pytest.raises(ValueError, match="invalid field types"):
+        _check(
+            [person],
+            [person],
+            prior_profiles=[dict(profile, work_id=123)],
+            current_profiles=[dict(profile, work_id="123")],
+        )
+
+
 @pytest.mark.parametrize("rows", [[], [None], [{"person_id": ""}]])
 def test_invalid_or_empty_parent_people_fail(rows):
     with pytest.raises(ValueError, match="rows|schema|IDs"):

@@ -71,8 +71,10 @@ atomic Hub write. This person review does not release any Hoda publications;
 those require the separate selected-only and publication gates. Remove the
 source-relative review after its exact one-time correction is published. This
 gate applies whether or not the upload uses an additive placement manifest;
-the frozen historical Bio and composite release paths retain their dedicated
-person-continuity reviews.
+the frozen Bio exception is bound to its exact historical Hub parent
+`dcbdfacd7e8cfeaefd4c91081c4b347b7c690061`, and the historical composite
+path retains its dedicated person-continuity review. Supplying the frozen Bio
+source against a current Hub parent fails before enrichment or a Hub write.
 
 ## `profile_publications`
 
