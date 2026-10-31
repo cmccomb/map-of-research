@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "display_name": "Hoda Heidari",
+  "scholar_id": "GpXyLGwAAAAJ",
+  "fetched_at_utc": "2026-10-30T12:00:53.340Z",
+  "publication_count": 9,
+  "browser_capture": {
+    "method": "user_chrome_visible_profile",
+    "profile_url": "https://scholar.google.com/citations?user=GpXyLGwAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-30T12:00:53.340Z",
+    "coverage": "complete_visible_profile",
+    "more_remain": false,
+    "displayed_count": 88,
+    "limit": 88,
+    "lifetime_publication_completeness": "not_independently_established",
+    "profile_verified_email_domain": "cmu.edu",
+    "cache_scope": "reviewed_public_subset",
+    "observed_visible_rows": 88,
+    "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
+    "private_review_sha256": "0c13a49022ac5857da3759251a25dede08097ef427565ef84466a67e346eb156",
+    "private_rendered_html_sha256": "ae8bd23de09af804100bad261aabd66d53a42404f67deab71162a417a9fabe4a",
+    "selected_ids_sha256": "6fb1468630b5507e50e0d053e02af1bb5107241e92d172bbf3e069be84a9ccbd",
+    "withheld_rows": 79,
+    "withheld_hold_rows": 79,
+    "withheld_excluded_rows": 0,
+    "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d",
+    "selected_author_pub_ids": [
+      "GpXyLGwAAAAJ:0EnyYjriUFMC",
+      "GpXyLGwAAAAJ:2osOgNQ5qMEC",
+      "GpXyLGwAAAAJ:3fE2CSJIrl8C",
+      "GpXyLGwAAAAJ:9yKSN-GCB0IC",
+      "GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
+      "GpXyLGwAAAAJ:UebtZRa9Y70C",
+      "GpXyLGwAAAAJ:W7OEmFMy1HYC",
+      "GpXyLGwAAAAJ:g5m5HwL7SMYC",
+      "GpXyLGwAAAAJ:mVmsd5A6BfQC"
+    ]
+  },
+  "publications": [
+    {
+      "title": "Fairness in criminal justice risk assessments: The state of the art",
+      "author": "R Berk, H Heidari, S Jabbari, M Kearns, A Roth",
+      "pub_year": "2021",
+      "venue": "Sociological Methods & Research 50 (1), 3-44",
+      "num_citations": 1741,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&citation_for_view=GpXyLGwAAAAJ:W7OEmFMy1HYC",
+      "author_pub_id": "GpXyLGwAAAAJ:W7OEmFMy1HYC",
+      "capture_row_index": 1,
+      "citation_count_display": "1741"
+    },
+    {
+      "title": "Fairness behind a veil of ignorance: A welfare analysis for automated decision making",
+      "author": "H Heidari, C Ferrari, K Gummadi, A Krause",
+      "pub_year": "2018",
+      "venue": "Advances in neural information processing systems 31",
+      "num_citations": 192,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&citation_for_view=GpXyLGwAAAAJ:UebtZRa9Y70C",
+      "author_pub_id": "GpXyLGwAAAAJ:UebtZRa9Y70C",
+      "capture_row_index": 8,
+      "citation_count_display": "192"
+    },
+    {
+      "title": "Preventing disparate treatment in sequential decision making.",
+      "author": "H Heidari, A Krause",
+      "pub_year": "2018",
+      "venue": "IJCAI, 2248-2254",
+      "num_citations": 72,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&citation_for_view=GpXyLGwAAAAJ:0EnyYjriUFMC",
+      "author_pub_id": "GpXyLGwAAAAJ:0EnyYjriUFMC",
+      "capture_row_index": 19,
+      "citation_count_display": "72"
+    },
+    {
+      "title": "Learning from contagion (without timestamps)",
+      "author": "K Amin, H Heidari, M Kearns",
+      "pub_year": "2014",
+      "venue": "International conference on machine learning, 1845-1853",
+      "num_citations": 44,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:2osOgNQ5qMEC",
+      "author_pub_id": "GpXyLGwAAAAJ:2osOgNQ5qMEC",
+      "capture_row_index": 30,
+      "citation_count_display": "44"
+    },
+    {
+      "title": "On the desiderata for online altruism: Nudging for equitable donations",
+      "author": "N Mota, A Chakraborty, AJ Biega, KP Gummadi, H Heidari",
+      "pub_year": "2020",
+      "venue": "Proceedings of the ACM on Human-computer Interaction 4 (CSCW2), 1-21",
+      "num_citations": 20,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:mVmsd5A6BfQC",
+      "author_pub_id": "GpXyLGwAAAAJ:mVmsd5A6BfQC",
+      "capture_row_index": 42,
+      "citation_count_display": "20"
+    },
+    {
+      "title": "On the impact of choice architectures on inequality in online donation platforms",
+      "author": "A Chakraborty, N Mota, AJ Biega, KP Gummadi, H Heidari",
+      "pub_year": "2019",
+      "venue": "The World Wide Web Conference, 2623-2629",
+      "num_citations": 19,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:3fE2CSJIrl8C",
+      "author_pub_id": "GpXyLGwAAAAJ:3fE2CSJIrl8C",
+      "capture_row_index": 44,
+      "citation_count_display": "19"
+    },
+    {
+      "title": "Pricing a low-regret seller",
+      "author": "H Heidari, M Mahdian, U Syed, S Vassilvitskii, S Yazdanbod",
+      "pub_year": "2016",
+      "venue": "International Conference on Machine Learning, 2559-2567",
+      "num_citations": 15,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
+      "author_pub_id": "GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
+      "capture_row_index": 47,
+      "citation_count_display": "15"
+    },
+    {
+      "title": "New models for competitive contagion",
+      "author": "M Draief, H Heidari, M Kearns",
+      "pub_year": "2014",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 28 (1)",
+      "num_citations": 12,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:9yKSN-GCB0IC",
+      "author_pub_id": "GpXyLGwAAAAJ:9yKSN-GCB0IC",
+      "capture_row_index": 56,
+      "citation_count_display": "12"
+    },
+    {
+      "title": "The backfiring effect of weak AI safety regulation",
+      "author": "B Laufer, J Kleinberg, H Heidari",
+      "pub_year": "2026",
+      "venue": "Proceedings of the National Academy of Sciences 123 (30), e2509768123",
+      "num_citations": 9,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GpXyLGwAAAAJ&cstart=20&pagesize=80&citation_for_view=GpXyLGwAAAAJ:g5m5HwL7SMYC",
+      "author_pub_id": "GpXyLGwAAAAJ:g5m5HwL7SMYC",
+      "capture_row_index": 60,
+      "citation_count_display": "9"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "165d3182f36b426898155abdefbb61fae26d7524",
-  "registry_producer_commit": "047a6caba26a97c2cd078e1d3707e042b125c251",
+  "base_source_status_commit": "b138150b8ef86552e94fc0d70a72acca818fe99a",
+  "registry_producer_commit": "e1da3d44e1bce67d7c92bb11ef4851c407ee7a9c",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1897,16 +1897,45 @@
         "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac"
       },
       "cache_sha256": "866dac64875ff2e44b070ff88691e1dd1cda41eb5d0f73a3ea038cb0e2d548ca"
+    },
+    {
+      "slug": "hoda-heidari",
+      "person_id": "person-hodaheidari-477d966d",
+      "scholar_id": "GpXyLGwAAAAJ",
+      "expected_source_rows": 9,
+      "selected_author_pub_ids": [
+        "GpXyLGwAAAAJ:0EnyYjriUFMC",
+        "GpXyLGwAAAAJ:2osOgNQ5qMEC",
+        "GpXyLGwAAAAJ:3fE2CSJIrl8C",
+        "GpXyLGwAAAAJ:9yKSN-GCB0IC",
+        "GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
+        "GpXyLGwAAAAJ:UebtZRa9Y70C",
+        "GpXyLGwAAAAJ:W7OEmFMy1HYC",
+        "GpXyLGwAAAAJ:g5m5HwL7SMYC",
+        "GpXyLGwAAAAJ:mVmsd5A6BfQC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 88,
+        "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
+        "private_review_sha256": "0c13a49022ac5857da3759251a25dede08097ef427565ef84466a67e346eb156",
+        "private_rendered_html_sha256": "ae8bd23de09af804100bad261aabd66d53a42404f67deab71162a417a9fabe4a",
+        "selected_ids_sha256": "6fb1468630b5507e50e0d053e02af1bb5107241e92d172bbf3e069be84a9ccbd",
+        "withheld_rows": 79,
+        "withheld_hold_rows": 79,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d"
+      },
+      "cache_sha256": "b84ea006dd5cd6f214851f88fea78d9c276bda2c68943e4c82b067457b2fc39c"
     }
   ],
   "totals": {
-    "observed_visible_rows": 3447,
-    "selected_rows": 1254,
-    "withheld_hold_rows": 1994,
+    "observed_visible_rows": 3535,
+    "selected_rows": 1263,
+    "withheld_hold_rows": 2073,
     "withheld_excluded_rows": 199,
-    "withheld_rows": 2193
+    "withheld_rows": 2272
   },
-  "selected_ids_sha256": "55fe421357e386b332f53761e11e62ae96e53c5c889f43a0c9d1d61976f5b5e5",
-  "withheld_ids_sha256": "f798e80f21c7689e4c5f8a43deb6bdbf9c9a54fc74b9dfca52e5f85bed86ba35",
+  "selected_ids_sha256": "18cf5dfb783ace4115e456420592e5ee1b656771bafcf40a8fca91631a5b7067",
+  "withheld_ids_sha256": "6773292b881f8e7743371d9c073c3b3bb1254ab52c68c3363129f6eaae4f72be",
   "private_capture_files_or_html_copied": false
 }
