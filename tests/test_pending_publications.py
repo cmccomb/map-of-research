@@ -5,6 +5,7 @@ from __future__ import annotations
 from copy import deepcopy
 from types import SimpleNamespace
 
+import numpy
 import pandas
 import pytest
 
@@ -436,6 +437,72 @@ def test_parent_pending_carryforward_does_not_hide_new_exclusion() -> None:
         )
 
 
+@pytest.mark.parametrize(
+    ("defect", "message"),
+    [
+        ("duplicate_id", "duplicate work IDs"),
+        ("missing_reasons", "lacks exclusion reasons"),
+        ("malformed_reasons", "reasons are malformed"),
+        ("region_outlier", "region-outlier state"),
+        ("spatial_parent", "spatial presentation"),
+        ("missing_candidate_column", "lacks public table fields"),
+        ("incomplete_binding", "binding is incomplete"),
+        ("duplicate_binding", "binding repeats"),
+        ("missing_fingerprint", "fingerprint is incomplete"),
+        ("changed_fingerprint", "fingerprint changed"),
+    ],
+)
+def test_parent_pending_carryforward_rejects_unreviewed_parent_change(
+    defect: str, message: str
+) -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    if defect == "duplicate_id":
+        prior_works.append(deepcopy(prior_works[0]))
+    elif defect == "missing_reasons":
+        prior_works[0].pop("map_exclusion_reasons")
+    elif defect == "malformed_reasons":
+        prior_works[0]["map_exclusion_reasons"] = "pending_placement_review"
+    elif defect == "region_outlier":
+        prior_works[0]["map_region_outlier"] = True
+    elif defect == "spatial_parent":
+        prior_works[0]["x"] = 0.1
+    elif defect == "missing_candidate_column":
+        candidate = candidate.drop(columns=["map_region_outlier"])
+    elif defect == "incomplete_binding":
+        prior_profiles[0]["author_pub_id"] = ""
+    elif defect == "duplicate_binding":
+        prior_profiles.append(deepcopy(prior_profiles[0]))
+    elif defect == "missing_fingerprint":
+        prior_works[0].pop("citation")
+    elif defect == "changed_fingerprint":
+        candidate.at[0, "citation"] = "An unreviewed citation change"
+    with pytest.raises(ValueError, match=message):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+
+
+def test_parent_pending_carryforward_handles_no_pending_and_list_values() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_works[0]["map_exclusion_reasons"] = []
+    unchanged, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert unchanged is candidate and held == []
+
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_urls = [SOURCE_URL, "https://cmu.edu/another-source"]
+    prior_works[0]["source_urls"] = prior_urls
+    candidate.at[0, "source_urls"] = numpy.array(prior_urls, dtype=object)
+    prior_works[0]["source_verified_at"] = None
+    candidate.at[0, "source_verified_at"] = None
+    output, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert held == ["work-one"]
+    assert not bool(output.at[0, "map_eligible"])
+
+
 def test_parent_pending_list_is_exactly_preserved() -> None:
     row = {"work_id": "work-one", "title": "A reviewed paper"}
     require_parent_pending_list_preserved(
@@ -449,3 +516,15 @@ def test_parent_pending_list_is_exactly_preserved() -> None:
         )
     with pytest.raises(ValueError, match="Parent pending list is missing"):
         require_parent_pending_list_preserved({"schema_version": 8}, [], [])
+    with pytest.raises(ValueError, match="Parent pending map schema is invalid"):
+        require_parent_pending_list_preserved({"schema_version": "8"}, [], [])
+    with pytest.raises(ValueError, match="Parent pending list is missing"):
+        require_parent_pending_list_preserved(
+            {
+                "schema_version": 8,
+                "pending_publications": [],
+                "pending_publication_count": 1,
+            },
+            [],
+            [],
+        )

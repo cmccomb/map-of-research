@@ -2502,6 +2502,36 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     assert result["topic_label_review_version"] == (
         publisher.TOPIC_LABEL_REVIEW_VERSION
     )
+    if pinned and atomic and not region_override and not missing_prior and reuse_order:
+        # The additive path must carry the pinned parent pending state before
+        # the ordinary region continuity gate sees a rebuilt corpus.
+        snapshot_digest["value"] = "test-snapshot"
+        chemistry_active = False
+        monkeypatch.setattr(
+            publisher, "bio_scholar_source_changed", lambda *args: False
+        )
+        carryforward_calls = []
+
+        def carryforward(works, profiles, prior_works, prior_profiles):
+            carryforward_calls.append((works, profiles, prior_works, prior_profiles))
+            return works, ["old"]
+
+        monkeypatch.setattr(
+            publisher, "carry_forward_parent_pending_works", carryforward
+        )
+        additive_options = {
+            **publish_options,
+            "require_bio_release": False,
+            "additive_placement_review_path": tmp_path / "placement.json",
+        }
+        additive_options.pop("historical_loss_approval_path", None)
+        publisher.publish_snapshot(
+            tmp_path / "snapshot.parquet",
+            tmp_path / "manifest.json",
+            **additive_options,
+        )
+        assert len(carryforward_calls) == 1
+        assert atomic_calls[-1]["parent_pending_work_ids"] == ["old"]
 
 
 def test_historical_chemistry_count_offset_applies_only_at_its_parent(

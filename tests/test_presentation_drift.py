@@ -876,6 +876,7 @@ def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> No
 
     with pytest.raises(ValueError, match="parent works lack presentation fields"):
         require_preserved_additive_staged_works(path, [{"work_id": "work-0000"}])
+    require_preserved_additive_staged_works(path, [])
 
 
 def test_additive_staged_works_rejects_unreviewed_held_placement(
@@ -953,6 +954,11 @@ def test_additive_new_excluded_work_has_no_public_placement(
     staged_path = tmp_path / "works.parquet"
     output.to_parquet(staged_path, index=False)
     require_excluded_additive_staged_works(staged_path, receipt)
+    require_excluded_additive_staged_works(
+        staged_path, {**receipt, "excluded_new_work_reasons": {}}
+    )
+    with pytest.raises(ValueError, match="receipt is missing"):
+        require_excluded_additive_staged_works(staged_path, {})
     for field, value, message in (
         ("x", 0.2, "leaks coordinates"),
         ("keyword", "Unreviewed topic", "leaks topic labels"),

@@ -749,6 +749,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     receipt = {
         "status": "parent_frozen_new_points_reviewed",
         "held_new_work_ids": [],
+        "excluded_new_work_reasons": {},
     }
 
     def freeze(works, prior, pinned, proposal, **kwargs):
@@ -815,6 +816,46 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     assert [event for event, _ in calls] == ["map", "commit"]
     assert len(checked_staged_works) == 1
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+def test_reviewed_additive_path_requires_pinned_parent_map(
+    monkeypatch, tmp_path
+) -> None:
+    _, tables, manifest = _stage(monkeypatch, tmp_path)
+    tables["profile_publications"] = pandas.DataFrame(
+        {"author_pub_id": ["owner:row-1"]}
+    )
+    monkeypatch.setattr(publisher, "_pinned_parent_map", lambda **kwargs: (None, None))
+    monkeypatch.setattr(publisher, "build_map_artifact", lambda *args, **kwargs: {})
+    monkeypatch.setattr(
+        publisher,
+        "preserve_reviewed_additive_presentation",
+        lambda works, *args, **kwargs: (works, {"held_new_work_ids": []}),
+    )
+    review_path = tmp_path / "placement.json"
+    review_path.write_text("{}", encoding="utf-8")
+    with pytest.raises(ValueError, match="lacks pinned map"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={
+                "snapshot_sha256": "source-sha",
+                "reported_faculty_coauthors_sha256": "a" * 64,
+            },
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=[],
+            enforce_presentation_drift=True,
+            additive_placement_review_path=review_path,
+        )
 
 
 @pytest.mark.parametrize(
