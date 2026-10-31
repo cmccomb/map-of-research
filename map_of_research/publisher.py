@@ -165,6 +165,7 @@ from .presentation_drift import (
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
     reported_coauthor_evidence_changed,
+    require_excluded_additive_staged_works,
     require_held_additive_staged_works,
     require_presentation_review,
     require_preserved_additive_artifact,
@@ -1705,6 +1706,9 @@ def _publish_atomic_release(
             files[f"{config_name}/{path.name}"] = path
         if additive_placement_review_path is not None:
             require_held_additive_staged_works(staged["works"][1], preservation_receipt)
+            require_excluded_additive_staged_works(
+                staged["works"][1], preservation_receipt
+            )
             require_preserved_additive_staged_works(staged["works"][1], prior_works)
         held_table_counts = None
         if held_topic_parent_artifact is not None:

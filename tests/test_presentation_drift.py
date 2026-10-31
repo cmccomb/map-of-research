@@ -10,6 +10,7 @@ from pathlib import Path
 import pandas
 import pytest
 
+from map_of_research.composite_region import BLANK_TOPICS
 from map_of_research.presentation_drift import (
     PresentationDriftError,
     compare_presentation,
@@ -17,6 +18,7 @@ from map_of_research.presentation_drift import (
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
     reported_coauthor_evidence_changed,
+    require_excluded_additive_staged_works,
     require_held_additive_staged_works,
     require_presentation_review,
     require_preserved_additive_artifact,
@@ -916,6 +918,70 @@ def test_additive_staged_works_rejects_unreviewed_held_placement(
     broken.to_parquet(staged_path, index=False)
     with pytest.raises(ValueError, match="lack unique held work IDs"):
         require_held_additive_staged_works(staged_path, receipt)
+
+
+def test_additive_new_excluded_work_has_no_public_placement(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    excluded = {
+        **works.iloc[0].to_dict(),
+        "work_id": "work-region-excluded",
+        "map_eligible": False,
+        "map_exclusion_reasons": ["low_information_region"],
+        "x": 0.93,
+        "y": -0.28,
+        "tsne_x": 0.83,
+        "tsne_y": -0.19,
+        "keyword": "Unreviewed region",
+    }
+    works = pandas.concat([works, pandas.DataFrame([excluded])], ignore_index=True)
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+    output, receipt = freeze_additive(parent, candidate, works, review_path)
+    assert receipt["excluded_new_work_reasons"] == {
+        "work-region-excluded": ["low_information_region"]
+    }
+    row = output.loc[output.work_id.eq("work-region-excluded")].iloc[0]
+    assert not bool(row.map_eligible)
+    assert row.map_exclusion_reasons == ["low_information_region"]
+    assert all(pandas.isna(row[field]) for field in ("x", "y", "tsne_x", "tsne_y"))
+    assert all(row[field] == value for field, value in BLANK_TOPICS.items())
+
+    staged_path = tmp_path / "works.parquet"
+    output.to_parquet(staged_path, index=False)
+    require_excluded_additive_staged_works(staged_path, receipt)
+    for field, value, message in (
+        ("x", 0.2, "leaks coordinates"),
+        ("keyword", "Unreviewed topic", "leaks topic labels"),
+        ("map_eligible", True, "changes exclusion"),
+        ("map_exclusion_reasons", ["pending_placement_review"], "changes exclusion"),
+    ):
+        broken = output.copy(deep=True)
+        excluded_index = broken.index[broken.work_id.eq("work-region-excluded")][0]
+        broken.at[excluded_index, field] = value
+        broken.to_parquet(staged_path, index=False)
+        with pytest.raises(ValueError, match=message):
+            require_excluded_additive_staged_works(staged_path, receipt)
+
+    missing = output.loc[output.work_id.ne("work-region-excluded")].copy()
+    missing.to_parquet(staged_path, index=False)
+    with pytest.raises(ValueError, match="lack unique excluded new work IDs"):
+        require_excluded_additive_staged_works(staged_path, receipt)
+
+
+def test_additive_new_unmapped_eligible_work_fails_closed(tmp_path: Path) -> None:
+    parent, candidate, works = additive_case()
+    extra = {**works.iloc[0].to_dict(), "work_id": "work-unmapped"}
+    works = pandas.concat([works, pandas.DataFrame([extra])], ignore_index=True)
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+    with pytest.raises(ValueError, match="lacks a separate exclusion"):
+        freeze_additive(parent, candidate, works, review_path)
 
 
 @pytest.mark.parametrize(

@@ -426,6 +426,16 @@ def test_parent_pending_carryforward_rejects_mixed_reason() -> None:
         )
 
 
+def test_parent_pending_carryforward_does_not_hide_new_exclusion() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    candidate.at[0, "map_eligible"] = False
+    candidate.at[0, "map_exclusion_reasons"] = ["low_information_region"]
+    with pytest.raises(ValueError, match="separate exclusion"):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+
+
 def test_parent_pending_list_is_exactly_preserved() -> None:
     row = {"work_id": "work-one", "title": "A reviewed paper"}
     require_parent_pending_list_preserved(
@@ -437,3 +447,5 @@ def test_parent_pending_list_is_exactly_preserved() -> None:
             [{"work_id": "work-one", "title": "Changed"}],
             ["work-one"],
         )
+    with pytest.raises(ValueError, match="Parent pending list is missing"):
+        require_parent_pending_list_preserved({"schema_version": 8}, [], [])

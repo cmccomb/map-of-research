@@ -135,6 +135,17 @@ def carry_forward_parent_pending_works(
                 raise ValueError(
                     f"Parent pending fingerprint changed: {work_id}:{field}"
                 )
+        current_reasons = current["map_exclusion_reasons"]
+        if not isinstance(current_reasons, list) or not (
+            (bool(current["map_eligible"]) and current_reasons == [])
+            or (
+                not bool(current["map_eligible"])
+                and current_reasons == [PENDING_REASON]
+            )
+        ):
+            raise ValueError(
+                f"Parent pending candidate has a separate exclusion: {work_id}"
+            )
         output.at[index, "map_eligible"] = False
         output.at[index, "map_region_outlier"] = False
         output.at[index, "map_exclusion_reasons"] = [PENDING_REASON]
@@ -152,14 +163,19 @@ def require_parent_pending_list_preserved(
 ) -> None:
     """Reject a changed or missing parent schema8 pending-list row."""
 
-    prior = parent.get("pending_publications", [])
-    if "pending_publications" not in parent and parent.get(
-        "pending_publication_count", 0
-    ):
+    schema = parent.get("schema_version", 7)
+    if type(schema) is not int or schema < 7:
+        raise ValueError("Parent pending map schema is invalid")
+    if schema >= PENDING_MAP_SCHEMA_VERSION and not {
+        "pending_publications",
+        "pending_publication_count",
+    } <= set(parent):
         raise ValueError("Parent pending list is missing")
-    if not isinstance(prior, list) or parent.get(
-        "pending_publication_count", len(prior)
-    ) != len(prior):
+    prior = parent.get("pending_publications", [])
+    count = parent.get(
+        "pending_publication_count", len(prior) if isinstance(prior, list) else None
+    )
+    if not isinstance(prior, list) or type(count) is not int or count != len(prior):
         raise ValueError("Parent pending list is missing")
     previous_by_id = {str(row.get("work_id") or ""): row for row in prior}
     current_by_id = {str(row.get("work_id") or ""): row for row in current}

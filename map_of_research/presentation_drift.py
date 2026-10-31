@@ -674,6 +674,7 @@ def preserve_reviewed_additive_presentation(
         by_id[work_id] = item
     output = works.copy()
     retained = parent_points.keys() & candidate_points.keys()
+    excluded_new_reasons: dict[str, list[str]] = {}
     for index, work_id in current_ids.items():
         if work_id in prior_by_id:
             prior = prior_by_id[work_id]
@@ -776,6 +777,27 @@ def preserve_reviewed_additive_presentation(
                     output.at[index, field] = float(decision["coordinates"][field])
                 for field, value in UNCLASSIFIED_TOPICS.items():
                     output.at[index, field] = value
+        else:
+            # A selected observation can create a new canonical work that the
+            # region or quality gate excludes before placement review. Its
+            # fitted coordinates and topic labels are still unreviewed public
+            # metadata, even though it never appears as a spatial map point.
+            reasons = output.at[index, "map_exclusion_reasons"]
+            if (
+                bool(output.at[index, "map_eligible"])
+                or not isinstance(reasons, list)
+                or not reasons
+                or any(not isinstance(reason, str) or not reason for reason in reasons)
+                or "pending_placement_review" in reasons
+            ):
+                raise ValueError(
+                    f"Additive new off-map work lacks a separate exclusion: {work_id}"
+                )
+            excluded_new_reasons[work_id] = list(reasons)
+            for field in COORDINATE_FIELDS:
+                output.at[index, field] = None
+            for field, value in BLANK_TOPICS.items():
+                output.at[index, field] = value
     receipt["status"] = "parent_frozen_new_points_reviewed"
     receipt["placed_new_points"] = sum(
         decision["decision"] == "place_unclassified" for decision in by_id.values()
@@ -791,6 +813,7 @@ def preserve_reviewed_additive_presentation(
         for work_id, item in by_id.items()
         if item["decision"] == "hold_pending_placement"
     )
+    receipt["excluded_new_work_reasons"] = dict(sorted(excluded_new_reasons.items()))
     receipt["placed_new_coordinates_sha256"] = _digest(
         [
             (
@@ -837,6 +860,43 @@ def require_held_additive_staged_works(
             raise ValueError("Additive staged held work leaks coordinates")
         if any(row[field] != value for field, value in BLANK_TOPICS.items()):
             raise ValueError("Additive staged held work leaks topic labels")
+
+
+def require_excluded_additive_staged_works(
+    staged_path: Path, receipt: Mapping[str, Any]
+) -> None:
+    """Reject unreviewed placement metadata for newly excluded off-map works."""
+
+    expected = receipt.get("excluded_new_work_reasons")
+    if not isinstance(expected, Mapping):
+        raise ValueError("Additive excluded new-work receipt is missing")
+    if not expected:
+        return
+    import pyarrow.parquet as parquet
+
+    fields = [
+        "work_id",
+        "map_eligible",
+        "map_exclusion_reasons",
+        *COORDINATE_FIELDS,
+        *TOPIC_FIELDS,
+    ]
+    staged = parquet.read_table(staged_path, columns=fields).to_pylist()
+    rows = [row for row in staged if str(row["work_id"]) in expected]
+    if len(rows) != len(expected) or {str(row["work_id"]) for row in rows} != set(
+        expected
+    ):
+        raise ValueError("Additive staged works lack unique excluded new work IDs")
+    for row in rows:
+        if (
+            row["map_eligible"] is not False
+            or row["map_exclusion_reasons"] != expected[str(row["work_id"])]
+        ):
+            raise ValueError("Additive staged excluded new work changes exclusion")
+        if any(row[field] is not None for field in COORDINATE_FIELDS):
+            raise ValueError("Additive staged excluded new work leaks coordinates")
+        if any(row[field] != value for field, value in BLANK_TOPICS.items()):
+            raise ValueError("Additive staged excluded new work leaks topic labels")
 
 
 def require_preserved_additive_staged_works(
