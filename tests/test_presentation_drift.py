@@ -69,6 +69,7 @@ def artifact(count: int = 120, *, broad: str = "systems") -> dict:
                 "doi": "10.1000/example",
                 "publication_type": "publication",
                 "source_document_id": "",
+                "source_verified_at": "2026-10-30",
                 "collaboration_eligible": True,
                 "display_contributors": "",
                 "source_url": "",
@@ -136,9 +137,19 @@ def parent_work_rows(parent: dict) -> list[dict]:
             "doi": point["doi"],
             "publication_type": point["publication_type"],
             "source_document_id": point["source_document_id"],
+            "source_verified_at": point["source_verified_at"],
             "collaboration_eligible": point["collaboration_eligible"],
             "display_contributors": point["display_contributors"],
             "source_urls": [],
+            "title_variants": [point["title"]],
+            "author_variants": [point["authors"]],
+            "year_variants": [point["year"]],
+            "venue_variants": [point["venue"]],
+            "citation_variants": ["Full citation"],
+            "external_coauthors": [],
+            "faculty": ["A. Author"],
+            "department_titles": ["Electrical & Computer Engineering"],
+            "school_titles": ["College of Engineering"],
             "person_ids": ["person-one"],
             "memberships": [{"person_id": "person-one", "department_id": "ece"}],
             "department_ids": ["ece"],
@@ -824,6 +835,7 @@ def test_additive_freezes_prior_bibliography_on_spatial_and_off_map_works(
             ("doi", "10.1000/changed"),
             ("publication_type", "conference_paper"),
             ("source_document_id", "changed-document"),
+            ("source_verified_at", "2026-10-31"),
             ("collaboration_eligible", False),
             ("display_contributors", "Changed contributors"),
             ("map_exclusion_reasons", ["different_reason"]),
@@ -1064,6 +1076,7 @@ def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> No
         ("doi", "10.1000/changed"),
         ("publication_type", "conference_paper"),
         ("source_document_id", "new-source"),
+        ("source_verified_at", "2026-10-31"),
         ("collaboration_eligible", False),
         ("display_contributors", "New contributor"),
         ("map_eligible", False),
@@ -1149,7 +1162,12 @@ def test_additive_staged_works_allows_binding_and_provenance_growth(
     parent = parent_work_rows(artifact(1))
     staged = pandas.DataFrame(parent)
     for field in RETAINED_WORK_GROWTH_FIELDS:
-        new = {"person_id": "person-two"} if field == "memberships" else "new"
+        if field == "year_variants":
+            new = 2026
+        elif field in ("memberships", "external_coauthors"):
+            new = {"person_id": "person-two"}
+        else:
+            new = "new"
         staged.at[0, field] = [*parent[0][field], new]
     staged.at[0, "observation_count"] = 2
     path = tmp_path / "works.parquet"

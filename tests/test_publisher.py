@@ -502,6 +502,7 @@ def work_frame() -> pandas.DataFrame:
                 "citation_count": 7,
                 "doi": "10.1000/test",
                 "source_document_id": "",
+                "source_verified_at": "2026-10-30",
                 "collaboration_eligible": True,
                 "display_contributors": "",
                 "source_urls": ["https://example.test/paper"],
