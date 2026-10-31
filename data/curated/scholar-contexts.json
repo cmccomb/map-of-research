@@ -252,7 +252,7 @@
       "verified_doi": "10.1016/j.cels.2021.01.001",
       "collaboration_eligible": true,
       "map_eligible": true,
-      "reason": "NSF deposited the publisher-version Cell Systems article, with Christian and Elisa in the byline, volume 12 pp. 272–288.e3, DOI and 17 March 2021 issue date. Direct ScienceDirect request was refused, so no retry there.",
+      "reason": "NSF deposited the publisher-version Cell Systems article; its complete byline, volume, pages, DOI and 2021 issue date match the captured record.",
       "evidence_url": "https://par.nsf.gov/servlets/purl/10274110",
       "verified_at": "2026-10-31"
     },
@@ -294,7 +294,7 @@
       "verified_doi": "10.1039/c8sc03426e",
       "collaboration_eligible": true,
       "map_eligible": true,
-      "reason": "RSC original article verifies complete five-person byline, title, type, 2019 volume/pages and DOI. A separate 2020 correction at capture index 25 is excluded and must stay attached as a correction, not a new work.",
+      "reason": "Royal Society of Chemistry original article verifies complete five-person byline, title, article type, 2019 volume and pages, and DOI.",
       "evidence_url": "https://pubs.rsc.org/en/content/articlelanding/2019/sc/c8sc03426e",
       "verified_at": "2026-10-31"
     },
@@ -336,7 +336,7 @@
       "verified_doi": "10.1021/acssynbio.5b00176",
       "collaboration_eligible": true,
       "map_eligible": true,
-      "reason": "ACS original article record verifies five-person byline, title, article type, 2016 issue/pages and DOI. Capture index 53 is a malformed title fragment and is already excluded; it is not a second work.",
+      "reason": "American Chemical Society original article record verifies five-person byline, title, article type, 2016 issue and pages, and DOI.",
       "evidence_url": "https://pubs.acs.org/doi/10.1021/acssynbio.5b00176",
       "verified_at": "2026-10-31"
     },
