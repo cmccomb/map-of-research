@@ -1,9 +1,9 @@
 {
-  "artifact_commit": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
+  "artifact_commit": "448ec111870229b0ec86236e8b1f1bf2ef3c3674",
   "atomic_release": {
-    "artifact_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
-    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: d52312748773427bbd78a7978a0dab7f",
-    "commit_nonce": "d52312748773427bbd78a7978a0dab7f",
+    "artifact_revision": "448ec111870229b0ec86236e8b1f1bf2ef3c3674",
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 77dc05f9f61d4329b3267721abca410c",
+    "commit_nonce": "77dc05f9f61d4329b3267721abca410c",
     "committed_files": [
       "README.md",
       "authorships/train-00000-of-00001.parquet",
@@ -15,14 +15,14 @@
     ],
     "hosted_file_bytes_match_prewrite": true,
     "mode": "single_parent_commit",
-    "parent_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+    "parent_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
     "prewrite_gate": {
       "gate": "full-source-and-region-continuity-v1",
       "map_points": 53626,
       "presentation_drift": {
-        "candidate_map_sha256": "d0e3ad37feff38324d4c7eb74e18722ce5f9b1dd8f4c20b27ec6be8ac32ee6b7",
+        "candidate_map_sha256": "a9f8f92794d6d9bed8dd33c06f1b87c2d7d221482d87f230d6117a711bbc9017",
         "material_reasons": [],
-        "parent_map_sha256": "3c0481344bfa9d933e0e437804fce0e482cfe6e615ab6a00914313a35fde84ba",
+        "parent_map_sha256": "d0e3ad37feff38324d4c7eb74e18722ce5f9b1dd8f4c20b27ec6be8ac32ee6b7",
         "point_counts": {
           "added": 0,
           "candidate": 53626,
@@ -30,8 +30,8 @@
           "removed": 0,
           "retained": 53626
         },
-        "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
-        "report_sha256": "a5ccd838fb0f2b4842e87a2ecf1f0ae2949212076b6e4dc491176df33c09948a",
+        "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
+        "report_sha256": "567af7ab0cd7cc8d640bbf50388656f1ad1721e0ebdc978572da981fc5bf9780",
         "retained": {
           "broad_semantic_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
           "broad_semantic_label_changes": 0,
@@ -53,51 +53,65 @@
           "tsne_distance_p99": 0.0
         },
         "schema_version": 1,
-        "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+        "source_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
         "status": "pass_no_material_drift",
         "top_broad_label_transitions": [],
         "top_detail_label_transitions": []
       },
       "presentation_preservation": {
-        "candidate_map_content_sha256": "1c857d253d9afdbeadf4f3bab39900ff0cc5290384e84cf22b41a060e27928a4",
-        "excluded_new_work_reasons": {},
-        "held_new_points": 16,
+        "candidate_map_content_sha256": "c04a63c96997921c9866b8d594cccef52b1fb305ef9a90aa8cd4bd7b563c8a51",
+        "excluded_new_work_reasons": {
+          "work-36c7f4634973bbfae1a1f52bb86b027bea1adbf852ca255e264d49ca85ac50b1": [
+            "low_information_region"
+          ]
+        },
+        "held_new_points": 26,
         "held_new_work_ids": [
-          "work-09a838dd6c6770a0aacbf3c414ead09698b4d0a4981813283ee5c276c617dfd7",
-          "work-2c286e5261b468de21c240dfcf2c0526869d5de43b130b7cedc5e56c3b592836",
-          "work-2deec890cb347edbbd183674859f4cf3f09e2e0cd86aa0a9d1b00dfae0c79d27",
-          "work-3585bb83960c5b19ac79a2fc3b8cd8ba8f6ee5da4765c62d0dc858d62fd6560f",
-          "work-3f622d1e2731506baa44da3409718a1a961a403b0c5162e45f38418dd4792807",
-          "work-568870d6625643e1ae3b149b7e91f6c9af42692f888c4026a032361d6c53d065",
-          "work-5d1c8e5e477b66a9e704f7e4698a18afd8888df51d5d1106c7cbe071e0ff7259",
-          "work-81e838a7cf7b429b315285ef27e87f1aab6679cc01d150af9229a2c2e745c306",
-          "work-949c4d23129349c4b8538683ad78a95833cb8e026ffe097b11c43c74763b3a13",
-          "work-9ca6928a81ab29db370bc1f923f4d6515ec3080105b1a003640cd49983809d03",
-          "work-b8105c6c676dbddf282d3a3c269026e3a20b0c992a707fc3600a420f5d273135",
-          "work-c0260427249d0346f4334767199e67c11aabfd52e63071d5fd0966f6a12e66df",
-          "work-c6d2d8ab759b0fb669d638fb3a646ddc2d40c3b01d80219d5d55cf2cea431458",
-          "work-ce06f9b6cad2a540333ee7a4718c8b7aac0328832089dfb972c5a778a3a43b9b",
-          "work-e2957c7d14ae1d6607083e02029cf53551cf8d8832c26e86560f0aab76331901",
-          "work-f70a29c84f951df2b967a15d235ae3e918cf06f4dbd77ea3aa11d39eaa61669c"
+          "work-0732945ac135ebbf8eedb57e5c0195aa648c2970f49b17f10f5b5b0be828bddc",
+          "work-1ef4be8e38ff8f1e648ba9c790232e9aee3d4c498b6dd93271a692787fc2cf70",
+          "work-36c2ea4ad4870e639d4b24f1a5cbeefb5741fa736fbdf01168bd30c6b80c2402",
+          "work-3d27b1cd2d52c6bd61fc2cc1dbd00c6c7e97870e9a16d47fdd296402fdbf183a",
+          "work-47ce741c34fbdff1977f050ba5d8a0a15e0ae8f4e49734eb349943a03e7a01e9",
+          "work-5ad452d11048a568e384cbb48d5727b2a7fc3acedfd465bd171022cb33eda071",
+          "work-692574a4b290a6b94a3d1d74f8d9683e3c9576f654841bf854b352dba2d37757",
+          "work-6dbd327b7f501eedbb36d949b76b8bede7f5122b02116b3935c7e6af1313a76e",
+          "work-86f2796865f71627a2388126aeff34a700bd414df5da919dc6d65b776e90c86c",
+          "work-8dd9e3ca926154167a89a4f2d19bbb55ebe5be030f9850d4c3c406eaac564605",
+          "work-9399fd5d13a42ae7922751780c411b76a9030a8a20233ed5efd37e59e5dfd05a",
+          "work-9af428069764e7dca70d311de74d8b16c0dfca52b71e5af112ba6bb5860a3e98",
+          "work-a7fc6b93e34d0cb7e9be041c33f0a468d35444e44db775427b7a0be01ea69ac0",
+          "work-afbb4cf4ea3170e807e70961c48081d342e9d3232e1fe03e1627ccf82b610a3f",
+          "work-bfee05c9cd4b94a666e6c0a4ea5f452b27584f08625452e9d3ac92fec21e1e4b",
+          "work-c4e3871343c3e2d79102ae2700ccac693e040c21510c9b23015515329c051656",
+          "work-cade335fb8fc9ac44c92d64dd875e437cc262a02d6258ee022e60f71ba801360",
+          "work-dc4adf396680ff0f00aaef5e0973c5f42a46f6e13d2a8a989428f05e743fc90d",
+          "work-e102ebfa19feb576ced39aac9fce65462d08378608e5e115cc9d244c8e32696b",
+          "work-e26c921b936bb786bafed57f1fea8e37fd81564512d3b2b7e31f565618baed96",
+          "work-e94e470814cea4d6def89f73f8b5ba2ea594e5891c6fb0fb01fa37dbaa36baea",
+          "work-e9c3f50aa59035fb237d224b2c9a886b2874c61e899b0ae0b928042daf502d87",
+          "work-ea29952f6584ad65e1af22260ae25427d53be2b7024d4bec9ffd5e75715a00f4",
+          "work-ec2ceff72a4b6d704b24dddc8f19a3f27e684cbee35d09ba146186d09ef37119",
+          "work-f5385fcb424f5992042787856a9a2d6c592c0612378fb6ee0184118876a3ff19",
+          "work-ff15e67052b07651ce0dbeffb549c389b696b5577c2ad4df53e175af4510b17a"
         ],
-        "new_point_count": 16,
-        "new_work_ids_sha256": "42f4864f618459d267ff98cb81032d4559cc4c1e0b663a7781b8b35c4658346e",
-        "parent_map_sha256": "3c0481344bfa9d933e0e437804fce0e482cfe6e615ab6a00914313a35fde84ba",
+        "new_point_count": 26,
+        "new_work_ids_sha256": "99ec62b567b435070125dc83a880f1b5e1b80620772574b35f9d2a8f3ef9df72",
+        "parent_map_sha256": "d0e3ad37feff38324d4c7eb74e18722ce5f9b1dd8f4c20b27ec6be8ac32ee6b7",
         "placed_new_coordinates_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
         "placed_new_points": 0,
         "placed_new_work_ids": [],
-        "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+        "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
         "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
         "retained_point_count": 53626,
-        "review_sha256": "dab6a73c84fd98a330332eb4409392925f1c101947a5cf8e8b4f04f599969e76",
+        "review_sha256": "9212b9cd8c67c8cd9722c74a63c06db91063e7178fa9d79d7ed8643b9c77c544",
         "schema_version": 1,
-        "selected_ids_sha256": "22f91fc4eb7902aa82d0e9dee797910c78cd1e45640211c268518e3916090e17",
-        "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+        "selected_ids_sha256": "37eb79aaf94d8dbd31c619f0ffa014ab9a39295d40cb91c3c3b8ca9f9b33906c",
+        "source_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
         "status": "parent_frozen_new_points_reviewed"
       },
       "prior_person_continuity": {
         "changed_people": {
-          "person-rayidghani-0861bb94": [
+          "person-stevenwu-2f9ac697": [
             "mapped_work_count",
             "publication_observation_count",
             "scholar_observation_count",
@@ -105,52 +119,52 @@
           ]
         },
         "gate": "exact-prior-person-continuity-v1",
-        "parent_people_sha256": "5755fda06329318df1b16a9a3c5281b2dd4accf533a1b584b82986018e11580e",
+        "parent_people_sha256": "5ea785b1a82b3f949c26a6ad721f924f418a8b73735f31c0f51b48687299fb01",
         "prior_person_count": 2001,
-        "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+        "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
         "producer_people_registry_sha256": "3f3e0eb155e094af3f3c10961da2a16475fefcc964229a9c77d997b0d9b907c9",
         "review_sha256": null,
-        "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+        "source_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
         "status": "pass"
       },
-      "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
-      "raw_rows": 70829,
-      "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+      "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
+      "raw_rows": 70856,
+      "source_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
       "status": "pass"
     },
     "release_context": {
-      "producer_commit": "53594cab03619d05577694df7dcb3a46a5a280c2",
-      "snapshot_commit": "6c6952dd3e0a3c6c54232574ae93bc4e0bba6712",
-      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41227842498"
+      "producer_commit": "754a93a619a61bfc8ffc9a1a7869e147d7a0f9d6",
+      "snapshot_commit": "0de8fe9ece4ee6d35d868091cadda7eb21134178",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41234698459"
     },
     "sha256_by_path": {
-      "README.md": "15b876c73129b99bcb959ddb8e57446ce3db4959e02b69f1e3688bcb66f1c56a",
-      "authorships/train-00000-of-00001.parquet": "005a0f90b88453813ab425e533178a71cf2e6df12b07f58af8aa2f3c6661b7c9",
-      "maps/manifest.json": "b1719ecf367df492c444f33ec77179aa64a33436a3a2d1455e97609f36ed52ce",
-      "maps/publications.json": "d0e3ad37feff38324d4c7eb74e18722ce5f9b1dd8f4c20b27ec6be8ac32ee6b7",
-      "people/train-00000-of-00001.parquet": "5ea785b1a82b3f949c26a6ad721f924f418a8b73735f31c0f51b48687299fb01",
-      "profile_publications/train-00000-of-00001.parquet": "1c87bb278f3b6d50a3b9f7fb0126a3afe70e7c65a83a31443567a208a1cf1e0f",
-      "works/train-00000-of-00001.parquet": "c7f2b35c71f3d132f512074732601a117eb70dc63ea785b55257eecaa8d7ed6f"
+      "README.md": "fc3546d2a12a94b9afcac26d937491885260817e5c3d320a5eade5102fa88cc9",
+      "authorships/train-00000-of-00001.parquet": "a83f76abffa5d5be160a8a757794f2066ca31654831bf075c2caa89fd51dcb69",
+      "maps/manifest.json": "8b91ccd8531d5c277a73fcccd244cbf55bfd2f786886a912cea8b5fc3dfd0865",
+      "maps/publications.json": "a9f8f92794d6d9bed8dd33c06f1b87c2d7d221482d87f230d6117a711bbc9017",
+      "people/train-00000-of-00001.parquet": "193bd587cab6d02b4d9d24679d4896123b4548679a5b480d4bafe92574ec9753",
+      "profile_publications/train-00000-of-00001.parquet": "691edde5920ed5a834929f9ce45ddc6fc5132c0945eb89a63f747f3f8dd02a2f",
+      "works/train-00000-of-00001.parquet": "43c9a9a03bf2f7c980a6b36b3af7f8ce9349de8a407136e74749436d78cd2ebb"
     },
     "size_by_path": {
       "README.md": 10439,
-      "authorships/train-00000-of-00001.parquet": 18914129,
-      "maps/manifest.json": 8406,
-      "maps/publications.json": 49731249,
-      "people/train-00000-of-00001.parquet": 671707,
-      "profile_publications/train-00000-of-00001.parquet": 255247308,
-      "works/train-00000-of-00001.parquet": 260545734
+      "authorships/train-00000-of-00001.parquet": 18923310,
+      "maps/manifest.json": 9323,
+      "maps/publications.json": 49743530,
+      "people/train-00000-of-00001.parquet": 671709,
+      "profile_publications/train-00000-of-00001.parquet": 255350640,
+      "works/train-00000-of-00001.parquet": 260661238
     }
   },
   "attribution_confirmed": 505,
   "attribution_held": 6228,
   "attribution_reviews_sha256": "b9334546cf44d40b36d9faf6c4eff213b93677ebef2fb748fcb4cb258091aa51",
-  "authorships": 61675,
+  "authorships": 61702,
   "dataset_commits": {
-    "authorships": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
-    "people": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
-    "profile_publications": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
-    "works": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47"
+    "authorships": "448ec111870229b0ec86236e8b1f1bf2ef3c3674",
+    "people": "448ec111870229b0ec86236e8b1f1bf2ef3c3674",
+    "profile_publications": "448ec111870229b0ec86236e8b1f1bf2ef3c3674",
+    "works": "448ec111870229b0ec86236e8b1f1bf2ef3c3674"
   },
   "dataset_configs": [
     "people",
@@ -162,8 +176,8 @@
   "detail_keywords": 120,
   "error_message": null,
   "error_type": null,
-  "excluded_works": 8966,
-  "finished_at_utc": "2026-10-31T18:37:12.626576+00:00",
+  "excluded_works": 8993,
+  "finished_at_utc": "2026-10-31T20:01:51.646020+00:00",
   "held_observation_rows": 0,
   "held_person_observation_rows": 3,
   "held_profile_ids": [],
@@ -178,7 +192,7 @@
     "math_people": 65,
     "unresolved_scholar_id_people": 29
   },
-  "new_embedding_count": 16,
+  "new_embedding_count": 27,
   "people": 2001,
   "person_publication_hold_manifest_sha256": "575d553b9762eefdb92631265f8c374e5be843edf004e44d6cb80297f6bc3395",
   "person_publication_holds": [
@@ -208,19 +222,19 @@
       ]
     }
   ],
-  "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+  "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
   "private_subset_preflight": {
     "private_evidence_limit": "Public verification checks the locally generated receipt and byte hashes; private full capture/review content is verified only by controlled local preflight.",
-    "profile_count": 36,
-    "receipt_sha256": "239c3cd6c83bda8a8584eaf049029e326ad09443eb447376dcb3011cc9aa42cf",
-    "selected_rows": 1364,
-    "source_selection_manifest_sha256": "fa6836ed0414a85f99fba7d7890e9d2db98574102bb8f3eba6818ca3e55a6c84",
+    "profile_count": 37,
+    "receipt_sha256": "8e759882ebe374057e251b93f80e318816e0079d4564a848f3a70020bb3a35da",
+    "selected_rows": 1391,
+    "source_selection_manifest_sha256": "0d38241d14025c6072d3ce0280dd34f99f78586d8dc0816c118b9c2850f54042",
     "status": "pass",
-    "withheld_rows": 3173
+    "withheld_rows": 3368
   },
-  "producer_commit": "53594cab03619d05577694df7dcb3a46a5a280c2",
-  "profile_count": 421,
-  "profile_publications": 70826,
+  "producer_commit": "754a93a619a61bfc8ffc9a1a7869e147d7a0f9d6",
+  "profile_count": 422,
+  "profile_publications": 70853,
   "profile_release_decisions": [
     {
       "cache_sha256": "685712c1f75b7b8d29edcc29478b2577be7b30a82873d90f6a115df161ec7c08",
@@ -3231,9 +3245,57 @@
       "withheld_hold_rows": 193,
       "withheld_ids_sha256": "c588682addfa00ab0380763a0e2a9bbe6136d92641c002dfe51e835af4cf0a93",
       "withheld_rows": 210
+    },
+    {
+      "cache_scope": "reviewed_public_subset",
+      "cache_sha256": "7c5807ea6569730f0f0c522052263134baa9b6219df3dc16268417e38afaac6b",
+      "observed_visible_rows": 222,
+      "person_id": "person-stevenwu-2f9ac697",
+      "person_observation_rows": 27,
+      "private_capture_sha256": "4cfde73a6f9d07e029b48e6c2bdd74b520fadfa82693660c095e928a41d1c38a",
+      "private_review_sha256": "35175f4dd910cff6e44d05c31ba3ac8d070dde52360a76a2a21e4e838db036f8",
+      "reason": "Local private-stage candidate: 27 original-document-supported Steven Wu observations from 222 complete visible Chrome rows; 195 remain private. Two star-citation rows and existing Fanti version continuity remain held. New works require exact placement/topic review and remain pending. This decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "scholar_id": "MbF6rTEAAAAJ",
+      "selected_author_pub_ids": [
+        "MbF6rTEAAAAJ:0CzhzZyukY4C",
+        "MbF6rTEAAAAJ:2KloaMYe4IUC",
+        "MbF6rTEAAAAJ:35r97b3x0nAC",
+        "MbF6rTEAAAAJ:5awf1xo2G04C",
+        "MbF6rTEAAAAJ:6yz0xqPARnAC",
+        "MbF6rTEAAAAJ:Aul-kAQHnToC",
+        "MbF6rTEAAAAJ:BUYA1_V_uYcC",
+        "MbF6rTEAAAAJ:DUooU5lO8OsC",
+        "MbF6rTEAAAAJ:F9fV5C73w3QC",
+        "MbF6rTEAAAAJ:NyGDZy8z5eUC",
+        "MbF6rTEAAAAJ:PR6Y55bgFSsC",
+        "MbF6rTEAAAAJ:SdhP9T11ey4C",
+        "MbF6rTEAAAAJ:W5xh706n7nkC",
+        "MbF6rTEAAAAJ:WA5NYHcadZ8C",
+        "MbF6rTEAAAAJ:ZfRJV9d4-WMC",
+        "MbF6rTEAAAAJ:ZzlSgRqYykMC",
+        "MbF6rTEAAAAJ:_Ybze24A_UAC",
+        "MbF6rTEAAAAJ:epqYDVWIO7EC",
+        "MbF6rTEAAAAJ:hkOj_22Ku90C",
+        "MbF6rTEAAAAJ:hsZV8lGYWTMC",
+        "MbF6rTEAAAAJ:nVrZBo8bIpAC",
+        "MbF6rTEAAAAJ:sszUF3NjhM4C",
+        "MbF6rTEAAAAJ:t7zJ5fGR-2UC",
+        "MbF6rTEAAAAJ:tzM49s52ZIMC",
+        "MbF6rTEAAAAJ:u-x6o8ySG0sC",
+        "MbF6rTEAAAAJ:uJ-U7cs_P_0C",
+        "MbF6rTEAAAAJ:wMgC3FpKEyYC"
+      ],
+      "selected_ids_sha256": "a4b62f4bb4eb2e79cad4b0e9011128de1f0bd251034e8d96821ebbbf863e6d45",
+      "source_observation_rows": 27,
+      "state": "released",
+      "withheld_excluded_rows": 2,
+      "withheld_hold_rows": 193,
+      "withheld_ids_sha256": "15a0058b289e2895fb56bd94ab44dffb293ec5d88d4b4f120cdf1fa7160ec0c8",
+      "withheld_rows": 195
     }
   ],
-  "profile_release_manifest_sha256": "5ce54ed3d6559879213ce26ae39882f2f0711de9eb93b73d447c393af2abbb5e",
+  "profile_release_manifest_sha256": "65fb7e4167ed2543134290aabab923df9737d13c97e0a954ea4b3f2bd2f6c80b",
   "provisional_hold_manifest_sha256": "0eba1183b5df86b8e45107324b1a89bf61995e669ca3ab8af7ad8974a91c2bf9",
   "provisional_hold_observation_rows": 6175,
   "provisional_hold_profiles": [
@@ -4108,11 +4170,11 @@
       "source_observation_rows": 116
     }
   ],
-  "raw_snapshot_observations": 70829,
-  "raw_snapshot_profiles": 421,
-  "raw_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+  "raw_snapshot_observations": 70856,
+  "raw_snapshot_profiles": 422,
+  "raw_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
   "region_audit_version": "low-information-semantic-region-v3",
-  "region_comparison_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+  "region_comparison_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
   "region_continuity": {
     "approved_bio_binding_changes": [],
     "approved_coauthor_binding_changes": [],
@@ -4128,14 +4190,14 @@
     "chem_region_review_sha256": "e2b888a3293b9515491770cf13ccfc0dbdd75e31bc4fda671698f5acbb41ec9b",
     "chemistry_review_root_revision": "dcbdfacd7e8cfeaefd4c91081c4b347b7c690061",
     "coauthor_binding_approval_sha256": null,
-    "current_visible_observations": 60770,
+    "current_visible_observations": 60780,
     "mccomb_continuity_sha256": null,
     "missing_sullivan_curated_targets": [],
-    "new_source_gains": 16,
+    "new_source_gains": 26,
     "poster_loss_approval_sha256": null,
-    "prior_eligible_overrides": 106,
-    "prior_excluded_overrides": 131,
-    "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+    "prior_eligible_overrides": 192,
+    "prior_excluded_overrides": 176,
+    "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
     "prior_visible_observations": 60754,
     "reviewed_composite_observation_gains": [],
     "reviewed_composite_observation_losses": [],
@@ -4154,10 +4216,10 @@
           "work_id": "work-e9b6da02fcf0310dc757a98c23ca7e5ac66b5046a889fb80ba82d5cfbe816415"
         }
       ],
-      "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+      "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
       "raw_and_authorship_retained": true,
       "reason": "reviewed_topic_hold",
-      "snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390"
+      "snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3"
     },
     "stable_works": 56380,
     "sullivan_continuity_addendum_sha256": null,
@@ -4210,8 +4272,8 @@
       "verified_at": "2026-10-30"
     }
   ],
-  "reviewed_contexts": 268,
-  "reviewed_contexts_sha256": "5f433f2950d5d512b5e9667c1d8211e4f3dfc501fd42bfe56cc0882f72a0862a",
+  "reviewed_contexts": 295,
+  "reviewed_contexts_sha256": "2ecb8ce9d89c493c78d7603c4c5beec20446200b794e6dbaee24b73c50decbb6",
   "reviewed_doi_aliases": 60,
   "reviewed_doi_aliases_sha256": "ac18a559d31a405e449b51bc8765eae561e5b8deae48e73adde4c5e875c4ba73",
   "reviewed_exclusions": 1900,
@@ -4220,15 +4282,15 @@
   "reviewed_metadata_corrections_sha256": "6cccfedb0ea8cd1573ed96c6e1c128a136fce9ad5c7f6899c0b82994daea8867",
   "schema_version": 2,
   "scholar_coverage": {
-    "complete_profiles": 137,
+    "complete_profiles": 138,
     "legacy_profiles": 284,
     "reconciled_prior_ids": 19
   },
-  "snapshot_commit": "6c6952dd3e0a3c6c54232574ae93bc4e0bba6712",
-  "started_at_utc": "2026-10-31T18:09:58.396875+00:00",
+  "snapshot_commit": "0de8fe9ece4ee6d35d868091cadda7eb21134178",
+  "started_at_utc": "2026-10-31T19:34:35.396941+00:00",
   "status": "success",
   "topic_label_review_version": "representative-title-audit-2026-07-19-v1",
   "validated_metadata_corrections": 45,
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41227842498",
-  "works": 64904
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41234698459",
+  "works": 64931
 }
