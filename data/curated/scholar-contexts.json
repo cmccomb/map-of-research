@@ -4919,7 +4919,7 @@
       "verified_doi": "10.1145/354756.354805",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "ACM CIKM 2000 Crossref registration; held row88 title variant Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper, captured year, and DOI 10.1145/354756.354805. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://api.crossref.org/works/10.1145/354756.354805",
       "verified_at": "2026-10-31"
     },
@@ -4933,7 +4933,7 @@
       "verified_doi": "10.48550/arXiv.1811.05577",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "arXiv 2018 preprint by Ghani; held row71 malformed year Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "arXiv verifies this 2018 preprint and its registered DOI; no later publication version is claimed. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://arxiv.org/abs/1811.05577",
       "verified_at": "2026-10-31"
     },
@@ -4947,7 +4947,7 @@
       "verified_doi": "10.1136/bmj.l6927",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Source-backed exact row correction must carry journal_article and DOI; preserve raw Scholar record and keep row45 withheld. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact journal article, captured year, and DOI 10.1136/bmj.l6927. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.bmj.com/content/bmj/368/bmj.l6927.full.pdf",
       "verified_at": "2026-10-31"
     },
@@ -4961,7 +4961,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Owner bibliography ICML 2002 pp187-194; DOI not established Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.rayidghani.com/publications/",
       "verified_at": "2026-10-31"
     },
@@ -4975,7 +4975,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper from the original CIKM document; DOI can remain empty until a publisher-registered value is verified. Preserve row40 exactly. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cs.cmu.edu/~TextLearning/corpusbuilder/papers/cikm2001.pdf",
       "verified_at": "2026-10-31"
     },
@@ -4989,7 +4989,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper; preserve the 2002 journal row4 and its canonical work exactly. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cs.cmu.edu/~yiming/publications.html",
       "verified_at": "2026-10-31"
     },
@@ -5003,7 +5003,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper; preserve retained KDD row37/work exactly. Do not infer a DOI from the KDD work. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cs.cmu.edu/~rayid/newpage/resume.htm",
       "verified_at": "2026-10-31"
     },
@@ -5017,7 +5017,7 @@
       "verified_doi": "10.1145/2783258.2788588",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "ACM KDD 2015 Crossref registration; row173 2014 variant held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper, captured year, and DOI 10.1145/2783258.2788588. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://api.crossref.org/works/10.1145/2783258.2788588",
       "verified_at": "2026-10-31"
     },
@@ -5031,7 +5031,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "CMU original eight-page ACL 2000 Student Research Workshop paper; exact venue correction may be needed; DOI not established Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cs.cmu.edu/~TextLearning/corpusbuilder/papers/acl2000.pdf",
       "verified_at": "2026-10-31"
     },
@@ -5045,7 +5045,7 @@
       "verified_doi": "10.1162/99608f92.ed353ae3",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "MIT Press HDSR 2019 article; row194 duplicate held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact journal article, captured year, and DOI 10.1162/99608f92.ed353ae3. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://hdsr.mitpress.mit.edu/pub/0mb0zzlc/download/pdf",
       "verified_at": "2026-10-31"
     },
@@ -5059,7 +5059,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Owner bibliography and original paper identify LREC 2002 workshop contribution; DOI not established; row114 duplicate held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.rayidghani.com/publications/",
       "verified_at": "2026-10-31"
     },
@@ -5073,7 +5073,7 @@
       "verified_doi": "10.1145/3209811.3209869",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Final author-hosted COMPASS 2018 paper prints ACM DOI and Ghani byline; row197 2017 version held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper, captured year, and DOI 10.1145/3209811.3209869. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://mbauman.com/assets/research/SIGCAS-2018-Bauman.pdf",
       "verified_at": "2026-10-31"
     },
@@ -5087,7 +5087,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper; leave DOI empty until publisher registration is source-verified. Keep row125 separately keyed and pending. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://kdd.org/exploration_files/MDMKDD2005-report.pdf",
       "verified_at": "2026-10-31"
     },
@@ -5101,7 +5101,7 @@
       "verified_doi": "10.1145/383952.384072",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "ACM SIGIR 2001 Crossref registration; distinct from ACL 2000 row52 Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper, captured year, and DOI 10.1145/383952.384072. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://api.crossref.org/works/10.1145/383952.384072",
       "verified_at": "2026-10-31"
     },
@@ -5115,7 +5115,7 @@
       "verified_doi": "10.1017/dap.2020.23",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Cambridge Data & Policy vol3 2021 e2 Research Article; row163 prepublication variant held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact journal article, captured year, and DOI 10.1017/dap.2020.23. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cambridge.org/core/journals/data-and-policy/article/recommendation-and-risk-classification-system-for-connecting-rough-sleepers-to-essential-outreach-services/55E067F857ED9F1592EF1A0B3CE1E286",
       "verified_at": "2026-10-31"
     },
@@ -5129,7 +5129,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper. IEEE page was inaccessible in this audit, so do not assert an unverified DOI; maintain explicit overlap note with row109 and keep both off spatial/collaboration maps pending placement. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://ieeexplore.ieee.org/document/1532927",
       "verified_at": "2026-10-31"
     },
@@ -5143,7 +5143,7 @@
       "verified_doi": "10.1007/978-981-99-8391-9_14",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Springer first-online 27 Nov 2023 supports captured year and DOI; formal volume citation says 2024, preserve date provenance; arXiv row190 held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "Springer lists this DOI as first online in 2023; the selected citation uses that documented online year. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://link.springer.com/chapter/10.1007/978-981-99-8391-9_14",
       "verified_at": "2026-10-31"
     },
@@ -5157,7 +5157,7 @@
       "verified_doi": "10.5220/0001989001640169",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "SciTePress original ICEIS 2009 paper prints DOI, pp164-169 and Ghani byline; row209 duplicate held Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper, captured year, and DOI 10.5220/0001989001640169. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.scitepress.org/PublishedPapers/2009/19890/19890.pdf",
       "verified_at": "2026-10-31"
     },
@@ -5171,7 +5171,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper; preserve ICML 2000 row13 exactly and keep proposal row98 withheld. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.cs.cmu.edu/~rayid/newpage/resume.htm",
       "verified_at": "2026-10-31"
     },
@@ -5185,7 +5185,7 @@
       "verified_doi": "",
       "collaboration_eligible": false,
       "map_eligible": true,
-      "reason": "Transport conference_paper; preserve retained AAAI 2005 work exactly and keep row215 withheld as a duplicate display. Exact owner-linked citation supports authorship; collaboration and spatial placement remain held pending review.",
+      "reason": "The linked primary or author record verifies this exact conference paper and captured year; no registered DOI is asserted. The exact owner-linked Scholar citation supports Rayid Ghani authorship. Spatial placement and collaboration remain unreviewed.",
       "evidence_url": "https://www.rayidghani.com/publications/",
       "verified_at": "2026-10-31"
     }

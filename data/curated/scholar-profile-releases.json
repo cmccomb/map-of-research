@@ -1682,7 +1682,7 @@
       "state": "released",
       "expected_source_rows": 101,
       "cache_sha256": "d98311f74f71058b8fd9c0aeb2c73f2b016dbefe1a191484d5e49c47ef1465b6",
-      "reason": "Local private-stage candidate: 101 selected Rayid observations from one complete 226-row exact owner Scholar capture; 125 rows remain withheld. Twenty new rows have source-reviewed publication types, ten verified DOI values, and explicit collaboration exclusion; row102/130 publication-year conflicts and row196 poster remain held. All new spatial placements require an exact-parent all-held review. MLD and Heinz included; CMIST affiliate excluded. This decision alone does not authorize upload.",
+      "reason": "Selected-only source candidate: 101 Rayid observations from one complete exact-owner Scholar capture; 125 unselected observations remain private. Twenty new works have reviewed types and ten verified DOI values. New works remain nonspatial and collaboration-ineligible pending placement and byline review. MLD and Heinz are included memberships; CMIST is an affiliate. Upload requires exact-parent staged gates.",
       "reviewed_at": "2026-10-31",
       "public_subset": {
         "observed_visible_rows": 226,
