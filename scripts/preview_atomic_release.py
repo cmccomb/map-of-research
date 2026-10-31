@@ -157,6 +157,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--region-comparison-revision", required=True)
     parser.add_argument("--require-bio-release", action="store_true")
     parser.add_argument("--additive-placement-review", type=Path)
+    parser.add_argument("--prior-person-continuity-review", type=Path)
     return parser.parse_args()
 
 
@@ -385,6 +386,9 @@ def main() -> int:
                 math_region_review_path=curated / "scholar-region-review.json",
                 chem_region_review_path=curated / "scholar-chem-region-review.json",
                 additive_placement_review_path=args.additive_placement_review,
+                prior_person_continuity_review_path=(
+                    args.prior_person_continuity_review
+                ),
             )
         except AtomicReleaseReconciliationRequired as error:
             if not isinstance(error.__cause__, FirstHubWriteIntercepted):
