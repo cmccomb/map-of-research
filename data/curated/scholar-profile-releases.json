@@ -1595,6 +1595,26 @@
         "withheld_excluded_rows": 6,
         "withheld_ids_sha256": "8dbec6be64db77416ec1d7ee0ab86f389d8e07e2a82d1a6d50a265fd086d8b2a"
       }
+    },
+    {
+      "person_id": "person-maxsimchowitz-e43dffcb",
+      "scholar_id": "HjmSOFEAAAAJ",
+      "state": "released",
+      "expected_source_rows": 38,
+      "cache_sha256": "866dac64875ff2e44b070ff88691e1dd1cda41eb5d0f73a3ea038cb0e2d548ca",
+      "reason": "Local private-stage candidate: 38 original-document-supported conference observations from 97 complete visible Chrome rows; 59 remain private. Exactly one selected record requires stable existing Nicholas Boffi work binding; 37 new works need exact placement/topic review and remain pending. This candidate decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 97,
+        "private_capture_sha256": "5d16171bb2e0e55db9687b5762164e9e3a8edd65809a81a71ac1c1efe9547444",
+        "private_review_sha256": "08ebc5abd4488deaea289a46eb3db61ee60237b929c97884355687f6f01f960d",
+        "private_rendered_html_sha256": "4f54a8e4a97b341adc2837280bbb34aed45a6c95bb8a14c4f3e1fa40a5eca26b",
+        "selected_ids_sha256": "0d2bc973118a3c662db49a4e73ba3945bf884cb9e52d347c612485caf313c4da",
+        "withheld_rows": 59,
+        "withheld_hold_rows": 54,
+        "withheld_excluded_rows": 5,
+        "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac"
+      }
     }
   ]
 }

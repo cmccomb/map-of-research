@@ -95,6 +95,7 @@ def parent_work_rows(parent: dict) -> list[dict]:
     return [
         {
             "work_id": point["work_id"],
+            "publication_type": "publication",
             "x": point["x"],
             "y": point["y"],
             "tsne_x": point["tsne_x"],
@@ -709,6 +710,35 @@ def test_additive_freezes_parent_and_reviews_each_new_point(tmp_path: Path) -> N
     assert works["x"].tolist() == [0.9] * 5
 
 
+def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    works.at[0, "publication_type"] = "conference_paper"
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    review_path = tmp_path / "placement-review.json"
+    additive_review(review_path, error.value.receipt)
+    frozen, _ = freeze_additive(parent, candidate, works, review_path)
+    assert frozen.at[0, "publication_type"] == "publication"
+    assert works.at[0, "publication_type"] == "conference_paper"
+    prior = parent_work_rows(parent)
+    del prior[0]["publication_type"]
+    with pytest.raises(ValueError, match="lacks publication type"):
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="a" * 64,
+            review_path=review_path,
+        )
+
+
 def test_additive_preserves_prior_off_map_work_presentation(
     tmp_path: Path,
 ) -> None:
@@ -731,6 +761,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
     refitted = {
         **works.iloc[0].to_dict(),
         "work_id": off_map["work_id"],
+        "publication_type": "conference_paper",
         "map_eligible": False,
         "x": 0.9,
         "y": 0.9,
@@ -759,6 +790,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
         -0.45,
     ]
     assert restored.keyword == off_map["keyword"]
+    assert restored.publication_type == "publication"
     assert works.iloc[-1]["x"] == 0.9
 
     changed_region = works.copy()
@@ -866,6 +898,12 @@ def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> No
 
     broken = staged.copy()
     broken.at[0, "map_region_audit_version"] = "unreviewed-refit"
+    broken.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="change prior presentation"):
+        require_preserved_additive_staged_works(path, parent)
+
+    broken = staged.copy()
+    broken.at[0, "publication_type"] = "conference_paper"
     broken.to_parquet(path, index=False)
     with pytest.raises(ValueError, match="change prior presentation"):
         require_preserved_additive_staged_works(path, parent)
@@ -1256,6 +1294,7 @@ def test_additive_requires_exact_report_source_sha() -> None:
 
 def test_additive_staged_map_preserves_retained_reported_coauthors() -> None:
     parent = artifact(1)
+    parent["points"][0]["publication_type"] = "publication"
     parent["points"][0]["reported_faculty_coauthors"] = [
         {"person_id": "person-other", "source_person_id": "person-author"}
     ]
@@ -1266,6 +1305,18 @@ def test_additive_staged_map_preserves_retained_reported_coauthors() -> None:
         "placed_new_coordinates_sha256": hashlib.sha256(b"[]").hexdigest(),
     }
     require_preserved_additive_artifact(parent, staged, receipt)
+    staged["points"][0]["publication_type"] = "conference_paper"
+    with pytest.raises(ValueError, match="changes retained publication type"):
+        require_preserved_additive_artifact(parent, staged, receipt)
+    staged["points"][0]["publication_type"] = "publication"
+    missing_parent_type = deepcopy(parent)
+    del missing_parent_type["points"][0]["publication_type"]
+    with pytest.raises(ValueError, match="lacks retained publication type"):
+        require_preserved_additive_artifact(missing_parent_type, staged, receipt)
+    missing_staged_type = deepcopy(staged)
+    del missing_staged_type["points"][0]["publication_type"]
+    with pytest.raises(ValueError, match="lacks retained publication type"):
+        require_preserved_additive_artifact(parent, missing_staged_type, receipt)
     staged["points"][0]["reported_faculty_coauthors"] = []
     with pytest.raises(ValueError, match="changes retained reported coauthors"):
         require_preserved_additive_artifact(parent, staged, receipt)
