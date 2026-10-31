@@ -83,7 +83,8 @@ does not become collaboration eligible by type alone. The context must explicitl
 permit collaboration, and the ordinary quality and authorship gates still
 apply. Every DOI present in the captured source fields must agree with the
 reviewed DOI; an explicit blank rejects every captured DOI. Conflicting source
-DOIs require a separate exact version review.
+DOIs require a separate exact version review. This comparison decodes URL
+escapes and HTML entities for inspection while preserving captured field text.
 A book chapter is an authored chapter, distinct from an edited book.
 
 ## `works`

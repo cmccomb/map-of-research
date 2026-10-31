@@ -329,6 +329,43 @@ def test_authored_type_doi_and_eligibility_are_explicit(
         )["profile_publications"].iloc[0]["doi"]
         == "10.1234/chapter.2026"
     )
+    fully_encoded_conflict = "".join(
+        f"%{ord(character):02X}" for character in "10.1234/other-doi"
+    )
+    for field, conflicting_value in (
+        ("source_url", "https://doi.org/10.1234%2Fother-doi"),
+        ("source_url", "https://doi.org/10%2E1234%2Fother-doi"),
+        ("source_url", f"https://doi.org/{fully_encoded_conflict}"),
+        ("source_url", "https://publisher.example.test/?doi=10.1234%2Fother-doi"),
+        ("source_url", "https://doi.org/10.1234%252Fother-doi"),
+        ("citation", "Cites 10.1234&#47;other-doi"),
+        ("citation", "Cites 10.1234&sol;other-doi"),
+    ):
+        with pytest.raises(ValueError, match="DOI conflicts with source"):
+            build_dataset_tables(
+                pandas.DataFrame([{**matching_source_doi, field: conflicting_value}]),
+                registry,
+                contexts=load_contexts(path),
+            )
+    encoded_same_url = "https://doi.org/10.1234%2FCHAPTER.2026."
+    encoded_same = build_dataset_tables(
+        pandas.DataFrame([{**row, "source_url": encoded_same_url}]),
+        registry,
+        contexts=load_contexts(path),
+    )["profile_publications"].iloc[0]
+    assert encoded_same["doi"] == "10.1234/chapter.2026"
+    assert encoded_same["source_url"] == encoded_same_url
+    deeply_encoded = "10.1234%2Fchapter.2026"
+    for _ in range(8):
+        deeply_encoded = deeply_encoded.replace("%", "%25")
+    with pytest.raises(ValueError, match="DOI encoding exceeds review limit"):
+        build_dataset_tables(
+            pandas.DataFrame(
+                [{**row, "source_url": f"https://doi.org/{deeply_encoded}"}]
+            ),
+            registry,
+            contexts=load_contexts(path),
+        )
 
     conflict = ReviewedDoiAlias(
         doi="10.1234/another-version",
@@ -361,7 +398,10 @@ def test_authored_type_doi_and_eligibility_are_explicit(
     for field, observed_value in (
         ("source_doi", "10.1234/unreviewed"),
         ("source_url", "https://publisher.example.test/10.1234/unreviewed"),
+        ("source_url", "https://doi.org/10.1234%2Funreviewed"),
+        ("source_url", f"https://doi.org/{fully_encoded_conflict}"),
         ("citation", "Unreviewed DOI 10.1234/unreviewed"),
+        ("citation", "Unreviewed DOI 10.1234&sol;unreviewed"),
         ("source_record_json", '{"doi":"10.1234/unreviewed"}'),
     ):
         with pytest.raises(ValueError, match="DOI conflicts with source"):

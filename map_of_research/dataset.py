@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import math
 import re
 from collections import Counter
 from collections.abc import Mapping
 from typing import Any
+from urllib.parse import unquote
 
 from .attribution import AttributionReviews
 from .contexts import AUTHORED_PUBLICATION_TYPES, ReviewedContext
@@ -77,6 +79,18 @@ def _doi(*values: Any) -> str:
         if match:
             return match.group(0).rstrip(".,;)").casefold()
     return ""
+
+
+def _decoded_doi_text(value: Any) -> str:
+    """Expose encoded DOI mentions for review without rewriting the source field."""
+
+    text = _clean_text(value)
+    for _ in range(8):
+        decoded = html.unescape(unquote(text))
+        if decoded == text:
+            return text
+        text = decoded
+    raise ValueError("Authored Scholar context DOI encoding exceeds review limit")
 
 
 def _hash_id(prefix: str, value: str) -> str:
@@ -178,7 +192,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
             row.citation,
             row.source_record_json,
         )
-        for match in DOI_PATTERN.finditer(_clean_text(value))
+        for match in DOI_PATTERN.finditer(_decoded_doi_text(value))
     }
     if len(observed_dois) > 1 or observed_dois - {context.verified_doi}:
         raise ValueError("Authored Scholar context DOI conflicts with source")
