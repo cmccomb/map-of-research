@@ -311,11 +311,21 @@ def require_prior_person_continuity(
     for row in current_works:
         if not {"work_id", "map_eligible", "memberships"} <= set(row):
             raise ValueError("Candidate works lack mapped person memberships")
-        if _normal(row["map_eligible"]) is True:
-            for membership in _normal(row["memberships"]):
-                if not isinstance(membership, dict) or "person_id" not in membership:
-                    raise ValueError("Candidate mapped work has invalid membership")
-                mapped_work_ids[str(membership["person_id"])].add(str(row["work_id"]))
+        if type(_normal(row["map_eligible"])) is not bool:
+            raise ValueError("Candidate work has invalid map eligibility")
+        memberships = _normal(row["memberships"])
+        if not isinstance(memberships, list):
+            raise ValueError("Candidate mapped work has invalid memberships")
+        # The people count comes from source-eligible work memberships before
+        # later region and placement holds change spatial map eligibility.
+        for membership in memberships:
+            if (
+                not isinstance(membership, dict)
+                or not isinstance(membership.get("person_id"), str)
+                or not membership["person_id"]
+            ):
+                raise ValueError("Candidate mapped work has invalid membership")
+            mapped_work_ids[membership["person_id"]].add(str(row["work_id"]))
 
     changed_people: dict[str, list[str]] = {}
     for person_id, before in prior.items():

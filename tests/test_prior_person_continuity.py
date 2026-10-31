@@ -457,6 +457,30 @@ def test_selected_profile_count_and_binding_growth_must_match_receipt():
         "scholar_observation_count",
         "unique_work_count",
     ]
+    spatial_hold = copy.deepcopy(works)
+    spatial_hold[0]["map_eligible"] = False
+    assert check(graph=spatial_hold)["changed_people"] == check()["changed_people"]
+    source_ineligible = copy.deepcopy(current)
+    source_ineligible[0]["mapped_work_count"] = 0
+    no_eligible_memberships = copy.deepcopy(spatial_hold)
+    no_eligible_memberships[0]["memberships"] = []
+    assert (
+        "mapped_work_count"
+        not in check(candidate=source_ineligible, graph=no_eligible_memberships)[
+            "changed_people"
+        ]["person-new"]
+    )
+    bad_spatial_hold = copy.deepcopy(spatial_hold)
+    bad_spatial_hold[0]["memberships"] = [{}]
+    with pytest.raises(ValueError, match="invalid membership"):
+        check(graph=bad_spatial_hold)
+    bad_spatial_hold[0]["memberships"] = None
+    with pytest.raises(ValueError, match="invalid memberships"):
+        check(graph=bad_spatial_hold)
+    invalid_map_flag = copy.deepcopy(works)
+    invalid_map_flag[0]["map_eligible"] = "false"
+    with pytest.raises(ValueError, match="invalid map eligibility"):
+        check(graph=invalid_map_flag)
     with pytest.raises(ValueError, match="selected-profile"):
         check(reviews=[])
     bad = copy.deepcopy(current)
