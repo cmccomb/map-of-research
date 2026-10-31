@@ -323,6 +323,27 @@ def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
         profiles.loc["oneAAAAJ:scholar-first", "source_record_json"]
         == row["source_record_json"]
     )
+    generic_identity = profiles.loc["oneAAAAJ:scholar-first", "work_id"]
+    for doi_looking_venue in (
+        "Data Science Foundation. https://doi. org/10.5281/zenodo",
+        "Journal of Examples. https://doi.org/10.1234/full-record",
+    ):
+        changed = {
+            **row,
+            "venue": doi_looking_venue,
+            "source_record_json": json.dumps({**captured, "venue": doi_looking_venue}),
+        }
+        held = build_dataset_tables(
+            pandas.DataFrame([changed]), registry, contexts=contexts
+        )
+        observation = held["profile_publications"].iloc[0]
+        assert observation["doi"] == ""
+        assert observation["work_match_method"] == "profile_publication"
+        assert observation["work_id"] == generic_identity
+        assert not bool(observation["collaboration_eligible"])
+        work = held["works"].iloc[0]
+        assert work["doi"] == ""
+        assert not bool(work["collaboration_eligible"])
     ca_url = str(source_url).replace("scholar.google.com", "scholar.google.ca")
     _manifest(
         path,

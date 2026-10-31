@@ -117,6 +117,9 @@ def _work_identity(
     if context is not None and context.verified_doi:
         doi = context.verified_doi
         return _hash_id("work", f"doi:{doi}"), "reviewed_context_doi", doi
+    if context is not None and context.publication_type == "publication":
+        value = f"profile-publication:{row.scholar_id}\0{row.author_pub_id}"
+        return _hash_id("work", value), "profile_publication", ""
     native_id = _clean_text(getattr(row, "source_native_id", ""))
     if native_id and not _doi(getattr(row, "source_doi", "")):
         return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
