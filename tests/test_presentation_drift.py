@@ -12,6 +12,10 @@ import pytest
 
 from map_of_research.composite_region import BLANK_TOPICS
 from map_of_research.presentation_drift import (
+    RETAINED_POINT_GROWTH_FIELDS,
+    RETAINED_POINT_PRESENTATION_FIELDS,
+    RETAINED_WORK_GROWTH_FIELDS,
+    RETAINED_WORK_PRESENTATION_FIELDS,
     PresentationDriftError,
     compare_presentation,
     preserve_additive_report_presentation,
@@ -36,6 +40,10 @@ def artifact(count: int = 120, *, broad: str = "systems") -> dict:
                 "label_reviewed": False,
                 "level": 0,
                 "parent_keyword_id": None,
+                "coordinates": {
+                    "pca": {"x": 0.0, "y": 0.0},
+                    "tsne": {"x": 0.0, "y": 0.0},
+                },
             },
             {
                 "keyword_id": "detail",
@@ -44,11 +52,35 @@ def artifact(count: int = 120, *, broad: str = "systems") -> dict:
                 "label_reviewed": False,
                 "level": 1,
                 "parent_keyword_id": "broad",
+                "coordinates": {
+                    "pca": {"x": 0.1, "y": 0.1},
+                    "tsne": {"x": 0.1, "y": 0.1},
+                },
             },
         ],
         "points": [
             {
                 "work_id": f"work-{index:04d}",
+                "title": f"Title {index}",
+                "authors": "A. Author",
+                "year": 2025,
+                "venue": "A Journal",
+                "citation_count": 7,
+                "doi": "10.1000/example",
+                "publication_type": "publication",
+                "source_document_id": "",
+                "collaboration_eligible": True,
+                "display_contributors": "",
+                "source_url": "",
+                "faculty_ids": ["person-one"],
+                "department_ids": ["ece"],
+                "school_ids": ["engineering"],
+                "external_coauthor_ids": [],
+                "source_types": ["scholar"],
+                "source_native_ids": ["original-record"],
+                "source_verification_urls": [],
+                "context_evidence_urls": [],
+                "observation_count": 1,
                 "x": round(index / count, 7),
                 "y": 0.0,
                 "tsne_x": round(index / count, 7),
@@ -95,7 +127,36 @@ def parent_work_rows(parent: dict) -> list[dict]:
     return [
         {
             "work_id": point["work_id"],
-            "publication_type": "publication",
+            "title": point["title"],
+            "authors": point["authors"],
+            "year": point["year"],
+            "venue": point["venue"],
+            "citation": "Full citation",
+            "citation_count": point["citation_count"],
+            "doi": point["doi"],
+            "publication_type": point["publication_type"],
+            "source_document_id": point["source_document_id"],
+            "collaboration_eligible": point["collaboration_eligible"],
+            "display_contributors": point["display_contributors"],
+            "source_urls": [],
+            "person_ids": ["person-one"],
+            "memberships": [{"person_id": "person-one", "department_id": "ece"}],
+            "department_ids": ["ece"],
+            "school_ids": ["engineering"],
+            "observation_ids": ["first-observation"],
+            "author_pub_ids": ["first-author-pub"],
+            "scholar_ids": ["scholar-one"],
+            "external_coauthor_ids": [],
+            "source_types": ["scholar"],
+            "source_native_ids": ["original-record"],
+            "source_verification_urls": [],
+            "context_evidence_urls": [],
+            "observation_count": 1,
+            "map_eligible": True,
+            "map_exclusion_reasons": [],
+            "layout_version": "test-layout-v1",
+            "keyword_model_version": "test-keywords-v1",
+            "topic_label_review_version": "test-topic-review-v1",
             "x": point["x"],
             "y": point["y"],
             "tsne_x": point["tsne_x"],
@@ -724,7 +785,7 @@ def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(
     assert works.at[0, "publication_type"] == "conference_paper"
     prior = parent_work_rows(parent)
     del prior[0]["publication_type"]
-    with pytest.raises(ValueError, match="lacks publication type"):
+    with pytest.raises(ValueError, match="lacks presentation fields"):
         preserve_reviewed_additive_presentation(
             works,
             prior,
@@ -737,6 +798,80 @@ def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(
             reported_coauthor_source_sha256="a" * 64,
             review_path=review_path,
         )
+
+
+def test_additive_freezes_prior_bibliography_on_spatial_and_off_map_works(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    prior = parent_work_rows(parent)
+    off_map = {
+        **prior[0],
+        "work_id": "prior-off-map",
+        "map_eligible": False,
+        "map_exclusion_reasons": ["pending_placement_review"],
+    }
+    prior.append(off_map)
+    works = pandas.concat([works, pandas.DataFrame([off_map])], ignore_index=True)
+    for index in (0, len(works) - 1):
+        for field, value in (
+            ("title", "Refitted title"),
+            ("authors", "B. Author"),
+            ("year", 2026),
+            ("venue", "Changed venue"),
+            ("citation", "Changed citation"),
+            ("citation_count", 8),
+            ("doi", "10.1000/changed"),
+            ("publication_type", "conference_paper"),
+            ("source_document_id", "changed-document"),
+            ("collaboration_eligible", False),
+            ("display_contributors", "Changed contributors"),
+            ("map_exclusion_reasons", ["different_reason"]),
+            ("layout_version", "changed-layout"),
+            ("keyword_model_version", "changed-model"),
+            ("topic_label_review_version", "changed-topic-review"),
+        ):
+            works.at[index, field] = value
+    with pytest.raises(PresentationDriftError) as error:
+        preserve_reviewed_additive_presentation(
+            works,
+            prior,
+            parent,
+            candidate,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="s" * 64,
+            selected_ids_sha256="i" * 64,
+            parent_map_sha256="p" * 64,
+            reported_coauthor_source_sha256="a" * 64,
+            review_path=None,
+        )
+    path = tmp_path / "placement-review.json"
+    additive_review(path, error.value.receipt)
+    frozen, _ = preserve_reviewed_additive_presentation(
+        works,
+        prior,
+        parent,
+        candidate,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="s" * 64,
+        selected_ids_sha256="i" * 64,
+        parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
+        review_path=path,
+    )
+    prior_by_id = {row["work_id"]: row for row in prior}
+    for row in frozen.to_dict("records"):
+        if row["work_id"] not in prior_by_id:
+            continue
+        for field in RETAINED_WORK_PRESENTATION_FIELDS:
+            assert row[field] == prior_by_id[row["work_id"]][field]
+
+
+@pytest.mark.parametrize("field", RETAINED_WORK_PRESENTATION_FIELDS)
+def test_additive_candidate_rejects_missing_protected_column(field: str) -> None:
+    parent, candidate, works = additive_case()
+    with pytest.raises(ValueError, match="candidate works lack"):
+        freeze_additive(parent, candidate, works.drop(columns=field), None)
 
 
 def test_additive_preserves_prior_off_map_work_presentation(
@@ -846,7 +981,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
 
     prior_missing_field = deepcopy(prior)
     prior_missing_field[-1].pop("tsne_y")
-    with pytest.raises(ValueError, match="off-map work lacks presentation fields"):
+    with pytest.raises(ValueError, match="parent work lacks presentation fields"):
         preserve_reviewed_additive_presentation(
             works,
             prior_missing_field,
@@ -862,7 +997,7 @@ def test_additive_preserves_prior_off_map_work_presentation(
 
     prior_missing_region = deepcopy(prior)
     prior_missing_region[-1].pop("map_region_prior_eligible_override")
-    with pytest.raises(ValueError, match="lacks region presentation fields"):
+    with pytest.raises(ValueError, match="lacks presentation fields"):
         preserve_reviewed_additive_presentation(
             works,
             prior_missing_region,
@@ -915,6 +1050,151 @@ def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> No
     with pytest.raises(ValueError, match="parent works lack presentation fields"):
         require_preserved_additive_staged_works(path, [{"work_id": "work-0000"}])
     require_preserved_additive_staged_works(path, [])
+
+
+@pytest.mark.parametrize(
+    ("field", "changed"),
+    [
+        ("title", "Changed title"),
+        ("authors", "B. Author"),
+        ("year", 2026),
+        ("venue", "Another journal"),
+        ("citation", "Altered citation"),
+        ("citation_count", 8),
+        ("doi", "10.1000/changed"),
+        ("publication_type", "conference_paper"),
+        ("source_document_id", "new-source"),
+        ("collaboration_eligible", False),
+        ("display_contributors", "New contributor"),
+        ("map_eligible", False),
+        ("map_exclusion_reasons", ["unreviewed_exclusion"]),
+        ("layout_version", "new-layout"),
+        ("keyword_model_version", "new-keywords"),
+        ("topic_label_review_version", "new-topic-review"),
+    ],
+)
+@pytest.mark.parametrize("off_map", [False, True])
+def test_additive_staged_works_rejects_bibliographic_drift_on_every_prior_work(
+    tmp_path: Path, field: str, changed: object, off_map: bool
+) -> None:
+    parent = parent_work_rows(artifact(2))
+    parent.append(
+        {
+            **parent[0],
+            "work_id": "prior-off-map",
+            "map_eligible": False,
+            "map_exclusion_reasons": ["pending_placement_review"],
+        }
+    )
+    staged = pandas.DataFrame(parent)
+    index = 2 if off_map else 0
+    if field == "map_eligible" and off_map:
+        changed = True
+    if field == "map_exclusion_reasons" and off_map:
+        changed = ["different_exclusion"]
+    staged.at[index, field] = changed
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="change prior presentation"):
+        require_preserved_additive_staged_works(path, parent)
+
+
+@pytest.mark.parametrize("field", RETAINED_WORK_PRESENTATION_FIELDS)
+def test_additive_staged_works_rejects_missing_protected_field(
+    tmp_path: Path, field: str
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    path = tmp_path / "works.parquet"
+    pandas.DataFrame(parent).drop(columns=field).to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="staged works lack presentation fields"):
+        require_preserved_additive_staged_works(path, parent)
+    missing_parent = deepcopy(parent)
+    del missing_parent[0][field]
+    pandas.DataFrame(parent).to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="parent works lack presentation fields"):
+        require_preserved_additive_staged_works(path, missing_parent)
+
+
+def test_additive_staged_works_rejects_scalar_exclusion_reasons(
+    tmp_path: Path,
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    staged = pandas.DataFrame(parent)
+    staged["map_exclusion_reasons"] = "not-a-list"
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="lack exclusion reasons"):
+        require_preserved_additive_staged_works(path, parent)
+
+
+@pytest.mark.parametrize("field", RETAINED_WORK_GROWTH_FIELDS)
+def test_additive_staged_works_rejects_lost_binding_or_provenance(
+    tmp_path: Path, field: str
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    parent[0][field] = (
+        [{"person_id": "person-one"}] if field == "memberships" else ["old"]
+    )
+    staged = pandas.DataFrame(parent)
+    staged.at[0, field] = []
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match=f"loses prior {field}"):
+        require_preserved_additive_staged_works(path, parent)
+
+
+def test_additive_staged_works_allows_binding_and_provenance_growth(
+    tmp_path: Path,
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    staged = pandas.DataFrame(parent)
+    for field in RETAINED_WORK_GROWTH_FIELDS:
+        new = {"person_id": "person-two"} if field == "memberships" else "new"
+        staged.at[0, field] = [*parent[0][field], new]
+    staged.at[0, "observation_count"] = 2
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    require_preserved_additive_staged_works(path, parent)
+
+
+@pytest.mark.parametrize("side", ["parent", "staged"])
+def test_additive_staged_works_rejects_scalar_binding_list(
+    tmp_path: Path, side: str
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    staged = pandas.DataFrame(parent)
+    if side == "parent":
+        parent[0]["person_ids"] = "not-a-list"
+    else:
+        staged["person_ids"] = "not-a-list"
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="lacks person_ids list"):
+        require_preserved_additive_staged_works(path, parent)
+
+
+@pytest.mark.parametrize("count", [0, "bad-count", True])
+def test_additive_staged_works_rejects_lost_or_invalid_observation_count(
+    tmp_path: Path, count: object
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    staged = pandas.DataFrame(parent)
+    staged["observation_count"] = count
+    path = tmp_path / "works.parquet"
+    staged.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="observation count"):
+        require_preserved_additive_staged_works(path, parent)
+
+
+@pytest.mark.parametrize("field", (*RETAINED_WORK_GROWTH_FIELDS, "observation_count"))
+def test_additive_staged_works_rejects_missing_growth_column(
+    tmp_path: Path, field: str
+) -> None:
+    parent = parent_work_rows(artifact(1))
+    path = tmp_path / "works.parquet"
+    pandas.DataFrame(parent).drop(columns=field).to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="staged works lack presentation fields"):
+        require_preserved_additive_staged_works(path, parent)
 
 
 def test_additive_staged_works_rejects_unreviewed_held_placement(
@@ -1225,7 +1505,7 @@ def test_additive_rejects_parent_with_missing_topic_field(tmp_path: Path) -> Non
     additive_review(path, error.value.receipt)
     prior = parent_work_rows(parent)
     prior[0].pop("detail_keyword_extracted")
-    with pytest.raises(ValueError, match="parent work lacks topic fields"):
+    with pytest.raises(ValueError, match="parent work lacks presentation fields"):
         preserve_reviewed_additive_presentation(
             works,
             prior,
@@ -1320,3 +1600,110 @@ def test_additive_staged_map_preserves_retained_reported_coauthors() -> None:
     staged["points"][0]["reported_faculty_coauthors"] = []
     with pytest.raises(ValueError, match="changes retained reported coauthors"):
         require_preserved_additive_artifact(parent, staged, receipt)
+
+
+def _retained_only_receipt() -> dict:
+    return {
+        "placed_new_work_ids": [],
+        "held_new_work_ids": [],
+        "placed_new_coordinates_sha256": hashlib.sha256(b"[]").hexdigest(),
+    }
+
+
+@pytest.mark.parametrize("field", RETAINED_POINT_PRESENTATION_FIELDS)
+def test_additive_staged_map_rejects_each_changed_bibliographic_field(
+    field: str,
+) -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    original = staged["points"][0][field]
+    staged["points"][0][field] = (
+        not original if isinstance(original, bool) else f"changed-{original}"
+    )
+    with pytest.raises(ValueError, match="changes retained"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+@pytest.mark.parametrize("field", RETAINED_POINT_PRESENTATION_FIELDS)
+@pytest.mark.parametrize("missing_side", ["parent", "staged"])
+def test_additive_staged_map_rejects_each_missing_bibliographic_field(
+    field: str, missing_side: str
+) -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    target = parent if missing_side == "parent" else staged
+    del target["points"][0][field]
+    with pytest.raises(ValueError, match="lacks retained"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+def test_additive_staged_map_accepts_reviewed_binding_and_provenance_growth() -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    staged_point = staged["points"][0]
+    for field in RETAINED_POINT_GROWTH_FIELDS:
+        staged_point[field].append("new-reviewed-entry")
+    staged_point["observation_count"] = 2
+    require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+@pytest.mark.parametrize("field", RETAINED_POINT_GROWTH_FIELDS)
+def test_additive_staged_map_rejects_lost_binding_or_provenance(field: str) -> None:
+    parent = artifact(1)
+    parent["points"][0][field] = ["prior-entry"]
+    staged = deepcopy(parent)
+    staged["points"][0][field] = []
+    with pytest.raises(ValueError, match=f"loses prior {field}"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+@pytest.mark.parametrize("field", RETAINED_POINT_GROWTH_FIELDS)
+@pytest.mark.parametrize("missing_side", ["parent", "staged"])
+def test_additive_staged_map_rejects_missing_growth_field(
+    field: str, missing_side: str
+) -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    target = parent if missing_side == "parent" else staged
+    del target["points"][0][field]
+    with pytest.raises(ValueError, match=f"lacks retained {field}"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+@pytest.mark.parametrize("count", [0, "bad-count", True])
+def test_additive_staged_map_rejects_lost_or_invalid_observation_count(
+    count: object,
+) -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    staged["points"][0]["observation_count"] = count
+    with pytest.raises(ValueError, match="observation count"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+def test_additive_staged_map_rejects_missing_observation_count() -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    del staged["points"][0]["observation_count"]
+    with pytest.raises(ValueError, match="lacks retained observation count"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+def test_additive_staged_map_rejects_keyword_coordinate_drift_and_missing() -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    staged["keywords"][0]["coordinates"]["pca"]["x"] = 0.4
+    with pytest.raises(ValueError, match="changes parent topic metadata"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+    staged = deepcopy(parent)
+    del staged["keywords"][0]["coordinates"]
+    with pytest.raises(ValueError, match="lacks parent topic metadata"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
+
+
+def test_additive_staged_map_rejects_missing_keyword_ids() -> None:
+    parent = artifact(1)
+    staged = deepcopy(parent)
+    del staged["points"][0]["keyword_ids"]
+    with pytest.raises(ValueError, match="lacks retained topic IDs"):
+        require_preserved_additive_artifact(parent, staged, _retained_only_receipt())
