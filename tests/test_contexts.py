@@ -368,9 +368,26 @@ def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
                 ),
             )
     contexts = load_contexts(_manifest(path, [_scholar_profile_entry()]))
+    mistyped_owner_context = load_contexts(
+        _manifest(
+            path,
+            [
+                _scholar_profile_entry(
+                    scholar_id="wrongAAAAJ",
+                    author_pub_id="wrongAAAAJ:scholar-first",
+                    evidence_url="https://scholar.google.com/citations?user=wrongAAAAJ&citation_for_view=wrongAAAAJ:scholar-first",
+                )
+            ],
+        )
+    )
+    with pytest.raises(ValueError, match="ID must occur exactly once"):
+        build_dataset_tables(
+            pandas.DataFrame([row]), registry, contexts=mistyped_owner_context
+        )
     for bad_row in (
         {**row, "title": "Another Work"},
         {**row, "year": 2024},
+        {**row, "year": 2025.9},
         {**row, "source_record_json": "{invalid"},
         {
             **row,

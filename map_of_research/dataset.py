@@ -170,6 +170,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
             or context.expected_title != str(row.title)
             or type(context.expected_year) is not int
             or context.expected_year != _year(row.year)
+            or row.year != context.expected_year
             or context.evidence_url != source
             or parsed.scheme != "https"
             or parsed.hostname not in {"scholar.google.com", "scholar.google.ca"}
@@ -361,13 +362,15 @@ def build_dataset_tables(
         }
         for key, context in contexts.items():
             if (
-                context.publication_type in AUTHORED_PUBLICATION_TYPES | {"publication"}
-                and key[0] in present_scholar_ids
-                and observed_context_ids[key] != 1
-            ):
+                context.publication_type == "publication"
+                or (
+                    context.publication_type in AUTHORED_PUBLICATION_TYPES
+                    and key[0] in present_scholar_ids
+                )
+            ) and observed_context_ids[key] != 1:
                 raise ValueError(
-                    "Reviewed Scholar context ID must occur exactly once for "
-                    f"a present profile: {key}"
+                    "Reviewed Scholar context ID must occur exactly once "
+                    f"in the selected source: {key}"
                 )
     curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
     curated_title_year_native_ids: dict[tuple[str, int], set[str]] = {}
