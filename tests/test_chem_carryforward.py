@@ -19,6 +19,7 @@ FIXTURE = Path("tests/fixtures/chem_dcb_carryforward_rows.json")
 FROZEN_BIO_PROFILES = Path("tests/fixtures/bio_approved_profiles.json")
 FROZEN_BIO_EXCLUSIONS = Path("tests/fixtures/bio_approved_exclusions.json")
 FROZEN_BIO_HOLDS = Path("tests/fixtures/bio_approved_provisional_holds.json")
+FROZEN_CHEM_CONTEXTS = Path("tests/fixtures/chem_approved_contexts.json")
 
 
 def _candidate():
@@ -38,6 +39,7 @@ def _candidate():
         "releases_path": FROZEN_BIO_PROFILES,
         "exclusions_path": FROZEN_BIO_EXCLUSIONS,
         "holds_path": FROZEN_BIO_HOLDS,
+        "contexts_path": FROZEN_CHEM_CONTEXTS,
     }
     return current, kwargs
 

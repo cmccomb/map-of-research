@@ -18,6 +18,8 @@ from map_of_research.exclusions import ReviewedExclusion
 from map_of_research.registry import load_registry
 from tests.registry_helpers import write_registry
 
+FROZEN_CHEM_CONTEXTS = Path("tests/fixtures/chem_approved_contexts.json")
+
 
 def _entry(**changes: object) -> dict[str, object]:
     return {
@@ -55,7 +57,12 @@ def _authored_entry(**changes: object) -> dict[str, object]:
 
 
 def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
-    contexts = load_contexts(DEFAULT_CONTEXTS_PATH)
+    contexts = {
+        key: item
+        for key, item in load_contexts(DEFAULT_CONTEXTS_PATH).items()
+        if key[0] in {"8iLLOQgAAAAJ", "ILambBMAAAAJ"}
+    }
+    assert contexts == load_contexts(FROZEN_CHEM_CONTEXTS)
     assert len(contexts) == 14
     assert {key[0] for key in contexts} == {"8iLLOQgAAAAJ", "ILambBMAAAAJ"}
     assert Counter(item.publication_type for item in contexts.values()) == {
