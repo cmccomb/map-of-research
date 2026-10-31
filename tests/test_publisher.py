@@ -455,6 +455,7 @@ def work_frame() -> pandas.DataFrame:
         [
             {
                 "work_id": "work-one",
+                "publication_type": "publication",
                 "map_eligible": True,
                 "map_exclusion_reasons": [],
                 "map_region_audit_version": "reviewed-region-v1",

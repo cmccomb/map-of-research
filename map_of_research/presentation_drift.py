@@ -34,6 +34,7 @@ REGION_PRESENTATION_FIELDS = (
     "map_region_prior_excluded_override",
 )
 RETAINED_WORK_PRESENTATION_FIELDS = (
+    "publication_type",
     "map_eligible",
     *COORDINATE_FIELDS,
     *TOPIC_FIELDS,
@@ -559,6 +560,7 @@ def preserve_reviewed_additive_presentation(
         )
     required_columns = {
         "work_id",
+        "publication_type",
         "map_eligible",
         "map_exclusion_reasons",
         *COORDINATE_FIELDS,
@@ -678,6 +680,13 @@ def preserve_reviewed_additive_presentation(
     for index, work_id in current_ids.items():
         if work_id in prior_by_id:
             prior = prior_by_id[work_id]
+            if "publication_type" not in prior:
+                raise ValueError(
+                    f"Additive parent work lacks publication type: {work_id}"
+                )
+            # A newly bound observation can supply a more specific reviewed
+            # type without changing the already published canonical work.
+            output.at[index, "publication_type"] = prior["publication_type"]
             if any(field not in prior for field in REGION_PRESENTATION_FIELDS):
                 raise ValueError(
                     f"Additive parent work lacks region presentation fields: {work_id}"
@@ -963,6 +972,10 @@ def require_preserved_additive_artifact(
             raise ValueError("Additive staged map changes retained topic IDs")
         if point.get("source_url") != staged_point.get("source_url"):
             raise ValueError("Additive staged map changes retained source URL")
+        if "publication_type" not in point or "publication_type" not in staged_point:
+            raise ValueError("Additive staged map lacks retained publication type")
+        if point["publication_type"] != staged_point["publication_type"]:
+            raise ValueError("Additive staged map changes retained publication type")
         if point.get("reported_faculty_coauthors", []) != staged_point.get(
             "reported_faculty_coauthors", []
         ):
