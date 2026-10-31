@@ -1,110 +1,170 @@
 {
   "schema_version": 1,
-  "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
-  "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
-  "selected_ids_sha256": "22f91fc4eb7902aa82d0e9dee797910c78cd1e45640211c268518e3916090e17",
-  "parent_map_sha256": "3c0481344bfa9d933e0e437804fce0e482cfe6e615ab6a00914313a35fde84ba",
-  "candidate_map_content_sha256": "1c857d253d9afdbeadf4f3bab39900ff0cc5290384e84cf22b41a060e27928a4",
-  "new_work_ids_sha256": "42f4864f618459d267ff98cb81032d4559cc4c1e0b663a7781b8b35c4658346e",
+  "prior_revision": "7c2026d709d3ae792314ab9ebc4615cb5ebcdf47",
+  "source_snapshot_sha256": "9572e87303b13753710d323057ba7f372cf6e9b1a9738b94d6ab081afb33b4b3",
+  "selected_ids_sha256": "37eb79aaf94d8dbd31c619f0ffa014ab9a39295d40cb91c3c3b8ca9f9b33906c",
+  "parent_map_sha256": "d0e3ad37feff38324d4c7eb74e18722ce5f9b1dd8f4c20b27ec6be8ac32ee6b7",
+  "candidate_map_content_sha256": "c04a63c96997921c9866b8d594cccef52b1fb305ef9a90aa8cd4bd7b563c8a51",
+  "new_work_ids_sha256": "99ec62b567b435070125dc83a880f1b5e1b80620772574b35f9d2a8f3ef9df72",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-10-31",
   "new_points": [
     {
-      "work_id": "work-09a838dd6c6770a0aacbf3c414ead09698b4d0a4981813283ee5c276c617dfd7",
+      "work_id": "work-0732945ac135ebbf8eedb57e5c0195aa648c2970f49b17f10f5b5b0be828bddc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-2c286e5261b468de21c240dfcf2c0526869d5de43b130b7cedc5e56c3b592836",
+      "work_id": "work-1ef4be8e38ff8f1e648ba9c790232e9aee3d4c498b6dd93271a692787fc2cf70",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-2deec890cb347edbbd183674859f4cf3f09e2e0cd86aa0a9d1b00dfae0c79d27",
+      "work_id": "work-36c2ea4ad4870e639d4b24f1a5cbeefb5741fa736fbdf01168bd30c6b80c2402",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-3585bb83960c5b19ac79a2fc3b8cd8ba8f6ee5da4765c62d0dc858d62fd6560f",
+      "work_id": "work-3d27b1cd2d52c6bd61fc2cc1dbd00c6c7e97870e9a16d47fdd296402fdbf183a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-3f622d1e2731506baa44da3409718a1a961a403b0c5162e45f38418dd4792807",
+      "work_id": "work-47ce741c34fbdff1977f050ba5d8a0a15e0ae8f4e49734eb349943a03e7a01e9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-568870d6625643e1ae3b149b7e91f6c9af42692f888c4026a032361d6c53d065",
+      "work_id": "work-5ad452d11048a568e384cbb48d5727b2a7fc3acedfd465bd171022cb33eda071",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-5d1c8e5e477b66a9e704f7e4698a18afd8888df51d5d1106c7cbe071e0ff7259",
+      "work_id": "work-692574a4b290a6b94a3d1d74f8d9683e3c9576f654841bf854b352dba2d37757",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-81e838a7cf7b429b315285ef27e87f1aab6679cc01d150af9229a2c2e745c306",
+      "work_id": "work-6dbd327b7f501eedbb36d949b76b8bede7f5122b02116b3935c7e6af1313a76e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-949c4d23129349c4b8538683ad78a95833cb8e026ffe097b11c43c74763b3a13",
+      "work_id": "work-86f2796865f71627a2388126aeff34a700bd414df5da919dc6d65b776e90c86c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-9ca6928a81ab29db370bc1f923f4d6515ec3080105b1a003640cd49983809d03",
+      "work_id": "work-8dd9e3ca926154167a89a4f2d19bbb55ebe5be030f9850d4c3c406eaac564605",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-b8105c6c676dbddf282d3a3c269026e3a20b0c992a707fc3600a420f5d273135",
+      "work_id": "work-9399fd5d13a42ae7922751780c411b76a9030a8a20233ed5efd37e59e5dfd05a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-c0260427249d0346f4334767199e67c11aabfd52e63071d5fd0966f6a12e66df",
+      "work_id": "work-9af428069764e7dca70d311de74d8b16c0dfca52b71e5af112ba6bb5860a3e98",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-c6d2d8ab759b0fb669d638fb3a646ddc2d40c3b01d80219d5d55cf2cea431458",
+      "work_id": "work-a7fc6b93e34d0cb7e9be041c33f0a468d35444e44db775427b7a0be01ea69ac0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-ce06f9b6cad2a540333ee7a4718c8b7aac0328832089dfb972c5a778a3a43b9b",
+      "work_id": "work-afbb4cf4ea3170e807e70961c48081d342e9d3232e1fe03e1627ccf82b610a3f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-e2957c7d14ae1d6607083e02029cf53551cf8d8832c26e86560f0aab76331901",
+      "work_id": "work-bfee05c9cd4b94a666e6c0a4ea5f452b27584f08625452e9d3ac92fec21e1e4b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     },
     {
-      "work_id": "work-f70a29c84f951df2b967a15d235ae3e918cf06f4dbd77ea3aa11d39eaa61669c",
+      "work_id": "work-c4e3871343c3e2d79102ae2700ccac693e040c21510c9b23015515329c051656",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-cade335fb8fc9ac44c92d64dd875e437cc262a02d6258ee022e60f71ba801360",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-dc4adf396680ff0f00aaef5e0973c5f42a46f6e13d2a8a989428f05e743fc90d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-e102ebfa19feb576ced39aac9fce65462d08378608e5e115cc9d244c8e32696b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-e26c921b936bb786bafed57f1fea8e37fd81564512d3b2b7e31f565618baed96",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-e94e470814cea4d6def89f73f8b5ba2ea594e5891c6fb0fb01fa37dbaa36baea",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-e9c3f50aa59035fb237d224b2c9a886b2874c61e899b0ae0b928042daf502d87",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-ea29952f6584ad65e1af22260ae25427d53be2b7024d4bec9ffd5e75715a00f4",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-ec2ceff72a4b6d704b24dddc8f19a3f27e684cbee35d09ba146186d09ef37119",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-f5385fcb424f5992042787856a9a2d6c592c0612378fb6ee0184118876a3ff19",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
+    },
+    {
+      "work_id": "work-ff15e67052b07651ce0dbeffb549c389b696b5577c2ad4df53e175af4510b17a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Original document supports the selected source observation; exact four-coordinate placement and topic review remain pending, so this work stays off the spatial map."
     }
   ]
 }
