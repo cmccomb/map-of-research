@@ -1680,20 +1680,20 @@
       "person_id": "person-rayidghani-0861bb94",
       "scholar_id": "_ufWH4IAAAAJ",
       "state": "released",
-      "expected_source_rows": 81,
-      "cache_sha256": "0c9ec2451efc4ff36a55987332c27a3266c9ec8aee38ff611b82f39a5665910a",
-      "reason": "Local private-stage candidate: 81 selected Rayid observations from one complete 226-row owner Scholar capture; 145 rows remain private. The 65 new Scholar-backed work associations retain captured title/year/venue and exact owner citation identity, with specific type, DOI, full byline and collaboration unverified; all new spatial placements remain held. MLD and Heinz are included; CMIST is an affiliate and excluded despite the immutable private capture receipt error. This decision alone does not authorize upload.",
+      "expected_source_rows": 101,
+      "cache_sha256": "d98311f74f71058b8fd9c0aeb2c73f2b016dbefe1a191484d5e49c47ef1465b6",
+      "reason": "Local private-stage candidate: 101 selected Rayid observations from one complete 226-row exact owner Scholar capture; 125 rows remain withheld. Twenty new rows have source-reviewed publication types, ten verified DOI values, and explicit collaboration exclusion; row102/130 publication-year conflicts and row196 poster remain held. All new spatial placements require an exact-parent all-held review. MLD and Heinz included; CMIST affiliate excluded. This decision alone does not authorize upload.",
       "reviewed_at": "2026-10-31",
       "public_subset": {
         "observed_visible_rows": 226,
         "private_capture_sha256": "441b8c64aeffec1816e7b91d74029a2c5d70761a2207fec7e454444cd5ae144f",
-        "private_review_sha256": "2d4842f6e0927c77d73a733dc53236e766858d2eada10f60fda29f61122a2aa4",
+        "private_review_sha256": "056d8fee6a146afd9a8e32aa0e9c14c106a6b4cf2ab751d70e2fe90b25c7a039",
         "private_rendered_html_sha256": "d3242fad1b73f4aadfb8d0297c6f7c7253e7f989c2fa0bbf3ef8fa6ccf77674a",
-        "selected_ids_sha256": "33a8c3f395319fc93c50d1ae4d42984fd8b6554c4e60858cf535e884e246eaa3",
-        "withheld_rows": 145,
-        "withheld_hold_rows": 128,
+        "selected_ids_sha256": "258ffd9b5676d7c94ebe214ae0abebcd8be73d9504dcd817436d1feb64c25d8d",
+        "withheld_rows": 125,
+        "withheld_hold_rows": 108,
         "withheld_excluded_rows": 17,
-        "withheld_ids_sha256": "11f060b88e261cd2e07bd7d3bba6a6d1b218cf8149c6057b44a88e61208d11f1"
+        "withheld_ids_sha256": "50e6d52a2db982cbff5b164cea6767a31d4284f6d2a1768d321b686b37584571"
       }
     },
     {
