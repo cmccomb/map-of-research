@@ -468,6 +468,216 @@
       "basis": "The original Journal of Undergraduate Neuroscience Education article and NIH full-text record give the complete title, two-author byline, and full A159–A166 page range; Scholar abbreviates the authors and page range.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3970999/",
       "verified_at": "2026-10-25"
+    },
+    {
+      "scholar_id": "CQ39OowAAAAJ",
+      "author_pub_id": "CQ39OowAAAAJ:XD-gHx7UXLsC",
+      "expected": {
+        "title": "Group-based Motion Prediction for Navigation in Crowded Environments",
+        "year": 2022,
+        "venue": "Conference on Robot Learning, 871-882"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 5th Conference on Robot Learning, PMLR 164, 871–882"
+      },
+      "basis": "Full peer-reviewed conference proceedings paper (PMLR); original/publisher or institutional bibliographic record establishes canonical venue display. Captured row retained unchanged.",
+      "evidence_url": "https://proceedings.mlr.press/v164/wang22e.html",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "CQ39OowAAAAJ",
+      "author_pub_id": "CQ39OowAAAAJ:f2IySw72cVMC",
+      "expected": {
+        "title": "An assisted photography framework to help visually impaired users properly aim a camera",
+        "year": 2014,
+        "venue": "ACM Transactions on Computer-Human Interaction (TOCHI) 21 (5), 1-29"
+      },
+      "corrected": {
+        "venue": "ACM Transactions on Computer-Human Interaction 21(5), Article 25, 29 pages"
+      },
+      "basis": "Full journal article (ACM TOCHI); original/publisher or institutional bibliographic record establishes canonical venue display. Captured row retained unchanged.",
+      "evidence_url": "https://interactive-machines.gitlab.io/assets/papers/mvazquez-TOCHI14.pdf",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "CQ39OowAAAAJ",
+      "author_pub_id": "CQ39OowAAAAJ:aqlVkmm33-oC",
+      "expected": {
+        "title": "Modality preference for rider reports on transit accessibility problems",
+        "year": 2010,
+        "venue": "Transportation Research Board 2010 Annual Meeting"
+      },
+      "corrected": {
+        "venue": "Transportation Research Board 89th Annual Meeting, Paper 10-2405"
+      },
+      "basis": "Full 13-page TRB annual-meeting paper, numbered 10-2405; Aaron and Edward Steinfeld are distinct people; original/publisher or institutional bibliographic record establishes canonical venue display. Captured row retained unchanged.",
+      "evidence_url": "https://trid.trb.org/View/910501",
+      "verified_at": "2026-10-30"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:35N4QoGY0k4C",
+      "expected": {
+        "title": "FEATUREHOUSE: Language-independent, automated software composition",
+        "year": 2009,
+        "venue": "International Conference on Software Engineering, 2009. ICSE, 221-231"
+      },
+      "corrected": {
+        "venue": "31st International Conference on Software Engineering (ICSE), pp. 221–231"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/icse2009_fh.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:KVD38NuK74kC",
+      "expected": {
+        "title": "Collaboration Challenges in Building ML-Enabled Systems: Communication, Documentation, Engineering, and Process",
+        "year": 2022,
+        "venue": "International Conference on Software Engineering (ICSE)"
+      },
+      "corrected": {
+        "venue": "44th International Conference on Software Engineering (ICSE), pp. 413–425"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/icse22_seai.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:lSLTfruPkqcC",
+      "expected": {
+        "title": "A case study implementing features using AspectJ",
+        "year": 2007,
+        "venue": "Software Product Line Conference, 2007. SPLC 2007. 11th International, 223-232"
+      },
+      "corrected": {
+        "venue": "11th International Software Product Line Conference (SPLC), pp. 223–232"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/splc07.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:ZHo1McVdvXMC",
+      "expected": {
+        "title": "Abstract features in feature modeling",
+        "year": 2011,
+        "venue": "2011 15th International Software Product Line Conference, 191-200"
+      },
+      "corrected": {
+        "venue": "15th International Software Product Line Conference (SPLC), pp. 191–200"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/SPLC11_af.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:bnK-pcrLprsC",
+      "expected": {
+        "title": "Measuring and modeling programming experience",
+        "year": 2014,
+        "venue": "Empirical Software Engineering 19 (5), 1299-1334"
+      },
+      "corrected": {
+        "venue": "Empirical Software Engineering 19(5):1299–1334"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/ese13.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:3fE2CSJIrl8C",
+      "expected": {
+        "title": "Type checking annotation-based product lines",
+        "year": 2012,
+        "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM) 21 (3), 1-39"
+      },
+      "corrected": {
+        "venue": "ACM Transactions on Software Engineering and Methodology 21(3), Article 14, pp. 1–39"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/tosem11.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:IjCSPb-OGe4C",
+      "expected": {
+        "title": "Type safety for feature-oriented product lines",
+        "year": 2010,
+        "venue": "Automated Software Engineering 17 (3), 251-300"
+      },
+      "corrected": {
+        "venue": "Automated Software Engineering 17(3), pp. 251–300"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/jase10.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:zYLM7Y9cAGgC",
+      "expected": {
+        "title": "Virtual separation of concerns-a second chance for preprocessors",
+        "year": 2009,
+        "venue": "Journal of Object Technology 8 (6), 59-78"
+      },
+      "corrected": {
+        "venue": "Journal of Object Technology 8(6), pp. 59–78"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/jot09_vsoc.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:qjMakFHDy7sC",
+      "expected": {
+        "title": "Model superimposition in software product lines",
+        "year": 2009,
+        "venue": "International Conference on Theory and Practice of Model Transformations, 4-19"
+      },
+      "corrected": {
+        "venue": "Theory and Practice of Model Transformations, ICMT 2009, pp. 4–19"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/icmt09.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:2BeMVx_SZpEC",
+      "expected": {
+        "title": "Where do configuration constraints stem from? an extraction approach and an empirical study",
+        "year": 2015,
+        "venue": "IEEE Transactions on Software Engineering 41 (8), 820-841"
+      },
+      "corrected": {
+        "venue": "IEEE Transactions on Software Engineering 41(8), pp. 820–841"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/tse15.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "author_pub_id": "PR-ZnJUAAAAJ:CLPBug3NTQYC",
+      "expected": {
+        "title": "When and how to make breaking changes: Policies and practices in 18 open source software ecosystems",
+        "year": 2021,
+        "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM) 30 (4), 1-56"
+      },
+      "corrected": {
+        "venue": "ACM Transactions on Software Engineering and Methodology 30(4), Article 42, pp. 1–56"
+      },
+      "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
+      "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/tosem21.pdf",
+      "verified_at": "2026-10-31"
     }
   ]
 }

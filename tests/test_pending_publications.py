@@ -5,10 +5,16 @@ from __future__ import annotations
 from copy import deepcopy
 from types import SimpleNamespace
 
+import numpy
 import pandas
 import pytest
 
-from map_of_research.pending_publications import build_pending_publications
+from map_of_research.composite_region import BLANK_TOPICS
+from map_of_research.pending_publications import (
+    build_pending_publications,
+    carry_forward_parent_pending_works,
+    require_parent_pending_list_preserved,
+)
 from map_of_research.public_subsets import ids_sha256
 
 ROW_ID = "ScholarOne:paper1"
@@ -349,3 +355,176 @@ def test_pending_collaboration_eligibility_must_be_exact_boolean(table) -> None:
         profiles.at[0, "collaboration_eligible"] = "true"
     with pytest.raises(ValueError, match="collaboration eligibility disagrees"):
         build_pending_publications(works, profiles, receipt, registry, held)
+
+
+def carryforward_inputs():
+    works, profiles, _, _, _ = inputs()
+    works["map_region_outlier"] = False
+    works["authors"] = [["Person One"]]
+    works["venue"] = "Conference"
+    works["citation"] = "Person One, A reviewed paper"
+    works["citation_count"] = 0
+    works["doi"] = ""
+    works["publication_type"] = "publication"
+    works["source_document_id"] = ""
+    works["source_types"] = [["scholar"]]
+    works["source_native_ids"] = [[]]
+    works["source_verified_at"] = ""
+    works["source_verification_urls"] = [[]]
+    works["department_ids"] = [["ece"]]
+    works["quality_assessment_version"] = "test-v1"
+    for field, blank in BLANK_TOPICS.items():
+        works[field] = blank
+    prior_works = works.to_dict("records")
+    candidate = works.copy(deep=True)
+    candidate.at[0, "map_eligible"] = True
+    candidate.at[0, "map_exclusion_reasons"] = []
+    candidate.at[0, "x"] = 0.25
+    candidate.at[0, "y"] = -0.25
+    candidate.at[0, "tsne_x"] = 0.1
+    candidate.at[0, "tsne_y"] = -0.1
+    return candidate, profiles, prior_works, profiles.to_dict("records")
+
+
+def test_parent_pending_carryforward_prevents_unreviewed_promotion() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    output, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert held == ["work-one"]
+    assert bool(output.at[0, "map_eligible"]) is False
+    assert output.at[0, "map_exclusion_reasons"] == ["pending_placement_review"]
+    assert all(
+        pandas.isna(output.at[0, field]) for field in ("x", "y", "tsne_x", "tsne_y")
+    )
+    assert all(output.at[0, field] == blank for field, blank in BLANK_TOPICS.items())
+    assert bool(candidate.at[0, "map_eligible"]) is True
+
+
+def test_parent_pending_carryforward_rejects_changed_or_missing_source() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    profiles.at[0, "author_pub_id"] = "ScholarOne:changed"
+    with pytest.raises(ValueError, match="source bindings changed"):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    with pytest.raises(ValueError, match="drops or duplicates"):
+        carry_forward_parent_pending_works(
+            candidate.iloc[0:0], profiles, prior_works, prior_profiles
+        )
+
+
+def test_parent_pending_carryforward_rejects_mixed_reason() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_works[0]["map_exclusion_reasons"] = [
+        "pending_placement_review",
+        "another_reason",
+    ]
+    with pytest.raises(ValueError, match="mixed exclusion state"):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+
+
+def test_parent_pending_carryforward_does_not_hide_new_exclusion() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    candidate.at[0, "map_eligible"] = False
+    candidate.at[0, "map_exclusion_reasons"] = ["low_information_region"]
+    with pytest.raises(ValueError, match="separate exclusion"):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+
+
+@pytest.mark.parametrize(
+    ("defect", "message"),
+    [
+        ("duplicate_id", "duplicate work IDs"),
+        ("missing_reasons", "lacks exclusion reasons"),
+        ("malformed_reasons", "reasons are malformed"),
+        ("region_outlier", "region-outlier state"),
+        ("spatial_parent", "spatial presentation"),
+        ("missing_candidate_column", "lacks public table fields"),
+        ("incomplete_binding", "binding is incomplete"),
+        ("duplicate_binding", "binding repeats"),
+        ("missing_fingerprint", "fingerprint is incomplete"),
+        ("changed_fingerprint", "fingerprint changed"),
+    ],
+)
+def test_parent_pending_carryforward_rejects_unreviewed_parent_change(
+    defect: str, message: str
+) -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    if defect == "duplicate_id":
+        prior_works.append(deepcopy(prior_works[0]))
+    elif defect == "missing_reasons":
+        prior_works[0].pop("map_exclusion_reasons")
+    elif defect == "malformed_reasons":
+        prior_works[0]["map_exclusion_reasons"] = "pending_placement_review"
+    elif defect == "region_outlier":
+        prior_works[0]["map_region_outlier"] = True
+    elif defect == "spatial_parent":
+        prior_works[0]["x"] = 0.1
+    elif defect == "missing_candidate_column":
+        candidate = candidate.drop(columns=["map_region_outlier"])
+    elif defect == "incomplete_binding":
+        prior_profiles[0]["author_pub_id"] = ""
+    elif defect == "duplicate_binding":
+        prior_profiles.append(deepcopy(prior_profiles[0]))
+    elif defect == "missing_fingerprint":
+        prior_works[0].pop("citation")
+    elif defect == "changed_fingerprint":
+        candidate.at[0, "citation"] = "An unreviewed citation change"
+    with pytest.raises(ValueError, match=message):
+        carry_forward_parent_pending_works(
+            candidate, profiles, prior_works, prior_profiles
+        )
+
+
+def test_parent_pending_carryforward_handles_no_pending_and_list_values() -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_works[0]["map_exclusion_reasons"] = []
+    unchanged, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert unchanged is candidate and held == []
+
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_urls = [SOURCE_URL, "https://cmu.edu/another-source"]
+    prior_works[0]["source_urls"] = prior_urls
+    candidate.at[0, "source_urls"] = numpy.array(prior_urls, dtype=object)
+    prior_works[0]["source_verified_at"] = None
+    candidate.at[0, "source_verified_at"] = None
+    output, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert held == ["work-one"]
+    assert not bool(output.at[0, "map_eligible"])
+
+
+def test_parent_pending_list_is_exactly_preserved() -> None:
+    row = {"work_id": "work-one", "title": "A reviewed paper"}
+    require_parent_pending_list_preserved(
+        {"pending_publications": [row]}, [row, {"work_id": "work-two"}], ["work-one"]
+    )
+    with pytest.raises(ValueError, match="changes a parent pending-list row"):
+        require_parent_pending_list_preserved(
+            {"pending_publications": [row]},
+            [{"work_id": "work-one", "title": "Changed"}],
+            ["work-one"],
+        )
+    with pytest.raises(ValueError, match="Parent pending list is missing"):
+        require_parent_pending_list_preserved({"schema_version": 8}, [], [])
+    with pytest.raises(ValueError, match="Parent pending map schema is invalid"):
+        require_parent_pending_list_preserved({"schema_version": "8"}, [], [])
+    with pytest.raises(ValueError, match="Parent pending list is missing"):
+        require_parent_pending_list_preserved(
+            {
+                "schema_version": 8,
+                "pending_publications": [],
+                "pending_publication_count": 1,
+            },
+            [],
+            [],
+        )
