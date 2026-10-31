@@ -170,13 +170,19 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
         raise ValueError("Authored Scholar context has an invalid verified DOI")
     if not context.reason or not context.evidence_url.startswith("https://"):
         raise ValueError("Authored Scholar context needs primary-source evidence")
-    observed_doi = _doi(
-        row.source_doi,
-        row.source_url,
-        row.citation,
-        row.source_record_json,
-    )
-    if context.verified_doi and observed_doi and observed_doi != context.verified_doi:
+    observed_dois = {
+        match.group(0).rstrip(".,;)").casefold()
+        for value in (
+            row.source_doi,
+            row.source_url,
+            row.citation,
+            row.source_record_json,
+        )
+        for match in DOI_PATTERN.finditer(_clean_text(value))
+    }
+    if len(observed_dois) > 1 or (
+        context.verified_doi and observed_dois - {context.verified_doi}
+    ):
         raise ValueError("Authored Scholar context DOI conflicts with source")
 
 

@@ -81,7 +81,9 @@ ID and is retained in the observation and work DOI fields; the Scholar cache's
 captured citation and source record remain unchanged. A reviewed authored type
 does not become collaboration eligible by type alone. The context must explicitly
 permit collaboration, and the ordinary quality and authorship gates still
-apply. A book chapter is an authored chapter, distinct from an edited book.
+apply. Every DOI present in the captured source fields must agree with the
+reviewed DOI; conflicting source DOIs require a separate exact version review.
+A book chapter is an authored chapter, distinct from an edited book.
 
 ## `works`
 

@@ -289,6 +289,47 @@ def test_authored_type_doi_and_eligibility_are_explicit(
                 pandas.DataFrame([bad_row]), registry, contexts=load_contexts(path)
             )
 
+    matching_source_doi = {**row, "source_doi": "10.1234/chapter.2026"}
+    for field, conflicting_value in (
+        ("source_url", "https://publisher.example.test/10.1234/other-doi"),
+        ("citation", "A citation with 10.1234/other-doi"),
+        ("source_record_json", '{"other_doi":"10.1234/other-doi"}'),
+    ):
+        conflicting = {**matching_source_doi, field: conflicting_value}
+        with pytest.raises(ValueError, match="DOI conflicts with source"):
+            build_dataset_tables(
+                pandas.DataFrame([conflicting]),
+                registry,
+                contexts=load_contexts(path),
+            )
+    with pytest.raises(ValueError, match="DOI conflicts with source"):
+        build_dataset_tables(
+            pandas.DataFrame(
+                [
+                    {
+                        **row,
+                        "source_record_json": (
+                            '{"citations":"10.1234/chapter.2026, 10.1234/other-doi"}'
+                        ),
+                    }
+                ]
+            ),
+            registry,
+            contexts=load_contexts(path),
+        )
+    repeated_verified_doi = {
+        **matching_source_doi,
+        "citation": "The verified DOI is 10.1234/chapter.2026.",
+    }
+    assert (
+        build_dataset_tables(
+            pandas.DataFrame([repeated_verified_doi]),
+            registry,
+            contexts=load_contexts(path),
+        )["profile_publications"].iloc[0]["doi"]
+        == "10.1234/chapter.2026"
+    )
+
     conflict = ReviewedDoiAlias(
         doi="10.1234/another-version",
         observed_title=row["title"],
