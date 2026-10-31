@@ -449,19 +449,33 @@
       "withheld_hold_rows": 54,
       "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac",
       "withheld_rows": 59
+    },
+    {
+      "cache_sha256": "b84ea006dd5cd6f214851f88fea78d9c276bda2c68943e4c82b067457b2fc39c",
+      "observed_visible_rows": 88,
+      "person_id": "person-hodaheidari-477d966d",
+      "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
+      "private_review_sha256": "0c13a49022ac5857da3759251a25dede08097ef427565ef84466a67e346eb156",
+      "scholar_id": "GpXyLGwAAAAJ",
+      "selected_ids_sha256": "6fb1468630b5507e50e0d053e02af1bb5107241e92d172bbf3e069be84a9ccbd",
+      "selected_rows": 9,
+      "withheld_excluded_rows": 0,
+      "withheld_hold_rows": 79,
+      "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d",
+      "withheld_rows": 79
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "55fe421357e386b332f53761e11e62ae96e53c5c889f43a0c9d1d61976f5b5e5",
-  "source_selection_manifest_sha256": "3d18d9feb5e73bdd063df628d2b6d5fc503deaf32435ad18b12c41177595a5a7",
-  "source_snapshot_sha256": "87bc93d3838af8050a07bc406a5efdf338b3f5e3c2d601bb09e9ab9e11da887b",
+  "selected_ids_sha256": "18cf5dfb783ace4115e456420592e5ee1b656771bafcf40a8fca91631a5b7067",
+  "source_selection_manifest_sha256": "e0df2f4515b1a0e7527664ce708db64208687e2a68ce7e977d642add0178a748",
+  "source_snapshot_sha256": "458082fc24ed110651c4f4e1617a0d6835673363e6e37621708bfb70bcd5a339",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 3447,
-    "selected_rows": 1254,
+    "observed_visible_rows": 3535,
+    "selected_rows": 1263,
     "withheld_excluded_rows": 199,
-    "withheld_hold_rows": 1994,
-    "withheld_rows": 2193
+    "withheld_hold_rows": 2073,
+    "withheld_rows": 2272
   },
-  "withheld_ids_sha256": "f798e80f21c7689e4c5f8a43deb6bdbf9c9a54fc74b9dfca52e5f85bed86ba35"
+  "withheld_ids_sha256": "6773292b881f8e7743371d9c073c3b3bb1254ab52c68c3363129f6eaae4f72be"
 }
