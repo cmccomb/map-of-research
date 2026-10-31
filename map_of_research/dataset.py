@@ -10,7 +10,7 @@ import re
 from collections import Counter
 from collections.abc import Mapping
 from typing import Any
-from urllib.parse import unquote
+from urllib.parse import parse_qs, unquote, urlparse
 
 from .attribution import AttributionReviews
 from .contexts import AUTHORED_PUBLICATION_TYPES, ReviewedContext
@@ -117,6 +117,9 @@ def _work_identity(
     if context is not None and context.verified_doi:
         doi = context.verified_doi
         return _hash_id("work", f"doi:{doi}"), "reviewed_context_doi", doi
+    if context is not None and context.publication_type == "publication":
+        value = f"profile-publication:{row.scholar_id}\0{row.author_pub_id}"
+        return _hash_id("work", value), "profile_publication", ""
     native_id = _clean_text(getattr(row, "source_native_id", ""))
     if native_id and not _doi(getattr(row, "source_doi", "")):
         return _hash_id("work", f"native:{native_id}"), "source_native_id", ""
@@ -160,6 +163,72 @@ def _work_identity(
 def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
     """Bind a reviewed type and DOI to the exact effective Scholar citation."""
 
+    if context.publication_type == "publication":
+        source = str(row.source_url)
+        parsed = urlparse(source)
+        query = parse_qs(parsed.query, keep_blank_values=True)
+        if (
+            row.source_type != "scholar"
+            or not context.expected_title
+            or context.expected_title != str(row.title)
+            or type(context.expected_year) is not int
+            or context.expected_year != _year(row.year)
+            or row.year != context.expected_year
+            or context.evidence_url != source
+            or parsed.scheme != "https"
+            or parsed.hostname not in {"scholar.google.com", "scholar.google.ca"}
+            or parsed.username is not None
+            or parsed.password is not None
+            or parsed.port is not None
+            or parsed.path != "/citations"
+            or query.get("user") != [str(row.scholar_id)]
+            or query.get("citation_for_view") != [str(row.author_pub_id)]
+            or context.collaboration_eligible is not False
+            or not context.map_eligible
+            or context.verified_doi
+        ):
+            raise ValueError(
+                "Scholar-profile publication context differs from exact source citation"
+            )
+        try:
+            captured = json.loads(str(row.source_record_json))
+        except (TypeError, ValueError) as error:
+            raise ValueError(
+                "Scholar-profile publication context needs exact captured fields"
+            ) from error
+        if (
+            not isinstance(captured, dict)
+            or captured.get("author_pub_id") != str(row.author_pub_id)
+            or captured.get("title") != context.expected_title
+            or captured.get("pub_year") != str(context.expected_year)
+            or captured.get("pub_url") != source
+            or captured.get("venue") != str(row.venue)
+        ):
+            raise ValueError(
+                "Scholar-profile publication context differs from exact captured fields"
+            )
+        decoded_dois: set[str] = set()
+        for value in (
+            row.source_doi,
+            row.source_url,
+            row.citation,
+            row.source_record_json,
+        ):
+            for match in DOI_PATTERN.finditer(_decoded_doi_text(value)):
+                token = match.group(0)
+                if DOI_PATTERN.search(token, 1):
+                    raise ValueError(
+                        "Scholar-profile publication context has ambiguous source DOI"
+                    )
+                decoded_dois.add(token.rstrip(".,;)").casefold())
+        parsed_doi = _doi(
+            row.source_doi, row.source_url, row.citation, row.source_record_json
+        )
+        if len(decoded_dois) > 1 or decoded_dois not in (set(), {parsed_doi}):
+            raise ValueError(
+                "Scholar-profile publication context has ambiguous source DOI"
+            )
+        return
     if context.publication_type not in AUTHORED_PUBLICATION_TYPES:
         return
     if (
@@ -296,13 +365,15 @@ def build_dataset_tables(
         }
         for key, context in contexts.items():
             if (
-                context.publication_type in AUTHORED_PUBLICATION_TYPES
-                and key[0] in present_scholar_ids
-                and observed_context_ids[key] != 1
-            ):
+                context.publication_type == "publication"
+                or (
+                    context.publication_type in AUTHORED_PUBLICATION_TYPES
+                    and key[0] in present_scholar_ids
+                )
+            ) and observed_context_ids[key] != 1:
                 raise ValueError(
-                    "Authored Scholar context ID must occur exactly once for "
-                    f"a present profile: {key}"
+                    "Reviewed Scholar context ID must occur exactly once "
+                    f"in the selected source: {key}"
                 )
     curated_title_year_dois: dict[tuple[str, int], set[str]] = {}
     curated_title_year_native_ids: dict[tuple[str, int], set[str]] = {}
