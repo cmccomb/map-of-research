@@ -435,19 +435,33 @@
       "withheld_hold_rows": 179,
       "withheld_ids_sha256": "8dbec6be64db77416ec1d7ee0ab86f389d8e07e2a82d1a6d50a265fd086d8b2a",
       "withheld_rows": 185
+    },
+    {
+      "cache_sha256": "866dac64875ff2e44b070ff88691e1dd1cda41eb5d0f73a3ea038cb0e2d548ca",
+      "observed_visible_rows": 97,
+      "person_id": "person-maxsimchowitz-e43dffcb",
+      "private_capture_sha256": "5d16171bb2e0e55db9687b5762164e9e3a8edd65809a81a71ac1c1efe9547444",
+      "private_review_sha256": "08ebc5abd4488deaea289a46eb3db61ee60237b929c97884355687f6f01f960d",
+      "scholar_id": "HjmSOFEAAAAJ",
+      "selected_ids_sha256": "0d2bc973118a3c662db49a4e73ba3945bf884cb9e52d347c612485caf313c4da",
+      "selected_rows": 38,
+      "withheld_excluded_rows": 5,
+      "withheld_hold_rows": 54,
+      "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac",
+      "withheld_rows": 59
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "59e55c701b35473fbe87a0969725240f157ae3227ce09c71f107a3245b9f0bd8",
-  "source_selection_manifest_sha256": "bdc76ec793617a9be8624ef2290a284c8c9c7a1cd3023f31b6591708ec9b3a98",
-  "source_snapshot_sha256": "d4f98b70e61f42d1592fe362dfb7b1e2445596dfc58933c14fe835dcdd098783",
+  "selected_ids_sha256": "55fe421357e386b332f53761e11e62ae96e53c5c889f43a0c9d1d61976f5b5e5",
+  "source_selection_manifest_sha256": "3d18d9feb5e73bdd063df628d2b6d5fc503deaf32435ad18b12c41177595a5a7",
+  "source_snapshot_sha256": "87bc93d3838af8050a07bc406a5efdf338b3f5e3c2d601bb09e9ab9e11da887b",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 3350,
-    "selected_rows": 1216,
-    "withheld_excluded_rows": 194,
-    "withheld_hold_rows": 1940,
-    "withheld_rows": 2134
+    "observed_visible_rows": 3447,
+    "selected_rows": 1254,
+    "withheld_excluded_rows": 199,
+    "withheld_hold_rows": 1994,
+    "withheld_rows": 2193
   },
-  "withheld_ids_sha256": "b1f74c46891e4f999efe536bddc0f8d1588f2f1e41f87e70a9403eb625a877f8"
+  "withheld_ids_sha256": "f798e80f21c7689e4c5f8a43deb6bdbf9c9a54fc74b9dfca52e5f85bed86ba35"
 }
