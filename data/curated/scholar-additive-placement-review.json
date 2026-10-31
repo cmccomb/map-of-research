@@ -1,410 +1,236 @@
 {
   "schema_version": 1,
-  "decision": "freeze_retained_review_new",
-  "prior_revision": "1041c0b687e41edb17f4ebe8ff50a281c748c0eb",
-  "source_snapshot_sha256": "d4f98b70e61f42d1592fe362dfb7b1e2445596dfc58933c14fe835dcdd098783",
-  "selected_ids_sha256": "bb7ad136bb304926816dc34c0f2a74f74ded78c991fa8f65ea576440fbf8c057",
-  "parent_map_sha256": "77aec2fe8efb6fbd764d77142354719490a0ceefb5aa1a38e2cef5b111a54699",
-  "candidate_map_content_sha256": "d1aaa246ba28278e1871a6b8bdcdb861520f83be38e01df3137395b7b08e62ee",
-  "new_work_ids_sha256": "541b285eee11dd3af9e575997b5e04f4c2b4154b52be2a90b2c39a1b5cd90cb2",
+  "prior_revision": "7afbe9db0a4aadb011633edd7ac7432a1cc89ca5",
+  "source_snapshot_sha256": "87bc93d3838af8050a07bc406a5efdf338b3f5e3c2d601bb09e9ab9e11da887b",
+  "selected_ids_sha256": "55d5a958d91df1ee9242553ef267e8816758b5c0892a9052f8f32b8361aca916",
+  "parent_map_sha256": "531418b49e2ab7ba1b6ba67de1c065a346cd0c154a1fbff8e4607b54609e6b3f",
+  "candidate_map_content_sha256": "723bf6cb1149913543123115cb496a14d4b2422efe0c0d01586d7a0e910f9b87",
+  "new_work_ids_sha256": "925966dd3fa1674ef23b847a1323363d1066ce4caaf5646779070613bc655548",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
+  "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-10-31",
   "new_points": [
     {
-      "work_id": "work-0bef004ccec23af8fe73faf9dce6943aa37e6397fd2d75b70ff94a2a5f9b23e9",
+      "work_id": "work-0aa2f01015c30511f4683effdecbba8902aad980585b6649bfa812f521c35ab6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-10a03fabadcbdd484fdd16813684358656d4a59aab1588d38e0fd06df9caeb9d",
+      "work_id": "work-0c12e50dd59a5c54375880bf978b17ad35f517e6dc1fe85d26ced1032808aa06",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-1106b55bd87970cc134c43c7bad20b7e1f29687ca056d7f82c44335513e95381",
+      "work_id": "work-122af78280bca185bbcefc332186924e83a34cde899245b34f95bbdf3578cc8f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-15016b4c1c0c60e420fcab1c1389659af8eaf30cb033943395bfbd348ec15f02",
+      "work_id": "work-1819f41d9dc3c378eab5936a0cd9dcc59da49b8cf0159272184663b3bd91f96e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-15c5121e55d7556b72dd58dab9dd6863d48a61ad5e4f0cda1c0b716f3058c4c4",
+      "work_id": "work-183dbe444fa8f018126a6597204795b09bcb9912887c261f2d768ef535bbe1d4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-1aaf9ad7b5d42dbbd53cdea726241e3f88acb5fe7a0633ac916f7e747cccac2d",
+      "work_id": "work-254b520ca88638ebefefc6e9ba0f1f2a195ad72d5b9b4c3415550564ee52a803",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-20d86c73f3e80105198cfc06b0c3629f8d945076b5a1079ec16277d7fe2c3405",
+      "work_id": "work-28fa460adced187bde1e646293d7a7b637782ceaf6cf5c3162ff8c4db9e9f2de",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-24793eb55cec2427d2504afe41a292bb15e043c165bb6c0fbbcb461c7c6aa98a",
+      "work_id": "work-2b0ab8746bd67b43c02acd3f7c4dad5d9c2bcc52ea480b1c0aea27860f180faa",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-2696f88a8a63857dbfca3d65deaf45256219e06a2f4794a601cfaa7c0383d6aa",
+      "work_id": "work-3840d192cc8106d2708a704c3b60329d08d3c19cdfe7ff4581357fbf77a54c88",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-2c32cfda0f966620ae7fb382a06de76ea7bdd8a06a210f817fde1e492840989d",
+      "work_id": "work-3b6a0876f016e1bea021a4ae285d791e2ed989ca32bd79a3cef9ba50150da970",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-2c52860a13a0bf010267c8e3ef84575ccb06983e7f831add79eda95fc9fd8b98",
+      "work_id": "work-3fa498b189af0396b4069cf6f9fe47317dfc418da9c5e83871a82b41da0d4125",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-32acc4eab8b98474cd392603d03a9b34fc00d98162852984882a6264962f38a6",
+      "work_id": "work-4ec1ab62e3ca97a1fc938d78b91d2ab735512b62bf0abf91e0d0f859e5dc7b30",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-36c001ae943379a10053fbe4494c1c10199b6c57be36257dc4577b161e7d2263",
+      "work_id": "work-55a650850695cd96f2448749b12cbce558087e3b868f1b8c56954b181f89df7a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-37ba5787aaa92013a655a4ec4027de3cd4a8b2169592f4db5bca3491bac01381",
+      "work_id": "work-570fce6ace1e52abba49b6752e82aecea2a73fb854bf817ce2cbb1c1c16f52cd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-3fe0e1f4a57acafd18599a7bd6de2b5175bdcb4be57a6a15a9a4748a5e4d55c5",
+      "work_id": "work-5789ffe8c4bcdc9991789da0747a32d9be77907d0f8442f94faea0f3c750a692",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-49d6b0d1703ced2aa39bfca1c91e4156d6c41da7c293c669cccb452773e9d1b5",
+      "work_id": "work-6179768d1e5c207e9f01354e58b7abf6b5055a03159869564b646f3b58e7fa3d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-4b99546e98612454fcc79cf4a240effde1c0daf98cdb5cd4880d9b860956ce9e",
+      "work_id": "work-687b0eef7f00a1ea155f1de3e0e390ec08c5f203b0bd75f0f2b925a3d8d02799",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-4bd7ea1e7a830681e22e56048c4f027468022296dffe47f5d91cb65da3c431a8",
+      "work_id": "work-79f20932189ed9fb7a869ae704f0b71454d9be16af377efe9efd89f55f540538",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-4bf61d2ed464ebd34872fd4b716bcd35a07a0158ec8e48c8bddcf7944dff6750",
+      "work_id": "work-7f4505508e18c21a2c55259a419c0753c27128ad577d05ae9f41f3f7dd1a250f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-4d6c494d642bba695f80627f489e1156f1c9eed63c3b1de994d271fe38d7d0b6",
+      "work_id": "work-83709489712ee2585e20bc0bdcd54e6b438404bed8d815046a039fcc638dbb65",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-4eeae7fc3e3696ed10ecc750ec69fc0e3a7c6e6e95452a7bec340eaa38c40156",
+      "work_id": "work-8591357f3f3667b8c0605b7f0c077aa2ec4c04398389dbb1335371e70bc9ace0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-553a6f8eb76b1ea566cd91812a27b0c318f5b3025d8f9beaa051027959cb6692",
+      "work_id": "work-87ec927f81bc50db98a4f8ec8ae470a2e8252f941fa850971830e088944a3c73",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-56cfb37ba5187f65c4ad2b0725115f9f939017c6de8ea63fd6b5f68aad4c306a",
+      "work_id": "work-897f1edf8d9839937d04c8e58b85a7cece9d019698659d5711a3a4004382f20f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-575c4d693a4cf1abbc7c208d23bcb3ad8a1337fa94bef5674476d7f28fb8c1a5",
+      "work_id": "work-8e4d494ec83f66e1245804f0e87c86f6b9063fb0c2dcbf2a76c1cecb1c3d6c9e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-5a7c02ff76c77c97bb0fff15bc3e43f3219b26f3d855cdcabddb99558cf8b39d",
+      "work_id": "work-8f3d1c645ec0d797c1b039313ba8893a7b5ee97136fbc1a54f82598526224dcb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-61ccb5be18e7e02314adb4d8e1054f2229184a430d76f3b477f3e42aadaa5faf",
+      "work_id": "work-93cfd6310568760e4c27a8dda9fc8ccbaac8fcfe229b14c7355e21ab9c6c1b6e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-6b7812c3ab59033e108b0a2e870ec1073fcfbc90e3c1ea69fea61b20424785ba",
+      "work_id": "work-94b5f0ce1b54b5fe7a489617d708ee81a2e1ed84d02c51e3dd12ae76648568f6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-6d9f81a332223d9312e44af7230d737b74522c958fbcede8caeb66d4714713dc",
+      "work_id": "work-9ed24ec47a6f46ef9d70240e6faee3ccfe2aa674e80e23d221bbf3f47b2700f8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-6dbf9a5dc193ec47e14aba65b840fc9d9dbd8ab87d11020c2bacd3b5ec81820c",
+      "work_id": "work-a0f6400d1919ab82025a0008cfd186d29341ccd0de5ab0ff77ff2c66c061299f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-6fc1e3eefbe9b0beb4cc6c0fe6a0cbcc502fe28d53810b51e2e3e6a6a82e0a30",
+      "work_id": "work-c620b2b0d8ecd721bb4e7fbf1c23184088b41275f3fb1846fb0a98fac06f812f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-71c09c3c2e099a5659140761f7eb0e0a19fb5264d57132848ef34d67cb53e725",
+      "work_id": "work-d369fe8440238fbe4e086e6dacccf51fadfd17aad10af4ab01f237de5db3b713",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-752a03d77d9f79a9593bd4ad45373c51ce7b125a9775cd64fe70bfd985062720",
+      "work_id": "work-de3e472b99f1b1ec0b709623da4a23e6fed9b3d1bd767f505f69b764a32c5781",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-7c4df62641f974bb8e6a0e025507e223cd49b6d16513ed7902200fe0f9c079c9",
+      "work_id": "work-df062a12e3ddfd429914488176095bd73715cb76deba6c9adf8b92266cf8a4f5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-7db600ce27f8f734f4079b49e7d7994beee88501547c47cc82110d364807f5fe",
+      "work_id": "work-ee388d14a4d316507145088eeb532bccf84966b410fa332420d45154a64fb110",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-84e40ab0909cf86952ef08ec1387bc250b11a28b9b5c7d6c66435bbde1b85a59",
+      "work_id": "work-f5d078befd4db1a5d0e6c85ef0fd3548d4f4fb37bc594ea15231876b0a725f96",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-853bdeb8ad15892eb018b44d9a5e58ce46c20432115c09a3e341f2aa9441d7e4",
+      "work_id": "work-fc5ead21a3a8fcf31a675f420eaaf4f79c33fcda4e118e959f4767537d0c93d9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     },
     {
-      "work_id": "work-8dcceefacea9f2a2888bdf2d0666ef2765cf1d994fe7513626e54ba2ddb91638",
+      "work_id": "work-ff5c7aeb0fa2d586ee2c43e90ff1bee287289cebc3cde34a1047f4b0c051e230",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-8eeb123e9090ffdea14ab7a7d937fe24945cf1b0673bf0b9dcc936a41618a014",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-94b9e748f3f52d755b871fd1f2620190068a257c4373879e1b6ac4f6ca2c0c7f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-98de53f19f4bef68a1a829004dfe37b2591da2557eb4e55d2f53cdba58a42e31",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-9ed83baf53d0b39dcc4ba13424ae139fdea24621abf15f1734cf3055ccbf26b8",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-a9f22d77ce29a497b2e1ab3ca5d42220be25d567f8e78aa48ec8146d02b83cbb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-ace10b54663c6db7accd7a39335d09bed5ac2b4cd7944e730c0d444535c79852",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-b0545463108447311fb01c770735b8e41c6777bf2bb71fce458279571d58eca6",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-b1664603647e2f2ab7c02d21ad708c4258113cbe030a5ac8823918630e23afe3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-b2484eab3f727638298786c66bf4a1e739c0bf76ea2c7d0234fda3422c71e945",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-b7aba6542043540d169cd66bc2d65a8c697fda378bfd0c969a6b0ccec764782f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-bd741bf7730457b40f944b1ae940165d28532158e3c6a876c6f17e2b5ccb53a4",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-be4b89126f698669c6aeeac9af0ed797ab41ed2757d612545c918b2a05a1ac69",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-c257b88fe92061f6592102e1573829f3bbeaed9bedc81f45b82db4f57b960590",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-c4b980487ec20ea060dd423da682e70a455a301b2a8a805b7f2d2ab54e2d1f55",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-c8683a56fa73d428d86c0cb7e2f85b22634d30114bc4811f00f7a99cec08761b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-ccc4c8eaddf01d94f8d0f00735749d473879ff54d1b707265c4cc3d8d50b7096",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-cdd338f13f8467459add2123268b1b43bba54f42dbd2b26e7045e861f7b9d53b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-db8c5de725389099c9a5aa17453563993e6e7cb2aca233f952fea2789f3b6aa0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-deff63003c036d69cd2cb4c51139553837b6eb97cdbf0c0f94eea066cc59163c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-e040f52f1eb7ea680c43900f8de98f0f2b542003ba508fb201e71d2dc797f088",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-e12003da1d8775ae3f3b33f1c1bbfeea9d395680b01d332c321406a5f177f4fd",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-e1d441665f93100d9fedae2f3811f563fdfaae31c9ef115c131e2b38440a541a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-e2ec1c6971a23a45964447cb35dfca4c04631a55558da947d2845862f802eadd",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-e6d8c548dcf382094d7ecb74c25a4232b761b82822e6de878f7cd265d540018b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-f0b049ddc8abb549f3f8a3a5a9808ceb53abb967847a46364c4bccc35ab8c8c9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-f2605bc7881abb8ea81d5e58a849633bce0c8653115fed6692aa2af60d1b6f1c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-f3a709154b5cbe75e9be921d9c55603ff2e2fdf482aa7ffcab9bfb41c2b8b3f5",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-f45a8fdaeb95c9d4b0efef2d8a1b96c9cc2cb1c229b1ac903e5bed52f952a9cb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
-    },
-    {
-      "work_id": "work-fd49ca07d224be3ef9543e28602f4ac44148498709b7ddc24ea687935ccaf256",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and topic assignment remain unreviewed against the immutable Hub1041 parent."
+      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
     }
   ]
 }
