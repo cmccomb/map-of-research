@@ -1,68 +1,164 @@
 {
   "schema_version": 1,
-  "prior_revision": "95d2c5b4757ae38db99ea1fd5828747e9ac62067",
-  "source_snapshot_sha256": "458082fc24ed110651c4f4e1617a0d6835673363e6e37621708bfb70bcd5a339",
-  "selected_ids_sha256": "7dfc89af3ee74c86281cc4a52fd680ccf5d9f43ab1cd3a69a400213e696deb44",
-  "parent_map_sha256": "8581a2dfd9a6e39efb19a5a59c259420c915cf6aefcfe13d1b226628e28ea518",
-  "candidate_map_content_sha256": "b941b790dbd27543a7b445e6bf57ac835828c3202d5d6d8766277dac7005dabb",
-  "new_work_ids_sha256": "4cdd3ed5a3a29ee134eb0f748df93db3213536ba8de57ea52916b6b9c990a82a",
+  "prior_revision": "0eb4ace5836f2da470e33eef00ddc0839664d192",
+  "source_snapshot_sha256": "f46ae54ddbec2e83b451bac485a214480fa240252f8f34341c3a428daad9bd86",
+  "selected_ids_sha256": "33c9fe74c47900c2ab60ce8b0aa52f35408ac77352f2c387582555e9fae88452",
+  "parent_map_sha256": "89915e5e4de2f35d664989c1f76e4b185bfa36c99d24ba527d7c5c394bf67efd",
+  "candidate_map_content_sha256": "316a5ffd9fec858f921a4008393d3e92c8197bfa67240462abcbe8f689efc39d",
+  "new_work_ids_sha256": "27290abb918a4976090d51aa2515eb4bce45d115e90c4bd16ed05d0bc95bbfc4",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-10-31",
   "new_points": [
     {
-      "work_id": "work-07e17f31650a5140822fda5fd06ec8c995f011e2e1302f1a44bc72a8b202f410",
+      "work_id": "work-00b2561f7fa98d87f39e5bd2056bbc4bf195498b09a37504dac7cf2550d7bc31",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0b8e55f146f98462230667700953594d846550d8e585ce7055b778dc8f5ba49e",
+      "work_id": "work-015a85389bc70fdecdd6d94c8f9027b60a1c5b66e10fc7cc27e8a5cd84e6996a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-1f89cd6186fb8838dfd4be7cb53685deb39f249b2953509250d5b3e116846b21",
+      "work_id": "work-01fa98b1fa09492e19c01844ba102943141e69874252435cb65fe09cc30502cd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-43ceac61abefca0652f3fcf6feccdb0f22665ba2828921dc074c2a01cc614999",
+      "work_id": "work-1876db44e345c917b0a59167ba5a6f5537d398623561186b69630fd17bf37567",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-8360ca98b421be19517a7dab559f4fc4d9a3188e3551806de3c8fee0ae365fb1",
+      "work_id": "work-215386e3be89d3e93d367581dd699dda6cd6b1f8f970df0cc8197531ab823d3f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-846a786f889b3edbf19a52c421afc954fdab69e1442e4228bd5e79633070e162",
+      "work_id": "work-25699d6b1c76d976409c67fccd613703079dc505547f4dd3d8d04c31cc2c1c87",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-bbf338435a020e822d7e2be513c2eaf8e565c0fb78d9efeda483c06c33199a64",
+      "work_id": "work-30cc3b35408ec96a64009a726adf13fd912cff61360cc0c89397e0ba74d53a5d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-d38399a77f40380e3672b8a170c131ecae087a33e81f43eb6aae40d8381470d1",
+      "work_id": "work-326de8f4869de94bad612c4a16417ab4805b4b20ffd889fe6431a6a34fe91263",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-e5b5c5d52d663e9aff79b57ae371b7242468d13f38fdc30260c4edddba0638f3",
+      "work_id": "work-38e699ad761e157778c4f328c7c1d03b10fe8eb448495d634d0cb2ce3813edbd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-4182eb39905dc4c0bb226694b94e5a439bf18d336928fd709faae5c04d42e49f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-46a18bd6be6774398bb564e9fc6ec21978508377f3a6462350f41377d84802be",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-4eae44ee073fb04cd518362c23f9b31397b46991aeb31203ceaf332d9428fbee",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-5ddf6c079a7428262af0adeb155bcd3bdd4a9ffd1ad64975945402c8c9fdac2c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-7e63f87861bb161999fab18006f7f09327d2ff189aaabd6230deac056b33a07e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-9259ec36a9b99f5e058fa03f8c1dd72fbfb256e4072c9aedc5a13b32e11dce1f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-9a120f9e80713585b28f7f208fedb31ccbff55324f3de3db3297aa67511f7132",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-a73762ff0e45414bd866223d1ddbc244cd7e102730f32b414bcb041daf6a364c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-a96fcff7a58968ec99801193ad3ba01de5207212a8cc27d2b9607a15102350cc",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-a974f107d42555be82a5432591e7062650929f9295cadfa890a4e51360978c92",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-c24447159a66601965556b51687ce965f65f68a828f5279b670fbc4029a709d0",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-c67bf80fcef5ab346f77acb0a08308f9646dde314e146c07aec2ea2c60463a6a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-dd472a5f5ce77e10fee69b108a60003a60d9163be80ab2674006980cb53c118a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-eb116567559f6eb86c527c8874b91e535fd409114a99fc9ee5566436a761e00a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-ecc34faf5e9e72d9d9fa8ea9464d4265e0f9d7e3d5b05d1112d04c8ca72aa61c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
+    },
+    {
+      "work_id": "work-f5a4b34b6b379b062204bd7b9d7f17605c307658e7e031d4b0cb8593599cb808",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Seshan original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0eb4 are unreviewed; keep this work pending and nonspatial."
     }
   ]
 }

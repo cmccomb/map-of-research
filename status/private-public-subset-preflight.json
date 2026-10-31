@@ -463,19 +463,33 @@
       "withheld_hold_rows": 79,
       "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d",
       "withheld_rows": 79
+    },
+    {
+      "cache_sha256": "6410d53486b7f826179f894f1756f1b07437dc5ffebeb9c409ae7719ca96530d",
+      "observed_visible_rows": 309,
+      "person_id": "person-srinivasanseshan-ad84bf6d",
+      "private_capture_sha256": "879ac85008224d9292b604191cb9880d2a14438f5f088c1ed31e3cd71fade5ab",
+      "private_review_sha256": "c70998d8a013467ac4c72a2d3dc9311fd400af4ced20abd6ffdee33269d82143",
+      "scholar_id": "0irVeiQAAAAJ",
+      "selected_ids_sha256": "7f3950b59e0f8c32929953e3d9b3e935624adb2ff6def7ead0d4b4c086587d5f",
+      "selected_rows": 25,
+      "withheld_excluded_rows": 0,
+      "withheld_hold_rows": 284,
+      "withheld_ids_sha256": "6bbb5d4e0ad06c4a3c61049455b9ff7427bb4884dbfdfe89c7d3d9178fba2a88",
+      "withheld_rows": 284
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "18cf5dfb783ace4115e456420592e5ee1b656771bafcf40a8fca91631a5b7067",
-  "source_selection_manifest_sha256": "e0df2f4515b1a0e7527664ce708db64208687e2a68ce7e977d642add0178a748",
-  "source_snapshot_sha256": "458082fc24ed110651c4f4e1617a0d6835673363e6e37621708bfb70bcd5a339",
+  "selected_ids_sha256": "4024340259bdf86773107c820daa4792be55d59ceb5bbda8219bff1e78825339",
+  "source_selection_manifest_sha256": "d178ef720557d5f9724ab069955adfbf4a39c0370c20dd77c064a6af5a60f782",
+  "source_snapshot_sha256": "f46ae54ddbec2e83b451bac485a214480fa240252f8f34341c3a428daad9bd86",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 3535,
-    "selected_rows": 1263,
+    "observed_visible_rows": 3844,
+    "selected_rows": 1288,
     "withheld_excluded_rows": 199,
-    "withheld_hold_rows": 2073,
-    "withheld_rows": 2272
+    "withheld_hold_rows": 2357,
+    "withheld_rows": 2556
   },
-  "withheld_ids_sha256": "6773292b881f8e7743371d9c073c3b3bb1254ab52c68c3363129f6eaae4f72be"
+  "withheld_ids_sha256": "98b2d73a4549585229d9a7963e4b6094c9f87b8e1008156aac169f96844c0140"
 }
