@@ -358,6 +358,18 @@ def test_authored_type_doi_and_eligibility_are_explicit(
         "normalized_title_year"
     )
     assert without_doi["works"].iloc[0]["publication_type"] == kind
+    for field, observed_value in (
+        ("source_doi", "10.1234/unreviewed"),
+        ("source_url", "https://publisher.example.test/10.1234/unreviewed"),
+        ("citation", "Unreviewed DOI 10.1234/unreviewed"),
+        ("source_record_json", '{"doi":"10.1234/unreviewed"}'),
+    ):
+        with pytest.raises(ValueError, match="DOI conflicts with source"):
+            build_dataset_tables(
+                pandas.DataFrame([{**row, field: observed_value}]),
+                registry,
+                contexts=load_contexts(path),
+            )
 
     _manifest(
         path,

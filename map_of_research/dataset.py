@@ -180,9 +180,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
         )
         for match in DOI_PATTERN.finditer(_clean_text(value))
     }
-    if len(observed_dois) > 1 or (
-        context.verified_doi and observed_dois - {context.verified_doi}
-    ):
+    if len(observed_dois) > 1 or observed_dois - {context.verified_doi}:
         raise ValueError("Authored Scholar context DOI conflicts with source")
 
 

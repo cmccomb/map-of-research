@@ -82,7 +82,8 @@ captured citation and source record remain unchanged. A reviewed authored type
 does not become collaboration eligible by type alone. The context must explicitly
 permit collaboration, and the ordinary quality and authorship gates still
 apply. Every DOI present in the captured source fields must agree with the
-reviewed DOI; conflicting source DOIs require a separate exact version review.
+reviewed DOI; an explicit blank rejects every captured DOI. Conflicting source
+DOIs require a separate exact version review.
 A book chapter is an authored chapter, distinct from an edited book.
 
 ## `works`
