@@ -146,6 +146,8 @@ from .mccomb_continuity import validate_exact_mccomb_continuity
 from .pending_publications import (
     PENDING_MAP_SCHEMA_VERSION,
     build_pending_publications,
+    carry_forward_parent_pending_works,
+    require_parent_pending_list_preserved,
 )
 from .person_publication_holds import (
     DEFAULT_PERSON_PUBLICATION_HOLDS_PATH,
@@ -1524,6 +1526,7 @@ def _publish_atomic_release(
     presentation_drift_approval_path: Path | None = None,
     preserve_deletion_presentation: bool = False,
     additive_placement_review_path: Path | None = None,
+    parent_pending_work_ids: Sequence[str] = (),
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1681,7 +1684,12 @@ def _publish_atomic_release(
             tables["profile_publications"],
             release_receipt or [],
             registry,
-            held_ids,
+            sorted(set(held_ids) | set(parent_pending_work_ids)),
+        )
+        if parent_map is None:
+            raise ValueError("Additive parent pending list lacks pinned map")
+        require_parent_pending_list_preserved(
+            parent_map, pending_publications, parent_pending_work_ids
         )
 
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
@@ -2229,6 +2237,7 @@ def publish_snapshot(
                     if (
                         comparison_revision != prior_revision
                         or composite_plan is not None
+                        or additive_placement_review_path is not None
                     )
                     else ()
                 ),
@@ -2285,6 +2294,14 @@ def publish_snapshot(
     )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
+    parent_pending_work_ids: list[str] = []
+    if additive_placement_review_path is not None:
+        tables["works"], parent_pending_work_ids = carry_forward_parent_pending_works(
+            tables["works"],
+            tables["profile_publications"],
+            prior_works,
+            prior_profiles,
+        )
     approved_person_hold_losses = validate_person_hold_losses(
         person_holds,
         prior_revision=prior_revision,
@@ -2614,6 +2631,7 @@ def publish_snapshot(
         presentation_drift_approval_path=presentation_drift_approval_path,
         preserve_deletion_presentation=True,
         additive_placement_review_path=additive_placement_review_path,
+        parent_pending_work_ids=parent_pending_work_ids,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (

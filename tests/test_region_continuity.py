@@ -11,7 +11,9 @@ import numpy
 import pandas
 import pytest
 
+from map_of_research.composite_region import BLANK_TOPICS, COORDINATE_FIELDS
 from map_of_research.mccomb_continuity import ExactMcCombContinuity
+from map_of_research.pending_publications import carry_forward_parent_pending_works
 from map_of_research.region_continuity import (
     RegionReleaseDiffError,
     _fingerprint,
@@ -176,6 +178,63 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["prior_revision"] == REVISION
     assert receipt["unexplained_losses"] == []
     assert receipt["unexplained_gains"] == []
+
+
+def test_parent_pending_carryforward_leaves_unrelated_gain_region_gated():
+    pending = work("pending", eligible=False, outlier=False)
+    pending.update(
+        {
+            "map_exclusion_reasons": ["pending_placement_review"],
+            "citation": "Journal 1, 2020",
+            "citation_count": 2,
+            "publication_type": "publication",
+            "source_document_id": "",
+            "source_urls": ["https://scholar.google.com/citations?x=1"],
+            **dict.fromkeys(COORDINATE_FIELDS),
+            **BLANK_TOPICS,
+        }
+    )
+    other = work("other", eligible=False, outlier=False)
+    other.update(
+        {
+            "citation": "Journal 1, 2020",
+            "citation_count": 2,
+            "publication_type": "publication",
+            "source_document_id": "",
+            "source_urls": ["https://scholar.google.com/citations?x=2"],
+            **dict.fromkeys(COORDINATE_FIELDS),
+            **BLANK_TOPICS,
+        }
+    )
+    prior_works = [pending, other]
+    prior_pending = observation("person-one", "pending")
+    prior_other = {
+        **observation("person-two", "other"),
+        "author_pub_id": "profile:other-row",
+    }
+    prior_profiles = [prior_pending, prior_other]
+    candidate = copy.deepcopy(prior_works)
+    for row in candidate:
+        row["map_eligible"] = True
+        row["map_exclusion_reasons"] = []
+        row["x"] = 0.2
+    carried, ids = carry_forward_parent_pending_works(
+        pandas.DataFrame(candidate),
+        pandas.DataFrame(prior_profiles),
+        prior_works,
+        prior_profiles,
+    )
+    assert ids == ["pending"]
+    assert carried.loc[carried.work_id == "pending", "map_eligible"].eq(False).all()
+    assert carried.loc[carried.work_id == "other", "map_eligible"].eq(True).all()
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained gains"):
+        reconcile_region_decisions(
+            carried,
+            pandas.DataFrame(prior_profiles),
+            prior_works,
+            prior_profiles,
+            prior_revision=REVISION,
+        )
 
 
 def test_visible_observation_cannot_change_work_without_exact_review():
