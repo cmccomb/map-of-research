@@ -393,19 +393,61 @@
       "withheld_hold_rows": 204,
       "withheld_ids_sha256": "bfb20a41e8d0781c0a21ce102e01cbcb7ff534c3ab1d2c0ce6a8b26093a5a471",
       "withheld_rows": 206
+    },
+    {
+      "cache_sha256": "87225f123744259b06c5d9144bcc23ff91fd89285e79322251c10b8423f747ec",
+      "observed_visible_rows": 142,
+      "person_id": "person-bogdanvasilescu-19805463",
+      "private_capture_sha256": "be409152af461189d80b1df170b63d60367c8a7d68753920feda2cf5b4fc97f4",
+      "private_review_sha256": "8bddbe918e375bee962b447c010b951ffeacd1d976d7d255271ae5dff8f391fc",
+      "scholar_id": "bcXjlqYAAAAJ",
+      "selected_ids_sha256": "7c002111ec32a54537b649e95dbfa53451203eabf105fe24229b681b5a861223",
+      "selected_rows": 25,
+      "withheld_excluded_rows": 1,
+      "withheld_hold_rows": 116,
+      "withheld_ids_sha256": "671ee3acb567e18711863d746f98fb7541bc5e3f084366b2c67526084108e5c1",
+      "withheld_rows": 117
+    },
+    {
+      "cache_sha256": "1f2d7d363382dcd3f69ee2bab099fb81cd190ecc80c641064660559e8fa172e8",
+      "observed_visible_rows": 78,
+      "person_id": "person-minchenli-272be5ea",
+      "private_capture_sha256": "fd47390d241d85ae2b882ea4b8de8840c65607ec956e32fe01826b8554120072",
+      "private_review_sha256": "67692351138752dca978a94473bdb5c3793b7c469a221c2ecdd8ef17f03959a4",
+      "scholar_id": "Gk7K7VkAAAAJ",
+      "selected_ids_sha256": "46fa3f2da9bfb2aae3e3ba83004cd426bf590f41c277cfbf9e5153f75e9e823d",
+      "selected_rows": 25,
+      "withheld_excluded_rows": 0,
+      "withheld_hold_rows": 53,
+      "withheld_ids_sha256": "afe7320e6978c817126fc8e842b9f87108b907b5abfefb4f676a1e3e19030b2b",
+      "withheld_rows": 53
+    },
+    {
+      "cache_sha256": "72a89c7df4706b93f46401f58142f50539172302a7c9a286ba4f50d1c0f72c3f",
+      "observed_visible_rows": 201,
+      "person_id": "person-maartensap-f9b83bc8",
+      "private_capture_sha256": "99ecfe8d8a689e427b54d1caf9610a8a99874dd179253b8be6a638016d1fc598",
+      "private_review_sha256": "a08959f7ef53941ffeb185e6ee10488a452e50e4a63b67eea352832df1b21c90",
+      "scholar_id": "gFN4QUYAAAAJ",
+      "selected_ids_sha256": "e8cd28ff800b3cc1bb726b736f95141f4264011bcbaf98a7f6152033033010f3",
+      "selected_rows": 16,
+      "withheld_excluded_rows": 6,
+      "withheld_hold_rows": 179,
+      "withheld_ids_sha256": "8dbec6be64db77416ec1d7ee0ab86f389d8e07e2a82d1a6d50a265fd086d8b2a",
+      "withheld_rows": 185
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "02d0503b5eebe97a2504f7b9181ba39670480d94ce4296afaad8c2e481babc82",
-  "source_selection_manifest_sha256": "841708ea4fba0553d8972ef85e36c875c998841e25e637c5052fe087f9314566",
-  "source_snapshot_sha256": "74d8dc56c8468ac291e0ea8ffb58dd07b76d2263a62d93560d00ff8e859147af",
+  "selected_ids_sha256": "59e55c701b35473fbe87a0969725240f157ae3227ce09c71f107a3245b9f0bd8",
+  "source_selection_manifest_sha256": "bdc76ec793617a9be8624ef2290a284c8c9c7a1cd3023f31b6591708ec9b3a98",
+  "source_snapshot_sha256": "d4f98b70e61f42d1592fe362dfb7b1e2445596dfc58933c14fe835dcdd098783",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 2929,
-    "selected_rows": 1150,
-    "withheld_excluded_rows": 187,
-    "withheld_hold_rows": 1592,
-    "withheld_rows": 1779
+    "observed_visible_rows": 3350,
+    "selected_rows": 1216,
+    "withheld_excluded_rows": 194,
+    "withheld_hold_rows": 1940,
+    "withheld_rows": 2134
   },
-  "withheld_ids_sha256": "8d621826415f5d2630bef4d09e0bf6a4b86a6025696bfe1ac55880d10fc66b78"
+  "withheld_ids_sha256": "b1f74c46891e4f999efe536bddc0f8d1588f2f1e41f87e70a9403eb625a877f8"
 }
