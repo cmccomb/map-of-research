@@ -1515,6 +1515,26 @@
         "withheld_excluded_rows": 3,
         "withheld_ids_sha256": "e2e456ca4cc70198a8b9ed7fdb78d3a74ba59383ef6f52961a268fae4df02d70"
       }
+    },
+    {
+      "person_id": "person-feifang-031e00dc",
+      "scholar_id": "R6jE0VEAAAAJ",
+      "state": "released",
+      "expected_source_rows": 24,
+      "cache_sha256": "10ce5007eba58fbd3471133aa53b2ecbb6cc655fc907a39d7966631cde9987bd",
+      "reason": "Local selected-only candidate: 24 original-document-supported Fei Fang observations from 230 complete visible Chrome rows. Other 206 captured records remain private; 24 new works require held nonspatial placement. No upload is authorized by this decision alone.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 230,
+        "private_capture_sha256": "ae373c10b685778924f382928a3686fd3883358eab2e65bb949e938ce3d3713b",
+        "private_review_sha256": "e574e25f9f9b72b321b235a4928ac0d822cf3d9ee781a9f23a520eed8610b550",
+        "private_rendered_html_sha256": "d41dcfb2956ec1afd7d0989b9110ba09eee126814fd88fd9b8c700307f39ff35",
+        "selected_ids_sha256": "b4dadbb21cf2ad9b609b2655381a616e5431d459a96e7a04607b4469cd145c4e",
+        "withheld_rows": 206,
+        "withheld_hold_rows": 204,
+        "withheld_excluded_rows": 2,
+        "withheld_ids_sha256": "bfb20a41e8d0781c0a21ce102e01cbcb7ff534c3ab1d2c0ce6a8b26093a5a471"
+      }
     }
   ]
 }
