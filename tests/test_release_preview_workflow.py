@@ -206,6 +206,7 @@ def _run_preview(
     require_bio_release: bool | None = None,
     chem_manifest_present: bool = True,
     additive_placement_review: Path | None = None,
+    prior_person_continuity_review: Path | None = None,
     presentation_gate_failure: bool = False,
 ):
     preview = _load_script()
@@ -251,6 +252,7 @@ def _run_preview(
         region_comparison_revision=PARENT,
         require_bio_release=require_bio_release,
         additive_placement_review=additive_placement_review,
+        prior_person_continuity_review=prior_person_continuity_review,
     )
     monkeypatch.setattr(preview, "_parse_args", lambda: args)
     monkeypatch.setattr(
@@ -298,6 +300,10 @@ def _run_preview(
             producer / "data/curated/person-publication-holds.json"
         )
         assert kwargs["additive_placement_review_path"] == additive_placement_review
+        assert (
+            kwargs["prior_person_continuity_review_path"]
+            == prior_person_continuity_review
+        )
         if presentation_gate_failure:
             raise PresentationDriftError(
                 {"candidate_map_content_sha256": "f" * 64},
@@ -397,6 +403,20 @@ def test_no_write_preview_forwards_additive_placement_review(monkeypatch, tmp_pa
         tmp_path,
         fail_before_write=False,
         additive_placement_review=review,
+    )
+    assert code == 0
+    assert receipt["status"] == "passed_no_upload"
+
+
+def test_no_write_preview_forwards_prior_person_continuity_review(
+    monkeypatch, tmp_path
+):
+    review = tmp_path / "person-review.json"
+    code, receipt = _run_preview(
+        monkeypatch,
+        tmp_path,
+        fail_before_write=False,
+        prior_person_continuity_review=review,
     )
     assert code == 0
     assert receipt["status"] == "passed_no_upload"

@@ -1615,6 +1615,26 @@
         "withheld_excluded_rows": 5,
         "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac"
       }
+    },
+    {
+      "person_id": "person-hodaheidari-477d966d",
+      "scholar_id": "GpXyLGwAAAAJ",
+      "state": "released",
+      "expected_source_rows": 9,
+      "cache_sha256": "b84ea006dd5cd6f214851f88fea78d9c276bda2c68943e4c82b067457b2fc39c",
+      "reason": "Local private-stage candidate: nine original-document-supported Hoda research observations from 88 complete visible Chrome rows; 79 remain private, including two nondecimal citation-display rows. New works require exact placement/topic review and remain pending. This candidate decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 88,
+        "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
+        "private_review_sha256": "0c13a49022ac5857da3759251a25dede08097ef427565ef84466a67e346eb156",
+        "private_rendered_html_sha256": "ae8bd23de09af804100bad261aabd66d53a42404f67deab71162a417a9fabe4a",
+        "selected_ids_sha256": "6fb1468630b5507e50e0d053e02af1bb5107241e92d172bbf3e069be84a9ccbd",
+        "withheld_rows": 79,
+        "withheld_hold_rows": 79,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d"
+      }
     }
   ]
 }
