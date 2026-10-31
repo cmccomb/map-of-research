@@ -1435,6 +1435,66 @@
         "withheld_excluded_rows": 6,
         "withheld_ids_sha256": "b8c8a441f990db5a96aaee879c2caec52bd727f446991ed713f0ed8b216114c9"
       }
+    },
+    {
+      "person_id": "person-aaronsteinfeld-5443ab0b",
+      "scholar_id": "CQ39OowAAAAJ",
+      "state": "released",
+      "expected_source_rows": 8,
+      "cache_sha256": "178dfa7e41137100cbbf3709c4e2495f514053cb0715a8b8db2ba644c4dd6869",
+      "reason": "Local private-stage candidate: 8 original-document-supported selected observations from 254 complete visible Chrome rows; all other captured rows stay private. Every new work is held pending exact map placement. No upload is authorized by this candidate decision alone.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 254,
+        "private_capture_sha256": "ea26af4ee1a0b278dc39699fd4eb49232d2dcd7ecd05e0f9ad66d02a633e203a",
+        "private_review_sha256": "0ee93f295322ac002cdc11c11042b84da6c82019b5227d72fce1755b7ef8ad7e",
+        "private_rendered_html_sha256": "1ee1c886717fd9a41b236e9d3e3f67693f572962f175471bc69215a9bbb86b7c",
+        "selected_ids_sha256": "a23ed73d2e1256257ee9ea6a5471fcffabb5d0d4a7a5aeab0a1f1ddb7de0891f",
+        "withheld_rows": 246,
+        "withheld_hold_rows": 234,
+        "withheld_excluded_rows": 12,
+        "withheld_ids_sha256": "7648312129c510c9223aec6665d21e7bf1641c9e069c4d999fcaa4c0a602c4d5"
+      }
+    },
+    {
+      "person_id": "person-christiankastner-bdab7c96",
+      "scholar_id": "PR-ZnJUAAAAJ",
+      "state": "released",
+      "expected_source_rows": 36,
+      "cache_sha256": "268d1b84b176f3ebef2ed18ec6ec94ea720075a9bbaa069d4d0d67f861c93d99",
+      "reason": "Local private-stage candidate: 36 original-document-supported selected observations from 359 complete visible Chrome rows; all other captured rows stay private. Every new work is held pending exact map placement. No upload is authorized by this candidate decision alone.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 359,
+        "private_capture_sha256": "3521d4ca49885112945e19bd17ef76a419b7270377a7253aa3574eafe188a287",
+        "private_review_sha256": "3ce6966e8e84fd0632c1fda5a850e3986601135f12b5987ebc9609a54c1505ce",
+        "private_rendered_html_sha256": "2e0da1bdf7348616a4419862fa2c40f1c8ba0300417251f20e9ef868f27eaed8",
+        "selected_ids_sha256": "93b61c20c880f3814fcc4adaa9c8cbf56aa784febf776168a2559b761f91a651",
+        "withheld_rows": 323,
+        "withheld_hold_rows": 288,
+        "withheld_excluded_rows": 35,
+        "withheld_ids_sha256": "733cfaa26e70977104f6c0115815322818fa11c309532254f4b6553a6abfb0b0"
+      }
+    },
+    {
+      "person_id": "person-clairelegoues-fb1b95ee",
+      "scholar_id": "Cmr9ljkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 17,
+      "cache_sha256": "f238200ea3b0b498f505769dd8a6d0576fe7c853da5a82378d29f827c70cf4f0",
+      "reason": "Local private-stage candidate: 17 original-document-supported selected observations from 234 complete visible Chrome rows; all other captured rows stay private. Every new work is held pending exact map placement. No upload is authorized by this candidate decision alone.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 234,
+        "private_capture_sha256": "86d87942738e49930a73aaf7b98cdede647b2c1e331822e1d5d54047c52ed820",
+        "private_review_sha256": "c995af697658233ca479907c71c00635b93427787dd26883d7b70754714ba071",
+        "private_rendered_html_sha256": "6f0f30f6f1a7a444acd08a45f9277003422c08317dd983c692e6eb6386334f50",
+        "selected_ids_sha256": "d6bc8160090f20961cbb26b0510c71ff00c2edc7a536d96b40a5a983c27a9aee",
+        "withheld_rows": 217,
+        "withheld_hold_rows": 167,
+        "withheld_excluded_rows": 50,
+        "withheld_ids_sha256": "9c5c7c68449f93dc6822001ef1016d792b63e5ce51d9ecb3cbee15b51cfc7b55"
+      }
     }
   ]
 }
