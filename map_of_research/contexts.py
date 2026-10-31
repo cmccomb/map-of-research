@@ -18,6 +18,7 @@ AUTHORED_PUBLICATION_TYPES = frozenset(
 CONTEXT_TYPES = (
     frozenset(
         {
+            "publication",
             "patent",
             "edited_book",
             "panel_transcript",
@@ -97,7 +98,25 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             else ""
         )
         collaboration_eligible = entry.get("collaboration_eligible")
-        if publication_type in AUTHORED_PUBLICATION_TYPES:
+        if publication_type == "publication":
+            if (
+                not expected_title
+                or type(expected_year) is not int
+                or not 1500 <= expected_year <= 2100
+            ):
+                raise ValueError(
+                    "Scholar-profile publication context needs exact title and year"
+                )
+            if "verified_doi" in entry:
+                raise ValueError(
+                    "Scholar-profile publication context cannot claim a verified DOI"
+                )
+            if collaboration_eligible is not False or not map_eligible:
+                raise ValueError(
+                    "Scholar-profile publication context must hold collaboration "
+                    "and remain source eligible"
+                )
+        elif publication_type in AUTHORED_PUBLICATION_TYPES:
             if (
                 not expected_title
                 or type(expected_year) is not int
@@ -129,8 +148,8 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             )
         ):
             raise ValueError(
-                "Only authored Scholar contexts may set title, year, DOI, or "
-                "collaboration eligibility"
+                "Only authored Scholar contexts or Scholar-profile publication "
+                "contexts may set title, year, DOI, or collaboration eligibility"
             )
         evidence_url = str(entry.get("evidence_url") or "").strip()
         parsed = urlparse(evidence_url)

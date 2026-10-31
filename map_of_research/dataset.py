@@ -10,7 +10,7 @@ import re
 from collections import Counter
 from collections.abc import Mapping
 from typing import Any
-from urllib.parse import unquote
+from urllib.parse import parse_qs, unquote, urlparse
 
 from .attribution import AttributionReviews
 from .contexts import AUTHORED_PUBLICATION_TYPES, ReviewedContext
@@ -160,6 +160,50 @@ def _work_identity(
 def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
     """Bind a reviewed type and DOI to the exact effective Scholar citation."""
 
+    if context.publication_type == "publication":
+        source = str(row.source_url)
+        parsed = urlparse(source)
+        query = parse_qs(parsed.query)
+        if (
+            row.source_type != "scholar"
+            or not context.expected_title
+            or context.expected_title != str(row.title)
+            or type(context.expected_year) is not int
+            or context.expected_year != _year(row.year)
+            or context.evidence_url != source
+            or parsed.scheme != "https"
+            or parsed.hostname not in {"scholar.google.com", "scholar.google.ca"}
+            or parsed.username is not None
+            or parsed.password is not None
+            or parsed.port is not None
+            or parsed.path != "/citations"
+            or query.get("user") != [str(row.scholar_id)]
+            or query.get("citation_for_view") != [str(row.author_pub_id)]
+            or context.collaboration_eligible is not False
+            or not context.map_eligible
+            or context.verified_doi
+        ):
+            raise ValueError(
+                "Scholar-profile publication context differs from exact source citation"
+            )
+        decoded_dois = {
+            match.group(0).rstrip(".,;)").casefold()
+            for value in (
+                row.source_doi,
+                row.source_url,
+                row.citation,
+                row.source_record_json,
+            )
+            for match in DOI_PATTERN.finditer(_decoded_doi_text(value))
+        }
+        parsed_doi = _doi(
+            row.source_doi, row.source_url, row.citation, row.source_record_json
+        )
+        if len(decoded_dois) > 1 or decoded_dois not in (set(), {parsed_doi}):
+            raise ValueError(
+                "Scholar-profile publication context has ambiguous source DOI"
+            )
+        return
     if context.publication_type not in AUTHORED_PUBLICATION_TYPES:
         return
     if (

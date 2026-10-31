@@ -116,6 +116,16 @@ DOIs require a separate exact version review. This comparison decodes URL
 escapes and HTML entities for inspection while preserving captured field text.
 A book chapter is an authored chapter, distinct from an edited book.
 
+An exact `publication` context may instead use the owner-linked Scholar
+citation itself as evidence when the row is a substantive work but its precise
+document type has not been checked elsewhere. It must match that Scholar
+citation's owner, observation ID, title, year, and source URL. It preserves the
+captured fields, does not claim a verified DOI or a conference/journal/chapter
+type, and explicitly sets `collaboration_eligible=false`. This allows a
+selected source observation to appear in the pending-work list without
+asserting a coauthor edge from an unclassified item. It does not approve map
+coordinates or topics; placement still needs the separate exact-parent review.
+
 ## `works`
 
 One canonical work derived conservatively from the observations. DOI is used

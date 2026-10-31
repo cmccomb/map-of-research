@@ -56,6 +56,28 @@ def _authored_entry(**changes: object) -> dict[str, object]:
     }
 
 
+def _scholar_profile_entry(**changes: object) -> dict[str, object]:
+    return {
+        "scholar_id": "oneAAAAJ",
+        "author_pub_id": "oneAAAAJ:scholar-first",
+        "publication_type": "publication",
+        "document_id": "",
+        "reason": (
+            "The exact owner-profile citation is substantive; "
+            "item type is unclassified."
+        ),
+        "evidence_url": (
+            "https://scholar.google.com/citations?user=oneAAAAJ"
+            "&citation_for_view=oneAAAAJ:scholar-first"
+        ),
+        "verified_at": "2026-10-31",
+        "expected_title": "A Substantive Scholarly Work",
+        "expected_year": 2025,
+        "collaboration_eligible": False,
+        **changes,
+    }
+
+
 def test_checked_in_chien_contexts_are_exact_and_source_backed() -> None:
     contexts = {
         key: item
@@ -194,6 +216,129 @@ def test_authored_type_doi_and_collaboration_need_exact_review(tmp_path: Path) -
     _manifest(path, [_entry(verified_doi="10.1234/not-a-patent")])
     with pytest.raises(ValueError, match="Only authored Scholar contexts"):
         load_contexts(path)
+
+
+def test_scholar_profile_generic_context_requires_exact_no_edge_decision(
+    tmp_path: Path,
+) -> None:
+    path = _manifest(tmp_path / "contexts.json", [_scholar_profile_entry()])
+    context = load_contexts(path)[("oneAAAAJ", "oneAAAAJ:scholar-first")]
+    assert context.publication_type == "publication"
+    assert context.collaboration_eligible is False
+    assert context.verified_doi == ""
+    for changes, error in (
+        ({"expected_title": ""}, "exact title and year"),
+        ({"expected_year": None}, "exact title and year"),
+        ({"verified_doi": ""}, "cannot claim a verified DOI"),
+        ({"collaboration_eligible": True}, "must hold collaboration"),
+        ({"map_eligible": False}, "remain source eligible"),
+    ):
+        _manifest(path, [_scholar_profile_entry(**changes)])
+        with pytest.raises(ValueError, match=error):
+            load_contexts(path)
+
+
+def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
+    tmp_path: Path,
+) -> None:
+    people, memberships, departments = write_registry(
+        tmp_path / "registry",
+        people=[
+            {"person_id": "person-one", "display_name": "One", "scholar_id": "oneAAAAJ"}
+        ],
+        memberships=[
+            {
+                "person_id": "person-one",
+                "department_id": "s3d",
+                "role": "faculty",
+                "included": "true",
+                "source_url": "https://example.test/s3d",
+                "verified_at": "2026-10-31",
+            }
+        ],
+        departments=[
+            {
+                "department_id": "s3d",
+                "school_id": "scs",
+                "title": "Software and Societal Systems",
+                "directory_url": "https://example.test/s3d",
+            }
+        ],
+    )
+    registry = load_registry(people, memberships, departments)
+    source_url = _scholar_profile_entry()["evidence_url"]
+    row = {
+        "scholar_id": "oneAAAAJ",
+        "person_id": "person-one",
+        "display_name": "One",
+        "faculty": "One",
+        "memberships": [{"department_id": "s3d", "role": "faculty", "included": True}],
+        "author_pub_id": "oneAAAAJ:scholar-first",
+        "title": "A Substantive Scholarly Work",
+        "authors": "One; Second Person",
+        "year": 2025,
+        "venue": "An Unclassified Research Venue",
+        "citation": "",
+        "citation_count": 0,
+        "source_url": source_url,
+        "source_type": "scholar",
+        "source_doi": "",
+        "source_record_json": '{"title":"A Substantive Scholarly Work"}',
+        "fetched_at_utc": "2026-10-31T00:00:00+00:00",
+        "embedding": [0.1, 0.2],
+    }
+    path = _manifest(tmp_path / "contexts.json", [_scholar_profile_entry()])
+    contexts = load_contexts(path)
+    old = {
+        **row,
+        "author_pub_id": "oneAAAAJ:old",
+        "title": "An Older Reviewed Work",
+        "year": 2024,
+        "source_url": "https://scholar.google.com/citations?user=oneAAAAJ&citation_for_view=oneAAAAJ:old",
+    }
+    tables = build_dataset_tables(
+        pandas.DataFrame([old, row]), registry, contexts=contexts
+    )
+    profiles = tables["profile_publications"].set_index("author_pub_id")
+    assert bool(profiles.loc["oneAAAAJ:old", "collaboration_eligible"])
+    assert not bool(profiles.loc["oneAAAAJ:scholar-first", "collaboration_eligible"])
+    assert profiles.loc["oneAAAAJ:scholar-first", "publication_type"] == "publication"
+    assert bool(profiles.loc["oneAAAAJ:scholar-first", "map_eligible"])
+    assert (
+        profiles.loc["oneAAAAJ:scholar-first", "source_record_json"]
+        == row["source_record_json"]
+    )
+    ca_url = str(source_url).replace("scholar.google.com", "scholar.google.ca")
+    _manifest(
+        path,
+        [_scholar_profile_entry(evidence_url=ca_url)],
+    )
+    ca_tables = build_dataset_tables(
+        pandas.DataFrame([{**row, "source_url": ca_url}]),
+        registry,
+        contexts=load_contexts(path),
+    )
+    assert not bool(ca_tables["profile_publications"].iloc[0]["collaboration_eligible"])
+    for bad_row in (
+        {**row, "title": "Another Work"},
+        {**row, "year": 2024},
+        {
+            **row,
+            "source_url": "https://scholar.google.com/citations?user=oneAAAAJ&citation_for_view=oneAAAAJ:other",
+        },
+        {
+            **row,
+            "source_url": "https://scholar.google.com.evil.test/citations?user=oneAAAAJ&citation_for_view=oneAAAAJ:scholar-first",
+        },
+        {**row, "citation": "10.1234/one and 10.1234/two"},
+        {**row, "citation": "10.1234%2Fone and 10.1234%2Ftwo"},
+    ):
+        with pytest.raises(
+            ValueError, match="exact source citation|ambiguous source DOI"
+        ):
+            build_dataset_tables(
+                pandas.DataFrame([bad_row]), registry, contexts=contexts
+            )
 
 
 @pytest.mark.parametrize(
