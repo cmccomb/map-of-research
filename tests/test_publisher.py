@@ -2076,6 +2076,9 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     monkeypatch.setattr(publisher, "require_reported_source_sync", lambda *args: False)
     bio_intent = pinned and atomic and not region_override and not missing_prior
+    if bio_intent:
+        # This fixture uses an abstract immutable parent for the historical Bio path.
+        monkeypatch.setattr(publisher, "BIO_BINDING_PRIOR_REVISION", "a" * 40)
     snapshot_digest = {
         "value": publisher.BIO_SOURCE_SHA256 if bio_intent else "test-snapshot"
     }
@@ -2269,6 +2272,16 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             lambda works, final: historical_decision_checks.append((works, final)),
         )
     if pinned:
+        monkeypatch.setattr(
+            publisher,
+            "read_pinned_prior_people",
+            lambda **kwargs: ([{"person_id": "fixture"}], "a" * 64),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "require_prior_person_continuity",
+            lambda *args, **kwargs: {"status": "pass"},
+        )
         monkeypatch.setattr(
             publisher,
             "_require_current_dataset_revision",
@@ -2485,6 +2498,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert result["atomic_release"] == {"mode": "single_parent_commit"}
     assert len(atomic_calls) == 1
+    if pinned and not bio_intent and not region_override:
+        assert atomic_calls[-1]["prior_person_continuity_receipt"] == {"status": "pass"}
     if bio_intent and reuse_order:
         assert len(approval_loads) == 1
         assert approval_loads[0][0] == tmp_path / "approval.json"
@@ -2648,6 +2663,16 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
             if config == "people"
             else [{"author_pub_id": "curated:independent"}]
         ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "read_pinned_prior_people",
+        lambda **kwargs: ([{"person_id": "prior-bio"}], "a" * 64),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "require_prior_person_continuity",
+        lambda *args, **kwargs: {"status": "pass"},
     )
     receipt = {
         "prior_revision": "a" * 40,

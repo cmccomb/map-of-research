@@ -101,6 +101,7 @@ jobs:
             snapshots/cmu-engineering-publications.parquet.manifest.json
             data/curated/reported-faculty-coauthors.json
             data/curated/scholar-additive-placement-review.json
+            data/curated/scholar-prior-person-continuity-review.json
             data/authors
             data/captures
             status
@@ -264,6 +265,11 @@ jobs:
           if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ] || [ -f "$ADDITIVE_REVIEW" ]; then
             test -s "$ADDITIVE_REVIEW"
             ADDITIVE_REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")
+          fi
+          PERSON_REVIEW=snapshot/data/curated/scholar-prior-person-continuity-review.json
+          if [ -f "$PERSON_REVIEW" ]; then
+            test -s "$PERSON_REVIEW"
+            ADDITIVE_REVIEW_ARGS+=(--prior-person-continuity-review "$PERSON_REVIEW")
           fi
           SUBSET_ARGS=()
           SUBSET_SELECTION=snapshot/status/browser-public-subset-current.json
