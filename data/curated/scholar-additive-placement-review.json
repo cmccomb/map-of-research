@@ -1,374 +1,110 @@
 {
   "schema_version": 1,
-  "prior_revision": "899fc3f0e9ea9e2a42dc95ab0fde1f6b59a4a166",
-  "source_snapshot_sha256": "8c9a874a058e51b52d7dcd98b501506e0f8fa163e5c825c47f6c0435db8c7189",
-  "selected_ids_sha256": "27ef9bba6b30270e75aa474835d485af1889df8acc8416603e027967802fcfb9",
-  "parent_map_sha256": "35a298b9e784ee2ed136630edfef7e9cc8b2b571cc3720da6533ab42f2b3ad55",
-  "candidate_map_content_sha256": "dfbe5f1a40958493ee1e0546b9d39163e9638a543ae07d433c36db83b639438d",
-  "new_work_ids_sha256": "adb6ce89c0a7b24b5c20930c0969c6699c9a313ed5ba5bc57d05c8cb29f8063d",
+  "prior_revision": "0f31584e1672f21350156d5ae69cd41ea4555621",
+  "source_snapshot_sha256": "197f99155cb1de37a6da5ba516e3fe6feac369a8c8f3a96329a8b87559f75390",
+  "selected_ids_sha256": "22f91fc4eb7902aa82d0e9dee797910c78cd1e45640211c268518e3916090e17",
+  "parent_map_sha256": "3c0481344bfa9d933e0e437804fce0e482cfe6e615ab6a00914313a35fde84ba",
+  "candidate_map_content_sha256": "1c857d253d9afdbeadf4f3bab39900ff0cc5290384e84cf22b41a060e27928a4",
+  "new_work_ids_sha256": "42f4864f618459d267ff98cb81032d4559cc4c1e0b663a7781b8b35c4658346e",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-10-31",
   "new_points": [
     {
-      "work_id": "work-04a287b0335729680c680d5c85441e17eca46934eb1f5f314c1a62007180d564",
+      "work_id": "work-09a838dd6c6770a0aacbf3c414ead09698b4d0a4981813283ee5c276c617dfd7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-05eeb795904e77c2bf4f6b869a157ee1b7ed06f97f3de5578f1c92fbd05bce22",
+      "work_id": "work-2c286e5261b468de21c240dfcf2c0526869d5de43b130b7cedc5e56c3b592836",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0a6ee9469bf8517fd40b2f25d9e8feeea7860b883c043aabe6a7d3ff35862a76",
+      "work_id": "work-2deec890cb347edbbd183674859f4cf3f09e2e0cd86aa0a9d1b00dfae0c79d27",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0bac817a033d3012c17fba46fedf945ec7908900fc2a976a4fdbde796dabad03",
+      "work_id": "work-3585bb83960c5b19ac79a2fc3b8cd8ba8f6ee5da4765c62d0dc858d62fd6560f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0ce99b95207e16092ef937f933efc7bdd1d4c990fae67b79be79a3e6da6c1dab",
+      "work_id": "work-3f622d1e2731506baa44da3409718a1a961a403b0c5162e45f38418dd4792807",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0f9e6e3108b5a7521d0eea1412b020160b6059fe9b96487d7c89bbd993624064",
+      "work_id": "work-568870d6625643e1ae3b149b7e91f6c9af42692f888c4026a032361d6c53d065",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-189fa688b15c64cbbc70a79a3ab9ad8eb1d22e3e441fbc2edbec1a52532b44f9",
+      "work_id": "work-5d1c8e5e477b66a9e704f7e4698a18afd8888df51d5d1106c7cbe071e0ff7259",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-1b177be50483a74d3643493c12c7f15cacea297e014270c072aceb08aadfafeb",
+      "work_id": "work-81e838a7cf7b429b315285ef27e87f1aab6679cc01d150af9229a2c2e745c306",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-1e5819521ea4ad3807f19bed31fcc758ea63ec0fbcec039a2c345d1f62c650d7",
+      "work_id": "work-949c4d23129349c4b8538683ad78a95833cb8e026ffe097b11c43c74763b3a13",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-2188534874c627e05bc84f5682303b0d10f01cad5c171ae50d5f70bbf36bfbd9",
+      "work_id": "work-9ca6928a81ab29db370bc1f923f4d6515ec3080105b1a003640cd49983809d03",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-2af3c2f6d47c9c2b308483e9dae272d1325d71ccc4b6852fbb6630dca730f7e7",
+      "work_id": "work-b8105c6c676dbddf282d3a3c269026e3a20b0c992a707fc3600a420f5d273135",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-2e7d01d360fd3e2a40aa87af99aed83ac8442c044359197a0ad5057a478ec5d6",
+      "work_id": "work-c0260427249d0346f4334767199e67c11aabfd52e63071d5fd0966f6a12e66df",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-2f819c13e8e32fb0e3e6c733fa536292fc3778d61b7d79fd4f14f37ed0019fd8",
+      "work_id": "work-c6d2d8ab759b0fb669d638fb3a646ddc2d40c3b01d80219d5d55cf2cea431458",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-37ea416d4e5d770ae29d1d08c6139bc5139c718cb8a5b2d0781b33c5cc08f95a",
+      "work_id": "work-ce06f9b6cad2a540333ee7a4718c8b7aac0328832089dfb972c5a778a3a43b9b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-491e3e30be0e89797aae2c2f863e2b8f4eac051e3328b4cac93469ebf80623af",
+      "work_id": "work-e2957c7d14ae1d6607083e02029cf53551cf8d8832c26e86560f0aab76331901",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-4a937db31d93d00d6a3f32e251dd9d0b93f07968c17ee9d5790dd4c3c78de857",
+      "work_id": "work-f70a29c84f951df2b967a15d235ae3e918cf06f4dbd77ea3aa11d39eaa61669c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-4b488e54d86c0378dccea7bcaf36fb329b3be5ace544748c749b50c69dee0be4",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-61aa32917249fe41d8a50762590c78cadb2205c159efbe1f9f9777fe72c2a897",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-62e4538a75d0958b3dbe64c55f77dea7876790ed553786cc3531b15914e663be",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-66c039c9c7a55315656777426ed79f8293ee30e0a2fe2ba9386b5f3a9bf8afc6",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-67c4b803d6d6211cc4ff4130401ce68512e7e3074d3074cfb2ff4b8001fa778a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-69202b185011b16894588200f5d6f4848fdb7265c35609bf83a3736272ed71e9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-70e6b6d18d6e45bde93280915c20ac6169b9c2793e985d01a602c4968ae2b513",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-74f461516cd3d8b741f1ebd3060c4f085bd9b365aa7a1bab60090e82a8ca2ffd",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-78884570ed01798382230d315a30f22c5871f7eeed4e292768d746ad2cfb9025",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-84c4a7fc445130a228a5fcd2592ce13e9de06fbaf9cfaf2579fdc394aec27132",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8673b88f804d3c2ccd60b9b5c26c8dc27c035b56419f95502dc1861f55318fad",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-87ab21829e8a1f7c79f7cdb2b1099e2c3261fe151f43d7effe7cea5c6afc3644",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-892203df41b644a5ce6d7d25dcbbe996c831b69fd87a5deeba363a23daba61de",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8a309ddea8f21b3d5bd1d4c08b2cb14bd647d483f4c056965c5b0a3a1c50ca21",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8c4ba72fbc8a608830218c977163218b21cee3cdbf17b1fe8a6e294e23797ca0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-9241d35ada10fb9c99ba0c8c0189e48e11519c204e65d6cfdef46a3e823c1558",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-97d6e6e21fcdf0f8eb3f95586d1dd98f9f3be1ad8532ef2c0d9e77b27db189e3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-995b3d71ac5489586f04237f453601f6829771746b4882bb1ad0cb9216d537c4",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-9b164da51729f2b5a01abf4bac30932a356ebc6cf400d82aae4668eae8dcc0d3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-a3405f66ede5c7b6bc6f2559e86723523a96ad07a2c6e657c3d535013ab2b0a7",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-a3f6b7626541839c0aebdf07f9b63b78d2df453ab3e87660972164c7c1bbb743",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-a7654cf4a327197c8db089d4d863a05e3b8c55d92a34e206d1cabcb6c8d9c47d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-a7ed3ab2bc2a44e38876e3ec12eb27ec0a3965ce7ecc659a696b1a36cd21107f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-ab0a871e0c64547edd66a54dae042d7c5e6ca0fb08350e772a61690643da47de",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b0554db74e04d54dd68c67f81a04821ffeaf6b055148405ec3d4aa591a31f479",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b21660f5d4fd7ce9702ccc972b86dabcdb398fa561168aeea1c90437fbf66855",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b3b23c86e92cbb8622e17d3106a1e95872579f30d884496629c76177fb09bdc9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b4fa94890d26409f13057bca8921a88ccbe55c0c5e197ba612271c0a37759e25",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b7a16ccf694b05e1705a5b31ef7197ae04f799b5604fb509404b9fb60c02c14f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-b8918e442a741fe9720264148a72db28396a84e1076ee0cb842195696cb0f7ce",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-c0817b328127afaa8e65b4979f515f417f6f992aa7f026fb1b0f4564abbc3595",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-c4ce7f2b9f4b483a4fcc1974486e853dca47d566f0454d439ded9cce7cd42641",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-cb7afca91e387edf00907bc317f6ad7a04d4ff2367f1857a26cfb375b4ca45d2",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-d0cfd97ebf50dedf212faacc66e8a27b60e929b93a9d1de60a390d52bf51f9f4",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-d648ac347872ab5fc69af9b19bfe2f772cf7f239cc7acb6587fbb515fc78f76f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-e1872974c96a7e4d10f80352156134009607376e14805054f80a94112b4fea5b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-e19c3c3b016e964abf6036bdaf4230c08d6d576fbe2316c33e2efb8c3db1cb3c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-e2ba0357ec7117902ceb4b92d799baef4a4cdd6d125dfc9647ae751f0e5cf23d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-e4647787801480af62774ec139ff63ca4a1a45423865f1b30916fb27bd5b2e8c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-e555aa3903a9df7defa458fd65909b6f78e50b2bd91bf1035d606496f4acd0f0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-ea1b4e9f9891c3cb431ff7683dae708fc8f3a3702d3dcf2bbddbec423fd9354e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-eff27763a640c66c930f7873bf8d78d7382cf0916c300362d3ba774d4c9de783",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-f5682f02d99985f8eefe82fdb35ee677388ca03a9bc9cbe96640394eda2fbd4e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
-    },
-    {
-      "work_id": "work-ff5189e12b29d51563668038e62d23082cfed750d7b3db4135eb0ddcbb63833c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Vincent original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub899fc are unreviewed; keep this work pending and nonspatial."
+      "rationale": "Rayid original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub0f315 are unreviewed; keep this work pending and nonspatial."
     }
   ]
 }
