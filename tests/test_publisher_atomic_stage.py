@@ -423,6 +423,7 @@ def _stage(monkeypatch, tmp_path, *, bio=False, gate_status="pass", pending=Fals
 
     monkeypatch.setattr(publisher, "_write_map_artifacts", map_files)
     monkeypatch.setattr(publisher, "_to_hub_dataset", Dataset)
+    monkeypatch.setattr(publisher, "require_staged_people_equal", lambda *args: None)
     monkeypatch.setattr(publisher, "build_updated_dataset_card", lambda *args: "card")
     monkeypatch.setattr(publisher, "commit_atomic_release", commit)
     manifest = tmp_path / "repair.json"
@@ -518,6 +519,7 @@ def test_material_presentation_drift_stops_before_atomic_commit(
             prior_profiles=[],
             prior_people=_prior_bio_people(),
             enforce_presentation_drift=True,
+            prior_person_continuity_receipt={"status": "pass"},
         )
     assert [event for event, _ in calls] == ["map"]
 
@@ -628,6 +630,7 @@ def test_additive_reports_use_pinned_source_and_keep_drift_gate(monkeypatch, tmp
         prior_works=[],
         reported_faculty_coauthors_by_work={"work": [{"person_id": "coauthor"}]},
         enforce_presentation_drift=True,
+        prior_person_continuity_receipt={"status": "pass"},
         preserve_deletion_presentation=True,
     )
     assert [event for event, _ in calls] == ["candidate", "preserve", "map", "commit"]
@@ -669,6 +672,7 @@ def test_reviewed_presentation_gate_is_in_manifest_and_atomic_intent(
         prior_profiles=[],
         prior_people=_prior_bio_people(),
         enforce_presentation_drift=True,
+        prior_person_continuity_receipt={"status": "pass"},
     )
     assert [event for event, _ in calls] == ["map", "commit"]
     assert calls[-1][1]["prewrite_gate"]["presentation_drift"]["status"] == (
@@ -717,6 +721,7 @@ def test_deletion_only_preservation_is_reported_before_atomic_commit(
         prior_people=_prior_bio_people(),
         prior_works=[],
         enforce_presentation_drift=True,
+        prior_person_continuity_receipt={"status": "pass"},
         preserve_deletion_presentation=True,
     )
     assert [event for event, _ in calls] == ["map", "commit"]
@@ -783,6 +788,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     )
     review_path = tmp_path / "placement.json"
     review_path.write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(publisher, "require_staged_people_equal", lambda *args: None)
     publisher._publish_atomic_release(
         tables,
         _bio_registry(),
@@ -804,6 +810,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         enforce_presentation_drift=True,
         preserve_deletion_presentation=True,
         additive_placement_review_path=review_path,
+        prior_person_continuity_receipt={"status": "pass"},
     )
     assert received == {
         "prior_revision": "a" * 40,
@@ -816,6 +823,57 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
     assert [event for event, _ in calls] == ["map", "commit"]
     assert len(checked_staged_works) == 1
     assert calls[-1][1]["prewrite_gate"]["presentation_preservation"] == receipt
+
+
+def test_additive_internal_stage_requires_prior_person_receipt(monkeypatch, tmp_path):
+    _, tables, manifest = _stage(monkeypatch, tmp_path)
+    tables["profile_publications"] = pandas.DataFrame(
+        {"author_pub_id": ["owner:row-1"]}
+    )
+    monkeypatch.setattr(
+        publisher,
+        "_pinned_parent_map",
+        lambda **kwargs: ({"points": []}, "parent-sha"),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "build_map_artifact",
+        lambda *args, **kwargs: {"points": [{"work_id": "new"}]},
+    )
+    monkeypatch.setattr(
+        publisher,
+        "preserve_reviewed_additive_presentation",
+        lambda works, *args, **kwargs: (
+            works,
+            {"held_new_work_ids": [], "excluded_new_work_reasons": {}},
+        ),
+    )
+    monkeypatch.setattr(publisher, "build_pending_publications", lambda *args: [])
+    monkeypatch.setattr(
+        publisher, "require_parent_pending_list_preserved", lambda *args: None
+    )
+    with pytest.raises(ValueError, match="prior-person continuity gate"):
+        publisher._publish_atomic_release(
+            tables,
+            _bio_registry(),
+            source_frame=pandas.DataFrame({"source": [1]}),
+            source_manifest={
+                "snapshot_sha256": "source-sha",
+                "reported_faculty_coauthors_sha256": "a" * 64,
+            },
+            hf_token="token",
+            prior_revision="a" * 40,
+            atomic_intent_sink=lambda intent: None,
+            generated_at_utc="2026-10-30T00:00:00+00:00",
+            continuity_receipt={"prior_revision": "a" * 40},
+            repair_manifest_path=manifest,
+            provisional_holds={},
+            prior_profiles=[],
+            prior_people=_prior_bio_people(),
+            prior_works=[],
+            enforce_presentation_drift=True,
+            additive_placement_review_path=tmp_path / "placement.json",
+        )
 
 
 def test_reviewed_additive_path_requires_pinned_parent_map(
@@ -1029,6 +1087,7 @@ def test_deletion_preservation_missing_parent_works_stops_before_stage(
             prior_profiles=[],
             prior_people=_prior_bio_people(),
             enforce_presentation_drift=True,
+            prior_person_continuity_receipt={"status": "pass"},
             preserve_deletion_presentation=True,
         )
     assert calls == []
@@ -1070,6 +1129,7 @@ def test_presentation_gate_rejects_invalid_staged_manifest_before_hub(
             prior_profiles=[],
             prior_people=_prior_bio_people(),
             enforce_presentation_drift=True,
+            prior_person_continuity_receipt={"status": "pass"},
         )
     assert [event for event, _ in calls] == ["map"]
 

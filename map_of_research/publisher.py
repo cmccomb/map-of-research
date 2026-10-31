@@ -173,6 +173,11 @@ from .presentation_drift import (
     require_preserved_additive_artifact,
     require_preserved_additive_staged_works,
 )
+from .prior_person_continuity import (
+    read_pinned_prior_people,
+    require_prior_person_continuity,
+    require_staged_people_equal,
+)
 from .private_subset_preflight import require_private_preflight_receipt
 from .profile_releases import (
     DEFAULT_PROFILE_RELEASES_PATH,
@@ -1530,6 +1535,7 @@ def _publish_atomic_release(
     preserve_deletion_presentation: bool = False,
     additive_placement_review_path: Path | None = None,
     parent_pending_work_ids: Sequence[str] = (),
+    prior_person_continuity_receipt: Mapping[str, Any] | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Stage every output, run Bio gates, then commit seven files once."""
 
@@ -1695,6 +1701,16 @@ def _publish_atomic_release(
             parent_map, pending_publications, parent_pending_work_ids
         )
 
+    # Every ordinary atomic publish writes people, even without an additive
+    # placement review. Never let omission of that flag bypass person parity.
+    if (
+        enforce_presentation_drift
+        and not bio_release
+        and composite_plan is None
+        and not isinstance(prior_person_continuity_receipt, Mapping)
+    ):
+        raise ValueError("Ordinary release lacks prior-person continuity gate")
+
     with tempfile.TemporaryDirectory(prefix="map-of-research-atomic-release-") as temp:
         root = Path(temp)
         staged: dict[str, tuple[Any, Path]] = {}
@@ -1706,6 +1722,10 @@ def _publish_atomic_release(
             dataset.to_parquet(str(path))
             staged[config_name] = (dataset, path)
             files[f"{config_name}/{path.name}"] = path
+        if prior_person_continuity_receipt is not None:
+            require_staged_people_equal(
+                staged["people"][1], tables["people"].to_dict("records")
+            )
         if additive_placement_review_path is not None:
             require_held_additive_staged_works(staged["works"][1], preservation_receipt)
             require_excluded_additive_staged_works(
@@ -1915,6 +1935,8 @@ def _publish_atomic_release(
             gate["presentation_drift"] = presentation_receipt
             if preservation_receipt is not None:
                 gate["presentation_preservation"] = preservation_receipt
+        if prior_person_continuity_receipt is not None:
+            gate["prior_person_continuity"] = dict(prior_person_continuity_receipt)
         return commit_atomic_release(
             files,
             prewrite_gate=gate,
@@ -1974,6 +1996,7 @@ def publish_snapshot(
     coauthor_binding_approval_path: Path = DEFAULT_COAUTHOR_BINDING_APPROVAL_PATH,
     presentation_drift_approval_path: Path | None = None,
     additive_placement_review_path: Path | None = None,
+    prior_person_continuity_review_path: Path | None = None,
     curated_works_path: Path = DEFAULT_CURATED_WORKS_PATH,
     math_region_review_path: Path = DEFAULT_REGION_REVIEW_PATH,
     chem_region_review_path: Path = DEFAULT_CHEM_REGION_REVIEW_PATH,
@@ -1988,6 +2011,15 @@ def publish_snapshot(
         and region_comparison_revision not in (None, prior_revision)
     ):
         raise ValueError("Additive placement requires the exact parent comparison")
+    expected_person_review_path = (
+        snapshot_path.parent.parent
+        / "data/curated/scholar-prior-person-continuity-review.json"
+    )
+    if prior_person_continuity_review_path is not None and (
+        prior_person_continuity_review_path.resolve()
+        != expected_person_review_path.resolve()
+    ):
+        raise ValueError("Prior-person review must be source-relative")
     if atomic_release is False:
         raise ValueError("Live publish requires one atomic Hub commit")
     if atomic_intent_sink is None:
@@ -2305,6 +2337,17 @@ def publish_snapshot(
             revision=prior_revision,
         )
     )
+    prior_people_full = None
+    parent_people_sha256 = None
+    ordinary_person_gate = (
+        comparison_revision == prior_revision
+        and not frozen_bio_source
+        and composite_plan is None
+    )
+    if ordinary_person_gate:
+        prior_people_full, parent_people_sha256 = read_pinned_prior_people(
+            repo_id=REPO_ID, prior_revision=prior_revision, hf_token=hf_token
+        )
     if not prior_works or not prior_profiles:
         raise RuntimeError("Pinned prior dataset lacks region continuity tables")
     parent_pending_work_ids: list[str] = []
@@ -2542,6 +2585,23 @@ def publish_snapshot(
     )
     require_no_provisional_hold_contributions(tables, provisional_holds)
     require_public_subset_boundary(tables, release_receipt)
+    prior_person_continuity_receipt = None
+    if ordinary_person_gate:
+        prior_person_continuity_receipt = require_prior_person_continuity(
+            prior_people_full,
+            tables["people"].to_dict("records"),
+            prior_profiles,
+            tables["profile_publications"].to_dict("records"),
+            tables["authorships"].to_dict("records"),
+            tables["works"].to_dict("records"),
+            release_receipt,
+            prior_revision=prior_revision,
+            parent_people_sha256=parent_people_sha256,
+            source_snapshot_sha256=str(manifest["snapshot_sha256"]),
+            producer_commit=os.environ.get("MAP_PRODUCER_COMMIT", ""),
+            producer_people_registry_sha256=sha256_file(people_path),
+            review_path=prior_person_continuity_review_path,
+        )
     held_topic_parent_artifact = None
     held_topic_parent_map_sha256 = None
     if (
@@ -2645,6 +2705,7 @@ def publish_snapshot(
         preserve_deletion_presentation=True,
         additive_placement_review_path=additive_placement_review_path,
         parent_pending_work_ids=parent_pending_work_ids,
+        prior_person_continuity_receipt=prior_person_continuity_receipt,
     )
     dataset_commits = dict.fromkeys(DATASET_CONFIGS, artifact_commit)
     related_mask = (
@@ -2945,6 +3006,11 @@ def _parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         help="Review placement or map hold for each new work point",
     )
+    parser.add_argument(
+        "--prior-person-continuity-review",
+        type=Path,
+        help="Source-bound exact-parent review of prior people provenance",
+    )
     parser.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
     parser.add_argument("--math-cache-dir", type=Path)
     parser.add_argument("--math-capture-dir", type=Path)
@@ -3065,6 +3131,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             coauthor_binding_approval_path=args.coauthor_binding_approval,
             presentation_drift_approval_path=args.presentation_drift_approval,
             additive_placement_review_path=args.additive_placement_review,
+            prior_person_continuity_review_path=args.prior_person_continuity_review,
             source_cache_dir=args.scholar_cache_dir,
             primary_home_baseline_path=args.primary_home_baseline,
             prior_revision=args.prior_revision,

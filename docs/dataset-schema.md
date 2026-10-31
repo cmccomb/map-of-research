@@ -47,6 +47,33 @@ affect publication collection.
 `included_school_ids` and school information on memberships are derived from
 the validated registry; they are not a second identity or collection key.
 
+### Ordinary-release prior-person continuity
+
+Before every ordinary atomic upload, the producer reads every column and row of the
+immutable parent's `people` Parquet. It compares every prior person against the
+candidate, including nested memberships and null fields. New observations may
+increase the five published count fields only when their exact source identities
+appear in a reviewed selected-profile receipt. Observation counts must equal
+the newly selected rows; unique and mapped work counts must match the candidate
+authorship and work tables, with growth bounded by those selected rows. All
+other prior-person fields remain exact unless an explicit review permits them.
+
+The first review contract is restricted to Hoda Heidari's four primary-home
+source URL and verification-date fields. The review is stored only on the
+source snapshot branch as
+`data/curated/scholar-prior-person-continuity-review.json`, and is checked
+against the exact Hub parent, parent people Parquet SHA-256, source snapshot
+SHA-256, merged producer commit, and producer `registry/people.csv` SHA-256.
+It must name the original and replacement values for all four fields. An
+unneeded, partial, or stale review fails. The producer also compares every
+staged `people` Parquet field with its approved prewrite table before the
+atomic Hub write. This person review does not release any Hoda publications;
+those require the separate selected-only and publication gates. Remove the
+source-relative review after its exact one-time correction is published. This
+gate applies whether or not the upload uses an additive placement manifest;
+the frozen historical Bio and composite release paths retain their dedicated
+person-continuity reviews.
+
 ## `profile_publications`
 
 One row per publication observation on one Scholar profile or an explicitly

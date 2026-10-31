@@ -2271,6 +2271,16 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     if pinned:
         monkeypatch.setattr(
             publisher,
+            "read_pinned_prior_people",
+            lambda **kwargs: ([{"person_id": "fixture"}], "a" * 64),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "require_prior_person_continuity",
+            lambda *args, **kwargs: {"status": "pass"},
+        )
+        monkeypatch.setattr(
+            publisher,
             "_require_current_dataset_revision",
             lambda **kwargs: baseline_checks.append(kwargs["prior_revision"]),
         )
@@ -2485,6 +2495,8 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
     )
     assert result["atomic_release"] == {"mode": "single_parent_commit"}
     assert len(atomic_calls) == 1
+    if pinned and not bio_intent and not region_override:
+        assert atomic_calls[-1]["prior_person_continuity_receipt"] == {"status": "pass"}
     if bio_intent and reuse_order:
         assert len(approval_loads) == 1
         assert approval_loads[0][0] == tmp_path / "approval.json"
@@ -2648,6 +2660,16 @@ def test_publish_snapshot_holds_complete_profile_before_public_tables(
             if config == "people"
             else [{"author_pub_id": "curated:independent"}]
         ),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "read_pinned_prior_people",
+        lambda **kwargs: ([{"person_id": "prior-bio"}], "a" * 64),
+    )
+    monkeypatch.setattr(
+        publisher,
+        "require_prior_person_continuity",
+        lambda *args, **kwargs: {"status": "pass"},
     )
     receipt = {
         "prior_revision": "a" * 40,
