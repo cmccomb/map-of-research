@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "128b2765e53a16b4d825a2826bc962fb95ee2b52",
-  "registry_producer_commit": "073b844f27e4ff06cccfc85e46db42834e6edf0e",
+  "base_source_status_commit": "165d3182f36b426898155abdefbb61fae26d7524",
+  "registry_producer_commit": "047a6caba26a97c2cd078e1d3707e042b125c251",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1839,16 +1839,74 @@
         "withheld_ids_sha256": "8dbec6be64db77416ec1d7ee0ab86f389d8e07e2a82d1a6d50a265fd086d8b2a"
       },
       "cache_sha256": "72a89c7df4706b93f46401f58142f50539172302a7c9a286ba4f50d1c0f72c3f"
+    },
+    {
+      "slug": "max-simchowitz",
+      "person_id": "person-maxsimchowitz-e43dffcb",
+      "scholar_id": "HjmSOFEAAAAJ",
+      "expected_source_rows": 38,
+      "selected_author_pub_ids": [
+        "HjmSOFEAAAAJ:3fE2CSJIrl8C",
+        "HjmSOFEAAAAJ:3s1wT3WcHBgC",
+        "HjmSOFEAAAAJ:4JMBOYKVnBMC",
+        "HjmSOFEAAAAJ:8k81kl-MbHgC",
+        "HjmSOFEAAAAJ:HDshCWvjkbEC",
+        "HjmSOFEAAAAJ:JV2RwH3_ST0C",
+        "HjmSOFEAAAAJ:KlAtU1dfN6UC",
+        "HjmSOFEAAAAJ:L8Ckcad2t8MC",
+        "HjmSOFEAAAAJ:LkGwnXOMwfcC",
+        "HjmSOFEAAAAJ:M3NEmzRMIkIC",
+        "HjmSOFEAAAAJ:M3ejUd6NZC8C",
+        "HjmSOFEAAAAJ:MXK_kJrjxJIC",
+        "HjmSOFEAAAAJ:NMxIlDl6LWMC",
+        "HjmSOFEAAAAJ:Se3iqnhoufwC",
+        "HjmSOFEAAAAJ:TQgYirikUcIC",
+        "HjmSOFEAAAAJ:UeHWp8X0CEIC",
+        "HjmSOFEAAAAJ:UebtZRa9Y70C",
+        "HjmSOFEAAAAJ:W7OEmFMy1HYC",
+        "HjmSOFEAAAAJ:WF5omc3nYNoC",
+        "HjmSOFEAAAAJ:Wp0gIr-vW9MC",
+        "HjmSOFEAAAAJ:YOwf2qJgpHMC",
+        "HjmSOFEAAAAJ:YsMSGLbcyi4C",
+        "HjmSOFEAAAAJ:ZeXyd9-uunAC",
+        "HjmSOFEAAAAJ:_FxGoFyzp5QC",
+        "HjmSOFEAAAAJ:_Qo2XoVZTnwC",
+        "HjmSOFEAAAAJ:_kc_bZDykSQC",
+        "HjmSOFEAAAAJ:dhFuZR0502QC",
+        "HjmSOFEAAAAJ:hC7cP41nSMkC",
+        "HjmSOFEAAAAJ:hMod-77fHWUC",
+        "HjmSOFEAAAAJ:hqOjcs7Dif8C",
+        "HjmSOFEAAAAJ:iH-uZ7U-co4C",
+        "HjmSOFEAAAAJ:j3f4tGmQtD8C",
+        "HjmSOFEAAAAJ:kNdYIx-mwKoC",
+        "HjmSOFEAAAAJ:ldfaerwXgEUC",
+        "HjmSOFEAAAAJ:qUcmZB5y_30C",
+        "HjmSOFEAAAAJ:qjMakFHDy7sC",
+        "HjmSOFEAAAAJ:qxL8FJ1GzNcC",
+        "HjmSOFEAAAAJ:r0BpntZqJG4C"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 97,
+        "private_capture_sha256": "5d16171bb2e0e55db9687b5762164e9e3a8edd65809a81a71ac1c1efe9547444",
+        "private_review_sha256": "08ebc5abd4488deaea289a46eb3db61ee60237b929c97884355687f6f01f960d",
+        "private_rendered_html_sha256": "4f54a8e4a97b341adc2837280bbb34aed45a6c95bb8a14c4f3e1fa40a5eca26b",
+        "selected_ids_sha256": "0d2bc973118a3c662db49a4e73ba3945bf884cb9e52d347c612485caf313c4da",
+        "withheld_rows": 59,
+        "withheld_hold_rows": 54,
+        "withheld_excluded_rows": 5,
+        "withheld_ids_sha256": "c2b8dd196c01f5abcb765e72a44f20bc0b4ba5df40349637ecd2cd3bee550fac"
+      },
+      "cache_sha256": "866dac64875ff2e44b070ff88691e1dd1cda41eb5d0f73a3ea038cb0e2d548ca"
     }
   ],
   "totals": {
-    "observed_visible_rows": 3350,
-    "selected_rows": 1216,
-    "withheld_hold_rows": 1940,
-    "withheld_excluded_rows": 194,
-    "withheld_rows": 2134
+    "observed_visible_rows": 3447,
+    "selected_rows": 1254,
+    "withheld_hold_rows": 1994,
+    "withheld_excluded_rows": 199,
+    "withheld_rows": 2193
   },
-  "selected_ids_sha256": "59e55c701b35473fbe87a0969725240f157ae3227ce09c71f107a3245b9f0bd8",
-  "withheld_ids_sha256": "b1f74c46891e4f999efe536bddc0f8d1588f2f1e41f87e70a9403eb625a877f8",
+  "selected_ids_sha256": "55fe421357e386b332f53761e11e62ae96e53c5c889f43a0c9d1d61976f5b5e5",
+  "withheld_ids_sha256": "f798e80f21c7689e4c5f8a43deb6bdbf9c9a54fc74b9dfca52e5f85bed86ba35",
   "private_capture_files_or_html_copied": false
 }
