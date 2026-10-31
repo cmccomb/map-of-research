@@ -1495,6 +1495,26 @@
         "withheld_excluded_rows": 50,
         "withheld_ids_sha256": "9c5c7c68449f93dc6822001ef1016d792b63e5ce51d9ecb3cbee15b51cfc7b55"
       }
+    },
+    {
+      "person_id": "person-christiancubasamaniego-791497de",
+      "scholar_id": "F5JTlEcAAAAJ",
+      "state": "released",
+      "expected_source_rows": 16,
+      "cache_sha256": "90871cc11c2be71da076c541bb0404ecda7c0c86be7176ae6644e49ad9e7339d",
+      "reason": "Local private-stage candidate: 16 original-document-supported observations from 53 complete visible Chrome rows; 37 other captured rows remain private (34 holds, 3 exclusions). All new works require exact placement and topic review and remain pending/off spatial map. This decision alone does not authorize upload.",
+      "reviewed_at": "2026-10-31",
+      "public_subset": {
+        "observed_visible_rows": 53,
+        "private_capture_sha256": "5caf5ce7fa01179ee84f5ad006fadcdfcb9d39ef97e67bfd54862eec0fadfd79",
+        "private_review_sha256": "5ee0723abf6c5ba951e44d74644fdec50173478ba04d52750c36b9c09e388d3d",
+        "private_rendered_html_sha256": "bfb13eab62cd6c8260f12429804755637c6be425772360ae994f3162a3b3f7d7",
+        "selected_ids_sha256": "1ed9551b80d9a17d53b0050cd6379ddafdb4573aa985f7b7124559305512ae5b",
+        "withheld_rows": 37,
+        "withheld_hold_rows": 34,
+        "withheld_excluded_rows": 3,
+        "withheld_ids_sha256": "e2e456ca4cc70198a8b9ed7fdb78d3a74ba59383ef6f52961a268fae4df02d70"
+      }
     }
   ]
 }

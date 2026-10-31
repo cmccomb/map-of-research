@@ -678,6 +678,36 @@
       "basis": "Original scholarly document and independent selected-only review establish the canonical venue or complete citation.",
       "evidence_url": "https://www.cs.cmu.edu/~ckaestne/pdf/tosem21.pdf",
       "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "F5JTlEcAAAAJ",
+      "author_pub_id": "F5JTlEcAAAAJ:RHpTSmoSYBkC",
+      "expected": {
+        "title": "Computational characterization of recombinase circuits for periodic behaviors",
+        "year": 2023,
+        "venue": "Iscience 26 (1)"
+      },
+      "corrected": {
+        "venue": "iScience 26(1), Article 105624"
+      },
+      "basis": "Publisher-version iScience article deposited by a coauthor confirms article number 105624 in volume 26(1), January 2023.",
+      "evidence_url": "https://giuliagiordano.dii.unitn.it/docs/papers/Journal/J060_2023_iScience.pdf",
+      "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "F5JTlEcAAAAJ",
+      "author_pub_id": "F5JTlEcAAAAJ:Wp0gIr-vW9MC",
+      "expected": {
+        "title": "Ultrasensitive molecular controllers for quasi-integral feedback",
+        "year": 2021,
+        "venue": "Cell Systems 12 (3), 272-288. e3"
+      },
+      "corrected": {
+        "venue": "Cell Systems 12(3), pp. 272–288.e3"
+      },
+      "basis": "NSF-deposited publisher-version Cell Systems article confirms volume 12(3) and pages 272–288.e3 in March 2021.",
+      "evidence_url": "https://par.nsf.gov/servlets/purl/10274110",
+      "verified_at": "2026-10-31"
     }
   ]
 }
