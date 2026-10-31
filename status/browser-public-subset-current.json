@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "f3e976accf9065e728d8503cf5fd76ef71a5d9e7",
-  "registry_producer_commit": "66f83c37fc9d30ba11b14a651cf832c61c5dd885",
+  "base_source_status_commit": "47da42f4c25b5eb4b0198c693495c82567b8c45f",
+  "registry_producer_commit": "43a51942ceef4852cbf3d97487fd601cbc9c14c6",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1669,16 +1669,60 @@
         "withheld_ids_sha256": "e2e456ca4cc70198a8b9ed7fdb78d3a74ba59383ef6f52961a268fae4df02d70"
       },
       "cache_sha256": "90871cc11c2be71da076c541bb0404ecda7c0c86be7176ae6644e49ad9e7339d"
+    },
+    {
+      "slug": "fei-fang",
+      "person_id": "person-feifang-031e00dc",
+      "scholar_id": "R6jE0VEAAAAJ",
+      "expected_source_rows": 24,
+      "selected_author_pub_ids": [
+        "R6jE0VEAAAAJ:-mN3Mh-tlDkC",
+        "R6jE0VEAAAAJ:1Ye0OR6EYb4C",
+        "R6jE0VEAAAAJ:4TOpqqG69KYC",
+        "R6jE0VEAAAAJ:6_hjMsCP8ZoC",
+        "R6jE0VEAAAAJ:DJbcl8HfkQkC",
+        "R6jE0VEAAAAJ:DkZNVXde3BIC",
+        "R6jE0VEAAAAJ:FAceZFleit8C",
+        "R6jE0VEAAAAJ:FPJr55Dyh1AC",
+        "R6jE0VEAAAAJ:OBSaB-F7qqsC",
+        "R6jE0VEAAAAJ:P7Ujq4OLJYoC",
+        "R6jE0VEAAAAJ:PyEswDtIyv0C",
+        "R6jE0VEAAAAJ:XoXfffV-tXoC",
+        "R6jE0VEAAAAJ:cWzG1nlazyYC",
+        "R6jE0VEAAAAJ:fbc8zXXH2BUC",
+        "R6jE0VEAAAAJ:foquWX3nUaYC",
+        "R6jE0VEAAAAJ:hSRAE-fF4OAC",
+        "R6jE0VEAAAAJ:hsZV8lGYWTMC",
+        "R6jE0VEAAAAJ:lgwcVrK6X84C",
+        "R6jE0VEAAAAJ:nRpfm8aw39MC",
+        "R6jE0VEAAAAJ:nZcligLrVowC",
+        "R6jE0VEAAAAJ:qjMakFHDy7sC",
+        "R6jE0VEAAAAJ:sJsF-0ZLhtgC",
+        "R6jE0VEAAAAJ:v1_lew4L6wgC",
+        "R6jE0VEAAAAJ:yqoGN6RLRZoC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 230,
+        "private_capture_sha256": "ae373c10b685778924f382928a3686fd3883358eab2e65bb949e938ce3d3713b",
+        "private_review_sha256": "e574e25f9f9b72b321b235a4928ac0d822cf3d9ee781a9f23a520eed8610b550",
+        "private_rendered_html_sha256": "d41dcfb2956ec1afd7d0989b9110ba09eee126814fd88fd9b8c700307f39ff35",
+        "selected_ids_sha256": "b4dadbb21cf2ad9b609b2655381a616e5431d459a96e7a04607b4469cd145c4e",
+        "withheld_rows": 206,
+        "withheld_hold_rows": 204,
+        "withheld_excluded_rows": 2,
+        "withheld_ids_sha256": "bfb20a41e8d0781c0a21ce102e01cbcb7ff534c3ab1d2c0ce6a8b26093a5a471"
+      },
+      "cache_sha256": "10ce5007eba58fbd3471133aa53b2ecbb6cc655fc907a39d7966631cde9987bd"
     }
   ],
   "totals": {
-    "observed_visible_rows": 2699,
-    "selected_rows": 1126,
-    "withheld_hold_rows": 1388,
-    "withheld_excluded_rows": 185,
-    "withheld_rows": 1573
+    "observed_visible_rows": 2929,
+    "withheld_hold_rows": 1592,
+    "withheld_excluded_rows": 187,
+    "withheld_rows": 1779,
+    "selected_rows": 1150
   },
-  "selected_ids_sha256": "bb869ae3c1c5eb8e49b5e17b0182bcd3eeaa0ef862d37192d40905ef4aa27636",
-  "withheld_ids_sha256": "12382dde095290f686585980239f2a537c9880e27793576eff30af6bc41bd63d",
+  "selected_ids_sha256": "02d0503b5eebe97a2504f7b9181ba39670480d94ce4296afaad8c2e481babc82",
+  "withheld_ids_sha256": "8d621826415f5d2630bef4d09e0bf6a4b86a6025696bfe1ac55880d10fc66b78",
   "private_capture_files_or_html_copied": false
 }
