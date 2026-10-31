@@ -1,236 +1,68 @@
 {
   "schema_version": 1,
-  "prior_revision": "7afbe9db0a4aadb011633edd7ac7432a1cc89ca5",
-  "source_snapshot_sha256": "87bc93d3838af8050a07bc406a5efdf338b3f5e3c2d601bb09e9ab9e11da887b",
-  "selected_ids_sha256": "55d5a958d91df1ee9242553ef267e8816758b5c0892a9052f8f32b8361aca916",
-  "parent_map_sha256": "531418b49e2ab7ba1b6ba67de1c065a346cd0c154a1fbff8e4607b54609e6b3f",
-  "candidate_map_content_sha256": "723bf6cb1149913543123115cb496a14d4b2422efe0c0d01586d7a0e910f9b87",
-  "new_work_ids_sha256": "925966dd3fa1674ef23b847a1323363d1066ce4caaf5646779070613bc655548",
+  "prior_revision": "95d2c5b4757ae38db99ea1fd5828747e9ac62067",
+  "source_snapshot_sha256": "458082fc24ed110651c4f4e1617a0d6835673363e6e37621708bfb70bcd5a339",
+  "selected_ids_sha256": "7dfc89af3ee74c86281cc4a52fd680ccf5d9f43ab1cd3a69a400213e696deb44",
+  "parent_map_sha256": "8581a2dfd9a6e39efb19a5a59c259420c915cf6aefcfe13d1b226628e28ea518",
+  "candidate_map_content_sha256": "b941b790dbd27543a7b445e6bf57ac835828c3202d5d6d8766277dac7005dabb",
+  "new_work_ids_sha256": "4cdd3ed5a3a29ee134eb0f748df93db3213536ba8de57ea52916b6b9c990a82a",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-10-31",
   "new_points": [
     {
-      "work_id": "work-0aa2f01015c30511f4683effdecbba8902aad980585b6649bfa812f521c35ab6",
+      "work_id": "work-07e17f31650a5140822fda5fd06ec8c995f011e2e1302f1a44bc72a8b202f410",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-0c12e50dd59a5c54375880bf978b17ad35f517e6dc1fe85d26ced1032808aa06",
+      "work_id": "work-0b8e55f146f98462230667700953594d846550d8e585ce7055b778dc8f5ba49e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-122af78280bca185bbcefc332186924e83a34cde899245b34f95bbdf3578cc8f",
+      "work_id": "work-1f89cd6186fb8838dfd4be7cb53685deb39f249b2953509250d5b3e116846b21",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-1819f41d9dc3c378eab5936a0cd9dcc59da49b8cf0159272184663b3bd91f96e",
+      "work_id": "work-43ceac61abefca0652f3fcf6feccdb0f22665ba2828921dc074c2a01cc614999",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-183dbe444fa8f018126a6597204795b09bcb9912887c261f2d768ef535bbe1d4",
+      "work_id": "work-8360ca98b421be19517a7dab559f4fc4d9a3188e3551806de3c8fee0ae365fb1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-254b520ca88638ebefefc6e9ba0f1f2a195ad72d5b9b4c3415550564ee52a803",
+      "work_id": "work-846a786f889b3edbf19a52c421afc954fdab69e1442e4228bd5e79633070e162",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-28fa460adced187bde1e646293d7a7b637782ceaf6cf5c3162ff8c4db9e9f2de",
+      "work_id": "work-bbf338435a020e822d7e2be513c2eaf8e565c0fb78d9efeda483c06c33199a64",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-2b0ab8746bd67b43c02acd3f7c4dad5d9c2bcc52ea480b1c0aea27860f180faa",
+      "work_id": "work-d38399a77f40380e3672b8a170c131ecae087a33e81f43eb6aae40d8381470d1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     },
     {
-      "work_id": "work-3840d192cc8106d2708a704c3b60329d08d3c19cdfe7ff4581357fbf77a54c88",
+      "work_id": "work-e5b5c5d52d663e9aff79b57ae371b7242468d13f38fdc30260c4edddba0638f3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-3b6a0876f016e1bea021a4ae285d791e2ed989ca32bd79a3cef9ba50150da970",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-3fa498b189af0396b4069cf6f9fe47317dfc418da9c5e83871a82b41da0d4125",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-4ec1ab62e3ca97a1fc938d78b91d2ab735512b62bf0abf91e0d0f859e5dc7b30",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-55a650850695cd96f2448749b12cbce558087e3b868f1b8c56954b181f89df7a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-570fce6ace1e52abba49b6752e82aecea2a73fb854bf817ce2cbb1c1c16f52cd",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-5789ffe8c4bcdc9991789da0747a32d9be77907d0f8442f94faea0f3c750a692",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-6179768d1e5c207e9f01354e58b7abf6b5055a03159869564b646f3b58e7fa3d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-687b0eef7f00a1ea155f1de3e0e390ec08c5f203b0bd75f0f2b925a3d8d02799",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-79f20932189ed9fb7a869ae704f0b71454d9be16af377efe9efd89f55f540538",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-7f4505508e18c21a2c55259a419c0753c27128ad577d05ae9f41f3f7dd1a250f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-83709489712ee2585e20bc0bdcd54e6b438404bed8d815046a039fcc638dbb65",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8591357f3f3667b8c0605b7f0c077aa2ec4c04398389dbb1335371e70bc9ace0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-87ec927f81bc50db98a4f8ec8ae470a2e8252f941fa850971830e088944a3c73",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-897f1edf8d9839937d04c8e58b85a7cece9d019698659d5711a3a4004382f20f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8e4d494ec83f66e1245804f0e87c86f6b9063fb0c2dcbf2a76c1cecb1c3d6c9e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-8f3d1c645ec0d797c1b039313ba8893a7b5ee97136fbc1a54f82598526224dcb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-93cfd6310568760e4c27a8dda9fc8ccbaac8fcfe229b14c7355e21ab9c6c1b6e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-94b5f0ce1b54b5fe7a489617d708ee81a2e1ed84d02c51e3dd12ae76648568f6",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-9ed24ec47a6f46ef9d70240e6faee3ccfe2aa674e80e23d221bbf3f47b2700f8",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-a0f6400d1919ab82025a0008cfd186d29341ccd0de5ab0ff77ff2c66c061299f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-c620b2b0d8ecd721bb4e7fbf1c23184088b41275f3fb1846fb0a98fac06f812f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-d369fe8440238fbe4e086e6dacccf51fadfd17aad10af4ab01f237de5db3b713",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-de3e472b99f1b1ec0b709623da4a23e6fed9b3d1bd767f505f69b764a32c5781",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-df062a12e3ddfd429914488176095bd73715cb76deba6c9adf8b92266cf8a4f5",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-ee388d14a4d316507145088eeb532bccf84966b410fa332420d45154a64fb110",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-f5d078befd4db1a5d0e6c85ef0fd3548d4f4fb37bc594ea15231876b0a725f96",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-fc5ead21a3a8fcf31a675f420eaaf4f79c33fcda4e118e959f4767537d0c93d9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
-    },
-    {
-      "work_id": "work-ff5c7aeb0fa2d586ee2c43e90ff1bee287289cebc3cde34a1047f4b0c051e230",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact four-coordinate placement and specific topic assignment remain unreviewed against immutable Hub7afb; keep this source-backed new work pending and nonspatial."
+      "rationale": "Hoda original-document gate supports attribution, but exact four-coordinate placement and specific topic against immutable Hub95d2 are unreviewed; keep this work pending and nonspatial."
     }
   ]
 }
