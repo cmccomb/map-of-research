@@ -640,20 +640,21 @@ def _reviewed_new_generic_placement_work_ids(
         str(item.get("work_id") or "") if isinstance(item, Mapping) else ""
         for item in decisions
     ]
+    prior_id_set = set(prior_ids)
+    current_id_set = set(current_ids)
     if (
         not prior_ids
         or "" in prior_ids
-        or len(set(prior_ids)) != len(prior_ids)
+        or len(prior_id_set) != len(prior_ids)
         or "" in current_ids
-        or len(set(current_ids)) != len(current_ids)
-        or not review_ids
+        or len(current_id_set) != len(current_ids)
+        or (not review_ids and current_id_set != prior_id_set)
         or "" in review_ids
         or len(set(review_ids)) != len(review_ids)
-        or set(review_ids) & set(prior_ids)
-        or not set(review_ids) <= set(current_ids)
+        or set(review_ids) & prior_id_set
+        or not set(review_ids) <= current_id_set
     ):
         raise ValueError("Generic placement review has stale or duplicate work IDs")
-    prior_id_set = set(prior_ids)
     all_held_ids = {
         str(item["work_id"])
         for item in decisions

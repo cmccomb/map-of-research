@@ -42,6 +42,85 @@ class Rows(list):
     pass
 
 
+def test_binding_only_placement_review_requires_unchanged_canonical_work_ids(
+    tmp_path: Path,
+) -> None:
+    profiles = pandas.DataFrame(
+        [
+            {
+                "author_pub_id": "owner:binding",
+                "scholar_id": "owner",
+                "work_id": "work-prior",
+            }
+        ]
+    )
+    works = pandas.DataFrame(
+        [
+            {
+                "work_id": "work-prior",
+                "publication_type": "conference_paper",
+                "doi": "10.1000/prior",
+                "collaboration_eligible": True,
+                "map_eligible": True,
+                "title": "Existing paper",
+                "year": 2020,
+            }
+        ]
+    )
+    prior_works = [{"work_id": "work-prior"}]
+    review = {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "b" * 64,
+        "selected_ids_sha256": ids_sha256({"owner:binding"}),
+        "new_points": [],
+    }
+    path = tmp_path / "review.json"
+
+    def protected(
+        current_works: pandas.DataFrame = works,
+        current_prior: list[dict[str, str]] = prior_works,
+    ) -> frozenset[str]:
+        return publisher._reviewed_new_generic_placement_work_ids(
+            profiles,
+            current_works,
+            {},
+            current_prior,
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    path.write_text(json.dumps(review))
+    assert protected() == frozenset()
+
+    novel = pandas.concat(
+        [works, works.assign(work_id="work-novel")], ignore_index=True
+    )
+    with pytest.raises(ValueError, match="stale or duplicate work IDs"):
+        protected(current_works=novel)
+    with pytest.raises(ValueError, match="stale or duplicate work IDs"):
+        protected(current_works=pandas.concat([works, works], ignore_index=True))
+    with pytest.raises(ValueError, match="stale or duplicate work IDs"):
+        protected(current_prior=[*prior_works, *prior_works])
+
+    review["new_points"] = [
+        {
+            "work_id": "work-prior",
+            "decision": "hold_pending_placement",
+            "coordinates": None,
+        }
+    ]
+    path.write_text(json.dumps(review))
+    with pytest.raises(ValueError, match="stale or duplicate work IDs"):
+        protected()
+
+    review["new_points"] = []
+    review["source_snapshot_sha256"] = "c" * 64
+    path.write_text(json.dumps(review))
+    with pytest.raises(ValueError, match="source or parent changed"):
+        protected()
+
+
 def test_pending_generic_region_protection_is_manifest_source_bound(tmp_path) -> None:
     profiles = pandas.DataFrame(
         [

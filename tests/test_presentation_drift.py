@@ -782,6 +782,56 @@ def test_additive_freezes_parent_and_reviews_each_new_point(tmp_path: Path) -> N
     assert works["x"].tolist() == [0.9] * 5
 
 
+def test_additive_binding_only_freezes_parent_with_empty_exact_review(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    candidate["points"] = candidate["points"][:3]
+    works = works.iloc[:3].copy()
+    works.at[0, "person_ids"] = ["person-one", "person-two"]
+    works.at[0, "observation_ids"] = ["first-observation", "new-observation"]
+    works.at[0, "observation_count"] = 2
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    assert error.value.receipt["new_point_count"] == 0
+    path = tmp_path / "binding-only-review.json"
+    review = additive_review(path, error.value.receipt)
+    review["new_points"] = []
+    path.write_text(json.dumps(review))
+
+    frozen, receipt = freeze_additive(parent, candidate, works, path)
+    assert receipt["placed_new_work_ids"] == []
+    assert receipt["held_new_work_ids"] == []
+    assert receipt["excluded_new_work_reasons"] == {}
+    assert frozen["x"].tolist() == [0.0, round(1 / 3, 7), round(2 / 3, 7)]
+    assert frozen["keyword"].tolist() == ["systems"] * 3
+    assert frozen.at[0, "person_ids"] == ["person-one", "person-two"]
+    assert frozen.at[0, "observation_ids"] == ["first-observation", "new-observation"]
+    assert frozen.at[0, "observation_count"] == 2
+    assert works["x"].tolist() == [0.9] * 3
+
+    for field, value in (
+        ("source_snapshot_sha256", "x" * 64),
+        ("candidate_map_content_sha256", "y" * 64),
+    ):
+        changed = {**review, field: value}
+        path.write_text(json.dumps(changed))
+        with pytest.raises(PresentationDriftError, match="stale or mismatched"):
+            freeze_additive(parent, candidate, works, path)
+
+    path.write_text(json.dumps(review))
+    with pytest.raises(ValueError, match="no new map points"):
+        freeze_additive(
+            parent,
+            candidate,
+            pandas.concat(
+                [works, works.iloc[[0]].assign(work_id="work-novel")],
+                ignore_index=True,
+            ),
+            path,
+        )
+
+
 def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(
     tmp_path: Path,
 ) -> None:
