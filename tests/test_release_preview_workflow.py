@@ -60,6 +60,35 @@ def test_hosted_preview_coverage_uses_upload_prior_id_crosswalks():
     assert crosswalks(preview) == crosswalks(upload)
 
 
+def test_hosted_preview_uses_the_uploads_source_review_manifests():
+    """The Linux rehearsal must exercise the same additive review as upload."""
+
+    upload = (ROOT / ".github/workflows/upload.yml").read_text()
+    preview = (ROOT / ".github/workflows/release-preview.yml").read_text()
+    checkout = preview.split("- name: Check out collected snapshot", 1)[1].split(
+        "- name: Check out current upload receipts", 1
+    )[0]
+    stage = preview.split(
+        "- name: Stage and validate the seven-file release without uploading", 1
+    )[1].split("- name: Save inspectable preview receipt", 1)[0]
+
+    for name, option in (
+        ("scholar-additive-placement-review.json", "--additive-placement-review"),
+        (
+            "scholar-prior-person-continuity-review.json",
+            "--prior-person-continuity-review",
+        ),
+    ):
+        assert name in upload
+        assert f"data/curated/{name}" in checkout
+        assert f"snapshot/data/curated/{name}" in stage
+        assert option in stage
+    assert "use_additive_presentation_review:" in preview
+    assert '"$USE_ADDITIVE_PRESENTATION_REVIEW" = "true"' in stage
+    assert 'if [ -f "$PERSON_REVIEW" ]; then' in stage
+    assert '"${REVIEW_ARGS[@]}"' in stage
+
+
 def _load_script():
     spec = importlib.util.spec_from_file_location("preview_atomic_release", SCRIPT)
     assert spec and spec.loader

@@ -28,6 +28,11 @@ on:
         required: true
         default: false
         type: boolean
+      use_additive_presentation_review:
+        description: Require the reviewed additive placement manifest used by upload
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -48,6 +53,7 @@ jobs:
       SNAPSHOT_SHA256: ${{ inputs.snapshot_sha256 }}
       PRIOR_REVISION: ${{ inputs.prior_revision }}
       REQUIRE_BIO_RELEASE: ${{ inputs.require_bio_release }}
+      USE_ADDITIVE_PRESENTATION_REVIEW: ${{ inputs.use_additive_presentation_review }}
       HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
     steps:
       - name: Require the exact main dispatch
@@ -71,6 +77,8 @@ jobs:
             snapshots/cmu-engineering-publications.parquet
             snapshots/cmu-engineering-publications.parquet.manifest.json
             data/curated/reported-faculty-coauthors.json
+            data/curated/scholar-additive-placement-review.json
+            data/curated/scholar-prior-person-continuity-review.json
             data/authors
             data/captures
             status
@@ -156,8 +164,23 @@ jobs:
           if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
             BIO_RELEASE_ARGS+=(--require-bio-release)
           fi
+          REVIEW_ARGS=()
+          ADDITIVE_REVIEW=snapshot/data/curated/scholar-additive-placement-review.json
+          if [ "$SNAPSHOT_SHA256" = "bbfd125f61fa741708fa5e0697a7a865e1a8192f92713c275601fa061f3fb7ef" ]; then
+            test -s "$ADDITIVE_REVIEW"
+          fi
+          if [ "$USE_ADDITIVE_PRESENTATION_REVIEW" = "true" ] || [ -f "$ADDITIVE_REVIEW" ]; then
+            test -s "$ADDITIVE_REVIEW"
+            REVIEW_ARGS+=(--additive-placement-review "$ADDITIVE_REVIEW")
+          fi
+          PERSON_REVIEW=snapshot/data/curated/scholar-prior-person-continuity-review.json
+          if [ -f "$PERSON_REVIEW" ]; then
+            test -s "$PERSON_REVIEW"
+            REVIEW_ARGS+=(--prior-person-continuity-review "$PERSON_REVIEW")
+          fi
           python source/scripts/preview_atomic_release.py \
             "${BIO_RELEASE_ARGS[@]}" \
+            "${REVIEW_ARGS[@]}" \
             --producer-dir source \
             --snapshot-dir snapshot \
             --receipt-dir receipt \
