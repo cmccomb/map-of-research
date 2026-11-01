@@ -1071,6 +1071,7 @@ def work_frame() -> pandas.DataFrame:
                 "source_verified_at": "2026-10-30",
                 "collaboration_eligible": True,
                 "display_contributors": "",
+                "embedding": [0.1] * publisher.EMBEDDING_DIMENSION,
                 "source_urls": ["https://example.test/paper"],
                 "observation_count": 2,
                 "last_fetched_at_utc": "2026-01-01T00:00:00+00:00",
