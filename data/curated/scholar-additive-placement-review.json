@@ -1,512 +1,1286 @@
 {
   "schema_version": 1,
-  "prior_revision": "518b6e49ca52552c7dd5faa449f6f573c677de75",
-  "source_snapshot_sha256": "b27bccc5bcfe0e071c01f20959730260fe8bc74e79d3ffa5958e78ee7f3a31c0",
-  "selected_ids_sha256": "ca60c44403004e224982853222b914020ace9b54915b44d895d74392f605e259",
-  "parent_map_sha256": "ecfa4ad8406374c1bf97074ec6a796a7c56187629346df3c5b91bc7375e3c8cd",
-  "candidate_map_content_sha256": "37ed7920c2633eae9ebb0bd954b7dd483c955601f72371c0e544eda826070fbe",
-  "new_work_ids_sha256": "80975d51d194015bf8b4e5669e397ffdaf5cf236406cb5caf0e04448f22a6f7b",
+  "prior_revision": "8adfb2896bc851f173fee739cc4e7adf90b5c4b3",
+  "source_snapshot_sha256": "5cb368bf1ce80b65e760cd95f3ac08e273a95c686bfed332743b0efe9ef8a03e",
+  "selected_ids_sha256": "d276763eed51d3c74671a210787c960eb14fb078664f55e1f284524c90e3605d",
+  "parent_map_sha256": "c2caa5fef8b7da318260c918b4c96030130689557ac1c2cae427d7bb228005fd",
+  "candidate_map_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "new_work_ids_sha256": "428547c99d01811a1e4026ffc92f5acac23d7b7d238231e55e7dc2b66f810197",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-01",
   "new_points": [
     {
-      "work_id": "work-03d914277553a95d258e1e259c2d15100caa2bc1d4eba3246766b340d72583de",
+      "work_id": "work-01585b1041827ddf3c19b621d8a3bab03cb40cabf28e7c39dd75acd8bbc7870c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-096585879121175ec2ebbedbff2156cb222686873f2db686c7b795ccad3acaa9",
+      "work_id": "work-04a58ea712ab78a3963f51c596169ba9a1e18dacb10b1ca5149496924a2b0a71",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-0a49e8cfa9e69ff588e726904ae5979c0f8b6a4ab5e1404fb94e44d32ee7f6ed",
+      "work_id": "work-054303dd32fe67a795e6f97b2cd10273365eb38d5bd7cac149c7c6b78f9686e0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-0d2fec8b9625ab19bfb71296cb0152ba332f639a9bcd577dd34c120126f026b6",
+      "work_id": "work-06c10d18c56063f2f8b0cd692a7d5c5516232a2b7fa11ffbd68022cf287f3eac",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-13143743eab1d7862b94588f403bb090768e164de06ab19212a95eec53c93b9e",
+      "work_id": "work-09acfdee2743bd14dfe60b15e7bcc496814df3a5228cabbca0aa6afcd514f858",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-15b730b3fed8d5a4e053471c97aee3ea225502821044580bcb169591a92ec9ec",
+      "work_id": "work-0b727122880f8a25f547dc35168b025d8de08b8a90a2dc8f0ed1295c83ba9fcc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-1af659ce94fd99d1b736e8660c03d344f5a9e23eaa9e4d939e8d276ba5aa45d0",
+      "work_id": "work-0baa3b0af1817a9bd5fa4fc51c36fc3a74cbec46ac69d086e8b2ff7462997d3a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-1c898b1ea32711d1a71fdaddc58a9bd16a5a07627e0f282f512a0f35493b4d9e",
+      "work_id": "work-0bbe9c63ffe423f5904aaf91a3c9aabbd841931f260f73b1f27c5473eda70f50",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-21d7fd2d6ad30a9d10332e997282bdeede6e81dcf72f4f5144a312f77486bea5",
+      "work_id": "work-0bd179933758d4c7a911bed24ec6cadd8279c11c21c225967de5e2af6eb201ad",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-263d6e3504645675271bde989fb55af431ebd3b7117a76cda84353808ab00691",
+      "work_id": "work-10b44203bdf5a279a5564f5dd1b07c8ec9cbc876b818f1d9550ee3ad47f3e410",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-2f30ea1a5cd4f46a137143d8166b12e3d40e70065cbe6be4fad38e17d8b0414f",
+      "work_id": "work-116f4d20a143cefd641a21a92b7ccffd285091d5c2395603c404898565149af6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-33831b7515196b8ca35ffc2e8fe106af48f342551fee74ff4c61c48944ebaafd",
+      "work_id": "work-12c6491e600117eed2d39ae137bf72aee0e1df2256af05a1286687306883c8ae",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-33d5274632aadbc8cb886655f0b7278d493ace3982afb03dc7f43df735b436a6",
+      "work_id": "work-1683b9c03c2f13d77c19bda6c2bacaf3711ea0cb81e57d707e78da4ef6455814",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-3634d5e7a93f8c0fabde063abd07736680e5c9940751043d5b5c50f17902970a",
+      "work_id": "work-16f54d2b2c4b4e7f3ed99e27f723b4f6ec5c0e378645bc9cdad4752aa995823a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-3738ed0da7fd4733d082fa4cf82371f15bc95d744a0c920771bdff89ad74193d",
+      "work_id": "work-185adc8a3d12ee95127fe50a21a6d8f9e072ec06f1c39279a626b504b6258fe0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-39d2b8e6057595dfd3b0ebae11650fb24b561f1938d0038adfbb565f06896f1a",
+      "work_id": "work-194437b9013b39e966147cee0d07561b113bc4b6c8cd4166870f662b1795b02f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-3b20881c940d7a1178314795a37c062741846d6b895e03567301133c031b9d71",
+      "work_id": "work-1a790260f35eca139d868a2ff3c9c0204a7a02c045e47951cbc0be51d7951e3c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-3e6120a8a1826d20919648d267c96119b86e504a119e8176c69de31a5bb1d0d4",
+      "work_id": "work-1ab8c20370e23fdf80fc5fe7c5e3e421e5ce0343ce6add6250af34e7026e0302",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-3e8ece60c2edd751211178a3dc2afe880001056740b1bbb9fd5921bdf9935fc9",
+      "work_id": "work-1b1ea7f57ff4372a1617dd5c36faca1036aec2b6094a1dfedc0371404e113a70",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-413d2a7ab2245e153641933888bef165cecfd5fd0d7f46004eb55a08eaf326e2",
+      "work_id": "work-1b353139e9d39f9a82a7472225ae48148901b1c93c318b908b43e94056af1c60",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-42922179550e3f756816c48c7b114663712d1ab0f00d2b0d38beb0240d15301c",
+      "work_id": "work-1d1fe7ccdb269d4e0fcecd867228bddc0f05607ced65b70d1e6f79ea4f3580a0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-44318d11c86e892e637f492b768f8a487113420287ed17e7b35d925791938c4a",
+      "work_id": "work-1ea954463c3c7004e234593f73f45d85049e78c3a7ba21c4a587f0d212ea52a1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-46ffaebecd4476e2377ecef2ab323a0aababc76feae3fa0d8edbe4152caa22ba",
+      "work_id": "work-1fcbb6eeda4ed6b9a40a4b2816908a7937b8defb660f89f1fb872ebeb93409c3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-47996fe0a7a862cf8e4d9531e88467567e0f2a966d4819bb39d899ad89a0d369",
+      "work_id": "work-1fd8e07c141b734f1174715b055d1fc91e66119851abdced3cf92a840b66cf71",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-490de15c1aaa5a52c95e102522dd1b6c9fd26f0180dbabcd6de6a7974e19a6f7",
+      "work_id": "work-200e1b8a71ac8b29f50d46da9b6eacc74dcc24dc8187bd9b0d3a3368248c1581",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-4930d98be72cfb6379edd2e9f6cbae42eedd8daf3707fb04b7890a6cb4323f23",
+      "work_id": "work-218c55c938fd7b61dc9a1521271373393dceabb592c3a41c8ab5ed98249c7a8e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-4c964c24233319bcaa73d4d8c98fa2e64d751afadf9b175d5696bc8987f76043",
+      "work_id": "work-25eb00a1146e48b6434dc885c95437264481f22fcb289656e0bc0f0bdb34fccb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-50131280fa869f471ef4b3998da5dfea29b99eb1d01d81c17d4ae923e5a3802f",
+      "work_id": "work-265044194018ffab35cabf36428e085152706ca66b019bdbb735156929d54cce",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-53aff1697d5deeb4c07d9f24ae8f3e4533308cc3fccbec0963fa9655162ab0a5",
+      "work_id": "work-26ba24c196af82757d97ad3e7270697a07245f9fcb6f274d8777ca743aa1ff37",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-5c05226cd9a5d920a0e9ea642dcacd0ee4c15a5407688ebf5adfce20772fd6e5",
+      "work_id": "work-27518d0ddfd6fbe60bb743788e3cea59dbe19d29a94c5bd08a6dcc647811ab7e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-5fb4506ce0c77a2189fec6c0baf1f690e7ea20276d6ae000145815eec2b4eb5c",
+      "work_id": "work-276ebb6a899267494ce6548cb472ac0025615295c4d67accd25f9eb61739a55c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-64cb8de5db69f79035a1211fe89304cd1cfc4ea6f972c4b233a2e7685f7a7391",
+      "work_id": "work-2831dbef72d015a6c174a10e78c0471836b493592945caef8fa492071ea51a56",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-776d106d3716e1af47c4b497dcbc58d5fb59265648e343742c0d9660aa0c0fa8",
+      "work_id": "work-28907860525d6d0353133e83be8743148e145ade503f82620f10e2eb0b6a31c2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-7996b66676eef704fb781f80f10b601ab80944442438056f9b35b8a72a92a2f7",
+      "work_id": "work-28f5825c68d911bfdde3055db53413064c7ae9fec440d58e22f1d199cd3d3293",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-7a0b2c0e44f01b7df174790aec17fba5ecd3c383407fc69d00cfde13fdfc9e49",
+      "work_id": "work-2b767ff337450806cb02598e6ba6c86758554afcf313387ab4d99e6484eb4c43",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-7de4df20bd7c0bb9e53601dee8cb8ca3539f91285ae878924f8650ca87f5e744",
+      "work_id": "work-2d53823d757797e3c00b4c4765090513d773c22b06c44e1ae4cc165e17d23a5e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-80e4b191fff94767a2bb5d85894a2683d9166a9305679824a19bd7bbbaa0dc39",
+      "work_id": "work-2e0863ae1e3a5880ec1d5c241d3131b7cb8ff52df0ffd194c8b52d6ba479cc59",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-82bad62133bb77101c235cc497e7e90d7bec9e7860e7606671c51d90727e1ecd",
+      "work_id": "work-2f857bda9aeca388b9659a475b4c85a043e8c81f665b36cca8bdd56d374c91bc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-861ff23adb326ad94d33164ba75fe794e020e314f43a48a363dd24ad18c6798a",
+      "work_id": "work-3021f1f441f87343c8f4af5c8e9446141dc6f5716d9c7a0eddaa23ab1b00f457",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-86e316a877afa8751c731e750cb928a8b57da97afe57f9630386178d8ca80342",
+      "work_id": "work-30b2f876f0c26a71b61239a6e8ff902b684a4ddb358e4bc741dfa9e8c90f5b6b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-8b4b060320c97441674b21a9de8230b523d11decf3076406346e0b0f9cfb225c",
+      "work_id": "work-32fd832fb843f5aeb526c96f8b13bfd9cbb4275598a7c48c79fd57290aba4190",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-8c15055220500433e27012d223411aca7045264dabdff8c5037c9f19665a6c0d",
+      "work_id": "work-360f79c5ba696ef5e0faaace68d027e0e95325275355ec54f565e0bd24371fe4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-8c72f1ba2e9ff7f4d3cbf28d2bec1bb7c12cdc63ceb2ba1910600c7b56778abf",
+      "work_id": "work-3922434012c7e899d13aec08454054752c02b5a766497c0068d149e1799b0829",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-905a815ea86c937962fb576edc0c7eb0585318406c80432d6545745905df5a0f",
+      "work_id": "work-3941a1a3ce5029bb98de8602fed44a5dbec3b042ec6b376d6e609d91f2fc5384",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-90ee4696c5edb4c58f817d82b345754b1c4c1bae3cad972acc138490e285fa06",
+      "work_id": "work-39f4c84cba62ed1a9a8fdef41969fdbe91b939d128b483066b4713f2e008d23c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-90fd77eda989c19b06577c14cbc6bdd0e53dc49de94a68c4cc4118e22ff406cb",
+      "work_id": "work-3b3b967d431aa2a754070effcffeb99f9fb2f7eadb26da894f133397d9b2c0a4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-92a2734568ffe589e518bbb06c0eac364acdf98accc226e74735efe20e1ffc5a",
+      "work_id": "work-3c1296ab6fd69501d35cfe40e8329fdc3946ecef0893811525b94ae4c119bd45",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-948e7ebadd0c73734e39f037b6c3cea9ed79b70b2e94e7d55aa02b3bfbc09756",
+      "work_id": "work-3c5f1c5a6efda92f1c64cb63fe8f9939c72d71e9653476424290ebfceb6b727d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-957bb15785fdec9856114c09722aa605f1386205c3c0abe67cceda9762ac4d40",
+      "work_id": "work-3d4542dd6bd75243bb8f2ac87e5e4c63e380b8f0df93480a0bcb0b173d88943e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-969e662ed5eda9e224102bbbbc4999f29025880b073b662d0db126cab369ad3d",
+      "work_id": "work-3d8a94374e78fe793a0ceb07224eef3ccecff9881cb2e1695647e35406d5f092",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-9ab0252656411b160ab8b763220a294175735d9663976f3f8ae41820710afc41",
+      "work_id": "work-3ee143b876c9f3ee1f7c350020f691006c323d93b0edaac25c27d32a313e1dc5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-9d2c2cc1d7f9d58862d3c1238aefacb37aa12d22edd992f69767caa411ddeaea",
+      "work_id": "work-3ef886bf36b74bd3b90b37bd93f9ce2cb0a5200217aab7624bd90898e4844194",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-9d4f6846f78fa5dea30c0f73b5cc01fa3e63b8f43837283eccd3305302055c8a",
+      "work_id": "work-3fa9b0dcacd63cb5863ef45013ca35f50a0c5bd7fd93d979827cc4ebd60c1f0e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-9e252fe7fd3c782c23b9ffaebae417751eabb8f2a7859a3b854cbceb46b80dba",
+      "work_id": "work-3feb754fea23ead7c1e79609b5e8c14255d688cc5e3609a040cf2527c61b35a4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-a0aa60d98ccfb8625b884f04a1c7211701cec886116e93cf15d4b73567741629",
+      "work_id": "work-414db6fd81bd78edea984900e005bbe0c15860095c2aee57942cd46e5cb80d73",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-a188c8315e373b1bb17cb35b71f170df5882cea2eecd033e16f9327852ea775c",
+      "work_id": "work-415d80f71bdd2c97c0168f4802557f1338029cd80514ef6ddf6774eff280587c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-a9b420839a83583067bbd55389a74c53ae9f653d0581e927cc8f4000b22a63e0",
+      "work_id": "work-41b0d12495b962c0b7f0f4bc007111498c01c7fedb5d1096721433c3ff8b139c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-ad9e245b0ed623640b3ce8ead94b2ef25ff689876ceb2aa46312aec503b350ac",
+      "work_id": "work-4244c50b16aeb365785ceac22835203db6f9fe20b5dc365a126f704d3b09561e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-aeca8b3d63a99e262400ca6ddf78912a01d199e8c081ce1aec09902ff153b5fd",
+      "work_id": "work-4282e7fd80831fcef335af737531d77c99c6c27d4750b4c9ed433e5840ee35fa",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-afa609f5327ca88c3a794f9f2b9c6c9cfadc1a154609fde771518db188f850e8",
+      "work_id": "work-42c6b58d0cb930ec61d60b67da608db2eabc4cf00caa05ae5cf0e02240228362",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-b2b518faf36530970e1a2a8ccc0a7f5cc541dfcc6c41234d6ed322cbe2b3ee35",
+      "work_id": "work-4354f94e2648d7242be8e997b67dbda8b79d4178366730700e9c995ec9a8fed5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-b8a032d06d56031d2696e2c95ab37559279b3286ec66d050fe88773cc6a86f32",
+      "work_id": "work-442ccbdf50ce3a611e343624b36179cd02356e5bfddaf9163e690faf162b3c67",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-bec24ef7ea61c8c47ad4257b22eccd5e4c36a8991ac4c031c6dde3763f4ed374",
+      "work_id": "work-44ae81922f4a79cef9e09c33987615a167a48fc529cfd68b81a7c93ed259b862",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-c0e76c7bced4289aff7d47a2535e336aae3da5467377a3ca036d8d4bbf5a9793",
+      "work_id": "work-452bbdc0caeaa92e3c1825381486db24197ce21ae8ff5dc397102120575a9e4d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-c330428579657c2a99727790ec6106e8e1344f7bc452934e9b568710fbcb1aee",
+      "work_id": "work-458eeeda7f21fad903a5ee92481d05cef5ad70c50b95983c8f5ea848a191836d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-c7eaf40df8dc8fa2efd1bad2685d84d111f0c7cc72734c55294f89c2812f3b35",
+      "work_id": "work-45bc687008d66369fa7cd9835597db1575f7792fe70081a4b795b1970d70d2b9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-ce20039f8bb8417d392a5883ca0f68839245b408cbd9c65a9369a0fc831f588f",
+      "work_id": "work-475004e1b23858ac3c5240250cf8ab4796ea74281947b66cd112c4025f0f312e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-ce55f4a8c234b3fbedf4468dacaeef14344a22531a26e814384439b99a8b16d1",
+      "work_id": "work-47a0d1f6f94836683e3e984285b768f2f5c1ddc0e1dc809eaad716769e0cc589",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-d7fac9c1316b42ed44a712bf59e16d6745018ea5219f752df633024e1c15b877",
+      "work_id": "work-4a749895552fcc834e1704ea3b307ef7d058951c346db038229610f09ac52999",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-dd38deef286df0c116312a94cdddf140be8434899969ecca7160e7a6b08a2f47",
+      "work_id": "work-4aa3f30289d829e3b6c1003f8e698d5eaeb0e1f6ac3e6b27bf3294feb1ca7fe8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-dfabb7320c016f4938194022998666108b677747963e4dc700dc115b0a2735ec",
+      "work_id": "work-4b56ee424a511e0dc53681ad65d79b2c84c26561f5beae313d79cf7016ffec88",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-e1b2422fdd19a079334df0f7db42e1c80d49e28b9b6ea3053aff83b5f3002c1d",
+      "work_id": "work-4db247a25ed116f37f6120514614997333b58cf91b470facb3575425e8d8135c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-e443f37fedb058f200618a3bcc00447cb4cbe721323bc89dd26cf54f1e8e13ae",
+      "work_id": "work-4e38cecd78e4861255f224aa8a9371574c85eb700cb9a3fec6695aa21de98d91",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-e59a8273e0867fa7a1d98db08de7d04cfb9cfb9585ca82402f676b62e092b26a",
+      "work_id": "work-4ebb9731af8d1d2c38ece62154f6dd67ab27c4fed625f320dfb2c9aef8151c81",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-e8b596c5909cad26eff498cec310eab06d7a2b71b8c2ac5c2be8767b43bd5888",
+      "work_id": "work-4f4fc16977d1d7b2ddc7087d9945be0ec2a8f7d93f34d5d084aeab1b6e7f0aa7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f0fed70361ae6d157b75517f779a0aee15c01bebf8301941f95d5dedd2cca150",
+      "work_id": "work-533db11827381773d66ca43bbe728104521769f912f492f27f197d430b8d026a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f2a504eef643e430a1e5e1dd3f1e2a289e07aa6b24a34b6cd26a5e5fd0e963de",
+      "work_id": "work-53729c524aaef4dfc454c7771392352760d8f0ac91e4e863a3d6ef0522b76625",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f31048eb6ba260376e7f692b6f74905714e97c59bb7322812051d2dd609c177e",
+      "work_id": "work-53c843b01e7ceaa36dfbfbf91738f546b5847d9ffb29f19b5f413f6cfd9dceb0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f31e2be66beb1df136083d850dd34dfc70892f2fafc6e3866fd76e3230805600",
+      "work_id": "work-53e11f4620accf33c6e2e9b8ea6b34bfa7e35d4c0d9bc6f972091dc032b7aa07",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f34b67e4587a55ac4c71b07a6845c9fc4b61d579598f89eec0d3d7483357d70f",
+      "work_id": "work-5443bd15e147cfe42b8848ed6f293f6c184d83d67e358e47fc4dbf9a616362bb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f60f177f4edda4ca5fa6fa478467a756b283b8c9cf5a5629e6f9ff6ea2eeabbd",
+      "work_id": "work-56f1e3c75d5576da5366315fe711b36b10daab2e0dd9c62db4f83e0e73eac60e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-f610619d401c4042358a1d955415188e1160164476567cbba5e07ba85b14cfb5",
+      "work_id": "work-57d7ac90f0a3411c7b8a451e49a1f444b8932453b01a967b67ed54821cfc6aa5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     },
     {
-      "work_id": "work-ffcc8c625530f48801e0659003d1682d1ada9f4d7353ef28b45ed447f643e714",
+      "work_id": "work-5a32d9f756fedeccd9c5d6707adbb24613a6ed3869a6e38cee7cad657e6a4bab",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Aaron Steinfeld work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-5bf14937b0385cabc6b127ad4b80ee23d685307b818d71e2fa177a03304cdbf9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-5e7e6a8b2f5ae6d4fde4553fb1541896355954e579234f1e9fd185dd27c3ae21",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-5f62949015f2644d7d9f108ae15240cf7b6107642c17f18573b1627319b8e310",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-604b55222688a1171f3e14ee12bbef959c20a950094a5bb5523112407d975948",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6065b1b64959b37ea56292806287fcc3a193e1f36ff0db312198321b7543ff1d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6219d2521596682bff869d811fffe5fb02df3b0ea77f099f1d817fa2a279d1aa",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-68ad1e42497b3967875bfb47a4a9b9f8cf6aeb4ddd73fadb5514fef27c10ea1d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-68ca3276a8faa80588417cd194f38bfbf59432f38dbf7387a905c4a42896acec",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6952e4c7a5ae4aa893191b1d32a6ceb88931625773a015eef3c131628a5997f0",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-69b6e6baac87de896d0a7d433d66d578b50e7c4ebe65942d9fea88d035d762d1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6aaf14be5faf972a1863b1ef3710a8be308e305ae0eda5bb6ea96722cb5d5e8b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6d304c26757c90d2b0dbd52ad898c21a81c57e88e07e6d643de0d4d2fa53d83f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6e065788383f0bab67e52ef267820c709f274fe03cfdadbf774f463a3a2d9941",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-6f202e2521ad081b47f742929741e29f5648f60b7901fb66f552d01b9aaaba1a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7087ef2920645de1a739aca5eb3c5533efb88c07ae57ad26331855ec37b39c6a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-715bf5ba0606ebe27884f4d62d61092e3a0af8f7ac2097f77e013a943ac51e85",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7187213c8c9adaa219ad84abe63a713770211540a8850abf896c4c821ce7c6f1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-71ae47770419a3bd1e94f7f3e2271073d32cd6e125e366110600b34338818687",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7297e68c10298b7d57eda0ad680ce331b5e4d61546cdfca2244dd88e17c0b5cb",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7541d32e12a649454a9f7a8be089f24f3b53d5ebe051d944dffba3316d694c0e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-76ae0430622a2b47922f0a1a9713ee51851a2505c1cac0b069074be32dde57b7",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-787318d903719c54f25a7353ab4b5ec29f4e24388da43dc747945a997fa273c4",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7b63372684654c41a0526255e8a0e299c5cc47d86448a34d78867cb7a635bb58",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7cf228c3e9be1a282311f85524a4de94381ae850870ca9315e7a3e083ce8dab1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7d4d3a07d6f15c3bef13d20acea68ff9b943310358b25fb8811c804371177cae",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-7f6c2a9c33f7ce0c78da93d1aeabee9a5ac3e90e613ec79935ba485db75fbd1f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-80c59edc65ae825d9867770f88059504a099be4c378da48031d4aa54604fb72d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-832f37e683aac92c9621246df6f9c8534279abc987be19be65494b73c33b784f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-839e280aa6e8ab01fe2c55ffd5742037202d8135f119ff50381a80bf1dff8fe6",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-8452cdfbb1f6e790ee950b4003727f0c6107329f9f89d60292c3d97cb897bcaf",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-84bf93755445c9d1e112e09fd461118b77410334bab4ee5b0c5517864d6255dc",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-866f8b525b2c69bc9c4f769aa04afb402195eb4def9db841104c1b653481df85",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-88499eb06e053be657f1f2e0de26caf423ee13a781e7d886a990e88a6a1ca9c6",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-89034097d0533f8abd24b9d7a60ebba4a881c9c8c0993812ff4e688967233e02",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-8b58499e58253012a330494f2b8278e4eb14961c8343ad096772d78d20f02e69",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-8dfac8a436b637507035720208a740919c4ba2c67ecbfed693e891cd44b579e9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-8ec14aeed60d1928905efc4f7cfaddc13d7eb659b37e14c360ffcb2c7a0b8858",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-90d5080034c1a684e8406e0f932ce9d5293009d7202819192c5483f55619eecb",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-910f01048bd2837db8f51c16f5272660a63710f2e94d631cb24b6d5bff22f99c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-96ac61a10660b5e40c1f409c9bbc46148e0ac3b0fb6919d3124305a97e1c8b2e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-97aada25abeb77a173de2cb40958d499f54d097e780750a744a3706bd60dad1a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-9803eec00f92dea3596ccb827889a59fae8f3c36ea3d21d00f928cfb053ebca9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a0594bf6f0c77d5867fef5e8efaa8a25f92597b2a680e843dbe55a9e7b4903b3",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a08022430d7e7fc1f7269bc6bdbfdffb8f8523c90df7e1eaf0fcf8c151dcf7dd",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a4163682c95349f865e5a81f149ea79bf356890292be7e6baaca9a188b8ee77b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a4ec37acebb34e583cdf841d4e0eebbbd81561ec042bb720789a1cbce8ee7712",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a592d875e5d1e51f85f70c9027348e01437880fb11f16d6192b50d214789dd6b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a5c5b53c543336838d79c3482c7107da538d2125a17c6fb86a7b3c7b7e2ed562",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a60256ddb89e9a35cbce18a0445b2da3655bd11ee0956b12a220c91d13857c30",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a71f102b0b7467e151b70d2b16ddbae1dbfc6161f5dc3b9e4630885cac26b6b9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a83a967795b2e709c9558f834cf55a9902befcaef3aa2aa752a99f31b00d77d3",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-a97ca07121274018657300d49250c31b396088257de40ae43f3ce37cf11ac698",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ab488e8b0ee4b390c044de088f30da6d44c2a85406174b2ccdedcb761d12a844",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ab64ac7f16bf4a8e048bd498404099022c8ca01cfcf2b6a7cc199003afbabfdc",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ac89ceec2e1a3701664375398ba28ca07f4be599d5a8947b9752d03abce0ae65",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ae869dd4c4592e24af2e6dc7da01863f10b3075e1bbb288742906981eda5af07",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-af8e939ef55f2370eebad0a8ade8c42ded10133988b033a4e1a21ed49d05d5f8",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b07c8a94d767e89b8de973367d232b6e1202afe3ff037051222faac2d70ffa08",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b08243a041f3057fe45cc290f2e39588ce0c41ecb1c9370f6234b2381308250f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b396b4c090069fde9a3a60178641628216ccec61628b9ec4a3684b61d02d302a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b7c15521ec58e7b31e392c55674400578852f12d26ff9d4b462a03e94107829d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b7d5160eb696e53cd8da28a9c89deb1f30f8c9e34f2fb031fa32aead5d321bf1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b8a4cfff9263ee235abe5fcb503e9a1fac31b095df9294a93866664c2448cf36",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-b8d42c2151b42dd3f39493bbe199211efd37cf75e62e775337db65ae740ba8ad",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ba2f8bbaa3090ebc643a8adbc301d8b58d5957ea73d9857672bb0b399bc9648f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ba459084ffb1d9b05844c6f3b7b22809bb571c1e3ea368e385c34ff808ca28fd",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-baa40246ab6ddfbcc76ae1fa63e285ebbe04209a2dbeff9de4df2ae9cd36983e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-be2dcef09837fc9ffb6cf07696c5939028727e87aaeaa162b3d1259e88266eab",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-be6cbc86b3b10fd80d167b7fc39090e051bde0985445c819345f25bde8f65be5",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-bf3bea59475faa12cefd1c4dc5558ec9231db11ba991a0495fc2a57a80f252fb",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c11eedcd63a49c3d245d8ba30704e656c13c68239b85f22049de848c9f29518c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c2334b462997feea6505ddd30148ea2d4dd25a4b1c752798c12671c963040978",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c2c5832194d56bec8a3ea63943f615495c5837b554b23e9d6a59f4ead3fa722d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c41dfc39791d5fae495f6bfbf547ab63c60d06901ee6734f9f482281c4d50e8a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c5f9ed6ce6ba2e29e4d975f286cea7d0a5f35e7958c041baf92e18faff5e9f74",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c6e5504497ac461c2af0ae03d0b2d618983016aa2f3ceb7b50ab4a35ca4a18b6",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c71f3711600268c9309dadfba48634617549962155ea0e30aaba873ca00708c1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-c78e041c29ec93f22c836b409fc78365f418a8b71df45c2815e8562c085bd78f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-caa2eba463ccc8ea4511f9cf63c0a8d676add051659c61ec05959c70bfcd4c77",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-cb12efe970bfba52cfcc55fed4b88c7fdb0ea29fb13c2f090810bbf795b62329",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-cc0d377cc97b5076c0a94cfd8dde61a30527a0a5478fc0961008ddd4084d0e70",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-cf1c7ac334be3260df1ab7a85c15087128aba735b10efc6edca72d18471769af",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-cf1dee2f9d94f231145ebeb4a79efce9328796b158b85f61dbc48be8c906aa77",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-cf407e6683dffb5069fae0a303bbb51844a9f6106c92ee5141b3c5114b1f743a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d242a8fa559165dfe72da982581271e72ea5b7473275dad9f44e79fa21324340",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d331b642bd9fc56e61eb7daeefc6ec590ff871e2a3f658d4177acb7a5900d239",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d6559f4807841d9c6c3b4d15a706c72d605b488fa81ee76b48d612387a45f50a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d79e193182a0ac0e6c30a8f80cb5bf2c4cd25fdfe46e065d2712a602be145a8f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d8f1d8e4ca033644815b061efd69b4f7b51264aed811d3f03c5a9ed1198d5d4a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-d9a0817c0a9d2341b6d2f15b346ba376212d76a43e56758b95fb7f225b8f0655",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-da7fb681c013ae17eebb507c3b03537e299983f064512a76deacdfbe02fe7370",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-db0633ebb475f567e798ca694f05ac36633c7b0431022f1782906c14ea2f03b7",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-dc460d7281933318199a4efca36f5ad34408307c4833c07247be7430b8d497f1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-dcb8c5858f51ce2fa23b11029dabd28e1850cfa960cdc1f9f4414479dbeb4a8c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-df26be68212b7398dce08903e42ebc26bbed572bd9c2d05dbd4c48bfada9d237",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-df3b06a1140efd178b6d970c935b25948952993404bd975b3d08020fcb492595",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-dffb95a3ff7747af3c2b31d2c1e26231b182cbf7514d34fef5f5b062acfc2c49",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e1356cd943cb22e0a5106177f1e40711563858f45dfe6e91e0161e742b617c3a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e1a34aa5790d65e775669f6a67675a6377af77d8a1a0622b1f1e5a0413ec95de",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e1ecbbba5645b14bbeda44d0deeeda2af79516d79eb654da6fc91a7a1db26ef5",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e2028697d2a09a6d27f72e5fdf04983b9621a5896b14c4e84a820c2ed9621005",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e229bcbb5b22ebc0f55685566ae40689dd4e9c280e3d902e2bca3af55404c209",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e243bbbe35f1e21a2fc39656bd5a434432ae63555a23ac28e8e964e355161a65",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e5962ea6d032cea4f79345234380875a6376d1815f5ffd30d0a732859e7f86cc",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e62308c5af5a6101697a7fb894fa16d2cad764361364e10987aefced6cb5dab7",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e62661af040368557bb102932a0ba4c1110ea8c2c04d444c98a33954f9206387",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e6bfdb7dac33eabe34cb39aae51af655e72c199a3e503ad0e5e5859602913a33",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e79c3bc74039238ba10097ff266083fff040082ca08dd1f3bee37d284a8bebf9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-e8b9028eaa87c5bb6ab0e43b5b64f5bd4f51b9077d9490e5257c7c860964e260",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-eb4d638cb7fca3ef3f26977449c12bba76d5b44992da8672e53742514fa61d03",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ebbee19e42800610178e5029261db1f8a50af3adb31e203a55f32920aff43fd8",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ef17c028182c9426c501b3eac392c2a064c613348c5e9d58501c8fe755f6a2c3",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-ef4c1f19812fd7bc541e8debc749956bb441a50e0ffe8e5ff3205fcd45beea4d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f22602d0627666359887c59b14535006a3582ddc08ebfe8fb717f6d4c080d84b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f2fe6678f3834e6f705ee169b7f7d5f9ff4c0405101d14156eed1e2e9331c99e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f564a26b8a546fdd43014f4491076a059b49c1a244880946336dd79544b3d04b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f5aab62f3d407ac31c8d1f9146214b0f27c295662750343b5c392a55b33afac2",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f5f0522d5d8a1e779f157a0d318f33b57c39d0ae6703be95236c013cf885e532",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f6debc12bc734f7052e0df5fd9e3c74e590090d26cd59d6c7287d708b4daed5b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f73d8ab9650c33b035bb401d0d9ceb794880d02065ba22b23686c215cd07938a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f9ad0738b5b331236bf05d75ec86a1df14aac7ae1ca071d54b2f50e15a9ea3b5",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-f9f2e5b68da9e99411f15681c91c2f7e014223539d5b71d8b5eb6ae98a6bc6eb",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fadc809a06467cd611f41113860678f63789993dd19e59836ab728dee9e3dc39",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fc5a0b60faaf99114ec4600300c017f81a6ddb3a3d16fbebd1b06dad60f6135a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fc644beab4e827b3500a5b2fa9ca1c668deabf6b32c96ec93bd937e7099fc7d3",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fcc07b7372158736ba9de37bae89cd507c7b49c4b07d1edc8125a77b1f080d30",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fd094600dc535532ecc10918573e95858fcda9c997a846e7761191f85e8473d1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fdd3439235f40a94bb909be70ea6b016fc7b90c231f97b53615c4723b0292f71",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
+    },
+    {
+      "work_id": "work-fdd58e65706b37e0b1c790515363ab1279f33d0b211a286871ade08606e9339b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact selected Tuomas Sandholm work; topic and spatial placement await separate review."
     }
   ]
 }
