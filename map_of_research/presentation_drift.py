@@ -27,6 +27,7 @@ from .composite_region import (
 from .io import load_json
 
 SCHEMA_VERSION = 1
+RETAINED_EMBEDDING_DIMENSION = 768
 REGION_PRESENTATION_FIELDS = (
     "map_region_audit_version",
     "map_region_outlier",
@@ -47,6 +48,7 @@ RETAINED_WORK_PRESENTATION_FIELDS = (
     "source_verified_at",
     "collaboration_eligible",
     "display_contributors",
+    "embedding",
     "map_eligible",
     "map_exclusion_reasons",
     "layout_version",
@@ -155,6 +157,18 @@ def _digest(value: Any) -> str:
         value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
     )
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _retained_embedding(value: Any) -> tuple[float, ...]:
+    """Compare published vectors exactly across Python and Parquet list forms."""
+
+    if not isinstance(value, list) and hasattr(value, "tolist"):
+        value = value.tolist()
+    if not isinstance(value, list) or len(value) != RETAINED_EMBEDDING_DIMENSION:
+        raise ValueError("Additive retained work has invalid embedding")
+    if any(type(item) not in (int, float) or not math.isfinite(item) for item in value):
+        raise ValueError("Additive retained work has invalid embedding")
+    return tuple(value)
 
 
 def _require_retained_list_growth(
@@ -797,8 +811,8 @@ def preserve_reviewed_additive_presentation(
                     f"{sorted(missing)}"
                 )
             # A newly bound observation can carry reviewed metadata without
-            # rewriting the already published canonical work. Binding and
-            # provenance lists remain eligible for separately reviewed growth.
+            # rewriting the already published canonical work or its vector.
+            # Binding and provenance lists remain eligible for reviewed growth.
             for field in RETAINED_WORK_PRESENTATION_FIELDS:
                 output.at[index, field] = prior[field]
         if work_id in retained:
@@ -1146,13 +1160,23 @@ def require_preserved_additive_staged_works(
     ):
         raise ValueError("Additive staged works lose or duplicate prior work IDs")
     prior_ids = before.index
-    protected = list(RETAINED_WORK_PRESENTATION_FIELDS)
+    protected = [
+        field for field in RETAINED_WORK_PRESENTATION_FIELDS if field != "embedding"
+    ]
     if (
         not before[protected]
         .sort_index()
         .equals(after.loc[prior_ids, protected].sort_index())
     ):
         raise ValueError("Additive staged works change prior presentation")
+    # Compare one vector at a time: the live parent has tens of thousands of
+    # 768-dimensional vectors, and materializing tuple-valued Series twice
+    # would duplicate the entire corpus in memory.
+    for work_id in prior_ids:
+        if _retained_embedding(before.at[work_id, "embedding"]) != (
+            _retained_embedding(after.at[work_id, "embedding"])
+        ):
+            raise ValueError("Additive staged works change prior presentation")
     for work_id in prior_ids:
         for field in RETAINED_WORK_GROWTH_FIELDS:
             _require_retained_list_growth(

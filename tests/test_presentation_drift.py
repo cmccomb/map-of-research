@@ -141,6 +141,7 @@ def parent_work_rows(parent: dict) -> list[dict]:
             "source_verified_at": point["source_verified_at"],
             "collaboration_eligible": point["collaboration_eligible"],
             "display_contributors": point["display_contributors"],
+            "embedding": [0.1] * 768,
             "source_urls": [],
             "title_variants": [point["title"]],
             "author_variants": [point["authors"]],
@@ -963,6 +964,7 @@ def test_additive_freezes_prior_bibliography_on_spatial_and_off_map_works(
             ("source_verified_at", "2026-10-31"),
             ("collaboration_eligible", False),
             ("display_contributors", "Changed contributors"),
+            ("embedding", [0.3] * 768),
             ("map_exclusion_reasons", ["different_reason"]),
             ("layout_version", "changed-layout"),
             ("keyword_model_version", "changed-model"),
@@ -1204,6 +1206,7 @@ def test_additive_staged_works_preserve_prior_region_flags(tmp_path: Path) -> No
         ("source_verified_at", "2026-10-31"),
         ("collaboration_eligible", False),
         ("display_contributors", "New contributor"),
+        ("embedding", [0.3] * 768),
         ("map_eligible", False),
         ("map_exclusion_reasons", ["unreviewed_exclusion"]),
         ("layout_version", "new-layout"),
@@ -1251,6 +1254,33 @@ def test_additive_staged_works_rejects_missing_protected_field(
     pandas.DataFrame(parent).to_parquet(path, index=False)
     with pytest.raises(ValueError, match="parent works lack presentation fields"):
         require_preserved_additive_staged_works(path, missing_parent)
+
+
+@pytest.mark.parametrize(
+    "invalid",
+    [[], ["0.1"] * 768, [float("nan")] * 768, [True] * 768],
+)
+def test_additive_staged_works_rejects_malformed_retained_embedding(
+    tmp_path: Path, invalid: list[object]
+) -> None:
+    prior = parent_work_rows(artifact(1))
+    candidate = pandas.DataFrame(prior)
+    candidate.at[0, "embedding"] = invalid
+    path = tmp_path / "works.parquet"
+    candidate.to_parquet(path, index=False)
+    with pytest.raises(ValueError, match="invalid embedding"):
+        require_preserved_additive_staged_works(path, prior)
+
+
+def test_additive_staged_works_rejects_malformed_parent_embedding(
+    tmp_path: Path,
+) -> None:
+    prior = parent_work_rows(artifact(1))
+    path = tmp_path / "works.parquet"
+    pandas.DataFrame(prior).to_parquet(path, index=False)
+    prior[0]["embedding"] = ["0.1"] * 768
+    with pytest.raises(ValueError, match="invalid embedding"):
+        require_preserved_additive_staged_works(path, prior)
 
 
 def test_additive_staged_works_rejects_scalar_exclusion_reasons(
