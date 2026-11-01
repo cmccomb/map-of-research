@@ -1440,20 +1440,20 @@
       "person_id": "person-aaronsteinfeld-5443ab0b",
       "scholar_id": "CQ39OowAAAAJ",
       "state": "released",
-      "expected_source_rows": 8,
-      "cache_sha256": "178dfa7e41137100cbbf3709c4e2495f514053cb0715a8b8db2ba644c4dd6869",
-      "reason": "Local private-stage candidate: 8 original-document-supported selected observations from 254 complete visible Chrome rows; all other captured rows stay private. Every new work is held pending exact map placement. No upload is authorized by this candidate decision alone.",
-      "reviewed_at": "2026-10-31",
+      "expected_source_rows": 91,
+      "cache_sha256": "a71df7b92e116b196d4bd0bb3e1fcd64789a576a71b219eb453a967172ab14c9",
+      "reason": "Selected-only add-on: eight prior and 83 additional exact-owner Scholar observations from one complete 254-row capture; 151 concrete holds and 12 exclusions remain private. Known final report row remains held. All new works await reviewed map placement; this decision alone does not authorize upload.",
+      "reviewed_at": "2026-11-01",
       "public_subset": {
         "observed_visible_rows": 254,
         "private_capture_sha256": "ea26af4ee1a0b278dc39699fd4eb49232d2dcd7ecd05e0f9ad66d02a633e203a",
-        "private_review_sha256": "0ee93f295322ac002cdc11c11042b84da6c82019b5227d72fce1755b7ef8ad7e",
+        "private_review_sha256": "66b12ef6ecadd44657caad9c28ccf5c29e03a86c616ccbadbaf33b7850498996",
         "private_rendered_html_sha256": "1ee1c886717fd9a41b236e9d3e3f67693f572962f175471bc69215a9bbb86b7c",
-        "selected_ids_sha256": "a23ed73d2e1256257ee9ea6a5471fcffabb5d0d4a7a5aeab0a1f1ddb7de0891f",
-        "withheld_rows": 246,
-        "withheld_hold_rows": 234,
+        "selected_ids_sha256": "e273e074284108289cadfb02b7305b7eea904a0ae7ff53ef727c5f4b73c39d3b",
+        "withheld_rows": 163,
+        "withheld_hold_rows": 151,
         "withheld_excluded_rows": 12,
-        "withheld_ids_sha256": "7648312129c510c9223aec6665d21e7bf1641c9e069c4d999fcaa4c0a602c4d5"
+        "withheld_ids_sha256": "920c11a16a70e90e77302c1aafa0c92d5d607848121e04274e13d6470e80481a"
       }
     },
     {
