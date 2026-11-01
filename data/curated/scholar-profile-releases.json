@@ -1697,22 +1697,22 @@
       }
     },
     {
-      "cache_sha256": "7c5807ea6569730f0f0c522052263134baa9b6219df3dc16268417e38afaac6b",
-      "expected_source_rows": 27,
+      "cache_sha256": "19a50babce17d53412943238a36c7d439330e64ecafc4ea90f201a4ca4377fb1",
+      "expected_source_rows": 96,
       "person_id": "person-stevenwu-2f9ac697",
       "public_subset": {
         "observed_visible_rows": 222,
         "private_capture_sha256": "4cfde73a6f9d07e029b48e6c2bdd74b520fadfa82693660c095e928a41d1c38a",
+        "private_review_sha256": "65759f9c64cb3bdcbe3077fe7f3ae93d65d6b05a504091c0f5745d686a623b55",
         "private_rendered_html_sha256": "f9516e0b4d2e773fadbd803772354aea2e3a27b2571e67c988d89d644358d2cc",
-        "private_review_sha256": "35175f4dd910cff6e44d05c31ba3ac8d070dde52360a76a2a21e4e838db036f8",
-        "selected_ids_sha256": "a4b62f4bb4eb2e79cad4b0e9011128de1f0bd251034e8d96821ebbbf863e6d45",
+        "selected_ids_sha256": "90f623c63b912ac16a83dbfd76fed17afaa8bdf6ac85a18e3daa096c6249c0e9",
+        "withheld_rows": 126,
+        "withheld_hold_rows": 124,
         "withheld_excluded_rows": 2,
-        "withheld_hold_rows": 193,
-        "withheld_ids_sha256": "15a0058b289e2895fb56bd94ab44dffb293ec5d88d4b4f120cdf1fa7160ec0c8",
-        "withheld_rows": 195
+        "withheld_ids_sha256": "d7e10e5156591e0525dc81611318cc0472ffc9fb98ffc76809cb8b34eee6f7e3"
       },
-      "reason": "Local private-stage candidate: 27 original-document-supported Steven Wu observations from 222 complete visible Chrome rows; 195 remain private. Two star-citation rows and existing Fanti version continuity remain held. New works require exact placement/topic review and remain pending. This decision alone does not authorize upload.",
-      "reviewed_at": "2026-10-31",
+      "reason": "Selected-only add-on: 27 prior and 69 additional Scholar-first Steven Wu observations from one complete owner-linked 222-row capture; 126 concrete holds/exclusions remain private. New works await reviewed spatial placement; this decision alone does not authorize upload.",
+      "reviewed_at": "2026-11-01",
       "scholar_id": "MbF6rTEAAAAJ",
       "state": "released"
     },
