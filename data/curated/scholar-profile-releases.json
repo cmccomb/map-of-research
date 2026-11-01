@@ -1775,6 +1775,26 @@
         "withheld_excluded_rows": 9,
         "withheld_ids_sha256": "c46007a23badcf46b79a3f0b1ecc38c219d05ccb615b639552728db9a975b19d"
       }
+    },
+    {
+      "person_id": "person-yuvrajagarwal-6115c679",
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "state": "released",
+      "expected_source_rows": 22,
+      "cache_sha256": "8133196252d0697e01baa22a1ee372a4f22d22693c130edb8a54408cd059057c",
+      "reason": "Private local first22 selected-only candidate from one complete exact owner-linked Scholar capture; 94 further candidates deferred, 46 concrete holds and 16 exclusions. All new works placement-held. This stage alone does not authorize release.",
+      "reviewed_at": "2026-11-01",
+      "public_subset": {
+        "observed_visible_rows": 178,
+        "private_capture_sha256": "89b03b416d196da2d3bed6b8738bc3c9eadcd5375d1cee39afe61509219ec2cd",
+        "private_rendered_html_sha256": "2d52f731a1fc0af481392fce3e7e0db38fe78fa18fdea18652e258702e8ede96",
+        "private_review_sha256": "f2695e6cd3d7c6bf27d5b898b1d80aa3f962897383d6e336daa12cde31325a59",
+        "selected_ids_sha256": "0c29125945f42ab9436de8b02569f6ab8b4386eb8fedd749e5a0e277afc2d355",
+        "withheld_rows": 156,
+        "withheld_hold_rows": 140,
+        "withheld_excluded_rows": 16,
+        "withheld_ids_sha256": "b3876c13635d5cde07f1908a0756bbcbddfa59254249add1b2e1c697a4ccd2b2"
+      }
     }
   ]
 }
