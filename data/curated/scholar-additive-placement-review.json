@@ -1,146 +1,86 @@
 {
   "schema_version": 1,
-  "prior_revision": "0e04e03913b9c2075fa578d1c5376a09401e03bb",
-  "source_snapshot_sha256": "91eb6312aa781a8cdbbec2d3269e547083f4664f91e49c9399bee80ab6f8733a",
-  "selected_ids_sha256": "faf0cfdf2f937733060bf8397edfa1e4f25deae4141d5b114516b9e632a7e095",
-  "parent_map_sha256": "9296a5cdecd81f996e7918236a67c1aa2d3b9f9b4cb48acc81e3e20dd15f5244",
-  "candidate_map_content_sha256": "e82c199eeaa3814cd31c7f7f915efd1688bb62e25b382e1e979f5d2fde375992",
-  "new_work_ids_sha256": "de8923ce289f943bf1608d9fab663a3e873efe6c624c6001a384b90690381ddd",
+  "prior_revision": "a63a80ad777b237f64a495161629e906f7b0f299",
+  "source_snapshot_sha256": "c398f23d639eb4dd0cc66cd688760bdce3aaba9c4014bb5c128bcd1fb506f24d",
+  "selected_ids_sha256": "402d1020a738ed08fe17e7fae14da6f45ed8db2a37aad0c923dc6a997230dcaf",
+  "parent_map_sha256": "b7197fdfbe6d7483b845a34795b158e0b3407e4fa9040a75ba6a0b8474ab3e35",
+  "candidate_map_content_sha256": "289c978987c3128a6b71d0853c052dbf13822d94bbd05e29e99767b7a4df47e2",
+  "new_work_ids_sha256": "9f36440192d2568fb43e4fdfd90de2b10bfbef3d84b57c4432d271e9df272fdf",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-01",
   "new_points": [
     {
-      "work_id": "work-00331ab936e3bb5f31b4e7fa836d2f4941130bc250c4fbff106151af8727b8e2",
+      "work_id": "work-08cf649393721face6b0ef7132d7482240d73882bcecc0ad9949ad30ecc73d7a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-01df525b32e7bb06b1360cc83447af3326bc253ce99933d4c4ca9462bdcab514",
+      "work_id": "work-16637c68a4e3d18ff5c242b15e376774e6a293171460a171c9d2dac6d86a2cb7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0e4b407452c80a34b79b65fff198a7095bd127f0df0c58820ac12d0bcbd6a8b3",
+      "work_id": "work-274a3ab1fe0f45c8739c6369ad8e9276e4eeeb6bc4600083412cc61e8b21f552",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-184517da9fe0e2b014ec9ebe8fee5361117a0b2b9ea3cea3a13a220c9b121db2",
+      "work_id": "work-305b8d6041abd41ab398a41b7c707dd0581076fba0326ed045cceef3ddd9c675",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-295d5068d284e74ea0d8dd820b6287a5659eeea165da9ab732421b4a83e3b878",
+      "work_id": "work-3e517ad5260f271ec41dce77bdf0bbf8cc9164780e3cbd7b1351184a6b47326b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-2aca09a12da8b2a8db26bb1dc5e5b4a556e01f90ee7e0ca51cce18ee3314ed36",
+      "work_id": "work-3e618e795675b55cea1f9a325e29d21fe20a34112de1bc34c1ea1dc49bc0988c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-2d9b2a2c30f3c2b87ec298b2dfe2f30aa4c3e77b5e5bb9c2a811c0c3be413135",
+      "work_id": "work-79aecab44ab1e9b02c4796a2417b3c14976f26fd52f89ef931fcb59dfd98d8a6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-6fd2269f00e99d90b482094439adf087af9a175d4ae9506847ca46af60e42c35",
+      "work_id": "work-82cd6acac53e04f6603f43ac71164243d805d64def645ecb8cdd876384ee0d19",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-8ee40f94596c59201ed40eee7ea629d28ae288f8f8310b9734529fec580727a7",
+      "work_id": "work-ad24694bec5f3397a0677fd9527a8a7e116abf5318b52dc98f02f9f2d4c5551e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-92ce2b74a33d3f23eef544310911f93f492c58c6dad21b85dc96a4972d8f1a87",
+      "work_id": "work-bd6d8034cce13a57a7b4743872039f490b4292e0d28c88b8efb7652804800e5c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-98274919f31bfe08ba4bea09beb02b40ae8e16f8779b65251e5bb0fd8d42bdd2",
+      "work_id": "work-d417084f47108c3f0ed77dcb844608861e279193c033948379909f2c9e6781bd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-ab23511b1f53b9984cc45346c60abd79d746a58eb15bfd3ef97573623527f806",
+      "work_id": "work-d4df36be0c830ed896b49bf9e4f856cdc3e8978c372f70ec6de3b1534cbae1ec",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-b389bb9688199dd7c672172d957259d19447be941f8250a6a0c8580023000dcc",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-b521287c2aff806330303f2d614577a5d4312d747ec1ef22ec75bb518b624531",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-b57947fbcb25d5a6fb313453e9fea53bd37e7a50d3f15fb8c5f6853c3c91c889",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-bed283a210e13b465dc145c451216ff13637027b468e53bc2e3ede7141ce2cce",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-da387a64149448aa1ed12fd82f0bfbda90a29de480008f94e8fa8e02597537fd",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-dd354f5a22a2da6d3c0a6749f2539ae0d015ac3d8a495b667030f6ed494dbc11",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-e4ac9f766b3045700784ef5b5246359a302bd0ab6be793b4115d73ed5c96ee0b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-f1220198251d60eb437b34f217ac311fe5f27139034870004272002d7ac112c9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-f6c14781d91bea8b01833a9437d9819068cff8f075babf73eea49e2861097328",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
-    },
-    {
-      "work_id": "work-fd3c07000808442885ca61959e8aa962192df908f51e955cdbd1e364bf34e970",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
+      "rationale": "Exact selected Yuvraj Agarwal official arXiv preprint; spatial topic placement awaits separate review."
     }
   ]
 }
