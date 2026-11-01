@@ -1,134 +1,176 @@
 {
   "schema_version": 1,
-  "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
-  "source_snapshot_sha256": "dfd621ab4de95552fa5c55228062df36d06451edd7336e160e4299c454d3b2bb",
-  "selected_ids_sha256": "943cbe22afd778b15620dc48f4e76673ea33d450c080505b3ff12d7fb2f314c9",
-  "parent_map_sha256": "3d081e6cabab1f30034ac96b561a31c54eae88ff31c779538894556ea099c494",
-  "candidate_map_content_sha256": "e02788314693d5b4a75d2def9b3f9e801e64303cb91814a895155d607622de45",
-  "new_work_ids_sha256": "fff639bfc53e9e20e8638a7f5604c4d715a37929f931c768d3835a5cb2253f9a",
+  "prior_revision": "6ef8563a369e352dc695542676bf53c324e0d94f",
+  "source_snapshot_sha256": "7393b0ff9c3354d3a5e0520a7d020be5c0fbf0a95e718d040ed4e430dd639338",
+  "selected_ids_sha256": "b1a0c7005f8d1960adeb7c9294597da6b82a0830ad508fe0f5f75fdac4f07774",
+  "parent_map_sha256": "1b917885244a883fbf2878a2bc0218c6cf3a867a1cb8a7e33b5aa5e4e54d6162",
+  "candidate_map_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "new_work_ids_sha256": "b5f01f026a98ec0441a96b067dfd8ac506fdc19482eca52185d1db453fece8ae",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
-  "reviewed_at": "2026-10-31",
+  "reviewed_at": "2026-11-01",
   "new_points": [
     {
-      "work_id": "work-17caea992f6674146f424343fc8562a52a5b6d240f1d2410611c73dcf0d5f46a",
+      "work_id": "work-162eeee0d9bc90bb1ec440a2166491a10f1a1ed2a18aa37a9414c928e188ee44",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-196ffa2424babf4d151ef229c70ad516967db1e89f996a5e33ff8c264a30efb4",
+      "work_id": "work-1bac0190849ef849b803bb4d9417cac204e2baf7c2fa04b5f3410851f980f056",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-1f3611f63b23f112c496a6587efceccb5408e77e77197f3b7e7d0292922b7589",
+      "work_id": "work-1c22ad3a5af9f7f67fcc9507fada5d21f943a14d890a82724462ad00a0dd72d8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-527761769987d4971758c59982fb977ed86f3db8a87b9bb90423957433cb224d",
+      "work_id": "work-2bcca8e8f221ffe41dec3c362e2f0665d098b8c0a11520e0adfd32c70881972a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-5950cf9fdd5d82c864c2c4315366b09a38ba499e7ce2b933552939de136e00f6",
+      "work_id": "work-2e2725f95258f9c00752f8d0d4bea2ec31223066a3cdfe45095a1e9315d92a6a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-767822b647d51996cbc534237646a263a7ce78808c7ac4e75f2e36394a918f1a",
+      "work_id": "work-3655a08ede7ce4e5f60f1e7fd4d41def938b8a9227e9acb220dc2755e1a14c76",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-772ee912c2373613e5abc443c45c438aec7b565d2a4fee0dc1006ca01f174bc4",
+      "work_id": "work-4476ec5ce8823829f9f9b1b1aa5a9377f7aad98df9e48dbb1f0e95950b3e2f5d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-7caee22d4ef43316d224121f99075c64359051486cd43e2d4b5d85602c7179bb",
+      "work_id": "work-56c17ca1b7115088025ff5a29018d7ad465d77681e671e217200d86fa76e4a56",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-851f2decc29983a02e1d1bd389528db9bee25507140feb9f3b1f0898e33aa196",
+      "work_id": "work-572d9a5e75ed53ccb9c1896ae65cec4608877946815053508403ee1d545ec1b3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-8a82d2c06be6c0a92c2e8d189a5bcbab0a45ebf439af0a1467798c60fd2b6d5f",
+      "work_id": "work-75246480feeb38f7aa837ded2f15d4b873e0e2e5bf177a7598379a2f3a4499bf",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-8d5c62fb9c407c14319260f47984241ea80d063b23f8e91ffc737d9d7e44575b",
+      "work_id": "work-811017d3f3f080e3ce74d6d92a537bc239a99f017a5a2538847c79a6cc02ad11",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-914ab61196a30329bf734099f65cb334e6575c2914119d98c00445b103491fce",
+      "work_id": "work-899380fbec4b9a2e1c80d01e132e6ab383198785cde0667186bfa98704690daf",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-a60122513cd9cd890d26f4a601f1b031221606cbc0bf846c649078ebecd8e4ec",
+      "work_id": "work-8ba3772444021a6e8a3faf1934b983490321090e612be757f6793bb9bec0d3e4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-a70971b31672425ad78e88f2915261f7d8c0b393c21a7dea91785a836fc77281",
+      "work_id": "work-8fc229e3b97c30ae16136d00ddd8a442334d8a07d3c3cfc1090936388f084f7f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-b03cc6ac086319d0e8b524410dfb1b0ee91aa71a8422ccf0466b44ea3f80d936",
+      "work_id": "work-97138b8da010a9dbce3dd03665f74ce4299bc8b022ab72c4ca699c73a12298d2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-b79321f1806e1271fc45885c8331d3dc8aac44fa108d2f5df6f4a4e099bb8f12",
+      "work_id": "work-9db93794b2f3246f3bdc1c374ea22886e97f7b3a5f6f086c02b3d6c2d67854a2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-c11ba28c54a3361f24afedb26b8568e4658c27f8b7808b6d205b682b6e109828",
+      "work_id": "work-a021605ac09a3fc925e7878d667461aec2b2ee81917c99678b900a55b33fc826",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-cf5f19675de486da677f64f9615172e36e378deee451125fa623c95bb8f7285f",
+      "work_id": "work-a5f078df78e87802fd741564eb4dc678c453f5f598354b5e56e197ebb0f80451",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-d283506294f1399b9b89d41031b5fa2e885d8e0fe487dbfabd6d7e4387f769c8",
+      "work_id": "work-b8c1da097f735bcf765518c7813c13e6c3942775e7001be54ed0c216b53286ad",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     },
     {
-      "work_id": "work-d7f6d1858f53f86eb62b56a602bbc151b3d040926e16d635d72f9f0e410430f2",
+      "work_id": "work-c35aac2f683a41b37559fccc3e270bad2d46ba0031741e7ac764740d65d69295",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Scholar citation and source-reviewed type/DOI support this selected Rayid work. Exact four-coordinate placement and specific topic against Hub8ee2 remain unreviewed; keep pending and nonspatial."
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-c5d746916ebb20c5c8c4f4417b4d47489f12c1921e09985b3e02256f656c42cc",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-c79e0aa9e0e49dbcffe81a8c4e51ecb184170e586cb5fa71c522c11a8ebde86f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-ce40743029888171e2f2e53310e64c2e63ab27700e9452b52bf3dd2ac197f615",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-da497479b1b4dc5df57a334d4ae8530318967e06f43e843279f753d963c6a03b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-efa890866ee9cbf944bee1c83604dac373bf5686d9a3e3adf4d284a202416be8",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-f02122e8a381aca605c061851d3cdfca3fd6b490bd575c97ac026fc7b720ba5b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
+    },
+    {
+      "work_id": "work-fdd6fcd4724c4d5ae35b3e0790032435b810c00b44c54ce0bac49fc08f8511f4",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked selected Randi observation; exact placement and topic are unreviewed, so keep this new work pending and nonspatial."
     }
   ]
 }
