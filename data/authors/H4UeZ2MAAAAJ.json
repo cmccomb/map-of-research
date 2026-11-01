@@ -3,7 +3,7 @@
   "display_name": "Yuvraj Agarwal",
   "scholar_id": "H4UeZ2MAAAAJ",
   "fetched_at_utc": "2026-10-31T11:33:49.942Z",
-  "publication_count": 22,
+  "publication_count": 34,
   "browser_capture": {
     "method": "user_chrome_owner_link_visible_dom_complete",
     "profile_url": "https://scholar.google.com/citations?user=H4UeZ2MAAAAJ&hl=en",
@@ -18,17 +18,25 @@
     "observed_visible_rows": 178,
     "private_capture_sha256": "89b03b416d196da2d3bed6b8738bc3c9eadcd5375d1cee39afe61509219ec2cd",
     "private_rendered_html_sha256": "2d52f731a1fc0af481392fce3e7e0db38fe78fa18fdea18652e258702e8ede96",
-    "private_review_sha256": "f2695e6cd3d7c6bf27d5b898b1d80aa3f962897383d6e336daa12cde31325a59",
-    "selected_ids_sha256": "0c29125945f42ab9436de8b02569f6ab8b4386eb8fedd749e5a0e277afc2d355",
-    "withheld_rows": 156,
-    "withheld_hold_rows": 140,
+    "private_review_sha256": "acd312453b02dd676932d43f9a95b7dd6fe62221e5c818237951db4b65268277",
+    "selected_ids_sha256": "140250ef66d8ce32f7f703256df40c0033349d1948fc03b620e9fe28d968939c",
+    "withheld_rows": 144,
+    "withheld_hold_rows": 128,
     "withheld_excluded_rows": 16,
-    "withheld_ids_sha256": "b3876c13635d5cde07f1908a0756bbcbddfa59254249add1b2e1c697a4ccd2b2",
+    "withheld_ids_sha256": "beca3e8ec5a4cdf8468fcb0ce7627c6be3bfe2363a8c72a75ba3fc9ee990b1d5",
     "selected_author_pub_ids": [
+      "H4UeZ2MAAAAJ:-uzm3Y7AvW0C",
       "H4UeZ2MAAAAJ:2osOgNQ5qMEC",
       "H4UeZ2MAAAAJ:4TOpqqG69KYC",
       "H4UeZ2MAAAAJ:AYInfyleIOsC",
+      "H4UeZ2MAAAAJ:BAanoTsO0WEC",
+      "H4UeZ2MAAAAJ:KS-xo-ZNxMsC",
+      "H4UeZ2MAAAAJ:L_l9e5I586QC",
+      "H4UeZ2MAAAAJ:MIg0yeAD4ggC",
+      "H4UeZ2MAAAAJ:PQEM9vzQD9gC",
+      "H4UeZ2MAAAAJ:SxCCDk4iOpsC",
       "H4UeZ2MAAAAJ:TaaCk18tZOkC",
+      "H4UeZ2MAAAAJ:U0iAMwwPxtsC",
       "H4UeZ2MAAAAJ:W7OEmFMy1HYC",
       "H4UeZ2MAAAAJ:Wq2b2clWBLsC",
       "H4UeZ2MAAAAJ:X9ykpCP0fEIC",
@@ -37,14 +45,18 @@
       "H4UeZ2MAAAAJ:YlPif8NxrbYC",
       "H4UeZ2MAAAAJ:_AeoHAGD03cC",
       "H4UeZ2MAAAAJ:d1gkVwhDpl0C",
+      "H4UeZ2MAAAAJ:eH23hyXCXa4C",
+      "H4UeZ2MAAAAJ:hvmnpdAuIbkC",
       "H4UeZ2MAAAAJ:isU91gLudPYC",
       "H4UeZ2MAAAAJ:nPT8s1NX_-sC",
       "H4UeZ2MAAAAJ:qE4H1tSSYIIC",
       "H4UeZ2MAAAAJ:qjMakFHDy7sC",
+      "H4UeZ2MAAAAJ:rCNdntzdTkkC",
       "H4UeZ2MAAAAJ:s85pQhAUCrAC",
       "H4UeZ2MAAAAJ:s9ia6_kGH2AC",
       "H4UeZ2MAAAAJ:sJPMR1oEGYQC",
       "H4UeZ2MAAAAJ:ufrVoPGSRksC",
+      "H4UeZ2MAAAAJ:wUn16MOA3RoC",
       "H4UeZ2MAAAAJ:yY3RG6sOEgwC",
       "H4UeZ2MAAAAJ:zdjWy_NXXwUC"
     ]
@@ -205,6 +217,28 @@
       "citation_count_display": "36"
     },
     {
+      "title": "Privacyproxy: Leveraging crowdsourcing and in situ traffic analysis to detect and mitigate information leakage",
+      "author": "G Srivastava, K Bhuwalka, SK Sahoo, S Chitkara, K Ku, M Fredrikson, ...",
+      "pub_year": "2017",
+      "venue": "arXiv preprint arXiv:1708.06384",
+      "num_citations": 29,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:SxCCDk4iOpsC",
+      "author_pub_id": "H4UeZ2MAAAAJ:SxCCDk4iOpsC",
+      "capture_row_index": 74,
+      "citation_count_display": "29"
+    },
+    {
+      "title": "Quiver: Using control perturbations to increase the observability of sensor data in smart buildings",
+      "author": "J Koh, B Balaji, V Akhlaghi, Y Agarwal, R Gupta",
+      "pub_year": "2016",
+      "venue": "arXiv preprint arXiv:1601.07260",
+      "num_citations": 26,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:MIg0yeAD4ggC",
+      "author_pub_id": "H4UeZ2MAAAAJ:MIg0yeAD4ggC",
+      "capture_row_index": 76,
+      "citation_count_display": "26"
+    },
+    {
       "title": "Models, abstractions, and architectures: The missing links in cyber-physical systems",
       "author": "B Balaji, MA Al Faruque, N Dutt, R Gupta, Y Agarwal",
       "pub_year": "2015",
@@ -249,6 +283,28 @@
       "citation_count_display": "20"
     },
     {
+      "title": "Real world longitudinal iOS app usage study at scale",
+      "author": "D Kim, J Gluck, M Hall, Y Agarwal",
+      "pub_year": "2019",
+      "venue": "arXiv preprint arXiv:1912.12526",
+      "num_citations": 15,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:wUn16MOA3RoC",
+      "author_pub_id": "H4UeZ2MAAAAJ:wUn16MOA3RoC",
+      "capture_row_index": 89,
+      "citation_count_display": "15"
+    },
+    {
+      "title": "Managing Commercial HVAC Systems: What do Building Operators Really Need?",
+      "author": "B Balaji, N Weibel, Y Agarwal",
+      "pub_year": "2016",
+      "venue": "arXiv preprint arXiv:1612.06025",
+      "num_citations": 15,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:-uzm3Y7AvW0C",
+      "author_pub_id": "H4UeZ2MAAAAJ:-uzm3Y7AvW0C",
+      "capture_row_index": 90,
+      "citation_count_display": "15"
+    },
+    {
       "title": "Redcooper: Hardware sensor enabled variability software testbed for lifetime energy constrained application",
       "author": "Y Agarwal, A Bishop, TB Chan, M Fotjik, P Gupta, A Kahng, L Lai, P Martin, ...",
       "pub_year": "2014",
@@ -258,6 +314,17 @@
       "author_pub_id": "H4UeZ2MAAAAJ:zdjWy_NXXwUC",
       "capture_row_index": 93,
       "citation_count_display": "14"
+    },
+    {
+      "title": "A systematic approach for exploring tradeoffs in predictive HVAC control systems for buildings",
+      "author": "J Gluck, C Koehler, J Mankoff, A Dey, Y Agarwal",
+      "pub_year": "2017",
+      "venue": "arXiv preprint arXiv:1705.02058",
+      "num_citations": 12,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:hvmnpdAuIbkC",
+      "author_pub_id": "H4UeZ2MAAAAJ:hvmnpdAuIbkC",
+      "capture_row_index": 98,
+      "citation_count_display": "12"
     },
     {
       "title": "Micro-systems driving smart energy metering in smart grids",
@@ -271,6 +338,17 @@
       "citation_count_display": "12"
     },
     {
+      "title": "Orchestration for domain-specific edge-cloud language models",
+      "author": "P Patidar, A Crown, K Hsieh, Y Xu, T Chakraborty, R Chandra, Y Agarwal",
+      "pub_year": "2025",
+      "venue": "arXiv preprint arXiv:2507.09003",
+      "num_citations": 11,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=20&pagesize=80&citation_for_view=H4UeZ2MAAAAJ:BAanoTsO0WEC",
+      "author_pub_id": "H4UeZ2MAAAAJ:BAanoTsO0WEC",
+      "capture_row_index": 100,
+      "citation_count_display": "11"
+    },
+    {
       "title": "A vision for computational decarbonization of societal infrastructure",
       "author": "D Irwin, P Shenoy, M Hajiesmaili, WA Hanafy, J Oke, R Sitaraman, ...",
       "pub_year": "2025",
@@ -280,6 +358,72 @@
       "author_pub_id": "H4UeZ2MAAAAJ:XDrR66g3YHsC",
       "capture_row_index": 104,
       "citation_count_display": "9"
+    },
+    {
+      "title": "Self-serviced iot: Practical and private iot computation offloading with full user control",
+      "author": "D Kim, P Patidar, H Zhang, A Anilkumar, Y Agarwal",
+      "pub_year": "2022",
+      "venue": "arXiv preprint arXiv:2205.04405",
+      "num_citations": 6,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:rCNdntzdTkkC",
+      "author_pub_id": "H4UeZ2MAAAAJ:rCNdntzdTkkC",
+      "capture_row_index": 109,
+      "citation_count_display": "6"
+    },
+    {
+      "title": "FeatureSense: Protecting Speaker Attributes in Always-On Audio Sensing System",
+      "author": "B Chhaglani, SS Gomasta, Y Agarwal, J Gummeson, P Shenoy",
+      "pub_year": "2025",
+      "venue": "arXiv preprint arXiv:2505.24115",
+      "num_citations": 5,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:eH23hyXCXa4C",
+      "author_pub_id": "H4UeZ2MAAAAJ:eH23hyXCXa4C",
+      "capture_row_index": 113,
+      "citation_count_display": "5"
+    },
+    {
+      "title": "Verisplit: Secure and practical offloading of machine learning inferences across iot devices",
+      "author": "H Zhang, Z Wang, M Dhamankar, M Fredrikson, Y Agarwal",
+      "pub_year": "2024",
+      "venue": "arXiv preprint arXiv:2406.00586",
+      "num_citations": 5,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:U0iAMwwPxtsC",
+      "author_pub_id": "H4UeZ2MAAAAJ:U0iAMwwPxtsC",
+      "capture_row_index": 115,
+      "citation_count_display": "5"
+    },
+    {
+      "title": "The design of the user interfaces for privacy enhancements for android",
+      "author": "JI Hong, Y Agarwal, M Fredrikson, M Czapik, S Hanna, S Sahoo, J Chun, ...",
+      "pub_year": "2021",
+      "venue": "arXiv preprint arXiv:2104.12032",
+      "num_citations": 5,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:PQEM9vzQD9gC",
+      "author_pub_id": "H4UeZ2MAAAAJ:PQEM9vzQD9gC",
+      "capture_row_index": 116,
+      "citation_count_display": "5"
+    },
+    {
+      "title": "HVACMeter: Apportionment of HVAC power to thermal zones and air handler units",
+      "author": "J Koh, B Balaji, R Gupta, Y Agarwal",
+      "pub_year": "2015",
+      "venue": "arXiv preprint arXiv:1509.05421",
+      "num_citations": 4,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:L_l9e5I586QC",
+      "author_pub_id": "H4UeZ2MAAAAJ:L_l9e5I586QC",
+      "capture_row_index": 124,
+      "citation_count_display": "4"
+    },
+    {
+      "title": "Analysis of Longitudinal Changes in Privacy Behavior of Android Applications",
+      "author": "A Yu, Y Agarwal, JI Hong",
+      "pub_year": "2021",
+      "venue": "arXiv preprint arXiv:2112.14205",
+      "num_citations": 2,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=H4UeZ2MAAAAJ&cstart=100&pagesize=100&citation_for_view=H4UeZ2MAAAAJ:KS-xo-ZNxMsC",
+      "author_pub_id": "H4UeZ2MAAAAJ:KS-xo-ZNxMsC",
+      "capture_row_index": 129,
+      "citation_count_display": "2"
     },
     {
       "title": "Supporting Maintenance Operations for IoT-based Activity Recognition using Transfer Learning",
