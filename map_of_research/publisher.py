@@ -618,7 +618,7 @@ def _reviewed_new_generic_placement_work_ids(
     these works off the spatial map. This only prevents a refitted topic region
     from making a selected source observation disappear before that review.
     Authored contexts are protected only when their exact selected identity,
-    reviewed metadata, and noncollaborative placement hold all agree.
+    reviewed metadata, collaboration eligibility, and placement hold agree.
     """
 
     review = load_json(review_path)
@@ -666,6 +666,8 @@ def _reviewed_new_generic_placement_work_ids(
         "doi",
         "collaboration_eligible",
         "map_eligible",
+        "title",
+        "year",
     }
     if not required_work_fields <= set(works.columns):
         raise ValueError("Generic placement review lacks work eligibility fields")
@@ -675,6 +677,8 @@ def _reviewed_new_generic_placement_work_ids(
             "doi",
             "collaboration_eligible",
             "map_eligible",
+            "title",
+            "year",
         ]
     ].to_dict("index")
     protected: set[str] = set()
@@ -728,30 +732,35 @@ def _reviewed_new_generic_placement_work_ids(
         elif (
             context.publication_type in AUTHORED_PUBLICATION_TYPES
             and work_id in all_held_ids
-            and getattr(context, "collaboration_eligible", None) is False
         ):
             reviewed_doi = context.verified_doi
+            reviewed_collaboration = getattr(context, "collaboration_eligible", None)
             expected_match_method = (
                 "reviewed_context_doi" if reviewed_doi else "normalized_title_year"
             )
             if (
-                row.source_type != "scholar"
+                type(reviewed_collaboration) is not bool
+                or row.source_type != "scholar"
                 or row.publication_type != context.publication_type
                 or row.work_match_method != expected_match_method
                 or row.doi != reviewed_doi
-                or bool(row.collaboration_eligible)
-                or not bool(row.map_eligible)
+                or type(row.collaboration_eligible) is not bool
+                or row.collaboration_eligible is not reviewed_collaboration
+                or row.map_eligible is not True
                 or context.map_eligible is not True
                 or str(getattr(row, "title", "")).strip() != context.expected_title
-                or getattr(row, "year", None) != context.expected_year
+                or _year_key(getattr(row, "year", None)) != context.expected_year
             ):
                 raise ValueError("Authored placement review has ineligible source work")
             work = works_by_id[work_id]
             if (
                 work["publication_type"] != context.publication_type
                 or work["doi"] != reviewed_doi
-                or bool(work["collaboration_eligible"])
-                or not bool(work["map_eligible"])
+                or type(work["collaboration_eligible"]) is not bool
+                or work["collaboration_eligible"] is not reviewed_collaboration
+                or work["map_eligible"] is not True
+                or str(work["title"]).strip() != context.expected_title
+                or _year_key(work["year"]) != context.expected_year
             ):
                 raise ValueError(
                     "Authored placement review has ineligible canonical work"
