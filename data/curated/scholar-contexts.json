@@ -5322,9 +5322,10 @@
       "collaboration_eligible": false,
       "map_eligible": true,
       "verified_at": "2026-11-01",
-      "publication_type": "publication",
-      "reason": "Complete exact-owner Scholar profile supports captured title/year/author association; specific DOI/type and spatial placement are not asserted. Collaboration remains disabled.",
-      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SuXrO6gAAAAJ&citation_for_view=SuXrO6gAAAAJ:qjMakFHDy7sC"
+      "publication_type": "conference_paper",
+      "reason": "Randi Williams owner CV confirms exact 2018 IDC conference paper, full byline and DOI; source citation title and year exact.",
+      "evidence_url": "https://web.media.mit.edu/~randiw12/files/RWilliams_CV.pdf",
+      "verified_doi": "10.1145/3202185.3210788"
     },
     {
       "scholar_id": "SuXrO6gAAAAJ",
@@ -5404,9 +5405,10 @@
       "collaboration_eligible": false,
       "map_eligible": true,
       "verified_at": "2026-11-01",
-      "publication_type": "publication",
-      "reason": "Complete exact-owner Scholar profile supports captured title/year/author association; specific DOI/type and spatial placement are not asserted. Collaboration remains disabled.",
-      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SuXrO6gAAAAJ&citation_for_view=SuXrO6gAAAAJ:ufrVoPGSRksC"
+      "publication_type": "conference_paper",
+      "reason": "Randi Williams owner CV confirms exact 2021 SIGCSE conference paper and byline; DOI remains unverified in primary record.",
+      "evidence_url": "https://web.media.mit.edu/~randiw12/files/RWilliams_CV.pdf",
+      "verified_doi": ""
     },
     {
       "scholar_id": "SuXrO6gAAAAJ",
@@ -5484,9 +5486,10 @@
       "collaboration_eligible": false,
       "map_eligible": true,
       "verified_at": "2026-11-01",
-      "publication_type": "publication",
-      "reason": "Complete exact-owner Scholar profile supports captured title/year/author association; specific DOI/type and spatial placement are not asserted. Collaboration remains disabled.",
-      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SuXrO6gAAAAJ&cstart=20&pagesize=80&citation_for_view=SuXrO6gAAAAJ:L8Ckcad2t8MC"
+      "publication_type": "preprint",
+      "reason": "Original arXiv record confirms exact 2023 title, Randi in full byline, and arXiv 2305.02840. Existing public canonical work is attribution-held and DOI blank; retain its stable title-year identity and all parent metadata.",
+      "evidence_url": "https://arxiv.org/abs/2305.02840",
+      "verified_doi": ""
     },
     {
       "scholar_id": "SuXrO6gAAAAJ",
@@ -5497,9 +5500,10 @@
       "collaboration_eligible": false,
       "map_eligible": true,
       "verified_at": "2026-11-01",
-      "publication_type": "publication",
-      "reason": "Complete exact-owner Scholar profile supports captured title/year/author association; specific DOI/type and spatial placement are not asserted. Collaboration remains disabled.",
-      "evidence_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SuXrO6gAAAAJ&cstart=20&pagesize=80&citation_for_view=SuXrO6gAAAAJ:kNdYIx-mwKoC"
+      "publication_type": "conference_paper",
+      "reason": "Randi Williams owner CV confirms exact 2022 IEEE VL/HCC conference paper; publisher DOI remains unverified in primary record.",
+      "evidence_url": "https://web.media.mit.edu/~randiw12/files/RWilliams_CV.pdf",
+      "verified_doi": ""
     },
     {
       "scholar_id": "SuXrO6gAAAAJ",
