@@ -99,6 +99,8 @@ def test_pending_generic_region_protection_is_manifest_source_bound(tmp_path) ->
                 "doi": doi,
                 "collaboration_eligible": collaboration,
                 "map_eligible": True,
+                "title": work_id,
+                "year": 2000,
             }
             for work_id, publication_type, doi, collaboration in (
                 ("work-new", "publication", "", False),
@@ -122,11 +124,6 @@ def test_pending_generic_region_protection_is_manifest_source_bound(tmp_path) ->
         "new_points": [
             {
                 "work_id": "work-new",
-                "decision": "hold_pending_placement",
-                "coordinates": None,
-            },
-            {
-                "work_id": "work-authored",
                 "decision": "hold_pending_placement",
                 "coordinates": None,
             },
@@ -331,11 +328,31 @@ def test_pending_authored_region_protection_requires_exact_selected_context(
                 "doi": doi,
                 "collaboration_eligible": False,
                 "map_eligible": True,
+                "title": title,
+                "year": year,
             }
-            for work_id, kind, doi in (
-                ("work-typed", "conference_paper", ""),
-                ("work-doi", "journal_article", "10.1000/reviewed"),
-                ("work-other", "conference_paper", ""),
+            for work_id, kind, doi, title, year in (
+                (
+                    "work-typed",
+                    "conference_paper",
+                    "",
+                    "Reviewed proceedings paper",
+                    2001,
+                ),
+                (
+                    "work-doi",
+                    "journal_article",
+                    "10.1000/reviewed",
+                    "Reviewed journal article",
+                    2020,
+                ),
+                (
+                    "work-other",
+                    "conference_paper",
+                    "",
+                    "Unheld proceedings paper",
+                    2002,
+                ),
             )
         ]
     )
@@ -420,7 +437,64 @@ def test_pending_authored_region_protection_requires_exact_selected_context(
             "collaboration_eligible": True,
         }
     )
-    assert protected(current_contexts=changed_contexts) == frozenset({"work-doi"})
+    with pytest.raises(ValueError, match="ineligible source work"):
+        protected(current_contexts=changed_contexts)
+
+    collaborative_profiles = profiles.copy()
+    collaborative_profiles.loc[
+        collaborative_profiles["work_id"] == "work-typed", "collaboration_eligible"
+    ] = True
+    collaborative_works = works.copy()
+    collaborative_works.loc[
+        collaborative_works["work_id"] == "work-typed", "collaboration_eligible"
+    ] = True
+    assert protected(
+        current_profiles=collaborative_profiles,
+        current_works=collaborative_works,
+        current_contexts=changed_contexts,
+    ) == frozenset({"work-typed", "work-doi"})
+    with pytest.raises(ValueError, match="ineligible canonical work"):
+        protected(
+            current_profiles=collaborative_profiles,
+            current_contexts=changed_contexts,
+        )
+    with pytest.raises(ValueError, match="ineligible source work"):
+        protected(
+            current_works=collaborative_works,
+            current_contexts=changed_contexts,
+        )
+    with pytest.raises(ValueError, match="ineligible canonical work"):
+        protected(current_works=collaborative_works)
+
+    for field, value in (
+        ("title", "Different proceedings paper"),
+        ("year", 2002),
+        ("publication_type", "journal_article"),
+        ("doi", "10.1000/unreviewed"),
+        ("map_eligible", False),
+    ):
+        changed_work = collaborative_works.copy()
+        changed_work.loc[changed_work["work_id"] == "work-typed", field] = value
+        with pytest.raises(ValueError, match="ineligible canonical work"):
+            protected(
+                current_profiles=collaborative_profiles,
+                current_works=changed_work,
+                current_contexts=changed_contexts,
+            )
+
+    untyped_contexts = dict(changed_contexts)
+    untyped_contexts[("owner", "owner:typed")] = SimpleNamespace(
+        **{
+            **vars(changed_contexts[("owner", "owner:typed")]),
+            "collaboration_eligible": "true",
+        }
+    )
+    with pytest.raises(ValueError, match="ineligible source work"):
+        protected(
+            current_profiles=collaborative_profiles,
+            current_works=collaborative_works,
+            current_contexts=untyped_contexts,
+        )
 
     wrong_work = works.copy()
     wrong_work.loc[wrong_work["work_id"] == "work-typed", "map_eligible"] = False
