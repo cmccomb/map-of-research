@@ -78,9 +78,8 @@ from .coauthor_binding_approval import (
     SNAPSHOT_SHA256 as COAUTHOR_BINDING_SNAPSHOT_SHA256,
 )
 from .composite_region import (
-    HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
-)
-from .composite_region import (
+    BLANK_TOPICS,
+    COORDINATE_FIELDS,
     MATH_REVIEW_MANIFEST_SHA256,
     SULLIVAN_PERSON_ID,
     TOPIC_FIELDS,
@@ -93,12 +92,15 @@ from .composite_region import (
     validate_composite_staged_works,
 )
 from .composite_region import (
+    HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
+)
+from .composite_region import (
     PRESENTATION_FIELDS as COMPOSITE_PRESENTATION_FIELDS,
 )
 from .composite_region import (
     VARIANT_FIELDS as COMPOSITE_VARIANT_FIELDS,
 )
-from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
+from .contexts import AUTHORED_PUBLICATION_TYPES, DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
     apply_corrections,
@@ -150,6 +152,7 @@ from .pending_publications import (
     PENDING_MAP_SCHEMA_VERSION,
     build_pending_publications,
     carry_forward_parent_pending_works,
+    parent_pending_region_protection_ids,
     require_parent_pending_list_preserved,
 )
 from .person_publication_holds import (
@@ -572,6 +575,7 @@ def _existing_work_state(
         "work_match_method",
         "map_eligible",
         "map_region_outlier",
+        "map_region_documented_override",
         "map_exclusion_reasons",
         "department_ids",
         "quality_assessment_version",
@@ -579,6 +583,8 @@ def _existing_work_state(
         "topic_label_review_version",
         "map_region_audit_version",
         "layout_version",
+        *COORDINATE_FIELDS,
+        *BLANK_TOPICS,
     )
     try:
         return list(
@@ -606,11 +612,13 @@ def _reviewed_new_generic_placement_work_ids(
     prior_revision: str,
     source_snapshot_sha256: str,
 ) -> frozenset[str]:
-    """Keep exact reviewed new generic works in the candidate pending set.
+    """Keep exact reviewed new source works in the candidate pending set.
 
     The full additive gate subsequently checks the whole manifest and holds
     these works off the spatial map. This only prevents a refitted topic region
     from making a selected source observation disappear before that review.
+    Authored contexts are protected only when their exact selected identity,
+    reviewed metadata, and noncollaborative placement hold all agree.
     """
 
     review = load_json(review_path)
@@ -670,38 +678,93 @@ def _reviewed_new_generic_placement_work_ids(
         ]
     ].to_dict("index")
     protected: set[str] = set()
+    held_binding_counts = Counter(
+        str(row.work_id)
+        for row in profiles.itertuples(index=False)
+        if str(row.work_id) in all_held_ids
+    )
+    protected_binding_counts: Counter[str] = Counter()
     for row in profiles.itertuples(index=False):
         work_id = str(row.work_id)
         context = contexts.get((str(row.scholar_id), str(row.author_pub_id)))
-        if (
-            context is None
-            or context.publication_type != "publication"
-            or work_id in prior_id_set
-        ):
+        if context is None:
+            if (
+                work_id in all_held_ids
+                and row.publication_type in AUTHORED_PUBLICATION_TYPES
+            ):
+                raise ValueError("Authored placement review lacks exact source context")
             continue
-        if (
-            row.source_type != "scholar"
-            or row.publication_type != "publication"
-            or row.work_match_method != "profile_publication"
-            or row.doi != ""
-            or bool(row.collaboration_eligible)
-        ):
-            raise ValueError("Generic placement review has ineligible source work")
-        if not bool(row.map_eligible):
-            if work_id in all_held_ids:
+        if work_id in prior_id_set:
+            continue
+        if context.publication_type == "publication":
+            if (
+                row.source_type != "scholar"
+                or row.publication_type != "publication"
+                or row.work_match_method != "profile_publication"
+                or row.doi != ""
+                or bool(row.collaboration_eligible)
+            ):
                 raise ValueError("Generic placement review has ineligible source work")
-            continue
-        work = works_by_id[work_id]
-        if (
-            work["publication_type"] != "publication"
-            or work["doi"] != ""
-            or bool(work["collaboration_eligible"])
-            or not bool(work["map_eligible"])
+            if not bool(row.map_eligible):
+                if work_id in all_held_ids:
+                    raise ValueError(
+                        "Generic placement review has ineligible source work"
+                    )
+                continue
+            work = works_by_id[work_id]
+            if (
+                work["publication_type"] != "publication"
+                or work["doi"] != ""
+                or bool(work["collaboration_eligible"])
+                or not bool(work["map_eligible"])
+            ):
+                raise ValueError(
+                    "Generic placement review has ineligible canonical work"
+                )
+            if work_id not in all_held_ids:
+                raise ValueError(
+                    "Selected generic work lacks all-held placement review"
+                )
+        elif (
+            context.publication_type in AUTHORED_PUBLICATION_TYPES
+            and work_id in all_held_ids
+            and getattr(context, "collaboration_eligible", None) is False
         ):
-            raise ValueError("Generic placement review has ineligible canonical work")
-        if work_id not in all_held_ids:
-            raise ValueError("Selected generic work lacks all-held placement review")
+            reviewed_doi = context.verified_doi
+            expected_match_method = (
+                "reviewed_context_doi" if reviewed_doi else "normalized_title_year"
+            )
+            if (
+                row.source_type != "scholar"
+                or row.publication_type != context.publication_type
+                or row.work_match_method != expected_match_method
+                or row.doi != reviewed_doi
+                or bool(row.collaboration_eligible)
+                or not bool(row.map_eligible)
+                or context.map_eligible is not True
+                or str(getattr(row, "title", "")).strip() != context.expected_title
+                or getattr(row, "year", None) != context.expected_year
+            ):
+                raise ValueError("Authored placement review has ineligible source work")
+            work = works_by_id[work_id]
+            if (
+                work["publication_type"] != context.publication_type
+                or work["doi"] != reviewed_doi
+                or bool(work["collaboration_eligible"])
+                or not bool(work["map_eligible"])
+            ):
+                raise ValueError(
+                    "Authored placement review has ineligible canonical work"
+                )
+        else:
+            continue
         protected.add(work_id)
+        protected_binding_counts[work_id] += 1
+    if any(
+        protected_binding_counts[work_id] != held_binding_counts[work_id]
+        for work_id in protected
+    ):
+        raise ValueError("Pending placement review has an unreviewed work binding")
     return frozenset(protected)
 
 
@@ -2366,10 +2429,16 @@ def publish_snapshot(
         if additive_placement_review_path is not None
         else frozenset()
     )
+    protected_pending_work_ids = (
+        pending_generic_work_ids
+        | parent_pending_region_protection_ids(prior_work_state)
+        if additive_placement_review_path is not None
+        else frozenset()
+    )
     tables["works"] = exclude_low_information_regions(
         tables["works"],
         doi_aliases=doi_aliases,
-        pending_placement_review_work_ids=pending_generic_work_ids,
+        pending_placement_review_work_ids=protected_pending_work_ids,
     )
     producer_reports_path = (
         people_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH

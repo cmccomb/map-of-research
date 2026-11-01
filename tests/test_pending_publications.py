@@ -13,6 +13,7 @@ from map_of_research.composite_region import BLANK_TOPICS
 from map_of_research.pending_publications import (
     build_pending_publications,
     carry_forward_parent_pending_works,
+    parent_pending_region_protection_ids,
     require_parent_pending_list_preserved,
 )
 from map_of_research.public_subsets import ids_sha256
@@ -360,6 +361,7 @@ def test_pending_collaboration_eligibility_must_be_exact_boolean(table) -> None:
 def carryforward_inputs():
     works, profiles, _, _, _ = inputs()
     works["map_region_outlier"] = False
+    works["map_region_documented_override"] = False
     works["authors"] = [["Person One"]]
     works["venue"] = "Conference"
     works["citation"] = "Person One, A reviewed paper"
@@ -386,6 +388,32 @@ def carryforward_inputs():
     return candidate, profiles, prior_works, profiles.to_dict("records")
 
 
+def test_parent_pending_region_protection_requires_exact_prior_state() -> None:
+    _, _, prior_works, _ = carryforward_inputs()
+    assert parent_pending_region_protection_ids(prior_works) == frozenset({"work-one"})
+    ordinary = deepcopy(prior_works[0])
+    ordinary["work_id"] = "other"
+    ordinary["map_eligible"] = True
+    ordinary["map_exclusion_reasons"] = []
+    assert parent_pending_region_protection_ids([ordinary, *prior_works]) == frozenset(
+        {"work-one"}
+    )
+    for field, value in (
+        ("work_id", ""),
+        ("map_exclusion_reasons", "pending_placement_review"),
+        ("map_exclusion_reasons", ["pending_placement_review", "other"]),
+        ("map_eligible", True),
+        ("map_region_outlier", True),
+        ("map_region_documented_override", "false"),
+        ("x", 0.1),
+        ("keyword_id", "unreviewed-topic"),
+    ):
+        changed = deepcopy(prior_works)
+        changed[0][field] = value
+        with pytest.raises(ValueError, match="Parent pending region protection"):
+            parent_pending_region_protection_ids(changed)
+
+
 def test_parent_pending_carryforward_prevents_unreviewed_promotion() -> None:
     candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
     output, held = carry_forward_parent_pending_works(
@@ -399,6 +427,20 @@ def test_parent_pending_carryforward_prevents_unreviewed_promotion() -> None:
     )
     assert all(output.at[0, field] == blank for field, blank in BLANK_TOPICS.items())
     assert bool(candidate.at[0, "map_eligible"]) is True
+
+
+@pytest.mark.parametrize("prior_override", [False, True])
+def test_parent_pending_carryforward_restores_documented_override(
+    prior_override: bool,
+) -> None:
+    candidate, profiles, prior_works, prior_profiles = carryforward_inputs()
+    prior_works[0]["map_region_documented_override"] = prior_override
+    candidate.at[0, "map_region_documented_override"] = not prior_override
+    output, held = carry_forward_parent_pending_works(
+        candidate, profiles, prior_works, prior_profiles
+    )
+    assert held == ["work-one"]
+    assert output.at[0, "map_region_documented_override"] == prior_override
 
 
 def test_parent_pending_carryforward_rejects_changed_or_missing_source() -> None:
@@ -450,6 +492,7 @@ def test_parent_pending_carryforward_does_not_hide_new_exclusion() -> None:
         ("duplicate_binding", "binding repeats"),
         ("missing_fingerprint", "fingerprint is incomplete"),
         ("changed_fingerprint", "fingerprint changed"),
+        ("malformed_override", "override state is malformed"),
     ],
 )
 def test_parent_pending_carryforward_rejects_unreviewed_parent_change(
@@ -476,6 +519,8 @@ def test_parent_pending_carryforward_rejects_unreviewed_parent_change(
         prior_works[0].pop("citation")
     elif defect == "changed_fingerprint":
         candidate.at[0, "citation"] = "An unreviewed citation change"
+    elif defect == "malformed_override":
+        prior_works[0]["map_region_documented_override"] = "false"
     with pytest.raises(ValueError, match=message):
         carry_forward_parent_pending_works(
             candidate, profiles, prior_works, prior_profiles

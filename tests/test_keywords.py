@@ -618,7 +618,7 @@ def test_region_audit_skips_small_regions() -> None:
     assert audited["map_region_outlier"].tolist() == [False]
 
 
-def test_region_audit_keeps_only_exact_pending_generic_work_for_review() -> None:
+def test_region_audit_keeps_only_exact_new_and_parent_pending_works() -> None:
     size = keywords.MINIMUM_AUDIT_REGION_SIZE
     rows = []
     for index in range(size):
@@ -631,6 +631,10 @@ def test_region_audit_keeps_only_exact_pending_generic_work_for_review() -> None
                     if index == 0
                     else "unreviewed-generic"
                     if index == 1
+                    else "parent-pending"
+                    if index == 2
+                    else "new-typed-doi-empty"
+                    if index == 3
                     else f"prior-{index}"
                 ),
                 "map_eligible": True,
@@ -667,15 +671,25 @@ def test_region_audit_keeps_only_exact_pending_generic_work_for_review() -> None
     ordinary = keywords.exclude_low_information_regions(frame)
     reviewed = keywords.exclude_low_information_regions(
         frame,
-        pending_placement_review_work_ids=frozenset({"new-generic"}),
+        pending_placement_review_work_ids=frozenset(
+            {"new-generic", "new-typed-doi-empty", "parent-pending"}
+        ),
     )
 
     assert not ordinary.loc[0, "map_eligible"]
+    assert not ordinary.loc[2, "map_eligible"]
     assert reviewed.loc[0, "map_eligible"]
+    assert reviewed.loc[2, "map_eligible"]
+    assert reviewed.loc[3, "map_eligible"]
     assert not reviewed.loc[0, "map_region_outlier"]
+    assert not reviewed.loc[2, "map_region_outlier"]
+    assert not reviewed.loc[3, "map_region_outlier"]
     assert reviewed.loc[0, "map_exclusion_reasons"] == []
-    assert not reviewed.loc[1 : size - 1, "map_eligible"].any()
-    assert reviewed.loc[1 : size - 1, "map_region_outlier"].all()
+    assert reviewed.loc[2, "map_exclusion_reasons"] == []
+    assert reviewed.loc[3, "map_exclusion_reasons"] == []
+    assert not reviewed.loc[1, "map_eligible"]
+    assert not reviewed.loc[4 : size - 1, "map_eligible"].any()
+    assert reviewed.loc[4 : size - 1, "map_region_outlier"].all()
     assert reviewed.loc[1, "work_id"] == "unreviewed-generic"
     assert reviewed.loc[1, "map_exclusion_reasons"] == ["low_information_region"]
     assert reviewed.loc[size, "map_exclusion_reasons"] == ["reviewed_false_work"]

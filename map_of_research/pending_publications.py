@@ -23,6 +23,54 @@ PENDING_MAP_SCHEMA_VERSION = 8
 PENDING_REASON = "pending_placement_review"
 
 
+def parent_pending_region_protection_ids(
+    prior_work_state: Sequence[Mapping[str, Any]],
+) -> frozenset[str]:
+    """Protect exact parent placement holds from a refitted weak-region rule.
+
+    The full carryforward below still checks every source binding and work
+    fingerprint after the region audit. This early check only keeps an already
+    reviewed nonspatial parent work eligible for that exact carryforward.
+    """
+
+    pending: set[str] = set()
+    seen: set[str] = set()
+    for row in prior_work_state:
+        work_id = str(row.get("work_id") or "")
+        if not work_id or work_id in seen:
+            raise ValueError("Parent pending region protection has duplicate work IDs")
+        seen.add(work_id)
+        reasons = row.get("map_exclusion_reasons")
+        if not isinstance(reasons, list):
+            raise ValueError("Parent pending region protection has malformed reasons")
+        if PENDING_REASON not in reasons:
+            continue
+        if reasons != [PENDING_REASON] or row.get("map_eligible") is not False:
+            raise ValueError(
+                f"Parent pending region protection has mixed state: {work_id}"
+            )
+        if row.get("map_region_outlier") is not False:
+            raise ValueError(
+                f"Parent pending region protection has outlier state: {work_id}"
+            )
+        if type(row.get("map_region_documented_override")) is not bool:
+            raise ValueError(
+                f"Parent pending region protection lacks override state: {work_id}"
+            )
+        if any(
+            field not in row or not bool(pandas.isna(row[field]))
+            for field in COORDINATE_FIELDS
+        ) or any(
+            field not in row or row[field] != blank
+            for field, blank in BLANK_TOPICS.items()
+        ):
+            raise ValueError(
+                f"Parent pending region protection has presentation: {work_id}"
+            )
+        pending.add(work_id)
+    return frozenset(pending)
+
+
 def carry_forward_parent_pending_works(
     works: Any,
     profiles: Any,
@@ -71,6 +119,7 @@ def carry_forward_parent_pending_works(
         "work_id",
         "map_eligible",
         "map_region_outlier",
+        "map_region_documented_override",
         "map_exclusion_reasons",
         *COORDINATE_FIELDS,
         *BLANK_TOPICS,
@@ -148,6 +197,11 @@ def carry_forward_parent_pending_works(
             )
         output.at[index, "map_eligible"] = False
         output.at[index, "map_region_outlier"] = False
+        if type(prior.get("map_region_documented_override")) is not bool:
+            raise ValueError(f"Parent pending override state is malformed: {work_id}")
+        output.at[index, "map_region_documented_override"] = prior[
+            "map_region_documented_override"
+        ]
         output.at[index, "map_exclusion_reasons"] = [PENDING_REASON]
         for field in COORDINATE_FIELDS:
             output.at[index, field] = None
