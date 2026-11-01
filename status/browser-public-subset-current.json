@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "7a2f32c60786691ea1dba827ef1e27363e4e446f",
-  "registry_producer_commit": "a991b2fea201e08843f3f1e29803e9bcb8d9caa5",
+  "base_source_status_commit": "fc6e3641cc5db640feb0fb40da0c57873b1dff79",
+  "registry_producer_commit": "382d4288b2bc5d3797ba42ad8cd4b6fd4e1e827a",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -2219,16 +2219,64 @@
         "MbF6rTEAAAAJ:wMgC3FpKEyYC"
       ],
       "slug": "steven-wu"
+    },
+    {
+      "slug": "randi-williams",
+      "person_id": "person-randiwilliams-cd0b214f",
+      "scholar_id": "SuXrO6gAAAAJ",
+      "expected_source_rows": 28,
+      "selected_author_pub_ids": [
+        "SuXrO6gAAAAJ:-f6ydRqryjwC",
+        "SuXrO6gAAAAJ:0EnyYjriUFMC",
+        "SuXrO6gAAAAJ:2osOgNQ5qMEC",
+        "SuXrO6gAAAAJ:5nxA0vEk-isC",
+        "SuXrO6gAAAAJ:7PzlFSSx8tAC",
+        "SuXrO6gAAAAJ:8k81kl-MbHgC",
+        "SuXrO6gAAAAJ:9yKSN-GCB0IC",
+        "SuXrO6gAAAAJ:IWHjjKOFINEC",
+        "SuXrO6gAAAAJ:IjCSPb-OGe4C",
+        "SuXrO6gAAAAJ:L8Ckcad2t8MC",
+        "SuXrO6gAAAAJ:MXK_kJrjxJIC",
+        "SuXrO6gAAAAJ:RHpTSmoSYBkC",
+        "SuXrO6gAAAAJ:TQgYirikUcIC",
+        "SuXrO6gAAAAJ:Tyk-4Ss8FVUC",
+        "SuXrO6gAAAAJ:UeHWp8X0CEIC",
+        "SuXrO6gAAAAJ:WF5omc3nYNoC",
+        "SuXrO6gAAAAJ:YsMSGLbcyi4C",
+        "SuXrO6gAAAAJ:ZeXyd9-uunAC",
+        "SuXrO6gAAAAJ:_Qo2XoVZTnwC",
+        "SuXrO6gAAAAJ:d1gkVwhDpl0C",
+        "SuXrO6gAAAAJ:hqOjcs7Dif8C",
+        "SuXrO6gAAAAJ:kNdYIx-mwKoC",
+        "SuXrO6gAAAAJ:mB3voiENLucC",
+        "SuXrO6gAAAAJ:qUcmZB5y_30C",
+        "SuXrO6gAAAAJ:qjMakFHDy7sC",
+        "SuXrO6gAAAAJ:roLk4NBRz8UC",
+        "SuXrO6gAAAAJ:ufrVoPGSRksC",
+        "SuXrO6gAAAAJ:zYLM7Y9cAGgC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 39,
+        "private_capture_sha256": "63f8822b426da0a5cb339606150c2d1e80096afd8abc554c8fcc1874071f9d37",
+        "private_rendered_html_sha256": "b34074733a285cff020db6a4e5ece16721d4ba0b66fe061d2630185d0d761b00",
+        "private_review_sha256": "fe9e5c297350853b3188e513559471ae73ff5926148ba0272a392a500a3bfef5",
+        "selected_ids_sha256": "95d124ca17a369687a3ac6448d98d1b613eda5dc9a27cfa59fc68685088dcb3d",
+        "withheld_rows": 11,
+        "withheld_hold_rows": 10,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "fec544d656d6e9e15df25f306d16a9ca7caed6b421198380e9b01b70c5e21331"
+      },
+      "cache_sha256": "b2bf24ac9b32dd805c76ed365339669172c201d51832958a428ff3448a457735"
     }
   ],
   "totals": {
-    "observed_visible_rows": 4759,
-    "selected_rows": 1476,
-    "withheld_hold_rows": 3053,
-    "withheld_excluded_rows": 230,
-    "withheld_rows": 3283
+    "observed_visible_rows": 4798,
+    "selected_rows": 1504,
+    "withheld_hold_rows": 3063,
+    "withheld_excluded_rows": 231,
+    "withheld_rows": 3294
   },
-  "selected_ids_sha256": "5aa1ce09ec473a7e3adccb96df190cbae3324b86150ff2c97873321b5ed2810c",
-  "withheld_ids_sha256": "b876f64ce50be797ee8d1504d8298537065f3093abd4626ef2e924ea4b8e1368",
+  "selected_ids_sha256": "b1a0c7005f8d1960adeb7c9294597da6b82a0830ad508fe0f5f75fdac4f07774",
+  "withheld_ids_sha256": "db0786aa42c6a6efefa24ac60c0d11170b6cc891344c3ea4302142d1a850e281",
   "private_capture_files_or_html_copied": false
 }
