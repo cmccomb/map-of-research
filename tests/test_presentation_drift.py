@@ -21,6 +21,7 @@ from map_of_research.presentation_drift import (
     preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
+    preserve_reviewed_blank_map_source_urls,
     reported_coauthor_evidence_changed,
     require_excluded_additive_staged_works,
     require_held_additive_staged_works,
@@ -830,6 +831,80 @@ def test_additive_binding_only_freezes_parent_with_empty_exact_review(
             ),
             path,
         )
+
+
+def test_additive_blank_parent_map_link_keeps_exact_new_citation_provenance(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    url = "https://scholar.google.com/citations?view_op=view_citation&citation_for_view=new"
+    candidate["points"][0]["source_url"] = url
+    works.at[0, "source_urls"] = [url]
+    works.at[0, "author_pub_ids"] = ["first-author-pub", "new-author-pub"]
+    works.at[0, "observation_ids"] = ["first-observation", "new-observation"]
+    works.at[0, "observation_count"] = 2
+    profiles = pandas.DataFrame(
+        [{"work_id": "work-0000", "author_pub_id": "new-author-pub", "source_url": url}]
+    )
+    with pytest.raises(PresentationDriftError) as error:
+        freeze_additive(parent, candidate, works, None)
+    path = tmp_path / "placement-review.json"
+    additive_review(path, error.value.receipt)
+    frozen, receipt = preserve_reviewed_additive_presentation(
+        works,
+        parent_work_rows(parent),
+        parent,
+        candidate,
+        prior_revision="a" * 40,
+        source_snapshot_sha256="s" * 64,
+        selected_ids_sha256="i" * 64,
+        parent_map_sha256="p" * 64,
+        reported_coauthor_source_sha256="a" * 64,
+        review_path=path,
+        public_profiles=profiles,
+    )
+    assert frozen.at[0, "source_urls"] == [url]
+    assert receipt["retained_blank_source_url_work_ids"] == ["work-0000"]
+    displayed = preserve_reviewed_blank_map_source_urls(
+        candidate, parent, receipt["retained_blank_source_url_work_ids"]
+    )
+    assert displayed["points"][0]["source_url"] == ""
+    assert candidate["points"][0]["source_url"] == url
+    assert displayed["points"][1:] == candidate["points"][1:]
+    assert preserve_reviewed_blank_map_source_urls(candidate, parent, []) == candidate
+
+    for changed_profiles, changed_works in (
+        (None, works),
+        (profiles.assign(source_url="https://example.org/unrelated"), works),
+        (profiles.assign(author_pub_id="unrelated-id"), works),
+        (
+            profiles,
+            works.assign(
+                source_urls=[
+                    ["https://example.org/unrelated"],
+                    *works["source_urls"].tolist()[1:],
+                ]
+            ),
+        ),
+    ):
+        with pytest.raises(ValueError, match="blank map source URL"):
+            preserve_reviewed_additive_presentation(
+                changed_works,
+                parent_work_rows(parent),
+                parent,
+                candidate,
+                prior_revision="a" * 40,
+                source_snapshot_sha256="s" * 64,
+                selected_ids_sha256="i" * 64,
+                parent_map_sha256="p" * 64,
+                reported_coauthor_source_sha256="a" * 64,
+                review_path=path,
+                public_profiles=changed_profiles,
+            )
+    with pytest.raises(ValueError, match="exact parent"):
+        preserve_reviewed_blank_map_source_urls(candidate, parent, ["unrelated-work"])
+    with pytest.raises(ValueError, match="invalid"):
+        preserve_reviewed_blank_map_source_urls(candidate, parent, ["work-0000"] * 2)
 
 
 def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(

@@ -813,6 +813,7 @@ def test_reviewed_additive_path_binds_selected_ids_and_stages_receipt(
         additive_placement_review_path=review_path,
         prior_person_continuity_receipt={"status": "pass"},
     )
+    assert received.pop("public_profiles") is tables["profile_publications"]
     assert received == {
         "prior_revision": "a" * 40,
         "source_snapshot_sha256": "source-sha",
