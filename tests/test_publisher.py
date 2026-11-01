@@ -277,6 +277,183 @@ def test_pending_generic_region_protection_is_manifest_source_bound(tmp_path) ->
         )
 
 
+def test_pending_authored_region_protection_requires_exact_selected_context(
+    tmp_path,
+) -> None:
+    profiles = pandas.DataFrame(
+        [
+            {
+                "author_pub_id": "owner:typed",
+                "scholar_id": "owner",
+                "work_id": "work-typed",
+                "source_type": "scholar",
+                "publication_type": "conference_paper",
+                "work_match_method": "normalized_title_year",
+                "doi": "",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+                "title": "Reviewed proceedings paper",
+                "year": 2001,
+            },
+            {
+                "author_pub_id": "owner:doi",
+                "scholar_id": "owner",
+                "work_id": "work-doi",
+                "source_type": "scholar",
+                "publication_type": "journal_article",
+                "work_match_method": "reviewed_context_doi",
+                "doi": "10.1000/reviewed",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+                "title": "Reviewed journal article",
+                "year": 2020,
+            },
+            {
+                "author_pub_id": "owner:other",
+                "scholar_id": "owner",
+                "work_id": "work-other",
+                "source_type": "scholar",
+                "publication_type": "conference_paper",
+                "work_match_method": "normalized_title_year",
+                "doi": "",
+                "collaboration_eligible": False,
+                "map_eligible": True,
+                "title": "Unheld proceedings paper",
+                "year": 2002,
+            },
+        ]
+    )
+    works = pandas.DataFrame(
+        [
+            {
+                "work_id": work_id,
+                "publication_type": kind,
+                "doi": doi,
+                "collaboration_eligible": False,
+                "map_eligible": True,
+            }
+            for work_id, kind, doi in (
+                ("work-typed", "conference_paper", ""),
+                ("work-doi", "journal_article", "10.1000/reviewed"),
+                ("work-other", "conference_paper", ""),
+            )
+        ]
+    )
+    contexts = {
+        ("owner", "owner:typed"): SimpleNamespace(
+            publication_type="conference_paper",
+            verified_doi="",
+            collaboration_eligible=False,
+            map_eligible=True,
+            expected_title="Reviewed proceedings paper",
+            expected_year=2001,
+        ),
+        ("owner", "owner:doi"): SimpleNamespace(
+            publication_type="journal_article",
+            verified_doi="10.1000/reviewed",
+            collaboration_eligible=False,
+            map_eligible=True,
+            expected_title="Reviewed journal article",
+            expected_year=2020,
+        ),
+        ("owner", "owner:other"): SimpleNamespace(
+            publication_type="conference_paper",
+            verified_doi="",
+            collaboration_eligible=False,
+            map_eligible=True,
+            expected_title="Unheld proceedings paper",
+            expected_year=2002,
+        ),
+    }
+    review = {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "b" * 64,
+        "selected_ids_sha256": ids_sha256(set(profiles["author_pub_id"])),
+        "new_points": [
+            {
+                "work_id": work_id,
+                "decision": "hold_pending_placement",
+                "coordinates": None,
+            }
+            for work_id in ("work-typed", "work-doi")
+        ],
+    }
+    path = tmp_path / "review.json"
+    path.write_text(json.dumps(review))
+
+    def protected(
+        current_profiles=profiles, current_works=works, current_contexts=contexts
+    ):
+        return publisher._reviewed_new_generic_placement_work_ids(
+            current_profiles,
+            current_works,
+            current_contexts,
+            [{"work_id": "work-prior"}],
+            path,
+            prior_revision="a" * 40,
+            source_snapshot_sha256="b" * 64,
+        )
+
+    assert protected() == frozenset({"work-typed", "work-doi"})
+
+    wrong_doi = profiles.copy()
+    wrong_doi.loc[wrong_doi["work_id"] == "work-doi", "doi"] = ""
+    with pytest.raises(ValueError, match="ineligible source work"):
+        protected(current_profiles=wrong_doi)
+
+    for field, value in (
+        ("title", "Different proceedings paper"),
+        ("year", 2002),
+        ("work_match_method", "profile_publication"),
+        ("collaboration_eligible", True),
+        ("map_eligible", False),
+    ):
+        changed_profiles = profiles.copy()
+        changed_profiles.loc[changed_profiles["work_id"] == "work-typed", field] = value
+        with pytest.raises(ValueError, match="ineligible source work"):
+            protected(current_profiles=changed_profiles)
+
+    changed_contexts = dict(contexts)
+    changed_contexts[("owner", "owner:typed")] = SimpleNamespace(
+        **{
+            **vars(contexts[("owner", "owner:typed")]),
+            "collaboration_eligible": True,
+        }
+    )
+    assert protected(current_contexts=changed_contexts) == frozenset({"work-doi"})
+
+    wrong_work = works.copy()
+    wrong_work.loc[wrong_work["work_id"] == "work-typed", "map_eligible"] = False
+    with pytest.raises(ValueError, match="ineligible canonical work"):
+        protected(current_works=wrong_work)
+
+    missing_context = dict(contexts)
+    del missing_context[("owner", "owner:typed")]
+    with pytest.raises(ValueError, match="lacks exact source context"):
+        protected(current_contexts=missing_context)
+
+    extra_binding = pandas.concat(
+        [
+            profiles,
+            profiles.loc[profiles["work_id"] == "work-typed"].assign(
+                author_pub_id="owner:unreviewed"
+            ),
+        ],
+        ignore_index=True,
+    )
+    review["selected_ids_sha256"] = ids_sha256(set(extra_binding["author_pub_id"]))
+    path.write_text(json.dumps(review))
+    partly_reviewed_contexts = dict(contexts)
+    partly_reviewed_contexts[("owner", "owner:unreviewed")] = SimpleNamespace(
+        publication_type="edited_book"
+    )
+    with pytest.raises(ValueError, match="unreviewed work binding"):
+        protected(
+            current_profiles=extra_binding,
+            current_contexts=partly_reviewed_contexts,
+        )
+
+
 def install_published_rows(monkeypatch, loader) -> None:
     monkeypatch.setattr(publisher, "_published_rows", loader)
 

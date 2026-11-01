@@ -100,7 +100,7 @@ from .composite_region import (
 from .composite_region import (
     VARIANT_FIELDS as COMPOSITE_VARIANT_FIELDS,
 )
-from .contexts import DEFAULT_CONTEXTS_PATH, load_contexts
+from .contexts import AUTHORED_PUBLICATION_TYPES, DEFAULT_CONTEXTS_PATH, load_contexts
 from .corrections import (
     DEFAULT_CORRECTIONS_PATH,
     apply_corrections,
@@ -612,11 +612,13 @@ def _reviewed_new_generic_placement_work_ids(
     prior_revision: str,
     source_snapshot_sha256: str,
 ) -> frozenset[str]:
-    """Keep exact reviewed new generic works in the candidate pending set.
+    """Keep exact reviewed new source works in the candidate pending set.
 
     The full additive gate subsequently checks the whole manifest and holds
     these works off the spatial map. This only prevents a refitted topic region
     from making a selected source observation disappear before that review.
+    Authored contexts are protected only when their exact selected identity,
+    reviewed metadata, and noncollaborative placement hold all agree.
     """
 
     review = load_json(review_path)
@@ -676,38 +678,93 @@ def _reviewed_new_generic_placement_work_ids(
         ]
     ].to_dict("index")
     protected: set[str] = set()
+    held_binding_counts = Counter(
+        str(row.work_id)
+        for row in profiles.itertuples(index=False)
+        if str(row.work_id) in all_held_ids
+    )
+    protected_binding_counts: Counter[str] = Counter()
     for row in profiles.itertuples(index=False):
         work_id = str(row.work_id)
         context = contexts.get((str(row.scholar_id), str(row.author_pub_id)))
-        if (
-            context is None
-            or context.publication_type != "publication"
-            or work_id in prior_id_set
-        ):
+        if context is None:
+            if (
+                work_id in all_held_ids
+                and row.publication_type in AUTHORED_PUBLICATION_TYPES
+            ):
+                raise ValueError("Authored placement review lacks exact source context")
             continue
-        if (
-            row.source_type != "scholar"
-            or row.publication_type != "publication"
-            or row.work_match_method != "profile_publication"
-            or row.doi != ""
-            or bool(row.collaboration_eligible)
-        ):
-            raise ValueError("Generic placement review has ineligible source work")
-        if not bool(row.map_eligible):
-            if work_id in all_held_ids:
+        if work_id in prior_id_set:
+            continue
+        if context.publication_type == "publication":
+            if (
+                row.source_type != "scholar"
+                or row.publication_type != "publication"
+                or row.work_match_method != "profile_publication"
+                or row.doi != ""
+                or bool(row.collaboration_eligible)
+            ):
                 raise ValueError("Generic placement review has ineligible source work")
-            continue
-        work = works_by_id[work_id]
-        if (
-            work["publication_type"] != "publication"
-            or work["doi"] != ""
-            or bool(work["collaboration_eligible"])
-            or not bool(work["map_eligible"])
+            if not bool(row.map_eligible):
+                if work_id in all_held_ids:
+                    raise ValueError(
+                        "Generic placement review has ineligible source work"
+                    )
+                continue
+            work = works_by_id[work_id]
+            if (
+                work["publication_type"] != "publication"
+                or work["doi"] != ""
+                or bool(work["collaboration_eligible"])
+                or not bool(work["map_eligible"])
+            ):
+                raise ValueError(
+                    "Generic placement review has ineligible canonical work"
+                )
+            if work_id not in all_held_ids:
+                raise ValueError(
+                    "Selected generic work lacks all-held placement review"
+                )
+        elif (
+            context.publication_type in AUTHORED_PUBLICATION_TYPES
+            and work_id in all_held_ids
+            and getattr(context, "collaboration_eligible", None) is False
         ):
-            raise ValueError("Generic placement review has ineligible canonical work")
-        if work_id not in all_held_ids:
-            raise ValueError("Selected generic work lacks all-held placement review")
+            reviewed_doi = context.verified_doi
+            expected_match_method = (
+                "reviewed_context_doi" if reviewed_doi else "normalized_title_year"
+            )
+            if (
+                row.source_type != "scholar"
+                or row.publication_type != context.publication_type
+                or row.work_match_method != expected_match_method
+                or row.doi != reviewed_doi
+                or bool(row.collaboration_eligible)
+                or not bool(row.map_eligible)
+                or context.map_eligible is not True
+                or str(getattr(row, "title", "")).strip() != context.expected_title
+                or getattr(row, "year", None) != context.expected_year
+            ):
+                raise ValueError("Authored placement review has ineligible source work")
+            work = works_by_id[work_id]
+            if (
+                work["publication_type"] != context.publication_type
+                or work["doi"] != reviewed_doi
+                or bool(work["collaboration_eligible"])
+                or not bool(work["map_eligible"])
+            ):
+                raise ValueError(
+                    "Authored placement review has ineligible canonical work"
+                )
+        else:
+            continue
         protected.add(work_id)
+        protected_binding_counts[work_id] += 1
+    if any(
+        protected_binding_counts[work_id] != held_binding_counts[work_id]
+        for work_id in protected
+    ):
+        raise ValueError("Pending placement review has an unreviewed work binding")
     return frozenset(protected)
 
 
