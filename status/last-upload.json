@@ -1,4 +1,150 @@
 {
+  "atomic_release_intent": {
+    "artifact_revision": null,
+    "commit_message": "Publish central research dataset atomically\n\nRelease-Intent-Nonce: 7f4220dc63be4bc0865d89dd465c796f",
+    "commit_nonce": "7f4220dc63be4bc0865d89dd465c796f",
+    "committed_files": [
+      "README.md",
+      "authorships/train-00000-of-00001.parquet",
+      "maps/manifest.json",
+      "maps/publications.json",
+      "people/train-00000-of-00001.parquet",
+      "profile_publications/train-00000-of-00001.parquet",
+      "works/train-00000-of-00001.parquet"
+    ],
+    "intent_status": "before_write",
+    "mode": "single_parent_commit",
+    "parent_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
+    "prewrite_gate": {
+      "gate": "full-source-and-region-continuity-v1",
+      "map_points": 53626,
+      "presentation_drift": {
+        "candidate_map_sha256": "1b917885244a883fbf2878a2bc0218c6cf3a867a1cb8a7e33b5aa5e4e54d6162",
+        "material_reasons": [],
+        "parent_map_sha256": "3d081e6cabab1f30034ac96b561a31c54eae88ff31c779538894556ea099c494",
+        "point_counts": {
+          "added": 0,
+          "candidate": 53626,
+          "parent": 53626,
+          "removed": 0,
+          "retained": 53626
+        },
+        "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
+        "report_sha256": "e0df34a0bb3804594cd8f0cd1af5c11306a19a989eb83099dc9187aa23043edb",
+        "retained": {
+          "broad_semantic_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "broad_semantic_label_changes": 0,
+          "coordinate_changes": 0,
+          "coordinate_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "detail_semantic_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "detail_semantic_label_changes": 0,
+          "new_broad_region_labels": [],
+          "pca_distance_median": 0.0,
+          "pca_distance_over_0_1": 0,
+          "pca_distance_p95": 0.0,
+          "retired_broad_region_labels": [],
+          "topic_id_changes": 0,
+          "topic_id_changes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "tsne_distance_max": 0.0,
+          "tsne_distance_median": 0.0,
+          "tsne_distance_over_0_1": 0,
+          "tsne_distance_p95": 0.0,
+          "tsne_distance_p99": 0.0
+        },
+        "schema_version": 1,
+        "source_snapshot_sha256": "dfd621ab4de95552fa5c55228062df36d06451edd7336e160e4299c454d3b2bb",
+        "status": "pass_no_material_drift",
+        "top_broad_label_transitions": [],
+        "top_detail_label_transitions": []
+      },
+      "presentation_preservation": {
+        "candidate_map_content_sha256": "e02788314693d5b4a75d2def9b3f9e801e64303cb91814a895155d607622de45",
+        "excluded_new_work_reasons": {},
+        "held_new_points": 20,
+        "held_new_work_ids": [
+          "work-17caea992f6674146f424343fc8562a52a5b6d240f1d2410611c73dcf0d5f46a",
+          "work-196ffa2424babf4d151ef229c70ad516967db1e89f996a5e33ff8c264a30efb4",
+          "work-1f3611f63b23f112c496a6587efceccb5408e77e77197f3b7e7d0292922b7589",
+          "work-527761769987d4971758c59982fb977ed86f3db8a87b9bb90423957433cb224d",
+          "work-5950cf9fdd5d82c864c2c4315366b09a38ba499e7ce2b933552939de136e00f6",
+          "work-767822b647d51996cbc534237646a263a7ce78808c7ac4e75f2e36394a918f1a",
+          "work-772ee912c2373613e5abc443c45c438aec7b565d2a4fee0dc1006ca01f174bc4",
+          "work-7caee22d4ef43316d224121f99075c64359051486cd43e2d4b5d85602c7179bb",
+          "work-851f2decc29983a02e1d1bd389528db9bee25507140feb9f3b1f0898e33aa196",
+          "work-8a82d2c06be6c0a92c2e8d189a5bcbab0a45ebf439af0a1467798c60fd2b6d5f",
+          "work-8d5c62fb9c407c14319260f47984241ea80d063b23f8e91ffc737d9d7e44575b",
+          "work-914ab61196a30329bf734099f65cb334e6575c2914119d98c00445b103491fce",
+          "work-a60122513cd9cd890d26f4a601f1b031221606cbc0bf846c649078ebecd8e4ec",
+          "work-a70971b31672425ad78e88f2915261f7d8c0b393c21a7dea91785a836fc77281",
+          "work-b03cc6ac086319d0e8b524410dfb1b0ee91aa71a8422ccf0466b44ea3f80d936",
+          "work-b79321f1806e1271fc45885c8331d3dc8aac44fa108d2f5df6f4a4e099bb8f12",
+          "work-c11ba28c54a3361f24afedb26b8568e4658c27f8b7808b6d205b682b6e109828",
+          "work-cf5f19675de486da677f64f9615172e36e378deee451125fa623c95bb8f7285f",
+          "work-d283506294f1399b9b89d41031b5fa2e885d8e0fe487dbfabd6d7e4387f769c8",
+          "work-d7f6d1858f53f86eb62b56a602bbc151b3d040926e16d635d72f9f0e410430f2"
+        ],
+        "new_point_count": 20,
+        "new_work_ids_sha256": "fff639bfc53e9e20e8638a7f5604c4d715a37929f931c768d3835a5cb2253f9a",
+        "parent_map_sha256": "3d081e6cabab1f30034ac96b561a31c54eae88ff31c779538894556ea099c494",
+        "placed_new_coordinates_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "placed_new_points": 0,
+        "placed_new_work_ids": [],
+        "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
+        "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
+        "retained_point_count": 53626,
+        "review_sha256": "ca0150740ff097d34515cb11812f2752cd7f308d25d2d039f4e96b2c0a02db53",
+        "schema_version": 1,
+        "selected_ids_sha256": "943cbe22afd778b15620dc48f4e76673ea33d450c080505b3ff12d7fb2f314c9",
+        "source_snapshot_sha256": "dfd621ab4de95552fa5c55228062df36d06451edd7336e160e4299c454d3b2bb",
+        "status": "parent_frozen_new_points_reviewed"
+      },
+      "prior_person_continuity": {
+        "changed_people": {
+          "person-rayidghani-0861bb94": [
+            "mapped_work_count",
+            "publication_observation_count",
+            "scholar_observation_count",
+            "unique_work_count"
+          ]
+        },
+        "gate": "exact-prior-person-continuity-v1",
+        "parent_people_sha256": "1a2446866a6ccb6aec7306bf85e5a38ffebcdd1bd26a0e9f27f1d1ec5f364959",
+        "prior_person_count": 2001,
+        "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
+        "producer_people_registry_sha256": "3f3e0eb155e094af3f3c10961da2a16475fefcc964229a9c77d997b0d9b907c9",
+        "review_sha256": null,
+        "source_snapshot_sha256": "dfd621ab4de95552fa5c55228062df36d06451edd7336e160e4299c454d3b2bb",
+        "status": "pass"
+      },
+      "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
+      "raw_rows": 70941,
+      "source_snapshot_sha256": "dfd621ab4de95552fa5c55228062df36d06451edd7336e160e4299c454d3b2bb",
+      "status": "pass"
+    },
+    "release_context": {
+      "producer_commit": "a991b2fea201e08843f3f1e29803e9bcb8d9caa5",
+      "snapshot_commit": "bc4179f0f600408aed9a7948dde585dbff1c6a9f",
+      "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41265696381"
+    },
+    "sha256_by_path": {
+      "README.md": "6a74cd07a9c169d889763eac49a9b2fd3902fa9f559066fc388e4c1b2cdf98bd",
+      "authorships/train-00000-of-00001.parquet": "56a05b0c2b015c7fb249cb870fbbf5ff55f74609859082410c19adfff941b0e7",
+      "maps/manifest.json": "e15eef745b9b966f0048cb1e2fc0c27a2e94bc15d133d718fe66f00af142e1bd",
+      "maps/publications.json": "1b917885244a883fbf2878a2bc0218c6cf3a867a1cb8a7e33b5aa5e4e54d6162",
+      "people/train-00000-of-00001.parquet": "2173b1e3891a1098c91038727cb42775b185c6201867415752d0457abe06ca68",
+      "profile_publications/train-00000-of-00001.parquet": "f1c134fe1249f33550fa76e73352327228c8dc0f79434cce91c77132df785a1d",
+      "works/train-00000-of-00001.parquet": "a2bcdba932b654820db5b54467d459323fc331ddfa875e7c0bbe35c3349055f3"
+    },
+    "size_by_path": {
+      "README.md": 10439,
+      "authorships/train-00000-of-00001.parquet": 18964691,
+      "maps/manifest.json": 8722,
+      "maps/publications.json": 49784815,
+      "people/train-00000-of-00001.parquet": 671708,
+      "profile_publications/train-00000-of-00001.parquet": 255680794,
+      "works/train-00000-of-00001.parquet": 261039601
+    }
+  },
   "dataset_configs": [
     "people",
     "works",
@@ -6,9 +152,9 @@
     "profile_publications"
   ],
   "dataset_id": "ccm/cmu-engineering-publications",
-  "error_message": "Parent pending candidate has a separate exclusion: work-490e3f252b28d29ca12bb726d06319e6f4e75fda2bcdd9cae8eef008802d005a",
-  "error_type": "ValueError",
-  "finished_at_utc": "2026-11-01T00:48:57.298824+00:00",
+  "error_message": "Inspect the atomic release intent before retrying",
+  "error_type": "AtomicWriteOutcomeUnknown",
+  "finished_at_utc": null,
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -16,7 +162,7 @@
     "unresolved_scholar_id_people": 29
   },
   "prior_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
-  "producer_commit": "924a4ae87c80ef31d20fa733376d0a9c15c83ac1",
+  "producer_commit": "a991b2fea201e08843f3f1e29803e9bcb8d9caa5",
   "region_comparison_revision": "8ee2c015f809bf4f7aaaa7bd6fce750ae378eb10",
   "schema_version": 2,
   "scholar_coverage": {
@@ -24,8 +170,8 @@
     "legacy_profiles": 284,
     "reconciled_prior_ids": 19
   },
-  "snapshot_commit": "351539ffc083b48df34097f99af892e5ab1303e1",
-  "started_at_utc": "2026-11-01T00:40:45.322292+00:00",
+  "snapshot_commit": "bc4179f0f600408aed9a7948dde585dbff1c6a9f",
+  "started_at_utc": "2026-11-01T02:35:54.356348+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41257650868"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/41265696381"
 }
