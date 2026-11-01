@@ -2575,6 +2575,31 @@ def test_staged_map_files_bind_dataset_to_same_revision(tmp_path) -> None:
     assert "dataset_revision_policy" not in prior_manifest
 
 
+def test_staged_map_serializes_reviewed_blank_retained_source_url(
+    tmp_path: Path,
+) -> None:
+    works = work_frame()
+    parent = publisher.build_map_artifact(
+        works, registry(), generated_at_utc="2026-10-25T00:00:00+00:00"
+    )
+    work_id = parent["points"][0]["work_id"]
+    assert parent["points"][0]["source_url"]
+    parent["points"][0]["source_url"] = ""
+    artifact_path, manifest_path, artifact = publisher._write_map_artifacts(
+        works,
+        registry(),
+        maps_dir=tmp_path / "maps",
+        generated_at_utc="2026-10-25T00:00:00+00:00",
+        dataset_commits={},
+        retained_blank_source_url_parent=parent,
+        retained_blank_source_url_work_ids=[work_id],
+    )
+    assert artifact["points"][0]["source_url"] == ""
+    assert json.loads(artifact_path.read_text()) == artifact
+    manifest = json.loads(manifest_path.read_text())
+    assert manifest["artifact"]["file"] == artifact_path.name
+
+
 def test_hub_dataset_casts_list_and_embedding_features(monkeypatch) -> None:
     cast_features = []
 

@@ -593,6 +593,7 @@ def preserve_reviewed_additive_presentation(
     parent_map_sha256: str,
     reported_coauthor_source_sha256: str,
     review_path: Path | None,
+    public_profiles: Any | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Freeze retained points and require an exact review for every new point.
 
@@ -779,6 +780,7 @@ def preserve_reviewed_additive_presentation(
     output = works.copy()
     retained = parent_points.keys() & candidate_points.keys()
     excluded_new_reasons: dict[str, list[str]] = {}
+    retained_blank_source_url_work_ids: list[str] = []
     for index, work_id in current_ids.items():
         if work_id in prior_by_id:
             prior = prior_by_id[work_id]
@@ -841,9 +843,66 @@ def preserve_reviewed_additive_presentation(
                     f"Additive retained map source URL lacks provenance: {work_id}"
                 )
             if not parent_url and source_urls:
-                raise ValueError(
-                    f"Additive retained blank map source URL needs review: {work_id}"
-                )
+                # An exact new observation may add source provenance to a work
+                # whose published map link was blank. Keep the work provenance,
+                # but bind the new URLs to the selected observations before
+                # preserving the blank map display link below.
+                if prior.get("source_urls") != [] or not {
+                    "author_pub_ids",
+                    "observation_ids",
+                    "observation_count",
+                } <= set(output.columns):
+                    raise ValueError(
+                        "Additive retained blank map source URL needs review: "
+                        f"{work_id}"
+                    )
+                prior_pub_ids = prior.get("author_pub_ids")
+                current_pub_ids = output.at[index, "author_pub_ids"]
+                prior_observation_ids = prior.get("observation_ids")
+                current_observation_ids = output.at[index, "observation_ids"]
+                if (
+                    not isinstance(prior_pub_ids, list)
+                    or not isinstance(current_pub_ids, list)
+                    or not isinstance(prior_observation_ids, list)
+                    or not isinstance(current_observation_ids, list)
+                    or len(prior_pub_ids) != len(set(prior_pub_ids))
+                    or len(current_pub_ids) != len(set(current_pub_ids))
+                    or len(prior_observation_ids) != len(set(prior_observation_ids))
+                    or len(current_observation_ids) != len(set(current_observation_ids))
+                    or not set(prior_pub_ids) <= set(current_pub_ids)
+                    or not set(current_pub_ids) - set(prior_pub_ids)
+                    or not set(prior_observation_ids) <= set(current_observation_ids)
+                    or len(set(current_observation_ids) - set(prior_observation_ids))
+                    != len(set(current_pub_ids) - set(prior_pub_ids))
+                    or output.at[index, "observation_count"]
+                    != prior["observation_count"]
+                    + len(set(current_pub_ids) - set(prior_pub_ids))
+                    or public_profiles is None
+                    or not {"work_id", "author_pub_id", "source_url"}
+                    <= set(public_profiles.columns)
+                ):
+                    raise ValueError(
+                        "Additive retained blank map source URL needs review: "
+                        f"{work_id}"
+                    )
+                added_pub_ids = set(current_pub_ids) - set(prior_pub_ids)
+                bound = public_profiles.loc[
+                    public_profiles["work_id"].astype(str).eq(work_id)
+                    & public_profiles["author_pub_id"].astype(str).isin(added_pub_ids)
+                ]
+                bound_urls = [str(url) for url in bound["source_url"]]
+                if (
+                    len(bound) != len(added_pub_ids)
+                    or set(bound["author_pub_id"].astype(str)) != added_pub_ids
+                    or not all(bound_urls)
+                    or len(source_urls) != len(set(source_urls))
+                    or set(bound_urls) != set(source_urls)
+                ):
+                    raise ValueError(
+                        "Additive retained blank map source URL lacks exact new "
+                        f"citation provenance: {work_id}"
+                    )
+                retained_blank_source_url_work_ids.append(work_id)
             if parent_url:
                 output.at[index, "source_urls"] = [
                     parent_url,
@@ -914,6 +973,9 @@ def preserve_reviewed_additive_presentation(
         if item["decision"] == "hold_pending_placement"
     )
     receipt["excluded_new_work_reasons"] = dict(sorted(excluded_new_reasons.items()))
+    receipt["retained_blank_source_url_work_ids"] = sorted(
+        retained_blank_source_url_work_ids
+    )
     receipt["placed_new_coordinates_sha256"] = _digest(
         [
             (
@@ -928,6 +990,45 @@ def preserve_reviewed_additive_presentation(
     )
     receipt["review_sha256"] = hashlib.sha256(review_bytes).hexdigest()
     return output, receipt
+
+
+def preserve_reviewed_blank_map_source_urls(
+    artifact: Mapping[str, Any],
+    parent: Mapping[str, Any],
+    reviewed_work_ids: Sequence[str],
+) -> dict[str, Any]:
+    """Retain blank display links for exact source-bound work provenance growth."""
+
+    if (
+        not isinstance(reviewed_work_ids, list)
+        or any(
+            not isinstance(work_id, str) or not work_id for work_id in reviewed_work_ids
+        )
+        or len(reviewed_work_ids) != len(set(reviewed_work_ids))
+    ):
+        raise ValueError("Retained blank map source URL review IDs are invalid")
+    if not reviewed_work_ids:
+        return dict(artifact)
+    parent_points = _indexed_points(parent, "Parent")
+    current_points = _indexed_points(artifact, "Candidate")
+    for work_id in reviewed_work_ids:
+        if (
+            work_id not in parent_points
+            or work_id not in current_points
+            or str(parent_points[work_id].get("source_url") or "")
+            or not str(current_points[work_id].get("source_url") or "")
+        ):
+            raise ValueError(
+                "Retained blank map source URL review differs from exact parent: "
+                f"{work_id}"
+            )
+    reviewed = set(reviewed_work_ids)
+    output = dict(artifact)
+    output["points"] = [
+        {**point, "source_url": ""} if point["work_id"] in reviewed else point
+        for point in artifact["points"]
+    ]
+    return output
 
 
 def require_held_additive_staged_works(

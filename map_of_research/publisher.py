@@ -172,6 +172,7 @@ from .presentation_drift import (
     preserve_additive_report_presentation,
     preserve_deletion_only_presentation,
     preserve_reviewed_additive_presentation,
+    preserve_reviewed_blank_map_source_urls,
     reported_coauthor_evidence_changed,
     require_excluded_additive_staged_works,
     require_held_additive_staged_works,
@@ -1443,6 +1444,8 @@ def _write_map_artifacts(
     reported_faculty_coauthors_by_work: Mapping[str, list[dict[str, str]]]
     | None = None,
     pending_publications: list[dict[str, Any]] | None = None,
+    retained_blank_source_url_parent: Mapping[str, Any] | None = None,
+    retained_blank_source_url_work_ids: list[str] | None = None,
 ) -> tuple[Path, Path, dict[str, Any]]:
     """Render both map files before the Hub is touched."""
 
@@ -1476,6 +1479,12 @@ def _write_map_artifacts(
         publication_hold_reasons=publication_hold_reasons,
         reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
     )
+    if retained_blank_source_url_parent is not None:
+        artifact = preserve_reviewed_blank_map_source_urls(
+            artifact,
+            retained_blank_source_url_parent,
+            retained_blank_source_url_work_ids,
+        )
     if pending_publications is not None:
         artifact["schema_version"] = artifact_schema_version
         artifact["pending_publications"] = pending_publications
@@ -1828,6 +1837,7 @@ def _publish_atomic_release(
                         source_manifest.get("reported_faculty_coauthors_sha256", "")
                     ),
                     review_path=additive_placement_review_path,
+                    public_profiles=public_profiles,
                 )
             )
         if (
@@ -1956,6 +1966,14 @@ def _publish_atomic_release(
             ),
             reported_faculty_coauthors_by_work=reported_faculty_coauthors_by_work,
             pending_publications=pending_publications,
+            retained_blank_source_url_parent=(
+                parent_map if additive_placement_review_path is not None else None
+            ),
+            retained_blank_source_url_work_ids=(
+                preservation_receipt.get("retained_blank_source_url_work_ids", [])
+                if additive_placement_review_path is not None
+                else None
+            ),
         )
         presentation_receipt = None
         if enforce_presentation_drift:
