@@ -1735,6 +1735,26 @@
         "withheld_excluded_rows": 1,
         "withheld_ids_sha256": "a1f423a0fd6868b7d2e1b0531c9d059791a6a5c2e869840549532d48c271f9ac"
       }
+    },
+    {
+      "person_id": "person-tuomassandholm-29fe3629",
+      "scholar_id": "0DpK1EMAAAAJ",
+      "state": "released",
+      "expected_source_rows": 212,
+      "cache_sha256": "2076d40d022a6385f2e7bae741f48b5893d1f578e18d40cd42a523c4f76e51a5",
+      "reason": "Private local selected-only candidate from one complete exact owner-linked Scholar capture: 212 selected, 416 concrete holds and 12 exclusions. All new works remain placement-held and this stage alone does not authorize release.",
+      "reviewed_at": "2026-11-01",
+      "public_subset": {
+        "observed_visible_rows": 640,
+        "private_capture_sha256": "3cfafe0829fbbf0512763dd208805d827b28dabf57a4d8a3cea97385cc1e8d65",
+        "private_rendered_html_sha256": "5d89ff9e63ad462c755fa27f320270dee9537bc6e3954b72b641e368d210a3d2",
+        "private_review_sha256": "1208a741abfb7bba1441b2baf2947059966700811f7884fe4d319b3dfe9bd174",
+        "selected_ids_sha256": "f317a7e78b002c0cb3eb8a64264fc57804b64ac0c5f903cd2e5128f6b7f51068",
+        "withheld_rows": 428,
+        "withheld_hold_rows": 416,
+        "withheld_excluded_rows": 12,
+        "withheld_ids_sha256": "c773fcad69f85a4bb3e5783a27047c2b32b7e50d42e70e503642e06e6a4ac5cd"
+      }
     }
   ]
 }
