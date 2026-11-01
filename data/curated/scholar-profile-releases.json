@@ -1780,20 +1780,20 @@
       "person_id": "person-yuvrajagarwal-6115c679",
       "scholar_id": "H4UeZ2MAAAAJ",
       "state": "released",
-      "expected_source_rows": 34,
-      "cache_sha256": "8af1aa122d1fe656e550ffc66d86f8de8801ae01701c5efd10b863addaa7dec0",
-      "reason": "Private local stage: 22 prior plus 12 official arXiv DOI/type verified preprints; 144 saved rows remain withheld. All new placements null and collaboration held; no upload approved.",
+      "expected_source_rows": 53,
+      "cache_sha256": "b80411bb10627965d63f322d82a48007620144d55734282e9f2797ab60a893f3",
+      "reason": "Private staged candidate: 34 prior public observations retained plus 19 exact saved-owner Scholar citations bound to existing parent canonical works; 125 remain withheld. Prior canonical publication type, presentation, source provenance, map point and bindings require exact preservation. No upload approved by this record.",
       "reviewed_at": "2026-11-01",
       "public_subset": {
         "observed_visible_rows": 178,
         "private_capture_sha256": "89b03b416d196da2d3bed6b8738bc3c9eadcd5375d1cee39afe61509219ec2cd",
         "private_rendered_html_sha256": "2d52f731a1fc0af481392fce3e7e0db38fe78fa18fdea18652e258702e8ede96",
-        "private_review_sha256": "acd312453b02dd676932d43f9a95b7dd6fe62221e5c818237951db4b65268277",
-        "selected_ids_sha256": "140250ef66d8ce32f7f703256df40c0033349d1948fc03b620e9fe28d968939c",
-        "withheld_rows": 144,
-        "withheld_hold_rows": 128,
+        "private_review_sha256": "a5816efe441afef897e43726f947a9fcf99d2e079b34220152d52324784b62ec",
+        "selected_ids_sha256": "f9c00210b35e30f77512bddef8d983f9a2d94245c7abde9fb79af705ea7795d0",
+        "withheld_rows": 125,
+        "withheld_hold_rows": 109,
         "withheld_excluded_rows": 16,
-        "withheld_ids_sha256": "beca3e8ec5a4cdf8468fcb0ce7627c6be3bfe2363a8c72a75ba3fc9ee990b1d5"
+        "withheld_ids_sha256": "881b1ff26cbdb47d2a026631ac77df027e561406ee7cde702a2d8420b33f9996"
       }
     }
   ]
