@@ -1755,6 +1755,26 @@
         "withheld_excluded_rows": 12,
         "withheld_ids_sha256": "c773fcad69f85a4bb3e5783a27047c2b32b7e50d42e70e503642e06e6a4ac5cd"
       }
+    },
+    {
+      "person_id": "person-christosfaloutsos-7ace533d",
+      "scholar_id": "nd8lQQIAAAAJ",
+      "state": "released",
+      "expected_source_rows": 100,
+      "cache_sha256": "245a4180e29594b5cf4f7e650626fb8a3632a71f92d7dd90b7f165691324e11f",
+      "reason": "Private local first100 selected-only candidate from one complete exact owner-linked Scholar capture; 591 further candidates deferred, 527 concrete holds, nine exclusions. All new works placement-held. This local stage alone does not authorize release.",
+      "reviewed_at": "2026-11-01",
+      "public_subset": {
+        "observed_visible_rows": 1227,
+        "private_capture_sha256": "3cf51f62319e80574489b932a1b5224212bc46929a3c61dc55911e82eb057e83",
+        "private_rendered_html_sha256": "51fb958d2acfc94c744881ad0bc7e067e89ce1c912a82f81fdd4427ca9f8e395",
+        "private_review_sha256": "1c5f6ed65051369b3063bb47dc05b2ad468a6d11699833594f3c8ca4ef5bdbeb",
+        "selected_ids_sha256": "ec461895b67259ca2e1e93ee110f011c38a6a724f6f1579215b4c4b2c87f00a5",
+        "withheld_rows": 1127,
+        "withheld_hold_rows": 1118,
+        "withheld_excluded_rows": 9,
+        "withheld_ids_sha256": "c46007a23badcf46b79a3f0b1ecc38c219d05ccb615b639552728db9a975b19d"
+      }
     }
   ]
 }
