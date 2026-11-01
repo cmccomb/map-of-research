@@ -3,7 +3,7 @@
   "display_name": "Rayid Ghani",
   "scholar_id": "_ufWH4IAAAAJ",
   "fetched_at_utc": "2026-10-31T11:09:22.759Z",
-  "publication_count": 81,
+  "publication_count": 101,
   "browser_capture": {
     "method": "user_chrome_visible_profile",
     "profile_url": "https://scholar.google.ca/citations?user=_ufWH4IAAAAJ&hl=en",
@@ -17,16 +17,18 @@
     "cache_scope": "reviewed_public_subset",
     "observed_visible_rows": 226,
     "private_capture_sha256": "441b8c64aeffec1816e7b91d74029a2c5d70761a2207fec7e454444cd5ae144f",
-    "private_review_sha256": "2d4842f6e0927c77d73a733dc53236e766858d2eada10f60fda29f61122a2aa4",
+    "private_review_sha256": "056d8fee6a146afd9a8e32aa0e9c14c106a6b4cf2ab751d70e2fe90b25c7a039",
     "private_rendered_html_sha256": "d3242fad1b73f4aadfb8d0297c6f7c7253e7f989c2fa0bbf3ef8fa6ccf77674a",
-    "selected_ids_sha256": "33a8c3f395319fc93c50d1ae4d42984fd8b6554c4e60858cf535e884e246eaa3",
-    "withheld_rows": 145,
-    "withheld_hold_rows": 128,
+    "selected_ids_sha256": "258ffd9b5676d7c94ebe214ae0abebcd8be73d9504dcd817436d1feb64c25d8d",
+    "withheld_rows": 125,
+    "withheld_hold_rows": 108,
     "withheld_excluded_rows": 17,
-    "withheld_ids_sha256": "11f060b88e261cd2e07bd7d3bba6a6d1b218cf8149c6057b44a88e61208d11f1",
+    "withheld_ids_sha256": "50e6d52a2db982cbff5b164cea6767a31d4284f6d2a1768d321b686b37584571",
     "selected_author_pub_ids": [
       "_ufWH4IAAAAJ:-_dYPAW6P2MC",
       "_ufWH4IAAAAJ:0EnyYjriUFMC",
+      "_ufWH4IAAAAJ:2osOgNQ5qMEC",
+      "_ufWH4IAAAAJ:35N4QoGY0k4C",
       "_ufWH4IAAAAJ:35r97b3x0nAC",
       "_ufWH4IAAAAJ:3fE2CSJIrl8C",
       "_ufWH4IAAAAJ:3s1wT3WcHBgC",
@@ -38,7 +40,9 @@
       "_ufWH4IAAAAJ:5nxA0vEk-isC",
       "_ufWH4IAAAAJ:5qfkUJPXOUwC",
       "_ufWH4IAAAAJ:8d8msizDQcsC",
+      "_ufWH4IAAAAJ:8k81kl-MbHgC",
       "_ufWH4IAAAAJ:9ZlFYXVOiuMC",
+      "_ufWH4IAAAAJ:9yKSN-GCB0IC",
       "_ufWH4IAAAAJ:BJbdYPG6LGMC",
       "_ufWH4IAAAAJ:BzfGm06jWhQC",
       "_ufWH4IAAAAJ:D03iK_w7-QYC",
@@ -57,30 +61,41 @@
       "_ufWH4IAAAAJ:QD3KBmkZPeQC",
       "_ufWH4IAAAAJ:RGFaLdJalmkC",
       "_ufWH4IAAAAJ:TIZ-Mc8IlK0C",
+      "_ufWH4IAAAAJ:UeHWp8X0CEIC",
+      "_ufWH4IAAAAJ:UebtZRa9Y70C",
       "_ufWH4IAAAAJ:VLnqNzywnoUC",
       "_ufWH4IAAAAJ:W5xh706n7nkC",
       "_ufWH4IAAAAJ:W7OEmFMy1HYC",
+      "_ufWH4IAAAAJ:WF5omc3nYNoC",
       "_ufWH4IAAAAJ:WJVC3Jt7v1AC",
       "_ufWH4IAAAAJ:Wp0gIr-vW9MC",
+      "_ufWH4IAAAAJ:WqliGbK-hY8C",
       "_ufWH4IAAAAJ:XvxMoLDsR5gC",
       "_ufWH4IAAAAJ:YOwf2qJgpHMC",
       "_ufWH4IAAAAJ:YohjEiUPhakC",
       "_ufWH4IAAAAJ:YsMSGLbcyi4C",
       "_ufWH4IAAAAJ:ZHo1McVdvXMC",
+      "_ufWH4IAAAAJ:Zph67rFs4hoC",
       "_ufWH4IAAAAJ:ZzlSgRqYykMC",
       "_ufWH4IAAAAJ:_5tno0g5mFcC",
+      "_ufWH4IAAAAJ:_FM0Bhl9EiAC",
       "_ufWH4IAAAAJ:_OXeSy2IsFwC",
       "_ufWH4IAAAAJ:_Qo2XoVZTnwC",
       "_ufWH4IAAAAJ:_Re3VWB3Y0AC",
       "_ufWH4IAAAAJ:_Ybze24A_UAC",
       "_ufWH4IAAAAJ:_axFR9aDTf0C",
+      "_ufWH4IAAAAJ:_kc_bZDykSQC",
+      "_ufWH4IAAAAJ:a3BOlSfXSfwC",
       "_ufWH4IAAAAJ:a9-T7VOCCH8C",
+      "_ufWH4IAAAAJ:anf4URPfarAC",
       "_ufWH4IAAAAJ:aqlVkmm33-oC",
       "_ufWH4IAAAAJ:bz8QjSJIRt4C",
       "_ufWH4IAAAAJ:d1gkVwhDpl0C",
       "_ufWH4IAAAAJ:dBIO0h50nwkC",
       "_ufWH4IAAAAJ:dhFuZR0502QC",
       "_ufWH4IAAAAJ:e5wmG9Sq2KIC",
+      "_ufWH4IAAAAJ:eQOLeE2rZwMC",
+      "_ufWH4IAAAAJ:edDO8Oi4QzsC",
       "_ufWH4IAAAAJ:epqYDVWIO7EC",
       "_ufWH4IAAAAJ:fEOibwPWpKIC",
       "_ufWH4IAAAAJ:fPk4N6BV_jEC",
@@ -93,22 +108,60 @@
       "_ufWH4IAAAAJ:ns9cj8rnVeAC",
       "_ufWH4IAAAAJ:otzGkya1bYkC",
       "_ufWH4IAAAAJ:qjMakFHDy7sC",
+      "_ufWH4IAAAAJ:rmuvC79q63oC",
       "_ufWH4IAAAAJ:roLk4NBRz8UC",
       "_ufWH4IAAAAJ:sNmaIFBj_lkC",
       "_ufWH4IAAAAJ:tKAzc9rXhukC",
+      "_ufWH4IAAAAJ:tYavs44e6CUC",
       "_ufWH4IAAAAJ:tkaPQYYpVKoC",
       "_ufWH4IAAAAJ:tzM49s52ZIMC",
       "_ufWH4IAAAAJ:u-coK7KVo8oC",
       "_ufWH4IAAAAJ:u-x6o8ySG0sC",
+      "_ufWH4IAAAAJ:u5HHmVD_uO8C",
+      "_ufWH4IAAAAJ:uJ-U7cs_P_0C",
       "_ufWH4IAAAAJ:uLbwQdceFCQC",
       "_ufWH4IAAAAJ:uWiczbcajpAC",
       "_ufWH4IAAAAJ:ufrVoPGSRksC",
+      "_ufWH4IAAAAJ:yD5IFk8b50cC",
       "_ufWH4IAAAAJ:ye4kPcJQO24C",
       "_ufWH4IAAAAJ:zA6iFVUQeVQC",
       "_ufWH4IAAAAJ:zYLM7Y9cAGgC"
     ]
   },
   "publications": [
+    {
+      "title": "Analyzing the effectiveness and applicability of co-training",
+      "author": "K Nigam, R Ghani",
+      "pub_year": "2000",
+      "venue": "Proceedings of the ninth international conference on Information and …",
+      "num_citations": 1540,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&citation_for_view=_ufWH4IAAAAJ:u5HHmVD_uO8C",
+      "author_pub_id": "_ufWH4IAAAAJ:u5HHmVD_uO8C",
+      "capture_row_index": 1,
+      "citation_count_display": "1540"
+    },
+    {
+      "title": "Aequitas: A bias and fairness audit toolkit",
+      "author": "P Saleiro, B Kuester, L Hinkson, J London, A Stevens, A Anisfeld, ...",
+      "pub_year": "2018",
+      "venue": "arXiv preprint arXiv:1811.05577",
+      "num_citations": 692,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&citation_for_view=_ufWH4IAAAAJ:tYavs44e6CUC",
+      "author_pub_id": "_ufWH4IAAAAJ:tYavs44e6CUC",
+      "capture_row_index": 2,
+      "citation_count_display": "692"
+    },
+    {
+      "title": "Machine learning and artificial intelligence research for patient benefit: 20 critical questions on transparency, replicability, ethics, and effectiveness",
+      "author": "S Vollmer, BA Mateen, G Bohner, FJ Király, R Ghani, P Jonsson, ...",
+      "pub_year": "2020",
+      "venue": "bmj 368",
+      "num_citations": 649,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&citation_for_view=_ufWH4IAAAAJ:_FM0Bhl9EiAC",
+      "author_pub_id": "_ufWH4IAAAAJ:_FM0Bhl9EiAC",
+      "capture_row_index": 3,
+      "citation_count_display": "649"
+    },
     {
       "title": "A study of approaches to hypertext categorization",
       "author": "Y Yang, S Slattery, R Ghani",
@@ -154,6 +207,17 @@
       "citation_count_display": "179"
     },
     {
+      "title": "Combining labeled and unlabeled data for multiclass text categorization",
+      "author": "R Ghani",
+      "pub_year": "2002",
+      "venue": "ICML 2, 187-194",
+      "num_citations": 170,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&citation_for_view=_ufWH4IAAAAJ:9yKSN-GCB0IC",
+      "author_pub_id": "_ufWH4IAAAAJ:9yKSN-GCB0IC",
+      "capture_row_index": 12,
+      "citation_count_display": "170"
+    },
+    {
       "title": "Using error-correcting codes for text classification",
       "author": "R Ghani",
       "pub_year": "2000",
@@ -174,6 +238,17 @@
       "author_pub_id": "_ufWH4IAAAAJ:qjMakFHDy7sC",
       "capture_row_index": 14,
       "citation_count_display": "160"
+    },
+    {
+      "title": "Mining the web to create minority language corpora",
+      "author": "R Ghani, R Jones, D Mladenić",
+      "pub_year": "2001",
+      "venue": "Proceedings of the tenth international conference on Information and …",
+      "num_citations": 143,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&citation_for_view=_ufWH4IAAAAJ:2osOgNQ5qMEC",
+      "author_pub_id": "_ufWH4IAAAAJ:2osOgNQ5qMEC",
+      "capture_row_index": 16,
+      "citation_count_display": "143"
     },
     {
       "title": "Explainable machine learning for public policy: Use cases, gaps, and research directions",
@@ -220,6 +295,17 @@
       "citation_count_display": "109"
     },
     {
+      "title": "Hypertext categorization using hyperlink patterns and meta data",
+      "author": "R Ghani, S Slattery, Y Yang",
+      "pub_year": "2001",
+      "venue": "ICML 1, 178-185",
+      "num_citations": 101,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:UeHWp8X0CEIC",
+      "author_pub_id": "_ufWH4IAAAAJ:UeHWp8X0CEIC",
+      "capture_row_index": 23,
+      "citation_count_display": "101"
+    },
+    {
       "title": "A machine learning based system for semi-automatically redacting documents",
       "author": "C Cumby, R Ghani",
       "pub_year": "2011",
@@ -229,6 +315,17 @@
       "author_pub_id": "_ufWH4IAAAAJ:ns9cj8rnVeAC",
       "capture_row_index": 25,
       "citation_count_display": "90"
+    },
+    {
+      "title": "Predicting the end-price of online auctions",
+      "author": "R Ghani, H Simmons",
+      "pub_year": "2004",
+      "venue": "International workshop on data mining and adaptive modelling methods for …",
+      "num_citations": 82,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:eQOLeE2rZwMC",
+      "author_pub_id": "_ufWH4IAAAAJ:eQOLeE2rZwMC",
+      "capture_row_index": 29,
+      "citation_count_display": "82"
     },
     {
       "title": "Identifying police officers at risk of adverse events",
@@ -352,6 +449,17 @@
       "citation_count_display": "59"
     },
     {
+      "title": "Early prediction of cardiac arrest (code blue) using electronic medical records",
+      "author": "S Somanchi, S Adhikari, A Lin, E Eneva, R Ghani",
+      "pub_year": "2015",
+      "venue": "Proceedings of the 21th ACM SIGKDD international conference on knowledge …",
+      "num_citations": 55,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:WqliGbK-hY8C",
+      "author_pub_id": "_ufWH4IAAAAJ:WqliGbK-hY8C",
+      "capture_row_index": 48,
+      "citation_count_display": "55"
+    },
+    {
       "title": "Improving knowledge worker productivity–the ACTIVE integrated approach",
       "author": "P Warren, N Kings, I Thurlow, J Davies, T Buerger, E Simperl, C Ruiz, ...",
       "pub_year": "2009",
@@ -372,6 +480,17 @@
       "author_pub_id": "_ufWH4IAAAAJ:RGFaLdJalmkC",
       "capture_row_index": 51,
       "citation_count_display": "53"
+    },
+    {
+      "title": "Automatically building a corpus for a minority language from the web",
+      "author": "R Jones, R Ghani",
+      "pub_year": "2000",
+      "venue": "Annual Meeting-Association for Computational Linguistics 38 (2), 29-36",
+      "num_citations": 52,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:WF5omc3nYNoC",
+      "author_pub_id": "_ufWH4IAAAAJ:WF5omc3nYNoC",
+      "capture_row_index": 52,
+      "citation_count_display": "52"
     },
     {
       "title": "The legislative influence detector: Finding text reuse in state legislation",
@@ -451,6 +570,17 @@
       "citation_count_display": "34"
     },
     {
+      "title": "Change through data: A data analytics training program for government employees",
+      "author": "F Kreuter, R Ghani, J Lane",
+      "pub_year": "2019",
+      "venue": "Harvard Data Science Review 1 (2)",
+      "num_citations": 33,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:rmuvC79q63oC",
+      "author_pub_id": "_ufWH4IAAAAJ:rmuvC79q63oC",
+      "capture_row_index": 67,
+      "citation_count_display": "33"
+    },
+    {
       "title": "Using Ensemble Machine Learning Methods for Predicting Risk of Readmission for Heart Failure.",
       "author": "SM Mahajan, R Ghani",
       "pub_year": "2019",
@@ -482,6 +612,28 @@
       "author_pub_id": "_ufWH4IAAAAJ:tkaPQYYpVKoC",
       "capture_row_index": 76,
       "citation_count_display": "25"
+    },
+    {
+      "title": "A comparison of efficacy and assumptions of bootstrapping algorithms for training information extraction systems",
+      "author": "R Ghani, R Jones",
+      "pub_year": "2002",
+      "venue": "Workshop on Linguistic Knowledge Acquisition and Representation …",
+      "num_citations": 25,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:UebtZRa9Y70C",
+      "author_pub_id": "_ufWH4IAAAAJ:UebtZRa9Y70C",
+      "capture_row_index": 77,
+      "citation_count_display": "25"
+    },
+    {
+      "title": "Reducing incarceration through prioritized interventions",
+      "author": "MJ Bauman, KS Boxer, TY Lin, E Salomon, H Naveed, L Haynes, J Walsh, ...",
+      "pub_year": "2018",
+      "venue": "Proceedings of the 1st ACM SIGCAS Conference on Computing and Sustainable …",
+      "num_citations": 22,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=20&pagesize=80&citation_for_view=_ufWH4IAAAAJ:uJ-U7cs_P_0C",
+      "author_pub_id": "_ufWH4IAAAAJ:uJ-U7cs_P_0C",
+      "capture_row_index": 80,
+      "citation_count_display": "22"
     },
     {
       "title": "Faking feature importance: A cautionary tale on the use of differentially-private synthetic data",
@@ -627,6 +779,17 @@
       "citation_count_display": "10"
     },
     {
+      "title": "Multiple sensor integration for indoor surveillance",
+      "author": "VA Petrushin, G Wei, R Ghani, AV Gershman",
+      "pub_year": "2005",
+      "venue": "Proceedings of the 6th international workshop on Multimedia data mining …",
+      "num_citations": 10,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:8k81kl-MbHgC",
+      "author_pub_id": "_ufWH4IAAAAJ:8k81kl-MbHgC",
+      "capture_row_index": 109,
+      "citation_count_display": "10"
+    },
+    {
       "title": "An experience-centered approach to training effective data scientists",
       "author": "KT Rodolfa, AD Unanue, M Gee, R Ghani",
       "pub_year": "2019",
@@ -649,6 +812,28 @@
       "citation_count_display": "9"
     },
     {
+      "title": "Automatic web search query generation to create minority language corpora",
+      "author": "R Ghani, R Jones, D Mladenic",
+      "pub_year": "2001",
+      "venue": "SIGIR, 432-433",
+      "num_citations": 8,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:_kc_bZDykSQC",
+      "author_pub_id": "_ufWH4IAAAAJ:_kc_bZDykSQC",
+      "capture_row_index": 115,
+      "citation_count_display": "8"
+    },
+    {
+      "title": "A recommendation and risk classification system for connecting rough sleepers to essential outreach services",
+      "author": "H Wilde, LL Chen, A Nguyen, Z Kimpel, J Sidgwick, A De Unanue, ...",
+      "pub_year": "2021",
+      "venue": "Data & Policy 3, e2",
+      "num_citations": 7,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:anf4URPfarAC",
+      "author_pub_id": "_ufWH4IAAAAJ:anf4URPfarAC",
+      "capture_row_index": 118,
+      "citation_count_display": "7"
+    },
+    {
       "title": "Inference control to protect sensitive information in text documents",
       "author": "C Cumby, R Ghani",
       "pub_year": "2010",
@@ -657,6 +842,17 @@
       "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:zA6iFVUQeVQC",
       "author_pub_id": "_ufWH4IAAAAJ:zA6iFVUQeVQC",
       "capture_row_index": 123,
+      "citation_count_display": "7"
+    },
+    {
+      "title": "Multiple sensor indoor surveillance: problems and solutions",
+      "author": "VA Petrushin, G Wei, R Ghani, AV Gershman",
+      "pub_year": "2005",
+      "venue": "2005 IEEE workshop on machine learning for signal processing, 349-354",
+      "num_citations": 7,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:Zph67rFs4hoC",
+      "author_pub_id": "_ufWH4IAAAAJ:Zph67rFs4hoC",
+      "capture_row_index": 125,
       "citation_count_display": "7"
     },
     {
@@ -713,6 +909,17 @@
       "author_pub_id": "_ufWH4IAAAAJ:QD3KBmkZPeQC",
       "capture_row_index": 133,
       "citation_count_display": "5"
+    },
+    {
+      "title": "Systematic analysis of the impact of label noise correction on ml fairness",
+      "author": "IO Silva, C Soares, I Sousa, R Ghani",
+      "pub_year": "2023",
+      "venue": "Australasian Joint Conference on Artificial Intelligence, 173-184",
+      "num_citations": 4,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:a3BOlSfXSfwC",
+      "author_pub_id": "_ufWH4IAAAAJ:a3BOlSfXSfwC",
+      "capture_row_index": 136,
+      "citation_count_display": "4"
     },
     {
       "title": "Machine learning for public policy: Do we need to sacrifice accuracy to make models fair",
@@ -924,6 +1131,28 @@
       "citation_count_display": "1"
     },
     {
+      "title": "Graph Structure Learning for Task Ordering.",
+      "author": "Y Yang, A Lad, H Shu, B Kisiel, CM Cumby, R Ghani, K Probst",
+      "pub_year": "2009",
+      "venue": "ICEIS (2), 164-169",
+      "num_citations": 1,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:yD5IFk8b50cC",
+      "author_pub_id": "_ufWH4IAAAAJ:yD5IFk8b50cC",
+      "capture_row_index": 176,
+      "citation_count_display": "1"
+    },
+    {
+      "title": "Using error-correcting codes with co-training for text classification with a large number of categories",
+      "author": "R Ghani",
+      "pub_year": "2001",
+      "venue": "Proceedings of Workshop on Text Mining at the First IEEE Conference on Data …",
+      "num_citations": 1,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=100&pagesize=100&citation_for_view=_ufWH4IAAAAJ:edDO8Oi4QzsC",
+      "author_pub_id": "_ufWH4IAAAAJ:edDO8Oi4QzsC",
+      "capture_row_index": 180,
+      "citation_count_display": "1"
+    },
+    {
       "title": "Breaking the Cycle of Incarceration With Targeted Mental Health Outreach: A Case Study in Machine Learning for Public Policy",
       "author": "KT Rodolfa, E Salomon, J Yao, S Yoder, R Sullivan, K McGuire, ...",
       "pub_year": "2025",
@@ -987,6 +1216,17 @@
       "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=200&pagesize=100&citation_for_view=_ufWH4IAAAAJ:e5wmG9Sq2KIC",
       "author_pub_id": "_ufWH4IAAAAJ:e5wmG9Sq2KIC",
       "capture_row_index": 210,
+      "citation_count_display": ""
+    },
+    {
+      "title": "Using bayesian reasoning from sensor network for indoor surveillance",
+      "author": "VA Petrushin, G Wei, R Ghani, AV Gershman",
+      "pub_year": "2006",
+      "venue": "Proceedings of the PTA2006 Workshop",
+      "num_citations": 0,
+      "pub_url": "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=_ufWH4IAAAAJ&cstart=200&pagesize=100&citation_for_view=_ufWH4IAAAAJ:35N4QoGY0k4C",
+      "author_pub_id": "_ufWH4IAAAAJ:35N4QoGY0k4C",
+      "capture_row_index": 211,
       "citation_count_display": ""
     },
     {
