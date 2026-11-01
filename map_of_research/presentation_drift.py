@@ -606,8 +606,6 @@ def preserve_reviewed_additive_presentation(
     if not parent_points.keys() <= candidate_points.keys():
         raise ValueError("Additive presentation cannot remove parent map points")
     added = sorted(candidate_points.keys() - parent_points.keys())
-    if not added:
-        raise ValueError("Additive presentation review has no new map points")
     if not re.fullmatch(r"[0-9a-f]{64}", reported_coauthor_source_sha256):
         raise ValueError("Additive review lacks exact reported coauthor source SHA")
     for work_id in parent_points:
@@ -675,6 +673,11 @@ def preserve_reviewed_additive_presentation(
         raise ValueError("Additive candidate works lack unique mapped IDs")
     if not prior_by_id.keys() <= set(current_ids):
         raise ValueError("Additive candidate drops prior work IDs")
+    # Binding-only additions have no new canonical work to place. An empty
+    # placement review is valid only when the entire work-ID set is unchanged;
+    # new off-map works still require a separate reviewed placement decision.
+    if not added and set(current_ids) != set(prior_by_id):
+        raise ValueError("Additive presentation review has no new map points")
 
     receipt: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
