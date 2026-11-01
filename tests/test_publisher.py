@@ -2789,7 +2789,27 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
         monkeypatch.setattr(
             publisher,
             "_reviewed_new_generic_placement_work_ids",
-            lambda *args, **kwargs: frozenset(),
+            lambda *args, **kwargs: frozenset({"new-generic"}),
+        )
+        monkeypatch.setattr(
+            publisher,
+            "parent_pending_region_protection_ids",
+            lambda *args: frozenset({"parent-pending"}),
+        )
+        real_region_audit = publisher.exclude_low_information_regions
+        protected_calls = []
+
+        def capture_region_protection(works, **kwargs):
+            protected_calls.append(kwargs["pending_placement_review_work_ids"])
+            # The synthetic fixture has no matching work rows; the real
+            # region-audit behavior is tested with matching IDs separately.
+            return real_region_audit(
+                works,
+                doi_aliases=kwargs["doi_aliases"],
+            )
+
+        monkeypatch.setattr(
+            publisher, "exclude_low_information_regions", capture_region_protection
         )
         publisher.publish_snapshot(
             tmp_path / "snapshot.parquet",
@@ -2797,6 +2817,7 @@ def test_publish_snapshot_orchestrates_all_dataset_configs(
             **additive_options,
         )
         assert len(carryforward_calls) == 1
+        assert protected_calls == [frozenset({"new-generic", "parent-pending"})]
         assert atomic_calls[-1]["parent_pending_work_ids"] == ["old"]
 
 

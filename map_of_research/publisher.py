@@ -78,9 +78,8 @@ from .coauthor_binding_approval import (
     SNAPSHOT_SHA256 as COAUTHOR_BINDING_SNAPSHOT_SHA256,
 )
 from .composite_region import (
-    HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
-)
-from .composite_region import (
+    BLANK_TOPICS,
+    COORDINATE_FIELDS,
     MATH_REVIEW_MANIFEST_SHA256,
     SULLIVAN_PERSON_ID,
     TOPIC_FIELDS,
@@ -91,6 +90,9 @@ from .composite_region import (
     validate_composite_map_points,
     validate_composite_staged_nonwork_tables,
     validate_composite_staged_works,
+)
+from .composite_region import (
+    HISTORICAL_REVISION as COMPOSITE_HISTORICAL_REVISION,
 )
 from .composite_region import (
     PRESENTATION_FIELDS as COMPOSITE_PRESENTATION_FIELDS,
@@ -150,6 +152,7 @@ from .pending_publications import (
     PENDING_MAP_SCHEMA_VERSION,
     build_pending_publications,
     carry_forward_parent_pending_works,
+    parent_pending_region_protection_ids,
     require_parent_pending_list_preserved,
 )
 from .person_publication_holds import (
@@ -572,6 +575,7 @@ def _existing_work_state(
         "work_match_method",
         "map_eligible",
         "map_region_outlier",
+        "map_region_documented_override",
         "map_exclusion_reasons",
         "department_ids",
         "quality_assessment_version",
@@ -579,6 +583,8 @@ def _existing_work_state(
         "topic_label_review_version",
         "map_region_audit_version",
         "layout_version",
+        *COORDINATE_FIELDS,
+        *BLANK_TOPICS,
     )
     try:
         return list(
@@ -2366,10 +2372,16 @@ def publish_snapshot(
         if additive_placement_review_path is not None
         else frozenset()
     )
+    protected_pending_work_ids = (
+        pending_generic_work_ids
+        | parent_pending_region_protection_ids(prior_work_state)
+        if additive_placement_review_path is not None
+        else frozenset()
+    )
     tables["works"] = exclude_low_information_regions(
         tables["works"],
         doi_aliases=doi_aliases,
-        pending_placement_review_work_ids=pending_generic_work_ids,
+        pending_placement_review_work_ids=protected_pending_work_ids,
     )
     producer_reports_path = (
         people_path.parent.parent / DEFAULT_REPORTED_FACULTY_COAUTHORS_PATH
