@@ -1,614 +1,146 @@
 {
   "schema_version": 1,
-  "prior_revision": "74224e0f0db0ab4a469b9e6527971c84afcad9ce",
-  "source_snapshot_sha256": "19e5e03c340158e6fa05fe36b01751f1f11e8a06467230d1fffcd5cd8243a566",
-  "selected_ids_sha256": "1d588ccba816f6c743bbd0bd1ab91bf40cc417ec0ed0197e3b7529f16f489aff",
-  "parent_map_sha256": "514d50043b040a05178ef7a351d540a13f3aca018809c139deedd1ba49afe28c",
-  "candidate_map_content_sha256": "b8b74f2b7676677ff8dc8a681784fe3722812618157e8d3b0124f41de9ddd090",
-  "new_work_ids_sha256": "aca7b32e6b0ddcd34b33447042f92bf7d20ed795ddbf1870a561c0382f2b9fdf",
+  "prior_revision": "0e04e03913b9c2075fa578d1c5376a09401e03bb",
+  "source_snapshot_sha256": "91eb6312aa781a8cdbbec2d3269e547083f4664f91e49c9399bee80ab6f8733a",
+  "selected_ids_sha256": "faf0cfdf2f937733060bf8397edfa1e4f25deae4141d5b114516b9e632a7e095",
+  "parent_map_sha256": "9296a5cdecd81f996e7918236a67c1aa2d3b9f9b4cb48acc81e3e20dd15f5244",
+  "candidate_map_content_sha256": "e82c199eeaa3814cd31c7f7f915efd1688bb62e25b382e1e979f5d2fde375992",
+  "new_work_ids_sha256": "de8923ce289f943bf1608d9fab663a3e873efe6c624c6001a384b90690381ddd",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-01",
   "new_points": [
     {
-      "work_id": "work-06993d633bb559adcc2f222f3c5d3ee356a0949010e5acb0ef032dbfd329eed9",
+      "work_id": "work-00331ab936e3bb5f31b4e7fa836d2f4941130bc250c4fbff106151af8727b8e2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0705aff961b864ba710538fdf535a8ef07486b7882d8191685d6396800718311",
+      "work_id": "work-01df525b32e7bb06b1360cc83447af3326bc253ce99933d4c4ca9462bdcab514",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-08232810a5232c564dbcec3d329debefa3414e90a5c7db19b3653cf12340ca03",
+      "work_id": "work-0e4b407452c80a34b79b65fff198a7095bd127f0df0c58820ac12d0bcbd6a8b3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0cedd14f22e77b26e5bdf3818cbc662baf6bb96162a61e28ba6a40e9c3c2666e",
+      "work_id": "work-184517da9fe0e2b014ec9ebe8fee5361117a0b2b9ea3cea3a13a220c9b121db2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0d1bc8ee2de15fd8d702d3d3cb307ad565804e9a62966dab242fe700d71ce97b",
+      "work_id": "work-295d5068d284e74ea0d8dd820b6287a5659eeea165da9ab732421b4a83e3b878",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0d8e8bc01f25248cc5d178d1ac66ff0f0973f41bf7dd9bff826a453d159a181a",
+      "work_id": "work-2aca09a12da8b2a8db26bb1dc5e5b4a556e01f90ee7e0ca51cce18ee3314ed36",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-0dd426d9c1263df860eefb738d66b374bffa6224ad60fb6382f7b9df3dce4bc0",
+      "work_id": "work-2d9b2a2c30f3c2b87ec298b2dfe2f30aa4c3e77b5e5bb9c2a811c0c3be413135",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-115c7ad7e224ed710b6a96d5dd8f4249575ea54ffdf9911ff65e4d8d5b105443",
+      "work_id": "work-6fd2269f00e99d90b482094439adf087af9a175d4ae9506847ca46af60e42c35",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-1a3ee2b31cfe651f2d6b5b8a3fa76f38203c4e1d160a36177306f1fee6e02d91",
+      "work_id": "work-8ee40f94596c59201ed40eee7ea629d28ae288f8f8310b9734529fec580727a7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-1e326369a2cb543dca58148408af659dc6dde81c4285053d5ec1a18b2a9255f2",
+      "work_id": "work-92ce2b74a33d3f23eef544310911f93f492c58c6dad21b85dc96a4972d8f1a87",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-1e791c6a749280a3acebe45bb3dc9c2095c7a1531601ea0340ec534304dbe8ab",
+      "work_id": "work-98274919f31bfe08ba4bea09beb02b40ae8e16f8779b65251e5bb0fd8d42bdd2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-238f79dd1f933ff882ea16211f3269576aadfc41eab303eef74de81ce8020d5f",
+      "work_id": "work-ab23511b1f53b9984cc45346c60abd79d746a58eb15bfd3ef97573623527f806",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-241752ea4644820add1c12276d06eff88cc2d78bc8b8076e3fc749fe227765e4",
+      "work_id": "work-b389bb9688199dd7c672172d957259d19447be941f8250a6a0c8580023000dcc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-246ee3b9f74250c54b24ac1be14429c3c398bf175d7b13bd694a2d6fe9091a80",
+      "work_id": "work-b521287c2aff806330303f2d614577a5d4312d747ec1ef22ec75bb518b624531",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-267bc3410e466f605ee9f61d9f645751c496396574189f8191c6bf2b6eaa2d59",
+      "work_id": "work-b57947fbcb25d5a6fb313453e9fea53bd37e7a50d3f15fb8c5f6853c3c91c889",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-2807ddc0e6cd3c6af6611c524a3ff45dd4bb9de59d8835476962bbd6423200c4",
+      "work_id": "work-bed283a210e13b465dc145c451216ff13637027b468e53bc2e3ede7141ce2cce",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-2ce7c0178d5985a7c28991f3aec19e11558a7c30df0e421b19d7e4dd05a3f935",
+      "work_id": "work-da387a64149448aa1ed12fd82f0bfbda90a29de480008f94e8fa8e02597537fd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-2ef0a27992ef80b2e61272ca75ef167a8e98d72c2d5ae344ce43993048d6b508",
+      "work_id": "work-dd354f5a22a2da6d3c0a6749f2539ae0d015ac3d8a495b667030f6ed494dbc11",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-3109e2992a038afcdb3d3486e9a75041352323dc656e9df8c426d391b59beccc",
+      "work_id": "work-e4ac9f766b3045700784ef5b5246359a302bd0ab6be793b4115d73ed5c96ee0b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-31b298f617960a0a23b7b523675e3d5a37b41ba1770bdbe9f1260a55c0d172b9",
+      "work_id": "work-f1220198251d60eb437b34f217ac311fe5f27139034870004272002d7ac112c9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-35e828db76e33ccd6467a28d1f647eb0f94178d1cd9f038e3d89bf07e4170c4f",
+      "work_id": "work-f6c14781d91bea8b01833a9437d9819068cff8f075babf73eea49e2861097328",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     },
     {
-      "work_id": "work-381dd5f9bdfdda1b8868778fb6252e361890c89a590f48917914fac923101a43",
+      "work_id": "work-fd3c07000808442885ca61959e8aa962192df908f51e955cdbd1e364bf34e970",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-3d1ad187895dfcb90097cb0dfa80669bdeb2bd9c20f2ca6918720070713917e5",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-4191a8eb466e38928cdc8489455901ac1c8df2b053d2652903674356bd8fd865",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-43eb2665ff244c789c392047875a97fa0cde2e7c6a3e2dad8a4cf808d8a501a3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-4571cf72a9e9f2d80d0a2af78a73c3d3f0d3039f646d68397237611cd90f8f41",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-4e56ecaed93d24609f2f4ef3ab318fafe464f3e8af5f11cc0d62ebeee842bce4",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-561ab2ae91f305b1f3f1ae74ce81bac10ce35249997048da0e917f6a10cfc0b6",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-582b1b464f19b6e6d8d36c0648f4c2a135ff6bf961b6beb9678ddd5d8383b31b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-58ea5761bb6ae2b86a410d5d9f33f4a1de2ab4771d58b6b56129fbb6d6dd6762",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-5c8bc5967e629ebeb09a1022af1a2edb7893bbff09049dfa469a9b19c7933c72",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-5ca0bf6a94a6fd2006b25ed952d94b7e7d8637e3291c8ccc593cf3d46a8abdbc",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-5d3d7b5c793f567499229080d90b9490470ce9f751c6ae4fef721944105d5e01",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-5def29e5dc9e6f2c9982cff7ed344ae8034078610135f5deacff178b97ad8678",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-640e1687feafca16a49507ac12ec364f50495a3043621a972e5304298bdfe910",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-6a208071bb3f1112d8fb6c7497fac79d982f4fe447b8b6b72ecea7893f95b8e0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-6b2c407e971f1f2c385f307f69edb91140d469c40021487f8b1bb45f628c8607",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-713be33e4dd48eb6adb26e8b1ce7300f45a1d7984425305027774db276d76c0f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-75f9f5094eb9799536deb4023e5f96445d3f2784e091c34fc18600aaff04415b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-764385d0cac15f225c1133ac6c5400b651ba8bcec28e34d249b84837a66f5771",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-76d4aebc299fb064469bdb112d5aaecd5cc7d48bcf3b9a46da85f4bbfaf5d903",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-77fe59121ca43be815c72490a1a891615a8a651c17861905d51859dfbfbc4265",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-7fc9ebdf0aaa81829642c8991267391cfcfd259339823ea24d05656cb20da2a0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-8126b269abfc66d31e3b2f1075de7209b48e3f98e0634a58191af4d049b59e67",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-8140595b75a54f73e5a1bf9e6c9b40c3c76e5583a2f65ce39d0ed9be9695dc1f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-81c401af453ea97fd6012cf2143aeecb57df66349587164f1e3738d609c6853d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-860064af14ef81ebebe7b05518d8d8d4567f6330bd078a81eac64d716947856e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-868d05480c91fc55abd8e73e22828289c16ab5e1bb86093b38b6afce541bf701",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-88fdd7407855715ebac00f911fc79edd1079629c84ebdb39bed88976fe28ef0b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-8a6de7c11129ffb1d446f4ad434f40b7b5db5150b20a0e4ae44ed6fd9c710e79",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-8de9146d5b0977a3b1a23f868d2928ef1bd5a4775ab99bd39a2814d2f44f9d0b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-8ed615f1ceb36f8974498e28a44e7d133a5860a6a0954cc21f517c27a6b30760",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9051365203406762edd2dc8b913a601e78c2da36570a9d6b063547f1021431c0",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-90ae6b28a4c44ebfa2535dc35502074418fd17dcf645a6cb7908f37e836cd407",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-92ff392504292f91e250e828c1c275e06f4ce9a020341c5a4b7cc4ed246a44cb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9496cb899280f728a2b6fe6abd2d6abf095c9cd4dca45b344b1074d3a6d3594a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9567744eb70a3ee1ad567eb0fcbdb5f0a710aa9194e840e201c9790b6d44a317",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9625a2d002f5c584d47e8e8bb0e4ab60b7dde694d594175b156533bfd2ff2a19",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-98d9e1578e811058d6ec9752e4267b7bf0a6baf8d84be06133a95946ac823b07",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-999cc08b36ccf16ec5a8bb89ee0bd7f728e68b30d56c7f97a52ad50ee76f4622",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9a6938e50b629c50207e780adfcc39f146572725ccd5faac42f3ff6441000436",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9b09eb7cbea327c4ac40991f9bade009783a7aa416dda208e18c10454cfe080d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-9c111319b80715e66e2134fdef562612edfb2f6a6ea9558f488127ee340b1992",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-a09893160d2d85001efc34c1ceb67d102744299a403ba0f7d402c9329c525642",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-a09d31acf9594b011081acb45a2de72deba2412540f65142a92f7c5caa9028ac",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-a0dc8b9c9223026005d861c9678fb26e0d3e16e3cc5ab254f5a1a8b5e8ed7d37",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-a6b76b23397efb66983a27a2001e44e273ce0368e239d53325f622fc225860c3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-ab530a28ab0ba352a5a508ebb2dbf1c788bf9923ccf409d004dd6f65765e9f24",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-af45f13b9a76e3984cfc921c6ecbea8e0334d17ddb08751ff2fc3b6b868d3fd2",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b294b0fbf072c98b935a3d4ca3d2bc978cec7e39a7d8928e1a14c6e04918bc9d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b3a6daca0de8ca1338b86eb4078be446ff92de6b9822dddaa3f7ad76806a0862",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b498a4b3a898dd00da1c893aea0707d0210bee834d9f8e18fe2606642d22c772",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b547b52c7dc690c7085b1816f9c77ecfab6476d5210bc641c89b6bb8be65f7df",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b55d4d2016640af800f739f4ae577479a7d7ac1b78a3a3d29aa8b1ab79742e0f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b576f7bcf24987e4b12865eeb173c35ab50621863bccfb80dd8860947b5c6899",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b6dd863a7906f33309fd2acac9a0e480b61c0e037747b417956e992ce0033c04",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-b97061f87df0dcc7930fcc89170d8e0a8448ed05cb174be1f609aac7f7b31cc9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-ba2696615dfa79c394a79b0245ad5438172b28993b52f8cc6be3e22ceb611884",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-bb01be282e2ba14b191f02aec9cdf729dabcaa0469a39ce2a3fb99f34e7c1dc8",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-be0ea8bcc2995b2d05e66dba8afdbc91392aa8e1ae1c05492c995c84ac7d936a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-c0f20c4a10a24902a5543cea2bbcbf1ec83c1d9d72013902f8019e8cab4675bb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-c6aab53aecc97b3d5e2b6498fb18af8fce7bd6bc2fbe45713fc9126c10974f1b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-ccddffb88822175125a5c424c3aae970f400dfca6948bd335037a04a7dec3e75",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-cd6194c6e08e50bbbcf3bf2789e4dc8d90ef8268f15511bd8d1f45fe3945117e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-cfe76141d01c20967d53b7e44cb233b9bed17bcb4215cdc1c8dfe6291cf1cc83",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-d25728f44d59180af43fd8bba3f2964415252b3270b56cbcb0fca9ddbaa8b4eb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-d36876c9eed1e99930a8cb2939a349e18050e3bd92fd23b3e0966dc2715ab0ab",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-d71eb2e7f64e52c99b84c80dcd177d1410352738d39332912477b0914b2e9046",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-daeb2a8c72c093ce79db673607f723a0bea0f881c351df01cb6286d32e093e0e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-e14f19230e9c21b57687f62e02869a105b477608f3b4ec3ea45836891e9f921e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-e4358a66fcf1cd2ad6e275299a6f6acf415da130aaaf39118b96c5271efed2e3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-e8067fd2b52c989ea2535e5bc036d492ded89a2daa011f0ec5d4ca836bdc6e7f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-ede8d28fb0d8049c70244368168589806f68915264545f6248ac4c84b9e53eac",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-ee8e4b99ed22a1122d297ca6c015409c4b654e5b0769ca83d0c61205c2c3968a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-f2d592c949f8ad0887b3a9a69deae9480a9fd35f5f3131a0cff64bba3fda7877",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-f5dad283db09fc18d275cf7067ab7a1deb4e0d806835532fb48ec5aebb0dbe47",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-f70abd42a0bca9feb2af32838b678acbbb53854538fdef926fd629bea0cf4a4b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-f88b3b30ab26e98c9be8f9ab1dfa35bdd217ef698d756f5f0f8b11009ff27ce5",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-fd81814a7b9cc74c0595636eef9ba19c0b8c8571cbc0e1bce204c9c1498707ee",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
-    },
-    {
-      "work_id": "work-fdfac8b8c99fc5953f89f7204c5f820d6c093fc05678d26da5985ce7fd667637",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact selected Christos Faloutsos first-batch work; topic and spatial placement await separate review."
+      "rationale": "Exact selected Yuvraj Agarwal saved-capture work; spatial topic placement awaits separate review."
     }
   ]
 }
