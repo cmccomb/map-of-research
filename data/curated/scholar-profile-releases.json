@@ -1715,6 +1715,26 @@
       "reviewed_at": "2026-10-31",
       "scholar_id": "MbF6rTEAAAAJ",
       "state": "released"
+    },
+    {
+      "person_id": "person-randiwilliams-cd0b214f",
+      "scholar_id": "SuXrO6gAAAAJ",
+      "state": "released",
+      "expected_source_rows": 28,
+      "cache_sha256": "b2bf24ac9b32dd805c76ed365339669172c201d51832958a428ff3448a457735",
+      "reason": "Local private-stage candidate: 28 selected observations from one complete exact-owner Randi Williams Scholar capture; 11 concrete version, duplicate, media, missing-year, or malformed rows remain private. Row 22 shares an existing arXiv work with its original byline verified. Generic works remain noncollaborative and placement held. This decision alone does not authorize upload.",
+      "reviewed_at": "2026-11-01",
+      "public_subset": {
+        "observed_visible_rows": 39,
+        "private_capture_sha256": "63f8822b426da0a5cb339606150c2d1e80096afd8abc554c8fcc1874071f9d37",
+        "private_rendered_html_sha256": "b34074733a285cff020db6a4e5ece16721d4ba0b66fe061d2630185d0d761b00",
+        "private_review_sha256": "fe9e5c297350853b3188e513559471ae73ff5926148ba0272a392a500a3bfef5",
+        "selected_ids_sha256": "95d124ca17a369687a3ac6448d98d1b613eda5dc9a27cfa59fc68685088dcb3d",
+        "withheld_rows": 11,
+        "withheld_hold_rows": 10,
+        "withheld_excluded_rows": 1,
+        "withheld_ids_sha256": "fec544d656d6e9e15df25f306d16a9ca7caed6b421198380e9b01b70c5e21331"
+      }
     }
   ]
 }
