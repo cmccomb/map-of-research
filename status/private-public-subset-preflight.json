@@ -589,19 +589,33 @@
       "withheld_rows": 836,
       "withheld_hold_rows": 763,
       "withheld_excluded_rows": 73
+    },
+    {
+      "person_id": "person-yangliu-b57c54d4",
+      "scholar_id": "LrHm5cgAAAAJ",
+      "cache_sha256": "311357ecf2015d31887daab1642fe3bab9499d75e196fe58c08651ce28cc7a2f",
+      "private_capture_sha256": "37c9657ffa346d071943344d04f3402148052de7ca53ed4bef80dac6d5264d9b",
+      "private_review_sha256": "3934b6da4825ae7434d2ac32438a8eff9a8e9f148d1f133b347bb0c022c727ec",
+      "selected_ids_sha256": "70f8fe964f12003dd1d44325b143755072da86605e3d1f3c951d167e9d664a8f",
+      "withheld_ids_sha256": "97101d62a66f4acebfa3cf446f0353a01324ce4aa70f48055baa17cdb002699a",
+      "observed_visible_rows": 38,
+      "selected_rows": 25,
+      "withheld_rows": 13,
+      "withheld_hold_rows": 13,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "59b954d0beab41d4e9f4b7a84743574e06c375cdbfccc71c3e0f5186d4a26d5f",
-  "source_selection_manifest_sha256": "d6aec6957682ac8d3c651749fa92236f33f62e3ac83558e0be3de6712eb59ab6",
-  "source_snapshot_sha256": "1486623e152e72c33d6a3db3f1277cad6abfe542b8eec5b663b39367ef9cff6d",
+  "selected_ids_sha256": "512f8c52831bb499de0ff99415f3c4ef3a2f556a9dd4bc0b96835bbd7b5bbe92",
+  "source_selection_manifest_sha256": "b35c9c67258dfd40c4c70cc0294376cc5e8fae9dfe78de77104841581f707e59",
+  "source_snapshot_sha256": "4bb057cde8e36077e813ca04368f22f50ceeee473b80bc51f59af044e744fd27",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 7747,
-    "selected_rows": 2111,
-    "withheld_rows": 5636,
-    "withheld_hold_rows": 5295,
+    "observed_visible_rows": 7785,
+    "selected_rows": 2136,
+    "withheld_rows": 5649,
+    "withheld_hold_rows": 5308,
     "withheld_excluded_rows": 341
   },
-  "withheld_ids_sha256": "4fa8b6950fec6b9f3ec7ef54aa16c7eb440ac646f6d2524ad6d6c32b4a033f08"
+  "withheld_ids_sha256": "729daba513af65a16a091ecdae648a60cfae4a7465877bbb94e516f90f465916"
 }
