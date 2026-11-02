@@ -344,28 +344,43 @@ def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
         work = held["works"].iloc[0]
         assert work["doi"] == ""
         assert not bool(work["collaboration_eligible"])
-    ca_url = str(source_url).replace("scholar.google.com", "scholar.google.ca")
-    _manifest(
-        path,
-        [_scholar_profile_entry(evidence_url=ca_url)],
-    )
-    ca_tables = build_dataset_tables(
-        pandas.DataFrame(
-            [
-                {
-                    **row,
-                    "source_url": ca_url,
-                    "source_record_json": json.dumps({**captured, "pub_url": ca_url}),
-                }
-            ]
-        ),
-        registry,
-        contexts=load_contexts(path),
-    )
-    assert not bool(ca_tables["profile_publications"].iloc[0]["collaboration_eligible"])
+    for regional_host in ("scholar.google.ca", "scholar.google.co.jp"):
+        regional_url = str(source_url).replace("scholar.google.com", regional_host)
+        _manifest(
+            path,
+            [_scholar_profile_entry(evidence_url=regional_url)],
+        )
+        regional_tables = build_dataset_tables(
+            pandas.DataFrame(
+                [
+                    {
+                        **row,
+                        "source_url": regional_url,
+                        "source_record_json": json.dumps(
+                            {**captured, "pub_url": regional_url}
+                        ),
+                    }
+                ]
+            ),
+            registry,
+            contexts=load_contexts(path),
+        )
+        assert not bool(
+            regional_tables["profile_publications"].iloc[0]["collaboration_eligible"]
+        )
+    japan_url = str(source_url).replace("scholar.google.com", "scholar.google.co.jp")
     for bad_url in (
         str(source_url) + "&user=",
         str(source_url) + "&citation_for_view=",
+        japan_url.replace("/citations?", ".attacker.example/citations?"),
+        japan_url.replace("/citations?", ":443/citations?"),
+        japan_url.replace("https://", "https://name@", 1),
+        japan_url.replace("/citations?", "/not-citations?"),
+        japan_url.replace("user=oneAAAAJ", "user=otherAAAAJ"),
+        japan_url.replace(
+            "citation_for_view=oneAAAAJ:scholar-first",
+            "citation_for_view=oneAAAAJ:wrong",
+        ),
     ):
         with pytest.raises(ValueError, match="exact source citation"):
             build_dataset_tables(

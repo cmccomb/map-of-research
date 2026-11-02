@@ -1101,19 +1101,18 @@ def _rebind_changed_private_evidence(case):
     case.selection_manifest_path.write_text(json.dumps(selection))
 
 
-def test_private_preflight_accepts_exact_google_scholar_canada_capture(tmp_path):
+@pytest.mark.parametrize("host", ["scholar.google.ca", "scholar.google.co.jp"])
+def test_private_preflight_accepts_exact_regional_google_scholar_capture(
+    tmp_path, host
+):
     case = _private_subset_case(tmp_path)
     raw = json.loads(case.raw_path.read_text())
     for row in raw["rows"]:
-        row["citation_url"] = row["citation_url"].replace(
-            "scholar.google.com", "scholar.google.ca"
-        )
+        row["citation_url"] = row["citation_url"].replace("scholar.google.com", host)
     case.raw_path.write_text(json.dumps(raw))
     cache = json.loads(case.cache_path.read_text())
     for row in cache["publications"]:
-        row["pub_url"] = row["pub_url"].replace(
-            "scholar.google.com", "scholar.google.ca"
-        )
+        row["pub_url"] = row["pub_url"].replace("scholar.google.com", host)
     case.cache_path.write_text(json.dumps(cache))
     frame = pandas.read_parquet(case.snapshot_path)
     frame["source_record_json"] = frame["source_record_json"].map(
@@ -1121,7 +1120,7 @@ def test_private_preflight_accepts_exact_google_scholar_canada_capture(tmp_path)
             {
                 **json.loads(text),
                 "pub_url": json.loads(text)["pub_url"].replace(
-                    "scholar.google.com", "scholar.google.ca"
+                    "scholar.google.com", host
                 ),
             }
         )
@@ -1143,11 +1142,9 @@ def test_private_preflight_accepts_exact_google_scholar_canada_capture(tmp_path)
 @pytest.mark.parametrize(
     "mutation",
     [
-        lambda url: url.replace(
-            "scholar.google.com", "scholar.google.ca.attacker.example"
-        ),
-        lambda url: url.replace("scholar.google.com", "scholar.google.ca:443"),
-        lambda url: url.replace("scholar.google.com", "name@scholar.google.ca"),
+        lambda url: url.replace("/citations?", ".attacker.example/citations?"),
+        lambda url: url.replace("/citations?", ":443/citations?"),
+        lambda url: url.replace("https://", "https://name@", 1),
         lambda url: url.replace("/citations?", "/not-citations?"),
         lambda url: url.replace(f"user={SCHOLAR}", "user=otherAAAAJ"),
         lambda url: url.replace(
@@ -1155,10 +1152,13 @@ def test_private_preflight_accepts_exact_google_scholar_canada_capture(tmp_path)
         ),
     ],
 )
-def test_private_preflight_rejects_google_scholar_canada_lookalike(tmp_path, mutation):
+@pytest.mark.parametrize("host", ["scholar.google.ca", "scholar.google.co.jp"])
+def test_private_preflight_rejects_regional_google_scholar_lookalike(
+    tmp_path, mutation, host
+):
     case = _private_subset_case(tmp_path)
     raw = json.loads(case.raw_path.read_text())
-    original = raw["rows"][0]["citation_url"]
+    original = raw["rows"][0]["citation_url"].replace("scholar.google.com", host)
     changed = mutation(original)
     assert changed != original
     raw["rows"][0]["citation_url"] = changed

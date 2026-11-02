@@ -176,7 +176,12 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
             or row.year != context.expected_year
             or context.evidence_url != source
             or parsed.scheme != "https"
-            or parsed.hostname not in {"scholar.google.com", "scholar.google.ca"}
+            or parsed.hostname
+            not in {
+                "scholar.google.com",
+                "scholar.google.ca",
+                "scholar.google.co.jp",
+            }
             or parsed.username is not None
             or parsed.password is not None
             or parsed.port is not None
