@@ -1800,20 +1800,20 @@
       "person_id": "person-grahamneubig-767add33",
       "scholar_id": "wlosgkoAAAAJ",
       "state": "released",
-      "expected_source_rows": 32,
-      "cache_sha256": "66b809ebae5eb53b4fe4bfbda35289fd6a2f93e67bd9ded1c1513236242792f9",
-      "reason": "Private local stage: 11 prior Graham selections preserved plus 21 exact source-backed candidates; 657 other candidates deferred, 142 concrete holds and 73 exclusions. New placement pending; no upload approved.",
+      "expected_source_rows": 40,
+      "cache_sha256": "16eeb5d66f21d6cfa2b68c6becdcbb10cb9d92e5ea89ca0618fdf2ad74e1939c",
+      "reason": "Private local stage: 32 prior Graham selections preserved plus eight exact official ACL source-backed candidates; 649 other candidates deferred, 142 concrete holds and 73 exclusions. New placement pending; no upload approved.",
       "reviewed_at": "2026-11-02",
       "public_subset": {
         "observed_visible_rows": 904,
         "private_capture_sha256": "eb318cca62aea08ed50d6cd21bb0118ae7881c8ecd5a8a2553983d6b83a6570f",
         "private_rendered_html_sha256": "db66ec3b949c692b7bb545030cf3c9ef378bfc75aebe5abc0fb317fcb507fbf6",
-        "private_review_sha256": "a63d71186af5638794d945521928cb1b4dccac87343a22598c8554ac95113350",
-        "selected_ids_sha256": "3fce1938a7fbd41a2a76e7713301908fcc5219233b3384ae267a9b121795f2ff",
-        "withheld_rows": 872,
-        "withheld_hold_rows": 799,
+        "private_review_sha256": "43ed9c6711dd644694fe3f9f39e511fa1b3a02765487745c8b849af71e63d003",
+        "selected_ids_sha256": "6c22068fa6ba830b5a7a93c8875fce09d7e69e12e338b8135453c80433dff072",
+        "withheld_rows": 864,
+        "withheld_hold_rows": 791,
         "withheld_excluded_rows": 73,
-        "withheld_ids_sha256": "90846e918bcddfbecfa521cfdf6f142944220cab645b1e4fbef962b3608758f7"
+        "withheld_ids_sha256": "a81b205aa80437b80d98f2fea048d214ca237ac1bf9afc51732b060f85d2ba33"
       }
     }
   ]
