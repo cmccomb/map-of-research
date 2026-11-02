@@ -1053,6 +1053,196 @@
       "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
       "evidence_url": "https://synergylabs.org/yuvraj/docs/Patidar_Ubicomp2026_BuildingChat.pdf",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:tFyepMjQr3wC",
+      "expected": {
+        "title": "How can we know what language models know?",
+        "year": 2020,
+        "venue": "TACL 8, 423-438",
+        "authors": "Z Jiang, FF Xu, J Araki, G Neubig"
+      },
+      "corrected": {
+        "authors": "Zhengbao Jiang, Frank F. Xu, Jun Araki, Graham Neubig",
+        "title": "How Can We Know What Language Models Know?",
+        "venue": "Transactions of the Association for Computational Linguistics 8, 423-438"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/2020.tacl-1.28/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:0qX8s2k1IRwC",
+      "expected": {
+        "title": "Are Sixteen Heads Really Better than One?",
+        "year": 2019,
+        "venue": "NeurIPS 2019",
+        "authors": "P Michel, O Levy, G Neubig"
+      },
+      "corrected": {
+        "authors": "Paul Michel, Omer Levy, Graham Neubig",
+        "venue": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/2c601ad9d2ff9bc8b282670cdd54f69f-Abstract.html",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:0klj8wIChNAC",
+      "expected": {
+        "title": "XTREME: A massively multilingual multi-task benchmark for evaluating cross-lingual generalization",
+        "year": 2020,
+        "venue": "ICML 2020",
+        "authors": "J Hu, S Ruder, A Siddhant, G Neubig, O Firat, M Johnson"
+      },
+      "corrected": {
+        "authors": "Junjie Hu, Sebastian Ruder, Aditya Siddhant, Graham Neubig, Orhan Firat, Melvin Johnson",
+        "title": "XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalisation",
+        "venue": "Proceedings of the 37th International Conference on Machine Learning (PMLR 119)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://proceedings.mlr.press/v119/hu20b.html",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:H0nRGT7Dr7IC",
+      "expected": {
+        "title": "BARTScore: Evaluating Generated Text as Text Generation",
+        "year": 2021,
+        "venue": "NeurIPS 2021",
+        "authors": "W Yuan, G Neubig, P Liu"
+      },
+      "corrected": {
+        "authors": "Weizhe Yuan, Graham Neubig, Pengfei Liu",
+        "venue": "Advances in Neural Information Processing Systems 34 (NeurIPS 2021)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://proceedings.neurips.cc/paper_files/paper/2021/hash/e4d2b6e6fdeca3e60e0f1a62fee3d9dd-Abstract.html",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:lBZ7XAAYe3oC",
+      "expected": {
+        "title": "TaBERT: Pretraining for Joint Understanding of Textual and Tabular Data",
+        "year": 2020,
+        "venue": "ACL 2020",
+        "authors": "P Yin, G Neubig, W Yih, S Riedel"
+      },
+      "corrected": {
+        "authors": "Pengcheng Yin, Graham Neubig, Wen-tau Yih, Sebastian Riedel",
+        "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/2020.acl-main.745/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:CLhUwle04lcC",
+      "expected": {
+        "title": "A Syntactic Neural Model for General-Purpose Code Generation",
+        "year": 2017,
+        "venue": "ACL 2017",
+        "authors": "P Yin, G Neubig"
+      },
+      "corrected": {
+        "authors": "Pengcheng Yin, Graham Neubig",
+        "venue": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/P17-1041/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:NObE97JSLecC",
+      "expected": {
+        "title": "Weight Poisoning Attacks on Pre-trained Models",
+        "year": 2020,
+        "venue": "ACL 2020",
+        "authors": "K Kurita, P Michel, G Neubig"
+      },
+      "corrected": {
+        "authors": "Keita Kurita, Paul Michel, Graham Neubig",
+        "title": "Weight Poisoning Attacks on Pretrained Models",
+        "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/2020.acl-main.249/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:5-bGDoUgDrYC",
+      "expected": {
+        "title": "How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering",
+        "year": 2021,
+        "venue": "Transactions of the Association for Computational Linguistics 9, 962-977",
+        "authors": "Z Jiang, J Araki, H Ding, G Neubig"
+      },
+      "corrected": {
+        "authors": "Zhengbao Jiang, Jun Araki, Haibo Ding, Graham Neubig"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/2021.tacl-1.57/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:0paDrhnEFY0C",
+      "expected": {
+        "title": "When and Why are Pre-trained Word Embeddings Useful for Neural Machine Translation?",
+        "year": 2018,
+        "venue": "NAACL 2018",
+        "authors": "Y Qi, DS Sachan, M Felix, SJ Padmanabhan, G Neubig"
+      },
+      "corrected": {
+        "authors": "Ye Qi, Devendra Sachan, Matthieu Felix, Sarguna Padmanabhan, Graham Neubig",
+        "title": "When and Why Are Pre-Trained Word Embeddings Useful for Neural Machine Translation?",
+        "venue": "Proceedings of NAACL-HLT 2018, Volume 2 (Short Papers)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/N18-2084/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:pwA0zy_liR0C",
+      "expected": {
+        "title": "Lagging Inference Networks and Posterior Collapse in Variational Autoencoders",
+        "year": 2019,
+        "venue": "ICLR 2019",
+        "authors": "J He, D Spokoyny, G Neubig, T Berg-Kirkpatrick"
+      },
+      "corrected": {
+        "authors": "Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick",
+        "venue": "ICLR 2019 Conference Paper"
+      },
+      "basis": "Saved owner-linked ICLR 2019 citation and author-submitted arXiv record with ICLR conference comment support byline and venue; arXiv preprint DOI is not a conference DOI; exact saved row identity/year guarded.",
+      "evidence_url": "https://arxiv.org/abs/1901.05534",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:YXeC4bxG7-IC",
+      "expected": {
+        "title": "BRIO: Bringing Order to Abstractive Summarization",
+        "year": 2022,
+        "venue": "NAACL 2022",
+        "authors": "Y Liu, P Liu, D Radev, G Neubig"
+      },
+      "corrected": {
+        "authors": "Yixin Liu, Pengfei Liu, Dragomir Radev, Graham Neubig",
+        "venue": "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL 2022)"
+      },
+      "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
+      "evidence_url": "https://aclanthology.org/2022.acl-long.207/",
+      "verified_at": "2026-11-02"
     }
   ]
 }
