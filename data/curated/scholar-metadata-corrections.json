@@ -2225,6 +2225,420 @@
       "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
       "evidence_url": "https://aclanthology.org/2022.findings-emnlp.192/",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:TQgYirikUcIC",
+      "expected": {
+        "title": "Minimum cost flows, MDPs, and ℓ1-regression in nearly linear time for dense instances",
+        "year": 2021,
+        "venue": "Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "J van den Brand, YT Lee, YP Liu, T Saranurak, A Sidford, Z Song, D Wang"
+      },
+      "corrected": {
+        "authors": "Jan van den Brand, Yin Tat Lee, Yang P. Liu, Thatchaphol Saranurak, Aaron Sidford, Zhao Song, Di Wang",
+        "venue": "Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3406325.3451108",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:mVmsd5A6BfQC",
+      "expected": {
+        "title": "Faster energy maximization for faster maximum flow",
+        "year": 2020,
+        "venue": "Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Yang P. Liu, Aaron Sidford",
+        "venue": "Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3357713.3384247",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:kNdYIx-mwKoC",
+      "expected": {
+        "title": "Discrepancy minimization via a self-balancing walk",
+        "year": 2021,
+        "venue": "Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "R Alweiss, YP Liu, M Sawhney"
+      },
+      "corrected": {
+        "authors": "Ryan Alweiss, Yang P. Liu, Mehtaab Sawhney",
+        "venue": "Proceedings of the 53rd Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3406325.3450994",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:dhFuZR0502QC",
+      "expected": {
+        "title": "Parallel reachability in almost linear work and square root depth",
+        "year": 2019,
+        "venue": "2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS …",
+        "authors": "A Jambulapati, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Arun Jambulapati, Yang P. Liu, Aaron Sidford",
+        "venue": "2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS)"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1109/focs.2019.00098",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:vV6vV6tmYwMC",
+      "expected": {
+        "title": "Almost-linear time algorithms for decremental graphs: Min-cost flow and more via duality",
+        "year": 2024,
+        "venue": "2024 IEEE 65th Annual Symposium on Foundations of Computer Science (FOCS …",
+        "authors": "J Van Den Brand, L Chen, R Kyng, YP Liu, S Meierhans, MP Gutenberg, ..."
+      },
+      "corrected": {
+        "authors": "Jan Van Den Brand, Li Chen, Rasmus Kyng, Yang P. Liu, Simon Meierhans, Maximilian Probst Gutenberg, Sushant Sachdeva",
+        "venue": "2024 IEEE 65th Annual Symposium on Foundations of Computer Science (FOCS)"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1109/focs61266.2024.00120",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:iH-uZ7U-co4C",
+      "expected": {
+        "title": "Chaining, group leverage score overestimates, and fast spectral hypergraph sparsification",
+        "year": 2023,
+        "venue": "Proceedings of the 55th Annual ACM Symposium on Theory of Computing, 196-206",
+        "authors": "A Jambulapati, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Arun Jambulapati, Yang P. Liu, Aaron Sidford"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3564246.3585136",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:W7OEmFMy1HYC",
+      "expected": {
+        "title": "Near-optimal approximate discrete and continuous submodular function minimization",
+        "year": 2020,
+        "venue": "Proceedings of the Fourteenth Annual ACM-SIAM Symposium on Discrete …",
+        "authors": "B Axelrod, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Brian Axelrod, Yang P. Liu, Aaron Sidford",
+        "venue": "Proceedings of the Fourteenth Annual ACM-SIAM Symposium on Discrete Algorithms"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1137/1.9781611975994.51",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:NMxIlDl6LWMC",
+      "expected": {
+        "title": "Sparsifying sums of norms",
+        "year": 2023,
+        "venue": "2023 IEEE 64th Annual Symposium on Foundations of Computer Science (FOCS …",
+        "authors": "A Jambulapati, JR Lee, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Arun Jambulapati, James R. Lee, Yang P. Liu, Aaron Sidford",
+        "venue": "2023 IEEE 64th Annual Symposium on Foundations of Computer Science (FOCS)"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1109/focs57990.2023.00119",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:j3f4tGmQtD8C",
+      "expected": {
+        "title": "Online edge coloring via tree recurrences and correlation decay",
+        "year": 2022,
+        "venue": "Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "J Kulkarni, YP Liu, A Sah, M Sawhney, J Tarnawski"
+      },
+      "corrected": {
+        "authors": "Janardhan Kulkarni, Yang P. Liu, Ashwin Sah, Mehtaab Sawhney, Jakub Tarnawski",
+        "venue": "Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3519935.3519986",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:_Qo2XoVZTnwC",
+      "expected": {
+        "title": "Improved iteration complexities for overconstrained p-norm regression",
+        "year": 2022,
+        "venue": "Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "A Jambulapati, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Arun Jambulapati, Yang P. Liu, Aaron Sidford",
+        "venue": "Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3519935.3519971",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:r0BpntZqJG4C",
+      "expected": {
+        "title": "Optimal sublinear sampling of spanning trees and determinantal point processes via average-case entropic independence",
+        "year": 2025,
+        "venue": "SIAM Journal on Computing 54 (5), FOCS22-93-FOCS22-119",
+        "authors": "N Anari, YP Liu, TD Vuong"
+      },
+      "corrected": {
+        "authors": "Nima Anari, Yang P. Liu, Thuy-Duong Vuong"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1137/22m1524321",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:d1gkVwhDpl0C",
+      "expected": {
+        "title": "Reproducibility and pseudo-determinism in log-space",
+        "year": 2019,
+        "venue": "Proceedings of the Thirtieth Annual ACM-SIAM Symposium on Discrete …",
+        "authors": "O Grossman, YP Liu"
+      },
+      "corrected": {
+        "authors": "Ofer Grossman, Yang P. Liu",
+        "venue": "Proceedings of the Thirtieth Annual ACM-SIAM Symposium on Discrete Algorithms"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1137/1.9781611975482.38",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:GnPB-g6toBAC",
+      "expected": {
+        "title": "Sparsifying generalized linear models",
+        "year": 2024,
+        "venue": "Proceedings of the 56th Annual ACM Symposium on Theory of Computing, 1665-1675",
+        "authors": "A Jambulapati, JR Lee, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Arun Jambulapati, James R. Lee, Yang P. Liu, Aaron Sidford"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3618260.3649684",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:hMod-77fHWUC",
+      "expected": {
+        "title": "Dynamic maxflow via dynamic interior point methods",
+        "year": 2023,
+        "venue": "Proceedings of the 55th Annual ACM Symposium on Theory of Computing, 1215-1228",
+        "authors": "J Van Den Brand, YP Liu, A Sidford"
+      },
+      "corrected": {
+        "authors": "Jan van den Brand, Yang P. Liu, Aaron Sidford"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3564246.3585135",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:5nxA0vEk-isC",
+      "expected": {
+        "title": "Constant girth approximation for directed graphs in subquadratic time",
+        "year": 2020,
+        "venue": "Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory of Computing …",
+        "authors": "S Chechik, YP Liu, O Rotem, A Sidford"
+      },
+      "corrected": {
+        "authors": "Shiri Chechik, Yang P. Liu, Omer Rotem, Aaron Sidford",
+        "venue": "Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory of Computing"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3357713.3384330",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:9yKSN-GCB0IC",
+      "expected": {
+        "title": "An exponential separation between MA and AM proofs of proximity",
+        "year": 2021,
+        "venue": "computational complexity 30 (2), 12",
+        "authors": "T Gur, YP Liu, RD Rothblum"
+      },
+      "corrected": {
+        "authors": "Tom Gur, Yang P. Liu, Ron D. Rothblum"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1007/s00037-021-00212-3",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:WF5omc3nYNoC",
+      "expected": {
+        "title": "On the upper tail problem for random hypergraphs",
+        "year": 2021,
+        "venue": "Random Structures & Algorithms 58 (2), 179-220",
+        "authors": "YP Liu, Y Zhao"
+      },
+      "corrected": {
+        "authors": "Yang P. Liu, Yufei Zhao"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1002/rsa.20975",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:2osOgNQ5qMEC",
+      "expected": {
+        "title": "Short cycles via low-diameter decompositions",
+        "year": 2019,
+        "venue": "Proceedings of the Thirtieth Annual ACM-SIAM Symposium on Discrete …",
+        "authors": "YP Liu, S Sachdeva, Z Yu"
+      },
+      "corrected": {
+        "authors": "Yang P. Liu, Sushant Sachdeva, Zejun Yu",
+        "venue": "Proceedings of the Thirtieth Annual ACM-SIAM Symposium on Discrete Algorithms"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1137/1.9781611975482.161",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:35N4QoGY0k4C",
+      "expected": {
+        "title": "Quasipolynomial bounds for the corners theorem",
+        "year": 2025,
+        "venue": "2025 IEEE 66th Annual Symposium on Foundations of Computer Science (FOCS …",
+        "authors": "M Jaber, YP Liu, S Lovett, A Ostuni, M Sawhney"
+      },
+      "corrected": {
+        "authors": "Michael Jaber, Yang P. Liu, Shachar Lovett, Anthony Ostuni, Mehtaab Sawhney",
+        "venue": "2025 IEEE 66th Annual Symposium on Foundations of Computer Science (FOCS)"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1109/focs63196.2025.00108",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:RGFaLdJalmkC",
+      "expected": {
+        "title": "On approximate fully-dynamic matching and online matrix-vector multiplication",
+        "year": 2024,
+        "venue": "2024 IEEE 65th Annual Symposium on Foundations of Computer Science (FOCS …",
+        "authors": "YP Liu"
+      },
+      "corrected": {
+        "authors": "Yang P. Liu",
+        "venue": "2024 IEEE 65th Annual Symposium on Foundations of Computer Science (FOCS)"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1109/focs61266.2024.00006",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:70eg2SAEIzsC",
+      "expected": {
+        "title": "Parallel Repetition for 3-Player 𝘟𝘖𝘙 Games",
+        "year": 2025,
+        "venue": "Proceedings of the 57th Annual ACM Symposium on Theory of Computing, 104-110",
+        "authors": "A Bhangale, M Braverman, S Khot, Y Liu, D Minzer"
+      },
+      "corrected": {
+        "authors": "Amey Bhangale, Mark Braverman, Subhash Khot, Yang Liu, Dor Minzer"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3717823.3718190",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:NaGl4SEjCO4C",
+      "expected": {
+        "title": "On further questions regarding unit fractions",
+        "year": 2026,
+        "venue": "International Mathematics Research Notices 2026 (2), rnaf382",
+        "authors": "YP Liu, M Sawhney"
+      },
+      "corrected": {
+        "authors": "Yang P Liu, Mehtaab Sawhney"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1093/imrn/rnaf382",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:u-x6o8ySG0sC",
+      "expected": {
+        "title": "Bounded gaps between products of distinct primes",
+        "year": 2017,
+        "venue": "Research in Number Theory 3 (1), 26",
+        "authors": "Y Liu, PS Park, ZQ Song"
+      },
+      "corrected": {
+        "authors": "Yang Liu, Peter S. Park, Zhuo Qun Song"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1007/s40993-017-0089-3",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:u5HHmVD_uO8C",
+      "expected": {
+        "title": "The “Riemann Hypothesis” is true for period polynomials of almost all newforms",
+        "year": 2016,
+        "venue": "Research in the Mathematical Sciences 3 (1), 31",
+        "authors": "Y Liu, PS Park, ZQ Song"
+      },
+      "corrected": {
+        "authors": "Yang Liu, Peter S. Park, Zhuo Qun Song"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1186/s40687-016-0081-x",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "LrHm5cgAAAAJ",
+      "author_pub_id": "LrHm5cgAAAAJ:2P1L_qKh6hAC",
+      "expected": {
+        "title": "Incremental shortest paths in almost linear time via a modified interior point method",
+        "year": 2026,
+        "venue": "Proceedings of the 58th Annual ACM Symposium on Theory of Computing, 118-127",
+        "authors": "YP Liu"
+      },
+      "corrected": {
+        "authors": "Yang P. Liu"
+      },
+      "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
+      "evidence_url": "https://doi.org/10.1145/3798129.3800733",
+      "verified_at": "2026-11-02"
     }
   ]
 }
