@@ -1795,6 +1795,26 @@
         "withheld_excluded_rows": 16,
         "withheld_ids_sha256": "c4fa11f8e887e9e668c79838f80f3c560b6fa6fb7b37ccceebe75f0f42ff7bd7"
       }
+    },
+    {
+      "person_id": "person-grahamneubig-767add33",
+      "scholar_id": "wlosgkoAAAAJ",
+      "state": "released",
+      "expected_source_rows": 11,
+      "cache_sha256": "3e2cc8f0f61a454ef14af6b9af11e6e5030ea91b68be03ca013c24decc124387",
+      "reason": "Private local stage: first 11 exact saved owner-linked and official-source verified works; 893 other saved rows deferred/held/excluded. All new placement pending; no upload approved.",
+      "reviewed_at": "2026-11-02",
+      "public_subset": {
+        "observed_visible_rows": 904,
+        "private_capture_sha256": "eb318cca62aea08ed50d6cd21bb0118ae7881c8ecd5a8a2553983d6b83a6570f",
+        "private_rendered_html_sha256": "db66ec3b949c692b7bb545030cf3c9ef378bfc75aebe5abc0fb317fcb507fbf6",
+        "private_review_sha256": "c283d4b94b81fba835bb10c9b5382a2b68a560adf0736e8668dcf41df4a2b826",
+        "selected_ids_sha256": "f5e3b8d57ac855e1f7c12b3f3fdd8cc24fd5394d927432cc2cd82bf63d59c318",
+        "withheld_rows": 893,
+        "withheld_hold_rows": 820,
+        "withheld_excluded_rows": 73,
+        "withheld_ids_sha256": "5e968e08aa00f0945fc5eff7231130a78358ad41525b2100c97f6fa1e29f3d90"
+      }
     }
   ]
 }
