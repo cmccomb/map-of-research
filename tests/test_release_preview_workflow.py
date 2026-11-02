@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -95,6 +96,109 @@ def _load_script():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _imported_package(root: Path) -> dict[str, ModuleType]:
+    package = ModuleType("map_of_research")
+    package.__file__ = str(root / "__init__.py")
+    package.__path__ = [str(root)]
+    publisher = ModuleType("map_of_research.publisher")
+    publisher.__file__ = str(root / "publisher.py")
+    return {"map_of_research": package, "map_of_research.publisher": publisher}
+
+
+def _pinned_test_producer(tmp_path: Path) -> tuple[Path, Path, str]:
+    producer = tmp_path / "producer"
+    package = producer / "map_of_research"
+    package.mkdir(parents=True)
+    (package / "__init__.py").write_text("", encoding="utf-8")
+    (package / "publisher.py").write_text("trusted = True\n", encoding="utf-8")
+    _git(producer, "init", "-q")
+    _git(producer, "config", "user.name", "Preview Test")
+    _git(producer, "config", "user.email", "preview@example.test")
+    _git(producer, "add", "map_of_research")
+    _git(producer, "commit", "-qm", "pinned package")
+    return producer, package, _git(producer, "rev-parse", "HEAD")
+
+
+def test_preview_accepts_imports_from_pinned_producer_checkout(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    assert preview._require_producer_imports(
+        producer, commit, _imported_package(package)
+    ) == {
+        "mode": "producer_checkout",
+        "loaded_modules_checked": 2,
+    }
+
+
+def test_preview_accepts_only_byte_identical_installed_package(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    installed = tmp_path / "venv/lib/python3.12/site-packages/map_of_research"
+    shutil.copytree(package, installed)
+    assert preview._require_producer_imports(
+        producer, commit, _imported_package(installed)
+    ) == {"mode": "byte_identical_installed_package", "loaded_modules_checked": 2}
+    (installed / "publisher.py").write_text("trusted = False\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="differs from pinned commit"):
+        preview._require_producer_imports(
+            producer, commit, _imported_package(installed)
+        )
+
+
+def test_preview_rejects_other_editable_checkout_even_with_identical_bytes(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    other = tmp_path / "other/map_of_research"
+    shutil.copytree(package, other)
+    with pytest.raises(ValueError, match="another editable checkout"):
+        preview._require_producer_imports(producer, commit, _imported_package(other))
+
+
+def test_preview_rejects_untracked_or_changed_package_python(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    modules = _imported_package(package)
+    extra = package / "untracked.py"
+    extra.write_text("surprise = True\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="differs from its pinned Git commit"):
+        preview._require_producer_imports(producer, commit, modules)
+    extra.unlink()
+    (package / "publisher.py").write_text("trusted = False\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="differs from its pinned Git commit"):
+        preview._require_producer_imports(producer, commit, modules)
+
+
+def test_preview_rejects_wheel_matching_dirty_checkout_instead_of_commit(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    (package / "publisher.py").write_text("trusted = False\n", encoding="utf-8")
+    installed = tmp_path / "venv/lib/python3.12/site-packages/map_of_research"
+    shutil.copytree(package, installed)
+    with pytest.raises(ValueError, match="differs from its pinned Git commit"):
+        preview._require_producer_imports(
+            producer, commit, _imported_package(installed)
+        )
+
+
+def test_preview_rejects_missing_or_mixed_import_origins(tmp_path):
+    preview = _load_script()
+    producer, package, commit = _pinned_test_producer(tmp_path)
+    with pytest.raises(ValueError, match="Cannot verify the imported producer"):
+        preview._require_producer_imports(producer, commit, {})
+    modules = _imported_package(package)
+    modules["map_of_research"].__path__ = [str(tmp_path / "other")]
+    with pytest.raises(ValueError, match="unexpected search path"):
+        preview._require_producer_imports(producer, commit, modules)
+    modules = _imported_package(package)
+    del modules["map_of_research.publisher"].__file__
+    with pytest.raises(ValueError, match="Cannot verify imported producer module"):
+        preview._require_producer_imports(producer, commit, modules)
+    modules = _imported_package(package)
+    modules["map_of_research.publisher"].__file__ = str(tmp_path / "other.py")
+    with pytest.raises(ValueError, match="module comes from another checkout"):
+        preview._require_producer_imports(producer, commit, modules)
 
 
 def _git(checkout: Path, *args: str) -> str:
@@ -237,6 +341,7 @@ def _run_preview(
     additive_placement_review: Path | None = None,
     prior_person_continuity_review: Path | None = None,
     presentation_gate_failure: bool = False,
+    import_origin_mismatch: bool = False,
 ):
     preview = _load_script()
     producer = tmp_path / "producer"
@@ -292,6 +397,18 @@ def _run_preview(
         ),
     )
     monkeypatch.setattr(preview, "_require_clean_tracked_files", lambda path: None)
+    if import_origin_mismatch:
+
+        def reject_imports(_producer, _commit):
+            raise ValueError(
+                "Imported producer package comes from another editable checkout"
+            )
+
+        monkeypatch.setattr(preview, "_require_producer_imports", reject_imports)
+    else:
+        monkeypatch.setattr(
+            preview, "_require_producer_imports", lambda _producer, _commit: {}
+        )
     monkeypatch.setattr(
         preview, "_require_receipt_lineage", lambda *args, **kwargs: success_bytes
     )
@@ -423,6 +540,17 @@ def test_no_write_preview_passes_only_at_pinned_seven_file_boundary(
     assert set(receipt["stage_files"]) == RELEASE_PATHS
     assert receipt["status_commit"] == STATUS
     assert receipt["local_atomic_intent"]["prewrite_gate"]["status"] == "pass"
+
+
+def test_preview_rejects_wrong_import_before_any_hub_access(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch, tmp_path, fail_before_write=False, import_origin_mismatch=True
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert "another editable checkout" in receipt["error"]
+    assert "hub_head_before" not in receipt
+    assert receipt["blocked_hub_write_calls"] == receipt["hub_writes_completed"] == 0
 
 
 def test_no_write_preview_forwards_additive_placement_review(monkeypatch, tmp_path):

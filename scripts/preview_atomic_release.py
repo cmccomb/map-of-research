@@ -14,6 +14,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import traceback
 from pathlib import Path
 from typing import Any
@@ -42,6 +43,93 @@ def _git_head(path: Path) -> str:
 
 def _require_clean_tracked_files(path: Path) -> None:
     subprocess.run(["git", "-C", str(path), "diff", "--quiet", "HEAD"], check=True)
+
+
+def _require_producer_imports(
+    producer: Path, commit: str, modules: dict[str, Any] | None = None
+) -> dict[str, Any]:
+    """Reject an unrelated editable install before reading Hub state or publishing.
+
+    Actions installs a wheel into site-packages, while local previews often use
+    an editable checkout. A wheel is accepted only when its entire Python package
+    matches the pinned producer checkout byte for byte.
+    """
+
+    expected_root = (producer / "map_of_research").resolve()
+    listed = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(producer),
+            "ls-tree",
+            "-r",
+            "-z",
+            "--name-only",
+            commit,
+            "--",
+            "map_of_research",
+        ],
+        capture_output=True,
+        check=True,
+    ).stdout
+    committed_sources = {
+        Path(name.decode("utf-8")): _committed_file_bytes(
+            producer, commit, name.decode("utf-8")
+        )
+        for name in listed.split(b"\0")
+        if name and name.endswith(b".py")
+    }
+    checkout_sources = {
+        path.relative_to(producer): path.read_bytes()
+        for path in expected_root.rglob("*.py")
+    }
+    if (
+        Path("map_of_research/__init__.py") not in committed_sources
+        or checkout_sources != committed_sources
+    ):
+        raise ValueError("Producer package differs from its pinned Git commit")
+    loaded_modules = sys.modules if modules is None else modules
+    package = loaded_modules.get("map_of_research")
+    package_file = getattr(package, "__file__", None)
+    if not package_file or not expected_root.is_dir():
+        raise ValueError("Cannot verify the imported producer package")
+    actual_root = Path(package_file).resolve().parent
+    if actual_root == expected_root:
+        mode = "producer_checkout"
+    elif "site-packages" in actual_root.parts:
+        actual_sources = {
+            Path("map_of_research") / path.relative_to(actual_root): path.read_bytes()
+            for path in actual_root.rglob("*.py")
+        }
+        if actual_sources != committed_sources:
+            raise ValueError("Installed producer package differs from pinned commit")
+        mode = "byte_identical_installed_package"
+    else:
+        raise ValueError(
+            "Imported producer package comes from another editable checkout"
+        )
+
+    package_paths = [Path(path).resolve() for path in getattr(package, "__path__", ())]
+    if package_paths != [actual_root]:
+        raise ValueError("Imported producer package has an unexpected search path")
+    loaded = 0
+    for name, module in tuple(loaded_modules.items()):
+        if name != "map_of_research" and not name.startswith("map_of_research."):
+            continue
+        module_file = getattr(module, "__file__", None)
+        if not module_file:
+            raise ValueError(f"Cannot verify imported producer module {name}")
+        relative = (
+            Path("__init__.py")
+            if name == "map_of_research"
+            else Path(*name.split(".")[1:]).with_suffix(".py")
+        )
+        if Path(module_file).resolve() != (actual_root / relative).resolve():
+            raise ValueError(
+                f"Imported producer module comes from another checkout: {name}"
+            )
+        loaded += 1
+    return {"mode": mode, "loaded_modules_checked": loaded}
 
 
 def _committed_file_bytes(checkout: Path, commit: str, relative_path: str) -> bytes:
@@ -231,6 +319,9 @@ def main() -> int:
         _require_clean_tracked_files(producer)
         _require_clean_tracked_files(snapshot)
         _require_clean_tracked_files(receipt_checkout)
+        receipt["producer_import_provenance"] = _require_producer_imports(
+            producer, args.producer_commit
+        )
         baseline_bytes = _require_receipt_lineage(
             snapshot,
             receipt_checkout,
