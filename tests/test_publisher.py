@@ -1256,18 +1256,15 @@ def test_additive_map_rebuild_preserves_parent_and_has_coherent_catalog(
         )
     blank_source_list = current.copy(deep=True)
     blank_source_list.at[0, "source_urls"] = []
-    blank_frozen, _ = preserve_reviewed_additive_presentation(
-        blank_source_list,
-        old.to_dict("records"),
-        blank_parent_url,
-        candidate,
-        review_path=review_path,
-        **kwargs,
-    )
-    assert (
-        blank_frozen.loc[blank_frozen.work_id.eq("work-one"), "source_urls"].iloc[0]
-        == []
-    )
+    with pytest.raises(ValueError, match="blank map source URL needs review"):
+        preserve_reviewed_additive_presentation(
+            blank_source_list,
+            old.to_dict("records"),
+            blank_parent_url,
+            candidate,
+            review_path=review_path,
+            **kwargs,
+        )
     frozen, receipt = preserve_reviewed_additive_presentation(
         current,
         old.to_dict("records"),
