@@ -1882,6 +1882,349 @@
       "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
       "evidence_url": "https://aclanthology.org/D18-1111/",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:HkunuPqSaCsC",
+      "expected": {
+        "title": "Efficient Nearest Neighbor Language Models",
+        "year": 2021,
+        "venue": "EMNLP 2021",
+        "authors": "J He, G Neubig, T Berg-Kirkpatrick"
+      },
+      "corrected": {
+        "authors": "Junxian He, Graham Neubig, Taylor Berg-Kirkpatrick",
+        "venue": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2021.emnlp-main.461/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:pZ2CosqRuhkC",
+      "expected": {
+        "title": "Bilingual Lexicon Induction with Semi-supervision in Non-Isometric Embedding Spaces",
+        "year": 2019,
+        "venue": "ACL 2019, 184-193",
+        "authors": "B Patra, JRA Moniz, S Garg, MR Gormley, G Neubig"
+      },
+      "corrected": {
+        "authors": "Barun Patra, Joel Ruben Antony Moniz, Sarthak Garg, Matthew R. Gormley, Graham Neubig",
+        "venue": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/P19-1018/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:ewB7xoWXMOgC",
+      "expected": {
+        "title": "Mammoth-vl: Eliciting multimodal reasoning with instruction tuning at scale",
+        "year": 2025,
+        "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational …",
+        "authors": "J Guo, T Zheng, Y Li, Y Bai, B Li, Y Wang, K Zhu, G Neubig, W Chen, ..."
+      },
+      "corrected": {
+        "authors": "Jiawei Guo, Tianyu Zheng, Yizhi Li, Yuelin Bai, Bo Li, Yubo Wang, King Zhu, Graham Neubig, Wenhu Chen, Xiang Yue",
+        "title": "MAmmoTH-VL: Eliciting Multimodal Reasoning with Instruction Tuning at Scale",
+        "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2025.acl-long.680/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:GDem9OnCwu8C",
+      "expected": {
+        "title": "Balancing Training for Multilingual Neural Machine Translation",
+        "year": 2020,
+        "venue": "ACL 2020",
+        "authors": "X Wang, Y Tsvetkov, G Neubig"
+      },
+      "corrected": {
+        "authors": "Xinyi Wang, Yulia Tsvetkov, Graham Neubig",
+        "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.acl-main.754/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:q7LczdTNAjsC",
+      "expected": {
+        "title": "compare-mt: A Tool for Holistic Comparison of Language Generation Systems",
+        "year": 2019,
+        "venue": "NAACL 2019 Demo",
+        "authors": "G Neubig, ZY Dou, J Hu, P Michel, D Pruthi, X Wang"
+      },
+      "corrected": {
+        "authors": "Graham Neubig, Zi-Yi Dou, Junjie Hu, Paul Michel, Danish Pruthi, Xinyi Wang",
+        "venue": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics (Demonstrations)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/N19-4007/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:WgvcDLhf7hwC",
+      "expected": {
+        "title": "Stronger Baselines for Trustable Results in Neural Machine Translation",
+        "year": 2017,
+        "venue": "WNMT 2017",
+        "authors": "M Denkowski, G Neubig"
+      },
+      "corrected": {
+        "authors": "Michael Denkowski, Graham Neubig",
+        "venue": "Proceedings of the First Workshop on Neural Machine Translation"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/W17-3203/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:LiF7i2gyBHwC",
+      "expected": {
+        "title": "Testing the Ability of Language Models to Interpret Figurative Language",
+        "year": 2022,
+        "venue": "NAACL 2022",
+        "authors": "E Liu, C Cui, K Zheng, G Neubig"
+      },
+      "corrected": {
+        "authors": "Emmy Liu, Chenxuan Cui, Kenneth Zheng, Graham Neubig",
+        "venue": "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.naacl-main.330/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:wUCFpcnEedwC",
+      "expected": {
+        "title": "TICO-19: the Translation Initiative for COvid-19",
+        "year": 2020,
+        "venue": "NLP COVID-19 Workshop 2020",
+        "authors": "A Anastasopoulos, A Cattelan, ZY Dou, M Federico, C Federman, ..."
+      },
+      "corrected": {
+        "authors": "Antonios Anastasopoulos, Alessandro Cattelan, Zi-Yi Dou, Marcello Federico, Christian Federmann, Dmitriy Genzel, Francisco Guzmán, Junjie Hu, Macduff Hughes, Philipp Koehn, Rosie Lazar, Will Lewis, Graham Neubig, Mengmeng Niu, Alp Öktem, Eric Paquin, Grace Tang, Sylwia Tur",
+        "venue": "Proceedings of the 1st Workshop on NLP for COVID-19 (Part 2) at EMNLP 2020"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.nlpcovid19-2.5/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:ns9cj8rnVeAC",
+      "expected": {
+        "title": "Adaptation data selection using neural language models: Experiments in machine translation",
+        "year": 2013,
+        "venue": "ACL 2013 2, 678-683",
+        "authors": "K Duh, G Neubig, K Sudoh, H Tsukada"
+      },
+      "corrected": {
+        "authors": "Kevin Duh, Graham Neubig, Katsuhito Sudoh, Hajime Tsukada",
+        "title": "Adaptation Data Selection using Neural Language Models: Experiments in Machine Translation",
+        "venue": "Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; DOI blank in reviewed official ACL BibTeX.",
+      "evidence_url": "https://aclanthology.org/P13-2119/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:vkDViGfkvYEC",
+      "expected": {
+        "title": "OmniTab: Pretraining with Natural and Synthetic Data for Few-shot Table-based Question Answering",
+        "year": 2022,
+        "venue": "NAACL 2022",
+        "authors": "Z Jiang, Y Mao, P He, G Neubig, W Chen"
+      },
+      "corrected": {
+        "authors": "Zhengbao Jiang, Yi Mao, Pengcheng He, Graham Neubig, Weizhu Chen",
+        "venue": "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.naacl-main.68/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:vkz5F8TaVKkC",
+      "expected": {
+        "title": "Extreme Adaptation for Personalized Neural Machine Translation",
+        "year": 2018,
+        "venue": "ACL 2018",
+        "authors": "P Michel, G Neubig"
+      },
+      "corrected": {
+        "authors": "Paul Michel, Graham Neubig",
+        "venue": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/P18-2050/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:-qpA3cGbmHsC",
+      "expected": {
+        "title": "Learning Language Representations for Typology Prediction",
+        "year": 2017,
+        "venue": "EMNLP 2017",
+        "authors": "C Malaviya, G Neubig, P Littell"
+      },
+      "corrected": {
+        "authors": "Chaitanya Malaviya, Graham Neubig, Patrick Littell",
+        "venue": "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/D17-1268/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:QC-2xSqExF4C",
+      "expected": {
+        "title": "MasakhaNER 2.0: Africa-centric Transfer Learning for Named Entity Recognition",
+        "year": 2022,
+        "venue": "EMNLP 2022, arXiv: 2210.12391",
+        "authors": "D Ifeoluwa Adelani, G Neubig, S Ruder, S Rijhwani, M Beukman, ..."
+      },
+      "corrected": {
+        "authors": "David Ifeoluwa Adelani, Graham Neubig, Sebastian Ruder, Shruti Rijhwani, Michael Beukman, Chester Palen-Michel, Constantine Lignos, Jesujoba O. Alabi, Shamsuddeen H. Muhammad, Peter Nabende, Cheikh M. Bamba Dione, Andiswa Bukula, Rooweither Mabuya, Bonaventure F. P. Dossou, Blessing Sibanda, Happy Buzaaba, Jonathan Mukiibi, Godson Kalipe, Derguene Mbaye, Amelia Taylor, Fatoumata Kabore, Chris Chinenye Emezue, Anuoluwapo Aremu, Perez Ogayo, Catherine Gitau, Edwin Munkoh-Buabeng, Victoire Memdjokam Koagne, Allahsera Auguste Tapo, Tebogo Macucwa, Vukosi Marivate, Elvis Mboning, Tajuddeen Gwadabe, Tosin Adewumi, Orevaoghene Ahia, Joyce Nakatumba-Nabende, Neo L. Mokono, Ignatius Ezeani, Chiamaka Chukwuneke, Mofetoluwa Adeyemi, Gilles Q. Hacheme, Idris Abdulmumin, Odunayo Ogundepo, Oreen Yousuf, Tatiana Moteu Ngoli, Dietrich Klakow",
+        "venue": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.emnlp-main.298/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:QndmRo8phpgC",
+      "expected": {
+        "title": "Findings of the AmericasNLP 2021 Shared Task on Open Machine Translation for Indigenous Languages of the Americas",
+        "year": 2021,
+        "venue": "AmericasNLP 2021, 202-217",
+        "authors": "M Mager, A Oncevay, A Ebrahimi, J Ortega, AR Gonzales, A Fan, ..."
+      },
+      "corrected": {
+        "authors": "Manuel Mager, Arturo Oncevay, Abteen Ebrahimi, John Ortega, Annette Rios, Angela Fan, Ximena Gutierrez-Vasques, Luis Chiruzzo, Gustavo Giménez-Lugo, Ricardo Ramos, Ivan Vladimir Meza Ruiz, Rolando Coto-Solano, Alexis Palmer, Elisabeth Mager-Hois, Vishrav Chaudhary, Graham Neubig, Ngoc Thang Vu, Katharina Kann",
+        "venue": "Proceedings of the First Workshop on Natural Language Processing for Indigenous Languages of the Americas"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2021.americasnlp-1.23/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:-XtG2q47PdUC",
+      "expected": {
+        "title": "Quality-Aware Decoding for Neural Machine Translation",
+        "year": 2022,
+        "venue": "NAACL 2022",
+        "authors": "P Fernandes, A Farinhas, R Rei, JGC de Souza, P Ogayo, G Neubig, ..."
+      },
+      "corrected": {
+        "authors": "Patrick Fernandes, António Farinhas, Ricardo Rei, José G. C. de Souza, Perez Ogayo, Graham Neubig, Andre Martins",
+        "venue": "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.naacl-main.100/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:ZpgFv6i7Z4gC",
+      "expected": {
+        "title": "StructVAE: Tree-structured Latent Variable Models for Semi-supervised Semantic Parsing",
+        "year": 2018,
+        "venue": "ACL 2018",
+        "authors": "P Yin, C Zhou, J He, G Neubig"
+      },
+      "corrected": {
+        "authors": "Pengcheng Yin, Chunting Zhou, Junxian He, Graham Neubig",
+        "venue": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/P18-1070/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:K-tzbvM8PMoC",
+      "expected": {
+        "title": "Parameter Sharing Methods for Multilingual Self-Attentional Translation Models",
+        "year": 2018,
+        "venue": "WMT 2018",
+        "authors": "DS Sachan, G Neubig"
+      },
+      "corrected": {
+        "authors": "Devendra Sachan, Graham Neubig",
+        "venue": "Proceedings of the Third Conference on Machine Translation: Research Papers"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/W18-6327/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:43LB_KcVqeAC",
+      "expected": {
+        "title": "Improving Robustness of Machine Translation with Synthetic Noise",
+        "year": 2019,
+        "venue": "NAACL 2019",
+        "authors": "S Singh, C Stewart, G Neubig"
+      },
+      "corrected": {
+        "authors": "Vaibhav, Sumeet Singh, Craig Stewart, Graham Neubig",
+        "venue": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/N19-1190/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:SoGhKUJvMTQC",
+      "expected": {
+        "title": "Findings of the WMT 2020 Shared Task on Machine Translation Robustness",
+        "year": 2020,
+        "venue": "WMT 2020, 76-91",
+        "authors": "L Specia, Z Li, J Pino, V Chaudhary, F Guzmán, G Neubig, N Durrani, ..."
+      },
+      "corrected": {
+        "authors": "Lucia Specia, Zhenhao Li, Juan Pino, Vishrav Chaudhary, Francisco Guzmán, Graham Neubig, Nadir Durrani, Yonatan Belinkov, Philipp Koehn, Hassan Sajjad, Paul Michel, Xian Li",
+        "venue": "Proceedings of the Fifth Conference on Machine Translation"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.wmt-1.4/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:YIdQ7BAI8VoC",
+      "expected": {
+        "title": "Prompt consistency for zero-shot task generalization",
+        "year": 2022,
+        "venue": "Findings of the association for computational linguistics: EMNLP 2022, 2613-2626",
+        "authors": "C Zhou, J He, X Ma, T Berg-Kirkpatrick, G Neubig"
+      },
+      "corrected": {
+        "authors": "Chunting Zhou, Junxian He, Xuezhe Ma, Taylor Berg-Kirkpatrick, Graham Neubig",
+        "title": "Prompt Consistency for Zero-Shot Task Generalization",
+        "venue": "Findings of the Association for Computational Linguistics: EMNLP 2022"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.findings-emnlp.192/",
+      "verified_at": "2026-11-02"
     }
   ]
 }
