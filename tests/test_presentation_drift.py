@@ -908,6 +908,95 @@ def test_additive_blank_parent_map_link_keeps_exact_new_citation_provenance(
         preserve_reviewed_blank_map_source_urls(candidate, parent, ["work-0000"] * 2)
 
 
+def test_additive_blank_parent_map_link_keeps_unchanged_parent_provenance(
+    tmp_path: Path,
+) -> None:
+    parent, candidate, works = additive_case()
+    url = "https://scholar.google.com/citations?citation_for_view=existing"
+    other_url = "https://scholar.google.com/citations?citation_for_view=other"
+    candidate["points"][0]["source_url"] = url
+    candidate["points"][1]["source_url"] = other_url
+    works.at[0, "source_urls"] = [url]
+    works.at[1, "source_urls"] = [other_url]
+    works.at[1, "author_pub_ids"] = ["second-author-pub"]
+    works.at[1, "observation_ids"] = ["second-observation"]
+    prior = parent_work_rows(parent)
+    prior[0]["source_urls"] = [url]
+    prior[1]["source_urls"] = [other_url]
+    prior[1]["author_pub_ids"] = ["second-author-pub"]
+    prior[1]["observation_ids"] = ["second-observation"]
+    profiles = pandas.DataFrame(
+        [
+            {
+                "work_id": "work-0000",
+                "author_pub_id": "first-author-pub",
+                "source_url": url,
+            },
+            {
+                "work_id": "work-0001",
+                "author_pub_id": "second-author-pub",
+                "source_url": other_url,
+            },
+        ]
+    )
+    kwargs = {
+        "prior_revision": "a" * 40,
+        "source_snapshot_sha256": "s" * 64,
+        "selected_ids_sha256": "i" * 64,
+        "parent_map_sha256": "p" * 64,
+        "reported_coauthor_source_sha256": "a" * 64,
+        "public_profiles": profiles,
+    }
+    with pytest.raises(PresentationDriftError) as error:
+        preserve_reviewed_additive_presentation(
+            works, prior, parent, candidate, review_path=None, **kwargs
+        )
+    path = tmp_path / "placement-review.json"
+    additive_review(path, error.value.receipt)
+    frozen, receipt = preserve_reviewed_additive_presentation(
+        works, prior, parent, candidate, review_path=path, **kwargs
+    )
+    assert frozen.at[0, "source_urls"] == [url]
+    assert frozen.at[1, "source_urls"] == [other_url]
+    assert receipt["retained_blank_source_url_work_ids"] == ["work-0000", "work-0001"]
+    displayed = preserve_reviewed_blank_map_source_urls(
+        candidate, parent, receipt["retained_blank_source_url_work_ids"]
+    )
+    assert displayed["points"][0]["source_url"] == ""
+    assert displayed["points"][1]["source_url"] == ""
+    assert displayed["points"][2:] == candidate["points"][2:]
+
+    changed_cases = []
+    cleared_url = works.copy(deep=True)
+    cleared_url.at[0, "source_urls"] = []
+    changed_cases.append((cleared_url, prior, candidate, profiles))
+    added_url = works.copy(deep=True)
+    added_url.at[0, "source_urls"] = [url, "https://example.test/new-provenance"]
+    changed_cases.append((added_url, prior, candidate, profiles))
+    changed_pub = works.copy(deep=True)
+    changed_pub.at[0, "author_pub_ids"] = ["first-author-pub", "new-author-pub"]
+    changed_cases.append((changed_pub, prior, candidate, profiles))
+    changed_observation = works.copy(deep=True)
+    changed_observation.at[0, "observation_ids"] = ["new-observation"]
+    changed_cases.append((changed_observation, prior, candidate, profiles))
+    changed_candidate = deepcopy(candidate)
+    changed_candidate["points"][0]["source_url"] = "https://example.test/new-display"
+    changed_cases.append((works, prior, changed_candidate, profiles))
+    changed_profiles = profiles.assign(source_url="https://example.test/new-provenance")
+    changed_cases.append((works, prior, candidate, changed_profiles))
+    changed_cases.append((works, prior, candidate, None))
+    for changed_works, changed_prior, changed_map, changed_profile in changed_cases:
+        with pytest.raises(ValueError, match="blank map source URL needs review"):
+            preserve_reviewed_additive_presentation(
+                changed_works,
+                changed_prior,
+                parent,
+                changed_map,
+                review_path=path,
+                **{**kwargs, "public_profiles": changed_profile},
+            )
+
+
 def test_additive_keeps_existing_spatial_work_type_when_new_source_is_typed(
     tmp_path: Path,
 ) -> None:

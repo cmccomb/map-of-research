@@ -856,12 +856,14 @@ def preserve_reviewed_additive_presentation(
                 raise ValueError(
                     f"Additive retained map source URL lacks provenance: {work_id}"
                 )
-            if not parent_url and source_urls:
-                # An exact new observation may add source provenance to a work
-                # whose published map link was blank. Keep the work provenance,
-                # but bind the new URLs to the selected observations before
-                # preserving the blank map display link below.
-                if prior.get("source_urls") != [] or not {
+            if not parent_url and (source_urls or prior.get("source_urls")):
+                # A published point may already have a blank display link
+                # while its parent work has source provenance. Keep that
+                # exact inherited state when neither its URLs nor its
+                # observation bindings changed. New provenance still needs
+                # the selected-citation binding review below.
+                prior_urls = prior.get("source_urls")
+                if not {
                     "author_pub_ids",
                     "observation_ids",
                     "observation_count",
@@ -874,6 +876,53 @@ def preserve_reviewed_additive_presentation(
                 current_pub_ids = output.at[index, "author_pub_ids"]
                 prior_observation_ids = prior.get("observation_ids")
                 current_observation_ids = output.at[index, "observation_ids"]
+                if prior_urls != []:
+                    if (
+                        not isinstance(prior_urls, list)
+                        or not prior_urls
+                        or any(
+                            not isinstance(url, str) or not url for url in prior_urls
+                        )
+                        or len(prior_urls) != len(set(prior_urls))
+                        or raw_urls != prior_urls
+                        or not isinstance(prior_pub_ids, list)
+                        or not prior_pub_ids
+                        or len(prior_pub_ids) != len(set(prior_pub_ids))
+                        or current_pub_ids != prior_pub_ids
+                        or not isinstance(prior_observation_ids, list)
+                        or len(prior_observation_ids) != len(set(prior_observation_ids))
+                        or current_observation_ids != prior_observation_ids
+                        or output.at[index, "observation_count"]
+                        != prior["observation_count"]
+                        or prior["observation_count"] != len(prior_pub_ids)
+                        or str(candidate_points[work_id].get("source_url") or "")
+                        != prior_urls[0]
+                        or public_profiles is None
+                        or not {"work_id", "author_pub_id", "source_url"}
+                        <= set(public_profiles.columns)
+                    ):
+                        raise ValueError(
+                            "Additive retained blank map source URL needs review: "
+                            f"{work_id}"
+                        )
+                    bound = public_profiles.loc[
+                        public_profiles["work_id"].astype(str).eq(work_id)
+                    ]
+                    if (
+                        len(bound) != prior["observation_count"]
+                        or set(bound["author_pub_id"].astype(str)) != set(prior_pub_ids)
+                        or {str(url) for url in bound["source_url"] if str(url)}
+                        != set(prior_urls)
+                    ):
+                        raise ValueError(
+                            "Additive retained blank map source URL needs review: "
+                            f"{work_id}"
+                        )
+                    retained_blank_source_url_work_ids.append(work_id)
+                    continue
+                # An exact new observation may add source provenance to a work
+                # whose published map link was blank. Bind the new URLs to
+                # selected observations before preserving the blank display.
                 if (
                     not isinstance(prior_pub_ids, list)
                     or not isinstance(current_pub_ids, list)
