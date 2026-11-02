@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "742accd43190fe679a69df8961b71f1cebca2cfc",
-  "registry_producer_commit": "dd289e1b806e62f1bf34e1fab6364ae30bb7fe75",
+  "base_source_status_commit": "04c1da764ceac1562c68508e7a46ec05d161d03c",
+  "registry_producer_commit": "55c724255288b99d2520f58f0accc02538ace392",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -2871,10 +2871,11 @@
       "slug": "graham-neubig",
       "person_id": "person-grahamneubig-767add33",
       "scholar_id": "wlosgkoAAAAJ",
-      "expected_source_rows": 40,
+      "expected_source_rows": 48,
       "selected_author_pub_ids": [
         "wlosgkoAAAAJ:-fu4zM_6qcIC",
         "wlosgkoAAAAJ:09LM3QYkMKUC",
+        "wlosgkoAAAAJ:0BSZZHtHo6cC",
         "wlosgkoAAAAJ:0klj8wIChNAC",
         "wlosgkoAAAAJ:0paDrhnEFY0C",
         "wlosgkoAAAAJ:0qX8s2k1IRwC",
@@ -2884,6 +2885,8 @@
         "wlosgkoAAAAJ:9o6PfxSMcEIC",
         "wlosgkoAAAAJ:BxcezVm2apwC",
         "wlosgkoAAAAJ:CLhUwle04lcC",
+        "wlosgkoAAAAJ:DwWRdx-KAo4C",
+        "wlosgkoAAAAJ:EVUe1p4rgj0C",
         "wlosgkoAAAAJ:G887dSk7Sz8C",
         "wlosgkoAAAAJ:GO5CT2y9xrEC",
         "wlosgkoAAAAJ:H0nRGT7Dr7IC",
@@ -2892,12 +2895,14 @@
         "wlosgkoAAAAJ:JaLtl8ASYokC",
         "wlosgkoAAAAJ:KPAPMsW7zc0C",
         "wlosgkoAAAAJ:KYgttONoxcsC",
+        "wlosgkoAAAAJ:MSzX15-gZgkC",
         "wlosgkoAAAAJ:NObE97JSLecC",
         "wlosgkoAAAAJ:OkrdTXRNpVkC",
         "wlosgkoAAAAJ:OlbiQ0ttILcC",
         "wlosgkoAAAAJ:PpfTWA6RG0gC",
         "wlosgkoAAAAJ:Qovp55VTycgC",
         "wlosgkoAAAAJ:RF4BjkDOTHkC",
+        "wlosgkoAAAAJ:Wqn_fehR_TUC",
         "wlosgkoAAAAJ:X1y8G5kAG8gC",
         "wlosgkoAAAAJ:Xxrp-jDxsD4C",
         "wlosgkoAAAAJ:YXeC4bxG7-IC",
@@ -2907,9 +2912,12 @@
         "wlosgkoAAAAJ:kGbpvR7Ecy8C",
         "wlosgkoAAAAJ:lBZ7XAAYe3oC",
         "wlosgkoAAAAJ:lOG7zRu2uA8C",
+        "wlosgkoAAAAJ:o0eFlWRwRSUC",
         "wlosgkoAAAAJ:polMJLZb0X8C",
         "wlosgkoAAAAJ:pwA0zy_liR0C",
         "wlosgkoAAAAJ:tFyepMjQr3wC",
+        "wlosgkoAAAAJ:v6PuF9mNY3oC",
+        "wlosgkoAAAAJ:w9ZB08sdvuUC",
         "wlosgkoAAAAJ:wE8AsS3ykUMC",
         "wlosgkoAAAAJ:xMZGxf1v-3YC",
         "wlosgkoAAAAJ:yaBp1wUtcLsC"
@@ -2918,24 +2926,24 @@
         "observed_visible_rows": 904,
         "private_capture_sha256": "eb318cca62aea08ed50d6cd21bb0118ae7881c8ecd5a8a2553983d6b83a6570f",
         "private_rendered_html_sha256": "db66ec3b949c692b7bb545030cf3c9ef378bfc75aebe5abc0fb317fcb507fbf6",
-        "private_review_sha256": "43ed9c6711dd644694fe3f9f39e511fa1b3a02765487745c8b849af71e63d003",
-        "selected_ids_sha256": "6c22068fa6ba830b5a7a93c8875fce09d7e69e12e338b8135453c80433dff072",
-        "withheld_rows": 864,
-        "withheld_hold_rows": 791,
+        "private_review_sha256": "5b9204576bda7f630e11cc10fb9e92f4d9024f3af6f81a7ae72758da65140113",
+        "selected_ids_sha256": "4d433d993e3e259ffeca39f0df43e67c63c9045883fec747f14e990fbbf66d20",
+        "withheld_rows": 856,
+        "withheld_hold_rows": 783,
         "withheld_excluded_rows": 73,
-        "withheld_ids_sha256": "a81b205aa80437b80d98f2fea048d214ca237ac1bf9afc51732b060f85d2ba33"
+        "withheld_ids_sha256": "932f06d3c44a7ebfd28d51b5659cea22353df74287ad30162e7c0979616ab77b"
       },
-      "cache_sha256": "16eeb5d66f21d6cfa2b68c6becdcbb10cb9d92e5ea89ca0618fdf2ad74e1939c"
+      "cache_sha256": "4ecb9ddda518b3338d12dfcaddd2f8f834a2886b7e2a4cbc1e5f2df7c14465e3"
     }
   ],
   "totals": {
     "observed_visible_rows": 7747,
-    "selected_rows": 2083,
-    "withheld_rows": 5664,
-    "withheld_hold_rows": 5323,
+    "selected_rows": 2091,
+    "withheld_rows": 5656,
+    "withheld_hold_rows": 5315,
     "withheld_excluded_rows": 341
   },
-  "selected_ids_sha256": "3551efe7ac2d3401734ee3e4a998deba78856c8bd4023aafc4afb25ad057c3bb",
-  "withheld_ids_sha256": "c59c8e308284b9d18bfc0ad651110e0aac3e7846496ca4d4e7e0a4b4be1b18a8",
+  "selected_ids_sha256": "049f2b55b2f2b27eb027a51ad736f62e2a398bc6790b00ee0613a06aac7620fd",
+  "withheld_ids_sha256": "336a9bc4cf3d852fa436e63029e1a947df18ad41ba472ea58eb7d8e964002d16",
   "private_capture_files_or_html_copied": false
 }
