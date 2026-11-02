@@ -1014,6 +1014,20 @@ def test_new_independent_verification_url_can_promote_prior_outlier():
             },
             {},
         ),
+        *[
+            (
+                {"source_verification_urls": [f"https://{host}./citations?x=1"]},
+                {},
+            )
+            for host in (
+                "scholar.google.com",
+                "scholar.google.ca",
+                "scholar.google.co.jp",
+                "sub.scholar.google.com",
+                "sub.scholar.google.ca",
+                "sub.scholar.google.co.jp",
+            )
+        ],
         ({"authors": ""}, {}),
         (
             {},
@@ -1031,6 +1045,20 @@ def test_new_independent_verification_url_can_promote_prior_outlier():
                 ]
             },
         ),
+        *[
+            (
+                {},
+                {"source_verification_urls": [f"https://{host}./citations?x=1"]},
+            )
+            for host in (
+                "scholar.google.com",
+                "scholar.google.ca",
+                "scholar.google.co.jp",
+                "sub.scholar.google.com",
+                "sub.scholar.google.ca",
+                "sub.scholar.google.co.jp",
+            )
+        ],
     ],
 )
 def test_prior_outlier_gain_requires_valid_independent_evidence(bad_work, bad_row):

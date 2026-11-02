@@ -260,7 +260,7 @@ def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
 def _independent_evidence(urls: Any) -> bool:
     for url in _value(urls) or []:
         parsed = urlparse(str(url))
-        hostname = (parsed.hostname or "").casefold()
+        hostname = (parsed.hostname or "").casefold().rstrip(".")
         if (
             parsed.scheme == "https"
             and hostname
