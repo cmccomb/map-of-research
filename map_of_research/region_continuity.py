@@ -260,12 +260,19 @@ def _reviewed_loss(row: Mapping[str, Any] | None) -> bool:
 def _independent_evidence(urls: Any) -> bool:
     for url in _value(urls) or []:
         parsed = urlparse(str(url))
-        hostname = (parsed.hostname or "").casefold()
+        hostname = (parsed.hostname or "").casefold().rstrip(".")
         if (
             parsed.scheme == "https"
             and hostname
-            and hostname not in {"scholar.google.com", "scholar.google.ca"}
-            and not hostname.endswith((".scholar.google.com", ".scholar.google.ca"))
+            and hostname
+            not in {
+                "scholar.google.com",
+                "scholar.google.ca",
+                "scholar.google.co.jp",
+            }
+            and not hostname.endswith(
+                (".scholar.google.com", ".scholar.google.ca", ".scholar.google.co.jp")
+            )
         ):
             return True
     return False
