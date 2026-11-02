@@ -1815,6 +1815,26 @@
         "withheld_excluded_rows": 73,
         "withheld_ids_sha256": "f8f6b74a72ac5f723417a7dadec426bbd0a3634abc4d4f9a5f61680025cc3b09"
       }
+    },
+    {
+      "person_id": "person-yangliu-b57c54d4",
+      "scholar_id": "LrHm5cgAAAAJ",
+      "state": "released",
+      "expected_source_rows": 25,
+      "cache_sha256": "311357ecf2015d31887daab1642fe3bab9499d75e196fe58c08651ce28cc7a2f",
+      "reason": "Private local stage: 25 exact owner-linked, publisher DOI/type/year/byline verified novel Yang P. Liu citations. Six exact Richard Peng canonical spatial reuses remain candidate-only deferred and seven concrete holds remain excluded. New placement pending; no upload approved.",
+      "reviewed_at": "2026-11-02",
+      "public_subset": {
+        "observed_visible_rows": 38,
+        "private_capture_sha256": "37c9657ffa346d071943344d04f3402148052de7ca53ed4bef80dac6d5264d9b",
+        "private_rendered_html_sha256": "6c50c34d6c966120a720abc18eaeea351f00f8a113361caac8e8687dac20b31d",
+        "private_review_sha256": "3934b6da4825ae7434d2ac32438a8eff9a8e9f148d1f133b347bb0c022c727ec",
+        "selected_ids_sha256": "70f8fe964f12003dd1d44325b143755072da86605e3d1f3c951d167e9d664a8f",
+        "withheld_rows": 13,
+        "withheld_hold_rows": 13,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "97101d62a66f4acebfa3cf446f0353a01324ce4aa70f48055baa17cdb002699a"
+      }
     }
   ]
 }
