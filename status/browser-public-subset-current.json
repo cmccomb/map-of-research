@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "0e6127ec795ca09e098a14b1e2a9a57e61b724e6",
-  "registry_producer_commit": "17237d2e5981d6be8d252b5a92953bad9a2b3264",
+  "base_source_status_commit": "8ffc63847428d41377ebd165deb4cb9e2349bf18",
+  "registry_producer_commit": "904590e624c31f38bb29b787a5b659ba5ac3e178",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -2866,16 +2866,47 @@
         "withheld_ids_sha256": "c4fa11f8e887e9e668c79838f80f3c560b6fa6fb7b37ccceebe75f0f42ff7bd7"
       },
       "cache_sha256": "e4f6acc9e5c024637f4e286ec5ee76781a71e39a8e7b0f784e1f6cad4129f80a"
+    },
+    {
+      "slug": "graham-neubig",
+      "person_id": "person-grahamneubig-767add33",
+      "scholar_id": "wlosgkoAAAAJ",
+      "expected_source_rows": 11,
+      "selected_author_pub_ids": [
+        "wlosgkoAAAAJ:0klj8wIChNAC",
+        "wlosgkoAAAAJ:0paDrhnEFY0C",
+        "wlosgkoAAAAJ:0qX8s2k1IRwC",
+        "wlosgkoAAAAJ:5-bGDoUgDrYC",
+        "wlosgkoAAAAJ:CLhUwle04lcC",
+        "wlosgkoAAAAJ:H0nRGT7Dr7IC",
+        "wlosgkoAAAAJ:NObE97JSLecC",
+        "wlosgkoAAAAJ:YXeC4bxG7-IC",
+        "wlosgkoAAAAJ:lBZ7XAAYe3oC",
+        "wlosgkoAAAAJ:pwA0zy_liR0C",
+        "wlosgkoAAAAJ:tFyepMjQr3wC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 904,
+        "private_capture_sha256": "eb318cca62aea08ed50d6cd21bb0118ae7881c8ecd5a8a2553983d6b83a6570f",
+        "private_rendered_html_sha256": "db66ec3b949c692b7bb545030cf3c9ef378bfc75aebe5abc0fb317fcb507fbf6",
+        "private_review_sha256": "c283d4b94b81fba835bb10c9b5382a2b68a560adf0736e8668dcf41df4a2b826",
+        "selected_ids_sha256": "f5e3b8d57ac855e1f7c12b3f3fdd8cc24fd5394d927432cc2cd82bf63d59c318",
+        "withheld_rows": 893,
+        "withheld_hold_rows": 820,
+        "withheld_excluded_rows": 73,
+        "withheld_ids_sha256": "5e968e08aa00f0945fc5eff7231130a78358ad41525b2100c97f6fa1e29f3d90"
+      },
+      "cache_sha256": "3e2cc8f0f61a454ef14af6b9af11e6e5030ea91b68be03ca013c24decc124387"
     }
   ],
   "totals": {
-    "observed_visible_rows": 6843,
-    "selected_rows": 2043,
-    "withheld_rows": 4800,
-    "withheld_hold_rows": 4532,
-    "withheld_excluded_rows": 268
+    "observed_visible_rows": 7747,
+    "selected_rows": 2054,
+    "withheld_rows": 5693,
+    "withheld_hold_rows": 5352,
+    "withheld_excluded_rows": 341
   },
-  "selected_ids_sha256": "acbdf88619d7eb7888c29f2dbb06ed861560430d2dd5abd1bb787d832439d7a5",
-  "withheld_ids_sha256": "328cda9ecb4aec2f20bf3c766bdfb194b6d950698564e1a09d5a9d7a23662d35",
+  "selected_ids_sha256": "3066ff02bdd5351076c1d81ade4705ec7e5154d2d6a4686b38739499e78e6a39",
+  "withheld_ids_sha256": "e2bfbba1296e52a7f064b60be8b59de858bb83244b560b5064aaea0a00430114",
   "private_capture_files_or_html_copied": false
 }

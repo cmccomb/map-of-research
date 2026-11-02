@@ -1,152 +1,80 @@
 {
   "schema_version": 1,
-  "prior_revision": "7bf6510e0c6d02caacd529d4b43ff7f72da4b451",
-  "source_snapshot_sha256": "64b1e83d59d253c58b07262bc8dd15624216ed5d75d6985faa82abd4b07a1cd1",
-  "selected_ids_sha256": "34f04b28cc0783c68676b7bb280f32f849ad6b19bcb5a1a2e846e77a13e481a1",
-  "parent_map_sha256": "2c870fef36b09ea0b4e4895a06cab504fa41a0864da61bf2f2603c63dd547e0c",
-  "candidate_map_content_sha256": "3968704636bc26985a03c4c0e034c1772f2956b00bac3214ec724fc341f38df8",
-  "new_work_ids_sha256": "5f70c380c222afe7440a06d538a3e432abc24951e040a950c32505dea7520c32",
+  "prior_revision": "e0823827ae68f69f8a00b075f16e98395191134a",
+  "source_snapshot_sha256": "b4a4b891bed9e465df9bebe01109f63777d13d0784875042ffbc46501a54a522",
+  "selected_ids_sha256": "6087e933ad3ca7cc82c173c8249347a28c785156378ed8c61ff39e3a283cbfe2",
+  "parent_map_sha256": "b50c84948daa092748d7924d3fd5c4c8ab48153afa78a5cc2b63ddd0e949cf9f",
+  "candidate_map_content_sha256": "396df52e34f292807c15aaf60fbcf1882ecaede02f817bc0da575425a0977538",
+  "new_work_ids_sha256": "8386d6d5a673eed223ba7c248352a8076716b2172f3bfe140edcb43465d59a6e",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-02",
   "new_points": [
     {
-      "work_id": "work-01d0389a47e6959ec4314d3d2158330b7c9d67654c854a82641f7e2705a9f71f",
+      "work_id": "work-0195b1388b32770a2618a5c314e013997d545d33fd60bface9ab805c903480be",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-06a69ee71ac45f4dfabc8e2f839474f3322fc74a35dc13ad79127088d9404a77",
+      "work_id": "work-37bbced81547e894d0da7855fdc455f0b72241c5b3f4b1b3b6d6e4c9c06eb408",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-15b65e73a4ef250d8ac3e8d19ab063d376e549b92cd6b4c1dd1684a92b348098",
+      "work_id": "work-457cf6c7d9439d7ecbbaa592f0d977e6128db4aa4882d589ae6d8830d978dde9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-1677e26c4e4bd7ce404973a0aace90ef055e0848d725044b15a2d24262b70447",
+      "work_id": "work-6ac75ffbf3e8f413cf08f8515be77f0454b8cd8c6df9651f701c0121dc4e36f9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-26bc0ed3d6f2c3a42adc90bc1d77213c16664336c619e3dca7899f07191c0c5f",
+      "work_id": "work-707e2e893f1a3ff819d0ee88d6b1d0344c1b9fa16b76172838d76096ff495083",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-338c4d5056964944719bc32a32e816b15a482ad468f4b6c4d66c95d1d827b3c7",
+      "work_id": "work-9088b258b07e321ab30e89f6f4544bd4ce113734c3b9630eb7fde23e2d9f3d55",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-4a7ad4d5721683448e72549ed0c3be055ec6657a2619702ca5114f2ceeecc613",
+      "work_id": "work-96ad82090f0aa7765068fb40396bb8633269392c2836138a2a7b2113311c3e8f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-5fac5559ea2ddec843c52e3300b50c8567bb4e918b07bd59f78a6900e0c647f5",
+      "work_id": "work-a90c173c611251e829d1baa58143ba829788085d7517f336c97f3497231e1e11",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-5ff7b694c69c2833c6e3b8dd64b3aa964b798e16178bcaaff84a2f294cf0e238",
+      "work_id": "work-b71149bb147a2ecd2e48d73ef6818605107765d8d4bc72e4b02bd26f2b028bef",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-60cf0d6767fe2a0061b44ea21c610ace39c8504a5edb90b6f3e487f67570da75",
+      "work_id": "work-e1ae25cb1469cdddfcfa1c105896d4be37e45a4a544c092438e7ecd984d9c79d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     },
     {
-      "work_id": "work-6f0fb490b5f97ffdae6430e7a53c4563ea08b29c2210ff0fe4af78ebc929344b",
+      "work_id": "work-ff5831c08fc81a75ce6f706235fcb124e09ef2331fd855b89027421e66047a6a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-73383eee2787a305b41950d3cff3e3a5726d9189a3e1ccfa54eadf53e174f272",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-76a42b725b388484763ad8a42d16adda574b0ed4b976d23f499c8a732cc9cb28",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-8b5283f16ecad74608544a59ec3e4bc5d27f61e2a7592f060ab15bb3b0a569b7",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-922f0f27f2c4ea764fd80a4f75a17ec8d8d875ecbffd8ef3e3e8e5374042dc36",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-b2d31e4c43b6c87a579e838946758d60299999c41b2055160405db7d185639da",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-bdf53de6ffed457d87c18f94794a61f710f9e351093b1f608f5759f44b9dbd4c",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-c7d058f836e8fd0d863762f17538ef001889897e08cb18119dde652def17e88e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-ca7460c94d68e93937d329ddb77746f3f7f911f3a88c348e00a4c7b030514ae3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-d843881bff92da8b468687c728ffd67162cc682094784c85db38227635b297db",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-df3b569828a5e24bfc198be95efde6b5d6a12d3a662c220883abbde06ad1ee03",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-e0338f891e22a60b541280e4636e15903e1f275716091e7f784fa11f04650fbe",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
-    },
-    {
-      "work_id": "work-e37c93d3257c20f2c7acd50b3655751f7ae7c420de3c23d08f1403c90020480a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact saved Yuvraj Agarwal citation with verified metadata; spatial placement awaits separate review."
+      "rationale": "Exact saved owner-linked Graham Neubig citation with verified metadata; spatial placement awaits separate review."
     }
   ]
 }
